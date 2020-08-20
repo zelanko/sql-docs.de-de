@@ -1,4 +1,5 @@
 ---
+description: MDX-Datendefinition – CREATE SET
 title: CREATE SET-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6f8d522f7832a280aa8b280bbe912640b566974a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1712d109f7aa984e4b7b2b2a5512ce043869aad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483884"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX-Datendefinition – CREATE SET
 
@@ -92,12 +93,12 @@ SELECT [Core Products] ON 0
  Gibt an, dass die Menge für Benutzer, die den Cube abfragen, nicht sichtbar ist.  
   
 ## <a name="standard-properties"></a>Standardeigenschaften  
- Jede Menge verfügt über Standardeigenschaften. Wenn eine Client Anwendung mit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]verbunden ist, werden die Standardeigenschaften entweder unterstützt, oder Sie können unterstützt werden, wenn der Administrator dies auswählt.  
+ Jede Menge verfügt über Standardeigenschaften. Wenn eine Client Anwendung mit verbunden ist [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , werden die Standardeigenschaften entweder unterstützt, oder Sie können unterstützt werden, wenn der Administrator dies auswählt.  
   
 |Eigenschaftsbezeichner|Bedeutung|  
 |-------------------------|-------------|  
 |CAPTION|Eine Zeichenfolge, die von der Clientanwendung als Beschriftung für die Menge verwendet wird.|  
-|DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, der von der Clientanwendung zum Anzeigen der Menge verwendet wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Bei den von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]bereitgestellten Tools und Clients ist der umgekehrte schräg\\Strich () das ebenendtrennzeichen. Um mehrere Anzeigeordner für eine definierte Menge bereitzustellen, verwenden Sie ein Semikolon (;) als Trennzeichen für die Ordner.|  
+|DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, der von der Clientanwendung zum Anzeigen der Menge verwendet wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Bei den von bereitgestellten Tools und Clients [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ist der umgekehrte Schrägstrich ( \\ ) das ebenendtrennzeichen. Um mehrere Anzeigeordner für eine definierte Menge bereitzustellen, verwenden Sie ein Semikolon (;) als Trennzeichen für die Ordner.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Drop Set-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-drop-set.md)   

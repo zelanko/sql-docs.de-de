@@ -1,4 +1,5 @@
 ---
+description: Fehler- und Ereignisreferenz (Replikation)
 title: Fehler- und Ereignisreferenz (Replikation) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 273caba1a25efbfd30bb856f6ebaf157b9bf5a03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10d2073949de158c0773876adef0ba06d6e587eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482408"
 ---
 # <a name="errors-and-events-reference-replication"></a>Fehler- und Ereignisreferenz (Replikation)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "85652992"
 |MSSQL_ENG021642. Siehe [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungsserver mit dem Namen '%1!s!' ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus.|  
 |MSSQL_ENG021663. Siehe [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Für die [%1!s!].[%2!s!]-Quelltabelle wurde kein gültiger Primärschlüssel gefunden.|  
 |MSSQL_ENG021684. Siehe [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Der Administratoranmeldung für den '%s'-Oracle-Verleger sind unzureichende Berechtigungen zugeordnet.|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%1!s!' muss eine gültige Windows-Anmeldung der folgenden Form sein: 'MACHINE\Login' oder 'DOMAIN\Login'. Lesen Sie die Dokumentation zu '%3!s!'.|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|„%s“ muss eine gültige Windows-Anmeldung der folgenden Form sein: "MACHINE Login" oder "DOMAIN Login". Lesen Sie die Dokumentation zu '%3!s!'.|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|Der %1!s!-Agent-Auftrag muss vor dem Fortsetzen des Vorgangs über '%2!s!' hinzugefügt werden. Lesen Sie die Dokumentation zu '%3!s!'.|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|Der Prozess konnte '%1' nicht auf '%2' ausführen.|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|Vom Mergeprozess konnte der Generierungsverlauf auf '%1' nicht geändert werden. Führen Sie zur Problembehandlung einen Neustart der Synchronisierung mit ausführlicher Verlaufsprotokollierung aus, und geben Sie eine Ausgabedatei an, in die geschrieben werden soll.|  

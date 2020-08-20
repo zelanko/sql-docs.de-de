@@ -1,4 +1,5 @@
 ---
+description: Stellen Sie eine Verbindung mit der Teradata-Quelle her.
 title: Herstellen einer Verbindung mit der Teradata-Quelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16c534788803c2c29fc36817fb63e112c8c84b1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484481"
 ---
 # <a name="connect-to-the-teradata-source"></a>Stellen Sie eine Verbindung mit der Teradata-Quelle her.
 
@@ -53,8 +54,8 @@ Die benutzerdefinierten Eigenschaften der Teradata-Quelle sind in der folgenden 
 |DiscardLargeRow|Boolean|Der Standardwert ist *False*. Große Zeilen (mit mehr als 64 KB) werden verworfen, wenn der Wert *True*ist.|
 |ExtendedStringColumnsAllocation|Boolean|*Maximal Transfer Character Allocation Factor* wird verwendet, wenn der Wert *True* ist. <br> Dieser Wert muss auf *True* festgelegt werden, wenn die Eigenschaft `Export Width Table ID` der Teradata-Datenbank auf *Maximal Defaults* festgelegt ist. <br> Der Standardwert ist *False*.|
 |JobMaxRowSize|Integer|Die maximale Zeilenlänge kann unterstützt werden. Dieser Wert wird benötigt, wenn der `DiscardLargeRow`-Wert *True* ist.<br>Gültige Werte: <br>*64* (Standardwert): Zeilenlängen von 2 Bytes können unterstützt werden. <br>*1024*: Zeilenlängen von 4 Bytes können unterstützt werden.|
-|MaxSessions|Integer|Die maximale Anzahl der angemeldeten Sitzungen. Dieser Wert muss größer als 1 sein. Der Standardwert ist eine Sitzung für jede verfügbare AMP-Instanz (Access Module Processor).|
-|MinSessions|Integer|Die minimale Anzahl der angemeldeten Sitzungen. Dieser Wert muss größer als 1 sein. Der Standardwert ist eine Sitzung für jede verfügbare AMP-Instanz.|
+|MaxSessions|Integer|Die maximale Anzahl der angemeldeten Sitzungen. Dieser Wert muss größer als 0 (null) sein. Der Standardwert ist eine Sitzung für jede verfügbare AMP-Instanz (Access Module Processor).|
+|MinSessions|Integer|Die minimale Anzahl der angemeldeten Sitzungen. Dieser Wert muss größer als 0 (null) sein. Der Standardwert ist eine Sitzung für jede verfügbare AMP-Instanz.|
 |QueryBandSessInfo|Varchar|Ein benutzerdefinierter, sitzungsbasierter Abfragebandausdruck im Format einer Verbindungszeichenfolge. Sie verwenden diese Eigenschaft für die Überwachung und Steuerung von Rückbuchungen. Diese Eigenschaft befindet sich im Bereich **Erweiterter Editor**.|
 |SpoolMode|Varchar|Gültige Werte sind: <br>*Spool*: Verwenden Sie den Standardwert *Spool*. <br> *NoSpool*: Verwenden Sie *Spool* nicht. Dieser Wert ist nur gültig, wenn der Datenbankserver *NoSpool* unterstützt. <br>  *NoSpoolOnly*: Verwenden Sie *Spool* auf keinen Fall. Der Auftrag wird mit einem Fehler beendet, wenn der Datenbankserver *NoSpool* nicht unterstützt.|
 |SqlCommand|String|Der SQL-Befehl, der ausgeführt werden soll, wenn `AccessMode` auf *SQL Command* festgelegt wird.|

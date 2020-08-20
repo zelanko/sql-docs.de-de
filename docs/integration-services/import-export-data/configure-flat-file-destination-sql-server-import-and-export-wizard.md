@@ -1,4 +1,5 @@
 ---
+description: Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent)
 title: Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 413464d787e3f2fac1ae16d497dcaabb55b90ab8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3ccc72824732f1c76dde974916c83cc9a6c434a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484187"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent)
 
@@ -35,7 +36,7 @@ ms.locfileid: "86913346"
  ![Konfigurieren einer Flatfileseite des Import/Export-Assistenten](../../integration-services/import-export-data/media/flat-file.png)
   
 ## <a name="pick-a-source-table"></a>Auswählen einer Quelltabelle
- **Quelltabelle oder -sicht**  
+ **Quelltabelle oder Sicht**  
 -   Wenn Sie auf einer vorherigen Seite angegeben haben, dass Sie eine Tabelle kopieren möchten, wählen Sie die Quelltabelle oder -sicht aus der Dropdownliste.
 -   Wenn Sie eine Abfrage bereitgestellt haben, ist `"Query"` als einzige Option ausgewählt.  
 
@@ -43,7 +44,7 @@ ms.locfileid: "86913346"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste das Trennzeichen zum Trennen von Zeilen in der Ausgabe aus. Es gibt keine Option zum Angeben eines *benutzerdefinierten* Zeilentrennzeichens.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Trennen von Zeilen mit einem Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Trennen von Zeilen mit einem Wagenrücklauf.|  
@@ -57,7 +58,7 @@ ms.locfileid: "86913346"
  **Spaltentrennzeichen**  
  Wählen Sie aus der Liste das Trennzeichen zum Trennen von Spalten in der Ausgabe aus. Es gibt keine Option zum Angeben eines *benutzerdefinierten* Spaltentrennzeichens.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Trennen von Spalten mit einem Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**{CR}**|Trennen von Spalten mit einem Wagenrücklauf.|  
@@ -82,6 +83,6 @@ Klicken Sie optional auf **Vorschau**, um bis zu 200 Zeilen mit Beispieldaten im
   
 Nachdem Sie die Daten in der Vorschau anzeigen, sollten Sie die Optionen ändern, die Sie auf den vorherigen Seiten des Assistenten ausgewählt haben. Wechseln Sie zum Vornehmen dieser Änderungen zurück auf die Seite **Flatfileziel konfigurieren** , und klicken Sie anschließend auf **Zurück** , um zu vorherigen Seiten zurückzukehren, auf denen Sie Ihre Auswahl ändern können.  
 
-## <a name="whats-next"></a>Wie geht es weiter?  
+## <a name="whats-next"></a>Nächste Schritte  
  Nachdem Sie Formatierungsoptionen für die Zielflatfile angegeben haben, ist die nächste Seite **Paket speichern und ausführen**. Auf dieser Seite geben Sie an, ob der Vorgang sofort ausgeführt werden soll. Abhängig von Ihrer Konfiguration können Sie Ihre Einstellungen möglicherweise auch als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket speichern, um es anzupassen und später wiederzuverwenden. Weitere Informationen finden Sie unter [Paket speichern und ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
 

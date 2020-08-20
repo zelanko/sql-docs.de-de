@@ -1,4 +1,5 @@
 ---
+description: '! (Logisches NOT) (SSIS-Ausdruck)'
 title: '! (Logisches NOT) (SSIS-Ausdruck) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb3d9bc9fb9ff483e86f1ddd4a451f440bac2824
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1643daac9dab5b1027a0df8fec56ccd190e5980a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484403"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Logisches NOT) (SSIS-Ausdruck)
 
@@ -45,14 +46,14 @@ ms.locfileid: "86914487"
 ## <a name="result-types"></a>Ergebnistypen  
  DT_BOOL  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle wird das Ergebnis des ausgeführt werden müssen.  
   
 |Ursprünglicher boolescher Ausdruck|Nach dem Anwenden des !- Operator|  
 |---------------------------------|------------------------------------|  
-|TRUE|FALSE|  
+|true|FALSE|  
 |NULL|NULL|  
-|FALSE|TRUE|  
+|false|true|  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  
  In diesem Beispiel wird zu FALSE ausgewertet, falls der Wert in der **Color** -Spalte "red" ist.  
@@ -67,7 +68,7 @@ ms.locfileid: "86914487"
 !(@MonthNumber != MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

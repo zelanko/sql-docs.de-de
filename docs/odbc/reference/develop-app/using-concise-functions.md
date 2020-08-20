@@ -1,4 +1,5 @@
 ---
+description: Verwenden präziser Funktionen
 title: Verwenden von präzisen Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 63313e3dfaec8dbcd91f3bb084bbaab46da40c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0dcd16c1380c95921d5e4bb58831e2dd939ecf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482796"
 ---
 # <a name="using-concise-functions"></a>Verwenden präziser Funktionen
 Einige ODBC-Funktionen erhalten impliziten Zugriff auf Deskriptoren. Anwendungs Schreiber finden Sie möglicherweise bequemer als das Aufrufen von **SQLSetDescField** oder **SQLGetDescField**. Diese Funktionen werden als *präzise* Funktionen bezeichnet, da Sie eine Reihe von Funktionen ausführen, einschließlich dem Festlegen oder dem erhalten von Deskriptorfeldern. Einige präzise Funktionen ermöglichen es einer Anwendung, mehrere verwandte Deskriptorfelder in einem einzelnen Funktions aufzurufen festzulegen oder abzurufen.  

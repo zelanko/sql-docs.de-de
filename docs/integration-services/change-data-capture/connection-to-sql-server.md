@@ -1,4 +1,5 @@
 ---
+description: Verbindung zu SQL Server
 title: Verbindung mit SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d8e8bce65061ac4cb9b0d4ea9829ab24a92da40
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f45b001faf8f290d36ef8239945a844f78af46fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484630"
 ---
 # <a name="connection-to-sql-server"></a>Verbindung zu SQL Server
 
@@ -31,14 +32,14 @@ ms.locfileid: "86916251"
 ### <a name="server-name"></a>Servername  
  Geben Sie den Namen des Servers ein, auf dem sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befindet.  
   
-### <a name="authentication"></a>Authentication  
+### <a name="authentication"></a>Authentifizierung  
  Wählen Sie eines der folgenden Szenarien aus:  
   
 -   Windows-Authentifizierung  
   
 -   **SQL Server-Authentifizierung**: Wenn Sie diese Option auswählen, müssen Sie den **Benutzernamen** und das **Kennwort** für den Benutzer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeben, mit dem Sie eine Verbindung herstellen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  Klicken Sie auf den Pfeil, um die verfügbaren Optionen anzuzeigen, die konfiguriert werden sollen. Sie können für diese Optionen auch die Standardwerte unverändert lassen. Verfügbare Optionen:  
   
 -   **Verbindungstimeout**: Geben Sie den Zeitraum (in Sekunden) ein, wie lange das Programm auf die Herstellung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindung warten soll, bevor ein Timeoutfehler eintritt. Der Standardwert lautet **15**.  

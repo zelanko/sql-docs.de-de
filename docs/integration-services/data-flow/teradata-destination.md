@@ -1,4 +1,5 @@
 ---
+description: Teradata-Ziel
 title: Teradata-Ziel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2091999bce0fbacb99083239a7eb209fa8939505
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: caa6cc656e37f4718e06c9af010b458dfa1b738d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484511"
 ---
 # <a name="teradata-destination"></a>Teradata-Ziel
 
@@ -50,7 +51,7 @@ Sie können den Modus im [Teradata-Ziel-Editor (Seite „Verbindungs-Manager“)
 ## <a name="error-handling"></a>Fehlerbehandlung
 
 Fehler, die während des Ladevorgangs zurückgegeben werden, werden in temporäre Fehlertabellen geschrieben, die während des Ladevorgangs gesperrt sind.
-Die **Maximale Anzahl von Fehlern (MaxErrors)** -Eigenschaft im „Erweiterten Editor“ legt die maximale Anzahl von Fehlern fest, die in diese Tabellen geschrieben werden können.
+Die **Maximale Anzahl von Fehlern (MaxErrors)**-Eigenschaft im „Erweiterten Editor“ legt die maximale Anzahl von Fehlern fest, die in diese Tabellen geschrieben werden können.
 
 Wenn die „Maximale Anzahl von Fehlern“ größer als 0 (null) ist, werden Fehlertabellen mit eindeutigen Namen generiert, und Informationsmeldungen werden im Paketprotokoll ausgegeben. Die Fehler können von der standardmäßigen SSIS-Komponentenfehlerausgabe abgerufen werden.
 
@@ -85,7 +86,7 @@ In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften des Terada
 |ArraySupport|Boolean|Der Standardwert ist **true**. Wenn der Wert **True** ist, verwenden DML-Gruppen ArraySupport. Gilt nur für TPT-Stream. Diese Eigenschaft befindet sich im **Erweiterten Editor**.|
 |Puffer|Integer|Ein von 2 bis 64 festlegbarer Wert, auf den die Anzahl der Anforderungspuffer erhöht werden soll. Gilt nur für TPT-Stream. Diese Eigenschaft befindet sich im **Erweiterten Editor**.|
 |BufferMode|Boolean|Der Standardwert ist **true**. Wenn die PutBuffer-Funktion verwendet wird, muss der Wert **True** sein. Diese Eigenschaft befindet sich im **Erweiterten Editor**.|
-|BufferSize|Integer|Die Ausgabepuffergröße (in KB), die zum Senden von Ladepaketen verwendet wird. Der Standardwert ist „1024“. Gilt nur für TPT-Ladevorgang. Diese Eigenschaft befindet sich im **Erweiterten Editor**.|
+|BufferSize|Integer|Die Ausgabepuffergröße (in KB), die zum Senden von Ladepaketen verwendet wird. Der Standardwert ist 1024. Gilt nur für TPT-Ladevorgang. Diese Eigenschaft befindet sich im **Erweiterten Editor**.|
 |DataEncryption|Boolean|Der Standardwert ist **False**. Wenn der Wert **True** ist, wird die vollständige Sicherheitsverschlüsselung verwendet.|
 |DefaultCodePage|Integer|Die zu verwendende Codepage, wenn die Datenquelle keine Codepageinformationen enthält. <br>**Hinweis**: Diese Eigenschaft befindet sich im **Erweiterten Editor**.|
 |DetailedTracingLevel|Ganze Zahl (Enumeration)|Wählen Sie für die erweiterte Ablaufverfolgung eine der folgenden Optionen aus: <br> **Off**: Keine erweiterte Protokollierung. <br> **General**: Bei dieser Ablaufverfolgung werden treiberspezifische Aktivitäten protokolliert. <br> **CLI**: Bei dieser Ablaufverfolgung werden CLIv2-spezifische Aktivitäten protokolliert. <br> **Notify Method**: Aktivitäten im Zusammenhang mit der Benachrichtigung werden protokolliert. <br> **Common Library**: Die Ablaufverfolgung von Aktivitäten in der opCommon-Bibliothek wird protokolliert. <br> **All**: Bei dieser Ablaufverfolgung werden alle obigen Aktivitäten protokolliert. <br> Die Protokolldatei mit der erweiterten Ablaufverfolgung wird in der **DetailedTracingFile**-Eigenschaft definiert. <br> Die **DetailedTracingFile**-Eigenschaft muss festgelegt werden, wenn die Option nicht „Off“ ist. <br> Diese Eigenschaft befindet sich im **Erweiterten Editor**.|

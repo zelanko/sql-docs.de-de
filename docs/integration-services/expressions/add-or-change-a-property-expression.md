@@ -1,4 +1,5 @@
 ---
+description: Hinzufügen oder Ändern eines Eigenschaftsausdrucks
 title: Hinzufügen oder Ändern eines Eigenschaftsausdrucks | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9959b1b8c4628ec171b82b895f648c44037218c9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3ef6580fb5a6983412343137e5cdf9e0d4ecbcf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484439"
 ---
 # <a name="add-or-change-a-property-expression"></a>Hinzufügen oder Ändern eines Eigenschaftsausdrucks
 
@@ -47,7 +48,7 @@ ms.locfileid: "86923539"
   
     -   Geben Sie in die Spalte **Ausdruck** direkt einen Ausdruck ein oder ändern Sie ihn, und klicken Sie dann auf **OK**.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie in der Ausdruckszeile der Eigenschaft auf die Auslassungspunkte (...), um den **Ausdrucks-Generator** zu öffnen.  
   

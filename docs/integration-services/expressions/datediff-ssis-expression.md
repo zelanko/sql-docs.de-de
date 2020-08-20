@@ -1,4 +1,5 @@
 ---
+description: DATEDIFF (SSIS-Ausdruck)
 title: DATEDIFF (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2f869de30e8f6b6c65d01cc3189d9e63abfb57e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3e7133fffcea2afe188e00f2c80aa51d6825386c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484420"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS-Ausdruck)
 
@@ -47,7 +48,7 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle sind die datepart-Werte und Abkürzungen aufgeführt, die von der Ausdrucksauswertung erkannt werden.  
   
 |datepart|Abkürzungen|  
@@ -56,12 +57,12 @@ DATEDIFF(datepart, startdate, endate)
 |Quarter|qq, q|  
 |Month (Monat)|mm, m|  
 |Dayofyear|dy, y|  
-|Day (Tag)|dd, d|  
-|Week|wk, ww|  
+|Tag|dd, d|  
+|Woche|wk, ww|  
 |Wochentag|dw, w|  
-|Hour|Hh|  
+|Stunde|Hh|  
 |Minute|mi, n|  
-|Sekunde|ss, s|  
+|Second|ss, s|  
 |Millisekunde|Ms|  
   
  DATEDIFF gibt ein NULL-Ergebnis zurück, wenn eines der Argumente NULL ist.  

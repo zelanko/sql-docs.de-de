@@ -1,4 +1,5 @@
 ---
+description: Ändern benutzerdefinierter Funktionen
 title: Ändern von benutzerdefinierten Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
@@ -11,12 +12,12 @@ ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36d40f917621a5efce6d794338c1d221fad92025
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c86496904351d305cdf21af05275f469db689982
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485302"
 ---
 # <a name="modify-user-defined-functions"></a>Ändern benutzerdefinierter Funktionen
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85722888"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So ändern Sie eine benutzerdefinierte Funktion mit:**  
   

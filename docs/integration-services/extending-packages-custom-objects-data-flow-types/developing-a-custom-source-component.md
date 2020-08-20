@@ -1,4 +1,5 @@
 ---
+description: Entwickeln einer benutzerdefinierten Quellkomponente
 title: Entwickeln einer benutzerdefinierten Quellkomponente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea134d0ec6ca3a7868e21577d033a53b6a8e4f11
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba5222b35e6e55329e746f316a0503c27092441a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484343"
 ---
 # <a name="developing-a-custom-source-component"></a>Entwickeln einer benutzerdefinierten Quellkomponente
 
@@ -173,7 +174,7 @@ End Sub
   
  Der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> der Spalte bestimmt die Werte, die für die anderen Eigenschaften festgelegt werden. Die folgende Tabelle zeigt die Anforderungen an die abhängigen Eigenschaften für jeden <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>. Bei den nicht aufgelisteten Datentypen sind die abhängigen Eigenschaften auf 0 (null) festgelegt.  
   
-|DataType|Länge|Skalieren|Precision|CodePage|  
+|DataType|Länge|Skalieren|Genauigkeit|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|Größer 0 und kleiner oder gleich 28|0|0|  
 |DT_CY|0|0|0|0|  

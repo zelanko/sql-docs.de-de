@@ -1,4 +1,5 @@
 ---
+description: Anforderungsprotokoll
 title: Anforderungsprotokoll | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c0a129bd8985180a9094b8846e685c0d4025313
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fe85b46fcdcfdb398993dc073f69a8c31aa08742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484568"
 ---
 # <a name="request-log"></a>Anforderungsprotokoll
 
@@ -45,14 +46,14 @@ ms.locfileid: "86922747"
     > [!NOTE]  
     >  Wenn Sie auf **Vorschau** klicken, wird auch das Dialogfeld **Vorschau** geöffnet. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Preview](../../integration-services/data-flow/preview.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Time**  
  Zeigt die Uhrzeit an, zu der das Ereignis protokolliert wurde.  
   
- **Typ**  
+ **Type**  
  Zeigt den Typ des protokollierten Ereignisses an. In der folgenden Tabelle sind die möglichen Ereignistypen aufgelistet.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |E|Eine Erfolgsmeldung.|  
 |E|Fehlermeldung|  

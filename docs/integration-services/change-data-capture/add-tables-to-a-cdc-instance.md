@@ -1,4 +1,5 @@
 ---
+description: Hinzufügen von Tabellen zu einer CDC-Instanz
 title: Hinzufügen von Tabellen zu einer CDC-Instanz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ca9d1f6fbc9c238dae9682552cb02153d8a89fbb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e025963ad981e05696af4676155efe642ee49893
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484823"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Hinzufügen von Tabellen zu einer CDC-Instanz
 

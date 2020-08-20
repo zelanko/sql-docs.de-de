@@ -1,4 +1,5 @@
 ---
+description: Verwenden von Eigenschaftsausdrücken in Paketen
 title: Verwenden von Eigenschaftsausdrücken in Paketen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c02dfe0e479873b50399a2dfcdbe8ae20a984f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8d0df4ebde316b640314f37788ccc39475fd8686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922280"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484370"
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
 
@@ -96,7 +97,7 @@ ms.locfileid: "86922280"
  Eigenschaftsausdrücke werden nach dem Laden der Paketkonfigurationen geladen. Beispielsweise werden Variablen zuerst durch ihre Konfigurationen aktualisiert, und anschließend werden die Eigenschaftsausdrücke, die die Variablen verwenden, ausgewertet und geladen. Das bedeutet, dass die Eigenschaftsausdrücke immer die Werte der Variablen verwenden, die durch Konfigurationen festgelegt wurden.  
   
 > [!NOTE]  
->  Sie können die Option **Set** des Hilfsprogramms **dtexec** nicht verwenden, um einen Eigenschaftsausdruck aufzufüllen.  
+>   Sie können die **Set** -Option des Hilfsprogramms **dtexec** nicht verwenden, um einen Eigenschaftsausdruck aufzufüllen.  
   
  In der folgenden Tabelle finden Sie eine Auflistung von Situationen, in denen Eigenschaftsausdrücke von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ausgewertet und geladen werden.  
   

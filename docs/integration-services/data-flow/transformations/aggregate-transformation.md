@@ -1,4 +1,5 @@
 ---
+description: Transformation für das Aggregieren
 title: Transformation für das Aggregieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1e643fdbf50bee27763395430c24cabd9e47816
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 69db57924486ea2cf1e02c76f78a2ed75a559fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484479"
 ---
 # <a name="aggregate-transformation"></a>Transformation für das Aggregieren
 
@@ -141,7 +142,7 @@ ms.locfileid: "86912318"
 >   
 >  In der Transformation für das Aggregieren beziehen sich **Schlüssel** und **Schlüsselskala** auf die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY** -Vorgangs erwartet werden. **COUNT DISTINCT-Schlüssel** und **COUNT DISTINCT-Skala** beziehen sich auf die Anzahl der unterschiedlichen Werte, die als Ergebnis eines **DISTINCT COUNT** -Vorgangs erwartet werden.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Erweitert/Standard**  
  Blenden Sie die Optionen ein oder aus, um mehrere Aggregationen für mehrere Ausgaben zu konfigurieren. Die erweiterten Optionen sind standardmäßig ausgeblendet.  
   
@@ -154,9 +155,9 @@ ms.locfileid: "86912318"
  **Schlüsselskala**  
  Geben Sie in der erweiterten Anzeige optional die ungefähre Anzahl der Schlüssel an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn die Eigenschaften **Schlüsselskala** und **Schlüssel** festgelegt sind, wird der Wert von **Schlüssel** vorrangig behandelt.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Unspecified|Die Eigenschaft Schlüsselskala wird nicht verwendet.|  
+|Nicht angegeben.|Die Eigenschaft Schlüsselskala wird nicht verwendet.|  
 |Niedrig|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 Schlüssel schreiben.|  
 |High|Die Aggregation kann mehr als 25.000.000 Schlüssel schreiben.|  
@@ -180,7 +181,7 @@ ms.locfileid: "86912318"
 |---------------|-----------------|  
 |**GroupBy**|Unterteilt Datasets in Gruppen. Zum Gruppieren können Spalten aller Datentypen verwendet werden. Weitere Informationen finden Sie unter GROUP BY.|  
 |**Sum**|Summiert die Werte einer Spalte. Summiert werden können nur Spalten mit einem numerischen Datentyp. Weitere Informationen finden Sie unter SUM.|  
-|**Mittelwert**|Gibt den Mittelwert der Werte in einer Spalte zurück. Der Mittelwert kann nur für Spalten mit einem numerischen Datentyp ermittelt werden. Weitere Informationen finden Sie unter AVG.|  
+|**Average**|Gibt den Mittelwert der Werte in einer Spalte zurück. Der Mittelwert kann nur für Spalten mit einem numerischen Datentyp ermittelt werden. Weitere Informationen finden Sie unter AVG.|  
 |**Count**|Gibt die Anzahl von Elementen in einer Gruppe zurück. Weitere Informationen finden Sie unter COUNT.|  
 |**CountDistinct**|Gibt die Anzahl eindeutiger Werte ungleich null in einer Gruppe zurück. Weitere Informationen finden Sie unter COUNT und Distinct.|  
 |**Mindestanforderungen**|Gibt den kleinsten Wert in einer Gruppe zurück. Ist auf numerische Datentypen beschränkt.|  
@@ -189,17 +190,17 @@ ms.locfileid: "86912318"
  **Vergleichsflags**  
  Wenn Sie **Group By**auswählen, steuern Sie mithilfe der Kontrollkästchen, wie der Vergleich durch die Transformation ausgeführt wird. Weitere Informationen zu den Optionen für das Vergleichen von Zeichenfolgen finden Sie unter [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
   
- **Count Distinct Scale**  
+ **COUNT DISTINCT-Skala**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **CountDistinctScale** und **CountDistinctKeys** angegeben werden, wird **CountDistinctKeys** vorrangig behandelt.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Unspecified|Die **CountDistinctScale** -Eigenschaft wird nicht verwendet.|  
+|Nicht angegeben.|Die **CountDistinctScale** -Eigenschaft wird nicht verwendet.|  
 |Niedrig|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 unterschiedliche Werte schreiben.|  
 |High|Die Aggregation kann mehr als 25.000.000 unterschiedliche Werte schreiben.|  
   
- **Count Distinct Keys**  
+ **COUNT DISTINCT-Schlüssel**  
  Gibt optional die genaue Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Wenn sowohl **CountDistinctScale** und **CountDistinctKeys** angegeben werden, wird **CountDistinctKeys** vorrangig behandelt.  
   
 ## <a name="aggregate-transformation-editor-advanced-tab"></a>Transformations-Editor für Aggregieren (Registerkarte Erweitert)
@@ -210,13 +211,13 @@ ms.locfileid: "86912318"
 >   
 >  In der Transformation für das Aggregieren beziehen sich **Schlüssel** und **Schlüsselskala** auf die Anzahl der Gruppen, die als Ergebnis eines **GROUP BY** -Vorgangs erwartet werden. **COUNT DISTINCT-Schlüssel** und **COUNT DISTINCT-Skala** beziehen sich auf die Anzahl der unterschiedlichen Werte, die als Ergebnis eines **DISTINCT COUNT** -Vorgangs erwartet werden.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Schlüsselskala**  
  Gibt optional die ungefähre Anzahl an Schlüsseln an, die von der Aggregation erwartet werden. Für die Transformation wird diese Information verwendet, um die anfängliche Cachegröße zu optimieren. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **Schlüsselskala** als auch **Anzahl von Schlüsseln** angegeben wurden, hat **Anzahl von Schlüsseln** Vorrang.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Unspecified|Die Eigenschaft **Schlüsselskala** wird nicht verwendet.|  
+|Nicht angegeben.|Die Eigenschaft **Schlüsselskala** wird nicht verwendet.|  
 |Niedrig|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 Schlüssel schreiben.|  
 |High|Die Aggregation kann mehr als 25.000.000 Schlüssel schreiben.|  
@@ -227,9 +228,9 @@ ms.locfileid: "86912318"
  **COUNT DISTINCT-Skala**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **COUNT DISTINCT-Skala** als auch **COUNT DISTINCT-Schlüssel** angegeben wurden, hat **COUNT DISTINCT-Schlüssel** Vorrang.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|Unspecified|Die CountDistinctScale-Eigenschaft wird nicht verwendet.|  
+|Nicht angegeben.|Die CountDistinctScale-Eigenschaft wird nicht verwendet.|  
 |Niedrig|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 unterschiedliche Werte schreiben.|  
 |High|Die Aggregation kann mehr als 25.000.000 unterschiedliche Werte schreiben.|  
@@ -238,7 +239,7 @@ ms.locfileid: "86912318"
  Gibt optional die genaue Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Wenn sowohl **COUNT DISTINCT-Skala** als auch **COUNT DISTINCT-Schlüssel** angegeben wurden, hat **COUNT DISTINCT-Schlüssel** Vorrang.  
   
  **Faktor für automatische Erweiterung**  
- Verwenden Sie einen Wert zwischen 1 und 100, um den Prozentsatz anzugeben, um den der Arbeitsspeicher während der Aggregation erweitert werden kann. Der Standardwert für diese Option ist **25 %** .  
+ Verwenden Sie einen Wert zwischen 1 und 100, um den Prozentsatz anzugeben, um den der Arbeitsspeicher während der Aggregation erweitert werden kann. Der Standardwert für diese Option ist **25 %**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   

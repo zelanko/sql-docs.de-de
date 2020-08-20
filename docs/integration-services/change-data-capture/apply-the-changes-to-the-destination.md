@@ -1,4 +1,5 @@
 ---
+description: Anwenden der Änderungen auf das Ziel
 title: Anwenden der Änderungen auf das Ziel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b8886f2f5b40b9a3a2032323be935d8df126c381
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0176dcc68e8c7f72c4bd9b78b1f3d926e52ad215
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484752"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Anwenden der Änderungen auf das Ziel
 
@@ -106,6 +107,6 @@ ms.locfileid: "86919706"
 ## <a name="optimizing-inserts-and-updates-by-using-merge-functionality"></a>Optimieren von Einfügungen und Updates mithilfe der MERGE-Funktionalität  
  Sie können die Verarbeitung von Einfügungen und Updates optimieren, indem Sie bestimmte Change Data Capture-Optionen mit der Verwendung des Transact-SQL-MERGE-Schlüsselworts kombinieren. Weitere Informationen zum MERGE-Schlüsselwort finden Sie unter [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md).  
   
- In der Transact-SQL-Anweisung, mit der die Änderungsdaten abgerufen werden, können Sie *all with merge* als den Wert des *row_filter_option*-Parameters festlegen, wenn Sie die **cdc.fn_cdc_get_net_changes_<capture_instance>** -Funktion aufrufen. Diese Change Data Capture-Funktion arbeitet effizienter, wenn sie nicht die zusätzliche Verarbeitung ausführen muss, die erforderlich ist, um Einfügungen von Updates zu unterscheiden. Wenn Sie den *all with merge* -Parameterwert angeben, ist der **__$operation** -Wert der Änderungsdaten 1 für Löschungen oder 5 für Änderungen, die durch Einfügungen oder Updates verursacht wurden. Weitere Informationen zur Transact-SQL-Funktion, die zum Abrufen der Änderungsdaten verwendet wird, finden Sie unter [Abrufen und Verstehen der Änderungsdaten](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). Nachdem Sie Änderungen mit dem *all with merge* -Parameterwert abgerufen haben, können Sie Löschungen anwenden und die übrigen Zeilen in eine temporäre Tabelle oder eine Stagingtabelle ausgeben. Sie können dann in einem Downstream-Task 'SQL Ausführen' eine einzelne MERGE-Anweisung verwenden, um alle Einfügungen oder Updates aus der Stagingtabelle auf das Ziel anzuwenden.  
+ In der Transact-SQL-Anweisung, mit der die Änderungsdaten abgerufen werden, können Sie *all with merge* als den Wert des *row_filter_option*-Parameters festlegen, wenn Sie die **cdc.fn_cdc_get_net_changes_<capture_instance>**-Funktion aufrufen. Diese Change Data Capture-Funktion arbeitet effizienter, wenn sie nicht die zusätzliche Verarbeitung ausführen muss, die erforderlich ist, um Einfügungen von Updates zu unterscheiden. Wenn Sie den *all with merge* -Parameterwert angeben, ist der **__$operation** -Wert der Änderungsdaten 1 für Löschungen oder 5 für Änderungen, die durch Einfügungen oder Updates verursacht wurden. Weitere Informationen zur Transact-SQL-Funktion, die zum Abrufen der Änderungsdaten verwendet wird, finden Sie unter [Abrufen und Verstehen der Änderungsdaten](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). Nachdem Sie Änderungen mit dem *all with merge* -Parameterwert abgerufen haben, können Sie Löschungen anwenden und die übrigen Zeilen in eine temporäre Tabelle oder eine Stagingtabelle ausgeben. Sie können dann in einem Downstream-Task 'SQL Ausführen' eine einzelne MERGE-Anweisung verwenden, um alle Einfügungen oder Updates aus der Stagingtabelle auf das Ziel anzuwenden.  
   
   

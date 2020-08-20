@@ -1,4 +1,5 @@
 ---
+description: Dialogfeld 'Spaltenkonvertierungsdetails' (SQL Server-Import/Export-Assistent)
 title: Dialogfeld „Spaltenkonvertierungsdetails“ (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 742e3aef907a5537ef6ac158fd3219251bc7762e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18e512c1834a74be5c45ce81fd859eaebb375be5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484148"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Dialogfeld 'Spaltenkonvertierungsdetails' (SQL Server-Import/Export-Assistent)
 
@@ -39,8 +40,8 @@ Dieses Beispiel zeigt Ihnen die folgenden Sachverhalte.
   
  ![Seite „Spaltenkonvertierungsdetails“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/column-conversion.png "Seite „Spaltenkonvertierungsdetails“ des Import/Export-Assistenten") 
   
-## <a name="whats-next"></a>Wie geht es weiter?  
+## <a name="whats-next"></a>Nächste Schritte  
  Nachdem Sie die Spaltenkonvertierungsdetails überprüft und auf **OK**geklickt haben, kehren Sie im Dialogfeld **Spaltenkonvertierungsdetails** zur Seite **Datentypzuordnung überprüfen** zurück. Weitere Informationen finden Sie unter [Datentypzuordnung überprüfen](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

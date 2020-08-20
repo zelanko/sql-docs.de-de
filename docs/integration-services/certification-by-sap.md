@@ -1,4 +1,5 @@
 ---
+description: Zertifizierung von SAP
 title: Zertifizierung von SAP | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 634088a2d6eec7c9a435e530d3837f46f9252470
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c6da38ed30cef94a51f5e8028358232a6179069
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484849"
 ---
 # <a name="certification-by-sap"></a>Zertifizierung von SAP
 

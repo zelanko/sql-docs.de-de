@@ -1,4 +1,5 @@
 ---
+description: Verwenden von Blockcursorn
 title: Verwenden von Blockcursorn | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f5c487bd8b60a83c709399cb9673dc0b015bd79d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67cad7220641e9c3800e89675825cf2c0b1e334d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482863"
 ---
 # <a name="using-block-cursors"></a>Verwenden von Blockcursorn
 Unterstützung für Blockcursorn ist in ODBC 3 integriert. *x*. **SQLFetch** kann nur für Abfragen mit mehreren Zeilen verwendet werden, wenn Sie in ODBC 3 aufgerufen werden. *x*; bei ODBC 2. die *x* -Anwendung ruft **SQLFetch**auf, öffnet nur einen Vorwärts Cursor mit einer einzelnen Zeile. Bei ODBC 3. die *x* -Anwendung ruft **SQLFetch** in einem ODBC 2 auf. *x* -Treiber gibt eine einzelne Zeile zurück, es sei denn, der Treiber unterstützt **SQLExtendedFetch**. Weitere Informationen finden Sie unter [Blockieren von Cursorn, scrollfähigen Cursorn und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Anhang G: Treiber Richtlinien zur Abwärtskompatibilität.  

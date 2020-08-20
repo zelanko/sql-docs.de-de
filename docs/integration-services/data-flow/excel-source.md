@@ -1,4 +1,5 @@
 ---
+description: Excel-Quelle
 title: Excel-Quelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/15/2018
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 90d9d2a7607d61b6eb777dce37950408f3376cf4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9664786703f0d9b81ce2a939bd422ea41a2fd8f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484580"
 ---
 # <a name="excel-source"></a>Excel-Quelle
 
@@ -158,6 +159,6 @@ ms.locfileid: "86913242"
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
-[Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md)  
+[Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
 [Excel-Ziel](excel-destination.md)  
 [Excel-Verbindungs-Manager](../connection-manager/excel-connection-manager.md)

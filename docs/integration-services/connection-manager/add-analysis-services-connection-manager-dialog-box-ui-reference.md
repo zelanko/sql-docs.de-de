@@ -1,4 +1,5 @@
 ---
+description: Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen
 title: Referenz zur Benutzeroberfläche des Dialogfelds „Analysis Services-Verbindungs-Manager hinzufügen“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffc3d2786ff20ec500fed130dcf6058c9f3f627d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e64a5d03e7f5e8998e2273f6dcf5b695b08b14b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484619"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen
 
@@ -30,7 +31,7 @@ ms.locfileid: "86918616"
   
  Weitere Informationen zum Analysis Services-Verbindungs-Manager finden Sie unter [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verbindung mit einem Computer mit Analysis Services herstellen**  
  Verwenden Sie die Standardverbindung mit einem Server, auf dem eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ausgeführt wird, oder erstellen Sie eine neue Verbindung, indem Sie auf **Bearbeiten**klicken.  
   

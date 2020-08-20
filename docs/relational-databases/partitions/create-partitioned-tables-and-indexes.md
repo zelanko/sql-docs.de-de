@@ -1,4 +1,5 @@
 ---
+description: Erstellen partitionierter Tabellen und Indizes
 title: Erstellen partitionierter Tabellen und Indizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147a5490d2940caebc9184e8049e7c430959b081
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a22807e98d887504cb1700e7bc3497984b699059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482533"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Erstellen partitionierter Tabellen und Indizes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "85787550"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Erstellen einer partitionierten Tabelle oder eines partitionierten Indexes mit:**  
   
@@ -111,13 +112,13 @@ ms.locfileid: "85787550"
   
 #### <a name="to-create-a-partitioned-table"></a>So erstellen Sie eine partitionierte Tabelle  
   
-1.  Klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie partitionieren möchten, zeigen Sie auf **Speicher**, und klicken Sie dann auf **Partition erstellen...** .  
+1.  Klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie partitionieren möchten, zeigen Sie auf **Speicher**, und klicken Sie dann auf **Partition erstellen...**.  
   
 2.  Klicken Sie im **Assistent zum Erstellen von Partitionen**auf der Seite **Willkommen beim Assistenten zum Erstellen von Partitionen** auf **Weiter**.  
   
 3.  Wählen Sie auf der Seite **Partitionierungsspalte auswählen** im Raster **Verfügbare Partitionierungsspalten** die Spalte aus, an der Sie die Tabelle partitionieren möchten. Im Raster **Verfügbare Partitionierungsspalten** werden nur Spalten mit Datentypen angezeigt, die zum Partitionieren von Daten verwendet werden können. Wenn Sie eine berechnete Spalte als Partitionierungsspalte auswählen, muss die Spalte als persistente berechnete Spalte gekennzeichnet sein.  
   
-     Die Auswahlmöglichkeiten, die Ihnen für die Partitionierungsspalte und den Wertebereich zur Verfügung stehen, werden in erster Linie durch das Ausmaß bestimmt, in dem Ihre Daten auf logische Weise gruppiert werden können. So können Sie z. B. die Daten nach Monaten oder Quartalen in logische Gruppierungen aufteilen. Ob die logische Gruppierung für die Verwaltung der Tabellenpartitionen geeignet ist, hängt von den Abfragen ab, die Sie für die Daten ausführen möchten. Als Partitionierungsspalte sind alle Datentypen außer **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , Aliasdatentypen oder CLR-benutzerdefinierten Datentypen, zulässig.  
+     Die Auswahlmöglichkeiten, die Ihnen für die Partitionierungsspalte und den Wertebereich zur Verfügung stehen, werden in erster Linie durch das Ausmaß bestimmt, in dem Ihre Daten auf logische Weise gruppiert werden können. So können Sie z. B. die Daten nach Monaten oder Quartalen in logische Gruppierungen aufteilen. Ob die logische Gruppierung für die Verwaltung der Tabellenpartitionen geeignet ist, hängt von den Abfragen ab, die Sie für die Daten ausführen möchten. Als Partitionierungsspalte sind alle Datentypen außer **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, Aliasdatentypen oder CLR-benutzerdefinierten Datentypen, zulässig.  
   
      Die folgenden zusätzlichen Optionen sind auf dieser Seite verfügbar:  
   
@@ -203,7 +204,7 @@ ms.locfileid: "85787550"
   
                 -   Wenn Sie **Tag**auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am 15. ausgeführt wird, wählen Sie **Tag** aus, und geben Sie in das erste Feld „15“ und in das zweite Feld „2“ ein. Beachten Sie, dass die größte im zweiten Feld zulässige Zahl „99“ ist.  
   
-                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag** und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld „2“ ein. Sie können auch **erster**, **zweiter**, **dritter**oder **vierter**sowie bestimmte Wochentage (z.B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zulässige Zahl „99“ ist.  
+                -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag** und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld „2“ ein. Sie können auch **ersten**, **zweiten**, **dritten**oder **vierten**sowie bestimmte Wochentage z. B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zulässige Zahl „99“ ist.  
   
         2.  Geben Sie unter **Häufigkeit pro Tag**an, wie oft der Auftragszeitplan an dem Tag wiederholt werden soll, an dem der Auftragszeitplan ausgeführt wird:  
   
@@ -384,7 +385,7 @@ ms.locfileid: "85787550"
   
 #### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>So definieren Sie die Partitionsspalte für eine partitionierte Tabelle  
   
-1.  Die folgende Abfrage gibt den Namen der Partitionierungsspalte für die Tabelle zurück. [https://login.microsoftonline.com/consumers/](`PartitionTable`).  
+1.  Die folgende Abfrage gibt den Namen der Partitionierungsspalte für die Tabelle zurück. `PartitionTable`.  
   
     ```  
     SELECT   
@@ -411,7 +412,7 @@ ms.locfileid: "85787550"
   
  Weitere Informationen finden Sie unter  
   
--   [ALTER DATABASE-Optionen für Dateien und Dateigruppen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
+-   [ALTER DATABASE-Optionen Datei und Dateigruppe &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   
 -   [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   
