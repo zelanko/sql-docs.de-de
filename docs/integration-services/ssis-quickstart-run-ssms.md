@@ -1,4 +1,5 @@
 ---
+description: Ausführen eines SSIS-Pakets mit SQL Server Management Studio (SSMS)
 title: Ausführen eines SSIS-Pakets mit SSMS | Microsoft-Dokumentation
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e89ca342011010eebb330eb20319a2bf9a8d9ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d884f38d93d7e79094fd1e2074e92e37050ddfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477244"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Ausführen eines SSIS-Pakets mit SQL Server Management Studio (SSMS)
 
@@ -75,7 +76,7 @@ Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Kata
 
 2. Klicken Sie mit der rechten Maustaste, und wählen Sie **Ausführen** aus. Das Dialogfeld **Paket ausführen** wird geöffnet.
 
-3.  Konfigurieren Sie die Paketausführung im Dialogfeld „Paket ausführen“ mit den Einstellungen auf den Registerkarten **Parameter**, **Verbindungs-Manager** und **Erweitert**.
+3.  Konfigurieren Sie die Paketausführung mit den Einstellungen im Dialogfeld **Paket ausführen**auf den Registerkarten **Parameter**, **Verbindungs-Managern** und Erweitert .
 
 4.  Klicken Sie auf „OK“, um das Paket auszuführen.
 

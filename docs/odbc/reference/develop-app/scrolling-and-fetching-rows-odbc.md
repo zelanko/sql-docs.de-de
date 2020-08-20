@@ -1,4 +1,5 @@
 ---
+description: Durchscrollen und Abrufen von Zeilen (ODBC)
 title: Scrollen und Abrufen von Zeilen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 72d262bf73e69388f65ff281e62235d2d831669e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6fcdd2cd635a7da66a5d81c4beb24088f96382b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476492"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Durchscrollen und Abrufen von Zeilen (ODBC)
 Wenn Sie einen Bild lauffähigen Cursor verwenden, rufen Anwendungen **SQLFetchScroll** auf, um den Cursor zu positionieren und Zeilen abzurufen. **SQLFetchScroll** unterstützt den relativen Bildlauf (Next, vorherige und relative *n* Zeilen), den absoluten Bildlauf (First, Last und Row *n*) und die Positionierung nach Lesezeichen. Die Argumente " *FetchOrientation* " und " *FetchOffset* " in **SQLFetchScroll** geben an, welches Rowset abgerufen werden soll, wie in den folgenden Diagrammen dargestellt.  

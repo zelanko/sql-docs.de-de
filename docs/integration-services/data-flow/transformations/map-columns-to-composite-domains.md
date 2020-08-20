@@ -1,4 +1,5 @@
 ---
+description: Zuordnen von Spalten zu Verbunddomänen
 title: Zuordnen von Spalten zu Verbunddomänen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 311b7d3117d0c8675ed6399c9eeaf85247373295
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4508244cb9558cc63c9e1b2185c89c5a43d659cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477668"
 ---
 # <a name="map-columns-to-composite-domains"></a>Zuordnen von Spalten zu Verbunddomänen
 
@@ -56,7 +57,7 @@ ms.locfileid: "86919236"
   
 6.  Legen Sie nach Bedarf Eigenschaften auf der Registerkarte **Erweitert** fest. Weitere Informationen zu den Eigenschaften finden Sie unter [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [DQS-Bereinigungstransformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

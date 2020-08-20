@@ -1,4 +1,5 @@
 ---
+description: Beispiele für erweiterte SQL Server Integration Services-Ausdrücke
 title: Beispiele für erweiterte SQL Server Integration Services-Ausdrücke | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbf2c304cf97dfad85fbdb53ca83fd7922e3a128
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e0ab5a444d660d505ae6b71cd34cf5253686d3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477594"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Beispiele für erweiterte SQL Server Integration Services-Ausdrücke
 
@@ -29,7 +30,7 @@ ms.locfileid: "86917650"
 
   In diesem Abschnitt werden Beispiele für erweiterte Ausdrücke bereitgestellt, die mehrere Operatoren und Funktionen kombinieren. Falls ein Ausdruck in einer Rangfolgeneinschränkung oder der Transformation für bedingtes Teilen verwendet wird, muss er zu einem booleschen Wert ausgewertet werden. Diese Einschränkung gilt jedoch nicht für Ausdrücke, die in Eigenschaftsausdrücken, Variablen, der Transformation für abgeleitete Spalten oder im For-Schleifencontainer verwendet werden.  
   
- In den folgenden Beispiele werden die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken **AdventureWorks** und [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] verwendet. Jedes Beispiel identifiziert die verwendeten Tabellen.  
+ In den folgenden Beispiele werden die [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken **AdventureWorks** und [!INCLUDE[msCoName](../../includes/msconame-md.md)] verwendet. Jedes Beispiel identifiziert die verwendeten Tabellen.  
   
 ## <a name="boolean-expressions"></a>Boolesche Ausdrücke  
   

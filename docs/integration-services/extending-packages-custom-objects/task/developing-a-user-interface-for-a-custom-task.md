@@ -1,4 +1,5 @@
 ---
+description: Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task
 title: Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ef58fe4cdc604f0b23d97d5b4538cb1ffb629a35
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2819e52dfe651cb7fde80560c3edd28745376179
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477390"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task
 
@@ -49,7 +50,7 @@ ms.locfileid: "86916336"
  Ein Task und seine Benutzeroberfläche sind separate Entitäten. Sie sollten in separaten Assemblys implementiert werden, um den Aufwand bei der Lokalisierung, der Bereitstellung und den Wartungsarbeiten zu reduzieren. Mit Ausnahme der Informationen, die in den im Task codierten<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attributwerten enthalten sind, werden von der DLL keine Informationen zur Benutzeroerfläche geladen oder aufgerufen bzw. sind solche Informationen in der Regel nicht in ihr enthalten. Dies ist die einzige Möglichkeit der Zuordnung eines Task zu seiner Benutzeroberfläche.  
   
 ## <a name="the-dtstask-attribute"></a>Das DtsTask-Attribut  
- Das <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attribut ist im Code der Taskklasse enthalten, um den Task seiner Benutzeroberfläche zuzuordnen. Der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer nutzt die Eigenschaften des Attributs, um zu ermitteln, wie der Task im Designer angezeigt werden soll. Diese Eigenschaften schließen den anzuzeigenden Namen und ggf. das Symbol ein.  
+ Das <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attribut ist im Code der Taskklasse enthalten, um den Task seiner Benutzeroberfläche zuzuordnen. Der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer nutzt die Eigenschaften des Attributs, um zu ermitteln, wie der Task im Designer angezeigt werden soll.  Diese Eigenschaften schließen den anzuzeigenden Namen und ggf. das Symbol ein.  
   
  In der folgenden Tabelle werden die Eigenschaften des <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attributs beschrieben.  
   

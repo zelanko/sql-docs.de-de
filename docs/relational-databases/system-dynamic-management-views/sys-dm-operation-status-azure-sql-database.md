@@ -1,4 +1,5 @@
 ---
+description: sys.dm_operation_status
 title: sys. dm_operation_status | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/05/2017
@@ -19,12 +20,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 080d12cdcf945fe34a2c8f1ab9ea7414e714da8c
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: ef9d5634a9520ce0d71fce1c866c32f46c5b3793
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474833"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -32,7 +33,7 @@ ms.locfileid: "87544383"
 
   Gibt Informationen zu den Vorgängen zurück, die für Datenbanken auf einem [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Server ausgeführt werden.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|ID des Vorgangs. Nicht NULL.|  
 |resource_type|**int**|Bezeichnet den Typ der Ressource, für die der Vorgang ausgeführt wird. Nicht NULL. In der aktuellen Version verfolgt diese Sicht nur die Vorgänge nach, die für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausgeführt werden. Der entsprechende ganzzahlige Wert ist 0.|  

@@ -1,4 +1,5 @@
 ---
+description: SHORTEST_PATH (Transact-SQL)
 title: Kürzeste Pfade (SQL-Graph) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/01/2020
@@ -18,11 +19,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475840"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -86,7 +88,7 @@ Um Attribute aus dem letzten Knoten des durchsuchten Pfades zu projizieren, kann
 
 **Letzter Knoten**: der letzte Knoten verweist auf den Knoten, der zuletzt im durchsuchten Pfad angezeigt wird, unabhängig von der Richtung des Pfeils im Übereinstimmungs Prädikat. Beispiel: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Hier ist der letzte Knoten im Pfad der zuletzt besuchte P-Knoten. 
 
-Der letzte Knoten ist hingegen der letzte n-te Knoten im Ausgabe Diagramm Pfad für dieses Muster:`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+Der letzte Knoten ist hingegen der letzte n-te Knoten im Ausgabe Diagramm Pfad für dieses Muster: `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 Diese Funktion gibt die Summe der angegebenen Knoten-/edgeattributwerte oder des Ausdrucks zurück, die im durchsuchten Pfad aufgetreten sind.
@@ -107,7 +109,7 @@ Gibt den minimalen Wert aus den angegebenen Knoten-/edgeattributwerten oder dem 
 ### <a name="max"></a>MAX
 Gibt den maximalen Wert aus den angegebenen Knoten-/edgeattributwerten oder dem Ausdruck zurück, der im durchsuchten Pfad aufgetreten ist.
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 shortest_path Funktion kann nur innerhalb von Match verwendet werden.     
 LAST_NODE wird nur in shortest_path unterstützt.     
 Das Auffinden von gewichtetem kürzesten Pfad wird nicht unterstützt.         

@@ -1,4 +1,5 @@
 ---
+description: sys.server_event_session_targets (Transact-SQL)
 title: sys. server_event_session_targets (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b99adfbd57d8062cec0b3cc493095312f06020f8
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0d7a67610844722fc7b280223e31f096ad534679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475267"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -43,10 +44,10 @@ ms.locfileid: "87442436"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Sicht hat die folgende Kardinalität der Beziehungen.  
   
-| From | To | Beziehung |
+| Von | An | Beziehung |
 | ---- | -- | ------------ |
 |sys.server_event_session_targets.event_session_id|sys. server_event_sessions. event_session_id|n:1|  
   

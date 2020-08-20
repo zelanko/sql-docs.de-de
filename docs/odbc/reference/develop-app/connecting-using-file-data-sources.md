@@ -1,4 +1,5 @@
 ---
+description: Herstellen einer Verbindung mithilfe von Dateidatenquellen
 title: Herstellen einer Verbindung mithilfe von Datei Datenquellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c752fc3b09c06c68dcc216cacac63744dc3101b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ab210a77d1d6516b6b54ba25767d859ff9102fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476762"
 ---
 # <a name="connecting-using-file-data-sources"></a>Herstellen einer Verbindung mithilfe von Dateidatenquellen
 Die Verbindungsinformationen für eine Datei Datenquelle werden in einer DSN-Datei gespeichert. Folglich kann die Verbindungs Zeichenfolge wiederholt von einem einzelnen Benutzer verwendet werden oder von mehreren Benutzern gemeinsam verwendet werden, wenn der entsprechende Treiber installiert ist. Die Datei enthält einen Treiber Namen (oder einen anderen Datenquellen Namen im Fall einer nicht in der Share baren Datei Datenquelle) und optional eine Verbindungs Zeichenfolge, die von **SQLDriverConnect**verwendet werden kann. Der Treiber-Manager erstellt die Verbindungs Zeichenfolge für den **SQLDriverConnect** -Befehl aus den Schlüsselwörtern in der DSN-Datei.  

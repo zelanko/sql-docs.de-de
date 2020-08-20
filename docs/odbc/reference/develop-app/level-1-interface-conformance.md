@@ -1,4 +1,5 @@
 ---
+description: Schnittstellenübereinstimmung auf Ebene 1
 title: Schnittstellen Konformität der Ebene 1 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 29f59cf06eac1ce0f6589ad9c7cba8491e8383b5
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e92b68c9e8864e79c495c9405f905fa5a4f37acf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476572"
 ---
 # <a name="level-1-interface-conformance"></a>Schnittstellenübereinstimmung auf Ebene 1
 Die Schnittstelle für die Schnittstellen Konformität der Ebene 1 umfasst die grundlegende Funktionalität der Schnittstellen Konformität sowie zusätzliche Funktionen, wie z. b. Transaktionen, die normalerweise in einem relationalen OLTP-DBMS verfügbar sind. Mithilfe eines Schnittstellen kompatiblen Treibers der Ebene 1 kann die Anwendung zusätzlich zu den Features im Übereinstimmungs Grad der Kernschnittstelle folgende Aktionen ausführen:  
   
-|Funktions Nummer|BESCHREIBUNG|  
+|Funktions Nummer|Beschreibung|  
 |-|-|  
 |101|Geben Sie das Schema von Datenbanktabellen und-Sichten an (mit zweit Eider Benennung). (Weitere Informationen finden Sie unter die dreiteilige Benennungs Funktion 201 in der [Schnittstellen Konformität der Ebene 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)|  
 |102|Rufen Sie die tatsächliche asynchrone Ausführung von ODBC-Funktionen auf, bei denen anwendbare ODBC-Funktionen alle synchron oder alle asynchron für eine bestimmte Verbindung sind.|  

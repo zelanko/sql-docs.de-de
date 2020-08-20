@@ -1,4 +1,5 @@
 ---
+description: Datenbank erstellen (SQL Server-Import/Export-Assistent)
 title: Datenbank erstellen (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/17/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f3616da1034fa0c590a4544691e22ffd054eaa10
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477271"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Datenbank erstellen (SQL Server-Import/Export-Assistent)
 
@@ -62,7 +63,7 @@ Ausführliche Informationen zu diesen Anforderungen finden Sie unter [Datenbankb
 > Sie müssen im Feld **Name** einen Namen für die neue Datenbank angeben, die Einstellungen für Dateigröße und Dateivergrößerung können Sie auf den Standardwerten belassen.
 
 ### <a name="data-file-options"></a>Optionen für Datendateien  
- **Anfangsgröße**  
+ **Ursprüngliche Größe**  
  Geben Sie die Anzahl der Megabytes für die Anfangsgröße der Datendatei an.  
   
  **Keine Vergrößerung zulässig**  
@@ -75,7 +76,7 @@ Ausführliche Informationen zu diesen Anforderungen finden Sie unter [Datenbankb
  Geben Sie die Anzahl der Megabytes an, um die die Datendatei wachsen kann.  
   
 ### <a name="log-file-options"></a>Protokolldateioptionen  
- **Anfangsgröße**  
+ **Ursprüngliche Größe**  
  Geben Sie die Anzahl der Megabytes für die Anfangsgröße der Protokolldatei an.  
   
  **Keine Vergrößerung zulässig**  
@@ -90,6 +91,6 @@ Ausführliche Informationen zu diesen Anforderungen finden Sie unter [Datenbankb
 ### <a name="more-info"></a>Weitere Informationen
 Weitere Informationen zu den Optionen für die Dateigröße, die auf dieser Seite angezeigt werden, finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
 
-## <a name="whats-next"></a>Wie geht es weiter?  
+## <a name="whats-next"></a>Nächste Schritte  
  Nachdem Sie einen Namen für die neue Datenbank angegeben und auf **OK**geklickt haben, wechselt das Dialogfeld **Datenbank erstellen** wieder zurück zur Seite **Ziel auswählen** . Weitere Informationen finden Sie unter [Ziel auswählen](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
 

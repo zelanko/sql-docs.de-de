@@ -1,4 +1,5 @@
 ---
+description: Benachrichtigung der Asynchronen Funktionsvollendung
 title: Benachrichtigung über den Abschluss der asynchronen Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a453967f2ffdda4af2a44429737f700f4a994cf8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6e762e6b144e6a713f22429dccf43e1d27d8b24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476259"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Benachrichtigung der Asynchronen Funktionsvollendung
 Im Windows 8 SDK wurde von ODBC ein Mechanismus hinzugefügt, mit dem Anwendungen benachrichtigt werden, wenn ein asynchroner Vorgang abgeschlossen ist. Dies wird als "Benachrichtigung bei Abschluss" bezeichnet. (Weitere Informationen finden Sie unter [asynchrone Ausführung (Benachrichtigungs Methode)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) .) In diesem Thema werden einige der Probleme für Treiber Entwickler erläutert.  

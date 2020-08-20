@@ -1,4 +1,5 @@
 ---
+description: Blockcursor
 title: Blockcursor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa35888ef93da9648fe6422bdc35ebf9da3a0525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dece0e3ecfc5ef4f3116361a202cfa2d10863ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476822"
 ---
 # <a name="block-cursors"></a>Blockcursor
 Viele Anwendungen verbringen einen beträchtlichen Zeitaufwand für das Übertragen von Daten über das Netzwerk. Ein Teil dieses Zeitraums ist das eigentliche Einbinden der Daten über das Netzwerk, und ein Teil davon ist für den Netzwerk Aufwand aufgewendet, z. b. durch den Aufruf des Treibers, eine Daten Zeile anzufordern. Die letztgenannte Zeit kann reduziert werden, wenn die Anwendung eine effiziente Verwendung von *Block* -oder *FAT* - *Cursorn* durchführt, die mehrere Zeilen gleichzeitig zurückgeben können.  

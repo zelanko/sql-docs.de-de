@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_xtp_index_stats (Transact-SQL)
 title: sys. dm_db_xtp_index_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/29/2016
@@ -20,12 +21,12 @@ ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91afcf9bc654c73b6dad416bf9c5d114ca1edee5
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 096398c66e43ae36a9d2565394a7621ad45a4260
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475062"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -44,17 +45,17 @@ ms.locfileid: "87442693"
 |scans_retries|**bigint**|Anzahl der Indexscans, die wiederholt werden mussten.|  
 |rows_returned|**bigint**|Kumulierte Anzahl der Zeilen, die seit dem Erstellen der Tabelle oder dem Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben wurden.|  
 |rows_touched|**bigint**|Kumulierte Anzahl der Zeilen, auf die seit dem Erstellen der Tabelle oder dem Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugegriffen wurde.|  
-|rows_expiring|**bigint**|Nur zur internen Verwendung.|  
-|rows_expired|**bigint**|Nur zur internen Verwendung.|  
-|rows_expired_removed|**bigint**|Nur zur internen Verwendung.|  
-|phantom_scans_started|**bigint**|Nur zur internen Verwendung.|  
-|phantom_scans_retries|**bigint**|Nur zur internen Verwendung.|  
-|phantom_rows_touched|**bigint**|Nur zur internen Verwendung.|  
-|phantom_expiring_rows_encountered|**bigint**|Nur zur internen Verwendung.|  
-|phantom_expired_rows_encountered|**bigint**|Nur zur internen Verwendung.|  
-|phantom_expired_removed_rows_encountered|**bigint**|Nur zur internen Verwendung.|  
-|phantom_expired_rows_removed|**bigint**|Nur zur internen Verwendung.|  
-|object_address|**varbinary(8)**|Nur zur internen Verwendung.|  
+|rows_expiring|**bigint**|Nur interne Verwendung.|  
+|rows_expired|**bigint**|Nur interne Verwendung.|  
+|rows_expired_removed|**bigint**|Nur interne Verwendung.|  
+|phantom_scans_started|**bigint**|Nur interne Verwendung.|  
+|phantom_scans_retries|**bigint**|Nur interne Verwendung.|  
+|phantom_rows_touched|**bigint**|Nur interne Verwendung.|  
+|phantom_expiring_rows_encountered|**bigint**|Nur interne Verwendung.|  
+|phantom_expired_rows_encountered|**bigint**|Nur interne Verwendung.|  
+|phantom_expired_removed_rows_encountered|**bigint**|Nur interne Verwendung.|  
+|phantom_expired_rows_removed|**bigint**|Nur interne Verwendung.|  
+|object_address|**varbinary(8)**|Nur interne Verwendung.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung für die aktuelle Datenbank.  

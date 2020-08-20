@@ -1,4 +1,5 @@
 ---
+description: Ausführen eines SSIS-Pakets mit C#-Code in einer .NET-App
 title: Ausführen eines SSIS-Projekts mit .NET-Code (C#) | Microsoft-Dokumentation
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbc0cfc7a5ef22487a22ade0f65cbf76ac78645c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 03be806b29fa46c04b38bab822c848f96a0c516d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477210"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Ausführen eines SSIS-Pakets mit C#-Code in einer .NET-App
 

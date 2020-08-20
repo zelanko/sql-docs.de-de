@@ -1,4 +1,5 @@
 ---
+description: Scrollbare Cursortypen
 title: Scrollbare Cursor Typen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 63f29269ea209875a2e775cf8d523302fcb9a976
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c27ccd54bfe0ba099d78c002fce4c901e4bf8c1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476512"
 ---
 # <a name="scrollable-cursor-types"></a>Scrollbare Cursortypen
 Die vier Typen von scrollfähigen Cursorn sind statisch, dynamisch, keysetgesteuert und gemischt. Statische Cursor erkennen wenige oder keine Änderungen, sind aber relativ kostengünstig zu implementieren. Dynamische Cursor erkennen alle Änderungen, sind aber aufwendig zu implementieren. Keysetgesteuerte und gemischte Cursor befinden sich dazwischen und erkennen die meisten Änderungen, aber weniger Kosten als dynamische Cursor.  

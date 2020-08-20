@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobserver (Transact-SQL)
 title: sp_delete_jobserver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf97ac7ffd72cf6f3d8b0d04987fa1eacce47835
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ef3896c2e425d1b85c80bd4b7fa057df4f8b5df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474344"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id`Die ID des Auftrags, aus dem der angegebene Zielserver entfernt wird. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, aus dem der angegebene Zielserver entfernt wird. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'`Der Name des Auftrags, aus dem der angegebene Zielserver entfernt wird. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, aus dem der angegebene Zielserver entfernt wird. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *job_id* oder *job_name* angegeben werden. Beide können nicht angegeben werden.  
   
-`[ @server_name = ] 'server'`Der Name des Zielservers, der aus dem angegebenen Auftrag entfernt werden soll. der *Server* ist vom Datentyp **nvarchar (30)** und hat keinen Standardwert. der *Server* kann **(local)** oder der Name eines Remote Zielservers sein.  
+`[ @server_name = ] 'server'` Der Name des Zielservers, der aus dem angegebenen Auftrag entfernt werden soll. der *Server* ist vom Datentyp **nvarchar (30)** und hat keinen Standardwert. der *Server* kann **(local)** oder der Name eines Remote Zielservers sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

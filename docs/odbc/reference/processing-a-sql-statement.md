@@ -1,4 +1,5 @@
 ---
+description: Verarbeiten von SQL-Anweisungen
 title: Verarbeiten einer SQL-Anweisung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 349a62034d598c1bfb44b891b91359d5ff184b7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b4ce614f6dcf4c1fe0ab1e1c806b966b4267e7fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476217"
 ---
 # <a name="processing-a-sql-statement"></a>Verarbeiten von SQL-Anweisungen
 Bevor Sie die Techniken zur programmgesteuerten Verwendung von SQL erörtern, muss erläutert werden, wie eine SQL-Anweisung verarbeitet wird. Die erforderlichen Schritte gelten für alle drei Techniken, obwohl die einzelnen Techniken Sie zu unterschiedlichen Zeitpunkten ausführen. In der folgenden Abbildung werden die Schritte zum Verarbeiten einer SQL-Anweisung gezeigt, die im restlichen Teil dieses Abschnitts erläutert werden.  

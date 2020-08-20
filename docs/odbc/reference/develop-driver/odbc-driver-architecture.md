@@ -1,4 +1,5 @@
 ---
+description: ODBC-Treiberarchitektur
 title: ODBC-Treiberarchitektur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 712de6a7a3f80ce1cd3ca854a88765dbfa531356
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1789d5799ed9eb15ace7ea263d1a5804c8e86e74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476246"
 ---
 # <a name="odbc-driver-architecture"></a>ODBC-Treiberarchitektur
 Treiber-Writer müssen beachten, dass die Treiberarchitektur sich darauf auswirken kann, ob eine Anwendung DBMS-spezifisches SQL verwenden kann.  
@@ -54,5 +55,5 @@ Treiber-Writer müssen beachten, dass die Treiberarchitektur sich darauf auswirk
 |Aktivieren von Verbindungspooling|[ODBC-Verbindungs Pooling](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[Herstellen einer Verbindung mit einer Datenquelle oder einem Treiber](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)in der ODBC-Programmier Referenz|  
 |Unicode/ANSI-Treiber und Verbindungsprobleme|[Unicode-Treiber](../../../odbc/reference/develop-app/unicode-drivers.md)|[Überlegungen zur Programmierung](../../../odbc/reference/develop-app/programming-considerations.md)in der ODBC-Programmier Referenz|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Developing an ODBC Driver (Entwickeln eines ODBC-Treibers)](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

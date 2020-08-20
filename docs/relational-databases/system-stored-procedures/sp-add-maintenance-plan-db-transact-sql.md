@@ -1,4 +1,5 @@
 ---
+description: sp_add_maintenance_plan_db (Transact-SQL)
 title: sp_add_maintenance_plan_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b3f28d23925e76383b30a82e907394e05b2b7ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d8369e3cdd8ad7d7c943e715361cbd26d99bb00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474621"
 ---
 # <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @plan_id = ] 'plan_id'`Gibt die Plan-ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
+`[ @plan_id = ] 'plan_id'` Gibt die Plan-ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
   
-`[ @db_name = ] 'database_name'`Gibt den Namen der Datenbank an, die dem Wartungsplan hinzugefügt werden soll. Die Datenbank muss erstellt werden oder vorhanden sein, bevor sie dem Plan hinzugefügt wird. *database_name* ist **sysname**  
+`[ @db_name = ] 'database_name'` Gibt den Namen der Datenbank an, die dem Wartungsplan hinzugefügt werden soll. Die Datenbank muss erstellt werden oder vorhanden sein, bevor sie dem Plan hinzugefügt wird. *database_name* ist **sysname**  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

@@ -1,4 +1,5 @@
 ---
+description: Scrollbare Cursor und Transaktionsisolation
 title: Scrollbare Cursor und Transaktions Isolation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7e40278bd209132736aee2788b5648ffa84a44e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 790b2d0c4d80c821645c3a4360d1295cc55a8a4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476502"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Scrollbare Cursor und Transaktionsisolation
 In der folgenden Tabelle sind die Faktoren aufgeführt, die die Sichtbarkeit von Änderungen bestimmen.  
@@ -39,18 +40,18 @@ In der folgenden Tabelle sind die Faktoren aufgeführt, die die Sichtbarkeit von
   
 |Cursor type\action|Self|Heimat<br /><br /> Transaktion|Andere<br /><br /> Transaktion<br /><br /> (Ru [a])|Andere<br /><br /> Transaktion<br /><br /> (RC [a])|Andere<br /><br /> Transaktion<br /><br /> (RR [a])|Andere<br /><br /> Transaktion<br /><br /> (S [a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
-|Statisch|||||||  
-|Einfügen|Vielleicht [b]|Nein |Nein |Nein |Nein |Nein|  
-|Aktualisieren|Vielleicht [b]|Nein |Nein |Nein |Nein |Nein|  
-|Löschen|Vielleicht [b]|Nein |Nein |Nein |Nein |Nein|  
+|statischen|||||||  
+|Einfügen|Vielleicht [b]|Nein|Nein|Nein|Nein|Nein|  
+|Aktualisieren|Vielleicht [b]|Nein|Nein|Nein|Nein|Nein|  
+|Löschen|Vielleicht [b]|Nein|Nein|Nein|Nein|Nein|  
 |Keysetgesteuert|||||||  
-|Einfügen|Vielleicht [b]|Nein |Nein |Nein |Nein |Nein|  
-|Aktualisieren|Ja|Ja|Ja|Ja|Nein |Nein|  
-|Löschen|Vielleicht [b]|Ja|Ja|Ja|Nein |Nein|  
+|Einfügen|Vielleicht [b]|Nein|Nein|Nein|Nein|Nein|  
+|Aktualisieren|Ja|Ja|Ja|Ja|Nein|Nein|  
+|Löschen|Vielleicht [b]|Ja|Ja|Ja|Nein|Nein|  
 |Dynamisch|||||||  
 |Einfügen|Ja|Ja|Ja|Ja|Ja|Nein|  
-|Aktualisieren|Ja|Ja|Ja|Ja|Nein |Nein|  
-|Löschen|Ja|Ja|Ja|Ja|Nein |Nein|  
+|Aktualisieren|Ja|Ja|Ja|Ja|Nein|Nein|  
+|Löschen|Ja|Ja|Ja|Ja|Nein|Nein|  
   
  [a] die Buchstaben in Klammern geben die Isolationsstufe der Transaktion an, die den Cursor enthält. die Isolationsstufe der anderen Transaktion (in der die Änderung vorgenommen wurde) ist irrelevant.  
   

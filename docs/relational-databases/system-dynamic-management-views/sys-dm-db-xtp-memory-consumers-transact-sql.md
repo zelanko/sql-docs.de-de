@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_xtp_memory_consumers (Transact-SQL)
 title: sys. dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
@@ -20,12 +21,12 @@ ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbe9d8a69a9bbe788c082cf2d684e0dd6763b1e2
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: d7ab860dbb8dc850e8586f691dc2e83fb32e56da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475011"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -46,14 +47,14 @@ ms.locfileid: "87442678"
 |allocated_bytes|**bigint**|Anzahl der für den Consumer reservierten Bytes.|  
 |used_bytes|**bigint**|Die von diesem Consumer verwendeten Bytes. Gilt nur für varheap.|  
 |allocation_count|**int**|Anzahl der Zuordnungen.|  
-|partition_count|**int**|Nur zur internen Verwendung.|  
-|sizeclass_count|**int**|Nur zur internen Verwendung.|  
-|min_sizeclass|**int**|Nur zur internen Verwendung.|  
-|max_sizeclass|**int**|Nur zur internen Verwendung.|  
-|memory_consumer_address|**varbinary**|Interne Adresse des Consumers. Nur zur internen Verwendung.|  
+|partition_count|**int**|Nur interne Verwendung.|  
+|sizeclass_count|**int**|Nur interne Verwendung.|  
+|min_sizeclass|**int**|Nur interne Verwendung.|  
+|max_sizeclass|**int**|Nur interne Verwendung.|  
+|memory_consumer_address|**varbinary**|Interne Adresse des Consumers. Nur für interne Verwendung.|  
 |xtp_object_id|**bigint**|Die in-Memory-OLTP-Objekt-ID, die der Speicher optimierten Tabelle entspricht.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In der Ausgabe verweisen die Zuordnungen auf Datenbankebene auf Benutzertabellen, Indizes und Systemtabellen. VARHEAP mit object_id = NULL verweist auf Arbeitsspeicher, der Tabellen mit Spalten variabler Länge zugeordnet ist.  
   
 ## <a name="permissions"></a>Berechtigungen  

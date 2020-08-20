@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_index_keywords (Transact-SQL)
 title: sys. dm_fts_index_keywords (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3b95ce96f126249da124ea5830e7cc898fa9f8b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e57cb14d48f23235971b3adacb656277aa2d1626
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474946"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 |**column_id**|**int**|Die ID der Spalte für die Volltextindizierung des aktuellen Schlüsselworts.|  
 |**document_count**|**int**|Die Anzahl der Dokumente bzw. Zeilen, die den aktuellen Begriff enthalten.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Informationen, die von **sys. dm_fts_index_keywords** zurückgegeben werden, sind unter anderem nützlich, um Folgendes zu ermitteln:  
   
 -   Ob ein Schlüsselwort ein Teil des Volltextindexes ist  
@@ -77,7 +78,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 >  Der von **sys. dm_fts_index_keywords** zurückgegebene **document_count** kann für ein bestimmtes Dokument weniger genau sein als die von **sys. dm_fts_index_keywords_by_document** oder einer **enthält** -Abfrage zurückgegebene Anzahl. Die mögliche Ungenauigkeit liegt bei ca. 1 %. Diese ingenauigkeit kann auftreten, wenn eine **document_id** zweimal gezählt werden kann, wenn Sie über mehr als eine Zeile im Index Fragment hinweg fortgesetzt wird, oder wenn Sie mehrmals in derselben Zeile angezeigt wird. Um einen genaueren Zähler für ein bestimmtes Dokument zu erhalten, verwenden Sie **sys. dm_fts_index_keywords_by_document** oder eine **enthält** -Abfrage.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
   

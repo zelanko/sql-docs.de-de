@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_nodes (Transact-SQL)
 title: sys. dm_pdw_nodes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,22 +13,22 @@ ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ba367379795408a79b412c5b4c04097484bfd2b
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: b999f7e10baece4566ebe0dd87b96b92eaabac53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474768"
 ---
 # <a name="sysdm_pdw_nodes-transact-sql"></a>sys. dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Enthält Informationen zu allen Knoten in [!INCLUDE[ssAPS](../../includes/ssaps-md.md)] . Es wird eine Zeile pro Knoten in der Appliance aufgelistet.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|Eindeutige numerische ID, die dem Knoten zugeordnet ist.<br /><br /> Der Schlüssel für diese Ansicht.|In der gesamten Appliance eindeutig, unabhängig vom Typ.|  
-|Typ|**nvarchar(32)**|Der Typ des Knotens.|"Compute", "Control", "Management"|  
+|type|**nvarchar(32)**|Der Typ des Knotens.|"Compute", "Control", "Management"|  
 |name|**nvarchar(32)**|Logischer Name des Knotens.|Eine beliebige Zeichenfolge mit entsprechender Länge.|  
 |address|**nvarchar(32)**|Die IP-Adresse dieses Knotens.|Im Format [0-255]. [0-255]. [0-255]. [0-255].|  
 |is_passive|**int**|Gibt an, ob der virtuelle Computer, auf dem der Knoten ausgeführt wird, auf dem zugewiesenen Server oder ein Failover auf den Ersatz Server ausgeführt wird.|0-Knoten-VM wird auf dem ursprünglichen Server ausgeführt.<br /><br /> 1-Knoten-VM wird auf dem Ersatz Server ausgeführt.|  

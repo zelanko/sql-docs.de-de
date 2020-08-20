@@ -1,4 +1,5 @@
 ---
+description: Transaktionsunterstützung
 title: Transaktionsunterstützung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5b9d731d12329a4ef663b1ea66cdc59a0b153fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0218941606752ccd93c7bc9bdfe31096682c6d87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476329"
 ---
 # <a name="transaction-support"></a>Transaktionsunterstützung
 Der Grad der Unterstützung für Transaktionen ist Treiber definiert. ODBC ist für die Implementierung in einer Einzelbenutzer-oder Desktop Datenbank konzipiert, die nicht mehrere Datenaktualisierungen verwalten muss. Darüber hinaus tun einige Datenbanken, die Transaktionen unterstützen, dies nur für die DML-Anweisungen (Data Manipulation Language, Daten Bearbeitungs Sprache) von SQL. Es gibt Einschränkungen oder eine spezielle Transaktions Semantik in Bezug auf die Verwendung der DDL (Data Definition Language), wenn eine Transaktion aktiv ist. Das heißt, es gibt möglicherweise Transaktionsunterstützung für mehrere gleichzeitige Aktualisierungen von Tabellen, jedoch nicht zum Ändern der Anzahl und Definition von Tabellen während einer Transaktion.  

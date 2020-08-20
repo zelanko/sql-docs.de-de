@@ -1,4 +1,5 @@
 ---
+description: Operatorenrangfolge und -assoziativität
 title: Operatorenrangfolge und -assoziativität | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 801f0358ce5dd6b68e42aff37e7135ec813b3bc0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cda01c12856bff3e28b06c9cfddccb368e6a3e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477497"
 ---
 # <a name="operator-precedence-and-associativity"></a>Operatorenrangfolge und -assoziativität
 
@@ -31,9 +32,9 @@ ms.locfileid: "86901257"
   
 |Operatorsymbol|Vorgangstyp|Assoziativität|  
 |---------------------|-----------------------|-------------------|  
-|( )|Ausdruck|Von links nach rechts|  
-|-, !, ~|Unäroperatoren|Von rechts nach links|  
-|Umwandlungen|Unäroperatoren|Von rechts nach links|  
+|( )|expression|Von links nach rechts|  
+|-, !, ~|Unär|Von rechts nach links|  
+|Umwandlungen|Unär|Von rechts nach links|  
 |*, / ,%|Multiplikativ|Von links nach rechts|  
 |+, -|Additiv|Von links nach rechts|  
 |\<, >, \<=, >=|Relational|Von links nach rechts|  
@@ -43,9 +44,9 @@ ms.locfileid: "86901257"
 |&#124;|Bitweises inklusives OR|Von links nach rechts|  
 |&&|Logisches AND|Von links nach rechts|  
 |&#124;&#124;|Logisches OR|Von links nach rechts|  
-|? decodiert werden:|Bedingter Ausdruck|Von rechts nach links|  
+|? :|Bedingter Ausdruck|Von rechts nach links|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

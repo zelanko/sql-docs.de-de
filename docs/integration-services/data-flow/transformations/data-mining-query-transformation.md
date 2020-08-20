@@ -1,4 +1,5 @@
 ---
+description: Transformation für Data Mining-Abfragen
 title: Transformation für Data Mining-Abfragen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e44443974472593a45d35ec54a4cb69d0dd580f2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c7a2e6ffd3dcf8544dabfd010ea7a1161dc9bf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477773"
 ---
 # <a name="data-mining-query-transformation"></a>Transformation für Data Mining-Abfragen
 
@@ -67,7 +68,7 @@ ms.locfileid: "86919406"
 ## <a name="data-mining-query-transformation-editor-query-tab"></a>Transformations-Editor für Data Mining-Abfragen (Registerkarte Abfrage)
   Auf der Registerkarte **Abfrage** des Dialogfelds **Transformations-Editor für Data Mining-Abfragen** können Sie eine Vorhersageabfrage erstellen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Data Mining-Abfrage**  
  Geben Sie die DMX-Abfrage (Data Mining Extension, Data Mining-Erweiterung) direkt in das Textfeld ein.  
   

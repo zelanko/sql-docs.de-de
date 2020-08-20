@@ -1,4 +1,5 @@
 ---
+description: Aufgezählte Konstanten in Eigenschaftsausdrücken
 title: Aufgezählte Konstanten in Eigenschaftsausdrücken | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c233d75beabca847937f85977acfd0e2230dc7c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 692e2e19b86b5d47d207c32c3024365675603c07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477582"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Aufgezählte Konstanten in Eigenschaftsausdrücken
 
@@ -37,7 +38,7 @@ ms.locfileid: "86922770"
   
  In den folgenden Abschnitten werden Informationen zu den folgenden aufgelisteten Konstanten bereitgestellt:  
   
- [Paket](#Package)  
+ [Pakete](#Package)  
   
  [Foreach-Schleifenenumeratoren](#Foreach)  
   
@@ -96,7 +97,7 @@ ms.locfileid: "86922770"
 |Anzeigename in DTSPrecedenceEvalOp|Numerischer Wert|  
 |------------------------------------------|-------------------|  
 |Ausdruck|1|  
-|Einschränkung|2|  
+|Constraint|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
   
@@ -292,7 +293,7 @@ ms.locfileid: "86922770"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Überspringen|2|  
   
 ### <a name="transfer-jobs-task"></a>Aufträge übertragen (Task)  
  **IfObjectExists**-Eigenschaft: Festlegung mithilfe von Werten der **IfObjectExists**-Enumeration.  
@@ -301,7 +302,7 @@ ms.locfileid: "86922770"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Überspringen|2|  
   
 ### <a name="transfer-logins-task"></a>Task "Anmeldungen übertragen"  
  **IfObjectExists**-Eigenschaft: Festlegung mithilfe von Werten der **IfObjectExists**-Enumeration.  
@@ -310,7 +311,7 @@ ms.locfileid: "86922770"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Überspringen|2|  
   
  **LoginsToTransfer**-Eigenschaft: Festlegung mithilfe von Werten der **LoginsToTransfer**-Enumeration.  
   
@@ -327,7 +328,7 @@ ms.locfileid: "86922770"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Überspringen|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>SQL Server-Objekte kopieren (Task)  
  **ExistingData**-Eigenschaft: Festlegung mithilfe von Werten der **ExistingData**-Enumeration.  
@@ -475,9 +476,9 @@ ms.locfileid: "86922770"
   
 |Anzeigename in DTSXMLDiffAlgorithm|Numerischer Wert|  
 |------------------------------------------|-------------------|  
-|Auto|0|  
+|Automatisch|0|  
 |Schnell|1|  
-|Precise|2|  
+|Precise (Genau)|2|  
   
 ##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> Wartungsplantasks  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält eine Reihe von Tasks, mit denen SQL Server-Tasks für die Verwendung in Wartungsplänen und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen ausgeführt werden.  
@@ -510,7 +511,7 @@ ms.locfileid: "86922770"
 |Anzeigename in ObjectType|Numerischer Wert|  
 |---------------------------------|-------------------|  
 |Tabelle|0|  
-|Sicht|1|  
+|Ansicht|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Datenbank sichern (Task)  
@@ -518,7 +519,7 @@ ms.locfileid: "86922770"
   
 |Anzeigename in DestinationType|Numerischer Wert|  
 |--------------------------------------|-------------------|  
-|Auto|0|  
+|Automatisch|0|  
 |Manuell|1|  
   
  **ExistingBackupsAction**-Eigenschaft: Festlegung mithilfe von Werten der **ActionForExistingBackups**-Enumeration.  
@@ -533,7 +534,7 @@ ms.locfileid: "86922770"
 |Anzeigename in BackupTaskType|Numerischer Wert|  
 |-------------------------------------|-------------------|  
 |Datenbank|0|  
-|Dateien|1|  
+|Files|1|  
 |Log|2|  
   
  **BackupDevice-Eigenschaft**: Festlegung mithilfe von Werten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DeviceType **-Enumeration von SMO (** Management Objects).  
@@ -558,8 +559,8 @@ ms.locfileid: "86922770"
   
 |Anzeigename in TimeUnitType|Numerischer Wert|  
 |-----------------------------------|-------------------|  
-|Day (Tag)|0|  
-|Week|1|  
+|Tag|0|  
+|Woche|1|  
 |Month (Monat)|2|  
 |Jahr|3|  
   
@@ -591,7 +592,7 @@ ms.locfileid: "86922770"
 |Anzeigename in DTSLoggingMode|Numerischer Wert|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|Enabled|1|  
+|Aktiviert|1|  
 |Disabled|2|  
   
  **TransactionOption**-Eigenschaft: Festlegung mithilfe von Werten der **DTSTransactionOption**-Enumeration.  

@@ -1,4 +1,5 @@
 ---
+description: Schnittstellenübereinstimmung auf Ebene 2
 title: Schnittstellen Konformität der Ebene 2 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b8c18a77cfd843a6bb7b70494e62dcb9efc4582
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 31b7148b05d3870a7f23a51167fffeb1860c26d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476562"
 ---
 # <a name="level-2-interface-conformance"></a>Schnittstellenübereinstimmung auf Ebene 2
 Die Schnittstelle für die Schnittstellen Konformität der Ebene 2 umfasst die Funktionen der Schnittstellen Konformität auf Ebene 1 sowie die folgenden Features:  
   
-|Funktions Nummer|BESCHREIBUNG|  
+|Funktions Nummer|Beschreibung|  
 |-|-|  
 |201|Verwenden Sie dreiteilige Namen von Datenbanktabellen und-Sichten. (Weitere Informationen finden Sie unter die zweiteilige namens Unterstützung 101 in der [Schnittstellen Konformität der Ebene 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md).)|  
 |202|Beschreiben Sie die dynamischen Parameter durch Aufrufen von **SQLDescribeParam**.|  

@@ -1,4 +1,5 @@
 ---
+description: Keysetgesteuerte Cursor
 title: Keysetgesteuerte Cursor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 814fca7d48f50aab51b6b4f7e34835be8c412e9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c34432481eeafd6bed938dcd1275e33583d33cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476592"
 ---
 # <a name="keyset-driven-cursors"></a>Keysetgesteuerte Cursor
 Ein keysetgesteuertes Cursor liegt zwischen einem statischen und einem dynamischen Cursor, um Änderungen zu erkennen. Wie ein statischer Cursor ermittelt er nicht immer Änderungen an der Mitgliedschaft und Reihenfolge des Resultsets. Ebenso wie ein dynamischer Cursor werden Änderungen an den Werten der Zeilen im Resultset erkannt (abhängig von der Isolationsstufe der Transaktion, wie vom SQL_ATTR_TXN_ISOLATION Verbindungs Attribut festgelegt).  

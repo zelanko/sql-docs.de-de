@@ -1,4 +1,5 @@
 ---
+description: Erstellen eines ODBC-Ziels mit der Skriptkomponente
 title: Erstellen eines ODBC-Ziels mit der Skriptkomponente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/10/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c1b434486cb27d5a001e0b185ed6c637e1ca45d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dd25e6cf4816b0ff39ed1129a1d98f9de5603d2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477315"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Erstellen eines ODBC-Ziels mit der Skriptkomponente
 
@@ -41,7 +42,7 @@ ms.locfileid: "86916311"
   
 -   **OdbcCommand** erwartet Positionsparameter. Die Position von Parametern wird durch die Fragezeichen (?) im Text des Befehls angegeben. (Im Gegensatz dazu erwartet **SqlCommand** benannte Parameter.)  
   
- In diesem Beispiel wird die Tabelle **Person.Address** in der **AdventureWorks**-Beispieldatenbank verwendet. Im Beispiel werden die erste und die vierte Spalte dieser Tabelle, nämlich die Spalten **int _AddressID_** und **nvarchar(30) _City_** , durch den Datenfluss übergeben. Die gleichen Daten werden in den Beispielen für die Quelle, die Transformation und das Ziel im Thema [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md) (Entwickeln bestimmter Typen von Skriptkomponenten) verwendet.  
+ In diesem Beispiel wird die Tabelle **Person.Address** in der **AdventureWorks**-Beispieldatenbank verwendet. Im Beispiel werden die erste und die vierte Spalte dieser Tabelle, nämlich die Spalten **int _AddressID_** und **nvarchar(30) _City_**, durch den Datenfluss übergeben. Die gleichen Daten werden in den Beispielen für die Quelle, die Transformation und das Ziel im Thema [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md) (Entwickeln bestimmter Typen von Skriptkomponenten) verwendet.  
   
 #### <a name="to-configure-this-script-component-example"></a>So konfigurieren Sie dieses Skriptkomponentenbeispiel  
   
@@ -170,6 +171,6 @@ ms.locfileid: "86916311"
     ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen eines Ziels mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [Creating a Destination with the Script Component (Erstellen eines Ziels mit der Skriptkomponente)](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

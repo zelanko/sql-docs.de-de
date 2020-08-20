@@ -1,4 +1,5 @@
 ---
+description: Festlegen von Parameterwerten
 title: Festlegen von Parameter Werten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 923fd57f4308fb72aca2f829ccb9d7b884c12546
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af2992ea66601ec0ae4804e327863e6abb285d73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476422"
 ---
 # <a name="setting-parameter-values"></a>Festlegen von Parameterwerten
 Um den Wert eines Parameters festzulegen, legt die Anwendung einfach den Wert der Variablen fest, die an den-Parameter gebunden ist. Es ist nicht wichtig, wenn dieser Wert festgelegt wird, solange er festgelegt wird, bevor die-Anweisung ausgeführt wird. Die Anwendung kann den Wert vor oder nach dem Binden der Variablen festlegen, und Sie kann den Wert beliebig oft ändern. Wenn die-Anweisung ausgeführt wird, ruft der Treiber einfach den aktuellen Wert der Variablen ab. Dies ist besonders nützlich, wenn eine vorbereitete Anweisung mehrmals ausgeführt wird. bei jeder Ausführung der Anweisung werden von der Anwendung neue Werte für einige oder alle Variablen festgelegt. Ein Beispiel hierfür finden Sie weiter oben in diesem Abschnitt unter [vorbereitete Ausführung](../../../odbc/reference/develop-app/prepared-execution-odbc.md).  
@@ -34,7 +35,7 @@ Um den Wert eines Parameters festzulegen, legt die Anwendung einfach den Wert de
   
  In der folgenden Tabelle werden die Werte der gebundenen Variablen und der Längen-/Indikatorpuffer angezeigt, der von der Anwendung für eine Vielzahl von Parameterwerten festgelegt wird.  
   
-|Parameter<br /><br /> value|Parameter<br /><br /> SQL<br /><br /> Datentyp|Variable (C)<br /><br /> Datentyp|Wert in <br /><br /> binden<br /><br /> Variable|Wert in <br /><br /> Länge/Indikator<br /><br /> Puffer [d]|  
+|Parameter<br /><br /> value|Parameter<br /><br /> SQL<br /><br /> Datentyp|Variable (C)<br /><br /> Datentyp|Wert in <br /><br /> binden<br /><br /> -Variable|Wert in <br /><br /> Länge/Indikator<br /><br /> Puffer [d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
 |"ABC"|SQL_CHAR|SQL_C_CHAR|Abc\0 [a]|SQL_NTS oder 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  

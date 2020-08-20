@@ -1,4 +1,5 @@
 ---
+description: sys. dm_fts_index_keywords_position_by_document (Transact-SQL)
 title: sys. dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 04cedd0df5552ee19f7fc98ecdd94ff2d9dc88fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b14ccbe7643ed56e18dc79b2a72e27867d63454
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474951"
 ---
 # <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>sys. dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ OBJECT_ID('table_name')
 |document_id|**bigint**|Die ID des Dokuments bzw. der Zeile für die Volltextindizierung des aktuellen Ausdrucks. Diese ID entspricht dem Volltextschlüsselwert dieses Dokuments bzw. dieser Zeile.|  
 |position|**int**|Die Position des Schlüssel Worts im Dokument.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die DMV, um den Speicherort von indizierten Wörtern in indizierten Dokumenten zu identifizieren. Diese DMV kann verwendet werden, um Probleme zu beheben, wenn **sys. dm_fts_index_keywords_by_document** angibt, dass sich die Wörter im Volltextindex befinden, aber wenn Sie eine Abfrage mit diesen Wörtern ausführen, wird das Dokument nicht zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  

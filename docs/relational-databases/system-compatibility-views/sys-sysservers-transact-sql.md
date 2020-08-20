@@ -1,4 +1,5 @@
 ---
+description: sys.sysservers (Transact-SQL)
 title: sys.sysServer (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fa61b7122849a1c3d380a39beb4da947d52d35f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea79d90f7ccb75243246cc64713c746e05c8996c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475105"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,16 +47,16 @@ ms.locfileid: "85893974"
 |**location**|**nvarchar(4000)**|OLE DB-Speicherortwert.|  
 |**Eigenschaften**|**nvarchar(4000)**|Zeichenfolgenwert des OLE DB-Anbieters.|  
 |**schemadate**|**datetime**|Datum, an dem diese Zeile zuletzt aktualisiert wurde.|  
-|**topologyx**|**int**|Wird nicht verwendet.|  
-|**topologyy**|**int**|Wird nicht verwendet.|  
-|**sieren**|**sysname**|Katalog, der beim Herstellen einer Verbindung mit einem OLE DB-Anbieter verwendet wird.|  
+|**topologyx**|**int**|Nicht verwendet.|  
+|**topologyy**|**int**|Nicht verwendet.|  
+|**catalog**|**sysname**|Katalog, der beim Herstellen einer Verbindung mit einem OLE DB-Anbieter verwendet wird.|  
 |**srvcollation**|**sysname**|Die Sortierung des Servers.|  
 |**ConnectTimeout**|**int**|Timeouteinstellung für die Serververbindung.|  
 |**QueryTimeout**|**int**|Timeouteinstellung für Abfragen auf den Server.|  
 |**srvnetname**|**char (30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**IsRemote**|**bit**|1 = Server ist ein Remoteserver.<br /><br /> 0 = Server ist ein Verbindungsserver.|  
 |**RPC**|**bit**|1 = **sp_serveroption \@ RPC** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption \@ RPC** ist auf **false** oder **Off**festgelegt.|  
-|**pub**|**bit**|1 = **sp_serveroption \@ pub** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption \@ pub** ist auf **false** oder **Off**festgelegt.|  
+|**knei**|**bit**|1 = **sp_serveroption \@ pub** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption \@ pub** ist auf **false** oder **Off**festgelegt.|  
 |**sub**|**bit**|1 = **sp_serveroption \@ Sub** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption \@ Sub** ist auf **false** oder **Off**festgelegt.|  
 |**dist**|**bit**|1 = **sp_serveroption \@ dist** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption \@ dist** ist auf **false** oder **Off**festgelegt.|  
 |**dpub**|**bit**|1 = **sp_serveroption \@ dpub ist** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption \@ dpub ist** ist auf **false** oder **Off**festgelegt.|  

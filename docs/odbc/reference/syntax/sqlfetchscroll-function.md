@@ -1,4 +1,5 @@
 ---
+description: SQLFetchScroll-Funktion
 title: SQLFetchScroll-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b6c65ef71f5c2cb9202ab788cac5e00357674f4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3c725e11c889765c18c2ff14625b6bde4705051
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476085"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll-Funktion
 **Konformitäts**  
@@ -84,7 +85,7 @@ SQLRETURN SQLFetchScroll(
   
  Für alle Sqlstates, die SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurückgeben können (außer 01xxx Sqlstates), wird SQL_SUCCESS_WITH_INFO zurückgegeben, wenn ein Fehler in einer oder mehreren, aber nicht in allen Zeilen eines mehr Zeilen Vorgangs auftritt. SQL_ERROR wird zurückgegeben, wenn ein Fehler bei einem einzeiligen Vorgang auftritt.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichen folgen Daten, rechts abgeschnitten|Zeichen folgen-oder Binärdaten, die für eine Spalte zurückgegeben wurden, ergaben das Abschneiden von nicht leeren Zeichen oder Binärdaten, die nicht NULL sind. Wenn es sich um einen Zeichen folgen Wert handelt, wurde er rechts abgeschnitten.|  
@@ -104,7 +105,7 @@ SQLRETURN SQLFetchScroll(
 |24.000|Ungültiger Cursorstatus|Das *StatementHandle* befand sich in einem ausgeführten Zustand, aber dem *StatementHandle*wurde kein Resultset zugeordnet.|  
 |40001|Serialisierungsfehler|Die Transaktion, in der der Abruf ausgeführt wurde, wurde beendet, um einen Deadlock zu verhindern.|  
 |40003|Anweisungs Vervollständigung unbekannt|Bei der zugeordneten Verbindung ist während der Ausführung dieser Funktion ein Fehler aufgetreten, und der Status der Transaktion kann nicht bestimmt werden.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen. Anschließend wurde die Funktion erneut für " *StatementHandle*" aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **SQLFetchScroll** -Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) das angegebene *StatementHandle* war nicht in einem ausgeführten Zustand. Die Funktion wurde aufgerufen, ohne zuerst **SQLExecDirect**, **SQLExecute** oder eine Katalog Funktion aufzurufen.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) **SQLFetch** wurde für das *StatementHandle* aufgerufen, nachdem **SQLExtendedFetch** aufgerufen wurde und bevor **SQLFreeStmt** mit der SQL_CLOSE-Option aufgerufen wurde.|  
@@ -164,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |Bedingung|Erste Zeile des neuen Rowsets|  
 |---------------|-----------------------------|  
 |*Vor dem Start*|1|  
-|*Currrowsetstart + rowsetsize*[1] * \<= lastresultrow*|*Currrowsetstart + rowsetsize*[1]|  
+|*Currrowsetstart + rowsetsize*[1] * \< = lastresultrow*|*Currrowsetstart + rowsetsize*[1]|  
 |*Currrowsetstart + rowsetsize*[1]*> lastresultrow*|*Nach dem Ende*|  
 |*Nach dem Ende*|*Nach dem Ende*|  
   
@@ -182,7 +183,7 @@ SQLRETURN SQLFetchScroll(
 |*Nach Ende und lastresultrow < rowsetsize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*Nach Ende und lastresultrow >= rowsetsize* <sup>[2]</sup>|*Lastresultrow-rowsetsize + 1* <sup>[2]</sup>|  
   
- [1] **SQLFetchScroll** gibt SQLSTATE 01s06 zurück (der Versuch, den Abruf Vorgang durchzuführen, bevor das Resultset das erste Rowset zurückgegeben hat) und SQL_SUCCESS_WITH_INFO.  
+ [1]   **SQLFetchScroll** gibt SQLSTATE 01s06 zurück (der Versuch, den Abruf Vorgang durchzuführen, bevor das Resultset das erste Rowset zurückgegeben hat) und SQL_SUCCESS_WITH_INFO.  
   
  [2] Wenn die Rowsetgröße seit dem vorherigen Abruf von Zeilen abgerufen wurde, ist dies die neue Rowsetgröße.  
   
@@ -196,13 +197,13 @@ SQLRETURN SQLFetchScroll(
 |*Currrowsetstart = 1 und FetchOffset < 0*|*Vor dem Start*|  
 |*Currrowsetstart > 1 und currrowsetstart + FetchOffset < 1 und &#124; FetchOffset &#124; > rowsetsize* <sup>[3]</sup>|*Vor dem Start*|  
 |*Currrowsetstart > 1 und currrowsetstart + FetchOffset < 1 und &#124; FetchOffset &#124; <= rowsetsize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
-|*1 <= currrowsetstart + FetchOffset \<= lastresultrow*|*Currrowsetstart + FetchOffset*|  
+|*1 <= currrowsetstart + FetchOffset \< = lastresultrow*|*Currrowsetstart + FetchOffset*|  
 |*Currrowsetstart + FetchOffset > lastresultrow*|*Nach dem Ende*|  
 |*Nach Ende und FetchOffset >= 0*|*Nach dem Ende*|  
   
- [1] ***SQLFetchScroll*** gibt das gleiche Rowset zurück, als hätte es aufgerufen, wenn "FetchOrientation" auf "SQL_FETCH_ABSOLUTE" festgelegt wurde. Weitere Informationen finden Sie im Abschnitt "SQL_FETCH_ABSOLUTE".  
+ [1]   ***SQLFetchScroll*** gibt das gleiche Rowset zurück, als hätte es aufgerufen, wenn "FetchOrientation" auf "SQL_FETCH_ABSOLUTE" festgelegt wurde. Weitere Informationen finden Sie im Abschnitt "SQL_FETCH_ABSOLUTE".  
   
- [2] **SQLFetchScroll** gibt SQLSTATE 01s06 zurück (der Versuch, den Abruf Vorgang durchzuführen, bevor das Resultset das erste Rowset zurückgegeben hat) und SQL_SUCCESS_WITH_INFO.  
+ [2]   **SQLFetchScroll** gibt SQLSTATE 01s06 zurück (der Versuch, den Abruf Vorgang durchzuführen, bevor das Resultset das erste Rowset zurückgegeben hat) und SQL_SUCCESS_WITH_INFO.  
   
  [3] Wenn die Rowsetgröße seit dem vorherigen Abruf von Zeilen abgerufen wurde, ist dies die neue Rowsetgröße.  
   
@@ -215,10 +216,10 @@ SQLRETURN SQLFetchScroll(
 |*FetchOffset < 0 und &#124; FetchOffset &#124; > lastresultrow und &#124; FetchOffset &#124; > rowsetsize* <sup>[2]</sup>|*Vor dem Start*|  
 |*FetchOffset < 0 und &#124; FetchOffset &#124; > lastresultrow und &#124; FetchOffset &#124; <= rowsetsize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Vor dem Start*|  
-|*1 <= FetchOffset \<= lastresultrow*|*FetchOffset*|  
+|*1 <= FetchOffset \< = lastresultrow*|*FetchOffset*|  
 |*FetchOffset > lastresultrow*|*Nach dem Ende*|  
   
- [1] **SQLFetchScroll** gibt SQLSTATE 01s06 zurück (der Versuch, den Abruf Vorgang durchzuführen, bevor das Resultset das erste Rowset zurückgegeben hat) und SQL_SUCCESS_WITH_INFO.  
+ [1]   **SQLFetchScroll** gibt SQLSTATE 01s06 zurück (der Versuch, den Abruf Vorgang durchzuführen, bevor das Resultset das erste Rowset zurückgegeben hat) und SQL_SUCCESS_WITH_INFO.  
   
  [2] Wenn die Rowsetgröße seit dem vorherigen Abruf von Zeilen abgerufen wurde, ist dies die neue Rowsetgröße.  
   
@@ -247,7 +248,7 @@ SQLRETURN SQLFetchScroll(
 |Bedingung|Erste Zeile des neuen Rowsets|  
 |---------------|-----------------------------|  
 |*Bookmarkrow + FetchOffset < 1*|*Vor dem Start*|  
-|*1 <= bookmarkrow + FetchOffset \<= lastresultrow*|*Bookmarkrow und FetchOffset*|  
+|*1 <= bookmarkrow + FetchOffset \< = lastresultrow*|*Bookmarkrow und FetchOffset*|  
 |*Bookmarkrow + FetchOffset > lastresultrow*|*Nach dem Ende*|  
   
  Weitere Informationen zu Lesezeichen finden Sie unter [Lesezeichen (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
@@ -277,7 +278,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
   
  Angenommen, das aktuelle Rowset besteht aus den Zeilen 21 bis 30, die Rowsetgröße ist 10, der Cursor entfernt aus dem Resultset gelöschte Zeilen und erkennt die dem Resultset hinzugefügten Zeilen. In der folgenden Tabelle werden die Zeilen angezeigt, die **SQLFetchScroll** in verschiedenen Situationen zurückgibt.  
   
-|Änderung|FETCH-Typ|FetchOffset|Neues Rowset [1]|  
+|Change|FETCH-Typ|FetchOffset|Neues Rowset [1]|  
 |------------|----------------|-----------------|---------------------|  
 |Zeile 21 löschen|NEXT|0|31 bis 40|  
 |Zeile 31 löschen|NEXT|0|32 bis 41|  
@@ -350,7 +351,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Binden eines Puffers an eine Spalte in einem Resultset|[SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |Ausführen von BULK INSERT-, Update-oder DELETE-Vorgängen|[SQLBulkOperations-Funktion](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
@@ -364,6 +365,6 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |Positionieren des Cursors, Aktualisieren von Daten im Rowset oder aktualisieren oder Löschen von Daten im Resultset|[SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |Festlegen eines Anweisungs Attributs|[SQLSetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

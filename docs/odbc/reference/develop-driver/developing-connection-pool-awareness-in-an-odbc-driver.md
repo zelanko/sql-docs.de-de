@@ -1,4 +1,5 @@
 ---
+description: Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber
 title: Entwickeln von Verbindungs Pool Informationen in einem ODBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f77fea1d8439ac9ce7374b7dd47db5665686cfbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 519a2b64f6a5330b8c8fde458323c6c900941025
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476272"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber
 In diesem Thema werden die Details der Entwicklung eines ODBC-Treibers erläutert, der Informationen darüber enthält, wie der Treiber Verbindungspooling-Dienste bereitstellen soll.  
