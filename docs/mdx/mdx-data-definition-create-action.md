@@ -1,4 +1,5 @@
 ---
+description: MDX-Datendefinition – CREATE ACTION
 title: Create action-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7132c28e93dbc11eee1c5a4e4d53126f280fa74a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494903"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX-Datendefinition – CREATE ACTION
 
@@ -75,14 +76,14 @@ FOR
  Es ist möglich, dass Clientanwendungen unsichere Aktionen erstellen und ausführen oder unsichere Funktionen verwenden. Um diese Situationen zu vermeiden, verwenden Sie die Eigenschaft **Sicherheitsoptionen** . Weitere Informationen finden Sie im Abschnitt zur Safety Options-Eigenschaft.  
   
 > [!NOTE]  
->  Diese Anweisung wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. Aktionen, die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]in neu sind, z. b. Drillthrough-oder Berichts Aktionen, werden nicht unterstützt.  
+>  Diese Anweisung wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. Aktionen, die in neu sind [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , z. b. Drillthrough-oder Berichts Aktionen, werden nicht unterstützt.  
   
 ## <a name="action-types"></a>Aktions Typen  
- In der folgenden Tabelle werden die verschiedenen Typen von Aktionen beschrieben [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die in verfügbar sind.  
+ In der folgenden Tabelle werden die verschiedenen Typen von Aktionen beschrieben, die in verfügbar sind [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 |Aktionstyp|BESCHREIBUNG|  
 |-----------------|-----------------|  
-|**URL**|Die zurückgegebene Aktionszeichenfolge ist eine URL, die mit einem Internetbrowser geöffnet werden sollte.<br /><br /> Hinweis: Wenn diese Aktion nicht `https://` mit oder `https://`beginnt, ist die Aktion für den Browser nicht verfügbar, es sei denn, **SafetyOptions** ist auf **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**festgelegt.|  
+|**URL**|Die zurückgegebene Aktionszeichenfolge ist eine URL, die mit einem Internetbrowser geöffnet werden sollte.<br /><br /> Hinweis: Wenn diese Aktion nicht mit oder beginnt `https://` `https://` , ist die Aktion für den Browser nicht verfügbar, es sei denn, **SafetyOptions** ist auf **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**festgelegt.|  
 |**HTML**|Die zurückgegebene Aktionszeichenfolge ist ein HTML-Skript. Die Zeichenfolge sollte in einer Datei gespeichert werden, und die Datei sollte mit einem Internetbrowser gerendert werden. In diesem Fall kann ein ganzes Skript als Teil des generierten HTML-Codes ausgeführt werden.|  
 |**An**|Die zurückgegebene Aktions Zeichenfolge ist eine Anweisung, die ausgeführt werden muss, indem die **ICommand:: SetText** -Methode eines Befehls Objekts auf die Zeichenfolge festgelegt und die **ICommand:: Execute**-Methode aufgerufen wird. Wenn der Befehl nicht erfolgreich ausgeführt werden kann, wird ein Fehler zurückgegeben.|  
 |**DataSet**|Die zurückgegebene Aktions Zeichenfolge ist eine MDX-Anweisung, die ausgeführt werden muss, indem die **ICommand:: SetText** -Methode eines Befehls Objekts auf die Zeichenfolge festgelegt und die **ICommand:: Execute** -Methode aufgerufen wird. Die angeforderte Schnittstellen-ID (IID) sollte " **IDataset**" lauten. Der Befehl ist erfolgreich, wenn ein Dataset erstellt wurde. Die Clientanwendung sollte dem Benutzer das Durchsuchen des zurückgegebenen Datasets ermöglichen.|  
@@ -93,7 +94,7 @@ FOR
 ## <a name="invocation-types"></a>Aufruftypen  
  In der folgenden Tabelle sind die verschiedenen Typen von Aufrufen beschrieben, die in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zur Verfügung stehen. Der Aufruftyp wird nur von der Clientanwendung verwendet, um zu bestimmen, wann die Aktion aufgerufen werden soll. Das Aufrufverhalten der Aktion selbst wird nicht durch den Aufruftyp bestimmt.  
   
-|Aufruftyp|BESCHREIBUNG|  
+|Aufruftyp|Beschreibung|  
 |---------------------|-----------------|  
 |**Interaktive**|Die Aktion sollte von der Clientanwendung durch Benutzerinteraktion aufgerufen werden.|  
 |**ON_OPEN**|Die Aktion sollte von der Clientanwendung aufgerufen werden, wenn das Zielobjekt geöffnet wird. Dieser Aufruftyp ist zurzeit nicht implementiert.|  

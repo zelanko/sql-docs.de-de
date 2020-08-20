@@ -1,4 +1,5 @@
 ---
+description: 'Columnstore-Indizes: Data Warehouse'
 title: 'Columnstore-Indizes: Data Warehouse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/01/2017
@@ -11,12 +12,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e9ca11ccf29cc1f13b5d4c70a229634674b3d9f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3ffd31c536952780f487504fae715797bd07028d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494213"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Columnstore-Indizes: Data Warehouse
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

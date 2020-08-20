@@ -1,4 +1,5 @@
 ---
+description: Task 'Operator benachrichtigen' (Wartungsplan)
 title: Task 'Operator benachrichtigen' (Wartungsplan) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fd22da4ecbbef25ac02fb5c937307f4ccc1919a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee74eddbefbb808692ba7974a21b8c3b06fb4c4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494166"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Task 'Operator benachrichtigen' (Wartungsplan)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Mithilfe des Dialogfelds **Task 'Operator benachrichtigen'** können Sie dem Wartungsplan eine automatische Benachrichtigung hinzufügen. Um diesen Task zu verwenden, müssen Datenbank-E-Mails aktiviert und ordnungsgemäß mit msdb als Mailhostdatenbank konfiguriert sein. Außerdem muss der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentoperator über eine gültige E-Mail-Adresse verfügen.  
+   Mithilfe des Dialogfelds **Task „Operator benachrichtigen“** können Sie dem Wartungsplan eine automatische Benachrichtigung hinzufügen. Um diesen Task zu verwenden, müssen Datenbank-E-Mails aktiviert und ordnungsgemäß mit msdb als Mailhostdatenbank konfiguriert sein. Außerdem muss der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentoperator über eine gültige E-Mail-Adresse verfügen.  
   
  Dieser Task verwendet die gespeicherte Prozedur sp_notify_operator.  
   
@@ -63,10 +64,10 @@ ms.locfileid: "85755730"
  Legt fest, wie die Authentifizierung gegenüber dem Server stattfindet.  
   
  **Integrierte Sicherheit von Windows NT verwenden**  
- Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Windows-Authentifizierung eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] her.  
+ Stellt mithilfe der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] her.  
   
  **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
- Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her. Diese Option ist nicht verfügbar.  
+ Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] her. Diese Option ist nicht verfügbar.  
   
  **Benutzername**  
  Stellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  

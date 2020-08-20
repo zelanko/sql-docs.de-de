@@ -1,4 +1,5 @@
 ---
+description: Exists (MDX)
 title: Vorhanden (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2cef1cfb95319cbe0aff827cb251ff7e2317c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e025449634106003ea6e5d624f0d4a621ef3b93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494913"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
   Gibt die Menge der Tupel der ersten angegebenen Menge zurück, die zusammen mit einem oder mehreren Tupeln der zweiten angegebenen Menge vorhanden sind. Diese Funktion führt die Operationen manuell aus, die Auto-exist automatisch ausführt. Weitere Informationen zu "automatisch vorhanden" finden Sie unter [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
- Wenn der optionale \<measurengruppenname> bereitgestellt wird, gibt die Funktion Tupel zurück, die mit einem oder mehreren Tupeln aus der zweiten Menge und den Tupeln mit zugeordneten Zeilen in der Fakten Tabelle der angegebenen Measure-Gruppe vorhanden sind.  
+ Wenn das optionale \<Measure Group Name> -bereitgestellt wird, gibt die-Funktion Tupel zurück, die mit einem oder mehreren Tupeln aus der zweiten Menge vorhanden sind, und den Tupeln, die Zeilen in der Fakten Tabelle der angegebenen Measure-Gruppe zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -1,4 +1,5 @@
 ---
+description: Grundlegendes zu synchronen und asynchronen Transformationen
 title: Grundlegendes zu synchronen und asynchronen Transformationen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c2748384a8ea4901a21ffa94498da5405043227
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 849f01ba00bddd67ca2de2c16b6953cff9b06c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495154"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Grundlegendes zu synchronen und asynchronen Transformationen
 
@@ -45,7 +46,7 @@ ms.locfileid: "86913714"
   
 -   Es gibt keine 1:1-Entsprechung zwischen Eingabezeilen und Ausgabezeilen. Ein Beispiel ist die Transformation für das Aggregieren, bei der die Komponente eine Zeile zur Ausgabe hinzufügen muss, um die berechneten Aggregatwerte aufzunehmen.  
   
- Bei der Skripterstellung und Programmierung in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] geben Sie eine asynchrone Transformation an, indem Sie den Wert 0 zur **SynchronousInputID**-Eigenschaft der Ausgaben der Komponente zuweisen. erforderlich. Dadurch wird die Datenfluss-Engine angewiesen, nicht jede Zeile automatisch an die Ausgaben zu senden. Anschließend müssen Sie den Code schreiben, um jede Zeile explizit an die jeweilige Ausgabe zu senden, indem sie dem neuen Ausgabepuffer hinzugefügt wird, der für die Ausgabe einer asynchronen Transformation erstellt wird.  
+ Bei der Skripterstellung und Programmierung in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] geben Sie eine asynchrone Transformation an, indem Sie den Wert 0 zur **SynchronousInputID**-Eigenschaft der Ausgaben der Komponente zuweisen. . Dadurch wird die Datenfluss-Engine angewiesen, nicht jede Zeile automatisch an die Ausgaben zu senden. Anschließend müssen Sie den Code schreiben, um jede Zeile explizit an die jeweilige Ausgabe zu senden, indem sie dem neuen Ausgabepuffer hinzugefügt wird, der für die Ausgabe einer asynchronen Transformation erstellt wird.  
   
 > [!NOTE]  
 >  Da eine Quellkomponente auch jede Zeile, die aus der Datenquelle gelesen wird, explizit ihren Ausgabepuffern hinzufügen muss, ähnelt eine Quelle einer Transformation mit asynchronen Ausgaben.  

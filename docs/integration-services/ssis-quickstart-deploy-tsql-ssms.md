@@ -1,4 +1,5 @@
 ---
+description: Bereitstellen eines SSIS-Projekts aus SSMS mit Transact-SQL
 title: Bereitstellen eines SSIS-Projekts mit Transact-SQL (SSMS) | Microsoft-Dokumentation
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9bdd9a10d5ab30cba8f12e07ee3475e902c3e35f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4c03bf004b95e4321cb93198750a798a019a1eb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495451"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Bereitstellen eines SSIS-Projekts aus SSMS mit Transact-SQL
 
@@ -41,7 +42,7 @@ Dieser Schnellstart enthält keine Anleitung zum Bereitstellen von SSIS-Paketen 
 
 ## <a name="supported-authentication-method"></a>Unterstützte Authentifizierungsmethode
 
-Weitere Informationen hierzu finden Sie unter [Authentifizierungsmethoden im Bereitstellungs-Assistenten](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+Weitere Informationen finden Sie unter [Authentifizierungsmethoden für die Bereitstellung](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>Herstellen einer Verbindung mit der SSIS-Katalogdatenbank
 

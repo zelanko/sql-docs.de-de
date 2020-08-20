@@ -1,4 +1,5 @@
 ---
+description: Unterschlüssel für Datenquellenspezifikationen
 title: Unterschlüssel der Datenquellen Spezifikation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 281377c307f3f3750e87bf5dc988beb7660067af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8fabfd07779f74945bf647d20075de0cc057710b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494565"
 ---
 # <a name="data-source-specification-subkeys"></a>Unterschlüssel für Datenquellenspezifikationen
 Jede Datenquelle, die im Unterschlüssel für ODBC-Datenquellen aufgelistet ist, verfügt über einen eigenen Unterschlüssel. Dieser Unterschlüssel hat denselben Namen wie der entsprechende Wert unter dem Unterschlüssel für ODBC-Datenquellen. Die Werte unter diesem Unterschlüssel müssen die Treiber-DLL auflisten und eine Beschreibung der Datenquelle auflisten. Wenn der Treiber Konvertierer unterstützt, können die Werte den Namen eines Standard Konvertierers, die standardmäßige Übersetzungs-DLL und die Standard Übersetzungs Option auflisten. Die Werte können auch andere Informationen auflisten, die der Treiber zum Herstellen einer Verbindung mit der Datenquelle benötigt. Beispielsweise ist für den Treiber möglicherweise ein Servername, ein Datenbankname oder ein Schema Name erforderlich.  

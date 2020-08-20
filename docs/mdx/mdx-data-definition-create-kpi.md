@@ -1,4 +1,5 @@
 ---
+description: MDX-Datendefinition – CREATE KPI
 title: CREATE KPI-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1840ebe0dec014a2b768a8571249b103de6552d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494853"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX-Datendefinition – CREATE KPI
 
@@ -58,7 +59,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |CURRENT_TIME_MEMBER|Ein gültiger MDX-Ausdruck, der ein Element in der Zeitdimension zurückgibt. CURRENT_TIME_MEMBER legt den Bezugspunkt für alle relativen Zeitfunktionen fest.|  
 |PARENT_KPI|Eine Zeichenfolge, die den Namen für den übergeordneten KPI bereitstellt.|  
 |CAPTION|Eine Zeichenfolge, die von der Clientanwendung als Beschriftung für den KPI verwendet wird.|  
-|DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, in dem der KPI von der Clientanwendung angezeigt wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Bei den von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]bereitgestellten Tools und Clients ist der umgekehrte schräg\\Strich () das ebenendtrennzeichen. Um mehrere Anzeige Ordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) So trennen Sie die Ordner|  
+|DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, in dem der KPI von der Clientanwendung angezeigt wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Bei den von bereitgestellten Tools und Clients [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ist der umgekehrte Schrägstrich ( \\ ) das ebenendtrennzeichen. Um mehrere Anzeige Ordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) So trennen Sie die Ordner|  
 |ASSOCIATED_MEASURE_GROUP|Eine Zeichenfolge, die den Namen der Measuregruppe angibt, auf die alle MDX-Berechnungen verweisen sollen.|  
   
  Die Werte für die Eigenschaften GOAL, STATUS und TREND sind MDX-Ausdrücke, die zu einem Wert zwischen -1 und 1 ausgewertet werden sollen. Allerdings wird der tatsächliche Wertebereich für die Eigenschaften von der Clientanwendung definiert. Wenn Sie die von bereitgestellten Tools und Clients [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zum Durchsuchen von KPIs verwenden, werden Werte kleiner als-1 als-1 behandelt, und Werte, die größer als 1 sind, werden als 1 behandelt.  
@@ -76,7 +77,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 > [!NOTE]  
 >  Für einige Grafiken, z. B. der umgekehrte Maßstab oder umgekehrte Statuspfeil, wird der Bereich umgekehrt. Das heißt, -1 ist gut, und 1 ist schlecht.  
   
- In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] wird anhand des Namens der KPI-Grafik bestimmt, ob die Grafik über drei oder fünf Status verfügt. In der folgenden Tabelle werden die Verwendung, der Name und die Anzahl der [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Zustände aufgelistet, die mit den KPI-Grafiken verknüpft sind.  
+ In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] wird anhand des Namens der KPI-Grafik bestimmt, ob die Grafik über drei oder fünf Status verfügt. In der folgenden Tabelle werden die Verwendung, der Name und die Anzahl der Zustände aufgelistet, die [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mit den KPI-Grafiken verknüpft sind.  
   
 |Verwendung der Grafik|Name der KPI-Grafik|Anzahl von Status|  
 |--------------------|-------------------------|----------------------|  

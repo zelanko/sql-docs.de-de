@@ -1,4 +1,5 @@
 ---
+description: CursorExecute-Ereignisklasse
 title: CursorExecute-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db1b52180a644c4350b66833f559845ab0f9c181
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65834775bd190e5d8638d5eba33b38c7d01b2997
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494436"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Die **CursorExecute** -Ereignisklasse beschreibt Cursorausführungsereignisse, die in API-Cursorn (Application Programming Interface, Schnittstelle für Anwendungsprogrammierung) auftreten. Cursorausführungsereignisse treten auf, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] mithilfe des Ausführungsplans, der von einem Cursorvorbereitungsereignis erstellt wurde, einen Cursor erstellt und befüllt.  
+   Die **CursorExecute**-Ereignisklasse beschreibt Cursorausführungsereignisse, die in API-Cursorn (Application Programming Interface, Schnittstelle für Anwendungsprogrammierung) auftreten. Cursorausführungsereignisse treten auf, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] mithilfe des Ausführungsplans, der von einem Cursorvorbereitungsereignis erstellt wurde, einen Cursor erstellt und befüllt.  
   
  Schließen Sie die **CursorExecute** -Ereignisklasse in Ablaufverfolgungen ein, von denen die Leistung von Cursorn aufgezeichnet wird. Wenn die **CursorExecute** -Ereignisklasse in eine Ablaufverfolgung eingeschlossen wird, hängt der entstehende Verwaltungsaufwand davon ab, wie häufig Cursor während der Ablaufverfolgung in Bezug auf die Datenbank verwendet werden. Wenn Cursor sehr häufig verwendet werden, kann die Ablaufverfolgung die Leistung erheblich beeinträchtigen.  
   
@@ -38,7 +39,7 @@ ms.locfileid: "85762950"
 |**GroupID**|**int**|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |**Handle**|**int**|Ganze Zahl, die von ODBC, OLE DB oder DB-Library zum Koordinieren der Ausführung mit dem Server verwendet wird.|33|Ja|  
 |**HostName**|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
-|**IntegerData**|**int**|Cursortyp. Werte:<br /><br /> 1 = Keyset<br /><br /> 2 = Dynamisch<br /><br /> 4 = Vorwärtscursor<br /><br /> 8 = Statisch<br /><br /> 16 = Schneller Vorlauf|25|Nein|  
+|**IntegerData**|**int**|Cursortyp. Gültige Werte:<br /><br /> 1 = Keyset<br /><br /> 2 = Dynamisch<br /><br /> 4 = Vorwärtscursor<br /><br /> 8 = Statisch<br /><br /> 16 = Schneller Vorlauf|25|Nein|  
 |**IsSystem**|**int**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, 0 = Benutzer.|60|Ja|  
 |**LoginName**|**nvarchar**|Anmeldename des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder Windows-Anmeldeinformationen im Format DOMAIN\username).|11|Ja|  
 |**LoginSid**|**image**|Die Sicherheits-ID (Security Identifier, SID) des angemeldeten Benutzers. Diese Informationen finden Sie in der **sys.server_principals** -Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Ja|  

@@ -1,4 +1,5 @@
 ---
+description: DTCTransaction-Ereignisklasse
 title: DTCTransaction-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c66dc8844aa47748fe5f4beb3a15e8b26f120c90
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d000b8ae419c6c360d6d8b5a6ce498266e7a540c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494338"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Verwenden Sie die **DTCTransaction-Ereignisklasse** zum Überwachen des Status von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Transaktionen, die über [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (DTC) koordiniert werden. Dies umfasst Transaktionen, die mindestens zwei Datenbanken in derselben Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]betreffen, oder verteilte Transaktionen, die mindestens Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]betreffen.  
+   Verwenden Sie die **DTCTransaction**-Ereignisklasse zum Überwachen des Status von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Transaktionen, die über [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (DTC) koordiniert werden. Dies umfasst Transaktionen, die mindestens zwei Datenbanken in derselben Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]betreffen, oder verteilte Transaktionen, die mindestens Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]betreffen.  
   
 ## <a name="dtctransaction-event-class-data-columns"></a>Datenspalten der DTCTransaction-Ereignisklasse  
   

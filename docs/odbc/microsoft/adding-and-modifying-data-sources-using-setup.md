@@ -1,4 +1,5 @@
 ---
+description: Erstellen und Ändern von Datenquellen mithilfe der Einrichtung
 title: Hinzufügen und Ändern von Datenquellen mithilfe von Setup | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae76abc902e4687e5d9891871d7d5d60598b3abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8592c01897e691cdb6702c4efdfca6054655a793
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494740"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Erstellen und Ändern von Datenquellen mithilfe der Einrichtung
 > [!IMPORTANT]  
@@ -57,7 +58,7 @@ ms.locfileid: "81281410"
   
 1.  Klicken Sie auf Optionen, um weitere Spezifikationen zum ODBC-Treiber für Oracle-Setup zu erstellen:  
   
-    -   **Übersetzung** : Klicken Sie auf auswählen, um einen geladenen Datenkonvertierer auszuwählen. Der Standardwert \<ist kein Konvertierungs>.  
+    -   **Übersetzung** : Klicken Sie auf auswählen, um einen geladenen Datenkonvertierer auszuwählen. Der Standardwert ist \<No Translator>.  
   
     -   **Leistung** : das Kontrollkästchen "Hinweise in Katalog Funktionen einschließen" gibt an, ob der Treiber Hinweise Spalten für das [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) -Resultset zurückgibt. Der ODBC-Treiber für Oracle bietet schnelleren Zugriff, wenn dieser Wert nicht festgelegt ist.  
   

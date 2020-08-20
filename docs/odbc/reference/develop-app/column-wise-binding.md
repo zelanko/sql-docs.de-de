@@ -1,4 +1,5 @@
 ---
+description: Spaltenbezogenes Binden
 title: Spaltenweise Bindung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9c2793695dce4487a58ee138a0a620f3bc05550
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494680"
 ---
 # <a name="column-wise-binding"></a>Spaltenbezogenes Binden
 Wenn die spaltenweise Bindung verwendet wird, bindet eine Anwendung ein oder zwei oder in einigen Fällen drei Arrays an jede Spalte, für die Daten zurückgegeben werden sollen. Das erste Array enthält die Datenwerte, und das zweite Array enthält Länge/Indikator Puffer. Indikatoren und Längenwerte können in separaten Puffern gespeichert werden, indem die SQL_DESC_INDICATOR_PTR-und SQL_DESC_OCTET_LENGTH_PTR Deskriptorfelder auf verschiedene Werte festgelegt werden. Wenn dies der Fall ist, wird ein drittes Array gebunden. Jedes Array enthält so viele Elemente, wie Zeilen im Rowset vorhanden sind.  
