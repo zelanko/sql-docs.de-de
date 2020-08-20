@@ -1,4 +1,5 @@
 ---
+description: ODBC Jet SQLConfigDataSource (Excel-Treiber)
 title: ODBC Jet SQLConfigDataSource (Excel-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 885b3bea-f4b6-4902-b994-f78a912b612f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a76482acd1182d900336d7ac9826b16968e00caa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61fcc1e7df00f14a7b92e294262b7806382a3d52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500303"
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet SQLConfigDataSource (Excel-Treiber)
 > [!NOTE]  
@@ -26,7 +27,7 @@ ms.locfileid: "81293010"
   
  Die **SQLConfigDataSource** -Funktion, die verwendet wird, um eine Datenquelle hinzuzufügen, zu ändern oder zu löschen, verwendet dynamisch die folgenden Schlüsselwörter.  
   
-|Stichwort|BESCHREIBUNG|  
+|Schlüsselwort|Beschreibung|  
 |-------------|-----------------|  
 |DBQ|Der Name der Arbeitsmappendatei für den Microsoft Excel-Treiber beim Zugriff auf Microsoft Excel 5,0-Dateien oder spätere Dateien.<br /><br /> Dadurch wird die gleiche Option wie die **Datenbank** im Setup Dialogfeld festgelegt.|  
 |DefaultDir|Die Pfadspezifikation für das Verzeichnis.<br /><br /> Dadurch wird die gleiche Option wie **Select Directory** oder **Select Workbook** im Setup Dialogfeld festgelegt.|  

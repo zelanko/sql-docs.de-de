@@ -1,4 +1,5 @@
 ---
+description: 'C zu SQL: Tag-Uhrzeit-Intervalle'
 title: 'C zu SQL: Zeitintervalle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c3f7efb443b442d44a94cfd43629cdaedd6195b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aba5bb40a34f100cf33d5c07fb6e796b227904dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499993"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C zu SQL: Tag-Uhrzeit-Intervalle
 Die Bezeichner für die ODBC-C-Datentypen für das Tag-Zeitintervall lauten wie folgt:  
@@ -49,10 +50,10 @@ Die Bezeichner für die ODBC-C-Datentypen für das Tag-Zeitintervall lauten wie 
   
 |SQL-Typbezeichner|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR [a]<br /><br /> SQL_VARCHAR [a]<br /><br /> SQL_LONGVARCHAR [a]|Spalten Byte Länge >= Zeichen Byte Länge<br /><br /> Spalten Byte Länge < Zeichen Byte Länge [a]<br /><br /> Der Datenwert ist kein gültiges intervallliterale.|Nicht zutreffend<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Spalten Zeichen Länge >= Zeichen Länge von Daten<br /><br /> Spalten Zeichenlänge < Zeichen Länge von Daten [a]<br /><br /> Der Datenwert ist kein gültiges intervallliterale.|Nicht zutreffend<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Die Konvertierung eines einzelnen Feld Intervalls führte nicht zum Abschneiden ganzer Ziffern.<br /><br /> Die Konvertierung führte zum Abschneiden ganzer Ziffern.|Nicht zutreffend<br /><br /> 22003|  
-|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Der Datenwert wurde ohne Abschneiden beliebiger Felder konvertiert.<br /><br /> Mindestens ein Feld mit einem Datenwert wurde während der Konvertierung abgeschnitten.|Nicht zutreffend<br /><br /> 22015|  
+|SQL_CHAR [a]<br /><br /> SQL_VARCHAR [a]<br /><br /> SQL_LONGVARCHAR [a]|Spalten Byte Länge >= Zeichen Byte Länge<br /><br /> Spalten Byte Länge < Zeichen Byte Länge [a]<br /><br /> Der Datenwert ist kein gültiges intervallliterale.|–<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Spalten Zeichen Länge >= Zeichen Länge von Daten<br /><br /> Spalten Zeichenlänge < Zeichen Länge von Daten [a]<br /><br /> Der Datenwert ist kein gültiges intervallliterale.|–<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Die Konvertierung eines einzelnen Feld Intervalls führte nicht zum Abschneiden ganzer Ziffern.<br /><br /> Die Konvertierung führte zum Abschneiden ganzer Ziffern.|–<br /><br /> 22003|  
+|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Der Datenwert wurde ohne Abschneiden beliebiger Felder konvertiert.<br /><br /> Mindestens ein Feld mit einem Datenwert wurde während der Konvertierung abgeschnitten.|–<br /><br /> 22015|  
   
  [a] alle C-Intervall Datentypen können in einen Zeichen Datentyp konvertiert werden.  
   

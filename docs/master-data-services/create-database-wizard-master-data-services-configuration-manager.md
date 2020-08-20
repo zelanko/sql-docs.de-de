@@ -1,4 +1,5 @@
 ---
+description: Datenbank erstellen (Assistent im Konfigurations-Manager für Master Data Services)
 title: Datenbank erstellen (Assistent)
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5379610bd7ca41f2648654eb3e3eaf27bf7dbae9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b5a2b1480db92f1cd3741aa4f3429755eeffce6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500657"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Datenbank erstellen (Assistent im Konfigurations-Manager für Master Data Services)
 
@@ -28,13 +29,13 @@ ms.locfileid: "85813029"
 ## <a name="database-server"></a>Datenbankserver  
  Geben Sie Informationen für die Verbindung mit einer lokalen oder Remoteinstanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] an, auf der die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank gehostet werden soll. Um eine Verbindung mit einer Remoteinstanz herzustellen, müssen Sie diese für Remoteverbindungen einrichten.  
   
-|Name des Steuerelements|BESCHREIBUNG|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
-|**SQL Server-Instanz**|Geben Sie den Namen der [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Instanz an, auf der die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank gehostet werden soll. Dies kann eine Standardinstanz oder eine benannte Instanz auf einem lokalen oder Remotecomputer sein. Geben Sie die Informationen wie folgt an:<br /><br /> Einen Punkt (.) für die Verbindung mit der Standardinstanz auf dem lokalen Computer.<br /><br /> Den Servernamen oder die IP-Adresse für die Verbindung mit der Standardinstanz auf dem angegebenen lokalen oder Remotecomputer.<br /><br /> Der Servername oder die IP-Adresse und der Instanzname für die Verbindung mit der benannten Instanz auf dem angegebenen lokalen oder Remotecomputer. Geben Sie diese Informationen im Format *server_name* \\ *instance_name*an.|  
+|**SQL Server Instanz**|Geben Sie den Namen der [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Instanz an, auf der die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank gehostet werden soll. Dies kann eine Standardinstanz oder eine benannte Instanz auf einem lokalen oder Remotecomputer sein. Geben Sie die Informationen wie folgt an:<br /><br /> Einen Punkt (.) für die Verbindung mit der Standardinstanz auf dem lokalen Computer.<br /><br /> Den Servernamen oder die IP-Adresse für die Verbindung mit der Standardinstanz auf dem angegebenen lokalen oder Remotecomputer.<br /><br /> Der Servername oder die IP-Adresse und der Instanzname für die Verbindung mit der benannten Instanz auf dem angegebenen lokalen oder Remotecomputer. Geben Sie diese Informationen im Format *server_name* \\ *instance_name*an.|  
 |**Authentifizierungstyp**|Wählen Sie den Authentifizierungstyp aus, der für die Verbindung mit der angegebenen SQL Server-Instanz verwendet werden soll. Die Anmeldeinformationen, mit denen Sie die Verbindung herstellen, müssen der Serverrolle **sysadmin** der angegebenen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz angehören. Weitere Informationen zur Rolle sysadmin finden Sie unter [Rollen auf Serverebene](../relational-databases/security/authentication-access/server-level-roles.md).<br /><br /> Mögliche Authentifizierungstypen:<br /><br /> **Aktuelle Benutzer integrierte Sicherheit**: verwendet die integrierte Windows-Authentifizierung, um eine Verbindung herzustellen, indem die Anmelde Informationen des aktuellen Windows-Benutzerkontos verwendet werden. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] verwendet die Windows-Anmeldeinformationen des Benutzers, der am Computer angemeldet ist und die Anwendung geöffnet hat. Sie können keine anderen Windows-Anmeldeinformationen in der Anwendung angeben. Wenn Sie die Verbindung mit anderen Windows-Anmeldeinformationen herstellen möchten, müssen Sie sich als der betreffende Benutzer am Computer anmelden und [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]öffnen.<br /><br /> **SQL Server-Konto**: Verwendet ein SQL Server-Konto für die Verbindung. Wenn Sie diese Option auswählen, sind die Felder **Benutzername** und **Kennwort** aktiviert, und Sie müssen Anmeldeinformationen für ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konto auf der betreffenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz angeben.|  
 |**Benutzername**|Geben Sie den Namen des Benutzerkontos an, unter dem eine Verbindung mit der angegebenen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz hergestellt wird. Das Konto muss Teil der **sysadmin** -Rolle auf der angegebenen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanz sein.<br /><br /> Wenn der **Authentifizierungstyp** auf **Aktueller Benutzer integrierter Sicherheit**festgeschrieben ist, ist das Feld **Benutzername** schreibgeschützt und zeigt den Namen des Windows-Benutzerkontos an, das auf dem Computer angemeldet ist.<br /><br /> Wenn der **Authentifizierungstyp** auf **SQL Server-Konto**festgelegt wurde, ist das Feld **Benutzername** aktiviert, und Sie müssen Anmeldeinformationen für ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konto auf der betreffenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz angeben.|  
 |**Kennwort**|Geben Sie das Kennwort ein, das dem Benutzerkonto zugeordnet ist:<br /><br /> Wenn der **Authentifizierungstyp** auf **Aktueller Benutzer integrierter Sicherheit**festgelegt ist, ist das Feld **Kennwort** schreibgeschützt, und für die Verbindung werden Anmelde Informationen des angegebenen Windows-Benutzerkontos verwendet.<br /><br /> Wenn der **Authentifizierungstyp** auf **SQL Server-Konto**festgelegt wurde, ist das Feld **Kennwort** aktiviert, und Sie müssen das Kennwort angeben, das dem betreffenden Benutzerkonto zugeordnet ist.|  
-|**Testen der Verbindung**|Überprüfen Sie, ob unter dem angegebenen Benutzerkonto eine Verbindung mit der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz hergestellt werden kann und ob das Konto über eine Berechtigung zum Erstellen der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank für diese Instanz verfügt. Wenn Sie **Verbindung testen**nicht aktivieren, wird der Test ausgeführt, sobald Sie auf **Weiter**klicken.|  
+|**Verbindung testen**|Überprüfen Sie, ob unter dem angegebenen Benutzerkonto eine Verbindung mit der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz hergestellt werden kann und ob das Konto über eine Berechtigung zum Erstellen der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank für diese Instanz verfügt. Wenn Sie **Verbindung testen**nicht aktivieren, wird der Test ausgeführt, sobald Sie auf **Weiter**klicken.|  
   
 ## <a name="database"></a>Datenbank  
  Geben Sie einen Datenbanknamen und Sortierungsoptionen für die neue Datenbank an. Sortierungen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bieten Sortierregeln und die Berücksichtigung von Groß-/Kleinschreibung und Akzenten für die Daten. Sortierungen, die mit Zeichendatentypen wie char und varchar verwendet werden, geben die Codepage und die entsprechenden Zeichen vor, die für den jeweiligen Datentyp dargestellt werden können. Weitere Informationen zur Datenbanksortierung finden Sie unter [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).  
@@ -47,7 +48,7 @@ ms.locfileid: "85813029"
   
 ## <a name="administrator-account"></a>Administratorkonto  
   
-|Name des Steuerelements|BESCHREIBUNG|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |**Benutzername**|Geben Sie den Standardadministrator für [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]an. Ein Administrator verfügt über Zugriff auf alle Funktionsbereiche und kann alle Modelle hinzufügen, löschen oder aktualisieren. Informationen über die Administratorberechtigung und andere Typen von Administratoren in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
   

@@ -1,4 +1,5 @@
 ---
+description: Zeit- und Datumsfunktionen (Visual FoxPro-ODBC-Treiber)
 title: Zeit-und Datumsfunktionen (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 86260f8e7245bed15122d4dbfc4649131674e17f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d537411481a8bc6c9065e8e86c216c8c0637e565
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500073"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Zeit- und Datumsfunktionen (Visual FoxPro-ODBC-Treiber)
 In der folgenden Tabelle sind die vom Visual FoxPro-ODBC-Treiber unterstützten ODBC-Zeit-und Datumsfunktionen aufgeführt. Wenn die Visual FoxPro-Grammatik für dieselbe Funktion von der ODBC-Syntax abweicht, wird die Entsprechung von Visual FoxPro aufgeführt.  

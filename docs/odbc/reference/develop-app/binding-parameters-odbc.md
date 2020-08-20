@@ -1,4 +1,5 @@
 ---
+description: Binden von Parametern (ODBC)
 title: Bindungs Parameter ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6e314bb9e3a1a979976a450e2a45a286ec54dfe7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9893d6611ad2bfc7107df1cd2d4ffe72dbf32fad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499953"
 ---
 # <a name="binding-parameters-odbc"></a>Binden von Parametern (ODBC)
 Jeder Parameter in einer SQL-Anweisung muss einer Variablen in der Anwendung zugeordnet oder *gebunden* werden, bevor die Anweisung ausgeführt wird. Wenn die Anwendung eine Variable an einen Parameter bindet, wird die Variable-Address, der C-Datentyp usw. für den Treiber beschrieben. Außerdem wird der Parameter selbst-SQL-Datentyp, Genauigkeit usw. beschrieben. Der Treiber speichert diese Informationen in der Struktur, die er für diese Anweisung verwaltet, und verwendet die Informationen, um den Wert aus der Variablen abzurufen, wenn die Anweisung ausgeführt wird.  

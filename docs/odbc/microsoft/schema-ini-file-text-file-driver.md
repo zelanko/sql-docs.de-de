@@ -1,4 +1,5 @@
 ---
+description: Datei „Schema.ini“ (Textdateitreiber)
 title: Schema.ini Datei (Text Datei Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed041e43a211f58a34b4e2476d9e0b62ff5d162b
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 8b4bbebfa6eb184bf81cba4a9faf5e3200f428de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500223"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Datei „Schema.ini“ (Textdateitreiber)
 Wenn der Text Treiber verwendet wird, wird das Format der Textdatei mithilfe einer Schema Informationsdatei festgelegt. Die Schema Informationsdatei wird immer Schema.ini benannt und immer im gleichen Verzeichnis wie die Text Datenquelle gespeichert. Die Schema Informationsdatei stellt dem IISAM Informationen über das allgemeine Format der Datei, den Spaltennamen und Datentyp Informationen sowie verschiedene weitere Daten Merkmale bereit. Für den Zugriff auf Daten mit fester Länge ist immer eine Schema.ini Datei erforderlich. Sie sollten eine Schema.ini Datei verwenden, wenn die Text Tabelle DateTime-, Currency-oder decimal-Daten enthält, oder wenn Sie eine bessere Kontrolle über die Verarbeitung der Daten in der Tabelle wünschen.  
@@ -93,10 +94,10 @@ Col2=CustomerName Text Width 30
 n=ColumnName type [Width] [#]  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle werden die einzelnen Teile des " **Col**_n_ "-Eintrags beschrieben.  
   
-|Parameter|BESCHREIBUNG|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*ColumnName*|Der Textname der Spalte. Wenn der Spaltenname eingebettete Leerzeichen enthält, müssen Sie ihn in doppelte Anführungszeichen einschließen.|  
 |*type*|Die Datentypen lauten wie folgt:<br /><br /> **Microsoft Jet-Datentypen**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Währung<br /><br /> Single<br /><br /> Double<br /><br /> Datetime<br /><br /> Text<br /><br /> Memo<br /><br /> **ODBC-Datentypen** Char (identisch mit Text)<br /><br /> Float (identisch mit Double)<br /><br /> Ganzzahl (identisch mit Short)<br /><br /> LongChar (identisch mit Memo)<br /><br /> Datums *Format* für Datum|  
@@ -113,7 +114,7 @@ CharacterSet=ANSI
 ## <a name="specifying-data-type-formats-and-conversions"></a>Angeben von Datentyp Formaten und-Konvertierungen  
  Die Schema.ini-Datei enthält mehrere Optionen, mit denen Sie angeben können, wie Daten konvertiert oder angezeigt werden. In der folgenden Tabelle sind die einzelnen Optionen aufgeführt.  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**DateTimeFormat**|Kann auf eine Format Zeichenfolge festgelegt werden, die Datumsangaben und Uhrzeiten angibt. Sie sollten diesen Eintrag angeben, wenn alle Datums-/Uhrzeitfelder im Import/Export im gleichen Format behandelt werden. Alle Microsoft Jet-Formate außer Uhr und Nachmittag werden unterstützt. Wenn keine Format Zeichenfolge vorhanden ist, werden die Windows-Systemsteuerung kurz Datums Bild und Uhrzeit Optionen verwendet.|  
 |**Decimalsymbol**|Kann auf ein beliebiges einzelnes Zeichen festgelegt werden, das zum Trennen der Ganzzahl vom Bruchteil einer Zahl verwendet wird.|  

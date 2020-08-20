@@ -1,4 +1,5 @@
 ---
+description: SetToStr (MDX)
 title: Setto Str (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3965c3cc8ea2a2f2de292ca0c75e49c957e04f02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0317de06f3d68388fac5be752d26e27f0d373a89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500443"
 ---
 # <a name="settostr-mdx"></a>SetToStr (MDX)
 
@@ -32,7 +33,7 @@ SetToStr(Set_Expression)
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Funktion wird zum Übertragen der Zeichenfolgendarstellung einer Menge an eine externe Funktion zur Analyse verwendet. Die zurückgegebene Zeichenfolge wird in geschweiften {}Klammern eingeschlossen, wobei jedes Element im Satz durch ein Komma getrennt ist.  
+ Diese Funktion wird zum Übertragen der Zeichenfolgendarstellung einer Menge an eine externe Funktion zur Analyse verwendet. Die zurückgegebene Zeichenfolge wird in geschweiften Klammern eingeschlossen {} , wobei jedes Element im Satz durch ein Komma getrennt ist.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine Zeichenfolge zurückgegeben, die alle Elemente der Geography.Country-Attributhierarchie enthält.  

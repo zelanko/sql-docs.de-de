@@ -1,4 +1,5 @@
 ---
+description: 'Transaktionen: Always On-Verfügbarkeitsgruppen und Datenbankspiegelung'
 title: 'Transaktionen: Always On-Verfügbarkeitsgruppen und Datenbankspiegelung'
 descripton: Learn about cross-database and distributed transaction support for SQL Server Always On availability groups and database mirroring.
 ms.custom: seo-lt-2019
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87a2d5dc4e4c7109db09217e975c1a8c8c9b9434
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a738c1eb308ccafa0c744a66d069cbefee46ad26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500935"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transaktionen: Always On-Verfügbarkeitsgruppen und Datenbankspiegelung
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ Microsoft Distributed Transaction Coordinator (MSDTC oder DTC) ist ein Windows-D
 
 Mit der neuen Funktion von SQL Server 2016 können Sie verteilte Transaktionen selbst dann verwenden, wenn mindestens eine Datenbank in der Transaktion Teil zu einer Verfügbarkeitsgruppe gehören. Vor SQL Server 2016 wurden verteilte Transaktionen für Datenbanken in Verfügbarkeitsgruppen nicht unterstützt. In SQL Server 2016 können Sie einen Ressourcen-Manager pro Datenbank registrieren. Dank dieser neuen Funktion können verteilte Transaktionen jetzt auch Datenbanken in Verfügbarkeitsgruppen berücksichtigen.
   
- Die folgenden Anforderungen müssen erfüllt sein:  
+ Die folgenden Anforderungen müssen erfüllt werden:  
   
 -   Verfügbarkeitsgruppen müssen auf Windows Server 2012 R2 oder höher ausgeführt werden. Für Windows Server 2012 R2 müssen Sie das Update in KB3090973 installieren, das unter [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973) verfügbar ist.  
   
@@ -91,6 +92,6 @@ Mit der neuen Funktion von SQL Server 2016 können Sie verteilte Transaktionen s
 >  Es besteht keine Unterstützung für die Verwendung der Datenbankspiegelung mit DTC oder die Verwendung von Verfügbarkeitsgruppen mit DTC auf nicht in diesem Artikel genehmigte Weise.  Dies bedeutet nicht, dass Aspekte des Produkts, die nicht mit DTC in Zusammenhang stehen, nicht unterstützt werden; Probleme die aus der unsachgemäßen Verwendung von verteilten Transaktionen herrühren, werden jedoch nicht unterstützt.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On-Verfügbarkeitsgruppen: Interoperabilität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

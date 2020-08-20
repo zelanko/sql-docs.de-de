@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46c41c4bf06082e36df1ea48165520afbc4a3210
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddfa137e0efd93bfad2a59a4fc2c8da2c189cdc3
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481977"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618113"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ In der obigen Tabelle kann das- **Attribut** die folgenden Werte aufweisen:
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="set-options"></a>SET-Optionen  
  Kopien desselben kompilierten Plans können sich nur durch den Wert in der Spalte **set_options** unterscheiden. Dies weist darauf hin, dass verschiedene Verbindungen für die gleiche Abfrage unterschiedliche Sätze von SET-Optionen verwenden. Die Verwendung unterschiedlicher Sätze von Optionen ist meist unerwünscht, da dies zusätzliche Kompilierungen, einen geringeren Anteil von Wiederverwendungen von Plänen sowie, da im Cache mehrere Pläne vorhanden sind, eine Vergrößerung des Plancaches verursachen kann.  
@@ -95,7 +95,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `V
 |Option|Wert|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
-|Paralleler Plan|2|  
+|Parallelplan<br /><br /> Gibt an, dass die Optionen für den Plan Parallelismus geändert wurden.|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
 |ANSI_WARNINGS|16|  

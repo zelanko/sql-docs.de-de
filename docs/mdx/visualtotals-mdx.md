@@ -1,4 +1,5 @@
 ---
+description: VisualTotals (MDX)
 title: Visualsummen (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a5becd3382f07a9adc89055a253235495a7e50a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c1e85f4384c322938f5e7937c32bcd116acdda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500423"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
 
@@ -40,7 +41,7 @@ VisualTotals(Set_Expression[,Pattern])
 > [!NOTE]  
 >  Wenn Sie die **visualsummen** -Funktion auf Dimensions Elemente anwenden, die nicht mit einem Measure verknüpft sind oder unter der Measure-Gruppen Granularität liegen, werden die Werte durch Null ersetzt.  
   
- Das optionale *Muster*gibt das Format für die Gesamt Bezeichnung an. *Pattern* erfordert ein Sternchen (*) als Ersatz Zeichen für das übergeordnete Element, und der restliche Text in der Zeichenfolge wird im Ergebnis mit dem übergeordneten Namen angezeigt. Wenn Sie ein literales Sternchen anzeigen möchten, verwenden Sie zwei\*\*Sternchen ().  
+ Das optionale *Muster*gibt das Format für die Gesamt Bezeichnung an. *Pattern* erfordert ein Sternchen (*) als Ersatz Zeichen für das übergeordnete Element, und der restliche Text in der Zeichenfolge wird im Ergebnis mit dem übergeordneten Namen angezeigt. Wenn Sie ein literales Sternchen anzeigen möchten, verwenden Sie zwei Sternchen ( \* \* ).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der sichtbare Gesamtwert für das dritte Quartal des Kalenderjahres 2001 basierend auf dem einzigen angegebenen nachfolgenden Wert, dem Monat Juli, zurückgegeben.  

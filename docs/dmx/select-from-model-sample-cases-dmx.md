@@ -1,4 +1,5 @@
 ---
+description: Wählen Sie aus dem &lt; Modell aus &gt; . SAMPLE_CASES (DMX)
 title: Wählen Sie aus dem &lt; Modell aus &gt; . SAMPLE_CASES (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: af927d9c998d245c31511c29450eafac31e1d54b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500874"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>Wählen Sie aus dem &lt; Modell aus &gt; . SAMPLE_CASES (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +33,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- Dies ist optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *Ausdrucks Liste*  
  Eine durch Trennzeichen getrennte Liste mit Bezeichnern verbundener Spalten.  
@@ -41,10 +42,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  Ein Modellbezeichner.  
   
  *Bedingungs Liste*  
- Dies ist optional. Bedingungen, die die Werte einschränken, die für die Spaltenliste zurückgegeben werden.  
+ Optional. Bedingungen, die die Werte einschränken, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- Dies ist optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Beispielfälle können generiert werden und sind in den Trainingsdaten möglicherweise nicht tatsächlich vorhanden. Der zurückgegebene Fall ist repräsentativ für den angegebenen Inhaltsknoten.  

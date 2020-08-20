@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eec9e95ccbc326d3d2f64d224cf11f3d059bb8f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 801602c78193f9fc3fa9cdab40b98c3dc3dd42e0
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717082"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512316"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren den Zugriff verloren haben 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ Es wird empfohlen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Wenn Sie die Instanz im Einzelbenutzermodus starten, müssen Sie zunächst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst beenden. Andernfalls stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent möglicherweise zuerst eine Verbindung her und belegt die einzige verfügbare Verbindung zum Server. Dadurch wird Ihre Anmeldung blockiert.
 
-Die einzige verfügbare Verbindung kann auch von einer unbekannten Clientanwendung besetzt werden, bevor Sie sich anmelden können. Damit dies nicht geschieht, können Sie die `-m`-Option gefolgt von einem Anwendungsnamen verwenden, um die Verbindungen der angegebenen Anwendung auf eine einzelne Verbindung zu beschränken. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit `-m"sqlcmd"` starten, werden Verbindungen z. B. auf eine einzelne Verbindung beschränkt, die sich selbst als **sqlcmd**-Clientprogramm identifiziert. Für eine Verbindungsherstellung über den Abfrage-Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] müssen Sie `-m"Microsoft SQL Server Management Studio - Query"` verwenden.  
+Die einzige verfügbare Verbindung kann auch von einer unbekannten Clientanwendung besetzt werden, bevor Sie sich anmelden können. Damit dies nicht geschieht, können Sie die `-m`-Option gefolgt von einem Anwendungsnamen verwenden, um die Verbindungen der angegebenen Anwendung auf eine einzelne Verbindung zu beschränken. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit `-mSQLCMD` starten, werden Verbindungen z. B. auf eine einzelne Verbindung beschränkt, die sich selbst als **sqlcmd**-Clientprogramm identifiziert. Für eine Verbindungsherstellung über den Abfrage-Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] müssen Sie `-m"Microsoft SQL Server Management Studio - Query"` verwenden.  
 
 
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ In der folgenden Tabelle werden die verschiedenen Methoden zusammengefasst, mit 
 | Option | BESCHREIBUNG | Verwendung |
 |:---|:---|:---|
 |`-m` | Beschränkt die Verbindungen auf eine einzelne Verbindung | Wenn keine anderen Benutzer versuchen, eine Verbindung mit der Instanz herzustellen, oder Sie den Namen der Anwendung nicht kennen, mit der die Verbindung zur Instanz hergestellt wird |
-|`-m"sqlcmd"`| Beschränkt die Verbindungen auf eine einzelne Verbindung, die sich als **sqlcmd**-Clientprogramm identifizieren muss| Wenn Sie mit **sqlcmd** eine Verbindung zur Instanz herstellen und verhindern möchten, dass andere Anwendungen die einzige verfügbare Verbindung belegen |
+|`-mSQLCMD`| Beschränkt die Verbindungen auf eine einzelne Verbindung, die sich als **sqlcmd**-Clientprogramm identifizieren muss| Wenn Sie mit **sqlcmd** eine Verbindung zur Instanz herstellen und verhindern möchten, dass andere Anwendungen die einzige verfügbare Verbindung belegen |
 |`-m"Microsoft SQL Server Management Studio - Query"`| Beschränkt die Verbindungen auf eine einzelne Verbindung, die sich selbst als die Anwendung **Microsoft SQL Server Management Studio - Query** identifizieren muss.| Wenn Sie über den Abfrage-Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] eine Verbindung zur Instanz herstellen und verhindern möchten, dass andere Anwendungen die einzige verfügbare Verbindung belegen |
 |`-f`| Beschränkt die Verbindungen auf eine einzelne Verbindung und startet die Instanz mit einer minimalen Konfiguration | Wenn eine andere Konfiguration den Start verhindert |
 | &nbsp; | &nbsp; | &nbsp; |

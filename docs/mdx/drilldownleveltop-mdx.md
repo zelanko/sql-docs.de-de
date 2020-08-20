@@ -1,4 +1,5 @@
 ---
+description: DrilldownLevelTop (MDX)
 title: DrilldownLevelTop (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bdb07daea5b48ac2627f23d9149e590e1fe35b48
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: d0bb64acad5e29ff6eed5570e8764fd6a76a7547
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500513"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
 

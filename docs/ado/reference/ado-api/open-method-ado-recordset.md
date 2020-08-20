@@ -1,4 +1,5 @@
 ---
+description: Open-Methode (ADO-Recordset)
 title: Open-Methode (ADO-Recordset) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d8a4514e677b2b50effdadd2eac24c9f195a1f07
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762178"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512256"
 ---
 # <a name="open-method-ado-recordset"></a>Open-Methode (ADO-Recordset)
 Öffnet einen Cursor für ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt.  
@@ -35,19 +36,19 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Dies ist optional. Eine **Variante** , die ein gültiges [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt, eine SQL-Anweisung, einen Tabellennamen, einen gespeicherten Prozedur Aufrufe, eine URL oder den Namen einer Datei oder eines [Streamobjekts](../../../ado/reference/ado-api/stream-object-ado.md) mit einem permanent gespeicherten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)ergibt.  
+ Optional. Eine **Variante** , die ein gültiges [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt, eine SQL-Anweisung, einen Tabellennamen, einen gespeicherten Prozedur Aufrufe, eine URL oder den Namen einer Datei oder eines [Streamobjekts](../../../ado/reference/ado-api/stream-object-ado.md) mit einem permanent gespeicherten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)ergibt.  
   
  *ActiveConnection*  
- Dies ist optional. Entweder eine **Variante** , die einen gültigen [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objektvariablen Namen ergibt, oder eine **Zeichenfolge** , die [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Parameter enthält.  
+ Optional. Entweder eine **Variante** , die einen gültigen [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objektvariablen Namen ergibt, oder eine **Zeichenfolge** , die [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Parameter enthält.  
   
  *CursorType*  
- Dies ist optional. Ein [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) -Wert, der den Typ des Cursors bestimmt, den der Anbieter beim Öffnen des **Recordsets**verwenden soll. Der Standardwert ist ' **adOpenForwardOnly**'.  
+ Optional. Ein [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) -Wert, der den Typ des Cursors bestimmt, den der Anbieter beim Öffnen des **Recordsets**verwenden soll. Der Standardwert ist ' **adOpenForwardOnly**'.  
   
  *LockType*  
- Dies ist optional. Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) -Wert, der bestimmt, welche Art von Sperre (Parallelität) der Anbieter beim Öffnen des **Recordsets**verwenden soll. Der Standardwert ist **adlockread only**.  
+ Optional. Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) -Wert, der bestimmt, welche Art von Sperre (Parallelität) der Anbieter beim Öffnen des **Recordsets**verwenden soll. Der Standardwert ist **adlockread only**.  
   
  *Optionen*  
- Dies ist optional. Ein **Long** -Wert, der angibt, wie der Anbieter das *Quell* Argument auswerten soll, wenn es etwas anderes als ein **Befehls** Objekt darstellt, oder dass das **Recordset** aus einer Datei wieder hergestellt werden soll, in der es zuvor gespeichert wurde. Kann ein oder mehrere [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) -oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) -Werte sein, die mit einem bitweisen OR-Operator kombiniert werden können.  
+ Optional. Ein **Long** -Wert, der angibt, wie der Anbieter das *Quell* Argument auswerten soll, wenn es etwas anderes als ein **Befehls** Objekt darstellt, oder dass das **Recordset** aus einer Datei wieder hergestellt werden soll, in der es zuvor gespeichert wurde. Kann ein oder mehrere [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) -oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) -Werte sein, die mit einem bitweisen OR-Operator kombiniert werden können.  
   
 > [!NOTE]
 >  Wenn Sie ein **Recordset** aus einem **Stream** öffnen, der ein persistente **Recordset**enthält, hat die Verwendung eines [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) -Werts von **adasyncfetchnonblocking** keine Auswirkung. das Abrufen erfolgt synchron und wird blockiert.  
@@ -60,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Mithilfe der **Open** -Methode für ein **Recordset** -Objekt wird ein Cursor geöffnet, der Datensätze aus einer Basistabelle, die Ergebnisse einer Abfrage oder ein zuvor gespeicherter **Recordset**darstellt.  
   
- Verwenden Sie das optionale *Source* -Argument zum Angeben einer Datenquelle, indem Sie eine der folgenden Aktionen verwenden: eine **Befehls** Objekt Variable, eine SQL-Anweisung, eine gespeicherte Prozedur, ein Tabellenname, eine URL oder ein kompletter Dateipfadname. Wenn die *Quelle* ein Dateipfadname ist, kann es sich um einen vollständigen Pfad ("c:\dir\file.RST"), einen relativen Pfad (".. \file.RST ") oder eine URL (" <https://files/file.rst> ").  
+ Verwenden Sie das optionale *Source* -Argument zum Angeben einer Datenquelle, indem Sie eine der folgenden Aktionen verwenden: eine **Befehls** Objekt Variable, eine SQL-Anweisung, eine gespeicherte Prozedur, ein Tabellenname, eine URL oder ein kompletter Dateipfadname. Wenn die *Quelle* ein Dateipfadname ist, kann es sich um einen vollständigen Pfad ("c:\dir\file.RST"), einen relativen Pfad (".. \file.RST ") oder eine URL ( `https://files/file.rst` ).  
   
  Es empfiehlt sich nicht, das *Source* -Argument der **Open** -Methode zu verwenden, um eine Aktions Abfrage auszuführen, die keine Datensätze zurückgibt, da es keine einfache Möglichkeit gibt, zu bestimmen, ob der-Befehl erfolgreich ausgeführt wurde. Das von einer solchen Abfrage zurückgegebene **Recordset** wird geschlossen. Um eine Abfrage auszuführen, die keine Datensätze zurückgibt, wie z. b. eine SQL INSERT-Anweisung, wird stattdessen die [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) -Methode eines **Befehls** Objekts oder die [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) -Methode eines [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekts aufgerufen.  
   
@@ -104,7 +105,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Open-und Close-Methoden Beispiel (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open-und Close-Methoden Beispiel (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Open-und Close-Methoden Beispiel (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

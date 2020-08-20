@@ -1,4 +1,5 @@
 ---
+description: '&lt;Quelldaten Abfrage&gt;'
 title: '&lt;Quelldaten Abfrage &gt; | Microsoft-Dokumentation'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fedb3472755a8147e10aef046c7a7fc435b356cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970280"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500767"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;Quelldaten Abfrage&gt;
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

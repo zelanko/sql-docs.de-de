@@ -1,4 +1,5 @@
 ---
+description: 'C zu SQL: GUID'
 title: 'C zu SQL: GUID | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3b559499273e885e23da10d9093a0ce9ff92393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fca2ba20df65222eaf1ce6f4384f449a1524334
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499983"
 ---
 # <a name="c-to-sql-guid"></a>C zu SQL: GUID
 Der Bezeichner für den GUID ODBC-C-Datentyp lautet:  
@@ -30,13 +31,13 @@ Der Bezeichner für den GUID ODBC-C-Datentyp lautet:
   
 |SQL-Typbezeichner|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR|Spalten Byte Länge >= 36|Nicht zutreffend|  
+|SQL_CHAR|Spalten Byte Länge >= 36|–|  
 |SQL_VARCHAR|Spalten Byte Länge < 36|22001|  
 |SQL_LONGVARCHAR|Der Datenwert ist keine gültige GUID.|22018|  
-|SQL_WCHAR|Spalten Zeichenlänge >= 36|Nicht zutreffend|  
+|SQL_WCHAR|Spalten Zeichenlänge >= 36|–|  
 |SQL_WVARCHAR|Spalten Zeichenlänge < 36|22001|  
 |SQL_WLONGVARCHAR|Der Datenwert ist keine gültige GUID.|22018|  
-|SQL_GUID|Keine [a]|Nicht zutreffend|  
+|SQL_GUID|Keine [a]|–|  
   
  [a] alle hexadezimalen Werte sind als GUID gültig.  
   

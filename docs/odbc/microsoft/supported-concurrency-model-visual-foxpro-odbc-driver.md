@@ -1,4 +1,5 @@
 ---
+description: Unterstütztes Parallelitätsmodell (Visual FoxPro-ODBC-Treiber)
 title: Unterstütztes Parallelitäts Modell (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c39ed963-3af1-4888-8631-6083692ddcd7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 253a6dd86f6dc974d53dd151636bb8b8132e4d02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1be0a7e9ea3700941282f23956a8c304a1ef7f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500103"
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>Unterstütztes Parallelitätsmodell (Visual FoxPro-ODBC-Treiber)
 Der Visual FoxPro-ODBC- *Treiber unterstützt*die schreibgeschützte Parallelität. Die Anwendung kann [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) mit einer SQL_CONCURRENCY Option von SQL_CONCUR_READ_ONLY aufrufen.  

@@ -1,4 +1,5 @@
 ---
+description: Überlegungen zur Programmierung von Microsoft Access-Treibern
 title: Überlegungen zur Programmierung von Microsoft Access Driver | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52c8a169c950de7c1b5f717c2591fff88add42f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7dea1379913213b941a0fd9cf9dcdec753ea5bde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81308051"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500273"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Überlegungen zur Programmierung von Microsoft Access-Treibern
 In diesem Abschnitt werden die folgenden Themen behandelt:  

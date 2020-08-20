@@ -1,4 +1,5 @@
 ---
+description: Struktur und Verwendung von DMX-Vorhersageabfragen
 title: Struktur und Verwendung von DMX-Vorhersage Abfragen | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e2aaeedff9eb0d22d6a7175641177f803379adaa
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 242e86a0ac74dacd8682825f25adab4a847a82e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500768"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Struktur und Verwendung von DMX-Vorhersageabfragen
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

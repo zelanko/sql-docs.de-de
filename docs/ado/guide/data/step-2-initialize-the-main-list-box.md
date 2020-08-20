@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6ad5bdd6b8fbf294a1c4f45a825910ec6a82af2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f746b454b18de7d88ca4c42d049eb058f671ba8e
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452802"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512296"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Schritt 2: Initialisieren des Listenfelds „Main“
 Um globale Datensatz-und Recordset-Objekte zu deklarieren, fügen Sie den folgenden Code in (allgemein) (Deklarationen) für Form1 ein:  
@@ -46,11 +46,11 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Dieser Code instanziiert die globalen Datensatz-und Recordset-Objekte. Das Daten Satz Objekt, `grec` , wird mit einer URL geöffnet, die als ActiveConnection angegeben ist. Wenn die URL vorhanden ist, wird Sie geöffnet. Wenn Sie nicht bereits vorhanden ist, wird Sie erstellt. Beachten Sie, dass Sie " <https://servername/foldername/> " durch eine gültige URL aus Ihrer Umgebung ersetzen sollten.  
+ Dieser Code instanziiert die globalen Datensatz-und Recordset-Objekte. Das Daten Satz Objekt, `grec` , wird mit einer URL geöffnet, die als ActiveConnection angegeben ist. Wenn die URL vorhanden ist, wird Sie geöffnet. Wenn Sie nicht bereits vorhanden ist, wird Sie erstellt. Beachten Sie, dass Sie `https://servername/foldername/` durch eine gültige URL aus Ihrer Umgebung ersetzen sollten.  
   
  Das Recordset-Objekt, `grs` , wird für die untergeordneten Elemente des Datensatzes geöffnet, `grec` . Anschließend `lstMain` wird mit den Dateinamen der Ressourcen aufgefüllt, die in der URL veröffentlicht werden.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Szenario für die Internet Veröffentlichung](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Schritt 1: Einrichten des Visual Basic Projekts](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
  [Schritt 3: Auffüllen des Listenfelds „Fields“](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
