@@ -1,4 +1,5 @@
 ---
+description: sp_apply_job_to_targets (Transact-SQL)
 title: sp_apply_job_to_targets (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbefdf6a045dce468365aa585b7efad775709c2c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1f821418b5e6a75aa51264abb0d265f907b8957d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464552"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,23 +43,23 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id`Die Auftrags-ID des Auftrags, der auf die angegebenen Zielserver oder Zielserver Gruppen angewendet werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die Auftrags-ID des Auftrags, der auf die angegebenen Zielserver oder Zielserver Gruppen angewendet werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'`Der Name des Auftrags, der auf die angegebenen Zielserver oder Zielserver Gruppen angewendet werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, der auf die angegebenen Zielserver oder Zielserver Gruppen angewendet werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @target_server_groups = ] 'target_server_groups'`Eine durch Trennzeichen getrennte Liste der Zielserver Gruppen, auf die der angegebene Auftrag angewendet werden soll. *target_server_groups* ist vom Datentyp **nvarchar (2048)** und hat den Standardwert NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Eine durch Trennzeichen getrennte Liste der Zielserver Gruppen, auf die der angegebene Auftrag angewendet werden soll. *target_server_groups* ist vom Datentyp **nvarchar (2048)** und hat den Standardwert NULL.  
   
-`[ @target_servers = ] 'target_servers'`Eine durch Trennzeichen getrennte Liste von Ziel Servern, auf die der angegebene Auftrag angewendet werden soll. *target_servers*ist vom Datentyp **nvarchar (2048)** und hat den Standardwert NULL.  
+`[ @target_servers = ] 'target_servers'` Eine durch Trennzeichen getrennte Liste von Ziel Servern, auf die der angegebene Auftrag angewendet werden soll. *target_servers*ist vom Datentyp **nvarchar (2048)** und hat den Standardwert NULL.  
   
-`[ @operation = ] 'operation'`Gibt an, ob der angegebene Auftrag auf die angegebenen Zielserver oder Zielserver Gruppen angewendet oder daraus entfernt werden soll. *Operation*ist vom Datentyp **varchar (7)**. der Standardwert ist Apply. Gültige Vorgänge sind **Apply** und **Remove**.  
+`[ @operation = ] 'operation'` Gibt an, ob der angegebene Auftrag auf die angegebenen Zielserver oder Zielserver Gruppen angewendet oder daraus entfernt werden soll. *Operation*ist vom Datentyp **varchar (7)**. der Standardwert ist Apply. Gültige Vorgänge sind **Apply** und **Remove**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_apply_job_to_targets** bietet eine einfache Möglichkeit zum anwenden (oder entfernen) eines Auftrags von mehreren Ziel Servern und ist eine Alternative zum Aufrufen von **sp_add_jobserver** (oder **sp_delete_jobserver**) für jeden erforderlichen Zielserver.  
   
 ## <a name="permissions"></a>Berechtigungen  

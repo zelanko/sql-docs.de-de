@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 title: sys. sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de629f6ae966f8ea64dffa01676811650ac38b43
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 4dda2f6da0ee65b7bfa927739ac945407f28cbc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463930"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ sys.sp_xtp_unbind_db_resource_pool 'database_name'
   
 #### <a name="parameters"></a>Parameter  
   
-## <a name="messages"></a>Nachrichten  
+## <a name="messages"></a>Meldungen  
  Wenn die Datenbank an einen benannten Ressourcenpool gebunden wurde, wurde die Prozedur erfolgreich ausgeführt. Sie müssen die Datenbank jedoch neu starten, damit die aufgehobene Bindung wirksam wird.  
  Wenn für die angegebene Datenbank keine Bindung besteht, wird `sp_xtp_unbind_db_resource_pool` zwar erfolgreich ausgeführt, gibt aber folgende Informationsmeldung aus:  
   

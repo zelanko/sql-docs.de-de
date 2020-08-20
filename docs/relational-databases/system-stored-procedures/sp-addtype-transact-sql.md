@@ -1,4 +1,5 @@
 ---
+description: sp_addtype (Transact-SQL)
 title: sp_addtype (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1b4d469d8afd6946b35cce503efd6db6cdfcb3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e924e286c036f7d26e93d88c18105696835d2f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464637"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85876222"
   Erstellt einen Aliasdatentyp.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Create Type](../../t-sql/statements/create-type-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [Create Type](../../t-sql/statements/create-type-transact-sql.md) .  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,15 +45,15 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @typename = ] type`Der Name des Alias Datentyps. Alias Datentyp Namen müssen den Regeln für Bezeichner [entsprechen und in](../../relational-databases/databases/database-identifiers.md) jeder Datenbank eindeutig sein. *Type ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @typename = ] type` Der Name des Alias Datentyps. Alias Datentyp Namen müssen den Regeln für Bezeichner [entsprechen und in](../../relational-databases/databases/database-identifiers.md) jeder Datenbank eindeutig sein. *Type ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @phystype = ] system_data_type`Der physische oder bereitgestellte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp, auf dem der Alias Datentyp basiert.* system_data_type* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die folgenden Werte sind möglich:  
+`[ @phystype = ] system_data_type` Der physische oder bereitgestellte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp, auf dem der Alias Datentyp basiert.* system_data_type* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 ||||  
 |-|-|-|  
 |**bigint**|**binary(n)**|**bit**|  
 |**char(n)**|**datetime**|**decimal**|  
-|**float**|**Bild**|**int**|  
+|**float**|**image**|**int**|  
 |**money**|**NCHAR (n)**|**ntext**|  
 |**numeric**|**nvarchar (n)**|**real**|  
 |**smalldatetime**|**smallint**|**smallmoney**|  
@@ -70,7 +71,7 @@ sp_addtype [ @typename = ] type,
  *Hymnen*  
  Eine nicht negative ganze Zahl, die die maximale Anzahl der Dezimalstellen angibt, die nach dem Dezimalzeichen gespeichert werden können. Diese Zahl muss kleiner oder gleich der Gesamtzahl der Stellen sein. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'`Gibt an, wie der Alias Datentyp NULL-Werte behandelt. *null_type* ist vom Datentyp **varchar (** 8 **)** und hat den Standardwert NULL und muss in einfache Anführungszeichen (' NULL ', ' not NULL ' oder ' nonull ') eingeschlossen werden. Wenn *null_type* nicht explizit durch **sp_addtype**definiert ist, wird es auf die aktuelle standardmäßige NULL-Zulässigkeit festgelegt. Verwenden Sie die GETANSINULL-Systemfunktion, um die aktuelle Standard-NULL-Zulässigkeit zu ermitteln. Diese kann mithilfe der SET-Anweisung oder ALTER DATABASE angepasst werden. Die NULL-Zulässigkeit sollte explizit definiert werden. Wenn ** \@ phystype** den Wert **Bit**hat und ** \@ nulltype** nicht angegeben wird, ist der Standardwert not NULL.  
+`[ @nulltype = ] 'null_type'` Gibt an, wie der Alias Datentyp NULL-Werte behandelt. *null_type* ist vom Datentyp **varchar (** 8 **)** und hat den Standardwert NULL und muss in einfache Anführungszeichen (' NULL ', ' not NULL ' oder ' nonull ') eingeschlossen werden. Wenn *null_type* nicht explizit durch **sp_addtype**definiert ist, wird es auf die aktuelle standardmäßige NULL-Zulässigkeit festgelegt. Verwenden Sie die GETANSINULL-Systemfunktion, um die aktuelle Standard-NULL-Zulässigkeit zu ermitteln. Diese kann mithilfe der SET-Anweisung oder ALTER DATABASE angepasst werden. Die NULL-Zulässigkeit sollte explizit definiert werden. Wenn ** \@ phystype** den Wert **Bit**hat und ** \@ nulltype** nicht angegeben wird, ist der Standardwert not NULL.  
   
 > [!NOTE]  
 >  Der *null_type* -Parameter definiert nur die standardmäßige NULL-Zulässigkeit für diesen Datentyp. Wenn der Aliasdatentyp beim Erstellen der Tabelle verwendet und die NULL-Zulässigkeit explizit definiert wurde, hat diese Vorrang vor der definierten NULL-Zulässigkeit. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) und [CREATE TABLE &#40;Transact-SQL-&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -133,7 +134,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Create Type &#40;Transact-SQL-&#41;](../../t-sql/statements/create-type-transact-sql.md)   
+ [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [sp_bindefault &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   

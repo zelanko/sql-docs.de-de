@@ -1,4 +1,5 @@
 ---
+description: Table Properties - SSMS
 title: Tabelleneigenschaften – SSMS | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e476076084e23d3381f08a2e10dc130bee25b93
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1cc8c79f0a8020d4301e6bc8653f2d3fcf600149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463775"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -149,7 +150,7 @@ ms.locfileid: "87928671"
  Der Speicherplatz in Megabytes, der von den Indizes in der Tabelle belegt wird. Dieser Wert schließt die Speicherverwendung für den XML-Index der Tabelle nicht mit ein. Verwenden Sie stattdessen [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) , wenn XML-Indizes zur Tabelle gehören.  
   
  **Zeilenanzahl**  
- Anzahl der Zeilen in der Tabelle.  
+ Die Anzahl der Zeilen in der Tabelle.  
   
  **Datenspeicher**  
  Der Speicherplatz in Megabytes, der von den Daten in der Tabelle belegt wird.  
@@ -163,7 +164,7 @@ ms.locfileid: "87928671"
  **Partitionsschema**  
  Der Name des Partitionsschemas, sofern die Tabelle partitioniert ist. Wenn die Tabelle nicht partitioniert ist, ist das Feld leer.  
   
- **Anzahl Partitionen**  
+ **Anzahl von Partitionen**  
  Die Anzahl von Partitionen in der Tabelle.  
   
  **FILESTREAM-Partitionsschema**  

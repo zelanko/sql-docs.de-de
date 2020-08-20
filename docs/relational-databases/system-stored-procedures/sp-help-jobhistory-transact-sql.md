@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobhistory (Transact-SQL)
 title: sp_help_jobhistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a04d651467b8ccff057d3dcec0cb824edae73b12
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf0766388b50fabfe3a0571b5cf4e86ab7e15520
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464282"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,44 +54,44 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id`Die Auftrags-ID. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die Auftrags-ID. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'`Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @step_id = ] step_id`Die Schritt-ID. *step_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @step_id = ] step_id` Die Schritt-ID. *step_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @sql_message_id = ] sql_message_id`Die ID der Fehlermeldung, die von Microsoft SQL Server beim Ausführen des Auftrags zurückgegeben wird. *sql_message_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @sql_message_id = ] sql_message_id` Die ID der Fehlermeldung, die von Microsoft SQL Server beim Ausführen des Auftrags zurückgegeben wird. *sql_message_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @sql_severity = ] sql_severity`Der Schweregrad der Fehlermeldung, die von SQL Server beim Ausführen des Auftrags zurückgegeben wird. *sql_severity* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @sql_severity = ] sql_severity` Der Schweregrad der Fehlermeldung, die von SQL Server beim Ausführen des Auftrags zurückgegeben wird. *sql_severity* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @start_run_date = ] start_run_date`Das Datum, an dem der Auftrag gestartet wurde. *start_run_date*ist vom Datentyp **int**und hat den Standardwert NULL. *start_run_date* muss im Format YYYYMMDD eingegeben werden, wobei yyyy ein vierjähriges Jahr ist, mm ein aus zwei Zeichen bestehende Monats Name und DD ein zwei Zeichen täglicher Name ist.  
+`[ @start_run_date = ] start_run_date` Das Datum, an dem der Auftrag gestartet wurde. *start_run_date*ist vom Datentyp **int**und hat den Standardwert NULL. *start_run_date* muss im Format YYYYMMDD eingegeben werden, wobei yyyy ein vierjähriges Jahr ist, mm ein aus zwei Zeichen bestehende Monats Name und DD ein zwei Zeichen täglicher Name ist.  
   
-`[ @end_run_date = ] end_run_date`Das Datum, an dem der Auftrag abgeschlossen wurde. *end_run_date* ist vom Datentyp **int**und hat den Standardwert NULL. *end_run_date*muss im Format YYYYMMDD eingegeben werden, wobei yyyy ein vierstelliges Jahr ist, mm ein aus zwei Zeichen bestehenden Monatsnamen und DD ein zwei Zeichen täglicher Name ist.  
+`[ @end_run_date = ] end_run_date` Das Datum, an dem der Auftrag abgeschlossen wurde. *end_run_date* ist vom Datentyp **int**und hat den Standardwert NULL. *end_run_date*muss im Format YYYYMMDD eingegeben werden, wobei yyyy ein vierstelliges Jahr ist, mm ein aus zwei Zeichen bestehenden Monatsnamen und DD ein zwei Zeichen täglicher Name ist.  
   
-`[ @start_run_time = ] start_run_time`Der Zeitpunkt, zu dem der Auftrag gestartet wurde. *start_run_time* ist vom Datentyp **int**und hat den Standardwert NULL. *start_run_time*muss im Format HHMMSS eingegeben werden, wobei HH eine aus zwei Zeichen bestehende Stunden Angabe, mm eine aus zwei Zeichen bestehende Minuten Angabe und SS eine aus zwei Zeichen bestehende Sekunde des Tages ist.  
+`[ @start_run_time = ] start_run_time` Der Zeitpunkt, zu dem der Auftrag gestartet wurde. *start_run_time* ist vom Datentyp **int**und hat den Standardwert NULL. *start_run_time*muss im Format HHMMSS eingegeben werden, wobei HH eine aus zwei Zeichen bestehende Stunden Angabe, mm eine aus zwei Zeichen bestehende Minuten Angabe und SS eine aus zwei Zeichen bestehende Sekunde des Tages ist.  
   
-`[ @end_run_time = ] end_run_time`Der Zeitpunkt, zu dem die Ausführung des Auftrags abgeschlossen wurde. *end_run_time* ist vom Datentyp **int**und hat den Standardwert NULL. *end_run_time*muss im Format HHMMSS eingegeben werden, wobei HH eine aus zwei Zeichen bestehende Stunden Angabe, mm eine aus zwei Zeichen bestehende Minuten Angabe und SS eine aus zwei Zeichen bestehende Sekunde des Tages ist.  
+`[ @end_run_time = ] end_run_time` Der Zeitpunkt, zu dem die Ausführung des Auftrags abgeschlossen wurde. *end_run_time* ist vom Datentyp **int**und hat den Standardwert NULL. *end_run_time*muss im Format HHMMSS eingegeben werden, wobei HH eine aus zwei Zeichen bestehende Stunden Angabe, mm eine aus zwei Zeichen bestehende Minuten Angabe und SS eine aus zwei Zeichen bestehende Sekunde des Tages ist.  
   
-`[ @minimum_run_duration = ] minimum_run_duration`Die minimale Zeitspanne für den Abschluss des Auftrags. *minimum_run_duration* ist vom Datentyp **int**und hat den Standardwert NULL. *minimum_run_duration*muss im Format HHMMSS eingegeben werden, wobei HH eine aus zwei Zeichen bestehende Stunden Angabe, mm eine aus zwei Zeichen bestehende Minuten Angabe und SS eine aus zwei Zeichen bestehende Sekunde des Tages ist.  
+`[ @minimum_run_duration = ] minimum_run_duration` Die minimale Zeitspanne für den Abschluss des Auftrags. *minimum_run_duration* ist vom Datentyp **int**und hat den Standardwert NULL. *minimum_run_duration*muss im Format HHMMSS eingegeben werden, wobei HH eine aus zwei Zeichen bestehende Stunden Angabe, mm eine aus zwei Zeichen bestehende Minuten Angabe und SS eine aus zwei Zeichen bestehende Sekunde des Tages ist.  
   
-`[ @run_status = ] run_status`Der Ausführungs Status des Auftrags. *run_status* ist vom Datentyp **int**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
+`[ @run_status = ] run_status` Der Ausführungs Status des Auftrags. *run_status* ist vom Datentyp **int**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Fehler|  
 |**1**|Erfolgreich|  
 |**2**|Wiederholen (nur Schritte)|  
 |**3**|Canceled|  
 |**4**|In Bearbeitung befindliche Nachricht|  
-|**5**|Unbekannt|  
+|**5**|Unknown|  
   
-`[ @minimum_retries = ] minimum_retries`Die Mindestanzahl der Wiederholungs Versuche für einen Auftrag. *minimum_retries* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @minimum_retries = ] minimum_retries` Die Mindestanzahl der Wiederholungs Versuche für einen Auftrag. *minimum_retries* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @oldest_first = ] oldest_first`Gibt an, ob die Ausgabe zuerst mit den ältesten Aufträgen angezeigt werden soll. *oldest_first* ist vom Datentyp **int**. der Standardwert ist **0**, wodurch zuerst die neuesten Aufträge dargestellt werden. **1** zeigt zuerst die ältesten Aufträge an.  
+`[ @oldest_first = ] oldest_first` Gibt an, ob die Ausgabe zuerst mit den ältesten Aufträgen angezeigt werden soll. *oldest_first* ist vom Datentyp **int**. der Standardwert ist **0**, wodurch zuerst die neuesten Aufträge dargestellt werden. **1** zeigt zuerst die ältesten Aufträge an.  
   
-`[ @server = ] 'server'`Der Name des Servers, auf dem der Auftrag ausgeführt wurde. der *Server* ist vom Datentyp **nvarchar (30)** und hat den Standardwert NULL.  
+`[ @server = ] 'server'` Der Name des Servers, auf dem der Auftrag ausgeführt wurde. der *Server* ist vom Datentyp **nvarchar (30)** und hat den Standardwert NULL.  
   
-`[ @mode = ] 'mode'`Gibt an, ob SQL Server alle Spalten im Resultset (**Full**) oder eine Zusammenfassung der Spalten ausgibt. der *Modus* ist vom Datentyp **varchar (7)** und hat den Standardwert **Summary**.  
+`[ @mode = ] 'mode'` Gibt an, ob SQL Server alle Spalten im Resultset (**Full**) oder eine Zusammenfassung der Spalten ausgibt. der *Modus* ist vom Datentyp **varchar (7)** und hat den Standardwert **Summary**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -118,7 +119,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|Die Wiederholungsversuche für den Schritt (für einen Auftragsverlauf immer 0).|  
 |**server**|**nvarchar(30)**|Server, auf dem der Schritt oder Auftrag ausgeführt wird. Ist immer (**local**).|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_help_jobhistory** gibt einen Bericht mit dem Verlauf der angegebenen geplanten Aufträge zurück. Werden keine Parameter angegeben, enthält der Bericht den Verlauf aller geplanten Aufträge.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -164,7 +165,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_purge_jobhistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
+ [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

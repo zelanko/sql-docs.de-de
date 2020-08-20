@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergepublication (Transact-SQL)
 title: sp_dropmergepublication (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9b2b36484d34396ed573f4b06bd1feb5b0f83b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0a28a81d897f9319495963b0f9d049502fe8c7d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464345"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,18 +41,18 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der zu löschenden Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn **alle**vorhanden sind, werden alle vorhandenen Mergeveröffentlichungen und der ihr zugeordnete Momentaufnahmen-Agent Auftrag entfernt. Wenn Sie einen bestimmten Wert für die *Veröffentlichung*angeben, werden nur diese Veröffentlichung und der zugehörige Momentaufnahmen-Agent Auftrag gelöscht.  
+`[ @publication = ] 'publication'` Der Name der zu löschenden Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn **alle**vorhanden sind, werden alle vorhandenen Mergeveröffentlichungen und der ihr zugeordnete Momentaufnahmen-Agent Auftrag entfernt. Wenn Sie einen bestimmten Wert für die *Veröffentlichung*angeben, werden nur diese Veröffentlichung und der zugehörige Momentaufnahmen-Agent Auftrag gelöscht.  
   
-`[ @ignore_distributor = ] ignore_distributor`Wird verwendet, um eine Veröffentlichung zu löschen, ohne Cleanuptasks auf dem Verteiler auszuführen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**. Dieser Parameter wird auch bei der Neuinstallation des Verteilers verwendet.  
+`[ @ignore_distributor = ] ignore_distributor` Wird verwendet, um eine Veröffentlichung zu löschen, ohne Cleanuptasks auf dem Verteiler auszuführen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**. Dieser Parameter wird auch bei der Neuinstallation des Verteilers verwendet.  
   
-`[ @reserved = ] reserved`Ist für die zukünftige Verwendung reserviert. *reserved* ist vom Typ **Bit**. der Standardwert ist **0**.  
+`[ @reserved = ] reserved` Ist für die zukünftige Verwendung reserviert. *reserved* ist vom Typ **Bit**. der Standardwert ist **0**.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata`Nur interne Verwendung.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Nur interne Verwendung.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_dropmergepublication** wird bei der Mergereplikation verwendet.  
   
  **sp_dropmergepublication** löscht alle Artikel, die einer Veröffentlichung zugeordnet sind, rekursiv und löscht dann die Veröffentlichung selbst. Solange für eine Veröffentlichung ein Abonnement vorhanden ist, kann sie nicht gelöscht werden. Weitere Informationen zum Entfernen von Abonnements finden Sie unter [Löschen eines Pushabonnements](../../relational-databases/replication/delete-a-push-subscription.md) und [Löschen eines](../../relational-databases/replication/delete-a-pull-subscription.md)Pullabonnements.  
@@ -68,7 +69,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
  [Löschen einer Veröffentlichung](../../relational-databases/replication/publish/delete-a-publication.md)   
  [sp_addmergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

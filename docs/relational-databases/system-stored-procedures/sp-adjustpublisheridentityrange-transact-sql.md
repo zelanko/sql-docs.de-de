@@ -1,4 +1,5 @@
 ---
+description: sp_adjustpublisheridentityrange (Transact-SQL)
 title: sp_adjustpublisheridentityrange (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac449d2437184695c4d5957fea0788ce40a176ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9315025143c31d6fc1ef76aab4e70578e251694d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464592"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,16 +40,16 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, in der neue Identitäts Bereiche neu zugewiesen werden. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, in der neue Identitäts Bereiche neu zugewiesen werden. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @table_name = ] 'table_name'`Der Name der Tabelle, in der neue Identitäts Bereiche erneut zugeordnet werden. *table_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @table_name = ] 'table_name'` Der Name der Tabelle, in der neue Identitäts Bereiche erneut zugeordnet werden. *table_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @table_owner = ] 'table_owner'`Der Besitzer der Tabelle auf dem Verleger. *TABLE_OWNER* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *TABLE_OWNER* nicht angegeben ist, wird der Name des aktuellen Benutzers verwendet.  
+`[ @table_owner = ] 'table_owner'` Der Besitzer der Tabelle auf dem Verleger. *TABLE_OWNER* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *TABLE_OWNER* nicht angegeben ist, wird der Name des aktuellen Benutzers verwendet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_adjustpublisheridentityrange** wird bei allen Replikations Typen verwendet.  
   
  Für eine Veröffentlichung mit aktiviertem automatischem Identitätsbereich ist der Verteilungs- oder Merge-Agent für die automatische Anpassung des Identitätsbereichs in einer Veröffentlichung auf der Basis des Schwellenwerts verantwortlich. Wenn jedoch aus irgendeinem Grund die Verteilungs-Agent oder Merge-Agent nicht innerhalb eines bestimmten Zeitraums ausgeführt wurden und die Identitäts Bereichs Ressource stark bis zum Schwellenwert verbraucht wurde, können Benutzer **sp_adjustpublisheridentityrange** aufzurufen, um einen neuen Wertebereich für einen Verleger zuzuordnen.  

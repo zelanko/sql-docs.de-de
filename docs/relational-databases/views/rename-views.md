@@ -1,4 +1,5 @@
 ---
+description: Umbenennen von Sichten
 title: Umbenennen von Sichten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 856c40bbe7031a8adf2a789f8ac2a674d572838c
-ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
+ms.openlocfilehash: 135bccd7ff94a88f7f1036b4bce4e55451eab4e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85082682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463665"
 ---
 # <a name="rename-views"></a>Umbenennen von Sichten
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85082682"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:**  [Nach dem Umbenennen einer Ansicht](#FollowUp)  
+-   **Follow Up:**  [After renaming a view](#FollowUp)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -71,7 +72,7 @@ ms.locfileid: "85082682"
   
  Weitere Informationen finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md) und [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md).  
   
-##  <a name="follow-up-after-renaming-a-view"></a><a name="FollowUp"></a>Nächster Schritt: Nach dem Umbenennen einer Ansicht  
+##  <a name="follow-up-after-renaming-a-view"></a><a name="FollowUp"></a> Nachverfolgung: Nach dem Umbenennen einer Sicht  
  Stellen Sie sicher, dass alle Objekte, Skripts und Anwendungen, die auf den alten Namen der Ansicht verweisen, jetzt den neuen Namen verwenden.  
   
   

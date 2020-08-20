@@ -1,4 +1,5 @@
 ---
+description: sp_changeobjectowner (Transact-SQL)
 title: sp_changeobjectowner (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: df232018259055697bb6624ee96a8fc980b3bef3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e96c93be7b21deb0966e0a48f5fde3258501ac6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464422"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85871745"
   Ändert den Besitzer eines Objekts in der aktuellen Datenbank.  
   
 > [!IMPORTANT]
->  Diese gespeicherte Prozedur funktioniert nur mit den in verfügbaren Objekten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Alter Schema](../../t-sql/statements/alter-schema-transact-sql.md) oder [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** ändert sowohl das Schema als auch den Besitzer. Aus Gründen der Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändert diese gespeicherte Prozedur nur Objektbesitzer, wenn sowohl der aktuelle Besitzer als auch der neue Besitzer Schemas besitzen, die den gleichen Namen wie die Datenbankbenutzernamen aufweisen.  
+>  Diese gespeicherte Prozedur funktioniert nur mit den in verfügbaren Objekten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [Alter Schema](../../t-sql/statements/alter-schema-transact-sql.md) oder [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** ändert sowohl das Schema als auch den Besitzer. Aus Gründen der Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändert diese gespeicherte Prozedur nur Objektbesitzer, wenn sowohl der aktuelle Besitzer als auch der neue Besitzer Schemas besitzen, die den gleichen Namen wie die Datenbankbenutzernamen aufweisen.  
 > 
 > [!IMPORTANT]
 >  Dieser gespeicherten Prozedur wurde eine neue Berechtigungsanforderung hinzugefügt.  
@@ -45,9 +46,9 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @objname = ] 'object'`Der Name einer vorhandenen Tabelle, Sicht, benutzerdefinierten Funktion oder gespeicherten Prozedur in der aktuellen Datenbank. *Object* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. Das *Objekt* kann mit dem Besitzer des vorhandenen Objekts im Formular _existing_owner_qualifiziert werden **.** _Objekt_ , wenn das Schema und der zugehörige Besitzer denselben Namen haben.  
+`[ @objname = ] 'object'` Der Name einer vorhandenen Tabelle, Sicht, benutzerdefinierten Funktion oder gespeicherten Prozedur in der aktuellen Datenbank. *Object* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. Das *Objekt* kann mit dem Besitzer des vorhandenen Objekts im Formular _existing_owner_qualifiziert werden **.** _Objekt_ , wenn das Schema und der zugehörige Besitzer denselben Namen haben.  
   
-`[ @newowner = ] 'owner_ '`Der Name des Sicherheits Kontos, das den neuen Besitzer des Objekts sein wird. *Owner* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Besitzer* muss ein gültiger Datenbankbenutzer, eine Server Rolle, eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldung oder eine Windows-Gruppe mit Zugriff auf die aktuelle Datenbank sein. Wenn es sich beim neuen Besitzer um einen Windows-Benutzer oder eine Windows-Gruppe handelt, für den bzw. die kein entsprechender Datenbankprinzipal vorhanden ist, wird ein Datenbankbenutzer erstellt.  
+`[ @newowner = ] 'owner_ '` Der Name des Sicherheits Kontos, das den neuen Besitzer des Objekts sein wird. *Owner* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Besitzer* muss ein gültiger Datenbankbenutzer, eine Server Rolle, eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldung oder eine Windows-Gruppe mit Zugriff auf die aktuelle Datenbank sein. Wenn es sich beim neuen Besitzer um einen Windows-Benutzer oder eine Windows-Gruppe handelt, für den bzw. die kein entsprechender Datenbankprinzipal vorhanden ist, wird ein Datenbankbenutzer erstellt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -69,10 +70,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Alter Schema &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Alter Authorization &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sp_changedbowner &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

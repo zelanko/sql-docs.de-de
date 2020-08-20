@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_log_shipping_monitor (Transact-SQL)
 title: sp_refresh_log_shipping_monitor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93abffe797a4507c9d3329f864e09753ca1f1da0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6125ac4a916ff9d19777644a9db5fd853c045290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464070"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @agent_id = ] 'agent_id'`Die primäre ID für die Sicherung oder die sekundäre ID für kopieren oder wiederherstellen. *agent_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
+`[ @agent_id = ] 'agent_id'` Die primäre ID für die Sicherung oder die sekundäre ID für kopieren oder wiederherstellen. *agent_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
   
-`[ @agent_type = ] 'agent_type'`Der Typ des Protokoll Versand Auftrags.  
+`[ @agent_type = ] 'agent_type'` Der Typ des Protokoll Versand Auftrags.  
   
  0 = Sicherungsauftrag  
   
@@ -55,9 +56,9 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* ist vom Datentyp **tinyint** und kann nicht NULL sein.  
   
-`[ @database = ] 'database'`Die primäre oder sekundäre Datenbank, die von Sicherungs-oder Wiederherstellungs-Agents protokolliert wird.  
+`[ @database = ] 'database'` Die primäre oder sekundäre Datenbank, die von Sicherungs-oder Wiederherstellungs-Agents protokolliert wird.  
   
-`[ @mode ] n`Gibt an, ob die Überwachungsdaten aktualisiert oder bereinigt werden sollen. Der Datentyp von *m* ist tinyint, und die folgenden Werte werden unterstützt:  
+`[ @mode ] n` Gibt an, ob die Überwachungsdaten aktualisiert oder bereinigt werden sollen. Der Datentyp von *m* ist tinyint, und die folgenden Werte werden unterstützt:  
   
  1 = aktualisieren (Dies ist der Standardwert.)  
   
@@ -69,7 +70,7 @@ sp_refresh_log_shipping_monitor
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_refresh_log_shipping_monitor** aktualisiert die Tabellen " **log_shipping_monitor_primary**", " **log_shipping_monitor_secondary**", " **log_shipping_monitor_history_detail**" und " **log_shipping_monitor_error_detail** " mit Sitzungsinformationen, die noch nicht übertragen wurden. Dies ermöglicht das Synchronisieren des Überwachungsservers mit dem primären oder einem sekundären Server, wenn der Überwachungsserver für einen bestimmten Zeitraum nicht mehr synchronisiert wurde. Zudem können Sie die Überwachungsinformationen auf dem Überwachungsserver bei Bedarf leeren.  
   
  **sp_refresh_log_shipping_monitor** muss von der **Master** -Datenbank auf dem primären oder sekundären Server ausgeführt werden.  

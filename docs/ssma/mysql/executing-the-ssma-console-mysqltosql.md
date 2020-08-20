@@ -1,4 +1,5 @@
 ---
+description: Ausführen der SSMA-Konsole (MySqlToSql)
 title: Ausführen der SSMA-Konsole (mysqldesql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8cf2ded8823c03c5f002087277604ac65985aabc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 59a0075dfcee23c5e005853b0befd4b3eb0f39c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463451"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Ausführen der SSMA-Konsole (MySqlToSql)
 Microsoft bietet Ihnen einen robusten Satz von Skriptdatei Befehlen zum Ausführen und Steuern von SSMA-Aktivitäten.  
@@ -39,9 +40,9 @@ Die Projekt Befehle behandeln das Erstellen von Projekten, das Öffnen, speicher
   
 **Skript**  
   
-1.  `project-folder`Gibt den Ordner des Projekts an, das erstellt wird.  
+1.  `project-folder` Gibt den Ordner des Projekts an, das erstellt wird.  
   
-2.  `project-name`Gibt den Namen des Projekts an. {string}  
+2.  `project-name` Gibt den Namen des Projekts an. {string}  
   
 3.  `overwrite-if-exists`Optionales Attribut gibt an, ob ein vorhandenes Projekt überschrieben werden soll. booleschen  
   
@@ -73,9 +74,9 @@ Open-Project:
   
 **Skript**  
   
-1.  `project-folder`Gibt den Ordner des Projekts an, das erstellt wird. Der Befehl schlägt fehl, wenn der angegebene Ordner nicht vorhanden ist.  {string}  
+1.  `project-folder` Gibt den Ordner des Projekts an, das erstellt wird. Der Befehl schlägt fehl, wenn der angegebene Ordner nicht vorhanden ist.  {string}  
   
-2.  `project-name`Gibt den Namen des Projekts an. Der Befehl schlägt fehl, wenn das angegebene Projekt nicht vorhanden ist.  {string}  
+2.  `project-name` Gibt den Namen des Projekts an. Der Befehl schlägt fehl, wenn das angegebene Projekt nicht vorhanden ist.  {string}  
   
 **Syntax Beispiel:**  
   
@@ -244,25 +245,25 @@ generieren-Assessment-Bericht
   
 **Skript**  
   
-1.  `assessment-report-folder:`Gibt den Ordner an, in dem der Bewertungsbericht gespeichert wird. (optionales Attribut)  
+1.  `assessment-report-folder:` Gibt den Ordner an, in dem der Bewertungsbericht gespeichert wird. (optionales Attribut)  
   
-2.  `object-name:`Gibt die Objekte an, die für die Bewertungsbericht Generierung berücksichtigt werden (Sie kann einzelne Objektnamen oder einen Gruppen Objektnamen aufweisen).  
+2.  `object-name:` Gibt die Objekte an, die für die Bewertungsbericht Generierung berücksichtigt werden (Sie kann einzelne Objektnamen oder einen Gruppen Objektnamen aufweisen).  
   
-3.  `object-type:`Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
+3.  `object-type:` Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
   
-4.  `assessment-report-overwrite:`Gibt an, ob der Bewertungsberichts Ordner überschrieben werden soll, wenn er bereits vorhanden ist.  
+4.  `assessment-report-overwrite:` Gibt an, ob der Bewertungsberichts Ordner überschrieben werden soll, wenn er bereits vorhanden ist.  
   
     **Standardwert:** false. (optionales Attribut)  
   
-5.  `write-summary-report-to:`Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird.  
+5.  `write-summary-report-to:` Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird.  
   
     Wenn nur der Ordner Pfad erwähnt wird, dann file **by Name &lt; &gt; XML** wird erstellt. (optionales Attribut)  
   
     Die Berichterstellung hat zwei weitere Unterkategorien:  
   
-    -   `report-errors`(= "true/false", mit dem Standardwert "false" (optionale Attribute))  
+    -   `report-errors` (= "true/false", mit dem Standardwert "false" (optionale Attribute))  
   
-    -   `verbose`(= "true/false", mit dem Standardwert "false" (optionale Attribute))  
+    -   `verbose` (= "true/false", mit dem Standardwert "false" (optionale Attribute))  
   
 **Syntax Beispiel:**  
   
@@ -318,25 +319,25 @@ Convert-Schema
   
 **Skript**  
   
-1.  `conversion-report-folder:`Gibt den Ordner an, in dem der Bewertungsbericht gespeichert wird. (optionales Attribut)  
+1.  `conversion-report-folder:` Gibt den Ordner an, in dem der Bewertungsbericht gespeichert wird. (optionales Attribut)  
   
-2.  `object-name:`Gibt die Objekte an, die für das Umrechnen des Schemas berücksichtigt werden (es kann einzelne Objektnamen oder ein Gruppen Objektname sein).  
+2.  `object-name:` Gibt die Objekte an, die für das Umrechnen des Schemas berücksichtigt werden (es kann einzelne Objektnamen oder ein Gruppen Objektname sein).  
   
-3.  `object-type:`Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
+3.  `object-type:` Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
   
-4.  `conversion-report-overwrite:`Gibt an, ob der Bewertungsberichts Ordner überschrieben werden soll, wenn er bereits vorhanden ist.  
+4.  `conversion-report-overwrite:` Gibt an, ob der Bewertungsberichts Ordner überschrieben werden soll, wenn er bereits vorhanden ist.  
   
     **Standardwert:** false. (optionales Attribut)  
   
-5.  `write-summary-report-to:`Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird.  
+5.  `write-summary-report-to:` Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird.  
   
     Wenn nur der Ordner Pfad erwähnt wird, dann file by Name **schemaconversionreport &lt; n &gt; . XML** wird erstellt. (optionales Attribut)  
   
     Die Erstellung eines Zusammenfassungs Berichts umfasst zwei weitere Unterkategorien:  
   
-    -   `report-errors`(= "true/false", mit dem Standardwert "false" (optionale Attribute))  
+    -   `report-errors` (= "true/false", mit dem Standardwert "false" (optionale Attribute))  
   
-    -   `verbose`(= "true/false", mit dem Standardwert "false" (optionale Attribute))  
+    -   `verbose` (= "true/false", mit dem Standardwert "false" (optionale Attribute))  
   
 **Syntax Beispiel:**  
   
@@ -382,19 +383,19 @@ Migrieren von Daten
   
 **Skript**  
   
-1.  `object-name:`Gibt die zum Migrieren von Daten berücksichtigten Quell Objekte an (Sie können einzelne Objektnamen oder einen Gruppen Objektnamen aufweisen).  
+1.  `object-name:` Gibt die zum Migrieren von Daten berücksichtigten Quell Objekte an (Sie können einzelne Objektnamen oder einen Gruppen Objektnamen aufweisen).  
   
-2.  `object-type:`Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
+2.  `object-type:` Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
   
-3.  `write-summary-report-to:`Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird.  
+3.  `write-summary-report-to:` Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird.  
   
     Wenn nur der Ordner Pfad erwähnt wird, dann file by Name **datamigrationreport &lt; n &gt; . XML** wird erstellt. (optionales Attribut)  
   
     Die Berichterstellung hat zwei weitere Unterkategorien:  
   
-    -   `report-errors`(= "true/false", mit dem Standardwert "false" (optionale Attribute))  
+    -   `report-errors` (= "true/false", mit dem Standardwert "false" (optionale Attribute))  
   
-    -   `verbose`(= "true/false", mit dem Standardwert "false" (optionale Attribute))  
+    -   `verbose` (= "true/false", mit dem Standardwert "false" (optionale Attribute))  
   
 **Syntax Beispiel:**  
   
@@ -444,9 +445,9 @@ Schema Zuordnung der Quelldatenbank zum Ziel Schema.
   
 **Skript**  
   
-1.  `source-schema`Gibt das Quell Schema an, das migriert werden soll.  
+1.  `source-schema` Gibt das Quell Schema an, das migriert werden soll.  
   
-2.  `sql-server-schema`Gibt das Ziel Schema an, in dem Sie migriert werden soll.  
+2.  `sql-server-schema` Gibt das Ziel Schema an, in dem Sie migriert werden soll.  
   
 **Syntax Beispiel:**  
   
@@ -476,11 +477,11 @@ Synchronisieren-Ziel
   
 **Skript**  
   
-1.  `object-name:`Gibt die Objekte an, die für die Synchronisierung mit der Zieldatenbank berücksichtigt werden (es können einzelne Objektnamen oder ein Gruppen Objektname vorhanden sein).  
+1.  `object-name:` Gibt die Objekte an, die für die Synchronisierung mit der Zieldatenbank berücksichtigt werden (es können einzelne Objektnamen oder ein Gruppen Objektname vorhanden sein).  
   
-2.  `object-type:`Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
+2.  `object-type:` Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
   
-3.  `on-error:`Gibt an, ob Synchronisierungs Fehler als Warnungen oder Fehler angegeben werden sollen. Verfügbare Optionen für "bei Fehler":  
+3.  `on-error:` Gibt an, ob Synchronisierungs Fehler als Warnungen oder Fehler angegeben werden sollen. Verfügbare Optionen für "bei Fehler":  
   
     -   Bericht-gesamt-als-Warnung  
   
@@ -488,7 +489,7 @@ Synchronisieren-Ziel
   
     -   Fehler-Skript  
   
-4.  `report-errors-to:`Gibt den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang an (optionales Attribut), wenn nur der Ordner Pfad angegeben ist, dann wird file by Name **TargetSynchronizationReport.XML** erstellt.  
+4.  `report-errors-to:` Gibt den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang an (optionales Attribut), wenn nur der Ordner Pfad angegeben ist, dann wird file by Name **TargetSynchronizationReport.XML** erstellt.  
   
 **Syntax Beispiel:**  
   
@@ -539,11 +540,11 @@ Refresh-from-Database
   
 **Skript**  
   
-1.  `object-name:`Gibt die Quell Objekte an, die für die Aktualisierung aus der Quelldatenbank berücksichtigt werden (Sie können einzelne Objektnamen oder ein Gruppen Objektname aufweisen).  
+1.  `object-name:` Gibt die Quell Objekte an, die für die Aktualisierung aus der Quelldatenbank berücksichtigt werden (Sie können einzelne Objektnamen oder ein Gruppen Objektname aufweisen).  
   
-2.  `object-type:`Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
+2.  `object-type:` Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
   
-3.  `on-error:`Gibt an, ob Synchronisierungs Fehler als Warnungen oder Fehler angegeben werden sollen. Verfügbare Optionen für "bei Fehler":  
+3.  `on-error:` Gibt an, ob Synchronisierungs Fehler als Warnungen oder Fehler angegeben werden sollen. Verfügbare Optionen für "bei Fehler":  
   
     -   Bericht-gesamt-als-Warnung  
   
@@ -551,7 +552,7 @@ Refresh-from-Database
   
     -   Fehler-Skript  
   
-4.  `report-errors-to:`Gibt den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang an (optionales Attribut), wenn nur der Ordner Pfad angegeben ist, dann wird file by Name **SourceDBRefreshReport.XML** erstellt.  
+4.  `report-errors-to:` Gibt den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang an (optionales Attribut), wenn nur der Ordner Pfad angegeben ist, dann wird file by Name **SourceDBRefreshReport.XML** erstellt.  
   
 Erfordert einen oder mehrere Metabasisknoten als Befehlszeilenparameter.  
   
@@ -604,15 +605,15 @@ Wird verwendet, um die Skripts der Objekte in einer Datei zu speichern, die bei 
   
 Erfordert einen oder mehrere Metabasisknoten als Befehlszeilenparameter.  
   
-1.  `object-name:`Gibt die Objekte an, deren Skripts gespeichert werden sollen. (Es kann einzelne Objektnamen oder ein Gruppen Objektname aufweisen.)  
+1.  `object-name:` Gibt die Objekte an, deren Skripts gespeichert werden sollen. (Es kann einzelne Objektnamen oder ein Gruppen Objektname aufweisen.)  
   
-2.  `object-type:`Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
+2.  `object-type:` Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
   
-3.  `metabase:`Gibt an, ob es sich um die Quell-oder Ziel Metabase handelt.  
+3.  `metabase:` Gibt an, ob es sich um die Quell-oder Ziel Metabase handelt.  
   
-4.  `destination:`Gibt den Pfad oder den Ordner an, in dem das Skript gespeichert werden muss. wenn der Dateiname nicht angegeben ist, wird ein Dateiname im Format (object_name Attribut Wert). out angegeben.  
+4.  `destination:` Gibt den Pfad oder den Ordner an, in dem das Skript gespeichert werden muss. wenn der Dateiname nicht angegeben ist, wird ein Dateiname im Format (object_name Attribut Wert). out angegeben.  
   
-5.  `overwrite:`true gibt an, dass der Dateiname überschrieben wird Sie kann die Werte (true/false) enthalten.  
+5.  `overwrite:` true gibt an, dass der Dateiname überschrieben wird Sie kann die Werte (true/false) enthalten.  
   
 **Syntax Beispiel:**  
   
@@ -650,25 +651,25 @@ oder
   
 Convert-SQL-Anweisung  
   
-1.  `context`Gibt den Schema Namen an.  
+1.  `context` Gibt den Schema Namen an.  
   
-2.  `destination`Gibt an, ob die Ausgabe in einer Datei gespeichert werden soll.  
+2.  `destination` Gibt an, ob die Ausgabe in einer Datei gespeichert werden soll.  
   
     Wenn dieses Attribut nicht angegeben wird, wird die konvertierte T-SQL-Anweisung in der Konsole angezeigt. (optionales Attribut)  
   
-3.  `conversion-report-folder`Gibt den Ordner an, in dem der Bewertungsbericht gespeichert wird. (optionales Attribut)  
+3.  `conversion-report-folder` Gibt den Ordner an, in dem der Bewertungsbericht gespeichert wird. (optionales Attribut)  
   
-4.  `conversion-report-overwrite`Gibt an, ob der Bewertungsberichts Ordner überschrieben werden soll, wenn er bereits vorhanden ist.  
+4.  `conversion-report-overwrite` Gibt an, ob der Bewertungsberichts Ordner überschrieben werden soll, wenn er bereits vorhanden ist.  
   
     **Standardwert:** false. (optionales Attribut)  
   
-5.  `write-converted-sql-to`Gibt den Datei Ordner Pfad (oder) an, in dem die konvertierte T-SQL-Datei gespeichert werden soll. Wenn ein Ordner Pfad zusammen mit dem-Attribut angegeben wird `sql-files` , verfügt jede Quelldatei über eine entsprechende Ziel-T-SQL-Datei, die im angegebenen Ordner erstellt wurde. Wenn ein Ordner Pfad zusammen mit dem-Attribut angegeben wird `sql` , wird die konvertierte T-SQL-Datei in eine Datei mit dem Namen "result. out" unter dem angegebenen Ordner geschrieben.  
+5.  `write-converted-sql-to` Gibt den Datei Ordner Pfad (oder) an, in dem die konvertierte T-SQL-Datei gespeichert werden soll. Wenn ein Ordner Pfad zusammen mit dem-Attribut angegeben wird `sql-files` , verfügt jede Quelldatei über eine entsprechende Ziel-T-SQL-Datei, die im angegebenen Ordner erstellt wurde. Wenn ein Ordner Pfad zusammen mit dem-Attribut angegeben wird `sql` , wird die konvertierte T-SQL-Datei in eine Datei mit dem Namen "result. out" unter dem angegebenen Ordner geschrieben.  
   
-6.  `sql`Gibt die zu konvertierenden MySQL-SQL-Anweisungen an. eine oder mehrere Anweisungen können mithilfe von ";" getrennt werden.  
+6.  `sql` Gibt die zu konvertierenden MySQL-SQL-Anweisungen an. eine oder mehrere Anweisungen können mithilfe von ";" getrennt werden.  
   
-7.  `sql-files`Gibt den Pfad der SQL-Dateien an, die in T-SQL-Code konvertiert werden müssen.  
+7.  `sql-files` Gibt den Pfad der SQL-Dateien an, die in T-SQL-Code konvertiert werden müssen.  
   
-8.  `write-summary-report-to`Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird. Wenn nur der Ordner Pfad erwähnt wird, wird die Datei mit dem Namen **ConvertSQLReport.XML** erstellt. (optionales Attribut)  
+8.  `write-summary-report-to` Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird. Wenn nur der Ordner Pfad erwähnt wird, wird die Datei mit dem Namen **ConvertSQLReport.XML** erstellt. (optionales Attribut)  
   
     Die Berichtserstellung hat zwei weitere Unterkategorien, nämlich:  
   

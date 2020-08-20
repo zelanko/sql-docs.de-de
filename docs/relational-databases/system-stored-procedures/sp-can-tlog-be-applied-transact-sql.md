@@ -1,4 +1,5 @@
 ---
+description: sp_can_tlog_be_applied (Transact-SQL)
 title: sp_can_tlog_be_applied (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2369c2db6003229ee54f9d7ef04784a470493faf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e4596cfab5bb7a272e29b2d2749e38c9f38ddaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464469"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @backup_file_name = ] 'backup_file_name'`Der Name einer Sicherungsdatei. *backup_file_name* ist **nvarchar(128)**  
+`[ @backup_file_name = ] 'backup_file_name'` Der Name einer Sicherungsdatei. *backup_file_name* ist **nvarchar(128)**  
   
-`[ @database_name = ] 'database_name'`Der Name der Datenbank. *database_name* ist **sysname**  
+`[ @database_name = ] 'database_name'` Der Name der Datenbank. *database_name* ist **sysname**  
   
-`[ @result = ] _result_ OUTPUT`Gibt an, ob das Transaktionsprotokoll auf die Datenbank angewendet werden kann. *result* ist **bit**  
+`[ @result = ] _result_ OUTPUT` Gibt an, ob das Transaktionsprotokoll auf die Datenbank angewendet werden kann. *result* ist **bit**  
   
  1 = Das Protokoll kann angewendet werden.  
   
@@ -72,7 +73,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\Adventu
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

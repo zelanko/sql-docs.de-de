@@ -1,4 +1,5 @@
 ---
+description: sp_articleview (Transact-SQL)
 title: sp_articleview (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a906e3b74e4682883dbddaf89ba58b5d4069936
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b1d18b8e4249f2948dccb3b042742afe0c0f54a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464530"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,34 +47,34 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, die den Artikel enthält. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die den Artikel enthält. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @article = ] 'article'`Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @view_name = ] 'view_name'`Der Name der Sicht, die den veröffentlichten Artikel definiert. *view_name* ist vom Datentyp **nvarchar (386)** und hat den Standardwert NULL.  
+`[ @view_name = ] 'view_name'` Der Name der Sicht, die den veröffentlichten Artikel definiert. *view_name* ist vom Datentyp **nvarchar (386)** und hat den Standardwert NULL.  
   
-`[ @filter_clause = ] 'filter_clause'`Eine Einschränkungs Klausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort WHERE weg. *filter_clause* ist vom Typ **ntext**und hat den Standardwert NULL.  
+`[ @filter_clause = ] 'filter_clause'` Eine Einschränkungs Klausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort WHERE weg. *filter_clause* ist vom Typ **ntext**und hat den Standardwert NULL.  
   
-`[ @change_active = ] change_active`Ermöglicht das Ändern von Spalten in Veröffentlichungen, die über Abonnements verfügen. *change_active* ist vom Datentyp **int**und hat den Standardwert **0**. Wenn der Wert **0**ist, werden die Spalten nicht geändert. Wenn der Wert **1**ist, können Sichten für aktive Artikel mit Abonnements erstellt oder neu erstellt werden.  
+`[ @change_active = ] change_active` Ermöglicht das Ändern von Spalten in Veröffentlichungen, die über Abonnements verfügen. *change_active* ist vom Datentyp **int**und hat den Standardwert **0**. Wenn der Wert **0**ist, werden die Spalten nicht geändert. Wenn der Wert **1**ist, können Sichten für aktive Artikel mit Abonnements erstellt oder neu erstellt werden.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit**, der Standardwert ist **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit**, der Standardwert ist **0**.  
   
  der Wert **0** gibt an, dass Änderungen am Artikel nicht bewirken, dass die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
   
  der Wert **1** gibt an, dass Änderungen am Artikel bewirken können, dass die Momentaufnahme ungültig wird. wenn Abonnements vorhanden sind, die eine neue Momentaufnahme erfordern, wird die Berechtigung erteilt, die vorhandene Momentaufnahme als veraltet zu markieren und eine neue Momentaufnahme zu generieren.  
   
-`[ @force_reinit_subscription = ] _force_reinit_subscription_`Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise erfordert, dass vorhandene Abonnements erneut initialisiert werden. *force_reinit_subscription* ist ein **Bit** mit einem Standardwert von **0**.  
+`[ @force_reinit_subscription = ] _force_reinit_subscription_` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise erfordert, dass vorhandene Abonnements erneut initialisiert werden. *force_reinit_subscription* ist ein **Bit** mit einem Standardwert von **0**.  
   
  der Wert **0** gibt an, dass Änderungen am Artikel nicht bewirken, dass das Abonnement erneut initialisiert wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die erneute Initialisierung der Abonnements erfordert, tritt ein Fehler auf, und es werden keine Änderungen vorgenommen.  
   
  der Wert **1** gibt an, dass das vorhandene Abonnement durch Änderungen am Artikel erneut initialisiert wird, und erteilt die Berechtigung für die erneute Initialisierung des Abonnements.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* sollte beim Veröffentlichen von einem Verleger nicht verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @refreshsynctranprocs = ] refreshsynctranprocs`Gibt an, ob die zum Synchronisieren der Replikation verwendeten gespeicherten Prozeduren automatisch neu erstellt werden. der Wert für " *erfrischendes synctranprocs* " ist " **Bit**". der Standardwert ist 1.  
+`[ @refreshsynctranprocs = ] refreshsynctranprocs` Gibt an, ob die zum Synchronisieren der Replikation verwendeten gespeicherten Prozeduren automatisch neu erstellt werden. der Wert für " *erfrischendes synctranprocs* " ist " **Bit**". der Standardwert ist 1.  
   
  **1** bedeutet, dass die gespeicherten Prozeduren neu erstellt werden.  
   
@@ -84,7 +85,7 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_articleview** erstellt die Sicht, die den veröffentlichten Artikel definiert, und fügt die ID dieser Sicht in die Spalte **sync_objid** der Tabelle [sysarticles &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) ein und fügt den Text der Einschränkungs Klausel in die Spalte **filter_clause** ein. Wenn alle Spalten repliziert werden und keine **filter_clause**vorhanden ist, wird der **sync_objid** in der [sysarticles-&#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) Tabelle auf die ID der Basistabelle festgelegt, und die Verwendung **sp_articleview** ist nicht erforderlich.  
   
  Führen Sie zum Veröffentlichen einer vertikal gefilterten Tabelle (d. h. zum Filtern von Spalten) zuerst **sp_addarticle** ohne *sync_object* Parameter aus, führen Sie [sp_articlecolumn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede zu replizierende Spalte aus (definieren Sie den vertikalen Filter), und führen Sie dann **sp_articleview** aus, um die Sicht zu erstellen, die den veröffentlichten Artikel definiert.  
@@ -104,13 +105,13 @@ sp_articleview [ @publication = ] 'publication'
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_articleview**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md)   
- [Definieren und Ändern eines statischen Zeilen Filters](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Definieren und Ändern eines statischen Zeilenfilters](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

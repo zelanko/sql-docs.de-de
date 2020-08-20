@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_scan (Transact-SQL)
 title: sys. sp_cdc_scan (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 558a2fd9ff62baa3448609eb42e5f31883fbac53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ad39bba5f8a3fbee5bcecde3e41ad9a7f7f4442
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463934"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @maxtrans = ] max_trans`Maximale Anzahl von Transaktionen, die in jedem Scanvorgang verarbeitet werden sollen. *max_trans* ist vom Datentyp **int** und hat den Standardwert 500.  
+`[ @maxtrans = ] max_trans` Maximale Anzahl von Transaktionen, die in jedem Scanvorgang verarbeitet werden sollen. *max_trans* ist vom Datentyp **int** und hat den Standardwert 500.  
   
-`[ @maxscans = ] max_scans`Maximale Anzahl der Scan Zyklen, die ausgeführt werden müssen, um alle Zeilen aus dem Protokoll zu extrahieren. *max_scans* ist vom Datentyp **int** und hat den Standardwert 10.  
+`[ @maxscans = ] max_scans` Maximale Anzahl der Scan Zyklen, die ausgeführt werden müssen, um alle Zeilen aus dem Protokoll zu extrahieren. *max_scans* ist vom Datentyp **int** und hat den Standardwert 10.  
   
-`[ @continuous = ] continuous`Gibt an, ob die gespeicherte Prozedur nach dem Ausführen eines einzelnen Überprüfungszyklen (0) beendet werden soll, oder ausgeführt wird, wenn die von *polling_interval* angegebene Zeit angehalten werden soll, bevor der Überprüfungszyklen erneut ausgeführt wird (1). *Continuous* ist vom Datentyp **tinyint** und hat den Standardwert 0.  
+`[ @continuous = ] continuous` Gibt an, ob die gespeicherte Prozedur nach dem Ausführen eines einzelnen Überprüfungszyklen (0) beendet werden soll, oder ausgeführt wird, wenn die von *polling_interval* angegebene Zeit angehalten werden soll, bevor der Überprüfungszyklen erneut ausgeführt wird (1). *Continuous* ist vom Datentyp **tinyint** und hat den Standardwert 0.  
   
-`[ @pollinginterval = ] polling_interval`Anzahl der Sekunden zwischen Protokoll Scan Zyklen. *polling_interval* ist vom Datentyp **bigint** und hat den Standardwert 0.  
+`[ @pollinginterval = ] polling_interval` Anzahl der Sekunden zwischen Protokoll Scan Zyklen. *polling_interval* ist vom Datentyp **bigint** und hat den Standardwert 0.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_delete_collector_type (Transact-SQL)
 title: sp_syscollector_delete_collector_type (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c24011a274b362a6b8267b7559d2641a4f1c6aa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5e24b7cce5992df21e11edf5aff4202abb67f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464017"
 ---
 # <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +42,14 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @collector_type_uid = ] 'collector_type_uid'`Die GUID für den Sammlertyp. *collector_type_uid* ist vom *Datentyp* **uniqueidentifier** und muss über einen Wert verfügen, wenn Name NULL ist.  
+`[ @collector_type_uid = ] 'collector_type_uid'` Die GUID für den Sammlertyp. *collector_type_uid* ist vom *Datentyp* **uniqueidentifier** und muss über einen Wert verfügen, wenn Name NULL ist.  
   
-`[ @name = ] 'name'`Der Name des Sammler Typs. *Name ist vom Datentyp* **vom Datentyp sysname** und muss über einen Wert verfügen, wenn *collector_type_uid* NULL ist.  
+`[ @name = ] 'name'` Der Name des Sammler Typs. *Name ist vom Datentyp* **vom Datentyp sysname** und muss über einen Wert verfügen, wenn *collector_type_uid* NULL ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Entweder *collector_type_uid* oder *Name* muss einen Wert aufweisen, beide dürfen nicht NULL sein.  
   
  Diese Prozedur löst einen Fehler aus, wenn Sammelelemente dieses Auflistungstyps vorhanden sind.  

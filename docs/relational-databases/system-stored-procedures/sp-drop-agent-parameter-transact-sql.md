@@ -1,4 +1,5 @@
 ---
+description: sp_drop_agent_parameter (Transact-SQL)
 title: sp_drop_agent_parameter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c284a3cb2601f66d48dd61ad7df6017052964aaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 24f037232818ef395bfd52d3734b5de9cce5378b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464394"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,14 +39,14 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id`Die ID des Profils, für das ein Parameter gelöscht werden soll. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @profile_id = ] profile_id` Die ID des Profils, für das ein Parameter gelöscht werden soll. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert.  
   
-`[ @parameter_name = ] 'parameter_name'`Der Name des Parameters, der gelöscht werden soll. *parameter_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . **%** Gibt an, dass alle Parameter für das angegebene Profil gelöscht werden.  
+`[ @parameter_name = ] 'parameter_name'` Der Name des Parameters, der gelöscht werden soll. *parameter_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . **%** Gibt an, dass alle Parameter für das angegebene Profil gelöscht werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_drop_agent_parameter** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

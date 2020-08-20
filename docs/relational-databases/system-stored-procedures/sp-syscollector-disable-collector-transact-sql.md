@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_disable_collector (Transact-SQL)
 title: sp_syscollector_disable_collector (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9ef4c85d-cca6-452d-94be-2be6f616c3d8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 14eabed691aafe177de9674e985bd9c7f78cdc25
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e8f3e60112ed2f7e96d95652d370dac5fca44b80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463985"
 ---
 # <a name="sp_syscollector_disable_collector-transact-sql"></a>sp_syscollector_disable_collector (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ dbo.sp_syscollector_disable_collector
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wird standardmäßig auf den Datensammler auf dem Server festgelegt.  
   
 ## <a name="permissions"></a>Berechtigungen  

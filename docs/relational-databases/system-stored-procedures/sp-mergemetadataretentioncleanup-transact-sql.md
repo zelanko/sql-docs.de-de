@@ -1,4 +1,5 @@
 ---
+description: sp_mergemetadataretentioncleanup (Transact-SQL)
 title: sp_mergemetadataretentioncleanup (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e922d92f217cead21116b61ebd828a1dd588abb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7c0a186852c704a5ab21fd31864de9aa019078df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464149"
 ---
 # <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,18 +41,18 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT`Gibt die Anzahl der Zeilen zurück, die aus der [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) Tabelle bereinigt wurden. *num_genhistory_rows* ist vom Datentyp **int**und hat den Standardwert **0**.  
+`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT` Gibt die Anzahl der Zeilen zurück, die aus der [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) Tabelle bereinigt wurden. *num_genhistory_rows* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
-`[ @num_contents_rows = ] num_contents_rows OUTPUT`Gibt die Anzahl der Zeilen zurück, die aus der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle bereinigt wurden. *num_contents_rows* ist vom Datentyp **int**und hat den Standardwert **0**.  
+`[ @num_contents_rows = ] num_contents_rows OUTPUT` Gibt die Anzahl der Zeilen zurück, die aus der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle bereinigt wurden. *num_contents_rows* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
-`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT`Gibt die Anzahl der Zeilen zurück, die aus der [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle bereinigt wurden. *num_tombstone_rows* ist vom Datentyp **int**und hat den Standardwert **0**.  
+`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT` Gibt die Anzahl der Zeilen zurück, die aus der [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle bereinigt wurden. *num_tombstone_rows* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
-`[ @aggressive_cleanup_only = ] aggressive_cleanup_only`Nur interne Verwendung.  
+`[ @aggressive_cleanup_only = ] aggressive_cleanup_only` Nur interne Verwendung.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!IMPORTANT]  
 >  Wenn mehrere Veröffentlichungen in einer Datenbank vorhanden sind und eine dieser Veröffentlichungen eine unbegrenzte Beibehaltungs Dauer für die Veröffentlichung verwendet, werden durch das Ausführen von **sp_mergemetadataretentioncleanup** die Metadaten der Änderungs Nachverfolgung für die Mergereplikation für die Datenbank nicht bereinigt. Aus diesem Grund sollten Sie die unbegrenzte Aufbewahrungsdauer für Veröffentlichungen mit Vorsicht verwenden. Führen Sie [sp_helpmergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) auf dem Verleger aus, und notieren Sie alle Veröffentlichungen im Resultset mit einem Wert von **0** für die **Beibehaltung**, um zu bestimmen, ob eine Veröffentlichung über eine unbegrenzte Beibehaltungs Dauer verfügt.  

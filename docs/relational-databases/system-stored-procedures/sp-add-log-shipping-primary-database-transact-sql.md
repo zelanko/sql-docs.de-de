@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_primary_database (Transact-SQL)
 title: sp_add_log_shipping_primary_database (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 188a7d3b98021255074ccaf6b954b4c9b2100fd0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ed823f2b6564593388893db74866931bc1c0c93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464659"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,41 +56,41 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @database = ] 'database'`Der Name der primären Datenbank für den Protokoll Versand. *database* ist vom Datentyp **sysname**, hat keinen Standardwert und darf nicht NULL sein.  
+`[ @database = ] 'database'` Der Name der primären Datenbank für den Protokoll Versand. *database* ist vom Datentyp **sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
-`[ @backup_directory = ] 'backup_directory'`Der Pfad zum Sicherungsordner auf dem primären Server. *backup_directory* ist vom Datentyp **nvarchar (500)** und hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_directory = ] 'backup_directory'` Der Pfad zum Sicherungsordner auf dem primären Server. *backup_directory* ist vom Datentyp **nvarchar (500)** und hat keinen Standardwert und darf nicht NULL sein.  
   
-`[ @backup_share = ] 'backup_share'`Der Netzwerkpfad zum Sicherungs Verzeichnis auf dem primären Server. *backup_share* ist vom Datentyp **nvarchar (500)** und hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_share = ] 'backup_share'` Der Netzwerkpfad zum Sicherungs Verzeichnis auf dem primären Server. *backup_share* ist vom Datentyp **nvarchar (500)** und hat keinen Standardwert und darf nicht NULL sein.  
   
-`[ @backup_job_name = ] 'backup_job_name'`Der Name des SQL Server-Agent Auftrags auf dem primären Server, der die Sicherung in den Sicherungsordner kopiert. *backup_job_name* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
+`[ @backup_job_name = ] 'backup_job_name'` Der Name des SQL Server-Agent Auftrags auf dem primären Server, der die Sicherung in den Sicherungsordner kopiert. *backup_job_name* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
   
-`[ @backup_retention_period = ] backup_retention_period`Der Zeitraum (in Minuten), in dem die Protokoll Sicherungsdatei im Sicherungs Verzeichnis auf dem primären Server beibehalten werden soll. *backup_retention_period* ist vom Datentyp **int**und hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_retention_period = ] backup_retention_period` Der Zeitraum (in Minuten), in dem die Protokoll Sicherungsdatei im Sicherungs Verzeichnis auf dem primären Server beibehalten werden soll. *backup_retention_period* ist vom Datentyp **int**und hat keinen Standardwert und darf nicht NULL sein.  
   
-`[ @monitor_server = ] 'monitor_server'`Der Name des Überwachungs Servers. *Monitor_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
+`[ @monitor_server = ] 'monitor_server'` Der Name des Überwachungs Servers. *Monitor_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
   
-`[ @monitor_server_security_mode = ] monitor_server_security_mode`Der Sicherheitsmodus, der zum Herstellen der Verbindung mit dem Überwachungs Server verwendet wird.  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode` Der Sicherheitsmodus, der zum Herstellen der Verbindung mit dem Überwachungs Server verwendet wird.  
   
  1 = Windows-Authentifizierung  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *monitor_server_security_mode* ist vom Datentyp **bit** und darf nicht NULL sein.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`Der Benutzername des Kontos, das für den Zugriff auf den Überwachungs Server verwendet wird.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Der Benutzername des Kontos, das für den Zugriff auf den Überwachungs Server verwendet wird.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`Das Kennwort des Kontos, das für den Zugriff auf den Überwachungs Server verwendet wird.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Das Kennwort des Kontos, das für den Zugriff auf den Überwachungs Server verwendet wird.  
   
-`[ @backup_threshold = ] backup_threshold`Die Zeitspanne (in Minuten) nach der letzten Sicherung, bevor ein *threshold_alert* Fehler ausgelöst wird. *backup_threshold* ist vom Datentyp **int**, der Standardwert ist 60 Minuten.  
+`[ @backup_threshold = ] backup_threshold` Die Zeitspanne (in Minuten) nach der letzten Sicherung, bevor ein *threshold_alert* Fehler ausgelöst wird. *backup_threshold* ist vom Datentyp **int**, der Standardwert ist 60 Minuten.  
   
-`[ @threshold_alert = ] threshold_alert`Die Warnung, die ausgelöst werden soll, wenn der Sicherungs Schwellenwert überschritten wird. *threshold_alert* ist vom Datentyp **int**und hat den Standardwert 14.420.  
+`[ @threshold_alert = ] threshold_alert` Die Warnung, die ausgelöst werden soll, wenn der Sicherungs Schwellenwert überschritten wird. *threshold_alert* ist vom Datentyp **int**und hat den Standardwert 14.420.  
   
-`[ @threshold_alert_enabled = ] threshold_alert_enabled`Gibt an, ob eine Warnung ausgelöst wird, wenn *backup_threshold* überschritten wird. Der Standardwert null (0) bedeutet, dass die Warnung deaktiviert ist und nicht ausgelöst wird. *threshold_alert_enabled* ist **Bit**.  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled` Gibt an, ob eine Warnung ausgelöst wird, wenn *backup_threshold* überschritten wird. Der Standardwert null (0) bedeutet, dass die Warnung deaktiviert ist und nicht ausgelöst wird. *threshold_alert_enabled* ist **Bit**.  
   
-`[ @history_retention_period = ] history_retention_period`Der Zeitraum in Minuten, in dem der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Wert 14420 wird verwendet, falls kein anderer Wert angegeben wird.  
+`[ @history_retention_period = ] history_retention_period` Der Zeitraum in Minuten, in dem der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Wert 14420 wird verwendet, falls kein anderer Wert angegeben wird.  
   
-`[ @backup_job_id = ] backup_job_id OUTPUT`Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Auftrags-ID, die dem Sicherungsauftrag auf dem primären Server zugeordnet ist. *backup_job_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
+`[ @backup_job_id = ] backup_job_id OUTPUT` Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Auftrags-ID, die dem Sicherungsauftrag auf dem primären Server zugeordnet ist. *backup_job_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
   
-`[ @primary_id = ] primary_id OUTPUT`Die ID der primären Datenbank für die Protokoll Versand Konfiguration. *primary_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
+`[ @primary_id = ] primary_id OUTPUT` Die ID der primären Datenbank für die Protokoll Versand Konfiguration. *primary_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
   
-`[ @backup_compression = ] backup_compression_option`Gibt an, ob eine Protokoll Versand Konfiguration die [Sicherungs Komprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md)verwendet. Dieser Parameter wird nur in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (oder einer höheren Version) unterstützt.  
+`[ @backup_compression = ] backup_compression_option` Gibt an, ob eine Protokoll Versand Konfiguration die [Sicherungs Komprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md)verwendet. Dieser Parameter wird nur in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (oder einer höheren Version) unterstützt.  
   
  0 = Deaktiviert. Protokollsicherungen nie komprimieren.  
   

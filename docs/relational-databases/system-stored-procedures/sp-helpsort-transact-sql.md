@@ -1,4 +1,5 @@
 ---
+description: sp_helpsort (Transact-SQL)
 title: sp_helpsort (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2da3e78c5fde49a3d83c3813f70c5d56a1915908
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22a34a8285a2043159e1bf56191381c6ac933bc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464170"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ sp_helpsort
 ## <a name="result-sets"></a>Resultsets  
  Gibt die Standardsortierung des Servers zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit einer Sortierung installiert ist, für die angegeben ist, dass sie kompatibel mit einer früheren Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein soll, dann gibt **sp_helpsort** leere Ergebnisse zurück. Wenn dieses Verhalten auftritt, können Sie die Sortierung bestimmen, indem Sie das SERVERPROPERTY-Objekt beispielsweise folgendermaßen abfragen: `SELECT SERVERPROPERTY ('Collation');`.  
   
 ## <a name="permissions"></a>Berechtigungen  

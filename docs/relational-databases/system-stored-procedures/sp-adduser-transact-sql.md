@@ -1,4 +1,5 @@
 ---
+description: sp_adduser (Transact-SQL)
 title: sp_adduser (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5c917889a4ed435e59e7d165841234b80390dc7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 05aa08ee4d2b518b804db93d5a2408f690b56bbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464602"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85875419"
   Fügt der aktuellen Datenbank einen neuen Benutzer hinzu.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,11 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'`Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder der Windows-Anmeldung. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Login* muss ein vorhandener- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name oder Windows-Anmelde Name sein.  
+`[ @loginame = ] 'login'` Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder der Windows-Anmeldung. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Login* muss ein vorhandener- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name oder Windows-Anmelde Name sein.  
   
-`[ @name_in_db = ] 'user'`Der Name des neuen Daten Bank Benutzers. *User* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der *Benutzer* nicht angegeben ist, wird der Name des neuen Daten Bank Benutzers standardmäßig auf den *Anmelde* Namen festgelegt. Durch Angeben eines *Benutzers* erhält der neue Benutzer einen anderen Namen als den Anmelde Namen auf Serverebene.  
+`[ @name_in_db = ] 'user'` Der Name des neuen Daten Bank Benutzers. *User* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der *Benutzer* nicht angegeben ist, wird der Name des neuen Daten Bank Benutzers standardmäßig auf den *Anmelde* Namen festgelegt. Durch Angeben eines *Benutzers* erhält der neue Benutzer einen anderen Namen als den Anmelde Namen auf Serverebene.  
   
-`[ @grpname = ] 'role'`Die Daten Bank Rolle, deren Mitglied der neue Benutzer wird. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. die *Rolle* muss eine gültige Daten Bank Rolle in der aktuellen Datenbank sein.  
+`[ @grpname = ] 'role'` Die Daten Bank Rolle, deren Mitglied der neue Benutzer wird. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. die *Rolle* muss eine gültige Daten Bank Rolle in der aktuellen Datenbank sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -101,10 +102,10 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sys. server_principals &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [Erstellen eines Benutzer &#40;Transact-SQL-&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [sp_dropuser &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
+ [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

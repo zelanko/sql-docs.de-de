@@ -1,4 +1,5 @@
 ---
+description: IHextendedArticleView (Transact-SQL)
 title: IHextendedArticleView (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e15bb478ba04a95fa3c4d358477fe8073f50d007
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a56d2e7b96464866f0216e1f93ef6eb3d1066df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463872"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85889213"
 |**destination_object**|**sysname**|Der Name des veröffentlichten Objekts auf dem Abonnenten.|  
 |**source_owner**|**sysname**|Der Besitzer des veröffentlichten Objekts auf dem Verleger.|  
 |**source_object**|**sysname**|Der Name des veröffentlichten Objekts auf dem Verleger.|  
-|**description**|**nvarchar(255)**|Die Beschreibung des Artikels.|  
+|**Beschreibung**|**nvarchar(255)**|Die Beschreibung des Artikels.|  
 |**creation_script**|**nvarchar(255)**|Das Schemaerstellungsskript für den Artikel|  
 |**del_cmd**|**nvarchar(255)**|Der für eine DELETE-Anweisung ausgeführte Befehl.|  
 |**filter**|**int**|Der Bezeichner für die gespeicherte Prozedur, die die horizontale Partition definiert.|  
@@ -51,7 +52,7 @@ ms.locfileid: "85889213"
 |**dest_owner**|**sysname**|Der Besitzer des veröffentlichten Objekts in der Zieldatenbank.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Heterogene Replikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

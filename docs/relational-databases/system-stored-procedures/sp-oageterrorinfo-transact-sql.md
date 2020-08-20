@@ -1,4 +1,5 @@
 ---
+description: sp_OAGetErrorInfo (Transact-SQL)
 title: sp_OAGetErrorInfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d190bf442b7c6e629058f6679291ff75ca64e5ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7336be191ea34fcf36b8221b2a1698ae179fa980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464099"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +70,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="result-sets"></a>Resultsets  
  Ist kein Ausgabeparameter angegeben, werden die Fehlerinformationen dem Client als Resultset zurückgegeben.  
   
-|Spaltennamen|Datentyp|Beschreibung|  
+|Spaltennamen|Datentyp|BESCHREIBUNG|  
 |------------------|---------------|-----------------|  
 |**Fehler**|**Binary (4)**|Binärdarstellung der Fehlernummer|  
 |**Quelle**|**nvarchar (NN)**|Fehlerquelle|  
@@ -77,7 +78,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**HelpFile**|**nvarchar (NN)**|Hilfedatei für die Quelle|  
 |**HelpID**|**int**|Hilfekontext-ID in der Hilfequelldatei|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Jeder-Aufrufsatz einer gespeicherten OLE-Automatisierungs Prozedur (außer **sp_OAGetErrorInfo**) setzt die Fehlerinformationen zurück. aus diesem Grund werden von **sp_OAGetErrorInfo** nur Fehlerinformationen für den letzten gespeicherten Prozedur Aufrufs der OLE-Automatisierung abgerufen. Beachten Sie, dass **sp_OAGetErrorInfo** die Fehlerinformationen nicht zurücksetzt, dass Sie mehrmals aufgerufen werden kann, um dieselben Fehlerinformationen zu erhalten.  
   
  In der folgenden Tabelle werden OLE-Automatisierungsfehler und deren übliche Ursachen aufgelistet.  
@@ -95,7 +96,7 @@ sp_OAGetErrorInfo [ objecttoken ]
  Weitere Informationen zur Verarbeitung von HRESULT-Rückgabecodes finden Sie unter [Rückgabecodes und Fehlerinformationen der OLE-Automatisierung](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die EXECUTE-Berechtigung direkt für diese gespeicherte Prozedur. `Ole Automation Procedures`die Konfiguration muss **aktiviert** sein, um alle System Prozeduren für OLE-Automatisierung verwenden zu können.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die EXECUTE-Berechtigung direkt für diese gespeicherte Prozedur. `Ole Automation Procedures` die Konfiguration muss **aktiviert** sein, um alle System Prozeduren für OLE-Automatisierung verwenden zu können.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden OLE-Automatisierungsfehlerinformationen angezeigt.  

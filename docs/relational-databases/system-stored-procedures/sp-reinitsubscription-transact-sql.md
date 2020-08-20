@@ -1,4 +1,5 @@
 ---
+description: sp_reinitsubscription (Transact-SQL)
 title: sp_reinitsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8bc377c269eeb6034ebbe0e5753f2605464ecd8a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b6aad3d76fca41075bd022eac703ce7d1a112bc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464048"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,29 +45,29 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert all.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert all.  
   
-`[ @article = ] 'article'`Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert all. Bei einer Veröffentlichung mit sofortigem Update *article* muss der Artikel **alle**lauten. andernfalls überspringt die gespeicherte Prozedur die Veröffentlichung und meldet einen Fehler.  
+`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert all. Bei einer Veröffentlichung mit sofortigem Update *article* muss der Artikel **alle**lauten. andernfalls überspringt die gespeicherte Prozedur die Veröffentlichung und meldet einen Fehler.  
   
-`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @subscriber = ] 'subscriber'` Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @destination_db = ] 'destination_db'`Der Name der Zieldatenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert all.  
+`[ @destination_db = ] 'destination_db'` Der Name der Zieldatenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert all.  
   
-`[ @for_schema_change = ] 'for_schema_change'`Gibt an, ob die erneute Initialisierung als Ergebnis einer Schema Änderung in der Veröffentlichungs Datenbank erfolgt. *for_schema_change* ist vom Typ **Bit**. der Standardwert ist 0. Wenn der Wert **0**ist, werden aktive Abonnements für Veröffentlichungen, die sofortiges Aktualisieren zulassen, erneut aktiviert, solange die gesamte Veröffentlichung und nicht nur einige der zugehörigen Artikel erneut initialisiert werden. Die erneute Initialisierung wird demnach als Ergebnis von Schemaänderungen initiiert. Bei **1**werden aktive Abonnements erst wieder aktiviert, wenn die Momentaufnahmen-Agent ausgeführt wird.  
+`[ @for_schema_change = ] 'for_schema_change'` Gibt an, ob die erneute Initialisierung als Ergebnis einer Schema Änderung in der Veröffentlichungs Datenbank erfolgt. *for_schema_change* ist vom Typ **Bit**. der Standardwert ist 0. Wenn der Wert **0**ist, werden aktive Abonnements für Veröffentlichungen, die sofortiges Aktualisieren zulassen, erneut aktiviert, solange die gesamte Veröffentlichung und nicht nur einige der zugehörigen Artikel erneut initialisiert werden. Die erneute Initialisierung wird demnach als Ergebnis von Schemaänderungen initiiert. Bei **1**werden aktive Abonnements erst wieder aktiviert, wenn die Momentaufnahmen-Agent ausgeführt wird.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht für Verleger verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @ignore_distributor_failure = ] ignore_distributor_failure`Lässt die erneute Initialisierung zu, auch wenn der Verteiler nicht vorhanden oder offline ist. *ignore_distributor_failure* ist vom Typ **Bit**. der Standardwert ist 0. Wenn der Wert **0**ist, schlägt die erneute Initialisierung fehl, wenn der Verteiler nicht vorhanden oder offline ist.  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure` Lässt die erneute Initialisierung zu, auch wenn der Verteiler nicht vorhanden oder offline ist. *ignore_distributor_failure* ist vom Typ **Bit**. der Standardwert ist 0. Wenn der Wert **0**ist, schlägt die erneute Initialisierung fehl, wenn der Verteiler nicht vorhanden oder offline ist.  
   
-`[ @invalidate_snapshot = ] invalidate_snapshot`Erklärt die vorhandene Veröffentlichungs Momentaufnahme für ungültig. *invalidate_snapshot* ist vom Typ **Bit**. der Standardwert ist 0. Wenn der Wert **1**ist, wird für die Veröffentlichung eine neue Momentaufnahme generiert.  
+`[ @invalidate_snapshot = ] invalidate_snapshot` Erklärt die vorhandene Veröffentlichungs Momentaufnahme für ungültig. *invalidate_snapshot* ist vom Typ **Bit**. der Standardwert ist 0. Wenn der Wert **1**ist, wird für die Veröffentlichung eine neue Momentaufnahme generiert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_reinitsubscription** wird bei der Transaktions Replikation verwendet.  
   
  **sp_reinitsubscription** wird für die Peer-zu-Peer-Transaktions Replikation nicht unterstützt.  
@@ -93,7 +94,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erneutes Initialisieren eines Abonnements](../../relational-databases/replication/reinitialize-a-subscription.md)   
- [Abonnements erneut initialisieren](../../relational-databases/replication/reinitialize-subscriptions.md)   
+ [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

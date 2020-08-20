@@ -1,4 +1,5 @@
 ---
+description: sp_ivindexhasnullcols (Transact-SQL)
 title: sp_ivindexhasnullcols (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 837a589827b4bf4db9d4e7d38e00d56b646e781a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86fef9d3b131770e11edde117ea12e96d336de24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464204"
 ---
 # <a name="sp_ivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @viewname = ] 'view_name'`Der Name der Sicht, die überprüft werden soll. *view_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @viewname = ] 'view_name'` Der Name der Sicht, die überprüft werden soll. *view_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @fhasnullcols = ] field_has_null_columns OUTPUT`Das Flag, das angibt, ob der Sicht Index über Spalten verfügt, die NULL zulassen. *view_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Gibt den Wert **1** zurück, wenn der Ansichts Index Spalten enthält, die NULL zulassen. Gibt den Wert **0** zurück, wenn die Sicht keine Spalten enthält, die NULL-Werte zulassen.  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` Das Flag, das angibt, ob der Sicht Index über Spalten verfügt, die NULL zulassen. *view_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Gibt den Wert **1** zurück, wenn der Ansichts Index Spalten enthält, die NULL zulassen. Gibt den Wert **0** zurück, wenn die Sicht keine Spalten enthält, die NULL-Werte zulassen.  
   
 > [!NOTE]  
 >  Wenn die gespeicherte Prozedur selbst einen Rückgabecode von **1**zurückgibt, was bedeutet, dass bei der Ausführung der gespeicherten Prozedur ein Fehler aufgetreten ist, ist dieser Wert **0** und sollte ignoriert werden.  
@@ -48,7 +49,7 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_ivindexhasnullcols** wird von der Transaktions Replikation verwendet.  
   
  Standardmäßig werden Artikel für indizierte Sichten in einer Veröffentlichung als Tabellen bei den Abonnenten erstellt. Wenn die indizierte Spalte jedoch NULL-Werte zulässt, wird die indizierte Sicht auf dem Abonnenten als indizierte Sicht erstellt und nicht als Tabelle. Durch die Ausführung dieser gespeicherten Prozedur kann der Benutzer gewarnt werden, wenn dieses Problem mit der aktuellen indizierten Sicht besteht.  

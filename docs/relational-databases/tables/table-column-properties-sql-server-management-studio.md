@@ -1,4 +1,5 @@
 ---
+description: Tabellenspalteneigenschaften (SQL Server Management Studio)
 title: Tabellenspalteneigenschaften (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/08/2016
@@ -15,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb7e20e8f310b6cb6786c2d4cc1a62409dc81c6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463815"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Tabellenspalteneigenschaften (SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "87397000"
  **Länge**  
  Zeigt die Anzahl der für zeichenbasierte Datentypen zulässigen Zeichen an. Diese Eigenschaft ist nur für zeichenbasierte Datentypen verfügbar.  
   
- **Skalieren**  
+ **Skalierung**  
  Zeigt die Höchstzahl von Ziffern an, die rechts neben dem Komma für Werte in dieser Spalte angezeigt werden können. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben.  
   
  **Genauigkeit**  
@@ -64,7 +65,7 @@ ms.locfileid: "87397000"
  Zeigt Informationen über eine berechnete Spalte an. Der für die Eigenschaft angezeigte Wert ist derselbe, wie der Wert der untergeordneten Eigenschaft **Formel** , und zeigt die Formel für die berechnete Spalte an.  
   
 > [!NOTE]  
->  Erweitern Sie zum Ändern des für die **ComputedColumnSpecification** -Eigenschaft angezeigten Werts die Eigenschaft, und bearbeiten Sie die untergeordnete Eigenschaft **Formel** .  
+>   Erweitern Sie zum Ändern des für die **BerechneteSpalteSpezifikation** -Eigenschaft angezeigten Werts die Eigenschaft, und bearbeiten Sie die untergeordnete Eigenschaft **Ist Identity** .  
   
 -   **Formel** Zeigt die Formel für die berechnete Spalte an. Sie können diese Eigenschaft bearbeiten, indem Sie direkt eine neue Formel eingeben.  
   
@@ -108,7 +109,7 @@ ms.locfileid: "87397000"
  Zeigt Informationen darüber an, ob und wie diese Spalte die Eindeutigkeit der Werte erzwingt. Der Wert dieser Eigenschaft zeigt an, ob diese Spalte eine Identitätsspalte ist, und gleicht dem Wert der untergeordneten Eigenschaft **Ist Identity**.  
   
 > [!NOTE]  
->  Zum Ändern des Werts für die **Identitätsspezifikation** -Eigenschaft erweitern Sie die untergeordnete Eigenschaft **Ist Identität** .  
+>   Zum Ändern des Werts für die **Identitätsspezifikation** -Eigenschaft erweitern Sie die untergeordnete Eigenschaft **Ist Identity** .  
   
 -   **Ist Identity** Zeigt an, ob diese Spalte eine Identitätsspalte ist. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_changedistributor_password (Transact-SQL)
 title: sp_changedistributor_password (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 52fcf5c739ad5312aef89586e78454652df93f2f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1709bdbb673dcf88ffc9646ded291abb5702412d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464476"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,12 +38,12 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @password = ] 'password'`Das neue Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn der Verteiler lokal ist, wird das Kennwort des **distributor_admin** System-Anmelde namens geändert.  
+`[ @password = ] 'password'` Das neue Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn der Verteiler lokal ist, wird das Kennwort des **distributor_admin** System-Anmelde namens geändert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changedistributor_password** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="example"></a>Beispiel  
@@ -51,8 +52,8 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changedistributor_password**ausführen.  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Anzeigen und Ändern von Replikations Sicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Schützen des Verteilers](../../relational-databases/replication/security/secure-the-distributor.md)   
  [sp_adddistributor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

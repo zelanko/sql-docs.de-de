@@ -1,4 +1,5 @@
 ---
+description: sp_help_spatial_geography_histogram (Transact-SQL)
 title: sp_help_spatial_geography_histogram (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1ed475c78decb3891185b90d3dc032ab896bdf0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1713bb208fd556b23776fcfc2871879e6aa0d79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464240"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +41,15 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @tabname = ] 'tabname'`Der qualifizierte oder nicht qualifizierte Name der Tabelle, für die der räumliche Index angegeben wurde.  
+`[ @tabname = ] 'tabname'` Der qualifizierte oder nicht qualifizierte Name der Tabelle, für die der räumliche Index angegeben wurde.  
   
  Anführungszeichen sind nur dann erforderlich, wenn eine qualifizierte Tabelle angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *tabname* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @colname = ] 'columnname'`Der Name der angegebenen räumlichen Spalte. *ColumnName* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @colname = ] 'columnname'` Der Name der angegebenen räumlichen Spalte. *ColumnName* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @resolution = ] 'resolution'`Die Auflösung des umgebenden Felds. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist vom Datentyp **tinyint**und hat keinen Standardwert.  
+`[ @resolution = ] 'resolution'` Die Auflösung des umgebenden Felds. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist vom Datentyp **tinyint**und hat keinen Standardwert.  
   
-`[ @sample = ] 'sample'`Der Prozentsatz der verwendeten Tabelle. Gültige Werte sind 0 bis 100. *TABLESAMPLE* ist ein **float**-Wert. Der Standardwert ist 100.  
+`[ @sample = ] 'sample'` Der Prozentsatz der verwendeten Tabelle. Gültige Werte sind 0 bis 100. *TABLESAMPLE* ist ein **float**-Wert. Der Standardwert ist 100.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Tabellenwert wird zurückgegeben. In der folgenden Tabelle wird der Spalteninhalt der Tabelle beschrieben.  
@@ -62,7 +63,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss ein Mitglied der Datenbankrolle **public** sein. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Auf der räumlichen SSMS-Registerkarte wird eine grafische Darstellung der Ergebnisse angezeigt. Sie können die Ergebnisse für das räumliche Fenster abfragen, um die ungefähre Anzahl von Ergebniselementen abzurufen.  
   
 > [!NOTE]  
@@ -71,7 +72,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  Das umgebende Feld für den **geography** -Typ ist der gesamte Globus.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird **sp_help_spatial_geography_histogram** für die- `Person.Address` Tabelle in der- [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank aufgerufen.  
+ Im folgenden Beispiel wird  **sp_help_spatial_geography_histogram** für die- `Person.Address` Tabelle in der- [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank aufgerufen.  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

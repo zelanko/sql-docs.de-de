@@ -1,4 +1,5 @@
 ---
+description: sp_mergedummyupdate (Transact-SQL)
 title: sp_mergedummyupdate (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5502b64da269639d99fe54d4930f7f3b7b145d73
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dbacf385842d226c733c5c1baec9859f26e140d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464132"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,14 +38,14 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @source_object = ] 'source_object'`Der Name des Quell Objekts. *source_object*ist vom Datentyp **nvarchar (386)** und hat keinen Standardwert.  
+`[ @source_object = ] 'source_object'` Der Name des Quell Objekts. *source_object*ist vom Datentyp **nvarchar (386)** und hat keinen Standardwert.  
   
-`[ @rowguid = ] 'rowguid'`Der Zeilen Bezeichner. *ROWGUID* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert.  
+`[ @rowguid = ] 'rowguid'` Der Zeilen Bezeichner. *ROWGUID* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_mergedummyupdate** wird bei der Mergereplikation verwendet.  
   
  **sp_mergedummyupdate** ist nützlich, wenn Sie eine eigene Alternative zum Replikationskonflikt-Viewer (Wzcnflct.exe) schreiben.  
