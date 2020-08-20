@@ -1,4 +1,5 @@
 ---
+description: SQLRemoveDSNFromIni-Funktion
 title: Sqlremovedsnfromini-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 848e82741954ab24941d5d519699292727ca25d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f49646881539d7c90c057633e7151b31cfe52b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499613"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni-Funktion
 **Konformitäts**  
@@ -46,12 +47,12 @@ BOOL SQLRemoveDSNFromIni(
  Der Der Name der zu entfernenden Datenquelle.  
   
 ## <a name="returns"></a>Rückgabe  
- Die Funktion gibt "true" zurück, wenn die Datenquelle entfernt wird oder die Datenquelle nicht in der Datei "ODBC. ini" war. Wenn die Datenquelle nicht entfernt werden kann, wird false zurückgegeben.  
+ Die-Funktion gibt true zurück, wenn die Datenquelle entfernt wird oder die Datenquelle nicht in der Odbc.ini-Datei gespeichert wurde. Wenn die Datenquelle nicht entfernt werden kann, wird false zurückgegeben.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlremovedsnfromini** false zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlremovedsnfromini** false zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pferrorcode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_DSN|Ungültiger DSN|Das *lpszdsn* -Argument war ungültig.|  
@@ -65,7 +66,7 @@ BOOL SQLRemoveDSNFromIni(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[ConfigDSN ausgeführt werden](../../../odbc/reference/syntax/configdsn-function.md)|  
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  

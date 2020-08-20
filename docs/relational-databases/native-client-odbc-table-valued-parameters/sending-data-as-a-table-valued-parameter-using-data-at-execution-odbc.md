@@ -1,4 +1,5 @@
 ---
+description: Senden von Daten als Tabellenwertparameter mit Data-at-Execution (ODBC)
 title: Tabellenwert Parameter, Data-at-Execution (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ce5d61838ac40d350cda5a7d436fac6979f513f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 72fc2ad3db6c6eddde0124fc2144fa6faca6f058
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499132"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Senden von Daten als Tabellenwertparameter mit Data-at-Execution (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +34,7 @@ ms.locfileid: "85998394"
   
  Wenn SQLPutData für einen Tabellenwert aufgerufen wird, wird *DataPtr* für die Anzahl der verfügbaren Zeilen verwendet (in diesem Beispiel immer 1). *StrLen_or_IndPtr* muss immer 0 sein. Wenn alle Zeilen des Tabellen Werts weitergegeben wurden, wird SQLPutData mit einem *DataPtr* -Wert von 0 aufgerufen.  
   
-## <a name="prerequisite"></a>Voraussetzung  
+## <a name="prerequisite"></a>Voraussetzungen  
  In dieser Prozedur wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl auf dem Server ausgeführt wurde:  
   
 ```sql
@@ -185,7 +187,7 @@ from @Items
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt, dass Sie das Zeilen Streaming, eine Zeile pro SQLPutData-Befehl, mit ODBC TVP verwenden können, ähnlich wie bei der Verwendung von BCP.exe zum Laden von Daten in eine Datenbank.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  
@@ -373,7 +375,7 @@ EXIT:
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt, dass Sie mit ODBC TVP Zeilen Streaming, mehrere Zeilen pro aufzurufenden SQLPutData-Vorgang verwenden können, ähnlich wie bei der Verwendung von BCP.exe zum Laden von Daten in eine Datenbank.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  

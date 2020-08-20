@@ -1,4 +1,5 @@
 ---
+description: Schutz von Sonderzeichen und Steuerzeichen durch FOR JSON (SQL Server)
 title: Schutz von Sonderzeichen und Steuerzeichen durch FOR JSON
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 939e9d4782fec818df387844841f58e9e45f0da6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c96ae7e539a4a5783d238d71ff94d9e04f179251
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499244"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>Schutz von Sonderzeichen und Steuerzeichen durch FOR JSON (SQL Server)
 
@@ -36,11 +37,11 @@ Wenn die Quelldatei Sonderzeichen enthält, umgeht die **FOR JSON**-Klausel dies
 |Anführungszeichen (")|\\"|  
 |Umgekehrter Schrägstrich (\\)|\\\\|  
 |Schrägstrich (/)|\\/|  
-|Rücktaste|\b|  
+|Rückschritt|\b|  
 |Seitenvorschub|\f|  
-|Neue Zeile|\n|  
+|Zeilenwechsel|\n|  
 |Wagenrücklauf|\r|  
-|Horizontaler Tabstopp|\t|  
+|Horizontaler Tabulator|\t|  
   
 ## <a name="control-characters"></a>Steuerzeichen  
 Wenn die Quelldatei Steuerzeichen enthält, kodiert die **FOR JSON**-Klausel diese in der JSON-Ausgabe im `\u<code>`-Format, wie in der folgenden Tabelle dargestellt.  

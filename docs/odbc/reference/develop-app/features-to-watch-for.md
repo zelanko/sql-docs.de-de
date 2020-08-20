@@ -1,4 +1,5 @@
 ---
+description: Zu überwachende Funktionen
 title: Zu überwachende Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10fa5df8a47837e92d4215f558d52711a0df3440
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee7da25bccf0ed3d3649412c702a426a31c3ad44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499900"
 ---
 # <a name="features-to-watch-for"></a>Zu überwachende Funktionen
 In diesem Abschnitt wird eine Reihe von Features beschrieben, die Anwendungsentwickler häufig zur Gewährung benötigen. Tatsächlich unterscheiden sich diese Features stark von der Unterstützung und der Unterstützung von DBMSs. ein Fehler bei der Codeausführung führt wahrscheinlich zu Problemen in interoperablen Anwendungen.  

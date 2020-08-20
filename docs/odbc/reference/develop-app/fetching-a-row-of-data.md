@@ -1,4 +1,5 @@
 ---
+description: Abrufen einer Datenzeile
 title: Abrufen einer Daten Zeile | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a702f561b756d5305020df9f015d3ea4b444caa6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71ced7d7df30f1bb4f784317b76f7b42553951df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499890"
 ---
 # <a name="fetching-a-row-of-data"></a>Abrufen einer Datenzeile
 Zum Abrufen einer Daten Zeile Ruft eine Anwendung **SQLFetch**auf. **SQLFetch** kann mit jeder Art von Cursor aufgerufen werden, aber der rowsetcursor wird nur in Vorwärtsrichtung verschoben. **SQLFetch** verschiebt den Cursor auf die nächste Zeile und gibt die Daten für alle Spalten zurück, die mit Aufrufen von **SQLBindCol**gebunden wurden. Wenn der Cursor das Ende des Resultsets erreicht, gibt **SQLFetch** SQL_NO_DATA zurück. Beispiele zum Aufrufen von **SQLFetch**finden [Sie unter Verwenden von SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectOption-Funktion
 title: SQLSetConnectOption-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 263b15cb75fb5c0c7c1d7aa630a8da171b9765a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ebe9166ea52971812e8905399da4ea0e6347361a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499532"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption-Funktion
 **Konformitäts**  
@@ -42,6 +43,6 @@ ms.locfileid: "81301595"
 > [!NOTE]  
 >  Das in ODBC 3,8 eingeführte Attribut SQL_ASYNC_DBC_FUNCTION_ENABLE wird von **SQLSetConnectOption**nicht unterstützt. Anwendungen, die den asynchronen Vorgang für das Verbindungs Handle verwenden, müssen **SQLSetConnectAttr**verwenden.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

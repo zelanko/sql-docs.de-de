@@ -1,4 +1,5 @@
 ---
+description: SQLRemoveTranslator-Funktion
 title: Sqlremovetranslator-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 348d2c5da0731ba88ccd4dd6406d3754890f7906
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92042d1a29720d8fcca32d3fb7127f24a0566b7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499603"
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator-Funktion
 **Konformitäts**  
  Eingeführte Version: ODBC 3,0  
   
  **Zusammenfassung**  
- **Sqlremovetranslator** entfernt Informationen zu einem Konvertierer aus dem Abschnitt "Odbcinst. ini" der Systeminformationen und dekretet die Anzahl der Komponenten der Übersetzer um 1.  
+ **Sqlremovetranslator** entfernt Informationen zu einem Konvertierer aus dem Odbcinst.ini Abschnitt der Systeminformationen und dekretet die Anzahl der Komponenten der Übersetzer um 1.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +45,7 @@ BOOL SQLRemoveTranslator(
   
 ## <a name="arguments"></a>Argumente  
  *lpsztranslator*  
- Der Der Name des Konvertierers, der im Schlüssel "Odbcinst. ini" der Systeminformationen registriert ist.  
+ Der Der Name des Konvertierers, der im Odbcinst.ini Schlüssel der Systeminformationen registriert ist.  
   
  *lpdwusagecount*  
  Ausgeben Die Verwendungs Anzahl des Konvertierers, nachdem diese Funktion aufgerufen wurde.  
@@ -53,9 +54,9 @@ BOOL SQLRemoveTranslator(
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false. Wenn in den Systeminformationen kein Eintrag vorhanden ist, wenn diese Funktion aufgerufen wird, gibt die Funktion false zurück.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlremovetranslator** "false" zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlremovetranslator** "false" zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pferrorcode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|Komponente wurde in der Registrierung nicht gefunden.|Der Installer konnte die Konvertierungs Informationen nicht entfernen, weil er entweder nicht in der Registrierung vorhanden war oder in der Registrierung nicht gefunden wurde.|  
@@ -82,6 +83,6 @@ BOOL SQLRemoveTranslator(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Installieren eines Konvertierers|[Sqlinstalltranslatorex](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|
