@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_session_object_columns (Transact-SQL)
 title: sys. dm_xe_session_object_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56bea991f705a9dfdbcd3189737eb3e2a51a8c63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba65acaf8feb98a959e9ef37c7fdd26d1ce29121
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898560"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498257"
 ---
 # <a name="sysdm_xe_session_object_columns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85898560"
   
 ### <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|From|To|Beziehung|  
+|Von|An|Beziehung|  
 |----------|--------|------------------|  
 |dm_xe_session_object_columns. object_name<br /><br /> dm_xe_session_object_columns.object_package_guid|sys. dm_xe_objects. package_guid,<br /><br /> sys.dm_xe_objects.name|n:1|  
 |dm_xe_session_object_columns. column_name<br /><br /> dm_xe_session_object_columns.column_id|sys. dm_xe_object_columns. Name,<br /><br /> sys.dm_xe_object_columns.column_id|n:1|  

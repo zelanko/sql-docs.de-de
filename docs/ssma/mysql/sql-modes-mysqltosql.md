@@ -1,4 +1,5 @@
 ---
+description: SQL-Modi (MySqlToSql)
 title: SQL-Modi (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4bc4b59984cc9e2e1f7a6c358f24e3fc0d2e86be
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8d0631b35d2631e04cfad5c509d6084ba0a30aaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497717"
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL-Modi (MySqlToSql)
 SSMA für MySQL kann in verschiedenen SQL-Modi betrieben werden und kann diese Modi für verschiedene Clients unterschiedlich anwenden.  
@@ -27,7 +28,7 @@ Modi definieren die SQL-Syntax, die von MySQL unterstützt wird, sowie die Art d
   
 -   Das Raster SQL-Modi in der Kategorie Datenbanken, Datenbank, Tabellen Kategorie, Anweisungs Kategorie, Ansichts Kategorie, Tabelle, Sicht, Funktionen, Prozeduren, UDF und Ereignis Objektebene enthält die folgenden Spalten: **SQL-Modusname**, **geerbte SQL-Modi**und **effektive SQL-Modi**.  
   
--   Das Raster mit den SQL-Modi in gespeicherter Prozedur, gespeicherter Funktion und triggerebene enthält die folgenden Spalten: **SQL-Modusname**, **ursprüngliche SQL-Modi**und **effektive SQL-Modi**.  
+-   Das Raster mit den SQL-Modi in gespeicherter Prozedur, gespeicherter Funktion und triggerebene enthält die folgenden Spalten: **SQL-Modusname**,  **ursprüngliche SQL-Modi**und **effektive SQL-Modi**.  
   
 > [!NOTE]  
 > Die Gruppen Modi werden in der Spalte "SQL Mode Name" in Fett Schrift angezeigt.  

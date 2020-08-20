@@ -1,4 +1,5 @@
 ---
+description: Objekthierarchiesyntax (Transact-SQL)
 title: Objekt Hierarchie Syntax (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f5cd7b04ebf16ce11791bf1d7caeb0d1012c5d9e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be02e82ef4ba1718f15bd083e3ffc3b86058a24b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783051"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498106"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Objekthierarchiesyntax (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "85783051"
   
  Die doppelten Anführungszeichen (") sind erforderlich. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn *travermendobject* nicht angegeben wird, ist *PropertyOrMethod* erforderlich.  
   
  Wenn *PropertyOrMethod* nicht angegeben wird, wird das *TraversedObject* -Objekt als Objekt Token-Ausgabeparameter von der gespeicherten OLE-Automatisierungs Prozedur zurückgegeben. Wenn *PropertyOrMethod* angegeben wird, wird die-Eigenschaft oder die-Methode des *traversierten* -Objekts aufgerufen, und der-Eigenschafts Wert oder der Methodenrückgabewert wird als Output-Parameter aus der gespeicherten OLE-Automatisierungs Prozedur zurückgegeben.  

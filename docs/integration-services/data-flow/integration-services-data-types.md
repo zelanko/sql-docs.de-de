@@ -1,4 +1,5 @@
 ---
+description: SQL Server Integration Services-Datentypen
 title: SQL Server Integration Services-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffa03bda518d3b30119cca0534a070f2140712fc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 504c89f7c3c150451e9bf59e1f6c0b7984eb1a1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495870"
 ---
 # <a name="integration-services-data-types"></a>SQL Server Integration Services-Datentypen
 
@@ -56,15 +57,15 @@ ms.locfileid: "86904883"
 |DT_I4|Eine ganze Zahl mit Vorzeichen und einer Länge von 4 Bytes.|  
 |DT_I8|Eine ganze Zahl mit Vorzeichen und einer Länge von 8 Bytes.|  
 |DT_NUMERIC|Ein genauer numerischer Wert mit einer festen Genauigkeit und festen Dezimalstellen. Dieser Datentyp ist eine ganze Zahl ohne Vorzeichen und einer Länge von 16 Bytes, mit 0 bis 38 Dezimalstellen und einer maximalen Genauigkeit von 38.|  
-|DT_R4|Ein Gleitkommawert mit einfacher Genauigkeit|  
-|DT_R8|Ein Gleitkommawert mit doppelter Genauigkeit|  
+|DT_R4|Ein Gleitkommawert mit einfacher Genauigkeit.|  
+|DT_R8|Ein Gleitkommawert mit doppelter Genauigkeit.|  
 |DT_STR|Eine NULL-terminierte [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS-Zeichenfolge mit einer maximalen Länge von 8000 Zeichen. (Wenn ein Spaltenwert zusätzliche Nullabschlusszeichen enthält, wird die Zeichenfolge bei der ersten Null abgeschnitten.)|  
 |DT_UI1|Eine ganze Zahl ohne Vorzeichen und einer Länge von 1 Byte.|  
 |DT_UI2|Eine ganze Zahl ohne Vorzeichen und einer Länge von 2 Bytes.|  
 |DT_UI4|Eine ganze Zahl ohne Vorzeichen und einer Länge von 4 Bytes.|  
 |DT_UI8|Eine ganze Zahl ohne Vorzeichen und einer Länge von 8 Bytes.|  
 |DT_WSTR|Eine NULL-terminierte Unicode-Zeichenfolge mit einer maximalen Länge von 4000 Zeichen. (Wenn ein Spaltenwert zusätzliche Nullabschlusszeichen enthält, wird die Zeichenfolge bei der ersten Null abgeschnitten.)|  
-|DT_IMAGE|Ein Binärwert mit einer maximalen Länge von 2^31-1 (2.147.483.647) Bytes. erforderlich.|  
+|DT_IMAGE|Ein Binärwert mit einer maximalen Länge von 2^31-1 (2.147.483.647) Bytes. .|  
 |DT_NTEXT|Eine Unicode-Zeichenfolge mit einer maximalen Länge von 2^30-1 (1.073.741.823) Zeichen.|  
 |DT_TEXT|Eine [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS-Zeichenfolge mit einer maximalen Länge von 2^31-1 (2.147.483.647) Zeichen.|  
   
@@ -242,7 +243,7 @@ ms.locfileid: "86904883"
 |DT_I4|INT|INT|Long||INTEGER|INTEGER|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|real|real|Single||real|real|  
+|DT_R4|real|real|Single||real|REAL|  
 |DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
@@ -259,7 +260,7 @@ ms.locfileid: "86904883"
 ## <a name="related-content"></a>Verwandte Inhalte  
  Blogeintrag, [Leistungsvergleich zwischen Datentypkonvertierungstechniken in SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035), auf blogs.msdn.com.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Daten in Datenflüssen](../../integration-services/data-flow/data-in-data-flows.md)  
   
   

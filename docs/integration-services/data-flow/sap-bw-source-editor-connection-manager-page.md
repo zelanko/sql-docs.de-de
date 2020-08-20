@@ -1,4 +1,5 @@
 ---
+description: Quellen-Editor für SAP BW (Seite Verbindungs-Manager)
 title: Quellen-Editor für SAP BW (Seite „Verbindungs-Manager“) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52972f7b21a9eb7ff2fa0059e8d52848e8cc9ab4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aa56c3788e690aae63d292ac1a71fad3a4fc6b67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495729"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Quellen-Editor für SAP BW (Seite Verbindungs-Manager)
 
@@ -127,7 +128,7 @@ ms.locfileid: "86917836"
  **Anfrage-ID**  
  Geben Sie die Anforderungs-ID ein, die der Extrahierung zugeordnet ist.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
  [Quellen-Editor für SAP BW &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [Quellen-Editor für SAP BW &#40;Seite „Erweitert“&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   

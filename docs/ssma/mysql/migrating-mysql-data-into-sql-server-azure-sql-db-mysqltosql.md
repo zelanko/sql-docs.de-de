@@ -1,4 +1,5 @@
 ---
+description: Migrieren von MySQL-Daten in SQL Server Azure SQL-Datenbank (mysqlto SQL)
 title: Migrieren von MySQL-Daten in SQL Server Azure SQL-Datenbank (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 46636f7d7b72eb10e6bf8417e90bde48468db9f3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9fa753d472c5a7ead39faf88bc2479bc1caa9bc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497742"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-database-mysqltosql"></a>Migrieren von MySQL-Daten in SQL Server Azure SQL-Datenbank (mysqlto SQL)
 Nachdem Sie die konvertierten Objekte erfolgreich mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure synchronisiert haben, können Sie Daten von MySQL zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migrieren.  
@@ -107,6 +108,6 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldun
 > [!NOTE]  
 > Wenn die SQL Express-Edition als Zieldatenbank verwendet wird, ist nur die Client seitige Datenmigration zulässig, und die serverseitige Datenmigration wird nicht unterstützt.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Migrieren von MySQL-Datenbanken zu SQL Server Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

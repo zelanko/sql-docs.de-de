@@ -1,4 +1,5 @@
 ---
+description: Zuordnung von Quell-und Ziel Datentypen (accesstosql)
 title: Zuordnung von Quell-und Ziel Datentypen (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c67cb826d5a5dce7c142cba3ded468b851cef337
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497847"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Zuordnung von Quell-und Ziel Datentypen (accesstosql)
 Zugriffsdaten Bank Typen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanktypen. Wenn Sie Access-Datenbankobjekte in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte konvertieren, müssen Sie angeben, wie Datentypen aus dem Zugriff zugeordnet werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Prozeduren gezeigt.  
@@ -90,6 +91,6 @@ Im folgenden Verfahren wird gezeigt, wie Datentypen auf der Projekt-, Datenbank-
 ## <a name="next-steps"></a>Nächste Schritte  
 Der nächste Schritt des Migrations Vorgangs ist das [Konvertieren des Zugriffs auf Datenbankobjekte in SQL Server Objekte](converting-access-database-objects-accesstosql.md) .  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

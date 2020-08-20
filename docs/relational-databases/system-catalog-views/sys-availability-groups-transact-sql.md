@@ -1,4 +1,5 @@
 ---
+description: sys.availability_groups (Transact-SQL)
 title: sys. availability_groups (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b53d4da153087e222c70711c847e010ca702f31
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 17b30c17ba2102846f27904fe4678fa5072f317c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498451"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86279104"
 |**failure_condition_level**|**int**|Eine benutzerdefinierte Fehler Bedingungs Ebene, unter der ein automatisches Failover ausgelöst werden muss, einer der ganzzahligen Werte, die in der Tabelle direkt unterhalb dieser Tabelle angezeigt werden.<br /><br /> Die Fehlerbedingungsebenen (1–5) reichen von der Ebene 1 mit den wenigsten Einschränkungen bis zur Ebene 5 mit den meisten Einschränkungen. Jede Bedingungsebene umfasst stets auch sämtliche weniger restriktiven Ebenen. Daher schließt die strengste Bedingungsebene 5 die vier Bedingungsebenen mit weniger Einschränkungen (1-4) ein, Ebene 4 schließt die Ebenen 1-3 ein usw.<br /><br /> Um diesen Wert zu ändern, verwenden Sie die FAILURE_CONDITION_LEVEL-Option der [Alter Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) - [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.|  
 |**health_check_timeout**|**int**|Die Wartezeit (in Millisekunden), mit der die gespeicherte Prozedur des [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) Servers Server Zustandsinformationen zurückgibt, bevor davon ausgegangen wird, dass die Serverinstanz langsam ist oder nicht antwortet. Der Standardwert ist 30000 Millisekunden (oder 30 Sekunden).<br /><br /> Um diesen Wert zu ändern, verwenden Sie die HEALTH_CHECK_TIMEOUT-Option der [Alter Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) - [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.|  
 |**automated_backup_preference**|**tinyint**|Bevorzugter Speicherort zum Durchführen von Sicherungen auf den Verfügbarkeitsdatenbanken in dieser Verfügbarkeitsgruppe. Im folgenden sind die möglichen Werte und ihre Beschreibungen aufgeführt.<br /><br /> <br /><br /> 0: primär. Sicherungen sollten immer auf dem primären Replikat erfolgen.<br /><br /> 1: nur sekundär. Die Durchführung von Sicherungen auf einem sekundären Replikat wird bevorzugt.<br /><br /> 2: Sekundär bevorzugen. Die Durchführung von Sicherungen auf einem sekundären Replikat wird bevorzugt, aber die Durchführung von Sicherungen auf dem primären Replikat wird akzeptiert, wenn kein sekundäres Replikat für Sicherungsvorgänge verfügbar ist. Dies ist das Standardverhalten.<br /><br /> 3: beliebiges Replikat. Keine Präferenz, ob Sicherungen auf dem primären Replikat oder einem sekundären Replikat durchgeführt werden.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
-|**automated_backup_preference_desc**|**nvarchar(60)**|Beschreibung der **automated_backup_preference**, eine der folgenden:<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> NONE|  
+|**automated_backup_preference_desc**|**nvarchar(60)**|Beschreibung der **automated_backup_preference**, eine der folgenden:<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> Keine|  
 |**version**|**smallint**|Die Version der Verfügbarkeits Gruppen Metadaten, die im Windows-Failovercluster gespeichert sind. Diese Versionsnummer wird erhöht, wenn neue Funktionen hinzugefügt werden.|  
 |**basic_features**|**bit**|Gibt an, ob dies eine Basis-Verfügbarkeits Gruppe ist. Weitere Informationen finden Sie unter [Basis-Verfügbarkeitsgruppen &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**bit**|Gibt an, ob die DTC-Unterstützung für diese Verfügbarkeits Gruppe aktiviert wurde. Die Option **DTC_SUPPORT** von **Create Availability Group** steuert diese Einstellung.|  
@@ -69,9 +70,9 @@ ms.locfileid: "86279104"
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW ANY DEFINITION-Berechtigung für die Serverinstanz.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
- [Always on Verfügbarkeits Gruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Überwachen von Verfügbarkeits Gruppen &#40;Transact-SQL-&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   

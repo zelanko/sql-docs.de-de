@@ -1,4 +1,5 @@
 ---
+description: Vorbereiten von SQL Server für Oracle CDC – Skript anzeigen
 title: Vorbereiten von SQL Server für Oracle CDC – Skript anzeigen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a1b97eab4f09e83cfb21523bfc7c9c432b442e1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 034f66219a715064d06ed47192846f7a2775124a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496190"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Vorbereiten von SQL Server für Oracle CDC – Skript anzeigen
 
@@ -29,10 +30,10 @@ ms.locfileid: "86920046"
  **Speichern unter**  
  Speichert das Skript in einer Textdatei, die Sie an einem beliebigen Speicherort ablegen können. Sie können die Skripts zu einem späteren Zeitpunkt ausführen, indem Sie das Skript in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]einfügen.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert das Skript in die Zwischenablage. Sie können das Skript dann in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einfügen, um es auszuführen und die MSXDBCDC-Datenbank zu erstellen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Vorbereiten von SQL Server für CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   

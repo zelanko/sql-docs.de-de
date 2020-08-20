@@ -1,4 +1,5 @@
 ---
+description: sys.database_mirroring (Transact-SQL)
 title: sys. database_mirroring (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 188a4c98b8f179cafd184a2add60055d7b36e4b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 491ff79e6337ee7ec9767c73138174ac2fe64c8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498433"
 ---
 # <a name="sysdatabase_mirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,13 +47,13 @@ ms.locfileid: "85883612"
 |**mirroring_role_desc**|**nvarchar(60)**|Beschreibung der Rolle der lokalen Datenbank im Rahmen der Spiegelung. Folgende Werte sind möglich:<br /><br /> PRINCIPAL<br /><br /> MIRROR|  
 |**mirroring_role_sequence**|**int**|Die Anzahl von Rollenwechseln zwischen den Spiegelungspartnern (Prinzipal und Spiegel) aufgrund eines Failovers oder eines erzwungenen Diensts.<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_safety_level**|**tinyint**|Sicherheitseinstellung für Updates in der Spiegeldatenbank:<br /><br /> 0 = Unbekannter Status<br /><br /> 1 = Deaktiviert [asynchron]<br /><br /> 2 = Vollständige Sicherheit [synchron]<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
-|**mirroring_safety_level_desc**|**nvarchar(60)**|Transaktionssicherheitseinstellung für Updates in der Spiegeldatenbank. Folgende Werte sind möglich:<br /><br /> UNBEKANNT<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL|  
+|**mirroring_safety_level_desc**|**nvarchar(60)**|Transaktionssicherheitseinstellung für Updates in der Spiegeldatenbank. Folgende Werte sind möglich:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL|  
 |**mirroring_safety_sequence**|**int**|Updatesequenznummer für Änderungen an der Transaktionssicherheitsstufe.<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_partner_name**|**nvarchar(128)**|Servername des Datenbank-Spiegelungspartners.<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_partner_instance**|**nvarchar(128)**|Instanzname und Computername des anderen Partners. Clients benötigen diese Information, um die Verbindung mit dem Partner herstellen zu können, wenn dieser zum Prinzipalserver wird.<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_witness_name**|**nvarchar(128)**|Servername des Datenbank-Spiegelungszeugen.<br /><br /> NULL = Es gibt keinen Zeugen.|  
 |mirroring_witness_state|**tinyint**|Status des Zeugen in der Datenbankspiegelungssitzung der Datenbank. Folgende Werte sind möglich:<br /><br /> 0 = Unbekannt<br /><br /> 1 = Verbunden<br /><br /> 2 = Getrennt<br /><br /> NULL = Es ist kein Zeuge vorhanden, die Datenbank befindet sich nicht online, oder die Datenbank wird nicht gespiegelt.|  
-|**mirroring_witness_state_desc**|**nvarchar(60)**|Beschreibung des Status. Folgende Werte sind möglich:<br /><br /> UNBEKANNT<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL|  
+|**mirroring_witness_state_desc**|**nvarchar(60)**|Beschreibung des Status. Folgende Werte sind möglich:<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL|  
 |**mirroring_failover_lsn**|**numeric(25,0)**|Protokollsequenznummer (Log Sequence Number, LSN) des aktuellsten Transaktionsprotokoll-Datensatzes, für den das Festschreiben auf der Festplatte auf beiden Partnern garantiert wird. Nach einem Failover wird der **mirroring_failover_lsn** von den Partnern als Punkt der Abstimmung verwendet, bei dem der neue Spiegel Server mit der Synchronisierung der neuen Spiegel Datenbank mit der neuen Prinzipal Datenbank beginnt.|  
 |**mirroring_connection_timeout**|**int**|Timeout für die Spiegelungsverbindung in Sekunden. Dieser Wert entspricht der Anzahl von Sekunden, die auf eine Antwort vom Partner oder Zeugen gewartet wird, bis dieser als nicht verfügbar eingestuft wird. Standardmäßig beträgt der Timeoutwert 10 Sekunden.<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_redo_queue**|**int**|Maximaler Umfang des Protokolls für die Wiederholung auf dem Spiegel. Wenn mirroring_redo_queue_type auf UNLIMITED festgelegt ist (Standardeinstellung), ist der Wert dieser Spalte NULL. Wenn die Datenbank nicht online ist, ist der Wert dieser Spalte ebenfalls NULL.<br /><br /> Andernfalls enthält diese Spalte den maximalen Protokollumfang in MB. Wenn das Maximum erreicht ist, wird das Protokoll auf dem Prinzipal vorübergehend angehalten, bis der Spiegelserver den aktuellen Stand erreicht hat. Durch diese Funktion wird die Failoverzeit begrenzt.<br /><br /> Weitere Informationen finden Sie unter [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)ausgetauscht werden.|  
@@ -63,12 +64,12 @@ ms.locfileid: "85883612"
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys. database_mirroring_witnesses &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [sys. database_mirroring_endpoints &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
- [Katalog Sichten für Datenbanken und Dateien &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
+ [Datenbanken und Dateikatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [FAQ: Abfragen des SQL Server-Systemkatalogs](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

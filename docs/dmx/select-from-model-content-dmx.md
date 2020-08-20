@@ -1,4 +1,5 @@
 ---
+description: Wählen Sie aus dem &lt; Modell aus &gt; . Inhalt (DMX)
 title: Wählen Sie aus dem &lt; Modell aus &gt; . Inhalt (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496286"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Wählen Sie aus dem &lt; Modell aus &gt; . Inhalt (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -31,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- Dies ist optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *Ausdrucks Liste*  
  Eine durch Trennzeichen getrennte Liste mit Spalten, die aus dem Schemarowset des Inhalts abgeleitet wurden.  
@@ -40,10 +41,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Ein Modellbezeichner.  
   
  *Bedingungs Ausdruck*  
- Dies ist optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
+ Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- Dies ist optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die **Select from** -Option _\<model>_ **. Die Inhalts** Anweisung gibt Inhalt zurück, der für jeden Algorithmus spezifisch ist. Angenommen, Sie möchten die Beschreibungen aller Regeln eines Modells für Zuordnungsregeln in einer benutzerdefinierten Anwendung verwenden. Sie können eine SELECT from-Option verwenden ** \<model> . Inhalts** Anweisung zum Zurückgeben von Werten in der NODE_RULE-Spalte des Modells.  

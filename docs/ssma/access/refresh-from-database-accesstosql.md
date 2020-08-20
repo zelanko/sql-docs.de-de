@@ -1,4 +1,5 @@
 ---
+description: Aktualisieren aus der Datenbank (Access Token-SQL)
 title: Aktualisieren aus der Datenbank (Access Token) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 06174be45e178f3fb7c612925e78795bf4eeaa7c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 471b1b3891d017858c0f0d035f8207bc8a1d2539
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497775"
 ---
 # <a name="refresh-from-database-accesstosql"></a>Aktualisieren aus der Datenbank (Access Token-SQL)
 Im Dialogfeld **aus Datenbank aktualisieren** können Sie auswählen, welche Objekte aus der Access-Datenbank aktualisiert werden sollen. Zeilen im Dialogfeld sind basierend auf dem Status der Metadaten farblich codiert:  

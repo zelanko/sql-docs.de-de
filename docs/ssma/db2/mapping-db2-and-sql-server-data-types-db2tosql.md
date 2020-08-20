@@ -1,4 +1,5 @@
 ---
+description: Zuordnung von DB2-und SQL Server-Datentypen (DB2ToSQL)
 title: Zuordnung von DB2-und SQL Server-Datentypen (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0579a5c477b9933b9937c1f003d3c7bbc056eae6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936889"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497789"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Zuordnung von DB2-und SQL Server-Datentypen (DB2ToSQL)
 DB2-Datenbanktypen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanktypen Beim Konvertieren von DB2-Datenbankobjekten in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte müssen Sie angeben, wie Datentypen aus DB2 zugeordnet werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Abschnitten dargestellt.  
@@ -74,7 +75,7 @@ Im folgenden Verfahren wird gezeigt, wie Datentypen auf Projekt-, Datenbank-oder
   
     4.  Wählen Sie unter **Zieltyp**den Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp aus.  
   
-        Einige Typen erfordern eine Länge des Ziel Datentyps. Wenn dies erforderlich ist, geben Sie die neue Daten Länge im Feld **Ersetzen durch** ein, und klicken Sie dann auf[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        Einige Typen erfordern eine Länge des Ziel Datentyps. Wenn dies erforderlich ist, geben Sie die neue Daten Länge im Feld **Ersetzen durch** ein, und klicken Sie dann auf [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Gehen Sie folgendermaßen vor, um eine benutzerdefinierte Datentyp Zuordnung zu entfernen:  
   
@@ -87,6 +88,6 @@ Im folgenden Verfahren wird gezeigt, wie Datentypen auf Projekt-, Datenbank-oder
 ## <a name="next-steps"></a>Nächste Schritte  
 Der nächste Schritt des Migrations Vorgangs besteht darin, entweder die [Bewertung des Berichts &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md) oder [DB2-Schemas &#40;DB2ToSQL&#41;zu ](../../ssma/db2/converting-db2-schemas-db2tosql.md). Wenn Sie einen Bewertungsbericht erstellen, werden DB2-Objekte während der Bewertung automatisch konvertiert.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Migrieren von DB2-Datenbanken zu SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

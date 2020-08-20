@@ -1,4 +1,5 @@
 ---
+description: Schnellprofilformular für eine einzelne Tabelle (Datenprofilerstellungs-Task)
 title: Schnellprofilformular für eine einzelne Tabelle (Datenprofilerstellungs-Task) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9da9e33020b89074eb42751eaba89d22e251ef69
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b974db6df0f18a8063201f9e83ec905b87267301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495959"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Schnellprofilformular für eine einzelne Tabelle (Datenprofilerstellungs-Task)
 
@@ -40,7 +41,7 @@ ms.locfileid: "86920982"
  **Compute**  
  Wählen Sie aus, welche Profile berechnet werden sollen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Profil für Spalten-NULL-Verhältnis**|Berechnen Sie ein Profil für Spalten-NULL-Verhältnis anhand der Standardeinstellungen für alle anwendbaren Spalten in der ausgewählten Tabelle oder Sicht.<br /><br /> Dieses Profil meldet den Prozentwert der NULL-Werte in der ausgewählten Spalte. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. ein unerwartet hohes Verhältnis an NULL-Werten in einer Spalte. Weitere Informationen zu den Einstellungen für dieses Profil finden Sie unter [Optionen für die Anforderung für Profil für NULL-Verhältnis der Spalte &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md).|  
 |**Spaltenstatistikprofil**|Berechnen Sie ein Spaltenstatistikprofil anhand der Standardeinstellungen für alle anwendbaren Spalten in der ausgewählten Tabelle oder Sicht.<br /><br /> Dieses Profil meldet Statistiken, wie minimale, maximale, durchschnittliche und standardmäßige Abweichung für numerische Spalten und den Mindest- und Höchstwert für **datetime** -Spalten. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. ungültige Datumsangaben. Weitere Informationen zu den Einstellungen für dieses Profil finden Sie unter [Optionen für die Anforderung für Spaltenstatistikprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md).|  
@@ -53,9 +54,9 @@ ms.locfileid: "86920982"
 |**für bis zu N Spalten als bestimmende Spalten**|Wählen Sie die maximale Anzahl von Spalten aus, die in möglichen Kombinationen als determinante Spalten getestet werden sollen. Der Standardwert ist 1. Der Maximalwert ist 1000. Wenn Sie beispielsweise "2" auswählen, werden Kombinationen getestet, in denen einzelne Spalten oder Kombinationen aus zwei Spalten die bestimmenden Spalten für eine andere (abhängige) Spalte sind.|  
   
 > [!NOTE]  
->  Der Typ „Wertinklusionsprofil“ ist im **Schnellprofilformular für eine einzelne Tabelle**nicht verfügbar.  
+>   Der Typ Wertinklusionsprofil ist im **Schnellprofilformular für eine einzelne Tabelle**nicht verfügbar.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Editor für den Datenprofilerstellungs-Task &#40;Seite „Profilanforderungen“&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Bestimmen, ob die Änderungsdaten bereit sind
 title: Bestimmen, ob die Änderungsdaten bereit sind | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c396f85d05203a9a2c01825adb94bd0cd2ae910e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95a2a3a5ec29f8b467cbd637e13be3aced203f41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496224"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Bestimmen, ob die Änderungsdaten bereit sind
 
@@ -169,15 +170,15 @@ ms.locfileid: "86921686"
   
 3.  Für die Rangfolgeneinschränkung, die den Task "SQL ausführen" mit dem Skripttask verbindet, öffnen Sie den **Rangfolgeneinschränkungs-Editor** , und wählen Sie die folgenden Optionen aus:  
   
-    1.  Wählen Sie für **Auswertungsvorgang** **Ausdruck und Einschränkung**aus.  
+    1.  Wählen Sie für **Auswertungsvorgang****Ausdruck und Einschränkung**aus.  
   
-    2.  Wählen Sie für **Wert** **Erfolg**aus.  
+    2.  Wählen Sie für **Wert****Erfolg**aus.  
   
          Der Einschränkungswert von **Erfolg** verweist auf den Erfolg des vorherigen Tasks. In diesem Fall auf den Erfolg des Tasks "SQL ausführen".  
   
     3.  Geben Sie für **Ausdruck**`@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`ein.  
   
-    4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE** ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
+    4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE**ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
   
 4.  Wählen Sie im **Skripttask-Editor**auf der Seite **Skript** für **ReadOnlyVariables**die ganzzahlige Variable **User::DelaySeconds** aus der Liste aus.  
   
@@ -201,7 +202,7 @@ ms.locfileid: "86921686"
         ```  
   
         > [!NOTE]  
-        >  Die **Thread.Sleep** -Methode erwartet ein Argument, das in Millisekunden angegeben wird.  
+        >   Die **Thread.Sleep** -Methode erwartet ein Argument, das in Millisekunden angegeben wird.  
   
 7.  Verlassen Sie die Standardcodezeile, die **DtsExecResult.Success** aus der Ausführung des Skripts zurückgibt.  
   
@@ -215,15 +216,15 @@ ms.locfileid: "86921686"
   
 3.  Für die Rangfolgeneinschränkung, die die zwei Tasks "SQL ausführen" verbindet, öffnen Sie den **Rangfolgeneinschränkungs-Editor** , und wählen Sie die folgenden Optionen aus:  
   
-    1.  Wählen Sie für **Auswertungsvorgang** **Ausdruck und Einschränkung**aus.  
+    1.  Wählen Sie für **Auswertungsvorgang****Ausdruck und Einschränkung**aus.  
   
-    2.  Wählen Sie für **Wert** **Erfolg**aus.  
+    2.  Wählen Sie für **Wert****Erfolg**aus.  
   
          Der Einschränkungswert von **Erfolg** verweist auf den Erfolg des vorherigen Tasks "SQL ausführen".  
   
     3.  Geben Sie für **Ausdruck**`@DataReady == 0`ein.  
   
-    4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE** ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
+    4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE**ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
   
          Diese Auswahl erfordert, dass beide Bedingungen, die Einschränkung und der Ausdruck, den Wert true haben müssen.  
   
@@ -261,19 +262,19 @@ ms.locfileid: "86921686"
   
 4.  Für die Rangfolgeneinschränkung, die den Task "SQL ausführen" mit dem Skripttask verbindet, öffnen Sie den **Rangfolgeneinschränkungs-Editor** , und wählen Sie die folgenden Optionen aus:  
   
-    1.  Wählen Sie für **Auswertungsvorgang** **Ausdruck und Einschränkung**aus.  
+    1.  Wählen Sie für **Auswertungsvorgang****Ausdruck und Einschränkung**aus.  
   
-    2.  Wählen Sie für **Wert** **Erfolg**aus.  
+    2.  Wählen Sie für **Wert****Erfolg**aus.  
   
          Der Einschränkungswert von **Erfolg** verweist auf den Erfolg des vorherigen Tasks. In diesem Fall auf den Erfolg des Tasks "SQL ausführen".  
   
     3.  Geben Sie für **Ausdruck**`@DataReady == 1 || @DataReady == 5`ein.  
   
-    4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE** ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
+    4.  Wählen Sie **Logischer AND-Operator. Alle Einschränkungen müssen zu TRUE**ausgewertet werden, sofern die Option nicht bereits ausgewählt ist.  
   
          Diese Auswahl erfordert, dass beide Bedingungen, die Einschränkung und der Ausdruck, den Wert true haben müssen.  
   
-5.  Wählen Sie im **Skripttask-Editor**auf der Seite **Skript** des Editors für **ReadOnlyVariables** **User::DataReady** und **User::ExtractStartTime** aus der Liste aus, um deren Werte für das Skript verfügbar zu machen.  
+5.  Wählen Sie im **Skripttask-Editor**auf der Seite **Skript** des Editors für **ReadOnlyVariables****User::DataReady** und **User::ExtractStartTime** aus der Liste aus, um deren Werte für das Skript verfügbar zu machen.  
   
      Wenn Sie Informationen von bestimmten Systemvariablen (z. B. System::PackageName) in die Informationen, die in das Protokoll geschrieben werden, einschließen möchten, wählen Sie auch diese Variablen aus.  
   

@@ -1,4 +1,5 @@
 ---
+description: Erstellen einer asynchronen Transformation mit der Skriptkomponente
 title: Erstellen einer asynchronen Transformation mit der Skriptkomponente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 980300f1deee55be9d8c7977bf813108bcfd1e80
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 05d28638ebb8981c0ccce4e6bb38ab7179565d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495611"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Erstellen einer asynchronen Transformation mit der Skriptkomponente
 
@@ -72,7 +73,7 @@ ms.locfileid: "86923846"
  Weitere Informationen über die Seite **Eingaben und Ausgaben** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Inputs and Outputs Page) (Transformations-Editor für Skripterstellung (Seite „Eingaben und Ausgaben“))](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Hinzufügen von Variablen  
- Wenn Sie die Werte von vorhandenen Variablen in Ihrem Skript verwenden möchten, können Sie diese in den Eigenschaftenfeldern „ReadOnlyVariables“ und „ReadWriteVariables“ auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** hinzufügen.  
+ Wenn Sie die Werte von vorhandenen Variablen in Ihrem Skript verwenden möchten, können Sie diese in den Eigenschaftsfeldern ReadOnlyVariables und ReadWriteVariables auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** hinzufügen.  
   
  Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ) neben den Eigenschaftsfeldern für **ReadOnlyVariables** und **ReadWriteVariables** klicken und dann die Variablen im Dialogfeld **Variablen auswählen** festlegen.  
   

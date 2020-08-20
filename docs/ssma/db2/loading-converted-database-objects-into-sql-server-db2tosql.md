@@ -1,4 +1,5 @@
 ---
+description: Laden von konvertierten Datenbankobjekten in SQL Server (DB2ToSQL)
 title: Laden von konvertierten Datenbankobjekten in SQL Server (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c44f55d80669863bf0a968d3a6c415b863a311e9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ddd074654a12d6eb837b9e9fc9a152c7ec1e75b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497768"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Laden von konvertierten Datenbankobjekten in SQL Server (DB2ToSQL)
 Nachdem Sie DB2-Schemas in konvertiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie die resultierenden Datenbankobjekte in Laden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können entweder das SSMA-Objekt erstellen, oder Sie können Skripts für die Objekte erstellen und die Skripts selbst ausführen. Außerdem können Sie mit SSMA Ziel Metadaten mit dem tatsächlichen Inhalt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank aktualisieren.  
@@ -42,7 +43,7 @@ Wenn Sie SSMA zum Erstellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 3.  Nachdem Sie die zu verarbeitenden Objekte im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer ausgewählt haben, klicken Sie mit der rechten Maustaste auf **Datenbanken**, und klicken Sie dann auf **mit Datenbank synchronisieren**.  
   
-    Sie können einzelne Objekte oder Objektkategorien auch synchronisieren, indem Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner klicken und dann auf **mit Datenbank synchronisieren**klicken.  
+    Sie können einzelne Objekte oder Objektkategorien auch synchronisieren, indem Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner klicken und dann auf  **mit Datenbank synchronisieren**klicken.  
   
     Danach zeigt SSMA das Dialogfeld **mit Datenbank synchronisieren an** , in dem Sie zwei Gruppen von Elementen sehen können. Auf der linken Seite zeigt SSMA ausgewählte Datenbankobjekte an, die in einer Struktur dargestellt werden. Auf der rechten Seite sehen Sie eine Baumstruktur, die die gleichen Objekte in SSMA-Metadaten darstellt. Sie können die Struktur erweitern, indem Sie auf die Schaltfläche mit der rechten oder linken Schaltfläche klicken. Die Richtung der Synchronisierung wird in der Aktionsspalte angezeigt, die zwischen den beiden Strukturen platziert ist.  
   
@@ -89,7 +90,7 @@ Sie können in ein Skript oder einzelne Anweisungen ausführen [!INCLUDE[ssManSt
   
 1.  Zeigen Sie im Menü [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Datei** auf **Öffnen**, und klicken Sie dann auf **Datei**.  
   
-2.  Wählen Sie im Dialogfeld **Öffnen** die Skriptdatei aus, und klicken Sie dann auf[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  Wählen Sie im Dialogfeld **Öffnen** die Skriptdatei aus, und klicken Sie dann auf [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Drücken Sie die Taste **F5** , um das komplette Skript auszuführen.  
   
@@ -105,6 +106,6 @@ Nachdem Sie die konvertierten Datenbankobjekte in geladen haben [!INCLUDE[ssNoVe
 ## <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt des Migrations Vorgangs besteht darin, [DB2-Daten in SQL Server zu migrieren](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Migrieren von DB2-Daten in SQL Server &#40;DB2ToSQL-&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

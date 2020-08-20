@@ -1,4 +1,5 @@
 ---
+description: Oracle CDC Service
 title: Oracle CDC Service | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 95dc655d8c1ac23df7cbb058cba2c5c7f4e41419
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a38a8f0ac868968015ead8031a0a5aad37b89078
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496132"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
 
@@ -47,7 +48,7 @@ GO
   
  Die Oracle CDC-Instanzkonfiguration wird in der Tabelle **cdc.xdbcdc_config** gespeichert. Dies ist die Tabelle, die von der Oracle CDC Designer Console verwendet wird. Da sich die gesamte Konfiguration einer Oracle CDC-Instanz auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz und in CDC-Datenbanken befindet, ist es möglich, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Bereitstellungsskripts für eine Oracle CDC-Instanz zu erstellen. Dies wird mithilfe der CDC Service Configuration Console und Oracle CDC Designer Console erreicht.  
   
-## <a name="security-considerations"></a>Überlegungen zur Sicherheit  
+## <a name="security-considerations"></a>Sicherheitsüberlegungen  
  Im Folgenden werden die Sicherheitsanforderungen beschrieben, die für die Verwendung des CDC Service for Oracle erforderlich sind.  
   
 ### <a name="protection-of-source-oracle-data"></a>Schutz der Oracle-Quelldaten  
@@ -96,8 +97,8 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Arbeiten mit dem Oracle CDC Service](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten eines lokalen CDC Service](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
- [Verwalten eines Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

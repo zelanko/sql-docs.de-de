@@ -1,4 +1,5 @@
 ---
+description: Optionen für Anforderung für Verteilungsprofil für Spaltenlänge (Datenprofilerstellungs-Task)
 title: Optionen für Anforderung für Verteilungsprofil für Spaltenlänge (Datenprofilerstellungs-Task) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f3833327f518b935874b79747ef9cd6b129143a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8eea376c7dc204b326f7ad4bb5ac41d0a76e4ee4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496027"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Optionen für Anforderung für Verteilungsprofil für Spaltenlänge (Datenprofilerstellungs-Task)
 
@@ -75,14 +76,14 @@ ms.locfileid: "86921424"
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **IgnoreLeadingSpaces**  
  Geben Sie an, ob führende Leerzeichen ignoriert werden sollen, wenn das Profil Zeichenfolgenwerte vergleicht. Der Standardwert für diese Option ist **False**.  
   
  **IgnoreTrailingSpaces**  
  Geben Sie an, ob nachfolgende Leerzeichen ignoriert werden sollen, wenn das Profil Zeichenfolgenwerte vergleicht. Der Standardwert für diese Option ist **True**.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

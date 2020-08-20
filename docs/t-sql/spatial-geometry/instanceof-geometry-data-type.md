@@ -1,4 +1,5 @@
 ---
+description: InstanceOf (geometry-Datentyp)
 title: InstanceOf (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 33752578feb12ce8471e9f7bf01b6138e2e8b8e7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5b79e0d67f11258afb8cf7aeebbfc4d52b9f4907
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497056"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (geometry-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,14 +41,14 @@ Eine Methode, die die Übereinstimmung der **geometry**-Instanz mit dem angegebe
 
 ## <a name="arguments"></a>Argumente
 *geometry_type*  
-Eine **nvarchar(4000)** -Zeichenfolge, die einen von 15 Typen angibt, die in der **geometry**-Typhierarchie verfügbar gemacht werden.  
+Eine **nvarchar(4000)**-Zeichenfolge, die einen von 15 Typen angibt, die in der **geometry**-Typhierarchie verfügbar gemacht werden.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **bit**  
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Eingabe für die Methode muss einem der folgenden Typen entsprechen: **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** oder **MultiPoint**. Diese Methode löst eine **ArgumentException** aus, wenn andere Zeichenfolgen für die Eingabe verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
@@ -59,7 +60,7 @@ SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

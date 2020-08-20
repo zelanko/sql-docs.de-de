@@ -1,4 +1,5 @@
 ---
+description: InfoObject suchen
 title: InfoObject suchen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fc863ce6460977b2eb91c53531983a0dde92668
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93050f2a583f3fa378778397470506787c7001f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495859"
 ---
 # <a name="look-up-infoobject"></a>InfoObject suchen
 
@@ -82,7 +83,7 @@ ms.locfileid: "86916499"
   
  Wenn die Liste der verfügbaren InfoObjects angezeigt wird, wählen Sie das gewünschte InfoObject aus. Daraufhin werden die zugehörigen Optionen vom Ziel mit den erforderlichen Werten aufgefüllt.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [InfoCube für Transaktionsdaten erstellen](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [InfoSource erstellen](../../integration-services/data-flow/create-infosource.md)   
  [InfoSource für Transaktionsdaten erstellen](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

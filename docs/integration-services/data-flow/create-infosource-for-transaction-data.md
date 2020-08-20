@@ -1,4 +1,5 @@
 ---
+description: InfoSource für Transaktionsdaten erstellen
 title: InfoSource für Transaktionsdaten erstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28c3d7da3777f20957d0bdd4cf0881453af2cc00
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5b37416ef8283f32909b216508defda671080e30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495924"
 ---
 # <a name="create-infosource-for-transaction-data"></a>InfoSource für Transaktionsdaten erstellen
 
@@ -82,20 +83,20 @@ ms.locfileid: "86923984"
  **InfoObject**  
  Zeigt den Namen des InfoObject an, das der Datenflussspalte zugeordnet ist.  
   
- **Typ**  
+ **Type**  
  Zeigt den Typ des InfoObject an, das der Datenflussspalte zugeordnet ist. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |CHA|Merkmale|  
-|UNI|Units|  
+|UNI|Einheiten|  
 |KYF|Kennzahlen|  
 |TIM|Zeitmerkmale|  
   
  **Einheitenfeld**  
  Geben Sie die Einheiten an, die vom InfoObject verwendet werden.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [InfoSource erstellen](../../integration-services/data-flow/create-infosource.md)   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

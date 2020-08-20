@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_set_parameter (Transact-SQL)
 title: managed_backup. sp_set_parameter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3eab417e1d959c990e53aca3119546a73a3e1aad
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 8341c09305f6e02317d5b49a9e8239d18213b242
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498073"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,27 +46,27 @@ EXEC managed_backup.sp_set_parameter
     ,[@parameter_value = ] 'parameter_value'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentation  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumente  
  @parameter_name  
- Der Name des Parameters, dessen Wert festgelegt werden soll. @parameter_nameist vom Datentyp nvarchar (128). Die verfügbaren Parameternamen lauten **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **fileretentiondebug XEvent**und **storageoperationdebug-Ereignis**.  
+ Der Name des Parameters, dessen Wert festgelegt werden soll. @parameter_name ist vom Datentyp nvarchar (128). Die verfügbaren Parameternamen lauten **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **fileretentiondebug XEvent**und **storageoperationdebug-Ereignis**.  
   
  @parameter_value  
- Der Wert des Parameters, der festgelegt werden soll. @parameterder Wert ist nvarchar (128).  Im Folgenden sind die zulässigen Parametername/Parameterwert-Paare aufgeführt:  
+ Der Wert des Parameters, der festgelegt werden soll. @parameter der Wert ist nvarchar (128).  Im Folgenden sind die zulässigen Parametername/Parameterwert-Paare aufgeführt:  
   
--   @parameter_name= ' SSMBackup2WANotificationEmailIds ': @parameter_value = ' Email '  
+-   @parameter_name = ' SSMBackup2WANotificationEmailIds ': @parameter_value  = ' Email '  
   
--   @parameter_name= ' SSMBackup2WAEnableUserDefinedPolicy ': @parameter_value = {' true ' | ' false '}  
+-   @parameter_name = ' SSMBackup2WAEnableUserDefinedPolicy ': @parameter_value  = {' true ' | ' false '}  
   
--   @parameter_name= ' SSMBackup2WADebugXevent ': @parameter_value = {' true ' | ' false '}  
+-   @parameter_name = ' SSMBackup2WADebugXevent ': @parameter_value  = {' true ' | ' false '}  
   
--   @parameter_name= ' Fileretentiondebug-XEvent ': @parameter_value = {' true ' | ' false '}  
+-   @parameter_name = ' Fileretentiondebug-XEvent ': @parameter_value  = {' true ' | ' false '}  
   
--   @parameter_name= ' Storageoperationentbugxevent ' = {' true ' | ' false '}  
+-   @parameter_name = ' Storageoperationentbugxevent ' = {' true ' | ' false '}  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="best-practices"></a>Bewährte Methoden  
+## <a name="best-practices"></a>Empfehlungen  
  Optionaler Abschnitt, der bewährte Methoden beschreibt, die der Benutzer beim Ausführen der Anweisung oder Routine befolgen sollte.  
   
 ## <a name="security"></a>Sicherheit  

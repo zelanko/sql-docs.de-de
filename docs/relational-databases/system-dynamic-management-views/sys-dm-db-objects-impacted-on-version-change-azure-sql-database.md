@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_objects_impacted_on_version_change (Azure SQL-Datenbank)
 title: sys.dm_db_objects_impacted_on_version_change
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
@@ -20,19 +21,19 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c0b26edb80b254ca6c7d3b161e618d2a6ad5849f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 804b9828ae2a1359075cce2db4077918b0294b59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498333"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Diese datenbankbezogene Systemsicht wurde entworfen, um ein Frühwarnsystem bereitzustellen, mit dem Objekte ermittelt werden sollen, die von einem Upgrade der Hauptversion in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] betroffen sein werden. Sie können die Sicht entweder vor oder nach dem Upgrade verwenden, um eine vollständige Enumeration der betroffenen Objekte abzurufen. Sie müssen diese Sicht in jeder Datenbank abfragen, damit der gesamte Server berücksichtigt wird.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |class|**int** nicht NULL|Die Klasse des Objekts, das betroffen sein wird:<br /><br /> **1** = Einschränkung<br /><br /> **7** = Indizes und Heaps|  
 |class_desc|**nvarchar (60)** nicht NULL|Beschreibung der Klasse:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **Sin**|  
@@ -60,14 +61,14 @@ class  class_desc        major_id    minor_id    dependency
 1      OBJECT_OR_COLUMN  101575400   NULL        geometry     
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ### <a name="how-to-update-impacted-objects"></a>Aktualisieren betroffener Objekte  
  Die folgenden Schritte beschreiben die Korrekturmaßnahmen, die Sie nach dem bevorstehenden Serviceupgrade im Juni durchführen sollten.  
   
 |Auftrag|Betroffenes Objekt|Korrekturmaßnahme|  
 |-----------|---------------------|-----------------------|  
-|1|**Indizes**|Erstellen Sie jeden durch **sys. dm_db_objects_impacted_on_version_change** identifizierten Index neu, z. b.:`ALTER INDEX ALL ON <table> REBUILD`<br />oder<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Objekt**|Alle Einschränkungen, die durch **sys.dm_db_objects_impacted_on_version_change** gekennzeichnet sind, müssen nach der Neuberechnung der Geometrie- und Geografiedaten in der zugrunde liegenden Tabelle erneut überprüft werden. Führen Sie die erneute Überprüfung für Einschränkungen mithilfe von ALTER TABLE durch. <br />Beispiel: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />oder<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Indizes**|Erstellen Sie jeden durch **sys. dm_db_objects_impacted_on_version_change** identifizierten Index neu, z. b.:  `ALTER INDEX ALL ON <table> REBUILD`<br />oder<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Object**|Alle Einschränkungen, die durch **sys.dm_db_objects_impacted_on_version_change** gekennzeichnet sind, müssen nach der Neuberechnung der Geometrie- und Geografiedaten in der zugrunde liegenden Tabelle erneut überprüft werden. Führen Sie die erneute Überprüfung für Einschränkungen mithilfe von ALTER TABLE durch. <br />Beispiel: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />oder<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

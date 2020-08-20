@@ -1,4 +1,5 @@
 ---
+description: Azure HDInsight Create Cluster-Task
 title: Azure HDInsight Create Cluster-Task | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/28/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3fff08c4259424319621127d3e91762beaa46885
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: f86a35316de80caa1a6db487518f0080f6097a17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496078"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight Create Cluster-Task
 
@@ -37,13 +38,13 @@ Um einen **Azure HDInsight Create Cluster-Task**hinzuzufügen, legen Sie ihn mit
   
 Die folgende Tabelle enthält eine Beschreibung für die Felder in diesem Dialogfeld.  
   
-|Feld|Beschreibung|  
+|Feld|BESCHREIBUNG|  
 |-|-|  
 |AzureResourceManagerConnection|Wählen Sie einen vorhandenen Azure Resource Manager-Verbindungs-Manager aus, oder erstellen Sie einen neuen, mit dem der HDInsight-Cluster erstellt wird.|  
 |AzureStorageConnection|Wählen Sie einen vorhandenen Azure Storage-Verbindungs-Manager aus, oder erstellen Sie einen neuen, der auf ein Azure Storage-Konto verweist, um ihn mit dem HDInsight-Cluster zu verknüpfen.|
 |SubscriptionId|Geben Sie die ID des Abonnements an, in dem der HDInsight-Cluster erstellt wird.|
 |ResourceGroup|Geben Sie die Azure-Ressourcengruppe an, wo der HDInsight-Cluster erstellt wird.|
-|Location|Geben Sie den Speicherort des HDInsight-Clusters an. Der Cluster muss am selben Speicherort erstellt werden, wo sich das Azure-Speicherkonto befindet.|  
+|Standort|Geben Sie den Speicherort des HDInsight-Clusters an. Der Cluster muss am selben Speicherort erstellt werden, wo sich das Azure-Speicherkonto befindet.|  
 |ClusterName|Geben Sie einen Namen für den zu erstellenden HDInsight-Cluster an.|  
 |clusterSize|Geben Sie die Anzahl der Knoten an, die im Cluster erstellt werden sollen.|  
 |BlobContainer|Geben Sie den Namen des standardmäßigen Speichercontainers an, der mit dem HDInsight-Cluster verbunden sein soll.|  

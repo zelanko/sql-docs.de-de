@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Synchronisierung) (SybaseToSQL)
 title: Projekteinstellungen (Synchronisierung) (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b2237d2226644799b7360c53948ae2ecd9445cfa
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 505df97bc8acbc0d3f55ef9c816ed4fb0c9bd569
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497649"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>Projekteinstellungen (Synchronisierung) (SybaseToSQL)
 Die Seite Synchronisierung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, die anpassen, wie SSMA Datenbankobjekte, z. b. Tabellen und gespeicherte Prozeduren, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure lädt.  
@@ -25,7 +26,7 @@ Sie können auf zwei verschiedene Synchronisierungs Seiten zugreifen, die die gl
   
 -   Um Einstellungen für das aktuelle Projekt anzugeben, wählen Sie **im Menü Extras** die Option **Projekteinstellungen**aus, und wählen Sie dann unten im linken Bereich die Option **Synchronisierung** aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Unternommen**  
 Gibt die Anzahl der Versuche an, die SSMA beim Laden von Objekten in durchführen soll [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Objekte, die im aktuellen Versuch nicht in geladen werden, werden wiederholt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis SSMA die maximale Anzahl von versuchen im aktuellen Synchronisierungs Vorgang erreicht.  
   

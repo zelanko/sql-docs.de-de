@@ -1,4 +1,5 @@
 ---
+description: Service Broker-Katalogsichten (Transact-SQL)
 title: Service Broker Katalog Sichten (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2dad704672d5c2eb6aa82db6c4a6cfb2c48fc67
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: a6f083a8f776714f8ac32dcc3394b32d6bce6870
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498464"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Service Broker-Katalogsichten (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ Dieser Abschnitt enthält die folgenden Katalogsichten:
     :::column-end:::
 :::row-end:::
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [System Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [sys. service_broker_endpoints &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-service-broker-endpoints-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: IsValidDetailed (geometry-Datentyp)
 title: IsValidDetailed (geometry DataType) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a1aa6995864aa4407c0c7c71611ddf9da65acfc7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f57155c8724d8cb27aaf06eaf491e11298ad61c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497037"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (geometry-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +65,7 @@ Gibt eine Meldung zurück, die Informationen zur Identifizierung von Problemen m
 |24416|Ungültig, weil die Kante, die an Punkt {1} beginnt, in Kurve {0} entweder eine Linie oder ein degenerierter Bogen mit entgegengesetzten Endpunkten ist.|  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel für ein ungültiges räumliches Objekt wird veranschaulicht, wie sich die **IsValidDetailed()** -Methoden verhalten.  
+ Im folgenden Beispiel für ein ungültiges räumliches Objekt wird veranschaulicht, wie sich die **IsValidDetailed()**-Methoden verhalten.  
   
 ```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  

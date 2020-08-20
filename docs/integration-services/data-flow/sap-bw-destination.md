@@ -1,4 +1,5 @@
 ---
+description: SAP BW-Ziel
 title: SAP BW-Ziel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79523f9e589ff24c909442024430317dd531c2e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1b1398c6884fd154d4f142f10a6d14844a3e7875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495786"
 ---
 # <a name="sap-bw-destination"></a>SAP BW-Ziel
 
@@ -47,7 +48,7 @@ ms.locfileid: "86917852"
   
     1.  Wählen Sie den Typ **Third Party/Staging BAPIs**(Drittanbieter/Staging BAPIs) aus.  
   
-    2.  Wählen Sie für **Communication Type with Target System**(Kommunikationstyp mit Zielsystem) die Option **Non-Unicode (Inactive MDMP Settings)** (Nicht-Unicode (inaktive MDMP-Einstellungen)) aus.  
+    2.  Wählen Sie für **Communication Type with Target System**(Kommunikationstyp mit Zielsystem) die Option **Non-Unicode (Inactive MDMP Settings)**(Nicht-Unicode (inaktive MDMP-Einstellungen)) aus.  
   
     3.  Weisen Sie eine entsprechende Programm-ID zu.  
   
@@ -118,7 +119,7 @@ ms.locfileid: "86917852"
   
 -   [InfoPackage erstellen](../../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Komponenten von Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

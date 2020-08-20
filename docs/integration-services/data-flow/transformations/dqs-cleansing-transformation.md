@@ -1,4 +1,5 @@
 ---
+description: DQS-Bereinigungstransformation
 title: DQS-Bereinigungstransformation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d02041dfedd882502a0440909b52fab86337b22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495700"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS-Bereinigungstransformation
 
@@ -90,7 +91,7 @@ ms.locfileid: "86919374"
  **Data Quality-Wissensdatenbank**  
  Wählen Sie eine vorhandene DQS-Wissensdatenbank für die verbundene Datenquelle aus. Weitere Informationen zur DQS-Wissensdatenbank finden Sie unter [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Verschlüsseln der Verbindung**  
+ **Verbindung verschlüsseln**  
  Gibt an, ob die Verbindung verschlüsselt werden soll, um die Datenübertragung zwischen dem DQS-Server und [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] zu verschlüsseln.  
   
  **Verfügbare Domänen**  
@@ -141,7 +142,7 @@ ms.locfileid: "86919374"
  **Confidence**  
  Gibt an, ob der Vertrauensgrad für korrigierte Daten eingeschlossen wird. Der Vertrauensgrad gibt die DQS-Sicherheitsstufe der Korrektur oder des Vorschlags an. Weitere Informationen zu Vertrauensgraden finden Sie unter [Datenbereinigung](../../../data-quality-services/data-cleansing.md).  
   
- **Reason**  
+ **`Reason`**  
  Gibt an, ob der Grund für die Datenkorrektur eingeschlossen wird.  
   
  **Angefügte Daten**  

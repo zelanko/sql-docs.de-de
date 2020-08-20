@@ -1,4 +1,5 @@
 ---
+description: CDC. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (Transact-SQL)
 title: CDC. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9e801649cceee2aacdda530fa47c53db500bad6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 731effd8310521308f9097323d10fcc57bcb9921
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498211"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>CDC. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +89,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin oder in der festen Datenbankrolle db_owner. Für alle anderen Benutzer ist die SELECT-Berechtigung für alle aufgezeichneten Spalten in der Quelltabelle und, wenn eine Gatingrolle für die Aufzeichnungsinstanz definiert wurde, eine Mitgliedschaft in dieser Datenbankrolle erforderlich. Wenn der Aufrufer nicht über die Berechtigungen zum Anzeigen der Quelldaten verfügt, gibt die Funktion Fehler 208 (Ungültiger Objektname) zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn der angegebene LSN-Bereich nicht in den Zeitraum der Änderungsnachverfolgung der Aufzeichnungsinstanz fällt, gibt die Funktion Fehler 208 (Ungültiger Objektname) zurück.
 
  Änderungen am eindeutigen Bezeichner einer Zeile bewirken, dass fn_cdc_get_net_changes den anfänglichen Update-Befehl mit dem Befehl delete und then INSERT anzeigt.  Dieses Verhalten ist erforderlich, um den Schlüssel vor und nach der Änderung zu überprüfen.

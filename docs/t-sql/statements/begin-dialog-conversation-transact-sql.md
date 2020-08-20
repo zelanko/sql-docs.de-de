@@ -1,4 +1,5 @@
 ---
+description: BEGIN DIALOG CONVERSATION (Transact-SQL)
 title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/26/2017
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 980563b7aa2b8a169f271a40f97f1f49295e7a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496945"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -71,12 +72,12 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  Gibt den Dienst an, der den Dialog initialisiert. Bei dem angegebenen Namen muss es sich um den Namen eines Diensts in der aktuellen Datenbank handeln. Die als Initiatordienst angegebene Warteschlange empfängt Nachrichten, die vom Zieldienst zurückgegeben werden, sowie Nachrichten, die von Service Broker für diese Konversation erstellt wurden.  
   
  TO SERVICE **'** _target_service_name_ **'**  
- Gibt den Zieldienst an, mit dem der Dialog initialisiert werden soll. Der *target_service_name* ist vom Typ **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] führt einen bitweisen Vergleich mit der *target_service_name*-Zeichenfolge aus. Das heißt, dass bei dem Vergleich die Groß- und Kleinschreibung beachtet und die aktuelle Sortierung nicht berücksichtigt wird.  
+ Gibt den Zieldienst an, mit dem der Dialog initialisiert werden soll. Der *target_service_name* ist vom Typ **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] führt einen bitweisen Vergleich mit der *target_service_name*-Zeichenfolge aus. Das heißt, dass bei dem Vergleich die Groß- und Kleinschreibung beachtet und die aktuelle Sortierung nicht berücksichtigt wird.  
   
  *service_broker_guid*  
  Gibt die Datenbank an, auf der sich der Zieldienst befindet. Wenn mehrere Datenbanken eine Instanz des Zieldiensts hosten, können Sie mit einer bestimmten Datenbank kommunizieren, indem Sie *service_broker_guid* angeben.  
   
- Die *service_broker_guid* ist vom Typ **nvarchar(128)** . Führen Sie die folgende Abfrage in der Datenbank aus, um die *service_broker_guid* für eine Datenbank zu ermitteln:  
+ Die *service_broker_guid* ist vom Typ **nvarchar(128)**. Führen Sie die folgende Abfrage in der Datenbank aus, um die *service_broker_guid* für eine Datenbank zu ermitteln:  
   
 ```  
 SELECT service_broker_guid  

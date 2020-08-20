@@ -1,4 +1,5 @@
 ---
+description: Neues InfoObject erstellen
 title: Neues InfoObject erstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a67dd66c18fc5700ee964a2e321bd50fef09092
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cb9336b7999373b1f6af5bb5327a35f77fdbe7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86900426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495884"
 ---
 # <a name="create-new-infoobject"></a>Neues InfoObject erstellen
 
@@ -75,7 +76,7 @@ ms.locfileid: "86900426"
  Geben Sie an, dass das InfoObject Masterdaten in Form von Attributen, Texten oder Hierarchien enthält.  
   
 > [!NOTE]  
->  Wählen Sie diese Option aus, wenn das InfoObject Dimensionsdaten darstellt und Sie die Option **Merkmal** ausgewählt haben.  
+>   Wählen Sie diese Option aus, wenn das InfoObject Dimensionsdaten darstellt und Sie die Option **Merkmal** ausgewählt haben.  
   
  **Kleinbuchstaben zulassen**  
  Lassen Sie Kleinbuchstaben in den InfoObject-Daten zu.  
@@ -133,11 +134,11 @@ ms.locfileid: "86900426"
  **InfoObject-Typ**  
  Zeigt den InfoObject-Typ an. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |CHA|Merkmale|  
 |KYF|Kennzahlen|  
-|UNI|Units|  
+|UNI|Einheiten|  
 |TIM|Zeitmerkmale|  
   
 ### <a name="attributes-options"></a>Optionen für "Attribute"  
@@ -156,7 +157,7 @@ ms.locfileid: "86900426"
  **Remove**  
  Entfernt das ausgewählte InfoObject aus der Liste **Attribute** .  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [InfoCube für Transaktionsdaten erstellen](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [InfoSource erstellen](../../integration-services/data-flow/create-infosource.md)   
  [InfoSource für Transaktionsdaten erstellen](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

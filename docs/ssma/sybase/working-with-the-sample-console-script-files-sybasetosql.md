@@ -1,4 +1,5 @@
 ---
+description: Arbeiten mit den Beispielskriptdateien der Konsole (SybaseToSQL)
 title: Arbeiten mit den Beispiel Konsolen Skriptdateien (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7db44b317ee91044748519b93c7cdc175c96a94d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 072073fae690812ed2a51cb74073eea95552392a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497607"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Arbeiten mit den Beispielskriptdateien der Konsole (SybaseToSQL)
 Einige Beispieldateien wurden zusammen mit dem Produkt für die Benutzer Referenz und-Verwendung bereitgestellt. In diesem Abschnitt wird beschrieben, wie Sie diese Skripts problemlos an die Anforderungen der Endbenutzer anpassen können.  
@@ -81,7 +82,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     **Attribut**  
   
-    -   `source-schema:`Gibt die Quelldatenbank an, die für die Konvertierung erforderlich ist.  
+    -   `source-schema:` Gibt die Quelldatenbank an, die für die Konvertierung erforderlich ist.  
   
     -   `sql-server-schema`: Gibt die Zieldatenbank an, zu der migriert werden soll.  
   
@@ -95,7 +96,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     **Attribut**  
   
-    `object-name`: Geben Sie die Quelldatenbank/den Objektnamen an, der für die Konvertierung erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`  
+    `object-name`: Geben Sie die Quelldatenbank/den Objektnamen an, der für die Konvertierung erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im `object-name`  
   
     **Befehls Name**  
   
@@ -107,7 +108,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     **Attribut**  
   
-    `object-name:`Geben Sie den SQL Server-Datenbank-/Objektnamen an, der erstellt werden soll. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`  
+    `object-name:` Geben Sie den SQL Server-Datenbank-/Objektnamen an, der erstellt werden soll. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im `object-name`  
   
     **Befehls Name**  
   
@@ -119,7 +120,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     **Attribut**  
   
-    `object-name:`Gibt den Namen der Quelldatenbank/-Tabelle an, die für die Migration erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`  
+    `object-name:` Gibt den Namen der Quelldatenbank/-Tabelle an, die für die Migration erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im `object-name`  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Erstellen von Variablen Wert Dateien &#40;sybasedesql&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  

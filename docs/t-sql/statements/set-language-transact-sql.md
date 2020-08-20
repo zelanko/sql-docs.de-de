@@ -1,4 +1,5 @@
 ---
+description: SET LANGUAGE (Transact-SQL)
 title: SET LANGUAGE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/05/2017
@@ -22,12 +23,12 @@ ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e845cf7fcf299185947a07a6249167cad652a21
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9c8a97bd48405e97e660428027bfc16279dc0963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496470"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -44,7 +45,9 @@ ms.locfileid: "87397047"
 SET LANGUAGE { [ N ] 'language' | @language_var }   
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  [**N**] **'** _language_ **'**  |  **@** _language\_var_  
  Der Name der in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) gespeicherten Sprache. Dieses Argument kann in Unicode oder in DBCS, das in Unicode konvertiert wurde, dargestellt sein. Um eine Sprache in Unicode anzugeben, verwenden Sie **N'** _language_ **'** . Wenn die Sprache als Variable angegeben wird, muss die Variable vom Typ **sysname** sein.  
   

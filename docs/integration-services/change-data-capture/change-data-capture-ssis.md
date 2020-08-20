@@ -1,4 +1,5 @@
 ---
+description: Change Data Capture (SSIS)
 title: Change Data Capture (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: caa4c63f44fb1b1a9fd13b0a557cc76dfeec408b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 33752c48b4fbaa49885423c608f8cd05ab383f1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496279"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
 
@@ -65,7 +66,7 @@ ms.locfileid: "86924007"
   
      **Weitere Informationen:** [Vorbereiten zur Abfrage der Änderungsdaten](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
- **Schritt 2: Einrichten der Abfrage für Änderungsdaten**  
+ **Schritt 2: Einrichten der Abfrage von Änderungsdaten**  
  Erstellen Sie die Tabellenwertfunktion, die die Daten abfragt.  
   
  Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um die Abfrage zu entwickeln und zu speichern.  
@@ -97,7 +98,7 @@ ms.locfileid: "86924007"
  Der im vorherigen Diagramm und den Schritten beschriebene Prozess umfasst ein inkrementelles Laden aus einer einzelnen Tabelle. Wenn Sie ein inkrementelles Laden aus mehreren Tabellen ausführen müssen, ist der Gesamtprozess identisch. Der Entwurf des Pakets muss jedoch geändert werden, damit die Verarbeitung von mehreren Tabellen unterstützt wird. Weitere Informationen zum Erstellen eines Pakets, das ein inkrementelles Laden aus mehreren Tabellen ausführt, finden Sie unter [Ausführen eines inkrementellen Ladens von mehreren Tabellen](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md).  
   
 ## <a name="samples-of-change-data-capture-packages"></a>Beispiele für Change Data Capture-Pakete  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt zwei Beispiele bereit, in denen veranschaulicht wird, wie Change Data Capture in Paketen verwendet wird. Weitere Informationen finden Sie in den folgenden Themen:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt zwei Beispiele bereit, in denen veranschaulicht wird, wie Change Data Capture in Paketen verwendet wird. Weitere Informationen finden Sie unter den folgenden Themen:  
   
 -   [Readme_Change Data Capture-Paketbeispiel für angegebenes Intervall](https://go.microsoft.com/fwlink/?LinkId=133507)  
   

@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Laden von Systemobjekten) (OracleToSQL)
 title: Projekteinstellungen (Laden von System Objekten) (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 93e008c9d7518e7e171e7548c7353e4f83ccb8a1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 62e0268d4a7b6e8c009ea2970fd0c0103d18c197
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497729"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>Projekteinstellungen (Laden von Systemobjekten) (OracleToSQL)
 Auf der Seite System Objekte Laden des Dialog Felds **Projekteinstellungen** können Sie angeben, welche Oracle-System Objekte von SSMA konvertiert und in geladen werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

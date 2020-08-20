@@ -1,4 +1,5 @@
 ---
+description: Programmgesteuerte Ausführung und Verwaltung von Paketen
 title: Programmgesteuerte Ausführung und Verwaltung von Paketen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d1b837a2271a74cb577ebd318a815eeb632dd66
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbee736c5f74a2fa4258e6271e5ddce98a7fc626
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495519"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Programmgesteuerte Ausführung und Verwaltung von Paketen
 
@@ -54,7 +55,7 @@ ms.locfileid: "86913286"
  [Laden der Ausgabe eines lokalen Pakets](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
  Beschreibt, wie ein Paket auf dem lokalen Computer ausgeführt und die Ausgabe des Datenflusses unter Verwendung des DataReader-Ziels und des DtsClient-Namespaces in eine Clientanwendung geladen wird.  
   
- [Programmgesteuertes Auflisten verfügbarer Pakete](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
+ [Enumerating Available Packages Programmatically](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
  Beschreibt, wie verfügbare Pakete, die vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst verwaltet werden, ermittelt werden.  
   
  [Programmgesteuerte Verwaltung von Paketen und Ordnern](../../integration-services/run-manage-packages-programmatically/managing-packages-and-folders-programmatically.md)  
@@ -80,7 +81,7 @@ ms.locfileid: "86913286"
  [Programmgesteuertes Erstellen von Paketen](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Erläutert, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete programmgesteuert erstellt, konfiguriert und gespeichert werden können.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
