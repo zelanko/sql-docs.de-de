@@ -1,4 +1,5 @@
 ---
+description: SQLGetFunctions-Funktion
 title: SQLGetFunctions-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15537b28ff2bae8a4fcd3e7be82426eb53aa83a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 396c677c6052176240afaa86e02c5f52ba4739b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460983"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions-Funktion
 **Konformitäts**  
@@ -68,11 +69,11 @@ SQLRETURN SQLGetFunctions(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLGetFunctions** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_DBC und einem *handle* von *connectionHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLGetFunctions** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------|-----|-----------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY010|Funktions Sequenz Fehler|(DM) **SQLGetFunctions** wurde vor **SQLCONNECT**, **sqlbrowseconnetct**oder **SQLDriverConnect**aufgerufen.<br /><br /> (DM) **sqlbrowseconnetct** wurde für *connectionHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor **sqlbrowseconnct** SQL_SUCCESS_WITH_INFO oder SQL_SUCCESS zurückgegeben hat.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für *connectionHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
 |HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
@@ -137,7 +138,7 @@ SQLRETURN SQLGetFunctions(
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   
- [2] **sqlcancelhandle** wird nur dann als unterstützt zurückgegeben, wenn der Treiber sowohl **SQLCancel** als auch **sqlcancelhandle**unterstützt. Wenn **SQLCancel** unterstützt wird, aber **sqlcancelhandle** nicht ist, kann die Anwendung immer noch **sqlcancelhandle** für ein Anweisungs Handle aufzurufen, da Sie **SQLCancel**zugeordnet wird.  
+ [2]   **sqlcancelhandle** wird nur dann als unterstützt zurückgegeben, wenn der Treiber sowohl **SQLCancel** als auch **sqlcancelhandle**unterstützt. Wenn **SQLCancel** unterstützt wird, aber **sqlcancelhandle** nicht ist, kann die Anwendung immer noch **sqlcancelhandle** für ein Anweisungs Handle aufzurufen, da Sie **SQLCancel**zugeordnet wird.  
   
 ## <a name="sql_func_exists-macro"></a>SQL_FUNC_EXISTS-Makro  
  Das SQL_FUNC_EXISTS-Makro (*supportedptr*, *FunctionID*) wird verwendet, um die Unterstützung von ODBC 3 *. x* -Funktionen oder früheren Funktionen zu ermitteln, nachdem **SQLGetFunctions** mit dem *FunctionID* -Argument SQL_API_ODBC3_ALL_FUNCTIONS aufgerufen wurde. Die Anwendung ruft SQL_FUNC_EXISTS auf, wobei das *supportedptr* -Argument auf " *supportedptr* " festgelegt ist, das in *SQLGetFunctions*weitergegeben wurde, und mit dem *FunctionID* -Argument, das für die-Funktion auf die **#define** SQL_FUNC_EXISTS gibt SQL_TRUE zurück, wenn die Funktion unterstützt wird, und SQL_FALSE andernfalls.  
@@ -217,12 +218,12 @@ SQLDisconnect(hdbc);
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Zurückgeben der Einstellung eines Verbindungs Attributs|[SQLGetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Zurückgeben von Informationen zu einem Treiber oder einer Datenquelle|[SQLGetInfo-Funktion](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
 |Zurückgeben der Einstellung eines Anweisungs Attributs|[SQLGetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,4 +1,5 @@
 ---
+description: 64-Bit-ODBC-Informationen
 title: ODBC 64-Bit-Informationen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b9cb8e3fc42d0ad71ac83f1432c165f243f39012
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 791bb54481ae5844061852f5321bdf07fc027b1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461282"
 ---
 # <a name="odbc-64-bit-information"></a>64-Bit-ODBC-Informationen
 Ab Windows Server 2003 haben die Microsoft-Betriebssysteme die 64-Bit-ODBC-Bibliotheken unterstützt. Die ODBC-Header und-Bibliotheken, die zum ersten Mal mit dem MDAC 2,7 SDK ausgeliefert wurden, enthalten Änderungen, damit Programmierer problemlos Code für die neuen 64-Bit-Plattformen schreiben Indem Sie sicherstellen, dass der Code die unten aufgeführten ODBC-Typen verwendet, können Sie den gleichen Quellcode sowohl für 64-Bit-als auch 32-Bit-Plattformen kompilieren, die auf den **_WIN64** -oder **Win32** -Makros basieren.  
@@ -496,5 +497,5 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ROWSET_SIZE  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Einführung in ODBC](../../odbc/reference/introduction-to-odbc.md)

@@ -1,4 +1,5 @@
 ---
+description: SQLGetDiagRec-Funktion
 title: SQLGetDiagRec-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 39069526e254903509ddfef00b7bd4844f3d9e10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f141891292fb80d53ba06e03329b66cbc8b826e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461013"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec-Funktion
 **Konformitäts**  
@@ -81,11 +82,11 @@ SQLRETURN SQLGetDiagRec(
   
  Wenn *MessageText* NULL ist, gibt *Textlängen PTR* weiterhin die Gesamtzahl der Zeichen zurück (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten), die im Puffer zurückgegeben werden können, auf den von *MessageText*verwiesen wird.  
   
- *Pufferlänge*  
+ *BufferLength*  
  Der Länge des **MessageText* -Puffers in Zeichen. Es gibt keine maximale Länge für den Text der Diagnose Nachricht.  
   
  *Textverlänptr*  
- Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen zurückgegeben werden soll (ausgenommen der Anzahl der Zeichen, die für das NULL-Beendigungs Zeichen erforderlich sind), die in * \*MessageText*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als *BufferLength*ist, wird der Text der Diagnose Nachricht in * \*MessageText* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen zurückgegeben werden soll (ausgenommen der Anzahl der Zeichen, die für das NULL-Beendigungs Zeichen erforderlich sind), die in * \* MessageText*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als *BufferLength*ist, wird der Text der Diagnose Nachricht in * \* MessageText* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
 ## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
@@ -131,11 +132,11 @@ SQLRETURN SQLGetDiagRec(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Abrufen eines Felds eines Diagnosedaten Satzes oder eines Felds des Diagnose Headers|[SQLGetDiagField-Funktion](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Header Dateien](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC-Beispielprogramm](../../../odbc/reference/sample-odbc-program.md)

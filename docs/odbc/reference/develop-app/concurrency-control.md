@@ -1,4 +1,5 @@
 ---
+description: Gleichzeitigkeitssteuerung
 title: Gleichzeitigkeitssteuerung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8afba3b3b8c8fee1307473c790186d509b37d982
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e47308cc0224ef73689a3b82d1ab4186fd0c823a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461552"
 ---
 # <a name="concurrency-control"></a>Gleichzeitigkeitssteuerung
 *Parallelität ist die* Fähigkeit von zwei Transaktionen, dieselben Daten gleichzeitig zu verwenden, und mit erhöhter Transaktions Isolation kommt es in der Regel zu reduzierter Parallelität. Dies liegt daran, dass die Transaktions Isolation normalerweise durch das Sperren von Zeilen implementiert wird. wenn mehr Zeilen gesperrt sind, können weniger Transaktionen abgeschlossen werden, ohne mindestens vorübergehend durch eine gesperrte Zeile blockiert zu werden. Obwohl die geringere Parallelität im Allgemeinen als Kompromiss für die höheren Transaktions Isolations Stufen, die für die Beibehaltung der Datenbankintegrität erforderlich sind, akzeptiert wird, kann es in interaktiven Anwendungen mit hoher Lese-/Schreibaktivität, die Cursor verwenden, zu einem Problem werden.  

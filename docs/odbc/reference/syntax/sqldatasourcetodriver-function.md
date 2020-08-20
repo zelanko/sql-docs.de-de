@@ -1,4 +1,5 @@
 ---
+description: SQLDataSourceToDriver-Funktion
 title: Sqldatasourceto Driver-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92df58b76a9a11d0d4ab9821756bff014ecae29a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80a9f74f7711e252b1ee947a5ece7088c1a9aa04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461172"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver-Funktion
 **Sqldatasourceto Driver** supportstranslations für ODBC-Treiber. Diese Funktion wird nicht von ODBC-fähigen Anwendungen aufgerufen. Anwendungen fordern Übersetzungen über **SQLSetConnectAttr**an. Der Treiber, der dem in **SQLSetConnectAttr** angegebenen *connectionHandle* zugeordnet ist, ruft die angegebene DLL auf, um Übersetzungen für alle Daten zu übertragen, die von der Datenquelle an den Treiber fließen. In der ODBC-Initialisierungsdatei kann eine standardmäßige Übersetzungs-DLL angegeben werden.  
@@ -104,7 +105,7 @@ BOOL SQLDataSourceToDriver(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Übersetzen von Daten, die an die Datenquelle gesendet werden|[Sqldriverflidatasource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|  
 |Zurückgeben der Einstellung eines Verbindungs Attributs|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  

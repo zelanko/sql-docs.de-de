@@ -1,4 +1,5 @@
 ---
+description: Arbeiten mit den Beispiel Konsolen Skriptdateien (mysqltoisql)
 title: Arbeiten mit den Beispiel Konsolen Skriptdateien (mysqltoisql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 35041f234a28100c19baa9091e127b35f2a8364d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6c60c48b2c22dfb414710e305986b16d3ee31e17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463289"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Arbeiten mit den Beispiel Konsolen Skriptdateien (mysqltoisql)
 Einige Beispieldateien wurden zusammen mit dem Produkt für die Benutzer Referenz und-Verwendung bereitgestellt. In diesem Abschnitt wird beschrieben, wie Sie diese Skripts problemlos an die Anforderungen der Endbenutzer anpassen können.  
@@ -81,7 +82,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     **Attribut**  
   
-    -   `source-schema:`Gibt die Quelldatenbank an, die für die Konvertierung erforderlich ist.  
+    -   `source-schema:` Gibt die Quelldatenbank an, die für die Konvertierung erforderlich ist.  
   
     -   `sql-server-schema`: Gibt die Zieldatenbank an, zu der migriert werden soll.  
   
@@ -95,7 +96,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     **Attribut**  
   
-    `object-name`: Geben Sie die Quelldatenbank/den Objektnamen an, der für die Konvertierung erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`  
+    `object-name`: Geben Sie die Quelldatenbank/den Objektnamen an, der für die Konvertierung erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im `object-name`  
   
     **Befehls Name**  
   
@@ -107,7 +108,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     **Attribut**  
   
-    `object-name:`Geben Sie den SQL Server-Datenbank-/Objektnamen an, der erstellt werden soll. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`  
+    `object-name:` Geben Sie den SQL Server-Datenbank-/Objektnamen an, der erstellt werden soll. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im `object-name`  
   
     **Befehls Name**  
   
@@ -119,7 +120,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     **Attribut**  
   
-    `object-name:`Gibt den Namen der Quelldatenbank/-Tabelle an, die für die Migration erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`  
+    `object-name:` Gibt den Namen der Quelldatenbank/-Tabelle an, die für die Migration erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im `object-name`  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Erstellen von Variablen Wert Dateien &#40;mysqlto SQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  

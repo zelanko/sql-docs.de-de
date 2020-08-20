@@ -1,4 +1,5 @@
 ---
+description: Auswählen einer Datenquelle oder eines Treibers
 title: Auswählen einer Datenquelle oder eines Treibers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b10aafad95463f56ec0f5a029eac59a02cff003b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 215e249fe354396239118394d4e792ced67bc82d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461602"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Auswählen einer Datenquelle oder eines Treibers
 Die von einer Anwendung verwendete Datenquelle oder der Treiber ist in der Anwendung manchmal hart codiert. Beispielsweise würde eine benutzerdefinierte Anwendung, die von einer missabteilung geschrieben wurde, um Daten aus einer Datenquelle in eine andere zu übertragen, die Namen dieser Datenquellen enthalten. die Anwendung funktioniert einfach nicht mit anderen Datenquellen. Ein weiteres Beispiel ist eine vertikale Anwendung, z. b. eine, die für den Bestell Eintrag verwendet wird. Eine solche Anwendung verwendet immer dieselbe Datenquelle, die über ein vordefiniertes Schema verfügt, das von der Anwendung bekannt ist.  

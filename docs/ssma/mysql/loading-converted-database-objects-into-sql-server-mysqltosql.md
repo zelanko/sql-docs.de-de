@@ -1,4 +1,5 @@
 ---
+description: Laden konvertierter Datenbankobjekte in SQL Server (MySqlToSql)
 title: Laden von konvertierten Datenbankobjekten in SQL Server (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 57a6f527da05c4f62d9055b70193af6ce74275f7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 87960d05db8a12ebd7a8751f46c90a256ce73313
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463394"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>Laden konvertierter Datenbankobjekte in SQL Server (MySqlToSql)
 Nachdem Sie MySQL-Datenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure konvertiert haben, können Sie die resultierenden Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure laden. Sie können entweder das SSMA-Objekt erstellen, oder Sie können Skripts für die Objekte erstellen und die Skripts selbst ausführen. Außerdem können Sie mit SSMA Ziel Metadaten mit dem tatsächlichen Inhalt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank aktualisieren.  

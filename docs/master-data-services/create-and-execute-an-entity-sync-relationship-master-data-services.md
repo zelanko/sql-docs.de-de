@@ -1,4 +1,5 @@
 ---
+description: Erstellen und Verwenden einer Beziehung für die Entitätensynchronisierung (Master Data Services)
 title: Erstellen und Verwenden einer Beziehung für die Entitätensynchronisierung
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1dee8767cc5d8d975ef327073d5767967207eed2
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6e96975fbd7946c53f60af29a91cec938b0ffeb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461793"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Erstellen und Verwenden einer Beziehung für die Entitätensynchronisierung (Master Data Services)
 
@@ -95,7 +96,7 @@ ms.locfileid: "85813037"
 ## <a name="sync-relationship-information"></a>Informationen zur Synchronisierungsbeziehung  
  Für jede erstellte Synchronisierungsbeziehung wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.  
   
-|Spalte|BESCHREIBUNG|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |Status|Der Status der Synchronisierungsbeziehung.<br /><br /> Wenn Sie auf **Speichern** klicken oder eine Synchronisierungs Beziehung ausführen, wird das ![Symbol zum Aktualisieren des Status](../master-data-services/media/mds-statusicon-updating.png "Symbol für Aktualisierungs Status") angezeigt, das angibt, dass die Synchronisierungs Partnerschaft aktualisiert wird.<br /><br /> Wenn beim Erstellen, bearbeiten oder Ausführen einer Synchronisierungs Beziehung Fehler auftreten, wird das Bild ![Symbol für den Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol für Fehlerstatus") angezeigt.<br /><br /> Andernfalls lautet der Status "OK", und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK") wird angezeigt.|  
 |Quellmodell|Der Name des Quellmodells.|  

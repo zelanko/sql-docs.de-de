@@ -1,4 +1,5 @@
 ---
+description: SQLEndTran-Funktion
 title: SQLEndTran-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cce7792e52fce4984f3da41e11d79c34b6b79e53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fea27beb03c19dd9499175678ecfdcb7759a73f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461130"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran-Funktion
 **Konformitäts**  
@@ -65,7 +66,7 @@ SQLRETURN SQLEndTran(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLEndTran** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem entsprechenden *Handlertyp und handle*abgerufen werden. *HandleType* In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLEndTran** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08003|Verbindung nicht geöffnet|(DM) der *Handlertyp* wurde SQL_HANDLE_DBC, und das *handle* befand sich nicht in einem verbundenen Zustand.|  
@@ -75,7 +76,7 @@ SQLRETURN SQLEndTran(
 |25s03|Für Transaktion wird ein Rollback ausgeführt|Der Treiber war nicht in der Lage zu garantieren, dass alle Arbeiten in der globalen Transaktion atomarisch abgeschlossen werden konnten, und für alle Aufgaben in der Transaktion, die im *handle* aktiv war, wurde ein Rollback ausgeführt.|  
 |40001|Serialisierungsfehler|Für die Transaktion wurde aufgrund eines Ressourcen Deadlocks mit einer anderen Transaktion ein Rollback ausgeführt.|  
 |40002|Verletzung der Integritäts Einschränkung|Der *CompletionType* wurde SQL_COMMIT, und die Verpflichtung von Änderungen verursachte eine Verletzung der Integritäts Einschränkung. Folglich wurde für die Transaktion ein Rollback ausgeführt.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*szmessagetext* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* szmessagetext* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für *connectionHandle*aktiviert. Die Funktion wurde aufgerufen, und bevor die Ausführung der [sqlcancelhandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md) abgeschlossen wurde, wurde die Funktion " *connectionHandle*" aufgerufen. Anschließend wurde die Funktion für *connectionHandle*erneut aufgerufen.<br /><br /> Die-Funktion wurde aufgerufen, und vor der Ausführung von **sqlcancelhandle** wurde für *connectionHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für ein Anweisungs Handle aufgerufen, das dem *connectionHandle* zugeordnet ist und beim Aufrufen von **SQLEndTran** noch ausgeführt wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für *connectionHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für ein Anweisungs Handle aufgerufen, das dem *connectionHandle* zugeordnet ist, und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *handle* mit dem auf SQL_HANDLE_DBC festgelegten *andlertyp* aufgerufen und beim Aufrufen dieser Funktion noch ausgeführt.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für eines der Anweisungs Handles aufgerufen, die dem *handle* zugeordnet sind, und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
@@ -146,14 +147,14 @@ SQLRETURN SQLEndTran(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Abbrechen einer Funktion, die asynchron auf einem Verbindungs Handle ausgeführt wird.|[SQLCancelHandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
 |Zurückgeben von Informationen zu einem Treiber oder einer Datenquelle|[SQLGetInfo-Funktion](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
 |Freigeben eines Handles|[SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Freigeben eines Anweisungs Handles|[SQLFreeStmt-Funktion](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Header Dateien](../../../odbc/reference/install/odbc-header-files.md)   
- [Asynchrone Ausführung (Abrufmethode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+ [Asynchrone Ausführung (Abruf Methode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

@@ -1,4 +1,5 @@
 ---
+description: Erste Schritte mit der SSMA-Konsole für Oracle (OracleToSQL)
 title: Getting Started with SSMA for Oracle Console (oracledesql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 57170c17538ccd997c5bc4d2e12ab53914b3727c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a403f515c057349c9717422f99b6de15aede566f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463252"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Erste Schritte mit der SSMA-Konsole für Oracle (OracleToSQL)
 In diesem Abschnitt wird das Verfahren zum Starten und Starten der Oracle-Konsolenanwendung beschrieben. Hier sind auch die Konventionen aufgeführt, die in einem typischen Ausgabefenster der SSMA-Konsole verwendet werden.  

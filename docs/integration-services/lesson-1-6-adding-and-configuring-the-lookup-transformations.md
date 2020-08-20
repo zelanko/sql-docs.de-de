@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 1.6: Hinzufügen und Konfigurieren von Suchtransformationen'
 title: 'Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/19/2019
@@ -9,12 +10,12 @@ ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
-ms.openlocfilehash: f3c7a1f28e32a426b32edc397725a1495e562bdd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ab6f98a868dc504cf13fa770cd0d5ad5ceb1788
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462036"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lektion 1.6: Hinzufügen und Konfigurieren von Suchtransformationen
 
@@ -49,7 +50,7 @@ In beiden Fällen wird von der Suchtransformation der OLE DB-Verbindungs-Manager
   
     1.  Wählen Sie **Vollcache**aus.  
   
-    2.  Wählen Sie im Bereich **Verbindungstyp** **OLE DB-Verbindungs-Manager**aus.  
+    2.  Wählen Sie im Bereich **Verbindungstyp****OLE DB-Verbindungs-Manager**aus.  
   
 6.  Wählen Sie auf der Seite **Verbindung** die folgenden Optionen aus:  
   

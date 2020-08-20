@@ -1,4 +1,5 @@
 ---
+description: Aktualisieren eines 3.5 Treibers auf einen 3.8-Treiber
 title: Aktualisieren eines 3,5-Treibers auf einen 3,8-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dcd01d050e806b733d75c54058945d367a33d6a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac140c92b4042df1b4754d3a56237a6aa4b3afaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461332"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>Aktualisieren eines 3.5 Treibers auf einen 3.8-Treiber
 Dieses Thema enthält Richtlinien und Überlegungen zum Aktualisieren eines ODBC 3,5-Treibers auf einen ODBC 3,8-Treiber.  
@@ -72,7 +73,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
 ##### <a name="asynchronous-execution-notification-method"></a>Asynchrone Ausführung (Benachrichtigungsmethode)  
  ODBC 3,8 unterstützt die Benachrichtigungs Methode für asynchrone Vorgänge, die ab Windows 8 verfügbar sind. Weitere Informationen finden Sie unter [asynchrone Ausführung (Benachrichtigungs Methode)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Entwickeln eines ODBC-Treibers](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Von Microsoft bereitgestellte ODBC-Treiber](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
  [Neuerungen in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

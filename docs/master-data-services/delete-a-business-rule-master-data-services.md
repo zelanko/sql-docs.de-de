@@ -1,4 +1,5 @@
 ---
+description: Löschen einer Geschäftsregel (Master Data Services)
 title: Löschen einer Geschäftsregel
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 475af6465a5e79e6577c60ac88a312fb5d0d4cf9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1a649c1d04d1d52fee2864991bbe051b04814ee6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461760"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Löschen einer Geschäftsregel (Master Data Services)
 

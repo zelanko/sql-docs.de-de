@@ -1,4 +1,5 @@
 ---
+description: Aggregate (MDX)
 title: Aggregat (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1e3f00ffbf662422f162d493a585d3972518431
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461693"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -55,7 +56,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Zuweisungen|Zuweisungen werden entsprechend der Aggregationsfunktion des Measures aggregieren. Ist die Aggregationsfunktion des Measures Distinct Count, werden die Zuweisungen summiert.|  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die Summe des `Measures.[Order Quantity]` -Elements, aggregiert über die ersten acht Monate des Kalender Jahrs 2003, das in der `Date` Dimension enthalten ist, aus dem **Adventure Works** -Cube zurückgegeben.  
+ Im folgenden Beispiel wird die Summe des-Elements `Measures.[Order Quantity]` , aggregiert über die ersten acht Monate des Kalender Jahrs 2003, das in der `Date` Dimension enthalten ist, aus dem **Adventure Works** -Cube zurückgegeben.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -126,7 +127,7 @@ WHERE ([Geography].[State-Province].x,
  [Untergeordnete &#40;MDX-&#41;](../mdx/children-mdx.md)   
  [Hierarchize &#40;MDX-&#41;](../mdx/hierarchize-mdx.md)   
  [Anzahl &#40;fest geleg&#41; &#40;MDX-&#41;](../mdx/count-set-mdx.md)   
- [&#40;MDX-&#41;Filtern](../mdx/filter-mdx.md)   
+ [&#40;MDX-&#41;Filtern ](../mdx/filter-mdx.md)   
  [AddCalculatedMembers &#40;MDX-&#41;](../mdx/addcalculatedmembers-mdx.md)   
  [DrilldownLevel-&#40;MDX-&#41;](../mdx/drilldownlevel-mdx.md)   
  [Eigenschaften &#40;MDX-&#41;](../mdx/properties-mdx.md)   

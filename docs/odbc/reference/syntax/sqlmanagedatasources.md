@@ -1,4 +1,5 @@
 ---
+description: SQLManageDataSources
 title: Sqlmanagedatasources | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b572a861af3479e1543be9fda9598cc7e25d36c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81f4616cb04d5d17cca687843d28efa1027ff65f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460973"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Konformitäts**  
@@ -49,9 +50,9 @@ BOOL SQLManageDataSources(
  **Sqlmanagedatasources** gibt false zurück, wenn *HWND* kein gültiges Fenster Handle ist. Andernfalls wird TRUE zurückgegeben.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlmanagedatasources** false zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlmanagedatasources** false zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pferrorcode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_REQUEST_FAILED|*Anforderung* fehlgeschlagen|Fehler beim **ConfigDSN** -Rückruf.|  
@@ -93,7 +94,7 @@ BOOL SQLManageDataSources(
   
  Ein System-DSN wird im HKEY_LOCAL_MACHINE Eintrag in den Systeminformationen anstelle des HKEY_CURRENT_USER Eintrags registriert. Er ist nicht an einen Benutzer gebunden, der sich mit seinem bestimmten Benutzernamen und Kennwort anmeldet, aber von jedem Benutzer dieses Computers oder durch einen automatischen systemweiten Dienst verwendet werden kann. Der System-DSN ist jedoch an einen Computer gebunden. Die Verwendung von Remote-DSNs zwischen Computern wird nicht unterstützt. System-DSNs werden in den Systeminformationen wie folgt registriert:  
   
- HKEY_LOCAL_MACHINE Software ODBC ODBC. ini  
+ HKEY_LOCAL_MACHINE Software-ODBC-Odbc.ini  
   
 ## <a name="file-dsns"></a>Datei-DSNs  
  Eine Datei Datenquelle hat keinen Datenquellen Namen, wie eine Computer Datenquelle, und ist nicht für einen Benutzer oder Computer registriert. Die Verbindungsinformationen für diese Datenquelle sind in einer DSN-Datei enthalten, die auf einen beliebigen Computer kopiert werden kann. Eine Datei Datenquelle kann Share fähig sein. in diesem Fall befindet sich die DSN-Datei in einem Netzwerk und kann gleichzeitig von mehreren Benutzern im Netzwerk verwendet werden, solange der Benutzer den entsprechenden Treiber installiert hat. Eine Datei Datenquelle kann auch unshare fähig sein. in diesem Fall kann Sie nur auf einem einzelnen Computer verwendet werden.  
@@ -123,6 +124,6 @@ BOOL SQLManageDataSources(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Erstellen von Datenquellen|[Sqlkreatedatasource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|

@@ -1,4 +1,5 @@
 ---
+description: Modellberechtigungen (Master Data Services)
 title: Modellberechtigungen
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 36e2b4cacd6636b2580aff1d8c27ea5a3a444906
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e195c4f2db244fa5cf647c19c0713f24840c3441
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461740"
 ---
 # <a name="model-permissions-master-data-services"></a>Modellberechtigungen (Master Data Services)
 
@@ -33,7 +34,7 @@ ms.locfileid: "85813245"
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten anzeigen.|  
 |**Erstellen**|Der Benutzer kann Elemente erstellen und während der Erstellung Attributwerte zuweisen.|  
-|**Update**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten aktualisieren.|  
+|**Aktualisieren**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten aktualisieren.|  
 |**Löschen**|Der Benutzer kann Elemente löschen.|  
 |**Deny**|Der Zugriff auf das Modell wird vollständig verweigert.|  
 |**Administrator**|Administratorberechtigung für das Modell. Die Administratorberechtigung ist nur auf Modellebene verfügbar.|  

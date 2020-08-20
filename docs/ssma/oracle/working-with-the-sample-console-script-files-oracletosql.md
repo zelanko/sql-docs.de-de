@@ -1,4 +1,5 @@
 ---
+description: Arbeiten mit den Beispielskriptdateien der Konsole (OracleToSQL)
 title: Arbeiten mit den Beispiel Konsolen Skriptdateien (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b5be39914c13b647f9a3f4b70a6371b9c5b40749
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f7b9fa46fcd5b24b5427c4ba7a359ac37565f724
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463182"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Arbeiten mit den Beispielskriptdateien der Konsole (OracleToSQL)
 Einige Beispieldateien wurden zusammen mit dem Produkt für die Benutzer Referenz und-Verwendung bereitgestellt. In diesem Abschnitt wird beschrieben, wie Sie diese Skripts problemlos an die Anforderungen der Endbenutzer anpassen können.  
@@ -82,7 +83,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     **Attribut**  
   
-    -   `source-schema:`Gibt die Quelldatenbank an, die für die Konvertierung erforderlich ist.  
+    -   `source-schema:` Gibt die Quelldatenbank an, die für die Konvertierung erforderlich ist.  
   
     -   `sql-server-schema`: Gibt die Zieldatenbank an, zu der migriert werden soll.  
   
@@ -96,7 +97,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     **Attribut**  
   
-    `object-name`: Geben Sie die Quelldatenbank/den Objektnamen an, der für die Konvertierung erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`  
+    `object-name`: Geben Sie die Quelldatenbank/den Objektnamen an, der für die Konvertierung erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im `object-name`  
   
     **Befehls Name**  
   
@@ -108,7 +109,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     **Attribut**  
   
-    `object-name:`Geben Sie den SQL Server-Datenbank-/Objektnamen an, der erstellt werden soll. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`  
+    `object-name:` Geben Sie den SQL Server-Datenbank-/Objektnamen an, der erstellt werden soll. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im `object-name`  
   
     **Befehls Name**  
   
@@ -120,7 +121,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     **Attribut**  
   
-    `object-name:`Gibt den Namen der Quelldatenbank/-Tabelle an, die für die Migration erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`  
+    `object-name:` Gibt den Namen der Quelldatenbank/-Tabelle an, die für die Migration erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im `object-name`  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Erstellen von Variablen Wert Dateien &#40;oracleto SQL-&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  

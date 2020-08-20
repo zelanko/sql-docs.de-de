@@ -1,4 +1,5 @@
 ---
+description: Blattberechtigungen (Master Data Services)
 title: Blattberechtigungen
 ms.custom: ''
 ms.date: 03/15/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a50723727690307492d3d16cb3671e762dec401f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461750"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Blattberechtigungen (Master Data Services)
 
@@ -41,7 +42,7 @@ ms.locfileid: "85813296"
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Blattelemente und Attribute lesen.|  
 |**Erstellen**|Der Benutzer kann Blattelemente erstellen und während der Erstellung Attributwerte zuweisen.|  
-|**Update**|Der Benutzer kann Blattelemente und Attribute aktualisieren.|  
+|**Aktualisieren**|Der Benutzer kann Blattelemente und Attribute aktualisieren.|  
 |**Löschen**|Der Benutzer kann Blattelemente löschen.|  
 |**Deny**|Der Zugriff auf die Blattelemente wird vollständig verweigert.|  
   
@@ -54,17 +55,17 @@ ms.locfileid: "85813296"
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Attribute lesen.|  
 |**Erstellen**|Der Benutzer kann bei der Erstellung von Elementen Werte zuweisen.|  
-|**Update**|Der Benutzer kann Attribute aktualisieren.|  
+|**Aktualisieren**|Der Benutzer kann Attribute aktualisieren.|  
 |**Löschen**|Keine Auswirkung.|  
 |**Deny**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Der Zugriff auf die Attribute Name und Code kann nicht explizit verweigert werden.|  
   
 ### <a name="example"></a>Beispiel  
  Weisen Sie dem Attribut „Subcategory“ der Entität „Product“ die Berechtigung **Aktualisieren** zu. Verweigern Sie die Berechtigung für alle anderen Attribute.  
   
-|name|Code|Subcategory (Aktualisiert)|  
+|Name|Code|Subcategory (Aktualisiert)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5}Mountain Bikes|  
-|Mountain-100|BK-M201|{5}Mountain Bikes|  
+|Mountain-100|BK-M101|{5} Mountain Bikes|  
+|Mountain-100|BK-M201|{5} Mountain Bikes|  
   
  Sie können im **Explorer**jeden Attributwert in der Spalte „Subcategory“ aktualisieren. Wenn Sie keine Berechtigung für ein Attribut haben, wird das Attribut nicht angezeigt.  
   

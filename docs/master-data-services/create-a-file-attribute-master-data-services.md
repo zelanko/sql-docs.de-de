@@ -1,4 +1,5 @@
 ---
+description: Erstellen eines Dateiattributs (Master Data Services)
 title: Erstellen eines Dateiattributs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 18c64bacdec9e0d8640b5b5884a6dcaf04f99214
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: cc1b9b6cd36d12e39823cb0915e6fe7b5af4d7bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461856"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Erstellen eines Dateiattributs (Master Data Services)
 
@@ -38,12 +39,12 @@ ms.locfileid: "85813106"
 ## <a name="attribute-information"></a>Attributinformationen
  Für jedes erstellte Attribut wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.
 
-|Spalte|BESCHREIBUNG|
+|Column|Beschreibung|
 |------------|-----------------|
 |Status|Der Attributstatus.<br /><br /> Wenn Sie auf Speichern klicken, wird das Bild ![Symbol zum Aktualisieren des Status](../master-data-services/media/mds-statusicon-updating.png "Symbol für Aktualisierungs Status") angezeigt, das angibt, dass das Attribut aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten eines Attributs Fehler auftreten, wird das Bild ![Symbol für den Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol für Fehlerstatus") angezeigt.<br /><br /> Andernfalls lautet der Status "OK", und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK") wird angezeigt.|
-|name|Der Attributname.|
+|Name|Der Attributname.|
 |Anzeigename|Der Anzeigename des Attributs.|
-|BESCHREIBUNG|Die Attributbeschreibung.|
+|Beschreibung|Die Attributbeschreibung.|
 |Pixelbreite anzeigen|Die Breite des Attributs.|
 |Typ und Eigenschaften|Die Typ- und Datentypinformationen des Attributs.|
 |Änderungsnachverfolgung aktivieren|Gibt an, ob das Attribut für die Änderungsnachverfolgung aktiviert ist, und zeigt die Gruppennummer in Klammern.|

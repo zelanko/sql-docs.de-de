@@ -1,4 +1,5 @@
 ---
+description: Startbildschirm des Data Quality-Clients
 title: Startbildschirm des Data Quality-Clients
 ms.date: 02/29/2012
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4b1a25fc4bee5c66838c7e29f7c34dc67a572b79
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aaca3245731102ad667f8507761f57da0adb1437
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462412"
 ---
 # <a name="data-quality-client-home-screen"></a>Startbildschirm des Data Quality-Clients
 
@@ -24,7 +25,7 @@ ms.locfileid: "85899116"
 
   Über diesen Bildschirm können Sie auf die Benutzeroberflächen für die drei wichtigsten [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] -Taskgruppen (DSQ) zugreifen: Wissensdatenbank-Verwaltung, Data Quality-Projekte und Verwaltung.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="knowledge-base-management"></a>Wissensdatenbank-Verwaltung  
  Eine DQS-Wissensdatenbank ist ein Repository mit Metadaten, die von DQS zur Verbesserung der Datenqualität verwendet werden. Diese Metadaten werden von der DQS-Plattform in einem computergestützten Wissensermittlungsprozess und vom Data Steward in einem interaktiven Domänenverwaltungsprozess erstellt.  
@@ -58,7 +59,7 @@ ms.locfileid: "85899116"
  **Aktivitäts Überwachung**  
  Zeigen Sie eine Sicht mit dem Status aller (aktuellen und vergangenen) Aktivitäten an, die sich auf den verbundenen [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]beziehen. Die überwachten Aktivitätstypen umfassen die Wissensverwaltung, ein Data Quality-Projekt und die SSIS-basierte Datenkorrektur.  
   
- **Configuration**  
+ **Konfiguration**  
  Zeigen Sie die Konfigurations Eigenschaften für Verweis Datendienst Konten (sowohl über Azure Marketplace als auch direkt auf Verweis Datendienste), allgemeine Einstellungen (interaktive Bereinigung, Abgleich und Profilerstellung) und Einstellungen für den Protokoll Schweregrad an.  
   
 ## <a name="see-also"></a>Weitere Informationen  

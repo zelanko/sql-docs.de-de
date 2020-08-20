@@ -1,4 +1,5 @@
 ---
+description: SQLCreateDataSource-Funktion
 title: Sqlkreatedatasource-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94dc0d6d6f3b5bc96ae41aecda5b46f119cff85c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb65e0906e7b69666dd04824f9c4d0819837d2b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461212"
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource-Funktion
 **Konformitäts**  
@@ -53,9 +54,9 @@ BOOL SQLCreateDataSource(
  **Sqlkreatedatasource** gibt true zurück, wenn die Datenquelle erstellt wird. Andernfalls wird false zurückgegeben.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLCreateDataSource** "false" zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **SQLCreateDataSource** "false" zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pferrorcode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_HWND|Ungültiges Fenster handle.|Das *HWND* -Argument war ungültig oder NULL.|  
@@ -109,6 +110,6 @@ BOOL SQLCreateDataSource(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Verwalten von Datenquellen|[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|

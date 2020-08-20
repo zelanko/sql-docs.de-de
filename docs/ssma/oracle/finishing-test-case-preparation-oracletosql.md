@@ -1,4 +1,5 @@
 ---
+description: Beenden der Vorbereitung für Testfälle (OracleToSQL)
 title: Fertigstellung der Test Fall Vorbereitung (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0cd80ee10d70b31f06c22e064d199c98cc1820b3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a0498953c28a90498aa3e15439840180efdd25f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463225"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Beenden der Vorbereitung für Testfälle (OracleToSQL)
 Auf der letzten Seite des Assistenten werden die Test Fallbeschreibung und Informationen zu den am Test beteiligten Objekten angezeigt. Außerdem können Sie auf dieser Seite die Test Ausführungs Optionen festlegen.  

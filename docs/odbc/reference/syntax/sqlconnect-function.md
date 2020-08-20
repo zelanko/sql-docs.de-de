@@ -1,4 +1,5 @@
 ---
+description: SQLConnect-Funktion
 title: SQLConnect-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab0a31845efeb484c554a9c9cf1afeaeab1a8bea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 714bc6f69a72609ee266effff71f1898d62ec7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461202"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect-Funktion
 **Konformitäts**  
@@ -57,7 +58,7 @@ SQLRETURN SQLConnect(
  *NameLength1*  
  Der Länge von **Servername* in Zeichen.  
   
- *User*  
+ *UserName*  
  Der Benutzer-ID.  
   
  *NameLength2*  
@@ -75,7 +76,7 @@ SQLRETURN SQLConnect(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLCONNECT** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert abgerufen werden, indem **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_DBC und einem *handle* von *connectionHandle*aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLCONNECT** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01s02 entsprechen|Optionswert geändert|Der Treiber hat den angegebenen Wert des *ValuePtr* -Arguments in **SQLSetConnectAttr** nicht unterstützt und ersetzt einen ähnlichen Wert. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -84,7 +85,7 @@ SQLRETURN SQLConnect(
 |08004|Der Server hat die Verbindung abgelehnt.|Die Datenquelle hat die Einrichtung der Verbindung aus Implementierungs Gründen abgelehnt.|  
 |08S01|Kommunikations Verbindungsfehler|Der Kommunikationslink zwischen dem Treiber und der Datenquelle, mit dem der Treiber eine Verbindung herstellen wollte, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
 |28000|Ungültige Autorisierungs Spezifikation|Der für das Argument *username* angegebene Wert oder der für die Argument *Authentifizierung* angegebene Wert verletzt die von der Datenquelle definierten Einschränkungen.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|(DM) der Treiber-Manager konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für *connectionHandle*aktiviert. Die **SQLCONNECT** -Funktion wurde aufgerufen, und bevor die Ausführung abgeschlossen wurde, wurde die [sqlcancelhandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md) für *connectionHandle*aufgerufen, und anschließend wurde die **SQLCONNECT** -Funktion für *connectionHandle*erneut aufgerufen.<br /><br /> Oder die **SQLCONNECT** -Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **sqlcancelhandle** für *connectionHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für *connectionHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.|  
@@ -100,7 +101,7 @@ SQLRETURN SQLConnect(
 |IM005|Fehler beim Treiber "sqlzugewiesene CHandle" auf SQL_HANDLE_DBC|(DM) bei der **SQLCONNECT**-Funktion hat der Treiber-Manager die **sqlzuweisung** -Funktion des Treibers mit dem *Typ* "SQL_HANDLE_DBC" aufgerufen, und der Treiber hat einen Fehler zurückgegeben.|  
 |IM006|Fehler bei ' SQLSetConnectAttr ' des Treibers.|Während der **SQLCONNECT**-Funktion hat der Treiber-Manager die **SQLSetConnectAttr** -Funktion des Treibers aufgerufen, und der Treiber hat einen Fehler zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |IM009|Verbindung mit Übersetzungs-DLL kann nicht hergestellt werden.|Der Treiber konnte keine Verbindung mit der Übersetzungs-DLL herstellen, die für die Datenquelle angegeben wurde.|  
-|IM010|Der Datenquellen Name ist zu lang.|(DM) * \*Servername* ist länger als SQL_MAX_DSN_LENGTH Zeichen.|  
+|IM010|Der Datenquellen Name ist zu lang.|(DM) * \* Servername* ist länger als SQL_MAX_DSN_LENGTH Zeichen.|  
 |IM014|Der angegebene DSN enthält einen Architektur Konflikt zwischen dem Treiber und der Anwendung.|(DM) 32-Bit-Anwendung verwendet einen DSN, der eine Verbindung mit einem 64-Bit-Treiber herstellt. oder umgekehrt.|  
 |IM015|Fehler beim Treiber von SQLConnect auf SQL_HANDLE_DBC_INFO_HANDLE|Wenn ein Treiber SQL_ERROR zurückgibt, wird der Treiber-Manager SQL_ERROR an die Anwendung zurückgegeben, und die Verbindung wird nicht hergestellt.<br /><br /> Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN finden Sie unter [entwickeln von Verbindungs Pool Informationen in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|Der Abruf ist im asynchronen Benachrichtigungs Modus deaktiviert.|Wenn das Benachrichtigungs Modell verwendet wird, ist das Abrufen deaktiviert.|  
@@ -247,15 +248,15 @@ int main() {
   
 ### <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Zuordnen eines Handles|[SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Ermitteln und Auflisten von Werten, die zum Herstellen einer Verbindung mit einer Datenquelle erforderlich sind|[SQLBrowseConnect-Funktion](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |Trennen der Verbindung mit einer Datenquelle|[SQLDisconnect-Funktion](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|Herstellen einer Verbindung mit einer Datenquelle über eine Verbindungs Zeichenfolge oder ein Dialogfeld|[SQLDriveConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Herstellen einer Verbindung mit einer Datenquelle über eine Verbindungs Zeichenfolge oder ein Dialogfeld|[SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Zurückgeben der Einstellung eines Verbindungs Attributs|[SQLGetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Festlegen eines Verbindungs Attributs|[SQLSetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,4 +1,5 @@
 ---
+description: Erstellen eines Indexes (Master Data Services)
 title: Erstellen eines Indexes
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: da814796cb4f03008857b20d6f8f7d00b70a8b4a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 48d78cffb116996848035e3675e707994226f080
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461823"
 ---
 # <a name="create-an-index-master-data-services"></a>Erstellen eines Indexes (Master Data Services)
 
@@ -53,7 +54,7 @@ ms.locfileid: "85813078"
 |Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |Status|Der Indexstatus.<br /><br /> Wenn Sie auf **Speichern**klicken, wird das Bild ![Symbol zum Aktualisieren des Status](../master-data-services/media/mds-statusicon-updating.png "Symbol für Aktualisierungs Status") angezeigt, das angibt, dass der Index aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten eines Indexes Fehler auftreten, wird das Bild ![Symbol für den Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol für Fehlerstatus") angezeigt.<br /><br /> Andernfalls lautet der Status OK, und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK") wird angezeigt.|  
-|name|Der Indexname.|  
+|Name|Der Indexname.|  
 |Ist eindeutig|Gibt an, ob der Index eindeutig ist.|  
 |On Attributes|Zeigt die Anzeigenamen der Attribute, auf deren Basis der Index definiert ist.|  
   

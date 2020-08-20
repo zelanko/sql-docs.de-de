@@ -1,4 +1,5 @@
 ---
+description: Manage DQS Databases
 title: Manage DQS Databases
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b9f779ded8b13c209e3c490c2a7c0cdbef71e779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2384aab12163f54aa458c857c5b006861572f3fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462134"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
 
@@ -44,7 +45,7 @@ ms.locfileid: "85898115"
 >  -   Die Protokollkürzung im einfachen Wiederherstellungsmodell kann sich verzögern, wenn die Protokolleinträge über eine längere Zeit aktiv bleiben (z. B. bei einer langen und zeitintensiven Transaktion). Dies kann dann dazu führen, dass das Transaktionsprotokoll schnell an Größe zunimmt. Außerdem wird die Größe der physischen Protokolldatei (LDF-Datei) bei der Protokollkürzung nicht verringert. Um die Größe einer physischen Protokolldatei zu verringern, müssen Sie die Protokolldatei verkleinern. Informationen zum Beheben von Problemen bei Transaktionsprotokollen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) oder im Microsoft Support-Artikel unter [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   Sie müssen regelmäßig eine vollständige oder differenzielle Sicherung der DQS-Datenbanken ausführen und das Transaktionsprotokoll sichern, um eine Zeitpunktwiederherstellung der Daten auszuführen. Weitere Informationen finden Sie unter [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) und [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
-##  <a name="detachattach-the-dqs-databases"></a><a name="DetachAttach"></a>Trennen/Anfügen der DQS-Datenbanken  
+##  <a name="detachattach-the-dqs-databases"></a><a name="DetachAttach"></a> Trennen/Anfügen der DQS-Datenbanken  
  Sie können die Daten- und Transaktionsprotokolldateien der DQS-Datenbanken trennen und die Datenbanken dann wieder an dieselbe oder eine andere Instanz von SQL Server anfügen, wenn Sie die DQS-Datenbanken in eine andere Instanz von SQL Server auf demselben Computer ändern oder die Datenbank verschieben möchten.  
   
  Ausführliche Informationen zu den Aspekten, die berücksichtigt werden sollten, bevor oder während Datenbanken in SQL Server getrennt und angefügt werden, finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  

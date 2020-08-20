@@ -1,4 +1,5 @@
 ---
+description: Explizit zugewiesene Deskriptoren
 title: Explizit zugewiesene Deskriptoren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f590251d-56a6-4d58-a405-9e85e68fbc47
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9950bc23a1e75606316039e6c2d66f3dba59940
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7215d17a7156419f08bbd73528c468d7b6355b94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461482"
 ---
 # <a name="explicitly-allocated-descriptors"></a>Explizit zugewiesene Deskriptoren
 Eine Anwendung kann einen Anwendungs Deskriptor für eine Verbindung jederzeit explizit zuordnen, wenn Sie mit der Datenbank verbunden ist. Durch die Angabe dieses Deskriptorhandles als Attribut eines Anweisungs Handles mithilfe von **SQLSetStmtAttr**weist die Anwendung den Treiber an, diesen Deskriptor anstelle der entsprechenden implizit zugeordneten Anwendungs Deskriptoren zu verwenden. Die Anwendung kann keine alternativen Implementierungs Deskriptoren angeben.  

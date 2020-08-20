@@ -1,4 +1,5 @@
 ---
+description: Zuordnen von Ersatzfunktionen für die Abwärtskompatibilität von Anwendungen
 title: Zuordnung von Ersetzungs Funktionen für die Kompatibilität von apps (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b18669fe9b6edbd39859166e382ad18d1b04a99a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7cba29b0dda2b0d4533444fd3fa8b83eaaeae7a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461412"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Zuordnen von Ersatzfunktionen für die Abwärtskompatibilität von Anwendungen
 Eine ODBC *3. x* -Anwendung, die den ODBC *3. x* -Treiber-Manager verwendet, funktioniert mit einem ODBC *2. x* -Treiber, solange keine neuen Features verwendet werden. Duplizierte Funktionen und Verhaltensänderungen wirken sich jedoch darauf aus, wie die ODBC *3. x* -Anwendung auf einem ODBC *2. x* -Treiber funktioniert. Bei der Arbeit mit einem ODBC *2. x* -Treiber ordnet der Treiber-Manager die folgenden ODBC *3. x* -Funktionen, die eine oder mehrere ODBC *2. x* -Funktionen ersetzt haben, in die entsprechenden ODBC *2. x* -Funktionen zu.  

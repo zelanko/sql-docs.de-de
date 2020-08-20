@@ -1,4 +1,5 @@
 ---
+description: Abrufen von Ausgabeparametern mithilfe von SQLGetData
 title: Abrufen von Ausgabeparametern mit SQLGetData | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c96a3f9fc81d081ce16fe8e75746aafe8962fd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a31cb6baa015e2a90977d0112e770ce66fa8e62f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461382"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Abrufen von Ausgabeparametern mithilfe von SQLGetData
 Vor ODBC 3,8 konnte eine Anwendung nur die Ausgabeparameter einer Abfrage mit einem gebundenen Ausgabepuffer abrufen. Es ist jedoch schwierig, einen sehr großen Puffer zuzuordnen, wenn die Größe des Parameter Werts sehr groß ist (z. b. ein großes Bild). Mit ODBC 3,8 wird eine neue Methode eingeführt, um Ausgabeparameter in Teilen abzurufen. Eine Anwendung kann nun **SQLGetData** mit einem kleinen Puffer mehrmals aufrufen, um einen großen Parameterwert abzurufen. Dies ähnelt dem Abrufen großer Spaltendaten.  
@@ -37,7 +38,7 @@ Vor ODBC 3,8 konnte eine Anwendung nur die Ausgabeparameter einer Abfrage mit ei
   
 3.  Aufrufen von **SQLParamData** zum Abrufen des Parameters, der zum Abrufen verfügbar ist. **SQLParamData** gibt SQL_PARAM_DATA_AVAILABLE mit dem Token des ersten verfügbaren Parameters zurück, der in **SQLBindParameter** (Schritt 1) festgelegt ist. Das Token wird im Puffer zurückgegeben, auf den " *ValuePtrPtr* " verweist.  
   
-4.  Rufen Sie **SQLGetData** mit dem Argument *Col*_or\_*Param_Num* auf die Ordnungszahl des Parameters festzulegen, um die Daten des ersten verfügbaren Parameters abzurufen. Gibt **SQLGetData** SQL_SUCCESS_WITH_INFO und SQLSTATE 01004 (Daten abgeschnitten) zurück, und der Typ ist eine Variable Länge sowohl auf dem Client als auch auf dem Server, gibt es weitere Daten, die aus dem ersten verfügbaren Parameter abgerufen werden müssen. Sie können **SQLGetData** weiterhin aufrufen, bis SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO mit einem anderen **SQLSTATE**-Wert zurückgegeben wird.  
+4.  Rufen Sie **SQLGetData** mit dem Argument *Col*_or \_ *Param_Num* auf die Ordnungszahl des Parameters festzulegen, um die Daten des ersten verfügbaren Parameters abzurufen. Gibt **SQLGetData** SQL_SUCCESS_WITH_INFO und SQLSTATE 01004 (Daten abgeschnitten) zurück, und der Typ ist eine Variable Länge sowohl auf dem Client als auch auf dem Server, gibt es weitere Daten, die aus dem ersten verfügbaren Parameter abgerufen werden müssen. Sie können **SQLGetData** weiterhin aufrufen, bis SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO mit einem anderen **SQLSTATE**-Wert zurückgegeben wird.  
   
 5.  Wiederholen Sie Schritt 3 und Schritt 4, um den aktuellen Parameter abzurufen.  
   
@@ -75,13 +76,13 @@ Vor ODBC 3,8 konnte eine Anwendung nur die Ausgabeparameter einer Abfrage mit ei
   
  Nachdem **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** SQL_PARAM_DATA_AVAILABLE zurückgegeben hat, führt dies zu einem Funktions Sequenz Fehler, wenn eine Anwendung eine Funktion aufruft, die nicht in der folgenden Liste enthalten ist:  
   
--   **Sqlzugechandle** / **sqlfreichandlestd**  
+-   **Sqlzuweisung**  /  **Sqlzuweisung**  
   
--   **SQLDataSources** / **SQLDrivers**  
+-   **SQLDataSources**  /  **SQLDrivers**  
   
--   **SQLGetInfo** / **SQLGetFunctions**  
+-   **SQLGetInfo**  /  **SQLGetFunctions**  
   
--   **SQLGetConnectAttr** / **SQLGetEnvAttr** / **SQLGetDescField** / **SQLGetDescRec**  
+-   **SQLGetConnectAttr**  /  **SQLGetEnvAttr**  /  **SQLGetDescField**  /  **Sqlgetdebug**  
   
 -   **SQLNumParams**  
   
@@ -93,7 +94,7 @@ Vor ODBC 3,8 konnte eine Anwendung nur die Ausgabeparameter einer Abfrage mit ei
   
 -   **SQLMoreResults**  
   
--   **SQLGetDiagField** / **SQLGetDiagRec**  
+-   **SQLGetDiagField**  /  **SQLGetDiagRec**  
   
 -   **SQLCancel**  
   
@@ -268,5 +269,5 @@ BOOL displaySimilarPicture(BYTE* image, ULONG lengthOfImage, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Anweisungsparameter](../../../odbc/reference/develop-app/statement-parameters.md)

@@ -1,4 +1,5 @@
 ---
+description: Erstellen eines domänenbasierten Attributs (Master Data Services)
 title: Erstellen eines domänenbasierten Attributs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7446ea090bb0776b2a55e7be10e9c35bc566c8b1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: daea6bffcefaab4866a27418d48eb2963482a5e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461855"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Erstellen eines domänenbasierten Attributs (Master Data Services)
 
@@ -41,12 +42,12 @@ ms.locfileid: "85813121"
 ## <a name="attribute-information"></a>Attributinformationen
  Für jedes erstellte Attribut wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.
 
-|Spalte|BESCHREIBUNG|
+|Column|Beschreibung|
 |------------|-----------------|
 |Status|Der Attributstatus.<br /><br /> Wenn Sie auf Speichern klicken, wird das Bild ![Symbol zum Aktualisieren des Status](../master-data-services/media/mds-statusicon-updating.png "Symbol für Aktualisierungs Status") angezeigt, das angibt, dass das Attribut aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten eines Attributs Fehler auftreten, wird das Bild ![Symbol für den Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol für Fehlerstatus") angezeigt.<br /><br /> Andernfalls lautet der Status "OK", und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK") wird angezeigt.|
-|name|Der Attributname.|
+|Name|Der Attributname.|
 |Anzeigename|Der Anzeigename des Attributs.|
-|BESCHREIBUNG|Die Attributbeschreibung.|
+|Beschreibung|Die Attributbeschreibung.|
 |Pixelbreite anzeigen|Die Breite des Attributs.|
 |Typ und Eigenschaften|Die Typ- und Datentypinformationen des Attributs.|
 |Änderungsnachverfolgung aktivieren|Gibt an, ob das Attribut für die Änderungsnachverfolgung aktiviert ist, und zeigt die Gruppennummer in Klammern.|

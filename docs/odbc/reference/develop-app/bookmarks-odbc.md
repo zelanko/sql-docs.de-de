@@ -1,4 +1,5 @@
 ---
+description: Textmarken (ODBC)
 title: Lesezeichen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8273c82b918024417e613ea44a2d26bafaf7d76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f162fc317f2651549a1a2e80af03c9942dc64bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461612"
 ---
 # <a name="bookmarks-odbc"></a>Textmarken (ODBC)
 Ein Lesezeichen ist ein Wert, der verwendet wird, um eine Zeile mit Daten zu identifizieren. Die Bedeutung des Lesezeichenwerts ist nur dem Treiber oder der Datenquelle bekannt. Der Wert kann so einfach wie eine Zeilennummer oder so komplex wie eine Datenträgeradresse sein. Lesezeichen in ODBC unterscheiden sich etwas von Lesezeichen in echten Büchern. In einem echten Buch platziert der Reader ein Lesezeichen auf einer bestimmten Seite und sucht dann nach diesem Lesezeichen, um zur Seite zurückzukehren. In ODBC fordert die Anwendung ein Lesezeichen für bestimmte Zeilen an, speichert es und gibt es an den Cursor für die Rückgabe an die Zeile zurück. Daher ähneln Lesezeichen in ODBC den Lesern, die eine Seitenzahl schreiben, Sie zu speichern und die Seite dann erneut zu suchen.  

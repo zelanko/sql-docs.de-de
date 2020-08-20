@@ -1,4 +1,5 @@
 ---
+description: Datenbank-E-Mail-Profil und -Konto erstellen (Dialogfeld)
 title: Datenbank-E-Mail-Profil und -Konto erstellen (Dialogfeld)
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b1bc67db4ebfe6d72b466562e7075fb93489ba29
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d6c9b1c9b455b7e192c5c4c4ec921b8b9cdebcba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461800"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Datenbank-E-Mail-Profil und -Konto erstellen (Dialogfeld)
 
@@ -31,14 +32,14 @@ ms.locfileid: "85812422"
 > [!NOTE]  
 >  In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] können Sie weder vorhandene Datenbank-E-Mail-Profile und -Konten aktualisieren noch mehrere Konten für ein Profil konfigurieren. Verwenden Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] - oder Transact-SQL-Skripts, um erweiterte Aufgaben mit Datenbank-E-Mail auszuführen. Weitere Informationen finden Sie im Abschnitt [Database Mail Configuration Objects](../relational-databases/database-mail/database-mail-configuration-objects.md) in der SQL Server-Onlinedokumentation.  
   
-|Name des Steuerelements|BESCHREIBUNG|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |**Profilname**|Geben Sie einen Namen für das neue Datenbank-E-Mail-Profil ein. Dieser Name muss in den für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank konfigurierten Datenbank-E-Mail-Profilen eindeutig sein.<br /><br /> Nachdem Sie dieses Profil erstellt haben, ist es verfügbar und auf der Seite **Datenbank** von [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]ausgewählt.|  
 |**Kontoname**|Geben Sie einen Namen für das neue Datenbank-E-Mail-Konto ein, das diesem Profil zugewiesen werden soll. Dieser Name muss in den für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank konfigurierten Datenbank-E-Mail-Konten eindeutig sein. Dieses Konto entspricht weder einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konto noch einem Windows-Benutzerkonto.|  
   
 ## <a name="outgoing-smtp-mail-server"></a>Postausgangsserver (SMTP)  
   
-|Name des Steuerelements|BESCHREIBUNG|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |**E-Mail-Adresse**|Geben Sie den Namen der E-Mail-Adresse für das Konto ein. Dies ist die e-Mail-Adresse, von der aus e-Mail gesendet wird. Sie muss im Format *email_name* @ *domain_name*sein. Ein Beispiel für eine E-Mail-Adresse ist sales@contoso.com.|  
 |**Anzeigename**|Optionale Einstellung. Geben Sie den Namen ein, der in den von diesem Konto aus versendeten E-Mails angezeigt wird. Ein Beispiel für den Anzeigenamen ist Contoso Sales Group.|  
@@ -50,7 +51,7 @@ ms.locfileid: "85812422"
 ## <a name="smtp-authentication"></a>SMTP-Authentifizierung  
  Datenbank-E-Mail kann mit den Anmeldeinformationen von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], mit von Ihnen angegebenen anderen Anmeldeinformationen oder anonym gesendet werden. Wenn der E-Mail-Server eine Authentifizierung erfordert, empfiehlt es sich, ein bestimmtes Benutzerkonto für Datenbank-E-Mail zu erstellen. Dieses Benutzerkonto sollte über minimale Berechtigungen verfügen und für keinen anderen Zweck verwendet werden.  
   
-|Name des Steuerelements|BESCHREIBUNG|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |**Windows-Authentifizierung mithilfe der Anmeldeinformationen des Datenbank-Engine-Diensts**|Geben Sie an, dass Datenbank-E-Mail die Anmelde Informationen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Windows-Dienst Kontos für die Authentifizierung auf dem SMTP-Server verwenden soll.|  
 |**Standardauthentifizierung**|Geben Sie an, dass für Datenbank-E-Mail ein bestimmter Benutzername und ein bestimmtes Kennwort verwendet werden sollen, damit sie auf dem SMTP-Server authentifiziert werden kann. Diese Informationen werden nur zur Authentifizierung mit dem E-Mail-Server verwendet, das Konto muss keinem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Benutzer bzw. keinem Benutzer auf dem Computer entsprechen, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ausgeführt wird.|  

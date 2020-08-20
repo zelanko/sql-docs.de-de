@@ -1,4 +1,5 @@
 ---
+description: Erstellen einer expliziten Hierarchie (Master Data Services)
 title: Erstellen einer expliziten Hierarchie
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 13eab8e856ecb690cf0aa9badb77c8c91fc790ce
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8512e53686d747fedb8ac5158a388e48b38469e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461812"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Erstellen einer expliziten Hierarchie (Master Data Services)
 
@@ -58,12 +59,12 @@ ms.locfileid: "85813060"
 ## <a name="grid-columns"></a>Rasterspalten  
  Für jede erstellte explizite Hierarchie wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. Die Spalten werden im Folgenden beschrieben.  
   
-|name|BESCHREIBUNG|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |Status|Der Status der Entität. Wenn Sie auf **Speichern** klicken, wird das folgende Bild angezeigt, das angibt, dass die Entität aktualisiert wird.<br /><br /> ![Symbol für Aktualisierungs Status](../master-data-services/media/mds-statusicon-updating.png "Symbol für Aktualisierungs Status")<br /><br /> Wenn beim Erstellen oder Bearbeiten einer Entität Fehler auftreten, wird das folgende Bild angezeigt.<br /><br /> ![Symbol für Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol für Fehlerstatus")<br /><br /> Falls der Status „OK“ lautet, wird das folgende Bild angezeigt.<br /><br /> ![Symbol für Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK")|  
-|name|Der explizite Name der Hierarchie.|  
+|Name|Der explizite Name der Hierarchie.|  
 |Ist obligatorisch|Gibt an, ob die explizite Hierarchie erforderlich ist.|  
-|Created By|Der Benutzername des Benutzers, der die explizite Hierarchie erstellt hat.|  
+|Erstellt von|Der Benutzername des Benutzers, der die explizite Hierarchie erstellt hat.|  
 |Erstellt am|Das Datum und die Uhrzeit der Erstellung der expliziten Hierarchie.|  
 |Aktualisiert von|Der Benutzername des Benutzers, der die explizite Hierarchie zuletzt aktualisiert hat.|  
 |Aktualisiert am|Das Datum und die Uhrzeit der letzten Aktualisierung der expliziten Hierarchie.|  

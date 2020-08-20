@@ -1,4 +1,5 @@
 ---
+description: Erstellen eines Profils für Datenbank-E-Mail
 title: Erstellen eines Profils für Datenbank-E-Mail | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2016
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 466fa0d08af2fa91aefa4d206037080a5aa8f0b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3ee012fe4bcd7fa1cd98c51f537035fc6148938
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461147"
 ---
 # <a name="create-a-database-mail-profile"></a>Erstellen eines Profils für Datenbank-E-Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Verwenden Sie den **Assistenten zum Konfigurieren von Datenbank-E-Mail** oder [!INCLUDE[tsql](../../includes/tsql-md.md)] , um öffentliche und private Datenbank-E-Mail-Profile zu erstellen. Weitere Informationen über E-Mail-Profile finden Sie unter [Profile für Datenbank-E-Mail](database-mail-configuration-objects.md).
+   Verwenden Sie den **Assistenten zum Konfigurieren von Datenbank-E-Mail** oder [!INCLUDE[tsql](../../includes/tsql-md.md)], um öffentliche und private Datenbank-E-Mail-Profile zu erstellen. Weitere Informationen über E-Mail-Profile finden Sie unter [Profile für Datenbank-E-Mail](database-mail-configuration-objects.md).
   
--   **Vorbereitungen:** [Anforderungen](#Prerequisites), [Sicherheit](#Security)  
+-   **Vorbereitungen:** [Voraussetzungen](#Prerequisites), [Sicherheit](#Security)  
   
--   **So erstellen Sie ein privates Profil für Datenbank-E-Mails:**  [Assistent zum Konfigurieren von Datenbank-E-Mails](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **So erstellen Sie private Profile für Datenbank-E-Mail mit:**  [Assistenten zum Konfigurieren von Datenbank-E-Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **So erstellen Sie ein öffentliches Profil für Datenbank-E-Mails:**  [Assistent zum Konfigurieren von Datenbank-E-Mails](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **So erstellen Sie öffentliche Profile für Datenbank-E-Mail mit:**  [Assistenten zum Konfigurieren von Datenbank-E-Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   

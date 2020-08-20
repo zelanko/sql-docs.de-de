@@ -1,4 +1,5 @@
 ---
+description: Rechtliche Hinweise (MySqlToSql)
 title: Rechtliche Hinweise (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: aaf9660b77e943e2350c2dc32c73f013ae68dde8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 30ead9bd1d01b26d6453672940a55dd09ad36577
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463368"
 ---
 # <a name="legal-notice-mysqltosql"></a>Rechtliche Hinweise (MySqlToSql)
 Diese Dokumentation, einschließlich der darin enthaltenen Beispielanwendungen, wird nur zu Informationszwecken zur Verfügung gestellt. Es werden keine Gewährleistungen übernommen, weder ausdrücklich noch konkludent. Die in dieser Dokumentation enthaltenen Angaben und Daten, einschließlich URLs und anderen Verweisen auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Das vollständige Risiko der Nutzung oder der Ergebnisse der Nutzung dieser Dokumentation liegt bei dem Benutzer.  

@@ -1,4 +1,5 @@
 ---
+description: 'Schritt 3: Erstellen und Ausführen einer SQL­Anweisung'
 title: 'Schritt 3: Erstellen und Ausführen einer SQL-Anweisung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8322cf5e7b4a91bfc5f5f0204cfb25fa4bdad92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf99649ca84ab557457a1fb067e06188552b6aad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461352"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Schritt 3: Erstellen und Ausführen einer SQL­Anweisung
 Der dritte Schritt besteht darin, eine SQL-Anweisung zu erstellen und auszuführen, wie in der folgenden Abbildung dargestellt. Die Methoden, die zum Ausführen dieses Schritts verwendet werden, sind wahrscheinlich sehr unterschiedlich. Die Anwendung kann den Benutzer auffordern, eine SQL-Anweisung einzugeben, eine SQL-Anweisung auf der Grundlage von Benutzereingaben zu erstellen oder eine hart codierte SQL-Anweisung zu verwenden. Weitere Informationen finden Sie unter [Erstellen von SQL-Anweisungen](../../../odbc/reference/develop-app/constructing-sql-statements.md).  

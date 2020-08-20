@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Migration) (OracleToSQL)
 title: Projekteinstellungen (Migration) (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: fcd6b988-633b-4b2b-9f36-6368b5e86b60
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b2e6e8b0f74194383afd3adc26a0f5b9c7d13007
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 02a6df1dd535b6f2549b71680735b070d4f86645
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463237"
 ---
 # <a name="project-settings-migration-oracletosql"></a>Projekteinstellungen (Migration) (OracleToSQL)
 Die Seite Migration des Dialog Felds **Projekteinstellungen** enthält Einstellungen, die anpassen, wie SSMA Daten von Oracle zu migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -48,7 +49,7 @@ Der Bereich Migration ist sowohl in den Dialogfeldern **Projekteinstellungen** a
 |**NULL-Werte beibehalten**|Gibt an, ob SSMA beim Hinzufügen von Daten zu SQL Server NULL-Werte in den Quelldaten beibehält, unabhängig von den in SQL Server angegebenen Standardwerten.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: true|  
 |**Zeichen folgen-Trim-Vorgang mit Fehler markieren**|Wenn die Ziel Spaltengröße kleiner als die Länge der Quell Zeichenfolge ist, wird der Wert abgeschnitten und als Fehler markiert.<br /><br />**Standardmodus**: Ja<br /><br />**Optimistischer Modus**: Ja<br /><br />**Vollständiger Modus**: Ja|  
 |**Bei Fehler**|Beendet die Datenmigration, wenn ein Fehler auftritt. Es gibt drei Optionen:<br /><br />**Migration Abbrechen:** Beendet den Daten Migrations Vorgang.<br /><br />**Weiter zur nächsten Tabelle:** Beendet die Datenmigration zur aktuellen Tabelle und geht zum nächsten<br /><br />**Zum nächsten Batch wechseln:** Beendet die Datenmigration zum aktuellen Batch und geht zum nächsten<br /><br />**Standardmodus**: fahren Sie mit dem nächsten Batch fort<br /><br />**Optimistischer Modus**: mit dem nächsten Batch fortfahren<br /><br />**Vollständiger Modus**: mit dem nächsten Batch fortfahren|  
-|**Nicht unterstützte Datumsangaben ersetzen**|Gibt an, ob SSMA Datumsangaben vor dem frühesten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime** -Datum (01. Januar 1753) korrigieren soll.<br /><br />Um die aktuellen Datumswerte beizubehalten, wählen Sie keine Aktion durch **führen**aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]akzeptiert keine Datumsangaben vor 01. Januar 1753 in einer datetime-Spalte. Wenn Sie ältere Datumsangaben verwenden, müssen Sie die DateTime-Werte in Zeichen Werte konvertieren.<br /><br />Um Datumsangaben vor 01. Januar 1753 in NULL zu konvertieren, wählen Sie **durch Null Ersetzen**aus.<br /><br />Um Datumsangaben vor 01. Januar 1753 durch ein unterstütztes Datum zu ersetzen, wählen Sie **durch das nächste unterstützte Datum ersetzen**aus.<br /><br />**Standardmodus**: nichts tun<br /><br />**Optimistischer Modus**: nichts tun<br /><br />**Vollständiger Modus**: durch das nächste unterstützte Datum ersetzen|  
+|**Nicht unterstützte Datumsangaben ersetzen**|Gibt an, ob SSMA Datumsangaben vor dem frühesten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime** -Datum (01. Januar 1753) korrigieren soll.<br /><br />Um die aktuellen Datumswerte beizubehalten, wählen Sie keine Aktion durch **führen**aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] akzeptiert keine Datumsangaben vor 01. Januar 1753 in einer datetime-Spalte. Wenn Sie ältere Datumsangaben verwenden, müssen Sie die DateTime-Werte in Zeichen Werte konvertieren.<br /><br />Um Datumsangaben vor 01. Januar 1753 in NULL zu konvertieren, wählen Sie **durch Null Ersetzen**aus.<br /><br />Um Datumsangaben vor 01. Januar 1753 durch ein unterstütztes Datum zu ersetzen, wählen Sie **durch das nächste unterstützte Datum ersetzen**aus.<br /><br />**Standardmodus**: nichts tun<br /><br />**Optimistischer Modus**: nichts tun<br /><br />**Vollständiger Modus**: durch das nächste unterstützte Datum ersetzen|  
 |**Tabellensperre**|Gibt an, ob SSMA Tabellen sperrt, wenn während der Datenmigration Daten zu Tabellen hinzugefügt werden. Erhält eine Massen Aktualisierungs Sperre für die Dauer des Massen Kopiervorgangs. Wenn der Wert false ist, wird auf Zeilenebene eine Sperre festgelegt.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: true|  
   
 ## <a name="parallel-data-migration"></a>Parallele Daten Migration  

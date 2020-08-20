@@ -1,4 +1,5 @@
 ---
+description: Globale Einstellungen (Dialogfelder) (oracletosql)
 title: Globale Einstellungen (Dialogfelder) (oracletosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,19 +11,19 @@ ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 715bc5d1a407380d47c05313954adab5cdf53dc6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0a0b888c594a46543f3cdec8e9c70bf9b511ed91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463192"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>Globale Einstellungen (Dialogfelder) (oracletosql)
 Auf der Seite Dialoge des Dialog Felds **globale Einstellungen** können Sie die Standardeinstellungen für Benutzeraktionen und Warnungen für SSMA festlegen.  
   
 Um auf die Dialogfeld Einstellungen im **Menü Extras** zuzugreifen, klicken Sie auf **globale Einstellungen**, klicken Sie unten im linken Bereich auf **GUI** , und wählen Sie dann **Dialoge**aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Vor dem Überschreiben von Objekten warnen**  
 Wenn SSMA Objekte in SQL Server konvertiert, sind einige Objekte möglicherweise bereits in den SQL Server Metadaten des Projekts vorhanden. Diese Objekte wurden möglicherweise bereits konvertiert, oder die Objekte können im Ziel Schema einfach denselben Namen haben wie Objekte, die Sie konvertieren möchten.  
   

@@ -1,4 +1,5 @@
 ---
+description: Ancestors (MDX)
 title: Vorgänger (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92f15f20c872fbe63db09a55356b5d1e35ff0d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461682"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 
 
-  Eine Funktion, die die Menge aller Vorgänger eines angegebenen Elements in einer angegebenen Ebene oder in einem angegebenen Abstand vom Element zurückgibt. Bei [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]besteht der zurückgegebene Satz immer aus einem einzelnen Member [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . unterstützt nicht mehrere übergeordnete Elemente für einen einzelnen Member.  
+  Eine Funktion, die die Menge aller Vorgänger eines angegebenen Elements in einer angegebenen Ebene oder in einem angegebenen Abstand vom Element zurückgibt. Bei [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] besteht der zurückgegebene Satz immer aus einem einzelnen Member [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . unterstützt nicht mehrere übergeordnete Elemente für einen einzelnen Member.  
   
 ## <a name="syntax"></a>Syntax  
   

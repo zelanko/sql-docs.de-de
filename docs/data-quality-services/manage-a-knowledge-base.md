@@ -1,4 +1,5 @@
 ---
+description: Verwalten einer Wissensdatenbank
 title: Verwalten einer Wissensdatenbank
 ms.date: 06/04/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2f445f4c076497db3c41947e3105440de9025175
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5676a182615dfa7ddf23dcda1841a6530467a8c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462082"
 ---
 # <a name="manage-a-knowledge-base"></a>Verwalten einer Wissensdatenbank
 
@@ -32,7 +33,7 @@ ms.locfileid: "85882750"
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle "dqs_kb_editor" oder "dqs_administrator" in der DQS_MAIN-Datenbank verfügen, um eine Wissensdatenbank zu öffnen.  
   
-##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a>Verwalten einer Wissensdatenbank  
+##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a> Verwalten einer Wissensdatenbank  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -70,7 +71,7 @@ ms.locfileid: "85882750"
   
         8.  **Erstellungsdatum**: Datum der Erstellung.  
   
-##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Verwalten einer Wissensdatenbank  
+##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a> Nachverfolgung: nach dem Verwalten einer Wissensdatenbank  
  Der nächste Schritt nach dem Verwalten einer Wissensdatenbank hängt davon ab, welche Aktion Sie für die Wissensdatenbank durchgeführt haben:  
   
 -   Wenn Sie die Wissensdatenbank geöffnet haben, fahren Sie mit der Aktivität fort, die Sie ausgewählt haben.  

@@ -1,4 +1,5 @@
 ---
+description: Herstellen einer Verbindung direkt mit Treibern
 title: Direkte Verbindung mit Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f86e198f-a088-4401-9106-aa62a0eb8f6e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d6aacb5d3df985949e04cdd47a9fe460cddbde6a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dbf1d7a11f0ca4d6e7d049d425451b5f0e26c2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461522"
 ---
 # <a name="connecting-directly-to-drivers"></a>Herstellen einer Verbindung direkt mit Treibern
 Wie bei der [Auswahl einer Datenquelle oder eines Treibers](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)erläutert, möchten einige Anwendungen zuvor in diesem Abschnitt keine Datenquelle verwenden. Stattdessen möchten Sie eine direkte Verbindung mit einem Treiber herstellen. **SQLDriverConnect** bietet der Anwendung die Möglichkeit, eine direkte Verbindung mit einem Treiber herzustellen, ohne eine Datenquelle anzugeben. Konzeptionell wird zur Laufzeit eine temporäre Datenquelle erstellt.  

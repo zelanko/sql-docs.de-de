@@ -1,4 +1,5 @@
 ---
+description: CREATE MINING MODEL (DMX)
 title: Create Mining Model (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 440256a7349d7c77581c4369e901ce0da9c3212f
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 76cddca642fd25bb7e67ec7817c3fe3d1d9da9d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462038"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -50,7 +51,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe [DMSCHEMA_MINING_SERVICES Rowsets](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von unterstützten Algorithmen finden Sie unter [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *Parameterliste*  
- Dies ist optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
+ Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
   
  *XML-Zeichenfolge*  
  (Nur für Erweiterte Verwendung.) Ein XML-codiertes Modell (PMML). Die Zeichenfolge muss in einfache Anführungszeichen (') eingeschlossen werden.  
@@ -102,7 +103,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [Modellierungsflags &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- Sie können der Anweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden- \<Column relationship> Klausel.  
+ Sie können der Anweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Verwendung der folgenden- \<Column relationship> Klausel.  
   
  **verknüpft mit**  
  Diese Form kennzeichnet eine Wertehierarchie. Das Ziel einer RELATED TO-Spalte kann eine Schlüsselspalte einer geschachtelten Tabelle, eine Spalte mit diskreten Werten in der Fallzeile oder eine andere Spalte mit einer RELATED TO-Klausel sein, wodurch eine tiefere Hierarchie gekennzeichnet ist.  

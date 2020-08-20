@@ -1,4 +1,5 @@
 ---
+description: SQLCopyDesc-Funktion
 title: Sqlcopydebug-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef1fa5b319e8d72d5b70e6f2010e493eec6f844a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ede6d52614c1c35cdc28f6d85e8b3be61235b4ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461192"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc-Funktion
 **Konformitäts**  
@@ -60,18 +61,18 @@ SQLRETURN SQLCopyDesc(
   
  Da **SQLCopyDesc** durch Aufrufen von **SQLGetDescField** und **SQLSetDescField**implementiert werden kann, gibt **SQLCopyDesc** möglicherweise Sqlstates zurück, die von **SQLGetDescField** oder **SQLSetDescField**zurückgegeben werden.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte den erforderlichen Arbeitsspeicher nicht zuordnen, um die Ausführung oder den Abschluss der Funktion zu unterstützen.|  
 |HY007|Die zugehörige Anweisung ist nicht vorbereitet.|*Sourcetoschandle* wurde einem IRD zugeordnet, und das zugehörige Anweisungs Handle befand sich nicht im vorbereiteten oder ausgeführten Zustand.|  
 |HY010|Funktions Sequenz Fehler|(DM) das Deskriptorhandle in *sourcetoschandle* oder *targettoschandle* wurde mit einem *StatementHandle* verknüpft, für das eine asynchron ausgeführte Funktion (nicht diese) aufgerufen wurde und noch ausgeführt wurde, als diese Funktion aufgerufen wurde.<br /><br /> (DM) das Deskriptorhandle in *sourcedeschandle* oder *targetdeschandle* wurde mit einem *StatementHandle* verknüpft, für das **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** aufgerufen und SQL_NEED_DATA zurückgegeben wurde. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit *sourcedeschandle* oder *targetdeschandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **sqlcopyde SC** -Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für eines der Anweisungs Handles aufgerufen, die mit *sourcedebug* oder *targetdebug* verknüpft sind, und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
 |HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
 |HY016|Ein Implementierungs Zeilen Deskriptor kann nicht geändert werden.|*Targetbeschandle* wurde einem IRD zugeordnet.|  
 |HY021|Inkonsistente Deskriptorinformationen|Die während einer Konsistenzprüfung überprüften Deskriptorinformationen waren nicht konsistent. Weitere Informationen finden Sie unter "Konsistenzprüfungen" in **SQLSetDescField**.|  
-|HY092|Ungültiger Attribut/Options Bezeichner|Der **SQLCopyDesc** -Befehl hat einen Aufrufen von **SQLSetDescField**angefordert, " * \*ValuePtr* " war jedoch für das *fieldidentifier* -Argument in " *targetdeschandle*" nicht gültig.|  
+|HY092|Ungültiger Attribut/Options Bezeichner|Der **SQLCopyDesc** -Befehl hat einen Aufrufen von **SQLSetDescField**angefordert, " * \* ValuePtr* " war jedoch für das *fieldidentifier* -Argument in " *targetdeschandle*" nicht gültig.|  
 |HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
 |IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der mit *sourcedeschandle* oder *targetdeschandle* verknüpfte Treiber unterstützt die-Funktion nicht.|  
@@ -189,12 +190,12 @@ while (SQL_SUCCEEDED(rc)) {
   
 ### <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Mehrere Deskriptorfelder werden abgerufen.|[SQLGetDescRec-Funktion](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |Festlegen eines einzelnen deskriptorfelds|[SQLSetDescField-Funktion](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
 |Festlegen mehrerer Deskriptorfelder|[SQLSetDescRec-Funktion](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

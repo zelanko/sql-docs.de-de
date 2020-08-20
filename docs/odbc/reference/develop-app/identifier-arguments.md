@@ -1,4 +1,5 @@
 ---
+description: Bezeichnerargumente
 title: Bezeichnerargumente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6831eab30daebe37baecebe3ed7053537d7de8f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24efb295c9c27dbfc5edc2b1d7a46d6ca166e2c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461451"
 ---
 # <a name="identifier-arguments"></a>Bezeichnerargumente
 Wenn eine Zeichenfolge in einem bezeichnerargument in Anführungszeichen gesetzt wird, entfernt der Treiber führende und nachfolgende Leerzeichen und behandelt die Zeichenfolge innerhalb der Anführungszeichen. Wenn die Zeichenfolge nicht in Anführungszeichen eingeschlossen wird, entfernt der Treiber nachfolgende Leerzeichen und fasst die Zeichenfolge in Großbuchstaben um. Wenn ein bezeichnerargument auf einen NULL-Zeiger festgelegt wird, wird SQL_ERROR und SQLSTATE HY009 (Ungültige Verwendung des NULL-Zeigers) zurückgegeben, es sei denn, das Argument ist ein Katalog Name, und Kataloge  

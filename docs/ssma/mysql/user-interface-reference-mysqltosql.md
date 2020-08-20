@@ -1,4 +1,5 @@
 ---
+description: Referenz zur Benutzeroberfläche (MySqlToSql)
 title: Referenz zur Benutzeroberfläche (mysqltosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2f1b7a495f9962c35f805eec7518c25c50709b68
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 76eb6b52b988fc0a4c0f62e4c295b36beeab0078
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463300"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Referenz zur Benutzeroberfläche (MySqlToSql)
 Dieser Abschnitt enthält Hilfe Themen für SQL Server Migration Assistant (SSMA) für MySQL.  
@@ -22,7 +23,7 @@ Dieser Abschnitt enthält Hilfe Themen für SQL Server Migration Assistant (SSMA
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 In der folgenden Tabelle sind die SSMA-Dialogfelder aufgeführt:  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-|-|  
 |[Erweiterte Objektauswahl &#40;mysqlto SQL&#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|Verwenden Sie das Dialogfeld **Erweiterte Objektauswahl** , um mithilfe von Filterkriterien Datenbankobjekte zu suchen, und wählen Sie diese Objekte aus, oder löschen Sie Sie.|  
 |[Bewertungsbericht &#40;mysqlto SQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Verwenden Sie den Bericht, um die Ergebnisse der Konvertierung von MySQL-Objekten in die Transact-SQL-Syntax anzuzeigen und um die Zeit und die Komplexität einer Migration zu SQL Server einzuschätzen.|  
@@ -32,7 +33,7 @@ In der folgenden Tabelle sind die SSMA-Dialogfelder aufgeführt:
 |[Konvertierungs Einstellungen (MySQL)](https://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Verwenden Sie die Registerkarte **Einstellungen** , um Einstellungen auf Knotenebene festzulegen.|  
 |[Daten Migrationsbericht &#40;mysqlto SQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Zeigt die Ergebnisse der Migration von Daten aus MySQL zu SQL Server oder SQL Azure an.|  
 |[Einstellungen für die Datenmigration](data-migration-settings-mysqltosql.md)|Verwenden Sie die Registerkarte **Einstellungen für Erweiterte Datenmigration** , um benutzerdefinierte Abfragen für die Datenmigration zu schreiben.|  
-|[Typzuordnung &#40;mysqlto SQL-&#41;bearbeiten](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Verwenden Sie das Dialogfeld **Typzuordnung bearbeiten** , um die Zuordnung von Datentypen zwischen den Quell-und Ziel Datenbanken und Datenbankobjekten zu erstellen oder zu ändern.|  
+|[Typzuordnung &#40;mysqlto SQL-&#41;bearbeiten ](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Verwenden Sie das Dialogfeld **Typzuordnung bearbeiten** , um die Zuordnung von Datentypen zwischen den Quell-und Ziel Datenbanken und Datenbankobjekten zu erstellen oder zu ändern.|  
 |[Globale Einstellungen &#40;Editor&#41; &#40;mysqldesql&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|Mithilfe der Seite Editor des Dialog Felds **globale Einstellungen** können Sie Optionen für den Code-Editor konfigurieren.|  
 |[Globale Einstellungen &#40;Dialoge&#41; &#40;mysqltosql&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|Im Dialogfeld **globale Einstellungen** können Sie auf der Seite Dialogfelder die Standardeinstellungen für Dialogfeld und Warnungen konfigurieren.|  
 |[Global Settings (Logging) (Globale Einstellungen (Protokollierung))](https://msdn.microsoft.com/0d033492-5ec3-473a-8de1-821894ec9518)|Verwenden Sie die Seite Protokollierung des Dialog Felds **globale Einstellungen** , um die Protokollierung zu konfigurieren.|  

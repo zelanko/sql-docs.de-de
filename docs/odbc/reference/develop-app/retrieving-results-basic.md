@@ -1,4 +1,5 @@
 ---
+description: Abrufen von Ergebnissen (Standard)
 title: Abrufen von Ergebnissen (Basic) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f7d01bf92fcee07940e449a2fb4bbac4f0fe6ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43064703e7ee448de89396135fa610e972e2679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461362"
 ---
 # <a name="retrieving-results-basic"></a>Abrufen von Ergebnissen (Standard)
 Ein *Resultset* ist ein Satz von Zeilen in der Datenquelle, der bestimmten Kriterien entspricht. Es handelt sich um eine konzeptionelle Tabelle, die sich aus einer Abfrage ergibt und die für eine Anwendung in tabellarischer Form verfügbar ist. **Select** -Anweisungen, Katalog Funktionen und einige Prozeduren erstellen Resultsets. Im folgenden Beispiel erstellt die erste SQL-Anweisung ein Resultset, das alle Zeilen und alle Spalten in der Orders-Tabelle enthält, und die zweite SQL-Anweisung erstellt ein Resultset mit den Spalten OrderID, SalesPerson und Status für die Zeilen in der Orders-Tabelle, in der der Status offen ist:  
