@@ -1,4 +1,5 @@
 ---
+description: Migrieren von Zugriffsdaten in SQL Server Azure SQL-Datenbank (Access Token)
 title: Migrieren von Zugriffsdaten in SQL Server Azure SQL-Datenbank (Access Token) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: db881613edca3a6108f1d1f8164182465febff11
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c44f7af6972c316322d4a81b7de9fa13b77205a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488293"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>Migrieren von Zugriffsdaten in SQL Server Azure SQL-Datenbank (Access Token)
 Nachdem Sie die Datenbankobjekte erfolgreich in erstellt haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie Daten von Access zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migrieren.  
@@ -53,7 +54,7 @@ Sie können Daten auch außerhalb von SSMA migrieren, indem Sie das [!INCLUDE[ss
 ## <a name="next-step"></a>Nächster Schritt  
 Wenn Sie auf Datenbankanwendungen zugreifen möchten, die nach der Migration weiterhin verwendet werden sollen, verknüpfen Sie die Access-Datenbanktabellen mit den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen oder SQL Azure Tabellen. Weitere Informationen finden Sie unter [Verknüpfen von Access-Anwendungen mit SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Festlegen von Konvertierungs-und Migrations Optionen](setting-conversion-and-migration-options-accesstosql.md)  
   

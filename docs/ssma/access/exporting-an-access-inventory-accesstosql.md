@@ -1,4 +1,5 @@
 ---
+description: Exportieren einer Zugriffs Inventur (accesstosql)
 title: Exportieren einer Zugriffs Inventur (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7d7a87d45807c749477da7a7158f3a63fc56ec4b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 112452e9e6c31810dbf26d9aa1e7b36959c192d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488333"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportieren einer Zugriffs Inventur (accesstosql)
 Wenn Sie über mehrere Access-Datenbanken verfügen und nicht sicher sind, in welche migriert werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können dann die Inventar Metadaten überprüfen und Abfragen, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migriert werden sollen. Diese Inventur ermöglicht Ihnen das schnelle Auffinden von Antworten auf Fragen wie die folgenden:  
@@ -226,6 +227,6 @@ WHERE ColumnName LIKE '%salary%';
 ```  
 Wenn Sie den Spaltennamen nicht kennen, können Sie eine Abfrage schreiben, um alle Spalten zurückzugeben. Entfernen Sie zu diesem Zweck die WHERE-Klausel aus der vorherigen Abfrage.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Vorbereiten der Zugriffs Datenbanken für die Migration](preparing-access-databases-for-migration-accesstosql.md)  
   

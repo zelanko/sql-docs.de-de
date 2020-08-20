@@ -1,4 +1,5 @@
 ---
+description: Neue GUI-Features in SSMA für DB2 (DB2ToSQL)
 title: Neue GUI-Features in SSMA für DB2 (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 872eb991483bb1615f3260d64ed5e5438fd1c2ce
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d3ad4946b7e900fa9ca4adc22e16a299948e00f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488151"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>Neue GUI-Features in SSMA für DB2 (DB2ToSQL)
 In diesem Kapitel werden die neuen Funktionen der SSMA-Benutzeroberfläche beschrieben.  

@@ -1,4 +1,5 @@
 ---
+description: Assistent zum Suchen von Datenbanken (Speicherorte auswählen) (accesstosql)
 title: Assistent zum Suchen von Datenbanken (Speicherorte auswählen) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -11,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 06a6135425a8baf19d28d99b74e761f229f977fd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 15e065410a32b0902ad065a1903f4e28da044149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488311"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Assistent zum Suchen von Datenbanken (Speicherorte auswählen) (accesstosql)
 Geben Sie auf der Seite Speicherorte auswählen des Assistenten zum Suchen von Datenbanken die Suchparameter für die Suche nach Access-Datenbanken ein.  
   
 Um den Assistenten zum Suchen von Datenbanken zu öffnen, klicken Sie im Menü **Datei** auf **Datenbanken suchen**. Weitere Informationen zur Verwendung dieses Dialog Felds finden Sie unter [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md) .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Durchsuchen**  
 Klicken Sie, um den Computer oder das Netzwerk zu durchsuchen Wählen Sie den zu durchsuchenden Ordner oder Speicherort aus, und klicken Sie dann auf **OK**. Klicken Sie auf **Hinzufügen** , um diesen Speicherort der Liste hinzuzufügen.  
   
@@ -57,7 +58,7 @@ Wenn Sie Datenbanken suchen möchten, die mit einem Größen Kriterium übereins
 **Besitzer**  
 Geben Sie den vollständigen Windows-Benutzernamen des Besitzers ein. Dies kann als *Domänen* \\ *Benutzer*formatiert sein.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md)  
 [Referenz zur Benutzeroberfläche (Zugriff)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

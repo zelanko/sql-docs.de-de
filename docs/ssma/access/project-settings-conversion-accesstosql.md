@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Konvertierung) (accesstosql)
 title: Projekteinstellungen (Konvertierung) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8889e0d869960f8300194afe31fe87b7f0cf2346
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 49df8709518a9654ca5c286c4381b274546007cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488266"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Projekteinstellungen (Konvertierung) (accesstosql)
 Mithilfe der Konvertierungs Projekteinstellungen können Sie konfigurieren, wie Objekte aus Access-Datenbankobjekten in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbankobjekte konvertiert werden.  
@@ -28,7 +29,7 @@ Der Bereich Konvertierung ist in den Dialogfeldern **Projekteinstellungen** und 
   
 -   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die Konvertierungs Einstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp, für den die Einstellungen angezeigt werden müssen/Changed in der Dropdown Liste **Migrations Ziel Version** aus, klicken Sie unten im linken Bereich auf **Allgemein** , und klicken Sie dann auf **Konvertierung**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Primärschlüssel hinzufügen**  
 Erstellt einen neuen Primärschlüssel in der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder-SQL Azure Tabelle, wenn eine Zugriffs Tabelle keinen Primärschlüssel oder eindeutigen Index aufweist.  
   
