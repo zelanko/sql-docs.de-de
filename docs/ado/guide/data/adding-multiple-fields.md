@@ -1,4 +1,5 @@
 ---
+description: Hinzufügen mehrerer Felder und Werte
 title: Hinzufügen mehrerer Felder | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd5999d62056582d5739f50f415680b9b0dc8a3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e2543741749c1521526aea18bc4600168559eb45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453892"
 ---
 # <a name="adding-multiple-fields-and-values"></a>Hinzufügen mehrerer Felder und Werte
 Gelegentlich ist es möglicherweise effizienter, ein Array von Feldern und ihre entsprechenden Werte an die **AddNew** -Methode zu übergeben, anstatt für jedes neue Feld einen **Wert** mehrmals festzulegen. Wenn *FieldList* ein Array ist, müssen die *Werte* auch ein Array mit derselben Anzahl von Membern sein. Andernfalls tritt ein Fehler auf. Die Reihenfolge der Feldnamen muss der Reihenfolge der Feldwerte in jedem Array entsprechen. Der folgende Code übergibt ein Array von Feldern und ein Array von Werten an die **AddNew** -Methode.

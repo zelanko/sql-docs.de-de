@@ -1,4 +1,5 @@
 ---
+description: Verwenden von Visual C++-Erweiterungen
 title: Verwenden von Visual C++-Erweiterungen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a051329efa32a155cc368d3d01c38b40593b8898
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6ca7d66c7748658c5ba720b8664d824551da47bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453982"
 ---
 # <a name="visual-c-extensions"></a>Visual C++ Erweiterungen
 ## <a name="the-iadorecordbinding-interface"></a>Die IADORecordBinding-Schnittstelle
@@ -112,13 +113,13 @@ Update(CADORecordBinding *binding)
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Class*|Die Klasse, in der die Bindungs Einträge und die C/C++-Variablen definiert werden.|
-|*Ordnungszahl*|Die Ordinalzahl des **recordsetfelds** , die der C/C++-Variablen entspricht.|
+|*Klasse*|Die Klasse, in der die Bindungs Einträge und die C/C++-Variablen definiert werden.|
+|*Ordinal*|Die Ordinalzahl des **recordsetfelds** , die der C/C++-Variablen entspricht.|
 |*DataType*|Entsprechender ADO-Datentyp der C/C++-Variablen (Weitere Informationen finden Sie unter [datatypeer](../../../ado/reference/ado-api/datatypeenum.md) -Enumeration). Der Wert des **Recordset** -Felds wird bei Bedarf in diesen Datentyp konvertiert.|
-|*Ert*|Der Name der C/C++-Variablen, in der das **Recordsetfeld** gespeichert wird.|
+|*Buffer*|Der Name der C/C++-Variablen, in der das **Recordsetfeld** gespeichert wird.|
 |*Größe*|Maximale Größe des *Puffers*in Bytes. Wenn der *Puffer* eine Zeichenfolge variabler Länge enthält, lassen Sie Raum für eine abschließende NULL-Werte zu.|
 |*Status*|Der Name einer Variablen, die angibt, ob der Inhalt des *Puffers* gültig ist und ob die Konvertierung des Felds in den *Datentyp* erfolgreich war.<br /><br /> Die zwei wichtigsten Werte für diese Variable sind **adFldOK**, was bedeutet, dass die Konvertierung erfolgreich war. und **adFldNull**. Dies bedeutet, dass der Wert des Felds eine Variante vom Typ VT_NULL und nicht nur leer ist.<br /><br /> Mögliche Werte für den *Status* sind in der nächsten Tabelle "Statuswerte" aufgeführt.|
-|*Änderung*|Boolesches Flag; TRUE gibt an, dass ADO das entsprechende **Recordsetfeld** mit dem im *Puffer*enthaltenen Wert aktualisieren darf.<br /><br /> Legen Sie den booleschen Parameter *Modify* auf true fest, damit ADO das gebundene Feld aktualisieren kann, und false, wenn Sie das Feld untersuchen, aber nicht ändern möchten.|
+|*Modify* (Ändern)|Boolesches Flag; TRUE gibt an, dass ADO das entsprechende **Recordsetfeld** mit dem im *Puffer*enthaltenen Wert aktualisieren darf.<br /><br /> Legen Sie den booleschen Parameter *Modify* auf true fest, damit ADO das gebundene Feld aktualisieren kann, und false, wenn Sie das Feld untersuchen, aber nicht ändern möchten.|
 |*Genauigkeit*|Anzahl von Ziffern, die in einer numerischen Variablen dargestellt werden können.|
 |*Skalierung*|Anzahl der Dezimalstellen in einer numerischen Variablen.|
 |*Länge*|Der Name einer 4-Byte-Variablen, die die tatsächliche Länge der Daten im *Puffer*enthält.|
@@ -128,7 +129,7 @@ Update(CADORecordBinding *binding)
 
  Beim Festlegen von Daten kann der *Status* auf **adFldNull** festgelegt werden, um anzugeben, dass das **Recordsetfeld** auf NULL festgelegt werden soll.
 
-|Konstante|Wert|Beschreibung|
+|Konstant|Wert|Beschreibung|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Es wurde ein Feldwert ungleich NULL zurückgegeben.|
 |**adfldbadaccessor**|1|Die Bindung war ungültig.|
@@ -145,5 +146,5 @@ Update(CADORecordBinding *binding)
 |**adfldbadstatus**|12|Ungültiger Status Parameter beim Aktualisieren.|
 |**adFldDefault**|13|Bei der Aktualisierung wurde ein Standardwert verwendet.|
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
  [Beispiel für Visual C++ Erweiterungen](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual C++ Extensions-Header](../../../ado/guide/appendixes/visual-c-extensions-header.md)

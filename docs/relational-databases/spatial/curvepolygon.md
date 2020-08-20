@@ -1,4 +1,5 @@
 ---
+description: CurvePolygon
 title: CurvePolygon | Microsoft-Dokumentation
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3789ee478e1c77518c7ce1992ed4a5134c886498
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69aaa7667e0aa1576dc1ec2744e1f07a402ccdf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455415"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -173,7 +174,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  Sowohl `@g1` als auch `@g2` verwenden denselben äußeren Begrenzungsring (einen Kreis mit dem Radius 5), und für beide wird ein Quadrat als innerer Ring verwendet.  Die Instanz `@g1` ist jedoch gültig, während die Instanz `@g2` ungültig ist. Der Grund für die Ungültigkeit von @g2 ist, dass der innere Ring die vom äußeren Ring begrenzte Fläche in vier separate Bereiche teilt. Dies wird in der folgenden Zeichnung verdeutlicht:  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   

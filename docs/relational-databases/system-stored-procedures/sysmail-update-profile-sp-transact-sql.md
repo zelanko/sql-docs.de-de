@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_profile_sp (Transact-SQL)
 title: sysmail_update_profile_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c795b604538a26fc7602ea245bd4d1d8c9c52d33
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78a123514e990499f191cbc6742870647adebc5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454741"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,16 +41,16 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id`Die zu Aktualisier gende Profil-ID. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Mindestens eine *profile_id* oder *profile_name* muss angegeben werden. Werden beide Werte angegeben, wird der Name des Profils geändert.  
+`[ @profile_id = ] profile_id` Die zu Aktualisier gende Profil-ID. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Mindestens eine *profile_id* oder *profile_name* muss angegeben werden. Werden beide Werte angegeben, wird der Name des Profils geändert.  
   
-`[ @profile_name = ] 'profile_name'`Der Name des zu aktualisierenden Profils oder der neue Name für das Profil. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Mindestens eine *profile_id* oder *profile_name* muss angegeben werden. Werden beide Werte angegeben, wird der Name des Profils geändert.  
+`[ @profile_name = ] 'profile_name'` Der Name des zu aktualisierenden Profils oder der neue Name für das Profil. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Mindestens eine *profile_id* oder *profile_name* muss angegeben werden. Werden beide Werte angegeben, wird der Name des Profils geändert.  
   
-`[ @description = ] 'description'`Die neue Beschreibung für das Profil. die *Beschreibung* ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL.  
+`[ @description = ] 'description'` Die neue Beschreibung für das Profil. die *Beschreibung* ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn sowohl die Profil-ID als auch der Profilname angegeben werden, wird der Name des Profils zum bereitgestellten Namen geändert und die Beschreibung des Profils aktualisiert. Wenn nur eins dieser Argumente bereitgestellt wird, wird die Beschreibung des Profils aktualisiert.  
   
  Die gespeicherte Prozedur **sysmail_update_profile_sp** wird in der **msdb** -Datenbank gespeichert und befindet sich im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  

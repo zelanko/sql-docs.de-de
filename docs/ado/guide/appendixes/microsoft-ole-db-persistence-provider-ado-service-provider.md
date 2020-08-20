@@ -1,4 +1,5 @@
 ---
+description: Microsoft OLE DB-Persistenzanbieter (ADO-Dienstanbieter)
 title: Microsoft OLE DB-Persistenzanbieter (ADO-Dienstanbieter) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc8c8f099e703433f57e9d8ff463e229213503be
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454112"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Übersicht über den Microsoft OLE DB Persistenz
 Mit dem Microsoft OLE DB-Persistenzanbieter können Sie ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt in einer Datei speichern und das **Recordset** -Objekt später aus der Datei wiederherstellen. Schema Informationen, Daten und ausstehende Änderungen werden beibehalten.
@@ -33,10 +34,10 @@ Mit dem Microsoft OLE DB-Persistenzanbieter können Sie ein [Recordset](../../..
 "Provider=MSPersist"
 ```
 
-## <a name="errors"></a>Fehler
+## <a name="errors"></a>Errors
  Die folgenden Fehler, die von diesem Anbieter ausgegeben werden, können in der Anwendung erkannt werden.
 
-|Konstante|BESCHREIBUNG|
+|Konstante|Beschreibung|
 |--------------|-----------------|
 |E_BADSTREAM|Die geöffnete Datei weist kein gültiges Format auf (das heißt, das Format ist nicht ADTG oder XML).|
 |E_CANTPERSISTROWSET|Das gespeicherte **Recordset** -Objekt verfügt über Eigenschaften, die die Speicherung verhindern.|

@@ -1,4 +1,5 @@
 ---
+description: sys.service_message_types (Transact-SQL)
 title: sys. service_message_types (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02f210ddee531fe48e7bf2861fe353b1b04ac442
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b56665ff1a780cdcf8052c063f817b542e65ac3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455182"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85883187"
 |**message_type_id**|**int**|Die ID des Nachrichtentypes, die innerhalb der Datenbank eindeutig ist. Lässt keine NULL-Werte zu.|  
 |**principal_id**|**int**|Die ID des Datenbankprinzipals, der diesen Nachrichtentyp besitzt. Lässt NULL-Werte zu.|  
 |**Validierungs**|**char(2)**|Vom Broker vor dem Senden von Nachrichten dieses Types ausgeführte Überprüfung. Lässt keine NULL-Werte zu. Enthält einen der folgenden Werte:<br /><br /> N = Keiner<br /><br /> X = XML<br /><br /> E = Leer|  
-|**validation_desc**|**nvarchar(60)**|Beschreibung der vom Broker vor dem Senden von Nachrichten dieses Types ausgeführten Überprüfung. Lässt NULL-Werte zu. Enthält einen der folgenden Werte:<br /><br /> NONE<br /><br /> XML<br /><br /> EMPTY|  
+|**validation_desc**|**nvarchar(60)**|Beschreibung der vom Broker vor dem Senden von Nachrichten dieses Types ausgeführten Überprüfung. Lässt NULL-Werte zu. Enthält einen der folgenden Werte:<br /><br /> Keine<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|Für eine Überprüfung, die ein XML-Schema verwendet, wird die ID der Schemaauflistung verwendet.<br /><br /> Andernfalls wird NULL verwendet.|  
   
 ## <a name="permissions"></a>Berechtigungen  

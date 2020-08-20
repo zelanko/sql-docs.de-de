@@ -1,4 +1,5 @@
 ---
+description: sys.sysfiles (Transact-SQL)
 title: sys.sysDateien (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eff8f4bcb5b14c0099c6d9d907a978f96fe1536e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dfc6430023a4123e029ebdec4f2fca56491b3632
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455106"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,10 +39,10 @@ ms.locfileid: "85883768"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**FileID**|**smallint**|Datei-ID, die für jede Datenbank eindeutig ist.|  
-|**groupID**|**smallint**|Dateigruppen-ID.|  
+|**groupid**|**smallint**|Dateigruppen-ID.|  
 |**size**|**int**|Größe der Datei in Seiten mit einer Größe von 8 KB.|  
 |**MaxSize**|**int**|Maximale Dateigröße in Seiten mit einer Größe von 8 KB.<br /><br /> 0 = Keine Vergrößerung.<br /><br /> -1 = Datei wird vergrößert, bis der Datenträger voll ist.<br /><br /> 268435456 = Protokolldatei wird bis zu einer maximalen Größe von 2 TB vergrößert.<br /><br /> Hinweis: Datenbanken, die mit einer unbegrenzten Protokolldatei Größe aktualisiert werden, melden-1 für die maximale Größe der Protokolldatei.|  
-|**growth**|**int**|Zuwachsgröße für die Datenbank. Kann je nach Wert von **status**entweder die Seitenanzahl oder der Prozentsatz der Dateigröße sein.<br /><br /> 0 = Keine Vergrößerung.|  
+|**wachsen**|**int**|Zuwachsgröße für die Datenbank. Kann je nach Wert von **status**entweder die Seitenanzahl oder der Prozentsatz der Dateigröße sein.<br /><br /> 0 = Keine Vergrößerung.|  
 |**status**|**int**|Statusbits für den **growth** -Wert in Megabyte (MB) oder Kilobyte (KB).<br /><br /> 0x2 = Datenträgerdatei.<br /><br /> 0x40 = Protokolldatei.<br /><br /> 0x100000 = Vergrößerung. Dieser Wert ist ein Prozentsatz (und nicht die Anzahl von Seiten).|  
 |**Leistungs**|**int**|Reserviert.|  
 |**name**|**sysname**|Logischer Name der Datei.|  

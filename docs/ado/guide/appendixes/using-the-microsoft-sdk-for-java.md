@@ -1,4 +1,5 @@
 ---
+description: Verwenden des Microsoft SDK für Java
 title: Verwenden des Microsoft SDK für Java | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453972"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Verwenden des Microsoft SDK für Java
 
@@ -27,7 +28,7 @@ ms.locfileid: "82761558"
 
 Das Microsoft SDK für Java ist das Developer Kit für die Microsoft Internet Explorer-Umgebung. Es werden Tools, Informationen und Beispiele bereitgestellt, die Sie bei der Entwicklung von Java-Programmen und-Applets basierend auf JDK 1,1 und dem virtuellen Microsoft-Win32-Computer (Microsoft VM) unterstützen. Das Microsoft SDK für Java ist nicht an Microsoft Visual J++ gebunden. Klicken Sie hier, um dieses SDK herunterzuladen.  
   
- Das Hilfsprogramm "JActiveX. exe" generiert Klassen aus einer Typbibliothek, kann aber nur in der Befehlszeile aufgerufen werden. Diese Funktion ist nicht in die Visual J++-Entwicklungsumgebung integriert. Im Unterschied zu den vom Assistenten für die Java-Typbibliothek generierten Klassen können Sie die vom SDK erstellten Klassen Wrapper schrittweise durchlaufen. Dies ist nützlich für das Debuggen, wie der Code die ADO-Wrapper Klassen verwendet.  
+ Das Jactivex.exe-Hilfsprogramm generiert Klassen aus einer Typbibliothek, kann aber nur in der Befehlszeile aufgerufen werden. Diese Funktion ist nicht in die Visual J++-Entwicklungsumgebung integriert. Im Unterschied zu den vom Assistenten für die Java-Typbibliothek generierten Klassen können Sie die vom SDK erstellten Klassen Wrapper schrittweise durchlaufen. Dies ist nützlich für das Debuggen, wie der Code die ADO-Wrapper Klassen verwendet.  
   
  Dieser Mechanismus liest die ADO-Typbibliothek und generiert Klassen, die Sie in Ihrer Anwendung instanziieren können. Diese Klassen werden im folgenden Speicherort generiert: \\<Windows-Verzeichnis \> \Java\trustlib\msado15.  
   
@@ -49,5 +50,5 @@ Das Microsoft SDK für Java ist das Developer Kit für die Microsoft Internet Ex
   
 3.  Öffnen Sie das Projekt in Visual J++, um diese Dateien zu verwenden. Wählen Sie im Menü **Projekt** die Option **zu Projekt hinzufügen**aus. Wählen Sie **Dateien**aus, und fügen Sie alle hinzu. Java-Dateien, die im Verzeichnis trustlib\msado15 für Ihr Projekt generiert werden.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ADO-Java-Klassen-Wrapper](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   

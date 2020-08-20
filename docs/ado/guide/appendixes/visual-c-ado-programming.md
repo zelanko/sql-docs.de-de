@@ -1,4 +1,5 @@
 ---
+description: Visual C++-ADO-Programmierung
 title: Visual C++ ADO-Programmierung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c7b428e1127ac2431f6e0988774315c12ebd74f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ae93db522b465b85feefe85cd94df4be3d29f062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453952"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++-ADO-Programmierung
 Die ADO-API-Referenz beschreibt die Funktionalität der ADO-API (Application Programming Interface) mithilfe einer Syntax, die dem Microsoft-Visual Basic ähnelt. Obwohl es sich bei der Zielgruppe um alle Benutzer handelt, verwenden ADO-Programmierer verschiedene Sprachen, wie z. b. Visual Basic, Visual C++ (mit und ohne die **#Import** -Direktive) und Visual J++ (mit dem ADO/WFC-Klassen Paket).  
@@ -35,7 +36,7 @@ Die ADO-API-Referenz beschreibt die Funktionalität der ADO-API (Application Pro
  In den folgenden Abschnitten werden Details für C-und C++-Programmierer zusammengefasst, die ADO und die **#Import** -Direktive Er konzentriert sich auf spezifische Datentypen für com (**Variant**, **BSTR**und **SAFEARRAY**) und die Fehlerbehandlung (_com_error).  
   
 ## <a name="using-the-import-compiler-directive"></a>Verwenden der #Import-Compilerdirektive  
- Die **#Import** Visual C++-Compilerdirektive vereinfacht das Arbeiten mit den ADO-Methoden und-Eigenschaften. Die-Direktive nimmt den Namen einer Datei an, die eine Typbibliothek enthält, wie z. b. ADO. dll ("MSADO15. dll), und generiert Header Dateien mit typedef-Deklarationen, intelligenten Zeigern für Schnittstellen und Enumerationskonstanten. Jede Schnittstelle ist in einer Klasse gekapselt oder umschließt.  
+ Die **#Import** Visual C++-Compilerdirektive vereinfacht das Arbeiten mit den ADO-Methoden und-Eigenschaften. Die-Direktive nimmt den Namen einer Datei an, die eine Typbibliothek enthält, wie z. b. ADO. dll (Msado15.dll), und generiert Header Dateien mit typedef-Deklarationen, intelligenten Zeigern für Schnittstellen und Enumerationskonstanten. Jede Schnittstelle ist in einer Klasse gekapselt oder umschließt.  
   
  Für jeden Vorgang innerhalb einer Klasse (d. h. eine Methode oder einen Eigenschafts Befehl) gibt es eine Deklaration, um den Vorgang direkt aufzurufen (d. h. die "RAW"-Form des Vorgangs), und eine Deklaration, um den Rohvorgang aufzurufen und einen com-Fehler auszulösen, wenn der Vorgang nicht erfolgreich ausgeführt werden kann. Wenn es sich bei dem Vorgang um eine Eigenschaft handelt, gibt es normalerweise eine Compilerdirektive, die eine alternative Syntax für den Vorgang erstellt, der Syntax wie Visual Basic hat.  
   
@@ -116,7 +117,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  Die Ausnahmen für diese Regel sind die spezifischen Datentypen für com: **Variant**, **BSTR**und **SAFEARRAY**.  
   
-### <a name="variant"></a>Variante  
+### <a name="variant"></a>Variant  
  Ein **Variant** ist ein strukturierter Datentyp, der ein Wertmember und einen Datentyp Member enthält. Eine **Variante** kann eine breite Palette anderer Datentypen enthalten, einschließlich einer anderen Variante, BSTR, Boolean, IDispatch oder IUnknown-Zeiger, Währung, Datum usw. COM stellt auch Methoden bereit, die das Konvertieren eines Datentyps in einen anderen erleichtern.  
   
  Die **_variant_t** -Klasse kapselt und verwaltet den **Variant** -Datentyp.  
@@ -326,7 +327,7 @@ End Sub
   
  Im folgenden Visual C++ Beispiel wird die Verwendung eines **SAFEARRAY** veranschaulicht, das mit einem **_variant_t**verwendet wird.  
   
-#### <a name="notes"></a>Hinweise  
+#### <a name="notes"></a>Notizen  
  Die folgenden Hinweise entsprechen den kommentierten Abschnitten im Codebeispiel.  
   
 1.  Auch hier ist die Funktion "testhr () Inline" definiert, um den vorhandenen Mechanismus zur Fehlerbehandlung zu nutzen.  
@@ -435,7 +436,7 @@ End Sub
   
  In diesem Visual C++ Beispiel wird die **Get** / **Put** / **PutRef**-_Eigenschaft_veranschaulicht.  
   
-#### <a name="notes"></a>Hinweise  
+#### <a name="notes"></a>Notizen  
  Die folgenden Hinweise entsprechen den kommentierten Abschnitten im Codebeispiel.  
   
 1.  In diesem Beispiel werden zwei Formen eines fehlenden Zeichen folgen Arguments verwendet: eine explizite Konstante, ein **Strauch**und eine Zeichenfolge, mit der der Compiler eine temporäre **_bstr_t** erstellt, die für den Bereich der **Open** -Methode vorhanden ist.  
@@ -554,7 +555,7 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>Umwandeln von ADO-Objekt Zeigern mit (IDispatch *)  
  Im folgenden Visual C++ Beispiel wird die Verwendung von (IDispatch *) zum Umwandeln von ADO-Objekt Zeigern veranschaulicht.  
   
-#### <a name="notes"></a>Hinweise  
+#### <a name="notes"></a>Notizen  
  Die folgenden Hinweise entsprechen den kommentierten Abschnitten im Codebeispiel.  
   
 1.  Geben Sie in einem explizit codierten **Variant**ein offenes **Verbindungs** Objekt an. Wandeln Sie es mit (IDispatch \* ) um, damit der richtige Konstruktor aufgerufen wird. Legen Sie außerdem den zweiten **_variant_t** -Parameter explizit auf den Standardwert **true**fest, sodass der Objekt Verweis Zähler richtig ist, wenn der **Recordset:: Open** -Vorgang beendet wird.  

@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromWKB (geometry-Datentyp)
 title: STGeomCollFromWKB (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 746c6f3564af7084b86babe54be88c6f25947260
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f780e521ba80822eac4de95e91b8495521e07f60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554665"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454316"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (geometry-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

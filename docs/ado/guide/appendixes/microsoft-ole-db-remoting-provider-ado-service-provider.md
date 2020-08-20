@@ -1,4 +1,5 @@
 ---
+description: Microsoft OLE DB Remoting Provider (ADO-Dienstanbieter)
 title: Microsoft OLE DB Remoting Provider (ADO-Dienstanbieter) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3ad2ebe195bdcdf97548f040f3ef7dcc1fb1a38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1576cedd9352b5f134f3886ee901d40cebeccb33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454032"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Übersicht über den Microsoft OLE DB Remoting-Anbieter
 Der Microsoft OLE DB Remoting-Anbieter ermöglicht einem lokalen Benutzer auf einem Client Computer das Aufrufen von Datenanbietern auf einem Remote Computer. Geben Sie die Datenanbieter Parameter für den Remote Computer so an, als wären Sie ein lokaler Benutzer auf dem Remote Computer. Geben Sie dann die Parameter an, die vom Remote Anbieter für den Zugriff auf den Remote Computer verwendet werden. Sie können dann auf den Remote Computer zugreifen, als handele es sich um einen lokalen Benutzer.
 
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.
 
 ## <a name="provider-keyword"></a>Provider-Schlüsselwort
  Um den OLE DB Remoting-Anbieter aufzurufen, geben Sie das folgende Schlüsselwort und den Wert in der Verbindungs Zeichenfolge an. (Beachten Sie den Leerraum im Anbieter Namen.)
@@ -37,7 +38,7 @@ Der Microsoft OLE DB Remoting-Anbieter ermöglicht einem lokalen Benutzer auf ei
 ## <a name="additional-keywords"></a>Zusätzliche Schlüsselwörter
  Wenn dieser Dienstanbieter aufgerufen wird, sind die folgenden zusätzlichen Schlüsselwörter relevant.
 
-|Stichwort|Beschreibung|
+|Schlüsselwort|BESCHREIBUNG|
 |-------------|-----------------|
 |**Data Source**|Gibt den Namen der Remote Datenquelle an. Sie wird zur Verarbeitung an den OLE DB Remoting-Anbieter übermittelt.<br /><br /> Dieses Schlüsselwort entspricht dem [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) [Connect](../../../ado/reference/rds-api/connect-property-rds.md) -Eigenschaft des DataControl-Objekts.|
 
@@ -72,7 +73,7 @@ cn.Properties("Internet Timeout") = 5000
 ## <a name="remarks"></a>Bemerkungen
  In ADO 2,0 konnte der OLE DB Remoting-Anbieter nur im *ActiveConnection* -Parameter der **Open** -Methode des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts angegeben werden. Ab ADO 2,1 kann der Anbieter auch im *ConnectionString* -Parameter der [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt-Methode " **Open** " angegeben werden.
 
- Die Entsprechung des **RDS. **Die [SQL](../../../ado/reference/rds-api/sql-property.md) -Eigenschaft des DataControl-Objekts ist nicht verfügbar. Stattdessen wird das **Open** -method- *Quell* Argument des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts verwendet.
+ Die Entsprechung des **RDS. ** Die [SQL](../../../ado/reference/rds-api/sql-property.md) -Eigenschaft des DataControl-Objekts ist nicht verfügbar. Stattdessen wird das **Open** -method- *Quell* Argument des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts verwendet.
 
  **Hinweis** Angeben von "...; Remote Anbieter = MS Remote;... " würde ein Szenario mit vier Ebenen erstellen. Szenarien, die drei Ebenen überschreiten, wurden nicht getestet und sollten nicht benötigt werden.
 
@@ -90,5 +91,5 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
  [Übersicht über den OLE DB Remoting-Anbieter](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

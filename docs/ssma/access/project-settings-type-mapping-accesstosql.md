@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Typzuordnung) (accesstosql)
 title: Projekteinstellungen (Typzuordnung) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2b25cb2dbe5b92e0ece7ef28a842a2585ea9961d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 48054f25a5c7156a6d9d25d4770d19437d9dbadf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454302"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Projekteinstellungen (Typzuordnung) (accesstosql)
 Mit den Projekteinstellungen für die Typzuordnung können Sie Standardtypmappings für das SSMA-Projekt festlegen. Sie können auch Typzuordnungen für einzelne Datenbankobjekte angeben. Weitere Informationen finden Sie unter [Zuordnung von Quell-und Ziel Datentypen](mapping-source-and-target-data-types-accesstosql.md).  
@@ -32,7 +33,7 @@ Die Typzuordnung ist in den Dialogfeldern **Projekteinstellungen** und **Standar
   
 -   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die typzuordnungseinstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp, für den die Einstellungen angezeigt werden müssen/Changed in der Dropdown Liste **Migrations Ziel Version** aus, und klicken Sie im linken Bereich auf **Typzuordnung** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Quelltyp**  
 Der zuzuordnende Zugriffs Datentyp.  
   

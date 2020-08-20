@@ -1,4 +1,5 @@
 ---
+description: sys.master_files (Transact-SQL)
 title: sys. master_files (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/10/2016
@@ -20,11 +21,12 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c30a4bba2eed0e8709b7d99d745dd51607080b9
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 52cbf9cab6e8a9d77e7bdb0d079f5c3341ec0fed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455266"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -36,7 +38,7 @@ ms.locfileid: "86091814"
 |database_id|**int**|ID der Datenbank, auf die sich diese Datei bezieht Der masterdatabase_id ist immer 1.|  
 |file_id|**int**|ID der Datei in der Datenbank Die ID der primären Datei ist immer 1.|  
 |file_guid|**uniqueidentifier**|Der eindeutige Bezeichner der Datei.<br /><br /> NULL = die Datenbank wurde von einer früheren Version von aktualisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (gültig für SQL Server 2005 und früher).|  
-|Typ|**tinyint**|Dateityp:<br /><br /> 0 = Zeilen<br /><br /> 1 = Protokoll<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Volltext (Volltextkataloge vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; Volltextkataloge, die auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher aktualisiert oder darin erstellt wurden, geben den Dateityp 0 zurück.)|  
+|type|**tinyint**|Dateityp:<br /><br /> 0 = Zeilen<br /><br /> 1 = Protokoll<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Volltext (Volltextkataloge vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; Volltextkataloge, die auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher aktualisiert oder darin erstellt wurden, geben den Dateityp 0 zurück.)|  
 |type_desc|**nvarchar(60)**|Beschreibung des Dateityps:<br /><br /> ROWS<br /><br /> PROTOKOLL<br /><br /> FILESTREAM<br /><br /> FULLTEXT (Volltextkataloge vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].)|  
 |data_space_id|**int**|Die ID des Datenspeicherplatzes, zu dem diese Datei gehört. Der Datenspeicherplatz ist eine Dateigruppe.<br /><br /> 0 = Protokolldateien|  
 |name|**sysname**|Logischer Name der Datei in der Datenbank|  
@@ -72,10 +74,10 @@ ms.locfileid: "86091814"
  Zum Anzeigen der entsprechenden Zeile ist mindestens eine der Berechtigungen CREATE DATABASE, ALTER ANY DATABASE oder VIEW ANY DEFINITION erforderlich.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Katalog Sichten für Datenbanken und Dateien &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [Datenbanken und Dateikatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Dateistatus](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. database_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

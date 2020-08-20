@@ -1,4 +1,5 @@
 ---
+description: Massenladen von Daten in Tabellen in einer Mergeveröffentlichung
 title: Massenladen von Daten in Tabellen in einer Mergeveröffentlichung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cc2a57e7ce3323b2982ab862f73e0188174e8aa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d94dba664453cc559133c6dad1bc4fce7eada45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455639"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication"></a>Massenladen von Daten in Tabellen in einer Mergeveröffentlichung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Beim Laden von Daten in Tabellen unter Berücksichtigung der Informationen in [bcp Utility](../../tools/bcp-utility.md) oder mithilfe des [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) -Befehls werden die Mergereplikationstrigger, die die internen Überwachungsdaten in der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) -Systemtabelle verwalten, standardmäßig nicht ausgelöst. Sie haben die Möglichkeit, das Auslösen der Mergereplikationstrigger beim Laden der Daten zu erzwingen, oder Sie können die generierten Replikationsmetadaten programmgesteuert nach dem Massenkopiervorgang mithilfe gespeicherter Replikationsprozeduren einfügen.  
+   Beim Laden von Daten in Tabellen mit dem [Hilfsprogramm bcp](../../tools/bcp-utility.md) oder dem [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)-Befehl werden die Mergereplikationstrigger, die die internen Überwachungsdaten in der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)-Systemtabelle verwalten, standardmäßig nicht ausgelöst. Sie haben die Möglichkeit, das Auslösen der Mergereplikationstrigger beim Laden der Daten zu erzwingen, oder Sie können die generierten Replikationsmetadaten programmgesteuert nach dem Massenkopiervorgang mithilfe gespeicherter Replikationsprozeduren einfügen.  
   
 ### <a name="to-bulk-load-data-into-tables-published-by-merge-replication-using-the-bcp-utility"></a>So können Sie mit dem Hilfsprogramm "bcp" Daten per Massenladevorgang in mithilfe der Mergereplikation veröffentlichte Tabellen laden  
   

@@ -1,4 +1,5 @@
 ---
+description: SQL-Ablaufverfolgung
 title: SQL-Ablaufverfolgung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/27/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9941f85f14d5b1f820ad7166a7bb106db4bf0fb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7368f8e10c38008836d86d7dea14d2ab8add4a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455327"
 ---
 # <a name="sql-trace"></a>SQL-Ablaufverfolgung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -116,7 +117,7 @@ Die SQL-Ablaufverfolgung verwendet Datenspalten in der Ablaufverfolgungsausgabe,
 |**OwnerID**|58|Nur für Sperrereignisse. Der Typ des Objekts, das eine Sperre aufweist.|  
 |**OwnerName**|37|Der Datenbank-Benutzername des Objektbesitzers.|  
 |**ParentName**|59|Der Name des Schemas, in dem sich dieses Objekt befindet.|  
-|**Berechtigungen**|19|Der ganzzahlige Wert, der den Typ der überprüften Berechtigungen darstellt. Werte:<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (nur Prozeduren)<br /><br /> **4096** = SELECT ANY (mindestens eine Spalte)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
+|**Berechtigungen**|19|Der ganzzahlige Wert, der den Typ der überprüften Berechtigungen darstellt. Gültige Werte:<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (nur Prozeduren)<br /><br /> **4096** = SELECT ANY (mindestens eine Spalte)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|Der Name des OLE DB-Anbieters.|  
 |**Reads**|16|Die Anzahl der Lesevorgänge auf dem logischen Datenträger, die vom Server aufgrund dieses Ereignisses ausgeführt werden. Hierzu zählen alle Lesevorgänge aus Tabellen und Puffern während der Ausführung der Anweisung.|  
 |**RequestID**|49|Die ID der Anforderung, die die Anweisung enthält.|  
@@ -130,12 +131,12 @@ Die SQL-Ablaufverfolgung verwendet Datenspalten in der Ablaufverfolgungsausgabe,
 |**SqlHandle**|63|64-Bit-Hash, der auf dem Text einer Ad-hoc-Abfrage oder der Datenbank- und Objekt-ID eines SQL-Objekts basiert. Dieser Wert kann an **sys.dm_exec_sql_text()** übergeben werden, um den dazugehörigen SQL-Text abzurufen.|  
 |**StartTime**|14|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|  
 |**State**|30|Der Fehlerstatuscode.|  
-|**Erfolgreich**|23|Gibt an, ob das Ereignis erfolgreich war. Mögliche Werte sind:<br /><br /> **1** = Erfolg<br /><br /> **0** = Fehler<br /><br /> Eine **1** bedeutet z. B. eine erfolgreiche Berechtigungsüberprüfung, und **0** bedeutet einen Fehler bei dieser Überprüfung.|  
+|**Erfolgreich**|23|Gibt an, ob das Ereignis erfolgreich war. Mögliche Werte:<br /><br /> **1** = Erfolg<br /><br /> **0** = Fehler<br /><br /> Eine **1** bedeutet z. B. eine erfolgreiche Berechtigungsüberprüfung, und **0** bedeutet einen Fehler bei dieser Überprüfung.|  
 |**TargetLoginName**|42|Für Aktionen, die auf einen Anmeldenamen abzielen (z. B. das Hinzufügen eines neuen Anmeldenamens), der Anmeldename, auf den abgezielt wird.|  
 |**TargetLoginSid**|43|Für Aktionen, die auf einen Anmeldenamen abzielen (z. B. das Hinzufügen eines neuen Anmeldenamens), die SID, auf die abgezielt wird.|  
 |**TargetUserName**|39|Für Aktionen, die auf einen Datenbankbenutzer abzielen (z. B. das Erteilen von Berechtigungen für einen Benutzer), der Name des Benutzers.|  
 |**TextData**|1|Der Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird. Wenn Sie jedoch für eine parametrisierte Abfrage eine Ablaufverfolgung ausführen, werden in der **TextData** -Spalte die Variablen nicht mit Datenwerten angezeigt.|  
-|**Transaction ID**|4|Die vom System zugewiesene ID der Transaktion.|  
+|**TransactionID**|4|Die vom System zugewiesene ID der Transaktion.|  
 |**Typ**|57|Der ganzzahlige Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
 |**Writes**|17|Die Anzahl physischer Schreibvorgänge auf dem Datenträger, die vom Server aufgrund des Ereignisses ausgeführt werden.|  
 |**XactSequence**|50|Ein Token zur Beschreibung der aktuellen Transaktion.|  

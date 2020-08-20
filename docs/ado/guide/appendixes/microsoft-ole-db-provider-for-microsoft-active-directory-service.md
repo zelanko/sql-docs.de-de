@@ -1,4 +1,5 @@
 ---
+description: Microsoft OLE DB-Anbieter für Microsoft Active Directory Service
 title: Microsoft OLE DB-Anbieter für Microsoft Active Directory Service | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5a2513d8440adedaa0faecae2b544c9ea99bef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454122"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB-Anbieter für Microsoft Active Directory Service
 Der ADSI-Anbieter (Active Directory Service Interfaces) ermöglicht ADO das Herstellen einer Verbindung mit heterogenen Verzeichnisdiensten über ADSI. Dies ermöglicht ADO-Anwendungen einen schreibgeschützten Zugriff auf die Verzeichnisdienste Microsoft Windows NT 4,0 und Microsoft Windows 2000, zusätzlich zu allen LDAP-kompatiblen Verzeichnisdienst-und Novell-Verzeichnisdiensten. ADSI selbst basiert auf einem Anbieter Modell. wenn es also einen neuen Anbieter gibt, der Zugriff auf ein anderes Verzeichnis bietet, kann die ADO-Anwendung nahtlos darauf zugreifen. Der ADSI-Anbieter ist frei Thread-und Unicode-fähig.  
@@ -43,7 +44,7 @@ ADSDSOObject
   
  Die Zeichenfolge besteht aus den folgenden Schlüsselwörtern.  
   
-|Stichwort|BESCHREIBUNG|  
+|Schlüsselwort|Beschreibung|  
 |-------------|-----------------|  
 |**Anbieter**|Gibt den OLE DB Anbieter für Active Directory Dienst an.|  
 |**Benutzer-ID**|Gibt den Benutzernamen an. Wenn dieses Schlüsselwort weggelassen wird, wird die aktuelle Anmeldung verwendet.|  
@@ -59,12 +60,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |*Fasst*|Gibt das **ADsPath** -Objekt an, aus dem die Suche gestartet werden soll (d. h. der Stamm der Suche).|  
 |*Filter*|Gibt den Suchfilter im RFC 1960-Format an.|  
 |*Attribute*|Gibt eine durch Trennzeichen getrennte Liste von Attributen an, die zurückgegeben werden sollen.|  
-|*Umfang*|Dies ist optional. Eine **Zeichenfolge** , die den Suchbereich angibt. Kann eines der folgenden Elemente sein:<br /><br /> -Base: sucht nur nach dem Basisobjekt (Stamm der Suche).<br />-Onelevel-nur eine Ebene suchen.<br />-Subtree: Durchsuchen Sie die gesamte Unterstruktur.|  
+|*Umfang*|Optional. Eine **Zeichenfolge** , die den Suchbereich angibt. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> -Base: sucht nur nach dem Basisobjekt (Stamm der Suche).<br />-Onelevel-nur eine Ebene suchen.<br />-Subtree: Durchsuchen Sie die gesamte Unterstruktur.|  
   
  Beispiel:  
   
@@ -120,8 +121,8 @@ objectClass='user' AND objectCategory='Person'"
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Nein|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Nein|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|  
-|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|  
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Ja|  
+|[Klonen](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|  
+|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|  
 |[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|  
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Ja|  

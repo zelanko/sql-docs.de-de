@@ -1,4 +1,5 @@
 ---
+description: Übersicht über den Microsoft OLE DB Simple-Anbieter
 title: Microsoft OLE DB Simple-Anbieter | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e36648fe42024502316d65e3cf27412b907ffc2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454022"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Übersicht über den Microsoft OLE DB Simple-Anbieter
 Der Microsoft OLE DB Simple Provider (OSP) ermöglicht ADO den Zugriff auf alle Daten, für die ein Anbieter mithilfe des [OSP-Toolkits (OLE DB Simple Provider)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)geschrieben wurde. Einfache Anbieter sind für den Zugriff auf Datenquellen vorgesehen, die nur grundlegende OLE DB Unterstützung benötigen, wie z. b. in-Memory-Arrays oder XML-Dokumente.
@@ -44,15 +45,15 @@ MSDAOSP
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Stichwort|Beschreibung|
+|Schlüsselwort|Beschreibung|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für SQL Server an.|
 |**Data Source**|Gibt den Namen eines Servers an.|
 
 ## <a name="xml-document-example"></a>Beispiel für XML-Dokument
- Der OLE DB Simple Provider (OSP) in MDAC 2,7 oder höher und Windows Data Access Components (Windows DAC) wurde verbessert, um das Öffnen von hierarchischen ADO- **Recordsets** über beliebige XML-Dateien zu unterstützen. Diese XML-Dateien enthalten möglicherweise das ADO-XML-persistenzschema, sind jedoch nicht erforderlich. Dies wurde durch Verbinden des OSP mit der **MSXML2. dll implementiert.** Daher ist **MSXML2. dll** oder höher erforderlich.
+ Der OLE DB Simple Provider (OSP) in MDAC 2,7 oder höher und Windows Data Access Components (Windows DAC) wurde verbessert, um das Öffnen von hierarchischen ADO- **Recordsets** über beliebige XML-Dateien zu unterstützen. Diese XML-Dateien enthalten möglicherweise das ADO-XML-persistenzschema, sind jedoch nicht erforderlich. Dies wurde durch Verbinden des OSP mit dem **MSXML2.DLL**implementiert. Daher ist **MSXML2.DLL** oder höher erforderlich.
 
- Die im folgenden Beispiel verwendete Datei **Portfolio. XML** enthält die folgende Struktur:
+ Die im folgenden Beispiel verwendete **portfolio.xml** -Datei enthält die folgende Struktur:
 
 ```console
 Portfolio

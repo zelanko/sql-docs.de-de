@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_active_catalogs (Transact-SQL)
 title: sys. dm_fts_active_catalogs (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2017
@@ -20,12 +21,12 @@ ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a7b691103a32b49ab7ef017a9820500b7ab0526
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4545e37733448d1c26b19567c05463b014482d10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454924"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,20 +56,20 @@ ms.locfileid: "85734578"
 |**row_count_in_thousands**|**int**|Geschätzte Zeilenanzahl (in Tausenden) in allen Volltextindizes in diesem Volltextkatalog.|  
 |**is_importing**|**bit**|Gibt an, ob der Volltextkatalog importiert wird:<br /><br /> 1 = Der Katalog wird importiert.<br /><br /> 2 = Der Katalog wird nicht importiert.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die is_importing Spalte war neu in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 ## <a name="permissions"></a>Berechtigungen  
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
    
 ## <a name="physical-joins"></a>Physische Joins  
  ![Wesentliche Joins dieser dynamischen Verwaltungssicht](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "Wesentliche Joins dieser dynamischen Verwaltungssicht")  
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|From|To|Beziehung|  
+|Von|An|Beziehung|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|1:1|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|1:1|  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_server_services (Transact-SQL)
 title: sys. dm_server_services (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/07/2018
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 728eb088f02d338d5ac9d22f2b0cb5f2127450e6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d281809133228d4af21c92ed06544a6143509e12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454799"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85898617"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|Der Name des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -, Volltext-oder SQL Server-Agent Dienstanbieter. Lässt keine NULL-Werte zu.|  
-|startup_type|**int**|Gibt den Startmodus des Dienstes an. Im folgenden sind die möglichen Werte und ihre entsprechenden Beschreibungen aufgeführt.<br /><br /> 0: Sonstige<br />1: Sonstige<br />2: automatisch<br />3: manuell<br />4: deaktiviert<br /><br /> Lässt NULL-Werte zu.|  
+|startup_type|**int**|Gibt den Startmodus des Diensts an. Im folgenden sind die möglichen Werte und ihre entsprechenden Beschreibungen aufgeführt.<br /><br /> 0: Sonstige<br />1: Sonstige<br />2: automatisch<br />3: manuell<br />4: deaktiviert<br /><br /> Lässt NULL-Werte zu.|  
 |startup_type_desc|**nvarchar(256)**|Beschreibt den Startmodus des Diensts. Im folgenden sind die möglichen Werte und ihre entsprechenden Beschreibungen aufgeführt.<br /><br /> Sonstige: Sonstige (Start Start)<br />Sonstiges: Sonstiges (Systemstart)<br />Automatisch: automatisch starten<br />Manuell: Start nach Bedarf<br />Deaktiviert: deaktiviert<br /><br /> Lässt keine NULL-Werte zu.|  
 |status|**int**|Zeigt den aktuellen Status des Diensts an. Im folgenden sind die möglichen Werte und ihre entsprechenden Beschreibungen aufgeführt.<br /><br /> 1: beendet<br />2: Sonstige (Start ausstehend)<br />3: Sonstige (ausstehenden Vorgang nicht mehr)<br />4: wird ausgeführt<br />5: Sonstige (ausstehende Fortsetzung)<br />6: Sonstige (Anhalten steht aus)<br />7: angehalten<br /><br /> Lässt NULL-Werte zu.|  
 |status_desc|**nvarchar(256)**|Beschreibt den aktuellen Status des Diensts. Im folgenden sind die möglichen Werte und ihre entsprechenden Beschreibungen aufgeführt.<br /><br /> Beendet: der Dienst wurde beendet.<br />Sonstige (Startvorgang steht aus): der Dienst wird gerade gestartet.<br />Sonstige (Stop-Vorgang steht aus): der Dienst wird gerade beendet.<br />Wird ausgeführt: der Dienst wird ausgeführt.<br />Sonstige (Continue-Vorgänge ausstehend): der Dienst befindet sich im Status "Ausstehend".<br />Sonstige (ausstehende Pause): der Dienst wird gerade angehalten.<br />Angehalten: der Dienst wurde angehalten.<br /><br /> Lässt keine NULL-Werte zu.|  

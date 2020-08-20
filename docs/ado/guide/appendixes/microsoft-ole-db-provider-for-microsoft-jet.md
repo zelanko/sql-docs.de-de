@@ -1,4 +1,5 @@
 ---
+description: Übersicht über Microsoft OLE DB-Anbieter für Microsoft Jet
 title: Microsoft OLE DB-Anbieter für Microsoft Jet | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 204aca25a330dd912e1a9354adc92bbb7c58f847
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 822c9f6ef6aebe5e32bb37e4c89a9bb4e6d7db68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454072"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für Microsoft Jet
 Der OLE DB Anbieter für Microsoft Jet ermöglicht ADO den Zugriff auf Microsoft Jet-Datenbanken.
@@ -42,7 +43,7 @@ Microsoft.Jet.OLEDB.4.0
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Stichwort|BESCHREIBUNG|
+|Schlüsselwort|Beschreibung|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für Microsoft Jet an.|
 |**Data Source**|Gibt den Daten bankpfad und den Dateinamen an (z `c:\Northwind.mdb` . b.).|

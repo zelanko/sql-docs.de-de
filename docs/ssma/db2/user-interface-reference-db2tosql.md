@@ -1,4 +1,5 @@
 ---
+description: Referenz zur Benutzeroberfläche (DB2ToSQL)
 title: Referenz zur Benutzeroberfläche (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c01e871490f5362e610339c6626252c700eea3f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fa7ecb8749fb0b5a6f9a105393e3cb20a41456a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454162"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referenz zur Benutzeroberfläche (DB2ToSQL)
 Dieser Abschnitt enthält Hilfe Themen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für DB2.  
@@ -22,7 +23,7 @@ Dieser Abschnitt enthält Hilfe Themen für [!INCLUDE[ssNoVersion](../../include
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 In der folgenden Tabelle sind die SSMA-Dialogfelder aufgeführt:  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-|-|  
 |[Erweiterte Objektauswahl &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Verwenden Sie das Dialogfeld **Erweiterte Objektauswahl** , um mithilfe von Filterkriterien Datenbankobjekte zu suchen, und wählen Sie diese Objekte aus, oder löschen Sie Sie.|  
 |[Bewertungsbericht &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Verwenden Sie den Bewertungsbericht, um die Ergebnisse der Konvertierung von DB2-Objekten in die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax anzuzeigen und um die Zeit und Komplexität einer Migration zu einzuschätzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

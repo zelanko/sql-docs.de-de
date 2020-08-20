@@ -1,4 +1,5 @@
 ---
+description: Erstellen, Aufbauen und Abfragen von geography-Instanzen
 title: Erstellen, Aufbauen und Abfragen von geography-Instanzen | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ab74d3cb24118b147743165d6db221ea337629
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 271e1135cddfb775432660c1d4385753e95fbf16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455472"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Erstellen, Aufbauen und Abfragen von geography-Instanzen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Der Datentyp für räumliche Geografiedaten, **geography**, stellt Daten in einem Erdkugel-Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als .NET CLR-Datentyp (Common Language Runtime) implementiert. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **geography** speichert elliptische Daten (Globusmodell) wie GPS-Koordinaten in Längen- und Breitengraden.  
+   Der Datentyp für räumliche Geografiedaten, **geography**, stellt Daten in einem Erdkugel-Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als .NET CLR-Datentyp (Common Language Runtime) implementiert. Der -Datentyp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** speichert elliptische Daten (Globusmodell) wie GPS-Koordinaten in Längen- und Breitengraden.  
   
  Der **geography** -Typ ist vordefiniert und in jeder Datenbank verfügbar. Sie können Tabellenspalten des **geography** -Typs in der gleichen Weise erstellen und **geography** -Daten in der gleichen Weise verwenden wie andere vom System bereitgestellte Typen.  
   
@@ -270,7 +271,7 @@ SELECT @result = @geog1.STIntersection(@geog2);
 SELECT @result.STAsText();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

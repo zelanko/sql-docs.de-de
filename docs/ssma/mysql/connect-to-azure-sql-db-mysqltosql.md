@@ -1,4 +1,5 @@
 ---
+description: Herstellen einer Verbindung mit der Azure SQL-Datenbank (mysqlto SQL)
 title: Herstellen einer Verbindung mit Azure SQL-Datenbank (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7180e123572016661fa4de4a2b38a12f8480d89c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cf3112f6b431fae9149df76464ed576f89a51dd1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454132"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>Herstellen einer Verbindung mit der Azure SQL-Datenbank (mysqlto SQL)
 Verwenden Sie das Dialogfeld mit SQL Azure verbinden, um eine Verbindung mit der Datenbank in Azure SQL-Datenbank herzustellen, die Sie migrieren möchten.  
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit SQL Azure verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl **erneut eine Verbindung mit SQL Azure her.**  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Servername**  
   
 Geben Sie den Server Namen für die Verbindung mit SQL Azure ein  

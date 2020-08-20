@@ -1,4 +1,5 @@
 ---
+description: CDC. &lt; capture_instance &gt; _CT (Transact-SQL)
 title: CDC. &lt; capture_instance &gt; _CT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/01/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce584b558be168a81e21da0762f6ea26ed798b05
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6f91c8064316c8d1fa94b88a4a5c123a652cb5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454764"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; capture_instance &gt; _CT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Die Änderungstabelle, die erstellt wird, wenn Change Data Capture für eine Quelltabelle aktiviert wird. Für jeden Einfüge- oder Löschvorgang, der in der Quelltabelle ausgeführt wird, gibt die Tabelle eine Zeile zurück, für jeden Updatevorgang in der Quelltabelle gibt sie zwei Zeilen zurück. Wird der Name der Änderungstabelle bei der Aktivierung der Quelltabelle nicht angegeben, wird der Name abgeleitet. Das Format des Namens ist CDC. *capture_instance*_CT, wobei *capture_instance* der Schema Name der Quell Tabelle und der Name der Quell Tabelle im Format *schema_table*ist. Wenn beispielsweise die Tabelle **Person. Address** in der **AdventureWorks** -Beispieldatenbank für Change Data Capture aktiviert ist, ist der Name der abgeleiteten Änderungs Tabelle **CDC. Person_Address_CT**.  
   
- Es wird empfohlen, **die Systemtabellen nicht direkt abzufragen**. Führen Sie stattdessen die Funktionen [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) und [CDC. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>aus.  
+ Es wird empfohlen, **die Systemtabellen nicht direkt abzufragen**. Führen Sie stattdessen die Funktionen [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) und [CDC. fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>aus.  
   
 
   
@@ -38,12 +39,12 @@ ms.locfileid: "85890648"
 |**__$start_lsn**|**binary(10)**|Protokollfolgenummer (LSN, Log Sequence Number), die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Wenn z. b. bei einem Löschvorgang in der Quell Tabelle zwei Zeilen entfernt werden, enthält die Änderungs Tabelle zwei Zeilen mit demselben Wert von **__ $ start_lsn** .|  
 |**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hat diese Spalte immer den Wert NULL.|  
 |**__$seqval**|**binary(10)**|Sequenzwert, der verwendet wird, um die Zeilenänderungen innerhalb einer Transaktion zu sortieren.|  
-|**__ $-Vorgang**|**int**|Identifiziert den Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der der Änderung zugeordnet ist. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Aktualisieren (alte Werte)<br /><br /> Spaltendaten verfügen vor der Ausführung der UPDATE-Anweisung über Zeilenwerte.<br /><br /> 4 = Aktualisieren (neue Werte)<br /><br /> Spaltendaten verfügen nach der Ausführung der UPDATE-Anweisung über Zeilenwerte.|  
+|**__$operation**|**int**|Identifiziert den Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der der Änderung zugeordnet ist. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Aktualisieren (alte Werte)<br /><br /> Spaltendaten verfügen vor der Ausführung der UPDATE-Anweisung über Zeilenwerte.<br /><br /> 4 = Aktualisieren (neue Werte)<br /><br /> Spaltendaten verfügen nach der Ausführung der UPDATE-Anweisung über Zeilenwerte.|  
 |**__$update_mask**|**varbinary(128)**|Eine Bitmaske, die auf den Spalten Ordnungen der Änderungs Tabelle basiert, die die geänderten Spalten identifiziert.|  
 |*\<captured source table columns>*|Variiert|Bei den verbleibenden Spalten in der Änderungstabelle handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Tabellen identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle in diese Tabelle aufgenommen.|  
 |**__ $ command_id** |**int** |Verfolgt die Reihenfolge der Vorgänge innerhalb einer Transaktion. |  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 
 Die Spalte " `__$command_id` Spalte war" wurde in einem kumulativen Update in den Versionen 2012 bis 2016 eingeführt. Informationen zur Version und zum Herunterladen finden Sie im KB-Artikel 3030352 unter [Korrektur: die Änderungs Tabelle wird nach dem Aktivieren von Change Data Capture für eine Microsoft SQL Server Datenbank falsch für aktualisierte Zeilen angeordnet](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Weitere Informationen finden Sie unter unter [Brechung der CDC-Funktion nach dem Upgrade auf das neueste Cu für SQL Server 2012, 2014 und 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 

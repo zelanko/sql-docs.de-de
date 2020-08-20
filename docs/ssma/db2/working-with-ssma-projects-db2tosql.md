@@ -1,4 +1,5 @@
 ---
+description: Arbeiten mit SSMA-Projekten (DB2ToSQL)
 title: Arbeiten mit SSMA-Projekten (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d3835e8988a04082d0f4666e0564029de3f767a9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2454ec9d594977a89ddf867645bc7e2d8fe26e57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454152"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Arbeiten mit SSMA-Projekten (DB2ToSQL)
 Wenn Sie DB2-Datenbanken zu migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , erstellen Sie zunächst ein SSMA-Projekt. Das Projekt ist eine Datei, die die folgenden Informationen enthält:  
@@ -23,7 +24,7 @@ Wenn Sie DB2-Datenbanken zu migrieren möchten [!INCLUDE[ssNoVersion](../../incl
   
 -   Metadaten zur Ziel Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die migrierten Objekte und Daten empfängt.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verbindungsinformationen.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindungsinformationen.  
   
 -   Projekteinstellungen.  
   
@@ -71,11 +72,11 @@ Wenn Sie Daten aus DB2-Datenbanken zu migrieren möchten [!INCLUDE[ssNoVersion](
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL-Datenbank  
+    -   Azure SQL-Datenbank  
   
 ## <a name="customizing-project-settings"></a>Anpassen von Projekteinstellungen  
 Zusätzlich zum Definieren von Standard Projekteinstellungen, die für alle neuen SSMA-Projekte gelten, können Sie die Einstellungen für jedes Projekt anpassen. Weitere Informationen finden Sie unter [Festlegen von Projektoptionen &#40;oracleto SQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md) und verwandten Abschnitten.  

@@ -1,4 +1,5 @@
 ---
+description: ADO-Fehlerreferenz
 title: ADO-Fehler Referenz | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ec9df42f3aee56d06883478e365fffcb71790d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453862"
 ---
 # <a name="ado-errors"></a>ADO-Fehler
 Die **ErrorValueEnum** -Konstante beschreibt die ADO-Fehler Werte. Eine umfassende Auflistung dieser Enumerationskonstanten, einschließlich der Werte, finden Sie unter [Anhang B: ADO-Fehler](../../../ado/guide/appendixes/appendix-b-ado-errors.md). In diesem Abschnitt werden einige der interessanteren Fehler erläutert und einige bestimmte Situationen erläutert, die Sie lösen können, oder Lösungen zur Behebung des Problems. Die " **ErrorValueEnum** "-Konstante und die kurze positive Dezimalzahl werden aufgelistet.
 
-|Number|ErrorValueEnum-Konstante|Beschreibung/mögliche Ursachen|
+|Zahl|ErrorValueEnum-Konstante|Beschreibung/mögliche Ursachen|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**aderrproviderfailed**|Der Anbieter konnte den angeforderten Vorgang nicht ausführen.|
 |**3001**|**aderrinvalidargument**|Argumente weisen den falschen Typ auf, sind außerhalb des zulässigen Bereichs oder stehen in Konflikt zueinander. Dieser Fehler wird häufig durch einen typografischen Fehler in einer SQL-SELECT-Anweisung verursacht. Beispielsweise kann dieser Fehler durch einen falsch geschriebenen Feldnamen oder einen Tabellennamen generiert werden. Dieser Fehler kann auch auftreten, wenn ein Feld oder eine Tabelle in einer SELECT-Anweisung nicht im Datenspeicher vorhanden ist.|
@@ -53,8 +54,8 @@ Die **ErrorValueEnum** -Konstante beschreibt die ADO-Fehler Werte. Eine umfassen
 |**3714**|**aderrinvalidtransaction**|Die koordinierende Transaktion ist ungültig oder wurde nicht gestartet.|
 |**3715**|**aderrnotexecuting**|Der Vorgang kann nicht ausgeführt werden.|
 |**3716**|**aderrunsafeoperation**|Die Sicherheitseinstellungen auf diesem Computer verhindern den Zugriff auf eine Datenquelle in einer anderen Domäne.|
-|**3717**|**adwrnsecuritydialog**|Nur zur internen Verwendung. Verwenden Sie nicht. (Der Eintrag wurde aus Gründen der Vollständigkeit eingeschlossen. Dieser Fehler sollte nicht in Ihrem Code angezeigt werden.)|
-|**3718**|**adwrnsecuritydialogheader**|Nur zur internen Verwendung. Verwenden Sie nicht. (Der Eintrag ist aus Gründen der Vollständigkeit enthalten. Dieser Fehler sollte nicht in Ihrem Code angezeigt werden.)|
+|**3717**|**adwrnsecuritydialog**|Nur für interne Verwendung. Verwenden Sie nicht. (Der Eintrag wurde aus Gründen der Vollständigkeit eingeschlossen. Dieser Fehler sollte nicht in Ihrem Code angezeigt werden.)|
+|**3718**|**adwrnsecuritydialogheader**|Nur für interne Verwendung. Verwenden Sie nicht. (Der Eintrag ist aus Gründen der Vollständigkeit enthalten. Dieser Fehler sollte nicht in Ihrem Code angezeigt werden.)|
 |**3719**|**aderrintegrityverstoß**|Der Datenwert steht in Konflikt mit den Integritäts Einschränkungen des Felds. Ein neuer Wert für ein **Feld** führt zu einem doppelten Schlüssel. Ein Wert, der eine Seite einer Beziehung zwischen zwei Datensätzen bildet, ist möglicherweise nicht aktualisierbar.|
 |**3720**|**aderrpermissiondenied**|Unzureichende Berechtigungen verhindern das Schreiben in das Feld. Der Benutzer, der in der Verbindungs Zeichenfolge benannt ist, verfügt nicht über die erforderlichen Berechtigungen, um in ein **Feld**zu schreiben.|
 |**3721**|**aderrdataoverflow**|Der Datenwert ist zu groß, um durch den Feld Datentyp dargestellt zu werden. Ein numerischer Wert, der für das vorgesehene Feld zu groß ist, wurde zugewiesen. Ein Long Integer-Wert wurde z. b. einem kurzen ganzzahligen Feld zugewiesen.|

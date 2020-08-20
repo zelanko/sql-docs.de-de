@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobs (Transact-SQL)
 title: dbo.sysAufträge (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00bab120cd8d0e931f0aba77ce7aee694126339c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 71fc80a0c847957f52b85344139c75a397b8e6c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454733"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "85890497"
 |**job_id**|**uniqueidentifier**|Eindeutige ID des Auftrags.|  
 |**originating_server_id**|**int**|ID des Servers, von dem der Auftrag stammt.|  
 |**name**|**sysname**|Der Name des Auftrags.|  
-|**wodurch**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
-|**description**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
+|**enabled**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
+|**Beschreibung**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
 |**category_id**|**int**|ID der Auftragskategorie.|  
 |**owner_sid**|**varbinary(85)**|Sicherheits-ID (SID, System Identification Number) des Auftragsbesitzers.|  

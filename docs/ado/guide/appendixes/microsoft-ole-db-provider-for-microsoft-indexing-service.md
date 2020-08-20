@@ -1,4 +1,5 @@
 ---
+description: Übersicht über den Microsoft OLE DB-Anbieter für den Index Dienst
 title: Microsoft OLE DB-Anbieter für Microsoft-Indizierungs Dienst | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4bc6669f961e712ced994a590348604e7bd3274
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd6e4c3a60cd0c052fec7b474154684ef6c03127
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454082"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Übersicht über den Microsoft OLE DB-Anbieter für den Index Dienst
 Der Microsoft OLE DB-Anbieter für den Index Dienst von Microsoft bietet programmgesteuerten schreibgeschützten Zugriff auf Dateisystem-und Webdaten, die vom Microsoft-Indizierungs Dienst indiziert werden. ADO-Anwendungen können SQL-Abfragen ausgeben, um Inhalt und Datei Eigenschafts Informationen abzurufen.
@@ -44,7 +45,7 @@ MSIDXS
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Stichwort|Beschreibung|
+|Schlüsselwort|Beschreibung|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für den Microsoft-Indizierungs Dienst an. In der Regel ist dies das einzige in der Verbindungs Zeichenfolge angegebene Schlüsselwort.|
 |**Data Source**|Gibt den Namen des Index Dienst Katalogs an. Wenn dieses Schlüsselwort nicht angegeben wird, wird der Standardsystem Katalog verwendet.|
@@ -99,8 +100,8 @@ MSIDXS
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Ja|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Nein|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|
-|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Ja|
+|[Klonen](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|
+|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|
 |[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Ja|

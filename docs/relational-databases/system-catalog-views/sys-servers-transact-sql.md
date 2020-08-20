@@ -1,4 +1,5 @@
 ---
+description: sys.servers (Transact-SQL)
 title: sys. Servers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/16/2020
@@ -20,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4ebbcdb8fa1f13d7c0d40c4ac66ac1d3453dffb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f588f0c472432cc4dc68819d32ee57cf65a59358
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455192"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85894934"
 |**data_source**|**nvarchar(4000)**|Die Verbindungseigenschaft der OLE DB-Datenquelle.|  
 |**location**|**nvarchar(4000)**|Die Verbindungseigenschaft des OLE DB-Standortes. Ist NULL, wenn nichts angegeben wird.|  
 |**provider_string**|**nvarchar(4000)**|Die Verbindungseigenschaft der OLE DB-Anbieterzeichenfolge.<br /><br /> Ist NULL, wenn der Aufrufer nicht über die `ALTER ANY LINKED SERVER` Berechtigung verfügt.|  
-|**sieren**|**sysname**|OLE DB Catalog-Verbindungs Eigenschaft. Ist NULL, wenn nichts angegeben wird.|  
+|**catalog**|**sysname**|OLE DB Catalog-Verbindungs Eigenschaft. Ist NULL, wenn nichts angegeben wird.|  
 |**connect_timeout**|**int**|Das Verbindungstimeout in Sekunden. Ist 0, wenn nichts angegeben wird.|  
 |**query_timeout**|**int**|Abfragetimeout in Sekunden. Ist 0, wenn nichts angegeben wird.|  
 |**is_linked**|**bit**|0 = Ist ein Server im alten Format, der mithilfe von **sp_addserver**hinzugefügt wurde und ein anderes Verhalten hinsichtlich RPC und verteilter Transaktionen aufweist.<br /><br /> 1 = Standardverbindungsserver.|  
@@ -74,9 +75,9 @@ ms.locfileid: "85894934"
 - Mitgliedschaft in den festen Serverrollen **setupadmin** oder **sysadmin**  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Verknüpfte Server-Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
  

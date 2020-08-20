@@ -1,4 +1,5 @@
 ---
+description: Katalog Sichten für die Datenbank-Spiegelungs Zeugen-sys. database_mirroring_witnesses
 title: sys. database_mirroring_witnesses (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 303fe8085ae4d103ede7715dcbb46e456db8f01f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c27dc5a6caacf7a1cde44a54fe6383fc36ea516
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455300"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>Katalog Sichten für die Datenbank-Spiegelungs Zeugen-sys. database_mirroring_witnesses
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85752945"
 |**principal_server_name**|**sysname**|Name des Partnerservers, dessen Datenbankkopie derzeit die Prinzipaldatenbank ist.|  
 |**mirror_server_name**|**sysname**|Name des Partnerservers, dessen Datenbankkopie derzeit die Spiegeldatenbank ist.|  
 |**safety_level**|**tinyint**|Transaktionssicherheitseinstellung für Updates der Spiegeldatenbank:<br /><br /> 0 = Unbekannter Status<br /><br /> 1 = Aus (asynchron)<br /><br /> 2 = Vollständig (synchron)<br /><br /> Die Verwendung eines Zeugen für das automatische Failover setzt die vollständige Transaktionssicherheit (Standardeinstellung) voraus.|  
-|**safety_level_desc**|**nvarchar(60)**|Beschreibung der Sicherheitsgarantie für Updates der Spiegeldatenbank.<br /><br /> UNBEKANNT<br /><br /> OFF<br /><br /> FULL|  
+|**safety_level_desc**|**nvarchar(60)**|Beschreibung der Sicherheitsgarantie für Updates der Spiegeldatenbank.<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
 |**safety_sequence_number**|**int**|Aktualisieren Sie die Sequenznummer für Änderungen an **safety_level**.|  
 |**role_sequence_number**|**int**|Updatesequenznummer für Änderungen an Prinizipal-/Spiegelrollen der Spiegelungspartner.|  
 |**mirroring_guid**|**uniqueidentifier**|Bezeichner der Spiegelungspartnerschaft.|  
@@ -55,9 +56,9 @@ ms.locfileid: "85752945"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenbank-Spiegelungs Zeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)   
+ [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [sys. database_mirroring &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
- [sys. database_mirroring_endpoints &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
+ [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [FAQ: Abfragen des SQL Server-Systemkatalogs](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_schedulers (Transact-SQL)
 title: sys. dm_os_schedulers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ee5f6aca36766edd915b4b1b53c54a83c6b5a63
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2d89c460dd3e69e3fe0020463be750e9528de951
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454914"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,14 +63,14 @@ ms.locfileid: "86012048"
 |task_memory_object_address|**varbinary(8)**|Speicheradresse des Speicherobjekts des Tasks. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [sys. dm_os_memory_objects &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Macht das von SQLOS verwendete Zeitplanungsmodul-Quantum verfügbar.|  
 | total_cpu_usage_ms |**bigint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher <br><br> Gesamte von diesem Scheduler verbrauchte CPU, wie von nicht präemptiven Workern gemeldet. Lässt keine NULL-Werte zu.|
-|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Gibt die Drosselung basierend auf dem [Service Level-Ziel](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)an, ist für nicht-Azure-Versionen von immer 0 (null) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lässt NULL-Werte zu.|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Gibt die Drosselung basierend auf dem [Service Level-Ziel](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)an, ist für nicht-Azure-Versionen von immer 0 (null) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lässt NULL-Werte zu.|
 |total_scheduler_delay_ms|**bigint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher <br><br> Die Zeit zwischen dem Wechsel zwischen einem Worker und einem anderen Wechsel in. Kann darauf zurückzuführen sein, dass ein präemptiver Worker die Planung des nächsten nicht-präemptiven Workers verzögert oder aufgrund des Betriebssystems, das Threads aus anderen Prozessen plant. Lässt keine NULL-Werte zu.|
 |ideal_workers_limit|**int**|**Gilt für**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher <br><br> Wie viele Worker im Idealfall im Scheduler sein sollten. Wenn die aktuellen Worker den Grenzwert aufgrund einer unausgeglichenen Aufgaben Auslastung überschreiten, werden Sie nach dem Leerlauf gekürzt. Lässt keine NULL-Werte zu.|
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
 ## <a name="examples"></a>Beispiele  
   
@@ -136,7 +138,7 @@ active_workers_count work_queue_count
   
 -   Dem Zeitplanungsmodul `255`, das DAC darstellt, sind `3` Arbeitsthreads zugeordnet. Diese Arbeitsthreads werden beim Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet und nicht geändert. Diese Arbeitsthreads werden nur zur Verarbeitung von DAC-Abfragen verwendet. Die beiden Tasks in diesem Zeitplanungsmodul stellen einen Verbindungs-Manager und einen im Leerlauf befindlichen Arbeitsthread dar.  
   
--   `active_workers_count`stellt alle Worker dar, denen Aufgaben zugeordnet sind und die im nicht präemptiven Modus ausgeführt werden. Einige Tasks, z. B. zur Netzwerküberwachung, werden mit präemptiver Zeitplanung ausgeführt.  
+-   `active_workers_count` stellt alle Worker dar, denen Aufgaben zugeordnet sind und die im nicht präemptiven Modus ausgeführt werden. Einige Tasks, z. B. zur Netzwerküberwachung, werden mit präemptiver Zeitplanung ausgeführt.  
   
 -   Verborgene Zeitplanungsmodule verarbeiten keine typischen Benutzeranforderungen. Das DAC-Zeitplanungsmodul ist die Ausnahme. Dieses DAC-Zeitplanungsmodul verfügt über einen Thread zum Verarbeiten von Anforderungen.  
   

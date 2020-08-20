@@ -1,4 +1,5 @@
 ---
+description: Sitzungen (Native Client OLE DB-Anbieter)
 title: Sitzungen (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f75c9fec32105561ce3c07ba29aeec9b4779324
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce9c18021d474bfcb4af0e1418e432d779b9376a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455730"
 ---
 # <a name="sessions-native-client-ole-db-provider"></a>Sitzungen (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -181,7 +182,7 @@ EXIT:
 }  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Das Herstellen einer Verbindung von Native Client OLE DB-Anbieter Sitzungs Objekten mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann einen erheblichen mehr Aufwand für Anwendungen generieren, die Sitzungs Objekte ständig erstellen und freigeben. Der Aufwand kann minimiert werden, indem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Sitzungs Objekte effizient verwaltet werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB-Anbieter Anwendungen können die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung eines Sitzungs Objekts aktiv halten, indem Sie einen Verweis auf mindestens eine Schnittstelle des Objekts beibehalten.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Das Herstellen einer Verbindung von Native Client OLE DB-Anbieter Sitzungs Objekten mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann einen erheblichen mehr Aufwand für Anwendungen generieren, die Sitzungs Objekte ständig erstellen und freigeben. Der Aufwand kann minimiert werden, indem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Sitzungs Objekte effizient verwaltet werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Anwendungen können die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung eines Sitzungs Objekts aktiv halten, indem Sie einen Verweis auf mindestens eine Schnittstelle des Objekts beibehalten.  
   
  Durch Aufrechterhalten eines Pools von Verweisen auf Befehlserstellungsobjekte können aktive Verbindungen für diese Sitzungsobjekte im Pool aktiviert bleiben. Wenn Sitzungsobjekte angefordert werden, übergibt der Poolverwaltungscode einen gültigen **IDBCreateCommand**-Schnittstellenzeiger an die Anwendungsmethode, die die Sitzung anfordert. Wenn die Anwendungsmethode die Sitzung nicht mehr erfordert, gibt die Methode den Schnittstellenzeiger an den Poolverwaltungscode zurück, anstatt den Verweis der Anwendung auf das Befehlserstellungsobjekt freizugeben.  
   

@@ -1,4 +1,5 @@
 ---
+description: Erstellen, Aufbauen und Abfragen von geometry-Instanzen
 title: Erstellen, Aufbauen und Abfragen von geometry-Instanzen | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed268a5b8097b637c8a7e51eecf2e088aad58e04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d6a82ad07670a714cb701498224cb20d0207862
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455425"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Erstellen, Aufbauen und Abfragen von geometry-Instanzen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Der planare räumliche Datentyp **geometry**, stellt Daten in einem euklidischen (flachen) Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als CLR-Datentyp (Common Language Runtime) implementiert.  
+   Der planare räumliche Datentyp **geometry** stellt Daten in einem euklidischen (flachen) Koordinatensystem dar. Dieser Datentyp wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]als CLR-Datentyp (Common Language Runtime) implementiert.  
   
  Der **geometry** -Typ ist vordefiniert und in jeder Datenbank verfügbar. Sie können Tabellenspalten des **geometry** -Typs in der gleichen Weise erstellen und **geometry** -Daten in der gleichen Weise verwenden wie andere CLR-Typen.  
   
@@ -379,7 +380,7 @@ SELECT @result = @geom1.STIntersection(@geom2);
 SELECT @result.STAsText();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

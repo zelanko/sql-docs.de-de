@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 title: sys. dm_tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79f609de2cc683656eb7c6b1b2db27962246bbf2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 67fc1004da354aca3eebb446300d284c85b944e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454849"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,14 +70,14 @@ sys.dm_tran_active_snapshot_database_transactions
 |**max_version_chain_traversed**|**int**|Maximale Länge der Versionskette, die durchsucht wird, um die hinsichtlich der Transaktion konsistente Version zu finden.|  
 |**average_version_chain_traversed**|**real**|Durchschnittliche Anzahl von Zeilenversionen in den durchsuchten Versionsketten.|  
 |**elapsed_time_seconds**|**bigint**|Zeitraum, der verstrichen ist, seitdem die Transaktion ihre Transaktionssequenznummer erhalten hat.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sys. dm_tran_active_snapshot_database_transactions** meldet Transaktionen, denen eine Transaktions Sequenznummer (XSN) zugewiesen ist. Die XSN wird zugewiesen, wenn die Transaktion zum ersten Mal auf den Versionsspeicher zugreift. In den folgenden Beispielen wird gezeigt, wann in einer Datenbank, die für die Momentaufnahmeisolation oder die READ COMMITTED-Isolation aktiviert ist, die die Zeilenversionsverwaltung verwendet, einer Transaktion eine XSN zugewiesen wird:  
   
 -   Wenn eine Transaktion unter der serialisierbaren Isolationsstufe ausgeführt wird, wird eine XSN zugewiesen, wenn die Transaktion zum ersten Mal eine Anweisung ausführt, die die Erstellung einer Zeilenversion verursacht, z. B. einen UPDATE-Vorgang.  
@@ -154,7 +156,7 @@ elapsed_time_seconds
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Festlegen der Transaktions Isolationsstufe &#40;Transact-SQL-&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungssichten und Funktionen in Verbindung mit Transaktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

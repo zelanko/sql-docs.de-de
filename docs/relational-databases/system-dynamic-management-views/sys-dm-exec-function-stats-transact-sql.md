@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_function_stats (Transact-SQL)
 title: sys. dm_exec_function_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/30/2019
@@ -18,12 +19,12 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: baa8bd4e62d66812d6f2ba32e4c94bc1b80da99f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454931"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "87396779"
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile, die Daten enthält, die nicht zum verbundenen Mandanten gehören, herausgefiltert.  
   
 > [!NOTE]
-> Die Ergebnisse von **sys. dm_exec_function_stats** können sich bei jeder Ausführung unterscheiden, da die Daten nur abgeschlossene Abfragen widerspiegeln, und keine, die noch aktiv sind. 
+> Die Ergebnisse von **sys. dm_exec_function_stats**  können sich bei jeder Ausführung unterscheiden, da die Daten nur abgeschlossene Abfragen widerspiegeln, und keine, die noch aktiv sind. 
 
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
@@ -75,7 +76,7 @@ ms.locfileid: "87396779"
 ## <a name="permissions"></a>Berechtigungen  
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Informationen zu den zehn wichtigsten Funktionen zurückgegeben, die nach durchschnittlich verstrichener Zeit identifiziert werden.  

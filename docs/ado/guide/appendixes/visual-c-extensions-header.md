@@ -1,4 +1,5 @@
 ---
+description: Visual C++-Erweiterungsheader
 title: Visual C++-Erweiterungs Header | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c5b4e7a3bc960882830fa447f58f74e6728a559
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 25a435b2fd4739710f208e50c1265db441d54f7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453922"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++-Erweiterungsheader
 Der folgende Header ( **icrsint. h**) beschreibt die Schnittstelle, mit der Clients Felder aus einem **Recordset** in Variablen abrufen können, die in einer Klasse definiert sind, die von **CADORecordBinding**abgeleitet wurde. Sie müssen für jedes Feld, auf das Sie zugreifen möchten, ein ADO-Bindungs Makro angeben.  

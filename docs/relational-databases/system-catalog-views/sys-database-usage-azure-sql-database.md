@@ -1,4 +1,5 @@
 ---
+description: sys.database_usage (Azure SQL-Datenbank)
 title: sys. database_usage (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4b68fbc20fb220af49036890edc2b67d1a4f7b65
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c72973c21b2e660667b2bed31d771f3ce19c43b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455263"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85724685"
   
  Die **sys. database_usage** -Sicht enthält die folgenden Spalten.  
   
-|Spaltenname|BESCHREIBUNG|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |time|Das Datum, an dem die Verwendungsereignisse eingetreten sind.|  
 |sku|Der Typ der Dienst Ebene für die Datenbank: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
@@ -45,7 +46,7 @@ ms.locfileid: "85724685"
 ## <a name="permissions"></a>Berechtigungen  
  Der schreibgeschützte Zugriff auf diese Ansicht ist für alle Benutzer verfügbar, die über Berechtigungen zum Herstellen einer Verbindung mit der **Master** -Datenbank verfügen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **sys. database_usage** -Sicht gibt eine Zeile für jeden Tag Ihres Abonnements zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  

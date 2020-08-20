@@ -1,4 +1,5 @@
 ---
+description: Absolute und relative URLs
 title: Absolute und relative URLs | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43fc1a32428f54682b8fde5dea0f0140568c482e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453912"
 ---
 # <a name="absolute-and-relative-urls"></a>Absolute und relative URLs
 Eine URL gibt den Speicherort eines Ziels an, das auf einem lokalen Computer oder einem vernetzten Computer gespeichert ist. Bei dem Ziel kann es sich um eine Datei, ein Verzeichnis, eine HTML-Seite, ein Bild, ein Programm usw. handeln.  
@@ -32,10 +33,10 @@ Eine URL gibt den Speicherort eines Ziels an, das auf einem lokalen Computer ode
   
  Ein relative URL besteht in der Regel nur aus dem *Pfad*und optional der *Ressource*, aber keinem *Schema* oder *Server*. In den folgenden Tabellen werden die einzelnen Teile des gesamten URL-Formats definiert.  
   
- *scheme*  
+ *Schema*  
  Gibt an, wie auf die *Ressource* zugegriffen werden soll.  
   
- *Servers*  
+ *server*  
  Gibt den Namen des Computers an, auf dem sich die *Ressource* befindet.  
   
  *path*  
@@ -64,7 +65,7 @@ Eine URL gibt den Speicherort eines Ziels an, das auf einem lokalen Computer ode
   
  Eine relative URL kann im *CommandText* -Parameter oder im *Source* -Parameter angegeben werden. Der relative URL stellt keinen Befehl dar, wie z. b. einen SQL-Befehl. Sie gibt lediglich die Parameter an. Der Kontext der aktiven Verbindung muss ein absolute URL sein, und der *Option* -Parameter muss auf **adCmdTableDirect**festgelegt sein.  
   
- Im folgenden Codebeispiel wird z. b. gezeigt, wie ein **Recordset** in der Datei "Readme25. txt" im Verzeichnis "winnt/system32" geöffnet wird:  
+ Im folgenden Codebeispiel wird z. b. gezeigt, wie ein **Recordset** für die Readme25.txt-Datei im Verzeichnis winnt/system32 geöffnet wird:  
   
 ```  
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

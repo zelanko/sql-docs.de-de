@@ -1,4 +1,5 @@
 ---
+description: MSreplication_queue (Transact-SQL)
 title: MSreplication_queue (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3bdbfed403a8b85a195134e053a151905efa128f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6dbd2f5d17c4bb19cf26d49ab7be8ca534e98245
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454641"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85889424"
 |**publisher_db**|**sysname**|Der Name der Veröffentlichungs Datenbank.|  
 |**ung**|**sysname**|Der Name der Veröffentlichung.|  
 |**tranid**|**sysname**|Die Transaktions-ID, unter der der Befehl in der Warteschlange ausgeführt wurde|  
-|**Daten**|**varbinary(8000)**|Der gepackte Bytedatenstrom, der Informationen zu dem in der Warteschlange aufgenommenen Befehl gespeichert hat.|  
+|**data**|**varbinary(8000)**|Der gepackte Bytedatenstrom, der Informationen zu dem in der Warteschlange aufgenommenen Befehl gespeichert hat.|  
 |**datalen**|**int**|Die Länge der Daten in Bytes.|  
 |**CommandType**|**int**|Der Typ des Befehls in der Warteschlange:<br /><br /> 1 = Benutzerbefehl in Transaktion.<br /><br /> 2 = Befehl zur Abonnementsynchronisierung.|  
 |**insertdate**|**datetime**|Das Einfügedatum.|  

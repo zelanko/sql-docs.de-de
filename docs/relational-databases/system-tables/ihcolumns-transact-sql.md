@@ -1,4 +1,5 @@
 ---
+description: IHcolumns (Transact-SQL)
 title: IHcolumns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1870e1d826fef593f5458004d424a02185028e2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0bc33419b8bb710b223150e1880002ff49681870
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454697"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85890314"
 |**mapped_nullable**|**bit**|Gibt an, ob die Spalte auf dem Abonnenten NULL-Werte akzeptiert, wobei **1** bedeutet, dass NULL-Werte akzeptiert werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Heterogene Replikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

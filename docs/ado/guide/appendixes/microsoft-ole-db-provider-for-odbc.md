@@ -1,4 +1,5 @@
 ---
+description: Übersicht über Microsoft OLE DB-Anbieter für ODBC
 title: Microsoft OLE DB-Anbieter für ODBC | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b84ce6679071cc3ea90ce23b4dcd9f8e1894bb2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ce793d1b7f62a565a19fa8efe8d11292ae5642f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454062"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für ODBC
 Für einen ADO-oder RDS-Programmierer wäre eine ideale Welt eine ideale Welt, bei der jede Datenquelle eine OLE DB-Schnittstelle verfügbar macht, sodass ADO direkt in der Datenquelle aufgerufen werden kann. Obwohl immer mehr Datenbankanbieter OLE DB-Schnittstellen implementieren, sind einige Datenquellen auf diese Weise noch nicht verfügbar. Allerdings kann auf die meisten derzeit verwendeten DBMS-Systeme über ODBC zugegriffen werden.
@@ -49,7 +50,7 @@ MSDASQL
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Stichwort|BESCHREIBUNG|
+|Schlüsselwort|Beschreibung|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für ODBC an.|
 |**DSN**|Gibt den Namen der Datenquelle an.|
@@ -204,19 +205,19 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Ja|Ja|Ja|Ja|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Ja|Ja|Ja|Ja|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Ja|Ja|Ja|Ja|
-|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Nein|Nein |Ja|Ja|
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Ja|Ja|Ja|Ja|
+|[Klonen](../../../ado/reference/ado-api/clone-method-ado.md)|Nein|Nein|Ja|Ja|
+|[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Ja|Ja|Ja|Ja|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|Ja|Ja|Ja|Ja|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Ja|Ja|Ja|Ja|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Nein |Ja|Ja|Ja|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Nein|Ja|Ja|Ja|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Ja|Ja|Ja|Ja|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Nein |Ja|Ja|Ja|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Nein|Ja|Ja|Ja|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Ja|Ja|Ja|Ja|
 |[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Ja|Ja|Ja|Ja|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Ja|Ja|Ja|Ja|
-|[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|Nein|Nein |Ja|Ja|
+|[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|Nein|Nein|Ja|Ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Ja|Ja|Ja|Ja|
 |[Aktualisieren](../../../ado/reference/ado-api/update-method.md)|Ja|Ja|Ja|Ja|
 |[Update Batch](../../../ado/reference/ado-api/updatebatch-method.md)|Ja|Ja|Ja|Ja|
@@ -430,5 +431,5 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Ausführliche Informationen zu bestimmten Implementierungs-und Funktions Informationen zum Microsoft OLE DB-Anbieter für ODBC finden Sie in der [OLE DB Programmierer-Referenz](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) , oder besuchen Sie die Website des Entwickler Centers für Datenzugriff und-Speicherung auf MSDN.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [CommandText-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [Verbindungs Objekt (](../../../ado/reference/ado-api/connection-object-ado.md) ADO) [ConnectionString-Eigenschaft (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Execute-Methode (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Parameters Collection (](../../../ado/reference/ado-api/parameters-collection-ado.md) ADO) [Properties Collection (](../../../ado/reference/ado-api/properties-collection-ado.md) ADO) [Provider Property (](../../../ado/reference/ado-api/provider-property-ado.md) [ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [unterstützt Methode](../../../ado/reference/ado-api/supports-method.md)

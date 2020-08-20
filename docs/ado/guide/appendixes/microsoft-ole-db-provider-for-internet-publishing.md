@@ -1,4 +1,5 @@
 ---
+description: Übersicht über Microsoft OLE DB-Anbieter für Internet Publishing
 title: Microsoft OLE DB-Anbieter für die Internet Veröffentlichung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 079bbefce30b5836c16394a7b8efb215725c5ce6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 051185b9b40b1f7d4472e957f3a09a8f6416c8b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454092"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für Internet Publishing
 Der Microsoft OLE DB-Anbieter für die Internet Veröffentlichung ermöglicht ADO den Zugriff auf Ressourcen, die von Microsoft FrontPage oder Microsoft Internet Information Server bereitgestellt werden. Zu den Ressourcen gehören webquell Dateien, z. b. HTML-Dateien oder Windows 2000-Webordner.
@@ -48,7 +49,7 @@ MSDAIPP.DSO
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Stichwort|BESCHREIBUNG|
+|Schlüsselwort|Beschreibung|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für die Internet Veröffentlichung an.|
 |**Datenquelle** -oder- **URL**|Gibt die URL einer Datei oder eines Verzeichnisses an, die in einem Webordner veröffentlicht wird.|

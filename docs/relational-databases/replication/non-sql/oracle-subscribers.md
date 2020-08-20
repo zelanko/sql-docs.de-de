@@ -1,4 +1,5 @@
 ---
+description: Oracle-Abonnenten
 title: Oracle-Abonnenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 40942d92f30790f896888bd71cf4523a14d1cc48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3e7b6abc6b235950fef107a870e53d827dee6f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455602"
 ---
 # <a name="oracle-subscribers"></a>Oracle-Abonnenten
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85883041"
   
      Wenn der Oracle Universal Installer abgeschlossen ist, konfigurieren Sie die Netzwerkkonnektivität mit Net Configuration Assistant. Zur Konfiguration der Netzwerkkonnektivität müssen Sie vier Informationen eingeben. Der Oracle-Datenbankadministrator, der die Netzwerkkonfiguration beim Einrichten der Datenbank und der Überwachung (Listener) konfiguriert, kann Ihnen diese Informationen geben, falls Sie sie nicht selbst besitzen. Führen Sie folgende Schritte aus:  
   
-    |Action|BESCHREIBUNG|  
+    |Aktion|BESCHREIBUNG|  
     |------------|-----------------|  
     |Identifizieren Sie die Datenbank.|Es gibt zwei Methoden, mit denen Sie die Datenbank identifizieren können. Die erste Methode besteht darin, die Oracle SID (System Identifier) zu verwenden. Die SID ist in jeder Oracle-Version verfügbar. Die zweite Methode besteht darin, den Dienstnamen zu verwenden, der ab Oracle Version 8.0 verfügbar ist. Beide Methoden basieren auf einem Wert, der beim Erstellen der Datenbank konfiguriert wird. Wichtig ist dabei, dass Sie bei der Clientnetzwerkkonfiguration dieselbe Benennungsmethode verwenden wie der Administrator beim Konfigurieren des Listeners der Datenbank.|  
     |Identifizieren Sie den Datenbankalias.|Für den Zugriff auf die Oracle-Datenbank müssen Sie einen Netzwerkalias angeben. Der Netzwerkalias ist im Wesentlichen ein Zeiger auf die während der Erstellung der Datenbank konfigurierte Remote-SID bzw. den Service Name. In manchen Oracle-Versionen und -Produkten wird er u. a. auch als "Net Service Name" oder "TNS Alias" bezeichnet. SQL*Plus fordert bei der Anmeldung zur Eingabe dieses Netzwerkalias als Parameter "Host String" auf.|  
@@ -86,7 +87,7 @@ ms.locfileid: "85883041"
   
     -   Stellen Sie sicher, dass keine leeren Zeichenfolgen als Spaltenwerte in die veröffentlichte Tabelle eingefügt werden.  
   
-    -   Verwenden Sie für den Verteilungs-Agent den Parameter **-SkipErrors**, wenn eine Fehlerbenachrichtigung im Verlaufsprotokoll des Verteilungs-Agents genügt und die Verarbeitung ansonsten fortgesetzt werden kann. Geben Sie den Oracle-Fehlercode 1400 ( **-SkipErrors1400**) an.  
+    -   Verwenden Sie für den Verteilungs-Agent den Parameter **-SkipErrors**, wenn eine Fehlerbenachrichtigung im Verlaufsprotokoll des Verteilungs-Agents genügt und die Verarbeitung ansonsten fortgesetzt werden kann. Geben Sie den Oracle-Fehlercode 1400 (**-SkipErrors1400**) an.  
   
     -   Entfernen Sie das NOT NULL-Attribut aus allen Zeichenspalten, denen eventuell leere Zeichenfolgen zugeordnet werden können, aus dem generierten CREATE TABLE-Skript, und geben Sie das geänderte Skript mithilfe des @creation_script -Parameters von [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)als benutzerdefiniertes Skript für den Artikel an.  
   
@@ -143,7 +144,7 @@ ms.locfileid: "85883041"
 |**varchar(max)**|CLOB|  
 |**xml**|NCLOB|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)  
   

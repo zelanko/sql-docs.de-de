@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_workload_groups (Transact-SQL)
 title: sys. dm_resource_governor_workload_groups (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/15/2020
@@ -20,12 +21,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1940c42143eb2a1b4112eb2dea789196938e18ed
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: dfcbcaceeb4e60a88f1ba00fa7a116629945c7e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454882"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "87397127"
 |effective_max_dop|**int**|**Gilt für**: ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br />Effektiver maximaler Grad an Parallelität für die Arbeits Auslastungs Gruppe. Lässt keine NULL-Werte zu.| 
 |total_cpu_usage_preemptive_ms|**bigint**|**Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Gesamte CPU-Zeit, die bei der Planung des präemptiven Modus für die Arbeits Auslastungs Gruppe in MS gemessen wird. Lässt keine NULL-Werte zu.<br /><br />Für die Ausführung von Code außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. erweiterte gespeicherte Prozeduren und verteilte Abfragen) muss ein Thread außerhalb der Steuerung des nicht präemptiven Zeitplanungsmoduls ausgeführt werden. Dazu wechselt ein Arbeitsthread in den präemptiven Modus.| 
 |request_max_memory_grant_percent_numeric|**float**|**Gilt für**: ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br /><br />Aktuelle Einstellung der maximalen Arbeitsspeicherzuweisung in Prozent für eine einzelne Anforderung. Lässt keine NULL-Werte zu.| 
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Diese dynamische Verwaltungssicht zeigt die Konfiguration im Arbeitsspeicher an. Verwenden Sie die [sys. resource_governor_workload_groups &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) -Katalog Sicht, um die gespeicherten Konfigurations Metadaten anzuzeigen.  

@@ -1,4 +1,5 @@
 ---
+description: Verwenden von ADO mit Skriptsprachen
 title: Verwenden von ADO mit Skriptsprachen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71057caed6d28a2923e1c3735e10d20fccc9217d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6decee7fddc4748a7d0931ab671f66b11161cc9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453992"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Verwenden von ADO mit Skriptsprachen
 In einer Skript Umgebung können Sie mithilfe von ADO Daten mithilfe von serverseitiger Skripterstellung verfügbar machen. In diesem Szenario werden ADO, der zugrunde liegende OLE DB-Anbieter und alle anderen Komponenten, die für den Verweis auf einen bestimmten Datenspeicher erforderlich sind, auf einem Server installiert, auf dem Internetinformationsdienste (IIS) ausgeführt wird. Mithilfe von Active Server Pages (ASP) ist ADO eine Komponente, auf die in einem Skript verwiesen wird, das z. b. HTML generieren kann. Dieser HTML-Inhalt kann über HTTP an einen Client-Webbrowser übermittelt werden. Mithilfe der Skripterstellung kann die Webseite Aktionen an das serverseitige Skript zurücksenden, um bestimmte Daten zu aktualisieren, zu durchlaufen oder anzuzeigen.  
@@ -44,8 +45,8 @@ In einer Skript Umgebung können Sie mithilfe von ADO Daten mithilfe von servers
   
 |Anbieter|Sicher für Skripterstellung?|  
 |--------------|-------------------------|  
-|Formen|Ja|  
-|Beibehalten|Ja|  
+|Form|Ja|  
+|Speichern|Ja|  
 |Remote|Ja|  
 |OLE DB Anbieter für SQL Server (SQLOLEDB)|Nein|  
 |OLE DB Anbieter für ODBC (MSDASQL)|Nein|  
@@ -65,7 +66,7 @@ In einer Skript Umgebung können Sie mithilfe von ADO Daten mithilfe von servers
   
 -   [JScript-ADO-Programmierung](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Verwenden von ADO mit Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Verwenden von ADO mit Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
