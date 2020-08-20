@@ -1,4 +1,5 @@
 ---
+description: sp_OACreate (Transact-SQL)
 title: sp_OACreate (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 74daa037fab18fc2ddb4126f8cf5f33e9d4e5159
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e28f5bcd2f539ae9ab457c2ab14ed7aee6121b7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489224"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *progid*  
+ *ProgID*  
  Der programmtechnische Bezeichner (ProgID, Programmatic Identifier) des zu erstellenden OLE-Objekts. Diese Zeichenfolge beschreibt die Klasse des OLE-Objekts und weist das folgende Format auf: **'**_OLEComponent_**.** _Objekt_**'**  
   
  *OLEComponent* ist der Komponenten Name des OLE-Automatisierungs Servers, und *Object* ist der Name des OLE-Objekts. Das angegebene OLE-Objekt muss gültig sein und die **IDispatch** -Schnittstelle unterstützen.  
@@ -77,13 +78,13 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Weitere Informationen zu HRESULT-Rückgabecodes finden Sie unter [Rückgabecodes und Fehlerinformationen der OLE-Automatisierung](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn OLE-Automatisierungs Prozeduren aktiviert sind, wird durch einen **sp_OACreate** die freigegebene Ausführungsumgebung der OLE-Automatisierung gestartet. Weitere Informationen zum Aktivieren der OLE-Automatisierung finden Sie unter [OLE-Automatisierungs Prozeduren (Server Konfigurations Option](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)).  
   
  Das erstellte OLE-Objekt wird automatisch am Ende des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungsbatches zerstört.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die EXECUTE-Berechtigung direkt für diese gespeicherte Prozedur. `Ole Automation Procedures`die Konfiguration muss **aktiviert** sein, um alle System Prozeduren für OLE-Automatisierung verwenden zu können.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die EXECUTE-Berechtigung direkt für diese gespeicherte Prozedur. `Ole Automation Procedures` die Konfiguration muss **aktiviert** sein, um alle System Prozeduren für OLE-Automatisierung verwenden zu können.  
   
 ## <a name="examples"></a>Beispiele  
   

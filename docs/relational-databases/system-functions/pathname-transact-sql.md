@@ -1,4 +1,5 @@
 ---
+description: PathName (Transact-SQL)
 title: Pfadname (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 348069dcab86747bccd179f85fd343e5c9d2c47f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc5b4b67074c85aef7d5d6d0f7c889a02cbb047d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489723"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +73,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>Rückgabewert  
  Der zurückgegebene Wert ist der vollqualifizierte logische oder NETBIOS-Pfad des BLOB. Pfadname gibt keine IP-Adresse zurück. NULL wird zurückgegeben, wenn das FILESTREAM BLOB nicht erstellt wurde.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Spalte ROWGUID muss in jeder Abfrage sichtbar sein, die PathName aufruft.  
   
  Ein FILESTREAM BLOB kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt werden.  
@@ -148,7 +149,7 @@ DROP DATABASE PathNameDB;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Binärer Large Object &#40;BLOB&#41; Daten &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [Binary Large Object &#40;Blob&#41; Daten &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL-&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

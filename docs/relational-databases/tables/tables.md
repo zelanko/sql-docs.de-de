@@ -1,4 +1,5 @@
 ---
+description: Tabellen
 title: Tabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/18/2019
@@ -14,12 +15,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdb7bb3ef617d244e1e58f7c74cece3d47b87b72
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 588b33d51a2a3814c3be8ddf3b083050df856c41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488603"
 ---
 # <a name="tables"></a>Tabellen
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -101,6 +102,6 @@ Bei breiten Tabellen treten folgende Leistungsauswirkungen auf:
 |Beschreibt, wie ein Standardwert für eine Spalte angegeben wird. Dieser Wert wird verwendet, wenn kein anderer Wert angegeben wird.|[Angeben von Standardwerten für Spalten](../../relational-databases/tables/specify-default-values-for-columns.md)|
 
 ## <a name="see-also"></a>Weitere Informationen
- [Primärschlüssel- und Fremdschlüsseleinschränkungen](../../relational-databases/tables/primary-and-foreign-key-constraints.md)[UNIQUE- und CHECK-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
+ [Primärschlüssel- und Fremdschlüsseleinschränkungen](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [UNIQUE- und CHECK-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 
 

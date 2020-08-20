@@ -1,4 +1,5 @@
 ---
+description: sys. dm_os_host_info (Transact-SQL)
 title: sys. dm_os_host_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/10/2017
@@ -19,12 +20,12 @@ ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a504416014d9e3a0cb25972ab624fc720a26bef3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb99e12c75a3f10ca88dc7668d194840f360be2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489823"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -40,7 +41,7 @@ Gibt eine Zeile zurück, in der Informationen zur Betriebssystemversion angezeig
 |**host_sku**|**int**|Windows-SKU-ID (Stock Keeping Unit). Eine Liste mit SKU-IDs und Beschreibungen finden Sie unter [Funktion "GetProductInfo"](https://msdn.microsoft.com/library/ms724358.aspx). Lässt NULL-Werte zu. <br> Für Linux wird NULL zurückgegeben. |  
 |**os_language_version**|**int**|Windows-Gebietsschemabezeichner (LCID) des Betriebssystems. Eine Liste mit LCID-Werten und Beschreibungen finden Sie unter [Von Microsoft zugewiesene Gebietsschemabezeichner (LCIDs)](https://go.microsoft.com/fwlink/?LinkId=208080). Lässt keine NULL-Werte zu.|  
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 Diese Ansicht ähnelt [sys. dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)und fügt Spalten hinzu, um Windows und Linux zu unterscheiden.
   
 ## <a name="security"></a>Sicherheit  
@@ -65,7 +66,7 @@ Im folgenden finden Sie ein Beispiel für ein Resultset unter Windows:
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
+ |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
 
 Im folgenden finden Sie ein Beispiel für ein Resultset unter Linux:
  
@@ -74,7 +75,7 @@ Im folgenden finden Sie ein Beispiel für ein Resultset unter Linux:
  |Linux |Ubuntu |16.04  |   |NULL   |1033 |  
 
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sys. dm_os_sys_info &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  

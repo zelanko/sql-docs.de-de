@@ -1,4 +1,5 @@
 ---
+description: Ändern von CHECK-Einschränkungen
 title: Ändern von Check-Einschränkungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/28/2017
@@ -16,12 +17,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea5ecb64640df674d0f55d7347c1e8cb2d78d3ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 024897c426ed1bee082a75f44365698274424977
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488561"
 ---
 # <a name="modify-check-constraints"></a>Ändern von CHECK-Einschränkungen
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85786062"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So ändern Sie eine CHECK-Einschränkung mit:**  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85786062"
   
 4.  Führen Sie eine Aktion aus der folgenden Tabelle aus:  
   
-    |To|Schritte|  
+    |An|Schritte|  
     |--------|------------------------|  
     |Ändern des Einschränkungsausdrucks|Geben Sie im Feld **Ausdruck** den neuen Ausdruck ein.|  
     |Umbenennen der Einschränkung|Geben Sie im Feld **Name** einen neuen Namen ein.|  

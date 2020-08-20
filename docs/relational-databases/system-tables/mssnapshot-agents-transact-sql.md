@@ -1,4 +1,5 @@
 ---
+description: MSsnapshot_agents (Transact-SQL)
 title: MSsnapshot_agents (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 20394d5204059b7ec55c09b9feb6092415ccda12
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4ab0908d8ef5ba3a3bb24e1a518c8195174603cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488701"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

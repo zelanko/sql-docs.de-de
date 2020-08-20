@@ -1,4 +1,5 @@
 ---
+description: sp_help_targetservergroup (Transact-SQL)
 title: sp_help_targetservergroup (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10f96877b346396166f2980d47085c726a66bc19
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75d725bec30d25d46216e292d7e96ff8f2b5f899
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489381"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>Argument  
-`[ @name = ] 'name'`Der Name der Zielserver Gruppe, für die Informationen zurückgegeben werden sollen. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @name = ] 'name'` Der Name der Zielserver Gruppe, für die Informationen zurückgegeben werden sollen. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

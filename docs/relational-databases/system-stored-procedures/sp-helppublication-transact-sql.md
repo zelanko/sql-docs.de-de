@@ -1,4 +1,5 @@
 ---
+description: sp_helppublication (Transact-SQL)
 title: sp_helppublication (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/18/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd5452439cc3467cc840ac11dd9ce3cf880a4ce8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489303"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, die angezeigt werden soll. *Publication* ist vom Datentyp sysname und **%** hat den Standardwert, mit dem Informationen zu allen Veröffentlichungen zurückgegeben werden.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die angezeigt werden soll. *Publication* ist vom Datentyp sysname und **%** hat den Standardwert, mit dem Informationen zu allen Veröffentlichungen zurückgegeben werden.  
   
-`[ @found = ] 'found' OUTPUT`Ein Flag, das die Rückgabe von Zeilen angibt. " *found*" ist vom Datentyp **int** und ein Output-Parameter. der Standardwert ist **23456**. **1** gibt an, dass die Veröffentlichung gefunden wurde. **0** gibt an, dass die Veröffentlichung nicht gefunden wurde.  
+`[ @found = ] 'found' OUTPUT` Ein Flag, das die Rückgabe von Zeilen angibt. " *found*" ist vom Datentyp **int** und ein Output-Parameter. der Standardwert ist **23456**. **1** gibt an, dass die Veröffentlichung gefunden wurde. **0** gibt an, dass die Veröffentlichung nicht gefunden wurde.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom Datentyp sysname und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom Datentyp sysname und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* sollte nicht angegeben werden, wenn Veröffentlichungsinformationen von einem Verleger angefordert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -104,7 +105,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_helppublication wird bei der Momentaufnahme- und Transaktionsreplikation verwendet.  
   
  sp_helppublication gibt Informationen zu allen Veröffentlichungen zurück, die sich im Besitz des Benutzers befinden, der diese Prozedur ausführt.  

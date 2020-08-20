@@ -1,4 +1,5 @@
 ---
+description: sp_addpushsubscription_agent (Transact-SQL)
 title: sp_addpushsubscription_agent (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/09/2020
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42dffc53fbce2350314d773ce4cd376fae84256a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: d4ea11d1169244d8fb7d15d2b26e377e44fd645e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489618"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,37 +70,37 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @subscriber = ] 'subscriber'`Der Name der Abonnenten Instanz oder der Name des Verfügbarkeits Gruppen-Listener, wenn die Abonnenten Datenbank eine Verfügbarkeits Gruppe ist. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. 
+`[ @subscriber = ] 'subscriber'` Der Name der Abonnenten Instanz oder der Name des Verfügbarkeits Gruppen-Listener, wenn die Abonnenten Datenbank eine Verfügbarkeits Gruppe ist. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. 
 
 > [!NOTE]
 > Der Server Name kann als angegeben werden `<Hostname>,<PortNumber>` . Möglicherweise müssen Sie die Portnummer für die Verbindung angeben, wenn SQL Server unter Linux oder Windows mit einem benutzerdefinierten Port bereitgestellt wird und der-Browser Dienst deaktiviert ist.
 
-`[ @subscriber_db = ] 'subscriber_db'`Der Name der Abonnement Datenbank. *subscriber_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Geben Sie für einen nicht-SQL Server Abonnenten den Wert **(Standardziel)** für *subscriber_db*an.  
+`[ @subscriber_db = ] 'subscriber_db'` Der Name der Abonnement Datenbank. *subscriber_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Geben Sie für einen nicht-SQL Server Abonnenten den Wert **(Standardziel)** für *subscriber_db*an.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Abonnenten verwendet wird. *subscriber_security_mode* ist vom Datentyp **int**und hat den Standardwert 1. **0** gibt die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung an. **1** gibt die Windows-Authentifizierung an.  
+`[ @subscriber_security_mode = ] subscriber_security_mode` Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Abonnenten verwendet wird. *subscriber_security_mode* ist vom Datentyp **int**und hat den Standardwert 1. **0** gibt die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung an. **1** gibt die Windows-Authentifizierung an.  
   
 > [!IMPORTANT]  
 >  Bei Abonnements mit verzögertem Update über eine Warteschlange verwenden Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung für Verbindungen mit Abonnenten. Geben Sie für die Verbindung zu den einzelnen Abonnenten jeweils ein anderes Konto an. Verwenden Sie für alle anderen Abonnements die Windows-Authentifizierung.  
   
-`[ @subscriber_login = ] 'subscriber_login'`Der Anmelde Name des Abonnenten, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Abonnenten verwendet wird. *subscriber_login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` Der Anmelde Name des Abonnenten, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Abonnenten verwendet wird. *subscriber_login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @subscriber_password = ] 'subscriber_password'`Das Kennwort des Abonnenten. *subscriber_password* ist erforderlich, wenn *subscriber_security_mode* auf **0**festgelegt ist. *subscriber_password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei Verwendung eines Abonnentenkennworts wird dieses automatisch verschlüsselt.  
+`[ @subscriber_password = ] 'subscriber_password'` Das Kennwort des Abonnenten. *subscriber_password* ist erforderlich, wenn *subscriber_security_mode* auf **0**festgelegt ist. *subscriber_password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei Verwendung eines Abonnentenkennworts wird dieses automatisch verschlüsselt.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
-`[ @job_login = ] 'job_login'`Der Anmelde Name für das Konto, unter dem der Agent ausgeführt wird. Verwenden Sie in Azure SQL verwaltete Instanz ein SQL Server Konto. *job_login* ist vom Datentyp **nvarchar (257)** und hat den Standardwert NULL. Dieses Windows-Konto wird immer für Agentverbindungen mit dem Verteiler und für Verbindungen mit dem Abonnenten verwendet, wenn die integrierte Windows-Authentifizierung verwendet wird.  
+`[ @job_login = ] 'job_login'` Der Anmelde Name für das Konto, unter dem der Agent ausgeführt wird. Verwenden Sie in Azure SQL verwaltete Instanz ein SQL Server Konto. *job_login* ist vom Datentyp **nvarchar (257)** und hat den Standardwert NULL. Dieses Windows-Konto wird immer für Agentverbindungen mit dem Verteiler und für Verbindungen mit dem Abonnenten verwendet, wenn die integrierte Windows-Authentifizierung verwendet wird.  
   
-`[ @job_password = ] 'job_password'`Das Kennwort für das Konto, unter dem der Agent ausgeführt wird. *job_password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @job_password = ] 'job_password'` Das Kennwort für das Konto, unter dem der Agent ausgeführt wird. *job_password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
-`[ @job_name = ] 'job_name'`Der Name eines vorhandenen Agentauftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird nur angegeben, wenn das Abonnement mithilfe eines vorhandenen Auftrags statt mit einem neu erstellten Auftrag (Standard) synchronisiert wird. Wenn Sie kein Mitglied der festen Server Rolle **sysadmin** sind, müssen Sie *job_login* und *job_password* angeben, wenn Sie *job_name*angeben.  
+`[ @job_name = ] 'job_name'` Der Name eines vorhandenen Agentauftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird nur angegeben, wenn das Abonnement mithilfe eines vorhandenen Auftrags statt mit einem neu erstellten Auftrag (Standard) synchronisiert wird. Wenn Sie kein Mitglied der festen Server Rolle **sysadmin** sind, müssen Sie *job_login* und *job_password* angeben, wenn Sie *job_name*angeben.  
   
-`[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der die Verteilungs-Agent geplant werden soll. *frequency_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
+`[ @frequency_type = ] frequency_type` Die Häufigkeit, mit der die Verteilungs-Agent geplant werden soll. *frequency_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -115,63 +116,63 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 > [!NOTE]  
 >  Das Angeben des Werts **64** bewirkt, dass die Verteilungs-Agent im kontinuierlichen Modus ausgeführt wird. Dies entspricht dem Festlegen des **-Continuous-** Parameters für den Agent. Weitere Informationen finden Sie unter [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
-`[ @frequency_interval = ] frequency_interval`Der Wert, der auf die von *frequency_type*festgelegte Häufigkeit angewendet werden soll. *frequency_interval* ist vom Datentyp **int**und hat den Standardwert 1.  
+`[ @frequency_interval = ] frequency_interval` Der Wert, der auf die von *frequency_type*festgelegte Häufigkeit angewendet werden soll. *frequency_interval* ist vom Datentyp **int**und hat den Standardwert 1.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum der Verteilungs-Agent. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Das Datum der Verteilungs-Agent. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1** (Standard)|First|  
-|**2**|Sekunde|  
+|**2**|Second|  
 |**4**|Third|  
 |**8**|Vierter|  
-|**16**|Letzter|  
+|**16**|Last (Letzter)|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert 0.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert 0.  
   
-`[ @frequency_subday = ] frequency_subday`Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
+`[ @frequency_subday = ] frequency_subday` Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
-|**2**|Sekunde|  
+|**2**|Second|  
 |**4** (Standard)|Minute|  
 |**8**|Stunde|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Das Intervall für die *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert 5.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für die *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert 5.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`Die Tageszeit, zu der die Verteilungs-Agent zum ersten Mal geplant ist. dabei wird das Format HHMMSS verwendet. *active_start_time_of_day* ist vom Datentyp **int**und hat den Standardwert 0.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit, zu der die Verteilungs-Agent zum ersten Mal geplant ist. dabei wird das Format HHMMSS verwendet. *active_start_time_of_day* ist vom Datentyp **int**und hat den Standardwert 0.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`Die Tageszeit, zu der die Verteilungs-Agent nicht mehr geplant ist. dabei wird das Format HHMMSS verwendet. *active_end_time_of_day* ist vom Datentyp **int**und hat den Standardwert 235959.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, zu der die Verteilungs-Agent nicht mehr geplant ist. dabei wird das Format HHMMSS verwendet. *active_end_time_of_day* ist vom Datentyp **int**und hat den Standardwert 235959.  
   
-`[ @active_start_date = ] active_start_date`Das Datum, an dem die Verteilungs-Agent zum ersten Mal geplant ist, formatiert als YYYYMMDD. *active_start_date* ist vom Datentyp **int**und hat den Standardwert 0.  
+`[ @active_start_date = ] active_start_date` Das Datum, an dem die Verteilungs-Agent zum ersten Mal geplant ist, formatiert als YYYYMMDD. *active_start_date* ist vom Datentyp **int**und hat den Standardwert 0.  
   
-`[ @active_end_date = ] active_end_date`Das Datum, an dem der Verteilungs-Agent nicht mehr geplant ist, formatiert als YYYYMMDD. *active_end_date* ist vom Datentyp **int**und hat den Standardwert 99991231.  
+`[ @active_end_date = ] active_end_date` Das Datum, an dem der Verteilungs-Agent nicht mehr geplant ist, formatiert als YYYYMMDD. *active_end_date* ist vom Datentyp **int**und hat den Standardwert 99991231.  
   
-`[ @dts_package_name = ] 'dts_package_name'`Gibt den Namen des DTS-Pakets (Data Transformation Services) an. *dts_package_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Zum Angeben des Paketnamens `DTSPub_Package` wird beispielsweise der `@dts_package_name = N'DTSPub_Package'`-Parameter verwendet.  
+`[ @dts_package_name = ] 'dts_package_name'` Gibt den Namen des DTS-Pakets (Data Transformation Services) an. *dts_package_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Zum Angeben des Paketnamens `DTSPub_Package` wird beispielsweise der `@dts_package_name = N'DTSPub_Package'`-Parameter verwendet.  
   
-`[ @dts_package_password = ] 'dts_package_password'`Gibt das Kennwort an, das zum Ausführen des Pakets erforderlich ist. *dts_package_password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
+`[ @dts_package_password = ] 'dts_package_password'` Gibt das Kennwort an, das zum Ausführen des Pakets erforderlich ist. *dts_package_password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Wenn *dts_package_name* angegeben ist, müssen Sie ein Kennwort angeben.  
   
-`[ @dts_package_location = ] 'dts_package_location'`Gibt den Speicherort des Pakets an. *dts_package_location* ist vom Datentyp **nvarchar (12)** und hat den Standardwert Distributor. Der Speicherort des Pakets kann **Distributor** oder **Subscriber**sein.  
+`[ @dts_package_location = ] 'dts_package_location'` Gibt den Speicherort des Pakets an. *dts_package_location* ist vom Datentyp **nvarchar (12)** und hat den Standardwert Distributor. Der Speicherort des Pakets kann **Distributor** oder **Subscriber**sein.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Gibt an, ob das Abonnement über den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronisierungs-Manager synchronisiert werden kann. *enabled_for_syncmgr* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. Wenn der Wert **false**ist, wird das Abonnement nicht bei der Synchronisierungs Verwaltung registriert. Wenn der Wert **true**ist, wird das Abonnement bei der Synchronisierungs Verwaltung registriert und kann synchronisiert werden, ohne zu starten [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Gibt an, ob das Abonnement über den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronisierungs-Manager synchronisiert werden kann. *enabled_for_syncmgr* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. Wenn der Wert **false**ist, wird das Abonnement nicht bei der Synchronisierungs Verwaltung registriert. Wenn der Wert **true**ist, wird das Abonnement bei der Synchronisierungs Verwaltung registriert und kann synchronisiert werden, ohne zu starten [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @distribution_job_name = ] 'distribution_job_name'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`Der eindeutige Programm Bezeichner (ProgID), mit dem der OLE DB-Anbieter für die nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle registriert wird. *subscriber_provider* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. *subscriber_provider* muss für den OLE DB Anbieter, der auf dem Verteiler installiert ist, eindeutig sein. *subscriber_provider* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
+`[ @subscriber_provider = ] 'subscriber_provider'` Der eindeutige Programm Bezeichner (ProgID), mit dem der OLE DB-Anbieter für die nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle registriert wird. *subscriber_provider* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. *subscriber_provider* muss für den OLE DB Anbieter, der auf dem Verteiler installiert ist, eindeutig sein. *subscriber_provider* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
   
-`[ @subscriber_datasrc = ] 'subscriber_datasrc'`Der Name der Datenquelle, wie er vom OLE DB-Anbieter interpretiert wird. *subscriber_datasrc* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL. *subscriber_datasrc* wird als DBPROP_INIT_DATASOURCE Eigenschaft zum Initialisieren des OLE DB Anbieters übermittelt. *subscriber_datasrc* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
+`[ @subscriber_datasrc = ] 'subscriber_datasrc'` Der Name der Datenquelle, wie er vom OLE DB-Anbieter interpretiert wird. *subscriber_datasrc* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL. *subscriber_datasrc* wird als DBPROP_INIT_DATASOURCE Eigenschaft zum Initialisieren des OLE DB Anbieters übermittelt. *subscriber_datasrc* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
   
-`[ @subscriber_location = ] 'subscriber_location'`Der Speicherort der Datenbank, der vom OLE DB-Anbieter interpretiert wird. *subscriber_location* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL. *subscriber_location* wird als DBPROP_INIT_LOCATION Eigenschaft zum Initialisieren des OLE DB Anbieters übermittelt. *subscriber_location* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
+`[ @subscriber_location = ] 'subscriber_location'` Der Speicherort der Datenbank, der vom OLE DB-Anbieter interpretiert wird. *subscriber_location* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL. *subscriber_location* wird als DBPROP_INIT_LOCATION Eigenschaft zum Initialisieren des OLE DB Anbieters übermittelt. *subscriber_location* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
   
-`[ @subscriber_provider_string = ] 'subscriber_provider_string'`Die OLE DB anbieterspezifische Verbindungs Zeichenfolge, die die Datenquelle identifiziert. *subscriber_provider_string* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL. *subscriber_provider_string* wird an IDataInitialize weitergegeben oder als DBPROP_INIT_PROVIDERSTRING-Eigenschaft festgelegt, um den OLE DB-Anbieter zu initialisieren. *subscriber_provider_string* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
+`[ @subscriber_provider_string = ] 'subscriber_provider_string'` Die OLE DB anbieterspezifische Verbindungs Zeichenfolge, die die Datenquelle identifiziert. *subscriber_provider_string* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL. *subscriber_provider_string* wird an IDataInitialize weitergegeben oder als DBPROP_INIT_PROVIDERSTRING-Eigenschaft festgelegt, um den OLE DB-Anbieter zu initialisieren. *subscriber_provider_string* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
   
-`[ @subscriber_catalog = ] 'subscriber_catalog'`Der Katalog, der beim Herstellen einer Verbindung mit dem OLE DB-Anbieter verwendet werden soll. *subscriber_catalog* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. *subscriber_catalog* wird als DBPROP_INIT_CATALOG Eigenschaft zum Initialisieren des OLE DB Anbieters übermittelt. *subscriber_catalog* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
+`[ @subscriber_catalog = ] 'subscriber_catalog'` Der Katalog, der beim Herstellen einer Verbindung mit dem OLE DB-Anbieter verwendet werden soll. *subscriber_catalog* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. *subscriber_catalog* wird als DBPROP_INIT_CATALOG Eigenschaft zum Initialisieren des OLE DB Anbieters übermittelt. *subscriber_catalog* wird nur für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -185,7 +186,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addpushsubscription_agent**ausführen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Erstellen eines Abonnements für einen nicht-SQL Server Abonnenten](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   

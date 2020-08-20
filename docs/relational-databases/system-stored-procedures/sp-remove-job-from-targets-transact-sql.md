@@ -1,4 +1,5 @@
 ---
+description: sp_remove_job_from_targets (Transact-SQL)
 title: sp_remove_job_from_targets (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de4d2686066e10f1eb9f80862241d1d1a47cf6b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d40f7d8812fe83648871bedbb3538202f5c519a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489147"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id`Die ID des Auftrags, aus dem die angegebenen Zielserver oder Zielserver Gruppen entfernt werden sollen. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, aus dem die angegebenen Zielserver oder Zielserver Gruppen entfernt werden sollen. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'`Der Name des Auftrags, aus dem die angegebenen Zielserver oder Zielserver Gruppen entfernt werden sollen. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, aus dem die angegebenen Zielserver oder Zielserver Gruppen entfernt werden sollen. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @target_server_groups = ] 'target_server_groups'`Eine durch Trennzeichen getrennte Liste der Zielserver Gruppen, die aus dem angegebenen Auftrag entfernt werden sollen. *target_server_groups* ist vom Datentyp **nvarchar (1024)** und hat den Standardwert NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Eine durch Trennzeichen getrennte Liste der Zielserver Gruppen, die aus dem angegebenen Auftrag entfernt werden sollen. *target_server_groups* ist vom Datentyp **nvarchar (1024)** und hat den Standardwert NULL.  
   
-`[ @target_servers = ] 'target_servers'`Eine durch Trennzeichen getrennte Liste von Ziel Servern, die aus dem angegebenen Auftrag entfernt werden sollen. *target_servers* ist vom Datentyp **nvarchar (1024)** und hat den Standardwert NULL.  
+`[ @target_servers = ] 'target_servers'` Eine durch Trennzeichen getrennte Liste von Ziel Servern, die aus dem angegebenen Auftrag entfernt werden sollen. *target_servers* ist vom Datentyp **nvarchar (1024)** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

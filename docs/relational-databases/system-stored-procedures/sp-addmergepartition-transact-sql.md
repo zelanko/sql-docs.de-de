@@ -1,4 +1,5 @@
 ---
+description: sp_addmergepartition (Transact-SQL)
 title: sp_addmergepartition (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a4f4743efbd0ee3b7a57cb4fab02c98a2680a870
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1bf10e593c23b4f31f418df45e9ad0fe03dbdcdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489639"
 ---
 # <a name="sp_addmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,16 +40,16 @@ sp_addmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Die Mergeveröffentlichung, für die die Partition erstellt wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn *SUSER_SNAME* angegeben wird, muss der Wert von *Hostname* NULL sein.  
+`[ @publication = ] 'publication'` Die Mergeveröffentlichung, für die die Partition erstellt wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn *SUSER_SNAME* angegeben wird, muss der Wert von *Hostname* NULL sein.  
   
-`[ @suser_sname = ] 'suser_sname'`Der Wert, der beim Erstellen der Partition für ein Abonnement verwendet wird, das nach dem Wert der [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion auf dem Abonnenten gefiltert wird. *SUSER_SNAME* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @suser_sname = ] 'suser_sname'` Der Wert, der beim Erstellen der Partition für ein Abonnement verwendet wird, das nach dem Wert der [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion auf dem Abonnenten gefiltert wird. *SUSER_SNAME* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @host_name = ] 'host_name'`Der Wert, der beim Erstellen der Partition für ein Abonnement verwendet wird, das nach dem Wert der [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion auf dem Abonnenten gefiltert wird. *HOST_NAME* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @host_name = ] 'host_name'` Der Wert, der beim Erstellen der Partition für ein Abonnement verwendet wird, das nach dem Wert der [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) -Funktion auf dem Abonnenten gefiltert wird. *HOST_NAME* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addmergepartition** wird bei der Mergereplikation verwendet.  
   
 ## <a name="example"></a>Beispiel  
@@ -57,7 +58,7 @@ sp_addmergepartition [ @publication = ] 'publication'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addmergepartition**ausführen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [Parametrisierte Zeilenfilter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   

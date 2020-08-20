@@ -1,4 +1,5 @@
 ---
+description: 'ISSAsynchStatus:: GetStatus (Native Client OLE DB-Anbieter)'
 title: 'ISSAsynchStatus:: GetStatus (Native Client OLE DB Provider) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3bda3f96cf7440599fafdc1f2a3ac914fd59c64
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c7bd8db285c1c8d9801adb7d37d4f03a9103b444
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490815"
 ---
 # <a name="issasynchstatusgetstatus-native-client-ole-db-provider"></a>ISSAsynchStatus:: GetStatus (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -124,7 +125,7 @@ HRESULT GetStatus(
  Durch Aufrufen von **ISSAsynchStatus::GetStatus** für ein initialisiertes Datenquellobjekt oder ein aufgefülltes Rowset oder durch Übergeben eines Werts für *eOperation* außer DBASYNCHOP_OPEN wird S_OK zurückgegeben, wobei *pulProgress* und *pulProgressMax* auf den gleichen Wert festgelegt sind. Wenn **ISSAsynchStatus::GetStatus** für ein Objekt aufgerufen wird, das durch Ausführung eines Befehls zum Aktualisieren, Löschen oder Einfügen von Zeilen erstellt wurde, gibt sowohl *pulProgress* als auch *pulProgressMax* die Gesamtzahl der Zeilen an, die von dem Befehl betroffen sind.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Ausführen von asynchronen Vorgängen](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
+ [Ausführen asynchroner Vorgänge](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

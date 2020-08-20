@@ -1,4 +1,5 @@
 ---
+description: sp_cursorprepare (Transact-SQL)
 title: sp_cursorprepare (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 130446e1f92fd735c3ab83a8f515fcf36fb63948
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a2b001c3e08c9d68be113e351bcf0482205e196
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489438"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +107,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
  Wie bei *scrollpt* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann einen anderen Wert als den angeforderten zuweisen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der RPC-Statusparameter entspricht einem der folgenden Werte:  
   
 |Wert|Beschreibung|  

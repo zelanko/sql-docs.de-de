@@ -1,4 +1,5 @@
 ---
+description: Beispiel für den zum Speichern eines Indexes belegten Speicherplatz
 title: Beispiel für den zum Speichern eines Indexes belegten Speicherplatz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/02/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1d85fecce4c5b97154312922ed96f988754f88e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d12125849b83fb6701b18bd3d7c46b9d9b9828a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490969"
 ---
 # <a name="index-disk-space-example"></a>Beispiel für den zum Speichern eines Indexes belegten Speicherplatz
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

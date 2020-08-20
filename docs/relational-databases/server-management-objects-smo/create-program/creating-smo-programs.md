@@ -1,4 +1,5 @@
 ---
+description: Erstellen von SMO-Programmen
 title: Erstellen von SMO-Programmen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,18 +18,19 @@ ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fe4da5dbd07cef57b6028ce015b184cffa9563f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b55530e34a77878c551dc8ea4ff0fa2936325755
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490439"
 ---
 # <a name="creating-smo-programs"></a>Erstellen von SMO-Programmen
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Die allgemeinen Programmierungsaufgaben für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)-Objekte umfassen Bereiche, die allen Objekten gemein sind, wie z. B. das Ausführen von Methoden, das Einstellen von Eigenschaften oder die Bearbeitung von Auflistungen.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Herstellen einer Verbindung zu einer Instanz von SQL Server](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|Das grundlegendste SMO-Programm, das eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellt. Veranschaulicht die Windows-Authentifizierung und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung. Enthält zudem Beispiele, die das Herstellen einer Verbindung mit einer lokalen und einer Remoteinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zeigen.|  
 |[Trennen der Verbindung zu einer Instanz von SQL Server](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|Ein Programm, das veranschaulicht, wie die Verbindung zur Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] getrennt wird.|  

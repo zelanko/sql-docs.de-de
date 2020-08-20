@@ -1,4 +1,5 @@
 ---
+description: sp_post_msx_operation (Transact-SQL)
 title: sp_post_msx_operation (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36759d2c90e29c0a019d8bd294a0c7e621c8d468
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da3d1e8bd762f31a7592d90957c3a8680c29dbfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489200"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @operation = ] 'operation'`Der Typ des Vorgangs für den übermittelten Vorgang. *Operation*ist vom Datentyp **varchar (64)** und hat keinen Standardwert. Gültige Vorgänge sind von *object_type*abhängig.  
+`[ @operation = ] 'operation'` Der Typ des Vorgangs für den übermittelten Vorgang. *Operation*ist vom Datentyp **varchar (64)** und hat keinen Standardwert. Gültige Vorgänge sind von *object_type*abhängig.  
   
 |Objekttyp|Vorgang|  
 |-----------------|---------------|  
@@ -53,15 +54,15 @@ sp_post_msx_operation
 |**Servers**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**Vereinbaren**|INSERT<br /><br /> UPDATE<br /><br /> Delete|  
   
-`[ @object_type = ] 'object'`Der Typ des Objekts, für das ein Vorgang gepostet werden soll. Gültige Typen sind **Job**, **Server**und **Schedule**. *Objekt* ist vom Datentyp **varchar (64)**. der Standardwert ist **Job**.  
+`[ @object_type = ] 'object'` Der Typ des Objekts, für das ein Vorgang gepostet werden soll. Gültige Typen sind **Job**, **Server**und **Schedule**. *Objekt* ist vom Datentyp **varchar (64)**. der Standardwert ist **Job**.  
   
-`[ @job_id = ] job_id`Die ID des Auftrags, auf den der Vorgang angewendet wird. *job_id* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert. **0x00** zeigt alle Aufträge an. Wenn *Object* **Server**ist, ist *job_id*nicht erforderlich.  
+`[ @job_id = ] job_id` Die ID des Auftrags, auf den der Vorgang angewendet wird. *job_id* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert. **0x00** zeigt alle Aufträge an. Wenn *Object* **Server**ist, ist *job_id*nicht erforderlich.  
   
-`[ @specific_target_server = ] 'target_server'`Der Name des Zielservers, für den der angegebene Vorgang gilt. Wenn *job_id* angegeben ist, aber *target_server* nicht angegeben ist, werden die Vorgänge für alle Auftrags Server des Auftrags gesendet. *target_server* ist vom Datentyp **nvarchar (30)** und hat den Standardwert NULL.  
+`[ @specific_target_server = ] 'target_server'` Der Name des Zielservers, für den der angegebene Vorgang gilt. Wenn *job_id* angegeben ist, aber *target_server* nicht angegeben ist, werden die Vorgänge für alle Auftrags Server des Auftrags gesendet. *target_server* ist vom Datentyp **nvarchar (30)** und hat den Standardwert NULL.  
   
-`[ @value = ] value`Das Abruf Intervall in Sekunden. *value* ist vom Datentyp **int**. Der Standardwert ist NULL. Geben Sie diesen Parameter nur an, wenn der *Vorgang* " **set-** Abruf" ist  
+`[ @value = ] value` Das Abruf Intervall in Sekunden. *value* ist vom Datentyp **int**. Der Standardwert ist NULL. Geben Sie diesen Parameter nur an, wenn der *Vorgang* " **set-** Abruf" ist  
   
-`[ @schedule_uid = ] schedule_uid`Der eindeutige Bezeichner für den Zeitplan, auf den der Vorgang angewendet wird. *schedule_uid* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert.  
+`[ @schedule_uid = ] schedule_uid` Der eindeutige Bezeichner für den Zeitplan, auf den der Vorgang angewendet wird. *schedule_uid* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

@@ -1,4 +1,5 @@
 ---
+description: sp_delete_maintenance_plan_job (Transact-SQL)
 title: sp_delete_maintenance_plan_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 516bfaa2b581b19570e7edffc7567ae1d520bb85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8aab6443a16b5de89bb3d8764beabfa5dc8beb34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489412"
 ---
 # <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @plan_id = ] 'plan\_id'`Gibt die ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
+`[ @plan_id = ] 'plan\_id'` Gibt die ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
   
-`[ @job_id = ] 'job\_id'`Gibt die ID des Auftrags an, dem der Wartungsplan zugeordnet ist. *job_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
+`[ @job_id = ] 'job\_id'` Gibt die ID des Auftrags an, dem der Wartungsplan zugeordnet ist. *job_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

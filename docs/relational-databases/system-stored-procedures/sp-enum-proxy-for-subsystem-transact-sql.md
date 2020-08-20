@@ -1,4 +1,5 @@
 ---
+description: sp_enum_proxy_for_subsystem (Transact-SQL)
 title: sp_enum_proxy_for_subsystem (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 21df62ff7ab60933281ca0dce0e7bc2bc2b3b7c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f484764e05a23594c32494934a9c366154e02aeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489428"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
@@ -43,13 +44,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @proxy_id = ] proxy_id`Die ID des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
+`[ @proxy_id = ] proxy_id` Die ID des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
   
-`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
   
-`[ @subsystem_id = ] subsystem_id`Die ID des Subsystems, für das Informationen aufgelistet werden sollen. Der *subsystem_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder die *subsystem_id* oder die *subsystem_name* angegeben werden.  
+`[ @subsystem_id = ] subsystem_id` Die ID des Subsystems, für das Informationen aufgelistet werden sollen. Der *subsystem_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder die *subsystem_id* oder die *subsystem_name* angegeben werden.  
   
-`[ @subsystem_name = ] 'subsystem_name'`Der Name des Subsystems, für das Informationen aufgelistet werden sollen. Der *subsystem_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder die *subsystem_id* oder die *subsystem_name* angegeben werden.  
+`[ @subsystem_name = ] 'subsystem_name'` Der Name des Subsystems, für das Informationen aufgelistet werden sollen. Der *subsystem_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder die *subsystem_id* oder die *subsystem_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -64,7 +65,7 @@ sp_enum_proxy_for_subsystem
 |**proxy_name**|**sysname**|Der Name des Proxys.|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn keine Parameter angegeben werden, werden in **sp_enum_proxy_for_subsystem** Informationen zu allen Proxys in der Instanz für jedes Subsystem aufgelistet.  
   
  Wenn eine Proxy-ID oder ein Proxy Name bereitgestellt wird, werden in **sp_enum_proxy_for_subsystem** Subsysteme aufgelistet, auf die der Proxy Zugriff hat. Wenn eine Subsystem-ID oder ein Subsystemname bereitgestellt wird, werden **sp_enum_proxy_for_subsystem** Proxys aufgelistet, die Zugriff auf dieses Subsystem haben.  

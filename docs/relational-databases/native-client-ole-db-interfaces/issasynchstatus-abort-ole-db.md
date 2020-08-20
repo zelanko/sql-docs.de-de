@@ -1,4 +1,5 @@
 ---
+description: 'ISSAsynchStatus:: Abort (Native Client OLE DB-Anbieter)'
 title: 'ISSAsynchStatus:: Abort (Native Client OLE DB-Anbieter) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/07/2017
@@ -16,12 +17,12 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a713f210c04032d9b24d90c59ad1088b1a1cd0d8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f159a85e4dd60706402c08931f0350e9f7efaf67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490890"
 ---
 # <a name="issasynchstatusabort-native-client-ole-db-provider"></a>ISSAsynchStatus:: Abort (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ HRESULT Abort(
  E_UNEXPECTED  
  **ISSAsynchStatus::Abort** wurde für ein Datenquellobjekt aufgerufen, für das **IDBInitialize::Initialize** nicht aufgerufen oder nicht abgeschlossen wurde.  
   
- **ISSAsynchStatus:: Abort** wurde für ein Datenquellen Objekt aufgerufen, für das **IDBInitialize:: Initialize** aufgerufen wurde, aber anschließend vor der Initialisierung abgebrochen wurde oder für das ein Timeout aufgetreten ist. Das Datenquellen Objekt ist noch nicht initialisiert.  
+ **ISSAsynchStatus::Abort** wurde für ein Datenquellobjekt aufgerufen, für das **IDBInitialize::Initialize** aufgerufen wurde, das jedoch vor der Initialisierung abgebrochen wurde oder für das ein Timeout eingetreten ist. Das Datenquellobjekt wurde noch nicht initialisiert.  
   
  **ISSAsynchStatus::Abort** wurde für ein Rowset aufgerufen, für das zuvor **ITransaction::Commit** oder **ITransaction::Abort** aufgerufen wurde, und das Rowset blieb nach dem Commit oder Abbruch nicht bestehen und befindet sich in einem Zombiezustand.  
   

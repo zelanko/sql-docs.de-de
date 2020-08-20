@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepullsubscription (Transact-SQL)
 title: sp_helpmergepullsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db4ae46a9436ceb960a32764a95467116ce537e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489318"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argument  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** . Wenn *Publication* **%** den Wert hat, werden Informationen zu allen Mergeveröffentlichungen und Abonnements in der aktuellen Datenbank zurückgegeben.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** . Wenn *Publication* **%** den Wert hat, werden Informationen zu allen Mergeveröffentlichungen und Abonnements in der aktuellen Datenbank zurückgegeben.  
   
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher*ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** .  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher*ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** .  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** .  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** .  
   
-`[ @subscription_type = ] 'subscription_type'`Gibt an, ob Pullabonnements angezeigt werden. *subscription_type*ist vom Datentyp **nvarchar (10)** und hat **den**Standardwert Pull. Gültige Werte sind **' Push '**, **' Pull '** oder **' both '**.  
+`[ @subscription_type = ] 'subscription_type'` Gibt an, ob Pullabonnements angezeigt werden. *subscription_type*ist vom Datentyp **nvarchar (10)** und hat **den**Standardwert Pull. Gültige Werte sind **' Push '**, **' Pull '** oder **' both '**.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -63,7 +64,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|Typ des Abonnements:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = anonym|  
 |**haben**|**float (8)**|Abonnementpriorität. Der Wert muss kleiner als **100,00**sein.|  
 |**sync_type**|**tinyint**|Synchronisierungsart des Abonnements:<br /><br /> **1** = automatisch<br /><br /> **2** = Momentaufnahme wird nicht verwendet.|  
-|**description**|**nvarchar(255)**|Kurze Beschreibung des Pullabonnements.|  
+|**Beschreibung**|**nvarchar(255)**|Kurze Beschreibung des Pullabonnements.|  
 |**merge_jobid**|**Binary (16)**|Auftrags-ID des Merge-Agents.|  
 |**enabled_for_syncmgr**|**int**|Zeigt an, ob das Abonnement über die Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] synchronisiert werden kann.|  
 |**last_updated**|**nvarchar (26)**|Zeitpunkt, zu dem der Merge-Agent das Abonnement zuletzt erfolgreich synchronisiert hat.|  
@@ -101,7 +102,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpmergepullsubscription** wird bei der Mergereplikation verwendet. Im Resultset wird das in **last_updated** zurückgegebene Datum als *YYYYMMDD hh: mm: SS. fff*formatiert.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -1,4 +1,5 @@
 ---
+description: sp_helplanguage (Transact-SQL)
 title: sp_helplanguage (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72f2e867c8139045b107cbb99871742c26440ee4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489330"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @language = ] 'language'`Der Name der alternativen Sprache, für die Informationen angezeigt werden sollen. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Language* angegeben wird, werden Informationen zur angegebenen Sprache zurückgegeben. Wenn language nicht angegeben wird, werden Informationen zu allen Sprachen in der Kompatibilitäts Ansicht **sys.sysSprachen** zurückgegeben.  
+`[ @language = ] 'language'` Der Name der alternativen Sprache, für die Informationen angezeigt werden sollen. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Language* angegeben wird, werden Informationen zur angegebenen Sprache zurückgegeben. Wenn language nicht angegeben wird, werden Informationen zu allen Sprachen in der Kompatibilitäts Ansicht **sys.sysSprachen** zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -58,7 +59,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**alias**|**sysname**|Alternativer Name der Sprache|  
 |**months**|**nvarchar (372)**|Monatsnamen|  
 |**shortmonths**|**nvarchar (132)**|Kurznamen für die Monate|  
-|**tagelang**|**nvarchar (217)**|Tagesnamen|  
+|**days**|**nvarchar (217)**|Tagesnamen|  
 |**lcid**|**int**|Windows-Gebietsschema-ID für die Sprache.|  
 |**msglangid**|**smallint**|ID der Meldungsgruppe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   

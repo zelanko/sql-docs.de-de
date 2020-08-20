@@ -1,4 +1,5 @@
 ---
+description: sp_requestpeerresponse (Transact-SQL)
 title: sp_requestpeerresponse (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2114460ca878b45bb0b850c066e1fd9356504a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489198"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,16 +40,16 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung in einer Peer-zu-Peer-Topologie, für die der Status überprüft wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung in einer Peer-zu-Peer-Topologie, für die der Status überprüft wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @description = ] 'description'`Benutzerdefinierte Informationen, die zum Identifizieren einzelner Status Anforderungen verwendet werden können. die *Beschreibung* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL.  
+`[ @description = ] 'description'` Benutzerdefinierte Informationen, die zum Identifizieren einzelner Status Anforderungen verwendet werden können. die *Beschreibung* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL.  
   
-`[ @request_id = ] request_id`Gibt die ID der neuen Anforderung zurück. *request_id* ist vom Datentyp **int** und ein Output-Parameter. Dieser Wert kann beim Ausführen [sp_helppeerresponses &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) verwendet werden, um alle Antworten auf eine Status Anforderung anzuzeigen.  
+`[ @request_id = ] request_id` Gibt die ID der neuen Anforderung zurück. *request_id* ist vom Datentyp **int** und ein Output-Parameter. Dieser Wert kann beim Ausführen [sp_helppeerresponses &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) verwendet werden, um alle Antworten auf eine Status Anforderung anzuzeigen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_requestpeerresponse** wird in der Peer-zu-Peer-Transaktions Replikation verwendet.  
   
  **sp_requestpeerresponse** wird verwendet, um sicherzustellen, dass alle anderen Knoten alle Befehle empfangen haben, bevor eine in einer Peer-zu-Peer-Topologie veröffentlichte Datenbank wieder hergestellt wird. Die Prozedur wird außerdem beim Replizieren von DDL-Änderungen (Data Definition Language) verwendet, die vorgenommen wurden, während ein Knoten offline war. Damit kann abgeschätzt werden, wann diese Änderungen bei den anderen Knoten ankommen.  
@@ -58,7 +59,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_requestpeerresponse**ausführen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_deletepeerrequesthistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
  [sp_helppeerrequests &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_control_plan_guide (Transact-SQL)
 title: sp_control_plan_guide (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08121eb48e637f2cb6bc404407f7a37d41dbeb2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b05a3b807f80bccb0c07d876cbb2c10db43f3111
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85870132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489517"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +72,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  ENABLE ALL  
  Aktiviert alle Planhinweislisten in der aktuellen Datenbank. **N '**_plan_guide_name_**'** kann nicht angegeben werden, wenn ' Enable all ' angegeben ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Das Löschen oder Ändern einer Funktion, einer gespeicherten Prozedur oder eines DML-Triggers, auf die bzw. den in einer Planhinweisliste verwiesen wird, verursacht einen Fehler.  
   
  Das Deaktivieren einer deaktivierten bzw. das Aktivieren einer aktivierten Planhinweisliste hat keine Auswirkung und kann ausgeführt werden, ohne einen Fehler zu verursachen.  
@@ -133,11 +134,11 @@ GO
 EXEC sp_control_plan_guide N'DISABLE ALL';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sys. plan_guides &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
+ [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Planhinweislisten](../../relational-databases/performance/plan-guides.md)  
   
   

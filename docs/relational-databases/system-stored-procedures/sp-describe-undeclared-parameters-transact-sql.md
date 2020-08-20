@@ -1,4 +1,5 @@
 ---
+description: sp_describe_undeclared_parameters (Transact-SQL)
 title: sp_describe_undeclared_parameters (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/24/2018
@@ -18,12 +19,12 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: b93ecf05c0a4b48417240db1b9bf22e1104149a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489448"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -45,7 +46,7 @@ sp_describe_undeclared_parameters
 > Um diese gespeicherte Prozedur in Azure Synapse Analytics (früher SQL DW) verwenden zu können, muss der Kompatibilitäts Grad einer Datenbank größer als 10 sein. 
 
 ## <a name="arguments"></a>Argumente  
-`[ \@tsql = ] 'Transact-SQL\_batch'`Eine oder mehrere- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (**_n_**)** oder **nvarchar (max)** sein.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Eine oder mehrere- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (**_n_**)** oder **nvarchar (max)** sein.  
   
 `[ \@params = ] N'parameters'`\@Parameter stellen eine Deklarations Zeichenfolge für Parameter für den [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch bereit, ähnlich wie sp_executesql funktioniert. *Parameter* können **nvarchar (**_n_**)** oder **nvarchar (max)** sein.  
   
@@ -169,7 +170,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Einfache Ableitung  
   
-     Wenn E ( \@ p) = \@ p und TT ( \@ p) vorhanden ist, d. h., wenn \@ p direkt ein Argument für einen der am Anfang von Schritt 2 aufgeführten Ausdrücke ist, leitet der typableitungs Algorithmus den Datentyp von \@ p in TT ( \@ p) ab. Zum Beispiel:  
+     Wenn E ( \@ p) = \@ p und TT ( \@ p) vorhanden ist, d. h., wenn \@ p direkt ein Argument für einen der am Anfang von Schritt 2 aufgeführten Ausdrücke ist, leitet der typableitungs Algorithmus den Datentyp von \@ p in TT ( \@ p) ab. Beispiel:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -217,7 +218,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  Der Datentyp, der die kleinste Anzahl impliziter Konvertierungen in E ( \@ p) erzeugt, wird ausgewählt. Wenn ein bestimmter Datentyp einen Datentyp für E ( \@ p) erzeugt, der nicht mit TT ( \@ p) identisch ist, betrachtet der typableitungs Algorithmus dies als zusätzliche implizite Konvertierung des Datentyps e ( \@ p) in TT ( \@ p).  
   
-     Zum Beispiel:  
+     Beispiel:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  

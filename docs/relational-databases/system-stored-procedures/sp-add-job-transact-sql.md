@@ -1,4 +1,5 @@
 ---
+description: sp_add_job (Transact-SQL)
 title: sp_add_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf9351455ffa21978821590e06edaa93e7f70405
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 76503d17117e6a6dd0787539d96c6e16f3a0bfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489669"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,21 +58,21 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_name = ] 'job_name'`Der Name des Auftrags. Der Name muss eindeutig sein und darf nicht das Prozent **%** Zeichen () enthalten. *job_name*ist vom Datentyp **nvarchar (128)** und hat keinen Standardwert.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. Der Name muss eindeutig sein und darf nicht das Prozent **%** Zeichen () enthalten. *job_name*ist vom Datentyp **nvarchar (128)** und hat keinen Standardwert.  
   
-`[ @enabled = ] enabled`Gibt den Status des hinzugefügten Auftrags an. *aktiviert*ist vom Datentyp **tinyint**. der Standardwert ist 1 (aktiviert). Wenn der Wert **0**ist, ist der Auftrag nicht aktiviert und wird nicht gemäß dem Zeitplan ausgeführt. Sie kann jedoch manuell ausgeführt werden.  
+`[ @enabled = ] enabled` Gibt den Status des hinzugefügten Auftrags an. *aktiviert*ist vom Datentyp **tinyint**. der Standardwert ist 1 (aktiviert). Wenn der Wert **0**ist, ist der Auftrag nicht aktiviert und wird nicht gemäß dem Zeitplan ausgeführt. Sie kann jedoch manuell ausgeführt werden.  
   
-`[ @description = ] 'description'`Die Beschreibung des Auftrags. die *Beschreibung* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. Wenn *Description* weggelassen wird, wird "keine Beschreibung verfügbar" verwendet.  
+`[ @description = ] 'description'` Die Beschreibung des Auftrags. die *Beschreibung* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. Wenn *Description* weggelassen wird, wird "keine Beschreibung verfügbar" verwendet.  
   
-`[ @start_step_id = ] step_id`Die ID des ersten Schritts, der für den Auftrag ausgeführt werden soll. *step_id*ist vom Datentyp **int**und hat den Standardwert 1.  
+`[ @start_step_id = ] step_id` Die ID des ersten Schritts, der für den Auftrag ausgeführt werden soll. *step_id*ist vom Datentyp **int**und hat den Standardwert 1.  
   
-`[ @category_name = ] 'category'`Die Kategorie für den Auftrag. *Category*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @category_name = ] 'category'` Die Kategorie für den Auftrag. *Category*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @category_id = ] category_id`Ein sprachunabhängiger Mechanismus zum Angeben einer Auftrags Kategorie. *category_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @category_id = ] category_id` Ein sprachunabhängiger Mechanismus zum Angeben einer Auftrags Kategorie. *category_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @owner_login_name = ] 'login'`Der Name der Anmeldung, die den Auftrag besitzt. *Login*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL, der als aktueller Anmelde Name interpretiert wird. Nur Mitglieder der festen Server Rolle **sysadmin** können den Wert für ** \@ owner_login_name**festlegen oder ändern. Wenn Benutzer, die keine Mitglieder der **sysadmin** -Rolle sind, den Wert ** \@ owner_login_name**festlegen oder ändern, schlägt die Ausführung dieser gespeicherten Prozedur fehl, und es wird ein Fehler zurückgegeben.  
+`[ @owner_login_name = ] 'login'` Der Name der Anmeldung, die den Auftrag besitzt. *Login*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL, der als aktueller Anmelde Name interpretiert wird. Nur Mitglieder der festen Server Rolle **sysadmin** können den Wert für ** \@ owner_login_name**festlegen oder ändern. Wenn Benutzer, die keine Mitglieder der **sysadmin** -Rolle sind, den Wert ** \@ owner_login_name**festlegen oder ändern, schlägt die Ausführung dieser gespeicherten Prozedur fehl, und es wird ein Fehler zurückgegeben.  
   
-`[ @notify_level_eventlog = ] eventlog_level`Ein Wert, der angibt, wann für diesen Auftrag ein Eintrag in das Microsoft Windows-Anwendungsprotokoll platziert werden soll. *eventlog_level*ist vom Datentyp **int**. die folgenden Werte sind möglich:  
+`[ @notify_level_eventlog = ] eventlog_level` Ein Wert, der angibt, wann für diesen Auftrag ein Eintrag in das Microsoft Windows-Anwendungsprotokoll platziert werden soll. *eventlog_level*ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -80,24 +81,24 @@ sp_add_job [ @job_name = ] 'job_name'
 |**2** (Standardwert)|Bei Fehler|  
 |**3**|Always|  
   
-`[ @notify_level_email = ] email_level`Ein Wert, der angibt, wann nach Abschluss dieses Auftrags eine e-Mail gesendet werden soll. *email_level*ist vom Datentyp **int**und hat den Standardwert **0**. Dies bedeutet nie. *email_level*verwendet die gleichen Werte wie *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Ein Wert, der angibt, wann nach Abschluss dieses Auftrags eine e-Mail gesendet werden soll. *email_level*ist vom Datentyp **int**und hat den Standardwert **0**. Dies bedeutet nie. *email_level*verwendet die gleichen Werte wie *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level`Ein Wert, der angibt, wann nach Abschluss dieses Auftrags eine Netzwerk Nachricht gesendet werden soll. *netsend_level*ist vom Datentyp **int**und hat den Standardwert **0**. Dies bedeutet nie. *netsend_level* verwendet die gleichen Werte wie *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Ein Wert, der angibt, wann nach Abschluss dieses Auftrags eine Netzwerk Nachricht gesendet werden soll. *netsend_level*ist vom Datentyp **int**und hat den Standardwert **0**. Dies bedeutet nie. *netsend_level* verwendet die gleichen Werte wie *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level`Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine Seite gesendet werden soll. *page_level*ist vom Datentyp **int**und hat den Standardwert **0**. Dies bedeutet nie. *page_level*verwendet die gleichen Werte wie *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine Seite gesendet werden soll. *page_level*ist vom Datentyp **int**und hat den Standardwert **0**. Dies bedeutet nie. *page_level*verwendet die gleichen Werte wie *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'email_name'`Der e-Mail-Name der Person, an die eine e-Mail gesendet werden soll, wenn *email_level* erreicht ist. *email_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @notify_email_operator_name = ] 'email_name'` Der e-Mail-Name der Person, an die eine e-Mail gesendet werden soll, wenn *email_level* erreicht ist. *email_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_name'`Der Name des Operators, an den die Netzwerk Nachricht gesendet wird, wenn dieser Auftrag abgeschlossen ist. *netsend_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'` Der Name des Operators, an den die Netzwerk Nachricht gesendet wird, wenn dieser Auftrag abgeschlossen ist. *netsend_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @notify_page_operator_name = ] 'page_name'`Der Name der Person, die nach dem Abschluss dieses Auftrags angezeigt werden soll. *page_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @notify_page_operator_name = ] 'page_name'` Der Name der Person, die nach dem Abschluss dieses Auftrags angezeigt werden soll. *page_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @delete_level = ] delete_level`Ein Wert, der angibt, wann der Auftrag gelöscht werden soll. *delete_value*ist vom Datentyp **int**und hat den Standardwert 0. Dies bedeutet nie. *delete_level*verwendet die gleichen Werte wie *eventlog_level*.  
+`[ @delete_level = ] delete_level` Ein Wert, der angibt, wann der Auftrag gelöscht werden soll. *delete_value*ist vom Datentyp **int**und hat den Standardwert 0. Dies bedeutet nie. *delete_level*verwendet die gleichen Werte wie *eventlog_level*.  
   
 > [!NOTE]  
 >  Wenn *delete_level* gleich **3**ist, wird der Auftrag nur einmal ausgeführt, unabhängig von den für den Auftrag definierten Zeitplänen. Darüber hinaus wird, wenn sich ein Auftrag selbst löscht, auch der gesamte Verlauf für diesen Auftrag gelöscht.  
   
-`[ @job_id = ] _job_idOUTPUT`Die Auftrags-ID, die dem Auftrag zugewiesen wird, wenn er erfolgreich erstellt wurde. *job_id*ist eine Ausgabevariable vom Typ **uniqueidentifier**, der Standardwert ist NULL.  
+`[ @job_id = ] _job_idOUTPUT` Die Auftrags-ID, die dem Auftrag zugewiesen wird, wenn er erfolgreich erstellt wurde. *job_id*ist eine Ausgabevariable vom Typ **uniqueidentifier**, der Standardwert ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -167,7 +168,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_add_jobstep &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_add_jobserver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   

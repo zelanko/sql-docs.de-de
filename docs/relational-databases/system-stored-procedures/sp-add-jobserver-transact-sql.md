@@ -1,4 +1,5 @@
 ---
+description: sp_add_jobserver (Transact-SQL)
 title: sp_add_jobserver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3a93fb689cf812ad48a9c77469621a2d523796bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 17759b079b8f2263d6cfe025d8550d35747ab080
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489680"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id`Die ID des Auftrags. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'`Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @server_name = ] 'server'`Der Name des Servers, an dem der Auftrag ausgerichtet werden soll. der *Server* ist vom Datentyp **nvarchar (30)**, der Standardwert ist N ' (local) '. der *Server* kann entweder **(local)** für einen lokalen Server oder der Name eines vorhandenen Zielservers sein.  
+`[ @server_name = ] 'server'` Der Name des Servers, an dem der Auftrag ausgerichtet werden soll. der *Server* ist vom Datentyp **nvarchar (30)**, der Standardwert ist N ' (local) '. der *Server* kann entweder **(local)** für einen lokalen Server oder der Name eines vorhandenen Zielservers sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -106,7 +107,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_apply_job_to_targets &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

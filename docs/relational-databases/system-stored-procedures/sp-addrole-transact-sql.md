@@ -1,4 +1,5 @@
 ---
+description: sp_addrole (Transact-SQL)
 title: sp_addrole (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f364de4eb2760c5beeae17360fb84ffd52fd7181
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 245e617a9756e276bc06907a6f1592ec5383e69e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489568"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rolename = ] 'role'`Der Name der neuen Daten Bank Rolle. *role* ist vom Datentyp **sysname**und hat keinen Standardwert. die *Rolle* muss ein gültiger Bezeichner (ID) sein und darf nicht bereits in der aktuellen Datenbank vorhanden sein.  
+`[ @rolename = ] 'role'` Der Name der neuen Daten Bank Rolle. *role* ist vom Datentyp **sysname**und hat keinen Standardwert. die *Rolle* muss ein gültiger Bezeichner (ID) sein und darf nicht bereits in der aktuellen Datenbank vorhanden sein.  
   
-`[ @ownername = ] 'owner'`Ist der Besitzer der neuen Daten Bank Rolle. *Owner* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert des aktuell ausgeführten Benutzers. der *Besitzer* muss ein Datenbankbenutzer oder eine Daten Bank Rolle in der aktuellen Datenbank sein.  
+`[ @ownername = ] 'owner'` Ist der Besitzer der neuen Daten Bank Rolle. *Owner* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert des aktuell ausgeführten Benutzers. der *Besitzer* muss ein Datenbankbenutzer oder eine Daten Bank Rolle in der aktuellen Datenbank sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -69,7 +70,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 EXEC sp_addrole 'Managers';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  

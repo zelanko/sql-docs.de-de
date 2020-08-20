@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobs_in_schedule (Transact-SQL)
 title: sp_help_jobs_in_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55dbd9d513383fc4ed299dd56be5022b68f68bac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2c314f209e1b020598d1a0ab2ef946f2494ca989
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489372"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @schedule_id = ] schedule_id`Der Bezeichner des Zeitplans, für den Informationen aufgelistet werden sollen. *schedule_id* ist vom Datentyp **int**und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
+`[ @schedule_id = ] schedule_id` Der Bezeichner des Zeitplans, für den Informationen aufgelistet werden sollen. *schedule_id* ist vom Datentyp **int**und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
   
-`[ @schedule_name = ] 'schedule_name'`Der Name des Zeitplans, für den Informationen aufgelistet werden sollen. *schedule_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
+`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans, für den Informationen aufgelistet werden sollen. *schedule_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -56,8 +57,8 @@ sp_help_jobs_in_schedule
 |**job_id**|**uniqueidentifier**|Eindeutige ID des Auftrags.|  
 |**originating_server**|**nvarchar(30)**|Name des Servers, von dem der Auftrag stammt|  
 |**name**|**sysname**|Der Name des Auftrags.|  
-|**wodurch**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
-|**description**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
+|**enabled**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
+|**Beschreibung**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
 |**category**|**sysname**|Auftragskategorie|  
 |**Eigentor**|**sysname**|Auftragsbesitzer|  
@@ -86,7 +87,7 @@ sp_help_jobs_in_schedule
 |**has_target**|**int**|Die Anzahl der Zielserver des Auftrags.|  
 |**type**|**int**|Typ des Auftrags:<br /><br /> **1** = lokaler Auftrag.<br /><br /> **2** = Multiserverauftrag.<br /><br /> **0** = Auftrag hat keine Zielserver.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Prozedur werden Informationen aufgelistet, die an den bestimmten Zeitplan angefügt sind.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -1,4 +1,5 @@
 ---
+description: sp_server_info (Transact-SQL)
 title: sp_server_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09a7f0e7b0496d3f38ca31bc4a1df369133bb548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489139"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
@@ -40,7 +41,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @attribute_id = ] 'attribute_id'`Die ganzzahlige ID des Attributs. *attribute_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @attribute_id = ] 'attribute_id'` Die ganzzahlige ID des Attributs. *attribute_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -53,7 +54,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Der Attributname.|  
 |**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Aktuelle Einstellung des Attributs.|  
   
- Die Attribute sind in der folgenden Tabelle aufgeführt. [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC-Client Bibliotheken verwenden derzeit die Attribute **1**, **2**, **18**, **22**und **500** zur Verbindungszeit.  
+ Die Attribute sind in der folgenden Tabelle aufgeführt. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC-Client Bibliotheken verwenden derzeit die Attribute **1**, **2**, **18**, **22**und **500** zur Verbindungszeit.  
   
 |ATTRIBUTE_ID|Beschreibung in ATTRIBUTE_NAME|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -87,13 +88,13 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> Gibt an, ob gespeicherte Prozeduren über die remote gespeicherten Prozedurfunktionen in DB-Library ausgeführt werden können.|J|  
 |**500**|SYS_SPROC_VERSION<br /><br /> Gibt die Katalogversion der derzeit implementierten gespeicherten Prozeduren an.|Aktuelle Versionsnummer|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_server_info** gibt eine Teilmenge der Informationen zurück, die von **SQLGetInfo** in ODBC bereitgestellt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Katalog Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

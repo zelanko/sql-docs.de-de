@@ -1,4 +1,5 @@
 ---
+description: sp_helpqreader_agent (Transact-SQL)
 title: sp_helpqreader_agent (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e969e33c42348aabcd46f1c51d56c1329669820
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c638e7895d95518f59627643deb0b0070a19fa70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489288"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @frompublisher = ] frompublisher`Gibt an, ob die gespeicherte Prozedur auf dem Verleger oder auf dem Verteiler aufgerufen wird. *frompublisher* ist vom Typ Bit und hat den Standardwert 0. **1** bedeutet, dass die gespeicherte Prozedur vom Verleger aufgerufen wird, und **0** bedeutet, dass die gespeicherte Prozedur vom Verteiler aufgerufen wird.  
+`[ @frompublisher = ] frompublisher` Gibt an, ob die gespeicherte Prozedur auf dem Verleger oder auf dem Verteiler aufgerufen wird. *frompublisher* ist vom Typ Bit und hat den Standardwert 0. **1** bedeutet, dass die gespeicherte Prozedur vom Verleger aufgerufen wird, und **0** bedeutet, dass die gespeicherte Prozedur vom Verteiler aufgerufen wird.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -52,7 +53,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpqreader_agent** wird bei der Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -1,4 +1,5 @@
 ---
+description: sp_create_removable (Transact-SQL)
 title: sp_create_removable (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 454b077e39a8ff1c17c3a742bb7acd00e8e719f8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b004ff5c004d51bcd0af402fc081f96745d9b9ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489500"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85869876"
   Erstellt eine Datenbank für austauschbare Medien. Erstellt drei oder mehr Dateien (eine für die Systemkatalogtabellen, eine für das Transaktionsprotokoll und eine oder mehrere für die Datentabellen) und platziert die Datenbank in diesen Dateien.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Es wird empfohlen, stattdessen [Create Database](../../t-sql/statements/create-database-sql-server-transact-sql.md) zu verwenden.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Es wird empfohlen, stattdessen [Create Database](../../t-sql/statements/create-database-sql-server-transact-sql.md) zu verwenden.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,27 +56,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'dbname'`Der Name der Datenbank, die für die Verwendung auf einem Wechsel Datenträger erstellt werden soll. *dbname* ist vom **Datentyp vom Datentyp sysname**.  
+`[ @dbname = ] 'dbname'` Der Name der Datenbank, die für die Verwendung auf einem Wechsel Datenträger erstellt werden soll. *dbname* ist vom **Datentyp vom Datentyp sysname**.  
   
-`[ @syslogical = ] 'syslogical'`Der logische Name der Datei, die die System Katalog Tabellen enthält. *syslogisch* ist vom **Datentyp vom Datentyp sysname**.  
+`[ @syslogical = ] 'syslogical'` Der logische Name der Datei, die die System Katalog Tabellen enthält. *syslogisch* ist vom **Datentyp vom Datentyp sysname**.  
   
-`[ @sysphysical = ] 'sysphysical'`Der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Systemkatalogtabellen enthält. *sysphysical* ist vom Datentyp **nvarchar (260)**.  
+`[ @sysphysical = ] 'sysphysical'` Der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Systemkatalogtabellen enthält. *sysphysical* ist vom Datentyp **nvarchar (260)**.  
   
-`[ @syssize = ] syssize`Die Größe der Datei in Megabyte, die die System Katalog Tabellen enthält. *syssize* ist vom Datentyp **int**. Die minimale *syssize* ist 1.  
+`[ @syssize = ] syssize` Die Größe der Datei in Megabyte, die die System Katalog Tabellen enthält. *syssize* ist vom Datentyp **int**. Die minimale *syssize* ist 1.  
   
-`[ @loglogical = ] 'loglogical'`Der logische Name der Datei, die das Transaktionsprotokoll enthält. *loglogisch* ist vom **Datentyp vom Datentyp sysname**.  
+`[ @loglogical = ] 'loglogical'` Der logische Name der Datei, die das Transaktionsprotokoll enthält. *loglogisch* ist vom **Datentyp vom Datentyp sysname**.  
   
-`[ @logphysical = ] 'logphysical'`Der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Transaktionsprotokolltabellen enthält. *logphysical* ist vom Datentyp **nvarchar (260)**.  
+`[ @logphysical = ] 'logphysical'` Der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Transaktionsprotokolltabellen enthält. *logphysical* ist vom Datentyp **nvarchar (260)**.  
   
-`[ @logsize = ] logsize`Die Größe der Datei in Megabyte, die das Transaktionsprotokoll enthält. *logsize* ist vom Datentyp **int**. Die minimale *logsize* ist 1.  
+`[ @logsize = ] logsize` Die Größe der Datei in Megabyte, die das Transaktionsprotokoll enthält. *logsize* ist vom Datentyp **int**. Die minimale *logsize* ist 1.  
   
-`[ @datalogical1 = ] 'datalogical'`Der logische Name einer Datei, die die Datentabellen enthält. *datalogisch ist vom Datentyp* **vom Datentyp sysname**.  
+`[ @datalogical1 = ] 'datalogical'` Der logische Name einer Datei, die die Datentabellen enthält. *datalogisch ist vom Datentyp* **vom Datentyp sysname**.  
   
  Die Anzahl von Datendateien muss zwischen 1 und 16 liegen. In der Regel wird mehr als eine Datendatei erstellt, wenn zu erwarten ist, dass die Datenbank umfangreich wird und auf mehrere Datenträger verteilt werden muss.  
   
-`[ @dataphysical1 = ] 'dataphysical'`Der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Datentabellen enthält. *dataphysical ist vom Datentyp* **nvarchar (260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` Der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Datentabellen enthält. *dataphysical ist vom Datentyp* **nvarchar (260)**.  
   
-`[ @datasize1 = ] 'datasize'`Die Größe einer Datei in Megabyte, die Datentabellen enthält. *datasize ist vom Datentyp* **int**. Der minimale *DataSize* -Wert ist 1.  
+`[ @datasize1 = ] 'datasize'` Die Größe einer Datei in Megabyte, die Datentabellen enthält. *datasize ist vom Datentyp* **int**. Der minimale *DataSize* -Wert ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobstep (Transact-SQL)
 title: sp_delete_jobstep (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77557dee97475ef713c88c969de98a241d955eea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7fc21ae11a1ade4780b99a86d03b7c9948c05663
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489413"
 ---
 # <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id`Die ID des Auftrags, von dem der Schritt entfernt wird. *job_id*ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, von dem der Schritt entfernt wird. *job_id*ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'`Der Name des Auftrags, von dem aus der Schritt entfernt wird. *job_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, von dem aus der Schritt entfernt wird. *job_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > **Hinweis:** Es muss entweder *job_id* oder *job_name* angegeben werden. Beide können nicht angegeben werden.  
   
-`[ @step_id = ] step_id`Die ID des Schrittes, der entfernt wird. *step_id*ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @step_id = ] step_id` Die ID des Schrittes, der entfernt wird. *step_id*ist vom Datentyp **int**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

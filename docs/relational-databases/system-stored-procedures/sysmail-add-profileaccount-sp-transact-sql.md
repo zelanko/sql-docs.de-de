@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_profileaccount_sp (Transact-SQL)
 title: sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3de6a0b8ed5cbabd37cfa18f3b107c90121fe459
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a393c3902d8ee9c5af45a10358fbb9fa371af18e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488999"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,20 +42,20 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id`Die Profil-ID, der das Konto hinzugefügt werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_id = ] profile_id` Die Profil-ID, der das Konto hinzugefügt werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @profile_name = ] 'profile_name'`Der Profilname, dem das Konto hinzugefügt werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_name = ] 'profile_name'` Der Profilname, dem das Konto hinzugefügt werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @account_id = ] account_id`Die Konto-ID, die dem Profil hinzugefügt werden soll. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
+`[ @account_id = ] account_id` Die Konto-ID, die dem Profil hinzugefügt werden soll. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
-`[ @account_name = ] 'account_name'`Der Name des Kontos, das dem Profil hinzugefügt werden soll. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
+`[ @account_name = ] 'account_name'` Der Name des Kontos, das dem Profil hinzugefügt werden soll. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
-`[ @sequence_number = ] sequence_number`Die Sequenznummer des Kontos innerhalb des Profils. *sequence_number* ist vom Datentyp **int**und hat keinen Standardwert. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil verwendet werden.  
+`[ @sequence_number = ] sequence_number` Die Sequenznummer des Kontos innerhalb des Profils. *sequence_number* ist vom Datentyp **int**und hat keinen Standardwert. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil verwendet werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sowohl das Profil als auch das Konto müssen bereits vorhanden sein. Andernfalls gibt die gespeicherte Prozedur einen Fehler zurück.  
   
  Beachten Sie, dass diese gespeicherte Prozedur nicht die Sequenznummer eines Kontos ändert, das bereits dem angegebenen Profil zugeordnet ist. Weitere Informationen zum Aktualisieren der Sequenznummer eines Kontos finden Sie unter [sysmail_update_profileaccount_sp &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md).  

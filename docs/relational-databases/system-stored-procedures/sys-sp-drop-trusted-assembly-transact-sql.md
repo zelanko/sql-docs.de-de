@@ -1,4 +1,5 @@
 ---
+description: sys.sp_drop_trusted_assembly (Transact-SQL)
 title: sys. sp_drop_trusted_assembly (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
@@ -20,12 +21,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd3c1747fee1e23e0f68a7bcf1744f40e80786b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489028"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -46,7 +47,7 @@ sp_drop_trusted_assembly
 [ @hash =] '*Wert*'  
 Der SHA2_512 Hashwert der Assembly, die aus der Liste der vertrauenswürdigen Assemblys für den Server gelöscht werden soll. Vertrauenswürdige Assemblys werden möglicherweise geladen, wenn die CLR-strikte Sicherheit aktiviert ist, auch wenn die Assembly nicht signiert ist oder die Datenbank nicht als vertrauenswürdig gekennzeichnet ist.
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 
 Mit diesem Verfahren wird eine Assembly aus [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)entfernt.
 

@@ -1,4 +1,5 @@
 ---
+description: Angeben von berechneten Spalten in einer Tabelle
 title: Angeben von berechneten Spalten in einer Tabelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 546490349b2d80135c873ff0917ab571f3cae830
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee1d32ce60064d6ab42b04a9aeddec4a6252d479
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488598"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Angeben von berechneten Spalten in einer Tabelle
 
@@ -32,7 +33,7 @@ Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabe
 
    [Einschränkungen](#Limitations)
 
-   [Sicherheit](#Security)
+   [Security](#Security)
 
 - **So geben Sie eine berechnete Spalte an mit:**
 
@@ -67,7 +68,7 @@ Erfordert die ALTER-Berechtigung für die Tabelle.
 
 5. Geben Sie an, ob die Daten persistent gespeichert werden sollen, indem Sie im Dropdownfeld für die untergeordnete Eigenschaft **IsPersisted** die Option **Ja** oder **Nein** wählen.
 
-6. Klicken Sie im Menü **Datei** auf **Tabellenname** _speichern_.
+6. Klicken Sie im Menü **Datei** auf _Tabellenname_ **speichern**.
 
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>So fügen Sie einer vorhandenen Spalte die Definition einer berechneten Spalte hinzu
 

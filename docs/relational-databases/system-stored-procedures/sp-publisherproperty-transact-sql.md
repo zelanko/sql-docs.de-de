@@ -1,4 +1,5 @@
 ---
+description: sp_publisherproperty (Transact-SQL)
 title: sp_publisherproperty (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a4bfcd7d9f03e41e32551653788386612a43835
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b04284605289d731b0a8eb955830ab149827114
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489208"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des heterogenen Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des heterogenen Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @propertyname = ] 'propertyname'`Der Name der Eigenschaft, die festgelegt wird. *propertyName* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
+`[ @propertyname = ] 'propertyname'` Der Name der Eigenschaft, die festgelegt wird. *propertyName* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**xactsetbatching**|Gibt an, ob Transaktionen auf dem Verleger zur weiteren Verarbeitung gruppiert werden, in Mengen, die im Hinblick auf Transaktionen konsistent sind und als Xactsets bezeichnet werden. Der Wert **aktiviert** bedeutet, dass Xactsets erstellt werden können. Dies ist die Standardeinstellung. Der Wert **deaktiviert** bedeutet, dass vorhandene Xactsets verarbeitet werden, ohne dass neue Xactsets erstellt werden.|  
 |**xactsetjob**|Gibt an, ob der Xactset-Auftrag zum Erstellen von Xactsets aktiviert ist. Der Wert **aktiviert** bedeutet, dass der Xactset-Auftrag regelmäßig ausgeführt wird, um Xactsets auf dem Verleger zu erstellen. Der Wert **deaktiviert** bedeutet, dass die Xactsets nur vom Protokolllese-Agent erstellt werden, wenn der Verleger nach Änderungen abfragt.|  
@@ -64,7 +65,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_publisherproperty** wird bei der Transaktions Replikation für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger verwendet.  
   
  Wenn nur *Publisher* angegeben ist, enthält das Resultset die aktuellen Einstellungen für alle Eigenschaften, die festgelegt werden können.  
@@ -79,7 +80,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  Nur Mitglieder der festen Server Rolle **sysadmin** auf dem Verteiler können **sp_publisherproperty**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren des Transaktions Satz-Auftrags für einen Oracle-Verleger &#40;Replikations Programmierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [Konfigurieren des Transaktionssatz-Auftrags für einen Oracle-Verleger &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

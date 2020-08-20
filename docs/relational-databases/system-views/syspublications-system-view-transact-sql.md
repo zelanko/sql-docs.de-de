@@ -1,4 +1,5 @@
 ---
+description: syspublications (Systemsicht) (Transact-SQL)
 title: syspublications (System Sicht) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d19bf233bf1f240f6ada8a1e110b331cc7ca6ce8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 051a57d3cce26d7367cff1ce3afc720534e920bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488671"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (Systemsicht) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85881206"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**description**|**nvarchar(255)**|Der beschreibende Eintrag für die Veröffentlichung.|  
+|**Beschreibung**|**nvarchar(255)**|Der beschreibende Eintrag für die Veröffentlichung.|  
 |**name**|**sysname**|Der eindeutige der Veröffentlichung zugeordnete Name.|  
 |**pubid**|**int**|Die Identitätsspalte mit einer eindeutigen ID für die Veröffentlichung.|  
 |**repl_freq**|**tinyint**|Replikationshäufigkeit:<br /><br /> **0** = Transaktions basiert (transaktional).<br /><br /> **1** = geplante Tabellen Aktualisierung (Momentaufnahme).|  
@@ -47,7 +48,7 @@ ms.locfileid: "85881206"
 |**immediate_sync_ready**|**bit**|Zeigt an, ob die Momentaufnahme vom Momentaufnahme-Agent generiert wurde und dieser zum Verwenden durch neue Abonnements bereit ist. Dies ist nur für sofort aktualisierbare Veröffentlichungen von Bedeutung. **1** gibt an, dass die Momentaufnahme bereit ist.|  
 |**allow_sync_tran**|**bit**|Gibt an, ob Abonnements mit sofortiger Aktualisierung für die Veröffentlichung zulässig sind. **1** bedeutet, dass Abonnements mit sofortigem Update zulässig sind.|  
 |**autogen_sync_procs**|**bit**|Gibt an, ob die synchronisierende gespeicherte Prozedur für Abonnements mit sofortiger Aktualisierung beim Verleger generiert wird. der Wert **1** bedeutet, dass er auf dem Verleger generiert wird.|  
-|**zurück**|**int**|Der Zeitraum (in Stunden), in dem Änderungen an der Veröffentlichung in der Verteilungsdatenbank beibehalten werden.|  
+|**Beibehaltung**|**int**|Der Zeitraum (in Stunden), in dem Änderungen an der Veröffentlichung in der Verteilungsdatenbank beibehalten werden.|  
 |**allow_queued_tran**|**bit**|Gibt an, ob das Einreihen von Änderungen auf dem Abonnenten in Warteschlangen, bis diese Änderungen auf dem Verleger angewendet werden können, aktiviert wurde. Bei **1**werden Änderungen auf dem Abonnenten in die Warteschlange eingereiht.|  
 |**snapshot_in_defaultfolder**|**bit**|Gibt an, ob Momentaufnahme Dateien im Standardordner gespeichert werden. Wenn der Wert **0**ist, wurden die Momentaufnahme Dateien am alternativen Speicherort gespeichert, der durch *alternate_snapshot_folder*angegeben wurde. Bei 1 befinden sich die Momentaufnahmedateien im Standardordner.|  
 |**alt_snapshot_folder**|**nvarchar (510)**|Gibt den Speicherort des anderen Ordners für die Momentaufnahme an.|  

@@ -1,4 +1,5 @@
 ---
+description: dbo.sysschedules (Transact-SQL)
 title: dbo.sysZeitpläne (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 397fecaadad721529671a69daaf1c704e28268ea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 16e51513c6d2b678798d0f4bde3b5a9cb1de69a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488874"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85890391"
 |**originating_server_id**|**int**|ID des Masterservers, von dem der Auftragszeitplan stammt.|  
 |**name**|**vom Datentyp sysname (nvarchar (128))**|Benutzerdefinierter Name für den Auftragszeitplan. Dieser Name muss innerhalb eines Auftrags eindeutig sein.|  
 |**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* des Benutzers oder der Gruppe, der den Auftrags Zeitplan besitzt.|  
-|**wodurch**|**int**|Status des Auftragszeitplans:<br /><br /> **0** = nicht aktiviert.<br /><br /> **1** = aktiviert.<br /><br /> Wenn der Zeitplan nicht aktiviert ist, werden keine Aufträge nach dem Zeitplan ausgeführt.|  
+|**enabled**|**int**|Status des Auftragszeitplans:<br /><br /> **0** = nicht aktiviert.<br /><br /> **1** = aktiviert.<br /><br /> Wenn der Zeitplan nicht aktiviert ist, werden keine Aufträge nach dem Zeitplan ausgeführt.|  
 |**freq_type**|**int**|Häufigkeit der Ausführung eines Auftrags für diesen Zeitplan.<br /><br /> **1** = nur einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu **freq_interval**<br /><br /> **64** = wird ausgeführt, wenn der SQL Server-Agent Dienst gestartet wird.<br /><br /> **128** = wird ausgeführt, wenn sich der Computer im Leerlauf befindet|  
 |**freq_interval**|**int**|Tage, an denen der Auftrag ausgeführt wird. Hängt vom Wert **freq_type**ab. Der Standardwert ist **0**(null) und gibt an, dass **freq_interval** nicht verwendet wird. In der folgenden Tabelle finden Sie die möglichen Werte und deren Auswirkungen.|  
 |**freq_subday_type**|**int**|Einheiten für die **freq_subday_interval**. Im folgenden sind die möglichen Werte und ihre Beschreibungen aufgeführt.<br /><br /> <br /><br /> **1** : zum angegebenen Zeitpunkt<br /><br /> **2** : Sekunden<br /><br /> **4** : Minuten<br /><br /> **8** : Stunden|  
@@ -64,7 +65,7 @@ ms.locfileid: "85890391"
 |**64** (wird gestartet, wenn SQL Server-Agent Dienst gestartet wird)|**freq_interval** nicht verwendet (**0**)|  
 |**128** (wird ausgeführt, wenn der Computer im Leerlauf ist)|**freq_interval** nicht verwendet (**0**)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [dbo.sysjobzeitpläne &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

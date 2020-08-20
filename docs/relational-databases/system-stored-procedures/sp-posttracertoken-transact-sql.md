@@ -1,4 +1,5 @@
 ---
+description: sp_posttracertoken (Transact-SQL)
 title: sp_posttracertoken (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1354645781d4d6207311349689fb8431e3cb7912
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74e1bcab6a1db0f8c92b82475689f24b53d72316
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489140"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +42,16 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, für die die Latenzzeit gemessen wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die die Latenzzeit gemessen wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @tracer_token_id = ] _tracer_token_id OUTPUT`Die ID des eingefügten Überwachungs Tokens. *tracer_token_id* ist vom Datentyp **int** und hat den Standardwert NULL, und es handelt sich um einen Output-Parameter. Dieser Wert kann verwendet werden, um [sp_helptracertokenhistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) oder [sp_deletetracertokenhistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) auszuführen, ohne zuerst [sp_helptracertokens &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)auszuführen.  
+`[ @tracer_token_id = ] _tracer_token_id OUTPUT` Die ID des eingefügten Überwachungs Tokens. *tracer_token_id* ist vom Datentyp **int** und hat den Standardwert NULL, und es handelt sich um einen Output-Parameter. Dieser Wert kann verwendet werden, um [sp_helptracertokenhistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) oder [sp_deletetracertokenhistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) auszuführen, ohne zuerst [sp_helptracertokens &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)auszuführen.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist NULL und sollte für einen Verleger nicht angegeben werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist NULL und sollte für einen Verleger nicht angegeben werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_posttracertoken** wird bei der Transaktions Replikation verwendet.  
   
 ## <a name="example"></a>Beispiel  

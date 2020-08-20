@@ -1,4 +1,5 @@
 ---
+description: sp_columns (Transact-SQL)
 title: sp_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/17/2016
@@ -18,12 +19,12 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ac9e5647193899335af494ac87f8ecdafe6390d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5dec6803d57bbb67286dc7b9ceb1b573644c2863
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489553"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,20 +46,20 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ \@table_name = ] object`Der Name des-Objekts, das verwendet wird, um Katalog Informationen zurückzugeben. bei dem *Objekt* kann es sich um eine Tabelle, eine Sicht oder ein anderes Objekt mit Spalten wie Tabellenwert Funktionen handeln. Das *Objekt* ist vom Datentyp **nvarchar (384)** und hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
+`[ \@table_name = ] object` Der Name des-Objekts, das verwendet wird, um Katalog Informationen zurückzugeben. bei dem *Objekt* kann es sich um eine Tabelle, eine Sicht oder ein anderes Objekt mit Spalten wie Tabellenwert Funktionen handeln. Das *Objekt* ist vom Datentyp **nvarchar (384)** und hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
-`[ \@table_owner = ] owner`Der Objektbesitzer des-Objekts, das verwendet wird, um Katalog Informationen zurückzugeben. *Owner* ist vom Datentyp **nvarchar (384)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *Owner* nicht angegeben wird, werden die Standardregeln für die Sichtbarkeit des Objekts des zugrunde liegenden DBMS angewendet.  
+`[ \@table_owner = ] owner` Der Objektbesitzer des-Objekts, das verwendet wird, um Katalog Informationen zurückzugeben. *Owner* ist vom Datentyp **nvarchar (384)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *Owner* nicht angegeben wird, werden die Standardregeln für die Sichtbarkeit des Objekts des zugrunde liegenden DBMS angewendet.  
   
  Wenn der aktuelle Benutzer ein Objekt mit dem angegebenen Namen besitzt, werden die Spalten dieses Objekts zurückgegeben. Wenn *Owner* nicht angegeben wird und der aktuelle Benutzer kein Objekt mit dem angegebenen *Objekt*besitzt, sucht **sp_columns** nach einem Objekt mit dem angegebenen *Objekt* , das im Besitz des Daten Bank Besitzers ist. Sofern ein solches Objekt vorhanden ist, werden dessen Spalten zurückgegeben.  
   
-`[ \@table_qualifier = ] qualifier`Der Name des Objekt Qualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für-Objekte (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für das Objekt dar.  
+`[ \@table_qualifier = ] qualifier` Der Name des Objekt Qualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für-Objekte (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für das Objekt dar.  
   
-`[ \@column_name = ] column`Bei handelt es sich um eine einzelne Spalte, die verwendet wird, wenn nur eine Spalte mit Katalog Informationen gewünscht wird. die Spalte ist vom *Datentyp* **nvarchar (384)** und hat den Standardwert NULL. Wenn *Column* nicht angegeben wird, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt *Column* den Spaltennamen dar, der in der **syscolumschlag** -Tabelle aufgelistet ist. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen SQL-92-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
+`[ \@column_name = ] column` Bei handelt es sich um eine einzelne Spalte, die verwendet wird, wenn nur eine Spalte mit Katalog Informationen gewünscht wird. die Spalte ist vom *Datentyp* **nvarchar (384)** und hat den Standardwert NULL. Wenn *Column* nicht angegeben wird, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt *Column* den Spaltennamen dar, der in der **syscolumschlag** -Tabelle aufgelistet ist. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen SQL-92-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
   
-`[ \@ODBCVer = ] ODBCVer`Die verwendete ODBC-Version. *ODBCVer* ist vom Datentyp **int**. der Standardwert ist 2. Dieser gibt ODBC, Version 2, an. Gültige Werte sind 2 oder 3. Informationen zu den Verhaltens unterschieden zwischen den Versionen 2 und 3 finden Sie in der **SQLColumns** -Spezifikation von ODBC.  
+`[ \@ODBCVer = ] ODBCVer` Die verwendete ODBC-Version. *ODBCVer* ist vom Datentyp **int**. der Standardwert ist 2. Dieser gibt ODBC, Version 2, an. Gültige Werte sind 2 oder 3. Informationen zu den Verhaltens unterschieden zwischen den Versionen 2 und 3 finden Sie in der **SQLColumns** -Spezifikation von ODBC.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keiner  
+ Keine  
   
 ## <a name="result-sets"></a>Resultsets  
  Die gespeicherte Prozedur **sp_columns** Katalogs entspricht **SQLColumns** in ODBC. Die zurückgegebenen Ergebnisse werden nach **TABLE_QUALIFIER**, **TABLE_OWNER**und **table_name**geordnet.  
@@ -113,7 +114,7 @@ EXEC sp_columns @table_name = N'DimEmployee',
    @table_owner = N'dbo';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_tables &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [Gespeicherte Katalog Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

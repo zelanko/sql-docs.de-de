@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 1: Konvertieren einer Tabelle in eine hierarchische Struktur'
 title: 'Lektion 1: Konvertieren einer Tabelle in eine hierarchische Struktur | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 08/22/2018
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 18a7ad2ca8c66f2960fae9a051d0d2546adb02f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1a4d64425d6d02fbc57bde9f84159c4f09f4929
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488572"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lektion 1: Konvertieren einer Tabelle in eine hierarchische Struktur
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Laden Sie die [AdventureWorks 2017-Beispieldatenbank](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) herunter.
 
-Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restore a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Untersuchen der aktuellen Struktur der Mitarbeitertabelle
 Die Beispieldatenbank Adventureworks2017 (oder höher) enthält im Schema **HumanResources** die Tabelle **Employee**. Um Änderungen an der ursprünglichen Tabelle zu vermeiden, wird in diesem Schritt eine Kopie der Tabelle **Employee** mit dem Namen **EmployeeDemo**erstellt. Um das Beispiel zu vereinfachen, kopieren Sie nur fünf Spalten aus der ursprünglichen Tabelle. Dann fragen Sie die Tabelle **HumanResources.EmployeeDemo** ab, um zu sehen, wie die Daten in einer Tabelle strukturiert werden, wenn der **hierarchyid** -Datentyp nicht verwendet wird.  
@@ -94,7 +95,7 @@ Beachten Sie, dass die **ORDER BY** -Klausel bewirkt, dass die Mitarbeiter, die 
 
 
 ## <a name="populate-a-table-with-existing-hierarchical-data"></a>Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten
-In dieser Aufgabe wird eine neue Tabelle erstellt und mit den Daten aus der Tabelle **EmployeeDemo** aufgefüllt. Diese Aufgabe umfasst die folgenden Schritte:  
+ In dieser Aufgabe wird eine neue Tabelle erstellt und mit den Daten aus der Tabelle **EmployeeDemo** aufgefüllt. Diese Aufgabe umfasst die folgenden Schritte:  
   
 -   Erstellen Sie eine neue Tabelle, die eine **hierarchyid** -Spalte enthält. Diese Spalte könnte die vorhandenen Spalten **EmployeeID** und **ManagerID** ersetzen. Sie behalten diese Spalten jedoch bei, weil bestehende Anwendungen möglicherweise auf diese Spalten verweisen und weil dann die Daten nach der Übertragung leichter verständlich sind. Gemäß der Tabellendefinition ist **OrgNode** der Primärschlüssel, so dass diese Spalte eindeutige Werte enthalten muss. Der gruppierte Index der Spalte **OrgNode** speichert das Datum in **OrgNode** -Sequenz.    
 -   Erstellen Sie eine temporäre Tabelle, mit deren Hilfe verfolgt wird, wie viele Mitarbeiter jedem Manager direkt unterstellt sind. 

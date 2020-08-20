@@ -1,4 +1,5 @@
 ---
+description: sp_helpsrvrolemember (Transact-SQL)
 title: sp_helpsrvrolemember (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 559a88809e903c56221088e811b1b04875f3849a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be34b5879a21824e5e0b92fbe3187fce039d6ffa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489246"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @srvrolename = ] 'role'`Der Name einer Server Rolle mit fester Größe. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Role*nicht angegeben wird, enthält das Resultset Informationen zu allen festgelegten Server Rollen.  
+`[ @srvrolename = ] 'role'` Der Name einer Server Rolle mit fester Größe. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Role*nicht angegeben wird, enthält das Resultset Informationen zu allen festgelegten Server Rollen.  
   
  die *Rolle* kann einen der folgenden Werte aufweisen.  
   
@@ -65,7 +66,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |MemberName|**sysname**|Name eines Mitglieds von ServerRole.|  
 |MemberSID|**varbinary(85)**|Sicherheits-ID des Mitgliedsnamens|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie sp_helprolemember, um die Mitglieder einer Daten Bank Rolle anzuzeigen.  
   
  Alle Anmeldungen sind Mitglied von Public. sp_helpsrvrolemember erkennt die public-Rolle nicht, da von intern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht als Rolle implementiert wird.  

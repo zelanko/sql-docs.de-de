@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergealternatepublisher (Transact-SQL)
 title: sp_helpmergealternatepublisher (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 408d619ac06403c2d07b4b71b859cf49f6e2a071
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9d20e6273aaafd2c589dbd7e04b38e60890d5c21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489319"
 ---
 # <a name="sp_helpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +38,11 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des alternativen Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des alternativen Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -52,12 +53,12 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**alternate_publication**|**sysname**|Name der Veröffentlichung.|  
 |**alternate_distributor**|**sysname**|Der Name des Verteilers.|  
 |**friendly_name**|**nvarchar(255)**|Die Beschreibung des alternativen Verlegers.|  
-|**wodurch**|**bit**|Gibt an, ob der Server ein alternativer Verleger ist. der Wert **1** gibt an, dass der Verleger als alternativer Verleger aktiviert ist. der Wert **0** gibt an, dass er nicht aktiviert ist.|  
+|**enabled**|**bit**|Gibt an, ob der Server ein alternativer Verleger ist. der Wert **1** gibt an, dass der Verleger als alternativer Verleger aktiviert ist. der Wert **0** gibt an, dass er nicht aktiviert ist.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpmergealternatepublisher** wird bei der Mergereplikation verwendet.  
   
  Während jeder Mergesitzung fragt das System sowohl den Verleger als auch den Abonnenten nach ihren Listen alternativer Verleger ab. Der Mergeprozess fügt der Liste der alternativen Verleger Einträge hinzu bzw. entfernt Einträge aus der Liste, sodass die Liste der alternativen Verleger auf dem Abonnenten mit derjenigen auf dem Verleger übereinstimmt.  

@@ -1,4 +1,5 @@
 ---
+description: Umbenennen von benutzerdefinierten Funktionen
 title: Umbenennen von benutzerdefinierten Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c80d1d948f24c212c547c9367f05802c8570fe01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3af6036a3bc6cf2b751eed6a1df173fca2c9a117
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488583"
 ---
 # <a name="rename-user-defined-functions"></a>Umbenennen von benutzerdefinierten Funktionen
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85768311"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So benennen Sie benutzerdefinierte Funktionen um mit:**  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_helplogins (Transact-SQL)
 title: sp_helplogins (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f88a0248d6e3afbfb3b654bd56de01cecfc7f872
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68a90477996c9782722e1a9c0b50f82fd5cf408e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489335"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @LoginNamePattern = ] 'login'`Ein Anmelde Name. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *login* muss vorhanden sein, wenn angegeben. Falls *login* nicht angegeben wird, werden Informationen zu allen Anmeldenamen zurückgegeben.  
+`[ @LoginNamePattern = ] 'login'` Ein Anmelde Name. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *login* muss vorhanden sein, wenn angegeben. Falls *login* nicht angegeben wird, werden Informationen zu allen Anmeldenamen zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -62,10 +63,10 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Benutzername|  
 |**DBName**|**sysname**|Standarddatenbank, die **LoginName** beim Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet.|  
-|**User**|**sysname**|Benutzerkonto, dem **LoginName** in **DBName**zugeordnet ist, und die Rollen, denen **LoginName** in **DBName**angehört.|  
+|**UserName**|**sysname**|Benutzerkonto, dem **LoginName** in **DBName**zugeordnet ist, und die Rollen, denen **LoginName** in **DBName**angehört.|  
 |**UserOrAlias**|**char (8)**|MemberOf = **UserName** ist eine Rolle.<br /><br /> User = **UserName** ist ein Benutzerkonto.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Bestimmen Sie mithilfe von **sp_helplogins** die Benutzerkonten, die dem Anmeldenamen zugeordnet sind, bevor Sie Anmeldenamen entfernen.  
   
 ## <a name="permissions"></a>Berechtigungen  

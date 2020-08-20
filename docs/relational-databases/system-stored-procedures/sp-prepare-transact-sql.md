@@ -1,4 +1,5 @@
 ---
+description: sp_prepare (Transact-SQL)
 title: sp_prepare (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/28/2018
@@ -18,17 +19,17 @@ ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9095536219fc0cdc419a0952217b0eeb2ef19f5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b3ccb20945f47aa7094de832faa8eb246022819a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489175"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-Bereitet eine parametrisierte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung vor und gibt ein Anweisungs *handle* zur Ausführung zurück.  `sp_prepare`wird aufgerufen, indem ID = 11 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
+Bereitet eine parametrisierte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung vor und gibt ein Anweisungs *handle* zur Ausführung zurück.  `sp_prepare` wird aufgerufen, indem ID = 11 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
  ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +52,7 @@ sp_prepare handle OUTPUT, params, stmt, options
  *options*  
  Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. die *Optionen* erfordern den folgenden int-Eingabe Wert:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

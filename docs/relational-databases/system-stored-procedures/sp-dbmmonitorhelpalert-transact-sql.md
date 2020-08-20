@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitorhelpalert (Transact-SQL)
 title: sp_dbmmonitorhelpalert (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab1a8338a25394b3a750e09e0b0da6c6099c97ee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 942696e1d05ac149780ca226d4a6ba500a3aa11c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489424"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +70,7 @@ sp_dbmmonitorhelpalert database_name
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|In der folgenden Tabelle sind die **alert_id** Werte für jede Leistungs Metrik und die Maßeinheit der Metrik aufgelistet, die im **sp_dbmmonitorresults** Resultset angezeigt wird:|  
 |**threshold**|**int**|Der Schwellenwert für die Warnung. Wenn der Rückgabewert beim Aktualisieren des Spiegelungsstatus diesen Schwellenwert überschreitet, wird ein Eintrag im Windows-Ereignisprotokoll generiert. Der Wert stellt je nach Warnung KB, Minuten oder Millisekunden dar. Ist der Schwellenwert aktuell nicht festgelegt, lautet der Wert NULL.<br /><br /> **Hinweis:** Führen Sie die gespeicherte Prozedur [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) aus, um die aktuellen Werte anzuzeigen.|  
-|**wodurch**|**bit**|0 = Ereignis ist deaktiviert.<br /><br /> 1 = Ereignis ist aktiviert.<br /><br /> **Hinweis:** Die Beibehaltungs Dauer ist immer aktiviert.|  
+|**enabled**|**bit**|0 = Ereignis ist deaktiviert.<br /><br /> 1 = Ereignis ist aktiviert.<br /><br /> **Hinweis:** Die Beibehaltungs Dauer ist immer aktiviert.|  
   
 |Wert|Leistungsmetrik|Einheit|  
 |-----------|------------------------|----------|  
@@ -80,7 +81,7 @@ sp_dbmmonitorhelpalert database_name
 |5|Beibehaltungsdauer|Stunden|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Zeile zurückgegeben, die angibt, ob eine Warnung für die Leistungsmetrik der ältesten, nicht gesendeten Transaktion für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank aktiviert ist.  
@@ -96,7 +97,7 @@ EXEC sp_dbmmonitorhelpalert AdventureWorks2012;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Überwachen der Daten Bank Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   

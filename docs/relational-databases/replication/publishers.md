@@ -1,4 +1,5 @@
 ---
+description: Herausgeber
 title: Verleger | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 774358e1732d5110d9574bce810b84af1f2807d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a2fed319e89864538104904782b28329855dbf08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490543"
 ---
 # <a name="publishers"></a>Herausgeber
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85765172"
   
  Die von Ihnen als Verleger ausgewählten Server verwenden die auf der Seite **Verteilungsdatenbank** dieses Assistenten ausgewählte Verteilungsdatenbank. Aktivieren Sie zu diesem Zeitpunkt nicht den Verleger, wenn Sie eine andere Verteilungsdatenbank verwenden möchten. Verwenden Sie stattdessen das Dialogfeld **Verteilereigenschaften** , um Verleger nach dem Abschließen des Verteilungskonfigurations-Assistenten hinzuzufügen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verleger**  
  Wählen Sie die Server aus, die diesen Verteiler verwenden dürfen. Klicken Sie neben einem Verleger auf die Eigenschaftenschaltfläche(**die Schaltfläche mit den drei Punkten**), um zusätzliche Eigenschaften anzuzeigen und festzulegen.  
   

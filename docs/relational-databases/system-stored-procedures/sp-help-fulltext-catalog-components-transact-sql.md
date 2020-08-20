@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_catalog_components (Transact-SQL)
 title: sp_help_fulltext_catalog_components (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb7cbf41a439c5221892142178d1341a9284f555
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 008c9b4f6cd0478e960d77ff6c39b45d9a34fbe2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489366"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**Name des voll Text Katalogs**|**int**|Name des Volltextkatalogs.|  
 |**voll Text Katalog-ID**|**sysname**|ID des Volltextkatalogs.|  
-|**componenttype**|**sysname**|Typ der Komponente. Einer der folgenden:<br /><br /> Filter<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
+|**componenttype**|**sysname**|Typ der Komponente. Einer der folgenden:<br /><br /> Filtern<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
 |**componentname**|**sysname**|Der Name der Komponente.|  
 |**CLSID**|**uniqueidentifier**|Klassenbezeichner der Komponente.|  
 |**FullPath**|**nvarchar(256)**|Pfad zum Speicherort der Komponente.<br /><br /> NULL = Aufrufer ist kein Mitglied der festen Serverrolle **serveradmin** .|  

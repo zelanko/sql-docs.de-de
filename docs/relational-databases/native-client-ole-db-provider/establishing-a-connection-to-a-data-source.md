@@ -1,4 +1,5 @@
 ---
+description: Herstellen einer Verbindung mit der Datenquelle (Native Client OLE DB-Anbieter)
 title: Herstellen einer Verbindung mit der Datenquelle (Native Client OLE DB-Anbieter) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1dc465bfa63a0822fc4a1de7b13611c0d1121017
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 384d6b0b9db152d1418b009c50345151786875e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490724"
 ---
 # <a name="establishing-a-connection-to-a-sql-server-native-client-data-source"></a>Herstellen einer Verbindung mit einer SQL Server Native Client Datenquelle
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "87248169"
   
  Wenn mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Computer ausgeführt werden, wird der Servername als ServerName\InstanceName angegeben.  
   
- Das Datenquellenobjekt macht auch die **IDBInitialize**-Schnittstelle verfügbar. Nachdem die Eigenschaften festgelegt wurden, wird die Verbindung zur Datenquelle durch Aufrufen der **IDBInitialize::Initialize**-Methode hergestellt. Zum Beispiel:  
+ Das Datenquellenobjekt macht auch die **IDBInitialize**-Schnittstelle verfügbar. Nachdem die Eigenschaften festgelegt wurden, wird die Verbindung zur Datenquelle durch Aufrufen der **IDBInitialize::Initialize**-Methode hergestellt. Beispiel:  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   

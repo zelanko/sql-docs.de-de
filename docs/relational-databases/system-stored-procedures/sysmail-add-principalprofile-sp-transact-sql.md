@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_principalprofile_sp (Transact-SQL)
 title: sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dac2c362e2aac2b09969ba7193e44b06facebb51
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7e3c8085bdbdf45deac3fe6190bbad263e4d7d5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489040"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,20 +42,20 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @principal_id = ] principal_id`Die ID des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *principal_id* oder *principal_name* angegeben werden. Wenn *principal_id* auf **0** festgelegt ist, wird dieses Profil öffentlich, wobei der Zugriff auf alle Prinzipale in der Datenbank erteilt wird.  
+`[ @principal_id = ] principal_id` Die ID des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *principal_id* oder *principal_name* angegeben werden. Wenn *principal_id* auf **0** festgelegt ist, wird dieses Profil öffentlich, wobei der Zugriff auf alle Prinzipale in der Datenbank erteilt wird.  
   
-`[ @principal_name = ] 'principal_name'`Der Name des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *principal_id* oder *principal_name* angegeben werden. Wenn *principal_name* auf **'public'** festgelegt ist, wird dieses Profil öffentlich, wobei der Zugriff auf alle Prinzipale in der Datenbank erteilt wird.  
+`[ @principal_name = ] 'principal_name'` Der Name des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *principal_id* oder *principal_name* angegeben werden. Wenn *principal_name* auf **'public'** festgelegt ist, wird dieses Profil öffentlich, wobei der Zugriff auf alle Prinzipale in der Datenbank erteilt wird.  
   
-`[ @profile_id = ] profile_id`Die ID des Profils für die Zuordnung. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_id = ] profile_id` Die ID des Profils für die Zuordnung. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @profile_name = ] 'profile_name'`Der Name des Profils für die Zuordnung. *profile_name* ist vom Datentyp **sysname**und hat keinen Standardwert. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_name = ] 'profile_name'` Der Name des Profils für die Zuordnung. *profile_name* ist vom Datentyp **sysname**und hat keinen Standardwert. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @is_default = ] is_default`Gibt an, ob dieses Profil das Standardprofil für den Prinzipal ist. Ein Prinzipal muss genau ein Standardprofil haben. *is_default* ist vom Datentyp **bit**und hat keinen Standardwert.  
+`[ @is_default = ] is_default` Gibt an, ob dieses Profil das Standardprofil für den Prinzipal ist. Ein Prinzipal muss genau ein Standardprofil haben. *is_default* ist vom Datentyp **bit**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie ein Profil als öffentlich festlegen möchten, geben Sie die ** \@ principal_id** **0** oder eine ** \@ principal_name** **Public**an. Ein öffentliches Profil ist für alle Benutzer der **msdb** -Datenbank verfügbar. Allerdings müssen diese Benutzer auch Mitglieder von **DatabaseMailUserRole** sein, wenn sie **sp_send_dbmail**ausführen können sollen.  
   
  Ein Datenbankbenutzer kann nur ein Standardprofil besitzen. Wenn ** \@ is_default** '**1**' ist und der Benutzer bereits einem oder mehreren Profilen zugeordnet ist, wird das angegebene Profil zum Standardprofil für den Benutzer. Das zuvor als Standardprofil verwendete Profil ist dem Benutzer weiter zugeordnet, es ist jedoch nicht mehr als Standardprofil festgelegt.  

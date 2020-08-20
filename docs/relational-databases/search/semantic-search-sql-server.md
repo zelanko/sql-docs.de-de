@@ -1,4 +1,5 @@
 ---
+description: Semantische Suche (SQL Server)
 title: Semantische Suche (SQL Server) | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 4ef517636a0bc1f727f2dc6a59093af773007cc8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8da5b57c26ad2b99ab11b058b9d3362ff48569e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490544"
 ---
 # <a name="semantic-search-sql-server"></a>Semantische Suche (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-Die statistische semantische Suche liefert einen tiefen Einblick in unstrukturierte Dokumente, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken gespeichert sind, indem statistisch relevante *Schlüsselausdrücke*extrahiert und indiziert werden. Anschließend werden diese Schlüsselausdrücke verwendet, um *ähnliche oder verwandte Dokumente* zu identifizieren und zu indizieren.  
+ Die statistische semantische Suche liefert einen tiefen Einblick in unstrukturierte Dokumente, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken gespeichert sind, indem statistisch relevante *Schlüsselausdrücke* extrahiert und indiziert werden. Anschließend werden diese Schlüsselausdrücke verwendet, um *ähnliche oder verwandte Dokumente* zu identifizieren und zu indizieren.  
   
 ##  <a name="what-can-you-do-with-semantic-search"></a><a name="whatcanido"></a> Was ist mit der semantischen Suche alles möglich?  
  Die semantische Suche basiert auf der vorhandenen Volltextsuchfunktion in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ermöglicht jedoch neue Szenarien, die über Schlüsselwortsuchen hinausgehen. Während Sie bei der Volltextsuche *Wörter* in einem Dokument abfragen können, können Sie bei der *semantischen* Suche die Bedeutung des Dokuments abfragen. Die jetzt möglichen Lösungen umfassen die automatische Tagextraktion, die Ermittlung von verwandten Inhalten sowie die hierarchische Navigation über ähnlichen Inhalt. Sie können beispielsweise den Index von Schlüsselausdrücken abfragen, um die Taxonomie für eine Organisation oder für einen Korpus von Dokumenten zu erstellen. Oder sie können den Dokumentähnlichkeitsindex abfragen, um Lebensläufe zu identifizieren, die einer Arbeitsplatzbeschreibung entsprechen.  
