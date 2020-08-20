@@ -1,4 +1,5 @@
 ---
+description: BINARY_CHECKSUM (Transact-SQL)
 title: BINARY_CHECKSUM (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbf7006b435dc9012fc98fcd103a88e03471d65f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 922f1da9e2988f5bf6a316101bad175dbe46b2b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479736"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -78,7 +79,7 @@ oder
   
 Die `BINARY_CHECKSUM`-Werte für die Zeichenfolgen „McCavity“ und „Mccavity“ sind z. B. unterschiedlich. Bei einem Server ohne Unterscheidung nach Groß-/Kleinschreibung gibt `CHECKSUM` jedoch für diese Zeichenfolgen dieselben Prüfsummenwerte zurück. Sie sollten Vergleiche zwischen `CHECKSUM`-Werten und `BINARY_CHECKSUM`-Werten vermeiden.
  
-`BINARY_CHECKSUM` unterstützt für den Typ **varbinary(max)** beliebige Längen und bis zu 255 Zeichen für den Typ **nvarchar(max)** .
+`BINARY_CHECKSUM` unterstützt für den Typ **varbinary(max)** beliebige Längen und bis zu 255 Zeichen für den Typ **nvarchar(max)**.
   
 ## <a name="examples"></a>Beispiele  
 Im folgenden Beispiel wird `BINARY_CHECKSUM` verwendet, um Änderungen in einer Zeile einer Tabelle zu erkennen.
@@ -99,7 +100,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen
-[Aggregate Functions &#40;Transact-SQL&#41; (Aggregatfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[Aggregate Functions &#40;Transact-SQL&#41; (Aggregatfunktionen (Transact-SQL))](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
 [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  

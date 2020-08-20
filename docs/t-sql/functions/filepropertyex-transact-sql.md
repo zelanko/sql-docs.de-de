@@ -1,4 +1,5 @@
 ---
+description: FILEPROPERTYEX (Transact-SQL)
 title: FILEPROPERTYEX (Transact-SQL) | Microsoft-Dokumentation
 ms.date: 07/23/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - file names [SQL Server], FILEPROPERTYEX
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d0eb763436bc4dd26815879c33c9a8461d9a38d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fca1a10c6e0fce286854b96ac673e602744cdb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479663"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -41,14 +42,14 @@ FILEPROPERTYEX ( name , property )
   
 ## <a name="arguments"></a>Argumente  
  *name*  
- Ein Ausdruck, der den Namen der Datei enthält, die der aktuellen Datenbank zugeordnet ist, für die Eigenschaftsinformationen zurückgegeben werden sollen. *file_name* ist vom Datentyp **nchar(128)** .  
+ Ein Ausdruck, der den Namen der Datei enthält, die der aktuellen Datenbank zugeordnet ist, für die Eigenschaftsinformationen zurückgegeben werden sollen. *file_name* ist vom Datentyp **nchar(128)**.  
   
  *property*  
- Ein Ausdruck, der den Namen der zurückzugebenden Dateieigenschaft enthält. *property* ist vom Datentyp **varchar(128)** . Die folgenden Werte sind möglich.  
+ Ein Ausdruck, der den Namen der zurückzugebenden Dateieigenschaft enthält. *property* ist vom Datentyp **varchar(128)**. Die folgenden Werte sind möglich.  
 
 
   
-|value|BESCHREIBUNG|
+|Wert|BESCHREIBUNG|
 |-----------|-----------------|  
 |**BlobTier**|Die Ebene des Azure-Zielseitenblobs. Gilt nur für Standard- und GeneralPurpose-Datenbanken, in denen Azure-Seitenblob-Speicher verwendet wird.|
 |**AccountType**|Der Speicherkontotyp, der angibt, ob es sich um Blobspeicher oder Dateispeicher handelt und ob der Speicher Premium- oder Standard-Speicher ist.|
@@ -86,7 +87,7 @@ file_id  type_desc  name  BlobTier  AccountType  IsInferredTier  IsPageBlob
 (2 rows affected)
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [FILEGROUPPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
  [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   

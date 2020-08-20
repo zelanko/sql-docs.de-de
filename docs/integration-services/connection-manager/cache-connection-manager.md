@@ -1,4 +1,5 @@
 ---
+description: Cacheverbindungs-Manager
 title: Cacheverbindungs-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cc4725f69d35043734da6d9210bac0a6b65e4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477941"
 ---
 # <a name="cache-connection-manager"></a>Cacheverbindungs-Manager
 
@@ -115,7 +116,7 @@ ms.locfileid: "86920826"
 > [!NOTE]  
 >  Wenn die Transformation für Suche so konfiguriert ist, dass sie einen Cacheverbindungs-Manager verwendet, können nur Indexspalten im Verweisdataset Eingabespalten zugeordnet werden. Auch müssen alle Indexspalten zugeordnet werden.  
   
- **Typ**  
+ **Type**  
  Geben Sie den Datentyp der Spalte an.  
   
  **Länge**  
@@ -124,7 +125,7 @@ ms.locfileid: "86920826"
  **Genauigkeit**  
  Gibt die Genauigkeit für bestimmte Spaltendatentypen an. Genauigkeit gibt die Anzahl der Ziffern einer Zahl an. Wenn für den Datentyp zutreffend, können Sie den Wert von **Precision**aktualisieren.  
   
- **Skalieren**  
+ **Skalierung**  
  Gibt die Dezimalstellen für bestimmte Spaltendatentypen an. Dezimalstellen gibt die Anzahl der Nachkommastellen an. Wenn für den Datentyp zutreffend, können Sie den Wert von **Scale**aktualisieren.  
   
  **Codepage**  

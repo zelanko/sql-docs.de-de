@@ -1,4 +1,5 @@
 ---
+description: Transformation für bedingtes Teilen
 title: Transformation für bedingtes Teilen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb286721fac9e90a5e1d34bfb8a30ac9ac52032f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477767"
 ---
 # <a name="conditional-split-transformation"></a>Transformation für bedingtes Teilen
 
@@ -78,7 +79,7 @@ ms.locfileid: "86923207"
 > [!NOTE]  
 >  Die Transformation für bedingtes Teilen leitet jede Eingabezeile an nur eine Ausgabe. Wenn Sie mehrere Bedingungen eingeben, wird jede Zeile durch die Transformation an die erste Ausgabe gesendet, bei der die Bedingung erfüllt ist (TRUE). Dadurch bleiben alle folgenden Bedingungen für diese Zeile unberücksichtigt. Wenn mehrere Bedingungen aufeinander folgend ausgewertet werden sollen, dann müssen Sie mehrere Transformationen für bedingtes Teilen im Datenfluss miteinander verketten.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Order**  
  Wählen Sie eine Zeile aus, und verwenden Sie die Pfeiltasten auf der rechten Seite, um die Reihenfolge zu ändern, in der die Ausdrücke ausgewertet werden.  
   

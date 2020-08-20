@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;PACK_SENT (Transact-SQL)'
 title: '@@PACK_SENT (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: da77f0255a67c175537dd6ba5ea6030555f31c68
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7e25d074aa561b81d5b6ea981787964eebbac189
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479615"
 ---
 # <a name="x40x40pack_sent-transact-sql"></a>&#x40;&#x40;PACK_SENT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87110855"
 ## <a name="return-types"></a>Rückgabetypen
  **integer**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Führen Sie **sp_monitor** aus, um einen Bericht anzuzeigen, der mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Statistiken enthält, einschließlich versandter und erhaltener Pakete.  
   
 ## <a name="examples"></a>Beispiele  

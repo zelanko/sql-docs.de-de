@@ -1,4 +1,5 @@
 ---
+description: CREATE SECURITY POLICY (Transact-SQL)
 title: CREATE SECURITY POLICY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/10/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de5ab7ebb06a6ba51241b06a3ee6f618378bc635
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: da7b906f774bb3cf56acdb8c60587146fa98ae50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478969"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -88,7 +89,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  Die Zieltabelle, auf die das Sicherheitsprädikat angewendet wird. Mehrere deaktivierte Sicherheitsrichtlinien können auf eine einzelne Tabelle abzielen, aber zu jedem Zeitpunkt kann nur eine aktiviert werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+
+## <a name="remarks"></a>Bemerkungen
  Wenn Sie Prädikatfunktionen mit speicheroptimierten Tabellen verwenden, müssen Sie **SCHEMABINDING** einfügen und den Kompilierungshinweis **WITH NATIVE_COMPILATION** verwenden.  
   
  BLOCK-Prädikate werden ausgewertet, nachdem der entsprechende DML-Vorgang ausgeführt wurde. Aus diesem Grund kann eine READ UNCOMMITTED-Abfrage vorübergehende Werte lesen, für die später ein Rollback ausgeführt wird.  

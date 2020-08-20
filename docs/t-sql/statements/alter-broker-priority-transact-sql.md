@@ -1,4 +1,5 @@
 ---
+description: ALTER BROKER PRIORITY (Transact-SQL)
 title: ALTER BROKER PRIORITY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2db827883ba69ac4183352241459638b4adf0638
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 827d05f614a55789d93d11e9f43f31bf937b2744
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479237"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -91,7 +92,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Gibt den Namen eines Diensts an, der als Kriterium verwendet werden kann, um zu bestimmen, ob die Konversationspriorität für einen Konversationsendpunkt übernommen wird.  
   
- *RemoteServiceName* ist ein Literal vom Typ **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet einen bitweisen Vergleich für den Abgleich der *RemoteServiceName*-Zeichenfolge. Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Der Zieldienst kann in der aktuellen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder in einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] vorhanden sein.  
+ *RemoteServiceName* ist ein Literal vom Typ **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet einen bitweisen Vergleich für den Abgleich der *RemoteServiceName*-Zeichenfolge. Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Der Zieldienst kann in der aktuellen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder in einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] vorhanden sein.  
   
  '*RemoteServiceName*'  
  Gibt an, dass die Konversationspriorität Folgendem zugewiesen werden kann:  
@@ -110,7 +111,7 @@ FOR CONVERSATION
   
  Wenn PRIORITY_LEVEL nicht angegeben ist, wird die Eigenschaft für die Prioritätsebene der Konversationspriorität nicht geändert.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Keine Eigenschaften, die von ALTER BROKER PRIORITY geändert werden, werden für vorhandene Konversationen übernommen. Die vorhandenen Konversationen werden mit der Priorität fortgesetzt, die beim Starten der Konversationen zugewiesen wurde.  
   
  Weitere Informationen finden Sie unter [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md).  
@@ -141,7 +142,7 @@ ALTER BROKER PRIORITY SimpleContractPriority
          PRIORITY_LEVEL = 8);  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  

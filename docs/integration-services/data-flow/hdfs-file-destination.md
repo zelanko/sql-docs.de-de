@@ -1,4 +1,5 @@
 ---
+description: HDFS-Dateiziel
 title: HDFS-Dateiziel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/09/2019
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ab4b9ae139d50beb707d751b14da32224bade67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cfac02ca6db43d77f9157449df7319a6b67418e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477831"
 ---
 # <a name="hdfs-file-destination"></a>HDFS-Dateiziel
 
@@ -30,7 +31,7 @@ ms.locfileid: "86920864"
 
  ![HDFS-Dateiziel-Editor](../../integration-services/data-flow/media/hdfs-file-dest.png "HDFS-Dateiziel-Editor")
 
-## <a name="options"></a>Tastatur
+## <a name="options"></a>Optionen
  Konfigurieren Sie die folgenden Optionen auf der Registerkarte **Allgemein** im Dialogfeld **Dateiziel-Editor für Hadoop** .
 
 |Feld|BESCHREIBUNG|
@@ -71,6 +72,6 @@ Die folgenden Java-Builds wurden getestet.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Hadoop-Verbindungs-Manager](../../integration-services/connection-manager/hadoop-connection-manager.md)  
 [HDFS-Dateiquelle](../../integration-services/data-flow/hdfs-file-source.md)

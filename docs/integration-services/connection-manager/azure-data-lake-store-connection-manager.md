@@ -1,4 +1,5 @@
 ---
+description: Azure Data Lake Store-Verbindungsmanager
 title: Azure Data Lake Store-Verbindungs-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/02/2017
@@ -12,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: 64f79fc33e3dc5436df4a01e5398d0a262914d48
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e128b510c9bd40eedd89f7750c65bbd03a7d8670
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913658"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477981"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store-Verbindungsmanager
 
@@ -35,7 +36,7 @@ Der Azure Data Lake Storage-Verbindungs-Manager ist eine Komponente von [SQL Ser
  
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Konfigurieren des Azure Data Lake Store-Verbindungs-Manager
 
-1.  Wählen Sie im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** **AzureDataLake** aus, und klicken Sie auf **Hinzufügen**. Das Dialogfeld **Azure Data Lake Store Connection Manager Editor** (Azure Data Lake Store-Verbindungs-Manager-Editor) wird geöffnet.
+1.  Wählen Sie im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen****AzureDataLake** aus, und klicken Sie auf **Hinzufügen**. Das Dialogfeld **Azure Data Lake Store Connection Manager Editor** (Azure Data Lake Store-Verbindungs-Manager-Editor) wird geöffnet.
   
 2.  Geben Sie im Dialogfeld **Azure Data Lake Store-Verbindungs-Manager-Editor** im Feld **ADLS-Host** die URL des Data Lake Storage Gen1-Hosts ein. Zum Beispiel: `https://test.azuredatalakestore.net` oder `test.azuredatalakestore.net`.
   

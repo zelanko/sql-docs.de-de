@@ -1,4 +1,5 @@
 ---
+description: HDFS-Dateiquelle
 title: HDFS-Dateiquelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3be6be9e43d6e9e643ea76c4d4a08cd5b370b343
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b015d1d62e42b5b453c273d899c387a222c3fe2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477802"
 ---
 # <a name="hdfs-file-source"></a>HDFS-Dateiquelle
 
@@ -30,7 +31,7 @@ ms.locfileid: "86920268"
   
  ![HDFS-Dateiquellen-Editor](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS-Dateiquellen-Editor")  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Konfigurieren Sie die folgenden Optionen auf der Registerkarte **Allgemein** im Dialogfeld **Quellen-Editor für Hadoop-Dateien** .  
   
 |Feld|BESCHREIBUNG|  
@@ -43,7 +44,7 @@ ms.locfileid: "86920268"
   
  Nachdem Sie diese Optionen konfiguriert haben, wählen Sie die Registerkarte **Spalten** aus, um Quellspalten zu Zielspalten im Datenfluss zuzuordnen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Hadoop-Verbindungs-Manager](../../integration-services/connection-manager/hadoop-connection-manager.md)   
  [HDFS-Dateiziel](../../integration-services/data-flow/hdfs-file-destination.md)  
   

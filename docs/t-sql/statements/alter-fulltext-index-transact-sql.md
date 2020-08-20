@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT INDEX (Transact-SQL)
 title: ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa8594033c004bed2f37204d9de96a75bcfb83f3
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 0f8b215f3e90822fe285b93274b7d93a7e1ee8b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479142"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -102,7 +103,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  Ob der Volltextindex aufgefüllt wird, nachdem eine Spalte hinzugefügt oder entfernt wurde, hängt davon ab, ob die Änderungsnachverfolgung aktiviert wurde und WITH NO POPULATION angegeben ist. Weitere Informationen finden Sie unter [Interaktionen zwischen der Änderungsnachverfolgung und dem Parameter NO POPULATION](#change-tracking-no-population).
   
  TYPE COLUMN *type_column_name*  
- Gibt den Namen der Tabellenspalte *table_column_name* an, die den Dokumenttyp für ein Dokument vom Typ **varbinary**, **varbinary(max)** oder **image** enthält. Diese Spalte, als Typspalte bezeichnet, enthält eine vom Benutzer angegebene Dateierweiterung (.doc, .pdf, .xls usw.) Die Typspalte muss vom Typ **char**, **nchar**, **varchar**oder **nvarchar**sein.  
+ Gibt den Namen der Tabellenspalte *table_column_name* an, die den Dokumenttyp für ein Dokument vom Typ **varbinary**,** varbinary(max)** oder **image** enthält. Diese Spalte, als Typspalte bezeichnet, enthält eine vom Benutzer angegebene Dateierweiterung (.doc, .pdf, .xls usw.) Die Typspalte muss vom Typ **char**, **nchar**, **varchar**oder **nvarchar**sein.  
   
  Geben Sie TYPE COLUMN *type_column_name* nur an, wenn *column_name* eine Spalte vom Typ **varbinary**, **varbinary(max)** oder **image** angibt, in der Daten als Binärdaten gespeichert werden. Andernfalls gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück.  
   
@@ -129,7 +130,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Erstellt den zusätzlichen Schlüsselausdruck und die Dokumentähnlichkeitsindizes, die Teil der statistischen semantischen Indizierung sind. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,** _...n_]  
+ [ **,**_...n_]  
  Gibt an, dass mehrere Spalten für die ADD-, ALTER- oder DROP-Klauseln angegeben werden können. Bei Angabe mehrerer Spalten müssen die Spalten mit Kommas getrennt werden.  
   
  WITH NO POPULATION  
@@ -292,7 +293,7 @@ ALTER FULLTEXT INDEX ON table_name
  Wenn SET STOPLIST angegeben wird, muss der Benutzer über die REFERENCES-Berechtigung für die Stoppliste verfügen. Wenn SET SEARCH PROPERTY LIST angegeben wird, muss der Benutzer über die REFERENCES-Berechtigung für die Sucheigenschaftenliste verfügen. Der Besitzer der angegebenen Stoppliste oder der angegebenen Sucheigenschaftenliste kann die REFERENCES-Berechtigung erteilen, wenn der Besitzer über ALTER FULLTEXT CATALOG-Berechtigungen verfügt.  
   
 > [!NOTE]  
->  Der Datenbankrolle public[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird für die Standardstoppliste, die mit  ausgeliefert wird, die REFERENCES-Berechtigung gewährt.  
+>  Der Datenbankrolle public wird für die Standardstoppliste, die mit  ausgeliefert wird, die REFERENCES-Berechtigung gewährt.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -349,7 +350,7 @@ ALTER FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [DROP FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   

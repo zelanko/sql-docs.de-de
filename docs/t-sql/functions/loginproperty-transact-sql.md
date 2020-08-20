@@ -1,4 +1,5 @@
 ---
+description: LOGINPROPERTY (Transact-SQL)
 title: LOGINPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -32,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 20b67d4b1913cd896d3c4473b0c0f161b833154f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c3014a8d57602dc80b7faeec26dbc85d43f91c44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479617"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  Ein Ausdruck, der die Eigenschafteninformationen enthält, die für die Anmeldung zurückgegeben werden sollen. Für*propertyname* sind die folgenden Werte möglich.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Gibt die Anzahl aufeinanderfolgender Anmeldeversuche mit einem falschen Kennwort zurück.|  
 |**BadPasswordTime**|Gibt die Zeit des letzten Anmeldeversuchs mit einem falschen Kennwort zurück.|  
@@ -78,7 +79,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**PasswordLastSetTime**|Gibt das Datum zurück, an dem das aktuelle Kennwort festgelegt wurde.|  
 |**PasswordHashAlgorithm**|Gibt den Algorithmus zurück, der zum Erstellen eines Hashwerts für das Kennwort verwendet wird.|  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Der Datentyp hängt vom angeforderten Wert ab.  
   
  **IsLocked**, **IsExpired** und **IsMustChange** weisen den Typ **int** auf.  
@@ -113,7 +114,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   NULL, wenn es sich bei der Anmeldung nicht um eine gültige SQL Server-Anmeldung handelt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese integrierte Funktion gibt Informationen zu den Kennwortrichtlinien-Einstellungen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung zurück. Bei den Namen der Eigenschaften wird die Groß-/Kleinschreibung nicht beachtet. Somit sind Eigenschaftsnamen wie **BadPasswordCount** und **badpasswordcount** gleichwertig. Die Werte der Eigenschaften **PasswordHash, PasswordHashAlgorithm** und **PasswordLastSetTime** sind in allen unterstützten Konfigurationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar, die anderen Eigenschaften jedoch nur, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] ausgeführt wird und CHECK_POLICY und CHECK_EXPIRATION aktiviert sind. Weitere Informationen finden Sie unter [Password Policy](../../relational-databases/security/password-policy.md).  
   
 ## <a name="permissions"></a>Berechtigungen  

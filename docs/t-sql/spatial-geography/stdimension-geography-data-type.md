@@ -1,4 +1,5 @@
 ---
+description: STDimension (geography-Datentyp)
 title: STDimension (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7dfd48621e2d587d985a695d00f4f091877c4814
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e7cd207272093ab77aea443737f27bd99a35e2e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479295"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86552875"
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  STDimension() gibt -1 zurück, wenn die **geography**-Instanz leer ist.  
   
 ## <a name="examples"></a>Beispiele  

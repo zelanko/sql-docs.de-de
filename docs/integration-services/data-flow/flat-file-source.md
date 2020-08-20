@@ -1,4 +1,5 @@
 ---
+description: Flatfilequelle
 title: Flatfilequelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6eea48434554705c49e8291f01a8e32aabfd1b0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c52bae62d70212ea735ec9d0d7eb25cf8af76551
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477842"
 ---
 # <a name="flat-file-source"></a>Flatfilequelle
 
@@ -78,7 +79,7 @@ ms.locfileid: "86915006"
   
 -   Einen Verbindungs-Manager für mehrere Flatfiles, wenn es bei der Quelle um mehrere Flatfiles handelt und der Datenflusstask sich in einem Schleifencontainer wie dem For-Schleifencontainer befindet. In jeder Schleife des Containers werden von der Flatfilequelle Daten vom nächsten Dateinamen geladen, der vom Verbindungs-Manager für mehrere Flatfiles bereitgestellt wird. Weitere Informationen finden Sie unter [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Flat file connection manager**  
  Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie einen neuen Verbindungs-Manager, indem Sie auf **Neu**klicken.  
   

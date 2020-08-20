@@ -1,4 +1,5 @@
 ---
+description: STCurveN (geography-Datentyp)
 title: STCurveN (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: cca9963b6f8ad6690190de8d3da551c6536c92ed
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 18d3a992b3f3d5eeecb09a16ce3fb6d582ee2fb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479347"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86552512"
 ## <a name="exceptions"></a>Ausnahmen  
  **ArgumentOutOfRangeException** wird ausgelöst, wenn n < 1 ist.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **NULL** wird zurückgegeben, wenn die folgenden Kriterien erfüllt sind.  
   
 -   Die **geography** -Instanz wird deklariert, aber nicht instanziiert  

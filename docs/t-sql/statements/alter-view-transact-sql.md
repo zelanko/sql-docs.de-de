@@ -1,4 +1,5 @@
 ---
+description: ALTER VIEW (Transact-SQL)
 title: ALTER VIEW (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/25/2018
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b12802ee2d4c8e9263b1a8c5ca284d134e56d59
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: fe90ae1099c350c4e323a7229ca980d94f0eac24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479075"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -103,7 +104,7 @@ AS <select_statement>
  WITH CHECK OPTION  
  Erzwingt, dass alle für die Sicht ausgeführten Datenänderungsanweisungen den Kriterien entsprechen müssen, die innerhalb von *select_statement* festgelegt wurden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Weitere Informationen zu ALTER VIEW finden Sie im Abschnitt „Hinweise“ unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 > [!NOTE]  

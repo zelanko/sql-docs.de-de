@@ -1,4 +1,5 @@
 ---
+description: DECOMPRESS (Transact-SQL)
 title: DECOMPRESS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/11/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4c4309a12f3db14af0d38f9e98e73b7e8c4e6b1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f6390d157ab7d352e7ecb355fec4c16114333ea0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479712"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,14 +36,12 @@ Diese Funktion dekomprimiert einen Eingabeausdruckswert mit dem GZIP-Algorithmus
 DECOMPRESS ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>Argumente
  *expression*  
 Ein Wert vom Typ **varbinary(** _n_ **)** , **varbinary(max)** oder **binary(** _n_ **)** . Weitere Informationen finden Sie unter [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
-Ein Wert vom Datentyp **varbinary(max)** . `DECOMPRESS` verwendet den ZIP-Algorithmus, um das Eingabeargument zu dekomprimieren. Der Benutzer sollte das Ergebnis wenn nötig explizit in einen Zieltyp umwandeln.  
+Ein Wert vom Datentyp **varbinary(max)**. `DECOMPRESS` verwendet den ZIP-Algorithmus, um das Eingabeargument zu dekomprimieren. Der Benutzer sollte das Ergebnis wenn nötig explizit in einen Zieltyp umwandeln.  
   
 ## <a name="remarks"></a>Bemerkungen  
   
@@ -70,7 +69,7 @@ CREATE TABLE example_table (
 );  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen (Transact-SQL))](../../t-sql/functions/string-functions-transact-sql.md)   
  [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Transformation für Datenkonvertierung
 title: Transformation für Datenkonvertierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e43b29fadf9c4fe36775616a8ddf7a82a29eae4e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdd281be64879d56ec8c81eacc52ea3631fe0867
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477712"
 ---
 # <a name="data-conversion-transformation"></a>Transformation für Datenkonvertierung
 
@@ -33,7 +34,7 @@ ms.locfileid: "86912309"
   
  Mithilfe dieser Transformation kann ein Paket die folgenden Datenkonvertierungstypen ausführen:  
   
--   Ändern des Datentyps. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../../integration-services/data-flow/integration-services-data-types.md).  
+-   den Datentyp ändern. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../../integration-services/data-flow/integration-services-data-types.md).  
   
     > [!NOTE]  
     >  Falls Sie Daten in einen date- oder datetime-Datentyp konvertieren, weist das Datum in der Ausgabespalte das ISO-Format auf, auch wenn für das Gebietsschema ein anderes Format angegeben ist.  
@@ -80,7 +81,7 @@ ms.locfileid: "86912309"
  **Genauigkeit**  
  Legt für numerische Daten die Genauigkeit fest.  
   
- **Skalieren**  
+ **Skalierung**  
  Legt für numerische Daten die Dezimalstellen fest.  
   
  **Codepage**  
@@ -89,7 +90,7 @@ ms.locfileid: "86912309"
  **Fehlerausgabe konfigurieren**  
  Geben Sie mithilfe des Dialogfelds [Fehlerausgabe konfigurieren](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) an, wie Fehler auf Zeilenebene behandelt werden sollen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Schnelle Analyse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

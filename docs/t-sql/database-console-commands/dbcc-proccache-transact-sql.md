@@ -1,4 +1,5 @@
 ---
+description: DBCC PROCCACHE (Transact-SQL)
 title: DBCC PROCCACHE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f847da8dec94f7344087d836e651b9edf2c4fa35
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5bdeee9a0d49eb1701785df899bdbb722024221d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479836"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
 
@@ -51,7 +52,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Mit dem Prozedurcache werden kompilierte und ausführbare Pläne zwischengespeichert, um die Ausführung von Batches zu beschleunigen. Die Einträge in einem Prozedurcache erfolgen auf Batchebene. Der Prozedurcache schließt die folgenden Einträge ein:
 -   Kompilierte Pläne  
 -   Ausführungsplan  

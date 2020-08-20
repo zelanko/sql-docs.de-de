@@ -1,4 +1,5 @@
 ---
+description: TRIM (Transact-SQL)
 title: TRIM (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/27/2019
@@ -18,12 +19,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d17b3012e68e08af24ea1fe2b93cb02f206a69a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8d0f81ad846185978a73bfcc1de75f33b83c5ca0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479505"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
@@ -55,7 +56,7 @@ Bei „characters“ handelt es sich um ein Literal, eine Variable oder ein Funk
 
 Gibt einen Zeichenausdruck mit einem Zeichenargumenttyp zurück, aus dem das Leerzeichen `char(32)` oder andere angegebene Zeichenfolgen auf beiden Seiten entfernt werden sollen. Gibt `NULL` zurück, wenn die Eingabezeichenfolge `NULL` ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Standardmäßig entfernt die `TRIM`-Funktion das Leerzeichen sowohl am Anfang als auch am Ende der Zeichenfolge. Dieses Verhalten entspricht `LTRIM(RTRIM(@string))`.
 

@@ -1,4 +1,5 @@
 ---
+description: CREATE BROKER PRIORITY (Transact-SQL)
 title: CREATE BROKER PRIORITY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf67cf64888101f2a5a7d704cbe91785791133
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c753f9dc977f94064161ee340ebced685dd9f6c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478982"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ FOR CONVERSATION
 
 ## <a name="arguments"></a>Argumente
  *ConversationPriorityName*  
- Gibt den Namen für diese Konversationspriorität an. Der Name muss in der aktuellen Datenbank eindeutig sein und den Regeln für [!INCLUDE[ssDE](../../includes/ssde-md.md)]-[Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
+ Gibt den Namen für diese Konversationspriorität an. Der Name muss in der aktuellen Datenbank eindeutig sein und den Regeln für -[!INCLUDE[ssDE](../../includes/ssde-md.md)] [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
  SET  
  Gibt die Kriterien an, anhand derer bestimmt wird, ob die Konversationspriorität für eine Konversation übernommen wird. Wenn angegeben, muss SET mindestens ein Kriterium enthalten: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME oder PRIORITY_LEVEL. Wenn SET nicht angegeben wird, werden für alle drei Kriterien die Standardwerte festgelegt.  
@@ -95,7 +96,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Gibt den Namen eines Diensts an, der als Kriterium verwendet werden kann, um zu bestimmen, ob die Konversationspriorität für einen Konversationsendpunkt übernommen wird.  
   
- *RemoteServiceName* ist ein Literal vom Typ **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet einen bitweisen Vergleich für den Abgleich der *RemoteServiceName*-Zeichenfolge. Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Der Zieldienst kann in der aktuellen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder in einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] vorhanden sein.  
+ *RemoteServiceName* ist ein Literal vom Typ **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet einen bitweisen Vergleich für den Abgleich der *RemoteServiceName*-Zeichenfolge. Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Der Zieldienst kann in der aktuellen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder in einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] vorhanden sein.  
   
  '*RemoteServiceName*'  
  Gibt an, dass die Konversationspriorität für Folgendes übernommen werden kann:  

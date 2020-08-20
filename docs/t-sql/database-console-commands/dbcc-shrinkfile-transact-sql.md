@@ -1,4 +1,5 @@
 ---
+description: DBCC SHRINKFILE (Transact-SQL)
 title: DBCC SHRINKFILE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 32ce225096e6a232c824a9fc360cb2c3a282f4b2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 203b53928ee41dcc75194cef6171959cdc08dd71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479787"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -107,7 +108,7 @@ In der folgenden Tabelle sind die Resultsetspalten beschrieben.
 |**UsedPages**|Die Anzahl von 8-KB-Seiten, die derzeit von der Datei verwendet werden.|  
 |**EstimatedPages**|Die Anzahl an 8-KB-Seiten, auf die die Datei wahrscheinlich vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] verkleinert werden kann.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 DBCC SHRINKFILE gilt für die Dateien der aktuellen Datenbank. Weitere Informationen zum Ändern der aktuellen Datenbank finden Sie unter [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
 Sie können den DBCC SHRINKFILE-Vorgang jederzeit beenden, und alle abgeschlossenen Vorgänge bleiben erhalten. Wenn Sie den Parameter EMPTYFILE verwenden und den Vorgang abbrechen, wird die Datei nicht markiert, um zu verhindern, dass zusätzliche Daten hinzugefügt werden.

@@ -1,4 +1,5 @@
 ---
+description: Rohdatendatei-Quelle
 title: Rohdatendatei-Quelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd61425f63f4124951c8c0c90c6c599292602c23
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b19fb7a9ab60f5f89a12ab3311c39f0611d233f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477861"
 ---
 # <a name="raw-file-source"></a>Rohdatendatei-Quelle
 
@@ -63,7 +64,7 @@ ms.locfileid: "86916039"
   Die Rohdatendatei-Quelle liest Rohdaten aus einer Datei. Die Darstellung der Daten erfolgt im systemeigenen Quellformat, sodass die Daten nicht übersetzt und fast nicht analysiert werden müssen.   
 ## <a name="raw-file-source-editor-columns-page"></a>Quellen-Editor für Rohdatendateien (Seite Spalten)
   Die Rohdatendatei-Quelle liest Rohdaten aus einer Datei. Die Darstellung der Daten erfolgt im systemeigenen Quellformat, sodass die Daten nicht übersetzt und fast nicht analysiert werden müssen.   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   

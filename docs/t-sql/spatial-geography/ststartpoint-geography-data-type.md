@@ -1,4 +1,5 @@
 ---
+description: STStartPoint (geography-Datentyp)
 title: STStartPoint (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7df18a5f-b9ee-4e36-b765-a0790c1dee3d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 206c1df5fbbb582108f70bd00b7a164badf3f8cb
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 015a1906ad2be09ffd2ea4fec85277255641a36a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479330"
 ---
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
