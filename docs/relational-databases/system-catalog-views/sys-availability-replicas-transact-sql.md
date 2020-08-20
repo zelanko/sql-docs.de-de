@@ -1,4 +1,5 @@
 ---
+description: sys.availability_replicas (Transact-SQL)
 title: sys. availability_replicas (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/16/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b924ccc5deb5b533bd593ccc50eca111ac52ce66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1ed78e1cce742ce508237b7e04187927cf931cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486499"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,9 +50,9 @@ Wenn die lokale Serverinstanz nicht mit dem WSFC-Failovercluster kommunizieren k
 |**\_ \_ Failovermodus DESC**|**nvarchar(60)**|Beschreibung des ** \_ Failovermodus**, eine der folgenden:<br /><br /> MANUAL<br /><br /> AUTOMATIC<br /><br /> Verwenden Sie die \_ Option Failovermodus der [Alter Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) -Anweisung, um den Failovermodus zu ändern [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**Sitzungs \_ Timeout**|**int**|Der Timeoutzeitraum in Sekunden. Der Timeoutzeitraum ist die maximale Zeit, die das Replikat für den Empfang einer Meldung von einem anderen Replikat abwartet, bevor die Verbindung zwischen dem primären und sekundären Replikat als fehlgeschlagen betrachtet wird. Das Sitzungstimeout erkennt, ob sekundäre Replikate mit dem primären Replikat verbunden sind.<br /><br /> Beim Erkennen einer fehlgeschlagenen Verbindung mit einem sekundären Replikat betrachtet das primäre Replikat das sekundäre Replikat als nicht \_ synchronisiert. Ein sekundäres Replikat versucht einfach, erneut eine Verbindung herzustellen, wenn eine fehlgeschlagene Verbindung mit dem primären Replikat erkannt wird.<br /><br /> **Hinweis:** Sitzungs Timeouts verursachen keine automatischen Failover.<br /><br /> Um diesen Wert zu ändern, verwenden Sie die SESSION_TIMEOUT-Option der [Alter Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) - [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.|  
 |**primäre \_ Rolle \_ Zulassen von \_ Verbindungen**|**tinyint**|Gibt an, ob die Verfügbarkeit alle Verbindungen oder nur Verbindungen mit Lese-/Schreibzugriff zulässt. Folgende Werte sind möglich:<br /><br /> 2 = Alle (Standard)<br /><br /> 3 = Lesen/Schreiben|  
-|**primäre \_ Rolle \_ Zulassen von \_ Verbindungen zulassen \_**|**nvarchar(60)**|Beschreibung der **primären \_ Rolle \_ \_ Verbindungen zulassen**, eine der folgenden:<br /><br /> ALLE<br /><br /> Lese \_ Schreibvorgang|  
+|**primäre \_ Rolle \_ Zulassen von \_ Verbindungen zulassen \_**|**nvarchar(60)**|Beschreibung der **primären \_ Rolle \_ \_ Verbindungen zulassen**, eine der folgenden:<br /><br /> ALL<br /><br /> Lese \_ Schreibvorgang|  
 |**sekundäre \_ Rolle \_ Zulassen von \_ Verbindungen**|**tinyint**|Gibt an, ob ein Verfügbarkeitsreplikat, das die sekundäre Rolle ausführt (also einem sekundären Replikat entspricht), Verbindungen von Clients zulassen kann. Folgende Werte sind möglich:<br /><br /> 0 = Nein. Für die Datenbanken im sekundären Replikat sind keine Verbindungen zugelassen, und die Datenbanken sind für den Lesezugriff nicht verfügbar. Dies ist die Standardeinstellung.<br /><br /> 1 = Nur Lesezugriff. Nur Verbindungen mit Lesezugriff auf die Datenbanken im sekundären Replikat sind zugelassen. Alle Datenbanken im Replikat sind für den Lesezugriff verfügbar.<br /><br /> 2 = Alle. Für alle Verbindungen mit den Datenbanken im sekundären Replikat ist der schreibgeschützte Zugriff zugelassen.<br /><br /> Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).|  
-|**secondary_role_allow_connections_desc**|**nvarchar(60)**|Beschreibung der **secondary_role_allow_connections**, eine der folgenden:<br /><br /> Nein<br /><br /> READ_ONLY<br /><br /> ALLE|  
+|**secondary_role_allow_connections_desc**|**nvarchar(60)**|Beschreibung der **secondary_role_allow_connections**, eine der folgenden:<br /><br /> Nein<br /><br /> READ_ONLY<br /><br /> ALL|  
 |**create_date**|**datetime**|Das Datum, an dem das Replikat erstellt wurde.<br /><br /> NULL = Replikat befindet sich nicht auf dieser Serverinstanz.|  
 |**modify_date**|**datetime**|Datum der letzten Änderung des Replikats.<br /><br /> NULL = Replikat befindet sich nicht auf dieser Serverinstanz.|  
 |**backup_priority**|**int**|Stellt die benutzerdefinierte Priorität für die Ausführung von Sicherungen auf diesem Replikat in Relation zu den anderen Replikaten in derselben Verfügbarkeitsgruppe dar. Der Wert liegt im Bereich von 0 bis 100 und ist eine ganze Zahl.<br /><br /> Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
@@ -65,7 +66,7 @@ Wenn die lokale Serverinstanz nicht mit dem WSFC-Failovercluster kommunizieren k
 ## <a name="see-also"></a>Weitere Informationen  
  [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always on Verfügbarkeits Gruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Überwachen von Verfügbarkeits Gruppen &#40;Transact-SQL-&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   

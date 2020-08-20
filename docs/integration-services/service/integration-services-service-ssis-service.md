@@ -1,4 +1,5 @@
 ---
+description: Integration Services-Dienst (SSIS-Dienst)
 title: Integration Services-Dienst (SSIS-Dienst) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e3ec1d9e9721ff050ea9196322c3e8a81aba7f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 08fd5b99d4ffe74bb409db65093a3148dc5f786b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487705"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services-Dienst (SSIS-Dienst)
 
@@ -77,7 +78,7 @@ ms.locfileid: "86922022"
   
  Es kann nur eine einzige Instanz des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienstes auf einem Computer installiert werden. Der Dienst ist nicht spezifisch für eine bestimmte Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Sie melden sich beim Dienst mit dem Namen des Computers an, auf dem er ausgeführt wird.  
   
- Sie können den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst mithilfe eines der folgenden MMC-Snap-Ins (Microsoft Management Console) verwalten: SQL Server-Konfigurations-Manager oder SQL Server Integration Services. Bevor Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Pakete verwalten können, muss der Dienst gestartet werden.  
+ Sie können den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst mithilfe eines der folgenden Snap-Ins für Microsoft Management Console (MMC) verwalten: SQL Server-Konfigurations-Manager oder -Dienste. Bevor Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Pakete verwalten können, muss der Dienst gestartet werden.  
   
  Standardmäßig wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst für die Verwaltung von Paketen in der msdb-Datenbank der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] konfiguriert, die zur selben Zeit wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installiert wird. Wenn eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht zur selben Zeit installiert wird, wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst so konfiguriert, dass Pakete in der msdb-Datenbank der lokalen Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwaltet werden. Zur Verwaltung von Paketen, die in einer benannten Instanz oder einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]bzw. in mehreren Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]gespeichert sind, müssen Sie die Konfigurationsdatei ändern.
   

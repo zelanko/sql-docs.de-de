@@ -1,4 +1,5 @@
 ---
+description: Data Cleansing
 title: Data Cleansing
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5a45acafea032b6a0815d975f91b64f5612b2e43
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d54722c2a8cf6e5364cc25d35621957164d3b9a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487838"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -38,7 +39,7 @@ ms.locfileid: "85899135"
   
  ![Datenbereinigungsprozess in DQS](../data-quality-services/media/dqs-cleansingprocess.gif "Datenbereinigungsprozess in DQS")  
   
-##  <a name="computer-assisted-cleansing"></a><a name="ComputerAssisted"></a>Computer gestützte Bereinigung  
+##  <a name="computer-assisted-cleansing"></a><a name="ComputerAssisted"></a> Computer gestützte Bereinigung  
  Der DQS-Datenbereinigungsprozess führt die Bereinigung der Daten mithilfe der Wissensdatenbank aus und schlägt Änderungen an den Daten vor. Der Data Steward hat Zugriff auf alle vorgeschlagenen Änderungen, sodass er diese bewerten und korrigieren kann. So führt der Data Steward eine Datenbereinigung aus  
   
 1.  Erstellen Sie ein Data Quality-Projekt, wählen Sie eine Wissensdatenbank aus, wofür Sie eine Analyse ausführen und Ihre Daten bereinigen möchten, und wählen Sie die Aktivität **Bereinigung** aus. Mehrere Data Quality-Projekte können die gleiche Wissensdatenbank verwenden.  
@@ -62,7 +63,7 @@ ms.locfileid: "85899135"
   
  Jeder Wert, der über einen Vertrauensgrad unter dem Schwellenwert für die automatischen Vorschläge verfügt, wird von DQS nicht verändert, außer wenn der Data Steward eine Änderung angibt.  
   
-##  <a name="interactive-cleansing"></a><a name="Interactive"></a>Interaktive Bereinigung  
+##  <a name="interactive-cleansing"></a><a name="Interactive"></a> Interaktive Bereinigung  
  Auf Grundlage des computergestützten Bereinigungsprozesses stellt DQS dem Data Steward Informationen bereit, die dieser für die Bewertung von Datenänderungen benötigt. DQS kategorisiert die Daten auf den folgenden fünf Registerkarten:  
   
 -   **Vorgeschlagen**: Werte, für die DQS Vorschläge gefunden hat, die einen Vertrauensgrad aufweisen, der höher als der *automatisch vorgeschlagene Schwellenwert* , aber niedriger als der *Schwellenwert für die automatische Korrektur* ist. Diese Werte sollten Sie überprüfen und genehmigen bzw. ablehnen.  
@@ -88,10 +89,10 @@ ms.locfileid: "85899135"
   
  ![Datenbereinigung im Data Quality-Client](../data-quality-services/media/dqs-cleansingindqsclient.gif "Datenbereinigung im Data Quality-Client")  
   
-##  <a name="leading-value-correction"></a><a name="Leading"></a>Korrektur des führenden Werts  
+##  <a name="leading-value-correction"></a><a name="Leading"></a> Korrektur des führenden Werts  
  Die Korrektur des führenden Werts gilt für Domänenwerte, die über Synonyme verfügen, und der Benutzer möchte einen der Synonymwerte als führenden Wert anstelle von anderen für die konsistente Darstellung des Werts verwenden. Beispielsweise sind „New York“, „NYC“ und „Big Apple“ Synonyme. Der Benutzer möchte jedoch „New York“ als führenden Wert anstelle von „NYC“ und „Big Apple“ verwenden. DQS unterstützt während des Bereinigungsprozesses die Korrektur des führenden Werts, um Ihnen beim Standardisieren der Daten zu helfen. Die Korrektur des führenden Werts wird nur ausgeführt, wenn die Domäne für das Gleiche aktiviert wurde, als sie erstellt wurde. Standardmäßig ist bei allen Domänen die Korrektur des führenden Werts aktiviert, außer wenn Sie beim Erstellen einer Domäne das Kontrollkästchen **Führende Werte verwenden** deaktiviert haben. Weitere Informationen zu diesem Kontrollkästchen finden Sie unter [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
-##  <a name="standardize-cleansed-data"></a><a name="Standardize"></a>Standardisieren bereinigter Daten  
+##  <a name="standardize-cleansed-data"></a><a name="Standardize"></a> Standardisieren bereinigter Daten  
  Sie können auswählen, ob Sie die bereinigten Daten im standardisierten Format auf Grundlage des für Domänen definierten Ausgabeformats ausgegeben möchten. Wählen beim Erstellen einer Domäne die Formatierung aus, die beim Ausgeben der Datenwerte in der Domäne angewendet wird. Weitere Informationen zum Angeben von Ausgabeformaten einer Domäne finden Sie in der Liste **Formatausgabe** in [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
  Beim Exportieren der bereinigten Daten auf der Seite **Exportieren** im Assistenten für die Bereinigung von Data Quality-Projekten können Sie angeben, ob die bereinigten Daten im standardisierten Format exportiert werden sollen, indem Sie das Kontrollkästchen **Ausgabe standardisieren** aktivieren. Standardmäßig werden die gereinigten Daten im standardisierten Format exportiert, das heißt, das Kontrollkästchen ist aktiviert. Weitere Informationen zum Exportieren der bereinigten Daten finden Sie unter [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  

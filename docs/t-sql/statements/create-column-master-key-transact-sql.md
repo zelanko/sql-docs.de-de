@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN MASTER KEY (Transact-SQL)
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/15/2019
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 02d57df3e018e558f5e8a42a63647aeefdff77ff
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3e6b80b2737517e0d78a5ca4adbd1c66e619fc8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488061"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -81,7 +82,7 @@ Die folgende Tabelle enthält die Namen von Systemanbietern:
     |-----------------------------|--------------------------|
     |'MSSQL_CERTIFICATE_STORE'|Windows-Zertifikatspeicher| 
     |'MSSQL_CSP_PROVIDER'|Ein Speicher, z.B. ein Hardwaresicherheitsmodul (HSM), der Microsoft CryptoAPI unterstützt.|
-    |'MSSQL_CNG_STORE'|Ein Speicher, z. B. ein Hardwaresicherheitsmodul (HSM), der Folgendes unterstützt: Cryptography API: Next Generation.|  
+    |'MSSQL_CNG_STORE'|Ein Speicher, z.B. ein Hardwaresicherheitsmodul (HSM), der Cryptography API: Next Generation unterstützt.|  
     |'AZURE_KEY_VAULT'|Weitere Informationen finden Sie unter [Erste Schritte mit Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).|  
     |'MSSQL_JAVA_KEYSTORE'| Java-Schlüsselspeicher
   
@@ -163,11 +164,10 @@ Der Pfad des Schlüssels im Speicher des Spaltenhauptschlüssels. Der Schlüssel
 ENCLAVE_COMPUTATIONS  
 Gibt an, dass der Spaltenhauptschlüssel Enclave-fähig ist. Sie können alle mit dem Spaltenhauptschlüssel verschlüsselten Spaltenverschlüsselungsschlüssel für eine serverseitige Secure Enclave freigeben und für Berechnungen innerhalb der Enclave verwenden. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-*signature*  
+*Signatur*  
 Ein binäres Literal, das das Ergebnis des digitalen Signierens von *Schlüsselpfad* und der Einstellung „ENCLAVE_COMPUTATIONS“ mit dem Spaltenhauptschlüssel ist. Die Signatur zeigt an, ob „ENCLAVE_COMPUTATIONS“ angegeben wurde. Die Signatur schützt die signierten Werte vor Änderungen durch nicht autorisierte Benutzer. Ein Always Encrypted-fähiger Clienttreiber überprüft die Signatur und gibt einen Fehler an die Anwendung zurück, wenn die Signatur ungültig ist. Die Signatur muss mit clientseitigen Tools generiert werden. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
-  
-  
-## <a name="remarks"></a>Bemerkungen  
+
+## <a name="remarks"></a>Bemerkungen
 
 Erstellen Sie einen Metadateneintrag für einen Spaltenhauptschlüssel, bevor Sie einen Metadateneintrag für einen Spaltenverschlüsselungsschlüssel in der Datenbank erstellen und bevor Spalten in der Datenbank mithilfe von Always Encrypted verschlüsselt werden können. Ein Metadateneintrag für einen Spaltenhauptschlüssel enthält nicht den tatsächlichen Spaltenhauptschlüssel. Der Spaltenhauptschlüssel muss in einem externen Spaltenschlüsselspeicher (außerhalb von SQL Server) gespeichert werden. Der Name des Schlüsselspeicheranbieters und der Pfad des Spaltenhauptschlüssels in den Metadaten müssen für eine Clientanwendung gültig sein. Die Clientanwendung muss den Spaltenhauptschlüssel verwenden, um einen Spaltenverschlüsselungsschlüssel zu entschlüsseln. Der Spaltenverschlüsselungsschlüssel ist mit dem Spaltenhauptschlüssel verschlüsselt. Die Clientanwendung muss auch verschlüsselte Spalten abfragen.
 

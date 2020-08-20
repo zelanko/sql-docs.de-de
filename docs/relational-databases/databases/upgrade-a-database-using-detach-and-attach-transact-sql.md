@@ -1,4 +1,5 @@
 ---
+description: Aktualisieren einer Datenbank durch Trennen und Anfügen (Transact-SQL)
 title: Aktualisieren einer Datenbank durch Trennen und Anfügen (Transact-SQL)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -16,18 +17,18 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cbaa67dbde197e1e59df92380945a0d969180add
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3bb3afe218c4087e09b8227bbcbf8c60798a3b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487094"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Aktualisieren einer Datenbank durch Trennen und Anfügen (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In diesem Thema wird beschrieben, wie Sie Trenn- und Anfügevorgänge verwenden, um eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu aktualisieren. Nach dem Anfügen an [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Dies verhindert, dass die Datenbank mit einer älteren Version der [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verwendet wird. Die Aktualisierung der Metadaten besitzt jedoch keine Auswirkungen auf die Einstellung [Datenbank-Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) einer Datenbank. Weitere Informationen finden Sie unter [Datenbank-Kompatibilitätsgrad nach dem Upgrade](#dbcompat) weiter unten in diesem Thema.  
   
- **In diesem Thema**  
+ **Inhalt**  
   
 -   **Vorbereitungen:**  
   
@@ -106,7 +107,7 @@ Das Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht ve
   
     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ist eine neu angefügte Datenbank nicht sofort im Objekt-Explorer sichtbar. Um die Datenbank anzuzeigen, klicken Sie im Objekt-Explorer im Menü **Ansicht** auf **Aktualisieren**. Wenn der **Datenbanken** -Knoten im Objekt-Explorer erweitert wird, wird nun die neu angefügte Datenbank in der Liste der Datenbanken angezeigt.  
   
-##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Nachverfolgung: Nach dem Aktualisieren einer SQL Server-Datenbank  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a>Nächster Schritt: Nach dem Aktualisieren einer SQL Server-Datenbank  
 Wenn die Datenbank Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **upgrade_option** . Wenn die Upgradeoption auf „Importieren“ (**upgrade_option** = 2) oder „Neu erstellen“ (**upgrade_option** = 0) festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf Importieren festgelegt ist und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Verwenden Sie **sp_fulltext_service** , um die Einstellung der Servereigenschaft [upgrade_option](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)zu ändern.  
   
 ### <a name="database-compatibility-level-after-upgrade"></a><a name="dbcompat"></a> Datenbank-Kompatibilitätsgrad nach dem Upgrade  

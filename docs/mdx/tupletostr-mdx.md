@@ -1,4 +1,5 @@
 ---
+description: TupleToStr (MDX)
 title: Tuplerestr (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d6cde1f60274d1437517d89e48b111e9e7298b9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69e81156b26d4becb05390c8684b433584793697
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487623"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 
@@ -32,7 +33,7 @@ TupleToStr(Tuple_Expression)
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Tupel zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Funktion wird zum Übertragen der Zeichenfolgendarstellung eines Tupels an eine externe Funktion zur Analyse verwendet. Die zurückgegebene Zeichenfolge wird in geschweifte {} Klammern eingeschlossen, und jedes Element wird, wenn mehr als eine ausdrücklich im Tupel definiert ist, durch ein Komma getrennt.  
+ Diese Funktion wird zum Übertragen der Zeichenfolgendarstellung eines Tupels an eine externe Funktion zur Analyse verwendet. Die zurückgegebene Zeichenfolge wird in geschweifte Klammern eingeschlossen {} , und jedes Element wird, wenn mehr als eine ausdrücklich im Tupel definiert ist, durch ein Komma getrennt.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Zeichenfolge ([Date]. [ Calendar Year]. & [2001], [Geography]. [Geography]. [Land]. & [USA]):  

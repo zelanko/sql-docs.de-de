@@ -1,4 +1,5 @@
 ---
+description: ODBC-Dienstanbieterschnittstelle – Übersicht
 title: Zusammenfassung der ODBC-Dienstanbieter Schnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2f7e459cc7b89106bf1b7ebcd49c699d43da9f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 00d15d33fba1e697eebbe6a640c4f8a4d8eadea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487343"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC-Dienstanbieterschnittstelle – Übersicht
 In der folgenden Tabelle werden die Funktionen der ODBC-Dienstanbieter Schnittstelle beschrieben. Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie in der [Referenz zur ODBC-Dienstanbieter Schnittstelle (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md).  

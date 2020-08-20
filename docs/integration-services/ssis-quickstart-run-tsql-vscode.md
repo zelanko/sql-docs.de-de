@@ -1,4 +1,5 @@
 ---
+description: Ausführen eines SSIS-Pakets aus Visual Studio Code mit Transact-SQL
 title: Ausführen eines SSIS-Pakets mit Transact-SQL (Visual Studio Code) | Microsoft-Dokumentation
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5533f3425cd301b6d69904d346031c4143870f88
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f59bde18b416927484cac2a1b8dec86663ffeb05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487673"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Ausführen eines SSIS-Pakets aus Visual Studio Code mit Transact-SQL
 
@@ -42,7 +43,7 @@ Anhand der Informationen in diesem Schnellstart können Sie unter Linux keine SS
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Festlegen des Sprachmodus auf SQL in VS Code
 
-Legen Sie den Sprachmodus auf `mssql`SQL**in Visual Studio Code fest, um**-Befehle und T-SQL-IntelliSense zu aktivieren.
+Legen Sie den Sprachmodus auf `mssql`SQL** in Visual Studio Code fest, um **-Befehle und T-SQL-IntelliSense zu aktivieren.
 
 1. Öffnen Sie zuerst Visual Studio Code und dann ein neues Fenster. 
 

@@ -1,4 +1,5 @@
 ---
+description: Direkte Ausführung
 title: Direkte Ausführung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14c2a982d1d1744eb8ee0da40203b86d62bfaccd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c55dd59c86c5a46ef409f607e109264859210f8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486816"
 ---
 # <a name="direct-execution"></a>Direkte Ausführung
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +33,7 @@ ms.locfileid: "86001412"
   
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde die Leistung bei der direkten Ausführung von häufig ausgeführten Anweisungen in Mehrbenutzerumgebungen wesentlich verbessert. Durch den Einsatz von SQLExecDirect mit Parametermarkierungen für häufig ausgeführte SQL-Anweisungen wird zudem beinahe die gleiche Effizienz wie bei der vorbereiteten Ausführung erzielt.  
   
- Wenn eine Verbindung mit einer Instanz von besteht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet der Native Client ODBC-Treiber [sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) , um die SQL-Anweisung oder den Batch zu übertragen, die in **SQLExecDirect**angegeben ist [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verfügt über Logik, um schnell festzustellen, ob eine SQL-Anweisung oder ein Batch, der mit **sp_executesql** ausgeführt wird, mit der Anweisung oder dem Batch übereinstimmt, die einen Ausführungsplan generiert hat Wenn eine Übereinstimmung gefunden wird, nutzt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den vorhandenen Plan, anstatt einen neuen Plan zu kompilieren. Dies bedeutet, dass häufig ausgeführte SQL-Anweisungen, die mit **SQLExecDirect** in einem System mit vielen Benutzern ausgeführt werden, von vielen der Vorteile der Plan Wiederverwendung profitieren, die nur für gespeicherte Prozeduren in früheren Versionen von verfügbar waren [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Wenn eine Verbindung mit einer Instanz von besteht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet der Native Client ODBC-Treiber [sp_executesql](../../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) , um die SQL-Anweisung oder den Batch zu übertragen, die in **SQLExecDirect**angegeben ist [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügt über Logik, um schnell festzustellen, ob eine SQL-Anweisung oder ein Batch, der mit **sp_executesql** ausgeführt wird, mit der Anweisung oder dem Batch übereinstimmt, die einen Ausführungsplan generiert hat Wenn eine Übereinstimmung gefunden wird, nutzt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den vorhandenen Plan, anstatt einen neuen Plan zu kompilieren. Dies bedeutet, dass häufig ausgeführte SQL-Anweisungen, die mit **SQLExecDirect** in einem System mit vielen Benutzern ausgeführt werden, von vielen der Vorteile der Plan Wiederverwendung profitieren, die nur für gespeicherte Prozeduren in früheren Versionen von verfügbar waren [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Die Vorteile der erneuten Nutzung von Ausführungsplänen können jedoch nur umgesetzt werden, wenn mehrere Benutzer die gleiche SQL-Anweisungen oder den gleichen Batch ausführen. Befolgen Sie diese Codierungskonventionen, um die Wahrscheinlichkeit zu erhöhen, dass die SQL-Anweisungen, die von unterschiedlichen Clients ausgeführt werden, sich soweit ähneln, dass die Ausführungspläne wiederverwendet werden können:  
   

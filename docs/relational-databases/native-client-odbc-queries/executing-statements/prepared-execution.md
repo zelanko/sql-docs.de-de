@@ -1,4 +1,5 @@
 ---
+description: Vorbereitete Ausführung
 title: Vorbereitete Ausführung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1974bca39ef90357e66467525843ba24b4a0f9cc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 721b2377f5539a4ee047816da6e5ecb5bc2fe213
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486780"
 ---
 # <a name="prepared-execution"></a>Vorbereitete Ausführung
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +33,7 @@ ms.locfileid: "86001383"
   
  Bei den meisten Datenbanken ist die vorbereitete Ausführung schneller als eine direkte Ausführung von Anweisungen, die mehr als drei- oder viermal ausgeführt werden, hauptsächlich da die Anweisung nur einmal kompiliert wird, während die direkt ausgeführten Anweisungen bei jeder Ausführung kompiliert werden. Die vorbereitete Ausführung kann auch zu einer Reduzierung des Netzwerkverkehrs beitragen, da der Treiber bei jeder Ausführung der Anweisung eine Ausführungsplan-ID und die Parameterwerte an die Datenquelle senden kann, anstatt die gesamte SQL-Anweisung zu senden.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verringert den Leistungsunterschied zwischen direkter und vorbereiteter Ausführung durch verbesserte Algorithmen zum erkennen und wieder verwenden von Ausführungsplänen von **SQLExecDirect**. Dadurch stehen einige der Leistungsvorteile einer vorbereiteten Ausführung auch für direkt ausgeführte Anweisungen zur Verfügung. Weitere Informationen finden Sie unter [direkte Ausführung](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verringert den Leistungsunterschied zwischen direkter und vorbereiteter Ausführung durch verbesserte Algorithmen zum erkennen und wieder verwenden von Ausführungsplänen von **SQLExecDirect**. Dadurch stehen einige der Leistungsvorteile einer vorbereiteten Ausführung auch für direkt ausgeführte Anweisungen zur Verfügung. Weitere Informationen finden Sie unter [direkte Ausführung](../../../relational-databases/native-client-odbc-queries/executing-statements/direct-execution.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt außerdem auch eine systemeigene Unterstützung für die vorbereitete Ausführung bereit. Ein Ausführungsplan wird auf **SQLPrepare** erstellt und später ausgeführt, wenn **SQLExecute** aufgerufen wird. Da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht zum Erstellen temporärer gespeicherter Prozeduren auf **SQLPrepare**erforderlich ist, wird in den Systemtabellen in **tempdb**kein zusätzlicher mehr Aufwand geboten.  
   

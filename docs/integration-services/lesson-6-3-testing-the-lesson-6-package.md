@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 6.3: Testen des Pakets aus Lektion 6'
 title: 'Schritt 3: Testen des Pakets aus Lektion 6 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/11/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dec02c9a17a2eb1db3411c9b359ad55a83ac4fa5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6fc7b150f94d0f857244587140fd54b8fe7d38c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487723"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>Lektion 6.3: Testen des Pakets aus Lektion 6
 
@@ -39,7 +40,7 @@ Bevor Sie das Paket testen, überprüfen Sie, ob Ablaufsteuerung und Datenfluss 
   
 ## <a name="test-the-lesson-6-package"></a>Testen des Pakets aus Lektion 6  
   
-1.  Klicken Sie im Menü **Debuggen** auf **Start Debugging** (Debuggen starten).  
+1.  Wählen Sie im Menü **Debuggen** die Option **Debuggen starten** aus.  
   
 2.  Klicken Sie nach dem Ausführen des Pakets im Menü **Debuggen** auf **Stop Debugging** (Debuggen beenden).  
   

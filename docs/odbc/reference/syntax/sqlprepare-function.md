@@ -1,4 +1,5 @@
 ---
+description: SQLPrepare-Funktion
 title: SQLPrepare-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e9aedd665df2a943627207902d592d597c503c63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3b5d68aae8033b0710ee052b001c7942eb1f7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487186"
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare-Funktion
 **Konformitäts**  
@@ -59,7 +60,7 @@ SQLRETURN SQLPrepare(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLPrepare** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLPrepare** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01s02 entsprechen|Optionswert geändert|Ein angegebenes Anweisungs Attribut war aufgrund von Implementierungs Arbeitsbedingungen ungültig, sodass ein ähnlicher Wert vorübergehend ersetzt wurde. (**SQLGetStmtAttr** kann aufgerufen werden, um zu bestimmen, was der temporär ersetzte Wert ist.) Der Ersatzwert ist für " *StatementHandle* " gültig, bis der Cursor geschlossen wird. Die Anweisungs Attribute, die geändert werden können, sind: SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -80,7 +81,7 @@ SQLRETURN SQLPrepare(
 |42s12|Index nicht gefunden.|\*" *Status Text* " enthielt eine **Drop Index** -Anweisung, und der angegebene Indexname ist nicht vorhanden.|  
 |42s21|Spalte ist bereits vorhanden.|\*" *Status Text* " enthielt eine **ALTER TABLE** -Anweisung, und die in der **Add** -Klausel angegebene Spalte ist nicht eindeutig oder identifiziert eine vorhandene Spalte in der Basistabelle.|  
 |42s22|Spalte nicht gefunden|\*" *Status Text* " enthielt eine **Create Index** -Anweisung, und mindestens einer der in der Spaltenliste angegebenen Spaltennamen ist nicht vorhanden.<br /><br /> \*" *Status Text* " enthielt eine **Grant** -oder **Widerruf** -Anweisung, und ein angegebener Spaltenname ist nicht vorhanden.<br /><br /> \*" *Status Text* " enthielt eine **Select**-, **Delete**-, **Insert**-oder **Update** -Anweisung, und ein angegebener Spaltenname ist nicht vorhanden.<br /><br /> \*" *Status Text* " enthielt eine **CREATE TABLE** -Anweisung, und eine Spalte, die in einer Einschränkung angegeben ist (verweist auf eine andere Tabelle als die erstellte Tabelle), ist nicht vorhanden.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen, und anschließend wurde die Funktion für " *StatementHandle*" erneut aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY009|Ungültige Verwendung des NULL-Zeigers|(DM) *Status Text* war ein NULL-Zeiger.|  
@@ -117,7 +118,7 @@ SQLRETURN SQLPrepare(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Zuordnen eines Anweisungs Handles|[SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Binden eines Puffers an eine Spalte in einem Resultset|[SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
@@ -129,6 +130,6 @@ SQLRETURN SQLPrepare(
 |Zurückgeben der Anzahl der von einer Anweisung betroffenen Zeilen|[SQLRowCount-Funktion](../../../odbc/reference/syntax/sqlrowcount-function.md)|  
 |Festlegen eines Cursor namens|[SQLSetCursorName-Funktion](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

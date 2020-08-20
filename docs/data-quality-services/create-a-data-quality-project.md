@@ -1,4 +1,5 @@
 ---
+description: Erstellen eines Data Quality-Projekts
 title: Erstellen eines Data Quality-Projekts
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 33e719fb9db8f51df9b79569df778429e3051984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62dd18cb55aa57b95ab325b3e48d1ec618bd75c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487967"
 ---
 # <a name="create-a-data-quality-project"></a>Erstellen eines Data Quality-Projekts
 
@@ -37,7 +38,7 @@ ms.locfileid: "85900465"
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_kb_editor- oder dqs_kb_operator-Rolle in der DQS_MAIN-Datenbank verfügen, um ein Data Quality-Projekt zu erstellen.  
   
-##  <a name="create-a-data-quality-project"></a><a name="Create"></a>Erstellen eines Data Quality-Projekts  
+##  <a name="create-a-data-quality-project"></a><a name="Create"></a> Erstellen eines Data Quality-Projekts  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85900465"
   
 4.  Klicken Sie auf **Erstellen** , um ein Data Quality-Projekt zu erstellen.  
   
-##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen eines Data Quality-Projekts  
+##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a> Nachverfolgung: nach dem Erstellen eines Data Quality-Projekts  
  Nachdem Sie ein Data Quality-Projekt erstellt haben, wird ein Assistent angezeigt, mit dem Sie die ausgewählte Aktivität – Bereinigung oder Abgleich – ausführen können. Weitere Informationen zu den Bereinigungs- und Abgleichsaktivitäten finden Sie unter [Datenbereinigung](../data-quality-services/data-cleansing.md) und [Datenabgleich](../data-quality-services/data-matching.md).  
   
   

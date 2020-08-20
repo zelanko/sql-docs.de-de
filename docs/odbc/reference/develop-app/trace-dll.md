@@ -1,4 +1,5 @@
 ---
+description: Ablaufverfolgungs-DLL
 title: Trace-dll | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5ab99bd3-cdc3-4e2c-8827-932d1fcb6e00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e1f9dc57415ad9865ca1b2ad02487b62a93f18f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1791b72b5f7e836fba05275f87bd57948a273775
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81298070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487503"
 ---
 # <a name="trace-dll"></a>Ablaufverfolgungs-DLL
 Die dll, die die Ablauf Verfolgung ausführt, ist eine der ODBC-Kernkomponenten. Die Trace-dll wird derzeit als Beispiel-dll in der ODBC-Komponente des Windows SDK bereitgestellt und war zuvor das Microsoft Data Access Components (MDAC) SDK enthalten. Daher sind der Registrierungs Eintrag, die Schnittstelle und der Beispielcode für die Trace-dll verfügbar. Diese DLL kann durch eine von einem ODBC-Benutzer oder von einem Drittanbieter erstellte Ablaufverfolgungs-DLL ersetzt werden. Eine benutzerdefinierte Ablauf Verfolgungs-dll sollte einen anderen Namen als die ursprüngliche Beispiel-Trace-dll erhalten. Ablauf Verfolgungs-DLLs müssen im System Verzeichnis installiert werden, oder Sie können nicht geladen werden. Die Verbindungs Zeichenfolgen werden vom Treiber-Manager nicht an die Trace-dll übermittelt.  

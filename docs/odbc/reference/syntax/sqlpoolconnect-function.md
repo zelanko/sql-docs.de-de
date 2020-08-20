@@ -1,4 +1,5 @@
 ---
+description: SQLPoolConnect-Funktion
 title: Sqlpoolconnect-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5045fe47683529f858b01e69f6af696e2821ca4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30e2ce61baf861551e51773aea7ce6dcaf020cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487219"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect-Funktion
 **Konformitäts**  
@@ -54,7 +55,7 @@ SQLRETURN  SQLPoolConnect(
  Der Länge des **wszoutconnectstring* -Puffers in Zeichen.  
   
  *cchconnectstringlen*  
- Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (mit Ausnahme des NULL-Beendigungs Zeichens) zurückgegeben \*werden soll, die in *wszoutconnectstring*zurückgegeben werden soll. Wenn die Anzahl der zurück zugebende Zeichen größer oder gleich *cchconnectstringbuffer*ist, wird die abgeschlossene Verbindungs Zeichenfolge \*in *wszoutconnectstring* auf *cchconnectstringbuffer* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (mit Ausnahme des NULL-Beendigungs Zeichens) zurückgegeben werden soll, die in \* *wszoutconnectstring*zurückgegeben werden soll. Wenn die Anzahl der zurück zugebende Zeichen größer oder gleich *cchconnectstringbuffer*ist, wird die abgeschlossene Verbindungs Zeichenfolge in \* *wszoutconnectstring* auf *cchconnectstringbuffer* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
 ## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
@@ -77,7 +78,7 @@ SQLRETURN  SQLPoolConnect(
   
  Fügen Sie sqlspi. h für die ODBC-Treiberentwicklung ein.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Entwickeln eines ODBC-Treibers](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Treiber fähiges Verbindungs Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Developing Connection-Pool Awareness in an ODBC Driver (Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber)](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

@@ -1,4 +1,5 @@
 ---
+description: Reservierte Schlüsselwörter (DMX)
 title: Reservierte Schlüsselwörter (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6359b17825e1f62c38492acb6747ca52a264c7bc
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fa446f07b81707c9476b133a430281057c476dcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487739"
 ---
 # <a name="reserved-keywords-dmx"></a>Reservierte Schlüsselwörter (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

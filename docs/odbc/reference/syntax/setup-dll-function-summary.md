@@ -1,4 +1,5 @@
 ---
+description: Setup-DLL – Funktionsübersicht
 title: Zusammenfassung der dll-Setup Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d141cdd88614c1a4881d794b345e7d2ada4ba69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8729cb681a7518125e218bac08874e8fd02cd7c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487323"
 ---
 # <a name="setup-dll-function-summary"></a>Setup-DLL – Funktionsübersicht
 In der folgenden Tabelle werden die Setup-DLL-Funktionen beschrieben Weitere Informationen zur Syntax und Semantik für die einzelnen Funktionen finden Sie unter [dll-API-Referenz für Setup](../../../odbc/reference/syntax/setup-dll-api-reference.md).  

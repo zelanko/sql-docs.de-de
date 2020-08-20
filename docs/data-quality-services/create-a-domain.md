@@ -1,4 +1,5 @@
 ---
+description: Erstellen einer Domäne
 title: Erstellen einer Domäne
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 529f0233f95a4f2ee123b2cc3c6974e4f5e6faf4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3a97b28ed41f71fe73c1184bdea28870beecd1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487897"
 ---
 # <a name="create-a-domain"></a>Erstellen einer Domäne
 
@@ -36,7 +37,7 @@ ms.locfileid: "85887989"
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_kb_editor- oder dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um eine Domäne zu erstellen.  
   
-##  <a name="create-a-domain-in-the-knowledge-discovery-activity"></a><a name="Discovery"></a>Erstellen einer Domäne in der Wissens Ermittlungs Aktivität  
+##  <a name="create-a-domain-in-the-knowledge-discovery-activity"></a><a name="Discovery"></a> Erstellen einer Domäne in der Wissens Ermittlungs Aktivität  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "85887989"
   
 5.  Wählen Sie in der Tabelle **Zuordnungen** eine Quellspalte aus der Dropdownliste für die Spalte **Quellspalte** einer leeren Zeile aus. Wenn keine entsprechenden Domänen vorhanden ist, klicken Sie auf das Symbol **Domäne erstellen** .  
   
-##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a>Erstellen einer Domäne in der Domänen Verwaltungs Aktivität  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a> Erstellen einer Domäne in der Domänen Verwaltungs Aktivität  
   
 1.  Klicken Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Wissensdatenbank öffnen** , und wählen Sie dann eine Wissensdatenbank aus, oder klicken Sie auf **Neue Wissensdatenbank** , und geben Sie Eigenschaften für die neue Wissensdatenbank ein.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85887989"
   
 3.  Klicken Sie auf der Seite **Domänenverwaltung** über der Domänenliste auf das Symbol **Domäne erstellen** .  
   
-##  <a name="set-domain-properties"></a><a name="Properties"></a>Festlegen von Domänen Eigenschaften  
+##  <a name="set-domain-properties"></a><a name="Properties"></a> Festlegen von Domänen Eigenschaften  
   
 1.  Geben Sie im Dialogfeld **Domäne erstellen** einen eindeutigen Namen für die Wissensdatenbank und eine Beschreibung mit maximal 256 Zeichen ein.  
   
@@ -91,7 +92,7 @@ ms.locfileid: "85887989"
   
 10. Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
-##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen einer Domäne  
+##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a> Nachverfolgung: nach dem Erstellen einer Domäne  
  Nachdem Sie eine Domäne erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen. Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
   

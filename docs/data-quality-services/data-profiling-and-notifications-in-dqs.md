@@ -1,4 +1,5 @@
 ---
+description: Datenprofilerstellung und Benachrichtigungen in DQS
 title: Datenprofilerstellung und Benachrichtigungen in DQS
 ms.date: 04/01/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: af0464a307d77531c5d11624dc86a836ddf77711
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4857ba951d86551e95f81075d77bc1d0d9be928a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487822"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Datenprofilerstellung und Benachrichtigungen in DQS
 
@@ -49,7 +50,7 @@ ms.locfileid: "85882549"
   
  DQS stellt keine Profil Erstellungs Statistiken für die Domänen Verwaltungs Aktivität bereit.  
   
-##  <a name="profiling-data-by-activity"></a><a name="Activity"></a>Profil Erstellungs Daten nach Aktivität  
+##  <a name="profiling-data-by-activity"></a><a name="Activity"></a> Profil Erstellungs Daten nach Aktivität  
  DQS-Profilerstellung verwendet standardmäßige Data Quality-Dimensionen, um die Qualität der Daten darzustellen: Vollständigkeit (das Ausmaß des Vorhandenseins von Daten), Genauigkeit (das Ausmaß, in dem Daten für den beabsichtigten Zweck verwendet werden können) und Eindeutigkeit (das Ausmaß, in dem verschiedene Werte verschiedene Entitäten darstellen). Standardmäßig werden NULL-Werte und leere Werte als fehlend betrachtet oder verringern den Vollständigkeits Prozentsatz. Sie können jedoch auch andere Werte so definieren, dass Sie NULL-äquivalent sind. in diesem Fall werden Sie auch als fehlend betrachtet.  
   
  Die Profilerstellung stellt Ihnen die Statistiken bereit, die Sie benötigen, um die Prozesse zu bewerten. Die Statistiken müssen Sie allerdings interpretieren. Verstehen Sie, was Ihnen die Profilerstellung mitteilt, indem Sie sich die Statistiken spaltenweise ansehen.  

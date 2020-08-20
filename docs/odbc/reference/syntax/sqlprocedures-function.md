@@ -1,4 +1,5 @@
 ---
+description: SQLProcedures-Funktion
 title: SQLProcedures-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b4c8b8a9f22f6005d1af811e56485299bad3a425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c4e44a708f96883891d44d629fdd3c945eb283a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487146"
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures-Funktion
 **Konformitäts**  
@@ -81,14 +82,14 @@ SQLRETURN SQLProcedures(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLProcedures** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert abgerufen werden, indem **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLProcedures** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
 |24.000|Ungültiger Cursorstatus|Ein Cursor war auf dem *StatementHandle*geöffnet, und **SQLFetch** oder **SQLFetchScroll** wurde aufgerufen. Dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** nicht SQL_NO_DATA zurückgegeben hat, und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.<br /><br /> Ein Cursor war auf dem *StatementHandle*geöffnet, aber **SQLFetch** oder **SQLFetchScroll** wurde nicht aufgerufen.|  
 |40001|Serialisierungsfehler|Für die Transaktion wurde aufgrund eines Ressourcen Deadlocks mit einer anderen Transaktion ein Rollback ausgeführt.|  
 |40003|Anweisungs Vervollständigung unbekannt|Bei der zugeordneten Verbindung ist während der Ausführung dieser Funktion ein Fehler aufgetreten, und der Status der Transaktion kann nicht bestimmt werden.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen. Anschließend wurde die Funktion erneut für " *StatementHandle*" aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY009|Ungültige Verwendung des NULL-Zeigers|Das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, das *CatalogName* -Argument war ein NULL-Zeiger, und der SQL_CATALOG_NAME *InfoType* gibt zurück, dass Katalognamen unterstützt werden.<br /><br /> (DM *) das SQL_ATTR_METADATA_ID* Statement-Attribut wurde auf SQL_TRUE festgelegt, und das Schema Name-oder *procname* -Argument war ein NULL-Zeiger.|  
@@ -130,9 +131,9 @@ SQLRETURN SQLProcedures(
 |PROCEDURE_CAT (ODBC 2,0)|1|Varchar|Prozedur Katalog Bezeichner; NULL, wenn nicht auf die Datenquelle anwendbar. Wenn ein Treiber Kataloge für einige Prozeduren unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, wird eine leere Zeichenfolge ("") für die Prozeduren zurückgegeben, für die keine Kataloge vorhanden sind.|  
 |PROCEDURE_SCHEM (ODBC 2,0)|2|Varchar|Prozedur Schema Bezeichner; NULL, wenn nicht auf die Datenquelle anwendbar. Wenn ein Treiber Schemas für einige Prozeduren unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, wird eine leere Zeichenfolge ("") für die Prozeduren zurückgegeben, für die keine Schemas vorhanden sind.|  
 |Procedure_name (ODBC 2,0)|3|Varchar not NULL|Prozedur Bezeichner.|  
-|NUM_INPUT_PARAMS (ODBC 2,0)|4|–|Für die zukünftige Verwendung reserviert. Anwendungen sollten sich nicht auf die in diesen Ergebnis Spalten zurückgegebenen Daten stützen.|  
-|NUM_OUTPUT_PARAMS (ODBC 2,0)|5|–|Für die zukünftige Verwendung reserviert. Anwendungen sollten sich nicht auf die in diesen Ergebnis Spalten zurückgegebenen Daten stützen.|  
-|NUM_RESULT_SETS (ODBC 2,0)|6|–|Für die zukünftige Verwendung reserviert. Anwendungen sollten sich nicht auf die in diesen Ergebnis Spalten zurückgegebenen Daten stützen.|  
+|NUM_INPUT_PARAMS (ODBC 2,0)|4|–|Für zukünftige Verwendung reserviert. Anwendungen sollten sich nicht auf die in diesen Ergebnis Spalten zurückgegebenen Daten stützen.|  
+|NUM_OUTPUT_PARAMS (ODBC 2,0)|5|–|Für zukünftige Verwendung reserviert. Anwendungen sollten sich nicht auf die in diesen Ergebnis Spalten zurückgegebenen Daten stützen.|  
+|NUM_RESULT_SETS (ODBC 2,0)|6|–|Für zukünftige Verwendung reserviert. Anwendungen sollten sich nicht auf die in diesen Ergebnis Spalten zurückgegebenen Daten stützen.|  
 |Hinweise (ODBC 2,0)|7|Varchar|Eine Beschreibung der Prozedur.|  
 |PROCEDURE_TYPE (ODBC 2,0)|8|Smallint|Definiert den Prozedurtyp:<br /><br /> SQL_PT_UNKNOWN: Es kann nicht bestimmt werden, ob die Prozedur einen Wert zurückgibt.<br /><br /> SQL_PT_PROCEDURE: das zurückgegebene Objekt ist eine Prozedur. Dies bedeutet, dass Sie keinen Rückgabewert hat.<br /><br /> SQL_PT_FUNCTION: das zurückgegebene Objekt ist eine Funktion. Das heißt, Sie verfügt über einen Rückgabewert.|  
   
@@ -143,7 +144,7 @@ SQLRETURN SQLProcedures(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Binden eines Puffers an eine Spalte in einem Resultset|[SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |Abbrechen der Anweisungs Verarbeitung|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
@@ -153,6 +154,6 @@ SQLRETURN SQLProcedures(
 |Zurückgeben der Parameter und Resultsetspalten einer Prozedur|[SQLProcedureColumns-Funktion](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|  
 |Syntax zum Aufrufen gespeicherter Prozeduren|[Ausführen von Anweisungen](../../../odbc/reference/develop-app/executing-statements-odbc.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

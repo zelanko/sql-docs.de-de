@@ -1,4 +1,5 @@
 ---
+description: Erstellen einer verknüpften Domäne
 title: Erstellen einer verknüpften Domäne
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 68c8fe492dfe05945b670b137b0d2f427d82d486
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487863"
 ---
 # <a name="create-a-linked-domain"></a>Erstellen einer verknüpften Domäne
 
@@ -45,7 +46,7 @@ ms.locfileid: "85887961"
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um eine verknüpfte Domäne zu erstellen.  
   
-##  <a name="create-a-linked-domain"></a><a name="Create"></a>Erstellen einer verknüpften Domäne  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a> Erstellen einer verknüpften Domäne  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   

@@ -1,4 +1,5 @@
 ---
+description: Erstellen einer Wissensdatenbank
 title: Erstellen einer Wissensdatenbank
 ms.date: 06/04/2013
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: aa740172957e3f0ba08812e298db5621ba43e890
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dd8e0379d25b231de873ccfd1529284e62f0f1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487905"
 ---
 # <a name="create-a-knowledge-base"></a>Erstellen einer Wissensdatenbank
 
@@ -35,7 +36,7 @@ ms.locfileid: "85887978"
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_kb_editor- oder dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um eine Wissensdatenbank zu erstellen.  
   
-##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a>Erstellen einer Wissensdatenbank  
+##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a> Erstellen einer Wissensdatenbank  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   

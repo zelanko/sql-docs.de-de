@@ -1,4 +1,5 @@
 ---
+description: sys.column_store_row_groups (Transact-SQL)
 title: sys. column_store_row_groups (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9722eb458485d8b0635c226dbfa952a7b6cfca48
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: a7a6f8a54469aa8a87eb02128ef91672ff69ea3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486463"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,13 +39,13 @@ ms.locfileid: "87442578"
 |**partition_number**|**int**|ID der Tabellenpartition, die die row_group_id der Zeilengruppe enthält. Sie können partition_number verwenden, um diese DMV mit sys.partitions zu verknüpfen.|  
 |**row_group_id**|**int**|Die dieser Zeilengruppe zugeordnete Zeilengruppenzahl. Diese ist innerhalb der Partition eindeutig.<br /><br /> -1 = Ende einer in-Memory-Tabelle.|  
 |**delta_store_hobt_id**|**bigint**|Die hobt_id für die geöffnete Zeilen Gruppe im Delta Speicher.<br /><br /> NULL, wenn sich die Zeilen Gruppe nicht im Delta Speicher befindet.<br /><br /> NULL für das Ende einer in-Memory-Tabelle.|  
-|**state**|**tinyint**|Die der state_description zugeordnete ID.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = Tombstone|  
+|**Status**|**tinyint**|Die der state_description zugeordnete ID.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = Tombstone|  
 |**state_description**|**nvarchar(60)**|Beschreibung des persistenten Status der Zeilengruppe:<br /><br /> Unsichtbar: ein verborgenes komprimiertes Segment, das aus Daten in einem Delta Speicher erstellt wird. Lesevorgänge nutzen den Deltastore, bis das unsichtbare komprimierte Segment abgeschlossen ist. Anschließend werden das neue Segment sichtbar gemacht und der Quelldeltastore entfernt.<br /><br /> Öffnen: eine Zeilen Gruppe mit Lese-/Schreibzugriff, die neue Datensätze akzeptiert. Eine offene Zeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.<br /><br /> Closed: eine Zeilen Gruppe, die ausgefüllt, aber noch nicht durch den tupelverschiebungsprozess komprimiert wurde.<br /><br /> Komprimiert: eine Zeilen Gruppe, die ausgefüllt und komprimiert wurde.|  
 |**total_rows**|**bigint**|Gesamtzahl der Zeilen, die in der Zeilengruppe physisch gespeichert sind. Einige wurden u. U. gelöscht, sind aber weiterhin gespeichert. Die maximale Anzahl der Zeilen in einer Zeilengruppe beträgt 1.048.576 (hexadezimal FFFFF).|  
 |**deleted_rows**|**bigint**|Gesamtzahl der Zeilen in der Zeilengruppe, die als gelöscht markiert sind. Dies ist für DELTA-Zeilengruppen immer 0.|  
 |**size_in_bytes**|**bigint**|Größe aller Daten (in Bytes) in dieser Zeilengruppe (ausgenommen von Metadaten oder freigegebenen Wörterbüchern) sowohl für DELTA- als auch für COLUMNSTORE-Zeilengruppen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Gibt eine Zeile für jede columnstore-Zeilengruppe für jede Tabelle zurück, die über einen gruppierten oder nicht gruppierten columnstore-Index verfügt.  
   
  Verwenden Sie **sys. column_store_row_groups** , um die Anzahl der Zeilen, die in der Zeilen Gruppe enthalten sind, und die Größe der Zeilen Gruppe zu bestimmen.  

@@ -1,4 +1,5 @@
 ---
+description: Erstellen eindeutiger Indizes
 title: Erstellen eindeutiger Indizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/17/2017
@@ -18,12 +19,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9b897de6d5d833a485e976592f5776972a212f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59ab82f18d59bd6a2f8df0c236cd44031b740ee1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486874"
 ---
 # <a name="create-unique-indexes"></a>Erstellen eindeutiger Indizes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85760817"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie einen eindeutigen Index auf einer Tabelle mithilfe von:**  
   
@@ -107,13 +108,13 @@ ms.locfileid: "85760817"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Tabelle, in der Sie einen eindeutigen Index erstellen möchten, und wählen Sie **Entwurf**aus.  
   
-4.  Wählen Sie im Menü **Tabellen-Designer** **Indizes/Schlüssel**aus.  
+4.  Wählen Sie im Menü **Tabellen-Designer****Indizes/Schlüssel**aus.  
   
 5.  Klicken Sie im Dialogfeld **Indizes/Schlüssel** auf **Hinzufügen**.  
   
 6.  Wählen Sie im Textfeld **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index** den neuen Index aus.  
   
-7.  Wählen Sie im Hauptraster unter **(Allgemein)** **Typ** aus, und wählen Sie dann **Index** aus der Liste aus.  
+7.  Wählen Sie im Hauptraster unter **(Allgemein)****Typ** aus, und wählen Sie dann **Index** aus der Liste aus.  
   
 8.  Wählen Sie **Spalten** aus, und klicken Sie dann auf die Auslassungspunkte **(...)** .  
   
@@ -121,13 +122,13 @@ ms.locfileid: "85760817"
   
 10. Wenn alle Spalten für den Index ausgewählt sind, klicken Sie auf **OK**.  
   
-11. Wählen Sie im Raster unter **(Allgemein)** **Ist eindeutig** aus, und wählen Sie anschließend **Ja** aus der Liste aus.  
+11. Wählen Sie im Raster unter **(Allgemein)****Ist eindeutig** aus, und wählen Sie anschließend **Ja** aus der Liste aus.  
   
-12. Optional: wählen Sie im Hauptraster unter **Tabellen-Designer** **Doppelte Schlüssel ignorieren** aus, und wählen Sie dann **Ja** aus der Liste aus. Auf diese Weise ignorieren Sie Versuche, Daten hinzuzufügen, die im eindeutigen Index einen doppelten Schlüssel erstellen würden.  
+12. Optional: wählen Sie im Hauptraster unter **Tabellen-Designer****Doppelte Schlüssel ignorieren** aus, und wählen Sie dann **Ja** aus der Liste aus. Auf diese Weise ignorieren Sie Versuche, Daten hinzuzufügen, die im eindeutigen Index einen doppelten Schlüssel erstellen würden.  
   
 13. Klicken Sie auf **Schließen**.  
   
-14. Klicken Sie im Menü **Datei** auf **Tabellenname**_speichern\__ .  
+14. Klicken Sie im Menü **Datei** auf **Tabellenname**_speichern\__.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Erstellen eines eindeutigen Indexes mit dem Objekt-Explorer  
   

@@ -1,4 +1,5 @@
 ---
+description: SQLPutData-Funktion
 title: SQLPutData-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c4e704d96924942812904ea63d0e3d4fce8748e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8adda30141a99c1a575d8cc66511f1606e77dcf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487133"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData-Funktion
 **Konformitäts**  
@@ -59,7 +60,7 @@ SQLRETURN SQLPutData(
   
 -   Der c-Datentyp ist SQL_C_DEFAULT, und der c-Standard Datentyp für den angegebenen SQL-Datentyp ist SQL_C_CHAR oder SQL_C_BINARY.  
   
- Wenn *StrLen_Or_Ind* für alle anderen Typen von C-Daten nicht SQL_NULL_DATA oder SQL_DEFAULT_PARAM ist, geht der Treiber davon aus, dass die \*Größe des *DataPtr* -Puffers die Größe des mit *ValueType* oder *TargetType* angegebenen C-Datentyps ist, und sendet den gesamten Datenwert. Weitere Informationen finden Sie unter "Datentypen" in Anhang D: Datentypen [von C in SQL-Daten](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) Typen.  
+ Wenn *StrLen_Or_Ind* für alle anderen Typen von C-Daten nicht SQL_NULL_DATA oder SQL_DEFAULT_PARAM ist, geht der Treiber davon aus, dass die Größe des \* *DataPtr* -Puffers die Größe des mit *ValueType* oder *TargetType* angegebenen C-Datentyps ist, und sendet den gesamten Datenwert. Weitere Informationen finden Sie unter "Datentypen" in Anhang D: Datentypen [von C in SQL-Daten](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) Typen.  
   
 ## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
@@ -67,7 +68,7 @@ SQLRETURN SQLPutData(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLPutData** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die häufig von **SQLPutData** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichen folgen Daten, rechts abgeschnitten|Zeichen folgen-oder Binärdaten, die für einen Output-Parameter zurückgegeben wurden, führten zu einer Verkürzung von nicht leeren Zeichen oder Binärdaten, die nicht NULL sind. Wenn es sich um einen Zeichen folgen Wert handelt, wurde er rechts abgeschnitten. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -81,7 +82,7 @@ SQLRETURN SQLPutData(
 |22012|Division durch Null|Ein arithmetischer Ausdruck, der für einen Eingabe-/Ausgabe-oder Ausgabeparameter berechnet wurde, führte zu einer Division|  
 |22015|Überlauf des Intervall Felds|Die Daten, die für eine genaue numerische oder Intervall Spalte oder einen bestimmten Intervall Parameter an einen SQL-Datentyp für das Intervall gesendet werden, haben einen Verlust signifikanter Ziffern<br /><br /> Es wurden Daten für eine Intervall Spalte oder einen Parameter mit mehr als einem Feld gesendet, in einen numerischen Datentyp konvertiert, und es gab keine Darstellung im numerischen Datentyp.<br /><br /> Die Daten, die für Spalten-oder Parameterdaten gesendet werden, wurden einem SQL-Intervalltyp zugewiesen, und es gab keine Darstellung des Werts des C-Typs im Interval-SQL-Typ.<br /><br /> Die Daten, die für eine genaue numerische Spalte oder Interval c-Spalte oder einen-Parameter an einen Interval-c-Typ gesendet werden, haben einen Verlust signifikanter Ziffern<br /><br /> Die Daten, die für Spalten-oder Parameterdaten gesendet werden, wurden einer Intervall-C-Struktur zugewiesen, und es gab keine Darstellung der Daten in der Intervall Datenstruktur.|  
 |22018|Ungültiger Zeichen Wert für Umwandlungs Spezifikation.|Der C-Typ war ein genauer oder Ungefährer numerischer, DateTime-oder Interval-Datentyp. der SQL-Typ der Spalte war ein Zeichen Datentyp. und der Wert in der Spalte oder im Parameter war kein gültiges Literale des gebundenen C-Typs.<br /><br /> Der SQL-Typ war ein genauer oder Ungefährer numerischer, DateTime-oder Interval-Datentyp. der C-Typ war SQL_C_CHAR. und der Wert in der Spalte oder dem Parameter war kein gültiges Literale des gebundenen SQL-Typs.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen. Anschließend wurde die Funktion erneut für " *StatementHandle*" aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY009|Ungültige Verwendung des NULL-Zeigers|(DM) das Argument *DataPtr* war ein NULL-Zeiger, und das Argument *StrLen_Or_Ind* war nicht 0, SQL_DEFAULT_PARAM oder SQL_NULL_DATA.|  
@@ -103,7 +104,7 @@ SQLRETURN SQLPutData(
   
  Wenn eine Anwendung **SQLParamData** aufruft, um zu bestimmen, welche Daten gesendet werden sollen, gibt der Treiber einen Indikator zurück, der von der Anwendung verwendet werden kann, um zu bestimmen, welche Parameterdaten zu senden sind oder welche Spaltendaten gefunden werden. Außerdem wird SQL_NEED_DATA zurückgegeben, bei dem es sich um einen Indikator für die Anwendung handelt, der zum Senden der Daten **SQLPutData** aufruft. Im *DataPtr* -Argument von **SQLPutData**übergibt die Anwendung einen Zeiger auf den Puffer, der die tatsächlichen Daten für den Parameter oder die Spalte enthält.  
   
- Wenn der Treiber SQL_SUCCESS für **SQLPutData**zurückgibt, ruft die Anwendung **SQLParamData** erneut auf. **SQLParamData** gibt SQL_NEED_DATA zurück, wenn weitere Daten gesendet werden müssen. in diesem Fall ruft die Anwendung **SQLPutData** erneut auf. Wenn alle Data-at-Execution-Daten gesendet wurden, wird SQL_SUCCESS zurückgegeben. Die Anwendung ruft dann **SQLParamData** erneut auf. Wenn der Treiber SQL_NEED_DATA und einen weiteren Indikator in * \*ValuePtrPtr*zurückgibt, sind Daten für einen anderen Parameter oder eine Spalte erforderlich, und **SQLPutData** wird erneut aufgerufen. Wenn der Treiber SQL_SUCCESS zurückgibt, werden alle Data-at-Execution-Daten gesendet, und die SQL-Anweisung kann ausgeführt werden, oder der **SQLBulkOperations** -oder **SQLSetPos** -Rückruf kann verarbeitet werden.  
+ Wenn der Treiber SQL_SUCCESS für **SQLPutData**zurückgibt, ruft die Anwendung **SQLParamData** erneut auf. **SQLParamData** gibt SQL_NEED_DATA zurück, wenn weitere Daten gesendet werden müssen. in diesem Fall ruft die Anwendung **SQLPutData** erneut auf. Wenn alle Data-at-Execution-Daten gesendet wurden, wird SQL_SUCCESS zurückgegeben. Die Anwendung ruft dann **SQLParamData** erneut auf. Wenn der Treiber SQL_NEED_DATA und einen weiteren Indikator in * \* ValuePtrPtr*zurückgibt, sind Daten für einen anderen Parameter oder eine Spalte erforderlich, und **SQLPutData** wird erneut aufgerufen. Wenn der Treiber SQL_SUCCESS zurückgibt, werden alle Data-at-Execution-Daten gesendet, und die SQL-Anweisung kann ausgeführt werden, oder der **SQLBulkOperations** -oder **SQLSetPos** -Rückruf kann verarbeitet werden.  
   
  Weitere Informationen zur Übergabe von Data-at-Execution-Parameterdaten zur Anweisungs Ausführungszeit finden Sie unter "übergeben von Parameterwerten" in [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) und [Senden von Long-Daten](../../../odbc/reference/develop-app/sending-long-data.md). Weitere Informationen zur Aktualisierung oder zum Hinzufügen von Data-at-Execution-Spaltendaten finden Sie im Abschnitt "Verwenden von SQLSetPos" in [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md), "Ausführen von Massen Aktualisierungen mithilfe von Lesezeichen" in [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)und [Long Data und SQLSetPos und SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
@@ -275,7 +276,7 @@ int main() {
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Binden eines Puffers an einen Parameter|[SQLBindParameter-Funktion](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |Abbrechen der Anweisungs Verarbeitung|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
@@ -283,6 +284,6 @@ int main() {
 |Ausführen einer vorbereiteten SQL-Anweisung|[SQLExecute-Funktion](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Zurückgeben des nächsten Parameters zum Senden von Daten|[SQLParamData-Funktion](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

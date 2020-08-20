@@ -1,4 +1,5 @@
 ---
+description: Anzeigen eines Sammlungssatzberichts (SQL Server Management Studio)
 title: Anzeigen eines Sammlungssatzberichts (SSMS)
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 161fbacb2edc8d73d69bbc501e255ce657f6208c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5132dc4b782cb9af8e5e096ae35f57d8266a27c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487200"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Anzeigen eines Sammlungssatzberichts (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85715516"
  Geben Sie eine Anfangszeit für die Berichtsdaten ein, oder wählen Sie ein Datum durch Klicken auf die Pfeile aus.  
   
  **Duration**  
- Geben Sie den Zeitraum an, der in den Bericht aufgenommen werden soll. Der Standardwert ist 240 Minuten. Die möglichen Auswahlwerte sind 15 Minuten, 60 Minuten, 240 Minuten(4 Stunden), 720 Minuten (12 Stunden) und 1440 Minuten (24 Stunden).  
+ Geben Sie den Zeitraum an, der in den Bericht aufgenommen werden soll. Der Standardwert beträgt 240 Minuten. Die möglichen Auswahlwerte sind 15 Minuten, 60 Minuten, 240 Minuten(4 Stunden), 720 Minuten (12 Stunden) und 1440 Minuten (24 Stunden).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   

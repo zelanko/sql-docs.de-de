@@ -1,4 +1,5 @@
 ---
+description: Erstellen einer Domänenregel
 title: Erstellen einer Domänenregel
 ms.date: 11/08/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e77d3966476bba662f864cb2f81dbbfa983d4740
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b85a6f50b7e0759c5b691389c102236ce3df082b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487933"
 ---
 # <a name="create-a-domain-rule"></a>Erstellen einer Domänenregel
 
@@ -72,7 +73,7 @@ ms.locfileid: "85900449"
   
 16. Fahren Sie mit der nachfolgenden Testprozedur fort.  
   
-##  <a name="test-domain-rules"></a><a name="Test"></a>Testen von Domänen Regeln  
+##  <a name="test-domain-rules"></a><a name="Test"></a> Testen von Domänen Regeln  
   
 1.  Wählen Sie eine Regel aus, und klicken Sie auf das Symbol **Ausgewählte Domänenregel für Testdaten ausführen** .  
   
@@ -88,7 +89,7 @@ ms.locfileid: "85900449"
   
 7.  Fahren Sie mit der nachfolgenden Anwendungsprozedur fort.  
   
-##  <a name="apply-domain-rules"></a><a name="Apply"></a>Anwenden von Domänen Regeln  
+##  <a name="apply-domain-rules"></a><a name="Apply"></a> Anwenden von Domänen Regeln  
   
 1.  Klicken Sie auf **Alle Regeln anwenden** , um die Regeln auf die Werte in der Domäne anzuwenden. Nachdem Sie auf **Alle Regeln anwenden**geklickt haben, wird ein Popupfenster angezeigt, in dem angegeben ist, wie viele Werte in bestimmten Status von der Regel betroffen sind. Klicken Sie auf **Ja** , wenn Sie die Regel trotzdem anwenden möchten, oder auf **Nein** , um sie nicht anzuwenden. Wenn Sie auf **Ja**klicken, klicken Sie anschließend auf **OK** , um das Popupfenster mit den Ergebnissen zu schließen.  
   
@@ -99,10 +100,10 @@ ms.locfileid: "85900449"
   
 3.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
   
-##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen einer Domänen Regel  
+##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> Nachverfolgung: nach dem Erstellen einer Domänen Regel  
  Nachdem Sie eine Domänenregel erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen. Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="domain-rule-conditions"></a><a name="Conditions"></a>Domänen Regel Bedingungen  
+##  <a name="domain-rule-conditions"></a><a name="Conditions"></a> Domänen Regel Bedingungen  
  In der nachfolgenden Tabelle werden die Bedingungen beschrieben, die in der Domänenregel angewendet werden können. Die Tabelle enthält außerdem ein Beispiel zur Veranschaulichung, wie die Bedingungen angewendet werden können.  
   
  Wenn eine Domänenregel angewendet wird und ein Domänenwert nicht der Regel entspricht, wird der Wert auf Ungültig festgelegt. Ein Wert, für den Ungültig angegeben ist, wird in Richtig geändert, wenn die Regel, wegen der er ungültig ist, gelöscht oder deaktiviert wird bzw. so geändert wird, dass der Wert jetzt der Regel entspricht. Wenn Sie für einen Wert manuell Ungültig angegeben haben (auf der Registerkarte Domänenwerte der Aktivität Domänenverwaltung) und eine Regel, der der Wert nicht entspricht, gelöscht, deaktiviert oder geändert wird, bleibt der Wert trotzdem gemäß der manuellen Festlegung ungültig.  

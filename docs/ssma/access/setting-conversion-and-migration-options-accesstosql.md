@@ -1,4 +1,5 @@
 ---
+description: Festlegen von Konvertierungs-und Migrations Optionen (accesstosql)
 title: Festlegen von Konvertierungs-und Migrations Optionen (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e074f603586afa0322d62872c49abb52fe47f047
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8d5113a5c007105a0fab7700d92a16672fa9ab84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488236"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Festlegen von Konvertierungs-und Migrations Optionen (accesstosql)
 Für jedes SSMA-Projekt können Sie Optionen auf Projektebene festlegen. Diese Optionen geben an, wie Objekte konvertiert werden, wie Daten migriert werden und wie Quell Datentypen den Ziel Datentypen zugeordnet werden. Vergewissern Sie sich, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dass die Konfigurationsoptionen für das Projekt geeignet sind, bevor Sie Objekte in oder SQL Azure oder Daten in oder SQL Azure migrieren.  

@@ -1,4 +1,5 @@
 ---
+description: 'IBCPSession:: bcpwrite TEF (Native Client OLE DB-Anbieter)'
 title: 'IBCPSession:: bcpwrite TEF (Native Client OLE DB Provider) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6653e1cf209e398548aa0274ec6f4802ebfffde3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: eaeb5d8806b09dc9239b07008dde23053f066abe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87941164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486673"
 ---
 # <a name="ibcpsessionbcpwritefmt-native-client-ole-db-provider"></a>IBCPSession:: bcpwrite TEF (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ HRESULT BCPWriteFmt(
       const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Formatdatei gibt das Datenformat einer durch Massenkopieren erstellten Datendatei an. Durch Aufrufe der Methoden [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) und [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) wird das Format der Datendatei definiert. Die Methode **BCPWriteFmt** speichert diese Definition in der im Argument pwszFormatFile angegebenen Datei.  
   
  Die **BCPWriteFmt** -Methode kann die Formatdateien in XML- oder Textformat speichern. Dies muss mithilfe der BCP_OPTION_XML-Steuerungsoption und der [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md)-Methode angegeben werden.  
@@ -52,7 +53,7 @@ HRESULT BCPWriteFmt(
  Die Methode wurde erfolgreich ausgeführt.  
   
  E_FAIL  
- Ein Anbieter spezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie, wenn Sie die [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) -Schnittstelle verwenden.  
+ Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)-Schnittstelle.  
   
  E_OUTOFMEMORY  
  Fehler aufgrund nicht genügenden Arbeitsspeichers  

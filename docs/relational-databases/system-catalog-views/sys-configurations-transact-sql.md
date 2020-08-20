@@ -1,4 +1,5 @@
 ---
+description: sys.configurations (Transact-SQL)
 title: sys.configurationen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bfe45a28ba06da888b5b28bbd3c5c404acde2dca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b041e0bb17e0c290225ecb951fe26d95ab07770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486452"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,14 +37,14 @@ ms.locfileid: "85896322"
 |**configuration_id**|**int**|Eindeutige ID des Konfigurationswerts.|  
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
 |**value**|**sql_variant**|Der für diese Option konfigurierte Wert.|  
-|**Garantien**|**sql_variant**|Der Mindestwert für die Konfigurationsoption.|  
-|**maximale**|**sql_variant**|Der Höchstwert für die Konfigurationsoption.|  
+|**minimum**|**sql_variant**|Der Mindestwert für die Konfigurationsoption.|  
+|**maximum**|**sql_variant**|Der Höchstwert für die Konfigurationsoption.|  
 |**value_in_use**|**sql_variant**|Ausgeführter Wert, der derzeit für diese Option wirksam ist.|  
-|**description**|**nvarchar(255)**|Beschreibung der Konfigurationsoption.|  
+|**Beschreibung**|**nvarchar(255)**|Beschreibung der Konfigurationsoption.|  
 |**is_dynamic**|**bit**|1 = Variable, die bei Ausführung der RECONFIGURE-Anweisung wirksam wird.|  
 |**is_advanced**|**bit**|1 = die Variable wird nur angezeigt, wenn die **Option advancedoption anzeigen** festgelegt ist.|  
   
- ## <a name="remarks"></a>Hinweise
+ ## <a name="remarks"></a>Bemerkungen
   Eine Liste aller Server Konfigurationsoptionen finden Sie unter [Server Configuration options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: 'IBCPSession:: BCPControl (Native Client OLE DB-Anbieter)'
 title: 'IBCPSession:: BCPControl (Native Client OLE DB-Anbieter) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42f50ec668d61d9244f6f2ba413095fb1642a964
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f90f55df46097416bc3f3b2c801d021ad0ee50ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486719"
 ---
 # <a name="ibcpsessionbcpcontrol-native-client-ole-db-provider"></a>IBCPSession:: BCPControl (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Mit der **BCPControl**-Methode werden verschiedene Steuerelementparameter für Massenkopiervorgänge festgelegt, einschließlich der Anzahl von Fehlern, die vor dem Abbrechen eines Massenkopiervorgangs zulässig sind, der Nummern der ersten und letzten Zeilen, die aus einer Datendatei kopiert werden sollen, und der Batchgröße.  
   
  Außerdem wird diese Methode dazu verwendet, die SELECT-Anweisung beim Massenkopieren von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzugeben. Sie können das **eOption-Argument** auf BCP_OPTION_HINTS und das **iValue**-Argument festlegen, um einen Zeiger auf eine Zeichenfolge mit Breitzeichen zur Verfügung zu haben, die die SELECT-Anweisung enthält.  
@@ -50,7 +51,7 @@ HRESULT BCPControl(
 |BCP_OPTION_BATCH|Die Anzahl der Zeilen pro Batch. Der Standardwert ist 0 (null), womit beim Extrahieren von Daten alle Zeilen in einer Tabelle oder beim Kopieren von Daten nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Zeilen in der Benutzerdatendatei angegeben werden. Mit einem Wert kleiner als 1 wird BCP_OPTION_BATCH auf den Standardwert zurückgesetzt.|  
 |BCP_OPTION_DELAYREADFMT|Ein boolescher Wert. Wenn er auf TRUE festgelegt ist, erfolgt das Lesen durch [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) bei der Ausführung. Gilt die Standardeinstellung FALSE, wird IBCPSession::BCPReadFm sofort die Formatdatei lesen. Wenn **BCP_OPTION_DELAYREADFMT** auf TRUE festgelegt ist und Sie IBCPSession::BCPColumns oder IBCPSession::BCPColFmt aufrufen, kommt es zu einem Sequenzfehler.<br /><br /> Ein Sequenzfehler tritt auch auf, wenn Sie nach dem Aufrufen von `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` und IBCPSession::BCPWriteFmt noch `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` aufrufen.<br /><br /> Weitere Informationen finden Sie unter [Metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).|  
 |BCP_OPTION_FILECP|Das *iValue*-Argument enthält die Nummer der Codepage für die Datendatei. Sie können die Nummer der Codepage angeben, z. B. 1252 oder 850, oder einen der folgenden Werte:<br /><br /> BCP_FILECP_ACP: Daten in der Datei sind in der Microsoft Windows®-Codepage des Clients.<br /><br /> BCP_FILECP_OEMCP: Daten in der Datei sind in der OEM-Codepage des Clients (Standard).<br /><br /> BCP_FILECP_RAW: Daten in der Datei sind in der Codepage von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|BCP_OPTION_FILEFMT|Die Versionsnummer des Datendateiformats. Diese kann 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) oder 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) sein. Der Standardwert ist 120. Dies ist beim Exportieren und Importieren von Daten in Formate nützlich, die in früheren Versionen des Servers unterstützt wurden.  Geben Sie beispielsweise zum Importieren von Daten aus einer Textspalte eines [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Servers in eine **varchar(max)**-Spalte auf einem [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Server oder höher den Wert 80 an. Wenn Sie den Wert 80 entsprechend beim Exportieren von Daten aus einer **varchar(max)**-Spalte angeben, werden diese wie Textspalten im [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Format gespeichert und können in eine Textspalte eines[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Servers importiert werden.|  
+|BCP_OPTION_FILEFMT|Die Versionsnummer des Datendateiformats. Diese kann 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) oder 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) sein. Der Standardwert ist 120. Dies ist beim Exportieren und Importieren von Daten in Formate nützlich, die in früheren Versionen des Servers unterstützt wurden.  Geben Sie beispielsweise zum Importieren von Daten aus einer Textspalte eines [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Servers in eine **varchar(max)** -Spalte auf einem [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Server oder höher den Wert 80 an. Wenn Sie den Wert 80 entsprechend beim Exportieren von Daten aus einer **varchar(max)** -Spalte angeben, werden diese wie Textspalten im [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Format gespeichert und können in eine Textspalte eines[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Servers importiert werden.|  
 |BCP_OPTION_FIRST|Die erste Datenzeile der zu kopierenden Datei oder Tabelle. Der Standard ist 1; ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück.|  
 |BCP_OPTION_FIRSTEX|Gibt für BCP-OUT-Vorgänge die erste Zeile der Datenbanktabelle an, die in die Datendatei kopiert werden soll.<br /><br /> Gibt für BCP-IN-Vorgänge die erste Zeile der Datendatei an, die in die Datenbanktabelle kopiert werden soll.<br /><br /> Der -Parameter *iValue* sollte die Adresse einer 64-Bit-Ganzzahl mit Vorzeichen sein, die den Wert enthält. Der maximale Wert, der an BCPFIRSTEX übergeben werden kann, ist 2^63-1.|  
 |BCP_OPTION_FMTXML|Gibt an, dass die generierte Formatdatei das XML-Format aufweisen sollte. Diese Option ist standardmäßig deaktiviert. Die Formatdateien werden standardmäßig als Textdateien gespeichert. Das XML-Format bietet größere Flexibilität, ist jedoch mit einigen Einschränkungen verbunden. Sie können beispielsweise das Präfix und das Abschlusszeichen für ein Feld nicht gleichzeitig angeben, was in älteren Formatdateien durchaus möglich war.<br /><br /> Hinweis: XML-Format Dateien werden nur unterstützt, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tools zusammen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client installiert werden.|  
@@ -76,7 +77,7 @@ HRESULT BCPControl(
  Die Methode wurde erfolgreich ausgeführt.  
   
  E_FAIL  
- Ein Anbieter spezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie, wenn Sie die [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) -Schnittstelle verwenden.  
+ Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)-Schnittstelle.  
   
  E_UNEXPECTED  
  Die Methode wurde unerwartet aufgerufen. Die [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)-Methode wurde beispielsweise vor dem Aufruf dieser Funktion nicht aufgerufen.  

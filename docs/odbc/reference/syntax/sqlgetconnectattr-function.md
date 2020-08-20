@@ -1,4 +1,5 @@
 ---
+description: SQLGetConnectAttr-Funktion
 title: SQLGetConnectAttr-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6076f14ff0c33fec38b99e9c43b8a688970a7a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 457ba462c277ec4b5fa44030557861507823dc04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487273"
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr-Funktion
 **Konformitäts**  
@@ -60,21 +61,21 @@ SQLRETURN SQLGetConnectAttr(
   
  Wenn *ValuePtr* den Wert NULL hat, gibt *stringlengthptr* weiterhin die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten) zurück, die im Puffer zurückgegeben werden können, auf den *ValuePtr*zeigt.  
   
- *Pufferlänge*  
- Der Wenn *Attribute* ein ODBC-definiertes Attribut ist und *ValuePtr* auf eine Zeichenfolge oder einen binären Puffer zeigt, sollte dieses Argument der Länge von \* *ValuePtr*entsprechen. Wenn *Attribute* ein ODBC-definiertes Attribut und \* *ValuePtr* eine ganze Zahl ist, wird *BufferLength* ignoriert. Wenn der Wert in * \*ValuePtr* eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlgetconnectattrw**), muss das *BufferLength* -Argument eine gerade Zahl sein.  
+ *BufferLength*  
+ Der Wenn *Attribute* ein ODBC-definiertes Attribut ist und *ValuePtr* auf eine Zeichenfolge oder einen binären Puffer zeigt, sollte dieses Argument der Länge von \* *ValuePtr*entsprechen. Wenn *Attribute* ein ODBC-definiertes Attribut und \* *ValuePtr* eine ganze Zahl ist, wird *BufferLength* ignoriert. Wenn der Wert in * \* ValuePtr* eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlgetconnectattrw**), muss das *BufferLength* -Argument eine gerade Zahl sein.  
   
  Wenn *Attribute* ein Treiber definiertes Attribut ist, gibt die Anwendung die Art des Attributs für den Treiber-Manager an, indem das *BufferLength* -Argument festgelegt wird. *BufferLength* kann die folgenden Werte aufweisen:  
   
--   Wenn * \*ValuePtr* ein Zeiger auf eine Zeichenfolge ist, entspricht *BufferLength* der Länge der Zeichenfolge.  
+-   Wenn * \* ValuePtr* ein Zeiger auf eine Zeichenfolge ist, entspricht *BufferLength* der Länge der Zeichenfolge.  
   
--   Wenn * \*ValuePtr* ein Zeiger auf einen binären Puffer ist, platziert die Anwendung das Ergebnis des Makros SQL_LEN_BINARY_ATTR (*length*) in *BufferLength*. Dadurch wird ein negativer Wert in *BufferLength*platziert.  
+-   Wenn * \* ValuePtr* ein Zeiger auf einen binären Puffer ist, platziert die Anwendung das Ergebnis des Makros SQL_LEN_BINARY_ATTR (*length*) in *BufferLength*. Dadurch wird ein negativer Wert in *BufferLength*platziert.  
   
--   Wenn * \*ValuePtr* ein Zeiger auf einen anderen Wert als eine Zeichenfolge oder eine binäre Zeichenfolge ist, muss *BufferLength* den Wert SQL_IS_POINTER.  
+-   Wenn * \* ValuePtr* ein Zeiger auf einen anderen Wert als eine Zeichenfolge oder eine binäre Zeichenfolge ist, muss *BufferLength* den Wert SQL_IS_POINTER.  
   
--   Wenn * \*ValuePtr* einen Datentyp mit fester Länge enthält, ist *BufferLength* entweder SQL_IS_INTEGER oder SQL_IS_UINTEGER.  
+-   Wenn * \* ValuePtr* einen Datentyp mit fester Länge enthält, ist *BufferLength* entweder SQL_IS_INTEGER oder SQL_IS_UINTEGER.  
   
  *Stringlengthptr*  
- Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens) zurückgegeben werden soll \*, die in *ValuePtr*zurückgegeben werden können. Wenn \* *ValuePtr* ein NULL-Zeiger ist, wird keine Länge zurückgegeben. Wenn der Attribut Wert eine Zeichenfolge ist und die Anzahl von Bytes, die zurückgegeben werden können, größer als *BufferLength* abzüglich der Länge des NULL-Beendigungs Zeichens ist, werden die Daten in * \*ValuePtr* auf *BufferLength* abzüglich der Länge des NULL-Beendigungs Zeichens gekürzt und vom Treiber auf Null beendet.  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens) zurückgegeben werden soll, die in \* *ValuePtr*zurückgegeben werden können. Wenn \* *ValuePtr* ein NULL-Zeiger ist, wird keine Länge zurückgegeben. Wenn der Attribut Wert eine Zeichenfolge ist und die Anzahl von Bytes, die zurückgegeben werden können, größer als *BufferLength* abzüglich der Länge des NULL-Beendigungs Zeichens ist, werden die Daten in * \* ValuePtr* auf *BufferLength* abzüglich der Länge des NULL-Beendigungs Zeichens gekürzt und vom Treiber auf Null beendet.  
   
 ## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR oder SQL_INVALID_HANDLE.  
@@ -82,7 +83,7 @@ SQLRETURN SQLGetConnectAttr(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLGetConnectAttr** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert aus der Diagnosedaten Struktur abgerufen werden, indem **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_DBC und einem *handle* von *connectionHandle*aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLGetConnectAttr** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichen folgen Daten, rechts abgeschnitten|Die in \* *ValuePtr* zurückgegebenen Daten wurden als *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens abgeschnitten. Die Länge des nicht abgeschnittene Zeichen folgen Werts wird in **stringlengthptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -92,7 +93,7 @@ SQLRETURN SQLGetConnectAttr(
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY010|Funktions Sequenz Fehler|(DM) **sqlbrowseconnetct** wurde für *connectionHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor **sqlbrowseconnct** SQL_SUCCESS_WITH_INFO oder SQL_SUCCESS zurückgegeben hat.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für *connectionHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
 |HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
-|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) * \*ValuePtr* ist eine Zeichenfolge, und BufferLength war kleiner als 0 (null), aber nicht gleich SQL_NTS.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) * \* ValuePtr* ist eine Zeichenfolge, und BufferLength war kleiner als 0 (null), aber nicht gleich SQL_NTS.|  
 |HY092|Ungültiger Attribut/Options Bezeichner|Der für das Argument- *Attribut* angegebene Wert war nicht gültig für die Version von ODBC, die vom Treiber unterstützt wird.|  
 |HY114|Der Treiber unterstützt keine asynchrone Funktions Ausführung auf Verbindungs Ebene.|(DM) eine Anwendung hat versucht, die asynchrone Funktions Ausführung mit SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE für einen Treiber zu aktivieren, der asynchrone Verbindungs Vorgänge nicht unterstützt.|  
 |HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -118,13 +119,13 @@ SQLRETURN SQLGetConnectAttr(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Zurückgeben der Einstellung eines Anweisungs Attributs|[SQLGetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
 |Festlegen eines Verbindungs Attributs|[SQLSetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
 |Festlegen eines Umgebungs Attributs|[SQLSetEnvAttr-Funktion](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |Festlegen eines Anweisungs Attributs|[SQLSetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

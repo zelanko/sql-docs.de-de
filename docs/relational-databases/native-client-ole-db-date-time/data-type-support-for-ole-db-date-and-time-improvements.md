@@ -1,4 +1,5 @@
 ---
+description: Datentyp Unterstützung für Datums-und Uhrzeit Verbesserungen (Native Client OLE DB-Anbieter)
 title: Datentyp Unterstützung für Datums-und Uhrzeit Verbesserungen (Native Client OLE DB Provider) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a39a9c4d99ed94db0d70575f0047698b1a15074
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 741906e1673d5ac8fe5b88e4d546ee1807667063
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486743"
 ---
 # <a name="sql-server-native-client-data-type-support-for-ole-db-date-and-time-improvements"></a>SQL Server Native Client Datentyp Unterstützung für OLE DB Datums-und Uhrzeit Verbesserungen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "87245832"
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern  
  OLE DB stellt zwei neue Datentypen bereit, um die neuen Servertypen zu unterstützen: DBTYPE_DBTIME2 und DBTYPE_DBTIMESTAMPOFFSET. Die folgende Tabelle zeigt die vollständige Servertypzuordnung:  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|OLE DB-Datentyp|Wert|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|OLE DB-Datentyp|value|  
 |-----------------------------------------|----------------------|-----------|  
 |datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -74,7 +75,7 @@ ms.locfileid: "87245832"
   
  Implementierungen für die folgenden bestehenden OLE DB-Strukturen wurden geändert, um die Unterstützung der neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datum-/Uhrzeitdatentypen sicherzustellen. Die Definitionen haben sich jedoch nicht geändert.  
   
--   DBTYPE_DATE (Dies ist ein Automatisierung-DATE-Typ. Sie wird intern als **Double**dargestellt. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder und der Bruchteil den Teil eines Tages. Dieser Typ hat eine Genauigkeit von 1 Sekunde und hat daher eine effektive Dezimalstelle von 0.)  
+-   DBTYPE_DATE (Dies ist ein Automatisierung-DATE-Typ. Er wird intern als **double** dargestellt. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder und der Bruchteil den Teil eines Tages. Dieser Typ hat eine Genauigkeit von 1 Sekunde und hat daher eine effektive Dezimalstelle von 0.)  
   
 -   DBTYPE_DBDATE  
   

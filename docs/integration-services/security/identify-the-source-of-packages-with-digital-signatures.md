@@ -1,4 +1,5 @@
 ---
+description: Identifizieren der Quelle von Paketen mit digitalen Signaturen
 title: Identifizieren der Quelle von Paketen mit digitalen Signaturen | Microsoft-Dokumentation
 ms.custom: security
 ms.date: 08/24/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84922b21e074cbef8afe233e41746a51dfd13d20
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d1d5d09d0c41de51d545ca68aa4509f8a6b240f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487773"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifizieren der Quelle von Paketen mit digitalen Signaturen
 
@@ -45,7 +46,7 @@ ms.locfileid: "86922054"
 ## <a name="set-a-registry-value-to-check-package-signature"></a>Festlegen eines Registrierungswerts zum Überprüfen der Paketsignatur  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt außerdem den optionalen Registrierungswert **BlockedSignatureStates**, mit dem Sie die Richtlinie einer Organisation zum Laden von signierten und nicht signierten Paketen verwalten können. Der Registrierungswert kann das Laden von Paketen verhindern, wenn die Pakete nicht signiert sind, oder ungültige oder nicht vertrauenswürdige Signaturen enthalten. Weitere Informationen zum Festlegen des Registrierungswerts finden Sie unter [Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts](#registry).  
   
-> **HINWEIS** : Der optionale Registrierungswert **BlockedSignatureStates** kann eine Einstellung angeben, die restriktiver ist als die Option für die digitale Signatur, die in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder in der **dtexec** -Befehlszeile festgelegt wurde. In dieser Situation überschreibt die restriktivere Registrierungseinstellung die andere Einstellung.  
+> **HINWEIS:** Der optionale Registrierungswert **BlockedSignatureStates** kann eine Einstellung angeben, die restriktiver ist als die Option für die digitale Signatur, die in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder in der **dtexec**-Befehlszeile festgelegt wurde. In dieser Situation überschreibt die restriktivere Registrierungseinstellung die andere Einstellung.  
 
 ## <a name="implement-a-signing-policy-by-setting-a-registry-value"></a><a name="registry"></a> Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts
   Sie können einen optionalen Registrierungswert zum Verwalten einer Organisationsrichtlinie verwenden, um signierte und nicht signierte Pakete zu laden. Wenn Sie diesen Registrierungswert verwenden, müssen Sie ihn auf jedem Computer erstellen, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ausgeführt werden und auf dem Sie die Richtlinie durchsetzen möchten. Nachdem der Registrierungswert festgelegt wurde, überprüft oder verifiziert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Signaturen vor dem Laden der Pakete.  
@@ -62,7 +63,7 @@ ms.locfileid: "86922054"
   
  In der folgenden Tabelle werden die gültigen Werte der DWORD-Daten und ihre verbundenen Richtlinien aufgelistet.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Keine administrative Einschränkung.|  
 |1|Blockieren von ungültigen Signaturen.<br /><br /> Bei dieser Einstellung werden nicht signierte Pakete nicht blockiert.|  

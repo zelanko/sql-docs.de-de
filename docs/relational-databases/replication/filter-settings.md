@@ -1,4 +1,5 @@
 ---
+description: Filtereinstellungen
 title: Filtereinstellungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,18 +14,18 @@ ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 58750ffba9d8eb19c02ceb4870fda0ddffeb5a7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74ddf2a67970c290d427e777184eba74af28a3d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486672"
 ---
 # <a name="filter-settings"></a>Filtereinstellungen
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Im Dialogfeld **Filtereinstellungen** können Sie Filter für Raster im Replikationsmonitor definieren. Wenn Sie z. B. nur die aktiven Abonnements auf der Registerkarte **Alle Abonnements** anzeigen möchten, wählen Sie in der Spalte **Spaltenname** den Eintrag **Status** , in der Spalte **Operator** den Eintrag **Ist gleich** und in der Spalte **Wert1** den Eintrag **Aktiv** aus. Wenn Sie einen auf einer oder mehreren Spalten basierenden Filter definiert haben, wird dieser Filter angewendet, sodass im Raster nur die Teilmenge von Zeilen angezeigt wird, die die Filterkriterien erfüllen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Spaltenname**  
  Wählen Sie den Namen der Spalte aus, für die Sie einen Filter definieren möchten. Sie können einen Filter für eine oder mehrere Spalten definieren.  
   

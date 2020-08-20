@@ -1,4 +1,5 @@
 ---
+description: UPDATE-, DELETE- und INSERT-Anweisungen
 title: Update-, DELETE-und INSERT-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f12682a5d012d6981afce0085e9c920ed2f2ffbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b01582594bb54f8feafef3f98118d3e17286fae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487423"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE-, DELETE- und INSERT-Anweisungen
 SQL-basierte Anwendungen nehmen Änderungen an den Tabellen vor, indem Sie die Anweisungen **Update**, **Delete**und **Insert** ausführen. Diese Anweisungen sind Teil der minimalen Konformität der SQL-Grammatik und müssen von allen Treibern und Datenquellen unterstützt werden.  
@@ -32,7 +33,7 @@ SQL-basierte Anwendungen nehmen Änderungen an den Tabellen vor, indem Sie die A
   
  **Festlegen** des _Spalten Bezeichners_ **=** {*Expression* &#124; **null**}  
   
- [**,** _Spalten Bezeichner_ **=** {*Expression* &#124; **null**}]...  
+ [**,** _Spalten Bezeichner_ **=** {*Expression* &#124; **null**}] ...  
   
  [**Where** _Such Bedingung_]  
   

@@ -1,4 +1,5 @@
 ---
+description: Erstellen einer Abgleichsrichtlinie
 title: Erstellen einer Abgleichsrichtlinie
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c18d8d44bb595e4bfaad66296331d8dab403535e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a899d2117cf3999e93fc95628b6cccea1bbbde1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487904"
 ---
 # <a name="create-a-matching-policy"></a>Erstellen einer Abgleichsrichtlinie
 
@@ -38,7 +39,7 @@ ms.locfileid: "85881965"
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um eine Abgleichsrichtlinie zu erstellen.  
   
-##  <a name="how-to-set-matching-rule-parameters"></a><a name="MatchingRules"></a>Festlegen von Übereinstimmungs Regel Parametern  
+##  <a name="how-to-set-matching-rule-parameters"></a><a name="MatchingRules"></a> Festlegen von Übereinstimmungs Regel Parametern  
  Das Erstellen einer Abgleichsregel ist ein iterativer Prozess, in dem Sie die Faktoren eingeben, der verwendet werden, um zu bestimmen, ob ein Datensatz mit einem anderen übereinstimmt. Sie können Bedingungen für eine beliebige Domäne in einer Tabelle eingeben. Wenn DQS zwei Datensätzen gegeneinander abgleicht, werden die Werte in den Feldern, die den Domänen zugeordnet sind, die in der Abgleichsregel enthalten sind, verglichen. DQS analysiert die Werte in jedem Feld der Regel, und verwendet dann die in der Regel eingegebenen Faktoren für jede Domäne, um eine abschließende Treffergenauigkeit zu berechnen. Wenn die Treffergenauigkeit für die zwei verglichenen Datensätze größer als die minimale Treffergenauigkeit ist, werden die zwei Felder als übereinstimmend angesehen.  
   
  Die Faktoren, die Sie in einer Abgleichsregel eingeben, schließen Folgendes ein:  
@@ -57,12 +58,12 @@ ms.locfileid: "85881965"
   
  Die Profilerstellung gibt Einblicke in Vollständigkeit und Eindeutigkeit. Berücksichtigen Sie Vollständigkeit und Eindeutigkeit zusammen. Verwenden Sie Vollständigkeits- und Eindeutigkeitsdaten, um zu bestimmen, welche Gewichtung ein Feld im Abgleichsprozess erhalten soll. Wenn es einen hohen Eindeutigkeitsgrad in einem Feld gibt, können durch Verwenden des Felds in einer Abgleichsrichtlinie die Abgleichsergebnisse verringert werden. Daher sollten Sie die Gewichtung für dieses Feld auf einen relativ kleinen Wert festlegen. Wenn Sie für eine Spalte eine niedrige Eindeutigkeit, aber auch eine niedrige Vollständigkeit haben, sollten Sie keine Domäne für diese Spalte einschließen. Bei einer niedrigen Eindeutigkeit aber einer hohen Vollständigkeit sollten Sie die Domäne einschließen. Einige Spalten, z. B. Geschlecht, haben normalerweise einen niedrigen Eindeutigkeitsgrad. Weitere Informationen finden Sie unter [Registerkarten „Profiler“ und „Ergebnisse“](#Tabs).  
   
-##  <a name="first-step-starting-a-matching-policy"></a><a name="Starting"></a>Erster Schritt: Starten einer abgleichsrichtlinie  
+##  <a name="first-step-starting-a-matching-policy"></a><a name="Starting"></a> Erster Schritt: Starten einer abgleichsrichtlinie  
  Sie führen die Abgleichsrichtlinienaktivität im Wissensdatenbank-Verwaltungsbereich der Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aus.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
-2.  Klicken Sie auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Neue Wissensdatenbank** , um in einer neuen Wissensdatenbank eine Abgleichsrichtlinie zu erstellen. Geben Sie einen Namen für die Wissensdatenbank ein, geben Sie eine Beschreibung ein, und legen Sie **Wissensdatenbank erstellen aus** wie gewünscht fest. Klicken Sie für die Aktivität auf **Abgleichsrichtlinie** . Klicken Sie zum Fortfahren auf **Weiter**.  
+2.  Klicken Sie auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Neue Wissensdatenbank** , um in einer neuen Wissensdatenbank eine Abgleichsrichtlinie zu erstellen. Geben Sie einen Namen für die Wissensdatenbank ein, geben Sie eine Beschreibung ein, und legen Sie **Wissensdatenbank erstellen aus** wie gewünscht fest. Klicken Sie für die Aktivität auf **Abgleichsrichtlinie** . Klicken Sie zum Fortfahren auf **Weiter** .  
   
 3.  Klicken Sie auf **Wissensdatenbank öffnen** , um die Abgleichsrichtlinie in einer vorhandenen Wissensdatenbank zu erstellen oder zu ändern. Wählen Sie die Wissensdatenbank aus, wählen Sie **Abgleichsrichtlinie**aus, und klicken Sie dann auf **Weiter**. Sie können auch unter **Zuletzt verwendete Wissensdatenbank**auf eine Wissensdatenbank klicken. Wenn Sie eine Wissensdatenbank öffnen, die geschlossen wurde, während an einer Abgleichsrichtlinie gearbeitet wurde, fahren Sie mit der Phase fort, in der die Abgleichsrichtlinienaktivität geschlossen wurde (wie von der Spalte **Status** für die Wissensdatenbank in der Wissensdatenbanktabelle oder im Wissensdatenbanknamen unter **Zuletzt verwendete Wissensdatenbank**angegeben). Wenn Sie eine Wissensdatenbank öffnen, die eine Abgleichsrichtlinie enthält und abgeschlossen wurde, wechseln Sie zur Seite **Abgleichsrichtlinie** . Wenn Sie eine Wissensdatenbank öffnen, die keine Abgleichsrichtlinie enthält und abgeschlossen wurde, wechseln Sie zur Seite **Zuordnung** .  
   
@@ -91,7 +92,7 @@ ms.locfileid: "85881965"
     > [!NOTE]  
     >  Klicken Sie auf **Schließen** , um die Phase des Abgleichsprojekts zu speichern und zur DQS-Startseite zurückzukehren. Wenn Sie dieses Projekt das nächste Mal öffnen, befindet es sich in derselben Phase. Klicken Sie auf **Abbrechen** , um die Abgleichsaktivität zu beenden, ohne Ihre Arbeit zu speichern, und kehren Sie zur DQS-Startseite zurück.  
   
-##  <a name="matching-policy-stage"></a><a name="MatchingPolicyStage"></a>Abgleich der Richtlinien Phase  
+##  <a name="matching-policy-stage"></a><a name="MatchingPolicyStage"></a> Abgleich der Richtlinien Phase  
  Sie erstellen Abgleichsregeln und testen sie einzeln auf der Abgleichsrichtlinienseite. Wenn Sie eine Abgleichsregel auf der Seite **Abgleichsrichtlinie** testen, sehen Sie eine Abgleichsergebnistabelle, die die Cluster anzeigt, die DQS für die ausgewählte Regel identifiziert hat. In der Tabelle wird jeder Datensatz im Cluster mit den Zuordnungsdomänenwerten und der Treffergenauigkeit sowie der ursprüngliche Pivotdatensatz für den Cluster angezeigt. Sie können auch alle Profilerstellungsdaten für den Abgleichsprozess gemeinsam, die Bedingungen in den einzelnen Abgleichsregeln und die Statistiken zu den Ergebnissen für die einzelnen Abgleichsregeln separat anzeigen. Sie können nach den gewünschten Masterregeldaten filtern.  
   
  Weitere Informationen zur Funktionsweise von Abgleichsregeln finden Sie unter [So legen Sie Abgleichsregelparameter fest](#MatchingRules).  
@@ -147,7 +148,7 @@ ms.locfileid: "85881965"
   
 18. Klicken Sie auf **Weiter** , um zur Abgleichsergebnisphase zu wechseln.  
   
-##  <a name="matching-results-stage"></a><a name="MatchingResultsStage"></a>Treffer Ergebnis Stufe  
+##  <a name="matching-results-stage"></a><a name="MatchingResultsStage"></a> Treffer Ergebnis Stufe  
  Sie testen alle Abgleichsregeln sofort auf der Seite **Abgleichsergebnisse** . Davor können Sie angeben, dass der Regeltestlauf überlappende oder nicht überlappende Cluster identifizieren soll. Wenn Sie die Regeln mehrfach ausführen, können Sie die Regel auf von der Quelle erneut geladenen Daten oder auf vorherigen Daten ausführen.  
   
  Wenn Sie die Abgleichsregeln auf der Seite **Abgleichsergebnisse** testen, sehen Sie eine Abgleichsergebnistabelle, die die Cluster anzeigt, die DQS für alle Regeln identifiziert hat. In der Tabelle wird jeder Datensatz im Cluster mit den Zuordnungsdomänenwerten und der Treffergenauigkeit sowie der ursprüngliche Pivotdatensatz für den Cluster angezeigt. Sie können auch alle Profilerstellungsdaten für die Abgleichsregeln gemeinsam, die Bedingungen in den einzelnen Abgleichsregeln und die Statistiken zu den Ergebnissen für alle Abgleichsregeln anzeigen.  
@@ -188,13 +189,13 @@ ms.locfileid: "85881965"
   
 9. Klicken Sie auf **Abbrechen** , um die Abgleichsrichtlinienaktivität abzubrechen, ohne die Ergebnisse zu speichern, und um zur DQS-Startseite zurückzukehren.  
   
-##  <a name="follow-up-after-creating-a-matching-policy"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen einer abgleichsrichtlinie  
+##  <a name="follow-up-after-creating-a-matching-policy"></a><a name="FollowUp"></a> Nachverfolgung: nach dem Erstellen einer abgleichsrichtlinie  
  Nachdem Sie eine Abgleichsrichtlinie erstellt haben, können Sie ein Abgleichsprojekt basierend auf der Wissensdatenbank, die die Abgleichsrichtlinie enthält, ausführen. Weitere Informationen finden Sie unter [Ausführen eines Abgleichsprojekts](../data-quality-services/run-a-matching-project.md).  
   
-##  <a name="profiler-and-results-tabs"></a><a name="Tabs"></a>Registerkarten für Profiler und Ergebnisse  
+##  <a name="profiler-and-results-tabs"></a><a name="Tabs"></a> Registerkarten für Profiler und Ergebnisse  
  Die Registerkarten „Profiler“ und „Ergebnisse“ enthalten Statistiken für die Abgleichsrichtlinie und die Abgleichsergebnisseiten.  
   
-###  <a name="profiler-tab"></a><a name="Profiler"></a>Registerkarte Profiler  
+###  <a name="profiler-tab"></a><a name="Profiler"></a> Registerkarte Profiler  
  Klicken Sie auf die Registerkarte **Profiler** , um Statistiken für die Quelldatenbank und für alle in der Richtlinienregel enthaltenen Felder anzuzeigen. Die Statistiken werden aktualisiert, wenn die Richtlinienregel ausgeführt wird.  
   
  Weitere Informationen zum Interpretieren der folgenden Statistiken finden Sie unter [So legen Sie Abgleichsregelparameter fest](#MatchingRules).  
@@ -223,7 +224,7 @@ ms.locfileid: "85881965"
   
 -   **Vollständigkeit**: Die Vollständigkeit jedes Quellfelds, das für den Abgleich zugeordnet ist  
   
-###  <a name="matching-policy-notifications"></a><a name="Notifications"></a>Abgleichen von Richtlinien Benachrichtigungen  
+###  <a name="matching-policy-notifications"></a><a name="Notifications"></a> Abgleichen von Richtlinien Benachrichtigungen  
  Für die Abgleichsrichtlinienaktivität führen die folgenden Bedingungen zu Benachrichtigungen:  
   
 -   Das Feld ist in allen Datensätzen leer; Sie sollten es aus der Zuordnung entfernen.  
@@ -236,7 +237,7 @@ ms.locfileid: "85881965"
   
 -   Es gibt einen hohen Eindeutigkeitsgrad in diesem Feld. Das Verwenden dieses Felds in Abgleichsrichtlinien kann die Abgleichsergebnisse reduzieren.  
   
-###  <a name="matching-results-tab"></a><a name="ResultsTab"></a>Treffer Ergebnis  
+###  <a name="matching-results-tab"></a><a name="ResultsTab"></a> Treffer Ergebnis  
  Klicken Sie auf die Registerkarte **Abgleichsergebnisse** , um Statistiken für die Ausführung der Abgleichsrichtlinienregel und der vorherigen Regel anzuzeigen. Wenn Sie die gleiche Regel mehrmals mit anderen Parametern ausgeführt haben, werden in der Abgleichsergebnistabelle Statistiken für beide Ausführungen angezeigt, sodass Sie sie miteinander vergleichen können. Sie können die vorherige Regel bei Bedarf auch wiederherstellen.  
   
  Die Statistiken umfassen Folgendes:  

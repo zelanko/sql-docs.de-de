@@ -1,4 +1,5 @@
 ---
+description: ODBC-Dienstanbieterschnittstelle – Referenz
 title: Referenz zur ODBC-Dienstanbieter Schnittstelle (SPI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e9739abd13bf2c4bed1b1b3a31c18c683594705a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ef1eea6dd78537169d3394c7d048d1829e8d9a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487353"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC-Dienstanbieterschnittstelle – Referenz
 In der Regel hat ODBC eine Anwendungsprogrammierschnittstelle (Application Programming Interface, API) definiert. Die Funktionen in der API können von Anwendungen aufgerufen werden, und Sie sollten innerhalb des Treiber-Managers und des Treibers implementiert werden.  
@@ -40,7 +41,7 @@ In der Regel hat ODBC eine Anwendungsprogrammierschnittstelle (Application Progr
   
 -   [Sqlsetdriverconnectinfo](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Entwickeln eines ODBC-Treibers](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Entwickeln von Verbindungs Pool Informationen in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [Verbindungspooling des Treiber-Managers](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)
