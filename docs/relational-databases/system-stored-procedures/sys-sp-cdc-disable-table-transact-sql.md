@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_disable_table (Transact-SQL)
 title: sys. sp_cdc_disable_table (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d8f258662f9dddb4f1a0ecdb1c375666fc18cb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1dcc5dffd4c9a718227c85ce8f421b8cb45bbd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492841"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,15 +47,15 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @source_schema = ] 'source\_schema'`Der Name des Schemas, in dem die Quell Tabelle enthalten ist. *source_schema* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
+`[ @source_schema = ] 'source\_schema'` Der Name des Schemas, in dem die Quell Tabelle enthalten ist. *source_schema* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
   
  *source_schema* muss in der aktuellen Datenbank vorhanden sein.  
   
-`[ @source_name = ] 'source\_name'`Der Name der Quell Tabelle, aus der Change Data Capture deaktiviert werden soll. *source_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
+`[ @source_name = ] 'source\_name'` Der Name der Quell Tabelle, aus der Change Data Capture deaktiviert werden soll. *source_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
   
  *source_name* muss in der aktuellen Datenbank vorhanden sein.  
   
-`[ @capture_instance = ] 'capture\_instance' | 'all'`Der Name der Aufzeichnungs Instanz, die für die angegebene Quell Tabelle deaktiviert werden soll. *capture_instance* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` Der Name der Aufzeichnungs Instanz, die für die angegebene Quell Tabelle deaktiviert werden soll. *capture_instance* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
   
  Wenn ' all ' angegeben ist, werden alle für *source_name* definierten Aufzeichnungs Instanzen deaktiviert.  
   

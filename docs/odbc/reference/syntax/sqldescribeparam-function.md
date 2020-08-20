@@ -1,4 +1,5 @@
 ---
+description: SQLDescribeParam-Funktion
 title: SQLDescribeParam-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c55668bb565bd383d170e7bf331630bf8b6adef1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0e6209f4e3145e55dfd94a9ff1375013ae5c7a85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491313"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam-Funktion
 **Konformitäts**  
@@ -78,13 +79,13 @@ SQLRETURN SQLDescribeParam(
   
 -   SQL_NULLABLE_UNKNOWN: der Treiber kann nicht bestimmen, ob der Parameter NULL-Werte zulässt.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLDescribeParam** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLDescribeParam** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07009|Ungültiger deskriptorindex.|(DM) der für das Argument *ParameterNumber* angegebene Wert ist kleiner als 1.<br /><br /> Der für das Argument *ParameterNumber* angegebene Wert war größer als die Anzahl der Parameter in der zugeordneten SQL-Anweisung.<br /><br /> Die Parameter Markierung war Teil einer nicht-DML-Anweisung.<br /><br /> Die Parameter Markierung war Teil einer **Auswahl** Liste.|  
@@ -178,6 +179,6 @@ free(LenOrIndArray);
 |Ausführen einer vorbereiteten SQL-Anweisung|[SQLExecute-Funktion](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Vorbereiten einer Anweisung für die Ausführung|[SQLPrepare-Funktion](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_add_job (Transact-SQL)
 title: sys. sp_cdc_add_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53bc390e3e95ac49554826ad6ed96b8c4138ca10
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e301fe1ef2251a5c5814074864ccf566791ccc8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88172899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492898"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,19 +49,19 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_type = ] 'job\_type'`Der Typ des hinzu zufügenden Auftrags. *job_type* ist vom Datentyp **nvarchar (20)** und darf nicht NULL sein. Gültige Eingaben sind **' Capture '** und **' Cleanup '**.  
+`[ @job_type = ] 'job\_type'` Der Typ des hinzu zufügenden Auftrags. *job_type* ist vom Datentyp **nvarchar (20)** und darf nicht NULL sein. Gültige Eingaben sind **' Capture '** und **' Cleanup '**.  
   
-`[ @start_job = ] start_job`Flag zum angeben, ob der Auftrag sofort nach dem Hinzufügen gestartet werden soll. *start_job* ist vom Typ **Bit** und hat den Standardwert 1.  
+`[ @start_job = ] start_job` Flag zum angeben, ob der Auftrag sofort nach dem Hinzufügen gestartet werden soll. *start_job* ist vom Typ **Bit** und hat den Standardwert 1.  
   
-`[ @maxtrans ] = max_trans`Maximale Anzahl von Transaktionen, die in jedem Scanvorgang verarbeitet werden sollen. *max_trans* ist vom Datentyp **int** und hat den Standardwert 500. Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
+`[ @maxtrans ] = max_trans` Maximale Anzahl von Transaktionen, die in jedem Scanvorgang verarbeitet werden sollen. *max_trans* ist vom Datentyp **int** und hat den Standardwert 500. Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  *max_trans* ist nur für Aufzeichnungs Aufträge gültig.  
   
-`[ @maxscans ] = max\_scans_`Maximale Anzahl der Scan Zyklen, die ausgeführt werden müssen, um alle Zeilen aus dem Protokoll zu extrahieren. *max_scans* ist vom Datentyp **int** und hat den Standardwert 10.  
+`[ @maxscans ] = max\_scans_` Maximale Anzahl der Scan Zyklen, die ausgeführt werden müssen, um alle Zeilen aus dem Protokoll zu extrahieren. *max_scans* ist vom Datentyp **int** und hat den Standardwert 10.  
   
  *max_scan* ist nur für Aufzeichnungs Aufträge gültig.  
   
-`[ @continuous ] = continuous_`Gibt an, ob der Aufzeichnungs Auftrag fortlaufend (1) oder nur einmal ausgeführt werden soll (0). *Continuous* ist vom Typ **Bit** und hat den Standardwert 1.  
+`[ @continuous ] = continuous_` Gibt an, ob der Aufzeichnungs Auftrag fortlaufend (1) oder nur einmal ausgeführt werden soll (0). *Continuous* ist vom Typ **Bit** und hat den Standardwert 1.  
   
  Wenn *Continuous* = 1, scannt der [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) Auftrag das Protokoll und verarbeitet bis zu (*max_trans* \* *max_scans*) Transaktionen. Anschließend wird die Anzahl der Sekunden gewartet, die in *polling_interval* angegeben ist, bevor mit dem nächsten Protokoll Scan begonnen wird.  
   
@@ -68,15 +69,15 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *Continuous* ist nur für Aufzeichnungs Aufträge gültig.  
   
-`[ @pollinginterval ] = polling\_interval_`Anzahl der Sekunden zwischen Protokoll Scan Zyklen. *polling_interval* ist vom Datentyp **bigint** und hat den Standardwert 5.  
+`[ @pollinginterval ] = polling\_interval_` Anzahl der Sekunden zwischen Protokoll Scan Zyklen. *polling_interval* ist vom Datentyp **bigint** und hat den Standardwert 5.  
   
  *polling_interval* ist nur für Aufzeichnungs Aufträge gültig, wenn *Continuous* auf 1 festgelegt ist. Wenn angegeben, muss der Wert größer oder gleich 0 und kleiner als 24 Stunden (max: 86399 Sekunden) sein. Wenn der Wert 0 angegeben ist, wird zwischen den Protokollscans nicht gewartet.  
   
-`[ @retention ] = retention_`Die Anzahl der Minuten, die Änderungs Daten Zeilen in Änderungs Tabellen beibehalten werden sollen. die *Beibehaltung* ist vom Datentyp **bigint** und hat den Standardwert 4320 (72 Stunden). Der Maximalwert beträgt 52494800 (100 Jahre). Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
+`[ @retention ] = retention_` Die Anzahl der Minuten, die Änderungs Daten Zeilen in Änderungs Tabellen beibehalten werden sollen. die *Beibehaltung* ist vom Datentyp **bigint** und hat den Standardwert 4320 (72 Stunden). Der Maximalwert beträgt 52494800 (100 Jahre). Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  die *Beibehaltung* ist nur für Cleanupaufträge gültig.  
   
-`[ @threshold = ] 'delete\_threshold'`Maximale Anzahl von DELETE-Einträgen, die mit einer einzelnen Anweisung beim Cleanup gelöscht werden können. *delete_threshold* ist vom Datentyp **bigint** und hat den Standardwert 5000.  
+`[ @threshold = ] 'delete\_threshold'` Maximale Anzahl von DELETE-Einträgen, die mit einer einzelnen Anweisung beim Cleanup gelöscht werden können. *delete_threshold* ist vom Datentyp **bigint** und hat den Standardwert 5000.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -120,7 +121,7 @@ EXEC sys.sp_cdc_add_job
     ,@retention = 5760;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [dbo. cdc_jobs &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys. sp_cdc_enable_table &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  

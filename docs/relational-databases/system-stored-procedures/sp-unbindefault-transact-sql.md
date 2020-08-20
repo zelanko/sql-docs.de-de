@@ -1,4 +1,5 @@
 ---
+description: sp_unbindefault (Transact-SQL)
 title: sp_unbindefault (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8ca77607b6b83f437792800060c368db91ae3bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2a78e7ac859e4750f543befd2e574214dae35386
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492987"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85891417"
   Hebt die Bindung eines Standardwerts an eine Spalte oder einen Aliasdatentyp in der aktuellen Datenbank auf.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]Es wird empfohlen, stattdessen mithilfe des Default-Schlüssel Worts in den [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) -oder [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) -Anweisungen Standarddefinitionen zu erstellen.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Es wird empfohlen, stattdessen mithilfe des Default-Schlüssel Worts in den [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) -oder [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) -Anweisungen Standarddefinitionen zu erstellen.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,14 +44,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @objname = ] 'object_name'`Der Name der Tabelle und Spalte oder der Alias Datentyp, von dem aus der Standardwert für die Bindung aufgehoben wird. *object_name* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, zweiteilige Bezeichner für Spaltennamen aufzulösen, und versucht dann, zweiteilige Bezeichner für Aliasdatentypen aufzulösen.  
+`[ @objname = ] 'object_name'` Der Name der Tabelle und Spalte oder der Alias Datentyp, von dem aus der Standardwert für die Bindung aufgehoben wird. *object_name* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, zweiteilige Bezeichner für Spaltennamen aufzulösen, und versucht dann, zweiteilige Bezeichner für Aliasdatentypen aufzulösen.  
   
  Beim Aufheben der Bindung eines Standardwerts an einen Aliasdatentyp wird auch die Bindung für alle Spalten dieses Datentyps, die denselben Standardwert aufweisen, aufgehoben. Spalten dieses Datentyps mit Standardwerten, die direkt an diese gebunden sind, sind nicht betroffen.  
   
 > [!NOTE]  
 >  *object_name* können eckige Klammern **[]** als Begrenzungs Bezeichner enthalten. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'`Wird nur beim Aufheben der Bindung eines standardmäßigen von einem Alias Datentyp verwendet. *futureonly_flag* ist vom Datentyp **varchar (15)** und hat den Standardwert NULL. Wenn *futureonly_flag* **futureonly**ist, verlieren vorhandene Spalten des-Datentyps nicht den angegebenen Standardwert.  
+`[ @futureonly = ] 'futureonly_flag'` Wird nur beim Aufheben der Bindung eines standardmäßigen von einem Alias Datentyp verwendet. *futureonly_flag* ist vom Datentyp **varchar (15)** und hat den Standardwert NULL. Wenn *futureonly_flag* **futureonly**ist, verlieren vorhandene Spalten des-Datentyps nicht den angegebenen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -99,7 +100,7 @@ EXEC sp_bindefault 'default2', '[t.3].c1' ;
 EXEC sp_unbindefault '[t.3].c1';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   

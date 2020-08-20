@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_change_job (Transact-SQL)
 title: sys. sp_cdc_change_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 54d6e50e6c29ab29d48143ed9a12c4bb0591d769
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b63f79d4c02d133fd2429de65b9414abe22e8c0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492913"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,17 +48,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_type = ] 'job_type'`Der Typ des Auftrags, der geändert werden soll. *job_type* ist vom Datentyp **nvarchar (20)** und hat den Standardwert ' Capture '. Gültige Eingaben sind 'capture' und 'cleanup'.  
+`[ @job_type = ] 'job_type'` Der Typ des Auftrags, der geändert werden soll. *job_type* ist vom Datentyp **nvarchar (20)** und hat den Standardwert ' Capture '. Gültige Eingaben sind 'capture' und 'cleanup'.  
   
-`[ @maxtrans ] = max_trans_`Maximale Anzahl von Transaktionen, die in jedem Scanvorgang verarbeitet werden sollen. *max_trans* ist vom Datentyp **int** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wurde Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
+`[ @maxtrans ] = max_trans_` Maximale Anzahl von Transaktionen, die in jedem Scanvorgang verarbeitet werden sollen. *max_trans* ist vom Datentyp **int** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wurde Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  *max_trans* ist nur für Aufzeichnungs Aufträge gültig.  
   
-`[ @maxscans ] = max_scans_`Maximale Anzahl der Scan Zyklen, die ausgeführt werden müssen, um alle Zeilen aus dem Protokoll zu extrahieren. *max_scans* ist vom Datentyp **int** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wurde  
+`[ @maxscans ] = max_scans_` Maximale Anzahl der Scan Zyklen, die ausgeführt werden müssen, um alle Zeilen aus dem Protokoll zu extrahieren. *max_scans* ist vom Datentyp **int** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wurde  
   
  *max_scan* ist nur für Aufzeichnungs Aufträge gültig.  
   
-`[ @continuous ] = continuous_`Gibt an, ob der Aufzeichnungs Auftrag fortlaufend (1) oder nur einmal ausgeführt werden soll (0). *Continuous* ist vom Typ **Bit** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wird.  
+`[ @continuous ] = continuous_` Gibt an, ob der Aufzeichnungs Auftrag fortlaufend (1) oder nur einmal ausgeführt werden soll (0). *Continuous* ist vom Typ **Bit** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wird.  
   
  Wenn *Continuous* = 1, scannt der [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) Auftrag das Protokoll und verarbeitet bis zu (*max_trans* \* *max_scans*) Transaktionen. Anschließend wird die Anzahl der Sekunden gewartet, die in *polling_interval* angegeben ist, bevor mit dem nächsten Protokoll Scan begonnen wird.  
   
@@ -69,15 +70,15 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *Continuous* ist nur für Aufzeichnungs Aufträge gültig.  
   
-`[ @pollinginterval ] = polling_interval_`Anzahl der Sekunden zwischen Protokoll Scan Zyklen. *polling_interval* ist vom Datentyp **bigint** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wird.  
+`[ @pollinginterval ] = polling_interval_` Anzahl der Sekunden zwischen Protokoll Scan Zyklen. *polling_interval* ist vom Datentyp **bigint** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung vorgenommen wird.  
   
  *polling_interval* ist nur für Aufzeichnungs Aufträge gültig, wenn *Continuous* auf 1 festgelegt ist.  
   
-`[ @retention ] = retention_`Die Anzahl der Minuten, die Änderungs Zeilen in Änderungs Tabellen beibehalten werden sollen. die *Beibehaltung* ist vom Datentyp **bigint** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung erfolgt. Der Maximalwert beträgt 52494800 (100 Jahre). Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
+`[ @retention ] = retention_` Die Anzahl der Minuten, die Änderungs Zeilen in Änderungs Tabellen beibehalten werden sollen. die *Beibehaltung* ist vom Datentyp **bigint** und hat den Standardwert NULL, der angibt, dass für diesen Parameter keine Änderung erfolgt. Der Maximalwert beträgt 52494800 (100 Jahre). Wenn dieser Wert angegeben ist, muss er eine positive ganze Zahl annehmen.  
   
  die *Beibehaltung* ist nur für Cleanupaufträge gültig.  
   
-`[ @threshold = ] 'delete threshold'`Maximale Anzahl von DELETE-Einträgen, die mit einer einzelnen Anweisung beim Cleanup gelöscht werden können. der *Lösch Schwellenwert* ist vom Datentyp **bigint** und hat den Standardwert NULL der *Lösch Schwellenwert* ist nur für Cleanupaufträge gültig.  
+`[ @threshold = ] 'delete threshold'` Maximale Anzahl von DELETE-Einträgen, die mit einer einzelnen Anweisung beim Cleanup gelöscht werden können. der *Lösch Schwellenwert* ist vom Datentyp **bigint** und hat den Standardwert NULL der *Lösch Schwellenwert* ist nur für Cleanupaufträge gültig.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

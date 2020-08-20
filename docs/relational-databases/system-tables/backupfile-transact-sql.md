@@ -1,4 +1,5 @@
 ---
+description: backupfile (Transact-SQL)
 title: Backup File (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5c304cfafc04d9f7c0ec77dc5faedc75ada79df
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4a4caafa49aca29e1093ffb6304b292bcd5c7735
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492817"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85890690"
 |**logical_name**|**nvarchar(128)**|Logischer Name der Datei, die gesichert wird. Kann den Wert NULL haben.|  
 |**physical_drive**|**nvarchar(260)**|Name des physischen Laufwerks oder der physischen Partition. Kann den Wert NULL haben.|  
 |**physical_name**|**nvarchar(260)**|Rest des physischen (Betriebssystem-) Dateinamens. Kann den Wert NULL haben.|  
-|**state**|**tinyint**|Status der Datei. Folgende Werte sind möglich:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = gelöscht<br /><br /> Hinweis: der Wert 5 wird übersprungen, sodass diese Werte den Werten für den Daten Bank Status entsprechen.|  
+|**Status**|**tinyint**|Status der Datei. Folgende Werte sind möglich:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = gelöscht<br /><br /> Hinweis: der Wert 5 wird übersprungen, sodass diese Werte den Werten für den Daten Bank Status entsprechen.|  
 |**state_desc**|**nvarchar (64)**|Beschreibung des Dateistatus. Folgende Werte sind möglich:<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|Protokollfolgenummer, bei der die Datei erstellt wurde.|  
 |**drop_lsn**|**numeric(25,0)**|Protokollfolgenummer, bei der die Datei gelöscht wurde. Kann den Wert NULL haben.<br /><br /> Wurde die Datei nicht gelöscht, ist dieser Wert NULL.|  
@@ -59,7 +60,7 @@ ms.locfileid: "85890690"
 |**is_readonly**|**bit**|1 = Die Datei ist schreibgeschützt.|  
 |**is_present**|**bit**|1 = Die Datei ist im Sicherungssatz enthalten.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  RESTORE VERIFYONLY FROM *backup_device* mit LOADHISTORY füllt die Spalten der **Backup Mediaset** -Tabelle mit den entsprechenden Werten aus dem Medien Satz Header auf.  
   
  Führen Sie die gespeicherte Prozedur [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) aus, um die Anzahl der Zeilen in dieser Tabelle und in anderen Sicherungs-und Verlaufs Tabellen zu verringern.  

@@ -1,4 +1,5 @@
 ---
+description: MSreplication_monitordata (Transact-SQL)
 title: MSreplication_monitordata (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 49dd84629222b170740a99f95e33b114d9707044
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 544a21ee17d30eff7d249c7597b2b579a894194e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492729"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85889455"
 |**last_distsync**|**datetime**|Datum und die Uhrzeit, wann der Verteilungs-Agent zuletzt ausgeführt wurde|  
 |**agentstoptime**|**datetime**|Datum und die Uhrzeit der Beendigung der Momentaufnahme|  
 |**distdb**|**sysname**|Name der Verteilungsdatenbank für das Abonnement|  
-|**zurück**|**int**|Beibehaltungsdauer für die Veröffentlichung|  
+|**Beibehaltung**|**int**|Beibehaltungsdauer für die Veröffentlichung|  
 |**time_stamp**|**datetime**|Nur intern verwendet.|  
 |**worst_latency**|**int**|Die längste Latenzzeit (in Sekunden) für Datenänderungen, die vom Protokolllese-Agent oder vom Verteilungs-Agent für eine Transaktionsveröffentlichung weitergegeben werden.|  
 |**best_latency**|**int**|Die kürzeste Latenzzeit (in Sekunden) für Datenänderungen, die vom Protokolllese-Agent oder vom Verteilungs-Agent für eine Transaktionsveröffentlichung weitergegeben werden.|  
@@ -60,7 +61,7 @@ ms.locfileid: "85889455"
 |**average_runspeedPerf**|**int**|Die durchschnittliche Synchronisierungszeit für die Mergeveröffentlichung|  
 |**mergePerformance**|**int**|Die Leistung der letzten Synchronisierung im Vergleich zu allen Synchronisierungen des Abonnements. Sie ergibt sich aus der Übermittlungsrate der letzten Synchronisierung dividiert durch den Durchschnitt aller vorhergegangenen Übermittlungsraten.|  
 |**mergelatestsessionrunduration**|**int**|Dauer der letzten Ausführung des Merge-Agents|  
-|**mergelatestsessionrunspeed**|**float (53)**|Übermittlungsrate der letzten Ausführung des Merge-Agents|  
+|**mergelatestsessionrunspeed**|**float(53)**|Übermittlungsrate der letzten Ausführung des Merge-Agents|  
 |**mergelatestsessionconnectiontype**|**int**|Die für die letzte Merge-Agent-Sitzung verwendete Verbindung. Die folgenden Werte sind möglich:<br /><br /> **1** = LAN (Local Area Network)<br /><br /> **2** = DFÜ-Netzwerkverbindung|  
 |**retention_period_unit**|**tinyint**|Gibt die zum Definieren der Beibehaltungsdauer verwendete Einheit an. Die folgenden Werte sind möglich.<br /><br /> **1** = Woche<br /><br /> **2** = Monat<br /><br /> **3** = Jahr|  
   

@@ -1,4 +1,5 @@
 ---
+description: Konvertieren von Sybase ASE-Datenbankobjekten (SybaseToSQL)
 title: Umstellen von Sybase ASE-Datenbankobjekten (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/01/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f52700e0b85c2630d30c7ffe32193cbd96ce9d1e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 076f1d8a5f3227d906ddb76b0352a57eb80d4915
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492343"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Umstellen von SAP ASE-Datenbankobjekten (sybaseto SQL)
 Nachdem Sie eine Verbindung mit SAP Adaptive Server Enterprise (ASE) hergestellt, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL hergestellt und Projekt-und Daten Zustellungs Optionen festgelegt haben, können Sie SAP Adaptive Server Enterprise-Datenbankobjekte (ASE) in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbankobjekte konvertieren  

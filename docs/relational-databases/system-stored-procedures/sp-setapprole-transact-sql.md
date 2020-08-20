@@ -1,4 +1,5 @@
 ---
+description: sp_setapprole (Transact-SQL)
 title: sp_setapprole (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/12/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ba0a1d118ce62912e082b0553f000018e5d8233e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e8680d0f122d2b89c199172866a40dd55981a00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493070"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -45,24 +46,24 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>Argumente
 
-`[ @rolename = ] 'role'`Der Name der Anwendungs Rolle, die in der aktuellen Datenbank definiert ist. *Role* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. *role* muss in der aktuellen Datenbank vorhanden sein.  
+`[ @rolename = ] 'role'` Der Name der Anwendungs Rolle, die in der aktuellen Datenbank definiert ist. *Role* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. *role* muss in der aktuellen Datenbank vorhanden sein.  
   
-`[ @password = ] { encrypt N'password' }`Das Kennwort, das zum Aktivieren der Anwendungs Rolle erforderlich ist. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Das *Kennwort* kann mithilfe der ODBC-Funktion " **verschlüsseln** " verdeckt werden. Wenn Sie die Funktion " **verschlüsseln** " verwenden, muss das Kennwort in eine Unicode-Zeichenfolge konvertiert werden, indem **N** vor dem ersten Anführungszeichen platziert wird.  
+`[ @password = ] { encrypt N'password' }` Das Kennwort, das zum Aktivieren der Anwendungs Rolle erforderlich ist. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Das *Kennwort* kann mithilfe der ODBC-Funktion " **verschlüsseln** " verdeckt werden. Wenn Sie die Funktion " **verschlüsseln** " verwenden, muss das Kennwort in eine Unicode-Zeichenfolge konvertiert werden, indem **N** vor dem ersten Anführungszeichen platziert wird.  
   
  Die Verschlüsselungsoption wird für Verbindungen, die **SqlClient**verwenden, nicht unterstützt.  
   
 > [!IMPORTANT]  
 > Die ODBC-Funktion zum **verschlüsseln** bietet keine Verschlüsselung. Diese Funktion ist zum Schützen von Kennwörtern, die über ein Netzwerk übertragen werden, nicht empfehlenswert. Wenn diese Informationen über ein Netzwerk übertragen werden, verwenden Sie TLS oder IPSec.
   
- **@encrypt= ' none '**  
- Gibt an, dass keine Verbergung verwendet wird. Das Kennwort wird als Nur-Text an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übergeben. Dies ist die Standardeinstellung.  
+ **@encrypt = ' none '**  
+ Gibt an, dass keine Verbergung verwendet wird. Das Kennwort wird als Nur-Text an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übergeben. Dies ist die Standardoption.  
   
  **@encrypt= ' ODBC '**  
  Gibt an, dass ODBC das Kennwort mithilfe der ODBC- **Verschlüsselungs** Funktion verbirgt, bevor das Kennwort an das gesendet wird [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Dies ist nur mit einem ODBC-Client oder dem OLE DB-Anbieter für SQL Server möglich.  
   
-`[ @fCreateCookie = ] true | false`Gibt an, ob ein Cookie erstellt werden soll. **true** wird implizit in 1 konvertiert. **false** wird implizit in 0 konvertiert.  
+`[ @fCreateCookie = ] true | false` Gibt an, ob ein Cookie erstellt werden soll. **true** wird implizit in 1 konvertiert. **false** wird implizit in 0 konvertiert.  
   
-`[ @cookie = ] @cookie OUTPUT`Gibt einen Ausgabeparameter an, der das Cookie enthalten soll. Das Cookie wird nur generiert, wenn der Wert von " ** \@ f** " den Wert " **true**" hat. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` Gibt einen Ausgabeparameter an, der das Cookie enthalten soll. Das Cookie wird nur generiert, wenn der Wert von " ** \@ f** " den Wert " **true**" hat. **varbinary(8000)**  
   
 > [!NOTE]  
 > Der **OUTPUT** -Cookieparameter für **sp_setapprole** ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(50)** zurück. Anwendungen müssen weiterhin **varbinary(8000)** reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einer zukünftigen Version erhöht wird.
@@ -71,7 +72,7 @@ sp_setapprole [ @rolename = ] 'role',
 
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
  Eine durch **sp_setapprole**aktivierte Anwendungsrolle bleibt aktiv, bis der Benutzer die Serververbindung trennt oder bis er **sp_unsetapprole**ausführt. **sp_setapprole** können nur durch direkte-Anweisungen ausgeführt werden [!INCLUDE[tsql](../../includes/tsql-md.md)] . **sp_setapprole** kann nicht innerhalb einer anderen gespeicherten Prozedur oder innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   

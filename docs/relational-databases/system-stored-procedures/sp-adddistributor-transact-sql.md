@@ -1,4 +1,5 @@
 ---
+description: sp_adddistributor (Transact-SQL)
 title: sp_adddistributor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/09/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: af202181425b751d684d833946a52df036633afb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a1aa8f5a5ebd86c8ce1ea53d5ba8cf454d17f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493504"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,14 +43,14 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @distributor = ] 'distributor'`Der Name des Verteilungs Servers. *Distributor* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Dieser Parameter wird nur bei der Einrichtung eines Remoteverteilers verwendet. Es werden Einträge für die Verteiler Eigenschaften in der msdb-Datenbank hinzugefügt **. MSdistributor** -Tabelle.  
+`[ @distributor = ] 'distributor'` Der Name des Verteilungs Servers. *Distributor* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Dieser Parameter wird nur bei der Einrichtung eines Remoteverteilers verwendet. Es werden Einträge für die Verteiler Eigenschaften in der msdb-Datenbank hinzugefügt **. MSdistributor** -Tabelle.  
 
 > [!NOTE]
 > Der Server Name kann als angegeben werden `<Hostname>,<PortNumber>` . Möglicherweise müssen Sie die Portnummer für die Verbindung angeben, wenn SQL Server unter Linux oder Windows mit einem benutzerdefinierten Port bereitgestellt wird und der-Browser Dienst deaktiviert ist.
 
-`[ @heartbeat_interval = ] heartbeat_interval`Die maximale Anzahl von Minuten, die ein Agent durchlaufen werden kann, ohne eine Fortschrittsmeldung zu protokollieren. *heartbeat_interval* ist vom Datentyp **int**. der Standardwert ist 10 Minuten. Ein Auftrag des SQL Server-Agents wird erstellt, der nach diesem Zeitraum ausgeführt wird, um den Status der ausgeführten Replikations-Agents zu überprüfen.  
+`[ @heartbeat_interval = ] heartbeat_interval` Die maximale Anzahl von Minuten, die ein Agent durchlaufen werden kann, ohne eine Fortschrittsmeldung zu protokollieren. *heartbeat_interval* ist vom Datentyp **int**. der Standardwert ist 10 Minuten. Ein Auftrag des SQL Server-Agents wird erstellt, der nach diesem Zeitraum ausgeführt wird, um den Status der ausgeführten Replikations-Agents zu überprüfen.  
   
-`[ @password = ] 'password']`Das Kennwort des **distributor_admin** Anmelde namens. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei NULL oder einer leeren Zeichenfolge wird das Kennwort auf einen Zufallswert festgelegt. Das Kennwort muss konfiguriert sein, wenn der erste Remoteverteiler hinzugefügt wird. **distributor_admin** Anmelde Name und das *Kennwort* werden für den Eintrag für den Verbindungs Server gespeichert, der für eine *Verteiler* -RPC-Verbindung verwendet wird Wenn der *Verteiler* lokal ist, wird das Kennwort für **distributor_admin** auf einen neuen Wert festgelegt. Für Verleger mit einem Remote Verteiler muss beim Ausführen von **sp_adddistributor** sowohl auf dem Verleger als auch auf dem Verteiler der gleiche Wert für das *Kennwort* angegeben werden. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) kann verwendet werden, um das Verteiler Kennwort zu ändern.  
+`[ @password = ] 'password']` Das Kennwort des **distributor_admin** Anmelde namens. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei NULL oder einer leeren Zeichenfolge wird das Kennwort auf einen Zufallswert festgelegt. Das Kennwort muss konfiguriert sein, wenn der erste Remoteverteiler hinzugefügt wird. **distributor_admin** Anmelde Name und das *Kennwort* werden für den Eintrag für den Verbindungs Server gespeichert, der für eine *Verteiler* -RPC-Verbindung verwendet wird Wenn der *Verteiler* lokal ist, wird das Kennwort für **distributor_admin** auf einen neuen Wert festgelegt. Für Verleger mit einem Remote Verteiler muss beim Ausführen von **sp_adddistributor** sowohl auf dem Verleger als auch auf dem Verteiler der gleiche Wert für das *Kennwort* angegeben werden. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) kann verwendet werden, um das Verteiler Kennwort zu ändern.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
@@ -72,7 +73,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistributor_property &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_dropdistributor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Verteilung konfigurieren](../../relational-databases/replication/configure-distribution.md)  
   

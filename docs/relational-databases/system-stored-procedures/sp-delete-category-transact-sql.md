@@ -1,4 +1,5 @@
 ---
+description: sp_delete_category (Transact-SQL)
 title: sp_delete_category (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6962e4bb4387cad22e16d62176ced10ad8e82205
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1d3441ae51bd674f41cce42fe17393bbcb6983df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493336"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @class = ] 'class'`Die Klasse der Kategorie. die *Klasse* ist vom Datentyp **varchar (8)** und hat keinen Standardwert und muss einen der folgenden Werte aufweisen.  
+`[ @class = ] 'class'` Die Klasse der Kategorie. die *Klasse* ist vom Datentyp **varchar (8)** und hat keinen Standardwert und muss einen der folgenden Werte aufweisen.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -48,7 +49,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |**Warnung**|Löscht eine Warnungskategorie|  
 |**KOM**|Löscht eine Operatorkategorie|  
   
-`[ @name = ] 'name'`Der Name der Kategorie, die entfernt werden soll. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'name'` Der Name der Kategorie, die entfernt werden soll. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -77,7 +78,7 @@ EXEC dbo.sp_delete_category
 GO   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_add_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_sql_referencing_entities (Transact-SQL)
 title: sys. dm_sql_referencing_entities (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 03848d99d6af31e1ceb04e10f97af26fac58011f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493582"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,15 +61,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- `schema_name.referenced_entity_name`Der Name der Entität, auf die verwiesen wird.  
+ `schema_name.referenced_entity_name` Der Name der Entität, auf die verwiesen wird.  
   
  `schema_name` ist erforderlich, es sei denn, es handelt sich bei der Klasse, auf die verwiesen wird, um PARTITION_FUNCTION.  
   
- `schema_name.referenced_entity_name`ist vom Datentyp **nvarchar (517)**.  
+ `schema_name.referenced_entity_name` ist vom Datentyp **nvarchar (517)**.  
   
- `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`Ist die Klasse der Entität, auf die verwiesen wird. Pro Anweisung kann nur eine Klasse angegeben werden.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }` Ist die Klasse der Entität, auf die verwiesen wird. Pro Anweisung kann nur eine Klasse angegeben werden.  
   
- `<referenced_class>`ist vom Datentyp **nvarchar**(60).  
+ `<referenced_class>` ist vom Datentyp **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -100,11 +101,11 @@ sys.dm_sql_referencing_entities (
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|Ja|  
-|Sicht|Ja|Ja|  
+|Ansicht|Ja|Ja|  
 |In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|Ja|Ja|  
-|Gespeicherte CLR-Prozedur|Nein |Ja|  
+|Gespeicherte CLR-Prozedur|Nein|Ja|  
 |Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Ja|  
-|CLR-benutzerdefinierte Funktion|Nein |Ja|  
+|CLR-benutzerdefinierte Funktion|Nein|Ja|  
 |CLR-Trigger (DML und DDL)|Nein|Nein|  
 |DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
 |DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
@@ -116,7 +117,7 @@ sys.dm_sql_referencing_entities (
 |XML-Schemaauflistung|Nein|Ja|  
 |Partitionsfunktion|Nein|Ja|  
   
- \*Eine Tabelle wird nur als verweisende Entität nachverfolgt, wenn Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] auf ein Modul, einen benutzerdefinierten Typ oder eine XML-Schema Auflistung in der Definition einer berechneten Spalte, einer Check-Einschränkung oder einer DEFAULT-Einschränkung verweist.  
+ \* Eine Tabelle wird nur als verweisende Entität nachverfolgt, wenn Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] auf ein Modul, einen benutzerdefinierten Typ oder eine XML-Schema Auflistung in der Definition einer berechneten Spalte, einer Check-Einschränkung oder einer DEFAULT-Einschränkung verweist.  
   
  ** Nummerierte gespeicherte Prozeduren mit einem ganzzahligen Wert größer als 1 werden weder als verweisende Entität noch als Entität, auf die verwiesen wird, aufgezeichnet.  
   

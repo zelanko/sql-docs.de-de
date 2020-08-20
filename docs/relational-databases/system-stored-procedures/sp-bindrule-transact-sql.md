@@ -1,4 +1,5 @@
 ---
+description: sp_bindrule (Transact-SQL)
 title: sp_bindrule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/25/2015
@@ -18,12 +19,12 @@ ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2d068c18f692009f29ee7e8d6450c4f013c6906
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c06a99b6c4e5f248df477e147f45b10c7f566f04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493499"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85716128"
   Bindet eine Regel an eine Spalte oder an einen Aliasdatentyp.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Verwenden[Sie stattdessen UNIQUE-Einschränkungen und Check-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md) . Check-Einschränkungen werden mit dem Check-Schlüsselwort der Anweisungen [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) oder [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) erstellt.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden[Sie stattdessen UNIQUE-Einschränkungen und Check-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md) . Check-Einschränkungen werden mit dem Check-Schlüsselwort der Anweisungen [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) oder [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) erstellt.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rulename = ] 'rule'`Der Name einer Regel, die von der CREATE RULE-Anweisung erstellt wurde. die *Regel* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert.  
+`[ @rulename = ] 'rule'` Der Name einer Regel, die von der CREATE RULE-Anweisung erstellt wurde. die *Regel* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert.  
   
-`[ @objname = ] 'object_name'`Die Tabelle und Spalte oder der Alias Datentyp, an den die Regel gebunden werden soll. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  
+`[ @objname = ] 'object_name'` Die Tabelle und Spalte oder der Alias Datentyp, an den die Regel gebunden werden soll. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  
   
  *object_name* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. Wenn *object_name* ein einteilige Name ist, wird er als Alias Datentyp aufgelöst. Ein zwei- oder dreiteiliger Name wird zunächst als Tabelle und Spalte aufgelöst. Wenn die Auflösung fehlschlägt, wird er als Aliasdatentyp aufgelöst. Standardmäßig erben vorhandene Spalten des Alias Datentyps die *Regel* , es sei denn, eine Regel wurde direkt an die Spalte gebunden.  
   
@@ -57,7 +58,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  Regeln, die für Ausdrücke erstellt werden, die Aliasdatentypen verwenden, können an Spalten oder Aliasdatentypen gebunden werden. Wenn darauf verwiesen wird, schlägt jedoch die Kompilierung fehl. Vermeiden Sie die Verwendung von Regeln, die für Aliasdatentypen erstellt wurden.  
   
-`[ @futureonly = ] 'futureonly_flag'`Wird nur beim Binden einer Regel an einen Alias Datentyp verwendet. *future_only_flag* ist vom Datentyp **varchar (15)** und hat den Standardwert NULL. Wenn dieser Parameter auf **futureonly** festgelegt ist, wird verhindert, dass vorhandene Spalten eines Alias Datentyps die neue Regel erben. Wenn *futureonly_flag* NULL ist, wird die neue Regel an alle Spalten des Alias Datentyps gebunden, die derzeit keine Regel haben oder die die vorhandene Regel des Alias Datentyps verwenden.  
+`[ @futureonly = ] 'futureonly_flag'` Wird nur beim Binden einer Regel an einen Alias Datentyp verwendet. *future_only_flag* ist vom Datentyp **varchar (15)** und hat den Standardwert NULL. Wenn dieser Parameter auf **futureonly** festgelegt ist, wird verhindert, dass vorhandene Spalten eines Alias Datentyps die neue Regel erben. Wenn *futureonly_flag* NULL ist, wird die neue Regel an alle Spalten des Alias Datentyps gebunden, die derzeit keine Regel haben oder die die vorhandene Regel des Alias Datentyps verwenden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

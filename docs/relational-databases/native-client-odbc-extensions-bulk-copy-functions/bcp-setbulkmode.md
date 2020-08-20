@@ -1,4 +1,5 @@
 ---
+description: bcp_setbulkmode
 title: bcp_setbulkmode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,11 +14,12 @@ ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee05749a46103e268b0bdc1aaf9c89a729753171
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 43302565cd49cc176b0ad3808398b28b86c57a39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494089"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +62,7 @@ RETCODE bcp_setbulkmode (
 ## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  bcp_setbulkmode können zum Massen kopieren aus einer Abfrage oder einer Tabelle verwendet werden. Wenn bcp_setbulkmode zum Massen Kopieren einer Abfrage Anweisung verwendet wird, muss Sie vor dem Aufrufen von bcp_control mit BCP_HINT aufgerufen werden.  
   
  bcp_setbulkmode ist eine Alternative zur Verwendung von [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) und [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), mit denen Sie nur das Format einer Spalte pro Funktions aufzurufen angeben können.  

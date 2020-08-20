@@ -1,4 +1,5 @@
 ---
+description: sp_set_firewall_rule (Azure SQL-Datenbank)
 title: sp_set_firewall_rule (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/28/2016
@@ -19,12 +20,12 @@ ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c64e9a9773ae01d4714e5c36d49097ae4f4856f2
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: 372aad3acb06910c3c905a12486a6ece4adbd6ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493046"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL-Datenbank)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -44,7 +45,7 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>Argumente  
  In der folgenden Tabelle werden die unterstützten Argumente und Optionen in veranschaulicht [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
-|Name|Datatype|BESCHREIBUNG|  
+|Name|Datatype|Beschreibung|  
 |----------|--------------|-----------------|  
 |[ @name =] ' Name '|**Nvarchar (128)**|Der verwendete Name, um die Firewalleinstellung auf Serverebene zu beschreiben und von anderen zu unterscheiden.|  
 |[ @start_ip_address =] ' start_ip_address '|**Varchar (50)**|Die niedrigste IP-Adresse im Bereich der Firewalleinstellung auf Serverebene. IP-Adressen, die gleich oder größer dieser IP-Adresse sind, können versuchen, eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server herzustellen. Die niedrigste mögliche IP-Adresse ist `0.0.0.0`.|  

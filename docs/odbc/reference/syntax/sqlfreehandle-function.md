@@ -1,4 +1,5 @@
 ---
+description: SQLFreeHandle-Funktion
 title: SQLFreeHandle-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b136dec98a19676aa67c78615d8fe931f62aafa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e90be541b73e0a5fefb7a082bad27f29c3a6d2a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491271"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle-Funktion
 **Konformitäts**  
@@ -75,9 +76,9 @@ SQLRETURN SQLFreeHandle(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLFreeHandle** SQL_ERROR zurückgibt, kann ein zugeordneter SQLSTATE-Wert aus der Diagnosedaten Struktur für das Handle abgerufen werden, das von **SQLFreeHandle** freigegeben wurde. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLFreeHandle** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY010|Funktions Sequenz Fehler|(DM) das *handlentypargument* wurde SQL_HANDLE_ENV, und mindestens eine Verbindung befand sich im zugeordneten oder verbundenen Zustand. **SQLDisconnect** und **SQLFreeHandle** mit dem *Typ* "SQL_HANDLE_DBC" müssen für jede Verbindung aufgerufen werden, bevor **SQLFreeHandle** mit dem *Typ* "SQL_HANDLE_ENV" aufgerufen wird.<br /><br /> (DM) das *HandlerType* -Argument wurde SQL_HANDLE_DBC, und die Funktion wurde aufgerufen, bevor **SQLDisconnect** für die Verbindung aufgerufen wurde.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_DBC. Eine asynchron ausgeführte Funktion wurde mit *handle* aufgerufen, und die Funktion wurde noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde mit dem Anweisungs Handle aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_STMT. Eine asynchron ausgeführte Funktion wurde für das Anweisungs Handle oder für das zugeordnete Verbindungs Handle aufgerufen, und die Funktion wurde noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_DESC. Für das zugeordnete Verbindungs Handle wurde eine asynchron ausgeführte Funktion aufgerufen. die Funktion wurde noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) alle neben geordneten Handles und anderen Ressourcen wurden nicht freigegeben, bevor **SQLFreeHandle** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für eines der Anweisungs Handles aufgerufen, die mit dem *handle* verknüpft sind, und der *Tortyp* wurde auf SQL_HANDLE_STMT festgelegt, oder SQL_HANDLE_DESC zurückgegebene SQL_PARAM_DATA_AVAILABLE. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
 |HY013|Speicher Verwaltungsfehler|Das ' *Lenker Type* '-Argument war SQL_HANDLE_STMT oder SQL_HANDLE_DESC, und der Funktions aufgerufene konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
@@ -175,13 +176,13 @@ int main() {
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Zuordnen eines Handles|[SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Abbrechen der Anweisungs Verarbeitung|[Sqlcance functionl](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Festlegen eines Cursor namens|[SQLSetCursorName-Funktion](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Header Dateien](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC-Beispielprogramm](../../../odbc/reference/sample-odbc-program.md)

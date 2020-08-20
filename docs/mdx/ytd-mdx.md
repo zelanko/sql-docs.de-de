@@ -1,4 +1,5 @@
 ---
+description: Ytd (MDX)
 title: YTD (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e3fcd823dea5d651cd7be9295fa4c6bba25380c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14f286a304e03624a9ce20c1bd7b045dffc38688
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491368"
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 
@@ -37,7 +38,7 @@ Ytd( [ Member_Expression ] )
  Die **YTD** -Funktion ist eine Verknüpfungs Funktion für die [PeriodsToDate](../mdx/periodstodate-mdx.md) -Funktion, bei der die Type-Eigenschaft der Attribut Hierarchie, auf der die Ebene basiert, auf *years*festgelegt ist. Somit ist `Ytd(Member_Expression)` äquivalent zu `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Beachten Sie, dass diese Funktion nicht funktioniert, wenn die Type-Eigenschaft auf " *fscalyears*" festgelegt ist.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Summe des `Measures.[Order Quantity]` -Elements, aggregiert über die ersten acht Monate des Kalender Jahrs 2003, das in der `Date` Dimension enthalten ist, aus dem **Adventure Works** -Cube zurückgegeben.  
+ Im folgenden Beispiel wird die Summe des-Elements `Measures.[Order Quantity]` , aggregiert über die ersten acht Monate des Kalender Jahrs 2003, das in der `Date` Dimension enthalten ist, aus dem **Adventure Works** -Cube zurückgegeben.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8MonthsCY2003] AS  

@@ -1,4 +1,5 @@
 ---
+description: Abonnenteneigenschaften
 title: Abonnenteneigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9aa569f9e96dea8bbc5788ec1de0a47ed4e67628
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 366740d950e249d6ad18e97af3094208d4d849fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493886"
 ---
 # <a name="subscriber-properties"></a>Abonnenteneigenschaften
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "87110486"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Agentverbindung mit dem Abonnenten**  
  Der Kontext, in dem der Verteilungs-Agent und der Merge-Agent die Verbindung vom Verteiler zum Abonnenten herstellen. Dieser gilt nur für Versionen vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   

@@ -1,4 +1,5 @@
 ---
+description: SQLForeignKeys-Funktion
 title: Sqlfremdnkeys-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5f2769fb378a5ee989fb6a0351537edb3de03469
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 802153837d53c6886b44511fbdffe6efa6b83281
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491303"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys-Funktion
 **Konformitäts**  
@@ -117,14 +118,14 @@ SQLRETURN SQLForeignKeys(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **sqlfremdnkeys** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **sqlfremdnkeys** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
 |24.000|Ungültiger Cursorstatus|Ein Cursor war auf dem *StatementHandle*geöffnet, und **SQLFetch** oder **SQLFetchScroll** wurde aufgerufen. Dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** nicht SQL_NO_DATA zurückgegeben hat, und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.<br /><br /> Ein Cursor war auf dem *StatementHandle*geöffnet, aber **SQLFetch** oder **SQLFetchScroll** wurde nicht aufgerufen.|  
 |40001|Serialisierungsfehler|Für die Transaktion wurde ein Rollback ausgeführt, weil ein Ressourcen Deadlock mit einer anderen Transaktion aufgetreten ist.|  
 |40003|Anweisungs Vervollständigung unbekannt|Bei der zugeordneten Verbindung ist während der Ausführung dieser Funktion ein Fehler aufgetreten, und der Status der Transaktion kann nicht bestimmt werden.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen, und anschließend wurde die Funktion für " *StatementHandle*" erneut aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY009|Ungültige Verwendung des NULL-Zeigers|(DM) die Argumente " *PKTableName* " und " *sktablename* " waren beide NULL-Zeiger.<br /><br /> Das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, das *FKCatalogName* -Argument oder das *PKCatalogName* -Argument war ein NULL-Zeiger, und der SQL_CATALOG_NAME *InfoType* gibt zurück, dass Katalognamen unterstützt werden.<br /><br /> (DM) das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, und das Argument *fkschemaname*, *pkschemaname*, *FKTableName*oder *PKTableName* war ein NULL-Zeiger.|  
@@ -144,7 +145,7 @@ SQLRETURN SQLForeignKeys(
 ## <a name="comments"></a>Kommentare  
  Informationen dazu, wie die von dieser Funktion zurückgegebenen Informationen verwendet werden können, finden Sie unter [Verwenden von Katalogdaten](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
   
- Wenn \*" *PKTableName* " einen Tabellennamen enthält, gibt **sqlforeign nkeys** ein Resultset zurück, das den Primärschlüssel der angegebenen Tabelle und alle Fremdschlüssel enthält, die darauf verweisen. Die Liste der Fremdschlüssel in anderen Tabellen enthält keine Fremdschlüssel, die auf eindeutige Einschränkungen in der angegebenen Tabelle verweisen.  
+ Wenn " \* *PKTableName* " einen Tabellennamen enthält, gibt **sqlforeign nkeys** ein Resultset zurück, das den Primärschlüssel der angegebenen Tabelle und alle Fremdschlüssel enthält, die darauf verweisen. Die Liste der Fremdschlüssel in anderen Tabellen enthält keine Fremdschlüssel, die auf eindeutige Einschränkungen in der angegebenen Tabelle verweisen.  
   
  Wenn \* *FKTableName* einen Tabellennamen enthält, gibt **sqlforeign nkeys** ein Resultset zurück, das alle Fremdschlüssel in der angegebenen Tabelle enthält, die auf Primärschlüssel in anderen Tabellen verweisen, und die Primärschlüssel in den anderen Tabellen, auf die Sie verweisen. Die Liste der Fremdschlüssel in der angegebenen Tabelle enthält keine Fremdschlüssel, die auf eindeutige Einschränkungen in anderen Tabellen verweisen.  
   
@@ -320,7 +321,7 @@ SQLFreeStmt(hstmt, SQL_DROP);
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Binden eines Puffers an eine Spalte in einem Resultset|[SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |Abbrechen der Anweisungs Verarbeitung|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
@@ -329,6 +330,6 @@ SQLFreeStmt(hstmt, SQL_DROP);
 |Zurückgeben der Spalten eines Primärschlüssels|[SQLPrimaryKeys-Funktion](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
 |Zurückgeben von Tabellenstatistiken und Indizes|[SQLStatistics-Funktion](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

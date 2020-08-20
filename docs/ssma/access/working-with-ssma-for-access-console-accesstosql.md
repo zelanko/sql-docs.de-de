@@ -1,4 +1,5 @@
 ---
+description: Arbeiten mit SSMA für die Zugriffs Konsole (Access Token)
 title: Arbeiten mit SSMA für Access Console (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d46435bcf975036fc92926f50651dd5eff7c8080
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2bab82a2fe9cc10b100cc49a4f18c1aa0bfaacff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492503"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Arbeiten mit SSMA für die Zugriffs Konsole (Access Token)
 Für den Zugriff auf Microsoft SQL Server Migration Assistant (SSMA) ist jetzt über eine Konsolenanwendung in der Befehlszeile verfügbar. Die Skriptdateien bilden die Eingabe für die Anwendung zum Ausführen der Befehle. Als Konsolenanwendung ermöglicht SSMA die Interaktion auf Skript Ebene, reduziert den Migrations Zyklen und skaliert den Migrations Aufwand.  
@@ -24,7 +25,7 @@ In diesem Abschnitt wird die Vorgehensweise zum Migrieren einer Access-Datenbank
   
 Zu den in diesem Abschnitt behandelten Themen gehören:  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-|-|  
 |[Informationen zu den ersten Schritten mit SSMA für die Zugriffs Konsole &#40;Access Token&#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|Erläutert das Verfahren zum Ausführen der Konsolenanwendung.|  
 |[Befehlszeilenoptionen in der SSMA-Konsole &#40;Access Token&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|Beschreibt die Befehlszeilenoptionen und Parameter für den Betrieb der SSMA-Konsolenanwendung.|  

@@ -1,4 +1,5 @@
 ---
+description: sp_helpfile (Transact-SQL)
 title: sp_helpfile (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86fdfa8fe60e16cbfa9bfd0364953ec1df84a20f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9974e4e83247b7af96937bb9cbb304d617a49934
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493228"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @filename = ] 'name'`Der logische Name einer beliebigen Datei in der aktuellen Datenbank. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Name* nicht angegeben wird, werden die Attribute aller Dateien in der aktuellen Datenbank zurückgegeben.  
+`[ @filename = ] 'name'` Der logische Name einer beliebigen Datei in der aktuellen Datenbank. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Name* nicht angegeben wird, werden die Attribute aller Dateien in der aktuellen Datenbank zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -51,10 +52,10 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**name**|**sysname**|Logischer Dateiname der Datei.|  
 |**FileID**|**smallint**|Numerischer Bezeichner der Datei. Wird nicht zurückgegeben, wenn *Name* angegeben ist *.*|  
 |**filename**|**NCHAR (260)**|Physischer Dateiname.|  
-|**Dateigruppe (filegroup)**|**sysname**|Dateigruppe, zu der die Datei gehört.<br /><br /> NULL = Die Datei ist eine Protokolldatei. Sie gehört nie zu einer Dateigruppe.|  
+|**Datei Gruppe**|**sysname**|Dateigruppe, zu der die Datei gehört.<br /><br /> NULL = Die Datei ist eine Protokolldatei. Sie gehört nie zu einer Dateigruppe.|  
 |**size**|**nvarchar (15)**|Die Dateigröße in KB.|  
 |**MaxSize**|**nvarchar (15)**|Maximale Größe, auf die die Datei vergrößert werden kann. Mit UNLIMITED in diesem Feld kann die Datei so lange vergrößert werden, bis der Datenträger voll ist.|  
-|**growth**|**nvarchar (15)**|Vergrößerungsinkrement der Datei. Zeigt die Menge an Speicherplatz an, die jedes Mal der Datei hinzugefügt wird, sobald neuer Speicherplatz erforderlich wird.<br /><br /> 0 = Die Datei weist eine feste Größe auf und wird nicht vergrößert.|  
+|**wachsen**|**nvarchar (15)**|Vergrößerungsinkrement der Datei. Zeigt die Menge an Speicherplatz an, die jedes Mal der Datei hinzugefügt wird, sobald neuer Speicherplatz erforderlich wird.<br /><br /> 0 = Die Datei weist eine feste Größe auf und wird nicht vergrößert.|  
 |**ungs**|**varchar (9)**|Bei der Datendatei lautet der Wert **' nur Daten** ', und für die Protokolldatei lautet der Wert **' nur protokollieren '**.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -73,9 +74,9 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpfilegroup &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
- [sys. database_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys. master_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [sys. File Groups &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md)  
   

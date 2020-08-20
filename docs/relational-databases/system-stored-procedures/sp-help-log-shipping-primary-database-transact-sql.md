@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_primary_database (Transact-SQL)
 title: sp_help_log_shipping_primary_database (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5606c29eb4592f15eff641d969f6fcd28c89fa90
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b3dea602c3464fb4fee36281a2430f2fef39b7ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493195"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @database = ] 'database'`Der Name der primären Datenbank für den Protokoll Versand. *database* ist vom Datentyp **sysname**, hat keinen Standardwert und darf nicht NULL sein.  
+`[ @database = ] 'database'` Der Name der primären Datenbank für den Protokoll Versand. *database* ist vom Datentyp **sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
-`[ @primary_id = ] 'primary_id'`Die ID der primären Datenbank für die Protokoll Versand Konfiguration. *primary_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
+`[ @primary_id = ] 'primary_id'` Die ID der primären Datenbank für die Protokoll Versand Konfiguration. *primary_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -69,7 +70,7 @@ sp_help_log_shipping_primary_database
 |**last_backup_date_utc**|Die Uhrzeit und das Datum der letzten Transaktionsprotokollsicherung in der primären Datenbank in UTC.|  
 |**history_retention_period**|Der Zeitraum in Minuten, den Verlaufsdatensätze des Protokollversands für eine bestimmte primäre Datenbank aufbewahrt werden, ehe sie gelöscht werden.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_help_log_shipping_primary_database** muss in der **master** -Datenbank auf dem primären Server ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

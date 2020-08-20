@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Konvertierung) (MySqlToSql)
 title: Projekteinstellungen (Konvertierung) (mysqltoisql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 378bc98dd24eff758e6f4e368f4e97e211d1f2a8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4c2c4c093fec21723584538dfb5585a74e15c8fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492433"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Projekteinstellungen (Konvertierung) (MySqlToSql)
 Die Seite Konvertierung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, mit denen Sie anpassen können, wie SSMA die MySQL-Syntax in SQL Server oder SQL Azure Syntax konvertiert.  
@@ -25,7 +26,7 @@ Der Bereich Konvertierung ist in den Dialogfeldern **Projekteinstellungen** und 
   
 -   Um Einstellungen für das aktuelle Projekt anzugeben, klicken Sie **im Menü Extras** auf **Projekteinstellungen**, klicken Sie dann unten im linken Bereich auf **Allgemein** , und klicken Sie dann auf **Konvertierung**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="collate-clause"></a>COLLATE-Klausel  
   
@@ -110,6 +111,6 @@ Der Bereich Konvertierung ist in den Dialogfeldern **Projekteinstellungen** und 
 |**Numerische Literale mit einer Genauigkeit von mehr als 38**|Gibt an, wie numerische Literale mit einer Genauigkeit konvertiert werden, die 38 überschreitet.<br /><br />**Standardmodus**: Runden, wenn möglich<br /><br />**Optimistischer Modus**: Runden, wenn möglich<br /><br />**Vollständiger Modus**: Round, wenn möglich|  
 |**NULL-Date in NOT NULL-Spalten**|Gibt an, wie die Zuweisung zu NOT NULL-Spalten mit NULL-Date-, Zero-in-Date-oder ungültigen Datums-/Uhrzeitwerten behandelt werden soll.<br /><br />**Standardmodus**: GETDATE ()<br /><br />**Optimistischer Modus**: GETDATE ()<br /><br />**Vollständiger Modus**: GETDATE ()|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Referenz zur Benutzeroberfläche &#40;mysqltosql&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_replsetoriginator (Transact-SQL)
 title: sp_replsetoriginator (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1811a523e23de9726517bfabd1ddf8417aa3c5fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c75f590fc0482319783d1fb94f516d43581dd39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493095"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,14 +39,14 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @server_name = ] 'server_name'`Der Name des Servers, auf dem die Transaktion angewendet wird. *originating_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @server_name = ] 'server_name'` Der Name des Servers, auf dem die Transaktion angewendet wird. *originating_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @database_name = ] 'database_name'`Der Name der Datenbank, in der die Transaktion angewendet wird. *originating_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @database_name = ] 'database_name'` Der Name der Datenbank, in der die Transaktion angewendet wird. *originating_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_replsetoriginator** wird vom Verteilungs-Agent ausgeführt, um die Quelle der von der Replikation angewendeten Transaktionen aufzuzeichnen. Mithilfe dieser Informationen wird die Loopbackerkennung für bidirektionale Transaktionsabonnements aufgerufen, bei denen die Loopbackeigenschaft festgelegt ist.  
   
 ## <a name="permissions"></a>Berechtigungen  

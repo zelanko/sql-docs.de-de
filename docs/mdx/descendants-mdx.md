@@ -1,4 +1,5 @@
 ---
+description: Descendants (MDX)
 title: Descendants (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b883d1ce73a7259b285748e5a66f283a7d830424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491439"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 
@@ -61,7 +62,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  Wenn ein Mengen Ausdruck angegeben ist, wird die **Descendants** -Funktion für jedes Element der Menge einzeln aufgelöst, und die Gruppe wird erneut erstellt. Anders ausgedrückt: die Syntax, die für die **Descendants** -Funktion verwendet wird, ist funktional äquivalent zur MDX-Funktion [Generate](../mdx/generate-mdx.md) .  
   
- Wenn keine Ebene oder kein Abstand angegeben wird, wird der Standardwert für die von der Funktion verwendete Ebene durch Aufrufen der [Ebenenfunktion](../mdx/level-mdx.md) ( \<<Member>> bestimmt. Level) für das angegebene Element (wenn ein Element angegeben ist) oder durch Aufrufen der **Ebenenfunktion** für jedes Element der angegebenen Menge (sofern eine Menge angegeben ist). Wenn kein Ebenenausdruck, Abstand oder Flag angegeben ist, wird die Funktion ausgeführt, als wenn die folgende Syntax verwendet würde:  
+ Wenn keine Ebene oder kein Abstand angegeben wird, wird der Standardwert für die von der Funktion verwendete Ebene durch Aufrufen der [Level](../mdx/level-mdx.md) -Funktion (<\<Member>> bestimmt. Level) für das angegebene Element (wenn ein Element angegeben ist) oder durch Aufrufen der **Ebenenfunktion** für jedes Element der angegebenen Menge (sofern eine Menge angegeben ist). Wenn kein Ebenenausdruck, Abstand oder Flag angegeben ist, wird die Funktion ausgeführt, als wenn die folgende Syntax verwendet würde:  
   
  `Descendants`  
   
@@ -123,7 +124,7 @@ SELECT Descendants
 FROM [Adventure Works]   
 ```  
   
- Im folgenden Beispiel wird der tägliche Durchschnitt des `Measures.[Gross Profit Margin]` Measures zurückgegeben, der über die Tage jedes Monats im 2003-Geschäftsjahr aus dem **Adventure Works** -Cube berechnet wird. Die **Descendants** -Funktion gibt eine Menge von Tagen zurück, die vom aktuellen Element `[Date].[Fiscal]` der Hierarchie bestimmt werden.  
+ Im folgenden Beispiel wird der tägliche Durchschnitt des Measures zurückgegeben `Measures.[Gross Profit Margin]` , der über die Tage jedes Monats im 2003-Geschäftsjahr aus dem **Adventure Works** -Cube berechnet wird. Die **Descendants** -Funktion gibt eine Menge von Tagen zurück, die vom aktuellen Element der `[Date].[Fiscal]` Hierarchie bestimmt werden.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS Avg  

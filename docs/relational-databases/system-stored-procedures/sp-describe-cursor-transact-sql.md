@@ -1,4 +1,5 @@
 ---
+description: sp_describe_cursor (Transact-SQL)
 title: sp_describe_cursor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e8b245778ea29c162cc023f707c717dfc5a01a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 97f7d5b17fdd06199b11bfa82c6795407e28127f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493296"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +90,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |last_operation|**tinyint**|Der letzte Vorgang, der für den Cursor ausgeführt wurde:<br /><br /> 0 = Für den Cursor wurden keine Vorgänge ausgeführt.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = einfügen<br /><br /> 4 = UPDATE<br /><br /> 5 = löschen<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Ein eindeutiger Wert für den Cursor innerhalb des Serverbereichs|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_describe_cursor beschreibt die für einen Servercursor globalen Attribute, wie z. B. die Optionen zum Durchführen eines Bildlaufs und zum Aktualisieren. Mit sp_describe_cursor_columns zeigen Sie eine Beschreibung der Attribute des vom Cursor zurückgegebenen Resultsets an. Mit sp_describe_cursor_tables zeigen Sie an, auf welche Basistabellen der Cursor verweist. Mit sp_cursor_list erhalten Sie einen Bericht der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor, die für die Verbindung sichtbar sind.  
   
  Eine DECLARE CURSOR-Anweisung kann einen Cursortyp anfordern, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der in DECLARE CURSOR enthaltenen SELECT-Anweisung nicht unterstützen kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert den Cursor implizit in einen Typ, der mithilfe der SELECT-Anweisung unterstützt werden kann. Wenn TYPE_WARNING in der DECLARE CURSOR-Anweisung angegeben wird, sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Anwendung eine Meldung zu Informationszwecken, dass eine Konvertierung durchgeführt wurde. sp_describe_cursor kann dann aufgerufen werden, um den Typ des implementierten Cursors zu bestimmen.  
@@ -136,10 +137,10 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Cursor](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-SQL-&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR &#40;Transact-SQL-&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [sp_cursor_list &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
  [sp_describe_cursor_tables &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  

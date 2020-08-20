@@ -1,4 +1,5 @@
 ---
+description: sp_certify_removable (Transact-SQL)
 title: sp_certify_removable (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1ba13cd3ae77a13e329c39fea22a9ee9550ed47
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f5bf1f0fd8a73948c2cc85937af4bc4c5ec7ffc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493413"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'dbname'`Gibt die Datenbank an, die überprüft werden soll. *dbname* ist vom **Datentyp vom Datentyp sysname**.  
+`[ @dbname = ] 'dbname'` Gibt die Datenbank an, die überprüft werden soll. *dbname* ist vom **Datentyp vom Datentyp sysname**.  
   
-`[ @autofix = ] 'auto'`Übergibt den Besitz der Datenbank und aller Datenbankobjekte an den Systemadministrator und löscht alle vom Benutzer erstellten Datenbankbenutzer und nicht standardmäßigen Berechtigungen. *Auto* ist vom Datentyp **nvarchar (4)** und hat den Standardwert NULL.  
+`[ @autofix = ] 'auto'` Übergibt den Besitz der Datenbank und aller Datenbankobjekte an den Systemadministrator und löscht alle vom Benutzer erstellten Datenbankbenutzer und nicht standardmäßigen Berechtigungen. *Auto* ist vom Datentyp **nvarchar (4)** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

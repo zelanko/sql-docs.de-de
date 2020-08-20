@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_system_components (Transact-SQL)
 title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0686017e612b5d9d7d2c1f932321a965b7f1448a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493205"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -45,7 +46,7 @@ sp_help_fulltext_system_components
  'all'  
  Gibt Informationen für alle Volltextkomponenten zurück.  
   
-`[ @component_type = ] component_type`Gibt den Komponententyp an. *component_type* kann eine der folgenden sein:  
+`[ @component_type = ] component_type` Gibt den Komponententyp an. *component_type* kann eine der folgenden sein:  
   
 -   **Wörter Trennung**  
   
@@ -57,7 +58,7 @@ sp_help_fulltext_system_components
   
  Wenn ein vollständiger Pfad angegeben wird, muss auch *param* mit dem vollständigen Pfad zur Komponenten-DLL angegeben werden, oder es wird eine Fehlermeldung zurückgegeben.  
   
-`[ @param = ] param`Abhängig vom Komponententyp ist dies einer der folgenden: ein Gebiets Schema Bezeichner (Locale Identifier, LCID), die Dateierweiterung mit "."-Präfix, der vollständige Komponenten Name des Protokoll Handlers oder der vollständige Pfad zur Komponenten-DLL.  
+`[ @param = ] param` Abhängig vom Komponententyp ist dies einer der folgenden: ein Gebiets Schema Bezeichner (Locale Identifier, LCID), die Dateierweiterung mit "."-Präfix, der vollständige Komponenten Name des Protokoll Handlers oder der vollständige Pfad zur Komponenten-DLL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -67,7 +68,7 @@ sp_help_fulltext_system_components
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|Typ der Komponente. Eine der folgenden Möglichkeiten:<br /><br /> filter<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
+|**componenttype**|**sysname**|Typ der Komponente. Einer der folgenden:<br /><br /> filter<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
 |**componentname**|**sysname**|Der Name der Komponente.|  
 |**CLSID**|**uniqueidentifier**|Klassenbezeichner der Komponente.|  
 |**FullPath**|**nvarchar(256)**|Pfad zum Speicherort der Komponente.<br /><br /> NULL = Aufrufer ist kein Mitglied der festen Serverrolle **serveradmin** .|  

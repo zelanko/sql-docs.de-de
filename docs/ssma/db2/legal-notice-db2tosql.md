@@ -1,4 +1,5 @@
 ---
+description: Rechtliche Hinweise (DB2toSQL)
 title: Rechtliche Hinweise (DB2toSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bb579ff317bdf829ee39e227cee9bf082451a43d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 331a004ac1daba1b1d456acab86037b97f15cad5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492493"
 ---
 # <a name="legal-notice-db2tosql"></a>Rechtliche Hinweise (DB2toSQL)
 Diese Dokumentation, einschließlich der darin enthaltenen Beispielanwendungen, wird nur zu Informationszwecken zur Verfügung gestellt. Es werden keine Gewährleistungen übernommen, weder ausdrücklich noch konkludent. Die in dieser Dokumentation enthaltenen Angaben und Daten, einschließlich URLs und anderen Verweisen auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Das vollständige Risiko der Nutzung oder der Ergebnisse der Nutzung dieser Dokumentation liegt bei dem Benutzer.  

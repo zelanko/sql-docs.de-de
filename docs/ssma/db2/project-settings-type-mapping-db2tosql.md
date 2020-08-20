@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Typzuordnung) (DB2ToSQL)
 title: Projekteinstellungen (Typzuordnung) (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f56ae792c632928f05a8733b27074779352a37db
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fc7abeb4eec6d25e183db5ffcf1923185016b913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492543"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Projekteinstellungen (Typzuordnung) (DB2ToSQL)
 Die Seite Typzuordnung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, die anpassen, wie SSMA DB2-Datentypen in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen konvertiert.  
@@ -27,7 +28,7 @@ Die Seite Typzuordnung ist in den Dialogfeldern **Projekteinstellungen** und **S
   
 Verwenden Sie die Registerkarte **Typzuordnung** im primären SSMA-Fenster, um Einstellungen für das aktuelle Objekt oder die Klasse von Objekten anzugeben.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 In der folgenden Tabelle werden die Registerkarten Optionen für die **Typzuordnung** angezeigt:  
   
 **Quelltyp**  
@@ -105,9 +106,9 @@ Die folgende Tabelle enthält die standardmäßige Datentyp Zuordnung für Argum
 |VARCHAR2|varchar(max)|  
 |XmlType|Xml|  
   
-<sup>\*</sup>Gilt nur für die Rückgabe Werttyp Zuordnung.  
+<sup>\*</sup> Gilt nur für die Rückgabe Werttyp Zuordnung.  
   
-<sup>\*\*</sup>Gilt nur für die Argument Typzuordnung.  
+<sup>\*\*</sup> Gilt nur für die Argument Typzuordnung.  
   
 ### <a name="default-column-type-mapping"></a>Standardmäßige Spaltentyp Zuordnung  
 Die folgende Tabelle enthält die Standardtyp Zuordnung für-Spalten.  
@@ -233,7 +234,7 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung für lokale Variablen.
 |NCHAR variiert [ \* .. 4000]|nvarchar [ \* ]|  
 |NCHAR-Variation [4001.. \* ]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Number|float [53]|  
+|Zahl|float [53]|  
 |Zahl [ \* .. \* ]|numerisch [ \* ]|  
 |Zahl [ \* .. \* ] [\*..\*]|numerisch [ \* ] [ \* ]|  
 |Numerisch|numerisch [38] [0]|  
@@ -264,6 +265,6 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung für lokale Variablen.
 |VARCHAR2 [8001.. \* ]|varcha (max)|  
 |XmlType|Xml|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Referenz zur Benutzeroberfläche &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

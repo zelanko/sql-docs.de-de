@@ -1,4 +1,5 @@
 ---
+description: sp_table_privileges_ex (Transact-SQL)
 title: sp_table_privileges_ex (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e8529a1a3be2bed8ddbea1ff475b21801a34424
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e748ece19ff0d4dadaf966529ed40e0ac9a69be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492953"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @table_server = ] 'table_server'`Der Name des Verbindungs Servers, für den Informationen zurückgegeben werden sollen. *table_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @table_server = ] 'table_server'` Der Name des Verbindungs Servers, für den Informationen zurückgegeben werden sollen. *table_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @table_name = ] 'table_name']`Der Name der Tabelle, für die Tabellen Berechtigungsinformationen bereitgestellt werden sollen. *table_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @table_name = ] 'table_name']` Der Name der Tabelle, für die Tabellen Berechtigungsinformationen bereitgestellt werden sollen. *table_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @table_schema = ] 'table_schema'`Das Tabellen Schema. Dies ist in einigen DBMS-Umgebungen der Tabellenbesitzer. *TABLE_SCHEMA* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @table_schema = ] 'table_schema'` Das Tabellen Schema. Dies ist in einigen DBMS-Umgebungen der Tabellenbesitzer. *TABLE_SCHEMA* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @table_catalog = ] 'table_catalog'`Der Name der Datenbank, in der sich die angegebene *table_name* befindet. *TABLE_CATALOG* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @table_catalog = ] 'table_catalog'` Der Name der Datenbank, in der sich die angegebene *table_name* befindet. *TABLE_CATALOG* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob die Zeichen "_", "%", "[" und "]" als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Bestimmt, ob die Zeichen "_", "%", "[" und "]" als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -68,7 +69,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**Ehre**|**varchar (** 32 **)**|Eine der verfügbaren Tabellenberechtigungen. Tabellenberechtigungen können folgende Werte annehmen bzw. auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden.<br /><br /> Select = **GRANTEE** kann Daten für eine oder mehrere Spalten abrufen.<br /><br /> INSERT = **GRANTEE** kann für eine oder mehrere Spaltendaten für neue Zeilen bereitstellen.<br /><br /> Update = **GRANTEE** kann vorhandene Daten für eine oder mehrere Spalten ändern.<br /><br /> DELETE = **GRANTEE** kann Zeilen aus der Tabelle entfernen.<br /><br /> References = **GRANTEE** kann in einer Primärschlüssel-/Fremdschlüssel Beziehung auf eine Spalte in einer fremd Tabelle verweisen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Primär-/Fremdschlüsselbeziehungen mithilfe von Tabelleneinschränkungen definiert.<br /><br /> Der **dem Empfänger durch ein** bestimmtes Tabellen Privileg erteilte Aktionsbereich ist Datenquellen abhängig. Beispielsweise **kann die Berechtigung** aktualisieren dem Empfänger ermöglichen, alle Spalten in einer Tabelle in einer Datenquelle zu aktualisieren, und nur die Spalten, für die der **GRANTOR** über die Berechtigung aktualisieren für eine andere Datenquelle verfügt.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Gibt an, **ob der Empfänger** berechtigt ist, anderen Benutzern Berechtigungen zu erteilen. Dies wird häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet. Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht anwendbar ist.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die zurückgegebenen Ergebnisse werden nach **TABLE_QUALIFIER**, **TABLE_OWNER**, **table_name**und **Berechtigungen**geordnet.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -84,7 +85,7 @@ EXEC sp_table_privileges_ex @table_server = 'Seattle1',
    @table_catalog ='AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_column_privileges_ex &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Gespeicherte Prozeduren für verteilte Abfragen &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  

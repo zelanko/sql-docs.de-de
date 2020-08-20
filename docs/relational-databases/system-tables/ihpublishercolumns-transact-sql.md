@@ -1,4 +1,5 @@
 ---
+description: IHpublishercolumns (Transact-SQL)
 title: IHpublishercolumns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 221586cec5acaf94954454076fcf948cc62cf577
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b5d3f4b833d6d5183c888dba9a4a3a39ac42598d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492775"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85890263"
 |**iscaptured**|**bit**|Zeigt an, ob für die Spalte ein Trigger vorhanden ist. Ein Trigger kann auch dann vorhanden sein, wenn die Spalte nicht in einem Artikel veröffentlicht wird. Der Wert **1** bedeutet, dass der-Wert für die Spalte vorhanden ist.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Heterogene Replikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sysarticlecolumns &#40;System Ansicht&#41; &#40;Transact-SQL-&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   

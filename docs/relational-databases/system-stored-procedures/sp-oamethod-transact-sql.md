@@ -1,4 +1,5 @@
 ---
+description: sp_OAMethod (Transact-SQL)
 title: sp_OAMethod (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9dced2e79df59117a0ae17e0cee2a1429ebd1d0c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98e487f2393aba0c33f91fba6a41dd096cb61368
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493109"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ sp_OAMethod objecttoken , methodname
   
 -   Die Methode gibt ein Array als Ausgabeparameter zurück.  
   
-`[ _@parametername = ] parameter[ OUTPUT ]`Ist ein Methoden Parameter. Wenn angegeben, muss der *Parameter* ein Wert des entsprechenden Datentyps sein.  
+`[ _@parametername = ] parameter[ OUTPUT ]` Ist ein Methoden Parameter. Wenn angegeben, muss der *Parameter* ein Wert des entsprechenden Datentyps sein.  
   
  Zum Abrufen des Rückgabewerts eines Ausgabe Parameters muss der *Parameter* eine lokale Variable des entsprechenden Datentyps sein, und die **Ausgabe** muss angegeben werden. Wenn ein konstanter Parameter angegeben wird oder wenn **Output** nicht angegeben wird, wird jeder Rückgabewert eines Ausgabe Parameters ignoriert.  
   
@@ -101,11 +102,11 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie können auch **sp_OAMethod** verwenden, um einen Eigenschafts Wert zu erhalten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die EXECUTE-Berechtigung direkt für diese gespeicherte Prozedur. `Ole Automation Procedures`die Konfiguration muss **aktiviert** sein, um alle System Prozeduren für OLE-Automatisierung verwenden zu können.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die EXECUTE-Berechtigung direkt für diese gespeicherte Prozedur. `Ole Automation Procedures` die Konfiguration muss **aktiviert** sein, um alle System Prozeduren für OLE-Automatisierung verwenden zu können.  
   
 ## <a name="examples"></a>Beispiele  
   

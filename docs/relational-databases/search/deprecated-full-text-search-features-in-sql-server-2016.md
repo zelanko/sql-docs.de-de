@@ -1,4 +1,5 @@
 ---
+description: Als veraltet markierte Features der Volltextsuche in SQL Server 2016
 title: Als veraltet markierte Features der Volltextsuche in SQL Server 2016
 ms.date: 08/19/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f74c1a7f5dbae4ce7d3fb1fe874cfb6ee170063e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: edfea50f0970f9d868ec36fe80d5ecc18c0e4a8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758057"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493819"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Als veraltet markierte Features der Volltextsuche in SQL Server 2016
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,6 +57,6 @@ Sie können die Nutzung von als veralteten Funktionen mithilfe des Objektleistun
 |sp_detach_db-Option:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Keine.|sp_detach_db @keepfulltextindexfile|226|  
 |sp_fulltext_service action-Werte: resource_usage hat keine Funktion.|Keine|sp_fulltext_service @action= resource_usage|200|  
   
- &#42;Das Objekt **SQL Server: Als veraltet markierte Funktionen**  überwacht keine Vorkommen von CREATE FULLTEXT CATLOG ON FILEGROUP *Dateigruppe*.  
+ &#42;Das Objekt **SQL Server: Als veraltet markierte Funktionen ** überwacht keine Vorkommen von CREATE FULLTEXT CATLOG ON FILEGROUP *Dateigruppe*.  
   
   

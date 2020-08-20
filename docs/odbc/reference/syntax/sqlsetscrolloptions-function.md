@@ -1,4 +1,5 @@
 ---
+description: SQLSetScrollOptions-Funktion
 title: SQLSetScrollOptions-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 056fc203581e1d5d8323b09ac62d692093d8c0f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0197c3756b76b480cd5370b5edff9d6fc88b201c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491207"
 ---
 # <a name="sqlsetscrolloptions-function"></a>SQLSetScrollOptions-Funktion
 **Konformitäts**  

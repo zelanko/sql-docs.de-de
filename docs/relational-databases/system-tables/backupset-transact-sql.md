@@ -1,4 +1,5 @@
 ---
+description: backupset (Transact-SQL)
 title: Backup (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd91cd99d70a90e3aaec5972ddcdccf472a18f1
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: f5bea32ebd5269ae57d7b754cf20d12a0d695109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492853"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -49,7 +51,7 @@ ms.locfileid: "86091856"
 |**expiration_date**|**datetime**|Datum und Uhrzeit des Zeitpunkts, zu dem die Gültigkeit des Sicherungssatzes endet. Kann den Wert NULL haben.|  
 |**software_vendor_id**|**int**|ID des Softwareanbieters, der den Sicherungsmedienheader schreibt. Kann den Wert NULL haben.|  
 |**name**|**nvarchar(128)**|Name des Sicherungssatzes. Kann den Wert NULL haben.|  
-|**description**|**nvarchar(255)**|Beschreibung des Sicherungssatzes. Kann den Wert NULL haben.|  
+|**Beschreibung**|**nvarchar(255)**|Beschreibung des Sicherungssatzes. Kann den Wert NULL haben.|  
 |**user_name**|**nvarchar(128)**|Name des Benutzers, der den Sicherungsvorgang durchführt. Kann den Wert NULL haben.|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Hauptversionsnummer. Kann den Wert NULL haben.|  
 |**software_minor_version**|**tinyint**|Nebenversionsnummer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Kann den Wert NULL haben.|  
@@ -98,9 +100,9 @@ ms.locfileid: "86091856"
 |**compressed_backup_size**|**Numerisch (20, 0)**|Gesamtbytezahl der auf einem Datenträger gespeicherten Sicherung.<br /><br /> Verwenden Sie zum Berechnen des Komprimierungs Verhältnisses **compressed_backup_size** und **backup_size**.<br /><br /> Während eines **msdb** -Upgrades wird dieser Wert auf NULL festgelegt. Dies gibt eine nicht komprimierte Sicherung an.|  
 |**key_algorithm**|**nvarchar(32)**|Der Verschlüsselungsalgorithmus, der zum Verschlüsseln der Sicherung verwendet wird. Der NO_Encryption-Wert gab an, dass die Sicherung nicht verschlüsselt wurde.|  
 |**encryptor_thumbprint**|**varbinary(20)**|Der Fingerabdruck der Verschlüsselung, der verwendet werden kann, um das Zertifikat oder den asymmetrischen Schlüssel in der Datenbank zu ermitteln. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
-|**encryptor_type**|**nvarchar(32)**|Der verwendete Verschlüsselungstyp: Zertifikat oder Asymmetrischer Schlüssel. . Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
+|**encryptor_type**|**nvarchar(32)**|Verwendeter Verschlüsselungstyp: Zertifikat oder asymmetrischer Schlüssel. . Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  RESTORE VERIFYONLY FROM *backup_device* mit LOADHISTORY füllt die Spalte der **Backup Mediaset** -Tabelle mit den entsprechenden Werten aus dem Medien Satz Header auf.  
   
  Führen Sie die gespeicherte Prozedur [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) aus, um die Anzahl der Zeilen in dieser Tabelle und in anderen Sicherungs-und Verlaufs Tabellen zu verringern.  

@@ -1,4 +1,5 @@
 ---
+description: sp_helpreplicationdboption (Transact-SQL)
 title: sp_helpreplicationdboption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0376653d2466bf756ba76575f90841f78956ade7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a09f31e6dca74e00248cb13801d9c5acec11bb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493146"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,17 +40,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'dbname'`Der Name der Datenbank. *dbname* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . Wenn **%** der Wert ist, enthält das Resultset alle Datenbanken auf dem Verleger; andernfalls werden nur Informationen über die angegebene Datenbank zurückgegeben. Es werden keine Informationen für Datenbanken zurückgegeben, für die der Benutzer wie nachstehend beschrieben keine entsprechenden Berechtigungen besitzt.  
+`[ @dbname = ] 'dbname'` Der Name der Datenbank. *dbname* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . Wenn **%** der Wert ist, enthält das Resultset alle Datenbanken auf dem Verleger; andernfalls werden nur Informationen über die angegebene Datenbank zurückgegeben. Es werden keine Informationen für Datenbanken zurückgegeben, für die der Benutzer wie nachstehend beschrieben keine entsprechenden Berechtigungen besitzt.  
   
-`[ @type = ] 'type'`Schränkt das Resultset so ein, dass es nur Datenbanken enthält, für die der angegebene Wert des Replikations options *Typs* aktiviert wurde *Type ist vom Datentyp* **vom Datentyp sysname**. die folgenden Werte sind möglich:  
+`[ @type = ] 'type'` Schränkt das Resultset so ein, dass es nur Datenbanken enthält, für die der angegebene Wert des Replikations options *Typs* aktiviert wurde *Type ist vom Datentyp* **vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**veröffentlichen**|Transaktionsreplikation ist zulässig.|  
 |**Zusammenführen der Veröffentlichung**|Mergereplikation ist zulässig.|  
 |**Replikation zulässig** (Standard)|Transaktionsreplikation und Mergereplikation sind zulässig.|  
   
-`[ @reserved = ] reserved`Gibt an, ob Informationen zu vorhandenen Veröffentlichungen und Abonnements zurückgegeben werden. *reserved* ist vom Typ **Bit**und hat den Standardwert 0. Wenn der Wert **1**ist, enthält das Resultset Informationen dazu, ob die angegebene Datenbank über vorhandene Veröffentlichungen oder Abonnements verfügt.  
+`[ @reserved = ] reserved` Gibt an, ob Informationen zu vorhandenen Veröffentlichungen und Abonnements zurückgegeben werden. *reserved* ist vom Typ **Bit**und hat den Standardwert 0. Wenn der Wert **1**ist, enthält das Resultset Informationen dazu, ob die angegebene Datenbank über vorhandene Veröffentlichungen oder Abonnements verfügt.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -67,7 +68,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpreplicationdboption** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

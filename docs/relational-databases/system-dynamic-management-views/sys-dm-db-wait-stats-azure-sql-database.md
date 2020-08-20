@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_wait_stats (Azure SQL-Datenbank)
 title: sys. dm_db_wait_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8932754b69fab7086f0eb6a98d979e93669daff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493754"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85677579"
 |max_wait_time_ms|**bigint**|Maximale Wartezeit für diesen Wartetyp.|  
 |signal_wait_time_ms|**bigint**|Differenz zwischen dem Zeitpunkt der Signalisierung des wartenden Threads und dem Beginn der Ausführung.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 -   In dieser dynamischen Verwaltungssicht werden nur Daten für die aktuelle Datenbank angezeigt.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "85677579"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung auf dem Server.  
   
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Warte Typen  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> Warte Typen  
  Ressourcenwartevorgänge  
  Ressourcenwartevorgänge finden dann statt, wenn ein Arbeitsthread den Zugriff auf eine Ressource anfordert, die nicht verfügbar ist, da sie von einem anderen Arbeitsthread verwendet wird oder noch nicht zur Verfügung steht. Beispiele für Ressourcenwartevorgänge sind Sperren, Latches, Netzwerk- und Datenträger-E/A-Wartevorgänge. Sperren und Latchwartevorgänge sind Vorgänge, die auf Synchronisierungsobjekte warten.  
   
@@ -168,7 +169,7 @@ ms.locfileid: "85677579"
 |FSAGENT|Tritt auf, wenn ein FILESTREAM-Datei-E/A-Vorgang auf eine FILESTREAM-Agent-Ressource wartet, die gerade von einem anderen Datei-E/A-Vorgang verwendet wird.|  
 |FSTR_CONFIG_MUTEX|Tritt bei einem Wartevorgang auf eine andere Neukonfiguration eines FILESTREAM-Funktionen auf, die abgeschlossen werden soll.|  
 |FSTR_CONFIG_RWLOCK|Tritt bei einem Wartevorgang auf die Serialisierung des Zugriffs auf die FILESTREAM-Konfigurationsparameter auf.|  
-|FT_METADATA_MUTEX|Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_METADATA_MUTEX|Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |FT_RESTART_CRAWL|Tritt auf, wenn ein Volltextcrawl von einem letzten bekannten fehlerfreien Punkt neu gestartet werden muss, um nach einem vorübergehenden Fehler wiederhergestellt zu werden. Durch die Wartezeit können die Arbeitstasks, die zurzeit an der jeweiligen Auffüllung arbeiten, abgeschlossen werden oder den aktuellen Schritt beenden.|  
 |FULLTEXT GATHERER|Tritt bei der Synchronisierung von Volltextvorgängen auf.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -379,11 +380,11 @@ ms.locfileid: "85677579"
 |XE_MODULEMGR_SYNC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_OLS_LOCK|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_PACKAGE_LOCK_BACKOFF|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FT_COMPROWSET_RWLOCK|Volltext wartet auf Metadatenvorgang für Fragment. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_IFTS_RWLOCK|Volltext wartet auf interne Synchronisierung. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_COMPROWSET_RWLOCK|Volltext wartet auf Metadatenvorgang für Fragment. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_IFTS_RWLOCK|Volltext wartet auf interne Synchronisierung. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |FT_IFTS_SCHEDULER_IDLE_WAIT|Volltext-Wartetyp für den Ruhezustand des Zeitplanungsmoduls. Das Zeitplanungsmodul befindet sich im Leerlauf.|  
-|FT_IFTSHC_MUTEX|Volltext wartet auf einen fdhost-Steuerungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_IFTSISM_MUTEX|Volltext wartet auf einen Kommunikationsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_MASTER_MERGE|Volltext wartet auf Masterzusammenführungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_IFTSHC_MUTEX|Volltext wartet auf einen fdhost-Steuerungsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_IFTSISM_MUTEX|Volltext wartet auf einen Kommunikationsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_MASTER_MERGE|Volltext wartet auf Masterzusammenführungsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
   
   

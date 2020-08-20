@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_cluster_properties (Transact-SQL)
 title: sys. dm_os_cluster_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1da39966fe7c11a4c4685d40b6cc762e14bf2b2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9efac0397b3b98ff6f85ba0a98fe574fb36d217
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493625"
 ---
 # <a name="sysdm_os_cluster_properties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85754205"
  Mit diesen Eigenschaften werden die Werte festgelegt, die sich auf die Fehlererkennung, Fehlerantwortzeit und die Protokollierung zum Überwachen des Integritätsstatus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz auswirken.  
   
 
-|Spaltenname|Eigenschaft|BESCHREIBUNG|  
+|Spaltenname|Eigenschaft|Beschreibung|  
 |-----------------|--------------|-----------------|  
 |VerboseLogging|BIGINT|Der Protokolliergrad für den SQL Server-Failovercluster. Die ausführliche Protokollierung kann aktiviert werden, um in den Fehlerprotokollen weitere Details für die Problembehandlung bereitzustellen. Einer der folgenden Werte:<br /><br /> 0: Die Protokollierung ist deaktiviert (Standard)<br /><br /> 1 – Nur Fehler<br /><br /> 2: Fehler und Warnungen<br /><br /> Weitere Informationen finden Sie unter [Alter Server Configuration &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
 |SqlDumperDumpFlags|BIGINT|SQLDumper-Dumpflags bestimmen den Typ der mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierten Dumpdateien. Die Standardeinstellung ist 0.|  

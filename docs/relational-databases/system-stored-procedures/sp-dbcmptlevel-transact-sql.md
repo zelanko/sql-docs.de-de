@@ -1,4 +1,5 @@
 ---
+description: sp_dbcmptlevel (Transact-SQL)
 title: sp_dbcmptlevel (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c5200a785b533a4d013f7e9b24eed2fac863ba7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b1571beb279f20cd5f887589b11c8fc72bec41a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493388"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85867253"
   Legt für bestimmte Verhalten der Datenbank fest, dass sie mit der angegebenen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompatibel sein müssen.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Verwenden Sie stattdessen [ALTER DATABASE-Kompatibilitäts Grad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen [ALTER DATABASE-Kompatibilitäts Grad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] name`Der Name der Datenbank, für die der Kompatibilitäts Grad geändert werden soll. Datenbanknamen müssen den Regeln für Bezeichner entsprechen. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @dbname = ] name` Der Name der Datenbank, für die der Kompatibilitäts Grad geändert werden soll. Datenbanknamen müssen den Regeln für Bezeichner entsprechen. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
-`[ @new_cmptlevel = ] version`Die Version von, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der die Datenbank kompatibel gemacht werden soll. die *Version* ist vom Datentyp **tinyint**. der Standardwert ist NULL. Folgende Werte sind zulässig:  
+`[ @new_cmptlevel = ] version` Die Version von, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der die Datenbank kompatibel gemacht werden soll. die *Version* ist vom Datentyp **tinyint**. der Standardwert ist NULL. Folgende Werte sind zulässig:  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -65,7 +66,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  Wenn *Name* ohne *Version*angegeben wird, [!INCLUDE[ssDE](../../includes/ssde-md.md)] gibt eine Meldung zurück, die den aktuellen Kompatibilitäts Grad der angegebenen Datenbank anzeigt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Eine Beschreibung der Kompatibilitäts Grade finden Sie unter [ALTER DATABASE-Kompatibilitäts Grad &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="permissions"></a>Berechtigungen  

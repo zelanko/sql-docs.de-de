@@ -1,4 +1,5 @@
 ---
+description: SQLDescribeCol-Funktion
 title: SQLDescribeCol-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c727f6b36930b0d2ad0d5a61592b83bcd4995426
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4007d5edbd400e65ea92d8c5dcab947a53779ec4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491325"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol-Funktion
 **Konformitäts**  
@@ -61,18 +62,18 @@ SQLRETURN SQLDescribeCol(
   
  Wenn *ColumnName* NULL ist, gibt *namelengthptr* weiterhin die Gesamtzahl der Zeichen zurück (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten), die im Puffer zurückgegeben werden können, auf den von *ColumnName*verwiesen wird.  
   
- *Pufferlänge*  
+ *BufferLength*  
  Der Länge des **ColumnName* -Puffers in Zeichen.  
   
  *Namelengthptr*  
- Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (ausgenommen der NULL-Beendigung) zurückgegeben werden \*soll, die in *ColumnName*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als oder gleich *BufferLength*ist, wird der Spaltenname in \* *ColumnName* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (ausgenommen der NULL-Beendigung) zurückgegeben werden soll, die in \* *ColumnName*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als oder gleich *BufferLength*ist, wird der Spaltenname in \* *ColumnName* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
  *DataTypePtr*  
  Ausgeben Zeiger auf einen Puffer, in den der SQL-Datentyp der Spalte zurückgegeben werden soll. Dieser Wert wird aus dem SQL_DESC_CONCISE_TYPE-Feld des IRD gelesen. Dies ist einer der Werte in SQL- [Datentypen](../../../odbc/reference/appendixes/sql-data-types.md)oder ein Treiber spezifischer SQL-Datentyp. Wenn der Datentyp nicht bestimmt werden kann, gibt der Treiber SQL_UNKNOWN_TYPE zurück.  
   
- In ODBC 3. " *x*", "SQL_TYPE_DATE", "SQL_TYPE_TIME" oder "SQL_TYPE_TIMESTAMP" wird in * \*"DataTypePtr* " für Datums-, Uhrzeit-oder Zeitstempel Daten zurückgegeben. in ODBC 2. *x*, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP wird zurückgegeben. Der Treiber-Manager führt die erforderlichen Zuordnungen bei ODBC 2 aus. die *x* -Anwendung arbeitet mit ODBC 3. *x* -Treiber oder bei ODBC 3. die *x* -Anwendung arbeitet mit ODBC 2. *x* -Treiber  
+ In ODBC 3. " *x*", "SQL_TYPE_DATE", "SQL_TYPE_TIME" oder "SQL_TYPE_TIMESTAMP" wird in " * \* DataTypePtr* " für Datums-, Uhrzeit-oder Zeitstempel-Daten bzw. in ODBC 2 zurückgegeben.* x*, SQL_DATE, SQL_TIME oder SQL_TIMESTAMP wird zurückgegeben. Der Treiber-Manager führt die erforderlichen Zuordnungen bei ODBC 2 aus. die *x* -Anwendung arbeitet mit ODBC 3. *x* -Treiber oder bei ODBC 3. die *x* -Anwendung arbeitet mit ODBC 2. *x* -Treiber  
   
- Wenn *ColumnNumber* gleich 0 (für eine Lesezeichen Spalte) ist, wird SQL_BINARY in * \*DataTypePtr* für Lesezeichen mit variabler Länge zurückgegeben. (SQL_INTEGER wird zurückgegeben, wenn Lesezeichen von ODBC 3 verwendet werden. *x* -Anwendung, die mit ODBC 2 arbeitet. *x* -Treiber oder ODBC 2. *x* -Anwendung, die mit ODBC 3 arbeitet. *x* -Treiber.)  
+ Wenn *ColumnNumber* gleich 0 (für eine Lesezeichen Spalte) ist, wird SQL_BINARY in * \* DataTypePtr* für Lesezeichen mit variabler Länge zurückgegeben. (SQL_INTEGER wird zurückgegeben, wenn Lesezeichen von ODBC 3 verwendet werden. *x* -Anwendung, die mit ODBC 2 arbeitet. *x* -Treiber oder ODBC 2. *x* -Anwendung, die mit ODBC 3 arbeitet. *x* -Treiber.)  
   
  Weitere Informationen zu diesen Datentypen finden Sie unter [SQL-Daten](../../../odbc/reference/appendixes/sql-data-types.md) Typen in Anhang D: Datentypen. Informationen zu treiberspezifischen SQL-Datentypen finden Sie in der Dokumentation des Treibers.  
   
@@ -97,14 +98,14 @@ SQLRETURN SQLDescribeCol(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLDescribeCol** entweder SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLDescribeCol** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichen folgen Daten, rechts abgeschnitten|Der \* *puffercolumnname* war nicht groß genug, um den gesamten Spaltennamen zurückzugeben, sodass der Spaltenname abgeschnitten wurde. Die Länge des nicht abgeschnittene Spaltennamens wird in **namelengthptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07005|Die vorbereitete Anweisung ist keine *Cursor Spezifikation* .|Die mit dem *StatementHandle* verknüpfte Anweisung hat kein Resultset zurückgegeben. Es waren keine zu beschreiften Spalten vorhanden.|  
 |07009|Ungültiger deskriptorindex.|(DM) der für das Argument *ColumnNumber* angegebene Wert war gleich 0, und die Option SQL_ATTR_USE_BOOKMARKS Anweisung war SQL_UB_OFF.<br /><br /> Der für das Argument *ColumnNumber* angegebene Wert war größer als die Anzahl der Spalten im Resultset.|  
 |08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen. Anschließend wurde die Funktion erneut für " *StatementHandle*" aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als **SQLDescribeCol** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) die Funktion wurde vor dem Aufrufen von **SQLPrepare**, **SQLExecute**oder einer Katalog Funktion für das Anweisungs Handle aufgerufen.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
@@ -130,7 +131,7 @@ SQLRETURN SQLDescribeCol(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Binden eines Puffers an eine Spalte in einem Resultset|[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |Abbrechen der Anweisungs Verarbeitung|[SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
@@ -139,6 +140,6 @@ SQLRETURN SQLDescribeCol(
 |Zurückgeben der Anzahl von Resultsetspalten|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |Vorbereiten einer Anweisung für die Ausführung|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

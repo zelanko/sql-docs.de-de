@@ -1,4 +1,5 @@
 ---
+description: sp_setdefaultdatatypemapping (Transact-SQL)
 title: sp_setdefaultdatatypemapping (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96e4959ffa88e96d6236b460d515353d6817f656
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d31d4f44d7b1b60c527a5fa8abcf1e9736b1f674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493023"
 ---
 # <a name="sp_setdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,9 +55,9 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @mapping_id = ] mapping_id`Identifiziert eine vorhandene Datentyp Zuordnung.  *mapping_id* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn Sie *mapping_id*angeben, sind die verbleibenden Parameter nicht erforderlich.  
+`[ @mapping_id = ] mapping_id` Identifiziert eine vorhandene Datentyp Zuordnung.  *mapping_id* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn Sie *mapping_id*angeben, sind die verbleibenden Parameter nicht erforderlich.  
   
-`[ @source_dbms = ] 'source_dbms'`Der Name des DBMS, von dem die Datentypen zugeordnet werden. *source_dbms* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
+`[ @source_dbms = ] 'source_dbms'` Der Name des DBMS, von dem die Datentypen zugeordnet werden. *source_dbms* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -66,25 +67,25 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  Sie müssen diesen Parameter angeben, wenn *mapping_id* NULL ist.  
   
-`[ @source_version = ] 'source_version'`Die Versionsnummer des Quell-DBMS. *source_version* ist vom Datentyp **varchar (10)** und hat den Standardwert NULL.  
+`[ @source_version = ] 'source_version'` Die Versionsnummer des Quell-DBMS. *source_version* ist vom Datentyp **varchar (10)** und hat den Standardwert NULL.  
   
-`[ @source_type = ] 'source_type'`Der Datentyp im Quell-DBMS. *source_type* ist vom **Datentyp vom Datentyp sysname**. Sie müssen diesen Parameter angeben, wenn *mapping_id* NULL ist.  
+`[ @source_type = ] 'source_type'` Der Datentyp im Quell-DBMS. *source_type* ist vom **Datentyp vom Datentyp sysname**. Sie müssen diesen Parameter angeben, wenn *mapping_id* NULL ist.  
   
-`[ @source_length_min = ] source_length_min`Die minimale Länge des Datentyps im Quell-DBMS. *source_length_min* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
+`[ @source_length_min = ] source_length_min` Die minimale Länge des Datentyps im Quell-DBMS. *source_length_min* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
   
-`[ @source_length_max = ] source_length_max`Die maximale Länge des Datentyps im Quell-DBMS. *source_length_max* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
+`[ @source_length_max = ] source_length_max` Die maximale Länge des Datentyps im Quell-DBMS. *source_length_max* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
   
-`[ @source_precision_min = ] source_precision_min`Die minimale Genauigkeit des Datentyps im Quell-DBMS. *source_precision_min* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
+`[ @source_precision_min = ] source_precision_min` Die minimale Genauigkeit des Datentyps im Quell-DBMS. *source_precision_min* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
   
-`[ @source_precision_max = ] source_precision_max`Die maximale Genauigkeit des Datentyps im Quell-DBMS. *source_precision_max* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
+`[ @source_precision_max = ] source_precision_max` Die maximale Genauigkeit des Datentyps im Quell-DBMS. *source_precision_max* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
   
-`[ @source_scale_min = ] source_scale_min`Die minimale Skala des Datentyps im Quell-DBMS. *source_scale_min* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @source_scale_min = ] source_scale_min` Die minimale Skala des Datentyps im Quell-DBMS. *source_scale_min* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @source_scale_max = ] source_scale_max`Die maximale Skalierung des Datentyps im Quell-DBMS. *source_scale_max* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @source_scale_max = ] source_scale_max` Die maximale Skalierung des Datentyps im Quell-DBMS. *source_scale_max* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @source_nullable = ] source_nullable`Gibt an, ob der Datentyp im Quell-DBMS den Wert NULL unterstützt. *source_nullable* ist vom Typ **Bit**und hat den Standardwert NULL. **1** bedeutet, dass NULL-Werte unterstützt werden.  
+`[ @source_nullable = ] source_nullable` Gibt an, ob der Datentyp im Quell-DBMS den Wert NULL unterstützt. *source_nullable* ist vom Typ **Bit**und hat den Standardwert NULL. **1** bedeutet, dass NULL-Werte unterstützt werden.  
   
-`[ @destination_dbms = ] 'destination_dbms'`Der Name des Ziel-DBMS. *destination_dbms* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
+`[ @destination_dbms = ] 'destination_dbms'` Der Name des Ziel-DBMS. *destination_dbms* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -94,22 +95,22 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**Sybase**|Das Ziel ist eine Sybase-Datenbank.|  
 |NULL (Standard)||  
   
-`[ @destination_version = ] 'destination_version'`Die Produktversion des Ziel-DBMS. *destination_version* ist vom Datentyp **varchar (10)** und hat den Standardwert NULL.  
+`[ @destination_version = ] 'destination_version'` Die Produktversion des Ziel-DBMS. *destination_version* ist vom Datentyp **varchar (10)** und hat den Standardwert NULL.  
   
-`[ @destination_type = ] 'destination_type'`Der im Ziel-DBMS aufgelistete Datentyp. *destination_type* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @destination_type = ] 'destination_type'` Der im Ziel-DBMS aufgelistete Datentyp. *destination_type* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @destination_length = ] destination_length`Die Länge des Datentyps im Ziel-DBMS. *destination_length* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
+`[ @destination_length = ] destination_length` Die Länge des Datentyps im Ziel-DBMS. *destination_length* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
   
-`[ @destination_precision = ] destination_precision`Die Genauigkeit des Datentyps im Ziel-DBMS. *destination_precision* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
+`[ @destination_precision = ] destination_precision` Die Genauigkeit des Datentyps im Ziel-DBMS. *destination_precision* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
   
-`[ @destination_scale = ] destination_scale`Die Skala des Datentyps im Ziel-DBMS. *destination_scale* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @destination_scale = ] destination_scale` Die Skala des Datentyps im Ziel-DBMS. *destination_scale* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @destination_nullable = ] destination_nullable`Gibt an, ob der Datentyp im Ziel-DBMS den Wert NULL unterstützt. *destination_nullable* ist vom Typ **Bit**und hat den Standardwert NULL. **1** bedeutet, dass NULL-Werte unterstützt werden.  
+`[ @destination_nullable = ] destination_nullable` Gibt an, ob der Datentyp im Ziel-DBMS den Wert NULL unterstützt. *destination_nullable* ist vom Typ **Bit**und hat den Standardwert NULL. **1** bedeutet, dass NULL-Werte unterstützt werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_setdefaultdatatypemapping** wird bei allen Replikations Typen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS verwendet.  
   
  Die standardmäßigen Datentypzuordnungen gelten für alle Replikationstopologien, die das angegebene DBMS enthalten.  

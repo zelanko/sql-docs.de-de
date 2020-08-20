@@ -1,4 +1,5 @@
 ---
+description: Dimensionen (MDX)
 title: Dimensionen (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 84d5ab0caa22c6f35f3e7b790dbfb3348df8ceb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c98167516f9e01525ecd351389c885c48626636e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491417"
 ---
 # <a name="dimensions-mdx"></a>Dimensionen (MDX)
 
@@ -44,7 +45,7 @@ Dimensions(Hierarchy_Name)
  Wenn ein Hierarchie Name angegeben wird, gibt die **Dimensions** Funktion die angegebene Hierarchie zurück. In der Regel verwenden Sie diese Zeichen folgen Version der **Dimensions** Funktion mit benutzerdefinierten Funktionen.  
   
 > [!NOTE]  
->  Die **Measures** -Dimension wird immer durch `Dimensions(0)`dargestellt.  
+>  Die **Measures** -Dimension wird immer durch dargestellt `Dimensions(0)` .  
   
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen wird die **Dimensions** -Funktion verwendet, um den Namen, die Anzahl der Ebenen und die Anzahl der Elemente einer angegebenen Hierarchie zurückzugeben, wobei ein numerischer Ausdruck und ein Zeichen folgen Ausdruck verwendet werden.  

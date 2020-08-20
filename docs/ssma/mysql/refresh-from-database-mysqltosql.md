@@ -1,4 +1,5 @@
 ---
+description: Aktualisieren der Datenbank (MySqlToSql)
 title: Aktualisieren aus der Datenbank (mysqltosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a3ca412381cf31edce8cf735fab630a6db92e5df
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 027aa6557036c54c4b7e143cd94149fa5e8fe4f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492359"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Aktualisieren der Datenbank (MySqlToSql)
 Im Dialogfeld **aus Datenbank aktualisieren** können Sie auswählen, welche Objekte aus der MySQL-Datenbank aktualisiert werden sollen. Zeilen im Dialogfeld sind basierend auf dem Status der Metadaten farblich codiert:  
@@ -31,7 +32,7 @@ Sie können im Dialogfeld **Projekteinstellungen** die Standardeinstellungen fü
   
 Um auf das Dialogfeld **aus Datenbank aktualisieren** zuzugreifen, klicken Sie mit der rechten Maustaste auf ein Objekt im MySQL-metadatenexplorer, und klicken Sie auf **aus Datenbank aktualisieren**  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 |||  
 |-|-|  

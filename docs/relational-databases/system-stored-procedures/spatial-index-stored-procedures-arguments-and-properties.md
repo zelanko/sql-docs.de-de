@@ -1,4 +1,5 @@
 ---
+description: Argumente und Eigenschaften gespeicherter Prozeduren für Räumlichkeitsindizes
 title: Argumente und Eigenschaften von gespeicherten Prozeduren für räumliche Indizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3001731959da3b253ee10f43c333b0c2a8b85380
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9525434eb17f33700f819ef45a8be4392bbfd69a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492875"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Gespeicherte Prozeduren für räumliche Indizes: Argumente und Eigenschaften
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ ms.locfileid: "85626587"
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Argumente  
-`[ @tabname = ] 'tabname'`Der qualifizierte oder nicht qualifizierte Name der Tabelle, für die der räumliche Index angegeben wurde.  
+`[ @tabname = ] 'tabname'` Der qualifizierte oder nicht qualifizierte Name der Tabelle, für die der räumliche Index angegeben wurde.  
   
  Anführungszeichen sind nur dann erforderlich, wenn eine qualifizierte Tabelle angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *tabname ist vom Datentyp* **nvarchar**(776) und hat keinen Standardwert.  
   
-`[ @indexname = ] 'indexname'`Der Name des angegebenen räumlichen Indexes. *Indexname* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
+`[ @indexname = ] 'indexname'` Der Name des angegebenen räumlichen Indexes. *Indexname* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @verboseoutput = ] 'verboseoutput'`Der Bereich von Eigenschaftsnamen und-Werten, die zurückgegeben werden sollen.  
+`[ @verboseoutput = ] 'verboseoutput'` Der Bereich von Eigenschaftsnamen und-Werten, die zurückgegeben werden sollen.  
   
  0 = Haupteigenschaften  
   
@@ -54,9 +55,9 @@ ms.locfileid: "85626587"
   
  *verbotenoutput* ist vom Datentyp **tinyint** und hat keinen Standardwert.  
   
-`[ @query_sample = ] 'query_sample'`Ist ein repräsentatives Abfrage Beispiel, das verwendet werden kann, um die Nützlichkeit des Indexes zu testen. Dabei kann es sich um ein repräsentatives Objekt oder ein Abfragefenster handeln. *query_sample* ist vom Typ **Geometry** und hat keinen Standardwert.  
+`[ @query_sample = ] 'query_sample'` Ist ein repräsentatives Abfrage Beispiel, das verwendet werden kann, um die Nützlichkeit des Indexes zu testen. Dabei kann es sich um ein repräsentatives Objekt oder ein Abfragefenster handeln. *query_sample* ist vom Typ **Geometry** und hat keinen Standardwert.  
   
-`[ @xml_output = ] 'xml_output'`Ein Ausgabeparameter, der das Resultset in einem XML-Fragment zurückgibt. *xml_output* ist **XML** und hat keinen Standardwert.  
+`[ @xml_output = ] 'xml_output'` Ein Ausgabeparameter, der das Resultset in einem XML-Fragment zurückgibt. *xml_output* ist **XML** und hat keinen Standardwert.  
   
 ## <a name="properties"></a>Eigenschaften  
  Legen Sie ** \@ verboseoutput** = 0 so fest, dass Kerneigenschaften zurückgegeben werden, wie in der folgenden Tabelle dargestellt. ** \@ Verbo* Output** > 0, um alle Eigenschaften des räumlichen Indexes zurückzugeben.  
@@ -300,7 +301,7 @@ ms.locfileid: "85626587"
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss ein Mitglied der Datenbankrolle **public** sein. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt. Dies gilt für alle gespeicherten Prozeduren für Räumlichkeitsindizes.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen Menge enthalten.  
   
 ## <a name="examples"></a>Beispiele  
@@ -314,7 +315,7 @@ ms.locfileid: "85626587"
   
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Prozeduren für räumliche Indizes &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   

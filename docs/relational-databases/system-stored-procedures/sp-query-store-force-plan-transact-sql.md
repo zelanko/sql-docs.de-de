@@ -1,4 +1,5 @@
 ---
+description: sp_query_store_force_plan (Transact-SQL)
 title: sp_query_store_force_plan (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2016
@@ -21,12 +22,12 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6aeea1c726e190945095b478e960266908019e0b
-ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
+ms.openlocfilehash: 3aa708d4af93449e2efe3d26cb9b92496c497942
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88046806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493055"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -44,9 +45,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @query_id = ] query_id`Die ID der Abfrage. *query_id* ist vom Datentyp **bigint**und hat keinen Standardwert.  
+`[ @query_id = ] query_id` Die ID der Abfrage. *query_id* ist vom Datentyp **bigint**und hat keinen Standardwert.  
   
-`[ @plan_id = ] plan_id`Die ID des Abfrage Plans, der erzwungen werden soll. *plan_id* ist vom Datentyp **bigint**und hat keinen Standardwert.  
+`[ @plan_id = ] plan_id` Die ID des Abfrage Plans, der erzwungen werden soll. *plan_id* ist vom Datentyp **bigint**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

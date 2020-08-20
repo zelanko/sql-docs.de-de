@@ -1,4 +1,5 @@
 ---
+description: Veröffentlichungsinformationen, Agents (Mergeveröffentlichung)
 title: Veröffentlichungsinformationen, Agents (Mergeveröffentlichung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2aa581588367a96036c62704c47f6ac6924fef5c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce84b55a553b26e6fe9141601987f1e743584699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493888"
 ---
 # <a name="publication-information-agents-merge-publication"></a>Veröffentlichungsinformationen, Agents (Mergeveröffentlichung)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Auf der Registerkarte **Agents** werden Zusammenfassungsinformationen zum Momentaufnahme-Agent für die ausgewählte Veröffentlichung angezeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Ausführliche Informationen und die Aufträge für den Momentaufnahme-Agent können Sie anzeigen, indem Sie mit der rechten Maustaste in die Zeile des jeweiligen Agents klicken und eine Option im Kontextmenü auswählen. Wenn Sie die Anzeige der Daten im Raster ändern möchten, klicken Sie mit der rechten Maustaste auf das Raster, und klicken Sie anschließend auf eine der folgenden Optionen:  
   
 -   **Sortieren**: Sortieren Sie nach einer oder mehreren Spalten im Dialogfeld **Spalten sortieren** .  

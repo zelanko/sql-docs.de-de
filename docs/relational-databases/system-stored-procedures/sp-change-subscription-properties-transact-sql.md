@@ -1,4 +1,5 @@
 ---
+description: sp_change_subscription_properties (Transact-SQL)
 title: sp_change_subscription_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35943489c707d5a1b84313bb7ef6eca9113e36ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da197fc6b4cc8b253b3597981a6973e9b77891bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493431"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,28 +43,28 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @property = ] 'property'`Die Eigenschaft, die geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname**.  
+`[ @property = ] 'property'` Die Eigenschaft, die geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname**.  
   
-`[ @value = ] 'value'`Der neue Wert der-Eigenschaft. der Wert ist vom Datentyp **nvarchar (1000)** und hat keinen Standard *Wert* .  
+`[ @value = ] 'value'` Der neue Wert der-Eigenschaft. der Wert ist vom Datentyp **nvarchar (1000)** und hat keinen Standard *Wert* .  
   
-`[ @publication_type = ] publication_type`Gibt den Replikationstyp der Veröffentlichung an. *publication_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
+`[ @publication_type = ] publication_type` Gibt den Replikationstyp der Veröffentlichung an. *publication_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
 |Wert|Veröffentlichungstyp|  
 |-----------|----------------------|  
 |**0**|Transaktionsreplikation|  
-|**1**|Snapshot|  
+|**1**|Momentaufnahme|  
 |**2**|Merge|  
 |NULL (Standard)|Die Replikation bestimmt den Veröffentlichungstyp. Da die gespeicherte Prozedur mehrere Tabellen durchsuchen muss, ist diese Option langsamer, als wenn der genaue Veröffentlichungstyp angegeben wird.|  
   
  Diese Tabelle beschreibt die Eigenschaften von Artikeln und die Werte für diese Eigenschaften.  
   
-|Eigenschaft|Wert|BESCHREIBUNG|  
+|Eigenschaft|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Gibt den Speicherort des anderen Ordners für die Momentaufnahme an. Wenn NULL festgelegt ist, werden die Momentaufnahmedateien aus dem vom Verleger angegebenen Standardspeicherort übernommen.|  
 |**distrib_job_login**||Anmeldename für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird.|  
@@ -102,7 +103,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_change_subscription_properties** wird bei allen Replikations Typen verwendet.  
   
  **sp_change_subscription_properties** wird für Pullabonnements verwendet.  

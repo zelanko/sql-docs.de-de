@@ -1,4 +1,5 @@
 ---
+description: Auswählen und Konfigurieren von zu testenden Objekten (SybaseToSQL)
 title: Auswählen und Konfigurieren von zu testenden Objekten (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 31cc868cfe2d6fa7cc87e3fc6f89c868c43d17c3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c6bcddffdbb524e10a0686e6e9a82f4abcd30db8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492141"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Auswählen und Konfigurieren von zu testenden Objekten (SybaseToSQL)
 In diesem Schritt wählen Sie die zu testenden Objekte aus und konfigurieren die Einstellungen für den Vergleich der Ausgabeparameter der Prozeduren und Funktionen sowie die Rückgabewerte von Funktionen.  
@@ -35,7 +36,7 @@ Legen Sie die Vergleichs Regeln für Ausgabeparameter und Rückgabewerte auf der
 ### <a name="use-during-comparisons"></a>Verwendung bei Vergleichen  
 Aktiviert die Verwendung des ausgewählten Parameters im Vergleich mit Testergebnissen.  
   
--   Wenn Sie **true**auswählen, vergleicht SSMA den Ausgabewert dieses Parameters nach dem Ausführen der Prozedur auf Sybase mit dem entsprechenden Wert für.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   Wenn Sie **true**auswählen, vergleicht SSMA den Ausgabewert dieses Parameters nach dem Ausführen der Prozedur auf Sybase mit dem entsprechenden Wert für. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Wenn Sie**false**auswählen, wird der Parameter von der Ergebnis Überprüfung ausgeschlossen.  
   
