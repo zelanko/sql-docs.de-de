@@ -1,4 +1,5 @@
 ---
+description: ODBC-Glossar
 title: ODBC-Glossar | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac454a8c57fe6e2f12724440dc37c3a1953e4c85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57b08d48944ee288b4eba849917828b6fe1d4396
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466252"
 ---
 # <a name="odbc-glossary"></a>ODBC-Glossar
 ## <a name="a"></a>Ein  
@@ -71,14 +72,14 @@ ms.locfileid: "81302901"
  **ert**  
  Ein Teil des Anwendungs Speichers, der verwendet wird, um Daten zwischen der Anwendung und dem Treiber zu übergeben. Puffer sind häufig paarweise enthalten: ein *Datenpuffer* und ein *Daten Längenpuffer*.  
   
- **byte**  
+ **Byte**  
  8 Bits oder ein Oktett. *Siehe auch* Octett.  
   
 ## <a name="c"></a>C  
  **C-Datentyp**  
  Der Datentyp einer Variablen in einem C-Programm, in diesem Fall die Anwendung.  
   
- **sieren**  
+ **catalog**  
  Der Satz von Systemtabellen in einer Datenbank, die die Form der Datenbank beschreiben. Wird auch als *Schema* oder *Datenwörterbuch*bezeichnet.  
   
  **Catalog-Funktion**  
@@ -90,7 +91,7 @@ ms.locfileid: "81302901"
  **Client/Server**  
  Eine Datenbankzugriffs Strategie, in der mindestens ein Client über einen Server auf Daten zugreift. Die Clients implementieren in der Regel die Benutzeroberfläche, während der Server den Datenbankzugriff steuert.  
   
- **Kolumne**  
+ **column**  
  Der Container für ein einzelnes Element von Informationen in einer Zeile. Wird auch als " *Field*" bezeichnet.  
   
  **einzusetzen**  
@@ -269,7 +270,7 @@ ms.locfileid: "81302901"
  Ein Bild lauffähigen Cursor, der aktualisierte und gelöschte Zeilen mithilfe eines Keysets erkennt.  
   
 ## <a name="l"></a>L  
- **wahrsten**  
+ **literal**  
  Eine Zeichen Darstellung eines tatsächlichen Datenwerts in einer SQL-Anweisung.  
   
  **gelungen**  
@@ -333,7 +334,7 @@ ms.locfileid: "81302901"
  **Parameter Status Array**  
  Ein Array, das nach einem-Befehl von **SQLExecDirect** oder **SQLExecute**den Status eines Parameters enthält.  
   
- **Eingeschränkte Parallelität**  
+ **Pessimistische Parallelität**  
  Eine Strategie zum Implementieren der Serialisierbarkeit, bei der Zeilen gesperrt werden, sodass Sie von anderen Transaktionen nicht geändert werden können. *Siehe auch* vollständige Parallelität *und* Serialisierbarkeit.  
   
  **positionierter Vorgang**  
@@ -361,7 +362,7 @@ ms.locfileid: "81302901"
  **Turnier**  
  Eine Datenbank, die eine oder mehrere Tabellen enthält.  
   
- **Frage**  
+ **query**  
  Eine SQL-Anweisung. Wird manchmal verwendet, um eine **Select** -Anweisung zu verwenden.  
   
  **Bezeichner in Anführungszeichen**  
@@ -447,13 +448,13 @@ ms.locfileid: "81302901"
  **SQL-Anweisung**  
  Ein vollständiger Ausdruck in SQL, der mit einem Schlüsselwort beginnt und eine Aktion, die ausgeführt werden soll, vollständig beschreibt. Wählen Sie z. b. * from Orders aus. SQL-Anweisungen sollten nicht mit-Anweisungen verwechselt werden.  
   
- **state**  
+ **Status**  
  Eine klar definierte Bedingung eines Elements. Eine Verbindung besteht z. b. aus sieben Zuständen, einschließlich der nicht zugeordneten, zugeordneten, verbundenen und benötigten Daten. Bestimmte Vorgänge können nur ausgeführt werden, wenn sich ein Element in einem bestimmten Zustand befindet. Beispielsweise kann eine Verbindung nur freigegeben werden, wenn Sie sich in einem zugewiesenen Zustand befindet, nicht, wenn Sie sich z. b. in einem verbundenen Zustand befindet.  
   
  **Zustandsübergang**  
  Die Bewegung eines Elements von einem Zustand in einen anderen. ODBC definiert strenge Zustandsübergänge für Umgebungen, Verbindungen und Anweisungen.  
   
- **an**  
+ **statement**  
  Ein Container für alle Informationen im Zusammenhang mit einer SQL-Anweisung. -Anweisungen sollten nicht mit SQL-Anweisungen verwechselt werden.  
   
  **Anweisungs Handle**  
@@ -475,7 +476,7 @@ ms.locfileid: "81302901"
  **Thunking**  
  Die Konvertierung von 16-Bit-Adressen in 32-Bit-Adressen oder umgekehrt, wenn 16-Bit-Anwendungen mit 32-Bit-ODBC-Treibern verwendet werden.  
   
- **Geschäfte**  
+ **transaction**  
  Unteilbare Arbeitseinheit. Die Arbeit in einer Transaktion muss als Ganzes abgeschlossen werden. Wenn bei einem Teil der Transaktion ein Fehler auftritt, misslingt die gesamte Transaktion.  
   
  **Transaktions Isolation**  
@@ -497,5 +498,5 @@ ms.locfileid: "81302901"
  Ein ganzzahliger Wert, der an eine ODBC-Funktion übergeben oder zurückgegeben wird, um den Datentyp einer Anwendungsvariablen, eines Parameters oder einer Spalte anzugeben. ODBC definiert Typindikatoren für C-und SQL-Datentypen.  
   
 ## <a name="v"></a>V  
- **Anschauung**  
+ **view**  
  Eine alternative Methode, um die Daten in einer oder mehreren Tabellen zu betrachten. Eine Sicht wird in der Regel als Teilmenge der Spalten aus einer oder mehreren Tabellen erstellt. In ODBC entsprechen Sichten im Allgemeinen den Tabellen.

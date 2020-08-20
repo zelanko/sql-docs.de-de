@@ -1,4 +1,5 @@
 ---
+description: Aufrufe von Skalarfunktionen
 title: Skalarfunktionsaufrufe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 349599a51b2996f419e6c8656a71bc9e30146542
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6d0f77adaf6284bceac126b3539121cbdb174ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465588"
 ---
 # <a name="scalar-function-calls"></a>Aufrufe von Skalarfunktionen
 Skalare Funktionen geben einen Wert für jede Zeile zurück. Die Skalarfunktion "absoluter Wert" nimmt z. b. eine numerische Spalte als Argument an und gibt den absoluten Wert jedes Werts in der Spalte zurück. Die Escapesequenz zum Aufrufen einer Skalarfunktion ist  

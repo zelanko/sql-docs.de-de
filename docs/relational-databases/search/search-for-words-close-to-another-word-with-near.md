@@ -1,4 +1,5 @@
 ---
+description: Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
 title: Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +21,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 401be9b8f231704dc5fd44860d03208cc1fa7a5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fb4746b2dda07cfcc4872f3bc987df3276f8859
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464995"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Sie können in einem *CONTAINS*-Prädikat oder in einer **CONTAINSTABLE**-Funktion mithilfe des [Näherungsbegriffs](../../t-sql/queries/contains-transact-sql.md) [NEAR](../../relational-databases/system-functions/containstable-transact-sql.md) nach Wörtern oder Ausdrücken suchen, die sich ähnlich sind. 
+  Sie können in einem [CONTAINS](../../t-sql/queries/contains-transact-sql.md)-Prädikat oder in einer [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-Funktion mithilfe des *Näherungsbegriffs* **NEAR** nach Wörtern oder Ausdrücken suchen, die sich ähnlich sind. 
   
 ##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> Übersicht über NEAR  
 **NEAR** umfasst die folgenden Funktionen:  
@@ -102,11 +103,11 @@ GO
 ## <a name="how-maximum-distance-is-measured"></a>Messen des maximalen Abstands  
  Ein bestimmter maximaler Abstand (z. B. 10 oder 25) gibt an, wie viele Nicht-Suchbegriffe (einschließlich von Stoppwörtern) in einer angegebenen Zeichenfolge zwischen dem Suchbegriff und dem letzten Suchbegriff auftreten können. `NEAR((dogs, cats, "hunting mice"), 3)` gibt z. B. die folgende Zeile zurück, in der die Gesamtzahl der Nicht-Suchbegriffe gleich 3 ist ("`enjoy`", "`but`" und "`avoid`"):  
   
- „`Cats` `enjoy` `hunting mice``, but avoid` `dogs``.`“  
+ "`Cats` `enjoy` `hunting mice``, but avoid` `dogs``.`"  
   
  Derselbe NEAR-Begriff würde nicht die folgende Zeile zurückgeben, da der maximale Abstand durch die vier Nicht-Suchbegriffe ("`enjoy`", "`but`", "`usually`" und "`avoid`") überschritten wird:  
   
- „`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`“  
+ "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>Kombinieren von NEAR mit anderen Begriffen  
  Sie können NEAR mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Beispiel:  

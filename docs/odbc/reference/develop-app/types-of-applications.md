@@ -1,4 +1,5 @@
 ---
+description: Anwendungstypen
 title: Anwendungs Typen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f14326c9cec1eb89e431154c91b680e4688fcdfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54056a6111924fb584ac35a65d6f74e8dab1ba6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465550"
 ---
 # <a name="types-of-applications"></a>Anwendungstypen
 ODBC-Anwendungen können wie folgt klassifiziert werden:  
@@ -41,7 +42,7 @@ ODBC-Anwendungen können wie folgt klassifiziert werden:
 -   **Reines ODBC 2.**  
      **_x_ Unicode-Anwendung** ein reines ODBC 2. *neu* kompilierte Anwendung, die Unicode-kompatibel ist und den SQL_WCHAR-Datentyp verwendet.  
   
--   **Reine Open Group-und ISO**--**kompatible ODBC-Anwendung** eine 32-Bit-Anwendung, die Folgendes hat:  
+-   **Reine offene Gruppe und ISO** - **kompatible ODBC-Anwendung** Eine 32-Bit-Anwendung, die Folgendes hat:  
   
     -   Ruft Funktionen auf, die in den Standards Open Group oder ISO CLI definiert sind. (Diese Funktionen können als veraltet markierte 3,0-Funktionen enthalten.)  
   

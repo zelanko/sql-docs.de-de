@@ -1,4 +1,5 @@
 ---
+description: Native Fehlermeldungen des Visual FoxPro-ODBC-Treibers
 title: Native Fehlermeldungen von Visual FoxPro-ODBC-Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56d65221ba90b217521fa6a7563d70b7fc44f940
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a4f4a57bc85e33708bd190aae833327e226d34ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466312"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Native Fehlermeldungen des Visual FoxPro-ODBC-Treibers
 In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxPro-ODBC-Treiber enthalten sind.  

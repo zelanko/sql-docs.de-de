@@ -1,4 +1,5 @@
 ---
+description: semantickeyphrasetable (Transact-SQL)
 title: semantickeyphraltable (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8026760d93132e3a18b51145bc1802e416bc0934
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464797"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ SEMANTICKEYPHRASETABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentation  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumente  
  **Tabelle**  
  Ist der Name einer Tabelle, für die die Volltext- und die semantische Indizierung aktiviert ist.  
   
@@ -67,7 +68,7 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
  In der folgenden Tabelle werden die Schlüsselausdrücke beschrieben, die von dieser Rowset-Funktion zurückgegeben werden.  
   
-|Column_name|Typ|BESCHREIBUNG|  
+|Column_name|type|Beschreibung|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|Die ID der Spalte, aus der der aktuelle Schlüsselausdruck extrahiert und indiziert wurde.<br /><br /> Im Abschnitt über die COL_NAME-Funktion und COLUMNPROPERTY-Funktion finden Sie ausführliche Informationen zum Abrufen des Spaltennamens aus "column_id" und umgekehrt.|  
 |**document_key**|**\***<br /><br /> Dieser Schlüssel stimmt mit dem Typ des eindeutigen Schlüssels in der Quelltabelle überein.|Eindeutiger Schlüsselwert des Dokuments oder der Zeile, anhand dem der aktuelle Schlüsselausdruck indiziert wurde.|  
@@ -91,7 +92,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>Beispiele  
   
-###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a>Beispiel 1: Suchen der wichtigsten Schlüssel Ausdrücke in einem bestimmten Dokument  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a> Beispiel 1: Suchen der wichtigsten Schlüssel Ausdrücke in einem bestimmten Dokument  
  Im folgenden Beispiel werden die obersten 10 Schlüsselausdrücke aus dem von der @DocumentId-Variable in der Spalte "Dokument" der Production.Document-Tabelle der AdventureWorks-Beispieldatenbank angegebenen Dokument abgerufen. Die @DocumentId-Variable stellt einen Wert aus der Schlüsselspalte des Volltextindexes dar. Die **SEMANTICKEYPHRASETABLE** -Funktion ruft diese Ergebnisse effizient mithilfe eines Indexsuchvorgangs anstelle eines Tabellenscans ab. In diesem Beispiel wird davon ausgegangen, dass die Spalte für die Volltextindizierung und die semantische Indizierung konfiguriert wurde.  
   
 ```sql  
@@ -106,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>Beispiel 2: Suchen der wichtigsten Dokumente, die einen bestimmten Schlüssel Ausdruck enthalten  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a> Beispiel 2: Suchen der wichtigsten Dokumente, die einen bestimmten Schlüssel Ausdruck enthalten  
  Im folgenden Beispiel werden die obersten 25 Dokumente mit dem Schlüsselausdruck „Bracket“ in der Spalte „Document“ der Production.Document-Tabelle der AdventureWorks-Beispieldatenbank abgerufen. In diesem Beispiel wird davon ausgegangen, dass die Spalte für die Volltextindizierung und die semantische Indizierung konfiguriert wurde.  
   
 ```sql  

@@ -1,4 +1,5 @@
 ---
+description: Erwägen der zu verwendenden Datenbankfunktionen
 title: Berücksichtigen der zu verwendenden Datenbankfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9d966781def1c3eab6a9568eab07ab591326171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2abaed3806514a161c5c506d8bad89b4d3b75153
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465892"
 ---
 # <a name="considering-database-features-to-use"></a>Erwägen der zu verwendenden Datenbankfunktionen
 Nachdem der grundlegende Grad an Interoperabilität bekannt ist, müssen die von der Anwendung verwendeten Datenbankfunktionen berücksichtigt werden. Welche SQL-Anweisungen werden z. b. von der Anwendung ausgeführt? Verwendet die Anwendung scrollbare Cursor? Handel? Abläufen? Lange Daten? Ideen zu den Funktionen, die möglicherweise nicht von allen DBMSs unterstützt werden, finden Sie in den Beschreibungen der Funktionen [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)und [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) und [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Die von einer Anwendung benötigten Features können einige DBMSs aus der Liste der Ziel-DBMSs entfernen. Sie können auch anzeigen, dass die Anwendung auf einfache Weise viele DBMSs als Ziel hat.  

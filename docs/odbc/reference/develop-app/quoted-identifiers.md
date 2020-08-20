@@ -1,4 +1,5 @@
 ---
+description: Bezeichner in Anführungszeichen
 title: Bezeichner in Anführungszeichen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0c03fa8bbc059566288997b29c899056f26de252
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd317e5d92618d8b458d6d28fa870c6945e136fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465680"
 ---
 # <a name="quoted-identifiers"></a>Bezeichner in Anführungszeichen
 In einer SQL-Anweisung müssen Bezeichner mit Sonderzeichen oder Match-Schlüsselwörtern in *bezeichneranführungs Zeichen*eingeschlossen werden. in diesen Zeichen eingeschlossene Bezeichner werden als Bezeichner in Anführungs *Zeichen (auch als* *Begrenzungs* Bezeichner bezeichnet in SQL-92) bezeichnet. Beispielsweise wird der Bezeichner für die Konten Kennung in der folgenden **Select** -Anweisung angegeben:  

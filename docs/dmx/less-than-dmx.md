@@ -1,5 +1,6 @@
 ---
-title: '&lt;(Kleiner als) (DMX) | Microsoft-Dokumentation'
+description: '&lt; (Kleiner als) DMX'
+title: '&lt; (Kleiner als) (DMX) | Microsoft-Dokumentation'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 54cf739762944683b1fe9063aa3e79896639ffc4
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 9e57072bd8742d2d0da6fad11043c104297ab4f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466532"
 ---
-# <a name="lt-less-than-dmx"></a>&lt;(Kleiner als) DMX
+# <a name="lt-less-than-dmx"></a>&lt; (Kleiner als) DMX
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Führt einen Vergleich aus, bei dem ermittelt wird, ob der Wert eines DMX-Ausdrucks (Data Mining-Erweiterungen) kleiner als der Wert eines anderen DMX-Ausdrucks ist.  

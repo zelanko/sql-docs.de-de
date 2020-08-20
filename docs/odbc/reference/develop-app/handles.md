@@ -1,4 +1,5 @@
 ---
+description: Ziehpunkte
 title: Handles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 713c2a71ec195b75d682b97239413e98d07b5861
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e9d2445dbbd676e8d48be519c1649d550fd89c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465762"
 ---
 # <a name="handles"></a>Ziehpunkte
 Handles sind nicht transparente 32-Bit-Werte, die ein bestimmtes Element bezeichnen. in ODBC kann es sich bei diesem Element um eine Umgebung, eine Verbindung, eine Anweisung oder einen Deskriptor handeln. Wenn die Anwendung **sqlzugeteilt**aufruft, erstellt der Treiber-Manager oder Treiber ein neues Element vom angegebenen Typ und gibt dessen Handle an die Anwendung zurück. Die Anwendung verwendet das Handle später, um dieses Element beim Aufrufen von ODBC-Funktionen zu identifizieren. Der Treiber-Manager und der Treiber verwenden das Handle, um Informationen über das Element zu suchen.  

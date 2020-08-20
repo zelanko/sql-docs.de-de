@@ -1,4 +1,5 @@
 ---
+description: SET DELETED-Befehl
 title: Löschbefehl festlegen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b3302dc7eecca7135dab9dff5afa376169be0f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60e00af582e0440957c8a4e743624e00f0ba3e58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466372"
 ---
 # <a name="set-deleted-command"></a>SET DELETED-Befehl
 Gibt an, ob für den Löschvorgang markierte Datensätze verarbeitet werden und ob Sie zur Verwendung in anderen Befehlen verfügbar sind.  
@@ -42,5 +43,5 @@ SET DELETED ON | OFF
 > [!IMPORTANT]  
 >  Set Deleted wird ignoriert, wenn der Standardbereich für den Befehl der aktuelle Datensatz ist oder wenn Sie einen Bereich eines einzelnen Datensatzes einschließen. Der Index ignoriert die gelöschten Sätze immer und indiziert alle Datensätze in der Tabelle.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [DELETE (SQL-Befehl)](../../odbc/microsoft/delete-sql-command.md)

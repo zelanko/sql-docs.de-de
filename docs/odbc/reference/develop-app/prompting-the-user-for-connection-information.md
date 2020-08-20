@@ -1,4 +1,5 @@
 ---
+description: Aufforderung an Benutzer zur Eingabe von Verbindungsinformationen
 title: Benutzer werden zur Eingabe von Verbindungsinformationen aufgefordert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b0f120a1076f14f5e67d506e52a446e0a3d4713
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f52e0d120fb150fe58b850107847d7ef5df20e7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465712"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Aufforderung an Benutzer zur Eingabe von Verbindungsinformationen
 Wenn die Anwendung **SQLCONNECT** verwendet und den Benutzer zur Eingabe von Verbindungsinformationen auffordern muss, wie z. b. Benutzername und Kennwort, muss dies selbst durchführen. Dies ermöglicht es der Anwendung, das "Aussehen und fühlen" zu steuern, es kann jedoch dazu gezwungen werden, dass die Anwendung treiberspezifischen Code enthält. Dieser Fehler tritt auf, wenn die Anwendung den Benutzer zur Eingabe von treiberspezifischen Verbindungsinformationen auffordern muss. Dies stellt eine unmögliche Situation für generische Anwendungen dar, die für die Arbeit mit allen Treibern entwickelt wurden, einschließlich Treiber, die beim Schreiben der Anwendung nicht vorhanden sind.  

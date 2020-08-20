@@ -1,4 +1,5 @@
 ---
+description: Ausführen eines Abgleichsprojekts
 title: Ausführen eines Abgleichsprojekts
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0a8a71349a5948c4ac162b82bd92d3b022446cb0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f1d75abc4a4e7f5221c500c211e915fa51bd49b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466673"
 ---
 # <a name="run-a-matching-project"></a>Ausführen eines Abgleichsprojekts
 
@@ -43,7 +44,7 @@ ms.locfileid: "85883332"
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um ein Abgleichsprojekt auszuführen.  
   
-##  <a name="first-step-starting-a-matching-project"></a><a name="StartingaMatchingProject"></a>Erster Schritt: Starten eines abgleichsprojekts  
+##  <a name="first-step-starting-a-matching-project"></a><a name="StartingaMatchingProject"></a> Erster Schritt: Starten eines abgleichsprojekts  
  Sie führen die Abgleichsaktivität in einem Data Quality-Projekt aus, das Sie in der DQS-Clientanwendung erstellen.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
@@ -75,7 +76,7 @@ ms.locfileid: "85883332"
     > [!NOTE]  
     >  Klicken Sie auf **Schließen** , um die Phase des Abgleichsprojekts zu speichern und zur DQS-Startseite zurückzukehren. Wenn Sie dieses Projekt das nächste Mal öffnen, befindet es sich in derselben Phase. Klicken Sie auf **Abbrechen** , um die Abgleichsaktivität zu beenden, ohne Ihre Arbeit zu speichern, und kehren Sie zur DQS-Startseite zurück.  
   
-##  <a name="matching-stage"></a><a name="MatchingStage"></a>Abgleichsphase  
+##  <a name="matching-stage"></a><a name="MatchingStage"></a> Abgleichsphase  
  In dieser Phase führen Sie einen computerunterstützten Abgleichsprozess aus, der anzeigt, wie viele Übereinstimmungen basierend auf den Abgleichsregeln in den Quelldaten enthalten sind. Durch diesen Prozess wird eine Abgleichsergebnistabelle generiert, in der die von DQS identifizierten Cluster, jeder Datensatz im Cluster mit der zugehörigen Datensatz-ID und die Treffergenauigkeit sowie der anfänglich führende Datensatz für den Cluster angezeigt werden. Der führende Datensatz im Cluster wird zufällig ausgewählt. Sie bestimmen den überdauernden Datensatz durch Auswählen der Survivorship-Regel auf der Seite **Exportieren** , wenn Sie das Abgleichsprojekt ausführen. Jede zusätzliche Zeile in einem Cluster wird als Treffer angesehen, dessen Treffergenauigkeit (im Vergleich zum führenden Datensatz) in der Ergebnistabelle angegeben wird. Die Clusternummer ist mit der Datensatz-ID für den führenden Datensatz im Cluster identisch.  
   
  Sie können die Abgleichsergebnisse nach den gewünschten Daten filtern und unerwünschte Treffer ablehnen. Sie können Profilerstellungsdaten für den gesamten Abgleichsprozess, Details zu den angewendeten Abgleichsregeln und Statistiken zu den Abgleichsergebnissen im Ganzen anzeigen. Der Abgleichsprozess kann überlappende oder nicht überlappende Cluster identifizieren. wenn er mehrfach ausgeführt wird, kann er zudem auf Daten, die neu aus der Quelle kopiert und indiziert wurden, oder auf frühere Daten angewendet werden.  
@@ -166,10 +167,10 @@ ms.locfileid: "85883332"
     > [!NOTE]  
     >  Wenn Sie ein Abgleichsprojekt beendet haben und es dann erneut verwenden, verwendet es die Wissensdatenbank in dem Zustand, als es veröffentlicht wurde. Es werden keine Änderungen berücksichtigt, die Sie seit Abschluss des Projekts an der Wissensdatenbank vorgenommen haben. Um die Änderungen oder eine neue Wissensdatenbank zu verwenden, müssen Sie ein neues Abgleichsprojekt erstellen. Wenn Sie jedoch ein Abgleichsprojekt erstellt, aber noch nicht abgeschlossen haben, werden alle an der Abgleichsrichtlinie vorgenommenen und veröffentlichten Änderungen beim Ausführen des Abgleichs in dem Projekt verwendet.  
   
-##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Ausführen eines abgleichsprojekts  
+##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a> Nachverfolgung: nach dem Ausführen eines abgleichsprojekts  
  Nachdem Sie ein Abgleichsprojekt ausgeführt haben, können Sie die Abgleichsrichtlinie in der Wissensdatenbank ändern und ein anderes Abgleichsprojekt basierend auf der aktualisierten Abgleichsrichtlinie erstellen und ausführen. Weitere Informationen finden Sie unter [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a>Registerkarten für Profiler und Ergebnisse  
+##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a> Registerkarten für Profiler und Ergebnisse  
  Die Registerkarten „Profiler“ und „Ergebnisse“ enthalten Statistiken für den Abgleichsprozess.  
   
 ### <a name="profiler-tab"></a>Registerkarte „Profiler“  

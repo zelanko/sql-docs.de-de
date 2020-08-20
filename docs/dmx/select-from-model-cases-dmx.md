@@ -1,4 +1,5 @@
 ---
+description: Wählen Sie aus dem &lt; Modell aus &gt; . Fälle (DMX)
 title: Wählen Sie aus dem &lt; Modell aus &gt; . Fälle (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fa1da730fc370995b22927604f9550c865877f4
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466523"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Wählen Sie aus dem &lt; Modell aus &gt; . Fälle (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,7 +38,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- Dies ist optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *Ausdrucks Liste*  
  Eine Liste von Ausdrücken, die durch Trennzeichen voneinander getrennt sind. Ein Ausdruck kann u. a. Spaltenbezeichner, benutzerdefinierte Funktionen und VBA-Funktionen einschließen.  
@@ -51,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- Dies ist optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn Sie Drillthrough sowohl für das Miningmodell als auch für die Miningstruktur aktivieren, können Benutzer, die Mitglied einer Rolle mit Drillthroughberechtigungen für das Miningmodell und die Miningstruktur sind, auf Spalten in der Miningstruktur zugreifen, die nicht Teil des Miningmodells sind. Daher sollten Sie zum Schutz sensibler Daten oder persönlicher Informationen die Datenquellen Sicht so erstellen, dass persönliche Informationen maskiert werden, und die **AllowDrillThrough** -Berechtigung für eine Mining Struktur nur bei Bedarf erteilen.  

@@ -1,4 +1,5 @@
 ---
+description: Unäre Operatoren
 title: Unäre Operatoren | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 32f5084190642bd4237d225404c92f0c4754da7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466472"
 ---
 # <a name="unary-operators"></a>Unäre Operatoren
 
@@ -22,7 +23,7 @@ ms.locfileid: "68893555"
   
  MDX unterstützt die unären Operatoren, die in der folgenden Tabelle aufgelistet sind.  
   
-|Operator|BESCHREIBUNG|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |[- (Negativ)](../mdx/negative-mdx.md)|Gibt den negativen Wert eines numerischen Ausdrucks zurück.|  
 |[+ (Positive) (+ (Positiv))](../mdx/positive-mdx.md)|Gibt den positiven Wert eines numerischen Ausdrucks zurück.|  

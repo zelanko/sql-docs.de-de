@@ -1,4 +1,5 @@
 ---
+description: Verwenden der DQS-Rechtschreibprüfung
 title: Verwenden der DQS-Rechtschreibprüfung
 ms.date: 11/08/2011
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ca84d1706641c15d7043e96ead0013fef3ed606a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5da3a38baa2038f923df5365b4eacb0bc60dcea0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466626"
 ---
 # <a name="use-the-dqs-speller"></a>Verwenden der DQS-Rechtschreibprüfung
 

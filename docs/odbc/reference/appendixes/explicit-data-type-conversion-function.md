@@ -1,4 +1,5 @@
 ---
+description: Explizite Datentyp-Konvertierungsfunktion
 title: Explizite Datentyp-Konvertierungs Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed0a1e9155eeb3e2147bed3dd31e78176bdc38d2
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: da897469d26cd0403dc023cfcd3f3e03bfceeba4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466187"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Explizite Datentyp-Konvertierungsfunktion
 Eine explizite Datentyp Konvertierung wird in Bezug auf SQL-Datentyp Definitionen angegeben.  
@@ -79,7 +80,7 @@ Eine explizite Datentyp Konvertierung wird in Bezug auf SQL-Datentyp Definitione
 
  Die ODBC-Syntax für die explizite Datentyp-Konvertierungs Funktion unterstützt keine Angabe des Konvertierungs Formats. Wenn die Spezifikation expliziter Formate von der zugrunde liegenden Datenquelle unterstützt wird, muss ein Treiber einen Standardwert angeben oder die Format Spezifikation implementieren.  
   
- Das Argument *value_exp* kann ein Spaltenname, das Ergebnis einer anderen Skalarfunktion oder ein numerisches oder ein Zeichenfolgenliteralwert sein. Zum Beispiel:  
+ Das Argument *value_exp* kann ein Spaltenname, das Ergebnis einer anderen Skalarfunktion oder ein numerisches oder ein Zeichenfolgenliteralwert sein. Beispiel:  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

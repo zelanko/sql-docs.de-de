@@ -1,4 +1,5 @@
 ---
+description: Argumente des Musterwerts
 title: Muster Wert Argumente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b8e7b7de64d8051118089a54cf14eb45dc96f74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a014c63c7fff6b82bbdd26d9fd5b4391c29d0ce2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465752"
 ---
 # <a name="pattern-value-arguments"></a>Argumente des Musterwerts
 Einige Argumente in den Katalog Funktionen, wie z. b. das *TableName* -Argument in **SQLTables**, akzeptieren Suchmuster. Diese Argumente akzeptieren Suchmuster, wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_FALSE festgelegt ist. Sie sind bezeichnerargumente, die kein Suchmuster akzeptieren, wenn dieses Attribut auf SQL_TRUE festgelegt ist.  
@@ -30,16 +31,16 @@ Einige Argumente in den Katalog Funktionen, wie z. b. das *TableName* -Argument 
   
 -   Ein Prozentzeichen (%), das eine beliebige Sequenz von NULL oder mehr Zeichen darstellt.  
   
--   Ein Escapezeichen, das Treiber spezifisch ist und verwendet wird, um Unterstriche, Prozentzeichen und das Escapezeichen als Literale einzuschließen. Wenn das Escapezeichen vor einem nicht-Sonderzeichen steht, hat das Escapezeichen keine besondere Bedeutung. Wenn das Escapezeichen einem Sonderzeichen vorangestellt ist, wird es mit Escapezeichen versehen. "\A" würde z. b. als zwei Zeichen behandelt werden:\\"" und "a", "\\%" wird jedoch als nicht spezielles einzelnes Zeichen "%" behandelt.  
+-   Ein Escapezeichen, das Treiber spezifisch ist und verwendet wird, um Unterstriche, Prozentzeichen und das Escapezeichen als Literale einzuschließen. Wenn das Escapezeichen vor einem nicht-Sonderzeichen steht, hat das Escapezeichen keine besondere Bedeutung. Wenn das Escapezeichen einem Sonderzeichen vorangestellt ist, wird es mit Escapezeichen versehen. "\A" würde z. b. als zwei Zeichen behandelt werden: " \\ " und "a", " \\ %" wird jedoch als nicht spezielles einzelnes Zeichen "%" behandelt.  
   
  Das Escapezeichen wird mit der SQL_SEARCH_PATTERN_ESCAPE-Option in **SQLGetInfo**abgerufen. Sie muss vor allen unterstrichen, Prozentzeichen oder Escapezeichen in einem Argument stehen, das Suchmuster annimmt, um das Zeichen als Literalzeichen einzuschließen. Beispiele sind in der folgenden Tabelle aufgeführt.  
   
-|Suchmuster|BESCHREIBUNG|  
+|Suchmuster|Beschreibung|  
 |--------------------|-----------------|  
 |Ein|Alle Bezeichner, die den Buchstaben A enthalten.|  
 |ABC_|Alle vier Zeichen Bezeichner, die mit ABC beginnen|  
-|ABC\\_|Der Bezeichner abc_, vorausgesetzt, das Escapezeichen ist\\ein umgekehrter Schrägstrich ()|  
-|\\\\%|Alle Bezeichner, die mit einem umgekehrten schräg\\Strich () beginnen, vorausgesetzt, das Escapezeichen ist ein umgekehrter Schrägstrich|  
+|ABC \\ _|Der Bezeichner abc_, vorausgesetzt, das Escapezeichen ist ein umgekehrter Schrägstrich ( \\ )|  
+|\\\\%|Alle Bezeichner, die mit einem umgekehrten Schrägstrich ( \\ ) beginnen, vorausgesetzt, das Escapezeichen ist ein umgekehrter Schrägstrich|  
   
  Es muss besonders darauf geachtet werden, dass Suchmuster Zeichen in Argumenten, die Suchmuster akzeptieren, umgangen werden. Dies gilt insbesondere für den Unterstrich, der häufig in bezeichlern verwendet wird. Ein häufiger Fehler in Anwendungen besteht darin, einen Wert aus einer Katalog Funktion abzurufen und diesen Wert an ein Suchmuster Argument in einer anderen Katalog Funktion zu übergeben. Nehmen wir beispielsweise an, dass eine Anwendung den Tabellennamen MY_TABLE aus dem Resultset für **SQLTables** abruft und diese an **SQLColumns** übergibt, um eine Liste der Spalten in MY_TABLE abzurufen. Anstatt die Spalten für MY_TABLE zu erhalten, erhält die Anwendung die Spalten für alle Tabellen, die dem Suchmuster MY_TABLE entsprechen, z. b. MY_TABLE, MY1TABLE, MY2TABLE usw.  
   

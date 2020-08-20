@@ -1,4 +1,5 @@
 ---
+description: Festlegen oder Ändern der Spaltensortierung
 title: Festlegen oder Ändern der Spaltensortierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/05/2019
@@ -13,12 +14,12 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06e96206160557eaaa71d3b44dd6960182b47a20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c57021e300168a5e912dfce4ce1e0c62f728dfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465602"
 ---
 # <a name="set-or-change-the-column-collation"></a>Festlegen oder Ändern der Spaltensortierung
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "85694976"
         
     Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
   
--   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Weitere Informationen finden Sie unter [Ändern von Spalten (Datenbank-Engine)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [Ändern von Spalten (Datenbank-Engine)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure).  
   
 -   Die **Column.Collation** -Eigenschaft in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   

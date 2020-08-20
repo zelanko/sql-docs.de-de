@@ -1,4 +1,5 @@
 ---
+description: Rowsetgröße
 title: Rowsetgröße | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 11b95768934f96e1587b3c570b2510f3c2849239
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d915d6e11fc7678312eab60c3316815cfabab38e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465608"
 ---
 # <a name="rowset-size"></a>Rowsetgröße
 Welche Rowsetgröße verwendet werden soll, hängt von der Anwendung ab. Bildschirmbasierte Anwendungen folgen in der Regel einer der beiden Strategien. Der erste besteht darin, die Rowsetgröße auf die Anzahl der auf dem Bildschirm angezeigten Zeilen festzulegen. Wenn der Benutzer die Größe des Bildschirms ändert, ändert die Anwendung die Rowsetgröße entsprechend. Die zweite besteht darin, die Rowsetgröße auf eine größere Zahl, z. b. 100, festzulegen, wodurch die Anzahl der Aufrufe an die Datenquelle reduziert wird. Die Anwendung scrollt nach Möglichkeit lokal innerhalb des Rowsets und ruft neue Zeilen nur dann ab, wenn ein Bildlauf außerhalb des Rowsets durchgeführt wird.  

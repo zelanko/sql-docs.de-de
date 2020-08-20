@@ -1,4 +1,5 @@
 ---
+description: model-Datenbank
 title: Model-Datenbank | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/22/2020
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dd0390e7e6b781d5ca5d2b0f5685aeb8fc95c88f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0e1af46a47e6e0e09c8e538fed06ecd1eb1ccc41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465419"
 ---
 # <a name="model-database"></a>model-Datenbank
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

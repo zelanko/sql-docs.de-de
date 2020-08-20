@@ -1,4 +1,5 @@
 ---
+description: SELECT (SQL-Befehl)
 title: SELECT-SQL-Befehl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 640189a5a31d0c21642b037e906bd6361690a9a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466422"
 ---
 # <a name="select---sql-command"></a>SELECT (SQL-Befehl)
 Ruft Daten aus einer oder mehreren Tabellen ab.  
@@ -113,7 +114,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   Wenn Sie zwei Tabellen in eine Abfrage einschließen und keine Joinbedingung angeben, wird jeder Datensatz in der ersten Tabelle mit jedem Datensatz in der zweiten Tabelle verknüpft, solange die Filterbedingungen erfüllt sind. Eine solche Abfrage kann lange Ergebnisse verursachen.  
   
--   Gehen Sie beim beitreten von Tabellen mit leeren Feldern vorsichtig vor, da Visual FoxPro leere Felder abgleicht. Beispielsweise, wenn Sie dem Kunden beitreten. ZIP und Rechnung. ZIP und wenn der Kunde 100 leere Postleitzahlen enthält und die Rechnung 400 leere Postleitzahlen enthält, enthält die Abfrageausgabe 40.000 zusätzliche Datensätze, die sich aus den leeren Feldern ergeben. Verwenden Sie die **empty ()** -Funktion, um leere Datensätze aus der Abfrageausgabe auszuschließen.  
+-   Gehen Sie beim beitreten von Tabellen mit leeren Feldern vorsichtig vor, da Visual FoxPro leere Felder abgleicht. Wenn Sie z. b. an CUSTOMER.ZIP und INVOICE.ZIP teilnehmen und der Kunde 100 leere Postleitzahlen enthält und die Rechnung 400 leere Postleitzahlen enthält, enthält die Abfrageausgabe 40.000 zusätzliche Datensätze, die sich aus den leeren Feldern ergeben. Verwenden Sie die **empty ()** -Funktion, um leere Datensätze aus der Abfrageausgabe auszuschließen.  
   
 -   Sie müssen den and-Operator verwenden, um mehrere Joinbedingungen zu verbinden. Jede Joinbedingung weist die folgende Form auf:  
   
@@ -280,7 +281,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>Hinweise zu Treibern  
  Wenn die Anwendung die ODBC-SQL-Anweisung SELECT an die Datenquelle sendet, konvertiert der Visual FoxPro-ODBC-Treiber den Befehl ohne Übersetzung in den Befehl Visual FoxPro SELECT, es sei denn, der Befehl enthält eine ODBC-Escapesequenz. In eine ODBC-Escapesequenz eingeschlossene Elemente werden in die Syntax von Visual FoxPro konvertiert. Weitere Informationen zur Verwendung von ODBC-Escapesequenzen finden Sie unter [Zeit-und Datumsfunktionen](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) und in der *Microsoft ODBC Programmer es Reference (Escapesequenzen* [in ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [ANSI festlegen](../../odbc/microsoft/set-ansi-command.md)   

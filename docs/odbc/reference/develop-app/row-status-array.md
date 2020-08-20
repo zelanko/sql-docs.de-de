@@ -1,4 +1,5 @@
 ---
+description: Zeilenstatusarray
 title: Zeilen Status Array | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 60dead23fe0051c05698e094f37ddad96b2b337d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8067aaf8724a6634d165d53743cbd0ef2015f6bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465633"
 ---
 # <a name="row-status-array"></a>Zeilenstatusarray
 Zusätzlich zu den Daten können **SQLFetch** und **SQLFetchScroll** ein Array zurückgeben, das den Status der einzelnen Zeilen im Rowset zurückgibt. Dieses Array wird über das SQL_ATTR_ROW_STATUS_PTR Statement-Attribut angegeben. Dieses Array wird von der Anwendung zugeordnet und muss über so viele Elemente verfügen, wie vom SQL_ATTR_ROW_ARRAY_SIZE Anweisungs Attribut angegeben werden. Die Werte im Array werden durch **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**und **SQLSetPos** festgelegt. Die Werte beschreiben den Status der Zeile und ob sich der Status seit dem letzten Abruf geändert hat.  
   
-|Array Wert für Zeilen Status|BESCHREIBUNG|  
+|Array Wert für Zeilen Status|Beschreibung|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|Die Zeile wurde erfolgreich abgerufen und seit der letzten Abruf Vorgang nicht geändert.|  
 |SQL_ROW_SUCCESS_WITH_INFO|Die Zeile wurde erfolgreich abgerufen und seit der letzten Abruf Vorgang nicht geändert. Es wurde jedoch eine Warnung zur Zeile zurückgegeben.|  

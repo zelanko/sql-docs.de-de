@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 4: Hinzufügen der Fehlerflussumleitung mit SSIS'
 title: 'Lektion 4: Hinzufügen der Fehlerflussumleitung mit SSIS | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8858494792a8acd9d1af7aee887c24e45d8829f9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d7ef0a6862e334221fd497a5adc44ffd0ab7990d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466578"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lektion 4: Hinzufügen der Fehlerflussumleitung mit SSIS
 

@@ -1,4 +1,5 @@
 ---
+description: Überschreiben der Standardwerte für die Genauigkeit des führenden Intervallfelds und die Dezimalstellenanzahl für numerische Datentypen
 title: Überschreiben der Standardgenauigkeit und-Skalierung für numerische Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 365c5f69d21dd3a4ad8e89805d81f1b3b0c9dcba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 798e607ff6584bde27791a29e4b20aeb1d7bb3cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466082"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Überschreiben der Standardwerte für die Genauigkeit des führenden Intervallfelds und die Dezimalstellenanzahl für numerische Datentypen
 Wenn das SQL_DESC_TYPE-Feld in einer ARD auf SQL_C_NUMERIC festgelegt wird, indem entweder **SQLBindCol** oder **SQLSetDescField**aufgerufen wird, wird das Feld SQL_DESC_SCALE in der ARD auf 0 festgelegt, und das SQL_DESC_PRECISION Feld wird auf eine vom Treiber definierte Standardgenauigkeit festgelegt. Dies gilt auch, wenn das SQL_DESC_TYPE-Feld in einer APD auf SQL_C_NUMERIC festgelegt ist, indem entweder **SQLBindParameter** oder **SQLSetDescField**aufgerufen wird. Dies gilt für Eingabe-, Eingabe-/Ausgabe-oder Ausgabeparameter.  

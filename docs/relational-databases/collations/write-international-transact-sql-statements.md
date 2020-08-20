@@ -1,4 +1,5 @@
 ---
+description: Schreiben internationaler Transact-SQL-Anweisungen
 title: Schreiben internationaler Transact-SQL-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/24/2019
@@ -18,12 +19,12 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72b2d6056d3a48d21804d02677867a9757f4f671
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8192fcd7d657c5842dfd60fcca36fec3e945413d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465519"
 ---
 # <a name="write-international-transact-sql-statements"></a>Schreiben internationaler Transact-SQL-Anweisungen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,10 +36,10 @@ ms.locfileid: "86003935"
 
     Auf diese Weise werden Probleme mit der Codepagekonvertierung vermieden. Weitere Überlegungen finden Sie unter [Speicherunterschiede zwischen UTF-8 und UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   Ersetzen Sie bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] die Datentypen **char**, **varchar** und **varchar(max)** durch **nchar**, **nvarchar** und **nvarchar(max)** . Wird eine für [ergänzende Zeichen (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) aktivierte Sortierung verwendet, werden die Daten mithilfe von UTF-16 codiert. Wird eine Sortierung ohne ergänzende Zeichen verwendet, werden die Daten mit UCS-2 codiert. Auf diese Weise werden Probleme mit der Codepagekonvertierung vermieden. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Ersetzen Sie bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] die Datentypen **char**, **varchar** und **varchar(max)** durch **nchar**, **nvarchar** und **nvarchar(max)**. Wird eine für [ergänzende Zeichen (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) aktivierte Sortierung verwendet, werden die Daten mithilfe von UTF-16 codiert. Wird eine Sortierung ohne ergänzende Zeichen verwendet, werden die Daten mit UCS-2 codiert. Auf diese Weise werden Probleme mit der Codepagekonvertierung vermieden. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
 
     > [!IMPORTANT]
-    > Der Datentyp **text** ist veraltet und sollte beim Entwickeln nicht verwendet werden. Konvertieren Sie **text**-Daten in **varchar(max)** .
+    > Der Datentyp **text** ist veraltet und sollte beim Entwickeln nicht verwendet werden. Konvertieren Sie **text**-Daten in **varchar(max)**.
   
 -   Verwenden Sie für Vergleiche und Vorgänge für bestimmte Monate oder Wochentage die numerischen Datumseinheiten anstelle der Namenszeichenfolgen. Unterschiedliche Spracheinstellungen geben verschiedene Namen für Monate und Arbeitstage zurück. `DATENAME(MONTH,GETDATE())` gibt beispielsweise `May` zurück, wenn die Sprache auf Englisch, `Mai`, wenn die Sprache auf Deutsch und `mai`, wenn die Sprache auf Französisch festgelegt ist. Verwenden Sie stattdessen eine Funktion wie [DATEPART](../../t-sql/functions/datepart-transact-sql.md), die die Monatszahl anstelle des Namens verwendet. Verwenden Sie DATEPART-Namen, wenn Sie Resultsets erstellen, die für einen Benutzer angezeigt werden sollen, da Datumsbezeichnungen häufig aussagekräftiger sind als eine numerische Darstellung. Codieren Sie jedoch keine Logik, die davon abhängt, ob die angezeigten Namen aus einer bestimmten Programmiersprache stammen.  
   

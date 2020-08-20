@@ -1,4 +1,5 @@
 ---
+description: GUID-Escapesequenzen
 title: GUID-Escapesequenzen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44907bfbd884bf361ce5f2ab8b3f6d8a247aba44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7babe2d26c0e5f2b311f8df5bbd1763622f3042
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466156"
 ---
 # <a name="guid-escape-sequences"></a>GUID-Escapesequenzen
 ODBC verwendet Escapesequenzen für GUID-Literale. Die Syntax dieser Escapesequenz lautet wie folgt:  

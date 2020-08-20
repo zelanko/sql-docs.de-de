@@ -1,4 +1,5 @@
 ---
+description: Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
 title: Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
 ms.date: 07/01/2020
 ms.prod: sql
@@ -14,16 +15,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d713b4eb49a527f2cbbbf871cce9d01d4449443d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465070"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextabfragen kann ein *Thesaurus* der Volltextsuche verwendet werden, um nach Synonymen der vom Benutzer angegebenen Begriffe zu suchen. Jeder Thesaurus definiert Synonyme für eine bestimmte Sprache. Indem Sie einen Thesaurus entwickeln, der genau auf Ihre Volltextdaten abgestimmt ist, können Sie den Bereich der Volltextabfragen für diese Daten effektiv erweitern.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bei -Volltextabfragen kann ein *Thesaurus* der Volltextsuche verwendet werden, um nach Synonymen der vom Benutzer angegebenen Begriffe zu suchen. Jeder Thesaurus definiert Synonyme für eine bestimmte Sprache. Indem Sie einen Thesaurus entwickeln, der genau auf Ihre Volltextdaten abgestimmt ist, können Sie den Bereich der Volltextabfragen für diese Daten effektiv erweitern.
 
 Der Thesaurusvergleich erfolgt für alle [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)- und [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)-Abfragen sowie für alle [CONTAINS](../../t-sql/queries/contains-transact-sql.md)- und [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-Abfragen, in denen die `FORMSOF THESAURUS`-Klausel angegeben ist.
   
@@ -170,7 +171,7 @@ and
   
 Die Einstellung eines Thesaurus für diakritische Zeichen wird in einem einzelnen `<diacritics_sensitive>`-Element angegeben. Dieses Element enthält einen ganzzahligen Wert, der die Unterscheidung nach Akzent folgendermaßen steuert:  
   
-|Einstellung für diakritische Zeichen|value|XML|  
+|Einstellung für diakritische Zeichen|Wert|XML|  
 |------------------------|-----------|---------|  
 |keine Unterscheidung nach Akzent|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
 |Unterscheidung nach Akzent|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  

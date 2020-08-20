@@ -1,4 +1,5 @@
 ---
+description: Reference Data Services in DQS
 title: Reference Data Services in DQS
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ecae6543a0a83084bbabb141339464d56b36c753
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e382be5f109efff9a0a08eb434017334fe54d2c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466735"
 ---
 # <a name="reference-data-services-in-dqs"></a>Reference Data Services in DQS
 
@@ -32,7 +33,7 @@ ms.locfileid: "85883362"
   
 -   Unterstützt die Verwendung von Verweis Daten sowohl aus Azure Marketplace als auch direkt von Verweis Datenanbietern von Drittanbietern.  
   
-##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a>Verwenden von Verweis Daten aus Azure Marketplace  
+##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a> Verwenden von Verweis Daten aus Azure Marketplace  
  DQS unterstützt das Verwenden von Verweis Daten aus Azure Marketplace, damit Inhaltsanbieter Verweis Datendienste über den Marketplace bereitstellen können. Marketplace ist ein Dienst von Microsoft, der einen Marketplace und einen Bereitstellungskanal für hochwertige Daten und Anwendungen als Clouddienste bereitstellt. Weitere Informationen zum Marketplace finden Sie unter Informationen [zu Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) () https://azuremarketplace.microsoft.com/about) .
   
  Die nahtlose Integration zwischen Marketplace und DQS vereinfacht die Schritte, die für das Ermitteln, Untersuchen und Abrufen von Informationen für Data Quality-Projekte innerhalb von DQS erforderlich sind. Die Daten werden von DQS genutzt und helfen DQS-Benutzern dabei, eine hohe Datenqualität durch das Kombinieren von DQS, Marketplace und Verweisdaten-Dienstanbietern auf innovative Weise zu erreichen.  

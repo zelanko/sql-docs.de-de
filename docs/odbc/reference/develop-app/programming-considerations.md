@@ -1,4 +1,5 @@
 ---
+description: Überlegungen zur Programmierung
 title: Überlegungen zur Programmierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 497869e26ac9bcc3267d620e2c67b4b1aaee991c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465692"
 ---
 # <a name="programming-considerations"></a>Überlegungen zur Programmierung
 In diesem Abschnitt wird eine Reihe von Themen im Zusammenhang mit dem Schreiben von ODBC-Anwendungen und-Treibern erläutert.  
@@ -26,7 +27,7 @@ In diesem Abschnitt wird eine Reihe von Themen im Zusammenhang mit dem Schreiben
   
 -   [Ausrichtung](../../../odbc/reference/develop-app/alignment.md)  
   
--   [Unicode-](../../../odbc/reference/develop-app/unicode.md)  
+-   [Unicode](../../../odbc/reference/develop-app/unicode.md)  
   
 -   [Übersetzungs-DLLs](../../../odbc/reference/develop-app/translation-dlls.md)  
   

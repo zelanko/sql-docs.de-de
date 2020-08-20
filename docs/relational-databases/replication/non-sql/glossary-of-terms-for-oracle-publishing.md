@@ -1,4 +1,5 @@
 ---
+description: Begriffe im Zusammenhang mit dem Veröffentlichen von Oracle-Daten
 title: Begriffe im Zusammenhang mit dem Veröffentlichen von Oracle-Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 259ddd0128350fef480d4d25429808571d23ef11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2dae5a66a762e53a4748bf43732aed70c5c0edfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465148"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Begriffe im Zusammenhang mit dem Veröffentlichen von Oracle-Daten
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

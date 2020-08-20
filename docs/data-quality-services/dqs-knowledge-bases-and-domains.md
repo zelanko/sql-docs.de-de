@@ -1,4 +1,5 @@
 ---
+description: DQS-Wissensdatenbanken und -Domänen
 title: DQS-Wissensdatenbanken und -Domänen
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e27c84f54901bb66e2d934af661c3aac20aea384
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466798"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS-Wissensdatenbanken und -Domänen
 
@@ -69,7 +70,7 @@ ms.locfileid: "87362493"
   
  Sie können jedoch die Groß-/Kleinschreibung der Werte steuern, die Sie in Bereinigungsergebnissen exportieren. Dies ist möglich, indem Sie die Domäneneigenschaft **Formatausgabe** (siehe [Festlegen von Domäneneigenschaften](../data-quality-services/set-domain-properties.md)) festlegen und das Kontrollkästchen **Ausgabe standardisieren** aktivieren, wenn Sie Bereinigungsergebnisse exportieren (siehe [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
-##  <a name="domain-management"></a><a name="Domains"></a>Domänen Verwaltung  
+##  <a name="domain-management"></a><a name="Domains"></a> Domänen Verwaltung  
  Die Domänenverwaltung ermöglicht es dem Data Steward, die Metadaten interaktiv zu ändern und zu verbessern, die von der computergestützten Wissensermittlungsaktivität generiert wurden. Jede von Ihnen vorgenommene Änderung ist für eine Wissensdatenbankdomäne. In der Domänenverwaltungsaktivität ist Folgendes möglich:  
   
 -   Erstellen Sie eine neue Domäne. Die neue Domäne kann mit einer vorhandenen Domäne verknüpft werden oder aus dieser kopiert werden.  
@@ -138,7 +139,7 @@ ms.locfileid: "87362493"
   
  Der Abgleich kann auf den einzelnen Domänen ausgeführt werden, aus der sich die Verbunddomäne zusammensetzt, jedoch nicht auf der Verbunddomäne selbst.  
   
-##  <a name="data-matching"></a><a name="Matching"></a>Datenabgleich  
+##  <a name="data-matching"></a><a name="Matching"></a> Datenabgleich  
  Zusätzlich zu den manuellen Änderungen an einer Wissensdatenbank, die mit der Domänenverwaltung vorgenommen werden können, können Sie der Wissensdatenbank Abgleichswissen hinzufügen. Um DQS auf den Datendeduplizierungsprozess vorzubereiten, müssen Sie eine Abgleichsrichtlinie erstellen, mit der DQS die Wahrscheinlichkeit einer Übereinstimmung berechnet. Die Richtlinie schließt eine oder mehrere Abgleichsregeln ein, die der Data Steward erstellt, um zu identifizieren, wie DQS Zeilen der Daten vergleichen sollte. Der Data Steward bestimmt, welche Datenfelder in der Zeile verglichen werden sollten und über welche Gewichtung jedes Feld beim Abgleich verfügen sollte. Der Data Steward bestimmt auch, wie hoch die Wahrscheinlichkeit sein sollte, um einen Treffer als Übereinstimmung anzusehen. DQS fügt der Wissensdatenbank Abgleichsregeln für die Verwendung beim Ausführen einer Abgleichsaktivität in einem Data Quality-Projekt hinzu.  
   
  Weitere Informationen zur Wissensdatenbank finden Sie unter [Datenabgleich](../data-quality-services/data-matching.md)verwalten.  

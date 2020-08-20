@@ -1,4 +1,5 @@
 ---
+description: Microsoft Excel-Datentypen
 title: Microsoft Excel-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8574985e10e5aaa3ae5431af7ee1245643e20b60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3e54ece7962fc5b56e4b9fcc17123ac7ad3c9e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466432"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel-Datentypen
 In der folgenden Tabelle wird gezeigt, wie Microsoft Excel-Treiber Datentypen ODBC-SQL-Datentypen zugeordnet werden. Der Microsoft Excel-Treiber weist diese Datentypen den Spalten in Microsoft Excel-Tabellen basierend auf den Daten in der Spalte zu.  
   
 |Microsoft Excel-Datentyp|ODBC-Datentyp|  
 |-------------------------------|--------------------|  
-|CURRENCY|SQL_NUMERIC|  
+|WÄHRUNG|SQL_NUMERIC|  
 |DATETIME|SQL_TIMESTAMP|  
 |Richtig|SQL_BIT|  
 |NUMBER|SQL_DOUBLE|  

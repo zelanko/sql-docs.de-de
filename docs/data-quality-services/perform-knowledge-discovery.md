@@ -1,4 +1,5 @@
 ---
+description: Durchführen der Wissensermittlung
 title: Durchführen der Wissensermittlung
 ms.date: 06/04/2013
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9f1d6865a4c432694201c9b5a666fff3fd46d117
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65bde5805bbe3e768b56094d165b385d01f68439
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466779"
 ---
 # <a name="perform-knowledge-discovery"></a>Durchführen der Wissensermittlung
 
@@ -39,7 +40,7 @@ ms.locfileid: "85883399"
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_kb_editor- oder dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um eine Wissensdatenbank zu erstellen.  
   
-##  <a name="first-step-start-knowledge-discovery"></a><a name="FirstStep"></a>Erster Schritt: Starten der Wissens Ermittlung  
+##  <a name="first-step-start-knowledge-discovery"></a><a name="FirstStep"></a> Erster Schritt: Starten der Wissens Ermittlung  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -202,7 +203,7 @@ ms.locfileid: "85883399"
   
     -   Klicken Sie auf **Zurück** , um zur Seite **Ermitteln** zurückzukehren. Nachdem Sie auf **Schließen**geklickt haben, um die Domänenverwaltung durchzuführen, müssen Sie im Fenster **Wissensdatenbank öffnen** auf **Wissensermittlung** klicken, die Seite **Wissensdatenbank-Verwaltung: Domänenbegriffe verwalten** öffnen, auf **Fertig stellen**klicken und anschließend auf **Ja** (um die Wissensdatenbank zu veröffentlichen) oder **Nein** (um die Arbeit in der Wissensdatenbank zu speichern und zu beenden) klicken.  
   
-##  <a name="follow-up-after-performing-knowledge-discovery"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Durchführen der Wissens Ermittlung  
+##  <a name="follow-up-after-performing-knowledge-discovery"></a><a name="FollowUp"></a> Nachverfolgung: nach dem Durchführen der Wissens Ermittlung  
  Nachdem Sie mithilfe des computergestützten Wissensermittlungsprozesses Wissen zur Wissensdatenbank hinzugefügt haben, können Sie die Wissensdatenbank sofort für ein Bereinigungsprojekt verwenden oder die Domänenverwaltung vor der Bereinigung durchführen. Weitere Informationen zur Datenbereinigung oder Domänenverwaltung finden Sie unter [Datenbereinigung](../data-quality-services/data-cleansing.md) oder [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md).  
   
 ##  <a name="the-meaning-of-correct-error-and-invalid-values"></a><a name="Meaning"></a> Die Bedeutung von richtigen, fehlerhaften und ungültigen Werten  
@@ -233,7 +234,7 @@ ms.locfileid: "85883399"
   
 -   Klicken Sie auf die Schaltfläche **Bereich mit dem Verlauf der Domänenwertänderungen anzeigen/ausblenden** , um unterhalb der Werttabelle den Vorschaubereich einzublenden, in dem die letzten Änderungen an der Domänenwertsammlung angezeigt werden.  
   
-##  <a name="profiler-statistics"></a><a name="Profiler"></a>Profiler-Statistik  
+##  <a name="profiler-statistics"></a><a name="Profiler"></a> Profiler-Statistik  
  Die Registerkarte <ui>Profiler</ui> stellt Statistiken bereit, die die Qualität der Quelldaten angeben. Die Statistiken messen nicht die Qualität der Wissensdatenbank. Die Profilerstellung bei der Wissensermittlung gibt Einblicke in Vollständigkeit und Eindeutigkeit. Die Profilerstellung bei der Wissensermittlung misst keine Genauigkeit. Mithilfe der Profilerstellung für die Wissensverwaltung können Sie bewerten, in welchem Maß die Datenquelle für die Erstellung und Verbesserung des Wissens in einer Wissensdatenbank nützlich ist.  
   
  Die Registerkarte **Profiler** stellt die folgenden Statistiken für den Ermittlungsprozess, nach Feld und Domäne geordnet, bereit:  

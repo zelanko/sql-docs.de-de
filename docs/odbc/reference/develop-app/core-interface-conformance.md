@@ -1,4 +1,5 @@
 ---
+description: Schnittstellenübereinstimmung auf Kernebene
 title: Konformität der Kernschnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 886ded1cd79b35488c0d47df3dbd8055dc6a8016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ca38e2b616c39839cfe813dad984f7eba3796a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465842"
 ---
 # <a name="core-interface-conformance"></a>Schnittstellenübereinstimmung auf Kernebene
 Alle ODBC-Treiber müssen mindestens eine Schnittstellen Übereinstimmung auf Kern Ebene aufweisen. Da die Features in der kernstufe diejenigen sind, die für die meisten generischen interoperablen Anwendungen erforderlich sind, kann der Treiber mit solchen Anwendungen arbeiten. Die Features auf der kernstufe entsprechen auch den in der ISO CLI-Spezifikation definierten Features und den nicht optionalen Features, die in der CLI-Spezifikation der Open-Gruppe definiert sind. Mit einem Schnittstellen kompatiblen ODBC-Treiber auf Kern Ebene kann die Anwendung Folgendes ausführen:  

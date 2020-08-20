@@ -1,4 +1,5 @@
 ---
+description: Datenlänge, Pufferlänge und Abschneiden
 title: Daten Länge, Pufferlänge und Abschneiden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2e7b8d1e60cd83594509c2ab5cbc24e04546eca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c9a9651f39c1ff4d2c6dc9b691453fb5354c9e1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465832"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Datenlänge, Pufferlänge und Abschneiden
 Die *Daten Länge* entspricht der Byte Länge der Daten, die im Datenpuffer der Anwendung gespeichert werden, und nicht so, wie Sie in der Datenquelle gespeichert werden. Dieser Unterschied ist wichtig, da die Daten häufig in verschiedenen Typen im Datenpuffer gespeichert werden als in der Datenquelle. Bei Daten, die an die Datenquelle gesendet werden, handelt es sich hierbei um die Byte Länge der Daten vor der Konvertierung in den Typ der Datenquelle. Bei Daten, die aus der Datenquelle abgerufen werden, entspricht dies der Byte Länge der Daten nach der Konvertierung in den Typ des Daten Puffers und vor dem Abschneiden.  

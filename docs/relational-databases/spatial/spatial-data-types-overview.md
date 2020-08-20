@@ -1,4 +1,5 @@
 ---
+description: Übersicht über räumliche Datentypen
 title: Übersicht über räumliche Datentypen | Microsoft-Dokumentation
 ms.date: 07/21/2020
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28f7ef5eb323ed69746a4ef2b40480ab1cfb925f
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: befee8aca5a1c9d7a66015a02c8851c56d0e5a8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86941496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464910"
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
 

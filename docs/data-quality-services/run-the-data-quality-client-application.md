@@ -1,4 +1,5 @@
 ---
+description: Ausführen der Data Quality-Clientanwendung
 title: Ausführen der Data Quality-Clientanwendung
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 7125dd10e16b8013fccc1f584115550c026cc627
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed5b6449ea470a63e27a1d23a057ed6507c2ed2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466664"
 ---
 # <a name="run-the-data-quality-client-application"></a>Ausführen der Data Quality-Clientanwendung
 
@@ -35,12 +36,12 @@ ms.locfileid: "85883344"
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Um sich bei [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]anzumelden, muss der Benutzer einer der drei Rollen (dqs_administrator, dqs_kb_editor oder dqs_kb_operator) in der DQS_MAIN-Datenbank angehören.  
   
-##  <a name="run-data-quality-client"></a><a name="Run"></a>Ausführen Data Quality-Client  
+##  <a name="run-data-quality-client"></a><a name="Run"></a> Ausführen Data Quality-Client  
  So führen Sie [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] auf dem Computer aus, auf dem Sie ihn installiert haben:  
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, klicken Sie auf **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]** und anschließend auf **Data Quality Services**, und klicken Sie dann auf **Data Quality Client**.  
   
-2.  Gehen Sie im Dialogfeld **Verbindung mit Server herstellen** wie folgt vor:  
+2.  Führen Sie folgende Aktionen im Dialogfeld **Mit Server verbinden** aus:  
   
     1.  Geben Sie den Server an, mit dem Sie die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Anwendung verbinden möchten. Wählen Sie **(LOCAL)** aus, um eine Verbindung mit [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] auf dem lokalen Computer herzustellen. Sie können auch auf den Pfeil nach unten klicken und auswählen **\<Browse network for more servers>** , um eine Verbindung mit einem anderen Server herzustellen (oder um eine Verbindung mit dem lokalen Server nach Name herzustellen). Das Dialogfeld **Nach Servern suchen** wird angezeigt. Sie können auf der Registerkarte **Lokale Server** oder auf der Registerkarte **Netzwerkserver** einen Server auswählen.  
   

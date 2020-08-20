@@ -1,4 +1,5 @@
 ---
+description: Übersicht über die Treiberarchitektur
 title: Übersicht über die Treiberarchitektur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef5a91cd-158e-40bf-b5a8-8ba535c4705e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cd55290e09fbd35f5a1559ce4209693ef8eaaf73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d71a2c28825ee8c7d4e12e047234f3e336b339e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466442"
 ---
 # <a name="driver-architecture-overview"></a>Übersicht über die Treiberarchitektur
 Der Microsoft Visual FoxPro-ODBC-Treiber ist ein 32-Bit-Treiber, der es Ihnen ermöglicht, eine Microsoft Visual FoxPro-Datenbank oder FoxPro-Tabellen über die Open Database Connectivity (ODBC)-Schnittstelle zu öffnen und abzufragen. Sie können mit den folgenden Anwendungs Typen auf FoxPro-Daten zugreifen:  

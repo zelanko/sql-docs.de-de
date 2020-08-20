@@ -1,4 +1,5 @@
 ---
+description: 'Profilerstellung von ODBC-Treiberleistungsdaten: Protokollieren von lang ausgeführten Abfragen'
 title: Protokollieren von Abfragen mit langer Ausführungszeit (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80757fcbaf0548b520f8357de4eb5cc23db86386
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 650ce0033a09913c8f30b8ff51534f31c628a6e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465337"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Profilerstellung von ODBC-Treiberleistungsdaten: Protokollieren von lang ausgeführten Abfragen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +27,7 @@ ms.locfileid: "86005836"
   Dieses Beispiel zeigt die ODBC-treiberspezifischen Optionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Protokollieren von Abfragen mit langer Ausführungszeit. Bei der Ausführung des Beispiels wird die Datei Odbcqry.log erstellt, die eine Liste von Abfragen enthält, deren Ausführung ein von der Anwendung festgelegtes Intervall überschreitet. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>So protokollieren Sie Abfragen mit langer Ausführungszeit mithilfe des ODBC-Administrators  
   

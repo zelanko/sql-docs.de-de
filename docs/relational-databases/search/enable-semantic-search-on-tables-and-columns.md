@@ -1,4 +1,5 @@
 ---
+description: Aktivieren der semantischen Suche in Tabellen und Spalten
 title: Aktivieren der semantischen Suche in Tabellen und Spalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 49691cea038a121ac27bdea729e3646e3375889f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c891b2089225de1560a8371440524846b7a96163
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465013"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "85730199"
  
  Rufen Sie die **CREATE FULLTEXT INDEX**-Anweisung auf, und geben Sie **STATISTICAL_SEMANTICS** für jede Spalte an, in der Sie einen semantischen Index erstellen möchten. Weitere Informationen zu allen Optionen für diese Anweisung finden Sie unter [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
- **Beispiel 1: Erstellen eines eindeutigen Indexes, eines Volltextindexes und eines semantischen Indexes**  
+ **Beispiel 1: Erstellen eines eindeutigen Indexes, eines Volltextindexes und eines semantischen Indexes**  
   
  Im folgenden Beispiel wird der Standardvolltextkatalog **ft**erstellt. Im folgenden Beispiel wird ein eindeutiger Index für die **JobCandidateID** -Spalte der **HumanResources.JobCandidate** -Tabelle der AdventureWorks2012-Beispieldatenbank erstellt. Dieser eindeutige Index ist als Schlüsselspalte für einen Volltextindex erforderlich. Im Beispiel werden dann ein Volltextindex und ein semantischer Index in der **Resume** -Spalte erstellt.  
   

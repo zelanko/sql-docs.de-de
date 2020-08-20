@@ -1,4 +1,5 @@
 ---
+description: Funktionsübereinstimmung
 title: Funktions Übereinstimmung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,78 +16,78 @@ helpviewer_keywords:
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 33cd0ad4269ed59e31c8ab343ddbb01806afce04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ff61c62b18f531eaad7cc822f99c7065fcba129
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465792"
 ---
 # <a name="function-conformance"></a>Funktionsübereinstimmung
 In der folgenden Tabelle ist die Übereinstimmungs Stufe der einzelnen ODBC-Funktionen angegeben, wo diese klar definiert ist.  
   
 |Funktion|Übereinstimmungsebene|  
 |--------------|-----------------------|  
-|**SQLAllocHandle**|Kernspeicher|  
-|**SQLBindCol**|Kernspeicher|  
+|**SQLAllocHandle**|Core|  
+|**SQLBindCol**|Core|  
 |**SQLBindParameter**|Kern [1]|  
 |**SQLBrowseConnect**|Ebene 1|  
 |**SQLBulkOperations**|Ebene 1|  
 |**SQLCancel**|Kern [1]|  
-|**SQLCloseCursor**|Kernspeicher|  
+|**SQLCloseCursor**|Core|  
 |**SQLColAttribute**|Kern [1]|  
 |**SQLColumnPrivileges**|Ebene 2|  
-|**SQLColumns**|Kernspeicher|  
-|**SQLConnect**|Kernspeicher|  
-|**Sqlcopyde SC**|Kernspeicher|  
-|**SQLDataSources**|Kernspeicher|  
+|**SQLColumns**|Core|  
+|**SQLConnect**|Core|  
+|**Sqlcopyde SC**|Core|  
+|**SQLDataSources**|Core|  
 |**SQLDescribeCol**|Kern [1]|  
 |**SQLDescribeParam**|Ebene 2|  
-|**SQLDisconnect**|Kernspeicher|  
-|**SQLDriverConnect**|Kernspeicher|  
-|**SQLDrivers**|Kernspeicher|  
+|**SQLDisconnect**|Core|  
+|**SQLDriverConnect**|Core|  
+|**SQLDrivers**|Core|  
 |**SQLEndTran**|Kern [1]|  
-|**SQLExecDirect**|Kernspeicher|  
-|**SQLExecute**|Kernspeicher|  
-|**SQLFetch**|Kernspeicher|  
+|**SQLExecDirect**|Core|  
+|**SQLExecute**|Core|  
+|**SQLFetch**|Core|  
 |**SQLFetchScroll**|Kern [1]|  
 |**SQLForeignKeys**|Ebene 2|  
-|**SQLFreeHandle**|Kernspeicher|  
-|**'SQLFreeStmt'**|Kernspeicher|  
-|**SQLGetConnectAttr**|Kernspeicher|  
-|**SQLGetCursorName**|Kernspeicher|  
-|**SQLGetData**|Kernspeicher|  
-|**SQLGetDescField**|Kernspeicher|  
-|**SQLGetDescRec**|Kernspeicher|  
-|**SQLGetDiagField**|Kernspeicher|  
-|**SQLGetDiagRec**|Kernspeicher|  
-|**SQLGetEnvAttr**|Kernspeicher|  
-|**SQLGetFunctions**|Kernspeicher|  
-|**SQLGetInfo**|Kernspeicher|  
-|**'SQLGetStmtAttr'**|Kernspeicher|  
-|**SQLGetTypeInfo**|Kernspeicher|  
+|**SQLFreeHandle**|Core|  
+|**'SQLFreeStmt'**|Core|  
+|**SQLGetConnectAttr**|Core|  
+|**SQLGetCursorName**|Core|  
+|**SQLGetData**|Core|  
+|**SQLGetDescField**|Core|  
+|**SQLGetDescRec**|Core|  
+|**SQLGetDiagField**|Core|  
+|**SQLGetDiagRec**|Core|  
+|**SQLGetEnvAttr**|Core|  
+|**SQLGetFunctions**|Core|  
+|**SQLGetInfo**|Core|  
+|**'SQLGetStmtAttr'**|Core|  
+|**SQLGetTypeInfo**|Core|  
 |**SQLMoreResults**|Ebene 1|  
-|**SQLNativeSql**|Kernspeicher|  
-|**SQLNumParams**|Kernspeicher|  
-|**SQLNumResultCols**|Kernspeicher|  
-|**SQLParamData**|Kernspeicher|  
-|**SQLPrepare**|Kernspeicher|  
+|**SQLNativeSql**|Core|  
+|**SQLNumParams**|Core|  
+|**SQLNumResultCols**|Core|  
+|**SQLParamData**|Core|  
+|**SQLPrepare**|Core|  
 |**SQLPrimaryKeys**|Ebene 1|  
 |**SQLProcedureColumns**|Ebene 1|  
 |**'SQLProcedures'**|Ebene 1|  
-|**SQLPutData**|Kernspeicher|  
-|**SQLRowCount**|Kernspeicher|  
+|**SQLPutData**|Core|  
+|**SQLRowCount**|Core|  
 |**SQLSetConnectAttr**|Kern [2]|  
-|**SQLSetCursorName**|Kernspeicher|  
+|**SQLSetCursorName**|Core|  
 |**SQLSetDescField**|Kern [1]|  
-|**SQLSetDescRec**|Kernspeicher|  
+|**SQLSetDescRec**|Core|  
 |**SQLSetEnvAttr**|Kern [2]|  
 |**SQLSetPos**|Ebene 1 [1]|  
 |**SQLSetStmtAttr**|Kern [2]|  
 |**'SQLSpecialColumns'**|Kern [1]|  
-|**'SQLStatistics'**|Kernspeicher|  
+|**'SQLStatistics'**|Core|  
 |**SQLTablePrivileges**|Ebene 2|  
-|**SQLTables**|Kernspeicher|  
+|**SQLTables**|Core|  
   
  [1] wichtige Features dieser Funktion sind nur bei höheren Konformitätsstufen verfügbar.  
   

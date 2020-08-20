@@ -1,4 +1,5 @@
 ---
+description: Abfragen von nächsten Nachbarn aus räumlichen Daten
 title: Abfragen von nächsten Nachbarn aus räumlichen Daten | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97e87d6590e9a8a79575e51d0a35f5e882ea21a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e53b816b25c991e7dafb891a0006b256979cb298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464929"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Abfragen von nächsten Nachbarn aus räumlichen Daten
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +72,7 @@ SELECT TOP ( number )
 7.  Alle Zeilen, für die `STDistance` den Wert **NULL** zurückgibt, müssen herausgefiltert werden.  
   
 > [!WARNING]  
->  Methoden, die den Datentyp **geography** oder **geometry** als Argument annehmen, geben **NULL** zurück, wenn die SRIDs für die Typen nicht identisch sind.  
+>   Methoden, die den Datentyp **geography** oder **geometry** als Argument annehmen, geben **NULL** zurück, wenn die SRIDs für die Typen nicht identisch sind.  
   
  Es wird empfohlen, dass für Indizes in Nächster Nachbar-Abfragen die neuen Mosaiken für räumliche Indizes verwendet werden. Weitere Informationen zu Mosaiken für räumliche Indizes finden Sie unter [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)festgelegt sein.  
   

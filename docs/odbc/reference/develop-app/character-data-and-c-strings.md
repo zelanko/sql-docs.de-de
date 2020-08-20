@@ -1,4 +1,5 @@
 ---
+description: Zeichendaten und C-Zeichenfolgen
 title: Zeichendaten und C-Zeichen folgen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7bb25022d4e0c0559f2a8f77b89a4ba26aeba33a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e412976cb297af9a9e38bbc6991647eeab48483b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465922"
 ---
 # <a name="character-data-and-c-strings"></a>Zeichendaten und C-Zeichenfolgen
 Eingabeparameter, die auf Zeichendaten variabler Länge (z. b. Spaltennamen, dynamische Parameter und Zeichen folgen Attributwerte) verweisen, verfügen über einen zugeordneten length-Parameter. Wenn die Anwendung Zeichen folgen mit dem NULL-Zeichen beendet, wie es in C typisch ist, stellt Sie als Argument entweder die Länge in Bytes der Zeichenfolge (ohne das NULL-Terminator) oder SQL_NTS (NULL-terminierte Zeichenfolge) bereit. Ein nicht negatives Längenargument gibt die tatsächliche Länge der zugeordneten Zeichenfolge an. Das length-Argument kann 0 sein, um eine Zeichenfolge der Länge 0 (null) anzugeben, die sich von einem NULL-Wert unterscheidet. Der negative Wert SQL_NTS weist den Treiber an, die Länge der Zeichenfolge zu bestimmen, indem das NULL-Terminierungs Zeichen gesucht wird.  

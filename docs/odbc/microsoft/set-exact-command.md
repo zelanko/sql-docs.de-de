@@ -1,4 +1,5 @@
 ---
+description: SET EXACT-Befehl
 title: Exakten Befehl festlegen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3e754fff35b6b948ac63d19361067b2d65a07fdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bae23ef0677061f92d0466564619e85d4ae1630
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466362"
 ---
 # <a name="set-exact-command"></a>SET EXACT-Befehl
 Gibt die Regeln für den Vergleich von zwei Zeichen folgen mit unterschiedlichen Längen an.  
@@ -52,18 +53,18 @@ SET EXACT ON | OFF
   
 |Vergleich|= Exact aus|= genau am|= = Genau ein/aus|  
 |----------------|------------------|-----------------|--------------------------|  
-|"ABC" = "ABC"|Übereinstimmung|Übereinstimmung|Übereinstimmung|  
+|"ABC" = "ABC"|Match|Match|Match|  
 |"ab" = "ABC"|Keine Übereinstimmung|Keine Übereinstimmung|Keine Übereinstimmung|  
-|"ABC" = "ab"|Übereinstimmung|Keine Übereinstimmung|Keine Übereinstimmung|  
+|"ABC" = "ab"|Match|Keine Übereinstimmung|Keine Übereinstimmung|  
 |"ABC" = "AB_"|Keine Übereinstimmung|Keine Übereinstimmung|Keine Übereinstimmung|  
-|"ab" = "AB_"|Keine Übereinstimmung|Übereinstimmung|Keine Übereinstimmung|  
-|"AB_" = "ab"|Übereinstimmung|Übereinstimmung|Keine Übereinstimmung|  
+|"ab" = "AB_"|Keine Übereinstimmung|Match|Keine Übereinstimmung|  
+|"AB_" = "ab"|Match|Match|Keine Übereinstimmung|  
 |"" = "ab"|Keine Übereinstimmung|Keine Übereinstimmung|Keine Übereinstimmung|  
-|"ab" = ""|Übereinstimmung|Keine Übereinstimmung|Keine Übereinstimmung|  
-|"__" = ""|Übereinstimmung|Übereinstimmung|Keine Übereinstimmung|  
-|"" = "___"|Keine Übereinstimmung|Übereinstimmung|Keine Übereinstimmung|  
-|Trim ("___") = ""|Übereinstimmung|Übereinstimmung|Übereinstimmung|  
-|"" = Trim ("___")|Übereinstimmung|Übereinstimmung|Übereinstimmung|  
+|"ab" = ""|Match|Keine Übereinstimmung|Keine Übereinstimmung|  
+|"__" = ""|Match|Match|Keine Übereinstimmung|  
+|"" = "___"|Keine Übereinstimmung|Match|Keine Übereinstimmung|  
+|Trim ("___") = ""|Match|Match|Match|  
+|"" = Trim ("___")|Match|Match|Match|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Befehl SET ANSI](../../odbc/microsoft/set-ansi-command.md)
