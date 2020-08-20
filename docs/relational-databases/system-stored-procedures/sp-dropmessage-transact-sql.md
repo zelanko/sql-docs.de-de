@@ -1,4 +1,5 @@
 ---
+description: sp_dropmessage (Transact-SQL)
 title: sp_dropmessage (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8c9ac233cdc71d8886224182c2c3b91cd871450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c95708903063b4fade98e3d45e29e184e93efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474237"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @msgnum = ] message_number`Die Nachrichten-Nummer, die gelöscht werden soll. *message_number* muss eine benutzerdefinierte Nachricht mit einer Nachrichtennummer größer als 50000 sein. *message_number* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @msgnum = ] message_number` Die Nachrichten-Nummer, die gelöscht werden soll. *message_number* muss eine benutzerdefinierte Nachricht mit einer Nachrichtennummer größer als 50000 sein. *message_number* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @lang = ] 'language'`Die Sprache der zu löschenden Nachricht. Wenn **all** angegeben wird, werden alle Sprachversionen von *message_number* gelöscht. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @lang = ] 'language'` Die Sprache der zu löschenden Nachricht. Wenn **all** angegeben wird, werden alle Sprachversionen von *message_number* gelöscht. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -53,7 +54,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in den festen Serverrollen **sysadmin** und **serveradmin** .  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Solange nicht **all** für *language*angegeben wird, müssen alle lokalisierten Versionen der Nachricht gelöscht werden, bevor die englische Version (USA) der Nachricht gelöscht werden kann.  
   
 ## <a name="examples"></a>Beispiele  

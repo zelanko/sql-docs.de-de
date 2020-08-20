@@ -1,4 +1,5 @@
 ---
+description: sp_helparticle (Transact-SQL)
 title: sp_helparticle (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca400eb6fc015acff452ca4ae6a7658a05145f8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474154"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,18 +42,18 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @article = ] 'article'`Der Name eines Artikels in der Veröffentlichung. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . Wenn der *Artikel* nicht angegeben wird, werden Informationen zu allen Artikeln für die angegebene Veröffentlichung zurückgegeben.  
+`[ @article = ] 'article'` Der Name eines Artikels in der Veröffentlichung. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . Wenn der *Artikel* nicht angegeben wird, werden Informationen zu allen Artikeln für die angegebene Veröffentlichung zurückgegeben.  
   
-`[ @returnfilter = ] returnfilter`Gibt an, ob die Filter Klausel zurückgegeben werden soll. *returnfilter* ist vom Typ **Bit**. der Standardwert ist **1**, wodurch die Filter Klausel zurückgegeben wird.  
+`[ @returnfilter = ] returnfilter` Gibt an, ob die Filter Klausel zurückgegeben werden soll. *returnfilter* ist vom Typ **Bit**. der Standardwert ist **1**, wodurch die Filter Klausel zurückgegeben wird.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* sollte nicht angegeben werden, wenn Informationen zu einem Artikel angefordert werden, der von einem Verleger veröffentlicht wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @found = ] found OUTPUT`Nur interne Verwendung.  
+`[ @found = ] found OUTPUT` Nur interne Verwendung.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -66,7 +67,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**type**|**smallint**|Der Artikeltyp:<br /><br /> **1** = Protokoll basiert.<br /><br /> **3** = Protokoll basiert mit manuellem Filter.<br /><br /> **5** = Protokoll basiert mit manueller Sicht.<br /><br /> **7** = Protokoll basiert mit manuellem Filter und manueller Ansicht.<br /><br /> **8** = Ausführung gespeicherter Prozeduren.<br /><br /> **24** = serialisierbare Ausführung gespeicherter Prozeduren.<br /><br /> **32** = gespeicherte Prozedur (nur Schema).<br /><br /> **64** = Ansicht (nur Schema).<br /><br /> **96** = Aggregatfunktion (nur Schema).<br /><br /> **128** = Funktion (nur Schema).<br /><br /> **257** = Protokoll basierte indizierte Sicht.<br /><br /> **259** = Protokoll basierte indizierte Sicht mit manuellem Filter.<br /><br /> **261** = Protokoll basierte indizierte Sicht mit manueller Sicht.<br /><br /> **263** = Protokoll basierte indizierte Sicht mit manuellem Filter und manueller Sicht.<br /><br /> **320** = indizierte Sicht (nur Schema).<br /><br />|  
 |**status**|**tinyint**|Kann das [& (Bitweises and)-](../../t-sql/language-elements/bitwise-and-transact-sql.md) Ergebnis einer oder mehrerer oder dieser Artikeleigenschaften sein:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = der Artikel ist aktiv.<br /><br /> **0x08** = schließt den Spaltennamen in INSERT-Anweisungen ein.<br /><br /> **0x16** = parametrisierte Anweisungen verwenden.<br /><br /> **0x32** = parametrisierte Anweisungen verwenden und den Spaltennamen in INSERT-Anweisungen einschließen.|  
 |**filter**|**nvarchar (257)**|Die gespeicherte Prozedur, mit der die Tabelle horizontal gefiltert wird. Diese gespeicherte Prozedur muss mit der FOR REPLICATION-Klausel erstellt werden.|  
-|**description**|**nvarchar(255)**|Beschreibungseintrag für den Artikel.|  
+|**Beschreibung**|**nvarchar(255)**|Beschreibungseintrag für den Artikel.|  
 |**insert_command**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Einfügungen bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Updates bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**delete_command**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Löschungen bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
@@ -92,7 +93,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helparticle** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

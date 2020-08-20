@@ -1,4 +1,5 @@
 ---
+description: sp_dropremotelogin (Transact-SQL)
 title: sp_dropremotelogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 183e7ce052e4ec9b5eba625f5e5e21fb16f1a5e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6ccb8f6c4bbf5795784c8ad3712c5fe8163ff0e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881785"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474219"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85881785"
   Entfernt einen Remoteanmeldenamen, der einem lokalen Anmeldenamen zugeordnet ist, mit dem gespeicherte Remoteprozeduren auf dem lokalen Server mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]Verwenden Sie stattdessen Verbindungs Server und gespeicherte Prozeduren für den verknüpften Server.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Verwenden Sie stattdessen Verbindungs Server und gespeicherte Prozeduren für den verknüpften Server.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,11 +45,11 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @remoteserver = ] 'remoteserver'`Der Name des Remote Servers, der dem Remote Anmelde Namen zugeordnet ist, der entfernt werden soll. *remoteserver* ist vom Datentyp **sysname**und hat keinen Standardwert. Der*remoteserver* muss bereits vorhanden sein.  
+`[ @remoteserver = ] 'remoteserver'` Der Name des Remote Servers, der dem Remote Anmelde Namen zugeordnet ist, der entfernt werden soll. *remoteserver* ist vom Datentyp **sysname**und hat keinen Standardwert. Der*remoteserver* muss bereits vorhanden sein.  
   
-`[ @loginame = ] 'login'`Der optionale Anmelde Name auf dem lokalen Server, der dem Remote Server zugeordnet ist. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *login* muss ggf. bereits vorhanden sein.  
+`[ @loginame = ] 'login'` Der optionale Anmelde Name auf dem lokalen Server, der dem Remote Server zugeordnet ist. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *login* muss ggf. bereits vorhanden sein.  
   
-`[ @remotename = ] 'remote_name'`Der optionale Name der Remote Anmeldung, die dem *Anmelde* Namen beim Anmelden vom Remote Server zugeordnet wird. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @remotename = ] 'remote_name'` Der optionale Name der Remote Anmeldung, die dem *Anmelde* Namen beim Anmelden vom Remote Server zugeordnet wird. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -90,8 +91,8 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   

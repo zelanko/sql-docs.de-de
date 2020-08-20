@@ -1,4 +1,5 @@
 ---
+description: sp_helpdistpublisher (Transact-SQL)
 title: sp_helpdistpublisher (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ada6e3bd06cdc915f8d34b18434994e9cc662a5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb9bfd2bebe5220d992b92251c79df957f3d7077
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474080"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Verleger, für den Eigenschaften zurückgegeben werden. *Publisher* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** .  
+`[ @publisher = ] 'publisher'` Der Verleger, für den Eigenschaften zurückgegeben werden. *Publisher* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** .  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -51,7 +52,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**security_mode**|**int**|Sicherheitsmodus, der von Replikations-Agents für die Verbindung mit dem Verleger für Abonnements mit verzögertem Update über eine Warteschlange oder für die Verbindung mit einem Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger verwendet wird.<br /><br /> **0** -  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**Anmel**|**sysname**|Anmeldename, der von Replikations-Agents für die Verbindung mit dem Verleger für Abonnements mit verzögertem Update über eine Warteschlange oder für die Verbindung mit einem Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger verwendet wird.|  
 |**password**|**nvarchar (524)**|Zurückgegebenes Kennwort (in einfacher verschlüsselter Form). Das Kennwort ist für andere Benutzer als **sysadmin**NULL.|  
-|**active**|**bit**|Gibt an, ob ein Remoteverleger den lokalen Server als Verteiler verwendet:<br /><br /> **0** = Nein<br /><br /> **1** = ja|  
+|**active**|**bit**|Gibt an, ob ein Remoteverleger den lokalen Server als Verteiler verwendet:<br /><br /> **0** = Nein<br /><br /> **1** = Ja|  
 |**working_directory**|**nvarchar(255)**|Name des Arbeitsverzeichnisses.|  
 |**trusted**|**bit**|Gibt an, ob das Kennwort beim Herstellen der Verbindung des Verlegers mit dem Verteiler erforderlich ist. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen sollte dies immer **0**(null) zurückgeben, was bedeutet, dass das Kennwort erforderlich ist.|  
 |**thirdparty_flag**|**bit**|Gibt an, ob die Veröffentlichung durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder eine Anwendung eines Drittanbieters aktiviert wurde:<br /><br /> " **0**"  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , "Oracle" oder "Oracle Gateway Publisher".<br /><br /> **1** = der Verleger wurde in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe einer Drittanbieter Anwendung integriert.|  
@@ -62,7 +63,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpdistpublisher** wird bei allen Replikations Typen verwendet.  
   
  im Resultset werden bei nicht-**sysadmin** -Anmeldungen **sp_helpdistpublisher** weder die Anmelde Informationen des Verlegers noch das Kennwort angezeigt.  
@@ -71,7 +72,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
  Mitglieder der festen Server Rolle **sysadmin** können **sp_helpdistpublisher** für jeden Verleger ausführen, der den lokalen Server als Verteiler verwendet. Mitglieder der festen Daten Bank Rolle **db_owner** oder der **replmonitor** -Rolle in einer Verteilungs Datenbank können **sp_helpdistpublisher** für jeden Verleger ausführen, der diese Verteilungs Datenbank verwendet. Benutzer in der Veröffentlichungs Zugriffsliste für eine Veröffentlichung auf dem angegebenen *Verleger* können **sp_helpdistpublisher**ausführen. Wenn *Publisher* nicht angegeben wird, werden Informationen für alle Verleger zurückgegeben, für die der Benutzer Zugriffsberechtigung hat.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Anzeigen und Ändern der Verteiler-und Verleger Eigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  

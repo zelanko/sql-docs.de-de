@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepartition (Transact-SQL)
 title: sp_helpmergepartition (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 276e1a886a999858585533ee35b6c5f3cf109657
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e7824eb6e547b8bacec2cae297e5f236376d0aa0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474027"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @suser_sname = ] 'suser_sname'`Der SUSER_SNAME Wert, der verwendet wird, um eine Partition zu definieren. *SUSER_SNAME* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Geben Sie diesen Parameter an, um das Resultset auf die Partitionen einzuschränken, bei denen SUSER_SNAME zu dem angegebenen Wert aufgelöst wird.  
+`[ @suser_sname = ] 'suser_sname'` Der SUSER_SNAME Wert, der verwendet wird, um eine Partition zu definieren. *SUSER_SNAME* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Geben Sie diesen Parameter an, um das Resultset auf die Partitionen einzuschränken, bei denen SUSER_SNAME zu dem angegebenen Wert aufgelöst wird.  
   
 > [!NOTE]  
 >  Wenn *SUSER_SNAME* angegeben wird, muss *HOST_NAME* NULL sein.  
   
-`[ @host_name = ] 'host_name'`Der HOST_NAME Wert, der verwendet wird, um eine Partition zu definieren. *HOST_NAME* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Geben Sie diesen Parameter an, um das Resultset auf die Partitionen einzuschränken, bei denen HOST_NAME zu dem angegebenen Wert aufgelöst wird.  
+`[ @host_name = ] 'host_name'` Der HOST_NAME Wert, der verwendet wird, um eine Partition zu definieren. *HOST_NAME* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Geben Sie diesen Parameter an, um das Resultset auf die Partitionen einzuschränken, bei denen HOST_NAME zu dem angegebenen Wert aufgelöst wird.  
   
 > [!NOTE]  
 >  Wenn *SUSER_SNAME* angegeben wird, muss *HOST_NAME* NULL sein.  
@@ -65,7 +66,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpmergepartition** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

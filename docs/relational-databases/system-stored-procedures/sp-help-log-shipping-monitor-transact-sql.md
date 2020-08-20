@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_monitor (Transact-SQL)
 title: sp_help_log_shipping_monitor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b687131739188c811347aa032c0eb941124eb665
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fa34a789b4993b8eaf14123b2f9a4bffb477ed39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474216"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,11 +65,11 @@ sp_help_log_shipping_monitor
 |**restore_threshold**|**int**|Die Anzahl der zulässigen Minuten zwischen Wiederherstellungsvorgängen, bevor eine Warnung generiert wird. **restore_threshold** kann nicht NULL sein.|  
 |**is_restore_alert_enabled**|**bit**|Gibt an, ob eine Warnung ausgegeben wird, wenn **restore_threshold** überschritten wird. Der Wert eins (**1**), der Standardwert, bedeutet, dass die Warnung ausgelöst wird.<br /><br /> NULL = Die Informationen sind nicht verfügbar oder nicht von Bedeutung.<br /><br /> Verwenden Sie [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md), um die Wiederherstellungsschwelle festzulegen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_help_log_shipping_monitor** muss in der **master** -Datenbank auf dem Überwachungsserver ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

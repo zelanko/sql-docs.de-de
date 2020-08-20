@@ -1,4 +1,5 @@
 ---
+description: sp_helpdevice (Transact-SQL)
 title: sp_helpdevice (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cda03415378577a061bb308c0b19e7fcd0659d49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0da4ef24647edd8de4bda1c412afb1410f9d3c14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474119"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85893605"
   Meldet Informationen zu Microsoft® SQL Server™-Sicherungsmedien.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Es wird empfohlen, stattdessen die [sys. backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) -Katalog Sicht zu verwenden.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Es wird empfohlen, stattdessen die [sys. backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) -Katalog Sicht zu verwenden.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @devname = ] 'name'`Der Name des Sicherungs Mediums, für das Informationen gemeldet werden. Der Wert von *name* ist immer **sysname**.  
+`[ @devname = ] 'name'` Der Name des Sicherungs Mediums, für das Informationen gemeldet werden. Der Wert von *name* ist immer **sysname**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -53,12 +54,12 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Logischer Medienname.|  
 |**physical_name**|**nvarchar(260)**|Physischer Dateiname.|  
-|**description**|**nvarchar(255)**|Beschreibung des Mediums.|  
+|**Beschreibung**|**nvarchar(255)**|Beschreibung des Mediums.|  
 |**status**|**int**|Eine Nummer, die der Statusbeschreibung in der **description** -Spalte entspricht.|  
 |**cntrltype**|**smallint**|Controllertyp des Mediums:<br /><br /> 2 = Datenträgermedium<br /><br /> 5 = Bandmedium|  
 |**size**|**int**|Mediengröße in Seiten von je 2 KB.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn *name* angegeben wird, zeigt **sp_helpdevice** Informationen zu dem angegebenen Sicherungsmedium an. Wenn *name* nicht angegeben wird, zeigt **sp_helpdevice** Informationen zu allen Sicherungsmedien in der **sys.backup_devices** -Katalogsicht an.  
   
  Sicherungsmedien werden dem System mithilfe von **sp_addumpdevice**hinzugefügt.  

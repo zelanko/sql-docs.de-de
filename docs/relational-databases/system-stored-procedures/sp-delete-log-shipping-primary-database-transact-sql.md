@@ -1,4 +1,5 @@
 ---
+description: sp_delete_log_shipping_primary_database (Transact-SQL)
 title: sp_delete_log_shipping_primary_database (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f1b5625ed09cb3c5e9d753477b61fdd1e898590
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b7a1e58188a9b9f3a845e465139e5a24d3fad88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474382"
 ---
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @database = ] 'database'`Der Name der primären Datenbank für den Protokoll Versand. *database* ist vom Datentyp **sysname**, hat keinen Standardwert und darf nicht NULL sein.  
+`[ @database = ] 'database'` Der Name der primären Datenbank für den Protokoll Versand. *database* ist vom Datentyp **sysname**, hat keinen Standardwert und darf nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -48,7 +49,7 @@ sp_delete_log_shipping_primary_database
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_delete_log_shipping_primary_database** muss in der **master** -Datenbank auf dem primären Server ausgeführt werden. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
   
 1.  Löscht den Sicherungsauftrag für die angegebene primäre Datenbank.  

@@ -1,4 +1,5 @@
 ---
+description: sp_delete_operator (Transact-SQL)
 title: sp_delete_operator (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c584dceb9306d6a74575b548bfd9d8548acb47a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 22fcae3edb3d882826e80bdb7a359726eac930fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474323"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'`Der Name des zu löschenden Operators. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'name'` Der Name des zu löschenden Operators. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @reassign_to_operator = ] 'reassign_operator'`Der Name eines Operators, dem die Warnungen des angegebenen Operators neu zugewiesen werden können. *reassign_operator* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @reassign_to_operator = ] 'reassign_operator'` Der Name eines Operators, dem die Warnungen des angegebenen Operators neu zugewiesen werden können. *reassign_operator* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

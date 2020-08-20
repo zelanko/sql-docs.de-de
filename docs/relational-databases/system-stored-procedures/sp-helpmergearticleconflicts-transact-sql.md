@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergearticleconflicts (Transact-SQL)
 title: sp_helpmergearticleconflicts (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 776f46d1f2e61c0f866352ee9c373e4619a2e282
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9a2e2272713266ea0dbae5d4bc8da76bff87b919
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474052"
 ---
 # <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Mergeveröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der Standardwert **%** gibt an, dass alle Artikel in der Datenbank zurückgegeben werden, die Konflikte aufweisen.  
+`[ @publication = ] 'publication'` Der Name der Mergeveröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der Standardwert **%** gibt an, dass alle Artikel in der Datenbank zurückgegeben werden, die Konflikte aufweisen.  
   
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -61,7 +62,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpmergearticleconflicts** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

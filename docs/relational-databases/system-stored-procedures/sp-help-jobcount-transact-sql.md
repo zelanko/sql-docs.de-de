@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobcount (Transact-SQL)
 title: sp_help_jobcount (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a697489367d085714fd9ab1ab5c6245ca04b9ee1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86d4c7ebeac06589e7f80f0a01adb0b996a1d3bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474193"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @schedule_id = ] schedule_id`Der Bezeichner des aufzulistenden Zeitplans. *schedule_id* ist vom Datentyp **int**und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
+`[ @schedule_id = ] schedule_id` Der Bezeichner des aufzulistenden Zeitplans. *schedule_id* ist vom Datentyp **int**und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
   
-`[ @schedule_name = ] 'schedule_name'`Der Name des Zeitplans, der aufgelistet werden soll. *schedule_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
+`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans, der aufgelistet werden soll. *schedule_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -55,7 +56,7 @@ sp_help_jobcount
 |-----------------|---------------|-----------------|  
 |**JOBCOUNT**|**int**|Anzahl von Aufträgen für den angegebenen Zeitplan.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Prozedur wird die Anzahl von Aufträgen aufgelistet, die an den angegebenen Zeitplan angefügt sind.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -83,7 +84,7 @@ EXEC sp_help_jobcount
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server-Agent gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   

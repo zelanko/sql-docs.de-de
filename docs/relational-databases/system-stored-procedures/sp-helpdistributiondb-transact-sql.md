@@ -1,4 +1,5 @@
 ---
+description: sp_helpdistributiondb (Transact-SQL)
 title: sp_helpdistributiondb (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e8097e5f528685a35038d4d20170277b7a922d64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0f592b7f3f5c864fba493327cb2b5cda1e44998
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474084"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @database = ] 'database_name'`Der Name der Datenbank, für die Eigenschaften zurückgegeben werden. *database_name* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** für alle Datenbanken, die dem Verteiler zugeordnet sind und für die der Benutzer über Berechtigungen verfügt.  
+`[ @database = ] 'database_name'` Der Name der Datenbank, für die Eigenschaften zurückgegeben werden. *database_name* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** für alle Datenbanken, die dem Verteiler zugeordnet sind und für die der Benutzer über Berechtigungen verfügt.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -60,14 +61,14 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpdistributiondb** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Mitglieder der festen Daten Bank Rolle **db_owner** oder der Rolle **replmonitor** in einer Verteilungs Datenbank und Benutzer in der Veröffentlichungs Zugriffsliste einer Veröffentlichung, die die Verteilungs Datenbank verwendet, können **sp_helpdistributiondb** ausführen, um Datei bezogene Informationen zurückzugeben. Mitglieder der **Public** -Rolle können **sp_helpdistributiondb** ausführen, um nicht Datei bezogene Informationen für Verteilungs Datenbanken zurückzugeben, auf die Sie Zugriff haben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Anzeigen und Ändern der Verteiler-und Verleger Eigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

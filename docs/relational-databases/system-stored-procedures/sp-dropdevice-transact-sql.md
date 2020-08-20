@@ -1,4 +1,5 @@
 ---
+description: sp_dropdevice (Transact-SQL)
 title: sp_dropdevice (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9be64080f6e1c56daa0901dbdc174c83d40cf541
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4c4a02e581b743b780db715b61f06ef7f22413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474292"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @logicalname = ] 'device'`Der logische Name des Daten Bank Geräts oder Sicherungs Mediums, wie in **master.dbo.sysDevices.Name**aufgeführt. *Device* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @logicalname = ] 'device'` Der logische Name des Daten Bank Geräts oder Sicherungs Mediums, wie in **master.dbo.sysDevices.Name**aufgeführt. *Device* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @delfile = ] 'delfile'`Gibt an, ob die physische Sicherungsmedien Datei gelöscht werden soll. *Delta File ist vom Datentyp* **varchar (7)**. Wenn die Datenträger Datei des physischen Sicherungs Mediums als **Delta**Datei angegeben wird, wird Sie gelöscht.  
+`[ @delfile = ] 'delfile'` Gibt an, ob die physische Sicherungsmedien Datei gelöscht werden soll. *Delta File ist vom Datentyp* **varchar (7)**. Wenn die Datenträger Datei des physischen Sicherungs Mediums als **Delta**Datei angegeben wird, wird Sie gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -64,7 +65,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 EXEC sp_dropdevice 'tapedump1';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Löschen eines Sicherungs Mediums &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

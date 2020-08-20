@@ -1,4 +1,5 @@
 ---
+description: sp_detach_db (Transact-SQL)
 title: sp_detach_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/30/2015
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee5261834a0eeb11b4f7f6a21ab5110c0d42fd48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66f3e4543e3090d3a2bb0fee7179abaf2e017503
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474299"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'database_name'`Der Name der Datenbank, die getrennt werden soll. *database_name* ist ein Wert vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
+`[ @dbname = ] 'database_name'` Der Name der Datenbank, die getrennt werden soll. *database_name* ist ein Wert vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @skipchecks = ] 'skipchecks'`Gibt an, ob die Update Statistik übersprungen oder ausgeführt werden soll. *wobei skipchecks "* ist ein **nvarchar (10)** -Wert mit dem Standardwert NULL. Um die Update Statistik zu überspringen, geben Sie **true**an Um Update Statistics explizit auszuführen, geben Sie **false**an.  
+`[ @skipchecks = ] 'skipchecks'` Gibt an, ob die Update Statistik übersprungen oder ausgeführt werden soll. *wobei skipchecks "* ist ein **nvarchar (10)** -Wert mit dem Standardwert NULL. Um die Update Statistik zu überspringen, geben Sie **true**an Um Update Statistics explizit auszuführen, geben Sie **false**an.  
   
  UPDATE STATISTICS wird standardmäßig ausgeführt, um Informationen zu den Daten in den Tabellen und Indizes zu aktualisieren. Das Ausführen von UPDATE STATISTICS ist nützlich für Datenbanken, die auf Nur-Lese-Medien verschoben werden sollen.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Gibt an, dass die Volltextindex Datei, die der zu trennende Datenbank zugeordnet ist, während des Trenn Vorgangs der Datenbank nicht gelöscht wird. *Keepfulltextindexfile* ist ein **nvarchar (10)** -Wert mit dem Standardwert **true**. Wenn *keepfulltextindexfile* den Wert **false**aufweist, werden alle der Datenbank zugeordneten Volltextindex Dateien und die Metadaten des voll Text Indexes gelöscht, es sei denn, die Datenbank ist schreibgeschützt. Wenn NULL oder **true**, werden voll Text bezogene Metadaten beibehalten.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Gibt an, dass die Volltextindex Datei, die der zu trennende Datenbank zugeordnet ist, während des Trenn Vorgangs der Datenbank nicht gelöscht wird. *Keepfulltextindexfile* ist ein **nvarchar (10)** -Wert mit dem Standardwert **true**. Wenn *keepfulltextindexfile* den Wert **false**aufweist, werden alle der Datenbank zugeordneten Volltextindex Dateien und die Metadaten des voll Text Indexes gelöscht, es sei denn, die Datenbank ist schreibgeschützt. Wenn NULL oder **true**, werden voll Text bezogene Metadaten beibehalten.  
   
 > [!IMPORTANT]
 >  Der ** \@ keepfulltextindexfile** -Parameter wird in einer zukünftigen Version von entfernt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Verwenden Sie diesen Parameter beim Entwickeln neuer Anwendungen nicht, und planen Sie so bald wie möglich das Ändern von Anwendungen, in denen er zurzeit verwendet wird.  
@@ -68,7 +69,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 > [!NOTE]  
 >  Informationen dazu, wie Sie die Standarddatenbank aller Anmeldekonten anzeigen, finden Sie unter [sp_helplogins &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie die [Alter Login](../../t-sql/statements/alter-login-transact-sql.md) -Anweisung verwenden, um einer Anmeldung eine neue Standarddatenbank zuzuweisen.  
   
-## <a name="restrictions"></a>Einschränkungen  
+## <a name="restrictions"></a>Beschränkungen  
  Eine Datenbank kann nicht getrennt werden, wenn Folgendes zutrifft:  
   
 -   Die Datenbank ist zurzeit in Verwendung. Weitere Informationen finden Sie im Abschnitt "Erhalten exklusiven Zugriffs" weiter unten in diesem Thema.  
