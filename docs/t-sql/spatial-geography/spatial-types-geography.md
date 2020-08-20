@@ -1,4 +1,5 @@
 ---
+description: Räumliche Typen - geography
 title: geography (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1a344d490ee4941ea233de28008a1cb990938274
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 46489eadd2c56fbccca62dfe415611e0f8f66a2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467474"
 ---
 # <a name="spatial-types---geography"></a>Räumliche Typen - geography
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Der Räumlichkeitsdatentyp **geography** wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als .NET-CLR-Datentyp (Common Language Runtime) implementiert. Dieser Typ stellt Daten in einem Erdkugel-Koordinatensystem dar. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **geography** speichert elliptische Daten (Globusmodell) wie GPS-Koordinaten in Längen- und Breitengraden.  
+  Der Räumlichkeitsdatentyp **geography** wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als .NET-CLR-Datentyp (Common Language Runtime) implementiert. Dieser Typ stellt Daten in einem Erdkugel-Koordinatensystem dar. Der -Datentyp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** speichert elliptische Daten (Globusmodell) wie GPS-Koordinaten in Längen- und Breitengraden.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt einen Satz von Methoden für den räumlichen **geography**-Datentyp. Dazu gehören Methoden für **geography**, die im OGC-Standard (Open Geospatial Consortium) sowie in einer Gruppe von [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Erweiterungen dieses Standards definiert sind.  
  
@@ -91,7 +92,7 @@ CREATE TABLE SpatialTable
 );  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
 
   

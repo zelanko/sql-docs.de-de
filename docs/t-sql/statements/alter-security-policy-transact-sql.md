@@ -1,4 +1,5 @@
 ---
+description: ALTER SECURITY POLICY (Transact-SQL)
 title: ALTER SECURITY POLICY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0696b96e83aac5ca66b43d38c11adceab702c10f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d8267b7583827dce34e46c8f3605912fe72ea72b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467292"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -88,7 +89,7 @@ Gibt an, dass die Sicherheitsrichtlinie nicht ausgeführt werden soll, wenn ein 
 table_schema_name.table_name  
 Die Zieltabelle für das angewendete Sicherheitsprädikat. Mehrere deaktivierte Sicherheitsrichtlinien können auf eine einzelne Tabelle abzielen, aber zu jedem Zeitpunkt kann nur eine aktiviert werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Bemerkungen
 Die ALTER SECURITY POLICY-Anweisung liegt im Bereich einer Transaktion. Wird ein Rollback für die Transaktion ausgeführt, so wird auch für die Anweisung ein Rollback durchgeführt.  
   
 Wenn Sie Prädikatfunktionen mit speicheroptimierten Tabellen verwenden, müssen die Sicherheitsrichtlinien **SCHEMABINDING** umfassen und den Kompilierungshinweis **WITH NATIVE_COMPILATION** verwenden. Das SCHEMABINDING-Argument kann nicht mit der ALTER-Anweisung geändert werden, da es auf alle Prädikate angewendet wird. Zum Ändern der Schemabindung müssen Sie die Sicherheitsrichtlinie löschen und neu erstellen.  

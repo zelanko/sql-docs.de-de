@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION SCHEME (Transact-SQL)
 title: ALTER PARTITION SCHEME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3baca278dfaa94c51dfddff84a8a5c760c1275ae
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: c6bd938d1dfcf4cf1506d1b8eb35cade61458f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467344"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -85,7 +86,7 @@ NEXT USED test5fg;
   
  Als Ergebnis einer ALTER PARTITION FUNCTION-Anweisung erhält die Dateigruppe `test5fg` alle zusätzlichen Partitionen einer partitionierten Tabelle oder eines partitionierten Indexes.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
