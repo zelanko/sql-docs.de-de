@@ -1,4 +1,5 @@
 ---
+description: Order (MDX)
 title: Reihenfolge (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4db745ea01a56d68fe259ebb2fffb5aae250abd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471742"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 
@@ -50,7 +51,7 @@ Order(Set_Expression, String_Expression
  Wenn die **Order** -Funktion mit einer Menge verwendet wird, in der zwei oder mehr Hierarchien quer verknüpft sind, und **das Flag zum** Aufheben der Verwendung verwendet wird, werden nur die Elemente der letzten Hierarchie in der Gruppe sortiert. Dies ist eine Änderung im Vergleich zu Analysis Services 2000, wo alle Hierarchien im Satz befohlen wurden.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die Anzahl der Bestellungen des Wiederverkäufers für alle Kalender Quartale der Kalender Hierarchie in der Date-Dimension aus dem **Adventure Works** -Cube zurückgegeben. Die **Order** -Funktion ordnet den Satz für die ROWS-Achse neu an. Die **Order** -Funktion ordnet den Satz `[Reseller Order Count]` in absteigender hierarchischer Reihenfolge an `[Calendar]` , wie von der Hierarchie bestimmt.  
+ Im folgenden Beispiel wird die Anzahl der Bestellungen des Wiederverkäufers für alle Kalender Quartale der Kalender Hierarchie in der Date-Dimension aus dem **Adventure Works** -Cube zurückgegeben. Die **Order** -Funktion ordnet den Satz für die ROWS-Achse neu an. Die **Order** -Funktion ordnet den Satz `[Reseller Order Count]` in absteigender hierarchischer Reihenfolge an, wie von der `[Calendar]` Hierarchie bestimmt.  
   
  `SELECT`  
   

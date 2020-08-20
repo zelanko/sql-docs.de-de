@@ -1,4 +1,5 @@
 ---
+description: Informationen zur Änderungsnachverfolgung (SQL Server)
 title: Informationen zur Änderungsnachverfolgung
 ms.custom: seo-dt-2019
 ms.date: 08/08/2016
@@ -17,12 +18,12 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0393313d6c57de73be26f55f93814460dcfd2027
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 518c827339b134ab30dd12552ec492d8bda878c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472992"
 ---
 # <a name="about-change-tracking-sql-server"></a>Informationen zur Änderungsnachverfolgung (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +78,7 @@ Jede Tabelle, für die Änderungsnachverfolgung aktiviert ist, verfügt über ei
 
 In den Service Packs für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wurde eine gespeicherte Prozedur für das Ausführen einer manuellen Bereinigung für die interne Änderungsnachverfolgung interner Tabellen hinzugefügt. Weitere Informationen zur gespeicherten Prozedur finden Sie unter [KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1). 
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Aktivieren und Deaktivieren der Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [Verwenden der Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)   
  [Verwalten der Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   

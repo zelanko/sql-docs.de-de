@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 title: sys. sp_xtp_control_proc_exec_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d011be97c90f156b8cd26cfb8fcc85963b75161
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: e189cd4e7a5ec9f488cce78ee6cc159c8700a463
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473399"
 ---
 # <a name="syssp_xtp_control_proc_exec_stats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +39,12 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
 ```  
   
 ## <a name="arguments"></a>Argumente  
- @new_collection_value= *Wert*  
+ @new_collection_value = *Wert*  
  Bestimmt, ob die Statistiksammlung auf Prozedurebene aktiviert (1) oder deaktiviert (0) ist.  
   
- @new_collection_valuewird auf NULL festgelegt, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder die Datenbank gestartet wird.  
+ @new_collection_value wird auf NULL festgelegt, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder die Datenbank gestartet wird.  
   
- @old_collection_value= *Wert*  
+ @old_collection_value = *Wert*  
  Gibt den aktuellen Status zurück.  
   
 ## <a name="return-code"></a>Rückgabe Code  
@@ -53,7 +54,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  Erfordert die Mitgliedschaft in der festen sysadmin-Rolle.  
   
 ## <a name="code-samples"></a>Codebeispiele  
- So legen Sie @new_collection_value den Wert von fest und Fragen ihn ab@new_collection_value:  
+ So legen Sie @new_collection_value den Wert von fest und Fragen ihn ab @new_collection_value:  
   
 ```  
 exec [sys].[sp_xtp_control_proc_exec_stats] @new_collection_value = 1  

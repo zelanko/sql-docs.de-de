@@ -1,4 +1,5 @@
 ---
+description: sp_update_targetservergroup (Transact-SQL)
 title: sp_update_targetservergroup (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16cd7c339a476875ee3f3a7319ddaf57f0d69711
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6aa33876376560cfc90cbf7ab03a69fcf94fa6a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473530"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'current_name'`Der Name der Zielserver Gruppe. *current_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'current_name'` Der Name der Zielserver Gruppe. *current_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @new_name = ] 'new_name'`Der neue Name für die Zielserver Gruppe. *new_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @new_name = ] 'new_name'` Der neue Name für die Zielserver Gruppe. *new_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -51,7 +52,7 @@ sp_update_targetservergroup
 ## <a name="permissions"></a>Berechtigungen  
  Zum Ausführen dieser gespeicherten Prozedur muss den Benutzern die festen Server Rolle **sysadmin** erteilt werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_update_targetservergroup** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="examples"></a>Beispiele  

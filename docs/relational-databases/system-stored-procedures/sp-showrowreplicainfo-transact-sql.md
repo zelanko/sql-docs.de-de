@@ -1,4 +1,5 @@
 ---
+description: sp_showrowreplicainfo (Transact-SQL)
 title: sp_showrowreplicainfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a734045bc253e71e8663314f785b8630b32b383a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 09ab29ef7e164aa89d99d4e34ffd1e71fc4a18a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473753"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @ownername = ] 'ownername'`Der Name des Tabellen Besitzers. "Besitzer *Name* " ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter ist hilfreich für differenzierte Tabellen, wenn eine Datenbank mehrere Tabellen mit dem gleichen Namen enthält, aber jede Tabelle einen unterschiedlichen Besitzer aufweist.  
+`[ @ownername = ] 'ownername'` Der Name des Tabellen Besitzers. "Besitzer *Name* " ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter ist hilfreich für differenzierte Tabellen, wenn eine Datenbank mehrere Tabellen mit dem gleichen Namen enthält, aber jede Tabelle einen unterschiedlichen Besitzer aufweist.  
   
-`[ @tablename = ] 'tablename'`Der Name der Tabelle, die die Zeile enthält, für die die Informationen zurückgegeben werden. *TableName* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @tablename = ] 'tablename'` Der Name der Tabelle, die die Zeile enthält, für die die Informationen zurückgegeben werden. *TableName* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @rowguid = ] rowguid`Ist der eindeutige Bezeichner der Zeile. *ROWGUID* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert.  
+`[ @rowguid = ] rowguid` Ist der eindeutige Bezeichner der Zeile. *ROWGUID* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert.  
   
-`[ @show = ] 'show'`Bestimmt die Menge der Informationen, die im Resultset zurückgegeben werden sollen. *Show* ist vom Datentyp **nvarchar (20)** . der Standardwert ist Both. Wenn **Row**, werden nur Zeilen Versionsinformationen zurückgegeben. Wenn **Spalten**, werden nur Spalten Versionsinformationen zurückgegeben. Wenn **beides**, werden sowohl Zeilen-als auch Spalten Informationen zurückgegeben.  
+`[ @show = ] 'show'` Bestimmt die Menge der Informationen, die im Resultset zurückgegeben werden sollen. *Show* ist vom Datentyp **nvarchar (20)** . der Standardwert ist Both. Wenn **Row**, werden nur Zeilen Versionsinformationen zurückgegeben. Wenn **Spalten**, werden nur Spalten Versionsinformationen zurückgegeben. Wenn **beides**, werden sowohl Zeilen-als auch Spalten Informationen zurückgegeben.  
   
 ## <a name="result-sets-for-row-information"></a>Resultsets für Zeileninformationen  
   
@@ -56,7 +57,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Name der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**db_nickname**|**Binary (6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**version**|**int**|Version des Eintrags.|  
-|**current_state**|**nvarchar (9)**|Gibt Informationen zum aktuellen Status der Zeile zurück.<br /><br /> **y** -Zeilendaten stellt den aktuellen Status der Zeile dar.<br /><br /> **n** -Zeilendaten stellen nicht den aktuellen Status der Zeile dar.<br /><br /> **\<n/a>**-Nicht zutreffend.<br /><br /> **\<unknown>**-Der aktuelle Zustand kann nicht ermittelt werden.|  
+|**current_state**|**nvarchar (9)**|Gibt Informationen zum aktuellen Status der Zeile zurück.<br /><br /> **y** -Zeilendaten stellt den aktuellen Status der Zeile dar.<br /><br /> **n** -Zeilendaten stellen nicht den aktuellen Status der Zeile dar.<br /><br /> **\<n/a>** -Nicht zutreffend.<br /><br /> **\<unknown>** -Der aktuelle Zustand kann nicht ermittelt werden.|  
 |**rowversion_table**|**NCHAR (17)**|Gibt an, ob die Zeilen Versionen in der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle oder der [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle gespeichert werden.|  
 |**comment**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Zeilenversionseintrag. Normalerweise ist dieses Feld leer.|  
   
@@ -74,7 +75,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="result-set-for-both"></a>Resultset für beide  
  Wenn **der Wert für** " *anzeigen*" ausgewählt ist, werden die Resultsets für Zeilen und Spalten zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_showrowreplicainfo** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

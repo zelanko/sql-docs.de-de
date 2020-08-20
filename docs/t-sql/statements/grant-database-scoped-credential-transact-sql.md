@@ -1,4 +1,5 @@
 ---
+description: GRANT (Berechtigungen für datenbankweit gültige Anmeldeinformationen) (Transact-SQL)
 title: GRANT (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/19/2017
@@ -21,12 +22,12 @@ ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c1566d978da2ca0ea7e40e146b1b1d5a2bbc3661
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f65bf32fb857b5039f6a48e26d48a8f49eca5a04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472229"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT (Berechtigungen für datenbankweit gültige Anmeldeinformationen) (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -80,7 +81,7 @@ AS *granting_principal*
 -   Einem asymmetrischen Schlüssel zugeordneter Datenbankbenutzer  
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Datenbankweit gültige Anmeldeinformationen sind ein sicherungsfähiges Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für datenbankweit gültige Anmeldeinformationen erteilt werden können, sind im Folgenden aufgeführt, zusammen mit den allgemeineren Berechtigungen, die sie implizit enthalten.  
   
 |Berechtigung für datenbankweit gültige Anmeldeinformationen|Impliziert durch die Berechtigung für datenbankweit gültige Anmeldeinformationen|Impliziert durch Datenbankberechtigung|  

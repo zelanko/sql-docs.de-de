@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_account_sp (Transact-SQL)
 title: sysmail_delete_account_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b49f1b42a1484ca5449c3e65e274a3626b62809
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 749aee08d548f3658c5cfba3e44e4cbf4667f6b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473393"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,9 +40,9 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @account_id = ] account_id`Die ID-Nummer des zu löschenden Kontos. *account_id* ist vom Datentyp **int**und hat keinen Standardwert. Es muss entweder *account_id* oder *account_name* angegeben werden.  
+`[ @account_id = ] account_id` Die ID-Nummer des zu löschenden Kontos. *account_id* ist vom Datentyp **int**und hat keinen Standardwert. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
-`[ @account_name = ] 'account_name'`Der Name des zu löschenden Kontos. *account_name* ist vom Datentyp **sysname**und hat keinen Standardwert. Es muss entweder *account_id* oder *account_name* angegeben werden.  
+`[ @account_name = ] 'account_name'` Der Name des zu löschenden Kontos. *account_name* ist vom Datentyp **sysname**und hat keinen Standardwert. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

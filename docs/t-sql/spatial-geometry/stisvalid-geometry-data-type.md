@@ -1,4 +1,5 @@
 ---
+description: STIsValid (geometry-Datentyp)
 title: STIsValid (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6068ed19c1f531104127402fddfa75ab30210932
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 65e86550626b1461cb8b0abc5e7fb354e6b4e3a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472419"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (geometry-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ Gibt true zurück, wenn eine **geometry** -Instanz basierend auf ihrem Open Geos
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der OGC-Typ einer **geometry**-Instanz kann durch einen Aufruf von [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) bestimmt werden.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erzeugt nur gültige **geometry**-Instanzen, erlaubt aber die Speicherung und den Abruf ungültiger Instanzen. Eine gültige Instanz, die die gleiche Punktmenge wie eine ungültige Instanz darstellt, kann mithilfe der `MakeValid()` -Methode abgerufen werden.  

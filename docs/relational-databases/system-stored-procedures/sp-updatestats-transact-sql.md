@@ -1,4 +1,5 @@
 ---
+description: sp_updatestats (Transact-SQL)
 title: sp_updatestats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/25/2017
@@ -18,19 +19,19 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4449e2a518ab1bfd12563070a80514d890eae48c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fbcfad5e5639fab399d65bd5ffbc24a1e0bd6cea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473466"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Wird `UPDATE STATISTICS` für alle benutzerdefinierten und internen Tabellen in der aktuellen Datenbank ausgeführt.  
   
-Weitere Informationen zu `UPDATE STATISTICS` finden Sie unter [Aktualisieren von Statistiken &#40;Transact-SQL-&#41;](../../t-sql/statements/update-statistics-transact-sql.md). Weitere Informationen zu Statistiken finden Sie unter [Statistics](../../relational-databases/statistics/statistics.md).  
+Weitere Informationen zu `UPDATE STATISTICS` finden Sie unter [Aktualisieren von Statistiken &#40;Transact-SQL-&#41;](../../t-sql/statements/update-statistics-transact-sql.md). Weitere Informationen zu Statistiken finden Sie unter [Statistik](../../relational-databases/statistics/statistics.md).  
     
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +45,9 @@ sp_updatestats [ [ @resample = ] 'resample']
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="arguments"></a>Argumente  
-`[ @resample = ] 'resample'`Gibt an, dass **sp_updatestats** die RESAMPLE-Option der [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) -Anweisung verwendet. Wird **'resample'** nicht angegeben, aktualisiert **sp_updatestats** Statistiken mithilfe der Standardstichprobe. **resample** ist vom Datentyp **varchar(8)** . Der Standardwert ist NO.  
+`[ @resample = ] 'resample'` Gibt an, dass **sp_updatestats** die RESAMPLE-Option der [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) -Anweisung verwendet. Wird **'resample'** nicht angegeben, aktualisiert **sp_updatestats** Statistiken mithilfe der Standardstichprobe. **resample** ist vom Datentyp **varchar(8)** . Der Standardwert ist NO.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_updatestats** `UPDATE STATISTICS` wird durch Angabe des- `ALL` Schlüssel Worts für alle benutzerdefinierten und internen Tabellen in der Datenbank ausgeführt. sp_updatestats zeigt Meldungen an, die auf den Fortschritt hinweisen. Nach Abschluss des Updates wird gemeldet, dass die Statistiken für alle Tabellen aktualisiert wurden.  
   
 **sp_updatestats** aktualisiert Statistiken für deaktivierte nicht gruppierte Indizes und aktualisiert keine Statistiken für deaktivierte gruppierte Indizes.  
@@ -75,11 +76,11 @@ Nutzen Sie Lösungen wie [Adaptive Index Defrag](https://github.com/Microsoft/ti
 
 ## <a name="see-also"></a>Weitere Informationen  
  [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [Erstellen von Statistiken &#40;Transact-SQL-&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [DBCC SHOW_STATISTICS &#40;Transact-SQL-&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICS &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sp_autostats &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
+ [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_createstats &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
- [Aktualisieren von Statistiken &#40;Transact-SQL-&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [Gespeicherte System Prozeduren](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
  

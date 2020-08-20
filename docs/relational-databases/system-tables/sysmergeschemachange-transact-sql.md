@@ -1,4 +1,5 @@
 ---
+description: sysmergeschemachange (Transact-SQL)
 title: sysmergeschemachange (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7740982430f03aed138a578dc12113eb7caf1764
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d5453a7b8802177e338a008af6df1a7ce2779374
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473125"
 ---
 # <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85881354"
 |**schemastatus**|**tinyint**|Gibt ab, ob eine Schemaänderung für den Artikel aussteht, die einen der folgenden Werte haben kann:<br /><br /> **0** = inaktiv.<br /><br /> **1** = aktiv.<br /><br /> Wenn eine Schema Änderung aussteht, wird dieser Wert auf **1**festgelegt.|  
 |**schemasubtype**|**int**|Der Untertyp der Schemaänderung:<br /><br /> **1** = AddColumn<br /><br /> **2** = DropColumn<br /><br /> **3** = AlterColumn<br /><br /> **4** = addprimarykey<br /><br /> **5** = AddUnique<br /><br /> **6** = adressenz<br /><br /> **7** = dropeinschränkung<br /><br /> **8** = adddefault<br /><br /> **9** = ADDCHECK<br /><br /> **10** = disableauslöst<br /><br /> **11** = enableauslöst<br /><br /> **12** = disableauslöst<br /><br /> **13** = enableauslöst<br /><br /> **14** = enableeinschränkung<br /><br /> **15** = disableeinschränkung<br /><br /> **16** = enableeinschränkung<br /><br /> **17** = disableeinschränkung|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

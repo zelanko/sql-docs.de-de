@@ -1,4 +1,5 @@
 ---
+description: Operatoren (MDX-Syntax)
 title: Operatoren (MDX-Syntax) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d52751978dbe2973ecab9506094fad6a6f6c29a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471772"
 ---
 # <a name="operators-mdx-syntax"></a>Operatoren (MDX-Syntax)
 
@@ -32,13 +33,13 @@ ms.locfileid: "68892117"
   
 |Art der auszuführenden Operation|Verwendung|  
 |---------------------------------------|---------|  
-|Weist einer Variablen einen Wert zu oder ordnet eine Resultsetspalte einem Alias zu.|[Zuweisungs Operatoren](../mdx/assignment-operators.md)|  
-|Addition, Subtraktion, Multiplikation, Division.|[Arithmetische Operatoren](../mdx/arithmetic-operators.md)|  
-|Testen, ob eine Bedingung wahr ist (z. B. AND, OR, NOT oder XOR).|[Bitweise Operatoren](../mdx/bitwise-operators.md)|  
-|Vergleichen eines Werts mit einem anderen Wert oder einem Ausdruck.|[Vergleichs Operatoren](../mdx/comparison-operators.md)|  
-|Dauerhaftes oder temporäres Kombinieren von zwei Zeichenfolgen zu einer Zeichenfolge.|[Verkettungsoperatoren](../mdx/concatenation-operators.md)|  
+|Weist einer Variablen einen Wert zu oder ordnet eine Resultsetspalte einem Alias zu.|[Zuweisungsoperatoren](../mdx/assignment-operators.md)|  
+|Addition, Subtraktion, Multiplikation, Division.|[Arithmetic Operators (Arithmetische Operatoren)](../mdx/arithmetic-operators.md)|  
+|Testen, ob eine Bedingung wahr ist (z. B. AND, OR, NOT oder XOR).|[Bitwise Operators (Bitweise Operatoren)](../mdx/bitwise-operators.md)|  
+|Vergleichen eines Werts mit einem anderen Wert oder einem Ausdruck.|[Comparison Operators (Vergleichsoperatoren)](../mdx/comparison-operators.md)|  
+|Dauerhaftes oder temporäres Kombinieren von zwei Zeichenfolgen zu einer Zeichenfolge.|[Verkettungs Operatoren](../mdx/concatenation-operators.md)|  
 |Dauerhaftes oder temporäres Kombinieren von zwei Mengenausdrücken zu einer Menge.|[Mengenoperatoren](../mdx/set-operators.md)|  
-|Ausführen einer Operation für einen Operanden.|[Unäre Operatoren](../mdx/unary-operators.md)|  
+|Ausführen einer Operation für einen Operanden.|[Unary Operators (Unäre Operatoren)](../mdx/unary-operators.md)|  
   
 > [!NOTE]  
 >  In Abfragen kann jeder Benutzer Operationen ausführen, sofern die Daten in dem Cube, der mit einem Operator verwendet werden soll, für diesen Benutzer sichtbar sind. Sie benötigen allerdings die entsprechenden Berechtigungen, um die Daten erfolgreich ändern zu können.  
@@ -46,7 +47,7 @@ ms.locfileid: "68892117"
  Wenn mehrere Operatoren verwendet werden, spielt die Reihenfolge eine Rolle, in der MDX die Operatoren auswertet. Darüber hinaus kann es für das Verwenden von Operatoren erforderlich sein, dass ein Datentyp in einen anderen Datentyp konvertiert wird, bevor die Operatoren ausgewertet werden können.  
   
 ## <a name="evaluating-complex-expressions"></a>Auswerten von komplexen Ausdrücken  
- Sie können einen Ausdruck erstellen, indem Sie Operatoren dazu verwenden, mehrere kleinere Ausdrücke zu kombinieren. In diesen komplexen Ausdrücken wertet MDX die Operatoren entsprechend der Definition der Operator Rangfolge aus, die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]verwendet wird. MDX führt Operatoren mit einer höheren Position in der Rangfolge vor Operatoren mit einer niedrigeren Position in der Rangfolge aus.  
+ Sie können einen Ausdruck erstellen, indem Sie Operatoren dazu verwenden, mehrere kleinere Ausdrücke zu kombinieren. In diesen komplexen Ausdrücken wertet MDX die Operatoren entsprechend der Definition der Operator Rangfolge aus, die von verwendet wird [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . MDX führt Operatoren mit einer höheren Position in der Rangfolge vor Operatoren mit einer niedrigeren Position in der Rangfolge aus.  
   
 ### <a name="understanding-operator-precedence"></a>Grundlegendes zur Rangfolge von Operatoren  
  Die folgende Liste zeigt die Operatorenrangfolge (vom höchsten bis zum niedrigsten Operator). Operatoren, die in derselben Zeile stehen, sind in der Rangfolge gleichwertig und werden von links nach rechts ausgewertet, es sei denn, durch Klammern wird eine andere Reihenfolge erzwungen:  
@@ -67,11 +68,11 @@ ms.locfileid: "68892117"
   
 -   EXISTING  
   
--   <>, >=, =, \<=, >, <  
+-   <>, >=, =, \<=, > , <  
   
 -   NICHT  
   
--   AND  
+-   UND  
   
 -   XOR  
   
@@ -91,11 +92,11 @@ ms.locfileid: "68892117"
   
 |Ursprünglicher Typ|Benötigter Typ|Konvertierung|  
 |-------------------|-----------------|----------------|  
-|Ebene|Set|\<Level>. Members|  
-|Hierarchy|Member|\<Hierarchie>. DefaultMember|  
+|Ebene|Set|\<level>. Members|  
+|Hierarchy|Member|\<hierarchy>DefaultMember|  
 |Member|Tupel|(\<Member>)|  
-|Tupel|Member|\<Tupel>. Item (0)|  
-|Tupel|Skalar|\<Tupel>. Wert|  
+|Tupel|Member|\<tuple>. Item (0)|  
+|Tupel|Skalar|\<tuple>. Wert|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md)   

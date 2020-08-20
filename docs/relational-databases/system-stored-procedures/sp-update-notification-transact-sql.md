@@ -1,4 +1,5 @@
 ---
+description: sp_update_notification (Transact-SQL)
 title: sp_update_notification (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b3018d982558f5d023d25695a541c8b109c015f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ddc8e2afae79b458d39f577d75176ba6f9dec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473521"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @alert_name = ] 'alert'`Der Name der dieser Benachrichtigung zugeordneten Warnung. *Alert* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @alert_name = ] 'alert'` Der Name der dieser Benachrichtigung zugeordneten Warnung. *Alert* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @operator_name = ] 'operator'`Der Operator, der benachrichtigt wird, wenn die Warnung auftritt. *Operator* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @operator_name = ] 'operator'` Der Operator, der benachrichtigt wird, wenn die Warnung auftritt. *Operator* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @notification_method = ] notification`Die Methode, mit der der Operator benachrichtigt wird. die *Benachrichtigung*ist vom Datentyp **tinyint**und hat keinen Standardwert. die folgenden Werte sind möglich:  
+`[ @notification_method = ] notification` Die Methode, mit der der Operator benachrichtigt wird. die *Benachrichtigung*ist vom Datentyp **tinyint**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -59,7 +60,7 @@ sp_update_notification
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_update_notification** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
  Sie können eine Benachrichtigung für einen Operator aktualisieren, der nicht über die erforderlichen Adressinformationen verfügt. verwenden Sie dazu den angegebenen *notification_method*. Wenn beim Senden einer E-Mail- oder Pagerbenachrichtigung ein Fehler auftritt, wird der Fehler im Fehlerprotokoll des Microsoft SQL Server-Agents angezeigt.  

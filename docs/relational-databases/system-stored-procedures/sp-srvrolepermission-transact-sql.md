@@ -1,4 +1,5 @@
 ---
+description: sp_srvrolepermission (Transact-SQL)
 title: sp_srvrolepermission (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 930b5ae195ab917faf5425bd2084314a633318b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb7a553adf516002a61f54ef900fd579f9d15856
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473712"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @srvrolename = ] 'role'`Der Name der Server Rolle, für die Berechtigungen zurückgegeben werden. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn keine Rolle angegeben wird, werden die Berechtigungen für alle festen Serverrollen zurückgegeben. *role* kann einen der folgenden Werte aufweisen.  
+`[ @srvrolename = ] 'role'` Der Name der Server Rolle, für die Berechtigungen zurückgegeben werden. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn keine Rolle angegeben wird, werden die Berechtigungen für alle festen Serverrollen zurückgegeben. *role* kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Serverrollen**|Systemadministratoren|  
+|**sysadmin**|Systemadministratoren|  
 |**securityadmin**|Sicherheitsadministratoren|  
 |**serveradmin**|Serveradministratoren|  
 |**setupadmin**|Setupadministratoren|  
@@ -65,7 +66,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |**ServerRole**|**sysname**|Der Name einer festen Serverrolle|  
 |**Berechtigung**|**sysname**|Die **ServerRole**zugeordnete Berechtigung|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Zu den aufgeführten Berechtigungen zählen die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die ausgeführt werden können, sowie andere spezielle Aktivitäten, die von Mitgliedern der festen Serverrolle ausgeführt werden können. Führen Sie **sp_helpsrvrole**aus, um eine Liste der festen Serverrollen anzuzeigen.  
   
  Die feste Serverrolle **sysadmin** hat die Berechtigungen aller anderen festen Serverrollen.  

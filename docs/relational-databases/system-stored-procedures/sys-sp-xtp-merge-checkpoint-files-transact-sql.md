@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 title: sys. sp_xtp_merge_checkpoint_files (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/28/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60f180eabadcbd4605b958ed3b631a5b4f38b838
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9bd9412dd63c8fa167fde614992b255508eea6b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473377"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die feste Serverrolle sysadmin und die feste Datenbankrolle db_owner.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Führt alle Daten und Änderungsdateien innerhalb des gültigen Bereichs zusammen, um eine einzelne Daten- und Änderungsdatei zu erstellen. Die Mergerichtlinie wird von dieser Prozedur nicht berücksichtigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  

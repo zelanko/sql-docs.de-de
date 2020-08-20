@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collector_type (Transact-SQL)
 title: sp_syscollector_update_collector_type (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f315b95b100315691d1ace30a3fe3bb2e9788d27
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 477fb448d91939933cea7132ad8b532de7a162e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473582"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +45,15 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @collector_type_uid = ] 'collector_type_uid'`Die GUID für den Sammlertyp. *collector_type_uid* ist vom Datentyp **uniqueidentifier**, und wenn er NULL ist, wird er automatisch erstellt und als Output zurückgegeben.  
+`[ @collector_type_uid = ] 'collector_type_uid'` Die GUID für den Sammlertyp. *collector_type_uid* ist vom Datentyp **uniqueidentifier**, und wenn er NULL ist, wird er automatisch erstellt und als Output zurückgegeben.  
   
-`[ @name = ] 'name'`Der Name des Sammler Typs. *Name ist vom Datentyp* **vom Datentyp sysname** und muss angegeben werden.  
+`[ @name = ] 'name'` Der Name des Sammler Typs. *Name ist vom Datentyp* **vom Datentyp sysname** und muss angegeben werden.  
   
-`[ @parameter_schema = ] 'parameter_schema'`Ist das XML-Schema für diesen Sammlertyp. *parameter_schema* ist **XML** und kann für bestimmte Sammlertypen erforderlich sein. Wenn nicht erforderlich, kann dieses Argument NULL sein.  
+`[ @parameter_schema = ] 'parameter_schema'` Ist das XML-Schema für diesen Sammlertyp. *parameter_schema* ist **XML** und kann für bestimmte Sammlertypen erforderlich sein. Wenn nicht erforderlich, kann dieses Argument NULL sein.  
   
-`[ @collection_package_id = ] collection_package_id`Ein eindeutiger lokaler Bezeichner, der auf das Sammlungs Paket verweist, das [!INCLUDE[ssIS](../../includes/ssis-md.md)] vom Sammlungs Satz verwendet wird. *collection_package_id* ist vom datnoch **uniqueidentifier** und ist erforderlich. Wenn Sie den Wert für *collection_package_id*abrufen möchten, Fragen Sie die dbo.syscollector_collector_types-Systemsicht in der msdb-Datenbank ab.  
+`[ @collection_package_id = ] collection_package_id` Ein eindeutiger lokaler Bezeichner, der auf das Sammlungs Paket verweist, das [!INCLUDE[ssIS](../../includes/ssis-md.md)] vom Sammlungs Satz verwendet wird. *collection_package_id* ist vom datnoch **uniqueidentifier** und ist erforderlich. Wenn Sie den Wert für *collection_package_id*abrufen möchten, Fragen Sie die dbo.syscollector_collector_types-Systemsicht in der msdb-Datenbank ab.  
   
-`[ @upload_package_id = ] upload_package_id`Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)] Uploadpaket verweist, das vom Sammlungs Satz verwendet wird. *upload_package_id* ist vom Datentyp **uniqueidentifier** und ist erforderlich. Wenn Sie den Wert für *upload_package_id*abrufen möchten, Fragen Sie die dbo.syscollector_collector_types-Systemsicht in der msdb-Datenbank ab.  
+`[ @upload_package_id = ] upload_package_id` Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)] Uploadpaket verweist, das vom Sammlungs Satz verwendet wird. *upload_package_id* ist vom Datentyp **uniqueidentifier** und ist erforderlich. Wenn Sie den Wert für *upload_package_id*abrufen möchten, Fragen Sie die dbo.syscollector_collector_types-Systemsicht in der msdb-Datenbank ab.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

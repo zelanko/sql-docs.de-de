@@ -1,4 +1,5 @@
 ---
+description: sysmergepublications (Transact-SQL)
 title: sysmergepublications (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8443d522edc8eeddeea51c775d2d29e6286e84cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 51a23c71b99ff57cb9dda76dd65cfc25fcf4a097
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473199"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,18 +35,18 @@ ms.locfileid: "85881386"
 |**publisher**|**sysname**|Entspricht dem Namen des Standardservers.|  
 |**publisher_db**|**sysname**|Der Name der Standardverlegerdatenbank.|  
 |**name**|**sysname**|Der Name der Veröffentlichung.|  
-|**description**|**nvarchar(255)**|Eine kurze Beschreibung der Veröffentlichung.|  
-|**zurück**|**int**|Die Beibehaltungs Dauer für den gesamten Veröffentlichungs Satz, wobei die Einheit durch den Wert der **retention_period_unit** Spalte angegeben wird.|  
+|**Beschreibung**|**nvarchar(255)**|Eine kurze Beschreibung der Veröffentlichung.|  
+|**Beibehaltung**|**int**|Die Beibehaltungs Dauer für den gesamten Veröffentlichungs Satz, wobei die Einheit durch den Wert der **retention_period_unit** Spalte angegeben wird.|  
 |**publication_type**|**tinyint**|Zeigt an, ob die Veröffentlichung gefiltert wird.<br /><br /> **0** = nicht gefiltert.<br /><br /> **1** = gefiltert.|  
 |**pubid**|**uniqueidentifier**|Die eindeutige ID für diese Veröffentlichung. Dieser Wert wird beim Hinzufügen der Veröffentlichung generiert.|  
-|**designmasterid**|**uniqueidentifier**|Für die zukünftige Verwendung reserviert.|  
-|**parentID**|**uniqueidentifier**|Zeigt die übergeordnete Veröffentlichung an, aus der die aktuelle gleichgeordnete oder als Teilmenge verwendete Veröffentlichung erstellt wurde (wird für hierarchische Veröffentlichungstopologien verwendet).|  
+|**designmasterid**|**uniqueidentifier**|Für zukünftige Verwendung reserviert.|  
+|**parentid**|**uniqueidentifier**|Zeigt die übergeordnete Veröffentlichung an, aus der die aktuelle gleichgeordnete oder als Teilmenge verwendete Veröffentlichung erstellt wurde (wird für hierarchische Veröffentlichungstopologien verwendet).|  
 |**sync_mode**|**tinyint**|Der Synchronisierungsmodus dieser Veröffentlichung:<br /><br /> **0** = System eigen.<br /><br /> **1** = Zeichen.|  
 |**allow_push**|**int**|Zeigt an, ob die Veröffentlichung Pushabonnements zulässt.<br /><br /> **0** = Pushabonnements sind nicht zulässig.<br /><br /> **1** = Pushabonnements sind zulässig.|  
 |**allow_pull**|**int**|Zeigt an, ob die Veröffentlichung Pullabonnements zulässt.<br /><br /> **0** = Pullabonnements sind nicht zulässig.<br /><br /> **1** = Pullabonnements sind zulässig.|  
 |**allow_anonymous**|**int**|Zeigt an, ob die Veröffentlichung anonyme Abonnements zulässt.<br /><br /> **0** = anonyme Abonnements sind nicht zulässig.<br /><br /> **1** = anonyme Abonnements sind zulässig.|  
 |**centralized_conflicts**|**int**|Zeigt an, ob die Konfliktdatensätze auf dem Verleger gespeichert werden:<br /><br /> **0** = Konflikt Datensätze werden nicht auf dem Verleger gespeichert.<br /><br /> **1** = Konflikt Datensätze werden auf dem Verleger gespeichert.|  
-|**status**|**tinyint**|Für die zukünftige Verwendung reserviert.|  
+|**status**|**tinyint**|Für zukünftige Verwendung reserviert.|  
 |**snapshot_ready**|**tinyint**|Zeigt den Status für die Momentaufnahme der Veröffentlichung an:<br /><br /> **0** = Momentaufnahme ist nicht einsatzbereit.<br /><br /> **1** = Momentaufnahme kann verwendet werden.<br /><br /> **2** = eine neue Momentaufnahme für diese Veröffentlichung muss erstellt werden.|  
 |**enabled_for_internet**|**bit**|Zeigt an, ob die Synchronisierungsdateien für die Veröffentlichung im Internet, über FTP oder andere Dienste bereitgestellt werden.<br /><br /> **0** = auf Synchronisierungs Dateien kann über das Internet zugegriffen werden.<br /><br /> **1** = auf Synchronisierungs Dateien kann nicht über das Internet zugegriffen werden.|  
 |**dynamic_filters**|**bit**|Gibt an, ob die Veröffentlichung mithilfe eines parametrisierten Zeilenfilters gefiltert wird.<br /><br /> **0** = die Veröffentlichung ist nicht Zeilen gefiltert.<br /><br /> **1** = die Veröffentlichung ist Zeilen gefiltert.|  
@@ -86,7 +87,7 @@ ms.locfileid: "85881386"
 |**generation_leveling_threshold**|**int**|Gibt die Anzahl der Änderungen an, die in einer Generierung enthalten sind. Eine Generierung ist eine Auflistung von Änderungen, die an einen Verleger oder Abonnenten übermittelt werden.|  
 |**automatic_reinitialization_policy**|**bit**|Gibt an, ob Änderungen vom Abonnenten vor einer automatischen erneuten Initialisierung hochgeladen werden.<br /><br /> **1** = Änderungen werden vom Abonnenten hochgeladen, bevor eine automatische Neuinitialisierung erfolgt.<br /><br /> **0** = Änderungen werden vor einer automatischen Neuinitialisierung nicht hochgeladen.|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   

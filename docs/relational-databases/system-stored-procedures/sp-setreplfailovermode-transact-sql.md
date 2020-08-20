@@ -1,4 +1,5 @@
 ---
+description: sp_setreplfailovermode (Transact-SQL)
 title: sp_setreplfailovermode (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf4ad48531567972d8fc9b1916d6c5f56bb28f68
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b5f75b17d54b5e119970af1bad9e12eaecf067d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473830"
 ---
 # <a name="sp_setreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Die Veröffentlichung muss bereits vorhanden sein.  
+`[ @publisher = ] 'publisher'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Die Veröffentlichung muss bereits vorhanden sein.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @failover_mode = ] 'failover_mode'`Der Failovermodus für das Abonnement. *failover_mode* ist vom Datentyp **nvarchar (10)** . die folgenden Werte sind möglich:  
+`[ @failover_mode = ] 'failover_mode'` Der Failovermodus für das Abonnement. *failover_mode* ist vom Datentyp **nvarchar (10)** . die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -57,12 +58,12 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing wurde als veraltet markiert und wird nicht mehr unterstützt.  
   
-`[ @override = ] override`Nur interne Verwendung.  
+`[ @override = ] override` Nur interne Verwendung.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_setreplfailovermode** wird bei der Momentaufnahme-oder Transaktions Replikation verwendet, bei der Abonnements entweder für das verzögerte Update über eine Warteschlange mit einem Failover auf eine sofortige Aktualisierung oder für sofortige Updates mit Failover zum verzögertem Update über eine Warteschlange aktiviert sind.  
   
 ## <a name="permissions"></a>Berechtigungen  

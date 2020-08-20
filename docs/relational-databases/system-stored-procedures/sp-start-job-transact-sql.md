@@ -1,4 +1,5 @@
 ---
+description: sp_start_job (Transact-SQL)
 title: sp_start_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 506fde9c77a0a78ef36bc4a89933ccdbe6a5f45d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fcf38d9b430943669a17e0ab1dd449eb4c75a18b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473730"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,15 +46,15 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_name = ] 'job_name'`Der Name des Auftrags, der gestartet werden soll. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, der gestartet werden soll. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @job_id = ] job_id`Die ID des Auftrags, der gestartet werden soll. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, der gestartet werden soll. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'`Der Zielserver, auf dem der Auftrag gestartet werden soll. *server_name* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. *server_name* muss einer der Zielserver sein, auf die der Auftrag zurzeit abzielt.  
+`[ @server_name = ] 'server_name'` Der Zielserver, auf dem der Auftrag gestartet werden soll. *server_name* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. *server_name* muss einer der Zielserver sein, auf die der Auftrag zurzeit abzielt.  
   
-`[ @step_name = ] 'step_name'`Der Name des Schritts, bei dem mit der Ausführung des Auftrags begonnen werden soll. Gilt nur für lokale Aufträge. *step_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @step_name = ] 'step_name'` Der Name des Schritts, bei dem mit der Ausführung des Auftrags begonnen werden soll. Gilt nur für lokale Aufträge. *step_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 `[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

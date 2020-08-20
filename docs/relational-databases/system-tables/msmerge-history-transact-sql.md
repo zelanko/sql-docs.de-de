@@ -1,4 +1,5 @@
 ---
+description: MSmerge_history (Transact-SQL)
 title: MSmerge_history (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a67943dd52f12fac1d7afa3d25e58ccaa85d79f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ce23db06fa76ff5ff3b5fe71fe9a11d87be36b75
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473195"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889795"
 |**timestamp**|**timestamp**|Die Timestampspalte dieser Tabelle.|  
 |**updatable_row**|**bit**|Auf **1** festgelegt, wenn die Verlaufs Zeile überschrieben werden kann.|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

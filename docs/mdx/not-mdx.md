@@ -1,4 +1,5 @@
 ---
+description: NOT (MDX)
 title: Not (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4031b887eb0a42580d6ae8debf6c9177ff67efc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c0cfa43896457397f2e2e08bac0b3de1d61e73f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471782"
 ---
 # <a name="not-mdx"></a>NOT (MDX)
 

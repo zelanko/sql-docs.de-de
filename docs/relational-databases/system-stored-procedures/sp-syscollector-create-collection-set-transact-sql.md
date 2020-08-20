@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_create_collection_set (Transact-SQL)
 title: sp_syscollector_create_collection_set (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 227c25b9e64e2630fe16b946383c37fd2989caaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d5b1d3b125a60608727273cc9ce2796fa254f174
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473645"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,13 +56,13 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'`Der Name des Sammlungs Satzes. *Name ist vom Datentyp* **vom Datentyp sysname** und darf keine leere Zeichenfolge oder NULL sein.  
+`[ @name = ] 'name'` Der Name des Sammlungs Satzes. *Name ist vom Datentyp* **vom Datentyp sysname** und darf keine leere Zeichenfolge oder NULL sein.  
   
  der *Name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammlungssätzen abrufen möchten, fragen Sie die syscollector_collection_sets-Systemsicht ab.  
   
-`[ @target = ] 'target'`Reserviert für zukünftige Verwendung. *Name ist vom Datentyp* **nvarchar (128)** und hat den Standardwert NULL.  
+`[ @target = ] 'target'` Reserviert für zukünftige Verwendung. *Name ist vom Datentyp* **nvarchar (128)** und hat den Standardwert NULL.  
   
-`[ @collection_mode = ] collection_mode`Gibt die Art und Weise an, in der die Daten gesammelt und gespeichert werden. *collection_mode* ist vom Datentyp **smallint** und kann einen der folgenden Werte aufweisen:  
+`[ @collection_mode = ] collection_mode` Gibt die Art und Weise an, in der die Daten gesammelt und gespeichert werden. *collection_mode* ist vom Datentyp **smallint** und kann einen der folgenden Werte aufweisen:  
   
  0 - Modus mit Zwischenspeicherung. Für Datensammlung und -upload werden separate Zeitpläne verwendet. Geben Sie den Modus mit Zwischenspeicherung für eine fortlaufende Sammlung an.  
   
@@ -69,19 +70,19 @@ sp_syscollector_create_collection_set
   
  Der Standardwert für *collection_mode* ist 0 (null). Wenn *collection_mode* 0 ist, müssen *schedule_uid* oder *schedule_name* angegeben werden.  
   
-`[ @days_until_expiration = ] days_until_expiration`Gibt an, wie viele Tage die gesammelten Daten im Verwaltungs Data Warehouse gespeichert werden. *days_until_expiration* ist vom Datentyp **smallint** und hat den Standardwert 730 (zwei Jahre). *days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
+`[ @days_until_expiration = ] days_until_expiration` Gibt an, wie viele Tage die gesammelten Daten im Verwaltungs Data Warehouse gespeichert werden. *days_until_expiration* ist vom Datentyp **smallint** und hat den Standardwert 730 (zwei Jahre). *days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
   
-`[ @proxy_id = ] proxy_id`Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proxy Konto des-Agents. *proxy_id* ist vom Datentyp **int** und hat den Standardwert NULL. Wenn angegeben, muss *proxy_name* NULL sein. Fragen Sie die sysproxies-Systemtabelle ab, um *proxy_id*abzurufen. Die feste Datenbankrolle dc_admin muss über die Berechtigung für den Zugriff auf den Proxy verfügen. Weitere Informationen finden Sie unter [Erstellen eines SQL Server-Agent Proxys](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+`[ @proxy_id = ] proxy_id` Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proxy Konto des-Agents. *proxy_id* ist vom Datentyp **int** und hat den Standardwert NULL. Wenn angegeben, muss *proxy_name* NULL sein. Fragen Sie die sysproxies-Systemtabelle ab, um *proxy_id*abzurufen. Die feste Datenbankrolle dc_admin muss über die Berechtigung für den Zugriff auf den Proxy verfügen. Weitere Informationen finden Sie unter [Erstellen eines SQL Server-Agent Proxys](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
-`[ @proxy_name = ] 'proxy_name'`Der Name des Proxy Kontos. *proxy_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn angegeben, muss *proxy_id* NULL sein. Fragen Sie die sysproxies-Systemtabelle ab, um *proxy_name*abzurufen.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxy Kontos. *proxy_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn angegeben, muss *proxy_id* NULL sein. Fragen Sie die sysproxies-Systemtabelle ab, um *proxy_name*abzurufen.  
   
-`[ @schedule_uid = ] 'schedule_uid'`Der GUID, der auf einen Zeitplan zeigt. *schedule_uid* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL. Wenn angegeben, muss *schedule_name* NULL sein. Fragen Sie die syszeitpläne-Systemtabelle ab, um *schedule_uid*abzurufen.  
+`[ @schedule_uid = ] 'schedule_uid'` Der GUID, der auf einen Zeitplan zeigt. *schedule_uid* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL. Wenn angegeben, muss *schedule_name* NULL sein. Fragen Sie die syszeitpläne-Systemtabelle ab, um *schedule_uid*abzurufen.  
   
  Wenn *collection_mode* auf 0 festgelegt ist, muss *schedule_uid* oder *schedule_name* angegeben werden. Wenn *collection_mode* auf 1 festgelegt ist, wird *schedule_uid* oder *schedule_name* ignoriert, wenn angegeben.  
   
-`[ @schedule_name = ] 'schedule_name'`Der Name des Zeitplans. *schedule_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn angegeben, muss *schedule_uid* NULL sein. Fragen Sie die syszeitpläne-Systemtabelle ab, um *schedule_name*abzurufen.  
+`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans. *schedule_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn angegeben, muss *schedule_uid* NULL sein. Fragen Sie die syszeitpläne-Systemtabelle ab, um *schedule_name*abzurufen.  
   
-`[ @logging_level = ] logging_level`Der Protokolliergrad. *LOGGING_LEVEL* ist vom Datentyp **smallint** und hat einen der folgenden Werte:  
+`[ @logging_level = ] logging_level` Der Protokolliergrad. *LOGGING_LEVEL* ist vom Datentyp **smallint** und hat einen der folgenden Werte:  
   
  0 – Informationen zur Protokollausführung und zu den [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Ereignissen, die Folgendes nachverfolgen:  
   
@@ -103,16 +104,16 @@ sp_syscollector_create_collection_set
   
  Der Standardwert für *LOGGING_LEVEL* ist 1.  
   
-`[ @description = ] 'description'`Die Beschreibung des Sammlungs Satzes. die *Beschreibung* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL.  
+`[ @description = ] 'description'` Die Beschreibung des Sammlungs Satzes. die *Beschreibung* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL.  
   
-`[ @collection_set_id = ] collection_set_id`Der eindeutige lokale Bezeichner für den Sammlungs Satz. *collection_set_id* ist vom Datentyp **int** mit Output und ist erforderlich.  
+`[ @collection_set_id = ] collection_set_id` Der eindeutige lokale Bezeichner für den Sammlungs Satz. *collection_set_id* ist vom Datentyp **int** mit Output und ist erforderlich.  
   
-`[ @collection_set_uid = ] 'collection_set_uid'`Die GUID für den Sammlungs Satz. *collection_set_uid* ist vom Datentyp **uniqueidentifier** mit der Ausgabe mit dem Standardwert NULL.  
+`[ @collection_set_uid = ] 'collection_set_uid'` Die GUID für den Sammlungs Satz. *collection_set_uid* ist vom Datentyp **uniqueidentifier** mit der Ausgabe mit dem Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_syscollector_create_collection_set muss im Kontext der msdb-Systemdatenbank ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -158,7 +159,7 @@ EXEC dbo.sp_syscollector_create_collection_set
 ## <a name="see-also"></a>Weitere Informationen  
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   
  [Erstellen Sie einen benutzerdefinierten Sammlungs Satz, der den generischen T-SQL-Abfrage Sammlertyp &#40;Transact-SQL verwendet&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
- [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

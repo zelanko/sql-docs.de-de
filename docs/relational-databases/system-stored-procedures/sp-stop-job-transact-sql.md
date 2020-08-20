@@ -1,4 +1,5 @@
 ---
+description: sp_stop_job (Transact-SQL)
 title: sp_stop_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7be2717c1f98291c0ce60b25e4290c20d23a86ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2314cec4cbb66893eb77ed6c8b025355c319de71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473680"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,16 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_name = ] 'job_name'`Der Name des Auftrags, der beendet werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, der beendet werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @job_id = ] job_id`Die ID des Auftrags, der beendet werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, der beendet werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @originating_server = ] 'master_server'`Der Name des Master Servers. Wenn angegeben, werden alle Multiserveraufträge beendet. *master_server* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. Geben Sie diesen Parameter nur an, wenn Sie **sp_stop_job** auf einem Zielserver aufrufen.  
+`[ @originating_server = ] 'master_server'` Der Name des Master Servers. Wenn angegeben, werden alle Multiserveraufträge beendet. *master_server* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. Geben Sie diesen Parameter nur an, wenn Sie **sp_stop_job** auf einem Zielserver aufrufen.  
   
 > [!NOTE]  
 >  Es kann jeweils nur einer der ersten drei Parameter angegeben werden.  
   
-`[ @server_name = ] 'target_server'`Der Name des bestimmten Zielservers, auf dem ein Multiserverauftrag beendet werden soll. *target_server* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. Geben Sie diesen Parameter nur an, wenn Sie **sp_stop_job** auf einem Master Server für einen Multiserverauftrag aufrufen.  
+`[ @server_name = ] 'target_server'` Der Name des bestimmten Zielservers, auf dem ein Multiserverauftrag beendet werden soll. *target_server* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. Geben Sie diesen Parameter nur an, wenn Sie **sp_stop_job** auf einem Master Server für einen Multiserverauftrag aufrufen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

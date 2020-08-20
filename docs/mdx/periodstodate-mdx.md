@@ -1,4 +1,5 @@
 ---
+description: PeriodsToDate (MDX)
 title: PeriodsToDate (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 812cd16a7d6b7a17d4f2f12098f22e32cf0d3363
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b18fe4d90a8a0c56424c5e0a7f3607ceea0eae4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471702"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
 
@@ -46,7 +47,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  `TopCount(Descendants(Ancestor(Member_Expression, Level_Expression), Member_Expression.Level), 1):Member_Expression`  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die Summe des `Measures.[Order Quantity]` -Elements, aggregiert über die ersten acht Monate des Kalender Jahrs 2003, das in der `Date` Dimension enthalten ist, aus dem **Adventure Works** -Cube zurückgegeben.  
+ Im folgenden Beispiel wird die Summe des-Elements `Measures.[Order Quantity]` , aggregiert über die ersten acht Monate des Kalender Jahrs 2003, das in der `Date` Dimension enthalten ist, aus dem **Adventure Works** -Cube zurückgegeben.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  

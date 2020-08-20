@@ -1,4 +1,5 @@
 ---
+description: GRANT-Berechtigungen für Volltext (Transact-SQL)
 title: GRANT-Berechtigungen für Volltext (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/17/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa4de06e0e860fd88d682a582110d6b46527414d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e466840015f0b5d82a8e6430434239db6655ee81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472228"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT-Berechtigungen für Volltext (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -88,7 +89,7 @@ AS *granting_principal*
 -   Einem asymmetrischen Schlüssel zugeordneter Datenbankbenutzer  
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="fulltext-catalog-permissions"></a>FULLTEXT CATALOG-Berechtigungen  
  Ein Volltextkatalog ist ein auf der Datenbankebene sicherungsfähiges Element, das in der Datenbank enthalten ist, die das übergeordnete Element in der Berechtigungshierarchie darstellt. Die spezifischsten und restriktivsten Berechtigungen, die für einen Volltextkatalog erteilt werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  
@@ -152,7 +153,7 @@ GRANT VIEW DEFINITION
     TO Mary ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   

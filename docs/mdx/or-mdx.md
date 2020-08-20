@@ -1,4 +1,5 @@
 ---
+description: OR (MDX)
 title: oder (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5ea3e65dd9bad768ef829858d42d6e4adea7a72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471752"
 ---
 # <a name="or-mdx"></a>OR (MDX)
 

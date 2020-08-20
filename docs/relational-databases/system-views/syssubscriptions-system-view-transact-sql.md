@@ -1,4 +1,5 @@
 ---
+description: syssubscriptions (Systemsicht) (Transact-SQL)
 title: sysabonnements (System Sicht) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 043624acfb2eab1ea7c959c8c9221c9f252935dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 889a0b58427dedaf9a0ffa167abaed10074183f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473079"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (Systemsicht) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

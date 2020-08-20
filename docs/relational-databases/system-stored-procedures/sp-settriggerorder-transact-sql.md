@@ -1,4 +1,5 @@
 ---
+description: sp_settriggerorder (Transact-SQL)
 title: sp_settriggerorder (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f222261c21ecb96f3599b20917a441898e3325e
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 564e38166cd26ea1fff2bc5154fea115e21b3131
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473799"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,20 +44,20 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @triggername = ] '[ _triggerschema.] _triggername'`Der Name des Auslösers und des Schemas, zu dem es gehört, falls zutreffend, dessen Reihenfolge festgelegt oder geändert werden soll. [_triggerschema_**.**] *Triggername* ist vom Datentyp **vom Datentyp sysname**. Wenn der Name keinem Trigger entspricht oder wenn der Name dem INSTEAD OF-Trigger entspricht, gibt die Prozedur einen Fehler zurück. *triggerschema* kann nicht für DDL-oder LOGON-Trigger angegeben werden.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` Der Name des Auslösers und des Schemas, zu dem es gehört, falls zutreffend, dessen Reihenfolge festgelegt oder geändert werden soll. [_triggerschema_**.**] *Triggername* ist vom Datentyp **vom Datentyp sysname**. Wenn der Name keinem Trigger entspricht oder wenn der Name dem INSTEAD OF-Trigger entspricht, gibt die Prozedur einen Fehler zurück. *triggerschema* kann nicht für DDL-oder LOGON-Trigger angegeben werden.  
   
-`[ @order = ] 'value'`Die Einstellung für die neue Reihenfolge des Auslösers. der *Wert* ist " **varchar (10)** ", und es kann sich um einen der folgenden Werte handeln:  
+`[ @order = ] 'value'` Die Einstellung für die neue Reihenfolge des Auslösers. der *Wert* ist " **varchar (10)** ", und es kann sich um einen der folgenden Werte handeln:  
   
 > [!IMPORTANT]  
 >  Der **erste** und der **Letzte** Trigger müssen zwei unterschiedliche Trigger sein.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**First**|Trigger wird zuerst ausgelöst|  
-|**Letzten**|Trigger wird zuletzt ausgelöst|  
-|**Keine**|Trigger wird in nicht definierter Reihenfolge ausgelöst|  
+|**Last**|Trigger wird zuletzt ausgelöst|  
+|**None**|Trigger wird in nicht definierter Reihenfolge ausgelöst|  
   
-`[ @stmttype = ] 'statement_type'`Gibt die SQL-Anweisung an, die den-Triggern auslöst. *statement_type* ist vom Datentyp **varchar (50)** und kann Einfüge-, Aktualisierungs-, Lösch-, Anmelde-oder beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)] in [DDL-Ereignissen](../../relational-databases/triggers/ddl-events.md)aufgeführte Anweisungs Ereignisse sein Ereignisgruppen können nicht angegeben werden.  
+`[ @stmttype = ] 'statement_type'` Gibt die SQL-Anweisung an, die den-Triggern auslöst. *statement_type* ist vom Datentyp **varchar (50)** und kann Einfüge-, Aktualisierungs-, Lösch-, Anmelde-oder beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)] in [DDL-Ereignissen](../../relational-databases/triggers/ddl-events.md)aufgeführte Anweisungs Ereignisse sein Ereignisgruppen können nicht angegeben werden.  
   
  Ein-Auslösers kann als **erster** oder **Letzter** -für einen Anweisungstyp festgelegt werden, nachdem dieser als ein-auslösertyp definiert wurde. Beispielsweise kann der **TR1** Auslösewert TR1 **zuerst** für INSERT in der Tabelle **T1** festgelegt werden, wenn **TR1** als INSERT-Vorgang definiert ist. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Gibt einen Fehler zurück, wenn **TR1**, der nur als INSERT-Vorgang definiert wurde, als **First**-oder **Last**-Wert für eine Update-Anweisung festgelegt wird. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   

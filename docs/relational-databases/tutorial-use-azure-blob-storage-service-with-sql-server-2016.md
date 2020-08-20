@@ -1,4 +1,5 @@
 ---
+description: 'Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016'
 title: 'Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016'
 ms.custom: seo-dt-2019
 ms.date: 07/22/2020
@@ -14,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: baf78116ef5d200246a0da7f4f8ce5c8686d2426
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472944"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016
 
@@ -481,7 +482,7 @@ Um die Ressourcengruppe zu löschen, führen Sie den folgenden PowerShell-Code a
 ## <a name="see-also"></a>Weitere Informationen
 
 [SQL Server-Datendateien in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Datei-Momentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server-Sicherung in URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [Shared Access Signatures, Teil 1: Grundlagen zum SAS-Modell](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Erstellen eines Containers](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
@@ -492,4 +493,4 @@ Um die Ressourcengruppe zu löschen, führen Sie den folgenden PowerShell-Code a
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
-[sp_delete_backup_file_snapshot (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)[Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[sp_delete_backup_file_snapshot (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  

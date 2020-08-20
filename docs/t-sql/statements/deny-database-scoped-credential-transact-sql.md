@@ -1,4 +1,5 @@
 ---
+description: DENY (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)
 title: DENY (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/16/2016
@@ -19,12 +20,12 @@ ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd618fe62a6894211bbad05135e9296e8679679c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cd88bb7760810e490fc4da457a3e9edc0bd1ad47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472318"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -95,7 +96,7 @@ DENY permission  [ ,...n ]
   
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Datenbankweit gültige Anmeldeinformationen sind ein sicherungsfähiges Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für datenbankweit gültige Anmeldeinformationen verweigert werden können, sind im Folgenden aufgeführt, zusammen mit den allgemeineren Berechtigungen, die sie implizit enthalten.  
   
 |Berechtigung für datenbankweit gültige Anmeldeinformationen|Impliziert durch die Berechtigung für datenbankweit gültige Anmeldeinformationen|Impliziert durch Datenbankberechtigung|  

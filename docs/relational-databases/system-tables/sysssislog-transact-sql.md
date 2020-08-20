@@ -1,4 +1,5 @@
 ---
+description: sysssislog (Transact-SQL)
 title: sysssislog (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 264f6495c12a350983af22c1bef325278238a514
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aef51cb3297cd83b68fa42c71dcd993fb418830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473100"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85889267"
   Enthält eine Zeile für jeden Protokollierungseintrag, der von Paketen oder deren Tasks und Containern zur Laufzeit generiert wird. Diese Tabelle wird in der msdb-Datenbank erstellt, wenn Sie installieren [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Wenn Sie die Protokollierung so konfigurieren, dass eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank protokolliert wird, wird in der angegebenen Datenbank eine sysssislog-Tabelle mit diesem Format erstellt.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]schreibt Protokollierungs Einträge **nur** in diese Tabelle, wenn Pakete den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokoll Anbieter verwenden.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schreibt Protokollierungs Einträge **nur** in diese Tabelle, wenn Pakete den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Protokoll Anbieter verwenden.  
   
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
@@ -45,7 +46,7 @@ ms.locfileid: "85889267"
 |starttime|**datetime**|Der Zeitpunkt, zu dem die Paketausführung gestartet wurde.|  
 |endtime|**datetime**|Der Zeitpunkt, zu dem das Paket abgeschlossen wurde.<br /><br /> Diese Funktion ist nicht implementiert. Der Wert in der Spalte endtime entspricht immer dem Wert in der Spalte starttime.|  
 |datacode|**int**|Ein optionaler ganzzahliger Wert, der in der Regel das Ergebnis der Ausführung des Containers oder der Task angibt.|  
-|databytes|**Bild**|Ein optionales Bytearray, das weitere Informationen enthält.|  
+|databytes|**image**|Ein optionales Bytearray, das weitere Informationen enthält.|  
 |message|**nvarchar**|Eine Beschreibung des Ereignisses sowie die mit dem Ereignis verknüpften Informationen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

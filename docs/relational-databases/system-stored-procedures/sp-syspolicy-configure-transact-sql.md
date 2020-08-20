@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_configure (Transact-SQL)
 title: sp_syspolicy_configure (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd11fa935dadc2ed7332275f3f6c66613cc831af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 820952e0829014efc3669759dabf5d1dfc208d91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473581"
 ---
 # <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'`Der Name der Einstellung, die Sie konfigurieren möchten. *Name ist vom Datentyp* **vom Datentyp sysname**, ist erforderlich und darf nicht NULL oder eine leere Zeichenfolge sein.  
+`[ @name = ] 'name'` Der Name der Einstellung, die Sie konfigurieren möchten. *Name ist vom Datentyp* **vom Datentyp sysname**, ist erforderlich und darf nicht NULL oder eine leere Zeichenfolge sein.  
   
  der *Name* kann einen der folgenden Werte aufweisen:  
   
@@ -50,7 +51,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' – Gibt an, ob die richtlinienbasierte Verwaltung erfolgreiche Richtlinienauswertungen protokolliert.  
   
-`[ @value = ] value`Der Wert, der dem angegebenen Wert für *Name*zugeordnet ist. der *Wert* ist **sql_variant**, und ist erforderlich.  
+`[ @value = ] value` Der Wert, der dem angegebenen Wert für *Name*zugeordnet ist. der *Wert* ist **sql_variant**, und ist erforderlich.  
   
 -   Wenn Sie "aktiviert" für *Name*angeben, können Sie einen der folgenden Werte verwenden:  
   
@@ -69,7 +70,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen sp_syspolicy_configure im Kontext der Systemdatenbank msdb ausführen.  
   
  Um aktuelle Werte für diese Einstellungen anzuzeigen, fragen Sie die Systemsicht msdb.dbo.syspolicy_configuration ab.  

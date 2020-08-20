@@ -1,4 +1,5 @@
 ---
+description: sp_upgrade_log_shipping (Transact-SQL)
 title: sp_upgrade_log_shipping (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8afb57d3660f9c69c3ded45f55ed393531a044c4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a51d0e021b5c62c935c2c32f4ed10a09f39616c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473490"
 ---
 # <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,13 +48,13 @@ sp_upgrade_log_shipping
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese gespeicherte Prozedur wird automatisch während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Upgrades aufgerufen, um Metadaten für den Protokollversand zu aktualisieren. Sie müssen diese Prozedur nicht explizit aufrufen, es sei denn, beim Upgrade tritt ein Problem mit den Metadaten auf.  
   
  sp_upgrade_log_shipping muss in der master-Datenbank auf dem primären, sekundären oder Überwachungsserver ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

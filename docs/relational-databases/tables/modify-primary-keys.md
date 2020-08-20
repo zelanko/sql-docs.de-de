@@ -1,4 +1,5 @@
 ---
+description: Ändern von Primärschlüsseln
 title: Ändern von Primärschlüsseln | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/25/2017
@@ -14,12 +15,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86f2fa7037a7c113a452974f8565148d0a9417e3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f69001aa9bdc4785c992f019807b411f00b755b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473047"
 ---
 # <a name="modify-primary-keys"></a>Ändern von Primärschlüsseln
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "86007109"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So ändern Sie einen Primärschlüssel mit:**  
   
@@ -55,7 +56,7 @@ ms.locfileid: "86007109"
   
 3.  Führen Sie eine Aktion aus der folgenden Tabelle aus:  
   
-    |To|Schritte|  
+    |An|Schritte|  
     |--------|------------------------|  
     |Umbenennen des Primärschlüssels|Geben Sie im Feld **Name** einen neuen Namen ein. Vergewissern Sie sich, dass der neue Name in der Liste **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index** nicht bereits vorhanden ist.|  
     |Festlegen der CLUSTERED-Option|Um einen gruppierten Index für den Primärschlüssel zu erstellen, wählen Sie **Als CLUSTERED erstellen**aus, und wählen Sie die Option im Dropdown-Listenfeld aus. In jeder Tabelle darf nur ein gruppierter Index vorhanden sein. Wenn diese Option für einen Index nicht verfügbar ist, müssen Sie zunächst diese Einstellung für den vorhandenen gruppierten Index deaktivieren.<br /><br /> Wenn diese Option nicht aktiviert wird, wird ein eindeutiger nicht gruppierter Index erstellt.|  

@@ -1,4 +1,5 @@
 ---
+description: sp_resetsnapshotdeliveryprogress (Transact-SQL)
 title: sp_resetsnapshotdeliveryprogress (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 918bd98410de1c82de9098dab5f6e74c32ebf7f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a6a4c0114077910f34f548db1f2b0b26d652f4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473835"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,14 +39,14 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @verbose_level = ] verbose_level`Gibt die Menge der zurückgegebenen Informationen an. *verbose_level*ist vom Datentyp **int**und hat den Standardwert **1**. Der Wert **1** bedeutet, dass ein Fehler zurückgegeben wird, wenn die erforderlichen Sperren für die **MSsnapshotdeliveryprogress** -Tabelle nicht abgerufen werden können, und **0** bedeutet, dass kein Fehler zurückgegeben wird.  
+`[ @verbose_level = ] verbose_level` Gibt die Menge der zurückgegebenen Informationen an. *verbose_level*ist vom Datentyp **int**und hat den Standardwert **1**. Der Wert **1** bedeutet, dass ein Fehler zurückgegeben wird, wenn die erforderlichen Sperren für die **MSsnapshotdeliveryprogress** -Tabelle nicht abgerufen werden können, und **0** bedeutet, dass kein Fehler zurückgegeben wird.  
   
-`[ @drop_table = ] 'drop_table'`Gibt an, ob die Tabelle mit Informationen zum Status der Momentaufnahme gelöscht oder abgeschnitten werden soll. *DROP_TABLE* ist vom Datentyp **nvarchar (5)** und hat den Standardwert **false**. Bei false wird die Tabelle abgeschnitten, und bei true wird die Tabelle gelöscht.  
+`[ @drop_table = ] 'drop_table'` Gibt an, ob die Tabelle mit Informationen zum Status der Momentaufnahme gelöscht oder abgeschnitten werden soll. *DROP_TABLE* ist vom Datentyp **nvarchar (5)** und hat den Standardwert **false**. Bei false wird die Tabelle abgeschnitten, und bei true wird die Tabelle gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_resetsnapshotdeliveryprogress** entfernt alle Zeilen in der **MSsnapshotdeliveryprogress** -Tabelle. Auf diese Weise werden alle Metadaten entfernt, die in der Abonnementdatenbank durch vorherige Momentaufnahme-Übermittlungsprozesse zurückgeblieben sind.  
   
 ## <a name="permissions"></a>Berechtigungen  

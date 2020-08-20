@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_profileaccount_sp (Transact-SQL)
 title: sysmail_update_profileaccount_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: af6578c98acfdd9fe5dea664ecea4cf21aa74f85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ccfcd3627627dd2fca78ba02b74f89f2bea07116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473347"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id`Die Profil-ID des Profils, das aktualisiert werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_id = ] profile_id` Die Profil-ID des Profils, das aktualisiert werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @profile_name = ] 'profile_name'`Der Profilname des Profils, das aktualisiert werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_name = ] 'profile_name'` Der Profilname des Profils, das aktualisiert werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @account_id = ] account_id`Die Konto-ID, die aktualisiert werden soll. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
+`[ @account_id = ] account_id` Die Konto-ID, die aktualisiert werden soll. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
-`[ @account_name = ] 'account_name'`Der Name des zu aktualisierenden Kontos. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
+`[ @account_name = ] 'account_name'` Der Name des zu aktualisierenden Kontos. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
-`[ @sequence_number = ] sequence_number`Die neue Sequenznummer für das Konto. *sequence_number* ist vom Datentyp **int**und hat keinen Standardwert. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil verwendet werden.  
+`[ @sequence_number = ] sequence_number` Die neue Sequenznummer für das Konto. *sequence_number* ist vom Datentyp **int**und hat keinen Standardwert. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil verwendet werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

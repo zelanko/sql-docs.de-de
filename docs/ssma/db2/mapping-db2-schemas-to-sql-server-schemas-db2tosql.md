@@ -1,4 +1,5 @@
 ---
+description: Zuordnung von DB2-Schemas zu SQL Server Schemas (DB2ToSQL)
 title: Zuordnung von DB2-Schemas zu SQL Server Schemas (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ed1535a9e8af398b9cac7742ab955822cb6034d0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a5c60984f9f1ed8da7238c254ac8b939dc1a9dee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472507"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Zuordnung von DB2-Schemas zu SQL Server Schemas (DB2ToSQL)
 In DB2 verfügt jede Datenbank über ein oder mehrere Schemas. Standardmäßig migriert SSMA alle Objekte in einem DB2-Schema zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank mit dem Namen für das Schema. Sie können jedoch die Zuordnung zwischen DB2-Schemas und- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken anpassen.  

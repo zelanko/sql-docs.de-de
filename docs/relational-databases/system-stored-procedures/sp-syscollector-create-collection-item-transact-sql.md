@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_create_collection_item (Transact-SQL)
 title: sp_syscollector_create_collection_item (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc35ba06f17b3b067e3b7ba9059c27e1f6db2d18
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 133f564d4f131e187334e5ebe5d4a2561dd21dcc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473674"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +72,7 @@ sp_syscollector_create_collection_item
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_syscollector_create_collection_item muss im Kontext der msdb-Systemdatenbank ausgeführt werden.  
   
  Der Sammlungssatz, dem das Sammelelement hinzugefügt wird, muss beendet werden, bevor das Sammelelement erstellt wird. Systemsammlungssätzen können keine Sammelelemente hinzugefügt werden.  

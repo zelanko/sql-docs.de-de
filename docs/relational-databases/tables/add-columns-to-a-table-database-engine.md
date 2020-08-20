@@ -1,4 +1,5 @@
 ---
+description: Hinzufügen von Spalten zu einer Tabelle (Datenbank-Engine)
 title: Hinzufügen von Spalten zu einer Tabelle (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/27/2016
@@ -15,12 +16,12 @@ ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0212f7615feb36b9c9f14d0a07e28445fac5597
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ad7cb3cdba7b9b20a28362b8570cc6e2fc0b04d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473073"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Hinzufügen von Spalten zu einer Tabelle (Datenbank-Engine)
 
@@ -52,14 +53,14 @@ Erfordert die ALTER-Berechtigung für die Tabelle.
    Dieser Wert ist obligatorisch. Wenn Sie keinen Wert auswählen, wird der Standardwert verwendet.
 
    > [!NOTE]
-   > Sie können den Standardwert im Dialogfeld **Optionen** unter **Datenbanktools**ändern.
+   >  Sie können den Standardwert im Dialogfeld **Optionen** unter **Datenbanktools**ändern.
 
 5. Definieren Sie auf der Registerkarte **Spalteneigenschaften** weitere Spalteneigenschaften.
 
     > [!NOTE]
-    > Die Standardwerte für die Spalteneigenschaften werden hinzugefügt, wenn Sie eine neue Spalte erstellen. Sie können die Werte jedoch auf der Registerkarte **Spalteneigenschaften** ändern.
+    >  Die Standardwerte für die Spalteneigenschaften werden hinzugefügt, wenn Sie eine neue Spalte erstellen. Sie können die Werte jedoch auf der Registerkarte **Spalteneigenschaften** ändern.
 
-6. Wenn Sie die gewünschten Spalten hinzugefügt haben, wählen Sie im Menü **Datei** die Option **Tabellenname** _speichern_ aus.
+6. Wenn Sie die gewünschten Spalten hinzugefügt haben, wählen Sie im Menü **Datei** die Option _Tabellenname_ **speichern** aus.
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL
   

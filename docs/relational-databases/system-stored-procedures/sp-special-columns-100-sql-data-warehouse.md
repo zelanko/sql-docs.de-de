@@ -1,4 +1,5 @@
 ---
+description: sp_special_columns_100 (SQL Data Warehouse)
 title: sp_special_columns_100 (SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6fa35188d803d58717449c2d3bf3c6afd41c5fc3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 002524d834b8036c353b096b0a4fa1fa37875b4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473793"
 ---
 # <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -67,13 +68,13 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  Die verwendete ODBC-Version. *ODBCVer* ist vom Datentyp **int (** 4 **)** und hat den Standardwert 2. Dieser gibt ODBC, Version 2.0, an. Weitere Informationen zu den Unterschieden zwischen ODBC, Version 2.0, und ODBC, Version 3.0, finden Sie in der SQLSpecialColumns-ODBC-Spezifikation für ODBC, Version 3.0.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keiner  
+ Keine  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|SCOPE|**smallint**|Der Bereich der Zeilen-ID. Kann 0, 1 oder 2 sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt immer 0 zurück. Dieses Feld gibt immer einen Wert zurück.<br /><br /> 0 = SQL_SCOPE_CURROW. Die Zeilen-ID ist nur garantiert gültig, wenn sie sich in dieser Zeile befindet. Eine spätere erneute Auswahl mit dieser Zeilen-ID gibt möglicherweise keine Zeile zurück, wenn die Zeile durch eine andere Transaktion aktualisiert oder gelöscht wurde.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. Die Zeilen-ID ist für die Dauer der aktuellen Transaktion garantiert gültig.<br /><br /> 2 = SQL_SCOPE_SESSION. Die Zeilen-ID ist für die Dauer der Sitzung garantiert gültig (über Transaktionsgrenzen hinweg).|  
+|SCOPE|**smallint**|Der Bereich der Zeilen-ID. Kann 0, 1 oder 2 sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt immer 0 zurück. Dieses Feld gibt immer einen Wert zurück.<br /><br /> 0 = SQL_SCOPE_CURROW. Die Zeilen-ID ist nur garantiert gültig, wenn sie sich in dieser Zeile befindet. Eine spätere erneute Auswahl mit dieser Zeilen-ID gibt möglicherweise keine Zeile zurück, wenn die Zeile durch eine andere Transaktion aktualisiert oder gelöscht wurde.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. Die Zeilen-ID ist für die Dauer der aktuellen Transaktion garantiert gültig.<br /><br /> 2 = SQL_SCOPE_SESSION. Die Zeilen-ID ist für die Dauer der Sitzung garantiert gültig (über Transaktionsgrenzen hinweg).|  
 |COLUMN_NAME|**sysname**|Der Spaltenname für jede Spalte der zurückgegebenen *Tabelle*. Dieses Feld gibt immer einen Wert zurück.|  
 |DATA_TYPE|**smallint**|ODBC-SQL-Datentyp.|  
 |TYPE_NAME|**sysname**|Datenquellen abhängiger Datentyp Name; beispielsweise " **char**", " **varchar**", " **Money**" oder " **Text**".|  

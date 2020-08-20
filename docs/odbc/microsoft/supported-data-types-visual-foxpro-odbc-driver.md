@@ -1,4 +1,5 @@
 ---
+description: Unterstützte Datentypen (Visual FoxPro-ODBC-Treiber)
 title: Unterstützte Datentypen (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab529cc6-d157-4b35-b6f9-6ffd09af098c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3fc28464a7c14f9801473cc125b0e90c50247d68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04f2039d18f134fe2c48397f6c0dc987e97bf47d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471522"
 ---
 # <a name="supported-data-types-visual-foxpro-odbc-driver"></a>Unterstützte Datentypen (Visual FoxPro-ODBC-Treiber)
 Die Liste der Datentypen, die vom Treiber unterstützt werden, wird über die ODBC-API und die Microsoft-Abfrage angezeigt.  

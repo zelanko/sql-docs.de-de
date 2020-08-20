@@ -1,4 +1,5 @@
 ---
+description: Korrelationsnamen
 title: Korrelations Namen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76c36c6f-f8e1-4ece-a77b-611dde3bdd8a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dfe0655ace4bbd622dfb80b833f49562732394e2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24de7ec65b069839541cfa5cd272a221ebc96ecd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471642"
 ---
 # <a name="correlation-names"></a>Korrelationsnamen
 Korrelations Namen werden vollständig unterstützt, einschließlich in der Tabellenliste. In der folgenden Zeichenfolge ist E1 z. b. der Korrelations Name für die Tabelle mit dem Namen EMP:  

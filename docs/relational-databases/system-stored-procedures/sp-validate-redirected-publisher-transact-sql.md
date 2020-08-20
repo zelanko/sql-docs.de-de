@@ -1,4 +1,5 @@
 ---
+description: sp_validate_redirected_publisher (Transact-SQL)
 title: sp_validate_redirected_publisher (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a38d4a197b5e86b41b8a7b791321d8a7ded7ab3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 158f49e40b60b528fa0a243a66fb3a5d29c7b6b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473452"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ ms.locfileid: "85723034"
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @original_publisher = ] 'original_publisher'`Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Datenbank ursprünglich veröffentlicht hat. *original_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @original_publisher = ] 'original_publisher'` Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Datenbank ursprünglich veröffentlicht hat. *original_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Datenbank, die veröffentlicht wird. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Datenbank, die veröffentlicht wird. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'`Das Ziel der Umleitung, das angegeben wurde, als **sp_redirect_publisher** für das Verleger-/Datenbankpaar aufgerufen wurde. *redirected_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @redirected_publisher = ] 'redirected_publisher'` Das Ziel der Umleitung, das angegeben wurde, als **sp_redirect_publisher** für das Verleger-/Datenbankpaar aufgerufen wurde. *redirected_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -52,7 +53,7 @@ ms.locfileid: "85723034"
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn kein Eintrag für den Verleger und die Veröffentlichungs Datenbank vorhanden ist, gibt **sp_validate_redirected_publisher** im * \@ redirected_publisher*Output-Parameter den Wert NULL zurück. Wenn ein Eintrag vorhanden ist, wird er im Ausgabeparameter in Erfolgs- und Fehlerfällen zurückgegeben.  
   
  Wenn die Überprüfung erfolgreich ist, gibt **sp_validate_redirected_publisher** eine Erfolgs Angabe zurück.  

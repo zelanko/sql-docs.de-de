@@ -1,4 +1,5 @@
 ---
+description: GRANT (Berechtigungen von Service Broker) (Transact-SQL)
 title: GRANT (Service Broker-Berechtigungen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 72cc7e6fa6d87afe2fcce8ea6c695117d140af79
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 350787ea11245db4bbd720c9bbbcc97403c90231
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472201"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT (Berechtigungen von Service Broker) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,16 +58,16 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Gibt eine Berechtigung an, die für ein sicherungsfähiges Service Broker-Element erteilt werden kann.  Unten aufgeführt.  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  Gibt den Vertrag an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  Gibt den Nachrichtentyp an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Gibt die Remotedienstbindung an, für die die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  Gibt die Route an, für die die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  SERVICE **::** _dienstname_  
@@ -113,7 +114,7 @@ GRANT permission  [ ,...n ] ON
   
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="service-broker-contracts"></a>Service Broker-Verträge  
  Ein Service Broker-Vertrag ist ein auf der Datenbankebene sicherungsfähiges Element, das in der Datenbank enthalten ist, die das übergeordnete Element in der Berechtigungshierarchie darstellt. Die spezifischsten und restriktivsten Berechtigungen, die für einen Service Broker-Vertrag erteilt werden können, sind im Folgenden aufgeführt, zusammen mit den allgemeineren Berechtigungen, die implizit enthalten sind.  

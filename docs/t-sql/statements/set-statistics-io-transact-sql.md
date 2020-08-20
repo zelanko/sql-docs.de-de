@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS IO (Transact-SQL)
 title: SET STATISTICS IO (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/10/2016
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84d113230152bdade11192db086f44911028a474
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 25b6b222e68325e75d4be8ae10cae6e95ff408e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472199"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,9 @@ ms.locfileid: "85765697"
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Bemerkungen
  Wenn STATISTICS IO auf ON festgelegt ist, werden statistische Informationen angezeigt. Bei OFF werden die Informationen nicht angezeigt.   
   
  Wenn diese Option auf ON festgelegt wird, geben alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen so lange statistische Informationen zurück, bis die Option auf OFF festgelegt wird.  
@@ -60,9 +63,9 @@ SET STATISTICS IO { ON | OFF }
 |**Logische Lesevorgänge**|Anzahl der aus dem Datencache gelesenen Seiten|  
 |**Physische Lesevorgänge**|Anzahl der vom Datenträger gelesenen Seiten|  
 |**Read-Ahead-Lesevorgänge**|Anzahl der Seiten, die für die Abfrage im Cache platziert wurden|  
-|**Logische LOB-Lesevorgänge**|Anzahl der aus dem Datencache gelesenen Seiten Umfasst **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** oder Columnstore-Indexseiten.|  
-|**Physische LOB-Lesevorgänge**|Anzahl der vom Datenträger gelesenen Seiten Umfasst **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** oder Columnstore-Indexseiten.|  
-|**Read-Ahead-LOB-Lesevorgänge**|Anzahl der Seiten, die für die Abfrage im Cache platziert wurden Umfasst **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** oder Columnstore-Indexseiten.|
+|**Logische LOB-Lesevorgänge**|Anzahl der aus dem Datencache gelesenen Seiten Umfasst **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** oder Columnstore-Indexseiten.|  
+|**Physische LOB-Lesevorgänge**|Anzahl der vom Datenträger gelesenen Seiten Umfasst **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** oder Columnstore-Indexseiten.|  
+|**Read-Ahead-LOB-Lesevorgänge**|Anzahl der Seiten, die für die Abfrage im Cache platziert wurden Umfasst **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** oder Columnstore-Indexseiten.|
 
  Die Einstellung von SET STATISTICS IO wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.
 

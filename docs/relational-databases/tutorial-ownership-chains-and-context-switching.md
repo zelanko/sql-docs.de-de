@@ -1,4 +1,5 @@
 ---
+description: 'Tutorial: Ownership Chains and Context Switching'
 title: 'Tutorial: Ownership Chains and Context Switching'
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6e8c2aeabcbfa73de3a0b02b6b3e6a637bcf1eb4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b26b475fbef54f501d1b40dc1c1b35df796b27ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472961"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Besitzketten und Kontextwechsel
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 Anhand des Szenarios in diesem Lernprogramm werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sicherheitskonzepte verdeutlicht, die Besitzketten und Kontextwechsel umfassen.  
   
@@ -52,7 +53,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 Weitere Informationen zum Wiederherstellen einer Datenbank in SQL Server Management Studio finden Sie unter [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Konfigurieren der Umgebung  
-Verwenden Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sowie den folgenden Code, um die Datenbank `AdventureWorks2017` zu öffnen. Vergewissern Sie sich mithilfe der `CURRENT_USER`-Anweisung [!INCLUDE[tsql](../includes/tsql-md.md)], dass der Benutzer „dbo“ als Kontext angezeigt wird.  
+Verwenden Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sowie den folgenden Code, um die Datenbank `AdventureWorks2017` zu öffnen. Vergewissern Sie sich mithilfe der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung `CURRENT_USER`, dass der Benutzer „dbo“ als Kontext angezeigt wird.  
   
 ```sql
 USE AdventureWorks2017;  

@@ -1,4 +1,5 @@
 ---
+description: BACKUP MASTER KEY (Transact-SQL)
 title: BACKUP MASTER KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 536195389a6a2015fd365f4ec5c33e724655707d
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 5a2a36dab320bac556c5847f74049d2af6524457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472384"
 ---
 # <a name="backup-master-key-transact-sql"></a>BACKUP MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +56,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
  PASSWORD ='*password*'  
  Das zum Verschlüsseln des Hauptschlüssels in der Datei verwendete Kennwort. Dieses Kennwort unterliegt Komplexitätsüberprüfungen. Weitere Informationen finden Sie unter [Password Policy](../../relational-databases/security/password-policy.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der Hauptschlüssel muss geöffnet und entschlüsselt sein, bevor er gesichert wird. Wenn er mit dem Diensthauptschlüssel verschlüsselt ist, muss der Hauptschlüssel nicht explizit geöffnet werden. Falls der Hauptschlüssel jedoch nur mit einem Kennwort verschlüsselt ist, muss er explizit geöffnet werden.  
   
  Es wird empfohlen, dass Sie sofort nach der Erstellung eine Sicherung des Hauptschlüssels anlegen und diese an einem sicheren Ort außerhalb Ihrer Geschäftsräume aufbewahren.  

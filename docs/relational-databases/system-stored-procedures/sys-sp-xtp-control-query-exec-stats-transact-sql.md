@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 title: sys. sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/13/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f451e3d6083a32db87c7e453413cf6b318e739f
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0963985b2f6f83d9be8c19be35fd16b0451dda8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473416"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -43,17 +44,17 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- @new_collection_value= *Wert*  
+ @new_collection_value = *Wert*  
  Bestimmt, ob die Statistiksammlung auf Prozedurebene aktiviert (1) oder deaktiviert (0) ist.  
   
- @new_collection_valuewird auf NULL festgelegt, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird.  
+ @new_collection_value wird auf NULL festgelegt, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird.  
   
- @database_id= = *database_id*, @xtp_object_id = *procedure_id*  
+ @database_id = = *database_id*, @xtp_object_id = *procedure_id*  
  Die Datenbank-ID und Objekt-ID der systemintern kompilierten gespeicherten Prozedur. Wenn die Statistik Sammlung für die-Instanz aktiviert ist ([sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), werden Statistiken für eine System intern kompilierte gespeicherte Prozedur gesammelt. Wenn Sie die Statistiksammlung auf der Instanz deaktivieren, wird die Statistiksammlung für die einzelnen systemintern kompilierten gespeicherten Prozeduren nicht deaktiviert.  
   
  Verwenden Sie [sys. Database &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [sys. Procedures &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)oder [object_id &#40;Transact-SQL-&#41;](../../t-sql/functions/object-id-transact-sql.md) , um IDs für eine Datenbank und eine gespeicherte Prozedur abzurufen.  
   
- @old_collection_value= *Wert*  
+ @old_collection_value = *Wert*  
  Gibt den aktuellen Status zurück.  
   
 ## <a name="return-code"></a>Rückgabe Code  

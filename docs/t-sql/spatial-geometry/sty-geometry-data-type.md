@@ -1,4 +1,5 @@
 ---
+description: STY (geometry-Datentyp)
 title: STY (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fd5f297b3fb2ea2700a6de0600896a6742fed8fc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: ae260a3587e3f0f9ea08829a89bfe78901cfb0e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472388"
 ---
 # <a name="sty-geometry-data-type"></a>STY (geometry-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ SET @g = geometry::STGeomFromText('POINT(3 8)', 0);
 SELECT @g.STY;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [STX &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STSrid &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

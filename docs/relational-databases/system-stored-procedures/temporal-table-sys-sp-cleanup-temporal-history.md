@@ -1,4 +1,5 @@
 ---
+description: sys. sp_cleanup_temporal_history (Transact-SQL)
 title: sys. sp_cleanup_temporal_history | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -9,12 +10,12 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a9cd5efaf70a915b6a31dced0f79498a01dd7ef5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30e689666336bfc76c7ec5e5f5df363363801baf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473308"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys. sp_cleanup_temporal_history (Transact-SQL)
 
@@ -44,7 +45,7 @@ Der Name des Schemas, zu dem die aktuelle Temporale Tabelle gehört.
 
 Der Output-Parameter, der die Anzahl der gelöschten Zeilen zurückgibt. Wenn in der Verlaufs Tabelle ein gruppierter columnstore--Index verwendet wird, gibt dieser Parameter immer 0 zurück.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Diese gespeicherte Prozedur kann nur für temporale Tabellen verwendet werden, für die eine begrenzte Beibehaltungs Dauer festgelegt wurde.
 Verwenden Sie diese gespeicherte Prozedur nur, wenn Sie alle veralteten Zeilen aus der Verlaufs Tabelle sofort bereinigen müssen. Sie sollten wissen, dass sich dies erheblich auf das Daten Bank Protokoll und das e/a-Subsystem auswirken kann, wenn alle berechtigten Zeilen innerhalb derselben Transaktion gelöscht werden.

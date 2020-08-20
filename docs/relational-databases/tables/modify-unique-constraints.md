@@ -1,4 +1,5 @@
 ---
+description: Ändern von UNIQUE-Einschränkungen
 title: Ändern von Unique-Einschränkungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/12/2016
@@ -16,12 +17,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca363d76f8c2bc624ad0e8889d10f2dd4883685e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5df4a0e197a55262afb57382ad1145194b66d3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473038"
 ---
 # <a name="modify-unique-constraints"></a>Ändern von UNIQUE-Einschränkungen
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "86007104"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So ändern Sie eine UNIQUE-Einschränkung mit:**  
   
@@ -59,7 +60,7 @@ ms.locfileid: "86007104"
   
 4.  Führen Sie eine Aktion aus der folgenden Tabelle aus:  
   
-    |To|Schritte|  
+    |An|Schritte|  
     |--------|------------------------|  
     |Ändern der Spalten, denen die Einschränkung zugewiesen ist|1.) Klicken Sie im Raster unter **Allgemein** auf **Spalten** und anschließend auf die Auslassungspunkten **(...)** rechts neben der Eigenschaft.<br /><br /> 2.) Geben Sie im Dialogfeld **Indexspalten** die neue Spalte oder die Sortierreihenfolge oder beides für den Index an.|  
     |Umbenennen der Einschränkung|Geben Sie im Raster unter **Identität**im Feld **Name** einen neuen Namen ein. Vergewissern Sie sich, dass der neue Name in der Liste **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index** nicht bereits vorhanden ist.|  

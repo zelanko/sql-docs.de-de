@@ -1,4 +1,5 @@
 ---
+description: sp_spaceused (Transact-SQL)
 title: sp_spaceused (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/14/2017
@@ -18,12 +19,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473796"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,15 +53,15 @@ Für [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] und [!INCLUDE[sspdw-md](..
 Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Datenbank zurückgegeben.  
 *objname ist vom Datentyp* **nvarchar (776)** und hat den Standardwert NULL.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]und [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] unterstützen nur Datenbank-und Tabellen Objekte.
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] und [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] unterstützen nur Datenbank-und Tabellen Objekte.
   
-`[ @updateusage = ] 'updateusage'`Gibt an, dass DBCC UPDATEUSAGE ausgeführt werden soll, um Speicherplatz Verwendungs Informationen zu aktualisieren. Wenn *objname* nicht angegeben wird, wird die-Anweisung für die gesamte Datenbank ausgeführt. Andernfalls wird die-Anweisung auf *objname*ausgeführt. Die Werte können " **true** " oder " **false**" sein. *UPDATEUSAGE* ist vom Datentyp **varchar (5)** und hat den Standardwert **false**.  
+`[ @updateusage = ] 'updateusage'` Gibt an, dass DBCC UPDATEUSAGE ausgeführt werden soll, um Speicherplatz Verwendungs Informationen zu aktualisieren. Wenn *objname* nicht angegeben wird, wird die-Anweisung für die gesamte Datenbank ausgeführt. Andernfalls wird die-Anweisung auf *objname*ausgeführt. Die Werte können " **true** " oder " **false**" sein. *UPDATEUSAGE* ist vom Datentyp **varchar (5)** und hat den Standardwert **false**.  
   
-`[ @mode = ] 'mode'`Gibt den Bereich der Ergebnisse an. Bei einer gestreckten Tabelle oder Datenbank können Sie mit dem *Modusparameter* den Remote Teil des Objekts einschließen bzw. ausschließen. Weitere Informationen finden Sie unter [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+`[ @mode = ] 'mode'` Gibt den Bereich der Ergebnisse an. Bei einer gestreckten Tabelle oder Datenbank können Sie mit dem *Modusparameter* den Remote Teil des Objekts einschließen bzw. ausschließen. Weitere Informationen finden Sie unter [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  Das *Mode* -Argument kann die folgenden Werte aufweisen:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |ALL|Gibt die Speicher Statistik des Objekts oder der Datenbank zurück, einschließlich des lokalen Teils und des Remote Teils.|  
 |LOCAL_ONLY|Gibt die Speicher Statistiken für nur den lokalen Teil des Objekts oder der Datenbank zurück. Wenn das Objekt oder die Datenbank nicht Stretch-aktiviert ist, gibt dieselbe Statistik zurück wie when @mode = all.|  
@@ -68,9 +69,9 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
   
  der *Modus* ist vom Datentyp **varchar (11)** und hat den Standardwert **n ' all '**.  
   
-`[ @oneresultset = ] oneresultset`Gibt an, ob ein einzelnes Resultset zurückgegeben werden soll. Das *oneresultset* -Argument kann die folgenden Werte aufweisen:  
+`[ @oneresultset = ] oneresultset` Gibt an, ob ein einzelnes Resultset zurückgegeben werden soll. Das *oneresultset* -Argument kann die folgenden Werte aufweisen:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Wenn * \@ objname* NULL ist oder nicht angegeben ist, werden zwei Resultsets zurückgegeben. Zwei Resultsets sind das Standardverhalten.|  
 |1|Wenn * \@ objname* = NULL oder nicht angegeben wird, wird ein einzelnes Resultset zurückgegeben.|  

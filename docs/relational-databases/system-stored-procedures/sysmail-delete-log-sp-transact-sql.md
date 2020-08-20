@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_log_sp (Transact-SQL)
 title: sysmail_delete_log_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db6f15fe8ce2f515bf79211e6db49a135eb6fb3f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae70fc03530ac80596ead5fe6e2e1927e323c5c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473369"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +42,14 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @logged_before = ] 'logged_before'`Löscht Einträge bis zu dem Datum und der Uhrzeit, die durch das *logged_before* -Argument angegeben werden. *logged_before* ist vom Datentyp **datetime** . Der Standardwert ist NULL. NULL steht für alle Daten.  
+`[ @logged_before = ] 'logged_before'` Löscht Einträge bis zu dem Datum und der Uhrzeit, die durch das *logged_before* -Argument angegeben werden. *logged_before* ist vom Datentyp **datetime** . Der Standardwert ist NULL. NULL steht für alle Daten.  
   
-`[ @event_type = ] 'event_type'`Löscht Protokolleinträge des als *event_type*angegebenen Typs. *event_type* ist vom Datentyp **varchar(15)** und besitzt keinen Standardwert. Gültige Einträge sind **success**, **warning**, **error**und **informational**. NULL steht für alle Ereignistypen.  
+`[ @event_type = ] 'event_type'` Löscht Protokolleinträge des als *event_type*angegebenen Typs. *event_type* ist vom Datentyp **varchar(15)** und besitzt keinen Standardwert. Gültige Einträge sind **success**, **warning**, **error**und **informational**. NULL steht für alle Ereignistypen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die gespeicherte Prozedur **sysmail_delete_log_sp** , um Einträge dauerhaft aus dem Datenbank-E-Mail-Protokoll zu löschen. Mithilfe eines optionalen Arguments können Sie nur ältere Datensätze löschen, indem Sie ein Datum und eine Uhrzeit angeben. Ereignisse, die älter sind als dieses Argument, werden gelöscht. Mithilfe eines optionalen Arguments können Sie nur Ereignisse eines bestimmten Typs löschen. Diese werden als **event_type** -Argument angegeben.  
   
  Durch Löschen der Einträge im Datenbank-E-Mail-Protokoll werden die E-Mail-Einträge nicht aus den Datenbank-E-Mail-Tabellen gelöscht. Verwenden Sie [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) , um E-Mails aus den Datenbank-E-Mail-Tabellen zu löschen.  

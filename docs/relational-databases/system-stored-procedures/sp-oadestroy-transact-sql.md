@@ -1,4 +1,5 @@
 ---
+description: sp_OADestroy (Transact-SQL)
 title: sp_OADestroy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 363d89a420d6fd927293fc39525e1a95d7ebd4b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5bb9f3e59cf27c9bfbac1430c0d7c0830170367d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473932"
 ---
 # <a name="sp_oadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,11 +48,11 @@ sp_OADestroy objecttoken
   
  Weitere Informationen zu HRESULT-Rückgabecodes finden Sie unter [Rückgabecodes und Fehlerinformationen der OLE-Automatisierung](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wird **sp_OADestroy** nicht aufgerufen, wird das erstellte OLE-Objekt am Ende des Batches automatisch gelöscht.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die EXECUTE-Berechtigung direkt für diese gespeicherte Prozedur. `Ole Automation Procedures`die Konfiguration muss **aktiviert** sein, um alle System Prozeduren für OLE-Automatisierung verwenden zu können.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die EXECUTE-Berechtigung direkt für diese gespeicherte Prozedur. `Ole Automation Procedures` die Konfiguration muss **aktiviert** sein, um alle System Prozeduren für OLE-Automatisierung verwenden zu können.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird das zuvor erstellte **SQLServer** -Objekt zerstört.  

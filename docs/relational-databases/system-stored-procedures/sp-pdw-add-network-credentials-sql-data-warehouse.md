@@ -1,4 +1,5 @@
 ---
+description: sp_pdw_add_network_credentials (SQL Data Warehouse)
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure SQL Data Warehouse
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4a6f551012a744d8659e0f3a4cee83b1fd39fbdf
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 47782250a0acf14ce0e8b63a2b631acfce9b3583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473990"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -36,7 +37,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
 ## <a name="arguments"></a>Argumente  
  "*target_server_name*"  
- Gibt den Hostnamen oder die IP-Adresse des Zielservers an. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]greift auf diesen Server mit den Anmelde Informationen für Benutzername und Kennwort zu, die an diese gespeicherte Prozedur übermittelt wurden  
+ Gibt den Hostnamen oder die IP-Adresse des Zielservers an. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] greift auf diesen Server mit den Anmelde Informationen für Benutzername und Kennwort zu, die an diese gespeicherte Prozedur übermittelt wurden  
   
  Verwenden Sie zum Herstellen einer Verbindung über das InfiniBand-Netzwerk die InfiniBand-IP-Adresse des Zielservers.  
   
@@ -65,7 +66,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. Hinzufügen von Anmelde Informationen zum Ausführen einer Datenbanksicherung  
- Im folgenden Beispiel werden die Anmelde Informationen für den Benutzernamen und das Kennwort für den Domänen Benutzer "tsattle\david" einem Zielserver mit der IP-Adresse 10.172.63.255 zugeordnet. Der Benutzer "einattle\david" verfügt über Lese-/Schreibberechtigungen für den Zielserver. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]speichert diese Anmelde Informationen und verwendet diese zum Lesen und Schreiben auf den und vom Zielserver, sofern dies für Sicherungs-und Wiederherstellungs Vorgänge erforderlich ist.  
+ Im folgenden Beispiel werden die Anmelde Informationen für den Benutzernamen und das Kennwort für den Domänen Benutzer "tsattle\david" einem Zielserver mit der IP-Adresse 10.172.63.255 zugeordnet. Der Benutzer "einattle\david" verfügt über Lese-/Schreibberechtigungen für den Zielserver. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] speichert diese Anmelde Informationen und verwendet diese zum Lesen und Schreiben auf den und vom Zielserver, sofern dies für Sicherungs-und Wiederherstellungs Vorgänge erforderlich ist.  
   
 ```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  

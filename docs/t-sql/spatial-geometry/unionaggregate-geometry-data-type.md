@@ -1,4 +1,5 @@
 ---
+description: UnionAggregate (geometry-Datentyp)
 title: UnionAggregate (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1f518b22b4d7aaaf6e100a4f10c91d463d80e495
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 832c49b68150be650885176b301ecd772cac82e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554891"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472413"
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate (geometry-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ UnionAggregate ( geometry_operand )
 ## <a name="exceptions"></a>Ausnahmen  
  Löst eine `FormatException` aus, wenn ungültige Eingabewerte vorhanden sind. Weitere Informationen finden Sie unter [STIsValid &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode gibt **null** zurück, wenn die Eingabe leer ist oder andere SRIDs aufweist. Weitere Informationen finden Sie unter [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
  Diese Methode ignoriert **null** -Eingaben.  

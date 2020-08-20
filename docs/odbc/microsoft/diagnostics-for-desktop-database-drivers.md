@@ -1,4 +1,5 @@
 ---
+description: Diagnose für Desktop-Datenbanktreiber
 title: Diagnose für Desktop-Datenbanktreiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 99603c047e77d3cd3e077c1b07c2192eeb65f93c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb5e4233ae77979df7b4b76ea845634fd7fd6ded
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471592"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>Diagnose für Desktop-Datenbanktreiber
 Alle Fehler und Warnungen, die vom Treiber-Manager nicht geprüft oder teilweise geprüft werden, werden vom Treiber verarbeitet. Der Treiber ordnet auch systemeigene Fehler oder von der Datenquelle zurückgegebene Fehler zu Sqlstates zu. Jede in der *ODBC-Programmier Referenz* aufgelistete Funktion enthält einen Abschnitt "Diagnostics", der Bedingungen und Meldungen angibt.  

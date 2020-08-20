@@ -1,4 +1,5 @@
 ---
+description: KPIValue (MDX)
 title: KPIValue (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c34e5b345ee0e4d780de66449473237cc413ace6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24189ffb3e9a550fd4819b15cfbd8ae41a48a64f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471812"
 ---
 # <a name="kpivalue-mdx"></a>KPIValue (MDX)
 
@@ -31,7 +32,7 @@ KPIValue(KPI_Name)
  *KPI_Name*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen des KPIs angibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der KPI-Wert, das KPI-Ziel, der KPI-Status und der KPI-Trend für das Channel Revenue-Measure der nachfolgenden Werte dreier Elemente der Fiscal Year-Attributhierarchie zurückgegeben.  

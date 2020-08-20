@@ -1,4 +1,5 @@
 ---
+description: sp_setsubscriptionxactseqno (Transact-SQL)
 title: sp_setsubscriptionxactseqno (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d17675f8443db2a726ceb72237d184d665f9d7e8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc63f645fe2c825e0c8dac27cbf5aeb138123c0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473788"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Bei einem nicht-SQL Server Verleger ist *publisher_db* der Name der Verteilungs Datenbank.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Bei einem nicht-SQL Server Verleger ist *publisher_db* der Name der Verteilungs Datenbank.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn die Verteilungs-Agent von mehreren Veröffentlichungen gemeinsam verwendet wird, müssen Sie den Wert all für *Publication*angeben.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn die Verteilungs-Agent von mehreren Veröffentlichungen gemeinsam verwendet wird, müssen Sie den Wert all für *Publication*angeben.  
   
-`[ @xact_seqno = ] xact_seqno`Die LSN der nächsten Transaktion auf dem Verteiler, die auf dem Abonnenten angewendet werden soll. *xact_seqno* ist vom Datentyp **varbinary (16)** und hat keinen Standardwert.  
+`[ @xact_seqno = ] xact_seqno` Die LSN der nächsten Transaktion auf dem Verteiler, die auf dem Abonnenten angewendet werden soll. *xact_seqno* ist vom Datentyp **varbinary (16)** und hat keinen Standardwert.  
   
 ## <a name="result-set"></a>Resultset  
   
@@ -62,7 +63,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_setsubscriptionxactseqno** wird bei der Transaktions Replikation verwendet.  
   
  **sp_setsubscriptionxactseqno** kann nicht in einer Peer-zu-Peer-Transaktions Replikations Topologie verwendet werden.  

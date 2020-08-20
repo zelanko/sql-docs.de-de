@@ -1,4 +1,5 @@
 ---
+description: sp_tableoption (Transact-SQL)
 title: sp_tableoption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/11/2017
@@ -18,12 +19,12 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84e6c530b4887502346b69adcf2590bce9d0e8fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06655c8dd684ca89d6e67b065d3943ee57f752fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473562"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] '*option_name*'  
  Der Name einer Tabellenoption. *option_name* ist vom Datentyp **varchar (35)** und hat den Standardwert NULL. *option_name* kann einen der folgenden Werte aufweisen.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |table lock on bulk load|Eine deaktivierte Option (Standard) führt dazu, dass der Massenladevorgang auf benutzerdefinierten Tabellen Zeilensperren erhält. Wenn diese Option aktiviert ist, erhalten die Massenladevorgänge auf benutzerdefinierten Tabellen eine Massenupdatesperre.|  
 |insert row lock|Wird nicht mehr unterstützt.<br /><br /> Diese Option wirkt sich nicht auf das Sperrverhalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und ist nur aus Gründen der Kompatibilität mit vorhandenen Skripts und Prozeduren enthalten.|  
@@ -68,7 +69,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Fehlernummer (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_tableoption kann nur verwendet werden, um die Optionswerte für benutzerdefinierte Tabellen festzulegen. Verwenden Sie OBJECTPROPERTY, oder führen Sie die Abfrage sys. Tables aus, um Tabellen Eigenschaften anzuzeigen.  
   
  Die text in row-Option von sp_tableoption kann nur für Tabellen aktiviert oder deaktiviert werden, die Textspalten enthalten. Wenn die Tabelle nicht über eine Textspalte verfügt, löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler aus.  
@@ -79,7 +80,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   text in row ist aktiviert.  
   
--   Die Länge der Zeichenfolge ist kürzer als die in angegebene Grenze.@OptionValue  
+-   Die Länge der Zeichenfolge ist kürzer als die in angegebene Grenze. @OptionValue  
   
 -   Es steht genügend Speicherplatz in der Datenzeile zur Verfügung.  
   
@@ -134,8 +135,8 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. Tables &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [OBJECTPROPERTY &#40;Transact-SQL-&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
+ [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   

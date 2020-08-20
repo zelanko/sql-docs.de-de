@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 3-3: Testen der bereitgestellten Pakete'
 title: 'Schritt 3: Testen der bereitgestellten Pakete | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fb3889d57052bcd305056a6468a2fa42d79d5c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6c7fed5c20d9025be9ad9bce060d6fa83de378a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472010"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Lektion 3-3: Testen der bereitgestellten Pakete
 
@@ -107,7 +108,7 @@ Die Ordner auf der obersten Ebene innerhalb des Ordners Gespeicherte Pakete sind
   
     Die Abfrage gibt 21 Datenzeilen zurück. Das Ergebnis besteht aus den Zeilen der XML-Datendatei orders.xml. Die einzelnen Zeilen sind Zusammenfassungen nach Land bzw. Region. In der Zeile werden der Name eines Landes bzw. einer Region, die Anzahl der Aufträge für jedes Land bzw. für jede Region und die Datumswerte der neuesten und ältesten Aufträge aufgelistet.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [dtexec (Hilfsprogramm)](../integration-services/packages/dtexec-utility.md)  
   
   

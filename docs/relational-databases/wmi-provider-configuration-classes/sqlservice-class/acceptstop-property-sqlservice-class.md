@@ -1,4 +1,5 @@
 ---
+description: AcceptStop-Eigenschaft (SqlService-Klasse)
 title: Accepted-Eigenschaft (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8036e4c21b7cc79744fc8c04411b0866ea1fce22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67874a17c13c5e62dde3e364291e29516d02276f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472717"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop-Eigenschaft (SqlService-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ object.AcceptStop [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein boolescher Wert, der angibt, ob der Dienst beendet werden kann: **true** , wenn der Dienst beendet werden kann, bzw. **false** , wenn der Dienst nicht beendet werden kann.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
