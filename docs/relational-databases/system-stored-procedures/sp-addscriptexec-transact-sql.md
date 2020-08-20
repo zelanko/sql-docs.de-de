@@ -1,4 +1,5 @@
 ---
+description: sp_addscriptexec (Transact-SQL)
 title: sp_addscriptexec (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7907f085cedfeb6a5dfc8be70c9a7eff67dc37b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a133709a8fbaaabd58a9ad00d7298bf34317b0cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486331"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,17 +41,17 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @scriptfile = ] 'scriptfile'`Der vollständige Pfad zur SQL-Skriptdatei. *scriptfile ist vom Datentyp* **nvarchar (4000)** und hat keinen Standardwert.  
+`[ @scriptfile = ] 'scriptfile'` Der vollständige Pfad zur SQL-Skriptdatei. *scriptfile ist vom Datentyp* **nvarchar (4000)** und hat keinen Standardwert.  
   
-`[ @skiperror = ] 'skiperror'`Gibt an, ob die Verteilungs-Agent oder Merge-Agent bei Auftreten eines Fehlers während der Skript Verarbeitung angehalten werden sollen. *SkipError* ist vom Typ **Bit**. der Standardwert ist 0.  
+`[ @skiperror = ] 'skiperror'` Gibt an, ob die Verteilungs-Agent oder Merge-Agent bei Auftreten eines Fehlers während der Skript Verarbeitung angehalten werden sollen. *SkipError* ist vom Typ **Bit**. der Standardwert ist 0.  
   
  **0** = der Agent wird beendet.  
   
  **1** = der Agent setzt das Skript fort und ignoriert den Fehler.  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* sollte beim Veröffentlichen von einem Verleger nicht verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -77,8 +78,8 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addscriptexec**ausführen.  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Ausführen von Skripts während der Synchronisierung &#40;Replikations&#41;Programmierung mit Transact-SQL](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Ausführen von Skripts während der Synchronisierung &#40;Replikations&#41;Programmierung mit Transact-SQL ](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [Synchronisieren von Daten](../../relational-databases/replication/synchronize-data.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

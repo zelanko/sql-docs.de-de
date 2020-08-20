@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_set_config_history_retention (Transact-SQL)
 title: sp_syspolicy_set_config_history_retention (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e718d545e6aeba709578f1857be81e8603a11b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8b33adfbe57765cf52b3b3572bf30b263999e773
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485618"
 ---
 # <a name="sp_syspolicy_set_config_history_retention-transact-sql"></a>sp_syspolicy_set_config_history_retention (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @value = ] value`Die Anzahl der Tage, die der Verlauf der Richtlinien basierten Verwaltung beibehalten werden soll. der *Wert* ist " **sqlvariant**".  
+`[ @value = ] value` Die Anzahl der Tage, die der Verlauf der Richtlinien basierten Verwaltung beibehalten werden soll. der *Wert* ist " **sqlvariant**".  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen sp_syspolicy_set_config_history_retention im Kontext der Systemdatenbank msdb ausführen.  
   
  Wenn *value* auf 0 festgelegt ist, wird der Verlauf nicht automatisch entfernt.  
@@ -71,7 +72,7 @@ EXEC msdb.dbo.sp_syspolicy_set_config_history_retention @value = 28;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren der Richtlinien basierten Verwaltung &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_configure &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   

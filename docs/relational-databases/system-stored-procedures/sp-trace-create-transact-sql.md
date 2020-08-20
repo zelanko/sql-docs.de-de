@@ -1,4 +1,5 @@
 ---
+description: sp_trace_create (Transact-SQL)
 title: sp_trace_create (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8327dc8beafb5d4e219cdaf25c44c75af3e85e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8818beb7c8ec4a0ff688f43fe6c3fe3794a573be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485585"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,9 +48,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @traceid = ] trace_id`Die Zahl, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der neuen Ablauf Verfolgung zugewiesen wird. Benutzereingaben werden ignoriert. *trace_id* ist vom Datentyp **int**und hat den Standardwert NULL. Der Benutzer verwendet den *trace_id* Wert, um die von dieser gespeicherten Prozedur definierte Ablauf Verfolgung zu identifizieren, zu ändern und zu steuern.  
+`[ @traceid = ] trace_id` Die Zahl, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der neuen Ablauf Verfolgung zugewiesen wird. Benutzereingaben werden ignoriert. *trace_id* ist vom Datentyp **int**und hat den Standardwert NULL. Der Benutzer verwendet den *trace_id* Wert, um die von dieser gespeicherten Prozedur definierte Ablauf Verfolgung zu identifizieren, zu ändern und zu steuern.  
   
-`[ @options = ] option_value`Gibt die für die Ablauf Verfolgung festgelegten Optionen an. *option_value* ist vom Datentyp **int**und hat keinen Standardwert. Benutzer können eine Kombination dieser Optionen wählen, indem sie den Summenwert der gewünschten Optionen angeben. Wenn Sie z. b. die Optionen TRACE_FILE_ROLLOVER und SHUTDOWN_ON_ERROR aktivieren möchten, geben Sie **6** für *option_value*an.  
+`[ @options = ] option_value` Gibt die für die Ablauf Verfolgung festgelegten Optionen an. *option_value* ist vom Datentyp **int**und hat keinen Standardwert. Benutzer können eine Kombination dieser Optionen wählen, indem sie den Summenwert der gewünschten Optionen angeben. Wenn Sie z. b. die Optionen TRACE_FILE_ROLLOVER und SHUTDOWN_ON_ERROR aktivieren möchten, geben Sie **6** für *option_value*an.  
   
  In der folgenden Tabelle werden die Optionen, Beschreibungen und die zugehörigen Werte aufgeführt.  
   
@@ -59,13 +60,13 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |SHUTDOWN_ON_ERROR|**4**|Gibt an, dass SQL Server heruntergefahren wird, wenn die Ablaufverfolgung nicht in die Datei geschrieben werden kann, unabhängig vom Grund. Diese Option ist beim Ausführen von Ablaufverfolgungen zur Sicherheitsüberwachung hilfreich.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|Gibt an, dass eine Aufzeichnung der letzten 5 MB der Ablaufverfolgungsinformationen, die vom Server erzeugt wurden, von diesem Server gespeichert werden. TRACE_PRODUCE_BLACKBOX ist mit keiner der anderen Optionen kompatibel.|  
   
-`[ @tracefile = ] 'trace_file'`Gibt den Speicherort und den Dateinamen an, in den die Ablauf Verfolgung geschrieben wird. *trace_file* ist vom Datentyp **nvarchar (245)** und hat keinen Standardwert. *trace_file* kann entweder ein lokales Verzeichnis (z. b. n ' c:\MSSQL\Trace\trace.trc ') oder eine UNC-Freigabe für eine Freigabe oder einen Pfad (n ' \\ \\ *Servername* \\ *ShareName* \\ *Verzeichnis*\Trace.trc ') sein.  
+`[ @tracefile = ] 'trace_file'` Gibt den Speicherort und den Dateinamen an, in den die Ablauf Verfolgung geschrieben wird. *trace_file* ist vom Datentyp **nvarchar (245)** und hat keinen Standardwert. *trace_file* kann entweder ein lokales Verzeichnis (z. b. n ' c:\MSSQL\Trace\trace.trc ') oder eine UNC-Freigabe für eine Freigabe oder einen Pfad (n ' \\ \\ *Servername* \\ *ShareName* \\ *Verzeichnis*\Trace.trc ') sein.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fügt eine **TRC** -Erweiterung an alle Namen von Ablauf Verfolgungs Dateien an. Wenn die TRACE_FILE_ROLLOVER-Option und eine *max_file_size* angegeben werden, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von eine neue Ablauf Verfolgungs Datei erstellt, wenn die ursprüngliche Ablauf Verfolgungs Datei die maximale Größe erreicht. Die neue Datei hat denselben Namen wie die ursprüngliche Datei, aber _*n* wird angehängt, um die zugehörige Sequenz anzugeben, beginnend mit **1**. Wenn die erste Ablauf Verfolgungs Datei z. b. den Namen **filename. trc**hat, wird die zweite Ablauf Verfolgungs Datei **filename_1. trc**benannt.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fügt eine **TRC** -Erweiterung an alle Namen von Ablauf Verfolgungs Dateien an. Wenn die TRACE_FILE_ROLLOVER-Option und eine *max_file_size* angegeben werden, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von eine neue Ablauf Verfolgungs Datei erstellt, wenn die ursprüngliche Ablauf Verfolgungs Datei die maximale Größe erreicht. Die neue Datei hat denselben Namen wie die ursprüngliche Datei, aber _*n* wird angehängt, um die zugehörige Sequenz anzugeben, beginnend mit **1**. Wenn die erste Ablauf Verfolgungs Datei z. b. den Namen **filename. trc**hat, wird die zweite Ablauf Verfolgungs Datei **filename_1. trc**benannt.  
   
  Wenn Sie die Option TRACE_FILE_ROLLOVER verwenden, sollten im ursprünglichen Dateinamen keine Unterstriche enthalten sein. Bei Verwendung von Unterstrichen tritt Folgendes auf:  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]wird nicht automatisch geladen oder fordert Sie auf, die Rolloverdateien zu laden (wenn eine dieser dateirolloveroptionen konfiguriert ist).  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] wird nicht automatisch geladen oder fordert Sie auf, die Rolloverdateien zu laden (wenn eine dieser dateirolloveroptionen konfiguriert ist).  
   
 -   Die fn_trace_gettable-Funktion lädt keine Rolloverdateien (wenn Sie mithilfe des *number_files* -Arguments angegeben wird), wobei der ursprüngliche Dateiname mit einem Unterstrich und einem numerischen Wert endet. (Dies gilt nicht für den Unterstrich und die Zahl, die beim Rollover automatisch angehängt werden.)  
   
@@ -74,15 +75,15 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  *trace_file* kann nicht angegeben werden, wenn die TRACE_PRODUCE_BLACKBOX-Option verwendet wird.  
   
-`[ @maxfilesize = ] max_file_size`Gibt die maximale Größe in Megabyte (MB) an, die eine Ablauf Verfolgungs Datei vergrößern kann. *max_file_size* ist vom Datentyp **bigint**und hat den Standardwert **5**.  
+`[ @maxfilesize = ] max_file_size` Gibt die maximale Größe in Megabyte (MB) an, die eine Ablauf Verfolgungs Datei vergrößern kann. *max_file_size* ist vom Datentyp **bigint**und hat den Standardwert **5**.  
   
  Wenn dieser Parameter ohne die Option TRACE_FILE_ROLLOVER angegeben wird, beendet die Ablauf Verfolgung die Aufzeichnung in der Datei, wenn der verwendete Speicherplatz den von *max_file_size*angegebenen Wert überschreitet.  
   
-`[ @stoptime = ] 'stop_time'`Gibt das Datum und die Uhrzeit an, zu der die Ablauf Verfolgung beendet wird. *stop_time* ist vom **Datentyp DateTime**und hat den Standardwert NULL. Beim Wert NULL wird die Ablaufverfolgung so lange ausgeführt, bis sie manuell beendet oder der Server heruntergefahren wird.  
+`[ @stoptime = ] 'stop_time'` Gibt das Datum und die Uhrzeit an, zu der die Ablauf Verfolgung beendet wird. *stop_time* ist vom **Datentyp DateTime**und hat den Standardwert NULL. Beim Wert NULL wird die Ablaufverfolgung so lange ausgeführt, bis sie manuell beendet oder der Server heruntergefahren wird.  
   
  Wenn sowohl *stop_time* als auch *max_file_size* angegeben sind und TRACE_FILE_ROLLOVER nicht angegeben ist, wird die Ablauf Verfolgung beendet, wenn entweder die angegebene Endzeit oder die maximale Dateigröße erreicht ist. Wenn *stop_time*, *max_file_size*und TRACE_FILE_ROLLOVER angegeben werden, wird die Ablauf Verfolgung zur angegebenen Endzeit angehalten, vorausgesetzt, dass die Ablauf Verfolgung das Laufwerk nicht auffüllen kann.  
   
-`[ @filecount = ] 'max_rollover_files'`Gibt die maximale Anzahl oder Ablauf Verfolgungs Dateien an, die mit dem gleichen Basis Dateinamen verwaltet werden sollen. *MAX_ROLLOVER_FILES* ist vom Datentyp **int**, größer als 1. Dieser Parameter ist nur dann gültig, wenn die Option TRACE_FILE_ROLLOVER angegeben wird. Wenn *MAX_ROLLOVER_FILES* angegeben wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, nicht mehr als *MAX_ROLLOVER_FILES* Ablauf Verfolgungs Dateien beizubehalten, indem die älteste Ablauf Verfolgungs Datei gelöscht wird, bevor eine neue Ablauf Verfolgungs Datei geöffnet wird. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das Alter von Ablaufverfolgungsdateien durch das Anfügen einer Nummer an den Basisdateinamen nachverfolgt.  
+`[ @filecount = ] 'max_rollover_files'` Gibt die maximale Anzahl oder Ablauf Verfolgungs Dateien an, die mit dem gleichen Basis Dateinamen verwaltet werden sollen. *MAX_ROLLOVER_FILES* ist vom Datentyp **int**, größer als 1. Dieser Parameter ist nur dann gültig, wenn die Option TRACE_FILE_ROLLOVER angegeben wird. Wenn *MAX_ROLLOVER_FILES* angegeben wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, nicht mehr als *MAX_ROLLOVER_FILES* Ablauf Verfolgungs Dateien beizubehalten, indem die älteste Ablauf Verfolgungs Datei gelöscht wird, bevor eine neue Ablauf Verfolgungs Datei geöffnet wird. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das Alter von Ablaufverfolgungsdateien durch das Anfügen einer Nummer an den Basisdateinamen nachverfolgt.  
   
  Wenn der *trace_file* -Parameter z. b. als "c:\mytrace" angegeben wird, ist eine Datei mit dem Namen "c:\ mytrace_123. trc" älter als eine Datei mit dem Namen "c:\ mytrace_124. trc". Wenn *MAX_ROLLOVER_FILES* auf 2 festgelegt ist, löscht SQL Server die Datei "c:\ mytrace_123. trc", bevor die Ablauf Verfolgungs Datei "c:\ mytrace_125. trc" erstellt wird.  
   
@@ -94,14 +95,14 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |0|Kein Fehler.|  
-|1|Unbekannter Fehler.|  
+|1|Unknown error. (Unbekannter Fehler.)|  
 |10|Ungültige Optionen. Wird zurückgegeben, wenn angegebene Optionen inkompatibel sind.|  
 |12|Datei nicht erstellt.|  
 |13|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
 |14|Ungültige Beendigungszeit. Wird zurückgegeben, wenn die angegebene Beendigungszeit bereits verstrichen ist.|  
 |15|Ungültige Parameter. Wird zurückgegeben, wenn der Benutzer inkompatible Parameter angegeben hat.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_trace_create** ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Prozedur, die viele der zuvor durch **xp_trace_ \* ** erweiterten gespeicherten Prozeduren ausführt, die in früheren Versionen von SQL Server verfügbar waren. Verwenden Sie **sp_trace_create** anstelle von:  
   
 -   **xp_trace_addnewqueue**  
@@ -137,7 +138,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
     -   **Exception**  
   
-    -   **Attention**  
+    -   **Hingewiesen**  
   
 -   Für diese Ablaufverfolgung können Ereignisse oder Spalten nicht hinzugefügt oder entfernt werden.  
   
@@ -146,9 +147,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="permissions"></a>Berechtigungen  
  Benutzer müssen über die ALTER TRACE-Berechtigung verfügen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_trace_generateevent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)  

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_set_log_on_success (Transact-SQL)
 title: sp_syspolicy_set_log_on_success (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4534c8178d20462377dcacced00e9f6cc9bbc029
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cb17728ab1ac9c063f2198ec707254bf6b2f8eed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485598"
 ---
 # <a name="sp_syspolicy_set_log_on_success-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @value = ] value`Bestimmt, ob erfolgreiche Richtlinien Auswertungen protokolliert werden. der *Wert* ist " **sqlvariant**". die folgenden Werte sind möglich:  
+`[ @value = ] value` Bestimmt, ob erfolgreiche Richtlinien Auswertungen protokolliert werden. der *Wert* ist " **sqlvariant**". die folgenden Werte sind möglich:  
   
 -   0 oder 'false' = Erfolgreiche Richtlinienauswertungen werden nicht protokolliert.  
   
@@ -49,7 +50,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen sp_syspolicy_set_log_on_success im Kontext der Systemdatenbank msdb ausführen.  
   
  Wenn *value* auf 0 oder auf ' false ' festgelegt ist, werden nur fehlerhafte Richtlinien Auswertungen protokolliert.  
@@ -68,7 +69,7 @@ EXEC msdb.dbo.sp_syspolicy_set_log_on_success @value = 1;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren der Richtlinien basierten Verwaltung &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_configure &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   

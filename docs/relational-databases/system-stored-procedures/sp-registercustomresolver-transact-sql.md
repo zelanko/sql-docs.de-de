@@ -1,4 +1,5 @@
 ---
+description: sp_registercustomresolver (Transact-SQL)
 title: sp_registercustomresolver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e16fe7352b03e803af57ca1ef4b744597b57a18f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92c601a4cf105c1c1b8ff1403d457a5a21d0f356
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485813"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,27 +42,27 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @article_resolver = ] 'article_resolver'`Gibt den anzeigen Amen für die benutzerdefinierte Geschäftslogik an, die registriert wird. *article_resolver* ist vom Datentyp **nvarchar (255)** und hat keinen Standardwert.  
+`[ @article_resolver = ] 'article_resolver'` Gibt den anzeigen Amen für die benutzerdefinierte Geschäftslogik an, die registriert wird. *article_resolver* ist vom Datentyp **nvarchar (255)** und hat keinen Standardwert.  
   
-`[ @resolver_clsid = ] 'resolver_clsid'`Gibt den CLSID-Wert des COM-Objekts an, das registriert wird. Die benutzerdefinierte Geschäftslogik *resolver_clsid* ist vom Datentyp **nvarchar (50)** und hat den Standardwert NULL. Dieser Parameter muss auf eine gültige CLSID oder auf NULL festgelegt werden, wenn Sie eine Assembly für einen Geschäftslogikhandler registrieren.  
+`[ @resolver_clsid = ] 'resolver_clsid'` Gibt den CLSID-Wert des COM-Objekts an, das registriert wird. Die benutzerdefinierte Geschäftslogik *resolver_clsid* ist vom Datentyp **nvarchar (50)** und hat den Standardwert NULL. Dieser Parameter muss auf eine gültige CLSID oder auf NULL festgelegt werden, wenn Sie eine Assembly für einen Geschäftslogikhandler registrieren.  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'`Gibt den Typ der benutzerdefinierten Geschäftslogik an, die registriert wird. *is_dotnet_assembly* ist vom Datentyp **nvarchar (50)** und hat den Standardwert false. **true** gibt an, dass die benutzerdefinierte Geschäftslogik, die registriert wird, eine Geschäftslogik Handler-Assembly ist. **false** gibt an, dass es sich um eine COM-Komponente handelt.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` Gibt den Typ der benutzerdefinierten Geschäftslogik an, die registriert wird. *is_dotnet_assembly* ist vom Datentyp **nvarchar (50)** und hat den Standardwert false. **true** gibt an, dass die benutzerdefinierte Geschäftslogik, die registriert wird, eine Geschäftslogik Handler-Assembly ist. **false** gibt an, dass es sich um eine COM-Komponente handelt.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'`Der Name der Assembly, die den Geschäftslogik Handler implementiert. *dotnet_assembly_name* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Sie müssen den vollständigen Pfad zur Assembly angeben, falls sie nicht im gleichen Verzeichnis wie die ausführbare Datei für den Merge-Agent, im gleichen Verzeichnis wie die Anwendung, mit der der Merge-Agent synchron gestartet wird, oder im globalen Assemblycache (GAC) bereitgestellt wird.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` Der Name der Assembly, die den Geschäftslogik Handler implementiert. *dotnet_assembly_name* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Sie müssen den vollständigen Pfad zur Assembly angeben, falls sie nicht im gleichen Verzeichnis wie die ausführbare Datei für den Merge-Agent, im gleichen Verzeichnis wie die Anwendung, mit der der Merge-Agent synchron gestartet wird, oder im globalen Assemblycache (GAC) bereitgestellt wird.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'`Der Name der Klasse, die überschreibt <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> , um den Geschäftslogik Handler zu implementieren. Der Name muss im Format **Namespace. ClassName**angegeben werden. *dotnet_class_name* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name'` Der Name der Klasse, die überschreibt <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> , um den Geschäftslogik Handler zu implementieren. Der Name muss im Format **Namespace. ClassName**angegeben werden. *dotnet_class_name* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_registercustomresolver** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_registercustomresolver**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Implementieren eines Geschäftslogik Handlers für einen Mergeartikel](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
+ [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Implementieren eines benutzerdefinierten Konflikt Lösers für einen Mergeartikel](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [sp_lookupcustomresolver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
  [sp_unregistercustomresolver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   

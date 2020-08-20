@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergeconflictrows (Transact-SQL)
 title: sp_helpmergeconflictrows (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85a5ad519f836288a98dd6327fc7ca8a15c0cf70
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c66dc9c8ac6cc21d74cbf2a6474ad74a2cffba1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485945"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** . Wenn die Veröffentlichung angegeben wird, werden alle Konflikte dieser Veröffentlichung zurückgegeben. Wenn die **MSmerge_conflict_Customers** Tabelle z. b. Konflikt Zeilen für die **WA** -und die ZS **-Veröffentlichungen enthält** , werden durch das Übergeben eines Veröffentlichungs namens **ca** Konflikte im Bezug auf die Zertifizierungs **Stellen Veröffentlichung abgerufen** .  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** . Wenn die Veröffentlichung angegeben wird, werden alle Konflikte dieser Veröffentlichung zurückgegeben. Wenn die **MSmerge_conflict_Customers** Tabelle z. b. Konflikt Zeilen für die **WA** -und die ZS **-Veröffentlichungen enthält** , werden durch das Übergeben eines Veröffentlichungs namens **ca** Konflikte im Bezug auf die Zertifizierungs **Stellen Veröffentlichung abgerufen** .  
   
-`[ @conflict_table = ] 'conflict_table'`Der Name der Konflikt Tabelle. *conflict_table* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden Konflikt Tabellen mithilfe des Artikels Format Namen mit **MSmerge_conflict \_ _Veröffentlichung \_ _** benannt, wobei jeweils eine Tabelle für jeden veröffentlichten Artikel verwendet wird.  
+`[ @conflict_table = ] 'conflict_table'` Der Name der Konflikt Tabelle. *conflict_table* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden Konflikt Tabellen mithilfe des Artikels Format Namen mit **MSmerge_conflict \_ _Veröffentlichung \_ _** benannt, wobei jeweils eine Tabelle für jeden veröffentlichten Artikel verwendet wird.  
   
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @logical_record_conflicts = ] logical_record_conflicts`Gibt an, ob das Resultset Informationen zu Konflikten logischer Datensätze enthält. *logical_record_conflicts* ist vom Datentyp **int**und hat den Standardwert 0. **1** bedeutet, dass Informationen zu Konflikten logischer Datensätze zurückgegeben werden.  
+`[ @logical_record_conflicts = ] logical_record_conflicts` Gibt an, ob das Resultset Informationen zu Konflikten logischer Datensätze enthält. *logical_record_conflicts* ist vom Datentyp **int**und hat den Standardwert 0. **1** bedeutet, dass Informationen zu Konflikten logischer Datensätze zurückgegeben werden.  
   
 ## <a name="result-sets"></a>Resultsets  
  **sp_helpmergeconflictrows** gibt ein Resultset zurück, das aus der Basistabellen Struktur und diesen zusätzlichen Spalten besteht.  
@@ -66,7 +67,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpmergeconflictrows** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

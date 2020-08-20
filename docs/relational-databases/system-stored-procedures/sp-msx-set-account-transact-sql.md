@@ -1,4 +1,5 @@
 ---
+description: sp_msx_set_account (Transact-SQL)
 title: sp_msx_set_account (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9e0e355c033c0ee33dd8c503875d03a163f998b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2b044279361f2ddd7118c7feda70a963de18761
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485864"
 ---
 # <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @credential_name = ] 'credential_name'`Der Name der Anmelde Informationen, die für die Anmeldung beim Master Server verwendet werden sollen. Der bereitgestellte Name muss der Name vorhandener Anmeldeinformationen sein. Es muss entweder *credential_name* oder *credential_id* angegeben werden.  
+`[ @credential_name = ] 'credential_name'` Der Name der Anmelde Informationen, die für die Anmeldung beim Master Server verwendet werden sollen. Der bereitgestellte Name muss der Name vorhandener Anmeldeinformationen sein. Es muss entweder *credential_name* oder *credential_id* angegeben werden.  
   
-`[ @credential_id = ] credential_id`Der Bezeichner für die Anmelde Informationen, die für die Anmeldung am Master Server verwendet werden sollen. Der Bezeichner muss ein Bezeichner für vorhandene Anmeldeinformationen sein. Es muss entweder *credential_name* oder *credential_id* angegeben werden.  
+`[ @credential_id = ] credential_id` Der Bezeichner für die Anmelde Informationen, die für die Anmeldung am Master Server verwendet werden sollen. Der Bezeichner muss ein Bezeichner für vorhandene Anmeldeinformationen sein. Es muss entweder *credential_name* oder *credential_id* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -49,7 +50,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet Anmeldeinformationen zum Speichern des Benutzernamens und der Kennwortinformationen, die ein Zielserver für die Anmeldung an einem Masterserver verwendet. Diese Prozedur legt die Anmeldeinformationen fest, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent für diesen Zielserver verwendet, um sich am Masterserver anzumelden.  
   
  Bei den angegebenen Anmeldeinformationen muss es sich um vorhandene Anmeldeinformationen handeln. Weitere Informationen zum Erstellen von Anmelde Informationen finden Sie unter [Create Credential &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
@@ -70,7 +71,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Agent gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Create Credential &#40;Transact-SQL-&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_msx_get_account &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbee07cd02ca423a633133546130615bcb1d60c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99a17425f74b1ae2f5db7c4a6002e27ca7780f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485622"
 ---
 # <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @policy_id = ] policy_id`Der Bezeichner der Richtlinie, für die Sie den Ausführungs Verlauf löschen möchten. *policy_id* ist vom Datentyp **int**und ist erforderlich. Kann den Wert NULL haben.  
+`[ @policy_id = ] policy_id` Der Bezeichner der Richtlinie, für die Sie den Ausführungs Verlauf löschen möchten. *policy_id* ist vom Datentyp **int**und ist erforderlich. Kann den Wert NULL haben.  
   
-`[ @oldest_date = ] 'oldest_date'`Ist das älteste Datum, für das Sie den Richtlinien Ausführungs Verlauf beibehalten möchten. Alle Ausführungsverläufe, die vor diesem Datum liegen, werden gelöscht. *oldest_date* ist vom **Datentyp DateTime**und ist erforderlich. Kann den Wert NULL haben.  
+`[ @oldest_date = ] 'oldest_date'` Ist das älteste Datum, für das Sie den Richtlinien Ausführungs Verlauf beibehalten möchten. Alle Ausführungsverläufe, die vor diesem Datum liegen, werden gelöscht. *oldest_date* ist vom **Datentyp DateTime**und ist erforderlich. Kann den Wert NULL haben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen sp_syspolicy_delete_policy_execution_history im Kontext der Systemdatenbank msdb ausführen.  
   
  Sie können die folgende Abfrage verwenden, um Werte für *policy_id*abzurufen und Datumsangaben zum Ausführungs Verlauf anzuzeigen:  
@@ -85,7 +86,7 @@ EXEC msdb.dbo.sp_syspolicy_delete_policy_execution_history @policy_id = 7
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren der Richtlinien basierten Verwaltung &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_set_config_history_retention &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_purge_history &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  

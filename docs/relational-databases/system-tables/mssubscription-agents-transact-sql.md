@@ -1,4 +1,5 @@
 ---
+description: MSsubscription_agents (Transact-SQL)
 title: MSsubscription_agents (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b70a0b6356a4b9a862c2a89178068ef6ec2c4af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f28a46ccebb0f01aaeed07fe2c27776aec0534dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485476"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85889352"
 |**queue_id**|**sysname**|Die ID der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Nachrichten Warteschlange auf dem Verleger. *queue_id* ist für SQL-basiertes verzögertes Update über eine Warteschlange auf **SQL** festgelegt.|  
 |**update_mode**|**tinyint**|Typ des Aktualisierens:<br /><br /> **0** = schreibgeschützt.<br /><br /> **1** = sofortiges Update.<br /><br /> **2** = verzögertes Update über Message Queuing.<br /><br /> **3** = sofortiges Update mit verzögertem Update über eine Warteschlange als Failover mit Message Queuing.<br /><br /> **4** = verzögertes Update über eine Warteschlange SQL Server Warteschlange.<br /><br /> **5** = sofortiges Update mit verzögertem Update von verzögertem Update mithilfe SQL Server Warteschlange.|  
 |**failover_mode**|**bit**|Wenn für das Update ein Failovertyp angegeben war, ist dies der gewählte Failovertyp:<br /><br /> **0** = sofortiges Update wird verwendet. Failover ist nicht aktiviert.<br /><br /> **1** = verzögertes Update in der Warteschlange wird verwendet. Failover ist aktiviert. Die Warteschlange, die für das Failover verwendet wird, wird im *update_mode* Wert angegeben.|  
-|**SPID**|**int**|Die Systemprozess-ID der Verbindung, die von dem Verteilungs-Agent verwendet wird, der derzeit ausgeführt wird oder gerade ausgeführt wurde.|  
+|**spid**|**int**|Die Systemprozess-ID der Verbindung, die von dem Verteilungs-Agent verwendet wird, der derzeit ausgeführt wird oder gerade ausgeführt wurde.|  
 |**login_time**|**datetime**|Das Datum und die Uhrzeit der Verbindung des Verteilungs-Agents, der derzeit ausgeführt wird oder gerade ausgeführt wurde.|  
 |**allow_subscription_copy**|**bit**|Gibt an, ob die Abonnementdatenbank kopiert werden darf oder nicht.|  
 |**attach_state**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

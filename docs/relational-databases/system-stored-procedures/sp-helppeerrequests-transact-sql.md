@@ -1,4 +1,5 @@
 ---
+description: sp_helppeerrequests (Transact-SQL)
 title: sp_helppeerrequests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f4b6dd66c3903b4503e37166ba8f3ae29439b30
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b16e7c25ebc47ccdb97950658de11d738a0d1666
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485941"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung in einer Peer-zu-Peer-Topologie, für die Status Anforderungen gesendet wurden. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung in einer Peer-zu-Peer-Topologie, für die Status Anforderungen gesendet wurden. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @description = ] 'description'`Ein Wert, der zum Identifizieren einzelner Status Anforderungen verwendet werden kann. Dadurch können Sie zurückgegebene Antworten auf der Grundlage von benutzerdefinierten Informationen filtern, die beim Aufrufen von [sp_requestpeerresponse &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)bereitgestellt werden. die *Beschreibung* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert **%** . Standardmäßig werden alle Statusanforderungen für die Veröffentlichung zurückgegeben. Dieser Parameter wird verwendet, um nur Status Anforderungen mit einer Beschreibung zurückzugeben, die mit dem in *Description*angegebenen Wert übereinstimmt, in dem Zeichen folgen mithilfe einer [like &#40;Transact-SQL-&#41;-](../../t-sql/language-elements/like-transact-sql.md) Klausel abgeglichen werden.  
+`[ @description = ] 'description'` Ein Wert, der zum Identifizieren einzelner Status Anforderungen verwendet werden kann. Dadurch können Sie zurückgegebene Antworten auf der Grundlage von benutzerdefinierten Informationen filtern, die beim Aufrufen von [sp_requestpeerresponse &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)bereitgestellt werden. die *Beschreibung* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert **%** . Standardmäßig werden alle Statusanforderungen für die Veröffentlichung zurückgegeben. Dieser Parameter wird verwendet, um nur Status Anforderungen mit einer Beschreibung zurückzugeben, die mit dem in *Description*angegebenen Wert übereinstimmt, in dem Zeichen folgen mithilfe einer [like &#40;Transact-SQL-&#41;- ](../../t-sql/language-elements/like-transact-sql.md) Klausel abgeglichen werden.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -49,12 +50,12 @@ sp_helppeerrequests [ @publication = ] 'publication'
 |**id**|**int**|Identifiziert eine Anforderung.|  
 |**ung**|**sysname**|Name der Veröffentlichung, für die die Statusanforderung gesendet wurde.|  
 |**sent_date**|**datetime**|Datum und Uhrzeit, zu der die Statusanforderung gesendet wurde.|  
-|**description**|**nvarchar(4000)**|Benutzerdefinierte Informationen, die zum Identifizieren einzelner Statusanforderungen verwendet werden können.|  
+|**Beschreibung**|**nvarchar(4000)**|Benutzerdefinierte Informationen, die zum Identifizieren einzelner Statusanforderungen verwendet werden können.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helppeerrequests** wird in der Peer-zu-Peer-Transaktions Replikation verwendet.  
   
  **sp_helppeerrequests** wird verwendet, wenn eine in einer Peer-zu-Peer-Topologie veröffentlichte Datenbank wieder hergestellt wird.  

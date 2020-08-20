@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelpsubscription (Transact-SQL)
 title: sp_replmonitorhelpsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70b85170ec4b7cf56028b2cea6d643d5e72dfd0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9597e7a3512307367568ee14800fcbf69a3045f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485669"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,13 +45,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des Verlegers, dessen Status überwacht wird. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der Wert **null**ist, werden Informationen für alle Verleger zurückgegeben, die den Verteiler verwenden.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers, dessen Status überwacht wird. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der Wert **null**ist, werden Informationen für alle Verleger zurückgegeben, die den Verteiler verwenden.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der veröffentlichten Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Lautet der Wert NULL, werden Informationen für alle veröffentlichten Datenbanken auf dem Verleger zurückgegeben.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der veröffentlichten Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Lautet der Wert NULL, werden Informationen für alle veröffentlichten Datenbanken auf dem Verleger zurückgegeben.  
   
-`[ @publication = ] 'publication'`Der Name der zu überwachenden Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publication = ] 'publication'` Der Name der zu überwachenden Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @publication_type = ] publication_type`Gibt an, ob der Typ der Veröffentlichung ist. *publication_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
+`[ @publication_type = ] publication_type` Gibt an, ob der Typ der Veröffentlichung ist. *publication_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -59,7 +60,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**2**|Mergeveröffentlichung.|  
 |NULL (Standard)|Die Replikation versucht, den Veröffentlichungstyp zu ermitteln.|  
   
-`[ @mode = ] mode`Der Filter Modus, der beim Zurückgeben von Abonnement Überwachungsinformationen verwendet werden soll. der *Modus* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
+`[ @mode = ] mode` Der Filter Modus, der beim Zurückgeben von Abonnement Überwachungsinformationen verwendet werden soll. der *Modus* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -72,11 +73,11 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Gibt nur Abonnements zurück, für die zurzeit eine Synchronisierung im Gange ist.|  
 |**7**|Gibt nur Abonnements zurück, für die zurzeit keine Synchronisierung im Gange ist.|  
   
-`[ @topnum = ] topnum`Beschränkt das Resultset auf die angegebene Anzahl von Abonnements am Anfang der zurückgegebenen Daten. *topnum* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @topnum = ] topnum` Beschränkt das Resultset auf die angegebene Anzahl von Abonnements am Anfang der zurückgegebenen Daten. *topnum* ist vom Datentyp **int**und hat keinen Standardwert.  
   
-`[ @exclude_anonymous = ] exclude_anonymous`Gibt an, ob anonyme Pullabonnements aus dem Resultset ausgeschlossen werden. *exclude_anonymous* ist vom Typ **Bit**. der Standardwert ist **0**. der Wert **1** bedeutet, dass anonyme Abonnements ausgeschlossen werden und der Wert **0** bedeutet, dass Sie eingeschlossen werden.  
+`[ @exclude_anonymous = ] exclude_anonymous` Gibt an, ob anonyme Pullabonnements aus dem Resultset ausgeschlossen werden. *exclude_anonymous* ist vom Typ **Bit**. der Standardwert ist **0**. der Wert **1** bedeutet, dass anonyme Abonnements ausgeschlossen werden und der Wert **0** bedeutet, dass Sie eingeschlossen werden.  
   
-`[ @refreshpolicy = ] refreshpolicy`Nur interne Verwendung.  
+`[ @refreshpolicy = ] refreshpolicy` Nur interne Verwendung.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -89,7 +90,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**publisher_db**|**sysname**|Der Name der Veröffentlichungsdatenbank.|  
 |**ung**|**sysname**|Der Name einer Veröffentlichung.|  
 |**publication_type**|**int**|Der Veröffentlichungstyp. die folgenden Werte sind möglich:<br /><br /> **0** = Transaktions Veröffentlichung<br /><br /> **1** = Momentaufnahme Veröffentlichung<br /><br /> **2** = Mergeveröffentlichung|  
-|**subtype**|**int**|Der Abonnementtyp, der einen der folgenden Werte haben kann:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = anonym|  
+|**Untertyp**|**int**|Der Abonnementtyp, der einen der folgenden Werte haben kann:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = anonym|  
 |**Schleifen**|**int**|Die längste Latenzzeit (in Sekunden) für Datenänderungen, die vom Protokolllese-Agent oder vom Verteilungs-Agent für eine Transaktionsveröffentlichung weitergegeben werden.|  
 |**latencythreshold**|**int**|Die maximale Latenzzeit für die Transaktionsveröffentlichung, bei deren Überschreiten eine Warnung ausgegeben wird.|  
 |**agentnotrunning**|**int**|Der Zeitraum (in Stunden), während dem der Agent nicht ausgeführt wird.|  
@@ -116,7 +117,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_replmonitorhelpsubscription** wird bei allen Replikations Typen verwendet.  
   
  **sp_replmonitorhelpsubscription** ordnet das Resultset auf Grundlage des schwere Grads des Status des Abonnements an, das durch den Wert von *monitorrang*bestimmt wird. So werden z. B. Zeilen für alle Abonnements, die einen Fehlerzustand aufweisen, oberhalb der Zeilen für Abonnements einsortiert, die einen Warnungsstatus aufweisen.  
@@ -125,6 +126,6 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank können **sp_replmonitorhelpsubscription**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Programmgesteuerte Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

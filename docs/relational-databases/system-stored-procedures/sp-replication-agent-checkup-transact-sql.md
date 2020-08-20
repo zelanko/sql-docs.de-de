@@ -1,4 +1,5 @@
 ---
+description: sp_replication_agent_checkup (Transact-SQL)
 title: sp_replication_agent_checkup (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25daf9098c1c4da74d8c5adfdac062016f68ce96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5bcd42ae639fad4b50feb6aac829a39abc9a1cad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485724"
 ---
 # <a name="sp_replication_agent_checkup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,12 +38,12 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @heartbeat_interval = ] 'heartbeat_interval'`Die maximale Anzahl von Minuten, die ein Agent durchlaufen werden kann, ohne eine Fortschrittsmeldung zu protokollieren. *heartbeat_interval* ist vom Datentyp **int**. der Standardwert ist 10 Minuten.  
+`[ @heartbeat_interval = ] 'heartbeat_interval'` Die maximale Anzahl von Minuten, die ein Agent durchlaufen werden kann, ohne eine Fortschrittsmeldung zu protokollieren. *heartbeat_interval* ist vom Datentyp **int**. der Standardwert ist 10 Minuten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **sp_replication_agent_checkup** löst den Fehler 14151 für jeden Agent aus, der als Fehler verdächtig erkannt wird. Außerdem wird eine Fehlerverlaufsmeldung für die Agents protokolliert.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_replication_agent_checkup** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

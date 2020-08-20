@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelpmergesession (Transact-SQL)
 title: sp_replmonitorhelpmergesession (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 305b7a0e2c9d83fe33a6d571198b205f7452ba44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5fe48c8ed194434fa71ce3fd01f2a8db93ecac74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485699"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,28 +43,28 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @agent_name = ] 'agent_name'`Der Name des Agents. *agent_name* ist vom Datentyp **nvarchar (100)** und hat keinen Standardwert.  
+`[ @agent_name = ] 'agent_name'` Der Name des Agents. *agent_name* ist vom Datentyp **nvarchar (100)** und hat keinen Standardwert.  
   
-`[ @hours = ] hours`Der Zeitraum (in Stunden), für den historische agentsitzungsinformationen zurückgegeben werden. *Hours* ist vom Datentyp **int**. die folgenden Bereiche sind möglich:  
+`[ @hours = ] hours` Der Zeitraum (in Stunden), für den historische agentsitzungsinformationen zurückgegeben werden. *Hours* ist vom Datentyp **int**. die folgenden Bereiche sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |< **1,0**|Gibt Informationen zu vergangenen Agentausführungen (bis zu maximal 100 Ausführungen) zurück.|  
 |**0** (Standardwert)|Gibt Informationen zu allen vergangenen Agentausführungen zurück.|  
 |> **1,0**|Gibt Informationen zu Agent-Ausführungen zurück, die in der Anzahl der letzten *Stunden* aufgetreten sind.|  
   
-`[ @session_type = ] session_type`Filtert das Resultset basierend auf dem Endzeit Ergebnis der Sitzung. *session_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
+`[ @session_type = ] session_type` Filtert das Resultset basierend auf dem Endzeit Ergebnis der Sitzung. *session_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1** (Standard)|Agentsitzungen mit einem Neuversuch oder erfolgreichem Abschluss.|  
 |**0**|Agentsitzungen mit einem Fehlerergebnis.|  
   
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn **sp_replmonitorhelpmergesession** auf dem Abonnenten ausgeführt wird.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn **sp_replmonitorhelpmergesession** auf dem Abonnenten ausgeführt wird.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn **sp_replmonitorhelpmergesession** auf dem Abonnenten ausgeführt wird.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn **sp_replmonitorhelpmergesession** auf dem Abonnenten ausgeführt wird.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn **sp_replmonitorhelpmergesession** auf dem Abonnenten ausgeführt wird.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn **sp_replmonitorhelpmergesession** auf dem Abonnenten ausgeführt wird.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -73,7 +74,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**Status**|**int**|Agenttestlauf-Status:<br /><br /> **1** = Start<br /><br /> **2** = erfolgreich<br /><br /> **3** = in Bearbeitung<br /><br /> **4** = im Leerlauf<br /><br /> **5** = Wiederholung<br /><br /> **6** = Fehler|  
 |**StartTime**|**datetime**|Zeit-Agent-Auftrags Sitzung wurde gestartet.|  
 |**EndTime**|**datetime**|Die Zeit-Agent-Auftrags Sitzung wurde abgeschlossen.|  
-|**Dauer**|**int**|Kumulierte Dauer dieser Auftragssitzung in Sekunden.|  
+|**Duration**|**int**|Kumulierte Dauer dieser Auftragssitzung in Sekunden.|  
 |**UploadedCommands**|**int**|Anzahl von Befehlen, die während der Agentsitzung hochgeladen wurden.|  
 |**DownloadedCommands**|**int**|Anzahl von Befehlen, die während der Agentsitzung heruntergeladen wurden.|  
 |**ErrorMessages**|**int**|Anzahl von Fehlermeldungen, die während der Agentsitzung generiert wurden.|  
@@ -86,7 +87,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_replmonitorhelpmergesession** wird zum Überwachen der Mergereplikation verwendet.  
   
  Bei der Ausführung auf dem Abonnenten werden von **sp_replmonitorhelpmergesession** nur Informationen zu den letzten fünf Merge-Agent Sitzungen zurückgegeben.  
@@ -95,6 +96,6 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank auf dem Verteiler oder der Abonnement Datenbank auf dem Abonnenten können **sp_replmonitorhelpmergesession**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Programmgesteuerte Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collection_set (Transact-SQL)
 title: sp_syscollector_update_collection_set (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ed9fe58317d1dbe1cb3de59b11f556bc96b1d9f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 00285e7f1e170a671cd38149098e485c90f710db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485691"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,15 +56,15 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @collection_set_id = ] collection_set_id`Der eindeutige lokale Bezeichner für den Sammlungs Satz. *collection_set_id* ist vom *Datentyp* **int** und muss über einen Wert verfügen, wenn Name NULL ist.  
+`[ @collection_set_id = ] collection_set_id` Der eindeutige lokale Bezeichner für den Sammlungs Satz. *collection_set_id* ist vom *Datentyp* **int** und muss über einen Wert verfügen, wenn Name NULL ist.  
   
-`[ @name = ] 'name'`Der Name des Sammlungs Satzes. *Name ist vom Datentyp* **vom Datentyp sysname** und muss über einen Wert verfügen, wenn *collection_set_id* NULL ist.  
+`[ @name = ] 'name'` Der Name des Sammlungs Satzes. *Name ist vom Datentyp* **vom Datentyp sysname** und muss über einen Wert verfügen, wenn *collection_set_id* NULL ist.  
   
-`[ @new_name = ] 'new_name'`Der neue Name für den Sammlungs Satz. *new_name* ist vom **Datentyp vom Datentyp sysname**und kann, wenn verwendet, keine leere Zeichenfolge sein. *new_name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammlungssätzen abrufen möchten, fragen Sie die syscollector_collection_sets-Systemsicht ab.  
+`[ @new_name = ] 'new_name'` Der neue Name für den Sammlungs Satz. *new_name* ist vom **Datentyp vom Datentyp sysname**und kann, wenn verwendet, keine leere Zeichenfolge sein. *new_name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammlungssätzen abrufen möchten, fragen Sie die syscollector_collection_sets-Systemsicht ab.  
   
-`[ @target = ] 'target'`Reserviert für zukünftige Verwendung.  
+`[ @target = ] 'target'` Reserviert für zukünftige Verwendung.  
   
-`[ @collection_mode = ] collection_mode`Der Typ der zu verwendenden Datensammlung. *collection_mode* ist vom Datentyp **smallint** und kann einen der folgenden Werte aufweisen:  
+`[ @collection_mode = ] collection_mode` Der Typ der zu verwendenden Datensammlung. *collection_mode* ist vom Datentyp **smallint** und kann einen der folgenden Werte aufweisen:  
   
  0 - Modus mit Zwischenspeicherung. Für Datensammlung und -upload werden separate Zeitpläne verwendet. Geben Sie den Modus mit Zwischenspeicherung für eine fortlaufende Sammlung an.  
   
@@ -71,21 +72,21 @@ sp_syscollector_update_collection_set
   
  Wenn Sie vom Modus ohne Zwischenspeicherung in den Modus mit Zwischenspeicherung (0) wechseln, müssen Sie auch *schedule_uid* oder *schedule_name*angeben.  
   
-`[ @days_until_expiration = ] days_until_expiration`Gibt an, wie viele Tage die gesammelten Daten im Verwaltungs Data Warehouse gespeichert werden. *days_until_expiration* ist vom Datentyp **smallint**. *days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
+`[ @days_until_expiration = ] days_until_expiration` Gibt an, wie viele Tage die gesammelten Daten im Verwaltungs Data Warehouse gespeichert werden. *days_until_expiration* ist vom Datentyp **smallint**. *days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
   
-`[ @proxy_id = ] proxy_id`Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proxy Konto des-Agents. *proxy_id* ist vom Datentyp **int**.  
+`[ @proxy_id = ] proxy_id` Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proxy Konto des-Agents. *proxy_id* ist vom Datentyp **int**.  
   
-`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys. *proxy_name* ist vom **Datentyp vom Datentyp sysname** und lässt NULL-Werte zu.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys. *proxy_name* ist vom **Datentyp vom Datentyp sysname** und lässt NULL-Werte zu.  
   
-`[ @schedule_uid = ] 'schedule_uid'`Der GUID, der auf einen Zeitplan zeigt. *schedule_uid* ist vom Datentyp **uniqueidentifier**.  
+`[ @schedule_uid = ] 'schedule_uid'` Der GUID, der auf einen Zeitplan zeigt. *schedule_uid* ist vom Datentyp **uniqueidentifier**.  
   
  Fragen Sie die syszeitpläne-Systemtabelle ab, um *schedule_uid*abzurufen.  
   
  Wenn *collection_mode* auf 0 festgelegt ist, muss *schedule_uid* oder *schedule_name* angegeben werden. Wenn *collection_mode* auf 1 festgelegt ist, wird *schedule_uid* oder *schedule_name* ignoriert, wenn angegeben.  
   
-`[ @schedule_name = ] 'schedule_name'`Der Name des Zeitplans. *schedule_name* ist vom **Datentyp vom Datentyp sysname** und lässt NULL-Werte zu. Wenn angegeben, muss *schedule_uid* NULL sein. Fragen Sie die syszeitpläne-Systemtabelle ab, um *schedule_name*abzurufen.  
+`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans. *schedule_name* ist vom **Datentyp vom Datentyp sysname** und lässt NULL-Werte zu. Wenn angegeben, muss *schedule_uid* NULL sein. Fragen Sie die syszeitpläne-Systemtabelle ab, um *schedule_name*abzurufen.  
   
-`[ @logging_level = ] logging_level`Der Protokolliergrad. *LOGGING_LEVEL* ist vom Datentyp **smallint** und hat einen der folgenden Werte:  
+`[ @logging_level = ] logging_level` Der Protokolliergrad. *LOGGING_LEVEL* ist vom Datentyp **smallint** und hat einen der folgenden Werte:  
   
  0 - Informationen zur Protokollausführung und zu den [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Ereignissen, die Folgendes nachverfolgen:  
   
@@ -107,12 +108,12 @@ sp_syscollector_update_collection_set
   
  Der Standardwert für *LOGGING_LEVEL* ist 1.  
   
-`[ @description = ] 'description'`Die Beschreibung des Sammlungs Satzes. die *Beschreibung* ist **nvarchar (4000)**.  
+`[ @description = ] 'description'` Die Beschreibung des Sammlungs Satzes. die *Beschreibung* ist **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_syscollector_update_collection_set muss im Kontext der msdb-Systemdatenbank ausgeführt werden.  
   
  Entweder *collection_set_id* oder *Name* muss einen Wert aufweisen, beide dürfen nicht NULL sein. Um diese Werte abzurufen, fragen Sie die syscollector_collection_sets-Systemsicht ab.  

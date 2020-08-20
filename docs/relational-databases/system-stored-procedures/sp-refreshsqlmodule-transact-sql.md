@@ -1,4 +1,5 @@
 ---
+description: sp_refreshsqlmodule (Transact-SQL)
 title: sp_refreshsqlmodule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/25/2018
@@ -26,12 +27,12 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11b7ec3592e73d890a6abab1e0d5df39e53eef18
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0c2621ffb96ad93d75e5b59e11963f93bf0f32eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485879"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -56,9 +57,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'module\_name'`Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *module_name* kann keine gespeicherte Prozedur Common Language Runtime (CLR) oder eine CLR-Funktion sein. *module_name* kann nicht Schema gebunden werden. *module_name* ist vom Datentyp **nvarchar**und hat keinen Standardwert. *module_name* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Objekte in der aktuellen Datenbank verweisen.  
+`[ @name = ] 'module\_name'` Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *module_name* kann keine gespeicherte Prozedur Common Language Runtime (CLR) oder eine CLR-Funktion sein. *module_name* kann nicht Schema gebunden werden. *module_name* ist vom Datentyp **nvarchar**und hat keinen Standardwert. *module_name* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Objekte in der aktuellen Datenbank verweisen.  
   
-`[ , @namespace = ] ' \<class> '`Die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-auslöst ist, \<class> ist erforderlich. *\<class>* ist vom Datentyp **nvarchar**(20). Gültige Eingaben sind:  
+`[ , @namespace = ] ' \<class> '` Die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-auslöst ist, \<class> ist erforderlich. *\<class>* ist vom Datentyp **nvarchar**(20). Gültige Eingaben sind:  
 
 * DATABASE_DDL_TRIGGER
 

@@ -1,4 +1,5 @@
 ---
+description: sp_server_diagnostics (Transact-SQL)
 title: sp_server_diagnostics (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2bd308f79e9ef4a49e91509400e8d4938cd4473
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485664"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'`Gibt das Zeitintervall an, in dem die gespeicherte Prozedur wiederholt ausgeführt wird, um Integritäts Informationen zu senden.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Gibt das Zeitintervall an, in dem die gespeicherte Prozedur wiederholt ausgeführt wird, um Integritäts Informationen zu senden.  
   
  *repeat_interval_in_seconds* ist vom Datentyp **int** und hat den Standardwert 0. Die gültigen Parameterwerte sind 0 sowie alle Werte größer oder gleich 5. Die gespeicherte Prozedur muss mindestens 5 Sekunden lang ausgeführt werden, um vollständige Daten zurückzugeben. Der minimale Wert für die Ausführung der gespeicherten Prozedur im Wiederholungsmodus beträgt 5 Sekunden.  
   
@@ -61,9 +62,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |**create_time**|**datetime**|Gibt den Zeitstempel der Zeilenerstellung an. Jede Zeile in einem einzelnen Rowset weist denselben Zeitstempel auf.|  
 |**component_type**|**sysname**|Gibt an, ob die Zeile Informationen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponente auf Instanzebene oder für eine Always on Verfügbarkeits Gruppe enthält:<br /><br /> instance<br /><br /> Always on: availabilitygroup|  
 |**component_name**|**sysname**|Gibt den Namen der Komponente oder den Namen der Verfügbarkeitsgruppe an:<br /><br /> System<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<name of the availability group>*|  
-|**state**|**int**|Gibt den Integritätsstatus der Komponente an:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**Status**|**int**|Gibt den Integritätsstatus der Komponente an:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Beschreibt die Zustandsspalte. Folgende Beschreibungen entsprechen den Werten in der Statusspalte:<br /><br /> 0: Unbekannt.<br /><br /> 1: Bereinigen<br /><br /> 2: Warnung<br /><br /> 3: Fehler|  
-|**Daten**|**varchar (max)**|Gibt Daten an, die für die Komponente spezifisch sind.|  
+|**data**|**varchar (max)**|Gibt Daten an, die für die Komponente spezifisch sind.|  
   
  Im Folgenden finden Sie die Beschreibungen der fünf Komponenten:  
   
@@ -79,7 +80,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<name of the availability group>**: Sammelt Daten für die angegebene Verfügbarkeits Gruppe (wenn component_type = "Always on: availabilitygroup").  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 Die Komponenten system, resource und query_processing werden zur Fehlererkennung aus Fehlerperspektive genutzt, während die Komponenten io_subsystem und events nur zu Diagnosezwecken genutzt werden.  
   
 In der folgenden Tabelle sind die Komponenten den jeweils zugeordneten Integritätszuständen zugeordnet.  
@@ -90,7 +91,7 @@ In der folgenden Tabelle sind die Komponenten den jeweils zugeordneten Integrit�
 |resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
-|events||||x|  
+|events||||w|  
   
 Das (x) in jeder Zeile steht für gültige Zustände für die Komponente. Im Beispiel wird io_subsystem als fehlerfrei oder Warnung angezeigt. Der Fehlerstatus wird nicht angezeigt.  
  
@@ -241,6 +242,6 @@ go
 ``` 
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Failoverrichtlinie für Failoverclusterinstanzen](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

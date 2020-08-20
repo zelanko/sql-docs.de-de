@@ -1,4 +1,5 @@
 ---
+description: sys. fn_all_changes_ &lt; capture_instance &gt; (Transact-SQL)
 title: sys. fn_all_changes_ &lt; capture_instance &gt; (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/02/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a412ac614037a79e033636b20c21e2464c427ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e091db783b29a767a5f1f762dbbc037a878ce8a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486333"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_all_changes_ &lt; capture_instance &gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -91,7 +92,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |__CDC_OPERATION|**nvarchar (2)**|Ein Vorgangscode, der den Vorgang angibt, der zum Anwenden der Zeile auf die Zielumgebung erforderlich ist. Dies variiert basierend auf dem Wert des Arguments, *row_filter_option* im-Befehl bereitgestellt wird:<br /><br /> *row_filter_option* = ' alle '<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Updatevorgang, neue Werte<br /><br /> *row_filter_option* = "Alle aktualisieren alt"<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Updatevorgang, neue Werte<br /><br /> 'UO' - Updatevorgang, alte Werte|  
 |\<columns from @update_flag_list>|**bit**|Ein Bitflag, das durch Anfügen von _uflag an den Spaltennamen benannt wird. Das Flag wird immer auf NULL festgelegt, wenn \_ _CDC_OPERATION ', ' I ', von ' UO ' ist. Wenn \_ _CDC_OPERATION auf ' un ' festgelegt ist, wird es auf 1 festgelegt, wenn das Update eine Änderung an der entsprechenden Spalte erzeugt hat. Andernfalls ist es 0.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die fn_all_changes_<capture_instance> Funktion dient als Wrapper für die Abfragefunktion CDC. fn_cdc_get_all_changes_<capture_instance>. Die gespeicherte Prozedur sys.sp_cdc_generate_wrapper wird zum Generieren des Skripts zum Erstellen des Wrappers verwendet.  
   
  Wrapperfunktionen werden nicht automatisch erstellt. Es gibt zwei Dinge, die Sie tun müssen, um Wrapper Funktionen zu erstellen:  
@@ -110,7 +111,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Die Change Data Capture Konfigurations Vorlage ' Instantiate CDC Wrapper TVFs for Schema ' zeigt, wie die gespeicherte Prozedur sp_cdc_generate_wrapper_function verwendet wird, um CREATE-Skripts für alle Wrapper Funktionen für die definierten Abfragefunktionen eines Schemas abzurufen. Diese Skripts werden dann von der Vorlage erstellt. Weitere Informationen zu Vorlagen finden Sie unter [Vorlagen-Explorer](../../ssms/template/template-explorer.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sys. sp_cdc_generate_wrapper_function &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   

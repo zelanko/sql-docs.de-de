@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_condition (Transact-SQL)
 title: sp_syspolicy_rename_condition (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 11f3abeff6d66e4a4a60c9e35d8eec0d742f753a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1df9ab11c50340b75d51481822f4a8925df34a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485627"
 ---
 # <a name="sp_syspolicy_rename_condition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,16 +41,16 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'`Der Name der Bedingung, die Sie umbenennen möchten. *Name ist vom Datentyp* **vom Datentyp sysname**und muss angegeben werden, wenn *condition_id* NULL ist.  
+`[ @name = ] 'name'` Der Name der Bedingung, die Sie umbenennen möchten. *Name ist vom Datentyp* **vom Datentyp sysname**und muss angegeben werden, wenn *condition_id* NULL ist.  
   
-`[ @condition_id = ] condition_id`Der Bezeichner für die Bedingung, die Sie umbenennen möchten. *condition_id* ist vom *Datentyp* **int**und muss angegeben werden, wenn Name NULL ist.  
+`[ @condition_id = ] condition_id` Der Bezeichner für die Bedingung, die Sie umbenennen möchten. *condition_id* ist vom *Datentyp* **int**und muss angegeben werden, wenn Name NULL ist.  
   
-`[ @new_name = ] 'new_name'`Der neue Name der Bedingung. *new_name* ist vom **Datentyp vom Datentyp sysname**und ist erforderlich. Darf nicht NULL und keine leere Zeichenfolge sein.  
+`[ @new_name = ] 'new_name'` Der neue Name der Bedingung. *new_name* ist vom **Datentyp vom Datentyp sysname**und ist erforderlich. Darf nicht NULL und keine leere Zeichenfolge sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen sp_syspolicy_rename_condition im Kontext der Systemdatenbank msdb ausführen.  
   
  Sie müssen einen Wert für " *Name* " oder " *condition_id*" angeben. Keiner der Werte darf NULL sein. Um diese Werte abzurufen, fragen Sie die Systemsicht msdb.dbo.syspolicy_conditions ab.  
@@ -70,7 +71,7 @@ EXEC msdb.dbo.sp_syspolicy_rename_condition @name = N'Change Tracking Enabled'
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren der Richtlinien basierten Verwaltung &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   
