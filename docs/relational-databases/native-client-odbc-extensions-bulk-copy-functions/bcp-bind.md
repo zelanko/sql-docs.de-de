@@ -1,4 +1,5 @@
 ---
+description: bcp_bind
 title: bcp_bind | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,11 +19,12 @@ ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29422a0dba80f9092221616c128b69f5579cb900
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7cbf8a5d7fa207b7be9eb2e6359766064dbef343
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455918"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
@@ -120,7 +122,7 @@ bcp_bind(hdbc, szName, 0,
 
 Der *eDataType* -Parameter wird durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp Token in sqlncli. h, nicht die ODBC-C-Datentyp Enumeratoren, aufgelistet. Beispielsweise können Sie eine 2-Byte-Ganzzahl, ODBC-Typ SQL_C_SHORT, angeben, indem Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen Typ SQLINT2 verwenden.  
 
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]in wurde die Unterstützung für die Datentyp Token SQLXML und SQLUDT im **_eDataType_** -Parameter eingeführt.  
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in wurde die Unterstützung für die Datentyp Token SQLXML und SQLUDT im **_eDataType_** -Parameter eingeführt.  
 
 Die folgende Tabelle führt gültige enumerierte Datentypen und die entsprechenden ODBC-C-Datentypen auf.
 
@@ -172,7 +174,7 @@ Die folgende Tabelle führt gültige enumerierte Datentypen und die entsprechend
 
  SUCCEED oder FAIL.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Verwenden Sie **bcp_bind** für eine schnelle, effiziente Methode zum Kopieren von Daten aus einer Programmvariablen in eine Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 

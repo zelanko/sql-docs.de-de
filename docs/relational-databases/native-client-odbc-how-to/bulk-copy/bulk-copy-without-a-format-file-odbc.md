@@ -1,4 +1,5 @@
 ---
+description: Massenkopieren ohne Formatdatei (ODBC)
 title: Massen Kopieren ohne Format Datei (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c02b758dfed2a18815dc039550a7e63bd69f0daa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 919326cf57fe17296daebdcdefc8df8980f323be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455871"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Massenkopieren ohne Formatdatei (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +30,7 @@ ms.locfileid: "86009569"
   In diesem Beispiel wird gezeigt, wie mit Funktionen zum Massenkopieren eine Datendatei im systemeigenen Modus erstellt werden kann, ohne eine Formatdatei zu verwenden. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-without-a-format-file"></a>So führen Sie das Massenkopieren ohne Formatdatei aus  
   

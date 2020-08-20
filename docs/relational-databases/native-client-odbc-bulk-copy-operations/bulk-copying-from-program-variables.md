@@ -1,4 +1,5 @@
 ---
+description: Massenkopieren aus Programmvariablen
 title: Massen kopieren aus Programmvariablen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,11 +20,12 @@ ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 543d14bf67cfc4587c315090533c1066646493c7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 50b1177e65ad2ef082335fa29a180ddd8f489adf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455975"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Massenkopieren aus Programmvariablen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -84,7 +86,7 @@ ms.locfileid: "86012337"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]weist nicht signierte Datentypen " **tinyint**", "Ganzzahl ohne Vorzeichen **smallint**" oder "Ganzzahl ohne Vorzeichen **int** " auf. Um den Verlust von Datenwerten beim Migrieren dieser Datentypen zu verhindern, erstellen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle mit dem nächstgrößeren ganzzahligen Datentyp. Um zu verhindern, dass Benutzer später Werte außerhalb des für den ursprünglichen Datentyp zulässigen Bereichs hinzufügen, wenden Sie eine Regel auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Spalte an, mit der die zulässigen Werte entsprechend eingeschränkt werden:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist nicht signierte Datentypen " **tinyint**", "Ganzzahl ohne Vorzeichen **smallint**" oder "Ganzzahl ohne Vorzeichen **int** " auf. Um den Verlust von Datenwerten beim Migrieren dieser Datentypen zu verhindern, erstellen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle mit dem nächstgrößeren ganzzahligen Datentyp. Um zu verhindern, dass Benutzer später Werte außerhalb des für den ursprünglichen Datentyp zulässigen Bereichs hinzufügen, wenden Sie eine Regel auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Spalte an, mit der die zulässigen Werte entsprechend eingeschränkt werden:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  

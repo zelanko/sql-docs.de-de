@@ -1,4 +1,5 @@
 ---
+description: Broker:Corrupted Message-Ereignisklasse
 title: Broker:Corrupted Message-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,18 +13,18 @@ ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e0683676a34393b787e1a2ee57069fb8939dbf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d54abb31cfe2f7541edb459f1d55356c7ae643db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456016"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message-Ereignisklasse
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt ein **Broker:Corrupted Message** -Ereignis, wenn Service Broker eine beschädigte Nachricht empfängt.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt ein **Broker:Corrupted Message**-Ereignis, wenn Service Broker eine beschädigte Nachricht empfängt.  
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Datenspalten der Broker:Corrupted Message-Ereignisklasse  
   
@@ -53,7 +54,7 @@ ms.locfileid: "85679256"
 |**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|Ja|  
 |**State**|**int**|Gibt den Standort im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellcode an, der das Ereignis erstellt hat. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann mithilfe dieses Statuscodes herausfinden, wo das Ereignis generiert wurde.|30|Nein|  
 |**TextData**|**ntext**|Beschreibung der erkannten Beschädigung|1|Ja|  
-|**Transaction ID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
+|**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
   
  Die **TextData** -Spalte dieses Ereignisses enthält eine Nachricht, die das Problem mit der Nachricht beschreibt.  
   
