@@ -1,4 +1,5 @@
 ---
+description: UPDATE (SQL-Befehl)
 title: Update-SQL-Befehl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 818811c18ed52cef5bdb1c4d97f947bb86e67422
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6aa25f786448a14da47321c0f5ce1825716c03d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471410"
 ---
 # <a name="update---sql-command"></a>UPDATE (SQL-Befehl)
 Aktualisiert Datensätze in einer Tabelle mit neuen Werten.  
@@ -40,7 +41,7 @@ SET Column_Name1 = eExpression1
   
  *DatabaseName1!* Gibt den Namen einer anderen Datenbank als der Datenbank an, die mit der Datenquelle angegeben ist, in der die Tabelle enthalten ist. Wenn die Datenbank nicht die aktuelle Datenbank ist, müssen Sie den Namen der Datenbank einschließen, in der die Tabelle enthalten ist. Schließen Sie das Ausrufezeichen (!) nach dem Datenbanknamen und vor dem Tabellennamen ein.  
   
- Set *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ Set *Column_Name1* =  *eExpression1*[, *Column_Name2* =  *eExpression2*  
  Gibt die aktualisierten Spalten und ihre neuen Werte an. Wenn Sie die WHERE-Klausel weglassen, wird jede Zeile in der Spalte mit demselben Wert aktualisiert.  
   
  Where *FilterCondition1*[und &#124; oder *FilterCondition2*...]  

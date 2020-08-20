@@ -1,4 +1,5 @@
 ---
+description: sp_droplinkedsrvlogin (Transact-SQL)
 title: sp_droplinkedsrvlogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f6df8ac0be9a6bfc8798697ec01e7e5a2c8e3d3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 934b936f6fdc301acde46af4160ee1edfc8374c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469551"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rmtsrvname = ] 'rmtsrvname'`Der Name eines Verbindungs Servers, für den die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Namen Zuordnung gilt. *rmzrvname* ist vom Datentyp **vom Datentyp sysname**und hat keinen Standardwert. *rmzrvname* muss bereits vorhanden sein.  
+`[ @rmtsrvname = ] 'rmtsrvname'` Der Name eines Verbindungs Servers, für den die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Namen Zuordnung gilt. *rmzrvname* ist vom Datentyp **vom Datentyp sysname**und hat keinen Standardwert. *rmzrvname* muss bereits vorhanden sein.  
   
-`[ @locallogin = ] 'locallogin'`Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name auf dem lokalen Server, der eine Zuordnung zum Verbindungs Server *rmzrvname*aufweist. *loczuweisung* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Eine Zuordnung für " *loczuweisung* " zu " *rmtrvname* " muss bereits vorhanden sein. Wenn der Wert NULL ist, wird die von **sp_addlinkedserver**erstellte Standard Zuordnung, die alle Anmeldungen auf dem lokalen Server den Anmeldungen auf dem Verbindungs Server zuordnet, gelöscht.  
+`[ @locallogin = ] 'locallogin'` Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name auf dem lokalen Server, der eine Zuordnung zum Verbindungs Server *rmzrvname*aufweist. *loczuweisung* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Eine Zuordnung für " *loczuweisung* " zu " *rmtrvname* " muss bereits vorhanden sein. Wenn der Wert NULL ist, wird die von **sp_addlinkedserver**erstellte Standard Zuordnung, die alle Anmeldungen auf dem lokalen Server den Anmeldungen auf dem Verbindungs Server zuordnet, gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -74,8 +75,8 @@ EXEC sp_droplinkedsrvlogin 'Accounts', NULL;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_addlinkedserver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

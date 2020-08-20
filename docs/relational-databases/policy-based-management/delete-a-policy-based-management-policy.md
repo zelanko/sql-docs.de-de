@@ -1,4 +1,5 @@
 ---
+description: Löschen einer Richtlinie der richtlinienbasierten Verwaltung
 title: Löschen einer Richtlinie der richtlinienbasierten Verwaltung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca019a5183cabcc78468fa504d9bfd98f8532032
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de66aa15b385ee2aef206e026550aca95e770f12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470316"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>Löschen einer Richtlinie der richtlinienbasierten Verwaltung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85749436"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Löschen einer Richtlinie mit:**  
   

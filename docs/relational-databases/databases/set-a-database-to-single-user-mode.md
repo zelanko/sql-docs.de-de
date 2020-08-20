@@ -1,4 +1,5 @@
 ---
+description: Festlegen des Einzelbenutzermodus für eine Datenbank
 title: Festlegen des Einzelbenutzermodus für eine Datenbank | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ba2485d34df61b931afef75d68cddbde6b01289f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 591a2d22a603c51f44bdfa16d4072e6b9ad36c73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471143"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>Festlegen des Einzelbenutzermodus für eine Datenbank
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85763383"
   
      [Voraussetzungen](#Prerequisites)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So legen Sie den Einzelbenutzermodus für eine Datenbank fest mit:**  
   

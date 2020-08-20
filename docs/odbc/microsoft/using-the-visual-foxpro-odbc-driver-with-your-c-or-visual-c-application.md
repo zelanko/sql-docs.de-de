@@ -1,4 +1,5 @@
 ---
+description: Verwenden des Visual FoxPro-ODBC-Treibers mit Ihrer C-oder Visual C++-Anwendung
 title: Verwenden des Visual FoxPro-ODBC-Treibers mit C-oder Visual C++-Anwendung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2f3a87503a94da75acc824a0937b92631c01bde
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e7dcbc0d14dfddb4aa8a2318d424dc6c7222e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471292"
 ---
 # <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>Verwenden des Visual FoxPro-ODBC-Treibers mit Ihrer C-oder Visual C++-Anwendung
 Die C-oder C++-Anwendung kommuniziert mit den Visual FoxPro-Daten, indem eine [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) -oder [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) -Anweisung an Visual FoxPro gesendet wird. Diese Anweisung kann Folgendes enthalten:  

@@ -1,4 +1,5 @@
 ---
+description: Einschränkungen der UPDATE-Anweisung
 title: Einschränkungen der Update-Anweisung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14700aac-e135-4dc0-9138-4b01224461d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ddf19c0b672901b2e778833f8bf624996d4ced3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7c1ea2e5e9d887005084cdb5454dcf9b5e8fa24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471399"
 ---
 # <a name="update-statement-limitations"></a>Einschränkungen der UPDATE-Anweisung
 Damit der Paradox-Treiber eine Tabelle aktualisieren kann, muss die Tabelle über einen eindeutigen Index verfügen (Paradox-Primärschlüssel). Wenn Sie den Paradox-Treiber verwenden, ohne die Datenbank-Engine "Borland" zu implementieren, ist es nicht möglich, eine Paradox-Tabelle zu aktualisieren.  

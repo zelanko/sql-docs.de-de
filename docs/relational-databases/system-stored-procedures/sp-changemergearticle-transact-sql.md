@@ -1,4 +1,5 @@
 ---
+description: sp_changemergearticle (Transact-SQL)
 title: sp_changemergearticle (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/09/2015
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e5533d228030349992dc9b6aa56812ada87872f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8775928ede4fd92072bd91e39bc9652bb7db53a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469729"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, in der der Artikel vorhanden ist. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, in der der Artikel vorhanden ist. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @article = ] 'article'`Der Name des Artikels, der geändert werden soll. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @article = ] 'article'` Der Name des Artikels, der geändert werden soll. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @property = ] 'property'`Die Eigenschaft, die für den angegebenen Artikel und die angegebene Veröffentlichung geändert werden soll. die *Eigenschaft* ist vom Datentyp **nvarchar (30)**, und es kann sich um einen der in der Tabelle aufgeführten Werte handeln.  
+`[ @property = ] 'property'` Die Eigenschaft, die für den angegebenen Artikel und die angegebene Veröffentlichung geändert werden soll. die *Eigenschaft* ist vom Datentyp **nvarchar (30)**, und es kann sich um einen der in der Tabelle aufgeführten Werte handeln.  
   
-`[ @value = ] 'value'`Der neue Wert für die angegebene Eigenschaft. der Wert ist vom Datentyp **nvarchar (1000)**. der *Wert* kann einer der in der Tabelle aufgeführten Werte sein.  
+`[ @value = ] 'value'` Der neue Wert für die angegebene Eigenschaft. der Wert ist vom Datentyp **nvarchar (1000)**. der *Wert* kann einer der in der Tabelle aufgeführten Werte sein.  
   
  Diese Tabelle beschreibt die Eigenschaften von Artikeln und die Werte für diese Eigenschaften.  
   
@@ -68,7 +69,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**creation_script**||Pfad und Name eines optionalen Artikelschemaskripts, mit dem der Artikel in der Abonnementdatenbank erstellt wurde|  
 |**delete_tracking**|**true**|DELETE-Anweisungen werden repliziert. Dies ist das Standardverhalten.|  
 ||**false**|DELETE-Anweisungen werden nicht repliziert.<br /><br /> Eine ** \* \* wichtige \* Einstellung \* ** **delete_tracking** **false** führt zu einer nicht Konvergenz, und gelöschte Zeilen müssen manuell entfernt werden.|  
-|**description**||Beschreibungseintrag für den Artikel.|  
+|**Beschreibung**||Beschreibungseintrag für den Artikel.|  
 |**destination_owner**||Der Name des Besitzers des Objekts in der Abonnement Datenbank, wenn es sich nicht um **dbo**handelt.|  
 |**identity_range**||**bigint** , das die beim Zuweisen neuer Identitäts Werte zu verwendende Bereichs Größe angibt, wenn für den Artikel **identityrangemanagementoption** auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist. Gilt nur für einen Tabellenartikel. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identityrangemanagementoption**|**Manuell**|Deaktiviert die automatische Verwaltung des Identitätsbereichs. Kennzeichnet Identitätsspalten mithilfe von NOT FOR REPLICATION, um die manuelle Handhabung des Identitätsbereichs zu aktivieren. Weitere Informationen finden Sie unter [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -83,8 +84,8 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**3**|Das Filtern für den Artikel ergibt nicht überlappende Partitionen, die für jedes Abonnement eindeutig sind.<br /><br /> Hinweis: Wenn Sie für **partition_options**den Wert **3** angeben, kann in diesem Artikel nur ein einzelnes Abonnement für jede Daten Partition vorhanden sein. Wird ein zweites Abonnement erstellt, in dem das Filterkriterium des neuen Abonnements die gleiche Partition ergibt wie das vorhandene Abonnement, wird das vorhandene Abonnement gelöscht.|  
 |**pre_creation_command**|**keine**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
 ||**delete**|Ein Löschvorgang wird auf der Grundlage der WHERE-Klausel im Teilmengenfilter ausgegeben.|  
-||**Dropdown**|Die Tabelle wird vor dem erneuten Erstellen gelöscht.|  
-||**TRUNCATE**|Schneidet die Zieltabelle ab.|  
+||**drop**|Die Tabelle wird vor dem erneuten Erstellen gelöscht.|  
+||**truncate**|Schneidet die Zieltabelle ab.|  
 |**processing_order**||**int** , der die Verarbeitungsreihenfolge von Artikeln in einer Mergeveröffentlichung angibt.|  
 |**pub_identity_range**||**bigint** , das die Bereichs Größe angibt, die einem Abonnenten mit einem Server Abonnement zugewiesen wird, wenn für den Artikel **identityrangemanagementoption** auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist. Dieser Identitätsbereich ist für einen Wiederveröffentlichungsabonnenten für die Zuordnung zu dessen Abonnenten reserviert. Gilt nur für einen Tabellenartikel. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**published_in_tran_pub**|**true**|Der Artikel wird zusätzlich in einer Transaktionsveröffentlichung veröffentlicht.|  
@@ -144,7 +145,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|Die digitale Signatur in einem benutzerdefinierten Konfliktlöser wird nicht überprüft, um festzustellen, ob er aus einer vertrauenswürdigen Quelle stammt.|  
 |NULL (Standard)||Gibt die Liste der unterstützten Werte für die- *Eigenschaft*zurück.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit**, der Standardwert ist **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit**, der Standardwert ist **0**.  
   
  der Wert **0** gibt an, dass Änderungen am Mergeartikel nicht bewirken, dass die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
   
@@ -152,7 +153,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  Weitere Informationen zu den Eigenschaften, bei deren Änderung die Generierung einer neuen Momentaufnahme erforderlich ist, finden Sie im Abschnitt "Hinweise".  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise erfordert, dass vorhandene Abonnements erneut initialisiert werden. *force_reinit_subscription* ist ein **Bit**, der Standardwert ist **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion möglicherweise erfordert, dass vorhandene Abonnements erneut initialisiert werden. *force_reinit_subscription* ist ein **Bit**, der Standardwert ist **0**.  
   
  der Wert **0** gibt an, dass Änderungen am Mergeartikel nicht bewirken, dass das Abonnement erneut initialisiert wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderung die Neuinitialisierung vorhandener Abonnements erfordert, tritt ein Fehler auf, und es werden keine Änderungen durchgeführt.  
   
@@ -163,7 +164,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changemergearticle** wird bei der Mergereplikation verwendet.  
   
  Da **sp_changemergearticle** zum Ändern von Artikeleigenschaften verwendet wird, die anfänglich mit [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)angegeben wurden, finden Sie unter [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) Weitere Informationen zu diesen Eigenschaften.  
@@ -236,12 +237,12 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changemergearticle**ausführen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Artikeleigenschaften](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [Ändern von Veröffentlichungs-und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_dropmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

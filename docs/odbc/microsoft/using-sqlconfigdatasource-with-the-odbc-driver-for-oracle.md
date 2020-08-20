@@ -1,4 +1,5 @@
 ---
+description: Verwenden von SQLConfigDatasource mit dem ODBC-Treiber für Oracle
 title: Verwenden von SQLConfigDataSource mit dem ODBC-Treiber für Oracle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 718e444d63e0d4cf3821c0c03eb851732ed5b4e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98f7ef460097a7ca4b814769290cdcda81eb6205
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471312"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Verwenden von SQLConfigDatasource mit dem ODBC-Treiber für Oracle
 > [!IMPORTANT]  
 >  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- In der folgenden Tabelle sind die gültigen **SQLConfigDataSource** -Einstellungen für den Microsoft ODBC Driver for Oracle, Version 1,0 (Msorcl10. dll) und der Microsoft ODBC Driver for Oracle, Version 2,0 (Msorcl32. dll), aufgeführt.  
+ In der folgenden Tabelle sind die gültigen **SQLConfigDataSource** -Einstellungen für den Microsoft ODBC-Treiber für Oracle, Version 1,0 (Msorcl10.dll) und Microsoft ODBC Driver for Oracle, Version 2,0 (Msorcl32.dll), aufgeführt.  
   
 > [!NOTE]  
->  Der Msorcl10. dll-Treiber (Version 1,0) unterstützt alle Einstellungen außer " **Server**". Der Msorcl32. dll-Treiber (Version 2,0 und höher) unterstützt alle Einstellungen.  
+>  Der Msorcl10.dll Treiber (Version 1,0) unterstützt alle Einstellungen außer " **Server**". Der Msorcl32.dll Treiber (Version 2,0 und höher) unterstützt alle Einstellungen.  
   
  Einige Einstellungen werden vom Treiber ignoriert, aber von **SQLConfigDataSource**akzeptiert. Das einschließen dieser Einstellungen in die ODBC-Verbindungs Zeichenfolge ist die einzige Möglichkeit, Sie zur Laufzeit zu akzeptieren. Eine ignorierte Einstellung wird nicht in der Registrierung gespeichert, wenn **SQLConfigDataSource** die Datenquelle erstellt.  
   
@@ -36,8 +37,8 @@ ms.locfileid: "81292770"
 |-------------|-------------|-------------------|------------------|-----------------|  
 |BufferSize|7|65.535|1000|Minimale Abruf Puffergröße bis zu 65535 Bytes|  
 |Catalogcap|2|1|0 oder 1|Wenn 1, werden Bezeichner ohne Anführungszeichen in den Katalog Funktionen in Großbuchstaben konvertiert.|  
-|ConnectString|128|""|A/N|Verbindungszeichenfolge. Erforderliche Methode zum Angeben des Server namens mit dem Msorcl10. dll-Treiber.|  
-|BESCHREIBUNG|256|""|A/N|Beschreibung|  
+|ConnectString|128|""|A/N|Verbindungszeichenfolge. Erforderliche Methode zum Angeben des Server namens mit dem Msorcl10.dll-Treiber.|  
+|Beschreibung|256|""|A/N|Beschreibung|  
 |DSN|33|""|A/N|Der Name der Datenquelle.|  
 |Guess thecoldef|4|0|A/N|Gibt einen Wert ungleich 0 (null) für Spalten ohne Oracle-definierte Skala zurück.|  
 |Nummerifloat|2|""|0 oder 1|Wenn der Wert 0 ist, werden float-Spalten als SQL_FLOAT behandelt. Wenn der Wert 1 ist, werden float-Spalten als SQL_DOUBLE behandelt.|  

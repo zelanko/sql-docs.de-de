@@ -1,4 +1,5 @@
 ---
+description: Abfragen von Spalten unter Verwendung von Always Encrypted mit Secure Enclaves mit SSMS
 title: Abfragen von Spalten unter Verwendung von Always Encrypted mit Secure Enclaves mit SSMS | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/31/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 50f44a01383a307ac462c0f4fcb3e9e3f67d66fa
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 74149cdcf8dd12280103c592c5a8662dddf4e750
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470092"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves-with-ssms"></a>Abfragen von Spalten unter Verwendung von Always Encrypted mit Secure Enclaves mit SSMS
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -33,7 +34,7 @@ Befolgen Sie die Anweisungen im Artikel [Abfragen von Spalten mithilfe von Alway
 ## <a name="next-steps"></a>Nächste Schritte
 - [Entwickeln von Anwendungen mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-client-development.md)
 
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 - [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Direkte Konfiguration der Spaltenverschlüsselung mit Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [Erstellen und Verwenden von Indizes in Spalten mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-create-use-indexes.md)

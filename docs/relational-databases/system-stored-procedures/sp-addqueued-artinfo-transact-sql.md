@@ -1,4 +1,5 @@
 ---
+description: sp_addqueued_artinfo (Transact-SQL)
 title: sp_addqueued_artinfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de7f206aea8b536c86333698dd5a557e2f50b84b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22c1c38828ab6f1857d64136a402752b110a214e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469810"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,27 +50,27 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @artid = ] 'artid'`Der Name der Artikel-ID. *artid* ist vom Datentyp **int**und hat keinen Standardwert  
+`[ @artid = ] 'artid'` Der Name der Artikel-ID. *artid* ist vom Datentyp **int**und hat keinen Standardwert  
   
-`[ @article = ] 'article'`Der Name des Artikels, für den ein Skript erstellt werden soll. *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert  
+`[ @article = ] 'article'` Der Name des Artikels, für den ein Skript erstellt werden soll. *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert  
   
-`[ @publisher = ] 'publisher'`Der Name des Verleger Servers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des Verleger Servers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, für die ein Skript erstellt werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die ein Skript erstellt werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @dest_table = ] _'dest_table'`Der Name der Ziel Tabelle. *dest_table* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @dest_table = ] _'dest_table'` Der Name der Ziel Tabelle. *dest_table* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
  [** @owner =** ] **'**_Besitzer_**'**  
  Entspricht dem Eigentümer des Abonnements. *Owner* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @cft_table = ] 'cft_table'`Der Name der Konflikt Tabelle mit verzögertem Update über eine Warteschlange für diesen Artikel. *cft_table*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @cft_table = ] 'cft_table'` Der Name der Konflikt Tabelle mit verzögertem Update über eine Warteschlange für diesen Artikel. *cft_table*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addqueued_artinfo** wird von der Verteilungs-Agent als Teil der Abonnement Initialisierung verwendet. Diese gespeicherte Prozedur wird normalerweise nicht von Benutzern ausgeführt, kann jedoch hilfreich sein, wenn der Benutzer manuell ein Abonnement einrichten muss.  
   
  [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) anstelle **sp_addqueued_artinfo**.  
@@ -78,7 +79,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addqueued_artinfo**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Aktualisierbare Abonnements für die Transaktions Replikation](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [sp_script_synctran_commands &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [MSsubscription_articles &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

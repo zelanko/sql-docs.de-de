@@ -1,4 +1,5 @@
 ---
+description: sys.fn_xe_file_target_read_file (Transact-SQL)
 title: sys. fn_xe_file_target_read_file (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/22/2017
@@ -22,12 +23,12 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b4ee24b0ee74540a967c713579365c68aa849dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9edd7d5181979beb5bbbc0e4069aac31d9b302bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469838"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85738570"
   Liest Dateien, die vom asynchronen Dateiziel der erweiterten Ereignisse erstellt werden. Pro Zeile wird ein Ereignis im XML-Format zurückgegeben.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] akzeptieren Ablauf Verfolgungs Ergebnisse, die im xel-und xem-Format generiert werden. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Erweiterte Ereignisse unterstützen nur Ablauf Verfolgungs Ergebnisse im XEL-Format. Verwenden Sie SQL Server Management Studio, um Ablaufverfolgungsergebnisse im XEL-Format lesen zu können.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] akzeptieren Ablauf Verfolgungs Ergebnisse, die im xel-und xem-Format generiert werden. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Erweiterte Ereignisse unterstützen nur Ablauf Verfolgungs Ergebnisse im XEL-Format. Verwenden Sie SQL Server Management Studio, um Ablaufverfolgungsergebnisse im XEL-Format lesen zu können.    
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +55,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
  Der Pfad zur Metadatendatei, die der Datei oder den Dateien entspricht, die durch das *path* -Argument angegeben werden. *mdpath ist vom Datentyp* **nvarchar (260)**. Es gibt keinen Standardwert. Ab SQL Server 2016 kann dieser Parameter als NULL angegeben werden.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]der *mdpath* -Parameter ist nicht erforderlich. Er wird jedoch beibehalten, um die Abwärtskompatibilität für in früheren Versionen von SQL Server erstellte Protokolldateien aufrechtzuerhalten.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] der *mdpath* -Parameter ist nicht erforderlich. Er wird jedoch beibehalten, um die Abwärtskompatibilität für in früheren Versionen von SQL Server erstellte Protokolldateien aufrechtzuerhalten.  
   
  *initial_file_name*  
  Die erste Datei, die aus dem *Pfad*gelesen werden soll. *initial_file_name* ist vom Datentyp **nvarchar (260)**. Es gibt keinen Standardwert. Wenn **null** als Argument angegeben wird, werden alle im *Pfad* gefundenen Dateien gelesen.  
@@ -78,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |timestamp_utc|**datetime2**|**Gilt für:** [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Das Datum und die Uhrzeit (UTC-Zeitzone) des Ereignisses. Lässt keine NULL-Werte zu.|  
 
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Das Lesen umfangreicher Resultsets durch Ausführen von **sys. fn_xe_file_target_read_file** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] führt möglicherweise zu einem Fehler. Verwenden Sie das **Ergebnis im Datei** Modus (**STRG + UMSCHALT + F**), um große Resultsets in eine Datei zu exportieren und die Datei stattdessen mit einem anderen Tool zu lesen.  
   
 ## <a name="permissions"></a>Berechtigungen  

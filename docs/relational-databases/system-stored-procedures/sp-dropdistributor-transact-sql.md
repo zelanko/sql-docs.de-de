@@ -1,4 +1,5 @@
 ---
+description: sp_dropdistributor (Transact-SQL)
 title: sp_dropdistributor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fdd3c733d93fa803906523d7150b4377e6f28666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 404ef0654abde8b9d41659d7dd25bf80ac5b3bb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469572"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,13 +39,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @no_checks = ] no_checks`Gibt an, ob nach abhängigen Objekten gesucht werden soll, bevor der Verteiler gelöscht wird. *no_checks* ist vom Typ **Bit**. der Standardwert ist 0.  
+`[ @no_checks = ] no_checks` Gibt an, ob nach abhängigen Objekten gesucht werden soll, bevor der Verteiler gelöscht wird. *no_checks* ist vom Typ **Bit**. der Standardwert ist 0.  
   
  Wenn der Wert **0**ist, wird **sp_dropdistributor** überprüft, um sicherzustellen, dass alle Veröffentlichungs-und Verteilungs Objekte zusätzlich zum Verteiler gelöscht wurden.  
   
  Bei **1**werden von **sp_dropdistributor** alle Veröffentlichungs-und Verteilungs Objekte gelöscht, bevor der Verteiler deinstalliert wird.  
   
-`[ @ignore_distributor = ] ignore_distributor`Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**.  
   
  Bei **0**wird **sp_dropdistributor** eine Verbindung mit dem Verteiler hergestellt und alle Replikations Objekte entfernt. Wenn **sp_dropdistributor** keine Verbindung mit dem Verteiler herstellen kann, schlägt die gespeicherte Prozedur fehl.  
   
@@ -53,7 +54,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_dropdistributor** wird bei allen Replikations Typen verwendet.  
   
  Wenn andere Verleger-oder Verteilungs Objekte auf dem Server vorhanden sind, schlägt **sp_dropdistributor** fehl, es sei denn, ** \@ no_checks** ist auf **1**festgelegt.  
@@ -67,10 +68,10 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
  Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_dropdistributor**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Veröffentlichung und Verteilung deaktivieren](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistributor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [sp_changedistributor_property &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

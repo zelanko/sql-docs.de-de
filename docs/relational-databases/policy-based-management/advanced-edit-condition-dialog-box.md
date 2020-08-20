@@ -1,4 +1,5 @@
 ---
+description: Dialogfeld 'Erweiterte Bearbeitung (Bedingung)'
 title: Dialogfeld „Erweiterte Bearbeitung (Bedingung)“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2016
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 959ac9ec61bc420d67e51b6f6de7733f95036861
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f22553f6fe5685600727ec5d382664e0f7878fac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470351"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Dialogfeld 'Erweiterte Bearbeitung (Bedingung)'
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

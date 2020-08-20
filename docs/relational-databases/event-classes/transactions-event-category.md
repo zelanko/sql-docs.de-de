@@ -1,4 +1,5 @@
 ---
+description: Transaktionen-Ereigniskategorie
 title: Transaktionen-Ereigniskategorie | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a828d66db6b70c7ea03bd3398f7cd3ac9fd791e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 086ea0a7206c667242d3aa631fa0f46f86220b2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470625"
 ---
 # <a name="transactions-event-category"></a>Transaktionen-Ereigniskategorie
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,13 +34,13 @@ ms.locfileid: "85728329"
 |[SQLTransaction-Ereignisklasse](../../relational-databases/event-classes/sqltransaction-event-class.md)|Verfolgt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen BEGIN TRAN, COMMIT TRAN, SAVE TRAN und ROLLBACK TRAN nach.|  
 |[TM: Begin Tran Completed (Ereignisklasse)](../../relational-databases/event-classes/tm-begin-tran-completed-event-class.md)|Gibt an, dass eine BEGIN TRANSACTION-Anforderung abgeschlossen wurde.|  
 |[TM: Begin Tran Starting (Ereignisklasse)](../../relational-databases/event-classes/tm-begin-tran-starting-event-class.md)|Gibt an, dass eine BEGIN TRANSACTION-Anforderung gestartet wird.|  
-|[TM: Commit Tran Completed-Ereignisklasse](../../relational-databases/event-classes/tm-commit-tran-completed-event-class.md)|Gibt an, dass eine COMMIT TRANSACTION-Anforderung abgeschlossen wurde.|  
+|[TM: Commit Tran Completed (Ereignisklasse)](../../relational-databases/event-classes/tm-commit-tran-completed-event-class.md)|Gibt an, dass eine COMMIT TRANSACTION-Anforderung abgeschlossen wurde.|  
 |[TM: Commit Tran Starting (Ereignisklasse)](../../relational-databases/event-classes/tm-commit-tran-starting-event-class.md)|Gibt an, dass eine COMMIT TRANSACTION-Anforderung gestartet wird.|  
 |[TM: Promote Tran Completed (Ereignisklasse)](../../relational-databases/event-classes/tm-promote-tran-completed-event-class.md)|Gibt an, dass eine PROMOTE TRANSACTION-Anforderung abgeschlossen wurde.|  
 |[TM: Promote Tran Starting (Ereignisklasse)](../../relational-databases/event-classes/tm-promote-tran-starting-event-class.md)|Gibt an, dass eine PROMOTE TRANSACTION-Anforderung gestartet wird.|  
 |[TM: Rollback Tran Completed (Ereignisklasse)](../../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md)|Gibt an, dass eine ROLLBACK TRANSACTION-Anforderung abgeschlossen wurde.|  
 |[TM: Rollback Tran Starting (Ereignisklasse)](../../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md)|Gibt an, dass eine ROLLBACK TRANSACTION-Anforderung gestartet wird.|  
-|[TM: Save Tran Completed-Ereignisklasse](../../relational-databases/event-classes/tm-save-tran-completed-event-class.md)|Gibt an, dass eine SAVE TRANSACTION-Anforderung abgeschlossen wurde.|  
+|[TM: Save Tran Completed (Ereignisklasse)](../../relational-databases/event-classes/tm-save-tran-completed-event-class.md)|Gibt an, dass eine SAVE TRANSACTION-Anforderung abgeschlossen wurde.|  
 |[TM: Save Tran Starting (Ereignisklasse)](../../relational-databases/event-classes/tm-save-tran-starting-event-class.md)|Gibt an, dass eine SAVE TRANSACTION-Anforderung gestartet wird.|  
 |[TransactionLog-Ereignisklasse](../../relational-databases/event-classes/transactionlog-event-class.md)|Verfolgt nach, wenn Transaktionen in das Transaktionsprotokoll einer Datenbank geschrieben werden.|  
   

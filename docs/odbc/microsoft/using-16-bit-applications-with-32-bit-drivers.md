@@ -1,4 +1,5 @@
 ---
+description: Verwenden von 16-Bit-Anwendungen mit 32-Bit-Treibern
 title: Verwenden von 16-Bit-Anwendungen mit 32-Bit-Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c919ed8c3f3791720d67ebdcbf5cfbdbea2a0455
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c54dc53e5a8e6d3322bfa74ec6904cebca434b8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471387"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Verwenden von 16-Bit-Anwendungen mit 32-Bit-Treibern
 > [!IMPORTANT]  
@@ -41,25 +42,25 @@ ms.locfileid: "81307631"
   
  ![Aufrufen einer 32-&#45;Bit-Treiber-Setup-DLL durch eine 16&#45;Bit-App](../../odbc/microsoft/media/sdka3.gif "sdka3")  
   
- In Windows on Windows (16-Bit-zu-32-Bit-Thunking) konvertiert eine zusätzliche Thunking-DLL mit dem Namen "Ds32gt. dll" 16-Bit-Argument Werte, die über eine 32-Bit-Setup-DLL an 16 Bit übermittelt werden.  
+ In Windows on Windows (16-Bit-zu-32-Bit-Thunking) konvertiert eine zusätzliche Thunking-DLL mit dem Namen Ds32gt.dll die 16-Bit-Argument Werte, die durch eine 32-Bit-Setup-dll weitergegeben wurden, zurück in 16-Bit  
   
 ## <a name="components"></a>Komponenten  
  Die ODBC-Komponente des MDAC 2,8 SP1 SDK umfasst die folgenden Dateien für die Ausführung von 16-Bit-Anwendungen mit 32-Bit-Treibern. Diese Komponenten befinden sich im Verzeichnis "\Redist".  
   
 |Dateiname|BESCHREIBUNG|  
 |---------------|-----------------|  
-|Odbc16gt. dll|16-Bit-ODBC-DLL für generischen Thunking|  
-|Odbc32gt. dll|32-Bit-ODBC-DLL für generischen Thunking|  
-|Datei odbccp32. dll|32-Bit-Installationsprogramm-dll|  
-|Odbcad32. exe|32-Bit-Administrator Programm|  
+|Odbc16gt.dll|16-Bit-ODBC-DLL für generischen Thunking|  
+|Odbc32gt.dll|32-Bit-ODBC-DLL für generischen Thunking|  
+|Odbccp32.dll|32-Bit-Installationsprogramm-dll|  
+|Odbcad32.exe|32-Bit-Administrator Programm|  
 |Odbcinst. hlp|Hilfedatei des Installationsprogramms|  
-|Ds16gt. dll|Setup für die generische Thunking-DLL von 16-Bit-Treibern|  
-|Ctl3d32. dll|32-Bit-dreidimensionale Fenster Stil Bibliothek|  
+|Ds16gt.dll|Setup für die generische Thunking-DLL von 16-Bit-Treibern|  
+|Ctl3d32.dll|32-Bit-dreidimensionale Fenster Stil Bibliothek|  
   
  Außerdem sind die folgenden Dateien zusammen mit dem 16-Bit-ODBC 2,10-Treiber-Manager, die nicht Teil von ODBC 3,51 sind, für erforderlich und sollten mit der 16-Bit-Anwendung installiert werden.  
   
 |Dateiname|BESCHREIBUNG|  
 |---------------|-----------------|  
-|ODBC. dll|16-Bit-Treiber-Manager|  
-|Odbcinst. dll|16-Bit-Installationsprogramm-dll|  
-|Odbcadm. exe|16-Bit-ODBC-Administrator Programm|
+|Odbc.dll|16-Bit-Treiber-Manager|  
+|Odbcinst.dll|16-Bit-Installationsprogramm-dll|  
+|Odbcadm.exe|16-Bit-ODBC-Administrator Programm|

@@ -1,4 +1,5 @@
 ---
+description: sp_describe_first_result_set (Transact-SQL)
 title: sp_describe_first_result_set (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2018
@@ -18,12 +19,12 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e3696f537cc538e011d3d037e82e54ed892da35
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 451884c5055ee0be3ceeb95f4fe3c9dddb388bc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469612"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,13 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ \@tsql = ] 'Transact-SQL_batch'`Eine oder mehrere- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (***n***)** oder **nvarchar (max)** sein.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Eine oder mehrere- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* kann vom Datentyp **nvarchar (***n***)** oder **nvarchar (max)** sein.  
   
 `[ \@params = ] N'parameters'`\@Parameter stellt eine Deklarations Zeichenfolge für Parameter für den- [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch bereit, die sp_executesql ähnelt. Parameter können **nvarchar (n)** oder **nvarchar (max)** sein.  
   
  Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in der-Anweisung angegebene Parameter muss in Parametern definiert werden \@ . Wenn die- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der-Batch in der Anweisung keine Parameter enthält, ist die Angabe von Parametern \@ nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
-`[ \@browse_information_mode = ] tinyint`Gibt an, ob zusätzliche Schlüssel Spalten und Quell Tabellen Informationen zurückgegeben werden. Wenn der Wert auf 1 festgelegt ist, wird jede Abfrage so analysiert, als ob Sie eine for Browse-Option für die Abfrage enthält. Zusätzliche Schlüsselspalten und Quelltabelleninformationen werden zurückgegeben.  
+`[ \@browse_information_mode = ] tinyint` Gibt an, ob zusätzliche Schlüssel Spalten und Quell Tabellen Informationen zurückgegeben werden. Wenn der Wert auf 1 festgelegt ist, wird jede Abfrage so analysiert, als ob Sie eine for Browse-Option für die Abfrage enthält. Zusätzliche Schlüsselspalten und Quelltabelleninformationen werden zurückgegeben.  
   
 -   Bei 0 werden keine Informationen zurückgegeben.  
   
@@ -398,7 +399,7 @@ N'
   
  Ergebnis: a **int NULL** , weil dbo. T1. a und S1. T1. a den Typ **int** und eine andere NULL-Zulässigkeit aufweisen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_describe_undeclared_parameters &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

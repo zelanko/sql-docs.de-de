@@ -1,4 +1,5 @@
 ---
+description: sys.sysindexkeys (Transact-SQL)
 title: sys.sysindexkeys (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 53a33c8d-e5f0-430d-a712-b65f43d64318
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: da4e6d1c1ec337cc1782c66c5418b4149e46a466
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8934f884ba5a0841ab54a2a06bafbe3d654e6bcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469891"
 ---
 # <a name="syssysindexkeys-transact-sql"></a>sys.sysindexkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85896681"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID der Tabelle.|  
 |**indid**|**smallint**|Die ID des Index.|  
-|**colid**|**smallint**|ID der Spalte.|  
+|**ColId**|**smallint**|ID der Spalte.|  
 |**keyno**|**smallint**|Position der Spalte im Index.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

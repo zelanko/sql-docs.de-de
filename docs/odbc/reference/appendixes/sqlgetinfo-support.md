@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo-Unterstützung
 title: SQLGetInfo-Unterstützung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a21c035a14814f51d4344894ef253b2cc844f4c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cff18a23c7d8c4526fc86904d75375ed5aaaf5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471231"
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo-Unterstützung
 Bei ODBC 2. die *x* -Anwendung ruft **SQLGetInfo** für einen ODBC 3 *. x* -Treiber auf. die *InfoType* -Argumente in der folgenden Tabelle müssen unterstützt werden.  
   
 |*Infotype*|Rückgabe|  
 |----------------|-------------|  
-|SQL_ALTER_TABLE (ODBC 2,0) **Hinweis:** dieser Informationstyp ist nicht veraltet. die Bitmasken in der Spalte auf der rechten Seite sind veraltet.|Eine SQLINTEGER-Bitmaske, die die-Klauseln in der **ALTER TABLE** -Anweisung auflistet, die von der Datenquelle unterstützt wird.<br /><br /> Die folgenden Bitmasken werden verwendet, um zu bestimmen, welche Klauseln unterstützt werden:<br /><br /> SQL_AT_DROP_COLUMN = die Möglichkeit zum Löschen von Spalten wird unterstützt. Ob dies zur Folge hat, dass das Verhalten kaskadiert oder eingeschränkt wird, ist Treiber definiert (ODBC 2,0)<br /><br /> SQL_AT_ADD_COLUMN = die Möglichkeit, mehrere Spalten in einer einzelnen ALTER TABLE-Anweisung hinzuzufügen, wird unterstützt. Dieses Bit wird nicht mit anderen SQL_AT_ADD_COLUMN_XXX Bits oder SQL_AT_CONSTRAINT_XXX Bits kombiniert. (ODBC 2,0)|  
+|SQL_ALTER_TABLE (ODBC 2,0) **Hinweis:**  dieser Informationstyp ist nicht veraltet. die Bitmasken in der Spalte auf der rechten Seite sind veraltet.|Eine SQLINTEGER-Bitmaske, die die-Klauseln in der **ALTER TABLE** -Anweisung auflistet, die von der Datenquelle unterstützt wird.<br /><br /> Die folgenden Bitmasken werden verwendet, um zu bestimmen, welche Klauseln unterstützt werden:<br /><br /> SQL_AT_DROP_COLUMN = die Möglichkeit zum Löschen von Spalten wird unterstützt. Ob dies zur Folge hat, dass das Verhalten kaskadiert oder eingeschränkt wird, ist Treiber definiert (ODBC 2,0)<br /><br /> SQL_AT_ADD_COLUMN = die Möglichkeit, mehrere Spalten in einer einzelnen ALTER TABLE-Anweisung hinzuzufügen, wird unterstützt. Dieses Bit wird nicht mit anderen SQL_AT_ADD_COLUMN_XXX Bits oder SQL_AT_CONSTRAINT_XXX Bits kombiniert. (ODBC 2,0)|  
 |SQL_FETCH_DIRECTION (ODBC 1,0)<br /><br /> Der Informationstyp wurde in ODBC 1,0 eingeführt. jede Bitmaske ist mit der Version gekennzeichnet, in der Sie eingeführt wurde.|Eine SQLINTEGER-Bitmaske, die die unterstützten Optionen für die Abruf Richtung auflistet.<br /><br /> Die folgenden Bitmasken werden zusammen mit dem-Flag verwendet, um zu bestimmen, welche Optionen unterstützt werden:<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1,0) SQL_FD_FETCH_FIRST (ODBC 1,0) SQL_FD_FETCH_LAST (ODBC 1,0) SQL_FD_FETCH_PRIOR (ODBC 1,0) SQL_FD_FETCH_ABSOLUTE (ODBC 1,0) SQL_FD_FETCH_RELATIVE (ODBC 1,0) SQL_FD_FETCH_BOOKMARK (ODBC 2,0)|  
 |SQL_LOCK_TYPES (ODBC 2,0)|Eine SQLINTEGER-Bitmaske, die die unterstützten Sperr Typen für das *fLock* -Argument in **SQLSetPos**auflistet.<br /><br /> Die folgenden Bitmasken werden zusammen mit dem-Flag verwendet, um zu bestimmen, welche Sperr Typen unterstützt werden:<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
 |SQL_ODBC_API_CONFORMANCE (ODBC 1,0)|Ein SQLSMALLINT-Wert, der die Ebene der ODBC-Konformität angibt.<br /><br /> SQL_OAC_NONE = None<br /><br /> SQL_OAC_LEVEL1 = Ebene 1 wird unterstützt.<br /><br /> SQL_OAC_LEVEL2 = Ebene 2 unterstützt|  

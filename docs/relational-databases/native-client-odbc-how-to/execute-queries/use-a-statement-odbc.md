@@ -1,4 +1,5 @@
 ---
+description: Verwenden einer Anweisung (ODBC)
 title: Use a-Anweisung (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,11 +14,12 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49e653ff458ee816a00654e574b27fe2d9f327b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1d3a6cead69651eedec63d9c34e24674ec6dd6ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470424"
 ---
 # <a name="use-a-statement-odbc"></a>Verwenden einer Anweisung (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,11 +39,11 @@ ms.locfileid: "86009420"
   
 5.  Führen Sie eine Anweisung direkt mit SQLExecDirect aus.  
   
-     \- oder -  
+     \- oder –  
   
      Wenn die Anweisung vorbereitet wurde, führen Sie sie mehrmals mit [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)aus.  
   
-     \- oder -  
+     \- oder –  
   
      Rufen Sie eine Katalogfunktion auf, die Ergebnisse zurückgibt.  
   
@@ -49,11 +51,11 @@ ms.locfileid: "86009420"
   
      Rufen Sie eine Zeile nach der anderen über das Resultset einer Anweisung ab.  
   
-     \- oder -  
+     \- oder –  
   
      Rufen Sie mehrere Zeilen gleichzeitig über das Resultset mithilfe eines Blockcursors ab.  
   
-     \- oder -  
+     \- oder –  
   
      Rufen Sie [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) auf, um die Anzahl der Zeilen, die von einer INSERT-, UPDATE- oder DELETE-Anweisung betroffen sind, zu bestimmen.  
   

@@ -1,4 +1,5 @@
 ---
+description: Einstellungen für die sekundäre Datenbank
 title: Einstellungen für die sekundäre Datenbank | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ce372206ab771679eb002e051dd78e1c6be60940
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6db17f4c7930e03e65412c9addaef5340ec4645
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471125"
 ---
 # <a name="secondary-database-settings"></a>Einstellungen für die sekundäre Datenbank
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "85759018"
  Zeigt den Namen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrags an, der verwendet wird, um Sicherungsdateien des Transaktionsprotokolls vom primären Server auf den sekundären Server zu kopieren. Wenn Sie den Auftrag erstmalig erstellen, können Sie den Namen durch Eingabe in das entsprechende Feld ändern.  
   
  **Zeitplan**  
- Zeigt den aktuellen Zeitplan für den Kopierauftrag des SQL Server-Agents an, mit dem die Transaktionsprotokollsicherungen vom primären auf den sekundären Server kopiert werden. Diesen Zeitplan können Sie ändern. Dazu klicken Sie auf **Zeitplan...** .  
+ Zeigt den aktuellen Zeitplan für den Kopierauftrag des SQL Server-Agents an, mit dem die Transaktionsprotokollsicherungen vom primären auf den sekundären Server kopiert werden. Diesen Zeitplan können Sie ändern. Dazu klicken Sie auf **Zeitplan...**.  
   
  **Zeitplan...**  
  Ändert die Parameter des SQL Server-Agentauftrags, von dem die Transaktionsprotokollsicherungen vom primären auf den sekundären Server kopiert werden.  
@@ -92,7 +93,7 @@ ms.locfileid: "85759018"
  **Kein Wiederherstellungsmodus**  
  Belässt die sekundäre Datenbank im NORECOVERY-Modus.  
   
- **Standbymodus**  
+ **Standby-Modus**  
  Belässt die sekundäre Datenbank im STANDBY-Modus. In diesem Modus können schreibgeschützte Vorgänge in der Datenbank ausgeführt werden.  
   
 > [!IMPORTANT]  
@@ -108,7 +109,7 @@ ms.locfileid: "85759018"
  Zeigt den Namen des SQL Server-Agentauftrags an, von dem die Transaktionsprotokollsicherungen in der sekundären Datenbank wiederhergestellt werden sollen. Wenn Sie den Auftrag erstmalig erstellen, können Sie den Namen durch Eingabe in das entsprechende Feld ändern.  
   
  **Zeitplan**  
- Zeigt den aktuellen Zeitplan für den SQL Server-Agentauftrag an, von dem die Transaktionsprotokollsicherungen in der sekundären Datenbank wiederhergestellt werden. Diese Option können Sie ändern. Dazu klicken Sie auf **Zeitplan...** .  
+ Zeigt den aktuellen Zeitplan für den SQL Server-Agentauftrag an, von dem die Transaktionsprotokollsicherungen in der sekundären Datenbank wiederhergestellt werden. Diese Option können Sie ändern. Dazu klicken Sie auf **Zeitplan...**.  
   
  **Zeitplan...**  
  Ändert die Parameter, die dem SQL Server-Agentwiederherstellungsauftrag zugeordnet sind.  
