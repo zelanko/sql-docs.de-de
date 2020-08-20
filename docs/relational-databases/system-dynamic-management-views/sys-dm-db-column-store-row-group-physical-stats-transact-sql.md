@@ -21,16 +21,17 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cabadc5cd42afa7a001d27f55e22c138bb6f9002
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dc6a94205c7432f6fee305d58a27ec1eb0e0c33
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447692"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646130"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Stellt aktuelle Informationen zu allen columnstore--Indizes in der aktuellen Datenbank auf Zeilen Gruppenebene bereit.  
 
@@ -43,7 +44,7 @@ Dadurch wird die Katalog Sicht [sys. column_store_row_groups &#40;Transact-SQL-&
 |**partition_number**|**int**|ID der Tabellen Partition, die *row_group_id*enthält. Sie können partition_number verwenden, um diese DMV mit sys.partitions zu verknüpfen.|  
 |**row_group_id**|**int**|ID dieser Zeilen Gruppe. Bei partitionierten Tabellen ist value innerhalb der Partition eindeutig.<br /><br /> -1 für einen in-Memory-Tail.|  
 |**delta_store_hobt_id**|**bigint**|Der hobt_id für eine Zeilen Gruppe im Delta Speicher.<br /><br /> NULL, wenn die Zeilen Gruppe nicht im Delta Speicher gespeichert ist.<br /><br /> NULL für das Ende einer in-Memory-Tabelle.|  
-|**Status**|**tinyint**|Die *state_description*zugeordnete ID-Nummer.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = Tombstone<br /><br /> Die Komprimierung ist der einzige Status, der für Tabellen im Arbeitsspeicher gilt.|  
+|**state**|**tinyint**|Die *state_description*zugeordnete ID-Nummer.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = Tombstone<br /><br /> Die Komprimierung ist der einzige Status, der für Tabellen im Arbeitsspeicher gilt.|  
 |**state_desc**|**nvarchar(60)**|Beschreibung des Zeilen Gruppenstatus:<br /><br /> 0-unsichtbar: eine Zeilen Gruppe, die erstellt wird. Beispiel: <br />Eine Zeilen Gruppe im columnstore-ist unsichtbar, während die Daten komprimiert werden. Wenn die Komprimierung abgeschlossen ist, ändert ein metadatenschalter den Status der columnstore--Zeilen Gruppe von unsichtbar in komprimiert und den Status der Delta Store-Zeilen Gruppe von Closed in Tombstone.<br /><br /> 1-öffnen-eine Delta Store-Zeilen Gruppe, die neue Zeilen akzeptiert. Eine offene Zeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.<br /><br /> 2-geschlossen-eine Zeilen Gruppe im Delta Speicher, die die maximale Anzahl von Zeilen enthält, und wartet darauf, dass der tupelverschiebungsprozess Sie in den columnstore komprimiert.<br /><br /> 3-komprimiert: eine Zeilen Gruppe, die mit der columnstore--Komprimierung komprimiert und im columnstore-gespeichert wird.<br /><br /> 4-Tombstone: eine Zeilen Gruppe, die sich zuvor im Delta Store befand und nicht mehr verwendet wird.|  
 |**total_rows**|**bigint**|Anzahl von Zeilen, die physisch in der Zeilen Gruppe gespeichert sind. Für komprimierte Zeilen Gruppen. Schließt die Zeilen ein, die als gelöscht markiert sind.|  
 |**deleted_rows**|**bigint**|Die Anzahl von Zeilen, die in einer komprimierten Zeilengruppe physisch gespeichert und zum Löschen markiert sind.<br /><br /> Für Zeilengruppen im Deltastore lautet der Wert 0.|  

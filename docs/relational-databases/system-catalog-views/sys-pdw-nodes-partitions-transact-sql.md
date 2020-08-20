@@ -13,12 +13,12 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b13e5da130d7b122f9b79e1996ea3fdb0792e25a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f015d17f401cb2457d3e5cf657ce85342c1628e
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475385"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646270"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "88475385"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|partition_id|**bigint**|die ID der Partition. Ist innerhalb einer Datenbank eindeutig.|  
-|object_id|**int**|ID des Objekts, zu dem diese Partition gehört. Jede Tabelle oder Sicht besteht aus mindestens einer Partition.|  
-|index_id|**int**|ID des Indexes innerhalb des Objekts, zu dem diese Partition gehört.|  
+|partition_id|**bigint**|Die ID der Partition. Ist innerhalb einer Datenbank eindeutig.|  
+|object_id|**int**|Die ID des Objekts, zu dem diese Partition gehört. Jede Tabelle oder Sicht besteht aus mindestens einer Partition.|  
+|index_id|**int**|Die ID des Indexes innerhalb des Objekts, zu dem diese Partition gehört.|  
 |partition_number|**int**|Auf 1 basierende Partitionsnummer im besitzenden Index oder Heap. Für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ist der Wert dieser Spalte 1.|  
 |hobt_id|**bigint**|Die ID des Data Heap-oder B-Struktur (hubt), das die Zeilen für diese Partition enthält.|  
 |rows|**bigint**|Die ungefähre Anzahl der Zeilen in dieser Partition. |  
@@ -69,6 +69,9 @@ JOIN sys.objects AS o
 WHERE o.name = 'myTable'  
 ORDER BY o.name, pnp.index_id, pnp.partition_id;  
 ```    
+
+>[!TIP]
+> Um die Leistung in Synapse SQL zu verbessern, sollten Sie die Verwendung von **sys. pdw_permanent_table_mappings** anstelle von **sys. pdw_table_mappings** in permanenten Benutzer Tabellen in Erwägung gezogen. Weitere Informationen finden Sie unter **[sys. pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** .
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Data Warehouse- und Parallel Data Warehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
