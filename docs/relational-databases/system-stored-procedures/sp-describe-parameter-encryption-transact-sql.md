@@ -19,15 +19,16 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3f4b5dd2d6c63688046eda4a8b752bc10b9c943
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35bf38e3c6ac85fe27af595571785f8d34a6f0d4
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469582"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646490"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Analysiert die angegebene [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung und ihre Parameter, um zu bestimmen, welche Parameterdaten Bank Spalten entsprechen, die mit dem Always Encrypted Feature geschützt werden. Gibt Verschlüsselungs Metadaten für die Parameter zurück, die verschlüsselten Spalten entsprechen.  
   
@@ -66,7 +67,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|ID der Zeile im Resultset.|  
 |**database_id**|**int**|Datenbank-ID.|  
 |**column_encryption_key_id**|**int**|Die ID des Spalten Verschlüsselungsschlüssels. Hinweis: Diese ID bezeichnet eine Zeile in der&#41;-Katalog Sicht [sys. column_encryption_keys &#40;Transact-SQL ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
-|**column_encryption_key_version**|**int**|Für zukünftige Verwendung reserviert. Derzeit enthält immer 1.|  
+|**column_encryption_key_version**|**int**|Für die zukünftige Verwendung reserviert. Derzeit enthält immer 1.|  
 |**column_encryption_key_metadata_version**|**Binär (8)**|Ein Zeitstempel, der die Erstellungszeit des Spalten Verschlüsselungsschlüssels darstellt.|  
 |**column_encryption_key_encrypted_value**|**varbinary (4000)**|Der verschlüsselte Wert des Spalten Verschlüsselungsschlüssels.|  
 |**column_master_key_store_provider_name**|**sysname**|Der Name des Anbieters für den Schlüsselspeicher, der den Spalten Hauptschlüssel enthält, der verwendet wurde, um den verschlüsselten Wert des Spalten Verschlüsselungsschlüssels zu erhalten.|  
@@ -84,7 +85,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Code der Zeile im ersten Resultset. In der Zeile, auf die verwiesen wird, wird der für die Spalte konfigurierte Spalten Verschlüsselungsschlüssel beschrieben. der Parameter entspricht.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Versionsnummer des typnormalisierungs Algorithmus.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Treiber, der Always Encrypted unterstützt, ruft automatisch **sp_describe_parameter_encryption** auf, um Verschlüsselungs Metadaten für parametrisierte Abfragen abzurufen, die von der Anwendung ausgegeben werden. Anschließend verwendet der Treiber die Verschlüsselungs Metadaten, um die Werte von Parametern zu verschlüsseln, die Daten Bank Spalten entsprechen, die mit Always Encrypted geschützt sind, und ersetzt die klar Text Parameterwerte, die von der Anwendung gesendet werden, mit den verschlüsselten Parameterwerten, bevor die Abfrage an die Datenbank-Engine gesendet wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -156,7 +157,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|\@C1|1|1|  
+|1|\@c1|1|1|  
   
  (Die Ergebnisse werden fortgesetzt.)  
   

@@ -12,15 +12,15 @@ ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4cc0cee2b7acea6bbe465f0fc3cef9f40954e0d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6234e6b9c6cc2cfeb48b01fd2a2541ec2244678
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88323356"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646343"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (Azure SQL-Datenbank)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Gibt eine Zeile für jedes Ereignis in einer Ereignissitzung zurück.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "88323356"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung auf dem Server.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Sicht hat die folgende Kardinalität der Beziehungen.  
   
 | Von | An | Beziehung |
