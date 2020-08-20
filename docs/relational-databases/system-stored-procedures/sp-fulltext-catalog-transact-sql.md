@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_catalog (Transact-SQL)
 title: sp_fulltext_catalog (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42985c60b7057904291bbf196e3faae27e77ae68
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 892b0e24bb76625b5d245a7314d368c0e0dc0cf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469531"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85771085"
   Erstellt und löscht einen Volltextkatalog und startet und beendet die Indizierung eines Katalogs. Für eine Datenbank können mehrere Volltextkataloge erstellt werden.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)und [DROP FULLTEXT CATALOG](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)und [DROP FULLTEXT CATALOG](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) .  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +46,9 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @ftcat = ] 'fulltext_catalog_name'`Der Name des voll Text Katalogs. Katalognamen müssen für jede Datenbank eindeutig sein. *fulltext_catalog_name* ist vom **Datentyp vom Datentyp sysname**.  
+`[ @ftcat = ] 'fulltext_catalog_name'` Der Name des voll Text Katalogs. Katalognamen müssen für jede Datenbank eindeutig sein. *fulltext_catalog_name* ist vom **Datentyp vom Datentyp sysname**.  
   
-`[ @action = ] 'action'`Die auszuführende Aktion. *action* ist vom Datentyp **varchar(20)**. Die folgenden Werte sind möglich:  
+`[ @action = ] 'action'` Die auszuführende Aktion. *action* ist vom Datentyp **varchar(20)**. Die folgenden Werte sind möglich:  
   
 > [!NOTE]  
 >  Volltextkataloge können bei Bedarf erstellt, gelöscht und geändert werden. Vermeiden Sie es jedoch, Schemaänderungen an mehreren Katalogen gleichzeitig auszuführen. Diese Aktionen können mithilfe der gespeicherten Prozedur **sp_fulltext_table** ausgeführt werden. Dies ist die empfohlene Vorgehensweise.  
@@ -61,7 +62,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**Beenden**|Beendet eine Index Auffüllung für *fulltext_catalog_name*. Wenn der Katalog nicht vorhanden ist, wird ein Fehler gemeldet. Wenn das Auffüllen bereits beendet wurde, wird keine Warnung angezeigt.|  
 |**Neuerstellen**|Erstellt *fulltext_catalog_name*neu. Bei der Neuerstellung eines Katalogs wird der vorhandene Katalog gelöscht und an seiner Stelle ein neuer Katalog erstellt. Alle Tabellen, in denen Referenzen für die Volltextindizierung vorhanden sind, werden dem neuen Katalog zugeordnet. Durch das erneute Erstellen werden die Volltextmetadaten in den Datenbanksystemtabellen zurückgesetzt.<br /><br /> Wenn die Änderungsnachverfolgung OFF ist, wird durch das erneute Erstellen keine Neuauffüllung des neu erstellten Volltextkatalogs verursacht. Führen Sie in diesem Fall zum erneuten Auffüllen **sp_fulltext_catalog** mit der **start_full** -oder **start_incremental** Aktion aus.|  
   
-`[ @path = ] 'root_directory'`Ist das Stammverzeichnis (nicht der gesamte physische Pfad) für eine **Create** -Aktion. *root_directory* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL, der angibt, dass der beim Setup angegebene Standard Speicherort verwendet wird. Dies ist das Unterverzeichnis Ftdata im MSSQL-Verzeichnis. Beispiel: c:\Programme\Microsoft SQL server\mssql13. MSSQLSERVER\MSSQL\FTData. Das angegebene Stammverzeichnis muss sich auf einem Laufwerk des gleichen Computers befinden, es darf nicht nur aus dem Laufwerkbuchstaben bestehen und darf kein relativer Pfad sein. Netzlaufwerke, austauschbare Laufwerke, Disketten und UNC-Pfade werden nicht unterstützt. Volltextkataloge müssen auf einer lokalen Festplatte des Computers erstellt werden, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
+`[ @path = ] 'root_directory'` Ist das Stammverzeichnis (nicht der gesamte physische Pfad) für eine **Create** -Aktion. *root_directory* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL, der angibt, dass der beim Setup angegebene Standard Speicherort verwendet wird. Dies ist das Unterverzeichnis Ftdata im MSSQL-Verzeichnis. Beispiel: c:\Programme\Microsoft SQL server\mssql13. MSSQLSERVER\MSSQL\FTData. Das angegebene Stammverzeichnis muss sich auf einem Laufwerk des gleichen Computers befinden, es darf nicht nur aus dem Laufwerkbuchstaben bestehen und darf kein relativer Pfad sein. Netzlaufwerke, austauschbare Laufwerke, Disketten und UNC-Pfade werden nicht unterstützt. Volltextkataloge müssen auf einer lokalen Festplatte des Computers erstellt werden, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
  der ** \@ Pfad** ist nur gültig, wenn *Action* **Create**ist. Für andere Aktionen als **Create** (**Stopps**, **Rebuild**usw.) muss der ** \@ Pfad** NULL oder ausgelassen sein.  
   

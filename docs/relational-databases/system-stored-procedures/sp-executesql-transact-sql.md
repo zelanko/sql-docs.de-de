@@ -1,4 +1,5 @@
 ---
+description: sp_executesql (Transact-SQL)
 title: sp_executesql (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,12 +20,12 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61a93d541e34c152d7c0ab5191ffe577c782c6e2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 492a0db844d0278808bdc8cf6bba27d980447f8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469517"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ sp_executesql [ @stmt = ] statement
  Eine Unicode-Zeichenfolge, die eine- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder einen-Batch enthält. \@stmt muss entweder eine Unicode-Konstante oder eine Unicode-Variable sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss Ihr ein **N**vorangestellt werden. Beispielsweise ist die Unicode-Konstante **N ' sp_who '** gültig, aber die Zeichen Konstante **' sp_who '** ist nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern ist die Größe der Zeichenfolge auf 2 GB beschränkt, die maximale Größe von **nvarchar (max)**.  
   
 > [!NOTE]  
->  \@stmt kann Parameter enthalten, die dieselbe Form wie ein Variablenname aufweisen, z. b.:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt kann Parameter enthalten, die dieselbe Form wie ein Variablenname aufweisen, z. b.: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  Jeder in \@ stmt enthaltene Parameter muss über einen entsprechenden Eintrag in der \@ Parameter Definitionsliste params und in der Parameterwerte Liste verfügen.  
   
@@ -205,7 +206,7 @@ GO
  Das Verwenden von sp_executesql in dieser Prozedur ist effizienter als das Verwenden von EXECUTE zum Ausführen einer Zeichenfolge. Beim Verwenden von sp_executesql werden nur 12 Versionen der INSERT-Zeichenfolge generiert, nämlich eine Version für jede Monatstabelle. Mit EXECUTE ist jede INSERT-Zeichenfolge eindeutig, weil die Parameterwerte unterschiedlich sind. Obwohl beide Methoden die gleiche Anzahl von Batches generieren, ist es wegen der Ähnlichkeit der von sp_executesql generierten INSERT-Zeichenfolgen wahrscheinlicher, dass der Abfrageoptimierer die Ausführungspläne wiederverwendet.  
   
 ### <a name="c-using-the-output-parameter"></a>C. Verwenden des OUTPUT-Parameters  
- Im folgenden Beispiel wird ein- `OUTPUT` Parameter verwendet, um das von der- `SELECT` Anweisung im-Parameter generierte Resultset zu speichern `@SQLString` . `SELECT`Anschließend werden zwei-Anweisungen ausgeführt, die den Wert des- `OUTPUT` Parameters verwenden.  
+ Im folgenden Beispiel wird ein- `OUTPUT` Parameter verwendet, um das von der- `SELECT` Anweisung im-Parameter generierte Resultset zu speichern `@SQLString` . `SELECT` Anschließend werden zwei-Anweisungen ausgeführt, die den Wert des- `OUTPUT` Parameters verwenden.  
   
 ```sql  
 USE AdventureWorks2012;  

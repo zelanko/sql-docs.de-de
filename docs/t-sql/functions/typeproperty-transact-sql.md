@@ -1,4 +1,5 @@
 ---
+description: TYPEPROPERTY (Transact-SQL)
 title: TYPEPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a504fb547e89a348d1fe6b5f6168f81fd0d7656
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 455f736f73d2b4ba6c5e798b3cd9d8376ee4217b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467714"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ TYPEPROPERTY (type , property)
 |**AllowsNull**|Datentyp lässt NULL-Werte zu.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Datentyp nicht gefunden.|  
 |**OwnerID**|Besitzer des Typs.<br /><br /> Hinweis: Der Schemabesitzer ist nicht notwendigerweise auch der Typbesitzer.|Nicht NULL = Die Datenbankbenutzer-ID des Typbesitzers.<br /><br /> NULL = Nicht unterstützter Typ oder ungültige Typ-ID.|  
 |**Genauigkeit**|Genauigkeit für diesen Datentyp.|Die Anzahl von Stellen oder Zeichen.<br /><br /> -1 = **xml** oder hoher Wertdatentyp<br /><br /> NULL = Datentyp nicht gefunden.|  
-|**Skalieren**|Dezimalstellen für diesen Datentyp.|Die Anzahl der Dezimalstellen für den Datentyp.<br /><br /> NULL = Datentyp ist nicht **numerisch** oder wurde nicht gefunden.|  
+|**Skalierung**|Dezimalstellen für diesen Datentyp.|Die Anzahl der Dezimalstellen für den Datentyp.<br /><br /> NULL = Datentyp ist nicht **numerisch** oder wurde nicht gefunden.|  
 |**UsesAnsiTrim**|Die Einstellung für ANSI-Auffüllung war aktiviert, als der Datentyp erstellt wurde.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Datentyp nicht gefunden oder kein binärer oder Zeichenfolgen-Datentyp.|  
   
 ## <a name="return-types"></a>Rückgabetypen  

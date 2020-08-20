@@ -1,4 +1,5 @@
 ---
+description: LIKE (Transact-SQL)
 title: LIKE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -31,12 +32,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cf0c961903707f86ec838c45d5935e72d72402
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f8886fbf2a94df7fd338572f2156e66ee6fc50ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467672"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -200,7 +201,7 @@ GO
   
  Wenn im LIKE-Muster auf ein Escapezeichen kein Zeichen folgt, ist das Muster nicht gültig, und das LIKE-Muster gibt FALSE zurück. Wenn es sich beim Zeichen nach einem Escapezeichen nicht um ein Platzhalterzeichen handelt, wird das Escapezeichen verworfen und das folgende Zeichen als reguläres Zeichen im Muster behandelt. Zu diesen Platzhalterzeichen gehören das Prozentzeichen (%), der Unterstrich (_) und die linke eckige Klammer ([), wenn sie in doppelte eckige Klammern ([ ]) eingeschlossen sind. Innerhalb doppelter eckiger Klammern ([ ]) können Escapezeichen verwendet werden; dem Caretzeichen (^), dem Bindestrich (-) sowie der rechten eckigen Klammer (]) kann ein Escapezeichen vorangestellt werden.  
   
- 0x0000 (**char(0)** ) ist ein nicht definiertes Zeichen in Windows-Sortierungen und darf in LIKE nicht enthalten sein.  
+ 0x0000 (**char(0)**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und darf in LIKE nicht enthalten sein.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -333,7 +334,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
- Das folgende Beispiel findet alle Telefonnummern in der `DimEmployee`-Tabelle, die nicht mit `612` beginnen.  erforderlich.  
+ Das folgende Beispiel findet alle Telefonnummern in der `DimEmployee`-Tabelle, die nicht mit `612` beginnen.  .  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -345,7 +346,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. Verwenden von LIKE mit dem Platzhalterzeichen _  
- Im folgenden Beispiel werden alle Telefonnummern in der `6`-Tabelle gefunden, die eine Vorwahl aufweisen, die mit `2` beginnt und mit `DimEmployee` endet. Das Platzhalterzeichen % wird am Ende des Suchmusters eingefügt, um alle folgenden Zeichen im Spaltenwert für Telefonnummern abzugleichen.  
+ Im folgenden Beispiel werden alle Telefonnummern in der `DimEmployee`-Tabelle gefunden, die eine Vorwahl aufweisen, die mit `6` beginnt und mit `2` endet. Das Platzhalterzeichen % wird am Ende des Suchmusters eingefügt, um alle folgenden Zeichen im Spaltenwert für Telefonnummern abzugleichen.  
   
 ```sql  
 -- Uses AdventureWorks  

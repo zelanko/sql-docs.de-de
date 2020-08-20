@@ -1,4 +1,5 @@
 ---
+description: '&amp;= (Bitweises UND mit Zuweisung) (Transact-SQL)'
 title: '&amp;= (Bitweises UND mit Zuweisung) (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/10/2017
@@ -21,12 +22,12 @@ ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b87843c7d73105203689d0fd1205009628e7831
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 34c1e720f6fa80c6757452b610ca08f358ebfd79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467738"
 ---
 # <a name="amp-bitwise-and-assignment-transact-sql"></a>&amp;= (Bitweises UND mit Zuweisung) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ expression &= expression
 ## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen finden Sie unter [& &#40;Bitweises UND&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

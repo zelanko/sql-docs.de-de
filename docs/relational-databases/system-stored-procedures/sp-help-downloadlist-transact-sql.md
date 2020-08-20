@@ -1,4 +1,5 @@
 ---
+description: sp_help_downloadlist (Transact-SQL)
 title: sp_help_downloadlist (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc658776dddbf79362e3ab4c90ba052abb193e63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb53702ec86f30c81802b95b77c61b71037b402e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469392"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,14 +47,14 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id`Die ID des Auftrags, für den Informationen zurückgegeben werden sollen. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, für den Informationen zurückgegeben werden sollen. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'`Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @operation = ] 'operation'`Der gültige Vorgang für den angegebenen Auftrag. *Operation* ist vom Datentyp **varchar (64)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
+`[ @operation = ] 'operation'` Der gültige Vorgang für den angegebenen Auftrag. *Operation* ist vom Datentyp **varchar (64)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -67,17 +68,17 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|Servervorgang, der bewirkt, dass der Zielserver die Systemuhr mit der Multiserverdomäne synchronisiert. Dies ist ein kostenaufwendiger Vorgang und sollte deshalb nur selten und in begrenztem Umfang durchgeführt werden.|  
 |**UPDATE**|Auftrags Vorgang, bei dem nur die **sysjobs** -Informationen für einen Auftrag und nicht die Auftrags Schritte oder Zeitpläne aktualisiert werden. Wird automatisch von **sp_update_job**aufgerufen.|  
   
-`[ @object_type = ] 'object_type'`Der Objekttyp für den angegebenen Auftrag. *object_type* ist vom Datentyp **varchar (64)** und hat den Standardwert NULL. *object_type* kann entweder "Job" oder "Server" sein. Weitere Informationen zu gültigen *object_type*Werten finden Sie unter [sp_add_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` Der Objekttyp für den angegebenen Auftrag. *object_type* ist vom Datentyp **varchar (64)** und hat den Standardwert NULL. *object_type* kann entweder "Job" oder "Server" sein. Weitere Informationen zu gültigen *object_type*Werten finden Sie unter [sp_add_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
-`[ @object_name = ] 'object_name'`Der Name des Objekts. *object_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *object_type* Auftrag ist, ist *object_name*der Auftrags Name. Wenn *object_type*Server ist, ist *object_name*der Servername.  
+`[ @object_name = ] 'object_name'` Der Name des Objekts. *object_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *object_type* Auftrag ist, ist *object_name*der Auftrags Name. Wenn *object_type*Server ist, ist *object_name*der Servername.  
   
-`[ @target_server = ] 'target_server'`Der Name des Zielservers. *target_server* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL.  
+`[ @target_server = ] 'target_server'` Der Name des Zielservers. *target_server* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL.  
   
-`[ @has_error = ] has_error`Gibt an, ob der Auftrag Fehler bestätigen soll. *has_error* ist vom Datentyp **tinyint**. der Standardwert ist NULL. der Wert gibt an, dass keine Fehler bestätigt werden sollen. der Wert **1** gibt an, dass alle Fehler bestätigt werden sollen.  
+`[ @has_error = ] has_error` Gibt an, ob der Auftrag Fehler bestätigen soll. *has_error* ist vom Datentyp **tinyint**. der Standardwert ist NULL. der Wert gibt an, dass keine Fehler bestätigt werden sollen. der Wert **1** gibt an, dass alle Fehler bestätigt werden sollen.  
   
-`[ @status = ] status`Der Status des Auftrags. *Status* ist vom Datentyp **tinyint**. der Standardwert ist NULL.  
+`[ @status = ] status` Der Status des Auftrags. *Status* ist vom Datentyp **tinyint**. der Standardwert ist NULL.  
   
-`[ @date_posted = ] date_posted`Das Datum und die Uhrzeit, für die alle Einträge, die an oder nach dem angegebenen Datum und der angegebenen Uhrzeit vorgenommen werden, in das Resultset eingeschlossen werden sollen. *date_posted* ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
+`[ @date_posted = ] date_posted` Das Datum und die Uhrzeit, für die alle Einträge, die an oder nach dem angegebenen Datum und der angegebenen Uhrzeit vorgenommen werden, in das Resultset eingeschlossen werden sollen. *date_posted* ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

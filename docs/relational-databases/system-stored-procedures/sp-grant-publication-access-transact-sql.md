@@ -1,4 +1,5 @@
 ---
+description: sp_grant_publication_access (Transact-SQL)
 title: sp_grant_publication_access (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 319f61f1cf1587117b4f8205b208c4f3e7deb6be
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5078173bfdf8ea079c0fa553c64a6235b101cdc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469362"
 ---
 # <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 
@@ -38,16 +39,16 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, auf die zugegriffen werden soll. **'***Publication***'** ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, auf die zugegriffen werden soll. **'***Publication***'** ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @login = ] 'login'`Die Anmelde-ID. **"***Login***"** ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @login = ] 'login'` Die Anmelde-ID. **"***Login***"** ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_grant_publication_access** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
  Diese gespeicherte Prozedur kann wiederholt aufgerufen werden.  

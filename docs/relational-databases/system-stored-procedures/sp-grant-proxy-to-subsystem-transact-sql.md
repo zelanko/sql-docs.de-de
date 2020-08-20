@@ -1,4 +1,5 @@
 ---
+description: sp_grant_proxy_to_subsystem (Transact-SQL)
 title: sp_grant_proxy_to_subsystem (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d772c66af8dfbab805124e4a07d26243865330a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 964bab1ac95d80d05f16fa8b538f1ecd5f15352c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469399"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -41,13 +42,13 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @proxy_id = ] id`Die Proxy-ID des Proxys, für den der Zugriff gewährt werden soll. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *proxy_id* oder *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
+`[ @proxy_id = ] id` Die Proxy-ID des Proxys, für den der Zugriff gewährt werden soll. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *proxy_id* oder *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, für den der Zugriff gewährt werden soll. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *proxy_id* oder *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, für den der Zugriff gewährt werden soll. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *proxy_id* oder *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @subsystem_id = ] id`Die ID-Nummer des Subsystems, auf das der Zugriff gewährt werden soll. Der *subsystem_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *subsystem_id* oder *subsystem_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
+`[ @subsystem_id = ] id` Die ID-Nummer des Subsystems, auf das der Zugriff gewährt werden soll. Der *subsystem_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *subsystem_id* oder *subsystem_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX-Skript<br /><br /> Wichtig das ActiveX Scripting-Subsystem wird in einer zukünftigen Version von aus dem-Agent entfernt ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |**3**|Betriebssystem (**CmdExec**)|  
@@ -62,7 +63,7 @@ sp_grant_proxy_to_subsystem
 |**12**|PowerShell-Skript|  
 | &nbsp; | &nbsp; |
   
-`[ @subsystem_name = ] 'subsystem_name'`Der Name des Subsystems, auf das der Zugriff gewährt werden soll. Der **subsystem_name** ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *subsystem_id* oder *subsystem_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
+`[ @subsystem_name = ] 'subsystem_name'` Der Name des Subsystems, auf das der Zugriff gewährt werden soll. Der **subsystem_name** ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *subsystem_id* oder *subsystem_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -70,16 +71,16 @@ sp_grant_proxy_to_subsystem
 |**CmdExec**|Betriebssystem (**CmdExec**)|  
 |**Momentaufnahme**|Replikationsmomentaufnahme-Agent|  
 |**LogReader**|Replikationsprotokolllese-Agent|  
-|**Verteilung**|Replikations Verteilungs-Agent|  
+|**Distribution**|Replikations Verteilungs-Agent|  
 |**Merge** (Zusammenführen)|Replikationsmerge-Agent|  
 |**QueueReader**|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
 |**ANALYSISQUERY**|Analysis Services-Abfrage|  
 |**ANALYSISCOMMAND**|Analysis Services-Befehl|  
-|**Dt**|SSIS-Paketausführung|  
+|**Dts**|SSIS-Paketausführung|  
 |**PowerShell**|PowerShell-Skript|  
 | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Beim Gewähren eines Proxyzugriffs auf ein Subsystem werden nicht die Berechtigungen für den im Proxy angegebenen Prinzipal geändert.  
   
 ## <a name="permissions"></a>Berechtigungen  
