@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 2: Erstellen und Verwalten von Daten in einer hierarchischen Tabelle'
 title: 'Lektion 2: Erstellen und Verwalten von Daten in einer hierarchischen Tabelle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a774ce3918388e8df23de43a01b8b0930f9336d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460222"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lektion 2: Erstellen und Verwalten von Daten in einer hierarchischen Tabelle
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-In Lektion 1 haben Sie eine vorhandene Tabelle so geändert, dass sie den **hierarchyid** -Datentyp verwendet. Dann haben Sie die **hierarchyid** -Spalte entsprechend der in den vorhandenen Daten gegebenen hierarchischen Darstellung gefüllt. In dieser Lektion erstellen Sie eine neue Tabelle und verwenden hierarchische Methoden, um Daten in sie einzufügen. Dann fragen Sie Daten ab und bearbeiten sie, indem Sie hierarchische Methoden verwenden. 
+ In Lektion 1 haben Sie eine vorhandene Tabelle so geändert, dass sie den **hierarchyid**-Datentyp verwendet. Dann haben Sie die **hierarchyid**-Spalte entsprechend der in den vorhandenen Daten gegebenen hierarchischen Darstellung gefüllt. In dieser Lektion erstellen Sie eine neue Tabelle und verwenden hierarchische Methoden, um Daten in sie einzufügen. Dann fragen Sie Daten ab und bearbeiten sie, indem Sie hierarchische Methoden verwenden. 
 
 ## <a name="prerequisites"></a>Voraussetzungen  
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, Zugriff auf einen Server, auf dem SQL-Server ausgeführt wird, und eine AdventureWorks-Datenbank.
@@ -30,7 +31,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Laden Sie die [AdventureWorks 2017-Beispieldatenbank](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) herunter.
 
-Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restore a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>Erstellen einer Tabelle mit dem Datentyp „hierarchyid“
 Im folgenden Beispiel wird eine Tabelle namens EmployeeOrg erstellt, die Mitarbeiterdaten zusammen mit ihrer Berichtshierarchie aufnimmt. Das Beispiel erstellt die neue Tabelle in der Datenbank AdventureWorks2017, was jedoch optional ist. Um das Beispiel einfach zu halten, enthält die Tabelle nur fünf Spalten:  
@@ -292,7 +293,7 @@ Nachdem die Tabelle HumanResources.EmployeeOrg nun vollständig gefüllt ist, ze
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Eine Hierarchie neu zu ordnen, ist eine allgemeine Wartungsaufgabe. In dieser Aufgabe werden wir eine UPDATE-Anweisung mit der [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) -Methode verwenden, um zunächst eine einzelne Zeile an eine neue Position in der Hierarchie zu verschieben. Dann verschieben wir eine ganze Teilstruktur an eine neue Position.  
   
-Die `GetReparentedValue` -Methode benötigt zwei Argumente. Das erste Argument beschreibt den Teil der Hierarchie, der geändert werden soll. Möchten Sie zum Beispiel in der Hierarchie **/1/4/2/3/** den Abschnitt **/1/4/** so ändern, dass die Hierarchie zu **/2/1/2/3/** wird, wobei die beiden letzten Knoten (**2/3/** ) unverändert bleiben, müssen Sie die zu ändernden Knoten ( **/1/4/** ) als erstes Argument angeben. Das zweite Argument gibt die neue Hierarchieebene an, in unserem Beispiel **/2/1/** . Die zwei Argumente dürfen nicht die gleichen Ebenennummern enthalten.  
+Die `GetReparentedValue` -Methode benötigt zwei Argumente. Das erste Argument beschreibt den Teil der Hierarchie, der geändert werden soll. Möchten Sie zum Beispiel in der Hierarchie **/1/4/2/3/** den Abschnitt **/1/4/** so ändern, dass die Hierarchie zu **/2/1/2/3/** wird, wobei die beiden letzten Knoten (**2/3/**) unverändert bleiben, müssen Sie die zu ändernden Knoten (**/1/4/**) als erstes Argument angeben. Das zweite Argument gibt die neue Hierarchieebene an, in unserem Beispiel **/2/1/**. Die zwei Argumente dürfen nicht die gleichen Ebenennummern enthalten.  
   
 ### <a name="move-a-single-row-to-a-new-location-in-the-hierarchy"></a>Verschieben einer einzelnen Zeile an eine neue Position in der Hierarchie  
   

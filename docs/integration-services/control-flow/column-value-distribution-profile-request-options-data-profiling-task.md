@@ -1,4 +1,5 @@
 ---
+description: Optionen für Anforderung für Verteilungsprofil für Spaltenwert (Datenprofilerstellungs-Task)
 title: Optionen für Anforderung für Verteilungsprofil für Spaltenwert (Datenprofilerstellungs-Task) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eacd467eed8a9c0a80be5e94f8495176ac134633
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 608dbbb804c8e7a2dbfdf5673b0070ef77b6ce60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457582"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Optionen für Anforderung für Verteilungsprofil für Spaltenwert (Datenprofilerstellungs-Task)
 
@@ -74,7 +75,7 @@ ms.locfileid: "86922491"
 > [!NOTE]  
 >  Wenn Sie den Platzhalter **(\*)** für **ColumnName** verwenden, ist **CompareOptions** schreibgeschützt und auf die **Default**-Einstellung festgelegt.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Standard**|Sortiert und vergleicht Daten anhand der Sortierung der Spalte in der Quelltabelle.|  
 |**BinarySort**|Sortiert und vergleicht Daten anhand der für jedes Zeichen definierten Bitmuster. Die binäre Sortierreihenfolge unterscheidet nach Groß- und Kleinschreibung und nach Akzent. Die Option Binär ist zudem die schnellste Sortierreihenfolge.|  
@@ -82,7 +83,7 @@ ms.locfileid: "86922491"
   
  Wenn Sie **DictionarySort**auswählen, können Sie auch jede Kombination der in der folgenden Tabelle aufgelisteten Optionen auswählen. Standardmäßig ist keine dieser zusätzlichen Optionen ausgewählt.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**IgnoreCase**|Gibt an, ob beim Vergleichen zwischen Groß- und Kleinbuchstaben unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich die Groß-/Kleinschreibung. Beispielsweise ist dann "ABC" mit "abc" identisch.|  
 |**IgnoreNonSpace**|Gibt an, ob beim Vergleichen zwischen Zeichen mit Zwischenraum und diakritischen Zeichen unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich diakritische Zeichen. Beispielsweise ist dann „å“ mit „a“ identisch.|  
@@ -97,7 +98,7 @@ ms.locfileid: "86922491"
  **ValueDistributionOption**  
  Geben Sie an, ob die Verteilung für alle Spaltenwerte berechnet werden soll. Der Standardwert für diese Option ist **FrequentValues**.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**AllValues**|Die Verteilung wird für alle Spaltenwerte berechnet.|  
 |**FrequentValues**|Die Verteilung wird nur für Werte berechnet, deren Frequenz den in **FrequentValueThreshold**angegebenen minimalen Wert übersteigt. Werte, die nicht dem Wert von **FrequentValueThreshold** entsprechen, werden im Ausgabebericht ausgeschlossen.|  

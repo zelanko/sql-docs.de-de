@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/15/2019
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 473d41dcc61113a331597a6de8f103517378bfdd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9527007eb54e07747f3e6d12b9fdf98bc50ed3cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458800"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -74,8 +75,8 @@ Der verschlüsselte Wert BLOB des Spaltenverschlüsselungsschlüssels.
   
 > [!WARNING]  
 >  Verwenden Sie diese Anweisung nie mit Werten des Spaltenverschlüsselungsschlüssels im Klartext. Hierdurch wird die Wirksamkeit des Features beeinträchtigt.  
-  
-## <a name="remarks"></a>Bemerkungen  
+
+## <a name="remarks"></a>Bemerkungen
 Die `CREATE COLUMN ENCRYPTION KEY`-Anweisung muss mindestens einen oder zwei Werte enthalten. Sie können mit der Anweisung [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) später einen zweiten Wert hinzufügen. Außerdem können Sie mithilfe der `ALTER COLUMN ENCRYPTION KEY`-Anweisung einen Wert entfernen.  
   
 In der Regel wird ein CEK nur mit einem verschlüsselten Wert erstellt. Manchmal müssen Sie einen Spaltenhauptschlüssel rotieren, um den aktuellen durch den neuen Spaltenhauptschlüssel zu ersetzen. Wenn Sie den Schlüssel rotieren müssen, fügen Sie einen neuen Wert des Spaltenverschlüsselungsschlüssels hinzu, verschlüsselt mit dem neuen Spaltenhauptschlüssel. Diese Rotation stellt sicher, dass Clientanwendungen auf Daten zugreifen können, die mit dem Spaltenverschlüsselungsschlüssel verschlüsselt wurden, während der neue Spaltenhauptschlüssel den Clientanwendungen zur Verfügung gestellt wird. Ein Treiber, für den Always Encrypted aktiviert ist, kann in einer Clientanwendung, die keinen Zugriff auf den neuen Hauptschlüssel hat, für den Zugriff auf vertrauliche Daten den Wert des Spaltenverschlüsselungsschlüssel verwenden, der mit dem alten Spaltenhauptschlüssel verschlüsselt wurde.  

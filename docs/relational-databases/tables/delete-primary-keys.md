@@ -1,4 +1,5 @@
 ---
+description: Löschen von Primärschlüsseln
 title: Löschen von Primärschlüsseln | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/25/2017
@@ -15,12 +16,12 @@ ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7465a183241211fe4372eea0c57f93f3cfe0aa49
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e281a418dc6bfc1ebf9ca1920564f22a9ff2f306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460250"
 ---
 # <a name="delete-primary-keys"></a>Löschen von Primärschlüsseln
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86002082"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So löschen Sie einen Primärschlüssel mit:**  
   

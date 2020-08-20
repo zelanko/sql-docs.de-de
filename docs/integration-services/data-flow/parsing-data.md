@@ -1,4 +1,5 @@
 ---
+description: Analysieren von Daten
 title: Analysieren von Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ee41fd4f9fa7074117f6e4a84307e8e31a10da84
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: eba3e72558433acab3ba1a0edc3cd921b15281bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457349"
 ---
 # <a name="parsing-data"></a>Analysieren von Daten
 
@@ -182,8 +183,8 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
 |---------------------|-------------|  
 |Sekunden|00 hinzufügen.|  
 |Minuten|00:00 hinzufügen.|  
-|Hour|00:00:00 hinzufügen.|  
-|Day (Tag)|01 für den Tag des Monats hinzufügen.|  
+|Stunde|00:00:00 hinzufügen.|  
+|Tag|01 für den Tag des Monats hinzufügen.|  
 |Month (Monat)|01 für den Monat des Jahres hinzufügen.|  
   
  Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  

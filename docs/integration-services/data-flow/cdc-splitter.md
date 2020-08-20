@@ -1,4 +1,5 @@
 ---
+description: CDC-Splitter
 title: CDC-Splitter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2015303f77a3ae7ba4f77758432f51bd84f0b811
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457400"
 ---
 # <a name="cdc-splitter"></a>CDC-Splitter
 
@@ -33,7 +34,7 @@ ms.locfileid: "86917147"
 |3|Aktualisieren|Zeile vor Update (nur bei Verwendung des CDC-Modus **All with Old Values** verfügbar)|  
 |4|Aktualisieren|Zeile nach Update (folgt auf die Zeile vor Update)|  
 |5|Aktualisieren|Mergezeile (nur bei Verwendung des CDC-Modus **Net with merge** verfügbar)|  
-|Andere|Fehler||  
+|Sonstiges|Fehler||  
   
  Sie können den Splitter verwenden, um vordefinierte INSERT-, DELETE- und UPDATE-Ausgaben zur weiteren Verarbeitung zu verbinden.  
   

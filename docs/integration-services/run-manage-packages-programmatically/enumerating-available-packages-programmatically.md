@@ -1,4 +1,5 @@
 ---
+description: Enumerating Available Packages Programmatically
 title: Programmgesteuertes Auflisten verfügbarer Pakete | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e30dcb8043d18d82e742666c8c36043f86c5a2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c07dc512de0c5d12fa06e49ba185db9c9ec25c4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457043"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerating Available Packages Programmatically
 
@@ -43,7 +44,7 @@ ms.locfileid: "86920126"
 |SSIS-Paketspeicher|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [Nach oben](#top)    
+ [Zurück nach oben](#top)    
     
 ##  <a name="enumerating-available-packages"></a><a name="listing"></a> Auflisten verfügbarer Pakete    
  Rufen Sie eine der folgenden Methoden auf, um eine Liste von gespeicherten Paketen programmgesteuert abzurufen:    
@@ -159,7 +160,7 @@ namespace EnumeratePackagesSSIS_CS
 }    
 ```    
     
- [Nach oben](#top)    
+ [Zurück nach oben](#top)    
     
 ###  <a name="example-sql-server"></a><a name="listing_sql"></a> Beispiel (SQL Server)    
  Verwenden Sie die <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A>-Methode, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete aufzulisten, die in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind.    
@@ -240,7 +241,7 @@ namespace EnumeratePackagesSql_CS
 }    
 ```    
     
- [Nach oben](#top)    
+ [Zurück nach oben](#top)    
    
 ## <a name="see-also"></a>Weitere Informationen    
  [Paketverwaltung &#40;SSIS-Dienst&#41;](../../integration-services/service/package-management-ssis-service.md)    

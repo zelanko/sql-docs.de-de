@@ -1,4 +1,5 @@
 ---
+description: Anwenden und Aktualisieren eines Changeset (Master Data Services)
 title: Anwenden und Aktualisieren eines Changeset
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 06a8e45cee504e51cccdfa4cdb545b6dffdf0dcb
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 06373651ed453c412360e2cf6201c61752e637be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456834"
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>Anwenden und Aktualisieren eines Changeset (Master Data Services)
 
@@ -41,7 +42,7 @@ ms.locfileid: "85814029"
   
 3.  Wählen Sie im rechten Bereich **Changesets** aus, und doppelklicken Sie auf das Changeset, das Sie anzeigen und ändern möchten.  
   
-4.  Klicken Sie auf **Übernehmen**.  
+4.  Klicken Sie auf **Anwenden**.  
   
      Die ausstehenden Änderungen werden auf das Entitätselement im Raster angewendet. Die ausstehenden Änderungen werden hervorgehoben.  
   

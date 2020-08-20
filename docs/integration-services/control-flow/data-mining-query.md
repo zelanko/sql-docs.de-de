@@ -1,4 +1,5 @@
 ---
+description: Data Mining-Abfrage
 title: Datamining-Abfrage | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44448f8f73ee303ff3d9484f887e40362fb1fb53
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0ac57f5f3e064df60c0fc885765fcbc445be9e22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457547"
 ---
 # <a name="data-mining-query"></a>Data Mining-Abfrage
 
@@ -57,7 +58,7 @@ ms.locfileid: "86919826"
  **Anzeigen**  
  Wählen Sie aus, ob die Spalte zurückgegeben oder nur in der WHERE-Klausel verwendet werden soll.  
   
- **Gruppe**  
+ **Gruppieren**  
  Wird mit der **Und/Oder** -Spalte verwendet, um Ausdrücke zu gruppieren. Beispielsweise (expr1 OR expr2) AND expr3.  
   
  **Und/Oder**  

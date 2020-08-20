@@ -1,4 +1,5 @@
 ---
+description: sysarticlecolumns (Transact-SQL)
 title: sysarticlecolumns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72395a0f549bce2e645c27959bbe6da5e2af0d0c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 45cc5fc3a39f13f7795e2f26aa91a15b618e2d38
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460242"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85881407"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Identifiziert einen Artikel.|  
-|**colid**|**smallint**|Identifiziert eine Spalte in einem Artikel.|  
+|**ColId**|**smallint**|Identifiziert eine Spalte in einem Artikel.|  
 |**is_udt**|**bit**|Zeigt an, ob die Spalte dem benutzerdefinierten Datentyp (UDT) zugehört. Der Wert **1** gibt eine UDT-Spalte an.|  
 |**is_xml**|**bit**|Gibt an, ob die Spalte eine **XML** -Spalte ist. Der Wert **1** gibt eine XML-Spalte an.|  
 |**is_max**|**bit**|Gibt an, ob die Spalte eine Spalte mit einem großen Wert ( **varchar (max)**, **nvarchar (max)** und **varbinary (max)** ist. Der Wert **1** gibt eine Spalte mit großen Werten an.|  

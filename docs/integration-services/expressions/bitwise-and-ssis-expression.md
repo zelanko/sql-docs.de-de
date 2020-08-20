@@ -1,4 +1,5 @@
 ---
+description: '&amp; (Bitweises AND) (SSIS-Ausdruck)'
 title: '&amp; (Bitweises AND) (SSIS-Ausdruck) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0efbf3b36ad21e7800533069e4fafefaa0b77900
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4cb70565c38518c76a614e32a3aad55c939e4a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457298"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (Bitweises AND) (SSIS-Ausdruck)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Führt eine bitweise AND-Operation mit zwei ganzzahligen Werten aus. Jedes Bit des ersten Operanden wird mit dem entsprechenden Bit des zweiten Operanden verglichen. Wenn beide Bits 1 sind, wird das entsprechende Ergebnisbit auf 1 festgelegt. Andernfalls wird das entsprechende Ergebnisbit auf 0 festgelegt.  
+  Führt eine bitweise AND-Operation mit zwei ganzzahligen Werten aus. Jedes Bit des ersten Operanden wird mit dem entsprechenden Bit des zweiten Operanden verglichen. Wenn beide Bits 1 sind, wird das entsprechende Ergebnisbit auf 1 festgelegt. Andernfalls wird das entsprechende Ergebnisbit auf 0 (null) festgelegt.  
   
  Beide Bedingungen müssen als Datentyp eine ganze Zahl mit Vorzeichen oder aber eine ganze Zahl ohne Vorzeichen aufweisen.  
   

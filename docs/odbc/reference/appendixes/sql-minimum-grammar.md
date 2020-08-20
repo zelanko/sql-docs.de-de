@@ -1,4 +1,5 @@
 ---
+description: Minimale SQL-Grammatik
 title: Minimale SQL-Grammatik | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20eee34feadb8e3140f25019ec6b0d036ff02e14
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07adcbb100fa28a941be4fdac6efabb445ffb9ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456563"
 ---
 # <a name="sql-minimum-grammar"></a>Minimale SQL-Grammatik
 In diesem Abschnitt wird die minimale SQL-Syntax beschrieben, die ein ODBC-Treiber unterstützen muss. Die in diesem Abschnitt beschriebene Syntax ist eine Teilmenge der Eintrags Ebenen-Syntax von SQL-92.  
@@ -85,7 +86,7 @@ In diesem Abschnitt wird die minimale SQL-Syntax beschrieben, die ein ODBC-Treib
   
 -   [Elemente, die in SQL-­Anweisungen verwendet werden](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)  
   
--   [Datentypunterstützung](../../../odbc/reference/appendixes/data-type-support.md)  
+-   [Datentyp Unterstützung](../../../odbc/reference/appendixes/data-type-support.md)  
   
 -   [Parameterdatentypen](../../../odbc/reference/appendixes/parameter-data-types.md)  
   

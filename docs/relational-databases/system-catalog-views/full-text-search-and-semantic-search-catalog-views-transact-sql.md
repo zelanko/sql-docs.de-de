@@ -1,4 +1,5 @@
 ---
+description: Katalogsichten für Volltextsuche und semantische Suche (Transact-SQL)
 title: Katalog Sichten für die voll Text Suche und semantische Suche (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 0272ab778c538b2fa8690493606a346d713fa6d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af1960d9fa36dd770ad11a16b0689737037b4a60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460712"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>Katalogsichten für Volltextsuche und semantische Suche (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85764811"
   In diesem Abschnitt werden die Katalogsichten beschrieben, die Informationen zu Volltextindizes und semantischen Indizes bereitstellen.  
   
 ## <a name="full-text-search-catalog-views"></a>Katalogsichten für die Volltextsuche  
- [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)  
+ [sys. fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)  
  Enthält eine Zeile für jeden Volltextkatalog.  
   
  [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)  
@@ -74,7 +75,7 @@ ms.locfileid: "85764811"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [System Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Dynamische Verwaltungs Sichten und Funktionen für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

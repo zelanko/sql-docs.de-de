@@ -1,4 +1,5 @@
 ---
+description: ALTER MATERIALIZED VIEW (Transact-SQL)
 title: ALTER MATERIALIZED VIEW (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/03/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c9c9ae639a3dce3e697eded9f55af3485118506c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bc7f7f07656f2dc187de013fcb56eada5a997b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458863"
 ---
 # <a name="alter-materialized-view-transact-sql"></a>ALTER MATERIALIZED VIEW (Transact-SQL)  
 
@@ -57,7 +58,7 @@ ALTER MATERIALIZED VIEW [ schema_name . ] view_name
 Erstellt die materialisierte Sicht neu.
 
 *DISABLE*   
-Hält die Verwaltung der materialisierten Sicht an, aber behält Metadaten und Berechtigungen bei.  Alle Abfragen einer materialisierten Sicht im deaktivierten Status werden für die zugrunde liegenden Tabellen aufgelöst.
+Hält die Verwaltung der materialisierten Sicht an, aber behält Metadaten und Berechtigungen bei.Alle Abfragen einer materialisierten Sicht im deaktivierten Status werden für die zugrunde liegenden Tabellen aufgelöst.
   
 ## <a name="permissions"></a>Berechtigungen
 

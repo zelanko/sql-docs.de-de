@@ -1,4 +1,5 @@
 ---
+description: SQL Server-Verbindung erfordert Berechtigungen für den CDC Designer
 title: Für SQL Server-Verbindung erforderliche Berechtigungen für den CDC Designer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 80334de2-17c1-43c9-951e-21a9f864e9cb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d0c98add7ebc959f4045eccac3877cbddaeb295
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fd17adee75940edd5ba6f177272dc3e678373581
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457604"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-designer"></a>SQL Server-Verbindung erfordert Berechtigungen für den CDC Designer
 

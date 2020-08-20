@@ -1,4 +1,5 @@
 ---
+description: ALTER ROLE (Transact-SQL)
 title: ALTER ROLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2018
@@ -22,12 +23,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4b00464aaa9651f353a3c525cdf43badf72b88c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cc9f49a8a21ef4582f6f951a9301f33fe66002aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458892"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,14 +64,16 @@ ALTER ROLE role_name
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *role_name*  
- **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Gilt für:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Gibt die Datenbankrolle an, die geändert werden soll.  
   
  ADD MEMBER *database_principal*  
- **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Gilt für:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Legt fest, dass der Datenbankprinzipal einer Datenbankrolle als Mitglied hinzugefügt werden soll.  
   
@@ -79,7 +82,7 @@ ALTER ROLE role_name
 -   *database_principal* darf keine feste Datenbankrolle oder ein Serverprinzipal sein.  
   
 DROP MEMBER *database_principal*  
- **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Gilt für:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Legt fest, dass für den Datenbankprinzipal die Mitgliedschaft einer Datenbankrolle gelöscht werden soll.  
   
@@ -88,7 +91,7 @@ DROP MEMBER *database_principal*
 -   *database_principal* darf keine feste Datenbankrolle oder ein Serverprinzipal sein.  
   
 WITH NAME = *new_name*  
- **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Gilt für:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Legt fest, dass der Name einer benutzerdefinierten Datenbankrolle geändert werden soll. Der neue Name darf nicht bereits in der Datenbank vorhanden sein.  
   
@@ -118,7 +121,7 @@ Zum Ändern der Mitgliedschaft einer festen Datenbankrolle benötigen Sie darüb
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>A. Ändern eines Datenbankrollennamens  
- **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **Gilt für:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  Im folgenden Beispiel wird der Name der `buyers`-Rolle in `purchasing` geändert.   Dieses Beispiel kann in der [AdventureWorks](https://msftdbprodsamples.codeplex.com/)-Musterdatenbank ausgeführt werden.
   
@@ -127,7 +130,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. Hinzufügen oder Entfernen von Rollenmitgliedern  
- **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **Gilt für:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  In folgendem Beispiel wird eine neue Datenbankrolle mit dem Namen `Sales` erstellt. Dieser wird der Datenbankbenutzer Barry als Mitglied hinzugefügt. Anschließend wird dieses Mitglied wieder entfernt.   Dieses Beispiel kann in der [AdventureWorks](https://msftdbprodsamples.codeplex.com/)-Musterdatenbank ausgeführt werden.
   

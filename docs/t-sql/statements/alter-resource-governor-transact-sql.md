@@ -1,4 +1,5 @@
 ---
+description: ALTER RESOURCE GOVERNOR (Transact-SQL)
 title: ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/01/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bec2a5008b65ea5e20b8e6b784d9fe3ecda64c2
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 3591f9209b3af602474a9844b5b5daa230895f1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458868"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +98,7 @@ ALTER RESOURCE GOVERNOR
  Setzt die Statistik für alle Arbeitsauslastungsgruppen und Ressourcenpools zurück. Weitere Informationen finden Sie unter [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) und [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
   
  Legt die maximale Anzahl an E/A-Vorgängen in der Warteschlange pro Datenträgervolume fest. Bei diesen E/A-Vorgängen kann es sich um Lese- oder Schreibvorgänge beliebiger Größe handeln.  Der Maximalwert für MAX_OUTSTANDING_IO_PER_VOLUME ist 100. Der Wert ist kein Prozentsatz. Diese Einstellung ist so konzipiert, dass sie die E/A-Ressourcenkontrolle auf die E/A-Eigenschaften eines Datenträgervolumes abstimmt. Es empfiehlt sich, verschiedene Werte auszuprobieren und ggf. ein Kalibrierungstool wie IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) oder SQLIO (veraltet) zu verwenden, um den Maximalwert für das Speichersubsystem festzulegen. Diese Einstellung bietet eine Sicherheitsprüfung auf Systemebene, die es SQL Server ermöglicht, den minimalen IOPS-Wert für Ressourcenpools einzuhalten, auch wenn die MAX_IOPS_PER_VOLUME-Einstellung anderer Pools auf einen unbegrenzten Wert festgelegt ist. Weitere Informationen zu MAX_IOPS_PER_VOLUME finden Sie unter [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   

@@ -1,4 +1,5 @@
 ---
+description: Neuigkeiten in Integration Services in SQL Server 2016
 title: Neuigkeiten in Integration Services in SQL Server 2016 | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a715409dddf2c2de19624f2f5f0b770e0202c9b8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456872"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Neuigkeiten in Integration Services in SQL Server 2016
 
@@ -375,4 +376,4 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Von den SQL Server 2016-Editionen unterstützte Funktionen](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [Editionen und unterstützten Funktionen von SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)

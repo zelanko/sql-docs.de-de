@@ -1,4 +1,5 @@
 ---
+description: Einführung in die CDC Designer Console
 title: Einführung in die CDC Designer Console | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a00271fd569f65b0adb94bba4d035d4fc3f3849f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b956269df3d887800587d80fbcd0e5a1699dcca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457592"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Einführung in die CDC Designer Console
 
@@ -33,7 +34,7 @@ ms.locfileid: "86921267"
  Die CDC Designer Console kann in den folgenden Windows-Umgebungen ausgeführt werden:  
   
 -   Windows 8 und 8.1  
--   Windows 10  
+-   Windows 10  
 -   Windows Server 2012 und 2012 R2
 -   Windows Server 2016
 

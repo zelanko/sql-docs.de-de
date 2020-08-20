@@ -1,4 +1,5 @@
 ---
+description: catalog.create_execution (SSISDB-Datenbank)
 title: catalog.create_execution (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 168491deaef52217dc47349718869e3b652d2099
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0170a6b6a3733b54c24be1f06e91a6a60135faf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456936"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (SSISDB-Datenbank)
 
@@ -49,7 +50,7 @@ catalog.create_execution [ @folder_name = ] folder_name
  Der Name des Projekts mit dem Paket, das ausgeführt werden soll. Der *project_name* ist **nvarchar(128)** .  
   
  [@package_name =] *package_name*  
- Der Name des Pakets, das ausgeführt werden soll. Der *package_name* ist **nvarchar(260)** .  
+ Der Name des Pakets, das ausgeführt werden soll. Der *package_name* ist **nvarchar(260)**.  
   
  [@reference_id =] *reference_id*  
  Ein eindeutiger Bezeichner für einen Umgebungsverweis. Dieser Parameter ist optional. Der *reference_id* ist **bigint**.  
@@ -65,7 +66,7 @@ Geben Sie an, ob jeder Scale Out-Worker für die Ausführung zugelassen ist.
 
 -   Verwenden Sie den Wert 1, um das Paket mit einem beliebigen Scale Out-Worker auszuführen. Wenn Sie `@useanyworker` auf „true“ setzen, steht jeder Worker, dessen maximale Taskanzahl (wie in der Workerkonfigurationsdatei angegeben) noch nicht erreicht ist, für die Ausführung des Pakets zur Verfügung. Weitere Informationen zur Konfigurationsdatei des Workers finden Sie unter [Integration Services (SSIS) Scale Out-Worker](../scale-out/integration-services-ssis-scale-out-worker.md).
 
--   Verwenden Sie den Wert 0, um anzugeben, dass nicht alle Scale Out-Worker für die Paketausführung zugelassen sind. Wenn Sie `@useanyworker` auf „false“ festlegen, müssen Sie mithilfe des Scale Out-Managers oder durch Aufrufen der gespeicherten Prozedur `[catalog].[add_execution_worker]` die Worker angeben, die zum Ausführen des Pakets zulässig sind. Wenn Sie einen Worker angeben, der bereits ein anderes Paket ausführt, schließt der Worker die Ausführung des aktuellen Pakets ab, bevor er eine weitere Ausführung anfordert.
+-   Verwenden Sie den Wert 0, um anzugeben, dass nicht alle Scale Out-Worker für die Paketausführung zugelassen sind. Wenn Sie `@useanyworker` auf „false“ festlegen, müssen Sie mithilfe des Managers für horizontales Hochskalieren oder durch Aufrufen der gespeicherten Prozedur `[catalog].[add_execution_worker]` die Worker angeben, die zum Ausführen des Pakets zulässig sind. Wenn Sie einen Worker angeben, der bereits ein anderes Paket ausführt, schließt der Worker die Ausführung des aktuellen Pakets ab, bevor er eine weitere Ausführung anfordert.
 
 Dieser Parameter ist optional. Wenn dieser Parameter nicht angegeben wird, wird der Wert auf 1 festgelegt. Das Argument *useanyworker* ist vom Typ **bit**. 
   

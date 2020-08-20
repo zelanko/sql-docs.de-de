@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION FUNCTION (Transact-SQL)
 title: CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/19/2018
@@ -27,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55269acfdb6f739c398a8f71712d34d7cb62f816
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 73e9ea60c35fd82d6927901e719aedb2e1745d34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458749"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Der Name der Partitionsfunktion. Partitionsfunktionsnamen müssen innerhalb der Datenbank eindeutig sein und den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
  *input_parameter_type*  
- Der Datentyp der zum Partitionieren verwendeten Spalte. Als Partitionierungsspalte sind alle Datentypen außer **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , Aliasdatentypen oder CLR-benutzerdefinierten Datentypen, zulässig.  
+ Der Datentyp der zum Partitionieren verwendeten Spalte. Als Partitionierungsspalte sind alle Datentypen außer **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, Aliasdatentypen oder CLR-benutzerdefinierten Datentypen, zulässig.  
   
  Die eigentliche Spalte, Partitionierungsspalte genannt, wird in der CREATE TABLE- oder CREATE INDEX-Anweisung angegeben.  
   
@@ -119,7 +120,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
   
 |Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**Werte**|**col1** \< `1`|**col1** >= `1` UND **col1** \< `100`|**col1** >= `100` UND **col1** \< `1000`|**col1** >= `1000`| 
+|**Werte**|**col1** \< `1`|**col1** >= `1` UND **col1** \< `100`|**col1** >= `100` UND **col1**\<`1000`|**col1** >= `1000`| 
   
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. Erstellen einer RANGE RIGHT-Partitionsfunktion für eine datetime-Spalte  
  Die folgende Partitionsfunktion partitioniert eine Tabelle oder einen Index in 12 Partitionen, d.h. eine für die Menge an Werten eines jeden Monats des Jahres in einer **datetime**-Spalte.  

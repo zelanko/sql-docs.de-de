@@ -1,4 +1,5 @@
 ---
+description: Ziel für Partitionsverarbeitung
 title: Ziel für Partitionsverarbeitung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50513545bf2737a8b331153c686acad7ebaf4bd2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba6441215b1f1462195b83a99ce040da11d694fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457316"
 ---
 # <a name="partition-processing-destination"></a>Ziel für Partitionsverarbeitung
 
@@ -80,7 +81,7 @@ ms.locfileid: "86916090"
  **Verarbeitungsmethode**  
  Wählen Sie die Verarbeitungsmethode aus. Der Standardwert für diese Option ist **Vollständig**.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Hinzufügen (inkrementell)|Führt eine inkrementelle Verarbeitung der Partition aus.|  
 |Vollständig|Führt eine vollständige Verarbeitung der Partition aus.|  
@@ -118,7 +119,7 @@ ms.locfileid: "86916090"
  **Schlüsselfehleraktion**  
  Gibt an, wie Datensätze behandelt werden, die unzulässige Schlüsselwerte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Konvertiert den unzulässigen Schlüsselwert in den Wert Unknown.|  
 |**DiscardRecord**|Verwirft den Datensatz.|  
@@ -135,7 +136,7 @@ ms.locfileid: "86916090"
  **Aktion bei Fehler**  
  Gibt die Aktion an, die bei Erreichen des Fehlerschwellenwerts ausgeführt wird, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**StopProcessing**|Beendet die Verarbeitung.|  
 |**StopLogging**|Beendet das Protokollieren der Fehler.|  
@@ -143,7 +144,7 @@ ms.locfileid: "86916090"
  **Schlüssel nicht gefunden**  
  Gibt die Aktion an, die beim Fehler Schlüssel nicht gefunden ausgeführt werden soll. Standardmäßig ist dieser Wert **ReportAndContinue**.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -152,7 +153,7 @@ ms.locfileid: "86916090"
  **Doppelter Schlüssel**  
  Gibt die Aktion an, die beim Fehler Doppelter Schlüssel ausgeführt werden soll. Standardmäßig ist dieser Wert **IgnoreError**.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -161,7 +162,7 @@ ms.locfileid: "86916090"
  **NULL-Schlüssel in unbekanntes Element konvertiert**  
  Gibt die Aktion an, die ausgeführt werden soll, wenn ein NULL-Schlüssel in den Wert Unknown konvertiert wurde. Standardmäßig ist dieser Wert **IgnoreError**.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -170,7 +171,7 @@ ms.locfileid: "86916090"
  **NULL-Schlüssel nicht zulässig**  
  Gibt die Aktion an, die ausgeführt wird, wenn NULL-Schlüssel unzulässig sind und ein NULL-Schlüssel entdeckt wurde. Standardmäßig ist dieser Wert **ReportAndContinue**.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  

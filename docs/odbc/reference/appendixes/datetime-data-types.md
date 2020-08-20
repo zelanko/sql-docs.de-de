@@ -1,4 +1,5 @@
 ---
+description: datetime-Datentypen
 title: DateTime-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10626c4f0bf2e33c70322a0eb49af6c3e01e4303
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a908ab61741ad46ec00a341552a15db44cd5b603
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456627"
 ---
 # <a name="datetime-data-types"></a>datetime-Datentypen
 In ODBC *3. x*wurden die Bezeichner für die SQL-Datentypen date, Time und Zeitstempel von SQL_DATE, SQL_TIME und SQL_TIMESTAMP (mit Instanzen von **#define** in der Header Datei 9, 10 und 11) in SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP (mit Instanzen von **#define** in der Header Datei 91, 92 und 93) geändert. Die entsprechenden C-Typbezeichner wurden von SQL_C_DATE, SQL_C_TIME und SQL_C_TIMESTAMP in SQL_C_TYPE_DATE, SQL_C_TYPE_TIME bzw. SQL_C_TYPE_TIMESTAMP geändert, und die Instanzen von **#define** wurden entsprechend geändert.  

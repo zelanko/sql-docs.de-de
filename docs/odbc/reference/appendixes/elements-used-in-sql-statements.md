@@ -1,4 +1,5 @@
 ---
+description: Elemente, die in SQL-­Anweisungen verwendet werden
 title: In SQL-Anweisungen verwendete Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 49a1cd54957426d4d14d84d43df670c8c3d96189
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c24f5dd55530e38ea47ed9a2b846d549bb26d56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456573"
 ---
 # <a name="elements-used-in-sql-statements"></a>Elemente, die in SQL-­Anweisungen verwendet werden
 Die folgenden Elemente werden in den zuvor aufgeführten SQL-Anweisungen verwendet.  
@@ -41,7 +42,7 @@ Die folgenden Elemente werden in den zuvor aufgeführten SQL-Anweisungen verwend
   
  *Column-Name* :: = [*Tabellenname*] *Spalten Bezeichner*  
   
- *Comparison-Operator* :: = < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
+ *Comparison-Operator* :: = < &#124; > &#124; \<= &#124; > = &#124; = &#124; <>  
   
  *Comparison-Predicate* :: = *Expression* Comparison-Operator Ausdruck  
   
@@ -53,7 +54,7 @@ Die folgenden Elemente werden in den zuvor aufgeführten SQL-Anweisungen verwend
   
  *Expression* :: = Term &#124; Ausdruck {+&#124;-} Term  
   
- *Faktor* :: = [*+*&#124;*-*]*primär*  
+ *Faktor* :: = [ *+*&#124;*-* ]*primär*  
   
  *Insert-Value* :: =  
   
@@ -97,7 +98,7 @@ Die folgenden Elemente werden in den zuvor aufgeführten SQL-Anweisungen verwend
   
  *Table-Reference-List* :: = *Tabellen Verweis* [,*Tabellen Verweis*]...  
   
- *Begriff* :: = *Faktor* &#124; *Begriff* {\*&#124;*/*} *Faktor*  
+ *Begriff* :: = *Faktor* &#124; *Begriff* { \*&#124;*/* } *Faktor*  
   
  *unsigned-Integer* :: = {*Digit*}  
   

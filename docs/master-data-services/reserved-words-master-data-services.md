@@ -1,4 +1,5 @@
 ---
+description: Reservierte Wörter (Master Data Services)
 title: Reservierte Wörter
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 78dcf9320312f93dd08495f21bf0f6cc1b71516b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 5eff7f5f2db1d1b155b94818083ddad11f23890e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456713"
 ---
 # <a name="reserved-words-master-data-services"></a>Reservierte Wörter (Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85811458"
 > [!NOTE]  
 >  Sie sollten auch die Verwendung von Sonderzeichen (Symbole, Silbentrennung usw.) einschränken.  
   
--   [Modelle](../master-data-services/reserved-words-master-data-services.md#models)  
+-   [Models](../master-data-services/reserved-words-master-data-services.md#models)  
   
 -   [Entitäten](../master-data-services/reserved-words-master-data-services.md#entities)  
   
@@ -39,16 +40,16 @@ ms.locfileid: "85811458"
   
 -   [Mitglieder](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a><a name="models"></a>Bilder  
+##  <a name="models"></a><a name="models"></a> Bilder  
  Wenn Sie ein Modell erstellen, dessen Name auf **Name** oder **Code**festgelegt ist, darf **Entität mit demselben Namen wie das Modell erstellen** nicht ausgewählt werden, weil **Name** oder **Code** nicht für den Namen einer Entität verwendet werden kann.  
   
-##  <a name="entities"></a><a name="entities"></a>Kleinstunternehmen  
+##  <a name="entities"></a><a name="entities"></a> Kleinstunternehmen  
  **Name** oder **Code**kann für Entitätsnamen nicht verwendet werden.  
   
-##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>Explizite Hierarchien  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a> Explizite Hierarchien  
  Für explizite Hierarchienamen können Sie **Name** oder **Code**verwenden.  
   
-##  <a name="attributes"></a><a name="attributes"></a>Legt  
+##  <a name="attributes"></a><a name="attributes"></a> Legt  
   
 -   **ID**  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85811458"
   
 -   **Version_ID**  
   
-##  <a name="members"></a><a name="members"></a>Parlamentariern  
+##  <a name="members"></a><a name="members"></a> Parlamentariern  
  Bei Elementen kann **MDMMemberStatus**, **MDMUnused**oder **ROOT** nicht für den Attributwert **Code** verwendet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  

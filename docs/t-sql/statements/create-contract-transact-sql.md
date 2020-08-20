@@ -1,4 +1,5 @@
 ---
+description: CREATE CONTRACT (Transact-SQL)
 title: CREATE CONTRACT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6fef1834b3e5b6afeda1df4c67e3403a6dd6d79
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 6f4b7360fa3429a621e364c27776c4f6a8f0a946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458741"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +125,7 @@ CREATE CONTRACT
     ) ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [DROP CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

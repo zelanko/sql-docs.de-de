@@ -1,4 +1,5 @@
 ---
+description: CDC-Flusskomponenten
 title: CDC-Flusskomponenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0dc246a311a8c5488d78067adb6772bd0b399988
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65836425e0f6cfa1533dfe28db8f8df483c74465
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457428"
 ---
 # <a name="cdc-flow-components"></a>CDC-Flusskomponenten
 
@@ -32,7 +33,7 @@ ms.locfileid: "86915510"
   
  **CDC-Ablaufsteuerungskomponente:**  
   
- [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md)  
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
  **CDC-Datenflusskomponenten:**  
   
@@ -56,7 +57,7 @@ Die CDC-Komponenten für SSIS werden von allen unterstützten Versionen von Micr
 Die CDC-Komponenten für SSIS werden auf den angegebenen Betriebssystemen und Plattformen unterstützt:  
   
 -   Windows 8 und 8.1
--   Windows 10  
+-   Windows 10  
 -   Windows Server 2012 und 2012 R2
 -   Windows Server 2016
   
@@ -137,7 +138,7 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
   
  Der Wert der CDC-Statusvariablen muss im dauerhaften Speicher beibehalten werden. Er sollte vor dem Starten der CDC-Verarbeitung gelesen werden und nach Abschluss der Verarbeitung mit dem aktuellen Zustand gespeichert werden. Das Laden und Speichern des CDC-Status kann vom SSIS-Entwickler ausgeführt werden, die CDC-Steuerungskomponente bietet jedoch die Möglichkeit, diesen Task zu automatisieren, indem der CDC-Statuswert in einer Datenbanktabelle verwaltet wird.  
   
-## <a name="security-considerations"></a>Überlegungen zur Sicherheit  
+## <a name="security-considerations"></a>Sicherheitsüberlegungen  
  In diesem Abschnitt werden einige Sicherheitsüberlegungen im Zusammenhang mit der Verwendung der CDC-Komponenten in SSIS erläutert.  
   
 ### <a name="access-authorization-to-change-data"></a>Autorisierung des Zugriffs auf Änderungsdaten  
@@ -173,7 +174,7 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
 ## <a name="cdc-state"></a>CDC-Status  
  Jeder CDC-Gruppe ist ein Status zugeordnet, der durch eine Zeichenfolge mit einem bestimmten Format dargestellt wird. Weitere Informationen finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md). In der folgenden Tabelle sind die möglichen CDC-Statuswerte aufgeführt.  
   
-|State|BESCHREIBUNG|  
+|Zustand|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0-(INITIAL)|Der Status, bevor alle Pakete in der aktuellen CDC-Gruppe ausgeführt werden. Dieser Status liegt auch vor, wenn der CDC-Status leer ist.<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Der Status beim Start des anfänglich geladenen Pakets. Dieser Schritt erfolgt nach dem Aufruf des CDC-Steuerungstasks durch den **MarkInitialLoadStart** -Vorgang.<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md).|  
@@ -219,6 +220,6 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
 -   Video [CDC für Oracle-Datenbanken mit SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898)auf technet.microsoft.com.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md)  
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
   

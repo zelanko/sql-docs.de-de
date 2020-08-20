@@ -1,4 +1,5 @@
 ---
+description: catalog.create_environment_variable (SSISDB-Datenbank)
 title: catalog.create_environment_variable (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3875650317c76b0b54608272eef0c56a7e11987d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 367f16f137bdb09de610ce8b0b8a2ab125ce25ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456972"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB-Datenbank)
 
@@ -46,10 +47,10 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
  Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)** .  
   
  [@variable_name =] *variable_name*  
- Der Name der Umgebungsvariablen. Der *variable_name* ist **nvarchar(128)** .  
+ Der Name der Umgebungsvariablen. Der *variable_name* ist **nvarchar(128)**.  
   
  [@data_type =] *data_type*  
- Der Datentyp der Variablen. Zu den unterstützten Umgebungsvariablen-Datentypen zählen **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** und **UInt64**. Die Umgebungsvariablen-Datentypen **Char**, **DBNull**, **Object** und **Sbyte** werden nicht unterstützt. Der *data_type*-Parameter ist vom Typ **nvarchar(128)** .  
+ Der Datentyp der Variablen. Zu den unterstützten Umgebungsvariablen-Datentypen zählen **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** und **UInt64**. Die Umgebungsvariablen-Datentypen **Char**, **DBNull**, **Object** und **Sbyte** werden nicht unterstützt. Der *data_type*-Parameter ist vom Typ **nvarchar(128)**.  
   
  [@sensitive =] *sensitive*  
  Gibt an, ob die Variable einen vertraulichen Wert enthält. Verwenden Sie den Wert `1` , um anzugeben, dass der Wert der Umgebungsvariablen vertraulich ist, oder den Wert `0` , um anzugeben, dass er nicht vertraulich ist. Ein vertraulicher Wert wird verschlüsselt, wenn er gespeichert wird. Ein Wert, der nicht vertraulich ist, wird als Nur-Text-Wert gespeichert. *Sensitive* ist vom Typ **bit**.  
@@ -58,7 +59,7 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
  Der Wert der Umgebungsvariablen. Der *value* ist **sql_variant**.  
   
  [@description =] *description*  
- Die Beschreibung der Umgebungsvariablen. *value* ist vom Typ **nvarchar(1024)** .  
+ Die Beschreibung der Umgebungsvariablen. *value* ist vom Typ **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  

@@ -1,4 +1,5 @@
 ---
+description: CREATE CERTIFICATE (Transact-SQL)
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/06/2020
@@ -27,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4f4a1209a68dc011aafdc43f631766a35c5a243
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 4ae27e25e16022aa1ec497188bee7fde68a9bca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458822"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -132,7 +133,7 @@ CREATE CERTIFICATE certificate_name
   
  BINARY = *asn_encoded_certificate*  
  Mit ASN verschlüsselte Zertifikatbytes, die als binäre Konstante angegeben sind.  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  WITH PRIVATE KEY  
  Gibt an, dass der private Schlüssel des Zertifikats in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen wird. Diese Klausel ist ungültig, wenn das Zertifikat aus einer Assembly erstellt wird. Verwenden Sie [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md), um den privaten Schlüssel eines aus einer Assembly erstellten Zertifikats zu laden.  
@@ -144,7 +145,7 @@ CREATE CERTIFICATE certificate_name
 > Diese Option ist weder in einer eigenständigen Datenbank noch in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verfügbar.  
   
  BINARY = *private_key_bits*  
- **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Private Schlüsselbits, die als binäre Konstante angegeben sind. Diese Bits können in verschlüsselter Form vorhanden sein. Bei Verschlüsselung muss der Benutzer ein Entschlüsselungskennwort bereitstellen. Kennwortrichtlinienüberprüfungen werden für dieses Kennwort nicht ausgeführt. Die privaten Schlüsselbits müssen in einem PVK-Dateiformat vorliegen.  
   

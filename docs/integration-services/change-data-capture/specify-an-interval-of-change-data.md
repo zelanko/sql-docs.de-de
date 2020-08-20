@@ -1,4 +1,5 @@
 ---
+description: Angeben eines Intervalls von Änderungsdaten
 title: Angeben eines Intervalls von Änderungsdaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad9785a9cddc36d368a01ec507fe0c7b3909794b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7f82a0fe161a12f4a7d20b24218bd0347cdf6187
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457636"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Angeben eines Intervalls von Änderungsdaten
 
@@ -85,7 +86,7 @@ ms.locfileid: "86921276"
   
 1.  Fügen Sie auf der Registerkarte **Ablaufsteuerung** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers dem Paket einen Task "SQL ausführen" hinzu.  
   
-2.  Öffnen Sie den **Editor für den Task 'SQL ausführen'** , und aktivieren Sie auf der Seite **Allgemein** des Editors die folgenden Optionen:  
+2.  Öffnen Sie den **Editor für den Task 'SQL ausführen'**, und aktivieren Sie auf der Seite **Allgemein** des Editors die folgenden Optionen:  
   
     1.  Wählen Sie für **ResultSet**die Option **Einzelne Zeile**aus.  
   

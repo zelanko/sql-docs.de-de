@@ -1,4 +1,5 @@
 ---
+description: Verarbeiten von Einfügungen, Updates und Löschungen
 title: Verarbeiten von Einfügungen, Updates und Löschungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 940e3e9d4ab622ee9913eee4a0c62356542ed8d6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f4fddbdaa770c79008d4c4c1cd481a0c6c6eeb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457668"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Verarbeiten von Einfügungen, Updates und Löschungen
 
@@ -30,10 +31,10 @@ ms.locfileid: "86921736"
 >  Der erste Task beim Entwerfen des Datenflusses eines Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, ist die Konfiguration der Quellkomponente, die die Abfrage ausführt, bei der die Änderungsdaten abgerufen werden. Weitere Informationen zu dieser Komponente finden Sie unter [Abrufen und Verstehen der Änderungsdaten](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). Eine Beschreibung des Gesamtprozesses zur Erstellung eines Pakets, das ein inkrementelles Laden von Änderungsdaten ausführt, finden Sie unter [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
 ## <a name="associating-friendly-values-to-separate-inserts-updates-and-deletes"></a>Zuordnen von benutzerfreundlichen Werten zur Trennung von Einfügungen, Updates und Löschungen  
- In der Beispielabfrage, bei der Änderungsdaten abgerufen werden, gibt die **cdc.fn_cdc_get_net_changes_<capture_instance>** -Funktion nur die Metadatenspalte mit der Bezeichnung **__$operation** zurück. Diese Metadatenspalte enthält einen Ordinalwert, der angibt, welcher Vorgang die Änderung verursacht hat.  
+ In der Beispielabfrage, bei der Änderungsdaten abgerufen werden, gibt die **cdc.fn_cdc_get_net_changes_<capture_instance>**-Funktion nur die Metadatenspalte mit der Bezeichnung **__$operation** zurück. Diese Metadatenspalte enthält einen Ordinalwert, der angibt, welcher Vorgang die Änderung verursacht hat.  
   
 > [!NOTE]  
->  Weitere Informationen zu der Abfrage, die die **cdc.fn_cdc_get_net_changes_<capture_instance>** -Funktion verwendet, finden Sie unter [Erstellen der Funktion zum Abrufen der Änderungsdaten](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
+>  Weitere Informationen zu der Abfrage, die die **cdc.fn_cdc_get_net_changes_<capture_instance>**-Funktion verwendet, finden Sie unter [Erstellen der Funktion zum Abrufen der Änderungsdaten](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
   
  Das Abgleichen eines Ordinalwerts mit seinem entsprechenden Vorgang ist nicht so einfach wie die Verwendung eines mnemonischen Codes des Vorgangs. Zum Beispiel kann 'D' leicht einen Löschvorgang und 'I' einen Einfügevorgang darstellen. Die Beispielabfrage, die im Thema [Erstellen der Funktion zum Abrufen der Änderungsdaten](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)erstellt wurde, nimmt diese Konvertierung von einem Ordinalwert in einen benutzerfreundlichen Zeichenfolgenwert vor, der in einer neuen Spalte zurückgegeben wird. Das folgende Codesegment zeigt diese Konvertierung:  
   

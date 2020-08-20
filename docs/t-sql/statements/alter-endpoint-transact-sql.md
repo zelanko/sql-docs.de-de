@@ -1,4 +1,5 @@
 ---
+description: ALTER ENDPOINT (Transact-SQL)
 title: ALTER ENDPOINT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eed0eb24fc38f3ff2856d8b9693265d888d5a8e2
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9c800a8f2a915c1ab10134b2f665bb767a18e4f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458907"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -96,7 +97,9 @@ FOR DATABASE_MIRRORING (
   
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
   
 > [!NOTE]  
 >  Die folgenden Argumente gelten nur für ALTER ENDPOINT. Beschreibungen der restlichen Argumente finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
@@ -118,7 +121,7 @@ FOR DATABASE_MIRRORING (
  Weitere Informationen zum Auswählen eines Verschlüsselungsalgorithmus zur Verwendung mit einem Endpunkt finden Sie unter [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
 > [!NOTE]  
->  Der RC4-Algorithmus wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höheren Versionen kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.  
+>  Der RC4-Algorithmus wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höheren Versionen kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.  
 >   
 >  RC4 ist ein relativ schwacher Algorithmus, und AES ist ein relativ starker Algorithmus. AES ist jedoch deutlich langsamer als RC4. Wenn Sicherheit für Sie eine höhere Priorität besitzt als Geschwindigkeit, ist es empfehlenswert, AES zu verwenden.  
   

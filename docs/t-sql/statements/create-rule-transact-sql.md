@@ -1,4 +1,5 @@
 ---
+description: CREATE RULE (Transact-SQL)
 title: CREATE RULE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72029c32440feac5d69e015a060d92bd204ec4f6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 2615c5d5d75191067d64d7c562f50b330dfdc830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458774"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +78,7 @@ AS condition_expression
 ## <a name="remarks"></a>Bemerkungen  
  CREATE RULE-Anweisungen können nicht mit anderen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem einzelnen Batch kombiniert werden. Wenn Sie Regeln erstellen, gelten diese nicht für die Daten, die zu diesem Zeitpunkt bereits in der Datenbank vorhanden sind; darüber hinaus können Regeln nicht an Systemdatentypen gebunden werden.  
   
- Eine Regel kann nur in der aktuellen Datenbank erstellt werden. Führen Sie nach dem Erstellen einer Regel **sp_bindrule** aus, um die Regel an eine Spalte oder an einen Aliasdatentyp zu binden. Eine Regel muss mit dem Datentyp der Spalte kompatibel sein. Es ist beispielsweise nicht möglich, "\@value LIKE A%" als Regel für eine numerische Spalte zu verwenden. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  
+ Eine Regel kann nur in der aktuellen Datenbank erstellt werden. Führen Sie nach dem Erstellen einer Regel **sp_bindrule** aus, um die Regel an eine Spalte oder an einen Aliasdatentyp zu binden. Eine Regel muss mit dem Datentyp der Spalte kompatibel sein. Es ist beispielsweise nicht möglich, "\@value LIKE A%" als Regel für eine numerische Spalte zu verwenden. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  
   
  Stellen Sie sicher, dass Sie Zeichen- und Datumskonstanten in einfache Anführungszeichen (') setzen und vor binären Konstanten 0x einfügen. Falls die Regel nicht mit der Spalte kompatibel ist, an die sie gebunden ist, gibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] eine Fehlermeldung zurück, wenn ein Wert eingefügt wird, nicht jedoch, wenn die Regel gebunden wird.  
   

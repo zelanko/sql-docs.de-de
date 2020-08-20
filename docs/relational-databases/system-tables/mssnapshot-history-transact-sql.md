@@ -1,4 +1,5 @@
 ---
+description: MSsnapshot_history (Transact-SQL)
 title: MSsnapshot_history (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fedcf6dd9d4b30b92a6a98d97f49c0b3361f38ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dcc8a6e5a35ca9062bf97dd4dece2afca078fb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460326"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85889399"
 |**Kommentare**|**nvarchar(255)**|Der Meldungstext.|  
 |**delivered_transactions**|**int**|Die Gesamtzahl der in der Sitzung übermittelten Transaktionen.|  
 |**delivered_commands**|**int**|Die Anzahl der pro Sekunde übermittelten Befehle.|  
-|**delivery_rate**|**float (53)**|Die durchschnittliche Anzahl der pro Sekunde übermittelten Befehle.|  
+|**delivery_rate**|**float(53)**|Die durchschnittliche Anzahl der pro Sekunde übermittelten Befehle.|  
 |**error_id**|**int**|Die ID des Fehlers in der [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) -Systemtabelle.|  
 |**timestamp**|**timestamp**|Die Timestampspalte dieser Tabelle.|  
   

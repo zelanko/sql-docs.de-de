@@ -1,4 +1,5 @@
 ---
+description: 'SSIS-Tutorials: Erstellen eines einfachen ETL-Pakets'
 title: 'SSIS: Erstellen eines einfachen ETL-Pakets | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 08/20/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0365939d33b1ef6e0a4c179cdedddb4c3981763
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f83cb45dc060bc2877cf316e4d19baa073a9e6e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457034"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS-Tutorials: Erstellen eines einfachen ETL-Pakets
 
@@ -46,7 +47,7 @@ Dieses Tutorial wendet sich an Benutzer, die mit grundlegenden Datenbankvorgäng
 
 Folgende Komponenten müssen installiert sein, damit Sie dieses Tutorial ausführen können:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]: Weitere Informationen zu SQL Server und SSIS finden Sie unter [Installieren von Integration Services](install-windows/install-integration-services.md).
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Weitere Informationen zu SQL Server und SSIS finden Sie unter [Installieren von Integration Services](install-windows/install-integration-services.md).
 
 -   Die **AdventureWorksDW2012**-Beispieldatenbank. Laden Sie `AdventureWorksDW2012.bak` von der [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) herunter, und stellen Sie die Sicherung wieder her, um die Datenbank **AdventureWorksDW2012** herunterzuladen.  
 

@@ -1,4 +1,5 @@
 ---
+description: Transaktions-ODBC
 title: Transaktionen ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a40c34b2abeb346c7a718994ba2484bfc728e2b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c40c51fa2b0154d90d5ea08952266997d175e3e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456424"
 ---
 # <a name="transactions-odbc"></a>Transaktions-ODBC
 Eine *Transaktion* ist eine Arbeitseinheit, die als einzelner, atomarer Vorgang durchgeführt wird. Das heißt, dass der Vorgang erfolgreich ist oder als Ganzes fehlschlägt. Beispielsweise können Sie Geld von einem Bankkonto auf ein anderes Konto übertragen. Dies umfasst zwei Schritte: das Zurückziehen des Geldes aus dem ersten Konto und das Ablegen des Geldes in der zweiten. Es ist wichtig, dass beide Schritte erfolgreich ausgeführt werden. Es ist nicht zulässig, dass ein Schritt erfolgreich ist und der andere fehlschlägt. Eine Datenbank, die Transaktionen unterstützt, kann dies gewährleisten.  
