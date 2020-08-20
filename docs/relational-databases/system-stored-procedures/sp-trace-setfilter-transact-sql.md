@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setfilter (Transact-SQL)
 title: sp_trace_setfilter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36cb1003bcb0884bce069a7f41b3264d045e86e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cf2b3eb0d8d71ce85ac7a5de4fddcd5a34ae97a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480979"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Wendet einen Filter auf eine Ablaufverfolgung an. **sp_trace_setfilter** werden möglicherweise nur für vorhandene Ablauf Verfolgungen ausgeführt, die beendet wurden (*Status* ist **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gibt einen Fehler zurück, wenn diese gespeicherte Prozedur für eine Ablauf Verfolgung ausgeführt wird, die nicht vorhanden ist oder deren *Status* nicht **0**ist.  
+  Wendet einen Filter auf eine Ablaufverfolgung an. **sp_trace_setfilter** werden möglicherweise nur für vorhandene Ablauf Verfolgungen ausgeführt, die beendet wurden (*Status* ist **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gibt einen Fehler zurück, wenn diese gespeicherte Prozedur für eine Ablauf Verfolgung ausgeführt wird, die nicht vorhanden ist oder deren *Status* nicht **0**ist.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen erweiterte Ereignisse.  
@@ -46,13 +47,13 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @traceid = ] trace_id`Die ID der Ablauf Verfolgung, für die der Filter festgelegt ist. *trace_id* ist vom Datentyp **int**und hat keinen Standardwert. Der Benutzer verwendet diesen *trace_id* Wert, um die Ablauf Verfolgung zu identifizieren, zu ändern und zu steuern.  
+`[ @traceid = ] trace_id` Die ID der Ablauf Verfolgung, für die der Filter festgelegt ist. *trace_id* ist vom Datentyp **int**und hat keinen Standardwert. Der Benutzer verwendet diesen *trace_id* Wert, um die Ablauf Verfolgung zu identifizieren, zu ändern und zu steuern.  
   
-`[ @columnid = ] column_id`Die ID der Spalte, auf die der Filter angewendet wird. *column_id* ist vom Datentyp **int**und hat keinen Standardwert. Wenn *column_id* NULL ist, werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Filter für die angegebene Ablauf Verfolgung gelöscht.  
+`[ @columnid = ] column_id` Die ID der Spalte, auf die der Filter angewendet wird. *column_id* ist vom Datentyp **int**und hat keinen Standardwert. Wenn *column_id* NULL ist, werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Filter für die angegebene Ablauf Verfolgung gelöscht.  
   
-`[ @logical_operator = ] logical_operator`Gibt an, ob der and (**0**) or or (**1**)-Operator angewendet wird. *logical_operator* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @logical_operator = ] logical_operator` Gibt an, ob der and (**0**) or or (**1**)-Operator angewendet wird. *logical_operator* ist vom Datentyp **int**und hat keinen Standardwert.  
   
-`[ @comparison_operator = ] comparison_operator`Gibt den Typ des Vergleichs an, der erstellt werden soll. *comparison_operator* ist vom Datentyp **int**und hat keinen Standardwert. Die folgende Tabelle enthält die Vergleichsoperatoren und die sie darstellenden Werte.  
+`[ @comparison_operator = ] comparison_operator` Gibt den Typ des Vergleichs an, der erstellt werden soll. *comparison_operator* ist vom Datentyp **int**und hat keinen Standardwert. Die folgende Tabelle enthält die Vergleichsoperatoren und die sie darstellenden Werte.  
   
 |Wert|Vergleichsoperator|  
 |-----------|-------------------------|  
@@ -65,7 +66,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|Nicht wie|  
   
-`[ @value = ] value`Gibt den Wert an, nach dem gefiltert werden soll. Der Datentyp des *Werts* muss mit dem Datentyp der zu filternden Spalte identisch sein. Wenn der Filter beispielsweise für eine Objekt-ID-Spalte mit einem **int** -Datentyp festgelegt ist, muss *value* " **int**" lauten. Wenn *value* der Wert **nvarchar** oder **varbinary**ist, kann er eine maximale Länge von 8000 aufweisen.  
+`[ @value = ] value` Gibt den Wert an, nach dem gefiltert werden soll. Der Datentyp des *Werts* muss mit dem Datentyp der zu filternden Spalte identisch sein. Wenn der Filter beispielsweise für eine Objekt-ID-Spalte mit einem **int** -Datentyp festgelegt ist, muss *value* " **int**" lauten. Wenn *value* der Wert **nvarchar** oder **varbinary**ist, kann er eine maximale Länge von 8000 aufweisen.  
   
  Wenn der Vergleichsoperator LIKE oder NOT LIKE ist, kann der logische Operator % oder einen anderen für die LIKE-Operation geeigneten Filter enthalten.  
   
@@ -81,7 +82,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |0|Kein Fehler.|  
-|1|Unbekannter Fehler.|  
+|1|Unknown error. (Unbekannter Fehler.)|  
 |2|Die Ablaufverfolgung wird derzeit ausgeführt. Das Ändern der Ablauf Verfolgung zu diesem Zeitpunkt führt zu einem Fehler.|  
 |4|Die angegebene Spalte ist ungültig.|  
 |5|Für die angegebene Spalte ist das Filtern nicht zulässig. Dieser Wert wird nur von **sp_trace_setfilter**zurückgegeben.|  
@@ -91,7 +92,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
 |16|Die Funktion ist für diese Ablaufverfolgung ungültig.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_trace_setfilter** ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Prozedur, die viele der Aktionen ausführt, die zuvor von erweiterten gespeicherten Prozeduren ausgeführt wurden, die in früheren Versionen von verfügbar waren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Verwenden Sie **sp_trace_setfilter** anstelle des **xp_trace_set \* Filtern** Sie erweiterte gespeicherte Prozeduren, um Filter für Ablauf Verfolgungen zu erstellen, anzuwenden, zu entfernen oder zu bearbeiten. Weitere Informationen finden Sie unter [Filtern einer Ablauf Verfolgung](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Alle Filter für eine bestimmte Spalte müssen in einer Ausführung von **sp_trace_setfilter**miteinander aktiviert werden. Wenn ein Benutzer z. B. zwei Filter auf die Spalte application name und einen Filter auf die Spalte username anwenden möchte, muss er die Filter für application name nacheinander angeben. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt einen Fehler zurück, wenn der Benutzer in einem Aufruf einer gespeicherten Prozedur einen Filter für application name angibt und danach ein Filter für username und ein weiterer Filter für application name folgt.  
@@ -112,7 +113,7 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. fn_trace_getfilterinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sys. fn_trace_getinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)  
   
   

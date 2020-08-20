@@ -1,4 +1,5 @@
 ---
+description: sp_help_maintenance_plan (Transact-SQL)
 title: sp_help_maintenance_plan (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a14767d15891ae970269feda6e712bf490ff5420
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85a2f93384dbca55e26a38933ab9afd730da9f76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481205"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @plan_id = ] 'plan\_id'`Gibt die Plan-ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**. Die Standardeinstellung ist NULL.  
+`[ @plan_id = ] 'plan\_id'` Gibt die Plan-ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**. Die Standardeinstellung ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -54,7 +55,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="plan-table"></a>Plan-Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|ID des Wartungsplans.|  
 |**plan_name**|**sysname**|Name des Wartungsplans.|  
@@ -80,7 +81,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|Die ID jedes Auftrags, der dem Wartungsplan zugeordnet ist. *job_id* ist vom Datentyp **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_help_maintenance_plan** in der **msdb** -Datenbank.  
   
 ## <a name="permissions"></a>Berechtigungen  

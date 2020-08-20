@@ -1,4 +1,5 @@
 ---
+description: sp_help_operator (Transact-SQL)
 title: sp_help_operator (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8ce38772655172a9c5e22d3dfdba9cb7fd8f4b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d86d691c33fdfc09ce60d3ef7059c823527f9494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481208"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @operator_name = ] 'operator_name'`Der Name des Operators. *operator_name* ist vom **Datentyp vom Datentyp sysname**. Wenn *operator_name* nicht angegeben wird, werden Informationen zu allen Operatoren zurückgegeben.  
+`[ @operator_name = ] 'operator_name'` Der Name des Operators. *operator_name* ist vom **Datentyp vom Datentyp sysname**. Wenn *operator_name* nicht angegeben wird, werden Informationen zu allen Operatoren zurückgegeben.  
   
-`[ @operator_id = ] operator_id`Die ID des Operators, für den Informationen angefordert werden. *operator_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @operator_id = ] operator_id` Die ID des Operators, für den Informationen angefordert werden. *operator_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *operator_id* oder *operator_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
@@ -58,7 +59,7 @@ sp_help_operator
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID des Operators.|  
 |**name**|**sysname**|Der Operator Name.|  
-|**wodurch**|**tinyint**|Operator steht für den Empfang von Benachrichtigungen zur Verfügung:<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
+|**enabled**|**tinyint**|Operator steht für den Empfang von Benachrichtigungen zur Verfügung:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
 |**email_address**|**nvarchar (100)**|E-Mail-Adresse des Operators.|  
 |**last_email_date**|**int**|Datum, an dem der Operator zuletzt per E-Mail benachrichtigt wurde.|  
 |**last_email_time**|**int**|Uhrzeit, zu der der Operator zuletzt per E-Mail benachrichtigt wurde.|  
@@ -77,7 +78,7 @@ sp_help_operator
 |**last_netsend_time**|**int**|Uhrzeit, zu der der Operator zuletzt per Netzwerk-Popupnachricht benachrichtigt wurde.|  
 |**category_name**|**sysname**|Name der Operatorkategorie, zu der dieser Operator gehört.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_help_operator** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -103,7 +104,7 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_add_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

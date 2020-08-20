@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (GUI) (OracleToSQL)
 title: Projekteinstellungen (GUI) (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b1a55f836879c351378b7605126d41e7dc74d85e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b3382c63479fa719b79cce2f582cb5f85e716ba1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480442"
 ---
 # <a name="project-settings-gui-oracletosql"></a>Projekteinstellungen (GUI) (OracleToSQL)
 Mit den Einstellungen des GUI-Projekts können Sie konfigurieren, wie Daten auf der Registerkarte " **Daten** " angezeigt werden und ob der Bewertungsbericht nach der Konvertierung angezeigt werden soll.  
@@ -26,7 +27,7 @@ Der Bereich GUI ist in den Dialogfeldern **Projekteinstellungen** und **Standard
   
 -   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Optionen für die Benutzeroberfläche für alle Projekte festzulegen. Um auf die GUI-Einstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt oder geändert werden müssen, und klicken Sie dann unten im linken Bereich auf **GUI** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Maximale Zeilennummer für Quelle**  
 Konfiguriert die Anzahl der Daten Zeilen, die auf der Registerkarte **Daten** für die ausgewählte Quell Tabelle angezeigt werden.  
   

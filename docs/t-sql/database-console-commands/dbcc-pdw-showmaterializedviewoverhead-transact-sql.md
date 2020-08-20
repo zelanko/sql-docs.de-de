@@ -1,4 +1,5 @@
 ---
+description: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
 title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 07/03/2019
@@ -12,12 +13,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5c3dd051156178572a03eeff23052e2c103d9555
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2a849fdf387361bdf217e1b40a81aa8c600931d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479852"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -42,11 +43,11 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 Der Name der materialisierten Sicht.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Data Warehouse-Engine fügt zu jeder betroffenen Sicht Nachverfolgungszeilen zur Darstellung der Änderungen hinzu, damit materialisierte Sichten stets mit Datenänderungen in Basistabellen aktualisiert werden. Die Auswahl einer materialisierten Sicht schließt das Überprüfen des gruppierten Columnstore-Index der Sicht und das Anwenden inkrementeller Änderungen ein.  Die Nachverfolgungszeilen (TOTAL_ROWS - BASE_VIEW_ROWS) werden erst gelöscht, wenn Benutzer die materialisierte Sicht neu erstellen (REBUILD).  
+Die Data Warehouse-Engine fügt zu jeder betroffenen Sicht Nachverfolgungszeilen zur Darstellung der Änderungen hinzu, damit materialisierte Sichten stets mit Datenänderungen in Basistabellen aktualisiert werden. Die Auswahl einer materialisierten Sicht schließt das Überprüfen des gruppierten Columnstore-Index der Sicht und das Anwenden inkrementeller Änderungen ein.Die Nachverfolgungszeilen (TOTAL_ROWS - BASE_VIEW_ROWS) werden erst gelöscht, wenn Benutzer die materialisierte Sicht neu erstellen (REBUILD).  
 
-Das Overheadverhältnis wird als TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS) berechnet.  Wenn der Wert hoch ist, wird die SELECT-Leistung beeinträchtigt.  Benutzer können die materialisierte Sicht neu erstellen, um das Overheadverhältnis zu verringern.
+Das Overheadverhältnis wird als TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS) berechnet.  Wenn der Wert hoch ist, wird die SELECT-Leistung beeinträchtigt.Benutzer können die materialisierte Sicht neu erstellen, um das Overheadverhältnis zu verringern.
 
 ## <a name="permissions"></a>Berechtigungen  
   

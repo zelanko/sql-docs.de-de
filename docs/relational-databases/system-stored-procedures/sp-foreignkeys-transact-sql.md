@@ -1,4 +1,5 @@
 ---
+description: sp_foreignkeys (Transact-SQL)
 title: sp_foreignkeys (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04df50dc8378dc346079c807f8e517f1e6bbecdd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f7d3fe93965bcfcb516e79452b6725940c1e68c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481285"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,19 +46,19 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @table_server = ] 'table_server'`Der Name des Verbindungs Servers, für den Tabellen Informationen zurückgegeben werden sollen. *table_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @table_server = ] 'table_server'` Der Name des Verbindungs Servers, für den Tabellen Informationen zurückgegeben werden sollen. *table_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @pktab_name = ] 'pktab_name'`Der Name der Tabelle mit einem Primärschlüssel. *pktab_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @pktab_name = ] 'pktab_name'` Der Name der Tabelle mit einem Primärschlüssel. *pktab_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @pktab_schema = ] 'pktab_schema'`Der Name des Schemas mit einem Primärschlüssel. *pktab_schema*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält dies den Namen des Besitzers.  
+`[ @pktab_schema = ] 'pktab_schema'` Der Name des Schemas mit einem Primärschlüssel. *pktab_schema*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält dies den Namen des Besitzers.  
   
-`[ @pktab_catalog = ] 'pktab_catalog'`Der Name des Katalogs mit einem Primärschlüssel. *pktab_catalog*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält dies den Namen der Datenbank.  
+`[ @pktab_catalog = ] 'pktab_catalog'` Der Name des Katalogs mit einem Primärschlüssel. *pktab_catalog*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält dies den Namen der Datenbank.  
   
-`[ @fktab_name = ] 'fktab_name'`Der Name der Tabelle mit einem Fremdschlüssel. *fktab_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @fktab_name = ] 'fktab_name'` Der Name der Tabelle mit einem Fremdschlüssel. *fktab_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @fktab_schema = ] 'fktab_schema'`Der Name des Schemas mit einem Fremdschlüssel. *fktab_schema*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @fktab_schema = ] 'fktab_schema'` Der Name des Schemas mit einem Fremdschlüssel. *fktab_schema*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @fktab_catalog = ] 'fktab_catalog'`Der Name des Katalogs mit einem Fremdschlüssel. *fktab_catalog*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @fktab_catalog = ] 'fktab_catalog'` Der Name des Katalogs mit einem Fremdschlüssel. *fktab_catalog*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -84,7 +85,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  Im Resultset geben die Spalten FK_NAME und PK_NAME immer NULL zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_foreignkeys** fragt das FOREIGN_KEYS Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters ab, der *table_server*entspricht. Die Parameter *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -103,7 +104,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
  [sp_catalogs &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_primarykeys &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

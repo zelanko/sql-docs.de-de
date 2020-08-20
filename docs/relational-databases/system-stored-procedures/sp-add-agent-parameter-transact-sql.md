@@ -1,4 +1,5 @@
 ---
+description: sp_add_agent_parameter (Transact-SQL)
 title: sp_add_agent_parameter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: cf8704f4106cd701c5c5d2bbeab324ed2f75e731
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abd0a36fe9699c3fc72db4848d08ad6469ae3dc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481645"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +40,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id`Die ID des Profils aus der **MSagent_profiles** Tabelle in der **msdb** -Datenbank. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @profile_id = ] profile_id` Die ID des Profils aus der **MSagent_profiles** Tabelle in der **msdb** -Datenbank. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert.  
   
  Um herauszufinden, welcher Agenttyp diese *profile_id* darstellt, suchen Sie die *profile_id* in der [MSagent_profiles &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) Tabelle, und notieren Sie sich den Wert des *agent_type* Felds. Mit den Parametern werden folgende Werte angegeben:  
   
@@ -51,7 +52,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|Merge-Agent|  
 |**9**|Warteschlangenlese-Agent|  
   
-`[ @parameter_name = ] 'parameter_name'`Der Name des Parameters. *parameter_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Eine Liste der Parameter, die bereits in Systemprofilen definiert sind, finden Sie unter [Replikations-Agentprofile](../../relational-databases/replication/agents/replication-agent-profiles.md). Eine vollständige Liste der gültigen Parameter für die einzelnen Agents finden Sie in den folgenden Themen:  
+`[ @parameter_name = ] 'parameter_name'` Der Name des Parameters. *parameter_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Eine Liste der Parameter, die bereits in Systemprofilen definiert sind, finden Sie unter [Replikations-Agentprofile](../../relational-databases/replication/agents/replication-agent-profiles.md). Eine vollständige Liste der gültigen Parameter für die einzelnen Agents finden Sie in den folgenden Themen:  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -63,20 +64,20 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-`[ @parameter_value = ] 'parameter_value'`Der Wert, der dem-Parameter zugewiesen werden soll. *parameter_value* ist vom Datentyp **nvarchar (255)** und hat keinen Standardwert.  
+`[ @parameter_value = ] 'parameter_value'` Der Wert, der dem-Parameter zugewiesen werden soll. *parameter_value* ist vom Datentyp **nvarchar (255)** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_add_agent_parameter** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_add_agent_parameter**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Arbeiten mit Replikations-Agentprofilen](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [Replikationsagentprofile](../../relational-databases/replication/agents/replication-agent-profiles.md)   
+ [Arbeiten mit Replikations-Agent-Profilen](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+ [Replikations-Agent-Profile](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_change_agent_profile &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
  [sp_change_agent_parameter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   

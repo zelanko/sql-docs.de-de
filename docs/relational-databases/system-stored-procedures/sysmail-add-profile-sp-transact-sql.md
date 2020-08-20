@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_profile_sp (Transact-SQL)
 title: sysmail_add_profile_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ae569ea3623c81e99bac6dd5a163393c07c0301
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f78f4ea075f04c4deb447ad9b68e3707b4e19ffb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480869"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,19 +42,19 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_name = ] 'profile\_name'`Der Name des neuen Profils. *profile_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @profile_name = ] 'profile\_name'` Der Name des neuen Profils. *profile_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
  
    > [!NOTE]
    > Der Name des Profils, der den SQL-Agent von Azure SQL verwaltete Instanz verwendet, muss aufgerufen werden **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'`Die optionale Beschreibung für das neue Profil. die *Beschreibung* ist vom Datentyp **nvarchar (256)** und hat keinen Standardwert.  
+`[ @description = ] 'description'` Die optionale Beschreibung für das neue Profil. die *Beschreibung* ist vom Datentyp **nvarchar (256)** und hat keinen Standardwert.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT`Gibt die ID für das neue Profil zurück. *new_profile_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` Gibt die ID für das neue Profil zurück. *new_profile_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein Datenbank-E-Mail-Profil kann eine beliebige Anzahl von Datenbank-E-Mail-Konten enthalten. Gespeicherte Prozeduren von Datenbank-E-Mail können nach dem Profilnamen oder der von dieser Prozedur generierten Profil-ID auf ein Profil verweisen. Weitere Informationen zum Hinzufügen eines Kontos zu einem Profil finden Sie unter [sysmail_add_profileaccount_sp &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
   
  Der Profilname und die Beschreibung können mit der gespeicherten Prozedur **sysmail_update_profile_sp**geändert werden, während die Profil-ID für die Lebensdauer des Profils konstant bleibt.  
@@ -91,7 +92,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 SELECT @profileId ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
  [Erstellen eines Datenbank-E-Mail Kontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Konfigurationsobjekte Datenbank-E-Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

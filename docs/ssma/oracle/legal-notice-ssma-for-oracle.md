@@ -1,4 +1,5 @@
 ---
+description: Rechtliche Hinweise (SSMA für Oracle)
 title: Rechtliche Hinweise (SSMA für Oracle) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 913ca29a043d6422d818221f5d13dea3029a21e8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 93ef937ac81df75eebc0845381383c7a2d0a4cdd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480472"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Rechtliche Hinweise (SSMA für Oracle)
 Diese Dokumentation, einschließlich der darin enthaltenen Beispielanwendungen, wird nur zu Informationszwecken zur Verfügung gestellt. Es werden keine Gewährleistungen übernommen, weder ausdrücklich noch konkludent. Die in dieser Dokumentation enthaltenen Angaben und Daten, einschließlich URLs und anderen Verweisen auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Das vollständige Risiko der Nutzung oder der Ergebnisse der Nutzung dieser Dokumentation liegt bei dem Benutzer.  

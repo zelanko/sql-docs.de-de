@@ -1,4 +1,5 @@
 ---
+description: sp_help_proxy (Transact-SQL)
 title: sp_help_proxy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 051f41139627420e825feffb292a02905917705d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ab6a1a976dd70e991b36f51429a96d0be425b152
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481180"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @proxy_id = ] id`Die Proxy-ID des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
+`[ @proxy_id = ] id` Die Proxy-ID des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
   
-`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
   
-`[ @subsystem_name = ] 'subsystem_name'`Der Name des Subsystems, für das Proxys aufgelistet werden sollen. Der *subsystem_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *subsystem_name* angegeben wird, muss auch *Name* angegeben werden.  
+`[ @subsystem_name = ] 'subsystem_name'` Der Name des Subsystems, für das Proxys aufgelistet werden sollen. Der *subsystem_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *subsystem_name* angegeben wird, muss auch *Name* angegeben werden.  
   
  In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
@@ -55,9 +56,9 @@ sp_help_proxy
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-Skript|  
 |CmdExec|Betriebssystem (CmdExec)|  
-|Snapshot|Replikationsmomentaufnahme-Agent|  
+|Momentaufnahme|Replikationsmomentaufnahme-Agent|  
 |LogReader|Replikationsprotokolllese-Agent|  
-|Verteilung|Replikations Verteilungs-Agent|  
+|Distribution|Replikations Verteilungs-Agent|  
 |Merge|Replikationsmerge-Agent|  
 |QueueReader|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
 |ANALYSISQUERY|Analysis Services-Befehl|  
@@ -65,7 +66,7 @@ sp_help_proxy
 |Dts|SSIS-Paketausführung|  
 |PowerShell|PowerShell-Skript|  
   
-`[ @name = ] 'name'`Der Name einer Anmeldung, für die Proxys [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgelistet werden sollen. Der Name ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL. Wenn *Name* angegeben ist, muss auch *subsystem_name* angegeben werden.  
+`[ @name = ] 'name'` Der Name einer Anmeldung, für die Proxys [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgelistet werden sollen. Der Name ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL. Wenn *Name* angegeben ist, muss auch *subsystem_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -77,13 +78,13 @@ sp_help_proxy
 |**proxy_id**|**int**|ID des Proxys.|  
 |**name**|**sysname**|Der Name des Proxys.|  
 |**credential_identity**|**sysname**|Der Microsoft Windows-Domänenname und -Benutzername für die dem Proxy zugeordneten Anmeldeinformationen.|  
-|**wodurch**|**tinyint**|Gibt an, ob dieser Proxy aktiviert ist. { **0** = nicht aktiviert, **1** = aktiviert}|  
-|**description**|**nvarchar(1024)**|Die Beschreibung des Proxys.|  
+|**enabled**|**tinyint**|Gibt an, ob dieser Proxy aktiviert ist. { **0** = nicht aktiviert, **1** = aktiviert}|  
+|**Beschreibung**|**nvarchar(1024)**|Die Beschreibung des Proxys.|  
 |**user_sid**|**varbinary(85)**|Die Windows-SID des Windows-Benutzers für diesen Proxy.|  
 |**credential_id**|**int**|Die ID für die dem Proxy zugeordneten Anmeldeinformationen.|  
 |**credential_identity_exists**|**int**|Gibt an, ob credential_identity vorhanden ist. { 0 = ist nicht vorhanden, 1 = ist vorhanden }|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn keine Parameter bereitgestellt werden, listet **sp_help_proxy** Informationen für alle Proxys in der Instanz auf.  
   
  Um zu ermitteln, welche Proxys ein Anmelde Name für ein bestimmtes Subsystem verwenden kann, geben Sie *Name* und *subsystem_name*an. Wenn diese Argumente bereitgestellt werden, listet **sp_help_proxy** Proxys auf, auf die der angegebene Anmelde Name zugreifen kann und die für das angegebene Subsystem verwendet werden kann.  

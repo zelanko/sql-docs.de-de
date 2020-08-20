@@ -1,4 +1,5 @@
 ---
+description: sp_cursor (Transact-SQL)
 title: sp_cursor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a92b502368756fd86fc4facda7c0726260d88fea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75a3d3f6c38b6d63ad8127966cba118f4c3455dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481369"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ sp_cursor  cursor, optype, rownum, table
 |Wert|Name|Beschreibung|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Wird zum Update mindestens einer Zeile im Fetchpuffer verwendet.  Die in *rowNum* angegebenen Zeilen werden erneut aufgerufen und aktualisiert.|  
-|0x0002|Delete|Wird zum Löschen mindestens einer Zeile im Fetchpuffer verwendet. Die in *rowNum* angegebenen Zeilen werden erneut aufgerufen und gelöscht.|  
+|0x0002|DELETE|Wird zum Löschen mindestens einer Zeile im Fetchpuffer verwendet. Die in *rowNum* angegebenen Zeilen werden erneut aufgerufen und gelöscht.|  
 |0X0004|INSERT|Fügt Daten ein, ohne eine SQL **Insert** -Anweisung zu entwickeln.|  
 |0X0008|REFRESH|Wird verwendet, um den Puffer mithilfe zugrunde liegender Tabellen aufzufüllen, und kann zum Update der Zeile verwendet werden, wenn ein Update- oder Löschvorgang aufgrund der Steuerung durch vollständige Parallelität fehlerhaft ist, oder nachdem ein UPDATE-Vorgang ausgeführt wurde.|  
 |0X10|LOCK|Bewirkt, dass eine SQL Server U-Sperre auf der Seite mit der angegebenen Zeile abgerufen wird. Diese Sperre ist mit S-Sperren kompatibel, jedoch nicht mit X-Sperren oder anderen U-Sperren. Kann verwendet werden, um eine kurzfristige Sperre zu implementieren.|  
@@ -98,7 +99,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Bei Verwendung eines RPC gibt ein positionierter DELETE-oder Update-Vorgang mit der Puffer Nummer 0 eine done-Meldung mit einer Zeilen *Anzahl* von 0 (Fehler) oder 1 (Erfolg) für jede Zeile im Fetchpuffer zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="optype-parameter"></a>optype-Parameter  
  Mit Ausnahme der Kombinationen von SetPosition mit Update, DELETE, Refresh oder Lock. oder absolut mit Update oder DELETE schließen sich die *optype* -Werte gegenseitig aus.  

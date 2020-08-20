@@ -1,4 +1,5 @@
 ---
+description: rowversion (Transact-SQL)
 title: rowversion (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/22/2017
@@ -26,24 +27,24 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f2962d457ce079bd0ec2164f9fdd2a982b983f14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 087e3e1d67bce5d8f46f03cdb1cad05578b39b46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85638133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479889"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Ein Datentyp, der automatisch generierte eindeutige, binäre Zahlen in einer Datenbank verfügbar macht. **rowversion** wird normalerweise als Mechanismus für die Erstellung einer Versionskennung von Tabellenzeilen verwendet. Die Speichergröße beträgt 8 Byte. Der **rowversion**-Datentyp ist nur eine inkrementelle Nummer und behält ein Datum oder eine Uhrzeit nicht bei. Zum Aufzeichnen eines Datums oder einer Uhrzeit verwenden Sie einen **datetime2**-Datentyp.
+Ein Datentyp, der automatisch generierte eindeutige, binäre Zahlen in einer Datenbank verfügbar macht. **rowversion** wird normalerweise als Mechanismus für die Erstellung einer Versionskennung von Tabellenzeilen verwendet. Die Größe des Speichers beträgt 8 Bytes. Der **rowversion**-Datentyp ist nur eine inkrementelle Nummer und behält ein Datum oder eine Uhrzeit nicht bei. Zum Aufzeichnen eines Datums oder einer Uhrzeit verwenden Sie einen **datetime2**-Datentyp.
   
 ## <a name="remarks"></a>Bemerkungen  
 Jede Datenbank weist einen Zähler auf, der für jeden Einfüge- oder Updatevorgang inkrementiert wird, der für eine Tabelle mit einer **rowversion**-Spalte in der Datenbank ausgeführt wird. Dieser Zähler ist die Datenbankzeilenversion. Hiermit wird ein relativer Zeitpunkt innerhalb einer Datenbank nachverfolgt, keine tatsächliche Zeit, die einer Uhr zugeordnet werden kann. Eine Tabelle kann nur eine **rowversion**-Spalte enthalten. Jedes Mal, wenn eine Zeile mit einer **rowversion**-Spalte geändert oder eingefügt wird, wird der inkrementierte rowversion-Wert der Datenbank in die **rowversion**-Spalte eingefügt. Daher sind **rowversion**-Spalten ungeeignete Kandidaten für Schlüssel, insbesondere für Primärschlüssel. Jedes Update der Zeile ändert den rowversion-Wert und somit auch den Wert des Schlüssels. Wenn die Spalte in einem Primärschlüssel verwendet wird, sind der alte Wert und somit auch alle Fremdschlüssel, die auf den alten Wert verweisen, nicht mehr gültig. Wenn in einem dynamischen Cursor auf die Tabelle verwiesen wird, ändern alle Updates die Position der Zeilen im Cursor. Falls die Spalte in einem Indexschlüssel verwendet wird, generieren alle Updates der Datenzeile auch Updates des Index.  Der **rowversion**-Wert kann mit jeder UPDATE-Anweisung inkrementiert werden, selbst wenn keine Zeilenwerte geändert werden. (Wenn ein Spaltenwert beispielsweise 5 beträgt und eine UPDATE-Anweisung diesen auf 5 festlegt, gilt diese Aktion als Update, obwohl keine Änderung durchgeführt wurde, und **rowversion** wird inkrementiert.)
   
 **timestamp** ist das Synonym für den **rowversion**-Datentyp und unterliegt der Verhaltensweise von Datentypsynonymen. Verwenden Sie in DDL-Anweisungen nach Möglichkeit stets **rowversion** anstelle von **timestamp**. Weitere Informationen finden Sie unter [Data Type Synonyms &#40;Transact-SQL&#41; (Synonyme für Datentypen &#40;Transact-SQL&#41;)](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
-Der [!INCLUDE[tsql](../../includes/tsql-md.md)]timestamp **-Datentyp von**  unterscheidet sich vom **timestamp**-Datentyp, der im ISO-Standard definiert ist.
+Der  **timestamp**-Datentyp von [!INCLUDE[tsql](../../includes/tsql-md.md)] unterscheidet sich vom **timestamp**-Datentyp, der im ISO-Standard definiert ist.
   
 > [!NOTE]  
 >  Die **timestamp**-Syntax ist veraltet. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -63,7 +64,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
 > [!NOTE]  
 >  Doppelte **rowversion**-Werte können mithilfe der SELECT INTO-Anweisung generiert werden, bei der eine **rowversion**-Spalte in der SELECT-Liste vorhanden ist. Es wird jedoch nicht empfohlen, **rowversion** auf diese Weise zu verwenden.  
   
-Eine **rowversion**-Spalte, die keine NULL-Werte zulässt, ist semantisch gleichwertig mit einer **binary(8)** -Spalte. Eine **rowversion**-Spalte, die NULL-Werte zulässt, ist semantisch gleichwertig mit einer **varbinary(8)** -Spalte.
+Eine **rowversion**-Spalte, die keine NULL-Werte zulässt, ist semantisch gleichwertig mit einer **binary(8)**-Spalte. Eine **rowversion**-Spalte, die NULL-Werte zulässt, ist semantisch gleichwertig mit einer **varbinary(8)**-Spalte.
   
 Sie können die **rowversion**-Spalte einer Zeile verwenden, um einfach zu bestimmen, ob für die Zeile seit dem letzten Lesevorgang eine UPDATE-Anweisung ausgeführt wurde. Wenn eine UPDATE-Anweisung für die Zeile ausgeführt wird, wird der rowversion-Wert aktualisiert. Falls keine UPDATE-Anweisung ausgeführt wurde, bleibt der rowversion-Wert wie beim letzten Lesevorgang. Verwenden Sie [@@DBTS](../../t-sql/functions/dbts-transact-sql.md), um den aktuellen rowversion-Wert für eine Datenbank zurückzugeben.
   

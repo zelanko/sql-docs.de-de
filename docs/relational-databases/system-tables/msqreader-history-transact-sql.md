@@ -1,4 +1,5 @@
 ---
+description: MSqreader_history (Transact-SQL)
 title: MSqreader_history (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ee889df3e29f486c12393870858fa0af2ea6546
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 64e6041c37c70359c645f1a0f6027503b185772c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480788"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,8 +43,8 @@ ms.locfileid: "85889554"
 |**transaction_status**|**int**|Status der Transaktion.|  
 |**transactions_processed**|**int**|Kumulierte Anzahl der in der Sitzung verarbeiteten Transaktionen.|  
 |**commands_processed**|**int**|Kumulierte Anzahl der in der Sitzung verarbeiteten Befehle.|  
-|**delivery_rate**|**float (53)**|Die durchschnittliche Anzahl der pro Sekunde übermittelten Befehle.|  
-|**transaction_rate**|**float (53)**|Rate der verarbeiteten Transaktionen.|  
+|**delivery_rate**|**float(53)**|Die durchschnittliche Anzahl der pro Sekunde übermittelten Befehle.|  
+|**transaction_rate**|**float(53)**|Rate der verarbeiteten Transaktionen.|  
 |**Abonnenten**|**sysname**|Den Namen des Abonnenten.|  
 |**SubscriberDB**|**sysname**|Der Name der Abonnement Datenbank.|  
 |**error_id**|**int**|Wenn nicht 0 (null), stellt die Zahl eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlermeldung dar.|  

@@ -1,4 +1,5 @@
 ---
+description: managed_backup.sp_backup_config_basic (Transact-SQL)
 title: managed_backup. sp_backup_config_basic (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/03/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67ed480e1d34e688413cd7242bd25501dcd3074a
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 90ca851e5056b5c592b5cab67fc695f598b67ed1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481672"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,7 +46,7 @@ EXEC managed_backup.sp_backup_config_basic
     ,[@retention_days = ] 'retention_period_in_days'    ,[@credential_name = ] 'sql_credential_name'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentation  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumente  
  @enable_backup  
  Aktiviert oder deaktiviert [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die angegebene Datenbank. Der @enable_backup ist **Bit**. Erforderlicher Parameter beim Konfigurieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die erste Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn Sie eine vorhandene Konfiguration ändern [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , ist dieser Parameter optional. In diesem Fall behalten alle nicht angegebenen Konfigurationswerte Ihre vorhandenen Werte bei.  
   
@@ -61,7 +63,7 @@ EXEC managed_backup.sp_backup_config_basic
  Die Beibehaltungsdauer für die Sicherungsdateien in Tagen. Ist vom Datentyp @storage_url int. Dies ist ein erforderlicher Parameter, wenn Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] zum ersten Mal für die-Instanz konfigurieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn Sie die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfiguration ändern, ist dieser Parameter optional. Wenn der Parameter nicht angegeben ist, werden die vorhandenen Konfigurationswerte beibehalten.  
   
  @credential_name  
- Der Name der SQL-Anmelde Informationen, die für die Authentifizierung beim Azure Storage-Konto verwendet werden. @credentail_nameist vom **Datentyp sysname**. Wenn angegeben, wird die Sicherung in einem seitenblob gespeichert. Wenn dieser Parameter NULL ist, wird die Sicherung als blockblob gespeichert. Die Sicherung im seitenblob ist veraltet. Daher wird empfohlen, die neue blockblob-Sicherungsfunktion zu verwenden. Bei Verwendung zum Ändern der [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Konfiguration ist dieser Parameter optional. Wenn kein Wert angegeben ist, werden die vorhandenen Konfigurationswerte beibehalten.  
+ Der Name der SQL-Anmelde Informationen, die für die Authentifizierung beim Azure Storage-Konto verwendet werden. @credentail_name ist vom **Datentyp sysname**. Wenn angegeben, wird die Sicherung in einem seitenblob gespeichert. Wenn dieser Parameter NULL ist, wird die Sicherung als blockblob gespeichert. Die Sicherung im seitenblob ist veraltet. Daher wird empfohlen, die neue blockblob-Sicherungsfunktion zu verwenden. Bei Verwendung zum Ändern der [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Konfiguration ist dieser Parameter optional. Wenn kein Wert angegeben ist, werden die vorhandenen Konfigurationswerte beibehalten.  
   
 > [!WARNING]
 >  Der ** \@ credential_name** -Parameter wird zurzeit nicht unterstützt. Es wird nur eine Sicherung in blockblob unterstützt, für die dieser Parameter NULL sein muss.  

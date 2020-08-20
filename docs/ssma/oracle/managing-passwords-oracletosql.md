@@ -1,4 +1,5 @@
 ---
+description: Verwalten von Kennwörtern (OracleToSQL)
 title: Verwalten von Kenn Wörtern (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b96c7cff343c1c0f00c0e324961d633c4255f2a9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3ffcc42e790e6eb0f26ffa96ec8e3bcf7503ca3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480452"
 ---
 # <a name="managing-passwords-oracletosql"></a>Verwalten von Kennwörtern (OracleToSQL)
 In diesem Abschnitt geht es um das Sichern von Daten Bank Kennwörtern und das Verfahren zum Importieren oder Exportieren von Datenbankservern.

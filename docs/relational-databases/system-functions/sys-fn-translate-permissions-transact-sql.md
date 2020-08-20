@@ -1,4 +1,5 @@
 ---
+description: sys.fn_translate_permissions (Transact-SQL)
 title: sys. fn_translate_permissions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aec909b59a6e174269a14a330ad839d3e3ff4faa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1069d5b76d6ee404ddd2e671eb6a7b63396424ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481763"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,16 +44,16 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Level*  
+ *level*  
  Die Art eines sicherungsfähigen Elements, für die die Berechtigung übernommen wird. *Ebene* ist vom Datentyp **nvarchar (60)**.  
   
  *perms*  
  Eine Bitmaske, die in der Berechtigungsspalte zurückgegeben wird. *perms* ist **varbinary (16)**.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  **Tabelle**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der in der Spalte **Berechtigungen** einer SQL-Ablauf Verfolgung zurückgegebene Wert ist eine ganzzahlige Darstellung einer Bitmaske, die von verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um effektive Berechtigungen zu berechnen. Jede der 25 Arten sicherungsfähiger Elemente verfügt über einen eigenen Satz Berechtigungen mit entsprechenden numerischen Werten. **sys. fn_translate_permissions** übersetzt diese Bitmaske in eine Tabelle von Berechtigungs Namen.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -70,7 +71,7 @@ SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011)
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys. server_permissions &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
+ [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   

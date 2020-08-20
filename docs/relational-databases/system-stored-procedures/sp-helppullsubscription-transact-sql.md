@@ -1,4 +1,5 @@
 ---
+description: sp_helppullsubscription (Transact-SQL)
 title: sp_helppullsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b12ffb31836bfde3cb29cf240dbfc5d9da66eac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 163cd14235fd5364f42c8e9a722341c96a03290f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481160"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des Remote Servers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem Informationen für alle Verleger zurückgegeben werden.  
+`[ @publisher = ] 'publisher'` Der Name des Remote Servers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem Informationen für alle Verleger zurückgegeben werden.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , mit dem alle Verleger Datenbanken zurückgegeben werden.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , mit dem alle Verleger Datenbanken zurückgegeben werden.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , mit dem alle Veröffentlichungen zurückgegeben werden. Wenn dieser Parameter dem Wert all entspricht, werden nur Pullabonnements mit independent_agent = **0** zurückgegeben.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , mit dem alle Veröffentlichungen zurückgegeben werden. Wenn dieser Parameter dem Wert all entspricht, werden nur Pullabonnements mit independent_agent = **0** zurückgegeben.  
   
-`[ @show_push = ] 'show_push'`Gibt an, ob alle Pushabonnements zurückgegeben werden sollen. *show_push*ist vom Datentyp **nvarchar (5)** und hat den Standardwert false, bei dem keine Pushabonnements zurückgegeben werden.  
+`[ @show_push = ] 'show_push'` Gibt an, ob alle Pushabonnements zurückgegeben werden sollen. *show_push*ist vom Datentyp **nvarchar (5)** und hat den Standardwert false, bei dem keine Pushabonnements zurückgegeben werden.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -96,7 +97,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helppullsubscription** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

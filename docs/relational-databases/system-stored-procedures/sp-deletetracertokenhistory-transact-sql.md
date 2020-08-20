@@ -1,4 +1,5 @@
 ---
+description: sp_deletetracertokenhistory (Transact-SQL)
 title: sp_deletetracertokenhistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26a9c4a3001d2a5b4f5709311e23c0023307ce92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4912611e79e4d6d3431cce7facb04af06a206211
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481333"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Entfernt Überwachungs Token-Datensätze aus den [MStracer_tokens &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) und MStracer_history &#40;Systemtabellen von [Transact-SQL](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Verteiler für die Verteilungsdatenbank ausgeführt.
+Entfernt Überwachungs Token-Datensätze aus den [MStracer_tokens &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) und MStracer_history &#40;Systemtabellen von [Transact-SQL ](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Verteiler für die Verteilungsdatenbank ausgeführt.
 
 ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -49,10 +50,10 @@ Der Name der Veröffentlichung, in die das Überwachungstoken eingefügt wurde. 
 Die ID des zu löschenden Überwachungstokens. Der Datentyp ist " **int**". Der Standardwert ist *null*. Wenn der Wert *null*ist, werden alle Überwachungs Token gelöscht, die zur Veröffentlichung gehören.
 
 `[ @cutoff_date= ] cutoff_date`  
-Überwachungs Token, die vor diesem Datum in die Veröffentlichung eingefügt wurden, werden gelöscht. Der **Datentyp ist "DateTime**". Der Standardwert ist *NULL*.
+Überwachungs Token, die vor diesem Datum in die Veröffentlichung eingefügt wurden, werden gelöscht. Der **Datentyp ist "DateTime**". Der Standardwert lautet *null*.
 
 `[ @publisher= ] 'publisher'`  
-Der Name des Verlegers. Der Datentyp ist vom Datentyp **vom Datentyp sysname**. Der Standardwert ist *NULL*.
+Der Name des Verlegers. Der Datentyp ist vom Datentyp **vom Datentyp sysname**. Der Standardwert lautet *null*.
 
 > [!NOTE]
 > Dieser Parameter sollte nur für nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger oder beim Ausführen der gespeicherten Prozedur vom Verteiler angegeben werden.
@@ -67,7 +68,7 @@ Der Name der Veröffentlichungsdatenbank. Der Datentyp ist vom Datentyp **vom Da
 
 **0** (Erfolg) oder **1** (Fehler)
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 **sp_deletetracertokenhistory** wird bei der Transaktions Replikation verwendet.  
 

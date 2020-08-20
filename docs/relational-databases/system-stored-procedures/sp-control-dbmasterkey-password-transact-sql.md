@@ -1,4 +1,5 @@
 ---
+description: sp_control_dbmasterkey_password (Transact-SQL)
 title: sp_control_dbmasterkey_password (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/09/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08b749ad756a47ed991acd1ad0ea1d533bbb770c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85870631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481440"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +53,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  @action= N ' Drop '  
  Gibt an, dass Anmeldeinformationen für die angegebene Datenbank aus dem Anmeldeinformationenspeicher gelöscht werden. Der an Übergabe Wert @action ist **nvarchar**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Datenbank-Hauptschlüssel zum Entschlüsseln oder Verschlüsseln eines Schlüssels benötigt wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, den Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel der Instanz zu entschlüsseln. Wenn bei der Entschlüsselung ein Fehler auftritt, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Anmelde Informationsspeicher nach Anmelde Informationen des Haupt Schlüssels durchsucht, die dieselbe Familien-GUID wie die Datenbank aufweisen, für die der Hauptschlüssel benötigt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den Datenbank-Hauptschlüssel mit allen übereinstimmenden Anmeldeinformationen zu entschlüsseln, bis die Entschlüsselung erfolgreich ausgeführt wurde oder keine Anmeldeinformationen mehr vorhanden sind.  
   
 > [!CAUTION]  
@@ -77,7 +78,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  **Potenzielles Problem** mit der Abwärtskompatibilität: Derzeit überprüft die gespeicherte Prozedur nicht, ob ein Hauptschlüssel vorhanden ist. Dies wird aus Gründen der Abwärtskompatibilität zugelassen, es wird jedoch eine Warnung angezeigt. Dieses Verhalten ist als veraltet markiert. In einer zukünftigen Version muss der Hauptschlüssel vorhanden sein, und das in der gespeicherten **sp_control_dbmasterkey_password** Prozedur verwendete Kennwort muss das gleiche Kennwort wie eines der Kenn Wörter sein, die zum Verschlüsseln des Datenbank-Haupt Schlüssels verwendet werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -103,7 +104,7 @@ GO
  [Einrichten einer verschlüsselten Spiegel Datenbank](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. Anmelde Informationen &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
+ [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  
   
   

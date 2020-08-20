@@ -1,4 +1,5 @@
 ---
+description: sp_msx_enlist (Transact-SQL)
 title: sp_msx_enlist (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 551d0796ce534f77d4994064a9af032f34f81f04
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 024aa764c6df0fa4e42a006cb6b6d855c32e3573
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481151"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @msx_server_name = ] 'msx_server'`Der Name des multiserververwaltungsservers (Master). *msx_server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @msx_server_name = ] 'msx_server'` Der Name des multiserververwaltungsservers (Master). *msx_server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
-`[ @location = ] 'location'`Der Speicherort des hinzu zufügenden Zielservers. *location* ist vom Datentyp **nvarchar(100)** und hat den Standardwert NULL.  
+`[ @location = ] 'location'` Der Speicherort des hinzu zufügenden Zielservers. *location* ist vom Datentyp **nvarchar(100)** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

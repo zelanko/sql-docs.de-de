@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Migration) (accesstosql)
 title: Projekteinstellungen (Migration) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 94bd5cc9a8cb0db9079db981ec50a5fa6af7b20c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480528"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Projekteinstellungen (Migration) (accesstosql)
 Mit den Migrationsprojekt Einstellungen können Sie konfigurieren, wie Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migriert werden.  
@@ -28,7 +29,7 @@ Der Bereich Migration ist in den Dialogfeldern **Projekteinstellungen** und **St
   
 -   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die Migrations Einstellungen zuzugreifen, wählen **Sie im Menü Extras die Option** **Standard Projekteinstellungen**aus, wählen Sie im Kombinations Feld **Migrations Ziel Version** den Projekttyp aus, für den Sie auf die Einstellungen zugreifen möchten, klicken Sie unten im linken Bereich auf **Allgemein** , und klicken Sie dann auf **Migration**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Check-Einschränkungen**  
 Gibt an, ob SSMA Einschränkungen beim Hinzufügen von Daten zu Tabellen überprüfen soll.  
   
@@ -77,7 +78,7 @@ Gibt an, ob SSMA Tabellen sperrt, wenn während der Datenmigration Daten zu Tabe
 **Nicht unterstützte Datumsangaben ersetzen**  
 Gibt an, ob SSMA Zugriffsdaten korrigieren soll, die vor dem frühestmöglichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datum (01. Januar 1753) liegen.  
   
--   Um die aktuellen Datumswerte beizubehalten, wählen Sie keine Aktion durch **führen**aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]akzeptiert keine Datumsangaben vor 01. Januar 1753 in einer datetime-Spalte. Wenn Sie ältere Datumsangaben verwenden, müssen Sie die DateTime-Werte in Zeichen Werte konvertieren.  
+-   Um die aktuellen Datumswerte beizubehalten, wählen Sie keine Aktion durch **führen**aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] akzeptiert keine Datumsangaben vor 01. Januar 1753 in einer datetime-Spalte. Wenn Sie ältere Datumsangaben verwenden, müssen Sie die DateTime-Werte in Zeichen Werte konvertieren.  
   
 -   Um Datumsangaben vor 01. Januar 1753 in NULL zu konvertieren, wählen Sie **durch Null Ersetzen**aus.  
   

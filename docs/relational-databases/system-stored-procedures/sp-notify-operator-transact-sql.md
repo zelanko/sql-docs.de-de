@@ -1,4 +1,5 @@
 ---
+description: sp_notify_operator (Transact-SQL)
 title: sp_notify_operator (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07f18ad85f759340d43825ce8c6a95c11696d2f0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6a1c623ec7172a7cab48c49491619184d618ebf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481105"
 ---
 # <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,26 +48,26 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_name = ] 'profilename'`Der Name des Datenbank-E-Mail Profils, das zum Senden der Nachricht verwendet werden soll. Profile Name ist vom *Datentyp* **nvarchar (128)**. Wenn Profile Name nicht *angegeben wird,* wird das Standard Datenbank-E-Mail Profil verwendet.  
+`[ @profile_name = ] 'profilename'` Der Name des Datenbank-E-Mail Profils, das zum Senden der Nachricht verwendet werden soll. Profile Name ist vom *Datentyp* **nvarchar (128)**. Wenn Profile Name nicht *angegeben wird,* wird das Standard Datenbank-E-Mail Profil verwendet.  
   
-`[ @id = ] id`Der Bezeichner für den Operator, an den die Nachricht gesendet werden soll. *ID* ist vom Datentyp **int**und hat den Standardwert NULL. Eine *ID* oder ein *Name* muss angegeben werden.  
+`[ @id = ] id` Der Bezeichner für den Operator, an den die Nachricht gesendet werden soll. *ID* ist vom Datentyp **int**und hat den Standardwert NULL. Eine *ID* oder ein *Name* muss angegeben werden.  
   
-`[ @name = ] 'name'`Der Name des Operators, an den die Nachricht gesendet werden soll. *Name ist vom Datentyp* **nvarchar (128)** und hat den Standardwert NULL. Eine *ID* oder ein *Name* muss angegeben werden.  
+`[ @name = ] 'name'` Der Name des Operators, an den die Nachricht gesendet werden soll. *Name ist vom Datentyp* **nvarchar (128)** und hat den Standardwert NULL. Eine *ID* oder ein *Name* muss angegeben werden.  
   
 > **Hinweis:** Eine e-Mail-Adresse muss für den Operator definiert werden, bevor Nachrichten empfangen werden können.  
   
-`[ @subject = ] 'subject'`Der Betreff der e-Mail-Nachricht. *Subject* ist vom Datentyp **nvarchar (256)** und hat keinen Standardwert.  
+`[ @subject = ] 'subject'` Der Betreff der e-Mail-Nachricht. *Subject* ist vom Datentyp **nvarchar (256)** und hat keinen Standardwert.  
   
-`[ @body = ] 'message'`Der Text der e-Mail-Nachricht. die Nachricht ist vom *Datentyp* **nvarchar (max)** und hat keinen Standardwert.  
+`[ @body = ] 'message'` Der Text der e-Mail-Nachricht. die Nachricht ist vom *Datentyp* **nvarchar (max)** und hat keinen Standardwert.  
   
-`[ @file_attachments = ] 'attachment'`Der Name einer Datei, die an die e-Mail-Nachricht angefügt werden soll. *Anlage* ist vom Datentyp **nvarchar (512)** und hat keinen Standardwert.  
+`[ @file_attachments = ] 'attachment'` Der Name einer Datei, die an die e-Mail-Nachricht angefügt werden soll. *Anlage* ist vom Datentyp **nvarchar (512)** und hat keinen Standardwert.  
   
-`[ @mail_database = ] 'mail_host_database'`Gibt den Namen der Mail Host Datenbank an. *mail_host_database* ist vom Datentyp **nvarchar (128)**. Wenn keine *mail_host_database* angegeben ist, wird standardmäßig die **msdb** -Datenbank verwendet.  
+`[ @mail_database = ] 'mail_host_database'` Gibt den Namen der Mail Host Datenbank an. *mail_host_database* ist vom Datentyp **nvarchar (128)**. Wenn keine *mail_host_database* angegeben ist, wird standardmäßig die **msdb** -Datenbank verwendet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sendet die Nachricht an die angegebene E-Mail-Adresse des angegebenen Operators. Falls für den Operator keine E-Mail-Adresse konfiguriert ist, wird ein Fehler zurückgegeben.  
   
  Die Datenbank-E-Mail und eine Mailhostdatenbank müssen konfiguriert werden, bevor eine Benachrichtigung an einen Operator gesendet werden kann.  
@@ -97,7 +98,7 @@ EXEC dbo.sp_notify_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Agent gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   

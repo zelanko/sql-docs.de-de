@@ -1,4 +1,5 @@
 ---
+description: Globale Einstellungen (Protokollierung) (OracleToSQL)
 title: Globale Einstellungen (Protokollierung) (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,23 +11,23 @@ ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ebb39ea8b86ac20e49d49387b981969a9366dd9e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fbc74e9129c642ea1b6655deb4e01ee04d92d0ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480512"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Globale Einstellungen (Protokollierung) (OracleToSQL)
 Verwenden Sie das Dialogfeld **globale Einstellungen** , um die Protokollierungs Einstellungen für SSMA anzugeben. In der Regel ändern Sie diese Einstellungen nur, wenn Sie mit dem Produktsupport arbeiten.  
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie **im Menü Extras die Option** **globale Einstellungen** aus, und klicken Sie dann unten im linken Bereich auf die Schaltfläche **Protokollierung** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Nachrichten Ebene**  
 Die folgenden Optionen sind unter **Nachrichten Ebene**verfügbar:  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |----------|---------------|  
 |**[alle Kategorien]**|Wird verwendet, um den Protokolliergrad für alle folgenden Optionen festzulegen.|  
 |**Collector**|Sammelt Metadaten über das Quell Schema und speichert Sie im Projekt.|  
@@ -47,7 +48,7 @@ Konfigurieren Sie für jede Option unter **Nachrichten Ebene**einen der folgende
 |-|-|  
 |**Schwerwiegender Fehler**|Schreiben Sie nur schwerwiegende Fehlermeldungen in das Protokoll.|  
 |**Fehler**|Schreiben Sie Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
-|**Warnung**|Schreiben Sie Warnungs-, Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
+|**Warning**|Schreiben Sie Warnungs-, Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
 |**Info**|Schreiben Sie Informations-, Warnungs-, Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
 |**Debuggen**|Schreiben Sie alle Meldungen, einschließlich des Debuggens von Nachrichten, in das Protokoll.|  
   

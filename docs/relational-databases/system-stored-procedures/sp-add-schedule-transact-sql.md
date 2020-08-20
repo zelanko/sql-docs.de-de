@@ -1,4 +1,5 @@
 ---
+description: sp_add_schedule (Transact-SQL)
 title: sp_add_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4ee3f039613865aab68860f93ab74279068a7da
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: aed71a51ab9852272c16e193367c12df77bb76a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481592"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,11 +55,11 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @schedule_name = ] 'schedule_name'`Der Name des Zeitplans. *schedule_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans. *schedule_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @enabled = ] enabled`Gibt den aktuellen Status des Zeitplans an. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist **1** (aktiviert). Wenn der Wert **0**ist, ist der Zeitplan nicht aktiviert. Wenn der Zeitplan nicht aktiviert ist, werden über diesen Zeitplan keine Aufträge ausgeführt.  
+`[ @enabled = ] enabled` Gibt den aktuellen Status des Zeitplans an. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist **1** (aktiviert). Wenn der Wert **0**ist, ist der Zeitplan nicht aktiviert. Wenn der Zeitplan nicht aktiviert ist, werden über diesen Zeitplan keine Aufträge ausgeführt.  
   
-`[ @freq_type = ] freq_type`Ein Wert, der angibt, wann ein Auftrag ausgeführt werden soll. *freq_type* ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
+`[ @freq_type = ] freq_type` Ein Wert, der angibt, wann ein Auftrag ausgeführt werden soll. *freq_type* ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -70,7 +71,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64**|Beim Starten des SQL Agent-Dienstanbieter ausführen|  
 |**128**|Ausführen, wenn sich der Computer im Leerlauf befindet (wird in [Azure SQL-verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)nicht unterstützt) |  
   
-`[ @freq_interval = ] freq_interval`Die Tage, an denen ein Auftrag ausgeführt wird. *freq_interval* ist vom Datentyp **int**und hat den Standardwert **1**und hängt vom Wert *freq_type*ab.  
+`[ @freq_interval = ] freq_interval` Die Tage, an denen ein Auftrag ausgeführt wird. *freq_interval* ist vom Datentyp **int**und hat den Standardwert **1**und hängt vom Wert *freq_type*ab.  
   
 |Wert *freq_type*|Auswirkung auf *freq_interval*|  
 |---------------------------|--------------------------------|  
@@ -82,7 +83,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64** (wenn der SQLServerAgent-Dienst gestartet wird)|*freq_interval* wird nicht verwendet.|  
 |**128**|*freq_interval* wird nicht verwendet.|  
   
-`[ @freq_subday_type = ] freq_subday_type`Gibt die Einheiten für die *freq_subday_interval*an. *freq_subday_type* ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
+`[ @freq_subday_type = ] freq_subday_type` Gibt die Einheiten für die *freq_subday_interval*an. *freq_subday_type* ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
@@ -91,37 +92,37 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|Minuten|  
 |**0x8**|Stunden|  
   
-`[ @freq_subday_interval = ] freq_subday_interval`Die Anzahl der *freq_subday_type* Zeiträume zwischen jeder Ausführung eines Auftrags. *freq_subday_interval* ist vom Datentyp **int**und hat den Standardwert **0**. Hinweis: Das Intervall sollte nicht länger als 10 Sekunden sein. *freq_subday_interval* wird in den Fällen ignoriert, in denen *freq_subday_type* gleich **1**ist.  
+`[ @freq_subday_interval = ] freq_subday_interval` Die Anzahl der *freq_subday_type* Zeiträume zwischen jeder Ausführung eines Auftrags. *freq_subday_interval* ist vom Datentyp **int**und hat den Standardwert **0**. Hinweis: Das Intervall sollte nicht länger als 10 Sekunden sein. *freq_subday_interval* wird in den Fällen ignoriert, in denen *freq_subday_type* gleich **1**ist.  
   
-`[ @freq_relative_interval = ] freq_relative_interval`Das Vorkommen eines Auftrags *freq_interval* in jedem Monat, wenn *freq_interval* 32 (monatlich, relativ) ist. *freq_relative_interval* ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich: *freq_relative_interval* wird in den Fällen ignoriert, in denen *freq_type* nicht gleich 32 ist.  
+`[ @freq_relative_interval = ] freq_relative_interval` Das Vorkommen eines Auftrags *freq_interval* in jedem Monat, wenn *freq_interval* 32 (monatlich, relativ) ist. *freq_relative_interval* ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich: *freq_relative_interval* wird in den Fällen ignoriert, in denen *freq_type* nicht gleich 32 ist.  
   
 |Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|Sekunde|  
+|**2**|Second|  
 |**4**|Third|  
 |**8**|Vierter|  
-|**16**|Letzter|  
+|**16**|Last (Letzter)|  
   
-`[ @freq_recurrence_factor = ] freq_recurrence_factor`Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *freq_recurrence_factor* wird nur verwendet, *freq_type* wenn freq_type **8**, **16**oder **32**ist. *freq_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert **0**.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor` Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *freq_recurrence_factor* wird nur verwendet, *freq_type* wenn freq_type **8**, **16**oder **32**ist. *freq_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
-`[ @active_start_date = ] active_start_date`Das Datum, an dem die Ausführung eines Auftrags beginnen kann. *active_start_date* ist vom Datentyp **int**und hat den Standardwert NULL, der das heutige Datum angibt. Das Datum wird als YYYYMMDD formatiert. Wenn *active_start_date* nicht NULL ist, muss das Datum größer oder gleich 19900101 sein.  
+`[ @active_start_date = ] active_start_date` Das Datum, an dem die Ausführung eines Auftrags beginnen kann. *active_start_date* ist vom Datentyp **int**und hat den Standardwert NULL, der das heutige Datum angibt. Das Datum wird als YYYYMMDD formatiert. Wenn *active_start_date* nicht NULL ist, muss das Datum größer oder gleich 19900101 sein.  
   
  Überprüfen Sie nach dem Erstellen des Zeitplans, ob das Startdatum korrekt ist. Weitere Informationen finden Sie im Abschnitt "Planen des Start Datums" unter [Erstellen und Anfügen von Zeitplänen an Aufträge](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
  Bei wöchentlichen oder monatlichen Zeitplänen wird vom Agent nicht berücksichtigt, ob active_start_date in der Vergangenheit liegt, und das aktuelle Datum verwendet. Beim Erstellen eines SQL-Agentzeitplans mithilfe von sp_add_schedule kann der active_start_date-Parameter angegeben werden, der das Startdatum der Auftragsausführung darstellt. Wenn der Zeitplantyp "Wöchentlich" oder "Monatlich" lautet und der active_start_date-Parameter auf ein Datum in der Vergangenheit festgelegt ist, werden der active_start_date-Parameter ignoriert und das aktuelle Datum für active_start_date verwendet.  
   
-`[ @active_end_date = ] active_end_date`Das Datum, an dem die Ausführung eines Auftrags beendet werden kann. *active_end_date* ist vom Datentyp **int**und hat den Standardwert **99991231**, womit der 31. Dezember 9999 angegeben wird. Im Format JJJJMMTT.  
+`[ @active_end_date = ] active_end_date` Das Datum, an dem die Ausführung eines Auftrags beendet werden kann. *active_end_date* ist vom Datentyp **int**und hat den Standardwert **99991231**, womit der 31. Dezember 9999 angegeben wird. Im Format JJJJMMTT.  
   
-`[ @active_start_time = ] active_start_time`Die Uhrzeit an einem beliebigen Tag zwischen *active_start_date* und *active_end_date* , um die Ausführung eines Auftrags zu beginnen. *active_start_time* ist vom Datentyp **int**und hat den Standardwert **000000**, der 12:00:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @active_start_time = ] active_start_time` Die Uhrzeit an einem beliebigen Tag zwischen *active_start_date* und *active_end_date* , um die Ausführung eines Auftrags zu beginnen. *active_start_time* ist vom Datentyp **int**und hat den Standardwert **000000**, der 12:00:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
-`[ @active_end_time = ] active_end_time`Die Uhrzeit an einem beliebigen Tag zwischen *active_start_date* und *active_end_date* , um die Ausführung eines Auftrags zu beenden. *active_end_time* ist vom Datentyp **int**und hat den Standardwert **235959**, der 11:59:59 Uhr angibt. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @active_end_time = ] active_end_time` Die Uhrzeit an einem beliebigen Tag zwischen *active_start_date* und *active_end_date* , um die Ausführung eines Auftrags zu beenden. *active_end_time* ist vom Datentyp **int**und hat den Standardwert **235959**, der 11:59:59 Uhr angibt. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
-`[ @owner_login_name = ] 'owner_login_name'`Der Name des Server Prinzipals, der den Zeitplan besitzt. *owner_login_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL, womit angegeben wird, dass der Zeitplan dem Ersteller gehört.  
+`[ @owner_login_name = ] 'owner_login_name'` Der Name des Server Prinzipals, der den Zeitplan besitzt. *owner_login_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL, womit angegeben wird, dass der Zeitplan dem Ersteller gehört.  
   
-`[ @schedule_uid = ] _schedule_uidOUTPUT`Ein eindeutiger Bezeichner für den Zeitplan. *schedule_uid* ist eine Variable vom Typ " **uniqueidentifier**".  
+`[ @schedule_uid = ] _schedule_uidOUTPUT` Ein eindeutiger Bezeichner für den Zeitplan. *schedule_uid* ist eine Variable vom Typ " **uniqueidentifier**".  
   
-`[ @schedule_id = ] _schedule_idOUTPUT`Ein Bezeichner für den Zeitplan. *schedule_id* ist eine Variable vom Typ **int**.  
+`[ @schedule_id = ] _schedule_idOUTPUT` Ein Bezeichner für den Zeitplan. *schedule_id* ist eine Variable vom Typ **int**.  
   
 `[ @originating_server = ] server_name` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_scriptpublicationcustomprocs (Transact-SQL)
 title: sp_scriptpublicationcustomprocs (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19a7b793a1bd7a72941a8f07baba44c584e5d8f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d31a6f58b62d242fd6fe056eaac198fb0a7b7738
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481058"
 ---
 # <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication_name'`Der Name der Veröffentlichung. *publication_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standard.  
+`[ @publication = ] 'publication_name'` Der Name der Veröffentlichung. *publication_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standard.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -45,7 +46,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ## <a name="result-sets"></a>Resultsets  
  Gibt ein Resultset zurück, das aus einer einzelnen **nvarchar (4000)** -Spalte besteht. Das Resultset enthält die vollständige CREATE PROCEDURE-Anweisung, die zum Erstellen der benutzerdefinierten, gespeicherten Prozedur notwendig ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Für benutzerdefinierte Prozeduren wird nur bei Artikeln Skriptcode erstellt, für die die Schemaoption für das automatische Generieren von benutzerdefinierten Prozeduren (0x2) aktiviert ist.  
   
  Die folgenden Prozeduren werden von **Sp_scriptpublicationcustomprocs** zum Erstellen von Prozeduren auf dem Abonnenten verwendet und sollten nicht direkt ausgeführt werden:  

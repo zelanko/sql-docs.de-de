@@ -1,4 +1,5 @@
 ---
+description: sp_getmergedeletetype (Transact-SQL)
 title: sp_getmergedeletetype (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 406eb51a43b350a5e6f0f2d4723baab40a62ce5e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e430a763a5922a38c23fda241fd207edc3c91fa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481260"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +38,11 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @source_object = ] 'source_object'`Der Name des Quell Objekts. *source_object* ist vom Datentyp **nvarchar (386)** und hat keinen Standardwert.  
+`[ @source_object = ] 'source_object'` Der Name des Quell Objekts. *source_object* ist vom Datentyp **nvarchar (386)** und hat keinen Standardwert.  
   
-`[ @rowguid = ] 'rowguid'`Der Zeilen Bezeichner für den Lösch Datentyp. *ROWGUID* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert.  
+`[ @rowguid = ] 'rowguid'` Der Zeilen Bezeichner für den Lösch Datentyp. *ROWGUID* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert.  
   
-`[ @delete_type = ] delete_type OUTPUT`Der Code, der den Typ des Löschvorgang angibt. *delete_type* ist vom Datentyp **int**und hat keinen Standardwert. *delete_type* ist auch ein Output-Parameter und kann einen der folgenden Werte aufweisen.  
+`[ @delete_type = ] delete_type OUTPUT` Der Code, der den Typ des Löschvorgang angibt. *delete_type* ist vom Datentyp **int**und hat keinen Standardwert. *delete_type* ist auch ein Output-Parameter und kann einen der folgenden Werte aufweisen.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -49,7 +50,7 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 |**5**|Teilweiser Löschvorgang|  
 |**6**|Löschvorgang durch System|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_getmergedeletetype** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

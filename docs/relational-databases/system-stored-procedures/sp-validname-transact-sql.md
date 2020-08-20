@@ -1,4 +1,5 @@
 ---
+description: sp_validname (Transact-SQL)
 title: sp_validname (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86b1c7ec67a19e18dcc5daa6d14e55acc9b34c64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b448493ada2d6ec5d1073f194053463b463807b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480953"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,9 +42,9 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'`Der Name der Bezeichner [, für die die Gültigkeit](../../relational-databases/databases/database-identifiers.md) überprüft werden soll. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert. der *Name* darf nicht NULL sein, darf keine leere Zeichenfolge sein und darf kein binäres NULL-Zeichen enthalten.  
+`[ @name = ] 'name'` Der Name der Bezeichner [, für die die Gültigkeit](../../relational-databases/databases/database-identifiers.md) überprüft werden soll. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert. der *Name* darf nicht NULL sein, darf keine leere Zeichenfolge sein und darf kein binäres NULL-Zeichen enthalten.  
   
-`[ @raise_error = ] raise_error`Gibt an, ob ein Fehler ausgegeben werden soll. *raise_error* ist vom Typ **Bit**und hat den Standardwert 1. Dies bedeutet, dass Fehler auftreten. 0 bewirkt, dass keine Fehlermeldungen angezeigt werden.  
+`[ @raise_error = ] raise_error` Gibt an, ob ein Fehler ausgegeben werden soll. *raise_error* ist vom Typ **Bit**und hat den Standardwert 1. Dies bedeutet, dass Fehler auftreten. 0 bewirkt, dass keine Fehlermeldungen angezeigt werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -51,7 +52,7 @@ sp_validname [@name =] 'name'
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [NCHAR &#40;Transact-SQL-&#41;](../../t-sql/functions/nchar-transact-sql.md)   
