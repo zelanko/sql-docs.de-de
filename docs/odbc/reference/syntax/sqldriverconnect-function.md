@@ -1,8 +1,8 @@
 ---
-description: SQLDriveConnect-Funktion
 title: SQLDriverConnect-Funktion | Microsoft-Dokumentation
+description: Die SQLDriverConnect-Funktion ist Teil des ODBC-API-Standards, und diese Referenz Dokumentation enthält Informationen zur Syntax.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,32 +20,20 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6abdafe0a01d5c8182c5427c45545930c84e08e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9ff73c570e607f687ff8293587b8dbcef551926
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476143"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745900"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriveConnect-Funktion
 **Konformitäts**  
  Eingeführte Version: ODBC 1,0 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
- **SQLDriverConnect** ist eine Alternative zu **SQLCONNECT**. Es werden Datenquellen unterstützt, die mehr Verbindungsinformationen benötigen als die drei Argumente in **SQLCONNECT**, Dialogfeldern, um den Benutzer zur Eingabe von allen Verbindungsinformationen und Datenquellen aufzufordern, die nicht in den Systeminformationen definiert sind.  
-  
- **SQLDriverConnect** stellt die folgenden Verbindungs Attribute bereit:  
-  
--   Stellen Sie eine Verbindung mithilfe einer Verbindungs Zeichenfolge her, die den Datenquellen Namen, eine oder mehrere Benutzer-IDs, ein oder mehrere Kenn Wörter und andere Informationen enthält, die von der Datenquelle benötigt werden.  
-  
--   Herstellen einer Verbindung mithilfe einer partiellen Verbindungs Zeichenfolge oder ohne zusätzliche Informationen in diesem Fall können der Treiber-Manager und der Treiber alle den Benutzer zur Eingabe von Verbindungsinformationen auffordern.  
-  
--   Stellen Sie eine Verbindung mit einer Datenquelle her, die nicht in den Systeminformationen definiert ist. Wenn die Anwendung eine partielle Verbindungs Zeichenfolge bereitstellt, kann der Treiber den Benutzer zur Eingabe von Verbindungsinformationen auffordern.  
-  
--   Stellen Sie eine Verbindung mit einer Datenquelle her, indem Sie eine aus den Informationen in einer DSN-Datei erstellte Verbindungs Zeichenfolge verwenden.  
-  
- Nachdem eine Verbindung hergestellt wurde, gibt **SQLDriverConnect** die abgeschlossene Verbindungs Zeichenfolge zurück. Die Anwendung kann diese Zeichenfolge für nachfolgende Verbindungsanforderungen verwenden. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md).  
-  
+ **SQLDriverConnect** ist eine Alternative zu **SQLCONNECT**. Es werden Datenquellen unterstützt, die mehr Verbindungsinformationen benötigen als die drei Argumente in **SQLCONNECT**, Dialogfeldern, um den Benutzer zur Eingabe von allen Verbindungsinformationen und Datenquellen aufzufordern, die nicht in den Systeminformationen definiert sind. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQLDriverConnect](../develop-app/connecting-with-sqldriverconnect.md).  
+
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
@@ -92,13 +80,13 @@ SQLRETURN SQLDriverConnect(
   
  (Weitere Informationen finden Sie unter "Kommentare").  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLDriverConnect** entweder SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *ftortype* SQL_HANDLE_DBC und einem *hHandle* von *connectionHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLDriverConnect** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichen folgen Daten, rechts abgeschnitten|Der Puffer \* *outconnectionstring* war nicht groß genug, um die gesamte Verbindungs Zeichenfolge zurückzugeben, daher wurde die Verbindungs Zeichenfolge abgeschnitten. Die Länge der nicht abgeschnittene Verbindungs Zeichenfolge wird in **StringLength2Ptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -367,6 +355,6 @@ int main() {
 |Freigeben eines Handles|[SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Festlegen eines Verbindungs Attributs|[SQLSetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
