@@ -9,15 +9,15 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bc64949b0e636a6c64e7b0ef576613f6e02c5c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400966"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777719"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Überwachen der Auslastung in parallele Data Warehouse
-Überwachen Sie aktive und aktuelle ["dwloader-Lade](dwloader.md) Vorgänge mithilfe der Verwaltungskonsole von Analytics Platform System (APS) oder der [System Sichten](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)parallel Data Warehouse (PDW). 
+Überwachen Sie aktive und aktuelle ["dwloader-Lade](dwloader.md) Vorgänge mithilfe der Verwaltungskonsole von Analytics Platform System (APS) oder der [System Sichten](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)parallel Data Warehouse (PDW). 
   
 > [!TIP]  
 > Einige Ladungen werden mithilfe von INSERT-Anweisungen oder Business Intelligence Tools initiiert, die SQL-Anweisungen verwenden, um die Auslastung auszuführen. 
@@ -49,7 +49,7 @@ In diesen System Sichten finden Sie Informationen zu den Metadaten zu der Auslas
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
+-   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -58,9 +58,9 @@ In diesen System Sichten finden Sie Informationen zu den Metadaten zu der Auslas
 ### <a name="to-monitor-loads-by-using-system-views"></a>So überwachen Sie Ladungen mithilfe von System Sichten  
 Führen Sie die folgenden Schritte aus, um aktive und aktuelle Lasten mithilfe SQL Server PDW Ansichten zu überwachen. Informationen zu den Spalten und möglichen Werten, die von der Sicht zurückgegeben werden, finden Sie in der Dokumentation für diese Ansicht.  
   
-1.  Suchen Sie in der [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) -Sicht nach der Lade Befehlszeile in der- `command` Spalte für diese Ansicht. `request_id`  
+1.  Suchen Sie `request_id` in der [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) -Sicht nach der Lade Befehlszeile in der- `command` Spalte für diese Ansicht.  
   
-    Der folgende Befehl gibt z. b. den Befehls Text und den aktuellen Status sowie `request_id`den zurück.  
+    Der folgende Befehl gibt z. b. den Befehls Text und den aktuellen Status sowie den zurück `request_id` .  
   
     ```sql  
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
@@ -83,4 +83,3 @@ Führen Sie die folgenden Schritte aus, um aktive und aktuelle Lasten mithilfe S
 ## See Also  
 [Common metadata query examples](metadata-query-examples.md)
 -->  
-  

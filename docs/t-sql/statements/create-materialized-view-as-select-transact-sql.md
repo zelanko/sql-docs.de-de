@@ -1,4 +1,5 @@
 ---
+description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
 title: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2020
@@ -37,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 221b26f59feb3c51ade10fd4923f30e1ade91fbf
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444837"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -108,7 +109,7 @@ Wenn MIN/MAX-Aggregate in der SELECT-Liste der Definition der materialisierten S
   
 ## <a name="remarks"></a>Bemerkungen
 
-Eine materialisierte Sicht in Azure Data Warehouse ähnelt einer indizierten Sicht in SQL Server.  Es gelten fast die gleichen Einschränkungen wie für eine indizierte Sicht (Details siehe [Erstellen indizierter Sichten](/sql/relational-databases/views/create-indexed-views)) – abgesehen davon, dass eine materialisierte Sicht Aggregatfunktionen unterstützt.   
+Eine materialisierte Sicht in Azure Data Warehouse ähnelt einer indizierten Sicht in SQL Server.Es gelten fast die gleichen Einschränkungen wie für eine indizierte Sicht (Details siehe [Erstellen indizierter Sichten](/sql/relational-databases/views/create-indexed-views)) – abgesehen davon, dass eine materialisierte Sicht Aggregatfunktionen unterstützt.   
 
 Eine materialisierte Sicht unterstützt nur CLUSTERED COLUMNSTORE INDEX. 
 
@@ -142,7 +143,8 @@ Um herauszufinden, ob eine SQL-Anweisung von einer neuen materialisierten Sicht 
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die CREATE VIEW-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema, in dem die Sicht erstellt wird. 
+Erfordert entweder die Berechtigungen REFERENCES und CREATE VIEW oder die Berechtigung CONTROL in dem Schema, in dem die Sicht erstellt wird. 
+
   
 ## <a name="see-also"></a>Weitere Informationen
 

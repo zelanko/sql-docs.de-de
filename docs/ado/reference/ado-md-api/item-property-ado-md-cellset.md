@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92f81199f52323e1e317c27b5206ebe69e674879
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440962"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778069"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item-Eigenschaft (ADO MD Cellset)
-Ruft eine Zelle aus einem [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) mithilfe ihrer Koordinaten ab.  
+Ruft eine Zelle aus einem [Cellset](./cellset-object-ado-md.md) mithilfe ihrer Koordinaten ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ Cell = Cellset.Item ( Positions)
 -   Die Ordinalposition  
   
 ## <a name="remarks"></a>Bemerkungen  
- Verwenden Sie die **Item** -Eigenschaft, um ein [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) -Objekt in einem [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) -Objekt zurückzugeben. Wenn die **Item** -Eigenschaft die Zelle nicht finden kann, die dem *Positions* Argument entspricht, tritt ein Fehler auf.  
+ Verwenden Sie die **Item** -Eigenschaft, um ein [Cell](./cell-object-ado-md.md) -Objekt in einem [Cellset](./cellset-object-ado-md.md) -Objekt zurückzugeben. Wenn die **Item** -Eigenschaft die Zelle nicht finden kann, die dem *Positions* Argument entspricht, tritt ein Fehler auf.  
   
  Die **Item** -Eigenschaft ist die Standard Eigenschaft für das **Cellset** -Objekt. Die folgenden Syntax Formen sind austauschbar:  
   
@@ -66,8 +66,8 @@ Cellset.Item ( Positions )Cellset ( Positions )
 >  Das Abrufen von Zellen nach Elementnamen wird vom Datenanbieter möglicherweise nicht unterstützt. Weitere Informationen finden Sie in der Dokumentation für Ihren Anbieter.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Cellset-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [Cellset-Objekt (ADO MD)](./cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Cell-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Cellset-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+ [Cell-Objekt (ADO MD)](./cell-object-ado-md.md)   
+ [Cellset-Objekt (ADO MD)](./cellset-object-ado-md.md)

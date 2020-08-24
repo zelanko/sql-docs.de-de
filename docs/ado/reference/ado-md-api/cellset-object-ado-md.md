@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f30243440d9b09194bd3cd1c7ed5a162ad8de34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65e5e28443fd4656aa2b953f18b07c952bcbb66a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441212"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778309"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset-Objekt (ADO MD)
 Stellt die Ergebnisse einer mehrdimensionalen Abfrage dar. Es handelt sich um eine Sammlung von Zellen, die aus Cubes oder anderen Cellsets ausgewählt wurden.  
@@ -34,35 +34,35 @@ cst.Axes(0).Positions(0).Members(0).Caption
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
- Es gibt kein Konzept einer aktiven Zelle in einem CellSet. Stattdessen ruft die [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) -Eigenschaft ein bestimmtes [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) -Objekt aus dem Cellset ab. Die Argumente der **Item** -Eigenschaft bestimmen, welche Zelle abgerufen wird. Sie können den eindeutigen Ordinalwert einer Zelle angeben. Sie können auch Zellen abrufen, indem Sie Ihre Positionsnummern entlang der einzelnen Achsen der Cellsets verwenden. Weitere Informationen zum Abrufen von Zellen finden Sie unter der [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) -Eigenschaft.  
+ Es gibt kein Konzept einer aktiven Zelle in einem CellSet. Stattdessen ruft die [Item](./item-property-ado-md-cellset.md) -Eigenschaft ein bestimmtes [Cell](./cell-object-ado-md.md) -Objekt aus dem Cellset ab. Die Argumente der **Item** -Eigenschaft bestimmen, welche Zelle abgerufen wird. Sie können den eindeutigen Ordinalwert einer Zelle angeben. Sie können auch Zellen abrufen, indem Sie Ihre Positionsnummern entlang der einzelnen Achsen der Cellsets verwenden. Weitere Informationen zum Abrufen von Zellen finden Sie unter der [Item](./item-property-ado-md-cellset.md) -Eigenschaft.  
   
  Mit den Auflistungen, Methoden und Eigenschaften eines **Cellset** -Objekts können Sie folgende Aufgaben ausführen:  
   
--   Ordnen Sie eine geöffnete Verbindung einem **Cellset** -Objekt zu, indem Sie die zugehörige [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) -Eigenschaft festlegen.  
+-   Ordnen Sie eine geöffnete Verbindung einem **Cellset** -Objekt zu, indem Sie die zugehörige [ActiveConnection](./activeconnection-property-ado-md.md) -Eigenschaft festlegen.  
   
--   Führen Sie aus, und rufen Sie die Ergebnisse einer mehrdimensionalen Abfrage mit der [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) -Methode ab.  
+-   Führen Sie aus, und rufen Sie die Ergebnisse einer mehrdimensionalen Abfrage mit der [Open](./open-method-ado-md.md) -Methode ab.  
   
--   Ruft eine **Zelle** aus dem **Cellset** mit der [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) -Eigenschaft ab.  
+-   Ruft eine **Zelle** aus dem **Cellset** mit der [Item](./item-property-ado-md-cellset.md) -Eigenschaft ab.  
   
--   Gibt die [Achsen](../../../ado/reference/ado-md-api/axis-object-ado-md.md) Objekte zurück, die das **Cellset** mit der [Achsen](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) Auflistung definieren.  
+-   Gibt die [Achsen](./axis-object-ado-md.md) Objekte zurück, die das **Cellset** mit der [Achsen](./axes-collection-ado-md.md) Auflistung definieren.  
   
--   Rufen Sie Informationen zu den Dimensionen ab, die zum Filtern der Daten im **Cellset** mit der [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) -Eigenschaft verwendet werden.  
+-   Rufen Sie Informationen zu den Dimensionen ab, die zum Filtern der Daten im **Cellset** mit der [FilterAxis](./filteraxis-property-ado-md.md) -Eigenschaft verwendet werden.  
   
--   Gibt die Abfrage zurück, die zum Definieren des **Cellsets** mit der [Source](../../../ado/reference/ado-md-api/source-property-ado-md.md) -Eigenschaft verwendet wird.  
+-   Gibt die Abfrage zurück, die zum Definieren des **Cellsets** mit der [Source](./source-property-ado-md.md) -Eigenschaft verwendet wird.  
   
--   Gibt den aktuellen Status des **Cellsets** (öffnen, schließen, ausführen oder verbinden) mit der [State](../../../ado/reference/ado-md-api/state-property-ado-md.md) -Eigenschaft zurück.  
+-   Gibt den aktuellen Status des **Cellsets** (öffnen, schließen, ausführen oder verbinden) mit der [State](./state-property-ado-md.md) -Eigenschaft zurück.  
   
--   Schließen Sie ein geöffnetes **Cellset** mit der [Close](../../../ado/reference/ado-md-api/close-method-ado-md.md) -Methode.  
+-   Schließen Sie ein geöffnetes **Cellset** mit der [Close](./close-method-ado-md.md) -Methode.  
   
--   Abrufen von anbieterspezifischen Informationen über das **Cellset** mit der standardmäßigen ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung.  
+-   Abrufen von anbieterspezifischen Informationen über das **Cellset** mit der standardmäßigen ADO [Properties](../ado-api/properties-collection-ado.md) -Auflistung.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
+-   [Eigenschaften, Methoden und Ereignisse](./cellset-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Cellset-Beispiel (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Achsen Auflistung (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
- [Cell-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Cellset-Beispiel (VB)](./cellset-example-vb.md)   
+ [Achsen Auflistung (ADO MD)](./axes-collection-ado-md.md)   
+ [Cell-Objekt (ADO MD)](./cell-object-ado-md.md)   
+ [Verbindungs Objekt (ADO)](../ado-api/connection-object-ado.md)   
+ [Properties-Collection (ADO)](../ado-api/properties-collection-ado.md)

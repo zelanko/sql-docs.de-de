@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd651e44bdea402e2c3f4dec5d142fb26709e110
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15592ff2f34744deb220748b31c4c97957982d4d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440712"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777799"
 ---
 # <a name="value-property-ado-md"></a>Value-Eigenschaft (ADO MD)
-Gibt den Wert der aktuellen [Zelle](../../../ado/reference/ado-md-api/cell-object-ado-md.md)an.  
+Gibt den Wert der aktuellen [Zelle](./cell-object-ado-md.md)an.  
   
 ## <a name="return-values"></a>Rückgabewerte  
  Gibt eine **Variante** zurück und ist schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Cell-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
+ [Cell-Objekt (ADO MD)](./cell-object-ado-md.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [FormattedValue-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)
+ [FormattedValue-Eigenschaft (ADO MD)](./formattedvalue-property-ado-md.md)

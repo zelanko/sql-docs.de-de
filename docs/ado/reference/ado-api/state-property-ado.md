@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca8a2421f15e5999347b0b7879f3faf707598ba2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14e9a083c9f80d2c6485a9444211a2796b7fabee
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441982"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777349"
 ---
 # <a name="state-property-ado"></a>State-Eigenschaft (ADO)
 Gibt für alle anwendbaren Objekte an, ob der Status des Objekts geöffnet oder geschlossen ist. Wenn das-Objekt eine asynchrone Methode ausführt, gibt an, ob der aktuelle Zustand des Objekts eine Verbindung herstellt, wird ausgeführt oder abgerufen wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt einen **Long** -Wert zurück, der ein [objectstateenum](../../../ado/reference/ado-api/objectstateenum.md) -Wert sein kann. Der Standardwert ist " **adStatus eclosed**".  
+ Gibt einen **Long** -Wert zurück, der ein [objectstateenum](./objectstateenum.md) -Wert sein kann. Der Standardwert ist " **adStatus eclosed**".  
   
 ## <a name="remarks"></a>Bemerkungen  
  Sie können die **State** -Eigenschaft verwenden, um den aktuellen Status eines bestimmten Objekts zu einem beliebigen Zeitpunkt zu bestimmen.  
@@ -40,18 +40,18 @@ Gibt für alle anwendbaren Objekte an, ob der Status des Objekts geöffnet oder 
 
 :::row:::
     :::column:::
-        [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
-        [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Command-Objekt (ADO)](./command-object-ado.md)  
+        [Connection-Objekt (ADO)](./connection-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
-        [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Record-Objekt (ADO)](./record-object-ado.md)  
+        [Recordset-Objekt (ADO)](./recordset-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Stream-Objekt (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für ConnectionString, ConnectionTimeout und State Properties (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [Beispiel für ConnectionString, ConnectionTimeout und State Properties (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [Beispiel für ConnectionString, ConnectionTimeout und State Properties (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [Beispiel für ConnectionString, ConnectionTimeout und State Properties (VC + +)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)

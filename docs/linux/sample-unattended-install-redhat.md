@@ -1,7 +1,7 @@
 ---
 title: Unbeaufsichtigte Installation von SQL Server unter Red Hat Enterprise Linux (RHEL)
 titleSuffix: SQL Server
-description: 'SQL Server-Beispielskript: unbeaufsichtigte Installation unter Red Hat Enterprise Linux (RHEL)'
+description: Verwenden Sie ein Bash-Beispielskript, um SQL Server 2017 ohne interaktive Eingaben unter Red Hat Enterprise Linux (RHEL) zu installieren.
 ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
@@ -9,12 +9,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a5681a7700e77d0cc5fd4afb7267a21f298c1f87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fda9b1459cf7cd0b15252cfb0e51e0d3ad4e9374
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894135"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089021"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Beispiel: Skript für eine unbeaufsichtigte SQL Server-Installation für Red Hat Enterprise Linux
 

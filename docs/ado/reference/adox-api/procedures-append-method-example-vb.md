@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85b13a87e09d7c95ecad8b6ed283b8d8066b22f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8b9b58c50a1e3c77a6239c73222ea7a1656b882
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439632"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769639"
 ---
 # <a name="procedures-append-method-example-vb"></a>Append-Methode für Prozeduren – Beispiel(VB)
-Der folgende Code veranschaulicht, wie ein [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt und die [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md) -Auflistungs [Methode zum](../../../ado/reference/adox-api/append-method-adox-procedures.md) Erstellen einer neuen Prozedur in der zugrunde liegenden Datenquelle verwendet werden.  
+Der folgende Code veranschaulicht, wie ein [Befehls](../ado-api/command-object-ado.md) Objekt und die [Prozeduren](./procedures-collection-adox.md) -Auflistungs [Methode zum](./append-method-adox-procedures.md) Erstellen einer neuen Prozedur in der zugrunde liegenden Datenquelle verwendet werden.  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -75,8 +75,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ActiveConnection-Eigenschaft (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append-Methode (ADOX-Prozeduren)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Procedure-Objekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures Collection (ADOX) (Procedures-Auflistung (ADOX))](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection-Eigenschaft (ADOX)](./activeconnection-property-adox.md)   
+ [Append-Methode (ADOX-Prozeduren)](./append-method-adox-procedures.md)   
+ [Catalog-Objekt (ADOX)](./catalog-object-adox.md)   
+ [Procedure-Objekt (ADOX)](./procedure-object-adox.md)   
+ [Procedures-Collection (ADOX)](./procedures-collection-adox.md)

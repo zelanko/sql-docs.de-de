@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc3661ef36c0b763ca6b0f04f52e4713d59b9a19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73feb1e20320a418804666e11cb2410ab4451c52
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441112"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778199"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension-Objekt (ADO MD)
 Stellt eine der Dimensionen eines mehrdimensionalen Cubes dar, der mindestens eine Hierarchien von Membern enthält.  
@@ -29,13 +29,13 @@ Stellt eine der Dimensionen eines mehrdimensionalen Cubes dar, der mindestens ei
 ## <a name="remarks"></a>Bemerkungen  
  Mit den Auflistungen und Eigenschaften eines **Dimensions** Objekts können Sie folgende Aufgaben ausführen:  
   
--   Identifizieren Sie die **Dimension** mit den Eigenschaften " [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) " und " [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) ".  
+-   Identifizieren Sie die **Dimension** mit den Eigenschaften " [Name](./name-property-ado-md.md) " und " [UniqueName](./uniquename-property-ado-md.md) ".  
   
--   Gibt eine sinnvolle Zeichenfolge zurück, die die **Dimension** mit der [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) -Eigenschaft beschreibt.  
+-   Gibt eine sinnvolle Zeichenfolge zurück, die die **Dimension** mit der [Description](./description-property-ado-md.md) -Eigenschaft beschreibt.  
   
--   Gibt die [Hierarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) Objekte zurück, die die **Dimension** mit der [Hierarchien](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md) -Auflistung bilden.  
+-   Gibt die [Hierarchie](./hierarchy-object-ado-md.md) Objekte zurück, die die **Dimension** mit der [Hierarchien](./hierarchies-collection-ado-md.md) -Auflistung bilden.  
   
--   Verwenden Sie die standardmäßige ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung, um zusätzliche Informationen über das **Dimensions** Objekt zu erhalten.  
+-   Verwenden Sie die standardmäßige ADO [Properties](../ado-api/properties-collection-ado.md) -Auflistung, um zusätzliche Informationen über das **Dimensions** Objekt zu erhalten.  
   
  Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
@@ -56,11 +56,11 @@ Stellt eine der Dimensionen eines mehrdimensionalen Cubes dar, der mindestens ei
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
+-   [Eigenschaften, Methoden und Ereignisse](./dimension-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CubeDef-Beispiel (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [CubeDef-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
- [Dimensions Auflistung (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [Hierarchien-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
- [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [CubeDef-Beispiel (VBScript)](./cubedef-example-vbscript.md)   
+ [CubeDef-Objekt (ADO MD)](./cubedef-object-ado-md.md)   
+ [Dimensions Auflistung (ADO MD)](./dimensions-collection-ado-md.md)   
+ [Hierarchien-Auflistung (ADO MD)](./hierarchies-collection-ado-md.md)   
+ [Properties-Collection (ADO)](../ado-api/properties-collection-ado.md)

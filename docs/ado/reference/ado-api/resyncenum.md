@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c379ca2a3f68b195c0020d0e89009d2715da5850
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: addaaa07b14b88ed7d72714ba8698da1f2ef2ac9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442252"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777639"
 ---
 # <a name="resyncenum"></a>ResyncEnum
-Gibt an, ob zugrunde liegende Werte durch einen Rückruf von [Resync](../../../ado/reference/ado-api/resync-method.md)überschrieben werden.  
+Gibt an, ob zugrunde liegende Werte durch einen Rückruf von [Resync](./resync-method.md)überschrieben werden.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|Standard. Überschreibt Daten, und ausstehende Updates werden abgebrochen.|  
 |**adresyncunderlyingvalues**|1|Daten werden nicht überschrieben, und ausstehende Updates werden nicht abgebrochen.|  
@@ -34,10 +34,10 @@ Gibt an, ob zugrunde liegende Werte durch einen Rückruf von [Resync](../../../a
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |Adoenumerations. Resync. AllValues|  
 |Adoenumerations. Resync. underlyingvalues|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Resync-Methode](../../../ado/reference/ado-api/resync-method.md)
+ [Resync-Methode](./resync-method.md)

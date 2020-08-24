@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4e09c5775d87d3339a4965b587828c613ed89fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a537ed684fb3f39d89af8c7f95d4e2f1abdb140
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452272"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759857"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>Konfigurieren von virtuellen Servern unter IIS
 Wenn Sie virtuelle Server in Internetinformationsdienste 4,0 erstellen, sind die folgenden beiden zusätzlichen Schritte erforderlich, um den virtuellen Server für die Zusammenarbeit mit RDS zu konfigurieren:  
@@ -31,6 +31,4 @@ Wenn Sie virtuelle Server in Internetinformationsdienste 4,0 erstellen, sind die
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Grundlegendes zu RDS](./rds-fundamentals.md)

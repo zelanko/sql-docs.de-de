@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbd0d9088ea39d604c53c462448ae1c94b3a9052
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0376017e4ab74822a076379385b4b5ab457afca0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439782"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769959"
 ---
 # <a name="name-property-adox"></a>Name-Eigenschaft (ADOX)
 Gibt den Namen des Objekts an.  
@@ -58,7 +58,7 @@ Gibt den Namen des Objekts an.
 ## <a name="remarks"></a>Bemerkungen  
  Namen müssen innerhalb einer Sammlung nicht eindeutig sein.  
   
- Die **Name** -Eigenschaft ist Lese- [/Schreibzugriff](../../../ado/reference/adox-api/table-object-adox.md)auf [Spalten](../../../ado/reference/adox-api/column-object-adox.md)-, [Gruppen](../../../ado/reference/adox-api/group-object-adox.md)-, [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md)-, [Index](../../../ado/reference/adox-api/index-object-adox.md)-, Tabellen-und [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) Objekte. Die **Name** -Eigenschaft ist für [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md)-, [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md)-und [Ansichts](../../../ado/reference/adox-api/view-object-adox.md) Objekte schreibgeschützt.  
+ Die **Name** -Eigenschaft ist Lese- [/Schreibzugriff](./table-object-adox.md)auf [Spalten](./column-object-adox.md)-, [Gruppen](./group-object-adox.md)-, [Schlüssel](./key-object-adox.md)-, [Index](./index-object-adox.md)-, Tabellen-und [Benutzer](./user-object-adox.md) Objekte. Die **Name** -Eigenschaft ist für [Katalog](./catalog-object-adox.md)-, [Prozedur](./procedure-object-adox.md)-und [Ansichts](./view-object-adox.md) Objekte schreibgeschützt.  
   
  Für Objekte mit Lese- **/Schreibzugriff** (**Spalten**-, **Gruppen**-, **Schlüssel**-, **Index**-, Tabellen-und **Benutzer** Objekte) ist der Standardwert eine leere Zeichenfolge ("").  
   
@@ -69,23 +69,23 @@ Gibt den Namen des Objekts an.
 
 :::row:::
     :::column:::
-        [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
-        [Group-Objekt (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
-        [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+        [Column-Objekt (ADOX)](./column-object-adox.md)  
+        [Group-Objekt (ADOX)](./group-object-adox.md)  
+        [Index-Objekt (ADOX)](./index-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
-        [Procedure Object (ADOX) (Procedure-Objekt (ADOX))](../../../ado/reference/adox-api/procedure-object-adox.md)  
-        [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Key-Objekt (ADOX)](./key-object-adox.md)  
+        [Procedure-Objekt (ADOX)](./procedure-object-adox.md)  
+        [Property-Objekt (ADO)](../ado-api/property-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
-        [User-Objekt (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
-        [View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+        [Table-Objekt (ADOX)](./table-object-adox.md)  
+        [User-Objekt (ADOX)](./user-object-adox.md)  
+        [View-Objekt (ADOX)](./view-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Weitere Informationen  
- [Methoden und Tabellen Append-Methoden, Name Property example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ParentCatalog-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
+ [Methoden und Tabellen Append-Methoden, Name Property example (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ParentCatalog-Eigenschaft – Beispiel (VB)](./parentcatalog-property-example-vb.md)

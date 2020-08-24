@@ -1,6 +1,6 @@
 ---
 title: Installieren der SQL Server-Volltextsuche unter Linux
-description: In diesem Artikel wird beschrieben, wie die SQL Server-Volltextsuche unter Linux installiert wird.
+description: Erfahren Sie, wie Sie die SQL Server-Volltextsuche unter Linux installieren. Mit der Volltextsuche können Sie Volltextabfragen für zeichenbasierte Daten in SQL Server-Tabellen ausführen.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 781730767836eab18f613c9c1e99e0279635f7b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 054de1a7f4213a7a8c23ff44bab021d2b64c9f35
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895285"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088780"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installieren der SQL Server-Volltextsuche unter Linux
 
@@ -134,10 +134,10 @@ Bei der Volltextsuche werden [Wörtertrennungen](../relational-databases/search/
 | Spanisch | 3082 |
 | Schwedisch | 1053 |
 | Tamilisch | 1097 |
-| Telugu | 1\.098 |
-| Thailändisch | 1054 |
+| Telugu | 1.098 |
+| Thai | 1054 |
 | Chinesisch (traditionell) | 1028 |
-| Türkisch | 1\.055 |
+| Türkisch | 1.055 |
 | Ukrainisch | 1058 |
 | Urdu | 1056 |
 | Vietnamesisch | 1066 |

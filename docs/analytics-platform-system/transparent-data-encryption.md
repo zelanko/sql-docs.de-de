@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f80767ef3b371260e916aef386dd1c8dbc755586
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289748"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777729"
 ---
 # <a name="transparent-data-encryption"></a>Transparente Datenverschlüsselung
 Sie können verschiedene Vorsichtsmaßnahmen zum Schützen der Datenbank treffen, z.B. Entwerfen eines sicheren Systems, Verschlüsseln vertraulicher Datenbestände und Erstellen einer Firewall für die Datenbankserver. In einem Szenario, in dem die physischen Medien (z. b. Laufwerke oder Sicherungsbänder) gestohlen werden, kann eine böswillige Partei jedoch die Datenbank einfach wiederherstellen oder Anfügen und die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
@@ -52,9 +52,9 @@ Führen Sie folgende Schritte aus, um TDE zu verwenden: Die ersten drei Schritte
   
 6.  Erstellen Sie in der Benutzerdatenbank einen Verschlüsselungsschlüssel für die Datenbank, und schützen Sie ihn durch das Zertifikat, das in der Master-Datenbank gespeichert ist.  
   
-7.  Verwenden Sie `ALTER DATABASE` die-Anweisung, um die Datenbank mithilfe von TDE zu verschlüsseln.  
+7.  Verwenden Sie die- `ALTER DATABASE` Anweisung, um die Datenbank mithilfe von TDE zu verschlüsseln.  
   
-Das folgende Beispiel veranschaulicht das Verschlüsseln der `AdventureWorksPDW2012` -Datenbank mithilfe eines Zertifikats `MyServerCert`namens, das in SQL Server PDW erstellt wurde.  
+Das folgende Beispiel veranschaulicht das Verschlüsseln der- `AdventureWorksPDW2012` Datenbank mithilfe eines Zertifikats namens `MyServerCert` , das in SQL Server PDW erstellt wurde.  
   
 **Zuerst: Aktivieren Sie TDE für die SQL Server PDW.** Diese Aktion ist nur einmal erforderlich.  
   
@@ -108,7 +108,7 @@ ALTER DATABASE AdventureWorksPDW2012 SET ENCRYPTION ON;
 GO  
 ```  
   
-Die Verschlüsselungs-und Entschlüsselungs Vorgänge werden von SQL Server für Hintergrundthreads geplant. Sie können den Status dieser Vorgänge mithilfe der Katalog Sichten und dynamischen Verwaltungs Sichten in der Liste anzeigen, die später in diesem Artikel angezeigt wird.  
+Die Verschlüsselungs- und Entschlüsselungsvorgänge werden von SQL Server in geplanten Hintergrundthreads ausgeführt. Sie können den Status dieser Vorgänge mithilfe der Katalog Sichten und dynamischen Verwaltungs Sichten in der Liste anzeigen, die später in diesem Artikel angezeigt wird.  
   
 > [!CAUTION]  
 > Sicherungsdateien von Datenbanken, für die TDE aktiviert wurde, werden ebenfalls mithilfe des Verschlüsselungsschlüssels für die Datenbank verschlüsselt. Darum muss bei der Wiederherstellung dieser Sicherungen das Zertifikat, das zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet wurde, verfügbar sein. Dies bedeutet, dass Sie zusätzlich zur Sicherung der Datenbank auch Sicherungskopien der Serverzertifikate aufbewahren müssen, um einem Datenverlust vorzubeugen. Ist das Zertifikat nicht mehr verfügbar, kann es zu einem Datenverlust kommen.  
@@ -123,7 +123,7 @@ Die folgende Tabelle bietet Links und Erläuterungen zu den Befehlen und Funktio
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Erstellt einen Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
 |[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Ändert den Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
 |[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Entfernt den Schlüssel, der verwendet wurde, um eine Datenbank zu verschlüsseln.|  
-|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Erklärt die **ALTER DATABASE** -Option, mit der TDE aktiviert wird.|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Erläutert die **ALTER DATABASE** -Option, die verwendet wird, um TDE zu aktivieren.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Katalogsichten und dynamische Verwaltungssichten  
 In der folgenden Tabelle werden die Katalogsichten und die dynamischen Verwaltungssichten von TDE erläutert.  
@@ -137,7 +137,7 @@ In der folgenden Tabelle werden die Katalogsichten und die dynamischen Verwaltun
 ## <a name="permissions"></a>Berechtigungen  
 Jede Funktion und jeder Befehl von TDE erfordert bestimmte Berechtigungen, die in den zuvor gezeigten Tabellen beschrieben wurden.  
   
-Zum Anzeigen der an TDE beteiligten Metadaten ist `CONTROL SERVER` die-Berechtigung erforderlich.  
+Zum Anzeigen der an TDE beteiligten Metadaten ist die- `CONTROL SERVER` Berechtigung erforderlich.  
   
 ## <a name="considerations"></a>Überlegungen  
 Während eine erneute Verschlüsselungsprüfung für einen Datenbankverschlüsselungsvorgang ausgeführt wird, sind Wartungsvorgänge für die Datenbank deaktiviert.  
@@ -145,7 +145,7 @@ Während eine erneute Verschlüsselungsprüfung für einen Datenbankverschlüsse
 Sie können den Status der Datenbankverschlüsselung mithilfe der dynamischen Verwaltungs Sicht **sys. dm_pdw_nodes_database_encryption_keys** ermitteln. Weitere Informationen finden Sie weiter oben in diesem Artikel im Abschnitt *Katalog Sichten und dynamische Verwaltungs Sichten* .  
   
 ### <a name="restrictions"></a>Beschränkungen  
-Die folgenden `CREATE DATABASE ENCRYPTION KEY`Vorgänge sind während der-, `ALTER DATABASE ENCRYPTION KEY` `DROP DATABASE ENCRYPTION KEY`-,-oder `ALTER DATABASE...SET ENCRYPTION` -Anweisungen nicht zulässig.  
+Die folgenden Vorgänge sind während der-,-,-oder-Anweisungen nicht zulässig `CREATE DATABASE ENCRYPTION KEY` `ALTER DATABASE ENCRYPTION KEY` `DROP DATABASE ENCRYPTION KEY` `ALTER DATABASE...SET ENCRYPTION` .  
   
 -   Löschen der Datenbank.  
   
@@ -155,7 +155,7 @@ Die folgenden `CREATE DATABASE ENCRYPTION KEY`Vorgänge sind während der-, `ALT
   
 -   Eine Daten Bank Wiederherstellung wird gestartet.  
   
-Die folgenden `CREATE DATABASE ENCRYPTION KEY`Vorgänge oder Bedingungen verhindern die-, `ALTER DATABASE ENCRYPTION KEY` `DROP DATABASE ENCRYPTION KEY`-,- `ALTER DATABASE...SET ENCRYPTION` oder-Anweisungen.  
+Die folgenden Vorgänge oder Bedingungen verhindern die-,-,- `CREATE DATABASE ENCRYPTION KEY` `ALTER DATABASE ENCRYPTION KEY` oder- `DROP DATABASE ENCRYPTION KEY` `ALTER DATABASE...SET ENCRYPTION` Anweisungen.  
   
 -   Ein `ALTER DATABASE` Befehl wird ausgeführt.  
   
@@ -173,7 +173,7 @@ Die von TDE geschützten Daten werden entschlüsselt, wenn Sie in SQL Server PDW
 Die Master-Datenbank wird nicht durch TDE geschützt. Obwohl die Master-Datenbank keine Benutzerdaten enthält, enthält Sie Informationen, wie z. b. Anmelde Namen.  
   
 ### <a name="transparent-data-encryption-and-transaction-logs"></a>Transparente Datenverschlüsselung und Transaktionsprotokolle  
-Wenn eine Datenbank für die Verwendung von TDE aktiviert wird, hat dies den Effekt, dass der verbleibende Teil des virtuellen Transaktions Protokolls zerrochen wird, um das nächste virtuelle Transaktionsprotokoll zu erzwingen. Dies gewährleistet, dass in den Transaktionsprotokollen kein Klartext verbleibt, nachdem die Datenbank für die Verschlüsselung eingerichtet wurde. Sie können den Status der Protokolldatei Verschlüsselung auf jedem PDW-Knoten ermitteln, indem Sie `encryption_state` die-Spalte `sys.dm_pdw_nodes_database_encryption_keys` in der-Sicht anzeigen, wie in diesem Beispiel gezeigt:  
+Wenn eine Datenbank für die Verwendung von TDE aktiviert wird, hat dies den Effekt, dass der verbleibende Teil des virtuellen Transaktions Protokolls zerrochen wird, um das nächste virtuelle Transaktionsprotokoll zu erzwingen. Dies gewährleistet, dass in den Transaktionsprotokollen kein Klartext verbleibt, nachdem die Datenbank für die Verschlüsselung eingerichtet wurde. Sie können den Status der Protokolldatei Verschlüsselung auf jedem PDW-Knoten ermitteln, indem Sie die- `encryption_state` Spalte in der- `sys.dm_pdw_nodes_database_encryption_keys` Sicht anzeigen, wie in diesem Beispiel gezeigt:  
   
 ```sql  
 WITH dek_encryption_state AS   
@@ -207,7 +207,7 @@ Der Datenbank-Verschlüsselungsschlüssel (Database Encryption Key, DEK) wird du
   
 Das System kann auf die Schlüssel zugreifen, ohne dass ein Benutzereingriff erforderlich ist (z. b. ein Kennwort). Wenn das Zertifikat nicht verfügbar ist, gibt das System einen Fehler aus, der erklärt, dass der DEK nicht entschlüsselt werden kann, bis das richtige Zertifikat verfügbar ist.  
   
-Wenn eine Datenbank von einem Gerät in ein anderes verschoben wird, muss das Zertifikat, das zum Schutz seiner DEK verwendet wird, zuerst auf dem Zielserver wieder hergestellt werden. Anschließend kann die Datenbank wie gewohnt wieder hergestellt werden. Weitere Informationen finden Sie in der Standard SQL Server-Dokumentation unter [Verschieben einer TDE-geschützten Datenbank in eine andere SQL Server](https://technet.microsoft.com/library/ff773063.aspx).  
+Wenn eine Datenbank von einem Gerät in ein anderes verschoben wird, muss das Zertifikat, das zum Schutz seiner DEK verwendet wird, zuerst auf dem Zielserver wieder hergestellt werden. Anschließend kann die Datenbank wie gewohnt wieder hergestellt werden. Weitere Informationen finden Sie in der Standard SQL Server-Dokumentation unter [Verschieben einer TDE-geschützten Datenbank in eine andere SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md?view=sql-server-ver15).  
   
 Zertifikate, die zum Verschlüsseln von-Zertifikaten verwendet werden, sollten beibehalten werden, solange Sie Datenbanksicherungen verwenden, die Sie verwenden. Zertifikat Sicherungen müssen den privaten Schlüssel des Zertifikats enthalten, da ein Zertifikat ohne den privaten Schlüssel nicht für die Daten Bank Wiederherstellung verwendet werden kann. Die Sicherungen des privaten Zertifikat Schlüssels werden in einer separaten Datei gespeichert, die durch ein Kennwort geschützt ist, das für die Zertifikat Wiederherstellung bereitgestellt werden muss.  
   
@@ -244,7 +244,7 @@ Beispiel für die Aktion zum Ersetzen einer virtuellen Maschine.
   
 `setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
-Wenn beim Upgrade eine Benutzer-DB verschlüsselt ist und das DMK-Kennwort nicht angegeben wird, tritt bei der Upgradeaktion ein Fehler auf. Wenn während des Ersetzens kein gültiges Kennwort angegeben wird, wenn ein DMK vorhanden ist, überspringt der Vorgang den Wiederherstellungs Schritt von DMK. Alle anderen Schritte werden am Ende der Aktion "VM ersetzen" abgeschlossen, aber die Aktion meldet einen Fehler am Ende, um anzugeben, dass zusätzliche Schritte erforderlich sind. In den Setup Protokollen (befindet sich unter **\programdata\microsoft\microsoft SQL Server parallel Data Warehouse-\100\logs\setup\\<Zeitstempel> \detail-Setup**), wird am Ende die folgende Warnung angezeigt.  
+Wenn beim Upgrade eine Benutzer-DB verschlüsselt ist und das DMK-Kennwort nicht angegeben wird, tritt bei der Upgradeaktion ein Fehler auf. Wenn während des Ersetzens kein gültiges Kennwort angegeben wird, wenn ein DMK vorhanden ist, überspringt der Vorgang den Wiederherstellungs Schritt von DMK. Alle anderen Schritte werden am Ende der Aktion "VM ersetzen" abgeschlossen, aber die Aktion meldet einen Fehler am Ende, um anzugeben, dass zusätzliche Schritte erforderlich sind. In den Setup Protokollen (befindet sich unter **\programdata\microsoft\microsoft SQL Server parallel Data Warehouse-\100\logs\setup \\<Zeitstempel> \detail-Setup**), wird am Ende die folgende Warnung angezeigt.  
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
@@ -265,7 +265,7 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 ```  
   
 ## <a name="performance-impact"></a>Leistungsauswirkungen  
-Die Auswirkungen von TDE auf die Leistung variieren abhängig von der Art der Daten, der Art der Speicherung und der Art der Arbeits Auslastungs Aktivität auf der SQL Server PDW. Beim Schutz durch TDE ist die e/a-Vorgänge zum Lesen und anschließenden Entschlüsseln von Daten oder zum Verschlüsseln und anschließenden Schreiben von Daten eine CPU-intensive Aktivität und hat mehr Auswirkungen, wenn gleichzeitig andere CPU-intensive Aktivitäten durchgeführt werden. TDE verschlüsselt `tempdb`, kann TDE sich auf die Leistung von Datenbanken auswirken, die nicht verschlüsselt sind. Um eine genaue Vorstellung der Leistung zu erhalten, sollten Sie das gesamte System mit Ihrer Daten-und Abfrage Aktivität testen.  
+Die Auswirkungen von TDE auf die Leistung variieren abhängig von der Art der Daten, der Art der Speicherung und der Art der Arbeits Auslastungs Aktivität auf der SQL Server PDW. Beim Schutz durch TDE ist die e/a-Vorgänge zum Lesen und anschließenden Entschlüsseln von Daten oder zum Verschlüsseln und anschließenden Schreiben von Daten eine CPU-intensive Aktivität und hat mehr Auswirkungen, wenn gleichzeitig andere CPU-intensive Aktivitäten durchgeführt werden. TDE verschlüsselt `tempdb` , kann TDE sich auf die Leistung von Datenbanken auswirken, die nicht verschlüsselt sind. Um eine genaue Vorstellung der Leistung zu erhalten, sollten Sie das gesamte System mit Ihrer Daten-und Abfrage Aktivität testen.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
 Die folgenden Links enthalten allgemeine Informationen darüber, wie SQL Server die Verschlüsselung verwaltet. Diese Artikel helfen Ihnen, die SQL Server Verschlüsselung zu verstehen, aber diese Artikel enthalten keine Informationen, die für SQL Server PDW spezifisch sind, und Sie erörtern Features, die nicht in SQL Server PDW vorhanden sind.  
@@ -287,4 +287,3 @@ Die folgenden Links enthalten allgemeine Informationen darüber, wie SQL Server 
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
 [sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
 [sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
-  

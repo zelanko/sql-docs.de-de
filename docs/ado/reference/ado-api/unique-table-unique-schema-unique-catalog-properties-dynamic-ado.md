@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c3f5bdb8a52f686ae336aa51986591788669979
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bd5979526e453e33674441ebd4e433f2a7ad6f3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441672"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777039"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Unique Table, Unique Schema, Unique Catalog Properties-Dynamic (ADO)
-Ermöglicht es Ihnen, Änderungen an einer bestimmten Basistabelle in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , das durch eine Joinoperation in mehreren Basistabellen gebildet wurde, genau zu steuern.  
+Ermöglicht es Ihnen, Änderungen an einer bestimmten Basistabelle in einem [Recordset](./recordset-object-ado.md) , das durch eine Joinoperation in mehreren Basistabellen gebildet wurde, genau zu steuern.  
   
 -   **Unique Table** gibt den Namen der Basistabelle an, auf der Updates, Einfügungen und Löschungen zulässig sind.  
   
@@ -40,16 +40,16 @@ Ermöglicht es Ihnen, Änderungen an einer bestimmten Basistabelle in einem [Rec
   
  Der Primärschlüssel der **eindeutigen Tabelle** wird als Primärschlüssel des gesamten **Recordsets**behandelt. Dies ist der Schlüssel, der für jede Methode verwendet wird, die einen Primärschlüssel erfordert.  
   
- Obwohl **Unique Table** festgelegt ist, wirkt sich die [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) -Methode nur auf die benannte Tabelle aus. Die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)-, [Resync](../../../ado/reference/ado-api/resync-method.md)-, [Update](../../../ado/reference/ado-api/update-method.md)-und [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) -Methoden wirken sich auf alle entsprechenden zugrunde liegenden Basistabellen des **Recordsets**aus.  
+ Obwohl **Unique Table** festgelegt ist, wirkt sich die [Delete](./delete-method-ado-recordset.md) -Methode nur auf die benannte Tabelle aus. Die [AddNew](./addnew-method-ado.md)-, [Resync](./resync-method.md)-, [Update](./update-method.md)-und [UpdateBatch](./updatebatch-method.md) -Methoden wirken sich auf alle entsprechenden zugrunde liegenden Basistabellen des **Recordsets**aus.  
   
- Vor der Durchführung benutzerdefinierter Neusynchronisierung muss eine **eindeutige Tabelle** angegeben werden. Wenn keine **eindeutige Tabelle** angegeben wurde, hat die [Resync-Befehls](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) Eigenschaft keine Auswirkung.  
+ Vor der Durchführung benutzerdefinierter Neusynchronisierung muss eine **eindeutige Tabelle** angegeben werden. Wenn keine **eindeutige Tabelle** angegeben wurde, hat die [Resync-Befehls](./resync-command-property-dynamic-ado.md) Eigenschaft keine Auswirkung.  
   
  Ein Laufzeitfehler tritt auf, wenn eine eindeutige Basistabelle nicht gefunden werden kann.  
   
- Diese dynamischen Eigenschaften werden alle an die Auflistung der **Recordset** -Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) angehängt, wenn die [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient**festgelegt ist.  
+ Diese dynamischen Eigenschaften werden alle an die Auflistung der **Recordset** -Objekt [Eigenschaften](./properties-collection-ado.md) angehängt, wenn die [Cursor Location](./cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient**festgelegt ist.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

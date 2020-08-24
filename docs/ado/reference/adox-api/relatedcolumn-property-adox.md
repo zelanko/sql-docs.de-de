@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d59969ed52f7b26e1b104a8ee40ff3e16a49c4a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 003d3e1fb3ff13c7608e5629c23d5eda8dc3bf05
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439572"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769499"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn-Eigenschaft (ADOX)
-Gibt den Namen des zugehörigen [Spalten Objekts (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) in der verknüpften Tabelle an (nur Schlüssel Spalten).  
+Gibt den Namen des zugehörigen [Spalten Objekts (ADOX)](./column-object-adox.md) in der verknüpften Tabelle an (nur Schlüssel Spalten).  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen **Zeichen** folgen Wert fest, der den Namen der verknüpften Spalte in der verknüpften Tabelle angibt, und gibt diesen zurück.  
@@ -36,11 +36,11 @@ Gibt den Namen des zugehörigen [Spalten Objekts (ADOX)](../../../ado/reference/
 ## <a name="remarks"></a>Bemerkungen  
  Der Standardwert ist eine leere Zeichenfolge ("").  
   
- Diese Eigenschaft ist für [Spalten](../../../ado/reference/adox-api/column-object-adox.md) Objekte, die bereits an eine Auflistung angehängt wurden, schreibgeschützt.  
+ Diese Eigenschaft ist für [Spalten](./column-object-adox.md) Objekte, die bereits an eine Auflistung angehängt wurden, schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Column-Objekt (ADOX)](./column-object-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Key-Objekt (ADOX)](./key-object-adox.md)

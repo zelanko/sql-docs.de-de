@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren der Serverkonfigurationsoption „Kostenbeschränkung der Abfragekontrolle“ | Microsoft-Dokumentation
-description: Informationen zur Option „query governor cost limit“ Hier erfahren Sie, wie Sie diese verwenden, um die Ausführung auf Abfragen einzuschränken, für die SQL Server schätzt, dass sie innerhalb eines bestimmten Zeitraums ausgeführt werden.
+description: Informationen zur Option „query governor cost limit“ Erfahren Sie, wie Sie die Ausführung von Abfragen begrenzen.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 016ca109ae4ad609637a1919c29515dea2548083
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02b34ab8d3c0a3efd79d7d136bf26401ba92fdf4
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785876"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216727"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Kostenbeschränkung der Abfragekontrolle
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Kostenbeschränkung der Abfragekontrolle** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Die Kostenbeschränkungsoption der Abfragekontrolle legt ein Höchstlimit für den Zeitraum an, in dem eine Abfrage ausgeführt werden kann. Die Abfragekosten beziehen sich auf eine geschätzte Zeit in Sekunden, die für das Ausführen einer Abfrage bei einer bestimmten Hardwarekonfiguration benötigt wird. Der Standardwert für diese Option ist 0, mit dem die Abfragekontrolle deaktiviert wird. Alle Abfragen können dann ohne zeitliche Begrenzung ausgeführt werden. Wenn Sie einen nicht negativen Wert ungleich Null angeben, lässt die Abfragekontrolle die Ausführung von Abfragen nicht zu, deren geschätzte Kosten über diesem Wert liegen.  
+In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Kostenbeschränkung der Abfragekontrolle** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Die Option zur Kostenbeschränkung legt eine Obergrenze für die geschätzten zulässigen Kosten für die Ausführung einer bestimmten Abfrage fest. Die Abfragekosten sind eine abstrakte Zahl, die vom Abfrageoptimierer basierend auf geschätzten Ausführungsanforderungen wie CPU-Zeit, Arbeitsspeichernutzung und Datenträger-E/A ermittelt wird. Sie beziehen sich auf eine geschätzte Zeit in Sekunden, die für das Ausführen einer Abfrage bei einer bestimmten Hardwarekonfiguration benötigt wird. Diese abstrakte Zahl entspricht nicht der Zeit, die für die vollständige Ausführung einer Abfrage auf der ausgeführten Instanz erforderlich ist. Sie sollte als relatives Measure behandelt werden. Der Standardwert für diese Option ist 0, mit dem die Abfragekontrolle deaktiviert wird. Durch Festlegen des Werts auf 0 können alle Abfragen ohne zeitliche Begrenzung ausgeführt werden. Wenn Sie einen nicht negativen Wert ungleich Null angeben, lässt die Abfragekontrolle die Ausführung von Abfragen nicht zu, deren geschätzte Kosten über diesem Wert liegen.   
   
  **In diesem Thema**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "85785876"
   
 3.  Aktivieren bzw. deaktivieren Sie das Kontrollkästchen **Abfragekontrolle verwenden, um Abfragen mit langer Ausführungszeit zu verhindern** .  
   
-     Wenn Sie dieses Kontrollkästchen aktivieren, geben Sie in das untere Feld einen positiven Wert ein, der von der Abfragekontrolle verwendet wird, um das Ausführen von Abfragen nicht zuzulassen, deren Ausführungszeiten diesen Wert überschreiten.  
+     Wenn Sie dieses Kontrollkästchen aktivieren, geben Sie im Feld unten einen positiven Wert ein. Dieser wird von der Abfragekontrolle verwendet, um das Ausführen von Abfragen zu verhindern, deren geschätzte Kosten diesen Wert überschreiten.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85785876"
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird gezeigt, wie [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) verwendet wird, um den Wert der Option `query governor cost limit` auf `120` Sekunden festzulegen.  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Dieses Beispiel zeigt, wie [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) verwendet wird, um den Wert der Option `query governor cost limit` auf eine Obergrenze von `120` Bytes für die geschätzten Kosten festzulegen.
   
 ```sql  
 USE AdventureWorks2012 ;  

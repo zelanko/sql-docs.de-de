@@ -1,4 +1,5 @@
 ---
+description: 'Schritt 5: Testen des Tutorialpakets aus Lektion 4'
 title: 'Schritt 5: Testen des Tutorialpakets aus Lektion 4 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c209aea67a04d7f602ec2015bdb3e7535c9bc8dd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccd458d09c43a97693c620b9498ad1d593751905
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457132"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>Lektion 4.5: Testen des Tutorialpakets aus Lektion 4
 
@@ -43,13 +44,13 @@ Bevor Sie das Paket testen, sollten Sie überprüfen, ob Ablaufsteuerung und Dat
   
 ## <a name="run-the-lesson-4-tutorial-package"></a>Ausführen des Tutorialpakets aus Lektion 4  
   
-1.  Klicken Sie im Menü **Debuggen** auf **Start Debugging** (Debuggen starten).  
+1.  Wählen Sie im Menü **Debuggen** die Option **Debuggen starten** aus.  
   
 2.  Klicken Sie nach dem Ausführen des Pakets im Menü **Debuggen** auf **Stop Debugging** (Debuggen beenden).  
   
 ## <a name="view-the-contents-of-the-erroroutputtxt-file"></a>Anzeigen des Inhalts der Datei „ErrorOutput.txt“  
   
-Öffnen Sie in Editor oder einem anderen Text-Editor die Datei **ErrorOutput.txt**. Die standardmäßige Spaltenreihenfolge ist: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
+Öffnen Sie in Editor oder einem anderen Text-Editor die Datei **ErrorOutput.txt**. Die standardmäßige Spaltenreihenfolge ist: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn und ErrorDescription.  
  
 Beachten Sie, dass alle in der Datei enthaltenen Zeilen den nicht übereinstimmenden CurrencyID-Wert BAD, den ErrorCode-Wert –1071607778, den ErrorColumn-Wert 0 und den ErrorDescription-Wert "Row yielded no match during lookup" (Es wurde für die Zeile bei der Suche keine Übereinstimmung gefunden.) enthalten. Der ErrorColumn-Wert ist 0, weil der Fehler nicht spaltenspezifisch ist, sondern vielmehr der Suchvorgang fehlgeschlagen ist.
   

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ea604f3144f371047c00171947c0b7ceaeaa602f
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 528eedeb18de9b0d1a8558edecccf5470a374eda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479155"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -741,14 +741,14 @@ Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `is_parameteriza
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 Überprüft, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers. Weitere Informationen finden Sie unter [Verwendungsszenarios für den Abfragespeicher](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 EIN     
 Aktiviert den Abfragespeicher.
 
 OFF      
-Deaktiviert den Abfragespeicher. OFF ist der Standardwert. 
+Deaktiviert den Abfragespeicher. OFF ist der Standardwert. FORCED ist optional. FORCED bricht alle Hintergrundaufgaben, die gerade im Abfragespeicher ausgeführt werden, ab und überspringt die synchrone Leerung, wenn der Abfragespeicher deaktiviert wird. Bewirkt, dass der Abfragespeicher so schnell wie möglich heruntergefahren wird Schaltet den Abfragespeicher effektiv sofort aus FORCED wurde mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 eingeführt.
 
 > [!NOTE]  
 > In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mit einer Einzeldatenbank oder einem Pool für elastische Datenbanken kann der Abfragespeicher nicht deaktiviert werden. Beim Ausführen von `ALTER DATABASE [database] SET QUERY_STORE = OFF` wird die Warnung `'QUERY_STORE=OFF' is not supported in this version of SQL Server.` zurückgegeben. 
@@ -1868,10 +1868,13 @@ ON | OFF | CLEAR [ ALL ]
 Überprüft, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers.
 
 EIN     
-Aktiviert den Abfragespeicher.
+Aktiviert den Abfragespeicher. ON ist der Standardwert.
 
 OFF     
-Deaktiviert den Abfragespeicher. Dies ist der Standardwert.
+Deaktiviert den Abfragespeicher. 
+
+> [!NOTE]  
+> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mit einer Einzeldatenbank oder einem Pool für elastische Datenbanken kann der Abfragespeicher nicht deaktiviert werden. Beim Ausführen von `ALTER DATABASE [database] SET QUERY_STORE = OFF` wird die Warnung `'QUERY_STORE=OFF' is not supported in this version of SQL Server.` zurückgegeben. 
 
 CLEAR     
 Entfernt den Inhalt des Abfragespeichers.
@@ -3323,7 +3326,7 @@ Deaktiviert die Option READ_COMMITTED_SNAPSHOT auf Datenbankebene.
 
 ### <a name="remarks"></a>Bemerkungen
 
-Sie müssen während der Ausführung dieses Befehls mit der `master`-Datenbank verbunden sein. Wenn Sie für eine Benutzerdatenbank die Option READ_COMMITTED_SNAPSHOT auf ON oder OFF festlegen, werden alle aktiven Verbindungen mit dieser Datenbank getrennt. Sie sollten diese Änderung innerhalb des Datenbankwartungsfensters vornehmen oder warten, bis mit Ausnahme der Verbindung, die zur Ausführung des ALTER DATABASE-Befehls verwendet wird, keine Verbindung mehr mit der Datenbank besteht.  Die Datenbank muss sich nicht im Einzelbenutzermodus befinden. Die Einstellung READ_COMMITTED_SNAPSHOT kann nicht auf Sitzungsebene geändert werden.  Sie können mithilfe der Spalte „is_read_committed_snapshot_on“ in „sys.databases“ überprüfen, welche Einstellung für die Datenbank festgelegt ist.
+Sie müssen während der Ausführung dieses Befehls mit der `master`-Datenbank verbunden sein. Wenn Sie für eine Benutzerdatenbank die Option READ_COMMITTED_SNAPSHOT auf ON oder OFF festlegen, werden alle aktiven Verbindungen mit dieser Datenbank getrennt. Sie sollten diese Änderung innerhalb des Datenbankwartungsfensters vornehmen oder warten, bis mit Ausnahme der Verbindung, die zur Ausführung des ALTER DATABASE-Befehls verwendet wird, keine Verbindung mit der Datenbank mehr besteht.  Die Datenbank muss sich nicht im Einzelbenutzermodus befinden. Die Einstellung READ_COMMITTED_SNAPSHOT kann nicht auf Sitzungsebene geändert werden.  Sie können mithilfe der Spalte „is_read_committed_snapshot_on“ in „sys.databases“ überprüfen, welche Einstellung für die Datenbank festgelegt ist.
 
 Wenn für eine Datenbank READ_COMMITTED_SNAPSHOT aktiviert ist, werden Abfragen möglicherweise langsamer ausgeführt, wenn mehrere Datenversionen vorliegen und nach einer Version gesucht wird. Lange geöffnete Transaktionen können ebenfalls zu einer Vergrößerung der Datenbank führen. Dieses Problem tritt auf, wenn von diesen Transaktionen Datenänderungen vorgenommen werden, die die Versionsbereinigung blockieren.  
 

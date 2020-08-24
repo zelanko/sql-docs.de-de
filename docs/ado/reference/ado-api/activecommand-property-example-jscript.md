@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d39a5cdfdf83f87f92a3b9087eda49a72a52f6b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8b36a7fe46e975d27d4b255d3bb5928916faac7
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451732"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759920"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand-Eigenschaft – Beispiel (JScript)
-In diesem Beispiel wird die [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) -Eigenschaft veranschaulicht. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **activecommandjs. ASP**.  
+In diesem Beispiel wird die [ActiveCommand](./activecommand-property-ado.md) -Eigenschaft veranschaulicht. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **activecommandjs. ASP**.  
   
 ```  
 <!-- BeginActiveCommandJS -->  
@@ -127,6 +127,6 @@ if (strName.length > 0)
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ActiveCommand-Eigenschaft (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ActiveCommand-Eigenschaft (ADO)](./activecommand-property-ado.md)   
+ [Command-Objekt (ADO)](./command-object-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

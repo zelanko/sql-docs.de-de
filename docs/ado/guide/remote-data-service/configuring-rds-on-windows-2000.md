@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db965e76f8d62bc90f0f6a5640e8ca4e7752bfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73ab5507d755fed32fa54b36a82f9ca915a8e194
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452292"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758640"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Konfigurieren von RDS unter Windows 2000
 Wenn Sie Schwierigkeiten haben, RDS nach dem Upgrade auf Windows 2000 ordnungsgemäß zu verwenden, führen Sie die folgenden Schritte aus, um das Problem zu beheben:  
@@ -41,6 +41,4 @@ Wenn Sie Schwierigkeiten haben, RDS nach dem Upgrade auf Windows 2000 ordnungsge
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden. Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten. Migrieren Sie Anwendungen, die RDS verwenden, zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Grundlegendes zu RDS](./rds-fundamentals.md)

@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7345337ab35f4154fd9dc53f749e04dba96dad48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f239978dc9d71af81c74de452fefe16efe95d1bf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440112"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770629"
 ---
 # <a name="delete-method-adox-collections"></a>Delete-Methode (ADOX-Collections)
 Entfernt ein-Objekt aus einer Auflistung.  
@@ -55,27 +55,27 @@ Collection.Delete Name
 ## <a name="remarks"></a>Bemerkungen  
  Wenn der *Name* in der Auflistung nicht vorhanden ist, tritt ein Fehler auf.  
   
- Bei [Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md) -und [Benutzer](../../../ado/reference/adox-api/users-collection-adox.md) Sammlungen tritt ein Fehler auf, wenn der Anbieter das Löschen von Tabellen oder Benutzern nicht unterstützt. Für [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md) und Ansichts [Auflistungen](../../../ado/reference/adox-api/views-collection-adox.md) schlägt **Delete** fehl, wenn der Anbieter das Beibehalten von Befehlen nicht unterstützt.  
+ Bei [Tabellen](./tables-collection-adox.md) -und [Benutzer](./users-collection-adox.md) Sammlungen tritt ein Fehler auf, wenn der Anbieter das Löschen von Tabellen oder Benutzern nicht unterstützt. Für [Prozeduren](./procedures-collection-adox.md) und Ansichts [Auflistungen](./views-collection-adox.md) schlägt **Delete** fehl, wenn der Anbieter das Beibehalten von Befehlen nicht unterstützt.  
   
 ## <a name="applies-to"></a>Gilt für  
 
 :::row:::
     :::column:::
-        [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
-        [Groups-Auflistung (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
-        [Auflistung von Indizes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [Columns-Collection (ADOX)](./columns-collection-adox.md)  
+        [Groups-Collection (ADOX)](./groups-collection-adox.md)  
+        [Indexes-Collection (ADOX)](./indexes-collection-adox.md)  
     :::column-end:::
     :::column:::
-        [Keys Collection (ADOX) (Keys-Auflistung (ADOX))](../../../ado/reference/adox-api/keys-collection-adox.md)  
-        [Procedures Collection (ADOX) (Procedures-Auflistung (ADOX))](../../../ado/reference/adox-api/procedures-collection-adox.md)  
-        [Tables-Auflistung (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [Keys-Collection (ADOX)](./keys-collection-adox.md)  
+        [Procedures-Collection (ADOX)](./procedures-collection-adox.md)  
+        [Tables-Collection (ADOX)](./tables-collection-adox.md)  
     :::column-end:::
     :::column:::
-        [Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
-        [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+        [Users-Collection (ADOX)](./users-collection-adox.md)  
+        [Views-Collection (ADOX)](./views-collection-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Weitere Informationen  
- [Prozeduren Delete-Methode (Beispiel) (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Views Delete-Methode – Beispiel (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)
+ [Prozeduren Delete-Methode (Beispiel) (VB)](./procedures-delete-method-example-vb.md)   
+ [Delete-Methode für Sichten – Beispiel (VB)](./views-delete-method-example-vb.md)

@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4356ad974c45e16cec32d45fa2ed6aeb42209f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 929421784aabdcd3e414d6005fc3d48ade2f68e2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442172"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777539"
 ---
 # <a name="schemaenum"></a>SchemaEnum
-Gibt den Typ des Schema- **Recordsets** an, das von der [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) -Methode abgerufen wird.  
+Gibt den Typ des Schema- **Recordsets** an, das von der [OpenSchema](./openschema-method.md) -Methode abgerufen wird.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Weitere Informationen über die Funktion und die Spalten, die für jede ADO-Konstante zurückgegeben werden, finden Sie in den Themen in [Anhang B: Schemarowsets](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) der OLE DB Programmierer-Referenz. Der Name jedes Themas wird in Klammern im Abschnitt Beschreibung der folgenden Tabelle aufgeführt.  
+ Weitere Informationen über die Funktion und die Spalten, die für jede ADO-Konstante zurückgegeben werden, finden Sie in den Themen in [Anhang B: Schemarowsets](/previous-versions/windows/desktop/ms712921(v=vs.85)) der OLE DB Programmierer-Referenz. Der Name jedes Themas wird in Klammern im Abschnitt Beschreibung der folgenden Tabelle aufgeführt.  
   
- Weitere Informationen über die Funktion und die Spalten, die für die einzelnen ADO MD Konstanten zurückgegeben werden, finden Sie in den Themen in [OLE DB für OLAP-Objekte und Schemarowsets](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) im OLE DB für die Online Analytical Processing (OLAP)-Dokumentation. Der Name jedes Themas wird in Klammern in der Spalte Beschreibung der folgenden Tabelle aufgeführt.  
+ Weitere Informationen über die Funktion und die Spalten, die für die einzelnen ADO MD Konstanten zurückgegeben werden, finden Sie in den Themen in [OLE DB für OLAP-Objekte und Schemarowsets](/previous-versions/windows/desktop/ms723056(v=vs.85)) im OLE DB für die Online Analytical Processing (OLAP)-Dokumentation. Der Name jedes Themas wird in Klammern in der Spalte Beschreibung der folgenden Tabelle aufgeführt.  
   
- Sie können die Datentypen von Spalten in der OLE DB-Dokumentation in ADO-Datentypen übersetzen, indem Sie auf die Spalte Beschreibung des Themas ADO [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) verweisen. Beispielsweise entspricht ein OLE DB Datentyp **DBTYPE_WSTR** dem ADO-Datentyp **adwchar**.  
+ Sie können die Datentypen von Spalten in der OLE DB-Dokumentation in ADO-Datentypen übersetzen, indem Sie auf die Spalte Beschreibung des Themas ADO [DataTypeEnum](./datatypeenum.md) verweisen. Beispielsweise entspricht ein OLE DB Datentyp **DBTYPE_WSTR** dem ADO-Datentyp **adwchar**.  
   
- ADO generiert Schema ähnliche Ergebnisse für die Konstanten **adSchemaDBInfoKeywords** und **adSchemaDBInfoLiterals**. ADO erstellt ein **Recordset**und füllt dann jede Zeile mit den Werten aus, die von den **IDBInfo:: GetKeywords** -und **IDBInfo:: GetLiteralInfo** -Methoden zurückgegeben werden. Weitere Informationen zu diesen Methoden finden Sie im Abschnitt [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) der OLE DB Programmierer-Referenz.  
+ ADO generiert Schema ähnliche Ergebnisse für die Konstanten **adSchemaDBInfoKeywords** und **adSchemaDBInfoLiterals**. ADO erstellt ein **Recordset**und füllt dann jede Zeile mit den Werten aus, die von den **IDBInfo:: GetKeywords** -und **IDBInfo:: GetLiteralInfo** -Methoden zurückgegeben werden. Weitere Informationen zu diesen Methoden finden Sie im Abschnitt [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) der OLE DB Programmierer-Referenz.  
   
-|Konstant|Wert|Beschreibung|Einschränkungs Spalten|  
+|Konstante|Wert|Beschreibung|Einschränkungs Spalten|  
 |--------------|-----------|-----------------|------------------------|  
 |**adschemaassert**|0|Gibt die im Katalog definierten Assertionen zurück, deren Besitzer ein angegebener Benutzer ist.<br /><br /> (Assertionen-Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA constraint_name|  
 |**adschemacatalogs**|1|Gibt die physischen Attribute zurück, die Katalogen zugeordnet sind, auf die über das DBMS zugegriffen werden<br /><br /> (Katalogen-Rowset)|CATALOG_NAME|  
@@ -82,7 +82,7 @@ Gibt den Typ des Schema- **Recordsets** an, das von der [OpenSchema](../../../ad
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |AdoEnums. Schema. Assert|  
 |AdoEnums. Schema. Kataloge|  
@@ -127,4 +127,4 @@ Gibt den Typ des Schema- **Recordsets** an, das von der [OpenSchema](../../../ad
 |AdoEnums. Schema. viewtableusage|  
   
 ## <a name="applies-to"></a>Gilt für  
- [OpenSchema-Methode](../../../ado/reference/ado-api/openschema-method.md)
+ [OpenSchema-Methode](./openschema-method.md)

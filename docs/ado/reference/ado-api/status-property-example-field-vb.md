@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66fab5cee49adf89bffee79f5b51b13780d5d982
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 148deaa16746bd964e4bed07ed673fea0ec4cb6a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441942"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777289"
 ---
 # <a name="status-property-example-field-vb"></a>Status-Eigenschaft – Beispiel (Field) (VB)
-Im folgenden Beispiel wird ein Dokument aus einem Ordner mit Lese-/Schreibzugriff mit dem [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)geöffnet. Die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) -Eigenschaft eines [Feld](../../../ado/reference/ado-api/field-object.md) Objekts des [Datensatzes](../../../ado/reference/ado-api/record-object-ado.md) wird zuerst auf **adfieldpdinginsert**festgelegt und dann auf **adFieldOK**aktualisiert.  
+Im folgenden Beispiel wird ein Dokument aus einem Ordner mit Lese-/Schreibzugriff mit dem [Internet Publishing Provider](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)geöffnet. Die [Status](./status-property-ado-field.md) -Eigenschaft eines [Feld](./field-object.md) Objekts des [Datensatzes](./record-object-ado.md) wird zuerst auf **adfieldpdinginsert**festgelegt und dann auf **adFieldOK**aktualisiert.  
   
 ```  
 'BeginStatusFieldVB  
@@ -86,13 +86,13 @@ End Sub
 Attribute VB_Name = "StatusField"  
 ```  
   
- Mit dem folgenden Code wird ein **Feld** aus einem **Datensatz** gelöscht, der in einem schreibgeschützten Dokument geöffnet wurde. Der **Status** wird auf **adfieldpdingdelete**festgelegt. Bei der [Aktualisierung](../../../ado/reference/ado-api/update-method.md)schlägt der Löschvorgang fehl, und der **Status** **lautet adfieldpdingdelete** Plus **adfieldpermissiondenied**. Mit [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) wird die Einstellung für den ausstehenden **Status** gelöscht.  
+ Mit dem folgenden Code wird ein **Feld** aus einem **Datensatz** gelöscht, der in einem schreibgeschützten Dokument geöffnet wurde. Der **Status** wird auf **adfieldpdingdelete**festgelegt. Bei der [Aktualisierung](./update-method.md)schlägt der Löschvorgang fehl, und der **Status** **lautet adfieldpdingdelete** Plus **adfieldpermissiondenied**. Mit [CancelUpdate](./cancelupdate-method-ado.md) wird die Einstellung für den ausstehenden **Status** gelöscht.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Status-Eigenschaft (ADO-Feld)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Field-Objekt](./field-object.md)   
+ [Record-Objekt (ADO)](./record-object-ado.md)   
+ [Status-Eigenschaft (ADO-Feld)](./status-property-ado-field.md)

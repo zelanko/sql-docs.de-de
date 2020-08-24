@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1c5aee050caf603c3e1512d9098b7684a5ff917
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03959b22d0b64f2932326c42f5bb0117441b9051
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452322"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758650"
 ---
 # <a name="address-book-navigation-buttons"></a>Adress Book-Navigationsschaltflächen
 Die Adressbuch Anwendung zeigt die Navigations Schaltflächen unten auf der Webseite an. Sie können die Navigations Schaltflächen verwenden, um durch die Daten in der HTML-Raster Anzeige zu navigieren, indem Sie entweder die erste oder letzte Daten Zeile oder Zeilen neben der aktuellen Auswahl auswählen.  
@@ -30,7 +30,7 @@ Die Adressbuch Anwendung zeigt die Navigations Schaltflächen unten auf der Webs
 ## <a name="navigation-sub-procedures"></a>Navigations unter Prozeduren  
  Die Adressbuch Anwendung enthält mehrere Prozeduren, mit denen Benutzer auf die Schaltflächen **erste**, **weiter**, zurück und **Letzter** klicken **können, um**die Daten zu verschieben.  
   
- Wenn Sie beispielsweise auf die **erste** Schaltfläche klicken, wird die VBScript-First_OnClick unter Prozedur aktiviert. Die Prozedur führt eine " [muvefirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) "-Methode aus, die die erste Zeile der Daten zur aktuellen Auswahl macht. Durch Klicken auf die **Letzte** Schaltfläche wird die Last_OnClick unter Prozedur aktiviert, die die " [muvelast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) "-Methode aufruft und die letzte Daten Zeile zur aktuellen Auswahl macht. Die verbleibenden Navigations Schaltflächen funktionieren auf ähnliche Weise.  
+ Wenn Sie beispielsweise auf die **erste** Schaltfläche klicken, wird die VBScript-First_OnClick unter Prozedur aktiviert. Die Prozedur führt eine " [muvefirst](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) "-Methode aus, die die erste Zeile der Daten zur aktuellen Auswahl macht. Durch Klicken auf die **Letzte** Schaltfläche wird die Last_OnClick unter Prozedur aktiviert, die die " [muvelast](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) "-Methode aufruft und die letzte Daten Zeile zur aktuellen Auswahl macht. Die verbleibenden Navigations Schaltflächen funktionieren auf ähnliche Weise.  
   
 ```vb
 ' Move to the first record in the bound Recordset.  
@@ -63,8 +63,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [MoveFirst-, MoveLast-, MoveNext- und MovePrevious-Methode (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
-
-
-
+ [DataControl-Objekt (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [MoveFirst-, MoveLast-, MoveNext- und MovePrevious-Methode (RDS)](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

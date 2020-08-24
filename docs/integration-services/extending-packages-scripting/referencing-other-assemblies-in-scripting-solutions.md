@@ -1,4 +1,5 @@
 ---
+description: Verweisen auf andere Assemblys in Skriptlösungen
 title: Verweisen auf andere Assemblys in Skriptlösungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e3be777b41c72544d6ce4d998d39d528fc6fcc2d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d476bd87096a68be5154cb57563f08ad982e7d3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425322"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Verweisen auf andere Assemblys in Skriptlösungen
 
@@ -86,7 +87,7 @@ ms.locfileid: "86915951"
   
  Weitere Informationen über [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] finden Sie in der MSDN Library.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Erweitern von Paketen mit Skripts](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

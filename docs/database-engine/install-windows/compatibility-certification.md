@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1505d27dfa186999d1730eece740b711d87ae0e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40d7c10127efa14000a3f91f2cf003bf52d95b2c
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659667"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200959"
 ---
 # <a name="compatibility-certification"></a>Kompatibilitätszertifizierung
 
@@ -100,6 +100,7 @@ Um für die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] ein Upgrade auf die n
 >
 > - Die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version (Ziel) wird auf Hardware ausgeführt, die mit der Hardware vergleichbar ist, auf der die vorherige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version (Quelle) ausgeführt wurde.
 > - Derselbe [unterstützte Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) wird sowohl in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel- als auch in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Quellinstanz verwendet.
+> - **Dieselbe** Datenbank und Workload werden sowohl für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz als auch für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Quellinstanz verwendet. 
 >
 > Alle Rückschritte der Abfrageplanform (im Vergleich mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Quellinstanz), die bei den oben genannten Bedingungen auftreten, werden behandelt. Wenden Sie sich an den Microsoft-Kundensupport, wenn dies der Fall ist.
   

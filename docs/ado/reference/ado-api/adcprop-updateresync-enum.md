@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81d1ff4bf67f103b613cb925a590b4d00e54482a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4097bcdeb5460776017ce7a120ff43aa7a4420f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451592"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760244"
 ---
 # <a name="adcprop_updateresync_enum"></a>ADCPROP_UPDATERESYNC_ENUM
-Gibt an, ob auf die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) -Methode ein impliziter Vorgang zum [erneuten Synchronisieren](../../../ado/reference/ado-api/resync-method.md) der Methode folgt, und wenn ja, der Gültigkeitsbereich dieses Vorgangs.  
+Gibt an, ob auf die [UpdateBatch](./updatebatch-method.md) -Methode ein impliziter Vorgang zum [erneuten Synchronisieren](./resync-method.md) der Methode folgt, und wenn ja, der Gültigkeitsbereich dieses Vorgangs.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstant|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adresynrufe**|15|Ruft **Resync** mit dem kombinierten Wert aller anderen ADCPROP_UPDATERESYNC_ENUM Member auf.|  
 |**adresyncautoincrement**|1|Standard. Versucht, den neuen Identitäts Wert für Spalten abzurufen, die von der Datenquelle automatisch inkrementiert oder generiert werden, z. b. die automatischen oder Microsoft SQL Server Identitäts Spalten von Microsoft Jet.|  
@@ -36,4 +36,4 @@ Gibt an, ob auf die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-met
 |**adresyncupdates**|4|Ruft die **erneute Synchronisierung** für alle erfolgreich aktualisierten Zeilen auf.|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Update Resync – dynamische Eigenschaft (ADO)](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)
+ [Update Resync – dynamische Eigenschaft (ADO)](./update-resync-property-dynamic-ado.md)

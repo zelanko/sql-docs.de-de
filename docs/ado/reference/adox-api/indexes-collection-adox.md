@@ -17,35 +17,35 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 916671fdf9722c7894ee122f3d68167a8047b72c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0075ca8340d869f803a10d296672e03326c5bad6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439912"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770269"
 ---
 # <a name="indexes-collection-adox"></a>Indexes-Collection (ADOX)
-Enthält alle [Index](../../../ado/reference/adox-api/index-object-adox.md) Objekte einer Tabelle.  
+Enthält alle [Index](./index-object-adox.md) Objekte einer Tabelle.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) -Methode für eine **Index** Sammlung ist für ADOX eindeutig. Ihre Möglichkeiten:  
+ Die [Append](./append-method-adox-indexes.md) -Methode für eine **Index** Sammlung ist für ADOX eindeutig. Ihre Möglichkeiten:  
   
 -   Fügen Sie der Auflistung mithilfe der **Append** -Methode einen neuen Index hinzu.  
   
  Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
   
--   Greifen Sie mit der [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf einen Index in der-Auflistung zu.  
+-   Greifen Sie mit der [Item](../ado-api/item-property-ado.md) -Eigenschaft auf einen Index in der-Auflistung zu.  
   
--   Gibt die Anzahl der in der Auflistung enthaltenen Indizes mit der [count](../../../ado/reference/ado-api/count-property-ado.md) -Eigenschaft zurück.  
+-   Gibt die Anzahl der in der Auflistung enthaltenen Indizes mit der [count](../ado-api/count-property-ado.md) -Eigenschaft zurück.  
   
--   Entfernen Sie einen Index aus der Sammlung mit der [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) -Methode.  
+-   Entfernen Sie einen Index aus der Sammlung mit der [Delete](./delete-method-adox-collections.md) -Methode.  
   
--   Aktualisieren Sie die Objekte in der Auflistung, um das aktuelle Datenbankschema mit der [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode widerzuspiegeln.  
+-   Aktualisieren Sie die Objekte in der Auflistung, um das aktuelle Datenbankschema mit der [Refresh](../ado-api/refresh-method-ado.md) -Methode widerzuspiegeln.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Indizes Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
+-   [Indexes-Collections – Eigenschaften, Methoden und Ereignisse](./indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Index Append-Methode (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
- [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [Beispiel für Index Append-Methode (VB)](./indexes-append-method-example-vb.md)   
+ [Index-Objekt (ADOX)](./index-object-adox.md)

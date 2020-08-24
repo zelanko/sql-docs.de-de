@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c37f18f8bcaa3d0c1f78b3ddb8d0c6413fe7277
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452392"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758770"
 ---
 # <a name="working-with-multidimensional-data"></a>Arbeiten mit mehrdimensionalen Daten
 Ein *Cellset* ist das Ergebnis einer Abfrage für mehrdimensionale Daten. Sie besteht aus einer Auflistung von Achsen, in der Regel nicht mehr als vier Achsen und in der Regel nur zwei oder drei Achsen. Eine *Achse* ist eine Auflistung von Membern aus einer oder mehreren Dimensionen, die zum Suchen oder Filtern bestimmter Werte in einem Cube verwendet wird.  
@@ -29,7 +29,7 @@ Ein *Cellset* ist das Ergebnis einer Abfrage für mehrdimensionale Daten. Sie be
   
  Eine *Zelle* ist ein Objekt, das an der Schnittmenge der Achsen Koordinaten positioniert ist. Jeder Zelle sind mehrere Informationen zugeordnet, darunter die Daten selbst, eine formatierte Zeichenfolge (die anzeigbare Form von Zelldaten) und der Wert für die Ordnungszahl der Zelle. (Jede Zelle ist ein eindeutiger Ordinalwert im Cellset. Der Ordinalwert der ersten Zelle im Cellset ist 0 (null), während die linke Zelle in der zweiten Zeile eines Cellsets mit acht Spalten einen Ordinalwert von 8 hat.)  
   
- Ein Cube hat z. b. die folgenden sechs Dimensionen (Beachten Sie, dass sich dieses Cubeschema geringfügig von dem Beispiel unter [Übersicht über mehrdimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)unterscheidet):  
+ Ein Cube hat z. b. die folgenden sechs Dimensionen (Beachten Sie, dass sich dieses Cubeschema geringfügig von dem Beispiel unter [Übersicht über mehrdimensionale Schemas und Daten](./overview-of-multidimensional-schemas-and-data.md)unterscheidet):  
   
 -   Salesperson  
   
@@ -76,11 +76,11 @@ Ein *Cellset* ist das Ergebnis einer Abfrage für mehrdimensionale Daten. Sie be
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- Cellsets, Zellen, Achsen und Positionen werden alle in ADO MD durch die entsprechenden Objekte dargestellt: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)und [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Cellsets, Zellen, Achsen und Positionen werden alle in ADO MD durch die entsprechenden Objekte dargestellt: [Cellset](../../reference/ado-md-api/cellset-object-ado-md.md), [Cell](../../reference/ado-md-api/cell-object-ado-md.md), [Axis](../../reference/ado-md-api/axis-object-ado-md.md)und [Position](../../reference/ado-md-api/position-object-ado-md.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (mehrdimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Übersicht über mehrdimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [Programmieren mit ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Verwenden von ADO mit ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
+ [ADO MD-Objektmodell](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (mehrdimensional) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [Übersicht über mehrdimensionale Schemas und Daten](./overview-of-multidimensional-schemas-and-data.md)   
+ [Programmieren mit ADO MD](./programming-with-ado-md.md)   
+ [Verwenden von ADO mit ADO MD](./using-ado-with-ado-md.md)

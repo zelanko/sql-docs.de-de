@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451872"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759868"
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zur Anpassungsdatei
 Jeder Abschnitts Header in der Anpassungs Datei besteht aus eckigen Klammern (**[]**), die einen Typ und einen Parameter enthalten. Die vier Abschnitts Typen werden durch die Literalzeichenfolgen **Connect**, **SQL**, **userlist**oder **Logs**angegeben. Der-Parameter ist die Literalzeichenfolge, der Standardwert, ein vom Benutzer angegebener Bezeichner oder Nothing.  
@@ -42,10 +42,10 @@ identifier
   
  Die Abschnitts Header haben die folgenden Teile.  
   
-|Teil|Beschreibung|  
+|Teil|BESCHREIBUNG|  
 |----------|-----------------|  
 |**connect**|Eine Literalzeichenfolge, die eine Verbindungs Zeichenfolge ändert.|  
-|**SQL**|Eine Literalzeichenfolge, die eine Befehls Zeichenfolge ändert.|  
+|**sql**|Eine Literalzeichenfolge, die eine Befehls Zeichenfolge ändert.|  
 |**UserList**|Eine Literalzeichenfolge, die die Zugriffsrechte eines bestimmten Benutzers ändert.|  
 |**logs**|Eine Literalzeichenfolge, die eine Protokolldatei zum Aufzeichnen von Betriebsfehlern angibt.|  
 |**default**|Eine Literalzeichenfolge, die verwendet wird, wenn kein Bezeichner angegeben oder gefunden wird.|  
@@ -68,11 +68,10 @@ identifier
 -   Der Abschnitt **Logs** wird immer dann verwendet, wenn das **DataFactory** in Betrieb ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Bereich für die Anpassungs Dateiverbindung](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Abschnitt "Anpassungs Datei Protokolle"](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [SQL-Abschnitt der Anpassungs Datei](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Benutzer Listen Abschnitt "Anpassungs Datei"](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Erforderliche Client Einstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Bereich für die Anpassungs Dateiverbindung](./customization-file-connect-section.md)   
+ [Abschnitt "Anpassungs Datei Protokolle"](./customization-file-logs-section.md)   
+ [SQL-Abschnitt der Anpassungs Datei](./customization-file-sql-section.md)   
+ [Benutzer Listen Abschnitt "Anpassungs Datei"](./customization-file-userlist-section.md)   
+ [DataFactory-Anpassung](./datafactory-customization.md)   
+ [Erforderliche Client Einstellungen](./required-client-settings.md)   
+ [Schreiben Ihres eigenen benutzerdefinierten Handlers](./writing-your-own-customized-handler.md)

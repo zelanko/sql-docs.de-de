@@ -16,34 +16,34 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ee804ac6f4668f28d5f13754109b0f038d7e1ec4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8932d2b71f631f24a9ce825804074b9094f932b9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439652"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769709"
 ---
 # <a name="procedure-object-adox"></a>Procedure-Objekt (ADOX)
-Stellt eine gespeicherte Prozedur dar. Bei Verwendung in Verbindung mit dem ADO- [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt kann das **Prozedur** Objekt zum Hinzufügen, löschen oder Ändern gespeicherter Prozeduren verwendet werden.  
+Stellt eine gespeicherte Prozedur dar. Bei Verwendung in Verbindung mit dem ADO- [Befehls](../ado-api/command-object-ado.md) Objekt kann das **Prozedur** Objekt zum Hinzufügen, löschen oder Ändern gespeicherter Prozeduren verwendet werden.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Das **Prozedur** Objekt ermöglicht es Ihnen, eine gespeicherte Prozedur zu erstellen, ohne die "CREATE PROCEDURE"-Syntax des Anbieters kennen oder verwenden zu müssen.  
   
  Mit den Eigenschaften eines **Prozedur** Objekts können Sie folgende Aktionen ausführen:  
   
--   Identifizieren Sie die Prozedur mit der [Name](../../../ado/reference/adox-api/name-property-adox.md) -Eigenschaft.  
+-   Identifizieren Sie die Prozedur mit der [Name](./name-property-adox.md) -Eigenschaft.  
   
--   Geben Sie das ADO- **Befehls** Objekt an, das verwendet werden kann, um die Prozedur mit der [Command](../../../ado/reference/adox-api/command-property-adox.md) -Eigenschaft zu erstellen oder auszuführen.  
+-   Geben Sie das ADO- **Befehls** Objekt an, das verwendet werden kann, um die Prozedur mit der [Command](./command-property-adox.md) -Eigenschaft zu erstellen oder auszuführen.  
   
--   Gibt Datumsinformationen mit den Eigenschaften [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) und [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) zurück.  
+-   Gibt Datumsinformationen mit den Eigenschaften [DateCreated](./datecreated-property-adox.md) und [DateModified](./datemodified-property-adox.md) zurück.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Procedure-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
+-   [Procedure-Objekt – Eigenschaften, Methoden und Ereignisse](./procedure-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Befehls-und CommandText-Eigenschaften (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Parameter Auflistung, Beispiel für Befehls Eigenschaft (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Prozeduren Append-Methode Beispiel (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Prozeduren Delete-Methode (Beispiel) (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Procedures Collection (ADOX) (Procedures-Auflistung (ADOX))](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Beispiel für Befehls-und CommandText-Eigenschaften (VB)](./command-and-commandtext-properties-example-vb.md)   
+ [Parameter Auflistung, Beispiel für Befehls Eigenschaft (VB)](./parameters-collection-command-property-example-vb.md)   
+ [Prozeduren Append-Methode Beispiel (VB)](./procedures-append-method-example-vb.md)   
+ [Prozeduren Delete-Methode (Beispiel) (VB)](./procedures-delete-method-example-vb.md)   
+ [Procedures-Collection (ADOX)](./procedures-collection-adox.md)

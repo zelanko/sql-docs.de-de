@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 20145847731b831bcfb21ca27c0229b064e33286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36d5deae232c609473b2cd81b203559343df2d00
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441892"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777259"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync-Eigenschaft – Beispiel (VC++)
-In diesem Beispiel wird veranschaulicht, wie die [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) -Eigenschaft den Zugriff auf Zeilen in einem hierarchischen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)erleichtert.  
+In diesem Beispiel wird veranschaulicht, wie die [StayInSync](./stayinsync-property.md) -Eigenschaft den Zugriff auf Zeilen in einem hierarchischen [Recordset](./recordset-object-ado.md)erleichtert.  
   
- Die äußere Schleife zeigt den vor-und Nachnamen, den Status und die Identifizierung jedes Autors an. Das angefügte **Recordset** für jede Zeile wird aus der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung abgerufen und automatisch **rsttitleauthor** von der **StayInSync** -Eigenschaft zugewiesen, wenn das übergeordnete **Recordset** in eine neue Zeile verschoben wird. Die innere Schleife zeigt vier Felder aus jeder Zeile im angefügten Recordset an.  
+ Die äußere Schleife zeigt den vor-und Nachnamen, den Status und die Identifizierung jedes Autors an. Das angefügte **Recordset** für jede Zeile wird aus der [Fields](./fields-collection-ado.md) -Auflistung abgerufen und automatisch **rsttitleauthor** von der **StayInSync** -Eigenschaft zugewiesen, wenn das übergeordnete **Recordset** in eine neue Zeile verschoben wird. Die innere Schleife zeigt vier Felder aus jeder Zeile im angefügten Recordset an.  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -145,6 +145,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [StayInSync-Eigenschaft](../../../ado/reference/ado-api/stayinsync-property.md)
+ [Fields-Auflistung (ADO)](./fields-collection-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)   
+ [StayInSync-Eigenschaft](./stayinsync-property.md)

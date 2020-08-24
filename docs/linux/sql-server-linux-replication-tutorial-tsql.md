@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: Konfigurieren der Replikation mit T-SQL'
-description: In diesem Tutorial wird gezeigt, wie Sie die Replikation von SQL Server-Momentaufnahmen unter Linux mithilfe von T-SQL konfigurieren.
+description: Konfigurieren Sie die SQL Server-Momentaufnahmereplikation unter Linux mit zwei SQL Server-Instanzen unter Verwendung von Transact-SQL (T-SQL).
 ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: fcabf34eae115f7fed2b74989e0e76c11562c7ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cc1a6ab577a471b69394cf35149f457972aece68
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882662"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088841"
 ---
 # <a name="configure-replication-with-t-sql"></a>Konfigurieren der Replikation mit T-SQL
 

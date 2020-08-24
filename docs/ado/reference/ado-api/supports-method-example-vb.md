@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4042f1a7bffc935333232a6267d06d905a34545f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e644bc69ec4d77dfdb280a263836784eebc39df
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441772"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777149"
 ---
 # <a name="supports-method-example-vb"></a>Supports-Methode – Beispiel (VB)
-In diesem Beispiel werden die [unter](../../../ado/reference/ado-api/supports-method.md) stützten Methoden verwendet, um die von einem Recordset unterstützten Optionen anzuzeigen, die mit verschiedenen Cursor Typen geöffnet wurden. Die Prozedur "DisplaySupport" ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
+In diesem Beispiel werden die [unter](./supports-method.md) stützten Methoden verwendet, um die von einem Recordset unterstützten Optionen anzuzeigen, die mit verschiedenen Cursor Typen geöffnet wurden. Die Prozedur "DisplaySupport" ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
   
 ```  
 'BeginSupportsVB  
@@ -163,5 +163,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Supports-Methode](../../../ado/reference/ado-api/supports-method.md)
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)   
+ [Supports-Methode](./supports-method.md)

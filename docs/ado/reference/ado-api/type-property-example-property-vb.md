@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f9c49ba9456af1f602fa5d2f399fc5172a5f1a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e6c0f758de185e56256aef4797c9507cdff539e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441692"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777049"
 ---
 # <a name="type-property-example-property-vb"></a>Type-Eigenschaft – Beispiel (Property) (VB)
-In diesem Beispiel wird die [Type](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft veranschaulicht. Es handelt sich um ein Modell eines Hilfsprogramms zum Auflisten der Namen und Typen einer Auflistung, wie z. b. [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md), [Felder](../../../ado/reference/ado-api/fields-collection-ado.md)usw.  
+In diesem Beispiel wird die [Type](./type-property-ado.md) -Eigenschaft veranschaulicht. Es handelt sich um ein Modell eines Hilfsprogramms zum Auflisten der Namen und Typen einer Auflistung, wie z. b. [Eigenschaften](./properties-collection-ado.md), [Felder](./fields-collection-ado.md)usw.  
   
- Das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) muss nicht geöffnet werden, um auf seine **Properties** -Auflistung zuzugreifen. Sie sind vorhanden, wenn das **Recordset** -Objekt instanziiert wird. Wenn Sie jedoch die Eigenschaft " [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) " auf " **adUseClient** " festlegen, werden der **Eigenschaften** Auflistung des **Recordset** -Objekts verschiedene dynamische Eigenschaften hinzugefügt, sodass das Beispiel etwas interessanter wird. Zur Veranschaulichung verwenden wir explizit die [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft, um auf die einzelnen [Eigenschaften](../../../ado/reference/ado-api/property-object-ado.md) Objekte zuzugreifen.  
+ Das [Recordset](./recordset-object-ado.md) muss nicht geöffnet werden, um auf seine **Properties** -Auflistung zuzugreifen. Sie sind vorhanden, wenn das **Recordset** -Objekt instanziiert wird. Wenn Sie jedoch die Eigenschaft " [Cursor Location](./cursorlocation-property-ado.md) " auf " **adUseClient** " festlegen, werden der **Eigenschaften** Auflistung des **Recordset** -Objekts verschiedene dynamische Eigenschaften hinzugefügt, sodass das Beispiel etwas interessanter wird. Zur Veranschaulichung verwenden wir explizit die [Item](./item-property-ado.md) -Eigenschaft, um auf die einzelnen [Eigenschaften](./property-object-ado.md) Objekte zuzugreifen.  
   
 ```  
 'BeginTypePropertyVB  
@@ -149,5 +149,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Type-Eigenschaft (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Property-Objekt (ADO)](./property-object-ado.md)   
+ [Type-Eigenschaft (ADO)](./type-property-ado.md)

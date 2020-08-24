@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c61663a1fc88f4e8efe464da0220df22133bdc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42fbc8670320761697caf4c956c1f9b64bda5c24
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452502"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758420"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Beibehaltungsszenario für XML-Recordsets
 In diesem Szenario erstellen Sie eine ASP-Anwendung (Active Server Pages), mit der der Inhalt eines Recordset-Objekts direkt in das ASP-Antwortobjekt gespeichert wird.  
@@ -26,7 +26,7 @@ In diesem Szenario erstellen Sie eine ASP-Anwendung (Active Server Pages), mit d
 > [!NOTE]
 >  Für dieses Szenario ist es erforderlich, dass auf dem Server Internet Information Server 5,0 (IIS) oder höher installiert ist.  
   
- Das zurückgegebene Recordset wird in Internet Explorer unter Verwendung eines [DataControl-Objekts (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)angezeigt.  
+ Das zurückgegebene Recordset wird in Internet Explorer unter Verwendung eines [DataControl-Objekts (RDS)](../../reference/rds-api/datacontrol-object-rds.md)angezeigt.  
   
  Zum Erstellen dieses Szenarios sind die folgenden Schritte erforderlich:  
   
@@ -85,12 +85,12 @@ In diesem Szenario erstellen Sie eine ASP-Anwendung (Active Server Pages), mit d
 %>  
 ```  
   
- Beachten Sie, dass das ASP-Antwortobjekt als Ziel für die [Speichermethode](../../../ado/reference/ado-api/save-method.md)Recordset angegeben wird. Das Ziel der Save-Methode kann ein beliebiges Objekt sein, das die IStream-Schnittstelle unterstützt, z. b. ein ADO [(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)-Objekt oder ein Dateiname, der den gesamten Pfad enthält, in dem das Recordset gespeichert werden soll.  
+ Beachten Sie, dass das ASP-Antwortobjekt als Ziel für die [Speichermethode](../../reference/ado-api/save-method.md)Recordset angegeben wird. Das Ziel der Save-Methode kann ein beliebiges Objekt sein, das die IStream-Schnittstelle unterstützt, z. b. ein ADO [(ADO)](../../reference/ado-api/stream-object-ado.md)-Objekt oder ein Dateiname, der den gesamten Pfad enthält, in dem das Recordset gespeichert werden soll.  
   
  Speichern und schließen Sie XMLResponse. ASP, bevor Sie mit dem nächsten Schritt fortfahren. Kopieren Sie außerdem die Datei "adovsb. Inc" aus dem Standard Installationsordner der ADO-Bibliothek in den Ordner, in dem Sie die Datei "XMLResponse. asp" gespeichert haben.  
   
 ## <a name="step-4-receive-and-display-the-data"></a>Schritt 4: empfangen und Anzeigen der Daten  
- In diesem Schritt erstellen Sie eine HTML-Datei mit einem eingebetteten Objekt des [DataControl-Objekts (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) , das auf die Datei XMLResponse. ASP zeigt, um das Recordset zu erhalten. Öffnen Sie default.htm mit einem Text-Editor, z. b. Notepad, und fügen Sie den folgenden Code hinzu. Ersetzen Sie "SQLServer" in der URL durch den Namen Ihres Servers.  
+ In diesem Schritt erstellen Sie eine HTML-Datei mit einem eingebetteten Objekt des [DataControl-Objekts (RDS)](../../reference/rds-api/datacontrol-object-rds.md) , das auf die Datei XMLResponse. ASP zeigt, um das Recordset zu erhalten. Öffnen Sie default.htm mit einem Text-Editor, z. b. Notepad, und fügen Sie den folgenden Code hinzu. Ersetzen Sie "SQLServer" in der URL durch den Namen Ihres Servers.  
   
 ```  
 <HTML>  
@@ -114,5 +114,5 @@ In diesem Szenario erstellen Sie eine ASP-Anwendung (Active Server Pages), mit d
  Schließen Sie die Datei default.htm, und speichern Sie Sie im selben Ordner, in dem Sie "XMLResponse. asp" gespeichert haben. Öffnen Sie in Internet Explorer 4,0 oder höher die URL https://*SQLServer*default.htm/XMLPersist/, und beobachten Sie die Ergebnisse. Die Daten werden in einer gebundenen DHTML-Tabelle angezeigt. Öffnen Sie nun die URL https:// *SQLServer* /XMLPersist/XMLResponse.ASP, und beobachten Sie die Ergebnisse. Der XML-Code wird angezeigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Save-Methode](../../../ado/reference/ado-api/save-method.md)   
- [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Save-Methode](../../reference/ado-api/save-method.md)   
+ [Beibehalten von Datensätzen im XML-Format](./persisting-records-in-xml-format.md)

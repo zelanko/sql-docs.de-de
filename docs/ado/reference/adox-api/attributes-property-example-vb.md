@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d1067f47d50b344731c0f270671861f381a3242
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7907572a282835e8d56150dbd034d530dd646b8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440432"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771329"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes-Eigenschaft – Beispiel (VB)
-Dieses Beispiel veranschaulicht die [Attribute](../../../ado/reference/adox-api/attributes-property-adox.md) -Eigenschaft einer [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Wenn Sie es auf **adcolnullable** festlegen, kann der Benutzer den Wert eines [recordsetfelds](../../../ado/reference/ado-api/recordset-object-ado.md) [Field](../../../ado/reference/ado-api/field-object.md) auf eine leere Zeichenfolge festlegen. In dieser Situation kann der Benutzer zwischen einem Datensatz unterscheiden, bei dem keine Daten bekannt sind, und einem Datensatz, in dem die Daten nicht zutreffen.  
+Dieses Beispiel veranschaulicht die [Attribute](./attributes-property-adox.md) -Eigenschaft einer [Spalte](./column-object-adox.md). Wenn Sie es auf **adcolnullable** festlegen, kann der Benutzer den Wert eines [recordsetfelds](../ado-api/recordset-object-ado.md) [Field](../ado-api/field-object.md) auf eine leere Zeichenfolge festlegen. In dieser Situation kann der Benutzer zwischen einem Datensatz unterscheiden, bei dem keine Daten bekannt sind, und einem Datensatz, in dem die Daten nicht zutreffen.  
   
 ```  
 ' BeginAttributesVB  
@@ -127,6 +127,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Attribute-Eigenschaft (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Attribute-Eigenschaft (ADOX)](./attributes-property-adox.md)   
+ [Catalog-Objekt (ADOX)](./catalog-object-adox.md)   
+ [Column-Objekt (ADOX)](./column-object-adox.md)
