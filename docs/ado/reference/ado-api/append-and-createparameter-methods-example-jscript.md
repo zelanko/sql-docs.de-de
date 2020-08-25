@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0701577bbd569e1b7c01239bd3613591864696d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 177ba5a63cb8503c51e3264ac5fea48ebf44a3e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451302"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776549"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Beispiel für Append und die Methode "Anfüge Parameter" (JScript)
-In diesem Beispiel werden die [Append](../../../ado/reference/ado-api/append-method-ado.md) -Methode und die-Methode für die-Methode zum Ausführen einer gespeicherten Prozedur mit einem [Eingabeparameter verwendet](../../../ado/reference/ado-api/createparameter-method-ado.md) . Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **AppendJS. ASP**.  
+In diesem Beispiel werden die [Append](./append-method-ado.md) -Methode und die-Methode für die-Methode zum Ausführen einer gespeicherten Prozedur mit einem [Eingabeparameter verwendet](./createparameter-method-ado.md) . Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **AppendJS. ASP**.  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -143,8 +143,8 @@ body {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [Kreateparameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)
+ [Append-Methode (ADO)](./append-method-ado.md)   
+ [Kreateparameter-Methode (ADO)](./createparameter-method-ado.md)   
+ [Field-Objekt](./field-object.md)   
+ [Fields-Auflistung (ADO)](./fields-collection-ado.md)   
+ [Parameter-Objekt](./parameter-object.md)

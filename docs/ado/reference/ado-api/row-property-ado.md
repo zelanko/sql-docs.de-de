@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bceacc215a67050142c773675a0af464ff9b9ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3048bf470ed27adb3fb3ceaaef3c7658c1fb93fb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442242"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777629"
 ---
 # <a name="row-property-ado"></a>Row-Eigenschaft (ADO)
-Ruft ein OLE DB **Row** -Objekt aus oder für ein [adorecordconstruction-Schnittstellen](../../../ado/reference/ado-api/adorecordconstruction-interface.md) Objekt ab oder legt es fest. Wenn Sie **put_Row** verwenden, um ein **Zeilen** Objekt festzulegen, wird eine Zeile in ein ADO- **Daten** Satz Objekt umgewandelt.  
+Ruft ein OLE DB **Row** -Objekt aus oder für ein [adorecordconstruction-Schnittstellen](./adorecordconstruction-interface.md) Objekt ab oder legt es fest. Wenn Sie **put_Row** verwenden, um ein **Zeilen** Objekt festzulegen, wird eine Zeile in ein ADO- **Daten** Satz Objekt umgewandelt.  
   
 ## <a name="readwritesyntax"></a>Lese-/Schreibzugriff. Syntax  
   
@@ -48,4 +48,4 @@ HRESULT put_Row([in] IUnknown* pRow);
  Diese Eigenschaften Methode gibt die HRESULT-Standardwerte zurück, einschließlich S_OK und E_FAIL.  
   
 ## <a name="applies-to"></a>Gilt für  
- [ADORecordConstruction-Schnittstelle](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+ [ADORecordConstruction-Schnittstelle](./adorecordconstruction-interface.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9eecf5caee690687adaffda7ccd56d869abb9e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3325cbb2a1178be61167cc0291bf23564d1e84fb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442096"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777519"
 ---
 # <a name="seek-method"></a>Seek-Methode
-Durchsucht den Index eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) , um die Zeile, die mit den angegebenen Werten übereinstimmt, schnell zu finden und die aktuelle Zeilen Position in diese Zeile zu ändern.  
+Durchsucht den Index eines [Recordsets](./recordset-object-ado.md) , um die Zeile, die mit den angegebenen Werten übereinstimmt, schnell zu finden und die aktuelle Zeilen Position in diese Zeile zu ändern.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,22 +39,22 @@ recordset.Seek KeyValues, SeekOption
  Ein Array von **Variant** -Werten. Ein Index besteht aus einer oder mehreren Spalten, und das Array enthält einen Wert, der mit jeder entsprechenden Spalte verglichen werden soll.  
   
  *Seekoption*  
- Ein [seekenum](../../../ado/reference/ado-api/seekenum.md) -Wert, der den Typ des Vergleichs angibt, der zwischen den Spalten des Indexes und den entsprechenden *KeyValues*vorgenommen werden soll.  
+ Ein [seekenum](./seekenum.md) -Wert, der den Typ des Vergleichs angibt, der zwischen den Spalten des Indexes und den entsprechenden *KeyValues*vorgenommen werden soll.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Verwenden Sie die **Seek** -Methode in Verbindung mit der [Index](../../../ado/reference/ado-api/index-property.md) -Eigenschaft, wenn der zugrunde liegende Anbieter Indizes für das **Recordset** -Objekt unterstützt. Verwenden Sie die [Unterstützung](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** -Methode, um zu bestimmen, ob der zugrunde liegende Anbieter **Seek**unterstützt, und die **unterstützte (adIndex)** -Methode, um zu bestimmen, ob der Anbieter Indizes (Beispielsweise unterstützt der [OLE DB Anbieter für Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) **Seek** und **Index**.)  
+ Verwenden Sie die **Seek** -Methode in Verbindung mit der [Index](./index-property.md) -Eigenschaft, wenn der zugrunde liegende Anbieter Indizes für das **Recordset** -Objekt unterstützt. Verwenden Sie die [Unterstützung](./supports-method.md)**(adSeek)** -Methode, um zu bestimmen, ob der zugrunde liegende Anbieter **Seek**unterstützt, und die **unterstützte (adIndex)** -Methode, um zu bestimmen, ob der Anbieter Indizes (Beispielsweise unterstützt der [OLE DB Anbieter für Microsoft Jet](../../guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) **Seek** und **Index**.)  
   
  Wenn **Seek** die gewünschte Zeile nicht findet, tritt kein Fehler auf, und die Zeile wird am Ende des **Recordsets**positioniert. Legen Sie die **Index** -Eigenschaft auf den gewünschten Index fest, bevor Sie diese Methode ausführen.  
   
- Diese Methode wird nur mit serverseitigen Cursorn unterstützt. Seek wird nicht unterstützt, wenn der [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschafts Wert des **Recordset** -Objekts **adUseClient**ist.  
+ Diese Methode wird nur mit serverseitigen Cursorn unterstützt. Seek wird nicht unterstützt, wenn der [Cursor Location](./cursorlocation-property-ado.md) -Eigenschafts Wert des **Recordset** -Objekts **adUseClient**ist.  
   
- Diese Methode kann nur verwendet werden, wenn das **Recordset** -Objekt mit einem [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) -Wert von **adCmdTableDirect**geöffnet wurde.  
+ Diese Methode kann nur verwendet werden, wenn das **Recordset** -Objekt mit einem [CommandTypeEnum](./commandtypeenum.md) -Wert von **adCmdTableDirect**geöffnet wurde.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für die Seek-Methode und Index-Eigenschaft (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
- [Beispiel für die Seek-Methode und Index-Eigenschaft (VC + +)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
- [Find-Methode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Index-Eigenschaft](../../../ado/reference/ado-api/index-property.md)
+ [Beispiel für die Seek-Methode und Index-Eigenschaft (VB)](./seek-method-and-index-property-example-vb.md)   
+ [Beispiel für die Seek-Methode und Index-Eigenschaft (VC + +)](./seek-method-and-index-property-example-vc.md)   
+ [Find-Methode (ADO)](./find-method-ado.md)   
+ [Index-Eigenschaft](./index-property.md)

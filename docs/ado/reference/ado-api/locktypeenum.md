@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52a6e4af75ac8887c23dd245a58981b1bbfb7eb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ba912f082cbd621d2d2205c6505e8c2be309bec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443332"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774549"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Gibt den Typ der Sperre an, die w채hrend der Bearbeitung in Datens채tzen eingef체gt wird  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adlockbatchoptimistische**|4|Gibt Updates f체r optimistische Batches an. Erforderlich f체r den Batch Aktualisierungs Modus.|  
-|**adlockoptimistisch**|3|Zeigt die optimistische Sperre, Datensatz nach Datensatz. Der Anbieter verwendet die optimistische Sperre und sperrt nur Datens채tze, wenn Sie die [Update](../../../ado/reference/ado-api/update-method.md) -Methode aufruft.|  
+|**adlockoptimistisch**|3|Zeigt die optimistische Sperre, Datensatz nach Datensatz. Der Anbieter verwendet die optimistische Sperre und sperrt nur Datens채tze, wenn Sie die [Update](./update-method.md) -Methode aufruft.|  
 |**adlockpessimi**|2|Gibt eine pessimistische Sperrung an, Daten Satz nach Datensatz. Der Anbieter 체bernimmt das, was erforderlich ist, um eine erfolgreiche Bearbeitung der Datens채tze sicherzustellen, normalerweise durch Sperren von Datens채tzen in der Datenquelle unmittelbar nach der Bearbeitung.|  
 |**adlockread Only**|1|Gibt schreibgesch체tzte Datens채tze an. Sie k철nnen die Daten nicht 채ndern.|  
 |**adlockunspezifiziert**|-1|Gibt keinen Sperrentyp an. Bei Klonen wird der Klon mit dem gleichen Sperrentyp wie der urspr체ngliche erstellt.|  
@@ -37,7 +37,7 @@ Gibt den Typ der Sperre an, die w채hrend der Bearbeitung in Datens채tzen eingef�
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |AdoEnums.LockType.BATchoptimistische|  
 |Adoerums. LockType. optimistisch|  
@@ -49,11 +49,11 @@ Gibt den Typ der Sperre an, die w채hrend der Bearbeitung in Datens채tzen eingef�
 
 :::row:::
     :::column:::
-        [Clone-Methode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)  
-        [LockType-Eigenschaft (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)  
+        [Clone-Methode (ADO)](./clone-method-ado.md)  
+        [LockType-Eigenschaft (ADO)](./locktype-property-ado.md)  
     :::column-end:::
     :::column:::
-        [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
-        [WillExecute-Ereignis (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+        [Open-Methode (ADO-Recordset)](./open-method-ado-recordset.md)  
+        [WillExecute-Ereignis (ADO)](./willexecute-event-ado.md)  
     :::column-end:::
 :::row-end:::

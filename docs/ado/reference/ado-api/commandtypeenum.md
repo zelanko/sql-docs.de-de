@@ -16,32 +16,32 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861abb0066f4b9f32ff8f9071c1520a1dec73016
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 994fe5eb0cf10189477e11154b8814f5e73c9194
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450822"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776079"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Gibt an, wie ein Befehls Argument interpretiert werden soll.  
   
  Es ist wichtig, vom Benutzer bereitgestellte *CommandString* -Werte zu validieren, um zu vermeiden, dass Anwendungs Benutzern potenziell gefährliche Befehle zur Ausführung von ADO hinzufügen können.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adcmdunspezifiziert**|-1|Gibt das Befehlstyp Argument nicht an.|  
-|**adCmdText**|1|Wertet [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) als Text Definition eines Befehls oder eines gespeicherten Prozedur Aufrufes aus.|  
+|**adCmdText**|1|Wertet [CommandText](./commandtext-property-ado.md) als Text Definition eines Befehls oder eines gespeicherten Prozedur Aufrufes aus.|  
 |**adCmdTable**|2|Wertet **CommandText** als einen Tabellennamen aus, dessen Spalten von einer intern generierten SQL-Abfrage zurückgegeben werden.|  
 |**adCmdStoredProc**|4|Wertet **CommandText** als Namen einer gespeicherten Prozedur aus.|  
 |**adCmdUnknown**|8|Standard. Gibt an, dass der Befehlstyp in der **CommandText** -Eigenschaft nicht bekannt ist.<br /><br /> Wenn der Typ des Befehls nicht bekannt ist, werden von ADO mehrere Versuche unternommen, den **CommandText**zu interpretieren.<br /><br /> -   **CommandText** wird als Text Definition eines Befehls oder eines gespeicherten Prozedur Aufrufes interpretiert. Dies entspricht dem Verhalten von **adCmdText**.<br />-   **CommandText** ist der Name einer gespeicherten Prozedur. Dies entspricht dem Verhalten von **adCmdStoredProc**.<br />-   **CommandText** wird als Name einer Tabelle interpretiert. Alle Spalten werden von einer intern generierten SQL-Abfrage zurückgegeben. Dies ist das gleiche Verhalten wie **adCmdTable**.|  
-|**adcmdfile**|256|Wertet **CommandText** als den Dateinamen eines permanent gespeicherten [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)aus. Wird mit **Recordset verwendet.** Nur [Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) oder [Requery](../../../ado/reference/ado-api/requery-method.md) .|  
-|**adCmdTableDirect**|512|Wertet **CommandText** als einen Tabellennamen aus, dessen Spalten alle zurückgegeben werden. Wird nur mit " **Recordset. Open** " oder " **Requery** " verwendet. Um die [Seek](../../../ado/reference/ado-api/seek-method.md) -Methode zu verwenden, muss das **Recordset** mit **adCmdTableDirect**geöffnet werden.<br /><br /> Dieser Wert kann nicht mit dem [executeoptionenumum](../../../ado/reference/ado-api/executeoptionenum.md) -Wert **adAsyncExecute**kombiniert werden.|  
+|**adcmdfile**|256|Wertet **CommandText** als den Dateinamen eines permanent gespeicherten [Recordsets](./recordset-object-ado.md)aus. Wird mit **Recordset verwendet.** Nur [Öffnen](./open-method-ado-recordset.md) oder [Requery](./requery-method.md) .|  
+|**adCmdTableDirect**|512|Wertet **CommandText** als einen Tabellennamen aus, dessen Spalten alle zurückgegeben werden. Wird nur mit " **Recordset. Open** " oder " **Requery** " verwendet. Um die [Seek](./seek-method.md) -Methode zu verwenden, muss das **Recordset** mit **adCmdTableDirect**geöffnet werden.<br /><br /> Dieser Wert kann nicht mit dem [executeoptionenumum](./executeoptionenum.md) -Wert **adAsyncExecute**kombiniert werden.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |Adoerums. CommandType. nicht angegeben|  
 |Adoerums. CommandType. Text|  
@@ -55,14 +55,14 @@ Gibt an, wie ein Befehls Argument interpretiert werden soll.
 
 :::row:::
     :::column:::
-        [CommandType-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)  
-        [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+        [CommandType-Eigenschaft (ADO)](./commandtype-property-ado.md)  
+        [Execute-Methode (ADO-Befehl)](./execute-method-ado-command.md)  
     :::column-end:::
     :::column:::
-        [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
-        [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Execute-Methode (ADO-Verbindung)](./execute-method-ado-connection.md)  
+        [Open-Methode (ADO-Recordset)](./open-method-ado-recordset.md)  
     :::column-end:::
     :::column:::
-        [Requery-Methode](../../../ado/reference/ado-api/requery-method.md)  
+        [Requery-Methode](./requery-method.md)  
     :::column-end:::
 :::row-end:::

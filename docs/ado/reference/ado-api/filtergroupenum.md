@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8d3c510cfd9fa6c4a28f78005021465b9b0917b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7552eb4b069b2cd2adc33e0bff25f23d918468c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443662"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775289"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
-Gibt die Gruppe von Datensätzen an, die von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)gefiltert werden sollen.  
+Gibt die Gruppe von Datensätzen an, die von einem [Recordset](./recordset-object-ado.md)gefiltert werden sollen.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
-|**adFilterAffectedRecords**|2|Filter zum Anzeigen nur der Datensätze, die vom letzten [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)-, [Resync](../../../ado/reference/ado-api/resync-method.md)-, [Update Batch](../../../ado/reference/ado-api/updatebatch-method.md)-oder [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) -Befehl betroffen sind.|  
+|**adFilterAffectedRecords**|2|Filter zum Anzeigen nur der Datensätze, die vom letzten [Delete](./delete-method-ado-recordset.md)-, [Resync](./resync-method.md)-, [Update Batch](./updatebatch-method.md)-oder [CancelBatch](./cancelbatch-method-ado.md) -Befehl betroffen sind.|  
 |**adFilterConflictingRecords**|5|Filter zum Anzeigen der Datensätze, bei denen das letzte Batch Update nicht erfolgreich war.|  
 |**adfilterfetchedrecords**|3|Filter zum Anzeigen der Datensätze im aktuellen Cache, d. h. die Ergebnisse des letzten Aufrufes zum Abrufen von Datensätzen aus der Datenbank.|  
 |**adfilternone**|0|Entfernt den aktuellen Filter und stellt alle Datensätze für die Anzeige wieder her.|  
@@ -37,7 +37,7 @@ Gibt die Gruppe von Datensätzen an, die von einem [Recordset](../../../ado/refe
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |AdoEnums. filtergroup. affectedrecords|  
 |AdoEnums. filtergroup. conflictingrecords|  
@@ -46,4 +46,4 @@ Gibt die Gruppe von Datensätzen an, die von einem [Recordset](../../../ado/refe
 |AdoEnums. filtergroup. pdingrecords|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Filter-Eigenschaft](../../../ado/reference/ado-api/filter-property.md)
+ [Filter-Eigenschaft](./filter-property.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: afdd3560de5ca7e64d8a378f1eca04f875903a06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14308aeda28311b73dc34a323a9a9bf662770e8b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452232"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759814"
 ---
 # <a name="customization-file-userlist-section"></a>UserList-Abschnitt der Anpassungsdatei
 Der Abschnitt " **userlist** " bezieht sich auf den **Connect** -Abschnitt mit dem gleichen Abschnitts *bezeichnerparameter* .  
@@ -35,18 +35,16 @@ Der Abschnitt " **userlist** " bezieht sich auf den **Connect** -Abschnitt mit d
  _Benutzername_**=**   
  **_accessRights_**  
   
-|Teil|Beschreibung|  
+|Teil|BESCHREIBUNG|  
 |----------|-----------------|  
 |*userName*|Der *Benutzername* der Person, die diese Verbindung verwendet. Gültige Benutzernamen werden mit dem Dialogfeld IIS **Service Manager** erstellt.|  
 |**_accessRights_**|Eine der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** : der Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   Schreib **geschützt: der** Benutzer kann die Datenquelle lesen.<br />-   " **Lesewrite** ": der Benutzer kann die Datenquelle lesen oder in diese schreiben.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Bereich für die Anpassungs Dateiverbindung](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Abschnitt "Anpassungs Datei Protokolle"](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [SQL-Abschnitt der Anpassungs Datei](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Erforderliche Client Einstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Grundlegendes zur Anpassungs Datei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+ [Bereich für die Anpassungs Dateiverbindung](./customization-file-connect-section.md)   
+ [Abschnitt "Anpassungs Datei Protokolle"](./customization-file-logs-section.md)   
+ [SQL-Abschnitt der Anpassungs Datei](./customization-file-sql-section.md)   
+ [DataFactory-Anpassung](./datafactory-customization.md)   
+ [Erforderliche Client Einstellungen](./required-client-settings.md)   
+ [Grundlegendes zur Anpassungs Datei](./understanding-the-customization-file.md)   
+ [Schreiben Ihres eigenen benutzerdefinierten Handlers](./writing-your-own-customized-handler.md)

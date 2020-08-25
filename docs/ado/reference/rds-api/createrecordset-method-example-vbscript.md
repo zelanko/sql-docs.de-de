@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6fc0eca4668aeaff00b8add8532ce633517eb64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9648445435cc1f26a28c43110584fb6280739f64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439172"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768629"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- In diesem Codebeispiel wird ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) auf der Serverseite erstellt. Sie verfügt über zwei Spalten mit jeweils vier Zeilen. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie **ihn als "**" "" "" "".  
+ In diesem Codebeispiel wird ein [Recordset](../ado-api/recordset-object-ado.md) auf der Serverseite erstellt. Sie verfügt über zwei Spalten mit jeweils vier Zeilen. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie **ihn als "**" "" "" "".  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -169,7 +169,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Methode "samaterecordset" (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
-
+ [Methode "samaterecordset" (RDS)](./createrecordset-method-rds.md)   
+ [Recordset-Objekt (ADO)](../ado-api/recordset-object-ado.md)

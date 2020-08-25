@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9543501582e8cff357a2677f88e7a917224d866
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77d6e70dcc1d2fa7d3fc0ad3d4e14139e8e4dace
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443082"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774039"
 ---
 # <a name="nextrecordset-method-example-vc"></a>NextRecordset-Methode – Beispiel (VC++)
-In diesem Beispiel wird die [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) -Methode verwendet, um die Daten in einem Recordset anzuzeigen, das eine Verbund Befehls Anweisung verwendet, die aus drei separaten **Select** -Anweisungen besteht.  
+In diesem Beispiel wird die [NextRecordset](./nextrecordset-method-ado.md) -Methode verwendet, um die Daten in einem Recordset anzuzeigen, das eine Verbund Befehls Anweisung verwendet, die aus drei separaten **Select** -Anweisungen besteht.  
   
 ```  
 // BeginNextRecordsetCpp.cpp  
@@ -140,4 +140,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [NextRecordset-Methode (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)
+ [NextRecordset-Methode (ADO)](./nextrecordset-method-ado.md)

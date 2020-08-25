@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 215e45631f223e68d2933c103c3503d0564d416c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf23a36461c089a76ae40890fa548bc357029ea6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439672"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769729"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey- und Unique-Eigenschaften – Beispiel (VC++)
-In diesem Beispiel werden die [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) -und die [Unique](../../../ado/reference/adox-api/unique-property-adox.md) -Eigenschaften eines [Indexes](../../../ado/reference/adox-api/index-object-adox.md)veranschaulicht. Der Code erstellt eine neue Tabelle mit zwei Spalten. Die Eigenschaften **PrimaryKey** und **Unique** werden verwendet, um eine Spalte als Primärschlüssel festzulegen, für den doppelte Werte nicht zulässig sind.  
+In diesem Beispiel werden die [PrimaryKey](./primarykey-property-adox.md) -und die [Unique](./unique-property-adox.md) -Eigenschaften eines [Indexes](./index-object-adox.md)veranschaulicht. Der Code erstellt eine neue Tabelle mit zwei Spalten. Die Eigenschaften **PrimaryKey** und **Unique** werden verwendet, um eine Spalte als Primärschlüssel festzulegen, für den doppelte Werte nicht zulässig sind.  
   
 ```  
 // BeginPrimaryKeyCpp.cpp  

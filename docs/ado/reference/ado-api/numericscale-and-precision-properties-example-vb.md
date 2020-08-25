@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fdeaafe1a6f4362eb6a4bc912ce9267d179fe9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f4e5407d013e567c09dbb659f5b5e6617e0042c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443062"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773989"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>Beispiel: NumericScale- und Precision-Eigenschaften (VB)
-In diesem Beispiel werden die [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) -Eigenschaft und die [Precision](../../../ado/reference/ado-api/precision-property-ado.md) -Eigenschaft verwendet, um die numerische Skala und Genauigkeit der Felder in der Tabelle " ***Rabatte*** " der ***Pubs*** -Datenbank anzuzeigen.  
+In diesem Beispiel werden die [NumericScale](./numericscale-property-ado.md) -Eigenschaft und die [Precision](./precision-property-ado.md) -Eigenschaft verwendet, um die numerische Skala und Genauigkeit der Felder in der Tabelle " ***Rabatte*** " der ***Pubs*** -Datenbank anzuzeigen.  
   
 ```  
 'BeginNumericScaleVB  
@@ -75,7 +75,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [NumericScale-Eigenschaft (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)   
- [Precision-Eigenschaft (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [Field-Objekt](./field-object.md)   
+ [NumericScale-Eigenschaft (ADO)](./numericscale-property-ado.md)   
+ [Parameter-Objekt](./parameter-object.md)   
+ [Precision-Eigenschaft (ADO)](./precision-property-ado.md)

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6b7e95f654482e7026e288420d2ad10f36ab71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 364f8ac8d799e8d354b43f5902eff5f3b46f4b59
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439262"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768829"
 ---
 # <a name="cancel-method-example-vbscript"></a>Cancel-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Im folgenden Beispiel wird gezeigt, wie die [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) -Methode zur Laufzeit gelesen wird. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als cancelvsb. ASP. Sie können das Ergebnis in einem beliebigen Client Browser anzeigen.  
+ Im folgenden Beispiel wird gezeigt, wie die [Cancel](../ado-api/cancel-method-ado.md) -Methode zur Laufzeit gelesen wird. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als cancelvsb. ASP. Sie können das Ergebnis in einem beliebigen Client Browser anzeigen.  
   
 ```  
 <!-- BeginCancelVBS -->  
@@ -70,6 +70,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Cancel-Methode (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)
-
-
+ [Cancel-Methode (ADO)](../ado-api/cancel-method-ado.md)

@@ -1,6 +1,6 @@
 ---
 title: Sichern und Wiederherstellen von SQL Server-Datenbanken für Linux
-description: Erfahren Sie, wie Sie SQL Server-Datenbanken für Linux sichern und wiederherstellen.
+description: Erfahren Sie, wie Sie SQL Server-Datenbanken für Linux sichern und wiederherstellen. Finden Sie auch heraus, wie die Sicherung und Wiederherstellung mit SQL Server Management Studio (SSMS) funktioniert.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882344"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088964"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken für Linux
 
@@ -107,9 +107,9 @@ Die folgenden Schritte führen Sie durch die Wiederherstellung einer Datenbank m
 
 1. SQL Server stellt die Datenbank wieder her. 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Erstellen einer vollständigen Datenbanksicherung (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [Sichern eines Transaktionsprotokolls (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
 * [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
-* [SQL Server-Sicherung über URLs](../relational-databases/backup-restore/sql-server-backup-to-url.md)
+* [SQL Server-Sicherung über URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Schritt 9: Testen des Tutorialpakets aus Lektion 1'
 title: 'Schritt 9: Testen des Tutorialpakets aus Lektion 1 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13c24945715ca9b0fa1ebac06b66d777c4eadaea
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 758f5e0c312afc2a8310743f917cc00a1c43462c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462012"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>Lektion 1.9: Testen des Tutorialpakets aus Lektion 1
 
@@ -47,7 +48,7 @@ Bevor Sie das Paket testen, überprüfen Sie, ob Ablaufsteuerung und Datenfluss 
   
 ## <a name="run-the-lesson-1-package"></a>Ausführen des Pakets aus Lektion 1  
   
-1.  Klicken Sie im Menü **Debuggen** auf **Start Debugging** (Debuggen starten).  
+1.  Wählen Sie im Menü **Debuggen** die Option **Debuggen starten** aus.  
   
     Dann wird das Paket ausgeführt, wobei 1.097 Zeilen erfolgreich zur **NewFactCurrencyRate**-Faktentabelle in **AdventureWorksDW2012** hinzugefügt werden. Klicken Sie auf die Registerkarte **Datenfluss**, um dieses Ergebnis zu überprüfen.
   

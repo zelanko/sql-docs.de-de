@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56f3a7551a94fa9f079aa56d24de9c1d7a072480
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5203cc9a896e42a18f2c3eedcbfbcb41d4f6ec4a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451172"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776439"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans-, CommitTrans-und RollbackTrans-Methoden Beispiel (VC + +)
-In diesem Beispiel wird der Buchtyp aller Psychologie Bücher in der ***Titel*** Tabelle der-Datenbank geändert. Nachdem die [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode eine Transaktion gestartet hat, die alle an der Tabelle " ***Titel*** " vorgenommenen Änderungen isoliert, speichert die [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode die Änderungen. Sie können mit der [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode Änderungen rückgängig machen, die Sie mithilfe der [Update](../../../ado/reference/ado-api/update-method.md) -Methode gespeichert haben.  
+In diesem Beispiel wird der Buchtyp aller Psychologie Bücher in der ***Titel*** Tabelle der-Datenbank geändert. Nachdem die [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode eine Transaktion gestartet hat, die alle an der Tabelle " ***Titel*** " vorgenommenen Änderungen isoliert, speichert die [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode die Änderungen. Sie können mit der [Rollback](./begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode Änderungen rückgängig machen, die Sie mithilfe der [Update](./update-method.md) -Methode gespeichert haben.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -268,5 +268,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [BeginTrans-, CommitTrans-und RollbackTrans-Methode (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Update-Methode](../../../ado/reference/ado-api/update-method.md)
+ [BeginTrans-, CommitTrans-und RollbackTrans-Methode (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Update-Methode](./update-method.md)

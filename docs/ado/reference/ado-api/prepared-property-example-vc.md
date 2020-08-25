@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d05e220717ad88ad52340d368a3b54a85365621d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 003f3f80e9a544e5b33929cf434f6b39855ca49d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442672"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773059"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel veranschaulicht die [vorbereitete](../../../ado/reference/ado-api/prepared-property-ado.md) Eigenschaft, indem zwei [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekte geöffnet werden: eine vorbereitete und eine nicht vorbereitete.  
+Dieses Beispiel veranschaulicht die [vorbereitete](./prepared-property-ado.md) Eigenschaft, indem zwei [Befehls](./command-object-ado.md) Objekte geöffnet werden: eine vorbereitete und eine nicht vorbereitete.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -145,5 +145,5 @@ void PrintComError(_com_error &e) {
 **Nicht vorbereitet: 0,016 Sekunden**  
 **Vorbereitet: 0,016 Sekunden**   
 ## <a name="see-also"></a>Weitere Informationen  
- [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Prepared-Eigenschaft (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+ [Command-Objekt (ADO)](./command-object-ado.md)   
+ [Prepared-Eigenschaft (ADO)](./prepared-property-ado.md)

@@ -16,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71142aac94003987267a6d4a6b30d2c9d17c1bfd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73fb0218b9a4a9437dbe8c103c8496f0a209e9b1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444422"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775809"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
-Gibt an, ob die [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode eines [Connection](../../../ado/reference/ado-api/connection-object-ado.md) -Objekts zurückgegeben werden soll, nachdem die Verbindung (synchron) oder vor (asynchron) hergestellt wurde.  
+Gibt an, ob die [Open](./open-method-ado-connection.md) -Methode eines [Connection](./connection-object-ado.md) -Objekts zurückgegeben werden soll, nachdem die Verbindung (synchron) oder vor (asynchron) hergestellt wurde.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
-|**adasyncconnect**|16|Öffnet die Verbindung asynchron. Das Ereignis [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) kann verwendet werden, um zu bestimmen, wann die Verbindung verfügbar ist.|  
+|**adasyncconnect**|16|Öffnet die Verbindung asynchron. Das Ereignis [ConnectComplete](./connectcomplete-and-disconnect-events-ado.md) kann verwendet werden, um zu bestimmen, wann die Verbindung verfügbar ist.|  
 |**adconnectunspezifiziert**|-1|Standard. Öffnet die Verbindung synchron.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |Adoumums. connectoption. asyncconnect|  
 |Adoesums. connectoption. connectunspezifiziert|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)
+ [Open-Methode (ADO-Verbindung)](./open-method-ado-connection.md)

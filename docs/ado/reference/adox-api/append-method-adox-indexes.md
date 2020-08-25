@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b13115a657f3bc25ae79cf3ba92a7fe339492536
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28e396e85dc68a3d622a173dad440c5dff68dea1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440542"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771459"
 ---
 # <a name="append-method-adox-indexes"></a>Append-Methode (ADOX-Indizes)
-Fügt [der](../../../ado/reference/adox-api/indexes-collection-adox.md) Index Auflistung ein neues [Index](../../../ado/reference/adox-api/index-object-adox.md) Objekt hinzu.  
+Fügt [der](./indexes-collection-adox.md) Index Auflistung ein neues [Index](./index-object-adox.md) Objekt hinzu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +38,7 @@ Indexes.Append Index [,Columns]
  Das anzufügende **Index** Objekt oder der Name des Indexes, der erstellt und angefügt werden soll.  
   
  *Spalten*  
- Optional. Ein **Variant** -Wert, der die Namen der zu indizierenden Spalte (n) angibt. Der *Columns* -Parameter entspricht den Werten der [Name](../../../ado/reference/adox-api/name-property-adox.md) -Eigenschaft eines [Spalten](../../../ado/reference/adox-api/column-object-adox.md) Objekts oder von Objekten.  
+ Optional. Ein **Variant** -Wert, der die Namen der zu indizierenden Spalte (n) angibt. Der *Columns* -Parameter entspricht den Werten der [Name](./name-property-adox.md) -Eigenschaft eines [Spalten](./column-object-adox.md) Objekts oder von Objekten.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Der *Columns* -Parameter kann entweder den Namen einer Spalte oder ein Array mit Spaltennamen annehmen.  
@@ -46,14 +46,14 @@ Indexes.Append Index [,Columns]
  Wenn der Anbieter das Erstellen von Indizes nicht unterstützt, tritt ein Fehler auf.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Auflistung von Indizes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Indexes-Collection (ADOX)](./indexes-collection-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Index Append-Methode (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
- [Append-Methode (ADOX-Spalten)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append-Methode (ADOX-Gruppen)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append-Methode (ADOX-Schlüssel)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append-Methode (ADOX-Prozeduren)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append-Methode (ADOX-Tabellen)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append-Methode (ADOX-Benutzer)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Beispiel für Index Append-Methode (VB)](./indexes-append-method-example-vb.md)   
+ [Append-Methode (ADOX-Spalten)](./append-method-adox-columns.md)   
+ [Append-Methode (ADOX-Gruppen)](./append-method-adox-groups.md)   
+ [Append-Methode (ADOX-Schlüssel)](./append-method-adox-keys.md)   
+ [Append-Methode (ADOX-Prozeduren)](./append-method-adox-procedures.md)   
+ [Append-Methode (ADOX-Tabellen)](./append-method-adox-tables.md)   
+ [Append-Methode (ADOX-Benutzer)](./append-method-adox-users.md)   
+ [Append-Methode (ADOX-Sichten)](./append-method-adox-views.md)

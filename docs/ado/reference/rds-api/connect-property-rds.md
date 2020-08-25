@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb3b5e535d2f4b6f6e4777c8c3ac1bbaaa3381c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 749133cdc079faf011e77e9925ca8d39dbe10219
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439212"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768699"
 ---
 # <a name="connect-property-rds"></a>Connect-Eigenschaft (RDS)
 Gibt den Datenbanknamen an, von dem die Abfrage-und Aktualisierungs Vorgänge ausgeführt werden.  
   
- Sie können die **Connect** -Eigenschaft zur Entwurfszeit in [RDS festlegen. Objekt Tags des DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekts oder zur Laufzeit im Skriptcode (z. b. VBScript).  
+ Sie können die **Connect** -Eigenschaft zur Entwurfszeit in [RDS festlegen. Objekt Tags des DataControl](./datacontrol-object-rds.md) -Objekts oder zur Laufzeit im Skriptcode (z. b. VBScript).  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
@@ -39,7 +39,7 @@ Run time: DataControl.Connect = "ConnectionString"
   
 #### <a name="parameters"></a>Parameter  
  *ConnectionString*  
- Eine gültige Verbindungszeichenfolge. Weitere allgemeine Informationen zu Verbindungs Zeichenfolgen finden Sie in der [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft oder in der Provider-Dokumentation.  
+ Eine gültige Verbindungszeichenfolge. Weitere allgemeine Informationen zu Verbindungs Zeichenfolgen finden Sie in der [ConnectionString](../ado-api/connectionstring-property-ado.md) -Eigenschaft oder in der Provider-Dokumentation.  
   
 > [!NOTE]
 >  Angeben von MS Remote als Anbieter für **RDS. DataControl** würde ein Szenario mit vier Ebenen erstellen. Szenarios, die größer als drei Stufen sind, wurden nicht getestet und sollten nicht benötigt werden.  
@@ -48,12 +48,10 @@ Run time: DataControl.Connect = "ConnectionString"
  Eine Objekt Variable, die einen **RDS darstellt. DataControl** -Objekt.  
   
 ## <a name="applies-to"></a>Gilt für  
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl-Objekt (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für eine Verbindungs Eigenschaft (VBScript)](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
- [Query-Methode (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
- [Refresh-Methode (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
- [SubmitChanges-Methode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [Beispiel für eine Verbindungs Eigenschaft (VBScript)](./connect-property-example-vbscript.md)   
+ [Query-Methode (RDS)](./query-method-rds.md)   
+ [Refresh-Methode (RDS)](./refresh-method-rds.md)   
+ [SubmitChanges-Methode (RDS)](./submitchanges-method-rds.md)

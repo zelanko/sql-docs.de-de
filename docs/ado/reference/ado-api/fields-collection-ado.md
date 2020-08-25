@@ -18,33 +18,33 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1374770ab86038d50c4dd8cafabff328a5275ace
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d94803ecbe53addb2efb7ef738863bc6541a5801
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443732"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775379"
 ---
 # <a name="fields-collection-ado"></a>Fields-Collection (ADO)
-Enthält alle [Feld](../../../ado/reference/ado-api/field-object.md) Objekte eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) oder eines [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekts.  
+Enthält alle [Feld](./field-object.md) Objekte eines [Recordsets](./recordset-object-ado.md) oder eines [Datensatz](./record-object-ado.md) -Objekts.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Ein **Recordset** -Objekt verfügt über eine **Fields** -Auflistung, die aus **Feld** Objekten besteht. Jedes **Feld** Objekt entspricht einer Spalte im **Recordset**. Sie können die **Fields** -Auflistung vor dem Öffnen des **Recordsets** auffüllen, indem Sie die [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode für die Auflistung aufrufen.  
+ Ein **Recordset** -Objekt verfügt über eine **Fields** -Auflistung, die aus **Feld** Objekten besteht. Jedes **Feld** Objekt entspricht einer Spalte im **Recordset**. Sie können die **Fields** -Auflistung vor dem Öffnen des **Recordsets** auffüllen, indem Sie die [Refresh](./refresh-method-ado.md) -Methode für die Auflistung aufrufen.  
   
 > [!NOTE]
 >  Eine ausführlichere Erläuterung der Verwendung von **Feld** Objekten finden Sie im Thema **Feld** Objekt.  
   
- Die **Fields** -Auflistung verfügt über eine [Append](../../../ado/reference/ado-api/append-method-ado.md) -Methode, die vorläufig ein **Feld** Objekt erstellt und der Auflistung hinzufügt, sowie eine **Update** -Methode, die alle Ergänzungen oder Löschungen schließt.  
+ Die **Fields** -Auflistung verfügt über eine [Append](./append-method-ado.md) -Methode, die vorläufig ein **Feld** Objekt erstellt und der Auflistung hinzufügt, sowie eine **Update** -Methode, die alle Ergänzungen oder Löschungen schließt.  
   
- Ein **Datensatz** -Objekt verfügt über zwei spezielle Felder, die mit [fieldenum](../../../ado/reference/ado-api/fieldenum.md) -Konstanten indiziert werden können. Eine Konstante greift auf ein Feld zu, das den Standardstream für den **Datensatz**enthält, und die andere auf ein Feld, das die absolute URL Zeichenfolge für den **Datensatz**enthält.  
+ Ein **Datensatz** -Objekt verfügt über zwei spezielle Felder, die mit [fieldenum](./fieldenum.md) -Konstanten indiziert werden können. Eine Konstante greift auf ein Feld zu, das den Standardstream für den **Datensatz**enthält, und die andere auf ein Feld, das die absolute URL Zeichenfolge für den **Datensatz**enthält.  
   
- Bestimmte Anbieter (z. b. der [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) können die **Fields** -Auflistung mit einer Teilmenge der verfügbaren Felder für den **Datensatz** oder das **Recordset**auffüllen. Der Auflistung werden keine anderen Felder hinzugefügt, bis Sie zunächst anhand ihres Namens referenziert oder durch den Code indiziert werden.  
+ Bestimmte Anbieter (z. b. der [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) können die **Fields** -Auflistung mit einer Teilmenge der verfügbaren Felder für den **Datensatz** oder das **Recordset**auffüllen. Der Auflistung werden keine anderen Felder hinzugefügt, bis Sie zunächst anhand ihres Namens referenziert oder durch den Code indiziert werden.  
   
- Wenn Sie versuchen, mit dem Namen auf ein nicht vorhandenes Feld zu verweisen, wird ein neues **Feld** Objekt an die **Fields** -Auflistung mit dem [Status](../../../ado/reference/ado-api/status-property-ado-field.md) **adfieldpdinginsert**angehängt. Wenn Sie [Update](../../../ado/reference/ado-api/update-method.md)aufruft, erstellt ADO ein neues Feld in der Datenquelle, wenn es von Ihrem Anbieter zugelassen wird.  
+ Wenn Sie versuchen, mit dem Namen auf ein nicht vorhandenes Feld zu verweisen, wird ein neues **Feld** Objekt an die **Fields** -Auflistung mit dem [Status](./status-property-ado-field.md) **adfieldpdinginsert**angehängt. Wenn Sie [Update](./update-method.md)aufruft, erstellt ADO ein neues Feld in der Datenquelle, wenn es von Ihrem Anbieter zugelassen wird.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Eigenschaften, Methoden und Ereignisse der Fields-Auflistung](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
+-   [Eigenschaften, Methoden und Ereignisse der Fields-Auflistung](./fields-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Field-Objekt](../../../ado/reference/ado-api/field-object.md)
+ [Field-Objekt](./field-object.md)

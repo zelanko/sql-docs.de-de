@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 122e6dc070565116bb6140464b33fdafdf4dc489
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5d39885ccc6640bb40c3e369c050fd00fb4c12d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438822"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767849"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>RDS-Codebeispiele in Visual C++
 Verwenden Sie die folgenden Codebeispiele, um zu erfahren, wie Sie beim Schreiben in Microsoft Visual C++ RDS-Eigenschaften verwenden.  
@@ -32,8 +32,6 @@ Verwenden Sie die folgenden Codebeispiele, um zu erfahren, wie Sie beim Schreibe
 > [!NOTE]
 >  Fügen Sie das gesamte Codebeispiel von Anfang bis Ende in Ihren Code-Editor ein. Das Beispiel wird möglicherweise nicht ordnungsgemäß ausgeführt, wenn Teil Beispiele verwendet werden oder wenn die Absatz Formatierung verloren geht.  
   
--   [Beispiel für Handlereigenschaft](../../../ado/reference/rds-api/handler-property-example-vc.md)  
+-   [Beispiel für Handlereigenschaft](./handler-property-example-vc.md)  
   
--   [Beispiel für InternetTimeout-Eigenschaft](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)
-
-
+-   [Beispiel für InternetTimeout-Eigenschaft](./internettimeout-property-example-vc.md)

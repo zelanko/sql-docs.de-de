@@ -14,42 +14,42 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bb02d47575eaaa2e1eee4a443f86a7d103dabca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aae7fdebfa01972709cd8e84c9e92a59f24acff1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440552"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771629"
 ---
 # <a name="adox-properties"></a>ADOX-Eigenschaften
 
 |Eigenschaft|Beschreibung|  
 |-|-|  
-|[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Gibt das ADO- **Verbindungs** Objekt an, zu dem der Katalog gehört.|  
-|[Attribute](../../../ado/reference/adox-api/attributes-property-adox.md)|Beschreibt Spalten Eigenschaften.|  
-|[Gruppiert](../../../ado/reference/adox-api/clustered-property-adox.md)|Gibt an, ob der Index gruppiert ist.|  
-|[Befehl](../../../ado/reference/adox-api/command-property-adox.md)|Gibt ein ADO- **Befehls** Objekt an, das verwendet werden kann, um die Prozedur zu erstellen oder auszuführen.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
-|[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Gibt das Datum an, an dem das Objekt erstellt wurde.|  
-|[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Gibt das Datum an, an dem das Objekt zuletzt geändert wurde.|  
-|[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Gibt die angegebene maximale Größe der Spalte an.|  
-|[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|Gibt die Aktion an, die ausgeführt wird, wenn ein Primärschlüssel gelöscht wird.|  
-|[Beispiel für IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Gibt an, ob Datensätze mit NULL-Werten in ihren Indexfeldern Indexeinträge aufweisen.|  
-|[Element](../../../ado/reference/ado-api/item-property-ado.md)|Gibt einen bestimmten Member einer Auflistung anhand des Namens oder der Ordinalzahl an.|  
-|[Name](../../../ado/reference/adox-api/name-property-adox.md)|Gibt den Namen des Objekts an.|  
-|[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Gibt die Skala eines numerischen Werts in der Spalte an.|  
-|[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Gibt den übergeordneten Katalog einer Tabelle oder Spalte an, um Zugriff auf anbieterspezifische Eigenschaften bereitzustellen.|  
-|[Genauigkeit](../../../ado/reference/adox-api/precision-property-adox.md)|Gibt die maximale Genauigkeit der Datenwerte in der Spalte an.|  
-|[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Gibt an, ob der Index den Primärschlüssel für die Tabelle darstellt.|  
-|[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|Gibt den Namen der verknüpften Spalte in der verknüpften Tabelle an (nur Schlüssel Spalten).|  
-|[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|Gibt den Namen der verknüpften Tabelle an.|  
-|[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|Gibt die Sortierreihenfolge für die Spalte an (nur Index Spalten).|  
-|[Type (Spalte)](../../../ado/reference/adox-api/type-property-column-adox.md)|Gibt den Datentyp einer Spalte an.|  
-|[Type (Schlüssel)](../../../ado/reference/adox-api/type-property-key-adox.md)|Gibt den Datentyp des Schlüssels an.|  
-|[Type (Tabelle)](../../../ado/reference/adox-api/type-property-table-adox.md)|Gibt den Typ einer Tabelle an.|  
-|[Eindeutig](../../../ado/reference/adox-api/unique-property-adox.md)|Gibt an, ob die Index Schlüssel eindeutig sein müssen.|  
-|[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|Gibt die Aktion an, die ausgeführt wird, wenn ein Primärschlüssel aktualisiert wird.|  
+|[ActiveConnection](./activeconnection-property-adox.md)|Gibt das ADO- **Verbindungs** Objekt an, zu dem der Katalog gehört.|  
+|[Attribute](./attributes-property-adox.md)|Beschreibt Spalten Eigenschaften.|  
+|[Gruppiert](./clustered-property-adox.md)|Gibt an, ob der Index gruppiert ist.|  
+|[Befehl](./command-property-adox.md)|Gibt ein ADO- **Befehls** Objekt an, das verwendet werden kann, um die Prozedur zu erstellen oder auszuführen.|  
+|[Count](../ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
+|[DateCreated](./datecreated-property-adox.md)|Gibt das Datum an, an dem das Objekt erstellt wurde.|  
+|[DateModified](./datemodified-property-adox.md)|Gibt das Datum an, an dem das Objekt zuletzt geändert wurde.|  
+|[DefinedSize](./definedsize-property-adox.md)|Gibt die angegebene maximale Größe der Spalte an.|  
+|[DeleteRule](./deleterule-property-adox.md)|Gibt die Aktion an, die ausgeführt wird, wenn ein Primärschlüssel gelöscht wird.|  
+|[Beispiel für IndexNulls](./indexnulls-property-adox.md)|Gibt an, ob Datensätze mit NULL-Werten in ihren Indexfeldern Indexeinträge aufweisen.|  
+|[Element](../ado-api/item-property-ado.md)|Gibt einen bestimmten Member einer Auflistung anhand des Namens oder der Ordinalzahl an.|  
+|[Name](./name-property-adox.md)|Gibt den Namen des Objekts an.|  
+|[NumericScale](./numericscale-property-adox.md)|Gibt die Skala eines numerischen Werts in der Spalte an.|  
+|[ParentCatalog](./parentcatalog-property-adox.md)|Gibt den übergeordneten Katalog einer Tabelle oder Spalte an, um Zugriff auf anbieterspezifische Eigenschaften bereitzustellen.|  
+|[Genauigkeit](./precision-property-adox.md)|Gibt die maximale Genauigkeit der Datenwerte in der Spalte an.|  
+|[PrimaryKey](./primarykey-property-adox.md)|Gibt an, ob der Index den Primärschlüssel für die Tabelle darstellt.|  
+|[RelatedColumn](./relatedcolumn-property-adox.md)|Gibt den Namen der verknüpften Spalte in der verknüpften Tabelle an (nur Schlüssel Spalten).|  
+|[RelatedTable](./relatedtable-property-adox.md)|Gibt den Namen der verknüpften Tabelle an.|  
+|[SortOrder](./sortorder-property-adox.md)|Gibt die Sortierreihenfolge für die Spalte an (nur Index Spalten).|  
+|[Type (Spalte)](./type-property-column-adox.md)|Gibt den Datentyp einer Spalte an.|  
+|[Type (Schlüssel)](./type-property-key-adox.md)|Gibt den Datentyp des Schlüssels an.|  
+|[Type (Tabelle)](./type-property-table-adox.md)|Gibt den Typ einer Tabelle an.|  
+|[Eindeutig](./unique-property-adox.md)|Gibt an, ob die Index Schlüssel eindeutig sein müssen.|  
+|[UpdateRule](./updaterule-property-adox.md)|Gibt die Aktion an, die ausgeführt wird, wenn ein Primärschlüssel aktualisiert wird.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ADOX-API-Referenz](../../../ado/reference/adox-api/adox-api-reference.md)   
- [ADO-Erweiterungen für Datendefinitionssprache und Sicherheit (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [ADOX-API-Referenz](./adox-object-model.md?view=sql-server-ver15)   
+ [ADO-Erweiterungen für Datendefinitionssprache und Sicherheit (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

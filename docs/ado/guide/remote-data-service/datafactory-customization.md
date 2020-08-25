@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7ec3707df187e09de92fa42d7ed2b1c1b8e1130
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c34ae14feda7c0a6847d638f35bf84c6b9cd0fd5
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452222"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759804"
 ---
 # <a name="datafactory-customization"></a>DataFactory-Anpassung
-Remote Data Service (RDS) bietet eine Möglichkeit, auf einfache Weise Datenzugriff in einem Client/Server-System mit drei Ebenen auszuführen. Ein Client Daten Steuerelement gibt Verbindungs-und Befehls Zeichenfolgen-Parameter an, um eine Abfrage für eine Remote Datenquelle oder Verbindungs [Zeichenfolgen-und Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt Parameter zum Ausführen eines Updates auszuführen.  
+Remote Data Service (RDS) bietet eine Möglichkeit, auf einfache Weise Datenzugriff in einem Client/Server-System mit drei Ebenen auszuführen. Ein Client Daten Steuerelement gibt Verbindungs-und Befehls Zeichenfolgen-Parameter an, um eine Abfrage für eine Remote Datenquelle oder Verbindungs [Zeichenfolgen-und Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekt Parameter zum Ausführen eines Updates auszuführen.  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Die Parameter werden an ein Serverprogramm weitergeleitet, das den Datenzugriffs Vorgang für die Remote Datenquelle ausführt. RDS bietet ein Standardmäßiges Serverprogramm, das als [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt bezeichnet wird. Das **RDSServer. DataFactory** -Objekt gibt ein beliebiges **Recordset** -Objekt zurück, das von einer Abfrage an den Client erzeugt wurde.  
+ Die Parameter werden an ein Serverprogramm weitergeleitet, das den Datenzugriffs Vorgang für die Remote Datenquelle ausführt. RDS bietet ein Standardmäßiges Serverprogramm, das als [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) -Objekt bezeichnet wird. Das **RDSServer. DataFactory** -Objekt gibt ein beliebiges **Recordset** -Objekt zurück, das von einer Abfrage an den Client erzeugt wurde.  
   
  **RDSServer. DataFactory** ist jedoch auf die Durchführung von Abfragen und Updates beschränkt. Es kann keine Validierung oder Verarbeitung der Verbindungs-oder Befehls Zeichenfolgen ausführen.  
   
@@ -36,18 +36,16 @@ Remote Data Service (RDS) bietet eine Möglichkeit, auf einfache Weise Datenzugr
   
  Die folgenden Themen enthalten weitere Informationen zum Anpassen des **DataFactory** -Objekts.  
   
--   [Grundlegendes zur Anpassungsdatei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)  
+-   [Grundlegendes zur Anpassungsdatei](./understanding-the-customization-file.md)  
   
--   [Connect-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-connect-section.md)  
+-   [Connect-Abschnitt der Anpassungsdatei](./customization-file-connect-section.md)  
   
--   [SQL-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-sql-section.md)  
+-   [SQL-Abschnitt der Anpassungsdatei](./customization-file-sql-section.md)  
   
--   [UserList-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)  
+-   [UserList-Abschnitt der Anpassungsdatei](./customization-file-userlist-section.md)  
   
--   [Logs-Abschnitt der Anpassungsdatei](../../../ado/guide/remote-data-service/customization-file-logs-section.md)  
+-   [Logs-Abschnitt der Anpassungsdatei](./customization-file-logs-section.md)  
   
--   [Erforderliche Clienteinstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)  
+-   [Erforderliche Clienteinstellungen](./required-client-settings.md)  
   
--   [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+-   [Schreiben Ihres eigenen benutzerdefinierten Handlers](./writing-your-own-customized-handler.md)

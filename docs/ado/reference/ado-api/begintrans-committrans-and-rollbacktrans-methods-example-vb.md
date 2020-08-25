@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cc23406c3c9ad7c2455d0efc7f11aeee107bb52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9579e5314bb298eed65145548d848e31bf47c1b9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451182"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776429"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans-, CommitTrans-und RollbackTrans-Methoden Beispiel (VB)
-In diesem Beispiel wird der Buchtyp aller Psychologie Bücher in der ***Titel*** Tabelle der-Datenbank geändert. Nachdem die [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode eine Transaktion gestartet hat, die alle an der Tabelle " ***Titel*** " vorgenommenen Änderungen isoliert, speichert die [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode die Änderungen. Sie können die [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode verwenden, um Änderungen rückgängig zu machen, die Sie mithilfe der [Update](../../../ado/reference/ado-api/update-method.md) -Methode gespeichert haben.  
+In diesem Beispiel wird der Buchtyp aller Psychologie Bücher in der ***Titel*** Tabelle der-Datenbank geändert. Nachdem die [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode eine Transaktion gestartet hat, die alle an der Tabelle " ***Titel*** " vorgenommenen Änderungen isoliert, speichert die [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode die Änderungen. Sie können die [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode verwenden, um Änderungen rückgängig zu machen, die Sie mithilfe der [Update](./update-method.md) -Methode gespeichert haben.  
   
 ```  
 'BeginBeginTransVB  
@@ -133,5 +133,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [BeginTrans-, CommitTrans-und RollbackTrans-Methode (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [BeginTrans-, CommitTrans-und RollbackTrans-Methode (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Connection-Objekt (ADO)](./connection-object-ado.md)

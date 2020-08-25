@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b241eb84e4ea7766d209a61542562c2522a80849
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 277226353ad9e06aed7774f9195d429940165c26
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439042"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768339"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions und FetchOptions Eigenschaften – Beispiel (VBScript)
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Der folgende Code zeigt, wie die Eigenschaften [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) und [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) zur Entwurfszeit festgelegt werden. Wenn die Einstellung nicht festgelegt ist, wird **ExecuteOptions** standardmäßig auf **adcExecSync**festgelegt. Diese Einstellung gibt an, dass beim **RDS. Die Aktualisierungs** Methode wird aufgerufen, Sie wird für den aktuellen aufrufenden Thread ausgeführt, der synchron ist. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **executeoptionsdesignvsb. ASP**.  
+ Der folgende Code zeigt, wie die Eigenschaften [ExecuteOptions](./executeoptions-property-rds.md) und [FetchOptions](./fetchoptions-property-rds.md) zur Entwurfszeit festgelegt werden. Wenn die Einstellung nicht festgelegt ist, wird **ExecuteOptions** standardmäßig auf **adcExecSync**festgelegt. Diese Einstellung gibt an, dass beim **RDS. Die Aktualisierungs** Methode wird aufgerufen, Sie wird für den aktuellen aufrufenden Thread ausgeführt, der synchron ist. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **executeoptionsdesignvsb. ASP**.  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -95,7 +95,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- Im folgenden Beispiel wird gezeigt, wie die Eigenschaften **ExecuteOptions** und **FetchOptions** zur Laufzeit im VBScript-Code festgelegt werden. Ein funktionstüchtiges Beispiel für diese Eigenschaften finden Sie in der [Aktualisierungs](../../../ado/reference/rds-api/refresh-method-rds.md) Methode. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **executeoptionsruntimevsb. ASP**.  
+ Im folgenden Beispiel wird gezeigt, wie die Eigenschaften **ExecuteOptions** und **FetchOptions** zur Laufzeit im VBScript-Code festgelegt werden. Ein funktionstüchtiges Beispiel für diese Eigenschaften finden Sie in der [Aktualisierungs](./refresh-method-rds.md) Methode. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **executeoptionsruntimevsb. ASP**.  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  
@@ -171,8 +171,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ExecuteOptions-Eigenschaft (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
- [FetchOptions-Eigenschaft (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
-
-
-
+ [ExecuteOptions-Eigenschaft (RDS)](./executeoptions-property-rds.md)   
+ [FetchOptions-Eigenschaft (RDS)](./fetchoptions-property-rds.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca1a9f62d293e3be0c7c27ce8dec8bc58e7d5c43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 921fccf29a823be169f16a0144aa0cdb0cabe232
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450772"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776049"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks-Methode – Beispiel (VC++)
-In diesem Beispiel wird die [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) -Methode veranschaulicht. Der relative Wert von Lesezeichen wird nur selten benötigt, wenn ein bestimmtes Lesezeichen etwas Besonderes ist.  
+In diesem Beispiel wird die [CompareBookmarks](./comparebookmarks-method-ado.md) -Methode veranschaulicht. Der relative Wert von Lesezeichen wird nur selten benötigt, wenn ein bestimmtes Lesezeichen etwas Besonderes ist.  
   
- Legen Sie eine zufällige Zeile eines [Recordsets fest](../../../ado/reference/ado-api/recordset-object-ado.md) , die von der ***Autoren*** Tabelle als Ziel für eine Suche abgeleitet ist. Zeigen Sie dann die Position der einzelnen Zeilen relativ zu diesem Ziel an.  
+ Legen Sie eine zufällige Zeile eines [Recordsets fest](./recordset-object-ado.md) , die von der ***Autoren*** Tabelle als Ziel für eine Suche abgeleitet ist. Zeigen Sie dann die Position der einzelnen Zeilen relativ zu diesem Ziel an.  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -171,5 +171,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CompareBookmarks-Methode (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CompareBookmarks-Methode (ADO)](./comparebookmarks-method-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

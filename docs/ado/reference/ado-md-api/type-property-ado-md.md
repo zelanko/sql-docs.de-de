@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e5f02b6467a5b826e7f35e12482c1575e60c087
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 30cf3c161e30884d370aea0fefd81260bafe141e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440732"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777819"
 ---
 # <a name="type-property-ado-md"></a>Type-Eigenschaft (ADO MD)
-Gibt den Typ [des aktuellen Elements](../../../ado/reference/ado-md-api/member-object-ado-md.md)an.  
+Gibt den Typ [des aktuellen Elements](./member-object-ado-md.md)an.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Gibt einen [-](../../../ado/reference/ado-md-api/membertypeenum.md) Enumerationswert zurück und ist schreibgeschützt.  
+ Gibt einen [-](./membertypeenum.md) Enumerationswert zurück und ist schreibgeschützt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Eigenschaft wird nur für [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) -Objekte unterstützt, die zu einem [Ebenenobjekt](../../../ado/reference/ado-md-api/level-object-ado-md.md) gehören. Ein Fehler tritt auf, **Wenn von Element** Objekten, die zu einem [Positions](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekt gehören, auf diese Eigenschaft verwiesen wird.  
+ Diese Eigenschaft wird nur für [Member](./member-object-ado-md.md) -Objekte unterstützt, die zu einem [Ebenenobjekt](./level-object-ado-md.md) gehören. Ein Fehler tritt auf, **Wenn von Element** Objekten, die zu einem [Positions](./position-object-ado-md.md) Objekt gehören, auf diese Eigenschaft verwiesen wird.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
+ [Member-Objekt (ADO MD)](./member-object-ado-md.md)

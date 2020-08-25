@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 77706fca8df07e35acb2c03f79af8a6684531d21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 24e742f36dfda2c76059eb8055a903bac4ced9ac
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441382"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776749"
 ---
 # <a name="ado-md-enumerated-constants"></a>Enumerationskonstanten – ADO MD
 Um das Debuggen zu unterstützen, listet die ADO MD enumerierten Konstanten einen Wert für jede Konstante auf. Dieser Wert ist jedoch rein beratend und kann sich von einer Version von ADO MD in eine andere ändern. Der Code sollte nur vom Namen und nicht vom tatsächlichen Wert von enumerierten Konstanten abhängen.  
   
  Die folgenden Enumerationen sind definiert.  
   
--   [SchemaObjectTypeEnum](../../../ado/reference/ado-md-api/schemaobjecttypeenum.md)  
+-   [SchemaObjectTypeEnum](./schemaobjecttypeenum.md)  
   
--   [MemberTypeEnum](../../../ado/reference/ado-md-api/membertypeenum.md)  
+-   [MemberTypeEnum](./membertypeenum.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [API-Referenz für ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [ADO MD Code Beispiele](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
- [ADO MD Sammlungen](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [ADO MD Methoden](../../../ado/reference/ado-md-api/ado-md-methods.md)   
- [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO MD Objekte](../../../ado/reference/ado-md-api/ado-md-objects.md)   
- [ADO MD-Eigenschaften](../../../ado/reference/ado-md-api/ado-md-properties.md)
+ [API-Referenz für ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD Code Beispiele](./ado-md-code-examples.md)   
+ [ADO MD Sammlungen](./ado-md-collections.md)   
+ [ADO MD Methoden](./ado-md-methods.md)   
+ [ADO MD-Objektmodell](./ado-md-object-model.md)   
+ [ADO MD Objekte](./ado-md-objects.md)   
+ [ADO MD-Eigenschaften](./ado-md-properties.md)

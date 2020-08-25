@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57edf327f2ba4661ba47f43cf8b2f128b9fe92ab
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442387"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772129"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-Gibt den [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) eines Datensatzes in Bezug auf Batch Updates und andere Massen Vorgänge an.  
+Gibt den [Status](./status-property-ado-recordset.md) eines Datensatzes in Bezug auf Batch Updates und andere Massen Vorgänge an.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Gibt an, dass der Datensatz nicht gespeichert wurde, weil der Vorgang abgebrochen wurde.|  
 |**adRecCantRelease**|0x400|Gibt an, dass der neue Datensatz nicht gespeichert wurde, weil der vorhandene Datensatz gesperrt war.|  
@@ -52,7 +52,7 @@ Gibt den [Status](../../../ado/reference/ado-api/status-property-ado-recordset.m
   
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |AdoEnums.RecordStatus.CANCELED|  
 |AdoEnums.RecordStatus.CANTRELEASE|  
@@ -74,4 +74,4 @@ Gibt den [Status](../../../ado/reference/ado-api/status-property-ado-recordset.m
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Status-Eigenschaft (ADO-Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status-Eigenschaft (ADO-Recordset)](./status-property-ado-recordset.md)

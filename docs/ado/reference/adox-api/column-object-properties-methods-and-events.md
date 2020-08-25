@@ -13,40 +13,40 @@ helpviewer_keywords:
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 025f5c3caafd950df9510c41129cea8f5da17c5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 554c32d7a9bbdaec3a5b98f5f85d2a6965cf86c8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440332"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771099"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Column-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [Attribute (Eigenschaft)](../../../ado/reference/adox-api/attributes-property-adox.md)  
+ [Attribute (Eigenschaft)](./attributes-property-adox.md)  
   
- [DefinedSize-Eigenschaft](../../../ado/reference/adox-api/definedsize-property-adox.md)  
+ [DefinedSize-Eigenschaft](./definedsize-property-adox.md)  
   
- [Name-Eigenschaft](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name-Eigenschaft](./name-property-adox.md)  
   
- [NumericScale-Eigenschaft](../../../ado/reference/adox-api/numericscale-property-adox.md)  
+ [NumericScale-Eigenschaft](./numericscale-property-adox.md)  
   
- [Para Catalog-Eigenschaft](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [Para Catalog-Eigenschaft](./parentcatalog-property-adox.md)  
   
- [Precision-Eigenschaft](../../../ado/reference/adox-api/precision-property-adox.md)  
+ [Precision-Eigenschaft](./precision-property-adox.md)  
   
- ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ ['Properties'-Sammlung](../ado-api/properties-collection-ado.md)  
   
- [RelatedColumn (Eigenschaft)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)  
+ [RelatedColumn (Eigenschaft)](./relatedcolumn-property-adox.md)  
   
- [Sortor der-Eigenschaft](../../../ado/reference/adox-api/sortorder-property-adox.md)  
+ [Sortor der-Eigenschaft](./sortorder-property-adox.md)  
   
- [Type-Eigenschaft (Spalte)](../../../ado/reference/adox-api/type-property-column-adox.md)  
+ [Type-Eigenschaft (Spalte)](./type-property-column-adox.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
 ## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Column-Objekt (ADOX)](./column-object-adox.md)

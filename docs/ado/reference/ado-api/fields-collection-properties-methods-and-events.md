@@ -13,34 +13,34 @@ helpviewer_keywords:
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c0e77444c95e90344ba1fc3786b8b5307c86b22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ca0d0c4a655c4f3b188788b0f0d7b2f54a7e710
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443722"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775339"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>Eigenschaften, Methoden und Ereignisse der Fields-Auflistung
 ## <a name="properties"></a>Eigenschaften  
- [Count-Eigenschaft](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count-Eigenschaft](./count-property-ado.md)  
   
- [Item-Eigenschaft](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item-Eigenschaft](./item-property-ado.md)  
   
 ## <a name="methods"></a>Methoden  
- [Append-Methode](../../../ado/reference/ado-api/append-method-ado.md)  
+ [Append-Methode](./append-method-ado.md)  
   
- [CancelUpdate-Methode](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
+ [CancelUpdate-Methode](./cancelupdate-method-ado.md)  
   
- [Delete-Methode (ADO-Fields-Collection)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)  
+ [Delete-Methode (ADO-Fields-Collection)](./delete-method-ado-fields-collection.md)  
   
- [Refresh-Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh-Methode](./refresh-method-ado.md)  
   
- [Resync-Methode](../../../ado/reference/ado-api/resync-method.md)  
+ [Resync-Methode](./resync-method.md)  
   
- [Update-Methode](../../../ado/reference/ado-api/update-method.md)  
+ [Update-Methode](./update-method.md)  
   
 ## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)
+ [Fields-Collection (ADO)](./fields-collection-ado.md)

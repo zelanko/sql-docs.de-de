@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7de7de37cf298005e7a8bdf58d1712d8cb46919
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3feab164032044d954a0ff90f909c210dc851743
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442202"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777589"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Beispiel für das Speichern und Öffnen von Methoden (VC + +)
-Diese drei Beispiele veranschaulichen, wie die [Save](../../../ado/reference/ado-api/save-method.md) -Methode und die **Open** -Methode gleichzeitig verwendet werden können.  
+Diese drei Beispiele veranschaulichen, wie die [Save](./save-method.md) -Methode und die **Open** -Methode gleichzeitig verwendet werden können.  
   
- Angenommen, Sie arbeiten an einer Geschäftsreise und möchten eine Tabelle aus einer Datenbank aufnehmen. Bevor Sie fortfahren, greifen Sie auf die Daten als [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zu, und speichern Sie Sie in einem austauschen-Format. Wenn Sie das Ziel erreichen, greifen Sie als lokales, nicht verbundenes **Recordset**auf das **Recordset** zu. Sie nehmen Änderungen am **Recordset**vor und speichern es dann erneut. Wenn Sie zu Hause zurückkehren, stellen Sie erneut eine Verbindung mit der Datenbank her, und aktualisieren Sie Sie mit den Änderungen, die Sie auf dem Weg vorgenommen haben.  
+ Angenommen, Sie arbeiten an einer Geschäftsreise und möchten eine Tabelle aus einer Datenbank aufnehmen. Bevor Sie fortfahren, greifen Sie auf die Daten als [Recordset](./recordset-object-ado.md) zu, und speichern Sie Sie in einem austauschen-Format. Wenn Sie das Ziel erreichen, greifen Sie als lokales, nicht verbundenes **Recordset**auf das **Recordset** zu. Sie nehmen Änderungen am **Recordset**vor und speichern es dann erneut. Wenn Sie zu Hause zurückkehren, stellen Sie erneut eine Verbindung mit der Datenbank her, und aktualisieren Sie Sie mit den Änderungen, die Sie auf dem Weg vorgenommen haben.  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -262,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Save-Methode](../../../ado/reference/ado-api/save-method.md)
+ [Open-Methode (ADO-Recordset)](./open-method-ado-recordset.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)   
+ [Save-Methode](./save-method.md)

@@ -1,4 +1,5 @@
 ---
+description: CREATE ASSEMBLY (Transact-SQL)
 title: CREATE ASSEMBLY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/07/2018
@@ -23,12 +24,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f7de8aed89c10e434ed8ef451a5e49f604d01995
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 556cab50de2e8207eb78d829f18373213ee171b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496861"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -69,7 +70,7 @@ Gibt den lokalen Pfad oder den Netzwerkspeicherort an, unter dem die Assembly ge
 > [!IMPORTANT]
 > Azure SQL-Datenbank bietet keine Unterstützung für das Erstellen einer Assembly aus einer Datei.
   
- \<client_assembly_specifier> kann nicht angegeben werden, wenn für den angemeldeten Benutzer ein Identitätswechsel ausgeführt wird.  
+ \<client_assembly_specifier> kann nicht angegeben werden, wenn für den angemeldeten Benutzer ein Identitätswechsel ausgeführt wurde.  
   
  \<assembly_bits>  
  Die Liste der Binärwerte, aus denen die Assembly und die abhängigen Assemblys bestehen. Der erste Wert in der Liste wird als Assembly auf Stammebene betrachtet. Die Werte, die den abhängigen Assemblys entsprechen, können in einer beliebigen Reihenfolge bereitgestellt werden. Werte, die nicht Abhängigkeiten der Stammassembly entsprechen, werden ignoriert.  
@@ -169,7 +170,7 @@ Die folgenden Berechtigungen werden zum Erstellen einer CLR-Assembly benötigt, 
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>Beispiel A: Erstellen einer Assembly aus einer dll  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Im folgenden Beispiel wird davon ausgegangen, dass die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Beispiele im Standardspeicherort des lokalen Computers gespeichert sind und dass die Beispielanwendung HelloWorld.csproj kompiliert ist. Weitere Informationen finden Sie unter [Beispiel „Hello World“](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
   
@@ -184,7 +185,7 @@ WITH PERMISSION_SET = SAFE;
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Beispiel B: Erstellen einer Assembly aus Assemblyteilen  
   
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Ersetzen Sie die Beispielteile (die nicht abgeschlossen oder gültig sind) durch Ihre Assemblyteile.  
   

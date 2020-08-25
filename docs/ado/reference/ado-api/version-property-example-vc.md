@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ddac29da277027f1cc89a8c078ac4d072c369b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cf9b819d57a6ad0808c498e2492863c685b13ba
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441542"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776909"
 ---
 # <a name="version-property-example-vc"></a>Version-Eigenschaft – Beispiel (VC++)
-In diesem Beispiel wird die [Version](../../../ado/reference/ado-api/version-property-ado.md) -Eigenschaft eines [Connection](../../../ado/reference/ado-api/connection-object-ado.md) -Objekts verwendet, um die aktuelle ADO-Version anzuzeigen. Außerdem werden verschiedene dynamische Eigenschaften verwendet, um Folgendes anzuzeigen:  
+In diesem Beispiel wird die [Version](./version-property-ado.md) -Eigenschaft eines [Connection](./connection-object-ado.md) -Objekts verwendet, um die aktuelle ADO-Version anzuzeigen. Außerdem werden verschiedene dynamische Eigenschaften verwendet, um Folgendes anzuzeigen:  
   
 -   Aktueller DBMS-Name und-Version.  
   
@@ -136,5 +136,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Version-Eigenschaft (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
+ [Verbindungs Objekt (ADO)](./connection-object-ado.md)   
+ [Version-Eigenschaft (ADO)](./version-property-ado.md)

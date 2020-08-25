@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6e5c4fd54b5784e76067231096752a68dd52a6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e75e5077ac82b1ae2095683cf87d2d969540dbdf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451342"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776559"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO/WFC-Syntaxindex
 Die ADO-Sprachreferenz verwendet die Programmiersprache Microsoft Visual Basic, um die ADO-Methoden-und Eigenschafts Syntax zu veranschaulichen. Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz Themen, basierend auf ADO für Windows Foundation Classes (ADO/WFC). Wenn Unterschiede in der Syntax auftreten, verwenden Sie die Funktions Signaturen in diesem Index im Gegensatz zu den Syntax Auflistungen im Sprachreferenz Thema.  
@@ -29,26 +29,26 @@ Die ADO-Sprachreferenz verwendet die Programmiersprache Microsoft Visual Basic, 
   
 ## <a name="activex-data-objects"></a>ActiveX-Datenobjekte  
   
--   [ADO-Collections](../../../ado/reference/ado-api/collections-ado-wfc-syntax.md)  
+-   [ADO-Collections](./collections-ado-wfc-syntax.md)  
   
--   [Command-Objekt](../../../ado/reference/ado-api/command-ado-wfc-syntax.md)  
+-   [Command-Objekt](./command-ado-wfc-syntax.md)  
   
--   [Verbindungs Objekt](../../../ado/reference/ado-api/connection-ado-wfc-syntax.md)  
+-   [Verbindungs Objekt](./connection-ado-wfc-syntax.md)  
   
--   [Error-Objekt](../../../ado/reference/ado-api/error-ado-wfc-syntax.md)  
+-   [Error-Objekt](./error-ado-wfc-syntax.md)  
   
--   [Field-Objekt](../../../ado/reference/ado-api/field-ado-wfc-syntax.md)  
+-   [Field-Objekt](./field-ado-wfc-syntax.md)  
   
--   [Parameter-Objekt](../../../ado/reference/ado-api/parameter-ado-wfc-syntax.md)  
+-   [Parameter-Objekt](./parameter-ado-wfc-syntax.md)  
   
--   [Recordset-Objekt](../../../ado/reference/ado-api/recordset-ado-wfc-syntax.md)  
+-   [Recordset-Objekt](./recordset-ado-wfc-syntax.md)  
   
 ## <a name="remote-data-service"></a>Remote Data Service  
   
--   [DataSpace](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
+-   [DataSpace](./dataspace-ado-wfc-syntax.md)  
   
--   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
+-   [ObjectProxy](./objectproxy-ado-wfc-syntax.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Behandeln von ADO-Ereignissen](../../../ado/guide/data/handling-ado-events.md)   
- [Microsoft ActiveX-Datenobjekte (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
+ [Behandeln von ADO-Ereignissen](../../guide/data/handling-ado-events.md)   
+ [Microsoft ActiveX-Datenobjekte (ADO)](../../microsoft-activex-data-objects-ado.md)

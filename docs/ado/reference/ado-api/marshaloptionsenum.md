@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6243621ad7127e475f89052dc0d860fba6bad510
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9569d73bd7ec403fa50a400f84a5189a3eb10cdb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443292"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774439"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Gibt an, welche Datensätze an den Server zurückgegeben werden sollen.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**admarshalall**|0|Standard. Gibt alle Zeilen an den Server zurück.|  
 |**adMarshalModifiedOnly**|1|Gibt nur geänderte Zeilen an den Server zurück.|  
@@ -34,10 +34,10 @@ Gibt an, welche Datensätze an den Server zurückgegeben werden sollen.
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |AdoEnums. MarshalOptions. all|  
 |AdoEnums. MarshalOptions. modifiedonly|  
   
 ## <a name="applies-to"></a>Gilt für  
- [MarshalOptions-Eigenschaft (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
+ [MarshalOptions-Eigenschaft (ADO)](./marshaloptions-property-ado.md)

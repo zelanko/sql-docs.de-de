@@ -14,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: c3e824b1-30c7-4afa-9a27-213c407453e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56afca8d56c44c42726dfeb718b95c513129efca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ef40a1f1e688cf2cdcd33693f9637018368149f1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440762"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777869"
 ---
 # <a name="position-object-properties-methods-and-events"></a>Position-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [Members-Auflistung](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+ [Members-Auflistung](./members-collection-ado-md.md)  
   
- [Ordinal-Eigenschaft (Position)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)  
+ [Ordinal-Eigenschaft (Position)](./ordinal-property-ado-md-position.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
 ## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Position-Objekt (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
+ [Position-Objekt (ADO MD)](./position-object-ado-md.md)

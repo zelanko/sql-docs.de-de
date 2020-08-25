@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43f374429d38cb4d3cb4516d640b6d05ef8e3efb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99c4e9be5c998b8abc1a5b609bbdeb249fa6c7b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451202"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776449"
 ---
 # <a name="attributes-property-ado"></a>Attributes-Eigenschaft (ADO)
 Gibt eine oder mehrere Eigenschaften eines Objekts an.  
@@ -31,13 +31,13 @@ Gibt eine oder mehrere Eigenschaften eines Objekts an.
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen **Long** -Wert fest oder gibt ihn zurück.  
   
- Für ein [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt lautet die Eigenschaft **Attribute** Lese-/Schreibzugriff, und ihr Wert kann die Summe von einem oder mehreren [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) -Werten sein. Der Standardwert ist null (0).  
+ Für ein [Verbindungs](./connection-object-ado.md) Objekt lautet die Eigenschaft **Attribute** Lese-/Schreibzugriff, und ihr Wert kann die Summe von einem oder mehreren [XactAttributeEnum](./xactattributeenum.md) -Werten sein. Der Standardwert ist null (0).  
   
- Bei einem [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt lautet die Eigenschaft **Attribute** Lese-/Schreibzugriff, und ihr Wert kann die Summe von einem oder mehreren [parameterattributesenum](../../../ado/reference/ado-api/parameterattributesenum.md) -Werten sein. Der Standardwert ist **adparamsigned**.  
+ Bei einem [Parameter](./parameter-object.md) Objekt lautet die Eigenschaft **Attribute** Lese-/Schreibzugriff, und ihr Wert kann die Summe von einem oder mehreren [parameterattributesenum](./parameterattributesenum.md) -Werten sein. Der Standardwert ist **adparamsigned**.  
   
- Bei einem [Feld](../../../ado/reference/ado-api/field-object.md) Objekt kann die Eigenschaft **Attribute** die Summe von einem oder mehreren [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) -Werten sein. Normalerweise ist sie schreibgeschützt. Bei neuen **Feld** Objekten, die an die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatzes](../../../ado/reference/ado-api/record-object-ado.md)angehängt wurden, werden **Attribute** nur dann gelesen/geschrieben, wenn die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft für das **Feld** angegeben wurde und das neue **Feld** durch Aufrufen der [Update](../../../ado/reference/ado-api/update-method.md) -Methode der **Fields** -Auflistung erfolgreich vom Datenanbieter hinzugefügt wurde.  
+ Bei einem [Feld](./field-object.md) Objekt kann die Eigenschaft **Attribute** die Summe von einem oder mehreren [FieldAttributeEnum](./fieldattributeenum.md) -Werten sein. Normalerweise ist sie schreibgeschützt. Bei neuen **Feld** Objekten, die an die [Fields](./fields-collection-ado.md) -Auflistung eines [Datensatzes](./record-object-ado.md)angehängt wurden, werden **Attribute** nur dann gelesen/geschrieben, wenn die [value](./value-property-ado.md) -Eigenschaft für das **Feld** angegeben wurde und das neue **Feld** durch Aufrufen der [Update](./update-method.md) -Methode der **Fields** -Auflistung erfolgreich vom Datenanbieter hinzugefügt wurde.  
   
- Für ein [Property](../../../ado/reference/ado-api/property-object-ado.md) -Objekt ist die **Attribute** -Eigenschaft schreibgeschützt, und ihr Wert kann die Summe von einem oder mehreren [propertyattributesenum](../../../ado/reference/ado-api/propertyattributesenum.md) -Werten sein.  
+ Für ein [Property](./property-object-ado.md) -Objekt ist die **Attribute** -Eigenschaft schreibgeschützt, und ihr Wert kann die Summe von einem oder mehreren [propertyattributesenum](./propertyattributesenum.md) -Werten sein.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Mit der Eigenschaft **Attribute** können Sie Merkmale von **Verbindungs** Objekten, **Parameter** Objekten, **Feld** Objekten oder **Eigenschafts** Objekten festlegen oder zurückgeben.  
@@ -51,18 +51,18 @@ Gibt eine oder mehrere Eigenschaften eines Objekts an.
 
 :::row:::
     :::column:::
-        [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
-        [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
+        [Connection-Objekt (ADO)](./connection-object-ado.md)  
+        [Field-Objekt](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)  
-        [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Parameter-Objekt](./parameter-object.md)  
+        [Property-Objekt (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Attribute und namens Eigenschaften (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Beispiel für Attribute und namens Eigenschaften (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
- [AppendChunk-Methode (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [BeginTrans-, CommitTrans-und RollbackTrans-Methode (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [GetChunk-Methode (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
+ [Beispiel für Attribute und namens Eigenschaften (VB)](./attributes-and-name-properties-example-vb.md)   
+ [Beispiel für Attribute und namens Eigenschaften (VC + +)](./attributes-and-name-properties-example-vc.md)   
+ [AppendChunk-Methode (ADO)](./appendchunk-method-ado.md)   
+ [BeginTrans-, CommitTrans-und RollbackTrans-Methode (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [GetChunk-Methode (ADO)](./getchunk-method-ado.md)
