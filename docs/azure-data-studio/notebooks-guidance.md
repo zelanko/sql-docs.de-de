@@ -6,15 +6,15 @@ ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
 ms.date: 07/01/2020
-ms.openlocfilehash: 7e61b31a21a6a3a85a9830bc73a7d62777c78b9b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b7d6e2c33cfc76736c3678ff9c802e3059f53baa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920528"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767819"
 ---
 # <a name="use-jupyter-notebooks-in-azure-data-studio"></a>Verwenden von Jupyter Notebooks in Azure Data Studio
 
@@ -22,7 +22,7 @@ ms.locfileid: "86920528"
 
 Jupyter Notebook ist eine Open Source-Webanwendung, mit der Sie Dokumente erstellen und freigeben können, die Livecode, Gleichungen, Visualisierungen und beschreibenden Text enthalten. Die Nutzung umfasst Folgendes: Bereinigung und Transformation von Daten, numerische Simulation, statistische Modellierung, Datenvisualisierung und Machine Learning.
 
-In diesem Artikel wird beschrieben, wie Sie in der neuesten Version von [**Azure Data Studio**](../azure-data-studio/download.md) ein Notebook erstellen und wie Sie mithilfe von verschiedenen Kernels mit der Erstellung eigener Notebooks beginnen.
+In diesem Artikel wird beschrieben, wie Sie in der neuesten Version von [**Azure Data Studio**](./download-azure-data-studio.md?view=sql-server-ver15) ein Notebook erstellen und wie Sie mithilfe von verschiedenen Kernels mit der Erstellung eigener Notebooks beginnen.
 
 Sehen Sie sich dieses kurze fünfminütige Video an, um eine Einführung in Notebooks in Azure Data Studio zu erhalten:
 
@@ -51,7 +51,7 @@ Azure Data Studio-Notebooks unterstützen eine Reihe unterschiedlicher Kernels, 
 Die Anweisung **Anfügen an** stellt den Kontext für den Kernel bereit. Wenn Sie z. B. SQL-Kernel verwenden, können Sie die Anweisung „Anfügen an“ für jede der SQL Server-Instanzen verwenden.
 Wenn Sie Python3-Kernel verwenden, fügen Sie an **localhost** an, und Sie können diesen Kernel für Ihre lokale Python-Entwicklung verwenden.
 
-Der SQL-Kernel kann auch verwendet werden, um eine Verbindung mit PostgreSQL-Serverinstanzen herzustellen. Wenn Sie ein PostgreSQL-Entwickler sind und eine Verbindung zwischen Ihren Notebooks und Ihrem PostgreSQL-Server herstellen möchten, müssen Sie die [**PostgreSQL-Erweiterung**](../azure-data-studio/postgres-extension.md) im Marketplace der Azure Data Studio-Erweiterung herunterladen und mit dem PostgreSQL-Server verbinden.
+Der SQL-Kernel kann auch verwendet werden, um eine Verbindung mit PostgreSQL-Serverinstanzen herzustellen. Wenn Sie ein PostgreSQL-Entwickler sind und eine Verbindung zwischen Ihren Notebooks und Ihrem PostgreSQL-Server herstellen möchten, müssen Sie die [**PostgreSQL-Erweiterung**](./postgres-extension.md) im Marketplace der Azure Data Studio-Erweiterung herunterladen und mit dem PostgreSQL-Server verbinden.
 
 Wenn Sie mit dem Big Data-Cluster von SQL Server 2019 verbunden sind, ist die Standardanweisung **Anfügen an** der Endpunkt des Clusters. Sie können Python-, Scala-und R-Code über Spark-Compute des Clusters verwenden.
 

@@ -2,19 +2,19 @@
 title: Erstellen von Erweiterungen
 description: Sie können Funktionen mithilfe einer Erweiterung zu Azure Data Studio hinzufügen. Hier erfahren Sie, wie Sie eine Erweiterung erstellen und im Erweiterungskatalog veröffentlichen.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 0473ac567f26748999e5718fe5f81660b0bfb7ba
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: bd2a20857c8f16ea2b2d71ebfcb620bcea3f0190
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411126"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778419"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Erweitern der Funktionalität durch Erstellen von Erweiterungen zu Azure Data Studio
 
@@ -40,7 +40,7 @@ npm install -g yo generator-azuredatastudio # Install the generator
 yo azuredatastudio
 ```
 
-Eine ausführliche Anleitung zu den ersten Schritten mit ihrer Erweiterungsvorlage finden Sie unter [Erstellen einer Erweiterung](https://docs.microsoft.com/sql/azure-data-studio/tutorial-create-extension?view=sql-server-ver15), worin Sie durch die Erstellung einer keymap-Erweiterung geführt werden.
+Eine ausführliche Anleitung zu den ersten Schritten mit ihrer Erweiterungsvorlage finden Sie unter [Erstellen einer Erweiterung](./tutorial-create-extension.md?view=sql-server-ver15), worin Sie durch die Erstellung einer keymap-Erweiterung geführt werden.
 
 **Erweiterbarkeitsreferenzen**
 

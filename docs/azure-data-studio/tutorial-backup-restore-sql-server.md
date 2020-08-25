@@ -2,19 +2,19 @@
 title: Sichern und Wiederherstellen einer Datenbank
 description: In diesem Tutorial erfahren Sie, wie Sie Datenbanken mithilfe von Azure Data Studio sichern und wiederherstellen.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 5e276a830f5fa6abc9b1fcf70c540d4cb955d5af
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522424"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765799"
 ---
 # <a name="backup-and-restore-databases-using-azure-data-studio"></a>Sichern und Wiederherstellen von Datenbanken mithilfe von Azure Data Studio
 
@@ -32,7 +32,7 @@ Für dieses Tutorial ist die SQL Server-Datenbank *TutorialDB* erforderlich. Um 
 
 * [Herstellen einer Verbindung mit und Abfragen von SQL Server mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
-In diesem Tutorial muss eine Verbindung mit einer SQL Server-Datenbank hergestellt werden. In Azure SQL-Datenbank gibt es automatisierte Sicherungen, sodass Azure Data Studio keine Azure SQL-Datenbank-Sicherung und -Wiederherstellung ausführt. Ausführliche Informationen finden Sie unter [Automatisierte Sicherungen](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
+In diesem Tutorial muss eine Verbindung mit einer SQL Server-Datenbank hergestellt werden. In Azure SQL-Datenbank gibt es automatisierte Sicherungen, sodass Azure Data Studio keine Azure SQL-Datenbank-Sicherung und -Wiederherstellung ausführt. Ausführliche Informationen finden Sie unter [Automatisierte Sicherungen](/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="back-up-a-database"></a>So sichern Sie eine Datenbank
 

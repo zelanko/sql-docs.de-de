@@ -1,236 +1,236 @@
 - name: SQL Server >>
   href: ../sql-server/index.yml
 - name: Übersicht über APS
-  href: ../analytics-platform-system/home-analytics-platform-system-aps-pdw.md
+  href: ./home-analytics-platform-system-aps-pdw.md
 - name: Neues in APS
-  href: ../analytics-platform-system/whats-new-analytics-platform-system.md
+  href: ./whats-new-analytics-platform-system.md
   items:
     - name: APS CU7.6
-      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.6'
+      href: ./whats-new-analytics-platform-system.md#h2-aps-cu7.6
     - name: APS CU7.5
-      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.5'
+      href: ./whats-new-analytics-platform-system.md#h2-aps-cu7.5
     - name: APS CU7.4
-      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.4'
+      href: ./whats-new-analytics-platform-system.md#h2-aps-cu7.4
     - name: APS CU7.3
-      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.3'
+      href: ./whats-new-analytics-platform-system.md#h2-aps-cu7.3
     - name: APS CU7.2
-      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.2'
+      href: ./whats-new-analytics-platform-system.md#h2-aps-cu7.2
     - name: APS CU7.1
-      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.1'
+      href: ./whats-new-analytics-platform-system.md#h2-aps-cu7.1
     - name: APS AU7
-      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-au7'
+      href: ./whats-new-analytics-platform-system.md#h2-aps-au7
     - name: APS 2016
-      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-au6'
+      href: ./whats-new-analytics-platform-system.md#h2-aps-au6
 - name: Aufbau
   items:
     - name: Parallel Data Warehouse – Übersicht
-      href: ../analytics-platform-system/parallel-data-warehouse-overview.md
+      href: ./parallel-data-warehouse-overview.md
     - name: Hardwarekomponenten
-      href: ../analytics-platform-system/hardware-components.md
+      href: ./hardware-components.md
     - name: Hardwarekonfigurationen
-      href: ../analytics-platform-system/hardware-configurations.md
+      href: ./hardware-configurations.md
     - name: Verarbeitung und Speicherkapazität
-      href: ../analytics-platform-system/processing-and-storage-capacity-planning.md
+      href: ./processing-and-storage-capacity-planning.md
     - name: Hochverfügbarkeit
-      href: ../analytics-platform-system/high-availability.md
+      href: ./high-availability.md
 - name: Sicherung und Laden von Hardware
   items:
     - name: Übersicht
-      href: ../analytics-platform-system/backup-and-loading-hardware.md
+      href: ./backup-and-loading-hardware.md
     - name: Erwerben und Konfigurieren eines Servers für Ladevorgänge
-      href: ../analytics-platform-system/acquire-and-configure-loading-server.md
+      href: ./acquire-and-configure-loading-server.md
     - name: Arbeitsblatt zur Kapazitätsplanung eines Servers für Ladevorgänge
-      href: ../analytics-platform-system/loading-server-capacity-planning-worksheet.md
+      href: ./loading-server-capacity-planning-worksheet.md
     - name: Erwerben und Konfigurieren eines Sicherungsservers
-      href: ../analytics-platform-system/acquire-and-configure-backup-server.md
+      href: ./acquire-and-configure-backup-server.md
     - name: Arbeitsblatt zur Kapazitätsplanung eines Sicherungsservers
-      href: ../analytics-platform-system/backup-capacity-planning-worksheet.md
+      href: ./backup-capacity-planning-worksheet.md
     - name: Konfigurieren von InfiniBand-Netzwerkadaptern
-      href: ../analytics-platform-system/configure-infiniband-network-adapters.md
+      href: ./configure-infiniband-network-adapters.md
 - name: Abfrage
   items:
     - name: Konfigurieren von automatisch erstellten Statistiken
-      href: ../analytics-platform-system/configure-auto-statistics.md
+      href: ./configure-auto-statistics.md
     - name: Überwachen aktiver Abfragen
-      href: ../analytics-platform-system/monitoring-active-queries.md
+      href: ./monitoring-active-queries.md
     - name: Entfernen gemeinsamer Teilausdrücke
-      href: ../analytics-platform-system/common-sub-expression-elimination.md
+      href: ./common-sub-expression-elimination.md
 - name: Laden
   items:
     - name: Übersicht
-      href: ../analytics-platform-system/load-overview.md
+      href: ./load-overview.md
     - name: Erstellen einer Stagingdatenbank
-      href: ../analytics-platform-system/staging-database.md
+      href: ./staging-database.md
     - name: Laden mit Integration Services
-      href: ../analytics-platform-system/load-with-ssis.md
+      href: ./load-with-ssis.md
     - name: 'Erstellen eines Integration Services-Skripttasks, der den Zieladapter von Parallel Data Warehouse verwendet'
-      href: ../analytics-platform-system/create-ssis-script-task-using-pdw-destination-adapter.md
+      href: ./create-ssis-script-task-using-pdw-destination-adapter.md
     - name: Regeln für das Konvertieren von Datentypen für dwloader
-      href: ../analytics-platform-system/dwloader-data-type-conversion-rules.md
+      href: ./dwloader-data-type-conversion-rules.md
     - name: Laden von Daten mit SSIS
-      href: ../analytics-platform-system/load-with-insert.md
+      href: ./load-with-insert.md
     - name: Befehlszeilen-Ladetool „dwloader“
-      href: ../analytics-platform-system/dwloader.md
+      href: ./dwloader.md
     - name: Überwachen von Ladevorgängen
-      href: ../analytics-platform-system/monitor-loads.md
+      href: ./monitor-loads.md
 - name: Datenbankverwaltung
   items:
     - name: Sichern und Wiederherstellen
       items:
         - name: Übersicht
-          href: ../analytics-platform-system/backup-and-restore-overview.md
+          href: ./backup-and-restore-overview.md
         - name: Wiederherstellen einer über TDE geschützten Datenbank
-          href: ../analytics-platform-system/restore-database-protected-by-tde.md
+          href: ./restore-database-protected-by-tde.md
     - name: Parallel Data Warehouse-Berechtigungen
-      href: ../analytics-platform-system/pdw-permissions.md
+      href: ./pdw-permissions.md
       items:
         - name: Erteilen von Berechtigungen
-          href: ../analytics-platform-system/grant-permissions.md
+          href: ./grant-permissions.md
     - name: Fehlermeldungen
-      href: ../analytics-platform-system/error-messages.md
+      href: ./error-messages.md
     - name: Sperrverhalten
-      href: ../analytics-platform-system/locking-behavior.md
+      href: ./locking-behavior.md
     - name: Remotetabellenkopie
-      href: ../analytics-platform-system/remote-table-copy.md
+      href: ./remote-table-copy.md
       items:
         - name: Konfigurieren eines externen Windows-Systems zum Empfang von Remotetabellenkopien mit InfiniBand
-          href: ../analytics-platform-system/configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md
+          href: ./configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md
         - name: Konfigurieren einer externen SMP-SQL Server-Instanz zum Empfang von Remotetabellenkopien
-          href: ../analytics-platform-system/configure-an-external-smp-sql-server-to-receive-remote-table-copies.md
+          href: ./configure-an-external-smp-sql-server-to-receive-remote-table-copies.md
         - name: Konfigurieren von SQL Server PDW für Remotetabellenkopien
-          href: ../analytics-platform-system/configure-sql-server-pdw-for-remote-table-copies.md
+          href: ./configure-sql-server-pdw-for-remote-table-copies.md
     - name: Systemdatenbanken
-      href: ../analytics-platform-system/system-databases.md
+      href: ./system-databases.md
       items:
         - name: Reservierte Datenbanknamen
-          href: ../analytics-platform-system/reserved-database-names.md
+          href: ./reserved-database-names.md
         - name: tempdb-Datenbank
-          href: ../analytics-platform-system/tempdb-database.md
+          href: ./tempdb-database.md
         - name: Masterdatenbank
-          href: ../analytics-platform-system/master-database.md
+          href: ./master-database.md
     - name: Benutzersitzungen
-      href: ../analytics-platform-system/user-sessions.md
+      href: ./user-sessions.md
     - name: Verwalten von Arbeitsauslastungen
-      href: ../analytics-platform-system/workload-management.md
+      href: ./workload-management.md
       items:
         - name: Tasks zum Verwalten von Arbeitsauslastungen
-          href: ../analytics-platform-system/workload-management-tasks.md
+          href: ./workload-management-tasks.md
 - name: Sicherheit
   items:
     - name: Transparente Datenverschlüsselung
-      href: ../analytics-platform-system/transparent-data-encryption.md
+      href: ./transparent-data-encryption.md
     - name: Bereitstellen eines Zertifikats
-      href: ../analytics-platform-system/provision-certificate.md
+      href: ./provision-certificate.md
 - name: Tasks zur Applianceverwaltung
-  href: ../analytics-platform-system/appliance-management-tasks.md
+  href: ./appliance-management-tasks.md
   items:
     - name: Übersicht über Installation und Konfiguration von Appliances
-      href: ../analytics-platform-system/appliance-installation-and-configuration-overview.md
+      href: ./appliance-installation-and-configuration-overview.md
       items:
         - name: 'Informationen, die Sie von Ihrem unabhängigen Hardwarehersteller erhalten'
-          href: ../analytics-platform-system/information-to-obtain-from-your-ihv.md
+          href: ./information-to-obtain-from-your-ihv.md
         - name: Hardwareinstallation
-          href: ../analytics-platform-system/hardware-installation.md
+          href: ./hardware-installation.md
     - name: Herstellen einer Verbindung mit Applianceknoten
-      href: ../analytics-platform-system/connect-to-appliance-nodes.md
+      href: ./connect-to-appliance-nodes.md
     - name: Antivirussoftware
-      href: ../analytics-platform-system/antivirus-software.md
+      href: ./antivirus-software.md
     - name: Appliancekonfiguration
-      href: ../analytics-platform-system/appliance-configuration.md
+      href: ./appliance-configuration.md
       items:
         - name: Physische Komponenten von PDW und Appliancefabric
-          href: ../analytics-platform-system/pdw-and-appliance-fabric-physical-components.md
+          href: ./pdw-and-appliance-fabric-physical-components.md
         - name: Starten von Configuration Manager
-          href: ../analytics-platform-system/launch-the-configuration-manager.md
+          href: ./launch-the-configuration-manager.md
         - name: Appliancetopologie
-          href: ../analytics-platform-system/appliance-topology.md
+          href: ./appliance-topology.md
         - name: Zurücksetzen von Kennwörtern
-          href: ../analytics-platform-system/password-reset.md
+          href: ./password-reset.md
         - name: Konfigurieren der Zeitzone für die Appliance
-          href: ../analytics-platform-system/appliance-time-zone-configuration.md
+          href: ./appliance-time-zone-configuration.md
         - name: Konfigurieren des Netzwerks für die Appliance
-          href: ../analytics-platform-system/appliance-network-configuration.md
+          href: ./appliance-network-configuration.md
         - name: PDW-Topologie
-          href: ../analytics-platform-system/pdw-topology.md
+          href: ./pdw-topology.md
         - name: PDW-Zertifikatbereitstellung
-          href: ../analytics-platform-system/pdw-certificate-provisioning.md
+          href: ./pdw-certificate-provisioning.md
         - name: PDW-Featureschalter
-          href: ../analytics-platform-system/appliance-feature-switch.md
+          href: ./appliance-feature-switch.md
         - name: PDW-Firewallkonfiguration
-          href: ../analytics-platform-system/pdw-firewall-configuration.md
+          href: ./pdw-firewall-configuration.md
         - name: PDW-Dienststatus
-          href: ../analytics-platform-system/pdw-services-status.md
+          href: ./pdw-services-status.md
         - name: Konfigurieren der sofortigen Dateiinitialisierung
-          href: ../analytics-platform-system/instant-file-initialization-configuration.md
+          href: ./instant-file-initialization-configuration.md
         - name: Wiederherstellen der Masterdatenbank
-          href: ../analytics-platform-system/restore-the-master-database.md
+          href: ./restore-the-master-database.md
         - name: Festlegen des Administratorkennworts zur Anmeldung bei AD-Knoten im Modus zur Verzeichnisdienstwiederherstellung
-          href: ../analytics-platform-system/set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md
+          href: ./set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md
         - name: Konfigurieren von Windows Server Update Services
-          href: ../analytics-platform-system/configure-windows-server-update-services-wsus.md
+          href: ./configure-windows-server-update-services-wsus.md
         - name: Konfiguration der PolyBase-Konnektivität für externe Daten
-          href: ../analytics-platform-system/configure-polybase-connectivity-to-external-data.md
+          href: ./configure-polybase-connectivity-to-external-data.md
           items:
             - name: Verbindung mit Hadoop herstellen
-              href: ../analytics-platform-system/polybase-configure-hadoop.md
+              href: ./polybase-configure-hadoop.md
             - name: Konfigurieren der Hadoop-Sicherheit
-              href: ../analytics-platform-system/polybase-configure-hadoop-security.md
+              href: ./polybase-configure-hadoop-security.md
             - name: Azure Blob Storage
-              href: ../analytics-platform-system/polybase-configure-azure-blob-storage.md
+              href: ./polybase-configure-azure-blob-storage.md
         - name: Konfigurieren von TLS 1.2 in Microsoft Analytics Platform System
-          href: ../analytics-platform-system/configure-tls12-aps.md
+          href: ./configure-tls12-aps.md
         - name: 'Verwenden einer DNS-Weiterleitung zum Auflösen von DNS-Namen, die nicht zu Appliances gehören'
-          href: ../analytics-platform-system/use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md
+          href: ./use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md
         - name: Erstellen eines APS-Domänenadministrators
-          href: ../analytics-platform-system/create-an-aps-domain-administrator-aps.md
+          href: ./create-an-aps-domain-administrator-aps.md
         - name: Senden von Telemetriefeedback an Microsoft
-          href: ../analytics-platform-system/send-telemetry-feedback-to-microsoft-sql-server-pdw.md
+          href: ./send-telemetry-feedback-to-microsoft-sql-server-pdw.md
     - name: Softwarewartung
-      href: ../analytics-platform-system/software-servicing.md
+      href: ./software-servicing.md
       items:
         - name: Herunterladen und Anwenden von Microsoft-Updates
-          href: ../analytics-platform-system/download-and-apply-microsoft-updates.md
+          href: ./download-and-apply-microsoft-updates.md
         - name: Deinstallieren von Microsoft-Updates
-          href: ../analytics-platform-system/uninstall-microsoft-updates.md
+          href: ./uninstall-microsoft-updates.md
         - name: Anwenden von Hotfixes für Analytics Platform System
-          href: ../analytics-platform-system/apply-analytics-platform-system-hotfixes.md
+          href: ./apply-analytics-platform-system-hotfixes.md
         - name: Deinstallieren von Hotfixes für Analytics Platform System
-          href: ../analytics-platform-system/uninstall-analytics-platform-system-hotfixes.md
+          href: ./uninstall-analytics-platform-system-hotfixes.md
     - name: Ein- und Ausschalten der APS-Appliance
-      href: ../analytics-platform-system/power-the-aps-appliance-on-or-off.md
+      href: ./power-the-aps-appliance-on-or-off.md
     - name: Applianceüberwachung
-      href: ../analytics-platform-system/appliance-monitoring.md
+      href: ./appliance-monitoring.md
       items:
         - name: Überwachen der Appliance mithilfe der Administratorkonsole
-          href: ../analytics-platform-system/monitor-the-appliance-by-using-the-admin-console.md
+          href: ./monitor-the-appliance-by-using-the-admin-console.md
         - name: Überwachen der Appliance mithilfe von Systemansichten
-          href: ../analytics-platform-system/monitor-the-appliance-by-using-system-views.md
+          href: ./monitor-the-appliance-by-using-system-views.md
         - name: Überwachen der Appliance mithilfe von System Center Operations Manager
-          href: ../analytics-platform-system/monitor-the-appliance-by-using-system-center-operations-manager.md
+          href: ./monitor-the-appliance-by-using-system-center-operations-manager.md
           items:
             - name: Installation von SCOM-Management Packs
-              href: ../analytics-platform-system/install-the-scom-management-packs.md
+              href: ./install-the-scom-management-packs.md
             - name: Importieren des SCOM-Management Packs für PDW
-              href: ../analytics-platform-system/import-the-scom-management-pack-for-pdw.md
+              href: ./import-the-scom-management-pack-for-pdw.md
             - name: Konfigurieren von SCOM für die Überwachung von Analytics Platform System
-              href: ../analytics-platform-system/configure-scom-to-monitor-analytics-platform-system.md
+              href: ./configure-scom-to-monitor-analytics-platform-system.md
         - name: Überwachen des Applianceintegritätsstatus
-          href: ../analytics-platform-system/monitor-appliance-health-state.md
+          href: ./monitor-appliance-health-state.md
         - name: Nachverfolgen von Appliancewarnungen
-          href: ../analytics-platform-system/track-appliance-alerts.md
+          href: ./track-appliance-alerts.md
         - name: Anzeigen der Kapazitätsnutzung
-          href: ../analytics-platform-system/view-capacity-utilization.md
+          href: ./view-capacity-utilization.md
         - name: Bestimmen der Abrufhäufigkeit
-          href: ../analytics-platform-system/determine-polling-frequency.md
+          href: ./determine-polling-frequency.md
         - name: Bestimmen von Clusterknoten mit Fehlern
-          href: ../analytics-platform-system/determine-which-cluster-node-failed.md
+          href: ./determine-which-cluster-node-failed.md
         - name: Grundlegendes zu Administratorkonsolenwarnungen
-          href: ../analytics-platform-system/understanding-admin-console-alerts.md
+          href: ./understanding-admin-console-alerts.md
 - name: Verweis
   items:
     - name: T-SQL-Sprachelemente
-      href: ../analytics-platform-system/tsql-language-elements.md
+      href: ./tsql-language-elements.md
     - name: T-SQL-Anweisungen
-      href: ../analytics-platform-system/tsql-statements.md
+      href: ./tsql-statements.md
     - name: T-SQL-Systemsichten
-      href: ../analytics-platform-system/tsql-system-views.md
+      href: ./tsql-system-views.md

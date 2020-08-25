@@ -2,19 +2,19 @@
 title: Hinzufügen zusätzlicher Funktionen durch Erweiterbarkeit
 description: Erfahren Sie mehr über das Erweiterbarkeitsmodell und die wichtigsten Erweiterbarkeitsbereiche zum Erweitern der Funktionalität von Azure Data Studio
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483858"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778439"
 ---
 # <a name="azure-data-studio-extensibility"></a>Erweiterbarkeit für Azure Data Studio
 
@@ -111,7 +111,7 @@ Um auf registrierte Container zu verweisen, geben Sie die ID des Containers an.
 
 `dashboard.insights`
 
-Sie können Erkenntnisse mithilfe von „dashboard.insights“ registrieren. Dies ähnelt [Tutorial: Erstellen eines benutzerdefinierten Erkenntniswidgets](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+Sie können Erkenntnisse mithilfe von „dashboard.insights“ registrieren. Dies ähnelt [Tutorial: Erstellen eines benutzerdefinierten Erkenntniswidgets](./tutorial-build-custom-insight-sql-server.md?view=sql-server-ver15)
 
 ```json
 "dashboard.insights": {

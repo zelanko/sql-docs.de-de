@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 80aa0be8ae70773fe0e1a0087e623f679504a983
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 928c258dff70f861c33cc59125171a467eb12bf8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411226"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766219"
 ---
 # <a name="schema-compare-extension"></a>Schemavergleich-Erweiterung
 Die Schemavergleicherweiterung bietet eine benutzerfreundliche Umgebung, in der zwei Datenbankdefinitionen verglichen und die Unterschiede aus der Quelle auf das Ziel angewendet werden können.
@@ -68,5 +68,5 @@ Es kann mühsam sein, unterschiedliche Datenbankversionen manuell zu verwalten u
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Schemavergleich finden Sie in der zugehörigen [Dokumentation](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions).
+Weitere Informationen zu Schemavergleich finden Sie in der zugehörigen [Dokumentation](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).
 Probleme und Featureanforderungen können Sie [hier](https://github.com/microsoft/azuredatastudio/issues) mitteilen.

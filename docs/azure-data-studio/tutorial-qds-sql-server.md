@@ -2,19 +2,19 @@
 title: Aktivieren des Beispielwidgets für die fünf langsamsten Abfragen
 description: In diesem Tutorial wird veranschaulicht, wie das Beispielwidget für die fünf langsamsten Abfragen auf dem Datenbankdashboard aktiviert wird.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 06/01/2020
-ms.openlocfilehash: f4e8e76583a90ce64a9f99ef3c94875b2c1fc6dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 678d985daf2ca3130fbf7eb3b052718c3cc898ab
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774545"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746190"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Hinzufügen des Beispielwidgets für die *fünf langsamsten Abfragen* zum Datenbankdashboard
 

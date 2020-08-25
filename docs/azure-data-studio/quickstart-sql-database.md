@@ -2,19 +2,19 @@
 title: Herstellen einer Verbindung mit einer Azure SQL-Datenbank-Instanz und deren Abfrage
 description: In diesem Schnellstart verwenden Sie Azure Data Studio, um eine Verbindung mit einem Azure SQL-Datenbank-Server herzustellen. Anschließend erstellen Sie eine Datenbank und fragen diese ab.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: f7ceb73d25d69e1d8e8f33b2c6a23b0ff7bff636
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411296"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766439"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>Schnellstart: Verwenden von Azure Data Studio, um eine Verbindung mit einer Azure SQL-Datenbank-Instanz herzustellen und sie abzufragen
 
@@ -24,13 +24,13 @@ In dieser Schnellstartanleitung stellen Sie mit Azure Data Studio eine Verbindun
 
 Um diesen Schnellstart abzuschließen, benötigen Sie Azure Data Studio und eine Azure SQL-Datenbank-Serverinstanz.
 
-- [Azure Data Studio installieren](download.md)
+- [Azure Data Studio installieren](./download-azure-data-studio.md?view=sql-server-ver15)
 
 Wenn Sie noch nicht über eine Azure SQL-Serverinstanz verfügen, führen Sie einen der folgenden Schnellstarts für Azure SQL-Datenbank aus. Merken Sie sich den voll qualifizierten Servernamen und die Anmeldeinformationen für die späteren Schritte:
 
-- [Erstellen einer Datenbank – Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [Erstellen einer Datenbank – CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [Erstellen einer Datenbank – PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [Erstellen einer Datenbank – Portal](/azure/sql-database/sql-database-get-started-portal)
+- [Erstellen einer Datenbank – CLI](/azure/sql-database/sql-database-get-started-cli)
+- [Erstellen einer Datenbank – PowerShell](/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Herstellen einer Verbindung mit Ihrer Azure SQL-Datenbank-Serverinstanz
@@ -57,7 +57,7 @@ Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure SQL-Datenban
 
 3. Wählen Sie **Verbinden**.
 
-4. Wenn der Server nicht über eine Firewallregel verfügt, die Azure Data Studio ermöglicht, eine Verbindung herzustellen, wird das Formular **Neue Firewallregel erstellen** geöffnet. Füllen Sie das Formular aus, um eine neue Firewallregel zu erstellen. Weitere Informationen finden Sie unter [Firewallregeln](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+4. Wenn der Server nicht über eine Firewallregel verfügt, die Azure Data Studio ermöglicht, eine Verbindung herzustellen, wird das Formular **Neue Firewallregel erstellen** geöffnet. Füllen Sie das Formular aus, um eine neue Firewallregel zu erstellen. Weitere Informationen finden Sie unter [Firewallregeln](/azure/sql-database/sql-database-firewall-configure).
 
    ![Neue Firewallregel](media/quickstart-sql-database/firewall.png)  
 
@@ -150,7 +150,7 @@ Die Abfrageergebnisse werden angezeigt:
 
 ## <a name="clean-up-resources"></a>Bereinigen von Ressourcen
 
-Spätere Schnellstartartikel bauen auf den hier erstellten Ressourcen auf. Wenn Sie beabsichtigen, diese Artikel durchzuarbeiten, achten Sie darauf, diese Ressourcen nicht zu löschen. Andernfalls können Sie im Azure-Portal die Ressourcen löschen, die Sie nicht mehr benötigen. Weitere Informationen finden Sie unter [Bereinigen von Ressourcen](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Spätere Schnellstartartikel bauen auf den hier erstellten Ressourcen auf. Wenn Sie beabsichtigen, diese Artikel durchzuarbeiten, achten Sie darauf, diese Ressourcen nicht zu löschen. Andernfalls können Sie im Azure-Portal die Ressourcen löschen, die Sie nicht mehr benötigen. Weitere Informationen finden Sie unter [Bereinigen von Ressourcen](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

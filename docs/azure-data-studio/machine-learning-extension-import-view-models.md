@@ -5,17 +5,17 @@ description: Hier erfahren Sie, wie Sie die Machine Learning-Erweiterung für Az
 ms.date: 06/09/2020
 ms.reviewer: sstein
 ms.prod: azure-data-studio
-ms.technology: machine-learning
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 62eb0a2c4eb4db7c86f4c5ff486a0088a20e8244
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 586136dde0c514523c96cb69aaa422fd739cf1f7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352407"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778389"
 ---
 # <a name="import-or-view-models-with-machine-learning-extension-preview-for-azure-data-studio"></a>Importieren oder Anzeigen von Modellen mit der Machine Learning-Erweiterung (Vorschauversion) für Azure Data Studio
 
@@ -70,7 +70,6 @@ Führen Sie die folgenden Schritte durch, um ein ONNX-Modell in Ihre Datenbank z
 - [Machine Learning-Erweiterung in Azure Data Studio](machine-learning-extension.md)
 - [Verwalten von Paketen in der Datenbank](machine-learning-extension-manage-packages.md)
 - [Treffen von Vorhersagen](machine-learning-extension-predictions.md)
-- [Importieren und Anzeigen von Modellen](machine-learning-extension-import-view-models.md)
 - [SQL Machine Learning-Dokumentation](../machine-learning/index.yml)
 - [Machine Learning Services in Azure SQL Managed Instance (Vorschauversion)](/azure/azure-sql/managed-instance/machine-learning-services-overview)
 - [Machine Learning und KI mit ONNX in SQL Edge (Vorschau)](/azure/azure-sql-edge/onnx-overview)

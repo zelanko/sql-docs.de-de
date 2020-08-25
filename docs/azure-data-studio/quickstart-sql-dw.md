@@ -2,19 +2,19 @@
 title: Herstellen einer Verbindung mit und Abfragen einer Azure SQL Data Warehouse-Datenbank
 description: In diesem Schnellstart erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit einer Azure SQL Data Warehouse-Datenbank herstellen und eine Abfrage ausführen.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: f9a8213dacb3a7f221d3a3c3e51f0ed94bb6990a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728013"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766369"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Schnellstart: Verwenden von Azure Data Studio, um eine Verbindung mit Daten in Azure SQL Data Warehouse herzustellen und sie abzufragen
 
@@ -23,9 +23,9 @@ In diesem Schnellstart erfahren Sie, wie Sie mit Azure Data Studio eine Verbindu
 ## <a name="prerequisites"></a>Voraussetzungen
 Um diesen Schnellstart ausführen zu können, benötigen Sie Azure Data Studio und eine Azure SQL Data Warehouse-Datenbank.
 
-- [Installieren Sie Azure Data Studio](download.md).
+- [Installieren Sie Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
-Wenn Sie noch keine SQL Data Warehouse-Datenbank haben, lesen Sie [Erstellen einer Azure SQL Data Warehouse-Instanz](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+Wenn Sie noch keine SQL Data Warehouse-Datenbank haben, lesen Sie [Erstellen einer Azure SQL Data Warehouse-Instanz](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 Merken Sie sich den Servernamen und die Anmeldeinformationen!
 
@@ -52,7 +52,7 @@ Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure SQL Data War
 
    ![Symbol „Neue Verbindung“](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. Wenn der Server nicht über eine Firewallregel verfügt, die Azure Data Studio ermöglicht, eine Verbindung herzustellen, wird das Formular **Neue Firewallregel erstellen** geöffnet. Füllen Sie das Formular aus, um eine neue Firewallregel zu erstellen. Weitere Informationen finden Sie unter [Firewallregeln](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Wenn der Server nicht über eine Firewallregel verfügt, die Azure Data Studio ermöglicht, eine Verbindung herzustellen, wird das Formular **Neue Firewallregel erstellen** geöffnet. Füllen Sie das Formular aus, um eine neue Firewallregel zu erstellen. Weitere Informationen finden Sie unter [Firewallregeln](/azure/sql-database/sql-database-firewall-configure).
 
    ![Neue Firewallregel](media/quickstart-sql-dw/firewall.png)  
 
@@ -140,7 +140,7 @@ Der Abfrage-Editor ist immer noch mit der Datenbank *master* verbunden, aber wir
 ## <a name="clean-up-resources"></a>Bereinigen von Ressourcen
 
 Andere Artikel in dieser Sammlung bauen auf diesem Schnellstart auf. Wenn Sie die Absicht haben, mit den nachfolgenden Schnellstarts weiterzuarbeiten, sollten Sie die in diesem Schnellstart erstellten Ressourcen nicht bereinigen. Wenn Sie nicht weiterarbeiten möchten, führen Sie im Azure-Portal die folgenden Schritte aus, um die Ressourcen zu löschen, die in diesem Schnellstart erstellt wurden.
-Bereinigen Sie die Ressourcen, indem Sie die Ressourcengruppen löschen, die Sie nicht mehr benötigen. Weitere Informationen finden Sie unter [Bereinigen von Ressourcen](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Bereinigen Sie die Ressourcen, indem Sie die Ressourcengruppen löschen, die Sie nicht mehr benötigen. Weitere Informationen finden Sie unter [Bereinigen von Ressourcen](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 
 ## <a name="next-steps"></a>Nächste Schritte

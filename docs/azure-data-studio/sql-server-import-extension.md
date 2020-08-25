@@ -5,22 +5,22 @@ ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: cac73bebca185f40deb1b1bac4a77c6ceb20264e
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 9ecee71588cb54cb23c813cf5009b92159cf94d6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522454"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765919"
 ---
 # <a name="sql-server-import-extension-preview"></a>Erweiterung „SQL Server Import“ (Vorschau)
 
 Die Erweiterung „SQL Server Import“ (Vorschau) konvertiert TXT- und CSV-Dateien in eine SQL-Tabelle. Der Assistent nutzt das Microsoft Research-Framework [PROSE (Program Synthesis using Examples)](https://microsoft.github.io/prose/), um die Dateien mit minimalen Benutzereingaben auf intelligente Weise zu analysieren. PROSE stellt ein leistungsstarkes Framework für das Data Wrangling dar und ist die gleiche Technologie, auf der die Blitzvorschau in Microsoft Excel basiert.
 
-Informationen über die SSMS-Version dieses Features finden Sie in [diesem Artikel](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard).
+Informationen über die SSMS-Version dieses Features finden Sie in [diesem Artikel](../relational-databases/import-export/import-flat-file-wizard.md).
 
 
 ## <a name="install-the-sql-server-import-extension"></a>Installieren der Erweiterung „SQL Server Import“

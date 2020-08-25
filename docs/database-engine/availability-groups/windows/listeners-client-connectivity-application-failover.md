@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c60b0dbb40c41a7d41971bffc0f44b89ad77eaaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25b22aa23d773765f98cf3610d57bb041ba2205b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882731"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746180"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Herstellen einer Verbindung mit einem Always On-Verfügbarkeitsgruppenlistener 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -184,10 +184,10 @@ SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.c
 
 Ein Domänenadministrator muss in Active Directory einen Dienstprinzipalnamen (Service Principal Name, SPN) für jeden Verfügbarkeitsgruppenlistener konfigurieren, um Kerberos für Clientverbindungen mit dem Listener zu aktivieren. Bei der Registrierung des Dienstprinzipalnamens (SPN) müssen Sie das Dienstkonto derjenigen Serverinstanz verwenden, die das Verfügbarkeitsreplikat hostet. Damit der SPN in allen Replikaten funktioniert, muss dasselbe Dienstkonto für alle Instanzen im WSFC-Cluster verwendet werden, der die Verfügbarkeitsgruppe hostet.  
   
- Konfigurieren Sie den SPN mithilfe des **setspn** Windows-Befehlszeilentools.  Beispiel für die Konfiguration eines Serverprinzipalnamens für die Verfügbarkeitsgruppe `AG1listener.Adventure-Works.com` , die auf einer Reihe von SQL Server-Instanzen gehostet wird und zur Ausführung unter dem Domänenkonto `corp/svclogin2`konfiguriert ist:  
+ Konfigurieren Sie den SPN mithilfe des **setspn** Windows-Befehlszeilentools.  Beispiel für die Konfiguration eines Serverprinzipalnamens für die Verfügbarkeitsgruppe `AG1listener.Adventure-Works.com` , die auf einer Reihe von SQL Server-Instanzen gehostet wird und zur Ausführung unter dem Domänenkonto `corp\svclogin2`konfiguriert ist:  
   
 ```  
-setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
+setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2  
 ```  
   
  Weitere Informationen zur manuellen Registrierung eines SPN für SQL Server finden Sie unter [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  

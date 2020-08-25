@@ -2,19 +2,19 @@
 title: 'Schnellstart: Herstellen einer Verbindung mit und Abfragen von SQL Server'
 description: In diesem Schnellstart verwenden Sie Azure Data Studio, um eine Verbindung mit SQL Server herzustellen, und anschließend verwenden Sie T-SQL-Anweisungen (Transact-SQL) zum Erstellen einer Datenbank.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: 532e210d239f8c55b99bd34828fafe160e1fb78b
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f49d322e664bce35f7d9a47ab5c8f3b197468377
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411286"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766359"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>Schnellstart: Verwenden von Azure Data Studio zum Verbinden mit und Abfragen von SQL Server
 
@@ -24,13 +24,13 @@ In dieser Schnellstartanleitung erfahren Sie, wie Sie Azure Data Studio zum Hers
 
 Um diesen Schnellstart abzuschließen, benötigen Sie Azure Data Studio und Zugriff auf SQL Server.
 
-- [Installieren Sie Azure Data Studio](download.md).
+- [Installieren Sie Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
 Wenn Sie nicht auf eine SQL Server-Instanz zugreifen können, wählen Sie Ihre Plattform über einen der folgenden Links aus (hierzu benötigen Sie Ihren SQL-Anmeldenamen und das zugehörige Kennwort):
 
 - [Windows: Herunterladen der SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
-- [macOS: Herunterladen von SQL Server 2017 für Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux: Herunterladen der SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install): Sie müssen nur die Schritte zum *Erstellen und Abfragen von Daten* ausführen.
+- [macOS: Herunterladen von SQL Server 2017 für Docker](../linux/quickstart-install-connect-docker.md)
+- [Linux: Herunterladen der SQL Server 2017 Developer Edition](../linux/sql-server-linux-overview.md#install): Sie müssen nur die Schritte zum *Erstellen und Abfragen von Daten* ausführen.
 
 ## <a name="connect-to-a-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 

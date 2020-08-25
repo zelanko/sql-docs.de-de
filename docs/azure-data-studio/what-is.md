@@ -2,19 +2,19 @@
 title: Was ist Azure Data Studio?
 description: Azure Data Studio ist ein kostenloses, schlankes Tool, das unter Windows, macOS und Linux ausgeführt werden kann und zur Verwaltung von SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse dient.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: 05819f1bafef5095ac9d3534b0293817f3841f96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b58a54e99c269db113bdd1e1821ba55ce3d83ff5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771922"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765509"
 ---
 # <a name="what-is-azure-data-studio"></a>Was ist Azure Data Studio?
 
@@ -24,7 +24,7 @@ Azure Data Studio bietet eine moderne Editor-Benutzeroberfläche mit IntelliSens
 
 Der Quellcode für Azure Data Studio und den dazugehörigen Datenanbietern ist auf GitHub verfügbar und Gegenstand eines Lizenzvertrags für Quellcode, gemäß dem die Software zwar geändert und verwendet, aber nicht weitervertrieben oder auf einem Clouddienst gehostet werden darf. Weitere Informationen finden Sie in den [Häufig gestellten Fragen zu Azure Data Studio](faq.md).
 
-**[Herunterladen und Installieren von Azure Data Studio](download.md)**
+**[Herunterladen und Installieren von Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## <a name="sql-code-editor-with-intellisense"></a>SQL-Code-Editor mit IntelliSense
 
@@ -165,7 +165,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Er
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Herunterladen und Installieren von Azure Data Studio](download.md)
+- [Herunterladen und Installieren von Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
 - [Herstellen einer Verbindung mit und Abfragen von SQL Server](quickstart-sql-server.md)
 - [Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank](quickstart-sql-database.md)
 

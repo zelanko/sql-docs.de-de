@@ -5,21 +5,21 @@ ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: dd1b610c5c8e99fcda446688d0dbdffe0a9dc51e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988604"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778479"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure SQL Managed Instance-Dashboard für Azure Data Studio (Vorschau)
 
-Die Azure SQL Managed Instance-Erweiterung stellt ein Dashboard für die Arbeit mit [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio) bereit. Diese Erweiterung stellt die folgenden Funktionen bereit:
+Die Azure SQL Managed Instance-Erweiterung stellt ein Dashboard für die Arbeit mit [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio) bereit. Diese Erweiterung stellt die folgenden Funktionen bereit:
 
 - Anzeige der SQL Managed Instance-Eigenschaften, einschließlich virtueller Kerne und genutztem Speicher
 - Überwachung der CPU- und Speichernutzung für die letzten zwei Stunden
@@ -29,7 +29,7 @@ Die Azure SQL Managed Instance-Erweiterung stellt ein Dashboard für die Arbeit 
 
 ## <a name="install"></a>Installieren
 
-Sie können das offizielle Release dieser Erweiterung installieren. Führen Sie die Schritte in der [Azure Data Studio-Dokumentation](https://docs.microsoft.com/sql/azure-data-studio/extensions) aus.
+Sie können das offizielle Release dieser Erweiterung installieren. Führen Sie die Schritte in der [Azure Data Studio-Dokumentation](./extensions.md) aus.
 Suchen Sie im Bereich **Erweiterungen** nach „Managed Instance“, und installieren Sie die Installation aus. Nach der Installation werden Sie automatisch über alle zukünftigen Updates der Erweiterung benachrichtigt.
 
 Wenn die Erweiterung installiert ist, wird die Registerkarte **Verwaltete Instanz** in Azure Data Studio angezeigt. Dort finden Sie spezifische Informationen zu Ihrer verwalteten Instanz.
@@ -58,8 +58,8 @@ Möglicherweise werden einige der folgenden Empfehlungen angezeigt:
 - **Erreichen der Speicherbegrenzung**. Sie können entweder unnötige Daten löschen oder die Speichergröße der Instanz erhöhen. Datenbanken, die die Speicherbegrenzung erreichen, können möglicherweise nicht einmal Leseabfragen verarbeiten.
 - **Erreichen der Durchsatzbegrenzung für die Instanz** Sie werden benachrichtigt, wenn beim Laden das Limit Ihrer Dienstebene erreicht wird: 22 MB/s für „universell“ bzw. 48 MB/s für „unternehmenskritisch“. Beachten Sie, dass die verwaltete Instanz Ihre Last begrenzt, um sicherzustellen, dass Sicherungen durchgeführt werden können.
 - **Hohe Arbeitsspeicherauslastung**. Niedrige Seitenlebenserwartung oder viele `PAGEIOLATCH`-Wartestatistiken deuten möglicherweise darauf hin, dass Ihre Instanz Seiten aus dem Arbeitsspeicher entfernt und ständig versucht, mehr Seiten von Datenträgern zu laden.
-- **Grenzwerte für Protokolldateien**. Wenn Ihre Protokolldateien in der [Dienstebene „Universell“ die Datei-E/A-Grenzwerte](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) erreichen, müssen Sie möglicherweise die Protokolldateigröße erhöhen, um eine bessere Leistung zu erzielen.
-- **Grenzwerte für Datendateien**. Wenn Ihre Datendateien in der [Dienstebene „Universell“ die Datei-E/A-Grenzwerte](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) erreichen, müssen Sie möglicherweise die Dateigröße erhöhen, um eine bessere Leistung zu erzielen. Dieses Problem kann zu Arbeitsspeicherauslastung führen und Sicherungen verlangsamen.
+- **Grenzwerte für Protokolldateien**. Wenn Ihre Protokolldateien in der [Dienstebene „Universell“ die Datei-E/A-Grenzwerte](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) erreichen, müssen Sie möglicherweise die Protokolldateigröße erhöhen, um eine bessere Leistung zu erzielen.
+- **Grenzwerte für Datendateien**. Wenn Ihre Datendateien in der [Dienstebene „Universell“ die Datei-E/A-Grenzwerte](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) erreichen, müssen Sie möglicherweise die Dateigröße erhöhen, um eine bessere Leistung zu erzielen. Dieses Problem kann zu Arbeitsspeicherauslastung führen und Sicherungen verlangsamen.
 - **Verfügbarkeitsprobleme**. Eine große Anzahl virtueller Protokolldateien kann sich auf die Leistung auswirken. Wenn ein Prozess fehlschlägt, kann dies zu einer längeren Datenbankwiederherstellung auf der universellen Dienstebene führen.
 
 Überprüfen Sie regelmäßig diese Empfehlungen, untersuchen Sie die Ursachen und ergreifen Sie Maßnahmen zur Problembehebung. Die SQL Managed Instance-Erweiterung stellt Skripts bereit, die Sie ausführen können, um einige der gemeldeten Probleme zu beheben.

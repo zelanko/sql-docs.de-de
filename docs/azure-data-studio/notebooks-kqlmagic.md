@@ -6,19 +6,19 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.topic: tutorial
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: ef59ecb200b30af6c30a5ea602cd89bc2c951e24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0f05030869b66ca0d2f57000aa85f02c93079f08
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920468"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766829"
 ---
 # <a name="kqlmagic-extension-in-azure-data-studio"></a>Kqlmagic-Erweiterung in Azure Data Studio
 
-**Kqlmagic** ist ein Befehl, der die Funktionen des Python-Kernels in **[Azure Data Studio-Notebooks](notebooks-guidance.md)** erweitert. Sie können Python und die **[Kusto-Abfragesprache (KQL)](https://docs.microsoft.com/azure/data-explorer/kusto/query)** zum Abfragen und Visualisieren von Daten mithilfe der umfassenden Bibliothek „Plot.ly“ kombinieren, die mit `render`-Befehlen integriert ist. Kqlmagic bietet Ihnen die Vorteile von Notebooks, Datenanalysen und umfassenden Python-Funktionen über einen Ort. Zu den unterstützten Datenquellen mit Kqlmagic gehören **[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)** , **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)** und **[Azure Monitor-Protokolle](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)** .
+**Kqlmagic** ist ein Befehl, der die Funktionen des Python-Kernels in **[Azure Data Studio-Notebooks](notebooks-guidance.md)** erweitert. Sie können Python und die **[Kusto-Abfragesprache (KQL)](/azure/data-explorer/kusto/query)** zum Abfragen und Visualisieren von Daten mithilfe der umfassenden Bibliothek „Plot.ly“ kombinieren, die mit `render`-Befehlen integriert ist. Kqlmagic bietet Ihnen die Vorteile von Notebooks, Datenanalysen und umfassenden Python-Funktionen über einen Ort. Zu den unterstützten Datenquellen mit Kqlmagic gehören **[Azure Data Explorer](/azure/data-explorer/data-explorer-overview)** , **[Application Insights](/azure/azure-monitor/app/app-insights-overview)** und **[Azure Monitor-Protokolle](/azure/azure-monitor/platform/data-platform-logs)** .
 
 In diesem Artikel erfahren Sie, wie Sie ein Notebook in Azure Data Studio mithilfe der Kqlmagic-Erweiterung für Azure Data Explorer-Cluster, Application Insights-Protokolle und Azure Monitor-Protokolle erstellen.
 
@@ -114,7 +114,7 @@ In diesem Abschnitt wird das Ausführen der Datenanalyse mit Kqlmagic mit einem 
 
 ### <a name="query-and-visualize-for-azure-data-explorer"></a>Abfragen und Visualisieren von Azure Data Explorer
 
-Fragen Sie Daten mit dem [Render-Operator](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) ab, und visualisieren Sie Daten mithilfe der Bibliothek „ploy.ly“ Durch die Abfrage und Visualisierung wird eine integrierte Benutzeroberfläche bereitgestellt, die die native KQL verwendet.
+Fragen Sie Daten mit dem [Render-Operator](/azure/data-explorer/kusto/query/renderoperator) ab, und visualisieren Sie Daten mithilfe der Bibliothek „ploy.ly“ Durch die Abfrage und Visualisierung wird eine integrierte Benutzeroberfläche bereitgestellt, die die native KQL verwendet.
 
 1. Analysieren Sie die zehn häufigsten StormEvent-Ereignisse nach Zustand und Häufigkeit:
 
@@ -179,7 +179,7 @@ Fragen Sie Daten mit dem [Render-Operator](https://docs.microsoft.com/azure/data
 
 ### <a name="query-and-visualize-for-application-insights"></a>Abfragen und Visualisieren von Application Insights
 
-Fragen Sie Daten mit dem [Render-Operator](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) ab, und visualisieren Sie Daten mithilfe der Bibliothek „ploy.ly“ Durch die Abfrage und Visualisierung wird eine integrierte Benutzeroberfläche bereitgestellt, die die native KQL verwendet.
+Fragen Sie Daten mit dem [Render-Operator](/azure/data-explorer/kusto/query/renderoperator) ab, und visualisieren Sie Daten mithilfe der Bibliothek „ploy.ly“ Durch die Abfrage und Visualisierung wird eine integrierte Benutzeroberfläche bereitgestellt, die die native KQL verwendet.
 
 1. Zeigen Sie die Seitenansichten an:
 
@@ -234,7 +234,7 @@ Fragen Sie Daten mit dem [Render-Operator](https://docs.microsoft.com/azure/data
 
 ### <a name="query-and-visualize-for-azure-monitor-logs"></a>Abfragen und Visualisieren von Azure Monitor-Protokollen
 
-Fragen Sie Daten mit dem [Render-Operator](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) ab, und visualisieren Sie Daten mithilfe der Bibliothek „ploy.ly“ Durch die Abfrage und Visualisierung wird eine integrierte Benutzeroberfläche bereitgestellt, die die native KQL verwendet.
+Fragen Sie Daten mit dem [Render-Operator](/azure/data-explorer/kusto/query/renderoperator) ab, und visualisieren Sie Daten mithilfe der Bibliothek „ploy.ly“ Durch die Abfrage und Visualisierung wird eine integrierte Benutzeroberfläche bereitgestellt, die die native KQL verwendet.
 
 1. Zeigen Sie ein Zeitachsendiagramm an:
 
@@ -251,7 +251,7 @@ Fragen Sie Daten mit dem [Render-Operator](https://docs.microsoft.com/azure/data
 
 Erfahren Sie mehr über Notebooks und Kqlmagic:
 
-- [Verwenden einer Jupyter Notebook-Instanz und der Kqlmagic-Erweiterung zum Analysieren von Daten in Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/Kqlmagic)
+- [Verwenden einer Jupyter Notebook-Instanz und der Kqlmagic-Erweiterung zum Analysieren von Daten in Azure Data Explorer](/azure/data-explorer/Kqlmagic)
 - [Magic-Erweiterung für Jupyter Notebook und Jupyter Lab zum Ermöglichen der Notebook-Funktion mit Daten von Kusto, Application Insights und der Protokollanalyse](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
