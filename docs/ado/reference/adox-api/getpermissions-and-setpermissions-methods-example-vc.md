@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15680dc29e8731d03978d32f9b21ba33cb74794e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e8d5d9ee99bc1c055846d8f8882ed15907ee3f9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440032"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770469"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions- und SetPermissions-Methoden – Beispiel (VC++)
-In diesem Beispiel werden die Methoden [getberechtigungs](../../../ado/reference/adox-api/getpermissions-method-adox.md) und [setberechtigungen](../../../ado/reference/adox-api/setpermissions-method-adox.md) veranschaulicht. Der folgende Code gewährt dem Administrator Benutzer uneingeschränkten Zugriff auf die Orders-Tabelle.  
+In diesem Beispiel werden die Methoden [getberechtigungs](./getpermissions-method-adox.md) und [setberechtigungen](./setpermissions-method-adox.md) veranschaulicht. Der folgende Code gewährt dem Administrator Benutzer uneingeschränkten Zugriff auf die Orders-Tabelle.  
   
 ```  
 // BeginGrantPermissionCpp.cpp  

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a567da551fbadc89ca28e8df169b0149b780897
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74fc1cb8504e027db7181657cbcc74452cd5dfe4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438932"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768089"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout-Eigenschaft – Beispiel (VC++)
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- In diesem Beispiel wird die [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) -Eigenschaft veranschaulicht, die für die Objekte [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) und [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) vorhanden ist. In diesem Fall wird die **InternetTimeout** -Eigenschaft im **DataControl** -Objekt und das Timeout auf 20 Sekunden festgelegt.  
+ In diesem Beispiel wird die [InternetTimeout](./internettimeout-property-rds.md) -Eigenschaft veranschaulicht, die für die Objekte [DataControl](./datacontrol-object-rds.md) und [DataSpace](./dataspace-object-rds.md) vorhanden ist. In diesem Fall wird die **InternetTimeout** -Eigenschaft im **DataControl** -Objekt und das Timeout auf 20 Sekunden festgelegt.  
   
 ```cpp
 // BeginInternetTimeoutCpp  
@@ -157,6 +157,4 @@ void PrintComError(_com_error &e)
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [InternetTimeout-Eigenschaft (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
-
-
+ [InternetTimeout-Eigenschaft (RDS)](./internettimeout-property-rds.md)

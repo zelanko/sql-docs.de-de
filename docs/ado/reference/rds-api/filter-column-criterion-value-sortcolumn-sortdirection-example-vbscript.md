@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 800534bb36014d3c2e9f733aee23173fbdd28b01
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc03f9ab55f22289bd159e7d028fd01b0008bcbd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439012"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768269"
 ---
 # <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>Filter Column, Filterkriterium, FilterValue, SortColumn und SortDirection Properties und Reset Method example (VBScript)
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Der folgende Code zeigt, wie das RDS-festgelegt wird [. Der DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) - **Server** Parameter bei Design Time und bindet ihn mithilfe einer Datenquelle an eine Daten abhängige HTML-Tabelle. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **filtercolumnvsb. ASP**.  
+ Der folgende Code zeigt, wie das RDS-festgelegt wird [. Der DataControl](./datacontrol-object-rds.md) - **Server** Parameter bei Design Time und bindet ihn mithilfe einer Datenquelle an eine Daten abhängige HTML-Tabelle. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **filtercolumnvsb. ASP**.  
   
 ```  
 <!-- BeginFilterColumnVBS -->  
@@ -205,12 +205,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [FilterColumn-Eigenschaft (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
- [Filterkriterium-Eigenschaft (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
- [FilterValue-Eigenschaft (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
- [Reset-Methode (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)   
- [SortColumn-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [SortDirection-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
-
+ [DataControl-Objekt (RDS)](./datacontrol-object-rds.md)   
+ [FilterColumn-Eigenschaft (RDS)](./filtercolumn-property-rds.md)   
+ [Filterkriterium-Eigenschaft (RDS)](./filtercriterion-property-rds.md)   
+ [FilterValue-Eigenschaft (RDS)](./filtervalue-property-rds.md)   
+ [Reset-Methode (RDS)](./reset-method-rds.md)   
+ [SortColumn-Eigenschaft (RDS)](./sortcolumn-property-rds.md)   
+ [SortDirection-Eigenschaft (RDS)](./sortdirection-property-rds.md)

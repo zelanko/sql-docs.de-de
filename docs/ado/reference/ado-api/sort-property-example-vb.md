@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7821e971d32f855fc219a2883f4190b9434d998
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49964c5dc3f9f6402c853f4adddabd798db4b2f0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442082"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777449"
 ---
 # <a name="sort-property-example-vb"></a>Sort-Eigenschaft – Beispiel (VB)
-In diesem Beispiel wird die [Sort](../../../ado/reference/ado-api/sort-property.md) -Eigenschaft des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts verwendet, um die Zeilen eines **Recordsets** neu anzuordnen, die von der Tabelle " ***Authors*** " der ***Pubs*** -Datenbank abgeleitet werden. Eine sekundäre hilfsprogrammroutine druckt jede Zeile.  
+In diesem Beispiel wird die [Sort](./sort-property.md) -Eigenschaft des [Recordset](./recordset-object-ado.md) -Objekts verwendet, um die Zeilen eines **Recordsets** neu anzuordnen, die von der Tabelle " ***Authors*** " der ***Pubs*** -Datenbank abgeleitet werden. Eine sekundäre hilfsprogrammroutine druckt jede Zeile.  
   
 ```  
 'BeginSortVB  
@@ -111,5 +111,5 @@ Attribute VB_Name = "Sort"
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Sort-Eigenschaft](../../../ado/reference/ado-api/sort-property.md)
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)   
+ [Sort-Eigenschaft](./sort-property.md)

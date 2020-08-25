@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942342"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767049"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>"dwloader-Befehlszeilen Lade Modul für parallele Data Warehouse
 **"dwloader** ist ein Befehlszeilen Tool für parallele Data Warehouse (PDW), das Tabellenzeilen in einem Massen Vorgang in eine vorhandene Tabelle lädt. Beim Laden von Zeilen können Sie alle Zeilen am Ende der Tabelle (*Anfügen* -oder *vom fastappend Lademodus-Modus*) hinzufügen, neue Zeilen anfügen und vorhandene Zeilen aktualisieren (*Upsert-Modus*) oder alle vorhandenen Zeilen vor dem Laden löschen und dann alle Zeilen in eine leere Tabelle (erneuten*laden Modus*) einfügen.  
@@ -490,7 +490,7 @@ Verfügbar mit Cu 7.4 Update, gibt die maximale Zeilenlänge (in Byte) an, die g
 ## <a name="return-code-values"></a>Rückgabecodewerte  
 0 (Erfolg) oder andere ganzzahlige Werte (Fehler)  
   
-Verwenden Sie in einem Befehlsfenster oder in einer Batchdatei, `errorlevel` um den Rückgabecode anzuzeigen. Beispiel:  
+Verwenden Sie in einem Befehlsfenster oder in einer Batchdatei, `errorlevel` um den Rückgabecode anzuzeigen. Zum Beispiel:  
   
 ```  
 dwloader  
@@ -528,7 +528,7 @@ Für geladene Daten ist möglicherweise mehr oder weniger Speicherplatz auf dem 
 Obwohl es sich bei **"dwloader** um einen Transaktionsprozess handelt und ein Rollback bei einem Fehler ordnungsgemäß ausgeführt wird, kann kein Rollback ausgeführt werden, sobald der Massen Ladevorgang erfolgreich abgeschlossen wurde. Um einen aktiven **"dwloader** -Prozess abzubrechen, geben Sie STRG + C ein.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
-Die Gesamtgröße aller gleichzeitig auftretenden Ladevorgänge muss kleiner als LOG_SIZE für die Datenbank sein, und es wird empfohlen, dass die Gesamtgröße aller gleichzeitigen Ladevorgänge kleiner als 50% der LOG_SIZE ist. Um diese Größenbeschränkung zu erreichen, können Sie große Lasten in mehrere Batches aufteilen. Weitere Informationen zu LOG_SIZE finden Sie unter [Create Database](../t-sql/statements/create-database-parallel-data-warehouse.md) .  
+Die Gesamtgröße aller gleichzeitig auftretenden Ladevorgänge muss kleiner als LOG_SIZE für die Datenbank sein, und es wird empfohlen, dass die Gesamtgröße aller gleichzeitigen Ladevorgänge kleiner als 50% der LOG_SIZE ist. Um diese Größenbeschränkung zu erreichen, können Sie große Lasten in mehrere Batches aufteilen. Weitere Informationen zu LOG_SIZE finden Sie unter [Create Database](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016) .  
   
 Beim Laden mehrerer Dateien mit einem Load-Befehl werden alle abgelehnten Zeilen in dieselbe Ablehnungs Datei geschrieben. Die Ablehnungs Datei zeigt nicht an, welche Eingabedatei jede abgelehnte Zeile enthält.  
   
@@ -554,14 +554,14 @@ Der Anfügen-Modus lädt Daten in zwei Phasen. In Phase 1 werden Daten gleichzei
   
 |Tabellentyp|Mehrere Transaktionen<br />Modus (-m)|Die Tabelle ist leer.|Unterstützte Parallelität|Protokollierung|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Heap|Ja|Ja|Ja|Wenig|  
-|Heap|Ja|Nein|Ja|Wenig|  
-|Heap|Nein |Ja|Nein|Wenig|  
-|Heap|Nein|Nein|Nein|Wenig|  
-|Schl|Ja|Ja|Nein|Wenig|  
+|Heap|Ja|Ja|Ja|Minimal|  
+|Heap|Ja|Nein|Ja|Minimal|  
+|Heap|Nein|Ja|Nein|Minimal|  
+|Heap|Nein|Nein|Nein|Minimal|  
+|Schl|Ja|Ja|Nein|Minimal|  
 |Schl|Ja|Nein|Ja|Vollständig|  
-|Schl|Nein |Ja|Nein|Wenig|  
-|Schl|Nein|Nein |Ja|Vollständig|  
+|Schl|Nein|Ja|Nein|Minimal|  
+|Schl|Nein|Nein|Ja|Vollständig|  
   
 In der obigen Tabelle wird **"dwloader** mit dem Anfüge Modus in einen Heap oder einer CI-Tabelle (gruppierten Index) mit oder ohne das multitransaktionsflag und das Laden in eine leere Tabelle oder eine nicht leere Tabelle angezeigt. Das Sperr-und Protokollierungs Verhalten jeder solchen Kombination von Load wird in der Tabelle angezeigt. Wenn Sie zum Beispiel die Phase (2.) mit dem Anfügen-Modus in einen gruppierten Index ohne den multitransaktionalen Modus und in eine leere Tabelle laden, wird PDW eine exklusive Sperre für die Tabelle erstellen, und die Protokollierung ist minimal. Dies bedeutet, dass ein Kunde nicht in der Lage ist, (2.) Phase und Abfrage gleichzeitig in eine leere Tabelle zu laden. Wenn Sie jedoch mit der gleichen Konfiguration in eine nicht leere Tabelle laden, gibt PDW keine exklusive Sperre für die Tabelle aus, und Parallelität ist möglich. Leider erfolgt die vollständige Protokollierung, die den Prozess verlangsamt.  
   
@@ -704,4 +704,3 @@ Beschreibung der Befehlszeilenparameter:
 [Common Metadata Query Examples](metadata-query-examples.md)  
 
 -->
-  

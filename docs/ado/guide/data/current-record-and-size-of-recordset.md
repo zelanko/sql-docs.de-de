@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12d4b9803682e94326636dd27bbc3f134eea23d8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bf1757eac1d3c94c0d26439c3519060def03e27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453602"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806210"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Aktueller Datensatz und Größe des Recordsets
-In diesem Abschnitt wird beschrieben, wie Sie die aktuelle Position des Cursors im Beispiel **Recordset** in [JScript-Code Beispiel zum Zurückgeben eines Recordsets](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)suchen.  
+In diesem Abschnitt wird beschrieben, wie Sie die aktuelle Position des Cursors im Beispiel **Recordset** in [JScript-Code Beispiel zum Zurückgeben eines Recordsets](./jscript-code-example-to-return-a-recordset.md)suchen.  
   
 ## <a name="current-record"></a>Aktueller Datensatz  
  Der aktuelle Datensatz im Dataset entspricht dem, der von der Position des Cursors des **Recordset** -Objekts hervorgehoben wird. Wenn ein **Recordset** -Objekt von der Datenquelle zurückgegeben wird, als das Ergebnis des Aufrufs von **Recordset. Open**, **Command.Exeniedlich**oder **Connection.Exeniedlich** (einschließlich **Connection. namedcommand** und **Connection. StoredProcedure**), wird der Cursor so festgelegt, dass er auf den ersten Datensatz verweist. Im Beispiel DataSet ist der anfängliche aktuelle Datensatz der "Onkel Bob es Organic getrocknete Birnen"-Element.  
@@ -38,14 +38,14 @@ In diesem Abschnitt wird beschrieben, wie Sie die aktuelle Position des Cursors 
   
  In einigen Fällen kann ein Anbieter oder Cursor den **RecordCount** -Wert nicht ermitteln, ohne zuerst alle Datensätze aus der Datenquelle abzurufen. Um eine genaue Zählung sicherzustellen, nennen Sie das **Recordset**. Die "" **-Methode vor** dem Aufruf von " **Recordset. RecordCount**".  
   
- Das **Recordset** -Beispiel Objekt, das mit dem [JScript-Code Beispiel](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) abgerufen wird, verwendet einen Vorwärts Cursor, sodass der Aufruf von **RecordCount** für dieses Objekt immer zu "-1" führt. Wenn Sie die Codezeile ändern, die das **Recordset**aufruft. **Open** -Methode wie im folgenden Beispiel gezeigt, gibt die **RecordCount** -Eigenschaft die tatsächliche Anzahl der abgerufenen Datensätze zurück.  
+ Das **Recordset** -Beispiel Objekt, das mit dem [JScript-Code Beispiel](./jscript-code-example-to-return-a-recordset.md) abgerufen wird, verwendet einen Vorwärts Cursor, sodass der Aufruf von **RecordCount** für dieses Objekt immer zu "-1" führt. Wenn Sie die Codezeile ändern, die das **Recordset**aufruft. **Open** -Methode wie im folgenden Beispiel gezeigt, gibt die **RecordCount** -Eigenschaft die tatsächliche Anzahl der abgerufenen Datensätze zurück.  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   
 ```  
   
- Dies liegt daran, dass statische Cursor mit dem [Microsoft OLE DB-Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) **RecordCount**unterstützen. In diesem Beispiel gibt es fünf Datensätze, sodass **RecordCount** den Wert 5 ergeben sollte.  
+ Dies liegt daran, dass statische Cursor mit dem [Microsoft OLE DB-Anbieter für SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md) **RecordCount**unterstützen. In diesem Beispiel gibt es fünf Datensätze, sodass **RecordCount** den Wert 5 ergeben sollte.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
- [Grenzen eines Recordsets](../../../ado/guide/data/boundaries-of-a-recordset.md)
+ [Grenzen eines Recordsets](./boundaries-of-a-recordset.md)

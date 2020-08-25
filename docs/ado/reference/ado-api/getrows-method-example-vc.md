@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94c8b64518a714a824fd1d05c69ac6f54467e35f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70882984404dab2905e10344af88c2d933aceacc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443532"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774969"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows-Methode – Beispiel (VC++)
-In diesem Beispiel wird die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) -Methode verwendet, um eine angegebene Anzahl von Zeilen aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) abzurufen und ein Array mit den resultierenden Daten auszufüllen. Die **GetRows** -Methode gibt weniger als die gewünschte Anzahl von Zeilen in zwei Fällen zurück: entweder wenn [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde oder **GetRows** versucht hat, einen Datensatz abzurufen, der von einem anderen Benutzer gelöscht wurde. Die Funktion gibt nur dann **false** zurück, wenn der zweite Fall auftritt. Die getrowsok-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
+In diesem Beispiel wird die [GetRows](./getrows-method-ado.md) -Methode verwendet, um eine angegebene Anzahl von Zeilen aus einem [Recordset](./recordset-object-ado.md) abzurufen und ein Array mit den resultierenden Daten auszufüllen. Die **GetRows** -Methode gibt weniger als die gewünschte Anzahl von Zeilen in zwei Fällen zurück: entweder wenn [EOF](./bof-eof-properties-ado.md) erreicht wurde oder **GetRows** versucht hat, einen Datensatz abzurufen, der von einem anderen Benutzer gelöscht wurde. Die Funktion gibt nur dann **false** zurück, wenn der zweite Fall auftritt. Die getrowsok-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -245,6 +245,6 @@ Pedro Afonso, 12/24/1990
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [BOF, EOF-Eigenschaften (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [GetRows-Methode (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [BOF, EOF-Eigenschaften (ADO)](./bof-eof-properties-ado.md)   
+ [GetRows-Methode (ADO)](./getrows-method-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

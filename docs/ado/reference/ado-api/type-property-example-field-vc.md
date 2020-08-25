@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb2ad6e448f215c29c278ba3f767ad995e713d26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50b8465e5f7f816007526b66d8cc0696e0c47fca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441712"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777069"
 ---
 # <a name="type-property-example-field-vc"></a>Type-Eigenschaft – Beispiel (Field) (VC++)
-In diesem Beispiel wird die [Type](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft veranschaulicht, indem der Name der Konstante angezeigt wird, die dem Wert der **Type** -Eigenschaft aller [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der ***Employees*** -Tabelle entspricht. Die FieldType-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
+In diesem Beispiel wird die [Type](./type-property-ado.md) -Eigenschaft veranschaulicht, indem der Name der Konstante angezeigt wird, die dem Wert der **Type** -Eigenschaft aller [Feld](./field-object.md) Objekte in der ***Employees*** -Tabelle entspricht. Die FieldType-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -172,5 +172,5 @@ void PrintComError(_com_error &e) {
  **Name: hire_date**  
  **Typ: adDBTimestamp**   
 ## <a name="see-also"></a>Weitere Informationen  
- [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [Type-Eigenschaft (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Field-Objekt](./field-object.md)   
+ [Type-Eigenschaft (ADO)](./type-property-ado.md)

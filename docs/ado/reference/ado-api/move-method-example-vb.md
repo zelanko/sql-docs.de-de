@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab6ea1b3a3b8f4d8ffa125bbc37a5e61dc7e1f96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d440d529a1f62fd239e81bb6ae408082d3a6f643
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443232"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774349"
 ---
 # <a name="move-method-example-vb"></a>Move-Methode – Beispiel (VB)
-In diesem Beispiel wird die [Move](../../../ado/reference/ado-api/move-method-ado.md) -Methode verwendet, um den Daten Satz Zeiger basierend auf der Benutzereingabe zu positionieren.  
+In diesem Beispiel wird die [Move](./move-method-ado.md) -Methode verwendet, um den Daten Satz Zeiger basierend auf der Benutzereingabe zu positionieren.  
   
 ```  
 'BeginMoveVB  
@@ -128,5 +128,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Move-Methode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Move-Methode (ADO)](./move-method-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3cb43e4ac4774963e79abadc6413882e1d0bce98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25f4cea4278421ee79c65c3784f74d36cc35e3c6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442932"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773719"
 ---
 # <a name="openschema-method-example-vc"></a>OpenSchema-Methode – Beispiel (VC++)
-In diesem Beispiel wird die [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) -Methode verwendet, um den Namen und den Typ der einzelnen Tabellen in der ***Pubs*** -Datenbank anzuzeigen.  
+In diesem Beispiel wird die [OpenSchema](./openschema-method.md) -Methode verwendet, um den Namen und den Typ der einzelnen Tabellen in der ***Pubs*** -Datenbank anzuzeigen.  
   
 ```  
 // OpenSchemaMethodExample.cpp  
@@ -195,4 +195,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [OpenSchema-Methode](../../../ado/reference/ado-api/openschema-method.md)
+ [OpenSchema-Methode](./openschema-method.md)

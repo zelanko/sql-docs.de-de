@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 607142ec89a1032fe42bab87c0dfad0f2a276387
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c5b5f21c1af3a3438b9e00cd00f4ed2baf338e2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453152"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805793"
 ---
 # <a name="named-commands"></a>Benannte Befehle
-Beim [Erstellen und Ausführen eines einfachen Befehls](../../../ado/guide/data/creating-and-executing-a-simple-command.md) wird eine Möglichkeit zum Ausführen eines Befehls angezeigt. Es gibt eine weitere Möglichkeit: Sie können einen benannten Befehl erstellen und dann den benannten Befehl direkt für das **Verbindungs** Objekt (zugewiesen an die **ActiveConnection** -Eigenschaft des **Command** -Objekts) aufzurufen. Das Benennen eines Befehls bedeutet, dass der **Name** -Eigenschaft eines **Befehls** Objekts ein Name zugewiesen wird. Beispiel:  
+Beim [Erstellen und Ausführen eines einfachen Befehls](./creating-and-executing-a-simple-command.md) wird eine Möglichkeit zum Ausführen eines Befehls angezeigt. Es gibt eine weitere Möglichkeit: Sie können einen benannten Befehl erstellen und dann den benannten Befehl direkt für das **Verbindungs** Objekt (zugewiesen an die **ActiveConnection** -Eigenschaft des **Command** -Objekts) aufzurufen. Das Benennen eines Befehls bedeutet, dass der **Name** -Eigenschaft eines **Befehls** Objekts ein Name zugewiesen wird. Beispiel:  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -91,4 +91,4 @@ ErrHandler:
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection-Objekt (ADO)](../../reference/ado-api/connection-object-ado.md)

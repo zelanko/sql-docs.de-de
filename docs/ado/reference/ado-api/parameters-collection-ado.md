@@ -28,7 +28,7 @@ ms.locfileid: "88773339"
 # <a name="parameters-collection-ado"></a>Parameters-Collection (ADO)
 Enthält alle [Parameter](./parameter-object.md) Objekte eines [Befehls](./command-object-ado.md) Objekts.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Ein **Command** -Objekt verfügt über eine **Parameter** Auflistung aus **Parameter** Objekten.  
   
  Wenn Sie die [Refresh](./refresh-method-ado.md) -Methode für die **Parameter** Auflistung eines **Befehls** Objekts verwenden, werden Anbieter Parameterinformationen für die gespeicherte Prozedur oder parametrisierte Abfrage abgerufen, die im **Command** -Objekt angegeben sind. Einige Anbieter unterstützen keine Aufrufe gespeicherter Prozeduren oder parametrisierte Abfragen. Wenn Sie die **Refresh** -Methode für die **Parameter** Auflistung aufrufen, wenn Sie einen solchen Anbieter verwenden, wird ein Fehler zurückgegeben.  

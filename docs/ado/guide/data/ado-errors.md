@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 279352e2ad99d57b3f1e019358962ff301cde182
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f753e66e6711c3abcf59e2541b9bad6cd390e71a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453852"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806684"
 ---
 # <a name="ado-run-time-errors"></a>ADO-Laufzeitfehler
 ADO-Fehler werden dem Programm als Laufzeitfehler gemeldet. Sie können den fehlerabfang Mechanismus ihrer Programmiersprache verwenden, um Sie abzufangen und zu behandeln. Verwenden Sie beispielsweise in Visual Basic die **On Error** -Anweisung. In Visual C++ hängt dies von der Methode ab, die Sie für den Zugriff auf die ADO-Bibliotheken verwenden. Verwenden Sie #Import einen **try-catch-** Block. Andernfalls müssen C++-Programmierer das Fehler Objekt explizit abrufen, indem Sie **GetErrorInfo**aufrufen. Die folgende Visual Basic unter Prozedur veranschaulicht das Abfangen eines ADO-Fehlers:
@@ -90,7 +90,7 @@ Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
  Die Fehlermeldung enthält alle Informationen, die vom Visual Basic **Err** -Objekt bereitgestellt werden, mit Ausnahme des **LastDllError** -Werts, der hier nicht gilt. Die Fehlernummer gibt Aufschluss darüber, welcher Fehler aufgetreten ist. Die Beschreibung ist in Fällen nützlich, in denen Sie den Fehler nicht selbst behandeln möchten. Sie können Sie einfach an den Benutzer übergeben. Obwohl Sie normalerweise Nachrichten verwenden möchten, die für Ihre Anwendung angepasst werden, können Sie nicht jeden Fehler vorhersehen. die Beschreibung gibt Aufschluss darüber, was schief gelaufen ist. Im Beispielcode wurde der Fehler vom **Verbindungs** Objekt gemeldet. Hier wird der Objekttyp oder die programmgesteuerte ID angezeigt, kein Variablenname.
 
 > [!NOTE]
->  Das Visual Basic **Err** -Objekt enthält nur Informationen zum letzten Fehler. Die ADO **Errors** -Auflistung des **Connection** -Objekts enthält ein **Error** -Objekt für jeden Fehler, der durch den letzten ADO-Vorgang ausgelöst wird. Verwenden Sie die **Errors** -Auflistung anstelle des **Err** -Objekts, um mehrere Fehler zu behandeln. Weitere Informationen zur **Fehler** Sammlung finden Sie unter [Anbieter Fehler](../../../ado/guide/data/provider-errors.md). Wenn jedoch kein gültiges **Verbindungs** Objekt vorhanden ist, ist das **Err** -Objekt die einzige Quelle für Informationen zu ADO-Fehlern.
+>  Das Visual Basic **Err** -Objekt enthält nur Informationen zum letzten Fehler. Die ADO **Errors** -Auflistung des **Connection** -Objekts enthält ein **Error** -Objekt für jeden Fehler, der durch den letzten ADO-Vorgang ausgelöst wird. Verwenden Sie die **Errors** -Auflistung anstelle des **Err** -Objekts, um mehrere Fehler zu behandeln. Weitere Informationen zur **Fehler** Sammlung finden Sie unter [Anbieter Fehler](./provider-errors.md). Wenn jedoch kein gültiges **Verbindungs** Objekt vorhanden ist, ist das **Err** -Objekt die einzige Quelle für Informationen zu ADO-Fehlern.
 
  Welche Arten von Vorgängen verursachen wahrscheinlich ADO-Fehler? Häufige ADO-Fehler können das Öffnen eines Objekts sein, z. b. eine **Verbindung** oder ein **Recordset**, das Aktualisieren von Daten oder das Aufrufen einer Methode oder Eigenschaft, die nicht vom Anbieter unterstützt wird.
 
@@ -98,4 +98,4 @@ Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 
  Im folgenden Thema finden Sie weitere Informationen zu ADO-Fehlern.
 
--   [ADO-Fehlerreferenz](../../../ado/guide/data/ado-error-reference.md)
+-   [ADO-Fehlerreferenz](./ado-error-reference.md)

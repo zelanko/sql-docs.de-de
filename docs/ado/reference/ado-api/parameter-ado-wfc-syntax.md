@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fc5226da0ceeefc6ae961b2a3d358d1dc1955b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09d345a0f08d9fa2e9e3696941aba1ef49443efd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442822"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773469"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO/WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket "com. ms. wfc. Data"  
@@ -66,7 +66,7 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="parameter-accessor-methods"></a>Parameter Accessor-Methoden  
- Die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft eines [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekts Ruft den Inhalt dieses Objekts ab oder legt ihn fest. Der Inhalt wird als Variant dargestellt. dabei handelt es sich um einen Objekttyp, dem ein Wert und mehrere Datentypen zugewiesen werden können.  
+ Die [value](./value-property-ado.md) -Eigenschaft eines [Parameter](./parameter-object.md) Objekts Ruft den Inhalt dieses Objekts ab oder legt ihn fest. Der Inhalt wird als Variant dargestellt. dabei handelt es sich um einen Objekttyp, dem ein Wert und mehrere Datentypen zugewiesen werden können.  
   
  ADO/WFC implementiert die **value** -Eigenschaft mit der **GetValue** -Methode, die ein Variant-Objekt zurückgibt. und die **SetValue** -Methode, die eine Variante als Argument annimmt. Varianten sind in bestimmten Sprachen, wie z. b. Microsoft Visual Basic, sehr effizient.  
   
@@ -96,4 +96,4 @@ public void setNull()
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter-Objekt](./parameter-object.md)

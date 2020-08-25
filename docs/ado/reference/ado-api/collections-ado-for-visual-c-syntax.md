@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3740b6ff922204d7f68f507c75011819de8ccfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c1e7719277bd7b03dac00d315243a94c9b84ec01
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450932"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776209"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (ADO für Visual C++-Syntax)
 ## <a name="parameters"></a>Parameter  
@@ -38,11 +38,11 @@ Refresh(void);
   
  Weitere Informationen finden Sie unter  
   
--   [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+-   [Append-Methode (ADO)](./append-method-ado.md)  
   
--   [Delete-Methode (ADO-Parameters-Collection)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Delete-Methode (ADO-Parameters-Collection)](./delete-method-ado-parameters-collection.md)  
   
--   [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Refresh-Methode (ADO)](./refresh-method-ado.md)  
   
 ### <a name="properties"></a>Eigenschaften  
   
@@ -53,9 +53,9 @@ get_Item(VARIANT Index, _ADOParameter **ppvObject);
   
  Weitere Informationen finden Sie unter  
   
--   [Count-Eigenschaft (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
+-   [Count-Eigenschaft (ADO)](./count-property-ado.md)  
   
--   [Item-Eigenschaft (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
+-   [Item-Eigenschaft (ADO)](./item-property-ado.md)  
   
 ## <a name="fields"></a>Felder  
   
@@ -69,11 +69,11 @@ Refresh(void);
   
  Weitere Informationen finden Sie unter  
   
--   [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+-   [Append-Methode (ADO)](./append-method-ado.md)  
   
--   [Delete-Methode (ADO-Parameters-Collection)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Delete-Methode (ADO-Parameters-Collection)](./delete-method-ado-parameters-collection.md)  
   
--   [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Refresh-Methode (ADO)](./refresh-method-ado.md)  
   
 ### <a name="properties"></a>Eigenschaften  
   
@@ -84,9 +84,9 @@ get_Item(VARIANT Index, ADOField **ppvObject);
   
  Weitere Informationen finden Sie unter  
   
--   [Count-Eigenschaft (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
+-   [Count-Eigenschaft (ADO)](./count-property-ado.md)  
   
--   [Item-Eigenschaft (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
+-   [Item-Eigenschaft (ADO)](./item-property-ado.md)  
   
 ## <a name="errors"></a>Errors  
   
@@ -99,9 +99,9 @@ Refresh(void);
   
  Weitere Informationen finden Sie unter  
   
--   [Clear-Methode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)  
+-   [Clear-Methode (ADO)](./clear-method-ado.md)  
   
--   [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Refresh-Methode (ADO)](./refresh-method-ado.md)  
   
 ### <a name="properties"></a>Eigenschaften  
   
@@ -112,9 +112,9 @@ get_Item(VARIANT Index, ADOError **ppvObject);
   
  Weitere Informationen finden Sie unter  
   
--   [Count-Eigenschaft (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
+-   [Count-Eigenschaft (ADO)](./count-property-ado.md)  
   
--   [Item-Eigenschaft (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
+-   [Item-Eigenschaft (ADO)](./item-property-ado.md)  
   
 ## <a name="properties"></a>Eigenschaften  
   
@@ -126,7 +126,7 @@ Refresh(void);
   
  Weitere Informationen finden Sie unter  
   
--   [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Refresh-Methode (ADO)](./refresh-method-ado.md)  
   
 ### <a name="properties"></a>Eigenschaften  
   
@@ -137,12 +137,12 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
  Weitere Informationen finden Sie unter  
   
--   [Count-Eigenschaft (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
+-   [Count-Eigenschaft (ADO)](./count-property-ado.md)  
   
--   [Item-Eigenschaft (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
+-   [Item-Eigenschaft (ADO)](./item-property-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehlersammlung (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameter Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Fehlersammlung (ADO)](./errors-collection-ado.md)   
+ [Fields-Auflistung (ADO)](./fields-collection-ado.md)   
+ [Parameter Auflistung (ADO)](./parameters-collection-ado.md)   
+ [Properties-Collection (ADO)](./properties-collection-ado.md)

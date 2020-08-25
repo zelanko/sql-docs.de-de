@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 216a01a6a182e7d2fad97a8ed88e6ca09719a33e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: acefd94f29b030a6bee724686e11023a354d8921
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439532"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769409"
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner-Methode
-Gibt den Besitzer eines Objekts in einem [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md)an.  
+Gibt den Besitzer eines Objekts in einem [Katalog](./catalog-object-adox.md)an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,10 +39,10 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  Ein **Zeichen** folgen Wert, der den Namen des Objekts angibt, für das der Besitzer angegeben werden soll.  
   
  *ObjectType*  
- Ein **Long** -Wert, der eine der [objecttypeer](../../../ado/reference/adox-api/objecttypeenum.md) -Konstanten sein kann, die den Besitzertyp angibt.  
+ Ein **Long** -Wert, der eine der [objecttypeer](./objecttypeenum.md) -Konstanten sein kann, die den Besitzertyp angibt.  
   
  *OwnerName*  
- Ein **Zeichen** folgen Wert, der den [Namen](../../../ado/reference/adox-api/name-property-adox.md) des [Benutzers](../../../ado/reference/adox-api/user-object-adox.md) oder der [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) angibt, der Besitzer des Objekts ist.  
+ Ein **Zeichen** folgen Wert, der den [Namen](./name-property-adox.md) des [Benutzers](./user-object-adox.md) oder der [Gruppe](./group-object-adox.md) angibt, der Besitzer des Objekts ist.  
   
  *ObjectTypeId*  
  Optional. Ein **Variant** -Wert, der die GUID für einen Anbieter Objekttyp angibt, der nicht von der OLE DB Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* auf **adpermubjproviderspecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  
@@ -51,8 +51,8 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  Wenn der Anbieter die Angabe von Objekt Besitzern nicht unterstützt, tritt ein Fehler auf.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Catalog-Objekt (ADOX)](./catalog-object-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für die GetObjectOwner-und die-Methode der-Methode (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
- [GetObjectOwner-Methode (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)
+ [Beispiel für die GetObjectOwner-und die-Methode der-Methode (VB)](./getobjectowner-and-setobjectowner-methods-example-vb.md)   
+ [GetObjectOwner-Methode (ADOX)](./getobjectowner-method-adox.md)

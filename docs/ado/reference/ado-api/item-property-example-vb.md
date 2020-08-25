@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ff98b6c2fe1dbb6da0131bf1a1d539fdfb74649
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c85e34201cb37745ef9f09b337b8d1f71dd508af
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443392"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774649"
 ---
 # <a name="item-property-example-vb"></a>Item-Eigenschaft – Beispiel (VB)
-In diesem Beispiel wird veranschaulicht, wie die [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf Member einer Auflistung zugreift. Im Beispiel wird die Tabelle " ***Authors*** " der ***Pubs*** -Datenbank mit einem parametrisierten Befehl geöffnet.  
+In diesem Beispiel wird veranschaulicht, wie die [Item](./item-property-ado.md) -Eigenschaft auf Member einer Auflistung zugreift. Im Beispiel wird die Tabelle " ***Authors*** " der ***Pubs*** -Datenbank mit einem parametrisierten Befehl geöffnet.  
   
- Auf den Parameter im Befehl, der für die Datenbank ausgegeben wird, wird von der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung des [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekts anhand des Indexes und namens zugegriffen. Auf die Felder des zurückgegebenen [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) wird dann von der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung dieses Objekts nach Index und Name zugegriffen.  
+ Auf den Parameter im Befehl, der für die Datenbank ausgegeben wird, wird von der [Parameter](./parameters-collection-ado.md) Auflistung des [Befehls](./command-object-ado.md) Objekts anhand des Indexes und namens zugegriffen. Auf die Felder des zurückgegebenen [Recordsets](./recordset-object-ado.md) wird dann von der [Fields](./fields-collection-ado.md) -Auflistung dieses Objekts nach Index und Name zugegriffen.  
   
 ```  
 'BeginItemVB  
@@ -136,8 +136,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Item-Eigenschaft (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Parameter Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Command-Objekt (ADO)](./command-object-ado.md)   
+ [Fields-Auflistung (ADO)](./fields-collection-ado.md)   
+ [Item-Eigenschaft (ADO)](./item-property-ado.md)   
+ [Parameter Auflistung (ADO)](./parameters-collection-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

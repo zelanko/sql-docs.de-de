@@ -35,7 +35,7 @@ Aktualisiert die Objekte in einer Auflistung, um die Objekte widerzuspiegeln, di
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **Aktualisierungs** Methode führt verschiedene Aufgaben aus, abhängig von der Sammlung, von der Sie aufgerufen wird.  
   
 ### <a name="parameters"></a>Parameter  

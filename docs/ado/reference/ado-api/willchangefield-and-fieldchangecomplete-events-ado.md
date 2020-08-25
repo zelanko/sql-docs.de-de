@@ -62,7 +62,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *pRecordset*  
  Ein **Recordset** -Objekt. Das **Recordset** , für das dieses Ereignis aufgetreten ist.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn Sie die [value](./value-property-ado.md) -Eigenschaft festlegen und die [Update](./update-method.md) -Methode mit Feld-und Wert Array Parametern aufrufen, kann ein Ereignis vom Typ " **WillChangeField** " oder " **FieldChangeComplete** " auftreten  
   
 ## <a name="see-also"></a>Weitere Informationen  

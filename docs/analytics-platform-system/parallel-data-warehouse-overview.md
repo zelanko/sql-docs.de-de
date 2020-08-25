@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400931"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Parallele Data Warehouse Komponenten-Analytics Platform System
@@ -66,8 +66,8 @@ Der Daten Verschiebungs Dienst (Data Movement Service, DMS) ist Teil der "geheim
 ### <a name="admin-console"></a>Verwaltungskonsole  
 Die Verwaltungskonsole ist eine Webanwendung, in der die Gerätestatus-, Integritäts-und Leistungsinformationen dargestellt werden.  
   
-### <a name="configuration-manager"></a>Configuration Manager  
-Der Configuration Manager (dwconfig. exe) ist das Tool, das von Anwendungs Administratoren zum Konfigurieren von Analytics Platform System verwendet wird.  
+### <a name="configuration-manager"></a>Konfigurations-Manager  
+Der Configuration Manager (dwconfig.exe) ist das Tool, das von Anwendungs Administratoren zum Konfigurieren von Analytics Platform System verwendet wird.  
   
 ### <a name="control-node-databases"></a>Steuern von Knoten Datenbanken  
 SQL Server verwaltet alle Datenbanken auf dem Steuer Knoten.  
@@ -118,7 +118,7 @@ Windows Server Update Services (WSUS) zum Anwenden oder Entfernen von Windows-Up
 ### <a name="windows-server"></a>Windows Server  
 Auf allen Hosts und virtuellen Maschinen in der Appliance wird das Windows Server-Betriebssystem ausgeführt.  
   
-### <a name="failover-clustering"></a>Failoverclusterunterstützung  
+### <a name="failover-clustering"></a>Failoverclustering  
 Windows-Failoverclustering bietet die Möglichkeit, Prozesse auf einem passiven Host neu zu starten, wenn ein Host ausfällt.  
   
 ### <a name="storage-spaces"></a>Speicherplätze  
@@ -138,7 +138,7 @@ Die polybase-Technologie integriert SQL Server PDW Daten mit externen Hadoop-Dat
   
 ## <a name="query-tools"></a>Abfragetools   
   
-Abfragen werden mit Transact\--SQL geschrieben, das an die MPP-Natur der Abfragen angepasst ist. Alle Abfragen werden an den Steuerungs Knoten übermittelt, von dem ein paralleler Abfrageplan generiert wird, um die Abfrage über die Computeknoten hinweg auszuführen.  
+Abfragen werden mit Transact- \- SQL geschrieben, das an die MPP-Natur der Abfragen angepasst ist. Alle Abfragen werden an den Steuerungs Knoten übermittelt, von dem ein paralleler Abfrageplan generiert wird, um die Abfrage über die Computeknoten hinweg auszuführen.  
   
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
 SQL Server Data Tools wird innerhalb von Visual Studio ausgeführt und ist unser empfohlenes GUI-Tool zum Senden von Abfragen an SQL Server PDW. Sie ähnelt SQL Server Management Studio, indem Sie durch einen Objekt-Explorer navigieren können.  
@@ -149,7 +149,7 @@ For more information, see [Install SQL Server database tooling  for Visual Studi
 -->
   
 ### <a name="sqlcmd-command-line-query-tool"></a>SQLCMD-Befehlszeilen Abfrage-Tool  
-sqlcmd ist das SQL Server Befehlszeilen Tool zum Ausführen von Transact\--SQL-Anweisungen und System Befehlen. Es funktioniert mit SQL Server PDW und ist unser empfohlenes Befehlszeilen Tool für die Abfrage SQL Server PDW. Mit sqlcmd können Sie Transact\--SQL-Anweisungen interaktiv von der Befehlszeile, als Batchdatei oder über Windows PowerShell ausführen.  
+sqlcmd ist das SQL Server Befehlszeilen Tool zum Ausführen von Transact \- -SQL-Anweisungen und System Befehlen. Es funktioniert mit SQL Server PDW und ist unser empfohlenes Befehlszeilen Tool für die Abfrage SQL Server PDW. Mit sqlcmd können Sie Transact- \- SQL-Anweisungen interaktiv von der Befehlszeile, als Batchdatei oder über Windows PowerShell ausführen.  
   
 <!-- MISSING LINKS
 
@@ -165,7 +165,7 @@ For more information, see [Connect With SQL Server Integration Services for Quer
 --> 
   
 ### <a name="linked-server"></a>Verknüpfter Server  
-Mithilfe einer SQL Server Verbindungs Server Verbindung können Sie SQL Server verwenden, um Transact\--SQL-Anweisungen an SQL Server PDW zu übermitteln. 
+Mithilfe einer SQL Server Verbindungs Server Verbindung können Sie SQL Server verwenden, um Transact- \- SQL-Anweisungen an SQL Server PDW zu übermitteln. 
 <!-- MISSING LINKS
 For more information, see [Connect With SQL Server Linked Server &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-linked-server-sql-server-pdw.md). 
 --> 
@@ -180,7 +180,7 @@ For more information, see [Connect With SQL Server Analysis Services &#40;SQL Se
 
 -->
   
-### <a name="report-builder"></a>Berichts-Generator  
+### <a name="report-builder"></a>Report Builder  
 Sie können SQL Server PDW als SQL Server Datenquelle für Berichte verwenden, die Sie mit SQL Server Berichts-Generator für Reporting Services entwickeln. Sie können auch SQL Server PDW als SQL Server Quelle für Berichts Modelle verwenden. Mithilfe von Berichts-Manager oder der Berichts Server-API können Sie ein Modell aus einer SQL Server PDW Datenbank generieren.  
   
 <!-- MISSING LINKS

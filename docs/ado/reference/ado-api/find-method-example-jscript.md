@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c328a3efe858c7abd9872eef0fcd28dfa1ccb36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2a37d907547359fd1366bc5b756fbcbb65b4ed20
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443632"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775219"
 ---
 # <a name="find-method-example-jscript"></a>Find-Methode – Beispiel (JScript)
-In diesem Beispiel wird die [Find](../../../ado/reference/ado-api/find-method-ado.md) -Methode des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts verwendet, um die Unternehmen in der ***Northwind*** -Datenbank zu suchen und anzuzeigen, deren Name mit dem Buchstaben "G." beginnt, und fügen Sie den folgenden Code in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als " **FindJS**  
+In diesem Beispiel wird die [Find](./find-method-ado.md) -Methode des [Recordset](./recordset-object-ado.md) -Objekts verwendet, um die Unternehmen in der ***Northwind*** -Datenbank zu suchen und anzuzeigen, deren Name mit dem Buchstaben "G." beginnt, und fügen Sie den folgenden Code in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als " **FindJS**  
   
 ```  
 <!-- BeginFindJS -->  
@@ -154,5 +154,5 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Find-Methode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Find-Methode (ADO)](./find-method-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

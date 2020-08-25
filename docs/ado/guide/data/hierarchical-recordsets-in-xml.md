@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd1e9e9b2dd1dc3512c95100baed0c83745250bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e6180c8aa422c5833234afba7881a1a4c8b9049
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453262"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806016"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Hierarchische Recordsets im XML-Format
 ADO ermöglicht die Persistenz hierarchischer Recordsetobjekte in XML. Bei hierarchischen recordsetobjekten ist der Wert eines Felds im übergeordneten Recordset ein weiteres Recordset. Diese Felder werden als untergeordnete Elemente im XML-Stream anstelle eines Attributs dargestellt.  
@@ -126,4 +126,4 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 -   Wenn ein untergeordneter Datensatz Verweise auf mehr als einen übergeordneten Datensatz enthält, kann das untergeordnete Recordset beim erneuten Öffnen des Recordsets doppelte Datensätze enthalten. Diese Duplikate werden jedoch nur angezeigt, wenn der Benutzer direkt mit dem zugrunde liegenden untergeordneten Rowset arbeitet. Wenn ein Kapitel verwendet wird, um durch das untergeordnete Recordset zu navigieren (Dies ist die einzige Möglichkeit, durch ADO zu navigieren), sind die Duplikate nicht sichtbar.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Beibehalten von Datensätzen im XML-Format](./persisting-records-in-xml-format.md)

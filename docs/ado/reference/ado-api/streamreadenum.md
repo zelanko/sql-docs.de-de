@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1aa8ff80f02d84aaa69904d914e0e40da44da930
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0a0e8d93742574e9a2975b99d15c18500684e60
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441812"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777179"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
-Gibt an, ob der gesamte Stream oder die nächste Zeile aus einem [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) gelesen werden soll.  
+Gibt an, ob der gesamte Stream oder die nächste Zeile aus einem [Streamobjekt](./stream-object-ado.md) gelesen werden soll.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
-|**ADRead all**|-1|Standard. Liest alle Bytes aus dem Stream von der aktuellen Position bis zum [EOS](../../../ado/reference/ado-api/eos-property.md) Marker. Dies ist der einzige gültige **streamRead** -Enumerationswert mit binären Datenströmen ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) : **adTypeBinary**).|  
-|**"ADRead Line"**|-2|Liest die nächste Zeile aus dem Stream (festgelegt durch die [lineseparser](../../../ado/reference/ado-api/lineseparator-property-ado.md) -Eigenschaft).|  
+|**ADRead all**|-1|Standard. Liest alle Bytes aus dem Stream von der aktuellen Position bis zum [EOS](./eos-property.md) Marker. Dies ist der einzige gültige **streamRead** -Enumerationswert mit binären Datenströmen ([Typ](./type-property-ado-stream.md) : **adTypeBinary**).|  
+|**"ADRead Line"**|-2|Liest die nächste Zeile aus dem Stream (festgelegt durch die [lineseparser](./lineseparator-property-ado.md) -Eigenschaft).|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Diese Konstanten haben keine ADO/WFC-Entsprechungen.  
@@ -38,9 +38,9 @@ Gibt an, ob der gesamte Stream oder die nächste Zeile aus einem [Streamobjekt](
 
 :::row:::
     :::column:::
-        [Read-Methode](../../../ado/reference/ado-api/read-method.md)  
+        [Read-Methode](./read-method.md)  
     :::column-end:::
     :::column:::
-        [ReadText-Methode](../../../ado/reference/ado-api/readtext-method.md)  
+        [ReadText-Methode](./readtext-method.md)  
     :::column-end:::
 :::row-end:::

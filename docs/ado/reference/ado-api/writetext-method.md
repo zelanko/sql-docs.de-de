@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b561c8d798236fa0c6df262e2fc2db4c4729cb90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a4e42733013a7ea756924199d05a93ae08e0c08
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441492"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776829"
 ---
 # <a name="writetext-method"></a>WriteText-Methode
-Schreibt eine angegebene Text Zeichenfolge in ein Daten [Strom](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
+Schreibt eine angegebene Text Zeichenfolge in ein Daten [Strom](./stream-object-ado.md) Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,20 +39,20 @@ Stream.WriteText Data, Options
  Ein **Zeichen** folgen Wert, der den Text in zu schreibenden Zeichen enthält.  
   
  *Optionen*  
- Optional. Ein [streamschreibwert](../../../ado/reference/ado-api/streamwriteenum.md) , der angibt, ob ein Zeilen Trennzeichen am Ende der angegebenen Zeichenfolge geschrieben werden muss.  
+ Optional. Ein [streamschreibwert](./streamwriteenum.md) , der angibt, ob ein Zeilen Trennzeichen am Ende der angegebenen Zeichenfolge geschrieben werden muss.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Angegebene Zeichen folgen werden in das **Stream** -Objekt geschrieben, ohne dass dazwischen liegende Leerzeichen oder Zeichen zwischen den einzelnen Zeichen folgen liegen  
   
- Die aktuelle [Position](../../../ado/reference/ado-api/position-property-ado.md) wird auf das Zeichen festgelegt, das den geschriebenen Daten folgt. Die Methode " **Write Text** " schneidet den Rest der Daten in einem Stream nicht ab. Wenn Sie diese Zeichen abschneiden möchten [, nennen Sie](../../../ado/reference/ado-api/seteos-method.md)"*".  
+ Die aktuelle [Position](./position-property-ado.md) wird auf das Zeichen festgelegt, das den geschriebenen Daten folgt. Die Methode " **Write Text** " schneidet den Rest der Daten in einem Stream nicht ab. Wenn Sie diese Zeichen abschneiden möchten [, nennen Sie](./seteos-method.md)"*".  
   
- Wenn Sie über die aktuelle [EOS](../../../ado/reference/ado-api/eos-property.md) -Position hinaus schreiben, wird die [Größe](../../../ado/reference/ado-api/size-property-ado-stream.md) des **Streams** um alle neuen Zeichen erweitert, und **EOS** wechselt zum neuen letzten Byte im **Stream**.  
+ Wenn Sie über die aktuelle [EOS](./eos-property.md) -Position hinaus schreiben, wird die [Größe](./size-property-ado-stream.md) des **Streams** um alle neuen Zeichen erweitert, und **EOS** wechselt zum neuen letzten Byte im **Stream**.  
   
 > [!NOTE]
->  Die Methode " **Write Text** " wird mit Textstreams verwendet ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) : **adtypetext**). Verwenden Sie für binäre Datenströme (**Typ** : **adTypeBinary**) " [Write](../../../ado/reference/ado-api/write-method.md)".  
+>  Die Methode " **Write Text** " wird mit Textstreams verwendet ([Typ](./type-property-ado-stream.md) : **adtypetext**). Verwenden Sie für binäre Datenströme (**Typ** : **adTypeBinary**) " [Write](./write-method.md)".  
   
 ## <a name="applies-to"></a>Gilt für  
- [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream-Objekt (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Write-Methode](../../../ado/reference/ado-api/write-method.md)
+ [Write-Methode](./write-method.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439202"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768639"
 ---
 # <a name="createobject-method-rds"></a>CreateObject-Methode (RDS)
 Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf zurück. Der Proxy verpackt und Marshalls Daten zum serverseitigen Stub für die Kommunikation mit dem Geschäftsobjekt, um Anforderungen und Daten über das Internet zu senden. Für in-Process-Komponenten Objekte werden keine Proxys verwendet. es wird lediglich ein Zeiger auf das-Objekt bereitgestellt.  
@@ -42,7 +42,7 @@ Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf z
  Eine Objekt Variable, die ein Objekt ergibt, bei dem es sich um den in *ProgID*angegebenen Typ handelt.  
   
  *DataSpace*  
- Eine Objekt Variable, die einen [RDS darstellt. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) -Objekt, das verwendet wird, um eine Instanz des neuen-Objekts zu erstellen.  
+ Eine Objekt Variable, die einen [RDS darstellt. DataSpace](./dataspace-object-rds.md) -Objekt, das verwendet wird, um eine Instanz des neuen-Objekts zu erstellen.  
   
  *ProgID*  
  Ein **Zeichen** folgen Wert, der den programmatischen Bezeichner enthält, der ein serverseitiges Geschäftsobjekt angibt, das die Geschäftsregeln Ihrer Anwendung implementiert.  
@@ -54,11 +54,9 @@ Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf z
  Das *http-Protokoll* ist das Standardweb Protokoll. *Https* ist ein sicheres Webprotokoll. Verwenden Sie das *DCOM-Protokoll* , wenn Sie ein lokales Netzwerk ohne http ausführen. Das *in-Process-* Protokoll ist eine lokale Dynamic Link Library (dll). Es wird kein Netzwerk verwendet.  
   
 ## <a name="applies-to"></a>Gilt für  
- [DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [DataSpace-Objekt (RDS)](./dataspace-object-rds.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DataFactory-Objekt, Abfrage Methode und Methode der Beispiel Methode (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
- [DataSpace-Objekt und Beispiel für eine kreateobject-Methode (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
- [CreateRecordset-Methode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
-
+ [DataFactory-Objekt, Abfrage Methode und Methode der Beispiel Methode (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
+ [DataSpace-Objekt und Beispiel für eine kreateobject-Methode (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)   
+ [CreateRecordset-Methode (RDS)](./createrecordset-method-rds.md)
