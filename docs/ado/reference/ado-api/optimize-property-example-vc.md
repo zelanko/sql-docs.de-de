@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f7db7d9ed14c91caf2551ef350833a67788920b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8000fd53dbc6342ecb9a41b9c66b398d8bbae84b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442882"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773619"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize-Eigenschaft – Beispiel (VC++)
-In diesem Beispiel wird die Eigenschaft " [Feld](../../../ado/reference/ado-api/field-object.md) Objekt dynamisch **optimieren** " veranschaulicht. Das **ZIP** -Feld der Tabelle " **Authors** " in der **Pubs** -Datenbank ist nicht indiziert. Wenn die Eigenschaft [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) für das **ZIP** -Feld auf **true** festgelegt wird, wird ADO zum Erstellen eines Indexes autorisiert, der die Leistung der [Find](../../../ado/reference/ado-api/find-method-ado.md) -Methode verbessert.  
+In diesem Beispiel wird die Eigenschaft " [Feld](./field-object.md) Objekt dynamisch **optimieren** " veranschaulicht. Das **ZIP** -Feld der Tabelle " **Authors** " in der **Pubs** -Datenbank ist nicht indiziert. Wenn die Eigenschaft [optimieren](./optimize-property-dynamic-ado.md) für das **ZIP** -Feld auf **true** festgelegt wird, wird ADO zum Erstellen eines Indexes autorisiert, der die Leistung der [Find](./find-method-ado.md) -Methode verbessert.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -135,5 +135,5 @@ void PrintComError(_com_error &e) {
   
  **Akiko yokomoto 3 Silver CT. Nussbaum Creek ca**   
 ## <a name="see-also"></a>Weitere Informationen  
- [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [Optimize – dynamische Eigenschaft (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+ [Field-Objekt](./field-object.md)   
+ [Optimize – dynamische Eigenschaft (ADO)](./optimize-property-dynamic-ado.md)

@@ -41,18 +41,18 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93d15cdac3d8f7a47c74a783d176d806271f68a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4087e3bf0ab7b9e65d616907b1f5db3c87a0f75e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439722"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769939"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog-Eigenschaft (ADOX)
 Gibt den übergeordneten Katalog einer Tabelle, eines Benutzers oder eines Spalten Objekts an, um Zugriff auf anbieterspezifische Eigenschaften bereitzustellen.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt ein [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md) Objekt fest und gibt dieses zurück. Durch Festlegen von " **parametricatalog** " auf einen geöffneten **Katalog** wird der Zugriff auf anbieterspezifische Eigenschaften ermöglicht, bevor eine Tabelle oder Spalte an eine **Katalog** Auflistung angehängt wird.  
+ Legt ein [Katalog](./catalog-object-adox.md) Objekt fest und gibt dieses zurück. Durch Festlegen von " **parametricatalog** " auf einen geöffneten **Katalog** wird der Zugriff auf anbieterspezifische Eigenschaften ermöglicht, bevor eine Tabelle oder Spalte an eine **Katalog** Auflistung angehängt wird.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Einige Datenanbieter erlauben, dass anbieterspezifische Eigenschaftswerte nur bei der Erstellung geschrieben werden, d. h., wenn eine Tabelle oder Spalte an die zugehörige **Katalog** Auflistung angefügt wird. Wenn Sie auf diese Eigenschaften zugreifen möchten, bevor Sie diese Objekte an einen **Katalog**anfügen, geben Sie zuerst den **Katalog** in der Eigenschaft " **parametricatalog** " an.  
@@ -63,15 +63,15 @@ Gibt den übergeordneten Katalog einer Tabelle, eines Benutzers oder eines Spalt
 
 :::row:::
     :::column:::
-        [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+        [Column-Objekt (ADOX)](./column-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+        [Table-Objekt (ADOX)](./table-object-adox.md)  
     :::column-end:::
     :::column:::
-        [User-Objekt (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [User-Objekt (ADOX)](./user-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Weitere Informationen  
- [ParentCatalog-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
+ [ParentCatalog-Eigenschaft – Beispiel (VB)](./parentcatalog-property-example-vb.md)

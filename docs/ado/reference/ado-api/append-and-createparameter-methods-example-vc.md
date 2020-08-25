@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 832981161e0fcc6ec297186975de33c027cc694f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 17e38f481478a43f59372d5be23fb29b701bc9c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451272"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776519"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Beispiel für Append und die Methode "append Parameter" (VC + +)
-In diesem Beispiel werden die [Append](../../../ado/reference/ado-api/append-method-ado.md) -Methode und die-Methode für die-Methode zum Ausführen einer gespeicherten Prozedur mit einem [Eingabeparameter verwendet](../../../ado/reference/ado-api/createparameter-method-ado.md) .  
+In diesem Beispiel werden die [Append](./append-method-ado.md) -Methode und die-Methode für die-Methode zum Ausführen einer gespeicherten Prozedur mit einem [Eingabeparameter verwendet](./createparameter-method-ado.md) .  
   
 ## <a name="example"></a>Beispiel  
   
@@ -204,5 +204,5 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)
+ [Append-Methode (ADO)](./append-method-ado.md)   
+ [CreateParameter-Methode (ADO)](./createparameter-method-ado.md)

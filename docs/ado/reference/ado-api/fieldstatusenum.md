@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06044b54be7066deb5cf7510f060716106816805
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f3ebabab3096217348e2309070d81e90128b8e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443712"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775329"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
-Gibt den [Status](../../../ado/reference/ado-api/status-property-ado-field.md) eines [Feld Objekts](../../../ado/reference/ado-api/field-object.md)an.  
+Gibt den [Status](./status-property-ado-field.md) eines [Feld Objekts](./field-object.md)an.  
   
  Die **adfieldpending \* ** -Werte geben den Vorgang an, der bewirkt hat, dass der Status festgelegt wurde, und können mit anderen Status Werten kombiniert werden.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adfieldalread yexistiert**|26|Gibt an, dass das angegebene Feld bereits vorhanden ist.|  
-|**adfieldbadstatus**|12|Gibt an, dass ein ungültiger Statuswert von ADO an den OLE DB-Anbieter gesendet wurde. Zu den möglichen Ursachen gehören ein OLE DB 1,0-oder 1,1-Anbieter oder eine falsche Kombination aus [Wert](../../../ado/reference/ado-api/value-property-ado.md) und [Status](../../../ado/reference/ado-api/status-property-ado-field.md).|  
-|**adfieldcannotcomplete**|20|Gibt an, dass der Server der von der [Quelle](../../../ado/reference/ado-api/source-property-ado-record.md) angegebenen URL den Vorgang nicht beenden konnte.|  
+|**adfieldbadstatus**|12|Gibt an, dass ein ungültiger Statuswert von ADO an den OLE DB-Anbieter gesendet wurde. Zu den möglichen Ursachen gehören ein OLE DB 1,0-oder 1,1-Anbieter oder eine falsche Kombination aus [Wert](./value-property-ado.md) und [Status](./status-property-ado-field.md).|  
+|**adfieldcannotcomplete**|20|Gibt an, dass der Server der von der [Quelle](./source-property-ado-record.md) angegebenen URL den Vorgang nicht beenden konnte.|  
 |**adfieldcannotdelta etesource**|23|Gibt an, dass während eines Verschiebungs Vorgangs eine Struktur oder Teilstruktur an eine neue Position verschoben wurde, die Quelle jedoch nicht gelöscht werden konnte.|  
 |**adfieldcantconvertvalue**|2|Gibt an, dass das Feld ohne Datenverlust nicht abgerufen oder gespeichert werden kann.|  
 |**adfieldcantcreate**|7|Gibt an, dass das Feld nicht hinzugefügt werden konnte, da der Anbieter eine Einschränkung überschritten hat (z. b. die zulässige Anzahl von Feldern).|  
@@ -45,7 +45,7 @@ Gibt den [Status](../../../ado/reference/ado-api/status-property-ado-field.md) e
 |**adfieldisnull**|3|Gibt an, dass der Anbieter einen Variant-Wert vom Typ VT_NULL zurückgegeben hat und dass das Feld nicht leer ist.|  
 |**adFieldOK**|0|Standard. Gibt an, dass das Feld erfolgreich hinzugefügt oder gelöscht wurde.|  
 |**adfieldouesleerraum**|22|Gibt an, dass der Anbieter nicht genügend Speicherplatz zum Durchführen eines verschiebe-oder Kopiervorgangs abrufen kann.|  
-|**adfieldpdingchange**|0x40000|Gibt an, dass das Feld gelöscht und anschließend erneut hinzugefügt wurde, möglicherweise mit einem anderen Datentyp, oder dass sich der Wert des Felds, das zuvor den Status **adFieldOK** enthielt, geändert hat. In der endgültigen Form des Felds wird die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung geändert, nachdem die [Update](../../../ado/reference/ado-api/update-method.md) -Methode aufgerufen wurde.|  
+|**adfieldpdingchange**|0x40000|Gibt an, dass das Feld gelöscht und anschließend erneut hinzugefügt wurde, möglicherweise mit einem anderen Datentyp, oder dass sich der Wert des Felds, das zuvor den Status **adFieldOK** enthielt, geändert hat. In der endgültigen Form des Felds wird die [Fields](./fields-collection-ado.md) -Auflistung geändert, nachdem die [Update](./update-method.md) -Methode aufgerufen wurde.|  
 |**adfieldpdingdelete**|0x20000|Gibt an, dass der **Lösch** Vorgang bewirkt hat, dass der Status festgelegt wurde. Nachdem die **Update** -Methode aufgerufen wurde, wurde das Feld zum Löschen aus der **Fields** -Auflistung markiert.|  
 |**adfieldpdinginsert**|0x10000|Gibt an, dass der Anfüge Vorgang bewirkt hat, **dass der Status** festgelegt wurde. Das **Feld** wurde so gekennzeichnet, dass es der **Fields** -Auflistung hinzugefügt wird, nachdem die **Update** -Methode aufgerufen wurde.|  
 |**adfieldpdingunknown**|0x80000|Gibt an, dass der Anbieter nicht ermitteln kann, welcher Vorgang das Festlegen des Feld Status bewirkt hat.|  
@@ -65,4 +65,4 @@ Gibt den [Status](../../../ado/reference/ado-api/status-property-ado-field.md) e
  Diese Konstanten haben keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Status-Eigenschaft (ADO-Feld)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Status-Eigenschaft (ADO-Feld)](./status-property-ado-field.md)

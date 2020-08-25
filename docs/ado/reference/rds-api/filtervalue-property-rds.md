@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8e80ffc13f4c1bae1d668bb85317345288caa2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a609f9b87ce94251cc5d0c3d79e82f4abe2e7df
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438982"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768199"
 ---
 # <a name="filtervalue-property-rds"></a>FilterValue-Eigenschaft (RDS)
 Gibt den Wert an, mit dem Datensätze gefiltert werden.  
@@ -36,44 +36,22 @@ DataControl.FilterValue = String
   
 #### <a name="parameters"></a>Parameter  
  *DataControl*  
- Eine Objekt Variable, die einen [RDS darstellt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt.  
+ Eine Objekt Variable, die einen [RDS darstellt. DataControl](./datacontrol-object-rds.md) -Objekt.  
   
  *String*  
  Ein **Zeichen** folgen Wert, der einen Datenwert darstellt, mit dem Datensätze gefiltert werden (z `'Programmer'` `125` . b. oder).  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die Eigenschaften [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), **FilterValue**, [Filterkriterium](../../../ado/reference/rds-api/filtercriterion-property-rds.md)und [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) stellen Sortier-und Filterfunktionen für den Client seitigen Cache bereit. Die Sortierfunktion ordnet Datensätze nach Werten aus einer Spalte an. Die Filterfunktion zeigt eine Teilmenge der Datensätze basierend auf den Suchkriterien an, während das vollständige [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) im Cache beibehalten wird. Die [Reset](../../../ado/reference/rds-api/reset-method-rds.md) -Methode führt die Kriterien aus und ersetzt das aktuelle **Recordset** durch ein Aktualisier bares **Recordset**.  
+ Die Eigenschaften [SortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), **FilterValue**, [Filterkriterium](./filtercriterion-property-rds.md)und [FilterColumn](./filtercolumn-property-rds.md) stellen Sortier-und Filterfunktionen für den Client seitigen Cache bereit. Die Sortierfunktion ordnet Datensätze nach Werten aus einer Spalte an. Die Filterfunktion zeigt eine Teilmenge der Datensätze basierend auf den Suchkriterien an, während das vollständige [Recordset](../ado-api/recordset-object-ado.md) im Cache beibehalten wird. Die [Reset](./reset-method-rds.md) -Methode führt die Kriterien aus und ersetzt das aktuelle **Recordset** durch ein Aktualisier bares **Recordset**.  
   
  NULL-Werte führen zu einem Typen Konflikt Fehler.  
   
 ## <a name="applies-to"></a>Gilt für  
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl-Objekt (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Filter Column, Filterkriterium, FilterValue, SortColumn und SortDirection Properties und Reset Method example (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [FilterColumn-Eigenschaft (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
- [Filterkriterium-Eigenschaft (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
- [SortColumn-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [SortDirection-Eigenschaft (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Filter Column, Filterkriterium, FilterValue, SortColumn und SortDirection Properties und Reset Method example (VBScript)](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [FilterColumn-Eigenschaft (RDS)](./filtercolumn-property-rds.md)   
+ [Filterkriterium-Eigenschaft (RDS)](./filtercriterion-property-rds.md)   
+ [SortColumn-Eigenschaft (RDS)](./sortcolumn-property-rds.md)   
+ [SortDirection-Eigenschaft (RDS)](./sortdirection-property-rds.md)

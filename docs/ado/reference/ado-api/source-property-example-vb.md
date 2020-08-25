@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 635f091b668c8b0a0a8d654a65055e72c835d987
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1771eb7d0c6ed2609b5dea506e71aa4180e2370
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442022"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777389"
 ---
 # <a name="source-property-example-vb"></a>Source-Eigenschaft – Beispiel (VB)
-In diesem Beispiel wird die [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) -Eigenschaft durch das Öffnen von drei [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekten basierend auf unterschiedlichen Datenquellen veranschaulicht.  
+In diesem Beispiel wird die [Source](./source-property-ado-recordset.md) -Eigenschaft durch das Öffnen von drei [Recordset](./recordset-object-ado.md) -Objekten basierend auf unterschiedlichen Datenquellen veranschaulicht.  
   
 ```  
 'BeginSourceVB  
@@ -128,5 +128,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Source-Eigenschaft (ADO-Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)   
+ [Source-Eigenschaft (ADO-Recordset)](./source-property-ado-recordset.md)

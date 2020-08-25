@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a52b8006ed97809690ec874c27e20ee8f1b05d0f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f93370ae23cd50e1fb494d484756505f69514df1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451332"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776600"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction-Schnittstelle
 Die **adorecordconstruction**-Schnittstelle wird verwendet, um ein ADO- **Datensatz** -Objekt aus einem OLE DB **Row** -Objekt in einer C/C++-Anwendung zu erstellen.  
@@ -32,11 +32,11 @@ Die **adorecordconstruction**-Schnittstelle wird verwendet, um ein ADO- **Datens
   
 |Eigenschaft|Beschreibung|  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Nur Schreibzugriff.<br />Legt den Container eines OLE DB **Row** -Objekts für dieses ADO- **Daten Satz** Objekt fest.|  
-|[Zeile](../../../ado/reference/ado-api/row-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB **Zeilen** Objekt aus/für dieses ADO- **Daten Satz** Objekt ab oder legt es fest.|  
+|[ParentRow](./parentrow-property-ado.md)|Nur Schreibzugriff.<br />Legt den Container eines OLE DB **Row** -Objekts für dieses ADO- **Daten Satz** Objekt fest.|  
+|[Zeile](./row-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB **Zeilen** Objekt aus/für dieses ADO- **Daten Satz** Objekt ab oder legt es fest.|  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
 ## <a name="events"></a>Events  
  Keine.  

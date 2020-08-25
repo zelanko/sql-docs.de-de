@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e56e93f851d2f5f0dac7df2339dec37c0b6a1ac2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c696fb6be361327944223bab19d1edb0cf35460
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450942"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776239"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone-Methode – Beispiel (VBScript)
-In diesem Beispiel wird die [Clone](../../../ado/reference/ado-api/clone-method-ado.md) -Methode verwendet, um Kopien eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) zu erstellen. Anschließend kann der Benutzer den Daten Satz Zeiger jeder Kopie unabhängig positionieren.  
+In diesem Beispiel wird die [Clone](./clone-method-ado.md) -Methode verwendet, um Kopien eines [Recordsets](./recordset-object-ado.md) zu erstellen. Anschließend kann der Benutzer den Daten Satz Zeiger jeder Kopie unabhängig positionieren.  
   
  Verwenden Sie das folgende Beispiel in einer Active Server Seite (ASP). In diesem Beispiel wird die **Northwind** -Datenbank verwendet, die mit Microsoft Access verteilt ist. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als clonevsb. ASP. Sie können das Ergebnis in einem beliebigen Client Browser anzeigen.  
   
@@ -119,5 +119,5 @@ In diesem Beispiel wird die [Clone](../../../ado/reference/ado-api/clone-method-
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Clone-Methode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Clone-Methode (ADO)](./clone-method-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

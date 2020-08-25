@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa7ec524d950a45dd11e1bc62a983810ab2550ca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c88cd48a16907e67813f90c06dd9ce69d11ed30
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441512"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776889"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset- und RecordsetChangeComplete-Ereignis (ADO)
-Das Ereignis " **WillChangeRecordset** " wird aufgerufen, bevor das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)durch einen ausstehenden Vorgang geändert wird. Das **RecordsetChangeComplete** -Ereignis wird aufgerufen, nachdem das **Recordset** geändert wurde.  
+Das Ereignis " **WillChangeRecordset** " wird aufgerufen, bevor das [Recordset](./recordset-object-ado.md)durch einen ausstehenden Vorgang geändert wird. Das **RecordsetChangeComplete** -Ereignis wird aufgerufen, nachdem das **Recordset** geändert wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,10 +40,10 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parameter  
  *adReason*  
- Ein [eventreasonenumerationswert](../../../ado/reference/ado-api/eventreasonenum.md) , der den Grund für dieses Ereignis angibt. Der Wert kann **adrsnrequery**, **adrsnresynch**, **adrsnclose**, **adrsnopen**lauten.  
+ Ein [eventreasonenumerationswert](./eventreasonenum.md) , der den Grund für dieses Ereignis angibt. Der Wert kann **adrsnrequery**, **adrsnresynch**, **adrsnclose**, **adrsnopen**lauten.  
   
  *adStatus*  
- Ein [eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) -Statuswert.  
+ Ein [eventstatusenum](./eventstatusenum.md) -Statuswert.  
   
  Wenn **WillChangeRecordset** aufgerufen wird, wird dieser Parameter auf **adstatuusok** festgelegt, wenn der Vorgang, der das Ereignis ausgelöst hat, erfolgreich war. Sie wird auf **adStatus-kandeny** festgelegt, wenn dieses Ereignis keinen Abbruch des ausstehenden Vorgangs anfordern kann.  
   
@@ -54,18 +54,18 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  Bevor " **WillChangeRecordset** " oder " **RecordsetChangeComplete** " zurückgegeben wird, legen Sie diesen Parameter auf **adstatuingunwantedevent** fest, um nachfolgende Benachrichtigungen zu verhindern  
   
  *pError*  
- Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred**ist. Andernfalls ist es nicht festgelegt.  
+ Ein [Fehler](./error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred**ist. Andernfalls ist es nicht festgelegt.  
   
  *pRecordset*  
  Ein **Recordset** -Objekt. Das **Recordset** , für das dieses Ereignis aufgetreten ist.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Ein " **WillChangeRecordset** "-oder " **RecordsetChangeComplete** "-Ereignis kann aufgrund der **Recordset** [-oder](../../../ado/reference/ado-api/requery-method.md) [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methoden auftreten.  
+ Ein " **WillChangeRecordset** "-oder " **RecordsetChangeComplete** "-Ereignis kann aufgrund der **Recordset** [-oder](./requery-method.md) [Open](./open-method-ado-recordset.md) -Methoden auftreten.  
   
  Wenn der Anbieter keine Lesezeichen unterstützt, tritt jedes Mal eine **recordsetchange** -Ereignis Benachrichtigung auf, wenn neue Zeilen vom Anbieter abgerufen werden. Die Häufigkeit dieses Ereignisses hängt von der **recordsetcachesize** -Eigenschaft ab.  
   
  Sie müssen den **adStatus** -Parameter für jeden möglichen **adReason** -Wert auf **adStatusUnwantedEvent** festlegen, um die Ereignis Benachrichtigung für jedes Ereignis vollständig zu beenden, das einen **adReason** -Parameter enthält.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für das ADO-Ereignis Modell (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignishandler – Übersicht](../../../ado/guide/data/ado-event-handler-summary.md)
+ [Beispiel für das ADO-Ereignis Modell (VC + +)](./ado-events-model-example-vc.md)   
+ [ADO-Ereignishandler – Übersicht](../../guide/data/ado-event-handler-summary.md)

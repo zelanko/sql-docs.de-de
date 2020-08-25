@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b562d480cfbebefdee82703e0c953854de07d064
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cad540a13fbad480f795049df0d0150188df4283
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443742"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775449"
 ---
 # <a name="fieldenum"></a>FieldEnum
-Gibt die speziellen Felder an, auf die in der [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung eines [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekts verwiesen wird.  
+Gibt die speziellen Felder an, auf die in der [Felder](./fields-collection-ado.md) Auflistung eines [Datensatz](./record-object-ado.md) -Objekts verwiesen wird.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Konstanten stellen eine "Verknüpfung" für den Zugriff auf spezielle Felder bereit, die einem **Datensatz**zugeordnet sind. Rufen Sie das [Feld](../../../ado/reference/ado-api/field-object.md) Objekt aus der **Fields** -Auflistung ab, und rufen Sie dessen Inhalt mit der [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft des **Field** -Objekts ab.  
+ Diese Konstanten stellen eine "Verknüpfung" für den Zugriff auf spezielle Felder bereit, die einem **Datensatz**zugeordnet sind. Rufen Sie das [Feld](./field-object.md) Objekt aus der **Fields** -Auflistung ab, und rufen Sie dessen Inhalt mit der [value](./value-property-ado.md) -Eigenschaft des **Field** -Objekts ab.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
-|**adDefaultStream**|-1|Verweist auf das Feld mit dem einem **Datensatz**zugeordneten [standardstreamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) .|  
+|**adDefaultStream**|-1|Verweist auf das Feld mit dem einem **Datensatz**zugeordneten [standardstreamobjekt](./stream-object-ado.md) .|  
 |**adRecordURL**|-2|Verweist auf das Feld, das die absolute URL Zeichenfolge für den aktuellen **Datensatz**enthält.|

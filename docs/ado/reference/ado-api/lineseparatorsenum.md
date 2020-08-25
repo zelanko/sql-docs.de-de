@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c92b70fdee1fb492b55b18e613284d25277f55b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50cc4c05319ed146882145e42469ab27c0dec0ab
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443362"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774609"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
-Gibt das Zeichen an, das als Zeilen Trennzeichen in [textstreamobjekten](../../../ado/reference/ado-api/stream-object-ado.md) verwendet wird.  
+Gibt das Zeichen an, das als Zeilen Trennzeichen in [textstreamobjekten](./stream-object-ado.md) verwendet wird.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adcr**|13|Gibt den Wagen Rücklauf an.|  
 |**adCRLF**|-1|Standard. Gibt Wagen Rücklauf-Zeilenvorschub an.|  
@@ -36,4 +36,4 @@ Gibt das Zeichen an, das als Zeilen Trennzeichen in [textstreamobjekten](../../.
  Diese Konstanten haben keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [LineSeparator-Eigenschaft (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)
+ [LineSeparator-Eigenschaft (ADO)](./lineseparator-property-ado.md)

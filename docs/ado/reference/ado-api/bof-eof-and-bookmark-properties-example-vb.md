@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d38d132e4e61f7b26d97450d41cc4f291789257
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b851fb2fc8624b8c2d7fb5e717552b97e80b756
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451152"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776409"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF-, EOF- und Bookmark-Eigenschaft – Beispiel (VB)
-In diesem Beispiel werden die Eigenschaften [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) verwendet, um eine Meldung anzuzeigen, wenn ein Benutzer versucht, nach dem ersten oder letzten Datensatz eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)zu wechseln. Er verwendet die [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) -Eigenschaft, damit der Benutzer einen Datensatz in einem **Recordset** markieren und später zurückkehren kann.  
+In diesem Beispiel werden die Eigenschaften [BOF](./bof-eof-properties-ado.md) und [EOF](./bof-eof-properties-ado.md) verwendet, um eine Meldung anzuzeigen, wenn ein Benutzer versucht, nach dem ersten oder letzten Datensatz eines [Recordsets](./recordset-object-ado.md)zu wechseln. Er verwendet die [Bookmark](./bookmark-property-ado.md) -Eigenschaft, damit der Benutzer einen Datensatz in einem **Recordset** markieren und später zurückkehren kann.  
   
 ```  
 'BeginBOFVB  
@@ -130,13 +130,13 @@ End Sub
 'EndBOFVB  
 ```  
   
- In diesem Beispiel werden die **Lesezeichen** -und [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaften verwendet, um eine begrenzte Ansicht des **Recordsets**zu erstellen. Der Zugriff ist nur auf Datensätze möglich.  
+ In diesem Beispiel werden die **Lesezeichen** -und [Filter](./filter-property.md) Eigenschaften verwendet, um eine begrenzte Ansicht des **Recordsets**zu erstellen. Der Zugriff ist nur auf Datensätze möglich.  
   
 ```  
 Attribute VB_Name = "BOF"  
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [BOF, EOF-Eigenschaften (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Bookmark-Eigenschaft (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [BOF, EOF-Eigenschaften (ADO)](./bof-eof-properties-ado.md)   
+ [Bookmark-Eigenschaft (ADO)](./bookmark-property-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

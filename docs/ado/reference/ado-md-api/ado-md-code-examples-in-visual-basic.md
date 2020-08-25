@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d1b759d3cd6591eef906b7354a5b8b3d22caf02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed25ae6338425438bd696a07c504f26e0a45c043
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441412"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776809"
 ---
 # <a name="ado-md-code-examples-in-visual-basic"></a>ADO MD-Codebeispiele in Visual Basic
 Die folgenden Beispiele erfordern Microsoft Visual Basic Version 5,0 mit Service Pack 3 oder Visual Basic Version 6,0.  
@@ -28,6 +28,6 @@ Die folgenden Beispiele erfordern Microsoft Visual Basic Version 5,0 mit Service
 > [!NOTE]
 >  Fügen Sie das gesamte Codebeispiel von Anfang bis Ende in Ihren Code-Editor ein. Das Beispiel wird möglicherweise nicht ordnungsgemäß ausgeführt, wenn Teil Beispiele verwendet werden oder wenn die Absatz Formatierung verloren geht.  
   
--   [Cellset-Beispiel](../../../ado/reference/ado-md-api/cellset-example-vb.md)  
+-   [Cellset-Beispiel](./cellset-example-vb.md)  
   
--   [Katalog Beispiel](../../../ado/reference/ado-md-api/catalog-example-vb.md)
+-   [Katalog Beispiel](./catalog-example-vb.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40382c77198a50a08ec41101fbda9c1aafcae08c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 883b9216509248d64e550a0eb3557a61cc0ccdaa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450787"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776059"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks-Methode – Beispiel (VB)
-In diesem Beispiel wird die [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) -Methode veranschaulicht. Der relative Wert von Lesezeichen wird nur selten benötigt, wenn ein bestimmtes Lesezeichen etwas Besonderes ist.  
+In diesem Beispiel wird die [CompareBookmarks](./comparebookmarks-method-ado.md) -Methode veranschaulicht. Der relative Wert von Lesezeichen wird nur selten benötigt, wenn ein bestimmtes Lesezeichen etwas Besonderes ist.  
   
- Legen Sie eine zufällige Zeile eines [Recordsets fest](../../../ado/reference/ado-api/recordset-object-ado.md) , die von der ***Autoren*** Tabelle als Ziel für eine Suche abgeleitet ist. Zeigen Sie dann die Position der einzelnen Zeilen relativ zu diesem Ziel an.  
+ Legen Sie eine zufällige Zeile eines [Recordsets fest](./recordset-object-ado.md) , die von der ***Autoren*** Tabelle als Ziel für eine Suche abgeleitet ist. Zeigen Sie dann die Position der einzelnen Zeilen relativ zu diesem Ziel an.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -134,6 +134,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CompareBookmarks-Methode (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
- [Compareerum](../../../ado/reference/ado-api/compareenum.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CompareBookmarks-Methode (ADO)](./comparebookmarks-method-ado.md)   
+ [Compareerum](./compareenum.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d16881ba6ee448ab8efda506e506b0a7f3bde02c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ff88ab9dc0c3f050be5ae8cfd593473ca2a7fa8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443222"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774299"
 ---
 # <a name="move-method-example-vbscript"></a>Move-Methode – Beispiel (VBScript)
-In diesem Beispiel wird die [Move](../../../ado/reference/ado-api/move-method-ado.md) -Methode verwendet, um den Daten Satz Zeiger basierend auf der Benutzereingabe zu positionieren.  
+In diesem Beispiel wird die [Move](./move-method-ado.md) -Methode verwendet, um den Daten Satz Zeiger basierend auf der Benutzereingabe zu positionieren.  
   
  Verwenden Sie das folgende Beispiel in einer Active Server Seite (ASP). Um dieses voll funktionsfähige Beispiel anzuzeigen, müssen Sie entweder die Datenquelle "AdvWorks. mdb" (installiert mit dem SDK) im Verzeichnis "c:\Programme\Microsoft Platform sdk\samples\dataaccess\rds\rdstest\advworks.mdb" aufweisen oder den Pfad im Beispielcode bearbeiten, um den tatsächlichen Speicherort dieser Datei anzugeben Dies ist eine Microsoft Access-Datenbankdatei.  
   
@@ -184,5 +184,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Move-Methode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Move-Methode (ADO)](./move-method-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

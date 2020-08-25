@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 905897cfa08591aaefce3aceb46e1892d41d3d7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4431d9a8af8623150717474cd5429a772f86be8c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443272"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774449"
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords-Eigenschaft (ADO)
-Gibt die maximale Anzahl von Datensätzen an, die aus einer Abfrage zu einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zurückgegeben werden sollen.  
+Gibt die maximale Anzahl von Datensätzen an, die aus einer Abfrage zu einem [Recordset](./recordset-object-ado.md) zurückgegeben werden sollen.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen **Long** -Wert fest, der die maximale Anzahl zurück zugebender Datensätze angibt, oder gibt ihn zurück. Der Standardwert ist**0**(null), was bedeutet, dass kein Grenzwert gilt.  
@@ -35,8 +35,8 @@ Gibt die maximale Anzahl von Datensätzen an, die aus einer Abfrage zu einem [Re
  Die **maxRecords** -Eigenschaft ist Lese-/Schreibzugriff, wenn das **Recordset** geschlossen ist, und schreibgeschützt, wenn es geöffnet ist.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für MaxRecords-Eigenschaft (VB)](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)   
- [MaxRecords-Eigenschaft – Beispiel (VC++)](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)   
+ [Beispiel für MaxRecords-Eigenschaft (VB)](./maxrecords-property-example-vb.md)   
+ [MaxRecords-Eigenschaft – Beispiel (VC++)](./maxrecords-property-example-vc.md)

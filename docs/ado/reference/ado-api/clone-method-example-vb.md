@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b58f1f0de4bf3a001d990e34a6f284a3940641b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cede971170b571189d1f0a6fef4b45773cfd7370
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450972"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776259"
 ---
 # <a name="clone-method-example-vb"></a>Clone-Methode – Beispiel (VB)
-In diesem Beispiel wird die [Clone](../../../ado/reference/ado-api/clone-method-ado.md) -Methode verwendet, um Kopien eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) zu erstellen. Anschließend kann der Benutzer den Daten Satz Zeiger jeder Kopie unabhängig positionieren.  
+In diesem Beispiel wird die [Clone](./clone-method-ado.md) -Methode verwendet, um Kopien eines [Recordsets](./recordset-object-ado.md) zu erstellen. Anschließend kann der Benutzer den Daten Satz Zeiger jeder Kopie unabhängig positionieren.  
   
 ```  
 'BeginCloneVB  
@@ -129,5 +129,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Clone-Methode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Clone-Methode (ADO)](./clone-method-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dd1000dce8308ada4044eb9f043097f8767a9c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c17ccfe0a31714d5e2b3945960a4ff3d2ad55d1e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451322"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776639"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction-Schnittstelle
 Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Recordset** -Objekt aus einem OLE DB Rowsetobjekt in einer C/C++-Anwendung zu erstellen. **Rowset**  
@@ -32,12 +32,12 @@ Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Re
   
 |Eigenschaft|Beschreibung|  
 |-|-|  
-|[Kapitel](../../../ado/reference/ado-api/chapter-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB **Kapitel** Objekt aus/für dieses ADO- **Recordset** -Objekt ab oder legt es fest.|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB **RowPosition** -Objekt von/für dieses ADO- **Recordset** -Objekt ab oder legt es fest.|  
-|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB Rowsetobjekt aus/für dieses ADO- **Recordset** -Objekt ab oder legt dieses **fest** .|  
+|[Kapitel](./chapter-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB **Kapitel** Objekt aus/für dieses ADO- **Recordset** -Objekt ab oder legt es fest.|  
+|[RowPosition](./rowposition-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB **RowPosition** -Objekt von/für dieses ADO- **Recordset** -Objekt ab oder legt es fest.|  
+|[Rowset](./rowset-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB Rowsetobjekt aus/für dieses ADO- **Recordset** -Objekt ab oder legt dieses **fest** .|  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
 ## <a name="events"></a>Events  
  Keine.  
@@ -80,5 +80,5 @@ Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Re
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Rowset-Eigenschaft (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)   
+ [Rowset-Eigenschaft (ADO)](./rowset-property-ado.md)

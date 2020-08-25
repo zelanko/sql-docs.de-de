@@ -13,38 +13,38 @@ helpviewer_keywords:
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea57679036785923a906a848b7f523e13163499f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77e70f67c879b8aff1600a16367988254f96fc0d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442832"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773429"
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>Parameter Objekteigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [Attribute (Eigenschaft)](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attribute (Eigenschaft)](./attributes-property-ado.md)  
   
- [Direction-Eigenschaft](../../../ado/reference/ado-api/direction-property.md)  
+ [Direction-Eigenschaft](./direction-property.md)  
   
- [Name-Eigenschaft](../../../ado/reference/ado-api/name-property-ado.md)  
+ [Name-Eigenschaft](./name-property-ado.md)  
   
- [NumericScale-Eigenschaft](../../../ado/reference/ado-api/numericscale-property-ado.md)  
+ [NumericScale-Eigenschaft](./numericscale-property-ado.md)  
   
- [Precision-Eigenschaft](../../../ado/reference/ado-api/precision-property-ado.md)  
+ [Precision-Eigenschaft](./precision-property-ado.md)  
   
- ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ ['Properties'-Sammlung](./properties-collection-ado.md)  
   
- [Size-Eigenschaft](../../../ado/reference/ado-api/size-property-ado-parameter.md)  
+ [Size-Eigenschaft](./size-property-ado-parameter.md)  
   
- [Type-Eigenschaft](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Type-Eigenschaft](./type-property-ado.md)  
   
- [Value-Eigenschaft](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Value-Eigenschaft](./value-property-ado.md)  
   
 ## <a name="methods"></a>Methoden  
- [AppendChunk-Methode](../../../ado/reference/ado-api/appendchunk-method-ado.md)  
+ [AppendChunk-Methode](./appendchunk-method-ado.md)  
   
 ## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter-Objekt](./parameter-object.md)

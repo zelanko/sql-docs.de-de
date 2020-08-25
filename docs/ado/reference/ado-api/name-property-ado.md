@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60bf64f57c4373d814f2b207808aa2d7dbe7c497
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da88b8e5a98e7d3ae105cc6e826804158f4bf7c8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443132"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774169"
 ---
 # <a name="name-property-ado"></a>Name-Eigenschaft (ADO)
 Gibt den Namen eines Objekts an.  
@@ -35,9 +35,9 @@ Gibt den Namen eines Objekts an.
   
  Der Wert ist Lese-/Schreibzugriff auf ein **Befehls** Objekt und schreibgeschützt für ein **Eigenschafts** Objekt.  
   
- Für ein **Feld** Objekt ist **Name** normalerweise schreibgeschützt. Bei neuen **Feld** Objekten, die an die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatzes](../../../ado/reference/ado-api/record-object-ado.md)angefügt wurden, ist der **Name** jedoch nur dann Lese-/Schreibzugriff, nachdem die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft für das **Feld** angegeben wurde und der Datenanbieter das neue **Feld** durch Aufrufen der [Update](../../../ado/reference/ado-api/update-method.md) -Methode der **Fields** -Auflistung erfolgreich hinzugefügt hat.  
+ Für ein **Feld** Objekt ist **Name** normalerweise schreibgeschützt. Bei neuen **Feld** Objekten, die an die [Fields](./fields-collection-ado.md) -Auflistung eines [Datensatzes](./record-object-ado.md)angefügt wurden, ist der **Name** jedoch nur dann Lese-/Schreibzugriff, nachdem die [value](./value-property-ado.md) -Eigenschaft für das **Feld** angegeben wurde und der Datenanbieter das neue **Feld** durch Aufrufen der [Update](./update-method.md) -Methode der **Fields** -Auflistung erfolgreich hinzugefügt hat.  
   
- Für **Parameter** Objekte, die noch nicht an die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung angefügt wurden, ist die **Name** -Eigenschaft Lese-/Schreibzugriff. Für angefügte **Parameter** Objekte und alle anderen Objekte ist die **Name** -Eigenschaft schreibgeschützt. Namen müssen innerhalb einer Sammlung nicht eindeutig sein.  
+ Für **Parameter** Objekte, die noch nicht an die [Parameter](./parameters-collection-ado.md) Auflistung angefügt wurden, ist die **Name** -Eigenschaft Lese-/Schreibzugriff. Für angefügte **Parameter** Objekte und alle anderen Objekte ist die **Name** -Eigenschaft schreibgeschützt. Namen müssen innerhalb einer Sammlung nicht eindeutig sein.  
   
  Sie können die **Name** -Eigenschaft eines Objekts durch einen Ordinalverweis abrufen, nach dem Sie direkt auf das Objekt über den Namen verweisen können. Wenn z. b `rstMain.Properties(20).Name` `Updatability` . ergibt, können Sie anschließend auf diese Eigenschaft als verweisen `rstMain.Properties("Updatability")` .  
   
@@ -45,15 +45,15 @@ Gibt den Namen eines Objekts an.
 
 :::row:::
     :::column:::
-        [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
-        [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
+        [Command-Objekt (ADO)](./command-object-ado.md)  
+        [Field-Objekt](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)  
-        [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Parameter-Objekt](./parameter-object.md)  
+        [Property-Objekt (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Attribute und namens Eigenschaften (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Beispiel für Attribute und namens Eigenschaften (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [Beispiel für Attribute und namens Eigenschaften (VB)](./attributes-and-name-properties-example-vb.md)   
+ [Beispiel für Attribute und namens Eigenschaften (VC + +)](./attributes-and-name-properties-example-vc.md)

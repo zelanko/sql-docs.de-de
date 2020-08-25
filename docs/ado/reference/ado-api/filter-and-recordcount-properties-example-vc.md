@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb95298fbc88749acdb5058cc45694688e0c2c6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3974219f4070d38e877ff7fdd4b6c7e3a26adef2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443672"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775309"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter-und RecordCount-Eigenschaften (Beispiel) (VC + +)
-In diesem Beispiel wird die [Filter](../../../ado/reference/ado-api/filter-property.md) -Eigenschaft zum Öffnen eines neuen [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf einer angegebenen Bedingung verwendet, die auf ein vorhandenes **Recordset**angewendet wird. Er verwendet die [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) -Eigenschaft, um die Anzahl der Datensätze in den beiden **Recordsets**anzuzeigen. Die FilterField-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
+In diesem Beispiel wird die [Filter](./filter-property.md) -Eigenschaft zum Öffnen eines neuen [Recordsets](./recordset-object-ado.md) basierend auf einer angegebenen Bedingung verwendet, die auf ein vorhandenes **Recordset**angewendet wird. Er verwendet die [RecordCount](./recordcount-property-ado.md) -Eigenschaft, um die Anzahl der Datensätze in den beiden **Recordsets**anzuzeigen. Die FilterField-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -304,6 +304,6 @@ Scootney Books, USA
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Filter-Eigenschaft](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Filter-Eigenschaft](./filter-property.md)   
+ [RecordCount-Eigenschaft (ADO)](./recordcount-property-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

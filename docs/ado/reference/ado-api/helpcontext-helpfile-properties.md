@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 628d3c0d01cc1b62304627fb310705b093976f8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4d4aacd44cc6dd245026f84b826d4c007f6b696
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443482"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774868"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext- und HelpFile-Eigenschaft
-Gibt die Hilfedatei und das Thema an, die einem [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt zugeordnet sind.  
+Gibt die Hilfedatei und das Thema an, die einem [Fehler](./error-object.md) Objekt zugeordnet sind.  
   
 ## <a name="return-values"></a>Rückgabewerte  
   
@@ -42,11 +42,11 @@ Gibt die Hilfedatei und das Thema an, die einem [Fehler](../../../ado/reference/
  Wenn eine Hilfedatei in der **HelpFile** -Eigenschaft angegeben ist, wird die **HelpContext** -Eigenschaft verwendet, um das Hilfethema, das identifiziert wird, automatisch anzuzeigen. Wenn kein relevantes Hilfethema verfügbar ist, gibt die **HelpContext** -Eigenschaft 0 (null) zurück, und die **HelpFile** -Eigenschaft gibt eine Zeichenfolge der Länge 0 (null) zurück.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Error-Objekt](../../../ado/reference/ado-api/error-object.md)  
+ [Error-Objekt](./error-object.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Beschreibung, HelpContext, HelpFile, NativeError, Number, Source und SQLSTATE Properties (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Beschreibung, HelpContext, HelpFile, NativeError, Number, Source und SQLSTATE Properties Example (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description-Eigenschaft](../../../ado/reference/ado-api/description-property.md)   
- [Number-Eigenschaft (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [Source-Eigenschaft (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)
+ [Beispiel für Beschreibung, HelpContext, HelpFile, NativeError, Number, Source und SQLSTATE Properties (VB)](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Beschreibung, HelpContext, HelpFile, NativeError, Number, Source und SQLSTATE Properties Example (VC + +)](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description-Eigenschaft](./description-property.md)   
+ [Number-Eigenschaft (ADO)](./number-property-ado.md)   
+ [Source-Eigenschaft (ADO Error)](./source-property-ado-error.md)

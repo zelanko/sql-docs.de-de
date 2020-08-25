@@ -13,38 +13,38 @@ helpviewer_keywords:
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b614fc32325ef8a7b64b555f91c32966fdbb438c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c77279fa33781102234fc353aeaad88501e8ce7d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439462"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769289"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Table-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Columns-Collection (ADOX)](./columns-collection-adox.md)  
   
- [DateCreated-Eigenschaft (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)  
+ [DateCreated-Eigenschaft (ADOX)](./datecreated-property-adox.md)  
   
- [DateModified-Eigenschaft (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)  
+ [DateModified-Eigenschaft (ADOX)](./datemodified-property-adox.md)  
   
- [Auflistung von Indizes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Indexes-Collection (ADOX)](./indexes-collection-adox.md)  
   
- [Keys Collection (ADOX) (Keys-Auflistung (ADOX))](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Keys-Collection (ADOX)](./keys-collection-adox.md)  
   
- [Name-Eigenschaft (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name-Eigenschaft (ADOX)](./name-property-adox.md)  
   
- [ParentCatalog-Eigenschaft (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [ParentCatalog-Eigenschaft (ADOX)](./parentcatalog-property-adox.md)  
   
- [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties-Collection (ADO)](../ado-api/properties-collection-ado.md)  
   
- [Type-Eigenschaft (Tabelle) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
+ [Type-Eigenschaft (Tabelle) (ADOX)](./type-property-table-adox.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
 ## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Table-Objekt (ADOX)](./table-object-adox.md)

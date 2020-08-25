@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 270d93169c5c1d91c35a58a36be9a4577e25e7d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0aa5aebbd3a87ede7d73223ffa7684bff837a328
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443152"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774219"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord-Methode (ADO)
-Verschiebt die durch einen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) dargestellte Entität an einen anderen Speicherort.  
+Verschiebt die durch einen [Datensatz](./record-object-ado.md) dargestellte Entität an einen anderen Speicherort.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  Optional. Eine **Zeichenfolge** , die das Kennwort enthält, das bei Bedarf den *Benutzernamen*überprüft.  
   
  *Optionen*  
- Optional. Ein Wert vom Typ "", dessen [Standardwert "](../../../ado/reference/ado-api/moverecordoptionsenum.md) **admuveunspezifiziert**" ist. Gibt das Verhalten dieser Methode an.  
+ Optional. Ein Wert vom Typ "", dessen [Standardwert "](./moverecordoptionsenum.md) **admuveunspezifiziert**" ist. Gibt das Verhalten dieser Methode an.  
   
  *Asynchron*  
  Optional. Ein **boolescher** Wert, der angibt, dass dieser Vorgang bei " **true**" asynchron erfolgen soll.  
@@ -64,17 +64,17 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 > [!NOTE]
 >  Verwenden Sie die Option **admuveüberschreibung** mit Bedacht. Wenn Sie diese Option z. b. beim Verschieben einer Datei in ein Verzeichnis angeben, wird das Verzeichnis gelöscht und durch die Datei ersetzt.  
   
- Bestimmte Attribute des **Datensatz** -Objekts, z. b. die Eigenschaft " [parametriurl](../../../ado/reference/ado-api/parenturl-property-ado.md) ", werden nach Abschluss dieses Vorgangs nicht aktualisiert. Aktualisieren Sie die Eigenschaften des **Daten Satz** Objekts, indem Sie den **Datensatz**schließen, und öffnen Sie ihn dann erneut mit der URL des Speicher Orts, an den die Datei oder das Verzeichnis verschoben wurde.  
+ Bestimmte Attribute des **Datensatz** -Objekts, z. b. die Eigenschaft " [parametriurl](./parenturl-property-ado.md) ", werden nach Abschluss dieses Vorgangs nicht aktualisiert. Aktualisieren Sie die Eigenschaften des **Daten Satz** Objekts, indem Sie den **Datensatz**schließen, und öffnen Sie ihn dann erneut mit der URL des Speicher Orts, an den die Datei oder das Verzeichnis verschoben wurde.  
   
- Wenn dieser **Datensatz** von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)abgerufen wurde, wird der neue Speicherort der verschostellten Datei oder des verschobenes Verzeichnisses nicht sofort in das **Recordset**reflektiert. Aktualisieren Sie das **Recordset** , indem Sie es schließen und erneut öffnen.  
+ Wenn dieser **Datensatz** von einem [Recordset](./recordset-object-ado.md)abgerufen wurde, wird der neue Speicherort der verschostellten Datei oder des verschobenes Verzeichnisses nicht sofort in das **Recordset**reflektiert. Aktualisieren Sie das **Recordset** , indem Sie es schließen und erneut öffnen.  
   
 > [!NOTE]
->  URLs, die das http-Schema verwenden, rufen automatisch den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung auf](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URLs, die das http-Schema verwenden, rufen automatisch den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung auf](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absolute und relative URLs](../../guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Gilt für  
- [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Record-Objekt (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Move-Methode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [Muvefirst-, muvelast-, muvenext-und muveprevious-Methode (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [MoveFirst-, MoveLast-, MoveNext- und MovePrevious-Methode (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
+ [Move-Methode (ADO)](./move-method-ado.md)   
+ [Muvefirst-, muvelast-, muvenext-und muveprevious-Methode (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst-, MoveLast-, MoveNext- und MovePrevious-Methode (RDS)](../rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

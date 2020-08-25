@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5375335fe0964107aed54de71d7e700b0588f209
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4a79dc76537bbcbabc8b8689638ff9c670413e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441992"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777359"
 ---
 # <a name="stat-method"></a>Stat-Methode
-Ruft Informationen zu einem [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) ab.  
+Ruft Informationen zu einem [Streamobjekt](./stream-object-ado.md) ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ Long stream.Stat(StatStg, StatFlag)
  *STATFLAG*  
  Gibt an, dass diese Methode nicht einige der Member in der Statuslisten Struktur zurückgibt, wodurch eine Speicher Belegungs Operation gespeichert wird. Werte werden aus der STATFLAG-Enumeration entnommen. Die STATFLAG-Enumeration weist zwei Werte auf.  
   
-|Konstant|Wert|  
+|Konstante|Wert|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
@@ -71,4 +71,4 @@ Long stream.Stat(StatStg, StatFlag)
  Wenn STATFLAG_NONAME im STATFLAG-Parameter nicht angegeben wurde und für den aktuellen Stream kein Name verfügbar ist, wird dieser Wert E_NOTIMPL.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream-Objekt (ADO)](./stream-object-ado.md)

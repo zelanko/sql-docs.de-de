@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7adb671b42d17b4abe13733fd912234e79560e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444452"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775899"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString-Eigenschaft (ADO)
 Gibt die Informationen an, die zum Herstellen einer Verbindung mit einer Datenquelle verwendet werden.  
@@ -42,9 +42,9 @@ Gibt die Informationen an, die zum Herstellen einer Verbindung mit einer Datenqu
 |*Remote Server =*|Gibt den Pfadnamen des Servers an, der beim Öffnen einer Client seitigen Verbindung verwendet werden soll. (Nur Remote Datendienst.)|  
 |*URL =*|Gibt die Verbindungs Zeichenfolge als absolute URL an, die eine Ressource identifiziert, z. b. eine Datei oder ein Verzeichnis.|  
   
- Nachdem Sie die **ConnectionString** -Eigenschaft festgelegt und das [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt geöffnet haben, kann der Anbieter den Inhalt der-Eigenschaft ändern, indem Sie z. b. die ADO-definierten Argument Namen ihren Entsprechungen für den jeweiligen Anbieter zuordnet.  
+ Nachdem Sie die **ConnectionString** -Eigenschaft festgelegt und das [Verbindungs](./connection-object-ado.md) Objekt geöffnet haben, kann der Anbieter den Inhalt der-Eigenschaft ändern, indem Sie z. b. die ADO-definierten Argument Namen ihren Entsprechungen für den jeweiligen Anbieter zuordnet.  
   
- Die **ConnectionString** -Eigenschaft erbt automatisch den Wert, der für das *ConnectionString* -Argument der [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode verwendet wird, sodass Sie die aktuelle **ConnectionString** -Eigenschaft während des **öffnenden** Methoden Aufrufes überschreiben können.  
+ Die **ConnectionString** -Eigenschaft erbt automatisch den Wert, der für das *ConnectionString* -Argument der [Open](./open-method-ado-connection.md) -Methode verwendet wird, sodass Sie die aktuelle **ConnectionString** -Eigenschaft während des **öffnenden** Methoden Aufrufes überschreiben können.  
   
  Da das *File Name* -Argument bewirkt, dass ADO den zugeordneten Anbieter lädt, können Sie nicht die *Anbieter* -und *Dateinamen* Argumente übergeben.  
   
@@ -63,9 +63,9 @@ Gibt die Informationen an, die zum Herstellen einer Verbindung mit einer Datenqu
 |Keine Standardeinstellung.<br /><br /> Wenn eine ADO-Anwendung unter den folgenden Betriebssystemen ausgeführt wird und den Anbieter nicht explizit angibt, gibt ADO den folgenden Fehler zurück: "ADODB. Verbindung: der Anbieter ist nicht angegeben, und es ist kein festgelegter Standardanbieter vorhanden.|Windows 2000 (64 Bit)<br /><br /> Windows XP (64-Bit)<br /><br /> Windows 2003 Server (64 Bit)<br /><br /> Windows Vista (64-Bit)|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection-Objekt (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für ConnectionString, ConnectionTimeout und State Properties (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [Beispiel für ConnectionString, ConnectionTimeout und State Properties (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Beispiel für ConnectionString, ConnectionTimeout und State Properties (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [Beispiel für ConnectionString, ConnectionTimeout und State Properties (VC + +)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [Anhang A: Anbieter](../../guide/appendixes/appendix-a-providers.md)

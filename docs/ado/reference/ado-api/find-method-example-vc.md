@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43037237ecba87b099c6e74b32f0a78c914a72f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092164ac8df26ae79da94125d0071baccd89a3f5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443642"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775149"
 ---
 # <a name="find-method-example-vc"></a>Find-Methode – Beispiel (VC++)
-In diesem Beispiel wird die [Find](../../../ado/reference/ado-api/find-method-ado.md) -Methode des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts verwendet, um die Anzahl von Geschäfts Titeln in der **Pubs** -Datenbank zu suchen und zu zählen. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter keine ähnliche Funktionalität unterstützt.  
+In diesem Beispiel wird die [Find](./find-method-ado.md) -Methode des [Recordset](./recordset-object-ado.md) -Objekts verwendet, um die Anzahl von Geschäfts Titeln in der **Pubs** -Datenbank zu suchen und zu zählen. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter keine ähnliche Funktionalität unterstützt.  
   
 ```  
 // BeginFindCpp.cpp  
@@ -156,5 +156,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Find-Methode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Find-Methode (ADO)](./find-method-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

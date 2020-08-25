@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c528cf280e5bb011f558f72a74290ff7f690170
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7aca1d8a8f34bc4e3122c393727bf0728d0f881
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443162"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774209"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>Muvefirst-, muvelast-, muvenext-und muveprevious-Methoden Beispiel (VC + +)
-In diesem Beispiel werden die Methoden [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)und [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) verwendet, um den Daten Satz Zeiger eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf dem angegebenen Befehl zu verschieben. Die Funktion "muveany" ist erforderlich, damit dieses Beispiel ausgeführt wird.  
+In diesem Beispiel werden die Methoden [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)und [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) verwendet, um den Daten Satz Zeiger eines [Recordsets](./recordset-object-ado.md) basierend auf dem angegebenen Befehl zu verschieben. Die Funktion "muveany" ist erforderlich, damit dieses Beispiel ausgeführt wird.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -209,5 +209,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Muvefirst-, muvelast-, muvenext-und muveprevious-Methode (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Muvefirst-, muvelast-, muvenext-und muveprevious-Methode (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

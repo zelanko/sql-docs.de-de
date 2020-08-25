@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3cafee5dbcc5d6469df2d733f1898806069dd112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6654adc5cbf5b01435dbc95a2f630cf980cc6d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451102"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776359"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize-Eigenschaft (ADO)
-Gibt die Anzahl von Datensätzen aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt an, die lokal im Arbeitsspeicher zwischengespeichert werden.  
+Gibt die Anzahl von Datensätzen aus einem [Recordset](./recordset-object-ado.md) -Objekt an, die lokal im Arbeitsspeicher zwischengespeichert werden.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen **Long** -Wert fest, der größer als 0 sein muss, oder gibt ihn zurück. Der Standardwert ist 1.  
@@ -41,14 +41,14 @@ Gibt die Anzahl von Datensätzen aus einem [Recordset](../../../ado/reference/ad
   
  Eine **CacheSize** -Einstellung von 0 (null) ist nicht zulässig und gibt einen Fehler zurück.  
   
- Aus dem Cache abgerufene Datensätze spiegeln keine gleichzeitigen Änderungen wider, die andere Benutzer an den Quelldaten vorgenommen haben. Verwenden Sie die [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode, um ein Update aller zwischengespeicherten Daten zu erzwingen.  
+ Aus dem Cache abgerufene Datensätze spiegeln keine gleichzeitigen Änderungen wider, die andere Benutzer an den Quelldaten vorgenommen haben. Verwenden Sie die [Resync](./resync-method.md) -Methode, um ein Update aller zwischengespeicherten Daten zu erzwingen.  
   
- Wenn **CacheSize** auf einen Wert größer als 1 festgelegt ist, können die Navigationsmethoden ([Move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext und MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) zur Navigation zu einem gelöschten Datensatz führen, wenn der Löschvorgang nach dem Abrufen der Datensätze erfolgt. Nach dem ersten Abruf werden nachfolgende Löschvorgänge nicht in Ihren Daten Cache übernommen, bis Sie versuchen, auf einen Datenwert aus einer gelöschten Zeile zuzugreifen. Wenn Sie **CacheSize** auf einen solchen Wert festlegen, wird dieses Problem jedoch vermieden, da gelöschte Zeilen nicht abgerufen werden können  
+ Wenn **CacheSize** auf einen Wert größer als 1 festgelegt ist, können die Navigationsmethoden ([Move](./move-method-ado.md), [MoveFirst, MoveLast, MoveNext und MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) zur Navigation zu einem gelöschten Datensatz führen, wenn der Löschvorgang nach dem Abrufen der Datensätze erfolgt. Nach dem ersten Abruf werden nachfolgende Löschvorgänge nicht in Ihren Daten Cache übernommen, bis Sie versuchen, auf einen Datenwert aus einer gelöschten Zeile zuzugreifen. Wenn Sie **CacheSize** auf einen solchen Wert festlegen, wird dieses Problem jedoch vermieden, da gelöschte Zeilen nicht abgerufen werden können  
   
 ## <a name="applies-to"></a>Gilt für  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CacheSize-Eigenschaft (Beispiel) (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
- [Beispiel für CacheSize-Eigenschaft (VC + +)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [CacheSize-Eigenschaft – Beispiel (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
+ [CacheSize-Eigenschaft (Beispiel) (VB)](./cachesize-property-example-vb.md)   
+ [Beispiel für CacheSize-Eigenschaft (VC + +)](./cachesize-property-example-vc.md)   
+ [CacheSize-Eigenschaft – Beispiel (JScript)](./cachesize-property-example-jscript.md)

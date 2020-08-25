@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58f7761cc67cd1320594988ba50bfcc79bcfc0d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1e67827a5a496b6b9163d8fa8740cc620033efd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450912"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776189"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Auflistungen (Visual C++ Syntax Index mit #Import)
 Es ist hilfreich zu wissen, dass Auflistungen bestimmte allgemeine Methoden und Eigenschaften erben.  
@@ -98,7 +98,7 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehlersammlung (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameter Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Fehlersammlung (ADO)](./errors-collection-ado.md)   
+ [Fields-Auflistung (ADO)](./fields-collection-ado.md)   
+ [Parameter Auflistung (ADO)](./parameters-collection-ado.md)   
+ [Properties-Collection (ADO)](./properties-collection-ado.md)

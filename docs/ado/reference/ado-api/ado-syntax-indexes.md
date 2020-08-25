@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f6394e390339d7770187650f0a19035cca2e0e85
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55d8f16ee617b74ee98d83a1cdf8dad408cab2f3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451352"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776608"
 ---
 # <a name="ado-syntax-indexes"></a>ADO – Syntaxindizes
 Die Syntax zum Aufrufen von ADO-Methoden und-Eigenschaften unterscheidet sich von der Entwicklungsumgebung. Der Rest der ADO-Sprachreferenz verwendet die Programmiersprache Microsoft Visual Basic, um die ADO-Methoden-und Eigenschafts Syntax zu veranschaulichen. In den folgenden Abschnitten finden Sie jedoch spezifischere Syntax Beispiele, die auf der Programmiersprache und Methodik basieren:  
   
--   Der [ADO for Visual C++-Syntax Index für com](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) behandelt ADO-Eigenschaften und-Methoden, ohne die **#Import** -Compilerdirektive mit Microsoft Visual C++ zu verwenden.  
+-   Der [ADO for Visual C++-Syntax Index für com](./ado-for-visual-c-syntax-index-for-com.md) behandelt ADO-Eigenschaften und-Methoden, ohne die **#Import** -Compilerdirektive mit Microsoft Visual C++ zu verwenden.  
   
--   Der [ADO for Visual C++-Syntax Index mit #Import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md) behandelt ADO-Eigenschaften und-Methoden, wenn die **#Import** -Compilerdirektive mit Microsoft Visual C++ verwendet wird.  
+-   Der [ADO for Visual C++-Syntax Index mit #Import](./ado-for-visual-c-syntax-index-with-sharpimport.md) behandelt ADO-Eigenschaften und-Methoden, wenn die **#Import** -Compilerdirektive mit Microsoft Visual C++ verwendet wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von ADO mit Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Verwenden von ADO mit Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
- [Verwenden von ADO mit Skriptsprachen](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden von ADO mit Microsoft Visual Basic](../../guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
+ [Verwenden von ADO mit Microsoft Visual C++](../../guide/appendixes/using-ado-with-microsoft-visual-c.md)   
+ [Verwenden von ADO mit Skriptsprachen](../../guide/appendixes/using-ado-with-scripting-languages.md)

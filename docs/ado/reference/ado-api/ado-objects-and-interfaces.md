@@ -14,42 +14,42 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80a47336bb6453033a28b2d62eeda3700431594a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d4cce8ba7913b80ea971c563b1235a15b84d372
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451372"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776619"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO-Objekte und -Schnittstellen
-Die Beziehungen zwischen diesen Objekten werden im ADO- [Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)dargestellt.  
+Die Beziehungen zwischen diesen Objekten werden im ADO- [Objektmodell](./ado-object-model.md)dargestellt.  
   
- Jedes-Objekt kann in der entsprechenden-Auflistung enthalten sein. Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt kann z. b. in einer [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung enthalten sein. Weitere Informationen finden Sie unter [ADO Collections](../../../ado/reference/ado-api/ado-collections.md) or a specific Collection Topic.  
+ Jedes-Objekt kann in der entsprechenden-Auflistung enthalten sein. Ein [Fehler](./error-object.md) Objekt kann z. b. in einer [Fehler](./errors-collection-ado.md) Auflistung enthalten sein. Weitere Informationen finden Sie unter [ADO Collections](./ado-collections.md) or a specific Collection Topic.  
   
 |Objekt oder Schnittstelle|Beschreibung|  
 |-|-|  
-|[Iadocommandconstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|Wird verwendet, um den zugrunde liegenden OLEDB-Befehl aus einem ADOCommand-Objekt abzurufen.|  
-|[Adorecordconstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Erstellt ein ADO- **Daten Satz** Objekt aus einem OLE DB **Row** -Objekt in einer C/C++-Anwendung.|  
-|[Adorecordsetconstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|Erstellt ein ADO- **Recordset** -Objekt aus einem OLE DB Rowsetobjekt in einer C/C++-Anwendung. **Rowset**|  
-|[ADOStreamConstruction-Schnittstelle](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|Erstellt ein ADO- **Streamobjekt** aus einem OLE DB **IStream** -Objekt in einer C/C++-Anwendung.|  
-|[Befehl](../../../ado/reference/ado-api/command-object-ado.md)|Definiert einen bestimmten Befehl, den Sie für eine Datenquelle ausführen möchten.<br /><br /> Das **Command** -Objekt ist für die Skripterstellung nicht sicher.|  
-|[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|Stellt eine offene Verbindung mit einer Datenquelle dar.<br /><br /> Das **Verbindungs** Objekt ist für die Skripterstellung sicher.|  
-|[IDSOShapeExtensions-Schnittstelle](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|Ruft das zugrunde liegende OLEDB-Datenquellen Objekt für den Shape-Anbieter ab.|  
-|[Fehler](../../../ado/reference/ado-api/error-object.md)|Enthält Details zu Datenzugriffs Fehlern, die sich auf einen einzelnen Vorgang beziehen, der den Anbieter einbezieht.<br /><br /> Das **Fehler** Objekt ist für die Skripterstellung nicht sicher.|  
-|[Feld](../../../ado/reference/ado-api/field-object.md)|Stellt eine Datenspalte mit einem gemeinsamen Datentyp dar.|  
-|[Parameter](../../../ado/reference/ado-api/parameter-object.md)|Stellt einen Parameter oder ein Argument dar, der einem **Befehls** Objekt auf Grundlage einer parametrisierten Abfrage oder gespeicherten Prozedur zugeordnet ist.<br /><br /> Das **Parameter** Objekt ist für die Skripterstellung nicht sicher.|  
-|[Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md)|Stellt eine dynamische Eigenschaft eines ADO-Objekts dar, das vom Anbieter definiert wird.|  
-|[Datensatz](../../../ado/reference/ado-api/record-object-ado.md)|Stellt eine Zeile eines **Recordsets**oder ein Verzeichnis oder eine Datei in einem Dateisystem dar. Das **Daten Satz** Objekt ist für die Skripterstellung sicher.|  
-|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Stellt den Satz von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Das **Recordset** -Objekt bezieht sich jederzeit auf einen einzelnen Datensatz innerhalb des Satzes als aktuellen Datensatz.<br /><br /> Das **Recordset** -Objekt ist für die Skripterstellung sicher.|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Stellt einen binären Datenstrom dar.<br /><br /> Das **Stream** -Objekt ist für die Skripterstellung sicher.|  
+|[Iadocommandconstruction](/previous-versions/windows/desktop/aa965677(v=vs.85))|Wird verwendet, um den zugrunde liegenden OLEDB-Befehl aus einem ADOCommand-Objekt abzurufen.|  
+|[Adorecordconstruction](./adorecordconstruction-interface.md)|Erstellt ein ADO- **Daten Satz** Objekt aus einem OLE DB **Row** -Objekt in einer C/C++-Anwendung.|  
+|[Adorecordsetconstruction](./adorecordsetconstruction-interface.md)|Erstellt ein ADO- **Recordset** -Objekt aus einem OLE DB Rowsetobjekt in einer C/C++-Anwendung. **Rowset**|  
+|[ADOStreamConstruction-Schnittstelle](./adostreamconstruction-interface.md)|Erstellt ein ADO- **Streamobjekt** aus einem OLE DB **IStream** -Objekt in einer C/C++-Anwendung.|  
+|[Befehl](./command-object-ado.md)|Definiert einen bestimmten Befehl, den Sie für eine Datenquelle ausführen möchten.<br /><br /> Das **Command** -Objekt ist für die Skripterstellung nicht sicher.|  
+|[Connection](./connection-object-ado.md)|Stellt eine offene Verbindung mit einer Datenquelle dar.<br /><br /> Das **Verbindungs** Objekt ist für die Skripterstellung sicher.|  
+|[IDSOShapeExtensions-Schnittstelle](./idsoshapeextensions-interface.md)|Ruft das zugrunde liegende OLEDB-Datenquellen Objekt für den Shape-Anbieter ab.|  
+|[Fehler](./error-object.md)|Enthält Details zu Datenzugriffs Fehlern, die sich auf einen einzelnen Vorgang beziehen, der den Anbieter einbezieht.<br /><br /> Das **Fehler** Objekt ist für die Skripterstellung nicht sicher.|  
+|[Feld](./field-object.md)|Stellt eine Datenspalte mit einem gemeinsamen Datentyp dar.|  
+|[Parameter](./parameter-object.md)|Stellt einen Parameter oder ein Argument dar, der einem **Befehls** Objekt auf Grundlage einer parametrisierten Abfrage oder gespeicherten Prozedur zugeordnet ist.<br /><br /> Das **Parameter** Objekt ist für die Skripterstellung nicht sicher.|  
+|[Eigenschaft](./property-object-ado.md)|Stellt eine dynamische Eigenschaft eines ADO-Objekts dar, das vom Anbieter definiert wird.|  
+|[Datensatz](./record-object-ado.md)|Stellt eine Zeile eines **Recordsets**oder ein Verzeichnis oder eine Datei in einem Dateisystem dar. Das **Daten Satz** Objekt ist für die Skripterstellung sicher.|  
+|[Recordset](./recordset-object-ado.md)|Stellt den Satz von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Das **Recordset** -Objekt bezieht sich jederzeit auf einen einzelnen Datensatz innerhalb des Satzes als aktuellen Datensatz.<br /><br /> Das **Recordset** -Objekt ist für die Skripterstellung sicher.|  
+|[Stream](./stream-object-ado.md)|Stellt einen binären Datenstrom dar.<br /><br /> Das **Stream** -Objekt ist für die Skripterstellung sicher.|  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md)   
- [ADO-Sammlungen](../../../ado/reference/ado-api/ado-collections.md)   
- [Dynamische ADO-Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [ADO-Enumerationskonstanten](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Anhang B: ADO-Fehler](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
- [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md)   
- [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)   
- [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)   
- [ADO-Eigenschaften](../../../ado/reference/ado-api/ado-properties.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO-API-Referenz](./ado-api-reference.md)   
+ [ADO-Sammlungen](./ado-collections.md)   
+ [Dynamische ADO-Eigenschaften](./ado-dynamic-properties.md)   
+ [ADO-Enumerationskonstanten](./ado-enumerated-constants.md)   
+ [Anhang B: ADO-Fehler](../../guide/appendixes/appendix-b-ado-errors.md)   
+ [ADO-Ereignisse](./ado-events.md)   
+ [ADO-Methoden](./ado-methods.md)   
+ [ADO-Objektmodell](./ado-object-model.md)   
+ [ADO-Eigenschaften](./ado-properties.md)

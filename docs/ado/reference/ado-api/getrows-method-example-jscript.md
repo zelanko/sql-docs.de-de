@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80f2727ae8254665bc39a42d635860f390224f25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93884ac8da110c3b6916d40d0216e4a1a2daf30e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443552"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775029"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows-Methode – Beispiel (JScript)
-In diesem Beispiel wird die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) -Methode verwendet, um alle Zeilen der *custiomertabelle* aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) abzurufen und ein Array mit den resultierenden Daten auszufüllen. Die **GetRows** -Methode gibt weniger als die gewünschte Anzahl von Zeilen in zwei Fällen zurück: entweder wenn [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde oder **GetRows** versucht hat, einen Datensatz abzurufen, der von einem anderen Benutzer gelöscht wurde. Die Funktion gibt nur dann **false** zurück, wenn der zweite Fall auftritt. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **getrowsjs. ASP**.  
+In diesem Beispiel wird die [GetRows](./getrows-method-ado.md) -Methode verwendet, um alle Zeilen der *custiomertabelle* aus einem [Recordset](./recordset-object-ado.md) abzurufen und ein Array mit den resultierenden Daten auszufüllen. Die **GetRows** -Methode gibt weniger als die gewünschte Anzahl von Zeilen in zwei Fällen zurück: entweder wenn [EOF](./bof-eof-properties-ado.md) erreicht wurde oder **GetRows** versucht hat, einen Datensatz abzurufen, der von einem anderen Benutzer gelöscht wurde. Die Funktion gibt nur dann **false** zurück, wenn der zweite Fall auftritt. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **getrowsjs. ASP**.  
   
 ```  
 <!-- BeginGetRowsJS -->  
@@ -160,5 +160,5 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [GetRows-Methode (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [GetRows-Methode (ADO)](./getrows-method-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

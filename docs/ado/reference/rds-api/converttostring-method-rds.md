@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58bfb25264c15f051bfd7144bdcaf01bbd1eda05
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8b3bf5e24fdb3ef05795d4ebd66a65baea984a42
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439192"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768659"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString-Methode (RDS)
-Konvertiert ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in eine MIME-Zeichenfolge, die die Recordsetdaten darstellt.  
+Konvertiert ein [Recordset](../ado-api/recordset-object-ado.md) in eine MIME-Zeichenfolge, die die Recordsetdaten darstellt.  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
@@ -36,7 +36,7 @@ DataFactory.ConvertToString(Recordset)
   
 #### <a name="parameters"></a>Parameter  
  *DataFactory*  
- Eine Objekt Variable, die ein [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt darstellt.  
+ Eine Objekt Variable, die ein [RDSServer. DataFactory](./datafactory-object-rdsserver.md) -Objekt darstellt.  
   
  *Recordset*  
  Eine Objekt Variable, die ein **Recordset** -Objekt darstellt.  
@@ -52,10 +52,8 @@ DataFactory.ConvertToString(Recordset)
 >  Wenn Sie Active Server Seiten verwenden, um die resultierende MIME-Zeichenfolge in eine Client-HTML-Seite einzubetten, beachten Sie, dass Versionen von VBScript vor Version 2,0 die Größe der Zeichenfolge auf 32 KB begrenzen. Wenn dieser Grenzwert überschritten wird, wird ein Fehler zurückgegeben. Behalten Sie den Abfrage Bereich relativ gering, wenn Sie MIME-Einbettungen über ASP-Dateien verwenden. Um dieses Problem zu beheben, laden Sie die neueste Version von VBScript von der Microsoft Windows Script Technologies-Website herunter.  
   
 ## <a name="applies-to"></a>Gilt für  
- [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+ [DataFactory-Objekt (RDSServer)](./datafactory-object-rdsserver.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ConvertTo String-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
- [ConvertToString-Methode – Beispiel (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
-
-
+ [ConvertTo String-Methode (Beispiel) (VB)](../ado-api/converttostring-method-example-vb.md)   
+ [ConvertToString-Methode – Beispiel (VBScript)](./converttostring-method-example-vbscript.md)

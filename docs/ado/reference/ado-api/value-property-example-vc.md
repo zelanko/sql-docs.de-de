@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bcea6cd4ad8f786cf2e2a70b35f6f67dcae3127
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6cbe1d7738bd827a8f984e8b4f5e024e88457035
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441572"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776949"
 ---
 # <a name="value-property-example-vc"></a>Value-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel veranschaulicht die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft mit [Feld](../../../ado/reference/ado-api/field-object.md) -und [Eigenschafts](../../../ado/reference/ado-api/property-object-ado.md) Objekten, indem Feld-und Eigenschaftswerte für die ***Employees*** -Tabelle angezeigt werden.  
+Dieses Beispiel veranschaulicht die [value](./value-property-ado.md) -Eigenschaft mit [Feld](./field-object.md) -und [Eigenschafts](./property-object-ado.md) Objekten, indem Feld-und Eigenschaftswerte für die ***Employees*** -Tabelle angezeigt werden.  
   
 ```  
 // BeginValueCpp.cpp  
@@ -171,6 +171,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Value-Eigenschaft (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
+ [Field-Objekt](./field-object.md)   
+ [Property-Objekt (ADO)](./property-object-ado.md)   
+ [Value-Eigenschaft (ADO)](./value-property-ado.md)

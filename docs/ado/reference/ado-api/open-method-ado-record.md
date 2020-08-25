@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7661c142263a785565a7dabc92d9b7f31c93739
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 980e7c840cfb19077c6f4f1d1041d1f1eb8acf64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442972"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773799"
 ---
 # <a name="open-method-ado-record"></a>Open-Methode (ADO Record)
-Öffnet ein vorhandenes [Daten Satz](../../../ado/reference/ado-api/record-object-ado.md) Objekt oder erstellt ein neues Element, das durch den **Datensatz**dargestellt wird, z. b. eine Datei oder ein Verzeichnis.  
+Öffnet ein vorhandenes [Daten Satz](./record-object-ado.md) Objekt oder erstellt ein neues Element, das durch den **Datensatz**dargestellt wird, z. b. eine Datei oder ein Verzeichnis.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,19 +36,19 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Optional. Eine **Variante** , die die URL der Entität darstellt, die durch dieses **Daten Satz** Objekt dargestellt werden soll, einen **Befehl**, ein offenes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder ein anderes **Datensatz** -Objekt, eine Zeichenfolge, die eine SQL-SELECT-Anweisung oder einen Tabellennamen enthält.  
+ Optional. Eine **Variante** , die die URL der Entität darstellt, die durch dieses **Daten Satz** Objekt dargestellt werden soll, einen **Befehl**, ein offenes [Recordset](./recordset-object-ado.md) oder ein anderes **Datensatz** -Objekt, eine Zeichenfolge, die eine SQL-SELECT-Anweisung oder einen Tabellennamen enthält.  
   
  *ActiveConnection*  
- Optional. Eine **Variante** , die die Verbindungs Zeichenfolge oder das geöffnete [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt darstellt.  
+ Optional. Eine **Variante** , die die Verbindungs Zeichenfolge oder das geöffnete [Verbindungs](./connection-object-ado.md) Objekt darstellt.  
   
  *Mode*  
- Optional. Ein [connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md) -Wert, der den Zugriffsmodus für das resultierende **Datensatz** -Objekt angibt. Der Standardwert ist **adModeUnknown**.  
+ Optional. Ein [connectmodeenum](./connectmodeenum.md) -Wert, der den Zugriffsmodus für das resultierende **Datensatz** -Objekt angibt. Der Standardwert ist **adModeUnknown**.  
   
  *"Kreateoptions"*  
- Optional. Ein [recordkreateoptionsenum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) -Wert, der angibt, ob eine vorhandene Datei oder ein vorhandenes Verzeichnis geöffnet werden soll, oder ob eine neue Datei oder ein neues Verzeichnis erstellt werden soll. Der Standardwert ist " **adfailif NotExists**". Wenn der Standardwert festgelegt ist, wird der Zugriffsmodus aus der [Mode](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft abgerufen. Dieser Parameter wird ignoriert, wenn der *Quell* Parameter keine URL enthält.  
+ Optional. Ein [recordkreateoptionsenum](./recordcreateoptionsenum.md) -Wert, der angibt, ob eine vorhandene Datei oder ein vorhandenes Verzeichnis geöffnet werden soll, oder ob eine neue Datei oder ein neues Verzeichnis erstellt werden soll. Der Standardwert ist " **adfailif NotExists**". Wenn der Standardwert festgelegt ist, wird der Zugriffsmodus aus der [Mode](./mode-property-ado.md) -Eigenschaft abgerufen. Dieser Parameter wird ignoriert, wenn der *Quell* Parameter keine URL enthält.  
   
  *Optionen*  
- Optional. Ein [recordopenoptionsenum](../../../ado/reference/ado-api/recordopenoptionsenum.md) -Wert, der Optionen zum Öffnen des **Datensatzes**angibt. Der Standardwert ist " **adopendrecordunspezifiziert**". Diese Werte können kombiniert werden.  
+ Optional. Ein [recordopenoptionsenum](./recordopenoptionsenum.md) -Wert, der Optionen zum Öffnen des **Datensatzes**angibt. Der Standardwert ist " **adopendrecordunspezifiziert**". Diese Werte können kombiniert werden.  
   
  *UserName*  
  Optional. Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die, falls erforderlich, den Zugriff auf die *Quelle*autorisiert.  
@@ -69,16 +69,16 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 -   Ein Tabellenname.  
   
- Wenn das **Daten Satz** Objekt eine Entität darstellt, auf die mit einer URL nicht zugegriffen werden kann (z. b. eine Zeile eines **Recordsets** , das von einer Datenbank abgeleitet wurde), sind die Werte der Eigenschaft " [parametriurl](../../../ado/reference/ado-api/parenturl-property-ado.md) " und des Felds, auf das mit der **adRecordURL** -Konstante zugegriffen wird, NULL.  
+ Wenn das **Daten Satz** Objekt eine Entität darstellt, auf die mit einer URL nicht zugegriffen werden kann (z. b. eine Zeile eines **Recordsets** , das von einer Datenbank abgeleitet wurde), sind die Werte der Eigenschaft " [parametriurl](./parenturl-property-ado.md) " und des Felds, auf das mit der **adRecordURL** -Konstante zugegriffen wird, NULL.  
   
 > [!NOTE]
->  URLs, die das http-Schema verwenden, rufen automatisch den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung auf](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URLs, die das http-Schema verwenden, rufen automatisch den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung auf](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absolute und relative URLs](../../guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Gilt für  
- [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Record-Objekt (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open-Methode (ADO-Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [OpenSchema-Methode](../../../ado/reference/ado-api/openschema-method.md)
+ [Open-Methode (ADO-Verbindung)](./open-method-ado-connection.md)   
+ [Open-Methode (ADO-Recordset)](./open-method-ado-recordset.md)   
+ [Open-Methode (ADO-Stream)](./open-method-ado-stream.md)   
+ [OpenSchema-Methode](./openschema-method.md)

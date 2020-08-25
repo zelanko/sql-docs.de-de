@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce13556c013c527ec16f183001b6042ed501398d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57375b89595c6ed3e5c377692709deacd8f0ff28
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443052"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773969"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale-Eigenschaft (ADO)
-Gibt die Skala numerischer Werte in einem [Parameter](../../../ado/reference/ado-api/parameter-object.md) -oder [Feld](../../../ado/reference/ado-api/field-object.md) Objekt an.  
+Gibt die Skala numerischer Werte in einem [Parameter](./parameter-object.md) -oder [Feld](./field-object.md) Objekt an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen **Bytewert** fest, der die Anzahl der Dezimalstellen angibt, auf die numerische Werte aufgelöst werden, oder gibt ihn zurück.  
@@ -35,20 +35,20 @@ Gibt die Skala numerischer Werte in einem [Parameter](../../../ado/reference/ado
   
  Bei **Parameter** Objekten ist die **NumericScale** -Eigenschaft Lese-/Schreibzugriff.  
   
- Für ein **Feld**Objekt ist **NumericScale** normalerweise schreibgeschützt. Bei neuen **Feld** Objekten, die an die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatzes](../../../ado/reference/ado-api/record-object-ado.md)angehängt wurden, ist **NumericScale** jedoch nur Lese-/Schreibzugriff, nachdem die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft für das **Feld** angegeben wurde und der Datenanbieter das neue **Feld** erfolgreich hinzugefügt hat, indem die [Update](../../../ado/reference/ado-api/update-method.md) -Methode der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung aufgerufen wurde.  
+ Für ein **Feld**Objekt ist **NumericScale** normalerweise schreibgeschützt. Bei neuen **Feld** Objekten, die an die [Fields](./fields-collection-ado.md) -Auflistung eines [Datensatzes](./record-object-ado.md)angehängt wurden, ist **NumericScale** jedoch nur Lese-/Schreibzugriff, nachdem die [value](./value-property-ado.md) -Eigenschaft für das **Feld** angegeben wurde und der Datenanbieter das neue **Feld** erfolgreich hinzugefügt hat, indem die [Update](./update-method.md) -Methode der [Fields](./fields-collection-ado.md) -Auflistung aufgerufen wurde.  
   
 ## <a name="applies-to"></a>Gilt für  
 
 :::row:::
     :::column:::
-        [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
+        [Field-Objekt](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)  
+        [Parameter-Objekt](./parameter-object.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für NumericScale und Precision Properties (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
- [Beispiel für NumericScale und Precision Properties (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
- [Precision-Eigenschaft (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [Beispiel für NumericScale und Precision Properties (VB)](./numericscale-and-precision-properties-example-vb.md)   
+ [Beispiel für NumericScale und Precision Properties (VC + +)](./numericscale-and-precision-properties-example-vc.md)   
+ [Precision-Eigenschaft (ADO)](./precision-property-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6dbeea5a053a1395e051939e313b9f672c73d2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ee1d8d211c0ceeed02408f559c63b5942aafe05
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442902"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773629"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize-Eigenschaft – Beispiel (VB)
-Dieses Beispiel veranschaulicht die dynamische **Optimierungs** Eigenschaft des [Field](../../../ado/reference/ado-api/field-object.md) -Objekts. Das ***ZIP*** -Feld der Tabelle " ***Authors*** " in der ***Pubs*** -Datenbank ist nicht indiziert. Wenn die Eigenschaft [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) für das ***ZIP*** -Feld auf **true** festgelegt wird, wird ADO zum Erstellen eines Indexes autorisiert, der die Leistung der [Find](../../../ado/reference/ado-api/find-method-ado.md) -Methode verbessert.  
+Dieses Beispiel veranschaulicht die dynamische **Optimierungs** Eigenschaft des [Field](./field-object.md) -Objekts. Das ***ZIP*** -Feld der Tabelle " ***Authors*** " in der ***Pubs*** -Datenbank ist nicht indiziert. Wenn die Eigenschaft [optimieren](./optimize-property-dynamic-ado.md) für das ***ZIP*** -Feld auf **true** festgelegt wird, wird ADO zum Erstellen eines Indexes autorisiert, der die Leistung der [Find](./find-method-ado.md) -Methode verbessert.  
   
 ```  
 'BeginOptimizeVB  
@@ -88,5 +88,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [Optimize – dynamische Eigenschaft (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+ [Field-Objekt](./field-object.md)   
+ [Optimize – dynamische Eigenschaft (ADO)](./optimize-property-dynamic-ado.md)

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba0b69a87f11104888edcfb588d2633414b5a5ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1e8f38ce47d2b5a48511a2dfe5a8650fc56c7be6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443172"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774259"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>Muvefirst-, muvelast-, muvenext-und muveprevious-Methoden Beispiel (VBScript)
-In diesem Beispiel werden die Methoden [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)und [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) verwendet, um den Daten Satz Zeiger eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf dem angegebenen Befehl zu verschieben.  
+In diesem Beispiel werden die Methoden [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)und [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) verwendet, um den Daten Satz Zeiger eines [Recordsets](./recordset-object-ado.md) basierend auf dem angegebenen Befehl zu verschieben.  
   
  Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Notepad oder einen anderen Text-Editor ein, und speichern Sie ihn als **movefirstvsb. ASP**. Sie können das Ergebnis in einem beliebigen Browser anzeigen.  
   
@@ -185,5 +185,5 @@ In diesem Beispiel werden die Methoden [MoveFirst](../../../ado/reference/ado-ap
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Muvefirst-, muvelast-, muvenext-und muveprevious-Methode (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Muvefirst-, muvelast-, muvenext-und muveprevious-Methode (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

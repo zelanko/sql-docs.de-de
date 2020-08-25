@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed744b6cb39b37958de8dcd6cb4dd6dde8b2a9a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2fb0d90d8e6fd5a999d3596af600c140c75e9617
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451222"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776459"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attributes- und Name-Eigenschaft – Beispiel (VB)
-In diesem Beispiel wird der Wert der Eigenschaft [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) für [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md)-, [Feld](../../../ado/reference/ado-api/field-object.md)-und [Eigenschafts](../../../ado/reference/ado-api/property-object-ado.md) Objekte angezeigt. Er verwendet die [Name](../../../ado/reference/ado-api/name-property-ado.md) -Eigenschaft, um den Namen der einzelnen **Felder** und **Eigenschaften** Objekte anzuzeigen.  
+In diesem Beispiel wird der Wert der Eigenschaft [Attribute](./attributes-property-ado.md) für [Verbindungs](./connection-object-ado.md)-, [Feld](./field-object.md)-und [Eigenschafts](./property-object-ado.md) Objekte angezeigt. Er verwendet die [Name](./name-property-ado.md) -Eigenschaft, um den Namen der einzelnen **Felder** und **Eigenschaften** Objekte anzuzeigen.  
   
 ```  
 ' BeginAttributesVB  
@@ -128,8 +128,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Attribute-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [Name-Eigenschaft (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
- [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [Attribute-Eigenschaft (ADO)](./attributes-property-ado.md)   
+ [Verbindungs Objekt (ADO)](./connection-object-ado.md)   
+ [Field-Objekt](./field-object.md)   
+ [Name-Eigenschaft (ADO)](./name-property-ado.md)   
+ [Property-Objekt (ADO)](./property-object-ado.md)

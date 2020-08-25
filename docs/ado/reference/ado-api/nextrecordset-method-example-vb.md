@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a181482d7f0b2a1d6589209bc4b4e58ff11f9a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b73660a9eaa94cab33f11577f19bf9cc7cac19c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443102"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774029"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset-Methode – Beispiel (VB)
-In diesem Beispiel wird die [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) -Methode verwendet, um die Daten in einem Recordset anzuzeigen, das eine Verbund Befehls Anweisung verwendet, die aus drei separaten **Select** -Anweisungen besteht.  
+In diesem Beispiel wird die [NextRecordset](./nextrecordset-method-ado.md) -Methode verwendet, um die Daten in einem Recordset anzuzeigen, das eine Verbund Befehls Anweisung verwendet, die aus drei separaten **Select** -Anweisungen besteht.  
   
 ```  
 'BeginNextRecordsetVB  
@@ -96,5 +96,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [NextRecordset-Methode (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [NextRecordset-Methode (ADO)](./nextrecordset-method-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 719a647f42c66e73b9bd55ed0a7476dfb95934e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ab44fcbb8409cd866167d4fb58bebc1de906274
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441592"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776969"
 ---
 # <a name="value-property-ado"></a>Value-Eigenschaft (ADO)
 
-Gibt den Wert an, der einem [Feld](../../../ado/reference/ado-api/field-object.md), einem [Parameter](../../../ado/reference/ado-api/parameter-object.md)oder einem [Eigenschafts](../../../ado/reference/ado-api/property-object-ado.md) Objekt zugewiesen ist.
+Gibt den Wert an, der einem [Feld](./field-object.md), einem [Parameter](./parameter-object.md)oder einem [Eigenschafts](./property-object-ado.md) Objekt zugewiesen ist.
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte
 
-Legt einen **Variant** -Wert fest, der den Wert des-Objekts angibt, oder gibt diesen zurück. Der Standardwert hängt von der [Type](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft ab.
+Legt einen **Variant** -Wert fest, der den Wert des-Objekts angibt, oder gibt diesen zurück. Der Standardwert hängt von der [Type](./type-property-ado.md) -Eigenschaft ab.
   
 ## <a name="remarks"></a>Bemerkungen
 
@@ -39,25 +39,25 @@ Verwenden Sie die **value** -Eigenschaft zum Festlegen oder Zurückgeben von Dat
 ADO ermöglicht das Festlegen und Zurückgeben von langen Binärdaten mit der **value** -Eigenschaft.
   
 > [!NOTE]
-> Bei **Parameter** Objekten liest ADO die **value** -Eigenschaft nur einmal vom Anbieter. Wenn ein Befehl einen **Parameter** enthält, dessen **value** -Eigenschaft leer ist, und Sie ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mit dem Befehl erstellen, müssen Sie zuerst das **Recordset** schließen, bevor Sie die **value** -Eigenschaft abrufen. Andernfalls ist für einige Anbieter die **value** -Eigenschaft möglicherweise leer und enthält nicht den richtigen Wert.
+> Bei **Parameter** Objekten liest ADO die **value** -Eigenschaft nur einmal vom Anbieter. Wenn ein Befehl einen **Parameter** enthält, dessen **value** -Eigenschaft leer ist, und Sie ein [Recordset](./recordset-object-ado.md) mit dem Befehl erstellen, müssen Sie zuerst das **Recordset** schließen, bevor Sie die **value** -Eigenschaft abrufen. Andernfalls ist für einige Anbieter die **value** -Eigenschaft möglicherweise leer und enthält nicht den richtigen Wert.
 > 
-> Bei neuen **Feld** Objekten, die an die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekts angehängt wurden, muss die **value** -Eigenschaft festgelegt werden, bevor andere **Feld** Eigenschaften angegeben werden können. Zuerst muss ein bestimmter Wert für die **value** -Eigenschaft zugewiesen und in der **Fields** -Auflistung mit dem Namen [aktualisiert](../../../ado/reference/ado-api/update-method.md) werden. Anschließend können Sie auf andere Eigenschaften, z. b. den [Typ](../../../ado/reference/ado-api/type-property-ado.md) oder die [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) , zugreifen.
+> Bei neuen **Feld** Objekten, die an die [Fields](./fields-collection-ado.md) -Auflistung eines [Datensatz](./record-object-ado.md) -Objekts angehängt wurden, muss die **value** -Eigenschaft festgelegt werden, bevor andere **Feld** Eigenschaften angegeben werden können. Zuerst muss ein bestimmter Wert für die **value** -Eigenschaft zugewiesen und in der **Fields** -Auflistung mit dem Namen [aktualisiert](./update-method.md) werden. Anschließend können Sie auf andere Eigenschaften, z. b. den [Typ](./type-property-ado.md) oder die [Attribute](./attributes-property-ado.md) , zugreifen.
   
 ## <a name="applies-to"></a>Gilt für
 
 :::row:::
     :::column:::
-        [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
+        [Field-Objekt](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)  
+        [Parameter-Objekt](./parameter-object.md)  
     :::column-end:::
     :::column:::
-        [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Property-Objekt (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Beispiel für Wert Eigenschaft (VB)](../../../ado/reference/ado-api/value-property-example-vb.md) 
- [Beispiel für Wert Eigenschaft (VC + +)](../../../ado/reference/ado-api/value-property-example-vc.md) 
+[Beispiel für Wert Eigenschaft (VB)](./value-property-example-vb.md) 
+ [Beispiel für Wert Eigenschaft (VC + +)](./value-property-example-vc.md)

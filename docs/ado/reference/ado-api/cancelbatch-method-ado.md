@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8fa4d02dd10325726c83a6b645ebdd5b94397f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db1ae959094c07ea44e7e236e540070bea7814e5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451032"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776309"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch-Methode (ADO)
 Bricht ein ausstehendes Batch Update ab.  
@@ -36,27 +36,27 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Parameter  
  *AffectRecords*  
- Optional. Ein [affectenum](../../../ado/reference/ado-api/affectenum.md) -Wert, der angibt, wie viele Datensätze von der **CancelBatch** -Methode betroffen sind.  
+ Optional. Ein [affectenum](./affectenum.md) -Wert, der angibt, wie viele Datensätze von der **CancelBatch** -Methode betroffen sind.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Verwenden Sie die **CancelBatch** -Methode, um ausstehende Updates in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) im Batch Aktualisierungs Modus abzubrechen. Wenn sich das **Recordset** im sofortigen Update Modus befindet, wird beim Aufrufen von **CancelBatch** ohne **adaffectcurrent** ein Fehler generiert.  
+ Verwenden Sie die **CancelBatch** -Methode, um ausstehende Updates in einem [Recordset](./recordset-object-ado.md) im Batch Aktualisierungs Modus abzubrechen. Wenn sich das **Recordset** im sofortigen Update Modus befindet, wird beim Aufrufen von **CancelBatch** ohne **adaffectcurrent** ein Fehler generiert.  
   
- Wenn Sie den aktuellen Datensatz bearbeiten oder einen neuen Datensatz hinzufügen, wenn Sie **CancelBatch**aufrufen, ruft ADO zuerst die [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) -Methode auf, um alle zwischengespeicherten Änderungen abzubrechen. Anschließend werden alle ausstehenden Änderungen im **Recordset** abgebrochen.  
+ Wenn Sie den aktuellen Datensatz bearbeiten oder einen neuen Datensatz hinzufügen, wenn Sie **CancelBatch**aufrufen, ruft ADO zuerst die [CancelUpdate](./cancelupdate-method-ado.md) -Methode auf, um alle zwischengespeicherten Änderungen abzubrechen. Anschließend werden alle ausstehenden Änderungen im **Recordset** abgebrochen.  
   
- Der aktuelle Datensatz kann nach einem **CancelBatch** -Aufruf indetierbar sein, insbesondere, wenn Sie gerade einen neuen Datensatz hinzugefügt haben. Aus diesem Grund ist es ratsam, die aktuelle Daten Satz Position nach dem **CancelBatch** -Befehl auf einen bekannten Speicherort im **Recordset** festzulegen. Nennen Sie z. b. die Methode " [muvefirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) ".  
+ Der aktuelle Datensatz kann nach einem **CancelBatch** -Aufruf indetierbar sein, insbesondere, wenn Sie gerade einen neuen Datensatz hinzugefügt haben. Aus diesem Grund ist es ratsam, die aktuelle Daten Satz Position nach dem **CancelBatch** -Befehl auf einen bekannten Speicherort im **Recordset** festzulegen. Nennen Sie z. b. die Methode " [muvefirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) ".  
   
- Wenn der Versuch, ausstehende Updates abzubrechen, aufgrund eines Konflikts mit den zugrunde liegenden Daten (z. b. Wenn ein Datensatz von einem anderen Benutzer gelöscht wurde) fehlschlägt, gibt der Anbieter Warnungen an die [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung zurück, hält die Ausführung des Programms jedoch nicht an. Ein Laufzeitfehler tritt nur auf, wenn für alle angeforderten Datensätze Konflikte vorliegen. Verwenden Sie die [Filter](../../../ado/reference/ado-api/filter-property.md) -Eigenschaft (**adFilterAffectedRecords**) und die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) -Eigenschaft, um Datensätze mit Konflikten zu suchen.  
+ Wenn der Versuch, ausstehende Updates abzubrechen, aufgrund eines Konflikts mit den zugrunde liegenden Daten (z. b. Wenn ein Datensatz von einem anderen Benutzer gelöscht wurde) fehlschlägt, gibt der Anbieter Warnungen an die [Fehler](./errors-collection-ado.md) Auflistung zurück, hält die Ausführung des Programms jedoch nicht an. Ein Laufzeitfehler tritt nur auf, wenn für alle angeforderten Datensätze Konflikte vorliegen. Verwenden Sie die [Filter](./filter-property.md) -Eigenschaft (**adFilterAffectedRecords**) und die [Status](./status-property-ado-recordset.md) -Eigenschaft, um Datensätze mit Konflikten zu suchen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für UpdateBatch und CancelBatch-Methoden (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
- [Beispiel für UpdateBatch und CancelBatch-Methoden (VC + +)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
- [Cancel-Methode (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Cancel-Methode (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
- [CancelUpdate-Methode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [CancelUpdate-Methode (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Clear-Methode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [LockType-Eigenschaft (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [UpdateBatch-Methode](../../../ado/reference/ado-api/updatebatch-method.md)
+ [Beispiel für UpdateBatch und CancelBatch-Methoden (VB)](./updatebatch-and-cancelbatch-methods-example-vb.md)   
+ [Beispiel für UpdateBatch und CancelBatch-Methoden (VC + +)](./updatebatch-and-cancelbatch-methods-example-vc.md)   
+ [Cancel-Methode (ADO)](./cancel-method-ado.md)   
+ [Cancel-Methode (RDS)](../rds-api/cancel-method-rds.md)   
+ [CancelUpdate-Methode (ADO)](./cancelupdate-method-ado.md)   
+ [CancelUpdate-Methode (RDS)](../rds-api/cancelupdate-method-rds.md)   
+ [Clear-Methode (ADO)](./clear-method-ado.md)   
+ [LockType-Eigenschaft (ADO)](./locktype-property-ado.md)   
+ [UpdateBatch-Methode](./updatebatch-method.md)

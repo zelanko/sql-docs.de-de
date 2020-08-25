@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 455db4b01f6e25b6e280a6b33461ed6747cea284
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89dc7e47bbd286d790086bde5da24e0a3316eef3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443432"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774759"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel-und Mode-Eigenschaften (Beispiel) (VC + +)
-In diesem Beispiel wird die [Mode](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft verwendet, um eine exklusive Verbindung zu öffnen, und die [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) -Eigenschaft, um eine Transaktion zu öffnen, die isoliert von anderen Transaktionen durchgeführt wird.  
+In diesem Beispiel wird die [Mode](./mode-property-ado.md) -Eigenschaft verwendet, um eine exklusive Verbindung zu öffnen, und die [IsolationLevel](./isolationlevel-property.md) -Eigenschaft, um eine Transaktion zu öffnen, die isoliert von anderen Transaktionen durchgeführt wird.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -245,5 +245,5 @@ void PrintComError(_com_error &e) {
 **50 Jahre in den trad_cook des Buckingham-Palastes**  
 **Sushi, jemand? -trad_cook**   
 ## <a name="see-also"></a>Weitere Informationen  
- [IsolationLevel-Eigenschaft](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Mode-Eigenschaft (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
+ [IsolationLevel-Eigenschaft](./isolationlevel-property.md)   
+ [Mode-Eigenschaft (ADO)](./mode-property-ado.md)
