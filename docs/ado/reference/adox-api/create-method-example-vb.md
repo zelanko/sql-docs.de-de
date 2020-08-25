@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40a50d983365285ccf0001f46450613bdf78bd87
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 462b701250f285b26e5b778897e221e97fc4c9c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440202"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770819"
 ---
 # <a name="create-method-example-vb"></a>Create-Methode – Beispiel (VB)
-Der folgende Code zeigt, wie eine neue Microsoft Jet-Datenbank mit der [Create](../../../ado/reference/adox-api/create-method-adox.md) -Methode erstellt wird.  
+Der folgende Code zeigt, wie eine neue Microsoft Jet-Datenbank mit der [Create](./create-method-adox.md) -Methode erstellt wird.  
   
 ```  
 Attribute VB_Name = "Create"  
@@ -51,5 +51,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Create-Methode (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+ [Catalog-Objekt (ADOX)](./catalog-object-adox.md)   
+ [Create-Methode (ADOX)](./create-method-adox.md)

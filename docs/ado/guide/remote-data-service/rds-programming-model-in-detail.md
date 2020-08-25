@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad3cd950c958fce95c0264533040fbe9e1df634b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 310bcdad8358120a47cf01ec6734325ca5fa425d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452122"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759660"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS-Programmiermodell im Detail
 Im folgenden sind die wichtigsten Elemente des RDS-Programmiermodells aufgeführt:  
@@ -37,18 +37,18 @@ Im folgenden sind die wichtigsten Elemente des RDS-Programmiermodells aufgeführ
 ## <a name="rdsdataspace"></a>RDS. DataSpace  
  Die Client Anwendung muss den Server und das aufzurufende Serverprogramm angeben. In der Rückgabe erhält die Anwendung einen Verweis auf das Serverprogramm und kann den Verweis so behandeln, als ob es sich um das Serverprogramm handelt.  
   
- Das RDS-Objektmodell verkörpert diese Funktionalität mit dem [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) -Objekt.  
+ Das RDS-Objektmodell verkörpert diese Funktionalität mit dem [RDS. DataSpace](../../reference/rds-api/dataspace-object-rds.md) -Objekt.  
   
  Das Serverprogramm wird mit einer Programm Kennung oder *ProgID*angegeben. Der Server verwendet die *ProgID* und die Registrierung des Server Computers, um Informationen zum eigentlichen Programm zu finden, das initiiert werden soll.  
   
  RDS unterscheidet sich intern, abhängig davon, ob sich das Serverprogramm auf einem Remote Server über das Internet oder ein Intranet befindet. ein Server in einem lokalen Netzwerk; oder nicht auf einem Server, sondern in einer lokalen Dynamic Link Library (dll). Dieser Unterschied bestimmt, wie Informationen zwischen dem Client und dem Server ausgetauscht werden, und macht einen konkreten Unterschied in der Art des Verweises, der an die Client Anwendung zurückgegeben wird. Allerdings hat diese Unterscheidung aus ihrer Sicht keine besondere Bedeutung. Alles, was wichtig ist, ist, dass Sie einen verwendbaren Programm Verweis erhalten.  
   
 ## <a name="rdsserverdatafactory"></a>RDSServer. DataFactory  
- RDS stellt ein Standard Serverprogramm bereit, das entweder eine SQL-Abfrage für die Datenquelle ausführen und ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt zurückgeben oder ein **Recordset** -Objekt erstellen und die Datenquelle aktualisieren kann.  
+ RDS stellt ein Standard Serverprogramm bereit, das entweder eine SQL-Abfrage für die Datenquelle ausführen und ein [Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekt zurückgeben oder ein **Recordset** -Objekt erstellen und die Datenquelle aktualisieren kann.  
   
- Das RDS-Objektmodell verkörpert diese Funktion mit dem [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt.  
+ Das RDS-Objektmodell verkörpert diese Funktion mit dem [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) -Objekt.  
   
- Außerdem verfügt dieses Objekt über eine Methode zum Erstellen eines leeren **Recordset** -Objekts, das Sie Programm gesteuert ausfüllen können ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)), und eine weitere Methode zum umrechnen eines Recordset-Objekts in eine Text **Zeichenfolge** zum Erstellen einer Webseite ([ConvertTo String](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
+ Außerdem verfügt dieses Objekt über eine Methode zum Erstellen eines leeren **Recordset** -Objekts, das Sie Programm gesteuert ausfüllen können ([CreateRecordset](../../reference/rds-api/createrecordset-method-rds.md)), und eine weitere Methode zum umrechnen eines Recordset-Objekts in eine Text **Zeichenfolge** zum Erstellen einer Webseite ([ConvertTo String](../../reference/rds-api/converttostring-method-rds.md)).  
   
  Mit ADO können Sie einige der standardmäßigen Verbindungs-und Befehls Verhalten von **RDSServer. DataFactory** mit einem **DataFactory** -Handler und einer Anpassungs Datei überschreiben, die Verbindungs-, Befehls-und Sicherheitsparameter enthält.  
   
@@ -57,7 +57,7 @@ Im folgenden sind die wichtigsten Elemente des RDS-Programmiermodells aufgeführ
 ## <a name="rdsdatacontrol"></a>RDS. DataControl  
  RDS bietet die Möglichkeit, die Funktionalität des RDS zu kombinieren **. DataSpace** und **RDSServer. DataFactory.** Außerdem können visuelle Steuerelemente problemlos das **Recordset** -Objekt verwenden, das von einer Abfrage aus einer Datenquelle zurückgegeben wird. RDS-Versuche, für den häufigsten Fall, so weit wie möglich zu tun, um automatisch Zugriff auf Informationen auf einem Server zu erhalten und in einem visuellen Steuerelement anzuzeigen.  
   
- Das RDS-Objektmodell verkörpert diese Funktionalität mit dem [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt.  
+ Das RDS-Objektmodell verkörpert diese Funktionalität mit dem [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md) -Objekt.  
   
  Das **RDS. DataControl** hat zwei Aspekte. Ein Aspekt bezieht sich auf die Datenquelle. Wenn Sie den Befehl und die Verbindungsinformationen mithilfe der Eigenschaften " **Connect** " und " **SQL** " des **RDS festlegen. DataControl**, wird das RDS automatisch verwendet **. DataSpace** zum Erstellen eines Verweises auf das standardmäßige **RDSServer. DataFactory** -Objekt. Anschließend verwendet das **RDSServer. DataFactory** den **Connect** -Eigenschafts Wert, um eine Verbindung mit der Datenquelle herzustellen, den **SQL** -Eigenschafts Wert zum Abrufen eines **Recordsets** aus der Datenquelle zu verwenden und das **Recordset** -Objekt an das RDS-Objekt zurückzugeben **. DataControl**.  
   
@@ -66,19 +66,16 @@ Im folgenden sind die wichtigsten Elemente des RDS-Programmiermodells aufgeführ
  Das **RDS. Das DataControl** -Objekt verfügt auch über eigene Methoden zum Navigieren, Sortieren und Filtern der Zeilen des zugeordneten **Recordset** -Objekts. Diese Methoden sind ähnlich, aber nicht identisch mit den Methoden für das ADO- **Recordset** -Objekt.  
   
 ## <a name="events"></a>Events  
- RDS unterstützt zwei der eigenen Ereignisse, die vom ADO-Ereignis Modell unabhängig sind. Das [onleserystatechange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) -Ereignis wird immer dann aufgerufen, wenn **RDS. Die DataControl** -Eigenschaft " [leserystate](../../../ado/reference/rds-api/readystate-property-rds.md) " ändert sich, sodass Sie benachrichtigt werden, wenn ein asynchroner Vorgang erfolgreich abgeschlossen wurde, beendet wurde oder einen Fehler festgestellt hat. Das [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) -Ereignis wird immer dann aufgerufen, wenn ein Fehler auftritt, auch wenn der Fehler während eines asynchronen Vorgangs auftritt.  
+ RDS unterstützt zwei der eigenen Ereignisse, die vom ADO-Ereignis Modell unabhängig sind. Das [onleserystatechange](../../reference/rds-api/onreadystatechange-event-rds.md) -Ereignis wird immer dann aufgerufen, wenn **RDS. Die DataControl** -Eigenschaft " [leserystate](../../reference/rds-api/readystate-property-rds.md) " ändert sich, sodass Sie benachrichtigt werden, wenn ein asynchroner Vorgang erfolgreich abgeschlossen wurde, beendet wurde oder einen Fehler festgestellt hat. Das [OnError](../../reference/rds-api/onerror-event-rds.md) -Ereignis wird immer dann aufgerufen, wenn ein Fehler auftritt, auch wenn der Fehler während eines asynchronen Vorgangs auftritt.  
   
 > [!NOTE]
 >  Microsoft Internet Explorer stellt zwei weitere Ereignisse für RDS bereit: **ondatasetchanged**, das angibt, dass das **Recordset** funktionsfähig ist, aber trotzdem Zeilen abruft, und **ondatasetcomplete**, das angibt, dass das **Recordset** das Abrufen von Zeilen abgeschlossen hat.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [RDS-Programmiermodell mit Objekten](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [RDS-Szenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
-
+ [RDS-Programmiermodell mit Objekten](./rds-programming-model-with-objects.md)   
+ [DataControl-Objekt (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [DataFactory-Objekt (RDSServer)](../../reference/rds-api/datafactory-object-rdsserver.md)   
+ [DataSpace-Objekt (RDS)](../../reference/rds-api/dataspace-object-rds.md)   
+ [RDS-Szenario](./rds-scenario.md)   
+ [RDS-Tutorial](./rds-tutorial.md)   
+ [Verwendung und Sicherheit von RDS](./rds-usage-and-security.md)

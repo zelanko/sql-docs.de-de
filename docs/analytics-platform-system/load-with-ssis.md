@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea2a4f39b16fe2f8b23d6a6a229ce9b936e6e6d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401014"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766759"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Laden von Daten mit Integration Services in parallele Data Warehouse
 Bietet Referenz-und Bereitstellungs Informationen zum Laden von Daten in SQL Server parallele Data Warehouse mithilfe von SQL Server Integration Services-Paketen (SSIS).  
@@ -54,12 +54,12 @@ Standardmäßig führt Angebote Pakete mit 64-Bit-Binärdateien aus. Dies wird d
 Klicken Sie mit der rechten Maustaste auf das Paket, und wählen Sie **Paket ausführen**aus, um das Paket in SQL Server Data Tools auszuführen.  
   
 ### <a name="run-from-powershell"></a>Ausführen von PowerShell  
-So führen Sie das Paket mithilfe des Hilfsprogramms **dtexec** aus Windows PowerShell aus:`dtexec /FILE <packagePath>`  
+So führen Sie das Paket mithilfe des Hilfsprogramms **dtexec** aus Windows PowerShell aus: `dtexec /FILE <packagePath>`  
   
-Zum Beispiel, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Beispiel: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Ausführen über eine Windows-Eingabeaufforderung 
-So führen Sie das Paket mithilfe des Hilfsprogramms **dtexec** von einer Windows-Eingabeaufforderung aus:`dtexec /FILE <packagePath>`  
+So führen Sie das Paket mithilfe des Hilfsprogramms **dtexec** von einer Windows-Eingabeaufforderung aus: `dtexec /FILE <packagePath>`  
   
 Beispiel: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -154,7 +154,7 @@ Beim Laden von Daten mit Integration Services verwendet SQL Server PDW Sperren a
 ### <a name="a-simple-load-from-flat-file"></a><a name="Walkthrough"></a>A. Einfaches Laden aus Flatfile  
 In der folgenden exemplarischen Vorgehensweise wird eine einfache Daten Auslastung mithilfe Integration Services veranschaulicht, um Flatfiledaten in eine SQL Server PDW Appliance zu laden.  In diesem Beispiel wird davon ausgegangen, dass Integration Services bereits auf dem Client Computer installiert wurde und das SQL Server PDW Ziel wie oben beschrieben installiert wurde.  
   
-In diesem Beispiel werden wir in die `Orders` -Tabelle laden, die die folgende DDL enthält. Die `Orders` Tabelle ist Teil der `LoadExampleDB` Datenbank.  
+In diesem Beispiel werden wir in die- `Orders` Tabelle laden, die die folgende DDL enthält. Die `Orders` Tabelle ist Teil der `LoadExampleDB` Datenbank.  
   
 ```sql  
 CREATE TABLE LoadExampleDB.dbo.Orders (  
@@ -174,7 +174,7 @@ id        city           lastUpdateDate     orderdate
 2         Denver         2002-06-25         1999-01-02  
 ```  
   
-Erstellen Sie zur Vorbereitung der Auslastung die Flatfile `exampleLoad.txt`, die die Auslastungs Daten enthält:  
+Erstellen Sie zur Vorbereitung der Auslastung die Flatfile `exampleLoad.txt` , die die Auslastungs Daten enthält:  
   
 ```  
 id,city,lastUpdateDate,orderDate  
@@ -184,7 +184,7 @@ id,city,lastUpdateDate,orderDate
   
 Erstellen Sie zunächst ein Integration Services Paket, indem Sie die folgenden Schritte ausführen:  
   
-1.  Wählen Sie \(in SQL Server Data Tools\)SSDT **Datei**, **neu**und dann **Projekt**aus. Wählen Sie **Integration Services Projekt** aus den aufgeführten Optionen aus. Nennen Sie dieses `ExampleLoad`Projekt, und klicken Sie auf **OK**.  
+1.  \(Wählen Sie in SQL Server Data Tools SSDT \) **Datei**, **neu**und dann **Projekt**aus. Wählen Sie **Integration Services Projekt** aus den aufgeführten Optionen aus. Nennen Sie dieses Projekt `ExampleLoad` , und klicken Sie auf **OK**.  
   
 2.  Klicken Sie auf die Registerkarte **Ablauf Steuerung** , und ziehen Sie dann den **Datenfluss Task** aus der **Toolbox** in den Bereich **Ablauf Steuerung** .  
   
@@ -192,7 +192,7 @@ Erstellen Sie zunächst ein Integration Services Paket, indem Sie die folgenden 
   
 4.  Klicken Sie auf **Verbindungs-Manager** und dann auf **neu**.  
   
-5.  Geben Sie im Feld **Name des Verbindungs-Managers** einen anzeigen Amen für die Verbindung ein. In diesem Beispiel `Example Load Flat File CM`.  
+5.  Geben Sie im Feld **Name des Verbindungs-Managers** einen anzeigen Amen für die Verbindung ein. In diesem Beispiel `Example Load Flat File CM` .  
   
 6.  Klicken Sie auf **Durchsuchen** , und wählen Sie die `ExampleLoad.txt` Datei auf dem lokalen Computer.  
   
@@ -228,7 +228,7 @@ Geben Sie das Ziel für den Datenfluss an.
   
     **Zieldatenbank:**`LoadExampleDB`  
   
-6.  Wählen Sie die Ziel Tabelle `Orders`aus:.  
+6.  Wählen Sie die Ziel Tabelle aus: `Orders` .  
   
 7.  Wählen Sie als Lade Modus **Anfügen** aus, und klicken Sie auf **OK**.  
   
@@ -242,7 +242,7 @@ Geben Sie den Datenfluss von der Quelle zum Ziel an.
   
 Führen Sie das Paket auf dem Computer Integration Services aus.  
   
-1.  Klicken Sie in der Integration Services**Projektmappen-Explorer** (Rechte Spalte) mit der `Package.dtsx` rechten Maustaste, und wählen Sie **Ausführen**aus.  
+1.  Klicken Sie in der Integration Services**Projektmappen-Explorer** (Rechte Spalte) mit der rechten Maustaste, `Package.dtsx` und wählen Sie **Ausführen**aus.  
   
 2.  Das Paket wird ausgeführt, und **der Fortschritt** sowie alle Fehler werden im Statusbereich angezeigt. Verwenden Sie einen SQL-Client, um die Last zu bestätigen, oder überwachen Sie die Last über die SQL Server PDW Admin Console.  
   
@@ -253,7 +253,7 @@ Führen Sie das Paket auf dem Computer Integration Services aus.
 [Lernprogramm: Erstellen eines einfachen Pakets mithilfe eines Assistenten](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Erste Schritte (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [Beispiel für die dynamische Paket Generierung](https://go.microsoft.com/fwlink/?LinkId=202413)  
-[Entwerfen der SSIS-Pakete für Parallelität (SQL Server-Video)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Entwerfen der SSIS-Pakete für Parallelität (SQL Server-Video)](/previous-versions/sql/sql-server-2008/dd795221(v=sql.100))  
 [Beispiele für die Microsoft SQL Server Community: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Verbessern des inkrementellen Ladens mit Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [Transformation für langsam veränderliche Dimensionen](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  

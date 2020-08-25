@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 502bad9d142df67096f23bf89f60184a958de55a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc9a111b3315c7737229ec0240e5ee4ed6e406b9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440082"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770549"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner- und SetObjectOwner-Methoden – Beispiel (VB)
-In diesem Beispiel werden die [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) [-Methode](../../../ado/reference/adox-api/setobjectowner-method.md) und die-Methode für die Methode "". In diesem Code wird davon ausgegangen, dass die Gruppen Buchhaltungs Gruppe vorhanden ist. (Weitere Informationen zum Hinzufügen dieser Gruppe zum System finden Sie im [Beispiel Gruppen und Benutzer anfügen, ChangePassword-Methoden Beispiel (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) . Der Besitzer der Categories-Tabelle ist auf Accounting festgelegt.  
+In diesem Beispiel werden die [GetObjectOwner](./getobjectowner-method-adox.md) [-Methode](./setobjectowner-method.md) und die-Methode für die Methode "". In diesem Code wird davon ausgegangen, dass die Gruppen Buchhaltungs Gruppe vorhanden ist. (Weitere Informationen zum Hinzufügen dieser Gruppe zum System finden Sie im [Beispiel Gruppen und Benutzer anfügen, ChangePassword-Methoden Beispiel (VB)](./groups-and-users-append-changepassword-methods-example-vb.md) . Der Besitzer der Categories-Tabelle ist auf Accounting festgelegt.  
   
 ```  
 ' BeginOwnersVB  
@@ -63,6 +63,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetObjectOwner-Methode (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
- [SetObjectOwner-Methode](../../../ado/reference/adox-api/setobjectowner-method.md)
+ [Catalog-Objekt (ADOX)](./catalog-object-adox.md)   
+ [GetObjectOwner-Methode (ADOX)](./getobjectowner-method-adox.md)   
+ [SetObjectOwner-Methode](./setobjectowner-method.md)

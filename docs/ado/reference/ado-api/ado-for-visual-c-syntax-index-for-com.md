@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c5febeb8727348525a9fe4a4dd5f8e22a17678b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddd21ab22fb018004673e1a9655117d913e27a7e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451412"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771839"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO für Visual C++ – Syntaxindex für COM
 Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz, die auf Microsoft Visual C++ basiert.  
@@ -33,24 +33,24 @@ Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz, die auf Microsoft V
   
  Die Methoden-und Eigenschafts Syntax in Visual C++ ist für die folgenden Elemente aufgeführt:  
   
--   [Sammlungen](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
+-   [Sammlungen](./collections-ado-for-visual-c-syntax.md)  
   
--   [Command-Objekt](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
+-   [Command-Objekt](./command-ado-for-visual-c-syntax.md)  
   
--   [Verbindungs Objekt](../../../ado/reference/ado-api/connection-ado-for-visual-c-syntax.md)  
+-   [Verbindungs Objekt](./connection-ado-for-visual-c-syntax.md)  
   
--   [Error-Objekt](../../../ado/reference/ado-api/error-ado-for-visual-c-syntax.md)  
+-   [Error-Objekt](./error-ado-for-visual-c-syntax.md)  
   
--   [Field-Objekt](../../../ado/reference/ado-api/field-ado-for-visual-c-syntax.md)  
+-   [Field-Objekt](./field-ado-for-visual-c-syntax.md)  
   
--   [Parameter-Objekt](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
+-   [Parameter-Objekt](./parameter-ado-for-visual-c-syntax.md)  
   
--   [Datensatz-Objekt](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
+-   [Datensatz-Objekt](./record-ado-for-visual-c-syntax.md)  
   
--   [Recordset-Objekt](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
+-   [Recordset-Objekt](./recordset-ado-for-visual-c-syntax.md)  
   
--   [Stream-Objekt](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
+-   [Stream-Objekt](./stream-ado-for-visual-c-syntax.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO für Visual C++ Syntax Index mit #Import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
- [Microsoft ActiveX-Datenobjekte (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO für Visual C++ Syntax Index mit #Import](./ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [Microsoft ActiveX-Datenobjekte (ADO)](../../microsoft-activex-data-objects-ado.md)

@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 4aca9838-1ec6-4084-bd63-dc2d17d8ab7d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: da45248ff0ad50f08f07e098417c71a9df06246d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6f7175caaccd7943235bb489686c7ed80ef36865
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451392"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771809"
 ---
 # <a name="ado-object-model"></a>ADO-Objektmodell
 Die folgenden Abbildungen zeigen die ADO-Objekte und ihre Auflistungen.  
   
  ![ADO-Objektmodell](../../../ado/reference/ado-api/media/ado_object_model.gif "ADO_object_model")  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO-Sammlungen](../../../ado/reference/ado-api/ado-collections.md)   
- [Dynamische ADO-Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [ADO-Enumerationskonstanten](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Anhang B: ADO-Fehler](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
- [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md)   
- [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)   
- [ADO-Objekte und-Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
- [ADO-Eigenschaften](../../../ado/reference/ado-api/ado-properties.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO-Sammlungen](./ado-collections.md)   
+ [Dynamische ADO-Eigenschaften](./ado-dynamic-properties.md)   
+ [ADO-Enumerationskonstanten](./ado-enumerated-constants.md)   
+ [Anhang B: ADO-Fehler](../../guide/appendixes/appendix-b-ado-errors.md)   
+ [ADO-Ereignisse](./ado-events.md)   
+ [ADO-Methoden](./ado-methods.md)   
+ [ADO-Objekte und-Schnittstellen](./ado-objects-and-interfaces.md)   
+ [ADO-Eigenschaften](./ado-properties.md)

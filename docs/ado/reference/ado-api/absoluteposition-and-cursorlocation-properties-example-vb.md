@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 409d54437c8f43ce3b2f42e42fe8abe67f77d964
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5869e8203ca5e07564a6d3c6bc7767bccfd9d553
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451772"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759960"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Beispiel für AbsolutePosition und Cursor Location-Eigenschaften (VB)
-In diesem Beispiel wird veranschaulicht, wie die [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) -Eigenschaft den Fortschritt einer Schleife verfolgen kann, in der alle Datensätze eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)aufgelistet werden. Er verwendet die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft, um die **AbsolutePosition** -Eigenschaft zu aktivieren, indem der Cursor auf einen Client Cursor festgelegt wird.  
+In diesem Beispiel wird veranschaulicht, wie die [AbsolutePosition](./absoluteposition-property-ado.md) -Eigenschaft den Fortschritt einer Schleife verfolgen kann, in der alle Datensätze eines [Recordsets](./recordset-object-ado.md)aufgelistet werden. Er verwendet die [CursorLocation](./cursorlocation-property-ado.md) -Eigenschaft, um die **AbsolutePosition** -Eigenschaft zu aktivieren, indem der Cursor auf einen Client Cursor festgelegt wird.  
   
 ```  
 'BeginAbsolutePositionVB  
@@ -93,6 +93,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [AbsolutePosition-Eigenschaft (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [Cursor Location-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePosition-Eigenschaft (ADO)](./absoluteposition-property-ado.md)   
+ [Cursor Location-Eigenschaft (ADO)](./cursorlocation-property-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

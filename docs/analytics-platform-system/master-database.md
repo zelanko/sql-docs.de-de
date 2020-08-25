@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7bf3928bfb21d34d0f60e6c52be8dae43621e4bd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400986"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766739"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master Datenbank-parallele Data Warehouse
 In der SQL Server PDW Master-Datenbank werden Anmelde Informationen auf Geräteebene und der Daten Bank Katalog gespeichert. Es handelt sich um eine SQL Server Master-Datenbank, die sich auf dem Steuer Knoten befindet. Daher bietet es eine ähnliche Funktionalität wie SQL Server PDW, wie die Master-SQL Server bereitstellt.  
@@ -42,9 +42,9 @@ Folgendes ist *nicht möglich:*
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Aufgabe|BESCHREIBUNG|  
+|Aufgabe|Beschreibung|  
 |--------|---------------|  
-|Erstellen Sie eine vollständige Sicherung der Master-Datei.|Beispiel:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Weitere Informationen finden Sie unter [Backup Database](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
+|Erstellen Sie eine vollständige Sicherung der Master-Datei.|Beispiel:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Weitere Informationen finden Sie unter [Backup Database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016).|  
 |Wiederherstellen der Masterdatenbank|Verwenden Sie zum Wiederherstellen der Master-Datenbank im Configuration Manager Tool die Seite [Master Datenbank wiederherstellen](restore-the-master-database.md) .|  
 |Daten Bank Katalog Informationen anzeigen.|`SELECT * FROM master.sys.databases;`|  
 |Systemweite Anmelde-und Berechtigungsinformationen anzeigen.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
@@ -53,4 +53,3 @@ Folgendes ist *nicht möglich:*
 ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-  

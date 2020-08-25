@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c7615a61622be136b0be951b71a1788d5f45bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b307a4116731016858ce4cc74f37bdcfbd258f3a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442482"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772479"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount-Eigenschaft (ADO)
 
-Gibt die Anzahl der Datensätze in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt an.
+Gibt die Anzahl der Datensätze in einem [Recordset](./recordset-object-ado.md) -Objekt an.
   
 ## <a name="return-value"></a>Rückgabewert
 
@@ -53,11 +53,11 @@ Der Cursortyp des **Recordset** -Objekts wirkt sich darauf aus, ob die Anzahl de
   
 ## <a name="applies-to"></a>Gilt für
 
-[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[Recordset-Objekt (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[Filter-und RecordCount-Eigenschaften (Beispiel) (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
-[Filter-und RecordCount-Eigenschaften (Beispiel) (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
-[AbsolutePosition-Eigenschaft (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
-[PageCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)
+[Filter-und RecordCount-Eigenschaften (Beispiel) (VB)](./filter-and-recordcount-properties-example-vb.md)   
+[Filter-und RecordCount-Eigenschaften (Beispiel) (VC + +)](./filter-and-recordcount-properties-example-vc.md)   
+[AbsolutePosition-Eigenschaft (ADO)](./absoluteposition-property-ado.md)   
+[PageCount-Eigenschaft (ADO)](./pagecount-property-ado.md)

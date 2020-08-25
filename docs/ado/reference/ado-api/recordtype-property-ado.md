@@ -18,25 +18,25 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 578e9a0d03382e5e0dc143e07351cfb8890f278d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7cc82893ce5c20c27f44851b555850db4cd9cc8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442372"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772099"
 ---
 # <a name="recordtype-property-ado"></a>RecordType-Eigenschaft (ADO)
-Gibt den Typ des [Daten Satz](../../../ado/reference/ado-api/record-object-ado.md) Objekts an.  
+Gibt den Typ des [Daten Satz](./record-object-ado.md) Objekts an.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt einen [RecordTypeEnum](../../../ado/reference/ado-api/recordtypeenum.md) -Wert zurück.  
+ Gibt einen [RecordTypeEnum](./recordtypeenum.md) -Wert zurück.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die **RecordType** -Eigenschaft ist schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Record-Objekt (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Type-Eigenschaft (ADO)](../../../ado/reference/ado-api/type-property-ado.md)   
- [Type-Eigenschaft (ADO-Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [Type-Eigenschaft (ADO)](./type-property-ado.md)   
+ [Type-Eigenschaft (ADO-Stream)](./type-property-ado-stream.md)

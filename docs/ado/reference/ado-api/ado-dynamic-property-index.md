@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbd7933ac206f81460a7d0d50d0a7ac332cf154a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4777349384d372355a107cced1503d774ade4f7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451462"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771739"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO – Index für dynamische Eigenschaften
-Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften** Auflistungen der nicht geöffneten [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) -und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte dynamische Eigenschaften hinzufügen. Ein bestimmter Anbieter kann auch zusätzliche Eigenschaften einfügen, wenn diese Objekte geöffnet werden. Einige dieser Eigenschaften werden im Abschnitt " [Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md) von ADO.net" aufgeführt. Weitere Informationen finden Sie unter den jeweiligen Anbietern im Abschnitt [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md) .  
+Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften** Auflistungen der nicht geöffneten [Verbindungs](./connection-object-ado.md) -und [Recordset](./recordset-object-ado.md) -Objekte dynamische Eigenschaften hinzufügen. Ein bestimmter Anbieter kann auch zusätzliche Eigenschaften einfügen, wenn diese Objekte geöffnet werden. Einige dieser Eigenschaften werden im Abschnitt " [Eigenschaften](./ado-dynamic-properties.md) von ADO.net" aufgeführt. Weitere Informationen finden Sie unter den jeweiligen Anbietern im Abschnitt [Anhang A: Anbieter](../../guide/appendixes/appendix-a-providers.md) .  
   
  Die folgenden Tabellen sind Index übergreifende Indizes der ADO-und OLE DB Namen für jede dynamische Eigenschaft des Standard OLE DB Anbieters. Ihre Anbieter können weitere Eigenschaften hinzufügen, als hier aufgeführt sind. Informationen zu den spezifischen Informationen zu anbieterspezifischen dynamischen Eigenschaften finden Sie in der Dokumentation des Anbieters.  
   
- Die OLE DB Programmierer-Referenz verweist auf einen ADO-Eigenschaftsnamen mit dem Begriff "Beschreibung". Weitere Informationen zu diesen Standardeigenschaften erhalten Sie, indem Sie den Index in der [OLE DB-Dokumentation](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)für die OLE DB-Eigenschaft nach Namen suchen oder durchsuchen.  
+ Die OLE DB Programmierer-Referenz verweist auf einen ADO-Eigenschaftsnamen mit dem Begriff "Beschreibung". Weitere Informationen zu diesen Standardeigenschaften erhalten Sie, indem Sie den Index in der [OLE DB-Dokumentation](/previous-versions/windows/desktop/ms722784(v=vs.85))für die OLE DB-Eigenschaft nach Namen suchen oder durchsuchen.  
   
 ## <a name="connection-dynamic-properties"></a>Dynamische Eigenschaften der Verbindung  
   

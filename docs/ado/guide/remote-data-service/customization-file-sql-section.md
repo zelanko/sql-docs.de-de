@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ceb97d4859126c2116383196db5e6c71affb77f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7be4aaa2a92de4f778ee69422b97ceb169411c10
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452242"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759824"
 ---
 # <a name="customization-file-sql-section"></a>SQL-Abschnitt der Anpassungsdatei
 Der **SQL** -Abschnitt kann eine neue SQL-Zeichenfolge enthalten, die die Client Befehls Zeichenfolge ersetzt. Wenn im Abschnitt keine SQL-Zeichenfolge vorhanden ist, wird der Abschnitt ignoriert.  
@@ -46,18 +46,16 @@ SQL = " "
  **SQL =**   
  ***SqlString***  
   
-|Teil|Beschreibung|  
+|Teil|BESCHREIBUNG|  
 |----------|-----------------|  
 |**SQL**|Eine literale Zeichenfolge, die angibt, dass dies ein SQL-Abschnitts Eintrag ist.|  
 |***SqlString***|Eine SQL-Zeichenfolge, die die Client Zeichenfolge ersetzt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Bereich für die Anpassungs Dateiverbindung](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Abschnitt "Anpassungs Datei Protokolle"](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Benutzer Listen Abschnitt "Anpassungs Datei"](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Erforderliche Client Einstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Grundlegendes zur Anpassungs Datei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+ [Bereich für die Anpassungs Dateiverbindung](./customization-file-connect-section.md)   
+ [Abschnitt "Anpassungs Datei Protokolle"](./customization-file-logs-section.md)   
+ [Benutzer Listen Abschnitt "Anpassungs Datei"](./customization-file-userlist-section.md)   
+ [DataFactory-Anpassung](./datafactory-customization.md)   
+ [Erforderliche Client Einstellungen](./required-client-settings.md)   
+ [Grundlegendes zur Anpassungs Datei](./understanding-the-customization-file.md)   
+ [Schreiben Ihres eigenen benutzerdefinierten Handlers](./writing-your-own-customized-handler.md)

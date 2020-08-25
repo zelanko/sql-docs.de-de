@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 16368fe948d2cefeb052d503385c99cedfb097ff
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448073"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Häufige Fehler bei Transparent Data Encryption (TDE) mit vom Kunden verwalteten Schlüsseln in Azure Key Vault
 
@@ -165,7 +165,7 @@ Vergewissern Sie sich, dass die logische SQL Server-Instanz über Berechtigungen
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>Abrufen des TDE-Status aus dem Aktivitätsprotokoll
 
-Um eine Überwachung des Datenbankstatus im Hinblick auf Azure Key Vault-Schlüsselzugriffsprobleme zu ermöglichen, werden im [Aktivitätsprotokoll](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) für die Ressourcen-ID basierend auf Azure Resource Manager-URL und Abonnement+Ressourcengruppe+Servername+Datenbankname die folgenden Ereignisse protokolliert: 
+Um die Überwachung des Datenbankstatus im Hinblick auf Azure Key Vault-Schlüsselzugriffsprobleme zu ermöglichen, werden die folgenden Ereignisse im [Aktivitätsprotokoll](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) protokolliert. Die Ressourcen-ID basiert auf der Azure Resource Manager-URL und Abonnement+Ressourcengruppe+Servername+Datenbankname: 
 
 **Ereignis, wenn der Dienst den Zugriff auf den Azure Key Vault-Schlüssel verliert**
 

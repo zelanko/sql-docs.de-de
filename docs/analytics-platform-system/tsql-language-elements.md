@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 148dc3033fdcf0fe9b5e86f4e3efa69717c32dfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d28d64c4c59655c1f08eb0e4c6dc979a7814652
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399836"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778409"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>T-SQL-Sprachelemente für parallele Data Warehouse
 T-SQL-Sprachelemente für das Analytics Platform System (APS) SQL Server parallel Data Warehouse (PDW).
@@ -23,7 +23,7 @@ T-SQL-Sprachelemente für das Analytics Platform System (APS) SQL Server paralle
 * [Syntaxkonventionen](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [Benennungsregeln für Objekte](../relational-databases/databases/database-identifiers.md)
 * [Reservierte Schlüsselwörter](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [Sortierungen](https://msdn.microsoft.com/library/ff848763.aspx)
+* [Sortierungen](../t-sql/statements/collations.md?view=sql-server-ver15)
 * [Kommentare](../t-sql/language-elements/comment-transact-sql.md)
 * [Konstanten](../t-sql/data-types/constants-transact-sql.md)
 * [Datentypen](../t-sql/data-types/data-types-transact-sql.md)

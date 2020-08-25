@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e80c140e5abab80e7c33199cb9401fe9d2774161
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d20e44a46309580f85a6d35e609cdade2b4f31c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438952"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768129"
 ---
 # <a name="handler-property-rds"></a>Handler-Eigenschaft (RDS)
-Gibt den Namen eines serverseitigen Anpassungsprogramms (Handler) an, das die Funktionalität von [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)erweitert, sowie alle Parameter, die vom *Handler*verwendet werden.  
+Gibt den Namen eines serverseitigen Anpassungsprogramms (Handler) an, das die Funktionalität von [RDSServer. DataFactory](./datafactory-object-rdsserver.md)erweitert, sowie alle Parameter, die vom *Handler*verwendet werden.  
   
- **Gilt für:** [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ **Gilt für:** [DataControl Object (RDS)](./datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
@@ -38,26 +38,24 @@ DataControl.Handler = String
   
 #### <a name="parameters"></a>Parameter  
  *DataControl*  
- Eine Objekt Variable, die einen [RDS darstellt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt.  
+ Eine Objekt Variable, die einen [RDS darstellt. DataControl](./datacontrol-object-rds.md) -Objekt.  
   
  *String*  
  Ein **Zeichen** folgen Wert, der den Namen des Handlers und alle Parameter enthält, die alle durch Kommas getrennt sind (z `"handlerName,parm1,parm2,...,parm` *N* `"` . b. N).  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Eigenschaft unterstützt [Anpassungen](../../../ado/guide/remote-data-service/datafactory-customization.md), eine Funktion, die das Festlegen der Eigenschaft " [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) " auf " **adUseClient**" erfordert.  
+ Diese Eigenschaft unterstützt [Anpassungen](../../guide/remote-data-service/datafactory-customization.md), eine Funktion, die das Festlegen der Eigenschaft " [Cursor Location](../ado-api/cursorlocation-property-ado.md) " auf " **adUseClient**" erfordert.  
   
  Der Name des Handlers und der zugehörigen Parameter werden ggf. durch Kommas (",") getrennt. Ein unvorhersehbares Verhalten ergibt sich, wenn ein Semikolon (";") an einer beliebigen Stelle innerhalb der *Zeichen*Folge Sie können einen eigenen Handler schreiben, sofern er die **idatafactoriyhandler** -Schnittstelle unterstützt.  
   
  Der Name des Standard Handlers ist **msdfmap. Der Handler**, und sein Standardparameter ist eine Anpassungs Datei mit dem Namen **MSDFMAP.INI**. Verwenden Sie diese Eigenschaft, um alternative Anpassungs Dateien aufzurufen, die vom Server Administrator erstellt wurden.  
   
- Die Alternative zum Festlegen der **Handlereigenschaft** ist das Angeben eines Handlers und von Parametern in der [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft. Das heißt, "**Handler =**_HandlerName, Parameter1, Parameter2,...;_".  
+ Die Alternative zum Festlegen der **Handlereigenschaft** ist das Angeben eines Handlers und von Parametern in der [ConnectionString](../ado-api/connectionstring-property-ado.md) -Eigenschaft. Das heißt, "**Handler =**_HandlerName, Parameter1, Parameter2,...;_".  
   
 ## <a name="applies-to"></a>Gilt für  
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl-Objekt (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Handlereigenschaft (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
- [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Beispiel für Handlereigenschaft (VB)](./handler-property-example-vb.md)   
+ [DataFactory-Anpassung](../../guide/remote-data-service/datafactory-customization.md)   
+ [DataFactory-Objekt (RDSServer)](./datafactory-object-rdsserver.md)

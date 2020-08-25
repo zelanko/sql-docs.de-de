@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 477db26b27b0b6222da55585661db1dc37d64b82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51f325977e068e89e540a798f9bccdfa2c784f8e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438782"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767729"
 ---
 # <a name="rds-objects"></a>RDS-Objekte
 > [!IMPORTANT]
@@ -27,12 +27,10 @@ ms.locfileid: "88438782"
   
 |Object|Beschreibung|  
 |-|-|  
-|[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Bindet ein Datenabfrage- **Recordset** an ein oder mehrere Steuerelemente (z. b. ein Textfeld, ein Raster Steuerelement oder ein Kombinations Feld), um die **Recordsetdaten** auf einer Webseite anzuzeigen.<br /><br /> Das **DataControl** -Objekt ist für die Skripterstellung sicher.|  
-|[DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Implementiert Methoden, die Lese-/Schreibdaten Zugriff auf angegebene Datenquellen für Client seitige Anwendungen bereitstellen.<br /><br /> Das **DataFactory** -Objekt ist für die Skripterstellung nicht sicher.|  
-|[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Erstellt Client seitige Proxys für benutzerdefinierte Geschäftsobjekte auf der mittleren Ebene.<br /><br /> Das **DataSpace** -Objekt ist für die Skripterstellung sicher.|  
-|[IRDSService-Schnittstelle (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Macht die [invokeservice (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) -Methode verfügbar, die verwendet wird, um einen Zeiger auf die angeforderte Schnittstelle auf einer leistungsfähigeren Version des-Objekts zurückzugeben.|  
+|[DataControl (RDS)](./datacontrol-object-rds.md)|Bindet ein Datenabfrage- **Recordset** an ein oder mehrere Steuerelemente (z. b. ein Textfeld, ein Raster Steuerelement oder ein Kombinations Feld), um die **Recordsetdaten** auf einer Webseite anzuzeigen.<br /><br /> Das **DataControl** -Objekt ist für die Skripterstellung sicher.|  
+|[DataFactory (RDSServer)](./datafactory-object-rdsserver.md)|Implementiert Methoden, die Lese-/Schreibdaten Zugriff auf angegebene Datenquellen für Client seitige Anwendungen bereitstellen.<br /><br /> Das **DataFactory** -Objekt ist für die Skripterstellung nicht sicher.|  
+|[DataSpace (RDS)](./dataspace-object-rds.md)|Erstellt Client seitige Proxys für benutzerdefinierte Geschäftsobjekte auf der mittleren Ebene.<br /><br /> Das **DataSpace** -Objekt ist für die Skripterstellung sicher.|  
+|[IRDSService-Schnittstelle (RDS)](./irdsservice-interface-rds.md)|Macht die [invokeservice (RDS)](./invokeservice-rds.md) -Methode verfügbar, die verwendet wird, um einen Zeiger auf die angeforderte Schnittstelle auf einer leistungsfähigeren Version des-Objekts zurückzugeben.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [RDS-API-Referenz](../../../ado/reference/rds-api/rds-api-reference.md)
-
-
+ [RDS-API-Referenz](./rds-api-reference.md)

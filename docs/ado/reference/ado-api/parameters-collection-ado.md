@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70a3554ed1ef0c94965e340f303cc3208c1962fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06020bb66a8fd986d3fbf38bda59b98e29e66386
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442762"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773339"
 ---
 # <a name="parameters-collection-ado"></a>Parameters-Collection (ADO)
-Enthält alle [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekte eines [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekts.  
+Enthält alle [Parameter](./parameter-object.md) Objekte eines [Befehls](./command-object-ado.md) Objekts.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Ein **Command** -Objekt verfügt über eine **Parameter** Auflistung aus **Parameter** Objekten.  
   
- Wenn Sie die [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode für die **Parameter** Auflistung eines **Befehls** Objekts verwenden, werden Anbieter Parameterinformationen für die gespeicherte Prozedur oder parametrisierte Abfrage abgerufen, die im **Command** -Objekt angegeben sind. Einige Anbieter unterstützen keine Aufrufe gespeicherter Prozeduren oder parametrisierte Abfragen. Wenn Sie die **Refresh** -Methode für die **Parameter** Auflistung aufrufen, wenn Sie einen solchen Anbieter verwenden, wird ein Fehler zurückgegeben.  
+ Wenn Sie die [Refresh](./refresh-method-ado.md) -Methode für die **Parameter** Auflistung eines **Befehls** Objekts verwenden, werden Anbieter Parameterinformationen für die gespeicherte Prozedur oder parametrisierte Abfrage abgerufen, die im **Command** -Objekt angegeben sind. Einige Anbieter unterstützen keine Aufrufe gespeicherter Prozeduren oder parametrisierte Abfragen. Wenn Sie die **Refresh** -Methode für die **Parameter** Auflistung aufrufen, wenn Sie einen solchen Anbieter verwenden, wird ein Fehler zurückgegeben.  
   
  Wenn Sie keine eigenen **Parameter** Objekte definiert haben und auf die **Parameter** Auflistung zugreifen, bevor Sie die **Aktualisierungs** Methode aufrufen, ruft ADO die-Methode automatisch auf und füllt die-Auflistung für Sie auf.  
   
- Sie können die Aufrufe des Anbieters minimieren, um die Leistung zu verbessern, wenn Sie die Eigenschaften der Parameter kennen, die der gespeicherten Prozedur oder der parametrisierten Abfrage zugeordnet sind, die Sie aufrufen möchten. Verwenden Sie die Methode " [kreateparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) ", um **Parameter** Objekte mit den entsprechenden Eigenschaften Einstellungen zu erstellen, und fügen Sie Sie mithilfe der [Append](../../../ado/reference/ado-api/append-method-ado.md) -Methode der **Parameter** Auflistung hinzu. Dies ermöglicht es Ihnen, Parameterwerte festzulegen und zurückzugeben, ohne den Anbieter für die Parameterinformationen aufrufen zu müssen. Wenn Sie in einen Anbieter schreiben, der keine Parameterinformationen bereitstellt, müssen Sie die **Parameter** Auflistung mithilfe dieser Methode manuell auffüllen, damit Sie Parameter verwenden können. Verwenden Sie die [Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) -Methode, um bei Bedarf **Parameter** Objekte aus der **Parameter** Auflistung zu entfernen.  
+ Sie können die Aufrufe des Anbieters minimieren, um die Leistung zu verbessern, wenn Sie die Eigenschaften der Parameter kennen, die der gespeicherten Prozedur oder der parametrisierten Abfrage zugeordnet sind, die Sie aufrufen möchten. Verwenden Sie die Methode " [kreateparameter](./createparameter-method-ado.md) ", um **Parameter** Objekte mit den entsprechenden Eigenschaften Einstellungen zu erstellen, und fügen Sie Sie mithilfe der [Append](./append-method-ado.md) -Methode der **Parameter** Auflistung hinzu. Dies ermöglicht es Ihnen, Parameterwerte festzulegen und zurückzugeben, ohne den Anbieter für die Parameterinformationen aufrufen zu müssen. Wenn Sie in einen Anbieter schreiben, der keine Parameterinformationen bereitstellt, müssen Sie die **Parameter** Auflistung mithilfe dieser Methode manuell auffüllen, damit Sie Parameter verwenden können. Verwenden Sie die [Delete](./delete-method-ado-parameters-collection.md) -Methode, um bei Bedarf **Parameter** Objekte aus der **Parameter** Auflistung zu entfernen.  
   
  Die Objekte in der **Parameters** -Auflistung eines **Recordsets** gehen außerhalb des gültigen Bereichs (daher nicht verfügbar), wenn das **Recordset** geschlossen wird.  
   
@@ -83,9 +83,9 @@ Enthält alle [Parameter](../../../ado/reference/ado-api/parameter-object.md) Ob
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Parameter Sammlungs Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [Parameter Sammlungs Eigenschaften, Methoden und Ereignisse](./parameters-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [Kreateparameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)
+ [Append-Methode (ADO)](./append-method-ado.md)   
+ [Kreateparameter-Methode (ADO)](./createparameter-method-ado.md)   
+ [Parameter-Objekt](./parameter-object.md)

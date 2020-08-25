@@ -1,4 +1,5 @@
 ---
+description: OLE DB-Ziel
 title: OLE DB-Ziel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477792"
 ---
 # <a name="ole-db-destination"></a>OLE DB-Ziel
 
@@ -129,6 +130,8 @@ ms.locfileid: "86908396"
   
 > [!NOTE]  
 >  Die **CommandTimeout** -Eigenschaft des OLE DB-Ziels ist nicht im **Ziel-Editor für OLE DB**verfügbar, sie kann jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden. Darüber hinaus sind bestimmte Optionen für schnelles Laden nur im Dialogfeld **Erweiterter Editor**verfügbar. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt OLE DB-Ziel von [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
+> 
+>  Die Eigenschaft **CommandTimeout** ist nur dann wirksam, wenn der Datenzugriffsmodus **SQL-Befehl** lautet.
   
 ### <a name="static-options"></a>Statische Optionen  
  **Teilcache**  

@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 5dac737a-b77e-47d3-9228-cd52b7a97b0a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f819834240a5dcabb245d44b110109df520f413
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5709318d51d9e29a017fcd3c36c2aa38a1296cd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441102"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778249"
 ---
 # <a name="cubedef-object-properties-methods-and-events"></a>CubeDef-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [Description-Eigenschaft](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Description-Eigenschaft](./description-property-ado-md.md)  
   
- [Dimensions Auflistung](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
+ [Dimensions Auflistung](./dimensions-collection-ado-md.md)  
   
- [Name-Eigenschaft](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Name-Eigenschaft](./name-property-ado-md.md)  
   
- ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ ['Properties'-Sammlung](../ado-api/properties-collection-ado.md)  
   
 ## <a name="methods"></a>Methoden  
- [Getschemaobject-Methode](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)  
+ [Getschemaobject-Methode](./getschemaobject-method-ado-md.md)  
   
 ## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CubeDef-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)
+ [CubeDef-Objekt (ADO MD)](./cubedef-object-ado-md.md)

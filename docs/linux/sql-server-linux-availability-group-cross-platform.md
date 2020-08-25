@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren einer SQL Server Always On-Verfügbarkeitsgruppe unter Windows und Linux
-description: Konfigurieren Sie eine SQL Server-Verfügbarkeitsgruppe mit Replikaten unter Windows und Linux.
+description: Erfahren Sie, wie Sie eine SQL Server-Always On-Verfügbarkeitsgruppe mit einem Replikat auf einem Windows-Server und dem anderen Replikat auf einem Linux-Server erstellen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2eec1f7f24f8465fb5d2bd4406de4c11aef8a518
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d38aed51796609a9fb97c2f6d06a7383fba9dde
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773588"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088951"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Konfigurieren einer SQL Server Always On-Verfügbarkeitsgruppe unter Windows und Linux (plattformübergreifend)
 

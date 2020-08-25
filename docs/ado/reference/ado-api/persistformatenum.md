@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5730ca6a0d0bae791dce9327e365a9a38a9857f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4f83189a241b396cba613d9df0d6c0b1aa1328e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442732"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773219"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
-Gibt das Format an, in dem ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)gespeichert werden soll.  
+Gibt das Format an, in dem ein [Recordset](./recordset-object-ado.md)gespeichert werden soll.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|Gibt das Microsoft Advanced Data TableGram (ADTG)-Format an.|  
 |**adpersistado**|1|Gibt an, dass das eigene Extensible Markup Language-Format (XML) verwendet wird. Dieser Wert ist identisch mit adpersistxml und wird aus Gründen der Abwärtskompatibilität eingeschlossen.|  
@@ -36,10 +36,10 @@ Gibt das Format an, in dem ein [Recordset](../../../ado/reference/ado-api/record
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |AdoEnums. persistformat. ADTG|  
 |AdoEnums.PersistFormat.XML|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Save-Methode](../../../ado/reference/ado-api/save-method.md)
+ [Save-Methode](./save-method.md)

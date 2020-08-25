@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6069b3d99e021be01d8fd2d724b7c25868167bd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f54f1491327b9b0294dec1332a3fb9ff8b2c69c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440472"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771389"
 ---
 # <a name="append-method-adox-tables"></a>Append-Methode (ADOX-Tabellen)
-Fügt der [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) -Auflistung ein neues [Table](../../../ado/reference/adox-api/table-object-adox.md) -Objekt hinzu.  
+Fügt der [Tables](./tables-collection-adox.md) -Auflistung ein neues [Table](./table-object-adox.md) -Objekt hinzu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,15 +42,15 @@ Tables.Append Table
  Wenn der Anbieter das Erstellen von Tabellen nicht unterstützt, tritt ein Fehler auf.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Tables-Auflistung (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Tables-Collection (ADOX)](./tables-collection-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Methoden und Tabellen Append-Methoden, Name Property example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Beispiel für eine Beispiel Katalog Eigenschaft (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Append-Methode (ADOX-Spalten)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append-Methode (ADOX-Gruppen)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append-Methode (ADOX-Indizes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append-Methode (ADOX-Schlüssel)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append-Methode (ADOX-Prozeduren)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append-Methode (ADOX-Benutzer)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Methoden und Tabellen Append-Methoden, Name Property example (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Beispiel für eine Beispiel Katalog Eigenschaft (VB)](./parentcatalog-property-example-vb.md)   
+ [Append-Methode (ADOX-Spalten)](./append-method-adox-columns.md)   
+ [Append-Methode (ADOX-Gruppen)](./append-method-adox-groups.md)   
+ [Append-Methode (ADOX-Indizes)](./append-method-adox-indexes.md)   
+ [Append-Methode (ADOX-Schlüssel)](./append-method-adox-keys.md)   
+ [Append-Methode (ADOX-Prozeduren)](./append-method-adox-procedures.md)   
+ [Append-Methode (ADOX-Benutzer)](./append-method-adox-users.md)   
+ [Append-Methode (ADOX-Sichten)](./append-method-adox-views.md)

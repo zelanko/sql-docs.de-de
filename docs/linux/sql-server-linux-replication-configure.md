@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren der Replikation (SSMS)
-description: In diesem Artikel ist beschrieben, wie Sie SQL Server-Replikation unter Linux konfigurieren.
+description: Erfahren Sie, wie Sie die SQL Server-Replikation unter Linux konfigurieren. Konfigurieren Sie die Replikation entweder in SQL Server Management Studio (SSMS) oder mit gespeicherten Transact-SQL-Prozeduren.
 ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,12 +12,12 @@ ms.prod_service: database-engine
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f367f7d6c41600ddb26d12b28ae14d0fc1cdffc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 61943baf9083d3ca33bd37e0fe9759a4c530dfe2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882693"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088846"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Konfigurieren von SQL Server-Replikation unter Linux
 
@@ -73,7 +73,7 @@ So konfigurieren Sie den Verteiler:
 
 1. Stellen Sie aus SSMS eine Verbindung mit Ihrer Instanz von SQL Server im Objekt-Explorer her.
 
-1. Klicken Sie mit der rechten Maustaste auf **Replikation**, und klicken Sie auf **Verteilung konfigurieren...** .
+1. Klicken Sie mit der rechten Maustaste auf **Replikation**, und klicken Sie auf **Verteilung konfigurieren...**.
 
 1. Befolgen Sie die Anweisungen für den **Verteilungskonfigurations-Assistenten**.
 

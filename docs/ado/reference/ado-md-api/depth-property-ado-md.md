@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5633df4158aeafc2e650d5c89aa5d83b02fe8a11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e050f73aaa2ceb174c115218796e166b72f39381
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441132"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778209"
 ---
 # <a name="depth-property-ado-md"></a>Depth-Eigenschaft (ADO MD)
-Gibt die Anzahl der Ebenen zwischen der [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) und dem Stamm der Hierarchie an.  
+Gibt die Anzahl der Ebenen zwischen der [Ebene](./level-object-ado-md.md) und dem Stamm der Hierarchie an.  
   
 ## <a name="return-values"></a>Rückgabewerte  
  Gibt eine ganze Zahl zurück, und ist schreibgeschützt.  
@@ -34,7 +34,7 @@ Gibt die Anzahl der Ebenen zwischen der [Ebene](../../../ado/reference/ado-md-ap
  Eine **Ebene** im Stamm einer Hierarchie hat einen **tiefen** Wert von NULL (0).  
   
 ## <a name="applies-to"></a>Gilt für  
- [Level-Objekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+ [Level-Objekt (ADO MD)](./level-object-ado-md.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [LevelDepth-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)
+ [LevelDepth-Eigenschaft (ADO MD)](./leveldepth-property-ado-md.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4627ac4b67e31861ff91cb516076a561a7a315e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b09994dba988d94c2e0f0f7cd9f68eef5790dde0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438562"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767319"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21-Methode (RDS)
 Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge für die Verwendung mit ADO 2,1 angegeben wird.  
@@ -62,9 +62,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  Der *handlerstring* -Parameter kann NULL sein. Was in diesem Fall geschieht, hängt von der Konfiguration des RDS-Servers ab. Die handlerzeichenfolge "msdfmap. Handler" gibt an, dass der von Microsoft bereitgestellte Handler (Msdfmap.dll) verwendet werden soll. Eine handlerzeichenfolge von "masdfmap. Handler, sample.ini" gibt an, dass der Msdfmap.dll Handler verwendet werden sollte und dass das Argument "sample.ini" an den Handler übermittelt werden soll. Msdfmap.dll interpretiert dann das Argument als Richtung, um die sample.ini zu verwenden, um die Verbindungs-und Abfrage Zeichenfolgen zu überprüfen.  
   
 > [!NOTE]
->  Die **Synchronize21** -Methode ist einfach eine Version der [Synchronisierungsmethode (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md). Wenn Sie die **Synchronisierungs** Methode für die Kommunikation mit ADO 2,1 verwenden müssen, kann stattdessen die **Synchronize21** -Methode aufgerufen werden. Die Funktionen der **Synchronisierungs** Methode in ADO 2,5 und höher sind eine supermenge der Funktionen, die für dieselbe Methode in ADO 2,1 bereitgestellt werden.  
+>  Die **Synchronize21** -Methode ist einfach eine Version der [Synchronisierungsmethode (RDS)](./synchronize-method-rds.md). Wenn Sie die **Synchronisierungs** Methode für die Kommunikation mit ADO 2,1 verwenden müssen, kann stattdessen die **Synchronize21** -Methode aufgerufen werden. Die Funktionen der **Synchronisierungs** Methode in ADO 2,5 und höher sind eine supermenge der Funktionen, die für dieselbe Methode in ADO 2,1 bereitgestellt werden.  
   
 ## <a name="applies-to"></a>Gilt für  
- [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory-Objekt (RDSServer)](./datafactory-object-rdsserver.md)

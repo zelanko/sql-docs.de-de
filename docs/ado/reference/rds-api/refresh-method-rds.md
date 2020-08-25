@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 372d4a2506f5ea7d14905ffed0842ca5cf2ce6ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b55794815808b65ae4ad7f1dc5cc684360766aa8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438712"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767549"
 ---
 # <a name="refresh-method-rds"></a>Refresh-Methode (RDS)
-Fragt die in der [Connect](../../../ado/reference/rds-api/connect-property-rds.md) -Eigenschaft angegebene Datenquelle ab und aktualisiert die Abfrageergebnisse.  
+Fragt die in der [Connect](./connect-property-rds.md) -Eigenschaft angegebene Datenquelle ab und aktualisiert die Abfrageergebnisse.  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
@@ -40,22 +40,20 @@ DataControl.Refresh
   
 #### <a name="parameters"></a>Parameter  
  *DataControl*  
- Eine Objekt Variable, die einen [RDS darstellt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt.  
+ Eine Objekt Variable, die einen [RDS darstellt. DataControl](./datacontrol-object-rds.md) -Objekt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Sie müssen die Eigenschaften " [Connect](../../../ado/reference/rds-api/connect-property-rds.md)", " [Server](../../../ado/reference/rds-api/server-property-rds.md)" und " [SQL](../../../ado/reference/rds-api/sql-property.md) " festlegen, bevor Sie die **Refresh** -Methode verwenden. Alle Daten gebundenen Steuerelemente auf dem Formular, das einem **RDS zugeordnet ist. Das DataControl** -Objekt reflektiert den neuen Satz von Datensätzen. Alle bereits vorhandenen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte werden freigegeben, und alle nicht gespeicherten Änderungen werden verworfen. Die **Aktualisierungs Methode erstellt** automatisch den ersten Datensatz zum aktuellen Datensatz.  
+ Sie müssen die Eigenschaften " [Connect](./connect-property-rds.md)", " [Server](./server-property-rds.md)" und " [SQL](./sql-property.md) " festlegen, bevor Sie die **Refresh** -Methode verwenden. Alle Daten gebundenen Steuerelemente auf dem Formular, das einem **RDS zugeordnet ist. Das DataControl** -Objekt reflektiert den neuen Satz von Datensätzen. Alle bereits vorhandenen [Recordset](../ado-api/recordset-object-ado.md) -Objekte werden freigegeben, und alle nicht gespeicherten Änderungen werden verworfen. Die **Aktualisierungs Methode erstellt** automatisch den ersten Datensatz zum aktuellen Datensatz.  
   
  Es empfiehlt sich, die **Aktualisierungs** Methode in regelmäßigen Abständen aufzurufen, wenn Sie mit Daten arbeiten. Wenn Sie Daten abrufen und Sie dann eine Weile auf einem Client Computer belassen, ist Sie wahrscheinlich veraltet. Es ist möglich, dass alle Änderungen, die Sie vornehmen, fehlschlagen, weil ein anderer Benutzer den Datensatz geändert und Änderungen übermittelt hat.  
   
 ## <a name="applies-to"></a>Gilt für  
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl-Objekt (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Aktualisierungs Methode (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
- [Aktualisierungs Methode (Beispiel) (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
- [Adressbuch-Befehls Schaltflächen](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
- [CancelUpdate-Methode (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
- [SubmitChanges-Methode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [Beispiel für Aktualisierungs Methode (VB)](../ado-api/refresh-method-example-vb.md)   
+ [Aktualisierungs Methode (Beispiel) (VBScript)](./refresh-method-example-vbscript.md)   
+ [Adressbuch-Befehls Schaltflächen](../../guide/remote-data-service/address-book-command-buttons.md)   
+ [CancelUpdate-Methode (RDS)](./cancelupdate-method-rds.md)   
+ [Refresh-Methode (ADO)](../ado-api/refresh-method-ado.md)   
+ [SubmitChanges-Methode (RDS)](./submitchanges-method-rds.md)
