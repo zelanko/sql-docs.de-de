@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d29e5897183cb10f33a322b75298d8adee08d0b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2da60e0d6ea0652d531b3e8c459617f1d52954b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453432"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806862"
 ---
 # <a name="event-parameters"></a>Ereignisparameter
-Jeder Ereignishandler verfügt über einen Status Parameter, der den Ereignishandler steuert. Bei Abschluss Ereignissen wird dieser Parameter auch verwendet, um den Erfolg oder Misserfolg des Vorgangs anzugeben, der das Ereignis generiert hat. Die meisten vollständigen Ereignisse verfügen auch über einen Fehler Parameter, um Informationen zu ggf. aufgetretenen Fehlern und einen oder mehrere Objekt Parameter bereitzustellen, die auf die ADO-Objekte verweisen, die zum Ausführen des Vorgangs verwendet werden. Das Ereignis [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) enthält z. b. Objekt Parameter für die **Befehle**, **Recordsets**und **Verbindungs** Objekte, die dem Ereignis zugeordnet sind. Im folgenden Beispiel zu Microsoft® Visual Basic® werden die Objekte pcommand, precordset und pconnection angezeigt, die den **Befehl**, das **Recordset**und die **Verbindungs** Objekte darstellen, die von der **Execute** -Methode verwendet werden.  
+Jeder Ereignishandler verfügt über einen Status Parameter, der den Ereignishandler steuert. Bei Abschluss Ereignissen wird dieser Parameter auch verwendet, um den Erfolg oder Misserfolg des Vorgangs anzugeben, der das Ereignis generiert hat. Die meisten vollständigen Ereignisse verfügen auch über einen Fehler Parameter, um Informationen zu ggf. aufgetretenen Fehlern und einen oder mehrere Objekt Parameter bereitzustellen, die auf die ADO-Objekte verweisen, die zum Ausführen des Vorgangs verwendet werden. Das Ereignis [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md) enthält z. b. Objekt Parameter für die **Befehle**, **Recordsets**und **Verbindungs** Objekte, die dem Ereignis zugeordnet sind. Im folgenden Beispiel zu Microsoft® Visual Basic® werden die Objekte pcommand, precordset und pconnection angezeigt, die den **Befehl**, das **Recordset**und die **Verbindungs** Objekte darstellen, die von der **Execute** -Methode verwendet werden.  
   
 ```  
 Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _  
@@ -60,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatus Cancel**|Anforderungs Abbruch des Vorgangs, der ausgeführt werden soll.|  
   
 ## <a name="error-parameter"></a>Error-Parameter  
- Der *Error* -Parameter ist ein Verweis auf ein ADO- [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Wenn der *Status* Parameter auf **adstatuserrorsoccurrred**festgelegt ist, enthält das **Fehler** Objektdetails darüber, warum der Vorgang fehlgeschlagen ist. Wenn das Ereignis, das einem abgeschlossenen Ereignis zugeordnet ist, den Vorgang abgebrochen hat, indem der *Status* Parameter auf **adStatusCancel**festgelegt wurde, wird das Fehler Objekt immer auf **aderroperationcancel**festgelegt.  
+ Der *Error* -Parameter ist ein Verweis auf ein ADO- [Fehler](../../reference/ado-api/error-object.md) Objekt. Wenn der *Status* Parameter auf **adstatuserrorsoccurrred**festgelegt ist, enthält das **Fehler** Objektdetails darüber, warum der Vorgang fehlgeschlagen ist. Wenn das Ereignis, das einem abgeschlossenen Ereignis zugeordnet ist, den Vorgang abgebrochen hat, indem der *Status* Parameter auf **adStatusCancel**festgelegt wurde, wird das Fehler Objekt immer auf **aderroperationcancel**festgelegt.  
   
 ## <a name="object-parameter"></a>Object-Parameter  
  Jedes Ereignis empfängt mindestens ein-Objekt, das die Objekte darstellt, die an dem Vorgang beteiligt sind. Das Ereignis **ExecuteComplete** erhält z. b. ein **Befehls** Objekt, ein **Recordset** -Objekt und ein **Verbindungs** Objekt.  
@@ -88,7 +88,7 @@ End Sub
  Im Gegensatz dazu müssen Sie *adStatus* nur einmal auf **adStatusUnwantedEvent** festlegen, um anzufordern, dass ein Ereignishandler ohne einen **adReason** -Parameter den Empfang von Ereignis Benachrichtigungen beenden kann.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ADO-Ereignis Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [Zusammenarbeiten von Ereignis Handlern](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Ereignis Typen](../../../ado/guide/data/types-of-events.md)
+ [ADO-Ereignis Handler-Zusammenfassung](./ado-event-handler-summary.md)   
+ [ADO-Ereignis Instanziierung nach Sprache](./ado-event-instantiation-by-language.md)   
+ [Zusammenarbeiten von Ereignis Handlern](./how-event-handlers-work-together.md)   
+ [Ereignistypen](./types-of-events.md)

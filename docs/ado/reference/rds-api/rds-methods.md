@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f8685ead3b7f62861d6e27792a850af3140ebe3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3403fa1baeeaa2c5e09f3b3f3e116325ecaef77c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438792"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767749"
 ---
 # <a name="rds-methods"></a>RDS-Methoden
 > [!IMPORTANT]
@@ -27,20 +27,18 @@ ms.locfileid: "88438792"
   
 |Methode|Beschreibung|  
 |-|-|  
-|[Abbrechen (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|Bricht die Ausführung eines ausstehenden asynchronen Methoden Aufrufes ab.|  
-|[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|Bricht alle Änderungen ab, die an der aktuellen oder neuen Zeile eines **Recordset** -Objekts vorgenommen wurden.|  
-|[ConvertTo String (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Konvertiert ein **Recordset** in eine MIME-Zeichenfolge, die die Recordsetdaten darstellt.|  
-|["Kreateobject" (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)|Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf zurück.|  
-|["Kreaterecordset" (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Erstellt ein leeres, nicht verbundenes **Recordset**.|  
-|[Execute-Methode (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Führen Sie die Anforderung aus, und erstellen Sie ein erweitertes Datenrowset (für die Verwendung mit ADO 2,5 und höher).|  
-|[Execute21-Methode (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Führen Sie die Anforderung aus, und erstellen Sie ein erweitertes Datenrowset (für die Verwendung mit ADO 2,1).|  
-|[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|Gibt einen Zeiger auf die angeforderte Schnittstelle für eine leistungsfähigere Version des-Objekts zurück.|  
-|["Muvefirst", "muvelast", "muvenext" (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen **Recordset** -Objekt.|  
-|[Abfrage (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Verwendet eine gültige SQL-Abfrage **Zeichenfolge**zum Zurückgeben eines Recordsets.|  
-|[Aktualisieren (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|Fragt die in der **Connect** -Eigenschaft angegebene Datenquelle ab und aktualisiert die Abfrageergebnisse.|  
-|[Zurücksetzen (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Führt die Sortierung oder den Filter für ein Client seitiges **Recordset**basierend auf den angegebenen Sortier-und Filtereigenschaften aus.|  
-|[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Übermittelt ausstehende Änderungen des lokal zwischengespeicherten und aktualisierbaren **Recordsets** an die Datenquelle, die in der **Connect** -Eigenschaft angegeben ist.|  
-|[Synchronize-Methode (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge angegeben wird (zur Verwendung mit ADO 2,5 und höher).|  
-|[Synchronize21-Methode (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge angegeben wird (zur Verwendung mit ADO 2,1).|
-
-
+|[Abbrechen (RDS)](./cancel-method-rds.md)|Bricht die Ausführung eines ausstehenden asynchronen Methoden Aufrufes ab.|  
+|[CancelUpdate (RDS)](./cancelupdate-method-rds.md)|Bricht alle Änderungen ab, die an der aktuellen oder neuen Zeile eines **Recordset** -Objekts vorgenommen wurden.|  
+|[ConvertTo String (RDS)](./converttostring-method-rds.md)|Konvertiert ein **Recordset** in eine MIME-Zeichenfolge, die die Recordsetdaten darstellt.|  
+|["Kreateobject" (RDS)](./createobject-method-rds.md)|Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf zurück.|  
+|["Kreaterecordset" (RDS)](./createrecordset-method-rds.md)|Erstellt ein leeres, nicht verbundenes **Recordset**.|  
+|[Execute-Methode (RDS)](./execute-method-rds.md)|Führen Sie die Anforderung aus, und erstellen Sie ein erweitertes Datenrowset (für die Verwendung mit ADO 2,5 und höher).|  
+|[Execute21-Methode (RDS)](./execute21-method-rds.md)|Führen Sie die Anforderung aus, und erstellen Sie ein erweitertes Datenrowset (für die Verwendung mit ADO 2,1).|  
+|[InvokeService (RDS)](./invokeservice-rds.md)|Gibt einen Zeiger auf die angeforderte Schnittstelle für eine leistungsfähigere Version des-Objekts zurück.|  
+|["Muvefirst", "muvelast", "muvenext" (RDS)](./movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen **Recordset** -Objekt.|  
+|[Abfrage (RDS)](./query-method-rds.md)|Verwendet eine gültige SQL-Abfrage **Zeichenfolge**zum Zurückgeben eines Recordsets.|  
+|[Aktualisieren (RDS)](./refresh-method-rds.md)|Fragt die in der **Connect** -Eigenschaft angegebene Datenquelle ab und aktualisiert die Abfrageergebnisse.|  
+|[Zurücksetzen (RDS)](./reset-method-rds.md)|Führt die Sortierung oder den Filter für ein Client seitiges **Recordset**basierend auf den angegebenen Sortier-und Filtereigenschaften aus.|  
+|[SubmitChanges (RDS)](./submitchanges-method-rds.md)|Übermittelt ausstehende Änderungen des lokal zwischengespeicherten und aktualisierbaren **Recordsets** an die Datenquelle, die in der **Connect** -Eigenschaft angegeben ist.|  
+|[Synchronize-Methode (RDS)](./synchronize-method-rds.md)|Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge angegeben wird (zur Verwendung mit ADO 2,5 und höher).|  
+|[Synchronize21-Methode (RDS)](./synchronize21-method-rds.md)|Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge angegeben wird (zur Verwendung mit ADO 2,1).|

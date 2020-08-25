@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea25d5c85969b71836fec30085dd9a626a18d40a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26586cf6a01b51e01ca695252dcdbf6e197b77c9
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453172"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805851"
 ---
 # <a name="keyset-cursors"></a>KEYSET-Cursor
 Der Keysetcursor bietet Funktionen zwischen einem statischen und einem dynamischen Cursor, um Änderungen zu erkennen. Wie ein statischer Cursor ermittelt er nicht immer Änderungen an der Mitgliedschaft und Reihenfolge des Resultsets. Wie ein dynamischer Cursor ermittelt er Änderungen an den Werten der Zeilen im Resultset.  
@@ -39,6 +39,6 @@ Der Keysetcursor bietet Funktionen zwischen einem statischen und einem dynamisch
  Der keysetgesteuerte Cursor ist schwierig zu verwenden, da die Vertraulichkeit von Datenänderungen von vielen unterschiedlichen Bedingungen abhängig ist, wie oben beschrieben. Wenn sich Ihre Anwendung jedoch nicht um gleichzeitige Updates handelt, kann ungültige Schlüsselprogramm gesteuert verarbeiten und direkt auf bestimmte Schlüssel gebundene Zeilen zugreifen, kann der keysetgesteuerte Cursor möglicherweise für Sie funktionieren. Verwenden Sie das " **adOpenKeyset" CursorTypeEnum** , um anzugeben, dass Sie einen Keyset-Cursor in ADO verwenden möchten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Vorwärts Cursor](../../../ado/guide/data/forward-only-cursors.md)   
- [Statische Cursor](../../../ado/guide/data/static-cursors.md)   
- [Dynamische Cursor](../../../ado/guide/data/dynamic-cursors.md)
+ [Vorwärts Cursor](./forward-only-cursors.md)   
+ [Statische Cursor](./static-cursors.md)   
+ [Dynamische Cursor](./dynamic-cursors.md)

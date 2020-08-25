@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 412401ba2b1d5a676b5f5172c59c6e4ffc5cce7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ee73221460a177e24317c9c3d7ff9ab5c06dec9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439052"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768399"
 ---
 # <a name="execute21-method-rds"></a>Execute21-Methode (RDS)
 Führt die Anforderung aus und erstellt ein ADO-Recordset für die Verwendung in ADO 2,1.  
@@ -74,9 +74,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  Der *handlerstring* -Parameter kann NULL sein. Was in diesem Fall geschieht, hängt von der Konfiguration des RDS-Servers ab. Die handlerzeichenfolge "msdfmap. Handler" gibt an, dass der von Microsoft bereitgestellte Handler (Msdfmap.dll) verwendet werden soll. Eine handlerzeichenfolge von "masdfmap. Handler, sample.ini" gibt an, dass der Msdfmap.dll Handler verwendet werden sollte und dass das Argument "sample.ini" an den Handler übermittelt werden soll. MSDFMAP.dll interpretiert das Argument als Richtung für die Verwendung des sample.ini, um die Verbindungs-und Abfrage Zeichenfolgen zu überprüfen.  
   
 > [!NOTE]
->  Die **Execute21** -Methode ist eine Version der [Execute-Methode (RDS)](../../../ado/reference/rds-api/execute-method-rds.md). Wenn Sie die **Execute** -Methode für die Kommunikation mit ADO 2,1 verwenden müssen, kann stattdessen die **Execute21** -Methode aufgerufen werden. Die Funktionen der **Execute** -Methode in ADO 2,5 und höher sind eine supermenge der Funktionen, die für dieselbe Methode in ADO 2,1 bereitgestellt werden.  
+>  Die **Execute21** -Methode ist eine Version der [Execute-Methode (RDS)](./execute-method-rds.md). Wenn Sie die **Execute** -Methode für die Kommunikation mit ADO 2,1 verwenden müssen, kann stattdessen die **Execute21** -Methode aufgerufen werden. Die Funktionen der **Execute** -Methode in ADO 2,5 und höher sind eine supermenge der Funktionen, die für dieselbe Methode in ADO 2,1 bereitgestellt werden.  
   
 ## <a name="applies-to"></a>Gilt für  
- [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory-Objekt (RDSServer)](./datafactory-object-rdsserver.md)

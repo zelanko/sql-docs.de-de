@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 057bd0f7a1023e32ef8bc9fd4da6aeca56e36a97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b145e538ea44d5f007f800f70df84b8eed0b116
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422194"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806660"
 ---
 # <a name="datacontrol-object-error-codes"></a>Fehler Codes für DataControl-Objekte
-In der folgenden Tabelle sind die [RDS aufgeführt. Fehlercodes des DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekts. Die positive Dezimal Übersetzung der unteren zwei Bytes, die negative Dezimal Übersetzung des vollständigen Fehlercodes und die hexadezimalen Werte werden angezeigt.
+In der folgenden Tabelle sind die [RDS aufgeführt. Fehlercodes des DataControl](../../reference/rds-api/datacontrol-object-rds.md) -Objekts. Die positive Dezimal Übersetzung der unteren zwei Bytes, die negative Dezimal Übersetzung des vollständigen Fehlercodes und die hexadezimalen Werte werden angezeigt.
 
-|RDS. DataControl-Fehlercodes|Zahl|Beschreibung|
+|RDS. DataControl-Fehlercodes|Number|BESCHREIBUNG|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800a1011|Der Vorgang kann nicht ausgeführt werden, während der asynchrone Vorgang aussteht.|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800a1009|Ungültiges Inline-Tablegram.|
@@ -48,4 +48,4 @@ In der folgenden Tabelle sind die [RDS aufgeführt. Fehlercodes des DataControl]
 |**IDS_URLMONNotFound**|4119-2146824169 0x800a1017|Die DataControl- **URL** -Eigenschaft erfordert, dass die Systemdatei Urlmon.dll ist, die nicht gefunden werden kann.|
 
 ## <a name="see-also"></a>Weitere Informationen
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
+ [DataControl-Objekt (RDS)](../../reference/rds-api/datacontrol-object-rds.md)

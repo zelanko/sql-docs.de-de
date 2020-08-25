@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0795131ef1765b1fd376355a46fe9cf53ba6eb66
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d58e5a65b2566aa77b74d69479f310a2d4f6e05b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438572"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767329"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize-Methode (RDS)
 Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge für die Verwendung in ADO 2,5 und höher angegeben wird.  
@@ -68,6 +68,4 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  Der *handlerstring* -Parameter kann NULL sein. Was in diesem Fall geschieht, hängt von der Konfiguration des RDS-Servers ab. Die handlerzeichenfolge "msdfmap. Handler" gibt an, dass der von Microsoft bereitgestellte Handler (Msdfmap.dll) verwendet werden soll. Eine handlerzeichenfolge von "masdfmap. Handler, sample.ini" gibt an, dass der Msdfmap.dll Handler verwendet werden sollte und dass das Argument "sample.ini" an den Handler übermittelt werden soll. Msdfmap.dll interpretiert dann das Argument als Richtung, um die sample.ini zu verwenden, um die Verbindungs-und Abfrage Zeichenfolgen zu überprüfen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory-Objekt (RDSServer)](./datafactory-object-rdsserver.md)

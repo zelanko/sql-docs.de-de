@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: ba9642d0-9025-4eff-8885-e6e7f8154c73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14b25e778e82cbea6c8b1b6f050ca70859317829
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 095fe864d42d574e15cfa6c27f60b1b1d527be15
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440002"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770369"
 ---
 # <a name="group-object-properties-methods-and-events"></a>Group-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [Name-Eigenschaft](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name-Eigenschaft](./name-property-adox.md)  
   
- ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ ['Properties'-Sammlung](../ado-api/properties-collection-ado.md)  
   
- [Benutzer Sammlung](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Benutzer Sammlung](./users-collection-adox.md)  
   
 ## <a name="methods"></a>Methoden  
- [Getberechtigungs Methode](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+ [Getberechtigungs Methode](./getpermissions-method-adox.md)  
   
- [Setberechtigungs-Methode](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+ [Setberechtigungs-Methode](./setpermissions-method-adox.md)  
   
 ## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Group-Objekt (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)
+ [Group-Objekt (ADOX)](./group-object-adox.md)

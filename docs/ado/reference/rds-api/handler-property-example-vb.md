@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d00626b04c4107ffdbf15cd24b104b17602fc6e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a4667b6524cef6694340d917dad04fad04ad3f8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438972"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768139"
 ---
 # <a name="handler-property-example-vb"></a>Handler-Eigenschaft – Beispiel (VB)
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- In diesem Beispiel wird die Eigenschaft " [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Object [Handler](../../../ado/reference/rds-api/handler-property-rds.md) " veranschaulicht. (Weitere Informationen finden Sie unter [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md) .)  
+ In diesem Beispiel wird die Eigenschaft " [RDS DataControl](./datacontrol-object-rds.md) Object [Handler](./handler-property-rds.md) " veranschaulicht. (Weitere Informationen finden Sie unter [DataFactory-Anpassung](../../guide/remote-data-service/datafactory-customization.md) .)  
   
  Angenommen, die folgenden Abschnitte in der Parameterdatei Msdfmap.ini befinden sich auf dem Server:  
   
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Der Code sieht wie folgt aus. Der Befehl, der der [SQL](../../../ado/reference/rds-api/sql-property.md) -Eigenschaft zugewiesen ist, entspricht dem ***AuthorById*** -Bezeichner und ruft eine Zeile für den Autor Michael \ Leary ab. Die **DataControl** -Objekt **Recordset** -Eigenschaft wird einem getrennten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt ausschließlich als Codierungs Zweck zugewiesen.  
+ Der Code sieht wie folgt aus. Der Befehl, der der [SQL](./sql-property.md) -Eigenschaft zugewiesen ist, entspricht dem ***AuthorById*** -Bezeichner und ruft eine Zeile für den Autor Michael \ Leary ab. Die **DataControl** -Objekt **Recordset** -Eigenschaft wird einem getrennten [Recordset](../ado-api/recordset-object-ado.md) -Objekt ausschließlich als Codierungs Zweck zugewiesen.  
   
 ```  
 'BeginHandlerVB  
@@ -80,7 +80,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Handler-Eigenschaft (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
-
-
+ [DataControl-Objekt (RDS)](./datacontrol-object-rds.md)   
+ [Handler-Eigenschaft (RDS)](./handler-property-rds.md)

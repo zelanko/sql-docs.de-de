@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3ef1ae1b6b5d60774e220cc4594cd54eda291e7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453752"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806953"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Aggregatfunktionen, die CALC-Funktion und das NEW-Schlüsselwort
 Die Daten Strukturierung unterstützt die folgenden Funktionen. Der Name, der dem Kapitel mit der zu verwendenden Spalte zugewiesen ist, ist das *Kapitel-Alias*.  
@@ -40,7 +40,7 @@ Die Daten Strukturierung unterstützt die folgenden Funktionen. Der Name, der de
   
 |Berechneter Ausdruck|Beschreibung|  
 |---------------------------|-----------------|  
-|Calc (*Ausdruck*)|Berechnet einen beliebigen Ausdruck, aber nur in der Zeile des **Recordsets** , das die Calc-Funktion enthält. Jeder Ausdruck, der diese [Visual Basic for Applications Funktionen (VBA)](../../../ado/guide/data/visual-basic-for-applications-functions.md) verwendet, ist zulässig.|  
+|Calc (*Ausdruck*)|Berechnet einen beliebigen Ausdruck, aber nur in der Zeile des **Recordsets** , das die Calc-Funktion enthält. Jeder Ausdruck, der diese [Visual Basic for Applications Funktionen (VBA)](./visual-basic-for-applications-functions.md) verwendet, ist zulässig.|  
   
 |New-Schlüsselwort|Beschreibung|  
 |-----------------|-----------------|  
@@ -73,7 +73,7 @@ Die Daten Strukturierung unterstützt die folgenden Funktionen. Der Name, der de
   
  Wenn das neue Feld den Typ Decimal hat (in OLE DB, DBTYPE_DECIMAL oder in ADO, addecimal), müssen Sie die Werte für Genauigkeit und Dezimalstelle angeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Beispiel für Daten Strukturierung](../../../ado/guide/data/data-shaping-example.md)   
- [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
- [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Daten Strukturierung](./data-shaping-example.md)   
+ [Formale Form Grammatik](./formal-shape-grammar.md)   
+ [Shape-Befehle im Allgemeinen](./shape-commands-in-general.md)

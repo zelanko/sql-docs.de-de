@@ -26,7 +26,7 @@ ms.locfileid: "88774439"
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Gibt an, welche Datensätze an den Server zurückgegeben werden sollen.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**admarshalall**|0|Standard. Gibt alle Zeilen an den Server zurück.|  
 |**adMarshalModifiedOnly**|1|Gibt nur geänderte Zeilen an den Server zurück.|  

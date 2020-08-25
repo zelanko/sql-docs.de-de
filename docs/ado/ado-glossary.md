@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355456"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805560"
 ---
 # <a name="ado-glossary-terms"></a>ADO-Glossar Begriffe
 In diesem Thema werden die für ADO relevanten Begriffe definiert.
@@ -133,7 +133,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
 
  Hierarchisches Recordset ein **Recordset** , das ein anderes **Recordset**enthält. Weitere Informationen finden Sie unter Daten Strukturierung (Kapitel).
 
- Weitere Informationen finden Sie unter [zugreifen auf Zeilen in einem hierarchischen Recordset](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).
+ Weitere Informationen finden Sie unter [zugreifen auf Zeilen in einem hierarchischen Recordset](./guide/data/accessing-rows-in-a-hierarchical-recordset.md).
 
  Hierarchie im Allgemeinen ist eine Hierarchie eine Rangstruktur mit einer obersten Ebene und untergeordneten Ebenen. In ADO werden hierarchische **Recordsets** verwendet, um die über-/Unterordnungsbeziehung zwischen einem Datensatz und einem Kapitel darzustellen. In ADO können auch **Datensatz** -und **Stream** -Objekte verwendet werden, um auf hierarchische Struktur Strukturen wie z. b. einen Ordner und Dokumente zuzugreifen. ADO MD umfasst auch **Hierarchy** -Objekte, die eine Beziehung zwischen den Ebenen einer Dimension in einem OLAP-Cube darstellen. Siehe auch hierarchische Recordsets, über-/Unterordnungsbeziehung, Chapter, Tree.
 

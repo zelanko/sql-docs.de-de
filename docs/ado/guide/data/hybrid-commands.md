@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3c6a852f5918a79c0fb2df5e2f60ef415cca6a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe4661618a56f208f0aeea7e66d5f57d4f95c44d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453242"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805989"
 ---
 # <a name="hybrid-commands"></a>Hybridbefehle
 Hybrid Befehle sind teilweise parametrisierte Befehle. Beispiel:  
@@ -35,6 +35,6 @@ SHAPE {select * from plants}
  Das zwischen Speicherungs Verhalten für einen Hybriden Befehl ist identisch mit dem von regulären parametrisierten Befehlen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Daten Strukturierung](../../../ado/guide/data/data-shaping-example.md)   
- [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
- [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)
+ [Beispiel für Daten Strukturierung](./data-shaping-example.md)   
+ [Formale Form Grammatik](./formal-shape-grammar.md)   
+ [Shape-Befehle im Allgemeinen](./shape-commands-in-general.md)
