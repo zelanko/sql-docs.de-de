@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b0281b569a6bfaf4f28d6958011ab3efacb4221
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7efad01088e4151d37dea9d71c1662a228e0c822
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444462"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775929"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>Beispiel für ConnectionString, ConnectionTimeout und State Properties (VC + +)
-In diesem Beispiel werden verschiedene Möglichkeiten veranschaulicht, wie die [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft verwendet wird, um ein [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt zu öffnen. Außerdem wird die [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) -Eigenschaft verwendet, um einen Verbindungs Timeout Zeitraum festzulegen, und die [State](../../../ado/reference/ado-api/state-property-ado.md) -Eigenschaft, um den Status der Verbindungen zu überprüfen. Die GetState-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
+In diesem Beispiel werden verschiedene Möglichkeiten veranschaulicht, wie die [ConnectionString](./connectionstring-property-ado.md) -Eigenschaft verwendet wird, um ein [Verbindungs](./connection-object-ado.md) Objekt zu öffnen. Außerdem wird die [ConnectionTimeout](./connectiontimeout-property-ado.md) -Eigenschaft verwendet, um einen Verbindungs Timeout Zeitraum festzulegen, und die [State](./state-property-ado.md) -Eigenschaft, um den Status der Verbindungen zu überprüfen. Die GetState-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
   
 > [!NOTE]
 >  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unterstützt, sollten Sie in der Verbindungs Zeichenfolge **Trusted_Connection = yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort angeben.  
@@ -168,7 +168,7 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ConnectionString-Eigenschaft (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [ConnectionTimeout-Eigenschaft (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
- [State-Eigenschaft (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [Verbindungs Objekt (ADO)](./connection-object-ado.md)   
+ [ConnectionString-Eigenschaft (ADO)](./connectionstring-property-ado.md)   
+ [ConnectionTimeout-Eigenschaft (ADO)](./connectiontimeout-property-ado.md)   
+ [State-Eigenschaft (ADO)](./state-property-ado.md)

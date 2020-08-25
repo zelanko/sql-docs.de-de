@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4e8304204a6eaebf6b64d5cb9ad44e5fa1602da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: efb206f3c0fbbeb0fbc700f8e714ddd1d5ee5a8c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454012"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806519"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Verwenden von ADO mit Microsoft Visual Basic und Visual Basic for Applications
 Das Einrichten eines ADO-Projekts und das Schreiben von ADO-Code ist ähnlich, egal ob Sie Visual Basic oder Visual Basic for Applications verwenden. In diesem Thema wird die Verwendung von ADO mit Visual Basic und Visual Basic for Applications erläutert, und es werden alle Unterschiede erläutert.
@@ -110,10 +110,10 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
  Das Instanziieren von Objekten mithilfe **der Methode "** Methode" ist in der Regel langsamer als die Verwendung der **Dim** -Anweisung.
 
 ## <a name="handling-events"></a>Behandeln von Ereignissen
- Um ADO-Ereignisse in Microsoft Visual Basic verarbeiten zu können, müssen Sie eine Variable auf Modulebene mithilfe des **widervents** -Schlüssel Worts deklarieren. Die Variable kann nur als Teil eines Klassen Moduls deklariert werden und muss auf Modulebene deklariert werden. Eine ausführlichere Erläuterung der Behandlung von ADO-Ereignissen finden Sie unter [Behandeln von ADO](../../../ado/guide/data/handling-ado-events.md)-Ereignissen.
+ Um ADO-Ereignisse in Microsoft Visual Basic verarbeiten zu können, müssen Sie eine Variable auf Modulebene mithilfe des **widervents** -Schlüssel Worts deklarieren. Die Variable kann nur als Teil eines Klassen Moduls deklariert werden und muss auf Modulebene deklariert werden. Eine ausführlichere Erläuterung der Behandlung von ADO-Ereignissen finden Sie unter [Behandeln von ADO](../data/handling-ado-events.md)-Ereignissen.
 
 ## <a name="visual-basic-examples"></a>Visual Basic Beispiele
- Viele Visual Basic Beispiele sind in der ADO-Dokumentation enthalten. Weitere Informationen finden Sie unter [ADO-Code Beispiele in Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md).
+ Viele Visual Basic Beispiele sind in der ADO-Dokumentation enthalten. Weitere Informationen finden Sie unter [ADO-Code Beispiele in Microsoft Visual Basic](../../reference/ado-api/ado-code-examples-in-visual-basic.md).
 
-## <a name="see-also"></a>Siehe auch
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [Verwenden von ADO mit Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [mithilfe von ADO und Skriptsprachen](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+## <a name="see-also"></a>Weitere Informationen
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md) [Verwenden von ADO mit Microsoft Visual C++](./using-ado-with-microsoft-visual-c.md) [mithilfe von ADO und Skriptsprachen](./using-ado-with-scripting-languages.md)

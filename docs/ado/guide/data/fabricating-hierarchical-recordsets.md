@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f418d2eb21f2cb02223234f6231efb39b232faa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1bf51c8d7d6db2ac898787c3a649a0ecb0610cb
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453402"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806851"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Herstellen hierarchischer Recordsets
 Im folgenden Beispiel wird gezeigt, wie ein hierarchisches Recordset ohne eine zugrunde liegende Datenquelle mit der Daten Strukturierungs Grammatik zum Definieren von Spalten für übergeordnete, untergeordnete und untergeordnete **Recordsets**von untergeordneten Elementen fabriziert werden kann.  
   
- Zum fabrizieren eines hierarchischen **Recordsets**müssen Sie den Microsoft-Daten Strukturierungs [Dienst für OLE DB (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) angeben, und Sie können im Verbindungs Zeichen folgen Parameter der [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode des [Connection](../../../ado/reference/ado-api/connection-object-ado.md) -Objekts den Datenanbieter Wert None angeben. Weitere Informationen finden Sie unter [erforderliche Anbieter für die Daten Strukturierung](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Zum fabrizieren eines hierarchischen **Recordsets**müssen Sie den Microsoft-Daten Strukturierungs [Dienst für OLE DB (ADO-Dienstanbieter)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) angeben, und Sie können im Verbindungs Zeichen folgen Parameter der [Open](../../reference/ado-api/open-method-ado-connection.md) -Methode des [Connection](../../reference/ado-api/connection-object-ado.md) -Objekts den Datenanbieter Wert None angeben. Weitere Informationen finden Sie unter [erforderliche Anbieter für die Daten Strukturierung](./required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -56,8 +56,8 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
  Sobald das **Recordset** erfunden wurde, kann es aufgefüllt, manipuliert oder persistent in einer Datei gespeichert werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
- [Erforderliche Anbieter für die Daten Strukturierung](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Shape-APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
- [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)
+ [Zugreifen auf Zeilen in einem hierarchischen Recordset](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [Formale Form Grammatik](./formal-shape-grammar.md)   
+ [Erforderliche Anbieter für die Daten Strukturierung](./required-providers-for-data-shaping.md)   
+ [Shape-APPEND-Klausel](./shape-append-clause.md)   
+ [Shape-Befehle im Allgemeinen](./shape-commands-in-general.md)

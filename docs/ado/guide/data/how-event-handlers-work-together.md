@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a571c36a67a4d2c1c3b98c64c826af949b0e773
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453252"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805980"
 ---
 # <a name="how-event-handlers-work-together"></a>Zusammenwirken der Ereignishandler
-Sofern Sie nicht in Visual Basic programmieren, müssen alle Ereignishandler für **Verbindungs** -und **recordsetereignisse** implementiert werden, unabhängig davon, ob Sie tatsächlich alle Ereignisse verarbeiten. Die Menge der Implementierungs Arbeit, die Sie erledigen müssen, hängt von ihrer Programmiersprache ab. Weitere Informationen finden Sie unter [ADO Event Instantiierung by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+Sofern Sie nicht in Visual Basic programmieren, müssen alle Ereignishandler für **Verbindungs** -und **recordsetereignisse** implementiert werden, unabhängig davon, ob Sie tatsächlich alle Ereignisse verarbeiten. Die Menge der Implementierungs Arbeit, die Sie erledigen müssen, hängt von ihrer Programmiersprache ab. Weitere Informationen finden Sie unter [ADO Event Instantiierung by Language](./ado-event-instantiation-by-language.md).  
   
 ## <a name="paired-event-handlers"></a>Paarweise Ereignishandler  
  Jedem Ereignishandler wird ein **kompletter** Ereignishandler zugeordnet. Wenn Ihre Anwendung z. b. den Wert eines Felds ändert, wird der Ereignishandler " **WillChangeField** " aufgerufen. Wenn die Änderung zulässig ist, lässt die Anwendung den Parameter " **adStatus** " unverändert, und der Vorgang wird ausgeführt. Wenn der Vorgang abgeschlossen ist, benachrichtigt das Ereignis **FieldChangeComplete** Ihre Anwendung, dass der Vorgang abgeschlossen wurde. Wenn der Vorgang erfolgreich abgeschlossen wurde, enthält **adStatus** **adStatusOK**; Andernfalls enthält **adStatus** **adstatuserrorsoccurrred** , und Sie müssen das **Fehler** Objekt überprüfen, um die Ursache des Fehlers zu ermitteln.  
@@ -46,7 +46,7 @@ Sofern Sie nicht in Visual Basic programmieren, müssen alle Ereignishandler fü
   
  Single **Complete** -Ereignishandler können für die Verwaltung von asynchronen Vorgängen nützlich sein. Jeder asynchrone Vorgang verfügt über ein entsprechendes **Complete** -Ereignis.  
   
- Beispielsweise kann es sehr lange dauern, bis ein großes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt aufgefüllt ist. Wenn Ihre Anwendung ordnungsgemäß geschrieben wird, können Sie einen `Recordset.Open(...,adAsyncExecute)` -Vorgang starten und mit der anderen Verarbeitung fortfahren. Sie werden letztendlich benachrichtigt, wenn das **Recordset** durch ein **ExecuteComplete** -Ereignis aufgefüllt wird.  
+ Beispielsweise kann es sehr lange dauern, bis ein großes [Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekt aufgefüllt ist. Wenn Ihre Anwendung ordnungsgemäß geschrieben wird, können Sie einen `Recordset.Open(...,adAsyncExecute)` -Vorgang starten und mit der anderen Verarbeitung fortfahren. Sie werden letztendlich benachrichtigt, wenn das **Recordset** durch ein **ExecuteComplete** -Ereignis aufgefüllt wird.  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>Einzelne Ereignishandler und mehrere Objekte  
  Die Flexibilität einer Programmiersprache wie Microsoft Visual C++® ermöglicht, dass ein ereignishandlerereignis Ereignisse aus mehreren Objekten verarbeitet. Beispielsweise können Sie einen Ereignishandler zum **trennen** von Ereignissen von mehreren **Verbindungs** Objekten verarbeiten. Wenn eine der Verbindungen beendet wurde, wird der **Disconnect** -Ereignishandler aufgerufen. Sie können feststellen, welche Verbindung das Ereignis verursacht hat, da der ereignishandlerobjektparameter auf das entsprechende **Verbindungs** Objekt festgelegt wird.  
@@ -55,7 +55,7 @@ Sofern Sie nicht in Visual Basic programmieren, müssen alle Ereignishandler fü
 >  Diese Methode kann nicht in Visual Basic verwendet werden, da diese Sprache nur ein Objekt mit einem Ereignishandler korrelieren kann.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ADO-Ereignis Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [Ereignis Parameter](../../../ado/guide/data/event-parameters.md)   
- [Ereignis Typen](../../../ado/guide/data/types-of-events.md)
+ [ADO-Ereignis Handler-Zusammenfassung](./ado-event-handler-summary.md)   
+ [ADO-Ereignis Instanziierung nach Sprache](./ado-event-instantiation-by-language.md)   
+ [Ereignis Parameter](./event-parameters.md)   
+ [Ereignistypen](./types-of-events.md)

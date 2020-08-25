@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9ab7dd72816d47b4f8a1c7aa55ba8751399e41a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9676087d23ff17b7aaa4c4ad6cab20eaec644ca
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453512"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806910"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Erkennen und Lösen von Konflikten
 Wenn Sie mit dem Recordset im unmittelbaren Modus arbeiten, ist die Wahrscheinlichkeit, dass Parallelitäts Probleme auftreten, weitaus geringer. Wenn Ihre Anwendung dagegen eine Batch Modus-Aktualisierung verwendet, kann es sinnvoll sein, dass ein Benutzer einen Datensatz ändert, bevor Änderungen, die von einem anderen Benutzer bearbeitet wurden, der denselben Datensatz bearbeitet hat, gespeichert werden. In einem solchen Fall möchten Sie, dass Ihre Anwendung den Konflikt ordnungsgemäß behandeln kann. Möglicherweise möchten Sie, dass die letzte Person ein Update an den Server "WINS" sendet. Oder Sie möchten dem aktuellen Benutzer gestatten, sich zu entscheiden, welches Update Vorrang haben sollte, indem er eine Auswahl zwischen den beiden in Konflikt stehenden Werten bietet.  
@@ -114,7 +114,7 @@ Wenn Sie mit dem Recordset im unmittelbaren Modus arbeiten, ist die Wahrscheinli
   
  Sie können die Eigenschaft Status des aktuellen Datensatzes oder eines bestimmten Felds verwenden, um zu bestimmen, welche Art von Konflikt aufgetreten ist.  
   
- Ausführliche Informationen zur Fehlerbehandlung finden Sie unter [Fehlerbehandlung](../../../ado/guide/data/error-handling.md).  
+ Ausführliche Informationen zur Fehlerbehandlung finden Sie unter [Fehlerbehandlung](./error-handling.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Batchmodus](../../../ado/guide/data/batch-mode.md)
+ [Batchmodus](./batch-mode.md)

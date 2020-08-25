@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06e7ca7204d673ac5888962f3d4f5095e9fe5a9d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7eaab32f14ce653d766cfe38408118cc37b763
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453942"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806773"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++-Erweiterungen – Beispiel
 Dieses Programm zeigt, wie Werte aus Feldern abgerufen und in C/C++-Variablen konvertiert werden.  
@@ -111,5 +111,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwenden von Visual C++-Erweiterungen](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
- [Visual C++-Erweiterungsheader](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Verwenden von Visual C++-Erweiterungen](./using-visual-c-extensions.md)   
+ [Visual C++-Erweiterungsheader](./visual-c-extensions-header.md)

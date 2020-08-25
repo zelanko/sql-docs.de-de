@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0c3a33b9c45afacfdb790606da22713a0a82478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf6bae32e9ed966939d5589f779bdb1d4d6d6f4b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453382"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806838"
 ---
 # <a name="filtering-for-updated-records"></a>Filtern nach aktualisierten Datensätzen
 Bevor Sie UpdateBatch aufrufen, können Sie mit der Recordset-Filter Eigenschaft nur die Datensätze anzeigen, die seit dem Öffnen des Recordsets oder dem letzten Aufrufen von UpdateBatch geändert wurden. Legen Sie zu diesem Zweck Filter auf adfilterpdingrecords fest, um zu bestimmen, wie viele Datensätze aktualisiert werden, wie im Codebeispiel im nächsten Abschnitt gezeigt.  
@@ -56,4 +56,4 @@ Bevor Sie UpdateBatch aufrufen, können Sie mit der Recordset-Filter Eigenschaft
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Batchmodus](../../../ado/guide/data/batch-mode.md)
+ [Batchmodus](./batch-mode.md)

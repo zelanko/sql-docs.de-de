@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 048fbb83c8a6b9de150642f6094a1f07e0c1e11e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34ad6214f36061ed12577f7ba843a69fc13b7d8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442222"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777599"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save- und Open-Methode – Beispiel (VB)
-Diese drei Beispiele veranschaulichen, wie die [Save](../../../ado/reference/ado-api/save-method.md) -Methode und die [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode gleichzeitig verwendet werden können.  
+Diese drei Beispiele veranschaulichen, wie die [Save](./save-method.md) -Methode und die [Open](./open-method-ado-recordset.md) -Methode gleichzeitig verwendet werden können.  
   
- Nehmen wir an, dass Sie einen geschäftlichen Trip ausführen und eine Tabelle aus einer Datenbank aufnehmen möchten. Bevor Sie fortfahren, greifen Sie auf die Daten als [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zu, und speichern Sie Sie in einem austauschen-Format. Wenn Sie das Ziel erreichen, greifen Sie als lokales, nicht verbundenes **Recordset**auf das **Recordset** zu. Sie nehmen Änderungen am **Recordset**vor und speichern es dann erneut. Wenn Sie zu Hause zurückkehren, stellen Sie erneut eine Verbindung mit der Datenbank her, und aktualisieren Sie Sie mit den Änderungen, die Sie auf dem Weg vorgenommen haben.  
+ Nehmen wir an, dass Sie einen geschäftlichen Trip ausführen und eine Tabelle aus einer Datenbank aufnehmen möchten. Bevor Sie fortfahren, greifen Sie auf die Daten als [Recordset](./recordset-object-ado.md) zu, und speichern Sie Sie in einem austauschen-Format. Wenn Sie das Ziel erreichen, greifen Sie als lokales, nicht verbundenes **Recordset**auf das **Recordset** zu. Sie nehmen Änderungen am **Recordset**vor und speichern es dann erneut. Wenn Sie zu Hause zurückkehren, stellen Sie erneut eine Verbindung mit der Datenbank her, und aktualisieren Sie Sie mit den Änderungen, die Sie auf dem Weg vorgenommen haben.  
   
  Greifen Sie zuerst auf die ***Autoren*** Tabelle zu, und speichern Sie Sie.  
   
@@ -98,7 +98,7 @@ Attribute VB_Name = "Save"
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Weitere Informationen zur Speicherung von Recordsets](../../../ado/guide/data/more-about-recordset-persistence.md)   
- [Save-Methode](../../../ado/reference/ado-api/save-method.md)
+ [Open-Methode (ADO-Recordset)](./open-method-ado-recordset.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)   
+ [Weitere Informationen zur Speicherung von Recordsets](../../guide/data/more-about-recordset-persistence.md)   
+ [Save-Methode](./save-method.md)

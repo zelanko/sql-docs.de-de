@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 051185b9b40b1f7d4472e957f3a09a8f6416c8b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3888cf881fd1b6cdb0ccc2c5985fe4a6e08ae581
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454092"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806587"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für Internet Publishing
 Der Microsoft OLE DB-Anbieter für die Internet Veröffentlichung ermöglicht ADO den Zugriff auf Ressourcen, die von Microsoft FrontPage oder Microsoft Internet Information Server bereitgestellt werden. Zu den Ressourcen gehören webquell Dateien, z. b. HTML-Dateien oder Windows 2000-Webordner.
 
 ## <a name="connection-string-parameters"></a>Parameter der Verbindungszeichenfolge
- Legen Sie das *Provider* -Argument der [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft auf fest, um eine Verbindung mit diesem Anbieter herzustellen:
+ Legen Sie das *Provider* -Argument der [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) -Eigenschaft auf fest, um eine Verbindung mit diesem Anbieter herzustellen:
 
 ```vb
 MSDAIPP.DSO
 ```
 
- Dieser Wert kann auch mit der [Provider](../../../ado/reference/ado-api/provider-property-ado.md) -Eigenschaft festgelegt oder gelesen werden.
+ Dieser Wert kann auch mit der [Provider](../../reference/ado-api/provider-property-ado.md) -Eigenschaft festgelegt oder gelesen werden.
 
 ## <a name="typical-connection-string"></a>Typische Verbindungs Zeichenfolge
  Eine typische Verbindungs Zeichenfolge für diesen Anbieter lautet:
@@ -62,7 +62,7 @@ MSDAIPP.DSO
  Wenn Sie den *resourceurl* -Wert von "URL =" in der Verbindungs Zeichenfolge auf einen ungültigen Wert festlegen, löst der Internet Publishing Provider standardmäßig ein Dialogfeld aus, in dem Sie zur Eingabe eines gültigen Werts aufgefordert werden. Dies ist ein unerwünschtes Verhalten für eine Komponente in der mittleren Ebene einer Anwendung, da die Programmausführung angehalten wird, bis das Dialogfeld gelöscht wird und der Client so fixiert wird, dass er nicht mehr eine Antwort von der Komponente empfangen hat.
 
 > [!NOTE]
->  Wenn msdaipp. DSO wird explizit als Wert des Anbieters angegeben. entweder mit dem Schlüsselwort für die Verbindungs Zeichenfolge des *Anbieters* oder mit der Eigenschaft " **Provider** " können Sie "URL =" nicht in der Verbindungs Zeichenfolge verwenden. Wenn Sie dies tun, tritt ein Fehler auf. Stattdessen geben Sie einfach die URL an, wie im Thema [Verwenden von ADO mit dem OLE DB Anbieter für die Internet Veröffentlichung](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)gezeigt.
+>  Wenn msdaipp. DSO wird explizit als Wert des Anbieters angegeben. entweder mit dem Schlüsselwort für die Verbindungs Zeichenfolge des *Anbieters* oder mit der Eigenschaft " **Provider** " können Sie "URL =" nicht in der Verbindungs Zeichenfolge verwenden. Wenn Sie dies tun, tritt ein Fehler auf. Stattdessen geben Sie einfach die URL an, wie im Thema [Verwenden von ADO mit dem OLE DB Anbieter für die Internet Veröffentlichung](../data/the-ole-db-provider-for-internet-publishing.md)gezeigt.
 
 ## <a name="see-also"></a>Weitere Informationen
- [Internet Publishing-Szenario](../../../ado/guide/data/internet-publishing-scenario.md) [der OLE DB Anbieter für die Internetveröffentlichung](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
+ [Internet Publishing-Szenario](../data/internet-publishing-scenario.md) [der OLE DB Anbieter für die Internetveröffentlichung](../data/the-ole-db-provider-for-internet-publishing.md)

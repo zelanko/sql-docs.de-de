@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be000a8ff9154c79c2b98c9bc57f79f3537743c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 84c861c2a344276a80ea8e8fd98f84aeb2bb7cbc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441532"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776899"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField- und FieldChangeComplete-Ereignis (ADO)
-Das Ereignis " **WillChangeField** " wird aufgerufen, bevor durch einen ausstehenden Vorgang der Wert von einem oder mehreren [Feld](../../../ado/reference/ado-api/field-object.md) Objekten im [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)geändert wird. Das Ereignis **FieldChangeComplete** wird aufgerufen, nachdem sich der Wert eines oder mehrerer **Feld** Objekte geändert hat.  
+Das Ereignis " **WillChangeField** " wird aufgerufen, bevor durch einen ausstehenden Vorgang der Wert von einem oder mehreren [Feld](./field-object.md) Objekten im [Recordset](./recordset-object-ado.md)geändert wird. Das Ereignis **FieldChangeComplete** wird aufgerufen, nachdem sich der Wert eines oder mehrerer **Feld** Objekte geändert hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,10 +46,10 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  Der *Fields* -Parameter für " **WillChangeField**" ist ein Array von **Varianten** , das **Feld** Objekte mit den ursprünglichen Werten enthält. Für **FieldChangeComplete**ist der *Fields* -Parameter ein Array von **Varianten** , das **Feld** Objekte mit den geänderten Werten enthält.  
   
  *pError*  
- Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred**ist. Andernfalls ist es nicht festgelegt.  
+ Ein [Fehler](./error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred**ist. Andernfalls ist es nicht festgelegt.  
   
  *adStatus*  
- Ein [eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) -Statuswert.  
+ Ein [eventstatusenum](./eventstatusenum.md) -Statuswert.  
   
  Wenn " **WillChangeField** " aufgerufen wird, wird dieser Parameter auf **adstatuusok** festgelegt, wenn der Vorgang, der das Ereignis ausgelöst hat, erfolgreich war. Sie wird auf **adStatus-kandeny** festgelegt, wenn dieses Ereignis keinen Abbruch des ausstehenden Vorgangs anfordern kann.  
   
@@ -63,8 +63,8 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  Ein **Recordset** -Objekt. Das **Recordset** , für das dieses Ereignis aufgetreten ist.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn Sie die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft festlegen und die [Update](../../../ado/reference/ado-api/update-method.md) -Methode mit Feld-und Wert Array Parametern aufrufen, kann ein Ereignis vom Typ " **WillChangeField** " oder " **FieldChangeComplete** " auftreten  
+ Wenn Sie die [value](./value-property-ado.md) -Eigenschaft festlegen und die [Update](./update-method.md) -Methode mit Feld-und Wert Array Parametern aufrufen, kann ein Ereignis vom Typ " **WillChangeField** " oder " **FieldChangeComplete** " auftreten  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für das ADO-Ereignis Modell (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignishandler – Übersicht](../../../ado/guide/data/ado-event-handler-summary.md)
+ [Beispiel für das ADO-Ereignis Modell (VC + +)](./ado-events-model-example-vc.md)   
+ [ADO-Ereignishandler – Übersicht](../../guide/data/ado-event-handler-summary.md)

@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7a350540d94ea0379f7829fa004d98ce691f1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c79843bb3397fee6d4c2d92d9e7905d2db472c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442302"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777679"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command – dynamische Eigenschaft (ADO)
-Gibt eine vom Benutzer bereitgestellte Befehls Zeichenfolge an, mit der die Methode für die [erneute Synchronisierung](../../../ado/reference/ado-api/resync-method.md) die Daten in der in der dynamischen Eigenschaft [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) genannten Tabelle aktualisiert.  
+Gibt eine vom Benutzer bereitgestellte Befehls Zeichenfolge an, mit der die Methode für die [erneute Synchronisierung](./resync-method.md) die Daten in der in der dynamischen Eigenschaft [Unique Table](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) genannten Tabelle aktualisiert.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen **Zeichen** folgen Wert fest, der eine Befehls Zeichenfolge ist.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt ist das Ergebnis einer Verknüpfungs Operation, die für mehrere Basistabellen ausgeführt wird. Die betroffenen Zeilen hängen vom *affectrecords* -Parameter der [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode ab. Die Standardmethode für die **Neusynchronisierung** wird ausgeführt, wenn die Eigenschaften [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) und **Resync Command** nicht festgelegt sind.  
+ Das [Recordset](./recordset-object-ado.md) -Objekt ist das Ergebnis einer Verknüpfungs Operation, die für mehrere Basistabellen ausgeführt wird. Die betroffenen Zeilen hängen vom *affectrecords* -Parameter der [Resync](./resync-method.md) -Methode ab. Die Standardmethode für die **Neusynchronisierung** wird ausgeführt, wenn die Eigenschaften [Unique Table](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) und **Resync Command** nicht festgelegt sind.  
   
  Die Befehls Zeichenfolge der **Resync-Befehls** Eigenschaft ist ein parametrisierter Befehl oder eine gespeicherte Prozedur, die die zu Aktualisier Ende Zeile eindeutig identifiziert und eine einzelne Zeile zurückgibt, die die gleiche Anzahl und Reihenfolge der Spalten wie die zu Aktualisier Ende Zeile enthält. Die Befehls Zeichenfolge enthält einen Parameter für jede Primärschlüssel Spalte in der **eindeutigen Tabelle**. Andernfalls wird ein Laufzeitfehler zurückgegeben. Die Parameter werden automatisch mit Primärschlüssel Werten aus der Zeile aufgefüllt, die aktualisiert werden soll.  
   
@@ -81,7 +81,7 @@ WHERE Orders.ordid  = @ordid
   
  Auch hier ist die **eindeutige Tabelle** *Orders* , und der zugehörige Primärschlüssel *OrderID*ist parametrisiert.  
   
- Der **Befehl Resync** ist eine dynamische Eigenschaft, die an die Auflistung der **Recordset** -Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) angehängt wird, wenn die Eigenschaft [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) auf **adUseClient**festgelegt ist.  
+ Der **Befehl Resync** ist eine dynamische Eigenschaft, die an die Auflistung der **Recordset** -Objekt [Eigenschaften](./properties-collection-ado.md) angehängt wird, wenn die Eigenschaft [Cursor Location](./cursorlocation-property-ado.md) auf **adUseClient**festgelegt ist.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

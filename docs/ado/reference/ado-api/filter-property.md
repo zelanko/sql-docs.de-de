@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e5927c2c3b32540ebfe54307203e0425600e2f2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443682"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775319"
 ---
 # <a name="filter-property"></a>Filter-Eigenschaft
-Gibt einen Filter für Daten in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)an.  
+Gibt einen Filter für Daten in einem [Recordset](./recordset-object-ado.md)an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte
 
@@ -34,11 +34,11 @@ Legt einen **Variant** -Wert fest oder gibt einen Wert zurück, der eines der fo
   
 -   **Array von Lesezeichen:** Ein Array von eindeutigen Lesezeichen Werten, die auf Datensätze im **Recordset** -Objekt zeigen.  
   
--   Ein [filtergroupum](../../../ado/reference/ado-api/filtergroupenum.md) -Wert.  
+-   Ein [filtergroupum](./filtergroupenum.md) -Wert.  
   
 ## <a name="remarks"></a>Bemerkungen
 
-Verwenden Sie die **Filter** -Eigenschaft, um Datensätze in einem **Recordset** -Objekt selektiv auszulagern. Das gefilterte **Recordset** wird zum aktuellen Cursor. Andere Eigenschaften, die Werte auf Grundlage des aktuellen **Cursors** zurückgeben, sind betroffen, wie z. b. die [AbsolutePosition-Eigenschaft (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), die [AbsolutePage-Eigenschaft (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), die [RecordCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)und die [PageCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Wenn die **Filter** -Eigenschaft auf einen bestimmten neuen Wert festgelegt wird, wird der aktuelle Datensatz in den ersten Datensatz verschoben, der den neuen Wert erfüllt.
+Verwenden Sie die **Filter** -Eigenschaft, um Datensätze in einem **Recordset** -Objekt selektiv auszulagern. Das gefilterte **Recordset** wird zum aktuellen Cursor. Andere Eigenschaften, die Werte auf Grundlage des aktuellen **Cursors** zurückgeben, sind betroffen, wie z. b. die [AbsolutePosition-Eigenschaft (ADO)](./absoluteposition-property-ado.md), die [AbsolutePage-Eigenschaft (ADO)](./absolutepage-property-ado.md), die [RecordCount-Eigenschaft (ADO)](./recordcount-property-ado.md)und die [PageCount-Eigenschaft (ADO)](./pagecount-property-ado.md). Wenn die **Filter** -Eigenschaft auf einen bestimmten neuen Wert festgelegt wird, wird der aktuelle Datensatz in den ersten Datensatz verschoben, der den neuen Wert erfüllt.
   
 Die Kriterienzeichenfolge besteht aus Klauseln in der Form *FieldName-Operator-Value* (z `"LastName = 'Smith'"` . b.). Sie können Verbund Klauseln erstellen, indem Sie einzelne Klauseln mit **and** (z. b. `"LastName = 'Smith' AND FirstName = 'John'"` ) oder **or** (z. b `"LastName = 'Smith' OR LastName = 'Jones'"` .) verketten. Verwenden Sie für Kriterienzeichenfolgen die folgenden Richtlinien:
 
@@ -59,9 +59,9 @@ Die Kriterienzeichenfolge besteht aus Klauseln in der Form *FieldName-Operator-V
   
 -   In einer **like** -Klausel können Sie am Anfang und am Ende des Musters einen Platzhalter verwenden. Sie können z. B. `LastName Like '*mit*'` verwenden. Oder mit **like** können Sie einen Platzhalter nur am Ende des Musters verwenden. Beispiel: `LastName Like 'Smit*'`.  
   
- Die Filter Konstanten vereinfachen das Auflösen einzelner Daten Satz Konflikte im Batch Aktualisierungs Modus, da Sie z. b. nur die Datensätze anzeigen können, die während des letzten [UpdateBatch-Methoden](../../../ado/reference/ado-api/updatebatch-method.md) Aufrufes aufgetreten sind.  
+ Die Filter Konstanten vereinfachen das Auflösen einzelner Daten Satz Konflikte im Batch Aktualisierungs Modus, da Sie z. b. nur die Datensätze anzeigen können, die während des letzten [UpdateBatch-Methoden](./updatebatch-method.md) Aufrufes aufgetreten sind.  
   
-Das Festlegen der **Filter** Eigenschaft selbst kann aufgrund eines Konflikts mit den zugrunde liegenden Daten fehlschlagen. Dieser Fehler kann z. b. auftreten, wenn ein Datensatz bereits von einem anderen Benutzer gelöscht wurde. In einem solchen Fall gibt der Anbieter Warnungen an die Auflistung der [Fehler Auflistung (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) zurück, hält die Ausführung des Programms jedoch nicht an. Ein Fehler zur Laufzeit tritt nur auf, wenn für alle angeforderten Datensätze Konflikte vorliegen. Verwenden Sie die Eigenschaft [Status Eigenschaft (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md) , um Datensätze mit Konflikten zu suchen.  
+Das Festlegen der **Filter** Eigenschaft selbst kann aufgrund eines Konflikts mit den zugrunde liegenden Daten fehlschlagen. Dieser Fehler kann z. b. auftreten, wenn ein Datensatz bereits von einem anderen Benutzer gelöscht wurde. In einem solchen Fall gibt der Anbieter Warnungen an die Auflistung der [Fehler Auflistung (ADO)](./errors-collection-ado.md) zurück, hält die Ausführung des Programms jedoch nicht an. Ein Fehler zur Laufzeit tritt nur auf, wenn für alle angeforderten Datensätze Konflikte vorliegen. Verwenden Sie die Eigenschaft [Status Eigenschaft (ADO Recordset)](./status-property-ado-recordset.md) , um Datensätze mit Konflikten zu suchen.  
   
 Wenn die **Filter** -Eigenschaft auf eine Zeichenfolge der Länge 0 (null) festgelegt wird, hat dies dieselbe Auswirkung wie die Verwendung der **adfilternone** -Konstante.
   
@@ -74,7 +74,7 @@ Angenommen, ein **Recordset** wird anhand eines Felds eines Varianten Typs gefil
 
 Diese Konfiguration erzeugt den Fehler zur Laufzeit. `rs.Filter = "C=2"`Das Anwenden auf das gleiche Feld führt jedoch nicht zu einem Fehler. Und das Feld wird aus dem aktuellen Daten Satz Satz herausgefiltert.
 
-Eine Erläuterung der Bookmark-Werte, aus denen Sie ein Array erstellen können, das mit der Filter-Eigenschaft verwendet werden kann, finden Sie unter der Eigenschaft " [Bookmark Property (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) ".
+Eine Erläuterung der Bookmark-Werte, aus denen Sie ein Array erstellen können, das mit der Filter-Eigenschaft verwendet werden kann, finden Sie unter der Eigenschaft " [Bookmark Property (ADO)](./bookmark-property-ado.md) ".
 
 Nur Filter in Form von Kriterienzeichenfolgen beeinflussen den Inhalt eines permanenten **Recordsets**. Ein Beispiel für eine Kriterienzeichenfolge ist `OrderDate > '12/31/1999'` . Filter, die mit einem Array von Lesezeichen erstellt wurden oder einen Wert aus dem **filtergroupum**verwenden, wirken sich nicht auf den Inhalt des beibehaltenen **Recordsets**aus. Diese Regeln gelten für Recordsets, die entweder mit Client seitigen oder serverseitigen Cursorn erstellt wurden.
   
@@ -100,11 +100,11 @@ In der folgenden Tabelle werden die Auswirkungen von **adfilterpdingrecords** in
   
 ## <a name="applies-to"></a>Gilt für
 
-[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[Recordset-Objekt (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[Filter-und RecordCount-Eigenschaften (Beispiel) (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md) 
- [Filter-und RecordCount-Eigenschaften (Beispiel) (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md) 
- [Clear-Methode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md) 
- [Optimieren von Eigenschaften-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[Filter-und RecordCount-Eigenschaften (Beispiel) (VB)](./filter-and-recordcount-properties-example-vb.md) 
+ [Filter-und RecordCount-Eigenschaften (Beispiel) (VC + +)](./filter-and-recordcount-properties-example-vc.md) 
+ [Clear-Methode (ADO)](./clear-method-ado.md) 
+ [Optimieren von Eigenschaften-Dynamic (ADO)](./optimize-property-dynamic-ado.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4729574b92b841da48f7cf6de6f1dcabc369b4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c5e863a694aa63e568e388304d964752dbae325
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450802"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776069"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks-Methode (ADO)
 Vergleicht zwei Lesezeichen und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.  
@@ -36,7 +36,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt einen [compareenum](../../../ado/reference/ado-api/compareenum.md) -Wert zurück, der die relative Zeilen Position von zwei Datensätzen angibt, die durch Ihre Lesezeichen dargestellt werden.  
+ Gibt einen [compareenum](./compareenum.md) -Wert zurück, der die relative Zeilen Position von zwei Datensätzen angibt, die durch Ihre Lesezeichen dargestellt werden.  
   
 #### <a name="parameters"></a>Parameter  
  *Bookmark1*  
@@ -46,9 +46,9 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  Das Lesezeichen der zweiten Zeile.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die Lesezeichen müssen auf dasselbe [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt oder ein **Recordset** -Objekt und dessen [Klon](../../../ado/reference/ado-api/clone-method-ado.md)angewendet werden. Lesezeichen aus unterschiedlichen **recordsetobjekten** können nicht zuverlässig verglichen werden, auch wenn Sie aus derselben Quelle oder demselben Befehl erstellt wurden. Sie können auch keine Lesezeichen für ein **Recordset** -Objekt vergleichen, dessen zugrunde liegender Anbieter keine Vergleiche unterstützt.  
+ Die Lesezeichen müssen auf dasselbe [Recordset](./recordset-object-ado.md) -Objekt oder ein **Recordset** -Objekt und dessen [Klon](./clone-method-ado.md)angewendet werden. Lesezeichen aus unterschiedlichen **recordsetobjekten** können nicht zuverlässig verglichen werden, auch wenn Sie aus derselben Quelle oder demselben Befehl erstellt wurden. Sie können auch keine Lesezeichen für ein **Recordset** -Objekt vergleichen, dessen zugrunde liegender Anbieter keine Vergleiche unterstützt.  
   
- Ein Lesezeichen identifiziert eine Zeile in einem **Recordset** -Objekt eindeutig. Verwenden Sie die [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) -Eigenschaft der aktuellen Zeile, um das Lesezeichen zu erhalten.  
+ Ein Lesezeichen identifiziert eine Zeile in einem **Recordset** -Objekt eindeutig. Verwenden Sie die [Bookmark](./bookmark-property-ado.md) -Eigenschaft der aktuellen Zeile, um das Lesezeichen zu erhalten.  
   
  Da der Datentyp eines Lesezeichens für jeden Anbieter spezifisch ist, macht ADO ihn als **Variant**verfügbar. SQL Server Lesezeichen sind z. b. vom Typ DBTYPE_R8 (**Double**). ADO würde diesen Typ als **Variant** mit dem Untertyp **Double**verfügbar machen.  
   
@@ -57,9 +57,9 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  Ein Lesezeichen, das ungültig oder falsch formatiert ist, führt zu einem Fehler.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CompareBookmarks-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
- [CompareBookmarks-Methode (Beispiel) (VC + +)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
- [Bookmark-Eigenschaft (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)
+ [CompareBookmarks-Methode (Beispiel) (VB)](./comparebookmarks-method-example-vb.md)   
+ [CompareBookmarks-Methode (Beispiel) (VC + +)](./comparebookmarks-method-example-vc.md)   
+ [Bookmark-Eigenschaft (ADO)](./bookmark-property-ado.md)

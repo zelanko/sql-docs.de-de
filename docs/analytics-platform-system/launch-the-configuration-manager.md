@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74401055"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Starten Sie den Configuration Manager in Analytics Platform System.
@@ -29,15 +29,15 @@ Zum Ausführen des Configuration Manager verwenden Sie Remotedesktop, um eine Ve
   
 #### <a name="to-launch-from-a-browser-window"></a>So starten Sie in einem Browserfenster  
   
-1.  Öffnen Sie einen Browser, und navigieren Sie `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`zum Verzeichnis.  
+1.  Öffnen Sie einen Browser, und navigieren Sie zum Verzeichnis `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-2.  Klicken Sie mit `dwconfig.exe` der rechten Maustaste und dann auf **als Administrator ausführen**.  
+2.  Klicken Sie mit der rechten Maustaste `dwconfig.exe` und dann auf **als Administrator ausführen**.  
   
 #### <a name="to-launch-from-a-command-prompt"></a>So starten Sie über eine Eingabeaufforderung  
   
 1.  Öffnen Sie auf dem Desktop das **Startmenü,** klicken Sie auf **Programme**und **Zubehör**, klicken Sie mit der rechten Maustaste auf **Eingabeaufforderung** , und klicken Sie dann auf **als Administrator ausführen**.  
   
-2.  Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um die `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`Verzeichnisse zu ändern:.  
+2.  Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um die Verzeichnisse zu ändern: `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"` .  
   
 3.  Geben Sie an der Eingabeaufforderung `dwconfig.exe` ein.  
   

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c387240e36225f03c8ba1287618ab59a98fb63c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 43e511329ba2b32784718d6edb381e6b7085aeb9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443022"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773909"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 Gibt an, ob ein Objekt geöffnet oder geschlossen ist, ob eine Verbindung mit einer Datenquelle hergestellt wird, ob ein Befehl ausgeführt oder Daten abgerufen werden.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adStatus**|0|Gibt an, dass das-Objekt geschlossen ist.|  
 |**adstateopen**|1|Gibt an, dass das-Objekt geöffnet ist.|  
@@ -37,7 +37,7 @@ Gibt an, ob ein Objekt geöffnet oder geschlossen ist, ob eine Verbindung mit ei
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |AdoEnums. ObjectState. Closed|  
 |Adoerums. ObjectState. Open|  
@@ -49,9 +49,9 @@ Gibt an, ob ein Objekt geöffnet oder geschlossen ist, ob eine Verbindung mit ei
 
 :::row:::
     :::column:::
-        [State-Eigenschaft (ADO)](../../../ado/reference/ado-api/state-property-ado.md)  
+        [State-Eigenschaft (ADO)](./state-property-ado.md)  
     :::column-end:::
     :::column:::
-        [State-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)  
+        [State-Eigenschaft (ADO MD)](../ado-md-api/state-property-ado-md.md)  
     :::column-end:::
 :::row-end:::

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 227c3ead2744c475a54f129078b5674587ae3849
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fb247f62173a0c622a08eb2d55af005efcb2669
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453122"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805680"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB-Anbieter (ADO)
 OLE DB definiert einen Satz von COM-Schnittstellen, um Anwendungen einen einheitlichen Zugriff auf Daten bereitzustellen, die in verschiedenen Informationsquellen gespeichert sind. Dieser Ansatz ermöglicht es einer Datenquelle, die Daten über die Schnittstellen freizugeben, die die für die Datenquelle geeignete Menge an DBMS-Funktionalität unterstützen. Entwurfs bedingt basiert die Hochleistungs Architektur OLE DB auf der Verwendung eines flexiblen, komponentenbasierten Dienst Modells. Anstatt eine vorgeschriebene Anzahl von zwischengeschalteten Schichten zwischen der Anwendung und den Daten zu haben, erfordert OLE DB nur so viele Komponenten, wie zum Durchführen einer bestimmten Aufgabe benötigt werden.  
@@ -42,6 +42,6 @@ OLE DB definiert einen Satz von COM-Schnittstellen, um Anwendungen einen einheit
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   
--   [Datenanbieter](../../../ado/guide/data/data-providers.md)  
+-   [Datenanbieter](./data-providers.md)  
   
--   [Dienstanbieter und Komponenten](../../../ado/guide/data/service-providers-and-components.md)
+-   [Dienstanbieter und -komponenten](./service-providers-and-components.md)

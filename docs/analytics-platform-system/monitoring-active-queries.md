@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400914"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Überwachen aktiver Abfragen-parallele Data Warehouse
@@ -36,9 +36,9 @@ Die Verwaltungskonsole und die SQL Server PDW System Sichten können verwendet w
     Wenn Sie ausführlichere Informationen zu einer bestimmten Abfrage anzeigen möchten, klicken Sie auf die Abfrage-ID. Informationen einschließlich der vollständigen Abfrage und des Abfrage Plans mit Statusinformationen zu den einzelnen Schritten in der Abfrage Ausführung werden angezeigt. Wenn Fehler zurückgegeben wurden, können Sie auch ausführliche Informationen zu den Fehlern sehen. <!-- MISSING LINKS See [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md) for information on how to interpret the query plan information available in the Admin Console.  -->
   
 ### <a name="to-monitor-active-queries-by-using-the-system-views"></a>So überwachen Sie aktive Abfragen mithilfe der System Sichten  
-Die primäre Systemsicht, die zum Überwachen von Abfragen verwendet wird, ist [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md). Verwenden Sie diese Systemsicht, um `request_id` den für eine aktive oder aktuelle Abfrage basierend auf dem Abfragetext zu suchen.  
+Die primäre Systemsicht, die zum Überwachen von Abfragen verwendet wird, ist [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md). Verwenden Sie diese Systemsicht, um den `request_id` für eine aktive oder aktuelle Abfrage basierend auf dem Abfragetext zu suchen.  
   
-Die folgende Abfrage sucht z. b. `request_id` die und die `status` aktuelle für jede Abfrage, die alle Spalten aus `memberAddresses` der Tabelle auswählt.  
+Die folgende Abfrage sucht z. b `request_id` . die und die aktuelle `status` für jede Abfrage, die alle Spalten aus der Tabelle auswählt `memberAddresses` .  
   
 ```sql  
 SELECT request_id, command, status   

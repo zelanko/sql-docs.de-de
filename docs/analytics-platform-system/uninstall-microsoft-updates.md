@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399466"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Deinstallieren von Microsoft-Updates in Analytics Platform System
@@ -26,7 +26,7 @@ Um diese Schritte ausführen zu können, benötigen Sie Folgendes:
   
 -   Eine Analytics Platform System-Anmeldung mit Berechtigungen für den Zugriff auf die Verwaltungskonsole zum Überwachen des Geräts.  
   
--   Kenntnis des Fabric-Domänen Administrator Kontos <em> <Fabric Domain> </em>, um sich beim **-HST01-** Knoten anzumelden.  
+-   Kenntnis des Fabric-Domänen Administrator Kontos, um sich beim <em> <Fabric Domain> </em> **-HST01-** Knoten anzumelden.  
   
 ## <a name="to-uninstall-microsoft-updates"></a><a name="HowToUninstallMSFT"></a>So deinstallieren Sie Microsoft-Updates  
   

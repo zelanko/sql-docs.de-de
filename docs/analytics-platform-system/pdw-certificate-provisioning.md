@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 676335fb8ee4aac5906c61084c28cd94cf8ea815
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400894"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW-Zertifikat Bereitstellung: Analytics Platform System
@@ -38,7 +38,7 @@ Obwohl bei der Verbindung über das selbst signierte Zertifikat in-Flight-Daten 
   
 Der Zertifizierungspfad muss den voll qualifizierten Domänen Namen enthalten, der der IP-Adresse des Kontroll Knoten Clusters (empfohlen) zugeordnet ist, oder den Namen, den die Benutzer in die Adressleiste Ihres Browsers eingeben, um auf die **Verwaltungskonsole**zuzugreifen.  
   
-Verwenden Sie das**Configuration Manager** Analytics Platform System, um das vertrauenswürdige Zertifikat hinzuzufügen oder zu entfernen. Die direkte Verwendung des Microsoft Windows HTTP Services Certificate Configuration Tool (**Winhttpcertcfg. exe**) zum Verwalten des Zertifikats wird nicht unterstützt.  
+Verwenden Sie das**Configuration Manager** Analytics Platform System, um das vertrauenswürdige Zertifikat hinzuzufügen oder zu entfernen. Die direkte Verwendung des Microsoft Windows HTTP-Dienste-Zertifikat Konfigurationstools (**winHttpCertCfg.exe**) zum Verwalten des Zertifikats wird nicht unterstützt.  
   
 ## <a name="import-or-remove-the-certificate"></a>Importieren oder Entfernen des Zertifikats  
 Die folgenden Anweisungen zeigen, wie das Gerätezertifikat importiert oder entfernt wird.

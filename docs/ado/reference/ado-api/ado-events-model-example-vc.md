@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19743fb8434ddfb75025ae47da079a8256f270f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451432"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776699"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO-Ereignismodell – Beispiel (VC++)
-Der Visual C++ Abschnitt der [ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md) enthält eine allgemeine Beschreibung, wie das ADO-Ereignis Modell instanziiert wird. Im folgenden finden Sie ein spezielles Beispiel für die Instanziierung des Ereignis Modells in der Umgebung, die von der **#Import** -Direktive erstellt wurde.  
+Der Visual C++ Abschnitt der [ADO-Ereignis Instanziierung nach Sprache](../../guide/data/ado-event-instantiation-by-language.md) enthält eine allgemeine Beschreibung, wie das ADO-Ereignis Modell instanziiert wird. Im folgenden finden Sie ein spezielles Beispiel für die Instanziierung des Ereignis Modells in der Umgebung, die von der **#Import** -Direktive erstellt wurde.  
   
  Die allgemeine Beschreibung verwendet **adoint. h** als Referenz für Methoden Signaturen. Einige Details in der allgemeinen Beschreibung ändern sich jedoch geringfügig aufgrund der Verwendung der **#Import** -Direktive:  
   

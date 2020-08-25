@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861fe39f270a007fdd3896c4150a02a0fd905b47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 279c77e7bbd5d676ab3f5f53b41e9e3172ab0d57
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453632"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806288"
 ---
 # <a name="controlling-transactions-ado"></a>Steuern von Transaktionen (ADO)
 ADO unterstützt die Transaktionsverarbeitung innerhalb einer Verbindung mit der Methode **BeginTrans**, **CommitTrans**und **RollbackTrans** für ein **Verbindungs** Objekt. Die allgemeine Idee der Implementierung der Transaktionsverarbeitung in ADO ist im folgenden einfachen Code Ausschnitt dargestellt.  
@@ -80,4 +80,4 @@ oConn.Close
   
  Hier wird die Transaktionsverarbeitung verwendet, um sicherzustellen, dass die beiden Datensätze als eine Betriebseinheit aktualisiert werden und dass die beiden Produktnamen entweder geändert oder überhaupt nicht geändert werden.  
   
- Ausführliche Informationen zur Transaktionsverarbeitung finden Sie unter [aktualisieren und](../../../ado/guide/data/updating-and-persisting-data.md)beibehalten von Daten.
+ Ausführliche Informationen zur Transaktionsverarbeitung finden Sie unter [aktualisieren und](./updating-and-persisting-data.md)beibehalten von Daten.

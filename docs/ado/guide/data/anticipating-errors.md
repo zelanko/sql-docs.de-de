@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 799a238d37e7b2fe4f5f4c8af5bb396513b75b03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85d313dabe9c6c0cf8c4dcdb76e01b0f2962d7d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453732"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806404"
 ---
 # <a name="anticipating-errors"></a>Vorhersehen von Fehlern
 Die Fehler Verhinderung ist mindestens so wichtig wie die Fehlerbehandlung. Dieser letzte Abschnitt enthält eine kurze Liste der Vorsichtsmaßnahmen, die Ihre Anwendung ausführen kann, um die Wahrscheinlichkeit von Fehlern zu verringern.  
@@ -29,7 +29,7 @@ Die Fehler Verhinderung ist mindestens so wichtig wie die Fehlerbehandlung. Dies
   
 -   Jedes Programm, das Daten von einem Benutzer akzeptiert, muss Code enthalten, um diese Daten vor dem Senden an den Datenspeicher zu überprüfen. Sie können sich nicht auf den Datenspeicher, den Anbieter, ADO oder sogar Ihre Programmiersprache verlassen, um Sie über Probleme zu informieren. Sie müssen jedes Byte überprüfen, das von Ihren Benutzern eingegeben wurde, und sicherstellen, dass die Daten der richtige Typ für das Feld sind und dass erforderliche Felder nicht leer sind.  
   
- Überprüfen Sie die Daten, bevor Sie versuchen, Daten in den Datenspeicher zu schreiben. Die einfachste Möglichkeit hierfür ist, das **WillMove** -Ereignis oder das **willupdaterecordset** -Ereignis zu behandeln. Eine ausführlichere Erläuterung der Behandlung von ADO-Ereignissen finden Sie unter [Behandeln von ADO](../../../ado/guide/data/handling-ado-events.md)-Ereignissen.  
+ Überprüfen Sie die Daten, bevor Sie versuchen, Daten in den Datenspeicher zu schreiben. Die einfachste Möglichkeit hierfür ist, das **WillMove** -Ereignis oder das **willupdaterecordset** -Ereignis zu behandeln. Eine ausführlichere Erläuterung der Behandlung von ADO-Ereignissen finden Sie unter [Behandeln von ADO](./handling-ado-events.md)-Ereignissen.  
   
  Stellen Sie sicher, dass **Recordset** -Objekte nicht die Grenzen des **Recordsets** überschreiten, bevor Sie versuchen, den Daten Satz Zeiger zu verschieben. **Wenn Sie** versuchen, die Datei " **EOF** " auf "true" oder " **muveprev** **" zu verwenden** , tritt ein Fehler auf. Wenn Sie **eine der Verschiebungs Methoden ausführen** , wenn sowohl **EOF** als auch **BOF** true sind, wird ein Fehler generiert.  
   

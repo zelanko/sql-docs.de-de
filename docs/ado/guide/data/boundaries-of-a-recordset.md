@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d89f25dc6e37c0b5c569d5db7c4f8486115ce94a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aec0ad3065deb60f99f672712c085fe054885d27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453712"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806377"
 ---
 # <a name="boundaries-of-a-recordset"></a>Grenzen eines Recordsets
 **Recordset** unterstützt die **BOF** -und **EOF** -Eigenschaften, um den Anfang bzw. das Ende des Datasets zu beschreiben. Sie können sich **BOF** und **EOF** als "Phantom"-Datensätze vorstellen, die am Anfang und am Ende des **Recordsets**positioniert sind. Wenn **BOF** und **EOF**gezählt werden, sieht das Beispiel- **Recordset** nun wie folgt aus:  
@@ -70,4 +70,4 @@ else
   
  Dieses Schema funktioniert für alle Cursor Typen und ist unabhängig von den zugrunde liegenden Anbietern. Wenn Sie versuchen, die leere eines **Recordset** -Objekts zu ermitteln, indem Sie überprüfen, ob der Wert der **RecordCount** -Eigenschaft NULL (0) ist oder nicht, müssen Sie Vorsichtsmaßnahmen ergreifen, um einen geeigneten Cursor und Anbieter zu verwenden, der die Rückgabe der Anzahl von Datensätzen im Ergebnis unterstützt.  
   
- Wenn Sie den letzten verbleibenden Datensatz im **Recordset** -Objekt löschen, bleibt der Cursor in einem unbestimmten Zustand. Die Eigenschaften **BOF** und **EOF** bleiben möglicherweise **falsch** , bis Sie versuchen, den aktuellen Datensatz neu zu positionieren, je nach Anbieter. Weitere Informationen finden Sie unter [Löschen von Datensätzen mit der Delete-Methode](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+ Wenn Sie den letzten verbleibenden Datensatz im **Recordset** -Objekt löschen, bleibt der Cursor in einem unbestimmten Zustand. Die Eigenschaften **BOF** und **EOF** bleiben möglicherweise **falsch** , bis Sie versuchen, den aktuellen Datensatz neu zu positionieren, je nach Anbieter. Weitere Informationen finden Sie unter [Löschen von Datensätzen mit der Delete-Methode](./deleting-records-using-the-delete-method.md).

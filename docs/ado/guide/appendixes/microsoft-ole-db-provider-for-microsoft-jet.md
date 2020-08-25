@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 822c9f6ef6aebe5e32bb37e4c89a9bb4e6d7db68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1747f01b554e8df45a7835e2cb2006adcdb3079a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454072"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806617"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für Microsoft Jet
 Der OLE DB Anbieter für Microsoft Jet ermöglicht ADO den Zugriff auf Microsoft Jet-Datenbanken.
 
 ## <a name="connection-string-parameters"></a>Parameter der Verbindungszeichenfolge
- Legen Sie das *Provider* -Argument der [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft auf Folgendes fest, um eine Verbindung mit diesem Anbieter herzustellen:
+ Legen Sie das *Provider* -Argument der [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) -Eigenschaft auf die folgende Eigenschaft fest, um eine Verbindung mit diesem Anbieter herzustellen:
 
 ```vb
 Microsoft.Jet.OLEDB.4.0
 ```
 
- Beim Lesen der [Provider](../../../ado/reference/ado-api/provider-property-ado.md) -Eigenschaft wird auch diese Zeichenfolge zurückgegeben.
+ Beim Lesen der [Provider](../../reference/ado-api/provider-property-ado.md) -Eigenschaft wird auch diese Zeichenfolge zurückgegeben.
 
 ## <a name="typical-connection-string"></a>Typische Verbindungs Zeichenfolge
  Eine typische Verbindungs Zeichenfolge für diesen Anbieter lautet:
@@ -54,7 +54,7 @@ Microsoft.Jet.OLEDB.4.0
 >  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unterstützt, sollten Sie in der Verbindungs Zeichenfolge **Trusted_Connection = yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort angeben.
 
 ## <a name="provider-specific-connection-parameters"></a>Anbieterspezifische Verbindungsparameter
- Der OLE DB Anbieter für Microsoft Jet unterstützt neben den, die von ADO definiert werden, mehrere anbieterspezifische dynamische Eigenschaften. Wie bei allen anderen **Verbindungs** Parametern können diese mithilfe der **Properties** -Auflistung des **Connection** -Objekts oder als Teil der Verbindungs Zeichenfolge festgelegt werden.
+ Der OLE DB Anbieter für Microsoft Jet unterstützt zusätzlich zu den von ADO definierten anbieterspezifischen dynamischen Eigenschaften. Wie bei allen anderen **Verbindungs** Parametern können diese mithilfe der **Properties** -Auflistung des **Connection** -Objekts oder als Teil der Verbindungs Zeichenfolge festgelegt werden.
 
  In der folgenden Tabelle werden diese Eigenschaften mit dem entsprechenden OLE DB Eigenschaftsnamen in Klammern aufgelistet.
 
@@ -69,7 +69,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: Datenbank verschlüsseln (DBPROP_JETOLEDB_ENCRYPTDATABASE)|Gibt an, ob eine komprimierte Datenbank verschlüsselt werden soll. Wenn diese Eigenschaft nicht festgelegt ist, wird die komprimierte Datenbank verschlüsselt, wenn die ursprüngliche Datenbank ebenfalls verschlüsselt wurde.|
 |Jet OLEDB: Engine-Typ (DBPROP_JETOLEDB_ENGINE)|Gibt die Speicher-Engine an, die zum Zugreifen auf den aktuellen Datenspeicher verwendet wird.|
 |Jet OLEDB: exklusive Async-Verzögerung (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|Gibt die maximale Zeitdauer in Millisekunden an, die der Jet asynchrone Schreibvorgänge auf den Datenträger verzögern kann, wenn die Datenbank exklusiv geöffnet wird.<br /><br /> Diese Eigenschaft wird ignoriert, es sei denn, **Jet OLEDB: Flush Transaction Timeout** ist auf 0 festgelegt.|
-|Jet OLEDB: Timeout für Transaktions Timeout (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Gibt an, wie lange gewartet werden soll, bevor Daten, die in einem Cache für asynchrone Schreibvorgänge gespeichert werden, tatsächlich auf den Datenträger geschrieben werden. Diese Einstellung überschreibt die Werte für **Jet OLEDB: Shared Async Delay** und **Jet OLEDB: Exclusive Async Delay**.|
+|Jet OLEDB: Timeout für Transaktions Timeout (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Gibt an, wie lange gewartet werden soll, bevor die in einem Cache für asynchrone Schreibvorgänge gespeicherten Daten auf den Datenträger geschrieben werden. Diese Einstellung überschreibt die Werte für **Jet OLEDB: Shared Async Delay** und **Jet OLEDB: Exclusive Async Delay**.|
 |Jet OLEDB: globale Massen Transaktionen (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|Gibt an, ob SQL-Massen Transaktionen transaktiv sind.|
 |Jet OLEDB: globale partielle Massen Massen Vorgänge (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|Gibt das Kennwort an, das zum Öffnen der Datenbank verwendet wird.|
 |Jet OLEDB: implizite Commit-Synchronisierung (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|Gibt an, ob Änderungen, die in internen impliziten Transaktionen vorgenommen wurden, im synchronen oder asynchronen Modus geschrieben werden.|
@@ -106,16 +106,16 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: gespeicherte Abfrage (DBPROP_JETOLEDB_STOREDQUERY)|Gibt an, ob der Befehls Text anstelle eines SQL-Befehls als gespeicherte Abfrage interpretiert werden soll.|
 |Jet OLEDB: Validieren von Regeln für Set (DBPROP_JETOLEDB_VALIDATEONSET)|Gibt an, ob die Jet-Validierungsregeln ausgewertet werden, wenn Spaltendaten festgelegt werden oder wenn die Änderungen an die Datenbank übertragen werden.|
 
- Standardmäßig öffnet der OLE DB Anbieter für Microsoft Jet Microsoft Jet-Datenbanken im Lese-/Schreibmodus. Um eine Datenbank im schreibgeschützten Modus zu öffnen, legen Sie die [Mode](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft des ADO- **Verbindungs** Objekts auf **admoderead**fest.
+ Standardmäßig öffnet der OLE DB Anbieter für Microsoft Jet Microsoft Jet-Datenbanken im Lese-/Schreibmodus. Um eine Datenbank im schreibgeschützten Modus zu öffnen, legen Sie die [Mode](../../reference/ado-api/mode-property-ado.md) -Eigenschaft des ADO- **Verbindungs** Objekts auf **admoderead**fest.
 
 ## <a name="command-object-usage"></a>Verwendung von Befehls Objekten
- Der Befehls Text im [Command](../../../ado/reference/ado-api/command-object-ado.md) -Objekt verwendet den Microsoft Jet SQL-Dialekt. Sie können Zeilen rückgabeabfragen, Aktions Abfragen und Tabellennamen im Befehls Text angeben. gespeicherte Prozeduren werden jedoch nicht unterstützt und sollten nicht angegeben werden.
+ Der Befehls Text im [Command](../../reference/ado-api/command-object-ado.md) -Objekt verwendet den Microsoft Jet SQL-Dialekt. Sie können Zeilen rückgabeabfragen, Aktions Abfragen und Tabellennamen im Befehls Text angeben. gespeicherte Prozeduren werden jedoch nicht unterstützt und sollten nicht angegeben werden.
 
 ## <a name="recordset-behavior"></a>Recordsetverhalten
- Dynamic Cursors werden von der Microsoft Jet-Datenbank-Engine nicht unterstützt. Daher unterstützt der OLE DB Anbieter für Microsoft Jet den **adlockdynamic** -Cursortyp nicht. Wenn ein dynamischer Cursor angefordert wird, gibt der Anbieter einen Keyset-Cursor zurück und setzt die [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) -Eigenschaft zurück, um den Typ des zurückgegebenen [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) anzugeben. Wenn ein Aktualisier bares **Recordset** angefordert wird (**LockType** ist " **adlockoptimi"**, " **adlockbatchoptimi"** oder " **adlockpessimi"**), gibt der Anbieter außerdem einen Keyset-Cursor zurück und setzt die **CursorType** -Eigenschaft zurück.
+ Dynamic Cursors werden von der Microsoft Jet-Datenbank-Engine nicht unterstützt. Daher unterstützt der OLE DB Anbieter für Microsoft Jet den **adlockdynamic** -Cursortyp nicht. Wenn ein dynamischer Cursor angefordert wird, gibt der Anbieter einen Keyset-Cursor zurück und setzt die [CursorType](../../reference/ado-api/cursortype-property-ado.md) -Eigenschaft zurück, um den Typ des zurückgegebenen [Recordsets](../../reference/ado-api/recordset-object-ado.md) anzugeben. Wenn ein Aktualisier bares **Recordset** angefordert wird (**LockType** ist " **adlockoptimi"**, " **adlockbatchoptimi"** oder " **adlockpessimi"**), gibt der Anbieter außerdem einen Keyset-Cursor zurück und setzt die **CursorType** -Eigenschaft zurück.
 
 ## <a name="dynamic-properties"></a>Dynamische Eigenschaften
- Der OLE DB Anbieter für Microsoft Jet fügt verschiedene dynamische Eigenschaften in die **Properties** -Sammlung der nicht geöffneten [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md)-, [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)-und [Command](../../../ado/reference/ado-api/command-object-ado.md) -Objekte ein.
+ Der OLE DB Anbieter für Microsoft Jet fügt verschiedene dynamische Eigenschaften in die **Properties** -Sammlung der nicht geöffneten [Verbindungs](../../reference/ado-api/connection-object-ado.md)-, [Recordset](../../reference/ado-api/recordset-object-ado.md)-und [Command](../../reference/ado-api/command-object-ado.md) -Objekte ein.
 
  Die folgenden Tabellen sind ein Index übergreifender Index der ADO-und OLE DB Namen für jede dynamische Eigenschaft. Die OLE DB Programmierer-Referenz verweist auf einen ADO-Eigenschaftsnamen mit dem Begriff "Description". Weitere Informationen zu diesen Eigenschaften finden Sie in der OLE DB Programmierer-Referenz.
 
@@ -336,4 +336,4 @@ Microsoft.Jet.OLEDB.4.0
 |Aktualisierbarkeit|DBPROP_UPDATABILITY|
 |Verwenden von Lesezeichen|DBPROP_BOOKMARKS|
 
- Spezifische Implementierungsdetails und Funktions Informationen zum OLE DB Anbieter für Microsoft Jet finden Sie unter [Jet Provider](https://msdn.microsoft.com/library/windows/desktop/ms722791.aspx) in der OLE DB-Dokumentation.
+ Spezifische Implementierungsdetails und Funktions Informationen zum OLE DB Anbieter für Microsoft Jet finden Sie unter [Jet Provider](/previous-versions/windows/desktop/ms722791(v=vs.85)) in der OLE DB-Dokumentation.

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74401038"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Laden von Daten in parallele Data Warehouse
@@ -43,7 +43,7 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Aufgabe|BESCHREIBUNG|  
+|Aufgabe|Beschreibung|  
 |--------|---------------|  
 |Erstellen Sie die Stagingdatenbank.|[Erstellen der Stagingdatenbank](staging-database.md)|  
 |Ladevorgang mit Integration Services.|[Laden mit Integration Services](load-with-ssis.md)|  

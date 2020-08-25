@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e7897d051716434b85f8ee01d15a94588fd947a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5d55b29ec268fcb47b1706eaeab2f42c8d3ff215
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414646"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805254"
 ---
 # <a name="appendix-b-ado-error-codes"></a>Anhang B: ADO-Fehler Codes
 Weitere Informationen zu bestimmten Fehlermeldungen finden Sie in den folgenden Themen:
 
--   [ADO-Fehlercodes](../../../ado/guide/appendixes/ado-error-codes.md)
+-   [ADO-Fehlercodes](./ado-error-codes.md)
 
--   [DataControl-Fehlercodes](../../../ado/guide/appendixes/datacontrol-error-codes.md)
+-   [DataControl-Fehlercodes](./datacontrol-error-codes.md)
 
--   [Internet Explorer-Fehlercodes](../../../ado/guide/appendixes/internet-explorer-error-codes.md)
+-   [Internet Explorer-Fehlercodes](./internet-explorer-error-codes.md)
 
--   [Fehlercodes für Internetinformationsdienste (IIS)](../../../ado/guide/appendixes/internet-information-services-error-codes.md)
+-   [Fehlercodes für Internetinformationsdienste (IIS)](./internet-information-services-error-codes.md)
 
 ## <a name="see-also"></a>Weitere Informationen
- [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md) [ADO](../../../ado/reference/ado-api/ado-collections.md) -Auflistungen ADO [dynamische Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md) ADO- [enumerierte Konstanten](../../../ado/reference/ado-api/ado-enumerated-constants.md) [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md) ADO- [Methoden](../../../ado/reference/ado-api/ado-methods.md) [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md) [ADO-Objekte](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) [ADO Properties](../../../ado/reference/ado-api/ado-properties.md)
+ [ADO-API-Referenz](../../reference/ado-api/ado-api-reference.md) [ADO](../../reference/ado-api/ado-collections.md) -Auflistungen ADO [dynamische Eigenschaften](../../reference/ado-api/ado-dynamic-properties.md) ADO- [enumerierte Konstanten](../../reference/ado-api/ado-enumerated-constants.md) [ADO-Ereignisse](../../reference/ado-api/ado-events.md) ADO- [Methoden](../../reference/ado-api/ado-methods.md) [ADO-Objektmodell](../../reference/ado-api/ado-object-model.md) [ADO-Objekte](../../reference/ado-api/ado-objects-and-interfaces.md) [ADO Properties](../../reference/ado-api/ado-properties.md)

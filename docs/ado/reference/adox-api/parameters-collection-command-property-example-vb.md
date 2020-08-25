@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c82fc6388f1a7ad6582cc91ab2589afda2912f6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7bfbf83c3b10a97593810e5160f585f61e2fdec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439742"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769889"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters-Collection, Command-Eigenschaft – Beispiel (VB)
-Der folgende Code veranschaulicht die Verwendung der [Command](../../../ado/reference/adox-api/command-property-adox.md) -Eigenschaft mit dem [Command](../../../ado/reference/ado-api/command-object-ado.md) -Objekt zum Abrufen von Parameterinformationen für die Prozedur.  
+Der folgende Code veranschaulicht die Verwendung der [Command](./command-property-adox.md) -Eigenschaft mit dem [Command](../ado-api/command-object-ado.md) -Objekt zum Abrufen von Parameterinformationen für die Prozedur.  
   
 ```  
 ' BeginParametersVB  
@@ -77,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ActiveConnection-Eigenschaft (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command-Eigenschaft (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Procedure-Objekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures Collection (ADOX) (Procedures-Auflistung (ADOX))](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection-Eigenschaft (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog-Objekt (ADOX)](./catalog-object-adox.md)   
+ [Command-Eigenschaft (ADOX)](./command-property-adox.md)   
+ [Procedure-Objekt (ADOX)](./procedure-object-adox.md)   
+ [Procedures-Collection (ADOX)](./procedures-collection-adox.md)

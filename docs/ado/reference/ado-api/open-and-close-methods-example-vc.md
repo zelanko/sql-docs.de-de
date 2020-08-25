@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cabdbee513ab42111710520358a66f5f42122f77
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 151802a801afe8d9b8b4ca9d46301f738d79fa1a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442992"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773819"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open- und Close-Methode – Beispiel (VC++)
-In diesem Beispiel werden die **Open** -und [Close](../../../ado/reference/ado-api/close-method-ado.md) -Methode sowohl für [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -als auch für [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekte verwendet, die geöffnet wurden.  
+In diesem Beispiel werden die **Open** -und [Close](./close-method-ado.md) -Methode sowohl für [Recordset](./recordset-object-ado.md) -als auch für [Verbindungs](./connection-object-ado.md) Objekte verwendet, die geöffnet wurden.  
   
 ```  
 // Open_Close_Methods.cpp  
@@ -207,8 +207,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Close-Methode (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Close-Methode (ADO)](./close-method-ado.md)   
+ [Verbindungs Objekt (ADO)](./connection-object-ado.md)   
+ [Open-Methode (ADO-Verbindung)](./open-method-ado-connection.md)   
+ [Open-Methode (ADO-Recordset)](./open-method-ado-recordset.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

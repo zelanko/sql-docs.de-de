@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453572"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806193"
 ---
 # <a name="data-section"></a>Datenabschnitt
 Der Daten Abschnitt definiert die Daten des Rowsets sowie alle ausstehenden Updates, Einfügungen oder Löschungen. Der Daten Abschnitt kann NULL oder mehr Zeilen enthalten. Es können nur Daten aus einem Rowset enthalten sein, in dem die Zeile durch das Schema definiert ist. Auch, wie bereits erwähnt, können Spalten ohne Daten ausgelassen werden. Wenn ein Attribut oder ein Unterelement im Daten Abschnitt verwendet wird und dieses Konstrukt nicht im Schema Abschnitt definiert wurde, wird es automatisch ignoriert.  
   
-## <a name="string"></a>Zeichenfolge  
+## <a name="string"></a>String  
  Reservierte XML-Zeichen in Textdaten müssen durch entsprechende Zeichen Entitäten ersetzt werden. Beispielsweise muss das einfache Anführungszeichen im Firmennamen "Joe es Garage" durch eine Entität ersetzt werden. Die tatsächliche Zeile ähnelt der folgenden:  
   
 ```  
@@ -86,4 +86,4 @@ Der Daten Abschnitt definiert die Daten des Rowsets sowie alle ausstehenden Upda
  Ein Update enthält immer die gesamten ursprünglichen Zeilendaten, gefolgt von den geänderten Zeilendaten. Die geänderte Zeile enthält möglicherweise alle Spalten oder nur die Spalten, die tatsächlich geändert wurden. Im vorherigen Beispiel wird die Zeile für den shipper2 nicht geändert, und nur die Spalte "Phone" hat Werte für den shipperwert 3 geändert und ist daher die einzige Spalte, die in der geänderten Zeile enthalten ist. Die eingefügten Zeilen für die Lader 12, 13 und 14 werden zusammen mit einem RS: Insert-Tag zusammengefasst. Beachten Sie, dass gelöschte Zeilen auch in einem Batch zusammengefasst werden können, obwohl dies im vorherigen Beispiel nicht gezeigt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Beibehalten von Datensätzen im XML-Format](./persisting-records-in-xml-format.md)

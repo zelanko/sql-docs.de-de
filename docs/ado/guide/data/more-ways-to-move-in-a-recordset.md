@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 847fe5406fcdcd75010a0f4836c6f35df4ab1da1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1895410181cea9a916589d766d2fa9254ca8642b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453162"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805814"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Weitere Möglichkeiten zum Navigieren in einem Recordset
-Die folgenden vier Methoden werden verwendet, um in das **Recordset**zu wechseln oder zu scrollen: [MoveFirst, MoveLast, MoveNext und MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Einige dieser Methoden sind bei Vorwärts Cursor nicht verfügbar.)  
+Die folgenden vier Methoden werden verwendet, um in das **Recordset**zu wechseln oder zu scrollen: [MoveFirst, MoveLast, MoveNext und MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Einige dieser Methoden sind bei Vorwärts Cursor nicht verfügbar.)  
   
  " **Muvefirst** " ändert die aktuelle Daten Satz Position in den ersten Datensatz im **Recordset**. " **Muvelast** " ändert die aktuelle Daten Satz Position in den letzten Datensatz im **Recordset**. Das **Recordset** -Objekt muss Lesezeichen oder rückwärts Cursor Bewegung unterstützen, um " **muvefirst** " oder " **muvelast**" zu verwenden. Andernfalls generiert der Methoden aufrufsvorgang einen Fehler.  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bf1f8764aad6192f2b6a38f57835e269a6ac19f0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e23ae5bffca27d7ad9940fb4f03df81645094792
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450852"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776119"
 ---
 # <a name="commandtext-property-ado"></a>CommandText-Eigenschaft (ADO)
 Gibt den Text eines Befehls an, der für einen Anbieter ausgegeben werden soll.  
@@ -30,22 +30,22 @@ Gibt den Text eines Befehls an, der für einen Anbieter ausgegeben werden soll.
  Ruft einen **Zeichen** folgen Wert ab, der einen Anbieter Befehl enthält, z. b. eine SQL-Anweisung, einen Tabellennamen, einen relative URL oder einen gespeicherten Prozedur Aufruf, oder legt diesen fest. Der Standardwert ist eine leere Zeichenfolge ("").  
   
 ## <a name="remarks"></a>Bemerkungen  
- Verwenden Sie die **CommandText** -Eigenschaft, um den Text eines Befehls festzulegen oder zurückzugeben, der von einem [Command](../../../ado/reference/ado-api/command-object-ado.md) -Objekt dargestellt wird. In der Regel handelt es sich hierbei um eine SQL-Anweisung, aber es kann sich auch um eine beliebige andere Art von Befehls Anweisung handeln, die vom Anbieter erkannt wird Eine SQL-Anweisung muss einen bestimmten Dialekt oder eine bestimmte Version aufweisen, die vom Abfrage Prozessor des Anbieters unterstützt wird.  
+ Verwenden Sie die **CommandText** -Eigenschaft, um den Text eines Befehls festzulegen oder zurückzugeben, der von einem [Command](./command-object-ado.md) -Objekt dargestellt wird. In der Regel handelt es sich hierbei um eine SQL-Anweisung, aber es kann sich auch um eine beliebige andere Art von Befehls Anweisung handeln, die vom Anbieter erkannt wird Eine SQL-Anweisung muss einen bestimmten Dialekt oder eine bestimmte Version aufweisen, die vom Abfrage Prozessor des Anbieters unterstützt wird.  
   
- Wenn die [vorbereitete](../../../ado/reference/ado-api/prepared-property-ado.md) -Eigenschaft des **Command** -Objekts auf **true** festgelegt ist und das **Command** -Objekt beim Festlegen der **CommandText** -Eigenschaft an eine geöffnete Verbindung gebunden ist, bereitet ADO die Abfrage (d. h. eine kompilierte Form der Abfrage, die vom Anbieter gespeichert wird) vor, wenn Sie die [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) -oder [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode aufzurufen.  
+ Wenn die [vorbereitete](./prepared-property-ado.md) -Eigenschaft des **Command** -Objekts auf **true** festgelegt ist und das **Command** -Objekt beim Festlegen der **CommandText** -Eigenschaft an eine geöffnete Verbindung gebunden ist, bereitet ADO die Abfrage (d. h. eine kompilierte Form der Abfrage, die vom Anbieter gespeichert wird) vor, wenn Sie die [Execute](./execute-method-ado-command.md) -oder [Open](./open-method-ado-connection.md) -Methode aufzurufen.  
   
- Abhängig von der [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) -Eigenschafts Einstellung kann ADO die **CommandText** -Eigenschaft ändern. Sie können die **CommandText** -Eigenschaft jederzeit lesen, um den eigentlichen Befehls Text anzuzeigen, der von ADO während der Ausführung verwendet wird.  
+ Abhängig von der [CommandType](./commandtype-property-ado.md) -Eigenschafts Einstellung kann ADO die **CommandText** -Eigenschaft ändern. Sie können die **CommandText** -Eigenschaft jederzeit lesen, um den eigentlichen Befehls Text anzuzeigen, der von ADO während der Ausführung verwendet wird.  
   
- Verwenden Sie die **CommandText** -Eigenschaft, um eine relative URL festzulegen oder zurückzugeben, die eine Ressource angibt, z. b. eine Datei oder ein Verzeichnis. Die Ressource ist relativ zu einem Speicherort, der explizit von einem absolute URL oder implizit durch ein geöffnetes [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt angegeben wird.  
+ Verwenden Sie die **CommandText** -Eigenschaft, um eine relative URL festzulegen oder zurückzugeben, die eine Ressource angibt, z. b. eine Datei oder ein Verzeichnis. Die Ressource ist relativ zu einem Speicherort, der explizit von einem absolute URL oder implizit durch ein geöffnetes [Verbindungs](./connection-object-ado.md) Objekt angegeben wird.  
   
 > [!NOTE]
->  URLs, die das http-Schema verwenden, rufen automatisch den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung auf](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URLs, die das http-Schema verwenden, rufen automatisch den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung auf](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absolute und relative URLs](../../guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Gilt für  
- [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Command-Objekt (ADO)](./command-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [Requery-Methode](../../../ado/reference/ado-api/requery-method.md)   
- [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)
+ [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VB)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VC + +)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [Requery-Methode](./requery-method.md)   
+ [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (JScript)](./activeconnection-commandtext-timeout-type-size-example-jscript.md)

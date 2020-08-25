@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83cfc60dcbc3efa51b5e1465ff09c80b4db75ead
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e26b3f364595adea7e1eadc65114bffb19db2639
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453362"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806813"
 ---
 # <a name="forward-only-cursors"></a>Vorwärtscursor
 Der typische Standardcursortyp, der als Vorwärts Cursor (oder nicht Bild lauffähigen Cursor) bezeichnet wird, kann nur durch das Resultset vorwärts verschoben werden. Ein Vorwärts Cursor unterstützt keinen Bildlauf (die Möglichkeit, vorwärts und rückwärts im Resultset zu bewegen); Es unterstützt nur das Abrufen von Zeilen vom Anfang bis zum Ende des Resultsets. Bei einigen Vorwärts Cursor (z. b. mit der SQL Server Cursor Bibliothek) werden alle INSERT-, Update-und DELETE-Anweisungen, die vom aktuellen Benutzer ausgeführt werden (oder von anderen Benutzern zugesichert wurden), die sich auf Zeilen im Resultset auswirken, beim Abrufen der Zeilen angezeigt. Da mit dem Cursor nicht zurück gescrollt werden kann, sind Änderungen, die an Zeilen in der Datenbank vorgenommen wurden, nachdem die jeweilige Zeile abgerufen wurde, über den Cursor nicht sichtbar.  
@@ -31,6 +31,6 @@ Der typische Standardcursortyp, der als Vorwärts Cursor (oder nicht Bild lauff�
  Wenn die Anwendung keinen Bildlauf durch das Resultset erfordert, ist der Vorwärts Cursor die beste Methode zum schnellen Abrufen von Daten mit dem geringsten Aufwand. Verwenden Sie die **cursortypeerum-Klasse von adOpenForwardOnly** , um anzugeben, dass Sie einen Vorwärts Cursor in ADO verwenden möchten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Statische Cursor](../../../ado/guide/data/static-cursors.md)   
- [Keysetcursor](../../../ado/guide/data/keyset-cursors.md)   
- [Dynamische Cursor](../../../ado/guide/data/dynamic-cursors.md)
+ [Statische Cursor](./static-cursors.md)   
+ [Keysetcursor](./keyset-cursors.md)   
+ [Dynamische Cursor](./dynamic-cursors.md)

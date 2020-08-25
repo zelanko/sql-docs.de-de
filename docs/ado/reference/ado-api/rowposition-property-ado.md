@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 330c090c9e4eedd6a083d58a55243d470514541f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f5f78843e38c2a3ff6b21c90bc9ed7f2c573ee4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442462"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777609"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition-Eigenschaft (ADO)
 Ruft ein OLE DB **RowPosition** -Objekt von/in einem **adorecordsetconstruction** -Objekt ab oder legt es fest. Wenn Sie **put_RowPosition** verwenden, um das **RowPosition** -Objekt festzulegen, verwendet das resultierende **Recordset** -Objekt das **RowPosition** -Objekt, um die aktuelle Zeile zu bestimmen.  
@@ -53,4 +53,4 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
  Wenn diese Eigenschaft festgelegt ist und sich **Rowset** das Rowsetobjekt für das **RowPosition** -Objekt vom Rowsetobjekt des **Recordset** -Objekts unterscheidet, überschreibt das erste das zweite. **Rowset** Das gleiche Verhalten gilt auch für das aktuelle **Kapitel** der **RowPosition** .  
   
 ## <a name="applies-to"></a>Gilt für  
- [ADORecordsetConstruction-Schnittstelle](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
+ [ADORecordsetConstruction-Schnittstelle](./adorecordsetconstruction-interface.md)

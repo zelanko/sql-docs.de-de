@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a8d92abc3a1b0d7e6d39ac4149c186c5a2fc2eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75cfedbafa7bc0c1b954f8bbdea29ec92d45c07f
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453372"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806825"
 ---
 # <a name="formal-shape-grammar"></a>Formale Grammatik für Strukturen
 Dies ist die formale Grammatik zum Erstellen beliebiger Form Befehle:  
@@ -69,10 +69,10 @@ Dies ist die formale Grammatik zum Erstellen beliebiger Form Befehle:
 |\<expression>|Ein Visual Basic for Applications Ausdruck, dessen Operanden andere nicht-Calc-Spalten in derselben Zeile sind.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Übersicht über die Daten Strukturierung](../../../ado/guide/data/data-shaping-overview.md)   
- [Erforderliche Anbieter für die Daten Strukturierung](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Shape-APPEND-Klausel](../../../ado/guide/data/shape-append-clause.md)   
- [Shape-Befehle im allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)   
- [Shape-COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md)   
- [Visual Basic for Applications-Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [Zugreifen auf Zeilen in einem hierarchischen Recordset](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [Übersicht über die Daten Strukturierung](./data-shaping-overview.md)   
+ [Erforderliche Anbieter für die Daten Strukturierung](./required-providers-for-data-shaping.md)   
+ [Shape-APPEND-Klausel](./shape-append-clause.md)   
+ [Shape-Befehle im allgemeinen](./shape-commands-in-general.md)   
+ [Shape-COMPUTE-Klausel](./shape-compute-clause.md)   
+ [Visual Basic for Applications-Funktionen](./visual-basic-for-applications-functions.md)

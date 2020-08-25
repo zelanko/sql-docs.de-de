@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbfd00f1cda9fcfc38a7b13b39e1f3e08a24b209
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 433854566bb329547e362e4e4d3ef4628e6069d3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443012"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773859"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Open- und Close-Methode – Beispiel (VB)
-In diesem Beispiel werden die **Open** -und [Close](../../../ado/reference/ado-api/close-method-ado.md) -Methode sowohl für [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -als auch für [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekte verwendet, die geöffnet wurden.  
+In diesem Beispiel werden die **Open** -und [Close](./close-method-ado.md) -Methode sowohl für [Recordset](./recordset-object-ado.md) -als auch für [Verbindungs](./connection-object-ado.md) Objekte verwendet, die geöffnet wurden.  
   
 ```  
 'BeginOpenVB  
@@ -103,8 +103,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Close-Methode (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Close-Methode (ADO)](./close-method-ado.md)   
+ [Verbindungs Objekt (ADO)](./connection-object-ado.md)   
+ [Open-Methode (ADO-Verbindung)](./open-method-ado-connection.md)   
+ [Open-Methode (ADO-Recordset)](./open-method-ado-recordset.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36934de15041ddec97b0cc266a980f4908518a24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e21089ed2fd513f4c82ba9c30478b51fee6c4ebe
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453102"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805641"
 ---
 # <a name="operation-of-parameterized-commands"></a>Verarbeitung parametrisierter Befehle
 Wenn Sie mit einem großen untergeordneten **Recordset**arbeiten, besonders im Vergleich zur Größe des übergeordneten **Recordsets**, aber nur auf ein paar untergeordneter Kapitel zugreifen müssen, ist es möglicherweise effizienter, einen parametrisierten Befehl zu verwenden.  
@@ -39,7 +39,7 @@ SHAPE {SELECT * FROM customer}
  Die über-und untergeordneten Tabellen haben einen gemeinsamen Spaltennamen *cust_id*. Der untergeordnete *Befehl* weist den Platzhalter "?" auf, auf den sich die Verwandte Klausel bezieht (d. h. "... Parameter 0 ").  
   
 > [!NOTE]
->  Die Parameter Klausel bezieht sich ausschließlich auf die Syntax des Shape-Befehls. Sie ist weder dem ADO- [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt noch der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung zugeordnet.  
+>  Die Parameter Klausel bezieht sich ausschließlich auf die Syntax des Shape-Befehls. Sie ist weder dem ADO- [Parameter](../../reference/ado-api/parameter-object.md) Objekt noch der [Parameter](../../reference/ado-api/parameters-collection-ado.md) Auflistung zugeordnet.  
   
  Wenn der Befehl für die parametrisierte Form ausgeführt wird, geschieht Folgendes:  
   
@@ -49,7 +49,7 @@ SHAPE {SELECT * FROM customer}
   
 3.  Wenn auf die Kapitel-Spalte einer übergeordneten Zeile zugegriffen wird, wird der untergeordnete *-Befehl* mit dem Wert von Customer. cust_id als Wert des-Parameters ausgeführt.  
   
-4.  Alle Zeilen im Datenanbieter-Rowset, das in Schritt 3 erstellt wurde, werden verwendet, um das untergeordnete **Recordset aufzufüllen**. In diesem Beispiel handelt es sich dabei um alle Zeilen in der Orders-Tabelle, in der die cust_id dem Wert von Customer. cust_id entspricht. Standardmäßig werden die untergeordneten **Recordsets**auf dem Client zwischengespeichert, bis alle Verweise auf das übergeordnete **Recordset** freigegeben werden. Um dieses Verhalten zu ändern, legen Sie die untergeordneten Zeilen des **Recordset** [Dynamic Property](../../../ado/reference/ado-api/ado-dynamic-property-index.md) **Cache** auf **false**fest.  
+4.  Alle Zeilen im Datenanbieter-Rowset, das in Schritt 3 erstellt wurde, werden verwendet, um das untergeordnete **Recordset aufzufüllen**. In diesem Beispiel handelt es sich dabei um alle Zeilen in der Orders-Tabelle, in der die cust_id dem Wert von Customer. cust_id entspricht. Standardmäßig werden die untergeordneten **Recordsets**auf dem Client zwischengespeichert, bis alle Verweise auf das übergeordnete **Recordset** freigegeben werden. Um dieses Verhalten zu ändern, legen Sie die untergeordneten Zeilen des **Recordset** [Dynamic Property](../../reference/ado-api/ado-dynamic-property-index.md) **Cache** auf **false**fest.  
   
 5.  Ein Verweis auf die abgerufenen untergeordneten Zeilen (d. h. das Kapitel des untergeordneten **Recordsets**) wird in der Spalte Kapitel der aktuellen Zeile des übergeordneten **Recordsets**platziert.  
   
@@ -90,6 +90,6 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 >  Bei Verwendung von WHERE-Klauseln können Parameter die SQL-Datentypen für Text, ntext und Image nicht verwenden, oder es tritt ein Fehler auf, der die folgende Beschreibung enthält: `Invalid operator for data type` .  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Daten Strukturierung](../../../ado/guide/data/data-shaping-example.md)   
- [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
- [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)
+ [Beispiel für Daten Strukturierung](./data-shaping-example.md)   
+ [Formale Form Grammatik](./formal-shape-grammar.md)   
+ [Shape-Befehle im Allgemeinen](./shape-commands-in-general.md)

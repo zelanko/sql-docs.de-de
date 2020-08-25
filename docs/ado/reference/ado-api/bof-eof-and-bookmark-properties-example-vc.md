@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33bd0bf737b6c586c0cb97072b28650898e86696
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be80fc6c09279920a992b25bb91ee7621aabf5a1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451142"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776589"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF-, EOF-und Bookmark-Eigenschaften Beispiel (VC + +)
-Die erste Funktion in diesem Beispiel verwendet die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) -und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) -Eigenschaften, um eine Meldung anzuzeigen, wenn ein Benutzer versucht, nach dem ersten oder letzten Datensatz eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)zu wechseln. Er verwendet die [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) -Eigenschaft, damit der Benutzer einen Datensatz in einem **Recordset** markieren und später zurückkehren kann.  
+Die erste Funktion in diesem Beispiel verwendet die [BOF](./bof-eof-properties-ado.md) -und [EOF](./bof-eof-properties-ado.md) -Eigenschaften, um eine Meldung anzuzeigen, wenn ein Benutzer versucht, nach dem ersten oder letzten Datensatz eines [Recordsets](./recordset-object-ado.md)zu wechseln. Er verwendet die [Bookmark](./bookmark-property-ado.md) -Eigenschaft, damit der Benutzer einen Datensatz in einem **Recordset** markieren und später zurückkehren kann.  
   
  Die zweite Funktion verwendet die Bookmark-Eigenschaft, um das **Lesezeichen** jedes anderen Datensatzes aus einem **Recordset** in ein Array zu platzieren, und filtert dann das Recordset mit dem Array.  
   
@@ -207,6 +207,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [BOF, EOF-Eigenschaften (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Bookmark-Eigenschaft (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [BOF, EOF-Eigenschaften (ADO)](./bof-eof-properties-ado.md)   
+ [Bookmark-Eigenschaft (ADO)](./bookmark-property-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

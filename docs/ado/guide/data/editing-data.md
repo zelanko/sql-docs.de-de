@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7fc5d177b05447637d635a9f132c9f9da086ef2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01f5f2010491e394addd37511ead8b7ea20136c1
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453462"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806877"
 ---
 # <a name="editing-data"></a>Bearbeiten von Daten
 Wir haben erläutert, wie ADO verwendet, um eine Verbindung mit einer Datenquelle herzustellen, einen Befehl auszuführen, die Ergebnisse in einem **Recordset** -Objekt zu erhalten und innerhalb des **Recordsets**zu navigieren. Dieser Abschnitt konzentriert sich auf den nächsten grundlegenden ADO-Vorgang: Bearbeiten von Daten.  
   
- In diesem Abschnitt wird weiterhin das in unter [Suchen von Daten](../../../ado/guide/data/examining-data.md)eingeführte **beispielrecordset** verwendet, mit einer wichtigen Änderung. Der folgende Code wird verwendet, um das **Recordset**zu öffnen:  
+ In diesem Abschnitt wird weiterhin das in unter [Suchen von Daten](./examining-data.md)eingeführte **beispielrecordset** verwendet, mit einer wichtigen Änderung. Der folgende Code wird verwendet, um das **Recordset**zu öffnen:  
   
 ```  
 'BeginEditIntro  
@@ -44,7 +44,7 @@ Wir haben erläutert, wie ADO verwendet, um eine Verbindung mit einer Datenquell
 'EndEditIntro  
 ```  
   
- Die wichtige Änderung am Code umfasst das Festlegen der **CursorLocation** -Eigenschaft des **Connection** -Objekts auf **adUseClient** in der *getNewConnection* -Funktion (siehe das nächste Beispiel), das die Verwendung eines Client Cursors angibt. Weitere Informationen zu den Unterschieden zwischen Client seitigen und serverseitigen Cursorn finden Sie Untergrund Legendes zu [Cursorn und Sperren](../../../ado/guide/data/understanding-cursors-and-locks.md).  
+ Die wichtige Änderung am Code umfasst das Festlegen der **CursorLocation** -Eigenschaft des **Connection** -Objekts auf **adUseClient** in der *getNewConnection* -Funktion (siehe das nächste Beispiel), das die Verwendung eines Client Cursors angibt. Weitere Informationen zu den Unterschieden zwischen Client seitigen und serverseitigen Cursorn finden Sie Untergrund Legendes zu [Cursorn und Sperren](./understanding-cursors-and-locks.md).  
   
  Die **adUseClient** -Einstellung der **CursorLocation** -Eigenschaft verschiebt die Position des Cursors aus der Datenquelle (in diesem Fall die SQL Server) an den Speicherort des Client Codes (die Desktop Arbeitsstation). Diese Einstellung erzwingt ADO, das Client Cursor Modul für OLE DB auf dem Client aufzurufen, um den Cursor zu erstellen und zu verwalten.  
   
@@ -84,12 +84,12 @@ End Function
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   
--   [Bearbeiten vorhandener Datensätze](../../../ado/guide/data/editing-existing-records.md)  
+-   [Bearbeiten vorhandener Datensätze](./editing-existing-records.md)  
   
--   [Hinzufügen von Datensätzen](../../../ado/guide/data/adding-records.md)  
+-   [Hinzufügen von Datensätzen](./adding-records.md)  
   
--   [Bestimmen der unterstützten Vorgänge](../../../ado/guide/data/determining-what-is-supported.md)  
+-   [Bestimmen der unterstützten Vorgänge](./determining-what-is-supported.md)  
   
--   [Löschen von Datensätzen mit der Delete-Methode](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
+-   [Löschen von Datensätzen mit der Delete-Methode](./deleting-records-using-the-delete-method.md)  
   
--   [Alternativen: Verwenden von SQL-Anweisungen](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [Alternativen: Verwenden von SQL-Anweisungen](./alternatives-using-sql-statements.md)

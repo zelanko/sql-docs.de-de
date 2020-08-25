@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400138"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>tempdb-Datenbank parallel Data Warehouse
@@ -25,7 +25,7 @@ Weitere Informationen zu System Datenbanken finden Sie unter [System Datenbanken
 *lokale temporäre Tabelle*  
 Eine *lokale temporäre Tabelle* verwendet das Präfix # vor dem Tabellennamen und ist eine temporäre Tabelle, die von einer lokalen Benutzersitzung erstellt wird. Jede Sitzung kann nur für eine eigene Sitzung auf die Daten in lokalen temporären Tabellen zugreifen.  
   
-Jede Sitzung kann die Metadaten für lokale temporäre Tabellen in allen Sitzungen anzeigen. Beispielsweise können alle Sitzungen die Metadaten für alle lokalen temporären Tabellen mit der `SELECT * FROM tempdb.sys.tables` Abfrage anzeigen.  
+Jede Sitzung kann die Metadaten für lokale temporäre Tabellen in allen Sitzungen anzeigen. Beispielsweise können alle Sitzungen die Metadaten für alle lokalen temporären Tabellen mit der Abfrage anzeigen `SELECT * FROM tempdb.sys.tables` .  
   
 globale temporäre Tabelle  
 *Globale temporäre Tabellen*, die in SQL Server mit der # #-Syntax unterstützt werden, werden in dieser Version von SQL Server PDW nicht unterstützt.  
@@ -84,7 +84,7 @@ Jeder Benutzer ist berechtigt, temporäre Objekte in tempdb zu erstellen. Benutz
   
 ## <a name="related-tasks"></a><a name="RelatedTasks"></a>Related Tasks  
   
-|Aufgaben|BESCHREIBUNG|  
+|Aufgaben|Beschreibung|  
 |---------|---------------|  
 |Erstellen Sie eine Tabelle in **tempdb**.|Sie können eine temporäre Benutzertabelle mit den CREATE TABLE und CREATE TABLE als SELECT-Anweisungen erstellen. Weitere Informationen finden Sie unter [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) und [Create Table As Select](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |Anzeigen einer Liste vorhandener Tabellen in **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  

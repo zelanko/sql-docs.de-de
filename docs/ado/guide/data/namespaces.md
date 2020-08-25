@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4ab26dd8f767315a3392a2434689561fdb391d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4973bd2e822d3ec56b4e8cb4aa9b7a359e07b977
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453142"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805776"
 ---
 # <a name="namespaces"></a>Namespaces
 Das XML-Persistenzformat in ADO verwendet die folgenden vier Namespaces.  
@@ -47,4 +47,4 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
  Der Benutzer kann dies als beliebiger Name definieren, solange dieser Name konsistent im gesamten XML-Dokument verwendet wird. ADO schreibt immer "s", "RS", "DT" und "z", aber diese Präfix Namen sind nicht in der Lade Komponente hart codiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Beibehalten von Datensätzen im XML-Format](./persisting-records-in-xml-format.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65f6583206ce48a0f2ee2508e369ce6256b4cdaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f76532e3904da2723f59afbf1f719f7cc212954
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451042"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776329"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel-Methode – Beispiel (VB)
-In diesem Beispiel wird die [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) -Methode zum Abbrechen eines Befehls verwendet, der für ein [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt ausgeführt wird, wenn die Verbindung ausgelastet ist.  
+In diesem Beispiel wird die [Cancel](./cancel-method-ado.md) -Methode zum Abbrechen eines Befehls verwendet, der für ein [Verbindungs](./connection-object-ado.md) Objekt ausgeführt wird, wenn die Verbindung ausgelastet ist.  
   
 ```  
 'BeginCancelVB  
@@ -104,5 +104,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Cancel-Methode (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Cancel-Methode (ADO)](./cancel-method-ado.md)   
+ [Connection-Objekt (ADO)](./connection-object-ado.md)

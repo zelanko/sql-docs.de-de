@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4093cfbd1ca5372d86fd07b6fc7716d484c4f51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66e80c85d1361c99499c91685d46e2df29b59957
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439712"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769809"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog-Eigenschaft – Beispiel (VB)
-Der folgende Code veranschaulicht die Verwendung der Eigenschaft ["Eigenschaft"](../../../ado/reference/adox-api/parentcatalog-property-adox.md) , um auf eine anbieterspezifische Eigenschaft zuzugreifen, bevor eine Tabelle an einen Katalog angehängt wird. Die-Eigenschaft ist " **AutoIncrement**", wodurch ein AutoIncrement-Feld in einer Microsoft Jet-Datenbank erstellt wird.  
+Der folgende Code veranschaulicht die Verwendung der Eigenschaft ["Eigenschaft"](./parentcatalog-property-adox.md) , um auf eine anbieterspezifische Eigenschaft zuzugreifen, bevor eine Tabelle an einen Katalog angehängt wird. Die-Eigenschaft ist " **AutoIncrement**", wodurch ein AutoIncrement-Feld in einer Microsoft Jet-Datenbank erstellt wird.  
   
 ```  
 ' BeginCreateAutoIncrColumnVB  
@@ -85,12 +85,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Append-Methode (ADOX-Spalten)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append-Methode (ADOX-Tabellen)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Name-Eigenschaft (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [Para Catalog-Eigenschaft (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
- [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Type-Eigenschaft (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
+ [Append-Methode (ADOX-Spalten)](./append-method-adox-columns.md)   
+ [Append-Methode (ADOX-Tabellen)](./append-method-adox-tables.md)   
+ [Catalog-Objekt (ADOX)](./catalog-object-adox.md)   
+ [Column-Objekt (ADOX)](./column-object-adox.md)   
+ [Columns-Auflistung (ADOX)](./columns-collection-adox.md)   
+ [Name-Eigenschaft (ADOX)](./name-property-adox.md)   
+ [Para Catalog-Eigenschaft (ADOX)](./parentcatalog-property-adox.md)   
+ [Table-Objekt (ADOX)](./table-object-adox.md)   
+ [Type-Eigenschaft (Spalte) (ADOX)](./type-property-column-adox.md)

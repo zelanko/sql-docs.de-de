@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b702f96fab776c383e309a94eea9358ed95cab90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 861b170e55c37f333f09dc8168c35ad7088d17fa
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355436"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805499"
 ---
 # <a name="ado-overview-and-benefits"></a>Übersicht und Vorteile von ADO
 ActiveX Data Objects (ADO) ist eine sehr einfach zu verwendende Oberfläche für die OLE DB. OLE DB ist eine hochleistungsfähige Hochleistungs Schnittstelle für eine Vielzahl von Daten speichern. ADO und OLE DB können mit relationalen (tabellarischen) und nicht relationalen (hierarchischen oder Datenstrom-) Daten arbeiten.
@@ -27,14 +27,14 @@ ActiveX Data Objects (ADO) ist eine sehr einfach zu verwendende Oberfläche für
 
  In diesem Abschnitt werden die folgenden Themen behandelt:
 
--   [ADO-Verlauf](../../ado/guide/ado-history.md)
+-   [ADO-Verlauf](./ado-history.md)
 
--   [Voraussetzungen für die Verwendung der ADO-Dokumentation](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
+-   [Voraussetzungen für die Verwendung der ADO-Dokumentation](./prerequisites-for-using-the-ado-documentation.md)
 
--   [Verweisen auf die ADO-Bibliotheken](../../ado/guide/referencing-the-ado-libraries.md)
+-   [Verweisen auf die ADO-Bibliotheken](./referencing-the-ado-libraries.md)
 
--   [ADO Task Table (ADO-Aufgabentabelle)](../../ado/guide/ado-task-table.md)
+-   [ADO-Aufgabentabelle](./ado-task-table.md)
 
--   [ADO Technology Table (ADO-Technologientabelle)](../../ado/guide/ado-technology-table.md)
+-   [ADO-Technologientabelle](./ado-technology-table.md)
 
--   [ADO Security Design Issues (Entwurfsaspekte für die ADO-Sicherheit)](../../ado/guide/ado-security-design-issues.md)
+-   [Entwurfsaspekte für die ADO-Sicherheit](./ado-security-design-issues.md)

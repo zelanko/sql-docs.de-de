@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bea36687e0fbe8aea4768386f4435ceece621bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e60bbc81f7b40dac7d1564a32f1e60eb8456c9bf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442112"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777499"
 ---
 # <a name="seekenum"></a>SeekEnum
-Gibt den Typ des auszuführenden [Suchtyps](../../../ado/reference/ado-api/seek-method.md) an.  
+Gibt den Typ des auszuführenden [Suchtyps](./seek-method.md) an.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adseekfirsteq**|1|Sucht den ersten Schlüssel, der mit *KeyValues*übereinstimmt.|  
 |**adseeklasteq**|2|Sucht den letzten Schlüssel, der mit *KeyValues*übereinstimmt.|  
@@ -38,7 +38,7 @@ Gibt den Typ des auszuführenden [Suchtyps](../../../ado/reference/ado-api/seek-
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |Adoerums. Seek. firsteq|  
 |Adoerums. Seek. lasteq|  
@@ -48,4 +48,4 @@ Gibt den Typ des auszuführenden [Suchtyps](../../../ado/reference/ado-api/seek-
 |Adoerums. Seek. before|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Seek-Methode](../../../ado/reference/ado-api/seek-method.md)
+ [Seek-Methode](./seek-method.md)

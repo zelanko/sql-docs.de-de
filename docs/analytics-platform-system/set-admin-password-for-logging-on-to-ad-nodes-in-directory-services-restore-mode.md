@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400333"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Festlegen des Administrator Kennworts für die Anmeldung bei AD-Knoten im Verzeichnisdienst-Wiederherstellungs Modus (DSRM)-Analytics Platform System
@@ -25,9 +25,9 @@ Der Verzeichnisdienst-Wiederherstellungs Modus (Directory Services Restore Mode,
   
 2.  Geben Sie an der Eingabeaufforderung `ntdsutil` ein:  
   
-3.  Geben `set dsrm password`Sie an der Eingabeaufforderung von **Ntdsutil** ein.  
+3.  Geben Sie an der Eingabeaufforderung von **Ntdsutil** ein `set dsrm password` .  
   
-4.  Geben `reset password on server null`Sie an der Eingabeaufforderung **Administrator Kennwort zurücksetzen: ein** .  
+4.  Geben Sie an der Eingabeaufforderung **Administrator Kennwort zurücksetzen: ein** `reset password on server null` .  
   
 5.  Geben Sie an der Eingabeaufforderung das neue Kennwort ein.  
   
