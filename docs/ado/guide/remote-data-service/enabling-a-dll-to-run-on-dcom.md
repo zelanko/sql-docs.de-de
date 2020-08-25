@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d685e03834b1c8390ddd51a8e590f25cd6307efe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0c68a6e438f44bedae3134253c72fe49521b44e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452202"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759783"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>Aktivieren einer DLL zur Ausführung unter DCOM
 > [!IMPORTANT]
@@ -36,12 +36,10 @@ ms.locfileid: "88452202"
   
      - oder -  
   
-     Importieren Sie das [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt in das Paket.  
+     Importieren Sie das [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) -Objekt in das Paket.  
   
 3.  Legen Sie das Aktivierungs Attribut für das Paket **im Prozess des Erstellers** (Bibliotheks Anwendung) auf fest.  
   
      Um die DLL-Datei über DCOM und IIS auf demselben Computer zugänglich zu machen, müssen Sie das Aktivierungs Attribut der Komponente im MMC-Snap-in "Komponenten Dienste" festlegen. Nachdem Sie **im Prozess des Erstellers das-** Attribut auf festgelegt haben, werden Sie feststellen, dass in der Registrierung ein **INPROC** -Server Schlüssel hinzugefügt wurde, der auf die Komponente "Ersatz. dll" für Komponenten Dienste verweist.  
   
  Weitere Informationen zu den Komponenten Diensten (oder zum Microsoft Transaction Service, wenn Sie Windows NT verwenden) und zum Ausführen dieser Schritte finden Sie auf der Microsoft Transaction Server-Website.
-
-

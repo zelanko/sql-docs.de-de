@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 506c20cddf6527e0d8c61a9a9c7133cefef0b1c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 744bb7a701207ef92bc23fa2d9728c0b86092fd0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451852"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760080"
 ---
 # <a name="using-related-technologies-with-rds"></a>Verwenden von verwandten Technologien mit RDS
 In diesem Abschnitt werden die folgenden Themen behandelt:  
   
--   [Verwenden von RDS mit ODBC-Verbindungspooling](../../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)  
+-   [Verwenden von RDS mit ODBC-Verbindungspooling](./using-rds-with-odbc-connection-pooling.md)  
   
--   [Ausführen von Geschäftsobjekten in Komponentendiensten](../../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)  
+-   [Ausführen von Geschäftsobjekten in Komponentendiensten](./running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
@@ -45,7 +45,4 @@ In diesem Abschnitt werden die folgenden Themen behandelt:
  **Microsoft Windows NT Server/Windows 2000-Server** Weitere Informationen zur Sicherheit in Microsoft Windows NT Server oder Windows 2000 Server finden Sie auf der Microsoft Windows-Website.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
+ [Grundlegendes zu RDS](./rds-fundamentals.md)

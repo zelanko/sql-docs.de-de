@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5674fc090a9803f6ce5249c48c65615edb2581bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67dd2ac9820167c92b16d11b056e02f796e56f5f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451882"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759888"
 ---
 # <a name="troubleshooting-rds"></a>RDS-Problembehandlung
 > [!IMPORTANT]
@@ -26,19 +26,17 @@ ms.locfileid: "88451882"
   
  In diesem Abschnitt finden Sie Lösungen für bestimmte Fehler oder Probleme mit RDS. In diesem Abschnitt werden die folgenden Themen behandelt:  
   
--   [Konfigurieren von RDS unter Windows 2000](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
+-   [Konfigurieren von RDS unter Windows 2000](./configuring-rds-on-windows-2000.md)  
   
--   ["Internet Server Fehler: Zugriff verweigert"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   ["Internet Server Fehler: Zugriff verweigert"](./internet-server-error-access-denied.md)  
   
--   [RDS gibt „Datenstrom nicht gelesen“-Fehler zurück](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
+-   [RDS gibt „Datenstrom nicht gelesen“-Fehler zurück](./rds-returns-stream-not-read-error.md)  
   
--   [Deadlocks mit Lese wiederholbarer Isolationsstufe](../../../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)  
+-   [Deadlocks mit Lese wiederholbarer Isolationsstufe](./deadlocks-with-read-repeatable-isolation-level.md)  
   
--   [Sicherstellen, dass ausreichend TempDB-Speicherplatz vorhanden ist](../../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)  
+-   [Sicherstellen, dass ausreichend TempDB-Speicherplatz vorhanden ist](./ensuring-sufficient-tempdb-space.md)  
   
--   [Minimieren des Verbrauchs an Protokolldatei-Speicherplatz](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
+-   [Minimieren des Verbrauchs an Protokolldatei-Speicherplatz](./minimizing-log-file-space-usage.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Grundlegendes zu RDS](./rds-fundamentals.md)

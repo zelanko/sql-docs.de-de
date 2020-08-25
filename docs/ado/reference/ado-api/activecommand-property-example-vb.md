@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55f0eb77a498eba9d6fe2565a8647dc11d77897b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c2cd1df656d07b274fe000c427dd3eae07da76b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451722"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759910"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand-Eigenschaft – Beispiel (VB)
-In diesem Beispiel wird die [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) -Eigenschaft veranschaulicht.  
+In diesem Beispiel wird die [ActiveCommand](./activecommand-property-ado.md) -Eigenschaft veranschaulicht.  
   
- Einer Unterroutine wird ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt zugewiesen, dessen **ActiveCommand** -Eigenschaft verwendet wird, um den Befehls Text und den Parameter anzuzeigen, mit dem das **Recordset**erstellt wurde.  
+ Einer Unterroutine wird ein [Recordset](./recordset-object-ado.md) -Objekt zugewiesen, dessen **ActiveCommand** -Eigenschaft verwendet wird, um den Befehls Text und den Parameter anzuzeigen, mit dem das **Recordset**erstellt wurde.  
   
 ```  
 'BeginActiveCommandVB  
@@ -91,9 +91,9 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- Die **activecommandxprint** -Routine erhält nur ein **Recordset** -Objekt, aber Sie muss den Befehls Text und den Parameter ausgeben, mit dem das **Recordset**erstellt wurde. Dies ist möglich, da die **ActiveCommand** -Eigenschaft des **Recordset** -Objekts das zugeordnete [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt ergibt.  
+ Die **activecommandxprint** -Routine erhält nur ein **Recordset** -Objekt, aber Sie muss den Befehls Text und den Parameter ausgeben, mit dem das **Recordset**erstellt wurde. Dies ist möglich, da die **ActiveCommand** -Eigenschaft des **Recordset** -Objekts das zugeordnete [Befehls](./command-object-ado.md) Objekt ergibt.  
   
- Die [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) -Eigenschaft des **Befehls** Objekts gibt den parametrisierten Befehl aus, mit dem das **Recordset**erstellt wurde. Die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung des **Befehls** Objekts gibt den Wert zurück, der für den Parameter Platzhalter ("**?**") des Befehls ersetzt wurde.  
+ Die [CommandText](./commandtext-property-ado.md) -Eigenschaft des **Befehls** Objekts gibt den parametrisierten Befehl aus, mit dem das **Recordset**erstellt wurde. Die [Parameter](./parameters-collection-ado.md) Auflistung des **Befehls** Objekts gibt den Wert zurück, der für den Parameter Platzhalter ("**?**") des Befehls ersetzt wurde.  
   
  Zum Schluss werden eine Fehlermeldung oder der Name und die ID des Autors ausgegeben.  
   
@@ -122,6 +122,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ActiveCommand-Eigenschaft (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ActiveCommand-Eigenschaft (ADO)](./activecommand-property-ado.md)   
+ [Command-Objekt (ADO)](./command-object-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

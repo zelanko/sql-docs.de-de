@@ -11,18 +11,19 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d411bff221ed82f1d31252aa2530efcef68a614a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa468028198839f9cf8d4dd6d12791966d254aaf
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723207"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091985"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Unterstützung für Hochverfügbarkeit für In-Memory OLTP-Datenbanken
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Datenbanken mit speicheroptimierten Tabellen mit bzw. ohne systemeigene kompilierte gespeicherte Prozeduren werden mit AlwaysOn-Verfügbarkeitsgruppen vollständig unterstützt.  Es gibt keinen Unterschied in Konfiguration und Unterstützung zwischen Datenbanken mit [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Objekten und solchen ohne diese Objekte.  
-  
- Wenn in der Konfiguration einer AlwaysOn-Verfügbarkeitsgruppe eine In-Memory-OLTP-Datenbank bereitgestellt wird, werden bei Anwendung von REDO Änderungen an speicheroptimierten Tabellen auf dem primären Replikat im Arbeitsspeicher auf die Tabellen auf den sekundären Replikaten angewendet. Dies bedeutet, dass ein Failover zu einem sekundären Replikat sehr schnell erfolgen kann, da sich die Daten bereits im Arbeitsspeicher befinden. Darüber hinaus stehen die Tabellen für Abfragen auf sekundären Replikaten, die für den Lesezugriff konfiguriert wurden, zur Verfügung.  
+  Datenbanken mit speicheroptimierten Tabellen mit bzw. ohne systemeigene kompilierte gespeicherte Prozeduren werden mit AlwaysOn-Verfügbarkeitsgruppen vollständig unterstützt.  Es gibt keinen Unterschied bei der Konfiguration und Unterstützung von Datenbanken mit [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Objekten und solchen ohne diese Objekte.  
+
+ Änderungen an speicheroptimierten Tabellen im primären Replikat werden während der Rollforwardphase auf die Tabellen im sekundären Replikat angewendet. So ist ein schnelles Failover auf das sekundäre Replikat möglich, weil sich die Daten bereits im Arbeitsspeicher befinden. Tabellen sind für Leseabfragen in sekundären Replikaten verfügbar, die für den Lesezugriff konfiguriert wurden.  
+
   
 ## <a name="always-on-availability-groups-and-in-memory-oltp-databases"></a>AlwaysOn-Verfügbarkeitsgruppen und In-Memory OLTP-Datenbanken  
  Die Konfiguration von Datenbanken mit [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Komponenten ermöglicht Folgendes:  
@@ -31,13 +32,17 @@ ms.locfileid: "85723207"
     Sie können Ihre Datenbanken mit speicheroptimierten Tabellen unter Verwendung des gleichen Assistenten mit der gleichen Ebene der Unterstützung für synchrone und asynchrone sekundäre Replikate konfigurieren. Darüber hinaus erfolgt die Systemüberwachung über das vertraute AlwaysOn-Dashboard in SQL Server Management Studio.  
   
 -   **Vergleichbare Failoverzeit**   
-    Sekundäre Replikate behalten den im Speicher enthaltenen Status der dauerhaften speicheroptimierten Tabellen. Beim automatischen oder erzwungenen Failover ist die Failoverzeit auf dem neuen primären Replikat mit der für datenträgerbasierte Tabellen vergleichbar, da keine Wiederherstellung notwendig ist. Speicheroptimierte Tabellen, die als SCHEMA_ONLY erstellt wurden, werden in dieser Konfiguration unterstützt. Änderungen an diesen Tabellen werden jedoch nicht protokolliert. Deshalb sind in diesen Tabellen keine Daten auf dem sekundären Replikat vorhanden.  
+    Sekundäre Replikate behalten den im Speicher enthaltenen Status der dauerhaften speicheroptimierten Tabellen. Bei einem automatischen oder erzwungenen Failover ist die für das Failover auf das neue primäre Replikat erforderliche Zeit mit der für datenträgerbasierte Tabellen vergleichbar, da keine Wiederherstellung notwendig ist. Speicheroptimierte Tabellen, die als SCHEMA_ONLY erstellt wurden, werden in dieser Konfiguration unterstützt. Änderungen an diesen Tabellen werden jedoch nicht protokolliert. Deshalb sind in diesen Tabellen keine Daten auf dem sekundären Replikat vorhanden.  
   
 -   **Lesbares sekundäres Replikat**   
-    Sie können auf speicheroptimierte Tabellen auf dem sekundären Replikat zugreifen und sie abfragen, wenn es für Lesezugriff konfiguriert ist. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ist der Lese-Zeitstempel auf dem sekundären Replikat eng mit dem Lese-Zeitstempel auf dem primären Replikat synchronisiert. Änderungen auf dem primären Replikat werden daher sehr schnell auf dem sekundären Replikat sichtbar. Diese enge Synchronisierung unterscheidet sich vom [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -In-Memory OLTP.  
+    Sie können auf speicheroptimierte Tabellen im sekundären Replikat zugreifen und sie abfragen, wenn es für den Lesezugriff konfiguriert wurde. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist der Lesezeitstempel im sekundären Replikat eng mit dem Lesezeitstempel im primären Replikat synchronisiert. Änderungen am primären Replikat sind daher schnell im sekundären Replikat sichtbar. Diese enge Synchronisierung unterscheidet sich von In-Memory OLTP von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+
+### <a name="considerations"></a>Überlegungen
+
+- In SQL Server 2019 wurde eine parallele Rollforwardphase für arbeitsspeicheroptimierte Datenbanken in Verfügbarkeitsgruppen eingeführt. In SQL Server 2016 und 2017 verwenden datenträgerbasierte Tabellen keine parallele Rollforwardphase, wenn eine Datenbank in einer Verfügbarkeitsgruppe ebenfalls arbeitsspeicheroptimiert ist. 
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>Failoverclustering-Instanz (FCI) und In-Memory OLTP-Datenbanken  
- Um in einer Konfiguration mit freigegebenem Speicher Hochverfügbarkeit zu erreichen, können Sie das Failoverclustering für Instanzen mit mindestens einer Datenbank mit speicheroptimierten Tabellen einrichten. Beim Einrichten einer FCI müssen Sie die folgenden Faktoren berücksichtigen:  
+ Um in einer Konfiguration mit freigegebenem Speicher Hochverfügbarkeit zu erreichen, können Sie eine Failoverclusterinstanz mit Datenbanken einrichten, die speicheroptimierte Tabellen verwenden. Beim Einrichten einer FCI müssen Sie die folgenden Faktoren berücksichtigen:  
   
 -   **Wiederherstellungszeit-Zielsetzung**   
     Die Failoverzeit wird wahrscheinlich höher sein, da speicheroptimierte Tabellen in den Arbeitsspeicher geladen werden müssen, bevor die Datenbank verfügbar gemacht wird.  

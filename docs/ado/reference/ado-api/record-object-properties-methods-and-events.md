@@ -13,48 +13,48 @@ helpviewer_keywords:
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a354504bcc81d73f3856c8265da908f84e1b019e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62d22edc7140805aa75d58b07b3ca29748cb54c9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442502"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772519"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Record-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [ActiveConnection (Eigenschaft)](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+ [ActiveConnection (Eigenschaft)](./activeconnection-property-ado.md)  
   
- [Fields-Auflistung](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Fields-Auflistung](./fields-collection-ado.md)  
   
- [Mode-Eigenschaft](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode-Eigenschaft](./mode-property-ado.md)  
   
- [Eigenschaft "para URL"](../../../ado/reference/ado-api/parenturl-property-ado.md)  
+ [Eigenschaft "para URL"](./parenturl-property-ado.md)  
   
- ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ ['Properties'-Sammlung](./properties-collection-ado.md)  
   
- [RecordType (Eigenschaft)](../../../ado/reference/ado-api/recordtype-property-ado.md)  
+ [RecordType (Eigenschaft)](./recordtype-property-ado.md)  
   
- [Source-Eigenschaft (ADO-Datensatz)](../../../ado/reference/ado-api/source-property-ado-record.md)  
+ [Source-Eigenschaft (ADO-Datensatz)](./source-property-ado-record.md)  
   
- [State-Eigenschaft](../../../ado/reference/ado-api/state-property-ado.md)  
+ [State-Eigenschaft](./state-property-ado.md)  
   
 ## <a name="methods"></a>Methoden  
- [Cancel-Methode](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Cancel-Methode](./cancel-method-ado.md)  
   
- [Close-Methode](../../../ado/reference/ado-api/close-method-ado.md)  
+ [Close-Methode](./close-method-ado.md)  
   
- [CopyRecord-Methode](../../../ado/reference/ado-api/copyrecord-method-ado.md)  
+ [CopyRecord-Methode](./copyrecord-method-ado.md)  
   
- [DeleteRecord-Methode](../../../ado/reference/ado-api/deleterecord-method-ado.md)  
+ [DeleteRecord-Methode](./deleterecord-method-ado.md)  
   
- [GetChildren-Methode](../../../ado/reference/ado-api/getchildren-method-ado.md)  
+ [GetChildren-Methode](./getchildren-method-ado.md)  
   
- ["Muecord"-Methode](../../../ado/reference/ado-api/moverecord-method-ado.md)  
+ ["Muecord"-Methode](./moverecord-method-ado.md)  
   
- [Open-Methode (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+ [Open-Methode (ADO Record)](./open-method-ado-record.md)  
   
 ## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [Record-Objekt (ADO)](./record-object-ado.md)

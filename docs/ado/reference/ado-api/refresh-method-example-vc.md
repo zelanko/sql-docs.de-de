@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 521ed958411e2943d0f01d25cb417aee569f1912
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b99e08e689e9e37ae489f61c742819e9d8a8afca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442332"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771959"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh-Methode – Beispiel (VC++)
-In diesem Beispiel wird die Verwendung der [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode zum Aktualisieren der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung für ein [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt einer gespeicherten Prozedur veranschaulicht.  
+In diesem Beispiel wird die Verwendung der [Refresh](./refresh-method-ado.md) -Methode zum Aktualisieren der [Parameter](./parameters-collection-ado.md) Auflistung für ein [Befehls](./command-object-ado.md) Objekt einer gespeicherten Prozedur veranschaulicht.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -235,6 +235,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Parameter Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [Command-Objekt (ADO)](./command-object-ado.md)   
+ [Parameter Auflistung (ADO)](./parameters-collection-ado.md)   
+ [Refresh-Methode (ADO)](./refresh-method-ado.md)

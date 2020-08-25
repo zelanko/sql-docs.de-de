@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c586b4e7ce2e18411d147e8aafb4eb144e01e6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cdd0e393c7fc5214866142150c7ff497e48e7122
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442782"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773329"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-Gibt an, ob der [Parameter](../../../ado/reference/ado-api/parameter-object.md) einen Eingabeparameter, einen Ausgabeparameter, einen Eingabe-und einen Output-Parameter oder den Rückgabewert einer gespeicherten Prozedur darstellt.  
+Gibt an, ob der [Parameter](./parameter-object.md) einen Eingabeparameter, einen Ausgabeparameter, einen Eingabe-und einen Output-Parameter oder den Rückgabewert einer gespeicherten Prozedur darstellt.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adParamInput**|1|Standard. Gibt an, dass der Parameter einen Eingabeparameter darstellt.|  
 |**adparser-putoutput**|3|Gibt an, dass der Parameter sowohl einen Eingabe-als auch einen Output-Parameter darstellt.|  
@@ -37,7 +37,7 @@ Gibt an, ob der [Parameter](../../../ado/reference/ado-api/parameter-object.md) 
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |Adoumums. ParameterDirection. Input|  
 |Adoerums. ParameterDirection. InputOutput|  
@@ -49,9 +49,9 @@ Gibt an, ob der [Parameter](../../../ado/reference/ado-api/parameter-object.md) 
 
 :::row:::
     :::column:::
-        [CreateParameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+        [CreateParameter-Methode (ADO)](./createparameter-method-ado.md)  
     :::column-end:::
     :::column:::
-        [Direction-Eigenschaft](../../../ado/reference/ado-api/direction-property.md)  
+        [Direction-Eigenschaft](./direction-property.md)  
     :::column-end:::
 :::row-end:::

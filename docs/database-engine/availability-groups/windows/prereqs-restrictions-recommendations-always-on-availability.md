@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ffcf45a0126e3443b1a5b3ac43cf9a0bdf7d6a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363002"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88092010"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "87363002"
 > [!IMPORTANT]  
 >  Vor der Bereitstellung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]wird empfohlen, dieses Thema vollständig zu lesen.  
     
-##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> .NET-Hotfixes, die Always On-Verfügbarkeitsgruppen unterstützen  
- Abhängig von den [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Komponenten und -Funktionen, die Sie mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]verwenden, müssen Sie möglicherweise zusätzliche in der folgenden Tabelle angegebene .NET-Hotfixes installieren. Die Hotfixes können in beliebiger Reihenfolge installiert werden.  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> .NET-Hotfixes mit Unterstützung für Verfügbarkeitsgruppen  
+ Abhängig von den [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]-Komponenten und -Features, die Sie mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]verwenden, müssen Sie möglicherweise zusätzliche in der folgenden Tabelle angegebene .NET-Hotfixes installieren. Die Hotfixes können in beliebiger Reihenfolge installiert werden.  
   
 |Abhängige Funktion|Hotfix|Link|  
 |-----------------------|------------|----------|  
-|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Hotfix für .NET 3.5 SP1 fügt dem SQL-Client Unterstützung für die Always On-Funktionen „Read-intent“, „readonly“ und „multisubnetfailover“ hinzu. Der Hotfix muss auf allen [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Berichtsservern installiert werden.|KB 2654347: [Hotfix for .Net 3.5 SP1 to add support for Always On features (Hotfix für .NET 3.5 SP1 zum Hinzufügen der Unterstützung von Always On-Features)](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Der Hotfix für .NET 3.5 SP1 fügt dem SQL-Client Unterstützung für die Always On-Features „Read-intent“, „readonly“ und „multisubnetfailover“ hinzu. Der Hotfix muss auf allen [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Berichtsservern installiert werden.|KB 2654347: [Hotfix für .NET 3.5 SP1 zum Hinzufügen von Unterstützung für Always On-Features](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> Prüfliste: Anforderungen (Windows-System)  
@@ -162,7 +162,9 @@ ms.locfileid: "87363002"
   
     -   Jedes primäre Replikat verwendet einen Protokollaufzeichnungsthread für jede primäre Datenbank. Außerdem verwendet es einen Protokollsendethread für jede sekundäre Datenbank. Protokollsendethreads werden nach ~ 15 Sekunden Inaktivität freigegeben.    
   
-    -   Von einer Sicherung auf einem sekundären Replikat wird ein Thread auf dem primären Replikat für die Dauer des Sicherungsvorgangs beibehalten.  
+    -   Von einer Sicherung auf einem sekundären Replikat wird ein Thread auf dem primären Replikat für die Dauer des Sicherungsvorgangs beibehalten. 
+
+-  In SQL Server 2019 wurde eine parallele Rollforwardphase für arbeitsspeicheroptimierte Datenbanken in Verfügbarkeitsgruppen eingeführt. In SQL Server 2016 und 2017 verwenden datenträgerbasierte Tabellen keine parallele Rollforwardphase, wenn eine Datenbank in einer Verfügbarkeitsgruppe ebenfalls arbeitsspeicheroptimiert ist. 
   
  Weitere Informationen finden Sie unter [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (Always On – HADRON-Lernreihe: Nutzung des Arbeitspools für HADRON-fähige Datenbanken)](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (ein CSS-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Engineer-Blogbeitrag).  
   

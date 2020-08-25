@@ -13,36 +13,36 @@ helpviewer_keywords:
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40c897057efa549ba88d876b5ef923a89fb886f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1893237b985cc5dc7ef83b43e42007ba8cdd6512
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441192"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778299"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Cellset-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [ActiveConnection (Eigenschaft)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)  
+ [ActiveConnection (Eigenschaft)](./activeconnection-property-ado-md.md)  
   
- [Achsen Sammlung](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+ [Achsen Sammlung](./axes-collection-ado-md.md)  
   
- [FilterAxis (Eigenschaft)](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)  
+ [FilterAxis (Eigenschaft)](./filteraxis-property-ado-md.md)  
   
- [Item-Eigenschaft (Cellset)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)  
+ [Item-Eigenschaft (Cellset)](./item-property-ado-md-cellset.md)  
   
- ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ ['Properties'-Sammlung](../ado-api/properties-collection-ado.md)  
   
- [Source-Eigenschaft](../../../ado/reference/ado-md-api/source-property-ado-md.md)  
+ [Source-Eigenschaft](./source-property-ado-md.md)  
   
- [State-Eigenschaft](../../../ado/reference/ado-md-api/state-property-ado-md.md)  
+ [State-Eigenschaft](./state-property-ado-md.md)  
   
 ## <a name="methods"></a>Methoden  
- [Close-Methode](../../../ado/reference/ado-md-api/close-method-ado-md.md)  
+ [Close-Methode](./close-method-ado-md.md)  
   
- [Open-Methode](../../../ado/reference/ado-md-api/open-method-ado-md.md)  
+ [Open-Methode](./open-method-ado-md.md)  
   
 ## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Cellset-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+ [Cellset-Objekt (ADO MD)](./cellset-object-ado-md.md)

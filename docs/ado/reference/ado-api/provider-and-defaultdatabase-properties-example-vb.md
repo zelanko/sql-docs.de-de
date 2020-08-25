@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db5e40a1f82f95e7b4d78f4e6e3ce7703305abb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3a438a3be7e7a046f36b0038cae8dcf24b6725c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442592"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772829"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Beispiel für Anbieter und DefaultDatabase-Eigenschaften (VB)
-In diesem Beispiel wird die [Provider](../../../ado/reference/ado-api/provider-property-ado.md) -Eigenschaft veranschaulicht, indem drei [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekte mit unterschiedlichen Anbietern geöffnet werden. Außerdem wird die Standarddatenbank für den Microsoft ODBC-Anbieter mit der [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) -Eigenschaft festgelegt.  
+In diesem Beispiel wird die [Provider](./provider-property-ado.md) -Eigenschaft veranschaulicht, indem drei [Verbindungs](./connection-object-ado.md) Objekte mit unterschiedlichen Anbietern geöffnet werden. Außerdem wird die Standarddatenbank für den Microsoft ODBC-Anbieter mit der [DefaultDatabase](./defaultdatabase-property.md) -Eigenschaft festgelegt.  
   
 > [!NOTE]
 >  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unterstützt, sollten Sie in der Verbindungs Zeichenfolge **Trusted_Connection = yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort angeben.  
@@ -106,6 +106,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [DefaultDatabase (Eigenschaft)](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Provider-Eigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+ [Verbindungs Objekt (ADO)](./connection-object-ado.md)   
+ [DefaultDatabase (Eigenschaft)](./defaultdatabase-property.md)   
+ [Provider-Eigenschaft (ADO)](./provider-property-ado.md)

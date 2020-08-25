@@ -9,12 +9,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 4348f117b57c9b13a70f4a6db39ab6710eafd0ef
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 191b10fd32d7c49c3f4a4e81c109e52fb2a1a81c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519166"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88171369"
 ---
 # <a name="build-and-publish-a-project"></a>Erstellen und Veröffentlichen eines Projekts
 
@@ -32,7 +32,6 @@ Mit der Erweiterung „SQL Server-Datenbankprojekte“ für Azure Data Studio k�
 
  ``` ... exited with code: 0 ```
 
-
 ## <a name="publish-a-database-project"></a>Veröffentlichen eines Datenbankprojekts
 
 Nachdem Sie das Projekt erfolgreich im Buildprozess kompiliert haben, können Sie die Datenbank in einer SQL Server-Instanz veröffentlichen. Klicken Sie dazu im Viewlet **Projekte** unter **Explorer** mit der rechten Maustaste auf den Stammknoten *SQLPROJ*, und klicken Sie auf **Veröffentlichen**.
@@ -42,6 +41,4 @@ Geben Sie im angezeigten Dialogfeld **Datenbank veröffentlichen** eine Serverve
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [Erweiterung „SQL Server-Datenbankprojekte“ für Azure Data Studio](sql-database-project-extension.md)
-- [Datenschichtanwendungen](../relational-databases/data-tier-applications/data-tier-applications.md)
-
-
+- [Erstellen von SQL-Datenbankprojekten über die Befehlszeile](sql-database-project-extension-build-from-command-line.md)

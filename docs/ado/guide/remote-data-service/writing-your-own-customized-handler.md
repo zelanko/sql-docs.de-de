@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73e71438b7f49472dff8c3f4732c541222598b08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bfddb0a5cbc1691a8013528abd4c1547f29e1504
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451842"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760070"
 ---
 # <a name="writing-your-own-customized-handler"></a>Schreiben Ihres eigenen benutzerdefinierten Handlers
 Möglicherweise möchten Sie einen eigenen Handler schreiben, wenn Sie ein IIS-Server Administrator sind, der die standardmäßige RDS-Unterstützung wünscht, aber mehr Kontrolle über Benutzer Anforderungen und Zugriffsrechte hat.  
@@ -30,12 +30,12 @@ Möglicherweise möchten Sie einen eigenen Handler schreiben, wenn Sie ein IIS-S
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="idatafactoryhandler-interface"></a>Idatafactoriyhandler-Schnittstelle  
- Diese Schnittstelle verfügt über zwei Methoden: **GetRecordSet** und **Reconnect**. Beide Methoden erfordern, dass die [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient**festgelegt ist.  
+ Diese Schnittstelle verfügt über zwei Methoden: **GetRecordSet** und **Reconnect**. Beide Methoden erfordern, dass die [Cursor Location](../../reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient**festgelegt ist.  
   
  Beide Methoden verwenden Argumente, die nach dem ersten Komma im Schlüsselwort "**Handler =**" angezeigt werden. Beispielsweise `"Handler=progid,arg1,arg2;"` übergibt eine Argument Zeichenfolge von `"arg1,arg2"` und `"Handler=progid"` übergibt ein NULL-Argument.  
   
 ## <a name="getrecordset-method"></a>GetRecordSet-Methode  
- Diese Methode fragt die Datenquelle ab und erstellt ein neues [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt mit den angegebenen Argumenten. Das **Recordset** muss mit **adlockbatchoptimier** geöffnet werden und darf nicht asynchron geöffnet werden.  
+ Diese Methode fragt die Datenquelle ab und erstellt ein neues [Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekt mit den angegebenen Argumenten. Das **Recordset** muss mit **adlockbatchoptimier** geöffnet werden und darf nicht asynchron geöffnet werden.  
   
 ### <a name="arguments"></a>Argumente  
  ***conn***  Die Verbindungs Zeichenfolge.  
@@ -47,7 +47,7 @@ Möglicherweise möchten Sie einen eigenen Handler schreiben, wenn Sie ein IIS-S
  ***PPRS***  Der Zeiger, an dem das **Recordset** zurückgegeben werden soll.  
   
 ## <a name="reconnect-method"></a>Reconnect-Methode  
- Mit dieser Methode wird die Datenquelle aktualisiert. Es wird ein neues [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt erstellt und das angegebene **Recordset**angefügt.  
+ Mit dieser Methode wird die Datenquelle aktualisiert. Es wird ein neues [Verbindungs](../../reference/ado-api/connection-object-ado.md) Objekt erstellt und das angegebene **Recordset**angefügt.  
   
 ### <a name="arguments"></a>Argumente  
  ***conn***  Die Verbindungs Zeichenfolge.  
@@ -101,12 +101,10 @@ HRESULT _stdcall GetRecordset(
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Bereich für die Anpassungs Dateiverbindung](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Abschnitt "Anpassungs Datei Protokolle"](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [SQL-Abschnitt der Anpassungs Datei](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Benutzer Listen Abschnitt "Anpassungs Datei"](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Erforderliche Client Einstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Grundlegendes zur Anpassungsdatei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)
-
-
+ [Bereich für die Anpassungs Dateiverbindung](./customization-file-connect-section.md)   
+ [Abschnitt "Anpassungs Datei Protokolle"](./customization-file-logs-section.md)   
+ [SQL-Abschnitt der Anpassungs Datei](./customization-file-sql-section.md)   
+ [Benutzer Listen Abschnitt "Anpassungs Datei"](./customization-file-userlist-section.md)   
+ [DataFactory-Anpassung](./datafactory-customization.md)   
+ [Erforderliche Client Einstellungen](./required-client-settings.md)   
+ [Grundlegendes zur Anpassungsdatei](./understanding-the-customization-file.md)

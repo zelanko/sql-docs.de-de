@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80e1e50fbfa6697f3f05a8cc9cf7a9ada98b9031
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d52b99182f34b5cefec46d210821dbcfb18388c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440702"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777879"
 ---
 # <a name="positions-collection-ado-md"></a>Positions-Collection (ADO MD)
-Enthält die [Positions](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekte, die einen Punkt auf einer Achse definieren.  
+Enthält die [Positions](./position-object-ado-md.md) Objekte, die einen Punkt auf einer Achse definieren.  
   
 ## <a name="remarks"></a>Bemerkungen  
  **Positionen** ist eine standardmäßige ADO-Auflistung. Mit den Eigenschaften und Methoden einer Sammlung können Sie folgende Aufgaben ausführen:  
   
--   Abrufen der Anzahl von Objekten in der Auflistung mit der [count](../../../ado/reference/ado-api/count-property-ado.md) -Eigenschaft.  
+-   Abrufen der Anzahl von Objekten in der Auflistung mit der [count](../ado-api/count-property-ado.md) -Eigenschaft.  
   
--   Gibt ein Objekt aus der Auflistung mit der Standard [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft zurück.  
+-   Gibt ein Objekt aus der Auflistung mit der Standard [Element](../ado-api/item-property-ado.md) Eigenschaft zurück.  
   
--   Aktualisieren Sie die Objekte in der Auflistung vom Anbieter mit der [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode.  
+-   Aktualisieren Sie die Objekte in der Auflistung vom Anbieter mit der [Refresh](../ado-api/refresh-method-ado.md) -Methode.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
+-   [Eigenschaften, Methoden und Ereignisse](./positions-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Cellset-Beispiel (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Axis-Objekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Cell-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Position-Objekt (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
+ [Cellset-Beispiel (VB)](./cellset-example-vb.md)   
+ [Axis-Objekt (ADO MD)](./axis-object-ado-md.md)   
+ [Cell-Objekt (ADO MD)](./cell-object-ado-md.md)   
+ [Position-Objekt (ADO MD)](./position-object-ado-md.md)

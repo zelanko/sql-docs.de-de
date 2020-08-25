@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 582014342380ed5ec77c8a6f0e2adacba52bbdcc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f620dd4c8c8c5b3e00c8875b18686259d71429d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440342"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771119"
 ---
 # <a name="column-object-adox"></a>Column-Objekt (ADOX)
 Stellt eine Spalte aus einer Tabelle, einem Index oder einem Schlüssel dar.  
@@ -33,25 +33,25 @@ Stellt eine Spalte aus einer Tabelle, einem Index oder einem Schlüssel dar.
   
  Mit den Eigenschaften und Auflistungen eines **Spalten** Objekts können Sie folgende Aktionen ausführen:  
   
--   Identifizieren Sie die Spalte mit der Eigenschaft [Name Property (ADOX)](../../../ado/reference/adox-api/name-property-adox.md) .  
+-   Identifizieren Sie die Spalte mit der Eigenschaft [Name Property (ADOX)](./name-property-adox.md) .  
   
--   Geben Sie den Datentyp der Spalte mit der Eigenschaft [Type Property (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md) an.  
+-   Geben Sie den Datentyp der Spalte mit der Eigenschaft [Type Property (Key) (ADOX)](./type-property-key-adox.md) an.  
   
--   Bestimmen Sie, ob die Spalte eine festgelegte Länge hat oder ob Sie NULL-Werte mit der Eigenschaft " [Attributeigenschaft" (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md) enthalten kann.  
+-   Bestimmen Sie, ob die Spalte eine festgelegte Länge hat oder ob Sie NULL-Werte mit der Eigenschaft " [Attributeigenschaft" (ADOX)](./attributes-property-adox.md) enthalten kann.  
   
--   Geben Sie die maximale Größe der Spalte mit der Eigenschaft [DefinedSize (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md) an.  
+-   Geben Sie die maximale Größe der Spalte mit der Eigenschaft [DefinedSize (ADOX)](./definedsize-property-adox.md) an.  
   
--   Geben Sie für numerische Datenwerte die Skala mit der Eigenschaft " [NumericScale Property (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md) " an.  
+-   Geben Sie für numerische Datenwerte die Skala mit der Eigenschaft " [NumericScale Property (ADOX)](./numericscale-property-adox.md) " an.  
   
--   Geben Sie als Wert für numerische Daten die maximale Genauigkeit mit der Eigenschaft für die [Precision-Eigenschaft (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md) an.  
+-   Geben Sie als Wert für numerische Daten die maximale Genauigkeit mit der Eigenschaft für die [Precision-Eigenschaft (ADOX)](./precision-property-adox.md) an.  
   
--   Geben Sie das [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md) an, das die Spalte besitzt, mit der Eigenschaft " [Eigenschaft" (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md) .  
+-   Geben Sie das [Catalog-Objekt (ADOX)](./catalog-object-adox.md) an, das die Spalte besitzt, mit der Eigenschaft " [Eigenschaft" (ADOX)](./parentcatalog-property-adox.md) .  
   
--   Geben Sie für Schlüssel Spalten den Namen der verknüpften Spalte in der verknüpften Tabelle mit der Eigenschaft [RelatedColumn-Eigenschaft (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md) an.  
+-   Geben Sie für Schlüssel Spalten den Namen der verknüpften Spalte in der verknüpften Tabelle mit der Eigenschaft [RelatedColumn-Eigenschaft (ADOX)](./relatedcolumn-property-adox.md) an.  
   
--   Geben Sie für Index Spalten an, ob die Sortierreihenfolge aufsteigend oder absteigend mit der Eigenschaft [sortor der Eigenschaft (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md) ist.  
+-   Geben Sie für Index Spalten an, ob die Sortierreihenfolge aufsteigend oder absteigend mit der Eigenschaft [sortor der Eigenschaft (ADOX)](./sortorder-property-adox.md) ist.  
   
--   Zugreifen auf anbieterspezifische Eigenschaften mit der [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung.  
+-   Zugreifen auf anbieterspezifische Eigenschaften mit der [Properties Collection (ADO)](../ado-api/properties-collection-ado.md) -Auflistung.  
   
 > [!NOTE]
 >  Nicht alle Eigenschaften von **Spalten** Objekten können von Ihrem Datenanbieter unterstützt werden. Wenn Sie einen Wert für eine Eigenschaft festgelegt haben, die vom Anbieter nicht unterstützt wird, tritt ein Fehler auf. Bei neuen **Spalten** Objekten tritt der Fehler auf, wenn das Objekt an die Auflistung angefügt wird. Bei vorhandenen Objekten tritt der Fehler auf, wenn die-Eigenschaft festgelegt wird.  
@@ -60,14 +60,14 @@ Stellt eine Spalte aus einer Tabelle, einem Index oder einem Schlüssel dar.
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Column-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
+-   [Column-Objekt – Eigenschaften, Methoden und Ereignisse](./column-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Methoden und Tabellen Append-Methoden, Name Property example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Connection Close-Methode, Table Type-Eigenschafts Beispiel (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ADOX-Code Beispiel: Beispiel für NumericScale und Precision Properties (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
- [Beispiel für eine Beispiel Katalog Eigenschaft (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Sortorider-Eigenschafts Beispiel (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
- [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Methoden und Tabellen Append-Methoden, Name Property example (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Connection Close-Methode, Table Type-Eigenschafts Beispiel (VB)](./connection-close-method-table-type-property-example-vb.md)   
+ [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ADOX-Code Beispiel: Beispiel für NumericScale und Precision Properties (VB)](./adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [Beispiel für eine Beispiel Katalog Eigenschaft (VB)](./parentcatalog-property-example-vb.md)   
+ [Sortorider-Eigenschafts Beispiel (VB)](./sortorder-property-example-vb.md)   
+ [Columns-Auflistung (ADOX)](./columns-collection-adox.md)   
+ [Properties-Collection (ADO)](../ado-api/properties-collection-ado.md)

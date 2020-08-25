@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 081ba6f2b82e6369d2871a2c9c7352c7335bc0d4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452512"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758980"
 ---
 # <a name="xml-persistence-format"></a>XML-Beibehaltungsformat
 ADO verwendet UTF-8-Codierung für den persistent verwendeten XML-Stream.  
   
  Das ADO-XML-Format ist in zwei Abschnitte unterteilt: ein Schema Abschnitt, auf den der Daten Abschnitt folgt. Im folgenden finden Sie eine XML-Beispieldatei für die Tabelle "Spediteure" aus der Datenbank "Northwind". Im folgenden Beispiel werden verschiedene Teile des XML-Codes erläutert.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -72,4 +72,4 @@ xmlns:z="#RowsetSchema">
  Der Daten Abschnitt enthält drei Zeilen, die Informationen über die Verlader enthalten. Für ein leeres Rowset ist der Daten Abschnitt möglicherweise leer, aber die \<rs:data> Tags müssen vorhanden sein. Wenn keine Daten angezeigt werden, können Sie die tagkurzform einfach schreiben \<rs:data/> . Jedes Tag mit dem Präfix "RS" weist darauf hin, dass es sich im Namespace befindet, der durch "urn: Schemas-Microsoft-com: Rowset" definiert ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Beibehalten von Datensätzen im XML-Format](./persisting-records-in-xml-format.md)

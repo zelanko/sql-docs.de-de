@@ -1,4 +1,5 @@
 ---
+description: ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/26/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db7f3f6456543af06a32f27e2e3258597e062906
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4d963edaaea4225fa969afd7694b9970d07135d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444872"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -63,7 +64,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
  „LOCATION = '<prefix>://<path>[:<port>]'“: Dient zum Angeben des Konnektivitätsprotokolls, des Pfads und des Ports der externen Datenquelle. Weitere Informationen über gültige Speicherortoptionen finden Sie unter [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport).
 
- RESOURCE_MANAGER_LOCATION = \<'IP-Adresse;Port'> (Gilt nicht für Azure SQL Data Warehouse) Gibt den Speicherort des Hadoop-Ressourcen-Managers an. Wenn angegeben, kann der Abfrageoptimierer festlegen, dass Daten für eine PolyBase-Abfrage mithilfe der Berechnungsfunktionen von Hadoop vorverarbeitet werden. Dies ist eine kostenbasierte Entscheidung. Dies wird Prädikatweitergabe genannt und kann die Menge der zwischen Hadoop und SQL übertragenen Daten deutlich reduzieren und damit die Abfrageleistung verbessern.
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (Gilt nicht für Azure SQL Data Warehouse): Gibt den Hadoop Resource Manager-Speicherort an. Wenn angegeben, kann der Abfrageoptimierer festlegen, dass Daten für eine PolyBase-Abfrage mithilfe der Berechnungsfunktionen von Hadoop vorverarbeitet werden. Dies ist eine kostenbasierte Entscheidung. Dies wird Prädikatweitergabe genannt und kann die Menge der zwischen Hadoop und SQL übertragenen Daten deutlich reduzieren und damit die Abfrageleistung verbessern.
 
  CREDENTIAL = Credential_Name gibt die benannten Anmeldeinformationen an. Informationen hierzu finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 

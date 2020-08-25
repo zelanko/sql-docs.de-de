@@ -13,30 +13,30 @@ helpviewer_keywords:
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7457b43a186ba30409a34cf415c5ca0889b1f96e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c643870386988ee22d729c1352dfe3683571fac5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440972"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778079"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Hierarchy-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [Description-Eigenschaft](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Description-Eigenschaft](./description-property-ado-md.md)  
   
- [Levels-Auflistung](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+ [Levels-Auflistung](./levels-collection-ado-md.md)  
   
- [Name-Eigenschaft](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Name-Eigenschaft](./name-property-ado-md.md)  
   
- ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ ['Properties'-Sammlung](../ado-api/properties-collection-ado.md)  
   
- [UniqueName-Eigenschaft](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [UniqueName-Eigenschaft](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
 ## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Hierarchy-Objekt (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)
+ [Hierarchy-Objekt (ADO MD)](./hierarchy-object-ado-md.md)

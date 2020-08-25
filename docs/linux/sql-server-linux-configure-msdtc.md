@@ -1,18 +1,18 @@
 ---
 title: Konfigurieren von MS DTC unter Linux
-description: Dieser Artikel bietet eine exemplarische Vorgehensweise zum Konfigurieren von MS DTC unter Linux.
+description: In diesem Artikel erfahren Sie, wie der Microsoft Distributed Transaction Coordinator (MS DTC) unter Linux konfiguriert wird.
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f2e8502956b808556c0ac6ddb83f95a61cbe5c9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77df45c3eb4cded79e4485e8c93262a6b5ed43fc
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900115"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180019"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Konfigurieren von Microsoft Distributed Transaction Coordinator (MS DTC) unter Linux
 
@@ -36,19 +36,21 @@ MS DTC verwendet zwei Konfigurationsparameter für das mssql-conf-Hilfsprogramm:
 
 Weitere Informationen zu diesen Einstellungen und weiteren MS DTC-Einstellungen finden Sie unter [Konfigurieren von SQL Server für Linux mit dem mssql-conf-Tool](sql-server-linux-configure-mssql-conf.md).
 
-## <a name="supported-msdtc-configurations"></a>Unterstützte MS DTC-Konfigurationen
+## <a name="supported-transaction-standards"></a>Unterstützte Transaktionsstandards
 
 Die folgenden MS DTC-Konfigurationen werden unterstützt:
 
-- Verteilte OLE-TX-Transaktionen für SQL Server für Linux für ODBC-Anbieter.
+| Transaktionsstandard | Datenquellen | ODBC-Treiber | JDBC-Treiber|
+|---|---|---|---|
+| OLE-TX-Transaktionen | SQL Server unter Linux | Ja | Nein|
+| Verteilte XA-Transaktionen | SQL Server sowie andere ODBC- und JDBC-Datenquellen mit Unterstützung für XA | Ja (Version 17.3 oder höher erforderlich) | Ja |
+| Verteilte Transaktionen auf Verbindungsserver | SQL Server | Ja | Nein
 
-- Verteilte XA-Transaktionen für SQL Server für Linux mithilfe von JDBC- und ODBC-Anbietern. Damit XA-Transaktionen mit dem ODBC-Anbieter ausgeführt werden können, müssen Sie Microsoft ODBC Driver for SQL Server Version 17.3 oder höher verwenden. Weitere Informationen finden Sie unter [Grundlegendes zu XA-Transaktionen](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
-
-- Verteilte Transaktionen auf Verbindungsservern.
+Weitere Informationen finden Sie unter [Grundlegendes zu XA-Transaktionen](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
 
 ## <a name="msdtc-configuration-steps"></a>MS DTC-Konfigurationsschritte
 
-Es gibt drei Schritte, um die MS DTC-Kommunikation und -Funktionalität zu konfigurieren. Wenn die erforderlichen Konfigurationsschritte nicht ausgeführt werden, aktiviert SQL Server die MS DTC-Funktionalität nicht.
+Es gibt drei Schritte, um die MS DTC-Kommunikation und -Funktionalität zu konfigurieren. Wenn die erforderlichen Konfigurationsschritte nicht ausgeführt werden, aktiviert SQL Server die MS DTC-Funktionalität nicht.
 
 - Konfigurieren von **network.rpcport** und **distributedtransaction.servertcpport** mithilfe von mssql-conf
 - Konfigurieren der Firewall, um die Kommunikation über **distributedtransaction.servertcpport** und Port 135 zuzulassen
@@ -157,7 +159,7 @@ sudo firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
 sudo firewall-cmd --reload
 ```
 
-## <a name="verify"></a>Überprüfen
+## <a name="verify"></a>Überprüfung
 
 An diesem Punkt sollte SQL Server an verteilten Transaktionen teilnehmen können. Führen Sie den Befehl **netstat** aus, um zu überprüfen, ob SQL Server lauscht (Wenn Sie RHEL verwenden, müssen Sie möglicherweise zuerst das Paket **net-tools** installieren):
 
@@ -165,7 +167,7 @@ An diesem Punkt sollte SQL Server an verteilten Transaktionen teilnehmen können
 sudo netstat -tulpn | grep sqlservr
 ```
 
-Die Ausgabe sollte etwa folgendermaßen aussehen:
+Die Ausgabe sollte in etwa wie folgt aussehen:
 
 ```bash
 tcp 0 0 0.0.0.0:1433 0.0.0.0:* LISTEN 13911/sqlservr
@@ -186,9 +188,9 @@ MS DTC für SQL Server für Linux verwendet standardmäßig keine Authentifizier
 
 | Einstellung | BESCHREIBUNG |
 |---|---|
-| **distributedtransaction.allowonlysecurerpccalls**          | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen. Der Standardwert ist 0 (null). |
-| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen. Der Standardwert ist 0 (null). |
-| **distributedtransaction.turnoffrpcsecurity**               | Aktivieren oder Deaktivieren der RPC-Sicherheit für verteilte Transaktionen. Der Standardwert ist 0 (null). |
+| **distributedtransaction.allowonlysecurerpccalls**          | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen. Der Standardwert ist 0. |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen. Der Standardwert ist 0. |
+| **distributedtransaction.turnoffrpcsecurity**               | Aktivieren oder Deaktivieren der RPC-Sicherheit für verteilte Transaktionen. Der Standardwert ist 0. |
 
 ## <a name="additional-guidance"></a>Zusätzliche Anleitungen
 

@@ -2,7 +2,7 @@
 title: COPY INTO – Transact-SQL (Vorschau)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Verwenden Sie die COPY-Anweisung in Azure SQL Data Warehouse zum Laden von externen Speicherkonten.
-ms.date: 06/19/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 52096dc3c4996537b36082bb9bb215405e097a68
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807501"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091963"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY – Transact-SQL (Vorschau)
 
@@ -102,7 +102,7 @@ Speicherorte, wo die Dateien bereitgestellt werden, die die Daten enthalten. Der
 - *Externer Speicherort* für ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> Der Blobendpunkt ist nur der Abwärtskompatibilität wegen für ADLS Gen2 verfügbar. Verwenden Sie den **dfs**-Endpunkt für ADLS Gen2, um eine optimale Leistung zu erzielen.
+> Der Blobendpunkt ist zum Zweck der Abwärtskompatibilität für ADLS Gen2 verfügbar. Verwenden Sie den **Blobendpunkt**, um eine optimale Leistung zu erzielen.
 
 - *Konto*: Der Speicherkontoname
 
@@ -139,10 +139,12 @@ Es können nur mehrere Dateispeicherorte aus demselben Speicherkonto und Contain
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* gibt den Authentifizierungsmechanismus für den Zugriff auf das externe Speicherkonto an. Authentifizierungsmethoden sind:
 
-|                          |                CSV                |              Parquet              |                ORC                |
-| :----------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
-|  **Azure Blob Storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY              |              SAS/KEY              |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |              Parquet               |                ORC                 |
+| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
+|  **Azure Blob Storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD |
+
+*Nur mit dem Blobendpunkt unterstützt.
 
 Bei der Authentifizierung mit AAD oder bei einem öffentlichen Speicherkonto muss CREDENTIAL nicht angegeben werden. 
 
@@ -429,7 +431,7 @@ Das Aufteilen von Parquet- und ORC-Dateien ist nicht erforderlich, da der COPY-B
 Der COPY-Befehl wird Ende dieses Kalenderjahres (2020) allgemein verfügbar. 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Gibt es Einschränkungen hinsichtlich der Anzahl oder Größe von Dateien?
-Dateien sollten mindestens 4 MB groß sein.
+Es gibt keine Einschränkungen in Bezug auf die Anzahl oder Größe von Dateien. Um eine optimale Leistung zu erzielen, wird jedoch eine Dateigröße von mindestens 4 MB empfohlen.
 
 
 Senden Sie Feedback oder Probleme an die folgende Verteilerliste: sqldwcopypreview@service.microsoft.com

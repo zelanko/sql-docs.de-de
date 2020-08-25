@@ -13,34 +13,34 @@ helpviewer_keywords:
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec04416433339fcec45da199fb3291154fce330a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db4847a6ada52d051a13068dcd2d50f9a7448504
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440932"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778039"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Level-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [Caption-Eigenschaft](../../../ado/reference/ado-md-api/caption-property-ado-md.md)  
+ [Caption-Eigenschaft](./caption-property-ado-md.md)  
   
- [Tiefen Eigenschaft](../../../ado/reference/ado-md-api/depth-property-ado-md.md)  
+ [Tiefen Eigenschaft](./depth-property-ado-md.md)  
   
- [Description-Eigenschaft](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Description-Eigenschaft](./description-property-ado-md.md)  
   
- [Members-Auflistung](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+ [Members-Auflistung](./members-collection-ado-md.md)  
   
- [Name-Eigenschaft](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Name-Eigenschaft](./name-property-ado-md.md)  
   
- ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ ['Properties'-Sammlung](../ado-api/properties-collection-ado.md)  
   
- [UniqueName-Eigenschaft](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [UniqueName-Eigenschaft](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
 ## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Level-Objekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)
+ [Level-Objekt (ADO MD)](./level-object-ado-md.md)

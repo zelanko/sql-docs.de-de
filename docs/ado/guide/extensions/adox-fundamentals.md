@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74b7f3a17bddb068d82f4e05b13a28abff219c2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa7a703f9790ef49961e3324b26c32d757682e4a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452462"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758810"
 ---
 # <a name="adox-fundamentals"></a>ADOX-Grundlagen
 Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and Security (ADOX) ist eine Erweiterung der ADO-Objekte und des Programmiermodells. ADOX umfasst Objekte für das Erstellen und Ändern von Schemas sowie für die Sicherheit. Da es sich um einen objektbasierten Ansatz für die Schema Bearbeitung handelt, können Sie Code schreiben, der unabhängig von den Unterschieden in der nativen Syntax für verschiedene Datenquellen verwendet werden kann.  
@@ -29,28 +29,28 @@ Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and S
   
  Der Microsoft OLE DB-Anbieter für Microsoft Jet Datenbank-Engine unterstützt ADOX vollständig. Bestimmte Funktionen von ADOX werden je nach Datenanbieter möglicherweise nicht unterstützt.  
   
- In diesem Dokument wird davon ausgegangen, dass Sie über die Microsoft® Visual Basic®-Programmiersprache und allgemeine Kenntnisse von ADO verfügen. Weitere Informationen zu ADO finden Sie im [ADO-Programmier Handbuch](../../../ado/guide/ado-programmer-s-guide.md). Weitere Informationen zu ADOX finden Sie in den folgenden Themen:  
+ In diesem Dokument wird davon ausgegangen, dass Sie über die Microsoft® Visual Basic®-Programmiersprache und allgemeine Kenntnisse von ADO verfügen. Weitere Informationen zu ADO finden Sie im [ADO-Programmier Handbuch](../ado-programmer-s-guide.md). Weitere Informationen zu ADOX finden Sie in den folgenden Themen:  
   
--   [ADOX-Objektmodell](../../../ado/reference/adox-api/adox-object-model.md)  
+-   [ADOX-Objektmodell](../../reference/adox-api/adox-object-model.md)  
   
--   [ADO-Objekte](../../../ado/reference/adox-api/adox-objects.md)  
+-   [ADOX-Objekte](../../reference/adox-api/adox-objects.md)  
   
--   [ADOX-Auflistungen](../../../ado/reference/adox-api/adox-collections.md)  
+-   [ADOX-Collections](../../reference/adox-api/adox-collections.md)  
   
--   [ADOX-Eigenschaften](../../../ado/reference/adox-api/adox-properties.md)  
+-   [ADOX-Eigenschaften](../../reference/adox-api/adox-properties.md)  
   
--   [ADOX-Methoden](../../../ado/reference/adox-api/adox-methods.md)  
+-   [ADOX-Methoden](../../reference/adox-api/adox-methods.md)  
   
--   [ADOX-Beispiele](../../../ado/reference/adox-api/adox-code-examples.md)  
+-   [ADOX-Beispiele](../../reference/adox-api/adox-code-examples.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ADOX-API-Referenz](../../../ado/reference/adox-api/adox-api-reference.md)   
- [ADOX-Code Beispiele](../../../ado/reference/adox-api/adox-code-examples.md)   
- [ADOX-Sammlungen](../../../ado/reference/adox-api/adox-collections.md)   
- [ADOX-Enumerationskonstanten](../../../ado/reference/adox-api/adox-enumerated-constants.md)   
- [ADOX-Methoden](../../../ado/reference/adox-api/adox-methods.md)   
- [ADOX-Objektmodell](../../../ado/reference/adox-api/adox-object-model.md)   
- [ADOX-Objekte](../../../ado/reference/adox-api/adox-objects.md)   
- [ADOX-Eigenschaften](../../../ado/reference/adox-api/adox-properties.md)   
- [ADO (mehrdimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [ADO Programmer's Guide (Programmierhandbuch zu ADO)](../../../ado/guide/ado-programmer-s-guide.md)
+ [ADOX-API-Referenz](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15)   
+ [ADOX-Code Beispiele](../../reference/adox-api/adox-code-examples.md)   
+ [ADOX-Sammlungen](../../reference/adox-api/adox-collections.md)   
+ [ADOX-Enumerationskonstanten](../../reference/adox-api/adox-enumerated-constants.md)   
+ [ADOX-Methoden](../../reference/adox-api/adox-methods.md)   
+ [ADOX-Objektmodell](../../reference/adox-api/adox-object-model.md)   
+ [ADOX-Objekte](../../reference/adox-api/adox-objects.md)   
+ [ADOX-Eigenschaften](../../reference/adox-api/adox-properties.md)   
+ [ADO (mehrdimensional) (ADO MD)](../multidimensional/ado-multidimensional-ado-md.md)   
+ [ADO-Programmierhandbuch](../ado-programmer-s-guide.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbddab9f7536c311d55f83fc9c6ea443c3757fa3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25d3c1fce0fd227a609da49d54bd55762fa1c4a2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442452"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772309"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
-Gibt Optionen für das Öffnen eines [Datensatzes](../../../ado/reference/ado-api/record-object-ado.md)an. Diese Werte können mit oder kombiniert werden.  
+Gibt Optionen für das Öffnen eines [Datensatzes](./record-object-ado.md)an. Diese Werte können mit oder kombiniert werden.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**addelta-fetchfields**|0x8000|Gibt dem Anbieter an, dass die dem **Datensatz** zugeordneten Felder anfänglich nicht abgerufen werden müssen, sondern beim ersten Versuch, auf das Feld zuzugreifen, abgerufen werden können. Das Standardverhalten, das durch das Fehlen dieses Flags angegeben wird, besteht darin, alle **Daten Satz** Objekt Felder abzurufen.|  
 |**addelta-fetchstream**|0x4000|Gibt dem Anbieter an, dass der dem Datensatz zugeordnete Standard **Daten** Strom anfänglich nicht abgerufen werden muss. Das Standardverhalten, das durch das Fehlen dieses Flags angegeben ist, besteht darin, den dem **Datensatz** -Objekt zugeordneten Standardstream abzurufen.|  
@@ -39,4 +39,4 @@ Gibt Optionen für das Öffnen eines [Datensatzes](../../../ado/reference/ado-ap
  Diese Konstanten haben keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Open-Methode (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)
+ [Open-Methode (ADO Record)](./open-method-ado-record.md)

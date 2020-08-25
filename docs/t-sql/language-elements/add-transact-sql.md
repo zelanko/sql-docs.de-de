@@ -1,4 +1,5 @@
 ---
+description: + (Addition) (Transact-SQL)
 title: + (Addition) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -24,12 +25,12 @@ ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 261c22abe760ae720c4bc691f0549ccc5491e3e9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 12b531d2f8615e9ff2cb9bbfc33973e6aab5d33f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361876"
 ---
 # <a name="-addition-transact-sql"></a>+ (Addition) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -113,7 +114,7 @@ SELECT '125127' + @addvalue;
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D: Verwenden des Additionsoperators zur Berechnung der Gesamtstunden, die ein Mitarbeiter nicht an seinem Arbeitsplatz verbringt  
+### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D: Verwenden des Additionsoperators zur Berechnung der Gesamtstunden, die ein Mitarbeiter nicht an seinem Arbeitsplatz verbringt.  
  Im folgenden Beispiel wird die Gesamtanzahl von Stunden, die ein Mitarbeiter nicht an seinem Arbeitsplatz verbringt, durch Addieren der Urlaubs- und Krankheitstage (in Stunden) ermittelt und in aufsteigender Reihenfolge sortiert.  
   
 ```  
@@ -125,7 +126,7 @@ FROM DimEmployee
 ORDER BY TotalHoursAway ASC;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [+= &#40;Additionszuweisung&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c36744944fb88be4da22642246b54908809145cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09dabe4cdb4e897bd7b9d0916bbe1e057cbbd02f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451712"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759930"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand-Eigenschaft – Beispiel (VC++)
-In diesem Beispiel wird die [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) -Eigenschaft veranschaulicht.  
+In diesem Beispiel wird die [ActiveCommand](./activecommand-property-ado.md) -Eigenschaft veranschaulicht.  
   
- Einer Unterroutine wird ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt zugewiesen, dessen **ActiveCommand** -Eigenschaft verwendet wird, um den Befehls Text und den Parameter anzuzeigen, mit dem das **Recordset**erstellt wurde.  
+ Einer Unterroutine wird ein [Recordset](./recordset-object-ado.md) -Objekt zugewiesen, dessen **ActiveCommand** -Eigenschaft verwendet wird, um den Befehls Text und den Parameter anzuzeigen, mit dem das **Recordset**erstellt wurde.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -222,5 +222,5 @@ Name = 'Anne  Ringer'
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ActiveCommand-Eigenschaft (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ActiveCommand-Eigenschaft (ADO)](./activecommand-property-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

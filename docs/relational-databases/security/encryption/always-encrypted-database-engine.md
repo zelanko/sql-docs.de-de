@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec29c3c9c9486c08ee8c95625b026f7b51ef5e0
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472676"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216766"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -163,21 +163,20 @@ Always Encrypted wird für die Spalten mit den folgenden Merkmalen nicht unterst
 - Spalten mit der `IDENTITY`-Eigenschaft  
 - Spalten mit der `ROWGUIDCOL`-Eigenschaft  
 - Zeichenfolgenspalten (`varchar`, `char` usw.) mit Nicht-BIN2-Sortierungen  
-- Spalten, die Schlüssel für nicht gruppierte Indizes darstellen, die wiederum eine zufallsverschlüsselte Spalte als Schlüsselspalte verwenden (bei deterministisch verschlüsselten Spalten gibt es keine Probleme)  
-- Spalten, die Schlüssel für gruppierte Indizes darstellen, die wiederum eine zufallsverschlüsselte Spalte als Schlüsselspalte verwenden (bei deterministisch verschlüsselten Spalten gibt es keine Probleme)  
-- Spalten, die Schlüssel für die Volltextindizes darstellen, die wiederum sowohl zufallsverschlüsstelte als auch deterministisch verschlüsselte Spalten umfassen.  
+- Spalten, die bei Verwendung der zufälligen Verschlüsselung Schlüssel für gruppierte und nicht gruppierte Indizes darstellen (deterministische Verschlüsselung wird unterstützt)
+- Spalten, die bei Verwendung der zufälligen Verschlüsselung Schlüssel für Volltextindizes darstellen (deterministische Verschlüsselung wird unterstützt)  
 - Berechnete Spalten.
 - Spalten, auf die berechnete Spalten verweisen (wenn der Ausdruck nicht unterstützte Vorgänge für Always Encrypted ausführt)  
 - Sparsespalten  
-- Spalten, auf die von Statistiken aus verwiesen wird  
-- Spalten, die den Aliastyp verwenden  
+- Spalten, auf die bei Verwendung der zufälligen Verschlüsselung von Statistiken verwiesen wird (deterministische Verschlüsselung wird unterstützt)  
+- Spalten, die Aliastypen verwenden  
 - Partitionierungsspalten  
 - Spalten mit standardmäßigen Einschränkungen  
 - Spalten, auf die Unique-Einschränkungen verweisen, wenn die zufällige Verschlüsselung verwendet wird (deterministische Verschlüsselung wird unterstützt)  
 - Primärschlüsselspalten, wenn die zufällige Verschlüsselung verwendet wird (deterministische Verschlüsselung wird unterstützt)  
 - Verweisende Spalten in Fremdschlüsseleinschränkungen bei Verwendung der zufälligen Verschlüsselung oder bei Verwendung der deterministischen Verschlüsselung, falls die referenzierten und die verweisenden Spalten verschiedene Schlüssel oder Algorithmen verwenden  
 - Spalten, auf die Check-Einschränkungen verweisen  
-- Spalten in Tabellen, die Change Data Capture verwenden  
+- Spalten, die mithilfe von Change Data Capture erfasst oder nachverfolgt werden  
 - Primärschlüsselspalten in Tabellen mit Änderungsnachverfolgung  
 - Spalten, die maskiert werden (mithilfe der dynamischen Datenmaskierung)  
 - Spalten in Stretch-aktivierten Tabellen (Tabellen mit Spalten, die mit Always Encrypted verschlüsselt sind, können für Stretch aktiviert werden.)  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e1840f567cf4d1285aa7257081f9dfc9d48a4bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1fcad0360e9ae15263860c45b9f9c4a96c4d36bc
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451782"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759980"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>Eigenschaften von "AbsolutePosition" und "Cursor Location" (JScript)
-In diesem Beispiel wird veranschaulicht, wie die [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) -Eigenschaft den Fortschritt einer Schleife verfolgen kann, in der alle Datensätze eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)aufgelistet werden. Er verwendet die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft, um die **AbsolutePosition** -Eigenschaft zu aktivieren, indem der Cursor auf einen Client Cursor festgelegt wird. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **AbsolutePositionJS. ASP**.  
+In diesem Beispiel wird veranschaulicht, wie die [AbsolutePosition](./absoluteposition-property-ado.md) -Eigenschaft den Fortschritt einer Schleife verfolgen kann, in der alle Datensätze eines [Recordsets](./recordset-object-ado.md)aufgelistet werden. Er verwendet die [CursorLocation](./cursorlocation-property-ado.md) -Eigenschaft, um die **AbsolutePosition** -Eigenschaft zu aktivieren, indem der Cursor auf einen Client Cursor festgelegt wird. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **AbsolutePositionJS. ASP**.  
   
 ```  
 <!-- BeginAbsolutePositionJS -->  
@@ -129,6 +129,6 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [AbsolutePosition-Eigenschaft (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [Cursor Location-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePosition-Eigenschaft (ADO)](./absoluteposition-property-ado.md)   
+ [Cursor Location-Eigenschaft (ADO)](./cursorlocation-property-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

@@ -1,19 +1,19 @@
 ---
 title: Unbeaufsichtigte Installation von SQL Server unter Ubuntu
 titleSuffix: SQL Server
-description: 'SQL Server-Beispielskript: unbeaufsichtigte Installation unter Ubuntu'
+description: Erfahren Sie, wie Sie ein Bash-Beispielskript verwenden, um SQL Server 2017 ohne interaktive Eingaben unter Ubuntu 16.04 zu installieren.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e9921f6b2639d533674a487de26c1d26aa365a0f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 555a15c3120b9dec2bfc367f9f15f23d967e0c05
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900166"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089000"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Beispiel: Skript für die unbeaufsichtigte SQL Server-Installation unter Ubuntu
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c29bb00ed7cf8ff914373f026d252880d6bdbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba02a22b987384e48a750705fa3c2baf6965f920
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452312"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758750"
 ---
 # <a name="basic-rds-programming-model"></a>Grundlegendes RDS-Programmiermodell
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "88452312"
   
 -   Rufen Sie das Serverprogramm auf. Übergeben Sie Parameter an das Serverprogramm, mit dem die Datenquelle und der auszugebende Befehl identifiziert werden. (Das Serverprogramm verwendet ADO, um Zugriff auf die Datenquelle zu erhalten. ADO stellt eine Verbindung mit einem der angegebenen Parameter her und gibt dann den im anderen Parameter angegebenen Befehl aus.)  
   
--   Das Serverprogramm Ruft ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt aus der Datenquelle ab. Optional wird das **Recordset** -Objekt auf dem Server verarbeitet.  
+-   Das Serverprogramm Ruft ein [Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekt aus der Datenquelle ab. Optional wird das **Recordset** -Objekt auf dem Server verarbeitet.  
   
 -   Das Serverprogramm gibt das endgültige **Recordset** -Objekt an die Client Anwendung zurück.  
   
@@ -45,10 +45,8 @@ ms.locfileid: "88452312"
  Wenn Ihre Bedürfnisse zwischen den Anforderungen liegen, unterstützt ADO nun das Anpassen des Verhaltens des standardmäßigen Server Programms.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [RDS-Programmiermodell im Detail](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
- [RDS-Szenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [RDS-Programmiermodell im Detail](./rds-programming-model-in-detail.md)   
+ [RDS-Szenario](./rds-scenario.md)   
+ [RDS-Tutorial](./rds-tutorial.md)   
+ [Recordset-Objekt (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [Verwendung und Sicherheit von RDS](./rds-usage-and-security.md)

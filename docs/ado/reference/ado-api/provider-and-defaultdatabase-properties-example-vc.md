@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5ad64de17b67acfba0948398fbec7ba5e853eec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49d1e08e421c520238573cd802a592cc970b19da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442612"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772799"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider- und DefaultDatabase-Eigenschaft – Beispiel (VC++)
-In diesem Beispiel wird die [Provider](../../../ado/reference/ado-api/provider-property-ado.md) -Eigenschaft veranschaulicht, indem drei [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekte mit unterschiedlichen Anbietern geöffnet werden. Außerdem wird die Standarddatenbank für den Microsoft ODBC-Anbieter mit der [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) -Eigenschaft festgelegt.  
+In diesem Beispiel wird die [Provider](./provider-property-ado.md) -Eigenschaft veranschaulicht, indem drei [Verbindungs](./connection-object-ado.md) Objekte mit unterschiedlichen Anbietern geöffnet werden. Außerdem wird die Standarddatenbank für den Microsoft ODBC-Anbieter mit der [DefaultDatabase](./defaultdatabase-property.md) -Eigenschaft festgelegt.  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -135,6 +135,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [DefaultDatabase (Eigenschaft)](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Provider-Eigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+ [Verbindungs Objekt (ADO)](./connection-object-ado.md)   
+ [DefaultDatabase (Eigenschaft)](./defaultdatabase-property.md)   
+ [Provider-Eigenschaft (ADO)](./provider-property-ado.md)

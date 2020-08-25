@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae25071d2740306c8ff6156a51cc380101046ba8
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3b2a5d4a4e88e1d0cb3a342395ebb3642d5d2dd8
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86456851"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147741"
 ---
 # <a name="statistics"></a>Statistik
 
@@ -113,16 +113,25 @@ ORDER BY s.name;
     * Wenn die Tabellenkardinalität zum Zeitpunkt der Statistikauswertung 500 oder weniger beträgt, wird nach jeweils 500 Änderungen eine Aktualisierung durchgeführt.
     * Wenn die Tabellenkardinalität zum Zeitpunkt der Statistikauswertung über 500 liegt, wird nach jeweils 500 Änderungen + 20 Prozent eine Aktualisierung durchgeführt.
 
-* Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und bei einem [Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) von unter 130 verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen abnehmenden dynamischen Schwellenwert für das Statistikupdate, der gemäß der Anzahl von Zeilen in der Tabelle angepasst wird. Dieser berechnet sich als Quadratwurzel des Produkts von 1000 und der aktuellen Tabellenkardinalität. Wenn Ihre Tabelle beispielsweise 2 Millionen Zeilen enthält, entspricht die Berechnung SQRT (1000 × 2000000) = 44721,359. Durch diese Änderung werden Statistiken für große Tabellen häufiger aktualisiert. Weist eine Datenbank jedoch einen Kompatibilitätsgrad unter 130 auf, dann gilt der Schwellenwert [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
+* Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und bei einem [Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) von unter 130 verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen abnehmenden dynamischen Schwellenwert für das Statistikupdate, der gemäß der Anzahl von Zeilen in der Tabelle angepasst wird. Dieser berechnet sich als Quadratwurzel des Produkts von 1000 und der aktuellen Tabellenkardinalität. Wenn Ihre Tabelle beispielsweise 2 Millionen Zeilen enthält, lautet die Berechnung folgendermaßen: sqrt(1000 * 2000000) = 44721.359. Durch diese Änderung werden Statistiken für große Tabellen häufiger aktualisiert. Weist eine Datenbank jedoch einen Kompatibilitätsgrad unter 130 auf, dann gilt der Schwellenwert [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
 
 > [!IMPORTANT]
-> Ab [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher unter [Kompatibilitätsgrad der Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) niedriger als 130 verwenden Sie [Ablaufverfolgungsflag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet einen abnehmenden, dynamischen Schwellenwert für das Statistikupdate, der sich entsprechend der Anzahl der Zeilen in der Tabelle anpasst.
+> In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bzw. in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher mit [Datenbank-Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 und niedriger müssen Sie das [Ablaufverfolgungsflag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) aktivieren, damit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen sinkenden Schwellenwert für das dynamische Statistikupdate verwendet.
+
+Gehen Sie folgendermaßen vor, um das Ablaufverfolgungsflag 2371 in Ihrer Umgebung vor [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] zu aktivieren:
+
+ - Wenn Sie keine Leistungsprobleme aufgrund von veralteten Statistiken festgestellt haben, ist es nicht erforderlich, dieses Ablaufverfolgungsflag zu aktivieren.
+ - Auf einem SAP-System sollten Sie das Flag aktivieren.  Zusätzliche Informationen finden Sie in diesem [Blog](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
+ - Wenn Sie Aufträge zur Statistikaktualisierung über Nacht ausführen müssen, weil die aktuelle automatische Aktualisierung nicht häufig genug ausgelöst wird, sollten Sie das Ablaufverfolgungsflag 2371 aktivieren, um den Schwellenwert zu senken.
   
 Bevor der Abfrageoptimierer eine Abfrage kompiliert und einen zwischengespeicherten Abfrageplan ausführt, sucht er nach veralteten Statistiken. Vor dem Kompilieren einer Abfrage ermittelt der Abfrageoptimierer anhand der Spalten, Tabellen und indizierten Sichten im Abfrageprädikat, welche Statistiken veraltet sein könnten. Vor dem Ausführen eines zwischengespeicherten Abfrageplans überprüft das [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ob der Abfrageplan auf aktuelle Statistiken verweist.  
   
 Die AUTO_UPDATE_STATISTICS-Option gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung generierte Statistiken erstellt wurden. Diese Option gilt auch für gefilterte Statistiken.  
  
-Weitere Informationen zur Steuerung von AUTO_UPDATE_STATISTICS finden Sie unter [Steuern des Verhaltens der automatischen Statistikaktualisierung (AUTO_UPDATE_STATISTICS) in SQL Server](https://support.microsoft.com/help/2754171).
+Sie können [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) verwenden, um die Anzahl geänderter Zeilen in einer Tabelle genau nachzuverfolgen und zu entscheiden, ob Sie die Statistiken manuell aktualisieren möchten.
+
+
+
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  Mit der [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async)-Option für das asynchrone Statistikupdate wird festgelegt, ob der Abfrageoptimierer das synchrone oder asynchrone Statistikupdate verwendet. Die Option für das asynchrone Statistikupdate ist standardmäßig deaktiviert, sodass der Abfrageoptimierer Statistiken synchron aktualisiert. Die AUTO_UPDATE_STATISTICS_ASYNC-Option gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung generierte Statistiken erstellt wurden.  

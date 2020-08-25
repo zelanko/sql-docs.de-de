@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b8d3263ee4d343f9e77b4d64d42ee8e871888d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b0f907cd2976e53b6942ff9d33da0a2a4712e61
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440222"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770899"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Connection Close-Methode, Table Type-Eigenschaft (VC++)
-Wenn die [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) -Eigenschaft auf " **Nothing** " festgelegt wird, sollte der Katalog "Schließen". Zugeordnete Sammlungen sind leer. Alle Objekte, die aus Schema Objekten im Katalog erstellt wurden, sind verwaist. Alle Eigenschaften von Objekten, die zwischengespeichert wurden, sind weiterhin verfügbar, aber der Versuch, Eigenschaften zu lesen, die einen Anrufe an den Anbieter erfordern, schlägt fehl.  
+Wenn die [ActiveConnection](./activeconnection-property-adox.md) -Eigenschaft auf " **Nothing** " festgelegt wird, sollte der Katalog "Schließen". Zugeordnete Sammlungen sind leer. Alle Objekte, die aus Schema Objekten im Katalog erstellt wurden, sind verwaist. Alle Eigenschaften von Objekten, die zwischengespeichert wurden, sind weiterhin verfügbar, aber der Versuch, Eigenschaften zu lesen, die einen Anrufe an den Anbieter erfordern, schlägt fehl.  
   
 ```  
 // BeginCloseConnectionCpp.cpp  
@@ -144,4 +144,4 @@ void CloseConnectionX() {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ActiveConnection-Eigenschaft (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [ActiveConnection-Eigenschaft (ADOX)](./activeconnection-property-adox.md)
