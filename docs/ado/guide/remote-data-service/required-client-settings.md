@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5263da344d39b828b431efd99a4171f74d2552db
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452022"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759380"
 ---
 # <a name="required-client-settings"></a>Erforderliche Clienteinstellungen
 > [!IMPORTANT]
@@ -26,11 +26,11 @@ ms.locfileid: "88452022"
   
  Geben Sie die folgenden Einstellungen für die Verwendung eines benutzerdefinierten **DataFactory** -Handlers an.  
   
--   Geben Sie "Provider = MS Remote" in der ADO-Eigenschaft ( [Verbindungs Objekt](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt [Anbieter Eigenschaft)](../../../ado/reference/ado-api/provider-property-ado.md) oder Verbindungs Zeichenfolge "**Provider**=" Verbindungs Zeichenfolge für **Verbindungs** Objekt an.  
+-   Geben Sie "Provider = MS Remote" in der ADO-Eigenschaft ( [Verbindungs Objekt](../../reference/ado-api/connection-object-ado.md) -Objekt [Anbieter Eigenschaft)](../../reference/ado-api/provider-property-ado.md) oder Verbindungs Zeichenfolge "**Provider**=" Verbindungs Zeichenfolge für **Verbindungs** Objekt an.  
   
--   Legen Sie die Eigenschaft für die [Cursor Location-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) auf **adUseClient**fest.  
+-   Legen Sie die Eigenschaft für die [Cursor Location-Eigenschaft (ADO)](../../reference/ado-api/cursorlocation-property-ado.md) auf **adUseClient**fest.  
   
--   Geben Sie den Namen des Handlers an, der in der **Handler** -Eigenschaft des [DataControl-Objekts (Objekt des DataControl-Objekts)](../../../ado/reference/rds-api/datacontrol-object-rds.md) oder der Verbindungs Zeichenfolge für das [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt verwendet werden soll.**Handler** (Der Handler kann nicht in der Verbindungs Zeichenfolge für **Verbindungs** Objekte festgelegt werden.)  
+-   Geben Sie den Namen des Handlers an, der in der **Handler** -Eigenschaft des [DataControl-Objekts (Objekt des DataControl-Objekts)](../../reference/rds-api/datacontrol-object-rds.md) oder der Verbindungs Zeichenfolge für das [Recordset-Objekt (ADO)](../../reference/ado-api/recordset-object-ado.md) -Objekt verwendet werden soll.**Handler** (Der Handler kann nicht in der Verbindungs Zeichenfolge für **Verbindungs** Objekte festgelegt werden.)  
   
  RDS stellt einen Standard Handler auf dem Server namens **msdfmap bereit. Handler**. (Die Standard Anpassungs Datei hat den Namen MSDFMAP.INI.)  
   
@@ -67,7 +67,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Geben Sie entweder die Eigenschaft oder das Schlüsselwort der [Handlereigenschaft (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) an. die Eigenschaft oder das Schlüsselwort der [Provider-Eigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) ; und die Bezeichner *customerbyid* und *CustomerDatabase* . Öffnen Sie anschließend das **Recordset** -Objekt.  
+ Geben Sie entweder die Eigenschaft oder das Schlüsselwort der [Handlereigenschaft (RDS)](../../reference/rds-api/handler-property-rds.md) an. die Eigenschaft oder das Schlüsselwort der [Provider-Eigenschaft (ADO)](../../reference/ado-api/provider-property-ado.md) ; und die Bezeichner *customerbyid* und *CustomerDatabase* . Öffnen Sie anschließend das **Recordset** -Objekt.  
   
  Graben. Öffnen Sie "customerbyid (4)", "Handler = msdfmap. Handler; "& _  
   
@@ -77,11 +77,10 @@ rs.CursorLocation = adUseClient
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Bereich für die Anpassungs Dateiverbindung](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [SQL-Abschnitt der Anpassungs Datei](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Benutzer Listen Abschnitt "Anpassungs Datei"](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Erforderliche Client Einstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Grundlegendes zur Anpassungs Datei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Bereich für die Anpassungs Dateiverbindung](./customization-file-connect-section.md)   
+ [SQL-Abschnitt der Anpassungs Datei](./customization-file-sql-section.md)   
+ [Benutzer Listen Abschnitt "Anpassungs Datei"](./customization-file-userlist-section.md)   
+ [DataFactory-Anpassung](./datafactory-customization.md)   
+ [Erforderliche Client Einstellungen]()   
+ [Grundlegendes zur Anpassungs Datei](./understanding-the-customization-file.md)   
+ [Schreiben Ihres eigenen benutzerdefinierten Handlers](./writing-your-own-customized-handler.md)

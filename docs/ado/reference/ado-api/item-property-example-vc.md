@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 231c5d4858436dc1c026f53ce002561529841c35
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dee5bda39c96dbfe70818a6b0e0aa4eb4f6ee6b7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443382"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774639"
 ---
 # <a name="item-property-example-vc"></a>Item-Eigenschaft – Beispiel (VC++)
-In diesem Beispiel wird veranschaulicht, wie die [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf Member einer Auflistung zugreift. Im Beispiel wird die Tabelle " ***Authors*** " der ***Pubs*** -Datenbank mit einem parametrisierten Befehl geöffnet.  
+In diesem Beispiel wird veranschaulicht, wie die [Item](./item-property-ado.md) -Eigenschaft auf Member einer Auflistung zugreift. Im Beispiel wird die Tabelle " ***Authors*** " der ***Pubs*** -Datenbank mit einem parametrisierten Befehl geöffnet.  
   
- Auf den Parameter im Befehl, der für die Datenbank ausgegeben wird, wird von der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung des [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekts anhand des Indexes und namens zugegriffen. Auf die Felder des zurückgegebenen [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) wird von der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung dieses Objekts nach Index und Name zugegriffen.  
+ Auf den Parameter im Befehl, der für die Datenbank ausgegeben wird, wird von der [Parameter](./parameters-collection-ado.md) Auflistung des [Befehls](./command-object-ado.md) Objekts anhand des Indexes und namens zugegriffen. Auf die Felder des zurückgegebenen [Recordsets](./recordset-object-ado.md) wird von der [Fields](./fields-collection-ado.md) -Auflistung dieses Objekts nach Index und Name zugegriffen.  
   
 ```  
 // BeginItemCpp.cpp  
@@ -233,8 +233,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Item-Eigenschaft (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Parameter Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Command-Objekt (ADO)](./command-object-ado.md)   
+ [Fields-Auflistung (ADO)](./fields-collection-ado.md)   
+ [Item-Eigenschaft (ADO)](./item-property-ado.md)   
+ [Parameter Auflistung (ADO)](./parameters-collection-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

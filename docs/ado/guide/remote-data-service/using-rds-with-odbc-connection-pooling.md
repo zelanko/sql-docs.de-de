@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 440a1947d5424840ec99f9e4da7ae03266c7ac04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 074226de92d5ea02a3eb507013c862e0ca493455
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451862"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760040"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Verwenden von RDS mit ODBC-Verbindungspooling
 Wenn Sie eine ODBC-Datenquelle verwenden, können Sie die Option Verbindungspooling in Internetinformationsdienste (IIS) verwenden, um eine leistungsstarke Verarbeitung der Client Auslastung zu erreichen. Das Verbindungspooling ist ein Ressourcen-Manager für Verbindungen, der den offenen Status für häufig verwendete Verbindungen aufrecht erhält.  
@@ -125,26 +125,4 @@ Wenn Sie eine ODBC-Datenquelle verwenden, können Sie die Option Verbindungspool
 5.  Klicken Sie auf OK und dann erneut auf OK, um das Hilfsprogramm zu beenden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Grundlegendes zu RDS](./rds-fundamentals.md)

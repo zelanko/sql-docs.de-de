@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68a7e5139be0cc317341bda05a171e0969411540
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f4e902888285f758975ffce0381a08b813152ba
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439252"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768809"
 ---
 # <a name="cancel-method-rds"></a>Cancel-Methode (RDS)
 Bricht die Ausführung eines ausstehenden asynchronen Methoden Aufrufes ab.  
@@ -35,17 +35,15 @@ RDS.DataControl.Cancel
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn Sie **Abbrechen**aufrufen, wird "read [ystate](../../../ado/reference/rds-api/readystate-property-rds.md) " automatisch auf " **adkreadystateloaded**" festgelegt, und das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ist leer.  
+ Wenn Sie **Abbrechen**aufrufen, wird "read [ystate](./readystate-property-rds.md) " automatisch auf " **adkreadystateloaded**" festgelegt, und das [Recordset](../ado-api/recordset-object-ado.md) ist leer.  
   
 ## <a name="applies-to"></a>Gilt für  
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl-Objekt (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Cancel-Methode (Beispiel) (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
- [Cancel-Methode (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [CancelBatch-Methode (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [CancelUpdate-Methode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [CancelUpdate-Methode (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [ExecuteOptions-Eigenschaft (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)
-
-
+ [Cancel-Methode (Beispiel) (VBScript)](./cancel-method-example-vbscript.md)   
+ [Cancel-Methode (ADO)](../ado-api/cancel-method-ado.md)   
+ [CancelBatch-Methode (ADO)](../ado-api/cancelbatch-method-ado.md)   
+ [CancelUpdate-Methode (ADO)](../ado-api/cancelupdate-method-ado.md)   
+ [CancelUpdate-Methode (RDS)](./cancelupdate-method-rds.md)   
+ [ExecuteOptions-Eigenschaft (RDS)](./executeoptions-property-rds.md)

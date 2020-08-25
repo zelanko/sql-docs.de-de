@@ -1,8 +1,6 @@
 ---
-title: Ändern des Serverauthentifizierungsmodus | Microsoft-Dokumentation
+title: Ändern des Serverauthentifizierungsmodus
 description: Hier erfahren Sie, wie Sie den Serverauthentifizierungsmodus in SQL Server ändern. Für diese Aufgabe können Sie entweder SQL Server Management Studio oder Transact-SQL verwenden.
-ms.custom: ''
-ms.date: 02/18/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -16,23 +14,26 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67fe4768a07460ebac0b533b6e886ab565d82029
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.custom: ''
+ms.date: 02/18/2020
+ms.openlocfilehash: 79dc463039be1100f265e6bb44561a6e2dc71c93
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759219"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200950"
 ---
 # <a name="change-server-authentication-mode"></a>Ändern des Serverauthentifizierungsmodus
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
 In diesem Thema wird beschrieben, wie Sie den Serverauthentifizierungsmodus in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern können. Während der Installation wird [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] entweder auf den **Windows-Authentifizierungsmodus** oder den **SQL Server- und Windows-Authentifizierungsmodus**festgelegt. Nach der Installation können Sie jederzeit den Authentifizierungsmodus ändern.
 
 Wird während der Installation der **Windows-Authentifizierungsmodus** ausgewählt, wird die Systemadministratoranmeldung deaktiviert und ein Kennwort durch das Setup zugewiesen. Wenn Sie den Authentifizierungsmodus später zu **SQL Server- und Windows-Authentifizierungsmodus**ändern, bleibt die Systemadministratoranmeldung deaktiviert. Um die Systemadministratoranmeldung zu verwenden, nutzen Sie die ALTER LOGIN-Anweisung, um die Systemadministratoranmeldung zu aktivieren und ein neues Kennwort zuzuweisen. Die Systemadministratoranmeldung kann nur mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung mit dem Server herstellen.
 
 ## <a name="before-you-begin"></a>Voraussetzungen
 
-Das Systemadministratorkonto ist ein bekanntes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konto und oft das Ziel böswilliger Benutzer. Aktivieren Sie das Systemadministratorkonto nur dann, wenn die Anwendung es erfordert. Es ist sehr wichtig, dass Sie für die Systemadministratoranmeldung ein sicheres Kennwort verwenden.
+Das Systemadministratorkonto ist ein bekanntes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konto und oft das Ziel böswilliger Benutzer. Aktivieren Sie das Systemadministratorkonto nur dann, wenn die Anwendung es erfordert. Es ist wichtig, für die Systemadministratoranmeldung ein sicheres Kennwort zu verwenden.
 
 ## <a name="change-authentication-mode-with-ssms"></a>Ändern des Authentifizierungsmodus mit SSMS
 
@@ -46,7 +47,7 @@ Das Systemadministratorkonto ist ein bekanntes [!INCLUDE[ssNoVersion](../../incl
 
 ## <a name="enable-sa-login"></a>Aktivieren der SA-Anmeldung
 
-Sie können die **SA**-Anmeldung mit SSMS oder T-SQL aktivieren.
+Sie können die **Systemadministrator**-Anmeldung mit SSMS oder T-SQL aktivieren.
 
 ### <a name="use-ssms"></a>Verwenden Sie SSMS.
 
@@ -83,7 +84,12 @@ EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE',
 GO
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+> [!Note]
+> Die zum Ändern des Authentifizierungsmodus erforderlichen Berechtigungen sind [Systemadministrator](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles) oder [Server steuern](../../relational-databases/security/permissions-database-engine.md).
 
- [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md)   
- [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md) [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) [Herstellen einer Verbindung mit SQL Server bei gesperrten Systemadministratoren](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md)
+- [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
+- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)
+- [Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren gesperrt sind](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)

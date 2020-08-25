@@ -1,4 +1,5 @@
 ---
+description: 'Columnstore-Indizes: Leitfaden zum Datenladevorgang'
 title: 'Columnstore-Indizes: Leitfaden zum Datenladevorgang | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/03/2017
@@ -11,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482722"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore-Indizes: Leitfaden zum Datenladevorgang
 
@@ -52,6 +53,8 @@ Das Massenladen verfügt über diese integrierten Leistungsoptimierungen:
 -   **Sperrenoptimierung:** Die X-Sperre in einer Zeilengruppe wird automatisch abgerufen, wenn Daten in eine komprimierte Zeilengruppe geladen werden. Beim Massenladen in eine Deltazeilengruppe wird eine X-Sperre für die Zeilengruppe abgerufen, aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sperrt PAGE/EXTENT weiterhin, da die X-Zeilengruppensperre nicht Teil der Sperrhierarchie ist.  
   
 Wenn Sie über einen nicht gruppierten B-Strukturindex auf einem Columnstore-Index verfügen, erfolgt keine Sperren- oder Protokollierungsoptimierung für den Index selbst, sondern es können die zuvor beschriebenen Optimierungen für den gruppierten Columnstore-Index angewendet werden.  
+
+Beachten Sie, dass DML-Vorgänge (Einfügen, Löschen, Aktualisieren) keine Batchmodusvorgänge sind, da DML nicht parallel ist.
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>Planen von Massenladungsgrößen zum Minimieren von Delta-Zeilengruppen
 Columnstore-Indizes sind am leistungsfähigsten, wenn die meisten Zeilen in den Columnstore komprimiert werden und sich nicht in Delta-Zeilengruppen befinden. Es wird empfohlen, die Größe Ihrer Ladungen so anzupassen, dass Zeilen direkt in den Columnstore verschoben werden und den Deltastore so weit wie möglich umgehen.

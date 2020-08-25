@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46ebc9a3d7419912f4e0c7e43beb08d2db57c0af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7bccf1feaf95417943194eed6e1faccbc83f1060
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438762"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767679"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState-Eigenschaft – Beispiel (VBScript)
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Im folgenden Beispiel wird gezeigt, wie die Eigenschaft "read- [State](../../../ado/reference/rds-api/readystate-property-rds.md) " der RDS-Datei gelesen wird [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt zur Laufzeit im VBScript-Code. "Read- **State** " ist eine schreibgeschützte Eigenschaft.  
+ Im folgenden Beispiel wird gezeigt, wie die Eigenschaft "read- [State](./readystate-property-rds.md) " der RDS-Datei gelesen wird [. DataControl](./datacontrol-object-rds.md) -Objekt zur Laufzeit im VBScript-Code. "Read- **State** " ist eine schreibgeschützte Eigenschaft.  
   
  Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \<Body> \</Body> Tags und in ein normales HTML-Dokument aus, und nennen Sie ihn **rdsinfoyst. ASP**. Verwenden Sie **Suchen** , um die Datei adovsb. Inc zu suchen, und platzieren Sie Sie in dem Verzeichnis, das Sie verwenden möchten. Das ASP-Skript identifiziert Ihren Server.  
   
@@ -111,7 +111,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [ReadyState-Eigenschaft (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)
-
-
+ [DataControl-Objekt (RDS)](./datacontrol-object-rds.md)   
+ [ReadyState-Eigenschaft (RDS)](./readystate-property-rds.md)

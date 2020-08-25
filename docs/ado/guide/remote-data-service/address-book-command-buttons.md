@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c2c3b0880a940b0f3388aced46c0cd9c888b786
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0abdb36a7ff51bdf0b01e21957c10ca8b9f995e4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452332"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758610"
 ---
 # <a name="address-book-command-buttons"></a>Adress Book-Befehlsschaltflächen
 Die Adressbuch Anwendung enthält die folgenden Befehls Schaltflächen:  
@@ -52,7 +52,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  Wenn die Abfrage erfolgreich war, werden alle Personen mit einem Nachnamen, der den Text "Berge" enthält (z. b. "Berge" und "Berger"), und mit einem Titel, der die Wörter "Program Manager" enthält (z. b. Programm-Manager, erweiterte Technologien), im HTML-Datenraster angezeigt.  
   
 ## <a name="preparing-and-sending-the-query"></a>Vorbereiten und Senden der Abfrage  
- Der letzte Teil der Find_OnClick unter Prozedur besteht aus zwei-Anweisungen. Mit der ersten Anweisung wird die [SQL](../../../ado/reference/rds-api/sql-property.md) -Eigenschaft des [RDS zugewiesen. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt, das der dynamisch erstellten SQL-Abfrage entspricht. Die zweite Anweisung bewirkt, dass **RDS. DataControl** -Objekt ( `DC1` ) zum Abfragen der Datenbank und anschließendes Anzeigen der neuen Ergebnisse der Abfrage im Raster.  
+ Der letzte Teil der Find_OnClick unter Prozedur besteht aus zwei-Anweisungen. Mit der ersten Anweisung wird die [SQL](../../reference/rds-api/sql-property.md) -Eigenschaft des [RDS zugewiesen. DataControl](../../reference/rds-api/datacontrol-object-rds.md) -Objekt, das der dynamisch erstellten SQL-Abfrage entspricht. Die zweite Anweisung bewirkt, dass **RDS. DataControl** -Objekt ( `DC1` ) zum Abfragen der Datenbank und anschließendes Anzeigen der neuen Ergebnisse der Abfrage im Raster.  
   
 ```vb
 Sub Find_OnClick  
@@ -63,7 +63,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>Schaltfläche Profil aktualisieren  
- Wenn Sie auf die Schaltfläche " **Profil aktualisieren** " klicken, wird die VBScript-Update_OnClick unter Prozedur aktiviert, die [RDS ausführt. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) `DC1` [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) und [Aktualisierungs](../../../ado/reference/rds-api/refresh-method-rds.md) Methoden des DataControl-Objekts.  
+ Wenn Sie auf die Schaltfläche " **Profil aktualisieren** " klicken, wird die VBScript-Update_OnClick unter Prozedur aktiviert, die [RDS ausführt. ](../../reference/rds-api/datacontrol-object-rds.md) `DC1` [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) und [Aktualisierungs](../../reference/rds-api/refresh-method-rds.md) Methoden des DataControl-Objekts.  
   
 ```vb
 Sub Update_OnClick  
@@ -75,7 +75,7 @@ End Sub
  Wenn `DC1.SubmitChanges` ausgeführt wird, verpackt der Remote Datendienst alle Update Informationen und sendet Sie über HTTP an den Server. Das Update ist alles-oder-nichts. Wenn ein Teil des Updates nicht erfolgreich ist, wird keine der Änderungen vorgenommen, und eine Statusmeldung wird zurückgegeben. `DC1.Refresh` ist nach **SubmitChanges** mit dem Remote Datendienst nicht erforderlich, stellt jedoch neue Daten sicher.  
   
 ## <a name="cancel-changes-button"></a>Schaltfläche "Änderungen abbrechen  
- Wenn Sie auf **Änderungen abbrechen** klicken, wird die VBScript-Cancel_OnClick unter Prozedur aktiviert, die das [RDS ausführt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt ( `DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) -Methode.  
+ Wenn Sie auf **Änderungen abbrechen** klicken, wird die VBScript-Cancel_OnClick unter Prozedur aktiviert, die das [RDS ausführt. DataControl](../../reference/rds-api/datacontrol-object-rds.md) -Objekt ( `DC1)` [CancelUpdate](../../reference/rds-api/cancelupdate-method-rds.md) -Methode.  
   
 ```vb
 Sub Cancel_OnClick  
@@ -86,7 +86,5 @@ End Sub
  Wenn `DC1.CancelUpdate` ausgeführt wird, werden alle Änderungen verworfen, die ein Benutzer seit der letzten Abfrage oder Aktualisierung an einem Mitarbeiterdaten Satz im Datenraster vorgenommen hat. Die ursprünglichen Werte werden wieder hergestellt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Adressbuch-Navigations Schaltflächen](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
-
+ [Adressbuch-Navigations Schaltflächen](./address-book-navigation-buttons.md)   
+ [DataControl-Objekt (RDS)](../../reference/rds-api/datacontrol-object-rds.md)

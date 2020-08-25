@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6314ae9a0682e1c10b1ecd45c8f8d5217e7d6426
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7829b984b603f7b21a339886d956b6db5cc0ffd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452402"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758380"
 ---
 # <a name="using-ado-with-ado-md"></a>Verwenden von ADO mit ADO MD
 ADO und ADO MD sind miteinander verknüpft, aber getrennte Objekt Modelle. ADO stellt Objekte für das Herstellen einer Verbindung mit Datenquellen, das Ausführen von Befehlen, das Abrufen von Tabellendaten und Schema Metadaten in einem Tabellenformat und das Anzeigen von Anbieter Fehlerinformationen bereit. ADO MD stellt Objekte zum Abrufen mehrdimensionaler Daten und zum Anzeigen von mehrdimensionalen Schema Metadaten bereit.  
   
  Wenn Sie mit einem MDP arbeiten, können Sie sich für die Verwendung von ADO, ADO MD oder beides mit Ihrer Anwendung entscheiden. Wenn Sie auf beide Bibliotheken innerhalb Ihres Projekts verweisen, haben Sie vollständigen Zugriff auf die Funktionen, die von Ihrem MDP bereitgestellt werden.  
   
- Es ist häufig nützlich für Consumer, eine vereinfachte tabellarische Ansicht eines mehrdimensionalen Datasets zu erhalten. Hierfür können Sie das ADO- [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt verwenden. Geben Sie die Quelle für das [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) als ***Quell*** Parameter für die [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode eines **Recordsets**anstelle der Quelle für ein ADO MD **Cellsets**an.  
+ Es ist häufig nützlich für Consumer, eine vereinfachte tabellarische Ansicht eines mehrdimensionalen Datasets zu erhalten. Hierfür können Sie das ADO- [Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekt verwenden. Geben Sie die Quelle für das [Cellset](../../reference/ado-md-api/cellset-object-ado-md.md) als ***Quell*** Parameter für die [Open](../../reference/ado-api/open-method-ado-recordset.md) -Methode eines **Recordsets**anstelle der Quelle für ein ADO MD **Cellsets**an.  
   
- Es kann auch hilfreich sein, die Schema Metadaten in einer tabellarischen Ansicht und nicht als eine Hierarchie von Objekten anzuzeigen. Die ADO [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) -Methode für das [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt ermöglicht dem Benutzer das Öffnen eines **Recordsets** , das Schema Informationen enthält. Der ***QueryType*** -Parameter der **OpenSchema** -Methode verfügt über mehrere [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) -Werte, die sich speziell auf MDPs beziehen. Die Werte lauten wie folgt:  
+ Es kann auch hilfreich sein, die Schema Metadaten in einer tabellarischen Ansicht und nicht als eine Hierarchie von Objekten anzuzeigen. Die ADO [OpenSchema](../../reference/ado-api/openschema-method.md) -Methode für das [Verbindungs](../../reference/ado-api/connection-object-ado.md) Objekt ermöglicht dem Benutzer das Öffnen eines **Recordsets** , das Schema Informationen enthält. Der ***QueryType*** -Parameter der **OpenSchema** -Methode verfügt über mehrere [SchemaEnum](../../reference/ado-api/schemaenum.md) -Werte, die sich speziell auf MDPs beziehen. Die Werte lauten wie folgt:  
   
 -   **adschemacubes**  
   
@@ -41,13 +41,13 @@ ADO und ADO MD sind miteinander verknüpft, aber getrennte Objekt Modelle. ADO s
   
 -   **"adschemamembers"**  
   
- Um ADO-Enumerationswerte mit ADO MD Eigenschaften oder Methoden zu verwenden, muss das Projekt auf die ADO-und ADO MD-Bibliotheken verweisen. Beispielsweise können Sie die ADO **adstate** -Enumerationswerte mit der ADO MD [State](../../../ado/reference/ado-md-api/state-property-ado-md.md) -Eigenschaft verwenden. Weitere Informationen zum Erstellen von Verweisen auf Bibliotheken finden Sie in der Dokumentation zu Ihrem Entwicklungs Tool.  
+ Um ADO-Enumerationswerte mit ADO MD Eigenschaften oder Methoden zu verwenden, muss das Projekt auf die ADO-und ADO MD-Bibliotheken verweisen. Beispielsweise können Sie die ADO **adstate** -Enumerationswerte mit der ADO MD [State](../../reference/ado-md-api/state-property-ado-md.md) -Eigenschaft verwenden. Weitere Informationen zum Erstellen von Verweisen auf Bibliotheken finden Sie in der Dokumentation zu Ihrem Entwicklungs Tool.  
   
- Weitere Informationen zu den ADO-Objekten und-Methoden finden Sie in der [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md).  
+ Weitere Informationen zu den ADO-Objekten und-Methoden finden Sie in der [ADO-API-Referenz](../../reference/ado-api/ado-api-reference.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (mehrdimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Übersicht über mehrdimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [Programmieren mit ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Arbeiten mit mehrdimensionalen Daten](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+ [ADO MD-Objektmodell](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (mehrdimensional) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [Übersicht über mehrdimensionale Schemas und Daten](./overview-of-multidimensional-schemas-and-data.md)   
+ [Programmieren mit ADO MD](./programming-with-ado-md.md)   
+ [Arbeiten mit mehrdimensionalen Daten](./working-with-multidimensional-data.md)

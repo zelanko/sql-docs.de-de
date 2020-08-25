@@ -1,6 +1,6 @@
 ---
 title: Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS
-description: In diesem Artikel wird SSIS (SQL Server Integration Services) für Linux-Computer beschrieben.
+description: Erfahren Sie, wie Sie SSIS-Pakete (SQL Server Integration Services) unter Linux ausführen. Erfahren Sie auch, wo Sie weitere Informationen zu den Funktionen von SSIS finden.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882720"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088870"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS
 

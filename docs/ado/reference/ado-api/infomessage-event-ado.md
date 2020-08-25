@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3957c6cf6843ba27c54fb5a979901bd4a656c2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cab5acb3ccedb9a1e42426da3701bc015f0ec2d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443452"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774829"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage-Ereignis (ADO)
 Das **infomess** -Ereignis wird immer dann aufgerufen, wenn während eines **ConnectionEvent** -Vorgangs eine Warnung auftritt.  
@@ -36,17 +36,17 @@ InfoMessage pError, adStatus, pConnection
   
 #### <a name="parameters"></a>Parameter  
  *pError*  
- Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Dieser Parameter enthält alle Fehler, die zurückgegeben werden. Wenn mehrere Fehler zurückgegeben werden, können Sie die **Fehler** Auflistung aufzählen, um Sie zu finden.  
+ Ein [Fehler](./error-object.md) Objekt. Dieser Parameter enthält alle Fehler, die zurückgegeben werden. Wenn mehrere Fehler zurückgegeben werden, können Sie die **Fehler** Auflistung aufzählen, um Sie zu finden.  
   
  *adStatus*  
- Ein [eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) -Statuswert. Wenn eine Warnung auftritt, wird *adStatus* auf **adStatusOK** festgelegt, und die *Warnung enthält die* Warnung.  
+ Ein [eventstatusenum](./eventstatusenum.md) -Statuswert. Wenn eine Warnung auftritt, wird *adStatus* auf **adStatusOK** festgelegt, und die *Warnung enthält die* Warnung.  
   
  Bevor dieses Ereignis zurückkehrt, legen Sie diesen Parameter auf **adStatus-unwantedevent** fest, um nachfolgende Benachrichtigungen zu verhindern.  
   
  *pConnection*  
- Ein [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Die Verbindung, für die die Warnung aufgetreten ist. Beispielsweise können Warnungen auftreten, wenn Sie ein **Verbindungs** Objekt öffnen oder einen [Befehl](../../../ado/reference/ado-api/command-object-ado.md) für eine **Verbindung**ausführen.  
+ Ein [Verbindungs](./connection-object-ado.md) Objekt. Die Verbindung, für die die Warnung aufgetreten ist. Beispielsweise können Warnungen auftreten, wenn Sie ein **Verbindungs** Objekt öffnen oder einen [Befehl](./command-object-ado.md) für eine **Verbindung**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für das ADO-Ereignis Modell (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignis Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Beispiel für das ADO-Ereignis Modell (VC + +)](./ado-events-model-example-vc.md)   
+ [ADO-Ereignis Handler-Zusammenfassung](../../guide/data/ado-event-handler-summary.md)   
+ [Connection-Objekt (ADO)](./connection-object-ado.md)

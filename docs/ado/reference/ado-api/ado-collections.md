@@ -14,32 +14,32 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fb960d7539dd2d47be6eb2aad424808d44db10d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: adaf8b1b14fbc6813096e8ba8fcbf3943e8a2179
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451472"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760120"
 ---
 # <a name="ado-collections"></a>ADO-Collections
-Die Beziehungen zwischen diesen Auflistungen und den ADO-Objekten werden im [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)dargestellt.  
+Die Beziehungen zwischen diesen Auflistungen und den ADO-Objekten werden im [ADO-Objektmodell](./ado-object-model.md)dargestellt.  
   
- Jede Auflistung kann das zugehörige-Objekt enthalten. Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt kann z. b. in einer [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung enthalten sein. Weitere Informationen zu-Objekten finden Sie unter [ADO-Objekte](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) oder ein bestimmtes Objekt Thema.  
+ Jede Auflistung kann das zugehörige-Objekt enthalten. Ein [Fehler](./error-object.md) Objekt kann z. b. in einer [Fehler](./errors-collection-ado.md) Auflistung enthalten sein. Weitere Informationen zu-Objekten finden Sie unter [ADO-Objekte](./ado-objects-and-interfaces.md) oder ein bestimmtes Objekt Thema.  
   
-|Sammlung|Beschreibung|  
+|Collection|BESCHREIBUNG|  
 |-|-|  
-|[Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)|Enthält alle Fehler Objekte, die als Reaktion auf einen einzelnen Anbieter **Fehler** erstellt wurden.|  
-|[Felder](../../../ado/reference/ado-api/fields-collection-ado.md)|Enthält alle **Feld** Objekte eines **Recordset** -Objekts.|  
-|[Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md)|Enthält alle **Parameter** Objekte eines **Befehls** Objekts.|  
-|[Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md)|Enthält alle **Eigenschafts** Objekte für eine bestimmte Instanz eines-Objekts.|  
+|[Fehler](./errors-collection-ado.md)|Enthält alle Fehler Objekte, die als Reaktion auf einen einzelnen Anbieter **Fehler** erstellt wurden.|  
+|[Felder](./fields-collection-ado.md)|Enthält alle **Feld** Objekte eines **Recordset** -Objekts.|  
+|[Parameter](./parameters-collection-ado.md)|Enthält alle **Parameter** Objekte eines **Befehls** Objekts.|  
+|[Eigenschaften](./properties-collection-ado.md)|Enthält alle **Eigenschafts** Objekte für eine bestimmte Instanz eines-Objekts.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md)   
- [Dynamische ADO-Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [ADO-Enumerationskonstanten](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Anhang B: ADO-Fehler](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
- [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md)   
- [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)   
- [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)   
- [ADO-Objekte und-Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
- [ADO-Eigenschaften](../../../ado/reference/ado-api/ado-properties.md)
+ [ADO-API-Referenz](./ado-api-reference.md)   
+ [Dynamische ADO-Eigenschaften](./ado-dynamic-properties.md)   
+ [ADO-Enumerationskonstanten](./ado-enumerated-constants.md)   
+ [Anhang B: ADO-Fehler](../../guide/appendixes/appendix-b-ado-errors.md)   
+ [ADO-Ereignisse](./ado-events.md)   
+ [ADO-Methoden](./ado-methods.md)   
+ [ADO-Objektmodell](./ado-object-model.md)   
+ [ADO-Objekte und-Schnittstellen](./ado-objects-and-interfaces.md)   
+ [ADO-Eigenschaften](./ado-properties.md)

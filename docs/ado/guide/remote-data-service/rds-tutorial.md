@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aedb4037d4f6c37ad70086a4e2a51a6210c219c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8200b9bd42d06a52e5786b839a55cce175bb0b2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452072"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759520"
 ---
 # <a name="rds-tutorial"></a>RDS-Tutorial
 In diesem Tutorial wird veranschaulicht, wie Sie das RDS-Programmiermodell zum Abfragen und Aktualisieren einer Datenquelle verwenden. Zuerst werden die Schritte beschrieben, die zum Ausführen dieser Aufgabe erforderlich sind. Anschließend wird das Tutorial in Microsoft® Visual Basic Scripting Edition (mit ADO für Windows Foundation-Klassen (ADO/WFC)) wiederholt.  
@@ -45,7 +45,7 @@ In diesem Tutorial wird veranschaulicht, wie Sie das RDS-Programmiermodell zum A
   
 -   Rufen Sie das Serverprogramm auf. Übergeben Sie Parameter an das Serverprogramm, das die Datenquelle und den auszugebenden Befehl identifiziert.  
   
--   Das Serverprogramm Ruft ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt aus der Datenquelle ab, in der Regel mithilfe von ADO. Optional wird das **Recordset** -Objekt auf dem Server verarbeitet.  
+-   Das Serverprogramm Ruft ein [Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekt aus der Datenquelle ab, in der Regel mithilfe von ADO. Optional wird das **Recordset** -Objekt auf dem Server verarbeitet.  
   
 -   Das Serverprogramm gibt das endgültige **Recordset** -Objekt an die Client Anwendung zurück.  
   
@@ -55,20 +55,20 @@ In diesem Tutorial wird veranschaulicht, wie Sie das RDS-Programmiermodell zum A
   
  Dieses Tutorial enthält die folgenden Themen.  
   
--   [Schritt 1: Serverprogramm angeben (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [Schritt 1: Serverprogramm angeben (RDS-Tutorial)](./step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [Schritt 2: Serverprogramm aufrufen (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [Schritt 2: Serverprogramm aufrufen (RDS-Tutorial)](./step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [Schritt 3: Server erhält ein Recordset (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [Schritt 3: Server ruft ein Recordset ab (RDS-Tutorial)](./step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [Schritt 4: Server gibt das Recordset zurück (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [Schritt 4: Server gibt das Recordset zurück (RDS-Tutorial)](./step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [Schritt 5: DataControl wird nutzbar gemacht (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [Schritt 5: DataControl wird nutzbar gemacht (RDS-Tutorial)](./step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [Schritt 6: Änderungen werden an den Server gesendet (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [Schritt 6: Änderungen werden an den Server gesendet (RDS-Tutorial)](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
--   [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
+-   [RDS-Tutorial (VBScript)](./rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Schritt 1: Angeben eines Server Programms (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
- [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Schritt 1: Angeben eines Server Programms (RDS-Tutorial)](./step-1-specify-a-server-program-rds-tutorial.md)   
+ [RDS-Tutorial (VBScript)](./rds-tutorial-vbscript.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3112670df34b0e74e359ef0e514d9acdc8620788
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03e46b4f449f0a937c21c436049692f0c95695cc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439272"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768839"
 ---
 # <a name="views-refresh-method-example-vb"></a>Refresh-Methode für Sichten – Beispiel (VB)
-Der folgende Code zeigt, wie die [views](../../../ado/reference/adox-api/views-collection-adox.md) -Auflistung eines [Katalogs](../../../ado/reference/adox-api/catalog-object-adox.md)aktualisiert wird. Dies ist erforderlich, bevor [auf Sicht](../../../ado/reference/adox-api/view-object-adox.md) Objekte aus dem **Katalog** zugegriffen werden kann.  
+Der folgende Code zeigt, wie die [views](./views-collection-adox.md) -Auflistung eines [Katalogs](./catalog-object-adox.md)aktualisiert wird. Dies ist erforderlich, bevor [auf Sicht](./view-object-adox.md) Objekte aus dem **Katalog** zugegriffen werden kann.  
   
 ```  
 ' BeginViewsRefreshVB  
@@ -57,5 +57,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
- [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Refresh-Methode (ADO)](../ado-api/refresh-method-ado.md)   
+ [Views-Collection (ADOX)](./views-collection-adox.md)

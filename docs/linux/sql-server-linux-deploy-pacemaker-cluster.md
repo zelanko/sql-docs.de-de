@@ -1,6 +1,6 @@
 ---
 title: Bereitstellen eines Pacemaker-Clusters für SQL Server für Linux
-description: In diesem Tutorial erfahren Sie, wie Sie einen Pacemaker-Cluster für SQL Server für Linux bereitstellen.
+description: Erfahren Sie, wie Sie einen Linux Pacemaker-Cluster für eine SQL Server-Always On-Verfügbarkeitsgruppe oder -Failoverclusterinstanz bereitstellen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +8,12 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b48511e9e737f4fb775925d8a6bff81e31ef2a5a
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: ebee4156a89a7eb2464abbda997f20a99be30753
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196758"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088922"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Bereitstellen eines Pacemaker-Clusters für SQL Server für Linux
 

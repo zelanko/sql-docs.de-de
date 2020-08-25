@@ -1,4 +1,5 @@
 ---
+description: SET NOEXEC (Transact-SQL)
 title: SET NOEXEC (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7495f0eb68df1cf64320aee14276d33ff7641db5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e32f168c04aba303dc33e1e3db8c268e163ef82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356626"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,8 +44,10 @@ ms.locfileid: "85765768"
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
- Wenn SET NOEXEC auf ON festgelegt ist, kompiliert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jeden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungsbatch, führt die Anweisungen jedoch nicht aus. Wenn SET NOEXEC auf OFF festgelegt ist, werden alle Batches nach der Kompilierung ausgeführt.  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Hinweise  
+ Wenn SET NOEXEC auf ON festgelegt ist, analysiert und kompiliert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jeden Batch mit [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, führt diese jedoch nicht aus. Wenn SET NOEXEC auf OFF festgelegt ist, werden alle Batches nach der Kompilierung ausgeführt.  NOEXEC unterstützt die verzögerte Namensauflösung. Wenn mindestens ein referenziertes Objekt im Batch nicht vorhanden ist, wird kein Fehler ausgelöst.
   
  Die Ausführung von Anweisungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfolgt in zwei Phasen: Kompilierung und Ausführung. Diese Einstellung ist hilfreich, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Syntax und Objektnamen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code während der Ausführung überprüfen soll. Sie ist auch hilfreich, um Anweisungen zu debuggen, die normalerweise Teil eines größeren Anweisungsbatches wären.  
   

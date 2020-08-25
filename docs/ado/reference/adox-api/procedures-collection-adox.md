@@ -17,41 +17,41 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3719107d002e91880d59b0ba33c25c09596a80b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97421c9020750627dcd27f6188ae5cda72a2d90c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439622"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769629"
 ---
 # <a name="procedures-collection-adox"></a>Procedures-Collection (ADOX)
-Enthält alle [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md) Objekte eines Katalogs.  
+Enthält alle [Prozedur](./procedure-object-adox.md) Objekte eines Katalogs.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) -Methode für eine **Prozeduren** Auflistung ist für ADOX eindeutig. Ihre Möglichkeiten:  
+ Die [Append](./append-method-adox-procedures.md) -Methode für eine **Prozeduren** Auflistung ist für ADOX eindeutig. Ihre Möglichkeiten:  
   
 -   Fügen Sie der Auflistung mithilfe der **Append** -Methode eine neue Prozedur hinzu.  
   
  Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
   
--   Greifen Sie mit der [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf eine Prozedur in der-Auflistung zu.  
+-   Greifen Sie mit der [Item](../ado-api/item-property-ado.md) -Eigenschaft auf eine Prozedur in der-Auflistung zu.  
   
--   Gibt die Anzahl der in der Auflistung enthaltenen Prozeduren mit der [count](../../../ado/reference/ado-api/count-property-ado.md) -Eigenschaft zurück.  
+-   Gibt die Anzahl der in der Auflistung enthaltenen Prozeduren mit der [count](../ado-api/count-property-ado.md) -Eigenschaft zurück.  
   
--   Entfernen Sie eine Prozedur aus der Auflistung mit der [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) -Methode.  
+-   Entfernen Sie eine Prozedur aus der Auflistung mit der [Delete](./delete-method-adox-collections.md) -Methode.  
   
--   Aktualisieren Sie die Objekte in der Auflistung, um das aktuelle Datenbankschema mit der [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode widerzuspiegeln.  
+-   Aktualisieren Sie die Objekte in der Auflistung, um das aktuelle Datenbankschema mit der [Refresh](../ado-api/refresh-method-ado.md) -Methode widerzuspiegeln.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Indizes Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
+-   [Indexes-Collections – Eigenschaften, Methoden und Ereignisse](./indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Befehls-und CommandText-Eigenschaften (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Parameter Auflistung, Beispiel für Befehls Eigenschaft (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Prozeduren Append-Methode Beispiel (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Prozeduren Delete-Methode (Beispiel) (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Prozeduren Aktualisierungs Methode (Beispiel) (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
- [Prozeduren: Auflistungs Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
- [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Procedure Object (ADOX) (Procedure-Objekt (ADOX))](../../../ado/reference/adox-api/procedure-object-adox.md)
+ [Beispiel für Befehls-und CommandText-Eigenschaften (VB)](./command-and-commandtext-properties-example-vb.md)   
+ [Parameter Auflistung, Beispiel für Befehls Eigenschaft (VB)](./parameters-collection-command-property-example-vb.md)   
+ [Prozeduren Append-Methode Beispiel (VB)](./procedures-append-method-example-vb.md)   
+ [Prozeduren Delete-Methode (Beispiel) (VB)](./procedures-delete-method-example-vb.md)   
+ [Prozeduren Aktualisierungs Methode (Beispiel) (VB)](./procedures-refresh-method-example-vb.md)   
+ [Prozeduren: Auflistungs Eigenschaften, Methoden und Ereignisse](./procedures-collection-properties-methods-and-events.md)   
+ [Catalog-Objekt (ADOX)](./catalog-object-adox.md)   
+ [Procedure-Objekt (ADOX)](./procedure-object-adox.md)

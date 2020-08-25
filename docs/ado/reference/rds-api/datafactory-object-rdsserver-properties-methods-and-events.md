@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43143be9bbe538059da8fac1bb44dedbb4b2ad64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: afc3b34dec0360930acdd333a97a62577ce334c8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439112"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768469"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory-Objekt (RDSServer) – Eigenschaften, Methoden und Ereignisse
 > [!IMPORTANT]
@@ -31,19 +31,17 @@ ms.locfileid: "88439112"
   
 |Methode|Beschreibung|  
 |-|-|  
-|[ConvertToString-Methode (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Konvertiert ein Recordset in eine MIME64-Zeichenfolge.|  
-|[CreateRecordset-Methode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Erstellt ein leeres Recordset und gibt dieses zurück.|  
-|[Execute-Methode (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Führen Sie die Anforderung aus, und erstellen Sie ein erweitertes Datenrowset (für die Verwendung mit ADO 2,5 oder höher).|  
-|[Execute21-Methode (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Führen Sie die Anforderung aus, und erstellen Sie ein erweitertes Datenrowset (für die Verwendung mit ADO 2,1).|  
-|[Query-Methode (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Führen Sie die Anforderung aus, und erstellen Sie ein erweitertes Datenrowset.|  
-|[SubmitChanges-Methode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Bei einem Recordset mit ausstehenden Änderungen übermittelt diese Methode Sie an die Datenbank, die in der Verbindungs Zeichenfolge angegeben ist.|  
-|[Synchronize-Methode (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge angegeben wird (zur Verwendung mit ADO 2,5 oder höher).|  
-|[Synchronize21-Methode (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge angegeben wird (zur Verwendung mit ADO 2,1).|  
+|[ConvertToString-Methode (RDS)](./converttostring-method-rds.md)|Konvertiert ein Recordset in eine MIME64-Zeichenfolge.|  
+|[CreateRecordset-Methode (RDS)](./createrecordset-method-rds.md)|Erstellt ein leeres Recordset und gibt dieses zurück.|  
+|[Execute-Methode (RDS)](./execute-method-rds.md)|Führen Sie die Anforderung aus, und erstellen Sie ein erweitertes Datenrowset (für die Verwendung mit ADO 2,5 oder höher).|  
+|[Execute21-Methode (RDS)](./execute21-method-rds.md)|Führen Sie die Anforderung aus, und erstellen Sie ein erweitertes Datenrowset (für die Verwendung mit ADO 2,1).|  
+|[Query-Methode (RDS)](./query-method-rds.md)|Führen Sie die Anforderung aus, und erstellen Sie ein erweitertes Datenrowset.|  
+|[SubmitChanges-Methode (RDS)](./submitchanges-method-rds.md)|Bei einem Recordset mit ausstehenden Änderungen übermittelt diese Methode Sie an die Datenbank, die in der Verbindungs Zeichenfolge angegeben ist.|  
+|[Synchronize-Methode (RDS)](./synchronize-method-rds.md)|Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge angegeben wird (zur Verwendung mit ADO 2,5 oder höher).|  
+|[Synchronize21-Methode (RDS)](./synchronize21-method-rds.md)|Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge angegeben wird (zur Verwendung mit ADO 2,1).|  
   
 ## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory-Objekt (RDSServer)](./datafactory-object-rdsserver.md)

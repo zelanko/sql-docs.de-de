@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a330087a016e4417498e8e96120642428b2e3a08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f247ac8c0ab4dac5d552bc128f155310c59af70b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438692"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767529"
 ---
 # <a name="server-property-example-vbscript"></a>Server-Eigenschaft – Beispiel (VBScript)
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Der folgende Code zeigt, wie das RDS-festgelegt wird [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Parameter zur Entwurfszeit und binden dieses Steuer Elements an ein Daten abhängiger Steuerelement mithilfe des SQLOLEDB-Anbieters. Schneiden Sie diesen Code aus, und fügen Sie ihn in ein normales ASP-Dokument ein, und nennen Sie ihn **serverdesignvsb. ASP** Das ASP-Skript identifiziert Ihren Server.  
+ Der folgende Code zeigt, wie das RDS-festgelegt wird [. DataControl](./datacontrol-object-rds.md) -Parameter zur Entwurfszeit und binden dieses Steuer Elements an ein Daten abhängiger Steuerelement mithilfe des SQLOLEDB-Anbieters. Schneiden Sie diesen Code aus, und fügen Sie ihn in ein normales ASP-Dokument ein, und nennen Sie ihn **serverdesignvsb. ASP** Das ASP-Skript identifiziert Ihren Server.  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -178,39 +178,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Servereigenschaft (RDS)](../../../ado/reference/rds-api/server-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [DataControl-Objekt (RDS)](./datacontrol-object-rds.md)   
+ [Servereigenschaft (RDS)](./server-property-rds.md)

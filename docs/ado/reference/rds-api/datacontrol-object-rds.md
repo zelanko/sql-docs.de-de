@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6643fe176ef6281afa39845310812f5f6981d16b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3b31721320c380606c3271b52ae2ad61c808379
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439142"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768499"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl-Objekt (RDS)
-Bindet ein Datenabfrage- [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) an ein oder mehrere Steuerelemente (z. b. ein Textfeld, ein Raster Steuerelement oder ein Kombinations Feld), um die **Recordsetdaten** auf einer Webseite anzuzeigen.  
+Bindet ein Datenabfrage- [Recordset](../ado-api/recordset-object-ado.md) an ein oder mehrere Steuerelemente (z. b. ein Textfeld, ein Raster Steuerelement oder ein Kombinations Feld), um die **Recordsetdaten** auf einer Webseite anzuzeigen.  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
@@ -45,14 +45,14 @@ Bindet ein Datenabfrage- [Recordset](../../../ado/reference/ado-api/recordset-ob
  Die Klassen-ID für das **RDS. Das DataControl** -Objekt ist BD96C556-65A3-11D0-983A-00C04FC29E33.  
   
 > [!NOTE]
->  Wenn Sie eine Fehlermeldung erhalten, die ein RDS-ist [. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oder **RDS. Das DataControl** -Objekt wird nicht geladen. Stellen Sie sicher, dass Sie die richtige Klassen-ID verwenden. Die Klassen-IDs für diese Objekte haben sich von Version 1,0 und 1,1 geändert. Beachten Sie auch, dass auch Spalten, die NULL-Werte zulassen, festgelegt werden müssen, wenn Sie das **RDS-DataControl** -Objekt verwenden.  
+>  Wenn Sie eine Fehlermeldung erhalten, die ein RDS-ist [. DataSpace](./dataspace-object-rds.md) oder **RDS. Das DataControl** -Objekt wird nicht geladen. Stellen Sie sicher, dass Sie die richtige Klassen-ID verwenden. Die Klassen-IDs für diese Objekte haben sich von Version 1,0 und 1,1 geändert. Beachten Sie auch, dass auch Spalten, die NULL-Werte zulassen, festgelegt werden müssen, wenn Sie das **RDS-DataControl** -Objekt verwenden.  
   
- Für ein einfaches Szenario müssen Sie nur die **SQL**-, **Connect**-und **Server** -Eigenschaften des RDS festlegen **. DataControl** -Objekt, das automatisch das Standard Geschäftsobjekt [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)aufruft.  
+ Für ein einfaches Szenario müssen Sie nur die **SQL**-, **Connect**-und **Server** -Eigenschaften des RDS festlegen **. DataControl** -Objekt, das automatisch das Standard Geschäftsobjekt [RDSServer. DataFactory](./datafactory-object-rdsserver.md)aufruft.  
   
  Alle Eigenschaften im **RDS. DataControl** ist optional, da benutzerdefinierte Geschäftsobjekte ihre Funktionalität ersetzen können.  
   
 > [!NOTE]
->  Wenn Sie mehrere Ergebnisse Abfragen, wird nur das erste [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zurückgegeben. Wenn mehrere Resultsets benötigt werden, weisen Sie jede der eigenen **DataControl**zu. Ein Beispiel für eine Abfrage für mehrere Ergebnisse könnte wie folgt lauten: `"Select * from Authors, Select * from Topics"`  
+>  Wenn Sie mehrere Ergebnisse Abfragen, wird nur das erste [Recordset](../ado-api/recordset-object-ado.md) zurückgegeben. Wenn mehrere Resultsets benötigt werden, weisen Sie jede der eigenen **DataControl**zu. Ein Beispiel für eine Abfrage für mehrere Ergebnisse könnte wie folgt lauten: `"Select * from Authors, Select * from Topics"`  
   
  Hinzufügen von "DFMode = 20;" zu ihrer Verbindungs Zeichenfolge, wenn Sie das **RDS verwenden. Das DataControl** -Objekt kann die Leistung des Servers beim Aktualisieren von Daten verbessern. Mit dieser Einstellung verwendet das **RDSServer. DataFactory** -Objekt auf dem Server einen weniger ressourcenintensiven Modus. Die folgenden Funktionen sind in dieser Konfiguration jedoch nicht verfügbar:  
   
@@ -64,15 +64,15 @@ Bindet ein Datenabfrage- [Recordset](../../../ado/reference/ado-api/recordset-ob
   
 -   Zeilen Status wird erhalten.  
   
--   Aufrufen der [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode.  
+-   Aufrufen der [Resync](../ado-api/resync-method.md) -Methode.  
   
--   Aktualisieren (explizit oder automatisch) über die Eigenschaft " [Resync aktualisieren](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) ".  
+-   Aktualisieren (explizit oder automatisch) über die Eigenschaft " [Resync aktualisieren](../ado-api/update-resync-property-dynamic-ado.md) ".  
   
--   Festlegen der Eigenschaften von **Befehlen** oder [Recordsets](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) .  
+-   Festlegen der Eigenschaften von **Befehlen** oder [Recordsets](./recordset-sourcerecordset-properties-rds.md) .  
   
 -   Verwenden von **adCmdTableDirect**.  
   
- Das **RDS. Das DataControl** -Objekt wird standardmäßig im asynchronen Modus ausgeführt. Wenn Sie für Ihre Anwendung eine synchrone Ausführung benötigen, legen Sie den [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) -Parameter auf **adcExecSync** und den [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) -Parameter auf **adcFetchUpFront**fest, wie im folgenden Beispiel gezeigt.  
+ Das **RDS. Das DataControl** -Objekt wird standardmäßig im asynchronen Modus ausgeführt. Wenn Sie für Ihre Anwendung eine synchrone Ausführung benötigen, legen Sie den [ExecuteOptions](./executeoptions-property-rds.md) -Parameter auf **adcExecSync** und den [FetchOptions](./fetchoptions-property-rds.md) -Parameter auf **adcFetchUpFront**fest, wie im folgenden Beispiel gezeigt.  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
@@ -107,29 +107,7 @@ Bindet ein Datenabfrage- [Recordset](../../../ado/reference/ado-api/recordset-ob
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [DataControl-Objekt (RDS) – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
+-   [DataControl-Objekt (RDS) – Eigenschaften, Methoden und Ereignisse](./datacontrol-object-rds-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DataControl-Objekt – Beispiel (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [DataControl-Objekt – Beispiel (VBScript)](./datacontrol-object-example-vbscript.md)

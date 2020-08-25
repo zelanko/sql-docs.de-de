@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63307b7b0074cca482befd0dfa689684504f26f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f170bbc7144e624ea6788c844fb817014e178d0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451832"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760030"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX-Datenobjekte (ADO)
 
@@ -50,21 +50,19 @@ In jedem Abschnitt dieses Artikels wird eine Komponente von ADO beschrieben.
  ADOX ist eine begleitende Bibliothek zu den Kern-ADO-Objekten. Es macht zusätzliche Objekte zum Erstellen, ändern und Löschen von Schema Objekten verfügbar, z. b. Tabellen und Prozeduren. Außerdem enthält es Sicherheits Objekte zum Verwalten von Benutzern und Gruppen sowie zum erteilen und widerrufen von Berechtigungen für Objekte.  
   
 ## <a name="documentation"></a>Dokumentation  
- [ADO Security Design Issues (Entwurfsaspekte für die ADO-Sicherheit)](../ado/guide/ado-security-design-issues.md)  
+ [Entwurfsaspekte für die ADO-Sicherheit](./guide/ado-security-design-issues.md)  
   
- [ADO Programmer's Guide (Programmierhandbuch zu ADO)](../ado/guide/ado-programmer-s-guide.md)  
+ [ADO-Programmierhandbuch](./guide/ado-programmer-s-guide.md)  
   
  Eine Einführung in die Verwendung von ADO, RDS, ADO MD und ADOX.  
   
- [ADO-Programmierreferenz](../ado/reference/ado-programmer-s-reference.md)  
+ [ADO-Programmierreferenz](./reference/ado-programmer-s-reference.md)  
   
  Dieser Abschnitt der ADO-Dokumentation enthält Themen für jedes ADO-, RDS-, ADO MD-und ADOX-Objekt, jede Auflistung, jede Eigenschaft, jede dynamische Eigenschaft, jede Methode, jedes Ereignis und jede Enumeration.  
   
- [ADO-Glossar](../ado/ado-glossary.md)  
+ [ADO-Glossar](./ado-glossary.md)  
   
-## <a name="support"></a>Unterstützung  
+## <a name="support"></a>Support  
  Um kostenlose Hilfe bei ADO-Problemen zu erhalten, versuchen Sie, die Veröffentlichung an die öffentliche "ADO-News Diese Newsgroup wird von den Supportmitarbeitern von Microsoft-Produktsupport Services (PSS) überwacht, die ADO und andere erfahrene ADO-Entwickler abdecken.  
   
  Weitere Informationen zu Supportoptionen finden Sie auf der Microsoft Hilfe-und Support-Website.
-
-

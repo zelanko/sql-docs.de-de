@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4abe8e9f72ced67a23113bee61452f372bbb1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b2a106dadcb8af11dcdd5865472fce1fa2e1be2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438772"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767739"
 ---
 # <a name="rds-properties"></a>RDS-Eigenschaften
 > [!IMPORTANT]
@@ -27,40 +27,18 @@ ms.locfileid: "88438772"
   
 |Eigenschaft|Beschreibung|  
 |-|-|  
-|[Verbinden (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)|Gibt den Datenbanknamen an, von dem die Abfrage-und Aktualisierungs Vorgänge ausgeführt werden.|  
-|[ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|Gibt an, ob die asynchrone Ausführung aktiviert ist.|  
-|[FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)|Gibt den Typ des asynchronen fetchen an.|  
-|[FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|Gibt die Spalte an, für die die Filterkriterien ausgewertet werden sollen.|  
-|[Filter Kriterium (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|Gibt den Auswertungs Operator an, der im Filter Wert verwendet werden soll.|  
-|[FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|Gibt den Wert an, mit dem Datensätze gefiltert werden.|  
-|[Handler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Gibt den Namen eines serverseitigen Anpassungsprogramms (*Handler*) an, das die Funktionalität von **RDSServer. DataFactory**erweitert, sowie alle Parameter, die vom *Handler*verwendet werden.|  
-|[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|Gibt die Anzahl der Millisekunden an, die gewartet wird, bevor ein Timeout für eine Anforderung eintritt.|  
-|["Read ystate" (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|Gibt den Fortschritt eines **DataControl** -Objekts beim Abrufen von Daten in das **Recordset** -Objekt an.|  
-|[Recordset und SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|Gibt das **Recordsetobjekt** an, das von einem benutzerdefinierten Geschäftsobjekt zurückgegeben wurde.|  
-|[Server (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|Gibt den Namen des Internetinformationsdienste (IIS) und das Kommunikationsprotokoll an.|  
-|[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|Gibt an, in welcher Spalte die Datensätze sortiert werden sollen.|  
-|[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|Gibt an, ob eine Sortierreihenfolge aufsteigend oder absteigend ist|  
-|[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|Gibt die Abfrage **Zeichenfolge**an, mit der das Recordset abgerufen wird.|  
-|[URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|Gibt eine Zeichenfolge an, die eine relative oder absolute URL enthält.|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+|[Verbinden (RDS)](./connect-property-rds.md)|Gibt den Datenbanknamen an, von dem die Abfrage-und Aktualisierungs Vorgänge ausgeführt werden.|  
+|[ExecuteOptions (RDS)](./executeoptions-property-rds.md)|Gibt an, ob die asynchrone Ausführung aktiviert ist.|  
+|[FetchOptions (RDS)](./fetchoptions-property-rds.md)|Gibt den Typ des asynchronen fetchen an.|  
+|[FilterColumn (RDS)](./filtercolumn-property-rds.md)|Gibt die Spalte an, für die die Filterkriterien ausgewertet werden sollen.|  
+|[Filter Kriterium (RDS)](./filtercriterion-property-rds.md)|Gibt den Auswertungs Operator an, der im Filter Wert verwendet werden soll.|  
+|[FilterValue (RDS)](./filtervalue-property-rds.md)|Gibt den Wert an, mit dem Datensätze gefiltert werden.|  
+|[Handler (RDS)](./handler-property-rds.md)|Gibt den Namen eines serverseitigen Anpassungsprogramms (*Handler*) an, das die Funktionalität von **RDSServer. DataFactory**erweitert, sowie alle Parameter, die vom *Handler*verwendet werden.|  
+|[InternetTimeout (RDS)](./internettimeout-property-rds.md)|Gibt die Anzahl der Millisekunden an, die gewartet wird, bevor ein Timeout für eine Anforderung eintritt.|  
+|["Read ystate" (RDS)](./readystate-property-rds.md)|Gibt den Fortschritt eines **DataControl** -Objekts beim Abrufen von Daten in das **Recordset** -Objekt an.|  
+|[Recordset und SourceRecordset (RDS)](./recordset-sourcerecordset-properties-rds.md)|Gibt das **Recordsetobjekt** an, das von einem benutzerdefinierten Geschäftsobjekt zurückgegeben wurde.|  
+|[Server (RDS)](./server-property-rds.md)|Gibt den Namen des Internetinformationsdienste (IIS) und das Kommunikationsprotokoll an.|  
+|[SortColumn (RDS)](./sortcolumn-property-rds.md)|Gibt an, in welcher Spalte die Datensätze sortiert werden sollen.|  
+|[SortDirection (RDS)](./sortdirection-property-rds.md)|Gibt an, ob eine Sortierreihenfolge aufsteigend oder absteigend ist|  
+|[SQL (RDS)](./sql-property.md)|Gibt die Abfrage **Zeichenfolge**an, mit der das Recordset abgerufen wird.|  
+|[URL (RDS)](./url-property-rds.md)|Gibt eine Zeichenfolge an, die eine relative oder absolute URL enthält.|

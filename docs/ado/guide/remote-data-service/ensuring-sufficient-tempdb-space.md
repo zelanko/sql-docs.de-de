@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a84bec7cbd7a79fadf4ea5b11d486e7daf6aa9ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0554bb48a7995e00f0a5c138cc4409ad4d0fd71
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452192"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759773"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Sicherstellen, dass ausreichend TempDB-Speicherplatz vorhanden ist
-Wenn bei der Verarbeitung von [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekten, für die ein Speicherplatz auf Microsoft SQL Server 6,5 erforderlich ist, Fehler auftreten, müssen Sie möglicherweise die Größe von tempdb erhöhen. (Für einige Abfragen ist ein temporärer Verarbeitungsbereich erforderlich, z. b. eine Abfrage mit einer ORDER BY-Klausel **, die einen**temporären Speicherplatz erfordert.)  
+Wenn bei der Verarbeitung von [Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekten, für die ein Speicherplatz auf Microsoft SQL Server 6,5 erforderlich ist, Fehler auftreten, müssen Sie möglicherweise die Größe von tempdb erhöhen. (Für einige Abfragen ist ein temporärer Verarbeitungsbereich erforderlich, z. b. eine Abfrage mit einer ORDER BY-Klausel **, die einen**temporären Speicherplatz erfordert.)  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
@@ -57,6 +57,4 @@ Wenn bei der Verarbeitung von [Recordset](../../../ado/reference/ado-api/records
  Weitere Informationen zu diesem Thema finden Sie in der Hilfedatei für den Microsoft SQL Server Enterprise-Manager, um das Dialogfeld "Datenbank erweitern" zu suchen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Grundlegendes zu RDS](./rds-fundamentals.md)

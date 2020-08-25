@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4d883d9498622c5118ecfcaa418bd734e4356c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39bd8ccc67b0181088c267a60d6af2bf99035c02
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438862"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767929"
 ---
 # <a name="query-method-rds"></a>Query-Methode (RDS)
-Verwendet eine gültige SQL-Abfrage [Zeichenfolge](../../../ado/reference/ado-api/recordset-object-ado.md)zum Zurückgeben eines Recordsets.  
+Verwendet eine gültige SQL-Abfrage [Zeichenfolge](../ado-api/recordset-object-ado.md)zum Zurückgeben eines Recordsets.  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
@@ -39,10 +39,10 @@ Set Recordset = DataFactory.Query(Connection, Query)
  Eine Objekt Variable, die ein **Recordset** -Objekt darstellt.  
   
  *DataFactory*  
- Eine Objekt Variable, die ein [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt darstellt.  
+ Eine Objekt Variable, die ein [RDSServer. DataFactory](./datafactory-object-rdsserver.md) -Objekt darstellt.  
   
  *Connection*  
- Ein **Zeichen** folgen Wert, der die Server Verbindungsinformationen enthält. Dies ähnelt der [Connect](../../../ado/reference/rds-api/connect-property-rds.md) -Eigenschaft.  
+ Ein **Zeichen** folgen Wert, der die Server Verbindungsinformationen enthält. Dies ähnelt der [Connect](./connect-property-rds.md) -Eigenschaft.  
   
  *Abfrage*  
  Eine **Zeichenfolge** , die die SQL-Abfrage enthält.  
@@ -51,9 +51,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  Die Abfrage sollte den SQL-Dialekt des Datenbankservers verwenden. Wenn ein Fehler mit der ausgeführten Abfrage vorliegt, wird ein Ergebnis Status zurückgegeben. Die **Abfrage** Methode führt keine Syntax Überprüfung der **Abfrage** Zeichenfolge aus.  
   
 ## <a name="applies-to"></a>Gilt für  
- [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+ [DataFactory-Objekt (RDSServer)](./datafactory-object-rdsserver.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DataFactory-Objekt, Abfragemethode und CreateObject-Methode – Beispiel (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
-
-
+ [DataFactory-Objekt, Abfragemethode und CreateObject-Methode – Beispiel (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)

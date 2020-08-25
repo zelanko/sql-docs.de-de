@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87460f060af7f3367147dd56f6bb599d260d09be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da49bbacf8ba59ba12f59fb072e9b5ec8c2ec2ea
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439542"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769459"
 ---
 # <a name="ruleenum"></a>RuleEnum
-Gibt die Regel an, die befolgt werden soll, wenn eine [Taste](../../../ado/reference/adox-api/key-object-adox.md) gelöscht wird.  
+Gibt die Regel an, die befolgt werden soll, wenn eine [Taste](./key-object-adox.md) gelöscht wird.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adricascade**|1|Kaskadierte Änderungen.|  
 |**adrinone**|0|Standard. Es wird keine Aktion ausgeführt.|  
@@ -34,4 +34,4 @@ Gibt die Regel an, die befolgt werden soll, wenn eine [Taste](../../../ado/refer
 |**adrisetnull**|2|Der Fremdschlüssel Wert ist auf NULL festgelegt.|  
   
 ## <a name="applies-to"></a>Gilt für  
- [DeleteRule-Eigenschaft (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)
+ [DeleteRule-Eigenschaft (ADOX)](./deleterule-property-adox.md)

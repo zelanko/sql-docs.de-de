@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2c047ed21662335368f85273ad8c52bf4f5e70f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5f7844278460859de4ef3c5a0ee5cf073548ec81
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438742"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767669"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset- und SourceRecordse-Eigenschaften – Beispiel (VBScript)
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Im folgenden Beispiel wird gezeigt, wie die erforderlichen Parameter des Standard Geschäftsobjekts [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) zur Laufzeit festgelegt werden.  
+ Im folgenden Beispiel wird gezeigt, wie die erforderlichen Parameter des Standard Geschäftsobjekts [RDSServer. DataFactory](./datafactory-object-rdsserver.md) zur Laufzeit festgelegt werden.  
   
  Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \<Body> \</Body> Tags und in ein normales HTML-Dokument aus, und nennen Sie ihn " **recordsetvb. ASP**". Das ASP-Skript identifiziert Ihren Server.  
   
@@ -129,8 +129,5 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Recordset, SourceRecordset-Eigenschaft (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
-
-
-
+ [DataFactory-Objekt (RDSServer)](./datafactory-object-rdsserver.md)   
+ [Recordset, SourceRecordset-Eigenschaft (RDS)](./recordset-sourcerecordset-properties-rds.md)

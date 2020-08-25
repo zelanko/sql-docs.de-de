@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2a52faceafdde92acb3aed1e2a1b765594777e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0056f965e36fb1fadd3d7f8c08c2514ee2593d46
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451902"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759000"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Schritt 6: Änderungen werden an den Server gesendet (RDS-Tutorial)
 Wenn das **Recordset** -Objekt bearbeitet wird, können alle Änderungen (d. h. hinzugefügte, geänderte oder gelöschte Zeilen) an den Server zurückgesendet werden.  
@@ -35,7 +35,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **Teil A** Angenommen, Sie haben nur [RDS verwendet. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) und ein **Recordset** -Objekt sind nun dem RDS zugeordnet **. DataControl**. Die [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) -Methode aktualisiert die Datenquelle mit allen Änderungen am **Recordset** -Objekt, wenn die [Server](../../../ado/reference/rds-api/server-property-rds.md) -und [Verbindungs](../../../ado/reference/rds-api/connect-property-rds.md) Eigenschaften noch festgelegt sind.  
+ **Teil A** Angenommen, Sie haben nur [RDS verwendet. DataControl](../../reference/rds-api/datacontrol-object-rds.md) und ein **Recordset** -Objekt sind nun dem RDS zugeordnet **. DataControl**. Die [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) -Methode aktualisiert die Datenquelle mit allen Änderungen am **Recordset** -Objekt, wenn die [Server](../../reference/rds-api/server-property-rds.md) -und [Verbindungs](../../reference/rds-api/connect-property-rds.md) Eigenschaften noch festgelegt sind.  
   
 ```vb
 Sub RDSTutorial6A()  
@@ -53,7 +53,7 @@ DC.
 ...  
 ```  
   
- **Teil B** Alternativ können Sie den Server mit dem [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt aktualisieren, indem Sie eine Verbindung und ein **Recordset** -Objekt angeben.  
+ **Teil B** Alternativ können Sie den Server mit dem [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) -Objekt aktualisieren, indem Sie eine Verbindung und ein **Recordset** -Objekt angeben.  
   
 ```vb
 Sub RDSTutorial6B()  
@@ -76,6 +76,6 @@ End Sub
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Microsoft OLE DB Remoting Provider (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
- [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Microsoft OLE DB Remoting Provider (ADO-Dienstanbieter)](../appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
+ [RDS-Tutorial](./rds-tutorial.md)   
+ [RDS-Tutorial (VBScript)](./rds-tutorial-vbscript.md)

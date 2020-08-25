@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02377ff40a56c8169576a5653ac21953946aaa1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8c712efc368d9b84158697d3b7e6eedfb4224ff
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452262"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759846"
 ---
 # <a name="customization-file-connect-section"></a>Connect-Abschnitt der Anpassungsdatei
 Das Standardverhalten des Handlers besteht darin, alle Verbindungen abzulehnen. Der Abschnitt " **Connect** " gibt Ausnahmen für dieses Verhalten an. Wenn z. b. alle **Connect** -Abschnitte nicht vorhanden oder leer waren, können standardmäßig keine Verbindungen hergestellt werden.  
@@ -52,9 +52,9 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
-|Teil|Beschreibung|  
+|Teil|BESCHREIBUNG|  
 |----------|-----------------|  
 |**Herstellen einer Verbindung**|Eine Literalzeichenfolge, die angibt, dass dies ein Verbindungs Zeichen folgen Eintrag ist|  
 |**_connectionString_**|Eine Zeichenfolge, die die gesamte Client Verbindungs Zeichenfolge ersetzt.|  
@@ -64,13 +64,10 @@ connectionString
  Wenn Sie eine beliebige Verbindung zulassen möchten (damit das Standardverhalten des Handlers deaktiviert wird), legen Sie den Zugriffs Eintrag im Abschnitt **Connect default** auf fest `Access=ReadWrite` , und löschen Sie alle anderen **Verbindungs** _identifier_ -ID-Abschnitte, oder kommentieren Sie Sie aus.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Abschnitt "Anpassungs Datei Protokolle"](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [SQL-Abschnitt der Anpassungs Datei](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Benutzer Listen Abschnitt "Anpassungs Datei"](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Erforderliche Client Einstellungen](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Grundlegendes zur Anpassungs Datei](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Schreiben Ihres eigenen benutzerdefinierten Handlers](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
+ [Abschnitt "Anpassungs Datei Protokolle"](./customization-file-logs-section.md)   
+ [SQL-Abschnitt der Anpassungs Datei](./customization-file-sql-section.md)   
+ [Benutzer Listen Abschnitt "Anpassungs Datei"](./customization-file-userlist-section.md)   
+ [DataFactory-Anpassung](./datafactory-customization.md)   
+ [Erforderliche Client Einstellungen](./required-client-settings.md)   
+ [Grundlegendes zur Anpassungs Datei](./understanding-the-customization-file.md)   
+ [Schreiben Ihres eigenen benutzerdefinierten Handlers](./writing-your-own-customized-handler.md)

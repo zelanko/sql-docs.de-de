@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401497"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767159"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Erwerben und Konfigurieren eines Sicherungs Servers für parallele Data Warehouse
 In diesem Artikel wird beschrieben, wie ein nicht-Appliance-Windows-System als Sicherungs Server für die Verwendung mit den Sicherungs-und Wiederherstellungs Funktionen in Analytics Platform System (APS) und parallel Data Warehouse (PDW) konfiguriert wird.  
@@ -50,7 +50,7 @@ Wir empfehlen Windows Server 2012 oder höher, um Folgendes zu tun:
   
 -   Profitieren Sie von den Leistungsvorteilen der vorab Zuordnung von Dateien über SMB.  
   
--   Verwenden Sie die sofortige Datei Initialisierung (IFI) für Sicherungs Vorgänge. Ihr IT-Team verwaltet diese Einstellung auf dem Sicherungs Server. Mit dem PDW-Configuration Manager (dwconfig. exe) wird IFI auf dem Sicherungs Server nicht festgelegt oder gesteuert. In früheren Versionen von Windows ist kein IFI vorhanden, Sie können jedoch weiterhin als Sicherungs Server verwendet werden.  
+-   Verwenden Sie die sofortige Datei Initialisierung (IFI) für Sicherungs Vorgänge. Ihr IT-Team verwaltet diese Einstellung auf dem Sicherungs Server. Mit dem PDW-Configuration Manager (dwconfig.exe) wird IFI auf dem Sicherungs Server nicht festgelegt oder gesteuert. In früheren Versionen von Windows ist kein IFI vorhanden, Sie können jedoch weiterhin als Sicherungs Server verwendet werden.  
   
 ### <a name="networking-requirements"></a>Netzwerkanforderungen  
 InfiniBand ist zwar nicht erforderlich, wird jedoch als Verbindungstyp für Sicherungs Server empfohlen. So bereiten Sie die Verbindung zwischen dem Lade Server und dem Gerät InfiniBand-Netzwerk vor:  
@@ -89,7 +89,7 @@ PDW greift über eine UNC-Dateifreigabe auf den Backup-Server zu. So richten Sie
   
 5.  Fügen Sie PDW die Anmelde Informationen für das Sicherungs Domänen Konto hinzu.  
   
-    Beispiel:  
+    Zum Beispiel:  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -120,9 +120,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 Weitere Informationen finden Sie unter 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
   
--   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [Datenbank wiederherstellen](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
   
 ## <a name="security-notices"></a><a name="Security"></a>Sicherheitshinweise  
 Der Sicherungs Server ist nicht mit der privaten Domäne für das Gerät verknüpft. Sie befindet sich in Ihrem eigenen Netzwerk, und es besteht keine Vertrauensstellung zwischen Ihrer eigenen Domäne und privaten Appliance-Domäne.  
@@ -151,4 +151,3 @@ Vorgänge auf dem Lade Server können einen UNC-Pfad zum Abrufen von Daten von a
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Sichern und Wiederherstellen](backup-and-restore-overview.md)  
-  

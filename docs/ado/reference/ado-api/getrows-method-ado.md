@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a197cf085c4c1d741c19a55524313edbd4c5906
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f91e83f1b4da0623b9903a5016701fc6557e1d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443562"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775049"
 ---
 # <a name="getrows-method-ado"></a>GetRows-Methode (ADO)
-Ruft mehrere Datensätze eines [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts in ein Array ab.  
+Ruft mehrere Datensätze eines [Recordset](./recordset-object-ado.md) -Objekts in ein Array ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,10 +39,10 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>Parameter  
  *Zeilen*  
- Optional. Ein [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) -Wert, der die Anzahl der abzurufenden Datensätze angibt. Der Standardwert ist **adgetrowsrest**.  
+ Optional. Ein [GetRowsOptionEnum](./getrowsoptionenum.md) -Wert, der die Anzahl der abzurufenden Datensätze angibt. Der Standardwert ist **adgetrowsrest**.  
   
  *Starten*  
- Optional. Ein **Zeichen** folgen Wert oder **Variant** , der das Lesezeichen für den Datensatz ergibt, von dem der **GetRows** -Vorgang beginnen soll. Sie können auch einen [bookmarkenum](../../../ado/reference/ado-api/bookmarkenum.md) -Wert verwenden.  
+ Optional. Ein **Zeichen** folgen Wert oder **Variant** , der das Lesezeichen für den Datensatz ergibt, von dem der **GetRows** -Vorgang beginnen soll. Sie können auch einen [bookmarkenum](./bookmarkenum.md) -Wert verwenden.  
   
  *Felder*  
  Optional. Eine **Variante** , die einen einzelnen Feldnamen oder eine Ordinalposition darstellt, oder ein Array von Feldnamen oder ordinalpositions Nummern. ADO gibt nur die Daten in diesen Feldern zurück.  
@@ -52,15 +52,15 @@ array = recordset.GetRows(Rows, Start, Fields )
   
  Wenn Sie keinen Wert für das *Rows* -Argument angeben, ruft die **GetRows** -Methode automatisch alle Datensätze im **Recordset** -Objekt ab. Wenn Sie mehr Datensätze anfordern, als verfügbar sind, gibt **GetRows** nur die Anzahl der verfügbaren Datensätze zurück.  
   
- Wenn das **Recordset** -Objekt Lesezeichen unterstützt, können Sie angeben, in welchem Datensatz die **GetRows** -Methode mit dem Abrufen von Daten beginnen soll, indem Sie den Wert der [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) -Eigenschaft dieses Datensatzes im *Start* Argument übergeben.  
+ Wenn das **Recordset** -Objekt Lesezeichen unterstützt, können Sie angeben, in welchem Datensatz die **GetRows** -Methode mit dem Abrufen von Daten beginnen soll, indem Sie den Wert der [Bookmark](./bookmark-property-ado.md) -Eigenschaft dieses Datensatzes im *Start* Argument übergeben.  
   
  Wenn Sie die Felder einschränken möchten, die der **GetRows** -Rückruf zurückgibt, können Sie entweder einen einzelnen Feldnamen/eine Zahl oder ein Array von Feldnamen/-Zahlen im *Fields* -Argument übergeben.  
   
- Nachdem Sie **GetRows**aufgerufen haben, wird der nächste ungelesene Datensatz zum aktuellen Datensatz, oder die [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) -Eigenschaft wird auf **true** festgelegt, wenn keine weiteren Datensätze vorhanden sind.  
+ Nachdem Sie **GetRows**aufgerufen haben, wird der nächste ungelesene Datensatz zum aktuellen Datensatz, oder die [EOF](./bof-eof-properties-ado.md) -Eigenschaft wird auf **true** festgelegt, wenn keine weiteren Datensätze vorhanden sind.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für eine GetRows-Methode (VB)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
- [GetRows-Methode – Beispiel (VC++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   
+ [Beispiel für eine GetRows-Methode (VB)](./getrows-method-example-vb.md)   
+ [GetRows-Methode – Beispiel (VC++)](./getrows-method-example-vc.md)

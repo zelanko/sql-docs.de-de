@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 700be4586a1e7808113b6ff20bf5459af3cb1f81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bde14ad286e54505cb5476a38cd4080ae43d2e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439422"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769179"
 ---
 # <a name="type-property-table-adox"></a>Type-Eigenschaft (Tabelle) (ADOX)
 Gibt den Typ einer Tabelle an.  
@@ -35,11 +35,11 @@ Gibt den Typ einer Tabelle an.
  Diese Eigenschaft ist schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+ [Table-Objekt (ADOX)](./table-object-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Katalog ActiveConnection-Eigenschaft (Beispiel) (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Connection Close-Methode, Table Type-Eigenschafts Beispiel (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Type-Eigenschaft (Spalte) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Type-Eigenschaft (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
- [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Katalog ActiveConnection-Eigenschaft (Beispiel) (VB)](./catalog-activeconnection-property-example-vb.md)   
+ [Connection Close-Methode, Table Type-Eigenschafts Beispiel (VB)](./connection-close-method-table-type-property-example-vb.md)   
+ [Type-Eigenschaft (Spalte) (ADOX)](./type-property-column-adox.md)   
+ [Type-Eigenschaft (Key) (ADOX)](./type-property-key-adox.md)   
+ [Table-Objekt (ADOX)](./table-object-adox.md)

@@ -2,19 +2,19 @@
 title: Herunterladen und Installieren von Azure Data Studio
 description: Laden Sie Azure Data Studio für Windows, macOS oder Linux herunter, und installieren Sie das Tool. In diesem Artikel finden Sie Veröffentlichungstermine, Versionsnummern, Systemanforderungen und Downloadlinks.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 8/12/2020
-ms.openlocfilehash: 29f5f31d999e96a17cd1653323c75251c8873572
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: a92bc4b19adc4322852f19ddabe3d98e20174e40
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147211"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746060"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce6c0042c92611c65bf243da7bbbf59bbeb748be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 80c5d3666c4b3b60aa622874dfec2388fa008898
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451802"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760000"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>Beispiel für AbsolutePage, PageCount und pageSize-Eigenschaften (VC + +)
-In diesem Beispiel werden die Eigenschaften [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)und [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) zum Anzeigen von Namen und zum Einstellen von Datumsangaben aus der ***Employee*** -Tabelle, fünf Datensätze gleichzeitig verwendet.  
+In diesem Beispiel werden die Eigenschaften [AbsolutePage](./absolutepage-property-ado.md), [PageCount](./pagecount-property-ado.md)und [PageSize](./pagesize-property-ado.md) zum Anzeigen von Namen und zum Einstellen von Datumsangaben aus der ***Employee*** -Tabelle, fünf Datensätze gleichzeitig verwendet.  
   
 ```  
 // BeginAbsolutePageCpp.cpp  
@@ -180,7 +180,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [AbsolutePage-Eigenschaft (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize-Eigenschaft (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePage-Eigenschaft (ADO)](./absolutepage-property-ado.md)   
+ [PageCount-Eigenschaft (ADO)](./pagecount-property-ado.md)   
+ [PageSize-Eigenschaft (ADO)](./pagesize-property-ado.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)

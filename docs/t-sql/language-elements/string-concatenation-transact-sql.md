@@ -1,4 +1,5 @@
 ---
+description: + (Zeichenfolgenverkettung) (Transact-SQL)
 title: + (Verketten von Zeichenfolgen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,12 +22,12 @@ ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a3124a8e66e8ac60acc78381431181ff224d00e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa1c1cb27204fc6da21fa3841a2a32ba530c808c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422464"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Verketten von Zeichenfolgen) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +70,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>Ergebnistypen  
  Gibt einen Wert vom Datentyp des Arguments zurück, das in der Rangfolge am höchsten steht. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der +-Operator (Verketten von Zeichenfolgen) verhält sich anders, wenn er zusammen mit einer leeren Zeichenfolge verwendet wird, als wenn er mit einem NULL-Wert oder unbekannten Werten verwendet wird. Eine leere Zeichenfolge lässt sich als zwei einfache Anführungszeichen ohne Zeichen innerhalb der Anführungszeichen angeben. Eine leere binäre Zeichenfolge lässt sich als 0x ohne Bytewerte in der hexadezimalen Konstante angeben. Beim Verketten einer leeren Zeichenfolge werden immer die beiden angegebenen Zeichenfolgen verkettet. Wenn Sie mit Zeichenfolgen mit einem NULL-Wert arbeiten, hängt das Ergebnis der Verkettung von den Sitzungseinstellungen ab. Bei arithmetischen Operationen, die für NULL-Werte ausgeführt werden, ist das Ergebnis beim Hinzufügen eines NULL-Wertes zu einem bekannten Wert in der Regel ein unbekannter Wert. Parallel dazu führt eine Zeichenfolgenverkettungsoperation, die mit einem NULL-Wert ausgeführt wird, in der Regel zu einem NULL-Ergebnis. Sie können dieses Verhalten jedoch ändern, indem Sie die `CONCAT_NULL_YIELDS_NULL`-Einstellung für die aktuelle Sitzung ändern. Weitere Informationen finden Sie unter [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
   
  Wenn das Ergebnis der Verkettung von Zeichenfolgen den Grenzwert von 8.000 Byte übersteigt, wird das Ergebnis abgeschnitten. Wenn jedoch mindestens eine der verketteten Zeichenfolgen einen umfangreichen Wert hat, wird das Ergebnis nicht abgeschnitten.  
@@ -179,7 +180,7 @@ Hamilton, J.       Vice President of Production
 Welcker, B.        Vice President of Sales  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [+= &#40;Zeichenfolgenverkettungszuweisung&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
