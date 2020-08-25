@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f9d8025daba4b4006b0d87422cffe8ea73f82c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39803c2063bf6afbae9bc6797d85499fc91a10bd
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466182"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564670"
 ---
 # <a name="collation-and-unicode-support"></a>Unterstützung von Sortierungen und Unicode
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -372,9 +372,6 @@ In der folgenden Tabelle werden die standardmäßig verwendeten Sortierbezeichnu
 |Yoruba (Nigeria)|0x046a|0x0409|Latin1_General_CI_AS|
 |Zulu/isiZulu (Südafrika)|0x0435|0x0409|Latin1_General_CI_AS|
 
-> [!NOTE]
-> Nur-Unicode-Sortierungen können während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups nicht ausgewählt werden, da sie nicht als Sortierungen auf Serverebene unterstützt werden.    
-    
 Nachdem Sie dem Server eine Sortierung zugewiesen haben, können Sie diese nur ändern, indem Sie alle Datenbankobjekte und Daten exportieren, die *Masterdatenbank* neu erstellen und alle Datenbankobjekte und Daten wieder importieren. Anstatt die Standardsortierung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu ändern, können Sie die gewünschte Sortierung beim Erstellen einer neuen Datenbank oder Datenbankspalte festlegen.    
 
 Zum Abfragen der Serversortierung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden Sie die `SERVERPROPERTY`-Funktion:

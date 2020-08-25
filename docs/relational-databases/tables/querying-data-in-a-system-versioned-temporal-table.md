@@ -12,16 +12,18 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4298cbc0c80937f01f37126c93b01f927c8cbd2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21e97c74d99a3ce653a79c68727e714d773cbba9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427482"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645783"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Wenn Sie den letzten (aktuellsten) Zustand der Daten in einer temporalen Tabelle abrufen möchten, können Sie die Abfrage wie gewohnt durchführen, so wie auch bei nicht temporalen Tabellen. Wenn die PERIOD-Spalten nicht ausgeblendet sind, erscheinen ihre Werte in einer SELECT \* -Abfrage. Wenn Sie die **PERIOD**-Spalten ausgeblendet haben, erscheinen ihre Werte nicht in einer SELECT \*-Abfrage. Wenn die **PERIOD** -Spalten ausgeblendet wurden, verweisen Sie in der SELECT-Klausel explizit auf die **PERIOD** -Spalten, um die Werte für diese Spalten zurückzugeben.
 

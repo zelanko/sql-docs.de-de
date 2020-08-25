@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 52096dc3c4996537b36082bb9bb215405e097a68
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: 54216c027c01855ba5f140e1ad17accba3f9e7f9
+ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88091963"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88602205"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY – Transact-SQL (Vorschau)
 
@@ -142,9 +142,8 @@ Es können nur mehrere Dateispeicherorte aus demselben Speicherkonto und Contain
 |                          |                CSV                |              Parquet               |                ORC                 |
 | :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
 |  **Azure Blob Storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (Blobendpunkt)/MSI (DFS-Endpunkt)/SERVICE PRINCIPAL/KEY/AAD | SAS (Blobendpunkt)/MSI (DFS-Endpunkt)/SERVICE PRINCIPAL/KEY/AAD |
 
-*Nur mit dem Blobendpunkt unterstützt.
 
 Bei der Authentifizierung mit AAD oder bei einem öffentlichen Speicherkonto muss CREDENTIAL nicht angegeben werden. 
 

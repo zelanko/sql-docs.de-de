@@ -4,17 +4,17 @@ description: Erfahren Sie, wie Sie eine Azure Data Studio-Erweiterung verwenden,
 ms.custom: seodec18
 ms.date: 07/03/2019
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: b40ad2646f1eaa1534ab84cb0d638465588f2cd2
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 6369224595efffa83eb1bd3bed370f76030efe38
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411236"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745640"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance für Azure Data Studio (Vorschau)
 Azure Data Studio bietet nun eine Möglichkeit, schnelle Visualisierungen für Ihre Daten zu erstellen. Diese Erweiterung ist nützlich, wenn Sie einen Blick auf die Daten erhalten und verstehen möchten, was vor sich geht. Dazu wird eine Technologie namens SandDance von Microsoft Research verwendet, mit der direkte Visualisierungen der jeweiligen Daten generiert werden können.

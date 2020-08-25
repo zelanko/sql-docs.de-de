@@ -12,16 +12,18 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3543738d8987beaeb6eafc69a446ab63e9b0c27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a12607d7279b8a7789d6365c11825608f57ad628
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463739"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646080"
 ---
 # <a name="temporal-tables"></a>Temporale Tabellen
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 In SQL Server 2016 wurde die Unterstützung von temporalen Tabellen (auch als temporale Tabellen mit Systemversionsverwaltung bezeichnet) als Datenbankfeature eingeführt, das integrierte Unterstützung für das Bereitstellen von Informationen zu den zu jedem Zeitpunkt in der Tabelle gespeicherten Daten zur Verfügung stellt, anstatt nur die aktuell in einer Tabelle gespeicherten Daten zu unterstützen. Temporal ist ein Datenbankfeature, das zusammen mit ANSI SQL 2011 eingeführt wurde.
 
