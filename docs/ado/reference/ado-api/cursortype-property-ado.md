@@ -29,7 +29,7 @@ Gibt den Typ des Cursors an, der in einem [Recordset](./recordset-object-ado.md)
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen [Cursor typeenum](./cursortypeenum.md) -Wert fest oder gibt ihn zurück. Der Standardwert ist ' **adOpenForwardOnly**'.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie die **CursorType** -Eigenschaft, um den Typ des Cursors anzugeben, der beim Öffnen des **Recordset** -Objekts verwendet werden soll.  
   
  Nur eine Einstellung von **adOpenStatic** wird unterstützt, wenn die [Cursor Location](./cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient**festgelegt ist. Wenn ein nicht unterstützter Wert festgelegt ist, wird kein Fehler ausgegeben. Stattdessen wird der nächste unterstützte **Cursor Type** verwendet.  
@@ -40,7 +40,7 @@ Gibt den Typ des Cursors an, der in einem [Recordset](./recordset-object-ado.md)
   
 |Für ein Recordset dieses Cursor Typs|Die unterstützte Methode muss für alle diese Konstanten true zurückgeben.|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|none|  
+|**adOpenForwardOnly**|Keine|  
 |**adOpenKeyset**|**adbookmark**, **adholdrecords**, **admuveprevious**, **adresync**|  
 |**adOpenDynamic**|**admuveprevious**|  
 |**adopkostatic**|**adbookmark**, **adholdrecords**, **admuveprevious**, **adresync**|  

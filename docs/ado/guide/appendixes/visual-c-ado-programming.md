@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae93db522b465b85feefe85cd94df4be3d29f062
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66d06630a6bc39c49b9a3e55276bed574869d40d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453952"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806771"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++-ADO-Programmierung
 Die ADO-API-Referenz beschreibt die Funktionalität der ADO-API (Application Programming Interface) mithilfe einer Syntax, die dem Microsoft-Visual Basic ähnelt. Obwohl es sich bei der Zielgruppe um alle Benutzer handelt, verwenden ADO-Programmierer verschiedene Sprachen, wie z. b. Visual Basic, Visual C++ (mit und ohne die **#Import** -Direktive) und Visual J++ (mit dem ADO/WFC-Klassen Paket).  
@@ -29,7 +29,7 @@ Die ADO-API-Referenz beschreibt die Funktionalität der ADO-API (Application Pro
 > [!NOTE]
 > Microsoft beendete die Unterstützung für Visual J++ in 2004.
 
- Um dieser Vielfalt Rechnung zu tragen, bietet das [ADO für Visual C++-Syntax Indizes](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) Visual C++ sprachspezifische Syntax mit Links zu allgemeinen Beschreibungen von Funktionen, Parametern, Ausnahme Verhalten usw. in der API-Referenz.  
+ Um dieser Vielfalt Rechnung zu tragen, bietet das [ADO für Visual C++-Syntax Indizes](./using-ado-with-microsoft-visual-c.md) Visual C++ sprachspezifische Syntax mit Links zu allgemeinen Beschreibungen von Funktionen, Parametern, Ausnahme Verhalten usw. in der API-Referenz.  
   
  ADO wird mit COM-Schnittstellen (Component Object Model) implementiert. Programmierer können jedoch einfacher mit com in bestimmten Programmiersprachen arbeiten als andere. Beispielsweise werden fast alle Details der Verwendung von com für Visual Basic Programmierer implizit behandelt, während Visual C++ Programmierer an diesen Details teilnehmen müssen.  
   
@@ -205,7 +205,7 @@ pRecordset->NextRecordset(NULL);
   
  Beachten Sie, dass es sich hierbei um ADO-Fehler handelt: Sie ergeben einen Fehler beim ADO-Vorgang. Fehler, die vom zugrunde liegenden Anbieter zurückgegeben werden, werden in der Auflistung der **Verbindungs** Objekt **Fehler** als **Fehler** Objekte angezeigt.  
   
- Die **#Import** -Direktive erstellt nur Fehlerbehandlungsroutinen für Methoden und Eigenschaften, die in der ADO. dll deklariert werden. Allerdings können Sie denselben Mechanismus zur Fehlerbehandlung nutzen, indem Sie ein eigenes Fehler Überprüfungs Makro oder eine Inline Funktion schreiben. Beispiele finden Sie im Thema [Visual C++ Erweiterungen](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)oder im Code in den folgenden Abschnitten.  
+ Die **#Import** -Direktive erstellt nur Fehlerbehandlungsroutinen für Methoden und Eigenschaften, die in der ADO. dll deklariert werden. Allerdings können Sie denselben Mechanismus zur Fehlerbehandlung nutzen, indem Sie ein eigenes Fehler Überprüfungs Makro oder eine Inline Funktion schreiben. Beispiele finden Sie im Thema [Visual C++ Erweiterungen](./visual-c-extensions-for-ado.md)oder im Code in den folgenden Abschnitten.  
   
 ## <a name="visual-c-equivalents-of-visual-basic-conventions"></a>Visual C++ Entsprechungen von Visual Basic Konventionen  
  Im folgenden finden Sie eine Zusammenfassung der verschiedenen Konventionen in der ADO-Dokumentation, die in Visual Basic programmiert sind, sowie deren Entsprechungen in Visual C++.  
@@ -327,7 +327,7 @@ End Sub
   
  Im folgenden Visual C++ Beispiel wird die Verwendung eines **SAFEARRAY** veranschaulicht, das mit einem **_variant_t**verwendet wird.  
   
-#### <a name="notes"></a>Notizen  
+#### <a name="notes"></a>Hinweise  
  Die folgenden Hinweise entsprechen den kommentierten Abschnitten im Codebeispiel.  
   
 1.  Auch hier ist die Funktion "testhr () Inline" definiert, um den vorhandenen Mechanismus zur Fehlerbehandlung zu nutzen.  
@@ -436,7 +436,7 @@ End Sub
   
  In diesem Visual C++ Beispiel wird die **Get** / **Put** / **PutRef**-_Eigenschaft_veranschaulicht.  
   
-#### <a name="notes"></a>Notizen  
+#### <a name="notes"></a>Hinweise  
  Die folgenden Hinweise entsprechen den kommentierten Abschnitten im Codebeispiel.  
   
 1.  In diesem Beispiel werden zwei Formen eines fehlenden Zeichen folgen Arguments verwendet: eine explizite Konstante, ein **Strauch**und eine Zeichenfolge, mit der der Compiler eine temporäre **_bstr_t** erstellt, die für den Bereich der **Open** -Methode vorhanden ist.  
@@ -555,7 +555,7 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>Umwandeln von ADO-Objekt Zeigern mit (IDispatch *)  
  Im folgenden Visual C++ Beispiel wird die Verwendung von (IDispatch *) zum Umwandeln von ADO-Objekt Zeigern veranschaulicht.  
   
-#### <a name="notes"></a>Notizen  
+#### <a name="notes"></a>Hinweise  
  Die folgenden Hinweise entsprechen den kommentierten Abschnitten im Codebeispiel.  
   
 1.  Geben Sie in einem explizit codierten **Variant**ein offenes **Verbindungs** Objekt an. Wandeln Sie es mit (IDispatch \* ) um, damit der richtige Konstruktor aufgerufen wird. Legen Sie außerdem den zweiten **_variant_t** -Parameter explizit auf den Standardwert **true**fest, sodass der Objekt Verweis Zähler richtig ist, wenn der **Recordset:: Open** -Vorgang beendet wird.  

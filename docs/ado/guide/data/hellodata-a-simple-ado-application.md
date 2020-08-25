@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2ac1d2ed987b1385c581f147431eaa208b035fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d8f8dac5e6a38e1a394c4646849ddd6a5021131
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453282"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806028"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Eine einfache ADO-Anwendung
 Diese einfache Anwendung führt Sie durch jeden der vier wichtigsten ADO-Vorgänge: das erhalten, untersuchen, bearbeiten und Aktualisieren von Daten. Diese Vorgänge werden für die Northwind-Beispieldatenbank ausgeführt, die in Microsoft® SQL Server enthalten ist. Um sich auf die Grundlagen von ADO zu konzentrieren und Code Übersichtlichkeit zu verhindern, ist die Fehlerbehandlung im Beispiel minimal.  
   
 ### <a name="to-run-hellodata"></a>So führen Sie HelloData aus  
   
-1.  Erstellen Sie eine neue Standard-exe-Visual Basic Projekt, das auf die ADO-Bibliothek verweist. Weitere Informationen finden Sie unter [verweisen auf die ADO-Bibliotheken](../../../ado/guide/referencing-the-ado-libraries.md).  
+1.  Erstellen Sie eine neue Standard-exe-Visual Basic Projekt, das auf die ADO-Bibliothek verweist. Weitere Informationen finden Sie unter [verweisen auf die ADO-Bibliotheken](../referencing-the-ado-libraries.md).  
   
 2.  Erstellen Sie im oberen Bereich des Formulars vier Befehls Schaltflächen, und legen Sie die Eigenschaften " **Name** " und " **Caption** " auf die Werte fest, die in der Tabelle am Ende dieses Themas angezeigt werden.  
   
@@ -34,12 +34,12 @@ Diese einfache Anwendung führt Sie durch jeden der vier wichtigsten ADO-Vorgän
   
 4.  Erstellen Sie ein **Textfeld** im Formular unterhalb des Rasters, und legen Sie dessen Eigenschaften wie in der Tabelle gezeigt fest. Wenn Sie fertig sind, sollte das Formular der folgenden Abbildung ähneln.  
   
-5.  Kopieren Sie schließlich den im [HelloData-Code](../../../ado/guide/data/hellodata-code.md)aufgelisteten Code, und fügen Sie ihn in das Fenster "Code-Editor" im Formular ein. Drücken Sie **F5** , um den Code auszuführen.  
+5.  Kopieren Sie schließlich den im [HelloData-Code](./hellodata-code.md)aufgelisteten Code, und fügen Sie ihn in das Fenster "Code-Editor" im Formular ein. Drücken Sie **F5** , um den Code auszuführen.  
   
 > [!NOTE]
 >  Im folgenden Beispiel und im gesamten Handbuch wird die Benutzer-ID "MyID" mit dem Kennwort "123aBc" verwendet, um sich beim Server zu authentifizieren. Sie sollten diese Werte durch gültige Anmelde Informationen für Ihren Server ersetzen. Ersetzen Sie außerdem den Wert "MySqlServer" durch den Namen Ihres Servers.  
   
- Eine ausführliche Beschreibung des Codes finden Sie in den [Kommentaren zu HelloData](../../../ado/guide/data/comments-on-hellodata.md).  
+ Eine ausführliche Beschreibung des Codes finden Sie in den [Kommentaren zu HelloData](./comments-on-hellodata.md).  
   
  ![Zeigt Form1 für die HelloData VB-Anwendung an](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   

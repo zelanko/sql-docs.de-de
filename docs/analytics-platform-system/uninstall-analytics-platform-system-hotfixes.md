@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399765"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Deinstallieren von Analytics Platform System-Hotfixes 
@@ -36,7 +36,7 @@ Um diese Schritte ausführen zu können, benötigen Sie Folgendes:
   
 2.  Verwenden Sie die Option als Administrator ausführen, um eine Eingabeaufforderung zu öffnen.  
   
-3.  Wechseln Sie in `C:\PDWINST\Patches\<kbarticle>\media` das *<kbarticle>* Verzeichnis, wobei die Nummer des Knowledge Base-Artikels für das zu deinstallierende Hotfix ist.  
+3.  Wechseln Sie in `C:\PDWINST\Patches\<kbarticle>\media` das Verzeichnis, wobei *<kbarticle>* die Nummer des Knowledge Base-Artikels für das zu deinstallierende Hotfix ist.  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  

@@ -31,7 +31,7 @@ Gibt die verfügbaren Berechtigungen zum Ändern von Daten in einem [Verbindungs
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen [connectmodeenum](./connectmodeenum.md) -Wert fest oder gibt ihn zurück. Der Standardwert für eine **Verbindung** ist **adModeUnknown**. Der Standardwert für ein **Datensatz** -Objekt ist **admoderead**. Der Standardwert für einen **Stream** , der einer zugrunde liegenden Quelle (geöffnet mit einer URL als Quelle oder als Standarddaten **Strom** eines **Datensatzes**) zugeordnet ist, ist **admoderead**. Der Standardwert für einen Daten **Strom** , der keiner zugrunde liegenden Quelle (instanziiert im Arbeitsspeicher) zugeordnet ist, ist **adModeUnknown**.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie die **Mode** -Eigenschaft, um die Zugriffsberechtigungen festzulegen oder zurückzugeben, die vom Anbieter für die aktuelle Verbindung verwendet werden. Die **Mode** -Eigenschaft kann nur festgelegt werden, wenn das **Verbindungs** Objekt geschlossen wird.  
   
  Bei einem **Streamobjekt** , wenn der Zugriffsmodus nicht angegeben ist, wird es von der Quelle geerbt, die zum Öffnen des Daten **Strom** Objekts verwendet wird. Wenn beispielsweise ein **Stream** von einem **Datensatz** -Objekt aus geöffnet wird, wird er standardmäßig im gleichen Modus wie der **Datensatz**geöffnet.  

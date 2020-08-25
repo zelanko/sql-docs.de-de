@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ceeb9abb3b14441e6f0e8194d07836cf5d482492
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbdc0b724d96cf541eedb7e26f8b652a280e829a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453182"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805836"
 ---
 # <a name="more-about-recordset-persistence"></a>Weitere Informationen zur Beibehaltung von Recordsets
-Das ADO-Recordset-Objekt unterstützt das Speichern des Inhalts eines **Recordset** -Objekts in einer Datei mithilfe der [Save](../../../ado/reference/ado-api/save-method.md) -Methode. Die permanent gespeicherte Datei ist möglicherweise auf einem lokalen Laufwerk, Server oder als URL auf einer Website vorhanden. Später kann die Datei entweder mit der [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode des **Recordset** -Objekts oder mit der [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) -Methode des [Connection](../../../ado/reference/ado-api/connection-object-ado.md) -Objekts wieder hergestellt werden.  
+Das ADO-Recordset-Objekt unterstützt das Speichern des Inhalts eines **Recordset** -Objekts in einer Datei mithilfe der [Save](../../reference/ado-api/save-method.md) -Methode. Die permanent gespeicherte Datei ist möglicherweise auf einem lokalen Laufwerk, Server oder als URL auf einer Website vorhanden. Später kann die Datei entweder mit der [Open](../../reference/ado-api/open-method-ado-recordset.md) -Methode des **Recordset** -Objekts oder mit der [Execute](../../reference/ado-api/execute-method-ado-connection.md) -Methode des [Connection](../../reference/ado-api/connection-object-ado.md) -Objekts wieder hergestellt werden.  
   
- Außerdem konvertiert die [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) -Methode ein **Recordset** -Objekt in ein Formular, in dem die Spalten und Zeilen mit den von Ihnen angegebenen Zeichen getrennt sind.  
+ Außerdem konvertiert die [GetString](../../reference/ado-api/getstring-method-ado.md) -Methode ein **Recordset** -Objekt in ein Formular, in dem die Spalten und Zeilen mit den von Ihnen angegebenen Zeichen getrennt sind.  
   
- Wenn Sie ein **Recordset**persistent speichern möchten, müssen Sie es zunächst in ein Formular umrechnen, das in einer Datei gespeichert werden kann. **Recordset** -Objekte können im proprietären Format des erweiterten Daten tablegrams (ADTG) oder im Open Extensible Markup Language-Format (XML) gespeichert werden. ADTG-Beispiele werden im nächsten Abschnitt angezeigt. Weitere Informationen zur XML-Persistenz finden Sie unter [persistente Datensätze im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md).  
+ Wenn Sie ein **Recordset**persistent speichern möchten, müssen Sie es zunächst in ein Formular umrechnen, das in einer Datei gespeichert werden kann. **Recordset** -Objekte können im proprietären Format des erweiterten Daten tablegrams (ADTG) oder im Open Extensible Markup Language-Format (XML) gespeichert werden. ADTG-Beispiele werden im nächsten Abschnitt angezeigt. Weitere Informationen zur XML-Persistenz finden Sie unter [persistente Datensätze im XML-Format](./persisting-records-in-xml-format.md).  
   
  Speichern Sie alle ausstehenden Änderungen in der persistenten Datei. Auf diese Weise können Sie eine Abfrage ausgeben, die ein **Recordset** -Objekt zurückgibt, das **Recordset**bearbeitet, es speichert und ausstehende Änderungen, später das **Recordset**wiederherstellt und dann die Datenquelle mit den gespeicherten ausstehenden Änderungen aktualisiert.  
   
- Informationen zum persistenten Speichern von **Streamobjekten** finden Sie unter [Streams und Persistenz](../../../ado/guide/data/streams-and-persistence.md).  
+ Informationen zum persistenten Speichern von **Streamobjekten** finden Sie unter [Streams und Persistenz](./streams-and-persistence.md).  
   
  Ein Beispiel für die Speicherung von **Recordsets** finden Sie im Szenario zur Persistenz von XML-Recordsets.  
   
@@ -79,7 +79,7 @@ dc.Refresh
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [GetString-Methode (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Microsoft OLE DB-Persistenzanbieter (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Datenströme und Persistenz](../../../ado/guide/data/streams-and-persistence.md)
+ [GetString-Methode (ADO)](../../reference/ado-api/getstring-method-ado.md)   
+ [Microsoft OLE DB-Persistenzanbieter (ADO-Dienstanbieter)](../appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
+ [Recordset-Objekt (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [Datenströme und Persistenz](./streams-and-persistence.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d0f6502ccfa58b28f0faeaf10b2670a42759a2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9dfaba8c2ae2511de9a07aa800abc08f76ec885
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453552"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806950"
 ---
 # <a name="data-shaping-overview"></a>Datenstrukturierung – Übersicht
-Die *Daten Strukturierung* bedeutet, dass hierarchische Beziehungen zwischen mindestens zwei logischen Entitäten in einer Abfrage aufgebaut werden. Die Hierarchie kann in Beziehungen zwischen übergeordneten und untergeordneten Elementen zwischen einem Datensatz eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)und einem oder mehreren Datensätzen (auch als Kapitel bezeichnet) eines anderen **Recordsets**angezeigt werden. In einer über-/Unterordnungsbeziehung enthält das übergeordnete **Recordset** das untergeordnete **Recordset**. Ein Beispiel für eine solche hierarchische Beziehung sind Kunden und Bestellungen. Für jeden Kunden in einer Datenbank können NULL oder mehr Bestellungen vorhanden sein. Die hierarchische Beziehung kann rekursiv sein. Dies bedeutet, dass Datensätze mit zwei untergeordneten Datensätzen in einem untergeordneten Datensatz eingefügt werden können Im Prinzip kann ein hierarchischer Datensatz in beliebiger Tiefe schachtelt werden. In der Praxis beschränkt ADO die Rekursion auf maximal 512 **Recordsets**.  
+Die *Daten Strukturierung* bedeutet, dass hierarchische Beziehungen zwischen mindestens zwei logischen Entitäten in einer Abfrage aufgebaut werden. Die Hierarchie kann in Beziehungen zwischen übergeordneten und untergeordneten Elementen zwischen einem Datensatz eines [Recordsets](../../reference/ado-api/recordset-object-ado.md)und einem oder mehreren Datensätzen (auch als Kapitel bezeichnet) eines anderen **Recordsets**angezeigt werden. In einer über-/Unterordnungsbeziehung enthält das übergeordnete **Recordset** das untergeordnete **Recordset**. Ein Beispiel für eine solche hierarchische Beziehung sind Kunden und Bestellungen. Für jeden Kunden in einer Datenbank können NULL oder mehr Bestellungen vorhanden sein. Die hierarchische Beziehung kann rekursiv sein. Dies bedeutet, dass Datensätze mit zwei untergeordneten Datensätzen in einem untergeordneten Datensatz eingefügt werden können Im Prinzip kann ein hierarchischer Datensatz in beliebiger Tiefe schachtelt werden. In der Praxis beschränkt ADO die Rekursion auf maximal 512 **Recordsets**.  
   
  Im Allgemeinen können Spalten eines geformten **Recordsets** Daten von einem Datenanbieter enthalten, wie z. b. Microsoft® SQL Server, Verweise auf ein anderes **Recordset**, Werte, die von einer Berechnung in einer einzelnen Zeile eines **Recordsets**abgeleitet werden, oder Werte, die von einem Vorgang für eine Spalte eines gesamten **Recordsets**abgeleitet werden. Eine Spalte kann auch neu erfunden und leer sein.  
   

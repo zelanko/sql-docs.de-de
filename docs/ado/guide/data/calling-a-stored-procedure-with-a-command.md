@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c510bd71d8b81eae9f86e48c398cc6ff7e81cea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27dd38482ffc197235b6c20c0d4ae8cb098d07b3
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453692"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806356"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Aufrufen einer gespeicherten Prozedur mit einem Befehl
 Sie können einen Befehl verwenden, um eine gespeicherte Prozedur aufzurufen. Das Codebeispiel am Ende dieses Themas bezieht sich auf eine gespeicherte Prozedur in der Northwind-Beispieldatenbank mit dem Namen CustOrdersOrders, die wie folgt definiert ist.  
@@ -35,13 +35,13 @@ ORDER BY OrderID
   
  Weitere Informationen zum Definieren und Abrufen gespeicherter Prozeduren finden Sie in der SQL Server-Dokumentation.  
   
- Diese gespeicherte Prozedur ähnelt dem Befehl, der in [Befehls Objekt Parametern](../../../ado/guide/data/command-object-parameters.md)verwendet wird. Er übernimmt einen Kunden-ID-Parameter und gibt Informationen zu den Aufträgen dieses Kunden zurück. Im folgenden Codebeispiel wird diese gespeicherte Prozedur als Quelle für ein ADO- **Recordset**verwendet.  
+ Diese gespeicherte Prozedur ähnelt dem Befehl, der in [Befehls Objekt Parametern](./command-object-parameters.md)verwendet wird. Er übernimmt einen Kunden-ID-Parameter und gibt Informationen zu den Aufträgen dieses Kunden zurück. Im folgenden Codebeispiel wird diese gespeicherte Prozedur als Quelle für ein ADO- **Recordset**verwendet.  
   
  Mithilfe der gespeicherten Prozedur können Sie auf eine andere Funktion von ADO zugreifen: die **Aktualisierungs** Methode für die **Parameter** Auflistung. Mit dieser Methode kann ADO automatisch alle Informationen zu den Parametern ausfüllen, die für den Befehl zur Laufzeit erforderlich sind. Bei der Verwendung dieses Verfahrens gibt es eine Leistungs Einbuße, da ADO die Datenquelle nach den Informationen zu den Parametern Abfragen muss.  
   
- Andere wichtige Unterschiede bestehen zwischen dem folgenden Codebeispiel und dem Code in [Befehls Objekt Parametern](../../../ado/guide/data/command-object-parameters.md), bei denen die Parameter manuell eingegeben wurden. Zunächst wird in diesem Code die **vorbereitete** Eigenschaft nicht auf " **true** " festgelegt, da es sich um eine SQL Server gespeicherte Prozedur handelt, die definitionsgemäß vorkompiliert ist. Zweitens wurde die **CommandType** -Eigenschaft des **Command** -Objekts in **adCmdStoredProc** im zweiten Beispiel geändert, um ADO darüber zu informieren, dass der Befehl eine gespeicherte Prozedur war.  
+ Andere wichtige Unterschiede bestehen zwischen dem folgenden Codebeispiel und dem Code in [Befehls Objekt Parametern](./command-object-parameters.md), bei denen die Parameter manuell eingegeben wurden. Zunächst wird in diesem Code die **vorbereitete** Eigenschaft nicht auf " **true** " festgelegt, da es sich um eine SQL Server gespeicherte Prozedur handelt, die definitionsgemäß vorkompiliert ist. Zweitens wurde die **CommandType** -Eigenschaft des **Command** -Objekts in **adCmdStoredProc** im zweiten Beispiel geändert, um ADO darüber zu informieren, dass der Befehl eine gespeicherte Prozedur war.  
   
- Schließlich muss im zweiten Beispiel beim Festlegen des Werts der-Parameter auf den-Parameter verwiesen werden, da Sie den Namen des Parameters zur Entwurfszeit möglicherweise nicht kennen. Wenn Sie den Namen des Parameters kennen, können Sie die neue [namedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) -Eigenschaft des **Befehls** Objekts auf "true" festlegen und sich auf den Namen der Eigenschaft beziehen. Sie Fragen sich vielleicht, warum die Position des ersten Parameters, der in der gespeicherten Prozedur ( @CustomerID ) erwähnt wird, 1 anstelle von 0 ( `objCmd(1) = "ALFKI"` ) ist. Der Grund hierfür ist, dass der Parameter 0 einen Rückgabewert aus der gespeicherten Prozedur SQL Server enthält.  
+ Schließlich muss im zweiten Beispiel beim Festlegen des Werts der-Parameter auf den-Parameter verwiesen werden, da Sie den Namen des Parameters zur Entwurfszeit möglicherweise nicht kennen. Wenn Sie den Namen des Parameters kennen, können Sie die neue [namedParameters](../../reference/ado-api/namedparameters-property-ado.md) -Eigenschaft des **Befehls** Objekts auf "true" festlegen und sich auf den Namen der Eigenschaft beziehen. Sie Fragen sich vielleicht, warum die Position des ersten Parameters, der in der gespeicherten Prozedur ( @CustomerID ) erwähnt wird, 1 anstelle von 0 ( `objCmd(1) = "ALFKI"` ) ist. Der Grund hierfür ist, dass der Parameter 0 einen Rückgabewert aus der gespeicherten Prozedur SQL Server enthält.  
   
 ```  
 'BeginAutoParamCmd  

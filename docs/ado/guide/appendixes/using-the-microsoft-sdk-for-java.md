@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 302cca77222454ac6fa73c69683c641e841acdda
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453972"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806492"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Verwenden des Microsoft SDK für Java
 
@@ -32,7 +32,7 @@ Das Microsoft SDK für Java ist das Developer Kit für die Microsoft Internet Ex
   
  Dieser Mechanismus liest die ADO-Typbibliothek und generiert Klassen, die Sie in Ihrer Anwendung instanziieren können. Diese Klassen werden im folgenden Speicherort generiert: \\<Windows-Verzeichnis \> \Java\trustlib\msado15.  
   
- Das Erstellen einer ADO-Anwendung in Java mithilfe des Microsoft SDK für Java ist von der Perspektive des Quellcodes über die Verwendung des Assistenten für die Java-Typbibliothek grundlegend identisch. Beispielcode finden Sie unter [ADO Java Class Wrapper](../../../ado/guide/appendixes/ado-java-class-wrappers.md). Der einzige wirkliche Unterschied besteht darin, wie Sie zuerst die Wrapper Klassen generieren, wie in den folgenden Schritten gezeigt.  
+ Das Erstellen einer ADO-Anwendung in Java mithilfe des Microsoft SDK für Java ist von der Perspektive des Quellcodes über die Verwendung des Assistenten für die Java-Typbibliothek grundlegend identisch. Beispielcode finden Sie unter [ADO Java Class Wrapper](./ado-java-class-wrappers.md). Der einzige wirkliche Unterschied besteht darin, wie Sie zuerst die Wrapper Klassen generieren, wie in den folgenden Schritten gezeigt.  
   
 ### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>So erstellen Sie ein ADO-Projekt mit dem Microsoft SDK für Java  
   
@@ -50,5 +50,5 @@ Das Microsoft SDK für Java ist das Developer Kit für die Microsoft Internet Ex
   
 3.  Öffnen Sie das Projekt in Visual J++, um diese Dateien zu verwenden. Wählen Sie im Menü **Projekt** die Option **zu Projekt hinzufügen**aus. Wählen Sie **Dateien**aus, und fügen Sie alle hinzu. Java-Dateien, die im Verzeichnis trustlib\msado15 für Ihr Projekt generiert werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO-Java-Klassen-Wrapper](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO-Java-Klassen-Wrapper](./ado-java-class-wrappers.md)

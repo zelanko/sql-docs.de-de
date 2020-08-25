@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 952dbda04b4f7132406e3a6de4479afea1be92e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400907"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Kenn Wort Zurücksetzung-Analytics Platform System
@@ -40,11 +40,11 @@ Der **sa** -Anmelde Name in SQL Server. **sa** ist ein Mitglied der festen Serve
 Die Anmelde Informationen des Domänen Administrators und die Systemadministrator-Anmelde Informationen entsprechen den Richtlinien für die Kenn Wort Sicherheit für jeden Anmelde Informationstyp. Wenn Sie die Anmelde Informationen des Domänen Administrators ändern, wird das neue Kennwort in der gesamten SQL Server PDW in die Domäne aktualisiert.  
   
 > [!IMPORTANT]  
-> SQL Server PDW unterstützt das Dollarzeichen (**$**) in den Domänen Administrator-oder lokalen Administrator Kennwörtern nicht. Die Zeichen **^% &** sind in Kenn Wörtern zulässig, PowerShell berücksichtigt diese jedoch als Sonderzeichen. Wenn keines dieser Zeichen in Kenn Wörtern für die Systemadministrator-oder SQL Server**sa** -Konten (die Parameter **AdminPassword** und **pdwsapassword** während des Setups) verwendet wird, tritt beim Setup ein Fehler auf. Um ein erfolgreiches Upgrade sicherzustellen, wenn aktuelle Kenn Wörter nicht unterstützte Zeichen enthalten, ändern Sie diese Kenn Wörter so, dass Sie vor dem Ausführen des Upgrades keine solchen Zeichen enthalten. Nachdem das Upgrade abgeschlossen ist, können Sie diese Kenn Wörter auf ihre ursprünglichen Werte zurücksetzen. Weitere Informationen zu Kenn Wort Anforderungen finden Sie unter [Alter Login](../t-sql/statements/alter-login-transact-sql.md).  
+> SQL Server PDW unterstützt das Dollarzeichen ( **$** ) in den Domänen Administrator-oder lokalen Administrator Kennwörtern nicht. Die Zeichen **^% &** sind in Kenn Wörtern zulässig, PowerShell berücksichtigt diese jedoch als Sonderzeichen. Wenn keines dieser Zeichen in Kenn Wörtern für die Systemadministrator-oder SQL Server**sa** -Konten (die Parameter **AdminPassword** und **pdwsapassword** während des Setups) verwendet wird, tritt beim Setup ein Fehler auf. Um ein erfolgreiches Upgrade sicherzustellen, wenn aktuelle Kenn Wörter nicht unterstützte Zeichen enthalten, ändern Sie diese Kenn Wörter so, dass Sie vor dem Ausführen des Upgrades keine solchen Zeichen enthalten. Nachdem das Upgrade abgeschlossen ist, können Sie diese Kenn Wörter auf ihre ursprünglichen Werte zurücksetzen. Weitere Informationen zu Kenn Wort Anforderungen finden Sie unter [Alter Login](../t-sql/statements/alter-login-transact-sql.md).  
   
 ## <a name="to-reset-a-password"></a>Zurücksetzen eines Kennworts  
   
-1.  Stellen Sie eine Verbindung mit dem Steuer Knoten her, und starten Sie den **Configuration Manager** (**dwconfig. exe**). Weitere Informationen finden Sie unter [Start the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
+1.  Stellen Sie eine Verbindung mit dem Steuer Knoten her, und starten Sie den **Configuration Manager** (**dwconfig.exe**). Weitere Informationen finden Sie unter [Start the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  Klicken Sie im linken Bereich der **Configuration Manager**auf Kenn **Wort**Zurücksetzung.  
   

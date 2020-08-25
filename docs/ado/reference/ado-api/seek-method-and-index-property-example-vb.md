@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88121d2f736d76eec80146c49c727cd0d27399b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6e2fe55a8aa34c6249edd2eee9666e9558a52027
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442142"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777569"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Beispiel für die Seek-Methode und Index-Eigenschaft (VB)
-In diesem Beispiel wird die [Seek](../../../ado/reference/ado-api/seek-method.md) -Methode und [Index](../../../ado/reference/ado-api/index-property.md) -Eigenschaft des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts zusammen mit einer bestimmten ***Mitarbeiter-ID***verwendet, um den Namen des Mitarbeiters in der ***Employees*** -Tabelle der Nwind. mdb-Datenbank zu suchen.  
+In diesem Beispiel wird die [Seek](./seek-method.md) -Methode und [Index](./index-property.md) -Eigenschaft des [Recordset](./recordset-object-ado.md) -Objekts zusammen mit einer bestimmten ***Mitarbeiter-ID***verwendet, um den Namen des Mitarbeiters in der ***Employees*** -Tabelle der Nwind. mdb-Datenbank zu suchen.  
   
 ```  
 'BeginSeekVB  
@@ -117,6 +117,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Index-Eigenschaft](../../../ado/reference/ado-api/index-property.md)   
- [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Seek-Methode](../../../ado/reference/ado-api/seek-method.md)
+ [Index-Eigenschaft](./index-property.md)   
+ [Recordset-Objekt (ADO)](./recordset-object-ado.md)   
+ [Seek-Methode](./seek-method.md)

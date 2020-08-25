@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400623"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Einschalten oder Deaktivieren der Appliance für das Analytics-Platt Form System
@@ -27,7 +27,7 @@ Verbindungen mit SQL Server PDW Knoten können mithilfe der IP-Adressen hergeste
   
 ## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>Ausschalten der Appliance  
   
-### <a name="before-you-begin"></a>Vorbereitung  
+### <a name="before-you-begin"></a>Voraussetzungen  
 Bevor Sie das Gerät ausschalten, sollten Sie alle Aktivitäten auf dem Gerät beenden. So beenden Sie alle Aktivitäten:  
   
 -   Verwenden Sie die Seite **Sitzungen** der Verwaltungskonsole, um die aktuellen Benutzer zu identifizieren. Kontaktieren Sie Sie, und bitten Sie Sie, sich abzumelden.  

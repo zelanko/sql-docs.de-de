@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c61e40220b99bd68c92e2651d58ea13ee10be29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d0acedc118c2789945f3b02a438655176179ef0
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454102"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806634"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Übersicht über den Microsoft-Daten Strukturierungs Dienst für OLE DB
 > [!IMPORTANT]
 >  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Stattdessen sollten Anwendungen XML verwenden.
 
- Der Microsoft-Daten Strukturierungs Dienst für OLE DB Dienstanbieter unterstützt das Erstellen hierarchischer (geformter) [Recordsetobjekte](../../../ado/reference/ado-api/recordset-object-ado.md) von einem Datenanbieter.
+ Der Microsoft-Daten Strukturierungs Dienst für OLE DB Dienstanbieter unterstützt das Erstellen hierarchischer (geformter) [Recordsetobjekte](../../reference/ado-api/recordset-object-ado.md) von einem Datenanbieter.
 
 ## <a name="provider-keyword"></a>Provider-Schlüsselwort
  Um den Daten Strukturierungs Dienst für OLE DB aufzurufen, geben Sie das folgende Schlüsselwort und den Wert in der Verbindungs Zeichenfolge an.
@@ -35,7 +35,7 @@ ms.locfileid: "88454102"
 ```
 
 ## <a name="dynamic-properties"></a>Dynamische Eigenschaften
- Wenn dieser Dienstanbieter aufgerufen wird, werden die folgenden dynamischen Eigenschaften der [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung des[Connection](../../../ado/reference/ado-api/connection-object-ado.md) -Objekts hinzugefügt.
+ Wenn dieser Dienstanbieter aufgerufen wird, werden die folgenden dynamischen Eigenschaften der [Properties](../../reference/ado-api/properties-collection-ado.md) -Auflistung des[Connection](../../reference/ado-api/connection-object-ado.md) -Objekts hinzugefügt.
 
 |Name der dynamischen Eigenschaft|Beschreibung|
 |---------------------------|-----------------|
@@ -49,7 +49,7 @@ Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
- Sie können auch eine dynamische Eigenschaft festlegen oder abrufen, indem Sie Ihren Namen als Index für die [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Eigenschaft angeben. Im folgenden Codebeispiel wird z. b. der aktuelle Wert der dynamischen Eigenschaft **Datenanbieter** abgerufen und ausgegeben. Anschließend wird ein neuer Wert festgelegt, wenn CN. "DataProvider" wurde auf "MSDataShape" (entweder direkt oder indirekt über die Verbindungs Zeichenfolge) festgelegt, und die Verbindung wurde nicht geöffnet:
+ Sie können auch eine dynamische Eigenschaft festlegen oder abrufen, indem Sie Ihren Namen als Index für die [Properties](../../reference/ado-api/properties-collection-ado.md) -Eigenschaft angeben. Im folgenden Codebeispiel wird z. b. der aktuelle Wert der dynamischen Eigenschaft **Datenanbieter** abgerufen und ausgegeben. Anschließend wird ein neuer Wert festgelegt, wenn CN. "DataProvider" wurde auf "MSDataShape" (entweder direkt oder indirekt über die Verbindungs Zeichenfolge) festgelegt, und die Verbindung wurde nicht geöffnet:
 
 ```vb
 Debug.Print cn.Properties("Data Provider")
@@ -59,7 +59,7 @@ cn.Properties("Data Provider") = "MSDASQL"
 > [!NOTE]
 >  Die dynamische Eigenschaft ( **Datenanbieter**) kann nur für ein ungeöffnetes **Verbindungs** Objekt festgelegt werden. Nachdem die Verbindung geöffnet wurde, wird die **Datenanbieter** -Eigenschaft schreibgeschützt.
 
- Weitere Informationen zur Daten Strukturierung finden Sie unter Strukturieren von [Daten](../../../ado/guide/data/data-shaping-overview.md).
+ Weitere Informationen zur Daten Strukturierung finden Sie unter Strukturieren von [Daten](../data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Weitere Informationen
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Anhang A: Anbieter](./appendix-a-providers.md)

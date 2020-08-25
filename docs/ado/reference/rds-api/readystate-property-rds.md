@@ -30,7 +30,7 @@ Gibt den Fortschritt eines [DataControl](./datacontrol-object-rds.md) -Objekts b
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen der folgenden Werte fest oder gibt ihn zurück.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|Die aktuelle Abfrage wird noch ausgeführt, und es wurden keine Zeilen abgerufen. Das **Recordset** des **DataControl** -Objekts ist nicht für die Verwendung verfügbar.|  
 |**adcReadyStateInteractive**|Ein anfänglicher Satz von Zeilen, der von der aktuellen Abfrage abgerufen wurde, wurde im **Recordset** des **DataControl** -Objekts gespeichert und steht für die Verwendung zur Verfügung. Die verbleibenden Zeilen werden noch abgerufen.|  
@@ -39,7 +39,7 @@ Gibt den Fortschritt eines [DataControl](./datacontrol-object-rds.md) -Objekts b
 > [!NOTE]
 >  Jede Client seitige ausführbare Datei, die diese Konstanten verwendet, muss Deklarationen für Sie bereitstellen. Sie können die gewünschten Konstanten Deklarationen aus der Datei "adcvsb. Inc" Ausschneiden und einfügen, die sich im Standard Installationsordner für die RDS-Bibliothek befindet.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie das [onluystatechange](./onreadystatechange-event-rds.md) -Ereignis, um Änderungen in der Eigenschaft " **leserystate** " während eines asynchronen Abfrage Vorgangs zu überwachen. Dies ist effizienter als die regelmäßige Überprüfung des Werts der-Eigenschaft.  
   
  Wenn während eines asynchronen Vorgangs ein Fehler auftritt, wird die Eigenschaft "read- **State** " in " **adkreadystatecomplete**" geändert, die [Zustands](../ado-api/state-property-ado.md) Eigenschaft wird von " **adstatecomplete** " in " **adstateclosed**" geändert, und die Eigenschaft " **Recordset** -Objekt [Wert](../ado-api/value-property-ado.md) *" bleibt unverändert*.  

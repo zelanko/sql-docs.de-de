@@ -43,7 +43,7 @@ Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angeg
 recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie die **MoveFirst** -Methode, um die aktuelle Daten Satz Position in den ersten Datensatz im **Recordset**zu verschieben.  
   
  Verwenden Sie die **MoveLast** -Methode, um die aktuelle Daten Satz Position in den letzten Datensatz im **Recordset**zu verschieben. Das **Recordset** -Objekt muss Lesezeichen oder rückwärts Cursor Bewegung unterstützen. Andernfalls generiert der Methoden aufrufsvorgang einen Fehler.  

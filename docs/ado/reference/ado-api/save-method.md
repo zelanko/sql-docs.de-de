@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09b8ce2c2b8f6388e300a0034c0ea72b795bded1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05e65643884d57d991028394f9f5b1ba7b752533
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442212"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777579"
 ---
 # <a name="save-method"></a>Save-Methode
-Speichert das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in einer Datei oder einem [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Speichert das [Recordset](./recordset-object-ado.md) in einer Datei oder einem [Streamobjekt](./stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,12 +39,12 @@ recordset.Save Destination, PersistFormat
  Optional. Eine **Variante** , die den kompletten Pfadnamen der Datei darstellt, in der das **Recordset** gespeichert werden soll, oder einen Verweis auf ein **Stream** -Objekt.  
   
  *PersistFormat*  
- Optional. Ein [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) -Wert, der das Format angibt, in dem das **Recordset** gespeichert werden soll (XML oder ADTG). Der Standardwert ist **adPersistADTG**.  
+ Optional. Ein [PersistFormatEnum](./persistformatenum.md) -Wert, der das Format angibt, in dem das **Recordset** gespeichert werden soll (XML oder ADTG). Der Standardwert ist **adPersistADTG**.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die Methode zum [Speichern der Methode](../../../ado/reference/ado-api/save-method.md) kann nur für ein offenes **Recordset**aufgerufen werden. Verwenden Sie die [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode, um das **Recordset** später aus dem *Ziel*wiederherzustellen.  
+ Die Methode zum [Speichern der Methode]() kann nur für ein offenes **Recordset**aufgerufen werden. Verwenden Sie die [Open-Methode (ADO Recordset)](./open-method-ado-recordset.md) -Methode, um das **Recordset** später aus dem *Ziel*wiederherzustellen.  
   
- Wenn die Eigenschaft [Filter Eigenschaft](../../../ado/reference/ado-api/filter-property.md) für das **Recordset**wirksam ist, werden nur die Zeilen, auf die der Filter zugreifen kann, gespeichert. Wenn das **Recordset** hierarchisch ist, werden das aktuelle untergeordnete **Recordset** und seine untergeordneten Elemente gespeichert, einschließlich des übergeordneten **Recordsets**. Wenn die Save-Methode eines untergeordneten **Recordsets** aufgerufen wird, werden das untergeordnete Element und alle zugehörigen untergeordneten Elemente gespeichert, das übergeordnete Element ist jedoch nicht.  
+ Wenn die Eigenschaft [Filter Eigenschaft](./filter-property.md) für das **Recordset**wirksam ist, werden nur die Zeilen, auf die der Filter zugreifen kann, gespeichert. Wenn das **Recordset** hierarchisch ist, werden das aktuelle untergeordnete **Recordset** und seine untergeordneten Elemente gespeichert, einschließlich des übergeordneten **Recordsets**. Wenn die Save-Methode eines untergeordneten **Recordsets** aufgerufen wird, werden das untergeordnete Element und alle zugehörigen untergeordneten Elemente gespeichert, das übergeordnete Element ist jedoch nicht.  
   
  Wenn Sie das **Recordset**zum ersten Mal speichern, ist es optional, das *Ziel*anzugeben. Wenn Sie das *Ziel*weglassen, wird eine neue Datei mit einem Namen erstellt, der auf den Wert der Source-Eigenschaft des **Recordsets**festgelegt ist.  
   
@@ -58,14 +58,14 @@ recordset.Save Destination, PersistFormat
   
  Datensätze werden ab der ersten Zeile des **Recordsets**gespeichert. Wenn die **Save** -Methode abgeschlossen ist, wird die aktuelle Zeilen Position in die erste Zeile des **Recordsets**verschoben.  
   
- Um optimale Ergebnisse zu erzielen, legen Sie die Eigenschaft für die [Cursor Location-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) mithilfe von **Save**auf **adUseClient** fest. Wenn Ihr Anbieter nicht alle Funktionen unterstützt, die zum Speichern von **Recordset** -Objekten erforderlich sind, stellt der Cursor Dienst diese Funktionalität bereit.  
+ Um optimale Ergebnisse zu erzielen, legen Sie die Eigenschaft für die [Cursor Location-Eigenschaft (ADO)](./cursorlocation-property-ado.md) mithilfe von **Save**auf **adUseClient** fest. Wenn Ihr Anbieter nicht alle Funktionen unterstützt, die zum Speichern von **Recordset** -Objekten erforderlich sind, stellt der Cursor Dienst diese Funktionalität bereit.  
   
- Wenn ein **Recordset** persistent ist und die Eigenschaft **Cursor Location** auf **adeeserver**festgelegt ist, ist die Aktualisierungs Funktion für das **Recordset** eingeschränkt. In der Regel sind nur Aktualisierungen der einzelnen Tabelle, Einfügungen und Löschungen zulässig (abhängig von der Anbieter Funktionalität). Die Methode Methode der [erneuten Synchronisierung](../../../ado/reference/ado-api/resync-method.md) ist in dieser Konfiguration ebenfalls nicht verfügbar.  
+ Wenn ein **Recordset** persistent ist und die Eigenschaft **Cursor Location** auf **adeeserver**festgelegt ist, ist die Aktualisierungs Funktion für das **Recordset** eingeschränkt. In der Regel sind nur Aktualisierungen der einzelnen Tabelle, Einfügungen und Löschungen zulässig (abhängig von der Anbieter Funktionalität). Die Methode Methode der [erneuten Synchronisierung](./resync-method.md) ist in dieser Konfiguration ebenfalls nicht verfügbar.  
   
 > [!NOTE]
 >  Das Speichern eines **Recordsets** mit **Feldern** vom Typ " **advariant**", " **adidispatch**" oder " **adiunknown** " wird nicht von ADO unterstützt und kann zu unvorhersehbaren Ergebnissen führen.  
   
- Nur Filter in Form von Kriterienzeichenfolgen (z. b. OrderDate > ' 12/31/1999 ') wirken sich auf den Inhalt eines persistent gespeicherten **Recordsets**aus. Filter, die mit einem Array von **Lesezeichen** erstellt wurden oder einen Wert aus dem [filtergroupum](../../../ado/reference/ado-api/filtergroupenum.md) verwenden, wirken sich nicht auf den Inhalt des beibehaltenen **Recordsets**aus. Diese Regeln gelten für **Recordsets**, die entweder mit Client seitigen oder serverseitigen Cursorn erstellt wurden.  
+ Nur Filter in Form von Kriterienzeichenfolgen (z. b. OrderDate > ' 12/31/1999 ') wirken sich auf den Inhalt eines persistent gespeicherten **Recordsets**aus. Filter, die mit einem Array von **Lesezeichen** erstellt wurden oder einen Wert aus dem [filtergroupum](./filtergroupenum.md) verwenden, wirken sich nicht auf den Inhalt des beibehaltenen **Recordsets**aus. Diese Regeln gelten für **Recordsets**, die entweder mit Client seitigen oder serverseitigen Cursorn erstellt wurden.  
   
  Da der *Destination* -Parameter jedes Objekt akzeptieren kann, das die OLE DB IStream-Schnittstelle unterstützt, können Sie ein **Recordset** direkt im ASP-Antwortobjekt speichern. Weitere Informationen finden Sie im XML- **Recordset-persistenzszenario**.  
   
@@ -92,16 +92,16 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 
 :::row:::
     :::column:::
-        [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Recordset-Objekt (ADO)](./recordset-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Stream-Objekt (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für das Speichern und Öffnen von Methoden (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
- [Beispiel für das Speichern und Öffnen von Methoden (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
- [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open-Methode (ADO-Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [SaveToFile-Methode](../../../ado/reference/ado-api/savetofile-method.md)
+ [Beispiel für das Speichern und Öffnen von Methoden (VB)](./save-and-open-methods-example-vb.md)   
+ [Beispiel für das Speichern und Öffnen von Methoden (VC + +)](./save-and-open-methods-example-vc.md)   
+ [Open-Methode (ADO-Recordset)](./open-method-ado-recordset.md)   
+ [Open-Methode (ADO-Stream)](./open-method-ado-stream.md)   
+ [SaveToFile-Methode](./savetofile-method.md)

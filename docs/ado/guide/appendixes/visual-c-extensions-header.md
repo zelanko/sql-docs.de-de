@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25a435b2fd4739710f208e50c1265db441d54f7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d3793049d9fa1f86dd9aa6f928ffe6003882a1e
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453922"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806739"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++-Erweiterungsheader
 Der folgende Header ( **icrsint. h**) beschreibt die Schnittstelle, mit der Clients Felder aus einem **Recordset** in Variablen abrufen können, die in einer Klasse definiert sind, die von **CADORecordBinding**abgeleitet wurde. Sie müssen für jedes Feld, auf das Sie zugreifen möchten, ein ADO-Bindungs Makro angeben.  
@@ -209,5 +209,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Visual C++ Erweiterungen](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
- [Verwenden von Visual C++-Erweiterungen](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+ [Beispiel für Visual C++ Erweiterungen](./visual-c-extensions-example.md)   
+ [Verwenden von Visual C++-Erweiterungen](./using-visual-c-extensions.md)

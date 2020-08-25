@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e5e019760c4496b7dab769cb96fbd7b2eab4f47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7772a1c8583619288177dd5115f532b6d51532d9
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453702"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806368"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Aufrufen einer gespeicherten Prozedur als Methode für ein Connection-Objekt
 Eine gespeicherte Prozedur kann so aufgerufen werden, als ob es sich um eine systemeigene Methode auf dem zugeordneten geöffneten **Verbindungs** Objekt handelt. Dies ähnelt dem Aufrufen eines benannten Befehls für das **Verbindungs** Objekt.  
@@ -80,4 +80,4 @@ Set objComm = Nothing
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection-Objekt (ADO)](../../reference/ado-api/connection-object-ado.md)

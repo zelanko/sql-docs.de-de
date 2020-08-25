@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400362"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Senden von telemetriefeedback an Microsoft for Analytics Platform System
@@ -26,7 +26,7 @@ Analytics Platform System verfügt über ein optionales telemetriefeature, mit d
 Um den maximalen Datenschutz zu gewährleisten, wird APS ohne Aktivierung der Telemetrie ausgeliefert. Bevor Sie dieses Feature aktivieren, überprüfen Sie zunächst die [Microsoft Analytics Platform System Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkId=400902). Führen Sie das unten beschriebene PowerShell-Skript aus, um sich zu entscheiden.  
   
 ## <a name="enable-telemetry"></a><a name="enable"></a>Aktivieren von Telemetrie  
-**DNS-Weiterleitung:** Zum Senden von Telemetriedaten an Microsoft muss das Analytics Platform System über eine DNS-Weiterleitung eine Verbindung mit dem Internet herstellen. Zum Aktivieren dieses Features müssen Sie die DNS-Weiterleitung auf allen Hosts und Arbeits Auslastungs-VMS aktivieren. Rufen Sie `Enable-RemoteMonitoring` den Befehl mit `SetupDnsForwarder` der Option zum ordnungsgemäßen Konfigurieren der DNS-Weiterleitung und zum Aktivieren der Telemetrie auf Rufen Sie `Enable-RemoteMonitoring` den Befehl ohne `SetupDnsForwarder` die Option auf, wenn die DNS-Weiterleitung bereits konfiguriert ist und Sie nur die Takt Überwachung aktivieren möchten.  
+**DNS-Weiterleitung:** Zum Senden von Telemetriedaten an Microsoft muss das Analytics Platform System über eine DNS-Weiterleitung eine Verbindung mit dem Internet herstellen. Zum Aktivieren dieses Features müssen Sie die DNS-Weiterleitung auf allen Hosts und Arbeits Auslastungs-VMS aktivieren. Rufen `Enable-RemoteMonitoring` Sie den Befehl mit der `SetupDnsForwarder` Option zum ordnungsgemäßen Konfigurieren der DNS-Weiterleitung und zum Aktivieren der Telemetrie auf Rufen `Enable-RemoteMonitoring` Sie den Befehl ohne die `SetupDnsForwarder` Option auf, wenn die DNS-Weiterleitung bereits konfiguriert ist und Sie nur die Takt Überwachung aktivieren möchten.  
   
 > [!IMPORTANT]  
 > Durch Aktivieren der DNS-Weiterleitung wird die Internetverbindung für alle Hosts und workloadvms geöffnet  
@@ -35,9 +35,9 @@ Um den maximalen Datenschutz zu gewährleisten, wird APS ohne Aktivierung der Te
   
 1.  Stellen Sie mithilfe eines Appliance-Domänen Administrator Kontos eine Verbindung mit dem Steuerungs Knoten (<strong>*appliance_domain*-CTL01</strong>) her, und öffnen Sie mithilfe der Windows-Administrator Anmelde Informationen eine Eingabeaufforderung.  
   
-2.  Navigieren Sie zum folgenden Verzeichnis: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
+2.  Navigieren Sie zum folgenden Verzeichnis: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-3.  Importieren des Moduls`Configure-RemoteMonitoring.ps1`  
+3.  Importieren des Moduls `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Zum Importieren von müssen Sie zwei Zeiträume im-Befehl verwenden.  
@@ -48,12 +48,12 @@ Um den maximalen Datenschutz zu gewährleisten, wird APS ohne Aktivierung der Te
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
     ```  
   
-4.  Rufen Sie `Enable-RemoteMonitoring` den Befehl auf.  
+4.  Rufen Sie den `Enable-RemoteMonitoring` Befehl auf.  
   
     > [!NOTE]  
     > Das Skript geht davon aus, dass die Internetverbindung ordnungsgemäß funktioniert und die Internetverbindung nicht überprüft.  
   
-    1.  Wenn Sie die Telemetrie zum ersten Mal aktivieren, verwenden Sie den folgenden Befehl, um sicherzustellen, dass alle DNS-Weiterleitungen ordnungsgemäß konfiguriert sind. Ersetzen Sie in diesem Beispiel die IP-Adresse `xx.xx.xx.xx` des DNS-weitergeleiteten durch die DNS-Weiterleitungs-IP-Adresse in Ihrer Umgebung.  
+    1.  Wenn Sie die Telemetrie zum ersten Mal aktivieren, verwenden Sie den folgenden Befehl, um sicherzustellen, dass alle DNS-Weiterleitungen ordnungsgemäß konfiguriert sind. Ersetzen Sie in diesem Beispiel die IP-Adresse des DNS-weitergeleiteten `xx.xx.xx.xx` durch die DNS-Weiterleitungs-IP-Adresse in Ihrer Umgebung.  
   
         ```  
         PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Enable-RemoteMonitoring -SetupDnsForwarder -DnsForwarderIp xx.xx.xx.xx  
@@ -73,7 +73,7 @@ Um den maximalen Datenschutz zu gewährleisten, wird APS ohne Aktivierung der Te
   
 Wenn Sie " **N**" eingegeben haben, werden keine Befehle ausgeführt, und die Funktion wird nicht aktiviert, und Sie müssen nichts weiter tun.  
   
-Es gibt keinen Schaden bei der mehrfach `Enable-RemoteMonitoring` Ausführung des Befehls. Wenn die DNS-Weiterleitung bereits festgelegt ist, erhalten Sie eine Warnmeldung, die angibt, dass dies der Fall ist.  
+Es gibt keinen Schaden bei der mehrfach Ausführung des `Enable-RemoteMonitoring` Befehls. Wenn die DNS-Weiterleitung bereits festgelegt ist, erhalten Sie eine Warnmeldung, die angibt, dass dies der Fall ist.  
   
 ## <a name="disable-telemetry"></a><a name="disable"></a>Deaktivieren der Telemetrie  
 Durch das Deaktivieren der Telemetrie werden alle Vorgänge angehalten, die Informationen über den Zustand des Geräts an den APS-Überwachungsdienst in der Cloud übermitteln.  
@@ -85,9 +85,9 @@ Durch das Deaktivieren der Telemetrie werden alle Vorgänge angehalten, die Info
   
 1.  Stellen Sie mithilfe eines Appliance-Domänen Administrator Kontos eine Verbindung mit dem Steuerungs Knoten (<strong>*appliance_domain*-CTL01</strong>) her, und öffnen Sie ein PowerShell-Fenster mit Administratorrechten.  
   
-2.  Navigieren Sie zum folgenden Verzeichnis: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
+2.  Navigieren Sie zum folgenden Verzeichnis: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-3.  Importieren des Moduls`Configure-RemoteMonitoring.ps1`  
+3.  Importieren des Moduls `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Zum Importieren von müssen Sie zwei Zeiträume im-Befehl verwenden.  
@@ -98,7 +98,7 @@ Durch das Deaktivieren der Telemetrie werden alle Vorgänge angehalten, die Info
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
     ```  
   
-4.  Rufen Sie `Disable-RemoteMonitoring` den Befehl ohne Parameter auf. Mit diesem Befehl wird das Senden von Feedback beendet. (Dies wirkt sich nicht auf die lokale Überwachung aus.) Der Befehl deaktiviert jedoch nicht die DNS-Weiterleitung und/oder deaktiviert jegliche Internet Konnektivität. Dies muss manuell nach der erfolgreichen Deaktivierung des Feedbacks erfolgen.  
+4.  Rufen Sie den `Disable-RemoteMonitoring` Befehl ohne Parameter auf. Mit diesem Befehl wird das Senden von Feedback beendet. (Dies wirkt sich nicht auf die lokale Überwachung aus.) Der Befehl deaktiviert jedoch nicht die DNS-Weiterleitung und/oder deaktiviert jegliche Internet Konnektivität. Dies muss manuell nach der erfolgreichen Deaktivierung des Feedbacks erfolgen.  
   
     **Beispiel:**  
   
@@ -108,7 +108,7 @@ Durch das Deaktivieren der Telemetrie werden alle Vorgänge angehalten, die Info
   
 Wenn Sie Fehler oder Informationen sehen, die Sie dazu führen, dass der Befehl nicht erfolgreich ist, wenden Sie sich an CSS, um Unterstützung zu erhalten.  
   
-Es gibt keinen Schaden bei der mehrfach `Disable-RemoteMonitoring` Ausführung des Befehls.  
+Es gibt keinen Schaden bei der mehrfach Ausführung des `Disable-RemoteMonitoring` Befehls.  
   
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen finden Sie unter

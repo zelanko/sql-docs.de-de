@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4325dfa9c16edba12c2bba694b47c1b0875c7c6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400314"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Software Wartung in Analytics Platform System
 In diesem Abschnitt werden die Anforderungen an die Softwarewartung für Analytics-Plattformsysteme zusammengefasst, einschließlich WSUS-und Analytics-Plattformsystem-Hotfixes  
   
 ## <a name="software-servicing-basics"></a><a name="Basics"></a>Grundlagen der Software Wartung  
-**WSUS:** Ihre Analytics-Platt Form System Appliance muss so konfiguriert werden, dass Sie Updates von Windows Server Update Services (WSUS) empfängt. Diese Updates enthalten wichtige Änderungen an der Geräte Software. Nachdem Sie konfiguriert wurden, werden viele Updates automatisch installiert und erfordern keine praktische Verwaltung. In der Regel werden WSUS-Updates während des Setups der neuen Appliance [Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform&#41;System](configure-windows-server-update-services-wsus.md) konfiguriert. Andernfalls kann dieser Konfigurationsschritt später ausgeführt werden. Weitere Informationen zu WSUS finden Sie im [WSUS-Website Handbuch](https://go.microsoft.com/fwlink/?LinkId=202417).  
+**WSUS:** Ihre Analytics-Platt Form System Appliance muss so konfiguriert werden, dass Sie Updates von Windows Server Update Services (WSUS) empfängt. Diese Updates enthalten wichtige Änderungen an der Geräte Software. Nachdem Sie konfiguriert wurden, werden viele Updates automatisch installiert und erfordern keine praktische Verwaltung. In der Regel werden WSUS-Updates während des Setups der neuen Appliance [Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform&#41;System ](configure-windows-server-update-services-wsus.md) konfiguriert. Andernfalls kann dieser Konfigurationsschritt später ausgeführt werden. Weitere Informationen zu WSUS finden Sie im [WSUS-Website Handbuch](https://go.microsoft.com/fwlink/?LinkId=202417).  
   
 **Hotfixes:** Außerdem müssen Sie möglicherweise Analytics-Platt Form System-Hotfixes anwenden. Ein *Hotfix* ist ein Software Update, das für einen bestimmten Kunden erstellt wird, um ein Problem mit der Analytics-Platt Form System Software zu beheben. Jeder Hotfix ist eine ausführbare Datei, die die Behebung für das kundenspezifische Problem installiert. Jeder Hotfix enthält auch eine Ansammlung aller bereits veröffentlichten Software Updates für Windows, SQL Server und Analytics Platform System. Wenn Sie einen Hotfix installieren müssen, stellt Ihnen der Microsoft-Support den Hotfix und die Anweisungen zur Verfügung.  
   

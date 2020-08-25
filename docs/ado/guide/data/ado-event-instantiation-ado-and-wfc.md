@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453832"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806450"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO-Ereignisinstanziierung: ADO und WFC
 ADO für Windows Foundation Classes (ADO/WFC) baut auf dem ADO-Ereignis Modell auf und stellt eine vereinfachte Anwendungsprogrammierschnittstelle dar. Im allgemeinen fängt ADO/WFC ADO-Ereignisse ab, konsolidiert die Ereignis Parameter in einer einzelnen Ereignisklasse und ruft dann Ihren Ereignishandler auf.  
@@ -53,7 +53,7 @@ ADO für Windows Foundation Classes (ADO/WFC) baut auf dem ADO-Ereignis Modell a
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     Das erste Argument ist der Typ des Objekts, das das Ereignis gesendet hat ([Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) oder [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)), und das zweite Argument ist das ADO/WFC-Ereignis Objekt (**ConnectionEvent** oder **RecordsetEvent**).  
+     Das erste Argument ist der Typ des Objekts, das das Ereignis gesendet hat ([Verbindung](../../reference/ado-api/connection-object-ado.md) oder [Recordset](../../reference/ado-api/recordset-object-ado.md)), und das zweite Argument ist das ADO/WFC-Ereignis Objekt (**ConnectionEvent** oder **RecordsetEvent**).  
   
      Die Signatur des Ereignis Handlers ist einfacher als ein ADO-Ereignis. Sie müssen jedoch weiterhin das ADO-Ereignis Modell verstehen, um zu wissen, welche Parameter für ein Ereignis gelten und wie Sie reagieren.  
   
@@ -61,9 +61,9 @@ ADO für Windows Foundation Classes (ADO/WFC) baut auf dem ADO-Ereignis Modell a
   
 7.  Wenn die Verarbeitung abgeschlossen ist, entfernen Sie den Handler aus der Liste der ADO/WFC-Ereignishandler. Verwenden Sie die-Methode mit einem Namen wie **RemoveOn**_EventName_(*Handler*).  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignis Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO-WFC-Syntax Index](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [Ereignis Parameter](../../../ado/guide/data/event-parameters.md)   
- [Zusammenarbeiten von Ereignis Handlern](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Ereignis Typen](../../../ado/guide/data/types-of-events.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO-Ereignis Handler-Zusammenfassung](./ado-event-handler-summary.md)   
+ [ADO-WFC-Syntax Index](../../reference/ado-api/ado-wfc-syntax-index.md)   
+ [Ereignis Parameter](./event-parameters.md)   
+ [Zusammenarbeiten von Ereignis Handlern](./how-event-handlers-work-together.md)   
+ [Ereignistypen](./types-of-events.md)

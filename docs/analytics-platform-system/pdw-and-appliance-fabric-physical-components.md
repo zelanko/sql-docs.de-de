@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400923"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Physische Appliance von Appliance-Analytics Platform System
@@ -49,7 +49,7 @@ Ein virtueller Computer, auf dem der Computeknoten ausgeführt wird. In diesem K
 ## <a name="appliance-fabric-components"></a><a name="fabric"></a>Appliance Fabric-Komponenten  
 Diese Komponenten sind Bestandteil des Appliance-Fabrics.  
   
-### <a name="virtual-machines"></a>Virtual Machines  
+### <a name="virtual-machines"></a>Virtuelle Computer  
 *appliance_domain*-WDS  
 Dieser virtuelle Computer hostet die Windows-Bereitstellungs Dienste (Windows Deployment Services, WDS), von denen Analytics Platform System Windows-Betriebssysteme über das Geräte Netzwerk bereitstellt Außerdem hostet Sie den DHCP-Dienst, der es den Geräte Hosts ermöglicht, dem Geräte Netzwerk beizutreten, ohne eine vorkonfigurierte IP-Adresse zu haben.  
   

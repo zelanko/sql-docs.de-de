@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec2dbf3dfb24fc484368f3fa2e2c2e950dbd20ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0f425deb87e831547d24a4b81f7d1a601e344a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453112"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805672"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Verarbeitung nicht-parametrisierter Befehle
 Bei nicht parametrisierten Befehlen werden alle Anbieter Befehle ausgeführt, und die **Recordsets** werden während der Ausführung des Befehls erstellt. Wenn der Befehl synchron ausgeführt wird, werden alle **Recordsets** vollständig aufgefüllt. Wenn ein asynchroner auffüllungs Modus ausgewählt wurde, hängt der auffüllungs Status der **Recordsets** vom auffüllungs Modus und der Größe der **Recordsets**ab.  
@@ -38,11 +38,11 @@ SHAPE {SELECT * FROM Customers}
   
  Wenn Sie auf den Verweis in der Kapitel-Spalte zugreifen, ruft ADO automatisch das **Recordset** ab, das durch den Verweis dargestellt wird. Beachten Sie, dass in einem nicht parametrisierten Befehl, obwohl das gesamte untergeordnete **Recordset** abgerufen wurde, das Kapitel nur eine Teilmenge der Zeilen darstellt.  
   
- Wenn die angefügte Spalte keinen *Chapter-Alias*hat, wird automatisch ein Name generiert. Ein [Feld](../../../ado/reference/ado-api/field-object.md) Objekt für die Spalte wird an die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung des **Recordset** -Objekts angehängt, und sein Datentyp **lautet adChapter**.  
+ Wenn die angefügte Spalte keinen *Chapter-Alias*hat, wird automatisch ein Name generiert. Ein [Feld](../../reference/ado-api/field-object.md) Objekt für die Spalte wird an die [Fields](../../reference/ado-api/fields-collection-ado.md) -Auflistung des **Recordset** -Objekts angehängt, und sein Datentyp **lautet adChapter**.  
   
- Informationen zum Navigieren in einem hierarchischen **Recordset**finden Sie unter [zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Informationen zum Navigieren in einem hierarchischen **Recordset**finden Sie unter [zugreifen auf Zeilen in einem hierarchischen Recordset](./accessing-rows-in-a-hierarchical-recordset.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beispiel für Daten Strukturierung](../../../ado/guide/data/data-shaping-example.md)   
- [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
- [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)
+ [Beispiel für Daten Strukturierung](./data-shaping-example.md)   
+ [Formale Form Grammatik](./formal-shape-grammar.md)   
+ [Shape-Befehle im Allgemeinen](./shape-commands-in-general.md)

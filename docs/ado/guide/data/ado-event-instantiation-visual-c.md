@@ -13,15 +13,15 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 118b3515665da6a5f03e6001d9b4a1b7d1822ab5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25271ea1cf080f8f2bb599681a54af967a2d4ad2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453782"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806434"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO-Ereignisinstanziierung: Visual C++
-Dies ist eine Schema bezogene Beschreibung, wie ADO-Ereignisse in Microsoft® Visual C++® instanziiert werden. Eine umfassende Beschreibung finden Sie unter Beispiel für das [ADO-Ereignis Modell (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) .  
+Dies ist eine Schema bezogene Beschreibung, wie ADO-Ereignisse in Microsoft® Visual C++® instanziiert werden. Eine umfassende Beschreibung finden Sie unter Beispiel für das [ADO-Ereignis Modell (VC + +)](../../reference/ado-api/ado-events-model-example-vc.md) .  
   
  Erstellen von Klassen, die von den Schnittstellen " **ConnectionEventsVt** " und " **recordmenteventsvt** " in der Datei "adoint. h" abgeleitet wurden  
   
@@ -68,7 +68,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  Die Ereignis Klassen erben von **IUnknown**, sodass Sie auch die Methoden **QueryInterface**, **adressf**und **Release** implementieren müssen. Implementieren Sie auch Klassenkonstruktoren und Dekonstruktoren. Wählen Sie die Visual C++ Tools, mit denen Sie diesen Teil der Aufgabe am bequemsten können.  
   
- Legen Sie fest, dass Ihre Ereignishandler verfügbar sind, indem **Sie QueryInterface** für das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekte für die Schnittstellen **IConnectionPointContainer** und **IConnectionPoint** ausgeben. Geben Sie dann **IConnectionPoint:: Rat** für jede Klasse aus.  
+ Legen Sie fest, dass Ihre Ereignishandler verfügbar sind, indem **Sie QueryInterface** für das [Recordset](../../reference/ado-api/recordset-object-ado.md) und [Verbindungs](../../reference/ado-api/connection-object-ado.md) Objekte für die Schnittstellen **IConnectionPointContainer** und **IConnectionPoint** ausgeben. Geben Sie dann **IConnectionPoint:: Rat** für jede Klasse aus.  
   
  Nehmen Sie beispielsweise an, dass Sie eine boolesche Funktion verwenden, die **true** zurückgibt, wenn Sie ein **Recordset** -Objekt erfolgreich informiert, dass Sie über Ereignishandler verfügen.  
   
