@@ -3,7 +3,7 @@ description: Cellset-Objekt (ADO MD)
 title: CellSet-Objekt (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65e5e28443fd4656aa2b953f18b07c952bcbb66a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 411ed21d5fecf5c9791a5d96aac60724e7446958
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778309"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987151"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset-Objekt (ADO MD)
 Stellt die Ergebnisse einer mehrdimensionalen Abfrage dar. Es handelt sich um eine Sammlung von Zellen, die aus Cubes oder anderen Cellsets ausgewählt wurden.  
@@ -33,7 +33,6 @@ Stellt die Ergebnisse einer mehrdimensionalen Abfrage dar. Es handelt sich um ei
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
  Es gibt kein Konzept einer aktiven Zelle in einem CellSet. Stattdessen ruft die [Item](./item-property-ado-md-cellset.md) -Eigenschaft ein bestimmtes [Cell](./cell-object-ado-md.md) -Objekt aus dem Cellset ab. Die Argumente der **Item** -Eigenschaft bestimmen, welche Zelle abgerufen wird. Sie können den eindeutigen Ordinalwert einer Zelle angeben. Sie können auch Zellen abrufen, indem Sie Ihre Positionsnummern entlang der einzelnen Achsen der Cellsets verwenden. Weitere Informationen zum Abrufen von Zellen finden Sie unter der [Item](./item-property-ado-md-cellset.md) -Eigenschaft.  
   
  Mit den Auflistungen, Methoden und Eigenschaften eines **Cellset** -Objekts können Sie folgende Aufgaben ausführen:  

@@ -3,7 +3,7 @@ description: Append-Methode (ADO)
 title: Append-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87c4c1b9842dbd104a69ff4ba6a90eae2d7b1369
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 84969b95751726579bdc7d4a61aee311b95b6108
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776509"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976081"
 ---
 # <a name="append-method-ado"></a>Append-Methode (ADO)
 Fügt ein Objekt an eine Auflistung an. Wenn es sich bei der Auflistung um [Felder](./fields-collection-ado.md)handelt, kann ein neues [Feld](./field-object.md) Objekt erstellt werden, bevor es an die Auflistung angefügt wird.  
@@ -35,7 +35,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *collection*  
+ *Ausstellung*  
  Ein Auflistungs Objekt.  
   
  *fields*  
@@ -47,7 +47,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *Name*  
  Ein **Zeichen** folgen Wert, der den Namen des neuen **Feld** Objekts enthält und nicht denselben Namen wie ein beliebiges anderes Objekt in *Feldern*aufweisen darf.  
   
- *Typ*  
+ *Type*  
  Ein [datatyetenum](./datatypeenum.md) -Wert, dessen Standardwert " **adempty**" ist, der den Datentyp des neuen Felds angibt. Die folgenden Datentypen werden nicht von ADO unterstützt und sollten nicht verwendet werden, wenn neue Felder an ein [Recordset-Objekt (ADO)](./recordset-object-ado.md)angehängt werden: **adidispatch**, **adiunknown**, **advariant**.  
   
  *DefinedSize*  

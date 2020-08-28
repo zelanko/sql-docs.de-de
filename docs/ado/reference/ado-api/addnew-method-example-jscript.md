@@ -3,7 +3,7 @@ description: AddNew-Methode – Beispiel (JScript)
 title: AddNew-Methode (Beispiel) (JScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 100329a51cbf3cbde4de4f82bc033dcb583efe90
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0fddb6ba43923692fd8811d2648460a243dc8354
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760222"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976731"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew-Methode – Beispiel (JScript)
 In diesem Beispiel wird die [AddNew](./addnew-method-ado.md) -Methode verwendet, um einen neuen Datensatz mit dem angegebenen Namen zu erstellen. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **addnewjs. ASP**.  

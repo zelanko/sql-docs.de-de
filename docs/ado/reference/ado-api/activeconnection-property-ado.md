@@ -3,7 +3,7 @@ description: ActiveConnection-Eigenschaft (ADO)
 title: ActiveConnection-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 344e712551e46d1ec28f75864dacbdfc39989248
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: bc1a54d70639e4e3ff78748b4e04483fcfefafdb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760100"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976961"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection-Eigenschaft (ADO)
 Gibt an, zu welchem [Verbindungs](./connection-object-ado.md) Objekt der angegebene [Befehl](./command-object-ado.md), das [Recordset](./recordset-object-ado.md)oder das [Datensatz](./record-object-ado.md) -Objekt derzeit gehört.  
@@ -31,10 +31,10 @@ Gibt an, zu welchem [Verbindungs](./connection-object-ado.md) Objekt der angegeb
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen Zeichen folgen Wert fest, der eine Definition für eine Verbindung enthält, wenn die Verbindung geschlossen wird, oder **gibt einen** **Zeichen** folgen Wert zurück, der das aktuelle **Verbindungs** Objekt enthält, wenn die Verbindung geöffnet ist. Der Standardwert ist ein NULL-Objekt Verweis. Siehe die [ConnectionString](./connectionstring-property-ado.md) -Eigenschaft.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **ActiveConnection** -Eigenschaft, um das **Verbindungs** Objekt zu ermitteln, über das das angegebene **Befehls** Objekt ausgeführt wird oder das angegebene **Recordset** geöffnet wird.  
   
-## <a name="command"></a>Get-Help  
+## <a name="command"></a>Befehl  
  Für **Befehls** Objekte ist die **ActiveConnection** -Eigenschaft Lese-/Schreibzugriff.  
   
  Wenn Sie versuchen, die [Execute](./execute-method-ado-command.md) -Methode für ein **Befehls** Objekt aufzurufen, bevor Sie diese Eigenschaft auf ein offenes **Verbindungs** Objekt oder eine gültige Verbindungs Zeichenfolge festlegen, tritt ein Fehler auf.  

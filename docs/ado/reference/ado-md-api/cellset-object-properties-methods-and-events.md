@@ -3,7 +3,7 @@ description: Cellset-Objekt – Eigenschaften, Methoden und Ereignisse
 title: Cellset-Objekteigenschaften,-Methoden und-Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1893237b985cc5dc7ef83b43e42007ba8cdd6512
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 72f51e61185269633cc3a218d48379060698342b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778299"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987141"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Cellset-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -41,7 +41,7 @@ ms.locfileid: "88778299"
   
  [Open-Methode](./open-method-ado-md.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Ereignisse  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  

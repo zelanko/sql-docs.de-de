@@ -3,7 +3,7 @@ description: AddNew-Methode (ADO)
 title: AddNew-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e16fb5d00ed38a0adbbb28b9c13e34f75f26236
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 4695d1cf70328adad910d5b2b34e6b346b8049a4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760232"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976801"
 ---
 # <a name="addnew-method-ado"></a>AddNew-Methode (ADO)
 Erstellt einen neuen Datensatz für ein Aktualisier bares [Recordset](./recordset-object-ado.md) -Objekt.  
@@ -44,7 +44,7 @@ recordset.AddNew FieldList, Values
  *Werte*  
  Optional. Ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz. Wenn *FieldList* ein Array ist, müssen die *Werte* auch ein Array mit derselben Anzahl von Membern sein. Andernfalls tritt ein Fehler auf. Die Reihenfolge der Feldnamen muss der Reihenfolge der Feldwerte in jedem Array entsprechen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **AddNew** -Methode, um einen neuen Datensatz zu erstellen und zu initialisieren. Verwenden Sie die Methode [unterstützt](./supports-method.md) mit **adAddNew** (ein [Cursor](./cursoroptionenum.md) Wert), um zu überprüfen, ob dem aktuellen **Recordset** -Objektdaten Sätze hinzugefügt werden können.  
   
  Nachdem Sie die **AddNew** -Methode aufgerufen haben, wird der neue Datensatz zum aktuellen Datensatz und bleibt nach dem Abrufen der [Update](./update-method.md) -Methode aktuell. Da der neue Datensatz an das **Recordset**angehängt wird, wird ein **MoveNext** -Befehl nach dem Update nach dem Ende des **Recordsets**verschoben, sodass **EOF** true ist. Wenn das **Recordset** -Objekt keine Lesezeichen unterstützt, können Sie möglicherweise nicht mehr auf den neuen Datensatz zugreifen, wenn Sie zu einem anderen Datensatz wechseln. Abhängig vom Cursortyp müssen Sie möglicherweise die [Requery](./requery-method.md) -Methode aufzurufen, um den neuen Datensatz zugänglich zu machen.  

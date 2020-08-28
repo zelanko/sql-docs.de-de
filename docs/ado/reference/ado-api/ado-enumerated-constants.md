@@ -3,7 +3,7 @@ description: ADO – Enumerationskonstanten
 title: ADO-Enumerationskonstanten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2b7890cc9926025e7662e8571fb79309590f9de
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c3c19b98cbb000abc93755c3de43ac5420db164d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776681"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976481"
 ---
 # <a name="ado-enumerated-constants"></a>ADO – Enumerationskonstanten
 Um das Debuggen zu unterstützen, listet die ADO-Enumerationen einen Wert für jede Konstante auf. Dieser Wert ist jedoch rein beratend und kann sich von einem Release von ADO zu einem anderen ändern. Der Code sollte nur vom Namen und nicht vom tatsächlichen Wert der einzelnen Enumerationskonstanten abhängen.  

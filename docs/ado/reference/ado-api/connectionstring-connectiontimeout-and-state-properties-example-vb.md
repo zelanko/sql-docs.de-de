@@ -3,7 +3,7 @@ description: Beispiel für ConnectionString, ConnectionTimeout und State Propert
 title: Verbindungs Eigenschaften (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc8619fd7c803fdbf417368ef8e7e896e1947ab2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6154dd6f741383dfbb2c86db95e766fc9903e3d5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775919"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974791"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>Beispiel für ConnectionString, ConnectionTimeout und State Properties (VB)
 In diesem Beispiel werden verschiedene Möglichkeiten veranschaulicht, wie die [ConnectionString](./connectionstring-property-ado.md) -Eigenschaft verwendet wird, um ein [Verbindungs](./connection-object-ado.md) Objekt zu öffnen. Außerdem wird die [ConnectionTimeout](./connectiontimeout-property-ado.md) -Eigenschaft verwendet, um einen Verbindungs Timeout Zeitraum festzulegen, und die [State](./state-property-ado.md) -Eigenschaft, um den Status der Verbindungen zu überprüfen. Die GetState-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
