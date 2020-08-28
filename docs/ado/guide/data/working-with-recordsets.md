@@ -3,7 +3,7 @@ description: Arbeiten mit Recordsets
 title: Arbeiten mit Recordsets | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84f60e269bcd01bdacc7647f1498c588620f049e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a8ffeab33125b3b13ca5725125654bd3ed1f822
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452522"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978841"
 ---
 # <a name="working-with-recordsets"></a>Arbeiten mit Recordsets
 Das **Recordset** -Objekt verfügt über integrierte Funktionen, mit denen Sie die Reihenfolge der Daten im Resultset neu anordnen können, um anhand der von Ihnen bereitgestellten Kriterien nach einem bestimmten Datensatz zu suchen und um diese Suchvorgänge mithilfe von Indizes zu optimieren. Ob diese Features zur Verwendung verfügbar sind, hängt vom Anbieter und in einigen Fällen (z. b. von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft-der Struktur der Datenquelle) ab.  

@@ -3,7 +3,7 @@ description: Datensätze und Datenströme
 title: Datensätze und Streams | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8afaae4221c57a7f7d832c34f0a374981e081cf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38bf8e44ec6b9521a1608c6081697295e6d9aedf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452982"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979911"
 ---
 # <a name="records-and-streams"></a>Datensätze und Datenströme
 ADO stellt derzeit das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt als primäres Mittel für den Zugriff auf Informationen in Datenquellen, z. b. relationale Datenbanken, bereit. Einige Anbieter unterstützen jedoch die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -und [Streamobjekte](../../../ado/reference/ado-api/stream-object-ado.md) als Alternative oder ergänzende Objekte, mit denen Daten von Anbietern bearbeitet werden können. Einzelheiten zum **Daten Satz** Verhalten finden Sie in der Dokumentation Ihres Anbieters.  

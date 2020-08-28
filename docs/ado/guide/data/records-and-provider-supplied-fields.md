@@ -3,7 +3,7 @@ description: Datensätze und von Anbietern bereitgestellte Felder
 title: Datensätze und vom Anbieter bereitgestellte Felder | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd737ce36a53643503a5c76dfaafe2127c93f9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cc7b8c4fb0116f96a2470a7161f9fbd30c7efb9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453002"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979951"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Datensätze und von Anbietern bereitgestellte Felder
 Wenn ein [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekt geöffnet wird, kann seine Quelle die aktuelle Zeile eines geöffneten [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md), eine absolute URL oder eine relative URL in Verbindung mit einem geöffneten [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt sein.  
@@ -56,7 +56,7 @@ Wenn ein [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objek
 ## <a name="resource-recordset-columns"></a>Ressourcen-Recordsetspalten  
  Ein *Ressourcen-Recordset* besteht aus den folgenden Spalten.  
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|Typ|Beschreibung|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWchar|Schreibgeschützt. Gibt die URL der Ressource an.|  
 |RESOURCE_PARENTNAME|AdVarWchar|Schreibgeschützt. Gibt die absolute URL des übergeordneten Datensatzes an.|  

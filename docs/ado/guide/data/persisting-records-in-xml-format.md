@@ -3,7 +3,7 @@ description: Beibehalten von Datensätzen im XML-Format
 title: Beibehalten von Datensätzen im XML-Format | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b88bef75b0cbe13402d90264b766adf5a3005efd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31512fd9843ae5ff15fc2f7c6981fccdc926dbb5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453042"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980061"
 ---
 # <a name="persisting-records-in-xml-format"></a>Beibehalten von Datensätzen im XML-Format
 Ebenso wie das ADTG-Format wird die **recordsetpersistenz** im XML-Format mit dem Microsoft OLE DB Dauerhaftigkeits Anbieter implementiert. Dieser Anbieter generiert ein Schreib geschütztes vorwärts-Rowset aus einer gespeicherten XML-Datei oder einem Datenstrom, der die von ADO generierten Schema Informationen enthält. Ebenso kann Sie ein ADO- **Recordset**verwenden, XML generieren und in einer Datei oder einem beliebigen Objekt speichern, das die com- **IStream** -Schnittstelle implementiert. (Tatsächlich ist eine Datei nur ein weiteres Beispiel für ein Objekt, das **IStream**unterstützt.) Bei Version 2,5 und höher stützt ADO den Microsoft XML-Parser (MSXML), um den XML-Code in das **Recordset**zu laden. Daher ist msxml.dll erforderlich.  
@@ -71,22 +71,22 @@ rs.Save "btitles.sav", adPersistXML
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   
--   [XML Persistence Format (XML-Beibehaltungsformat)](../../../ado/guide/data/xml-persistence-format.md)  
+-   [XML-Beibehaltungsformat](../../../ado/guide/data/xml-persistence-format.md)  
   
 -   [Namespaces](../../../ado/guide/data/namespaces.md)  
   
--   [Schema-Abschnitt](../../../ado/guide/data/schema-section.md)  
+-   [Schemaabschnitt](../../../ado/guide/data/schema-section.md)  
   
 -   [Datenabschnitt](../../../ado/guide/data/data-section.md)  
   
 -   [Hierarchische Recordsets im XML-Format](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
   
--   [Recordset Dynamic Properties in XML (Dynamische Recordset-Eigenschaften in XML)](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
+-   [Dynamische Recordseteigenschaften in XML](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
   
 -   [XSLT Transformations (XSLT-Transformationen)](../../../ado/guide/data/xslt-transformations.md)  
   
--   [Saving to the XML DOM Object (Speichern in das XML DOM-Objekts)](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
+-   [Speichern in das XML-DOM-Objekt](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
   
 -   [Überlegungen zur Sicherheit bei XML](../../../ado/guide/data/xml-security-considerations.md)  
   
--   [Speicherszenario für XML-Recordsets](../../../ado/guide/data/xml-recordset-persistence-scenario.md)
+-   [Beibehaltungsszenario für XML-Recordsets](../../../ado/guide/data/xml-recordset-persistence-scenario.md)

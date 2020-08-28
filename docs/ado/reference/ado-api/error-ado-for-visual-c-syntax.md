@@ -3,7 +3,7 @@ description: Error (ADO für Visual C++-Syntax)
 title: Fehler (ADO für Visual C++-Syntax) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21fec845ce1bc7c9b23bc691492af1d88eb8eeb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc77b15187701e94469660e3cc8ef29c9a060139
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444002"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973765"
 ---
 # <a name="error-ado-for-visual-c-syntax"></a>Error (ADO für Visual C++-Syntax)
 ## <a name="properties"></a>Eigenschaften  

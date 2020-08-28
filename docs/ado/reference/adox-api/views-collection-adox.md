@@ -3,7 +3,7 @@ description: Views-Collection (ADOX)
 title: Views-Auflistung (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a024f21e83a25a82a226428835215a8cba9e21e9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 26d61c1d2835d9dcabba82beb2a120330f8f2ead
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768919"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982871"
 ---
 # <a name="views-collection-adox"></a>Views-Collection (ADOX)
 Enthält alle [Ansichts](./view-object-adox.md) Objekte eines Katalogs.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die [Append](./append-method-adox-views.md) -Methode für eine **views** -Auflistung ist für ADOX eindeutig. Ihre Möglichkeiten:  
+ Die [Append](./append-method-adox-views.md) -Methode für eine **views** -Auflistung ist für ADOX eindeutig. Sie haben folgende Möglichkeiten:  
   
 -   Fügen Sie der Auflistung mithilfe der **Append** -Methode eine neue Ansicht hinzu.  
   
- Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Sie haben folgende Möglichkeiten:  
   
 -   Greifen Sie mit der [Item](../ado-api/item-property-ado.md) -Eigenschaft auf eine Ansicht in der Auflistung zu.  
   

@@ -3,7 +3,7 @@ description: Verwenden von CacheSize
 title: Verwenden von CacheSize | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5514f7b3a08d212e435a40341fc32033ec226c78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97f6dba7bf01b3236d6b8b00e6338185cf6a8d41
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452582"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979001"
 ---
 # <a name="using-cachesize"></a>Verwenden von CacheSize
 Verwenden Sie die **CacheSize** -Eigenschaft, um zu steuern, wie viele Datensätze gleichzeitig vom Anbieter in den lokalen Speicher abgerufen werden sollen. Wenn die **CacheSize** z. b. 10 ist, ruft der Anbieter nach dem ersten Öffnen des **Recordset** -Objekts die ersten 10 Datensätze in den lokalen Arbeitsspeicher ab. Wenn Sie durch das **Recordset** -Objekt wechseln, gibt der Anbieter die Daten aus dem lokalen Speicherpuffer zurück. Sobald Sie mit dem letzten Datensatz im Cache fortfahren, ruft der Anbieter die nächsten 10 Datensätze aus der Datenquelle in den Cache ab.  

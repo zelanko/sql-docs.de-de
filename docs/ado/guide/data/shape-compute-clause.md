@@ -3,7 +3,7 @@ description: SHAPE COMPUTE-Klausel
 title: Shape-COMPUTE-Klausel | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67411cf8d9be50571a515b5e7cf906fd19a650ec
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452842"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979601"
 ---
 # <a name="shape-compute-clause"></a>SHAPE COMPUTE-Klausel
 Eine Shape-COMPUTE-Klausel generiert ein übergeordnetes **Recordset**, dessen Spalten aus einem Verweis auf das untergeordnete **Recordset**bestehen. optionale Spalten, deren Inhalt Kapitel, neue oder berechnete Spalten ist, oder das Ergebnis der Ausführung von Aggregatfunktionen für das untergeordnete **Recordset** oder ein zuvor geformtes **Recordset**. und alle Spalten aus dem untergeordneten **Recordset** , die in der optionalen BY-Klausel aufgeführt sind.  
@@ -77,7 +77,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  Nehmen Sie beispielsweise an, Sie verfügen über eine Tabelle mit dem Namen Demographics, die aus den Feldern State, City und Population besteht. (Die Bevölkerungszahlen in der Tabelle werden ausschließlich als Beispiel bereitgestellt.)  
   
-|Staat|City|Auffüllung|  
+|State|City|Auffüllung|  
 |-----------|----------|----------------|  
 |WA|Seattle|700.000|  
 |oder|Medford|200.000|  
@@ -105,7 +105,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>Parent  
   
-|Sum (RS). Bevölkerungs|rs|Staat|  
+|Sum (RS). Bevölkerungs|rs|State|  
 |---------------------------|--------|-----------|  
 |1,3 Millionen|Verweis auf child1|CA|  
 |1,2 Millionen|Verweis auf child2|WA|  
@@ -113,27 +113,27 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ## <a name="child1"></a>Child1  
   
-|Staat|City|Auffüllung|  
+|State|City|Auffüllung|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800.000|  
 |CA|San Diego|600.000|  
   
 ## <a name="child2"></a>Child2  
   
-|Staat|City|Auffüllung|  
+|State|City|Auffüllung|  
 |-----------|----------|----------------|  
 |WA|Seattle|700.000|  
 |WA|Tacoma|500.000|  
   
 ## <a name="child3"></a>Child3  
   
-|Staat|City|Auffüllung|  
+|State|City|Auffüllung|  
 |-----------|----------|----------------|  
 |oder|Medford|200.000|  
 |oder|Portland|400.000|  
 |oder|Corvallis|300.000|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Übersicht über die Daten Strukturierung](../../../ado/guide/data/data-shaping-overview.md)   
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   

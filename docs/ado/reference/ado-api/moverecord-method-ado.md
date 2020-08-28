@@ -3,7 +3,7 @@ description: MoveRecord-Methode (ADO)
 title: "\"Muecord\"-Methode (ADO) | Microsoft-Dokumentation"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0aa5aebbd3a87ede7d73223ffa7684bff837a328
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3425326f9693d7c411f97f04ab5f87bba46578b4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774219"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990511"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord-Methode (ADO)
 Verschiebt die durch einen [Datensatz](./record-object-ado.md) dargestellte Entität an einen anderen Speicherort.  
@@ -56,7 +56,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ## <a name="return-value"></a>Rückgabewert  
  Ein **Zeichen** folgen Wert. In der Regel wird der Wert des *Ziels* zurückgegeben. Der genaue zurückgegebene Wert ist jedoch vom Anbieter abhängig.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Werte von *Quelle* und *Ziel* dürfen nicht identisch sein. Andernfalls tritt ein Laufzeitfehler auf. Mindestens der Server-, der Pfad-und der Ressourcen Name müssen unterschiedlich sein.  
   
  Bei Dateien, die mithilfe des Internet Publishing Anbieters verschoben werden, aktualisiert diese Methode alle Hypertext Links in Dateien, die verschoben werden, sofern nicht anders durch *Optionen*angegeben. Diese Methode schlägt fehl, wenn das *Ziel* ein vorhandenes Objekt (z. b. eine Datei oder ein Verzeichnis) identifiziert, es sei denn, **admuveüberschreibung** ist angegeben  

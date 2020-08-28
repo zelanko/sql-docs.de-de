@@ -3,7 +3,7 @@ description: RDS-Programmiermodell im Detail
 title: RDS-Programmiermodell im Detail | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 310bcdad8358120a47cf01ec6734325ca5fa425d
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: af1b575f642159cad84d0ce833bb783cf2363701
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759660"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977971"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS-Programmiermodell im Detail
 Im folgenden sind die wichtigsten Elemente des RDS-Programmiermodells aufgeführt:  
@@ -65,7 +65,7 @@ Im folgenden sind die wichtigsten Elemente des RDS-Programmiermodells aufgeführ
   
  Das **RDS. Das DataControl** -Objekt verfügt auch über eigene Methoden zum Navigieren, Sortieren und Filtern der Zeilen des zugeordneten **Recordset** -Objekts. Diese Methoden sind ähnlich, aber nicht identisch mit den Methoden für das ADO- **Recordset** -Objekt.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Ereignisse  
  RDS unterstützt zwei der eigenen Ereignisse, die vom ADO-Ereignis Modell unabhängig sind. Das [onleserystatechange](../../reference/rds-api/onreadystatechange-event-rds.md) -Ereignis wird immer dann aufgerufen, wenn **RDS. Die DataControl** -Eigenschaft " [leserystate](../../reference/rds-api/readystate-property-rds.md) " ändert sich, sodass Sie benachrichtigt werden, wenn ein asynchroner Vorgang erfolgreich abgeschlossen wurde, beendet wurde oder einen Fehler festgestellt hat. Das [OnError](../../reference/rds-api/onerror-event-rds.md) -Ereignis wird immer dann aufgerufen, wenn ein Fehler auftritt, auch wenn der Fehler während eines asynchronen Vorgangs auftritt.  
   
 > [!NOTE]

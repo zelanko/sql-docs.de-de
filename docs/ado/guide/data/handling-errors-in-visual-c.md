@@ -3,7 +3,7 @@ description: Behandeln von Fehlern in Visual C++
 title: Behandeln von Fehlern in Visual C++ | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b43b8314e47c8a96dadcf8cab841a37da0c0518
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f61f6b9f27011543545932f9ce7d9e5d434bbf9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453292"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980621"
 ---
 # <a name="handling-errors-in-visual-c"></a>Behandeln von Fehlern in Visual C++
 In com geben die meisten Vorgänge einen HRESULT-Rückgabecode zurück, der angibt, ob eine Funktion erfolgreich abgeschlossen wurde. Die #Import-Direktive generiert Wrapper Code um jede "RAW"-Methode oder-Eigenschaft und überprüft das zurückgegebene HRESULT. Wenn HRESULT einen Fehler anzeigt, löst der Wrapper Code einen com-Fehler aus, indem _com_issue_errorex () mit dem HRESULT-Rückgabecode als Argument aufgerufen wird. COM-Fehler Objekte können in einem **try-catch-** Block abgefangen werden. (Aus Effizienzgründen sollten Sie einen Verweis auf ein _com_error Objekt abfangen.)  

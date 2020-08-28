@@ -3,7 +3,7 @@ description: Behandeln von ADO-Ereignissen
 title: Behandeln von ADO-Ereignissen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efe8c82021c647b622792e8413527589435d4086
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ff36542abb462ffc63e8704a5c6c3cdd6670d280
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806786"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980701"
 ---
 # <a name="handling-ado-events"></a>Behandeln von ADO-Ereignissen
 Das ADO-Ereignis Modell unterstützt bestimmte synchrone und asynchrone ADO-Vorgänge, durch die *Ereignisse*oder Benachrichtigungen ausgegeben werden, bevor der Vorgang gestartet oder abgeschlossen wird. Ein Ereignis ist tatsächlich ein Aufrufen einer Ereignishandlerroutine, die Sie in der Anwendung definieren.  

@@ -3,7 +3,7 @@ description: Benannte Befehle
 title: Benannte Befehle | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c5b5f21c1af3a3438b9e00cd00f4ed2baf338e2
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 986c82ca73e202ea2f07ab20822c73dbfe6e7832
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805793"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980271"
 ---
 # <a name="named-commands"></a>Benannte Befehle
 Beim [Erstellen und Ausführen eines einfachen Befehls](./creating-and-executing-a-simple-command.md) wird eine Möglichkeit zum Ausführen eines Befehls angezeigt. Es gibt eine weitere Möglichkeit: Sie können einen benannten Befehl erstellen und dann den benannten Befehl direkt für das **Verbindungs** Objekt (zugewiesen an die **ActiveConnection** -Eigenschaft des **Command** -Objekts) aufzurufen. Das Benennen eines Befehls bedeutet, dass der **Name** -Eigenschaft eines **Befehls** Objekts ein Name zugewiesen wird. Beispiel:  
