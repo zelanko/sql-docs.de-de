@@ -3,7 +3,7 @@ description: Visual Basic for Applications-Funktionen
 title: Visual Basic for Applications Funktionen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d680d8a0f0f7d34e9074b5e2e9e63aedd82a1217
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960e0f8cf42a2ef1f0b2b30f73a784d208777dae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452552"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978931"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications-Funktionen
 Die folgenden Visual Basic for Applications Funktionen können in Daten Strukturierungs Ausdrücken verwendet werden:  
@@ -58,7 +58,7 @@ Die folgenden Visual Basic for Applications Funktionen können in Daten Struktur
         DatTeil  
         DatSeriell  
         DatWert  
-        Tag  
+        Day (Tag)  
         GDA  
         Fehler  
         Error$  
@@ -120,7 +120,7 @@ Die folgenden Visual Basic for Applications Funktionen können in Daten Struktur
         ZZG  
         RGlätten  
         RTRIM $  
-        Second  
+        Sekunde  
         Vorzchn  
         Sin  
         LIA  

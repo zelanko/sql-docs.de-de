@@ -3,7 +3,7 @@ description: Muvefirst-, muvelast-, muvenext-und muveprevious-Methode (ADO)
 title: Muvefirst-, muvelast-, muvenext-und muveprevious-Methoden (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed06cde45393f347ed5a001ca7da7f7adde375c3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dd050c775c706b3cafe2586eed05d93f9079fe27
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774289"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990551"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>Muvefirst-, muvelast-, muvenext-und muveprevious-Methode (ADO)
 Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen [Recordset](./recordset-object-ado.md) -Objekt und legt diesen Datensatz auf den aktuellen Datensatz fest.  
@@ -43,7 +43,7 @@ Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angeg
 recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **MoveFirst** -Methode, um die aktuelle Daten Satz Position in den ersten Datensatz im **Recordset**zu verschieben.  
   
  Verwenden Sie die **MoveLast** -Methode, um die aktuelle Daten Satz Position in den letzten Datensatz im **Recordset**zu verschieben. Das **Recordset** -Objekt muss Lesezeichen oder rückwärts Cursor Bewegung unterstützen. Andernfalls generiert der Methoden aufrufsvorgang einen Fehler.  

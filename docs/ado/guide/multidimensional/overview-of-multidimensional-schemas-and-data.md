@@ -3,7 +3,7 @@ description: Übersicht über mehrdimensionale Schemas und Daten
 title: Übersicht über mehrdimensionale Schemas und Daten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c7fc8cd189534a217468f71188479a8df100fed6
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 431ff25d49c4a45055d796aba98f229564872a4e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758360"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978641"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Übersicht über mehrdimensionale Schemas und Daten
 ## <a name="understanding-multidimensional-schemas"></a>Grundlegendes zu mehrdimensionalen Schemas  
@@ -69,7 +69,7 @@ Hamburg, Munich, Stuttgart}
   
 -   Städte `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>Member  
  Elemente auf der Blatt Ebene einer Hierarchie haben keine untergeordneten Elemente, und Elemente auf der Stamm Ebene haben kein übergeordnetes Element. Alle anderen Member haben mindestens ein übergeordnetes Element und mindestens ein untergeordnetes Element. Beispielsweise ergibt eine partielle Durchquerung der Hierarchiestruktur in der Geography-Dimension die folgenden Beziehungen zwischen übergeordneten und untergeordneten Elementen:  
   
 -   `{All} (parent of) {Europe, North America}`  

@@ -3,7 +3,7 @@ description: Verwenden von RDS mit ODBC-Verbindungspooling
 title: Verwenden von RDS mit ODBC-Verbindungs Pooling | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 074226de92d5ea02a3eb507013c862e0ca493455
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 133b72de19edcf3e222c619b0edc1118a96d88ea
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760040"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977371"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Verwenden von RDS mit ODBC-Verbindungspooling
 Wenn Sie eine ODBC-Datenquelle verwenden, können Sie die Option Verbindungspooling in Internetinformationsdienste (IIS) verwenden, um eine leistungsstarke Verarbeitung der Client Auslastung zu erreichen. Das Verbindungspooling ist ein Ressourcen-Manager für Verbindungen, der den offenen Status für häufig verwendete Verbindungen aufrecht erhält.  

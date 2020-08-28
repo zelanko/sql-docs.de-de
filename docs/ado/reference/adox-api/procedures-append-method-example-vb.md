@@ -3,7 +3,7 @@ description: Append-Methode für Prozeduren – Beispiel(VB)
 title: Prozeduren Append-Methode (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8b9b58c50a1e3c77a6239c73222ea7a1656b882
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d757b2df05bd4f376bb7c6744fa75ac5453f83f6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769639"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983581"
 ---
 # <a name="procedures-append-method-example-vb"></a>Append-Methode für Prozeduren – Beispiel(VB)
 Der folgende Code veranschaulicht, wie ein [Befehls](../ado-api/command-object-ado.md) Objekt und die [Prozeduren](./procedures-collection-adox.md) -Auflistungs [Methode zum](./append-method-adox-procedures.md) Erstellen einer neuen Prozedur in der zugrunde liegenden Datenquelle verwendet werden.  

@@ -3,7 +3,7 @@ description: ADCPROP_ASYNCTHREADPRIORITY_ENUM
 title: ADCPROP_ASYNCTHREADPRIORITY_ENUM | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 446a220868a2cf0b0a518bde95897b9d1f41a3b3
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: e01a004ded0b6ed3151ba28c747d3ea245462f92
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760275"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976871"
 ---
 # <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 Gibt für ein [Recordset](./recordset-object-ado.md) RDS-Recordsetobjekt die Ausführungs Priorität des asynchronen Threads an, der Daten abruft.  
   
  Verwenden Sie diese Konstanten mit **der dynamischen** %% amp; quot;**Background Thread Priority**-Eigenschaft, auf die im ADO-to-OLE DB Dynamic Property Index verwiesen wird und der im [Microsoft Cursor-Dienst für OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) Dokumentation dokumentiert ist.  
   
-|Konstant|Wert|BESCHREIBUNG|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adpriorityabovenormal**|4|Legt die Priorität zwischen normal und höchste Priorität fest.|  
 |**adprioritybelownormal**|2|Legt die Priorität zwischen dem niedrigsten und dem normalen fest.|  
@@ -39,7 +39,7 @@ Gibt für ein [Recordset](./recordset-object-ado.md) RDS-Recordsetobjekt die Aus
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |Adoumums. adcpropasyncthreadpriority. AboveNormal|  
 |AdoEnums. adcpropasyncthreadpriority. BelowNormal|  

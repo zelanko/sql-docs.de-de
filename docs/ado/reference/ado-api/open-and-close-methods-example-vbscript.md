@@ -3,7 +3,7 @@ description: Open- und Close-Methode – Beispiel (VBScript)
 title: Open-und Close-Methoden Beispiel (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3847fb3f9beaba4abe7820dae16cd57eba1cedd3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c126e00d424e01bfa25fd74356678245ca1eac8b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773829"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990361"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open- und Close-Methode – Beispiel (VBScript)
 In diesem Beispiel werden die [Open](./open-method-ado-recordset.md) -und [Close](./close-method-ado.md) -Methode sowohl für [Recordset](./recordset-object-ado.md) -als auch für [Verbindungs](./connection-object-ado.md) Objekte verwendet, die geöffnet wurden.  
