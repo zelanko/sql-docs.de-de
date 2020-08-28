@@ -3,7 +3,7 @@ description: Verwenden von Textmarken
 title: Verwenden von Lesezeichen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98c8f08d6d60a47da2cdf4de6459e90cee4d716e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34fc17275609dbf08ffa02a1bc89902c904cac85
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452592"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979038"
 ---
 # <a name="using-bookmarks"></a>Verwenden von Textmarken
 Es ist häufig nützlich, nach dem Verschieben in das **Recordset** direkt zu einem bestimmten Datensatz zurückzukehren, ohne durch jeden Datensatz scrollen und Werte vergleichen zu müssen. Wenn Sie z. b. versuchen, mit der **Find** -Methode nach einem Datensatz zu suchen, die Suche jedoch keine Datensätze zurückgibt, werden Sie automatisch an jedem Ende des **Recordsets**platziert. Wenn Ihr Anbieter diese unterstützt, können Sie Lesezeichen verwenden, um die Position zu markieren, bevor Sie die **Find** -Methode verwenden, um zu ihrem Speicherort zurückzukehren. Ein Lesezeichen ist ein **Variant** -Typwert, der einen Datensatz in einem **Recordset** -Objekt eindeutig identifiziert.  

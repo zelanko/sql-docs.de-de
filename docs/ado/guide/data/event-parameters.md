@@ -3,7 +3,7 @@ description: Ereignisparameter
 title: Ereignis Parameter | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2da60e0d6ea0652d531b3e8c459617f1d52954b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: cc36f0ab059bb7b605b02316008a969411663a8d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806862"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991301"
 ---
 # <a name="event-parameters"></a>Ereignisparameter
 Jeder Ereignishandler verfügt über einen Status Parameter, der den Ereignishandler steuert. Bei Abschluss Ereignissen wird dieser Parameter auch verwendet, um den Erfolg oder Misserfolg des Vorgangs anzugeben, der das Ereignis generiert hat. Die meisten vollständigen Ereignisse verfügen auch über einen Fehler Parameter, um Informationen zu ggf. aufgetretenen Fehlern und einen oder mehrere Objekt Parameter bereitzustellen, die auf die ADO-Objekte verweisen, die zum Ausführen des Vorgangs verwendet werden. Das Ereignis [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md) enthält z. b. Objekt Parameter für die **Befehle**, **Recordsets**und **Verbindungs** Objekte, die dem Ereignis zugeordnet sind. Im folgenden Beispiel zu Microsoft® Visual Basic® werden die Objekte pcommand, precordset und pconnection angezeigt, die den **Befehl**, das **Recordset**und die **Verbindungs** Objekte darstellen, die von der **Execute** -Methode verwendet werden.  

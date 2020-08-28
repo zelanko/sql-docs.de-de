@@ -3,7 +3,7 @@ description: Member-Objekt (ADO MD)
 title: Member-Objekt (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c53b22dc0b5129fc822c4a012eefcf99041f5b45
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 784dd3e842547c97f26107beaec67767363ce4ea
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777999"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986461"
 ---
 # <a name="member-object-ado-md"></a>Member-Objekt (ADO MD)
 Stellt einen Member einer Ebene in einem Cube, die untergeordneten Elemente eines Members einer Ebene oder einen Member einer Position entlang einer Achse eines Cellsets dar.  

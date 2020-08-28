@@ -3,7 +3,7 @@ description: EventStatusEnum
 title: EventStatus usenum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d696d7b971b5f6624a85addb3f023f2090ac90d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 853dd54afbb8753b05ce95f17b20aa600fea493c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443902"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973561"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 Gibt den aktuellen Status der Ausführung eines Ereignisses an.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adStatus Cancel**|4|Fordert den Abbruch des Vorgangs an, durch den das Ereignis aufgetreten ist.|  
 |**adStatus-kandeny**|3|Gibt an, dass der Vorgang keinen Abbruch des ausstehenden Vorgangs anfordern kann.|  
@@ -37,7 +37,7 @@ Gibt den aktuellen Status der Ausführung eines Ereignisses an.
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |Adoerums. EventStatus. Cancel|  
 |Adoerums. EventStatus. cantdeny|  

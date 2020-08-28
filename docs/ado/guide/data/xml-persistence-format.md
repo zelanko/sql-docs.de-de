@@ -3,7 +3,7 @@ description: XML-Beibehaltungsformat
 title: XML-Persistenzformat | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 081ba6f2b82e6369d2871a2c9c7352c7335bc0d4
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 2da0090b9e06a9df7692a27242a08303174f51aa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758980"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978831"
 ---
 # <a name="xml-persistence-format"></a>XML-Beibehaltungsformat
 ADO verwendet UTF-8-Codierung für den persistent verwendeten XML-Stream.  
   
  Das ADO-XML-Format ist in zwei Abschnitte unterteilt: ein Schema Abschnitt, auf den der Daten Abschnitt folgt. Im folgenden finden Sie eine XML-Beispieldatei für die Tabelle "Spediteure" aus der Datenbank "Northwind". Im folgenden Beispiel werden verschiedene Teile des XML-Codes erläutert.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   

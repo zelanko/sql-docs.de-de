@@ -3,7 +3,7 @@ description: Connection Close-Methode, Table Type-Eigenschaft – Beispiel (VB)
 title: Connection Close-Methode, Table Type-Eigenschafts Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b651389b4badd57e6a76b3b38c47c34cc814706
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: acd8183389276b47502b7ef14978eac855c74743
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770909"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984884"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close-Methode, Table Type-Eigenschaft – Beispiel (VB)
 Wenn die [ActiveConnection](./activeconnection-property-adox.md) -Eigenschaft auf **Nothing** festgelegt wird, sollte die Verbindung mit dem Katalog geschlossen werden. Zugeordnete Sammlungen sind leer. Alle Objekte, die aus Schema Objekten im Katalog erstellt wurden, sind verwaist. Alle Eigenschaften von Objekten, die zwischengespeichert wurden, sind weiterhin verfügbar, aber ein Versuch, Eigenschaften zu lesen, die einen-Anrufe an den Anbieter erfordern, schlägt fehl.  

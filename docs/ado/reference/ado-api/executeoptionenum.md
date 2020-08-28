@@ -3,7 +3,7 @@ description: ExecuteOptionEnum
 title: Executeoptionumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ab70f52adb11d1b242dd0f1bbce11bea221ed55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b89d582d839c1eea382d09d922c6fa0dd988725
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443832"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973341"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Gibt an, wie ein Anbieter einen Befehl ausführen soll.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|Gibt an, dass der Befehl asynchron ausgeführt werden soll.<br /><br /> Dieser Wert kann nicht mit dem commandtypeenumerationswert **adCmdTableDirect**kombiniert werden. [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)|  
 |**adasyncfetch**|0x20|Gibt an, dass die verbleibenden Zeilen nach der anfänglichen Menge, die in der [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) -Eigenschaft angegeben wurde, asynchron abgerufen werden sollen.|  
@@ -39,7 +39,7 @@ Gibt an, wie ein Anbieter einen Befehl ausführen soll.
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |AdoEnums.Executeoption. asyncexecute|  
 |AdoEnums.Executeoption. asyncfetch|  
@@ -55,7 +55,7 @@ Gibt an, wie ein Anbieter einen Befehl ausführen soll.
         [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
     :::column-end:::
     :::column:::
-        [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
         [Requery-Methode](../../../ado/reference/ado-api/requery-method.md)  
     :::column-end:::
 :::row-end:::

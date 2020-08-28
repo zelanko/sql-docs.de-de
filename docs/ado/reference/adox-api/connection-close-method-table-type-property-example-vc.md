@@ -3,7 +3,7 @@ description: Connection Close-Methode, Table Type-Eigenschaft (VC++)
 title: Connection Close-Methode, Table Type-Eigenschafts Beispiel (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b0f907cd2976e53b6942ff9d33da0a2a4712e61
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8f49a6456e9d2a461be1e4f51f3030da2b1ff015
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770899"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984851"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Connection Close-Methode, Table Type-Eigenschaft (VC++)
 Wenn die [ActiveConnection](./activeconnection-property-adox.md) -Eigenschaft auf " **Nothing** " festgelegt wird, sollte der Katalog "Schließen". Zugeordnete Sammlungen sind leer. Alle Objekte, die aus Schema Objekten im Katalog erstellt wurden, sind verwaist. Alle Eigenschaften von Objekten, die zwischengespeichert wurden, sind weiterhin verfügbar, aber der Versuch, Eigenschaften zu lesen, die einen Anrufe an den Anbieter erfordern, schlägt fehl.  

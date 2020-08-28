@@ -3,7 +3,7 @@ description: SHAPE APPEND-Klausel
 title: Shape-APPEND-Klausel | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452862"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979621"
 ---
 # <a name="shape-append-clause"></a>SHAPE APPEND-Klausel
 Die Form Befehl-Append-Klausel fügt eine Spalte oder Spalten an ein **Recordset**an. Häufig handelt es sich bei diesen Spalten um Kapitel Spalten, die auf ein untergeordnetes **Recordset**verweisen.  
@@ -96,8 +96,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  Die Klausel nach dem Append-Schlüsselwort ist tatsächlich eine Liste, wobei jede Klausel durch ein Komma getrennt wird und eine andere Spalte definiert, die an das übergeordnete Element angefügt werden soll.  
   
-## <a name="remarks"></a>Bemerkungen  
- Wenn Sie Anbieter Befehle aus Benutzereingaben als Teil eines Shape-Befehls erstellen, behandelt Shape den vom Benutzer bereitgestellten Anbieter Befehl als nicht transparente Zeichenfolge und übergibt sie an den Anbieter. Beispielsweise wird im folgenden Shape-Befehl  
+Wenn Sie Anbieter Befehle aus Benutzereingaben als Teil eines Shape-Befehls erstellen, behandelt Shape den vom Benutzer bereitgestellten Anbieter Befehl als nicht transparente Zeichenfolge und übergibt sie an den Anbieter. Beispielsweise wird im folgenden Shape-Befehl  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  

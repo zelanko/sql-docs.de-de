@@ -3,7 +3,7 @@ description: Übersicht über Microsoft OLE DB-Anbieter für ODBC
 title: Microsoft OLE DB-Anbieter für ODBC | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2dcd280098a5ca4075f424f12b0abdfede6b7653
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806644"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991021"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für ODBC
 Für einen ADO-oder RDS-Programmierer wäre eine ideale Welt eine ideale Welt, bei der jede Datenquelle eine OLE DB-Schnittstelle verfügbar macht, sodass ADO direkt in der Datenquelle aufgerufen werden kann. Obwohl immer mehr Datenbankanbieter OLE DB-Schnittstellen implementieren, sind einige Datenquellen auf diese Weise noch nicht verfügbar. Allerdings kann auf die meisten derzeit verwendeten DBMS-Systeme über ODBC zugegriffen werden.
