@@ -18,12 +18,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 6c76005fefffdbce76309762b1d2a1cd81d83537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ab11e74205f47d50e927680081e8e13dfee37fb
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474972"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042477"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -57,44 +57,42 @@ Ein Token, das einen Abfrage Ausführungsplan für einen Batch eindeutig identif
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|
 |**DBID**|**smallint**|ID der Kontextdatenbank, die gültig war, als die diesem Plan entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung kompiliert wurde. Für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen, die ID der Datenbank, in der die Anweisungen kompiliert wurden.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
-|**ObjectID**|**int**|ID des Objekts (z. B. gespeicherte Prozedur oder benutzerdefinierte Funktion) für diesen Abfrageplan. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
+|**objectid**|**int**|ID des Objekts (z. B. gespeicherte Prozedur oder benutzerdefinierte Funktion) für diesen Abfrageplan. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
 |**Zahl**|**smallint**|Gespeicherte Prozedur mit ganzer Zahl. Eine Gruppe von Prozeduren für die **orders**-Anwendung kann z. B. die Namen **orderproc;1**, **orderproc;2** usw. haben. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
 |**.**|**bit**|Zeigt an, ob die entsprechende Prozedur verschlüsselt ist.<br /><br /> 0 = nicht verschlüsselt<br /><br /> 1 = verschlüsselt<br /><br /> NULL-Werte sind in der Spalte nicht zulässig.|  
 |**query_plan**|**xml**|Enthält die letzte bekannte Runtime-Showplan-Darstellung des tatsächlichen Abfrage Ausführungs Plans, der mit *plan_handle*angegeben wird. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert.<br /><br /> Die Spalte lässt NULL-Werte zu.| 
 
 ## <a name="remarks"></a>Bemerkungen
-Diese Systemfunktion ist ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4 verfügbar.
-
-Hierbei handelt es sich um ein optionales Feature, für das das [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 aktiviert sein muss. Informationen dazu, wie Sie dies ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 auf der Datenbankebene erreichen, finden Sie in der LAST_QUERY_PLAN_STATS-Option unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+Dies ist ein Opt-in-Feature. Verwenden Sie das Ablaufverfolgungsflag [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451, um auf Serverebene zu aktivieren. Um auf Datenbankebene zu aktivieren, verwenden Sie die Option LAST_QUERY_PLAN_STATS in [ALTER DATABASE scoped Configuration &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 Diese Systemfunktion funktioniert unter der **Lightweight** -Infrastruktur für die Abfrage Ausführungs Statistik-Profilerstellung. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
-Die Showplan-Ausgabe von sys. dm_exec_query_plan_stats enthält die folgenden Informationen:
+Die Showplan-Ausgabe von `sys.dm_exec_query_plan_stats` enthält die folgenden Informationen:
 -  Alle im zwischengespeicherten Plan gefundenen Kompilierzeit Informationen
 -  Laufzeitinformationen, z. b. die tatsächliche Anzahl von Zeilen pro Operator, die gesamte Abfrage-CPU-Zeit und die Ausführungszeit, Überlauf Warnungen, tatsächlicher DOP, maximal verwendeter Arbeitsspeicher und zugewiesener Arbeitsspeicher
 
-Unter den folgenden Bedingungen wird eine Showplan-Ausgabe **, die einem tatsächlichen Ausführungsplan entspricht** , in der **query_plan** -Spalte der zurückgegebenen Tabelle für **sys. dm_exec_query_plan_stats**zurückgegeben:  
+Unter den folgenden Bedingungen wird eine Showplan-Ausgabe, die **einem tatsächlichen Ausführungsplan entspricht** , in der **query_plan** -Spalte der zurückgegebenen Tabelle für zurückgegeben `sys.dm_exec_query_plan_stats` :  
 
 -   Der Plan kann in [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)gefunden werden.     
     **AND**    
 -   Die ausgeführte Abfrage ist komplex oder Ressourcen aufwendig.
 
-Unter den folgenden Bedingungen wird eine **vereinfachte <sup>1</sup> ** Showplan-Ausgabe in der **query_plan** -Spalte der zurückgegebenen Tabelle für **sys. dm_exec_query_plan_stats**zurückgegeben:  
+Unter den folgenden Bedingungen wird eine **vereinfachte <sup>1</sup> ** Showplan-Ausgabe in der **query_plan** -Spalte der zurückgegebenen Tabelle für zurückgegeben `sys.dm_exec_query_plan_stats` :  
 
 -   Der Plan kann in [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)gefunden werden.     
     **AND**    
 -   Die Abfrage ist einfach genug und wird normalerweise als Teil einer OLTP-Arbeitsauslastung kategorisiert.
 
-<sup>1</sup> ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,5 bezieht sich dies auf einen Showplan, der nur den Stamm Knoten Operator (Select) enthält. Für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4 bezieht sich dies auf den zwischengespeicherten Plan, der über verfügbar ist `sys.dm_exec_cached_plans` .
+<sup>1</sup> bezieht sich auf einen Showplan, der nur den Stamm Knoten Operator (Select) enthält.
 
-Unter den folgenden Bedingungen **wird keine Ausgabe** aus **sys. dm_exec_query_plan_stats**zurückgegeben:
+Unter den folgenden Bedingungen **wird keine Ausgabe von zurückgegeben** `sys.dm_exec_query_plan_stats` :
 
--   Der mit *plan_handle* angegebene Abfrageplan wurde aus dem Plancache entfernt.     
+-   Der mit angegebene Abfrageplan wurde `plan_handle` aus dem Plancache entfernt.     
     **OR**    
 -   Der Abfrageplan konnte nicht an erster Stelle zwischengespeichert werden. Weitere Informationen finden Sie unter zwischen [Speichern und wieder verwenden von Ausführungsplänen ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> Aufgrund einer Beschränkung der im **xml** -Datentyp zulässigen Anzahl geschachtelter Ebenen kann **sys.dm_exec_query_plan** keine Abfragepläne zurückgeben, die 128 oder mehr Ebenen geschachtelter Elemente aufweisen. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhinderte diese Bedingung, dass der Abfrageplan nicht zurückgegeben wurde, und generiert den [Fehler 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 und höheren Versionen gibt die **query_plan** -Spalte NULL zurück.  
+> Aufgrund einer Einschränkung in der Anzahl der zulässigen, im **XML** -Datentyp zulässigen Werte `sys.dm_exec_query_plan` kann keine Abfrage Pläne zurückgeben, die 128 Ebenen von geschachtelte-Elementen erfüllen oder überschreiten. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhinderte diese Bedingung, dass der Abfrageplan nicht zurückgegeben wurde, und generiert den [Fehler 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 und höheren Versionen gibt die `query_plan` Spalte NULL zurück.  
 
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung auf dem Server.  

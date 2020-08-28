@@ -3,7 +3,7 @@ description: ADO-Glossar Begriffe
 title: Begriffe zu ADO-Glossar | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dd781612557faebd4b6eefb710ffad2379928aee
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805560"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980851"
 ---
 # <a name="ado-glossary-terms"></a>ADO-Glossar Begriffe
 In diesem Thema werden die für ADO relevanten Begriffe definiert.
@@ -138,7 +138,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
  Hierarchie im Allgemeinen ist eine Hierarchie eine Rangstruktur mit einer obersten Ebene und untergeordneten Ebenen. In ADO werden hierarchische **Recordsets** verwendet, um die über-/Unterordnungsbeziehung zwischen einem Datensatz und einem Kapitel darzustellen. In ADO können auch **Datensatz** -und **Stream** -Objekte verwendet werden, um auf hierarchische Struktur Strukturen wie z. b. einen Ordner und Dokumente zuzugreifen. ADO MD umfasst auch **Hierarchy** -Objekte, die eine Beziehung zwischen den Ebenen einer Dimension in einem OLAP-Cube darstellen. Siehe auch hierarchische Recordsets, über-/Unterordnungsbeziehung, Chapter, Tree.
 
 ## <a name="i-l"></a>I-L
- ISAPI (Internet Server Application Programming Interface) eine Reihe von Funktionen für Internet Server, z. b. ein Windows NT® Server/Windows 2000-Server, auf dem Microsoft® Internetinformationsdienste (IIS) ausgeführt wird.
+ ISAPI (Internet Server Application Programming Interface) eine Reihe von Funktionen für Internet Server, z. b. ein Windows NT &reg; -Server/Windows 2000-Server, auf dem Microsoft &reg; Internetinformationsdienste (IIS) ausgeführt wird.
 
  Schlüssel eine Spalte oder Spalten in einer Tabelle, die eine Zeile eindeutig identifizieren; wird häufig verwendet, um eine Tabelle zu indizieren.
 

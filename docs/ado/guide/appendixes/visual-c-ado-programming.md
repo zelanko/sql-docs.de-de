@@ -3,7 +3,7 @@ description: Visual C++-ADO-Programmierung
 title: Visual C++ ADO-Programmierung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66d06630a6bc39c49b9a3e55276bed574869d40d
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a2e0284db09672d0e92bb952c9e122a65cb8350b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806771"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991831"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++-ADO-Programmierung
 Die ADO-API-Referenz beschreibt die Funktionalität der ADO-API (Application Programming Interface) mithilfe einer Syntax, die dem Microsoft-Visual Basic ähnelt. Obwohl es sich bei der Zielgruppe um alle Benutzer handelt, verwenden ADO-Programmierer verschiedene Sprachen, wie z. b. Visual Basic, Visual C++ (mit und ohne die **#Import** -Direktive) und Visual J++ (mit dem ADO/WFC-Klassen Paket).  
@@ -327,7 +327,7 @@ End Sub
   
  Im folgenden Visual C++ Beispiel wird die Verwendung eines **SAFEARRAY** veranschaulicht, das mit einem **_variant_t**verwendet wird.  
   
-#### <a name="notes"></a>Hinweise  
+#### <a name="notes"></a>Notizen  
  Die folgenden Hinweise entsprechen den kommentierten Abschnitten im Codebeispiel.  
   
 1.  Auch hier ist die Funktion "testhr () Inline" definiert, um den vorhandenen Mechanismus zur Fehlerbehandlung zu nutzen.  
@@ -436,7 +436,7 @@ End Sub
   
  In diesem Visual C++ Beispiel wird die **Get** / **Put** / **PutRef**-_Eigenschaft_veranschaulicht.  
   
-#### <a name="notes"></a>Hinweise  
+#### <a name="notes"></a>Notizen  
  Die folgenden Hinweise entsprechen den kommentierten Abschnitten im Codebeispiel.  
   
 1.  In diesem Beispiel werden zwei Formen eines fehlenden Zeichen folgen Arguments verwendet: eine explizite Konstante, ein **Strauch**und eine Zeichenfolge, mit der der Compiler eine temporäre **_bstr_t** erstellt, die für den Bereich der **Open** -Methode vorhanden ist.  
@@ -555,7 +555,7 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>Umwandeln von ADO-Objekt Zeigern mit (IDispatch *)  
  Im folgenden Visual C++ Beispiel wird die Verwendung von (IDispatch *) zum Umwandeln von ADO-Objekt Zeigern veranschaulicht.  
   
-#### <a name="notes"></a>Hinweise  
+#### <a name="notes"></a>Notizen  
  Die folgenden Hinweise entsprechen den kommentierten Abschnitten im Codebeispiel.  
   
 1.  Geben Sie in einem explizit codierten **Variant**ein offenes **Verbindungs** Objekt an. Wandeln Sie es mit (IDispatch \* ) um, damit der richtige Konstruktor aufgerufen wird. Legen Sie außerdem den zweiten **_variant_t** -Parameter explizit auf den Standardwert **true**fest, sodass der Objekt Verweis Zähler richtig ist, wenn der **Recordset:: Open** -Vorgang beendet wird.  
