@@ -3,7 +3,7 @@ description: Verwendung und Sicherheit von RDS
 title: RDS-Verwendung und-Sicherheit | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 686d3caeb7835d05a4e2eff0c588a4fb2ca18cf4
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 7f357ec4390c6006ba4b522404dc7f15cc4f627f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759490"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977811"
 ---
 # <a name="rds-usage-and-security"></a>Verwendung und Sicherheit von RDS
 Verwenden Sie die Informationen in diesem Abschnitt, um Ihren Server einzurichten und schnell RDS zu verwenden. Dieser Abschnitt enthält bestimmte Konfigurationsschritte, die Sie möglicherweise bei der Implementierung von RDS ausführen müssen. hier werden einige der wichtigsten Beziehungen zwischen RDS und anderen Technologien beschrieben und Lösungen für Probleme identifiziert, die beim Einrichten einer RDS-Lösung auftreten können.  

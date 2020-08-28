@@ -3,7 +3,7 @@ description: ADO-Methoden
 title: ADO-Methoden | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7702a90afe7ef4c96b1cc4bd01bd45e774a0bacc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 13e126f070f188e47582227fabf4a1e37d6901a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771799"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976371"
 ---
 # <a name="ado-methods"></a>ADO-Methoden
 
 |Methode|Beschreibung|  
 |-|-|  
 |[AddNew](./addnew-method-ado.md)|Erstellt einen neuen Datensatz für ein Aktualisier bares **Recordset** -Objekt.|  
-|[Append](./append-method-ado.md)|Fügt ein Objekt an eine Auflistung an. Wenn es sich bei der Auflistung um **Felder**handelt, kann ein neues **Feld** Objekt erstellt werden, bevor es an die Auflistung angefügt wird.|  
+|[Append](./append-method-ado.md) (Anfügen)|Fügt ein Objekt an eine Auflistung an. Wenn es sich bei der Auflistung um **Felder**handelt, kann ein neues **Feld** Objekt erstellt werden, bevor es an die Auflistung angefügt wird.|  
 |[AppendChunk](./appendchunk-method-ado.md)|Fügt Daten an ein großes Textfeld oder ein binäres **Datenfeld**oder an ein **Parameter** Objekt an.|  
 |[BeginTrans, CommitTrans und RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)|Verwaltet die Transaktionsverarbeitung innerhalb eines **Verbindungs** Objekts wie folgt:<br /><br /> **BeginTrans** -startet eine neue Transaktion.<br /><br /> **CommitTrans** -speichert alle Änderungen und beendet die aktuelle Transaktion. Möglicherweise wird auch eine neue Transaktion gestartet.<br /><br /> **RollbackTrans** -bricht alle Änderungen ab und beendet die aktuelle Transaktion. Möglicherweise wird auch eine neue Transaktion gestartet.|  
 |[Abbrechen](./cancel-method-ado.md)|Bricht die Ausführung eines ausstehenden asynchronen Methoden Aufrufes ab.|  
@@ -45,7 +45,7 @@ ms.locfileid: "88771799"
 |[DeleteRecord](./deleterecord-method-ado.md)|Löscht eine Datei oder ein Verzeichnis und alle Unterverzeichnisse.|  
 |[Execute (ADO-Befehl)](./execute-method-ado-command.md)|Führt die Abfrage, die SQL-Anweisung oder die gespeicherte Prozedur aus, die in der **CommandText** -Eigenschaft angegeben ist.|  
 |[Ausführen (ADO-Verbindung)](./execute-method-ado-connection.md)|Führt die angegebene Abfrage, die SQL-Anweisung, die gespeicherte Prozedur oder den anbieterspezifischen Text aus.|  
-|[Sich](./find-method-ado.md)|Durchsucht ein **Recordset** nach der Zeile, die die angegebenen Kriterien erfüllt.|  
+|[Suchen](./find-method-ado.md)|Durchsucht ein **Recordset** nach der Zeile, die die angegebenen Kriterien erfüllt.|  
 |[Leerung](./flush-method-ado.md)|Erzwingt den Inhalt des verbleibenden **Streams** im ADO-Puffer für das zugrunde liegende Objekt, dem der **Stream** zugeordnet ist.|  
 |[get_OLEDBCommand-Methode](./get-oledbcommand-method.md)|Gibt den zugrunde liegenden OLEDB-Befehl zurück, wobei zuerst alle Parameterinformationen weitergegeben werden, die für den ADO-Befehl an den OLEDB-Befehl festgelegt|  
 |[GetChildren](./getchildren-method-ado.md)|Gibt ein **Recordset** zurück, dessen Zeilen die Dateien und Unterverzeichnisse in dem von diesem **Datensatz**dargestellten Verzeichnis darstellen.|  

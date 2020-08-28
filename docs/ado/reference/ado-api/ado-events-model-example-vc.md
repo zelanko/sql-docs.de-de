@@ -3,7 +3,7 @@ description: ADO-Ereignismodell – Beispiel (VC++)
 title: Beispiel für das ADO-Ereignis Modell (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d19743fb8434ddfb75025ae47da079a8256f270f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e5ce070edb9058f36bab18d64a06f50b867bbe55
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776699"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976471"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO-Ereignismodell – Beispiel (VC++)
 Der Visual C++ Abschnitt der [ADO-Ereignis Instanziierung nach Sprache](../../guide/data/ado-event-instantiation-by-language.md) enthält eine allgemeine Beschreibung, wie das ADO-Ereignis Modell instanziiert wird. Im folgenden finden Sie ein spezielles Beispiel für die Instanziierung des Ereignis Modells in der Umgebung, die von der **#Import** -Direktive erstellt wurde.  

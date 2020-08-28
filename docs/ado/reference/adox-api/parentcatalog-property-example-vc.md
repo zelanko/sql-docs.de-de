@@ -3,7 +3,7 @@ description: ParentCatalog-Eigenschaft – Beispiel (VC++)
 title: Beispiel für eine Beispiel Katalog Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25f633631f18ec1ec0ae5c954c541e4687f559da
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 41f11d786652f3ccd2a4c308cb8711e483160ad6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769799"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983751"
 ---
 # <a name="parentcatalog-property-example-vc"></a>ParentCatalog-Eigenschaft – Beispiel (VC++)
 Der folgende Code veranschaulicht die Verwendung der Eigenschaft ["Eigenschaft"](./parentcatalog-property-adox.md) , um auf eine anbieterspezifische Eigenschaft zuzugreifen, bevor eine Tabelle an einen Katalog angehängt wird. Die-Eigenschaft ist " **AutoIncrement**", wodurch ein AutoIncrement-Feld in einer Microsoft Jet-Datenbank erstellt wird.  

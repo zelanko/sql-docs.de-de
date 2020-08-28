@@ -3,7 +3,7 @@ description: Type-Eigenschaft – Beispiel (Property) (VB)
 title: Typeigenschafts Beispiel (Eigenschaft) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6c0f758de185e56256aef4797c9507cdff539e4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e826903c37ca436f73bd82abc93afdd0568fc9e6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777049"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988241"
 ---
 # <a name="type-property-example-property-vb"></a>Type-Eigenschaft – Beispiel (Property) (VB)
 In diesem Beispiel wird die [Type](./type-property-ado.md) -Eigenschaft veranschaulicht. Es handelt sich um ein Modell eines Hilfsprogramms zum Auflisten der Namen und Typen einer Auflistung, wie z. b. [Eigenschaften](./properties-collection-ado.md), [Felder](./fields-collection-ado.md)usw.  

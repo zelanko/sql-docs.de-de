@@ -3,7 +3,7 @@ description: AbsolutePage-Eigenschaft (ADO)
 title: AbsolutePage-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c5c9d802dd6ba373b7bf92f063125f0b656eab8
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 1d735a8a61d4b62e6fa57427ecbee247d4589040
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759990"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977241"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage-Eigenschaft (ADO)
 Gibt an, auf welcher Seite sich der aktuelle Datensatz befindet.  
@@ -31,7 +31,7 @@ Gibt an, auf welcher Seite sich der aktuelle Datensatz befindet.
   
  Verwenden Sie für 64-Bit-Code einen Datentyp, der für die Speicherung eines 64-Bit-Werts bereitstellt. Beispielsweise können Sie einen **langen** oder einen anderen Wert verwenden, der 64-Bit-Länge sein kann, z. b. dbordindin. Verwenden Sie keine **positionenum** -Werte, da Sie auf eine 32-Bit-Länge beschränkt sind.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Eigenschaft kann verwendet werden, um die Seitenzahl zu identifizieren, auf der sich der aktuelle Datensatz befindet. Er verwendet die [PageSize](./pagesize-property-ado.md) -Eigenschaft, um die Gesamtanzahl der Rowsets des **Recordset** -Objekts logisch in eine Reihe von Seiten aufzuteilen, von denen jede die Anzahl der Datensätze gleich " **PageSize** " aufweist (außer der letzten Seite, die möglicherweise weniger Datensätze aufweist). Der Anbieter muss die entsprechende Funktionalität unterstützen, damit diese Eigenschaft verfügbar ist.  
   
 -   Beim Aktivieren oder Festlegen der **AbsolutePage** -Eigenschaft verwendet ADO die [AbsolutePosition](./absoluteposition-property-ado.md) -Eigenschaft und die [PageSize](./pagesize-property-ado.md) -Eigenschaft wie folgt:  

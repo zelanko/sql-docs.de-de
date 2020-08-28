@@ -3,7 +3,7 @@ description: RecordStatusEnum
 title: RecordStatus usenum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57edf327f2ba4661ba47f43cf8b2f128b9fe92ab
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e4d2ad74187ef6be146be04f63e634bbdf3de9f5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772129"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989671"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Gibt den [Status](./status-property-ado-recordset.md) eines Datensatzes in Bezug auf Batch Updates und andere Massen Vorgänge an.  
