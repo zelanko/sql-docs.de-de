@@ -3,7 +3,7 @@ description: Beispiel für Execute, Requery und Clear Methods (JScript)
 title: Beispiel für Execute, Requery und Clear Methods (JScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f30dfef8bcfb769dd124f2501143eac6e619315c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e27fc5ee9a234741beeb14e1dac7b754635bc2be
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443882"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973441"
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>Beispiel für Execute, Requery und Clear Methods (JScript)
 In diesem Beispiel wird die **Execute** -Methode veranschaulicht, wenn Sie sowohl über ein [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt als auch über ein [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt ausgeführt wird Außerdem wird die [Requery](../../../ado/reference/ado-api/requery-method.md) -Methode verwendet, um aktuelle Daten in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)abzurufen, und die [Clear](../../../ado/reference/ado-api/clear-method-ado.md) -Methode, um den Inhalt der [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung zu löschen. (Der Zugriff auf die **Fehler** Sammlung erfolgt über das **Verbindungs** Objekt der [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) -Eigenschaft des [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md).) Nennen Sie die Datei " **executejs. ASP**".  

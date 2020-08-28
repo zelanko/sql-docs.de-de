@@ -3,7 +3,7 @@ description: Überlegungen zur Sicherheit bei XML
 title: Überlegungen zur XML-Sicherheit | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f73261f51a457144010aec6871f2acbf083b0361
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 608ad67d531573d0124ea312252e6d30c289bf15
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758970"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978791"
 ---
 # <a name="xml-security-considerations"></a>Überlegungen zur Sicherheit bei XML
 Die ADO-Speicher-und Open-Methoden des Recordset-Objekts werden nicht als sichere Vorgänge für die Ausführung in Internet Explorer angesehen. Wenn diese Methoden in einem Skriptcode verwendet werden, der in einer Anwendung oder einem Steuerelement ausgeführt wird, die in einem Browser gehostet wird, hat die Sicherheitskonfiguration des Browsers Auswirkungen auf das Verhalten.  

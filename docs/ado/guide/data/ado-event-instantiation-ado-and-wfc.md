@@ -3,7 +3,7 @@ description: 'ADO-Ereignisinstanziierung: ADO und WFC'
 title: 'ADO-Ereignis Instanziierung: ADO und wfc | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 906f895eade7120b57d401851a0e19203f943980
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806450"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991711"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO-Ereignisinstanziierung: ADO und WFC
 ADO für Windows Foundation Classes (ADO/WFC) baut auf dem ADO-Ereignis Modell auf und stellt eine vereinfachte Anwendungsprogrammierschnittstelle dar. Im allgemeinen fängt ADO/WFC ADO-Ereignisse ab, konsolidiert die Ereignis Parameter in einer einzelnen Ereignisklasse und ruft dann Ihren Ereignishandler auf.  

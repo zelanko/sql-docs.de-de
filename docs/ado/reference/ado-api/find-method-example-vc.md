@@ -3,7 +3,7 @@ description: Find-Methode – Beispiel (VC++)
 title: Find Method-Beispiel (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 092164ac8df26ae79da94125d0071baccd89a3f5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9c313233cfa82e5f3213366f9680ef3a4c567a5d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775149"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972921"
 ---
 # <a name="find-method-example-vc"></a>Find-Methode – Beispiel (VC++)
 In diesem Beispiel wird die [Find](./find-method-ado.md) -Methode des [Recordset](./recordset-object-ado.md) -Objekts verwendet, um die Anzahl von Geschäfts Titeln in der **Pubs** -Datenbank zu suchen und zu zählen. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter keine ähnliche Funktionalität unterstützt.  

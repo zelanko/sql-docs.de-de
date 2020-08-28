@@ -3,7 +3,7 @@ description: Source-Eigenschaft – Beispiel (VB)
 title: Beispiel für eine Quell Eigenschaft (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1771eb7d0c6ed2609b5dea506e71aa4180e2370
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b39c80d1cb61a4b99d6d909dae47b4a922af834e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777389"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988881"
 ---
 # <a name="source-property-example-vb"></a>Source-Eigenschaft – Beispiel (VB)
 In diesem Beispiel wird die [Source](./source-property-ado-recordset.md) -Eigenschaft durch das Öffnen von drei [Recordset](./recordset-object-ado.md) -Objekten basierend auf unterschiedlichen Datenquellen veranschaulicht.  

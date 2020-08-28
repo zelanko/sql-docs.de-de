@@ -3,7 +3,7 @@ description: UserList-Abschnitt der Anpassungsdatei
 title: Abschnitt "Anpassungs Datei (userlist)" | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14308aeda28311b73dc34a323a9a9bf662770e8b
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 38eb55c77f98711910e303bf6f511df26f7cecf7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759814"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978211"
 ---
 # <a name="customization-file-userlist-section"></a>UserList-Abschnitt der Anpassungsdatei
 Der Abschnitt " **userlist** " bezieht sich auf den **Connect** -Abschnitt mit dem gleichen Abschnitts *bezeichnerparameter* .  
@@ -35,7 +35,7 @@ Der Abschnitt " **userlist** " bezieht sich auf den **Connect** -Abschnitt mit d
  _Benutzername_**=**   
  **_accessRights_**  
   
-|Teil|BESCHREIBUNG|  
+|Teil|Beschreibung|  
 |----------|-----------------|  
 |*userName*|Der *Benutzername* der Person, die diese Verbindung verwendet. Gültige Benutzernamen werden mit dem Dialogfeld IIS **Service Manager** erstellt.|  
 |**_accessRights_**|Eine der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** : der Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   Schreib **geschützt: der** Benutzer kann die Datenquelle lesen.<br />-   " **Lesewrite** ": der Benutzer kann die Datenquelle lesen oder in diese schreiben.|  

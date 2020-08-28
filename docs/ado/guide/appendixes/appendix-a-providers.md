@@ -3,7 +3,7 @@ description: 'Anhang A: Daten-und Dienstanbieter'
 title: 'Anhang A: Anbieter | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ced7c241c1ad8ac0744bded33ed18a9c2c172617
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: d50f77959b21031b03ae9591181c61a3419577fd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805289"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991171"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Anhang A: Daten-und Dienstanbieter
 In diesem Abschnitt werden drei Arten von Anbietern behandelt: Datenanbieter, Dienstanbieter und Dienst Komponenten. Anbieter lassen sich in zwei Kategorien unterteilen: solche, die Daten bereitstellen Ein *Datenanbieter* besitzt seine eigenen Daten und macht Sie in tabellarischer Form für Ihre Anwendung verfügbar. Ein *Dienstanbieter* kapselt einen Dienst, indem er Daten erzeugt und nutzt, um Features in Ihren ADO-Anwendungen zu erweitern. Ein Dienstanbieter kann auch weiter als *Dienst Komponente*definiert werden, die zusammen mit anderen Dienstanbietern oder Komponenten verwendet werden muss.
@@ -40,7 +40,7 @@ In diesem Abschnitt werden drei Arten von Anbietern behandelt: Datenanbieter, Di
 
  Details zu jedem der derzeit von Microsoft verfügbaren Datenanbietern werden wie folgt aufgelistet.
 
-|Fläche|Thema|
+|Bereich|Thema|
 |----------|-----------|
 |ODBC-Datenbanken|[Microsoft OLE DB-Anbieter für ODBC](./microsoft-ole-db-provider-for-odbc.md)|
 |Microsoft-Indizierungs Dienst|[Microsoft OLE DB-Anbieter für Microsoft Indexdienst](./microsoft-ole-db-provider-for-microsoft-indexing-service.md)|

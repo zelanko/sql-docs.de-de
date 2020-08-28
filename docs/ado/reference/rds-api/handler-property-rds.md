@@ -3,7 +3,7 @@ description: Handler-Eigenschaft (RDS)
 title: Handler-Eigenschaft (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d20e44a46309580f85a6d35e609cdade2b4f31c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9a5f2469ea581fbbbf8264867bbaaa78275d8483
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768129"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982071"
 ---
 # <a name="handler-property-rds"></a>Handler-Eigenschaft (RDS)
 Gibt den Namen eines serverseitigen Anpassungsprogramms (Handler) an, das die Funktionalität von [RDSServer. DataFactory](./datafactory-object-rdsserver.md)erweitert, sowie alle Parameter, die vom *Handler*verwendet werden.  

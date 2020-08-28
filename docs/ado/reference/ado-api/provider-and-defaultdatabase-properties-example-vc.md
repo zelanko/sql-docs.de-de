@@ -3,7 +3,7 @@ description: Provider- und DefaultDatabase-Eigenschaft – Beispiel (VC++)
 title: Beispiel für Anbieter und DefaultDatabase-Eigenschaften (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49d1e08e421c520238573cd802a592cc970b19da
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5842bbdfc43a76797dd48aa75db133b9942a368e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772799"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989921"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider- und DefaultDatabase-Eigenschaft – Beispiel (VC++)
 In diesem Beispiel wird die [Provider](./provider-property-ado.md) -Eigenschaft veranschaulicht, indem drei [Verbindungs](./connection-object-ado.md) Objekte mit unterschiedlichen Anbietern geöffnet werden. Außerdem wird die Standarddatenbank für den Microsoft ODBC-Anbieter mit der [DefaultDatabase](./defaultdatabase-property.md) -Eigenschaft festgelegt.  

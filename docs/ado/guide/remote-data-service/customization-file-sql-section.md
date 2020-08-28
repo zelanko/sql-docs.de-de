@@ -3,7 +3,7 @@ description: SQL-Abschnitt der Anpassungsdatei
 title: SQL-Abschnitt der Anpassungs Datei | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7be4aaa2a92de4f778ee69422b97ceb169411c10
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 210363a1a852aa3c059c7929af1c07a9fe32c6ae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759824"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978231"
 ---
 # <a name="customization-file-sql-section"></a>SQL-Abschnitt der Anpassungsdatei
 Der **SQL** -Abschnitt kann eine neue SQL-Zeichenfolge enthalten, die die Client Befehls Zeichenfolge ersetzt. Wenn im Abschnitt keine SQL-Zeichenfolge vorhanden ist, wird der Abschnitt ignoriert.  
@@ -46,7 +46,7 @@ SQL = " "
  **SQL =**   
  ***SqlString***  
   
-|Teil|BESCHREIBUNG|  
+|Teil|Beschreibung|  
 |----------|-----------------|  
 |**SQL**|Eine literale Zeichenfolge, die angibt, dass dies ein SQL-Abschnitts Eintrag ist.|  
 |***SqlString***|Eine SQL-Zeichenfolge, die die Client Zeichenfolge ersetzt.|  

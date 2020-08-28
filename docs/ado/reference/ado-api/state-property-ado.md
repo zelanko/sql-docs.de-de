@@ -3,7 +3,7 @@ description: State-Eigenschaft (ADO)
 title: State-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14e9a083c9f80d2c6485a9444211a2796b7fabee
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d118ed6d695f8f047640f0ef16c139204ae36277
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777349"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988841"
 ---
 # <a name="state-property-ado"></a>State-Eigenschaft (ADO)
 Gibt für alle anwendbaren Objekte an, ob der Status des Objekts geöffnet oder geschlossen ist. Wenn das-Objekt eine asynchrone Methode ausführt, gibt an, ob der aktuelle Zustand des Objekts eine Verbindung herstellt, wird ausgeführt oder abgerufen wird.  
