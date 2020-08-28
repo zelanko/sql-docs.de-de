@@ -3,7 +3,7 @@ description: Microsoft OLE DB-Persistenzanbieter (ADO-Dienstanbieter)
 title: Microsoft OLE DB-Persistenzanbieter (ADO-Dienstanbieter) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7010c2dc4be6207397ee5e57fc999c3cacbba0b7
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8b9cfce1762ef678e544a2148df4a4d79074e152
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806604"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991071"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Übersicht über den Microsoft OLE DB Persistenz
 Mit dem Microsoft OLE DB-Persistenzanbieter können Sie ein [Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekt in einer Datei speichern und das **Recordset** -Objekt später aus der Datei wiederherstellen. Schema Informationen, Daten und ausstehende Änderungen werden beibehalten.

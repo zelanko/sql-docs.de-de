@@ -3,7 +3,7 @@ description: Item-Eigenschaft (ADO MD Cellset)
 title: Item-Eigenschaft (ADO MD Cellset) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 997777e853a54ae56175b4b5795087e67079813b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778069"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986601"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item-Eigenschaft (ADO MD Cellset)
 Ruft eine Zelle aus einem [Cellset](./cellset-object-ado-md.md) mithilfe ihrer Koordinaten ab.  
@@ -55,7 +55,6 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
  Das *Positions* Argument gibt an, welche Zelle zurückgegeben werden soll. Sie können die Zelle anhand der Ordinalposition oder der Position entlang jeder Achse angeben. Wenn Sie die Zelle auf jeder Achse nach Position angeben, können Sie den numerischen Wert der Position oder die Namen der Elemente für jede Position angeben.  
   
  Die Ordinalposition ist eine Zahl, die eine Zelle innerhalb des **Cellsets**eindeutig identifiziert. Konzeptionell werden Zellen in einem **Cellset** nummeriert, als ob das **Cellset** ein *p*-dimensionales Array wäre, wobei *p* für die Anzahl der Achsen steht. Die Zellen werden in zeilengerichteter Reihenfolge adressiert. Im folgenden finden Sie die Formel zum Berechnen der Ordinalzahl einer Zelle:  

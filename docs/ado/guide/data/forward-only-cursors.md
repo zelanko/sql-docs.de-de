@@ -3,7 +3,7 @@ description: Vorwärtscursor
 title: Vorwärts Cursor | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e26b3f364595adea7e1eadc65114bffb19db2639
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1ccf9d679d158b6f89ef6842b427c315078b99f6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806813"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991241"
 ---
 # <a name="forward-only-cursors"></a>Vorwärtscursor
 Der typische Standardcursortyp, der als Vorwärts Cursor (oder nicht Bild lauffähigen Cursor) bezeichnet wird, kann nur durch das Resultset vorwärts verschoben werden. Ein Vorwärts Cursor unterstützt keinen Bildlauf (die Möglichkeit, vorwärts und rückwärts im Resultset zu bewegen); Es unterstützt nur das Abrufen von Zeilen vom Anfang bis zum Ende des Resultsets. Bei einigen Vorwärts Cursor (z. b. mit der SQL Server Cursor Bibliothek) werden alle INSERT-, Update-und DELETE-Anweisungen, die vom aktuellen Benutzer ausgeführt werden (oder von anderen Benutzern zugesichert wurden), die sich auf Zeilen im Resultset auswirken, beim Abrufen der Zeilen angezeigt. Da mit dem Cursor nicht zurück gescrollt werden kann, sind Änderungen, die an Zeilen in der Datenbank vorgenommen wurden, nachdem die jeweilige Zeile abgerufen wurde, über den Cursor nicht sichtbar.  

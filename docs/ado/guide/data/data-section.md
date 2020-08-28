@@ -3,7 +3,7 @@ description: Datenabschnitt
 title: Daten Abschnitt | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806193"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991451"
 ---
 # <a name="data-section"></a>Datenabschnitt
 Der Daten Abschnitt definiert die Daten des Rowsets sowie alle ausstehenden Updates, Einfügungen oder Löschungen. Der Daten Abschnitt kann NULL oder mehr Zeilen enthalten. Es können nur Daten aus einem Rowset enthalten sein, in dem die Zeile durch das Schema definiert ist. Auch, wie bereits erwähnt, können Spalten ohne Daten ausgelassen werden. Wenn ein Attribut oder ein Unterelement im Daten Abschnitt verwendet wird und dieses Konstrukt nicht im Schema Abschnitt definiert wurde, wird es automatisch ignoriert.  
   
-## <a name="string"></a>String  
+## <a name="string"></a>Zeichenfolge  
  Reservierte XML-Zeichen in Textdaten müssen durch entsprechende Zeichen Entitäten ersetzt werden. Beispielsweise muss das einfache Anführungszeichen im Firmennamen "Joe es Garage" durch eine Entität ersetzt werden. Die tatsächliche Zeile ähnelt der folgenden:  
   
 ```  

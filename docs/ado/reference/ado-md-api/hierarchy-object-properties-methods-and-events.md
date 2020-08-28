@@ -3,7 +3,7 @@ description: Hierarchy-Objekt – Eigenschaften, Methoden und Ereignisse
 title: Eigenschaften von Hierarchie Objekten, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c643870386988ee22d729c1352dfe3683571fac5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0f8bcc0067357ff9612f32936913ac23d151ecc9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778079"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986621"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Hierarchy-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -33,9 +33,9 @@ ms.locfileid: "88778079"
  [UniqueName-Eigenschaft](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Ereignisse  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
