@@ -1,7 +1,7 @@
 ---
 description: ReadyState-Eigenschaft (RDS)
 title: Eigenschaft "leserystate" (RDS) | Microsoft-Dokumentation
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9915f76e336f7c8814428440460d1b0bfd7b9288
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5a7e27abfa2464f84e130d789db93a3d7606df21
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767659"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981481"
 ---
 # <a name="readystate-property-rds"></a>ReadyState-Eigenschaft (RDS)
 Gibt den Fortschritt eines [DataControl](./datacontrol-object-rds.md) -Objekts beim Abrufen von Daten in das [Recordset](../ado-api/recordset-object-ado.md) -Objekt an.  
@@ -30,7 +30,7 @@ Gibt den Fortschritt eines [DataControl](./datacontrol-object-rds.md) -Objekts b
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen der folgenden Werte fest oder gibt ihn zurück.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|Die aktuelle Abfrage wird noch ausgeführt, und es wurden keine Zeilen abgerufen. Das **Recordset** des **DataControl** -Objekts ist nicht für die Verwendung verfügbar.|  
 |**adcReadyStateInteractive**|Ein anfänglicher Satz von Zeilen, der von der aktuellen Abfrage abgerufen wurde, wurde im **Recordset** des **DataControl** -Objekts gespeichert und steht für die Verwendung zur Verfügung. Die verbleibenden Zeilen werden noch abgerufen.|  
@@ -39,7 +39,7 @@ Gibt den Fortschritt eines [DataControl](./datacontrol-object-rds.md) -Objekts b
 > [!NOTE]
 >  Jede Client seitige ausführbare Datei, die diese Konstanten verwendet, muss Deklarationen für Sie bereitstellen. Sie können die gewünschten Konstanten Deklarationen aus der Datei "adcvsb. Inc" Ausschneiden und einfügen, die sich im Standard Installationsordner für die RDS-Bibliothek befindet.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie das [onluystatechange](./onreadystatechange-event-rds.md) -Ereignis, um Änderungen in der Eigenschaft " **leserystate** " während eines asynchronen Abfrage Vorgangs zu überwachen. Dies ist effizienter als die regelmäßige Überprüfung des Werts der-Eigenschaft.  
   
  Wenn während eines asynchronen Vorgangs ein Fehler auftritt, wird die Eigenschaft "read- **State** " in " **adkreadystatecomplete**" geändert, die [Zustands](../ado-api/state-property-ado.md) Eigenschaft wird von " **adstatecomplete** " in " **adstateclosed**" geändert, und die Eigenschaft " **Recordset** -Objekt [Wert](../ado-api/value-property-ado.md) *" bleibt unverändert*.  

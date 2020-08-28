@@ -3,7 +3,7 @@ description: ADO-Eigenschaften
 title: ADO-Eigenschaften | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7f6ddee8a1d7629da95e233d02512e8e5cd3f35
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a8a53f4b901209a1ef59be6ca2eb8b531bc52d7c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776579"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976281"
 ---
 # <a name="ado-properties"></a>ADO-Eigenschaften
 
@@ -91,7 +91,7 @@ ms.locfileid: "88776579"
 |[Status (ADO-Recordset)](./status-property-ado-recordset.md)|Gibt den Status des aktuellen Datensatzes zu Batch Aktualisierungen oder anderen Massen Vorgängen an.|  
 |[StayInSync](./stayinsync-property.md)|Gibt in einem hierarchischen **Recordsetobjekt** an, ob sich der Verweis auf die zugrunde liegenden untergeordneten Datensätze (d. h. das *Kapitel*) ändert, wenn sich die Position der übergeordneten Zeile ändert.|  
 |[Stream-Eigenschaft](./stream-property.md)|Ruft ein OLE DB **Stream** -Objekt von/für ein **adostreamconstruction** -Objekt ab oder legt es fest.|  
-|[Typ](./type-property-ado.md)|Gibt den Betriebs Typ oder den Datentyp eines **Parameters**, **Felds**oder **Eigenschafts** Objekts an.|  
+|[Type](./type-property-ado.md)|Gibt den Betriebs Typ oder den Datentyp eines **Parameters**, **Felds**oder **Eigenschafts** Objekts an.|  
 |[Type (ADO-Stream)](./type-property-ado-stream.md)|Gibt den Datentyp an, der im Daten **Strom** (binär oder Text) enthalten ist.|  
 |[UnderlyingValue –](./underlyingvalue-property.md)|Gibt den aktuellen Wert in der Datenbank für ein **Feld** Objekt an.|  
 |[Wert](./value-property-ado.md)|Gibt den Wert an, der einem **Feld**, einem **Parameter**oder einem **Eigenschafts** Objekt zugewiesen ist.|  

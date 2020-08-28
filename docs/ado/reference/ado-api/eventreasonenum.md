@@ -3,7 +3,7 @@ description: EventReasonEnum
 title: Eventreasonaufumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dc0c811f989b0fd91c47827718d1d8480ddb769
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b676ee2b8585f2bab467cc9f09580721d06fab0c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443922"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973571"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 Gibt den Grund an, warum ein Ereignis aufgetreten ist.  
   
-|Konstant|Wert|Beschreibung|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adrsnaddnew**|1|Ein Vorgang hat einen neuen Datensatz hinzugefügt.|  
 |**adrsnclose**|9|Ein Vorgang hat das **Recordset**geschlossen.|  
@@ -47,7 +47,7 @@ Gibt den Grund an, warum ein Ereignis aufgetreten ist.
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstant|  
+|Konstante|  
 |--------------|  
 |Adoumums. eventreason. AddNew|  
 |Adoumums. eventreason. Close|  

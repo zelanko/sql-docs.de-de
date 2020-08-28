@@ -3,7 +3,7 @@ description: ADO MD-Eigenschaften
 title: ADO MD Eigenschaften | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f6628f0f172e81a490d0abd6a8cb2ae2a73679e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776669"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987421"
 ---
 # <a name="ado-md-properties"></a>ADO MD-Eigenschaften
 
@@ -47,7 +47,7 @@ ms.locfileid: "88776669"
 |[ParentSameAsPrev](./parentsameasprev-property-ado-md.md)|Gibt an, ob das übergeordnete Element dieses Positions Elements dem übergeordneten Element des unmittelbar vorangehenden Elements entspricht.|  
 |[Quelle](./source-property-ado-md.md)|Gibt die Quelle für die Daten im Cellset an.|  
 |[State](./state-property-ado-md.md)|Gibt den aktuellen Status des Cellsets an.|  
-|[Typ](./type-property-ado-md.md)|Gibt den Typ des aktuellen Elements an.|  
+|[Type](./type-property-ado-md.md)|Gibt den Typ des aktuellen Elements an.|  
 |[UniqueName](./uniquename-property-ado-md.md)|Gibt einen eindeutigen Namen für das aktuelle-Objekt an.|  
 |[Wert](./value-property-ado-md.md)|Gibt den Wert der aktuellen Zelle an.|  
   

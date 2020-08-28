@@ -3,7 +3,7 @@ description: Execute-Methode (ADO-Befehl)
 title: Execute-Methode (ADO-Befehl) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b33ada4ce6ac53c1caafbec80c19d1fd31deb6ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5bd7e8d98f7d7ccecfce2ce66852f92efa1dae77
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443892"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973511"
 ---
 # <a name="execute-method-ado-command"></a>Execute-Methode (ADO-Befehl)
 Führt die Abfrage, SQL-Anweisung oder die gespeicherte Prozedur aus, die in der [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) -Eigenschaft oder der [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) -Eigenschaft des [Command-Objekts](../../../ado/reference/ado-api/command-object-ado.md)angegeben ist.  

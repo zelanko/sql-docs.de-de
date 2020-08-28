@@ -3,7 +3,7 @@ description: CreateObject-Methode (RDS)
 title: Methode "kreateobject" (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0fd3e6c7ad67b058920963c7e2dc92f60a2a84d6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768639"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982611"
 ---
 # <a name="createobject-method-rds"></a>CreateObject-Methode (RDS)
 Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf zurück. Der Proxy verpackt und Marshalls Daten zum serverseitigen Stub für die Kommunikation mit dem Geschäftsobjekt, um Anforderungen und Daten über das Internet zu senden. Für in-Process-Komponenten Objekte werden keine Proxys verwendet. es wird lediglich ein Zeiger auf das-Objekt bereitgestellt.  
@@ -30,7 +30,7 @@ Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf z
 ## <a name="syntax"></a>Syntax  
  Der Remote Datendienst unterstützt die folgenden Protokolle: http, HTTPS (http über Secure Socket Layer), DCOM und in-Process.  
   
-|Protocol|Syntax|  
+|Protokoll|Syntax|  
 |--------------|------------|  
 |HTTP|Set Object = DataSpace. kreateobject ("ProgID", "HTTPS \: //awebsrvr")|  
 |HTTPS|Set Object = DataSpace. kreateobject ("ProgID", "HTTPS \: //awebsrvr")|  

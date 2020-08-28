@@ -3,7 +3,7 @@ description: Version-Eigenschaft – Beispiel (VC++)
 title: Beispiel für eine Versions Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5cf9b819d57a6ad0808c498e2492863c685b13ba
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ec19a5f4968613bbf85137485f9256937499a354
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776909"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987891"
 ---
 # <a name="version-property-example-vc"></a>Version-Eigenschaft – Beispiel (VC++)
 In diesem Beispiel wird die [Version](./version-property-ado.md) -Eigenschaft eines [Connection](./connection-object-ado.md) -Objekts verwendet, um die aktuelle ADO-Version anzuzeigen. Außerdem werden verschiedene dynamische Eigenschaften verwendet, um Folgendes anzuzeigen:  

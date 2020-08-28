@@ -3,7 +3,7 @@ description: Beispiel für Append und die Methode "Anfüge Parameter" (JScript)
 title: Beispiel für Append und die Methode "Anfüge Parameter" (JScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 177ba5a63cb8503c51e3264ac5fea48ebf44a3e4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3b4de61bfa05e1dfa5fef778773105b93aeb0c5f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776549"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976131"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Beispiel für Append und die Methode "Anfüge Parameter" (JScript)
 In diesem Beispiel werden die [Append](./append-method-ado.md) -Methode und die-Methode für die-Methode zum Ausführen einer gespeicherten Prozedur mit einem [Eingabeparameter verwendet](./createparameter-method-ado.md) . Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **AppendJS. ASP**.  
