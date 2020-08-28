@@ -3,7 +3,7 @@ description: AppendChunk-Methode (ADO)
 title: AppendChunk-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0df71772820d5871c32e40827400b8cdd40db99d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 260f1bddfe4433e26463bd58b594d2766ccbc531
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776479"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976011"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk-Methode (ADO)
 Fügt Daten an ein großes Textfeld oder ein binäres [Datenfeld](./field-object.md)oder an ein [Parameter](./parameter-object.md) Objekt an.  
@@ -41,7 +41,7 @@ object.AppendChunk Data
  *Daten*  
  Eine **Variante** , die die Daten enthält, die an das-Objekt angefügt werden sollen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **AppendChunk** -Methode für ein **Feld** oder ein **Parameter** Objekt, um Sie mit langen Binär-oder Zeichendaten auszufüllen. In Situationen, in denen der System Arbeitsspeicher eingeschränkt ist, können Sie die **AppendChunk** -Methode verwenden, um lange Werte in Teilen zu bearbeiten, anstatt sie vollständig zu verarbeiten.  
   
 ## <a name="field"></a>Feld  

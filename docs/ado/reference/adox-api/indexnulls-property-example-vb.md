@@ -3,7 +3,7 @@ description: IndexNulls-Eigenschaft – Beispiel (VB)
 title: Beispiel für IndexNulls-Eigenschaft (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aba3aed53a3640ff76b2d46b221265d1505e020a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27cb2f163f1c6732715f2e199a66ac95a39f11e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770149"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984071"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls-Eigenschaft – Beispiel (VB)
 In diesem Beispiel wird die [IndexNulls](./indexnulls-property-adox.md) -Eigenschaft eines [Indexes](./index-object-adox.md)veranschaulicht. Der Code erstellt einen neuen Index und legt den Wert von **IndexNulls** basierend auf Benutzereingaben (aus einem Listenfeld mit dem Namen list1) fest. Anschließend wird der **Index** an die Employees- **Employees** [Tabelle](./table-object-adox.md) im *Northwind* - [Katalog](./catalog-object-adox.md)angehängt. Der neue **Index** wird auf ein [Recordset](../ado-api/recordset-object-ado.md) angewendet, das auf der Tabelle **Employees** basiert, und das **Recordset** wird geöffnet. Ein neuer Datensatz wird der **Employees** -Tabelle mit einem **null** -Wert im indizierten Feld hinzugefügt. Ob dieser neue Datensatz angezeigt wird, hängt von der Einstellung der **IndexNulls** -Eigenschaft ab.  

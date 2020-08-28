@@ -3,7 +3,7 @@ description: OriginalValue-und UnderlyingValue-Eigenschaften (Beispiel) (VB)
 title: OriginalValue-und UnderlyingValue-Eigenschaften (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74cb7f53f7fd55332469a74e77405aa3312aef7e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 46fa4935e7a7aba6c9b50fef368a6f266f93abb4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773609"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990241"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue-und UnderlyingValue-Eigenschaften (Beispiel) (VB)
 In diesem Beispiel werden die [OriginalValue](./originalvalue-property-ado.md) -Eigenschaft und die [UnderlyingValue](./underlyingvalue-property.md) -Eigenschaft veranschaulicht, indem eine Meldung angezeigt wird, wenn sich die zugrunde liegenden Daten eines Datensatzes während eines [recordsetupdates](./recordset-object-ado.md) geändert haben.  

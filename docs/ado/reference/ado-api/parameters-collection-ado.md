@@ -3,7 +3,7 @@ description: Parameters-Collection (ADO)
 title: Parameter Auflistung (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06020bb66a8fd986d3fbf38bda59b98e29e66386
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bad2570c368e469afeb7c69e4f283bdbdfe04674
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773339"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990121"
 ---
 # <a name="parameters-collection-ado"></a>Parameters-Collection (ADO)
 Enthält alle [Parameter](./parameter-object.md) Objekte eines [Befehls](./command-object-ado.md) Objekts.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein **Command** -Objekt verfügt über eine **Parameter** Auflistung aus **Parameter** Objekten.  
   
  Wenn Sie die [Refresh](./refresh-method-ado.md) -Methode für die **Parameter** Auflistung eines **Befehls** Objekts verwenden, werden Anbieter Parameterinformationen für die gespeicherte Prozedur oder parametrisierte Abfrage abgerufen, die im **Command** -Objekt angegeben sind. Einige Anbieter unterstützen keine Aufrufe gespeicherter Prozeduren oder parametrisierte Abfragen. Wenn Sie die **Refresh** -Methode für die **Parameter** Auflistung aufrufen, wenn Sie einen solchen Anbieter verwenden, wird ein Fehler zurückgegeben.  

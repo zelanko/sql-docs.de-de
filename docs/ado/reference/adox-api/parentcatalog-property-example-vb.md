@@ -3,7 +3,7 @@ description: ParentCatalog-Eigenschaft – Beispiel (VB)
 title: Beispielcatalog-Eigenschaft (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66e80c85d1361c99499c91685d46e2df29b59957
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6910ac229d309360676f83f855664ab368459ce0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769809"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983821"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog-Eigenschaft – Beispiel (VB)
 Der folgende Code veranschaulicht die Verwendung der Eigenschaft ["Eigenschaft"](./parentcatalog-property-adox.md) , um auf eine anbieterspezifische Eigenschaft zuzugreifen, bevor eine Tabelle an einen Katalog angehängt wird. Die-Eigenschaft ist " **AutoIncrement**", wodurch ein AutoIncrement-Feld in einer Microsoft Jet-Datenbank erstellt wird.  

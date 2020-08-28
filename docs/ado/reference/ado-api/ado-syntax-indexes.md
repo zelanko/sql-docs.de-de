@@ -3,7 +3,7 @@ description: ADO – Syntaxindizes
 title: ADO-Syntax Indizes | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55d8f16ee617b74ee98d83a1cdf8dad408cab2f3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: acb84a462e6648badb71be752342f7fb1f3ae0da
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776608"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976301"
 ---
 # <a name="ado-syntax-indexes"></a>ADO – Syntaxindizes
 Die Syntax zum Aufrufen von ADO-Methoden und-Eigenschaften unterscheidet sich von der Entwicklungsumgebung. Der Rest der ADO-Sprachreferenz verwendet die Programmiersprache Microsoft Visual Basic, um die ADO-Methoden-und Eigenschafts Syntax zu veranschaulichen. In den folgenden Abschnitten finden Sie jedoch spezifischere Syntax Beispiele, die auf der Programmiersprache und Methodik basieren:  
