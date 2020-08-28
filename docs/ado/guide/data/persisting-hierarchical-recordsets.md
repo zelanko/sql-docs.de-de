@@ -3,7 +3,7 @@ description: Beibehalten von hierarchischen Recordsets
 title: Beibehalten hierarchischer Recordsets | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4bfcb79e532609ad9b3eeb14fb07dec4fd1239f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9fef0aad67d6d6cd68f50cc8940e2ddf3c53a206
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453052"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980071"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>Beibehalten von hierarchischen Recordsets
 Sie können ein hierarchisches **Recordset** in einer Datei im ADTG-oder XML-Format speichern, indem Sie die [Save](../../../ado/reference/ado-api/save-method.md) -Methode aufrufen. Es gelten jedoch zwei Einschränkungen beim Speichern hierarchischer **Recordsets**im XML-Format: Sie können XML nicht in XML speichern, wenn das hierarchische **Recordset** ausstehende Updates enthält, und Sie können kein parametrisiertes hierarchisches **Recordset**speichern.  

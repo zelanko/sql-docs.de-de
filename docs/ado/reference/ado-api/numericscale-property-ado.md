@@ -3,7 +3,7 @@ description: NumericScale-Eigenschaft (ADO)
 title: NumericScale-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57375b89595c6ed3e5c377692709deacd8f0ff28
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 120d88e82f77af622de962ac306442625487ff08
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773969"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990411"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale-Eigenschaft (ADO)
 Gibt die Skala numerischer Werte in einem [Parameter](./parameter-object.md) -oder [Feld](./field-object.md) Objekt an.  
@@ -30,7 +30,7 @@ Gibt die Skala numerischer Werte in einem [Parameter](./parameter-object.md) -od
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen **Bytewert** fest, der die Anzahl der Dezimalstellen angibt, auf die numerische Werte aufgelöst werden, oder gibt ihn zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **NumericScale** -Eigenschaft, um zu bestimmen, wie viele Ziffern rechts vom Dezimaltrennzeichen verwendet werden, um Werte für einen numerischen **Parameter** oder **Feld** Objekt darzustellen.  
   
  Bei **Parameter** Objekten ist die **NumericScale** -Eigenschaft Lese-/Schreibzugriff.  

@@ -3,7 +3,7 @@ description: Arbeiten mit mehrdimensionalen Daten
 title: Arbeiten mit mehrdimensionalen Daten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 0589b1fe5ca6da29f088e26b2236cfc5205bfe0c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758770"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978571"
 ---
 # <a name="working-with-multidimensional-data"></a>Arbeiten mit mehrdimensionalen Daten
 Ein *Cellset* ist das Ergebnis einer Abfrage für mehrdimensionale Daten. Sie besteht aus einer Auflistung von Achsen, in der Regel nicht mehr als vier Achsen und in der Regel nur zwei oder drei Achsen. Eine *Achse* ist eine Auflistung von Membern aus einer oder mehreren Dimensionen, die zum Suchen oder Filtern bestimmter Werte in einem Cube verwendet wird.  

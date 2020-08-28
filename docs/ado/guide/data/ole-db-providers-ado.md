@@ -3,7 +3,7 @@ description: OLE DB-Anbieter (ADO)
 title: OLE DB Anbieter (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fb247f62173a0c622a08eb2d55af005efcb2669
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 25eea144ab0f9301f79a74773258cf399802af9d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805680"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980181"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB-Anbieter (ADO)
 OLE DB definiert einen Satz von COM-Schnittstellen, um Anwendungen einen einheitlichen Zugriff auf Daten bereitzustellen, die in verschiedenen Informationsquellen gespeichert sind. Dieser Ansatz ermöglicht es einer Datenquelle, die Daten über die Schnittstellen freizugeben, die die für die Datenquelle geeignete Menge an DBMS-Funktionalität unterstützen. Entwurfs bedingt basiert die Hochleistungs Architektur OLE DB auf der Verwendung eines flexiblen, komponentenbasierten Dienst Modells. Anstatt eine vorgeschriebene Anzahl von zwischengeschalteten Schichten zwischen der Anwendung und den Daten zu haben, erfordert OLE DB nur so viele Komponenten, wie zum Durchführen einer bestimmten Aufgabe benötigt werden.  
   
- Nehmen wir beispielsweise an, ein Benutzer möchte eine Abfrage ausführen. Betrachten Sie die folgenden Szenarien:  
+ Nehmen wir beispielsweise an, ein Benutzer möchte eine Abfrage ausführen. Stellen Sie sich die folgenden Szenarien vor:  
   
 -   Die Daten befinden sich in einer relationalen Datenbank, für die zurzeit ein ODBC-Treiber, aber kein System eigener OLE DB Anbieter vorhanden ist: die Anwendung verwendet ADO, um mit dem OLE DB Anbieter für ODBC zu kommunizieren, der dann den entsprechenden ODBC-Treiber lädt. Der Treiber übergibt die SQL-Anweisung an das DBMS, das die Daten abruft.  
   

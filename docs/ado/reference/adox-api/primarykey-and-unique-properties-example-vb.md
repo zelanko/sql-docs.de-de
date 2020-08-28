@@ -3,7 +3,7 @@ description: PrimaryKey- und Unique-Eigenschaften – Beispiel (VB)
 title: Beispiel für PrimaryKey und Unique Properties (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa548ea37ffe3c91e8d36febac9f90cf9498d258
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d857dfca2b690b06f43b9be50520b4530645128f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769749"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983671"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey- und Unique-Eigenschaften – Beispiel (VB)
 In diesem Beispiel werden die [PrimaryKey](./primarykey-property-adox.md) -und die [Unique](./unique-property-adox.md) -Eigenschaften eines [Indexes](./index-object-adox.md)veranschaulicht. Der Code erstellt eine neue Tabelle mit zwei Spalten. Die Eigenschaften **PrimaryKey** und **Unique** werden verwendet, um eine Spalte als Primärschlüssel festzulegen, für den doppelte Werte nicht zulässig sind.  

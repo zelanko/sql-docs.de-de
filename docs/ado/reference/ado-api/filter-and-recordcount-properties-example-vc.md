@@ -3,7 +3,7 @@ description: Filter-und RecordCount-Eigenschaften (Beispiel) (VC + +)
 title: Filter-und RecordCount-Eigenschaften (Beispiel) (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3974219f4070d38e877ff7fdd4b6c7e3a26adef2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4d01d2acc51b89fbe1100e535c9aada7dcb8a603
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775309"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973011"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter-und RecordCount-Eigenschaften (Beispiel) (VC + +)
 In diesem Beispiel wird die [Filter](./filter-property.md) -Eigenschaft zum Öffnen eines neuen [Recordsets](./recordset-object-ado.md) basierend auf einer angegebenen Bedingung verwendet, die auf ein vorhandenes **Recordset**angewendet wird. Er verwendet die [RecordCount](./recordcount-property-ado.md) -Eigenschaft, um die Anzahl der Datensätze in den beiden **Recordsets**anzuzeigen. Die FilterField-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  

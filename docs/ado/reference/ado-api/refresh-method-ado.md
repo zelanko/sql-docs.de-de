@@ -3,7 +3,7 @@ description: Refresh-Methode (ADO)
 title: Refresh-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b172179adefc880034443b29ed36bb309215ec5a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 66324860f931a919cccc36d3de9464d2ad2e48d0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771979"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989611"
 ---
 # <a name="refresh-method-ado"></a>Refresh-Methode (ADO)
 Aktualisiert die Objekte in einer Auflistung, um die Objekte widerzuspiegeln, die von und für den Anbieter verfügbar sind.  
@@ -35,7 +35,7 @@ Aktualisiert die Objekte in einer Auflistung, um die Objekte widerzuspiegeln, di
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **Aktualisierungs** Methode führt verschiedene Aufgaben aus, abhängig von der Sammlung, von der Sie aufgerufen wird.  
   
 ### <a name="parameters"></a>Parameter  
