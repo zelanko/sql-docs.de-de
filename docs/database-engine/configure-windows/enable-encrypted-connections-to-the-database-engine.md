@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ab9b5b9a52656b948a63d2b283a0637f56da5037
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772508"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564660"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine
 
@@ -123,6 +123,10 @@ Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL
 9. Klicken Sie mit der rechten Maustaste auf das importierte Zertifikat, zeigen Sie auf **Alle Aufgaben**, und klicken Sie dann auf **Privatschlüssel verwalten**. Fügen Sie im Dialogfeld **Sicherheit** die Leseberechtigung für das Benutzerkonto hinzu, das vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto verwendet wird.  
   
 10. Ergänzen Sie die Angaben im **Zertifikatimport-Assistenten**, um dem Computer ein Zertifikat hinzuzufügen, und schließen Sie dann die MMC-Konsole. Weitere Informationen zum Hinzufügen von Zertifikaten zu einem Computer finden Sie in der Windows-Dokumentation.  
+
+> [!IMPORTANT]
+> In Produktionsumgebungen wird die Verwendung eines von einer Zertifizierungsstelle ausgestellten vertrauenswürdigen Zertifikats empfohlen.    
+> Zu Testzwecken kann auch ein selbstsigniertes Zertifikat verwendet werden. Informationen zum Erstellen eines selbstsignierten Zertifikats finden Sie in den Artikeln zum [PowerShell-Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) bzw. dem [certreq-Befehl](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1).
   
 ## <a name="install-across-multiple-servers"></a>Installieren auf mehreren Servern
 
@@ -141,7 +145,7 @@ Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL
 Konfigurieren Sie den Server, sodass er verschlüsselte Verbindungen erzwingt.
 
 > [!IMPORTANT]
-> Das SQL Server-Dienstkonto muss über Leseberechtigungen für das Zertifikat verfügen, das zum Erzwingen der Verschlüsselung auf der SQL Server-Instanz verwendet wird. Für ein nicht privilegiertes Dienstkonto müssen dem Zertifikat Leseberechtigungen hinzugefügt werden. Ist dies nicht der Fall, kann beim Neustart des SQL Server-Diensts ein Fehler auftreten.
+> Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto muss über Leseberechtigungen für das Zertifikat verfügen, das zum Erzwingen der Verschlüsselung auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verwendet wird. Für ein nicht privilegiertes Dienstkonto müssen dem Zertifikat Leseberechtigungen hinzugefügt werden. Ist dies nicht der Fall, kann beim Neustart des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Diensts ein Fehler auftreten.
   
 1. Erweitern Sie im **SQL Server-Konfigurations-Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<server instance>_ , und klicken Sie dann auf **Eigenschaften**.  
   
@@ -168,7 +172,7 @@ Konfigurieren Sie den Client, sodass er verschlüsselte Verbindungen anfordert.
   
 ## <a name="use-sql-server-management-studio"></a>Verwenden von SQL Server Management Studio
   
-Führen Sie die folgenden Schritte aus, um eine Verbindung in SQL Server Management Studio zu verschlüsseln:  
+So verschlüsseln Sie eine Verbindung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
 
 1. Klicken Sie auf der Symbolleiste des Objekt-Explorers auf **Verbinden**, und klicken Sie dann auf **Datenbank-Engine**.  
   
@@ -183,3 +187,4 @@ Mithilfe von IPSec können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 + [TLS 1.2-Unterstützung für Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
++ [Powershell-Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)

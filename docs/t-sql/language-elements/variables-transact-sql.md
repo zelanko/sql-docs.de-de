@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4eed82330e1a70ddbe269f3a0be845199b4931d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459252"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807029"
 ---
 # <a name="variables-transact-sql"></a>Variablen (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,10 +31,9 @@ Eine lokale Transact-SQL-Variable ist ein Objekt, das einen einzelnen Datenwert 
 * Zum Speichern eines Datenwerts, der vom Rückgabecode einer gespeicherten Prozedur oder vom Funktionsrückgabewert zurückgegeben werden soll.
 
 > [!NOTE]
-> Die Namen einiger Transact-SQL-Systemfunktionen beginnen mit zwei *@* -Zeichen (\@\@). Obwohl die \@\@-Funktionen in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als globale Variablen bezeichnet wurden, handelt es sich dabei keineswegs um Variablen, und sie verhalten sich auch nicht wie Variablen. Die \@\@-Funktionen sind Systemfunktionen, deren Syntaxverwendung den Regeln für Funktionen entspricht.
-
-> [!NOTE]
-> Variablen können in Sichten nicht verwendet werden.
+> - Die Namen einiger Transact-SQL-Systemfunktionen beginnen mit zwei *@* -Zeichen (\@\@). Obwohl die \@\@-Funktionen in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als globale Variablen bezeichnet wurden, handelt es sich bei \@\@-Funktionen keineswegs um Variablen, und sie verhalten sich auch nicht wie diese. Die \@\@-Funktionen sind Systemfunktionen, deren Syntaxverwendung den Regeln für Funktionen entspricht.
+> - Variablen können nicht in einer Ansicht verwendet werden.
+> - Änderungen an Variablen werden durch das Rollback einer Transaktion nicht beeinträchtigt.
 
 Das folgende Skript erstellt eine kleine Testtabelle, die mit 26 Zeilen aufgefüllt wird. Das Skript verwendet eine Variable zur Durchführung von drei Aufgaben: 
 

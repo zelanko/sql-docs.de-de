@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 91d8cdd0c776a7cc8f3e0fcb9ef73da83bf37e6c
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748417"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618119"
 ---
 # <a name="deferred-transactions-sql-server"></a>Markierte Transaktionen [SQL Server]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,6 +48,14 @@ ms.locfileid: "85748417"
 |Wiederholen bei Datenbankspiegelung|verzögerten Transaktion|  
 |Dateigruppe ist offline|verzögerten Transaktion|  
   
+### <a name="requirements-and-limitations"></a>Anforderungen und Einschränkungen
+
+ - Die Datenbank muss das FULL- oder BULK-LOGGED-Wiederherstellungsmodell verwenden.
+ - Mindestens eine Datenbank- und Protokollsicherung muss für die Datenbank abgeschlossen sein.
+ - Verzögerte Transaktionen gelten nicht als Fehler, die beim Rollback einer Transaktion auftreten, nachdem die Datenbank online ist (z. B. Laufzeitfehler).
+ - Transaktionen können bei Wiederherstellungsfehlern während einer Datenbankanfügung nicht verzögert werden.
+ - Einige Transaktionen wie Systemtransaktionen (z. B. Seitenzuordnungen) können nicht verzögert werden.
+
 ## <a name="moving-a-transaction-out-of-the-deferred-state"></a>Beenden des VERZÖGERTEN Zustands einer Transaktion  
   
 > [!IMPORTANT]  

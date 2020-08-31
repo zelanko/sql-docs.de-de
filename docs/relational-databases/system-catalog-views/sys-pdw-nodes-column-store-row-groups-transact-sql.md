@@ -13,19 +13,19 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9cabbcd9a47bbea4eaaf2d01bca1044c66ff9112
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 4e712d2b5adafbb3f47ef132c701a82d3c9026c9
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646025"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062349"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Stellt Informationen zu gruppierten columnstore--Indizes auf Segment Basis bereit, damit Administratoren Entscheidungen zur Systemverwaltung in treffen können [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **sys. pdw_nodes_column_store_row_groups** verfügt über eine Spalte für die Gesamtzahl der physisch gespeicherten Zeilen (einschließlich der als gelöscht markierten Zeilen) und eine Spalte für die Anzahl der Zeilen, die als gelöscht markiert sind. Verwenden Sie **sys. pdw_nodes_column_store_row_groups** , um zu bestimmen, welche Zeilen Gruppen einen hohen Prozentsatz gelöschter Zeilen aufweisen und neu erstellt werden sollten.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID der zugrunde liegenden Tabelle. Dabei handelt es sich um die physische Tabelle auf dem Computeknoten, nicht um die object_id für die logische Tabelle auf dem Steuerelement Knoten. Beispielsweise stimmt object_id nicht mit dem object_id in sys. Tables.<br /><br /> Verwenden Sie zum Verknüpfen mit sys. Tables sys. pdw_index_mappings.|  
 |**index_id**|**int**|ID des gruppierten columnstore--Indexes in *object_id* Tabelle.|  
@@ -107,8 +107,6 @@ FROM sys.pdw_nodes_column_store_row_groups rg
 GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
->[!TIP]
-> Um die Leistung in Synapse SQL zu verbessern, sollten Sie die Verwendung von **sys. pdw_permanent_table_mappings** anstelle von **sys. pdw_table_mappings** in permanenten Benutzer Tabellen in Erwägung gezogen. Weitere Informationen finden Sie unter **[sys. pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** .
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Data Warehouse- und Parallel Data Warehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   

@@ -13,18 +13,18 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 074dc46c36f4b90bebc241840eb137549e3bbd4d
-ms.sourcegitcommit: 2b4baae583a5430f2e2ec76192ef1af3f55b25e8
+ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251527"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646045"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistent zum Importieren von Flatfiles in SQL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 > Inhalte im Zusammenhang mit dem Import/Export-Assistenten finden Sie unter [SQL Server-Import/Export-Assistent](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-Mit dem Assistenten zum Importieren von Flatfiles können Daten mühelos aus einer Flatfile (CSV, TXT) in eine neue Tabelle in Ihrer Datenbank kopiert werden. In dieser Übersicht werden die Gründe für die Verwendung dieses Assistenten beschrieben. Außerdem erfahren Sie, wie er zu finden ist, und erhalten ein einfaches Beispiel, dem Sie folgen können.
+Mit dem Assistenten zum Importieren von Flatfiles können Daten mühelos aus einer Flatfile (CSV, TXT) in eine neue Tabelle in Ihrer Datenbank kopiert werden.  Der Assistent zum Importieren von Flatfiles unterstützt sowohl durch Kommas getrennte Formatdateien als auch Formatdateien mit fester Breite. In dieser Übersicht werden die Gründe für die Verwendung dieses Assistenten beschrieben. Außerdem erfahren Sie, wie er zu finden ist, und erhalten ein einfaches Beispiel, dem Sie folgen können.
 
 ## <a name="why-would-i-use-this-wizard"></a>Warum sollte ich diesen Assistenten verwenden?
 Dieser Assistent wurde erstellt, um die aktuelle Importoberfläche mithilfe eines intelligenten Frameworks zu verbessern: Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). Für einen Benutzer ohne spezielle Domänenkenntnisse kann das Importieren von Daten oft eine komplexe, fehleranfällige und mühsame Aufgabe darstellen. Dieser Assistent optimiert und vereinfacht den Importvorgang, sodass es genügt, eine Eingabedatei und einen eindeutigen Tabellennamen auszuwählen. Das PROSE-Framework kümmert sich um den Rest.
@@ -36,7 +36,7 @@ Um noch mehr über die Verbesserung der Benutzerfreundlichkeit des Assistenten z
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Voraussetzungen
-Dieses Feature ist nur in SQL Server Management Studio (SSMS) v17.3 oder höher verfügbar. Stellen Sie sicher, dass Sie die neueste Version verwenden. Die neueste Version ist [hier](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) zu finden.
+Dieses Feature ist in SQL Server Management Studio (SSMS) v17.3 oder höher verfügbar. Stellen Sie sicher, dass Sie die neueste Version verwenden. Die neueste Version ist [hier](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) zu finden.
  
 ## <a name="getting-started"></a><a id="started"></a>Erste Schritte
 Um den Assistenten zum Importieren von Flatfiles aufzurufen, gehen Sie folgendermaßen vor:
@@ -54,6 +54,14 @@ Für den Zweck dieses Tutorials können Sie gerne Ihre eigene Flatfile verwenden
 
 ![Assistent: Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
+Übersicht:
+1. [Öffnen des Assistenten](#step-1-access-wizard-and-intro-page)
+2. [Angeben der Eingabedatei](#step-2-specify-input-file)
+3. [Datenvorschau](#step-3-preview-data)
+4. [Bearbeiten von Spalten](#step-4-modify-columns)
+5. [Zusammenfassung](#step-5-summary)
+6. [Ergebnisse](#step-6-results)
+
 ### <a name="step-1-access-wizard-and-intro-page"></a>Schritt 1: Öffnen des Assistenten und der Einführungsseite
 Öffnen Sie den Assistenten, wie [hier](#started) beschrieben wird.
 
@@ -62,7 +70,7 @@ Die erste Seite des Assistenten ist die Startseite. Wenn Sie diese Seite nicht m
 ![Assistent: Einführung](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### <a name="step-2-specify-input-file"></a>Schritt 2: Angeben der Eingabedatei
-Klicken Sie auf „Durchsuchen“, um die Eingabedatei auszuwählen. Der Assistent sucht standardmäßig nach CSV- und TXT-Dateien. 
+Klicken Sie auf „Durchsuchen“, um die Eingabedatei auszuwählen. Der Assistent sucht standardmäßig nach CSV- und TXT-Dateien. PROSE erkennt unabhängig von der Dateierweiterung, ob die Datei durch Kommas getrennt ist oder ein Format mit fester Breite vorliegt.
 
 Der neue Tabellenname muss eindeutig sein, andernfalls lässt der Assistent Sie nicht fortfahren.
 
@@ -75,6 +83,8 @@ Der Assistent generiert eine Vorschau, die für die ersten 50 Zeilen angezeigt w
 
 ### <a name="step-4-modify-columns"></a>Schritt 4: Bearbeiten von Spalten
 Der Assistent identifiziert die richtigen Spaltennamen, Datentypen usw. Hier können Sie die Felder bearbeiten, wenn sie nicht korrekt sind (z.B. muss der Datentyp „float“ anstatt von „int“ lauten).
+
+Für Spalten, in denen leere Werte erkannt werden, wird „NULL-Werte zulassen“ aktiviert. Wenn Sie in einer Spalte jedoch NULL erwarten und „NULL-Werte zulassen“ nicht aktiviert ist, können Sie hier die Tabellendefinition aktualisieren, um NULL-Werte in einer oder allen Spalten zuzulassen.
 
 Fahren Sie fort, wenn Sie fertig sind.
 

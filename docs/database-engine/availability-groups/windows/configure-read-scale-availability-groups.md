@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 5681516c193a45fb3cee540d21bbc3e88a917d31
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565305"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564516"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Konfigurieren der Leseskalierung für eine Always On-Verfügbarkeitsgruppe
 
@@ -79,7 +79,7 @@ Bei dieser Verfügbarkeitsgruppe handelt es sich nicht um eine Hochverfügbarkei
 
 Es gibt zwei Möglichkeiten für die Verbindung mit schreibgeschützten sekundären Replikaten:
 * Anwendungen können eine direkte Verbindung mit der SQL Server-Instanz herstellen, auf der das sekundäre Replikat gehostet wird, und die Datenbanken abfragen. Weitere Informationen finden Sie unter [Lesbare sekundäre Replikate](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
-* Anwendungen können ebenfalls schreibgeschütztes Routing verwenden. Hierfür ist ein Listener erforderlich. Weitere Informationen finden Sie unter [Schreibgeschütztes Routing](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
+* Anwendungen können ebenfalls schreibgeschütztes Routing verwenden. Hierfür ist ein Listener erforderlich. Wenn Sie ein Szenario mit Leseskalierung ohne einen Cluster-Manager bereitstellen, können Sie dennoch einen Listener erstellen, der auf die IP-Adresse des aktuellen primären Replikats und des Ports verweist, die sich von jener unterscheidet, die von SQL Server überwacht wird. Nach einem Failover müssen Sie den Listener neu erstellen, um auf die neue primäre IP-Adresse zu verweisen. Weitere Informationen finden Sie unter [Schreibgeschütztes Routing](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
 
 ## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>Ausführen eines Failovers des primären Replikats auf eine schreibgeschützte Verfügbarkeitsgruppe
 

@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88122490"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88655288"
 ---
 Jede Verfügbarkeitsgruppe hat nur ein primäres Replikat. Das primäre Replikat lässt Lese- und Schreibvorgänge zu. Sie können ein Failover ausführen, um das primäre Replikat zu ändern. In einer Verfügbarkeitsgruppe für Hochverfügbarkeit automatisiert der Cluster-Manager den Failovervorgang. In einer Verfügbarkeitsgruppe mit dem Clustertyp „NONE“ erfolgt der Failovervorgang manuell. 
 
@@ -43,7 +43,7 @@ Verwenden Sie diese Methode, wenn das primäre Replikat verfügbar ist. Dabei m�
 
 So führen ein manuelles Failover ohne Datenverlust aus:
 
-1. Legen Sie `SYNCHRONOUS_COMMIT` als sekundäres Zielreplikat fest.
+1. Verwenden Sie `SYNCHRONOUS_COMMIT` für das aktuelle primäre Replikat und das sekundäre Zielreplikat.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -90,7 +90,7 @@ So führen ein manuelles Failover ohne Datenverlust aus:
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-1. Aktualisieren Sie die Rolle des alten Replikats auf `SECONDARY`, und führen Sie den folgenden Befehl auf der SQL Server-Instanz aus, die das primäre Replikat hostet:
+1. Aktualisieren Sie die Rolle des alten Replikats auf `SECONDARY`, und führen Sie den folgenden Befehl auf der SQL Server-Instanz aus, die das alte primäre Replikat hostet:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -106,3 +106,5 @@ So führen ein manuelles Failover ohne Datenverlust aus:
    ALTER DATABASE [db1]
         SET HADR RESUME
    ```
+
+1. Erstellen Sie jeden Listener neu, den Sie für Leseskalierungszwecke erstellt haben und der nicht von einem Cluster-Manager verwaltet wird. Wenn der ursprüngliche Listener auf das alte primäre Replikat zeigt, löschen Sie ihn, und erstellen Sie ihn neu, um auf das neue primäre Replikat zu verweisen.

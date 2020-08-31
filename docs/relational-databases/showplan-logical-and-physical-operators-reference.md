@@ -138,12 +138,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93640502582b244c4b6e36473a087d84f53423c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 001b08d1a2556e325fd3923928705e2a0df9aeb8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455495"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760260"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Referenz zu logischen und physischen Showplanoperatoren
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -188,7 +188,7 @@ Ein entsprechender Zähler, **ActualEndOfScans**, ist verfügbar, wenn die Showp
   
 |Symbol für grafischen Ausführungsplan|Showplanoperator|BESCHREIBUNG|  
 |-----------------------------------|-----------------------|-----------------|  
-|![Adaptiver Verknüpfungsoperator (Symbol)](../relational-databases/media/AdaptiveJoin.gif "Adaptiver Verknüpfungsoperator (Symbol)")|**Adaptiver Join**|Mit dem Operator für einen **adaptiven Join** können Sie wählen, ob eine Hashjoinmethode oder ein eine Methode mit dem Join geschachtelter Schleifen auf nach dem Scan der ersten Eingabe zurückgestellt werden. Der **Adaptive Join**-Operator (adaptiver Join) ist ein physischer Operator. Weitere Informationen finden Sie unter [Grundlegendes zu adaptiven Joins](../relational-databases/performance/joins.md#adaptive). | 
+|![Adaptiver Verknüpfungsoperator (Symbol)](../relational-databases/media/AdaptiveJoin.gif "Adaptiver Verknüpfungsoperator (Symbol)")|**Adaptiver Join**|Mit dem **Adaptiver Join**-Operator können Sie wählen, ob eine Hashjoinmethode oder eine Methode mit einem Join geschachtelter Schleifen bis nach dem Scan der ersten Eingabe zurückgestellt wird. Der **Adaptive Join**-Operator (adaptiver Join) ist ein physischer Operator. Weitere Informationen finden Sie unter [Grundlegendes zu adaptiven Joins](../relational-databases/performance/joins.md#adaptive). | 
 |Keine|**Aggregat**|Mit dem **Aggregate** -Operator wird ein Ausdruck berechnet, der MIN, MAX, SUM, COUNT oder AVG enthält. Der **Aggregate** -Operator kann ein logischer oder physischer Operator sein.| 
 |![Operator für arithmetische Ausdrücke (Symbol)](../relational-databases/media/arithmetic-expression-32x-2.gif "Operator für arithmetische Ausdrücke (Symbol)")|**Arithmetic Expression**|Der **Arithmetic Expression** -Operator berechnet einen neuen Wert anhand vorhandener Werte in einer Zeile. **Arithmetic Expression** wird nicht in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]verwendet.| 
 |Keine|**Async Concat**|Der **Async Concat**-Operator wird nur in Remoteabfragen (verteilten Abfragen) verwendet. Diese Anweisung weist *n* untergeordnete Knoten und einen übergeordneten Knoten auf. Gewöhnlich sind manche untergeordnete Knoten Remotecomputer, die an einer verteilten Abfrage beteiligt sind. **Async Concat** gibt `open()`-Aufrufe für alle untergeordneten Knoten gleichzeitig aus und wendet dann auf jeden untergeordneten Knoten ein Bitmap an. Für jedes Bit, das 1 ist, sendet **Async Concat** bei Bedarf die Ausgabezeilen an den übergeordneten Knoten.| 
@@ -259,7 +259,7 @@ Ein entsprechender Zähler, **ActualEndOfScans**, ist verfügbar, wenn die Showp
 |![Population Query-Cursoroperator (Symbol)](../relational-databases/media/poulation-query-32x.gif "Population Query-Cursoroperator (Symbol)")|**Population Query**|Der **Population Query** -Operator füllt die Arbeitstabelle eines Cursors auf, wenn der Cursor geöffnet wird.| 
 |![Refresh Query-Cursoroperator (Symbol)](../relational-databases/media/refresh-query-32x.gif "Refresh Query-Cursoroperator (Symbol)")|**Refresh Query**|Der **Refresh Query** -Operator ruft aktuelle Daten für die Zeilen im Fetchpuffer ab.| 
 |![Remote Delete-Operator (Symbol)](../relational-databases/media/remote-delete-32x.gif "Remote Delete-Operator (Symbol)")|**Remote Delete**|Der **Remote Delete** -Operator löscht die Eingabezeilen in einem Remoteobjekt. **Remote Delete** ist ein logischer und physischer Operator.| 
-|![Remote Index Seek-Showplanoperator](../relational-databases/media/remote-index-scan-32x.gif "Remote Index Seek-Showplanoperator")|**Remote Index Scan**|Der **Remote Index Scan** -Operator durchsucht den in der Argumentspalte angegebenen Remoteindex. **Remote Index Scan** ist ein logischer und physischer Operator.| 
+|![Remote Index Scan (Showplanoperator)](../relational-databases/media/remote-index-scan-32x.gif "Remote Index Scan (Showplanoperator)")|**Remote Index Scan**|Der **Remote Index Scan** -Operator durchsucht den in der Argumentspalte angegebenen Remoteindex. **Remote Index Scan** ist ein logischer und physischer Operator.| 
 |![Remote Index Seek-Showplanoperator](../relational-databases/media/remote-index-seek-32x.gif "Remote Index Seek-Showplanoperator")|**Remote Index Seek**|Der **Remote Index Seek** -Operator verwendet die Suchmöglichkeiten eines Remoteindexobjekts, um Zeilen abzurufen. Die **Argument** -Spalte enthält den Namen des verwendeten Remoteindexes und das SEEK:()-Prädikat. **Remote Index Seek** ist ein logischer und physischer Operator.| 
 |![Remote Insert-Operator (Symbol)](../relational-databases/media/remote-insert-32x.gif "Remote Insert-Operator (Symbol)")|**Remote Insert**|Der **Remote Insert** -Operator fügt die Eingabezeilen in ein Remoteobjekt ein. **Remote Insert** ist ein logischer und physischer Operator.| 
 |![Remote Query-Operator (Symbol)](../relational-databases/media/remote-query-32x.gif "Remote Query-Operator (Symbol)")|**Remote Query**|Durch den Operator **Remote Query** wird eine Abfrage an eine Remotequelle übermittelt. Der Text der an den Remoteserver gesendeten Abfrage wird in der **Argument** -Spalte angezeigt. **Remote Query** ist ein logischer und physischer Operator.| 

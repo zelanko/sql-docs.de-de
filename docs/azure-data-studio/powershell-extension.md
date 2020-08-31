@@ -1,21 +1,21 @@
 ---
 title: PowerShell-Erweiterung
-description: Erfahren Sie, wie Sie die PowerShell-Erweiterung für Azure Data Studio installieren und verwenden, die die umfassende Unterstützung des PowerShell-Editors zum Schreiben und Debuggen von Skripts bereitstellt.
+description: Hier erfahren Sie, wie Sie die PowerShell-Erweiterung für Azure Data Studio installieren und verwenden, die die umfassende Unterstützung des PowerShell-Editors zum Schreiben und Debuggen von Skripts bereitstellt.
 ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: a0c6a37af62422f65329ef1bbe2e66efbdc5eeb0
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c3edd5b618a6119021a69f90f4e90341ae6360bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411316"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766539"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>PowerShell-Editor-Unterstützung für Azure Data Studio
 
@@ -39,7 +39,7 @@ Jetzt können Sie PowerShell-Skripts mit der ausgezeichneten IDE-ähnlichen Schn
 
 ## <a name="installing-the-extension"></a>Installieren der Erweiterung
 
-Sie können das offizielle Release der PowerShell-Erweiterung installieren, indem Sie die Schritte in der [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions)-Dokumentation ausführen.
+Sie können das offizielle Release der PowerShell-Erweiterung installieren, indem Sie die Schritte in der [Azure Data Studio](./extensions.md)-Dokumentation ausführen.
 Suchen Sie im Bereich „Erweiterungen“ nach der Erweiterung „PowerShell“, und installieren Sie sie dort.  Sie werden automatisch über alle zukünftigen Updates der Erweiterung benachrichtigt.
 
 Sie können auch ein VSIX-Paket von unserer Seite [Releases](https://github.com/PowerShell/vscode-powershell/releases) herunterladen und über die Befehlszeile installieren:
@@ -63,8 +63,8 @@ Wenn Sie Azure Data Studio unter macOS oder Linux ausführen, müssen Sie mögli
 PowerShell Core ist ein Open-Source-Projekt auf [GitHub](https://github.com/powershell/powershell).
 Weitere Informationen zur Installation von PowerShell Core auf macOS- oder Linux-Plattformen finden Sie in den folgenden Artikeln:
 
-- [Installieren von PowerShell Core unter Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [Installieren von PowerShell Core unter macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [Installieren von PowerShell Core unter Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [Installieren von PowerShell Core unter macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## <a name="example-scripts"></a>Beispielskripts
 

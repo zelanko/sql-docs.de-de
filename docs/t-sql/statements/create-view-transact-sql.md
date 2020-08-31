@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23a71a0ffe8cfa34ee61b5396146d46f8f174bc6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1545d389f19aeee3c1cefa2e17bcc8c60bcd495
+ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444834"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88602195"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 
@@ -143,8 +143,8 @@ OR ALTER
  CHECK OPTION  
  Erzwingt, dass alle für die Sicht ausgeführten Datenänderungsanweisungen den Kriterien entsprechen müssen, die innerhalb von *select_statement* festgelegt wurden. Wenn durch eine Sicht eine Zeile geändert wird, stellt WITH CHECK OPTION sicher, dass die Daten nach dem Ausführen eines Commits für die Änderung in der Sicht weiterhin angezeigt werden.  
   
-> [!NOTE]  
->  Alle Updates, die direkt für die zugrunde liegenden Tabellen einer Sicht durchgeführt werden, werden nicht anhand der Sicht geprüft, auch wenn CHECK OPTION angegeben ist.  
+> [!NOTE]
+>  Die Klausel CHECK OPTION gilt nur für Updates, die über die Ansicht vorgenommen werden. Sie gilt nicht für Updates, die direkt für die zugrunde liegenden Tabellen einer Ansicht durchgeführt werden.  
   
  ENCRYPTION  
  **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

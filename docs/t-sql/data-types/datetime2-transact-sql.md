@@ -2,7 +2,7 @@
 description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 08/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a64acd93b34a1d919ec271f7a11a3d9edd199d44
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445985"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760330"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -49,7 +49,7 @@ Definiert ein Datum, das mit einer Uhrzeit kombiniert ist und auf dem 24-Stunden
 |Elementbereiche|Bei YYYY handelt es sich um eine vierstellige Zahl im Bereich von 0001 bis 9999, die ein Jahr darstellt.<br /><br /> Bei MM handelt es sich um eine zweistellige Zahl im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellt.<br /><br /> Bei DD handelt es sich um eine zweistellige Zahl im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellt.<br /><br /> Bei hh handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 23, die die Stunde darstellt.<br /><br /> Bei mm handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 59, die die Minute darstellt.<br /><br /> Bei ss handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 59, die die Sekunde darstellt.<br /><br /> Bei n* handelt es sich um eine null- bis siebenstellige Zahl von 0 bis 9999999, die die Sekundenbruchteile darstellt. In Informatica werden die Sekundenbruchteile abgeschnitten, wenn n > 3.|  
 |Zeichenlänge|Mindestens 19 Positionen (YYYY-MM-DD hh:mm:ss) bis maximal 27 Positionen (YYYY-MM-DD hh:mm:ss .0000000)|  
 |Genauigkeit, Dezimalstellen|0 bis 7 Stellen mit einer Genauigkeit von 100 ns. Die Standardgenauigkeit beträgt 7 Stellen.|  
-|Speichergröße|6 Byte für Genauigkeiten unter 3.<br/>7 Byte für Genauigkeiten von 3 und 4.<br/>Alle anderen Genauigkeiten erfordern 8 Byte.<sup>1</sup>|  
+|Speichergröße <sup>1</sup>|6 Byte für Genauigkeiten unter 3.<br/>7 Byte für Genauigkeiten von 3 und 4.<br/>Alle anderen Genauigkeiten erfordern 8 Byte.<sup>2</sup>|  
 |Genauigkeit|100 Nanosekunden|  
 |Standardwert|1900-01-01 00:00:00|  
 |Kalender|Gregorianisch|  
@@ -57,7 +57,9 @@ Definiert ein Datum, das mit einer Uhrzeit kombiniert ist und auf dem 24-Stunden
 |Beachtung und Beibehaltung des Zeitzonenoffsets|Nein|  
 |Beachtung der Sommerzeit|Nein|  
 
-<sup>1</sup> Das erste Byte eines **datetime2**-Werts speichert die Genauigkeit des Wertes, d.h. der tatsächlich für einen **datetime2**-Wert benötigte Speicher entspricht der Speichergröße, die in der obigen Tabelle angegeben ist, plus ein zusätzliches Byte, um die Genauigkeit zu speichern.  Insofern beträgt die maximale Größe eines **datetime2**-Werts 9 Byte. Dabei wird die Genauigkeit von einem Byte gespeichert; 8 Byte dienen als Datenspeicher bei maximaler Genauigkeit.
+<sup>1</sup> Bereitgestellte Werte gelten für den nicht komprimierten Rowstore-Index. Bei der Verwendung der [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md) oder von [Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md) kann sich die Speichergröße der Genauigkeiten ändern. Außerdem kann sich die Speichergröße auf dem Datenträger von der im Arbeitsspeicher unterscheiden. So benötigen **datetime2**-Werte immer 8 Byte Arbeitsspeicher, wenn der Batchmodus verwendet wird.
+
+<sup>2</sup> Wenn ein **datetime2**-Wert in einen **varbinary**-Wert umgewandelt wird, wird dem **varbinary**-Wert ein zusätzliches Byte hinzugefügt, um die Genauigkeit zu speichern.
 
 Metadaten von Datentypen finden Sie unter [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) oder [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). Für einige Datums- und Uhrzeitdatentypen sind die Genauigkeit und die Dezimalstellenanzahl variabel. Informationen zum Abrufen der Präzision und Skalierung für eine Spalte finden Sie unter [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md) oder [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
   

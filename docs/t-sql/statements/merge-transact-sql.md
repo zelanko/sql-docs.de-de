@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67e1fe125172b6f273b27d6fcb2cac3d18d0bb2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73181df45ee72cc29bc73b73b40940ce7bb15b15
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357806"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778559"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -56,7 +56,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
     [ INTO ] <target_table> [ WITH ( <merge_hint> ) ] [ [ AS ] table_alias ]  
-    USING <table_source>
+    USING <table_source> [ [ AS ] table_alias ]
     ON <merge_search_condition>  
     [ WHEN MATCHED [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
@@ -125,12 +125,15 @@ Wenn *target_table* eine Sicht ist, müssen alle Aktionen für die Tabelle die B
 *target_table* darf keine Remotetabelle sein. Für *target_table* dürfen keine Regeln definiert sein.  
   
 [ AS ] *table_alias*  
-Ein alternativer Name, über den auf eine Tabelle verwiesen wird.  
+Dies ist ein alternativer Name zum Verweisen auf eine Tabelle für *target_table*.  
   
 USING \<table_source>  
 Hiermit wird die Datenquelle angegeben, die basierend auf \<merge_search condition> mit den Datenzeilen in *target_table* abgeglichen wird. Das Ergebnis dieser Zuordnung legt die Aktionen fest, die von den WHEN-Klauseln der MERGE-Anweisung ausgeführt werden. \<table_source> kann eine Remotetabelle oder eine abgeleitete Tabelle sein, die auf Remotetabellen zugreift.
   
 \<table_source> kann eine abgeleitete Tabelle sein, die mit dem [Tabellenwertkonstruktor](../../t-sql/queries/table-value-constructor-transact-sql.md) von [!INCLUDE[tsql](../../includes/tsql-md.md)] eine Tabelle durch Angeben mehrerer Zeilen erstellt.  
+  
+ [ AS ] *table_alias*  
+Dies ist ein alternativer Name zum Verweisen auf eine Tabelle für table_source.   
   
 Weitere Informationen zur Syntax und zu den Argumenten dieser Klausel finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   

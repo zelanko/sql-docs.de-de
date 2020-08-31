@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 528eedeb18de9b0d1a8558edecccf5470a374eda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d75f734b3a45942155afaa7a85f4817fe868f3a0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479155"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778549"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -194,11 +194,13 @@ SET
   | TRANSFORM_NOISE_WORDS = { OFF | ON }
   | TWO_DIGIT_YEAR_CUTOFF = { 1753, ..., 2049, ..., 9999 }
 }
+
 <FILESTREAM_option> ::=
 {
     NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL
   | DIRECTORY_NAME = <directory_name>
 }
+
 <HADR_options> ::=
     ALTER DATABASE SET HADR
 
@@ -212,7 +214,7 @@ SET
 {
     QUERY_STORE
     {
- = OFF
+          = OFF [ FORCED ] 
         | = ON [ ( <query_store_option_list> [,...n] ) ]
         | ( < query_store_option_list> [,...n] )
         | CLEAR [ ALL ]
@@ -235,7 +237,7 @@ SET
 
 <query_capture_policy_option_list> :: =
 {
-    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+      STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
     | EXECUTION_COUNT = number
     | TOTAL_COMPILE_CPU_TIME_MS = number
     | TOTAL_EXECUTION_CPU_TIME_MS = number
@@ -253,11 +255,12 @@ SET
     REMOTE_DATA_ARCHIVE =
     {
         ON ( SERVER = <server_name> ,
-{CREDENTIAL = <db_scoped_credential_name>
-   | FEDERATED_SERVICE_ACCOUNT = ON | OFF
-}
-      )
-      | OFF
+             { 
+                  CREDENTIAL = <db_scoped_credential_name>
+                  | FEDERATED_SERVICE_ACCOUNT = ON | OFF
+             }
+        )
+        | OFF
     }
 }
 
@@ -273,8 +276,8 @@ SET
 <snapshot_option> ::=
 {
     ALLOW_SNAPSHOT_ISOLATION { ON | OFF }
-  | READ_COMMITTED_SNAPSHOT {ON | OFF }
-  | MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = {ON | OFF }
+  | READ_COMMITTED_SNAPSHOT { ON | OFF }
+  | MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = { ON | OFF }
 }
 <sql_option> ::=
 {
@@ -299,7 +302,9 @@ SET
   | ROLLBACK IMMEDIATE
   | NO_WAIT
 }
-<temporal_history_retention>::=TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<temporal_history_retention> ::=
+    TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```
 
 ## <a name="arguments"></a>Argumente
@@ -337,9 +342,9 @@ Die Option AUTO_CLOSE ist sehr nützlich für Desktopdatenbanken, da mit ihrer H
 >
 > Ist AUTO_CLOSE auf ON festgelegt, geben einige Spalten in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht sowie die [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion den Wert NULL zurück, da die Datenbank nicht für den Abruf der Daten verfügbar ist. Führen Sie eine USE-Anweisung zum Öffnen der Datenbank aus, um dieses Problem zu beheben.
 >
-> Für die Datenbankspiegelung muss AUTO_CLOSE deaktiviert sein (OFF).
+> Für die Datenbankspiegelung muss AUTO_CLOSE auf OFF festgelegt sein.
 
-Wenn die Datenbank auf AUTOCLOSE = ON festgelegt ist, wird mit einem Vorgang, bei dem das automatische Beenden der Datenbank initiiert wird, der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll für jeden geleerten Cachespeicher im Plancache die folgende Meldung: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
+Wenn die Datenbank auf `AUTOCLOSE = ON` festgelegt ist, wird mit einem Vorgang, mit dem das automatische Beenden der Datenbank initiiert wird, der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll für jeden geleerten Cachespeicher im Plancache die folgende Meldung: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 EIN     

@@ -26,17 +26,19 @@ ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca35aa4105bf3d54a84457fb51b48e9fc269ef72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 795030b16c25b9bf97795e16df4c03cfb7bbea15
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417126"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805867"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Führt für eine explizite oder implizite Transaktion ein Rollback zum Anfang der Transaktion oder auf einen Sicherungspunkt innerhalb der Transaktion aus. Mit ROLLBACK TRANSACTION können Sie alle Datenänderungen löschen, die seit dem letzten Start der Transaktion oder bis zu einem Sicherungspunkt vorgenommen wurden. Die Anweisung gibt auch Ressourcen frei, die von der Transaktion beansprucht werden.  
+  
+  Dies schließt keine Änderungen ein, die an lokalen Variablen oder Tabellenvariablen vorgenommen wurden. Diese werden von dieser Anweisung nicht gelöscht.
   
 
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
