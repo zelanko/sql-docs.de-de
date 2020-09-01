@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: c7e36c968a11b3aaa1e30b39ab120ffbac9bb08f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2fee6052dea18c25b093ee75b53c56b1dd053aad
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892053"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042498"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Konfigurieren von PolyBase-Erweiterungsgruppen unter Windows
 
@@ -34,7 +34,7 @@ Die folgenden Schritte fassen den Prozess der Erstellung einer PolyBase-Erweiter
   
 1. Installieren Sie die gleiche Version von SQL Server mit PolyBase auf N Computern.
   
-2. Wählen Sie eine SQL Server-Instanz als Hauptknoten aus. Ein Hauptknoten kann nur auf einer Instanz festgelegt werden, die SQL Server Enterprise ausführt.
+2. Wählen Sie eine SQL Server-Instanz als Hauptknoten aus. 
   
 3. Fügen Sie mithilfe von [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)die verbleibenden SQL Server-Instanzen als Serverknoten hinzu.
 
