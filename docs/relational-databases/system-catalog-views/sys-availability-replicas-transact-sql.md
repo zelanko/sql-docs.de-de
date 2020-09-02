@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1ed78e1cce742ce508237b7e04187927cf931cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01a82400b668243b48047e7118f7b7b0c4095a60
+ms.sourcegitcommit: d7accd198ee94e9d87eca8ed86fdb70bc60819e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486499"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385971"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,6 +57,8 @@ Wenn die lokale Serverinstanz nicht mit dem WSFC-Failovercluster kommunizieren k
 |**modify_date**|**datetime**|Datum der letzten Änderung des Replikats.<br /><br /> NULL = Replikat befindet sich nicht auf dieser Serverinstanz.|  
 |**backup_priority**|**int**|Stellt die benutzerdefinierte Priorität für die Ausführung von Sicherungen auf diesem Replikat in Relation zu den anderen Replikaten in derselben Verfügbarkeitsgruppe dar. Der Wert liegt im Bereich von 0 bis 100 und ist eine ganze Zahl.<br /><br /> Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**read_only_routing_url**|**nvarchar(256)**|Konnektivitätsendpunkt (URL) der schreibgeschützten Verbindung für das Verfügbarkeitsreplikat. Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Routing für eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).|  
+|**seeding_mode**|**tinyint**|Enthält einen der folgenden Werte: </br></br> 0: manuell </br></br> 1: automatisch|
+|**seeding_mode_desc**|**nvarchar(60)**|Beschreibt den Seeding Modus. </br></br> MANUAL </br></br> AUTOMATIC|
   
 ## <a name="security"></a>Sicherheit  
   
