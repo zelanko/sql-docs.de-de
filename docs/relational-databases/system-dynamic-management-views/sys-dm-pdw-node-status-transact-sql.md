@@ -13,14 +13,15 @@ ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b93d177ad3f73982386407e019629401d70ec57f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 78b6370a7041a5e29720acce5dfcf2b0bdf1c607
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447490"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283571"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-SQL)
+
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Enthält zusätzliche Informationen zur Leistung und zum Status aller Geräteknoten (über [sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)). Es wird eine Zeile pro Knoten in der Appliance aufgelistet.  
@@ -42,7 +43,7 @@ ms.locfileid: "88447490"
 |received_time|**datetime**|Der letzte Zeitpunkt, zu dem ein Netzwerk Paket von diesem Knoten empfangen wurde.||  
 |error_id|**nvarchar (36)**|Eindeutiger Bezeichner des letzten Fehlers, der auf diesem Knoten aufgetreten ist.||  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
