@@ -6222,6 +6222,8 @@
               items:
                 - name: Verschlüsselungsstärke von asymmetrischen Schlüsseln
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
+                - name: Sicherungsdateien und Datenbankdateien auf separaten Geräten
+                  href: relational-databases/policy-based-management/backup-files-on-separate-devices-from-database-files.md
                 - name: Überprüfen des Datenträger-E/A-Subsystems auf E/A-Verzögerungen
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: Überprüfen des Datenträger-E/A-Subsystems auf Lesewiederholungsprobleme
@@ -6230,6 +6232,8 @@
                   href: relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md
                 - name: Richtige Überlappung von Affinitätsmaske und E/A-Affinitätsmaske
                   href: relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+                - name: Datenbank-Wiederherstellungsmodell
+                  href: relational-databases/policy-based-management/database-recovery-model.md
                 - name: Protokolldateien für Standardablaufverfolgung deaktiviert
                   href: relational-databases/policy-based-management/default-trace-log-files-disabled.md
                 - name: Detect Failed Input and Output Requests
@@ -6264,6 +6268,8 @@
                   href: relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md
                 - name: Festlegen der AUTO_SHRINK-Datenbankoption auf OFF
                   href: relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md
+                - name: Festlegen der Sortierung von Benutzerdatenbanken entsprechend den master- und model-Datenbanken
+                  href: relational-databases/policy-based-management/set-collation-of-user-defined-databases-to-match-master-model-databases.md
                 - name: Festlegen der 'Max. Grad an Parallelität'-Option auf optimale Leistung
                   href: relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md
                 - name: Festlegen der PAGE_VERIFY-Datenbankoption auf CHECKSUM

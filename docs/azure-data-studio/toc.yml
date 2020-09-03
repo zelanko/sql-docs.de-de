@@ -84,10 +84,18 @@
           href: extensibility.md
         - name: Erweiterungserstellung
           href: extension-authoring.md
-        - name: Erstellen einer Erweiterung
-          href: tutorial-create-extension.md
         - name: Erweiterbarkeits-APIs
           href: extensibility-apis.md
+        - name: Tastenzuordnungserweiterung
+          href: extensions/keymap-extension.md
+        - name: Dashboarderweiterung
+          href: extensions/dashboard-extension.md
+        - name: Notebook-Erweiterung
+          href: extensions/notebook-extension.md
+        - name: Jupyter Book-Erweiterung
+          href: extensions/jupyter-book-extension.md
+        - name: Assistenten-Erweiterung
+          href: extensions/wizard-extension.md
     - name: 'Integriertes Terminal (PowerShell, Bash)'
       href: integrated-terminal.md
     - name: Tastenkombinationen
