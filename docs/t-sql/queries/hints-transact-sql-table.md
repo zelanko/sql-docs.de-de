@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d7dccda143515b801f06664d1916fbec6e2dcea3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445363"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062329"
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,10 +72,9 @@ ms.locfileid: "88445363"
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
-[ NOEXPAND ] {   
-    INDEX  ( index_value [ ,...n ] )   
-  | INDEX =  ( index_value )      
-  | FORCESEEK [( index_value ( index_column_name  [ ,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ] 
   | FORCESCAN  
   | FORCESEEK  
   | HOLDLOCK   
@@ -90,7 +89,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT   
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
@@ -145,15 +144,15 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 Es wird empfohlen, Tabellenhinweise durch Kommas voneinander zu trennen.  
   
 > [!IMPORTANT]  
->  Hinweise statt durch Kommas durch Leerzeichen zu trennen ist eine veraltete Funktion: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+> Hinweise statt durch Kommas durch Leerzeichen zu trennen ist eine veraltete Funktion: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
 Gibt an, dass indizierte Sichten nicht für den Zugriff auf zugrunde liegende Tabellen erweitert werden, wenn der Abfrageoptimierer die Abfrage verarbeitet. Der Abfrageoptimierer behandelt die Sicht wie eine Tabelle mit einem gruppierten Index. NOEXPAND gilt nur für indizierte Sichten. Weitere Informationen finden Sie unter [Verwenden von NOEXPAND](#using-noexpand).  
   
-INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
-Mit der INDEX()-Syntax werden die Namen oder IDs der Indizes angegeben, die der Abfrageoptimierer beim Verarbeiten der Anweisung verwenden soll. Die alternative INDEX = Syntax gibt einen einzigen Indexwert an. Pro Tabelle ist nur ein Indexhinweis zulässig.  
+INDEX **(** _<Indexwert>_ [ **,** ... _n_ ] ) | INDEX = ( _<Indexwert>_ **)**  
+Mit der INDEX()-Syntax werden die Namen oder IDs der Indizes angegeben, die der Abfrageoptimierer beim Verarbeiten der Anweisung verwenden soll. Die alternative Syntax `INDEX =` gibt einen einzigen Indexwert an. Pro Tabelle ist nur ein Indexhinweis zulässig.  
   
-Falls ein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Scan des gruppierten Index, und INDEX(1) erzwingt einen Scan des gruppierten Index oder eine Suche im gruppierten Index. Falls kein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Tabellenscan, und INDEX(1) wird als Fehler interpretiert.  
+Falls ein gruppierter Index vorhanden ist, erzwingt `INDEX(0)` eine Überprüfung des gruppierten Index, und `INDEX(1)` erzwingt eine Überprüfung des gruppierten Index oder eine Suche im gruppierten Index. Falls kein gruppierter Index vorhanden ist, erzwingt `INDEX(0)` eine Tabellenüberprüfung, und `INDEX(1)` wird als Fehler interpretiert.  
   
  Werden mehrere Indizes in einer einzigen Hinweisliste verwendet, werden Duplikate ignoriert, und die übrigen aufgeführten Indizes werden verwendet, um die Zeilen aus der Tabelle abzurufen. Die Reihenfolge der Indizes im Indexhinweis ist von Bedeutung. Mehrere Indexhinweise erzwingen die AND-Verknüpfung der Indizes, und der Abfrageoptimierer versucht, so viele Bedingungen wie möglich auf jeden verwendeten Index anzuwenden. Falls die Auflistung der Indexhinweise nicht alle in der Abfrage referenzierten Spalten umfasst, wird ein Abrufvorgang ausgeführt, um die restlichen Spalten abzurufen, nachdem [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alle indizierten Spalten abgerufen hat.  
   
@@ -181,7 +180,7 @@ Gibt an, dass statt NULL der Standardwert einer Tabellenspalte (falls vorhanden)
   
 Ein Beispiel für die Verwendung dieses Hinweises in einer INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung finden Sie unter [Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
+FORCESEEK [ **(** _<Indexwert>_ **(** _<Name\_der\_Indexspalte_ [ **,** ... _n_ ] **))** ]  
 Gibt an, dass der Abfrageoptimierer nur einen Indexsuchvorgang als Zugriffspfad auf die in der Tabelle oder Sicht angegebenen Daten verwenden darf. 
 
 > [!NOTE]
@@ -234,7 +233,7 @@ Bei partitionierten Tabellen und Indizes wird FORCESCAN angewendet, nachdem Part
 Der FORCESCAN-Hinweis unterliegt folgenden Einschränkungen:  
 -   Der Hinweis kann nicht für Tabellen angegeben werden, die Ziel einer INSERT-, UPDATE- oder DELETE-Anweisung sind.  
 -   Der Hinweis kann nicht mit mehr als einem Indexhinweis verwendet werden.  
--   Der Hinweis verhindert, dass der Optimierer räumliche oder XML-Indizes für die Tabelle berücksichtigt.  
+-   Der Hinweis verhindert, dass der Abfrageoptimierer räumliche oder XML-Indizes in der Tabelle berücksichtigt.  
 -   Der Hinweis kann nicht für eine Remotedatenquelle angegeben werden.  
 -   Der Hinweis kann nicht zusammen mit dem FORCESEEK-Hinweis angegeben werden.  
   
@@ -331,9 +330,9 @@ LEFT JOIN dbo.[Order History] AS oh
     ON c.customer_id=oh.customer_id;  
 ```  
   
-SPATIAL_WINDOW_MAX_CELLS = *integer*  
+SPATIAL_WINDOW_MAX_CELLS = *<Integerwert>*  
 **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
-Gibt die maximale Anzahl der Zellen an, die für die Mosaikbearbeitung eines geometry- oder geography-Objekts verwendet werden sollen. *number* muss einen Wert zwischen 1 und 8192 aufweisen.  
+Gibt die maximale Anzahl der Zellen an, die für die Mosaikbearbeitung eines geometry- oder geography-Objekts verwendet werden sollen. *<Integerwert>* ist ein Wert zwischen 1 und 8192.  
   
 Mit dieser Option können Sie die Ausführungszeit von Abfragen optimieren, indem Sie den Zusammenhang zwischen der Ausführungszeit des primären und des sekundären Filters kontrollieren. Ein höherer Wert verringert die Ausführungszeit des sekundären Filters, erhöht jedoch die Ausführungszeit des primären Filters. Ein niedrigerer Wert verringert die Ausführungszeit des primären Filters, erhöht jedoch die Ausführungszeit des sekundären Filters. Bei räumlichen Daten mit größerer Dichte sollte ein höherer Wert durch bessere Angleichung an den primären Filter und Verringerung der Ausführungszeit des sekundären Filters in einer niedrigeren Ausführungszeit resultieren. Bei Daten mit geringer Dichte verringert ein niedrigerer Wert die Ausführungszeit des primären Filters.  
   
@@ -390,12 +389,12 @@ SELECT StartDate, ComponentID FROM Production.BillOfMaterials
 GO  
 ```  
   
-Der Abfrageoptimierer berücksichtigt einen Indexhinweis nicht, wenn die SET-Optionen nicht die erforderlichen Werte für die gefilterten Indizes enthalten. Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+Der Abfrageoptimierer berücksichtigt einen Indexhinweis nur dann, wenn die SET-Optionen die erforderlichen Werte für die gefilterten Indizes enthalten. Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="using-noexpand"></a>Verwenden von NOEXPAND  
-NOEXPAND gilt nur für *indizierte Sichten*. Eine indizierte Sicht ist eine Sicht, auf der ein eindeutiger gruppierter Index erstellt wurde. Wenn eine Abfrage Verweise auf Spalten enthält, die in einer indizierten Sicht und in Basistabellen vorhanden sind, und der Abfrageoptimierer festlegt, dass die Verwendung der indizierten Sicht die beste Methode zum Ausführen der Abfrage darstellt, verwendet der Optimierer den Index der Sicht. Diese Funktionalität wird als *Abgleich der indizierten Sicht* bezeichnet. Vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 wurde die automatische Verwendung einer indizierten Sicht durch den Abfrageoptimierer nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+NOEXPAND gilt nur für *indizierte Sichten*. Eine indizierte Sicht ist eine Sicht, auf der ein eindeutiger gruppierter Index erstellt wurde. Wenn eine Abfrage Verweise auf Spalten enthält, die in einer indizierten Sicht und in Basistabellen vorhanden sind, und der Abfrageoptimierer festlegt, dass die Verwendung der indizierten Sicht die beste Methode zum Ausführen der Abfrage darstellt, verwendet der Optimierer den Index der Sicht. Diese Funktionalität wird als *Abgleich der indizierten Sicht* bezeichnet. Vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 wurde die automatische Verwendung einer indizierten Sicht durch den Abfrageoptimierer nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt. Eine Liste der von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützten Features finden Sie unter [Editionen und unterstützte Funktionen von SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md), [Editionen und unterstützte Funktionen von SQL Server 2017](../../SQL-server/editions-and-components-of-SQL-server-2017.md) und [Editionen und unterstützte Funktionen von SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
-Damit der Optimierer indizierte Sichten für den Abgleich oder die Verwendung einer indizierten Sicht berücksichtigt, auf die mit dem NOEXPAND-Hinweis verwiesen wird, müssen die folgenden SET-Optionen auf ON festgelegt werden.  
+Damit der Abfrageoptimierer indizierte Sichten für den Abgleich berücksichtigt oder eine indizierte Sicht verwendet, auf die mit dem NOEXPAND-Hinweis verwiesen wird, müssen die folgenden SET-Optionen auf ON festgelegt sein.  
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt die automatische Verwendung indizierter Sichten ohne Angabe des NOEXPAND-Hinweises.
@@ -411,13 +410,13 @@ Damit der Optimierer indizierte Sichten für den Abgleich oder die Verwendung ei
 
 Auch muss die Option NUMERIC_ROUNDABORT auf OFF festgelegt sein.  
   
- Damit der Optimierer einen Index für eine indizierte Sicht verwendet, geben Sie die Option NOEXPAND an. Dieser Hinweis kann nur dann verwendet werden, wenn die Sicht ebenfalls in der Abfrage angegeben wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt keinen Hinweis zur Verfügung, um die Verwendung einer bestimmten indizierten Sicht in einer Abfrage, die die Sicht nicht direkt in der FROM-Klausel benennt, zu erzwingen. Der Abfrageoptimierer zieht jedoch die Verwendung indizierter Sichten in Erwägung, selbst wenn in der Abfrage nicht direkt auf sie verwiesen wird. SQL Server erstellt Statistiken in einer indizierten Sicht nur automatisch, wenn ein NOEXPAND-Tabellenhinweis verwendet wird. Wenn Sie diesen Hinweis auslassen, können beim Ausführungsplan Warnungen zu fehlenden Statistiken auftreten, die nicht durch manuelles Erstellen von Statistiken aufgelöst werden können. Während der Abfrageoptimierung nutzt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ansichtsstatistiken, die automatisch oder manuell erstellt werden, wenn die Abfrage direkt auf die Ansicht verweist und der NOEXPAND-Hinweis verwendet wird.    
+ Damit der Abfrageoptimierer einen Index für eine indizierte Sicht verwendet, geben Sie die Option NOEXPAND an. Dieser Hinweis kann nur dann verwendet werden, wenn die Sicht ebenfalls in der Abfrage angegeben wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet keinen Hinweis, um die Verwendung einer bestimmten indizierten Sicht in einer Abfrage zu erzwingen, die die Sicht nicht direkt in der FROM-Klausel benennt. Der Abfrageoptimierer berücksichtigt jedoch die Verwendung indizierter Sichten, auch wenn in der Abfrage nicht direkt auf sie verwiesen wird. Die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] erstellt Statistiken in einer indizierten Sicht nur dann automatisch, wenn ein NOEXPAND-Tabellenhinweis verwendet wird. Wenn Sie diesen Hinweis auslassen, können beim Ausführungsplan Warnungen zu fehlenden Statistiken auftreten, die nicht durch manuelles Erstellen von Statistiken aufgelöst werden können. Während der Abfrageoptimierung nutzt die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatisch oder manuell erstellte Sichtstatistiken, wenn die Abfrage direkt auf die Sicht verweist und der NOEXPAND-Hinweis verwendet wird.    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Verwenden eines Tabellenhinweises als Abfragehinweis  
  *Tabellenhinweise* können mit der OPTION (TABLE HINT)-Klausel auch als Abfragehinweis angegeben werden. Es wird empfohlen, einen Tabellenhinweis nur im Kontext einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md) als Abfragehinweis zu verwenden. Für Ad-hoc-Abfragen geben Sie diese Hinweise nur als Tabellenhinweise an. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Für die KEEPIDENTITY, IGNORE_CONSTRAINTS- und IGNORE_TRIGGERS-Hinweise werden ALTER-Berechtigungen für die Tabelle benötigt.  
+ Die KEEPIDENTITY-, IGNORE_CONSTRAINTS- und IGNORE_TRIGGERS-Hinweise erfordern `ALTER`-Berechtigungen in der Tabelle.  
   
 ## <a name="examples"></a>Beispiele  
   
