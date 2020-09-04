@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7338ef58a86667b829fc1554660b316690de451a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9848ba94687f6f4555492de868f32431b3e1de84
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425262"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042393"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Verbinden mit Azure Blob Storage (SQL Server-Import/Export-Assistent)
 
@@ -52,7 +52,7 @@ Geben Sie den Schlüssel für das Azure-Speicherkonto ein.
  Geben Sie an, ob die Verbindung mit dem Speicherkonto über HTTP oder HTTPS hergestellt werden soll.  
   
  **Lokales Entwicklerkonto verwenden**  
- Geben Sie an, ob der Speicheremulator auf dem lokalen Computer verwendet werden soll.  
+ Geben Sie an, ob der Azure-Speicheremulator auf dem lokalen Computer verwendet werden soll.  
   
  **Blobcontainername**  
  Treffen Sie eine Auswahl aus der Liste der im angegebenen Speicherkonto verfügbaren Speichercontainer.  

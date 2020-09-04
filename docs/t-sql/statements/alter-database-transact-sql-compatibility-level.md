@@ -25,12 +25,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d470d95b2d6999d4f6825dce63a1a9c5b991d20a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1035d6b4cd6eedd12c2c9a193657fd8741488f2a
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426932"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901136"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 
@@ -82,7 +82,12 @@ Die folgenden Verhaltensweisen werden für [!INCLUDE[ssSQL17](../../includes/sss
 - War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten.
 - War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] entspricht.
 - Der Kompatibilitätsgrad der Datenbanken „tempdb“, „model“, „msdb“ und „Resource“ wird auf den Standardkompatibilitätsgrad für eine bestimmte [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Version festgelegt. 
-- Die „master“-Systemdatenbank behält den Kompatibilitätsgrad von vor dem Upgrade bei.
+- Die „master“-Systemdatenbank behält den Kompatibilitätsgrad von vor dem Upgrade bei. Dies wirkt sich nicht auf das Verhalten der Benutzerdatenbank aus. 
+
+Bei vorhandenen Datenbanken mit niedrigeren Kompatibilitätsgraden gilt Folgendes: Solange eine Anwendung keine Verbesserungen nutzen muss, die nur bei einem höheren Kompatibilitätsgrad verfügbar sind, ist es sinnvoll, den vorherigen Kompatibilitätsgrad beizubehalten. Bei Neuentwicklungen oder falls eine vorhandene Anwendung neue Features wie die [intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md) sowie neue [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen nutzen muss, sollten Sie ein Upgrade auf den neuesten verfügbaren Datenbank-Kompatibilitätsgrad planen. Weitere Informationen finden Sie unter [Kompatibilitätsgrade und Upgrades der Datenbank-Engine](../../database-engine/install-windows/compatibility-certification.md#compatibility-levels-and-database-engine-upgrades).     
+
+> [!NOTE]
+> Wenn keine Benutzerobjekte und Abhängigkeiten vorhanden sind, ist ein Upgrade auf den Standardkompatibilitätsgrad in aller Regel sicher. Weitere Informationen finden Sie unter [master-Datenbank – Empfehlungen](../../relational-databases/databases/master-database.md#recommendations).
 
 Verwenden Sie `ALTER DATABASE`, um den Kompatibilitätsgrad der Datenbank zu ändern. Die neue Kompatibilitätsgradeinstellung für eine Datenbank wird wirksam, wenn ein `USE <database>`-Befehl ausgegeben oder eine neue Anmeldung mit dieser Datenbank als Standarddatenbankkontext verarbeitet wird.
 Fragen Sie die Spalte `compatibility_level` in der Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ab, um den aktuellen Kompatibilitätsgrad einer Datenbank anzuzeigen.

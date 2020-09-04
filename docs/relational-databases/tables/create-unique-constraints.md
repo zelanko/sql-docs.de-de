@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c641b2562fa15f17bcb6ce235529916ca70a2a52
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646320"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195096"
 ---
 # <a name="create-unique-constraints"></a>Erstellen von Unique-Einschränkungen
 
@@ -63,9 +63,9 @@ ms.locfileid: "88646320"
   
 3.  Klicken Sie im Dialogfeld **Indizes/Schlüssel** auf **Hinzufügen**.  
   
-4.  Klicken Sie im Datenblattbereich unter **Allgemein**auf **Typ** , und wählen Sie im Dropdown-Listenfeld rechts neben der Eigenschaft den Eintrag **Eindeutiger Schlüssel** aus.  
+4.  Klicken Sie im Raster unter **Allgemein** auf **Typ**, und wählen Sie im Dropdown-Listenfeld rechts neben der Eigenschaft den Eintrag **Eindeutiger Schlüssel** aus. Klicken Sie danach auf **Schließen**.  
   
-5.  Klicken Sie im Menü **Datei** auf _Tabellenname_**speichern**.  
+5.  Klicken Sie im Menü **Datei** auf _Tabellenname_ **speichern**.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
@@ -106,7 +106,7 @@ ms.locfileid: "88646320"
   
     ```  
   
-#### <a name="to-create-a-unique-constraint-in-an-new-table"></a>So erstellen Sie eine UNIQUE-Einschränkung für eine neue Tabelle  
+#### <a name="to-create-a-unique-constraint-on-a-new-table"></a>So erstellen Sie eine UNIQUE-Einschränkung in einer neuen Tabelle  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   

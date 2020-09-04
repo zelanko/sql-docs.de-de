@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8640f7adc7e5da1e5095e44d16d201396c0924
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482553"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991851"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Handbuch zur Architektur von Seiten und Blöcken
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,14 +88,23 @@ Blöcke sind die Grundeinheit, in der Speicherplatz verwaltet wird. Ein Block um
 * **Einheitliche** Blöcke befinden sich im Besitz eines einzigen Objekts; alle acht Seiten in dem Block können nur vom besitzenden Objekt verwendet werden.
 * **Gemischte** Blöcke werden für bis zu acht Objekte freigegeben. Jede der acht Seiten im Block kann im Besitz eines anderen Objekts sein.
 
-Bis einschließlich [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ordnet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Tabellen, die nur wenige Daten enthalten, keine ganzen Blöcke zu. Für eine neue Tabelle oder einen neuen Index werden normalerweise Seiten aus gemischten Blöcken zugewiesen. Wenn eine Tabelle oder ein Index so groß geworden ist, dass sie bzw. er acht Seiten umfasst, werden bei nachfolgenden Zuweisungen einheitliche Blöcke zugewiesen. Wenn Sie einen Index für eine vorhandene Tabelle erstellen, die über genügend Zeilen verfügt, um acht Seiten im Index zu generieren, erfolgen alle Zuweisungen für den Index in Form von einheitlichen Blöcken. Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] jedoch sind einheitliche Blöcke der Standard für alle Zuordnungen in der Datenbank.
+![Einheitliche und gemischte Erweiterungen](../relational-databases/media/extents.gif)
 
-![Extents](../relational-databases/media/extents.gif)
+Bis einschließlich [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ordnet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Tabellen, die nur wenige Daten enthalten, keine ganzen Blöcke zu. Für eine neue Tabelle oder einen neuen Index werden normalerweise Seiten aus gemischten Blöcken zugewiesen. Wenn eine Tabelle oder ein Index so groß geworden ist, dass sie bzw. er acht Seiten umfasst, werden bei nachfolgenden Zuweisungen einheitliche Blöcke zugewiesen. Wenn Sie einen Index für eine vorhandene Tabelle erstellen, die über genügend Zeilen verfügt, um acht Seiten im Index zu generieren, erfolgen alle Zuweisungen für den Index in Form von einheitlichen Blöcken. 
+
+Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] verwenden die meisten Speicherbelegungen in einer Benutzerdatenbank und in tempdb standardmäßig einheitliche Erweiterungen. Eine Ausnahme bilden die Belegungen, die zu den ersten acht Seiten einer [IAM-Kette](#IAM) gehören. Speicherbelegungen für die Datenbanken „master“, „msdb“ und „model“ weisen weiterhin das frühere Verhalten auf. 
 
 > [!NOTE]
 > Bis einschließlich [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] kann das Ablaufverfolgungsflag 1118 verwendet werden, um die Standardzuordnung so zu ändern, dass immer einheitliche Blöcke verwendet werden. Weitere Informationen zu diesem Ablaufverfolgungsflag finden Sie unter [DBCC TRACEON – Trace Flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] wird die Funktionalität, die vom Ablaufverfolgungsflag 1118 bereitgestellt wird, für tempdb automatisch aktiviert. Für Benutzerdatenbanken wird dieses Verhalten durch die `SET MIXED_PAGE_ALLOCATION`-Option von `ALTER DATABASE` gesteuert. Der Standardwert ist auf OFF festgelegt, und das Ablaufverfolgungsflag 1118 hat keine Auswirkungen. Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] wird die vom Ablaufverfolgungsflag 1118 bereitgestellte Funktionalität für tempdb automatisch aktiviert. Für Benutzerdatenbanken wird dieses Verhalten durch die `SET MIXED_PAGE_ALLOCATION`-Option von `ALTER DATABASE` gesteuert. Der Standardwert ist auf OFF festgelegt, und das Ablaufverfolgungsflag 1118 hat keine Auswirkungen. Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+
+Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] kann die Systemfunktion `sys.dm_db_database_page_allocations` Informationen zur Seitenzuordnung für eine Datenbank, eine Tabelle, einen Index und eine Partition melden.
+
+> [!IMPORTANT]
+> Die Systemfunktion `sys.dm_db_database_page_allocations` ist nicht dokumentiert kann jederzeit geändert werden. Kompatibilität wird nicht sichergestellt. 
+
+Ab [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ist die Systemfunktion [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) verfügbar und gibt Informationen zu einer Seite in einer Datenbank zurück. Die Funktion gibt eine einzelne Zeile mit den Headerinformationen der Seite zurück, einschließlich „object_id“, „index_id“ und „partition_id“. Dank dieser Funktion ist die Verwendung von `DBCC PAGE` in den meisten Fällen nicht mehr erforderlich.
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Verwalten von Blockzuordnungen und freiem Speicherplatz 
 
@@ -141,7 +150,7 @@ In der Datendatei wird für jeden zusätzlichen Bereich, der nachverfolgt wird, 
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## <a name="managing-space-used-by-objects"></a>Verwalten des von Objekten belegten Speicherplatzes 
+## <a name="managing-space-used-by-objects"></a><a name="IAM"></a> Verwalten des von Objekten belegten Speicherplatzes 
 
 Eine **IAM-Seite (Index Allocation Map)** ordnet die Blöcke in einem 4-GB-Teil einer Datenbankdatei zu, die von einer Zuordnungseinheit verwendet wird. Eine Zuordnungseinheit entspricht einem von drei möglichen Typen:
 
@@ -149,10 +158,10 @@ Eine **IAM-Seite (Index Allocation Map)** ordnet die Blöcke in einem 4-GB-Teil 
     Enthält eine Partition eines Heap oder eines Index.
 
 - LOB_DATA   
-   Enthält LOB-Datentypen (Large Object) wie xml, varbinary(max) und varchar(max).
+   Enthält LOB-Datentypen (Large Object) wie XML, VARBINARY(max) und VARCHAR(max).
 
 - ROW_OVERFLOW_DATA   
-   Enthält Daten variabler Länge, die in varchar-, nvarchar-, varbinary- oder sql_variant-Spalten gespeichert sind, die das Zeilengrößenlimit von 8.060 Bytes überschreiten. 
+   Enthält Daten variabler Länge. Diese sind in VARCHAR-, NVARCHAR-, VARBINARY- oder SQL_VARIANT-Spalten gespeichert, die das Zeilengrößenlimit von 8.060 Bytes überschreiten. 
 
 Jede Partition eines Heap oder Index enthält mindestens eine IN_ROW_DATA-Zuordnungseinheit. Sie kann je nach dem Heap- oder Indexschema auch eine LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheit enthalten.
 
@@ -160,10 +169,10 @@ Eine IAM-Seite deckt einen 4-GB-Bereich in einer Datei ab und besitzt dieselbe E
 
 ![iam_pages](../relational-databases/media/iam-pages.gif)
 
-IAM-Seiten werden je nach Bedarf für jede Zuordnungseinheit zugeordnet und nach dem Zufallsprinzip in der Datei verteilt. Die Systemsicht „sys.system_internals_allocation_units“ verweist auf die erste IAM-Seite für eine Zuordnungseinheit. Alle IAM-Seiten für diese Zuordnungseinheit werden in einer Kette miteinander verknüpft.
+IAM-Seiten werden je nach Bedarf für jede Zuordnungseinheit zugeordnet und nach dem Zufallsprinzip in der Datei verteilt. Die Systemsicht `sys.system_internals_allocation_units` zeigt auf die erste IAM-Seite für eine Zuordnungseinheit. Alle IAM-Seiten für diese Zuordnungseinheit sind in einer IAM-Kette miteinander verknüpft.
 
 > [!IMPORTANT]
-> Die Systemsicht `sys.system_internals_allocation_units` ist nur zur internen Verwendung bestimmt und kann geändert werden. Kompatibilität wird nicht sichergestellt. Diese Ansicht steht In Azure SQL-Datenbank nicht zur Verfügung. 
+> Die Systemsicht `sys.system_internals_allocation_units` ist nur zur internen Verwendung bestimmt und kann geändert werden. Kompatibilität wird nicht sichergestellt. Diese Sicht ist in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]nicht verfügbar. 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
@@ -192,5 +201,6 @@ Der Abstand zwischen DCM-Seiten und BCM-Seiten ist derselbe Abstand wie zwischen
 ## <a name="see-also"></a>Weitere Informationen
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
 [Heaps &#40;Tabellen ohne gruppierte Indizes&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)     
 [Lesen von Seiten](../relational-databases/reading-pages.md)   
 [Schreiben von Seiten](../relational-databases/writing-pages.md)   

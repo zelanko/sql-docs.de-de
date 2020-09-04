@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: d75f734b3a45942155afaa7a85f4817fe868f3a0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778549"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900964"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -753,13 +753,13 @@ EIN
 Aktiviert den Abfragespeicher.
 
 OFF      
-Deaktiviert den Abfragespeicher. OFF ist der Standardwert. FORCED ist optional. FORCED bricht alle Hintergrundaufgaben, die gerade im Abfragespeicher ausgeführt werden, ab und überspringt die synchrone Leerung, wenn der Abfragespeicher deaktiviert wird. Bewirkt, dass der Abfragespeicher so schnell wie möglich heruntergefahren wird Schaltet den Abfragespeicher effektiv sofort aus FORCED wurde mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 eingeführt.
+Deaktiviert den Abfragespeicher. OFF ist der Standardwert. FORCED ist optional. FORCED bricht alle Hintergrundaufgaben, die gerade im Abfragespeicher ausgeführt werden, ab und überspringt die synchrone Leerung, wenn der Abfragespeicher deaktiviert wird. Bewirkt, dass der Abfragespeicher so schnell wie möglich heruntergefahren wird. FORCED gilt für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 und höhere Builds.
 
 > [!NOTE]  
 > In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mit einer Einzeldatenbank oder einem Pool für elastische Datenbanken kann der Abfragespeicher nicht deaktiviert werden. Beim Ausführen von `ALTER DATABASE [database] SET QUERY_STORE = OFF` wird die Warnung `'QUERY_STORE=OFF' is not supported in this version of SQL Server.` zurückgegeben. 
 
 CLEAR     
-Entfernt den Inhalt des Abfragespeichers.
+Entfernt abfragebezogene Daten aus dem Abfragespeicher. ALL ist optional. ALL entfernt abfragebezogene Daten und Metadaten aus dem Abfragespeicher.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     
 Beschreibt den Betriebsmodus des Abfragespeichers.

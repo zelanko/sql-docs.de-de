@@ -2,7 +2,7 @@
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/21/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 553d84c62dfb9de6bc1bd18cde7b09965bfdf0d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1feac396ec7a51a82f9070890fc17adf4cdecb57
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467332"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042383"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -450,9 +450,9 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) gibt die maxima
 |250 GB|–|√ (S)|√ (S)|√|√|
 |300 GB|–|√|√|√|√|
 |400 GB|–|√|√|√|√|
-|500 GB|–|√|√ (S)|√ (S)|√|
+|500 GB|–|√|√|√ (S)|√|
 |750 GB|–|√|√|√|√|
-|1024 GB|–|√|√|√ (S)|√ (S)|
+|1024 GB|–|√|√|√|√ (S)|
 |Von 1024 GB bis 4096 GB in Inkrementen von 256 GB*|Nicht zutreffend|Nicht zutreffend|–|–|√|
 
 \* P11 und P15 ermöglichen, dass die Größe von MAXSIZE bis zu 4 TB beträgt, wobei 1024 GB die Standardgröße darstellt. P11 und P15 können bis zu 4 TB des enthaltenen Speichers ohne Aufpreis verwenden. Im Premium-Tarif ist MAXSIZE mit einer Größe von mehr als 1 TB derzeit in den folgenden Regionen verfügbar: USA, Osten 2; USA, Westen; US Gov Virginia; Europa, Westen; Deutschland, Mitte; Asien, Südosten; Japan, Osten; Australien, Osten; Kanada, Mitte und Kanada, Osten. Zusätzliche Informationen bezüglich der Ressourcenbeschränkungen für das DTU-Modell finden Sie unter [DTU-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
@@ -602,7 +602,7 @@ Wenn SERVICE_OBJECTIVE nicht angegeben ist, wird die sekundäre Datenbank auf de
 ELASTIC_POOL (name = \<elastic_pool_name>): Wenn ELASTIC_POOL nicht angegeben ist, wird die sekundäre Datenbank nicht in einem Pool für elastische Datenbanken erstellt. Wenn ELASTIC_POOL angegeben ist, wird die sekundäre Datenbank im angegebenen Pool erstellt.
 
 > [!IMPORTANT]
-> Der Benutzer, der den Befehl ADD SECONDARY ausführt, muss DBManager auf dem primären Server, db_owner-Mitglied in der lokalen Datenbank und DBManager auf dem sekundären Server sein.
+> Der Benutzer, der den Befehl ADD SECONDARY ausführt, muss DBManager auf dem primären Server, db_owner-Mitglied in der lokalen Datenbank und DBManager auf dem sekundären Server sein. Die IP-Clientadresse muss sowohl für den primären als auch für den sekundären Server der Zulassungsliste in den Firewallregeln hinzugefügt werden. Sollten unterschiedliche IP-Clientadressen vorliegen, muss exakt dieselbe IP-Clientadresse, die auf dem primären Server hinzugefügt wurde, auch auf dem sekundären Server hinzugefügt werden. Dieser Schritt ist erforderlich, bevor Sie den Befehl ADD SECONDARY ausführen, um die Georeplikation zu initiieren.
 
 REMOVE SECONDARY ON SERVER \<partner_server_name>: Entfernt die angegebene georeplizierte sekundäre Datenbank vom angegebenen Server. Der Befehl wird in der Masterdatenbank auf dem Server ausgeführt, der Host der primären Datenbank ist.
 

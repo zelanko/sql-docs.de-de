@@ -13,12 +13,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b5f8274b7d73bb0119b165b1cfbe65473b499d55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb279fea42cd37af2c0e215f8dcd66ddecb766cc
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479820"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042453"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 
@@ -51,7 +51,7 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
   
 ## <a name="result-sets"></a>Resultsets
 
-Im Folgenden wird das Resultset für alle Tabellen aufgeführt.
+Im Folgenden wird das Resultset für alle Tabellen aufgeführt.  Bevor ein Cache für eine replizierte Synapse-Tabelle erstellt wird, spiegelt das DBCC-Ergebnis die Gesamtgröße der zugrunde liegenden Roundrobintabelle aus jeder Distribution wider.  Nach dem Erstellen des Caches reflektiert das Ergebnis die Gesamtgröße von Roundrobintabellen und Cache.   
   
 |Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
@@ -71,7 +71,7 @@ Im Folgenden wird das Resultset für eine Tabelle aufgeführt.
 |index_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.||  
 |unused_space|BIGINT|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.||  
 |pdw_node_id|INT|Computeknoten, der zum Erstellen von Berichten zum Speicherplatz verwendet wird.||  
-|distribution_id|INT|Verteilung, die zum Erstellen von Berichten zum Speicherplatz verwendet wird.|Der Wert für replizierte Tabellen ist –1.|  
+|distribution_id|INT|Verteilung, die zum Erstellen von Berichten zum Speicherplatz verwendet wird.|Bei parallelen Data Warehouse-Datenbanken lautet der Wert für replizierte Tabellen -1.|  
   
 ## <a name="examples-sssdw-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. Grundlegende DBCC-PDW_SHOWSPACEUSED-Syntax  

@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 54216c027c01855ba5f140e1ad17accba3f9e7f9
-ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
+ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88602205"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901574"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY – Transact-SQL (Vorschau)
 
@@ -432,6 +432,15 @@ Der COPY-Befehl wird Ende dieses Kalenderjahres (2020) allgemein verfügbar.
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Gibt es Einschränkungen hinsichtlich der Anzahl oder Größe von Dateien?
 Es gibt keine Einschränkungen in Bezug auf die Anzahl oder Größe von Dateien. Um eine optimale Leistung zu erzielen, wird jedoch eine Dateigröße von mindestens 4 MB empfohlen.
 
+### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Gibt es Einschränkungen beim COPY-Befehl in Synapse-Arbeitsbereichen (Vorschau)?
+
+Die Authentifizierung über eine verwaltete Identität wird mit der COPY-Anweisung und mit PolyBase nicht unterstützt (auch nicht bei Verwendung in Pipelines). Möglicherweise wird eine Fehlermeldung wie die folgende angezeigt:
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: Eine verwaltete Dienstidentität wurde auf diesem Server nicht aktiviert. Aktivieren Sie die verwaltete Dienstidentität, und versuchen Sie es noch mal.*
+
+Wenn das Speicherkonto mit einem VNET verknüpft wird, ist eine MSI-Authentifizierung erforderlich. In diesem Fall müssen Sie zum Laden von Daten BCP/BULK INSERT anstelle von COPY oder PolyBase verwenden.
+
+Diese Einschränkung gilt nur für SQL-Pools, die zu einem Synapse-Arbeitsbereich gehören (Vorschau). Die Unterstützung für MSI in Synapse-Arbeitsbereichen wird in einem zukünftigen Release hinzugefügt. 
 
 Senden Sie Feedback oder Probleme an die folgende Verteilerliste: sqldwcopypreview@service.microsoft.com
 

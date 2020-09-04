@@ -13,12 +13,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b83bba2f706b88e6a11e8efb50aaf5be4c52c152
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a221857278cdd2e8b88d8f6f13084b4def9d3c88
+ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417626"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942303"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 
@@ -46,7 +46,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
 
 ## <a name="arguments"></a>Argumente  
  *distribution_id*  
- Bezeichner für die Verteilung, die den Abfrageplan ausführt. Dabei handelt es sich um einen Integer, der nicht NULL sein kann. Dieser Bezeichner wird verwendet, wenn für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] entwickelt wird.  
+ Bezeichner für die Verteilung, die den Abfrageplan ausführt. Dabei handelt es sich um einen Integer, der nicht NULL sein kann. Der Wert muss zwischen 1 und 60 liegen. Dieser Bezeichner wird verwendet, wenn für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] entwickelt wird.  
   
  *pdw_node_id*  
  Bezeichner für den Knoten, der den Abfrageplan ausführt. Dabei handelt es sich um einen Integer, der nicht NULL sein kann. Wird verwendet, wenn eine Anwendung entwickelt wird.  
