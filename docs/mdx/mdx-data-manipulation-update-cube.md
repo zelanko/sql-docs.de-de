@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9958fa6e7efe7b3bc42dd04aebc295f1ee2d0944
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 142783612b495d7968fec1574e182654ac83fb64
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476992"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480670"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX-Datenbearbeitung – UPDATE CUBE
 
 
-  Mithilfe der UPDATE CUBE-Anweisung werden Daten in eine beliebige Zelle in einem Cube zurückgeschrieben, der mit der SUM-Aggregation in den übergeordneten Cube aggregiert wird. Eine ausführlichere Erläuterung und ein Beispiel finden Sie unter "Grundlegendes zu Zuordnungen" in diesem Blogbeitrag: [Building a Write Back Application with Analysis Services (Blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
+  Mithilfe der UPDATE CUBE-Anweisung werden Daten in eine beliebige Zelle in einem Cube zurückgeschrieben, der mit der SUM-Aggregation in den übergeordneten Cube aggregiert wird. Eine ausführlichere Erläuterung und ein Beispiel finden Sie unter "Grundlegendes zu Zuordnungen" in diesem Blogbeitrag: [Building a Write Back Application with Analysis Services (Blog)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
   
 ## <a name="syntax"></a>Syntax  
   

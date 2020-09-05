@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 470a71cb88a6ea35ddadcc53e83fe60ebd369bbb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97d0653a08d2b08b0cafa5ae23b329c6193b5181
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494893"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480608"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX-Datendefinition – ALTER CUBE
 
 
-  Ändert die Struktur eines angegebenen Cubes, der normalerweise verwendet wird, um das Rückschreiben von Dimensionen zu unterstützen. Weitere Informationen zur Verwendung des Rück Schreibens in einer Anwendung finden Sie in diesem Blogbeitrag: [Building a Write Back Application with Analysis Services (Blog)](https://go.microsoft.com/fwlink/?LinkId=394977) .  
+  Ändert die Struktur eines angegebenen Cubes, der normalerweise verwendet wird, um das Rückschreiben von Dimensionen zu unterstützen. Weitere Informationen zur Verwendung des Rück Schreibens in einer Anwendung finden Sie in diesem Blogbeitrag: [Building a Write Back Application with Analysis Services (Blog)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services) .  
   
  Gleichzeitige Rückschreibevorgänge für Dimensionen können zu einem Deadlock führen. Dabei wird die erste Rückschreibung aufgrund der durch die zweite Rückschreibung aufrechterhaltene gemeinsame Sperre für ein Commit blockiert. In diesem Fall wird zwar kein Fehler generiert, allerdings kann keiner der Vorgänge fortgesetzt werden. Schließlich tritt für beide Rückschreibevorgänge ein Timeout auf, und es wird ein Rollback der Änderungen ausgeführt.  
   
