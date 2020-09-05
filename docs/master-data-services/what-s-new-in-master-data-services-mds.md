@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f45667dad4466789823a8ff36ccc0b665f531db3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1aa72c49e5862621da193d4e4a400813c7cd0d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813924"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480579"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Neues in Master Data Services (MDS)
 
@@ -71,7 +71,7 @@ ms.locfileid: "85813924"
   
  Ein Index mit einer Fragmentierung, die über 30 % liegt, wird online neu erstellt. Während der Neuerstellung wird die Leistung beim CRUD-Vorgang für dieselbe Tabelle beeinflusst. Wenn die Leistungsverringerung Bedenken hervorruft, empfiehlt es sich, dass Sie die gespeicherte Prozedur außerhalb der Arbeitszeit ausführen. Weitere Informationen zum Fragmentieren von Indizes finden Sie unter [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
- Weitere Informationen finden Sie in diesem Beitrag zum Master Data Services-Blog [Verbesserung der Leistung und Skalierung in SQL Server 2016](https://go.microsoft.com/fwlink/p/?LinkId=615375).  
+ Weitere Informationen finden Sie in diesem Beitrag zum Master Data Services-Blog [Verbesserung der Leistung und Skalierung in SQL Server 2016](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-and-scale-improvement-in-sql-server-2016/ba-p/388225).  
   
 ##  <a name="improved-security"></a>Erhöhte Sicherheit  
   
@@ -123,7 +123,7 @@ ms.locfileid: "85813924"
   
 -   Umbenennen und Ausblenden von Namen- und Codeattributen.  
   
- Weitere Informationen finden Sie in den folgenden Themen.  
+ Weitere Informationen finden Sie in den nachfolgenden Themen.  
   
 -   [Modelle &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   

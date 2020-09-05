@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a8f4fd055394df55b96b8694621d430bbac6c320
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812829"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480317"
 ---
 # <a name="administrators-master-data-services"></a>Administratoren (Master Data Services)
 
@@ -72,7 +72,7 @@ ms.locfileid: "85812829"
 |Entitätsadministrator|Kann ein Entitätsadministrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Administratorberechtigungen.<br /><br /> Verfügt nur über Zugriff auf Funktionsbereiche, für die ihm eine Berechtigung gewährt wurde.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Objekte und Elemente in der bestimmten Entität.<br /><br /> Können die ausstehenden Changesets genehmigen, wenn die Entitätsänderungen genehmigt werden müssen.|  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogbeitrag [Sicherheitsverbesserungen](https://go.microsoft.com/fwlink/p/?LinkId=615376), auf msdn.com.  
+ Blogbeitrag [Sicherheitsverbesserungen](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay), auf msdn.com.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen Sie einen Modell Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   

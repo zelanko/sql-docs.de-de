@@ -12,12 +12,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 88304221dfa827679f787c55ec5065722cc9bc39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbbe6d602472a62e6d94c747a8856c507d8b2e06
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344156"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480555"
 ---
 # <a name="deprecated-master-data-services-features"></a>Veraltete Funktionen von Master Data Services
 
@@ -54,7 +54,7 @@ Der Transaktionsprotokolltyp von Entitäten „Attribut“ ist veraltet, bitte m
 * [Elementrevisionsverlauf](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogbeitrag [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)(Veraltet: explizite Hierarchien und Sammlungen) auf msdn.com.  
+ Blogbeitrag [Deprecated: Explicit Hierarchies and Collections](https://techcommunity.microsoft.com/t5/sql-server-integration-services/deprecated-explicit-hierarchies-and-collections/ba-p/388221)(Veraltet: explizite Hierarchien und Sammlungen) auf msdn.com.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Eingestellte Master Data Services-Funktionen](../master-data-services/discontinued-master-data-services-features.md)  

@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: e471a3ab0f6d2ce120ae5b20cd07ef71891dadc9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812685"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480435"
 ---
 # <a name="tracing-master-data-services"></a>Ablaufverfolgung (Master Data Services)
 
@@ -67,9 +67,9 @@ ms.locfileid: "85812685"
     |CorrelationID|Eine Korrelations-ID wird für jede Anforderung zugewiesen. Alle Ablaufverfolgungen, die durch diese Anforderung ausgelöst werden, haben die gleiche Korrelations-ID.<br /><br /> Tritt ein Fehler in der Benutzeroberfläche auf, wird die Korrelations-ID in der Fehlermeldung angezeigt.|  
     |Vorgang|Vorgangsname anfordern. Wenn die Anforderung eine Web-UI-Anforderung ist, ist der Vorgangsname die URL. Wenn die Anforderung eine API-Anforderung ist, ist der Vorgangsname der Dienstname.|  
     |Ebene|Ebene dieses Ablaufverfolgungseintrags.|  
-    |`Message`|Nachrichtentext der Ablaufverfolgung|  
+    |Nachricht|Nachrichtentext der Ablaufverfolgung|  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogbeitrag [Troubleshooting Logging Improvement](https://go.microsoft.com/fwlink/p/?LinkId=615377)(Problembehandlung der Protokollierungsverbesserung) auf msdn.com.  
+ Blogbeitrag [Troubleshooting Logging Improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)(Problembehandlung der Protokollierungsverbesserung) auf msdn.com.  
   
   

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b85a6f50b7e0759c5b691389c102236ce3df082b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9762c84ba42a3d35d0d9ebbcbb3ffb5f114ac1c8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487933"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480403"
 ---
 # <a name="create-a-domain-rule"></a>Erstellen einer Domänenregel
 
@@ -112,7 +112,7 @@ ms.locfileid: "88487933"
   
  Beim Erstellen einer Domänenregel stehen verschiedene Alternativen zur Auswahl. Um beispielsweise zu überprüfen, ob Werte mit dem Buchstaben A, B oder C beginnen, können Sie eine einfache Regel mit einer komplexen Bedingung (z. B. ein regulärer Ausdruck mit Pipezeichen) erstellen, oder Sie können eine komplexe Regel erstellen, die mehrere einfache Bedingungen enthält. Beispiel für die erste Regel: „Wert enthält regulären Ausdruck (^A|^B|^C)“. Beispiel für die zweite Regel: „'Wert beginnt mit A' OR 'Wert beginnt mit B' OR 'Wert beginnt mit C'“.  
   
-|Bedingung|Beschreibung|Beispiel|  
+|Bedingung|BESCHREIBUNG|Beispiel|  
 |---------------|-----------------|-------------|  
 |Länge ist gleich|Nur die Werte, die die vom Operanden festgelegte Anzahl an Zeichen enthalten, sind gültig.|Beispieloperand: 3<br /><br /> Gültiger Wert: BB1<br /><br /> Ungültiger Wert: AA|  
 |Länge ist größer als oder gleich|Nur die Werte, die mindestens die vom Operanden festgelegte Anzahl an Zeichen enthalten, sind gültig.|Beispieloperand: 3<br /><br /> Gültige Werte: BB1, BBAA<br /><br /> Ungültiger Wert: AA|  
@@ -127,7 +127,7 @@ ms.locfileid: "88487933"
 |Wert ist Datum\Uhrzeit|Nur Werte eines SQL Server-Datum\Uhrzeit-Datentyps sind gültig. Dazu gehören "datetime", "time", "date" usw.|Beispieloperand: N/A<br /><br /> Gültige Werte: 1916-06-04; 1916-06-04 18:24:24; March 21, 2001; 5/18/2011; 18:24:24<br /><br /> Ungültige Werte: 213. März 2006|  
 |Wert ist in|Nur die Werte, die im Satz im Operanden enthalten sind, sind gültig.<br /><br /> Um die Werte im Satz einzugeben, klicken Sie in das Operandentextfeld, geben Sie den ersten Wert ein, drücken Sie die EINGABETASTE, geben Sie den zweiten Wert ein, und wiederholen Sie den Vorgang für alle Werte, die Sie im Satz eingeben möchten. Klicken Sie anschließend erneut in das Operandentextfeld. DQS fügt zwischen den Werten im Satz ein Komma hinzu. Wenn Sie eine einzelne Zeichenfolge mit Kommas und ohne Wagenrücklauf eingeben (z. B. „A1, B1“), wird diese Zeichenfolge in DQS als einzelner Wert im Satz angesehen.|Beispieloperand: [A1, B1]<br /><br /> Gültige Werte: A1, B1<br /><br /> Ungültige Werte: AA, 11|  
 |Wert ist nicht in|Nur die Werte, die nicht im Satz im Operanden enthalten sind, sind gültig.|Beispieloperand: [A1, B1]<br /><br /> Gültige Werte: AA, 11<br /><br /> Ungültige Werte: A1, B1|  
-|Wert entspricht Muster|Nur die Werte, die dem Muster der Zeichen, Ziffern oder Sonderzeichen im Operanden entsprechen, sind gültig.<br /><br /> Alle Buchstaben A (...Z) können als Muster für einen beliebigen Buchstaben verwendet werden. Es wird Groß/Kleinschreibung unterschieden. Alle Ziffern (0...9) können als Muster für eine beliebige Ziffer verwendet werden. Alle Sonderzeichen mit Ausnahme eines Buchstabes oder einer Ziffer können als Muster für sich selbst verwendet werden. Durch Klammern [] wird ein optionaler Abgleich definiert.|Beispieloperand: AA:000 (Muster von zwei *beliebigen* Zeichen, gefolgt von einem Doppelpunkt (:), wiederum gefolgt von drei *beliebigen* Ziffern.)<br /><br /> Gültige Werte: AB:012, df:257<br /><br /> Ungültige Werte: abc:123, FJ-369<br /><br /> Weitere Informationen zu Musterregeln in DQS und Beispiele finden Sie unter [Mustervergleich in DQS-Domänenregeln](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
+|Wert entspricht Muster|Nur die Werte, die dem Muster der Zeichen, Ziffern oder Sonderzeichen im Operanden entsprechen, sind gültig.<br /><br /> Alle Buchstaben A (...Z) können als Muster für einen beliebigen Buchstaben verwendet werden. Es wird Groß/Kleinschreibung unterschieden. Alle Ziffern (0...9) können als Muster für eine beliebige Ziffer verwendet werden. Alle Sonderzeichen mit Ausnahme eines Buchstabes oder einer Ziffer können als Muster für sich selbst verwendet werden. Durch Klammern [] wird ein optionaler Abgleich definiert.|Beispieloperand: AA:000 (Muster von zwei *beliebigen* Zeichen, gefolgt von einem Doppelpunkt (:), wiederum gefolgt von drei *beliebigen* Ziffern.)<br /><br /> Gültige Werte: AB:012, df:257<br /><br /> Ungültige Werte: abc:123, FJ-369<br /><br /> Weitere Informationen zu Musterregeln in DQS und Beispiele finden Sie unter [Mustervergleich in DQS-Domänenregeln](https://techcommunity.microsoft.com/t5/sql-server-integration-services/pattern-matching-in-dqs-domain-rules/ba-p/388103).|  
 |Wert entspricht keinem Muster|Nur die Werte, die dem Muster der Zeichen, Ziffern oder Sonderzeichen im Operanden nicht entsprechen, sind gültig.|Beispieloperand: A1 (Wert darf einem Muster eines *beliebigen* Zeichens, gefolgt von einer *beliebigen* Ziffer nicht entsprechen.)<br /><br /> Gültige Werte: AB1, A, A:5<br /><br /> Ungültige Werte: B7, c9|  
 |Wert enthält Muster|Nur die Werte, die das Muster der Zeichen, Ziffern oder Sonderzeichen im Operanden enthalten, sind gültig.|Beispieloperand: AA-12 (Wert enthält ein Muster von zwei *beliebigen* Zeichen, gefolgt von einem Bindestrich (-), wiederum gefolgt von zwei *beliebigen* Ziffern.)<br /><br /> Gültige Werte: AAA-01, ab-975<br /><br /> Ungültiger Wert: A7, AA-6, C-45, aa;98|  
 |Wert enthält kein Muster|Nur die Werte, die das Muster der Zeichen im Operanden nicht enthalten, sind gültig.|Beispieloperand: AB-12 (Wert darf ein Muster von zwei *beliebigen* Zeichen, gefolgt von einem Bindestrich (-), wiederum gefolgt von zwei *beliebigen* Ziffern nicht enthalten.)<br /><br /> Gültige Werte: A7, AA-6, C-45, aa;98<br /><br /> Ungültiger Wert: AAA-01, ab-975|  
