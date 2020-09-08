@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6b35aa78b98a681ae7312db2bd9a7b1fb18f482
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 464bc971ca52c1363366ff439bcc5c51f32d5065
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457804"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480768"
 ---
 # <a name="building-packages-programmatically"></a>Programmgesteuertes Erstellen von Paketen
 
@@ -98,7 +98,7 @@ ms.locfileid: "88457804"
   
 -   CodePlex-Beispiele, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), auf www.codeplex.com/MSFTISProdSamples  
   
--   Blogeintrag [Leistungsprofilerstellung für benutzerdefinierte Erweiterungen](https://go.microsoft.com/fwlink/?LinkId=238831)auf blogs.msdn.com.  
+-   Blogeintrag [Leistungsprofilerstellung für benutzerdefinierte Erweiterungen](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-profiling-your-custom-extensions/ba-p/387490)auf blogs.msdn.com.  
 
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

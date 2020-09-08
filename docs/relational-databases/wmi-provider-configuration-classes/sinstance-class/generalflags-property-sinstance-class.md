@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - GeneralFlags property
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 335626f85e25380084fe312a7b5f61a8a3174cb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a5c517f03f4d7634d51f09ecec19507d4511aba3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427222"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516947"
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags-Eigenschaft (SInstance-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.GeneralFlags [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Array von Objekten, die die durch die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]unterstützten allgemeinen Flags darstellen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

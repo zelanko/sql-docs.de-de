@@ -17,12 +17,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: d2a2de2fd59222b174fe6b02fae12ff344a3de04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c86a5f51e1d78b15a85a2063530bfb9ac4183a7d
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346226"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480614"
 ---
 # <a name="upgrade-integration-services"></a>Upgrade von Integration Services
 
@@ -150,6 +150,6 @@ ms.locfileid: "88346226"
 -   Sie können Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents nicht auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Computern verwenden, um [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] -Pakete auszuführen, die in der upgegradeten Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]gespeichert werden.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag [Weiterverwenden benutzerdefinierter SSIS-Erweiterungen und -Anwendungen in Denali](https://go.microsoft.com/fwlink/?LinkId=238157) auf blogs.msdn.com.  
+ Blogeintrag [Weiterverwenden benutzerdefinierter SSIS-Erweiterungen und -Anwendungen in Denali](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951) auf blogs.msdn.com.  
   
   
