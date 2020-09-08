@@ -17,14 +17,14 @@ helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: dc0f1651c0c5532e387e4b878182a2cb99f66936
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2e84ad652e1253a9026d61ec0f0a28b571b699a3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373936"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525008"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88373936"
 |**is_readonly**|**bit**|1 = Die Dateigruppe ist schreibgeschützt.|  
 |**log_filegroup_guid**|**uniqueidentifier**|Kann den Wert NULL haben.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 > [!IMPORTANT]  
 >  Ein Dateigruppenname kann in unterschiedlichen Datenbanken auftreten. Jede Dateigruppe verfügt jedoch über eine eigene GUID. Daher ist **(backup_set_id filegroup_guid)** ein eindeutiger Schlüssel, der eine Datei Gruppe in **Backup File Group**identifiziert.  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdbms_datatype system table
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3fcda5b5d0283f764fa2347b51d8f34dfb4cc53e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9fc19ad90c8dcf73c9e0bc368b30ee41ca4fa125
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419114"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525073"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88419114"
 |**type**|**sysname**|Der Name des Datentyps (systemeigen).|  
 |**"kreateparameams"**|**int**|Das Bitmap, das beschreibt, welche Kombination aus Länge, Genauigkeit und Dezimalstellen für jeden Datentyp gilt:<br /><br /> **0x1** = Genauigkeit.<br /><br /> **0x2** = skalieren.<br /><br /> **0x4** = Länge.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Tabelle enthält Einträge für SQL Server-Datentypen, weil eine Instanz von SQL Server eine Nicht-SQL Server-Datenbank abonnieren und in einem Nicht-SQL Server-Abonnenten veröffentlichen kann.  
   
 ## <a name="see-also"></a>Weitere Informationen  
