@@ -14,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 89342916f850745113136a88769be5f9b0ff13f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c14b544edfe96e5cf4778a31db35a18df0b66fa5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475867"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89521847"
 ---
 # <a name="localdbdeleteinstance-function"></a>LocalDBDeleteInstance-Funktion
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ HRESULT LocalDBDeleteInstance(
  *dwFlags*  
  [Eingabe] Zur künftigen Verwendung reserviert. Muss derzeit auf 0 festgelegt sein.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  S_OK  
  Die Funktion wurde erfolgreich ausgeführt.  
   
@@ -91,10 +91,10 @@ HRESULT LocalDBDeleteInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Ein unerwarteter Fehler ist aufgetreten. Weitere Informationen finden Sie im Ereignisprotokoll.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Ein Codebeispiel, in dem die LocalDB-API verwendet wird, finden Sie unter [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Express LocalDB-Header und Versionsinformationen](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

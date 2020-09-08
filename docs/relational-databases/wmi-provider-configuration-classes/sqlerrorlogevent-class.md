@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SqlErrorLogEvent class
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 133eb91aed4cff032afd1b83637d3e4d4efa2635
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ff086556b507c0d09750b7ab27671a7b1cfaf496
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460064"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89522148"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent-Klasse
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ class SQLErrorLogEvent
 ## <a name="properties"></a>Eigenschaften  
  Die sqlerrorlogevent-Klasse definiert die folgenden Eigenschaften.  
   
-| Eigenschaft | Beschreibung |
+| Eigenschaft | BESCHREIBUNG |
 | -------- | ----------- |
 |FileName|Datentyp: **Zeichenfolge**<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> <br /><br /> Der Name der Fehlerprotokolldatei.|  
 |InstanceName|Datentyp: **Zeichenfolge**<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> Qualifizierer: Schlüssel<br /><br /> Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die die Protokolldatei enthält.|  
@@ -50,7 +50,7 @@ class SQLErrorLogEvent
 |Nachricht|Datentyp: **Zeichenfolge**<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> <br /><br /> Die Ereignismeldung.|  
 |ProcessInfo|Datentyp: **Zeichenfolge**<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> <br /><br /> Informationen zur SPID (Source Server Process ID, Quellserverprozess-ID) für das Ereignis.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 | type | Name |
 | ---- | ---- |
