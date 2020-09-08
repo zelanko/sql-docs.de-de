@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477698"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480905"
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
 
@@ -172,7 +172,7 @@ ms.locfileid: "88477698"
  Wenn Sie im Listenfeld **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen** eine andere Option auswählen, werden die Zeilen als Fehler behandelt. In diesem Fall ist die Option **Fehler** auf der Seite **Fehlerausgabe** verfügbar.  
   
 ### <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
+ Blogeintrag [Lookup cache modes](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) (Suchcachemodi) auf blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>Transformations-Editor für Suche (Seite 'Verbindung')
   Auf der Seite **Verbindung** des Dialogfelds **Transformations-Editor für Suche** können Sie einen Verbindungs-Manager auswählen. Wenn Sie einen OLE DB-Verbindungs-Manager auswählen, wählen Sie auch eine Abfrage, Tabelle oder Sicht zum Generieren des Verweisdatasets aus.  
@@ -219,7 +219,7 @@ ms.locfileid: "88477698"
  Zeigen Sie mithilfe des Dialogfelds **Vorschau der Abfrageergebnisse anzeigen** eine Vorschau der Ergebnisse an. Diese Option zeigt bis zu 200 Zeilen an.  
   
 ### <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
+ Blogeintrag [Lookup cache modes](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) (Suchcachemodi) auf blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>Transformations-Editor für Suche (Seite 'Spalten')
   Auf der Seite **Spalten** des Dialogfelds **Transformations-Editor für Suche** können Sie den Join zwischen der Quell- und der Verweistabelle angeben sowie Suchspalten aus der Verweistabelle auswählen.  
@@ -276,7 +276,7 @@ ms.locfileid: "88477698"
  Ordnen Sie mithilfe des Dialogfelds **Abfrageparameter festlegen** die Eingabespalten den Parametern zu.  
   
 ### <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) (Suchcachemodi) auf blogs.msdn.com  
+ Blogeintrag [Lookup cache modes](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) (Suchcachemodi) auf blogs.msdn.com  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Transformation für Fuzzysuche](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

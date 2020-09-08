@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 227c37385fd1c9b3b65ad45d891b3be7eb300739
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5212f29d4ab533554a6920517c0fa58ee1c19dd2
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900423"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480554"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On-Verfügbarkeitsgruppen: eine Hochverfügbarkeits- und Notfallwiederherstellungslösung
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -159,7 +159,7 @@ ms.locfileid: "85900423"
   
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblogs: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server-Technikblogs](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server-Technikblogs](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **Videos:**  
   

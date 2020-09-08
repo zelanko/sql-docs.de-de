@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af11c20870da67f9b6004c4a277c17e277c1ffed
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 096e416b5abaf7e6c148cba469cd4f7453be092e
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922433"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480485"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Überwachung und Problembehandlung bei Verfügbarkeitsgruppen
  Dieser Leitfaden unterstützt Sie bei den ersten Schritten mit der Überwachung von Always On-Verfügbarkeitsgruppen und der Behandlung einiger gängiger Probleme in Bezug auf Verfügbarkeitsgruppen. Zudem bietet der Leitfaden Originalinhalte sowie eine Angebotsseite mit nützlichen Informationen, die an anderer Stelle veröffentlicht wurden. Im Rahmen dieses Leitfadens können zwar nicht alle Probleme, die auf dem umfassenden Gebiet der Verfügbarkeitsgruppen auftreten können, im Detail erläutert werden, allerdings kann auf die richtige Richtung bezüglich der Ursachenanalyse und Problemlösung gewiesen werden. 
@@ -73,6 +73,6 @@ ms.locfileid: "82922433"
 
 ## <a name="next-steps"></a>Nächste Schritte  
  [SQL Server Always On-Teamblog](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [CSS SQL Server-Technikblogs](https://blogs.msdn.com/b/psssql/)  
+ [CSS SQL Server-Technikblogs](https://docs.microsoft.com/archive/blogs/psssql/)  
   
   

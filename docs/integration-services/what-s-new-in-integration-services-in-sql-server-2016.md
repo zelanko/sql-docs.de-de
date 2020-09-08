@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456872"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480827"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Neuigkeiten in Integration Services in SQL Server 2016
 
@@ -363,7 +363,7 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
  Das Speicherort für die Dimensionsverarbeitung funktioniert nicht für tabellarische Modelle mit dem Kompatibilitätsgrad „SQL Server 2016“.  Für die Verarbeitung von Tabellen benötigen Sie lediglich den Analysis Services-Verarbeitungstask und das Ziel der Partitionsverarbeitung. 
 
 ####  <a name="support-for-built-in-r-services"></a><a name="builtinR"></a> Unterstützung für integrierte R-Dienste  
- SSIS unterstützt bereits die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]integrierten R-Dienste. Mit SSIS können Sie nicht nur Daten extrahieren und die Ausgabe von Analysen laden, sondern auch R-Modelle erstellen, ausführen und in regelmäßigen Abständen aufbewahren. Weitere Informationen finden Sie im folgenden Blogbeitrag. [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)(Operationalisieren Ihres Machine Learning-Projekts mithilfe von SQL Server 2016 Integration Services (SSIS) und R Services). 
+ SSIS unterstützt bereits die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]integrierten R-Dienste. Mit SSIS können Sie nicht nur Daten extrahieren und die Ausgabe von Analysen laden, sondern auch R-Modelle erstellen, ausführen und in regelmäßigen Abständen aufbewahren. Weitere Informationen finden Sie im folgenden Blogbeitrag. [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296)(Operationalisieren Ihres Machine Learning-Projekts mithilfe von SQL Server 2016 Integration Services (SSIS) und R Services). 
 
 ####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> Umfangreiche Ausgabe der XML-Validierung im XML-Task  
  Validieren Sie XML-Dokumente und erhalten Sie eine umfangreiche Fehlerausgabe durch die Aktivierung der Eigenschaft **ValidationDetails** des XML-Tasks. Bevor die Eigenschaft **ValidationDetails** verfügbar war, gab die XML-Validierung durch den XML-Task nur „true“ oder „false“ als Ergebnis zurück, ohne Informationen zu Fehlern oder wo diese auftraten. Wenn Sie jetzt die Eigenschaft **ValidationDetails** auf „true“ festlegen, enthält die Ausgabedatei ausführliche Informationen zu jedem Fehler, einschließlich der Zeilennummer und der Position. Sie können diese Informationen verwenden, um Fehler in XML-Dokumenten zu verstehen, zu finden und zu beheben. Weitere Informationen finden Sie unter [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
