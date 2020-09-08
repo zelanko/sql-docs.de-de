@@ -17,14 +17,14 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4a4caafa49aca29e1093ffb6304b292bcd5c7735
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e59789c2d4de9174a43b34881e7b45a914cfd2c3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492817"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525461"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "88492817"
 |**page_size**|**int**|Größe der Seite in Bytes.|  
 |**file_number**|**numerisch (10, 0)**|Die innerhalb einer Datenbank eindeutige Datei-ID (entspricht **sys. database_files**.** file_id**).|  
 |**backed_up_page_count**|**numerisch (10, 0)**|Anzahl der gesicherten Seiten. Kann den Wert NULL haben.|  
-|**file_type**|**char (1)**|Die gesicherte Datei. Folgende Werte sind möglich:<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datendatei.<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokolldatei.<br /><br /> F = Volltextkatalog.<br /><br /> Kann den Wert NULL haben.|  
+|**file_type**|**char(1)**|Die gesicherte Datei. Folgende Werte sind möglich:<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datendatei.<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokolldatei.<br /><br /> F = Volltextkatalog.<br /><br /> Kann den Wert NULL haben.|  
 |**source_file_block_size**|**numerisch (10, 0)**|Medium, auf dem sich die ursprüngliche Daten- bzw. Protokolldatei befand, als sie gesichert wurde. Kann den Wert NULL haben.|  
 |**file_size**|**numeric(20,0)**|Länge der gesicherten Datei in Bytes. Kann den Wert NULL haben.|  
 |**logical_name**|**nvarchar(128)**|Logischer Name der Datei, die gesichert wird. Kann den Wert NULL haben.|  
 |**physical_drive**|**nvarchar(260)**|Name des physischen Laufwerks oder der physischen Partition. Kann den Wert NULL haben.|  
 |**physical_name**|**nvarchar(260)**|Rest des physischen (Betriebssystem-) Dateinamens. Kann den Wert NULL haben.|  
-|**Status**|**tinyint**|Status der Datei. Folgende Werte sind möglich:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = gelöscht<br /><br /> Hinweis: der Wert 5 wird übersprungen, sodass diese Werte den Werten für den Daten Bank Status entsprechen.|  
+|**state**|**tinyint**|Status der Datei. Folgende Werte sind möglich:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = gelöscht<br /><br /> Hinweis: der Wert 5 wird übersprungen, sodass diese Werte den Werten für den Daten Bank Status entsprechen.|  
 |**state_desc**|**nvarchar (64)**|Beschreibung des Dateistatus. Folgende Werte sind möglich:<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|Protokollfolgenummer, bei der die Datei erstellt wurde.|  
 |**drop_lsn**|**numeric(25,0)**|Protokollfolgenummer, bei der die Datei gelöscht wurde. Kann den Wert NULL haben.<br /><br /> Wurde die Datei nicht gelöscht, ist dieser Wert NULL.|  
@@ -60,7 +60,7 @@ ms.locfileid: "88492817"
 |**is_readonly**|**bit**|1 = Die Datei ist schreibgeschützt.|  
 |**is_present**|**bit**|1 = Die Datei ist im Sicherungssatz enthalten.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  RESTORE VERIFYONLY FROM *backup_device* mit LOADHISTORY füllt die Spalten der **Backup Mediaset** -Tabelle mit den entsprechenden Werten aus dem Medien Satz Header auf.  
   
  Führen Sie die gespeicherte Prozedur [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) aus, um die Anzahl der Zeilen in dieser Tabelle und in anderen Sicherungs-und Verlaufs Tabellen zu verringern.  
