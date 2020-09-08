@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationoption
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 80d34e406b7672e31dd9cb70f42431bcd7392917
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 093b718c74d086af10b351d1a87165ef1a659ea2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464214"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89526849"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +40,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="arguments"></a>Argumente  
 `[ @optname = ] 'option_name'` Der Name der Replikations Option, die abgefragt werden soll. *option_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Transaktions**|Ein Resultset wird zurückgegeben, wenn die Transaktionsreplikation aktiviert ist.|  
 |**merge**|Ein Resultset wird zurückgegeben, wenn die Mergereplikation aktiviert ist.|  
@@ -54,13 +54,13 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Novel**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helpreplicationoption** wird verwendet, um Informationen zu Replikations Optionen zu erhalten, die auf einem bestimmten Server aktiviert sind. Verwenden Sie **sp_helpreplicationdboption**, um Informationen zu einer bestimmten Datenbank zu erhalten.  
   
 ## <a name="permissions"></a>Berechtigungen  
