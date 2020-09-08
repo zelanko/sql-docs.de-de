@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyStrValue property
 ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a8b17c93eaaa388ec32b4d9a332c90353b69c962
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e55995c93910fe39880c18277e8daffc1f9c7062
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427182"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89520393"
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>PropertyStrValue-Eigenschaft (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.PropertyStrValue [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der den Wert der erweiterten Eigenschaft angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

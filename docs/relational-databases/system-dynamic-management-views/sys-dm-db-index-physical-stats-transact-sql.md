@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23fa1d8b5dc2f6e9caa1dccaf73ea788dac8bc1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9633305e5d60a9ccbdfcf57f966353792c24a12a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447755"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89518764"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +64,7 @@ sys.dm_db_index_physical_stats (
  Die integrierte [DB_ID](../../t-sql/functions/db-id-transact-sql.md)-Funktion kann angegeben werden. Wenn DB_ID verwendet wird, ohne dass ein Datenbankname angegeben wird, muss der Kompatibilitätsgrad der aktuellen Datenbank 90 oder höher sein.  
   
  *object_id* \| NULL \| 0 \| Standard  
- Die Objekt-ID der Tabelle oder Sicht, in der sich der Index befindet. *object_id* ist **int**.  
+ Die Objekt-ID der Tabelle oder Sicht, in der sich der Index befindet. *object_id* ist vom Datentyp **int**.  
   
  Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] enthalten gültige Eingaben auch den Service Broker-Warteschlangen Namen oder den internen Warteschlangen Tabellennamen. Wenn Standardparameter angewendet werden (d. h. alle Objekte, alle Indizes usw.), werden die Fragmentierungs Informationen für alle Warteschlangen in das Resultset eingeschlossen.  
   
@@ -121,7 +121,7 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|Anzahl der Versionsdaten Sätze, die außerhalb der ursprünglichen Daten Zeile aufbewahrt werden. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|Anzahl von Versionsdaten Sätzen, die als langfristig angesehen werden. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die dynamische Verwaltungsfunktion sys.dm_db_index_physical_stats ersetzt die DBCC SHOWCONTIG-Anweisung.  
   
 ## <a name="scanning-modes"></a>Scanmodi  
@@ -433,7 +433,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Index Related Dynamic Management Views and Functions (Transact-SQL) (Indexbezogene dynamische Verwaltungssichten und -funktionen (Transact-SQL))](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. dm_db_index_operational_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys. dm_db_partition_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   

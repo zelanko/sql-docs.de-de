@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - GetCurrentCertificate method
 ms.assetid: 9d2b72df-cb21-414a-abef-917f13d4de62
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 28f413d6869fde5eb62f7ab9d1f8ef6e8b28cac4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7c36d3c9bbaef0b37a42695315762cada6b9b12d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472794"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89520857"
 ---
 # <a name="getcurrentcertificate-method-sinstance-class"></a>GetCurrentCertificate-Methode (SInstance-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,14 +42,14 @@ object.GetCurrentCertificate(SHA)
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |*SHA*|Ein Zeichenfolgen-Objektwert (Ausgabeparameter), das das aktuelle Sicherheitszertifikat nach Abschluss der Methode angibt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

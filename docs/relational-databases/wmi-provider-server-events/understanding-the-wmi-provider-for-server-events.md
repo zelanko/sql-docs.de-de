@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Agent [WMI]
 - WMI Provider for Server Events, about WMI Provider for Server Events
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2218ed2c3eedafd1c6cab44096eaf356f0a8d492
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: df2e36110a9e4a52a3587644b96994bc040442e8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888171"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89519817"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Grundlegendes zum WMI-Anbieter für Serverereignisse
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "85888171"
   
  Verwaltungsanwendungen wie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent können über den WMI-Anbieter für Serverereignisse auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen, indem sie WQL-Anweisungen (WMI Query Language) ausgeben. WQL ist eine vereinfachte Teilmenge von Structured Query Language (SQL) mit einigen WMI-spezifischen Erweiterungen. Bei Verwendung von WQL ruft eine Anwendung einen Ereignistyp für eine bestimmte Datenbank oder ein bestimmtes Datenbankobjekt ab. Der WMI-Anbieter für Serverereignisse übersetzt die Abfrage in eine Ereignisbenachrichtigung und erstellt dadurch auf effektive Weise eine Ereignisbenachrichtigung in der Zieldatenbank. Weitere Informationen zur Funktionsweise von Ereignisbenachrichtigungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]finden Sie unter [Konzepte des WMI-Anbieters für Serverereignisse](https://technet.microsoft.com/library/ms180560.aspx). Die Ereignisse, die abgefragt werden können, sind in [Klassen und Eigenschaften für WMI-Anbieter für Serverereignisse](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)aufgelistet.  
   
- Wenn ein Ereignis auftritt, das die Ereignisbenachrichtigungsfunktion zum Senden einer Meldung veranlasst, wird die Benachrichtigung an einen vordefinierten Zieldienst in **msdb** mit dem Namen **SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**übermittelt. Der Zieldienst fügt das Ereignis in eine vordefinierte Warteschlange in **msdb** ein. Ihr Name ist **WMIEventProviderNotificationQueue**. (Sowohl der Dienst als auch die Warteschlange werden vom Anbieter dynamisch erstellt, wenn er zum ersten Mal eine Verbindung mit herstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .) Der Anbieter liest dann die Ereignisdaten aus dieser Warteschlange und wandelt sie in das Managed Object Format (MOF) um, bevor Sie an die Anwendung zurückgegeben wird. Die folgende Abbildung veranschaulicht diesen Prozess:  
+ Wenn ein Ereignis auftritt, das die Ereignisbenachrichtigungsfunktion zum Senden einer Meldung veranlasst, wird die Benachrichtigung an einen vordefinierten Zieldienst in **msdb** mit dem Namen **SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**übermittelt. Der Zieldienst fügt das Ereignis in eine vordefinierte Warteschlange in **msdb** ein. Ihr Name ist **WMIEventProviderNotificationQueue**. (Sowohl der Dienst als auch die Warteschlange werden vom Anbieter dynamisch erstellt, wenn er zum ersten Mal eine Verbindung mit herstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .) Der Anbieter liest dann die Ereignisdaten aus dieser Warteschlange und wandelt sie in das Managed Object Format (MOF) um, bevor Sie an die Anwendung zurückgegeben wird. Die folgende Abbildung veranschaulicht diesen Prozess.  
   
  ![Flussdiagramm des WMI-Anbieters für Serverereignisse](../../relational-databases/wmi-provider-server-events/media/wmi-provider-functional-spec.gif "Flussdiagramm des WMI-Anbieters für Serverereignisse")  
   
@@ -54,7 +54,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- In diesem Beispiel ist `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Bezeichner, der aus dem Präfix `SQLWEP_` und einer GUID besteht. `SQLWEP`erstellt eine neue GUID für jeden Bezeichner. Der Wert `A7E5521A-1CA6-4741-865D-826F804E5135` in der `TO SERVICE` -Klausel ist der GUID, der die Broker-Instanz in der **msdb** -Datenbank identifiziert.  
+ In diesem Beispiel ist `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Bezeichner, der aus dem Präfix `SQLWEP_` und einer GUID besteht. `SQLWEP` erstellt eine neue GUID für jeden Bezeichner. Der Wert `A7E5521A-1CA6-4741-865D-826F804E5135` in der `TO SERVICE` -Klausel ist der GUID, der die Broker-Instanz in der **msdb** -Datenbank identifiziert.  
   
  Weitere Informationen zur Arbeit mit WQL finden Sie unter [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
   

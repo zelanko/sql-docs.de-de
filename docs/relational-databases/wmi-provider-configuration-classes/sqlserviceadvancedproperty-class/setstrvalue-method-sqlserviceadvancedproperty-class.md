@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetStrValue method
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 86a0a552b8d6544a5ea42c175e04396d3dcc48a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: edadbdf316eaa20a2a701621b82afa609607f721
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427122"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89520312"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue-Methode (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,17 +42,17 @@ object.SetStrValue(StrValue)
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |*StrValue*|Ein Zeichenfolgenwert, der den Wert der erweiterten Eigenschaft angibt.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der Eigenschaftswert muss dem Typ *string* entsprechen, damit die Eigenschaft auf einen Zeichenfolgenwert festgelegt werden kann.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   
