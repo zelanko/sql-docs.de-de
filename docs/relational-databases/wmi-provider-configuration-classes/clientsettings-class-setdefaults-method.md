@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDefaults method
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 862e03c447e6c7e0c80318b89bcd9cbf5ecd92aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3570423483ea398be21a41e3b26d7d1c3d61c064
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460152"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540116"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>ClientSettings-Klasse – SetDefaults-Methode
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,12 +42,12 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |*Overschreiteall*|Ein boolescher Wert, der angibt, ob vorhandene Werte für die Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients überschrieben werden sollen. **true** , um vorhandene Daten zu überschreiben, **false** , wenn vorhandene Daten nicht überschrieben werden sollen.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   

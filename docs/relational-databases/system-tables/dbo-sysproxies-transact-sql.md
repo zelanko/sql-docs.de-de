@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysproxies system table
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 40ffbc10351cf4ca0cccc54e810a358da9a3e9f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d806ed58647b8c22edd28be44e85790b1962e32a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446615"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540415"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "88446615"
 |**name**|**sysname**|Name des Proxykontos.|  
 |**credential_id**|**int**|ID der vom Proxykonto verwendeten Anmeldeinformationen.|  
 |**enabled**|**tinyint**|Status des Proxykontos:<br /><br /> **0** = deaktiviert. **1** = aktiviert.|  
-|**Beschreibung**|**nvarchar(512)**|Beschreibung, die der Benutzer bei Erstellung des Proxykontos eingegeben hat.|  
+|**description**|**nvarchar(512)**|Beschreibung, die der Benutzer bei Erstellung des Proxykontos eingegeben hat.|  
 |**user_sid**|**varbinary(85)**|Microsoft Windows-Sicherheits-ID ( *security_identifier* ) des Benutzers oder der Gruppe, der bzw. die den Proxyanmeldeinformationen zugeordnet ist.|  
 |**credential_date_created**|**datetime**|Datum und Uhrzeit des Zeitpunkts, an dem die Anmeldeinformationen erstellt wurden.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Nur Mitglieder der festen Serverrolle **sysadmin** können auf die **sysproxies** -Tabelle zugreifen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

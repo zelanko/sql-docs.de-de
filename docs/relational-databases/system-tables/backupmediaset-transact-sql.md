@@ -16,14 +16,14 @@ helpviewer_keywords:
 - backup media [SQL Server], backupmediaset system table
 - backupmediaset system table
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 43f54ff292e21e28ec32e8581633872ced2333d7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fded40f11cfc094e3af89295496787413e3fd4cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890661"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540371"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "85890661"
 |**mirror_count**|**tinyint**|Anzahl der Spiegel im Mediensatz.|  
 |**is_password_protected**|**bit**|Gibt an, ob der Mediensatz kennwortgeschützt ist:<br /><br /> 0 = Nicht geschützt<br /><br /> 1 = Geschützt|  
 |**is_compressed**|**bit**|Gibt an, ob die Sicherung komprimiert ist:<br /><br /> 0 = nicht komprimiert<br /><br /> 1 = komprimiert<br /><br /> Während eines **msdb** -Upgrades wird dieser Wert auf NULL festgelegt. Dies gibt eine nicht komprimierte Sicherung an.|  
-|**is_encrypted**|**Trate**|Gibt an, ob die Sicherung verschlüsselt ist:<br /><br /> 0 = Nicht verschlüsselt<br /><br /> 1 = Verschlüsselt.|  
+|**is_encrypted**|**bit**|Gibt an, ob die Sicherung verschlüsselt ist:<br /><br /> 0 = Nicht verschlüsselt<br /><br /> 1 = Verschlüsselt.|  
   
 ## <a name="remarks"></a>Hinweise  
  RESTORE VERIFYONLY FROM *backup_device* mit LOADHISTORY füllt die Spalten der **Backup Mediaset** -Tabelle mit den entsprechenden Werten aus dem Medien Satz Header auf.  

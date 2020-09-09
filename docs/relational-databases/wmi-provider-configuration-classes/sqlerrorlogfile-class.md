@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 63937cb2d7a3aaf3994712aa493097597cd26c53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f74e8efc28591bb951d52aa7e242ee259810ff8f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446456"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540032"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile-Klasse
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ class SQLErrorLogFile
 ## <a name="properties"></a>Eigenschaften  
  Die sqlerrorlogfile-Klasse definiert die folgenden Eigenschaften.  
   
-| Eigenschaft | Beschreibung |
+| Eigenschaft | BESCHREIBUNG |
 | -------- | ----------- |
 |Archivenreiber|Datentyp: **UInt32**<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> <br /><br /> Die Archivnummer für die Protokolldatei.|  
 |InstanceName|Datentyp: **Zeichenfolge**<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> Qualifizierer: Schlüssel<br /><br /> <br /><br /> Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die die Protokolldatei enthält.|  
@@ -48,7 +48,7 @@ class SQLErrorLogFile
 |Logfile size|Datentyp: **UInt32**<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> <br /><br /> Die Größe der Protokolldatei in Bytes.|  
 |Name|Datentyp: **Zeichenfolge**<br /><br /> Zugriffstyp: Schreibgeschützt<br /><br /> Qualifizierer: Schlüssel<br /><br /> <br /><br /> Der Name der Protokolldatei.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 | type | Name |
 | ---- | ---- |

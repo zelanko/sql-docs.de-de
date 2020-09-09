@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 51a23c71b99ff57cb9dda76dd65cfc25fcf4a097
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f079b7ea36d55f978db4c802efb3c8c4283eab3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473199"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540225"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "88473199"
 |**publisher**|**sysname**|Entspricht dem Namen des Standardservers.|  
 |**publisher_db**|**sysname**|Der Name der Standardverlegerdatenbank.|  
 |**name**|**sysname**|Der Name der Veröffentlichung.|  
-|**Beschreibung**|**nvarchar(255)**|Eine kurze Beschreibung der Veröffentlichung.|  
-|**Beibehaltung**|**int**|Die Beibehaltungs Dauer für den gesamten Veröffentlichungs Satz, wobei die Einheit durch den Wert der **retention_period_unit** Spalte angegeben wird.|  
+|**description**|**nvarchar(255)**|Eine kurze Beschreibung der Veröffentlichung.|  
+|**zurück**|**int**|Die Beibehaltungs Dauer für den gesamten Veröffentlichungs Satz, wobei die Einheit durch den Wert der **retention_period_unit** Spalte angegeben wird.|  
 |**publication_type**|**tinyint**|Zeigt an, ob die Veröffentlichung gefiltert wird.<br /><br /> **0** = nicht gefiltert.<br /><br /> **1** = gefiltert.|  
 |**pubid**|**uniqueidentifier**|Die eindeutige ID für diese Veröffentlichung. Dieser Wert wird beim Hinzufügen der Veröffentlichung generiert.|  
 |**designmasterid**|**uniqueidentifier**|Für zukünftige Verwendung reserviert.|  
@@ -87,11 +87,11 @@ ms.locfileid: "88473199"
 |**generation_leveling_threshold**|**int**|Gibt die Anzahl der Änderungen an, die in einer Generierung enthalten sind. Eine Generierung ist eine Auflistung von Änderungen, die an einen Verleger oder Abonnenten übermittelt werden.|  
 |**automatic_reinitialization_policy**|**bit**|Gibt an, ob Änderungen vom Abonnenten vor einer automatischen erneuten Initialisierung hochgeladen werden.<br /><br /> **1** = Änderungen werden vom Abonnenten hochgeladen, bevor eine automatische Neuinitialisierung erfolgt.<br /><br /> **0** = Änderungen werden vor einer automatischen Neuinitialisierung nicht hochgeladen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_changemergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

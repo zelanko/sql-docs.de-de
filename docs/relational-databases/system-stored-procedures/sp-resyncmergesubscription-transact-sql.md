@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9210352380000b465c93f2b1d2121af1bd786f80
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86e1aaf4ee97447518e09a9b0b08a2624015cbef
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446804"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540484"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_resyncmergesubscription** wird bei der Mergereplikation verwendet.  
   
  Der Wert **0** für den *resync_type* -Parameter, der alle Änderungen seit der Anfangs Momentaufnahme erneut anwendet, kann ressourcenintensiv sein, aber möglicherweise sehr viel kleiner als eine vollständige erneute Initialisierung. Wenn z. B. die Anfangsmomentaufnahme vor einem Monat erstellt wurde, dann führt dieser Wert dazu, dass die Daten des letzten Monats erneut angewendet werden. Wenn die Anfangsmomentaufnahme 1 Gigabyte (GB) an Daten umfasst, der Umfang der Änderungen des letzten Monats jedoch nur 2 Megabyte (MB), dann ist es effizienter, die Daten und nicht die gesamte 1-GB-Momentaufnahme erneut anzuwenden.  

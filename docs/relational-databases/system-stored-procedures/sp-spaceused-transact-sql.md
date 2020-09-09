@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eb32803d759ff89a7c41addde56d9fa5dd76644
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473796"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540494"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
   
  Das *Mode* -Argument kann die folgenden Werte aufweisen:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |ALL|Gibt die Speicher Statistik des Objekts oder der Datenbank zurück, einschließlich des lokalen Teils und des Remote Teils.|  
 |LOCAL_ONLY|Gibt die Speicher Statistiken für nur den lokalen Teil des Objekts oder der Datenbank zurück. Wenn das Objekt oder die Datenbank nicht Stretch-aktiviert ist, gibt dieselbe Statistik zurück wie when @mode = all.|  
@@ -71,7 +71,7 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
   
 `[ @oneresultset = ] oneresultset` Gibt an, ob ein einzelnes Resultset zurückgegeben werden soll. Das *oneresultset* -Argument kann die folgenden Werte aufweisen:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Wenn * \@ objname* NULL ist oder nicht angegeben ist, werden zwei Resultsets zurückgegeben. Zwei Resultsets sind das Standardverhalten.|  
 |1|Wenn * \@ objname* = NULL oder nicht angegeben wird, wird ein einzelnes Resultset zurückgegeben.|  
@@ -119,7 +119,7 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Name des Objekts, für das Informationen zur Speicherverwendung angefordert wurden.<br /><br /> Der Schemaname des Objekts wird nicht zurückgegeben. Wenn der Schema Name erforderlich ist, verwenden Sie die dynamischen Verwaltungs Sichten [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) oder [sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) , um entsprechende Größen Informationen zu erhalten.|  
-|**Streitigkeiten**|**char (20)**|Anzahl der Zeilen in der Tabelle. Wenn es sich bei dem angegebenen Objekt um eine [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Warteschlange handelt, wird in dieser Spalte die Anzahl der in der Warteschlange vorhandenen Nachrichten angegeben.|  
+|**rows**|**char (20)**|Anzahl der Zeilen in der Tabelle. Wenn es sich bei dem angegebenen Objekt um eine [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Warteschlange handelt, wird in dieser Spalte die Anzahl der in der Warteschlange vorhandenen Nachrichten angegeben.|  
 |**bleiben**|**varchar (18)**|Gesamtmenge des reservierten Speicherplatzes für *objname*.|  
 |**data**|**varchar (18)**|Gesamtmenge des Speicherplatzes, der von Daten in *objname*verwendet wird.|  
 |**index_size**|**varchar (18)**|Gesamtmenge des Speicherplatzes, der von Indizes in *objname*verwendet wird.|  
@@ -165,7 +165,7 @@ Wenn *objname* weggelassen wird, ist der Wert von oneresultset 1 und *include_to
 |**xtp_used**|**varchar (18)**|Gesamtgröße der Prüf Punkt Dateien mit Zuständen, die in Bearbeitung, aktiv und Zusammenschluss Ziel in KB liegen. Dies ist der Speicherplatz, der für Daten in Speicher optimierten Tabellen aktiv verwendet wird. Gibt NULL zurück, wenn die Datenbank nicht über eine memory_optimized_data-Datei Gruppe mit mindestens einem Container verfügt. *Diese Spalte ist nur enthalten, wenn @include_total_xtp_storage = 1*.| 
 |**xtp_pending_truncation**|**varchar (18)**|Gesamtgröße der Prüf Punkt Dateien mit Status WAITING_FOR_LOG_TRUNCATION in KB. Dies ist der Speicherplatz, der für Prüf Punkt Dateien verwendet wird, die auf eine Bereinigung warten, sobald das Abschneiden des Protokolls erfolgt ist. Gibt NULL zurück, wenn die Datenbank nicht über eine memory_optimized_data-Datei Gruppe mit mindestens einem Container verfügt. Diese Spalte ist nur enthalten, wenn `@include_total_xtp_storage=1` .|
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **database_size** ist im Allgemeinen größer als die Summe des **reservierten**  +  **Speicherplatzes** , weil er die Größe der Protokolldateien enthält, aber **reserviert** ist und **unallocated_space** nur Datenseiten berücksichtigt. In einigen Fällen mit Azure Synapse Analytics ist diese Anweisung möglicherweise nicht "true". 
   
  Seiten, die von XML-Indizes und Volltextindizes verwendet werden, sind in **index_size** für beide Resultsets enthalten. Wenn *objname* angegeben ist, werden die Seiten für die XML-Indizes und Volltextindizes für das Objekt auch in den **reservierten** und **index_size** Ergebnissen gezählt.  
@@ -253,8 +253,8 @@ GO
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. Partitions &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

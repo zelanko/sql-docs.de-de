@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5bb6c7ff0d9e2025e5036043c8a48616b0679a54
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5f23c30ea481659bc1ce2366d674cea7fc753251
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247565"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540440"
 ---
 # <a name="syssp_rda_reauthorize_db-transact-sql"></a>Sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -57,7 +57,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert db_owner Berechtigungen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn Sie [sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) ausführen, um erneut eine Verbindung mit der Azure-Remote Datenbank herzustellen, setzt dieser Vorgang den Abfrage Modus automatisch auf LOCAL_AND_REMOTE zurück. Dies ist das Standardverhalten für Stretch Database. Das heißt, dass Abfragen Ergebnisse sowohl aus lokalen als auch aus Remote Daten zurückgeben.  
   
 ## <a name="example"></a>Beispiel  
