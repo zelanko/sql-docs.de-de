@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 197715e613e35e71068723fe90f2643e2373817e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d89340dfb073548378e8d4a9eb4929f836a2bbb9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489584"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529821"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -75,7 +75,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'` Der Typ des Abonnenten. *subscriber_type*ist vom Datentyp **nvarchar (15)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**local** (Standard)|Der Abonnent ist nur dem Verleger bekannt.|  
 |**global**|Der Abonnent ist allen Servern bekannt.|  
@@ -122,7 +122,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|Sekunde|  
 |**4**|Third|  
 |**8**|Vierter|  
 |**16**|Last (Letzter)|  
@@ -135,7 +135,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
-|**2**|Second|  
+|**2**|Sekunde|  
 |**4**|Minute|  
 |**8**|Stunde|  
 |NULL (Standard)||  
@@ -175,7 +175,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addmergesubscription** wird bei der Mergereplikation verwendet.  
   
  Wenn **sp_addmergesubscription** von einem Mitglied der festen Server Rolle **sysadmin** ausgeführt wird, um ein Pushabonnement zu erstellen, wird der Merge-Agent Auftrag implizit erstellt und unter dem- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst Konto ausgeführt. Es wird empfohlen, [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) auszuführen und die Anmelde Informationen eines anderen, agentspezifischen Windows-Kontos für ** \@ job_login** und ** \@ job_password**anzugeben. Weitere Informationen finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -186,7 +186,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addmergesubscription**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Interaktive Konfliktlösung](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   

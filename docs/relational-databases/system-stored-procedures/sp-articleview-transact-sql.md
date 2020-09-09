@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articleview
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5b1d18b8e4249f2948dccb3b042742afe0c0f54a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2d0efe52bb7f187ebfc981008610be81bc9528e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464530"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528727"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,7 +85,7 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_articleview** erstellt die Sicht, die den veröffentlichten Artikel definiert, und fügt die ID dieser Sicht in die Spalte **sync_objid** der Tabelle [sysarticles &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) ein und fügt den Text der Einschränkungs Klausel in die Spalte **filter_clause** ein. Wenn alle Spalten repliziert werden und keine **filter_clause**vorhanden ist, wird der **sync_objid** in der [sysarticles-&#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) Tabelle auf die ID der Basistabelle festgelegt, und die Verwendung **sp_articleview** ist nicht erforderlich.  
   
  Führen Sie zum Veröffentlichen einer vertikal gefilterten Tabelle (d. h. zum Filtern von Spalten) zuerst **sp_addarticle** ohne *sync_object* Parameter aus, führen Sie [sp_articlecolumn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede zu replizierende Spalte aus (definieren Sie den vertikalen Filter), und führen Sie dann **sp_articleview** aus, um die Sicht zu erstellen, die den veröffentlichten Artikel definiert.  
@@ -108,9 +108,9 @@ sp_articleview [ @publication = ] 'publication'
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Definieren und Ändern eines statischen Zeilenfilters](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
- [sp_changearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_droparticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

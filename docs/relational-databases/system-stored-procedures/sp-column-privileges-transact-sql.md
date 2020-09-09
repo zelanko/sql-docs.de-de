@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23dc67e25bdc6d57d2fc487e78dc988924dc800f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44097fb7340dd61f467b4bb08e0b4a718d6ab323
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481466"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528449"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**varchar (** 32 **)**|Eine der verfügbaren Spaltenberechtigungen. Spaltenberechtigungen können folgende Werte annehmen (oder auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> SELECT = der Berechtigte (GRANTEE) kann Daten für die Spalten abrufen.<br /><br /> INSERT = der Berechtigte (GRANTEE) kann Daten für diese Spalten bereitstellen, wenn neue Zeilen (von diesem GRANTEE) in die Tabelle eingefügt werden.<br /><br /> UPDATE = der Berechtigte (GRANTEE) kann vorhandene Daten in der Spalte ändern.<br /><br /> REFERENCES = der Berechtigte (GRANTEE) kann bei einer Primär-/Fremdschlüssel-Beziehung auf eine Spalte in einer Fremdschlüsseltabelle verweisen. Primär-/Fremdschlüssel-Beziehungen werden mithilfe von Tabelleneinschränkungen definiert.|  
 |IS_GRANTABLE|**varchar (** 3 **)**|Zeigt an, ob der Berechtigte (GRANTEE) anderen Benutzern Berechtigungen erteilen darf (bekannt als "Berechtigung mit Recht zum Erteilen"). Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert (oder NULL-Wert) verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht zutreffend ist.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Berechtigungen mit der GRANT-Anweisung erteilt und mit der REVOKE-Anweisung aufgehoben.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdevice
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0da4ef24647edd8de4bda1c412afb1410f9d3c14
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ae8e3db950ceab576786340ca396b25d774cb774
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474119"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89527836"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,12 +54,12 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Logischer Medienname.|  
 |**physical_name**|**nvarchar(260)**|Physischer Dateiname.|  
-|**Beschreibung**|**nvarchar(255)**|Beschreibung des Mediums.|  
+|**description**|**nvarchar(255)**|Beschreibung des Mediums.|  
 |**status**|**int**|Eine Nummer, die der Statusbeschreibung in der **description** -Spalte entspricht.|  
 |**cntrltype**|**smallint**|Controllertyp des Mediums:<br /><br /> 2 = Datenträgermedium<br /><br /> 5 = Bandmedium|  
 |**size**|**int**|Mediengröße in Seiten von je 2 KB.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn *name* angegeben wird, zeigt **sp_helpdevice** Informationen zu dem angegebenen Sicherungsmedium an. Wenn *name* nicht angegeben wird, zeigt **sp_helpdevice** Informationen zu allen Sicherungsmedien in der **sys.backup_devices** -Katalogsicht an.  
   
  Sicherungsmedien werden dem System mithilfe von **sp_addumpdevice**hinzugefügt.  

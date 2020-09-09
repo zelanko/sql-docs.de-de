@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 346b335063238d118412e8a2951ced67ed685756
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c3b3b78cc80f441ed340c4732e9b5d43a8af10e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489636"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89530007"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -87,10 +87,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'` Der Modus der erst Synchronisierung der Abonnenten mit der Veröffentlichung. *sync_mode* ist vom Datentyp **nvarchar (10)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**native** (Standard)|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus.|  
-|**Art**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. Erforderlich, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] und nicht--Abonnenten zu unterstützen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**character**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. Erforderlich, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] und nicht--Abonnenten zu unterstützen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 `[ @allow_push = ] 'allow_push'` Gibt an, ob für die angegebene Veröffentlichung Pushabonnements erstellt werden können. *allow_push* ist vom Datentyp **nvarchar (5)** und hat den Standardwert true, mit dem Pushabonnements für die Veröffentlichung zulässig sind.  
   
@@ -163,7 +163,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'` Gibt an, dass Voraus berechnete Partitionen verwendet werden sollen, um den Synchronisierungs Prozess zu optimieren. *use_partition_groups* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**true**|Die Veröffentlichung verwendet vorausberechnete Partitionen.|  
 |**false**|Die Veröffentlichung verwendet keine vorausberechneten Partitionen.|  
@@ -217,7 +217,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'` Gibt an, wo Konflikt Datensätze gespeichert werden. *conflict_logging* ist vom Datentyp **nvarchar (15)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**publisher**|Die Konfliktdatensätze werden auf dem Verleger gespeichert.|  
 |**Abonnenten**|Die Konfliktdatensätze werden auf dem Abonnenten gespeichert, der den Konflikt verursacht hat. Wird für Abonnenten nicht unterstützt [!INCLUDE[ssEW](../../includes/ssew-md.md)] .|  
@@ -247,7 +247,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="see-also"></a>Weitere Informationen  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [sp_changemergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

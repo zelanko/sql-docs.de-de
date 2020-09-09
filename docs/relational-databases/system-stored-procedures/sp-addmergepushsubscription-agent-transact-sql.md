@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepushsubscription_agent
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c1b441a47237d09cce422996f592076c879572c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 91131da8fe1102edf1c2d6f890ece76be440d1ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489591"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529442"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -134,7 +134,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|Sekunde|  
 |**4**|Third|  
 |**8**|Vierter|  
 |**16**|Last (Letzter)|  
@@ -147,7 +147,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
-|**2**|Second|  
+|**2**|Sekunde|  
 |**4**|Minute|  
 |**8**|Stunde|  
 |NULL (Standard)||  
@@ -176,7 +176,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addmergepushsubscription_agent**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergesubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

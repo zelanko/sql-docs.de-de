@@ -20,14 +20,14 @@ helpviewer_keywords:
 - estimate decimal compression
 - table compression [SQL Server]
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 40347ef5e273b19a4ae04362a5e80b6f8d813e5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f4ab6fbd33edef26f9cf1d37daf6688a68d8d5eb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447172"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89527838"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**avg_rowlen_vardecimal_format**|**Dezimalzahl (12, 2)**|Stellt die durchschnittliche Zeilengröße dar, wenn das vardecimal-Speicherformat verwendet wird.|  
 |**row_count**|**int**|Anzahl der Zeilen in der Tabelle|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie **sp_estimated_rowsize_reduction_for_vardecimal** , um die Einsparungen zu schätzen, die sich ergeben, wenn Sie eine Tabelle für das vardecimal--Speicherformat aktivieren. Wenn beispielsweise die durchschnittliche Größe der Zeile um 40 % verringert werden kann, können Sie die Größe der Tabelle potenziell um 40 % verringern. Möglicherweise erhalten Sie keine Platzeinsparung; dies hängt vom Füllfaktor und von der Zeilengröße ab. Wenn es sich beispielsweise um eine Zeile handelt, die 8000 Bytes lang ist, und Sie die Größe um 40 % verringern, passt weiterhin nur eine Zeile auf eine Datenseite, was zu keiner Einsparung führt.  
   
  Wenn die Ergebnisse von **sp_estimated_rowsize_reduction_for_vardecimal** die angeben, dass die Tabelle vergrößert wird, bedeutet dies, dass viele Zeilen in der Tabelle fast die gesamte Genauigkeit der Dezimal Datentypen verwenden, und dass der für das vardecimal--Speicherformat erforderliche kleinere Verwaltungsaufwand größer ist als die Einsparung aus dem vardecimal--Speicherformat. Aktivieren Sie in diesem seltenen Fall das vardecimal-Speicherformat nicht.  

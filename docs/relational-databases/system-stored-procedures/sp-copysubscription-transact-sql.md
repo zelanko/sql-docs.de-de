@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysubscription
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d157cd75c3443c9a74a3bab6affe8fca75fb4db8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4a80092356c6508c7ef1f8408d5573c8014fdc0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486187"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528019"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,7 +53,7 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_copysubscription** wird bei allen Replikations Typen verwendet, um eine Abonnement Datenbank als Alternative zum Anwenden einer Momentaufnahme auf dem Abonnenten in eine Datei zu kopieren. Die Datenbank muss so konfiguriert sein, dass ausschließlich Pullabonnements unterstützt werden. Benutzer mit entsprechenden Berechtigungen können Kopien der Abonnementdatenbank erstellen und die Abonnementdatei (MSF) dann per E-Mail, durch Kopieren oder Übertragen an einen anderen Abonnenten senden. Dort kann die Datei dann als Abonnement angefügt werden.  
   
  Die Größe der kopierten Abonnementdatenbank muss weniger als 2 Gigabyte (GB) betragen.  
