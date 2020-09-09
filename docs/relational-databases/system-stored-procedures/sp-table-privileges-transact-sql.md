@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9eb21300720f43d68dc00953e5b760489596145d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0ef4f8bb0971c0f594d07d3f8926a6a4cdae8991
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481024"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549521"
 ---
 # <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 
@@ -73,7 +73,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**sysname**|Eine der verfügbaren Tabellenberechtigungen. Tabellenberechtigungen können folgende Werte annehmen (bzw. auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> SELECT = GRANTEE kann Daten aus einer oder mehreren Spalten abrufen.<br /><br /> INSERT = GRANTEE kann in einer oder mehreren Spalten Daten für neue Zeilen bereitstellen.<br /><br /> UPDATE = GRANTEE kann vorhandene Daten in einer oder mehreren Spalten ändern.<br /><br /> DELETE = GRANTEE kann Zeilen aus der Tabelle entfernen.<br /><br /> REFERENCES = der Berechtigte (GRANTEE) kann bei einer Primär-/Fremdschlüssel-Beziehung auf eine Spalte in einer Fremdschlüsseltabelle verweisen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Primär-/Fremdschlüsselbeziehungen über Tabelleneinschränkungen definiert.<br /><br /> Der dem GRANTEE durch ein bestimmtes Tabellenprivileg erteilte Aktionsbereich ist datenquellenabhängig. Beispielsweise kann der GRANTEE mit dem UPDATE-Privileg alle Spalten in einer Tabelle für eine Datenquelle aktualisieren, während er für eine andere Datenquelle nur die Spalten aktualisieren kann, für die der GRANTOR das UPDATE-Privileg besitzt.|  
 |IS_GRANTABLE|**sysname**|Zeigt an, ob der GRANTEE anderen Benutzern Berechtigungen erteilen darf (oft als "Berechtigung mit Recht zum Erteilen" bezeichnet). Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert (oder NULL-Wert) verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht anwendbar ist.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die gespeicherte Prozedur sp_table_privileges entspricht SQLTablePrivileges in ODBC. Die zurückgegebenen Ergebnisse sind nach TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME und PRIVILEGE sortiert.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab6a1a976dd70e991b36f51429a96d0be425b152
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0125bee2811495eefc015e6be65d30b398edeaf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481180"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549674"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,14 +52,14 @@ sp_help_proxy
   
  In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-Skript|  
 |CmdExec|Betriebssystem (CmdExec)|  
 |Momentaufnahme|Replikationsmomentaufnahme-Agent|  
 |LogReader|Replikationsprotokolllese-Agent|  
-|Distribution|Replikations Verteilungs-Agent|  
-|Merge|Replikationsmerge-Agent|  
+|Verteilung|Replikations Verteilungs-Agent|  
+|Zusammenführen|Replikationsmerge-Agent|  
 |QueueReader|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
 |ANALYSISQUERY|Analysis Services-Befehl|  
 |ANALYSISCOMMAND|Analysis Services-Abfrage|  
@@ -79,12 +79,12 @@ sp_help_proxy
 |**name**|**sysname**|Der Name des Proxys.|  
 |**credential_identity**|**sysname**|Der Microsoft Windows-Domänenname und -Benutzername für die dem Proxy zugeordneten Anmeldeinformationen.|  
 |**enabled**|**tinyint**|Gibt an, ob dieser Proxy aktiviert ist. { **0** = nicht aktiviert, **1** = aktiviert}|  
-|**Beschreibung**|**nvarchar(1024)**|Die Beschreibung des Proxys.|  
+|**description**|**nvarchar(1024)**|Die Beschreibung des Proxys.|  
 |**user_sid**|**varbinary(85)**|Die Windows-SID des Windows-Benutzers für diesen Proxy.|  
 |**credential_id**|**int**|Die ID für die dem Proxy zugeordneten Anmeldeinformationen.|  
 |**credential_identity_exists**|**int**|Gibt an, ob credential_identity vorhanden ist. { 0 = ist nicht vorhanden, 1 = ist vorhanden }|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn keine Parameter bereitgestellt werden, listet **sp_help_proxy** Informationen für alle Proxys in der Instanz auf.  
   
  Um zu ermitteln, welche Proxys ein Anmelde Name für ein bestimmtes Subsystem verwenden kann, geben Sie *Name* und *subsystem_name*an. Wenn diese Argumente bereitgestellt werden, listet **sp_help_proxy** Proxys auf, auf die der angegebene Anmelde Name zugreifen kann und die für das angegebene Subsystem verwendet werden kann.  

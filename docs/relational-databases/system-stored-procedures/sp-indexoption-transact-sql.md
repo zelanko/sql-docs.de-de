@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 509d58a28f768fe774c813a8235ae4c0d9cd718a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: aaaf9863e6226de5aa30d553bfa4c7766588524b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469241"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547892"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 `[ @OptionName = ] 'option_name'` Ist ein Index Options Name. *option_name* ist vom Datentyp **varchar (35)** und hat keinen Standardwert. *option_name* kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Mit TRUE sind Zeilensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Zeilensperren verwendet werden. Mit FALSE werden keine Zeilensperren verwendet. Der Standardwert ist TRUE.|  
 |**AllowPageLocks**|Mit TRUE sind Seitensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Seitensperren verwendet werden. Mit FALSE werden keine Seitensperren verwendet. Der Standardwert ist TRUE.|  
@@ -63,7 +63,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder größer als 0 (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  XML-Indizes werden nicht unterstützt. Wenn Sie einen XML-Index angeben oder einen Tabellennamen ohne Indexnamen angeben und die Tabelle einen XML-Index enthält, wird für die Anweisung ein Fehler gemeldet. Verwenden Sie stattdessen [Alter Index](../../t-sql/statements/alter-index-transact-sql.md) , um diese Optionen festzulegen.  
   
  Verwenden Sie [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) oder die [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalog Sicht, um die aktuellen Zeilen-und Seiten Sperr Eigenschaften anzuzeigen.  
@@ -141,7 +141,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

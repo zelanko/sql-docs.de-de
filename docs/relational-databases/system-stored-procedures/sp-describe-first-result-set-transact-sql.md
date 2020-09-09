@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 451884c5055ee0be3ceeb95f4fe3c9dddb388bc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9cc2e3bef68a6900d5b9735ef3a5f8a050a34361
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469612"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548110"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +105,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|Für die interne Verwendung.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Für die interne Verwendung.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_describe_first_result_set** wird sichergestellt, dass, wenn die Prozedur die ersten Resultset-Metadaten für (einen hypothetischen) Batch a zurückgibt und dieser Batch (a) anschließend ausgeführt wird, der Batch entweder (1) einen Optimierungs Zeitfehler auslöst. (2) löst einen Laufzeitfehler aus, (3) gibt kein Resultset zurück, oder (4) gibt ein erstes Resultset mit denselben Metadaten zurück, die von **sp_describe_first_result_set**beschrieben werden.  
   
  Der Name, die NULL-Zulässigkeit und der Datentyp können abweichen. Wenn **sp_describe_first_result_set** ein leeres Resultset zurückgibt, ist die Garantie, dass bei der Batch Ausführung keine Resultsets zurückgegeben werden.  
@@ -399,7 +399,7 @@ N'
   
  Ergebnis: a **int NULL** , weil dbo. T1. a und S1. T1. a den Typ **int** und eine andere NULL-Zulässigkeit aufweisen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_describe_undeclared_parameters &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

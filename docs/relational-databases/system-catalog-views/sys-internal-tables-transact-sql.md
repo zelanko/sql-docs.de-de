@@ -19,14 +19,14 @@ helpviewer_keywords:
 - internal tables
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 73be0af1fd81cfc415417ff2ff233bbfa5e6ca41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c46f6a7f66ff9dfba0ebf9a7b4dfe4e39eef7033
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447934"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548731"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88447934"
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Interne Tabellen werden in dieselbe Dateigruppe wie die übergeordnete Entität platziert. Sie können die in Beispiel F unten dargestellte Katalogabfrage zur Rückgabe der Anzahl von Seiten verwenden, die interne Tabellen für Daten innerhalb und außerhalb von Zeilen sowie LOB-Daten (Large Object) benötigen.  
   
  Sie können die [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) System Prozedur verwenden, um Speicherplatz Verwendungs Daten für interne Tabellen zurückzugeben. **sp_spaceused** meldet internen Tabellenbereich auf folgende Weise:  

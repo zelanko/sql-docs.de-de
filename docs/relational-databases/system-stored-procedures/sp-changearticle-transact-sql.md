@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46afab7da64374922f20e5736c2a3d31217056b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2eb11859c0d0e4552324b0a3d7d5e005f9bd89b7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464471"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548230"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,11 +54,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Diese Tabelle beschreibt die Eigenschaften von Artikeln und die Werte für diese Eigenschaften.  
   
-|Eigenschaft|Werte|Beschreibung|  
+|Eigenschaft|Werte|BESCHREIBUNG|  
 |--------------|------------|-----------------|  
 |**creation_script**||Pfad und Name eines Artikelschemaskripts, mit dem Zieltabellen erstellt werden. Die Standardeinstellung ist NULL.|  
 |**del_cmd**||Die auszuführende DELETE-Anweisung; andernfalls wird die Löschoperation aus dem Protokoll hergeleitet.|  
-|**Beschreibung**||Ein neuer Beschreibungseintrag für den Artikel.|  
+|**description**||Ein neuer Beschreibungseintrag für den Artikel.|  
 |**dest_object**||Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt. Verwenden Sie **dest_table**.|  
 |**dest_table**||Die neue Zieltabelle.|  
 |**destination_owner**||Name des Besitzers des Zielobjekts.|  
@@ -69,7 +69,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**ins_cmd**||Die auszuführende INSERT-Anweisung; andernfalls wird die Operation aus dem Protokoll hergeleitet.|  
 |**pre_creation_cmd**||Ein Vorabbefehl, mit dem die Zieltabelle entfernt, gelöscht oder abgeschnitten werden kann, bevor die Synchronisierung angewendet wird.|  
 ||**keine**|Verwendet keinen Befehl.|  
-||**drop**|Entfernt die Zieltabelle.|  
+||**Dropdown**|Entfernt die Zieltabelle.|  
 ||**delete**|Löscht die Zieltabelle.|  
 ||**truncate**|Schneidet die Zieltabelle ab.|  
 |**pub_identity_range**||Steuert die Größe der zugeordneten Identitätsbereiche, die am Abonnent zugeordnet wurden. Wird für die Peer-zu-Peer-Replikation nicht unterstützt.|  
@@ -166,7 +166,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_changearticle** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  Wenn ein Artikel zu einer Veröffentlichung gehört, die die Peer-zu-Peer-Transaktions Replikation unterstützt, können Sie nur die Eigenschaften **Description**, **ins_cmd**, **upd_cmd**und **del_cmd** ändern.  
@@ -236,12 +236,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changearticle**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Artikeleigenschaften](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_droparticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   

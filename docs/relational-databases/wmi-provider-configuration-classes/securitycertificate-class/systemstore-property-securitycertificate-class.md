@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SystemStore property
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cdb3022ce2125a5960f068c596f2be38b2eea1df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 05aafca1d5be88f1d9b24e8edfca3b5617756127
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485197"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548830"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>SystemStore-Eigenschaft (SecurityCertificate-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.SystemStore [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der den Systemspeicher für das Sicherheitszertifikat angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

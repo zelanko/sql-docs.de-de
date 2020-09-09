@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_latch_stats dynamic management view
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 59624b04e417f2b1b7713adec784abca60303504
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1e4e29a7e416a5c3aebb109c871af00bbd31871a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398526"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548523"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ Gibt Informationen zu allen nach Klassen sortierten Latchwartevorgängen zurück
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sys.dm_os_latch_stats kann zum Identifizieren der Quelle von Latchkonflikten verwendet werden, indem die relative Anzahl der Wartevorgänge und der Wartezeiten für die verschiedenen Latchklassen überprüft wird. In einigen Fällen können Sie Latchkonflikte möglicherweise lösen oder reduzieren. Es kann jedoch Situationen geben, in denen Sie sich mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services in Verbindung setzen müssen.  
   
 Sie können den Inhalt von sys. dm_os_latch_stats zurücksetzen, indem Sie `DBCC SQLPERF` wie folgt verwenden:  
@@ -73,7 +73,7 @@ GO
   
  Die folgende Tabelle enthält kurze Beschreibungen der verschiedenen Latchklassen.  
   
-|Latchklasse|Beschreibung|  
+|Latchklasse|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Wird intern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Initialisieren der Synchronisierung beim Erstellen eines Zuordnungsringpuffers verwendet.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Wird zum Initialisieren der Synchronisierung interner Caches für freien Speicher für Heaps verwendet.|  

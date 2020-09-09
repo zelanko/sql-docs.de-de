@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_syscollector_enable_collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3c7563b12214f52f1c89428f50a50dbd021cd467
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c8b144e2ef3c0d12987d531cb8134c0a4ce2030f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464024"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549497"
 ---
 # <a name="sp_syscollector_enable_collector-transact-sql"></a>sp_syscollector_enable_collector (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ dbo.sp_syscollector_enable_collector
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wird standardmäßig auf den Datensammler auf dem Server festgelegt.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -62,7 +62,7 @@ EXEC dbo.sp_syscollector_enable_collector;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)  
   
   
