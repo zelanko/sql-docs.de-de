@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistributiondb
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fb52176989ef6e90eb132da21abcd299444aec8d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 35a090a0dc82f09ccceb1a4d56c09f8ab9d8191f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464444"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536723"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +44,7 @@ sp_changedistributiondb [ @database= ] 'database'
   
 `[ @property = ] 'property'` Die Eigenschaft, die für die angegebene Datenbank geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**history_retention**|Beibehaltungsdauer für die Verlaufstabelle.|  
 |**max_distretention**|Maximale Beibehaltungsdauer für die Verteilung.|  
@@ -56,7 +56,7 @@ sp_changedistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_changedistributiondb** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="example"></a>Beispiel  
@@ -65,7 +65,7 @@ sp_changedistributiondb [ @database= ] 'database'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changedistributiondb**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

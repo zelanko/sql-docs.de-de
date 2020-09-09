@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_createstats
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23eef2525deeebd78df824af483fa5db8c7fe2ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c49367f78a257b1ba4e19d9916b590a67991d1a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464412"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536694"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ sp_createstats
 ## <a name="result-sets"></a>Resultsets  
  Jedes neue Statistikobjekt hat den gleichen Namen wie die Spalte, für die es erstellt wurde.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sp_createstats erstellt oder aktualisiert keine Statistiken für Spalten, bei denen es sich um die erste Spalte in einem vorhandenen Statistik Objekt handelt.  Dies umfasst die erste Spalte von Statistiken, die für Indizes erstellt wurden, Spalten mit einspaltigen Statistiken, die mit AUTO_CREATE_STATISTICS Option generiert wurden, und die erste Spalte der Statistik, die mit der CREATE STATISTICS-Anweisung erstellt wurde. sp_createstats erstellt keine Statistiken für die ersten Spalten deaktivierter Indizes, es sei denn, diese Spalte wird in einem anderen aktivierten Index verwendet. sp_createstats erstellt keine Statistiken für Tabellen mit einem deaktivierten gruppierten Index.  
   
  Wenn die Tabelle einen Spaltensatz enthält, werden mit sp_createstats keine Statistiken für Sparsespalten erstellt. Weitere Informationen zu Spalten Sätzen und sparsespalten finden Sie unter Verwenden von Spalten [Sätzen](../../relational-databases/tables/use-column-sets.md) und [Verwenden von sparsespalten](../../relational-databases/tables/use-sparse-columns.md).  

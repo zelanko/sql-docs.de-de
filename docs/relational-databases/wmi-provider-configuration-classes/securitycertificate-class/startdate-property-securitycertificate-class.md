@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartDate property
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b8356a977b9e0572d44a500a40ec54aef3be05bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3ec0cee68e01ea5281d81751536a1b29dd8588c2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485203"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537624"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>StartDate-Eigenschaft (SecurityCertificate-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.StartDate [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32-Wert, der das Datum angibt, ab dem die Gültigkeit des Sicherheitszertifikats beginnt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7f033c24d2cfd84c26c9008e3f73adf5152715c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dca9473813bf8e4324f1b7de6fb1a30c38a21148
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481374"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536639"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope =] *cursor_scope*  
  Gibt die Ebene der Cursor an, die gemeldet werden sollen. *cursor_scope* ist vom Datentyp **int**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |1|Alle lokalen Cursor melden.|  
 |2|Alle globalen Cursor melden.|  
@@ -79,7 +79,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |last_operation|**smallint**|Der zuletzt ausgeführte Vorgang für den Cursor:<br /><br /> 0 = Für den Cursor wurden keine Vorgänge ausgeführt.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = einfügen<br /><br /> 4 = UPDATE<br /><br /> 5 = löschen<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Ein eindeutiger Wert für den Cursor innerhalb des Serverbereichs.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sp_cursor_list erstellt eine Liste der aktuellen Servercursor, die für die Verbindung geöffnet sind, und beschreibt die globalen Cursorattribute, wie z. B. die Scrolloptionen und die Aktualisierbarkeit des Cursors. sp_cursor_list listet die folgenden Cursor auf:  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor.  

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 48c548ed85c5110c8e3c117da796c6189eee39de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef8bc8087811e25c8fde893a251e77d25661b5ea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486434"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537473"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88486434"
 |service_id|**int**|Bezeichner des Diensts für diese Seite der Konversation. Lässt keine NULL-Werte zu.|  
 |lifetime|**datetime**|Ablaufdatum/-zeitpunkt für diese Konversation. Lässt keine NULL-Werte zu.|  
 |state|**char(2)**|Der aktuelle Status der Konversation. Lässt keine NULL-Werte zu. Enthält einen der folgenden Werte:<br /><br /> Also begann ausgehend. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat eine BEGIN CONVERSATION-Anweisung für diese Konversation verarbeitet, es wurden jedoch noch keine Nachrichten gesendet.<br /><br /> SI   Started inbound (Eingehend gestartet). Eine andere Instanz hat eine neue Konversation mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gestartet, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat jedoch die erste Meldung noch nicht vollständig empfangen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die Konversation in diesem Status starten, wenn die erste Meldung fragmentiert ist oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nachrichten in falscher Reihenfolge empfängt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] könnte die Konversation jedoch im Status CO (Konversation begonnen) erstellen, wenn die erste empfangene Übertragung für die Konversation die erste Nachricht vollständig enthält.<br /><br /> CO   Conversing (Konversation begonnen). Die Konversation wurde aufgenommen, und beide Seiten der Konversation können Nachrichten senden. Der Großteil der Kommunikation für einen Standarddienst findet in diesem Status der Konversation statt.<br /><br /> DI getrennt in eingehender Richtung. Die Remoteseite der Konversation hat eine END CONVERSATION-Anweisung ausgegeben. Die Konversation verbleibt in diesem Status, bis die lokale Seite der Konversation eine END CONVERSATION-Anweisung ausgibt. Eine Anwendung kann weiter Nachrichten für die Konversation empfangen. Da die Remoteseite der Konversation die Konversation beendet hat, kann eine Anwendung in dieser Konversation keine Nachrichten mehr senden. Wenn eine Anwendung eine END CONVERSATION-Anweisung ausgibt, geht die Konversation in den CD-Status (Geschlossen) über.<br /><br /> DO   Disconnected outbound (Ausgehend getrennt). Die lokale Seite der Konversation hat eine END CONVERSATION-Anweisung ausgegeben. Die Konversation bleibt so lange in diesem Status, bis die Remoteseite der Konversation END CONVERSATION anerkennt. Eine Anwendung kann keine Nachrichten für die Konversation senden oder empfangen. Wenn die Remoteseite der Konversation die END CONVERSATION-Anweisung bestätigt, geht die Konversation in den CD-Zustand (Geschlossen) über.<br /><br /> ER-Fehler. An diesem Endpunkt ist ein Fehler aufgetreten. Die Fehlermeldung wird in die Anwendungswarteschlange eingefügt. Wenn die Anwendungswarteschlange leer ist, deutet dies darauf hin, dass die Fehlermeldung bereits von der Anwendung verarbeitet wurde.<br /><br /> CD   Closed (Beendet). Der Konversationsendpunkt wird nicht mehr verwendet.|  
-|state_desc|**nvarchar(60)**|Beschreibung des Status der Endpunkt Konversation. In dieser Spalte ist NULL zulässig. Enthält einen der folgenden Werte:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **Konversation begonnen**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **Geschlossen**<br /><br /> **Zeit**|  
+|state_desc|**nvarchar(60)**|Beschreibung des Status der Endpunkt Konversation. In dieser Spalte ist NULL zulässig. Enthält einen der folgenden Werte:<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **Konversation begonnen**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **Geschlossen**<br /><br /> **ERROR**|  
 |far_service|**nvarchar(256)**|Name des Diensts auf der Remoteseite der Konversation. Lässt keine NULL-Werte zu.|  
 |far_broker_instance|**nvarchar(128)**|Die Brokerinstanz für die Remoteseite der Konversation. Lässt NULL-Werte zu.|  
 |principal_id|**int**|Bezeichner des Prinzipals, dessen Zertifikat von der lokalen Seite des Dialogs verwendet wird. Lässt keine NULL-Werte zu.|  

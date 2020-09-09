@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d01fb234585c5d4d95e80a3d0b1c5a356b589b2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a0df750dd3f582e712c41a01ce1406586b2cecf6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498291"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536890"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88498291"
  |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|Der Name des Objekts. der Name ist innerhalb eines Pakets für einen bestimmten Objekttyp eindeutig. Lässt keine NULL-Werte zu.|  
-|object_type|**nvarchar(60)**|Der Typ des Objekts. object_type ist einer der folgenden:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Lässt keine NULL-Werte zu.|  
+|object_type|**nvarchar(60)**|Der Typ des Objekts. object_type ist einer der folgenden:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> Typ<br /><br /> Lässt keine NULL-Werte zu.|  
 |package_guid|**uniqueidentifier**|Die GUID für das Paket, das diese Aktion verfügbar macht. Es gibt eine n:1-Beziehung mit sys.dm_xe_packages.package_id. Lässt keine NULL-Werte zu.|  
 |description|**nvarchar(256)**|Eine Beschreibung der Aktion. die Beschreibung wird vom Paket Ersteller festgelegt. Lässt keine NULL-Werte zu.|  
 |capabilities|**int**|Eine Bitmap, die die Fähigkeiten des Objekts beschreibt. Lässt NULL-Werte zu.|  
@@ -59,11 +59,11 @@ ms.locfileid: "88498291"
   
 ### <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|An|Beziehung|  
+|From|To|Beziehung|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|n:1|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

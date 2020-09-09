@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query_store_wait_stats catalog view
 - sys.query_store_wait_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41f66150a3a5c604889dc29d96abaea6d0418c6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc28729ef4f3743e945f782fed0409057e90224a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447841"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537308"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
 
@@ -55,7 +55,7 @@ ms.locfileid: "88447841"
   
 |Ganzzahliger Wert|Warte Kategorie|Warte Typen sind in der Kategorie enthalten.|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unbekannt**|Unknown |  
+|**0**|**Unbekannt**|Unbekannt |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Arbeits Thread**|THREADPOOL|
 |**3**|**Sperre**|LCK_M_%|
@@ -75,7 +75,7 @@ ms.locfileid: "88447841"
 |**17**|**Memory**|RESOURCE_SEMAPHORE, cmemthread, cmempartitioniert, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
 |**Jahren**|**Benutzer Wartezeit**|WAITFOR, WAIT_FOR_RESULTS BROKER_RECEIVE_WAITFOR|
 |**19.07.2016**|**Ablaufverfolgung**|tracewrite, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT|
-|**20**|**Volltextsuche**|FT_RESTART_CRAWL, Volltext-Gatherer, MSSearch, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR|
+|**20**|**Voll Text Suche**|FT_RESTART_CRAWL, Volltext-Gatherer, MSSearch, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR|
 |**21**|**Sonstige e/a**|ASYNC_IO_COMPLETION, IO_COMPLETION, backupio, WRITE_COMPLETION, IO_QUEUE_LIMIT, IO_RETRY|
 |**22**|**Replikation**|SE_REPL_%, REPL_%, HADR_% **(aber nicht HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|
 |**23**|**Protokoll Raten Kontrolle**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|
