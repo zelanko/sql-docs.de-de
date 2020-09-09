@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_handle catalog view
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 543d74e0c62c80ea768009b6a7c9c9f965acbd54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d7e8e059ad9d10ccd3b8fd0b51299cc91edb5c6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489911"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89533387"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Zeigt die Dateihandles an, die dem Namespace-Besitzer (NSO) bekannt sind. Dateistromhandles, die ein Client durch Verwendung von **OpenSqlFilestream** erhalten hat, werden in dieser Sicht angezeigt.  
   
-|Spalte|Typ|Beschreibung|  
+|Spalte|Typ|BESCHREIBUNG|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary(8)**|Zeigt die Adresse der internen nso-Struktur an, die dem Handle des Clients zugeordnet ist. Lässt NULL-Werte zu.|  
 |**creation_request_id**|**int**|Zeigt ein Feld der REQ_PRE_CREATE-E/A-Anforderung an, die zur Erstellung dieser Handle verwendet wird. Lässt keine NULL-Werte zu.|  
