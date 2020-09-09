@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - sys.dm_tcp_listener_states dynamic management view
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c313a61e673bb6885e1a6f0f8ecacf53bcda3f36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4da7c8a5c8cfd87ae0c1ffa4216996e1d9e0413a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493560"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550169"
 ---
 # <a name="sysdm_tcp_listener_states-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88493560"
 |**port**|**int**|Die Nummer des Ports, an dem der Listener lauscht. Lässt keine NULL-Werte zu.|  
 |**type**|**tinyint**|Der Typ des Listeners. Folgende Werte sind möglich:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Datenbankspiegelung<br /><br /> Lässt keine NULL-Werte zu.|  
 |**type_desc**|**nvarchar (20)**|Die Beschreibung des **Typs**, eine der folgenden:<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> Lässt keine NULL-Werte zu.|  
-|**Status**|**tinyint**|Der Status des Verfügbarkeitsgruppenlisteners. Folgende Werte sind möglich:<br /><br /> 1 = Online. Der Listener lauscht auf Anforderungen und verarbeitet sie.<br /><br /> 2 = Ausstehender Neustart. Der Listener ist offline, ein Neustart steht aus.<br /><br /> Wenn der Verfügbarkeitsgruppenlistener an dem gleichen Port wie die Serverinstanz lauscht, haben diese zwei Listener immer den gleichen Status.<br /><br /> Lässt keine NULL-Werte zu.<br /><br /> Hinweis: die Werte in dieser Spalte stammen aus dem TSD_listener Objekt. Die Spalte unterstützt keinen Offlinestatus, da der Status nicht abgefragt werden kann, wenn TDS_listener offline ist.|  
+|**state**|**tinyint**|Der Status des Verfügbarkeitsgruppenlisteners. Folgende Werte sind möglich:<br /><br /> 1 = Online. Der Listener lauscht auf Anforderungen und verarbeitet sie.<br /><br /> 2 = Ausstehender Neustart. Der Listener ist offline, ein Neustart steht aus.<br /><br /> Wenn der Verfügbarkeitsgruppenlistener an dem gleichen Port wie die Serverinstanz lauscht, haben diese zwei Listener immer den gleichen Status.<br /><br /> Lässt keine NULL-Werte zu.<br /><br /> Hinweis: die Werte in dieser Spalte stammen aus dem TSD_listener Objekt. Die Spalte unterstützt keinen Offlinestatus, da der Status nicht abgefragt werden kann, wenn TDS_listener offline ist.|  
 |**state_desc**|**nvarchar (16)**|Beschreibung des **Zustands**, eine der folgenden:<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> Lässt keine NULL-Werte zu.|  
 |**start_time**|**datetime**|Der Zeitstempel, der angibt, wann der Listener gestartet wurde. Lässt keine NULL-Werte zu.|  
   

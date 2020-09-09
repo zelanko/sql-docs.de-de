@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_log_stats dynamic management function
 ms.assetid: ''
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b70d0b23a55584bb866c278086bec7f437cedd2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98c8b45ccde39b7155443b1ef7fabd994f6b26ab
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423274"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550301"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Gibt Attribute der Übersichts Ebene und Informationen zu Transaktionsprotokoll 
 
 *database_id* | NULL | **Standard**
 
-Die ID der Datenbank. `database_id` ist `int`. Gültige Eingaben sind die ID einer Datenbank, `NULL` oder `DEFAULT` . Der Standardwert ist `NULL`. `NULL` und `DEFAULT` sind äquivalente Werte im Kontext der aktuellen Datenbank.  
+Die ID der Datenbank. `database_id` ist `int`. Gültige Eingaben sind die ID einer Datenbank, `NULL` oder `DEFAULT` . Der Standardwert lautet `NULL`. `NULL` und `DEFAULT` sind äquivalente Werte im Kontext der aktuellen Datenbank.  
 Die integrierte [DB_ID](../../t-sql/functions/db-id-transact-sql.md)-Funktion kann angegeben werden. Wenn Sie `DB_ID` ohne Angabe eines Daten Banknamens verwenden, muss der Kompatibilitäts Grad der aktuellen Datenbank 90 oder größer sein.
 
   
@@ -73,7 +73,7 @@ Die integrierte [DB_ID](../../t-sql/functions/db-id-transact-sql.md)-Funktion ka
 |recovery_vlf_count |**bigint** |   Die Gesamtanzahl der [virtuellen Protokolldateien (VLFs)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) , die wieder hergestellt werden sollen, wenn ein Failover oder ein Server Neustart aufgetreten ist. |  
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 Wenn eine `sys.dm_db_log_stats` Datenbank, die an einer Verfügbarkeits Gruppe teilnimmt, als sekundäres Replikat ausgeführt wird, wird nur eine Teilmenge der oben beschriebenen Felder zurückgegeben.  Derzeit werden nur `database_id` , `recovery_model` und `log_backup_time` zurückgegeben, wenn Sie für eine sekundäre Datenbank ausgeführt werden.   
 
 ## <a name="permissions"></a>Berechtigungen  

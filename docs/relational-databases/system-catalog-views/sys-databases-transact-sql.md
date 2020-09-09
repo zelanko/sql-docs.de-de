@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.databases catalog view
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73141e7bc09d2748ff79cba0de4ebf9d4758cd65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1c584d736208ba871983a6169684607dcb5627
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88379086"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550573"
 ---
 # <a name="sysdatabases-transact-sql"></a>group_database_id
 
@@ -50,7 +50,7 @@ Wenn eine Datenbank nicht `ONLINE` oder `AUTO_CLOSE` auf festgelegt ist `ON` und
 |**is_read_only**|**bit**|1 = Datenbank ist READ_ONLY<br /> 0 = Datenbank ist READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE ist ON<br /> 0 = AUTO_CLOSE ist OFF|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK ist ON<br /> 0 = AUTO_SHRINK ist OFF|  
-|**Status**|**tinyint**|**Wert**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = wiederherstellen <sup>1</sup><br /> 3 = RECOVERY_PENDING <sup>1</sup><br /> 4 = SUSPECT <br /> 5 = Notfall <sup>1</sup><br /> 6 = Offline <sup>1</sup><br /> 7 = Kopieren von <sup>2</sup> <br /> 10 = OFFLINE_SECONDARY <sup>2</sup> <br /><br /> **Hinweis:** Fragen Sie für Always on Datenbanken die- `database_state` Spalte oder die- `database_state_desc` Spalte von [sys. dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)ab.<br /><br /><sup>1</sup> **gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><sup>2</sup> **gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]|  
+|**state**|**tinyint**|**Wert**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = wiederherstellen <sup>1</sup><br /> 3 = RECOVERY_PENDING <sup>1</sup><br /> 4 = SUSPECT <br /> 5 = Notfall <sup>1</sup><br /> 6 = Offline <sup>1</sup><br /> 7 = Kopieren von <sup>2</sup> <br /> 10 = OFFLINE_SECONDARY <sup>2</sup> <br /><br /> **Hinweis:** Fragen Sie für Always on Datenbanken die- `database_state` Spalte oder die- `database_state_desc` Spalte von [sys. dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)ab.<br /><br /><sup>1</sup> **gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><sup>2</sup> **gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]|  
 |**state_desc**|**nvarchar(60)**|Beschreibung des Datenbankstatus. Siehe Status.|  
 |**is_in_standby**|**bit**|Datenbank ist für die Wiederherstellungsprotokollierung schreibgeschützt.|  
 |**is_cleanly_shutdown**|**bit**|1 = Datenbank wurde ordnungsgemäß heruntergefahren, keine Wiederherstellung beim Starten erforderlich<br /> 0 = Datenbank wurde nicht ordnungsgemäß heruntergefahren, Wiederherstellung beim Starten erforderlich|  
