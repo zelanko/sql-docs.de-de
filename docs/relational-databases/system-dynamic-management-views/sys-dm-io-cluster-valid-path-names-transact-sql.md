@@ -21,14 +21,14 @@ helpviewer_keywords:
 - csv name
 - cluster shared volume names
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0f81bd26a6ec2a43e9f063466bfa77c793ac4d8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 18a1e01e893486a7ce32f1c3510fb52d5fd7ec0e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419654"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89532099"
 ---
 # <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "88419654"
 |-----------------|---------------|-----------------|  
 |**path_name**|**Nvarchar (512)**|Der Einbindungspunkt oder Laufwerkpfad des Volumes, der als Stammverzeichnis für Datenbank- und Protokolldateien verwendet werden kann. Lässt keine NULL-Werte zu.|  
 |**cluster_owner_node**|**Nvarchar (64)**|Der aktuelle Besitzer des Laufwerks. Bei freigegebenen Clustervolumes (CSV) entspricht der Besitzer dem Knoten, der den MetaData-Server hostet. Lässt keine NULL-Werte zu.|  
-|**is_cluster_shared_volume**|**Trate**|Gibt 1 zurück, wenn das Laufwerk, auf dem sich der Pfad befindet, ein freigegebenes Clustervolume ist; andernfalls wird 0 zurückgegeben.|  
+|**is_cluster_shared_volume**|**bit**|Gibt 1 zurück, wenn das Laufwerk, auf dem sich der Pfad befindet, ein freigegebenes Clustervolume ist; andernfalls wird 0 zurückgegeben.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Eine SQL Server-Failoverclusterinstanz (FCI) muss auf allen FCI-Knoten freigegebenen Speicher zur Speicherung von Daten- und Protokolldateien verwenden. Die in dieser Sicht aufgeführten Datenträger sind die Datenträger der Clusterressourcengruppe, die der Instanz zugeordnet ist. Es sind die einzigen Datenträger, die zur Speicherung von Daten- oder Protokolldateien verwendet werden können.  
   
 > [!NOTE]  

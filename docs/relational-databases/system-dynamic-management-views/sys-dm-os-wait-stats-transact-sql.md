@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f3080ccf17862cdcc2002c37576802b2e7c32a4
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 678c6710e17d8383077be4acff8921268e9a0b6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680815"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89532210"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die ausgefü
 > [!NOTE] 
 > Um dies von ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_wait_stats**.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|Der Name des Wartetyps. Weitere Informationen finden Sie unter [Wartetypen](#WaitTypes) weiter unten in diesem Thema.|  
 |waiting_tasks_count|**bigint**|Anzahl von Wartevorgängen für diesen Wartetyp. Dieser Leistungsindikator wird beim Starten eines Wartevorgangs inkrementiert.|  
@@ -87,7 +87,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
   
  In der folgenden Tabelle werden die Wartetypen für Tasks in einer Liste aufgeführt.  
 
-|type |Beschreibung| 
+|Typ |BESCHREIBUNG| 
 |-------------------------- |--------------------------| 
 |ABR |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| | 
 |AM_INDBUILD_ALLOCATION |Nur interne Verwendung. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
