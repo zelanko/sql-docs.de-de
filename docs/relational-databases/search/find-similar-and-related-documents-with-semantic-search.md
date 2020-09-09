@@ -36,7 +36,7 @@ ms.locfileid: "88498592"
 > [!IMPORTANT]  
 >  Für die Spalten, auf die Sie abzielen, muss die Volltext- und die semantische Indizierung aktiviert sein.  
   
-###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>Beispiel: Suchen nach Dokumenten, die die größte Ähnlichkeit mit einem anderen Dokument aufweisen  
  Im folgenden Beispiel werden die ersten zehn Kandidaten abgerufen, die dem mit *\@CandidateID* angegebenen Kandidaten aus der Tabelle HumanResources.JobCandidate in der Beispieldatenbank AdventureWorks2012 ähneln.  
   
 ```scr  
