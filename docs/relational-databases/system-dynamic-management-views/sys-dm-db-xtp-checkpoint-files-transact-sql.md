@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_files dynamic management view
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4c4579fa8c2b891644e462ffd896e67862be8ca
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: eb13f60dd50a324795b705b3b99d6cf842a23869
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442591"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542280"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "87442591"
   
  Eine Speicher optimierte Datei Gruppe verwendet intern nur-Anhängen-Dateien, um eingefügte und gelöschte Zeilen für in-Memory-Tabellen zu speichern. Es gibt zwei Typen von Dateien. Eine Datendatei enthält eingefügte Zeilen, während eine Delta Datei Verweise auf gelöschte Zeilen enthält. 
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]unterscheidet sich wesentlich von neueren Versionen und wird weiter unten im Thema unter [SQL Server 2014](#bkmk_2014)erläutert.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterscheidet sich wesentlich von neueren Versionen und wird weiter unten im Thema unter [SQL Server 2014](#bkmk_2014)erläutert.  
   
  Weitere Informationen finden Sie unter [Erstellen und Verwalten von Speicher für Speicher optimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
-##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher   
+##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher  
  In der folgenden Tabelle werden die Spalten für `sys.dm_db_xtp_checkpoint_files` , beginnend mit, beschrieben **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
 |Spaltenname|type|BESCHREIBUNG|  

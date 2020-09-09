@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergearticle
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8775928ede4fd92072bd91e39bc9652bb7db53a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 994efc8752017757bbced6df16fed2b6a4955eb1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469729"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541897"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  Diese Tabelle beschreibt die Eigenschaften von Artikeln und die Werte für diese Eigenschaften.  
   
-|Eigenschaft|Werte|Beschreibung|  
+|Eigenschaft|Werte|BESCHREIBUNG|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|Aktiviert die Verwendung eines interaktiven Konfliktlösers für den Artikel.|  
 ||**false**|Deaktiviert die Verwendung eines interaktiven Konfliktlösers für den Artikel.|  
@@ -69,7 +69,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**creation_script**||Pfad und Name eines optionalen Artikelschemaskripts, mit dem der Artikel in der Abonnementdatenbank erstellt wurde|  
 |**delete_tracking**|**true**|DELETE-Anweisungen werden repliziert. Dies ist das Standardverhalten.|  
 ||**false**|DELETE-Anweisungen werden nicht repliziert.<br /><br /> Eine ** \* \* wichtige \* Einstellung \* ** **delete_tracking** **false** führt zu einer nicht Konvergenz, und gelöschte Zeilen müssen manuell entfernt werden.|  
-|**Beschreibung**||Beschreibungseintrag für den Artikel.|  
+|**description**||Beschreibungseintrag für den Artikel.|  
 |**destination_owner**||Der Name des Besitzers des Objekts in der Abonnement Datenbank, wenn es sich nicht um **dbo**handelt.|  
 |**identity_range**||**bigint** , das die beim Zuweisen neuer Identitäts Werte zu verwendende Bereichs Größe angibt, wenn für den Artikel **identityrangemanagementoption** auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist. Gilt nur für einen Tabellenartikel. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identityrangemanagementoption**|**Manuell**|Deaktiviert die automatische Verwaltung des Identitätsbereichs. Kennzeichnet Identitätsspalten mithilfe von NOT FOR REPLICATION, um die manuelle Handhabung des Identitätsbereichs zu aktivieren. Weitere Informationen finden Sie unter [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -84,7 +84,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**3**|Das Filtern für den Artikel ergibt nicht überlappende Partitionen, die für jedes Abonnement eindeutig sind.<br /><br /> Hinweis: Wenn Sie für **partition_options**den Wert **3** angeben, kann in diesem Artikel nur ein einzelnes Abonnement für jede Daten Partition vorhanden sein. Wird ein zweites Abonnement erstellt, in dem das Filterkriterium des neuen Abonnements die gleiche Partition ergibt wie das vorhandene Abonnement, wird das vorhandene Abonnement gelöscht.|  
 |**pre_creation_command**|**keine**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
 ||**delete**|Ein Löschvorgang wird auf der Grundlage der WHERE-Klausel im Teilmengenfilter ausgegeben.|  
-||**drop**|Die Tabelle wird vor dem erneuten Erstellen gelöscht.|  
+||**Dropdown**|Die Tabelle wird vor dem erneuten Erstellen gelöscht.|  
 ||**truncate**|Schneidet die Zieltabelle ab.|  
 |**processing_order**||**int** , der die Verarbeitungsreihenfolge von Artikeln in einer Mergeveröffentlichung angibt.|  
 |**pub_identity_range**||**bigint** , das die Bereichs Größe angibt, die einem Abonnenten mit einem Server Abonnement zugewiesen wird, wenn für den Artikel **identityrangemanagementoption** auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist. Dieser Identitätsbereich ist für einen Wiederveröffentlichungsabonnenten für die Zuordnung zu dessen Abonnenten reserviert. Gilt nur für einen Tabellenartikel. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -164,7 +164,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_changemergearticle** wird bei der Mergereplikation verwendet.  
   
  Da **sp_changemergearticle** zum Ändern von Artikeleigenschaften verwendet wird, die anfänglich mit [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)angegeben wurden, finden Sie unter [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) Weitere Informationen zu diesen Eigenschaften.  
@@ -237,11 +237,11 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changemergearticle**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Artikeleigenschaften](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_dropmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_dropmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

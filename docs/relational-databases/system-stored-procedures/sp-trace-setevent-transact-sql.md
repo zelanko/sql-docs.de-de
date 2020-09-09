@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f678427f05b5c3b136a7dfe18e1f51eb91773b91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480959"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542988"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -241,7 +241,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  In der folgenden Tabelle sind die Spalten aufgeführt, die für ein Ereignis hinzugefügt werden können.  
   
-|Spaltennummer|Spaltenname|Beschreibung|  
+|Spaltennummer|Spaltenname|BESCHREIBUNG|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|Ein Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
 |2|**BinaryData**|Binärer Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
@@ -255,7 +255,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |10|**ApplicationName**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|  
 |11|**LoginName**|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename des Clients.|  
 |12|**SPID**|Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|  
-|13|**Duration**|Die vom Ereignis benötigte Zeitspanne (in Millisekunden). Diese Datenspalte wird nicht durch das Hash Warning-Ereignis aufgefüllt.|  
+|13|**Dauer**|Die vom Ereignis benötigte Zeitspanne (in Millisekunden). Diese Datenspalte wird nicht durch das Hash Warning-Ereignis aufgefüllt.|  
 |14|**StartTime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar).|  
 |15|**EndTime**|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen, wie z. B. **SQL:BatchStarting** oder **SP:Starting**, nicht aufgefüllt. Sie wird auch nicht durch das **Hash Warning** -Ereignis aufgefüllt.|  
 |16|**Reads**|Die Anzahl der logischen Lesevorgänge auf dem Datenträger, die vom Server aufgrund dieses Ereignisses ausgeführt werden. Diese Spalte wird nicht durch das **Lock: Released** -Ereignis aufgefüllt.|  
@@ -305,7 +305,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |60|**IsSystem**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> **1** = System<br /><br /> **0** = Benutzer.|  
 |61|**Offset**|Der Startoffset der Anweisung in der gespeicherten Prozedur oder im Batch.|  
 |62|**SourceDatabaseID**|Die ID der Datenbank, in der sich die Quelle des Objekts befindet.|  
-|63|**SqlHandle**|64-Bit-Hash, der auf dem Text einer Ad-hoc-Abfrage oder der Datenbank- und Objekt-ID eines SQL-Objekts basiert. Dieser Wert kann an **sys. dm_exec_sql_text ()** übermittelt werden, um den zugehörigen SQL-Text abzurufen.|  
+|63|**SqlHandle**|64-Bit-Hash, der auf dem Text einer Ad-hoc-Abfrage oder der Datenbank- und Objekt-ID eines SQL-Objekts basiert. Dieser Wert kann an **sys.dm_exec_sql_text()** übergeben werden, um den dazugehörigen SQL-Text abzurufen.|  
 |64|**SessionLoginName**|Anmeldename des Benutzers, der die Sitzung geöffnet hat. Wenn Sie beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **verwenden, um eine Verbindung mit** herzustellen, und eine Anweisung als **Login2**ausführen, zeigt **SessionLoginName** den Wert **Login1**an und **LoginName** den Wert **Login2**. In dieser Datenspalte werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Anmeldenamen angezeigt.|  
   
  **[ @on =]** *auf*  
@@ -317,7 +317,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  In dieser Tabelle wird die Interaktion zwischen ** \@ on** und ** \@ ColumnID**veranschaulicht.  
   
-|\@auf|\@columnid|Ergebnis|  
+|\@auf|\@ColumnID|Ergebnis|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|Das Ereignis ist aktiviert (ON).<br /><br /> Alle Spalten werden gelöscht.|  
 ||NOT NULL|Die Spalte ist für das angegebene Ereignis aktiviert (ON).|  
@@ -330,7 +330,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |0|Kein Fehler.|  
-|1|Unknown error. (Unbekannter Fehler.)|  
+|1|Unbekannter Fehler.|  
 |2|Die Ablaufverfolgung wird derzeit ausgeführt. Wenn die Ablaufverfolgung jetzt geändert wird, hat dies einen Fehler zur Folge.|  
 |3|Das angegebene Ereignis ist ungültig. Das Ereignis ist möglicherweise nicht vorhanden oder nicht für die gespeicherte Prozedur geeignet.|  
 |4|Die angegebene Spalte ist ungültig.|  
@@ -339,7 +339,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
 |16|Die Funktion ist für diese Ablaufverfolgung ungültig.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_trace_setevent** führt viele Aktionen aus, die zuvor von erweiterten gespeicherten Prozeduren ausgeführt wurden, die in früheren Versionen von verfügbar waren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Verwenden Sie **sp_trace_setevent** anstelle der folgenden:  
   
 -   **xp_trace_addnewqueue**  

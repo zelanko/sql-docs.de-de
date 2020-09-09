@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_monitordata system table
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 544a21ee17d30eff7d249c7597b2b579a894194e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dde16569f96619778a3a3cd6a246f58482b9947d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492729"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540884"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88492729"
 |**last_distsync**|**datetime**|Datum und die Uhrzeit, wann der Verteilungs-Agent zuletzt ausgeführt wurde|  
 |**agentstoptime**|**datetime**|Datum und die Uhrzeit der Beendigung der Momentaufnahme|  
 |**distdb**|**sysname**|Name der Verteilungsdatenbank für das Abonnement|  
-|**Beibehaltung**|**int**|Beibehaltungsdauer für die Veröffentlichung|  
+|**zurück**|**int**|Beibehaltungsdauer für die Veröffentlichung|  
 |**time_stamp**|**datetime**|Nur intern verwendet.|  
 |**worst_latency**|**int**|Die längste Latenzzeit (in Sekunden) für Datenänderungen, die vom Protokolllese-Agent oder vom Verteilungs-Agent für eine Transaktionsveröffentlichung weitergegeben werden.|  
 |**best_latency**|**int**|Die kürzeste Latenzzeit (in Sekunden) für Datenänderungen, die vom Protokolllese-Agent oder vom Verteilungs-Agent für eine Transaktionsveröffentlichung weitergegeben werden.|  

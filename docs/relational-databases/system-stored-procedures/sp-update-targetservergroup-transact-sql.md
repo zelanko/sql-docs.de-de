@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_targetservergroup
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6aa33876376560cfc90cbf7ab03a69fcf94fa6a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f48424649b3265ee810e48c08602140ce133fc98
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473530"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541567"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_update_targetservergroup
 ## <a name="permissions"></a>Berechtigungen  
  Zum Ausführen dieser gespeicherten Prozedur muss den Benutzern die festen Server Rolle **sysadmin** erteilt werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_update_targetservergroup** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="examples"></a>Beispiele  

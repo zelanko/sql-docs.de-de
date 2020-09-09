@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartMode property
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 608214cf9d4eca2601c0f8bee7b82570ec936ea6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f662597bf67837678690928810875f62e5d75e04
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418756"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542773"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode-Eigenschaft (SqlService-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ object.StartMode [= value]
  System  
  Wert = 1. Der Dienst wurde von der **IoInitSystem** -Methode gestartet. Diese Option ist nur für Treiberdienste gültig.  
   
- Automatische  
+ Automatic  
  Wert = 2. Der Dienst soll während des Systemstarts automatisch vom Dienstkontroll-Manager gestartet werden.  
   
  Manuell  
@@ -60,7 +60,7 @@ object.StartMode [= value]
  Disabled  
  Wert = 4. Der Dienst kann nicht gestartet werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

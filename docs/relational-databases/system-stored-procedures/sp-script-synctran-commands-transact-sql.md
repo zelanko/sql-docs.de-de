@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_script_synctran_commands
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8e49e8cd0155ca5266e9953628799a132c7f7608
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f596a02346748cedcc6b99ada4e0a6122b184673
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481072"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541592"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ## <a name="results-set"></a>Resultset  
  **sp_script_synctran_commands** gibt ein Resultset zurück, das aus einer einzelnen **nvarchar (4000)** -Spalte besteht. Das Resultset bildet die gesamten Skripts, die zum Erstellen der **sp_addsynctrigger** -und **sp_addqueued_artinfo** Aufrufe erforderlich sind, die auf den Abonnenten angewendet werden sollen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_script_synctran_commands** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  **sp_addqueued_artinfo** wird für aktualisierbare Abonnements in der Warteschlange verwendet.  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Service Broker, catalog views
 - catalog views [SQL Server], Service Broker
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a6f083a8f776714f8ac32dcc3394b32d6bce6870
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c665bf8042c4f9d7b7cadcae6201169627099869
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498464"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542683"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Service Broker-Katalogsichten (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -55,13 +55,13 @@ Dieser Abschnitt enthält die folgenden Katalogsichten:
         
         [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)
         
-        [sys. Services](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)
+        [sys.services](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)
         
         [sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
     :::column-end:::
 :::row-end:::
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [System Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [sys. service_broker_endpoints &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-service-broker-endpoints-transact-sql.md)   

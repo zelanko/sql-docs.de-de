@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSagent_profiles system table
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fbf072d6e873b595d2c9c5d4e27a0d792c09ba4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2f9b44e872ef5175d07a679c330b7662ff9e5bf6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485473"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540906"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88485473"
 |**profile_name**|**sysname**|Der eindeutige Profilname für den Agenttyp.|  
 |**agent_type**|**int**|Der Agenttyp:<br /><br /> **1** = Momentaufnahmen-Agent<br /><br /> **2** = Protokolllese-Agent<br /><br /> **3** = Verteilungs-Agent<br /><br /> **4** = Merge-Agent<br /><br /> **9** = Warteschlangenlese-Agent|  
 |**type**|**int**|Der Profiltyp:<br /><br /> **0** = System**1** = Benutzer definiert|  
-|**Beschreibung**|**nvarchar (3000)**|Die Beschreibung des Profils.|  
+|**description**|**nvarchar (3000)**|Die Beschreibung des Profils.|  
 |**def_profile**|**bit**|Gibt an, ob dieses Profil das Standardprofil für diesen Agenttyp ist.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

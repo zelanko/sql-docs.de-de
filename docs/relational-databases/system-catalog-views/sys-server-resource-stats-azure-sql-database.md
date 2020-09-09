@@ -4,7 +4,6 @@ title: sys. server_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentatio
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
-ms.reviewer: carlrab, edmaca
 ms.topic: language-reference
 f1_keywords:
 - resource_stats
@@ -20,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ef3f27b814405cf6ca56a47ffcac8dd467f939f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed975dd768bc9d7979dd254fddec715ed07b3b2f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376706"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542498"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -37,7 +36,7 @@ Die **sys. server_resource_stats** -Sicht hat abhängig von der Version der Azur
   
  Die folgende Tabelle beschreibt die verfügbaren Spalten bei einem Server mit der Version 12:  
   
-|Spalten|Datentyp|Beschreibung|  
+|Spalten|Datentyp|BESCHREIBUNG|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|UTC-Zeit, die den Beginn des 15-Sekunden-Berichts Intervalls angibt|  
 |end_time|**datetime**|UTC-Zeit, die das Ende des Berichts Intervalls von 15 Sekunden angibt|
@@ -60,7 +59,7 @@ Die **sys. server_resource_stats** -Sicht hat abhängig von der Version der Azur
 ## <a name="permissions"></a>Berechtigungen  
  Diese Ansicht ist für alle Benutzer Rollen verfügbar, die über Berechtigungen zum Herstellen einer Verbindung mit der **Master** -Datenbank verfügen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Daten, die von **sys. server_resource_stats** zurückgegeben werden, werden als der Gesamtwert ausgedrückt, der in Byte oder Megabyte (angegeben in Spaltennamen) verwendet wird, und nicht als avg_cpu, der als Prozentsatz der maximal zulässigen Grenzwerte für die Dienst Ebene/Leistungsstufe ausgedrückt wird, die Sie ausführen.  
  
 ## <a name="examples"></a>Beispiele  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46fef8eff54b4a27957191e2456df90ff77f72c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e909e343a22ca1a249e5de03bc5eb64948e982cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474487"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541895"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Diese Tabelle beschreibt die Eigenschaften der Veröffentlichung, die geändert werden können, und beschreibt die Einschränkungen der Werte für diese Eigenschaften.  
   
-|Eigenschaft|Wert|Beschreibung|  
+|Eigenschaft|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Anonyme Abonnements sind zulässig.|  
 ||**false**|Anonyme Abonnements sind nicht zulässig.|  
@@ -79,7 +79,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**Abonnenten**|Die Konfliktdatensätze werden auf dem Abonnenten gespeichert, der den Konflikt verursacht hat. Wird für Abonnenten nicht unterstützt [!INCLUDE[ssEW](../../includes/ssew-md.md)] *.*|  
 ||**zwar**|Die Konfliktdatensätze werden auf dem Verleger und auf dem Abonnenten gespeichert.|  
 |**conflict_retention**||Ein **int** -Wert, der die Beibehaltungs Dauer (in Tagen) angibt, für die Konflikte beibehalten werden. Das Festlegen von *conflict_retention* auf **0** bedeutet, dass keine Konflikt Bereinigung erforderlich ist.|  
-|**Beschreibung**||Die Beschreibung der Veröffentlichung.|  
+|**description**||Die Beschreibung der Veröffentlichung.|  
 |**dynamic_filters**|**true**|Die Veröffentlichung wird anhand einer dynamischen Klausel gefiltert.|  
 ||**false**|Die Veröffentlichung wird nicht dynamisch gefiltert.|  
 |**enabled_for_internet**|**true**|Die Veröffentlichung ist für das Internet aktiviert. File Transfer Protocol (FTP) kann verwendet werden, um die Momentaufnahmedateien an einen Abonnenten zu übertragen. Die Synchronisierungsdateien für die Veröffentlichung werden im Verzeichnis C:\Programme\Microsoft SQL Server\MSSQL\Repldata\ftp gespeichert.|  
@@ -102,7 +102,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Entfernt die Veröffentlichungsinformationen aus Active Directory.|  
 |**replicate_ddl**|**1**|Auf dem Verleger ausgeführte DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) werden repliziert.|  
 ||**0**|DDL-Anweisungen werden nicht repliziert.|  
-|**Beibehaltung**||Dabei handelt es sich um einen **int** -Wert, der die Anzahl der *retention_period_unit* Einheiten darstellt, für die Änderungen für die angegebene Veröffentlichung gespeichert werden sollen. Wenn das Abonnement nicht innerhalb der Beibehaltungsdauer synchronisiert wird und die ausstehenden Änderungen von einem Cleanupvorgang auf dem Verteiler entfernt wurden, läuft das Abonnement ab und muss erneut initialisiert werden. Die maximal zulässige Beibehaltungsdauer entspricht der Anzahl von Tagen zwischen dem 31. Dezember 9999 und dem aktuellen Datum.<br /><br /> Hinweis: die Beibehaltungs Dauer für Mergeveröffentlichungen hat eine 24-Stunden-Toleranz Periode, um Abonnenten in unterschiedlichen Zeitzonen zu berücksichtigen.|  
+|**zurück**||Dabei handelt es sich um einen **int** -Wert, der die Anzahl der *retention_period_unit* Einheiten darstellt, für die Änderungen für die angegebene Veröffentlichung gespeichert werden sollen. Wenn das Abonnement nicht innerhalb der Beibehaltungsdauer synchronisiert wird und die ausstehenden Änderungen von einem Cleanupvorgang auf dem Verteiler entfernt wurden, läuft das Abonnement ab und muss erneut initialisiert werden. Die maximal zulässige Beibehaltungsdauer entspricht der Anzahl von Tagen zwischen dem 31. Dezember 9999 und dem aktuellen Datum.<br /><br /> Hinweis: die Beibehaltungs Dauer für Mergeveröffentlichungen hat eine 24-Stunden-Toleranz Periode, um Abonnenten in unterschiedlichen Zeitzonen zu berücksichtigen.|  
 |**retention_period_unit**|**day**|Die Beibehaltungsdauer wird in Tagen angegeben.|  
 ||**week**|Die Beibehaltungsdauer wird in Wochen angegeben.|  
 ||**month**|Die Beibehaltungsdauer wird in Monaten angegeben.|  
@@ -114,7 +114,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**status**|**active**|Die Veröffentlichung weist einen aktiven Status auf.|  
 ||**inactive**|Die Veröffentlichung weist einen inaktiven Status auf.|  
 |**sync_mode**|**native** oder<br /><br /> **bcp Native**|Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus wird für die Anfangsmomentaufnahme verwendet.|  
-||**Art**<br /><br /> oder **bcp-Zeichen**|Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus wird für die Anfangsmomentaufnahme verwendet. Dies ist für alle Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten erforderlich.|  
+||**character**<br /><br /> oder **bcp-Zeichen**|Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus wird für die Anfangsmomentaufnahme verwendet. Dies ist für alle Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten erforderlich.|  
 |**use_partition_groups**<br /><br /> Hinweis: Wenn Sie partition_groups verwenden, die Verwendung von **setupes**wiederherstellen und **use_partition_groups = false** im **changemergearticle**festlegen, wird dies möglicherweise nicht ordnungsgemäß wiedergegeben, nachdem eine Momentaufnahme erstellt wurde. Die Trigger, die von der Momentaufnahme generiert werden, sind mit Partitionsgruppen kompatibel.<br /><br /> Die Problem Umgehung für dieses Szenario besteht darin, den Status auf "inaktiv" festzulegen, die **use_partition_groups**zu ändern und dann den Status "aktiv" festzulegen.|**true**|Die Veröffentlichung verwendet vorausberechnete Partitionen.|  
 ||**false**|Die Veröffentlichung verwendet keine vorausberechneten Partitionen.|  
 |**validate_subscriber_info**||Listet die Funktionen auf, die zum Abrufen von Abonnenteninformationen verwendet werden. Überprüft anschließend die dynamischen Filterkriterien, die für den Abonnenten verwendet werden, um zu überprüfen, dass die Informationen konsistent partitioniert werden.|  
@@ -140,7 +140,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_changemergepublication** wird bei der Mergereplikation verwendet.  
   
  Das Ändern der folgenden Eigenschaften erfordert die Generierung einer neuen Momentaufnahme. Sie müssen den Wert **1** für den *force_invalidate_snapshot* -Parameter angeben.  

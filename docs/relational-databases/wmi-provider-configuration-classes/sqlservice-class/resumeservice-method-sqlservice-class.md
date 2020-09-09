@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ResumeService method
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7d1e5e368f9fc33898d251f3508f2bcaffd9622f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b5c533cde7bccdbf198e207e6026beb0404f19cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460058"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542828"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>ResumeService-Methode (SqlService-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.ResumeService()
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32 -Wert, der 0 beträgt, wenn die **ResumeService** -Anforderung angenommen wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

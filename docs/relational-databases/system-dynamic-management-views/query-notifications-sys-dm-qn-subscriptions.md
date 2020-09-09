@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2d19178ff8e4b684fbc32fb80d23ee057fb55db7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455101"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542380"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Abfrage Benachrichtigungen-sys. dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "88455101"
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|An|Ein|type|  
+|From|To|Ein|type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|n:1|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|n:1|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der Statuscode 0 gibt einen nicht definierten Status an.  
   
  Die folgenden Statuscodes geben an, dass ein Abonnement aufgrund einer Änderung ausgelöst wurde:  
@@ -58,7 +58,7 @@ ms.locfileid: "88455101"
 |65798|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Abonnement wurde durch eine Einfügung ausgelöst.|  
 |65799|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Löschen|  
 |65800|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Aktualisieren|  
-|65801|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Merge|  
+|65801|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Zusammenführen|  
 |65802|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Tabelle kürzen|  
 |66048|Abonnement wurde ausgelöst, da das Timeout abgelaufen ist.|Nicht definierter Infomodus|  
 |66315|Abonnement wurde ausgelöst, da sich ein Objekt geändert hat.|Objekt oder Benutzer wurde gelöscht.|  

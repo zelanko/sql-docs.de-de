@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resetsnapshotdeliveryprogress
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8a6a4c0114077910f34f548db1f2b0b26d652f4a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b4bcee8dfc47a489fc605bcd3bd787a1ed393329
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473835"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543080"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_resetsnapshotdeliveryprogress** entfernt alle Zeilen in der **MSsnapshotdeliveryprogress** -Tabelle. Auf diese Weise werden alle Metadaten entfernt, die in der Abonnementdatenbank durch vorherige Momentaufnahme-Übermittlungsprozesse zurückgeblieben sind.  
   
 ## <a name="permissions"></a>Berechtigungen  

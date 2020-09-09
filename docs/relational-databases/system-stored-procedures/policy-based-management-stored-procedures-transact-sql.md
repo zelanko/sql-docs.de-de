@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Policy-Based Management, stored procedures
 - stored procedures [Policy-Based Management]
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1811a67ac9eceb3e6f1fd14d27de2b7d04e07684
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3eb2ac9d9f0ad157d183cf1e5e18edda4b0a30a1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469806"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542016"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>Gespeicherte Prozeduren für die richtlinienbasierte Verwaltung (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "88469806"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

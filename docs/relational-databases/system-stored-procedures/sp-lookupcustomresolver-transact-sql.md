@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_lookupcustomresolver
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75f030013417d3cb5f68f8349d36cb26f9971a88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 54e2f1f4237e169637c7d73085dc29cbffe3e720
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473952"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541725"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_lookupcustomresolver** wird bei der Mergereplikation verwendet.  
   
  **sp_lookupcustomresolver** gibt einen NULL-Wert für *resolver_clsid* zurück, wenn die Komponente nicht bei der Verteilung registriert ist, und den Wert "00000000-0000-0000-0000-000000000000", wenn die Registrierung zu einer .NET Framework Assembly gehört, die als Geschäftslogik Handler registriert ist.  

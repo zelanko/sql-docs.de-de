@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e09946d4a705aa695b4049ac887cbb0b465ee9d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6114d52b0db23d04c3b8cf001b0881dbc38844a6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749281"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543150"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,13 +46,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der veröffentlichten Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der veröffentlichten Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, für die die Überwachungs Schwellenwert Attribute geändert werden. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die die Überwachungs Schwellenwert Attribute geändert werden. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication_type = ] publication_type`Gibt an, ob der Typ der Veröffentlichung ist. *publication_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
+`[ @publication_type = ] publication_type` Gibt an, ob der Typ der Veröffentlichung ist. *publication_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -61,7 +61,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|Mergeveröffentlichung.|  
 |NULL (Standard)|Replikationsversuche zum Bestimmen des Veröffentlichungstyps.|  
   
-`[ @metric_id = ] metric_id`Die ID der Schwellenwert Metrik für die Veröffentlichung, die geändert wird. *metric_id* ist vom Datentyp **int**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
+`[ @metric_id = ] metric_id` Die ID der Schwellenwert Metrik für die Veröffentlichung, die geändert wird. *metric_id* ist vom Datentyp **int**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
 |Wert|Metrikname|  
 |-----------|-----------------|  
@@ -75,13 +75,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  Sie müssen entweder *metric_id* oder " *stammoldmetricname*" angeben. Wenn " *stammoldmetricname* " angegeben ist, sollte *metric_id* NULL sein.  
   
-`[ @thresholdmetricname = ] 'thresholdmetricname'`Der Name der Schwellenwert Metrik für die Veröffentlichung, die geändert wird. " *stammoldmetricname* " ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Sie müssen entweder den *Namen* "" für "" und " *metric_id*" angeben. Wenn *metric_id* angegeben wird, sollte der Wert von "der *Name* der"  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` Der Name der Schwellenwert Metrik für die Veröffentlichung, die geändert wird. " *stammoldmetricname* " ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Sie müssen entweder den *Namen* "" für "" und " *metric_id*" angeben. Wenn *metric_id* angegeben wird, sollte der Wert von "der *Name* der"  
   
-`[ @value = ] value`Der neue Wert der Schwellenwert Metrik für die Veröffentlichung. der *Wert* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn der Wert **null**ist, wird der Metrikwert nicht aktualisiert.  
+`[ @value = ] value` Der neue Wert der Schwellenwert Metrik für die Veröffentlichung. der *Wert* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn der Wert **null**ist, wird der Metrikwert nicht aktualisiert.  
   
-`[ @shouldalert = ] shouldalert`Gibt an, ob eine Warnung generiert wird, wenn eine Schwellenwert Metrik für die Veröffentlichung erreicht wird der *Wert ist* " **Bit**", der Standardwert ist NULL. Der Wert **1** bedeutet, dass eine Warnung generiert wird, und der Wert **0** bedeutet, dass keine Warnung generiert wird.  
+`[ @shouldalert = ] shouldalert` Gibt an, ob eine Warnung generiert wird, wenn eine Schwellenwert Metrik für die Veröffentlichung erreicht wird der *Wert ist* " **Bit**", der Standardwert ist NULL. Der Wert **1** bedeutet, dass eine Warnung generiert wird, und der Wert **0** bedeutet, dass keine Warnung generiert wird.  
   
-`[ @mode = ] mode`Ist, wenn die Schwellenwert Metrik für die Veröffentlichung aktiviert ist. der *Modus* ist vom Datentyp **tinyint**. der Standardwert ist **1**. Der Wert **1** bedeutet, dass die Überwachung dieser Metrik aktiviert ist und der Wert **2** bedeutet, dass die Überwachung dieser Metrik deaktiviert ist.  
+`[ @mode = ] mode` Ist, wenn die Schwellenwert Metrik für die Veröffentlichung aktiviert ist. der *Modus* ist vom Datentyp **tinyint**. der Standardwert ist **1**. Der Wert **1** bedeutet, dass die Überwachung dieser Metrik aktiviert ist und der Wert **2** bedeutet, dass die Überwachung dieser Metrik deaktiviert ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -93,6 +93,6 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank können **sp_replmonitorchangepublicationthreshold**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Programmgesteuerte Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

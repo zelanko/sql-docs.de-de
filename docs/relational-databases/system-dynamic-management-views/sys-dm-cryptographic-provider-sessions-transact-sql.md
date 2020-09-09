@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_sessions dynamic management function
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 37a8854da08439c4dc3984bcdfc61a8695467c2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 223d3b1ebac4230436f069c2ec9415e7d57feb3f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455014"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542285"
 ---
 # <a name="sysdm_cryptographic_provider_sessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |**Identität**|**nvarchar(128)**|ID, die zur Authentifizierung mit dem Kryptgrafieanbieter verwendet wird.|  
 |**spid**|**short**|SPID der Sitzungs-ID für die Verbindung. Weitere Informationen finden Sie unter [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **sys. dm_cryptographic_provider_sessions** -Sicht ist für die öffentliche der aktuellen Verbindung sichtbar. Um alle kryptografieverbindungen anzuzeigen, müssen Sie über die **Control** Server-Berechtigung verfügen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

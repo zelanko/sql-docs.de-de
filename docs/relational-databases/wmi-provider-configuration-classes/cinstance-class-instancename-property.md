@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2700a8c00fb84388c42ba935585df9c713f26b62
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b7183f02215f8ffbbc6a3298b8c7561973823f9c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488543"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542881"
 ---
 # <a name="cinstance-class---instancename-property"></a>CInstance-Klasse – InstanceName-Eigenschaft
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.InstanceName [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der den Namen der Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)  

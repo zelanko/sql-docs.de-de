@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replflush
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 144bffdd6076b73c8b10fca3c7d9f878d77091d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cb5d459f1a9b89836a412450eb4215182b914ba8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485745"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541190"
 ---
 # <a name="sp_replflush-transact-sql"></a>sp_replflush (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ sp_replflush
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_replflush** wird bei der Transaktions Replikation verwendet.  
   
  Artikeldefinitionen werden aus Effizienzgründen im Cache gespeichert. **sp_replflush** wird von anderen gespeicherten Replikations Prozeduren verwendet, wenn eine Artikel Definition geändert oder gelöscht wird.  

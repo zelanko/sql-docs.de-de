@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 86a77a797d8da80746410b9f8a697b747f93242c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4468902fc983e94656a7f00c457b51e26a752a82
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469273"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541742"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |**Is Self Mapping**|**smallint**|0 = der **lokale Anmelde Name** wird **entfernte Anmeldung** zugeordnet, wenn eine Verbindung mit dem Verbindungs **Server**hergestellt wird.<br /><br /> 1 = der **lokale Anmelde Name** wird demselben Anmelde Namen und Kennwort zugeordnet, wenn eine Verbindung mit dem Verbindungs **Server**hergestellt wird.|  
 |**Remote Login**|**sysname**|Der Anmelde Name auf dem **LinkedServer** , der **loczumapping** zugeordnet ist, wenn **isselfmapping** den Wert 0 hat. Wenn **isselfmapping** den Wert 1 hat, ist **RemoteLogin** NULL.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Bevor Sie Anmelde Namen Zuordnungen löschen, verwenden Sie **sp_helplinkedsrvlogin** , um die beteiligten Verbindungs Server zu ermitteln.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -124,8 +124,8 @@ Sales            Mary          0               sa
 (2 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
