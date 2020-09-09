@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2e921c4bf0920f6586a7a837ccfea73c759f8b10
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8ce810ed6014710b6d4a9a3cb61da9fe4e0605cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447749"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537683"
 ---
 # <a name="sysdm_broker_connections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88447749"
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Bezeichner der Verbindung. Lässt NULL-Werte zu.|  
 |**transport_stream_id**|**uniqueidentifier**|Der Bezeichner der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Netzwerkschnittstellen Verbindung (SNI), die von dieser Verbindung für die TCP/IP-Kommunikation verwendet wird. Lässt NULL-Werte zu.|  
-|**Status**|**smallint**|Aktueller Verbindungsstatus. Lässt NULL-Werte zu. Mögliche Werte:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = geschlossen|  
+|**state**|**smallint**|Aktueller Verbindungsstatus. Lässt NULL-Werte zu. Mögliche Werte:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = geschlossen|  
 |**state_desc**|**nvarchar(60)**|Aktueller Verbindungsstatus. Lässt NULL-Werte zu. Mögliche Werte:<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|Datum und Uhrzeit der Verbindungseröffnung. Lässt NULL-Werte zu.|  
 |**login_time**|**datetime**|Datum und Uhrzeit der erfolgreichen Verbindungsanmeldung. Lässt NULL-Werte zu.|  
@@ -69,7 +69,7 @@ ms.locfileid: "88447749"
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|An|Beziehung|  
+|From|To|Beziehung|  
 |----------|--------|------------------|  
 |**dm_broker_connections.connection_id**|**dm_exec_connections.connection_id**|1:1|  
   

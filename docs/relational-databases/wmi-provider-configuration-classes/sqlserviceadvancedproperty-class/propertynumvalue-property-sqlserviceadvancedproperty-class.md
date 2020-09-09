@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyNumValue property
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 216f8ae6fc4e6dc86fe26b3b9cfff8a7e648d77b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 18643dc5de7cc68026ebb490f4ff9628d9d81312
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418726"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539944"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>PropertyNumValue-Eigenschaft (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ object.PropertyNumValue [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32-Wert, der den numerischen Wert der erweiterten Eigenschaft angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartService method
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5add2aebb0a2a148b803fadbab454d2d72c2bf3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a8e4f618436ed4b563d2f6dd623bd84cd099c21c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485073"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539969"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService-Methode (SqlService-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -118,7 +118,7 @@ object.StartService()
  24  
  Der Dienst wurde bereits angehalten. Der Dienst ist im System derzeitig angehalten.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

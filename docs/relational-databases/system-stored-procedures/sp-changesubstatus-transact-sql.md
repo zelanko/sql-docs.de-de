@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f08825d906705d87596347742c6481dda9c07d7c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: faee6b09f682c5d13a3c005d95b1d513d9206026
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486233"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539121"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -73,7 +73,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @status = ] 'status'` Der Abonnement Status in der **sysabonnements** -Tabelle. der *Status* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**active**|Der Abonnent ist synchronisiert und empfängt Daten.|  
 |**inactive**|Es ist ein Eintrag für einen Abonnenten ohne Abonnement vorhanden.|  
@@ -92,7 +92,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|Sekunde|  
 |**4**|Third|  
 |**8**|Vierter|  
 |**16**|Last (Letzter)|  
@@ -105,7 +105,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
-|**2**|Second|  
+|**2**|Sekunde|  
 |**4**|Minute|  
 |**8**|Stunde|  
 |NULL (Standard)||  
@@ -157,7 +157,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_changesubstatus** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  **sp_changesubstatus** ändert den Status des Abonnenten in der **sysabonnements** -Tabelle mit dem geänderten Status. Bei Bedarf wird der Artikel Status in der **sysarticles** -Tabelle aktualisiert, um den Status "aktiv" oder "inaktiv" anzugeben. Bei Bedarf wird das Replikationsflag in der **sysobjects** -Tabelle für die replizierte Tabelle auf on oder OFF festgelegt.  

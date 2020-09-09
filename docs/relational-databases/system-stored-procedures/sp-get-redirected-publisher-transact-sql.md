@@ -12,14 +12,14 @@ f1_keywords:
 - sp_get_redirected_publisher_TSQL
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1019f42b7edb8a82a3f655632aee64a61fbbcb99
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5a71799e3d7820ce4a142d6c9ec7d55b743214fb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447106"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538922"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ sp_get_redirected_publisher
 |**error_severity**|**int**|Der Schweregrad des Überprüfungsfehlers.|  
 |**error_message**|**nvarchar(4000)**|Der Text der Überprüfungsfehlermeldung.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  *redirected_publisher* gibt den Namen des aktuellen Verlegers zurück. Gibt NULL zurück, wenn der Verleger und die Veröffentlichungs Datenbanken nicht mithilfe von **sp_redirect_publisher**umgeleitet wurden.  
   
  Wenn keine Überprüfung angefordert wird oder wenn kein Eintrag für den Verleger und die Veröffentlichungs Datenbank vorhanden ist, wird *ERROR_NUMBER* und *ERROR_SEVERITY* 0 zurückgegeben und *ERROR_MESSAGE* NULL zurückgegeben.  
@@ -70,7 +70,7 @@ sp_get_redirected_publisher
  Der Aufrufer muss entweder ein Mitglied der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** für die Verteilungs Datenbank oder ein Mitglied einer Veröffentlichungs Zugriffsliste für eine der Verleger Datenbank zugeordnete definierte Veröffentlichung sein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Replikations Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_validate_redirected_publisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
  [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - IsReadOnly property
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 41bfb28199b868276861b68c78af40ea7b83af7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 44dcb0a56d9c86a3957458bc570d3d1082423edd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427172"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539981"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>IsReadOnly-Eigenschaft (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.IsReadOnly [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein boleescher Wert, der angibt, ob die erweiterte Eigenschaft schreibgeschützt ist oder nicht: **true** , wenn die erweiterte Eigenschaft schreibgeschützt ist, bzw. **false** , wenn die erweiterte Eigenschaft geändert werden kann.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

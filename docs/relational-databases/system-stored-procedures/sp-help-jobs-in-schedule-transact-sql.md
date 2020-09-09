@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobs_in_schedule
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2c314f209e1b020598d1a0ab2ef946f2494ca989
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9d8a9251e807be429bfb0881afc711880520f9f7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489372"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538848"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ sp_help_jobs_in_schedule
 |**originating_server**|**nvarchar(30)**|Name des Servers, von dem der Auftrag stammt|  
 |**name**|**sysname**|Der Name des Auftrags.|  
 |**enabled**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
-|**Beschreibung**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
+|**description**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
 |**category**|**sysname**|Auftragskategorie|  
 |**Eigentor**|**sysname**|Auftragsbesitzer|  
@@ -87,7 +87,7 @@ sp_help_jobs_in_schedule
 |**has_target**|**int**|Die Anzahl der Zielserver des Auftrags.|  
 |**type**|**int**|Typ des Auftrags:<br /><br /> **1** = lokaler Auftrag.<br /><br /> **2** = Multiserverauftrag.<br /><br /> **0** = Auftrag hat keine Zielserver.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In dieser Prozedur werden Informationen aufgelistet, die an den bestimmten Zeitplan angefügt sind.  
   
 ## <a name="permissions"></a>Berechtigungen  

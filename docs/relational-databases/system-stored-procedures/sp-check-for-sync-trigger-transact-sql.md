@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1e55fd24c9d4df46cb4703af31d2eda802a458ca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 85908cad93f729ad1c3029aff35be7a2cb91fcef
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486208"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539096"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
  [** @trigger_op =** ] '*trigger_output_parameters*' Ausgabe  
  Gibt an, ob der Ausgabeparameter den Typ von Trigger zurückgeben muss, mit dem er aufgerufen wird. *trigger_output_parameters* ist vom Typ **char (10)** . die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**ELine**|INSERT-Trigger|  
 |**Upd**|UPDATE-Trigger|  
@@ -58,7 +58,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 zeigt an, dass die gespeicherte Prozedur nicht im Kontext eines sofort aktualisierbaren Triggers aufgerufen wird. 1 gibt an, dass Sie im Kontext eines sofort aktualisierbaren Auslösers aufgerufen wird, und ist der Typ des in * \@ trigger_op*zurückgegebenen Auslösers.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_check_for_sync_trigger** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  **sp_check_for_sync_trigger** wird zum koordinieren zwischen Replikations-und benutzerdefinierten Triggern verwendet. Diese gespeicherte Prozedur bestimmt, ob sie im Kontext eines Replikationstriggers aufgerufen wird. Beispielsweise können Sie die Prozedur **sp_check_for_sync_trigger** im Text eines benutzerdefinierten Auslösers aufzurufen. Wenn **sp_check_for_sync_trigger** **0**zurückgibt, wird die Verarbeitung des benutzerdefinierten-Auslösers fortgesetzt. Wenn **sp_check_for_sync_trigger** **1**zurückgibt, wird der benutzerdefinierte-Wert beendet. So wird sichergestellt, dass der benutzerdefinierte Trigger nicht ausgelöst wird, wenn der Replikationstrigger die Tabelle aktualisiert.  

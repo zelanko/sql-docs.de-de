@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0595885b12cc70d5634058eeb9650ee323921ba5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e7cc07a0878eefdb6f8c0cdf33cf6e063651afb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489531"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539053"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ \@ module_or_batch =] {N ' [ *schema_name*. ] *object_name*' | N '*batch_text*' | Normal  
  Gibt entweder den Namen des Objekts an, in dem *statement_text* angezeigt wird, oder den Batchtext, in dem *statement_text* angezeigt wird. Der Batchtext darf keine use*Database* -Anweisung enthalten.  
   
- Damit eine Plan Hinweis Liste mit einem Batch übereinstimmt, der von einer Anwendung übermittelt wird, muss *batch_tex*t im gleichen Format, Zeichen für Zeichen, bereitgestellt werden, wie Sie an gesendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
+ Damit eine Plan Hinweis Liste mit einem Batch übereinstimmt, der von einer Anwendung übermittelt wird, muss *batch_tex*t im gleichen Format, Zeichen für Zeichen, bereitgestellt werden, wie Sie an gesendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
  [*schema_name*.] *object_name* gibt den Namen einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur, Skalarfunktion, Tabellenwert Funktion mit mehreren Anweisungen oder eines DML-Triggers an, der [!INCLUDE[tsql](../../includes/tsql-md.md)] *statement_text*enthält. Wenn *schema_name* nicht angegeben ist, verwendet *schema_name* das Schema des aktuellen Benutzers. Wenn NULL angegeben ist und \@ Type = ' SQL ', wird der Wert von \@ module_or_batch auf den Wert von \@ stmt festgelegt. Wenn \@ Type = ' template **\'** , \@ muss module_or_batch NULL sein.  
   
@@ -85,7 +85,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 -   *statement_text* übermittelt wird, indem sp_executesql verwendet wird und ein Wert für den \@ Parameter Parameters angegeben wird, oder über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mittelt eine Anweisung intern, nachdem Sie parametrisiert wurde. Die Übermittlung parametrisierter Abfragen von Datenbank-APIs (einschließlich ODBC, OLE DB und ADO.NET) werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Aufrufe von sp_executesql oder von API-Servercursorroutinen angezeigt; deshalb können Übereinstimmungen auch von SQL- oder TEMPLATE-Planhinweislisten festgestellt werden.  
   
- * \@ parameter_name data_type* muss genau dasselbe Format bereitgestellt werden, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entweder mithilfe von sp_executesql übermittelt oder intern nach der Parametrisierung übermittelt wird. Weitere Informationen finden Sie im Abschnitt mit Hinweisen. Wenn der Batch keine Parameter enthält, muss NULL angegeben werden. Die Größe von \@ Parametern wird nur durch den verfügbaren Server Arbeitsspeicher beschränkt.  
+ * \@ parameter_name data_type* muss genau dasselbe Format bereitgestellt werden, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entweder mithilfe von sp_executesql übermittelt oder intern nach der Parametrisierung übermittelt wird. Weitere Informationen finden Sie im Abschnitt "Hinweise". Wenn der Batch keine Parameter enthält, muss NULL angegeben werden. Die Größe von \@ Parametern wird nur durch den verfügbaren Server Arbeitsspeicher beschränkt.  
   
  [ \@ Hinweise =] {n ' Option (*query_hint* [,...* n* ]) "| N '*XML_showplan*' | Normal  
  N ' Option (*query_hint* [,...* n* ])  
@@ -99,7 +99,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  NULL  
  Gibt an, dass ein vorhandener Hinweis, der in der OPTION-Klausel angegeben ist, nicht auf die Abfrage angewendet wird. Weitere Informationen finden Sie unter [Option-Klausel &#40;Transact-SQL-&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Argumente für sp_create_plan_guide müssen in der angezeigten Reihenfolge bereitgestellt werden. Wenn Sie Werte für die Parameter von **sp_create_plan_guide**angeben, müssen entweder alle oder überhaupt keine Parameternamen explizit angegeben werden. Wenn z. b. ** \@ Name =** angegeben ist, muss auch ** \@ stmt =** , ** \@ Type =** usw. angegeben werden. Wenn ** \@ Name =** weggelassen wird und nur der Parameterwert angegeben wird, müssen die restlichen Parameternamen ebenfalls ausgelassen werden, und es werden nur ihre Werte angegeben. Argumentnamen dienen nur zu Beschreibungszwecken, zum besseren Verständnis der Syntax. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft nicht, ob der angegebene Parametername mit dem Namen des Parameters an der Position übereinstimmt, an der der Name verwendet wird.  
   
  Sie können mehr als eine Planhinweisliste des Typs OBJECT oder SQL für dieselbe Abfrage und den Batch oder das Modul erstellen. Es kann jedoch nur jeweils eine Planhinweisliste aktiviert sein.  
@@ -330,12 +330,12 @@ GO
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
- [sys. fn_validate_plan_guide &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
+ [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
  [sp_get_query_template &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
   
   

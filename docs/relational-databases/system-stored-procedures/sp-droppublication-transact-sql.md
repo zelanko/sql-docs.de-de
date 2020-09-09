@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_droppublication
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 980b40421b51594ef0d687521ba9e436c2a16c4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5ae91db140ea261a6417cb08eae07cfe2eb7fb79
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783830"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538926"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, die gelöscht werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn **all** angegeben wird, werden alle Veröffentlichungen aus der Veröffentlichungs Datenbank gelöscht, mit Ausnahme derjenigen, die Abonnements sind.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die gelöscht werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn **all** angegeben wird, werden alle Veröffentlichungen aus der Veröffentlichungs Datenbank gelöscht, mit Ausnahme derjenigen, die Abonnements sind.  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -62,8 +62,8 @@ sp_droppublication [ @publication= ] 'publication'
 ## <a name="see-also"></a>Weitere Informationen  
  [Löschen einer Veröffentlichung](../../relational-databases/replication/publish/delete-a-publication.md)   
  [sp_addpublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

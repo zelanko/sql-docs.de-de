@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: dde94b7383bd6d043972bc8ad496e0b40165e206
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec1209e23885026c4f64994d5b0605e36e6fde5d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485756"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538600"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +62,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_db_version**|**int**|Version der Datenbank, von der die Transaktion stammt|  
 |**originator_lsn**|**varbinary(16)**|Identifiziert die Protokollfolgenummer (LSN, Log Sequence Number) für den Befehl in der ursprünglichen Veröffentlichung|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_replcmds** wird vom Protokoll Leseprozess bei der Transaktions Replikation verwendet.  
   
  Bei der Replikation wird der erste Client, der **sp_replcmds** innerhalb einer bestimmten Datenbank ausführt, als Protokoll Leser behandelt.  

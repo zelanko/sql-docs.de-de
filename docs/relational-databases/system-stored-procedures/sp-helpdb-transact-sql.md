@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c94db417a7257d38f5b607854beeeb5663c30ea7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 371326efa5bf207f0a0e3febbad0260865e1299b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474132"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538736"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**name**|**sysname**|Datenbankname.|  
 |**db_size**|**nvarchar (13)**|Gesamtgröße der Datenbank.|  
 |**Eigentor**|**sysname**|Datenbankbesitzer, z. b. **sa**.|  
-|**dbid**|**smallint**|Datenbank-ID|  
+|**DBID**|**smallint**|Datenbank-ID|  
 |**created**|**nvarchar(11)**|Erstellungsdatum der Datenbank.|  
 |**status**|**nvarchar (600)**|Eine durch Trennzeichen getrennte Liste mit Werten von Datenbankoptionen, die zurzeit für die Datenbank festgelegt sind.<br /><br /> Optionen mit booleschen Werten werden nur aufgelistet, wenn sie aktiviert sind. Nicht boolesche Optionen werden mit ihren entsprechenden Werten in Form von *option_name* = *Wert*aufgelistet.<br /><br /> Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Datenbank-Kompatibilitätsgrad: 60, 65, 70, 80 oder 90.|  
@@ -70,7 +70,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**wachsen**|**nvarchar (18)**|Vergrößerungsinkrement der Datei. Gibt den Speicherplatz an, der der Datei jedes Mal hinzugefügt wird, wenn neuer Speicherplatz benötigt wird.|  
 |**ungs**|**varchar (9)**|Verwendung der Datei. Bei einer Datendatei ist der Wert **' nur Daten** ', und für die Protokolldatei lautet der Wert **' nur protokollieren '**.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **Status** -Spalte im Resultset meldet, welche Optionen in der Datenbank auf ON festgelegt wurden. Alle Daten Bankoptionen werden nicht von der **Status** -Spalte gemeldet. Verwenden Sie die **sys.** Database-Katalog Sicht, um eine komplette Liste der aktuellen Einstellungen für die Datenbankoption anzuzeigen.  
   
 ## <a name="permissions"></a>Berechtigungen  

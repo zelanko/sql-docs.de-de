@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_broker_endpoints catalog view
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1fd6a01ea9b6936edc90a64e70a2c310750d2b85
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7ee3bd0e5e09ab2e8511596f3920e0e8408f1b6f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419954"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539559"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88419954"
 |**encryption_algorithm**|**tinyint**|Der Verschlüsselungsalgorithmus. Im folgenden sind die möglichen Werte mit ihren Beschreibungen und entsprechenden DDL-Optionen aufgeführt.<br /><br /> **0** : keine. Entsprechende DDL-Option: deaktiviert.<br /><br /> **1** : RC4. Entsprechende DDL-Option: {Required &#124; erforderlichen Algorithmus RC4}.<br /><br /> **2** : AES. Entsprechende DDL-Option: erforderlicher Algorithmus AES.<br /><br /> **3** : keine, RC4. Entsprechende DDL-Option: {Supported &#124; unterstützter Algorithmus RC4}.<br /><br /> **4** : keine, AES. Entsprechende DDL-Option: unterstützter Algorithmus AES.<br /><br /> **5** : RC4, AES. Entsprechende DDL-Option: erforderlicher Algorithmus RC4 AES.<br /><br /> **6** : AES, RC4. Entsprechende DDL-Option: erforderlicher Algorithmus AES RC4.<br /><br /> **7** : keine, RC4, AES. Entsprechende DDL-Option: unterstützter Algorithmus RC4 AES.<br /><br /> **8** : keine, AES, RC4. Entsprechende DDL-Option: unterstützter Algorithmus AES RC4.<br /><br /> Lässt keine NULL-Werte zu.|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Beschreibung des Verschlüsselungsalgorithmus. Die möglichen Werte und ihre entsprechenden DDL-Optionen sind im folgenden aufgeführt:<br /><br /> Keine: deaktiviert<br /><br /> RC4: {Required &#124; erforderlichen Algorithmus RC4}<br /><br /> AES: erforderlicher Algorithmus AES<br /><br /> None, RC4: {Supported &#124; unterstützter Algorithmus RC4}<br /><br /> None, AES: unterstützter Algorithmus AES<br /><br /> RC4, AES: erforderlicher Algorithmus RC4 AES<br /><br /> AES, RC4: erforderlicher Algorithmus AES RC4<br /><br /> None, RC4, AES: unterstützter Algorithmus RC4 AES<br /><br /> None, AES, RC4: unterstützter Algorithmus AES RC4<br /><br /> Lässt NULL-Werte zu.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]  
 >  Der RC4-Algorithmus wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höheren Versionen kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.  

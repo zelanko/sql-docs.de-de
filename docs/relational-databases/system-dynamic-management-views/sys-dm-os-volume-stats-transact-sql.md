@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75e6753328857be7f677a253fde790dd51defc51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 085659b4c6754bc2de68124dcb7d5c6fbbcdeb16
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474812"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539246"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -51,19 +51,19 @@ sys.dm_os_volume_stats (database_id, file_id)
 ||||  
 |-|-|-|  
 |**Spalte**|**Datentyp**|**Beschreibung**|  
-|**database_id**|**int**|Die ID der Datenbank. Lässt keine NULL-Werte zu.|  
-|**file_id**|**int**|Die ID der Datei. Lässt keine NULL-Werte zu.|  
+|**database_id**|**int**|Die ID der Datenbank. Darf nicht NULL sein.|  
+|**file_id**|**int**|Die ID der Datei. Darf nicht NULL sein.|  
 |**volume_mount_point**|**nvarchar(512)**|Der Einbindungspunkt, der das Stammverzeichnis des Volumes darstellt. Kann eine leere Zeichenfolge zurückgeben.|  
 |**volume_id**|**nvarchar(512)**|Die ID des Betriebssystemvolumes. Kann eine leere Zeichenfolge zurückgeben.|  
 |**logical_volume_name**|**nvarchar(512)**|Der Name des logischen Volumes. Kann eine leere Zeichenfolge zurückgeben.|  
 |**file_system_type**|**nvarchar(512)**|Der Typ des Dateisystemvolumes (z. B. NTFS, FAT, RAW). Kann eine leere Zeichenfolge zurückgeben.|  
-|**total_bytes**|**bigint**|Die Gesamtgröße des Volumes in Bytes. Lässt keine NULL-Werte zu.|  
-|**available_bytes**|**bigint**|Der verfügbare freie Speicherplatz auf dem Volume. Lässt keine NULL-Werte zu.|  
-|**supports_compression**|**bit**|Gibt an, ob das Volume eine Komprimierung durch das Betriebssystem unterstützt. Lässt keine NULL-Werte zu.|  
-|**supports_alternate_streams**|**bit**|Gibt an, ob das Volume alternative Datenströme unterstützt. Lässt keine NULL-Werte zu.|  
-|**supports_sparse_files**|**bit**|Gibt an, ob das Volume Sparsedateien unterstützt.  Lässt keine NULL-Werte zu.|  
-|**is_read_only**|**bit**|Gibt an, ob das Volume derzeit als schreibgeschützt gekennzeichnet ist. Lässt keine NULL-Werte zu.|  
-|**is_compressed**|**bit**|Gibt an, ob dieses Volume derzeit komprimiert ist. Lässt keine NULL-Werte zu.|  
+|**total_bytes**|**bigint**|Die Gesamtgröße des Volumes in Bytes. Darf nicht NULL sein.|  
+|**available_bytes**|**bigint**|Der verfügbare freie Speicherplatz auf dem Volume. Darf nicht NULL sein.|  
+|**supports_compression**|**bit**|Gibt an, ob das Volume eine Komprimierung durch das Betriebssystem unterstützt. Darf nicht NULL sein.|  
+|**supports_alternate_streams**|**bit**|Gibt an, ob das Volume alternative Datenströme unterstützt. Darf nicht NULL sein.|  
+|**supports_sparse_files**|**bit**|Gibt an, ob das Volume Sparsedateien unterstützt.  Darf nicht NULL sein.|  
+|**is_read_only**|**bit**|Gibt an, ob das Volume derzeit als schreibgeschützt gekennzeichnet ist. Darf nicht NULL sein.|  
+|**is_compressed**|**bit**|Gibt an, ob dieses Volume derzeit komprimiert ist. Darf nicht NULL sein.|  
   
 ## <a name="security"></a>Sicherheit  
   

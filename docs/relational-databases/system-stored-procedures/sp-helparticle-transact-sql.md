@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticle
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ca400eb6fc015acff452ca4ae6a7658a05145f8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7bc639fef551b78dd73da39cd404999e39219b2d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474154"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538789"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -67,7 +67,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**type**|**smallint**|Der Artikeltyp:<br /><br /> **1** = Protokoll basiert.<br /><br /> **3** = Protokoll basiert mit manuellem Filter.<br /><br /> **5** = Protokoll basiert mit manueller Sicht.<br /><br /> **7** = Protokoll basiert mit manuellem Filter und manueller Ansicht.<br /><br /> **8** = Ausführung gespeicherter Prozeduren.<br /><br /> **24** = serialisierbare Ausführung gespeicherter Prozeduren.<br /><br /> **32** = gespeicherte Prozedur (nur Schema).<br /><br /> **64** = Ansicht (nur Schema).<br /><br /> **96** = Aggregatfunktion (nur Schema).<br /><br /> **128** = Funktion (nur Schema).<br /><br /> **257** = Protokoll basierte indizierte Sicht.<br /><br /> **259** = Protokoll basierte indizierte Sicht mit manuellem Filter.<br /><br /> **261** = Protokoll basierte indizierte Sicht mit manueller Sicht.<br /><br /> **263** = Protokoll basierte indizierte Sicht mit manuellem Filter und manueller Sicht.<br /><br /> **320** = indizierte Sicht (nur Schema).<br /><br />|  
 |**status**|**tinyint**|Kann das [& (Bitweises and)-](../../t-sql/language-elements/bitwise-and-transact-sql.md) Ergebnis einer oder mehrerer oder dieser Artikeleigenschaften sein:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = der Artikel ist aktiv.<br /><br /> **0x08** = schließt den Spaltennamen in INSERT-Anweisungen ein.<br /><br /> **0x16** = parametrisierte Anweisungen verwenden.<br /><br /> **0x32** = parametrisierte Anweisungen verwenden und den Spaltennamen in INSERT-Anweisungen einschließen.|  
 |**filter**|**nvarchar (257)**|Die gespeicherte Prozedur, mit der die Tabelle horizontal gefiltert wird. Diese gespeicherte Prozedur muss mit der FOR REPLICATION-Klausel erstellt werden.|  
-|**Beschreibung**|**nvarchar(255)**|Beschreibungseintrag für den Artikel.|  
+|**description**|**nvarchar(255)**|Beschreibungseintrag für den Artikel.|  
 |**insert_command**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Einfügungen bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Updates bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**delete_command**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Löschungen bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
@@ -93,7 +93,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helparticle** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -105,9 +105,9 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Artikeleigenschaften](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_changearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_droparticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

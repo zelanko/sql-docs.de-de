@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c6f91c8064316c8d1fa94b88a4a5c123a652cb5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0515c57b3c3249cc748c2ab96a12c2c1ef35d700
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454764"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538377"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; capture_instance &gt; _CT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88454764"
 |*\<captured source table columns>*|Variiert|Bei den verbleibenden Spalten in der Änderungstabelle handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Tabellen identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle in diese Tabelle aufgenommen.|  
 |**__ $ command_id** |**int** |Verfolgt die Reihenfolge der Vorgänge innerhalb einer Transaktion. |  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 
 Die Spalte " `__$command_id` Spalte war" wurde in einem kumulativen Update in den Versionen 2012 bis 2016 eingeführt. Informationen zur Version und zum Herunterladen finden Sie im KB-Artikel 3030352 unter [Korrektur: die Änderungs Tabelle wird nach dem Aktivieren von Change Data Capture für eine Microsoft SQL Server Datenbank falsch für aktualisierte Zeilen angeordnet](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Weitere Informationen finden Sie unter unter [Brechung der CDC-Funktion nach dem Upgrade auf das neueste Cu für SQL Server 2012, 2014 und 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 

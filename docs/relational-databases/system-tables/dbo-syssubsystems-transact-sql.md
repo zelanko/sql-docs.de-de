@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - syssubsystems system table
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f208311142cd5f58efdbda884d0e336de70e37c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4124ca1df5ef49984cb8e614ece4e37461ef1974
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469100"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538330"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88469100"
 |**stop_entry_point**|**nvarchar(30)**|Funktion, die beim Beenden der Ausführung eines Subsystems aufgerufen wird.|  
 |**max_worker_threads**|**int**|Maximale Anzahl paralleler Schritte für ein bestimmtes Subsystem.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Nur Mitglieder der festen Serverrolle **sysadmin** können auf diese Tabelle zugreifen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

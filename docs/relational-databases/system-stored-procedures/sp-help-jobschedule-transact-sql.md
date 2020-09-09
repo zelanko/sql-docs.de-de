@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 002534c38b5060dca0457d0c704194db037b93b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5d74890ab154700159fcf6ca086f88cd2ac57409
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481273"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538824"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,7 +86,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 > **Hinweis: sp_help_jobschedule** gibt Werte aus den **dbo.sysjobzeitpläne** und **dbo.sysplant** Systemtabellen in **msdb**zurück. **sysjobzeitpläne** werden alle 20 Minuten aktualisiert. Dies kann Auswirkungen auf die Werte haben, die von dieser gespeicherten Prozedur zurückgegeben werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Parameter von **sp_help_jobschedule** können nur in bestimmten Kombinationen verwendet werden. Wenn *schedule_id* angegeben wird, können weder *job_id* noch *job_name* angegeben werden. Andernfalls können die Parameter *job_id* oder *job_name* mit *schedule_name*verwendet werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
