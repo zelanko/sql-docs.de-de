@@ -74,7 +74,7 @@ GO
   
  Wenn Sie eine Aufzeichnungsinstanz erstellen, können Sie die folgenden Optionen angeben:  
   
- **Columns in the source table to be captured**.  
+ **Aufzuzeichnende Spalten in der Quelltabelle**  
   
  Standardmäßig werden alle Spalten in der Quelltabelle als aufgezeichnete Spalten identifiziert. Wenn nur eine Teilmenge der Spalten nachverfolgt werden soll, z. B. aus Gründen des Datenschutzes oder der Leistung, geben Sie diese Teilmenge mithilfe des Parameters *\@captured_column_list* an.  
   
