@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6722a59873dcf672fe2c1b953931f44da4515a8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f214abb7b20c42ec62f1bc35d85222e0033798d1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446983"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544753"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_monitor
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |**last_run**|Zeit **sp_monitor** zuletzt ausgeführt.|  
 |**current_run**|Der Zeitraum, **sp_monitor** ausgeführt wird.|  
-|**Vorsprung**|Anzahl der seit dem Ausführen **sp_monitor** verstrichenen Sekunden.|  
+|**Sekunden**|Anzahl der seit dem Ausführen **sp_monitor** verstrichenen Sekunden.|  
 |**cpu_busy**|Die Anzahl von Sekunden, während derer von der CPU des Servercomputers für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Vorgänge ausgeführt wurden.|  
 |**io_busy**|Die Anzahl von Sekunden, während derer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Eingabe- und Ausgabevorgänge ausgeführt wurden.|  
 |**Gesch**|Die Anzahl von Sekunden, während derer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sich im Leerlauf befand.|  
@@ -60,7 +60,7 @@ sp_monitor
 |**total_errors**|Die Anzahl von Fehlern, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Lesen und Schreiben festgestellt wurden.|  
 |**connections**|Die Anzahl von Anmeldungen oder versuchten Anmeldungen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mithilfe einer Reihe von Funktionen quantitative Angaben über die ausgeführten Vorgänge gespeichert. Beim Ausführen **sp_monitor** werden die aktuellen Werte angezeigt, die von diesen Funktionen zurückgegeben werden, und es wird angezeigt, wie stark Sie sich seit der letzten Ausführung der Prozedur geändert haben.  
   
  Für jede Spalte wird die Statistik im Format *Number*(*Number*)-*Number*% oder *Number*(*Number*) ausgegeben. Die erste *Zahl* bezieht sich auf die Anzahl von Sekunden (für **CPU_BUSY**, **IO_BUSY**und **Leerlauf**) oder die Gesamtzahl (für die anderen Variablen) seit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Neustart von. Die *Zahl* in Klammern bezieht sich auf die Anzahl der Sekunden oder die Gesamtzahl seit dem letzten Ausführen **sp_monitor** . Der Prozentsatz ist der Prozentsatz der Zeit seit dem letzten Ausführen **sp_monitor** . Wenn der Bericht z. b. **CPU_BUSY** als 4250 (215)-68% anzeigt, ist die CPU ausgelastet, 4250 Sekunden seit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] letzten Start, 215 Sekunden seit der letzten Betriebs **sp_monitor** und 68 Prozent der Gesamtzeit seit dem letzten Ausführen **sp_monitor** .  
@@ -97,7 +97,7 @@ total_read     total_write   total_errors    connections
 ```
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_who &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

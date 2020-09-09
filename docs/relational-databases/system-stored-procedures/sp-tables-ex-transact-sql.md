@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480983"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544732"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,16 +55,16 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'` Der Typ der zurück zugebende Tabelle. *TABLE_TYPE* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL und kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Alias**|Der Name eines Alias|  
 |**GLOBAL TEMPORARY**|Der Name einer systemweit verfügbaren temporären Tabelle|  
 |**LOCAL TEMPORARY**|Der Name einer nur für den aktuellen Auftrag verfügbaren temporären Tabelle|  
-|**Synonym**|Der Name eines Synonyms|  
+|**SYNONYM**|Der Name eines Synonyms|  
 |**System Tabelle**|Der Name einer Systemtabelle|  
 |**System Ansicht**|Der Name einer Systemsicht|  
-|**Glaub**|Der Name einer Benutzertabelle|  
-|**Anschauung**|Der Name einer Sicht|  
+|**TABLE**|Der Name einer Benutzertabelle|  
+|**VIEW**|Der Name einer Sicht|  
   
 `[ @fUsePattern = ] 'fUsePattern'` Bestimmt, ob die Zeichen **_**, **%** , **[** und **]** als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
@@ -81,7 +81,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_TYPE**|**varchar(32)**|Tabelle, Systemtabelle oder Sicht.|  
 |**HINWEISE**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_tables_ex** wird ausgeführt, indem das TABLES-Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters abgefragt wird, der *table_server*entspricht. Die Parameter *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
   
  **sp_tables_ex** gibt ein leeres Resultset zurück, wenn der OLE DB Anbieter des angegebenen Verbindungs Servers das TABLES-Rowset der **IDBSchemaRowset** -Schnittstelle nicht unterstützt.  

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - FriendlyName property
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6c94c32e9a124a708ff5b399abd30702a0540fee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a58865b030f5dda6db0e392f3f6ae81ee38715eb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460116"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545266"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>FriendlyName-Eigenschaft (SecurityCertificate-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.FriendlyName [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der einen alternativen Anzeigenamen für das Sicherheitszertifikat angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

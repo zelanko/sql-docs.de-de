@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4243bd6395095a586ceffab1c4b00f8cf99a220b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 351f97ed08d1a6a79f8611d19842dc93138277ce
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493711"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543931"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,17 +72,17 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle stellt Informationen zur Cursordeklarationsschnittstelle bereit und enthält die möglichen Werte für die Eigenschaftenspalte.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |API|Cursor wurde mithilfe einer der Datenzugriffs-APIs (ODBC, OLE DB) deklariert.|  
 |TSQL|Cursor wurde mithilfe der DECLARE CURSOR-Syntax von Transact-SQL deklariert.|  
   
  Die folgende Tabelle stellt Informationen zum Cursortyp bereit und enthält die möglichen Werte für die Eigenschaftenspalte.  
   
-|type|Beschreibung|  
+|type|BESCHREIBUNG|  
 |----------|-----------------|  
 |Keyset|Cursor wurde als Keyset deklariert.|  
 |Dynamisch|Cursor wurde als dynamisch deklariert.|  
@@ -91,7 +91,7 @@ dm_exec_cursors (session_id | 0 )
   
  Die folgende Tabelle stellt Informationen zur Cursorparallelität bereit und enthält die möglichen Werte für die Eigenschaftenspalte.  
   
-|Parallelität|Beschreibung|  
+|Parallelität|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |Nur Leseberechtigung|Cursor wurde als schreibgeschützt deklariert.|  
 |Scroll Locks|Cursor verwendet Scrollsperren.|  
@@ -99,7 +99,7 @@ dm_exec_cursors (session_id | 0 )
   
  Die folgende Tabelle stellt Informationen zum Cursorbereich bereit und enthält die möglichen Werte für die Eigenschaftenspalte.  
   
-|`Scope`|Beschreibung|  
+|Bereich|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Lokal|Gibt an, dass der Gültigkeitsbereich des Cursors lokal zu dem Batch, der gespeicherten Prozedur oder dem Trigger ist, in dem bzw. in der er erstellt wurde.|  
 |Global|Gibt an, dass der Bereich des Cursors global zur Verbindung ist.|  
@@ -117,7 +117,7 @@ WHERE DATEDIFF(hh, c.creation_time, GETDATE()) > 36;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  

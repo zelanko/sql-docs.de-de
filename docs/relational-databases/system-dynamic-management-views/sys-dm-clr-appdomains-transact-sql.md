@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2002b70dc0b949e3628f49e6b6bb9fa1fccbefb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ac0a451dd88d79ab1847d4c5414fadeb01724e3d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490043"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545342"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88490043"
 |**creation_time**|**datetime**|Uhrzeit, zu der die **AppDomain** erstellt wurde. Da **AppDomains** zwischengespeichert und wieder verwendet werden, um die Leistung zu verbessern, ist **creation_time** nicht notwendigerweise die Zeit, zu der der Code ausgeführt wurde.|  
 |**db_id**|**int**|ID der Datenbank, in der diese **AppDomain** erstellt wurde. Code, der in zwei verschiedenen Datenbanken gespeichert ist, kann eine **AppDomain**nicht gemeinsam nutzen|  
 |**user_id**|**int**|ID des Benutzers, dessen Objekte in dieser **AppDomain**ausgeführt werden können.|  
-|**Status**|**nvarchar(128)**|Ein Deskriptor für den aktuellen Status der **AppDomain**. Eine AppDomain kann sich in verschiedenen Zuständen befinden, von Erstellung bis Löschung. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.|  
+|**state**|**nvarchar(128)**|Ein Deskriptor für den aktuellen Status der **AppDomain**. Eine AppDomain kann sich in verschiedenen Zuständen befinden, von Erstellung bis Löschung. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.|  
 |**strong_refcount**|**int**|Anzahl der starken Verweise auf diese **AppDomain**. Dies gibt die Anzahl der zurzeit ausgeführten Batches an, die diese **AppDomain**verwenden. Beachten Sie, dass durch die Ausführung dieser Ansicht ein **starker Ref**-Wert erstellt wird. auch wenn derzeit kein Code ausgeführt wird, hat **strong_refcount** den Wert 1.|  
 |**weak_refcount**|**int**|Anzahl der schwachen Verweise auf diese **AppDomain**. Gibt an, wie viele Objekte innerhalb der **AppDomain** zwischengespeichert werden. Wenn Sie ein verwaltetes Datenbankobjekt ausführen, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es zur späteren Wiederverwendung in der **AppDomain** zwischengespeichert. Dadurch wird die Leistung verbessert.|  
 |**cost**|**int**|Kosten der **AppDomain**. Je höher die Kosten, desto wahrscheinlicher ist es, dass diese **AppDomain** bei ungenügendem Arbeitsspeicher entladen wird. Die Kosten hängen in der Regel davon ab, wie viel Arbeitsspeicher für die Neuerstellung dieser **AppDomain**benötigt wird.|  
@@ -52,20 +52,20 @@ ms.locfileid: "88490043"
 |**total_allocated_memory_kb**|**bigint**|Gesamtgröße, in Kilobyte, aller Speicherbelegungen durch die Anwendungsdomäne seit der Erstellung, ohne Abzug des bei Sammlungsvorgängen freigegebenen Speichers. Dies entspricht **System. AppDomain. monitoringtotalzustellungs-Speicher MemorySize**.|  
 |**survived_memory_kb**|**bigint**|Menge der Daten in KB, die die letzte vollständige Sammlung mit exklusivem Zugriff überdauert haben, und von denen bekannt ist, dass sie von der aktuellen Anwendungsdomäne referenziert werden. Dies entspricht **System. AppDomain. MonitoringSurvivedMemorySize**.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Zwischen **dm_clr_appdomains. appdomain_address** und **dm_clr_loaded_assemblies. appdomain_address**besteht eine 1: Mai-Beziehung.  
   
  In den folgenden Tabellen sind mögliche **Zustands** Werte, deren Beschreibungen und deren Auftreten im **AppDomain** -Lebenszyklus aufgeführt. Sie können diese Informationen verwenden, um den Lebenszyklus einer **AppDomain** zu verfolgen und um zu überwachen, dass verdächtige oder sich wiederholende **AppDomain** -Instanzen entladen werden, ohne dass das Windows-Ereignisprotokoll analysiert werden muss.  
   
 ## <a name="appdomain-initialization"></a>AppDomain-Initialisierung  
   
-|Staat|Beschreibung|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|Die **AppDomain** wird erstellt.|  
   
 ## <a name="appdomain-usage"></a>AppDomain-Verwendung  
   
-|Staat|Beschreibung|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|Die **AppDomain** der Laufzeit kann von mehreren Benutzern verwendet werden.|  
 |E_APPDOMAIN_SINGLEUSER|Die **AppDomain** ist bereit für die Verwendung in DDL-Vorgängen. Diese unterscheiden sich von E_APPDOMAIN_SHARED, indem im Gegensatz zu DDL-Vorgängen freigegebene AppDomains für die CLR-Integration verwendet werden, . Solche AppDomains werden von anderen gleichzeitigen Vorgängen isoliert.|  
@@ -73,7 +73,7 @@ ms.locfileid: "88490043"
   
 ## <a name="appdomain-cleanup"></a>AppDomain-Cleanup  
   
-|Staat|Beschreibung|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat angefordert, dass die CLR die **AppDomain**entladen soll, in der Regel, weil die Assembly, die die verwalteten Datenbankobjekte enthält, geändert oder gelöscht wurde.|  
 |E_APPDOMAIN_UNLOADED|Die CLR hat die **AppDomain**entladen. Dies ist normalerweise das Ergebnis eines Eskalations Verfahrens aufgrund von **ThreadAbort**, **outhfmemory**oder einer nicht behandelten Ausnahme im Benutzercode.|  
@@ -109,7 +109,7 @@ from sys.dm_clr_appdomains
 where appdomain_id = 15);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sys. dm_clr_loaded_assemblies &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Common Language Runtime &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   

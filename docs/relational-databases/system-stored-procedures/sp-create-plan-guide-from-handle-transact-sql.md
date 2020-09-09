@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 909bd7489421abb4b9ee1650c267eb7a35c1e072
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ddb185ca0a5cf0e7abe0e51992d3e607555a9ea1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447390"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543618"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  Wenn NULL angegeben ist oder kein Anweisungsoffset angegeben ist, wird eine Planhinweisliste für jede Anweisung im Batch unter Verwendung des Abfrageplans für das angegebene Planhandle erstellt. Die daraus resultierenden Planhinweislisten entsprechen den Planhinweislisten, die mit dem USE PLAN-Abfragehinweis die Verwendung eines bestimmten Plans erzwingen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Planhinweislisten können nicht für alle Anweisungstypen erstellt werden. Wenn für eine Anweisung im Batch keine Planhinweisliste erstellt werden kann, ignoriert die gespeicherte Prozedur die Anweisung und fährt mit der nächsten Anweisung im Batch fort. Wenn eine Anweisung mehrfach im selben Batch vorkommt, wird der Plan für das letzte Vorkommen aktiviert, und die vorherigen Pläne für die Anweisung werden deaktiviert. Wenn in einer Planhinweisliste keine Anweisungen im Batch verwendet werden können, wird Fehler 10532 ausgegeben, und die Anweisung schlägt fehl. Es wird empfohlen, das Planhandle immer aus der dynamischen Verwaltungssicht sys.dm_exec_query_stats abzurufen, um das Auftreten dieses Fehlers zu verhindern.  
   
 > [!IMPORTANT]  

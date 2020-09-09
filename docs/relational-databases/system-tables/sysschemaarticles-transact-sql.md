@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysschemaarticles system table
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f82f2a75d33eab462385f063ccba404781ed531a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10ad8eddd1d71b05f3c350d43f2205372685bcd4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419054"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545317"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88419054"
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Die Artikel-ID.|  
 |**creation_script**|**nvarchar(255)**|Der Pfad und der Name eines Artikelschemaskripts, mit dem die Zieltabelle erstellt wird.|  
-|**Beschreibung**|**nvarchar(255)**|Der Beschreibungseintrag für den Artikel.|  
+|**description**|**nvarchar(255)**|Der Beschreibungseintrag für den Artikel.|  
 |**dest_object**|**sysname**|Der Name des Objekts in der Abonnementdatenbank, wenn der Artikel vom Typ schema only ist, wie z. B. eine gespeicherte Prozedur, eine Sicht oder eine UDF.|  
 |**name**|**sysname**|Der Name des Artikels vom Typ schema only in einer Veröffentlichung.|  
 |**objid**|**int**|Der Objektbezeichner des Basisobjekts des Artikels. Dies kann der Objektbezeichner einer Prozedur, einer Sicht, einer indizierten Sicht oder einer UDF sein.|  

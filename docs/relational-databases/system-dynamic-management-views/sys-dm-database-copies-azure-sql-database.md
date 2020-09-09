@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e4dd3890969a1820bd38712d9533c68f6fd9d0d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 178fda9bb96fc84acd1527f172c6a6728a1ec22e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419774"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543922"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88419774"
 Verwenden Sie zum Zurückgeben von Informationen über georeplikationsverknüpfungen die Sichten [sys. geo_replication_links](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md) oder [sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (verfügbar in SQL-Datenbank V12).
   
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Die ID der aktuellen Datenbank in der `sys.databases`-Sicht.|  
 |**start_date**|**datetimeoffset**|Die UTC-Zeit in einem regionalen [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datencenter, zu der das Kopieren der Datenbank initiiert wurde.|  
@@ -59,7 +59,7 @@ Verwenden Sie zum Zurückgeben von Informationen über georeplikationsverknüpfu
 ## <a name="permissions"></a>Berechtigungen  
  Diese Ansicht ist nur in der **Master** -Datenbank für den Prinzipal Anmelde Namen auf Serverebene verfügbar.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Sie können die **sys. dm_database_copies** -Sicht in der **Master** -Datenbank der Quell-oder Ziel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server verwenden. Wenn das Kopieren der Datenbank erfolgreich abgeschlossen und die neue Datenbank online geschaltet wird, wird die Zeile in der **sys. dm_database_copies** -Sicht automatisch entfernt.  
   
   

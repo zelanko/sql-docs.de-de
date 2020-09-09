@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a86eec0b939a579d01c36d8c9739f8d9251636
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481513"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543723"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  Diese Tabelle beschreibt die änderbaren Eigenschaften der Veröffentlichung sowie die Einschränkungen für die Werte dieser Eigenschaften.  
   
-|Eigenschaft|Wert|Beschreibung|  
+|Eigenschaft|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Anonyme Abonnements können für die angegebene Veröffentlichung erstellt werden, und *immediate_sync* muss ebenfalls den Wert " **true**" aufweisen. Kann für Peer-zu-Peer-Veröffentlichungen nicht geändert werden.|  
 ||**false**|Anonyme Abonnements können für die Veröffentlichung nicht erstellt werden. Kann für Peer-zu-Peer-Veröffentlichungen nicht geändert werden.|  
@@ -73,7 +73,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**sub reinit**|Wenn für Updateabonnenten ein Konflikt auftritt, muss das Abonnement erneut initialisiert werden. Diese Eigenschaft kann nur geändert werden, wenn keine aktiven Abonnements vorhanden sind. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 ||**sub wins**|Richtlinie zur Konfliktlösung für Updateabonnenten, bei der der Abonnent den Konflikt gewinnt. Diese Eigenschaft kann nur geändert werden, wenn keine aktiven Abonnements vorhanden sind. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 |**conflict_retention**||**int** , der die Beibehaltungs Dauer für den Konflikt in Tagen angibt. Die Standardaufbewahrungsdauer beträgt 14 Tage. der Wert **0** bedeutet, dass kein Konflikt Bereinigungs Vorgang erforderlich ist. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
-|**Beschreibung**||Eine optionale Beschreibung der Veröffentlichung.|  
+|**description**||Eine optionale Beschreibung der Veröffentlichung.|  
 |**enabled_for_het_sub**|**true**|Aktiviert die Unterstützung von Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten durch die Veröffentlichung. **enabled_for_het_sub** kann nicht geändert werden, wenn Abonnements für die Veröffentlichung vorhanden sind. Sie müssen möglicherweise [gespeicherte Replikations Prozeduren (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) ausführen, um die folgenden Anforderungen zu erfüllen, bevor Sie **enabled_for_het_sub** auf "true" festlegen:<br /> - **allow_queued_tran** muss den Wert **false**aufweisen.<br /> - **allow_sync_tran** muss den Wert **false**aufweisen.<br /> Wenn **enabled_for_het_sub** in **true** geändert wird, können vorhandene Veröffentlichungs Einstellungen geändert werden. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden.|  
 ||**false**|Die Veröffentlichung unterstützt Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten nicht. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden.|  
 |**enabled_for_internet**|**true**|Die Veröffentlichung ist für das Internet aktiviert. FTP (File Transfer Protocol) kann dazu verwendet werden, die Momentaufnahmedateien an einen Abonnenten zu übermitteln. Die Synchronisierungsdateien für die Veröffentlichung werden im folgenden Verzeichnis abgelegt: C:\Programme\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* darf nicht NULL sein. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden.|  
@@ -102,13 +102,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**0**|DDL-Anweisungen werden nicht repliziert. Diese Eigenschaft kann für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichungen nicht geändert werden. Die Replikation von Schemaänderungen kann nicht deaktiviert werden, wenn Peer-zu-Peer-Replikation verwendet wird.|  
 |**replicate_partition_switch**|**true**|ALTER TABLE... Switch-Anweisungen, die für die veröffentlichte Datenbank ausgeführt werden, sollten auf Abonnenten repliziert werden. Diese Option ist nur gültig, wenn *allow_partition_switch* auf true festgelegt ist. Weitere Informationen finden Sie unter [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
 ||**false**|ALTER TABLE... Switch-Anweisungen sollten nicht auf Abonnenten repliziert werden.|  
-|**Beibehaltung**||**int** , der die Beibehaltungs Dauer für Abonnement Aktivitäten in Stunden darstellt. Wenn ein Abonnement innerhalb der Beibehaltungsdauer nicht aktiv ist, wird es entfernt.|  
+|**zurück**||**int** , der die Beibehaltungs Dauer für Abonnement Aktivitäten in Stunden darstellt. Wenn ein Abonnement innerhalb der Beibehaltungsdauer nicht aktiv ist, wird es entfernt.|  
 |**snapshot_in_defaultfolder**|**true**|Momentaufnahmedateien werden im Standardmomentaufnahmeordner gespeichert. Wenn *alt_snapshot_folder*ebenfalls angegeben ist, werden Momentaufnahme Dateien sowohl am Standard Speicherort als auch an anderen Speicherorten gespeichert.|  
 ||**false**|Momentaufnahme Dateien werden an dem alternativen Speicherort gespeichert, der durch *alt_snapshot_folder*angegeben wird.|  
 |**status**|**active**|Veröffentlichungsdaten sind für Abonnenten sofort beim Erstellen der Veröffentlichung verfügbar. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 ||**inactive**|Veröffentlichungsdaten sind für Abonnenten nicht beim Erstellen der Veröffentlichung verfügbar. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 |**sync_method**|**native**|Verwendet beim Synchronisieren von Abonnements eine Massenkopierausgabe aller Tabellen im einheitlichen Modus.|  
-||**Art**|Verwendet beim Synchronisieren von Abonnements eine Massenkopierausgabe aller Tabellen im Zeichenmodus.|  
+||**character**|Verwendet beim Synchronisieren von Abonnements eine Massenkopierausgabe aller Tabellen im Zeichenmodus.|  
 ||**findende**|Verwendet eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus, sperrt jedoch die Tabellen beim Generieren der Momentaufnahme nicht. Nicht für die Momentaufnahmereplikation gültig.|  
 ||**concurrent_c**|Verwendet eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus, sperrt jedoch die Tabellen beim Generieren der Momentaufnahme nicht. Nicht für die Momentaufnahmereplikation gültig.|  
 |**TaskID**||Diese Eigenschaft wurde als veraltet markiert und wird nicht mehr unterstützt.|  
@@ -134,7 +134,7 @@ Weitere Informationen zu den Eigenschaften, bei deren Änderung die Generierung 
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_changepublication** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  Nachdem Sie eine der folgenden Eigenschaften geändert haben, müssen Sie eine neue Momentaufnahme generieren, und Sie müssen den Wert **1** für den *force_invalidate_snapshot* -Parameter angeben.  

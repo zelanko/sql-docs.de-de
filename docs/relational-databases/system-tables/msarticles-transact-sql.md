@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSarticles system table
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f6a33127f1ba95fb17daff02ddcfaf64232cf94c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3123834712540681748ab39edbfa6ee39d78ea14
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463893"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545717"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88463893"
 |**destination_object**|**sysname**|Der Name der auf dem Abonnenten erstellten Tabelle.|  
 |**source_owner**|**sysname**|Der Name des Schemas der Quelltabelle auf dem Verleger.|  
 |**source_object**|**sysname**|Der Name des Quellobjekts, aus dem der Artikel hinzugefügt werden soll.|  
-|**Beschreibung**|**nvarchar(255)**|Die Beschreibung des Artikels.|  
+|**description**|**nvarchar(255)**|Die Beschreibung des Artikels.|  
 |**destination_owner**|**sysname**|Der Name des Schemas der auf dem Abonnenten erstellten Tabelle.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

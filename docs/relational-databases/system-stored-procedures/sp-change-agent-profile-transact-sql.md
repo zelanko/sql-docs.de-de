@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_profile
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 752cbdcb0e1908ace200ae769e7c42d85ad6d044
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f920c8a65deb7b71ca6e780d19f06c3a1b94ce24
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447364"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543727"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,14 +48,14 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
  In dieser Tabelle werden die Profileigenschaften beschrieben, die geändert werden können.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
-|**Beschreibung**|Beschreibung für das Profil.|  
+|**description**|Beschreibung für das Profil.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_change_agent_profile** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

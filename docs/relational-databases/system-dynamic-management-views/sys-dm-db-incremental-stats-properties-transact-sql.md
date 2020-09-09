@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f6661c9dd7f581bb7c8dccc62b0b11547a73b4fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: caa090c1835c34bd2d1da6d6b3bcb6caa4077217
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460442"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544802"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>Argumente  
  *object_id*  
- ID des Objekts in der aktuellen Datenbank, für die Eigenschaften einer der enthaltenen inkrementellen Statistiken angefordert werden. *object_id* ist **int**.  
+ ID des Objekts in der aktuellen Datenbank, für die Eigenschaften einer der enthaltenen inkrementellen Statistiken angefordert werden. *object_id* ist vom Datentyp **int**.  
   
  *stats_id*  
  ID der Statistik für die angegebene *object_id*. Die Statistik-ID kann aus der dynamischen Verwaltungssicht [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) abgerufen werden. *stats_id* ist **int**.  

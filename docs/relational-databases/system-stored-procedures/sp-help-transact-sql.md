@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21116db0cc5faa63a54ffda5740f1c93df27c676
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486040"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543344"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +67,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Storage_type**|**nvarchar (** 128 **)**|Name des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typs|  
     |**Länge**|**smallint**|Physische Länge des Datentyps (in Bytes)|  
     |**Prec**|**int**|Genauigkeit (Gesamtzahl der Ziffern)|  
-    |**Skalierung**|**int**|Anzahl der Stellen nach dem Dezimaltrennzeichen|  
+    |**Skalieren**|**int**|Anzahl der Stellen nach dem Dezimaltrennzeichen|  
     |**NULL zulassen**|**varchar (** 35 **)**|Zeigt an, ob NULL-Werte zulässig sind: Yes oder No.|  
     |**Default_name**|**nvarchar (** 128 **)**|Name eines an diesen Typ gebundenen Standards.<br /><br /> NULL = Es ist kein Standard gebunden.|  
     |**Rule_name**|**nvarchar (** 128 **)**|Name einer an diesen Typ gebundenen Regel.<br /><br /> NULL = Es ist kein Standard gebunden.|  
@@ -95,7 +95,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Berechnete**|**varchar (** 35 **)**|Zeigt an, ob die Werte in der Spalte berechnet werden: Yes oder No.|  
         |**Länge**|**int**|Spaltenlänge in Bytes<br /><br /> Hinweis: Wenn der Spaltendatentyp ein Typ mit umfangreichen Werten (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** oder **XML**) ist, wird der Wert als-1 angezeigt.|  
         |**Prec**|**char (** 5 **)**|Spaltengenauigkeit|  
-        |**Skalierung**|**char (** 5 **)**|Dezimalstellen einer Spalte|  
+        |**Skalieren**|**char (** 5 **)**|Dezimalstellen einer Spalte|  
         |**NULL zulassen**|**varchar (** 35 **)**|Zeigt an, ob in der Spalte NULL-Werte zulässig sind: Yes oder No.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Nachfolgende Leerzeichen entfernen. Gibt Yes oder No zurück.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
@@ -106,9 +106,9 @@ sp_help [ [ @objname = ] 'name' ]
         |Spaltenname|Datentyp|BESCHREIBUNG|  
         |-----------------|---------------|-----------------|  
         |**Identität**|**nvarchar (** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
-        |**Säen**|**numeric**|Startwert für die Identitätsspalte|  
+        |**Seed**|**numeric**|Startwert für die Identitätsspalte|  
         |**Increment**|**numeric**|Schrittweite für Werte in dieser Spalte|  
-        |**Nicht für Replikation**|**int**|Die Identity-Eigenschaft wird nicht erzwungen, wenn eine Replikations Anmeldung, z. b. **sqlrepl**, Daten in die Tabelle einfügt:<br /><br /> 1 = True<br /><br /> 0 = False|  
+        |**Not For Replication**|**int**|Die Identity-Eigenschaft wird nicht erzwungen, wenn eine Replikations Anmeldung, z. b. **sqlrepl**, Daten in die Tabelle einfügt:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Zusätzliches Resultset, das für Spalten zurückgegeben wird:  
   
@@ -156,10 +156,10 @@ sp_help [ [ @objname = ] 'name' ]
         |**Typ**|**nvarchar (** 128 **)**|Datentyp des Parameters der gespeicherten Prozedur|  
         |**Länge**|**smallint**|Maximale physische Speicherlänge in Bytes|  
         |**Prec**|**int**|Genauigkeit oder Gesamtzahl der Ziffern|  
-        |**Skalierung**|**int**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
+        |**Skalieren**|**int**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
         |**Param_order**|**smallint**|Reihenfolge der Parameter|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Prozedur **sp_help** sucht nur in der aktuellen Datenbank nach einem Objekt.  
   
  Wenn *Name* nicht angegeben wird, werden in **sp_help** Objektnamen, Besitzer und Objekttypen für alle Objekte in der aktuellen Datenbank aufgelistet. **sp_helptrigger** enthält Informationen zu Triggern.  
@@ -198,7 +198,7 @@ GO
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sysObjekte &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

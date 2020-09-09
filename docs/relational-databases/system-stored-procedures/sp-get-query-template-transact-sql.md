@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b6bef227f94188afe6f1eade92c54ff119982902
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 97a6b25d2a0a4d927f060fe8d693cb478b7b2977
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447092"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543360"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_get_query_template
  @parameters  
  Ist ein Ausgabeparameter vom Typ **nvarchar (max)**, der wie angegeben bereitgestellt wird, um ein Zeichenfolgenliteral der Parameternamen und Datentypen zu empfangen, die in parametrisiert wurden @templatetext .  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der Parameter sp_get_query_template gibt in folgenden Situationen einen Fehler zurück:  
   
 -   In *query_text*werden keine konstanten Literalwerte parametrisiert.  
@@ -114,7 +114,7 @@ SELECT @my_parameters;
 >  Die Reihenfolge und Benennung von Parametern in der Ausgabe von sp_get_query_template kann sich von einem zum nächsten Quick Fix Engineering, Service Pack und Versionsupgrade für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändern. Upgrades können auch bewirken, dass eine andere Gruppe mit konstanten Literalen für dieselbe Abfrage parametrisiert und unterschiedliche Abstände auf die Ergebnisse beider Ausgabeparameter angewendet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1faec2f41d2396102b4ee675f2dac40be4b9b216
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2942c06e5d63c0be25a05cd34e871447a29e7d6d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489499"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543583"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  Option für den Bildlauf. *scrollopt* ist ein optionaler Parameter, der einen der folgenden **int** -Eingabewerte erfordert.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -75,7 +75,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  Option für die Parallelitätssteuerung. *ccopt* ist ein optionaler Parameter, der einen der folgenden **int** -Eingabewerte erfordert.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (vormals bekannt als LOCKCC)|  
@@ -148,7 +148,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Wenn die sp_cursoropen Prozedur erfolgreich ausgeführt wird, werden die RPC-Rückgabe Parameter und ein Resultset mit TDS-Spalten Formatinformationen (0xa0 & 0xA1-Meldungen) gesendet. Andernfalls wird mindestens eine TDS-Fehlermeldung gesendet. In beiden Fällen werden keine Zeilendaten zurückgegeben, *und die Anzahl* der abgeschlossenen Nachrichten ist 0 (null). Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version vor 7.0 verwenden, werden 0xa0 und 0xa1 (Standard für SELECT-Anweisungen) zusammen mit den Tokendatenströmen 0xa5 und 0xa4 zurückgegeben. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 verwenden, wird 0x81 (Standard für SELECT-Anweisungen) zusammen mit den Tokendatenströmen 0xa5 und 0xa4 zurückgegeben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="stmt-parameter"></a>stmt-Parameter  
  Wenn *stmt* die Ausführung einer gespeicherten Prozedur angibt, können die Eingabeparameter entweder als Konstanten als Teil der *stmt* -Zeichenfolge definiert oder als *boundparam* -Argumente angegeben werden. Deklarierte Variablen können auf diese Weise als gebundene Parameter übergeben werden.  

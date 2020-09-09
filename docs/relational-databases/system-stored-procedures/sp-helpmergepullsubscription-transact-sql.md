@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b74d9846d672a59adbde9eada760af1d60fc725e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489318"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543274"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,9 +62,9 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**status**|**int**|Abonnementstatus:<br /><br /> **0** = inaktives Abonnement<br /><br /> **1** = aktives Abonnement<br /><br /> **2** = gelöschtes Abonnement<br /><br /> **3** = getrenntes Abonnement<br /><br /> **4** = angefügtes Abonnement<br /><br /> **5** = Abonnement wurde für die erneute Initialisierung mit Upload gekennzeichnet<br /><br /> **6** = Anfügen des Abonnements fehlgeschlagen<br /><br /> **7** = aus der Sicherung wiederhergestellte Abonnements|  
 |**subscriber_type**|**int**|Typ des Abonnenten:<br /><br /> **1** = Global<br /><br /> **2** = lokal<br /><br /> **3** = anonym|  
 |**subscription_type**|**int**|Typ des Abonnements:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = anonym|  
-|**haben**|**float (8)**|Abonnementpriorität. Der Wert muss kleiner als **100,00**sein.|  
+|**priority**|**float (8)**|Abonnementpriorität. Der Wert muss kleiner als **100,00**sein.|  
 |**sync_type**|**tinyint**|Synchronisierungsart des Abonnements:<br /><br /> **1** = automatisch<br /><br /> **2** = Momentaufnahme wird nicht verwendet.|  
-|**Beschreibung**|**nvarchar(255)**|Kurze Beschreibung des Pullabonnements.|  
+|**description**|**nvarchar(255)**|Kurze Beschreibung des Pullabonnements.|  
 |**merge_jobid**|**Binary (16)**|Auftrags-ID des Merge-Agents.|  
 |**enabled_for_syncmgr**|**int**|Zeigt an, ob das Abonnement über die Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] synchronisiert werden kann.|  
 |**last_updated**|**nvarchar (26)**|Zeitpunkt, zu dem der Merge-Agent das Abonnement zuletzt erfolgreich synchronisiert hat.|  
@@ -102,7 +102,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helpmergepullsubscription** wird bei der Mergereplikation verwendet. Im Resultset wird das in **last_updated** zurückgegebene Datum als *YYYYMMDD hh: mm: SS. fff*formatiert.  
   
 ## <a name="permissions"></a>Berechtigungen  
