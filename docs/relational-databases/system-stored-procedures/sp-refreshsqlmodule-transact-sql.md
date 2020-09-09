@@ -24,15 +24,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c2621ffb96ad93d75e5b59e11963f93bf0f32eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5265d2b38f8d41be321a63b701bb286b3b793e1c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485879"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535016"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -68,7 +68,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_refreshsqlmodule** sollte ausgeführt werden, wenn Änderungen an den Objekten vorgenommen werden, die dem Modul zugrunde liegen, das sich auf seine Definition auswirkt. Andernfalls kann das Modul bei einer Abfrage oder einem Aufruf unerwartete Ergebnisse generieren. Zum Aktualisieren einer Ansicht können Sie entweder **sp_refreshsqlmodule** oder **sp_refreshview** mit den gleichen Ergebnissen verwenden.  
   
  **sp_refreshsqlmodule** wirkt sich nicht auf Berechtigungen, erweiterte Eigenschaften oder SET-Optionen aus, die dem-Objekt zugeordnet sind.  

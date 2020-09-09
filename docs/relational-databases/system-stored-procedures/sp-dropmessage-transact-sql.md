@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46c95708903063b4fade98e3d45e29e184e93efd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cb4480908dc508fb82e591b2a9dbab448f951961
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474237"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536507"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in den festen Serverrollen **sysadmin** und **serveradmin** .  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Solange nicht **all** für *language*angegeben wird, müssen alle lokalisierten Versionen der Nachricht gelöscht werden, bevor die englische Version (USA) der Nachricht gelöscht werden kann.  
   
 ## <a name="examples"></a>Beispiele  

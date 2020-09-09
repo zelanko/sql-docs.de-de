@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppeerrequests
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b16e7c25ebc47ccdb97950658de11d738a0d1666
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0ea9dce50e440c9b519032d46340b1b0a495eea0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485941"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535148"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,12 +50,12 @@ sp_helppeerrequests [ @publication = ] 'publication'
 |**id**|**int**|Identifiziert eine Anforderung.|  
 |**ung**|**sysname**|Name der Veröffentlichung, für die die Statusanforderung gesendet wurde.|  
 |**sent_date**|**datetime**|Datum und Uhrzeit, zu der die Statusanforderung gesendet wurde.|  
-|**Beschreibung**|**nvarchar(4000)**|Benutzerdefinierte Informationen, die zum Identifizieren einzelner Statusanforderungen verwendet werden können.|  
+|**description**|**nvarchar(4000)**|Benutzerdefinierte Informationen, die zum Identifizieren einzelner Statusanforderungen verwendet werden können.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helppeerrequests** wird in der Peer-zu-Peer-Transaktions Replikation verwendet.  
   
  **sp_helppeerrequests** wird verwendet, wenn eine in einer Peer-zu-Peer-Topologie veröffentlichte Datenbank wieder hergestellt wird.  

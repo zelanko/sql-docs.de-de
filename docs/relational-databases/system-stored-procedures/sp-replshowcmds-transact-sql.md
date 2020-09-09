@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replshowcmds
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: beb5ba1371c3a3e8748e5a4963106d659e7dd31f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9bbc74050303a854b39ced508caf8a49e1ffdd1d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446822"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534864"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +52,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**type**|**int**|Der Typ des Befehls.|  
 |**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] verwenden, um die Migrationsdaten zu bereinigen.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_replshowcmds** wird bei der Transaktions Replikation verwendet.  
   
  Mithilfe **sp_replshowcmds**können Sie Transaktionen anzeigen, die derzeit nicht verteilt sind (die im Transaktionsprotokoll verbleibenden Transaktionen, die nicht an den Verteiler gesendet wurden).  

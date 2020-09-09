@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_histogram
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6d6e17d2e4ae048c563a2130918d137d5c186b60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b74fa91b13b3b7f432a4b647f063a91a76e8c56a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447030"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535235"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +75,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss ein Mitglied der Datenbankrolle **public** sein. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Auf der räumlichen SSMS-Registerkarte wird eine grafische Darstellung der Ergebnisse angezeigt. Sie können die Ergebnisse für das räumliche Fenster abfragen, um die ungefähre Anzahl von Ergebniselementen abzurufen. Objekte in der Tabelle decken möglicherweise mehrere Zellen ab, daher ist die Summe der Zellen möglicherweise größer als die Anzahl der tatsächlichen Objekte.  
   
  Eine zusätzliche Zeile mit der Anzahl der Objekte, die sich außerhalb des Begrenzungsrahmens befinden oder den Rahmen des Begrenzungsrahmens berühren, kann dem Resultset hinzugefügt werden. Der **CellID** dieser Zeile ist 0, und die **Zelle** dieser Zeile enthält eine **LineString** , die das umgebende Feld darstellt. Diese Zeile stellt den gesamten Bereich außerhalb des Begrenzungsrahmens dar.  

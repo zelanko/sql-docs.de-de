@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpstats
 ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f88558a41c4a169ca61ec7cc615cd0ba5b991589
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c7779e96727eed170d8869af8c21fe68c9d1455
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447039"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535102"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,12 +55,12 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>Resultsets  
  In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |**statistics_name**|Der Name der Statistik. Gibt " **vom Datentyp sysname** " zurück und kann nicht NULL sein.|  
 |**statistics_keys**|Die Schlüssel, auf denen die Statistik basiert. Gibt **nvarchar (2078)** zurück und darf nicht NULL sein.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie DBCC SHOW_STATISTICS, um detaillierte statistische Informationen zu einem bestimmten Index oder einer bestimmten Statistik anzuzeigen. Weitere Informationen finden Sie unter [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) und [sp_helpindex &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -100,7 +100,7 @@ EXEC sp_helpstats
  `PK_Customer_CustomerID        CustomerID`  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

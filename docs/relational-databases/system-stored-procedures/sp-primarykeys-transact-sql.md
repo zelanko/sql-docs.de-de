@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_primarykeys
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 35d9639416ffa551997f5c658148f19682bb3b8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c5b967d8ac3d30147e583ffa6268cdd8d2a8d282
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485843"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534990"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**int**|Die Sequenznummer der Spalte in einem mehrspaltigen Primärschlüssel.|  
 |**PK_NAME**|**sysname**|Der Primärschlüsselbezeichner. Gibt NULL zurück, wenn nicht auf die Datenquelle anwendbar|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_primarykeys** wird ausgeführt, indem das PRIMARY_KEYS Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters abgefragt wird, der *table_server*entspricht. Die Parameter *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
   
  **sp_primarykeys** gibt ein leeres Resultset zurück, wenn der OLE DB Anbieter des angegebenen Verbindungs Servers das PRIMARY_KEYS-Rowset der **IDBSchemaRowset** -Schnittstelle nicht unterstützt.  

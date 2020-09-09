@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 378b50379ab03124db37c296be273f0a68db59d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 451d19531bbee4814fe9335bc4aaba7707263a10
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486073"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536082"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'` Der Typ der Informationen, die zurückgegeben werden sollen. Wenn *info_type* nicht angegeben ist oder NULL angegeben ist, werden alle Informationstypen zurückgegeben. *info_type* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Gibt den Anbieter der Datenquelle an.|  
 |**DBMS_VERSION**|Gibt die Version der Datenquelle an.|  
@@ -59,7 +59,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type` Der Daten Quellentyp. *dso_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1** (Standard)|ODBC-Datenquelle (ODBC data source)|  
 |**3**|OLE DB-Datenquelle|  
@@ -74,7 +74,7 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**Informationstyp**|**nvarchar (64)**|Informationstypen, wie z. B. DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
 |**Wert**|**nvarchar(512)**|Der Wert der verknüpften Informationstypen.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_dsninfo** wird bei allen Replikations Typen verwendet.  
   
  **sp_dsninfo** ruft ODBC-oder OLE DB Datenquellen Informationen ab, die anzeigen, ob die Datenbank für die Replikation oder Abfrage verwendet werden kann.  

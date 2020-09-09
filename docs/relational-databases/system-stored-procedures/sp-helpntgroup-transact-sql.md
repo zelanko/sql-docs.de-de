@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9ad0853553de51ba53b363bc400facde0c01652e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1a88caee8d332a4802f4281360f93392ae29aa2c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485940"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535167"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |**SID**|**varbinary(85)**|Sicherheits-ID (SID) von **NTGroupName**.|  
 |**Hasdbaccess**|**int**|1 = Windows-Gruppe hat Zugriffsberechtigungen für die Datenbank.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_helprole **können Sie eine Liste der**-Rollen in der aktuellen Datenbank anzeigen.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -67,11 +67,11 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 EXEC sp_helpntgroup;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_grantdbaccess &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_helprole &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_revokedbaccess &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
+ [sp_revokedbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

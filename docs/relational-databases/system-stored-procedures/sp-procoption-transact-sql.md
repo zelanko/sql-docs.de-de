@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_procoption
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 161f819ba4d9cea76b6cf904b28236f6e6f9fefc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 155600ed4a41d4ad8ee7f404426bf5eed0d77ba8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485842"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535038"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_procoption [ @ProcName = ] 'procedure'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Fehlernummer (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Start Prozeduren müssen in der **Master** -Datenbank enthalten sein und dürfen keine Eingabe-oder Ausgabeparameter enthalten. Die Ausführung der gespeicherten Prozeduren beginnt, wenn alle Datenbanken wiederhergestellt sind und beim Start die Meldung "Die Wiederherstellung ist abgeschlossen" protokolliert wird.  
   
 ## <a name="permissions"></a>Berechtigungen  

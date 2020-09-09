@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrole
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9686de531821bc5b143caac7f756f9cae5af8ac0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 120303a4682ec659bca8a1cea6814506bc364cd4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474009"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535153"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="arguments"></a>Argumente  
 `[ @srvrolename = ] 'role'` Der Name der Server Rolle "Fixed". *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. die *Rolle* kann einen der folgenden Werte aufweisen.  
   
-|Server Rolle "Fixed"|Beschreibung|  
+|Server Rolle "Fixed"|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |Serverrollen|Systemadministratoren|  
 |securityadmin|Sicherheitsadministratoren|  
@@ -61,9 +61,9 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Name der Serverrolle.|  
-|Beschreibung|**sysname**|Beschreibung von ServerRole.|  
+|BESCHREIBUNG|**sysname**|Beschreibung von ServerRole.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Feste Serverrollen werden auf Serverebene definiert und haben Berechtigungen, um spezifische Verwaltungsfunktionen auf Serverebene auszuführen. Feste Serverrollen können nicht hinzugefügt, entfernt oder geändert werden.  
   
  Informationen zum Hinzufügen oder Entfernen von Mitgliedern zu Server Rollen finden Sie unter [Alter Server Role &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
@@ -98,10 +98,10 @@ SELECT * FROM sys.server_principals WHERE type = 'R' ;
 sp_helpsrvrole 'diskadmin' ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Rollen auf Serverebene](../../relational-databases/security/authentication-access/server-level-roles.md)   
- [sp_addsrvrolemember &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpsrvrolemember &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

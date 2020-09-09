@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticle
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ec07e77bcc2dbf3c0503e348b509848880705424
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 04e67d82b6c567a5c94de8009635c31e41864b92
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485963"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535210"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**source_object**|**sysname**|Name des Quellobjekts, aus dem der Artikel hinzugefügt werden soll|  
 |**sync_object_owner**|**sysname**|Name des Besitzers der Sicht, die den veröffentlichten Artikel definiert|  
 |**sync_object**|**sysname**|Name des benutzerdefinierten Objekts, mit dem die Anfangsdaten für die Partition eingerichtet werden|  
-|**Beschreibung**|**nvarchar(255)**|Beschreibung des Artikels|  
+|**description**|**nvarchar(255)**|Beschreibung des Artikels|  
 |**status**|**tinyint**|Status des Artikels. Die folgenden Werte sind möglich:<br /><br /> **1** = inaktiv<br /><br /> **2** = aktiv<br /><br /> **5** = DDL-Vorgang (Data Definition Language) steht aus.<br /><br /> **6** = DDL-Vorgang mit einer neu generierten Momentaufnahme<br /><br /> Hinweis: Wenn ein Artikel erneut initialisiert wird, werden die Werte **5** und **6** in **2**geändert.|  
 |**creation_script**|**nvarchar(255)**|Pfad und Name eines optionalen Artikelschemaskripts, mit dem der Artikel in der Abonnementdatenbank erstellt wurde|  
 |**conflict_table**|**nvarchar (270)**|Name der Tabelle, in der die Einfüge- oder Updatekonflikte gespeichert werden.|  
@@ -88,7 +88,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helpmergearticle** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -100,8 +100,8 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Artikeleigenschaften](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [sp_addmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_changemergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_dropmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_dropmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

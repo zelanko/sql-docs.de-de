@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5a40f12ade4dcbb08609da6184fa0a96ca9926cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 38ef2fe7710d4716d9b544086f29333c96384bf6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485983"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535234"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_help_publication_access** wird bei allen Replikations Typen verwendet.  
   
  Wenn sowohl **Isntname** als auch **Isntgroup** im Resultset den Wert **0**haben, wird davon ausgegangen, dass die Anmeldung eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung ist.  

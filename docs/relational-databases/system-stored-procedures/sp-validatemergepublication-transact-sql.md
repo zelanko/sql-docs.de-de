@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validatemergepublication
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f5120e6976291f9d064346891334b2d23b15aec8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ff7a9cb80717ee6b8015c5ed1b597eb5eae7a6c3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480980"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534604"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,14 +53,14 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_validatemergepublication** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_validatemergepublication**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Replizierte Daten überprüfen](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_validatemergesubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   

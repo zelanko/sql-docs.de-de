@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriberinfo
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: db23a3861e20627a829006c22d74a368acfb349f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 490355fa242d799d524690242e4f7e2a0d8ea830
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464163"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535092"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -70,7 +70,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**active_end_date**|**int**|Datum, an dem die Planung des Einsatzes des Verteilungs-Agents beendet wird (Format: YYYYMMDD).|  
 |**retryattempt**|**int**|Wird nicht unterstützt.|  
 |**retrydelay**|**int**|Wird nicht unterstützt.|  
-|**Beschreibung**|**nvarchar(255)**|Beschreibungstext des Abonnenten.|  
+|**description**|**nvarchar(255)**|Beschreibungstext des Abonnenten.|  
 |**security_mode**|**int**|Implementierter Sicherheitsmodus:<br /><br /> **0** -  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung|  
 |**frequency_type2**|**int**|Häufigkeit, mit der der Merge-Agent ausgeführt wird:<br /><br /> **1** = einmal<br /><br /> **2** = Bedarfs gesteuert<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ<br /><br /> **64** = Autostart<br /><br /> **128** = wiederholt|  
 |**frequency_interval2**|**int**|Der Wert, der auf die durch *frequency_type*festgelegte Häufigkeit angewendet wird.|  
@@ -86,7 +86,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helpsubscriberinfo** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
