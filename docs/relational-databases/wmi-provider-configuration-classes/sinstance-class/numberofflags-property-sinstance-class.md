@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - NumberOfFlags property
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f5d800da626f6c3dfa9f2af2d8680d10d9712b97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0a2cc72927f8eb6f1cff3dbfd1aeea3d35d4b26f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472773"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550935"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags-Eigenschaft (SInstance-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.NumberOfFlags [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **UInt32** -Wert, der die Anzahl von Flags für die-Instanz angibt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_modules catalog view
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d465b315fedb484143153e7be97dd2e895faf12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fef38d2e060e8b9442a29fb83e821de0e93822b5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447793"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551367"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88447793"
 |**inline_type**|**bit**|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] und höher.<br /><br />Gibt an, ob Inlining für das Modul aktuell aktiviert ist. <br /><br />0 = Inlining ist ausgeschaltet<br /><br /> 1 = Inlining ist eingeschaltet.<br /><br /> Bei skalaren UDFs ist der Wert 1, wenn Inlining aktiviert ist (explizit oder implizit). Der Wert ist für Inline-TVFs immer 1 und 0 für andere Modultypen.<br />|  
 
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der SQL-Ausdruck für eine DEFAULT-Einschränkung, Objekt vom Typ D, befindet sich in der [sys. default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) -Katalog Sicht. Der SQL-Ausdruck für eine Check-Einschränkung, Objekt vom Typ C, finden Sie in der [sys. check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) -Katalog Sicht.  
   
  Diese Informationen werden auch in [sys. dm_db_uncontained_entities &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)beschrieben.  

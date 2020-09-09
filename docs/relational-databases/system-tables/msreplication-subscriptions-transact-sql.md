@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1f8af3b4666556e41da1e48917c584e41dbddedd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b89aee32b5ea431da77043938104960d4d353b74
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454602"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551026"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88454602"
 |**subscription_type**|**int**|Der Typ des Abonnements:<br /><br /> 0 = Push.<br /><br /> 1 = Pull.<br /><br /> 2 = Anonym.|  
 |**distribution_agent**|**sysname**|Der Name des Verteilungs-Agents.|  
 |**Time**|**smalldatetime**|Der Zeitpunkt des letzten Updates durch den Verteilungs-Agent.|  
-|**Beschreibung**|**nvarchar(255)**|Die Beschreibung des Abonnements.|  
+|**description**|**nvarchar(255)**|Die Beschreibung des Abonnements.|  
 |**transaction_timestamp**|**varbinary(16)**|Nur intern verwendet.|  
 |**update_mode**|**tinyint**|Der Typ des Updates.|  
 |**agent_id**|**Binary (16)**|Die ID der Momentaufnahme.|  

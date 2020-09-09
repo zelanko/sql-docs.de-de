@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75a517f8a55eabbda1c9d50d37c6254079cc33b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dd0fb9ae28d2101b02feb17bc5b2eacbfcb476a7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446648"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551118"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88446648"
 |**session_id**|**int**|ID der Sitzung, die in der **syssessions** -Tabelle in der **msdb** -Datenbank gespeichert ist.|  
 |**job_id**|**uniqueidentifier**|ID des Auftrags.|  
 |**run_requested_date**|**datetime**|Datum und Uhrzeit, zu der der Auftrag laut Anforderung ausgeführt werden sollte.|  
-|**run_requested_source**|**sysname (nvarchar (128))**|Quelle der Anforderung der Auftragsausführung.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
+|**run_requested_source**|**sysname(nvarchar(128))**|Quelle der Anforderung der Auftragsausführung.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|Datum und Uhrzeit, zu der dieser Auftrag in der Warteschlange angeordnet wurde. Wird der Auftrag direkt ausgeführt, enthält diese Spalte den Wert NULL.|  
 |**start_execution_date**|**datetime**|Datum und Uhrzeit, für die die Ausführung des Auftrags geplant wurde.|  
 |**last_executed_step_id**|**int**|ID des letzten ausgeführten Auftragsschrittes.|  

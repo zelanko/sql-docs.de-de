@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Dependencies property
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ba7fbda65a5ccfab9e5b9c42b73e0bbe51c2538d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 36b40efb76cedd83dfadb9e8597a7d9bb5e9888c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418766"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550865"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies-Eigenschaft (SqlService-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.Dependencies [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenarray, das eine Liste von Diensten enthält, die von dem Dienst, auf den verwiesen wird, abhängig sind.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_startpublication_snapshot
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c41f52def223dbaf8d1a580e310022cdcd92af81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c43d44067e92a9ec606d08d9a458392d04c4e66
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473702"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551218"
 ---
 # <a name="sp_startpublication_snapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_startpublication_snapshot** wird bei allen Replikations Typen verwendet.  
   
  Bei einem nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger wird diese gespeicherte Prozedur auf dem Verteiler für die Verteilungs Datenbank ausgeführt.  
