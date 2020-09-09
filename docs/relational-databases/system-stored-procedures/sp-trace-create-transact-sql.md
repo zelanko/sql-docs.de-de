@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8818beb7c8ec4a0ff688f43fe6c3fe3794a573be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47e16f40b7cdd9ea9c65d3262487a7a68c8cb6ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485585"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547323"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  In der folgenden Tabelle werden die Optionen, Beschreibungen und die zugehörigen Werte aufgeführt.  
   
-|Optionsname|Optionswert|Beschreibung|  
+|Optionsname|Optionswert|BESCHREIBUNG|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|Gibt an, dass die aktuelle Ablauf Verfolgungs Datei geschlossen und eine neue Datei erstellt wird, wenn der *max_file_size* erreicht wird. Alle neuen Datensätze werden in die neue Datei geschrieben. Die neue Datei hat denselben Namen wie die vorherige Datei, es wird jedoch eine ganze Zahl angehängt, um die zugehörige Reihenfolge anzugeben. Ist z. B. der Name der ursprünglichen Ablaufverfolgungsdatei filename.trc, so wird die nächste Datei mit filename_1.trc benannt, dann folgt filename_2.trc usw.<br /><br /> Wenn weitere Ablaufverfolgungs-Rolloverdateien erstellt werden, erhöht sich der an die Dateinamen angefügte ganzzahlige Wert sequenziell.<br /><br /> SQL Server verwendet den Standardwert *max_file_size* (5 MB), wenn diese Option ohne Angabe eines Werts für *max_file_size*angegeben wird.|  
 |SHUTDOWN_ON_ERROR|**4**|Gibt an, dass SQL Server heruntergefahren wird, wenn die Ablaufverfolgung nicht in die Datei geschrieben werden kann, unabhängig vom Grund. Diese Option ist beim Ausführen von Ablaufverfolgungen zur Sicherheitsüberwachung hilfreich.|  
@@ -95,14 +95,14 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |0|Kein Fehler.|  
-|1|Unknown error. (Unbekannter Fehler.)|  
+|1|Unbekannter Fehler.|  
 |10|Ungültige Optionen. Wird zurückgegeben, wenn angegebene Optionen inkompatibel sind.|  
 |12|Datei nicht erstellt.|  
 |13|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
 |14|Ungültige Beendigungszeit. Wird zurückgegeben, wenn die angegebene Beendigungszeit bereits verstrichen ist.|  
 |15|Ungültige Parameter. Wird zurückgegeben, wenn der Benutzer inkompatible Parameter angegeben hat.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_trace_create** ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Prozedur, die viele der zuvor durch **xp_trace_ \* ** erweiterten gespeicherten Prozeduren ausführt, die in früheren Versionen von SQL Server verfügbar waren. Verwenden Sie **sp_trace_create** anstelle von:  
   
 -   **xp_trace_addnewqueue**  
@@ -147,11 +147,11 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="permissions"></a>Berechtigungen  
  Benutzer müssen über die ALTER TRACE-Berechtigung verfügen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_trace_generateevent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)  
   
   

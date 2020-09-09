@@ -18,14 +18,14 @@ helpviewer_keywords:
 - restoring files [SQL Server], restorefile system table
 - file restores [SQL Server], restorefile system table
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 82dc6bf152f9ba0a951536357f2d7147ba4e5960
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 366c6bd83e46b2a8586590552bfd05e2975b9e04
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460312"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547013"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88460312"
 |**destination_phys_drive**|**nvarchar(260)**|Laufwerk oder Partition, in welche(s) die Datei wiederhergestellt wurde. Kann den Wert NULL haben.<br /><br /> Wird eine Datenbankmomentaufnahme einer Datenbank wiederhergestellt, wird dieser Wert auf die gleiche Weise wie bei einer vollständigen Wiederherstellung aufgefüllt.|  
 |**destination_phys_name**|**nvarchar(260)**|Name der Datei, in welche die Datei wiederhergestellt wurde, ohne die Informationen zu Laufwerk oder Partition. Kann den Wert NULL haben.<br /><br /> Wird eine Datenbankmomentaufnahme einer Datenbank wiederhergestellt, wird dieser Wert auf die gleiche Weise wie bei einer vollständigen Wiederherstellung aufgefüllt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Führen Sie die gespeicherte Prozedur [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) aus, um die Anzahl der Zeilen in dieser Tabelle und in anderen Sicherungs-und Verlaufs Tabellen zu verringern.  
   
 ## <a name="see-also"></a>Weitere Informationen  

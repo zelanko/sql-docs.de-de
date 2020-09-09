@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_resource_governor_external_resource_pool_affinity
 - dm_resource_governor_external_resource_pool_affinity
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0ff51fc11dd2b74c2a8e83d4a42cd83d403282d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9ad8fa57e43d1b456434f007e224464af11aa53e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454819"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546492"
 ---
 # <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys. dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -39,7 +39,7 @@ Gibt CPU-Affinitäts Informationen über die aktuelle Konfiguration des externen
 |processor_group|**smallint**|Die ID der logischen Windows-Prozessorgruppe. Lässt keine NULL-Werte zu.|
 |cpu_mask|**bigint**|Die binäre Maske, die die diesem Pool zugeordneten CPUs darstellt. Lässt keine NULL-Werte zu.|
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Pools, die mit einer Affinität von erstellt werden, werden `AUTO` in dieser Sicht nicht angezeigt, weil Sie keine Affinität haben. Weitere Informationen finden Sie unter [Erstellen eines externen Ressourcenpools &#40;Transact-SQL-&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) und [Alter externer Ressourcenpool &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) Anweisungen.
 

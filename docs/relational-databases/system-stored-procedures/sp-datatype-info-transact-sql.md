@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f35043a8886165431e42b4b8641a1abbcf0fb1cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ff2af6626004412a028777634269c6dc13e4fa8c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486099"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546130"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Wert der Intervall führenden Genauigkeit, *data_type* Wenn data_type **Intervall**ist. andernfalls NULL.|  
 |USERTYPE|**smallint**|**usertype** -Wert aus der systypes-Tabelle.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sp_datatype_info entspricht sqlgettypeingefo in ODBC. Die zurückgegebenen Ergebnisse sind zuerst nach DATA_TYPE und dann nach der Übereinstimmung des Datentyps mit dem entsprechenden ODBC SQL-Datentyp geordnet.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sys.indexes
 - sys.index_resumable_operations
 ms.assetid: ''
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa2ae5221dbd360c5bad7279d27dbaedc7ae7f16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6878ccf5d267c265ca7bd90120c1bfc227f16ed
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490308"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546767"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "88490308"
 |**sql_text**|**nvarchar(max)**|DDL-T-SQL-Anweisungs Text|
 |**last_max_dop**|**smallint**|Letztes MAX_DOP verwendet (Standardwert = 0)|
 |**partition_number**|**int**|Die Partitionsnummer im besitzenden Index oder Heap. Für nicht partitionierte Tabellen und Indizes oder für den Fall, dass alle Partitionen neu erstellt werden, ist der Wert dieser Spalte NULL.|
-|**Status**|**tinyint**|Betriebsstatus für fort Setz baren Index:<br /><br />0 = wird ausgeführt<br /><br />1 = anhalten|
+|**state**|**tinyint**|Betriebsstatus für fort Setz baren Index:<br /><br />0 = wird ausgeführt<br /><br />1 = anhalten|
 |**state_desc**|**nvarchar(60)**|Beschreibung des Betriebsstatus für einen fort Setz baren Index (wird ausgeführt oder angehalten)|  
 |**start_time**|**datetime**|Startzeit des Index Vorgangs (lässt keine NULL-Werte zu)|
 |**last_pause_time**|**DataTime**| Zeit für Index Vorgang: letzte Pause (Nullable). NULL, wenn der Vorgang ausgeführt wird und nie angehalten wird.|
@@ -65,7 +65,7 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
-- [Katalogansichten](catalog-views-transact-sql.md)
+- [Katalog Sichten](catalog-views-transact-sql.md)
 - [Objektkatalog Sichten](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)
 - [sys.index_columns](sys-index-columns-transact-sql.md)

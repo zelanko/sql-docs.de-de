@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b7ad54f6ff92d150ad862709b0fcc8412911c7fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 80ce8df6158ca3c0f7cd37fc045c7bd5987e2e0f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469712"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546185"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @action =] '*Action*'  
  Gibt an, ob die Konflikterkennung für eine Veröffentlichung aktiviert oder deaktiviert werden soll. *Action* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**enable**|Aktiviert die Konflikterkennung für eine Veröffentlichung.|  
 |**disable**|Deaktiviert die Konflikterkennung für eine Veröffentlichung.|  
@@ -78,13 +78,13 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sp_configure_peerconflictdetection wird in der Peer-zu-Peer-Transaktionsreplikation verwendet. Zur Verwendung der Konflikterkennung müssen auf allen Knoten oder höhere Versionen ausgeführt werden, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und die Erkennung muss für alle Knoten aktiviert sein.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin oder in der festen Datenbankrolle db_owner.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konflikterkennung bei der Peer-zu-Peer-Replikation](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

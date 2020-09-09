@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_send_dbmail
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 95b9b18b6f36ebbd8d43f38a2bc8fe28d8f3288b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d2e7f1d11052b422ef8eb387349fbc8089a49eb2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446767"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547434"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -94,7 +94,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   Normal  
   
--   High  
+-   Hoch  
   
  Der Standardwert ist Normal.  
   
@@ -162,7 +162,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ## <a name="result-sets"></a>Resultsets  
  Bei Erfolg wird die Nachricht "E-Mail in der Warteschlange" zurückgegeben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Vor der Verwendung müssen Datenbank-E-Mail mithilfe des Datenbank-E-Mail Konfigurations-Assistenten oder **sp_configure**aktiviert werden.  
   
  **sysmail_stop_sp** beendet Datenbank-E-Mail, indem die vom externen Programm verwendeten Service Broker Objekte beendet werden. **sp_send_dbmail** akzeptiert weiterhin e-Mails, wenn Datenbank-E-Mail mit **sysmail_stop_sp**beendet wird. Starten Sie Datenbank-E-Mail mithilfe von **sysmail_start_sp**.  
@@ -246,7 +246,7 @@ EXEC msdb.dbo.sp_send_dbmail @recipients='yourfriend@Adventure-Works.com',
     @body_format = 'HTML' ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
  [Konfigurationsobjekte Datenbank-E-Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Datenbank-E-Mail gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   

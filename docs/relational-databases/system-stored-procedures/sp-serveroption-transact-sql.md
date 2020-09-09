@@ -17,14 +17,14 @@ helpviewer_keywords:
 - 7343 (Database Engine error)
 - sp_serveroption
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c9235c9307c679d80aa869990c6f43ca5ef301dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ba6045caf5d95aed6d11c0844c16afd93365368f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481036"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547384"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_serveroption [@server = ] 'server'
   
 `[ @optname = ] 'option_name'` Die Option, die für den angegebenen Server festgelegt werden soll. *option_name* ist vom Datentyp **varchar (** 35 **)** und hat keinen Standardwert. *option_name* kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**kompatibel mit Sortierung**|Betrifft die Ausführung verteilter Abfragen für Verbindungsserver. Wenn diese Option auf **true**festgelegt ist, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon ausgegangen, dass alle Zeichen auf dem Verbindungs Server in Bezug auf den Zeichensatz und die Sortierreihenfolge (oder die Sortierreihenfolge) mit dem lokalen Server kompatibel sind. Dies ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Vergleiche für Zeichenspalten an den Provider zu senden. Wird diese Option nicht festgelegt, werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Vergleiche für Zeichenspalten immer lokal ausgewertet.<br /><br /> Diese Option sollte nur festgelegt werden, wenn sicher ist, dass die Datenquelle, die dem Verbindungsserver entspricht, den gleichen Zeichensatz und die gleiche Sortierreihenfolge wie der lokale Server verwendet.|  
 |**Sortierungs Name**|Gibt den Namen der von der Remote Datenquelle verwendeten Sortierung an, wenn **use Remote COLLATIONS** auf **true** festgelegt ist und die Datenquelle keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle ist. Der Name muss eine von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützte Sortierung sein.<br /><br /> Verwenden Sie diese Option, wenn auf eine OLE DB-Datenquelle zugegriffen wird, die keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquelle ist, deren Sortierung jedoch mit einer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierungen übereinstimmt.<br /><br /> Der Verbindungsserver muss eine einzige Sortierung unterstützen, die für alle Spalten in diesem Server verwendet wird. Legen Sie diese Option nicht fest, wenn der Verbindungsserver mehrere Sortierungen in einer einzelnen Datenquelle unterstützt oder wenn festgestellt wird, dass die Sortierung des Verbindungsservers nicht mit einer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierungen übereinstimmt.|  

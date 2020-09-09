@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d2bd308f79e9ef4a49e91509400e8d4938cd4473
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 01c576dcb71aa3814f1e1c560c6e38ec35874161
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485664"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547410"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |**create_time**|**datetime**|Gibt den Zeitstempel der Zeilenerstellung an. Jede Zeile in einem einzelnen Rowset weist denselben Zeitstempel auf.|  
 |**component_type**|**sysname**|Gibt an, ob die Zeile Informationen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponente auf Instanzebene oder für eine Always on Verfügbarkeits Gruppe enthält:<br /><br /> instance<br /><br /> Always on: availabilitygroup|  
 |**component_name**|**sysname**|Gibt den Namen der Komponente oder den Namen der Verfügbarkeitsgruppe an:<br /><br /> System<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<name of the availability group>*|  
-|**Status**|**int**|Gibt den Integritätsstatus der Komponente an:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state**|**int**|Gibt den Integritätsstatus der Komponente an:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Beschreibt die Zustandsspalte. Folgende Beschreibungen entsprechen den Werten in der Statusspalte:<br /><br /> 0: Unbekannt.<br /><br /> 1: Bereinigen<br /><br /> 2: Warnung<br /><br /> 3: Fehler|  
 |**data**|**varchar (max)**|Gibt Daten an, die für die Komponente spezifisch sind.|  
   
@@ -80,7 +80,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<name of the availability group>**: Sammelt Daten für die angegebene Verfügbarkeits Gruppe (wenn component_type = "Always on: availabilitygroup").  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Die Komponenten system, resource und query_processing werden zur Fehlererkennung aus Fehlerperspektive genutzt, während die Komponenten io_subsystem und events nur zu Diagnosezwecken genutzt werden.  
   
 In der folgenden Tabelle sind die Komponenten den jeweils zugeordneten Integritätszuständen zugeordnet.  

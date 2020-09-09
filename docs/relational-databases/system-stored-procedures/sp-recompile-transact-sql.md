@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_recompile
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bbf1e6b85b3071e0029d1fd294a8147b79d64fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e0f32166351f80b87b28a169ea0204af97f832f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473894"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547599"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ sp_recompile [ @objname = ] 'object'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sp_recompile sucht nur in der aktuellen Datenbank nach einem Objekt.  
   
  Die Abfragen, die von gespeicherten Prozeduren, Triggern oder benutzerdefinierten Funktionen durchgeführt werden, werden nur bei der Prozedur- oder Triggerkompilierung optimiert. Wenn Sie Indizes bearbeiten oder andere Änderungen an der Datenbank vornehmen, die sich auf Statistiken beziehen, kann dies die Effizienz von gespeicherten Prozeduren, Triggern und benutzerdefinierten Funktionen beeinträchtigen. Durch das erneute Kompilieren der gespeicherten Prozeduren und Trigger, die auf eine Tabelle zugreifen, können solche Abfragen wieder optimiert werden.  

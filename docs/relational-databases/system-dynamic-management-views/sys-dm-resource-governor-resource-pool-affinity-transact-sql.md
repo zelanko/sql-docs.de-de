@@ -18,14 +18,14 @@ helpviewer_keywords:
 - dm_resource_governor_resource_pool_affinity
 - sys.dm_resource_governor_resource_pool_affinity
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7aefd457e99626a1c16ce04b6ecbc579d2de1ed6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c304b552dfbf09786af4c7d61edc64c99b004adc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454850"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546532"
 ---
 # <a name="sysdm_resource_governor_resource_pool_affinity-transact-sql"></a>sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88454850"
 |Processor_group|**smallint**|Die ID der logischen Windows-Prozessorgruppe. Lässt keine NULL-Werte zu.|  
 |Scheduler_mask|**bigint**|Die binäre Maske, die für das diesem Pool zugeordnete Zeitplanungsmodul steht. Lässt keine NULL-Werte zu.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Pools, die mit der Affinität AUTO erstellt werden, werden in dieser Sicht nicht angezeigt, da sie keine Affinität besitzen. Weitere Informationen finden Sie in den Anweisungen zum [Erstellen eines Ressourcenpools &#40;Transact-SQL-&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) und zum [Ändern von Ressourcenpools &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) .  
   
 ## <a name="see-also"></a>Weitere Informationen  

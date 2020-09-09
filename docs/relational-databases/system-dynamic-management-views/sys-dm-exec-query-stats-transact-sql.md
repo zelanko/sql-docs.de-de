@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12ef4ff17b243a674911a9611517529bbe0ce0dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2bca0c700f483aced7a4387885649cb0ac2e764
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489989"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546582"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,10 +74,10 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
 |**max_elapsed_time**|**bigint**|Maximal verstrichene Zeit in Mikrosekunden (aber nur auf Millisekunden genau) für eine beliebige abgeschlossene Ausführung dieses Plans.|  
 |**query_hash**|**Binär (8)**|Binärer Hashwert, der in der Abfrage berechnet wird und zum Identifizieren von Abfragen mit ähnlicher Logik verwendet wird. Sie können den Abfragehash verwenden, um die aggregierte Ressourcennutzung für Abfragen zu ermitteln, die sich nur durch Literalwerte unterscheiden.|  
 |**query_plan_hash**|**Binär (8)**|Binärer Hashwert, der im Abfrageausführungsplan wird und zum Identifizieren ähnlicher Abfrageausführungspläne verwendet wird. Sie können diesen Abfrageplan-Hashwert verwenden, um die kumulierten Kosten für Abfragen mit ähnlichen Ausführungsplänen zu suchen.<br /><br /> Ist immer 0x000, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
-|**total_rows**|**bigint**|Die Gesamtanzahl der von der Abfrage zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
-|**last_rows**|**bigint**|Die Anzahl der bei der letzten Ausführung der Abfrage zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
-|**min_rows**|**bigint**|Die minimale Anzahl von Zeilen, die von der Abfrage während einer Ausführung zurückgegeben wurden. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
-|**max_rows**|**bigint**|Maximale Anzahl von Zeilen, die von der Abfrage während einer Ausführung jemals zurückgegeben wurden. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
+|**total_rows**|**bigint**|Die Gesamtanzahl der von der Abfrage zurückgegebenen Zeilen. Darf nicht NULL sein.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
+|**last_rows**|**bigint**|Die Anzahl der bei der letzten Ausführung der Abfrage zurückgegebenen Zeilen. Darf nicht NULL sein.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
+|**min_rows**|**bigint**|Die minimale Anzahl von Zeilen, die von der Abfrage während einer Ausführung zurückgegeben wurden. Darf nicht NULL sein.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
+|**max_rows**|**bigint**|Maximale Anzahl von Zeilen, die von der Abfrage während einer Ausführung jemals zurückgegeben wurden. Darf nicht NULL sein.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
 |**statement_sql_handle**|**varbinary(64)**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Wird nur mit Werten aufgefüllt, die ungleich NULL sind, wenn Abfragespeicher aktiviert ist und die Statistiken für diese bestimmte Abfrage sammelt.|  
 |**statement_context_id**|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Wird nur mit Werten aufgefüllt, die ungleich NULL sind, wenn Abfragespeicher aktiviert ist und die Statistiken für diese bestimmte Abfrage sammelt.|  
 |**total_dop**|**bigint**|Die Gesamtsumme der Parallelität, die dieser Plan seit der Kompilierung verwendet hat. Es ist immer 0, wenn eine Speicher optimierte Tabelle abgefragt wird.<br /><br /> **Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.|  
@@ -104,14 +104,14 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
 |**last_used_threads**|**bigint**|Die Anzahl der bei der letzten Ausführung dieses Plans verwendeten parallelen Threads. Es ist immer 0, wenn eine Speicher optimierte Tabelle abgefragt wird.<br /><br /> **Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.|  
 |**min_used_threads**|**bigint**|Die Mindestanzahl von parallelen Threads, die dieser Plan jemals während einer Ausführung verwendet hat. Es ist immer 0, wenn eine Speicher optimierte Tabelle abgefragt wird.<br /><br /> **Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.|  
 |**max_used_threads**|**bigint**|Die maximale Anzahl von parallelen Threads, die dieser Plan jemals während einer Ausführung verwendet hat. Es ist immer 0, wenn eine Speicher optimierte Tabelle abgefragt wird.<br /><br /> **Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.|  
-|**total_columnstore_segment_reads**|**bigint**|Die Gesamtsumme der von der Abfrage gelesenen columnstore--Segmente. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_reads**|**bigint**|Die Anzahl der von der letzten Ausführung der Abfrage gelesenen columnstore--Segmente. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_reads**|**bigint**|Die Mindestanzahl von columnstore--Segmenten, die von der Abfrage während einer Ausführung gelesen wurden. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_reads**|**bigint**|Die maximale Anzahl von columnstore--Segmenten, die von der Abfrage während einer Ausführung gelesen wurden. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**total_columnstore_segment_skips**|**bigint**|Die Gesamtsumme der von der Abfrage übersprungenen columnstore--Segmente. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_skips**|**bigint**|Die Anzahl der columnstore--Segmente, die bei der letzten Ausführung der Abfrage übersprungen wurden. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_skips**|**bigint**|Die Mindestanzahl von columnstore--Segmenten, die von der Abfrage bei einer Ausführung jemals übersprungen wurden. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_skips**|**bigint**|Die maximale Anzahl von columnstore--Segmenten, die von der Abfrage während einer Ausführung jemals übersprungen wurden. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
+|**total_columnstore_segment_reads**|**bigint**|Die Gesamtsumme der von der Abfrage gelesenen columnstore--Segmente. Darf nicht NULL sein.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_reads**|**bigint**|Die Anzahl der von der letzten Ausführung der Abfrage gelesenen columnstore--Segmente. Darf nicht NULL sein.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_reads**|**bigint**|Die Mindestanzahl von columnstore--Segmenten, die von der Abfrage während einer Ausführung gelesen wurden. Darf nicht NULL sein.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_reads**|**bigint**|Die maximale Anzahl von columnstore--Segmenten, die von der Abfrage während einer Ausführung gelesen wurden. Darf nicht NULL sein.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**total_columnstore_segment_skips**|**bigint**|Die Gesamtsumme der von der Abfrage übersprungenen columnstore--Segmente. Darf nicht NULL sein.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_skips**|**bigint**|Die Anzahl der columnstore--Segmente, die bei der letzten Ausführung der Abfrage übersprungen wurden. Darf nicht NULL sein.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_skips**|**bigint**|Die Mindestanzahl von columnstore--Segmenten, die von der Abfrage bei einer Ausführung jemals übersprungen wurden. Darf nicht NULL sein.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_skips**|**bigint**|Die maximale Anzahl von columnstore--Segmenten, die von der Abfrage während einer Ausführung jemals übersprungen wurden. Darf nicht NULL sein.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
 |**total_spills**|**bigint**|Die Gesamtanzahl der Seiten, die durch die Ausführung dieser Abfrage seit der Kompilierung übergegangen sind.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**last_spills**|**bigint**|Die Anzahl der Seiten, die bei der letzten Ausführung der Abfrage übergegangen sind.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Die Mindestanzahl von Seiten, die diese Abfrage während einer einzelnen Ausführung jemals übergegangen ist.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
@@ -129,7 +129,7 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
    
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Statistiken in der Sicht werden nach Abschluss einer Abfrage aktualisiert.  
   
 ## <a name="examples"></a>Beispiele  

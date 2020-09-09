@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 904db034372ce3be7b4f3bf3e1f7dc4a95d8383d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 39cb33678b853feadbbb20a88669f0b48a3d444a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474432"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546215"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,10 +52,10 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'` Der neue Wert für die angegebene Eigenschaft. der Wert ist vom Datentyp **nvarchar (255)**. der *Wert*kann einer der Werte in der Tabelle sein.  
   
-|Eigenschaft|Wert|Beschreibung|  
+|Eigenschaft|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Speicherort, an dem der Momentaufnahme Ordner gespeichert wird, wenn der Speicherort nicht oder zusätzlich zum Standard Speicherort ist.|  
-|**Beschreibung**||Die Beschreibung dieses Mergepullabonnements.|  
+|**description**||Die Beschreibung dieses Mergepullabonnements.|  
 |**Verleih**||Name des Verteilers.|  
 |**distributor_login**||Die Anmelde-ID, die auf dem Verteiler für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
 |**distributor_password**||Kennwort (verschlüsselt), das auf dem Verteiler für die Authentifizierung verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -75,7 +75,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||URL, die den Speicherort des Replikations-Listener für die Websynchronisierung darstellt.|  
 |**merge_job_login**||Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird.|  
 |**merge_job_password**||Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird.|  
-|**haben**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Führen Sie [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) auf dem Verleger aus, um die Priorität eines Abonnements zu ändern.|  
+|**priority**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Führen Sie [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) auf dem Verleger aus, um die Priorität eines Abonnements zu ändern.|  
 |**publisher_login**||Auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendete Anmelde-ID.|  
 |**publisher_password**||Das Kennwort (verschlüsselt), das auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
 |**publisher_security_mode**|**0**|Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung für die Verbindung mit dem Verleger.|  
@@ -95,7 +95,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_changemergepullsubscription** wird bei der Mergereplikation verwendet.  
   
  Der aktuelle Server und die aktuelle Datenbank werden als Abonnent und Abonnentendatenbank angenommen.  

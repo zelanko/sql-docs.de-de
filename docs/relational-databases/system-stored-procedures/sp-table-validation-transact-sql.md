@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 32d347fe40af8f2617f47291d749ef039b0838b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 88ee13025153fff3018fadfa8d64becf7a534303
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446732"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545927"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +81,7 @@ sp_table_validation [ @table = ] 'table'
   
  Wenn die Überprüfung der Zeilen Anzahl und die erwartete Anzahl von Zeilen der Anzahl in der Tabelle entsprechen, gibt **sp_table_validation** eine Meldung zurück, dass die Tabelle die Überprüfung der Zeilen Anzahl bestanden hat. Andernfalls wird eine Meldung zurückgegeben, die besagt, dass die Tabelle möglicherweise nicht mehr synchronisiert ist, und der Unterschied zwischen der erwarteten und der tatsächlichen Zeilenanzahl wird angezeigt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_table_validation** wird bei allen Replikations Typen verwendet. **sp_table_validation** wird für Oracle-Verleger nicht unterstützt.  
   
  Der Prüfsummenalgorithmus berechnet eine zyklische 32-Bit-Redundanzprüfung (CRC, Redundancy Check) des gesamten Zeilenbilds auf der Seite. Er überprüft Spalten nicht selektiv und kann nicht für eine Sicht oder eine vertikale Partition der Tabelle ausgeführt werden. Außerdem überspringt die Prüfsumme den Inhalt von **Text** -und **Image** -Spalten (Entwurfs bedingt).  
@@ -93,7 +93,7 @@ sp_table_validation [ @table = ] 'table'
 ## <a name="permissions"></a>Berechtigungen  
  Um **sp_table_validation**auszuführen, benötigen Sie SELECT-Berechtigungen für die Tabelle, die überprüft wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Prüfsumme &#40;Transact-SQL-&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
  [sp_article_validation &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   

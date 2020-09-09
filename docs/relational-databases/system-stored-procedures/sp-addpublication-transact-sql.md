@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f03bffcfefbe20386885523aaf75419e56c87dd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 02b97900b86eac3c4fb5ffc61b7cf6922d4800e2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464624"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546321"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -92,10 +92,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'` Der Synchronisierungs Modus. *sync_method* ist vom Datentyp **nvarchar (13)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**native**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus. *Wird für Oracle-Verleger nicht unterstützt*.|  
-|**Art**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. _Bei einem Oracle-Verleger_ ist das **Zeichen** _nur für die Momentaufnahme Replikation gültig_.|  
+|**character**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. _Bei einem Oracle-Verleger_ ist das **Zeichen** _nur für die Momentaufnahme Replikation gültig_.|  
 |**findende**|Erzeugt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus, sperrt jedoch die Tabellen während der Erstellung der Momentaufnahme nicht. Wird nur für Transaktionsveröffentlichungen unterstützt. *Wird für Oracle-Verleger nicht unterstützt*.|  
 |**concurrent_c**|Erzeugt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus, sperrt jedoch die Tabellen während der Erstellung der Momentaufnahme nicht. Wird nur für Transaktionsveröffentlichungen unterstützt.|  
 |**Daten Bank Momentaufnahme**|Erstellt aus einer Datenbankmomentaufnahme eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus. Daten Bank Momentaufnahmen sind nicht in jeder Edition von verfügbar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
@@ -104,7 +104,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@repl_freq = ] 'repl_freq'` Der Typ der Replikations Häufigkeit, *repl_freq* ist vom Datentyp **nvarchar (10)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Continuous** (Standard)|Der Verleger stellt die Ausgabe aller protokollbasierten Transaktionen bereit. Für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger erfordert dies, dass *sync_method* auf **concurrent_c**festgelegt werden.|  
 |**Überblick**|Der Verleger gibt nur geplante Synchronisierungsereignisse aus. Für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger erfordert dies, dass *sync_method* auf **Zeichen**festgelegt werden.|  
@@ -113,7 +113,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'` Gibt an, ob Veröffentlichungsdaten verfügbar sind. der *Status* ist **nvarchar (8)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**active**|Die Veröffentlichungsdaten sind für Abonnenten sofort verfügbar.|  
 |**inaktiv** (Standard)|Die Veröffentlichungsdaten sind für Abonnenten zunächst nicht verfügbar, wenn die Veröffentlichung erstellt wird (die Abonnierung ist möglich, aber die Abonnements werden nicht verarbeitet).|  
@@ -136,7 +136,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'` Gibt an, ob die Synchronisierungs gespeicherte Prozedur zum Aktualisieren von Abonnements auf dem Verleger generiert wird. *autogen_sync_procs* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**true**|Wird automatisch festgelegt, wenn das Aktualisieren von Abonnements aktiviert ist.|  
 |**false**|Wird automatisch für Oracle-Verleger festgelegt oder wenn das Aktualisieren von Abonnements nicht aktiviert ist.|  
@@ -177,7 +177,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_policy = ] 'conflict_policy'` Gibt die Richtlinie zur Konfliktlösung an, gefolgt von der Verwendung der Option für Abonnenten mit verzögertem Update. *conflict_policy* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**pub wins**|Der Verleger gewinnt den Konflikt.|  
 |**sub reinit**|Erneutes Initialisieren des Abonnements.|  
@@ -192,7 +192,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'` Gibt an, welcher Typ von Warteschlange verwendet wird. *queue_type* ist vom Datentyp **nvarchar (10)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**SQL**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.|  
 |NULL (Standard)|Standardmäßig wird **SQL**verwendet, das angibt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen verwendet werden soll.|  
@@ -215,7 +215,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` Gibt an, ob Abonnenten ein Abonnement für diese Veröffentlichung aus einer Sicherung anstelle einer Anfangs Momentaufnahme initialisieren können. *allow_initialize_from_backup* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**true**|Aktiviert die Initialisierung aus einer Sicherung.|  
 |**false**|Deaktiviert die Initialisierung aus einer Sicherung.|  
@@ -317,7 +317,7 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addpublication** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  Wenn mehrere Veröffentlichungen vorhanden sind, die das gleiche Datenbankobjekt veröffentlichen, replizieren nur Veröffentlichungen mit dem *replicate_ddl* Wert **1** die DDL-Anweisungen ALTER TABLE, Alter View, ALTER PROCEDURE, Alter Function und Alter Triggern. Eine ALTER TABLE DROP COLUMN DDL-Anweisung wird hingegen von allen Veröffentlichungen repliziert, die die gelöschte Spalte veröffentlichen.  
@@ -330,10 +330,10 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addpublication**ausführen. Für Anmeldungen unter Verwendung der Windows-Authentifizierung muss in der Datenbank ein Konto vorhanden sein, das das zugehörige Windows-Benutzerkonto darstellt. Ein Benutzerkonto für eine Windows-Gruppe reicht in diesem Fall nicht aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_addlogreader_agent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
  [sp_addpublication_snapshot &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
- [sp_changepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_droppublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [sp_replicationdboption &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   

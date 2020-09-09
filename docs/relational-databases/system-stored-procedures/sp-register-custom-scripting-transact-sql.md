@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 35e70da9de3239fa7f147acf8ffe5a6ecc724606
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f73353cc5d2e0e9be02be5a0e6dc59eaf2f909f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446863"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547498"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>Argumente  
 `[ @type = ] 'type'` Der Typ der benutzerdefinierten gespeicherten Prozedur oder des Skripts, das registriert wird. *Type ist vom Datentyp* **varchar (16)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**insert**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine INSERT-Anweisung repliziert wird.|  
 |**update**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine UPDATE-Anweisung repliziert wird.|  
@@ -64,7 +64,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_register_custom_scripting** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  Diese gespeicherte Prozedur sollte ausgeführt werden, bevor Schemaänderungen an einer replizierten Tabelle vorgenommen werden. Weitere Informationen zur Verwendung dieser gespeicherten Prozedur finden Sie unter [Neugenerieren von benutzerdefinierten Transaktions Prozeduren, um Schema Änderungen widerzuspiegeln](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_error_detail system table
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 25c1187b463a52c4f5340356c23b77430ef0123f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0f606f93697308a690451583267a5d77383fa723
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473262"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547183"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "88473262"
 |**log_time**|**datetime**|Datum und Uhrzeit der Datensatzerstellung|  
 |**log_time_utc**|**datetime**|Datum und Uhrzeit der Datensatzerstellung in UTC (Coordinated Universal Time, Koordinierte Weltzeit)|  
 |**Nachricht**|**nvarchar**|Meldungstext.|  
-|**source**|**nvarchar**|Die Quelle der Fehlermeldung oder des Ereignisses.|  
+|**Quelle**|**nvarchar**|Die Quelle der Fehlermeldung oder des Ereignisses.|  
 |**help_url**|**nvarchar**|Die URL (sofern vorhanden), unter der weitere Informationen zum Fehler zur Verfügung stehen.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Tabelle enthält Fehlerdetails für die Protokollversand-Agents. Jeder Fehler wird als eine Sequenz von Ausnahmen protokolliert. Für jede Sitzung eines Agents sind mehrere Fehler (Sequenzen) möglich.  
   
  Die mit dem primären verbundenen Informationen Server werden sowohl auf dem Remoteüberwachungsserver als auch auf dem primären Server in der **log_shipping_monitor_error_detail** -Tabelle gespeichert. Die mit dem sekundären Server verbundenen Informationen werden ebenfalls auf dem sekundären Server in der **log_shipping_monitor_error_detail** -Tabelle gespeichert.  
