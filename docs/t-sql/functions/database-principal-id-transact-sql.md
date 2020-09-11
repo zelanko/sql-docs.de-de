@@ -51,7 +51,7 @@ Ein Ausdruck vom Typ **sysname**, der den Prinzipal darstellt. Ist *principal_na
 **int**  
 NULL, wenn der Datenbankprinzipal nicht vorhanden ist.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Verwenden Sie `DATABASE_PRINCIPAL_ID` in einer Auswahlliste, in einer WHERE-Klausel oder an einer beliebigen Stelle, an der ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="examples"></a>Beispiele  

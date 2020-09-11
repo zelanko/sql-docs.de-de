@@ -44,11 +44,11 @@ ms.locfileid: "88495720"
 |False|False|Nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
 |True|False|Nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
 |False|True|Nein|Die Transformation erstellt eine neue Datei und schreibt die Daten in die Datei.|  
-|True|True|Nein|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
-|False|False|Ja|Ein Laufzeitfehler tritt auf. Die Datei ist vorhanden, aber die Transformation kann nicht in diese schreiben.|  
-|False|True|Ja|Die Transformation löscht die Datei und erstellt sie neu und schreibt die Daten in diese Datei.|  
-|True|False|Ja|Die Transformation öffnet die Datei und fügt die Daten am Dateiende an.|  
-|True|True|Ja|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
+|True|True|No|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
+|False|False|Yes|Ein Laufzeitfehler tritt auf. Die Datei ist vorhanden, aber die Transformation kann nicht in diese schreiben.|  
+|False|True|Yes|Die Transformation löscht die Datei und erstellt sie neu und schreibt die Daten in diese Datei.|  
+|True|False|Yes|Die Transformation öffnet die Datei und fügt die Daten am Dateiende an.|  
+|True|True|Yes|Zur Entwurfszeit tritt bei der Überprüfung der Transformation ein Fehler auf. Beide Eigenschaften dürfen nicht auf **true**festgelegt werden.|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>Konfiguration der Transformation für das Exportieren von Spalten  
  Es gibt folgende Möglichkeiten, um die Transformation für das Exportieren von Spalten zu konfigurieren:  
@@ -79,7 +79,7 @@ ms.locfileid: "88495720"
 ## <a name="export-column-transformation-editor-columns-page"></a>Transformations-Editor für das Exportieren von Spalten (Seite Spalten)
   Auf der Seite **Spalten** des Dialogfelds **Transformations-Editor für das Exportieren von Spalten** können Sie die Spalten im Datenfluss angeben, die in Dateien extrahiert werden sollen. Sie können angeben, ob die Daten durch die Transformation für das Exportieren von Spalten an eine Datei angefügt werden, oder ob eine vorhandene Datei mit den Daten überschrieben wird.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Spalte extrahieren**  
  Wählen Sie Spalten aus der Liste der Eingabespalten aus, die Text- oder Bilddaten enthalten. Alle Zeilen sollten Definitionen für **Spalte extrahieren** und **Dateipfadspalte**aufweisen.  
   

@@ -99,7 +99,7 @@ ms.locfileid: "88496042"
   
 2.  Doppelklicken Sie auf der Registerkarte **Ablaufsteuerung** auf den CDC-Steuerungstask.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **ADO.NET-Verbindungs-Manager für die SQL Server-CDC-Datenbank**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um eine neue Verbindung zu erstellen. Die Verbindung muss zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank hergestellt werden, die für CDC aktiviert ist und in der sich die ausgewählte Änderungstabelle befindet.  
   

@@ -47,7 +47,7 @@ ms.locfileid: "88496179"
   
 -   **Durchführen der Wiederherstellung:** Beim Starten einer Oracle CDC-Instanz wird ihr interner Status aus den Tabellen **xdbcdc_state** und **xdbcdc_staged_transactions** wiederhergestellt. Nachdem der Status wiederhergestellt wurde, fährt die CDC-Instanz normal fort.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehlerbehandlung](../../integration-services/change-data-capture/error-handling.md)  
   
   

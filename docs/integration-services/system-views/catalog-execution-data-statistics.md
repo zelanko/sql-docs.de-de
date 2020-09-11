@@ -41,7 +41,7 @@ ms.locfileid: "88495218"
 |created_time|**datatimeoffset(7)**|Die Zeit, zu der die Werte abgerufen wurden.|  
 |execution_path|**nvarchar(max)**|Der Ausführungspfad der Komponente.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 -   Wenn eine Komponente mehrere Ausgaben hat, wird für jede Ausgabe eine Zeile hinzugefügt.  
   

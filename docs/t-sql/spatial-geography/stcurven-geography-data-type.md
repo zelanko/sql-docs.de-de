@@ -102,7 +102,7 @@ ms.locfileid: "88479347"
   
  `STCurveN()` gibt unabhängig vom verwendeten WKT-Format (Well-Known Text) die gleichen Ergebnisse zurück.  
   
-### <a name="d-testing-for-validity-before-calling-stcurve"></a>D: Testen auf Gültigkeit vor dem Aufrufen von STCurve()  
+### <a name="d-testing-for-validity-before-calling-stcurve"></a>D. Testen auf Gültigkeit vor dem Aufrufen von STCurve()  
  Im folgenden Beispiel wird gezeigt, wie Sie sicherstellen, dass *n* gültig ist, bevor Sie die Methode STCurve() aufrufen:  
   
 ```

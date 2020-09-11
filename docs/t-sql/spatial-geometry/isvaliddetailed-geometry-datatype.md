@@ -41,7 +41,7 @@ Gibt eine Meldung zurück, die Informationen zur Identifizierung von Problemen m
   
  CLR-Rückgabetyp: **string**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle enthält mögliche Rückgabewerte:  
   
 |Rückgabewert|BESCHREIBUNG|  
