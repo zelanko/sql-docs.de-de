@@ -50,7 +50,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
   
  Das Argument *property_value* ist vom Typ **bigint**.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="return-codes"></a>Rückgabecodes  
  0 (Erfolg)  

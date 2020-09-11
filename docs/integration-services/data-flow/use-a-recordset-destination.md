@@ -27,7 +27,7 @@ ms.locfileid: "88425602"
 
   Das Recordsetziel speichert keine Daten in einer externen Datenquelle. Stattdessen speichert das Recordsetziel Daten im Speicher eines Recordsets, das in einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketvariablen des Datentyps **Object** gespeichert ist. Nachdem die Daten vom Recordsetziel gespeichert wurden, verwenden Sie typischerweise einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator zum Verarbeiten jeweils einer Zeile des Recordsets. Der Foreach-ADO-Enumerator speichert den Wert jeder einzelnen Spalte für die aktuelle Zeile in einer separaten Paketvariablen. Anschließend lesen die im Foreach-Schleifencontainer konfigurierten Tasks diese Werte in den Variablen und führen für diese Aktionen aus.  
   
- Sie können das Recordsetziel in vielen verschiedenen Szenarios verwenden. Im Folgenden finden Sie einige Beispiele:  
+ Sie können das Recordsetziel in vielen verschiedenen Szenarios verwenden. Hier sind einige Beispiele:  
   
 -   Mit einem Task „Mail senden“ und der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausdruckssprache können Sie für jede Zeile im Recordset eine benutzerdefinierte E-Mail-Nachricht senden.  
   

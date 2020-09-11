@@ -44,7 +44,7 @@ Konvertiert eine ungültige **geometry** -Instanz in eine **geometry** -Instanz 
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode verursacht möglicherweise eine Änderung des Typs der **geometry** -Instanz sowie eine leichte Verschiebung der Punkte einer **geometry** -Instanz.  
   
 ## <a name="examples"></a>Beispiele  

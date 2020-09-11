@@ -41,7 +41,7 @@ Gibt den minimalen Datenbankkompatibilitätsgrad zurück, der die **geometry** -
   
  CLR-Rückgabetyp: **int**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Testen Sie die Kompatibilität eines räumlichen Objekts mithilfe von `MinDbCompatibilityLevel()` , bevor Sie den Kompatibilitätsgrad einer Datenbank ändern.  
   
 ## <a name="examples"></a>Beispiele  
@@ -68,7 +68,7 @@ Gibt den minimalen Datenbankkompatibilitätsgrad zurück, der die **geometry** -
  END
 ``` 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

@@ -88,7 +88,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     dbo.sales.price, dbo.sales.discount, SalesLT.Customer.Phone  
 ```
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 
 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 

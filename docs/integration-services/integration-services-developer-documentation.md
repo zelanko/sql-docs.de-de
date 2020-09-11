@@ -89,7 +89,7 @@ ms.locfileid: "88346096"
   
 -   CodePlex-Beispiele, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), auf www.codeplex.com/MSFTISProdSamples  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   
