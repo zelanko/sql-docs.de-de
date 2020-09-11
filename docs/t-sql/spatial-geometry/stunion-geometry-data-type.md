@@ -48,7 +48,7 @@ Gibt ein Objekt zurück, das die Vereinigung einer **geometry** -Instanz mit ein
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geometry** -Instanzen nicht übereinstimmen. Im Ergebnis können nur dann Kreisbogensegmente enthalten sein, wenn die Eingabeinstanzen auch Kreisbogensegmente enthalten.  
   
 ## <a name="examples"></a>Beispiele  

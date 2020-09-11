@@ -53,7 +53,7 @@ PWDENCRYPT ( 'password' )
 ## <a name="permissions"></a>Berechtigungen  
  PWDENCRYPT steht für die Öffentlichkeit zur Verfügung.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [PWDCOMPARE &#40;Transact-SQL&#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
   

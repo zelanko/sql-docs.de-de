@@ -122,7 +122,7 @@ GO
   
 -   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) OR NEAR((*Begriff3*, *Begriff4*),2, TRUE)')  
   
- Beispiel:  
+ Ein auf ein Objekt angewendeter  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  

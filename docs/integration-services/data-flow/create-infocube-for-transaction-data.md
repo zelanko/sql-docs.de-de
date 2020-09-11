@@ -62,7 +62,7 @@ ms.locfileid: "88457393"
  **InfoObject**  
  Zeigt den Namen des InfoObject an, das der Datenflussspalte zugeordnet ist.  
   
- **Typ**  
+ **Type**  
  Zeigt den Typ des InfoObject an, das der Datenflussspalte zugeordnet ist. In der folgenden Tabelle sind die möglichen Werte für den Typ aufgelistet.  
   
 |Wert|BESCHREIBUNG|  

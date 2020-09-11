@@ -72,7 +72,7 @@ Gibt alle eindeutigen Werte aus der Abfrage links vom EXCEPT-Operator zurück. D
 INTERSECT  
 Gibt alle eindeutigen Werte zurück, die von den Abfragen auf der linken und rechten Seite des INTERSECT-Operators zurückgegeben werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Die Datentypen vergleichbarer Spalten werden von den Abfragen links und rechts vom EXCEPT- oder INTERSECT-Operator zurückgegeben. Diese Datentypen können Zeichendatentypen mit unterschiedlichen Sortierungen enthalten. Wenn dies der Fall, wird der erforderliche Vergleich gemäß den Regeln der [Rangfolge von Sortierungen](../../t-sql/statements/collation-precedence-transact-sql.md) ausgeführt. Wenn Sie diese Konvertierung nicht ausführen können, gibt die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] einen Fehler zurück.  
   
 Wenn Sie zum Bestimmen EINDEUTIGER Zeilen Spaltenwerte vergleichen, werden zwei NULL-Werte als identisch betrachtet.  

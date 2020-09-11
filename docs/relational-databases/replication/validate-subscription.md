@@ -31,7 +31,7 @@ ms.locfileid: "88470134"
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Datum der letzten versuchten Überprüfung**  
  Das Datum der letzten Merge-Agent-Sitzung, bei der Abonnements überprüft wurden. Der Erfolg der Überprüfung ist dabei nicht entscheidend.  
   

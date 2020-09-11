@@ -46,7 +46,7 @@ In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]ist die bereitstell
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
 [Schritt 3: Hinzufügen von Paketen und weiteren Dateien](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Integration Services-Projekte &#40;SSIS&#41;](~/integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   

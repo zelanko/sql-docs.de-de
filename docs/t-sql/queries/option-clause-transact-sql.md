@@ -110,7 +110,7 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D: SELECT-Anweisung mit einer Bezeichnung und mehreren Abfragehinweisen in der OPTION-Klausel  
+### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. SELECT-Anweisung mit einer Bezeichnung und mehreren Abfragehinweisen in der OPTION-Klausel  
  Beim folgenden Beispiel handelt es sich um eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)]-SELECT-Anweisung, die eine Bezeichnung und mehrere Abfragehinweise enthält. Bei der Ausführung der Abfrage auf den Computeknoten wendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Hashjoin oder Merge Join an, je nachdem, welche Strategie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als optimal auswählt.  
   
 ```  

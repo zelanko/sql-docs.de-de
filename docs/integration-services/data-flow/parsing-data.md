@@ -185,7 +185,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
 |Minuten|00:00 hinzufügen.|  
 |Stunde|00:00:00 hinzufügen.|  
 |Tag|01 für den Tag des Monats hinzufügen.|  
-|Month (Monat)|01 für den Monat des Jahres hinzufügen.|  
+|Month|01 für den Monat des Jahres hinzufügen.|  
   
  Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   

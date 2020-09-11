@@ -63,7 +63,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Aktiviert oder deaktiviert das Sammeln von Datensätzen durch die Überwachung für diese Überwachungsspezifikation.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Sie müssen den Status einer Überwachungsspezifikation auf die Option OFF festlegen, um Änderungen an der Überwachungsspezifikation vornehmen zu können. Wenn ALTER SERVER AUDIT SPECIFICATION ausgeführt wird, während eine Überwachungsspezifikation mit einer anderen Option als STATE=OFF aktiviert ist, erhalten Sie eine Fehlermeldung.  
   
 ## <a name="permissions"></a>Berechtigungen  

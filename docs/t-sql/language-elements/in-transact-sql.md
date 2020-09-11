@@ -69,7 +69,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  Bei von der *Unterabfrage* oder dem *Ausdruck* zurückgegebenen NULL-Werten, die mithilfe von IN oder NOT IN mit *test_expression* verglichen werden, wird UNKNOWN zurückgegeben. Werden NULL-Werte zusammen mit IN oder NOT IN verwendet, kann dies zu unerwarteten Ergebnissen führen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn eine IN-Klausel eine extrem hohe Anzahl von Werten (viele Tausende durch Trennzeichen getrennte Werte) explizit in den Klammern enthält, können die Ressourcen überbeansprucht werden und die Fehler 8623 oder 8632 auftreten. Speichern Sie die Elemente in der IN-Liste in einer Tabelle, und verwenden Sie eine SELECT-Unterabfrage in einer IN-Klausel, um dieses Problem zu umgehen.  
   
  Fehler 8623:  

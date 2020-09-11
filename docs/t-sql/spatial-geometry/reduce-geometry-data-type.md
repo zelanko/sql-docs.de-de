@@ -48,7 +48,7 @@ Gibt einen Näherungswert für die angegebene **geometry**-Instanz zurück. Dies
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Bei Auflistungstypen arbeitet dieser Algorithmus unabhängig für jeden **geometry** -Wert, der in der Instanz enthalten ist.  
   
  Dieser Algorithmus ändert keine **Point**-Instanzen.  
@@ -113,6 +113,6 @@ SELECT @g.STIsValid() AS Valid
 SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte statische geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   

@@ -50,7 +50,7 @@ SqlInt16 GetLevel ( )
   
 **CLR-Rückgabetyp: SqlInt16**
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Wird zur Bestimmung der Ebene eines oder mehrerer Knoten oder zur Filterung der Knoten nach Elementen einer bestimmten Ebene verwendet. Der Stamm der Hierarchie ist Ebene 0.
   
 GetLevel ist nützlich für Breitensuchindizes. Weitere Informationen finden Sie unter [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
@@ -86,7 +86,7 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode.GetLevel() = 0;  
 ```  
   
-### <a name="d-clr-example"></a>D: CLR-Beispiel  
+### <a name="d-clr-example"></a>D. CLR-Beispiel  
 Im folgenden Codeausschnitt wird die GetLevel()-Methode aufgerufen:
   
 ```sql

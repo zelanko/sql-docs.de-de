@@ -47,7 +47,7 @@ ms.locfileid: "88459522"
 ## <a name="return-types"></a>Rückgabetypen
  **integer**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die BEGIN TRANSACTION-Anweisung erhöht @@TRANCOUNT um 1. ROLLBACK TRANSACTION reduziert @@TRANCOUNT auf 0. Lediglich ROLLBACK TRANSACTION *savepoint_name* wirkt sich nicht auf @@TRANCOUNT aus. COMMIT TRANSACTION oder COMMIT WORK reduziert @@TRANCOUNT um 1.  
   
 ## <a name="examples"></a>Beispiele  

@@ -101,7 +101,7 @@ Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/d
  ESTIMATEONLY  
  Zeigt den tempdb-Speicherplatz an, der schätzungsweise erforderlich ist, um DBCC CHECKALLOC auszuführen, wenn alle anderen Optionen angegeben sind.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 DBCC CHECKALLOC überprüft die Zuordnung aller Seiten in der Datenbank, unabhängig vom Typ der Seite oder des Objekts, zu dem sie gehören. Außerdem überprüft der Befehl die verschiedenen internen Strukturen, mit deren Hilfe diese Seiten und die Beziehungen zwischen ihnen nachverfolgt werden.
 Wird NO_INFOMSGS nicht angegeben, sammelt DBCC CHECKALLOC Informationen zur Speicherplatzverwendung für alle Objekte in der Datenbank. Diese Informationen werden anschließend zusammen mit den gefundenen Fehlern ausgegeben.
   

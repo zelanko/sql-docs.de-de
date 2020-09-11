@@ -50,7 +50,7 @@ Ein [Zeichenfolgenausdruck](../../t-sql/language-elements/expressions-transact-s
 ## <a name="return-types"></a>Rückgabetypen
 `TERTIARY_WEIGHTS` gibt **varbinary** zurück, wenn *non_Unicode_character_string_expression* vom Datentyp **char** oder **varchar** ist, und gibt **varbinary(max)** zurück, wenn *non_Unicode_character_string_expression* vom Datentyp **varchar(max)** ist.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 `TERTIARY_WEIGHTS` gibt NULL zurück, wenn eine tertiäre SQL-Sortierung *non_Unicode_character_string_expression* nicht definiert. In der folgenden Tabelle werden die tertiären SQL-Sortierungen dargestellt:
   
 |Sortierreihenfolge-ID|SQL-Sortierung|  
