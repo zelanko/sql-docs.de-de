@@ -44,7 +44,7 @@ ms.locfileid: "88467370"
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode zählt die Punkte in der Beschreibung einer **geometry** -Instanz. Doppelte Punkte werden mitgezählt. Wenn diese Instanz vom Typ **collection** ist, gibt diese Methode die Summe der Punkte in allen Elementen der Instanz zurück.  
   
 ## <a name="examples"></a>Beispiele  

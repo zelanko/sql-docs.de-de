@@ -35,7 +35,7 @@ In diesem Artikel werden spezielle Überlegungen zum Aktualisieren einer Datenba
 
 Das Bereitstellen eines DAC-Pakets kann auch dazu führen, dass Metadatenobjekte für Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel für Always Encrypted erstellt oder entfernt werden.
 
-## <a name="performance-considerations"></a>Überlegungen zur Leistung
+## <a name="performance-considerations"></a>Leistungserwägungen
 Ein Tool, mit dem Sie eine DACPAC-Datei bereitstellen, muss die Daten aus der Datenbank verschieben, um kryptografische Vorgänge auszuführen. Das Tool erstellt eine neue Tabelle (oder Tabellen) mit der gewünschten Verschlüsselungskonfiguration in der Datenbank, lädt alle Daten aus den ursprünglichen Tabellen, führt die angeforderten kryptografischen Vorgänge aus, lädt die Daten in die neue(n) Tabelle(n) hoch und vertauscht dann die ursprüngliche(n) Tabelle(n) mit der/den neuen Tabelle(n). Das Ausführen kryptografischer Vorgänge kann einige Zeit in Anspruch nehmen. Während dieser Zeit steht die Datenbank nicht zum Schreiben von Transaktionen zur Verfügung. 
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"

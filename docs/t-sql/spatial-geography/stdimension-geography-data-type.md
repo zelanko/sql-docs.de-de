@@ -63,7 +63,7 @@ FROM @temp;
   
  Im Beispiel werden dann die Dimensionen der einzelnen `geography`-Instanzen zurückgegeben.  
   
-|name|dim|  
+|Name|dim|  
 |----------|---------|  
 |Point|0|  
 |LineString|1|  

@@ -46,7 +46,7 @@ Nicht-Unicode-Daten variabler Länge in der Codepage des Servers und mit einer m
 **image**  
 Binärdaten variabler Länge von 0 bis 2^31-1 (2.147.483.647) Byte.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Die folgenden Funktionen und Anweisungen können mit **ntext**, **text** oder **image**-Daten verwendet werden.
   
 |Functions|Anweisungen|  

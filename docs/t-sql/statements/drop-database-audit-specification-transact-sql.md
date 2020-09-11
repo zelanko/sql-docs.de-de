@@ -47,7 +47,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Name eines vorhandenen Überwachungsspezifikationsobjekts.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  DROP DATABASE AUDIT SPECIFICATION entfernt die Metadaten für die Überwachungsspezifikation, jedoch nicht die Überwachungsdaten, die vor Ausgabe des DROP-Befehls gesammelt wurden. Sie müssen den Status einer Datenbanküberwachungsspezifikation mithilfe von `ALTER DATABASE AUDIT SPECIFICATION` auf OFF festlegen, bevor diese entfernt werden kann.  
   
 ## <a name="permissions"></a>Berechtigungen  

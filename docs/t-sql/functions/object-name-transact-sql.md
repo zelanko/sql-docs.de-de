@@ -65,7 +65,7 @@ OBJECT_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ANY-Berechtigung für das Objekt. Zum Angeben einer Datenbank-ID ist eine CONNECT-Berechtigung erforderlich, oder das Gastkonto muss aktiviert werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Systemfunktionen können in der SELECT-Liste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Ausdrücke](../../t-sql/language-elements/expressions-transact-sql.md) und [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  Für den von dieser Systemfunktion zurückgegebenen Wert wird die Sortierung der aktuellen Datenbank verwendet.  

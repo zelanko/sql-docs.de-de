@@ -43,7 +43,7 @@ Ein Wert des **hierarchyid** -Datentyps stellt eine Position in einer Strukturhi
   
 Der **hierarchyid**-Typ ist für CLR-Clients als **SqlHierarchyId**-Datentyp verfügbar.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Der **hierarchyid**-Typ codiert Informationen logisch über einen einzelnen Knoten in einer Hierarchiestruktur, indem der Pfad vom Stammelement der Struktur bis zum Knoten codiert wird. Ein solcher Pfad wird logisch dargestellt als eine Sequenz von Knotenbezeichnungen aller untergeordneten Elemente nach dem Stammelement. Die Darstellung beginnt mit einem Schrägstrich, und ein Pfad, der nur das Stammelement enthält, wird durch einen einzelnen Schrägstrich dargestellt. Für Ebenen unter dem Stammelement wird jede Bezeichnung als eine Sequenz von ganzen Zahlen codiert, die durch Punkte getrennt sind. Ein Vergleich zwischen untergeordneten Elementen wird ausgeführt, indem die durch Punkte getrennten Sequenzen von ganzen Zahlen in Wörterbuchreihenfolge verglichen werden. Auf jede Ebene folgt ein Schrägstrich. Deshalb werden übergeordnete Elemente von ihren untergeordneten Elementen durch einen ein Schrägstrich getrennt. Die folgenden Beispiele sind gültige **hierarchyid**-Pfade mit Längen von jeweils 1, 2, 2, 3 und 3 Ebenen:
   
 -   /  

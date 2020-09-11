@@ -60,7 +60,7 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ## <a name="return-types"></a>Rückgabetypen  
  **smalldatetime**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Funktion dient als Konstruktor für einen vollständig initialisierten **smalldatetime**-Wert. Wenn die Argumente nicht gültig sind, wird ein Fehler ausgegeben. Wenn erforderliche Argumente den Wert NULL haben, wird NULL zurückgegeben.  
   
  Diese Funktion kann remote auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern oder höher ausgeführt werden. Eine Remoteausführung auf Servern mit einer Version vor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist nicht möglich.  

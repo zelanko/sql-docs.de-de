@@ -69,7 +69,7 @@ catalog.create_environment [ @folder_name = ] folder_name
   
 -   Im angegebenen Ordner ist bereits eine Umgebung mit dem gleichen Namen vorhanden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der Umgebungsname muss innerhalb des Ordners eindeutig sein.  
   
   
