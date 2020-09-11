@@ -69,11 +69,11 @@ In der folgenden Tabelle finden Sie eine Beschreibung der Informationen des Resu
 |**TraceFlag**|Name des Ablaufverfolgungsflags|  
 |**Status**|Zeigt an, ob das Ablaufverfolgungsflag entweder global oder für die Sitzung auf ON oder OFF festgelegt wurde.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**Global**|Zeigt an, ob das Ablaufverfolgungsflag global festgelegt ist.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**Sitzung**|Zeigt an, ob das Ablaufverfolgungsflag für die Sitzung festgelegt ist.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**Sitzungskonsistenz**|Zeigt an, ob das Ablaufverfolgungsflag für die Sitzung festgelegt ist.<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS gibt eine Spalte für die Nummer des Ablaufverfolgungsflags und eine Spalte für den Status zurück. Zeigt an, ob das Ablaufverfolgungsflag auf ON (1) oder OFF (0) festgelegt ist. Die Spaltenüberschrift für die Nummer des Ablaufverfolgungsflags lautet entweder **Global Trace Flag** oder **Session Trace Flag**, je nachdem, ob Sie den Status eines Ablaufverfolgungsflags vom Typ „Global“ oder „Session“ überprüfen.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt es zwei Typen von Ablaufverfolgungsflags: Sitzung und global. Ablaufverfolgungsflags des Typs Session werden für eine Verbindung aktiviert und sind nur für diese Verbindung sichtbar. Globale Ablaufverfolgungsflags werden auf Serverebene festgelegt und sind für jede Verbindung auf dem Server sichtbar.
   
 ## <a name="permissions"></a>Berechtigungen  

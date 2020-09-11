@@ -44,7 +44,7 @@ ms.locfileid: "88405536"
  **Für erneute Initialisierung kennzeichnen**  
  Klicken Sie auf diese Option, um alle Abonnements für die Neuinitialisierung zu kennzeichnen. Sofern eine gültige Momentaufnahme verfügbar ist, wird er beim nächsten Start des Verteilungs- oder Merge-Agents für das Abonnement auf den Abonnenten angewendet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

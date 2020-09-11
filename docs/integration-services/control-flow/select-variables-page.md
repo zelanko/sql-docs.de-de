@@ -39,10 +39,10 @@ ms.locfileid: "88349306"
  **Name**  
  Gibt den Namen einer Variablen an.  
   
- **Type**  
+ **Typ**  
  Gibt den Datentyp einer Variablen an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Skripttask-Editor &#40;Seite Skript&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   

@@ -51,7 +51,7 @@ ms.locfileid: "88416996"
   
  CLR-Rückgabetyp: **SqlDouble**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Das Ergebnis wird in der Maßeinheit ausgedrückt, die der [räumliche Verweisbezeichner &#40; Spatial Reference Identifier, SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) der räumlichen Daten festlegt.
 STDistance() gibt immer *NULL* zurück, wenn die SRIDs der **geography**-Instanzen nicht übereinstimmen.  
   

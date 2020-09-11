@@ -48,7 +48,7 @@ ms.locfileid: "88416966"
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geography** -Instanzen nicht übereinstimmen.  
   
 ## <a name="examples"></a>Beispiele  

@@ -56,7 +56,7 @@ NULL oder die **hierarchyid** eines untergeordneten Elements des aktuellen Knote
   
 **CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Gibt einen untergeordneten Knoten zurück, der ein Nachfolger des übergeordneten Elements ist.
 -   Ist parent NULL, wird NULL zurückgegeben.  
 -   Ist parent nicht NULL und sind sowohl child1 als auch child2 NULL, dann wird ein parent untergeordneter Knoten zurückgegeben.  
@@ -126,7 +126,7 @@ Nach Abschluss der Beispiele A, B und C sind die der Tabelle hinzugefügten Knot
   
 Knoten `/3/1/1.1/` ist größer als Knoten `/3/1/1/`, befindet sich aber auf der gleichen Ebene in der Hierarchie.
   
-### <a name="d-scalar-examples"></a>D: Skalarbeispiele  
+### <a name="d-scalar-examples"></a>D. Skalarbeispiele  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt willkürliche Einfüge- und Löschvorgänge beliebiger **hierarchyid**-Knoten. Mit GetDescendant() ist es immer möglich, einen Knoten zwischen zwei beliebigen **hierarchyid**-Knoten zu generieren. Führen Sie den folgenden Code aus, um mithilfe von `GetDescendant` Beispielknoten zu generieren:
   
 ```sql

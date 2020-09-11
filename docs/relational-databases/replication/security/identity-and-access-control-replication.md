@@ -54,7 +54,7 @@ Geben Sie bei der Replikationskonfiguration Anmeldeinformationen und Kennwörter
 
 Die Verwendung gruppenverwalteter Dienstkonten (group Managed Service Accounts, gMSA) wird ab SQL Server 2014 unterstützt. Weitere Informationen finden Sie im Blogartikel [Replication and group Managed Service Accounts (Replikation und gruppenverwaltete Dienstkonten)](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/).
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Mindern von Bedrohungen und Sicherheitsrisiken (Replikation)](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [Sicherheitsmodell des Replikations-Agents](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Bewährte Methoden für die Replikationssicherheit](../../../relational-databases/replication/security/replication-security-best-practices.md)   
 

@@ -138,7 +138,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="d-using-the-over-clause"></a>D: Verwenden der OVER-Klausel  
+### <a name="d-using-the-over-clause"></a>D. Verwenden der OVER-Klausel  
 In diesem Beispiel werden die Funktionen `MIN`, `MAX`, `AVG` und `COUNT` zusammen mit der `OVER`-Klausel verwendet, um aggregierte Werte für jede Abteilung in der `HumanResources.Department`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückzugeben.
   
 ```sql
@@ -280,7 +280,7 @@ ProductCount   SalesOrderID`
 1              SO55981
 ```
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Aggregate Functions &#40;Transact-SQL&#41; (Aggregatfunktionen (Transact-SQL))](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)  
 [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)

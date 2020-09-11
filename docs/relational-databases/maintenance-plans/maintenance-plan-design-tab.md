@@ -26,7 +26,7 @@ ms.locfileid: "88420874"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
    Verwenden Sie **Wartungsplan (Registerkarte „Entwurf“)**, um die Eigenschaften eines Wartungsplans und seiner Unterpläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Unterplan hinzufügen**  
  Mit dieser Option fügen Sie einen Unterplan hinzu, den Sie konfigurieren können.  
   

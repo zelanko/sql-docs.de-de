@@ -101,7 +101,7 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode.GetAncestor(0) = @CurrentEmployee ;  
 ```  
   
-### <a name="d-returning-a-hierarchy-level-if-a-table-isnt-present"></a>D: Zurückgeben einer Hierarchieebene, wenn keine Tabelle vorhanden ist  
+### <a name="d-returning-a-hierarchy-level-if-a-table-isnt-present"></a>D. Zurückgeben einer Hierarchieebene, wenn keine Tabelle vorhanden ist  
 `GetAncestor` gibt die ausgewählte Ebene in der Hierarchie zurück, auch wenn keine Tabelle vorhanden ist. Beispiel: Mit dem folgenden Code wird ein aktueller Mitarbeiter festgelegt, und das `hierarchyid`-Element des Vorgängers des aktuellen Mitarbeiters wird ohne Verweis auf eine Tabelle zurückgegeben.
   
 ```sql
@@ -119,7 +119,7 @@ Im folgenden Codeausschnitt wird die `GetAncestor()`-Methode aufgerufen.
 this.GetAncestor(1)  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [IsDescendantOf &#40;Database Engine&#41; (IsDescendantOf (Datenbank-Engine))](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [hierarchyid-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  

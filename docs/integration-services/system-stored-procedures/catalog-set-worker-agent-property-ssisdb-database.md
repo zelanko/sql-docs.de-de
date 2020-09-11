@@ -40,12 +40,12 @@ catalog.set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId
 Die Worker-Agent-ID für den Scale Out-Worker. Das Argument *WorkerAgentId* ist vom Typ **uniqueidentifier**.
 
 [@PropertyName =] *PropertyName*  
-Der Name der Eigenschaft. Das Argument *PropertyName* ist vom Typ **nvarchar(256)**.
+Den Namen der Eigenschaft. Das Argument *PropertyName* ist vom Typ **nvarchar(256)**.
 
 [@PropertyValue =] *PropertyValue*  
-Der Wert der Eigenschaft. Das Argument *PropertyValue* ist vom Typ **nvarchar(max)**.
+Der Wert der Eigenschaft. Das Argument *PropertyValue* ist vom Typ **nvarchar(max)** .
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 Die gültigen Eigenschaftennamen sind **DisplayName**, **Description**, **Tags**.
 
 ## <a name="return-code-value"></a>Rückgabecodewert  

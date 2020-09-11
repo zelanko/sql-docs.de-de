@@ -68,7 +68,7 @@ Gibt eine **LineString** -Instanz mit zwei Punkten zurück, die den kürzesten A
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ShortestLineTo &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   

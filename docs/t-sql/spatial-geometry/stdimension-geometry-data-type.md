@@ -44,7 +44,7 @@ Gibt die maximale Dimension einer **geometry** -Instanz zurück
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  `STDimension()` gibt -1 zurück, wenn die **geometry**-Instanz leer ist.  
   
 ## <a name="examples"></a>Beispiele  
@@ -61,7 +61,7 @@ FROM @temp;
   
  Im Beispiel werden dann die Dimensionen jeder `geometry` -Instanz zurückgegeben.  
   
-|name|dim|  
+|Name|dim|  
 |----------|---------|  
 |Point|0|  
 |LineString|1|  
