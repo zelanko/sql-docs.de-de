@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0986c7af4ed3f6f8284db2e9faf99cad149b216
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c8636dad789915289ef0f08c7355c5f443a7a87a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457616"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480504"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "86457616"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>So starten Sie den Datenbankoptimierungsratgeber über den Abfrage-Editor von SQL Server Management Studio  
   
-1.  Öffnen Sie in [!INCLUDE[tsql](../../includes/tsql-md.md)] eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Skriptdatei. Weitere Informationen finden Sie unter [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
+1.  Öffnen Sie in [!INCLUDE[tsql](../../includes/tsql-md.md)] eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Skriptdatei. Weitere Informationen finden Sie unter [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15).  
   
 2.  Wählen Sie im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript eine Abfrage aus, oder wählen Sie das gesamte Skript aus, klicken Sie mit der rechten Maustaste auf die Auswahl, und wählen Sie **Abfrage mit dem Datenbankoptimierungsratgeber analysieren**. Die GUI des Datenbankoptimierungsratgebers wird geöffnet und importiert das Skript als Arbeitsauslastung in Form einer XML-Datei. Sie können einen Namen für die Sitzung und Optimierungsoptionen angeben, um die ausgewählten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen als Arbeitsauslastung zu optimieren.  
   
@@ -180,7 +180,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
 > [!NOTE]  
 >  Das Anhalten des Datenbankoptimierungsratgebers wird nicht unterstützt. Wenn Sie auf die Symbolleistenschaltfläche **Analyse starten** klicken, nachdem Sie auf eine der beiden Symbolleistenschaltflächen **Analyse beenden** oder **Analyse beenden (mit Empfehlungen)** geklickt haben, startet der Datenbankoptimierungsratgeber eine neue Optimierungssitzung.  
   
-##### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>So optimieren Sie eine Datenbank mithilfe einer Arbeitsauslastungsdatei oder -tabelle als Eingabe  
+#### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>So optimieren Sie eine Datenbank mithilfe einer Arbeitsauslastungsdatei oder -tabelle als Eingabe  
   
 1.  Legen Sie die Datenbankfunktionen (Indizes, indizierte Sichten, Partitionierung) fest, die während der Analyse vom Datenbankoptimierungsratgeber hinzugefügt, entfernt oder beibehalten werden sollen.  
   
@@ -195,7 +195,6 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
      Das Format für die Angabe einer Tabelle lautet wie folgt:  
   
     ```  
-  
     database_name.schema_name.table_name  
     ```  
   
@@ -235,7 +234,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
  Weitere Informationen zur Syntax des Hilfsprogramms **dta** sowie Beispiele finden Sie unter [dta Utility](../../tools/dta/dta-utility.md).  
   
-##### <a name="to-tune-a-database-by-using-the-plan-cache"></a>So optimieren Sie eine Datenbank mit dem Plancache  
+#### <a name="to-tune-a-database-by-using-the-plan-cache"></a>So optimieren Sie eine Datenbank mit dem Plancache  
   
 1.  Geben Sie die Option **-ip** an. Die obersten 1.000 Plancacheereignisse für die ausgewählten Datenbanken werden analysiert.  
   
@@ -257,7 +256,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
     dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
-##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>So optimieren Sie eine Datenbank mithilfe einer Arbeitsauslastung und den Standardeinstellungen des dta-Hilfsprogramms  
+#### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>So optimieren Sie eine Datenbank mithilfe einer Arbeitsauslastung und den Standardeinstellungen des dta-Hilfsprogramms  
   
 1.  Legen Sie die Datenbankfunktionen (Indizes, indizierte Sichten, Partitionierung) fest, die während der Analyse vom Datenbankoptimierungsratgeber hinzugefügt, entfernt oder beibehalten werden sollen.  
   
@@ -273,7 +272,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
      Die vier hier gezeigten Optionen (Datenbankname, Arbeitsauslastung, Verbindungstyp und Sitzungsname) müssen angegeben werden.  
   
-##### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>So optimieren Sie eine Remotedatenbank oder eine benannte Instanz für eine bestimmte Dauer  
+#### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>So optimieren Sie eine Remotedatenbank oder eine benannte Instanz für eine bestimmte Dauer  
   
 1.  Legen Sie die Datenbankfunktionen (Indizes, indizierte Sichten, Partitionierung) fest, die während der Analyse vom Datenbankoptimierungsratgeber hinzugefügt, entfernt oder beibehalten werden sollen.  
   
@@ -288,7 +287,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
      Dabei gibt `-S` den Namen und die Instanz eines Remoteservers an (oder eine benannte Instanz auf dem lokalen Server), während `-D` den Namen der zu optimierenden Datenbank angibt. Die Option `-it` gibt den Namen der Arbeitsauslastungstabelle an, `-U` und `-P` geben den Benutzernamen und das Kennwort für die Remotedatenbank an, `-s` gibt den Namen der Optimierungssitzung an, und `-A` gibt die Dauer der Optimierungssitzung in Minuten an. Standardmäßig verwendet das Hilfsprogramm **dta** eine Optimierungsdauer von 8 Stunden. Wenn der Datenbankoptimierungsratgeber eine Arbeitsauslastung für einen unbegrenzten Zeitraum optimieren soll, geben Sie **0** (Null) mit der Option `-A` an.  
   
-##### <a name="to-tune-a-database-using-an-xml-input-file"></a>So optimieren Sie eine Datenbank mithilfe einer XML-Eingabedatei  
+#### <a name="to-tune-a-database-using-an-xml-input-file"></a>So optimieren Sie eine Datenbank mithilfe einer XML-Eingabedatei  
   
 1.  Legen Sie die Datenbankfunktionen (Indizes, indizierte Sichten, Partitionierung) fest, die während der Analyse vom Datenbankoptimierungsratgeber hinzugefügt, entfernt oder beibehalten werden sollen.  
   
@@ -311,7 +310,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
   
  Das XML-Schema für den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Optimierungsratgeber ist in Ihrer Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an folgendem Speicherort verfügbar:  
   
- C:\Programme\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
+ `C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd` 
   
  Das XML-Schema des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers ist auch online auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)verfügbar.  
   
@@ -415,7 +414,7 @@ database_name.owner_name.table_name
  Begrenzt die Dauer der aktuellen Optimierungssitzung. Wenn der Optimierung mehr Zeit eingeräumt wird, erhöht sich die Qualität der Empfehlungen. Um bestmögliche Empfehlungen zu erhalten, sollte diese Option nicht ausgewählt werden.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber beansprucht während der Analyse die Systemressourcen. Um die Optimierung vor dem Beginn von Zeiträumen mit erwartungsgemäß hoher Arbeitsauslastung auf dem optimierten Server zu beenden, verwenden Sie **Optimierungszeit begrenzen** .  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber beansprucht während der Analyse die Systemressourcen. Um die Optimierung vor dem Beginn von Zeiträumen mit erwartungsgemäß hoher Arbeitsauslastung auf dem optimierten Server zu beenden, verwenden Sie **Optimierungszeit begrenzen** .  
   
  **Erweiterte Optionen**  
  Mithilfe des Dialogfelds **Erweiterte Optimierungsoptionen** können Sie den maximalen Speicherplatz, die maximale Anzahl an Schlüsselspalten sowie Onlineindexempfehlungen konfigurieren.  
@@ -518,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta (Hilfsprogramm)](../../tools/dta/dta-utility.md)  
-  
+ [dta (Hilfsprogramm)](../../tools/dta/dta-utility.md)    
+ [Tutorial: Datenbankoptimierungsratgeber](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
   

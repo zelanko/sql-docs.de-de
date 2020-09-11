@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 064b6294a33b87e41a9439e2759be2461131e388
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425822"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424420"
 ---
 # <a name="odata-source"></a>OData-Quelle
 
@@ -54,6 +54,13 @@ Beim Datentyp **Decimal** werden Genauigkeit und Skalierung durch die Quellmetad
 
 > [!IMPORTANT]
 > Die OData-Quellkomponente unterstützt keine komplexen Typen wie Multiple-Choice-Elemente in SharePoint-Listen.
+
+> [!Note]
+> Wenn die Quelle nur eine TLS 1.2-Verbindung zulässt, müssen Sie TLS 1.2 auf Ihrem Computer über Registereinstellungen erzwingen. Führen Sie in einer Eingabeaufforderung mit erhöhten Rechten die folgenden Befehle aus:
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:64
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:32
 
 ## <a name="odata-format-and-performance"></a>OData-Format und Leistung
  Die meisten OData-Dienste können Ergebnisse in verschiedenen Formaten zurückgeben. Sie können das Format des Resultsets mithilfe der `$format`-Abfrageoption angeben. Formate wie JSON und JSON Light sind effizienter als ATOM oder XML und erzielen bei der Übertragung großer Datenmengen möglicherweise eine bessere Leistung. In der folgenden Tabelle sind Ergebnisse aus Beispieltests dargestellt. Wie Sie erkennen können, ergab der Wechsel von ATOM zu JSON einen Leistungszuwachs von 30-53% und der Wechsel von ATOM zum neuen JSON Light-Format (verfügbar in WCF Data Services 5.1) einen Leistungszuwachs von 67 %.  

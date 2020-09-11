@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 769000368599b2dc4e39b851d3d0def2f8b40a38
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395055"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424430"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "87395055"
   Im Kontext einer Verfügbarkeitsgruppe können die primäre und die sekundäre Rolle von Verfügbarkeitsreplikaten normalerweise im Rahmen des so genannten *Failovers*ausgetauscht werden. Failover können in drei Formen auftreten: automatisches Failover (ohne Datenverlust), geplantes manuelles Failover (ohne Datenverlust) und erzwungenes manuelles Failover (mit möglichem Datenverlust), welches in der Regel *erzwungenes Failover*genannt wird. Beim automatischen und geplanten manuellen Failover bleiben alle Daten erhalten. Eine Verfügbarkeitsgruppe führt ein Failover auf der Ebene des Verfügbarkeitsreplikats aus. Das heißt, eine Verfügbarkeitsgruppe führt ein Failover auf eines ihrer sekundären Replikate (das aktuelle *Failoverziel*) aus.  
   
 > [!NOTE]  
->  Probleme auf Datenbankebene, z. B. wenn eine Datenbank aufgrund des Verlusts einer Datendatei fehlerverdächtig wird, eine Datenbank gelöscht oder ein Transaktionsprotokoll beschädigt wird, führen nicht zum Failover einer Verfügbarkeitsgruppe.  
+>   Wenn [Integritätserkennung aus Datenbankebene](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) nicht konfiguriert ist, führen Probleme auf Datenbankebene (z. B. wenn eine Datenbank aufgrund des Verlusts einer Datendatei fehlerverdächtig wird, eine Datenbank gelöscht oder ein Transaktionsprotokoll beschädigt wird) nicht zum Failover einer Verfügbarkeitsgruppe.  
   
  Während des Failovers übernimmt das Failoverziel die primäre Rolle, stellt die zugehörigen Datenbanken wieder her und schaltet sie als neue primäre Datenbanken online. Das frühere primäre Replikat (falls verfügbar) wechselt zur sekundären Rolle, und seine Datenbanken werden zu sekundären Datenbanken. Diese Rollen können in Reaktion auf wiederholte Fehler oder zu Verwaltungszwecken hin und her (bzw. zu einem anderen Failoverziel) gewechselt werden.  
   

@@ -2,7 +2,7 @@
 title: Sicherheit auf Zeilenebene | Microsoft-Dokumentation
 description: Mithilfe der Sicherheit auf Zeilenebene können Sie den Zugriff auf Zeilen in einer Datenbanktabelle in SQL Server anhand der Gruppenmitgliedschaft oder des Ausführungskontext steuern.
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 88f809409337557603120cc87a24874319a96c9a
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000538"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392188"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
 
@@ -256,7 +256,6 @@ GRANT SELECT ON security.fn_securitypredicate TO Sales1;
 GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
 ```
 
-
 Testen Sie jetzt das Filterungsprädikat, indem Sie sie als jeweiliger Benutzer aus der Sales-Tabelle auswählen.
 
 ```sql
@@ -272,6 +271,7 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
+
 Dem Manager sollten alle sechs Zeilen angezeigt werden. Den Benutzern Sales1 und Sales2 sollten nur ihre eigenen Verkäufe angezeigt werden.
 
 Ändern Sie die Sicherheitsrichtlinie, um die Richtlinie zu deaktivieren.
@@ -298,18 +298,26 @@ DROP SCHEMA Security;
 
 ### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. Szenarios für die Verwendung von Sicherheit auf Zeilenebene in einer externen Azure Synapse-Tabelle
 
-In diesem kurzen Beispiel werden drei Benutzer und eine externe Tabelle mit sechs Zeilen erstellt. Anschließend werden eine Inline-Tabellenwertfunktion und eine Sicherheitsrichtlinie für die externe Tabelle erstellt. Im Beispiel wird gezeigt, wie ausgewählte Anweisungen für verschiedene Benutzer gefiltert werden.
+In diesem kurzen Beispiel werden drei Benutzer und eine externe Tabelle mit sechs Zeilen erstellt. Anschließend werden eine Inline-Tabellenwertfunktion und eine Sicherheitsrichtlinie für die externe Tabelle erstellt. Im Beispiel wird gezeigt, wie ausgewählte Anweisungen für verschiedene Benutzer gefiltert werden. 
 
-Erstellen Sie drei Benutzerkonten, anhand derer unterschiedliche Zugriffsmöglichkeiten vorgeführt werden.
+### <a name="prerequisites"></a>Voraussetzungen
+
+1. Sie müssen über einen SQL-Pool verfügen. Siehe [Erstellen eines Synapse SQL-Pools](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal).
+1. Der Server, auf dem der SQL-Pool gehostet wird, muss bei AAD registriert sein, und Sie müssen über ein Azure-Speicherkonto mit den Berechtigungen „Speicherblogmitwirkender“ verfügen. Führen Sie [die hier beschriebenen Schritte](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps) aus.
+1. Erstellen Sie ein Dateisystem fürIhr Azure Storage-Konto. Zeigen Sie Ihr Speicherkonto mit Storage-Explorer an. Klicken Sie mit der rechten Maustaste auf Container, und wählen Sie *Dateisystem erstellen* aus.  
+
+Sobald Sie die Voraussetzungen eingerichtet haben, erstellen Sie drei Benutzerkonten, anhand derer unterschiedliche Zugriffsmöglichkeiten gezeigt werden.
 
 ```sql
-CREATE LOGIN Manager WITH PASSWORD = 'somepassword'
+--run in master
+CREATE LOGIN Manager WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales1 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales1 WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales2 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
+--run in master and your SQL pool database
 CREATE USER Manager FOR LOGIN Manager;  
 CREATE USER Sales1  FOR LOGIN Sales1;  
 CREATE USER Sales2  FOR LOGIN Sales2 ;
@@ -330,12 +338,12 @@ CREATE TABLE Sales
 Füllen Sie die Tabelle mit sechs Datenzeilen auf, sodass drei Bestellungen pro Vertriebsmitarbeiter enthalten sind.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -343,15 +351,15 @@ SELECT * FROM Sales;
 Erstellen Sie aus der zuvor erstellten Sales-Tabelle eine externe Azure Synapse-Tabelle.
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<user_password>';
 
 CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
 
-CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://<file_system_name@storage_account>.dfs.core.windows.net', CREDENTIAL = msi_cred);
 
 CREATE EXTERNAL FILE FORMAT MSIFormat  WITH (FORMAT_TYPE=DELIMITEDTEXT);
   
-CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='RLSExtTabletest.tbl', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
+CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
 AS SELECT * FROM sales;
 ```
 
@@ -363,7 +371,21 @@ GRANT SELECT ON Sales_ext TO Sales2;
 GRANT SELECT ON Sales_ext TO Manager;
 ```
 
-Erstellen Sie eine Sicherheitsrichtlinie für die externe Tabelle, wobei Sie die Funktion in Sitzung A als Filterprädikat verwenden. Der Status muss auf ON festgelegt werden, um die Richtlinie zu aktivieren.
+Erstellen Sie ein neues Schema und eine Inline-Tabellenwertfunktion. In Beispiel A haben Sie diesen Vorgang möglicherweise bereits abgeschlossen. Die Funktion gibt 1 zurück, wenn eine Zeile in der Spalte SalesRep dem Benutzer entspricht, der die Abfrage ausführt (`@SalesRep = USER_NAME()`), oder wenn der Benutzer, der die Abfrage ausführt, der Manager-Benutzer ist (`USER_NAME() = 'Manager'`).
+
+```sql
+CREATE SCHEMA Security;  
+GO  
+  
+CREATE FUNCTION Security.fn_securitypredicate(@SalesRep AS sysname)  
+    RETURNS TABLE  
+WITH SCHEMABINDING  
+AS  
+    RETURN SELECT 1 AS fn_securitypredicate_result
+WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
+```
+
+Erstellen Sie eine Sicherheitsrichtlinie für die externe Tabelle, wobei Sie die Inline-Tabellenwertfunktion als Filterprädikat verwenden. Der Status muss auf ON festgelegt werden, um die Richtlinie zu aktivieren.
 
 ```sql
 CREATE SECURITY POLICY SalesFilter_ext

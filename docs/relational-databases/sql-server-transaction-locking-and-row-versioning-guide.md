@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12d986004250f40acb9dc99d225fc30c015ac734
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403056"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480948"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -424,7 +424,7 @@ GO
   
  Anwendungen fordern in der Regel Sperren nicht direkt an. Sperren werden intern durch eine Komponente von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwaltet, die als Sperrenmanager bezeichnet wird. Wenn eine Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung verarbeitet, ermittelt der Abfrageprozessor von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], auf welche Ressourcen zugegriffen werden muss. Der Abfrageprozessor ermittelt, welche Arten von Sperren zum Schützen der einzelnen Ressourcen basierend auf dem Zugriffstyp und der Einstellung für den Isolationsgrad der Transaktion erforderlich sind. Der Abfrageprozessor fordert dann die entsprechenden Sperren vom Sperrenmanager an. Der Sperrenmanager erteilt die Sperren, wenn keine Sperren von anderen Transaktionen aufrechterhalten werden, die einen Konflikt verursachen.  
   
-### <a name="lock-granularity-and-hierarchies"></a>Sperrengranularität und -hierarchien  
+## <a name="lock-granularity-and-hierarchies"></a>Sperrengranularität und -hierarchien  
  Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet multigranulare Sperren, die das Sperren unterschiedlicher Ressourcentypen durch eine Transaktion ermöglichen. Um die Kosten für das Sperren zu minimieren, sperrt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] automatisch Ressourcen auf einer für die Aufgabe geeigneten Stufe. Bei Verwendung von Sperren mit differenzierterer Granularität, z. B. Sperren für Zeilen, steigt die Parallelität, aber der Verwaltungsaufwand ist größer, da mehr Sperren aufrechterhalten werden müssen, wenn viele Zeilen gesperrt werden. Die Verwendung von Sperren mit gröberer Granularität, z. B. Sperren für Tabellen, wirkt sich nachteilig auf die Parallelität aus, da durch das Sperren einer gesamten Tabelle der Zugriff auf alle Teile der Tabelle für andere Transaktionen eingeschränkt wird. Der Verwaltungsaufwand nimmt jedoch ab, da weniger Sperren aufrechterhalten werden müssen.  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] muss häufig Sperren auf einer höheren Granularitätsebene einrichten, um eine Ressource vollständig zu schützen. Diese Gruppe von Sperren auf mehreren Granularitätsebenen wird als Sperrenhierarchie bezeichnet. Um z. B. das Lesen eines Indexes vollständig zu schützen, muss eine Instanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] gegebenenfalls freigegebene Sperren für Spalten und beabsichtigt-freigegebene Sperren für die Seiten und Tabellen einrichten.  
@@ -448,7 +448,7 @@ GO
 > [!NOTE]  
 > HoBT- und TABLE-Sperren können durch die LOCK_ESCALATION-Option von [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) beeinflusst werden.  
   
-### <a name="lock-modes"></a><a name="lock_modes"></a> Sperrmodi  
+## <a name="lock-modes"></a><a name="lock_modes"></a> Sperrmodi  
  Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sperrt Ressourcen mithilfe unterschiedlicher Sperrmodi, die bestimmen, wie gleichzeitige Transaktionen auf Ressourcen zugreifen können.  
   
  Die folgende Tabelle zeigt die Ressourcen-Sperrmodi, die das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet.  
@@ -463,20 +463,20 @@ GO
 |**Massenaktualisierung (Bulk Update, BU)**|Wird beim Massenkopieren von Daten in eine Tabelle verwendet, wenn der **TABLOCK**-Hinweis angegeben ist.|  
 |**Schlüsselbereich**|Schützt den von einer Abfrage gelesenen Zeilenbereich, wenn die serialisierbare Transaktionsisolationsstufe verwendet wird. Stellt sicher, dass keine anderen Transaktionen Zeilen einfügen können, die von den Abfragen der serialisierbaren Transaktion berücksichtigt werden können, falls diese erneut ausgeführt würden.|  
   
-#### <a name="shared-locks"></a><a name="shared"></a> Gemeinsame Sperren  
+### <a name="shared-locks"></a><a name="shared"></a> Gemeinsame Sperren  
  Freigegebene Sperren (S) ermöglichen, dass Transaktionen eine Ressource gleichzeitig lesen können (SELECT), wenn die Steuerung durch eingeschränkte Parallelität aktiviert ist. Andere Transaktionen können die Daten nicht ändern, während freigegebene Sperren (S) für die Ressource eingerichtet sind. Freigegebene Sperren (S) einer Ressource werden aufgehoben, sobald der Lesevorgang abgeschlossen ist, es sei denn, die Isolationsstufe der Transaktion wird auf REPEATABLE READ oder höher festgelegt oder ein Sperrhinweis wird verwendet, um freigegebene Sperren (S) für die Dauer der Transaktion beizubehalten.  
   
-#### <a name="update-locks"></a><a name="update"></a> Aktualisierungssperren  
+### <a name="update-locks"></a><a name="update"></a> Aktualisierungssperren  
  Updatesperren (Update, U) verhindern eine häufige Form von Deadlocks. Bei REPEATABLE READ- oder SERIALIZABLE-Transaktionen liest die Transaktion Daten, wozu sie eine freigegebene Sperre (S) für die Ressource (Seite oder Zeile) einrichtet, und ändert anschließend die Daten, was eine Konvertierung der Sperre in eine exklusive Sperre (X) erfordert. Wenn zwei Transaktionen eine freigegebene Sperre für eine Ressource einrichten und anschließend versuchen, Daten gleichzeitig zu aktualisieren, versucht die erste Transaktion, die Sperre zu einer exklusiven Sperre (X) zu konvertieren. Diese Konvertierung muss aufgeschoben werden, da der Modus der exklusiven Sperre der einen Transaktion nicht kompatibel mit dem Modus der freigegebenen Sperre der anderen Transaktion ist. Es ergibt sich ein Sperrenwartevorgang. Die zweite Transaktion versucht nun ebenfalls, eine exklusive Sperre (X) für das Update einzurichten. Da beide Transaktionen das Konvertieren in eine exklusive Sperre (X) versuchen und darauf warten, dass die andere Transaktion die freigegebene Sperre aufhebt, kommt es zu einem Deadlock.  
   
  Um dieses potenzielle Deadlockproblem zu vermeiden, werden Updatesperren (U) verwendet. Es kann jeweils nur eine Transaktion eine Updatesperre (U) für eine Ressource einrichten. Wenn eine Transaktion eine Ressource ändert, wird die Updatesperre (U) in eine exklusive Sperre (X) konvertiert.  
   
-#### <a name="exclusive-locks"></a><a name="exclusive"></a> Exklusive Sperren  
+### <a name="exclusive-locks"></a><a name="exclusive"></a> Exklusive Sperren  
  Exklusive Sperren (X) verhindern, dass Transaktionen gleichzeitig auf eine Ressource zugreifen. Eine exklusive Sperre (X) bewirkt, dass keine andere Transaktion Daten ändern kann. Lesevorgänge können nur mithilfe des NOLOCK-Hinweises oder der READ UNCOMMITTED-Isolationsstufe ausgeführt werden.  
   
  Datenänderungsanweisungen wie INSERT, UPDATE und DELETE setzen sowohl Änderungs- als auch Lesevorgänge voraus. Die Anweisung führt zunächst Lesevorgänge aus, um die Daten einzulesen, und anschließend die erforderlichen Änderungsvorgänge. Daher machen Datenänderungsanweisungen normalerweise sowohl freigegebene als auch exklusive Sperren erforderlich. Eine UPDATE-Anweisung kann beispielsweise Zeilen einer Tabelle ändern, die auf einem Join mit einer anderen Tabelle basieren. In diesem Fall fordert die UPDATE-Anweisung freigegebene Sperren für die Zeilen in der verknüpften Tabelle an, sowie exklusive Sperren für die zu aktualisierenden Zeilen.  
   
-#### <a name="intent-locks"></a><a name="intent"></a> Beabsichtigte Sperren  
+### <a name="intent-locks"></a><a name="intent"></a> Beabsichtigte Sperren  
  Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet beabsichtigte Sperren, um das Platzieren einer freigegebenen (S) oder exklusiven Sperre (X) auf eine Ressource zu schützen, die sich weiter unten in der Sperrhierarchie befinden. Die Bezeichnung 'beabsichtige Sperre' bedeutet, dass beabsichtigte Sperren vor Sperren auf untergeordneten Ebenen eingerichtet werden, und damit die Absicht ausdrücken, Sperren auf untergeordneten Ebenen zu platzieren.  
   
  Beabsichtigte Sperren werden aus zwei Gründen verwendet:  
@@ -497,14 +497,14 @@ GO
 |**Gemeinsame Sperre mit beabsichtigter Aktualisierungssperre (SIU)**|Eine Kombination der Sperren vom Typ S und IU, die sich aus der separaten Einrichtung dieser Sperren und dem gleichzeitigen Beibehalten beider Sperren ergibt. Nehmen Sie beispielsweise an, eine Transaktion führt eine Abfrage mit dem PAGLOCK-Hinweis und anschließend einen Updatevorgang aus. Die Abfrage mit dem PAGLOCK-Hinweis richtet also die S-Sperre ein, wohingegen der Updatevorgang die IU-Sperre einrichtet.|  
 |**Aktualisierungssperre mit beabsichtigter exklusiver Sperre (UIX)**|Eine Kombination der Sperren vom Typ U und IX, die sich aus dem separaten Einrichten dieser Sperren und dem gleichzeitigen Beibehalten beider Sperren ergibt.|  
   
-#### <a name="schema-locks"></a><a name="schema"></a> Schemasperren  
+### <a name="schema-locks"></a><a name="schema"></a> Schemasperren  
  Sperren des Typs Sch-M (Schema Modification, Schemaänderung) werden von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet, wenn für eine Tabelle ein DDL-Vorgang (Data Definition Language, Datendefinitionssprache) ausgeführt wird, wie etwa das Hinzufügen einer Spalte oder Löschen einer Tabelle. Während die Sch-M-Sperre besteht, werden gleichzeitige Zugriffe auf die Tabelle verhindert. Dies bedeutet, dass die Sch-M-Sperre alle externen Vorgänge blockiert, bis die Sperre aufgehoben wird.  
   
  Einige DML-Vorgänge (Data Manipulation Language), z. B. das Abschneiden von Tabellen, verhindern mithilfe von Sch-M-Sperren, dass gleichzeitige Vorgänge auf die betroffenen Tabellen zugreifen.  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet Sperren des Typs Sch-S (Schemastabilität) beim Kompilieren und Ausführen von Abfragen. Sch-S-Sperren blockieren keine Transaktionssperren, auch keine exklusive Sperren (X). Daher können während der Kompilierung einer Abfrage andere Transaktionen, einschließlich Transaktionen mit exklusiven Sperren (X) auf Tabellenebene, weiterhin ausgeführt werden. Gleichzeitige DDL-Vorgänge und gleichzeitige DML-Vorgänge, die Sch-M-Sperren abrufen, können für die Tabelle jedoch nicht ausgeführt werden.  
   
-#### <a name="bulk-update-locks"></a><a name="bulk_update"></a> Massenaktualisierungssperren  
+### <a name="bulk-update-locks"></a><a name="bulk_update"></a> Massenaktualisierungssperren  
  Massenupdatesperren (BU) werden verwendet, damit mehrere Threads gleichzeitig Daten in dieselbe Tabelle laden können, während sie zugleich anderen Prozessen, die keine Daten massenkopieren, keinen Zugriff auf die Tabelle gewähren. Das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verwendet Massenupdatesperren (Bulk Update, BU), wenn die folgenden Bedingungen zutreffen.  
   
 -   Zum Massenkopieren von Daten in eine Tabelle verwenden Sie die [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung BULK INSERT oder die OPENROWSET(BULK)-Funktion. Sie können auch einen der Masseneinfügungs-API-Befehle wie „.NET SqlBulkCopy“, OLEDB-FastLoad-APIs oder die ODBC-APIs für das Massenkopieren verwenden.  
@@ -513,10 +513,10 @@ GO
 > [!TIP]  
 > Im Gegensatz zur BULK INSERT-Anweisung, die eine weniger restriktive Massenupdatesperre enthält, weist INSERT INTO…SELECT mit dem TABLOCK-Hinweis eine exklusive Sperre (X) für die Tabelle auf. Das bedeutet, dass Sie keine Zeilen mit parallelen Einfügevorgängen einfügen können.  
   
-#### <a name="key-range-locks"></a><a name="key_range"></a> Schlüsselbereichssperren  
+### <a name="key-range-locks"></a><a name="key_range"></a> Schlüsselbereichssperren  
  Schlüsselbereichssperren schützen einen Bereich von Zeilen, die implizit in ein Recordset eingeschlossen wurden, das von einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung gelesen wird; dies geschieht bei Verwendung der Transaktionsisolationsstufe SERIALIZABLE. Durch Schlüsselbereichssperren werden Phantomlesezugriffe verhindert. Indem die Schlüsselbereiche zwischen Zeilen geschützt werden, wird auch verhindert, dass beim Zugreifen von Transaktionen auf Recordsets Phantomeinfügungen oder -löschungen erfolgen.  
   
-### <a name="lock-compatibility"></a><a name="lock_compatibility"></a> Kompatibilität von Sperren  
+## <a name="lock-compatibility"></a><a name="lock_compatibility"></a> Kompatibilität von Sperren  
  Durch die Kompatibilität von Sperren wird gesteuert, ob mehrere Transaktionen gleichzeitig Sperren für dieselbe Ressource einrichten können. Wenn eine Ressource bereits durch eine andere Transaktion gesperrt wurde, kann eine erneute Sperranforderung nur gewährt werden, wenn der Modus der angeforderten Sperre mit dem Modus der vorhandenen Sperre kompatibel ist. Wenn der Modus der angeforderten Sperre nicht mit dem Modus der vorhandenen Sperre kompatibel ist, wartet die Transaktion, von der die neue Sperre angefordert wird, bis die vorhandene Sperre aufgehoben wird oder bis das Timeoutintervall der Sperre abgelaufen ist. So sind z. B. keine anderen Sperrmodi mit exklusiven Sperren kompatibel. Wenn eine exklusive Sperre (X) eingerichtet ist, kann eine andere Transaktion eine Sperre jeglicher Art (freigegeben, Update oder exklusiv) für die Ressource erst dann einrichten, wenn die exklusive Sperre (X) am Ende der ersten Transaktion aufgehoben wird. Falls hingegen eine freigegebene Sperre (Shared, S) auf eine Ressource angewendet wurde, können andere Transaktionen ebenfalls eine freigegebene Sperre oder eine Updatesperre (Update, U) auf dieses Element anwenden, selbst wenn die erste Transaktion noch nicht beendet ist. Andere Transaktionen können jedoch eine exklusive Sperre erst dann einrichten, wenn die freigegebene Sperre aufgehoben wurde.  
   
 <a name="lock_compat_table"></a> Die folgende Tabelle stellt die Kompatibilität der am häufigsten auftretenden Sperrmodi dar.  
@@ -538,14 +538,14 @@ GO
   
  ![lock_conflicts](../relational-databases/media/LockConflictTable.png)  
   
-### <a name="key-range-locking"></a>Schlüsselbereichssperren  
+## <a name="key-range-locking"></a>Schlüsselbereichssperren  
  Schlüsselbereichssperren schützen einen Bereich von Zeilen, die implizit in ein Recordset eingeschlossen wurden, das von einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung gelesen wird; dies geschieht bei Verwendung der Transaktionsisolationsstufe SERIALIZABLE. Für die Isolationsstufe SERIALIZABLE muss jede Abfrage, die während einer Transaktion ausgeführt wird, dieselben Zeilen erhalten, wenn sie im Rahmen der Transaktion ausgeführt wird. Durch eine Schlüsselbereichssperre wird diese Anforderung geschützt, indem verhindert wird, dass von anderen Transaktionen neue Zeilen eingefügt werden, deren Schlüssel dem Schlüsselbereich zugehörig sind, die von der serialisierbaren Transaktion gelesen werden.  
   
  Durch Schlüsselbereichssperren werden Phantomlesezugriffe verhindert. Indem die Schlüsselbereiche zwischen Zeilen geschützt werden, wird außerdem verhindert, dass es zu Phantomeinfügungsvorgängen in Datensätzen kommt, auf die eine Transaktion zugreift.  
   
  Eine Schlüsselbereichssperre wird für einen Index platziert; auf diese Weise wird ein Start- und Endschlüsselwert angegeben. Durch diese Sperre wird jeglicher Versuch blockiert, eine Zeile mit einem Schlüsselwert einzufügen, zu aktualisieren oder zu löschen, der dem Bereich zugehörig ist, da von diesen Vorgängen zunächst eine Sperre für den Index eingerichtet werden müsste. Eine serialisierbare Transaktion könnte beispielsweise eine `SELECT`-Anweisung ausgeben, die alle Zeilen liest, deren Schlüsselwerte mit der Bedingung `BETWEEN 'AAA' AND 'CZZ'` übereinstimmen. Eine Schlüsselbereichssperre für die Schlüsselwerte im Bereich von **'** AAA **'** bis **'** CZZ **'** verhindert, dass andere Transaktionen Zeilen mit Schlüsselwerten in diesem Bereich einfügen, beispielsweise **'** ADG **'** , **'** BBD **'** oder **'** CAL **'** .  
   
-#### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> Sperrmodi für Schlüsselbereiche  
+### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> Sperrmodi für Schlüsselbereiche  
  Zu Schlüsselbereichssperren gehören eine Bereichs- und eine Zeilenkomponente, die im Bereichszeilenformat angegeben werden.  
   
 -   Bereich stellt den Sperrmodus dar, der den Bereich zwischen zwei aufeinander folgenden Indexeinträgen schützt.  
@@ -575,7 +575,7 @@ GO
 |**RangeI-N**|Ja|Ja|Ja|Nein|Nein|Ja|Nein|  
 |**RangeX-X**|Nein|Nein|Nein|Nein|Nein|Nein|Nein|  
   
-#### <a name="conversion-locks"></a><a name="lock_conversion"></a> Konvertierungssperren  
+### <a name="conversion-locks"></a><a name="lock_conversion"></a> Konvertierungssperren  
  Konvertierungssperren werden erstellt, wenn eine Schlüsselbereichssperre eine andere Sperre überlappt.  
   
 |Sperre 1|Sperre 2|Konvertierungssperre|  
@@ -588,7 +588,7 @@ GO
   
  Konvertierungssperren lassen sich für eine kurze Zeitdauer unter verschiedenen komplexen Bedingungen beobachten, so gelegentlich bei der Ausführung gleichzeitiger Prozesse.  
   
-#### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>Serialisierbarer Bereichsscan, Singleton-Abruf, Löschen und Einfügen  
+### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>Serialisierbarer Bereichsscan, Singleton-Abruf, Löschen und Einfügen  
  Durch Schlüsselbereichssperren wird sichergestellt, dass folgende Vorgänge serialisierbar sind:  
   
 -   Bereichsscanabfrage  
@@ -601,12 +601,12 @@ GO
 -   Die Isolationsstufe der Transaktion muss auf SERIALIZABLE festgelegt sein.  
 -   Der Abfrageprozessor muss zum Implementieren des Bereichsfilterprädikäts verwendet werden. Beispiel: Die WHERE-Klausel in einer SELECT-Anweisung könnte eine Bereichsbedingung mit diesem Prädikat erstellen: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** . Eine Schlüsselbereichssperre kann nur eingerichtet werden, wenn **ColumnX** durch einen Indexschlüssel abgedeckt ist.  
   
-#### <a name="examples"></a>Beispiele  
+### <a name="examples"></a>Beispiele  
  Die nachfolgende Tabelle und der nachfolgende Index dienen als Grundlage für die Beispiele für Schlüsselbereichssperren, die nachfolgend aufgeführt sind.  
   
  ![B-Struktur](../relational-databases/media/btree4.png)  
   
-##### <a name="range-scan-query"></a>Bereichsscanabfrage  
+#### <a name="range-scan-query"></a>Bereichsscanabfrage  
  Um sicherzustellen, dass eine Bereichsscanabfrage serialisierbar ist, sollte dieselbe Abfrage immer dieselben Ergebnisse zurückgeben, wenn sie innerhalb derselben Transaktion ausgeführt wird. Neue Zeilen dürfen innerhalb der Bereichsscanabfrage nicht von anderen Transaktionen eingefügt werden, da diese sonst zu Phantomeinfügungen werden. In der nachfolgenden Abfrage werden beispielsweise die Tabelle und der Index in der obigen Abbildung verwendet:  
   
 ```sql  
@@ -615,12 +615,12 @@ FROM mytable
 WHERE name BETWEEN 'A' AND 'C';  
 ```  
   
- Es werden Schlüsselbereichssperren auf die Indexeinträge angewendet, die dem Datenzeilenbereich entsprechen, in dem der Name zwischen den Werten Adam und Dale liegt. Dadurch wird verhindert, dass neue Zeilen, die der vorhergehenden Abfrage entsprechen, hinzugefügt oder gelöscht werden. Obwohl Adam der erste Name in diesem Bereich ist, wird durch die Schlüsselbereichssperre mit dem Modus RangeS-S für diesen Indexeintrag sichergestellt, dass keine neuen Namen mit dem Anfangsbuchstaben A vor dem Namen Adam eingefügt werden können, beispielsweise Abigail. Entsprechend wird durch die Schlüsselbereichssperre mit dem Modus RangeS-S für den Indexeintrag für Dale sichergestellt, dass keine neuen Namen mit dem Anfangsbuchstaben C nach dem Namen Carlos eingefügt werden können, beispielsweise Clive.  
+ Es werden Schlüsselbereichssperren auf die Indexeinträge angewendet, die dem Datenzeilenbereich entsprechen, in dem der Name zwischen den Werten `Adam` und `Dale` liegt. Dadurch wird verhindert, dass neue Zeilen, die der vorhergehenden Abfrage entsprechen, hinzugefügt oder gelöscht werden. Obwohl `Adam` der erste Name in diesem Bereich ist, wird durch die Schlüsselbereichssperre mit dem Modus RangeS-S für diesen Indexeintrag sichergestellt, dass keine neuen Namen mit dem Anfangsbuchstaben A vor dem Namen `Adam` eingefügt werden können, beispielsweise `Abigail`. Entsprechend wird durch die Schlüsselbereichssperre mit dem Modus RangeS-S für den Indexeintrag für `Dale` sichergestellt, dass keine neuen Namen mit dem Anfangsbuchstaben C nach dem Namen `Carlos` eingefügt werden können, beispielsweise `Clive`.  
   
 > [!NOTE]  
 > Die Anzahl der aufrechterhaltenen Sperren vom Typ „RangeS-S“ entspricht *n*+1. Hierbei ist *n* die Anzahl der Zeilen, die der Abfrage entsprechen.  
   
-##### <a name="singleton-fetch-of-nonexistent-data"></a>Singleton-Abruf nicht vorhandener Daten  
+#### <a name="singleton-fetch-of-nonexistent-data"></a>Singleton-Abruf nicht vorhandener Daten  
  Wenn eine Abfrage in einer Transaktion versucht, eine nicht vorhandene Zeile auszuwählen, muss die Abfrage, wenn sie zu einem späteren Zeitpunkt innerhalb derselben Transaktion erneut ausgegeben wird, zu demselben Ergebnis führen. Es darf für keine andere Transaktion zulässig sein, diese nicht vorhandene Zeile einzufügen. Angenommen, die folgende Abfrage wird ausgeführt:  
   
 ```sql  
@@ -631,7 +631,7 @@ WHERE name = 'Bill';
   
  Es wird eine Schlüsselbereichssperre für den Indexeintrag platziert, der dem Namensbereich von `Ben` bis `Bing` entspricht, da der Name `Bill` zwischen den beiden aufeinander folgenden Indexeinträgen eingefügt würde. Die Schlüsselbereichssperre mit dem Modus RangeS-S wird für den Indexeintrag `Bing` platziert. Dadurch wird verhindert, dass andere Transaktionen Werte, wie etwa `Bill`, zwischen die Indexeinträge `Ben` und `Bing` einfügen.  
   
-##### <a name="delete-operation"></a>Löschvorgang  
+#### <a name="delete-operation"></a>Löschvorgang  
  Wenn ein Wert in einer Transaktion gelöscht wird, muss der Bereich, in dem der Wert liegt, nicht für die gesamte Dauer der Transaktion, die den Löschvorgang ausführt, gesperrt werden. Die Serialisierbarkeit wird bereits dann aufrechterhalten, wenn der gelöschte Schlüsselwert bis zum Ende der Transaktion gesperrt wird. Angenommen, folgende DELETE-Anweisung wird ausgeführt:  
   
 ```sql  
@@ -641,9 +641,9 @@ WHERE name = 'Bob';
   
  Eine exklusive Sperre (X) wird für den Indexeintrag platziert, der dem Namen `Bob` entspricht. Andere Transaktionen können Werte vor oder nach dem gelöschten Wert `Bob` einfügen oder löschen. Eine Transaktion, die versucht, den Wert `Bob` zu lesen, einzufügen oder zu löschen, wird jedoch so lange blockiert, bis für die löschende Transaktion entweder ein Commit oder ein Rollback ausgeführt wird.  
   
- Das Löschen des Bereichs kann mithilfe von drei grundlegenden Sperrmodi ausgeführt werden: Zeilen-, Seiten- oder Tabellensperre. Die Verwendung der Zeilen-, Seiten- oder Tabellensperren wird vom Abfrageoptimierer festgelegt oder kann vom Benutzer über Optimierungshinweise, wie ROWLOCK, PAGLOCK oder TABLOCK, angegeben werden. Wenn PAGLOCK oder TABLOCK verwendet wird, hebt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] umgehend die Zuordnung einer Indexseite auf, wenn sämtliche Zeilen dieser Seite gelöscht werden. Wenn hingegen ROWLOCK verwendet wird, werden sämtliche Zeilen lediglich als gelöscht markiert und zu einem späteren Zeitpunkt mithilfe eines Hintergrundtasks von der Indexseite entfernt.  
+ Das Löschen des Bereichs kann mithilfe von drei grundlegenden Sperrmodi ausgeführt werden: Zeilen-, Seiten- oder Tabellensperre. Die Verwendung der Zeilen-, Seiten- oder Tabellensperren wird vom Abfrageoptimierer festgelegt oder kann vom Benutzer über Abfrageoptimierungshinweise, wie ROWLOCK, PAGLOCK oder TABLOCK, angegeben werden. Wenn PAGLOCK oder TABLOCK verwendet wird, hebt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] umgehend die Zuordnung einer Indexseite auf, wenn sämtliche Zeilen dieser Seite gelöscht werden. Wenn hingegen ROWLOCK verwendet wird, werden sämtliche Zeilen lediglich als gelöscht markiert und zu einem späteren Zeitpunkt mithilfe eines Hintergrundtasks von der Indexseite entfernt.  
   
-##### <a name="insert-operation"></a>Einfügungsvorgang  
+#### <a name="insert-operation"></a>Einfügungsvorgang  
  Wenn ein Wert in einer Transaktion eingefügt wird, muss der Bereich, in dem der Wert liegt, nicht für die gesamte Dauer der Transaktion, die den Einfügungsvorgang ausführt, gesperrt werden. Die Serialisierbarkeit wird bereits dann aufrechterhalten, wenn der eingefügte Schlüsselwert bis zum Ende der Transaktion gesperrt wird. Angenommen, folgende INSERT-Anweisung wird ausgeführt:  
   
 ```sql  
@@ -652,7 +652,162 @@ INSERT mytable VALUES ('Dan');
   
  Für den Indexeintrag, der dem Namen David entspricht, wird die Schlüsselbereichssperre mit dem Modus RangeI-N platziert, um den Bereich zu testen. Wenn die Sperre erteilt wird, wird `Dan` eingefügt, und für den Wert `Dan` wird eine exklusive Sperre (X) platziert. Die Schlüsselbereichssperre mit dem Modus RangeI-N ist nur notwendig, um den Bereich zu testen, und wird nicht für die Dauer der Transaktion aufrechterhalten, die den Einfügungsvorgang ausführt. Andere Transaktionen können Werte vor oder nach dem eingefügten Wert `Dan` einfügen oder löschen. Eine Transaktion, die versucht, den Wert `Dan` zu lesen, einzufügen oder zu löschen, wird jedoch so lange gesperrt, bis für die einfügende Transaktion entweder ein Commit oder ein Rollback ausgeführt wird.  
   
-### <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Dynamische Sperre  
+## <a name="lock-escalation"></a>Sperrenausweitung
+Die Sperrenausweitung ist der Vorgang, bei dem viele differenzierte Sperren zu einer kleineren Anzahl von groben Sperren konvertiert werden, wodurch zwar der Aufwand des Systems reduziert, aber gleichzeitig die Wahrscheinlichkeit von Parallelitätskonflikten erhöht wird.
+
+Wenn [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Sperren auf niedriger Ebene eingerichtet werden, werden auch beabsichtigte Sperren für die Objekte eingerichtet, die diese Objekte der niedrigen Ebene enthalten:
+
+-   Beim Sperren von Zeilen oder Indexschlüsselbereichen richtet [!INCLUDE[ssde_md](../includes/ssde_md.md)] eine beabsichtigte Sperre für die Seiten ein, die diese Zeilen oder Schlüssel enthalten.
+-   Beim Sperren von Seiten richtet [!INCLUDE[ssde_md](../includes/ssde_md.md)] eine beabsichtigte Sperre für die Objekte der höheren Ebene ein, die diese Seiten enthalten. Zusätzlich zur beabsichtigten Sperre für das Objekt werden beabsichtigte Sperren für die folgenden Objekte angefordert:
+    -  Seiten auf Blattebene von nicht gruppierten Indizes
+    -  Datenseiten von gruppierten Indizes
+    -  Heap mit Datenseiten
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)] kann im Rahmen derselben Anweisung sowohl Zeilen- als auch Seitensperren bewirken, um die Anzahl der Sperren zu minimieren und um die Wahrscheinlichkeit zu verringern, dass eine Sperrenausweitung erforderlich wird. So könnte die Datenbank-Engine z. B. Seitensperren für einen nicht gruppierten Index (sofern ausreichend viele zusammenhängende Schlüssel im Indexknoten ausgewählt sind, um der Abfrage zu entsprechen) und Zeilensperren für die Daten einrichten.
+
+Zum Ausweiten von Sperren versucht [!INCLUDE[ssde_md](../includes/ssde_md.md)], die beabsichtigte Sperre für die Tabelle in eine entsprechende vollständige Sperre zu ändern, wodurch eine beabsichtigte exklusive Sperre (IX) zu einer exklusiven Sperre (X) bzw. eine beabsichtigte freigegebene Sperre (IS) zu einer freigegebenen Sperre (S) wird. Wenn der Versuch der Sperrenausweitung erfolgreich ist und die vollständige Tabellensperre eingerichtet wird, werden alle durch die Transaktion für den Heap bzw. den Index gehaltenen Sperren des Typs Heap oder B-Baum, Seite (PAGE) oder Zeilenebene (RID) aufgehoben. Wenn die vollständige Sperre nicht erreicht wird, erfolgt keine Sperrenausweitung, und die Datenbank-Engine richtet weiterhin Zeilen-, Schlüssel- oder Seitensperren ein.
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)] weitet keine Zeilen- oder Schlüsselbereichssperren zu Seitensperren aus, sondern weitet diese direkt zu Tabellensperren aus. In gleicher Weise werden Seitensperren immer zu Tabellensperren ausgeweitet. Das Sperren von partitionierten Tabellen kann auf die HoBT-Ebene für die zugehörige Partition statt auf die Tabellensperre ausgeweitet werden. Eine Sperre auf HoBT-Ebene führt nicht notwendigerweise dazu, dass die ausgerichteten HoBTs für die Partition gesperrt werden.
+
+> [!NOTE]
+> Sperren auf HoBT-Ebene führen in der Regel zur Erhöhung der Parallelität, erhöhen jedoch auch die Möglichkeit von Deadlocks, wenn Transaktionen, die verschiedene Partitionen sperren, jeweils ihre exklusiven Sperren auf andere Partitionen ausweiten möchten. In seltenen Fällen wird mit der TABLE-Sperrgranularität eine bessere Leistung erzielt.
+
+Wenn beim Versuch zur Sperrenausweitung ein Fehler erzeugt wird, weil von gleichzeitigen Transaktionen miteinander im Konflikt stehende Sperren gehalten werden, versucht [!INCLUDE[ssde_md](../includes/ssde_md.md)] die Sperrenausweitung erneut für jeweils weitere 1.250 Sperren, die von der Transaktion eingerichtet werden.
+
+Jedes Ausweitungsereignis wird primär auf der Ebene einer einzelnen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung ausgeführt. Wenn das Ereignis startet, versucht [!INCLUDE[ssde_md](../includes/ssde_md.md)] die Ausweitung aller Sperren, die von der aktuellen Transaktion in einer der Tabellen gehalten werden, auf die durch die aktive Anweisung verwiesen wird, vorausgesetzt, dass diese die Schwellenwertanforderungen für die Ausweitung erfüllt. Wenn das Ausweitungsereignis startet, bevor die Anweisung auf eine Tabelle zugegriffen hat, wird nicht versucht, die Sperren für diese Tabelle auszuweiten. Wenn die Sperrenausweitung erfolgreich ist, werden alle Sperren, die durch die Transaktion in einer früheren Anweisung eingerichtet wurden und zum Zeitpunkt des Ereignisstarts noch immer gehalten werden, ausgeweitet, wenn durch die aktuelle Anweisung auf die Tabelle verwiesen wird und die Tabelle in das Ausweitungsereignis eingeschlossen ist.
+
+Angenommen, eine Sitzung führt z. B. die folgenden Operationen durch:
+
+-  beginnt eine Transaktion,
+-  Aktualisiert `TableA`. Damit werden exklusive Zeilensperren in TableA eingerichtet, die so lange gehalten werden, bis die Transaktion abgeschlossen ist.
+-  Aktualisiert `TableB`. Damit werden exklusive Zeilensperren in TableB eingerichtet, die so lange gehalten werden, bis die Transaktion abgeschlossen ist.
+-  Führt eine SELECT-Anweisung aus, die `TableA` mit `TableC` verknüpft. Der Abfrageausführungsplan ruft die aus `TableA` abzurufenden Zeilen auf, bevor die Zeilen aus `TableC` abgerufen werden.
+-  Die SELECT-Anweisung löst die Sperrenausweitung aus, während sie die Zeilen aus `TableA` abruft und bevor sie auf `TableC` zugegriffen hat.
+
+Bei erfolgreicher Sperrenausweitung werden nur die von der Sitzung für `TableA` gehaltenen Sperren ausgeweitet. Das schließt sowohl die freigegebenen Sperren aus der SELECT-Anweisung als auch die exklusiven Sperren aus der vorherigen UPDATE-Anweisung ein. Während bei der Beurteilung, ob die Sperrenausweitung erfolgen soll, nur die Sperren berücksichtigt werden, die die Sitzung in `TableA` für die SELECT-Anweisung eingerichtet hat, werden bei erfolgreicher Ausweitung alle von der Sitzung in `TableA` gehaltenen Sperren zu einer exklusiven Sperre für die Tabelle ausgeweitet, und alle anderen Sperren mit geringerer Granularität, einschließlich beabsichtigter Sperren, für `TableA` werden aufgehoben.
+
+Es wird nicht versucht, die Sperren für `TableB` auszuweiten, weil es in der SELECT-Anweisung keinen aktiven Verweis auf `TableB` gibt. Desgleichen wird nicht versucht, die Sperren für `TableC` auszuweiten, weil zum Zeitpunkt der Ausweitung noch kein Zugriff auf die Tabelle erfolgt war.
+
+### <a name="lock-escalation-thresholds"></a>Schwellenwerte für die Sperrenausweitung
+
+Die Sperrenausweitung wird, wenn sie für die Tabelle nicht deaktiviert ist, mit der `ALTER TABLE SET LOCK_ESCALATION`-Option ausgelöst, und wenn eine der folgenden Bedingungen zutrifft:
+
+-  Eine einzelne [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung ruft mindestens 5.000 Sperren für eine einzelne nicht partitionierte Tabelle oder einen Index ab.
+-  Eine einzelne [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung ruft mindestens 5.000 Sperren für eine einzelne Partition einer partitionierten Tabelle ab, und die `ALTER TABLE SET LOCK_ESCALATION`-Option ist auf AUTO festgelegt.
+-  Die Anzahl von Sperren in einer Instanz von [!INCLUDE[ssde_md](../includes/ssde_md.md)] überschreitet den Arbeitsspeicher oder die Konfigurationsschwellenwerte.
+
+Wenn die Sperrenausweitung aufgrund von Sperrkonflikten nicht möglich ist, löst [!INCLUDE[ssde_md](../includes/ssde_md.md)] die Sperrenausweitung in regelmäßigen Abständen aus, sobald jeweils 1.250 neue Sperren eingerichtet werden.
+
+### <a name="escalation-threshold-for-a-transact-sql-statement"></a>Ausweitungsschwellenwert für eine Transact-SQL-Anweisung
+Wenn [!INCLUDE[ssde_md](../includes/ssde_md.md)] alle 1.250 neu abgerufenen Sperren auf mögliche Ausweitungen prüft, erfolgt eine Sperrenausweitung nur dann, wenn eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung mindestens 5.000 Sperren für einen einzelnen Verweis einer Tabelle abgerufen hat. Die Sperrenausweitung wird ausgelöst, wenn eine [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung mindestens 5.000 Sperren für einen einzelnen Verweis einer Tabelle abruft. So wird z. B. keine Sperrenausweitung ausgelöst, wenn eine Anweisung 3.000 Sperren in einem Index und 3.000 Sperren in einem anderen Index derselben Tabelle einrichtet. So wird auch dann keine Sperrenausweitung ausgelöst, wenn eine Anweisung einen Selbstjoin zu einer Tabelle enthält und jeder Verweis auf die Tabelle lediglich 3.000 Sperren in der Tabelle einrichtet.
+
+Die Sperrenausweitung tritt nur für Tabellen auf, auf die zum Zeitpunkt der Ausweitungsauslösung bereits zugegriffen wurde. Angenommen, eine einzelne SELECT-Anweisung ist ein Join, der auf drei Tabellen in genau dieser Reihenfolge zugreift: `TableA`, `TableB` und `TableC`. Die Anweisung richtet 3.000 Zeilensperren im gruppierten Index für `TableA` ein und mindestens 5.000 Zeilensperren im gruppierten Index für `TableB`. Auf `TableC` wurde jedoch noch nicht zugegriffen. Wenn [!INCLUDE[ssde_md](../includes/ssde_md.md)] erkennt, dass die Anweisung mindestens 5.000 Zeilensperren in `TableB` eingerichtet hat, wird versucht, sämtliche von der aktuellen Transaktion in `TableB` gehaltenen Sperren auszuweiten. Es wird auch versucht, sämtliche von der aktuellen Transaktion in `TableA` gehaltenen Sperren auszuweiten, da aber die Anzahl der Sperren für `TableA` kleiner als 5.000 ist, ist die Ausweitung nicht erfolgreich. Es wird keine Sperrenausweitung für `TableC` versucht, da zum Zeitpunkt der Ausweitung noch kein Zugriff auf die Tabelle erfolgt war.
+
+### <a name="escalation-threshold-for-an-instance-of-the-database-engine"></a>Ausweitungsschwellenwert für eine Instanz der Datenbank-Engine
+Immer wenn die Anzahl der Sperren den Speicherschwellenwert für die Sperrenausweitung überschreitet, löst [!INCLUDE[ssde_md](../includes/ssde_md.md)] die Sperrenausweitung aus. Der Speicherschwellenwert richtet sich nach der Einstellung der [Konfigurationsoption „locks“](../database-engine/configure-windows/configure-the-locks-server-configuration-option.md):
+
+-   Wenn die **locks**-Option auf die Standardeinstellung 0 festgelegt ist, wird der Schwellenwert der Sperrenausweitung erreicht, wenn der von Sperrobjekten belegte Speicheranteil 24 % des von der Datenbank-Engine verwendeten Speichers (ausschließlich AWE-Speicher) beträgt. Die Datenstruktur, mit der eine Sperre dargestellt wird, ist ungefähr 100 Bytes lang. Dieser Schwellenwert ist dynamisch, da die Datenbank-Engine je nach wechselnder Arbeitsauslastung dynamisch Speicher reserviert und freigibt.
+
+-   Wenn die **locks**-Option einen von 0 abweichenden Wert hat, beträgt der Schwellenwert für die Sperrenauswertung 40 % des Werts der locks-Option (oder weniger, wenn nicht genügend Arbeitsspeicher verfügbar ist).
+
+[!INCLUDE[ssde_md](../includes/ssde_md.md)] kann jede aktive Anweisung aus jeder Sitzung zur Ausweitung auswählen, und für jeweils 1.250 neue Sperren wählt es Anweisungen zur Ausweitung aus, so lange der in der Instanz für Sperren beanspruchte Arbeitsspeicher oberhalb des Schwellenwerts bleibt.
+
+### <a name="escalating-mixed-lock-types"></a>Ausweiten von gemischten Sperrentypen
+Wenn die Sperrenausweitung stattfindet, ist die für den Heap oder Index ausgewählte Sperre stark genug, um die Anforderungen der am restriktivsten Sperre auf unterer Ebene zu erfüllen.
+
+Angenommen, eine Sitzung
+
+-  beginnt eine Transaktion,
+-  aktualisiert eine Tabelle, die einen gruppierten Index enthält,
+-  gibt eine SELECT-Anweisung aus, die auf dieselbe Tabelle verweist.
+
+Die UPDATE-Anweisung richtet die folgenden Sperren ein:
+
+-  Exklusive Sperren (X) für die aktualisierten Datenzeilen.
+-  Beabsichtigte exklusive Sperren (IX) für die gruppierten Indexseiten, die diese Zeilen enthalten.
+-  Eine IX-Sperre für den gruppierten Index und eine weitere für die Tabelle.
+
+Die SELECT-Anweisung richtet die folgenden Sperren ein:
+
+-  Freigegebene Sperren (S) für alle gelesenen Datenzeilen, außer wenn die Zeile bereits durch eine X-Sperre aus der UPDATE-Anweisung geschützt wurde.
+-  Beabsichtigte freigegebene Sperren (IS) für alle gruppierten Indexseiten, die diese Zeilen enthalten, außer wenn die Seite bereits durch eine IX-Sperre geschützt wurde.
+-  Keine Sperre für den gruppierten Index oder die Tabelle, da diese bereits durch IX-Sperren geschützt sind.
+
+Wenn die SELECT-Anweisung ausreichend Sperren eingerichtet hat, um die Sperrenausweitung auszulösen, und die Ausweitung erfolgreich ist, wird die IX-Sperre für die Tabelle in eine X-Sperre umgewandelt, und sämtliche Zeilen-, Seiten- und Indexsperren werden aufgehoben. Sowohl die Updates als auch Lesevorgänge sind durch die X-Sperre für die Tabelle geschützt.
+
+### <a name="reducing-locking-and-escalation"></a>Verringern von Sperrung und Ausweitung
+In den meisten Fällen erzielt [!INCLUDE[ssde_md](../includes/ssde_md.md)] die beste Leistung, wenn es mit seinen Standardeinstellungen zur Sperrung und zur Sperrenausweitung arbeitet. Wenn eine Instanz von [!INCLUDE[ssde_md](../includes/ssde_md.md)] jedoch viele Sperren generiert und häufige Sperrenausweitungen durchführt, sollten Sie durch folgende Maßnahmen versuchen, das Ausmaß der Sperrung zu verringern:
+
+-   Verwenden einer Isolationsstufe, die keine freigegebenen Sperren für Lesevorgänge erzeugt:
+    -  READ COMMITTED-Isolationsstufe, wenn die READ_COMMITTED_SNAPSHOT-Datenbankoption auf ON gesetzt ist.
+    -  MOMENTAUFNAHME-Isolationsstufe.
+    -  READ UNCOMMITTED-Isolationsstufe. Diese kann nur für Systeme verwendet werden, die mit Dirty Reads arbeiten können.    
+  
+    > [!NOTE]
+    > Die Änderung der Isolationsstufe wirkt sich auf alle Tabellen der Instanz von [!INCLUDE[ssde_md](../includes/ssde_md.md)] aus.
+
+-   Verwenden der Tabellenhinweise PAGLOCK oder TABLOCK, damit die Datenbank-Engine Seiten-, Heap- oder Indexsperren anstelle von Zeilensperren verwendet. Die Verwendung dieser Option führt jedoch verstärkt zu Problemen, weil Benutzer den Zugriff anderer Benutzer auf dieselben Daten blockieren, und darf daher nicht in Systemen mit mehr als einigen wenigen gleichzeitigen Benutzern verwendet werden.
+
+-   Verwenden Sie für partitionierte Tabellen die LOCK_ESCALATION-Option von [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md), um Sperren auf die HoBT-Ebene auszuweiten statt auf die Tabelle, oder um die Sperrenausweitung zu deaktivieren.
+
+-   Teilen Sie eine große Anzahl von Vorgängen in mehrere kleinere Vorgänge auf. Angenommen, Sie führen die folgende Abfrage aus, um mehrere hunderttausend alte Datensätze aus einer Überwachungstabelle zu entfernen, und stellen dann fest, dass sie eine Sperrenausweitung verursacht, die andere Benutzer blockiert:
+   
+    ```sql
+    DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    ```
+
+    Wenn Sie einige Hundert dieser Datensätze auf einmal entfernen, können Sie die Anzahl der Sperren, die pro Transaktion anfallen, drastisch reduzieren und eine Sperrenausweitung verhindern. Beispiel:
+
+    ```sql
+    SET ROWCOUNT 500
+    delete_more:
+      DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    IF @@ROWCOUNT > 0 GOTO delete_more
+    SET ROWCOUNT 0
+    ```
+
+-   Verringern Sie den Umfang von Abfragesperren, indem Sie die Abfrage so effizient wie möglich gestalten. Große Scans oder eine große Anzahl von Lesezeichenlookups erhöhen möglicherweise die Wahrscheinlichkeit einer Sperrenausweitung. Außerdem erhöht sich dadurch die Wahrscheinlichkeit von Deadlocks, und in der Regel gibt es negative Auswirkungen auf Parallelität und Leistung. Nachdem Sie die Abfrage ermittelt haben, die die Sperrenausweitung verursacht, suchen Sie nach Möglichkeiten, neue Indizes zu erstellen oder Spalten zu einem vorhandenen Index hinzuzufügen, um Index- oder Tabellenscans zu entfernen und die Effizienz der Indexsuchvorgänge zu maximieren. Verwenden Sie ggf. den [Datenbankoptimierungsratgeber](../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md), um eine automatische Indexanalyse für die Abfrage auszuführen. Weitere Informationen finden Sie im [Tutorial: Datenbankoptimierungsratgeber](../tools/dta/tutorial-database-engine-tuning-advisor.md).
+    Ein Ziel dieser Optimierung besteht darin, dass Indexsuchvorgänge so wenige Zeilen wie möglich zurückgeben, um die Kosten von Lesezeichenlookups zu minimieren (Maximieren der Selektivität des Indexes für eine bestimmte Abfrage). Wenn [!INCLUDE[ssde_md](../includes/ssde_md.md)] schätzt, dass ein logischer Operator für den Lesezeichen-Lookupvorgang möglicherweise viele Zeilen zurückgibt, kann ein PREFETCH-Vorgang verwendet werden, um den Lesezeichen-Nachschlagevorgang auszuführen. Wenn [!INCLUDE[ssde_md](../includes/ssde_md.md)] PREFETCH für einen Lesezeichen-Lookupvorgang verwendet, muss Sie die Transaktionsisolationsstufe eines Teils der Abfrage für einen Teil der Abfrage auf wiederholbare Lesevorgänge erhöhen. Das bedeutet, dass das, was auf einer Isolationsebene mit Lesecommit ähnlich wie eine SELECT-Anweisung aussehen kann, viele Tausende von Schlüsselsperren (sowohl für den gruppierten Index als auch für einen nicht gruppierten Index) abrufen kann, was möglicherweise dazu führt, dass eine solche Abfrage die Sperrenausweitungs-Schwellenwerte überschreitet. Dies ist insbesondere dann wichtig, wenn Sie feststellen, dass es sich bei der ausgeweiteten Sperre um eine freigegebene Tabellensperre handelt, die jedoch bei der standardmäßigen Isolationsebene mit Lesecommit nicht häufig auftritt. Wenn ein Lesezeichen-Nachschlagevorgang MIT PREFETCH-Klausel die Ausweitung verursacht, sollten Sie in Erwägung ziehen, zusätzliche Spalten zum nicht gruppierten Index hinzuzufügen, der im logischen Operator „Index Seek“ oder „Index Scan“ unter dem logischen Operator „Bookmark Lookup“ im Abfrageplan enthalten ist. Unter Umständen ist es möglich, einen abdeckenden Index zu erstellen (einen Index, der alle Spalten in einer Tabelle enthält, die in der Abfrage verwendet wurden) oder zumindest einen Index, der die Spalten abdeckt, die für Verknüpfungskriterien oder in der WHERE-Klausel verwendet wurden, wenn es nicht praktikabel ist, alles in die Liste zum Auswählen von Spalten aufzunehmen.
+    Bei einem Nested Loop-Join kann ebenfalls PREFETCH verwendet werden. Dies führt zu demselben Sperrverhalten.
+   
+-   Die Sperrenausweitung kann nicht auftreten, wenn eine andere SPID derzeit eine nicht kompatible Tabellensperre aufrecht erhält. Die Sperrenausweitung wird immer zu einer Tabellensperre ausgeweitet und niemals zu Seitensperren. Wenn der Versuch einer Sperrenausweitung fehlschlägt, weil eine andere SPID eine nicht kompatible TAB-Sperre enthält, wird außerdem die Abfrage, die die Ausweitung versucht hat, beim Warten auf eine TAB-Sperre nicht blockiert. Stattdessen werden Sperren weiterhin auf der ursprünglichen, präziseren Ebene (Zeile, Schlüssel oder Seite) abgerufen, und es erfolgen zusätzliche Ausweitungsversuche in regelmäßigen Abständen. Daher besteht eine Methode zum Verhindern der Sperrenausweitung für eine bestimmte Tabelle im Abrufen und Halten einer Sperre für eine andere Verbindung, die mit dem ausgweiteten Sperrentyp nicht kompatibel ist. Eine IX-Sperre (Intent Exclusive) auf Tabellenebene sperrt keine Zeilen oder Seiten, ist aber immer noch nicht mit einer ausgeweiteten S- (freigegeben) oder X-TAB-Sperre (exklusiv) kompatibel. Nehmen Sie beispielsweise an, dass Sie einen Batchauftrag ausführen müssen, der eine große Anzahl von Zeilen in der mytable-Tabelle ändert und eine Blockierung verursacht hat, die aufgrund von Sperrenausweitung auftritt. Wenn dieser Auftrag immer in weniger als einer Stunde abgeschlossen ist, können Sie einen [!INCLUDE[tsql](../includes/tsql-md.md)]-Auftrag erstellen, der den folgenden Code enthält, und den neuen Auftrag so planen, dass er mehrere Minuten vor der Startzeit des Batchauftrags gestartet wird:
+  
+    ```sql
+    BEGIN TRAN
+    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1=0
+    WAITFOR DELAY '1:00:00'
+    COMMIT TRAN
+    ```
+   
+    Mit dieser Abfrage wird eine IX-Sperre für mytable für eine Stunde abgerufen und aufrecht erhalten, wodurch die Sperrenausweitung für die Tabelle während dieser Zeit verhindert wird. Mit diesem Batch werden keine Daten geändert oder andere Abfragen blockiert (es sei denn, die andere Abfrage erzwingt eine Tabellensperre mit dem TABLOCK-Hinweis, oder ein Administrator hat Seiten- oder Zeilensperren mithilfe einer gespeicherten sp_indexoption-Prozedur deaktiviert).
+
+Sie können auch die Ablaufverfolgungsflags 1211 und 1224 verwenden, um alle oder einige Sperrenausweitungen zu deaktivieren. Diese [Ablaufverfolgungsflags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) deaktivieren jedoch die gesamte Sperrenausweitung für die gesamte [!INCLUDE[ssde_md](../includes/ssde_md.md)] global. Sperrenausweitung ist in [!INCLUDE[ssde_md](../includes/ssde_md.md)] sehr nützlich, indem die Effizienz von Abfragen maximiert wird, die andernfalls durch den Mehraufwand für das Abrufen und Freigeben mehrerer Tausend Sperren verlangsamt würden. Sperrenausweitung trägt auch dazu bei, den erforderlichen Arbeitsspeicher zu minimieren, um Sperren nachzuverfolgen. Der Arbeitsspeicher, den [!INCLUDE[ssde_md](../includes/ssde_md.md)] dynamisch für Sperrstrukturen zuordnen kann, ist begrenzt. Wenn Sie also Sperrenausweitung deaktivieren und der Sperrenarbeitsspeicher groß genug wird, können Versuche fehlschlagen, zusätzliche Sperren für eine beliebige Abfrage zuzuweisen, und der folgende Fehler tritt auf:
+
+```Error: 1204, Severity: 19, State: 1
+The SQL Server cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users or ask the system administrator to check the SQL Server lock and memory configuration.
+```
+
+> [!NOTE]
+> Wenn [Fehler 1204](../relational-databases/errors-events/mssqlserver-1204-database-engine-error.md) auftritt, wird die Verarbeitung der aktuellen Anweisung beendet und ein Rollback der aktiven Transaktion ausgelöst. Wenn Sie den Datenbankdienst neu starten, können Benutzer durch das Rollback selbst blockiert werden, oder es tritt möglicherweise eine lange Datenbankwiederherstellungszeit auf.
+
+> [!NOTE]
+> Wenn Sie einen Sperrhinweis wie ROWLOCK verwenden, wird nur der anfängliche Sperrplan geändert. Sperrhinweise verhindern keine Sperrenausweitung. 
+
+Überwachen Sie außerdem die Sperrenausweitung mithilfe des erweiterten Ereignisses `lock_escalation` (XEvent). Das folgende Beispiel zeigt dies:
+
+```sql
+-- Session creates a histogram of the number of lock escalations per database 
+CREATE EVENT SESSION [Track_lock_escalation] ON SERVER 
+ADD EVENT sqlserver.lock_escalation(SET collect_database_name=(1),collect_statement=(1)
+    ACTION(sqlserver.database_id,sqlserver.database_name,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,sqlserver.sql_text,sqlserver.username))
+ADD TARGET package0.histogram(SET source=N'sqlserver.database_id')
+GO
+```
+
+> [!IMPORTANT]
+> Das erweiterte `lock_escalation`-Ereignis (xEvent) sollte anstelle der Ereignisklasse Lock:Escalation in SQL Trace oder SQL Profiler verwendet werden.
+
+## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Dynamische Sperre
  Wenn Sie Sperren auf niedriger Ebene verwenden, z. B. Zeilensperren, wird die Parallelität erhöht, da die Wahrscheinlichkeit geringer ist, dass zwei Transaktionen gleichzeitig Sperren für die gleichen Daten anfordern. Das Verwenden von Sperren auf niedriger Ebene erhöht außerdem die Anzahl der Sperren sowie der Ressourcen, die für deren Verwaltung erforderlich sind. Wenn Sie Tabellen- oder Seitensperren auf hoher Ebene verwenden, wird der Aufwand zwar gesenkt, jedoch auf Kosten der Parallelität.  
   
  ![lockcht](../relational-databases/media/lockcht.png) 
@@ -665,15 +820,15 @@ INSERT mytable VALUES ('Dan');
 -   Gesteigerte Leistung. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] minimiert den Aufwand des Systems mithilfe von Sperren, die speziell auf die Aufgabe zugeschnitten sind.  
 -   Anwendungsentwickler können sich auf die Entwicklung konzentrieren. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] passt Sperren automatisch an.  
   
- In [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und höheren Versionen hat sich das Verhalten der Sperrenausweitung mit der Einführung der `LOCK_ESCALATION`-Option geändert. Weitere Informationen finden Sie unter der `LOCK_ESCALATION`-Option von [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
-  
+ In [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und höheren Versionen hat sich das Verhalten der Sperrenausweitung mit der Einführung der `LOCK_ESCALATION`-Option geändert. Weitere Informationen finden Sie unter der `LOCK_ESCALATION`-Option von [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md). 
+   
 ## <a name="deadlocks"></a><a name="deadlocks"></a> Deadlocks  
  Ein Deadlock tritt auf, wenn zwei Tasks einander dauerhaft gegenseitig blockieren, weil jeder der Tasks eine Sperre für eine Ressource aufrecht erhält, die die anderen Tasks zu sperren versuchen. Beispiel:  
   
--   Die Transaktion A richtet eine freigegebene Sperre für Zeile 1 ein.  
--   Die Transaktion B richtet eine freigegebene Sperre für Zeile 2 ein.  
--   Die Transaktion A fordert nun eine exklusive Sperre für Zeile 2 an und ist blockiert, bis die Transaktion B beendet ist und die freigegebene Sperre für Zeile 2 aufhebt.  
--   Die Transaktion B fordert nun eine exklusive Sperre für Zeile 1 an und ist blockiert, bis die Transaktion A beendet ist und die freigegebene Sperre für Zeile 1 aufhebt.  
+-   Die Transaktion A richtet eine freigegebene Sperre für Zeile 1 ein.  
+-   Die Transaktion B richtet eine freigegebene Sperre für Zeile 2 ein.  
+-   Transaktion A fordert nun eine exklusive Sperre für Zeile 2 an und ist blockiert, bis Transaktion B beendet ist und die freigegebene Sperre für Zeile 2 aufhebt.  
+-   Transaktion B fordert nun eine exklusive Sperre für Zeile 1 an und ist blockiert, bis die Transaktion A beendet ist und die freigegebene Sperre für Zeile 1 aufhebt.  
   
  Transaktion A kann erst nach Ende von Transaktion B ausgeführt werden, aber Transaktion B ist durch Transaktion A blockiert. Diese Bedingung wird auch als zyklische Abhängigkeit bezeichnet. Transaktion A hängt von Transaktion B ab, und Transaktion B schließt den Kreis, da sie von Transaktion A abhängt.  
   
@@ -688,7 +843,7 @@ INSERT mytable VALUES ('Dan');
   
  ![Diagramm mit Transaktionsdeadlock](../relational-databases/media/deadlock.png)  
   
- In der Abbildung weist Transaktion T1 eine Abhängigkeit von Transaktion T2 für die Sperrressource der **Part**-Tabelle auf. Entsprechend weist Transaktion T2 eine Abhängigkeit von Transaktion T1 für die Sperrressource der **Supplier**-Tabelle auf. Da diese Abhängigkeiten einen Kreis bilden, besteht ein Deadlock zwischen den Transaktionen T1 und T2.  
+ In der Abbildung weist Transaktion T1 eine Abhängigkeit von Transaktion T2 für die Sperrressource der `Part`-Tabelle auf. Entsprechend weist Transaktion T2 eine Abhängigkeit von Transaktion T1 für die Sperrressource der `Supplier`-Tabelle auf. Da diese Abhängigkeiten einen Kreis bilden, besteht ein Deadlock zwischen den Transaktionen T1 und T2.  
   
  Deadlocks können auch auftreten, wenn eine Tabelle partitioniert wird und für die `LOCK_ESCALATION`-Einstellung von `ALTER TABLE` die Option AUTO festgelegt ist. Ist für `LOCK_ESCALATION` die Option AUTO festgelegt, nimmt die Parallelität durch Unterstützung der Sperre von Tabellenpartitionen auf HoBT-Ebene anstatt auf TABLE-Ebene durch [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] zu. Wenn jedoch separate Transaktionen Partitionssperren in eine Tabelle aufnehmen und in der anderen Partitionstransaktion eine Sperre hinzugefügt werden soll, wird hiermit ein Deadlock verursacht. Diese Art Deadlock kann durch Festlegen von `TABLE` für `LOCK_ESCALATION` vermieden werden, auch wenn mit dieser Einstellung die Parallelität verringert wird, indem große Updates gezwungen werden, auf eine Tabellensperre zu warten.  
   
@@ -747,7 +902,7 @@ INSERT mytable VALUES ('Dan');
   
  Nachdem ein Deadlock erkannt wurde, beendet [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] den Deadlock, indem einer der Threads als Deadlockopfer ausgewählt wird. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] beendet den aktuellen Batch, der für den Thread ausgeführt wird, führt ein Rollback der Transaktion des Deadlockopfers aus und gibt den Fehler 1205 an die Anwendung zurück. Durch den Rollback der Transaktion für das Deadlockopfer werden alle von der Transaktion aufrecht erhaltenen Sperren freigegeben. Auf diese Weise kann die Sperre der Transaktionen der anderen Threads aufgehoben werden, und diese können fortgesetzt werden. Der Fehler 1205 (Deadlockopfer) zeichnet Informationen zu den an einem Deadlock beteiligten Threads und Ressourcen im Fehlerprotokoll auf.  
   
- Standardmäßig wählt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die Sitzung als Deadlockopfer aus, die die Transaktion ausführt, für die mit dem geringsten Aufwand ein Rollback ausgeführt werden kann. Alternativ kann ein Benutzer mithilfe der SET DEADLOCK_PRIORITY-Anweisung die Priorität der Sitzungen im Falle eines Deadlocks angeben. DEADLOCK_PRIORITY kann auf LOW, NORMAL oder HIGH oder alternativ auf einen beliebigen ganzzahligen Wert im Bereich zwischen -10 und 10 festgelegt werden. Die Deadlockpriorität ist standardmäßig NORMAL. Wenn die Sitzungen verschiedene Deadlockprioritäten besitzen, wird die Sitzung mit der niedrigeren Deadlockpriorität als Deadlockopfer ausgewählt. Wurde für beide Sitzungen die gleiche Deadlockprioriät festgelegt, wird diejenige Sitzung als Deadlockopfer ausgewählt, für die der Rollback weniger aufwändig ist. Wenn die am Deadlockzyklus beteiligten Sitzungen die gleiche Deadlockpriorität und die gleichen Kosten besitzen, wird das Opfer zufällig ausgewählt.  
+ Standardmäßig wählt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die Sitzung als Deadlockopfer aus, die die Transaktion ausführt, für die mit dem geringsten Aufwand ein Rollback ausgeführt werden kann. Alternativ kann ein Benutzer mithilfe der `SET DEADLOCK_PRIORITY`-Anweisung die Priorität der Sitzungen im Falle eines Deadlocks angeben. DEADLOCK_PRIORITY kann auf LOW, NORMAL oder HIGH oder alternativ auf einen beliebigen ganzzahligen Wert im Bereich zwischen -10 und 10 festgelegt werden. Die Deadlockpriorität ist standardmäßig NORMAL. Wenn die Sitzungen verschiedene Deadlockprioritäten besitzen, wird die Sitzung mit der niedrigeren Deadlockpriorität als Deadlockopfer ausgewählt. Wurde für beide Sitzungen die gleiche Deadlockprioriät festgelegt, wird diejenige Sitzung als Deadlockopfer ausgewählt, für die der Rollback weniger aufwändig ist. Wenn die am Deadlockzyklus beteiligten Sitzungen die gleiche Deadlockpriorität und die gleichen Kosten besitzen, wird das Opfer zufällig ausgewählt.  
   
  Wenn CLR verwendet wird, erkennt der Deadlockmonitor automatisch Deadlocks für Synchronisierungsressourcen (Überwachungsprogramme, Leser/Schreibersperre und Threadjoin), auf die in verwalteten Prozeduren zugegriffen wird. Der Deadlock wird jedoch behoben, indem eine Ausnahme in der Prozedur ausgelöst wird, die als Deadlockopfer ausgewählt wurde. Beachten Sie unbedingt, dass die Ausnahme nicht automatisch Ressourcen freigibt, die sich zurzeit im Besitz des Opfers befinden; die Ressourcen müssen explizit freigegeben werden. Die zum Identifizieren eines Deadlockopfers verwendete Ausnahme kann konsistent mit dem Verhalten der Ausnahme abgefangen und behandelt werden.  
   
@@ -757,7 +912,7 @@ INSERT mytable VALUES ('Dan');
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Erweitertes Deadlock-Ereignis
 Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sollte das erweiterte Ereignis `xml_deadlock_report` (xEvent) anstelle der Ereignisklasse des Deadlock-Graphen in der SQL-Ablaufverfolgung oder in SQL Server Profiler verwendet werden.
 
-Ebenfalls ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] erfasst die system\_health-Sitzung bei Auftreten eines Deadlock alle `xml_deadlock_report`-xEvents, die den Deadlockgraphen enthalten. Da die system\_health-Sitzung standardmäßig aktiviert ist, ist es nicht erforderlich, eine eigene xEvent-Sitzung zu konfigurieren, um Deadlock-Informationen zu sammeln. 
+Ebenfalls ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] erfasst die ***system\_health***-Sitzung bei Auftreten eines Deadlock bereits alle `xml_deadlock_report`-xEvents, die den Deadlockgraphen enthalten. Da die *system\_health*-Sitzung standardmäßig aktiviert ist, ist es nicht erforderlich, eine eigene xEvent-Sitzung zu konfigurieren, um Deadlockinformationen erfassen. 
 
 Der in der Regel erfasste Deadlock Graph verfügt über drei unterschiedliche Knoten:
 -   **victim-list:** Prozessbezeichner des Deadlockopfers.
@@ -768,7 +923,7 @@ Das folgende Beispiel zeigt, wie [!INCLUDE[ssManStudio](../includes/ssManStudio-
 
 ![xEvent-Deadlock-Graph](../relational-databases/media/udb9_xEventDeadlockGraphc.png)
 
-Die folgende Abfrage kann alle Deadlock-Ereignisse anzeigen, die vom Ringpuffer der system\_health-Sitzung erfasst wurden:
+Die folgende Abfrage kann alle Deadlock-Ereignisse anzeigen, die vom Ringpuffer der *system\_health*-Sitzung erfasst wurden:
 
 ```sql
 SELECT xdr.value('@timestamp', 'datetime') AS [Date],
@@ -1762,7 +1917,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
  Weitere Informationen zu bestimmten Sperrhinweisen und ihrem Verhalten finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md).  
   
 > [!NOTE]  
-> Der [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Abfrageoptimierer wählt so gut wie immer die richtige Sperrebene aus. Es wird empfohlen, dass Sperrhinweise auf Tabellenebene zur Änderung des Standardsperrverhaltens nur dann verwendet werden, wenn dies notwendig ist. Wenn eine Sperrstufe nicht zugelassen wird, kann dies negative Auswirkungen auf die Parallelität haben.  
+> Der [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] wählt so gut wie immer die richtige Sperrebene aus. Es wird empfohlen, dass Sperrhinweise auf Tabellenebene zur Änderung des Standardsperrverhaltens nur dann verwendet werden, wenn dies notwendig ist. Wenn eine Sperrstufe nicht zugelassen wird, kann dies negative Auswirkungen auf die Parallelität haben.  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] muss möglicherweise beim Lesen von Metadaten selbst dann Sperren aktivieren, wenn eine SELECT-Anweisung mit einem Sperrhinweis verarbeitet wird, der beim Lesen von Daten Anforderungen für freigegebene Sperren verhindert. Eine `SELECT`-Anweisung, die den `NOLOCK`-Hinweis verwendet, aktiviert beim Lesen von Daten z.B. keine freigegebenen Sperren, kann jedoch manchmal Sperren anfordern, wenn eine Systemkatalogsicht gelesen wird. Dies bedeutet, dass es möglich ist, eine `SELECT`-Anweisung zu blockieren, die `NOLOCK` verwendet.  
   
@@ -1793,7 +1948,7 @@ ROLLBACK;
 GO  
 ```  
   
- Die einzige Sperre, die angewendet wird und auf *HumanResources.Employee* verweist, ist eine Sperre des Typs Sch-S (Schemastabilität). In diesem Fall kann die Serialisierbarkeit nicht mehr garantiert werden.  
+ Die einzige Sperre, die angewendet wird und auf `HumanResources.Employee` verweist, ist eine Sperre des Typs Sch-S (Schemastabilität). In diesem Fall kann die Serialisierbarkeit nicht mehr garantiert werden.  
   
  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] kann die `LOCK_ESCALATION`-Option von `ALTER TABLE` Tabellensperren als unerwünscht festlegen und HoBT-Sperren für partitionierte Tabellen aktivieren. Diese Option ist kein Sperrhinweis, kann jedoch verwendet werden, um die Sperrenausweitung zu reduzieren. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -1957,7 +2112,7 @@ GO
  Unter Umständen müssen Sie die KILL-Anweisung ausführen. Verwenden Sie diese Anweisung jedoch sehr vorsichtig, besonders wenn gerade kritische Prozesse ausgeführt werden. Weitere Informationen finden Sie unter [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Zusätzliches Lesematerial   
-[Mehraufwand der Zeilenversionsverwaltung](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+[Mehraufwand der Zeilenversionsverwaltung](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      

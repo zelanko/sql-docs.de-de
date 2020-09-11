@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 0c783f9db966605a3eeccaca453e7a5c249b8495
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062329"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288237"
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -307,13 +307,19 @@ Sie können Konflikte zwischen Sperren minimieren und zugleich Transaktionen vor
 Weitere Informationen zu Isolationsstufen in SQL Server finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 > [!NOTE]  
-> Haben Sie READUNCOMMITTED angegeben und erhalten die Fehlermeldung 601, lösen Sie den Fehler auf wie einen Deadlockfehler (1205), und wiederholen Sie die Anweisung.  
+> Wenn READUNCOMMITTED angegeben wird und Sie die [Fehlermeldung 601](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999) erhalten, lösen Sie den Fehler auf wie einen Deadlockfehler ([Fehlermeldung 1205](../../relational-databases/errors-events/mssqlserver-1205-database-engine-error.md)), und wiederholen Sie die Anweisung.  
   
 REPEATABLEREAD  
 Legt fest, dass ein Scan mit derselben Sperrsemantik wie eine Transaktion durchgeführt wird, die auf der Isolationsstufe REPEATABLE READ ausgeführt wird. Weitere Informationen zu Isolationsstufen in SQL Server finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 ROWLOCK  
-Gibt an, das Zeilensperren in solchen Fällen gesetzt werden, in denen normalerweise Seiten- oder Tabellensperren gesetzt werden. Wird das Argument in Transaktionen angegeben, die auf der SNAPSHOT-Isolationsstufe ausgeführt werden, werden Zeilensperren nur dann verwendet, wenn ROWLOCK mit anderen Tabellenhinweisen kombiniert ist, die Sperren erfordern, wie beispielsweise UPDLOCK und HOLDLOCK.  
+Gibt an, das Zeilensperren in solchen Fällen gesetzt werden, in denen normalerweise Seiten- oder Tabellensperren gesetzt werden. Wird das Argument in Transaktionen angegeben, die auf der SNAPSHOT-Isolationsstufe ausgeführt werden, werden Zeilensperren nur dann verwendet, wenn ROWLOCK mit anderen Tabellenhinweisen kombiniert ist, die Sperren erfordern, wie beispielsweise UPDLOCK und HOLDLOCK. ROWLOCK kann nicht mit einer Tabelle verwendet werden, die über einen gruppierten Columnstore-Index verfügt. Im folgenden Beispiel wird [Fehler 651](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999) an die Anwendung zurückgegeben.  
+
+```sql 
+UPDATE [dbo].[FactResellerSalesXL_CCI] WITH (ROWLOCK)
+SET UnitPrice = 50
+WHERE ProductKey = 150;
+```  
   
 SERIALIZABLE  
 Entspricht der Option HOLDLOCK. Verstärkt die Einschränkung von freigegebenen Sperren, indem sie aufrechterhalten werden, bis eine Transaktion abgeschlossen ist (anstatt die freigegebene Sperre aufzuheben, sobald die benötigte Tabelle oder Datenseite nicht mehr gebraucht wird, ganz gleich, ob die Transaktion abgeschlossen ist oder nicht). Der Scan wird mit derselben Sperrsemantik wie eine Transaktion durchgeführt, die auf der Isolationsstufe SERIALIZABLE ausgeführt wird. Weitere Informationen zu Isolationsstufen in SQL Server finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
@@ -321,11 +327,11 @@ Entspricht der Option HOLDLOCK. Verstärkt die Einschränkung von freigegebenen 
 SNAPSHOT  
 **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher. 
   
-Auf die speicheroptimierte Tabelle wird unter der SNAPSHOT-Isolation zugegriffen. SNAPSHOT kann nur mit speicheroptimierten Tabellen verwendet werden (nicht mit datenträgerbasierten Tabellen). Weitere Informationen finden Sie unter [Einführung in speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+Auf die speicheroptimierte Tabelle wird unter der SNAPSHOT-Isolation zugegriffen. SNAPSHOT kann nur mit speicheroptimierten Tabellen verwendet werden (nicht mit datenträgerbasierten Tabellen), wie im folgenden Beispiel gezeigt wird. Weitere Informationen finden Sie unter [Einführung in speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 ```sql 
-SELECT * FROM dbo.Customers AS c   
-WITH (SNAPSHOT)   
+SELECT * 
+FROM dbo.Customers AS c WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
     ON c.customer_id=oh.customer_id;  
 ```  

@@ -2,7 +2,7 @@
 description: CREATE TABLE (Transact-SQL)
 title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
-ms.date: 02/24/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -44,15 +44,16 @@ helpviewer_keywords:
 - CREATE TABLE statement
 - number of columns per table
 - maximum number of bytes per row
+- data retention policy
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 380d8d9dcd7d2812251203a91caaa2b9d056d616
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 96dcd0aff5874db3f025496b1067d5d3d111b3a9
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862450"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511262"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -237,14 +238,19 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
           ON [ ( <table_stretch_options> [,...n] ) ]
         | OFF ( MIGRATION_STATE = PAUSED )
       }
-    ]
+    ]   
+    [ DATA_DELETION = ON ( FILTER_COLUMN = column_name
+        , RETENTION_PERIOD = {
+                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }
+                          }) ]
 }
   
 <table_stretch_options> ::=
 {  
     [ FILTER_PREDICATE = { null | table_predicate_function } , ]
       MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
- }
+ }   
   
 <index_option> ::=
 {
@@ -762,7 +768,8 @@ SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table
 
 Ermöglicht die Systemversionsverwaltung der Tabelle, wenn die Einschränkungsanforderungen für den Datentyp, die NULL-Zulässigkeit und den Primärschlüssel erfüllt werden. Wenn das Argument `HISTORY_TABLE` nicht verwendet wird, generiert das System eine neue Verlaufstabelle, die dem Schema der aktuellen Tabelle in der gleichen Dateigruppe der aktuellen Tabelle entspricht, erstellt eine Verbindung zwischen den beiden Tabellen und ermöglicht dem System, den Verlauf von jedem Datensatz der aktuellen Tabelle in der Verlaufstabelle aufzuzeichnen. Der Name dieser Verlaufstabelle ist dann `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Standardmäßig ist die Verlaufstabelle **PAGE** -komprimiert. Wenn das Argument `HISTORY_TABLE` verwendet wird, um eine Verbindung zu einer vorhandenen Verlaufstabelle zu erstellen und diese zu verwenden, wird die Verbindung zwischen der aktuellen Tabelle und der angegebenen Tabelle hergestellt. Falls die aktuelle Tabelle partitioniert wurde, kann die Verlaufstabelle auf der Standarddateigruppe erstellt werden, da die Partitionierungskonfiguration nicht automatisch von der aktuellen auf die Verlaufstabelle repliziert wird. Falls der Name einer Verlaufstabelle während der Erstellung der Verlaufstabelle angegeben wird, müssen Sie das Schema und den Tabellennamen angeben. Wenn Sie einen Link zu einer vorhandenen Verlaufstabelle erstellen, können Sie eine Datenkonsistenzprüfung durchführen. Diese Datenkonsistenzprüfung stellt sicher, dass vorhandene Datensätze nicht überlappen. Die Datenkonsistenzprüfung ist standardmäßig aktiviert. Verwenden Sie dieses Argument mit den Argumenten `PERIOD FOR SYSTEM_TIME` und `GENERATED ALWAYS AS ROW { START | END }`, um die Systemversionsverwaltung für eine Tabelle zu aktivieren. Weitere Informationen finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) } **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
+REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher).
 
 Erstellt eine neue Tabelle, für die Stretch Database aktiviert oder deaktiviert ist. Weitere Informationen finden Sie unter [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -793,6 +800,23 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **Gilt für:** [!INCLUDE[ssNoV
    Dieser Vorgang verursacht Datenübertragungskosten und kann nicht abgebrochen werden.
 
 - Geben Sie `PAUSED` an, um die Datenmigration zu pausieren oder nach hinten zu verschieben. Weitere Informationen finden Sie unter [Anhalten und Fortsetzen der Datenmigration – Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
+
+DATA_DELETION = { ON ( FILTER_COLUMN = spaltenname,   
+            RETENTION_PERIOD = { INFINITE | Anzahl {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }    
+**Anwendungsbereich:** *Nur* Azure SQL Edge
+
+Aktiviert die auf Aufbewahrungsrichtlinien basierende Bereinigung von alten oder veralteten Daten aus Tabellen innerhalb einer Datenbank. Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren von Datenaufbewahrung](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). Die folgenden Parameter müssen angegeben werden, damit Datenaufbewahrung aktiviert wird. 
+
+- FILTER_COLUMN = { spaltenname }  
+Gibt die Spalte an, die verwendet werden soll, um zu bestimmen, ob die Zeilen in der Tabelle veraltet sind. Die folgenden Datentypen sind für die Filterspalte zulässig.
+  - Date
+  - Datetime
+  - DateTime2
+  - SmallDateTime
+  - DateTimeOffset
+
+- RETENTION_PERIOD = { INFINITE | Anzahl {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+  Gibt die Richtlinie für den Aufbewahrungszeitraum an. Der Aufbewahrungszeitraum wird als eine Kombination aus einem positiven Integerwert und der Datumsteileinheit angegeben.   
 
 MEMORY_OPTIMIZED **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) Azure SQL Managed Instance unterstützt speicheroptimierte Tabellen nicht.
 
@@ -1573,6 +1597,20 @@ Adressieren des Systemobjekts in „tempdb“ in [!INCLUDE[ssSDSfull](../../incl
 SELECT * FROM tempdb.sys.objects;
 SELECT * FROM tempdb.sys.columns;
 SELECT * FROM tempdb.sys.database_files;
+```   
+
+### <a name="w-enable-data-retention-policy-on-a-table"></a>W. Aktivieren der Richtlinie für Datenaufbewahrung für eine Tabelle
+
+Im folgenden Beispiel wird eine Tabelle erstellt, in der Datenaufbewahrung aktiviert ist, und es wird ein Aufbewahrungszeitraum von einer Woche angegeben. Dieses Beispiel gilt nur für **Azure SQL Edge**.
+
+```sql
+CREATE TABLE [dbo].[data_retention_table] 
+(
+  [dbdatetime2] datetime2(7), 
+  [product_code] int, 
+  [value] char(10)
+) 
+WITH (DATA_DELETION = ON ( FILTER_COLUMN = [dbdatetime2], RETENTION_PERIOD = 1 WEEKS ))
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
