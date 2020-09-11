@@ -41,7 +41,7 @@ Mit dieser Methode wird die Anzahl der Kurven in einer Instanz von **geometry** 
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Eine leere eindimensionale Instanz von **geometry** gibt 0 zurück. **NULL** wird zurückgegeben, wenn die **geometry** -Instanz keine eindimensionale oder eine nicht initialisierte Instanz ist.  
   
 ## <a name="examples"></a>Beispiele  

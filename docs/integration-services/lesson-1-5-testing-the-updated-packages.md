@@ -46,7 +46,7 @@ Werden die Pakete nicht erfolgreich ausgeführt, müssen Sie das Problem beheben
 3.  Klicken Sie nach Ausführen des Pakets im Menü **Debuggen** auf **Debuggen beenden**.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
-[Lesson 2: Create the Deployment Bundle in SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+[Lektion 2: Erstellen des Bereitstellungspakets in SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
   
   
   

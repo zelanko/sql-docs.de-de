@@ -29,7 +29,7 @@ ms.locfileid: "88430702"
   
  Weitere Informationen zu diesem Assistenten finden Sie unter [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Einzelne Spalte zum Anzeigen der aktuellen und abgelaufenen Datensätze verwenden**  
  Wenn Sie eine einzelne Spalte für zum Aufzeichnen des Status von Verlaufsattributen verwenden, sind folgende Optionen verfügbar:  
   

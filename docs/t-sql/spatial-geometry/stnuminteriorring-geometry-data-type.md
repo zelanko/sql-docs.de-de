@@ -44,8 +44,8 @@ Gibt die Anzahl der inneren Ringe einer **Polygongeometry**-Instanz zurück.
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Bemerkungen  
- Diese Methode gibt NULL zurück, wenn die **geometry**-Instanz kein Polygon ist.  
+## <a name="remarks"></a>Hinweise  
+ Diese Methode gibt null zurück, wenn die **geometry** -Instanz kein Polygon ist.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `Polygon`-Instanz erstellt und `STNumInteriorRing()` verwendet, um festzustellen, wie viele innere Ringe die Instanz enthält.  
@@ -56,7 +56,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STNumInteriorRing();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -44,7 +44,7 @@ ms.locfileid: "88445166"
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode zählt die Punkte in der Beschreibung einer **geography** -Instanz. Doppelte Punkte werden gezählt, verbundene Punkte zwischen Segmenten allerdings nur einmal. Wenn diese Instanz eine Auflistung ist, gibt diese Methode die Gesamtzahl der Punkte in der Auflistung zurück.  
   
 ## <a name="examples"></a>Beispiele  
@@ -75,7 +75,7 @@ SELECT @g.STNumPoints();
  SELECT @g.STNumPoints();
  ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

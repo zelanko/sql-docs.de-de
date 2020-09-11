@@ -44,7 +44,7 @@ Gibt die Anzahl von Geometrien zurück, die eine **geometry**-Instanz enthalten.
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode gibt 1 zurück, wenn die **geometry**-Instanz keine **MultiPoint**-, **MultiLineString**-, **MultiPolygon**- oder **GeometryCollection**-Instanz ist. Sie gibt 0 (null) zurück, wenn die **geometry**-Instanz leer ist.  
   
 > [!NOTE]  
