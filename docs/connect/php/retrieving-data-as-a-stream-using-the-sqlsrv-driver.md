@@ -1,4 +1,5 @@
 ---
+description: Abrufen von Daten als Stream mit dem SQLSRV-Treiber
 title: Abrufen von Daten als Stream mit dem SQLSRV-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4a9ac475c19560b005299410f59e5a45a94197e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cceb378b0571ff1fb6b3505abd1f6d8f4535a5cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414446"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Abrufen von Daten als Stream mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,9 +45,9 @@ Die folgenden Schritte fassen zusammen, wie Daten als Stream abgerufen werden k�
   
 |Thema|BESCHREIBUNG|  
 |---------|---------------|  
-|[Datentypen mit Streamunterstützung, die den SQLSRV-Treiber nutzen](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|Listet die SQL Server-Datentypen auf, die als Streams abgerufen werden können.|  
-|[Gewusst wie: Abrufen von Zeichendaten als Stream mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Veranschaulicht, wie Zeichendaten als Stream abgerufen werden können.|  
-|[Gewusst wie: Abrufen von Binärdaten als Stream mithilfe des SQLSRV-Treibers](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Veranschaulicht, wie Binärdaten als Stream abgerufen werden können.|  
+|[Datentypen mit Stream-Unterstützung, die den SQLSRV-Treiber nutzen](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|Listet die SQL Server-Datentypen auf, die als Streams abgerufen werden können.|  
+|[Vorgehensweise: Abrufen von Zeichendaten als Stream mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Veranschaulicht, wie Zeichendaten als Stream abgerufen werden können.|  
+|[Vorgehensweise: Abrufen von Binärdaten als Stream mithilfe des SQLSRV-Treibers](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Veranschaulicht, wie Binärdaten als Stream abgerufen werden können.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)

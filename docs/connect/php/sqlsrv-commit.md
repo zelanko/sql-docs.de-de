@@ -1,4 +1,5 @@
 ---
+description: Sqlsrv_commit
 title: sqlsrv_commit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a219e0e9c1fd11a7a99fb941eca571fb59800a2a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0d42500c2764815ade1a2bf2292320f4b8745e88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413966"
 ---
 # <a name="sqlsrv_commit"></a>Sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -126,7 +127,7 @@ Für die Überwachung des Transaktionsverhaltens ist eine empfohlene Fehlerbehan
 ## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Gewusst wie: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
+[Vorgehensweise: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
 
 [Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md)
   

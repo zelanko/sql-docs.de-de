@@ -1,4 +1,5 @@
 ---
+description: Diagrammbereich (Visual Database Tools)
 title: Diagrammbereich
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 82e1f9f4ecfcf1752165a8c71df90673b2b69bba
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3c468994dcfa80b1db2ee8c6c49dd881dd7bcf85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417806"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Diagrammbereich (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ Wenn Sie Änderungen im Diagrammbereich vornehmen, werden die Werte im Kriterien
   
 Jede Tabelle und jedes Tabellenwertobjekt wird im Diagrammbereich in einem separaten Fenster angezeigt. Das Symbol in der Titelleiste jedes Rechtecks gibt den dargestellten Objekttyp wieder, wie in der folgenden Tabelle beschrieben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Tabellen**  
 Listet die Tabellen auf, die dem Diagrammbereich hinzugefügt werden können. Um eine Tabelle hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**. Um mehrere Tabellen gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
   

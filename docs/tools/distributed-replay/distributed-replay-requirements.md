@@ -1,4 +1,5 @@
 ---
+description: Distributed Replay Requirements
 title: 'Distributed Replay: Anforderungen'
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
@@ -10,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/18/2018
-ms.openlocfilehash: 26fdf4b982b27b7ad7c4d832b7320a263d4a09ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b75a40618d327c077c36b93d6368e245a2669dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414836"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

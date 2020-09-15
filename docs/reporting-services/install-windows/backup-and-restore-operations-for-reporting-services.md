@@ -1,4 +1,5 @@
 ---
+description: Sicherungs- und Wiederherstellungsvorgänge für Reporting Services
 title: Sicherungs- und Wiederherstellungsvorgänge für Reporting Services | Microsoft-Dokumentation
 author: maggiesMSFT
 ms.author: maggies
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/08/2019
-ms.openlocfilehash: f5d2aad7b0a306dd4bd2c8e64b7a49581c8fb5d2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31ec98b4fa474ab97b3cac37f49ae885f04d1414
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68264973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418666"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Sicherungs- und Wiederherstellungsvorgänge für Reporting Services
 
@@ -39,7 +40,7 @@ ms.locfileid: "68264973"
     ::: moniker-end
   
 ## <a name="backing-up-the-report-server-databases"></a>Sichern der Berichtsserver-Datenbanken  
- Da es sich bei einem Berichtsserver um einen statuslosen Server handelt, werden alle Anwendungsdaten in den Datenbanken **reportserver** und **reportservertempdb** gespeichert, die in einer [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz ausgeführt werden. Mithilfe einer der zum Sichern von **-Datenbanken unterstützten Methoden können Sie die Datenbanken** reportserver**und**reportservertempdb[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sichern. Hier finden Sie einige Empfehlungen für die Berichtsserver-Datenbanken:  
+ Da es sich bei einem Berichtsserver um einen statuslosen Server handelt, werden alle Anwendungsdaten in den Datenbanken **reportserver** und **reportservertempdb** gespeichert, die in einer [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz ausgeführt werden. Mithilfe einer der zum Sichern von **-Datenbanken unterstützten Methoden können Sie die Datenbanken **reportserver** und **reportservertempdb[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sichern. Hier finden Sie einige Empfehlungen für die Berichtsserver-Datenbanken:  
   
 -   Verwenden Sie zum Sichern der **reportserver**-Datenbank das vollständige Wiederherstellungsmodell.  
   

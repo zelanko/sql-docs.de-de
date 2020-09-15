@@ -1,4 +1,5 @@
 ---
+description: Öffnen von Datenbankdiagrammen (Visual Database Tools)
 title: Öffnen von Datenbankdiagrammen
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 07ea1f96ac38a99a13aa9957960ae523e5f10609
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 17c86c408ca67a6d4eea656850b6126a55dbe2f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417756"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Öffnen von Datenbankdiagrammen (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ Nach dem Öffnen eines Datenbankdiagramms kann die Struktur des Diagramms angeze
   
 2.  Doppelklicken Sie auf den Namen des gewünschten Datenbankdiagramms.  
   
-    Oder  
+    - oder -  
   
     Klicken Sie mit der rechten Maustaste auf den Namen des gewünschten Datenbankdiagramms, und wählen Sie dann **Datenbankdiagramm erstellen**.  
   
