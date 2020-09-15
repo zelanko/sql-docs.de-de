@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: 869c2be4422df2361a0522e5b2183e61e43ae797
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b44e664d75735a6283d12f218b904fbdd07ad481
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248550"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396534"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Neues in SQL Server Reporting Services (SSRS)
 
@@ -233,9 +233,8 @@ Das neue Release von SSDT umfasst die Projektvorlagen für [!INCLUDE[ssRSCurrent
 
 **Neue Benutzeroberfläche für den Berichts-Generator:** Die [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]-Hauptbenutzeroberfläche weist jetzt ein modernes Layout mit optimierten Benutzeroberflächenelementen auf.  
 
-|||  
-|-|-|  
 |Neu|Previous|  
+|-|-|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
 **Benutzerdefinierter Parameterbereich:** Sie können den Parameterbereich jetzt anpassen. Mithilfe der Entwurfsoberfläche im Berichts-Generator, können Sie einen Parameter zu einer bestimmten Spalte und Zeile im Parameterbereich ziehen. Sie können Spalten hinzufügen und entfernen, um das Layouts des Bereichs zu ändern. Weitere Informationen finden Sie unter [Benutzerdefiniertes Anpassen des Parameterbereichs in einem Bericht &#40;Berichts-Generator&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)erstellen.  

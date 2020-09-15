@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ffa8d5781eb3ad7eb95a4dc5b360ad51ede6843
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4a2f61a8700c24a2cc41192103f57a51befbbd15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547472"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390656"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services
 
@@ -32,7 +32,7 @@ ms.locfileid: "84547472"
   
  ![Berichtssymbolleiste](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Berichtssymbolleiste")  
   
-|||  
+|Interaktion|Benutzeroberfläche|  
 |-|-|  
 |Das erste Dialogfeld gilt für alle Browser und ermöglicht Ihnen, grundlegende Layout-Eigenschaften wie z.B. die Ausrichtung zu ändern. Wenn Sie auf **Drucken**klicken, wird die Druckerfahrung je nach Browser einen minimalen Unterschied aufweisen.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |In Chrome öffnet sich ein detailliertes Dialogfenster zum Drucken aus dem Browser heraus.   Sie können die Druckerkonfiguration ändern, drucken und das Dialogfeld „Drucken“ im Betriebssystem öffnen.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  

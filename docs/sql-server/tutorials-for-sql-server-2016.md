@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d86c5a3662417c1af39f12fc3d32167a73912c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df4709bbbfa17cdf33cfd13a20486a213fcc5a05
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913947"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934239"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutorials für SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "86913947"
 |--------------|---------------|  
 |[Analysis Services-Tutorials &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
 |[Lernprogramme zur Datenbank-Engine](../relational-databases/database-engine-tutorials.md)|Hier erfahren Sie, wie Sie eine Verbindung mit einer Datenbank-Engine-Instanz herstellen und dann Transact-SQL-Anweisungen erstellen und ausführen.|  
-|[Enterprise Information Management-Lernprogramme](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Hier erfahren Sie, wie Informationen in einem Unternehmen mit EIM-Technologien von Microsoft verwaltet werden.|  
+|[Enterprise Information Management-Lernprogramme](https://wiki.scn.sap.com/wiki/display/EIM/EIM+Tutorials)|Hier erfahren Sie, wie Informationen in einem Unternehmen mit EIM-Technologien von Microsoft verwaltet werden.|  
 |[Integration Services-Lernprogramme](../integration-services/integration-services-tutorials.md)|Hier erfahren Sie, wie [!INCLUDE[ssIS](../includes/ssis-md.md)] -Pakete erstellt und bereitgestellt werden.|  
 |[Tutorials zur Replikation](../relational-databases/replication/replication-tutorials.md)|Hier erfahren Sie, wie Sie Replikationstopologien mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]einrichten und ausführen.|  
 |[Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Hier erfahren Sie, wie grundlegende Berichte und Abonnements erstellt werden.|  
@@ -38,7 +38,7 @@ ms.locfileid: "86913947"
   
  ## <a name="previously-published-tutorials"></a>Zuvor veröffentlichte Tutorials: 
   
- - [Lernprogramme für SQL Server 2014](https://msdn.microsoft.com/library/hh231699(v=sql.120).aspx)  
+ - [Lernprogramme für SQL Server 2014](https://www.quackit.com/sql_server/sql_server_2014/tutorial/)  
   
  - [Tutorials für SQL Server 2012](https://msdn.microsoft.com/library/hh231699(v=sql.110).aspx)  
   

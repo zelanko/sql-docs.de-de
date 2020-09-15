@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 155df0fc52ffc390a0bf528fb2a907751dbbfe6b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 556fc5e4c785345ede475dcadb2c5673489a279f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916896"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939390"
 ---
 # <a name="schedule-properties-reports-page"></a>Zeitplaneigenschaften (Registerkarte Berichte)
   Verwenden Sie die [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Seite mit den Zeitplaneigenschaften in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] , um eine Liste aller Berichte anzuzeigen, die den bestimmten freigegebenen Zeitplan verwenden. Zeitpläne können zum Aktualisieren von Berichtsmomentaufnahmen, zum Generieren des Berichtsverlaufs, zum Auslösen eines Abonnements oder zum Kennzeichnen einer zwischengespeicherten Kopie des Berichts als abgelaufen verwendet werden. Wenn Sie herausfinden möchten, wie der Zeitplan verwendet wird, dann zeigen Sie die Eigenschaften- und Abonnementinformationen des Berichts an.  
@@ -47,7 +47,7 @@ ms.locfileid: "86916896"
  [Zeitpläne](../../reporting-services/subscriptions/schedules.md)   
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Konfigurieren allgemeiner Berichtseigenschaften (Berichts-Manager)](https://msdn.microsoft.com/10b941b2-28e6-4408-9ee4-acebc63c8496)  
+ [Konfigurieren allgemeiner Berichtseigenschaften (Berichts-Manager)](https://docs.microsoft.com/sql/reporting-services/reports/configure-execution-properties-for-a-report-report-manager)  
   
   
 

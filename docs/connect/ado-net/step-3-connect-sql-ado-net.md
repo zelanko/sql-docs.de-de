@@ -2,7 +2,7 @@
 title: 'Schritt 3: Proof of Concept für das Herstellen von Verbindungen mit SQL Server mithilfe von ADO.NET | Microsoft-Dokumentation'
 description: Enthält Codebeispiele in C# für das Herstellen einer Verbindung mit SQL Server durch Ausführen einer Abfrage und Hinzufügen einer Zeile.
 ms.custom: ''
-ms.date: 08/15/2019
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,12 +11,12 @@ ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e78ba27912452562199a3d0c4d0d995b17371a56
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5e68e4e7753126c995923f0c037f227572a17e7f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918189"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823375"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von ADO.NET
 
@@ -34,9 +34,8 @@ Mithilfe der Methode **SqlConnection.Open** wird eine Verbindung zu Ihrer SQL-Da
 
 
 ```csharp
-// C# , ADO.NET  
 using System;
-using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
+using QC = Microsoft.Data.SqlClient;
   
 namespace ProofOfConcept_SQL_CSharp  
 {  
@@ -77,9 +76,9 @@ Die Methode SqlCommand.ExecuteReader:
   
   
 ```csharp
-using System;  // C# , ADO.NET  
-using DT = System.Data;            // System.Data.dll  
-using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
+using System;
+using DT = System.Data;
+using QC = Microsoft.Data.SqlClient;
   
 namespace ProofOfConcept_SQL_CSharp  
 {  
@@ -165,9 +164,9 @@ In diesem Beispiel wird veranschaulicht, wie Sie:
   
   
 ```csharp
-using System;  // C# , ADO.NET  
-using DT = System.Data;            // System.Data.dll  
-using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
+using System;
+using DT = System.Data;
+using QC = Microsoft.Data.SqlClient;
   
 namespace ProofOfConcept_SQL_CSharp  
 {  

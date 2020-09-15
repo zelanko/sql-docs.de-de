@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 41a0f20b28e54c1680546625ae09df649499b2db
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 522d18c5eca3f9200f69b68e3f269ce01212a608
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764681"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934229"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services-SharePoint-Dienst und -Dienstanwendungen
 
@@ -29,7 +29,7 @@ ms.locfileid: "83764681"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Erstellen einer Reporting Services-Dienstanwendung
 
- Sie können die SharePoint-Zentraladministrations- oder PowerShell-Skripts verwenden, um die Reporting Services-Dienstanwendungen zu erstellen. Weitere Informationen zum Verwenden der SharePoint-Zentraladministration finden Sie im Abschnitt „Erstellen einer Reporting Services-Dienstanwendung“ in [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). Lesen Sie den PowerShell-Abschnitt weiter unten in diesem Thema, um ein Beispiel zu einem PowerShell-Skript für die Erstellung von Dienstanwendungen zu erhalten.  
+ Sie können die SharePoint-Zentraladministrations- oder PowerShell-Skripts verwenden, um die Reporting Services-Dienstanwendungen zu erstellen. Weitere Informationen zum Verwenden der SharePoint-Zentraladministration finden Sie im Abschnitt „Erstellen einer Reporting Services-Dienstanwendung“ in [Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode). Lesen Sie den PowerShell-Abschnitt weiter unten in diesem Thema, um ein Beispiel zu einem PowerShell-Skript für die Erstellung von Dienstanwendungen zu erhalten.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>Ändern der Zuordnungen der Dienstanwendung mit einer Proxygruppe
 

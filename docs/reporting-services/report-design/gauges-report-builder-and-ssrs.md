@@ -157,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: 03c4fa2ddf36130fb9ff96899870207c6427efe1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84011858"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939220"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Messgeräte (Berichts-Generator und SSRS)
   In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten zeigt ein Messgerätdatenbereich einen einzelnen Wert aus Ihrem Dataset an. Einzelne Messgeräte werden stets in einem Messgerätbereich positioniert, dem untergeordnete oder benachbarte Messgeräte hinzugefügt werden können. Innerhalb eines einzelnen Messgerätbereichs können Sie mehrere Messgeräte mit einheitlichen Funktionen wie Filtern, Gruppieren oder Sortieren erstellen.  
@@ -283,16 +283,13 @@ ms.locfileid: "84011858"
   
 -   [Festlegen eines Mindestwerts oder eines Höchstwerts auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Festlegen eines Ausrichtungsintervalls auf einem Messgerät (Berichts-Generator und SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
-  
--   [Festlegen eines Bilds als Zeiger auf einem Messgerät (Berichts-Generator und SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [Festlegen eines Ausrichtungsintervalls auf einem Messgerät (Berichts-Generator und SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)  
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> In diesem Abschnitt  
  In den folgenden Themen finden Sie zusätzliche Informationen zum Arbeiten mit Messgeräten.  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
+|-|-|  
 |[Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Stellt allgemeine Informationen zum Formatieren von Skalen auf Messgeräten und ausführliche Informationen zu den Formatierungsoptionen für Skalen auf radialen und linearen Messgeräten bereit.|  
 |[Formatieren von Zeigern auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Stellt allgemeine Informationen zum Formatieren von Zeigern auf Messgeräten und ausführliche Informationen zu den Formatierungsoptionen für die verfügbaren Zeigerformate von radialen und linearen Messgeräten bereit.|  
 |[Formatieren von Bereichen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Stellt Informationen zum Formatieren von Bereichen auf Messgeräten bereit, um einen wichtigen Unterabschnitt der Werte im Messgerät anzugeben visuell anzuzeigen, wenn der Zeigerwert in eine bestimmte Wertespanne eintritt.|  
