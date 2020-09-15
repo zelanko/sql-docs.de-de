@@ -1,4 +1,5 @@
 ---
+description: Unterstützte Abfragetypen (Visual Database Tools)
 title: Unterstützte Abfragetypen
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,12 +23,12 @@ ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6fa2d2e5502bc47d0631263b0b42c254fead0bfc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3253aef57da9eb34ddd87b17aa9a0e690fd866b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312357"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>Unterstützte Abfragetypen (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,6 +54,6 @@ Zusätzlich zu den in den grafischen Bereichen erstellten Abfragen können Sie j
 Wenn Sie mithilfe von SQL-Anweisungen Abfragen erstellen, die nicht in den grafischen Bereichen dargestellt werden können, blendet der Abfrage- und Sicht-Designer diese Bereiche ab und zeigt damit an, dass in diesen Bereichen nicht die erstellte Abfrage wiedergegeben wird. Die abgeblendeten Bereiche bleiben allerdings aktiv, und in vielen Fällen können Sie in diesen Bereichen Änderungen an der Abfrage vornehmen. Wenn sich aus den von Ihnen vorgenommenen Änderungen eine Abfrage ergibt, die in den grafischen Bereichen dargestellt werden kann, werden die Bereiche nicht länger abgeblendet angezeigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Themen zur Vorgehensweise: Entwerfen von Abfragen und Ansichten](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Artikel zum Entwerfen von Abfragen und Sichten](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Abfragetypen](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

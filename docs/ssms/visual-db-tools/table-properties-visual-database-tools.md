@@ -1,4 +1,5 @@
 ---
+description: Tabelleneigenschaften (Visual Database Tools)
 title: Tabelleneigenschaften
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e5b8873d5387bf80159c8687310b2116f16874b9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2c82638c23213db41aece277812522eb40a52e66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312816"
 ---
 # <a name="table-properties-visual-database-tools"></a>Tabelleneigenschaften (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +67,7 @@ Zeigt an, ob die Tabelle indiziert werden kann. Wenn die Tabelle nicht indiziert
 Zeigt an, ob die Tabelle in einem anderen Speicherort repliziert wird.  
   
 **Kategorie Reguläre Datenbereichsspezifikation**  
-Wenn die Kategorie erweitert ist, werden Eigenschaften für **(Datenbereichstyp)** , **Schemaname der Dateigruppe oder Partition**und **Partitionsspaltenliste**angezeigt.  
+Wenn die Kategorie erweitert ist, werden Eigenschaften für **(Datenbereichstyp)**, **Schemaname der Dateigruppe oder Partition**und **Partitionsspaltenliste**angezeigt.  
   
 **(Datenbereichstyp)**  
 Zeigt an, ob die Tabelle mit einem Dateigruppen- oder einem Partitionsschema gespeichert wird.  

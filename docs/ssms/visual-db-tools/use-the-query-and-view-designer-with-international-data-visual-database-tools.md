@@ -1,4 +1,5 @@
 ---
+description: Verwenden des Abfrage- und Sicht-Designers bei internationalen Daten (Visual Database Tools)
 title: Verwenden des Abfrage- und Sicht-Designers bei internationalen Daten
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,16 +23,16 @@ ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 99e6d84d96171747977852caa1ceeef287d3e337
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bf7402047138bc70810aec16e6ea99845e85dbef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312656"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Verwenden des Abfrage- und Sicht-Designers bei internationalen Daten (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Sie können den [Abfrage- und Sicht-Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) mit Daten in jeder Sprache und mit jeder Version des Betriebssystems Windows verwenden. In den folgenden Richtlinien werden die Unterschiede erläutert und Informationen zur Datenverwaltung in internationalen Anwendungen bereitgestellt.  
+ Sie können den [Abfrage- und Sicht-Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) mit Daten in jeder Sprache und mit jeder Version des Betriebssystems Windows verwenden. In den folgenden Richtlinien werden die Unterschiede erläutert und Informationen zur Datenverwaltung in internationalen Anwendungen bereitgestellt.  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>Lokalisierte Informationen im Kriterien- und im SQL-Bereich  
 Wenn Sie eine Abfrage im Kriterienbereich erstellen, können Sie die Informationen in dem Format eingeben, das den Ländereinstellungen von Windows auf dem Computer entspricht. Wenn Sie z. B. nach Daten suchen, können Sie die Daten in den Spalten Kriterien in dem für Sie gewohnten Format eingeben, wobei jedoch folgende Ausnahmen zu beachten sind:  
@@ -59,4 +60,4 @@ Sie können DBCS-Zeichen für Literalwerte und für Namen von Datenbankobjekten,
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[Themen zur Vorgehensweise: Entwerfen von Abfragen und Ansichten](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
+[Artikel zum Entwerfen von Abfragen und Sichten](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)

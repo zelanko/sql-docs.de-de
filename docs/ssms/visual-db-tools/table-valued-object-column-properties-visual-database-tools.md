@@ -1,4 +1,5 @@
 ---
+description: Tabellenwertobjekt (Spalte) Eigenschaften (Visual Database Tools)
 title: Tabellenwertobjekt (Spalte) Eigenschaften
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,22 +13,22 @@ ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d64ccb277d9016cd94b5613529e2d1c322162a73
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f33c6df2e1acfa5c014b6739acd61c4d0153631c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004178"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312706"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Tabellenwertobjekt (Spalte) Eigenschaften (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Diese Eigenschaften erscheinen, wenn Sie im Abfrage- und Sicht-Designer im Bereich **Diagramm** eine Spalte in einem Tabellenwertobjekt auswählen.  
+ Diese Eigenschaften erscheinen, wenn Sie im Abfrage- und Sicht-Designer im Bereich **Diagramm** eine Spalte in einem Tabellenwertobjekt auswählen.  
   
 > [!NOTE]  
 > Die in diesem Thema behandelten Eigenschaften sind nicht alphabetisch, sondern nach Kategorie angeordnet.  
   
 > [!NOTE]  
-> Die angezeigten Dialogfelder und Menübefehle können von den in der Hilfe beschriebenen abweichen. Dies hängt von Ihren aktiven Einstellungen oder Ihrer Edition ab. Um Ihre Einstellungen zu ändern, wählen Sie **Einstellungen importieren und exportieren** im Menü **Extras** aus.  
+> Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.  
   
 **Kategorie Identität**  
 Wird erweitert, um die Eigenschaft **Name** anzuzeigen.  
@@ -56,7 +57,7 @@ Zeigt die Anzahl der Zeichen oder Stellen an, die der Datentyp der ausgewählten
 **Genauigkeit**  
 Zeigt die maximale Anzahl der für numerische Datentypen zulässigen Stellen. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben.  
   
-**Skalieren**  
+**Skalierung**  
 Zeigt die maximale Anzahl von Stellen an, die bei numerischen Datentypen rechts vom Dezimalkomma erscheinen können. Dieser Wert muss kleiner oder gleich der Genauigkeit sein. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben.  
   
 **Größe**  

@@ -1,4 +1,5 @@
 ---
+description: Eigenschaftenfenster (Management Studio)
 title: Eigenschaftenfenster (Management Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ff8df58824aee2e718284bbbb2201b2123c216e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2017d434218356a87cc1db079b3195f42030029f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316656"
 ---
 # <a name="properties-window-management-studio"></a>Eigenschaftenfenster (Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Dieses Fenster wird zum Anzeigen der Eigenschaften von ausgewählten Elementen verwendet. Zudem können Sie mithilfe des Fensters Eiegnschaften Datei-, Projekt- und Projektmappeneigenschaften anzeigen. Das Eigenschaftenfenster ist verfügbar, wenn Sie im Menü **Ansicht** auf **Eigenschaftenfenster** klicken.  
+Dieses Fenster wird zum Anzeigen der Eigenschaften von ausgewählten Elementen verwendet. Zudem können Sie mithilfe des Fensters Eiegnschaften Datei-, Projekt- und Projektmappeneigenschaften anzeigen. Das Fenster Eigenschaften ist verfügbar, wenn Sie im Menü **Ansicht** auf **Eigenschaftenfenster** klicken.  
   
 Im Eigenschaftenfenster werden unterschiedliche Arten der Bearbeitung von Feldern angezeigt, je nachdem, welche Bearbeitung für die bestimmte Eigenschaft erforderlich ist. Die in Grau angezeigten Eigenschaften sind schreibgeschützt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Element|BESCHREIBUNG|  
 |-----------|---------------|  

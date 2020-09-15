@@ -1,4 +1,5 @@
 ---
+description: Unterschiedliche Abfragedefinitionen (Dialogfeld) (Visual Database Tools)
 title: Unterschiedliche Abfragedefinitionen (Dialogfeld)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 90383473-2922-40e5-9682-3850849aa856
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 530f7dafce6d34bf38de2407a94f792234743b1c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a2517d930333f9a17e7746db29074456281ecf9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88313856"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>Unterschiedliche Abfragedefinitionen (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,14 +35,14 @@ Dieses Dialogfeld wird angezeigt, wenn Sie eine SQL-Anweisung im SQL-Bereich ein
 -   Die SQL-Anweisung ist gültig, enthält aber Syntax, die nur für die verwendete Datenverbindung gilt.  
   
 > [!TIP]  
-> Sie können die Gültigkeit einer Anweisung auf der Symbolleiste **Abfrage** mithilfe der Schaltfläche **Analysieren** überprüfen.  
+>  Sie können die Gültigkeit einer Anweisung auf der Symbolleiste **Abfrage** mithilfe der Schaltfläche **Analysieren** überprüfen.  
   
 Das Dialogfeld zeigt eine Meldung mit dem Hinweis an, dass die SQL-Anweisung nicht dargestellt werden kann. Geben Sie an, wie Sie weiter vorgehen möchten.  
   
 > [!NOTE]  
-> Das Dialogfeld **Unterschiedliche Abfragedefinitionen** wird nicht angezeigt, wenn die Bereiche „Diagramm“ und „Kriterien“ ausgeblendet sind.  
+>  Das Dialogfeld **Unterschiedliche Abfragedefinitionen** wird nicht angezeigt, wenn die Bereiche Diagramm und Kriterien ausgeblendet sind.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Schaltfläche Ignorieren**  
 Mit dieser Schaltfläche können Sie die SQL-Anweisung übernehmen, um sie weiter zu bearbeiten oder auszuführen. Wenn Sie die Anweisung übernehmen, werden die Bereiche Diagramm und Kriterien abgeblendet, um anzuzeigen, dass die Anweisung im SQL-Bereich darin nicht dargestellt wird.  
   

@@ -1,4 +1,5 @@
 ---
+description: Entfernen von Spalten aus Abfragen (Visual Database Tools)
 title: Entfernen von Spalten aus Abfragen
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9027c72dff7fd722be87450aa1de10d694a4d3d9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 05a761620a0acb4bc799c0163b69a75881425f62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88313896"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Entfernen von Spalten aus Abfragen (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ Wenn Sie in einer Abfrage eine Spalte nicht länger verwenden möchten, können 
   
 -   Wählen Sie im **Kriterienbereich**die Rasterzeile mit der zu entfernenden Spalte aus, und drücken Sie ENTF.  
   
-    Oder  
+    - oder -  
   
 -   Entfernen Sie im [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)alle Verweise auf die Spalte.  
   

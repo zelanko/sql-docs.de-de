@@ -1,4 +1,5 @@
 ---
+description: Dateien zum Verwalten von Projektmappen und Projekten
 title: Dateien zum Verwalten von Projektmappen und Projekten
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bec1f5859162d2438d2db137ef0637fc4900b32b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d611776bc72c9c95786f40269acb069d56fa5a48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88315846"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>Dateien zum Verwalten von Projektmappen und Projekten
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ Wenn eine Verzeichnisstruktur vorhanden ist, die der logischen Struktur im Proje
 [Verwalten von Dateien mit Codierung](../../ssms/solution/manage-files-with-encoding.md)  
 [Sonstige Dateien](../../ssms/solution/miscellaneous-files.md)  
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
-[Projektmappen &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[Quellcodeverwaltung des Projektmappen-Explorers](https://msdn.microsoft.com/library/ms173879.aspx)  
+[Projektmappen (SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[Projekte (SQL Server Management Studio)](../../ssms/solution/projects-sql-server-management-studio.md)  
+[Quellcodeverwaltung des Projektmappen-Explorers](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
   
