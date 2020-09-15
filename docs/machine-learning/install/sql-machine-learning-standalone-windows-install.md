@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 15280d88b2219587ee63b15e8e98421be2734fab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a83e1ea4c96144f7188812522ee121530bac351c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885938"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178657"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installieren von Machine Learning Server (eigenständig) oder R Server (Standalone) mithilfe des SQL Server-Setups
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Das SQL Server-Setup umfasst eine Option für **freigegebene Features** zum Installieren eines eigenständigen Machine Learning-Servers, der außerhalb von SQL Server ausgeführt wird. Dieses Feature heißt **Machine Learning Server (eigenständig)** und umfasst R und Python. 
@@ -226,7 +226,7 @@ Im Rahmen des Setups wird keine integrierte Entwicklungsumgebung installiert. We
 R-Entwickler können mit einigen einfachen Beispielen loslegen und die Grundlagen der Funktionen von R unter SQL Server kennenlernen. Informationen zu den nächsten Schritten finden Sie unter den folgenden Links:
 
 + [Schnellstart: Ausführen von R in T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/r-taxi-classification-introduction.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Python-Entwickler können in den folgenden Tutorials erfahren, wie Python mit SQL Server verwendet werden kann:

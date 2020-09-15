@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5aa8659b57349efb7378209006bbada148206bcb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04e883861bfd14d5a5b69a080e1ed41bfeccd147
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735124"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180294"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Aufrufen der Java-Runtime in SQL Server-Spracherweiterungen
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 [SQL Server-Spracherweiterungen](../language-extensions-overview.md) verwenden die gespeicherte Systemprozedur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) als Schnittstelle zum Aufrufen der Java-Runtime. 
 

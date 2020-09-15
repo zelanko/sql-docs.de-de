@@ -11,15 +11,15 @@ ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ac7bbbb10d736b68d3e9930fafd7ae6e50f739f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28cbd4f91992ceb98d8c983099e0bbb0bed56971
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85671028"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178721"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>R-Turorials für SQL Machine Learning
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In diesem Artikel werden die R-Tutorials und -Schnellstarts für [Machine Learning Services in SQL Server](../sql-server-machine-learning-services.md) und in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) beschrieben.
@@ -44,7 +44,7 @@ In diesem Artikel werden die Python-Tutorials und -Schnellstarts für [Machine L
 | [Vorhersagen für einen Skiverleih mit Entscheidungsstruktur](r-predictive-model-introduction.md) | Verwenden Sie R und ein Entscheidungsstrukturmodell, um die Anzahl zukünftiger Skivermietungen vorherzusagen. Bereiten Sie mithilfe von Notebooks in Azure Data Studio Daten vor und trainieren Sie das Modell, und verwenden Sie T-SQL für die Modellimplementierung. |
 | [Kategorisierung von Kunden mit K-Means-Clustering](r-clustering-model-introduction.md) | Verwenden Sie R, um ein K-Means-Clusteringmodell zum Kategorisieren von Kunden zu entwickeln und bereitzustellen. Bereiten Sie mithilfe von Notebooks in Azure Data Studio Daten vor und trainieren Sie das Modell, und verwenden Sie T-SQL für die Modellimplementierung. |
 | [Datenbankinterne R-Analysen für Data Scientists](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Dieses Tutorial richtet sich an R-Entwickler ohne Vorkenntnisse in SQL-Machine-Learning und erläutert, wie allgemeine Data-Science-Aufgaben in SQL ausgeführt werden. Zudem erfahren Sie, wie Sie Daten laden und visualisieren, ein Modell trainieren sowie in einer Datenbank speichern und das Modell für Predictive Analytics verwenden. |
-| [Datenbankinterne R-Analysen für SQL-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md) | In diesem Tutorial erfahren Sie, wie Sie nur mithilfe von SQL-Tools eine vollständige R-Lösung erstellen. Konzentriert sich auf das Verschieben einer Lösung in die Produktionsumgebung. Zudem wird erläutert, wie Sie R-Code in einer gespeicherten Prozedur umschließen, ein R-Modell in einer Datenbank speichern und zu Vorhersagezwecken parametrisierte Aufrufe des R-Modells durchführen. |
+| [Datenbankinterne R-Analysen für SQL-Entwickler](../tutorials/r-taxi-classification-introduction.md) | In diesem Tutorial erfahren Sie, wie Sie nur mithilfe von SQL-Tools eine vollständige R-Lösung erstellen. Konzentriert sich auf das Verschieben einer Lösung in die Produktionsumgebung. Zudem wird erläutert, wie Sie R-Code in einer gespeicherten Prozedur umschließen, ein R-Modell in einer Datenbank speichern und zu Vorhersagezwecken parametrisierte Aufrufe des R-Modells durchführen. |
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 | Lernprogramm | BESCHREIBUNG |

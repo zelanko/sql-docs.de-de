@@ -9,15 +9,15 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: defbd4fc4fe0872b84f1816ae93bc12d9ad0ded3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 75d5e4cc3892ed2fd33392dc413b55936eac191d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757152"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179689"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>Synchronisierung von R-Paketen für SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 Die Version von RevoScaleR in SQL Server 2017 bietet die Möglichkeit, Sammlungen von R-Paketen zwischen dem Dateisystem und der Instanz und Datenbank, in der die Pakete verwendet werden, zu synchronisieren.
 

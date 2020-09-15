@@ -9,16 +9,16 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 8cbfbe14eba45d5bb82b0741fb2ccfa809001038
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3cf6afe4f99e7a728368f3454cc125998d806fa
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885963"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178667"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installieren von SQL Server Machine Learning Services (Python und R) unter Windows
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 Erfahren Sie, wie Sie SQL Server-Machine Learning Services unter Windows installieren. Sie können Machine Learning Services verwenden, um Python- und R-Skripts in einer Datenbank auszuführen.
 
@@ -369,4 +369,4 @@ Python-Entwickler können in den folgenden Tutorials erfahren, wie Python mit SQ
 R-Entwickler können mit einigen einfachen Beispielen loslegen und die Grundlagen der Funktionen von R unter SQL Server kennenlernen. Informationen zu den nächsten Schritten finden Sie unter den folgenden Links:
 
 + [Schnellstart: Ausführen von R in T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/r-taxi-classification-introduction.md)

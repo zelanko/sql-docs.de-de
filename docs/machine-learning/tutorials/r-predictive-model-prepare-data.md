@@ -11,15 +11,15 @@ ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e0c679ce4a146065223123e41cb2935e7d33ad71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0be451ea14a6eec98872b3c21b16c5065d02f85f
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784079"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178727"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: Vorbereiten von Daten für das Training eines Vorhersagemodells in R mit SQL Machine Learning
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In Teil 2 dieser vierteiligen Tutorialreihe bereiten Sie Daten aus einer Datenbank mithilfe von R vor. Später in dieser Reihe verwenden Sie diese Daten zum Trainieren und Bereitstellen eines Vorhersagemodells in R mit SQL Server Machine Learning Services oder in Big Data-Clustern.

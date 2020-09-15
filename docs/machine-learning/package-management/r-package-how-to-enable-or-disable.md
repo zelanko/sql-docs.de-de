@@ -9,15 +9,15 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19fe9aaaa29f4b9d3e4454aa131e0ed6c261b557
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757144"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178922"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Aktivieren oder Deaktivieren der Remoteverwaltung von R-Paketen für SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
 In diesem Artikel wird beschrieben, wie Sie die Remoteverwaltung von R-Paketen auf einer Clientarbeitsstation oder in einer anderen Machine Learning Server-Instanz aktivieren. Nachdem die Paketverwaltungsfunktion in SQL Server aktiviert wurde, können Sie auf einem Client mit RevoScaleR-Befehlen Pakete in SQL Server installieren.
 

@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7a8162132f884c1bda7ea673eedbbceffa604e44
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812632"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362510"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Lokale Überwachung für SQL Server-Nutzungs- und -Diagnosedatensammlung (CEIP)
 
@@ -78,12 +78,12 @@ Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in 
   >[!NOTE] 
   >Konfigurieren Sie den Verzeichnispfad für die lokale Überwachung außerhalb des SQL Server-Installationspfads, um zu vermeiden, dass die Überwachungsfunktionen und das Patchen zu potenziellen Problemen mit SQL Server führen.
 
-  ||Entwurfsentscheidung|Empfehlung|  
-  |------|-----------------|----------|  
-  |![Kontrollkästchen](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Speicherplatzverfügbarkeit |Planen Sie für mittlere Arbeitsauslastungen mit ungefähr 10 Datenbanken ca. 2 MB an Speicherplatz pro Datenbank und Instanz ein.|  
-|![Kontrollkästchen](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate Verzeichnisse | Erstellen sie für jede Instanz ein Verzeichnis. Verwenden Sie z. B. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* für eine SQL Server-Instanz namens `MSSQLSERVER`. Dies vereinfacht die Dateiverwaltung.
-|![Kontrollkästchen](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate Ordner |Verwenden Sie für jeden Dienst einen bestimmten Ordner. Verwenden Sie z. B. für einen angegebenen Instanznamen einen Ordner für die Datenbank-Engine. Wenn eine Instanz von Analysis Services denselben Instanznamen verwendet, erstellen Sie einen separaten Ordner für Analysis Services. Wenn sowohl Datenbank-Engine- als auch Analysis Services-Instanzen für denselben Ordner konfiguriert sind, werden alle Daten von der lokalen Überwachung für beide Instanzen in dieselbe Protokolldatei geschrieben.| 
-|![Kontrollkästchen](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Gewähren von Berechtigungen für das Anmeldekonto des SQL Server-CEIP-Diensts|Aktivieren Sie die Zugriffsberechtigungen **Ordnerinhalt auflisten**, **Lesen** und **Schreiben** für das Anmeldekonto des SQL Server-CEIP-Diensts.|
+|Entwurfsentscheidung|Empfehlung|  
+|-----------------|----------|  
+|Speicherplatzverfügbarkeit |Planen Sie für mittlere Arbeitsauslastungen mit ungefähr 10 Datenbanken ca. 2 MB an Speicherplatz pro Datenbank und Instanz ein.|  
+|Separate Verzeichnisse | Erstellen sie für jede Instanz ein Verzeichnis. Verwenden Sie z. B. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* für eine SQL Server-Instanz namens `MSSQLSERVER`. Dies vereinfacht die Dateiverwaltung.
+|Separate Ordner |Verwenden Sie für jeden Dienst einen bestimmten Ordner. Verwenden Sie z. B. für einen angegebenen Instanznamen einen Ordner für die Datenbank-Engine. Wenn eine Instanz von Analysis Services denselben Instanznamen verwendet, erstellen Sie einen separaten Ordner für Analysis Services. Wenn sowohl Datenbank-Engine- als auch Analysis Services-Instanzen für denselben Ordner konfiguriert sind, werden alle Daten von der lokalen Überwachung für beide Instanzen in dieselbe Protokolldatei geschrieben.| 
+|Gewähren von Berechtigungen für das Anmeldekonto des SQL Server-CEIP-Diensts|Aktivieren Sie die Zugriffsberechtigungen **Ordnerinhalt auflisten**, **Lesen** und **Schreiben** für das Anmeldekonto des SQL Server-CEIP-Diensts.|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>Gewähren von Berechtigungen für das Anmeldekonto des SQL Server-CEIP-Diensts
@@ -143,7 +143,7 @@ Nachdem Sie die Schritte zur Vorkonfiguration abgeschlossen haben, können Sie d
 
 1. Klicken Sie mit der rechten Maustaste auf **UserRequestedLocalAuditDirectory**, und wählen Sie *Ändern* aus. 
 
-1. Geben Sie den Pfad für die lokale Überwachung ein, um diese zu aktivieren. Beispiel: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* .
+1. Geben Sie den Pfad für die lokale Überwachung ein, um diese zu aktivieren. Beispiel: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*.
  
     Um die lokale Überwachung zu deaktivieren, löschen Sie den Wert in **UserRequestedLocalAuditDirectory**.
 
@@ -155,8 +155,8 @@ Das SQL Server-CEIP sollte die Einstellung für die lokale Überwachung sofort e
 
 1. Navigieren Sie zu dem entsprechenden Dienst. 
 
-    - Für die Datenbank-Engine verwenden Sie **SQL Server CEIP-Dienst (*Name-Ihrer-Instanz*)** .     
-    - Verwenden Sie für Analysis Services **SQL Server Analysis Services CEIP (*Name Ihrer Instanz*)** .
+    - Für die Datenbank-Engine verwenden Sie **SQL Server CEIP-Dienst (*Name-Ihrer-Instanz*)**.     
+    - Verwenden Sie für Analysis Services **SQL Server Analysis Services CEIP (*Name Ihrer Instanz*)**.
     - Für Integration Services: 
         - Für SQL 2016 verwenden Sie *SQL Server Integration Services CEIP-Dienst 13.0*.
         - Für SQL 2017 verwenden Sie *SQL Server Integration Services CEIP-Dienst 14.0*.
@@ -212,9 +212,9 @@ Die nachfolgend aufgeführten Spalten stellen die Reihenfolge für die Dateiausg
 |clientVersion | SQL Server-Instanzversion | 13.0.2161.3 ((SQL16_RTM_QFE-CU).160907-1223) 
 |operatingSystem | Betriebssystemversion, auf der die SQL Server-Instanz installiert ist | Microsoft Windows Server 2012 R2 Datacenter 
 |querySetVersion | Version einer Gruppe von Abfragedefinitionen | 1.0.0.0 
-|traceName | Kategorien von Ablaufverfolgungen: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
+|traceName | Ablaufverfolgungskategorien: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Ein Bezeichner der Abfrage | SQLServerProperties.002 
-|data   | Die Ausgabe der für queryIdentifier erfassten Informationen als Ausgabe einer T-SQL-Abfrage, XE-Sitzung oder der Anwendung |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep 7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
+|data   | Die Ausgabe der für queryIdentifier erfassten Informationen als Ausgabe einer T-SQL-Abfrage, XE-Sitzung oder der Anwendung |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-Bit) unter Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
 |Abfrage| Die auf queryIdentifier bezogene T-SQL-Abfragedefinition, die Daten erzeugt, falls zutreffend.        Diese Komponente wird nicht vom SQL Server CEIP-Dienst hochgeladen. Sie ist in der lokalen Überwachung nur als Referenz für Kunden enthalten.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
 |queryTimeInTicks | Die Dauer zum Ausführen der Abfrage mit der folgenden Ablaufverfolgungskategorie: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
@@ -316,7 +316,7 @@ Es folgt ein Auszug aus einer JSON-Dateiausgabe der lokalen Überwachung.
 **Wie lesen DBAs die Protokolldateien der lokalen Überwachung?**
 Diese Protokolldateien werden im JSON-Format geschrieben. Jede Zeile ist ein JSON-Objekt, das Nutzungs-/Diagnosedaten darstellt, die zu Microsoft hochgeladen werden. Die Feldnamen sollten selbsterklärend sein.
 
-**Was geschieht, wenn der DBA die Sammlung von Nutzungs- und Diagnosedaten deaktiviert?**
+**Was geschieht, wenn der DBA die Nutzungs- und Diagnosedatensammlung deaktiviert?**
 Es wird keine Datei für die lokale Überwachung geschrieben.
 
 **Was geschieht, wenn keine Verbindung mit dem Internet besteht bzw. der Computer sich hinter der Firewall befindet?**
@@ -379,5 +379,5 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>Weitere Informationen
-[Lokale Überwachung für die Sammlung von SSMS-Nutzungs- und -Diagnosedaten](../ssms/sql-server-management-studio-telemetry-ssms.md)
+## <a name="see-also"></a>Weitere Informationen:
+[Lokale Überwachung für SSMS-Nutzungs- und -Diagnosedatensammlung](../ssms/sql-server-management-studio-telemetry-ssms.md)

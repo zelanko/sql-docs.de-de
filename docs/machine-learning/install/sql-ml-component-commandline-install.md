@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b3c3d469cb016a562f069473923f470ce750dd5e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8c496778731a972603019450be15b3ea72d4c415
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883903"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179799"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installieren von R- und Python-Komponenten für SQL Server für maschinelles Lernen über die Befehlszeile
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Dieser Artikel enthält Anweisungen zum Installieren von SQL Server-Komponenten für maschinelles Lernen über eine Befehlszeile:
 
@@ -216,4 +216,4 @@ Python-Entwickler können in den folgenden Tutorials erfahren, wie Python mit SQ
 R-Entwickler können mit einigen einfachen Beispielen loslegen und die Grundlagen der Funktionen von R unter SQL Server kennenlernen. Informationen zu den nächsten Schritten finden Sie unter den folgenden Links:
 
 + [Schnellstart: Ausführen von R in T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/r-taxi-classification-introduction.md)

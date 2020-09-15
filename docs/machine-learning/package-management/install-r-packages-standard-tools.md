@@ -9,16 +9,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: a1a135588c9775758008b5db9ffca38e6ff3d041
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd9b0dde6a7cc032b31fc2d8c45a06f616e3ed58
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723951"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179092"
 ---
 # <a name="install-packages-with-r-tools"></a>Installieren von Paketen mit R-Tools
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
 In diesem Artikel erfahren Sie, wie Sie mit R-Standardtools neue R-Pakete in einer Instanz von SQL Server Machine Learning Services oder SQL Server R Services installieren können. Sie können Pakete in einer SQL Server-Instanz installieren, die über eine Internetverbindung verfügt, sowie in einer vom Internet isolierten Instanz.
 

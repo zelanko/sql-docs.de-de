@@ -1,6 +1,6 @@
 ---
 title: Python-Paket für revoscalepy
-description: revoscalepy ist ein Python-Paket von Microsoft, das verteiltes Computing, Remotecomputekontexte und hochleistungsfähige Data-Science-Algorithmen unterstützt. Es ist in SQL Server Machine Learning Services enthalten.
+description: revoscalepy ist ein Python-Paket von Microsoft, das verteiltes Computing, Remotecomputekontexte und hochleistungsfähige Data-Science-Algorithmen unterstützt.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ae5d05658d94f6967049d9b6857d407286661f3f
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: c5932a335dc1789256932f327ba9dab58c6afaf7
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406183"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178609"
 ---
 # <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy (Python-Paket in SQL Server Machine Learning Services)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 **revoscalepy** ist ein Python-Paket von Microsoft, das verteiltes Computing, Remotecomputekontexte und hochleistungsfähige Data-Science-Algorithmen unterstützt. Es ist in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) enthalten.
 
@@ -105,7 +105,7 @@ Für eine lokale Ausführung führen Sie in der Regel ein Python-Skript über di
 
 Wenn Sie bereit sind, ein Python-Skript in einer gespeicherten Prozedur, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), zu kapseln, empfiehlt es sich, den Code als eine einzelne Funktion mit klar definierte Eingaben und Ausgaben neu zu schreiben. 
 
-Eingaben und Ausgaben müssen **Pandas**-Datenrahmen sein. Wenn dies der Fall ist, können Sie die gespeicherte Prozedur von jedem Client aus abrufen, der T-SQL unterstützt, SQL-Abfragen problemlos als Eingaben übergeben und die Ergebnisse in SQL-Tabellen speichern. Ein Beispiel finden Sie unter [Informationen zur datenbankinternen Python-Analyse für SQL-Entwickler](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Eingaben und Ausgaben müssen **Pandas**-Datenrahmen sein. Wenn dies der Fall ist, können Sie die gespeicherte Prozedur von jedem Client aus abrufen, der T-SQL unterstützt, SQL-Abfragen problemlos als Eingaben übergeben und die Ergebnisse in SQL-Tabellen speichern. Ein Beispiel finden Sie unter [Informationen zur datenbankinternen Python-Analyse für SQL-Entwickler](../tutorials/python-taxi-classification-introduction.md).
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>Verwenden von revoscalepy mit microsoftml
 

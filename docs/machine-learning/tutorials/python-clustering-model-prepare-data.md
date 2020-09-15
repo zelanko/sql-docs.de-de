@@ -12,15 +12,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 436546f7b84d561a3605912a7af55a0a1ad19315
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e6265a25a4a218e15e39c1f6a7163dbb6a958f32
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730501"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173423"
 ---
 # <a name="python-tutorial-prepare-data-to-categorize-customers-with-sql-machine-learning"></a>Python-Tutorial: Vorbereiten von Daten zum Kategorisieren von Kunden mithilfe von SQL Machine Learning
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Im zweiten Teil dieser vierteiligen Tutorialreihe stellen Sie Daten aus einer Datenbank mithilfe von Python wieder her und bereiten diese vor. Diese Daten verwenden Sie in einem späteren Teil dieser Reihe zum Trainieren und Bereitstellen eines Clustermodells in Python mit SQL Server Machine Learning Services oder in Big Data-Clustern.

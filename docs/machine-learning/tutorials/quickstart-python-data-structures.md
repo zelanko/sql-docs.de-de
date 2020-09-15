@@ -11,15 +11,15 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ed35820d38ea31ea0b7f8bae9b0a440398d55674
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41feb1db8b5ad14469dbf544e9cdbe083e2e6088
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784095"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178525"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-with-sql-machine-learning"></a>Schnellstart: Datenstrukturen und -objekte in Python mit SQL Machine Learning
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen und Datentypen bei Verwendung von Python [in SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) verwenden können. Sie erhalten Informationen zum Verschieben von Daten zwischen Python und SQL Server und zu Fehlern, die in diesem Zusammenhang häufig auftreten.

@@ -11,15 +11,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2327b6644725c77949b49c661bc7d02d13c4e47d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 331e7b56087d75222d29c3bdabccbd8717b40171
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772359"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178508"
 ---
 # <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>Schnellstart: Ausführen einfacher R-Skripts mit SQL Machine Learning
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In diesem Schnellstart führen Sie einige einfache R-Skripts mithilfe von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) aus. Sie erfahren, wie Sie die gespeicherte Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) verwenden, um das Skript in einer SQL Server-Instanz auszuführen.
@@ -109,7 +109,7 @@ GO
 
 Folgende Eingaben sind für die gespeicherte Prozedur `sp_execute_external_script` möglich:
 
-| | |
+| Eingabe | BESCHREIBUNG |
 |-|-|
 | @language | definiert die aufzurufende Spracherweiterung (hier R) |
 | @script | definiert die Befehle, die an die R-Runtime übergeben werden Ihr gesamtes R-Skript muss als Unicode-Text in dieses Argument eingeschlossen werden. Sie können den Text auch einer Variablen des Typs **nvarchar** hinzufügen und die Variable anschließend aufrufen. |

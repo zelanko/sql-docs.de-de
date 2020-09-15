@@ -11,15 +11,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a056d73ae28d822c12752ac60f31df5022acf28b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e5700e5b0bab7df8506725c2522c28479155fdab
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772366"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178471"
 ---
 # <a name="quickstart-r-functions-with-sql-machine-learning"></a>Schnellstart: R-Funktionen mit SQL Machine Learning
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In diesem Schnellstart wird beschrieben, wie Sie mathematische Funktionen und Hilfsfunktionen in R mit [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) verwenden. Die Implementierung von statistischen Funktionen mit T-SQL ist oft kompliziert, kann aber in R mit nur wenigen Codezeilen durchgeführt werden.

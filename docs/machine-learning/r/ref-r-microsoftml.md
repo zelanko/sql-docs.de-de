@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28f043ea0005f1020581218c358aed559285a5a4
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: d7b48e547d402e15404e39e849c262320c5ee59e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406173"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179945"
 ---
 # <a name="microsoftml-r-package-in-sql-server-machine-learning-services"></a>MicrosoftML (R-Paket in Machine Learning Services in SQL Server)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 **MicrosoftML** ist ein R-Paket von Microsoft, das leistungsstarke Machine-Learning-Algorithmen bereitstellt. Sie enthält Funktionen für Training, Transformationen, Bewertung, Text- und Bildanalyse sowie Featureextraktion zum Ableiten von Werten aus vorhandenen Daten. Das Paket ist in [Machine Learning Services in SQL Server](../sql-server-machine-learning-services.md) und in [SQL Server 2016 R Services](sql-server-r-services.md) enthalten und unterstützt Hochleistung für Big Data. Dafür wird Verarbeitung mit mehreren Kernen und schnelles Datenstreaming verwendet. MicrosoftML enthält auch zahlreiche Transformationen für die Text- und Bildverarbeitung.
 
@@ -152,6 +152,6 @@ logisticRegression(args);
 
 + [R-Tutorials](../tutorials/sql-server-r-tutorials.md)
 + [Informationen zur Verwendung von Computekontexten](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [R für SQL-Entwickler: Trainieren und Operationalisieren eines Modells](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [R für SQL-Entwickler: Trainieren und Operationalisieren eines Modells](../tutorials/r-taxi-classification-introduction.md)
 + [Microsoft-Produktbeispiele auf GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 + [R-Referenz (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a42d3203455d4273410b9b216c19e7a9d1da4e3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 95390a1eb5418a43883a9605c7498e6a86876e7e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896379"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178897"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Einrichten eines Data Science-Clients für die Entwicklung in R auf SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Die Integration von R ist ab SQL Server 2016 verfügbar, wenn Sie die R-Sprachoption bei der Installation von [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) oder [SQL Server-Machine Learning Services (datenbankintern)](../install/sql-machine-learning-services-windows-install.md) einbeziehen. 
 
@@ -38,7 +38,7 @@ Unabhängig davon, ob Sie ein R-Entwickler sind, der zum ersten Mal mit SQL arbe
 
 Für einfache R-Entwicklungsszenarien können Sie die ausführbare RGUI-Datei verwenden, die im Bundle in der Basis-R-Distribution in MRO und SQL Server enthalten ist. In diesem Artikel wird erläutert, wie Sie RGUI sowohl für lokale als auch Remote-R-Sitzungen verwenden. Um die Produktivität zu verbessern, sollten Sie eine IDE mit vollem Funktionsumfang verwenden, wie z. B. [RStudio oder Visual Studio](#install-ide).
 
-Bei SSMS handelt es sich um einen separaten Download, der zum Erstellen und Ausführen von gespeicherten Prozeduren auf SQL Server nützlich ist, einschließlich derjenigen, die R-Code enthalten. Sie können nahezu jeden R-Code, den Sie in einer Entwicklungsumgebung schreiben, in eine gespeicherte Prozedur einbetten. Informationen zu [SSMS und eingebettetem R-Code](../tutorials/sqldev-in-database-r-for-sql-developers.md) finden Sie in weiteren Tutorials.
+Bei SSMS handelt es sich um einen separaten Download, der zum Erstellen und Ausführen von gespeicherten Prozeduren auf SQL Server nützlich ist, einschließlich derjenigen, die R-Code enthalten. Sie können nahezu jeden R-Code, den Sie in einer Entwicklungsumgebung schreiben, in eine gespeicherte Prozedur einbetten. Informationen zu [SSMS und eingebettetem R-Code](../tutorials/r-taxi-classification-introduction.md) finden Sie in weiteren Tutorials.
 
 ## <a name="1---install-r-packages"></a>1 – Installieren von R-Paketen
 

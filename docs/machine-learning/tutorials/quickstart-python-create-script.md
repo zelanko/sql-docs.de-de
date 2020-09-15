@@ -11,15 +11,15 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 111230ebcd1108cc6fc99830d186294534f13a05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adcd1b0fba892e904a3866235e7a59e3d1774f4f
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784117"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178537"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>Schnellstart: Ausführen einfacher Python-Skripts mit SQL Machine Learning
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In diesem Schnellstart führen Sie einige einfache Python-Skripts mithilfe von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) aus. Sie erfahren, wie Sie die gespeicherte Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) verwenden, um das Skript in einer SQL Server-Instanz auszuführen.
@@ -103,7 +103,7 @@ GO
 
 Folgende Eingaben sind für die gespeicherte Prozedur `sp_execute_external_script` möglich:
 
-| | |
+| Eingabe | BESCHREIBUNG |
 |-|-|
 | @language | definiert die aufzurufende Spracherweiterung (hier Python) |
 | @script | In diesem Argument werden die Befehle definiert, die an die Python-Runtime übergeben werden. Ihr gesamtes Python-Skript muss von diesem Argument als Unicode-Text umschlossen sein. Sie können den Text auch einer Variablen des Typs **nvarchar** hinzufügen und die Variable anschließend aufrufen. |
