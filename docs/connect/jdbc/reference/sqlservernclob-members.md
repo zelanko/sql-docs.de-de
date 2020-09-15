@@ -1,4 +1,5 @@
 ---
+description: SQLServerNClob-Elemente
 title: SQLServerNClob-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 303742b8e7b7bf8221565e09cf23d2e18cdca8de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3e23a4a5e9a4cb2d2c2a7ecd93db8615e814652c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354456"
 ---
 # <a name="sqlservernclob-members"></a>SQLServerNClob-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "67970948"
   In den folgenden Tabellen sind die Elemente aufgeführt, die von der [SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md)-Klasse verfügbar gemacht werden.  
   
 ## <a name="constructors"></a>Konstruktoren  
- Keine.  
+ Keine  
   
 ## <a name="fields"></a>Felder  
  Keine.  
