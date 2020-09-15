@@ -1,4 +1,5 @@
 ---
+description: Sichern von freigegebenen Datasetelementen
 title: Sichern von freigegebenen Datasetelementen | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80cfeba2128e82c6254ba962e91c6c51461ff955
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373216"
 ---
 # <a name="secure-shared-dataset-items"></a>Sichern von freigegebenen Datasetelementen
   Auf einem Berichtsserver können freigegebene Datasetelemente von mehreren Berichten verwendet werden. Sie können freigegebene Datasets sichern, um die Zugriffsebene der Benutzer zu steuern. Standardmäßig können nur Benutzer, die Mitglieder der integrierten Gruppe **Administratoren** sind, freigegebene Datasets anzeigen, Eigenschaften ändern, das Zwischenspeichern aktivieren, Cacheaktualisierungspläne erstellen und die Elemente löschen. Für alle anderen Benutzer müssen Rollenzuweisungen erstellt werden, die den Zugriff auf ein freigegebenes Dataset zulassen.  
@@ -39,9 +40,9 @@ ms.locfileid: "65570674"
   
 |Verwendete Aufgabe|Berechtigt zu folgender Aktion|Standardrollen, in denen der Task enthalten ist|  
 |----------------------|---------------------------------|-----------------------------------------|  
-|Berichte anzeigen|Anzeigen des freigegebenen Datasetelements in der Ordnerhierarchie. Ohne diesen Task ist das Element für Benutzer nicht sichtbar, und sie bemerken möglicherweise nicht, dass das Dataset verfügbar ist.|Browser<br /><br /> Inhalts-Manager<br /><br /> Berichts-Generator<br /><br /> Meine Berichte|  
+|Berichte anzeigen|Anzeigen des freigegebenen Datasetelements in der Ordnerhierarchie. Ohne diesen Task ist das Element für Benutzer nicht sichtbar, und sie bemerken möglicherweise nicht, dass das Dataset verfügbar ist.|Browser<br /><br /> Inhalts-Manager<br /><br /> Report Builder<br /><br /> Meine Berichte|  
 |Berichte verwalten|Anzeigen von Eigenschaften, die den Namen, eine Beschreibung und Verbindungsinformationen angeben. Dieser Task wird auch verwendet, um ein freigegebenes Datasetelement in der Ordnerhierarchie anzuzeigen. Wenn Sie diesen Task auswählen, können Sie den Task Berichte anzeigen auslassen.|Inhalts-Manager<br /><br /> Herausgeber<br /><br /> Meine Berichte|  
-|Berichte lesen|Anzeigen der Definition des freigegebenen Datasets.|Inhalts-Manager<br /><br /> Berichts-Generator|  
+|Berichte lesen|Anzeigen der Definition des freigegebenen Datasets.|Inhalts-Manager<br /><br /> Report Builder|  
 |Die Sicherheit für einzelne Elemente festlegen|Erstellen und Ändern von Rollenzuweisungen, die den Zugriff auf das freigegebene Dataset steuern. Dieser Task muss zusammen mit dem Task Berichte anzeigen oder Berichte verwalten verwendet werden. Andernfalls zeigt sie keine Wirkung, weil der Benutzer das Element nicht auswählen kann.|Inhalts-Manager|  
   
  Weitere Informationen finden Sie unter [Aufgaben auf Elementebene](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) und [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md).  

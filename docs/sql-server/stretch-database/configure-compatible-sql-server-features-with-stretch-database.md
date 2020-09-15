@@ -1,4 +1,5 @@
 ---
+description: Konfigurieren kompatibler SQL Server-Features mit Stretch Database
 title: Konfigurieren kompatibler SQL Server-Features
 ms.date: 03/14/2017
 ms.service: sql-server-stretch-database
@@ -8,22 +9,22 @@ ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d558dad38492bcd9ce2bad0eb00a887a2225de33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c1f4df1bd0df0eeb444b009574c4b1a7800d119
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373286"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Konfigurieren kompatibler SQL Server-Features mit Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
 Führen Sie einfache Schritte aus, um die folgenden SQL Server-Features für die Arbeit mit Stretch Database zu konfigurieren.
 -   Always On
 -   Always Encrypted
 -   TDE (Transparent Data Encryption)
--   Temporäre Tabellen
+-   Temporale Tabellen
 
 ## <a name="configure-always-on-with-stretch-database"></a>Konfigurieren von Always On mit Stretch Database
 Wenn Sie Always On mit Stretch Database verwenden, müssen Sie sicherstellen, dass der Datenbank-Hauptschlüssel auf den sekundären Replikaten verfügbar ist. Stretch Database verwendet den Datenbank-Hauptschlüssel zum Sichern der Anmeldeinformationen, die für die Verbindung mit der Azure-Remotedatenbank verwendet werden.

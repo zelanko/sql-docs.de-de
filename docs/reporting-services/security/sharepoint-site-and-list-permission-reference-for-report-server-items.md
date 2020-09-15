@@ -1,4 +1,5 @@
 ---
+description: Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente
 title: Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed7a08a8f109da6151ffba2efed9df4263f2db5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373366"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente
   Dieses Thema bietet eine Referenz zu den Berechtigungen in SharePoint, mit denen Sie für einen im integrierten SharePoint-Modus ausgeführten Berichtsserver Zugriff auf Berichtsservervorgänge gewähren können. Wenn Sie benutzerdefinierte Berechtigungsebenen erstellen, können Sie mithilfe dieses Themas die zu verwendenden Berechtigungen auswählen.  
@@ -34,11 +35,18 @@ ms.locfileid: "65570682"
 |Besucher|**B**|  
   
  Berechtigungen, die sich nicht auf Berichtsserver auswirken, werden nicht aufgelistet. Personalisierungsberechtigungen sind von diesem Artikel ausgeschlossen. Obwohl Sie Berichtsserverelemente in eine personalisierte Website einfügen können, werden Personalisierungsanforderungen oder -vorgänge nicht direkt vom Berichtsserver verarbeitet.  
-  
-||  
-|-|  
-| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus &#124; SharePoint 2010 and SharePoint 2013.|  
-  
+
+[!INCLUDE[applies](../../includes/applies-md.md)]
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus  
+    :::column-end:::
+    :::column:::
+        SharePoint 2010 und SharePoint 2013  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="list-permissions"></a>Listenberechtigungen  
  Mit den Berechtigungen, die Sie für die Bibliothek festlegen, die Berichtsserverelemente enthält, legen Sie fest, wie Benutzer auf diese Elemente zugreifen.  
   
@@ -66,7 +74,7 @@ ms.locfileid: "65570682"
 |Seiten hinzufügen und anpassen|HTML- oder Webpartseiten hinzufügen, ändern oder löschen, und die Website in einem mit [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]kompatiblen Editor bearbeiten.|X|||Einen Berichts-Viewer-Webpart hinzufügen oder entfernen.|  
 |Benutzerinformationen durchsuchen|Informationen über die Benutzer der Website anzeigen.|X|X|X|Suchen nach Berichten und anderen Elementen über verschiedene Sites, Bibliotheken und Ordner hinweg. Veröffentlichen von Berichten und anderen Elementen in einer Bibliothek.|  
 |Berechtigungen auflisten|Berechtigungen für die Website, die Liste, den Ordner, das Dokument oder das Listenelement auflisten.|X|||Berechtigungen für alle Berichtsserverelemente lesen. Einen Bericht mit Durchklicken anzeigen, in dem ein Berichtsmodell mit Sicherheitseinstellungen für Modellelemente verwendet wird.|  
-|Benachrichtigungen verwalten|Benachrichtigungen für alle Benutzer der Website verwalten.|X|||Abonnements auf einer Website erstellen, ändern und löschen.|  
+|Verwalten von Warnungen|Benachrichtigungen für alle Benutzer der Website verwalten.|X|||Abonnements auf einer Website erstellen, ändern und löschen.|  
 |Remoteschnittstellen verwenden|Mit SOAP-, Web DAV- oder SharePoint Designer-Schnittstellen auf die Website zugreifen.|X|X|X|Wird zum Aufrufen des URL-Proxy-Endpunktes für den Berichtsserver verwendet.|  
 |Öffnen|Eine Website, eine Liste oder einen Ordner öffnen und auf im Container enthaltene Elemente zugreifen.|X|X|X|Zeitpläne und Elementeigenschaften lesen.|  
   

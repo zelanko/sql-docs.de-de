@@ -1,4 +1,5 @@
 ---
+description: Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website
 title: Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2dfaece778331dd84a3d24283d11c5721180ef2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373356"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] stellt integrierte Sicherheitsfunktionen bereit, mit denen Sie Zugriff von SharePoint-Websites und -Bibliotheken auf Berichtsserverelemente ermöglichen können. Wenn Sie Benutzern bereits Berechtigungen zugewiesen haben, verfügen diese Benutzer sofort, nachdem Sie die Integrationseinstellungen zwischen [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] und einem Berichtsserver konfiguriert haben, über Zugriff auf Berichtsserverelemente und -vorgänge. Mit den vorhandenen Berechtigungen können Sie Berichtsdefinitionen und andere Dokumente hochladen, Berichte anzeigen, Abonnements erstellen und Elemente verwalten.  
@@ -56,7 +57,7 @@ ms.locfileid: "65580037"
  Ein Serveradministrator oder Administrator einer Websitesammlung kann bestimmte Optionen festlegen, um zu bestimmen, ob andere Besitzer Berechtigungen festlegen können. Je nach der Ihnen zugewiesenen Berechtigungsebene können Sie möglicherweise keine SharePoint-Gruppen oder Berechtigungsebenen erstellen oder anpassen.  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>Verwenden vordefinierter SharePoint-Gruppen und Berechtigungsebenen  
- In der Produktdokumentation zu [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] wird empfohlen, SharePoint-Standardgruppen zu verwenden (d. h. *Besitzer* von **Websitename**, *Member* von **Websitename** und *Besucher* von **Websitename**) und Berechtigungen auf der Websiteebene zuzuweisen. Den meisten Benutzern sollten Sie Berechtigungen als Member der Gruppen *Besucher* von **Websitename** oder *Member* von **Websitename** zuweisen. Berechtigungen für die übergeordnete Website werden von der gesamten Websitehierarchie geerbt. Die Vererbung der Berechtigungen können Sie für bestimmte Elemente unterbrechen, für die zusätzliche Einschränkungen erforderlich sind.  
+ In der Produktdokumentation zu [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] wird empfohlen, SharePoint-Standardgruppen zu verwenden (d. h. **Besitzer** von *Websitename*, **Member** von *Websitename* und **Besucher** von *Websitename*) und Berechtigungen auf der Websiteebene zuzuweisen. Den meisten Benutzern sollten Sie Berechtigungen als Member der Gruppen **Besucher** von *Websitename* oder **Member** von *Websitename* zuweisen. Berechtigungen für die übergeordnete Website werden von der gesamten Websitehierarchie geerbt. Die Vererbung der Berechtigungen können Sie für bestimmte Elemente unterbrechen, für die zusätzliche Einschränkungen erforderlich sind.  
   
  Den aufgeführten SharePoint-Gruppen sind die folgenden vordefinierten Berechtigungsebenen zugeordnet:  
   
@@ -73,13 +74,13 @@ ms.locfileid: "65580037"
  Die integrierten Sicherheitsfunktionen können von den SharePoint-Gruppen nur verwendet werden, wenn Sie diesen Windows-Benutzer- oder Gruppenkonten zugewiesen haben. Mit Ausnahme des Serveradministrators und des Besitzers der Portalwebsite, die beim Installieren der Software automatisch Zugriffsberechtigungen für [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] erhalten, müssen allen Benutzern Berichtigungen für den Serverzugriff gewährt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Use Built-in Security in Windows SharePoint Services for Report Server Items (Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente)](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Erläutert, wie mit den vordefinierten SharePoint-Gruppen und Berechtigungsebenen auf Berichtsserverelemente zugegriffen werden kann.  
   
  [SharePoint Site and List Permission Reference for Report Server Items (Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente)](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  Bietet eine Referenz zu allen SharePoint-Produktberechtigungen, die es erlauben, auf Berichtsservervorgänge zuzugreifen.  
   
- [Set Permissions for Report Server Operations in a SharePoint Web Application (Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung)](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  Beschreibt die Berechtigungsanforderungen für die Ad-hoc-Berichterstellung und enthält empfohlene Vorgehensweisen für die Verfügbarmachung von Funktionen.  
   
  [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  

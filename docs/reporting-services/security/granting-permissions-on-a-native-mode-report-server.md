@@ -1,4 +1,5 @@
 ---
+description: Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus
 title: Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus | Microsoft-Dokumentation
 ms.date: 05/14/2019
 ms.prod: reporting-services
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be6b0825244dee9f80f88a1b211eee5881d2a96a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 82fba1144cdb970d97b8aac4938fd7c3e8fe0980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373296"
 ---
 # <a name="grant-permissions-on-a-native-mode-report-server"></a>Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bestimmt mithilfe der rollenbasierten Autorisierung und eines Authentifizierungssubsystems, wer Vorgänge ausführen und auf Elemente auf einem Berichtsserver zugreifen kann. Die rollenbasierte Autorisierung teilt die Aktionen, die ein Benutzer oder eine Gruppe ausführen kann, in Rollen ein. Die Authentifizierung basiert auf der integrierten Windows-Authentifizierung oder auf einem von Ihnen bereitgestellten benutzerdefinierten Authentifizierungsmodul. Bei beiden Authentifizierungstypen können vordefinierte oder benutzerdefinierte Rollen verwendet werden.
@@ -68,7 +69,7 @@ ms.locfileid: "77147369"
 |Management Studio: zum Anzeigen, Ändern, Erstellen und Löschen von Rollendefinitionen|[Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
 |Das Webportal: zum Zuweisen von Benutzern und Gruppen zu Rollen|[Gewähren von Benutzerzugriff auf einen Berichtsserver](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [Ändern oder Löschen einer Rollenzuweisung](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
  - [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md)  
  - [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
  - [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)  
