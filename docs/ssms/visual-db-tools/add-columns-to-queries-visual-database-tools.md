@@ -1,4 +1,5 @@
 ---
+description: Hinzufügen von Spalten zu Abfragen (Visual Database Tools)
 title: Hinzufügen von Spalten zu Abfragen
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 899f41988addb8488edf1ca51ab70d3971fbcfd1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9160ceb8b3fab33e7cc8c8068c418f4c2013bb79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370106"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Hinzufügen von Spalten zu Abfragen (Visual Database Tools)
 
@@ -36,7 +37,7 @@ Für alle Zwecke, für die Sie eine Spalte in einer Abfrage verwenden, können S
   
 -   Aktivieren Sie im **Diagrammbereich**das Kontrollkästchen neben der einzufügenden Spalte.  
   
-    Oder  
+    - oder -  
   
 -   Gehen Sie im **Kriterienbereich**zur ersten leeren Zeile des Datenblatts, klicken Sie in das Feld in der Spalte mit dem Namen **Spalte** , und wählen Sie in der Dropdownliste einen Spaltennamen aus.  
   

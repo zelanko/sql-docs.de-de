@@ -1,4 +1,5 @@
 ---
+description: Exportieren von Informationen zum registrierten Server (SQL Server Management Studio)
 title: Exportieren von Informationen zum registrierten Server
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 6137cc5760caec8017f2aeecc1cbb5dffb19e8a0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d770a7396f48aa11e00eb4f4663285f4cf6eef9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370306"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Exportieren von Informationen zum registrierten Server (SQL Server Management Studio)
 
@@ -51,7 +52,7 @@ In diesem Thema wird beschrieben, wie Sie Informationen zum registrierten Server
      In der Servergruppe werden nur die Servergruppen der Baumstruktur des aktuellen registrierten Servers angezeigt.  
   
      **Datei exportieren**  
-     Geben Sie den Namen der Exportdatei in das Textfeld ein, oder verwenden Sie die Schaltfläche zum Durchsuchen ( **...** ), um eine Exportdatei auf dem Clientcomputer zu suchen. Wenn Sie eine vorhandene Datei auswählen, werden die Daten der registrierten Server an die Datei angehängt. Verwenden Sie die Erweiterung .regsrvr. Wenn die Informationen zum registrierten Server für andere Benutzer oder einen anderen Computer verfügbar sein sollen, können Sie die Datei im Netzwerk speichern. Andere Benutzer können auf die Datei zugreifen und die Informationen zum registrierten Server vollständig oder teilweise importieren. Wenn Sie eine vorhandene Datei als Exportdatei auswählen, wird der Inhalt der Datei mit den Informationen zum registrierten Server überschrieben.  
+     Geben Sie den Namen der Exportdatei in das Textfeld ein, oder verwenden Sie die Schaltfläche zum Durchsuchen (**...**), um eine Exportdatei auf dem Clientcomputer zu suchen. Wenn Sie eine vorhandene Datei auswählen, werden die Daten der registrierten Server an die Datei angehängt. Verwenden Sie die Erweiterung .regsrvr. Wenn die Informationen zum registrierten Server für andere Benutzer oder einen anderen Computer verfügbar sein sollen, können Sie die Datei im Netzwerk speichern. Andere Benutzer können auf die Datei zugreifen und die Informationen zum registrierten Server vollständig oder teilweise importieren. Wenn Sie eine vorhandene Datei als Exportdatei auswählen, wird der Inhalt der Datei mit den Informationen zum registrierten Server überschrieben.  
   
      **Benutzernamen und Kennwörter nicht in die Exportdatei einschließen**  
      Schließen Sie Benutzernamen vom Export in die Datei aus.  

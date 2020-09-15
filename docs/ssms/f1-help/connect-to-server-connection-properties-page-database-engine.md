@@ -1,4 +1,5 @@
 ---
+description: Verbinden mit SQL Server-Datenbank-Engine (Eigenschaftenseite Verbindung)
 title: Verbinden mit SQL Server-Datenbank-Engine (Eigenschaftenseite Verbindung)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +14,19 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/14/2017
-ms.openlocfilehash: d1136d29ee8ee62648922f008042266a59632475
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: e5b01c75e099facc54c65ce5ef0d4c290ec79694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370846"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Verbinden mit SQL Server-Datenbank-Engine (Eigenschaftenseite Verbindung)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Auf dieser Registerkarte können Optionen für Verbindungen mit einer [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]-Instanz angezeigt oder angegeben werden, oder Sie können [!INCLUDE[ssDE](../../includes/ssde_md.md)] unter **Registrierte Server** registrieren. Die Felder**Verbinden** und **Optionen** werden nur beim Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde_md.md)]in diesem Dialogfeld angezeigt. Die Felder**Testen** und **Speichern** werden nur beim Registrieren von [!INCLUDE[ssDE](../../includes/ssde_md.md)]in diesem Dialogfeld angezeigt.  
   
-**Verbindung mit Datenbank herstellen**  
+**Herstellen einer Verbindung mit der Datenbank**  
 Wählen Sie eine Datenbank aus der Liste aus, zu der eine Verbindung hergestellt werden soll. Wenn Sie **<default>** auswählen, wird eine Verbindung zur Standarddatenbank des Servers hergestellt. Wenn Sie **<Browse server>** auswählen, können Sie den Server nach der Datenbank durchsuchen, mit der Sie eine Verbindung herstellen möchten.  
   
 Wenn Sie über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Verbindung mit einer Instanz der [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Datenbank-Engine herstellen, müssen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden und im Dialogfeld **Verbindung mit Server herstellen** auf der Registerkarte **Verbindungseigenschaften** eine Datenbank angeben. Das Kontrollkästchen **Verbindung verschlüsseln** muss aktiviert sein.  
@@ -44,7 +45,7 @@ Geben Sie an, wie lange (in Sekunden) versucht werden soll, eine Verbindung herz
 **Ausführungstimeout**  
 Geben Sie an, wie lange (in Sekunden) auf den Abschluss eines Tasks auf dem Server gewartet werden soll. Der Standardwert beträgt null Sekunden, d. h. es wird kein Timeout verwendet.  
   
-**Verschlüsseln der Verbindung**  
+**Verbindung verschlüsseln**  
 Erzwingt die Verschlüsselung der Verbindung.  
   
 **Benutzerdefinierte Farbe verwenden**  

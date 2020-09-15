@@ -1,4 +1,5 @@
 ---
+description: Detailbereich des Objekt-Explorers
 title: Detailbereich des Objekt-Explorers
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c3a13ad090b378e00ed43d0319100ec8e8a0638
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370786"
 ---
 # <a name="object-explorer-details-pane"></a>Detailbereich des Objekt-Explorers
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ Mithilfe von Details zum Objekt-Explorer können Sie in Ihrer [!INCLUDE[ssNoVers
   
 Details zum Objekt-Explorer verfügt über eine Symbolleiste, die die in der folgenden Tabelle beschriebenen Symbole enthält. Die Symbole sind nur verfügbar, wenn die entsprechenden Aktionen anwendbar sind.  
   
-|Symbol|Action|  
+|Symbol|Aktion|  
 |--------|----------|  
 |**Zurück**|Wechselt zu den vorherigen in Details zum Objekt-Explorer angezeigten Elementen. Wiederholt eine Suche, wenn die vorherige Anzeige das Ergebnis eines Suchvorgangs ist.|  
 |**Vorwärts**|Wechselt zum nächsten Bildschirm, nachdem eine **Zurück** -Aktion ausgewählt wurde.|  
@@ -47,7 +48,7 @@ Details zum Objekt-Explorer verfügt über eine Symbolleiste, die die in der fol
 |**Synchronize**|Legt den Fokus von Objekt-Explorer auf das in Details zum Objekt-Explorer ausgewählte Objekt fest.|  
 |**Filter**|Zeigt, soweit verfügbar, eine konfigurierbare Teilmenge von Objekten an.|  
 |**Aktualisieren**|Aktualisiert die Anzeige in Details zum Objekt-Explorer.|  
-|**Suchen,**|Stellt einen Bereich bereit, um einen Suchbegriff für bestimmte Datenbankobjekte einzugeben.|  
+|**Suche**|Stellt einen Bereich bereit, um einen Suchbegriff für bestimmte Datenbankobjekte einzugeben.|  
   
 ### <a name="column-header-selections"></a>Spaltenheaderauswahl  
 Details zum Objekt-Explorer verfügt über auswählbare Spalten. Sie können in jedem Spaltenheader mit der rechten Maustaste klicken und die Elemente aktivieren, die Sie anzeigen möchten. Ihre Auswahl wird für alle Objekte, durch die Sie navigieren, beibehalten. Die Auswahl wird für jeden Benutzer individuell beibehalten, wenn [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]beendet und neu gestartet wird.  
@@ -55,10 +56,10 @@ Details zum Objekt-Explorer verfügt über auswählbare Spalten. Sie können in 
 > [!CAUTION]  
 > Wenn bei einigen Objekttypen (wie z. B. Datenbanken) alle Spalten angezeigt werden, kann das Rendering der Anzeige bei großen Objektsätzen geringfügig verlangsamt werden.  
   
-### <a name="sorting"></a>Sortierung  
+### <a name="sorting"></a>Sortieren  
 Wenn Sie auf einen Spaltenheader einmal klicken, erfolgt eine Sortierung nach dieser Spalte. Wenn Sie auf denselben Header erneut klicken, erfolgt eine umgekehrte Sortierung nach dieser Spalte. Die Sortierauswahl wird für jeden Benutzer für alle Objekte und Ordner sowie für den Neustart von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] beibehalten.  
   
-### <a name="filtering"></a>Filterung  
+### <a name="filtering"></a>Filtern  
 Bestimmte Listen von Objekten, die in Details zum Objekt-Explorer angezeigt werden, können mithilfe des **Filter** -Symbols auf der Symbolleiste „Details“ zum Objekt-Explorer gefiltert werden. Das Symbol wird aktiviert, wenn eine Filterung möglich ist.  
   
 ### <a name="details-pane"></a>Detailbereich  
