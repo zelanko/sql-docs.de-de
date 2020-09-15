@@ -1,4 +1,5 @@
 ---
+description: updateDouble-Methode (java.lang.String, double)
 title: updateDouble(java.lang.String, double)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f70971d5-34cc-4f70-8a91-5d46356b24ae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9650d575a93af87bdcabb0b12e0878ebef692ece
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8a142c0265b013b95faabd6546978dfabdfe6e0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353446"
 ---
 # <a name="updatedouble-method-javalangstring-double"></a>updateDouble-Methode (java.lang.String, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +43,7 @@ public void updateDouble(java.lang.String columnName,
   
  *x*  
   
- Ein **Double**-Wert  
+ Ein **double**-Wert  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
