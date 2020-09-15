@@ -1,4 +1,5 @@
 ---
+description: Erstellen, Löschen oder Ändern einer Rolle (Management Studio)
 title: Erstellen, Löschen oder Ändern einer Rolle (Management Studio) | Microsoft-Dokumentation
 ms.date: 05/07/2019
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f079b7b16f485b92c60952d082281a1dba52d024
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a238f4421c86edea0d03ab52c1b739520f646222
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423234"
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>Rollendefinitionen: Erstellen, Löschen oder Ändern
 
@@ -72,7 +73,7 @@ Mit [!INCLUDE[SQL Server Management Studio](../../includes/ssmanstudiofull-md.md
 
 - Klicken Sie zum Ändern einer Rollendefinition auf Systemebene mit der rechten Maustaste auf das Element, und klicken Sie anschließend auf **Eigenschaften**. Die Seite Allgemein im Dialogfeld **Systemrolleneigenschaften** wird angezeigt. Wählen Sie die Aufgaben aus, die Mitglieder dieser Rolle ausführen können. Klicken Sie dann auf **OK**, um die Änderungen zu übernehmen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
  [Connect to a Report Server in Management Studio (Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio)](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
  [Erstellen und Verwalten von Rollenzuweisungen](../../reporting-services/security/create-and-manage-role-assignments.md)  

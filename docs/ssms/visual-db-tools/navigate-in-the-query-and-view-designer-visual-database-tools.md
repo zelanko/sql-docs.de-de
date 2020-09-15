@@ -1,4 +1,5 @@
 ---
+description: Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools)
 title: Navigieren im Abfrage- und Ansicht-Designer
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 57141f45ed985932d365bffb9479e085ba59e9bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ff0153da9b3905fb57d0e1359ff71aaaeef663df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85996777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423074"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ Sie können im Abfrage- und Sicht-Designer mit der Tastatur und mit der Maus arb
   
 ## <a name="any-pane"></a>Alle Bereiche  
   
-|**An**|**Tastenkombination**|**Mausaktion**|  
+|**An**|**Tastenkombination**|**Klicken Sie auf**|  
 |----------|-------------|-------------|  
 |Wechseln zwischen den Bereichen des Abfrage- und Sicht-Designers|F6, UMSCHALT+F6|Klicken Sie auf eine beliebige Stelle im Zielbereich.|  
   
@@ -37,7 +38,7 @@ Sie können im Abfrage- und Sicht-Designer mit der Tastatur und mit der Maus arb
   
 ## <a name="diagram-pane"></a>Diagrammbereich  
   
-|**An**|**Tastenkombination**|**Mausaktion**|  
+|**An**|**Tastenkombination**|**Klicken Sie auf**|  
 |----------|-------------|-------------|  
 |Wechseln zwischen Tabellen, anderen tabellenähnlich strukturierten Objekten und zu Joinlinien, sofern verfügbar|TAB oder UMSCHALT+TAB|Klicken Sie auf die Tabelle, das tabellenähnlich strukturierte Objekt oder die Joinlinie, um zu diesem Element zu wechseln.|  
 |Wechseln zwischen den Spalten in einer Tabelle oder einem tabellenähnlich strukturierten Objekt|Pfeiltasten|Klicken Sie auf die Spalte, zu der Sie wechseln möchten.|  
@@ -52,10 +53,10 @@ Weitere Informationen finden Sie unter [Diagrammbereich &#40;Visual Database Too
   
 ## <a name="criteria-pane"></a>Kriterienbereich  
   
-|To|Tastenkombination|Klicken Sie auf|  
+|An|Tastenkombination|Klicken Sie auf|  
 |------|---------|---------|  
 |Wechseln zwischen Zellen|Pfeiltasten, TAB oder UMSCHALT+TAB|Klicken Sie auf die gewünschte Zelle.|  
-|Wechseln in die letzte Zeile der aktuellen Spalte|STRG+NACH-UNTEN||  
+|Wechseln in die letzte Zeile der aktuellen Spalte|STRG+NACH-UNTEN-TASTE||  
 |Wechseln in die erste Zeile der aktuellen Spalte|STRG+NACH-OBEN-TASTE||  
 |Wechseln zur obersten linken Zelle im angezeigten Bereich des Datenblatts|STRG+POS1||  
 |Wechseln zur obersten rechten Zelle|STRG+ENDE||  
@@ -87,13 +88,13 @@ Weitere Informationen finden Sie unter [SQL-Bereich &#40;Visual Database Tools&#
   
 ## <a name="results-pane"></a>Ergebnisbereich  
   
-|**An**|**Tastenkombination**|**Mausaktion**|  
+|**An**|**Tastenkombination**|**Klicken Sie auf**|  
 |----------|-------------|-------------|  
 |Bewegen zwischen Zellen|Pfeiltasten, TAB oder UMSCHALT+TAB|Klicken Sie auf die gewünschte Zelle.|  
 |Wechseln zur ersten oder letzten Zelle in der aktuellen Zeile|POS1 oder ENDE||  
 |Wechseln in die erste Zeile der aktuellen Spalte|STRG+NACH-OBEN-TASTE||  
 |Wechseln zur obersten linken Zelle|STRG+POS1||  
-|Wechseln zur untersten Zelle in der ersten Spalten|STRG+NACH-UNTEN||  
+|Wechseln zur untersten Zelle in der ersten Spalten|STRG+NACH-UNTEN-TASTE||  
 |Markieren bis zum ersten Zeichen in einer Zelle|UMSCHALT+POS1||  
 |Markieren bis zum letzten Zeichen in einer Zelle|UMSCHALT+ENDE||  
 |Wechseln zwischen dem Bearbeitungsmodus und dem Modus für die Zellenauswahl|F2||  

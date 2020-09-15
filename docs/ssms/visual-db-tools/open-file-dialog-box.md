@@ -1,4 +1,5 @@
 ---
+description: Datei öffnen (Dialogfeld)
 title: Datei öffnen (Dialogfeld)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 214942feecf0161f373ca588c15510bcd5c0615f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6d9c0a9d83f0004c534f3548cb114f06de2861f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423044"
 ---
 # <a name="open-file-dialog-box"></a>Datei öffnen (Dialogfeld)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Verwenden Sie das Dialogfeld **Datei öffnen** , um eine vorhandene Datei von einem Datenträger zu öffnen. Außerdem können Sie dieses Dialogfeld dazu verwenden, eine bereits geöffnete Datei mit unterschiedlichen Sprachcodierungsoptionen zu öffnen.  
+ Verwenden Sie das Dialogfeld **Datei öffnen**, um eine vorhandene Datei von einem Datenträger zu öffnen. Außerdem können Sie dieses Dialogfeld dazu verwenden, eine bereits geöffnete Datei mit unterschiedlichen Sprachcodierungsoptionen zu öffnen.  
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **Öffnen** und dann **Datei**aus. Dieses Dialogfeld wird auch angezeigt, wenn Sie Dateien von anderen Elementen aus öffnen, z. B. dem Dialogfeld **Externe Tools** . Um das ähnliche Dialogfeld **Projekt öffnen** zu öffnen, wählen Sie im Menü **Datei**den Befehl **Öffnen** und dann **Projekt/Projektmappe** aus.  
   
@@ -36,7 +37,7 @@ Suchen Sie den vorhandenen Projektordner aus dieser Dropdownliste aus. Nach der 
 **Desktop**  
 Zeigt die Dateien und Ordner auf dem Desktop an.  
   
-**Eigene Projekte**  
+**Meine Projekte**  
 Zeigt die Dateien und Ordner im Ordner **Projekte** des Benutzers an.  
   
 **Arbeitsplatz**  
@@ -68,7 +69,7 @@ Löscht die ausgewählten Dateien oder Ordner aus dem Speicher.
 **Neuer Ordner**  
 Zeigt das Dialogfeld **Neuer Ordner** an. Verwenden Sie diese Option, um unterhalb des Ordners, der im Dropdown-Listenfeld **Suchen in** ausgewählt wurde, einen untergeordneten Ordner zu erstellen.  
   
-## <a name="views"></a>Sichten  
+## <a name="views"></a>Ansichten  
 Stellt Optionen bereit, mit denen der Inhalt des im Dropdown-Listenfeld **Sichten** ausgewählten Elements angeordnet und angezeigt werden kann.  
   
 **Miniaturansicht**  
