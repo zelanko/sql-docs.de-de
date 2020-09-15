@@ -6,17 +6,17 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a7d3ca36634e449dd26dfdb0df75f09608d25f51
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765799"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283691"
 ---
-# <a name="backup-and-restore-databases-using-azure-data-studio"></a>Sichern und Wiederherstellen von Datenbanken mithilfe von Azure Data Studio
+# <a name="tutorial-backup-and-restore-databases-using-azure-data-studio"></a>Tutorial: Sichern und Wiederherstellen von Datenbanken mithilfe von Azure Data Studio
 
 In diesem Tutorial lernen Sie, wie Sie Azure Data Studio für folgende Zwecke verwenden:
 > [!div class="checklist"]
@@ -36,13 +36,13 @@ In diesem Tutorial muss eine Verbindung mit einer SQL Server-Datenbank hergestel
 
 ## <a name="back-up-a-database"></a>So sichern Sie eine Datenbank
 
-1. Öffnen Sie das Dashboard der TutorialDB-Datenbank (öffnen Sie die Randleiste **SERVER** (**STRG+G**), erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf **TutorialDB**, und wählen Sie **Verwalten** aus).
+1. Öffnen Sie das Dashboard der TutorialDB-Datenbank (öffnen Sie die Seitenleiste **SERVER** (**STRG+G**), erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf **TutorialDB**, und wählen Sie **Verwalten** aus).
 
 2. Öffnen Sie das Dialogfeld **Datenbank sichern** (klicken Sie auf **Sichern** auf dem Widget **Aufgaben**).
 
    ![Widget „Aufgaben“](./media/tutorial-backup-restore-sql-server/tasks.png)
 
-3. In diesem Tutorial werden die Standardsicherungsoptionen verwendet, klicken Sie deshalb auf **Sichern**.
+3. In diesem Tutorial werden die Standardsicherungsoptionen verwendet. Klicken Sie deshalb auf **Sichern**.
    ![Dialogfeld für Sichern](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
 Nachdem Sie auf **Sichern** geklickt haben, wird das Dialogfeld **Datenbank sichern** ausgeblendet, und der Sicherungsvorgang beginnt.
@@ -59,20 +59,20 @@ Nachdem Sie auf **Sichern** geklickt haben, wird das Dialogfeld **Datenbank sich
 
 ## <a name="restore-a-database-from-a-backup-file"></a>Wiederherstellen einer Datenbank aus einer Sicherungsdatei
 
-1. Öffnen Sie die Randleiste **SERVER** (**STRG+ G**), klicken Sie mit der rechten Maustaste auf Ihren Server, und wählen Sie **Verwalten** aus.
+1. Öffnen Sie die Seitenleiste **SERVER** (**STRG+G**), klicken Sie mit der rechten Maustaste auf Ihren Server, und wählen Sie **Verwalten** aus.
 
 2. Öffnen Sie das Dialogfeld **Datenbank wiederherstellen** (klicken Sie auf **Wiederherstellen** auf dem Widget **Aufgaben**).
 
-   ![Wiederherstellen einer Task](media/tutorial-backup-restore-sql-server/tasks-restore.png)
+   ![Aufgabe wiederherstellen](media/tutorial-backup-restore-sql-server/tasks-restore.png)
 
 3. Wählen Sie **Sicherungsdatei** im Feld **Wiederherstellen von** aus.
 
-4. Klicken Sie auf die Auslassungspunkte (...) im Feld**Pfad der Sicherungsdatei**, und wählen Sie die letzte Sicherungsdatei für *TutorialDB* aus.
+4. Klicken Sie auf die Auslassungspunkte (...) im Feld **Pfad zur Sicherungsdatei**, und wählen Sie die aktuelle Sicherungsdatei für *TutorialDB* aus.
 
 5. Geben Sie **TutorialDB_Restored** in das Feld **Zieldatenbank** im Abschnitt **Ziel** ein, um die Sicherungsdatei in einer neuen Datenbank wiederherzustellen. Dann wählen Sie **Wiederherstellen** aus.
 
-   ![Wiederherstellen](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![Sicherung wiederherstellen](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. Um den Status des Wiederherstellungsvorgangs anzuzeigen, drücken Sie **STRG+T**, um den **Taskverlauf** zu öffnen.
 
-   ![Wiederherstellen](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![Verlauf „Aufgabe wiederherstellen“](./media/tutorial-backup-restore-sql-server/task-history-restore.png)

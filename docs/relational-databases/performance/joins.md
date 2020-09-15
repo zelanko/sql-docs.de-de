@@ -18,19 +18,29 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915846"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511312"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet bei Sortier-, Schnittmengen- und Vereinigungsvorgängen sowie bei Vorgängen zum Feststellen von Unterschieden arbeitsspeicherinterne Sortierverfahren und Hashjointechniken. Beim Verwenden dieses Abfrageplantyps unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die vertikale Tabellenpartitionierung, auch spaltenweise Speicherung genannt.   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet bei Sortier-, Schnittmengen- und Vereinigungsvorgängen sowie bei Vorgängen zum Feststellen von Unterschieden arbeitsspeicherinterne Sortierverfahren und Hashjointechniken. Wenn dieser Abfrageplan verwendet wird, unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die vertikale Tabellenpartitionierung.   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt vier Typen von Joinvorgängen:    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert logische Joinvorgänge, die durch die Syntax [!INCLUDE[tsql](../../includes/tsql-md.md)] festgelegt werden:
+-   Innere Verknüpfung
+-   Left Outer Join
+-   Rechte äußere Verknüpfung
+-   Vollständiger äußerer Join
+-   Kreuzprodukt
+
+> [!NOTE]
+> Weitere Informationen zur Joinsyntax finden Sie unter [FROM-Klausel mit JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet vier verschiedene physische Joinvorgänge, um logische Joinvorgänge auszuführen:    
 -   Joins geschachtelter Schleifen     
 -   Zusammenführungsjoins   
 -   Hashjoins   
@@ -41,50 +51,57 @@ Mithilfe von Joins können Sie Daten aus zwei oder mehr Tabellen basierend auf l
 
 Eine Joinbedingung definiert die Beziehung zweier Tabellen in einer Abfrage auf folgende Art:    
 -   Sie gibt die Spalte aus jeder Tabelle an, die für den Join verwendet werden soll. Eine typische Joinbedingung gibt einen Fremdschlüssel aus einer Tabelle und den zugehörigen Schlüssel in der anderen Tabelle an.    
--   Sie gibt einen logischen Operator (z. B. = oder <>) an, der zum Vergleichen von Werten aus den Spalten verwendet wird.    
+-   Sie gibt einen logischen Operator (z. B. = oder <>) an, der zum Vergleichen von Werten aus den Spalten verwendet wird.   
 
-Innere Joins können in `FROM`- oder in `WHERE`-Klauseln angegeben werden. Äußere Joins können nur in der `FROM`-Klausel angegeben werden. Die Joinbedingungen in Verbindung mit `WHERE`- und `HAVING`-Suchbedingungen steuern, welche Zeilen aus den Basistabellen ausgewählt werden, auf die in der `FROM`-Klausel verwiesen wird.    
+Joins werden mithilfe der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax logisch ausgedrückt:
+-   INNER JOIN
+-   LEFT [ OUTER ] JOIN
+-   RIGHT [ OUTER ] JOIN
+-   FULL [ OUTER ] JOIN
+-   CROSS JOIN
 
-Das Angeben der Joinbedingungen in der `FROM`-Klausel trägt dazu bei, dass diese von anderen, möglicherweise in einer `WHERE`-Klausel angegebenen Suchbedingungen getrennt werden. Dies ist die empfohlene Methode zur Angabe von Joins. Das Folgende ist eine vereinfachte ISO-Joinssyntax für eine FROM-Klausel:
+**Innere Joins** können in `FROM`- oder `WHERE`-Klauseln angegeben werden. **Äußere Joins** und **Kreuzprodukte** können nur in der `FROM`-Klausel angegeben werden. Die Joinbedingungen in Verbindung mit `WHERE`- und `HAVING`-Suchbedingungen steuern, welche Zeilen aus den Basistabellen ausgewählt werden, auf die in der `FROM`-Klausel verwiesen wird.    
+
+Das Angeben der Joinbedingungen in der `FROM`-Klausel trägt dazu bei, dass diese von anderen, möglicherweise in einer `WHERE`-Klausel angegebenen Suchbedingungen getrennt werden. Dies ist die empfohlene Methode zur Angabe von Joins. Eine vereinfachte ISO-Joinsyntax für eine `FROM`-Klausel lautet:
 
 ```
-FROM first_table join_type second_table [ON (join_condition)]
+FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 
-*join_type* gibt an, welche Art von Join ausgeführt wird: innerer Join, äußerer Join oder Cross Join. *join_condition* definiert das Prädikat, das für jedes verknüpfte Zeilenpaar ausgewertet werden soll. Es folgt ein Beispiel für eine Joinangabe in einer FROM-Klausel:
+*join_type* gibt an, welche Art von Join ausgeführt wird: innerer Join, äußerer Join oder Cross Join. *join_condition* definiert das Prädikat, das für jedes verknüpfte Zeilenpaar ausgewertet werden soll. Dies ist ein Beispiel für die Joinspezifizierung einer `FROM`-Klausel:
 
 ```sql
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
-     ON (ProductVendor.BusinessEntityID = Vendor.BusinessEntityID)
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
+     ON ( ProductVendor.BusinessEntityID = Vendor.BusinessEntityID )
 ```
 
-Es folgt eine einfache SELECT-Anweisung, die diesen Join verwendet:
+Dies ist ein Beispiel für eine einfache `SELECT`-Anweisung mithilfe dieses Joins:
 
 ```sql
 SELECT ProductID, Purchasing.Vendor.BusinessEntityID, Name
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
     ON (Purchasing.ProductVendor.BusinessEntityID = Purchasing.Vendor.BusinessEntityID)
 WHERE StandardPrice > $10
   AND Name LIKE N'F%'
 GO
 ```
 
-Die SELECT-Anweisung gibt die Produkt- und Lieferanteninformationen für alle Kombinationen von Teilen zurück, die von einer Firma geliefert werden, deren Firmenname mit dem Buchstaben F beginnt, und bei denen der Produktpreis über 10 $ liegt.   
+Die `SELECT`-Anweisung gibt die Produkt- und Lieferanteninformationen für alle Kombinationen der Teile zurück, die von einer Firma geliefert werden, deren Firmenname mit dem Buchstaben F beginnt, und bei denen der Produktpreis über 10 USD liegt.   
 
-Wenn in einer einzigen Abfrage auf mehrere Tabellen verwiesen wird, müssen alle Spaltenverweise eindeutig sein. Im vorherigen Beispiel verfügen sowohl die ProductVendor-Tabelle als auch die Vendor-Tabelle über eine Spalte mit dem Namen „BusinessEntityID“. Alle Spaltennamen, die in zwei oder mehr Tabellen vorkommen, auf die in der Abfrage verwiesen wird, müssen mit dem Tabellennamen gekennzeichnet werden. Alle Verweise auf die Vendor-Spalten im Beispiel sind gekennzeichnet.   
+Wenn in einer einzigen Abfrage auf mehrere Tabellen verwiesen wird, müssen alle Spaltenverweise eindeutig sein. Im vorherigen Beispiel verfügt sowohl die `ProductVendor`- als auch die `Vendor`-Tabelle über eine Spalte mit der Bezeichnung `BusinessEntityID`. Alle Spaltennamen, die in zwei oder mehr Tabellen vorkommen, auf die in der Abfrage verwiesen wird, müssen mit dem Tabellennamen gekennzeichnet werden. Alle Verweise auf die `Vendor`-Spalten im Beispiel sind gekennzeichnet.   
 
-Wenn ein Spaltenname nicht in zwei oder mehr in der Abfrage verwendeten Tabellen vorkommt, brauchen Verweise darauf nicht mit dem Tabellennamen gekennzeichnet zu werden. Dies ist im vorherigen Beispiel dargestellt. Eine solche SELECT-Anweisung ist manchmal schwer verständlich, weil nicht angezeigt wird, welche Spalte aus welcher Tabelle stammt. Die Lesbarkeit der Abfrage wird verbessert, indem alle Spalten mit dem entsprechenden Tabellennamen gekennzeichnet werden. Die Übersichtlichkeit kann weiterhin durch Verwenden von Tabellenaliasnamen verbessert werden, besonders, wenn die Tabellennamen mit dem Datenbank- und Besitzernamen gekennzeichnet werden müssen. Das folgende Beispiel unterscheidet sich vom vorherigen nur dadurch, dass Tabellenaliasnamen zugewiesen und die Spalten der Übersichtlichkeit halber mit Tabellenaliasnamen gekennzeichnet wurden:
+Wenn ein Spaltenname nicht in zwei oder mehr in der Abfrage verwendeten Tabellen vorkommt, brauchen Verweise darauf nicht mit dem Tabellennamen gekennzeichnet zu werden. Dies ist im vorherigen Beispiel dargestellt. Eine solche `SELECT`-Klausel ist manchmal schwer verständlich, weil nicht angezeigt wird, welche Spalte aus welcher Tabelle stammt. Die Lesbarkeit der Abfrage wird verbessert, indem alle Spalten mit dem entsprechenden Tabellennamen gekennzeichnet werden. Die Übersichtlichkeit kann weiterhin durch Verwenden von Tabellenaliasnamen verbessert werden, besonders, wenn die Tabellennamen mit dem Datenbank- und Besitzernamen gekennzeichnet werden müssen. Das folgende Beispiel unterscheidet sich vom vorherigen nur dadurch, dass Tabellenaliasnamen zugewiesen und die Spalten der Übersichtlichkeit halber mit Tabellenaliasnamen gekennzeichnet wurden:
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
 FROM Purchasing.ProductVendor AS pv 
-JOIN Purchasing.Vendor AS v
+INNER JOIN Purchasing.Vendor AS v
     ON (pv.BusinessEntityID = v.BusinessEntityID)
 WHERE StandardPrice > $10
     AND Name LIKE N'F%';
 ```
 
-In den vorhergehenden Beispielen wurden die Joinbedingungen in der FROM-Klausel angegeben. Dies ist die bevorzugte Methode. Die folgende Abfrage enthält dieselbe Joinbedingung, die in der WHERE-Klausel angegeben wird:
+In den vorhergehenden Beispielen wurden die Joinbedingungen in der `FROM`-Klausel angegeben. Dies ist die bevorzugte Methode. Die folgende Abfrage enthält dieselbe Joinbedingung, die in der `WHERE`-Klausel angegeben wird:
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
@@ -94,13 +111,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
     AND Name LIKE N'F%';
 ```
 
-Die SELECT-Liste für einen Join kann auf alle Spalten in den verknüpften Tabellen oder auf eine beliebige Teilmenge der Spalten verweisen. Es ist nicht erforderlich, dass die SELECT-Liste Spalten aus allen Tabellen in dem Join enthält. So kann z. B. in einem Join dreier Tabellen nur eine Tabelle verwendet werden, um die anderen Tabellen zu verbinden, und in der Auswahlliste muss auf keine der Spalten aus der mittleren Tabelle verwiesen werden.   
+Die `SELECT`-Liste für einen Join kann auf alle Spalten in den verknüpften Tabellen oder auf eine beliebige Teilmenge der Spalten verweisen. Es ist nicht erforderlich, dass die `SELECT`-Liste Spalten aus allen Tabellen im Join enthält. So kann z. B. in einem Join dreier Tabellen nur eine Tabelle verwendet werden, um die anderen Tabellen zu verbinden, und in der Auswahlliste muss auf keine der Spalten aus der mittleren Tabelle verwiesen werden. Dies wird auch als **Antisemijoin** bezeichnet.  
 
 Obwohl Joinbedingungen normalerweise Übereinstimmungsvergleiche (=) enthalten, können andere Vergleichsoperatoren oder relationale Operatoren ebenso wie andere Prädikate angegeben werden. Weitere Informationen finden Sie unter [Vergleichsoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) und [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
 
-Beim Verarbeiten von Joins durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wählt die Abfrage-Engine aus verschiedenen Möglichkeiten die effizienteste Methode aus. Die physische Ausführung von verschiedenen Joins kann viele verschiedene Optimierungen verwenden, weshalb keine zuverlässige Einschätzung möglich ist.   
+Beim Verarbeiten von Joins durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wählt der Abfrageoptimierer aus verschiedenen Möglichkeiten die effizienteste Methode aus. Dabei werden der effizienteste physische Join, die Joinreihenfolge der Tabellen und sogar logische Joinvorgänge ausgewählt, die mit der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax nicht direkt ausgedrückt werden können (z. B. **Semijoins** und **Antisemijoins**). Die physische Ausführung von verschiedenen Joins kann viele verschiedene Optimierungen verwenden, weshalb keine zuverlässige Einschätzung möglich ist. Weitere Informationen zu Semijoins und Antisemijoins finden Sie unter [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md).  
 
-Spalten, die in einer Joinbedingung verwendet werden, müssen nicht den gleichen Namen oder Datentyp haben. Die Datentypen müssen jedoch kompatibel sein, falls sie nicht identisch sind, oder es müssen Datentypen sein, die SQL Server implizit konvertieren kann. Wenn die Datentypen nicht implizit konvertiert werden können, muss die Joinbedingung den Datentyp mithilfe der `CAST`-Funktion explizit konvertieren. Weitere Informationen zur impliziten und expliziten Konvertierung finden Sie unter [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).    
+Spalten, die in einer Joinbedingung verwendet werden, müssen nicht den gleichen Namen oder Datentyp haben. Die Datentypen müssen jedoch kompatibel sein, falls sie nicht identisch sind, oder es müssen Datentypen sein, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implizit konvertieren kann. Wenn die Datentypen nicht implizit konvertiert werden können, muss die Joinbedingung den Datentyp mithilfe der `CAST`-Funktion explizit konvertieren. Weitere Informationen zur impliziten und expliziten Konvertierung finden Sie unter [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).    
 
 Die meisten Abfragen, die einen Join verwenden, können in eine Unterabfrage (eine in eine andere Abfrage geschachtelte Abfrage) umgeschrieben werden, und die meisten Unterabfragen können in Joins umgeschrieben werden. Weitere Informationen zu Unterabfragen finden Sie unter [Unterabfragen](../../relational-databases/performance/subqueries.md).   
 
@@ -356,3 +373,4 @@ In den Ergebnissen ist ein NULL-Wert in den Daten nicht ohne Weiteres von einem 
 [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Unterabfragen](../../relational-databases/performance/subqueries.md)      
 [Adaptive Joins](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
+[FROM-Klausel mit JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)

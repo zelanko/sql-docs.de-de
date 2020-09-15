@@ -1,20 +1,20 @@
 ---
-title: 'Tutorial: Erstellen eines benutzerdefinierten Erkenntnis-Widgets'
+title: Erstellen eines benutzerdefinierten Erkenntnis-Widgets
 description: In diesem Tutorial wird veranschaulicht, wie Sie benutzerdefinierte Erkenntnis-Widgets erstellen und diese in Azure Data Studio zu Datenbank- und Serverdashboards hinzufügen.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: efe6473dc716b8e8a2c70349b98e6433105d401a
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 08/26/2020
+ms.openlocfilehash: 0cd248b323ebc6176dbad37f578da1c08141281b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745753"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283751"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Erstellen eines benutzerdefinierten Erkenntnis-Widgets
 
@@ -104,7 +104,7 @@ In diesem Schritt führen Sie ein SQL-Skript aus, um die aktuellen aktiven Sitzu
 
 7. Speichern Sie die *Benutzereinstellungen*-Datei, und öffnen Sie das Datenbankdashboard *TutorialDB*, um das aktive Sitzungen-Widget anzuzeigen:
 
-   ![Einblick in aktive Sitzung](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![Einblick in aktive Sitzung (Dashboard)](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
 ## <a name="add-details-to-custom-insight"></a>Hinzufügen von Details zu einer benutzerdefinierten Erkenntnis
 
@@ -159,7 +159,7 @@ In diesem Schritt führen Sie ein SQL-Skript aus, um die aktuellen aktiven Sitzu
 
 7. Speichern Sie die *Benutzereinstellungen*-Datei, und öffnen Sie das Datenbankdashboard *TutorialDB*. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...) neben *My-Widget*, um die Details anzuzeigen:
 
-    ![Einblick in aktive Sitzung](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![Einblick in aktive Sitzung (Details)](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 In diesem Tutorial haben Sie Folgendes gelernt:

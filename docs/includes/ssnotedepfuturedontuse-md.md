@@ -1,1 +1,1 @@
- Dieses Feature wird in einer künftigen Version von Microsoft SQL Server entfernt. Verwenden Sie dieses Feature nicht in einer neuen Entwicklungsarbeit, und ändern Sie Anwendungen, die dieses Feature verwenden, so schnell wie möglich. 
+Dieses Feature wird in einer künftigen Version von Microsoft SQL Server entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. 
