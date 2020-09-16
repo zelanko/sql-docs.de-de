@@ -1,4 +1,5 @@
 ---
+description: Stretch Database
 title: Stretch Database
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -10,15 +11,15 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4ff3c8a24624b3833c04b4e6269fb3618b36568f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2338cfe80dafb68eefaba3d6302d4afc84a585c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497993"
 ---
 # <a name="stretch-database"></a>Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Stretch Database migriert Ihre inaktiven Daten (Cold Data) transparent und sicher zu Microsoft Azure Cloud.  
@@ -47,7 +48,7 @@ ms.locfileid: "81488352"
   
 -   Wenn Ihre Tabelle sowohl heiße als auch kalte Daten enthält, können Sie eine Filterfunktion zum Auswählen der zu migrierenden Zeilen angeben.
 
-**Sie müssen vorhandene Abfragen und Clientanwendungen nicht ändern.** Sie haben auch weiterhin nahtlosen Zugriff sowohl auf lokale als auch auf Remotedaten, sogar während der Datenmigration. Bei Remoteabfragen tritt eine geringfügige Latenz auf, diese Wartezeit macht sich jedoch nur beim Abfragen der kalten Daten bemerkbar.
+**Vorhandene Abfragen und Client-Apps brauchen nicht geändert zu werden.** Sie haben auch weiterhin nahtlosen Zugriff sowohl auf lokale als auch auf Remotedaten, sogar während der Datenmigration. Bei Remoteabfragen tritt eine geringfügige Latenz auf, diese Wartezeit macht sich jedoch nur beim Abfragen der kalten Daten bemerkbar.
 
 **Stretch Database stellt sicher, dass keine Daten verloren gehen**, falls während der Migration ein Failover auftritt. Sie weist außerdem Logik für Wiederholungsversuche zur Behandlung von Verbindungsproblemen auf, die möglicherweise während der Migration auftreten. Eine dynamische Verwaltungsansicht gibt über den Status der Migration Auskunft.
 
@@ -76,6 +77,6 @@ ms.locfileid: "81488352"
  **Testen Sie Stretch Database mit der AdventureWorks-Beispieldatenbank.** Laden Sie zum Abrufen der AdventureWorks-Beispieldatenbank zumindest die Datenbankdatei und die Beispiel- und Skriptdatei [here](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). Nachdem Sie die Beispieldatenbank auf einer Instanz von SQL Server 2016 wiederhergestellt haben, entpacken Sie die Datei „Stretch DB Samples“ aus dem Ordner „Stretch DB “. Führen Sie die Skripts in dieser Datei aus, um den von Ihren Daten verwendeten Speicherplatz vor und nach der Aktivierung von Stretch Database zu überprüfen, den Fortschritt der Datenmigration zu verfolgen und zu bestätigen, dass Sie weiterhin vorhandene Daten abfragen und neue Daten einfügen können, sowohl während als auch nach der Datenmigration.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- **Identifizieren Sie Datenbanken und Tabellen, die sich für Stretch Database eignen.** Laden Sie den Datenmigrations-Assistent herunter, und führen Sie einer Bewertung durch, um die Datenbanken und Tabellen zu identifizieren, die als Kandidaten für die Stretchdatenbank infrage kommen. Weitere Informationen finden Sie unter [Identifizieren von Datenbanken und Tabellen für Stretch Database durch Ausführen des Ratgebers für Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
+ **Identifizieren von Datenbanken und Tabellen als Kandidaten für Stretch Database.** Laden Sie den Datenmigrations-Assistent herunter, und führen Sie einer Bewertung durch, um die Datenbanken und Tabellen zu identifizieren, die als Kandidaten für die Stretchdatenbank infrage kommen. Weitere Informationen finden Sie unter [Identifizieren von Datenbanken und Tabellen für Stretch Database durch Ausführen des Ratgebers für Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
   

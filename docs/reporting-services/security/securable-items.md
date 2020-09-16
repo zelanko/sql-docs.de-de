@@ -1,4 +1,5 @@
 ---
+description: Sicherbare Elemente
 title: Sicherungsfähige Elemente | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b55265887b8d824e5e7d90d0fb2108efcf75fdb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fd4b92dcacf94e2a0196f210050954a84c1ac3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498013"
 ---
 # <a name="securable-items"></a>Sicherbare Elemente
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet rollenbasierte Sicherheit zur Steuerung des Zugriffs auf die Elemente, die auf einem Berichtsserver gespeichert sind. Wenn Sie Benutzerzugriff auf einen Berichtsserver gewähren, erstellen Sie in der Regel ein Rollenzuweisungspaar:  
@@ -48,7 +49,7 @@ ms.locfileid: "65570615"
 ## <a name="item-descriptions"></a>Elementbeschreibungen  
  In der folgenden Tabelle werden die sicherungsfähigen Elemente aufgelistet und ihre Merkmale beschrieben.  
   
-|Element|Merkmale|  
+|Artikel|Merkmale|  
 |----------|---------------------|  
 |Ordner|Die Ordnersicherheit gilt für den Ordner selbst und die darin enthaltenen Elemente. Der Ordner Stamm ist der Stammknoten der Ordnerhierarchie. Die Sicherheit, die Sie für diesen Ordner festlegen, stellt die anfänglichen Sicherheitseinstellungen für alle untergeordneten Ordner, Berichte, Ressourcen und freigegebenen Datenquellen in der Ordnerhierarchie her. Weitere Informationen finden Sie unter [Sichere Ordner](../../reporting-services/security/secure-folders.md).<br /><br /> Meine Berichte ist ein spezieller Ordner, der über eine implizite Rollenzuweisung basierend auf einer dedizierten Rolle gesichert wird. Weitere Informationen finden Sie unter [Sichern von Meine Berichte](../../reporting-services/security/secure-my-reports.md).|  
 |Berichte|Berichte und verknüpfte Berichte können gesichert werden, um die verfügbaren Aktionen, die Benutzer ausführen können, zu steuern, wie z. B. das Ändern der Eigenschaften eines bestimmten Berichts.<br /><br /> Der Berichtsverlauf wird über den Bericht, der den Verlauf enthält, gesichert. Einzelne Momentaufnahmen des Berichtsverlaufs können nicht gesichert werden.<br /><br /> Weitere Informationen zur Berichtssicherheit finden Sie unter [Sichere Berichte und Ressourcen](../../reporting-services/security/secure-reports-and-resources.md).|  
