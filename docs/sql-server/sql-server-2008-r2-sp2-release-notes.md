@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a8ed0a9892110f4469a9adeb4d586c8eec7f081c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111015"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570309"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ Die dynamische Verwaltungsansicht (DMV) **sys.dm_db_stats_properties**wurde hinz
 ## <a name="20-before-you-install"></a>2.0 Vor der Installation  
 Informationen zum Installieren von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Updates finden Sie in der [SQL Server 2008 R2-Wartungsdokumentation](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-Allgemeine Informationen zu den ersten Schritten sowie zur Installation von SQL Server 2008 R2 finden Sie in der SQL Server 2008 R2-Infodatei. Die Infodatei steht auf dem Installationsmedium zur Verfügung. Weitere Informationen finden Sie auch in den [SQL Server-Foren](https://social.msdn.microsoft.com/Forums/category/sqlserver/).
+Allgemeine Informationen zu den ersten Schritten sowie zur Installation von SQL Server 2008 R2 finden Sie in der SQL Server 2008 R2-Infodatei. Die Infodatei steht auf dem Installationsmedium zur Verfügung.
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Auswählen der richtigen Download- und Installationsdatei  
 Bestimmen Sie mithilfe der folgenden Tabelle, welche Datei heruntergeladen und installiert werden muss. Stellen Sie sicher, dass die Systemanforderungen erfüllt sind, bevor Sie das Service Pack installieren. Die Systemanforderungen sind auf den Downloadseiten angegeben, die mit den Links in der Tabelle verknüpft sind.  
