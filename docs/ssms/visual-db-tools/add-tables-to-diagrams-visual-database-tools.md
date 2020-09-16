@@ -1,4 +1,5 @@
 ---
+description: Hinzufügen von Tabellen zu Diagrammen (Visual Database Tools)
 title: Hinzufügen von Tabellen zu Diagrammen
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: da818756c2239d460af2d18b3050e9681aff2698
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5aa8b90a1a6d3b03ec7a8c091d2f17cbb669823f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462929"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Hinzufügen von Tabellen zu Diagrammen (Visual Database Tools)
 
@@ -32,7 +33,7 @@ Sie können dem Datenbankdiagramm eine Tabelle hinzufügen, um die Diagrammstruk
 
    Zum Erstellen einer Tabelle im aktuellen Diagramm klicken Sie auf der Symbolleiste auf die Schaltfläche **Neue Tabelle** .
 
-   Oder  
+   - oder -  
 
    Klicken Sie mit der rechten Maustaste auf das Diagramm, und wählen Sie **Neue Tabelle**aus.
 
@@ -75,5 +76,5 @@ Sie können dem Datenbankdiagramm eine Tabelle hinzufügen, um die Diagrammstruk
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Arbeiten mit Datenbankdiagrammen](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Verwenden von Tabellen in Datenbankdiagrammen (Visual Database Tools)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)
+[Verwenden von Datenbankdiagrammen](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Verwenden von Tabellen in Datenbankdiagrammen](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)

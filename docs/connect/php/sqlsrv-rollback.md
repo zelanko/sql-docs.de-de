@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_rollback
 title: sqlsrv_rollback | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d8253ad826b8537768aaf01331a60ceacb65edbe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4cde5b4e805b6dc55830c2ad396f181f2e1f642c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466722"
 ---
 # <a name="sqlsrv_rollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -126,7 +127,7 @@ Für die Überwachung des Transaktionsverhaltens ist eine empfohlene Fehlerbehan
 ## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Gewusst wie: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
+[Vorgehensweise: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)
 
 [Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md) 
   

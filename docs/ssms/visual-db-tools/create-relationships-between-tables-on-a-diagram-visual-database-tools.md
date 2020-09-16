@@ -1,4 +1,5 @@
 ---
+description: Erstellen von Beziehungen zwischen Tabellen in einem Diagramm (Visual Database Tools)
 title: Erstellen von Beziehungen zwischen Tabellen in einem Diagramm
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 665de2b5956d769a31ee24a1dbb5966ea1f1c49a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a90f644aeaf17bd51c8963f355c9932c85da7c58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468425"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Erstellen von Beziehungen zwischen Tabellen in einem Diagramm (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ Sie können im Datenbank-Designer Beziehungen zwischen den Spalten in verschiede
   
 6.  Im Raster sind alle lokalen Spalten und die entsprechenden Fremdspalten aufgeführt. Sie können Spalten hinzufügen oder entfernen bzw. die Zuordnungen ändern.  
   
-7.  Klicken Sie auf **OK**.  
+7.  Wählen Sie **OK** aus.  
   
     Das Dialogfeld **Fremdschlüsselbeziehung** wird angezeigt. Unter**Ausgewählte Beziehung** wird die von Ihnen erstellte Beziehung angezeigt.  
   

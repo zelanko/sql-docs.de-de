@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_send_stream_data
 title: sqlsrv_send_stream_data | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/28/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe3207810e44929b392a385f481dbb52da57ae6a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5adff7f48cc08bfd75e6d46f6f8a9a5f66e7c8cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466701"
 ---
 # <a name="sqlsrv_send_stream_data"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +41,7 @@ sqlsrv_send_stream_data( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$stmt*: Eine Anweisungsressource, die einer ausgeführten Anweisung entspricht.  
+*$stmt:* Hierbei handelt es sich um eine Anweisungsressource, die einer ausgeführten Anweisung entspricht.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Boolescher Wert: **true** wenn weitere Daten gesendet werden sollen. Andernfalls lautet der Wert **false**.  

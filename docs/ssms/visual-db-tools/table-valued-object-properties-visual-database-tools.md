@@ -1,4 +1,5 @@
 ---
+description: Tabellenwertobjekt-Eigenschaften (Visual Database Tools)
 title: Tabellenwertobjekt-Eigenschaften
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,22 +13,22 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9e21318c245ab43b288ac4784289a62673e7e94a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2606f055597438aa852c787c45c9c489cd4e5743
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468305"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Tabellenwertobjekt-Eigenschaften (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Diese Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn Sie im **Abfrage- und Sicht-Designer**ein Tabellenwertobjekt auswählen. Das Tabellenwertobjekt kann eine Sicht, ein Synonym, eine abgeleitete Tabelle oder eine Tabellenwertfunktion sein. Soweit nicht anders angegeben, sind die Eigenschaften im Fenster **Eigenschaften** schreibgeschützt.  
+ Diese Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn Sie im **Abfrage- und Sicht-Designer** ein Tabellenwertobjekt auswählen. Das Tabellenwertobjekt kann eine Sicht, ein Synonym, eine abgeleitete Tabelle oder eine Tabellenwertfunktion sein. Soweit nicht anders angegeben, sind die Eigenschaften im Fenster **Eigenschaften** schreibgeschützt.  
   
 > [!NOTE]  
 > Die in diesem Thema behandelten Eigenschaften sind nicht alphabetisch, sondern nach Kategorie angeordnet.  
   
 > [!NOTE]  
-> Die angezeigten Dialogfelder und Menübefehle können von den in der Hilfe beschriebenen abweichen. Dies hängt von Ihren aktiven Einstellungen oder Ihrer Edition ab. Um Ihre Einstellungen zu ändern, wählen Sie **Einstellungen importieren und exportieren** im Menü **Extras** aus.  
+> Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.  
   
 **Kategorie Identität**  
 Wird erweitert, um die Eigenschaften **Name** und **TVO-Typ** anzuzeigen.  

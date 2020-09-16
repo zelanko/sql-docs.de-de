@@ -1,4 +1,5 @@
 ---
+description: Speichern von Abfragen (Visual Database Tools)
 title: Speichern von Abfragen
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: fcc5b07a6b89e448568b4c41c6d50f2961cf72cb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c456f00064003e6d56e40be0343e10eaa2576c93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460034"
 ---
 # <a name="save-queries-visual-database-tools"></a>Speichern von Abfragen (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ Speichern Sie die Abfrage, wenn Sie später damit arbeiten möchten. Beachten Si
 [Erstellen von Abfragen](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Ausführen von Abfragen](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Verwerfen von Änderungen an Abfragen](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
-[Themen zur Vorgehensweise: Entwerfen von Abfragen und Ansichten](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Artikel zum Entwerfen von Abfragen und Sichten](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Abfragetypen](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
-[Durchführen grundlegender Vorgänge mit Abfragen](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Ausführen grundlegender Vorgänge mit Abfragen](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

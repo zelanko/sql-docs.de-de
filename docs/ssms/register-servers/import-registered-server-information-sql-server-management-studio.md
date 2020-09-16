@@ -1,4 +1,5 @@
 ---
+description: Importieren von Informationen zum registrierten Server (SQL Server Management Studio)
 title: Importieren von Informationen zum registrierten Server
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 77ae5807a5a509ecfa83973fe07d34fed1f4dbd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ed7c74f225998a7556ece2d6f62bf5ce6e47d7eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011819"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462991"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Importieren von Informationen zum registrierten Server (SQL Server Management Studio)
 
@@ -42,8 +43,8 @@ In diesem Thema wird beschrieben, wie Sie gespeicherte Informationen zu registri
   
 3.  Wählen Sie im Dialogfeld **Registrierte Server importieren** die zu importierende Datei mit den registrierten Servern aus, und klicken Sie dann auf **OK**.  
   
-     **Importdatei**  
-     Geben Sie den Namen der Importdatei in das Textfeld ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um eine Importdatei auf dem Clientcomputer auszuwählen. Wenn Sie eine vorhandene Datei auswählen, werden die Daten der registrierten Server an die Datei angehängt. Die Importdatei kann nur eine zuvor exportierte Datei mit registrierten Servern sein. Dateien mit registrierten Servern haben die Dateierweiterung .regsrvr.  
+     **Importieren einer Datei**  
+     Geben Sie den Namen der Importdatei in das Textfeld ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um eine Importdatei auf dem Clientcomputer auszuwählen. Wenn Sie eine vorhandene Datei auswählen, werden die Daten der registrierten Server an die Datei angehängt. Die Importdatei kann nur eine zuvor exportierte Datei mit registrierten Servern sein. Dateien mit registrierten Servern haben die Dateierweiterung .regsrvr.  
   
      **Wählen Sie die Servergruppe für den Import aus**  
      Wählen Sie einen Stammknoten oder eine bestimmte Servergruppe aus, in den/die die Einträge zu den registrierten Servern in der Datei importiert werden. Sie können alle registrierten Server, die registrierten Server in einer bestimmten Servergruppe oder einzelne registrierte Server in die Exportdatei importieren. Die Importfunktion ist rekursiv. Wenn z. B. Servergruppe A die Servergruppe B enthält und Servergruppe B die Servergruppen C und D enthält, werden beim Import von Servergruppe A alle Einträge in A, B, C und D exportiert.  

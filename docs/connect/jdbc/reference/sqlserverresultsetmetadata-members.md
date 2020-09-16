@@ -1,4 +1,5 @@
 ---
+description: SQLServerResultSetMetaData-Elemente
 title: SQLServerResultSetMetaData-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea6812d9a954d5aa9e19c965c9a0a1d6bce7cffe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1010b3d45bcca0c7b719e0a91d007f3acbc0f684
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462652"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>SQLServerResultSetMetaData-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80927101"
   Die folgenden Tabellen enthalten die Elemente, die von der [SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)-Klasse verfügbar gemacht werden.  
   
 ## <a name="constructors"></a>Konstruktoren  
- Keine.  
+ Keine  
   
 ## <a name="fields"></a>Felder  
  Keine.  

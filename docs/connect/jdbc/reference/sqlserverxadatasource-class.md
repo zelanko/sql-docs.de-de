@@ -1,4 +1,5 @@
 ---
+description: SQLServerXADataSource-Klasse
 title: SQLServerXADataSource-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 95fc7b07-2498-4a7e-8f7f-ee0d86b598b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6727ed92b72f905682908da6d38d8df0406a355
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 775768de5cd833a6fdc9d496c5d94653bcf4ef09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462592"
 ---
 # <a name="sqlserverxadatasource-class"></a>SQLServerXADataSource-Klasse
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80926951"
   
  **Paket:** com.microsoft.sqlserver.jdbc  
   
- **Erweitert:** [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
+ **Erweitert** [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
   
  **Implementiert** javax.sql.XADataSource  
   

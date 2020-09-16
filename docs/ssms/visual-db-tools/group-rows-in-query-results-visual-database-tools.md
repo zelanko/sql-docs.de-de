@@ -1,4 +1,5 @@
 ---
+description: Gruppieren von Zeilen in Abfrageergebnissen (Visual Database Tools)
 title: Gruppenzeilen in Abfrageergebnissen
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 743b0ea95643555136ee5c785a1aea689ebb6d50
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c607bc00528abe60ed4cb8e7d7e083f758cf9cea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468366"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Gruppieren von Zeilen in Abfrageergebnissen (Visual Database Tools)
 
@@ -84,5 +85,5 @@ Die entsprechende Ausgabe könnte folgendermaßen aussehen:
     ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Sortieren und Gruppieren von Abfrageergebnissen (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[Sortieren und Gruppieren von Abfrageergebnissen](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Aktualisieren von Daten (Microsoft Drivers for PHP for SQL Server)
 title: Aktualisieren von Daten (Microsoft-Treiber für PHP für SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6431ba7d874d93bfac7510eb21815dc79f093694
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 350b0d1cd368664598fa766f125956fb7bedf4f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466675"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Aktualisieren von Daten (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,9 +35,9 @@ Die Schritte zur Verwendung von [!INCLUDE[ssDriverPHP](../../includes/ssdriverph
   
 |Thema|BESCHREIBUNG|  
 |---------|---------------|  
-|[Gewusst wie: Ausführen von parametrisierten Abfragen](../../connect/php/how-to-perform-parameterized-queries.md)|Beschreibt, wie parametrisierte Abfragen ausgeführt werden|  
-|[Gewusst wie: Streamen von Daten](../../connect/php/how-to-send-data-as-a-stream.md)|Beschreibt, wie Datenströme an den Server übermittelt werden|  
-|[Gewusst wie: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)|Beschreibt, wie **sqlsrv** -Funktionen zur Durchführung von Transaktionen verwendet werden|  
+|[Vorgehensweise: Ausführen parametrisierter Abfragen](../../connect/php/how-to-perform-parameterized-queries.md)|Beschreibt, wie parametrisierte Abfragen ausgeführt werden|  
+|[Vorgehensweise: Senden von Daten als Stream](../../connect/php/how-to-send-data-as-a-stream.md)|Beschreibt, wie Datenströme an den Server übermittelt werden|  
+|[Vorgehensweise: Ausführen von Transaktionen](../../connect/php/how-to-perform-transactions.md)|Beschreibt, wie **sqlsrv** -Funktionen zur Durchführung von Transaktionen verwendet werden|  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Beispielanwendung &#40;SQLSRV-Treiber&#41;](../../connect/php/example-application-sqlsrv-driver.md)

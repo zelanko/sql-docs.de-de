@@ -1,4 +1,5 @@
 ---
+description: Drucken von Abfrageergebnissen (Visual Database Tools)
 title: Drucken von Abfrageergebnissen
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 7cabed9e928dce14f324e7f7b482d2ebed36d8ed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c3efdca2215b4338ef4141117c5ad19031c53bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462759"
 ---
 # <a name="print-query-results-visual-database-tools"></a>Drucken von Abfrageergebnissen (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Wenn Sie die Ergebnisse der Abfrage ausdrucken möchten, können Sie den Inhalt aus dem [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) in ein anderes Windows-Programm, z. B. ein Textverarbeitungsprogramm, kopieren, dort formatieren und drucken.  
+ Wenn Sie die Ergebnisse der Abfrage ausdrucken möchten, können Sie den Inhalt aus dem [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) in ein anderes Windows-Programm, z. B. ein Textverarbeitungsprogramm, kopieren, dort formatieren und drucken.  
   
 Der Abfrage- und Sicht-Designer legt die Abfrageergebnisse in die Zwischenablage, wobei Tabstopps als Trennzeichen zwischen Spalten sowie Wagenrücklauf- und Zeilenvorschubzeichen als Trennzeichen zwischen Zeilen verwendet werden.  
   

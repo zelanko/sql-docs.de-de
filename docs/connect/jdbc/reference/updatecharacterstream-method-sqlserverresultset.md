@@ -1,4 +1,5 @@
 ---
+description: updateCharacterStream-Methode (SQLServerResultSet)
 title: Microsoft-DokumentationupdateCharacterStream-Methode (java.io.Reader, int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 78f39ec7-e27c-4534-bb19-fae806afd08c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d723ed8b45cc3efa47e5936f1d0fa761512d39a8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7a1267a3aafa345a8d0718d68b762728667fe28e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466942"
 ---
 # <a name="updatecharacterstream-method-sqlserverresultset"></a>updateCharacterStream-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

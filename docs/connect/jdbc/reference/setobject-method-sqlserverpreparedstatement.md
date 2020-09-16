@@ -1,4 +1,5 @@
 ---
+description: setObject-Methode (SQLServerPreparedStatement)
 title: setObject-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 93a2b22c-82b4-48c7-a428-369ebe98a372
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 831225d105335826994c7802659d1e5bf69b8800
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2edfcc51f704dee93c5d14490179b65b55907ddf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458532"
 ---
 # <a name="setobject-method-sqlserverpreparedstatement"></a>setObject-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
