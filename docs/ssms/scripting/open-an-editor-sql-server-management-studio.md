@@ -1,26 +1,28 @@
 ---
 title: Öffnen eines Editors (SQL Server Management Studio)
 description: In diesem Artikel erfahren Sie, wie Sie die Editoren im Zusammenhang mit Datenbank-Engine-Abfragen, MDX, DMX und XML/A im SQL Server Management Studio öffnen.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122571"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093478"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Öffnen eines Editors (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  In diesem Thema wird beschrieben, wie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-, MDX-, DMX- oder XML/A-Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet werden. Nach dem Öffnen werden alle Editor-Fenster als Registerkarte im zentralen Bereich von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt.  
+
+In diesem Thema wird beschrieben, wie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-, MDX-, DMX- oder XML/A-Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet werden. Nach dem Öffnen werden alle Editor-Fenster als Registerkarte im zentralen Bereich von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] unterstützt vier Editoren: [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor zum Bearbeiten von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, DMX- und MDX-Editoren zum Bearbeiten von Skripts mit diesen Sprachen und XML/A-Editor zum Bearbeiten von XML/A-Skripts oder XML-Dateien. Diese Editoren können alle auch zum Bearbeiten von Textdateien verwendet werden.  
@@ -81,6 +83,4 @@ ms.locfileid: "87122571"
   
 -   Das Fenster **Vorlagenbrowser** wird im rechten Bereich angezeigt.  
   
--   Doppelklicken Sie auf eine Vorlage, um ein Fenster für die Datenbank-Engine-Abfrage mit dem Text der Vorlage zu öffnen. Um z. B. eine CREATE DATABASE-Vorlage zu öffnen, öffnen Sie den Ordner **SQL Server-Vorlagen** und dann den Ordner **Datenbanken** , und doppelklicken Sie auf **Datenbank erstellen**.  
-  
-  
+-   Doppelklicken Sie auf eine Vorlage, um ein Fenster für die Datenbank-Engine-Abfrage mit dem Text der Vorlage zu öffnen. Um z. B. eine CREATE DATABASE-Vorlage zu öffnen, öffnen Sie den Ordner **SQL Server-Vorlagen** und dann den Ordner **Datenbanken** , und doppelklicken Sie auf **Datenbank erstellen**.

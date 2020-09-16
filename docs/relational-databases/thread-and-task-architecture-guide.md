@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485576"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076805"
 ---
 # <a name="thread-and-task-architecture-guide"></a>Handbuch zur Thread- und Taskarchitektur
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -177,9 +177,13 @@ Von Microsoft Windows wird ein numerisches Prioritätssystem verwendet, das von 
 
 Standardmäßig hat jede Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Priorität 7, was als normale Priorität bezeichnet wird. Die Priorität von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Threads ist somit hoch genug, um ausreichend CPU-Ressourcen zu erhalten, ohne jedoch im Gegenzug andere Anwendungen zu beeinträchtigen. 
 
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]  
+
 Mithilfe der Konfigurationsoption [Prioritätserhöhung](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) kann die Priorität der Threads von einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf 13 heraufgesetzt werden. Diese Einstellung wird als "hohe Priorität" bezeichnet. Durch diese Einstellung erhalten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Threads eine höhere Priorität als die meisten anderen Anwendungen. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Threads werden somit aller Wahrscheinlichkeit nach gesendet, sobald sie zur Ausführung bereit sind, und müssen nicht für Threads anderer Anwendungen zurücktreten. Auf diese Weise kann die Leistung gesteigert werden, wenn ein Server nur Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und keine anderen Anwendungen ausführt. Wenn jedoch eine arbeitsspeicherintensive Operation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] durchgeführt wird, verfügen andere Anwendungen in der Regel nicht über eine ausreichend hohe Priorität, um Vorrang vor dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Thread zu besitzen. 
 
 Falls Sie mehrere Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem Computer ausführen und Prioritätserhöhung nur für einige Instanzen aktiviert ist, kann die Leistung von Instanzen, die mit normaler Priorität ausgeführt werden, beeinträchtigt werden. Auch kann die Leistung anderer Anwendungen und Komponenten auf dem Server beeinträchtigt werden, wenn die Prioritätserhöhung aktiviert ist. Diese Option sollte somit nur in genau kontrollierten Situationen verwendet werden.
+
 
 ## <a name="hot-add-cpu"></a>Hinzufügen von CPUs bei laufendem Systembetrieb
 Hinzufügen von CPUs im laufenden Systembetrieb bedeutet, dass Sie CPUs dynamisch hinzufügen können, während das System ausgeführt wird. CPUs können auf verschiedene Weise hinzugefügt werden: physisch durch neue Hardware, logisch durch eine Onlinepartitionierung der Hardware oder virtuell über eine Virtualisierungsschicht. Das Hinzufügen von CPUs im laufenden Systembetrieb wird in [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] ab [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt.
