@@ -1,11 +1,8 @@
 ---
 title: Verwalten der Codeformatierung
 description: Hier erfahren Sie mehr über die drei Arten des Texteinzugs und deren Verwendung sowie das Erstellen klickbarer URLs.
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - indenting code [SQL Server]
@@ -26,17 +23,22 @@ helpviewer_keywords:
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88d0d170172d215ae0bed9574005bc83bb42f026
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d85ba0589e239fc54280f3c418eaf011e69906b1
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123101"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093406"
 ---
 # <a name="manage-code-formatting"></a>Verwalten der Codeformatierung
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Mit dem Editor können Sie Code formatieren, z. B. mit Einzug, ausgeblendetem Text, URLs usw. Außerdem können Sie mit dem intelligenten Einzug den Code automatisch bei der Eingabe formatieren.  
+
+Mit dem Editor können Sie Code formatieren, z. B. mit Einzug, ausgeblendetem Text, URLs usw. Außerdem können Sie mit dem intelligenten Einzug den Code automatisch bei der Eingabe formatieren.  
   
 ## <a name="indenting"></a>Einzug  
  Für den Texteinzug stehen drei verschiedene Stile zur Auswahl. Außerdem können Sie angeben, aus wie vielen Leerzeichen ein Einzug oder Tabstopp besteht und ob der Editor für den Einzug Tabulatoren oder Leerzeichen verwenden soll.  
