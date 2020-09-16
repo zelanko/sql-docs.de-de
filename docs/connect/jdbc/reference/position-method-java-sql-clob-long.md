@@ -1,4 +1,5 @@
 ---
+description: position-Methode (java.sql.Clob, long)
 title: position(java.sql.Clob, long)-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b2fb34d5-1d34-4764-a795-712d9c6aa313
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b12c91fa08deb7856bb3a14158f8d02be5659a61
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d782839bc1a68008c4e86231fdf436b8c6f7a580
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433022"
 ---
 # <a name="position-method-javasqlclob-long"></a>position-Methode (java.sql.Clob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

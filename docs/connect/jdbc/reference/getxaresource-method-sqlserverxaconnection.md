@@ -1,4 +1,5 @@
 ---
+description: getXAResource-Methode (SQLServerXAConnection)
 title: Methode „getXAResource“ (SQLServerXAConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: beee81cbc62a1257c9f9f0fbe8c93720fa54a523
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5a523a1a1b731288632c969baee1170408734a81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433702"
 ---
 # <a name="getxaresource-method-sqlserverxaconnection"></a>getXAResource-Methode (SQLServerXAConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

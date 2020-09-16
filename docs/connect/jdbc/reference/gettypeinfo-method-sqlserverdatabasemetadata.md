@@ -1,4 +1,5 @@
 ---
+description: getTypeInfo-Methode (SQLServerDatabaseMetaData)
 title: getTypeInfo-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b007e5db3358cd1af350ac0d87af7df1af18518
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f58266a7b90b88c49aabfb60062e396181f8dde7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434012"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public java.sql.ResultSet getTypeInfo()
   
  Das von der getTypeInfo-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|type|BESCHREIBUNG|  
+|Name|Typ|BESCHREIBUNG|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
 |DATA_TYPE|**short**|Der SQL-Datentyp aus "java.sql.Types".|  
@@ -55,7 +56,7 @@ public java.sql.ResultSet getTypeInfo()
 |CREATE_PARAMS|**String**|Die Beschreibung der Erstellungsparameter für den Datentyp.|  
 |NULLABLE|**short**|Gibt an, ob die Spalte einen NULL-Wert enthalten kann. Es kann sich um einen der folgenden Werte handeln:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|Gibt an, ob bei dem Datentyp die Groß-/Kleinschreibung berücksichtigt wird. **TRUE**, wenn die Groß-/Kleinschreibung vom Typ berücksichtigt wird, andernfalls **FALSE**.|  
-|SEARCHABLE|**short**|Gibt an, ob die Spalte in einer SQL-Klausel vom Typ "WHERE" verwendet werden kann. Es kann sich um einen der folgenden Werte handeln:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|DURCHSUCHBAR|**short**|Gibt an, ob die Spalte in einer SQL-Klausel vom Typ "WHERE" verwendet werden kann. Es kann sich um einen der folgenden Werte handeln:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|Gibt das Vorzeichen des Datentyps an. **TRUE**, wenn der Typ kein Vorzeichen besitzt, andernfalls **FALSE**.|  
 |FIXED_PREC_SCALE|**boolean**|Gibt an, dass es sich bei dem Datentyp um eine Währung handeln kann. **TRUE**, wenn es sich bei dem Datentyp um eine Währung handelt, andernfalls **FALSE**.|  
 |AUTO_INCREMENT|**boolean**|Gibt an, dass der Datentyp automatisch inkrementiert werden kann. **TRUE**, wenn der Typ automatisch inkrementiert werden kann, andernfalls **FALSE**.|  

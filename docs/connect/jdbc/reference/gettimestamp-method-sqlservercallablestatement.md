@@ -1,4 +1,5 @@
 ---
+description: getTimestamp-Methode (SQLServerCallableStatement)
 title: getTimestamp-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: fca2d35f-266b-4dc7-9aa9-30a17ee2ecec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0197898f3d5c8d54002eed17be366828d364ffa6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 30e980dd701ca0894830f606479db3d7abdb07b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434042"
 ---
 # <a name="gettimestamp-method-sqlservercallablestatement"></a>getTimestamp-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

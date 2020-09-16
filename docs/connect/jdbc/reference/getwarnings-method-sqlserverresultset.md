@@ -1,4 +1,5 @@
 ---
+description: getWarnings-Methode (SQLServerResultSet)
 title: getWarnings-Methode (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: eb4339b0-383b-4337-a935-e8ec3f0d4123
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ed0ac3af651471c112a1d0b9d9d1c84ea9e8a1e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 74d18c8739a61b15fbbc7fb9606a211cae62f32b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433792"
 ---
 # <a name="getwarnings-method-sqlserverresultset"></a>getWarnings-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
