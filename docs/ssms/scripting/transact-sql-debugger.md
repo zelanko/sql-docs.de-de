@@ -3,7 +3,7 @@ title: Transact-SQL-Debugger
 description: Hier erfahren Sie, wie Sie Code schrittweise durchlaufen und den Ausführungsstatus mit dem Transact-SQL-Debugger anzeigen sowie verschiedene andere Debuggingaufgaben durchführen.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7a3f86e5df9c94905089cd5382d3895dd9f01e84
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3485795f239017df321e862a04c0411a3a9318c0
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246158"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480389"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL-Debugger
 
@@ -76,4 +76,4 @@ Jedes Mal, wenn der Debugger die Ausführung bei einer bestimmten [!INCLUDE[tsql
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)
+[Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)

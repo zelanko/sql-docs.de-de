@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data Transformation Services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4a512b91bbac1a84004643de2738468f21ee984
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ab2ad7c0e824332d59f0c724c835b1f5fedfeb97
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248668"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570299"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -46,7 +46,7 @@ Mithilfe der grafischen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md
 Weitere Informationen zum Installieren von SQL Server Integration Services mit SQL Server und weitere Downloads, die Sie möglicherweise wünschen oder benötigen, finden Sie unter [Installieren von Integration Services](install-windows/install-integration-services.md).
 
 ##  <a name="info_tip-resources"></a>![info_tip](../sql-server/media/info-tip.png) Ressourcen
--   [Erhalten Sie Hilfe im SSIS-Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
+-   [Erhalten Sie Hilfe im SSIS-Forum](https://docs.microsoft.com/answers/topics/sql-server-integration-services.html)
 -   [Erhalten Sie Hilfe auf Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  
 -   [Folgen Sie dem SSIS-Teamblog](https://blogs.msdn.microsoft.com/ssis/)
 -   [Probleme melden und Funktionen anfordern](https://feedback.azure.com/forums/908035-sql-server)
