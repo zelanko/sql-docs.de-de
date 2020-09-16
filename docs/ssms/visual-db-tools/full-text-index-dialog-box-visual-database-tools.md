@@ -1,4 +1,5 @@
 ---
+description: Volltextindex (Dialogfeld) (Visual Database Tools)
 title: Das Dialogfeld „Volltextindex“
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 8330963e62c3185203c9b25c53785f12ec9fb8be
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 566239ac238afb66650c50cd9d96c8fa81d3f70c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497143"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Volltextindex (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ Mit diesem Dialogfeld können Sie einen Volltextindex für Volltextsuchen in tex
 > [!NOTE]
 > Eine Volltextindex-Funktionalität ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Ausgewählter Volltextindex**  
 Listet vorhandene Volltextindizes auf. Wählen Sie einen Index aus, um seine Eigenschaften im Datenblatt rechts anzuzeigen. Wenn die Liste leer ist, wurden bisher keine Volltextbeziehungen für die Tabelle definiert.  
   

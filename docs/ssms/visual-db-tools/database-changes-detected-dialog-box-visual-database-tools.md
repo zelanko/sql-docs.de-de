@@ -1,4 +1,5 @@
 ---
+description: Es wurden Änderungen in der Datenbank festgestellt (Dialogfeld) (Visual Database Tools)
 title: Es wurden Änderungen in der Datenbank festgestellt (Dialogfeld)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: eff88edb726854bdc24fe334190d9014a2693a97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3d063c559669e9dfe973485611895aff5d2d8688
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497202"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>Es wurden Änderungen in der Datenbank festgestellt (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ Dieses Dialogfeld wird angezeigt, wenn Sie ein Datenbankdiagramm oder ausgewähl
 > [!NOTE]  
 > Die in einer Tabelle oder einem Datenbankdiagramm vorgenommenen Änderungen können zwar nicht rückgängig gemacht werden, doch werden sie erst dann in der Datenbank gespeichert, wenn Sie die Tabelle bzw. das Diagramm speichern. Sie können nicht gespeicherte Änderungen verwerfen, indem Sie **Nein** auswählen und alle geöffneten Diagramme schließen, ohne sie zu speichern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Warnung bei Unterschiederkennung**  
 Geben Sie an, ob dieses Dialogfeld beim nächsten Versuch angezeigt wird, ein Datenbankdiagramm oder ausgewählte Tabellen zu speichern. Wenn diese Option aktiviert ist, wird das Dialogfeld weiterhin immer dann angezeigt, wenn Sie ein Diagramm oder eine Tabelle speichern, das bzw. die in Bezug auf die Datenbank veraltet ist. Ist die Option deaktiviert, wird das Dialogfeld nicht angezeigt. Dieses Kontrollkästchen ist standardmäßig aktiviert. Wenn Sie diese Option deaktivieren, können Sie sie im Dialogfeld **Optionen** erneut aktivieren.  
   

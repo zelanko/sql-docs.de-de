@@ -1,4 +1,5 @@
 ---
+description: Hinzufügen eines benutzerdefinierten Berichts zu Management Studio
 title: Hinzufügen eines benutzerdefinierten Berichts zu Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e6b5323efc2d0ef9a32e68997ae53e7056dc9fb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: aa920b620cfa0045228fcdb5675c1e88bc7ab035
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480163"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Hinzufügen eines benutzerdefinierten Berichts zu Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ In diesem Thema wird beschrieben, wie ein einfacher, als RDL-Datei gespeicherter
   
 4.  Klicken Sie in der Liste **Vorlagen** auf **Berichtsserverprojekt-Assistent**.  
   
-5.  Geben Sie unter **Name** **ConnectionsReport**ein, und klicken Sie anschließend auf **OK**.  
+5.  Geben Sie unter **Name****ConnectionsReport**ein, und klicken Sie anschließend auf **OK**.  
   
 6.  Klicken Sie auf der Einführungsseite des **Berichts-Assistenten** auf **Weiter**.  
   

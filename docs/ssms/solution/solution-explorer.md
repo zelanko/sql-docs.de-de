@@ -1,4 +1,5 @@
 ---
+description: Projektmappen-Explorer
 title: Projektmappen-Explorer
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: ac4584f715da631c13a56fa531334e9da20f6c55
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b1c98d1e8cdf0525da76e65ef7481def4e3feb0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491773"
 ---
 # <a name="solution-explorer"></a>Projektmappen-Explorer
 
@@ -54,7 +55,7 @@ Erste Schritte mit den SQL Server-Lösungen mithilfe der folgenden Themen:
   
 |BESCHREIBUNG|Thema|  
 |-|-|    
-|Beschreibt, wie ein Projekt oder mehrere Projekte in einer Projektmappe gesammelt werden.|[Projektmappen &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
-|Beschreibt, wie ein Projekt erstellt und Elemente wie Skripts und Verbindungen hinzugefügt werden.|[Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
+|Beschreibt, wie ein Projekt oder mehrere Projekte in einer Projektmappe gesammelt werden.|[Projektmappen (SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)|  
+|Beschreibt, wie ein Projekt erstellt und Elemente wie Skripts und Verbindungen hinzugefügt werden.|[Projekte (SQL Server Management Studio)](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Enthält Informationen zu den Dateien, mit denen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Projektmappen und Dateien verwaltet.|[Dateien zum Verwalten von Projektmappen und Projekten](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Tasks und Berechtigungen: Tasks auf Elementebene'
 title: Tasks auf Elementebene | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6ff9b1cef9a4ee7edf5b71d669416921330e5d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492573"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Tasks und Berechtigungen: Tasks auf Elementebene
   Eine Aufgabe auf Elementebene ist eine Auflistung von Berechtigungen, die sich auf einen Bericht, einen Ordner, ein Berichtsmodell, eine Ressource oder eine freigegebene Datenquelle beziehen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält auch Aufgaben auf Systemebene, die sich auf die Berichtsserversite als Ganzes beziehen. Weitere Informationen finden Sie unter [Aufgaben auf Systemebene](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Weitere Informationen zu Aufgaben und Berechtigungen im Allgemeinen finden Sie unter [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  

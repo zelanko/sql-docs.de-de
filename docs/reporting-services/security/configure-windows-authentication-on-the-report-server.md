@@ -1,4 +1,5 @@
 ---
+description: Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
 title: Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver | Microsoft-Dokumentation
 ms.date: 06/22/2020
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3320851b253b8ca509b564405db4b873e5dea0b
-ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
+ms.openlocfilehash: eb6981b3396afdc387693c7ae89430179a6d68b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492653"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   In der Standardeinstellung werden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Anforderungen übergeben, die die Negotiate- oder die NTLM-Authentifizierung angeben. Wenn eine Bereitstellung Clientanwendungen und Browser umfasst, die diese Sicherheitsanbieter nutzen, können Sie die Standardwerte ohne zusätzliche Konfiguration verwenden. Wenn Sie einen anderen Sicherheitsanbieter für die integrierte Sicherheit von Windows nutzen möchten (wenn Sie beispielsweise Kerberos direkt verwenden möchten) oder wenn Sie die Standardwerte verändert haben und die ursprünglichen Einstellungen wiederherstellen möchten, können Sie mithilfe der in diesem Thema enthaltenen Informationen die Authentifizierungseinstellungen auf dem Berichtsserver festlegen.  

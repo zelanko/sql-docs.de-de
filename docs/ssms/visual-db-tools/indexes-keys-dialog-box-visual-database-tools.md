@@ -1,4 +1,5 @@
 ---
+description: Indizes – Schlüssel (Dialogfeld) (Visual Database Tools)
 title: Indizes – Schlüssel (Dialogfeld)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: f251517d488324028af33e2749955cbb91c1193e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 16d6c66945d46ecf2b82410d7ae573a450238922
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85980930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485005"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Indizes – Schlüssel (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +28,7 @@ Mit diesem Dialogfeld können Sie Indizes, Primärschlüssel und eindeutige Schl
 > [!NOTE]  
 > Wenn die Tabelle zur Replikation veröffentlicht ist, müssen Sie mit der Transact-SQL-Anweisung [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder mit SMO (SQL Server Management Objects) Schemaänderungen ausführen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index**  
 Listet die vorhandenen Primärschlüssel, eindeutigen Schlüssel und Indizes auf. Wenn Sie einen Index oder Schlüssel auswählen, werden dessen Eigenschaften rechts im Datenblatt angezeigt. Falls die Liste leer ist, sind für die Tabelle Indizes definiert worden.  
   
@@ -65,7 +66,7 @@ Wenn diese Kategorie erweitert ist, werden Informationen zu **Als CLUSTERED erst
 Erstellen Sie den Schlüssel oder Index als CLUSTERED. Pro Tabelle ist nur ein gruppierter Index zulässig. Die Daten in der Tabelle werden in der Reihenfolge des gruppierten Indexes gespeichert. Weitere Informationen finden Sie unter [Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md) und [Erstellen nicht gruppierter Indizes](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Datenbereichsspezifikation**  
-Wird dieses Element erweitert, werden Informationen für **(Datenbereichstyp)** , **Schemaname der Dateigruppe oder Partition**und **Partitionsspaltenliste**angezeigt.  
+Wird dieses Element erweitert, werden Informationen für **(Datenbereichstyp)**, **Schemaname der Dateigruppe oder Partition**und **Partitionsspaltenliste**angezeigt.  
   
 **(Datenbereichstyp)**  
 Gibt an, ob dieser Index oder Schlüssel zu einer Dateigruppe oder einem Partitionsschema gehört.  
@@ -92,9 +93,9 @@ Geben Sie an, ob für größer werdende Zwischenseiten in diesem Index der gleic
 **Doppelte Schlüssel ignorieren**  
 Geben Sie an, was geschieht, wenn eine Zeile, deren Schlüsselwert mit einem vorhandenen Schlüsselwert identisch ist, im Rahmen eines Masseneinfügevorgangs eingefügt wird. Wenn Sie Folgendes auswählen:  
   
--   **Ja**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Warnung aus, ignoriert die fehlerhafte eingehende Zeile und versucht, die übrigen Zeilen einzufügen.  
+-   **Ja, ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Warnung aus, ignoriert die fehlerhafte eingehende Zeile und versucht, die übrigen Zeilen einzufügen.  
   
--   **Nein**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Fehlermeldung aus und führt ein Rollback für den gesamten Masseneinfügevorgang durch.  
+-   **Nein, ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt eine Fehlermeldung aus und führt ein Rollback für den gesamten Masseneinfügevorgang durch.  
   
 **Eingeschlossene Spalten**  
 Zeigt eine durch Trennzeichen getrennte Liste der Namen aller Spalten an, die den Indexschlüssel bilden. Unterschlüsselspalten können nur für nicht gruppierte Indizes angegeben werden. Diese Eigenschaft ist bei XML-Indizes ausgeblendet.  

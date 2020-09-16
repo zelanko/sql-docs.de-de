@@ -1,4 +1,5 @@
 ---
+description: Identifizieren von Datenbanken und Tabellen für Stretch Database von Data Migration Assistant
 title: Identifizieren von Datenbanken und Tabellen
 ms.date: 10/30/2017
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ba45280f9a66c8d2b71841b8cae4272e850628f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492594"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identifizieren von Datenbanken und Tabellen für Stretch Database von Data Migration Assistant
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Laden Sie Microsoft Data Migration Assistant herunter, und führen Sie diesen aus, um Datenbanken und Tabellen, die für Stretch Database in Frage kommen, sowie mögliche Blockierungsprobleme zu ermitteln.
@@ -37,7 +38,7 @@ ms.locfileid: "73843752"
 
 3.  Wählen Sie **SQL Server** sowohl als **Source server type** (Quellservertyp) als auch als **Target server type** (Zielservertyp) aus.
 
-4.  Klicken Sie auf **Erstellen**. 
+4.  Wählen Sie **Erstellen** aus. 
 
 5. Klicken Sie auf der Seite **Optionen** (Schritt 1) auf **New features recommendation** (Empfehlungen neuer Funktionen). Deaktivieren Sie gegebenenfalls die Auswahl für **Kompatibilitätsprobleme**.
 

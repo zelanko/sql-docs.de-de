@@ -1,4 +1,5 @@
 ---
+description: Öffnen mit (neue Datei)
 title: Öffnen mit (neue Datei)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1ac269ba2768195448927375b4cbde5713f15f2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e619e457bf538a0a8c75e0615e45ca52567ea43a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491941"
 ---
 # <a name="open-with-new-file"></a>Öffnen mit (neue Datei)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Sie können ein Dokument in einem oder mehreren Editoren öffnen, indem Sie im Menü **Datei** auf **Öffnen** und danach auf **Datei**klicken. Wählen Sie im Dialogfeld **Datei öffnen** die Datei aus, klicken Sie auf den Pfeil bei **Öffnen** , und klicken Sie dann auf **Öffnen mit**. Klicken Sie im Dialogfeld **Öffnen mit** in der Liste **Wählen Sie das zu öffnende Programm aus** auf das bevorzugte Programm, und klicken Sie dann auf **Öffnen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Wählen Sie das zu öffnende Programm aus**  
 Listet die in [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio für den ausgewählten Dateityp zur Verfügung stehenden Editoren auf. Wählen Sie aus der Liste den Editor aus, mit dem Sie das Dokument öffnen möchten, oder klicken Sie auf **Hinzufügen** , um einen neuen Editor zur Liste hinzuzufügen.  
   

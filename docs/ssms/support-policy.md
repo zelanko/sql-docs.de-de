@@ -1,4 +1,5 @@
 ---
+description: Supportrichtlinie für SQL Server Management Studio (SSMS)
 title: Supportrichtlinie für SQL Server Management Studio (SSMS)
 ms.date: 11/13/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 2b46da30a4ea3c7548ca4696f144373feea7b986
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 035ea616a92f1760252087bc6a8e27bec3fe2d24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245665"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497268"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>Supportrichtlinie für SQL Server Management Studio (SSMS)
 
@@ -43,4 +44,4 @@ Wartungsphase **Vollständige Unterstützung**: Wenn die neueste Current Branch-
 
 
 > [!NOTE]
-> Die neueste Current Branch-Version ist stets in der Wartungsphase **Vollständige Unterstützung**. Diese Aussage zur Unterstützung bedeutet, dass Sie, wenn Sie auf einen Codefehler stoßen, der ein kritisches Update rechtfertigt, die neueste Current Branch-Version installiert haben müssen, um eine Fehlerbehebung zu erhalten.
+> Die neueste Current Branch-Version ist stets in der Wartungsphase **Vollständige Unterstützung**. Dieser Supporthinweis bedeutet, dass bei einem Codefehler, der ein kritisches Update erfordert, die neueste Current Branch-Version installiert sein muss, damit Sie eine Problembehebung erhalten.

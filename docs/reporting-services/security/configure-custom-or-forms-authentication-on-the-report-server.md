@@ -1,4 +1,5 @@
 ---
+description: Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver
 title: Konfigurieren der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver | Microsoft-Dokumentation
 ms.date: 04/18/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 196b326a9854242369efbdc6c697d292a1eb6e94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492623"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver
 
@@ -35,7 +36,7 @@ Wenn Sie eine Formular- oder benutzerdefinierte Authentifizierungserweiterung in
 
 1.  Öffnen Sie RSReportServer.config in einem Text-Editor.
 
-2.  Suchen Sie nach \<**Authentifizierung**>.
+2.  Suchen Sie \<**Authentication**>.
 
 3.  Kopieren Sie die folgende XML-Struktur:
 
@@ -48,11 +49,11 @@ Wenn Sie eine Formular- oder benutzerdefinierte Authentifizierungserweiterung in
     </Authentication>
     ```
 
-4.  Ersetzen Sie damit die vorhandenen Einträge für <\<**Authentifizierung**>.
+4.  Ersetzen Sie damit die vorhandenen Einträge für \<**Authentication**>.
 
      Beachten Sie, dass Sie **Custom** nicht mit anderen Authentifizierungstypen verwenden können.
 
-5.  Speichern Sie die Datei .
+5.  Speichern Sie die Datei.
 
 6.  Öffnen Sie die Datei Web.config für den Berichtsserver. Standardmäßig befindet sich diese Datei unter "Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer".
 
@@ -69,7 +70,7 @@ Wenn Sie eine Formular- oder benutzerdefinierte Authentifizierungserweiterung in
     ```
 9. Fügen Sie der Konfigurationsdatei die Elementstruktur **PassThroughCookies** hinzu. Weitere Informationen finden Sie unter [Konfigurieren des Webportals für die Übergabe von benutzerdefinierten Authentifizierungscookies](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
   
-10. Speichern Sie die Datei .  
+10. Speichern Sie die Datei.  
   
 11. Wenn Sie eine horizontal skalierte Bereitstellung konfiguriert haben, wiederholen Sie alle vorherigen Schritte für andere in der Bereitstellung vorhandene Berichtsserver.  
   

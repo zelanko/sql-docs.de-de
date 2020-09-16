@@ -1,4 +1,5 @@
 ---
+description: Hinzufügen von Sparklines und Datenbalken (Berichts-Generator und SSRS)
 title: Hinzufügen von Sparklines und Datenbalken (Berichts-Generator) | Microsoft-Dokumentation
 ms.date: 03/03/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c33752294c7335dca86dd51d7d06478188c20548
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74db316bf1e8eb4d72f3419799f76e3c2742fa81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484958"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>Hinzufügen von Sparklines und Datenbalken (Berichts-Generator und SSRS)
   Sparklines und Datenbalken sind kleine, zusätzliche Diagramme, die viele Information mit wenig relevanten Details vermitteln. Weitere Informationen dazu finden Sie unter [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
@@ -37,9 +38,9 @@ ms.locfileid: "77081532"
   
      Der Bereich **Diagrammdaten** wird geöffnet.  
   
-6.  Klicken Sie im Bereich **Werte** auf das Pluszeichen ( **) bei** Felder hinzufügen **+** und anschließend auf das Feld, dessen Werte Sie als Diagramm darstellen möchten.  
+6.  Klicken Sie im Bereich **Werte** auf das Pluszeichen ( **) bei** Felder hinzufügen**+** und anschließend auf das Feld, dessen Werte Sie als Diagramm darstellen möchten.  
   
-7.  Klicken Sie im Bereich **Kategoriegruppen** auf das Pluszeichen ( **) bei** Felder hinzufügen **+** und anschließend auf das Feld, nach dessen Werten Sie gruppieren möchten.  
+7.  Klicken Sie im Bereich **Kategoriegruppen** auf das Pluszeichen ( **) bei** Felder hinzufügen**+** und anschließend auf das Feld, nach dessen Werten Sie gruppieren möchten.  
   
      In der Regel fügen Sie bei Sparklines und Datenbalken dem Bereich **Reihengruppe** kein Feld hinzu, da Sie nur eine Reihe für jede Zeile möchten.  
   

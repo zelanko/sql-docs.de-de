@@ -1,4 +1,5 @@
 ---
+description: 'Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen'
 title: Hinzufügen und Ändern von Datenbankdiagrammen
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 41ecd01badd21d8c3198dfb661d63b7d14753d76
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 87ff469370e58c261e762cf9c4d6c604488ccfb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479918"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In dieser exemplarischen Vorgehensweise wird das Erstellen und Ändern eines Datenbankdiagramms und das Ausführen von Änderungen an der Datenbank mithilfe der Datenbankdiagrammkomponente erläutert. Es wird in Einzelschritten erklärt, wie Diagrammen Tabellen hinzugefügt werden, wie Beziehungen zwischen Tabellen erstellt werden, wie Einschränkungen und Indizes für Spalten erstellt werden und wie die Ebene der Informationen geändert wird, die für die einzelnen Tabellen angezeigt werden.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
-Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folgende Voraussetzungen erfüllt sein:  
+Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
   
 -   Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank  
   
@@ -45,7 +46,7 @@ Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folge
   
 3.  Klicken Sie mit der rechten Maustaste auf den Knoten Datenbankdiagramme, und wählen Sie **Neues Datenbankdiagramm** aus.  
   
-    Wenn die Datenbank nicht über die zum Erstellen von Diagrammen erforderlichen Objekte verfügt, wird folgende Meldung angezeigt: **Dieser Datenbank fehlt mindestens eines der Unterstützungsobjekte, die erforderlich sind, damit Diagramme für die Datenbank erstellt werden können. Möchten Sie es erstellen?** Wählen Sie die Option **Ja** aus.  
+    Wenn die Datenbank nicht über die zum Erstellen von Diagrammen erforderlichen Objekte verfügt, wird folgende Meldung angezeigt: **Dieser Datenbank fehlt mindestens eines der Unterstützungsobjekte, die erforderlich sind, damit Diagramme für die Datenbank erstellt werden können. Möchten Sie es erstellen?** Klicken Sie auf **Ja**.  
   
     Das Dialogfeld **Tabelle hinzufügen** wird angezeigt.  
   
@@ -79,9 +80,9 @@ Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folge
   
     |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**int**|Aktiviert|  
-    |**T1col2**|**varchar(50)**|Aktiviert|  
-    |**T1col3**|**float**|Aktiviert|  
+    |**T1col1**|**int**|checked|  
+    |**T1col2**|**varchar(50)**|checked|  
+    |**T1col3**|**float**|checked|  
   
 4.  Klicken Sie mit der rechten Maustaste auf `T1col1` , und wählen Sie **Primärschlüssel festlegen**aus.  
   
@@ -123,8 +124,8 @@ Im Datenbank-Designer können Sie CHECK-Einschränkungen hinzufügen und Beziehu
     |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|nicht aktiviert|  
-    |**T2col2**|**varchar(50)**|Aktiviert|  
-    |**T2col3**|**xml**|Aktiviert|  
+    |**T2col2**|**varchar(50)**|checked|  
+    |**T2col3**|**xml**|checked|  
   
     > [!NOTE]  
     > Die Spalten in einer Fremdschlüsselbeziehung, die sich auf der Seite des Primärschlüssels befinden, müssen Teil eines Primärschlüssels oder einer Unique-Einschränkung sein.  

@@ -1,4 +1,5 @@
 ---
+description: 'ConfigurationSetting-Eigenschaft: IsSharePointIntegrated'
 title: IsSharePointIntegrated-Eigenschaft (WMI) | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bac72cf23cfebf48f58b24bea0b50aa9033bf5d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 628212c9538b3a2efea08b0fdfb5def7fe017e10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497903"
 ---
 # <a name="configurationsetting-property---issharepointintegrated"></a>ConfigurationSetting-Eigenschaft: IsSharePointIntegrated
   Gibt an, ob sich der Berichtsserver im integrierten SharePoint-Modus befindet Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]gibt diese Eigenschaft immer **FALSE** zurück, da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanzen im SharePoint-Modus freigegebene SharePoint-Dienste darstellen und nicht von WMI-Anbietern kontrolliert werden.  

@@ -1,4 +1,5 @@
 ---
+description: Aufgaben und Berechtigungen
 title: Aufgaben und Berechtigungen | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8724bbcfdb410f573ea65fbc1b9364d44f9af23d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 410d8748e4ccdc853ab37d001685a5adebb0da69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480662"
 ---
 # <a name="tasks-and-permissions"></a>Aufgaben und Berechtigungen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]stellen *Aufgaben* Aktionen dar, die ein Benutzer oder Administrator ausführen kann. Aufgaben sind vordefiniert. Es ist nicht möglich, benutzerdefinierte Aufgaben zu erstellen oder die vom Programm oder über ein Tool bereitgestellten Aufgaben zu ändern. Es gibt insgesamt fünfundzwanzig Aufgaben. Diese Aufgaben enthalten alle Vorgänge, die für die rollenbasierte Sicherheit zur Verfügung stehen. Beispiele für Aufgaben sind "Berichte anzeigen", "Berichte verwalten" oder "Berichtsservereigenschaften verwalten".  

@@ -1,4 +1,5 @@
 ---
+description: Entfernen von Tabellen aus Abfragen (Visual Database Tools)
 title: Entfernen von Tabellen aus Abfragen
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 2df3bd96d6fa2e398b4a4be1effefcc80f732df2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 51402e1a0017f80b192bde54d7ef53aff99f61d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491596"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>Entfernen von Tabellen aus Abfragen (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ Sie können eine Tabelle oder ein Tabellenwertobjekt aus der Abfrage entfernen.
   
 -   Wählen Sie im **Diagrammbereich**die Tabelle, die Sicht, die benutzerdefinierte Funktion, das Synonym oder die Abfrage aus, und drücken Sie anschließend ENTF, oder klicken Sie mit der rechten Maustaste auf das Objekt, und wählen Sie im daraufhin angezeigten Dialogfeld den Befehl **Entfernen** aus. Sie können mehrere Objekte auswählen und gleichzeitig entfernen.  
   
-    Oder  
+    - oder -  
   
 -   Entfernen Sie im **SQL-Bereich**alle Verweise auf das Objekt.  
   
@@ -41,8 +42,8 @@ Wenn Sie eine Tabelle oder ein Tabellenwertobjekt entfernen, werden vom Abfrage-
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Hinzufügen von Tabellen zu Abfragen](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)  
-[Erstellen von Tabellenaliasen](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
+[Erstellen von Tabellenaliasnamen](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
 [Angeben von Suchkriterien](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Zusammenfassen von Abfrageergebnissen](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
-[Durchführen grundlegender Vorgänge mit Abfragen](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Ausführen grundlegender Vorgänge mit Abfragen](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

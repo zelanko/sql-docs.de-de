@@ -1,4 +1,5 @@
 ---
+description: Spalteneigenschaften (Visual Database Tools)
 title: Spalteneigenschaften
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 56bb24bbf28a07da1ade12eecea0e0db5b2badbd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480084"
 ---
 # <a name="column-properties-visual-database-tools"></a>Spalteneigenschaften (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ Für Spalten gibt es zwei Gruppen von Eigenschaften: eine vollständige Gruppe, 
 > Die in diesem Thema behandelten Eigenschaften sind nicht alphabetisch, sondern nach Kategorie angeordnet.  
   
 > [!NOTE]  
-> Die angezeigten Dialogfelder und Menübefehle können von den in der Hilfe beschriebenen abweichen. Dies hängt von Ihren aktiven Einstellungen oder Ihrer Edition ab. Um Ihre Einstellungen zu ändern, wählen Sie **Einstellungen importieren und exportieren** im Menü **Extras** aus.  
+> Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.  
   
 ## <a name="properties-window"></a>Eigenschaftenfenster  
 Die folgenden Eigenschaften werden im Eigenschaftenfenster angezeigt, wenn Sie im Server-Explorer eine Spalte auswählen.  
@@ -72,7 +73,7 @@ Zeigt an, ob die Spalte NULL-Werte zulässt.
 **Genauigkeit**  
 Zeigt die maximale Anzahl der für numerische Datentypen zulässigen Stellen. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben.  
   
-**Skalieren**  
+**Skalierung**  
 Zeigt die maximale Anzahl von Stellen an, die bei numerischen Datentypen rechts vom Dezimalkomma erscheinen können. Dieser Wert muss kleiner oder gleich der Genauigkeit sein. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben.  
   
 ## <a name="column-properties-tab"></a>Registerkarte Spalteneigenschaften  
@@ -105,14 +106,14 @@ Zeigt die Anzahl der für zeichenbasierte Datentypen zulässigen Zeichen an. Die
 **Genauigkeit**  
 Zeigt die maximale Anzahl der für numerische Datentypen zulässigen Stellen. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben. Diese Eigenschaft ist nur für numerische Datentypen verfügbar.  
   
-**Skalieren**  
+**Skalierung**  
 Zeigt die maximale Anzahl von Stellen an, die bei numerischen Datentypen rechts vom Dezimalkomma erscheinen können. Dieser Wert muss kleiner oder gleich der Genauigkeit sein. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben. Diese Eigenschaft ist nur für numerische Datentypen verfügbar.  
   
 **Kategorie Tabellen-Designer**  
 Wird erweitert, um die restlichen Eigenschaften anzuzeigen.  
   
 **Sortierung**  
-Zeigt die Sortierungseinstellung der ausgewählten Spalte an. Klicken Sie auf **Sortierung** und dann rechts neben dem Wert auf die Schaltfläche mit den Auslassungspunkten **(...)** , um diese Einstellung zu ändern.  
+Zeigt die Sortierungseinstellung der ausgewählten Spalte an. Klicken Sie auf **Sortierung** und dann rechts neben dem Wert auf die Schaltfläche mit den Auslassungspunkten **(...)**, um diese Einstellung zu ändern.  
   
 **Spezifikationskategorie der berechneten Spalte**  
 Wird erweitert, um die Eigenschaften für **Formel** und für **Ist Persisted**anzuzeigen. Wenn die Spalte berechnet ist, wird außerdem die Formel angezeigt. Um die Formel zu bearbeiten, erweitern Sie diese Kategorie, und bearbeiten Sie sie in der **Formel** -Eigenschaft.  
@@ -127,7 +128,7 @@ Ermöglicht das Speichern der berechneten Spalte mit der Datenquelle. Eine persi
 Zeigt die Informationen zum Felddatentyp an, im gleichen Format wie in der SQL-Anweisung CREATE TABLE. Beispiel: Ein Feld, das eine Zeichenfolge variabler Länge mit einer maximalen Länge von 20 Zeichen enthält, würde als "varchar(20)" dargestellt. Um diese Eigenschaft zu ändern, geben Sie den Wert direkt ein.  
   
 **Beschreibung**  
-Zeigt die Beschreibung der Spalte an. Klicken Sie auf Beschreibung und dann rechts neben der Eigenschaft auf die Schaltfläche mit den Auslassungspunkten **(...)** , um die vollständige Beschreibung anzuzeigen oder zu bearbeiten.  
+Zeigt die Beschreibung der Spalte an. Klicken Sie auf Beschreibung und dann rechts neben der Eigenschaft auf die Schaltfläche mit den Auslassungspunkten **(...)**, um die vollständige Beschreibung anzuzeigen oder zu bearbeiten.  
   
 **Kategorie Volltextspezifikation**  
 Wird erweitert, um die spezifischen Eigenschaften von Volltextspalten anzuzeigen.  

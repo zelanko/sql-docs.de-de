@@ -1,4 +1,5 @@
 ---
+description: Optionen (SQL Server-Objekt-Explorer – Seite „Skripterstellung“)
 title: Optionen (SQL Server-Objekt-Explorer – Seite „Skripterstellung“)
 ms.custom: seo-lt-2019
 ms.date: 08/01/2017
@@ -13,16 +14,16 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d1a775e42f37b5b224a2608c9055581376b0985
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f89d245bddec039846aed82168fbe8c687d73e2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491863"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Optionen (SQL Server-Objekt-Explorer – Seite „Skripterstellung“)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Auf dieser Seite können Sie Skripterstellungsoptionen festlegen, die auf die folgenden Befehle in Objektkontextmenüs im **Objekt-Explorer**angewendet werden:  
+ Auf dieser Seite können Sie Skripterstellungsoptionen festlegen, die auf die folgenden Befehle in Objektkontextmenüs im **Objekt-Explorer** angewendet werden:  
   
 -   **Bearbeiten**-Befehle für Benutzertabellen und Sichten.  
   
@@ -35,7 +36,7 @@ Auf dieser Seite können Sie Skripterstellungsoptionen festlegen, die auf die fo
 ## <a name="remarks"></a>Bemerkungen  
 Die Befehle **Bearbeiten** und **Ändern** führen möglicherweise zu Ergebnissen, die sich vom Befehl **Skript für <object> erstellen als** für die gleiche Optionseinstellung unterscheiden. Die Befehle **Bearbeiten** und **Ändern** sind für das Ändern von Objekten in der aktuellen Datenbank während einer Abfrage-Editor-Sitzung vorgesehen. Der Befehl **Skript für <object> erstellen als** ist zum Generieren eines Skripts vorgesehen, sodass es später zum Erstellen von Objekten verwendet werden kann.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 Geben Sie Skriptoptionen an, indem Sie eine Auswahl aus den verfügbaren Einstellungen in der Liste rechts neben den einzelnen Optionen treffen.
 
 > [!NOTE]
@@ -152,6 +153,6 @@ Schließt vom System generierte Einschränkungsnamen ein, damit die deklarative 
 **Skripterstellung für Serverversion**  
 Generierte Skripts werden auf die angegebene Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgerichtet. Funktionen, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] neu sind, können für eine Skripterstellung für frühere Versionen nicht verwendet werden. Einige für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellte Skripts können weder auf Servern, auf denen eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird, noch in einer Datenbank mit einer früheren [Einstellung des Datenbankkompatibilitätsgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)ausgeführt werden.  
 
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen:  
 [Erstellen von Skripts (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
   

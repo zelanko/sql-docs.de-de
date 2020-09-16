@@ -1,4 +1,5 @@
 ---
+description: Suchordner auswählen (Dialogfeld in Visual Studio)
 title: Suchordner auswählen (Dialogfeld in Visual Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 15d6c1e0cf13da4b8dd0fe38ffcf57e555bdd650
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 69c70680431019638dff53664393ce2256a5f01b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85983329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491999"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Suchordner auswählen (Dialogfeld in Visual Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -23,7 +24,7 @@ Ermöglicht es Ihnen, eigene benannte Sätze mit Suchordnern zusammenzustellen, 
   
 Fügen Sie der Liste **Ausgewählte Ordner** Ordner hinzu, geben Sie im Feld **Ordnersatz** einen Namen für diesen Ordner ein, und klicken Sie auf **Übernehmen** , um ihn zu speichern. Dieser benutzerdefinierte Suchbereich kann danach anhand des Namens aus den Dropdownlisten **Suchen in** in den Fenstern **Suchen in Dateien** und **Ersetzen in Dateien**ausgewählt werden. Wenn Sie einen benutzerdefinierten Ordnersatz aus den Listen **Suchen in** entfernen möchten, wählen Sie seinen Namen im Feld **Ordnersatz** aus, und klicken Sie auf **Löschen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 Mithilfe der folgenden Steuerelemente können Sie eigene Sätze mit Suchordnern zusammenstellen, speichern und überarbeiten.  
   
 **Ordnersatz**  

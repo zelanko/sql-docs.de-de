@@ -1,4 +1,5 @@
 ---
+description: Auswählen von Zeilen für die Migration mit einer Filterfunktion (Stretch Database)
 title: Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 9bb34b5e716f4cb0da7f11e5ce4772f52712127f
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: 31199872a4a206469c44f91aa80c3606f129fdb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492610"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Auswählen von Zeilen für die Migration mit einer Filterfunktion (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Wenn Sie inaktive Daten in einer separaten Tabelle speichern, können Sie Stretch Database so konfigurieren, dass die gesamte Tabelle migriert wird. Wenn Ihre Tabelle sowohl heiße als auch kalte Daten enthält, können Sie ein Filterprädikat zum Auswählen der zu migrierenden Zeilen angeben. Das Filterprädikat ist eine Inline-Tabellenwertfunktion. Dieser Artikel beschreibt, wie Sie eine Inline-Tabellenwertfunktion schreiben, um die zu migrierenden Zeilen auszuwählen.  
@@ -197,7 +198,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>Hinzufügen einer Filterfunktion nach dem Ausführen des Assistenten  
+## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>Hinzufügen einer Filterfunktion nach Ausführen des Assistenten  
   
 Wenn Sie eine Funktion verwenden möchten, die Sie im Assistenten **zum Aktivieren von Stretch für eine Datenbank** nicht erstellen können, können Sie die **ALTER TABLE** -Anweisung ausführen, um nach Beenden des Assistenten eine Funktion anzugeben. Bevor eine Funktion angewendet werden kann, müssen Sie jedoch die Datenmigration anhalten, die bereits in Bearbeitung ist, und migrierte Daten zurückbringen. (Weitere Informationen dazu, warum dies notwendig ist, finden Sie im Abschnitt [Ersetzen einer vorhandenen Filterfunktion](#replacePredicate)).
   

@@ -1,4 +1,5 @@
 ---
+description: Sortieren in aufsteigender oder absteigender Reihenfolge (Visual Database Tools)
 title: Sortieren in aufsteigender oder absteigender Reihenfolge
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,16 +14,16 @@ ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 947ff75c1eb3f0a20b0bc3c415645254a7c4b6c4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1826914bd042ad897dc7eb143dfd38d18104e7a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85976841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491629"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>Sortieren in aufsteigender oder absteigender Reihenfolge (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Mithilfe der Schlüsselwörter **ASC** und **DESC** mit der **ORDER BY** -Klausel können Abfrageergebnisse in einer oder mehreren Spalten des Resultsets in auf- oder absteigender Reihenfolge sortiert werden.  
+ Mithilfe der Schlüsselwörter **ASC** und **DESC** mit der **ORDER BY**-Klausel können Abfrageergebnisse in einer oder mehreren Spalten des Resultsets in auf- oder absteigender Reihenfolge sortiert werden.  
   
 > [!NOTE]  
 > Die Sortierreihenfolge wird teilweise durch die Sortierreihenfolge der Spalte bestimmt. Sie können die Sortierreihenfolge im [Dialogfeld Sortierreihenfolge](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md)ändern.  

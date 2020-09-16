@@ -1,4 +1,5 @@
 ---
+description: Wiederherstellen von Stretch-aktivierten Datenbanken (Stretch Database)
 title: Restore Stretch-enabled databases (Wiederherstellen von für die Streckung aktivierten Datenbanken)
 ms.date: 07/06/2016
 ms.service: sql-server-stretch-database
@@ -8,15 +9,15 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8cef37be62e91b608852a4b5867d5917e72e8742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492604"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Wiederherstellen von Stretch-aktivierten Datenbanken (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Das Wiederherstellen einer gesicherten Datenbank ist nach vielen Arten von Fehlern, Ausfällen und Notfällen unerlässlich.
@@ -38,7 +39,7 @@ Der Dienst SQL Server Stretch Database erstellt mit Azure Storage mindestens all
 
 Um eine Azure-Livedatenbank im Azure-Portal in einem Zustand wiederherzustellen, den sie zu einem früheren Zeitpunkt hatte, führen Sie folgende Schritte aus:
 
-1. Melden Sie sich beim [Azure portal][]an.
+1. Melden Sie sich beim [Azure-Portal][]an.
 2. Wählen Sie auf der linken Seite des Fensters **DURCHSUCHEN** , und wählen Sie dann **SQL-Datenbanken**aus.
 3. Navigieren Sie zu Ihrer Datenbank, und wählen Sie sie aus.
 4. Klicken Sie oben im Blatt für die Datenbank auf **Wiederherstellen**.
@@ -50,7 +51,7 @@ Der Azure-Dienst SQL Server Stretch Database erstellt eine Datenbankmomentaufnah
 
 Um eine gelöschte Azure-Datenbank im Azure-Portal in dem Zustand wiederherzustellen, den sie zum Zeitpunkt des Löschens hatte, führen Sie folgende Schritte aus:
 
-1. Melden Sie sich beim [Azure portal][]an.
+1. Melden Sie sich beim [Azure-Portal][]an.
 2. Wählen Sie auf der linken Seite des Fensters **DURCHSUCHEN** , und wählen Sie dann **Server mit SQL Server**aus.
 3. Navigieren Sie zu Ihrem Server, und wählen Sie ihn aus.
 4. Scrollen Sie auf dem Blatt für Ihren Server nach unten zu den Vorgängen, und klicken Sie auf die Kachel **Gelöschte Datenbanken** .

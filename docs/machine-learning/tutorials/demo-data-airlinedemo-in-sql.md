@@ -1,4 +1,5 @@
 ---
+description: Airline-Demodaten für Python- und R-Tutorials in SQL Server
 title: Airline-Demodaten für Tutorials
 Description: Erstellen Sie eine Datenbank, die das Airline-Dataset von R und Python enthält. Dieses Dataset wird in R- und Python-Tutorials für SQL Server Machine Learning Services verwendet.
 ms.prod: sql
@@ -9,15 +10,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f697287bff5ad4734d11c3d6391154a3a970470
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e00d3814b20f774568da007ba1e60f6784b1c9fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484073"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Airline-Demodaten für Python- und R-Tutorials in SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 In dieser Übung erstellen Sie eine SQL Server-Datenbank, um importierte Daten aus den integrierten Airline-Demodatasets von R oder Python zu speichern. Die R- und Python-Verteilungen stellen identische Daten bereit, die Sie mithilfe von Management Studio in eine SQL Server-Datenbank importieren können.
 
