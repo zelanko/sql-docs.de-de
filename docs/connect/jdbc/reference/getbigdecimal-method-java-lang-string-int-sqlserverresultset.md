@@ -1,4 +1,5 @@
 ---
+description: getBigDecimal-Methode (java.lang.String, int) (SQLServerResultSet)
 title: getBigDecimal-Methode (java.lang.String, int) (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 572a1799-c232-400f-b8d8-37a5719a8d5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db42729446b2007a730c5fda795cf628eea0fc5f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 16cd3731dc9c6cef484d2cceb0bbced908ef391e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437302"
 ---
 # <a name="getbigdecimal-method-javalangstring-int-sqlserverresultset"></a>getBigDecimal-Methode (java.lang.String, int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: DateTimeOffset-Elemente
 title: DateTimeOffset-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca2de23d6ddbd3bdebb900d4f840846c52d47154
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9361169363af84b701e6e963d844645072874d39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437862"
 ---
 # <a name="datetimeoffset-members"></a>DateTimeOffset-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80922197"
   Die folgenden Tabellen enthalten die Elemente, die von der [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)-Klasse verfügbar gemacht werden.  
   
 ## <a name="constructors"></a>Konstruktoren  
- Keine.  
+ Keine  
   
 ## <a name="fields"></a>Felder  
  Keine.  
@@ -37,7 +38,7 @@ ms.locfileid: "80922197"
 |[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|Gibt die Abweichung dieses **DateTimeOffset**-Objekts von GMT in Minuten zurück.|  
 |[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|Gibt den von diesem **DateTimeOffset**-Objekt dargestellten Zeitpunkt als java.sql.Timestamp zurück.|  
 |[hashCode](../../../connect/jdbc/reference/hashcode-method-datetimeoffset.md)|Gibt einen Hashcodewert für das Objekt zurück.|  
-|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|Diese Methode gibt eine Zeichenfolgendarstellung des **DateTimeOffset**-Objekts zurück.|  
+|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|Gibt eine Zeichenfolgendarstellung des **DateTimeOffset**-Objekts zurück.|  
 |[valueOf](../../../connect/jdbc/reference/valueof-method-datetimeoffset.md)|Erstellt ein **DateTimeOffset**-Objekt, das einen Zeitpunkt in einem bestimmten Offset von GMT darstellt.|  
   
 ## <a name="inherited-methods"></a>Geerbte Methoden  
