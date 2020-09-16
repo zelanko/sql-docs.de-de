@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5a294bf705e4caf4a79c0f67ce925187e24c0f00
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8fd56c7b3c3177f1ae08c9b2c5d821d1c2552f70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730700"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765679"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Was ist der Controller in einem SQL Server-Big Data Cluster?
 
@@ -57,7 +57,7 @@ Die gesamte Kommunikation mit dem Controllerdienst wird mittels einer Rest-API �
 Für die Authentifizierung beim Controllerdienstendpunkt wird entweder eine Active Directory-Identität verwendet, oder sie basiert auf Benutzername und Kennwort. Diese Anmeldeinformationen werden zur Clusterbootstrapzeit mithilfe der Eingabe für die Umgebungsvariablen `AZDATA_USERNAME` und `AZDATA_PASSWORD` bereitgestellt.
 
 > [!NOTE]
-> Sie müssen ein Kennwort angeben, das der [Kennwortrichtlinie für die Komplexität von SQL Server-Kennwörtern](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017) entspricht.
+> Sie müssen ein Kennwort angeben, das der [Kennwortrichtlinie für die Komplexität von SQL Server-Kennwörtern](../relational-databases/security/password-policy.md?view=sql-server-2017) entspricht.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

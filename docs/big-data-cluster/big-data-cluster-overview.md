@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942777"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765739"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -26,14 +26,14 @@ Mit [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] wurden SQL Server-Bi
 
 Sie können SQL Server-Big Data-Cluster für Folgendes verwenden:
 
-- [Bereitstellen skalierbarer Cluster](../big-data-cluster/deploy-get-started.md) aus SQL Server-, Spark- und HDFS-Containern, die auf Kubernetes ausgeführt werden 
+- [Bereitstellen skalierbarer Cluster](./deploy-get-started.md) aus SQL Server-, Spark- und HDFS-Containern, die auf Kubernetes ausgeführt werden 
 - Lesen, Schreiben und Verarbeiten von Big Data von Transact-SQL oder Spark
 - Einfaches Kombinieren und Analysieren hochwertiger relationaler Daten mit hohen Volumen von Big Data
 - Abfragen externer Datenquellen
 - Speichern von Big Data in von SQL Server verwaltetem HDFS
 - Abfragen von Daten aus mehreren externen Datenquellen über den Cluster
 - Verwenden der Daten für künstliche Intelligenz, maschinelles Lernen und andere Analyseaufgaben
-- [Bereitstellen und Ausführen von Anwendungen](../big-data-cluster/concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]
+- [Bereitstellen und Ausführen von Anwendungen](./concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]
 - Virtualisieren von Daten mit [PolyBase](../relational-databases/polybase/polybase-guide.md). Abfragen von Daten aus externen Datenquellen in SQL Server, Oracle, Teradata, MongoDB und ODBC mit externen Tabellen.
 - Bereitstellen der Hochverfügbarkeit für die SQL Server-Masterinstanz und alle Datenbanken mithilfe von Always On-Verfügbarkeitsgruppen
 

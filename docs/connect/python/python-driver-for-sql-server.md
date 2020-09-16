@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 347e6e386c0e634ce94b3341334d1463fd5e729d
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: a29748dc5c62d3102dc964871b416e175dbd725a
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487868"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746070"
 ---
 # <a name="python-sql-driver"></a>Python-SQL-Treiber
 
@@ -37,7 +37,7 @@ Es stehen verschiedene Python-SQL-Treiber zur Verfügung. Microsoft testet und b
 * [python.org Community](https://www.python.org/community/)  
   
 ## <a name="more-samples"></a>Weitere Beispiele  
-* [Erstellen einer Python-Web-App mithilfe von DJango und SQL-Datenbank in Azure-Websites](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
+* [Schnellstart: Erstellen einer Python-App in Azure App Service für Linux](https://docs.microsoft.com/azure/app-service/containers/quickstart-python?tabs=bash)
 * [Erste Schritte mit Python unter Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
 * [Erste Schritte mit Python unter macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
 * [Erste Schritte mit Python unter Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)

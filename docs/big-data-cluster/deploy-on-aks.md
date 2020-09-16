@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7e46d5bd2ad1fcb300c16ce3883f7b03f493fcdc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661087"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765939"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Azure Kubernetes Service für die Bereitstellung von Big-Data-Clustern für SQL Server
 
@@ -46,7 +46,7 @@ In diesem Artikel wird ausführlich beschrieben, wie Sie mithilfe der Azure CLI
    - mindestens 24 angefügte Datenträger, die auf alle Knoten verteilt sind
 
    > [!TIP]
-   > Die Azure-Infrastruktur bietet mehrere Größenoptionen für VMS. Weitere Informationen zu den Optionen, die für die Region zur Verfügung, für die Sie die Bereitstellung planen, [finden Sie hier](https://docs.microsoft.com/azure/virtual-machines/windows/sizes).
+   > Die Azure-Infrastruktur bietet mehrere Größenoptionen für VMS. Weitere Informationen zu den Optionen, die für die Region zur Verfügung, für die Sie die Bereitstellung planen, [finden Sie hier](/azure/virtual-machines/windows/sizes).
 
 ## <a name="create-a-resource-group"></a>Erstellen einer Ressourcengruppe
 
@@ -110,7 +110,7 @@ Wählen Sie die neuste für Ihren Cluster verfügbare Version aus. Notieren Sie 
 
 ## <a name="create-a-kubernetes-cluster"></a>Erstellen eines Kubernetes-Clusters
 
-1. Erstellen Sie mithilfe des Befehls [az aks create](https://docs.microsoft.com/cli/azure/aks) einen Kubernetes-Cluster in AKS. Im folgenden Beispiel wird ein Kubernetes-Cluster mit dem Namen *kubcluster* und einem Linux-Agent-Knoten der Größe **Standard_L8s** erstellt.
+1. Erstellen Sie mithilfe des Befehls [az aks create](/cli/azure/aks) einen Kubernetes-Cluster in AKS. Im folgenden Beispiel wird ein Kubernetes-Cluster mit dem Namen *kubcluster* und einem Linux-Agent-Knoten der Größe **Standard_L8s** erstellt.
 
    Ersetzen Sie `<version number>` vor dem Ausführen des Skripts durch die Versionsnummer, die Sie im vorherigen Schritt ermittelt haben.
 
@@ -149,7 +149,7 @@ Wählen Sie die neuste für Ihren Cluster verfügbare Version aus. Notieren Sie 
 
 ## <a name="connect-to-the-cluster"></a>Herstellen einer Verbindung mit dem Cluster
 
-1. Führen Sie den Befehl [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) aus, um kubectl für die Herstellung einer Verbindung mit dem Kubernetes-Cluster zu konfigurieren. In diesem Schritt werden Anmeldeinformationen heruntergeladen, und die kubectl-CLI wird für deren Verwendung konfiguriert.
+1. Führen Sie den Befehl [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) aus, um kubectl für die Herstellung einer Verbindung mit dem Kubernetes-Cluster zu konfigurieren. In diesem Schritt werden Anmeldeinformationen heruntergeladen, und die kubectl-CLI wird für deren Verwendung konfiguriert.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,9 +165,9 @@ Wählen Sie die neuste für Ihren Cluster verfügbare Version aus. Notieren Sie 
 
 Wenn Sie die oben genannten Befehle verwenden und Probleme beim Erstellen einer AKS-Instanz auftreten sollten, probieren Sie Folgendes aus:
 
-- Vergewissern Sie sich, dass Sie die [neueste Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) installiert haben.
+- Vergewissern Sie sich, dass Sie die [neueste Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) installiert haben.
 - Führen Sie dieselben Schritte noch einmal mit einer anderen Ressourcengruppe und einem anderen Clusternamen.
-- Weitere Informationen finden Sie in der ausführlichen [Dokumentation zur Problembehandlung für AKS](https://docs.microsoft.com/azure/aks/troubleshooting).
+- Weitere Informationen finden Sie in der ausführlichen [Dokumentation zur Problembehandlung für AKS](/azure/aks/troubleshooting).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
