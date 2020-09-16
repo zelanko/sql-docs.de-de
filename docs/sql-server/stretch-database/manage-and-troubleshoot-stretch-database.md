@@ -1,4 +1,5 @@
 ---
+description: Verwalten von Stretch Database und Behandeln von Problemen
 title: Verwaltung und Problembehandlung
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: efe0b68c605c96423dae5206693ff733430aff63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454332"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Verwalten von Stretch Database und Behandeln von Problemen
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Verwenden Sie die in diesem Artikel beschriebenen Tools und Methoden, um Stretch Database zu verwalten und Probleme zu behandeln.  
@@ -104,7 +105,7 @@ Wenn Sie Spalten aus der Remotetabelle versehentlich gelöscht haben, führen Si
  Um den Bereich aller Abfragen von allen Benutzern zu ändern, führen Sie die gespeicherte Prozedur **sys.sp_rda_set_query_mode**aus. Sie können den Bereich eingrenzen, sodass nur lokale Daten abgefragt werden, und Sie können alle Abfragen deaktivieren oder die Standardeinstellung wiederherstellen. Weitere Informationen finden Sie unter [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md).  
    
  ### <a name="change-the-scope-of-queries-for-a-single-query-by-an-administrator"></a><a name="queryHints"></a>Ändern des Abfragebereichs für eine einzelne Abfrage durch einen Administrator  
- Zum Ändern des Bereichs einer einzelnen Abfrage von einem Mitglied der Rolle „db_owner“ fügen Sie den Abfragehinweis ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =* value)** zur SELECT-Anweisung hinzu. Der REMOTE_DATA_ARCHIVE_OVERRIDE-Abfragehinweis kann die folgenden Werte enthalten.  
+ Zum Ändern des Bereichs einer einzelnen Abfrage von einem Mitglied der Rolle „db_owner“ fügen Sie den Abfragehinweis ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value)** zur SELECT-Anweisung hinzu. Der REMOTE_DATA_ARCHIVE_OVERRIDE-Abfragehinweis kann die folgenden Werte enthalten.  
  -   **LOCAL_ONLY**. Es werden nur lokale Daten abgefragt.  
    
  -   **REMOTE_ONLY**. Es werden nur Remotedaten abgefragt.  
@@ -121,7 +122,7 @@ GO
 ```  
    
  ## <a name="make-administrative-updates-and-deletes"></a><a name="adminHints"></a>Ausführen administrativer Updates und Löschvorgänge  
- Die Befehle UPDATE oder DELETE können standardmäßig nicht für zur Migration berechtigte Zeilen oder für bereits migrierte Zeilen in einer Stretch-fähigen Tabelle ausgeführt werden. Wenn Sie ein Problem beheben müssen, kann ein Mitglied der Rolle „db_owner“ einen UPDATE- oder DELETE-Vorgang durch Hinzufügen des Abfragehinweises ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE =* value)** zur Anweisung ausführen. Der REMOTE_DATA_ARCHIVE_OVERRIDE-Abfragehinweis kann die folgenden Werte enthalten.  
+ Die Befehle UPDATE oder DELETE können standardmäßig nicht für zur Migration berechtigte Zeilen oder für bereits migrierte Zeilen in einer Stretch-fähigen Tabelle ausgeführt werden. Wenn Sie ein Problem beheben müssen, kann ein Mitglied der Rolle „db_owner“ einen UPDATE- oder DELETE-Vorgang durch Hinzufügen des Abfragehinweises ***WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value)** zur Anweisung ausführen. Der REMOTE_DATA_ARCHIVE_OVERRIDE-Abfragehinweis kann die folgenden Werte enthalten.  
  -   **LOCAL_ONLY**. Aktualisieren oder löschen Sie nur lokale Daten.  
    
  -   **REMOTE_ONLY**. Aktualisieren oder löschen Sie nur Remotedaten.  

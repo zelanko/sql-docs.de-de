@@ -1,4 +1,5 @@
 ---
+description: Programmieren mit SQLXML
 title: Programmieren mit SQLXML | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6571c9592514bb0f29c796ae5a671363f3214ca7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 67766bb505750a4fbaaa1081dcf1d0441a44166e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438322"
 ---
 # <a name="programming-with-sqlxml"></a>Programmieren mit SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -99,7 +100,7 @@ ms.locfileid: "80920639"
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Adaptive Pufferung und SQLXML-Unterstützung  
  Die vom SQLXML-Objekt zurückgegebenen Binär- und Zeichendatenströme richten sich nach den Modi für die adaptive oder vollständige Pufferung. Wenn die XML-Parser hingegen keine Datenströme sind, berücksichtigen sie die Einstellungen für adaptive oder vollständige Pufferung nicht. Weitere Informationen zur Verwendung der adaptiven Pufferung finden Sie unter [Verwenden der adaptiven Pufferung](../../connect/jdbc/using-adaptive-buffering.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen:  
  [Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md)  
   
   

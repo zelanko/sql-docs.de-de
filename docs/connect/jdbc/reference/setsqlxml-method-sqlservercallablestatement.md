@@ -1,4 +1,5 @@
 ---
+description: setSQLXML-Methode (SQLServerCallableStatement)
 title: setSQLXML-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de095cb3-1111-4154-8996-3c2e529e3000
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 82e8d1507760591b4e019d5d785eb0cc6a93c3ac
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e41da20bd3e3f046f5ece7e2c190a3a81c70e861
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458302"
 ---
 # <a name="setsqlxml-method-sqlservercallablestatement"></a>setSQLXML-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

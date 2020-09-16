@@ -1,4 +1,5 @@
 ---
+description: Aktivieren von Stretch Database für eine Tabelle
 title: Aktivieren von Stretch Database für eine Tabelle
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 10f267dc42c7626ad89b576b00e2b80a07dae427
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454383"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Aktivieren von Stretch Database für eine Tabelle
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Wählen Sie **Stretch &gt; Aktivieren** aus, um eine Tabelle für Stretch Database zu konfigurieren. So wird in SQL Server Management Studio für eine Tabelle der Assistent zum **Aktivieren der Tabelle für Stretch** geöffnet. Sie können Transact-SQL auch verwenden, um Stretch Database für eine vorhandene Tabelle zu aktivieren oder um eine neue Tabelle zu erstellen, in der Stretch Database aktiviert ist.  
@@ -36,15 +37,15 @@ ms.locfileid: "73843807"
  > Bedenken Sie später beim Deaktivieren von Stretch Database Folgendes: Wenn Sie Stretch Database für eine Tabelle oder eine Datenbank deaktivieren, wird das Remoteobjekt nicht gelöscht. Wenn Sie die Remotetabelle oder Remotedatenbank löschen möchten, müssen Sie sie mithilfe des Azure-Verwaltungsportals löschen. Die Remoteobjekte erzeugen weiterhin Azure-Kosten, bis Sie die Objekte manuell löschen.
  
 ##  <a name="use-the-wizard-to-enable-stretch-database-on-a-table"></a><a name="EnableWizardTable"></a> Verwenden des Assistenten zum Aktivieren von Stretch Database für eine Tabelle  
- **Assistenten starten**  
+ **Starten des Assistenten**  
  1.  Wählen Sie im Objekt-Explorer in SQL Server Management Studio die Tabelle aus, für die Sie Stretch aktivieren möchten.  
   
 2.  Klicken Sie mit der rechten Maustaste, wählen Sie **Stretch**, und wählen Sie anschließend **Aktivieren** aus, um den Assistenten zu starten.  
   
- **Einführung**  
+ **Introduction (Einführung)**  
  Überprüfen Sie den Zweck des Assistenten und die Voraussetzungen.  
   
- **Datenbanktabellen auswählen**  
+ **Auswählen von Datenbanktabellen**  
  Vergewissern Sie sich, dass die Tabelle, die Sie aktivieren möchten, angezeigt wird und ausgewählt ist.  
   
  Sie können eine ganze Tabelle migrieren oder eine einfache Filterfunktion im Assistenten angeben. Wenn Sie zum Auswählen zu migrierender Zeilen eine andere Art von Filterfunktion verwenden möchten, führen Sie einen der folgenden Schritte aus.  
@@ -64,7 +65,7 @@ ms.locfileid: "73843807"
 ##  <a name="use-transact-sql-to-enable-stretch-database-on-a-table"></a><a name="EnableTSQLTable"></a> Verwenden von Transact-SQL zum Aktivieren von Stretch Database für eine Tabelle  
  Sie können Stretch Database mithilfe von Transact-SQL für eine vorhandene Tabelle aktivieren oder eine neue Tabelle erstellen, in der Stretch Database aktiviert ist.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  Verwenden Sie die folgenden Optionen beim Ausführen von CREATE TABLE oder ALTER TABLE, um Stretch Database für eine Tabelle zu aktivieren.  
   
 -   Verwenden Sie optional die `FILTER_PREDICATE = <function>` -Klausel, um eine Funktion zum Auswählen der zu migrierenden Zeilen anzugeben, wenn die Tabelle sowohl heiße als auch kalte Daten enthält. Das Prädikat muss eine Inline-Tabellenwertfunktion aufrufen. Weitere Informationen hierzu finden Sie unter [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Wenn Sie keine Filterfunktion angeben, wird die gesamte Tabelle migriert.  

@@ -1,4 +1,5 @@
 ---
+description: Herstellen von Verbindungen mit einer Verschlüsselung
 title: Herstellen einer Verbindung mit der Verschlüsselung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cff4228404690147d97a44f6f5dd43b1a180153c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f60a186626514ed5532cc2ffc0fa4ffd1af0674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71713292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438462"
 ---
 # <a name="connecting-with-encryption"></a>Herstellen von Verbindungen mit einer Verschlüsselung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ String connectionUrl =
      "encrypt=true;trustServerCertificate=true";  
 ```  
   
- Wenn die  **encrypt**-Eigenschaft auf  **TRUE** und die  **trustServerCertificate**-Eigenschaft auf  **FALSE** festgelegt ist, wird von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Überprüfung des TLS-Zertifikats für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt. Das Überprüfen des Serverzertifikats ist Teil des TLS-Handshakes und stellt sicher, dass es sich bei dem Server tatsächlich um den Server handelt, mit dem eine Verbindung hergestellt werden soll. Zum Überprüfen des Serverzertifikats müssen die Vertrauensinformationen zur Verbindungszeit explizit mithilfe der **trustStore**-Verbindungseigenschaft und der **trustStorePassword**-Verbindungseigenschaft oder implizit mithilfe des Standardvertrauensspeichers der zugrunde liegenden Java Virtual Machine (JVM) übermittelt werden.  
+ Wenn die **encrypt**-Eigenschaft auf **TRUE** und die **trustServerCertificate**-Eigenschaft auf **FALSE** festgelegt ist, wird von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Überprüfung des TLS-Zertifikats für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt. Das Überprüfen des Serverzertifikats ist Teil des TLS-Handshakes und stellt sicher, dass es sich bei dem Server tatsächlich um den Server handelt, mit dem eine Verbindung hergestellt werden soll. Zum Überprüfen des Serverzertifikats müssen die Vertrauensinformationen zur Verbindungszeit explizit mithilfe der **trustStore**-Verbindungseigenschaft und der **trustStorePassword**-Verbindungseigenschaft oder implizit mithilfe des Standardvertrauensspeichers der zugrunde liegenden Java Virtual Machine (JVM) übermittelt werden.  
   
  Die **trustStore**-Eigenschaft gibt den Pfad (einschließlich des Dateinamens) der trustStore-Zertifikatsdatei an. Diese enthält die Liste der Zertifikate, denen der Client vertraut. Die **trustStorePassword**-Eigenschaft gibt das Kennwort an, das verwendet wird, um die Integrität der trustStore-Daten zu überprüfen. Weitere Informationen zur Verwendung des Standardvertrauensspeichers von JVM finden Sie unter [Konfigurieren des Clients für die Verschlüsselung](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
   
@@ -65,6 +66,6 @@ String connectionUrl =
   
  Wenn die **encrypt**-Eigenschaft auf **TRUE** und die **trustServerCertificate**-Eigenschaft auf **FALSE** festgelegt ist, und der Servername in der Verbindungszeichenfolge nicht dem Servernamen im TLS-Zertifikat entspricht, wird der folgende Fehler ausgegeben: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. Ab Version 7.2 unterstützt der Treiber die Zuordnung von Platzhaltermustern in der ganz links stehenden Bezeichnung des Servernamens im TLS-Zertifikat.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
  [Verwenden von Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md) [Schützen von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)

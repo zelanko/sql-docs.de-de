@@ -1,4 +1,5 @@
 ---
+description: SQLServerXAResource-Elemente
 title: SQLServerXAResource-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6d41f89ce541d6bb6497ad0702511c303704a41b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0f772627bf8fb2265bfc95d25416d0f64f39601
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458159"
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80925668"
   In den folgenden Tabellen sind die Elemente aufgeführt, die von der [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)-Klasse verfügbar gemacht werden.  
   
 ## <a name="constructors"></a>Konstruktoren  
- Keine.  
+ Keine  
   
 ## <a name="fields"></a>Felder  
   

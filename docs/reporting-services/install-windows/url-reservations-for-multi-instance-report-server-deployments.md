@@ -1,4 +1,5 @@
 ---
+description: URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen
 title: URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen | Microsoft-Dokumentation
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a09d7c391af0d8800f5d9c66d40ab7ba0c2cbf4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 661dc1ee0e259cc2f1457e555ca685e8e581dc0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445962"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen
   Wenn Sie mehrere Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Computer installieren, müssen Sie überlegen, wie Sie die URL-Reservierungen für die einzelnen Instanzen definieren. Innerhalb jeder Instanz müssen Sie dem Berichtsserver-Webdienst und dem [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] mindestens jeweils eine URL-Reservierung zuweisen. Der gesamte Reservierungssatz muss in HTTP.SYS eindeutig sein.  

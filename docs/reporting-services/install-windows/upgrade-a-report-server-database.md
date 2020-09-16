@@ -1,4 +1,5 @@
 ---
+description: Aktualisieren der Berichtsserver-Datenbank
 title: Upgraden der Berichtsserver-Datenbank | Microsoft-Dokumentation
 ms.date: 08/17/2018
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fcf80ef99c06487f25b65a928aab25a24bfccffe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446005"
 ---
 # <a name="upgrade-a-report-server-database"></a>Aktualisieren der Berichtsserver-Datenbank
 
@@ -56,7 +57,7 @@ Die Berichtsserver-Datenbank ermöglicht die Speicherung für mindestens eine Be
  Neben der Berichtsserver-Datenbank verwendet ein Berichtsserver auch eine temporäre Datenbank. Die temporäre Datenbank wird automatisch aktualisiert, wenn Sie die Berichtsserver-Datenbank aktualisieren.  
   
 ## <a name="permissions-required-to-upgrade-a-report-server-database"></a>Erforderliche Berechtigungen, um eine Berichtsserverdatenbank zu aktualisieren  
- Wenn Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation aktualisieren, die eine Berichtsserver-Datenbank enthält, wird möglicherweise eine Fehlermeldung angezeigt, wenn das Datenbankupgrade mit ungenügenden Berechtigungen ausgeführt wird. Standardmäßig wird vom Setup das Sicherheitstoken des Benutzers, der das Setupprogramm ausführt, verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Remoteinstanz herzustellen und das Schema zu aktualisieren. Wenn Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über **sysadmin**-Berechtigungen für den Datenbankserver verfügen, der die Berichtsserver-Datenbanken hostet, wird das Upgrade für die Datenbank erfolgreich durchgeführt. Wenn Sie das Setup von der Eingabeaufforderung ausführen und die Argumente RSUPGRADEDATABASEACCOUNT und RSUPGRADEPASSWORD für ein Konto angeben, das über die **sysadmin** -Berechtigung zum Ändern des Schemas auf dem Remotecomputer verfügt, kann das Datenbankupgrade ebenfalls erfolgreich ausgeführt werden.  
+ Wenn Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation aktualisieren, die eine Berichtsserver-Datenbank enthält, wird möglicherweise eine Fehlermeldung angezeigt, wenn das Datenbankupgrade mit ungenügenden Berechtigungen ausgeführt wird. Standardmäßig wird vom Setup das Sicherheitstoken des Benutzers, der das Setupprogramm ausführt, verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Remoteinstanz herzustellen und das Schema zu aktualisieren. Wenn Sie in  über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**-Berechtigungen für den Datenbankserver verfügen, der die Berichtsserver-Datenbanken hostet, wird das Upgrade für die Datenbank erfolgreich durchgeführt. Wenn Sie das Setup von der Eingabeaufforderung ausführen und die Argumente RSUPGRADEDATABASEACCOUNT und RSUPGRADEPASSWORD für ein Konto angeben, das über die **sysadmin** -Berechtigung zum Ändern des Schemas auf dem Remotecomputer verfügt, kann das Datenbankupgrade ebenfalls erfolgreich ausgeführt werden.  
   
  Wenn Sie jedoch keine **sysadmin** -Berechtigung für die Datenbank auf dem Remotecomputer haben, wird die Verbindung mit folgender Fehlermeldung abgelehnt:  
   

@@ -1,4 +1,5 @@
 ---
+description: Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen
 title: Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen | Microsoft-Dokumentation
 ms.date: 06/03/2016
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 28f69b4aa47b45708832162b2b4b8429a847bc65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454532"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements und -Datenwarnungen setzt voraus, dass der SQL Server-Agent verwendet und SQL Server-Agentberechtigungen konfiguriert werden. Wenn Fehlermeldungen darauf hinweisen, dass der SQL Server-Agent erforderlich ist und Sie den SQL Server-Agent gestartet haben, können Sie die Berechtigungen aktualisieren oder überprüfen. Dieses Thema erstreckt sich auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus. Es werden drei Methoden beschrieben, wie Sie SQL Server-Agentberechtigungen bei Verwendung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements aktualisieren können. Die Anmeldeinformationen, die Sie in den Schritten dieses Themas verwenden, müssen ausreichende Berechtigungen aufweisen, um RSExecRole-Ausführungsberechtigungen für Objekte in der Dienstanwendung sowie in der msdb- und Masterdatenbank zu gewähren.  

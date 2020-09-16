@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/31/2020
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_field_metadata
 - sqlsrv_field_metadata
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76939571"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449966"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,15 +45,15 @@ Ein **Array** von Arrays oder **false**. Das Array besteht aus einem Array für 
 |Key|BESCHREIBUNG|  
 |-------|---------------|  
 |Name|Name der Spalte, der das Feld entspricht|  
-|type|Numerischer Wert, der einem SQL-Typ entspricht|  
+|Typ|Numerischer Wert, der einem SQL-Typ entspricht|  
 |Size|Anzahl der Zeichen für die Felder eines bestimmten Zeichentyps (char(n), varchar(n), nchar(n), nvarchar(n), XML) Anzahl der Bytes für Felder vom Typ „binär“ (binary(n), varbinary(n), UDT). **NULL** für andere SQL Server-Datentypen.|  
-|Precision|Die Genauigkeit für die Typen mit variabler Genauigkeit (real, numeric, decimal, datetime2, datetimeoffset und time). **NULL** für andere SQL Server-Datentypen.|  
+|Genauigkeit|Die Genauigkeit für die Typen mit variabler Genauigkeit (real, numeric, decimal, datetime2, datetimeoffset und time). **NULL** für andere SQL Server-Datentypen.|  
 |Skalieren|Die Skalierung für die Typen mit variabler Skalierung (numeric, decimal, datetime2, datetimeoffset und time). **NULL** für andere SQL Server-Datentypen.|  
 |Nullable|Ein Aufzählungswert, der anzeigt, ob die Spalte NULL-Werte zulässt (**SQLSRV_NULLABLE_YES**) oder nicht (**SQLSRV_NULLABLE_NO**), oder ob diese Eigenschaft nicht bekannt ist (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
-Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes Teilarray (weiter Informationen zu diesen Typen finden Sie in der Dokumentation zu SQL Server):  
+Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes Teilarray (weiter Informationen zu diesen Typen finden Sie in der Dokumentation zu SQL Server):   
   
-|SQL Server 2008-Datentyp|type|Min/Max Genauigkeit|Min/Max Skalierung|Size|  
+|SQL Server 2008-Datentyp|Typ|Min/Max Genauigkeit|Min/Max Skalierung|Size|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |BIGINT|SQL_BIGINT (-5)|||8|  
 |BINARY|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
@@ -75,12 +76,12 @@ Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes T
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
 |SMALLINT|SQL_SMALLINT (5)|||2 Bytes|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
-|sql_variant|SQL_SS_VARIANT (-150)|||variable|  
-|text|SQL_LONGVARCHAR (-1)|||2 GB|  
+|sql_variant|SQL_SS_VARIANT (-150)|||-Variable|  
+|Text|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
-|timestamp|SQL_BINARY (-2)|||8 Byte|  
+|timestamp|SQL_BINARY (-2)|||8 Bytes|  
 |TINYINT|SQL_TINYINT (-6)|||1 Byte|  
-|udt|SQL_SS_UDT (-151)|||variable|  
+|udt|SQL_SS_UDT (-151)|||-Variable|  
 |UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
 |varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  
 |varchar|SQL_VARCHAR (12)|||0 < *n* < 8000 <sup>1</sup>|  

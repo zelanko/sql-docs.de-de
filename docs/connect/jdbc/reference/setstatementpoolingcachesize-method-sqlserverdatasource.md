@@ -1,4 +1,5 @@
 ---
+description: setStatementPoolingCacheSize-Methode (SQLServerDataSource)
 title: setStatementPoolingCacheSize-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 289449c287a13ebb63451cf87472bbaaaba8263c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 07f2ab026fa0432124b554d31e52cf179ddaceea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450782"
 ---
 # <a name="setstatementpoolingcachesize-method-sqlserverdatasource"></a>setStatementPoolingCacheSize-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt die Größe des Caches für Prepared Statements für diese Verbindung fest Die Methode funktioniert nur, wenn disableStatementPooling auf FALSE festgelegt und der Wert > 0 (null) ist.
+  Mit dieser Methode wird die Größe des Caches für Prepared Statements für diese Verbindung festgelegt. Die Methode funktioniert nur, wenn disableStatementPooling auf FALSE festgelegt und der Wert > 0 (null) ist.
   
 ## <a name="syntax"></a>Syntax  
   

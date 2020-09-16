@@ -1,4 +1,5 @@
 ---
+description: Wrapper und Schnittstellen
 title: Wrapper und Schnittstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dc8a8277147dd2dc136379471f6a4f7df789c3ee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 504527843063bb3d5e3fd4a8c284dfc5e8e25b12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450052"
 ---
 # <a name="wrappers-and-interfaces"></a>Wrapper und Schnittstellen
 
@@ -111,6 +112,6 @@ public class UnWrapTest {
 }  
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

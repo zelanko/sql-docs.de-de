@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_ConfigurationSetting-Eigenschaften
 title: MSReportServer_ConfigurationSetting-Eigenschaften | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634c5065730ea58905f89ac0454cdda53552a126
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 94b199ce85b8f4d9fdea8d377ac0798a3e72f8fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454462"
 ---
 # <a name="msreportserver_configurationsetting-properties"></a>MSReportServer_ConfigurationSetting-Eigenschaften
   Die „MSReportServer_ConfigurationSetting“-Klasse stellt die Installations- und die Laufzeitparameter einer Berichtsserverinstanz dar. Diese Einstellungen werden in der Konfigurationsdatei RSReportServer.config gespeichert.  
   
 ## <a name="public-properties"></a>Öffentliche Eigenschaften  
   
-|||  
+|Eigenschaft|BESCHREIBUNG|  
 |-|-|  
 |[ConnectionPoolSize](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md)|Gibt die Größe des Verbindungspools zurück, über den der Berichtsserver mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz kommuniziert, die die Berichtsserver-Datenbank hostet. Schreibgeschützt.|  
 |[DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md)|Gibt das Anmeldekonto an, über das der Berichtsserver eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz herstellt, die die Berichtsserver-Datenbank hostet. Schreibgeschützt.|  

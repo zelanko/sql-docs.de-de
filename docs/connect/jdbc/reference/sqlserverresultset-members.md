@@ -1,4 +1,5 @@
 ---
+description: SQLServerResultSet-Elemente
 title: SQLServerResultSet-Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17d15be7b332d899aa35a0ce7c3d7c2b9cac1edf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dd331cec7252fb0fd0b3099800837cf667fce336
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458222"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80927123"
   In den folgenden Tabellen werden die Elemente aufgeführt, die von der Klasse [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) zur Verfügung gestellt werden.  
   
 ## <a name="constructors"></a>Konstruktoren  
- Keine.  
+ Keine  
   
 ## <a name="fields"></a>Felder  
   
@@ -105,7 +106,7 @@ ms.locfileid: "80927123"
 |[last](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|Versetzt den Cursor in die letzte Zeile in diesem [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.|  
 |[moveToCurrentRow](../../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)|Versetzt den Cursor an die gespeicherte Cursorposition (üblicherweise die aktuelle Zeile).|  
 |[moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)|Versetzt den Cursor in die Einfügezeile.|  
-|[next](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Versetzt den Cursor von seiner aktuellen Position aus um eine Zeile nach unten.|  
+|[Weiter](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Versetzt den Cursor von seiner aktuellen Position aus um eine Zeile nach unten.|  
 |[previous](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)|Versetzt den Cursor in die vorherige Zeile in diesem [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.|  
 |[refreshRow](../../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md)|Aktualisiert die aktuelle Zeile mit dem aktuellen Wert aus der Datenbank.|  
 |[relative](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|Versetzt den Cursor relativ zur aktuellen Zeile um die angegebene (positive oder negative) Anzahl von Zeilen.|  

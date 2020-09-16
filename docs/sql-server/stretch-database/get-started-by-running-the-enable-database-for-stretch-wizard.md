@@ -1,4 +1,5 @@
 ---
+description: Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank
 title: Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -21,15 +22,15 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b06f82e5c51aa1c3843abec0daa7d3bebabe40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454357"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  Führen Sie zum Konfigurieren einer Datenbank für Stretch Database den Assistenten zum Aktivieren einer Datenbank für Stretch aus.  Dieser Artikel beschreibt die Informationen und Entscheidungen, die Sie im Assistenten angeben bzw. treffen müssen.  
@@ -75,7 +76,7 @@ Oben in der sortierten Liste werden Tabellen mit einer Vielzahl von Zeilen angez
 ## <a name="optionally-provide-a-row-filter"></a>Optionales Angeben eines Zeilenfilters  
  Wenn Sie zum Auswählen zu migrierender Zeilen eine Filterfunktion verwenden möchten, führen Sie auf der Seite **Tabellen auswählen** die folgenden Schritte aus.  
   
-1.  Klicken Sie in der Liste **Wählen Sie die Tabellen aus, für die Sie Stretching durchführen möchten.** , in der Spalte für die Tabelle auf **Ganze Tabelle**. Das Dialogfeld **Wählen Sie die Zeilen aus, für die Stretching durchgeführt werden soll.** wird geöffnet.  
+1.  Klicken Sie in der Liste **Wählen Sie die Tabellen aus, für die Sie Stretching durchführen möchten.**, in der Spalte für die Tabelle auf **Ganze Tabelle**. Das Dialogfeld **Wählen Sie die Zeilen aus, für die Stretching durchgeführt werden soll.** wird geöffnet.  
   
      ![Definieren eines datumsbasierten Filterprädikats](../../sql-server/stretch-database/media/stretch-wizard-2a.png "Definieren eines datumsbasierten Filterprädikats")  
   

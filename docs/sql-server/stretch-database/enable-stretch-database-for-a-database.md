@@ -1,4 +1,5 @@
 ---
+description: Aktivieren von Stretch Database für eine Datenbank
 title: Aktivieren von Stretch Database für eine Datenbank
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 86ef68956fd948e485b221514dad588af40f4aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454388"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Aktivieren von Stretch Database für eine Datenbank
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Um eine vorhandene Datenbank für Stretch Database zu konfigurieren, wählen Sie **Aufgaben &gt; Stretch &gt; Aktivieren** für eine Datenbank in SQL Server Management Studio aus, um den Assistenten zum **Aktivieren einer Datenbank für Stretch** zu öffnen. Sie können auch Transact-SQL verwenden, um Stretch Database für eine Datenbank zu aktivieren.  
@@ -41,7 +42,7 @@ ms.locfileid: "73844591"
   
 -   Erhalten Sie die erforderlichen Informationen zu Verbindungen und Anmeldungen, um einen neuen Azure-Server zu erstellen oder einen vorhandenen Azure-Server auszuwählen.  
   
-##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> Voraussetzung: Aktivieren Sie Stretch Database auf dem Server.  
+##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> Voraussetzung: Aktivieren von Stretch Database auf dem Server  
  Bevor Sie Stretch Database für eine Datenbank oder eine Tabelle aktivieren können, müssen Sie sie auf dem lokalen Server aktivieren. Dieser Vorgang erfordert die Berechtigung „Systemadministrator“ oder „Severadministrator“.  
   
 -   Wenn Sie über die erforderlichen Administratorberechtigungen verfügen, konfiguriert der Assistent **Datenbank für Stretch aktivieren** den Server für Stretch.  

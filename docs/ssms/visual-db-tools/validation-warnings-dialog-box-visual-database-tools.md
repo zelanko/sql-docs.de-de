@@ -1,4 +1,5 @@
 ---
+description: Gültigkeitswarnungen (Dialogfeld) (Visual Database Tools)
 title: Gültigkeitswarnungen (Dialogfeld)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3dd3f15ba7b6b42b95d8789d204bc44c2afb3f7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f8656e0d43b93c2b640d5839a0d6a2235d48749d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446014"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>Gültigkeitswarnungen (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +44,7 @@ Das Dialogfeld kann aus folgenden Gründen angezeigt werden:
   
 -   Die Änderungen ergeben besondere Einstellungen von ANSI_NULLS und/oder ANSI_PADDING für die Spalten innerhalb einer Tabelle.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Ja**  
 Setzen Sie den Vorgang fort, und generieren Sie das Änderungsskript, oder übermitteln Sie die Änderungen an die Datenbank. Der Commitvorgang kann trotzdem noch fehlschlagen, wenn Sie nicht über die Berechtigungen zum Ändern der Datenbank verfügen, wenn die Änderungen bewirken, dass der Index größer als 900 Bytes wird, oder wenn die Änderungen eine falsch formatierte berechnete Spalte, Standardeinschränkungen oder CHECK-Einschränkungen zur Folge haben.  
   

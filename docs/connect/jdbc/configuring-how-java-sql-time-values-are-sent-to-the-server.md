@@ -1,4 +1,5 @@
 ---
+description: Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden
 title: Konfigurieren der Vorgehensweise zum Senden von java.sql.Time-Werten an den Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,19 +9,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a360def7656fb270267372d5b226b68d30aeaf57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438472"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Wenn Sie ein java.sql.Time-Objekt oder den java.sql.Types.TIME-JDBC-Typ zum Festlegen eines Parameters verwenden, können Sie konfigurieren, wie der java.sql.Time-Wert an den Server gesendet wird: als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]time **- oder als** datetime **-** -Typ.  
+  Wenn Sie ein java.sql.Time-Objekt oder den java.sql.Types.TIME-JDBC-Typ zum Festlegen eines Parameters verwenden, können Sie konfigurieren, wie der java.sql.Time-Wert an den Server gesendet wird: als  **time**- oder als **datetime**-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typ.  
   
  Dies trifft zu, wenn eine der folgenden Methoden verwendet wird:  
   
@@ -40,9 +41,9 @@ ms.locfileid: "69028229"
   
  Der Wert der Verbindungseigenschaft **sendTimeAsDatetime** kann mit [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) geändert werden.  
   
- In den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] wurde der **time**-Datentyp nicht unterstützt, sodass Anwendungen, die java.sql.Time verwenden, java.sql.Time-Werte in der Regel entweder als **datetime**- oder -**smalldatetime**-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen speichern.  
+ In den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] wurde der **time**-Datentyp nicht unterstützt, sodass Anwendungen, die java.sql.Time verwenden, java.sql.Time-Werte in der Regel entweder als **datetime**- oder -**smalldatetime-** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen speichern.  
   
- Wenn Sie beim Arbeiten mit java.sql.Time-Werten die **datetime**- und **smalldatetime**-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen verwenden möchten, sollten Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf **TRUE** festlegen. Wenn Sie beim Arbeiten mit java.sql.Time-Werten den **time**-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp verwenden möchten, sollten Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf **FALSE** festlegen.  
+ Wenn Sie beim Arbeiten mit java.sql.Time-Werten die **datetime**- und **smalldatetime**-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen verwenden möchten, sollten Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf **TRUE** festlegen. Wenn Sie beim Arbeiten mit java.sql.Time-Werten den **time-** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp verwenden möchten, sollten Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf **FALSE** festlegen.  
   
  Wenn Sie ausschließlich java.sql.Time-Werte in einen Parameter senden, deren Datentyp ebenfalls das Datum speichern kann, unterscheiden sich die Standarddaten je nachdem, ob der java.sql.Time-Wert als **datetime**- (01.01.1970) oder **time**-Wert (01.01.1900) gesendet wird. Weitere Informationen zu Datenkonvertierungen beim Senden von Daten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkID=145211).  
   
