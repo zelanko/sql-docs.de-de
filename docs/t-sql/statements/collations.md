@@ -17,15 +17,15 @@ helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6f5df8b371ded189d63095c86baeb417afe4ca4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c3c05cd8fbf9ae131bbb1bc61f18acab043a8228
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496933"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547576"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -55,9 +55,9 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** Bewirkt, dass die COLLATE-Klausel die Sortierung der aktuellen Datenbank erbt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die COLLATE-Klausel kann auf mehreren Ebenen angegeben werden. Dabei handelt es sich z. B. um:
+Die COLLATE-Klausel kann auf mehreren Ebenen angegeben werden. Diese umfassen Folgendes:
 
 1. Erstellen oder Ändern einer Datenbank.
 
@@ -155,7 +155,7 @@ Chiapas
 
 Zusätzliche Beispiele zur Verwendung von **COLLATE** finden Sie unter [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) in Beispiel **G. Erstellen einer Datenbank und Angeben eines Sortierungsnamens und von Optionen**, und unter [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) in Beispiel **V. Ändern der Spaltensortierung**.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)

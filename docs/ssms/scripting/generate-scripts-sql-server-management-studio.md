@@ -3,7 +3,7 @@ title: Generieren von Skripts
 description: Hier erfahren Sie, wie Sie den Assistenten zum Generieren und Veröffentlichen von Skripts verwenden, um Transact-SQL-Skripts für mehrere Objekte zu erstellen. Außerdem wird erläutert, wie Sie das Skript als Menü im Objekt-Explorer nutzen, um Skripts für einzelne oder mehrere Objekte zu generieren.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d3fb8dc9157e7574835ee330b9c9e0f925c6e6f4
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123127"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901343"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Erstellen von Skripts (SQL Server Management Studio)
 
@@ -67,7 +67,7 @@ Sie können den Bereich **Details** des Objekt-Explorers verwenden, um ein Skrip
 
 4. Öffnen Sie den Bereich **Details zum Objekt-Explorer** durch Drücken von **F7**oder durch Öffnen des Menüs **Ansicht** und Auswahl der Option **Details zum Objekt-Explorer**.
 
-    ![Objekt-Explorer](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
+    ![Menü Ansicht](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 
 5. Klicken Sie mit der linken Maustaste auf eines der Objekte, für das Sie ein Skript erstellen möchten.
 
@@ -75,4 +75,4 @@ Sie können den Bereich **Details** des Objekt-Explorers verwenden, um ein Skrip
 
 7. Klicken Sie mit der rechten Maustaste auf eines der ausgewählten Objekte und dann auf **Skript für \<object type> als**.
 
-    ![Objekt-Explorer](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
+    ![Details](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

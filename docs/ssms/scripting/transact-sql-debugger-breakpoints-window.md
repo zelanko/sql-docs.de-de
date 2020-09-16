@@ -3,7 +3,7 @@ title: Fenster 'Breakpoints'
 description: Informieren Sie sich, wie Sie das Fenster „Haltepunkte“ des Datenbank-Engine-Abfrage-Editors zum Verwalten von Transact-SQL-Debuggerbreakpoints verwenden.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 70178cf723b4e599ca6982668ade3faed61ee8c2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 92a2cb347a575477d9697a8e5e5d29d989cdb816
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248034"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901455"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL-Debugger – Fenster „Breakpoints“
 

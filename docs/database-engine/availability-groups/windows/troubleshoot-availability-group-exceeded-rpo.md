@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882361"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042841"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85882361"
   
  Es ist außerdem hilfreich, die zwei Leistungsobjekte `SQL Server:Availability Replica > Flow Control Time (ms/sec)` und `SQL Server:Availability Replica > Flow Control/sec` zu überprüfen. Durch Multiplikation beider Werte erfahren Sie bis auf die Sekunde genau, wie viel Zeit dafür aufgewendet wurde, auf die Verarbeitung der Flusssteuerung zu warten. Je länger die Wartezeit der Flusssteuerung, desto niedriger ist die Senderate.  
   
- Die folgenden Metriken sind hilfreich bei der Diagnose von Netzwerklatenz und -durchsatz. Sie können andere Windows-Tools wie **ping.exe** und [Netzwerkmonitor](https://www.microsoft.com/download/details.aspx?id=4865) verwenden, um Latenz und Netzwerkauslastung auszuwerten.  
+ Die folgenden Metriken sind hilfreich bei der Diagnose von Netzwerklatenz und -durchsatz. Sie können andere Windows-Tools wie **ping.exe** und [Netzwerkmonitor](https://www.microsoft.com/p/network-monitor-pro-free-edition/9n8gdvj32gp7) verwenden, um Latenz und Netzwerkauslastung auszuwerten.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   
