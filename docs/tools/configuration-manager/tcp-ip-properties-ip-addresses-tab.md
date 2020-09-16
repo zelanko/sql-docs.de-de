@@ -6,7 +6,7 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c68b7a9f1da65862403750e32315ee7168ded6e6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8824963894b70412ff4525f25b40de7ed53ccd3b
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880297"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901061"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP-Eigenschaften
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -62,8 +62,7 @@ ms.locfileid: "85880297"
  Suchen Sie in MSDN nach Themen wie **Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports (SQL Server-Konfigurations-Manager)** und **Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Auswählen eines Netzwerkprotokolls](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
+ [Auswählen eines Netzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [SQL Server-Browserdienst](sql-server-browser-service.md)  
-  
   
