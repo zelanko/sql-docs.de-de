@@ -1,4 +1,5 @@
 ---
+description: getNClob-Methode (java.lang.String)
 title: getNClob-Methode (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: be01ce56-8f13-437b-8de6-246cda5f7830
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2639808aab1a16b36e50c9bbb7cdf831711212d5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 031ca2e70d3b5ffb561a6f8ef67de89ab7889644
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435282"
 ---
 # <a name="getnclob-method-javalangstring"></a>getNClob-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

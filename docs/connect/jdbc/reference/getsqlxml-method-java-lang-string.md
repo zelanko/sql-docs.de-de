@@ -1,4 +1,5 @@
 ---
+description: getSQLXML-Methode (java.lang.String)
 title: getSQLXML-Methode (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f56b192a-3255-4215-b552-8e494fbca083
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 474e50964628d7361f40ec9d5d296f8b410d7e52
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 923fbcdbbc1624a3a196ef1dedb4619251f58ad4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434452"
 ---
 # <a name="getsqlxml-method-javalangstring"></a>getSQLXML-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

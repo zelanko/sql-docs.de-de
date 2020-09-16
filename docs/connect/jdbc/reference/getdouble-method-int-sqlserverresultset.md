@@ -1,4 +1,5 @@
 ---
+description: getDouble-Methode (int) (SQLServerResultSet)
 title: getDouble-Methode (int) (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 128df26a-9063-4bdf-a4fb-a077cbe7cfe1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b40e79c9b2cf41f39dac36ef90e078fe0a542c70
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ee030d8fd973d3c423f4e989e5b7a9099de8ac7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436212"
 ---
 # <a name="getdouble-method-int-sqlserverresultset"></a>getDouble-Methode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public double getDouble(int columnIndex)
  Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Double**-Wert  
+ Ein **double**-Wert  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

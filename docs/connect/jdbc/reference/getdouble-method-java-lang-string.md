@@ -1,4 +1,5 @@
 ---
+description: getDouble-Methode (java.lang.String)
 title: getDouble-Methode (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8eab6a8e-91f3-47b1-8707-5e57368ad0c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a111ab8d62fc43f3c4e23b227ed11e400122c1f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 61d1dfc94c213c0a982c48f4f9ff665022da390e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436172"
 ---
 # <a name="getdouble-method-javalangstring"></a>getDouble-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public double getDouble(java.lang.String sCol)
  Ein **String-Objekt**, das den Parameternamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Double**-Wert  
+ Ein **double**-Wert  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

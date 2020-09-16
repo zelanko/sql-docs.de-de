@@ -1,4 +1,5 @@
 ---
+description: getServerPreparedStatementDiscardThreshold-Methode (SQLServerDataSource)
 title: getServerPreparedStatementDiscardThreshold-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef993e25397be7e8aca1a4b83357bf95ae88693c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e779955f77be3891bb3f7479b4a40fb30b3d56ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434542"
 ---
 # <a name="getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource"></a>getServerPreparedStatementDiscardThreshold-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt den Wert der Verbindungseigenschaft **serverPreparedStatementDiscardThreshold** zurück Mit dieser Einstellung steuern Sie, wie viele ausstehende Aktionen zum Verwerfen vorbereiteter Anweisungen (sp_unprepare) pro Verbindung vorhanden sein dürfen, bevor ein Aufruf zum Bereinigen der ausstehenden Handles auf dem Server ausgeführt wird. Wenn diese Eigenschaft auf „<= 1“ festgelegt ist, werden unprepare-Aktionen sofort nach Abschluss der Prepared Statements ausgeführt. Wenn der Wert „> 1“ festgelegt ist, werden diese Aufrufe zusammengefasst, um einen durch zu häufiges Aufrufen von „sp_unprepare“ entstehenden Mehraufwand zu vermeiden.
+  Diese Methode gibt den Wert der Verbindungseigenschaft **serverPreparedStatementDiscardThreshold** zurück. Mit dieser Einstellung steuern Sie, wie viele ausstehende Aktionen zum Verwerfen vorbereiteter Anweisungen (sp_unprepare) pro Verbindung vorhanden sein dürfen, bevor ein Aufruf zum Bereinigen der ausstehenden Handles auf dem Server ausgeführt wird. Wenn diese Eigenschaft auf „<= 1“ festgelegt ist, werden unprepare-Aktionen sofort nach Abschluss der Prepared Statements ausgeführt. Wenn der Wert „> 1“ festgelegt ist, werden diese Aufrufe zusammengefasst, um einen durch zu häufiges Aufrufen von „sp_unprepare“ entstehenden Mehraufwand zu vermeiden.
 
   
 ## <a name="syntax"></a>Syntax  

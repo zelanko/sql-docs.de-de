@@ -1,4 +1,5 @@
 ---
+description: getResponseBuffering-Methode (SQLServerDataSource)
 title: getResponseBuffering-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7710a9c900867e273156690edc0d8961eb08c345
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 387f5442224f26095b0803891725ab8af81996ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434802"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>getResponseBuffering-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ public java.lang.String getResponseBuffering()
 ## <a name="return-value"></a>Rückgabewert  
  Eine **Zeichenfolge**, die den kleingeschriebenen Wert **full** oder **adaptive** enthält  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der Wert **full** gibt an, dass zur Laufzeit das gesamte Ergebnis vom Server gelesen wird.  
   
  Der Wert **adaptive** gibt an, dass im Bedarfsfall die geringstmögliche Menge an Daten gepuffert wird. Der **adaptive**-Wert ist der Standardpuffermodus.  
