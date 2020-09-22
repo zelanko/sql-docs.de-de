@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6194c9374258e23e7c5a388df9424f986fc899b0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 887730cdedd1dca884bca18bb6df449fdec2e1dc
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991571"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989953"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Aufrufen einer gespeicherten Prozedur als Methode für ein Connection-Objekt
 Eine gespeicherte Prozedur kann so aufgerufen werden, als ob es sich um eine systemeigene Methode auf dem zugeordneten geöffneten **Verbindungs** Objekt handelt. Dies ähnelt dem Aufrufen eines benannten Befehls für das **Verbindungs** Objekt.  
@@ -62,7 +62,9 @@ Set objComm.ActiveConnection = objConn
 ' the active connection object...  
 '    "ALFKI" is the required input parameter,  
 '    objRs is the resultant output variable.  
-  
+objComm(1) = "ALFKI"
+Set objRs = objComm.Execute
+
 ' Display the result.  
 Debug.Print "Results returned from sp_CustOrdersOrders for ALFKI: "  
 Do While Not objRs.EOF  
