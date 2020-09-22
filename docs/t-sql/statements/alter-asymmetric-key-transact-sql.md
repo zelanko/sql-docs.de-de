@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0e911a6680545e1b9d1b018e257bf191abd0edd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 814df70ce91d6cc65b6c2a86d0617dc42bbb4489
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472356"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688698"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,7 +92,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
 ### <a name="a-changing-the-password-of-the-private-key"></a>A. Ändern des Kennworts für den privaten Schlüssel  
  Im folgenden Beispiel wird das Kennwort geändert, das zum Schutz des privaten Schlüssels des asymmetrischen Schlüssels `PacificSales09` verwendet wird. Das neue Kennwort lautet `<enterStrongPasswordHere>`.  
   
-```  
+```sql  
 ALTER ASYMMETRIC KEY PacificSales09   
     WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<oldPassword>',  
@@ -103,7 +103,7 @@ GO
 ### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>B. Entfernen des privaten Schlüssels aus einem asymmetrischen Schlüssel  
  Im folgenden Beispiel wird der private Schlüssel aus `PacificSales19` entfernt, wobei nur der öffentliche Schlüssel beibehalten wird.  
   
-```  
+```sql  
 ALTER ASYMMETRIC KEY PacificSales19 REMOVE PRIVATE KEY;  
 GO  
 ```  
@@ -111,7 +111,7 @@ GO
 ### <a name="c-removing-password-protection-from-a-private-key"></a>C. Entfernen des Kennwortschutzes aus einem privaten Schlüssel  
  Im folgenden Beispiel wird der Kennwortschutz für einen privaten Schlüssel entfernt, und der private Schlüssel wird mit dem Datenbank-Hauptschlüssel geschützt.  
   
-```  
+```sql  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '<database master key password>';  
 ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<enterStrongPasswordHere>' );  

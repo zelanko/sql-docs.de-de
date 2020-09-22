@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63ef4a797c8e396d3ce3ca4b4db21d44519b8525
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 584fcb85f71d253fd2ecc471d64c58579cf2c233
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549480"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688378"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89549480"
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-  
 ALTER FULLTEXT INDEX ON table_name  
    { ENABLE   
    | DISABLE  
@@ -238,7 +237,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  Es wird ein Volltextindex in `table_1` mit der Sucheigenschaftenliste `spl_1` erstellt:  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1,   
        CHANGE_TRACKING OFF, NO POPULATION;   
@@ -246,13 +245,13 @@ ALTER FULLTEXT INDEX ON table_name
   
 2.  Eine vollständige Auffüllung des Volltextindex wird ausgeführt:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 START FULL POPULATION;  
     ```  
   
 3.  Der Volltextindex wird später mit der folgenden Anweisung einer anderen Sucheigenschaftenliste (`spl_2`) zugeordnet:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_2;  
     ```  
   
@@ -262,14 +261,14 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  In `table_1` wird ein Volltextindex mit der Sucheigenschaftenliste `spl_1` erstellt, und der Index wird standardmäßig automatisch aufgefüllt:  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1;   
     ```  
   
 2.  Die Sucheigenschaftenliste wird wie folgt deaktiviert:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1   
        SET SEARCH PROPERTY LIST OFF WITH NO POPULATION;   
     ```  
@@ -278,7 +277,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      Mit der folgenden Anweisung wird der Volltextindex beispielsweise wieder der ursprünglichen Sucheigenschaftenliste `spl_1` zugeordnet:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
     ```  
   
@@ -300,7 +299,7 @@ ALTER FULLTEXT INDEX ON table_name
 ### <a name="a-setting-manual-change-tracking"></a>A. Festlegen der manuellen Änderungsnachverfolgung  
  Im folgenden Beispiel wird die manuelle Änderungsnachverfolgung für den Volltextindex in der `JobCandidate`-Tabelle festgelegt.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate  
@@ -317,7 +316,7 @@ GO
 > [!NOTE]  
 >  Ein Beispiel, in dem die Eigenschaftenliste `DocumentPropertyList` erstellt wird, finden Sie unter [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -331,7 +330,7 @@ GO
   
  Im folgenden Beispiel wird die Eigenschaftenliste `DocumentPropertyList` aus dem Volltextindex in der Tabelle `Production.Document` entfernt. In diesem Beispiel besteht keine dringende Notwendigkeit, die Eigenschaften aus dem Index zu entfernen; daher wird die WITH NO POPULATION-Option angegeben. Suchen auf Eigenschaftenebene in diesem Volltextindex sind jedoch nicht mehr zulässig.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -342,7 +341,7 @@ GO
 ### <a name="d-starting-a-full-population"></a>D: Starten einer vollständigen Auffüllung  
  Im folgenden Beispiel wird die vollständige Ausfüllung für den Volltextindex in der `JobCandidate`-Tabelle gestartet.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   

@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c3fc7061750b7adea9cd90eda39b2364740dc9ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 615a18de5c90bec08d79579a038cb106f2a6d3fc
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479052"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688545"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,8 +45,7 @@ ms.locfileid: "88479052"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```syntaxsql
 ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Component'  
 ```  
   
@@ -67,7 +66,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
   
  Im folgenden Beispiel wird dem vorhandenen Namespace `https://MySchema/test_xml_schema` in der Collection `MyColl` ein neues \<element> hinzugefügt.  
   
-```  
+```sql  
 -- First create an XML schema collection.  
 CREATE XML SCHEMA COLLECTION MyColl AS '  
    <schema   
@@ -99,7 +98,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
 ### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. Erstellen einer XML-Schemaauflistung in der Datenbank  
  Im folgenden Beispiel wird die XML-Schemaauflistung `ManuInstructionsSchemaCollection` erstellt. Diese Auflistung hat nur einen Schemanamespace.  
   
-```  
+```sql  
 -- Create a sample database in which to load the XML schema collection.  
 CREATE DATABASE SampleDB;  
 GO  
@@ -171,7 +170,7 @@ DROP DATABASE SampleDB;
   
  Alternativ können Sie die Schemaauflistung einer Variablen zuweisen und die Variable in der `CREATE XML SCHEMA COLLECTION`-Anweisung wie folgt angeben:  
   
-```  
+```sql  
 DECLARE @MySchemaCollection nvarchar(max);  
 SET @MySchemaCollection  = N' copy the schema collection here';  
 CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;   
@@ -192,7 +191,7 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Angeben mehrerer Schemanamespaces in einer Schemaauflistung  
  Sie können mehrere XML-Schemas angeben, wenn Sie eine XML-Schemaauflistung erstellen. Beispiel:  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION N'  
 <xsd:schema>....</xsd:schema>  
 <xsd:schema>...</xsd:schema>';  
@@ -200,7 +199,7 @@ CREATE XML SCHEMA COLLECTION N'
   
  Im folgenden Beispiel wird die XML-Schemaauflistung `ProductDescriptionSchemaCollection` erstellt, die zwei XML-Schemanamespaces enthält.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
@@ -247,7 +246,7 @@ GO
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. Importieren eines Schemas ohne Zielnamespaceangabe  
  Falls ein Schema, das kein **targetNamespace**-Attribut enthält, in eine Collection importiert wird, werden dessen Komponenten wie im folgenden Beispiel dem Zielnamespace mit einer leeren Zeichenfolge zugeordnet. Wenn nicht mindestens ein importiertes Schema in der Auflistung zugeordnet wird, werden mehrere Schemakomponenten (möglicherweise nicht verknüpfte Komponenten) dem standardmäßigen Namespace mit einer leeren Zeichenfolge zugeordnet.  
   
-```  
+```sql  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  

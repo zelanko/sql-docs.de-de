@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4095c5fcfebdcaa531fc621684b95f4b1598142d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 16f0dce09020c1139bc97b86453c96ed7ada95f1
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484826"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688886"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (Berechtigungen für Datenbankprinzipal) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -157,7 +157,7 @@ DENY permission [ ,...n ]
 ### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>A. Verweigern der CONTROL-Berechtigung eines Benutzers für einen anderen Benutzer  
  Im folgenden Beispiel wird die `CONTROL`-Berechtigung für den [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Benutzer `Wanida` dem Benutzer `RolandX` verweigert.  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 DENY CONTROL ON USER::Wanida TO RolandX;  
 GO  
@@ -166,7 +166,7 @@ GO
 ### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>B. Verweigern der VIEW DEFINITION-Berechtigung einer Rolle für einen Benutzer, dem diese Berechtigung mit GRANT OPTION erteilt wurde  
  Im folgenden Beispiel wird die `VIEW DEFINITION`-Berechtigung für die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Rolle `SammamishParking` dem Datenbankbenutzer `JinghaoLiu` verweigert. Die `CASCADE`-Option ist angegeben, da dem Benutzer `JinghaoLiu` die VIEW DEFINITION-Berechtigung mit GRANT OPTION erteilt wurde.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu CASCADE;  
@@ -178,7 +178,7 @@ GO
   
 **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    

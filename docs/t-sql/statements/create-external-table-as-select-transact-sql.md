@@ -21,12 +21,12 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 14f329396794d3bfd0384a4888e705e9e31a498b
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 7b38d226ca660befe7a04c1c014fe41eedf22146
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862096"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688462"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88862096"
 
 ## <a name="syntax"></a>Syntax
 
-```syntaxsql
-  
+```syntaxsql 
 CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] table_name   
     WITH (   
         LOCATION = 'hdfs_folder',  
@@ -198,9 +197,8 @@ Um CREATE EXTERNAL TABLE AS SELECT-Anweisungen mit diesen Zeichen zu verwenden, 
 
  Dies ergibt `hdfs:// xxx.xxx.xxx.xxx:5000/files/Customer/ QueryID_YearMonthDay_HourMinutesSeconds_FileIndex.txt.` als Hadoop-Speicherort und -Dateiname.
 
-```  
-  
-      -- Example is based on AdventureWorks   
+```sql  
+-- Example is based on AdventureWorks   
 CREATE EXTERNAL TABLE hdfsCustomer  
 WITH (  
         LOCATION='/pdwdata/customer.tbl',  
@@ -216,9 +214,8 @@ WITH (
 > [!NOTE]
 >  In diesem Beispiel wird 5000 angegeben. Wird kein Port angegeben, verwendet die Datenbank 8020 als Standardport.
 
-```  
-  
-      -- Example is based on AdventureWorks  
+```sql  
+-- Example is based on AdventureWorks  
 CREATE EXTERNAL TABLE dbo.FactInternetSalesNew  
 WITH   
     (   

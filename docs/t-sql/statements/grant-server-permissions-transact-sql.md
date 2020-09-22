@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a208dc9a99f18a9bfad061afc9caae7f3e859add
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23ff7a537598cde913635d427bdbd58388e16803
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444639"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570531"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT (Serverberechtigungen) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ GRANT permission [ ,...n ]
 ### <a name="a-granting-a-permission-to-a-login"></a>A. Gewähren einer Berechtigung für einen Anmeldenamen  
  Im folgenden Beispiel wird die `CONTROL SERVER`-Berechtigung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `TerryEminhizer` erteilt.  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL SERVER TO TerryEminhizer;  
 GO  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. Gewähren einer Berechtigung, die über die GRANT-Berechtigung verfügt  
  Im folgenden Beispiel wird die `ALTER ANY EVENT NOTIFICATION`-Berechtigung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `JanethEsteves` mit dem Recht zum Erteilen der Berechtigung für andere Anmeldenamen erteilt.  
   
-```  
+```sql  
 USE master;  
 GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
 GO  
@@ -168,7 +168,7 @@ GO
 ### <a name="c-granting-a-permission-to-a-server-role"></a>C. Gewähren einer Berechtigung für eine Serverrolle  
  Im folgenden Beispiel werden die beiden Serverrollen `ITDevAdmin` und `ITDevelopers` erstellt. Die `ALTER ANY DATABASE`-Berechtigung wird der benutzerdefinierten `ITDevAdmin`-Serverrolle mit der `WITH GRANT`-Option erteilt, sodass die `ITDevAdmin`-Berechtigung von der `ALTER ANY DATABASE`-Serverrolle neu zugewiesen werden kann. Anschließend wird im Beispiel `ITDevelopers` die Berechtigung zur Verwendung der `ALTER ANY DATABASE`-Berechtigung der `ITDevAdmin`-Serverrolle erteilt.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3f7354a8a8ea4e705df8eb54a3db6dd2531132e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5cf5d6bcda6670c6cfc9a142be0569bc4bfeaf8e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544241"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688200"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ ALTER SEARCH PROPERTY LIST list_name
   
  Mit der [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)-Katalogsicht können Sie die Namen der vorhandenen Eigenschaftenlisten wie folgt aufrufen:  
   
-```  
+```sql  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
@@ -79,7 +79,7 @@ SELECT name FROM sys.registered_search_property_lists;
   
  Wenn Sie sich die Namen der Eigenschaften anzeigen lassen möchten, die derzeit in einer Sucheigenschaftenliste der aktuellen Datenbank vorhanden sind, können Sie die [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)-Katalogsicht wie folgt verwenden:  
   
-```  
+```sql  
 SELECT property_name FROM sys.registered_search_properties;  
 ```  
   
@@ -88,7 +88,7 @@ SELECT property_name FROM sys.registered_search_properties;
   
  Wenn Sie sich die Eigenschaftensatz-GUID der Eigenschaften anzeigen lassen möchten, die derzeit in einer Sucheigenschaftenliste der aktuellen Datenbank vorhanden sind, können Sie die [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)-Katalogsicht wie folgt verwenden:  
   
-```  
+```sql  
 SELECT property_set_guid FROM sys.registered_search_properties;  
 ```  
   
@@ -97,7 +97,7 @@ SELECT property_set_guid FROM sys.registered_search_properties;
   
  Wenn Sie sich den ganzzahliger Bezeichner der Eigenschaften anzeigen lassen möchten, die derzeit in einer Sucheigenschaftenliste der aktuellen Datenbank vorhanden sind, können Sie die [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)-Katalogsicht wie folgt verwenden:  
   
-```  
+```sql  
 SELECT property_int_id FROM sys.registered_search_properties;  
 ```  
   
@@ -117,7 +117,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
   
  Wenn Sie eine Eigenschaft angeben, können Sie die PROPERTY_SET_GUID, PROPERTY_INT_ID und die PROPERTY_DESCRIPTION-Klausel in Form einer Trennzeichen getrennten Liste in Klammern in beliebiger Reihenfolge angeben. Beispiel:  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST CVitaProperties  
 ADD 'System.Author'   
 WITH (   
@@ -136,7 +136,7 @@ WITH (
 ## <a name="making-added-properties-searchable"></a>Hinzugefügte Eigenschaften als durchsuchbar festlegen  
  Durch Hinzufügen einer Sucheigenschaft zu einer Sucheigenschaftenliste wird die Eigenschaft registriert. Eine neu hinzugefügte Eigenschaft kann unmittelbar in [CONTAINS](../../t-sql/queries/contains-transact-sql.md)-Abfragen angegeben werden. Bei Volltextabfragen mit Eigenschaftenbereichen in einer neu hinzugefügten Eigenschaft werden erst dann Dokumente zurückgegeben, wenn der zugeordnete Volltextindex neu aufgefüllt wurde. So werden von der folgenden Abfrage mit Eigenschaftenbereich für die neu hinzugefügte Eigenschaft *new_search_property* erst dann Dokumente zurückgegeben, wenn der mit der Zieltabelle *table_name* verknüpfte Volltextindex neu aufgefüllt wird:  
   
-```  
+```sql  
 SELECT column_name  
 FROM table_name  
 WHERE CONTAINS( PROPERTY( column_name, 'new_search_property' ), 
@@ -146,7 +146,7 @@ GO
   
  Um eine vollständige Auffüllung zu starten, können Sie in Transact-SQL die folgende [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)-Anweisung verwenden:  
   
-```  
+```sql  
 USE database_name;  
 GO  
 ALTER FULLTEXT INDEX ON table_name START FULL POPULATION;  
@@ -184,7 +184,7 @@ GO
 > [!NOTE]  
 >  Ein Beispiel, in dem die Eigenschaftenliste `DocumentPropertyList` erstellt wird, finden Sie unter [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST DocumentPropertyList  
    ADD 'Title'   
    WITH ( PROPERTY_SET_GUID = 'F29F85E0-4FF9-1068-AB91-08002B27B3D9', PROPERTY_INT_ID = 2,   
@@ -208,7 +208,7 @@ ALTER SEARCH PROPERTY LIST DocumentPropertyList
 ### <a name="b-dropping-a-property"></a>B. Löschen einer Eigenschaft  
  Im folgenden Beispiel wird die `Comments`-Eigenschaften aus der `DocumentPropertyList`-Eigenschaftenliste gelöscht.  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST DocumentPropertyList  
 DROP 'Comments' ;  
 ```  

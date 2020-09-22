@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919b355458d7a3b975906f5bc6f5cb72322fdc2a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ae8e04d348f6a3146030d4f0bf8856b2d343b682
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544234"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688178"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "89544234"
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-  
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
     [ INCREMENT BY <constant> ]  
@@ -93,7 +92,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die **ALTER**-Berechtigung für die Sequenz oder die **ALTER**-Berechtigung für das Schema. Die **ALTER**-Berechtigung für die Sequenz kann mit **ALTER ON OBJECT** im folgenden Format erteilt werden:  
   
-```  
+```sql  
 GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]  
 ```  
   
@@ -108,7 +107,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ### <a name="a-altering-a-sequence"></a>A. Ändern einer Sequenz  
  Im folgenden Beispiel werden das Schema „Test“ und die Sequenz „TestSeq“ mit dem **int**-Datentyp und einem Bereich von 100 bis 200 erstellt. Die Sequenz beginnt mit 125 und wird immer um 25 inkrementiert, wenn eine Zahl generiert wurde. Da die Sequenz zum Durchlaufen konfiguriert wurde, wird sie beim Überschreiten des maximalen Werts von 200 beim minimalen Wert von 100 neu gestartet.  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
   
@@ -126,7 +125,7 @@ GO
   
  Im folgenden Beispiel wird die Sequenz „TestSeq“ so geändert, dass sie über einen Bereich von 50 bis 200 verfügt. Die Nummerierung wird von der Sequenz bei 100 neu gestartet und wird immer um 50 inkrementiert, wenn eine Zahl generiert wurde.  
   
-```  
+```sql  
 ALTER SEQUENCE Test. TestSeq  
     RESTART WITH 100  
     INCREMENT BY 50  
@@ -143,25 +142,25 @@ GO
 ### <a name="b-restarting-a-sequence"></a>B. Neustarten einer Sequenz  
  Im folgenden Beispiel wird die Sequenz „CountBy1“ erstellt. Die Sequenz verwendet die Standardwerte.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1 ;  
 ```  
   
  Um einen Sequenzwert zu generieren, wird vom Besitzer folgende Anweisung ausgeführt:  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1  
 ```  
   
  Der zurückgegebene Wert –9.223.372.036.854.775.808 ist der niedrigst mögliche Wert des **bigint**-Datentyps. Der Besitzer erkennt, dass die Sequenz bei 1 beginnen sollte, die **START WITH**-Klausel beim Erstellen der Sequenz allerdings nicht angegeben wurde. Um diesen Fehler zu korrigieren, wird die folgende Anweisung vom Besitzer ausgeführt.  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1 RESTART WITH 1 ;  
 ```  
   
  Anschließend wird die folgende Anweisung vom Besitzer ausgeführt, um erneut eine Sequenznummer zu generieren.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1;  
 ```  
   
@@ -169,11 +168,10 @@ SELECT NEXT VALUE FOR Test.CountBy1;
   
  Die Sequenz „CountBy1“ wurde mit dem Standardwert von NO CYCLE erstellt. Nachdem die Zahl 9.223.372.036.854.775.807 generiert wurde, wird die Ausführung daher beendet. Nachfolgende Aufrufe des Sequenzobjekts geben den Fehler 11728 zurück. Die folgende Anweisung ändert das Sequenzobjekt auf Durchläufe und legt einen Cache von 20 fest.  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1  
     CYCLE  
-    CACHE 20 ;  
-  
+    CACHE 20 ; 
 ```  
   
  Wenn vom Sequenzobjekt jetzt der Wert 9.223.372.036.854.775.807 erreicht wird, erfolgt ein Durchlauf, und die nächste Zahl nach dem Durchlauf ist der minimale Wert des Datentyps -9.223.372.036.854.775.808.  

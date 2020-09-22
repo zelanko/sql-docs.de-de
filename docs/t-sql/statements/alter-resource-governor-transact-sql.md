@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e14ff0dce201a195fa7a064cc7df604b52b8370
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0f798856f7074aef0318f98d5d9c7415fe3e2846
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544321"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688238"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,14 +117,14 @@ ALTER RESOURCE GOVERNOR
 ### <a name="a-starting-the-resource-governor"></a>A. Starten der Ressourcenkontrolle  
  Nach der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist die Ressourcenkontrolle zunächst deaktiviert. Im folgenden Beispiel wird die Ressourcenkontrolle gestartet. Sobald die Anweisung ausgeführt wurde, ist die Ressourcenkontrolle gestartet und kann die vordefinierten Arbeitsauslastungsgruppen und Ressourcenpools verwenden.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 ```  
   
 ### <a name="b-assigning-new-sessions-to-the-default-group"></a>B. Zuweisen neuer Sitzungen zur Standardgruppe  
  Im folgenden Beispiel werden alle neuen Sitzungen der Standardarbeitsauslastungsgruppe zugewiesen, indem alle vorhandenen Klassifizierungsfunktionen aus der Konfiguration der Ressourcenkontrolle entfernt werden. Wenn keine Funktion als Klassifizierungsfunktion festgelegt ist, werden alle neuen Sitzungen der Standardarbeitsauslastungsgruppe zugewiesen. Diese Änderung gilt nur für neue Sitzungen. Vorhandene Sitzungen werden nicht beeinflusst.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = NULL);  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
@@ -133,7 +133,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 ### <a name="c-creating-and-registering-a-classifier-function"></a>C. Erstellen und Registrieren einer Klassifizierungsfunktion  
  Im folgenden Beispiel wird die Klassifizierungsfunktion `dbo.rgclassifier_v1` erstellt. Diese Funktion klassifiziert jede neue Sitzung anhand des Benutzer- oder Anwendungsnamens und weist die Sitzungsanforderungen und Abfragen einer bestimmten Arbeitsauslastungsgruppe zu. Sitzungen, die nicht mit dem angegebenen Benutzer- oder Anwendungsnamen übereinstimmen, werden der Standardarbeitsauslastungsgruppe zugewiesen. Anschließend wird die Klassifizierungsfunktion registriert, und die Konfigurationsänderung wird angewendet.  
   
-```  
+```sql  
 -- Store the classifier function in the master database.  
 USE master;  
 GO  
@@ -178,14 +178,14 @@ GO
 ### <a name="d-resetting-statistics"></a>D: Zurücksetzen von Statistiken  
  Im folgenden Beispiel wird die gesamte Statistik für Arbeitsauslastungsgruppen und Ressourcenpools zurückgesetzt.  
   
-```  
+```sql 
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
 ### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. Festlegen der MAX_OUTSTANDING_IO_PER_VOLUME-Option  
  Im folgenden Beispiel wird die MAX_OUTSTANDING_IO_PER_VOLUME-Option auf 20 festgelegt.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR  
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  

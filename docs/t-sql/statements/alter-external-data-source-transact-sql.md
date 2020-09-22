@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce602b13c79f45e5bba58664a165f74c7712a81a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d90bacf17953eee4874343fadf2e9daf97a8664
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538129"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688412"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -87,17 +87,16 @@ Die verwendeten Anmeldeinformationen müssen mithilfe von `SHARED ACCESS SIGNATU
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Speicherort und der Ressourcen-Manager-Speicherort einer vorhandenen Datenquelle geändert.
 
-```  
+```sql  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
      LOCATION = 'hdfs://10.10.10.10:8020',
      RESOURCE_MANAGER_LOCATION = '10.10.10.10:8032'
     ;
-  
 ```
 
  Im folgenden Beispiel werden die Anmeldeinformationen zur Verbindung mit einer vorhandenen Datenquelle geändert.
 
-```  
+```sql 
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
    CREDENTIAL = new_hadoop_user
     ;
@@ -105,7 +104,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
 
  Im folgenden Beispiel werden die Anmeldeinformationen in einen neuen Speicherort geändert. Bei diesem Beispiel handelt es sich um eine externe Datenquelle, die für Azure SQL Data Warehouse erstellt wurde. 
 
-```  
+```sql  
 ALTER EXTERNAL DATA SOURCE AzureStorage_west SET
    LOCATION = 'wasbs://loadingdemodataset@updatedproductioncontainer.blob.core.windows.net',
    CREDENTIAL = AzureStorageCredential

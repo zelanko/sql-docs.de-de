@@ -21,12 +21,12 @@ ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8c251486ae982abda531bd443db95c57a1b99900
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c16003a3d265bbebc613c6a7eacd798f5c00da6d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479236"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688786"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88479236"
   
 ## <a name="syntax"></a>Syntax  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  
 ```  
@@ -75,7 +74,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ### <a name="a-changing-the-password-of-a-credential"></a>A. Ändern des Kennworts für Anmeldeinformationen  
  Im folgenden Beispiel wird das Kennwort, das in den Anmeldeinformationen namens `Saddles` gespeichert ist, geändert. Diese Anmeldeinformationen enthalten den Windows-Anmeldenamen `RettigB` und das zugehörige Kennwort. Das neue Kennwort wird den Anmeldeinformationen mithilfe der SECRET-Klausel hinzugefügt.  
   
-```  
+```sql  
 ALTER CREDENTIAL Saddles WITH IDENTITY = 'RettigB',   
     SECRET = 'sdrlk8$40-dksli87nNN8';  
 GO  
@@ -84,7 +83,7 @@ GO
 ### <a name="b-removing-the-password-from-a-credential"></a>B. Entfernen des Kennworts aus Anmeldeinformationen  
  Im folgenden Beispiel wird das Kennwort aus Anmeldeinformationen namens `Frames` entfernt. Diese Anmeldeinformationen enthalten den Windows-Anmeldenamen `Aboulrus8` und ein Kennwort. Nach der Ausführung der Anweisung weisen die Anmeldeinformationen ein NULL-Kennwort auf, weil die Option SECRET nicht angegeben ist.  
   
-```  
+```sql  
 ALTER CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
 GO  
 ```  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9b4af50e021520c1333e0dbffb8cc3c654b6f0fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60e788fc63d0a7dd47274e85397f30aa04f95416
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88416836"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688633"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY (Endpunktberechtigungen) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. Verweigern der VIEW DEFINITION-Berechtigung für einen Endpunkt  
  Im folgenden Beispiel wird die `VIEW DEFINITION`-Berechtigung für den Endpunkt `Mirror7` für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `ZArifin` verweigert.  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;  
 GO  
@@ -110,7 +110,7 @@ GO
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. Verweigern der TAKE OWNERSHIP-Berechtigung mit CASCADE-Option  
  Im folgenden Beispiel wird die `TAKE OWNERSHIP`-Berechtigung für den Endpunkt `Shipping83` für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer `PKomosinski` und für alle Prinzipale verweigert, denen von `PKomosinski` die `TAKE OWNERSHIP`-Berechtigung erteilt wurde.  
   
-```  
+```sql  
 USE master;  
 DENY TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski   
     CASCADE;  

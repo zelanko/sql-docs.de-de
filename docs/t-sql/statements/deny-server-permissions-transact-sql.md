@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 50377ed7b719eee6a135af5db6161d9eed824915
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67833e662688b6de418fc6d7db169f1107866035
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426622"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688604"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY (Serverberechtigungen) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -155,7 +155,7 @@ In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die I
 ### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. Verweigern der CONNECT SQL-Berechtigung für einen SQL Server-Anmeldenamen und für Prinzipale, denen der Anmeldename diese Berechtigung erteilt hat  
  Im folgenden Beispiel wird die `CONNECT SQL`-Berechtigung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `Annika` und für die Prinzipale verweigert, denen diese Benutzerin die Berechtigung erteilt hat.  
   
-```  
+```sql  
 USE master;  
 DENY CONNECT SQL TO Annika CASCADE;  
 GO  
@@ -164,7 +164,7 @@ GO
 ### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>B. Verweigern der CREATE ENDPOINT-Berechtigung für einen SQL Server-Anmeldenamen mit der AS-Option  
  Im folgenden Beispiel wird die `CREATE ENDPOINT`-Berechtigung für den Benutzer `ArifS` verweigert. Im Beispiel wird die `AS`-Option verwendet, um `MandarP` als Prinzipal anzugeben, von dem der ausführende Prinzipal die Berechtigung zum Erteilen oder Verweigern der Berechtigung ableitet.  
   
-```  
+```sql  
 USE master;  
 DENY CREATE ENDPOINT TO ArifS AS MandarP;  
 GO  

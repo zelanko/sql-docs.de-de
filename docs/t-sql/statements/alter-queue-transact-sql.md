@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa1828f1a6c684c0028ed3ada229aca3811a88a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5a8ba9a6a1dbc0f1c6e6c6312c627f83335bbe09
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541490"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688223"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,6 @@ WITH
 {  
    ( MAXDOP = max_degree_of_parallelism )  
 }  
-  
 ```  
   
 
@@ -180,14 +179,14 @@ Im Gegensatz zu REORGANIZE bei Benutzertabellen wird REORGANIZE bei einer Wartes
 ### <a name="a-making-a-queue-unavailable"></a>A. Festlegen, dass eine Warteschlange nicht verfügbar ist  
  Im folgenden Beispiel wird festgelegt, dass die `ExpenseQueue`-Warteschlange nicht für den Empfang von Nachrichten verfügbar ist.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH STATUS = OFF ;  
 ```  
   
 ### <a name="b-changing-the-activation-stored-procedure"></a>B. Ändern der gespeicherten Aktivierungsprozedur  
  Im folgenden Beispiel wird die von der Warteschlange gestartete gespeicherte Prozedur geändert. Die gespeicherte Prozedur wird als der Benutzer ausgeführt, der die `ALTER QUEUE`-Anweisung ausgeführt hat.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = new_stored_proc,  
@@ -197,14 +196,14 @@ ALTER QUEUE ExpenseQueue
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. Ändern der Anzahl von Warteschlangenlesevorgängen  
  Im folgenden Beispiel wird die maximale Anzahl von Instanzen der gespeicherten Prozedur, die von [!INCLUDE[ssSB](../../includes/sssb-md.md)] für diese Warteschlange gestartet werden, auf `7` festgelegt.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  
 ```  
   
 ### <a name="d-changing-the-activation-stored-procedure-and-the-execute-as-account"></a>D: Ändern der gespeicherten Aktivierungsprozedur und des EXECUTE AS-Kontos  
  Im folgenden Beispiel wird die von [!INCLUDE[ssSB](../../includes/sssb-md.md)] gestartete gespeicherte Prozedur geändert. Die gespeicherte Prozedur wird als der Benutzer `SecurityAccount` ausgeführt.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = AdventureWorks2012.dbo.new_stored_proc ,  
@@ -214,7 +213,7 @@ ALTER QUEUE ExpenseQueue
 ### <a name="e-setting-the-queue-to-retain-messages"></a>E. Festlegen, dass Nachrichten in der Warteschlange aufbewahrt werden  
  Im folgenden Beispiel wird festgelegt, dass Nachrichten in der Warteschlange aufbewahrt werden. Die Warteschlange bewahrt alle Nachrichten auf, die von Diensten gesendet bzw. von diesen empfangen werden, die diese Warteschlange verwenden. Die Aufbewahrung endet, wenn die Konversation, in der die Nachrichten enthalten sind, beendet wurde.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;  
 ```  
   
@@ -231,7 +230,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
  Im folgenden Beispiel werden Warteschlangenindizes neu erstellt.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
@@ -241,7 +240,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
  Im folgenden Beispiel werden Warteschlangenindizes neu erstellt.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
@@ -249,7 +248,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 **Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   

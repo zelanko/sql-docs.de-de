@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 509117125c468d3ef8854f624060805b1a360990
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3ad277a8538eee95404be124068635bc4d9ea5fa
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541364"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688459"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -99,7 +99,7 @@ CREATE MESSAGE TYPE message_type_name
 ### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>A. Erstellen eines Nachrichtentyps, der wohlgeformtes XML enthält  
  Im folgenden Beispiel wird ein neuer Nachrichtentyp erstellt, der wohlgeformte XML-Daten enthält.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
   [//Adventure-Works.com/Expenses/SubmitExpense]  
   VALIDATION = WELL_FORMED_XML ;     
@@ -108,7 +108,7 @@ CREATE MESSAGE TYPE
 ### <a name="b-creating-a-message-type-containing-typed-xml"></a>B. Erstellen eines Nachrichtentyps, der typisiertes XML enthält  
  Im folgenden Beispiel wird ein Nachrichtentyp für einen Ausgabenbericht erstellt, der in XML verschlüsselt ist. Es wird eine XML-Schemaauflistung erstellt, die das Schema für einen einfachen Ausgabenbericht enthält. Anschließend wird ein neuer Nachrichtentyp erstellt, der Nachrichten mithilfe des Schemas überprüft.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ExpenseReportSchema AS  
 N'<?xml version="1.0" encoding="UTF-16" ?>  
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -147,7 +147,7 @@ N'<?xml version="1.0" encoding="UTF-16" ?>
 ### <a name="c-creating-a-message-type-for-an-empty-message"></a>C. Erstellen eines Nachrichtentyps für eine leere Nachricht  
  Im folgenden Beispiel wird ein neuer Nachrichtentyp mit leerer Codierung erstellt.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]  
     VALIDATION = EMPTY ;  
@@ -156,7 +156,7 @@ CREATE MESSAGE TYPE
 ### <a name="d-creating-a-message-type-containing-binary-data"></a>D: Erstellen eines Nachrichtentyps, der Binärdaten enthält  
  Im folgenden Beispiel wird ein neuer Nachrichtentyp erstellt, der Binärdaten enthalten soll. Da in der Nachricht keine XML-Daten enthalten sind, wird der Überprüfungstyp vom Nachrichtentyp auf `NONE` festgelegt. Beachten Sie, dass in diesem Fall die Anwendung, die eine Nachricht von diesem Typ empfängt, überprüfen muss, dass die Nachricht Daten enthält und dass die Daten vom erwarteten Typ sind.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/ReceiptImage]  
     VALIDATION = NONE ;  

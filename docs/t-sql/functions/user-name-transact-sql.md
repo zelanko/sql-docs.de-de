@@ -25,12 +25,12 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb4be6c95f60be21e594b98725a636aebce62bfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13c27b4f23e6361592a72082c94fb033a96ce0d7
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467702"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570667"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88467702"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 USER_NAME ( [ id ] )  
 ```  
   
@@ -65,7 +65,7 @@ USER_NAME ( [ id ] )
 ### <a name="a-using-user_name"></a>A. Verwenden von USER_NAME  
  Im folgenden Beispiel wird der Benutzername für die Benutzer-ID `13` zurückgegeben.  
   
-```  
+```sql  
 SELECT USER_NAME(13);  
 GO  
 ```  
@@ -73,7 +73,7 @@ GO
 ### <a name="b-using-user_name-without-an-id"></a>B. Verwenden von USER_NAME ohne ID  
  Das folgende Beispiel sucht nach dem Namen des aktuellen Benutzers, ohne eine ID anzugeben.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 ```  
@@ -90,7 +90,7 @@ dbo
 ### <a name="c-using-user_name-in-the-where-clause"></a>C. Verwenden von USER_NAME in der WHERE-Klausel  
  Das folgende Beispiel findet in der `sysusers`-Tabelle diejenige Zeile, in der der Name mit dem Ergebnis der `USER_NAME`-Systemfunktion (angewendet auf Benutzer-ID `1`) übereinstimmt.  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 GO  
 ```  
@@ -108,7 +108,7 @@ dbo
 ### <a name="d-calling-user_name-during-impersonation-with-execute-as"></a>D: Aufrufen von USER_NAME während des Identitätswechsels mit EXECUTE AS  
  Das folgende Beispiel zeigt, wie sich `USER_NAME` während des Identitätswechsels verhält.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 EXECUTE AS USER = 'Zelig';  
@@ -134,7 +134,7 @@ DBO
 ### <a name="e-using-user_name-without-an-id"></a>E. Verwenden von USER_NAME ohne ID  
  Das folgende Beispiel sucht nach dem Namen des aktuellen Benutzers, ohne eine ID anzugeben.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 ```  
   
@@ -148,7 +148,7 @@ User7
 ### <a name="f-using-user_name-in-the-where-clause"></a>F. Verwenden von USER_NAME in der WHERE-Klausel  
  Das folgende Beispiel findet in der `sysusers`-Tabelle diejenige Zeile, in der der Name mit dem Ergebnis der `USER_NAME`-Systemfunktion (angewendet auf Benutzer-ID `1`) übereinstimmt.  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 ```  
   

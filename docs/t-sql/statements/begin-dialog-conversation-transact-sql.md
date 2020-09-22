@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9dff53a56e9acd613322be5af1de6e5f0207abd6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 60eca69999f7e21164eac2ce35add549d767dc26
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547571"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688523"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,6 @@ ms.locfileid: "89547571"
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-  
 BEGIN DIALOG [ CONVERSATION ] @dialog_handle  
    FROM SERVICE initiator_service_name  
    TO SERVICE 'target_service_name'  
@@ -79,7 +78,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
   
  Die *service_broker_guid* ist vom Typ **nvarchar(128)**. Führen Sie die folgende Abfrage in der Datenbank aus, um die *service_broker_guid* für eine Datenbank zu ermitteln:  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID() ;  
@@ -132,7 +131,7 @@ WHERE database_id = DB_ID() ;
 ### <a name="a-beginning-a-dialog"></a>A. Starten eines Dialogs  
  Im folgenden Beispiel wird eine Dialogkonversation begonnen, und ein Bezeichner für den Dialog wird in `@dialog_handle.` gespeichert. Der Dienst `//Adventure-Works.com/ExpenseClient` ist der Initiator für den Dialog, und der Dienst `//Adventure-Works.com/Expenses` ist das Ziel des Dialogs. Der Dialog entspricht dem Vertrag `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -144,7 +143,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>B. Starten eines Dialogs mit einer expliziten Lebensdauer  
  Im folgenden Beispiel wird eine Dialogkonversation begonnen, und ein Bezeichner für den Dialog wird in `@dialog_handle` gespeichert. Der Dienst `//Adventure-Works.com/ExpenseClient` ist der Initiator für den Dialog, und der Dienst `//Adventure-Works.com/Expenses` ist das Ziel des Dialogs. Der Dialog entspricht dem Vertrag `//Adventure-Works.com/Expenses/ExpenseSubmission`. Wenn der Dialog nicht innerhalb von `60` Sekunden mit dem Befehl END CONVERSATION geschlossen wird, beendet Service Broker den Dialog mit einem Fehler.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -157,7 +156,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="c-beginning-a-dialog-with-a-specific-broker-instance"></a>C. Starten eines Dialogs mit einer bestimmten Brokerinstanz  
  Im folgenden Beispiel wird eine Dialogkonversation begonnen, und ein Bezeichner für den Dialog wird in `@dialog_handle` gespeichert. Der Dienst `//Adventure-Works.com/ExpenseClient` ist der Initiator für den Dialog, und der Dienst `//Adventure-Works.com/Expenses` ist das Ziel des Dialogs. Der Dialog entspricht dem Vertrag `//Adventure-Works.com/Expenses/ExpenseSubmission`. Service Broker leitet Nachrichten für diesen Dialog an den Broker weiter, der über folgenden GUID angegeben wird: `a326e034-d4cf-4e8b-8d98-4d7e1926c904.`  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -170,7 +169,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="d-beginning-a-dialog-and-relating-it-to-an-existing-conversation-group"></a>D: Starten eines Dialogs und Zuordnen des Dialogs zu einer vorhandenen Konversationsgruppe  
  Im folgenden Beispiel wird eine Dialogkonversation begonnen, und ein Bezeichner für den Dialog wird in `@dialog_handle` gespeichert. Der Dienst `//Adventure-Works.com/ExpenseClient` ist der Initiator für den Dialog, und der Dienst `//Adventure-Works.com/Expenses` ist das Ziel des Dialogs. Der Dialog entspricht dem Vertrag `//Adventure-Works.com/Expenses/ExpenseSubmission`. Service Broker verknüpft den Dialog mit der durch `@conversation_group_id` angegebenen Konversationsgruppe, statt eine neue Konversationsgruppe zu erstellen.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
@@ -186,7 +185,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="e-beginning-a-dialog-with-an-explicit-lifetime-and-relating-the-dialog-to-an-existing-conversation"></a>E. Starten eines Dialogs mit einer expliziten Lebensdauer und Zuordnen des Dialogs zu einer vorhandenen Konversation  
  Im folgenden Beispiel wird eine Dialogkonversation begonnen, und ein Bezeichner für den Dialog wird in `@dialog_handle` gespeichert. Der Dienst `//Adventure-Works.com/ExpenseClient` ist der Initiator für den Dialog, und der Dienst `//Adventure-Works.com/Expenses` ist das Ziel des Dialogs. Der Dialog entspricht dem Vertrag `//Adventure-Works.com/Expenses/ExpenseSubmission`. Der neue Dialog gehört der gleichen Konversationsgruppe an, zu der `@existing_conversation_handle` gehört. Wenn der Dialog nicht innerhalb von `600` Sekunden mit dem Befehl END CONVERSATION geschlossen wird, beendet [!INCLUDE[ssSB](../../includes/sssb-md.md)] den Dialog mit einem Fehler.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
 DECLARE @existing_conversation_handle UNIQUEIDENTIFIER  
   
@@ -203,7 +202,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="f-beginning-a-dialog-with-optional-encryption"></a>F. Starten eines Dialogs mit optionaler Verschlüsselung  
  Im folgenden Beispiel wird ein Dialog begonnen, und ein Bezeichner für den Dialog wird in `@dialog_handle` gespeichert. Der Dienst `//Adventure-Works.com/ExpenseClient` ist der Initiator für den Dialog, und der Dienst `//Adventure-Works.com/Expenses` ist das Ziel des Dialogs. Der Dialog entspricht dem Vertrag `//Adventure-Works.com/Expenses/ExpenseSubmission`. Die Konversation in diesem Beispiel lässt es zu, dass die Nachricht unverschlüsselt über das Netzwerk weitergeleitet wird, wenn die Verschlüsselung nicht verfügbar ist.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  

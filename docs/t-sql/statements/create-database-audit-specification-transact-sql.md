@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0febaf92d4bdc58ce4e714391c8d4789158a986f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 9ac1ddf48ec23f72fcfd500988c9eb05ce0b94ab
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392788"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688095"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "86392788"
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-  
 CREATE DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
     FOR SERVER AUDIT audit_name   
@@ -99,7 +98,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. Überwachen von "AUSWÄHLEN" und "EINFÜGEN" in einer Tabelle für ein beliebiges Datenbankprinzipal 
  Im folgenden Beispiel wird zunächst eine Serverüberwachung mit dem Namen `Payrole_Security_Audit` und anschließend eine Datenbank-Überwachungsspezifikation mit dem Namen `Payrole_Security_Audit` erstellt, die die`SELECT` -Anweisungen und `INSERT`-Anweisungen des `dbo`-Benutzers für die `HumanResources.EmployeePayHistory`-Tabelle in der `AdventureWorks2012`-Datenbank überwacht.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.  
@@ -126,7 +125,7 @@ GO
 ### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. Überwachen aller DML (EINFÜGEN, AKTUALISIEREN oder LÖSCHEN) für _alle_ Objekte im _sales_-Schema für eine bestimmte Datenbankrolle  
  Im folgenden Beispiel wird zunächst eine Serverüberwachung mit dem Namen `DataModification_Security_Audit` und anschließend eine Datenbank-Überwachungsspezifikation mit dem Namen `Audit_Data_Modification_On_All_Sales_Tables` erstellt, die die `INSERT`-Anweisungen, `UPDATE`-Anweisungen und `DELETE`-Anweisungen der Benutzer in einer neuen Datenbankrolle `SalesUK` für alle Objekte im `Sales`-Schema der `AdventureWorks2012` Datenbank überwacht.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.

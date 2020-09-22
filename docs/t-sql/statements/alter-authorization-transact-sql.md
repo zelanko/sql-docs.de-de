@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f47d0489955f0e7104449395a2fe3f8f591a1b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2e3c5df24d4d4e5897ad8f48384ac1bc5d49f9e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88305919"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688272"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -239,7 +239,7 @@ Ein Azure AD-Benutzer     |Ein Azure AD-Benutzer         |Erfolg
   
 Um den Azure AD-Besitzer der Datenbank zu bestätigen, führen Sie den folgenden Transact-SQL-Befehl in einer Benutzerdatenbank aus (in diesem Beispiel `testdb`).  
     
-```    
+```sql    
 SELECT CAST(owner_sid as uniqueidentifier) AS Owner_SID   
 FROM sys.databases   
 WHERE name = 'testdb';  
@@ -248,7 +248,7 @@ WHERE name = 'testdb';
 Die Ausgabe besteht aus einem Bezeichner (z.B. 6D8B81F6-7C79-444C-8858-4AF896C03C67), der der `richel@cqclinic.onmicrosoft.com` zugewiesenen Azure AD-ObjectID entspricht.  
 Wenn ein Benutzeranmeldename für die SQL Server-Authentifizierung der Datenbankbesitzer ist, führen Sie die folgende Anweisung in der Masterdatenbank aus, um den Datenbankbesitzer zu bestätigen:  
     
-```    
+```sql    
 SELECT d.name, d.owner_sid, sl.name   
 FROM sys.databases AS d  
 JOIN sys.sql_logins AS sl  
@@ -259,16 +259,19 @@ ON d.owner_sid = sl.sid;
 ### <a name="best-practice"></a>Bewährte Methode  
   
 Statt Azure AD-Benutzer als einzelne Datenbankbesitzer zu verwenden, verwenden Sie eine Azure AD-Gruppe als Mitglied der festen Datenbankrolle **db_owner**. In den folgenden Schritten wird gezeigt, wie ein deaktivierter Anmeldename als Datenbankbesitzer und eine Azure Active Directory-Gruppe (`mydbogroup`) als Mitglied der **db_owner**-Rolle konfiguriert wird. 
+
 1.  Melden Sie sich als Azure AD-Administrator bei SQL Server an, und ändern Sie den Datenbankbesitzer in einen deaktivierten Anmeldenamen für die SQL Server-Authentifizierung. Führen Sie über die Benutzerdatenbank z.B. Folgendes aus:  
-  ```    
+  ```sql    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
-  ```    
+  ```  
+  
 2.  Erstellen Sie eine Azure AD-Gruppe, die Datenbankbesitzer werden soll, und fügen Sie sie als Benutzer zur Benutzerdatenbank hinzu. Beispiel:  
-  ```    
+  ```sql    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
-  ```    
+  ```   
+  
 3.  Fügen Sie den Benutzer, der die Azure AD-Gruppe darstellt, in der Benutzerdatenbank zur festen Datenbankrolle **db_owner** hinzu. Beispiel:  
-  ```    
+  ```sql    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
@@ -278,7 +281,7 @@ Nun können die `mydbogroup`-Mitglieder die Datenbank als Mitglieder der **db_ow
   
 Um festzustellen, ob ein bestimmter Benutzer über die effektive DBO-Berechtigung verfügt, muss der Benutzer folgende Anweisung ausführen:  
     
-```    
+```sql    
 SELECT IS_MEMBER ('db_owner');  
 ```    
   
@@ -293,21 +296,21 @@ Lautet der Rückgabewert 1, bedeutet dies, dass der Benutzer ein Mitglied der Ro
 ### <a name="a-transfer-ownership-of-a-table"></a>A. Übertragen des Besitzes einer Tabelle    
  Im folgenden Beispiel wird der Besitz der `Sprockets`-Tabelle an den Benutzer `MichikoOsada` übertragen. Die Tabelle befindet sich im `Parts`-Schema.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON OBJECT::Parts.Sprockets TO MichikoOsada;    
 GO    
 ```    
     
- Die Abfrage kann auch folgendermaßen aussehen:    
+Die Abfrage kann auch folgendermaßen aussehen:    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;    
 GO    
 ```    
     
- Wenn das Objektschema kein Bestandteil der Anweisung ist, sucht die [!INCLUDE[ssDE](../../includes/ssde-md.md)] das Objekt im Standardschema des Benutzers. Beispiel:    
+Wenn das Objektschema kein Bestandteil der Anweisung ist, sucht die [!INCLUDE[ssDE](../../includes/ssde-md.md)] das Objekt im Standardschema des Benutzers. Beispiel:    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
@@ -315,7 +318,7 @@ ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;
 ### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>B. Übertragen des Besitzes einer Sicht an den Schemabesitzer    
  Im folgenden Beispiel wird der Besitz der `ProductionView06`-Sicht an den Besitzer des Schemas übertragen, das sie enthält. Die Sicht befindet sich im `Production`-Schema.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON OBJECT::Production.ProductionView06 TO SCHEMA OWNER;    
 GO    
 ```    
@@ -323,7 +326,7 @@ GO
 ### <a name="c-transfer-ownership-of-a-schema-to-a-user"></a>C. Übertragen des Besitzes eines Schemas an einen Benutzer    
  Im folgenden Beispiel wird der Besitz des `SeattleProduction11`-Schemas an den Benutzer `SandraAlayo` übertragen.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON SCHEMA::SeattleProduction11 TO SandraAlayo;    
 GO    
 ```    
@@ -333,14 +336,15 @@ GO
     
 **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
 GO    
 ```    
     
 ### <a name="e-changing-the-owner-of-a-table"></a>E. Ändern eines Tabellenbesitzers    
  In jedem der folgenden Beispiele wird der Besitzer der `Sprockets`-Tabelle in der `Parts`-Datenbank in den Datenbankbenutzer `MichikoOsada` geändert.    
-```    
+ 
+```sql    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON dbo.Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
@@ -352,14 +356,14 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
     
  Im folgenden Beispiel wird der Besitzer der `Parts`-Datenbank in den Anmeldenamen `MichikoOsada` geändert.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;    
 ```    
   
 ### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>G. Ändern des Besitzers einer SQL-Datenbank in einen Azure AD-Benutzer  
 Im folgenden Beispiel kann ein Azure Active Directory-Administrator für SQL Server in einer Organisation mit einer Active Directory namens `cqclinic.onmicrosoft.com` den aktuellen Besitzer der Datenbank `targetDB` ändern und den AAD-Benutzer `richel@cqclinic.onmicorsoft.com` zum neuen Datenbankbesitzer machen. Dazu muss er den folgenden Befehl ausführen:  
     
-```    
+```sql    
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];   
 ```    
     
