@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4deccd8bcfd4650a8f670969d1ec112f9f99d08d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447467"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990243"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -45,16 +45,16 @@ ms.locfileid: "88447467"
 |group_name|**sysname** |Bei Anforderungen, die Ressourcen verwenden, ist group_name der Name der Arbeits Auslastungs Gruppe, unter der die Anforderung ausgeführt wird.  Wenn die Anforderung keine Ressourcen verwendet, ist group_name NULL.</br>Gilt für: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|Für Anforderungen, die Ressourcen verwenden, den Namen des Klassifizierers, der zum Zuweisen von Ressourcen und Wichtigkeit verwendet wird.||
 |resource_allocation_percentage|**Dezimalzahl (5, 2)**|Die prozentuale Menge der Ressourcen, die der Anforderung zugeordnet sind.</br>Gilt für: Azure SQL Data Warehouse|
-|result_cache_hit|**decimal**|Erläutert, ob für eine abgeschlossene Abfrage der resultsetcache verwendet wurde.  </br>Gilt für: Azure SQL Data Warehouse| 1 = resultsetcache-Treffer </br> 0 = resultsetcache-Fehler </br> Negative Werte = Gründe, warum das Zwischenspeichern von Resultsets nicht verwendet wurde.  Weitere Informationen finden Sie im Abschnitt "Hinweise".|
+|result_cache_hit|**int**|Erläutert, ob für eine abgeschlossene Abfrage der resultsetcache verwendet wurde.  </br>Gilt für: Azure SQL Data Warehouse| 1 = resultsetcache-Treffer </br> 0 = resultsetcache-Fehler </br> Negative ganzzahlige Werte = Gründe für das Zwischenspeichern von Resultsets.  Weitere Informationen finden Sie im Abschnitt "Hinweise".|
 ||||
   
 ## <a name="remarks"></a>Bemerkungen 
  Informationen über die maximale Anzahl von Zeilen, die in dieser Sicht beibehalten werden, finden Sie im Abschnitt "Metadaten" im Thema [Kapazitäts Limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
- Der result_cache_hit ist eine Bitmaske der Verwendung von resultsetcache einer Abfrage.  Diese Spalte kann [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt mindestens eines der folgenden Werte:  
+Der negative ganzzahlige Wert in der result_cache_hit-Spalte ist ein Bitmapwert aller angewendeten Gründe, warum das Resultset einer Abfrage nicht zwischengespeichert werden kann.  Diese Spalte kann [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt von mindestens einem der folgenden Werte:  
   
-|Wert Hex (Decimal)|BESCHREIBUNG|  
-|-----------|-----------------|  
+|Wert            |BESCHREIBUNG  |  
+|-----------------|-----------------|  
 |**1**|Resultsetcache-Treffer|  
 |**0x00** (**0**)|Resultsetcache-Fehler|  
 |-**0x01** (**-1**)|Das Zwischenspeichern von Resultsets ist für die Datenbank deaktiviert.|  
@@ -63,8 +63,10 @@ ms.locfileid: "88447467"
 |-**0x08** (**-8**)|Das Zwischenspeichern von Resultsets ist aufgrund von Sicherheits Prädikaten auf Zeilenebene deaktiviert.|  
 |-**0x10** (**-16**)|Das Zwischenspeichern von Resultsets ist aufgrund der Verwendung der Systemtabelle, der temporären Tabelle oder der externen Tabelle in der Abfrage deaktiviert.|  
 |-**0x20** (**-32**)|Das Zwischenspeichern von Resultsets ist deaktiviert, da die Abfrage Lauf Zeitkonstanten, benutzerdefinierte Funktionen oder nicht deterministische Funktionen enthält.|  
-|-**0x40** (**-64**)|Das Zwischenspeichern von Resultsets ist deaktiviert, da die geschätzte Größe des Resultsets >10 GB beträgt.|  
-|-**0x80** (**-128**)|Das Zwischenspeichern von Resultsets ist deaktiviert, da das Resultset Zeilen mit großer Größe (>64 KB) enthält.|  
+|-**0x40**(**-64**)|Das Zwischenspeichern von Resultsets ist deaktiviert, da die geschätzte Größe des Resultsets >10 GB beträgt.|  
+|-**0x80**(**-128**) |Das Zwischenspeichern von Resultsets ist deaktiviert, da das Resultset Zeilen mit großer Größe (>64 KB) enthält.|  
+|-**0x100**(**-256**) |Das Zwischenspeichern von Resultsets ist aufgrund der Verwendung von granularer dynamischer Daten Maskierung deaktiviert.|  
+
   
 ## <a name="permissions"></a>Berechtigungen
 
@@ -77,6 +79,6 @@ ms.locfileid: "88447467"
 >[!WARNING]  
 >Ein Angreifer kann sys. dm_pdw_exec_requests zum Abrufen von Informationen über bestimmte Datenbankobjekte verwenden, indem er einfach die View Server State-Berechtigung und keine datenbankspezifische Berechtigung besitzt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
  [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

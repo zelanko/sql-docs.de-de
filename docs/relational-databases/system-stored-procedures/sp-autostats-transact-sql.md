@@ -19,12 +19,12 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c34e314e08f206ebfcf34956e7b4555f91166a3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 79995dc681db76f3de5b6d6af200f6f57f087464
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548281"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989934"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,15 +67,15 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Wenn *stats_flag* nicht angegeben ist, gibt **sp_autostats** das folgende Resultset zurück.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**Indexname**|**varchar(60)**|Der Name des Indexes oder der Statistik.|  
+|**Indexname**|**sysname**|Der Name des Indexes oder der Statistik.|  
 |**AUTOSTATS**|**varchar (3)**|Aktueller Wert für die AUTO_UPDATE_STATISTICS-Option.|  
 |**Zuletzt aktualisiert**|**datetime**|Das Datum des letzten Statistikupdates.|  
   
  Das Resultset für eine Tabelle oder indizierte Sicht enthält Statistiken, die für Indizes erstellt wurden, einspaltige Statistiken, die mit der Option AUTO_CREATE_STATISTICS generiert wurden, und Statistiken, die mit der [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) -Anweisung erstellt  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn der angegebene Index deaktiviert ist oder die angegebene Tabelle einen deaktivierten gruppierten Index enthält, wird eine Fehlermeldung angezeigt.  
   
  AUTO_UPDATE_STATISTICS ist für speicheroptimierte Tabellen immer auf OFF festgelegt.  
