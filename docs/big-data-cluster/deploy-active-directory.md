@@ -5,16 +5,16 @@ description: Erfahren Sie, wie Sie für einen SQL Server-Big Data-Cluster in ein
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 09/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 037c8bd26249ab3dc2cb3d0d8f4adf718f56000e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 92c170e16a05d67f21931479f82f5edb1856b12f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243071"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90687746"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus
 
@@ -24,23 +24,49 @@ In diesem Artikel wird erläutert, wie Sie einen Big Data-Cluster für SQL Serve
 
 >[!Note]
 >Vor dem Release von SQL Server 2019 CU5 gab es eine Einschränkung für Big Data-Cluster, durch die nur ein Cluster für eine Active Directory-Domäne bereitgestellt werden konnte. Diese Einschränkung wurde mit dem CU5-Release entfernt. Weitere Informationen zu den neuen Funktionen finden Sie unter [Konzept: Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus](active-directory-deployment-background.md). Die in diesem Artikel gezeigten Beispiele sind an beide Bereitstellungsszenarios angepasst.
+>
 
 ## <a name="background"></a>Hintergrund
 
-Um die Active Directory-Authentifizierung (AD) zu aktivieren, erstellt der BDC automatisch alle Benutzer-, Gruppen- und Computerkonten sowie Dienstprinzipalnamen, die von den verschiedenen Diensten im Cluster benötigt werden. Wählen Sie während der Bereitstellung eine Organisationseinheit (OE) aus, in der alle BDC-bezogenen AD-Objekte erstellt werden, um eine gewisse Begrenzung dieser Konten sowie bereichsbezogene Berechtigungen zu ermöglichen. Erstellen Sie diese Organisationseinheit vor der Clusterbereitstellung.
+Um die Active Directory-Authentifizierung (AD) zu aktivieren, erstellt der BDC automatisch alle Benutzer-, Gruppen- und Computerkonten sowie Dienstprinzipalnamen, die von den verschiedenen Diensten im Cluster benötigt werden. Es wird empfohlen, dass Sie eine Organisationseinheit (OE) vor der Clusterbereitstellung erstellen, um eine gewisse Eigenständigkeit dieser Konten sowie bereichsbezogene Berechtigungen zu ermöglichen. Alle BDC-bezogenen AD-Objekte werden während der Bereitstellung erstellt. 
 
-Um alle benötigten Objekte in Active Directory erstellen zu können, benötigt der BDC während der Bereitstellung ein AD-Konto. Dieses Konto muss über Berechtigungen zum Erstellen von Benutzern-, Gruppen- und Computerkonten innerhalb der angegebenen OE verfügen.
+## <a name="pre-requisites"></a>Voraussetzungen
+
+### <a name="organizational-unit-ou"></a>Organisationseinheit (OE)
+Eine Organisationseinheit (OE) ist eine Unterteilung innerhalb einer Active Directory-Instanz, in der Benutzer, Gruppen und sogar andere Organisationseinheiten platziert werden. Große Organisationseinheiten können verwendet werden, um die funktionale Struktur oder Geschäftsstruktur einer Organisation widerzuspiegeln. In diesem Artikel wird eine Organisationseinheit namens `bdc` als Beispiel erstellt. 
+
+>[!NOTE]
+>Die Organisationseinheit (OE) stellt Verwaltungsgrenzen dar und ermöglicht es Kunden, den Gültigkeitsbereich von Datenadministratoren zu steuern. 
+
+
+Sie können [OE-Entwurfsprinzipien](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts) befolgen, um die für Sie am besten geeignete Struktur bei der Arbeit mit Organisationseinheiten in Ihrer Organisation zu ermitteln. 
+
+### <a name="ad-account-for-bdc-domain-service-account"></a>AD-Konto für BDC-Domänendienstkonto
+
+Damit alle erforderlichen Objekte automatisch in Active Directory erstellt werden können, benötigt der BDC ein AD-Konto, das über bestimmte Berechtigungen zum Erstellen von Benutzern, Gruppen und Computerkonten in der angegebenen Organisationseinheit verfügt. In diesem Artikel wird erläutert, wie die Berechtigung dieses AD-Kontos konfiguriert wird. Wir verwenden einen AD-Konto namens `bdcDSA` als Beispiel in diesem Artikel.
+
+### <a name="auto-generated-active-directory-objects"></a>Automatisch generierte Active Directory-Objekte
+Der BDC generiert automatisch Konten- und Gruppennamen. Jedes der Konten stellt einen Dienst im BDC dar und wird während der gesamten Lebensdauer, in der ein BDC verwendet wird, vom BDC verwaltet. Diese Konten besitzen die Dienstprinzipalnamen (SPNs), die für jeden Dienst erforderlich sind.  Eine vollständige Liste der automatisch generierten AD-Konten, Gruppen und Dienste, die von ihnen verwaltet werden, finden Sie unter [Automatisch generierte Active Directory-Objekte](active-directory-objects.md).
+
+
+
+>[!IMPORTANT]
+>Abhängig von der im Domänencontroller festgelegten Richtlinie zum Kennwortablauf, können die Kennwörter für diese Konten ablaufen. Die Standardablaufrichtlinie gibt 42 Tage vor. Es gibt keinen Mechanismus zum Rotieren von Anmeldeinformationen für alle Konten im BDC, sodass der Cluster nicht mehr funktionsfähig ist, sobald das Ablaufdatum erreicht ist. Um dieses Problem zu umgehen, aktualisieren Sie die Ablaufrichtlinie für die BDC-Dienstkonten im Domänencontroller in „Kennwort läuft nie ab“. Diese Aktion kann vor oder nach der Ablaufzeit durchgeführt werden. Im letzteren Fall aktiviert Active Directory die abgelaufenen Kennwörter erneut.
+>
+>In der folgenden Abbildung wird gezeigt, wo diese Eigenschaft unter „Active Directory-Benutzer und -Computer“ festgelegt wird.
+>
+>:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="Festlegen einer Kennwortablaufrichtlinie":::
+
 
 In den folgenden Schritten wird vorausgesetzt, dass Sie bereits über einen Active Directory-Domänencontroller verfügen. Wenn Sie noch keinen Domänencontroller eingerichtet haben, finden Sie in dieser [Anleitung](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) nützliche Schritte.
 
-Eine Liste der AD-Konten und -Gruppen finden Sie unter [Automatisch generierte Active Directory-Objekte](active-directory-objects.md).
 
 ## <a name="create-ad-objects"></a>Erstellen von AD-Objekten
 
 Führen Sie die folgenden Schritte aus, bevor Sie einen BDC mit AD-Integration bereitstellen:
 
 1. Erstellen Sie eine Organisationseinheit (OE), in der alle AD-Objekte für den BDC gespeichert werden. Alternativ können Sie bei der Bereitstellung eine vorhandene Organisationseinheit auswählen.
-1. Erstellen Sie ein AD-Konto für den BDC, oder verwenden Sie ein vorhandenes Konto, und weisen Sie diesem BDC-AD-Konto die geeigneten Berechtigungen zu.
+1. Erstellen Sie ein AD-Konto für den BDC, oder verwenden Sie ein vorhandenes Konto, und weisen Sie diesem BDC-AD-Konto die geeigneten Berechtigungen innerhalb der bereitgestellten Organisationseinheit (OE) zu.
 
 ### <a name="create-a-user-in-ad-for-bdc-domain-service-account"></a>Erstellen eines Benutzers in AD für das BDC-Domänendienstkonto
 
@@ -180,6 +206,9 @@ Für die AD-Integration sind die folgenden Parameter erforderlich. Fügen Sie di
 
 - **Optionaler Parameter** `security.activeDirectory.realm`: In den meisten Fällen entspricht der Bereich dem Domänennamen. Falls sich Bereich und Domänenname unterscheiden, verwenden Sie diesen Parameter zum Definieren des Bereichs (z. B. `CONTOSO.LOCAL`). Der für diesen Parameter angegebene Wert sollte vollqualifiziert sein.
 
+  > [!IMPORTANT]
+  > Zurzeit unterstützt der BDC keine Konfiguration, bei der der Active Directory-Domänenname sich vom **NETBIOS**-Namen der Active Directory-Domäne unterscheidet.
+
 - `security.activeDirectory.domainDnsName`: Dies ist der Name Ihrer DNS-Domäne, die für den Cluster verwendet wird (z. B. `contoso.local`).
 
 - `security.activeDirectory.clusterAdmins`: Dieser Parameter akzeptiert eine AD-Gruppe. Der AD-Gruppenbereich muss universell oder global sein. Mitglieder dieser Gruppe verfügen über die Clusterrolle *bdcAdmin*, über die sie die Administratorberechtigungen im Cluster erhalten. Das bedeutet, dass sie über [`sysadmin`-Berechtigungen in SQL Server](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), [`superuser`-Berechtigungen in HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User) und Administratorberechtigungen bei bestehender Verbindung mit dem Controllerendpunkt verfügen.
@@ -192,6 +221,9 @@ Für die AD-Integration sind die folgenden Parameter erforderlich. Fügen Sie di
 AD-Gruppen in dieser Liste werden der Big Data-Clusterrolle *bdcUser* zugeordnet. Ihnen muss der Zugriff auf SQL Server auf SQL Server (siehe [SQL Server-Berechtigungen](../relational-databases/security/permissions-hierarchy-database-engine.md)) oder HDFS (siehe [Anleitung zu HDFS-Berechtigungen](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)) gewährt werden. Wenn eine Verbindung mit dem Controllerendpunkt besteht, können diese Benutzer mit dem Befehl *azdata bdc endpoint list* nur die Endpunkte auflisten, die im Cluster verfügbar sind.
 
 Ausführliche Informationen zum Aktualisieren der AD-Gruppen für diese Einstellungen finden Sie unter [Verwalten des Zugriffs auf Big Data-Cluster im Active Directory-Modus](manage-user-access.md).
+
+  >[!TIP]
+  >Wenn die HDFS-Suchfunktion aktiviert werden soll, wenn eine Verbindung mit einem SQL Server-Master in Azure Data Studio besteht, muss einem Benutzer mit der Rolle „bdcUser“ die Berechtigung VIEW SERVER STATE zugewiesen werden, da Azure Data Studio die dynamische Verwaltungssicht *sys.dm_cluster_endpoints* verwendet, damit der erforderliche Knox-Gatewayendpunkt eine Verbindung mit HDFS herstellt.
 
   >[!IMPORTANT]
   >Erstellen Sie diese Gruppen in AD, bevor Sie mit der Bereitstellung beginnen. Wenn der Bereich für eine dieser AD-Gruppen „domain local“ ist, schlägt die Bereitstellung fehl.
@@ -263,7 +295,7 @@ In der folgenden Tabelle wird das Autorisierungsmodell für die Anwendungsverwal
   >[!NOTE]
   >Active Directory erfordert, dass Kontonamen auf 20 Zeichen eingeschränkt werden. Der Big Data-Cluster muss 8 Zeichen zum Unterscheiden von Pods und StatefulSets verwenden. Es verbleiben also 12 Zeichen als Grenzwert für das Kontopräfix.
 
-[Überprüfen Sie den AD-Gruppenbereich](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), um zu ermitteln, ob es sich um eine DomainLocal-Gruppe handelt.
+[Überprüfen Sie den AD-Gruppenbereich](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), um zu ermitteln, ob es sich um eine DomainLocal-Gruppe handelt.
 
 Wenn Sie Konfigurationsdatei für die Bereitstellung noch nicht initialisiert haben, können Sie diesen Befehl ausführen, um eine Kopie der Konfiguration abzurufen. In den folgenden Beispielen wird das Profil `kubeadm-prod` verwendet, dasselbe gilt für `openshift-prod`.
 
@@ -422,7 +454,7 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - Vor dem Release von SQL Server 2019 CU5 war nur ein Big Data-Cluster pro Domäne (Active Directory) zulässig. Das Aktivieren mehrerer Big Data-Cluster pro Domäne ist ab dem CU5-Release verfügbar.
 
-- Keine der AD-Gruppen, die in Sicherheitskonfigurationen angegeben werden, können auf DomainLocal begrenzt werden. Sie können den Bereich einer AD-Gruppe überprüfen, indem Sie [diese Anweisungen befolgen](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+- Keine der AD-Gruppen, die in Sicherheitskonfigurationen angegeben werden, können auf DomainLocal begrenzt werden. Sie können den Bereich einer AD-Gruppe überprüfen, indem Sie [diese Anweisungen befolgen](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
 
 - AD-Konten können für die Anmeldung beim Big Data-Cluster verwendet werden und werden über dieselbe Domäne zugelassen, die für den Big Data-Cluster konfiguriert wurde. Das Aktivieren von Anmeldungen über andere vertrauenswürdige Domänen wird nicht unterstützt.
 
