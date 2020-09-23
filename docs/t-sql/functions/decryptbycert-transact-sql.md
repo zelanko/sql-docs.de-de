@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 73564c7c5a06e778d6f3c602b0cb61e9cc56dfda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 849826f084126d5b0ccc6c25896b642ce8c7f5f0
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422794"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111163"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ Diese Funktion verwendet den privaten Schlüssel eines Zertifikats zum Entschlü
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-  
 DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }   
     [ , { 'cert_password' | @cert_password } ] )  
 ```  
@@ -72,8 +71,8 @@ Diese Funktion entschlüsselt Daten mithilfe des privaten Schlüssels eines Zert
 ## <a name="examples"></a>Beispiele  
 In diesem Beispiel werden Zeilen aus `[AdventureWorks2012].[ProtectedData04]` ausgewählt, die als Daten markiert sind, die ursprünglich mit dem Zertifikat `JanainaCert02` verschlüsselt wurden. Im Beispiel wird zunächst der private Schlüssel des Zertifikats `JanainaCert02` mit dem Kennwort des Zertifikats `pGFD4bb925DGvbd2439587y` entschlüsselt. Dann wird der Chiffretext mit diesem privaten Schlüssel entschlüsselt. Die entschlüsselten Daten werden im Beispiel von **varbinary** in **nvarchar** konvertiert.  
 
-```  
-SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
+```sql  
+SELECT CONVERT(NVARCHAR(max), DecryptByCert(Cert_Id('JanainaCert02'),  
     ProtectedData, N'pGFD4bb925DGvbd2439587y'))  
 FROM [AdventureWorks2012].[ProtectedData04]   
 WHERE Description   

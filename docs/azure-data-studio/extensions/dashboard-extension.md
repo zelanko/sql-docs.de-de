@@ -3,18 +3,18 @@ title: Erstellen einer Dashboarderweiterung
 description: Dieses Tutorial veranschaulicht, wie Sie eine Dashboarderweiterung erstellen, um Azure Data Studio benutzerdefinierte Funktionen hinzuzufügen.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan
 ms.topic: how-to
 author: yualan
 ms.author: alayu
+ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: b28b3cd043d6564da7d644bb44469671c9ffa147
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: 835b1fd4687dc5fd86afe300d7c6ed56dc2ed6ea
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392147"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111638"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Erstellen einer Azure Data Studio-Dashboarderweiterung
 
