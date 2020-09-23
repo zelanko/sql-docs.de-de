@@ -21,12 +21,12 @@ ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0223be182fc7e29466f0a8a676cea6dc94eb915b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15924f5116261de308a9288935396d24d54b8aa8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88364096"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115111"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88364096"
   
 ## <a name="syntax"></a>Syntax  
   
-```sql  
-  
+```syntaxsql  
 -- Aggregation Function Syntax  
 MIN ( [ ALL | DISTINCT ] expression )  
   
@@ -78,7 +77,7 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
 ### <a name="a-simple-example"></a>A. Einfaches Beispiel  
  Im folgenden Beispiel wird der niedrigste Steuersatz (Mindeststeuersatz) zurückgegeben. Im Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank verwendet.  
   
-```  
+```sql  
 SELECT MIN(TaxRate)  
 FROM Sales.SalesTaxRate;  
 GO  
@@ -97,7 +96,7 @@ GO
 ### <a name="b-using-the-over-clause"></a>B. Verwenden der OVER-Klausel  
  Im folgenden Beispiel werden die Funktionen MIN, MAX, AVG und COUNT mit der OVER-Klausel verwendet, um aggregierte Werte für jede Abteilung in der `HumanResources.Department`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank bereitzustellen.  
   
-```  
+```sql  
 SELECT DISTINCT Name  
        , MIN(Rate) OVER (PARTITION BY edh.DepartmentID) AS MinSalary  
        , MAX(Rate) OVER (PARTITION BY edh.DepartmentID) AS MaxSalary  
@@ -142,7 +141,7 @@ Tool Design                   8.62                  29.8462               23.505
 ### <a name="c-using-min"></a>C. Verwenden von MIN  
  Im folgenden Beispiel wird die MIN-Aggregatfunktion verwendet, um den Preis des günstigsten Produkts in einer angegebenen Menge von Verkaufsaufträgen zurückzugeben.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT MIN(UnitPrice)  
@@ -160,7 +159,7 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
 ### <a name="d-using-min-with-over"></a>D: Verwenden von MIN mit OVER  
  Im folgenden Beispiel wird die analytische MIN OVER()-Funktion verwendet, um den Preis des günstigsten Produkts in jedem Verkaufsauftrag zurückzugeben. Das Resultset wird durch die `SalesOrderID`-Spalte partitioniert.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT MIN(UnitPrice) OVER(PARTITION BY SalesOrderNumber) AS LeastExpensiveProduct,  

@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b2a5d4a4e88e1d0cb3a342395ebb3642d5d2dd8
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: fbe55bf680ffbb80dca592d9bbdf63d86aaa793c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147741"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116583"
 ---
 # <a name="statistics"></a>Statistik
 
@@ -61,7 +61,7 @@ Zum Erstellen des Histogramms sortiert der Abfrageoptimierer die Spaltenwerte, b
 
 Das folgende Diagramm zeigt ein Histogramm mit sechs Schritten. Der Bereich links vom ersten oberen Grenzwert ist der erste Schritt.
   
-![Histogramm](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogramm") 
+![Histogramm](../../relational-databases/system-dynamic-management-views/media/histogram-2.svg "Histogramm") 
   
 Für jeden der vorherigen Histogrammschritt gilt:
 -   Eine fett formatierte Zeile stellt den oberen Grenzwert (*range_high_key*) und die Häufigkeit des Vorkommens (*equal_rows*) dar.  

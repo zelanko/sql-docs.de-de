@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d384171a4397816d51736c9ea793d3b2396c4178
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7c653d422938a3ead8bcd42bbbbdc8e6718a811
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417656"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114986"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +73,7 @@ Verwenden Sie DBCC OPENTRAN, um zu ermitteln, ob eine offene Transaktion innerha
 ## <a name="result-sets"></a>Resultsets  
 DBCC OPENTRAN gibt folgendes Resultset zurück, wenn keine offenen Transaktionen vorhanden sind:
   
-```sql
+```
 No active open transactions.  
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
@@ -86,7 +86,7 @@ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der fes
 Im folgenden Beispiel werden Transaktionsinformationen für die aktuelle Datenbank abgerufen. Die Ergebnisse können variieren.
   
 ```sql  
-CREATE TABLE T1(Col1 int, Col2 char(3));  
+CREATE TABLE T1(Col1 INT, Col2 CHAR(3));  
 GO  
 BEGIN TRAN  
 INSERT INTO T1 VALUES (101, 'abc');  
@@ -121,7 +121,7 @@ Im folgenden Beispiel werden die Ergebnisse des DBCC OPENTRAN-Befehls in eine te
 ```sql  
 -- Create the temporary table to accept the results.  
 CREATE TABLE #OpenTranStatus (  
-   ActiveTransaction varchar(25),  
+   ActiveTransaction VARCHAR(25),  
    Details sql_variant   
    );  
 -- Execute the command, putting the results in the table.  

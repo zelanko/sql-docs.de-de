@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15b156950ff752e96dc332c4071dbc748013aa3f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b7a386f058a442a984ba45b3be58bba5e9bb2e1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459893"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116148"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "88459893"
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-  
 DBCC CHECKFILEGROUP   
 [  
     [ ( { filegroup_name | filegroup_id | 0 }   
@@ -156,7 +155,7 @@ DBCC CHECKFILEGROUP gibt folgendes Resultset zurück (die tatsächlichen Werte k
 -   Es sei denn, ESTIMATEONLY oder NO_INFOMSGS wurde angegeben.  
 -   Für die aktuelle Datenbank (falls keine Datenbank angegeben wurde), ob Optionen (außer NOINDEX) angegeben wurden oder nicht.  
   
-```sql
+```
 DBCC results for 'master'.  
 DBCC results for 'sys.sysrowsetcolumns'.  
 There are 630 rows in 7 pages for object 'sys.sysrowsetcolumns'.  
@@ -174,12 +173,12 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 Wurde NO_INFOMSGS angegeben, gibt DBCC CHECKFILEGROUP Folgendes zurück:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
  Wurde ESTIMATEONLY angegeben, gibt DBCC CHECKFILEGROUP Folgendes zurück (die tatsächlichen Werte können davon abweichen):  
 
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)
 -------------------------------------------------   
 15  
@@ -202,8 +201,7 @@ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der fes
 ### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>A. Überprüfen der Dateigruppe PRIMARY in der Datenbank  
 Das folgende Beispiel überprüft die primäre Dateigruppe der aktuellen Datenbank.
   
-```sql  
-  
+```sql
 DBCC CHECKFILEGROUP;  
 GO  
 ```  
@@ -211,7 +209,7 @@ GO
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. Überprüfen der PRIMARY-Dateigruppe von AdventureWorks ohne nicht gruppierte Indizes  
 Im folgenden Beispiel wird die primäre Dateigruppe der `AdventureWorks2012`-Datenbank überprüft (unter Ausschluss nicht gruppierter Indizes). Zu diesem Zweck werden die ID der primären Dateigruppe und `NOINDEX` angegeben.
   
-```sql  
+```sql
 USE AdventureWorks2012;  
 GO  
 DBCC CHECKFILEGROUP (1, NOINDEX);  
@@ -221,7 +219,7 @@ GO
 ### <a name="c-checking-the-primary-filegroup-with-options"></a>C. Überprüfen der PRIMARY-Dateigruppe mit Optionen  
 Im folgenden Beispiel wird die primäre Dateigruppe der `master`-Datenbank überprüft. Dabei wird die Option `ESTIMATEONLY` angegeben.
   
-```sql  
+```sql
 USE master;  
 GO  
 DBCC CHECKFILEGROUP (1)  

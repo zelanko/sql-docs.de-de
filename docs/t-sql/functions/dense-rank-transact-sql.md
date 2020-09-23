@@ -22,12 +22,12 @@ ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0354d701b2f6037fa9f7489dcc67f344e987dbdc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07e79295f8beab364037a6ef7143d95745d3fb30
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459863"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116760"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ Diese Funktion gibt den Rang jeder Zeile innerhalb einer Resultsetpartition ohne
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
@@ -66,7 +66,7 @@ Die für die gesamte Abfrage verwendete Sortierreihenfolge bestimmt die Reihenfo
 ### <a name="a-ranking-rows-within-a-partition"></a>A. Ordnen von Zeilen innerhalb einer Partition  
 In diesem Beispiel wird die Rangfolge der Produkte im Bestand für die angegebenen Lagerstandorte gemäß ihren Mengen bestimmt. `DENSE_RANK` partitioniert das Resultset nach `LocationID` und sortiert es logisch nach `Quantity`. Beachten Sie, dass die Produkte 494 und 495 die gleiche Menge haben. Da beide den gleichen Mengenwert aufweisen, haben sie einen Rangwert von 1.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -103,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Ordnen aller Zeilen in einem Resultset  
 In diesem Beispiel werden die ersten zehn Mitarbeiter nach ihrem Gehalt geordneten zurückgegeben. Da die `SELECT`-Anweisung keine `PARTITION BY`-Klausel angegeben hat, gilt die `DENSE_RANK`-Funktion für alle Resultsetzeilen.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP(10) BusinessEntityID, Rate,   
@@ -138,7 +138,7 @@ In diesem Beispiel werden die vier Rangfolgefunktionen veranschaulicht:
 
 Diese werden hier in derselben Abfrage verwendet. Funktionsspezifische Beispiele finden Sie unter der jeweiligen Rangfolgefunktion.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -180,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ### <a name="d-ranking-rows-within-a-partition"></a>D: Ordnen von Zeilen innerhalb einer Partition  
 Im diesem Beispiel wird die Rangfolge der Vertriebsmitarbeiter in jedem Vertriebsgebiet auf Grundlage von deren Gesamtumsatz bestimmt. `DENSE_RANK` partitioniert das Rowset nach `SalesTerritoryGroup` und sortiert das Resultset nach `SalesAmountQuota`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryGroup,  

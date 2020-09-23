@@ -35,11 +35,11 @@
     - name: Erweiterungen
       items:
         - name: Übersicht über Erweiterungen
-          href: extensions.md
+          href: extensions/add-extensions.md
         - name: Azure Arc-Erweiterung
           href: extensions/azure-arc-extension.md
         - name: Datenvirtualisierungserweiterung
-          href: data-virtualization-extension.md
+          href: extensions/data-virtualization-extension.md
         - name: Kusto-Erweiterung
           href: extensions/kusto-extension.md
         - name: Machine-Learning-Erweiterung
@@ -55,39 +55,39 @@
         - name: Erweiterung für die verwaltete Instanz
           href: extensions/azure-sql-managed-instance-extension.md
         - name: PostgreSQL-Erweiterung
-          href: postgres-extension.md
+          href: extensions/postgres-extension.md
         - name: PowerShell-Erweiterung
-          href: powershell-extension.md
+          href: extensions/powershell-extension.md
         - name: SandDance-Erweiterung
           href: sanddance-extension.md
         - name: Schemavergleich-Erweiterung
-          href: schema-compare-extension.md
+          href: extensions/schema-compare-extension.md
         - name: SQL Database Projects-Erweiterung
           items:
             - name: Übersicht über die Erweiterung „SQL Database Projects“
-              href: sql-database-project-extension.md
+              href: extensions/sql-database-project-extension.md
             - name: Erste Schritte mit der Erweiterung „SQL Database Projects“
-              href: sql-database-project-extension-getting-started.md
+              href: extensions/sql-database-project-extension-getting-started.md
             - name: Erstellen und Veröffentlichen eines Projekts
-              href: sql-database-project-extension-build.md
+              href: extensions/sql-database-project-extension-build.md
             - name: Erstellen eines Projekts über die Befehlszeile
-              href: sql-database-project-extension-build-from-command-line.md
+              href: extensions/sql-database-project-extension-build-from-command-line.md
         - name: SQL Server-Agent
-          href: sql-server-agent-extension.md
+          href: extensions/sql-server-agent-extension.md
         - name: SQL Server-Erweiterung „Zentrale Verwaltungsserver“
-          href: sql-server-cms-extension.md
+          href: extensions/sql-server-cms-extension.md
         - name: Die DACPAC-Erweiterung für SQL Server
-          href: sql-server-dacpac-extension.md
+          href: extensions/sql-server-dacpac-extension.md
         - name: SQL Server-Import
-          href: sql-server-import-extension.md
+          href: extensions/sql-server-import-extension.md
         - name: SQL Server Profiler
-          href: sql-server-profiler-extension.md
+          href: extensions/sql-server-profiler-extension.md
     - name: Erweiterungserstellung
       items:
         - name: Übersicht über die Erweiterbarkeit
           href: extensibility.md
         - name: Erweiterungserstellung
-          href: extension-authoring.md
+          href: extensions/extension-authoring.md
         - name: Erweiterbarkeits-APIs
           href: extensibility-apis.md
         - name: Tastenzuordnungserweiterung

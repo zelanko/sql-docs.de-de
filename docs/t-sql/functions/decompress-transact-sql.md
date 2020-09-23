@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f6390d157ab7d352e7ecb355fec4c16114333ea0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d6851056673a896e1b07a26ee5d50142272a31a
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479712"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116423"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -32,7 +32,7 @@ Diese Funktion dekomprimiert einen Eingabeausdruckswert mit dem GZIP-Algorithmus
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 DECOMPRESS ( expression )  
 ```  
   
@@ -50,7 +50,7 @@ Ein Wert vom Datentyp **varbinary(max)**. `DECOMPRESS` verwendet den ZIP-Algorit
 ### <a name="a-decompress-data-at-query-time"></a>A. Dekomprimieren von Daten zur Abfragezeit  
 In diesem Beispiel wird gezeigt, wie Sie komprimierte Tabellendaten zurückgegeben:  
   
-```  
+```sql  
 SELECT _id, name, surname, datemodified,  
              CAST(DECOMPRESS(info) AS NVARCHAR(MAX)) AS info  
 FROM player;  
@@ -59,13 +59,13 @@ FROM player;
 ### <a name="b-display-compressed-data-using-computed-column"></a>B. Anzeigen von komprimierten Daten unter Verwendung einer berechneten Spalte  
 In diesem Beispiel wird gezeigt, wie Sie eine Tabelle erstellen, in der dekomprimierte Daten gespeichert werden können:  
   
-```  
+```sql  
 CREATE TABLE example_table (  
-    _id int primary key identity,  
-    name nvarchar(max),  
-    surname nvarchar(max),  
-    info varbinary(max),  
-    info_json as CAST(decompress(info) as nvarchar(max))  
+    _id INT PRIMARY KEY IDENTITY,  
+    name NVARCHAR(max),  
+    surname NVARCHAR(max),  
+    info VARBINARY(max),  
+    info_json as CAST(DECOMPRESS(info) as NVARCHAR(max))  
 );  
 ```  
   

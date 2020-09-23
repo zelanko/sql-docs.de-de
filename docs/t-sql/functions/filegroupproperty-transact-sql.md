@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5992e56da8ae602d2e681265b63b52f6415f9374
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 369a9e1b4914fe4c3de1d7fc86596067d67867ef
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468018"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116385"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ Diese Funktion gibt den filegroup-Eigenschaftenwert für einen angegebenen Namen
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
@@ -65,12 +65,12 @@ Ein Ausdruck vom Typ **varchar(128)**, der den Namen der Dateigruppeneigenschaft
 ## <a name="examples"></a>Beispiele  
 In diesem Beispiel wird die Einstellung der Eigenschaft `IsDefault` für die primäre Dateigruppe in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
   
-```  
+```sql  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  
 GO  
 ```  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
+
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]   
 ```  
 Default Filegroup   
 ---------------------   

@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 30942bd7f9c5ff8180eb9adfddedff72d1d97f05
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 04e11f27d26a7979dfc84b29d7c7de1b02eb02ab
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552575"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115435"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 
@@ -181,7 +181,7 @@ CONTAINS (
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord varchar(30)  
+DECLARE @SearchWord VARCHAR(30)  
 SET @SearchWord ='performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -193,7 +193,7 @@ WHERE CONTAINS(Description, @SearchWord);
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -256,7 +256,7 @@ Gibt eine Übereinstimmung für ein genaues Wort oder einen genauen Ausdruck an.
   
  Standardmäßig werden vom benutzerdefinierten NEAR-Begriff alle Zeilen zurückgegeben, die die angegebenen Begriffe enthalten, unabhängig vom Abstand dazwischen und unabhängig von der Reihenfolge. Beispielsweise müsste eine Dokument nur `term1` und "`term3 term4`" an beliebiger Position und in beliebiger Reihenfolge enthalten, um der Abfrage zu entsprechen:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR(term1,"term3 term4")')  
 ```  
   
@@ -270,13 +270,13 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  Beispielsweise wird mit der folgenden Abfrage nach `AA` und `BB` gesucht. Die Reihenfolge ist dabei nicht vorgegeben, und der maximale Abstand zwischen den beiden Suchbegriffen darf fünf Wörter betragen.  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR((AA,BB),5)')  
 ```  
   
  Die Zeichenfolge `AA one two three four five BB` stellt eine Übereinstimmung dar. Im folgenden Beispiel werden von der Abfrage drei Suchbegriffe (`AA`, `BB` und `CC`) mit einem maximalen Abstand von fünf Wörtern angegeben:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')  
 ```  
   
@@ -304,7 +304,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  Beispielsweise wird in den folgenden NEAR-Suchvorgängen nach den Wörtern "`Monday`", "`Tuesday`" und "`Wednesday`" in der angegebene Reihenfolge gesucht, unabhängig vom Abstand zwischen den Begriffen:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')  
 ```  
   
@@ -468,7 +468,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'Performance'  
 SELECT Description   
 FROM Production.ProductDescription   

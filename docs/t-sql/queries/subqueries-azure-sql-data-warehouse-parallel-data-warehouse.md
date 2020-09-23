@@ -12,12 +12,12 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c4ef78ed05046064dd00f534bf76b2adae069f1e
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 946a36987b72f145af5e9c34eecaed9e8853033c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196412"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115417"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Unterabfragen (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -47,16 +47,15 @@ ms.locfileid: "86196412"
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>A. TOP und ORDER BY in einer Unterabfrage  
   
-```  
+```sql
 SELECT * FROM tblA  
 WHERE col1 IN  
-    (SELECT TOP 100 col1 FROM tblB ORDER BY col1);  
-  
+    (SELECT TOP 100 col1 FROM tblB ORDER BY col1);
 ```  
   
 ### <a name="b-having-clause-with-a-correlated-subquery"></a>B. Korrelierte Unterabfragen in einer HAVING-Klausel  
   
-```  
+```sql
 SELECT dm.EmployeeKey, dm.FirstName, dm.LastName   
 FROM DimEmployee AS dm   
 GROUP BY dm.EmployeeKey, dm.FirstName, dm.LastName  
@@ -64,13 +63,12 @@ HAVING 5000 <=
 (SELECT sum(OrderQuantity)  
 FROM FactResellerSales AS frs  
 WHERE dm.EmployeeKey = frs.EmployeeKey)  
-ORDER BY EmployeeKey;  
-  
+ORDER BY EmployeeKey;
 ```  
   
 ### <a name="c-correlated-subqueries-with-analytics"></a>C. Korrelierte Unterabfragen mit Analyse  
   
-```  
+```sql
 SELECT * FROM ReplA AS A   
 WHERE A.ID IN   
     (SELECT sum(B.ID2) OVER() FROM ReplB AS B WHERE A.ID2 = B.ID);  
@@ -78,7 +76,7 @@ WHERE A.ID IN
   
 ### <a name="d-correlated-union-statements-in-a-subquery"></a>D: Korrelierte Union-Anweisungen in einer Unterabfrage  
   
-```  
+```sql
 SELECT * FROM RA   
 WHERE EXISTS   
     (SELECT 1 FROM RB WHERE RB.b1 = RA.a1   
@@ -87,14 +85,14 @@ WHERE EXISTS
   
 ### <a name="e-join-predicates-in-a-subquery"></a>E. JOIN-Prädikate in einer Unterabfrage  
   
-```  
+```sql
 SELECT * FROM RA INNER JOIN RB   
     ON RA.a1 = (SELECT COUNT(*) FROM RC);  
 ```  
   
 ### <a name="f-correlated-join-predicates-in-a-subquery"></a>F. Korrelierte JOIN-Prädikate in einer Unterabfrage  
   
-```  
+```sql
 SELECT * FROM RA   
     WHERE RA.a2 IN   
     (SELECT 1 FROM RB INNER JOIN RC ON RA.a1=RB.b1+RC.c1);  
@@ -102,7 +100,7 @@ SELECT * FROM RA
   
 ### <a name="g-correlated-subselects-as-data-sources"></a>G. Korrelierte untergeordnete SELECT-Ausdrücke als Datenquellen  
   
-```  
+```sql
 SELECT * FROM RA   
     WHERE 3 = (SELECT COUNT(*)   
         FROM (SELECT b1 FROM RB WHERE RB.b1 = RA.a1) X);  
@@ -110,14 +108,14 @@ SELECT * FROM RA
   
 ### <a name="h-correlated-subqueries-in-the-data-values--used-with-aggregates"></a>H. Korrelierte Unterabfragen in den mit Aggregaten verwendeten Datenwerten  
   
-```  
+```sql
 SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;  
 ```  
   
 ### <a name="i-using-in-with-a-correlated-subquery"></a>I. Verwenden von IN mit einer korrelierten Unterabfrage  
  Im folgenden Beispiel wird `IN` in einer abhängigen oder sich wiederholenden Unterabfrage verwendet. Die Werte dieser Abfrage sind von der äußeren Abfrage abhängig. Die innere Abfrage wird wiederholt ausgeführt, und zwar einmal für jede Zeile, die von der äußeren Abfrage ausgewählt wird. Diese Abfrage ruft eine Instanz des `EmployeeKey` plus den Vor- und Nachnamen der einzelnen Mitarbeiter ab, für die die `OrderQuantity` in der `FactResellerSales`-Tabelle `5` beträgt und für die die Mitarbeiter-IDs in der `DimEmployee`- und `FactResellerSales`-Tabelle übereinstimmen.  
   
-```  
+```sql
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   
 FROM DimEmployee AS dm   
 WHERE 5 IN   
@@ -130,7 +128,7 @@ ORDER BY EmployeeKey;
 ### <a name="j-using-exists-versus-in-with-a-subquery"></a>J. Verwenden von EXISTS im Vergleich zu IN in einer Unterabfrage  
  Im folgenden Beispiel werden Abfragen, die semantisch ähnlich sind, gezeigt, und der Unterschied zwischen der Verwendung des `EXISTS`-Schlüsselworts und des `IN`-Schlüsselworts wird veranschaulicht. Beides sind Beispiele für eine Unterabfrage, die eine Instanz von jedem Produktnamen abruft, für die die Produktunterkategorie `Road Bikes` ist. `ProductSubcategoryKey` vergleicht die `DimProduct`- und die `DimProductSubcategory`-Tabelle.  
   
-```  
+```sql
 SELECT DISTINCT EnglishProductName  
 FROM DimProduct AS dp   
 WHERE EXISTS  
@@ -143,7 +141,7 @@ ORDER BY EnglishProductName;
   
  oder  
   
-```  
+```sql
 SELECT DISTINCT EnglishProductName  
 FROM DimProduct AS dp   
 WHERE dp.ProductSubcategoryKey IN  
@@ -156,16 +154,14 @@ ORDER BY EnglishProductName;
 ### <a name="k-using-multiple-correlated-subqueries"></a>K. Verwenden von mehreren abhängigen Unterabfragen  
  In diesem Beispiel werden zwei abhängige Unterabfragen verwendet, um die Namen von Mitarbeitern zu finden, die ein bestimmtes Produkt verkauft haben.  
   
-```  
+```sql
 SELECT DISTINCT LastName, FirstName, e.EmployeeKey  
 FROM DimEmployee e JOIN FactResellerSales s ON e.EmployeeKey = s.EmployeeKey  
 WHERE ProductKey IN  
 (SELECT ProductKey FROM DimProduct WHERE ProductSubcategoryKey IN  
 (SELECT ProductSubcategoryKey FROM DimProductSubcategory   
  WHERE EnglishProductSubcategoryName LIKE '%Bikes'))  
-ORDER BY LastName  
-;  
-  
+ORDER BY LastName;  
 ```  
   
   

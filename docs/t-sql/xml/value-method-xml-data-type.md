@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2299352c6047dd177c900fe0747245b27037d2ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce7382722999e7120cafc3fcc7aeff496d1b97c8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496338"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116547"
 ---
 # <a name="value-method-xml-data-type"></a>value()-Methode (xml-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,8 +31,7 @@ ms.locfileid: "88496338"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```syntaxsql
 value (XQuery, SQLType)  
 ```  
   
@@ -55,9 +54,9 @@ value (XQuery, SQLType)
 ### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>A. Verwenden der value()-Methode mit einer Variablen vom Typ XML  
  Im folgenden Beispiel ist eine XML-Instanz in einer Variablen des `xml` -Typs gespeichert. Mit der `value()` -Methode wird der Wert des `ProductID` -Attributs aus der XML-Instanz abgerufen. Dieser Wert wird dann einer `int` -Variablen zugewiesen.  
   
-```  
-DECLARE @myDoc xml  
-DECLARE @ProdID int  
+```sql
+DECLARE @myDoc XML  
+DECLARE @ProdID INT  
 SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -78,13 +77,13 @@ SELECT @ProdID
 ### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. Verwenden der value()-Methode zum Abrufen eines Werts aus einer Spalte vom Typ XML  
  Die folgende Abfrage wird für eine Spalte vom Typ **xml** (`CatalogDescription`) in der `AdventureWorks` -Datenbank angegeben. Die Abfrage ruft die Werte des Attributs `ProductModelID` aus jeder in der Spalte gespeicherten XML-Instanz ab.  
   
-```  
+```sql
 SELECT CatalogDescription.value('             
     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";             
        (/PD:ProductDescription/@ProductModelID)[1]', 'int') AS Result             
 FROM Production.ProductModel             
 WHERE CatalogDescription IS NOT NULL             
-ORDER BY Result desc             
+ORDER BY Result DESC             
 ```  
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
@@ -107,10 +106,10 @@ ORDER BY Result desc
   
  Mit der Abfrage werden Produktmodell-IDs aus XML-Instanzen mit Garantieinformationen (<`Warranty`>-Element) als eine der Funktionen abgerufen. Die Bedingung in der `WHERE` -Klausel verwendet die `exist()` -Methode, um nur solche Zeilen abzurufen, die diese Bedingung erfüllen.  
   
-```  
+```sql
 SELECT CatalogDescription.value('  
      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-           (/PD:ProductDescription/@ProductModelID)[1] ', 'int') as Result  
+           (/PD:ProductDescription/@ProductModelID)[1] ', 'int') AS Result  
 FROM  Production.ProductModel  
 WHERE CatalogDescription.exist('  
      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -140,8 +139,8 @@ Result
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D: Verwenden der exist()-Methode anstelle der value()-Methode  
  Aus Leistungsgründen sollten Sie zum Vergleichen mit einem relationalen Wert die `value()` -Methode mit `exist()` verwenden und nicht die `sql:column()`-Methode in einem Prädikat. Beispiel:  
   
-```  
-CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  
+```sql
+CREATE TABLE T (c1 INT, c2 VARCHAR(10), c3 XML)  
 GO  
   
 SELECT c1, c2, c3   
@@ -152,7 +151,7 @@ GO
   
  Dies kann in der folgenden Weise geschrieben werden:  
   
-```  
+```sql
 SELECT c1, c2, c3   
 FROM T  
 WHERE c3.exist( '/root[@a=sql:column("c1")]') = 1  

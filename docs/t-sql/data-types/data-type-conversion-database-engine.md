@@ -22,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b99cb9371269b70dc36eae6361f2d6a805da774
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88368556"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115040"
 ---
 # <a name="data-type-conversion-database-engine"></a>Datentypkonvertierung (Datenbank-Engine)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ Das Diagramm oben veranschaulicht zwar alle expliziten und impliziten Konvertier
 Das folgende Skript definiert z.B. eine Variable vom Typ `varchar`, weist der Variablen einen `int`-Typwert zu und wählt dann eine Verkettung der Variablen mit einer Zeichenfolge aus.
 
 ```sql
-DECLARE @string varchar(10);
+DECLARE @string VARCHAR(10);
 SET @string = 1;
 SELECT @string + ' is a string.'
 ```
@@ -74,7 +74,7 @@ Der `int`-Wert von `1` wird in einen `varchar`-Wert konvertiert, sodass die `SEL
 Das folgende Beispiel zeigt stattdessen ein ähnliches Skript mit einer `int`-Variablen:
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + ' is not a string.'
 ```
@@ -87,7 +87,7 @@ In diesem Fall löst die `SELECT`-Anweisung den folgenden Fehler aus:
 Um den Ausdruck `@notastring + ' is not a string.'` auszuwerten, folgt SQL Server den Regeln der Datentyprangfolge, um die implizite Konvertierung abzuschließen, bevor das Ergebnis des Ausdrucks berechnet werden kann. Da `int` eine höhere Rangfolge als `varchar` hat, versucht SQL Server, die Zeichenfolge in einen Integerwert zu konvertieren, und schlägt fehl, da diese Zeichenfolge nicht in einen Integerwert konvertiert werden kann. Wenn der Ausdruck eine Zeichenfolge bereitstellt, die konvertiert werden kann, wird die Anweisung erfolgreich ausgeführt, wie im folgenden Beispiel gezeigt:
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + '1'
 ```

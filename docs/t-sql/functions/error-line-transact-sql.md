@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 928cdcd92ceb2bfc6ace1be7d5cd6b1c785d5f48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c914c69646f99fdcb3ff4a214d37faa61feef3b6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88366266"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116735"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 
@@ -56,7 +56,7 @@ Wenn die Funktion in einem CATCH-Block aufgerufen wird, gibt `ERROR_LINE`
 -   die Zeilennummer in einer Routine zurück, wenn der Fehler in einer gespeicherten Prozedur oder einem Trigger aufgetreten ist  
 -   NULL zurück, wenn sie außerhalb des Bereichs eines CATCH-Blocks aufgerufen wurde.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 Ein Aufruf von `ERROR_LINE` kann überall im Bereich eines CATCH-Blocks auftreten.  
   
 `ERROR_LINE` gibt die Nummer der Zeile zurück, in der der Fehler aufgetreten ist. Dies geschieht unabhängig davon, wo `ERROR_LINE` innerhalb des Bereichs vom CATCH-Block aufgerufen wurde, und unabhängig davon, wie oft `ERROR_LINE` aufgerufen wurde. Dies steht im Gegensatz zu Funktionen wie @@ERROR. @@ERROR gibt eine Fehlernummer in der Anweisung zurück, die unmittelbar auf die folgt, die einen Fehler verursacht hat sowie in der ersten Anweisung eines CATCH-Blocks.  
@@ -68,7 +68,7 @@ In geschachtelten CATCH-Blöcken gibt `ERROR_LINE` die für den Bereich des CATC
 ### <a name="a-using-error_line-in-a-catch-block"></a>A. Verwenden von ERROR_LINE in einem CATCH-Block  
 In diesem Codebeispiel wird eine `SELECT`-Anweisung dargestellt, die einen Fehler aufgrund einer Division durch 0 (null) generiert. `ERROR_LINE` gibt die Nummer der Zeile zurück, in der der Fehler aufgetreten ist.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -82,7 +82,7 @@ GO
 ### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. Verwenden von ERROR_LINE in einem CATCH-Block mit einer gespeicherten Prozedur  
 Dieses Beispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 (null) generiert wird. `ERROR_LINE` gibt die Nummer der Zeile zurück, in der der Fehler aufgetreten ist.  
   
-```  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>C. Verwenden von ERROR_LINE in einem CATCH-Block mit anderen Tools zur Fehlerbehandlung  
 In diesem Codebeispiel wird eine `SELECT`-Anweisung dargestellt, die einen Fehler aufgrund einer Division durch 0 (null) generiert. `ERROR_LINE` gibt die Nummer der Zeile, in der der Fehler aufgetreten ist, sowie Informationen zum Fehler selbst zurück.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -126,7 +126,7 @@ END CATCH;
 GO  
 ``` 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   

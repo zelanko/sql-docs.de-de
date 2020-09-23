@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: be453944791a479e12f6723c1ad6f5abded12204
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459098"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116282"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -174,7 +174,7 @@ In diesem Beispiel wird auf die `PREDICT`-Funktion in der `FROM`-Klausel einer `
 ```sql
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -182,11 +182,11 @@ FROM PREDICT(MODEL = @model,
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
 
 ```sql
-DECLARE @model varbinary(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
+DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -207,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score float) AS p;
+             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -217,11 +217,11 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 Einer der gängigsten Anwendungsfälle für die Vorhersage ist das Generieren einer Bewertung für Eingabedaten und das anschließende Einfügen der vorhergesagten Werte in eine Tabelle. Im folgenden Beispiel wird davon ausgegangen, dass die aufrufende Anwendung eine gespeicherte Prozedur verwendet, um eine Zeile mit dem vorhergesagten Wert in eine Tabelle einzufügen:
 
 ```sql
-DECLARE @model varbinary(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
 INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
-FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score float) AS p;
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
 
 - Die Ergebnisse von `PREDICT` werden in einer Tabelle namens PredictionResults gespeichert. 
