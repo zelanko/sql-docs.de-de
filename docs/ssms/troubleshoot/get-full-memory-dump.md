@@ -1,6 +1,7 @@
 ---
+description: Erhalten eines vollständigen Speicherabbilds
 title: Abrufen eines vollständigen Speicherabbilds zum Troubleshooting in SSMS
-Description: In diesem Artikel erfahren Sie, wie Sie eine Problembehandlung durchführen, wenn SSMS aufgrund der Erfassung eines vollständigen Speicherabbilds nicht antwortet oder abgestürzt ist.
+Description: Erfassen Sie Diagnoseinformationen vom SQL Server Management Studio (SSMS), sodass Sie einen Absturz oder ein nicht reagierendes System beheben können.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,12 +12,12 @@ ms.author: maghan
 ms.reviewer: dineth, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 7b55e8e68076ad14f874306ffdb578f619af1cf0
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 749562d3a4326c8db2d38e06dcc265b08b7cea68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314457"
 ---
 # <a name="get-full-memory-dump"></a>Erhalten eines vollständigen Speicherabbilds
 

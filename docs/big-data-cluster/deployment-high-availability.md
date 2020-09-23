@@ -5,16 +5,16 @@ description: Erfahren Sie, wie Sie Big Data-Cluster in SQL Server mit Hochverfü
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279460"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790269"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Bereitstellen von Big Data-Clustern in SQL Server mit Hochverfügbarkeit
 
@@ -133,6 +133,9 @@ Für bestimmte Vorgänge, wie das Festlegen von Konfigurationen auf Serverebene 
 
 > [!IMPORTANT]
 > Der für SQL Server-Instanzverbindungen verfügbar gemachte Endpunkt unterstützt nur die SQL-Authentifizierung, selbst in Clustern, in denen Active Directory aktiviert ist. Standardmäßig ist bei einer Big Data-Clusterbereitstellung die `sa`-Anmeldung deaktiviert und eine neue `sysadmin`-Anmeldung wird basierend auf den Werten bereitgestellt, die zum Zeitpunkt der Bereitstellung für `AZDATA_USERNAME` und `AZDATA_PASSWORD` Umgebungsvariablen bereitgestellt werden.
+
+> [!IMPORTANT]
+> Die enthaltene Verfügbarkeitsgruppen-DDL wird in BDC ausschließlich selbst verwaltet. Jeder Versuch (externer Benutzer), die enthaltene Verfügbarkeitsgruppe oder den Datenbankspiegelungs-Endpunkt zu löschen, wird nicht unterstützt und kann zu einem nicht wiederherstellbaren BDC-Status führen.
 
 Das folgende Beispiel zeigt, wie Sie diesen Endpunkt verfügbar machen und dann die Datenbank, die mit einem Wiederherstellungsworkflow erstellt wurde, zur Verfügbarkeitsgruppe hinzufügen können. Es gelten ähnliche Anweisungen zum Einrichten einer Verbindung mit der SQL Server-Masterinstanz, wenn Sie Serverkonfigurationen mit `sp_configure` ändern möchten.
 
