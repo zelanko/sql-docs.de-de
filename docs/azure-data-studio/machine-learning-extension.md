@@ -5,17 +5,17 @@ description: Mit der Machine-Learning-Erweiterung für Azure Data Studio können
 ms.date: 05/19/2020
 ms.reviewer: sstein
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+ms.technology: machine-learning
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5b54ec71ec3debaf39b0788cac0c1534300a4a72
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: a6a86baeb3c206c722aa91eae386ca80c287644c
+ms.sourcegitcommit: b9871e6cffb4c2c65d1f27f797630c43fc02cfb0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745550"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90101120"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>Machine-Learning-Erweiterung (Vorschauversion) für Azure Data Studio
 
@@ -101,7 +101,7 @@ Führen Sie die folgenden Schritte aus, um mithilfe der Machine Learning-Erweite
 
 Führen Sie die folgenden Schritte aus, um die Machine-Learning-Erweiterung in Azure Data Studio zu verwenden.
 
-1. Öffnen Sie die Verbindungen in Azure Data Studio.
+1. Öffnen Sie das Viewlet **Verbindungen** in Azure Data Studio.
 
 1. Klicken Sie mit der rechten Maustaste auf Ihren Server, und klicken Sie auf **Verwalten**
 

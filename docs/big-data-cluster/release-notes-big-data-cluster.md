@@ -5,16 +5,16 @@ description: In diesem Artikel werden die neuesten Updates und bekannten Problem
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 212c80adf64c9991aaf80cb422ded8fcbd1266ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cfd85d1b07a315a196c2728c776297c4d85d9d
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772899"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392172"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Versionshinweise zu Big Data-Clustern für SQL Server 2019
 
@@ -47,7 +47,7 @@ In diesem Abschnitt werden die Plattformen aufgeführt, die mit BDC unterstützt
 
 |Edition|Notizen|
 |---------|---------|
-|Enterprise<br/>Standard<br/>Entwickler| Die Edition von Big Data-Clustern wird von der Edition der SQL Server-Masterinstanz bestimmt. Zum Zeitpunkt der Bereitstellung wird standardmäßig die Developer Edition bereitgestellt. Sie können die Edition nach der Bereitstellung ändern. Informationen dazu finden Sie unter [Konfigurieren der SQL Server-Masterinstanz](../big-data-cluster/configure-sql-server-master-instance.md). |
+|Enterprise<br/>Standard<br/>Entwickler| Die Edition von Big Data-Clustern wird von der Edition der SQL Server-Masterinstanz bestimmt. Zum Zeitpunkt der Bereitstellung wird standardmäßig die Developer Edition bereitgestellt. Sie können die Edition nach der Bereitstellung ändern. Informationen dazu finden Sie unter [Konfigurieren der SQL Server-Masterinstanz](./configure-sql-server-master-instance.md). |
 
 ## <a name="tools"></a>Tools
 
@@ -64,6 +64,7 @@ In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[big-data-clusters
 
 | Release          | Big Data-Cluster-Version    | `azdata`-Version| Veröffentlichungsdatum |
 |------------------|----------------|-----------------|--------------|
+| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 4\.8.2020   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 31.3.2020   |
 | [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 12.03.2020   |
@@ -71,9 +72,31 @@ In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[big-data-clusters
 | [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 01.07.2020   |
 | [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
+> [!NOTE]
+> Für CU7 gibt es keine Updates für Big Data-Cluster in SQL Server 2019.
+
 ## <a name="how-to-install-updates"></a>Installieren von Updates
 
 Informationen zum Installieren von Updates finden Sie unter [Upgraden von Big Data-Clustern für SQL Server [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6 (Juli 2020)
+
+Kumulatives Update 6 (CU6) für SQL Server 2019.
+
+|Paketversion | Imagetag |
+|-----|-----|
+|15.0.4053.23 |[2019-CU6-ubuntu-16.04]
+
+Diese Version enthält kleinere Fehlerkorrekturen und Verbesserungen. In den folgenden Artikeln finden Sie Informationen, die sich auf diese Updates beziehen:
+
+- [Verwalten des Zugriffs auf Big Data-Cluster im Active Directory-Modus](manage-user-access.md)
+- [Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus](deploy-active-directory.md)
+- [Bereitstellen von Big Data-Clustern in SQL Server mit Hochverfügbarkeit](deployment-high-availability.md)
+- [Konfigurieren eines Big Data-Clusters in SQL Server](configure-cluster.md)
+- [Konfigurieren von Apache Spark und Apache Hadoop in Big Data-Clustern](configure-spark-hdfs.md)
+- [Konfigurationseigenschaften der SQL Server-Masterinstanz](reference-config-master-instance.md)
+- [Konfigurationseigenschaften von Apache Spark und Apache Hadoop (HDFS)](reference-config-spark-hadoop.md)
+- [RBAC-Modell in Kubernetes und Auswirkungen auf Benutzer und Dienstkonten, die Big Data-Cluster verwalten](kubernetes-rbac.md)
 
 ## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5 (Juni 2020)
 
@@ -89,7 +112,7 @@ Kumulatives Update 5 (CU5) für SQL Server 2019.
 - Das Sicherheitsmodell für die Big Data-Cluster-Bereitstellung wurde aktualisiert, wodurch privilegierte Container, die als Teil von Big Data-Cluster bereitgestellt werden, nicht mehr *erforderlich* sind. Zusätzlich zu nicht privilegierten Containern werden Container standardmäßig für alle neuen Bereitstellungen unter Verwendung von SQL Server 2019 CU5 nicht als Root-Benutzer ausgeführt. 
 - Unterstützung für die Bereitstellung mehrerer Big Data-Cluster für eine Active Directory-Domäne wurde hinzugefügt.
 - Die `azdata`-CLI verfügt über eine eigene semantische Version, die unabhängig vom Server ist. Alle Abhängigkeiten zwischen dem Client und der Serverversion von „azdata“ wurden entfernt. Es wird empfohlen, die neuesten Versionen des Clients und des Servers zu verwenden, damit Sie von den neusten Erweiterungen und Fixes profitieren können.
-- Es wurden zwei neue gespeicherte Prozeduren eingeführt, sp_data_source_objects und sp_data_source_columns, um die Introspektion bestimmter externer Datenquellen zu unterstützen. Diese können von Kunden direkt über T-SQL für die Schemaermittlung verwendet werden, um herauszufinden, welche Tabellen für die Virtualisierung verfügbar sind. Wir nutzen diese Änderungen im Assistenten für externe Tabellen der [Datenvirtualisierungserweiterung](../azure-data-studio/data-virtualization-extension.md) für Azure Data Studio, mit dem Sie über SQL Server, Oracle, MongoDB und Teradata externe Tabellen erstellen können.
+- Es wurden zwei neue gespeicherte Prozeduren („sp_data_source_objects“ und „sp_data_source_table_columns“) eingeführt, um die Introspektion bestimmter externer Datenquellen zu unterstützen. Diese können von Kunden direkt über T-SQL für die Schemaermittlung verwendet werden, um herauszufinden, welche Tabellen für die Virtualisierung verfügbar sind. Wir nutzen diese Änderungen im Assistenten für externe Tabellen der [Datenvirtualisierungserweiterung](../azure-data-studio/data-virtualization-extension.md) für Azure Data Studio, mit dem Sie über SQL Server, Oracle, MongoDB und Teradata externe Tabellen erstellen können.
 - Unterstützung wurde hinzugefügt, um in Grafana vorgenommene Anpassungen dauerhaft zu speichern. In der Vergangenheit haben CU5-Kunden festgestellt, dass Änderungen an Grafana-Konfigurationen bei einem Neustart von Pod `metricsui` (der das Grafana-Dashboard hostet) verloren gingen. Dieses Problem wurde behoben, und alle Konfigurationen werden nun dauerhaft gespeichert. 
 - Es wurde ein Sicherheitsproblem behoben, das im Zusammenhang mit der API stand, die zum Sammeln von Pod- und Knotenmetriken mithilfe von Telegraf (in den `metricsdc`-Pods gehostet) verwendet wird. Aufgrund dieser Änderung wird für Telegraf nun ein Dienstkonto, eine Clusterrolle sowie Clusterbindungen benötigt, um die Pod- und Knotenmetriken zu sammeln. Weitere Informationen finden Sie unter [Zum Sammeln von Pod- und Knotenmetriken erforderliche Clusterrolle](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection).
 - Es wurden zwei neue Featureparameter eigeführt, um die Sammlung von Pod- und Knotenmetriken zu steuern. Wenn Sie Ihre Kubernetes-Infrastruktur mithilfe anderer Lösungen überwachen, können Sie die integrierte Metriksammlung für Pods und Hostknoten deaktivieren, indem Sie *allowNodeMetricsCollection* und *allowPodMetricsCollection* in der Bereitstellungskonfigurationsdatei control.json auf „False“ festlegen. Bei OpenShift-Umgebungen werden diese Einstellungen in den integrierten Bereitstellungsprofilen standardmäßig auf „False“ festgelegt, da für das Sammeln von Pod- und Knotenmetriken privilegierte Funktionen erforderlich sind.
@@ -144,6 +167,28 @@ Mit der allgemeinen Vertriebsversion 1 für SQL Server 2019 (GDR1) wird die allg
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## <a name="known-issues"></a>Bekannte Probleme
+
+### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>Leere Livy-Aufträge vor dem Anwenden kumulativer Updates
+
+- **Betroffene Releases:** Durch das aktuelle kumulative Update
+
+- **Problem und Kundenbeeinträchtigung:** Während eines Upgrades gibt Sparkhead den Fehler 404 zurück.
+
+- **Problemumgehung**: Stellen Sie vor dem Durchführen eines Upgrades von BDC sicher, dass keine aktiven Livy-Sitzungen oder -Batchaufträge vorhanden sind. Folgen Sie den unter [Upgrade von einem unterstützten Release](deployment-upgrade.md#upgrade-from-supported-release) angegebenen Anweisungen, um dies zu vermeiden. 
+
+   Wenn Livy während des Upgradevorgangs den Fehler 404 zurückgibt, starten Sie den Livy-Server auf beiden Sparkhead-Knoten neu. Beispiel:
+
+   ```console
+   kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy
+   ```
+
+### <a name="big-data-cluster-generated-service-accounts-passwords-expiration"></a>Ablauf der von Big Data-Clustern generierten Kennwörter für Dienstkonten
+
+- **Betroffene Releases:** Alle Bereitstellungen von Big Data-Clustern mit Active Directory-Integration, unabhängig von der Version
+
+- **Problem und Kundenbeeinträchtigung:** Während der Bereitstellung eines Big Data-Clusters generiert der Workflow eine Reihe von [Dienstkonten](active-directory-objects.md). Abhängig von der auf dem Domänencontroller festgelegten Kennwortablaufrichtlinie können die Kennwörter für diese Konten ablaufen (der Standardwert lautet 42 Tage). Derzeit gibt es keinen Mechanismus zum Rotieren von Anmeldeinformationen für alle Konten im BDC, sodass der Cluster nicht mehr funktionsfähig ist, sobald das Ablaufdatum erreicht ist.
+
+- **Problemumgehung**: Aktualisieren Sie die Ablaufrichtlinie für die BDC-Dienstkonten auf dem Domänencontroller in „Kennwort läuft nie ab“. Eine vollständige Liste dieser Konten finden Sie unter [Automatisch generierte Active Directory-Objekte](active-directory-objects.md). Sie können diese Aktion vor oder nach der Ablaufzeit ausführen. Im letzteren Fall aktiviert Active Directory die abgelaufenen Kennwörter erneut.
 
 ### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>Anmeldeinformationen für den Zugriff auf Dienste über den Gatewayendpunkt
 

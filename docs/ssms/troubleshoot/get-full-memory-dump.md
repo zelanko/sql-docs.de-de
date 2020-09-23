@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.reviewer: dineth, sstein
+ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 749562d3a4326c8db2d38e06dcc265b08b7cea68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a15ce5e05e54b6196d363e8967c33fa4ad190295
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88314457"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990265"
 ---
 # <a name="get-full-memory-dump"></a>Erhalten eines vollständigen Speicherabbilds
 
@@ -33,7 +33,7 @@ Führen Sie zum Erfassen von Diagnoseinformationen für die Problembehandlung di
 
 3. Öffnen Sie eine Eingabeaufforderung (wie `cmd.exe`), und führen Sie den folgenden Befehl aus:
 
-    ```
+    ```console
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 
