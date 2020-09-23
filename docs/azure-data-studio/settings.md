@@ -1,20 +1,20 @@
 ---
 title: Benutzer- und Arbeitsbereichseinstellungen
 description: Erfahren Sie, wie Sie die Einstellungen zum Anpassen des Editors, der Benutzeroberfläche und des funktionalen Verhaltens von Azure Data Studio entsprechend Ihrer Vorlieben verwenden.
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 2196bd9c4445f700fd1a697db3edcb5879b1f44b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.reviewer: maghan, sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 05ed5f644b26c970383197376bce481a96ba5742
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746160"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114523"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Ändern von Benutzer- und Arbeitsbereichseinstellungen
 
@@ -55,7 +55,6 @@ Die Datei mit den Arbeitsbereichseinstellungen befindet sich unter dem `.Azure D
 Azure Data Studio speichert nicht gespeicherte Änderungen an Dateien, wenn Sie die Anwendung standardmäßig beenden. Dies entspricht der Hot-Exit-Funktion in Visual Studio Code.
 
 Standardmäßig ist Hot-Exit deaktiviert. Aktivieren Sie Hot-Exit, indem Sie die `files.hotExit`-Einstellung bearbeiten. Weitere Informationen finden Sie unter [Hot-Exit (in der Visual Studio Code-Dokumentation)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
-
 
 ## <a name="tab-color"></a>Registerkartenfarbe
 

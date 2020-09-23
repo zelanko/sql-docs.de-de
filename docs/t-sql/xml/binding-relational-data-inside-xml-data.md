@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 519f0cb9e198e86705d412af20d9d939365ee834
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbe67c81d106641d56e9ab2deb0bbad246c70b60
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88356166"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91113070"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Einbinden relationaler Daten in XML-Daten
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "88356166"
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>Beispiel: Domänenübergreifende Abfrage mithilfe von sql:variable()  
  In diesem Beispiel wird gezeigt, wie eine Anwendung mit **sql:variable()** eine Abfrage parametrisieren kann. Die ISBN wird mit der SQL-Variablen @isbn übergeben. Durch Ersetzen der Konstante durch **sql:variable()** kann die Abfrage für die Suche nach einer beliebigen ISBN verwendet werden, nicht nur für die Suche nach der ISBN 0-7356-1588-2.  
   
-```  
-DECLARE @isbn varchar(20)  
+```sql
+DECLARE @isbn VARCHAR(20)  
 SET     @isbn = '0-7356-1588-2'  
 SELECT  xCol  
 FROM    T  
