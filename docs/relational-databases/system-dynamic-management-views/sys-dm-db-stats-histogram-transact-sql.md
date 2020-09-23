@@ -21,12 +21,12 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330053f10b6b57b184d2be26d4181997ed19ba7b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: af4e3e3739475ff3beac61802606499874fdff58
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543954"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117000"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
@@ -63,7 +63,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |distinct_range_rows |**bigint** |Geschätzte Anzahl von Zeilen mit einem unterschiedlichen Spaltenwert innerhalb eines Histogrammschritts ohne den oberen Grenzwert. |
 |average_range_rows |**real** |Die durchschnittliche Anzahl von Zeilen mit doppelten Spaltenwerten in einem Histogrammschritt, ohne die obere Grenze ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` für `DISTINCT_RANGE_ROWS > 0` ). |
   
- ## <a name="remarks"></a>Hinweise  
+ ## <a name="remarks"></a>Bemerkungen  
  
  Das Resultset für `sys.dm_db_stats_histogram` gibt Informationen zurück, die mit vergleichbar `DBCC SHOW_STATISTICS WITH HISTOGRAM` sind, und umfasst auch `object_id` , `stats_id` und `step_number` .
 
@@ -77,7 +77,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  Das folgende Diagramm zeigt ein Histogramm mit sechs Schritten. Der Bereich links vom ersten oberen Grenzwert ist der erste Schritt.  
   
- ![Histogramm](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogramm")  
+ ![Histogramm](../../relational-databases/system-dynamic-management-views/media/histogram-2.svg "Histogramm")  
   
  Für jeden Histogrammschritt gilt:  
   
