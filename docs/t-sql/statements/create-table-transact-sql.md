@@ -46,14 +46,14 @@ helpviewer_keywords:
 - maximum number of bytes per row
 - data retention policy
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 96dcd0aff5874db3f025496b1067d5d3d111b3a9
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b55f70cd23047de6fa1b344cbe1c9c89ab3a94c
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511262"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027311"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -239,11 +239,13 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         | OFF ( MIGRATION_STATE = PAUSED )
       }
     ]   
-    [ DATA_DELETION = ON ( FILTER_COLUMN = column_name
-        , RETENTION_PERIOD = {
-                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
-                  | MONTH | MONTHS | YEAR | YEARS }
-                          }) ]
+    [ DATA_DELETION =  {OFF | ON }  
+          [(    
+              [ FILTER_COLUMN = column_name ],   
+              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                      | MONTH | MONTHS | YEAR | YEARS }}]    
+          )]
+     ]
 }
   
 <table_stretch_options> ::=
@@ -801,8 +803,12 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **Gilt für:** [!INCLUDE[ssNoV
 
 - Geben Sie `PAUSED` an, um die Datenmigration zu pausieren oder nach hinten zu verschieben. Weitere Informationen finden Sie unter [Anhalten und Fortsetzen der Datenmigration – Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
-DATA_DELETION = { ON ( FILTER_COLUMN = spaltenname,   
-            RETENTION_PERIOD = { INFINITE | Anzahl {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }    
+[ DATA_DELETION =  {OFF | ON }  
+          [(  
+              [ FILTER_COLUMN = spaltenname ],   
+              [ RETENTION_PERIOD = { INFINITE | Anzahl {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
+          )]  
+     ]  
 **Anwendungsbereich:** *Nur* Azure SQL Edge
 
 Aktiviert die auf Aufbewahrungsrichtlinien basierende Bereinigung von alten oder veralteten Daten aus Tabellen innerhalb einer Datenbank. Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren von Datenaufbewahrung](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). Die folgenden Parameter müssen angegeben werden, damit Datenaufbewahrung aktiviert wird. 

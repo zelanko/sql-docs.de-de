@@ -34,8 +34,14 @@
   items:
     - name: Erweiterungen
       items:
-        - name: Erweiterungen
+        - name: Übersicht über Erweiterungen
           href: extensions.md
+        - name: Azure Arc-Erweiterung
+          href: extensions/azure-arc-extension.md
+        - name: Datenvirtualisierungserweiterung
+          href: data-virtualization-extension.md
+        - name: Kusto-Erweiterung
+          href: extensions/kusto-extension.md
         - name: Machine-Learning-Erweiterung
           items:
             - name: Übersicht über die Machine-Learning-Erweiterung
@@ -46,10 +52,16 @@
               href: machine-learning-extension-predictions.md
             - name: Importieren und Anzeigen von Modellen
               href: machine-learning-extension-import-view-models.md
+        - name: Erweiterung für die verwaltete Instanz
+          href: extensions/azure-sql-managed-instance-extension.md
         - name: PostgreSQL-Erweiterung
           href: postgres-extension.md
-        - name: Datenvirtualisierungserweiterung
-          href: data-virtualization-extension.md
+        - name: PowerShell-Erweiterung
+          href: powershell-extension.md
+        - name: SandDance-Erweiterung
+          href: sanddance-extension.md
+        - name: Schemavergleich-Erweiterung
+          href: schema-compare-extension.md
         - name: SQL Database Projects-Erweiterung
           items:
             - name: Übersicht über die Erweiterung „SQL Database Projects“
@@ -70,14 +82,6 @@
           href: sql-server-import-extension.md
         - name: SQL Server Profiler
           href: sql-server-profiler-extension.md
-        - name: Schemavergleich-Erweiterung
-          href: schema-compare-extension.md
-        - name: PowerShell-Erweiterung
-          href: powershell-extension.md
-        - name: Erweiterung für die verwaltete Instanz
-          href: extensions/azure-sql-managed-instance-extension.md
-        - name: SandDance-Erweiterung
-          href: sanddance-extension.md
     - name: Erweiterungserstellung
       items:
         - name: Übersicht über die Erweiterbarkeit
@@ -114,8 +118,14 @@
           href: notebooks-tutorial-sql-kernel.md
         - name: Verwenden von Python-Kernel
           href: notebooks-tutorial-python-kernel.md
+        - name: Verwenden des Kusto-Kernels
+          href: notebooks/notebooks-kusto-kernel.md
         - name: Erweiterung „Kqlmagic“
           href: notebooks-kqlmagic.md
+    - name: Bereitstellung
+      items:
+        - name: Bereitstellen von Azure SQL Edge
+          href: deploy-azure-sql-edge.md
     - name: Dashboards und Einblickwidgets
       href: insight-widgets.md
     - name: Codeausschnitte
