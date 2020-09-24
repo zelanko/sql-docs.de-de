@@ -7,26 +7,26 @@ ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: ulvii
-ms.author: v-ulibra
+author: David-Engel
+ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 3fc2747f21ff50af6206e59da594c0a06b2bb909
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ee4938e8a0d226f668fabf3aaf4db1359ab6bf61
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886277"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807013"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutorial zur Linux- und macOS-Installation für die Microsoft-Treiber für PHP für SQL Server
-Die folgende Anleitung setzt eine saubere Umgebung voraus und zeigt, wie PHP 7.x, der Microsoft ODBC-Treiber, der Apache-Webserver und die Microsoft-Treiber für PHP für SQL Server unter Ubuntu 16.04, 18.04 und 19.10, Red Hat 7 und 8, Debian 8, 9, und 10, SUSE 12 und 15, Alpine 3.11 sowie macOS 10.13, 10.14 und 10.15 installiert werden. In dieser Anleitung wird empfohlen, die Treiber mit PECL zu installieren, aber Sie können auch die vorab erstellten Binärdateien von der GitHub-Projektseite [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) (Microsoft-Treiber für PHP für SQL Server) herunterladen und gemäß den Anweisungen unter [Laden der Microsoft-Treiber für PHP für SQL Server](../../connect/php/loading-the-php-sql-driver.md) installieren. Eine Beschreibung des Ladevorgangs von Erweiterungen und die Gründe, warum die Erweiterungen nicht zur php.ini-Datei hinzugefügt werden, finden Sie im Abschnitt zum [Laden der Treiber](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+Die folgende Anleitung setzt eine bereinigte Umgebung voraus und zeigt, wie PHP 7.x, der Microsoft ODBC-Treiber, der Apache-Webserver und die Microsoft-Treiber für PHP für SQL Server unter Ubuntu 16.04, 18.04 und 20.04, Red Hat 7 und 8, Debian 8, 9, und 10, SUSE 12 und 15, Alpine 3.11 sowie macOS 10.13, 10.14 und 10.15 installiert werden. In dieser Anleitung wird empfohlen, die Treiber mit PECL zu installieren, aber Sie können auch die vorab erstellten Binärdateien von der GitHub-Projektseite [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) (Microsoft-Treiber für PHP für SQL Server) herunterladen und gemäß den Anweisungen unter [Laden der Microsoft-Treiber für PHP für SQL Server](../../connect/php/loading-the-php-sql-driver.md) installieren. Eine Beschreibung des Ladevorgangs von Erweiterungen und die Gründe, warum die Erweiterungen nicht zur php.ini-Datei hinzugefügt werden, finden Sie im Abschnitt zum [Laden der Treiber](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
 Mit diesen Anweisungen wird standardmäßig PHP 7.4 mit `pecl install` installiert. Möglicherweise müssen Sie zuerst `pecl channel-update pecl.php.net` ausführen. Beachten Sie, dass einige unterstützte Linux-Distributionen standardmäßig PHP 7.1 oder eine frühere Version verwenden, die für die neueste Version der PHP-Treiber für SQL Server nicht unterstützt werden. Achten Sie daher auf die Hinweise am Anfang jedes Abschnitts, um stattdessen PHP 7.2 oder 7.3 zu installieren.
 
 In dieser Anleitung sind auch Anweisungen zum Installieren von PHP FastCGI Process Manager (PHP-FPM) unter Ubuntu enthalten. Dieser ist bei Verwendung des nginx-Webservers anstelle von Apache erforderlich.
 
-## <a name="contents-of-this-page"></a>Inhalt dieser Seite:
+## <a name="contents-of-this-page"></a>Inhalt dieser Seite
 
-- [Installieren der Treiber unter Ubuntu 16.04, 18.04 und 19.10](#installing-the-drivers-on-ubuntu-1604-1804-and-1910)
+- [Installieren der Treiber unter Ubuntu 16.04, 18.04 und 20.04](#installing-the-drivers-on-ubuntu-1604-1804-and-2004)
 - [Installieren der Treiber mit PHP-FPM unter Ubuntu](#installing-the-drivers-with-php-fpm-on-ubuntu)
 - [Installieren der Treiber unter Red Hat 7 und 8](#installing-the-drivers-on-red-hat-7-and-8)
 - [Installieren der Treiber unter Debian 8, 9 und 10](#installing-the-drivers-on-debian-8-9-and-10)
@@ -34,7 +34,7 @@ In dieser Anleitung sind auch Anweisungen zum Installieren von PHP FastCGI Proce
 - [Installieren der Treiber unter Alpine 3.11](#installing-the-drivers-on-alpine-311)
 - [Installieren der Treiber unter macOS High Sierra, Mojave und Catalina](#installing-the-drivers-on-macos-high-sierra-mojave-and-catalina)
 
-## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-1910"></a>Installieren der Treiber unter Ubuntu 16.04, 18.04 und 19.10
+## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-2004"></a>Installieren der Treiber unter Ubuntu 16.04, 18.04 und 20.04
 
 > [!NOTE]
 > Ersetzen Sie zum Installieren von PHP 7.2 oder 7.3 in den folgenden Befehlen die Versionsnummer 7.4 durch die Nummer 7.2 oder 7.3.
