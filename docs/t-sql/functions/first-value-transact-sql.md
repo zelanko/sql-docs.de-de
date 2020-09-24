@@ -20,12 +20,12 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db390dda473d997343de46f9b37a4ab4865ca347
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 3b4d115487f15c8af7083b9006cf2724d6b81011
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90915024"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114841"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +70,7 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
 ### <a name="a-using-first_value-over-a-query-result-set"></a>A. Verwenden von FIRST_VALUE für ein Abfrageresultset  
  Im folgenden Beispiel wird der Name des günstigsten Produkts in einer bestimmten Produktkategorie mithilfe von FIRST_VALUE zurückgegeben.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name, ListPrice,   
@@ -102,7 +102,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
 ### <a name="b-using-first_value-over-partitions"></a>B. Verwenden von FIRST_VALUE über Partitionen  
  Im folgenden Beispiel werden die Mitarbeiter mit der geringsten Anzahl von Urlaubsstunden im Vergleich zu anderen Angestellten mit der gleichen Berufsbezeichnung mithilfe von FIRST_VALUE zurückgegeben. Die PARTITION BY-Klausel partitioniert die Mitarbeiter nach Berufsbezeichnung, und die FIRST_VALUE-Funktion wird unabhängig auf jede Partition angewendet. Die in der OVER-Klausel angegebene ORDER BY-Klausel bestimmt die logische Reihenfolge, in der die FIRST_VALUE-Funktion auf die Zeilen in jeder Partition angewendet wird. Die ROWS UNBOUNDED PRECEDING-Klausel gibt den Ausgangspunkt des Fensters als erste Zeile jeder Partition an.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT JobTitle, LastName, VacationHours,   

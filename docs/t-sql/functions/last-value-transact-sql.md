@@ -20,12 +20,12 @@ ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 288b8213bba3623895c8c600f9b398c6e4f608b2
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: afff4f59dace8695e8b209acb2201a8cddd86069
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90915033"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116077"
 ---
 # <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "90915033"
   
 ## <a name="syntax"></a>Syntax  
   
-```syntaxsql
-  
+
+```syntaxsql 
 LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   
 ```  
@@ -72,7 +72,7 @@ LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
 ### <a name="a-using-last_value-over-partitions"></a>A. Partitionsweise Verwendung von LAST_VALUE  
  Im folgenden Beispiel wird das Einstellungsdatum des letzten Mitarbeiters in jeder Abteilung für das angegebene Gehalt ("Rate") zurückgegeben. Die PARTITION BY-Klausel partitioniert die Mitarbeiter nach Abteilung, und die LAST_VALUE-Funktion wird auf jede Partition separat angewendet. Die in der OVER-Klausel angegebene ORDER BY-Klausel bestimmt die logische Reihenfolge, in der die LAST_VALUE-Funktion auf die Zeilen in jeder Partition angewendet wird.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Department, LastName, Rate, HireDate,   
@@ -82,8 +82,7 @@ INNER JOIN HumanResources.EmployeePayHistory AS eph
     ON eph.BusinessEntityID = edh.BusinessEntityID  
 INNER JOIN HumanResources.Employee AS e  
     ON e.BusinessEntityID = edh.BusinessEntityID  
-WHERE Department IN (N'Information Services',N'Document Control');  
-  
+WHERE Department IN (N'Information Services',N'Document Control');   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -115,7 +114,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
  Die Klausel „RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING“ muss in diesem Beispiel wie unten dargestellt für die Werte ungleich NULL in der Spalte „DifferenceFromLastQuarter“ zurückgegeben werden. Der Standardbereich lautet „RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW“. In diesem Beispiel führt die Verwendung dieses Standardbereichs (oder ausschließlich eines Bereichs, wodurch der Standardbereich verwendet wird) dazu, dass Nullen (0) in der Spalte "DifferenceFromLastQuarter" zurückgegeben werden. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 SELECT BusinessEntityID, DATEPART(QUARTER,QuotaDate)AS Quarter, YEAR(QuotaDate) AS SalesYear,   
     SalesQuota AS QuotaThisQuarter,   
