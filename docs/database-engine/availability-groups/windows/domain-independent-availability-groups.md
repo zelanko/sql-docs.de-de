@@ -6,23 +6,23 @@ ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b50f2cda111a38ffd6ba67dbbf0fb9fc74192168
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac2fe67316f32d372c4f8faddef32af1bcc7f805
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894494"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116231"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Erstellen einer domänenunabhängigen Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Always On-Verfügbarkeitsgruppen erfordern einen zugrunde liegenden Windows Server-Failovercluster (WSFC). Das Bereitstellen eines WSFC über Windows Server 2012 R2 erfordert, dass die Server, die an einem WSFC teilnehmen (auch als Knoten bekannt) mit derselben Domäne verknüpft sind. Weitere Informationen zu Active Directory Domain Services (AD DS), finden Sie [hier](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
+Always On-Verfügbarkeitsgruppen (AGs) erfordern einen zugrunde liegenden Windows Server-Failovercluster (WSFC). Das Bereitstellen eines WSFC über Windows Server 2012 R2 erfordert, dass die Server, die an einem WSFC teilnehmen (auch als Knoten bekannt) mit derselben Domäne verknüpft sind. Weitere Informationen zu Active Directory Domain Services (AD DS), finden Sie [hier](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
 
 Die AD DS- sowie WSFC-Abhängigkeit ist komplexer als das, was zuvor mit einer Datenbankspiegelungskonfiguration (DBM) bereitgestellt wurde, da DBM über mehrere Rechenzentren hinweg mit Zertifikaten ohne solche Abhängigkeiten bereitgestellt werden.  Eine herkömmliche Verfügbarkeitsgruppe, die sich über mehrere Datencenter erstreckt, erfordert, dass alle Server mit derselben Active Directory-Domäne verknüpft sein sollen. Andere Domänen, auch vertrauenswürdige Domänen, funktionieren nicht. Alle Server müssen Knoten desselben WSFC sein. In der folgenden Abbildung wird diese Konfiguration veranschaulicht. SQL Server 2016 hat ebenfalls Verfügbarkeitsgruppen verteilt, die ebenfalls dieses Ziel auf eine andere Weise erreichen können.
 

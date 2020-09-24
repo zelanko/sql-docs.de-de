@@ -2,7 +2,7 @@
 title: Handbuch zur Thread- und Taskarchitektur | Microsoft-Dokumentation
 description: Erfahren Sie mehr über die Thread- und Taskarchitektur in SQL Server, einschließlich der Aufgabenplanung, des Hinzufügens von CPUs bei laufendem Systembetrieb und der bewährten Methoden für die Verwendung von Computern mit mehr als 64 CPUs.
 ms.custom: ''
-ms.date: 07/06/2020
+ms.date: 09/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
+- task scheduling
+- working threads
+- Large Deficit First scheduling
+- LDF scheduling
+- scheduling, SQL Server
+- tasks, SQL Server
+- threads, SQL Server
+- quantum, SQL Server
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: f2500a95946ee1a8226763ebd7983edd2a9f81c6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076805"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114588"
 ---
 # <a name="thread-and-task-architecture-guide"></a>Handbuch zur Thread- und Taskarchitektur
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -59,6 +67,14 @@ Die Anzahl der Arbeitsthreads, die für jeden Task erzeugt werden, hängt von fo
 Ein **Planer**, auch bekannt als SOS-Planer, verwaltet Arbeitsthreads, die Verarbeitungszeit benötigen, um Aufgaben im Rahmen von Tasks auszuführen. Jeder Planer ist einem einzelnen Prozessor (CPU) zugeordnet. Die Zeit, die ein Worker in einem Planer aktiv bleiben kann, wird als Betriebssystemquantum bezeichnet, wobei das Maximum bei 4 ms liegt. Nach Ablauf seiner Quantumzeit gibt ein Worker seine Zeit an andere Worker weiter, die auf CPU-Ressourcen zugreifen müssen, und ändert seinen Zustand. Diese Zusammenarbeit zwischen Workern zur Maximierung des Zugriffs auf CPU-Ressourcen wird als **kooperative Planung** oder auch nicht präemptive Planung bezeichnet. Die Änderung des Workerzustands wiederum wird an den Task, der diesem Worker zugeordnet ist, und an die mit dem Task verbundene Anforderung weitergegeben. Weitere Informationen zu Zuständen von Workern finden Sie unter [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). Weitere Informationen zu Planern finden Sie unter [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
 Zusammenfassend kann eine **Anforderung** eine oder mehrere **Tasks** erzeugen, um Arbeitseinheiten auszuführen. Jeder Task wird einem **Arbeitsthread** zugewiesen, der für das Abschließen des Tasks zuständig ist. Jeder Arbeitsthread muss für die aktive Ausführung des Tasks geplant (d. h. auf einem **Scheduler** platziert) werden. 
+
+> [!NOTE]
+> Nehmen Sie das folgende Szenario als Beispiel:   
+> -  Worker 1 ist ein Task mit langer Ausführungszeit, z. B. eine Leseabfrage, die Read-Ahead- für In-Memory-Tabellen verwendet. Worker 1 stellt fest, dass die erforderlichen Datenseiten bereits im Pufferpool vorhanden sind, sodass er nicht auf E/A-Vorgänge warten muss und sein vollständiges Quantum nutzen kann, bevor Ergebnisse geliefert werden.   
+> -  Worker 2 führt kürzere Tasks mit einer Dauer unter einer Millisekunde aus und muss daher vor dem Erreichen des vollständigen Quantums Ergebnisse zurückgeben.     
+>
+> In diesem Szenario und bis zu [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]kann Worker 1 den Scheduler im Grunde durch eine höhere gesamte Quantumzeit monopolisieren.   
+> Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] umfasst die kooperative Planung LDF-Planung (Large Deficit First). Bei der LDF-Planung werden die Quantumverwendungsmuster überwacht, und ein Workerthread monopolisiert keinen Scheduler. In demselben Szenario ist es für Worker 2 zulässig, wiederholte Quantums zu nutzen, bevor Worker 1 mehr Quantum nutzen darf, sodass Worker 1 daran gehindert wird, den Scheduler mit einem unfreundlichen Muster zu monopolisieren.
 
 ### <a name="scheduling-parallel-tasks"></a>Planen von parallelen Tasks
 Angenommen, ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist mit MAXDOP 8 konfiguriert, und die CPU-Affinität ist für 24 CPUs (Scheduler) zwischen den NUMA-Knoten 0 und 1 konfiguriert. Die Scheduler 0 bis 11 gehören zum NUMA-Knoten 0, die Scheduler 12 bis 23 zum NUMA-Knoten 1. Eine Anwendung sendet die folgende Abfrage (Anforderung) an die [!INCLUDE[ssde_md](../includes/ssde_md.md)]:

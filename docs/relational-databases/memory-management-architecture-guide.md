@@ -11,16 +11,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
+- PMO
+- Partitioned Memory Objects
+- cmemthread
+- AWE
+- SPA, Single Page Allocator
+- MPA, Multi Page Allocator
+- memory allocation, SQL Server
+- memory pressure, SQL Server
+- stack size, SQL Server
+- buffer manager, SQL Server
+- buffer pool, SQL Server
+- resource monitor, SQL Server
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243694"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116224"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 
@@ -62,7 +74,7 @@ Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie f
 |Betriebssystemberechtigung „Lock Pages in Memory“ (ermöglicht das Sperren des physischen Speichers, sodass das Betriebssystem keine Seiten des gesperrten Arbeitsspeichers auslagern kann.) <sup>6</sup> |Standard-, Enterprise- und Developer-Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess muss den AWE-Mechanismus verwenden. Über den AWE-Mechanismus zugeordneter Speicher kann nicht ausgelagert werden. <br> Wird dieses Privileg erteilt, ohne dass AWE aktiviert ist, hat dies keine Auswirkungen auf den Server. | Nur bei Bedarf verwendet, nämlich wenn es Anzeigen gibt, dass der sqlservr-Prozess ausgelagert wird. In diesem Fall wird im Fehlerprotokoll Fehler 17890 gemeldet, ähnlich wie im folgenden Beispiel: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> Ab [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]sind 32-Bit-Versionen nicht verfügbar.  
-<sup>2</sup> „/3gb“ ist ein Startparameter des Betriebssystems. Weitere Informationen finden Sie in der MSDN Library.  
+<sup>2</sup> „/3gb“ ist ein Startparameter des Betriebssystems.  
 <sup>3</sup> WOW64 (Windows on Windows 64) ist ein Modus, in dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32-Bit) unter einem 64-Bit-Betriebssystem ausgeführt wird.  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition unterstützt bis zu 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition unterstützt Betriebssystemmaximum.  
 <sup>5</sup> Beachten Sie, dass die Option „sp_configure awe enabled“ in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](64-Bit) vorhanden ist, jedoch ignoriert wird.    
@@ -94,7 +106,7 @@ In der folgenden Tabelle ist aufgeführt, ob ein bestimmter Typ von Speicherbele
 |Einzelseitenbelegungen|Ja|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
 |Mehrseitenbelegungen|Nein|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
 |CLR-Belegungen|Nein|Ja|
-|Threadstapel-Arbeitsspeicher|Nein|Nein |
+|Threadstapel-Arbeitsspeicher|Nein|Nein|
 |Direkte Belegungen von Windows|Nein|Nein|
 
 Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird möglicherweise mehr Arbeitsspeicher als der in der Einstellung „Max. Serverarbeitsspeicher“ angegebene Wert zugewiesen. Dieses Verhalten kann auftreten, wenn der Wert für **_Serverspeicher gesamt (KB)_** bereits die Einstellung **_Zielserverspeicher (KB)_** erreicht hat, die als maximaler Serverarbeitsspeicher angegeben ist. Wenn nicht ausreichend zusammenhängender freier Arbeitsspeicher vorhanden ist, um die Anforderung von Mehrseiten-Speicheranforderungen (mehr als 8 KB) zu bedienen, da der Arbeitsspeicher fragmentiert ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Zusage über den Grenzwert hinaus vornehmen, statt die Arbeitsspeicheranforderung zurückzuweisen. 
@@ -314,11 +326,24 @@ Der Schutz vor zerrissenen Seiten, der in [!INCLUDE[ssNoVersion](../includes/ssn
 Der Prüfsummenschutz, der in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] eingeführt wird, ermöglicht eine verbesserte Datenintegritätsprüfung. Eine Prüfsumme wird für die Daten berechnet, die in den einzelnen Seiten geschrieben werden, und im Seitenkopf gespeichert. Wenn eine Seite, deren Prüfsumme gespeichert wird, vom Datenträger gelesen wird, wird von der Datenbank-Engine die Prüfsumme für die Daten in der Seite neu berechnet. Wenn die neue Prüfsumme von der gespeicherten Prüfsumme abweicht, wird der Fehler 824 ausgegeben. Mithilfe des Prüfsummenschutzes können mehr Fehler ermittelt werden als mithilfe des Schutzes vor zerrissenen Seiten, da sich jedes in der Seite enthaltene Byte auf dieses Verfahren auswirkt. Der Prüfsummenschutz ist jedoch relativ ressourcenintensiv. Wenn die Prüfsumme aktiviert ist, werden durch Stromausfälle oder fehlerhafte Hard- oder Firmware verursachte Fehler erkannt, sobald die Seite vom Puffer-Manager vom Datenträger gelesen wird. Weitere Informationen zum Festlegen der Prüfsumme finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
 
 > [!IMPORTANT]
-> Wenn eine Benutzer- oder Systemdatenbank auf [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] oder eine höhere Version aktualisiert wird, bleibt der [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify)-Wert (NONE oder TORN_PAGE_DETECTION) erhalten. Sie sollten CHECKSUM verwenden.
+> Wenn eine Benutzer- oder Systemdatenbank auf [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] oder eine höhere Version aktualisiert wird, bleibt der [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify)-Wert (NONE oder TORN_PAGE_DETECTION) erhalten. Sie sollten unbedingt CHECKSUM verwenden.
 > TORN_PAGE_DETECTION verwendet zwar weniger Ressourcen, bietet jedoch einen minimalen Teil des Schutzes von CHECKSUM.
 
 ## <a name="understanding-non-uniform-memory-access"></a>Grundlegendes zu NUMA (Non-Uniform Memory Access)
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  ist NUMA-fähig (Non-Uniform Memory Access) und liefert hervorragende Leistungen auf NUMA-Hardware, ohne dass eine besondere Konfiguration notwendig wäre. Mit immer schnelleren Prozessoren und einer wachsenden Anzahl von Prozessoren wird es zunehmend schwieriger, die Speicherlatenzzeit zu verringern, die für die Verwendung dieser zusätzlichen Verarbeitungsleistung erforderlich ist. Für die Umgehung dieser Schwierigkeit stellen Hardwarehersteller große L3-Caches bereit; dies ist jedoch nur eine eingeschränkte Lösung. Die NUMA-Architektur bietet eine skalierbare Lösung für dieses Problem. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann die Vorteile NUMA-basierter Computer nutzen, ohne dass Anwendungsänderungen erforderlich sind. Weitere Informationen finden Sie unter [Vorgehensweise: Soft-NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md).
+
+## <a name="dynamic-partition-of-memory-objects"></a>Dynamische Partitionierung von Speicherobjekten
+Heapzuordnungen, die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als Speicherobjekte bezeichnet werden, ermöglichen [!INCLUDE[ssde_md](../includes/ssde_md.md)], Arbeitsspeicher vom Heap zuzuordnen. Diese können mithilfe der [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)-DMV nachverfolgt werden. CMemThread ist ein threadsicherer Speicherobjekttyp, der gleichzeitige Speicherzuordnungen von mehreren Threads zulässt. Zur ordnungsgemäßen Nachverfolgung verwenden CMemThread-Objekte Synchronisierungskonstrukte (Mutex), um sicherzustellen, dass nur ein einzelner Thread wichtige Informationen gleichzeitig aktualisiert. 
+
+> [!NOTE]
+> Der CMemThread-Objekttyp wird in der [!INCLUDE[ssde_md](../includes/ssde_md.md)]-Codebasis für viele verschiedene Zuordnungen verwendet und kann global, nach Knoten oder nach CPU partitioniert werden.   
+
+Die Verwendung von Mutexen kann jedoch zu Konflikten führen, wenn viele Threads hochgradig parallel aus demselben Speicherobjekt zuordnen. Daher weist [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] das Konzept von partitionierten Speicherobjekten (PMO) auf, und jede Partition wird durch ein einzelnes CMemThread-Objekt dargestellt. Die Partitionierung eines Speicherobjekts ist statisch definiert und kann nach der Erstellung nicht mehr geändert werden. Da Speicherzuordnungsmuster aufgrund von Aspekten wie Hardware und Speicherauslastung stark variieren, ist es nicht möglich, das perfekte Partitionierungsmuster vorab festzulegen. In den meisten Fällen genügt die Verwendung einer einzelnen Partition, aber in einigen Szenarien kann dies zu Konflikten führen, die nur mit einem stark partitionierten Speicherobjekt verhindert werden können. Es ist nicht wünschenswert, jedes Speicherobjekt zu partitionieren, da eine größere Anzahl von Partitionen möglicherweise andere Ineffizienzen verursachen und die Speicherfragmentierung erhöhen kann.
+
+> [!NOTE]
+> Vor [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] konnte das Ablaufverfolgungsflag 8048 verwendet werden, um zu erzwingen, dass ein knotenbasiertes PMO zu einem CPU-basierten PMO wird. Ab [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] ist dieses Verhalten dynamisch und wird durch die Engine gesteuert.
+
+Ab [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] kann [!INCLUDE[ssde_md](../includes/ssde_md.md)] Konflikte für ein bestimmtes CMemThread-Objekt dynamisch erkennen und das Objekt auf eine pro-Knoten- oder pro-CPU-basierten Implementierung heraufstufen. Nach der Heraufstufung bleibt das PMO höher gestuft, bis der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess neu gestartet wird. CMemThread-Konflikte können durch das Vorhandensein von hohen CMEMTHREAD-Wartezeiten in der [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)-DMV und durch Beobachtung der [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)-DMV-Spalten *contention_factor*, *partition_type*, *exclusive_allocations_count* und *waiting_tasks_count* erkannt werden.
 
 ## <a name="see-also"></a>Weitere Informationen
 [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
