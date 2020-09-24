@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72f2f72300982473696132d327881a2f2b867dd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce8bbe0982d193a871f89023f803e5719b74771b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426832"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024372"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* Gibt den Namen für die datenbankweit gültigen Anmeldeinformationen an, die erstellt werden sollen. *credential_name* darf nicht mit dem Nummernzeichen (#) beginnen. Systemanmeldeinformationen beginnen mit zwei Nummernzeichen (##).
 
-IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Der Identitätsname muss `SHARED ACCESS SIGNATURE` entsprechen, um eine Datei aus Azure Blob Storage mithilfe eines freigegebenen Schlüssels zu importieren. Jeder gültige Wert kann für die Identität verwendet werden, um Daten in SQL Data Warehouse zu laden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Der Identitätsname muss `SHARED ACCESS SIGNATURE` entsprechen, um eine Datei aus Azure Blob Storage mithilfe eines freigegebenen Schlüssels zu importieren. Jeder gültige Wert kann für die Identität verwendet werden, um Daten in SQL Data Warehouse zu laden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Verwenden Sie nicht den Domänennamen im IDENTITY-Argument, wenn Sie Kerberos (Windows Active Directory oder MIT KDC) verwenden. Sie sollten lediglich den Kontonamen verwenden.
 
 > [!NOTE]
 > WITH IDENTITY ist nicht erforderlich, wenn der Container in Azure Blob Storage für anonymen Zugriff aktiviert ist. Ein Beispiel für das Abfragen von Azure Blob Storage finden Sie unter [Importieren in eine Tabelle aus einer Datei, die in Azure Blob Storage](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage) gespeichert ist.
@@ -121,7 +121,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>C. Erstellen von datenbankweit gültigen Anmeldeinformationen für PolyBase-Konnektivität mit Azure Data Lake Store
 
-Im folgenden Beispiel werden datenbankweit gültige Anmeldeinformationen erstellt, durch die sich eine [externe Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md) erstellen lässt. Diese kann von PolyBase in Azure SQL Data Warehouse verwendet werden.
+Im folgenden Beispiel werden datenbankweit gültige Anmeldeinformationen erstellt, die zum Erstellen einer [externen Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md) verwendet werden können, die wiederum von PolyBase in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] verwendet werden kann.
 
 Azure Data Lake Store verwendet eine Azure Active Directory-Anwendung für Dienst-zu-Dienst-Authentifizierungen.
 Bevor Sie versuchen, datenbankweit gültige Anmeldeinformationen zu erstellen, ist es erforderlich, dass Sie [eine AAD-Anwendung](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) erstellen und sich die Werte für „client_id“, „OAuth_2.0_Token_EndPoint“ und „key“ notieren.

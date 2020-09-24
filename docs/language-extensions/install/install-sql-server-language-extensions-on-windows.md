@@ -4,17 +4,17 @@ titleSuffix: ''
 description: Erfahren Sie, wie Sie das Feature „Spracherweiterungen“ durch Ausführen des SQL Server-Setup-Assistenten auf einer SQL Server-Instanz unter Windows installieren.
 author: dphansen
 ms.author: davidph
-ms.date: 11/06/2019
+ms.date: 09/17/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62a4b97216f990d207070e76eaf38d12154757bf
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 41f0e9f1c4040e9d26432d8635667f045694e314
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173559"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989857"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Installieren von SQL Server-Spracherweiterungen unter Windows
 
@@ -150,8 +150,11 @@ Wenn Sie nicht die standardmäßige Zulu Open JRE installiert haben, die in SQL 
 2. Vergeben Sie AppContainer-Berechtigungen.
 
     ```cmd
-    icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+    icacls “<PATH to JRE>” /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
+    
+    > [!NOTE]
+    > Der obige Befehl erteilt Berechtigungen für die Computer-SID **S-1-15-2-1**, was **ALLEN ANWENDUNGSPAKETEN** auf einer englischen Version von Windows entspricht. Alternativ können Sie `icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` in einer englischen Version von Windows verwenden.
     
 ## <a name="enable-script-execution"></a>Aktivieren der Skriptausführung
 

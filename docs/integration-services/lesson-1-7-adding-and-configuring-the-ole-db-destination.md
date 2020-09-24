@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ebfca5c6b25f16bb4f86ca692b09bbc5d0beaaa9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c30d9c27550913f5c83334ff33ff3a1cc08e1bc
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462063"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990409"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lektion 1.7: Hinzufügen und Konfigurieren des OLE DB-Ziels
 
@@ -43,20 +43,22 @@ In dieser Aufgabe fügen Sie ein OLE DB-Ziel hinzu und konfigurieren es, sodass 
 6.  Stellen Sie im Dialogfeld **Ziel-Editor für OLE DB** sicher, dass **localhost.AdventureWorksDW2012** im Feld **OLE DB-Verbindungs-Manager** ausgewählt ist.  
   
 7.  Geben Sie in das Feld **Name of the table or the view** (Name der Tabelle oder Sicht) **[dbo].[FactCurrencyRate]** ein, oder wählen Sie diese Zeichenfolge aus.  
+ 
+8.  Wenn bereits eine Tabelle mit dem Namen **NewFactCurrencyRate** vorhanden ist, löschen Sie diese jetzt. Im nächsten Schritt erstellen Sie die Tabelle.
+ 
+9.  Klicken Sie auf die Schaltfläche **Neu**, um eine neue Tabelle zu erstellen.  Ändern Sie den Namen der Tabelle im Skript von **Sample OLE DB Destination** (OLE DB-Beispielziel) in **NewFactCurrencyRate**.  Klicken Sie auf **OK**.  
+ 
+10. Wenn Sie auf **OK** klicken, wird das Dialogfeld geschlossen, und das Feld **Name of the table or the view** (Name der Tabelle oder Ansicht) wird automatisch in **NewFactCurrencyRate** geändert.  
   
-8.  Klicken Sie auf die Schaltfläche **Neu**, um eine neue Tabelle zu erstellen.  Ändern Sie den Namen der Tabelle im Skript von **Sample OLE DB Destination** (OLE DB-Beispielziel) in **NewFactCurrencyRate**.  Klicken Sie auf **OK**.  
+11. Klicken Sie auf **Zuordnungen**.  
   
-9. Wenn Sie auf **OK** klicken, wird das Dialogfeld geschlossen, und das Feld **Name of the table or the view** (Name der Tabelle oder Ansicht) wird automatisch in **NewFactCurrencyRate** geändert.  
+12. Überprüfen Sie, ob die Eingabespalten **AverageRate**, **CurrencyKey**, **EndOfDayRate**und **DateKey** den Zielspalten ordnungsgemäß zugeordnet sind. Wenn gleichnamige Spalten einander zugeordnet sind, ist die Zuordnung richtig.  
   
-10. Klicken Sie auf **Zuordnungen**.  
+13. Klicken Sie auf **OK**.  
   
-11. Überprüfen Sie, ob die Eingabespalten **AverageRate**, **CurrencyKey**, **EndOfDayRate**und **DateKey** den Zielspalten ordnungsgemäß zugeordnet sind. Wenn gleichnamige Spalten einander zugeordnet sind, ist die Zuordnung richtig.  
+14. Klicken Sie erst mit der rechten Maustaste auf das Ziel **Sample OLE DB Destination** (OLE DB-Beispielziel) und anschließend mit der linken auf **Eigenschaften**.  
   
-12. Klicken Sie auf **OK**.  
-  
-13. Klicken Sie erst mit der rechten Maustaste auf das Ziel **Sample OLE DB Destination** (OLE DB-Beispielziel) und anschließend mit der linken auf **Eigenschaften**.  
-  
-14. Überprüfen Sie im Fenster **Eigenschaften**, ob die Eigenschaft **LocaleID** auf **Englisch (USA)** und die Eigenschaft **DefaultCodePage** auf **1252** festgelegt ist.  
+15. Überprüfen Sie im Fenster **Eigenschaften**, ob die Eigenschaft **LocaleID** auf **Englisch (USA)** und die Eigenschaft **DefaultCodePage** auf **1252** festgelegt ist.  
   
 ## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe
 [Schritt 8: Vereinfachen des Layouts des Pakets aus Lektion 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

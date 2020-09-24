@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 08/12/2020
-ms.openlocfilehash: 39deeb94ffa5fb3292f3402c836ec55eb826ebd3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.date: 09/22/2020
+ms.openlocfilehash: 1eaeb177fbd4cdc16190cbbc40efc76a3b468ac5
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766189"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989983"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
-**[Neuestes Release herunterladen und installieren](./download-azure-data-studio.md?view=sql-server-ver15)**
+**[Neuestes Release herunterladen und installieren](./download-azure-data-studio.md)**
+
+## <a name="september-2020"></a>September 2020
+
+22. September 2020 &nbsp; / &nbsp; Version: 1.22.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Neue Notebookfeatures | <br/> &bull; &nbsp; Unterstützung für brandneue Bearbeitungsfeatures für Textzellen, die auf Rich-Text-Formatierung und einer nahtlosen Umwandlung in Markdown basieren. Diese werden auch als What-You-See-Is-What-You-Get-Symbolleiste bezeichnet. <br/> &bull; &nbsp; Unterstützung für den Kusto-Kernel <br/> &bull; &nbsp; Unterstützung für das Anheften von Notebooks <br/> &bull; &nbsp; Unterstützung für eine neue Version von Jupyter Book-Instanzen <br/> &bull; &nbsp; Verbesserte Jupyter-Tastenkombinationen <br/> &bull; &nbsp; Verbesserungen für das Laden von perf |
+| SQL Database Projects-Erweiterung | Die Erweiterung „SQL Database Projects“ (SQL-Datenbank-Projekte) führt die projektbasierte Datenbankentwicklung in Azure Data Studio ein. In diesem Vorschaurelease können SQL-Projekte erstellt und über Azure Data Studio veröffentlicht werden. |
+| Kusto-Erweiterung (KQL) | Macht native Kusto-Features zum Durchsuchen von Daten und zur Analyse einer riesigen Menge von Echtzeitstreamingdaten, die in Azure Data Explorer gespeichert sind, in Azure Data Studio verfügbar. Dieses Vorschaurelease unterstützt das Verbinden und Durchsuchen von Azure Data Explorer-Clustern, das Schreiben von KQL-Abfragen sowie das Erstellen von Notebooks mit dem Kusto-Kernel. |
+| Azure Arc-Erweiterung | Benutzer können die Public Preview von Azure Arc über Azure Data Studio ausprobieren. Dies schließt Folgendes ein: <br/> &bull; &nbsp; Bereitstellen eines Datencontrollers <br/> &bull; &nbsp; Bereitstellen von Postgres <br/> &bull; &nbsp; Bereitstellen von Managed Instance für Azure Arc <br/> &bull; &nbsp; Verbinden mit dem Datencontroller <br/> &bull; &nbsp; Zugreifen auf Dashboards von Datendiensten <br/> &bull; &nbsp; Jupyter Book für Azure Arc |
+| Bereitstellungsoptionen | <br/> &bull; &nbsp; Azure SQL Database Edge <br/> (Edge erfordert eine Azure SQL Edge-Bereitstellungserweiterung) |
+| Allgemeine Verfügbarkeit der Erweiterung „SQL Server Import“ | Ankündigung der allgemeinen Verfügbarkeit der Erweiterung „SQL Server Import“, Features befinden sich nicht mehr in der Vorschau. Diese Erweiterung vereinfacht das Importieren von CSV-/TXT-Dateien. Weitere Informationen zur Erweiterung finden Sie [in diesem Artikel](sql-server-import-extension.md). |
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2020+Release%22+is%3Aclosed). |
 
 ## <a name="august-2020"></a>August 2020
 
@@ -29,7 +45,7 @@ ms.locfileid: "88766189"
 | Change | Details |
 | :----- | :------ |
 | Neue Notebookfeatures | &bull; &nbsp; Zellenspeicherorte verschieben <br/> &bull; &nbsp; Zellen in Textzellen oder Codezellen konvertieren
-| Auswahl von Jupyter Books | Benutzer können jetzt Jupyter Books aus GitHub-Releases auswählen und nahtlos in Azure Data Studio öffnen. |
+| Auswahl von Jupyter Books | Benutzer können jetzt Jupyter Book-Instanzen aus GitHub-Releases auswählen und nahtlos in Azure Data Studio öffnen. |
 | Suche zum Notebooks-Viewlet hinzugefügt | Benutzer können ganz einfach in ihren Notebooks und Jupyter Books nach Inhalten suchen. |
 | Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
@@ -76,7 +92,7 @@ ms.locfileid: "88766189"
 | :----- | :------ |
 | Hinzufügen von Azure Data Studio zur Azure-Portal-Integration | Benutzer können das Azure-Portal nun direkt über eine Azure SQL-Datenbank-Verbindung, über Azure Postgres und mehr aufrufen. |
 | Neue Notebookfeatures | &bull; &nbsp; Neue Notebook-Symbolleiste <br/> &bull; &nbsp; Neue Symbolleiste „Edit Cell“ (Zelle bearbeiten) <br/> &bull; &nbsp; Updates für die Benutzeroberfläche des Assistenten für Python-Abhängigkeiten <br/> &bull; &nbsp; Notebookübergreifende Verbesserung der Abstände |
-| Ankündigung API-Erweiterung für die SQL-Bewertung | Diese Erweiterung fügt SQL Server-Bewertungen im Einklang mit Best Practices zu ADS hinzu. Sie stellt die zuvor nur für die Verwendung im PowerShell-Modul SqlServer und in SMO verfügbare API für die SQL-Bewertung bereit, damit Sie Ihre SQL Server-Instanzen bewerten und vom SQL Server-Team Empfehlungen für sie erhalten können. Mehr über die API für die SQL-Bewertung und deren Funktionen erfahren Sie [in diesem Artikel](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15). |
+| Ankündigung API-Erweiterung für die SQL-Bewertung | Diese Erweiterung fügt SQL Server-Bewertungen im Einklang mit Best Practices zu ADS hinzu. Sie stellt die zuvor nur für die Verwendung im PowerShell-Modul SqlServer und in SMO verfügbare API für die SQL-Bewertung bereit, damit Sie Ihre SQL Server-Instanzen bewerten und vom SQL Server-Team Empfehlungen für sie erhalten können. Mehr über die API für die SQL-Bewertung und deren Funktionen erfahren Sie [in diesem Artikel](../tools/sql-assessment-api/sql-assessment-api-overview.md). |
 | [Verbesserungen an der Machine-Learning-Erweiterung](https://go.microsoft.com/fwlink/?linkid=2129918) | Unterstützt jetzt Azure SQL Managed Instance |
 | Verbesserungen an der Datenvirtualisierungserweiterung | Unterstützt jetzt MongoDB und Teradata |
 | Fehlerbehebungen für die Postgres-Erweiterung | Behebung von Problemen mit Azure MFA |
@@ -417,10 +433,10 @@ ms.locfileid: "88766189"
 | :----- | :------ |
 | Azure Data Studio wurde eine [PostgreSQL-Erweiterung](postgres-extension.md) hinzugefügt. | Unterstützte Features: <br/>&bull; &nbsp; Dialogfeld „Verbindung“ <br/>&bull; &nbsp; Objekt-Explorer <br/>&bull; &nbsp; Abfrage-Editor <br/>&bull; &nbsp; Diagramme <br/>&bull; &nbsp; Dashboards <br/>&bull; &nbsp; Codeausschnitte <br/>&bull; &nbsp; Bearbeiten von Daten <br/>&bull; &nbsp; Notebooks |
 | SQL-Notebooks wurden hinzugefügt. | Der SQL-Kernel wird nun für den integrierten Notebook-Viewer unterstützt: <br/>&bull; &nbsp; T-SQL wird unterstützt. <br/>&bull; &nbsp; PGSQL wird unterstützt. |
-| Eine PowerShell-Erweiterung wurde hinzugefügt.  | Mit dieser Änderung wird die [PowerShell-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) zur Verfügung gestellt, die bisher nur für VS Code verfügbar war.  |
+| Eine PowerShell-Erweiterung wurde hinzugefügt. | Mit dieser Änderung wird die [PowerShell-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) zur Verfügung gestellt, die bisher nur für VS Code verfügbar war.  |
 | Die DACPAC-Erweiterung für SQL Server wurde hinzugefügt.  | Der DAC-Assistent wurde aus der Erweiterung SQL Server-Import entfernt und in eine neue Erweiterung integriert.  |
 | Die Communityerweiterung „QueryPlan.show“ wurde hinzugefügt. | Die Integration zur Visualisierung von Abfrageplänen wird nun unterstützt.  |
-| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | &bull; &nbsp; Jupyter Notebook wird nun einschließlich der Kernel für Python 3 und Spark im Azure Data Studio-Haupttool unterstützt. <br/>&bull; &nbsp; Fehler im Assistenten für externe Daten wurden behoben.  |
+| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | &bull; &nbsp; Jupyter Notebook wird nun einschließlich der Kernel für Python 3 und Spark im Azure Data Studio-Haupttool unterstützt. <br/>&bull; &nbsp; Fehler im Assistenten für externe Daten wurden behoben. |
 | Fehler und Issues wurden behoben. | Weitere Informationen finden Sie in der [Liste der Fehler und Issues auf GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -446,11 +462,11 @@ ms.locfileid: "88766189"
 
 | Change | Details |
 | :----- | :------ |
-| Das Erweiterungspaket **Admin pack for SQL Server** (Administratorpaket für SQL Server) wurde hinzugefügt. | Dieses Paket vereinfacht die Installation von SQL Server-Administratorerweiterungen. Dies schließt Folgendes ein:<br/>&bull; &nbsp; [SQL Server-Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server-Import](sql-server-import-extension.md?view=sql-server-2017) |
+| Das Erweiterungspaket **Admin pack for SQL Server** (Administratorpaket für SQL Server) wurde hinzugefügt. | Dieses Paket vereinfacht die Installation von SQL Server-Administratorerweiterungen. Dies schließt Folgendes ein:<br/>&bull; &nbsp; [SQL Server-Agent](sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server-Import](sql-server-import-extension.md) |
 | Die Ereignisunterstützung in der Profilerweiterung wurde um eine Filterfunktion ergänzt. | &nbsp; |
 | Das Feature „Save as XML“ (Als XML speichern) wurde hinzugefügt. Damit können T-SQL-Ergebnisse im XML-Format gespeichert werden. | &nbsp; |
 | Verbesserungen am DAC-Assistenten wurden vorgenommen. | &bull; &nbsp; Die Schaltfläche „Skript generieren“ wurde hinzugefügt.<br/>&bull; &nbsp; Eine Ansicht wurde hinzugefügt, in der Warnungen vor möglichem Datenverlust während der Bereitstellung angezeigt werden. |
-| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [Datenvirtualisierungserweiterung](data-virtualization-extension.md?view=sql-server-ver15). |
+| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [Datenvirtualisierungserweiterung](data-virtualization-extension.md). |
 | Das Ergebnisstreaming wurde für zeitintensive Abfragen standardmäßig aktiviert. | &nbsp; |
 | Fehler und Issues wurden behoben. | Weitere Informationen finden Sie in der [Liste der Fehler und Issues auf GitHub](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1). |
 | &nbsp; | &nbsp; |
@@ -476,9 +492,9 @@ ms.locfileid: "88766189"
 | :----- | :------ |
 | Ein neues Benutzerinstallationsprogramm für Windows wurde hinzugefügt. | Für das neue Benutzerinstallationsprogramm sind anders als beim vorhandenen Systeminstallationsprogramm keine Administratorberechtigungen erforderlich. Dadurch können auch Nichtadministratoren leichter Upgrades durchführen. |
 | Die Azure Active Directory-Authentifizierung wird nun unterstützt. | &nbsp; |
-| Ankündigung von Idera SQL DM Performance Insights (Vorschauversion). | &nbsp; |
+| Ankündigung von Idera SQL DM Performance Insights (Vorschau) | &nbsp; |
 | Der DAC-Assistent wird in der Erweiterung SQL Server-Import unterstützt. | &nbsp; |
-| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [Datenvirtualisierungserweiterung](data-virtualization-extension.md?view=sql-server-ver15). |
+| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [Datenvirtualisierungserweiterung](data-virtualization-extension.md). |
 | Verbesserungen am SQL Server Profiler wurden vorgenommen. | &nbsp; |
 | Das Ergebnisstreaming für große Abfragen (Vorschauversion) ist verfügbar. | &nbsp; |
 | Die Communityerweiterungen „sp_executesql to SQL“ und „New Database“ sind verfügbar. | &nbsp; |
@@ -493,7 +509,7 @@ ms.locfileid: "88766189"
 
 | Change | Details |
 | :----- | :------ |
-| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [Datenvirtualisierungserweiterung](data-virtualization-extension.md?view=sql-server-ver15). |
+| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [Datenvirtualisierungserweiterung](data-virtualization-extension.md). |
 | Die neue Erweiterung Paste the Plan ist verfügbar. | &nbsp; |
 | Die neue Erweiterung High Color Queries einschließlich des SSMS-Editor-Designs ist verfügbar. | &nbsp; |
 | Fehlerbehebungen in den Erweiterungen SQL Server-Agent, SQL Server Profiler und SQL Server-Import wurden vorgenommen. | &nbsp; |
@@ -523,7 +539,7 @@ ms.locfileid: "88766189"
 | Einführung des Azure-Ressourcen-Explorers zum Durchsuchen von Azure SQL-Datenbank | &nbsp; |
 | Objekt-Explorer- und Abfrage-Editor-Verbindungen sind nun stabiler. | &nbsp; |
 | SQL Server Agent-Erweiterungen wurden verbessert. | &nbsp; |
-| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [Datenvirtualisierungserweiterung](data-virtualization-extension.md?view=sql-server-ver15). |
+| Die SQL Server 2019-Erweiterung (Vorschauversion) wurde aktualisiert. | Weitere Informationen finden Sie unter [Datenvirtualisierungserweiterung](data-virtualization-extension.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>Fehlerbehebungen im Oktober 2018

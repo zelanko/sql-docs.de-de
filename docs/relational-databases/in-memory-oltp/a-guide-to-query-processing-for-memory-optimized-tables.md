@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed9bec3042903f22c4a4c71ac4f07520062e60c9
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247076"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989903"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -273,35 +273,31 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Beachten Sie, dass der Hash Match-Operator keine Aggregationen unterstützt. Daher verwenden alle Aggregationen in den systemintern kompilierten gespeicherten Prozeduren den Stream Aggregate-Operator, selbst wenn der Plan für die gleiche Abfrage in interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)] den Hash Match-Operator verwendet.|  
   
 ## <a name="column-statistics-and-joins"></a>Spaltenstatistiken und Joins  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Statistiken für Werte in den Indexschlüsselspalten beibehalten, damit die Kosten für bestimmte Vorgänge wie Indexscans und Indexsuchen geschätzt werden können. (Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden auch Statistiken zu Nicht-Indexschlüsselspalten erstellt, wenn Sie sie explizit erstellen oder wenn sie vom Abfrageoptimierer in Reaktion auf eine Abfrage mit einem Prädikat erstellt werden.) Das wesentliche Maß für die Kostenschätzung ist die Anzahl der Zeilen, die von einem einzelnen Operator verarbeitet werden. Beachten Sie, dass für datenträgerbasierte Tabellen die Anzahl der Seiten, auf die von einem bestimmten Operator zugegriffen wird, für die Kostenschätzung maßgeblich ist. Da die Seitenanzahl bei speicheroptimierten Tabellen jedoch nicht von Bedeutung ist (da sie immer 0 ist), steht hier die Zeilenanzahl im Vordergrund. Die Schätzung beginnt mit den Index Seek- und Index Scan-Operatoren im Plan und schließt danach die anderen Operatoren wie den Join-Operator ein. Die geschätzte Anzahl der von einem Joinoperator zu verarbeitenden Zeilen basiert auf der Schätzung für den zugrunde liegenden Index-, Seek- und Scan-Operator. Beim interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen können Sie den tatsächlichen Ausführungsplan beobachten, um den Unterschied zwischen der geschätzten und der tatsächlichen Zeilenanzahl für die Operatoren im Plan herauszufinden.  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Statistiken für Werte in den Indexschlüsselspalten beibehalten, damit die Kosten für bestimmte Vorgänge wie Indexscans und Indexsuchen geschätzt werden können. (Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden auch Statistiken zu Nicht-Indexschlüsselspalten erstellt, wenn Sie sie explizit erstellen oder wenn sie vom Abfrageoptimierer in Reaktion auf eine Abfrage mit einem Prädikat erstellt werden.) Das wesentliche Maß für die Kostenschätzung ist die Anzahl der Zeilen, die von einem einzelnen Operator verarbeitet werden. Beachten Sie, dass für datenträgerbasierte Tabellen die Anzahl der Seiten, auf die von einem bestimmten Operator zugegriffen wird, für die Kostenschätzung maßgeblich ist. Da die Seitenanzahl bei speicheroptimierten Tabellen jedoch nicht von Bedeutung ist (da sie immer 0 ist), steht hier die Zeilenanzahl im Vordergrund. Die Schätzung beginnt mit den Index Seek- und Index Scan-Operatoren im Plan und schließt danach die anderen Operatoren wie den Join-Operator ein. Die geschätzte Anzahl der von einem Joinoperator zu verarbeitenden Zeilen basiert auf der Schätzung für den zugrunde liegenden Index-, Seek- und Scan-Operator. Beim interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen können Sie den tatsächlichen Ausführungsplan beobachten, um den Unterschied zwischen der geschätzten und der tatsächlichen Zeilenanzahl für die Operatoren im Plan herauszufinden.  
   
- Für das Beispiel in Abbildung 1 gilt:  
+Für das Beispiel in Abbildung 1 gilt:  
   
--   Der Scan des gruppierten Indexes für Customer ergibt 91 geschätzte und 91 tatsächliche Zeilen.  
+- Der Scan des gruppierten Indexes für Customer ergibt 91 geschätzte und 91 tatsächliche Zeilen.  
+- Der Scan des nicht gruppierten Indexes für CustomerID ergibt 830 geschätzte und tatsächliche Zeilen.  
+- Der Merge Join-Operator ergibt 815 geschätzte und 830 tatsächliche Zeilen.  
   
--   Der Scan des nicht gruppierten Indexes für CustomerID ergibt 830 geschätzte und tatsächliche Zeilen.  
+Die Schätzungen für die Indexscans sind genau. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behält die Zeilenanzahl für datenträgerbasierte Tabellen bei. Schätzungen für vollständige Tabellen- und Indexscans sind immer genau. Die Schätzung für den Join ist auch ziemlich genau.  
   
--   Der Merge Join-Operator ergibt 815 geschätzte und 830 tatsächliche Zeilen.  
+Wenn sich diese Schätzungen ändern, ändern sich auch die Kostenüberlegungen für verschiedene Planalternativen. Wenn beispielsweise eine der Seiten des Joins eine geschätzte Zeilenanzahl von 1 oder nur einige Zeilen hat, ist die Verwendung von Joins geschachtelter Schleifen kostengünstiger. Betrachten Sie die folgende Abfrage:  
   
- Die Schätzungen für die Indexscans sind genau. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behält die Zeilenanzahl für datenträgerbasierte Tabellen bei. Schätzungen für vollständige Tabellen- und Indexscans sind immer genau. Die Schätzung für den Join ist auch ziemlich genau.  
-  
- Wenn sich diese Schätzungen ändern, ändern sich auch die Kostenüberlegungen für verschiedene Planalternativen. Wenn beispielsweise eine der Seiten des Joins eine geschätzte Zeilenanzahl von 1 oder nur einige Zeilen hat, ist die Verwendung von Joins geschachtelter Schleifen kostengünstiger.  
-  
- Im Folgenden finden Sie den Plan für die Abfrage:  
-  
-```  
+```sql
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
- Nachdem alle Zeilen bis auf eine in der Customer-Tabelle gelöscht wurden:  
+Nach Löschung aller Zeilen bis auf eine in der `Customer`-Tabelle wird der folgende Abfrageplan erzeugt:  
   
- ![Spaltenstatistiken und Joins.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Spaltenstatistiken und Joins.")  
+![Spaltenstatistiken und Joins.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Spaltenstatistiken und Joins.")  
   
- Bei diesem Abfrageplan:  
+Bei diesem Abfrageplan:  
   
--   Die Hashübereinstimmung wurde durch einen physischen Joinoperator für geschachtelte Schleifen ersetzt.  
-  
--   Der vollständige Indexscan für IX_CustomerID wurde durch eine Indexsuche ersetzt. Dies führte zum Scannen von 5 Zeilen anstelle der für den vollständigen Indexscan erforderlichen 830 Zeilen.  
+- Die Hashübereinstimmung wurde durch einen physischen Joinoperator für geschachtelte Schleifen ersetzt.  
+- Der vollständige Indexscan für IX_CustomerID wurde durch eine Indexsuche ersetzt. Dies führte zum Scannen von 5 Zeilen anstelle der für den vollständigen Indexscan erforderlichen 830 Zeilen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

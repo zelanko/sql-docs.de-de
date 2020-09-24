@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353097"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989433"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Versionshinweise zu „SqlPackage.exe“
 
@@ -34,6 +34,41 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="186-sqlpackage"></a>18.6 sqlpackage
+
+|Plattform|Download|Veröffentlichungsdatum|Version|Entwickeln
+|:---|:---|:---|:---|:---|
+|Windows|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2143544)|18. September 2020|18.6|15.0.4897.1|
+|macOS .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2143659)|18. September 2020| 18.6|15.0.4897.1|
+|Linux .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2143497)|18. September 2020| 18.6|15.0.4897.1|
+|Windows .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2143496)|18. September 2020| 18.6|15.0.4897.1|
+
+### <a name="features"></a>Features
+| Funktion | Details |
+| :------ | :------ |
+| Plattform | Aktualisierung von sqlpackage für die .NET Core-Version auf .NET Core 3.1 |
+| Always Encrypted | Hinzufügung von Unterstützung des Imports und Exports von Secure Enclaves für SQL Server 2019 |
+| Bereitstellung | Hinzufügung von Unterstützung des Ignorierens von Change Data Capture-fähigen Tabellen beim Exportieren aus Azure SQL-Datenbank |
+| Bereitstellung | Hinzufügung von Unterstützung der Indexoption OPTIMIZE_FOR_SEQUENTIAL_KEY in Azure SQL-Datenbank |
+| Bereitstellung | Hinzufügung von Unterstützung von Identitätsspalten für Azure SQL Data Warehouse | 
+| Hilfe | Ausgabe der sqlpackage-Version im Hilfeparameter (/?) und Unterstützung des Parameters „/version“ | 
+
+### <a name="fixes"></a>Fehlerbehebungen
+| Funktion | Details |
+| :------ | :------ | 
+| Bereitstellung | Korrektur eines falschen Bereitstellungsskripts, das generiert wurde, wenn eine Aktion eines Benutzers, der kein Systemadministrator ist, die Bereitstellungsoption „verwaltete Azure SQL-Datenbank-Instanz“ als Ziel hat  | 
+| Bereitstellung | Behebung eines Fehlers beim Laden von Bereitstellungscontributors beim Ausführen von Skriptaktionen | 
+| Hilfe | Ausgabe der korrekten verstrichenen Zeit in sqlpackage, wenn der betreffende Vorgang länger als einen Tag dauert | 
+| Bereitstellung | Behebung eines Fehlers bei der DACPAC-Registrierung im Rahmen der Bereitstellung für .NET Core | 
+| Bereitstellung | Behebung eines Fehlers in sqlpackage bei der Verarbeitung des Parameters „/accessToken“ („/at“) durch .NET Core | 
+| Bereitstellung | Zulassen von ALTER TABLE-Anweisungen in gespeicherten Prozeduren als Anweisungen auf anderen Ebenen als der obersten | 
+| Bereitstellung | Problembehandlung durch Nichtberücksichtigung der Groß-/Kleinschreibung bei der Überprüfung von materialisierten Sichten in Azure SQL Data Warehouse | 
+
+### <a name="known-issues"></a>Bekannte Probleme
+| Funktion | Details |
+| :------ | :------ |
+| Bereitstellung | Das Azure SQL Data Warehouse-Feature „Arbeitsauslastungsverwaltung“ (Arbeitsauslastungsgruppen und Arbeitsauslastungsklassifizierer) wird noch nicht unterstützt. | 
 
 ## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
 
@@ -133,7 +168,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Plattform | sqlpackage .NET Core GA für macOS, Linux und Windows. | 
 | Sicherheit | SHA1-Codesignierung entfernt. |
 | Bereitstellung | Unterstützung für neue Azure-Datenbankeditionen hinzugefügt: GeneralPurpose, BusinessCritical, Hyperscale |
-| Bereitstellung | Unterstützung für verwaltete Instanzen bei AAD-Benutzern und -Gruppen hinzugefügt. |
+| Bereitstellung | Hinzufügung von Unterstützung von verwalteten Instanzen für Azure Active Directory-Benutzer und -Gruppen |
 | Bereitstellung | Unterstützung des /AccessToken-Parameters für sqlpackage in .NET Core hinzugefügt. |
 | &nbsp; | &nbsp; |
 

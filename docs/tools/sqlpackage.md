@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
 ms.date: 07/06/2020
-ms.openlocfilehash: 3d162630d029fcde31275ce4d09cfe05bdf78c36
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714248"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989443"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -68,6 +68,13 @@ Erstellen Sie ein SQL-Skript, das die Unterschiede der zwei DACPAC-Dateien gener
 ```
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
+
+Mit dem folgenden Befehl wird die sqlpackage-Version angezeigt:
+
+```
+sqlpackage.exe /Version
+ ```
+
 
 ## <a name="extract-parameters-and-properties"></a>Extrahieren von Parametern und Eigenschaften
 Durch eine SqlPackage.exe-Extract-Aktion wird ein Schema einer Livedatenbank aus SQL Server bzw. Azure SQL-Datenbank in einem DACPAC-Paket (DACPAC-Datei) erstellt. Standardmäßig sind in der DACPAC-Datei keine Daten enthalten. Verwenden Sie die [Exportaktion](#export-parameters-and-properties), wenn die Daten mit einbezogen werden sollen. 

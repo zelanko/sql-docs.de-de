@@ -5,22 +5,22 @@ description: Erfahren Sie, wie Sie Big Data-Cluster in SQL Server mit Hochverfü
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 17aaed99c8adb73b88a2d81482fcdefc7d8f68fd
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790269"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990018"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Bereitstellen von Big Data-Clustern in SQL Server mit Hochverfügbarkeit
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Da SQL Server-Big Data-Cluster bei Kubernetes als containerisierte Anwendungen eingesetzt werden und Funktionen wie zustandsbehaftete Mengen und persistente Speicherung verwenden, verfügt diese Infrastruktur über integrierte Integritätsüberwachungs-, Fehlererkennungs- und Failovermechanismen, die Clusterkomponenten nutzen, um die Dienstintegrität zu erhalten. Für eine höhere Zuverlässigkeit können Sie auch die SQL Server-Masterinstanz oder HDFS-Namensknoten und gemeinsame Spark-Dienste konfigurieren, um sie mit zusätzlichen Replikaten in einer hochverfügbaren Konfiguration bereitzustellen. Überwachung, Fehlererkennung und automatisches Failover werden von einem Verwaltungsdienst für Big Data-Cluster verwaltet, der auch als Steuerungsdienst bezeichnet wird. Dieser Dienst wird ohne Benutzereingriff bereitgestellt – vom Einrichten der Verfügbarkeitsgruppe, Konfigurieren von Endpunkten für die Datenbankspiegelung, Hinzufügen von Datenbanken zur Verfügbarkeitsgruppe bis hin zur Failover- und Upgradekoordination. 
+Da SQL Server-Big Data-Cluster bei Kubernetes als containerisierte Anwendungen eingesetzt werden und Funktionen wie zustandsbehaftete Mengen und persistente Speicherung verwenden, verfügt diese Infrastruktur über integrierte Integritätsüberwachungs-, Fehlererkennungs- und Failovermechanismen, die Clusterkomponenten nutzen, um die Dienstintegrität zu erhalten. Für eine höhere Zuverlässigkeit können Sie auch die SQL Server-Masterinstanz und/oder HDFS-Namensknoten und gemeinsame Spark-Dienste konfigurieren, um sie mit zusätzlichen Replikaten in einer hochverfügbaren Konfiguration bereitzustellen. Überwachung, Fehlererkennung und automatisches Failover werden von dem Verwaltungsdienst für Big Data-Cluster verwaltet, der auch als Steuerungsdienst bezeichnet wird. Dieser Dienst wird ohne Benutzereingriff bereitgestellt – vom Einrichten der Verfügbarkeitsgruppe, Konfigurieren von Endpunkten für die Datenbankspiegelung, Hinzufügen von Datenbanken zur Verfügbarkeitsgruppe bis hin zur Failover- und Upgradekoordination. 
 
 Die folgende Abbildung zeigt, wie eine Verfügbarkeitsgruppe in einem Big Data-Cluster in SQL Server bereitgestellt wird:
 
@@ -32,7 +32,7 @@ Dies sind einige der Möglichkeiten, die Ihnen Verfügbarkeitsgruppen bieten:
 - Alle Datenbanken werden automatisch zur Verfügbarkeitsgruppe hinzugefügt, einschließlich aller Benutzer- und Systemdatenbanken wie `master` und `msdb`. Diese Funktion bietet eine Einzelsystemansicht zu den Replikaten der Verfügbarkeitsgruppen. Weitere Modelldatenbanken, `model_replicatedmaster` und `model_msdb`, werden für das Seeding des replizierten Teils der Systemdatenbanken verwendet. Zusätzlich zu diesen Datenbanken sehen Sie die Datenbanken `containedag_master` und `containedag_msdb`, wenn Sie sich direkt mit der Instanz verbinden. Die `containedag`-Datenbanken repräsentieren die Elemente `master` und `msdb` innerhalb der Verfügbarkeitsgruppe.
 
   > [!IMPORTANT]
-  > Mit dem SQL Server 2019 CU1-Release werden nur Datenbanken, die als Ergebnis einer CREATE DATABASE-Anweisung erstellt wurden, automatisch zur Verfügbarkeitsgruppe hinzugefügt. Datenbanken, die auf der Instanz als Ergebnis anderer Workflows wie das Anfügen einer Datenbank erstellt wurden, werden noch nicht zur Verfügbarkeitsgruppe hinzugefügt, und der Big Data-Clusteradministrator müsste diese manuell hinzufügen. Weitere Informationen finden Sie im Abschnitt [Herstellen einer Verbindung mit einer SQL Server-Instanz](#instance-connect). Vor dem Release von SQL Server 2019 CU2 haben Datenbanken, die aufgrund einer RESTORE-Anweisung erstellt wurden, dasselbe Verhalten aufgewiesen und erforderten, dass die Datenbanken manuell zur enthaltenen Verfügbarkeitsgruppe hinzugefügt werden.
+  > Datenbanken, die auf der Instanz als Ergebnis von Workflows wie das Anfügen einer Datenbank erstellt wurden, werden nicht automatisch der Verfügbarkeitsgruppe hinzugefügt, und der Big Data-Clusteradministrator müsste diese manuell hinzufügen. Im Abschnitt [Verbinden mit einer SQL Server-Instanz](#instance-connect) finden Sie Anweisungen zum Aktivieren eines temporären Endpunkts der Masterdatenbank der SQL Server-Instanz. Vor dem Release von SQL Server 2019 CU2 haben Datenbanken, die aufgrund einer RESTORE-Anweisung erstellt wurden, dasselbe Verhalten aufgewiesen und erforderten, dass die Datenbanken manuell zur enthaltenen Verfügbarkeitsgruppe hinzugefügt werden.
   >
 - Polybase-Konfigurationsdatenbanken sind nicht in der Verfügbarkeitsgruppe enthalten, da sie für jedes Replikat spezifische Metadaten auf Instanzebene enthalten.
 - Ein externer Endpunkt wird automatisch für die Verbindung mit Datenbanken innerhalb der Verfügbarkeitsgruppe bereitgestellt. Der Endpunkt `master-svc-external` übernimmt die Rolle des Listeners der Verfügbarkeitsgruppe.
@@ -201,13 +201,17 @@ Das folgende Beispiel zeigt, wie Sie diesen Endpunkt verfügbar machen und dann 
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-Bekannte Probleme und Einschränkungen bei Verfügbarkeitsgruppen für SQL Server-Masterinstanzen in einem Big Data-Cluster:
+Bekannte Probleme und Einschränkungen bei eigenständigen Verfügbarkeitsgruppen für SQL Server-Masterinstanzen in einem Big Data-Cluster sind:
 
-- Datenbanken, die vor SQL Server 2019 CU2 aufgrund von anderen Workflows als `CREATE DATABASE` und `RESTORE DATABASE`, z. B. `CREATE DATABASE FROM SNAPSHOT`, erstellt wurden, werden nicht automatisch zur Verfügbarkeitsgruppe hinzugefügt. [Stellen Sie eine Verbindung mit der Instanz her](#instance-connect), und fügen Sie die Datenbank manuell zur Verfügbarkeitsgruppe hinzu.
+- Die Konfiguration für Hochverfügbarkeit muss erstellt werden, sobald ein Big Data-Cluster bereitgestellt wird. Nach der Bereitstellung kann die Konfiguration für Hochverfügbarkeit mit Verfügbarkeitsgruppen nicht mehr aktiviert werden. Zurzeit ist nur die Konfiguration für Replikate mit synchronem Commit aktiviert.
+
+> [!WARNING]
+> Wenn Sie den Synchronisierungsmodus auf einen asynchronen Commit für eines der Replikate im Quorumcommit aktualisieren, führt dies zu einer ungültigen Konfiguration für Hochverfügbarkeit. Das Ausführen in dieser Konfiguration ist mit einem Datenverlustrisiko verbunden, da bei Fehlerereignissen, die das primäre Replikat betreffen, kein automatisches Failover ausgelöst wird und der Benutzer beim Auslösen eines manuellen Failovers das Datenverlustrisiko akzeptieren muss.
+
 - Sie müssen sicherstellen, dass die [erforderlichen Zertifikate](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) sowohl in der SQL Server-Masterinstanz als auch in der enthaltenen Verfügbarkeitsgruppen-Masterinstanz wiederhergestellt werden, um eine TDE-fähige Datenbank erfolgreich über eine Sicherung wiederherzustellen, die auf einem anderen Server erstellt wurde. [Hier](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) finden Sie ein Beispiel zur Sicherung und Wiederherstellung der Zertifikate.
 - Für bestimmte Vorgänge wie das Ausführen von Serverkonfigurationseinstellungen mit `sp_configure` ist eine Verbindung mit der `master`-Datenbank der SQL Server-Instanz erforderlich, nicht mit der Verfügbarkeitsgruppe `master`. Der entsprechende primäre Endpunkt kann nicht verwendet werden. Befolgen Sie die [Anweisungen](#instance-connect), um einen Endpunkt verfügbar zu machen, eine Verbindung mit der SQL Server-Instanz herzustellen und `sp_configure` auszuführen. Sie können die SQL-Authentifizierung nur verwenden, wenn Sie den Endpunkt manuell verfügbar machen, um eine Verbindung mit der `master`-Datenbank der SQL Server-Instanz herzustellen.
-- Die Konfiguration für Hochverfügbarkeit muss erstellt werden, sobald ein Big Data-Cluster bereitgestellt wird. Nach der Bereitstellung kann die Konfiguration für Hochverfügbarkeit mit Verfügbarkeitsgruppen nicht mehr aktiviert werden.
-- Obwohl die enthaltene msdb-Datenbank in der Verfügbarkeitsgruppe enthalten ist und die SQL-Agent-Aufträge darin repliziert werden, werden die Aufträge nicht pro Zeitplan ausgelöst. [Stellen Sie eine Verbindung mit jeder der SQL Server-Instanzen her](#instance-connect), und erstellen Sie die Aufträge in der Instanz msdb, um dieses Problem zu umgehen. Ab SQL Server 2019 CU2 werden nur Aufträge unterstützt, die in jedem der Replikate in der Masterinstanz erstellt werden.
+- Obwohl die enthaltene msdb-Datenbank in der Verfügbarkeitsgruppe enthalten ist und die SQL-Agent-Aufträge darin repliziert werden, werden die Aufträge nur auf dem primären Replikat nach Zeitplan ausgeführt.
+- Datenbanken, die vor SQL Server 2019 CU2 aufgrund von anderen Workflows als `CREATE DATABASE` und `RESTORE DATABASE`, z. B. `CREATE DATABASE FROM SNAPSHOT`, erstellt wurden, werden nicht automatisch zur Verfügbarkeitsgruppe hinzugefügt. [Stellen Sie eine Verbindung mit der Instanz her](#instance-connect), und fügen Sie die Datenbank manuell zur Verfügbarkeitsgruppe hinzu.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32cfd85d1b07a315a196c2728c776297c4d85d9d
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: d9c08893006e0b2edf093477259ebed788d49097
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392172"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989993"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Versionshinweise zu Big Data-Clustern für SQL Server 2019
 
@@ -62,18 +62,19 @@ Eine umfassende Liste finden Sie unter [Welche Tools sind erforderlich?](deploy-
 
 In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] aufgelistet.
 
-| Release          | Big Data-Cluster-Version    | `azdata`-Version| Veröffentlichungsdatum |
-|------------------|----------------|-----------------|--------------|
-| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 4\.8.2020   |
-| [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
-| [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 31.3.2020   |
-| [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 12.03.2020   |
-| [CU2](#cu2)      | 15.0.4013.40   | 15.0.4013       | 13.2.2020   |
-| [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 01.07.2020   |
-| [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
+| Release <sup>1</sup> | Big Data-Cluster-Version  | `azdata` Version <sup>2</sup> | Veröffentlichungsdatum |
+|----------------------|--------------|-------------------------------|--------------|
+| [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 4\.8.2020   |
+| [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
+| [CU4](#cu4)          | 15.0.4033.1  | 15.0.4033                     | 31.3.2020   |
+| [CU3](#cu3)          | 15.0.4023.6  | 15.0.4023                     | 12.03.2020   |
+| [CU2](#cu2)          | 15.0.4013.40 | 15.0.4013                     | 13.2.2020   |
+| [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 01.07.2020   |
+| [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
-> [!NOTE]
-> Für CU7 gibt es keine Updates für Big Data-Cluster in SQL Server 2019.
+<sup>1</sup> Für CU7 gibt es keine Updates für Big Data-Cluster in SQL Server 2019.
+
+<sup>2</sup> Die `azdata`-Version entspricht der Version des Tools zum Zeitpunkt der CU-Veröffentlichung. `azdata` kann auch unabhängig von der Serververöffentlichung veröffentlicht werden. Daher erhalten Sie möglicherweise neuere Versionen, wenn Sie die neuesten Pakete installieren. Neuere Versionen sind mit zuvor veröffentlichten CUs kompatibel.
 
 ## <a name="how-to-install-updates"></a>Installieren von Updates
 

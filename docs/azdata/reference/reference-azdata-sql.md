@@ -4,39 +4,118 @@ titleSuffix: SQL Server big data clusters
 description: Referenzartikel zu azdata sql-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9965c6805cb8e12e6a5a2990a43bb7bf7c937fe1
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 01e6cd577892a1d6738afdc1fdf3b2518a23a5f3
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733700"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914408"
 ---
 # <a name="azdata-sql"></a>azdata sql
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Gilt für `azdata`e
 
-Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den **sql**-Befehlen im **azdata**-Tool. Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
-| Get-Help | BESCHREIBUNG |
+
+|Get-Help|BESCHREIBUNG|
 | --- | --- |
-[azdata sql shell](#azdata-sql-shell) | Die SQL-Datenbank-CLI ermöglicht es dem Benutzer, über T-SQL mit SQL Server zu interagieren.
-[azdata sql query](#azdata-sql-query) | Der query-Befehl ermöglicht das Ausführen einer T-SQL-Abfrage.
+[azdata sql shell](#azdata-sql-shell) | Die SQL-CLI ermöglicht dem Benutzer, über T-SQL mit SQL Server und Azure SQL zu interagieren.
+[azdata sql query](#azdata-sql-query) | Die SQL-CLI ermöglicht dem Benutzer, über T-SQL mit SQL Server und Azure SQL zu interagieren.
 ## <a name="azdata-sql-shell"></a>azdata sql shell
-Die SQL-Datenbank-CLI ermöglicht es dem Benutzer, über T-SQL mit SQL Server zu interagieren.
+Die SQL-CLI ermöglicht dem Benutzer, über T-SQL mit SQL Server und Azure SQL zu interagieren.
 ```bash
-azdata sql shell 
+azdata sql shell [--username -u] 
+                 [--database -d]  
+                 
+[--server -s]  
+                 
+[--integrated -e]  
+                 
+[--mssqlclirc]  
+                 
+[--row-limit]  
+                 
+[--less-chatty]  
+                 
+[--auto-vertical-output]  
+                 
+[--encrypt -n]  
+                 
+[--trust-server-certificate -c]  
+                 
+[--connect-timeout -l]  
+                 
+[--application-intent -k]  
+                 
+[--multi-subnet-failover -m]  
+                 
+[--packet-size]  
+                 
+[--dac-connection -a]  
+                 
+[--input-file -i]  
+                 
+[--output-file]  
+                 
+[--enable-sqltoolsservice-logging]  
+                 
+[--prompt]
 ```
 ### <a name="examples"></a>Beispiele
 Beispielbefehlszeile, um die interaktive Umgebung zu starten.
 ```bash
 azdata sql shell
 ```
+Beispielbefehlszeile mit bereitgestelltem Server, Benutzer und bereitgestellter Datenbank
+```bash
+azdata sql shell --server localhost --username sa --database master         
+```
+### <a name="optional-parameters"></a>Optionale Parameter
+#### `--username -u`
+Benutzername zum Herstellen einer Verbindung mit der Datenbank.
+#### `--database -d`
+Name der Datenbank, mit der eine Verbindung hergestellt werden soll.
+#### `--server -s`
+Name oder Adresse der SQL Server-Instanz.
+#### `--integrated -e`
+Integrierte Authentifizierung in Windows verwenden.
+#### `--mssqlclirc`
+Speicherort der mssqlclirc-Konfigurationsdatei.
+#### `--row-limit`
+Hiermit wird ein Schwellenwert für die Aufforderung für ein Zeilenlimit festgelegt. 0 verwenden, um die Aufforderung zu deaktivieren.
+#### `--less-chatty`
+Intro beim Start und Beenden überspringen.
+#### `--auto-vertical-output`
+Hiermit wird automatisch zum vertikalen Ausgabemodus gewechselt, wenn das Ergebnis breiter als die Breite des Terminals ist.
+#### `--encrypt -n`
+SQL Server verwendet SSL-Verschlüsselung für alle Daten, wenn auf dem Server ein Zertifikat installiert ist.
+#### `--trust-server-certificate -c`
+Der Kanal wird verschlüsselt, während das Durchlaufen der Zertifikatskette zum Überprüfen der Vertrauensstellung umgangen wird.
+#### `--connect-timeout -l`
+Wartezeit (in Sekunden) für eine Verbindung mit dem Server, bevor die Anforderung beendet wird.
+#### `--application-intent -k`
+Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einer Datenbank in einer SQL Server-Verfügbarkeitsgruppe.
+#### `--multi-subnet-failover -m`
+Wenn die Anwendung in unterschiedlichen Subnetzen eine Verbindung mit der AlwaysOn-Verfügbarkeitsgruppe herstellt, ermöglicht diese Einstellung eine schnellere Erkennung des derzeit aktiven Servers und Verbindung mit ihm.
+#### `--packet-size`
+Größe der zur Kommunikation mit SQL Server verwendeten Netzwerkpakete in Bytes.
+#### `--dac-connection -a`
+Herstellen der Verbindung mit SQL Server über eine dedizierte Administratorverbindung.
+#### `--input-file -i`
+Gibt die Datei an, die einen Batch mit SQL-Anweisungen für die Verarbeitung enthält.
+#### `--output-file`
+Gibt die Datei an, die die Ausgabe von einer Abfrage empfängt.
+#### `--enable-sqltoolsservice-logging`
+Aktiviert die Diagnoseprotokollierung für SqlToolsService.
+#### `--prompt`
+Eingabeaufforderungsformat (Standardwert: \d>
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
 Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
@@ -49,21 +128,35 @@ JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unt
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-sql-query"></a>azdata sql query
-Der query-Befehl ermöglicht das Ausführen einer T-SQL-Abfrage.
+Die SQL-CLI ermöglicht dem Benutzer, über T-SQL mit SQL Server und Azure SQL zu interagieren.
 ```bash
-azdata sql query --database -d 
-                 -q
+azdata sql query -q 
+                 [--database -d]  
+                 
+[--username -u]  
+                 
+[--server -s]  
+                 
+[--integrated -e]
 ```
 ### <a name="examples"></a>Beispiele
-Wählen Sie die Liste der Tabellennamen aus.  In der Datenbank wird standardmäßig „master“ verwendet.
+Beispielbefehlszeile zum Auswählen der Liste der Tabellennamen.
 ```bash
-azdata sql query "SELECT name FROM SYS.TABLES"
+azdata sql query --server localhost --username sa --database master -q "SELECT name FROM SYS.TABLES"
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
-#### `--database -d`
-Die Datenbank, in der die Abfrage ausgeführt werden soll.  Der Standard ist „master“.
 #### `-q`
 Die T-SQL-Abfrage, die ausgeführt werden soll.
+### <a name="optional-parameters"></a>Optionale Parameter
+#### `--database -d`
+Name der Datenbank, mit der eine Verbindung hergestellt werden soll.
+`master`
+#### `--username -u`
+Benutzername zum Herstellen einer Verbindung mit der Datenbank.
+#### `--server -s`
+Name oder Adresse der SQL Server-Instanz.
+#### `--integrated -e`
+Integrierte Authentifizierung in Windows verwenden.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
 Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
@@ -78,4 +171,7 @@ Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md). Weitere Informationen zur Installation des `azdata`-Tools finden Sie unter [Installieren von azdata zum Verwalten von Big Data-Clustern für SQL Server 2019](../install/deploy-install-azdata.md).
+Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). 
+
+Weitere Informationen zur Installation des Tools **azdata** finden Sie unter [Installieren von azdata](..\install\deploy-install-azdata.md).
+

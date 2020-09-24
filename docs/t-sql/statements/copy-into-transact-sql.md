@@ -1,7 +1,7 @@
 ---
 title: COPY INTO – Transact-SQL (Vorschau)
-titleSuffix: (SQL Data Warehouse) - SQL Server
-description: Verwenden Sie die COPY-Anweisung in Azure SQL Data Warehouse zum Laden von externen Speicherkonten.
+titleSuffix: (Azure Synapse Analytics) - SQL Server
+description: Verwenden Sie die COPY-Anweisung in Azure Synapse Analytics zum Laden aus externen Speicherkonten.
 ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
@@ -18,18 +18,18 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901574"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024559"
 ---
-# <a name="copy-transact-sql-preview"></a>COPY – Transact-SQL (Vorschau)
+# <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-In diesem Artikel erfahren Sie, wie Sie die COPY-Anweisung in Azure SQL Data Warehouse zum Laden von externen Speicherkonten verwenden. Die COPY-Anweisung bietet die größtmögliche Flexibilität für die Datenerfassung mit hohem Durchsatz in SQL Data Warehouse. Verwenden Sie COPY für die folgenden Funktionen:
+In diesem Artikel erfahren Sie, wie Sie die COPY-Anweisung in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] zum Laden aus externen Speicherkonten verwenden. Die COPY-Anweisung bietet die größtmögliche Flexibilität für die Datenerfassung mit hohem Durchsatz in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. Verwenden Sie COPY für die folgenden Funktionen:
 
 - Benutzer mit niedrigeren Berechtigungen können ohne strikte Berechtigungen zur STEUERUNG im Data Warehouse laden
 - Ausführen einer einzelnen T-SQL-Anweisung, ohne dass zusätzliche Datenbankobjekte erstellt werden müssen
@@ -40,9 +40,6 @@ In diesem Artikel erfahren Sie, wie Sie die COPY-Anweisung in Azure SQL Data War
 - Angeben eines benutzerdefinierten Zeilenabschlusszeichens für CSV-Dateien
 - Nutzen von SQL Server-Datumsformaten für CSV-Dateien
 - Angeben von Platzhaltern und mehreren Dateien im Speicherortpfad
-
-> [!NOTE]  
-> Die COPY-Anweisung befindet sich zurzeit in der Public Preview.
 
 In den folgenden Dokumentationen finden Sie umfassende Beispiele und Schnellstarts, die die COPY-Anweisung verwenden:
 
@@ -274,7 +271,7 @@ Der Benutzer, der den COPY-Befehl ausführt, muss über die folgenden Berechtigu
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 - [INSERT](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 
-Erfordert die Berechtigungen INSERT und ADMINISTER BULK OPERATIONS. In Azure SQL Data Warehouse sind INSERT- und ADMINISTER DATABASE BULK OPERATIONS-Berechtigungen erforderlich.
+Erfordert die Berechtigungen INSERT und ADMINISTER BULK OPERATIONS. In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] sind INSERT- und ADMINISTER DATABASE BULK OPERATIONS-Berechtigungen erforderlich.
 
 ## <a name="examples"></a>Beispiele  
 
@@ -398,7 +395,7 @@ WITH (
 ## <a name="faq"></a>Häufig gestellte Fragen
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Wie hoch ist die Leistung des COPY-Befehls im Vergleich zu PolyBase?
-Der COPY-Befehl hat abhängig von der Workload eine bessere Leistung. Für eine optimale Ladeleistung während der öffentlichen Vorschau empfiehlt es sich, Ihre Eingaben beim Laden von CSV in mehrere Dateien aufzuteilen. Teilen Sie Ihre Leistungsergebnisse während der Vorschau mit unserem Team! sqldwcopypreview@service.microsoft.com
+Der COPY-Befehl hat abhängig von der Workload eine bessere Leistung. Für eine optimale Ladeleistung empfiehlt es sich, Ihre Eingaben beim Laden von CSV in mehrere Dateien aufzuteilen.
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Welche Anweisungen gibt es zur Dateiaufteilung für den COPY-Befehl beim Laden von CSV-Dateien?
 Anweisungen zur Anzahl der Dateien sind in der Tabelle unten aufgeführt. Sobald die empfohlene Dateianzahl erreicht ist, erzielen Sie eine umso bessere Leistung, je größer die Dateien sind. Eine einfache Oberfläche zur Dateiaufteilung finden Sie in der folgenden [Dokumentation](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 
@@ -446,4 +443,4 @@ Senden Sie Feedback oder Probleme an die folgende Verteilerliste: sqldwcopyprevi
 
 ## <a name="see-also"></a>Weitere Informationen  
 
- [Datenladestrategien für Azure SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)
+ [Übersicht über das Laden mit [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)

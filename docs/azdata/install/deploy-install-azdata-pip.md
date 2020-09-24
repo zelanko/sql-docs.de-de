@@ -1,7 +1,7 @@
 ---
 title: Installation von azdata mithilfe von pip
-titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie das azdata-Tool zum Installieren und Verwalten Big Data-Clustern mit pip installieren.
+titleSuffix: ''
+description: Hier erfahren Sie, wie Sie das Tool „azdata“ mit pip installieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 51faf26a6414854ad3b2b1c2d205304e9b3dfb36
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 6bf2bbff5f1d048895515f18b600cd05acd8ae6f
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733867"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914950"
 ---
 # <a name="install-azdata-with-pip"></a>Installieren von `azdata` mit `pip`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
 In diesem Artikel wird beschrieben, wie Sie das `azdata`-Tool mithilfe von `pip` unter Windows oder Linux installieren.
 
@@ -26,7 +26,7 @@ Unter Windows und Linux (Ubuntu-Distribution) ist es einfacher, wenn Sie einen [
 
 ## <a name="prerequisites"></a><a id="prerequisites"></a> Voraussetzungen
 
-`azdata` ist ein in Python geschriebenes Befehlszeilen-Hilfsprogramm, das es Clusteradministratoren ermöglicht, den Big Data-Cluster über REST-APIs zu starten und zu verwalten. Die mindestens erforderliche Python-Version ist v3.5. `pip` ist zum Herunterladen und Installieren des `azdata`-Tools erforderlich. Die nachfolgenden Anweisungen enthalten Beispiele für Windows und Ubuntu. Informationen zum Installieren von Python auf anderen Plattformen finden Sie in der [Python-Dokumentation](https://wiki.python.org/moin/BeginnersGuide/Download).
+`azdata` ist ein in Python geschriebenes Befehlszeilen-Hilfsprogramm mit dem Clusteradministratoren über REST-APIs Bootstraps durchführen und Daten verwalten können. Die mindestens erforderliche Python-Version ist v3.5. `pip` ist zum Herunterladen und Installieren des `azdata`-Tools erforderlich. Die nachfolgenden Anweisungen enthalten Beispiele für Windows und Ubuntu. Informationen zum Installieren von Python auf anderen Plattformen finden Sie in der [Python-Dokumentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 Installieren und aktualisieren Sie außerdem die aktuelle Version des Python-Pakets `requests`:
 
 ```bash
@@ -143,3 +143,5 @@ Befolgen Sie diese Schritte, um `azdata` unter macOS oder OS X zu installieren. 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zu Big Data-Clustern finden Sie unter [Was sind [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Verwenden von azdata mit [Azure Arc-fähigen Datendiensten](/azure/azure-arc/data/)

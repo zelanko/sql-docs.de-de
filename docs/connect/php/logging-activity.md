@@ -2,7 +2,7 @@
 title: Protokollieren von Aktivitäten
 description: Erfahren Sie, wie Sie verschiedene Kombinationen von Protokollierungsoptionen konfigurieren, wenn Sie die Microsoft-Treiber für PHP für SQL Server verwenden.
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 0d5da2aa33741e0c93b067bd942958ca70137d0b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680545"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024508"
 ---
 # <a name="logging-activity"></a>Protokollieren von Aktivitäten
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Standardmäßig werden Fehler und Warnungen, die von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] generiert werden, nicht protokolliert. Dieses Thema erläutert, wie Protokollierungsaktivitäten konfiguriert werden.  
+Von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] generierte Fehler und Warnungen werden standardmäßig nicht im PHP-Systemprotokoll protokolliert. In diesem Artikel wird erläutert, wie die Treiberprotokollierungsaktivität konfiguriert wird. Weitere Informationen zum Konfigurieren von Einstellungen für die PHP-Fehlerbehandlung, die nicht für Treiber spezifisch sind, finden Sie in der [PHP-Dokumentation](https://www.php.net/manual/en/errorfunc.configuration.php).  
   
 ## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>Protokollieren von Aktivitäten mit dem PDO_SQLSRV-Treiber  
-Die einzige Konfiguration, die für den PDO_SQLSRV-Treiber verfügbar ist, ist der pdo_sqlsrv.log_severity-Eintrag in der Datei „php.ini“.  
+Die einzige verfügbare Protokollierungskonfiguration, die spezifisch für den PDO_SQLSRV-Treiber ist, ist der Eintrag „pdo_sqlsrv.log_severity“ in der Datei „php.ini“.  
   
 Fügen Sie am Ende der Datei „php.ini“ Folgendes ein:  
   
@@ -53,7 +53,7 @@ PHP liest die Konfigurationsdatei bei der Initialisierung und speichert die Date
 Um die Protokollierung zu aktivieren, können Sie die [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)-Funktion verwenden oder die „php.ini“-Datei ändern. Sie können Aktivitäten protokollieren, die in Initialisierungen, Verbindungen, Anweisungen oder Fehlerfunktionen auftreten. Sie können auch angeben, ob Fehler, Warnungen, Hinweise oder alle drei protokolliert werden sollen.  
   
 > [!NOTE]  
-> Sie können den Speicherort der Protokolldatei in der Datei „php.ini“ konfigurieren.  
+> Sie können den Speicherort der Protokolldatei in der Datei „php.ini“ konfigurieren. Weitere Informationen finden Sie in der [PHP-Dokumentation](https://www.php.net/manual/en/errorfunc.configuration.php).  
   
 ### <a name="turning-logging-on"></a>Aktivieren der Protokollierung  
 Sie können die Protokollierung mit der [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)-Funktion aktivieren, um einen Wert für die **LogSubsystems**-Einstellung anzugeben. Zum Beispiel konfiguriert die folgende Codezeile den Treiber zur Protokollierung von Aktivitäten bei Verbindungen:  
@@ -65,7 +65,7 @@ Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSubsy
 |Wert (entsprechende ganze Zahl in Klammern)|BESCHREIBUNG|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Aktiviert die Protokollierung aller Subsysteme.|  
-|SQLSRV_LOG_SYSTEM_OFF(0)|Deaktiviert die Protokollierung. Dies ist die Standardoption.|  
+|SQLSRV_LOG_SYSTEM_OFF(0)|Deaktiviert die Protokollierung. Dies ist die Standardeinstellung.|  
 |SQLSRV_LOG_SYSTEM_INIT (1)|Aktiviert die Protokollierung der Initialisierungsaktivität.|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|Aktiviert die Protokollierung der Verbindungsaktivität.|  
 |SQLSRV_LOG_SYSTEM_STMT (4)|Aktiviert die Protokollierung der Anweisungsaktivität.|  
@@ -96,7 +96,7 @@ Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSever
 |Wert (entsprechende ganze Zahl in Klammern)|BESCHREIBUNG|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Gibt an, dass Fehler, Warnungen und Hinweise protokolliert werden.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Gibt an, dass Fehler protokolliert werden Dies ist die Standardoption.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Gibt an, dass Fehler protokolliert werden Dies ist die Standardeinstellung.|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|Gibt an, dass Warnungen protokolliert werden|  
 |SQLSRV_LOG_SEVERITY_NOTICE (4)|Gibt an, dass Benachrichtigungen protokolliert werden|  
   

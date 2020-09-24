@@ -3,7 +3,7 @@ title: ALTER DATABASE SCOPED CONFIGURATION
 description: Diese Anweisung aktiviert mehrere Einstellungen für die Datenbankkonfiguration auf der Ebene einzelner Datenbanken.
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
-ms.date: 10/31/2019
+ms.date: 09/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: f395ef15f82b4975a3df677abea227e181835e83
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9b3710606df63baaf85134be47fb0fe1643c72f3
+ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537087"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90565085"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -153,7 +153,7 @@ Sie können mithilfe der MAXDOP-Option die Anzahl der Prozessoren beschränken, 
 Informationen zum Festlegen dieser Option auf Instanzebene finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Max. Grad an Parallelität“](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 > [!NOTE]
-> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] wird die Konfiguration **Max. Grad an Parallelität** auf Serverebene immer auf 0 festgelegt. Der maximale Grad an Parallelität kann für jede Datenbank, wie im aktuellen Artikel beschrieben, konfiguriert werden. Empfehlungen zur optimalen Konfiguration vom maximalen Grad an Parallelität finden Sie im Abschnitt [Zusätzliche Ressourcen](#additional-resources).
+> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ist die datenbankweite Konfiguration von MAXDOP für neue Singletons und elastische Datenbanken in Pools standardmäßig auf 8 begrenzt. Der maximale Grad an Parallelität kann für jede Datenbank, wie im aktuellen Artikel beschrieben, konfiguriert werden. Empfehlungen zur optimalen Konfiguration des maximalen Grads an Parallelität finden Sie im Abschnitt [Weitere Ressourcen](#additional-resources).
 
 > [!TIP]
 > Verwenden Sie den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**, um dies auf Abfrageebene zu erreichen.    

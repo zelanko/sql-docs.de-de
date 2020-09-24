@@ -1,6 +1,6 @@
 ---
-title: Sicherheitsübersicht für Erweiterbarkeit
-description: Sicherheitsübersicht für das Erweiterbarkeitsframework in SQL Server Machine Learning Services. Sicherheit für Anmelde- und Benutzerkonten, SQL Server-Launchpad-Dienst, Workerkonten, Ausführen mehrerer Skripts und Dateiberechtigungen.
+title: Sicherheitsarchitektur für die Erweiterbarkeit
+description: In diesem Artikel wird die Sicherheitsarchitektur für das Erweiterbarkeitsframework in SQL Server Machine Learning Services beschrieben. Dies umfasst Sicherheit für Anmelde- und Benutzerkonten, den SQL Server-Launchpad-Dienst, Workerkonten, das Ausführen mehrerer Skripts und Dateiberechtigungen.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -8,24 +8,26 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-ms.custom: seo-lt-2019
+ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5110f96b654847a0288471d28c72afa37d3df8c2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 61294897524a0e260e457cbf98e892cad940ca54
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179849"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989837"
 ---
-# <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Sicherheitsübersicht für das Erweiterbarkeitsframework in SQL Server Machine Learning Services
+# <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Sicherheitsarchitektur für das Erweiterbarkeitsframework in SQL Server Machine Learning Services
 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-In diesem Artikel wird die allgemeine Sicherheitsarchitektur beschrieben, die zur Integration der SQL Server-Datenbank-Engine sowie der zugehörigen Komponenten mit dem Erweiterbarkeitsframework in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) verwendet wird. Es werden die sicherungsfähigen Elemente, Dienste, Prozessidentität und Berechtigungen untersucht. Weitere Informationen zu den wichtigsten Konzepten und Komponenten der Erweiterbarkeit in SQL Server finden Sie unter [Erweiterbarkeitsarchitektur in SQL Server Machine Learning Services](extensibility-framework.md).
+In diesem Artikel wird die Sicherheitsarchitektur beschrieben, die zur Integration der SQL Server-Datenbank-Engine sowie der zugehörigen Komponenten mit dem Erweiterbarkeitsframework in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) verwendet wird. Es werden die sicherungsfähigen Elemente, Dienste, Prozessidentität und Berechtigungen untersucht. Zu den Hauptthemen dieses Artikels gehören der Zweck von Launchpad, SQLRUserGroup und Workerkonten, die Prozessisolation von externen Skripts und die Zuordnung von Benutzeridentitäten zu Workerkonten.
+
+Weitere Informationen zu den wichtigsten Konzepten und Komponenten der Erweiterbarkeit in SQL Server finden Sie unter [Erweiterbarkeitsarchitektur in SQL Server Machine Learning Services](extensibility-framework.md).
 
 ## <a name="securables-for-external-script"></a>Sicherungsfähige Elemente für externes Skript
 
-Ein in R oder Python oder externen Sprachen wie Java oder .NET geschriebenes externes Skript wird als Eingabeparameter für eine [gespeicherte Systemprozedur](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) übermittelt, die zu diesem Zweck erstellt oder in eine von Ihnen definierte gespeicherte Prozedur eingeschlossen wird. Alternativ können Sie auch über Modelle verfügen, die vorab trainiert und in einem Binärformat in einer Datenbanktabelle gespeichert sind und somit in einer [PREDICT](../../t-sql/queries/predict-transact-sql.md)-T-SQL-Funktion aufgerufen werden können.
+Ein externes Skript wird als Eingabeparameter für eine [im gespeicherte Systemprozedur](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) übermittelt, die zu diesem Zweck erstellt oder in eine von Ihnen definierte gespeicherte Prozedur eingeschlossen wird. Dieses Skript kann in R, Python oder externen Sprachen wie Java oder .NET geschrieben werden. Alternativ können Sie auch über Modelle verfügen, die vorab trainiert und in einem Binärformat in einer Datenbanktabelle gespeichert sind und somit in einer [PREDICT](../../t-sql/queries/predict-transact-sql.md)-T-SQL-Funktion aufgerufen werden können.
 
 Da das Skript über vorhandene Datenbankschemaobjekte, gespeicherte Prozeduren und Tabellen bereitgestellt wird, gibt es keine neuen [sicherungsfähige Elemente](../../relational-databases/security/securables.md) für SQL Server Machine Learning Services.
 
@@ -35,7 +37,7 @@ Unabhängig davon, wie Sie Skripts verwenden oder woraus sie bestehen, werden Da
 
 ## <a name="permissions"></a>Berechtigungen
 
-Das Datensicherheitsmodell von SQL Server für Datenbankanmeldungen und -rollen umfasst auch externe Skripts. Zum Ausführen externer Skripts, die SQL Server-Daten verwenden oder mit SQL Server als Computekontext ausgeführt werden, ist eine SQL Server-Anmeldung oder ein Windows-Benutzerkonto erforderlich. Datenbankbenutzer, die über Berechtigungen zum Ausführen einer Ad-hoc-Abfrage verfügen, können auf dieselben Daten aus externen Skripts zugreifen.
+Das Datensicherheitsmodell mit Datenbankanmeldungen und Rollen von SQL Server umfasst auch externe Skripts. Zum Ausführen externer Skripts, die SQL Server-Daten verwenden oder mit SQL Server als Computekontext ausgeführt werden, ist eine SQL Server-Anmeldung oder ein Windows-Benutzerkonto erforderlich. Datenbankbenutzer, die über Berechtigungen zum Ausführen einer Abfrage verfügen, können auf dieselben Daten aus externen Skripts zugreifen.
 
 Das Anmelde- oder Benutzerkonto identifiziert den *Sicherheitsprinzipal*, der je nach den Anforderungen des externen Skripts mehrere Zugriffsebenen benötigen kann:
 
@@ -78,7 +80,7 @@ Aus diesem Grund müssen alle externen Skripts, die von einem Remoteclient initi
 Das Erweiterbarkeitsframework fügt einen neuen NT-Dienst zur [Liste der Dienste](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in einer SQL Server-Installation hinzu: [**SQL Server-Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
 
 Die Datenbank-Engine verwendet den SQL Server-**Launchpad**-Dienst, um eine externe Skriptsitzung als separaten Prozess zu instanziieren. 
-Der Prozess wird unter einem Konto mit niedriger Berechtigung ausgeführt, im Gegensatz zu SQL Server, Launchpad selbst und der Benutzeridentität, unter der die gespeicherte Prozedur oder Hostabfrage ausgeführt wurde. Die Ausführung von Skripts in einem separaten Prozess unter einem Konto mit niedrigen Berechtigungen ist die Grundlage des Sicherheits- und Isolationsmodells für externe Skripts in SQL Server.
+Der Prozess wird mit einem Konto mit geringen Rechten ausgeführt. Dieses Konto unterscheidet sich von SQL Server, Launchpad und der Benutzeridentität, unter der die gespeicherte Prozedur oder Hostabfrage ausgeführt wurde. Die Ausführung von Skripts in einem separaten Prozess unter einem Konto mit niedrigen Berechtigungen ist die Grundlage des Sicherheits- und Isolationsmodells für externe Skripts in SQL Server.
 
 SQL Server verwaltet außerdem die Zuordnung der Identität des aufrufenden Benutzers zum Workerkonto mit geringen Berechtigungen, das zum Starten des Satellitenprozesses verwendet wird. In einigen Szenarios, in denen Skripts oder Code für Daten und Vorgänge an SQL Server zurückgerufen werden, kann SQL Server den Identitätstransfer nahtlos steuern. Skripts, die SELECT-Anweisungen oder aufrufende Funktionen und andere Programmierobjekte enthalten, werden in den meisten Fällen erfolgreich sein, wenn der aufrufende Benutzer über ausreichende Berechtigungen verfügt.
 
@@ -111,7 +113,7 @@ Das Erweiterbarkeitsframework fügt einen neuen Daemon in einer SQL Server-Insta
 
 Nur eine Instanz der Datenbank-Engine wird unterstützt, und es ist ein launchpadd-Dienst an die Instanz gebunden. Wenn ein Skript ausgeführt wird, startet der launchpadd-Dienst einen separaten Launchpadprozess mit dem mssql_satellite-Benutzerkonto mit geringen Berechtigungen und eigener neuer PID, IPC, Einbindung und Netzwerknamespace. Jeder Satellitenprozess erbt das mssql_satellite-Benutzerkonto des Launchpads und verwendet dieses für die Dauer der Skriptausführung.
 
-Weitere Informationen finden Sie unter [Erweiterbarkeitsarchitektur in SQL Server-Machine Learning Services](extensibility-framework.md).
+Weitere Informationen finden Sie unter [Erweiterbarkeitsarchitektur in SQL Server Machine Learning Services](extensibility-framework.md).
 
 ::: moniker-end
 
@@ -133,7 +135,7 @@ Für parallel ausgeführte Aufgaben sind keine zusätzlichen Konten erforderlich
 
 ### <a name="permissions-granted-to-sqlrusergroup"></a>Für SQLRUserGroup erteilte Berechtigungen
 
-Standardmäßig haben **SQLRUserGroup**-Mitglieder Lese- und Ausführungsberechtigungen für Dateien in den SQL Server-Verzeichnissen **Binn**, **R_SERVICES** und **PYTHON_SERVICES** mit Zugriff auf ausführbare Dateien, Bibliotheken und integrierte Datasets in den mit SQL Server installierten R- und Python-Distributionen. 
+Mitglieder von **SQLRUserGroup** verfügen standardmäßig über Lese- und Ausführungsberechtigungen für Dateien in den SQL Server-Verzeichnissen **Binn**, **R_SERVICES** und **PYTHON_SERVICES**. Dies umfasst Zugriff auf ausführbare Dateien, Bibliotheken und integrierte Datasets in den R- und Python-Verteilungen, die mit SQL Server installiert werden. 
 
 Um vertrauliche Ressourcen in SQL Server zu schützen, können Sie optional eine Zugriffssteuerungsliste (ACL) definieren, die den Zugriff auf **SQLRUserGroup** verweigert. Umgekehrt können Sie auch Berechtigungen für lokale Datenressourcen vergeben, die auf dem Hostcomputer vorhanden sind, mit Ausnahme von SQL Server selbst. 
 

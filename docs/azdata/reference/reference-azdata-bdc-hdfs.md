@@ -1,31 +1,31 @@
 ---
 title: Referenz zu „azdata bdc hdfs“
 titleSuffix: SQL Server big data clusters
-description: Verwenden Sie diesen Referenzartikel, um die SQL-Befehle (insbesondere die „bdc hdfs“-Befehle) im azdata-Tool zu verstehen.
+description: Referenzartikel zu „azdata bdc hdfs“-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17cac3a31309402d01442b598785908cbf345bba
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 4cc99df7ada4ff4e0aced35c4cbcf4c39e8ca5c5
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733764"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914819"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Gilt für `azdata`e
 
-Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den **sql**-Befehlen im **azdata**-Tool. Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
-| Get-Help | BESCHREIBUNG |
+
+|Get-Help|Beschreibung|
 | --- | --- |
-[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Statusbefehle für HDFS-Dienste.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | Die HDFS-Shell ist eine einfache interaktive Befehlsshell für das HDFS-Dateisystem.
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | Auflisten des Status der angegebenen Datei bzw. des angegebenen Verzeichnisses.
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | Bestimmen, ob eine Datei oder ein Verzeichnis vorhanden ist.  Gibt „True“ bei Vorhandensein zurück, andernfalls „False“.
@@ -39,6 +39,7 @@ Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `az
 [azdata bdc hdfs chown](#azdata-bdc-hdfs-chown) | Ändern des Besitzers oder der Gruppe der angegebenen Datei.
 [azdata bdc hdfs cp](#azdata-bdc-hdfs-cp) | Kopieren Sie eine Datei oder ein Verzeichnis zwischen dem lokalen Computer und dem HDFS.
 [azdata bdc hdfs mount](reference-azdata-bdc-hdfs-mount.md) | Verwalten des Einbindens von Remotespeichern in HDFS.
+[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Statusbefehle für HDFS-Dienste.
 ## <a name="azdata-bdc-hdfs-shell"></a>azdata bdc hdfs shell
 Die HDFS-Shell ist eine einfache interaktive Befehlsshell für das HDFS-Dateisystem.
 ```bash
@@ -69,7 +70,7 @@ azdata bdc hdfs ls --path -p
 ### <a name="examples"></a>Beispiele
 Auflisten des Status
 ```bash
-azdata bdc hdfs ls --path tmp/
+azdata bdc hdfs ls --path "tmp/"
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
@@ -92,9 +93,9 @@ azdata bdc hdfs exists --path -p
                        
 ```
 ### <a name="examples"></a>Beispiele
-So überprüfen Sie, ob eine Datei oder ein Verzeichnis vorhanden ist.
+Überprüfen, ob die Datei oder das Verzeichnis vorhanden ist.
 ```bash
-azdata bdc hdfs exists --path tmp/
+azdata bdc hdfs exists --path "tmp/"
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
@@ -119,7 +120,7 @@ azdata bdc hdfs mkdir --path -p
 ### <a name="examples"></a>Beispiele
 Erstellen eines Verzeichnisses.
 ```bash
-azdata bdc hdfs mkdir --path tmp/
+azdata bdc hdfs mkdir --path "tmp/"
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
@@ -144,7 +145,7 @@ azdata bdc hdfs mv --source-path -s
 ### <a name="examples"></a>Beispiele
 Verschieben von Datei oder Verzeichnis.
 ```bash
-azdata bdc hdfs mv --source-path tmp/ --target-path "dest/"
+azdata bdc hdfs mv --source-path "tmp/" --target-path "dest/"
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--source-path -s`
@@ -229,7 +230,7 @@ azdata bdc hdfs rm --path -p
 ### <a name="examples"></a>Beispiele
 Entfernen einer Datei oder eines Verzeichnisses.
 ```bash
-azdata bdc hdfs rm --path tmp/
+azdata bdc hdfs rm --path "tmp/"
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
@@ -254,7 +255,7 @@ azdata bdc hdfs rmr --path -p
 ### <a name="examples"></a>Beispiele
 Rekursives Entfernen des Verzeichnisses.
 ```bash
-azdata bdc hdfs rmr --path tmp/
+azdata bdc hdfs rmr --path "tmp/"
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
@@ -358,4 +359,7 @@ Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md). Weitere Informationen zur Installation des `azdata`-Tools finden Sie unter [Installieren von azdata zum Verwalten von Big Data-Clustern für SQL Server 2019](../install/deploy-install-azdata.md).
+Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). 
+
+Weitere Informationen zur Installation des Tools **azdata** finden Sie unter [Installieren von azdata](..\install\deploy-install-azdata.md).
+

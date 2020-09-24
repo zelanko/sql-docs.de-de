@@ -3,31 +3,29 @@ title: Aktualisieren der Python- und R-Runtimes (Bindung)
 description: Führen Sie mit sqlbindr.exe ein Upgrade der Python- und R-Runtimes in SQL Server Machine Learning Services oder SQL Server R Services aus, um diese an Machine Learning Server zu binden.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: f6b7d5b0dbff20961b6f719e0e0f3360433712f8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009376"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990113"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>Durchführen eines Upgrades der Python- und R-Runtime mit Bindung in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-In diesem Artikel wird beschrieben, wie ein Installationsprozess namens **Bindung** verwendet werden kann, um die R- oder Python-Runtime in [SQL Server 2016 R Services](../r/sql-server-r-services.md) oder [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md) zu aktualisieren.
+In diesem Artikel wird beschrieben, wie ein Installationsprozess namens **Bindung** verwendet werden kann, um die R- oder Python-Runtime in [SQL Server 2016 R Services](../r/sql-server-r-services.md) oder [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md) zu aktualisieren. Sie können [neuere Versionen von Python und R](#version-map) durch *Binden* an [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server) erhalten.
 
 > [!IMPORTANT]
 > In diesem Artikel wird eine alte Methode für das Upgrade der R- und Python-Runtimes beschrieben, die als *Bindung* bezeichnet wird. Wenn Sie das **Kumulative Update (CU) 14 oder höher für SQL Server 2016 Services Pack (SP) 2** oder das **Kumulative Update (CU) 22 oder höher für SQL Server 2017** installiert haben, erfahren Sie, wie Sie [die standardmäßige Runtime der Programmiersprache R oder Python stattdessen in eine höhere Version](change-default-language-runtime-version.md) ändern können.
 
-Sie können [neuere Versionen von Python und R](#version-map) durch *Binden* an Microsoft Machine Learning Server erhalten. Diese Version gilt für sowohl SQL Server Machine Learning Services (datenbankintern) als auch SQL Server R Services (datenbankintern).
-
 ## <a name="what-is-binding"></a>Was ist eine Bindung?
 
-Die Bindung ist ein Installationsprozess, bei dem der Inhalt der Ordner **R_SERVICES** und **PYTHON_SERVICES** gegen neuere ausführbare Dateien, Bibliotheken und Tools von [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index) ausgetauscht wird.
+Die Bindung ist ein Installationsprozess, bei dem der Inhalt der Ordner **R_SERVICES** und **PYTHON_SERVICES** durch neuere ausführbare Dateien, Bibliotheken und Tools von [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server) ersetzt wird.
 
 Die hochgeladenen Komponenten, die im Wartungsmodell enthalten sind, wurden geändert. Die Updates des Diensts entsprechen dem [Supportablauffristen für Microsoft R Server und Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) im [modernen Lebenszyklus](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 

@@ -13,18 +13,24 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: da1baba9e50007358bd7a0f4d550282ee130e4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6c05db7b6022aec3b7f6123f0a070f238560db8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491473"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989881"
 ---
 # <a name="accelerated-database-recovery"></a>Verbesserte Wiederherstellung von Datenbanken
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-Durch die schnellere Datenbankwiederherstellung (Accelerated Database Recovery, ADR) wird die Verfügbarkeit von Datenbanken enorm verbessert, insbesondere bei zeitintensiven Transaktionen. Hierfür wurde der Wiederherstellungsprozess der SQL-Datenbank-Engine vollständig überarbeitet. Das neue ADR-Feature für SQL Server 2019 ist auch für einzelne Datenbanken und Pooldatenbanken in Azure SQL Database und Datenbanken in Azure SQL Data Warehouse (derzeit in der Public Preview) verfügbar. Die Hauptvorteile der schnellen Datenbankwiederherstellung sind:
+Durch die schnellere Datenbankwiederherstellung (Accelerated Database Recovery, ADR) wird die Verfügbarkeit von Datenbanken enorm verbessert, insbesondere bei zeitintensiven Transaktionen. Hierfür wurde der Wiederherstellungsprozess der SQL-Datenbank-Engine vollständig überarbeitet. Die beschleunigte Datenbankwiederherstellung (ADR) ist ein neues Feature in SQL Server 2019. 
+
+ADR ist auch für Datenbanken in Azure SQL-Datenbank, Azure SQL Managed Instance und Azure Synapse SQL verfügbar. ADR ist in SQL-Datenbank und SQL Managed Instance standardmäßig aktiviert und kann nicht deaktiviert werden. 
+
+## <a name="overview"></a>Übersicht
+
+Die Hauptvorteile der schnellen Datenbankwiederherstellung sind:
 
 - **Schnelle und konsistente Datenbankwiederherstellung**
 

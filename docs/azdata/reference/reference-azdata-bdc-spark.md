@@ -1,29 +1,30 @@
 ---
 title: 'azdata bdc spark: Referenz'
 titleSuffix: SQL Server big data clusters
-description: Verwenden Sie diesen Referenzartikel, um die SQL-Befehle (insbesondere den „bdc spark“-Befehl) im azdata-Tool zu verstehen.
+description: Referenzartikel zu azdata bdc spark-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c03c459070c008e825b51e40e01e40a4c21b07d6
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: bf95100c1b3a91d4d7e8b802bd9945face4a1b88
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733731"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914756"
 ---
 # <a name="azdata-bdc-spark"></a>azdata bdc spark
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Gilt für `azdata`e
 
-Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den **sql**-Befehlen im **azdata**-Tool. Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
-| Get-Help | BESCHREIBUNG |
+
+|Get-Help|BESCHREIBUNG|
 | --- | --- |
 [azdata bdc spark batch](reference-azdata-bdc-spark-batch.md) | Verwaltet Batchvorgänge im Spark-System.
 [azdata bdc spark session](reference-azdata-bdc-spark-session.md) | Verwaltet Vorgänge einer aktiven Sitzung im Spark-System.
@@ -32,4 +33,7 @@ Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `az
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md). Weitere Informationen zur Installation des `azdata`-Tools finden Sie unter [Installieren von azdata zum Verwalten von Big Data-Clustern für SQL Server 2019](../install/deploy-install-azdata.md).
+Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). 
+
+Weitere Informationen zur Installation des Tools **azdata** finden Sie unter [Installieren von azdata](..\install\deploy-install-azdata.md).
+

@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b2c1984b18596a8c1c527113232c7637d309359
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: afcf2e560b5fd4300c02ddf6bcc548ef68fdc05b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480857"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024569"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -309,7 +309,7 @@ ENCRYPTION Wird verwendet, um die Verschlüsselung für eine Sicherung anzugeben
 - `TRIPLE_DES_3KEY`
 - `NO_ENCRYPTION`
 
-Wenn Sie sich für die Verschlüsselung entscheiden, müssen Sie auch die Verschlüsselung mithilfe der Verschlüsselungsoptionen angeben:
+Wenn Sie sich für die Verschlüsselung entscheiden, müssen Sie auch die Verschlüsselung mithilfe der Verschlüsselungsoptionen festlegen:
 
 - `SERVER CERTIFICATE` = Encryptor_Name
 - `SERVER ASYMMETRIC KEY` = Encryptor_Name
@@ -1209,7 +1209,7 @@ Beispiel:
 
 Erfordert die **BACKUP DATABASE**-Berechtigung oder die Mitgliedschaft in der festen Datenbankrolle **db_backupoperator**. Die Masterdatenbank kann nur von einem normalen Benutzer gesichert werden, der der festen Datenbankrolle **Db_backupoperator** hinzugefügt wurde. Die Masterdatenbank kann nur durch **sa**, den Fabricadministrator, oder Mitglieder der festen Serverrolle **Sysadmin** gesichert werden.
 
-Erfordert ein Windows-Konto mit der Berechtigung, auf das Sicherungsverzeichnis zuzugreifen, es zu erstellen und auf es zu schreiben. Sie müssen außerdem den Windows-Kontonamen und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] speichern. Verwenden Sie die gespeicherte Prozedur [sp_pdw_add_network_credentials – SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md), um diese Netzwerkanmeldeinformationen zu [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] hinzuzufügen.
+Erfordert ein Windows-Konto mit der Berechtigung, auf das Sicherungsverzeichnis zuzugreifen, es zu erstellen und auf es zu schreiben. Sie müssen außerdem den Windows-Kontonamen und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] speichern. Verwenden Sie die gespeicherte Prozedur [sp_pdw_add_network_credentials – [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md), um diese Netzwerkanmeldeinformationen zu [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] hinzuzufügen.
 
 Weitere Informationen zum Verwalten von Anmeldeinformationen in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] finden Sie im Abschnitt [Sicherheit](#Security).
 
@@ -1222,14 +1222,14 @@ BACKUP DATABASE-Fehler unter den folgenden Bedingungen:
 - Die Datenbank ist nicht vorhanden.
 - Das Zielverzeichnis ist bereits auf der Netzwerkfreigabe vorhanden.
 - Die Zielnetzwerkfreigabe ist nicht verfügbar.
-- Der Speicherplatz auf der Ziel-Netzwerkfreigabe ist nicht ausreichend für die Sicherung. Der BACKUP DATABASE-Befehl bestätigt nicht, dass genügend freier Speicherplatz vorhanden ist, bevor die Sicherung initiiert wird, wodurch bei Ausführen von BACKUP DATABASE ein Fehler wegen unzureichendem Speicherplatz generiert werden kann. Wenn nicht genügend Speicherplatz vorhanden ist, führt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ein Rollback für den Befehl BACKUP DATABASE aus. Führen Sie zum Verkleinern Ihrer Datenbank [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) aus.
+- Der Speicherplatz auf der Ziel-Netzwerkfreigabe ist nicht ausreichend für die Sicherung. Der BACKUP DATABASE-Befehl bestätigt nicht, dass genügend freier Speicherplatz vorhanden ist, bevor die Sicherung initiiert wird, wodurch bei Ausführen von BACKUP DATABASE ein Fehler wegen unzureichendem Speicherplatz generiert werden kann. Wenn nicht genügend Speicherplatz vorhanden ist, führt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ein Rollback für den Befehl BACKUP DATABASE aus. Führen Sie [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) aus, um Ihre Datenbank zu verkleinern.
 - Versuchen Sie, eine Sicherung innerhalb einer Transaktion zu starten.
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>Allgemeine Hinweise
 
-Verwenden Sie vor dem Ausführen einer Datenbanksicherung [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) zum Verkleinern der Datenbank.
+Verwenden Sie vor dem Ausführen einer Datenbanksicherung [DBCC SHRINKLOG ([!INCLUDE[ssPDW](../../includes/sspdw-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) zum Verkleinern der Datenbank. 
 
 Eine [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Sicherung wird als Satz von mehreren Dateien im gleichen Verzeichnis gespeichert.
 
@@ -1288,9 +1288,9 @@ Der Netzwerkzugriff auf das Sicherungsverzeichnis basiert auf der Datei für die
 > [!IMPORTANT]
 > Um Sicherheitsrisiken in Verbindung mit Ihren Daten zu reduzieren, empfehlen wir, dass Sie ein Windows-Konto ausschließlich zum Ausführen der Sicherungs- und Wiederherstellungsvorgänge festlegen. Definieren Sie das Konto so, dass es nur Berechtigungen für den Sicherungsspeicherort besitzt.
 
-Sie müssen den Benutzernamen und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] speichern, indem Sie die gespeicherte Prozedur [sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) ausführen. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verwendet die Windows-Anmeldeinformationsverwaltung zum Speichern und Verschlüsseln von Benutzernamen und Kennwörtern auf dem Steuerknoten und den Computeknoten. Die Anmeldeinformationen werden nicht mit dem Befehl BACKUP DATABASE gesichert.
+Sie müssen den Benutzernamen und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] speichern, indem Sie die gespeicherte Prozedur [sp_pdw_add_network_credentials – [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) ausführen. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verwendet die Windows-Anmeldeinformationsverwaltung zum Speichern und Verschlüsseln von Benutzernamen und Kennwörtern auf dem Steuerknoten und den Computeknoten. Die Anmeldeinformationen werden nicht mit dem Befehl BACKUP DATABASE gesichert.
 
-Mit [sp_pdw_remove_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) können Sie Netzwerkanmeldeinformationen aus [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] entfernen.
+Mit [sp_pdw_remove_network_credentials – [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) können Sie Netzwerkanmeldeinformationen aus [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] entfernen.
 
 Um alle in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] gespeicherten Netzwerkanmeldeinformationen aufzulisten, verwenden Sie die dynamische Verwaltungssicht [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).
 

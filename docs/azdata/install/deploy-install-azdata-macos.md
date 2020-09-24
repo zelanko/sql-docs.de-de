@@ -1,7 +1,7 @@
 ---
 title: Installieren von „azdata“ für macOS
-titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie das Tool „azdata“ zum Installieren und Verwalten von Big Data-Clustern für macOS installieren.
+titleSuffix: ''
+description: Hier erfahren Sie, wie Sie das Tool „azdata“ unter macOS installieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f6662a5ff7ced4c260e2b1a3fbd1efe5a285cf4a
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: c812600394546cba8adb0eacab59fa450b7c4bd2
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733868"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914907"
 ---
 # <a name="install-azdata-on-macos"></a>Installieren von `azdata` unter macOS
 
@@ -62,3 +62,5 @@ brew uninstall azdata-cli
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zu Big Data-Clustern finden Sie unter [Was sind [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Verwenden von azdata mit [Azure Arc-fähigen Datendiensten](/azure/azure-arc/data/)

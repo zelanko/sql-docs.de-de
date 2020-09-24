@@ -1,7 +1,7 @@
 ---
 title: Installieren von azdata mit yum
-titleSuffix: SQL Server big data clusters
-description: In diesem Artikel erfahren Sie, wie Sie das Tool „azdata“ zum Installieren und Verwalten Big Data-Clustern mit yum installieren.
+titleSuffix: ''
+description: Hier erfahren Sie, wie Sie das Tool „azdata“ mit yum installieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f343d4d6b46c581d0f633aa2c7eb79ef9b5c536c
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: eae81ccee65899335b161b3a32fbb260d0a8517a
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733900"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914893"
 ---
 # <a name="install-azdata-with-yum"></a>Installieren von `azdata` mit yum
 
@@ -41,13 +41,13 @@ Für Linux-Distributionen mit `yum` gibt es ein Paket für die `azdata-cli`. Das
    Führen Sie für einen RHEL 7-Client Folgendes aus:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
   
    Führen Sie für einen RHEL 8-Client Folgendes aus:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
 
 1. Installieren Sie das Paket mit dem Befehl `yum install`.
@@ -88,3 +88,5 @@ sudo yum update azdata-cli
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zu Big Data-Clustern finden Sie unter [Was sind [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Verwenden von azdata mit [Azure Arc-fähigen Datendiensten](/azure/azure-arc/data/)

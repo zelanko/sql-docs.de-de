@@ -1,26 +1,25 @@
 ---
 title: Installieren von azdata
-titleSuffix: SQL Server big data clusters
-description: In diesem Artikel erfahren Sie, wie Sie das azdata-Tool zum Installieren und Verwalten von Big Data-Clustern installieren.
+titleSuffix: ''
+description: Hier erfahren Sie, wie Sie das Tool „azdata“ installieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 408dec76480a36ff2280926147b948859fa7088d
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 7939aa1575aaeec8edff33a9a9f7101a1014abc2
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733899"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914922"
 ---
 # <a name="install-azdata"></a>Installieren von `azdata`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-`azdata` ist ein in Python geschriebenes Befehlszeilen-Hilfsprogramm für das Starten und Verwalten eines Big Data-Clusters über REST-APIs. 
+`azdata` ist ein in Python geschriebenes Befehlszeilen-Hilfsprogramm für Bootstraps und Verwaltung der Datendienste über REST-APIs. 
 
 ## <a name="find-latest-version"></a>Abrufen der aktuellen Version
 
@@ -42,4 +41,6 @@ Führen Sie `azdata --version` aus, um Ihre installierte Version zu ermitteln un
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big Data-Clustern finden Sie unter [Was sind [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+Weitere Informationen zur Verwendung von azdata mit Big Data-Cluster finden Sie unter [Was ist [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md)
+
+Verwenden von azdata mit [Azure Arc-fähigen Datendiensten](/azure/azure-arc/data/)
