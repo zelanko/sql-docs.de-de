@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 087b92b1bb8bcac9439688790918f46fd609ce96
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 24bdf85af4a165a77694af5e65c262fdf5b97edd
+ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688491"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91136388"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "90688491"
 Registriert externe Spracherweiterungen aus dem angegebenen Dateipfad oder Bytedatenstrom in der Datenbank. Diese Anweisung dient als generischer Mechanismus, mit dem der Datenbankadministrator neue externe Spracherweiterungen auf jeder von SQL Server unterstützten Betriebssystemplattform registrieren kann. Weitere Informationen finden Sie unter [Spracherweiterungen](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> Derzeit wird nur **Java** als externe Sprache unterstützt. **R** und **Python** sind reservierte Namen, und es kann keine externe Sprache mit diesen Namen erstellt werden. Weitere Informationen zur Verwendung von **R** und **Python** finden Sie unter [SQL Server-Machine Learning-Services](https://docs.microsoft.com/sql/machine-learning/).
+> **R** und **Python** sind reservierte Namen, und es kann keine externe Sprache mit diesen Namen erstellt werden. Weitere Informationen zur Verwendung von **R** und **Python** finden Sie unter [SQL Server-Machine Learning-Services](https://docs.microsoft.com/sql/machine-learning/).
 
 ## <a name="syntax"></a>Syntax
 
