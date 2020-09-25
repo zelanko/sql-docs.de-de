@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: 0d8bdd09fd1ae946c78aeb4860d1d5cfd89eabb8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d4a0c1c88e890ed7aa92a50a83eff795a83f42e9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245149"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395298"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analyse und Berichterstellung mit Microsoft Business Intelligence-Tools (BI)
 
@@ -28,9 +28,8 @@ In der folgenden Tabelle werden die verschiedenen Arbeitsauslastungen für Daten
 > [!NOTE]
 > Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
   
-|Arbeitsauslastungen|Benutzer|||BI-Tools|||  
+|Arbeitsauslastungen|Benutzer|Excel-basiertes BI-Tool|SharePoint-basiertes BI-Tool|SharePoint Online-basiertes BI-Tool|Power BI-basiertes BI-Tool|SQL Server-basiertes BI-Tool|  
 |---------------|----------|-|-|--------------|-|-|  
-|||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**Self-Service-BI**|Analyst/Endbenutzer||||||  
 |Einfache Suche und einfacher Zugriff auf öffentliche und Unternehmensdaten||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)||  
 |Erstellen leistungsstarker Datenmodelle||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
