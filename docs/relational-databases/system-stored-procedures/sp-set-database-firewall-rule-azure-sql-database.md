@@ -22,15 +22,15 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b43c386f803c1d9fea8a1e7645d1764ece3a7eef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3021389a5223cd45ef7fb2b0b2dba72c51ba7235
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493033"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226864"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL-Datenbank)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Erstellt oder aktualisiert die Firewallregeln auf Datenbankebene für den [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Datenbank-Firewallregeln können für die **Master** Datenbank und für Benutzer Datenbanken unter konfiguriert werden [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Datenbank-Firewallregeln sind besonders nützlich, wenn eigenständige Datenbankbenutzer verwendet werden. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
@@ -56,7 +56,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 > [!NOTE]  
 >  Azure-Verbindungsversuche sind zulässig, wenn sowohl dieses Feld als auch das *start_ip_address* Feld gleich sind `0.0.0.0` .  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Namen der Firewalleinstellungen auf Datenbankebene für eine Datenbank müssen eindeutig sein. Wenn der Name der für die gespeicherte Prozedur bereitgestellten Firewalleinstellung auf Datenbankebene bereits in der Tabelle mit den Firewalleinstellungen auf Datenbankebene vorhanden ist, werden die Start- und End-IP-Adressen aktualisiert. Andernfalls wird eine neue Firewalleinstellung auf Datenbankebene erstellt.  
   
  Wenn Sie eine Firewalleinstellung auf Datenbankebene hinzufügen, bei der die Start-und End-IP-Adressen gleich sind `0.0.0.0` , aktivieren Sie den Zugriff auf die Datenbank auf dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server aus einer beliebigen Azure-Ressource. Geben Sie einen Wert für den *Name* -Parameter an, der Ihnen hilft, die Firewalleinstellung zu merken.  

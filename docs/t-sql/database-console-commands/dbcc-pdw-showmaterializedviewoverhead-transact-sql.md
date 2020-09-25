@@ -13,12 +13,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3e0045f23caa883592d772c16e02f5d9d18b5f32
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 77c9309afc762a1aa68cfcc22ee6fba4cf119246
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076585"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114930"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -73,7 +73,7 @@ Ausgabe:
 
 Erstellen einer Tabelle
 ```sql
-CREATE TABLE t1 (c1 int NOT NULL, c2 int not null, c3 int not null)
+CREATE TABLE t1 (c1 INT NOT NULL, c2 INT NOT NULL, c3 INT NOT NULL)
 ```
 Einfügen von fünf Zeilen in t1
 ```sql
@@ -85,11 +85,11 @@ INSERT INTO t1 VALUES (5, 5, 5)
 ```
 Erstellen materialisierter Sichten (MV1)
 ```sql
-CREATE materialized view MV1 
+CREATE MATERIALIZED VIEW MV1 
 WITH (DISTRIBUTION = HASH(c1))  
 AS
-SELECT c1, count(*) total_number 
-FROM dbo.t1 where c1 < 3
+SELECT c1, COUNT(*) total_number 
+FROM dbo.t1 WHERE c1 < 3
 GROUP BY c1  
 ```
 Bei der Auswahl aus der materialisierten Sicht werden zwei Zeilen zurückgegeben.
@@ -111,7 +111,7 @@ Ausgabe:
 
 Aktualisieren Sie die Basistabelle.  Diese Abfrage aktualisiert dieselbe Spalte in derselben Zeile 100 mal mit demselben Wert.  Der Inhalt der materialisierten Sicht ändert sich nicht.
 ```sql
-DECLARE @p int
+DECLARE @p INT
 SELECT @p = 1
 WHILE (@p < 101)
 BEGIN
@@ -137,7 +137,7 @@ Nachdem die materialisierte Sicht neu erstellt wurde, werden alle Nachverfolgung
 
 ```sql
 ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
-go
+GO
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 ```
 Output

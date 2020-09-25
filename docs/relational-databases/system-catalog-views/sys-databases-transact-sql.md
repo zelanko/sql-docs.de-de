@@ -21,12 +21,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab1c584d736208ba871983a6169684607dcb5627
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9e298052726e033724d20d6b1695b1accda4c6ec
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550573"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227128"
 ---
 # <a name="sysdatabases-transact-sql"></a>group_database_id
 
@@ -115,7 +115,7 @@ Wenn eine Datenbank nicht `ONLINE` oder `AUTO_CLOSE` auf festgelegt ist `ON` und
 |**is_federation_member**|**bit**|Gibt an, ob die Datenbank Mitglied eines Verbunds ist.<br /> **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_remote_data_archive_enabled**|**bit**|Gibt an, ob die Datenbank gestreckt wird.<br /> 0 = die Datenbank ist nicht Stretch-aktiviert.<br /> 1 = die Datenbank ist Stretch-aktiviert.<br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /> Weitere Informationen finden Sie unter [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |**is_mixed_page_allocation_on**|**bit**|Gibt an, ob Tabellen und Indizes in der Datenbank anfängliche Seiten aus gemischten Blöcken zuordnen können.<br /> 0 = Tabellen und Indizes in der Datenbank weisen immer anfängliche Seiten aus einheitlichen Blöcken zu.<br /> 1 = Tabellen und Indizes in der Datenbank können ursprüngliche Seiten aus gemischten Blöcken zuordnen.<br /> Weitere Informationen finden Sie unter der `SET MIXED_PAGE_ALLOCATION` Option [ALTER DATABASE Set options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).<br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )|  
-|**is_temporal_retention_enabled**|**bit**|Gibt an, ob die cleanupaufgabe der temporalen Aufbewahrungs Richtlinie aktiviert ist.<br /><br />1 = Temporale Beibehaltung ist aktiviert<br />0 = Temporale Beibehaltung ist deaktiviert.<br />**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_temporal_history_retention_enabled**|**bit**|Gibt an, ob die cleanupaufgabe der temporalen Aufbewahrungs Richtlinie aktiviert ist.<br /><br />1 = Temporale Beibehaltung ist aktiviert<br />0 = Temporale Beibehaltung ist deaktiviert.<br />**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|Die Einstellung für die Katalog Sortierung:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|Die Einstellung für die Katalog Sortierung:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**physical_database_name**|**nvarchar(128)**|Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den physischen Namen der Datenbank. Für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] eine allgemeine ID für die Datenbanken auf einem Server. <br />**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
