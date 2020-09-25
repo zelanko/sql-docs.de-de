@@ -1,6 +1,6 @@
 ---
 title: 'R-Tutorial: Bereitstellen eines Modells'
-description: In diesem Tutorial erfahren Sie, wie Sie ein R-Modell in SQL Server für die datenbankinterne Analyse bereitstellen können.
+description: Erfahren Sie, wie Sie R-Modelle in einer Produktionsumgebung bereitstellen können, indem Sie ein trainiertes Modell aus einer gespeicherten Prozedur abrufen.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781786"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179751"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Bereitstellen des R-Modells und Verwendung in SQL Server (exemplarische Vorgehensweise)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 In dieser Lektion erfahren Sie, wie Sie R-Modelle in einer Produktionsumgebung bereitstellen können, indem Sie ein trainiertes Modell aus einer gespeicherten Prozedur abrufen. Sie können die gespeicherte Prozedur aus R oder jeder beliebigen Anwendungsprogrammiersprache aufrufen, die [!INCLUDE[tsql](../../includes/tsql-md.md)] (z. B. C#, Java und Python) unterstützt, um das Modell zum Treffen von Vorhersagen für neue Beobachtungen zu verwenden.
 
@@ -228,6 +228,6 @@ Da Sie nun gelernt haben, mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 Sie können sich auch folgende zusätzlichen Beispiele und Ressourcen ansehen:
 
 + [Szenarien für Data Science und Lösungsvorlagen](data-science-scenarios-and-solution-templates.md)
-+ [Datenbankinterne Advanced Analytics](sqldev-in-database-r-for-sql-developers.md)
++ [Datenbankinterne Advanced Analytics](r-taxi-classification-introduction.md)
 + [Anleitungen für Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
 + [Zusätzliche Ressourcen für Machine Learning Server](https://docs.microsoft.com//machine-learning-server/resources-more)

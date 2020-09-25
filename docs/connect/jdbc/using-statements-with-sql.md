@@ -1,5 +1,6 @@
 ---
-title: Verwenden von Anweisungen mit SQL | Microsoft-Dokumentation
+title: Verwenden von Anweisungen mit SQL
+description: Hier finden Sie eine Übersicht zur Verwendung der verschiedenen Typen von SQL-Anweisungen mit dem Microsoft JDBC-Treiber für SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17e6253d0ff1f4fa9a26d97772fb9f7ff2890221
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 49ab0f6367353847bdf3a9e0a7aff13975b4d711
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923974"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435288"
 ---
 # <a name="using-statements-with-sql"></a>Verwenden von Anweisungen mit SQL
 
@@ -39,6 +40,6 @@ Die folgenden Abschnitte enthalten Beschreibungen der verschiedenen Szenarios f�
 | [Ändern von Datenbankobjekten mit SQL-Anweisungen](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md) | Beschreibt die Verwendung von SQL-Anweisungen, um Datenbankobjekte zu ändern.   |
 | [Ändern von Daten mit SQL-Anweisungen](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)                         | Beschreibt die Verwendung von SQL-Anweisungen, um Daten in einer Datenbank zu ändern. |
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 [Verwenden von Anweisungen mit dem JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

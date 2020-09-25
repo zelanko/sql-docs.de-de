@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_ConfigurationSetting-Klasse
 title: MSReportServer_ConfigurationSetting-Klasse | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74382531162bb691cd47838fa2896169abd7ce58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e7b535ba8ce57cad4ddf1a43d2bfda97e4a26e25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454427"
 ---
 # <a name="msreportserver_configurationsetting-class"></a>MSReportServer_ConfigurationSetting-Klasse
   Stellt die Installationsparameter und die Laufzeitparameter einer Berichtsserverinstanz dar. Diese Parameter werden in der Konfigurationsdatei für den Berichtsserver gespeichert.  
@@ -42,7 +43,7 @@ public class MSReportServer_ConfigurationSetting
  Alle öffentlichen statischen Member dieses Typs (**Shared** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) sind für Vorgänge mit mehreren Threads sicher. Für Instanzmember kann nicht gewährleistet werden, dass sie für Threads sicher sind.  
   
 ## <a name="example"></a>Beispiel  
- Um den folgenden Code auszuführen, fügen Sie den Servernamen an Stelle jedes \<*servername*> hinzu. Aktualisieren Sie ggf. den Pfad, sodass dieser auf den Installationspfad verweist. Im folgenden Codebeispiel wird jede Eigenschaft in der *MSReportServer_ConfigurationSetting* -Klasse durchlaufen, wobei der Name jeder Eigenschaft und deren Wert in die Konsole geschrieben werden.  
+ Zum Ausführen des folgenden Codes ersetzen Sie \<*servername*> jeweils durch den Namen Ihres Servers. Aktualisieren Sie ggf. den Pfad, sodass dieser auf den Installationspfad verweist. Im folgenden Codebeispiel wird jede Eigenschaft in der *MSReportServer_ConfigurationSetting* -Klasse durchlaufen, wobei der Name jeder Eigenschaft und deren Wert in die Konsole geschrieben werden.  
   
 ```vb  
 Imports System  

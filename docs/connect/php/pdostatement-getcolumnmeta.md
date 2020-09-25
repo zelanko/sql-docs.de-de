@@ -1,21 +1,22 @@
 ---
-title: PDOStatement::getColumnMeta | Microsoft-Dokumentation
+title: PDOStatement::getColumnMeta
+description: API-Referenz für die PDOStatement::getColumnMeta-Funktion im Microsoft PDO_SQLSRV-Treiber für PHP für SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb7e9e37d568659a71917df66016f2333ed4be46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76918799"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645075"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,10 +36,10 @@ array PDOStatement::getColumnMeta ( $column );
 ## <a name="return-value"></a>Rückgabewert  
 Ein assoziatives Array (Schlüssel und Wert), das die Metadaten für die Spalte enthält. Im Abschnitt „Anmerkungen“ finden Sie eine Beschreibung für die Felder im Array.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Die folgende Tabelle beschreibt die Felder im durch „getColumnMeta“ zurückgegebenen Array.  
   
-|NAME|VALUES|  
+|NAME|WERTE|  
 |--------|----------|  
 |native_type|Gibt den PHP-Typ der Spalte an Immer Zeichenfolge.|  
 |driver:decl_type|Gibt den SQL-Typ an, der verwendet wird, um den Spaltenwert in der Datenbank darzustellen Falls die Spalte im Resultset das Ergebnis einer Funktion ist, wird dieser Wert nicht von PDOStatement::getColumnMeta zurückgegeben.|  
@@ -46,7 +47,7 @@ Die folgende Tabelle beschreibt die Felder im durch „getColumnMeta“ zurückg
 |name|Gibt den Namen der Spalte in der Datenbank an|  
 |table|Gibt den Namen derjenigen Tabelle in der Datenbank an, welche die Spalte enthält Immer leer.|  
 |Länge|Gibt die Länge der Spalte an|  
-|precision|Gibt die numerische Genauigkeit dieser Spalte an|  
+|precision (Genauigkeit)|Gibt die numerische Genauigkeit dieser Spalte an|  
 |pdo_type|Gibt den Typ dieser Spalte an, wie durch die PDO::PARAM_* Konstanten widergespiegelt. Immer PDO::PARAM_STR (2).|  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  

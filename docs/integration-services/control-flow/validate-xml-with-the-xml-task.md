@@ -2,7 +2,7 @@
 description: Validate XML with the XML Task
 title: Validieren von XML-Dokumenten mit dem XML-Task | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/08/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2dd292ea05ae40ff5cd19a1a8e8de55f9f0b9095
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5009a7a1c0b51feb555223294e1cc4cb5ff490f
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349256"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570353"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 
@@ -28,7 +28,7 @@ ms.locfileid: "88349256"
 
   Validieren Sie XML-Dokumente und erhalten Sie eine umfangreiche Fehlerausgabe durch die Aktivierung der Eigenschaft **ValidationDetails** des XML-Tasks.  
   
- Die folgende Abbildung zeigt den **XML-Task-Editor** eingestellt für die XML-Validierung mit umfassender Fehlerausgabe.  
+ Die folgende Abbildung zeigt den **XML-Task-Editor** mit den Einstellungen für die XML-Validierung mit umfassender Fehlerausgabe.  
   
  ![XML-Taskeigenschaften im XML-Task-Editor](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML-Taskeigenschaften im XML-Task-Editor")  
   
@@ -121,7 +121,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  Hier ist das Ergebnis in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] der zweiten Beispielabfrage aus dem vorangegangenen Text.  
   
- ![Abfrage zum Gruppieren von XML-Fehlern in Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Abfrage zum Gruppieren von XML-Fehlern in Management Studio")  
+ ![Abfrage zum Gruppieren von XML-Fehlern in Management Studio](../../integration-services/control-flow/media/query-for-xml-errors.png "Abfrage zum Gruppieren von XML-Fehlern in Management Studio")  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [XML-Task](../../integration-services/control-flow/xml-task.md)   

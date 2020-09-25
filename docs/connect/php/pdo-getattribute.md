@@ -1,7 +1,8 @@
 ---
-title: PDO::getAttribute | Microsoft-Dokumentation
+title: PDO::getAttribute
+description: API-Referenz für die PDO::getAttribute-Funktion im Microsoft PDO_SQLSRV-Treiber für PHP für SQL Server.
 ms.custom: ''
-ms.date: 07/13/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 33cddaa2718c53b9df684aaee7183722d6ae81c8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f1f3e189441109a61aeda6b6b39a16aefe940797
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919359"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646740"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

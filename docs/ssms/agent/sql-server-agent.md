@@ -1,4 +1,5 @@
 ---
+description: SQL Server-Agent
 title: SQL Server-Agent
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,19 +15,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9914ebe147344b24352b97d018166601077a8895
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec94ebc0b62194a8b6201ccd9a7a2c6cfe8c3ba8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418016"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] als *Jobs* bezeichnet werden.  
 
@@ -39,10 +40,10 @@ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent kann einen A
 > [!NOTE]  
 > Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst ist standardmäßig deaktiviert, wenn [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert ist, sofern der Benutzer nicht explizit festgelegt hat, dass der Dienst automatisch gestartet werden soll.  
   
-## <a name="sql-server-agent-components"></a><a name="Components"></a>Komponenten des SQL Server-Agents  
+## <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server Agent Components  
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet die folgenden Komponenten, um die auszuführenden Aufgaben, den Zeitpunkt der Ausführung und die Meldung erfolgreicher bzw. fehlgeschlagener Aufgaben zu definieren.  
   
-### <a name="jobs"></a>Jobs  
+### <a name="jobs"></a>Aufträge  
 Ein *Auftrag* umfasst eine angegebene Reihe von Aktionen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ausführt. Verwenden Sie Aufträge, um eine Verwaltungsaufgabe zu definieren, die einmalig oder mehrmals ausgeführt und deren Erfolgsstatus überwacht werden kann. Ein Auftrag kann auf einem einzelnen lokalen Server oder auf mehreren Remoteservern ausgeführt werden.  
   
 > [!IMPORTANT]  
@@ -107,13 +108,13 @@ Ein *Operator* definiert die Kontaktinformationen einer Person, die für die Ver
 > Um Benachrichtigungen mit **net send** zu senden, muss der Windows Messenger-Dienst auf dem Computer mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent gestartet worden sein.  
   
 > [!IMPORTANT]  
-> Die Pager- und **net send**-Optionen werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent vorhanden sein. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
+> Die Pager- und **net send** -Optionen werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
   
 Um Operatoren Benachrichtigungen per E-Mail oder Pager zu senden, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent so konfigurieren, dass Datenbank-E-Mail verwendet wird. Weitere Informationen finden Sie unter [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md).  
   
 Ein Operator kann auch als Alias für eine Gruppe von Personen definiert werden. In diesem Fall werden alle Mitglieder dieses Alias zur selben Zeit benachrichtigt. Weitere Informationen finden Sie unter [Operatoren](../../ssms/agent/operators.md).  
   
-## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Sicherheit beim Verwalten des SQL Server-Agents  
+## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Sicherheit für die Administration mit dem SQL Server-Agent  
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet die festen Datenbankrollen **SQLAgentUserRole**, **SQLAgentReaderRole** und **SQLAgentOperatorRole** in der **msdb**-Datenbank, um den Zugriff auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent für Benutzer zu steuern, die keine Mitglieder der festen Serverrolle **sysadmin** sind. Neben diesen festen Datenbankrollen können Datenbankadministratoren mithilfe von Subsystemen und Proxys sicherstellen, dass jeder Auftragsschritt mit den mindestens erforderlichen Berechtigungen ausgeführt wird.  
   
 ### <a name="roles"></a>Rollen  

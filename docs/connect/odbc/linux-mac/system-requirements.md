@@ -2,7 +2,7 @@
 title: Systemanforderungen (ODBC-Treiber für SQL Server)
 description: In diesem Artikel werden die Systemanforderungen für den ODBC-Treiber für SQL Server für Linux und macOS-Betriebssysteme aufgeführt.
 ms.custom: ''
-ms.date: 03/18/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01a5dd44d111fd72d76db244c8135d3bdde00ec8
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 74b7bf1680dd956dfca85917939ad24a3559d7de
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391755"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934459"
 ---
 # <a name="system-requirements-linux-and-macos"></a>Systemanforderungen (Linux und macOS)
 
@@ -36,28 +36,28 @@ Die Kompatibilität der Treiber unter Linux und macOS mit der SQL-Version ist id
 
 Die Versionen 17, 13.1 und 13 der Linux- und macOS-Treiber werden für die x64-Architektur der folgenden Betriebssysteme unterstützt:
 
-|Unterstützte Betriebssysteme     |17,5|17.4|17.3|17.2|17.1|17.0|Version 13.1|13|
-|-------------------------------|----|----|----|----|----|----|----|--|
-|Apple OS X 10.11 (El Capitan)  | |J|J|J|J|J|J|J|
-|Apple macOS 10.12 (Sierra)     | |J|J|J|J|J|J|J|
-|Apple macOS 10.13 (High Sierra)|J|J|J|J|J|J|J|J|
-|Apple macOS 10.14 (Mojave)     |J|J|J| | | | | |
-|Apple macOS 10.15 (Catalina)   |J| | | | | | | |
-|Alpine Linux 3.11              |J| | | | | | | |
-|Debian Linux 8                 | |J|J|J|J|J|J|J|
-|Debian Linux 9                 |J|J|J|J|J|J|J|J|
-|Debian Linux 10                |J|J| | | | | | |
-|Oracle Linux 8                 |J| | | | | | | |
-|Red Hat Enterprise Linux 6      |J|J|J|J|J|J|J|J|
-|Red Hat Enterprise Linux 7      |J|J|J|J|J|J|J|J|
-|Red Hat Enterprise Linux 8      |J|J| | | | | | |
-|SUSE Linux Enterprise Server 11<sup>1</sup>|J|J|J|J|J|J|J|J|
-|SUSE Linux Enterprise Server 12|J|J|J|J|J|J|J|J|
-|SUSE Linux Enterprise Server 15|J|J|J| | | | | |
-|Ubuntu Linux 14.04             | |J|J|J|J|J|J|J|
-|Ubuntu Linux 16.04             |J|J|J|J|J|J|J|J|
-|Ubuntu Linux 18.04             |J|J|J|J| | | | |
-|Ubuntu Linux 19.10             |J| | | | | | | |
+|Treiberversion&nbsp;&#8594;<br />&#8595; Betriebssystem     |17.6|17,5|17.4|17.3|17.2|17.1|17.0|Version 13.1|13|
+|-------------------------------|----|----|----|----|----|----|----|----|---|
+|Apple OS X 10.11 (El Capitan)  |    |    |Ja |Ja |Ja |Ja |Ja |Ja |Ja|
+|Apple macOS 10.12 (Sierra)     |    |    |Ja |Ja |Ja |Ja |Ja |Ja |Ja|
+|Apple macOS 10.13 (High Sierra)|Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja|
+|Apple macOS 10.14 (Mojave)     |Ja |Ja |Ja |Ja |    |    |    |    |   |
+|Apple macOS 10.15 (Catalina)   |Ja |Ja |    |    |    |    |    |    |   |
+|Alpine Linux 3.11              |Ja |Ja |    |    |    |    |    |    |   |
+|Debian Linux 8                 |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja|
+|Debian Linux 9                 |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja|
+|Debian Linux 10                |Ja |Ja |Ja |    |    |    |    |    |   |
+|Oracle Linux 8                 |Ja |Ja |    |    |    |    |    |    |   |
+|Red Hat Enterprise Linux 6      |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja|
+|Red Hat Enterprise Linux 7      |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja|
+|Red Hat Enterprise Linux 8      |Ja |Ja |Ja |    |    |    |    |    |   |
+|SUSE Linux Enterprise Server 11<sup>1</sup>|Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja|
+|SUSE Linux Enterprise Server 12|Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja|
+|SUSE Linux Enterprise Server 15|Ja |Ja |Ja |Ja |    |    |    |    |   |
+|Ubuntu Linux 14.04             |    |    |Ja |Ja |Ja |Ja |Ja |Ja |Ja|
+|Ubuntu Linux 16.04             |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja |Ja|
+|Ubuntu Linux 18.04             |Ja |Ja |Ja |Ja |Ja |    |    |    |   |
+|Ubuntu Linux 20.04             |Ja |    |    |    |    |    |    |    |   |
 
 <sup>1</sup> ODBC Driver 17 unterstützt nur SUSE Linux Enterprise Server 11 SP4.
 

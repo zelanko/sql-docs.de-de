@@ -1,4 +1,5 @@
 ---
+description: Migrieren einer Reporting Services-Installation (einheitlicher Modus)
 title: Migrieren einer Reporting Services-Installation (einheitlicher Modus) | Microsoft-Dokumentation
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -6,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: c4a9ea113597324828574560af03db7caaac7cc9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454579"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrieren einer Reporting Services-Installation (einheitlicher Modus)
 
@@ -265,7 +266,7 @@ Wenn Sie die Datei RSReportServer.config oder RSWebApplication.config in der vor
 
 ## <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Windows-Dienstgruppe und Sicherheits-ACLs
 
- In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] gibt es eine Dienstgruppe, die Windows-Dienstgruppe von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], mit deren Hilfe Sicherheits-ACLs für alle Registrierungsschlüssel, Dateien und Ordner erstellt werden, die mit SQL Server Reporting Services installiert werden. Dieser Windows-Gruppenname wird im Format SQLServerReportServerUser$\<*Computer_Name*>$\<*Instanz_Name*> angezeigt.  
+ In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] gibt es eine Dienstgruppe, die Windows-Dienstgruppe von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], mit deren Hilfe Sicherheits-ACLs für alle Registrierungsschlüssel, Dateien und Ordner erstellt werden, die mit SQL Server Reporting Services installiert werden. Dieser Windows-Gruppenname wird im Format SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> angezeigt.  
 
 ## <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> Überprüfen der Bereitstellung
 

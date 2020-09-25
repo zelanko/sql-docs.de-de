@@ -1,4 +1,5 @@
 ---
+description: setTrustStore-Methode (SQLServerDataSource)
 title: setTrustStore-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 30af86d585602c730dfe49e1a5f6b557b065f6cc
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: be69bd333d0264e4833dd053979f1e3dfe5a9b39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219166"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354926"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,9 +45,9 @@ public void setTrustStore(java.lang.String trustStore)
   
 -   1. Eine von der Java Virtual Machine (JVM)-Systemeigenschaft "javax.net.ssl.trustStore" angegebene Datei  
   
--   2. Datei „\<java-home>/lib/security/jssecacerts“.  
+-   2. Datei "\<java-home>/lib/security/jssecacerts".  
   
--   3. Datei „\<java-home>/lib/security/cacerts“.  
+-   3. Datei "\<java-home>/lib/security/cacerts".  
   
  Weitere Informationen finden Sie in der Dokumentation zur SunX509 TrustManager-Schnittstelle auf der Website von Sun Microsystems.  
   

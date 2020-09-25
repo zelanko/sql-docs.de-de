@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e945d07f357055904fe31bb54746e94e69a7d46
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: c7bd834b1eedbb2f3e15aeeaa7d73e6266274bdd
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137034"
+ms.locfileid: "91210615"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Installieren einer benutzerdefinierten Python-Laufzeit für SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -117,7 +117,7 @@ Fügen Sie den Instanznamen an `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`) 
 2. Give permissions to **SID S-1-15-2-1**.
     ```cmd
     icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
-    
+
 >[!NOTE]
 >The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to ALL APPLICATION PACKAGES on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
@@ -134,7 +134,7 @@ Klicken Sie alternativ mit der rechten Maustaste auf den SQL Server-Launchpad-D
 
 ## <a name="download-python-language-extension"></a>Herunterladen der Python-Programmiersprachenerweiterung
 
-Laden Sie die ZIP-Datei mit der Python-Spracherweiterung [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143952) herunter.
+Laden Sie die ZIP-Datei mit der Python-Spracherweiterung [python-lang-extension.zip](https://github.com/microsoft/sql-server-language-extensions/releases) herunter.
 
 ## <a name="register-external-language"></a>Registrieren einer externen Sprache
 
@@ -280,7 +280,7 @@ sudo systemctl restart mssql-launchpadd
 ```
 ## <a name="download-python-language-extension"></a><a name="download-python-linux"></a> Herunterladen der Python-Programmiersprachenerweiterung
 
-Laden Sie die ZIP-Datei mit der Python-Spracherweiterung [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143793) herunter.
+Laden Sie die ZIP-Datei mit der Python-Spracherweiterung [python-lang-extension.zip](https://github.com/microsoft/sql-server-language-extensions/releases) herunter.
 
 ## <a name="register-external-language"></a>Registrieren einer externen Sprache
 

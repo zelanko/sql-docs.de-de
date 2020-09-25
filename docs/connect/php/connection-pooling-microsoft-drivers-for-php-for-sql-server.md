@@ -1,7 +1,8 @@
 ---
-title: Verbindungspooling (Microsoft-Treiber für PHP für SQL Server) | Microsoft-Dokumentation
+title: Verbindungspooling (Microsoft Drivers for PHP for SQL Server)
+description: Lernen Sie die Details zum Verbindungspooling beim Verwenden der Microsoft-Treiber für PHP für SQL Server und das möglicherweise unterschiedliche Verhalten unter verschiedenen Betriebssystemen kennen.
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 08/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 714a3436cc79f3568e14c5e2609e16fd408f288e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 147e744a69850a5c76b9706c03a96fa67d2efb5f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80900986"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435259"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Verbindungspooling (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +29,7 @@ Folgende wichtige Punkte sollten Sie für das Verbindungspooling in [!INCLUDE[ss
   
 -   Das Verbindungspooling ist in Windows standardmäßig aktiviert. Unter Linux und macOS werden Verbindungen nur in einem Pool zusammengefasst, wenn Verbindungspooling für ODBC aktiviert ist (siehe [Aktivieren/Deaktivieren von Verbindungspooling](#enablingdisabling-connection-pooling)). Wenn Verbindungspooling aktiviert ist und Sie eine Verbindung mit einem Server herstellen, versucht der Treiber zunächst, eine Poolverbindung zu verwenden, bevor er eine neue erstellt. Falls im Pool keine äquivalente Verbindung gefunden wird, wird eine neue Verbindung erstellt und dem Pool hinzugefügt. Basierend auf einem Vergleich der Verbindungszeichenfolgen, ermittelt der Treiber  ob die Verbindungen äquivalent sind.  
   
--   Wenn eine Verbindung aus dem Pool verwendet wird, wird der Verbindungsstatus zurückgesetzt.  
+-   Wenn eine Verbindung aus dem Pool verwendet wird, wird der Verbindungsstatus zurückgesetzt (nur Windows).  
   
 -   Das Schließen der Verbindung gibt die Verbindung an den Pool zurück.  
   
@@ -39,8 +40,12 @@ Weitere Informationen zum Verbindungspooling finden Sie unter [Treiber-Manager-V
 Sie können den Treiber zwingen, eine neue Verbindung zu erstellen (anstatt nach einer äquivalenten Verbindung im Verbindungspool zu suchen), indem Sie den Wert des *ConnectionPooling*-Attributs in der Verbindungszeichenfolge auf **false** (oder 0) festlegen.  
   
 Falls das *ConnectionPooling*-Attribut aus der Verbindungszeichenfolge weggelassen oder auf **true** (oder 1) festgelegt wird, erstellt der Treiber nur dann eine neue Verbindung, wenn es keine äquivalente Verbindung im Verbindungspool gibt.  
+
+> [!NOTE]  
+> MARS (mehrere aktive Resultsets) ist standardmäßig aktiviert. Wenn MARS und Pooling zugleich verwendet werden, benötigt der Treiber mehr Zeit für das Zurücksetzen der Verbindung bei der *ersten* Abfrage, damit MARS ordnungsgemäß funktionieren kann, was bedeutet, dass eventuell festgelegte Abfragetimeouts ignoriert werden. Der Wert für das Abfragetimeout kommt in den nachfolgenden Abfragen jedoch zum Tragen.
   
-Weitere Informationen zu weiteren Verbindungsattributen finden Sie unter [Connection Options](../../connect/php/connection-options.md).  
+Informieren Sie sich bei Bedarf unter [Vorgehensweise: Deaktivieren von Multiple Active Resultsets (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md). Weitere Informationen zu weiteren Verbindungsattributen finden Sie unter [Connection Options](../../connect/php/connection-options.md).  
+
 ### <a name="linux-and-macos"></a>Linux und macOS
 Das *ConnectionPooling*-Attribut kann nicht verwendet werden, um das Verbindungspooling zu aktivieren bzw. zu deaktivieren. 
 
@@ -51,7 +56,7 @@ Wenn Sie `Pooling` auf `Yes` und einen positiven `CPTimeout`-Wert in der Datei �
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
+[ODBC Driver 17 for SQL Server]
 CPTimeout=<int value>
 ```
   
@@ -61,9 +66,9 @@ Die Datei „odbcinst.ini“ sollte mindestens in etwa wie in diesem Beispiel au
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
-Description=Microsoft ODBC Driver 13 for SQL Server
-Driver=/opt/microsoft/msodbcsql/lib64/libmsodbcsql-13.1.so.3.0
+[ODBC Driver 17 for SQL Server]
+Description=Microsoft ODBC Driver 17 for SQL Server
+Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.5.so.2.1
 UsageCount=1
 CPTimeout=120
 ```
@@ -75,7 +80,7 @@ Pooling=No
 ```
 
 ## <a name="remarks"></a>Bemerkungen
-- Unter Linux oder macOS werden alle Verbindungen in einem Pool zusammengefasst, wenn Pooling in der Datei „odbcinst.ini“ aktiviert ist. Dies bedeutet, dass die ConnectionPooling-Verbindungsoption keine Auswirkung hat. Um das Pooling zu deaktivieren, legen Sie in der Datei „odbcinst.ini“ „Pooling=No“ fest, und laden Sie die Treiber erneut.
+- In Linux oder macOS wird das Verbindungspooling mit unixODBC < 2.3.7 nicht empfohlen. Alle Verbindungen werden gepoolt, wenn Pooling in der Datei „odbcinst.ini“ aktiviert ist, was bedeutet, dass die Verbindungsoption „ConnectionPooling“ keine Wirkung hat. Um das Pooling zu deaktivieren, legen Sie in der Datei „odbcinst.ini“ „Pooling=No“ fest, und laden Sie die Treiber erneut. 
   - „unixODBC <= 2.3.4“ (Linux und macOS) gibt möglicherweise keine ordnungsgemäßen Diagnoseinformationen wie z. B. Fehlermeldungen, Warnungen und informative Meldungen zurück.
   - Aus diesem Grund können SQLSRV- und PDO_SQLSRV-Treiber möglicherweise lange Daten (z. B. XML, binär) nicht ordnungsgemäß als Zeichenfolgen abrufen. Lange Daten können zur Problemumgehung als Datenströme abgerufen werden. Betrachten Sie das folgende Beispiel für SQLSRV.
 
@@ -127,5 +132,5 @@ function getColumn($conn)
 ## <a name="see-also"></a>Weitere Informationen  
 [Gewusst wie: Herstellen einer Verbindung mithilfe der Windows-Authentifizierung](../../connect/php/how-to-connect-using-windows-authentication.md)
 
-[Gewusst wie: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+[Vorgehensweise: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

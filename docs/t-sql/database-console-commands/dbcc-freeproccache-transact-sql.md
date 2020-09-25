@@ -26,31 +26,31 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8b3b9733500dc56f4994dd13fd42939b0885a02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 583bed1efb0f19b1924fe007be7a6f49c2587a52
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88367786"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076592"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Entfernt alle Elemente aus dem Plancache, entfernt einen bestimmten Plan aus dem Plancache durch Angabe eines Planhandles oder SQL-Handles oder entfernt alle einem angegebenen Ressourcenpool zugeordneten Cacheinträge.
 
->[!NOTE]
->Die Ausführungsstatistik für systemintern kompilierte gespeicherte Prozeduren wird durch DBCC FREEPROCCACHE nicht gelöscht. Der Prozedurcache enthält keine Informationen zu systemintern kompilierten gespeicherten Prozeduren. Jede Ausführungsstatistik, die aus Prozedurausführungen erfasst wird, wird in den DMVs der Ausführungsstatistik angezeigt: [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) und [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
+> [!NOTE]
+> Die Ausführungsstatistik für systemintern kompilierte gespeicherte Prozeduren wird durch DBCC FREEPROCCACHE nicht gelöscht. Der Prozedurcache enthält keine Informationen zu systemintern kompilierten gespeicherten Prozeduren. Jede Ausführungsstatistik, die aus Prozedurausführungen erfasst wird, wird in den DMVs der Ausführungsstatistik angezeigt: [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) und [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
 ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
-Syntax für SQL Server:
+Syntax für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 ```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
-Syntax für Azure SQL Data Warehouse und Parallel Data Warehouse:
+Syntax für [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
   
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 

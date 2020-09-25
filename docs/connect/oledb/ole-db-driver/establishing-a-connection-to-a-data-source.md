@@ -1,6 +1,6 @@
 ---
 title: Herstellen einer Verbindung zu einer Datenquelle (OLE DB-Treiber) | Microsoft-Dokumentation
-description: In diesem Artikel erfahren Sie, wie Sie eine Verbindung zu einer Datenquelle mithilfe des Microsoft OLE DB-Treibers für SQL Server herstellen.
+description: Erfahren Sie, wie ein Verbraucher mithilfe des Microsoft OLE DB-Treibers für SQL Server eine Verbindung zu einer Datenquelle herstellt.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, data source connections
 - CoCreateInstance method
 - OLE DB data sources [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 79f0ba6da0416c269d4a23cf45862746462f38e4
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0d842bcee76fa989d8212d3c377c25c1f86f2491
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244838"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861545"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Herstellen einer Verbindung zu einer Datenquelle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

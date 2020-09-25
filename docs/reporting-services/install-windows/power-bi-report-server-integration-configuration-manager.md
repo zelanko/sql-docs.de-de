@@ -1,4 +1,5 @@
 ---
+description: Berichtsserverintegration für Power BI (Configuration Manager)
 title: Integration von Power BI-Berichtsserver (Configuration Manager) | Microsoft-Dokumentation
 author: maggiesMSFT
 ms.author: maggies
@@ -6,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0eb3bcdd62d7f78799f754b668544cfdd01fcd9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265645"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991867"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Berichtsserverintegration für Power BI (Configuration Manager)
 
@@ -25,7 +26,7 @@ Zusätzlich zu einer aktiven Internetverbindung zum Öffnen des [!INCLUDE[sspowe
 
 - **Azure Active Directory:** Ihr Unternehmen muss Azure Active Directory verwenden, das die Verzeichnis- und Identitätsverwaltung für Azure-Dienste und Webanwendungen bietet. Weitere Informationen finden Sie unter [Was ist Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/).
 
-- **Verwalteter Mandant:** Das [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Dashboard, an das Sie Berichtselemente anheften möchten, muss Teil eines verwalteten Azure AD-Mandanten sein.  Ein verwalteter Mandant wird automatisch beim erstmaligen Abonnieren der Azure-Dienste wie Office 365 und Microsoft Intune für Ihr Unternehmen erstellt.   Virale Mandanten werden derzeit nicht unterstützt.  Weitere Informationen finden Sie in den Abschnitten „Erläuterung zum Azure AD-Mandanten“ und „Gewusst wie: Abrufen eines Azure AD-Verzeichnisses“ in [Erläuterungen zum Azure AD-Verzeichnis](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
+- **Verwalteter Mandant:** Das [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Dashboard, an das Sie Berichtselemente anheften möchten, muss Teil eines verwalteten Azure AD-Mandanten sein.  Ein verwalteter Mandant wird automatisch beim erstmaligen Abonnieren der Azure-Dienste wie Microsoft 365 und Microsoft Intune für Ihr Unternehmen erstellt.   Virale Mandanten werden derzeit nicht unterstützt.  Weitere Informationen finden Sie in den Abschnitten „Erläuterung zum Azure AD-Mandanten“ und „Gewusst wie: Abrufen eines Azure AD-Verzeichnisses“ in [Erläuterungen zum Azure AD-Verzeichnis](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
 
 - Der Benutzer, der die [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Integration durchführt, muss ein Mitglied des Azure AD-Mandanten, ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Systemadministrator und ein Systemadministrator für die ReportServer-Katalogdatenbank sein.
 
@@ -112,7 +113,7 @@ In diesem Abschnitt werden die grundlegenden Schritte und die damit verbundenen 
 
 1. Benutzer zeigen eine Berichtsvorschau im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] an und wenn sie das erste Mal klicken, um ein Berichtselement aus dem [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] anzuheften.
 
-2. Sie werden zur Azure Active Directory-Anmeldeseite umgeleitet. Sie können sich auch über die [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]-Seite **Meine Einstellungen** anmelden. Wenn sich Benutzer bei einem verwalteten Azure-Mandanten anmelden, wird eine Beziehung zwischen dem Azure-Konto und den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berechtigungen erstellt.  Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](../my-settings-for-power-bi-integration-web-portal.md)integrieren.
+2. Sie werden zur Azure Active Directory-Anmeldeseite umgeleitet. Sie können sich auch über die -Seite [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **Meine Einstellungen** anmelden. Wenn sich Benutzer bei einem verwalteten Azure-Mandanten anmelden, wird eine Beziehung zwischen dem Azure-Konto und den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berechtigungen erstellt.  Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration &#40;Webportal&#41;](../my-settings-for-power-bi-integration-web-portal.md)integrieren.
 
 3. Ein Benutzersicherheitstoken wird an den Berichtsserver zurückgegeben.
 
@@ -124,7 +125,7 @@ In diesem Abschnitt werden die grundlegenden Schritte und die damit verbundenen 
 
 7. Es wird ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnement erstellt, um die geplante Aktualisierung des Berichtselements auf der Dashboardkachel zu verwalten. Das Abonnement verwendet das Sicherheitstoken, das bei der Anmeldung des Benutzers erstellt wurde.
 
-     Das Token ist für **90 Tage**gültig. Anschließend müssen sich die Benutzer neu anmelden, um ein neues Benutzertoken zu erstellen. Wenn das Token abgelaufen ist, werden die angehefteten Kacheln weiterhin im Dashboard angezeigt, aber die Daten werden nicht mehr aktualisiert.  Die für angeheftete Elemente verwendeten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements weisen einen Fehler auf, bis ein neues Benutzertoken erstellt wird. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration (Webportal)](../my-settings-for-power-bi-integration-web-portal.md). finden Sie weitere Informationen.
+     Das Token ist für **90 Tage**gültig. Anschließend müssen sich die Benutzer neu anmelden, um ein neues Benutzertoken zu erstellen. Wenn das Token abgelaufen ist, werden die angehefteten Kacheln weiterhin im Dashboard angezeigt, aber die Daten werden nicht mehr aktualisiert.  Die für angeheftete Elemente verwendeten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements weisen einen Fehler auf, bis ein neues Benutzertoken erstellt wird. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration (Webportal)](../my-settings-for-power-bi-integration-web-portal.md). um weitere Informationen zu erhalten.
 
 Wenn ein Benutzer ein Element ein zweites Mal anheftet, werden die Schritte 1 bis 4 übersprungen und stattdessen die App-ID und die URLs aus der ReportServer-Datenbank abgerufen. Der Ablauf wird dann mit Schritt 5 fortgesetzt.
 

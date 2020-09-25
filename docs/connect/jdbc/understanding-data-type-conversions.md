@@ -1,5 +1,6 @@
 ---
-title: Grundlegendes zu Datentypkonvertierungen | Microsoft-Dokumentation
+title: Grundlegendes zu Datentypkonvertierungen
+description: Erfahren Sie Einzelheiten zur Verarbeitung von Datentypkonvertierungen zwischen JDBC- und Datenbank-Datentypen durch den JDBC-Treiber für SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d27c53199a549c05c1b0fce65ab0d538022f48ea
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fa84b420b4100e74a9e57047f1bfbbd386fa5fa6
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902426"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435314"
 ---
 # <a name="understanding-data-type-conversions"></a>Grundlegendes zu Datentypkonvertierungen
 
@@ -31,29 +32,29 @@ Das folgende Diagramm enthält auf Grundlage der [!INCLUDE[ssNoVersion](../../in
 
 Von den Abrufmethoden des JDBC-Treibers werden drei Konvertierungskategorien unterstützt:
 
-- **Non-Lossy (x)** : Konvertierungen für Fälle, in denen der Abruftyp maximal dem zugrunde liegenden Servertyp entspricht. Beim Aufruf von getBigDecimal für eine zugrunde liegende dezimale Serverspalte ist beispielsweise keine Konvertierung erforderlich.
+- **Non-Lossy (x)**: Konvertierungen für Fälle, in denen der Abruftyp maximal dem zugrunde liegenden Servertyp entspricht. Beim Aufruf von getBigDecimal für eine zugrunde liegende dezimale Serverspalte ist beispielsweise keine Konvertierung erforderlich.
 
-- **Converted (y)** : Konvertierungen von numerischen Servertypen zu Java-Typen, bei denen die Konvertierung entsprechend den Konvertierungsregeln von Java erfolgt. Bei diesen Konvertierungen wird die Genauigkeit gekürzt (niemals gerundet), und der Überlauf wird als Modulo des Zieltyps behandelt, der kleiner ist. Beim Aufruf von getInt für eine zugrunde liegende **Dezimalspalte** mit dem Wert „1,9999“ wird beispielsweise der Wert „1“ zurückgegeben. Beim zugrunde liegenden **Dezimalwert** „3000000000“ beträgt der Überlauf des **int**-Werts dann „-1294967296“.
+- **Converted (y)**: Konvertierungen von numerischen Servertypen zu Java-Typen, bei denen die Konvertierung den Konvertierungsregeln von Java entsprechend erfolgt. Bei diesen Konvertierungen wird die Genauigkeit gekürzt (niemals gerundet), und der Überlauf wird als Modulo des Zieltyps behandelt, der kleiner ist. Beim Aufruf von getInt für eine zugrunde liegende **Dezimalspalte** mit dem Wert „1,9999“ wird beispielsweise der Wert „1“ zurückgegeben. Beim zugrunde liegenden **Dezimalwert** „3000000000“ beträgt der Überlauf des **int**-Werts dann „-1294967296“.
 
-- **Data Dependent (z)** : Bei Konvertierungen von zugrunde liegenden Datentypen in numerische Typen müssen die Zeichentypen Werte enthalten, die in den betreffenden Typ konvertiert werden können. Andere Konvertierungen werden nicht ausgeführt. Werte, die für den Abruftyp zu groß sind, sind ungültig. Beim Aufruf von getInt für eine varchar(50)-Spalte, die "53" enthält, wird beispielsweise der Wert als **int** zurückgegeben. Bei einem zugrunde liegenden Wert von "xyz" oder "3000000000" wird ein Fehler ausgegeben.
+- **Data Dependent (z)**: Bei Konvertierungen von zugrunde liegenden Datentypen in numerische Typen müssen die Zeichentypen Werte enthalten, die in den betreffenden Typ konvertiert werden können. Andere Konvertierungen werden nicht ausgeführt. Werte, die für den Abruftyp zu groß sind, sind ungültig. Beim Aufruf von getInt für eine varchar(50)-Spalte, die "53" enthält, wird beispielsweise der Wert als **int** zurückgegeben. Bei einem zugrunde liegenden Wert von "xyz" oder "3000000000" wird ein Fehler ausgegeben.
 
-Wenn getString für einen **binären**, **varbinary**-, **varbinary(max)** - oder **image**-Spaltendatentyp aufgerufen wird, wird der Wert als hexadezimaler Zeichenfolgenwert zurückgegeben.
+Wenn getString für einen **binären**, **varbinary**-, **varbinary(max)**- oder **image**-Spaltendatentyp aufgerufen wird, wird der Wert als hexadezimaler Zeichenfolgenwert zurückgegeben.
 
 ## <a name="updater-method-conversions"></a>Konvertierungen für Updatemethoden
 
-Für die Java-Typdaten, die an die \<Type>()-Methoden der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse übergeben werden, gelten die folgenden Konvertierungen.
+Für die Java-Typdaten, die an die update\<Type>()-Methoden der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse übergeben werden, gelten die folgenden Konvertierungen.
 
 ![JDBCUpdaterConversions](../../connect/jdbc/media/jdbc_jdbcupdatterconversions.gif "JDBCUpdaterConversions")
 
 Von den Updatemethoden des JDBC-Treibers werden drei Konvertierungskategorien unterstützt:
 
-- **Non-Lossy (x)** : Konvertierungen für Fälle, in denen der Aktualisierungstyp maximal dem zugrunde liegenden Servertyp entspricht. Beim Aufruf von updateBigDecimal für eine zugrunde liegende dezimale Serverspalte ist beispielsweise keine Konvertierung erforderlich.
+- **Non-Lossy (x)**: Konvertierungen für Fälle, in denen der Aktualisierungstyp maximal dem zugrunde liegenden Servertyp entspricht. Beim Aufruf von updateBigDecimal für eine zugrunde liegende dezimale Serverspalte ist beispielsweise keine Konvertierung erforderlich.
 
-- **Converted (y)** : Konvertierungen von numerischen Servertypen zu Java-Typen, bei denen die Konvertierung entsprechend den Konvertierungsregeln von Java erfolgt. Bei diesen Konvertierungen wird die Genauigkeit gekürzt (niemals gerundet), und der Überlauf wird als Modulo des (kleineren) Zieltyps behandelt. Beim Aufruf von updateDecimal für eine zugrunde liegende **int**-Spalte mit dem Wert „1,9999“ wird beispielsweise der Wert „1“ zurückgegeben. Beim zugrunde liegenden **Dezimalwert** „3000000000“ beträgt der Überlauf des **int**-Werts dann „-1294967296“.
+- **Converted (y)**: Konvertierungen von numerischen Servertypen zu Java-Typen, bei denen die Konvertierung den Konvertierungsregeln von Java entsprechend erfolgt. Bei diesen Konvertierungen wird die Genauigkeit gekürzt (niemals gerundet), und der Überlauf wird als Modulo des (kleineren) Zieltyps behandelt. Beim Aufruf von updateDecimal für eine zugrunde liegende **int**-Spalte mit dem Wert „1,9999“ wird beispielsweise der Wert „1“ zurückgegeben. Beim zugrunde liegenden **Dezimalwert** „3000000000“ beträgt der Überlauf des **int**-Werts dann „-1294967296“.
 
-- **Data Dependent (z)** : Bei Konvertierungen von zugrunde liegenden Quelldatentypen in Zieldatentypen müssen die enthaltenen Werte in die Zieltypen konvertiert werden können. Andere Konvertierungen werden nicht ausgeführt. Werte, die für den Abruftyp zu groß sind, sind ungültig. Beispielsweise wird das Update bei einem Aufruf von updateString für eine int-Spalte, die "53" enthält, erfolgreich ausgeführt. Bei einem zugrunde liegenden String-Wert von "foo" oder "3000000000" wird ein Fehler ausgelöst.
+- **Data Dependent (z)**: Bei Konvertierungen von zugrunde liegenden Quelldatentypen zu Zieldatentypen müssen die enthaltenen Werte zu den Zieltypen konvertiert werden können. Andere Konvertierungen werden nicht ausgeführt. Werte, die für den Abruftyp zu groß sind, sind ungültig. Beispielsweise wird das Update bei einem Aufruf von updateString für eine int-Spalte, die "53" enthält, erfolgreich ausgeführt. Bei einem zugrunde liegenden String-Wert von "foo" oder "3000000000" wird ein Fehler ausgelöst.
 
-Wenn updateString für einen **binären**, **varbinary**-, **varbinary(max)** - oder **image**-Spaltendatentyp aufgerufen wird, wird der Zeichenfolgenwert als hexadezimaler Zeichenfolgenwert zurückgegeben.
+Wenn updateString für einen **binären**, **varbinary**-, **varbinary(max)**- oder **image**-Spaltendatentyp aufgerufen wird, wird der Zeichenfolgenwert als hexadezimaler Zeichenfolgenwert zurückgegeben.
 
 Wenn der Datentyp der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalte **XML** ist, muss der Datenwert ein gültiger **XML**-Wert sein. Beim Aufrufen der Methoden updateBytes, updateBinaryStream oder updateBlob sollte der Datenwert die hexadezimale Zeichenfolgendarstellung der XML-Zeichen sein. Beispiel:
 
@@ -65,17 +66,17 @@ Beachten Sie, dass eine Bytereihenfolge-Marke (BOM) erforderlich ist, wenn die X
 
 ## <a name="setter-method-conversions"></a>Konvertierungen für Festlegungsmethoden
 
-Für die Java-Typdaten, die an die \<Type>()-Methoden der [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Klasse und der [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse übergeben werden, gelten die folgenden Konvertierungen.
+Für die Java-Typdaten, die an die set\<Type>()-Methoden der [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Klasse und der [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse übergeben werden, gelten die folgenden Konvertierungen.
 
 ![JDBCSetterConversions](../../connect/jdbc/media/jdbc_jdbcsetterconversions_v2.gif "JDBCSetterConversions")
 
 Der Server versucht alle Konvertierungen und gibt bei Fehlern eine Fehlermeldung zurück.
 
-Wenn der Wert eines **String**-Datentyps die Länge von **VARCHAR** überschreitet, wird er **LONGVARCHAR** zugeordnet. Ebenso wird **NVARCHAR** **LONGNVARCHAR** zugeordnet, wenn der Wert die unterstützte Länge von **NVARCHAR** überschreitet. Das gleiche gilt für **byte[]** . Werte, die länger sind als **VARBINARY**, werden zu **LONGVARBINARY**.
+Wenn der Wert eines **String**-Datentyps die Länge von **VARCHAR** überschreitet, wird er **LONGVARCHAR** zugeordnet. Ebenso wird **NVARCHAR****LONGNVARCHAR** zugeordnet, wenn der Wert die unterstützte Länge von **NVARCHAR** überschreitet. Das gleiche gilt für **byte[]**. Werte, die länger sind als **VARBINARY**, werden zu **LONGVARBINARY**.
 
 Von den Festlegungsmethoden des JDBC-Treibers werden zwei Konvertierungskategorien unterstützt:
 
-- **Non-Lossy (x)** : Konvertierungen für numerische Fälle, in denen der Festlegungstyp maximal dem zugrunde liegenden Servertyp entspricht. Beim Aufruf von updateBigDecimal für eine zugrunde liegende **dezimale** Serverspalte ist beispielsweise keine Konvertierung erforderlich. Bei der Umwandlung von numerischen Typen in Zeichentypen wird der **numerische** Java-Datentyp in eine **Zeichenfolge** konvertiert. Beim Aufruf von setDouble für eine varchar(50)-Spalte mit dem Wert "53" wird beispielsweise in der betreffenden Zielspalte der Zeichenwert "53" erzeugt.
+- **Non-Lossy (x)**: Konvertierungen für numerische Fälle, in denen der Festlegungstyp maximal dem zugrunde liegenden Servertyp entspricht. Beim Aufruf von updateBigDecimal für eine zugrunde liegende **dezimale** Serverspalte ist beispielsweise keine Konvertierung erforderlich. Bei der Umwandlung von numerischen Typen in Zeichentypen wird der **numerische** Java-Datentyp in eine **Zeichenfolge** konvertiert. Beim Aufruf von setDouble für eine varchar(50)-Spalte mit dem Wert "53" wird beispielsweise in der betreffenden Zielspalte der Zeichenwert "53" erzeugt.
 
 - **Converted (y)** : Konvertierungen eines **numerischen** Java-Typs in einen zugrunde liegenden **numerischen** Servertyp, der kleiner ist. Diese Konvertierung ist regulär und erfolgt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konvertierungskonventionen entsprechend. Die Genauigkeit wird immer gekürzt (niemals gerundet). Bei einem Überlauf wird der Fehler ausgegeben, dass die Konvertierung nicht unterstützt wird. Beispielsweise führt updateDecimal mit einem Wert von "1,9999" für eine zugrunde liegende integer-Spalte zu einer "1" in der Zielspalte. Bei Übergabe von "3000000000" löst der Treiber jedoch einen Fehler aus.
 
@@ -100,11 +101,11 @@ Für die Java-Typdaten, die an die setObject(\<Type>)-Methoden der [SQLServerPre
 
 ![JDBCSetObjectConversions](../../connect/jdbc/media/jdbc_jdbcsetobjectconversions.gif "JDBCSetObjectConversions")
 
-Die setObject-Methode ohne Angabe eines Zieltyps verwendet die Standardzuordnung. Wenn der Wert eines **String**-Datentyps die Länge von **VARCHAR** überschreitet, wird er **LONGVARCHAR** zugeordnet. Ebenso wird **NVARCHAR** **LONGNVARCHAR** zugeordnet, wenn der Wert die unterstützte Länge von **NVARCHAR** überschreitet. Das gleiche gilt für **byte[]** . Werte, die länger sind als **VARBINARY**, werden zu **LONGVARBINARY**.
+Die setObject-Methode ohne Angabe eines Zieltyps verwendet die Standardzuordnung. Wenn der Wert eines **String**-Datentyps die Länge von **VARCHAR** überschreitet, wird er **LONGVARCHAR** zugeordnet. Ebenso wird **NVARCHAR****LONGNVARCHAR** zugeordnet, wenn der Wert die unterstützte Länge von **NVARCHAR** überschreitet. Das gleiche gilt für **byte[]**. Werte, die länger sind als **VARBINARY**, werden zu **LONGVARBINARY**.
 
 Von den setObject-Methoden des JDBC-Treibers werden drei Konvertierungskategorien unterstützt:
 
-- **Non-Lossy (x)** : Konvertierungen für numerische Fälle, in denen der Festlegungstyp maximal dem zugrunde liegenden Servertyp entspricht. Beim Aufruf von updateBigDecimal für eine zugrunde liegende **dezimale** Serverspalte ist beispielsweise keine Konvertierung erforderlich. Bei der Umwandlung von numerischen Typen in Zeichentypen wird der **numerische** Java-Datentyp in eine **Zeichenfolge** konvertiert. Beim Aufruf von setDouble für eine varchar(50)-Spalte mit dem Wert "53" wird beispielsweise in der betreffenden Zielspalte der Zeichenwert "53" erzeugt.
+- **Non-Lossy (x)**: Konvertierungen für numerische Fälle, in denen der Festlegungstyp maximal dem zugrunde liegenden Servertyp entspricht. Beim Aufruf von updateBigDecimal für eine zugrunde liegende **dezimale** Serverspalte ist beispielsweise keine Konvertierung erforderlich. Bei der Umwandlung von numerischen Typen in Zeichentypen wird der **numerische** Java-Datentyp in eine **Zeichenfolge** konvertiert. Beim Aufruf von setDouble für eine varchar(50)-Spalte mit dem Wert "53" wird beispielsweise in der betreffenden Zielspalte der Zeichenwert "53" erzeugt.
 
 - **Converted (y)** : Konvertierungen eines **numerischen** Java-Typs in einen zugrunde liegenden **numerischen** Servertyp, der kleiner ist. Diese Konvertierung ist regulär und erfolgt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konvertierungskonventionen entsprechend. Die Genauigkeit wird immer gekürzt (niemals gerundet). Bei einem Überlauf wird der Fehler ausgegeben, dass die Konvertierung nicht unterstützt wird. Beispielsweise führt updateDecimal mit einem Wert von "1,9999" für eine zugrunde liegende integer-Spalte zu einer "1" in der Zielspalte. Bei Übergabe von "3000000000" löst der Treiber jedoch einen Fehler aus.
 

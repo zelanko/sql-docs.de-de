@@ -27,14 +27,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
-ms.date: 01/23/2020
+ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8bec01c994df45975ac42faa25f0fb389443eb82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 61d00005973755588012d0e7e1d9f4be9327fa08
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998547"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076755"
 ---
 # <a name="bcp-utility"></a>Hilfsprogramms bcp
 
@@ -42,7 +42,7 @@ ms.locfileid: "85998547"
 
 > Informationen zur bcp-Verwendung unter Linux finden Sie unter [Installieren von sqlcmd und bcp unter Linux](../linux/sql-server-linux-setup-tools.md).
 >
-> Ausführliche Informationen zum Verwenden von bcp mit Azure SQL Data Warehouse finden Sie im Artikel zum [Laden von Daten mit bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
+> Ausführliche Informationen zum Verwenden von bcp mit Azure SQL Data Warehouse finden Sie im Artikel zum [Laden von Daten mit bcp](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
 Mit dem Hilfsprogramm **bcp** (**B**ulk **C**opy **P**rogram) werden Daten per Massenvorgang zwischen einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in einem benutzerdefinierten Format kopiert. Das Hilfsprogramm **bcp** kann verwendet werden, um große Mengen neuer Zeilen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabellen zu importieren oder um Daten aus Tabellen in Datendateien zu exportieren. Außer in Verbindung mit der Option **queryout** sind für das Hilfsprogramm keine Kenntnisse von [!INCLUDE[tsql](../includes/tsql-md.md)]erforderlich. Um Daten in eine Tabelle zu importieren, müssen Sie entweder eine für diese Tabelle erstellte Formatdatei verwenden oder die Struktur der Tabelle und die Art der Daten kennen, die in den Tabellenspalten zulässig sind.  
 
@@ -53,16 +53,16 @@ Mit dem Hilfsprogramm **bcp** (**B**ulk **C**opy **P**rogram) werden Daten per M
 
 ## <a name="download-the-latest-version-of-bcp-utility"></a>Herunterladen der aktuellen Version des bcp-Hilfsprogramms
 
-**[![Herunterladen](../ssdt/media/download.png)Microsoft Befehlszeilen-Hilfsprogramme 15 für SQL Server (x64) herunterladen](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![Herunterladen](../ssdt/media/download.png)Microsoft Befehlszeilen-Hilfsprogramme 15 für SQL Server (x86) herunterladen](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![bcp für x64 herunterladen](../ssdt/media/download.png) Microsoft Befehlszeilen-Hilfsprogramme 15 für SQL Server (x64) herunterladen](https://go.microsoft.com/fwlink/?linkid=2142258)**
+<br>**[![bcp für x86 herunterladen](../ssdt/media/download.png) Microsoft Befehlszeilen-Hilfsprogramme 15 für SQL Server (x86) herunterladen](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 Die Befehlszeilentools sind allgemein verfügbar (GA-Version), sie werden jedoch mit dem Installationspaket für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] veröffentlicht.
 
 ### <a name="version-information"></a>Versionsinformationen
 
-Releasenummer: 15.0 <br>
-Buildnummer: 15.0.1300.359<br>
-Veröffentlichungsdatum: 13. März 2019
+Releasenummer: 15.0.2 <br>
+Buildnummer: 15.0.2000.5<br>
+Veröffentlichungsdatum: 11. September 2020
 
 Die neue Version von SQLCMD unterstützt die Azure AD-Authentifizierung, einschließlich der Multi-Factor Authentication-Unterstützung (MFA) für SQL-Datenbank, SQL Data Warehouse und Always Encrypted-Features.
 Die neue BCP unterstützt die Azure AD-Authentifizierung, einschließlich der Multi-Factor Authentication-Unterstützung (MFA) für SQL-Datenbank und SQL Data Warehouse.
@@ -71,9 +71,9 @@ Die neue BCP unterstützt die Azure AD-Authentifizierung, einschließlich der Mu
 
 Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
-Für diese Komponente sind sowohl [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) als auch [Microsoft ODBC Driver for SQL Server 17](https://www.microsoft.com/download/details.aspx?id=56567) erforderlich.
+Für diese Komponente sind sowohl [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) als auch [Microsoft ODBC Driver for SQL Server 17](https://aka.ms/downloadmsodbcsql) erforderlich.
 
-Führen Sie zum Überprüfen der BCP-Version den Befehl `bcp /v` aus, und vergewissern Sie sich, dass Version 15.0.1300.359 oder höher verwendet wird.
+Führen Sie zum Überprüfen der BCP-Version den Befehl `bcp /v` aus, und vergewissern Sie sich, dass Version 15.0.2000.5 oder höher verwendet wird.
 
 <table><th>Syntax</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -124,7 +124,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  Sie können den Datenbanknamen auch explizit mit **-d** angeben.  
 
- **in** *Datendatei* | **out** *Datendatei* | **queryout** *Datendatei* | **format nul**  
+ **in** *Datendatei* \| **out** *Datendatei* \| **queryout** *Datendatei* \| **format nul**  
  Gibt die Richtung des Massenkopierens wie folgt an:  
   
 - **in**<a name="in"></a> werden Daten aus einer Datei in die Datenbanktabelle oder -sicht kopiert.  
@@ -163,7 +163,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Weitere Informationen finden Sie unter [Verwenden des Zeichenformats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).  
   
- **-C** { **ACP** | **OEM** | **RAW** | *Codepage* }<a name="C"></a>   
+ **-C** { **ACP** \| **OEM** \| **RAW** \| *code_page* }<a name="C"></a>   
  Gibt die Codepage für die in der Datendatei enthaltenen Daten an. *Codepage* ist nur dann von Bedeutung, wenn die Daten **char**-, **varchar**- oder **text** -Spalten mit Zeichenwerten enthalten, die größer als 127 oder kleiner als 32 sind.  
   
 > [!NOTE]
@@ -215,7 +215,7 @@ Gibt an, dass der oder die Identitätswerte in der importierten Datendatei für 
 
 **-G**<a name="G"></a>
 
- Diese Option wird vom Client beim Herstellen einer Verbindung mit Azure SQL-Datenbank oder Azure SQL-Datenbank verwendet, um anzugeben, dass der Benutzer mithilfe der Azure Active Directory-Authentifizierung authentifiziert werden soll. Der Schalter „-G“ erfordert [Version 14.0.3008.27 oder höher](https://go.microsoft.com/fwlink/?LinkID=825643). Führen Sie „bcp -v“ aus, um die von Ihnen verwendete Version zu ermitteln. Weitere Informationen finden Sie unter [Verwenden der Azure Active Directory-Authentifizierung für die Authentifizierung mit SQL-Datenbank oder SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+ Diese Option wird vom Client beim Herstellen einer Verbindung mit Azure SQL-Datenbank oder Azure SQL-Datenbank verwendet, um anzugeben, dass der Benutzer mithilfe der Azure Active Directory-Authentifizierung authentifiziert werden soll. Der Schalter „-G“ erfordert [Version 14.0.3008.27 oder höher](https://go.microsoft.com/fwlink/?LinkID=825643). Führen Sie „bcp -v“ aus, um die von Ihnen verwendete Version zu ermitteln. Weitere Informationen finden Sie unter [Verwenden der Azure Active Directory-Authentifizierung für die Authentifizierung mit SQL-Datenbank oder SQL Data Warehouse](/azure/sql-database/sql-database-aad-authentication). 
 
 > [!IMPORTANT]
 > Die **-G** -Option gilt nur für Azure SQL-Datenbank und Azure Data Warehouse.
@@ -260,7 +260,7 @@ Gibt an, dass der oder die Identitätswerte in der importierten Datendatei für 
 
    Durch die interaktive Azure AD-Authentifizierung für Azure SQL-Datenbank und SQL Data Warehouse können Sie eine interaktive Methode verwenden, die die mehrstufige Authentifizierung unterstützt. Weitere Informationen finden Sie unter [Interaktive Active Directory-Authentifizierung](../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
 
-   Die interaktive Azure AD-Authentifizierung erfordert die **bcp**-[Version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) oder höher sowie die [ODBC-Version 17.2 oder höher](https://www.microsoft.com/download/details.aspx?id=56567).  
+   Die interaktive Azure AD-Authentifizierung erfordert die **bcp**-[Version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) oder höher sowie die [ODBC-Version 17.2 oder höher](https://aka.ms/downloadmsodbcsql).  
 
    Geben Sie zum Aktivieren der interaktiven Authentifizierung die Option „-G“ nur mit dem Benutzernamen (-U) und ohne ein Kennwort an.
 
@@ -415,7 +415,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
  **-v**<a name="v"></a>  
  Meldet die Versionsnummer und Copyrightinformationen des **bcp** -Hilfsprogramms.  
   
- **-V** (**80** | **90** | **100** | **110** | **120** | **130)<a name="V"></a>  
+ **-V** (**80** \| **90** \| **100** \| **110** \| **120** \| **130**)<a name="V"></a>  
  Führt den Massenkopiervorgang mithilfe von Datentypen aus einer früheren Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]aus. Diese Option fordert nicht für jedes Feld zu einer Eingabe auf. Es werden die Standardwerte verwendet.  
   
  **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  
@@ -444,7 +444,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
 
 ## <a name="remarks"></a>Hinweise<a name="remarks"></a>
 
-- Der **bcp** 13.0-Client wird bei der Installation der [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Tools installiert. Wenn sowohl Tools für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] als auch für eine frühere Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]installiert sind, verwenden Sie, abhängig von der Reihenfolge der Werte in der PATH-Umgebungsvariablen, möglicherweise den früheren **bcp** -Client anstelle des **bcp** 13.0-Clients. Diese Umgebungsvariable definiert die Verzeichnisse, in denen von Windows nach ausführbaren Dateien gesucht wird. Führen Sie über die Windows-Befehlszeile den Befehl **bcp /v** oder **bcp -v** aus, um zu ermitteln, welche Version Sie verwenden. Weitere Informationen dazu, wie Sie den Befehlspfad in der PATH-Umgebungsvariablen festlegen, finden Sie unter [Umgebungsvariablen](https://docs.microsoft.com/windows/win32/shell/user-environment-variables). Alternativ können Sie die Windows-Hilfe nach „Umgebungsvariablen“ durchsuchen.
+- Der **bcp** 13.0-Client wird bei der Installation der [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Tools installiert. Wenn sowohl Tools für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] als auch für eine frühere Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]installiert sind, verwenden Sie, abhängig von der Reihenfolge der Werte in der PATH-Umgebungsvariablen, möglicherweise den früheren **bcp** -Client anstelle des **bcp** 13.0-Clients. Diese Umgebungsvariable definiert die Verzeichnisse, in denen von Windows nach ausführbaren Dateien gesucht wird. Führen Sie über die Windows-Befehlszeile den Befehl **bcp /v** oder **bcp -v** aus, um zu ermitteln, welche Version Sie verwenden. Weitere Informationen dazu, wie Sie den Befehlspfad in der PATH-Umgebungsvariablen festlegen, finden Sie unter [Umgebungsvariablen](/windows/win32/shell/user-environment-variables). Alternativ können Sie die Windows-Hilfe nach „Umgebungsvariablen“ durchsuchen.
 
     Sie müssen ältere Versionen des bcp-Hilfsprogramms entfernen, um sicherzustellen, dass die neueste Version ordnungsgemäß ausgeführt wird.
 
@@ -464,7 +464,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
 
 - Informationen dazu, wann Zeileneinfügevorgänge, die durch den Massenimport ausgeführt werden, im Transaktionsprotokoll protokolliert werden, finden Sie unter [Voraussetzungen für die minimale Protokollierung beim Massenimport](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).
 
-- [Verwenden zusätzlicher Sonderzeichen](https://docs.microsoft.com/windows-server/administration/windows-commands/set_1#remarks)
+- [Verwenden zusätzlicher Sonderzeichen](/windows-server/administration/windows-commands/set_1#remarks)
 
     Die Zeichen <, >, |, & und ^ sind spezielle Zeichen für die Befehlsshell. Diesen muss ein Escapezeichen (^) vorangestellt werden, oder sie müssen in Anführungszeichen gesetzt werden, wenn sie in einer Zeichenfolge verwendet werden (z. B. „ZeichenfolgeMit&Symbol“). Wenn Sie eine Zeichenfolge, die eines der Sonderzeichen enthält, in Anführungszeichen einschließen, werden diese als Teil des Werts der Umgebungsvariable festgelegt.
 
@@ -758,9 +758,5 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 - [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
 - [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-
-## <a name="feedback"></a>Feedback
-
-![Person_benötigt_Hilfe_Symbol](../ssms/media/needhelp_person_icon.png) [SQL Clienttools-Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -1,6 +1,6 @@
 ---
 title: Erstellen von R-Modellen mit RevoScaleR
-description: 'Tutorial 7 zu RevoScaleR: Erstellen eines Models mithilfe der R-Sprache in SQL Server'
+description: Erfahren Sie, wie ein lineares Regressionsmodell zum Analysieren der Daten erstellt wird, die Sie in einem vorhergehenden Tutorial erweitert haben.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 50d145e1191779e3c1af4788c406856dd16b8e82
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c37608146b0ebf75cd0042f12ffc004f1273960
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728601"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178817"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Erstellen von R-Modellen (SQL Server- und RevoScaleR-Tutorial)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Bei diesem Tutorial handelt es sich um das 7. Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Lernprogramm erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 

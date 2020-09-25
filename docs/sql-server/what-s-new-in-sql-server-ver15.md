@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c1232571931a8260e545aa21d483a5fbe2d93c70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923406"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864301"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -262,7 +262,7 @@ In dieser Version werden neue Funktionen eingeführt, um Dateivorgänge zu verbe
 
 | Neue Funktion oder Update | Details |
 |:---|:---|
-|Unterstützung für Datenbanken mit verwalteter Azure SQL-Datenbank-Instanz| Hosten von [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] auf einer verwalteten Instanz. Informationen finden Sie unter [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]-Installation und -Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|Unterstützung für Azure SQL Managed Instance-Datenbanken| Hosten von [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] auf Azure SQL Managed Instance. Informationen finden Sie unter [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]-Installation und -Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
 |Neue HTML-Steuerelemente| HTML-Steuerelemente ersetzen alle früheren Silverlight-Komponenten. Die Silverlight-Abhängigkeit wurde aufgehoben.|
 | &nbsp; | &nbsp; |
 

@@ -2,7 +2,7 @@
 description: Konstanten (Transact-SQL)
 title: Konstanten (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8b68b99fa522b69401eab47d54e40cdf8621c2
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422934"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027281"
 ---
 # <a name="constants-transact-sql"></a>Konstanten (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +46,12 @@ ms.locfileid: "88422934"
 Eine Konstante, gelegentlich auch als Literal- oder Skalarwert bezeichnet, ist ein Symbol, das einen bestimmten Datenwert repräsentiert. Das Format einer Konstante ist abhängig vom Datentyp des Werts, den sie repräsentiert.
   
 ## <a name="character-string-constants"></a>Zeichenfolgenkonstanten
-Zeichenfolgenkonstanten werden in einfache Anführungszeichen eingeschlossen und enthalten alphanumerische Zeichen (a-z, A-Z und 0-9) sowie Sonderzeichen, wie z. B. Ausrufezeichen (!), @-Zeichen und Nummernzeichen (#). Zeichenfolgenkonstanten wird die Standardsortierung der aktuellen Datenbank zugewiesen, es sei denn, mit der COLLATE-Klausel wird eine Sortierung angegeben. Vom Benutzer eingegebene Zeichenfolgen werden durch die Codepage auf dem Computer ausgewertet und ggf. in die Standardcodepage der Datenbank übersetzt.
+Zeichenfolgenkonstanten werden in einfache Anführungszeichen eingeschlossen und enthalten alphanumerische Zeichen (a-z, A-Z und 0-9) sowie Sonderzeichen, wie z. B. Ausrufezeichen (!), @-Zeichen und Nummernzeichen (#). Zeichenfolgenkonstanten wird die Standardsortierung der aktuellen Datenbank zugewiesen. Wenn die COLLATE-Klausel verwendet wird, erfolgt die Konvertierung in die Standardcodepage der Datenbank trotzdem noch vor der Konvertierung in die durch die COLLATE-Klausel angegebene Sortierung. Vom Benutzer eingegebene Zeichenfolgen werden durch die Codepage auf dem Computer ausgewertet und ggf. in die Standardcodepage der Datenbank übersetzt.
+
+> [!NOTE]
+> Wenn mithilfe der COLLATE-Klausel eine [UTF8-fähige Sortierung](../../relational-databases/collations/collation-and-unicode-support.md#utf8) angegeben wird, erfolgt die Konvertierung in die Standardcodepage der Datenbank trotzdem noch vor der Konvertierung in die von der COLLATE-Klausel angegebene Sortierung. Die Konvertierung erfolgt nicht direkt mit der angegebenen Unicode-fähigen Sortierung. Weitere Informationen finden Sie unter [Unicode-Zeichenfolgen](#unicode-strings).
   
-Wurde für die QUOTED_IDENTIFIER-Option für eine Verbindung OFF festgelegt, können Zeichenfolgen auch in doppelte Anführungszeichen eingeschlossen werden; allerdings verwenden der Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anbieter und der ODBC-Treiber automatisch SET QUOTED_IDENTIFIER ON. Es wird die Verwendung einfacher Anführungszeichen empfohlen.
+Wurde für die QUOTED_IDENTIFIER-Option für eine Verbindung OFF festgelegt, können Zeichenfolgen auch in doppelte Anführungszeichen eingeschlossen werden; der Microsoft [OLE DB-Treiber für SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) und der [ODBC-Treiber für SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) verwenden jedoch automatisch `SET QUOTED_IDENTIFIER ON`. Es wird die Verwendung einfacher Anführungszeichen empfohlen.
   
 Enthält eine in einfache Anführungszeichen eingeschlossene Zeichenfolge ein eingeschlossenes Anführungszeichen, muss das eingeschlossene Anführungszeichen durch zwei einfache Anführungszeichen ersetzt werden. Bei Zeichenfolgen, die in doppelten Anführungszeichen stehen, ist dies nicht erforderlich.
   
@@ -64,18 +67,23 @@ Nachfolgend finden Sie Beispiele für Zeichenfolgen:
   
 Leere Zeichenfolgen werden als zwei einzelne Anführungszeichen ohne Inhalt dargestellt. Im 6.x-Kompatibilitätsmodus wird eine leere Zeichenfolge als einzelnes Leerzeichen interpretiert.
   
-Zeichenfolgenkonstanten unterstützen erweiterte Sortierungen.
+Zeichenfolgenkonstanten unterstützen erweiterte [Sortierungen](../../relational-databases/collations/collation-and-unicode-support.md).
   
 > [!NOTE]  
->  Zeichenkonstanten, die größer sind als 8000 Bytes, werden als **varchar(max)-** Daten typisiert.  
+> Zeichenkonstanten, die größer sind als 8000 Bytes, werden als **varchar(max)-** Daten typisiert.  
   
 ## <a name="unicode-strings"></a>Unicode-Zeichenfolgen
-Unicode-Zeichenfolgen besitzen ein ähnliches Format wie Zeichenfolgen, werden aber mit einem N-Bezeichner eingeleitet (N steht für Landessprache (National Language) im SQL-92-Standard). Das Präfix N muss ein Großbuchstabe sein. Beispielsweise ist „Michél“ eine Zeichenkonstante, während „N‘Michél“ eine Unicode-Konstante ist. Unicode-Konstanten werden als Unicode-Daten interpretiert und nicht mithilfe einer Codepage ausgewertet. Unicode-Konstanten verfügen über eine Sortierung. Diese Sortierung steuert in erster Linie Vergleiche und die Unterscheidung nach Groß- und Kleinschreibung. Unicode-Konstanten wird die Standardsortierung der aktuellen Datenbank zugewiesen, es sei denn, mit der COLLATE-Klausel wird eine Sortierung angegeben. Unicode-Daten werden mithilfe von 2 Byte pro Zeichen anstelle von 1 Byte pro Zeichen bei Zeichendaten gespeichert. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
+Unicode-Zeichenfolgen besitzen ein ähnliches Format wie Zeichenfolgen, werden aber mit einem N-Bezeichner eingeleitet (N steht für Landessprache (National Language) im SQL-92-Standard). 
+
+> [!IMPORTANT]  
+> Das Präfix N muss ein Großbuchstabe sein. 
+
+Beispielsweise ist `'Michél'` eine Zeichenkonstante, während `N'Michél'` eine Unicode-Konstante ist. Unicode-Konstanten werden als Unicode-Daten interpretiert und nicht mithilfe einer Codepage ausgewertet. Unicode-Konstanten verfügen über eine Sortierung. Diese Sortierung steuert in erster Linie Vergleiche und die Unterscheidung nach Groß- und Kleinschreibung. Unicode-Konstanten wird die Standardsortierung der aktuellen Datenbank zugewiesen. Wenn die COLLATE-Klausel verwendet wird, erfolgt die Konvertierung in die Standardsortierung der Datenbank trotzdem noch vor der Konvertierung in die durch die COLLATE-Klausel angegebene Sortierung. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).
   
 Unicode-Zeichenfolgenkonstanten unterstützen erweiterte Sortierungen.
   
 > [!NOTE]  
->  Unicode-Konstanten, die größer sind als 8000 Bytes, werden als **nvarchar(max)**-Daten typisiert.  
+> Unicode-Konstanten, die größer sind als 8000 Bytes, werden als **nvarchar(max)**-Daten typisiert.  
   
 ## <a name="binary-constants"></a>Binäre Konstanten
 Binäre Konstanten besitzen das Präfix `0x` und bestehen aus einer Zeichenfolge von hexadezimalen Zahlen. Sie werden nicht in Anführungszeichen eingeschlossen.
@@ -200,11 +208,12 @@ Um anzugeben, ob eine Zahl positiv oder negativ ist, wenden Sie einen der unäre
 ```
   
 ## <a name="enhanced-collations"></a>Erweiterte Sortierungen  
-SQL Server unterstützt Zeichen- und Unicode-Zeichenfolgenkonstanten, die erweiterte Sortierungen unterstützen. Weitere Informationen finden Sie in der [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)-Klausel.
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] unterstützt Zeichen- und Unicode-Zeichenfolgenkonstanten, die erweiterte Sortierungen unterstützen. Weitere Informationen finden Sie in der [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)-Klausel.
   
 ## <a name="see-also"></a>Weitere Informationen
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
-  
+[Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)  
+[Rangfolge von Sortierungen](../../t-sql/statements/collation-precedence-transact-sql.md)    
   

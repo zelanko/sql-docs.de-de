@@ -1,6 +1,6 @@
 ---
 title: SSMS-Skriptobjekte
-description: Tutorial zur Erstellung von Skripts für Objekte in SSMS
+description: Erstellen von T-SQL-Skripts (Transact-SQL) für verschiedene Objekte in SQL Server Management Studio (SSMS).
 keywords: SQL Server, SSMS, SQL Server Management Studio, Skripts, Skripterstellung
 author: MashaMSFT
 ms.author: mathoma
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0cc0e394e622880dc60991b1c0ca3b0c00597be6
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247295"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523332"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Erstellen von Skripts für Objekte in SQL Server Management Studio
 

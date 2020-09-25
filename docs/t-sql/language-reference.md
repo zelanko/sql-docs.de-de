@@ -16,12 +16,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362d2643557229b64961217d9a5b5b3c4f784bff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 727dc40389d803cc81bb07011f799bc2d44365a0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360696"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076661"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL-Referenz (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ Dieses Thema gilt beispielsweise für alle Versionen und hat folgende Bezeichnun
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-Ein weiteres Beispiel ist die folgende Bezeichnung für ein Thema, das nur für Azure SQL Data Warehouse und Parallel Data Warehouse gilt.
+Ein weiteres Beispiel ist die folgende Bezeichnung für ein Thema, das nur für Azure Synapse Analytics und Parallel Data Warehouse gilt.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
 In einigen Fällen wird das Thema von einem Produkt oder Dienst verwendet, jedoch werden nicht alle Argumente unterstützt. In diesem Fall werden zusätzliche **Applies to** -Abschnitte in den Beschreibungen der entsprechenden Arguments in den Text des Themas eingefügt.  
  
-## <a name="get-help-from-the-msdn-forum"></a>Hilfe im MSDN-Forum  
-Onlinehilfe finden Sie im [MSDN Transact-SQL-Forum](https://social.msdn.microsoft.com/Forums/home).  
+## <a name="get-help-from-microsoft-q--a"></a>Hilfe durch Microsoft Fragen und Antworten erhalten  
+Onlinehilfe finden Sie im [Microsoft Q & A-Transact-SQL-Forum](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html).  
  
 ## <a name="see-other-language-references"></a>Weitere Sprachreferenzen
 Die SQL-Dokumentation enthält die folgenden weiteren Sprachreferenzen:

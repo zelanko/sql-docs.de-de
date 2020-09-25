@@ -13,16 +13,18 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: df08f0434247f3235d9316c064e669d6bf453d1f
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: b58763dc5bf126e164ada0c0d808a75270819171
+ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511253"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614614"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Schnellstart: Ausführen von SQL Server-Containerimages mit Docker
-
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+
+> [!NOTE]
+> Die unten gezeigten Beispiele verwenden „docker.exe“, die meisten dieser Befehle funktionieren aber auch in Verbindung mit Podman. Es bietet eine ähnliche Befehlszeilenschnittstelle wie die Docker-Container-Engine. Weitere Informationen zu Podman finden Sie [hier](http://docs.podman.io/en/latest):
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -99,7 +101,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
-      -p 1433:1433 --name sql1 \
+      -p 1433:1433 --name sql1 -h sql1 \
       -d \
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -112,7 +114,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -121,7 +123,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    ::: zone pivot="cs1-cmd"
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -140,6 +142,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
    | **-p 1433:1433** | Ordnen Sie einen TCP-Port in der Hostumgebung (erster Wert) einem TCP-Port im Container zu (zweiter Wert). In diesem Beispiel lauscht SQL Server an TCP 1433 im Container. Diese Informationen werden für Port 1433 auf dem Host offen gelegt. |
    | **--name sql1** | Geben Sie dem Container selbst einen Namen, anstatt einen willkürlich generierten zu verwenden. Wenn Sie mehrere Container ausführen, können Sie nicht denselben Namen mehrfach verwenden. |
+   | **-h sql1** | Wird verwendet, um den Container Hostnamen explizit festzulegen. Wenn Sie ihn nicht angeben, wird standardmäßig die Container-ID verwendet, bei der es sich um eine zufällig generierte System-GUID handelt. |
    | **-d** | Hiermit wird der Container im Hintergrund ausgeführt (Daemon) |
    | **mcr.microsoft.com/mssql/server:2017-latest** | Das Linux-Containerimage von SQL Server 2017 |
 
@@ -170,7 +173,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
 
 4. Wenn in der Spalte **STATUS** **Up** (Aktiv) eingetragen ist, wird SQL Server im Container ausgeführt und überwacht den Port, der in der Spalte **PORTS** angegeben ist. Wenn in der Spalte **STATUS** Ihres SQL Server-Containers **Exited** (Beendet) steht, lesen Sie bitte im [Abschnitt „Problembehebung“ im Konfigurationshandbuch](sql-server-linux-configure-docker.md#troubleshooting) nach.
 
-Der Parameter `-h` (Hostname) ist ebenfalls nützlich, wird der Einfachheit halber jedoch in diesem Tutorial nicht verwendet. Mit ihm lässt sich der interne Name eines Containers in einen benutzerdefinierten Wert ändern. Dieser Name wird in der folgenden Transact-SQL-Abfrage zurückgegeben:
+Der `-h`-Parameter (Hostname) ändert den internen Namen des Containers in einen benutzerdefinierten Wert, wie oben erläutert. Dieser Name wird in der folgenden Transact-SQL-Abfrage zurückgegeben:
 
 ```sql
 SELECT @@SERVERNAME,
@@ -231,7 +234,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
-      -p 1433:1433 --name sql1 \
+      -p 1433:1433 --name sql1 -h sql1 \
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -239,7 +242,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -247,7 +250,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    ::: zone pivot="cs1-cmd"
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -265,6 +268,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
    | **-p 1433:1433** | Ordnen Sie einen TCP-Port in der Hostumgebung (erster Wert) einem TCP-Port im Container zu (zweiter Wert). In diesem Beispiel lauscht SQL Server an TCP 1433 im Container. Diese Informationen werden für Port 1433 auf dem Host offen gelegt. |
    | **--name sql1** | Geben Sie dem Container selbst einen Namen, anstatt einen willkürlich generierten zu verwenden. Wenn Sie mehrere Container ausführen, können Sie nicht denselben Namen mehrfach verwenden. |
+   | **-h sql1** | Wird verwendet, um den Container Hostnamen explizit festzulegen. Wenn Sie ihn nicht angeben, wird standardmäßig die Container-ID verwendet, bei der es sich um eine zufällig generierte System-GUID handelt. |
    | **mcr.microsoft.com/mssql/server:2019-latest** | Das Ubuntu Linux-Containerimage von SQL Server 2019 |
 
 3. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
@@ -293,7 +297,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
 
 4. Wenn in der Spalte **STATUS** **Up** (Aktiv) eingetragen ist, wird SQL Server im Container ausgeführt und überwacht den Port, der in der Spalte **PORTS** angegeben ist. Wenn in der Spalte **STATUS** Ihres SQL Server-Containers **Exited** (Beendet) angezeigt wird, lesen Sie [Problembehandlung von SQL Server Docker-Containern](sql-server-linux-docker-container-troubleshooting.md).
 
-Der Parameter `-h` (Hostname) ist ebenfalls nützlich, wird der Einfachheit halber jedoch in diesem Tutorial nicht verwendet. Mit ihm lässt sich der interne Name eines Containers in einen benutzerdefinierten Wert ändern. Dieser Name wird in der folgenden Transact-SQL-Abfrage zurückgegeben:
+Der `-h`-Parameter (Hostname) ändert den internen Namen des Containers in einen benutzerdefinierten Wert, wie oben erläutert. Mit ihm lässt sich der interne Name eines Containers in einen benutzerdefinierten Wert ändern. Dieser Name wird in der folgenden Transact-SQL-Abfrage zurückgegeben:
 
 ```sql
 SELECT @@SERVERNAME,

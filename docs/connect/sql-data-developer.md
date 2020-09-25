@@ -2,7 +2,7 @@
 title: SQL Data Developer | Microsoft-Dokumentation
 description: Verwenden Sie die SQL-Datenplattform von Microsoft, um datenzentrierte Lösungen für mobile Geräte und Desktops für Webserver, Unternehmensserver und die Cloud zu erstellen.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,25 +11,26 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b60eb6ca02ef446fe05bb109123e5c48951905a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ff3fb2b5e789d9eb9d89100e1722b37c9eae6385
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922301"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988477"
 ---
 # <a name="sql-data-developer"></a>SQL Data Developer
 Verwenden Sie die SQL-Datenplattform von Microsoft, um datenzentrierte Lösungen für mobile Geräte und Desktops für Webserver, Unternehmensserver und die Cloud zu erstellen.  
 
 ## <a name="sql-data-storage"></a>SQL-Datenspeicher
 * [SQL Server-Datenbank-Engine](../database-engine/configure-windows/sql-server-database-engine.md): Verwenden Sie die SQL Server-Datenbank-Engine, um relationale Datenbanken für die Onlinetransaktionsverarbeitung oder die analytische Onlineverarbeitung zu erstellen. 
-* [SQL Azure](https://docs.microsoft.com/azure/sql-database/): Verwenden Sie SQL Azure, um Ihre Datenbank in die Cloud zu verlagern. 
+* [Azure SQL](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview): Verwenden von Azure SQL zum Verlagern Ihrer Datenbank in die Cloud 
 * [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): Verwenden Sie SQL Server Compact, um eigenständige und nur gelegentlich verbundene Anwendungen für mobile Geräte, Desktops und Webclients zu erstellen.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): Verwenden Sie LocalDB, um Transact-SQL-Code zu schreiben und zu testen, ohne eine vollständige Instanz von SQL Server verwalten zu müssen.
 
 ## <a name="sql-data-tools"></a>SQL-Datentools
-* [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md): Verwenden Sie SSDT, um relationale Datenbanken, Azure SQL-Datenbanken, Integration Services-Pakete, Analysis Services-Datenmodelle und Reporting Services-Berichte zu erstellen.
-* [SQL Server-Verwaltungstools (SSMS)](../ssms/download-sql-server-management-studio-ssms.md):  Verwenden Sie SSMS zum Konfigurieren, Überwachen und Verwalten von SQL Server-Instanzen.
+* [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md): Verwenden Sie Azure Data Studio unter Windows, macOS und Linux, um SQL Server, Azure SQL-Datenbank, PostgreSQL, Jupyter Notebook uvm. auszuführen.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md): Verwenden Sie SSDT in Visual Studio, um relationale Datenbanken, Azure SQL-Datenbanken, Integration Services-Pakete, Analysis Services-Datenmodelle und Reporting Services-Berichte zu erstellen.
+* [SQL Server-Verwaltungstools (SSMS)](../ssms/download-sql-server-management-studio-ssms.md):  Verwenden Sie SSMS unter Windows zum Konfigurieren, Überwachen und Verwalten von SQL Server-Instanzen.
 
 ## <a name="sql-data-access"></a>SQL-Datenzugriff
 * [SQL-Clienttreiber](sql-connection-libraries.md):  Verwenden Sie SQL-Treiber, um eine Verbindung mit einer SQL-Datenbank herzustellen und Daten darin abzufragen, zu aktualisieren, einzufügen oder zu löschen.

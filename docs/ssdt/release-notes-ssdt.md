@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 212cf0c286ec0f55a76d16c27a66fac6a6f1f5e4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003955"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195126"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Versionshinweise für SQL Server Data Tools (SSDT)
 
@@ -44,6 +44,35 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1596nbsp-ssdt-for-vs-2017"></a>15.9.6,&nbsp; SSDT für VS 2017
+
+_Veröffentlicht_: &nbsp;31. August 2020  
+_Buildnummer:_ &nbsp; 14.0.16222.0  
+_SSDT für Visual Studio 2017._
+
+### <a name="whats-new"></a>Neues
+
+| Neues Element | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Es wurde ein Problem behoben, dass die Schaltfläche **Vorschau** in der OLE DB-Quelle beim Herstellen einer Verbindung mit einer SSAS-Datenquelle (SQL Server Analysis Services) nicht funktioniert. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem das Entfernen einer Eingabe oder Ausgabe einer Datenflusskomponente vor dem Entfernen des zugeordneten Pfads zu einem COMException-Fehler führen kann. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem die SSAS-Verarbeitungsaufgabe keine Verbindung mit einem Power BI Arbeitsbereich herstellen und ihre Modelle aktualisieren kann. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem Visual Studio beim Verwenden der x64-Runtime und SQL Server 2017 als Zielplattform beim Debuggen einer Skriptaufgabe/Komponente aufhört zu reagieren. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, dass der Import/Export-Assistent beim Auswählen eines MySQL-Treibers in einigen Umgebungen abstürzt. |
+| Integration Services (SSIS) | Es wurden einige Probleme im Zusammenhang mit Barrierefreiheit und hohen DPI-Werten behoben. |
+| Integration Services (SSIS) | Ermöglicht Benutzern das Überspringen der Validierung beim Öffnen von Paketen, wodurch die Leistung verbessert wird. Weitere Informationen finden Sie unter [Beschleunigen des Öffnens von SSIS-Paketen in SSDT](https://techcommunity.microsoft.com/t5/sql-server-integration-services/accelerate-the-opening-of-ssis-package-in-ssdt/ba-p/1607099). |
+| Integration Services (SSIS) | Blockieren der Bereitstellung in Azure-SSIS, wenn die Zielserverversion nicht SQL Server 2017 ist. |
+
+### <a name="known-issues"></a>Bekannte Probleme
+
+| Bekanntes Problem | Details |
+| :---------- | :------ |
+| Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. | Dieses Problem betrifft nur das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog ist nicht betroffen. |
+| Die Power Query-Quelle unterstützt möglicherweise kein OData v4, wenn SSIS und SSAS in derselben Visual Studio-Instanz installiert sind. | &nbsp; |
+| Die Power Query-Quelle unterstützt möglicherweise kein ODBC für die Verbindung mit Oracle, wenn SSIS und SSAS in derselben Visual Studio-Instanz installiert sind. | &nbsp; |
+| Die Power Query-Quelle ist nicht lokalisiert. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1595nbsp-ssdt-for-vs-2017"></a>15.9.5, SSDT für VS&nbsp;2017
 
@@ -640,7 +669,7 @@ _SSDT für Visual Studio 2015._
 
 **AS-Projekte**
 - Die Leistung wurde bedeutend verbessert, um die Benutzerfreundlichkeit bei der Weitergabe von Änderungen an DAX-Measures und anderen Modellbearbeitungen zu erhöhen.
-- Es wurde eine Reihe von Problemen mit der Integration von Power Query in Analysis Services-Projekte, die tabellarische Modelle mit Kompatibilitätsgrad 1400 verwenden, behoben.
+- Es wurde eine Reihe von Problemen bei der Integration von Power Query in Analysis Services-Projekte behoben, die tabellarische Modelle mit Kompatibilitätsgrad 1400 verwenden.
 - Es wurde ein Problem mit mehrdimensionalen Projekten in VS2017 behoben, bei dem der Aggregation-Designer möglicherweise nicht lädt.
 - Es wurde ein Problem beim Ziehen eines Elements in das mehrdimensionale DSV-Diagramm in Analysis Services behoben, das einen Absturz von VS2017 verursachen konnte.
 - Es wurde ein Problem mit AS-Projekten behoben, bei dem das Dialogfeld für die Bereitstellung in Visual Studio nicht immer im Vordergrund angezeigt wurde.
