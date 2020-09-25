@@ -1,4 +1,5 @@
 ---
+description: Sichere Berichte und Ressourcen
 title: Sichere Berichte und Ressourcen | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dc9ee5a8bcdf2afd2ca02703eed1a6d0b782587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454492"
 ---
 # <a name="secure-reports-and-resources"></a>Sichere Berichte und Ressourcen
   Die Sicherheit kann für einzelne Berichte und Ressourcen festgelegt werden, um die Zugriffsebene der Benutzer für diese Objekte zu steuern. In der Standardeinstellung können nur Benutzer, die Mitglieder der integrierten Gruppe **Administratoren** sind, Berichte ausführen, Ressourcen anzeigen, Eigenschaften ändern und die Elemente löschen. Für alle anderen Benutzer müssen Rollenzuweisungen erstellt werden, die den Zugriff auf einen Bericht oder eine Ressource zulassen.  
@@ -51,7 +52,7 @@ ms.locfileid: "65570626"
   
 2.  Der Bericht wird auf einem Berichtsserver veröffentlicht oder auf eine andere Weise verfügbar gemacht, sodass der Berichtsparameterwert von der URL einer Webseite gesteuert werden kann.  
   
-3.  Ein Angreifer erstellt einen Link zur Webseite oder zum Berichtsserver, gibt dabei den Wert des Parameters in der Form „javascript:\<bösartiges Skript hier>“ an und sendet diesen Link in einem Lockangriff an eine andere Person.  
+3.  Ein Angreifer erstellt einen Link zur Webseite oder zum Berichtsserver, gibt dabei den Wert des Parameters in der Form „javascript:\<malicious script here>“ an und sendet diesen Link in einem Lockangriff an eine andere Person.  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>Abwehren von Script-Injection-Angriffen in einem Link in einem veröffentlichten Bericht oder Dokument  
  Berichte können eingebettete Links im Wert der Action-Eigenschaft in einem Berichtselement oder einem Teil eines Berichtselements enthalten. Links können an Daten gebunden werden, die aus einer externen Datenquelle abgerufen werden, wenn der Bericht verarbeitet wird. Wenn ein böswilliger Benutzer die zugrunde liegenden Daten ändert, könnte der Link für Skriptexploits eingesetzt werden. Wenn ein Benutzer im veröffentlichten oder exportierten Bericht auf den Link klickt, könnte bösartiges Skript ausgeführt werden.  

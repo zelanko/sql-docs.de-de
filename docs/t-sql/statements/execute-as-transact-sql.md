@@ -24,12 +24,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1ae261b89d375ac13914c87674bdfc43cd0751e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d263f8db7e95cbc5e961d5b4d3879ce53ce99d47
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547706"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227317"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "89547706"
  Gibt an, dass es sich bei dem Ausführungskontext, dessen Identität übernommen werden soll, um einen Anmeldenamen handelt. Der Bereich des Identitätswechsels liegt auf Serverebene.  
   
 > [!NOTE]  
->  Diese Option ist in einer eigenständigen Datenbank, in SQL-Datenbank oder in SQL Data Warehouse nicht verfügbar.  
+>  Diese Option ist in einer enthaltenen Datenbank oder in SQL-Datenbank oder [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] nicht verfügbar.  
   
  USER  
  Gibt an, dass der Kontext, der als Identität angenommen werden soll, ein Benutzer in der aktuellen Datenbank ist. Der Identitätswechselbereich ist auf die aktuelle Datenbank beschränkt. Bei einem Kontextwechsel zu einem Datenbankbenutzer werden die Berechtigungen auf Serverebene dieses Benutzers nicht geerbt.  
@@ -96,7 +96,7 @@ ms.locfileid: "89547706"
  Bei Verwendung innerhalb eines Moduls gibt dieser Wert an, dass die Anweisungen innerhalb des Moduls im Kontext des Modulaufrufers ausgeführt werden.
 Bei Verwendung außerhalb eines Moduls weist die Anweisung keine Aktion auf.
  > [!NOTE]  
->  Diese Option ist in SQL Data Warehouse nicht verfügbar.  
+>  Diese Option steht in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]nicht zur Verfügung.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Änderung des Ausführungskontexts bleibt wirksam, bis eine der folgenden Bedingungen auftritt:  
@@ -146,7 +146,7 @@ Wenn der Benutzer verwaist ist (der zugeordnete Anmeldename ist nicht mehr vorha
 ###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. Verwenden von EXECUTE AS und REVERT zum Wechseln des Kontexts  
  Im folgenden Beispiel wird ein Kontextausführungsstapel mit mehreren Prinzipalen erstellt. Mit der `REVERT`-Anweisung wird der Ausführungskontext anschließend auf den vorherigen Aufrufer zurückgesetzt. Die `REVERT`-Anweisung wird mehrmals ausgeführt und bewegt sich so durch den Stapel, bis der Ausführungskontext wieder auf den ursprünglichen Aufrufer festgelegt ist.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 --Create two temporary principals  
@@ -190,7 +190,7 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. Verwenden der WITH COOKIE-Klausel  
  Im folgenden Beispiel wird der Ausführungskontext einer Sitzung auf einen angegebenen Benutzer festgelegt und die WITH NO REVERT COOKIE = @*varbinary_variable*-Klausel angegeben. In der `REVERT`-Anweisung muss der an die `@cookie`-Variable in der `EXECUTE AS`-Anweisung übergebene Wert angegeben sein, damit der Kontext erfolgreich auf den Aufrufer zurückgesetzt werden kann. Zur Ausführung dieses Beispiels müssen der `login1`-Anmeldename und der `user1`-Benutzer, die in Beispiel A erstellt wurden, vorhanden sein.  
   
-```  
+```sql
 DECLARE @cookie varbinary(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  

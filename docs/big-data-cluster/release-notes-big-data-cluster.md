@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c08893006e0b2edf093477259ebed788d49097
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 75af471239529587cf51b151c04a541a612949c0
+ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989993"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145389"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Versionshinweise zu Big Data-Clustern für SQL Server 2019
 
@@ -62,7 +62,7 @@ Eine umfassende Liste finden Sie unter [Welche Tools sind erforderlich?](deploy-
 
 In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] aufgelistet.
 
-| Release <sup>1</sup> | Big Data-Cluster-Version  | `azdata` Version <sup>2</sup> | Veröffentlichungsdatum |
+| Release | Big Data-Cluster-Version  | `azdata` Version <sup>1</sup> | Veröffentlichungsdatum |
 |----------------------|--------------|-------------------------------|--------------|
 | [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 4\.8.2020   |
 | [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
@@ -72,9 +72,7 @@ In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[big-data-clusters
 | [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 01.07.2020   |
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
-<sup>1</sup> Für CU7 gibt es keine Updates für Big Data-Cluster in SQL Server 2019.
-
-<sup>2</sup> Die `azdata`-Version entspricht der Version des Tools zum Zeitpunkt der CU-Veröffentlichung. `azdata` kann auch unabhängig von der Serververöffentlichung veröffentlicht werden. Daher erhalten Sie möglicherweise neuere Versionen, wenn Sie die neuesten Pakete installieren. Neuere Versionen sind mit zuvor veröffentlichten CUs kompatibel.
+<sup>1</sup> Die `azdata`-Version entspricht der Version des Tools zum Zeitpunkt der CU-Veröffentlichung. `azdata` kann auch unabhängig von der Serververöffentlichung veröffentlicht werden. Daher erhalten Sie möglicherweise neuere Versionen, wenn Sie die neuesten Pakete installieren. Neuere Versionen sind mit zuvor veröffentlichten CUs kompatibel.
 
 ## <a name="how-to-install-updates"></a>Installieren von Updates
 

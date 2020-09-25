@@ -1,4 +1,5 @@
 ---
+description: Installieren des Reporting Services 2016-Berichtsservers im einheitlichen Modus
 title: Installieren des Reporting Services 2016-Berichtsservers im einheitlichen Modus | Microsoft-Dokumentation
 ms.date: 12/20/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ea3cde2e407600dab0b595df1dace43dc6b1ca3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2c05251bb8ac19f3c4594a263c7b108a8dbc90a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498083"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Installieren des Reporting Services 2016-Berichtsservers im einheitlichen Modus
 
@@ -75,7 +76,7 @@ Bei der Standardkonfigurationsoption werden die Haupteinstellungen, die für den
 
 - Das zur Ausführung des Setups verwendete Benutzerkonto muss Mitglied der lokalen Administratorgruppe sein und die Berechtigung zum Datenbankzugriff sowie zur Datenbankerstellung mithilfe der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz besitzen, die die Berichtsserver-Datenbanken hostet.
 
-- Setup muss die Standardwerte verwenden können, um die URLs zu reservieren, über die auf den Berichtsserver und das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]zugegriffen werden kann. Zu diesen Werten gehören Port 80, ein starker Platzhalter und die Namen der virtuellen Verzeichnisse im Format **ReportServer_\<***Instanzname***>** und **Reports\<***_Instanzname***>** .
+- Setup muss die Standardwerte verwenden können, um die URLs zu reservieren, über die auf den Berichtsserver und das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]zugegriffen werden kann. Zu diesen Werten gehören Port 80, ein starker Platzhalter und die Namen der virtuellen Verzeichnisse im Format **ReportServer_\<***instance_name***>** und **Reports_\<***instance_name***>** .
 
 - Setup muss die Standardwerte für die Erstellung der Berichtsserver-Datenbanken verwenden können. Diese Werte lauten **ReportServer** und **ReportServerTempDB**. Wenn Sie über bestehende Datenbanken aus einer früheren Installation verfügen, wird das Setup blockiert, weil es den Berichtsserver nicht in der Standardkonfiguration für den einheitlichen Modus konfigurieren kann. Sie müssen die Datenbanken umbenennen, verschieben oder löschen, um die Blockierung des Setups aufzuheben.
 
@@ -93,7 +94,7 @@ URL-Reservierungen bestehen aus Präfix, Hostname, Port und virtuellem Verzeichn
 |Präfix|Das Standardpräfix ist http. Wenn Sie zuvor ein TLS-Zertifikat (Transport Layer Security, früher als Secure Sockets Layer, SSL, bezeichnet) installiert haben, versucht das Setup, die URL-Reservierungen zu erstellen, die das Präfix HTTPS verwenden.|
 |Hostname|Der Standardhostname ist ein Platzhalter (+). Er gibt an, dass der Berichtsserver eine beliebige HTTP-Anforderung an den angegebenen Port für einen beliebigen Hostnamen akzeptiert, der den Computer erreicht, einschließlich `https://<computername>/reportserver`, `https://localhost/reportserver` oder `https://<IPAddress>/reportserver`.|
 |Port|Der Standardport ist 80. Hinweis: Wenn Sie einen anderen Port als Port 80 verwenden, müssen Sie diesen ausdrücklich der URL hinzufügen, wenn Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webanwendung in einem Browserfenster öffnen.|
-|Virtuelles Verzeichnis|Standardmäßig werden virtuelle Verzeichnisse im Format „ReportServer_\<*Instanzname*>“ für den Berichtsserver-Webdienst und „Reports_\<*Instanzname*>“ für das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] erstellt. Beim Berichtsserver-Webdienst lautet der Standardname für das virtuelle Verzeichnis **reportserver**. Für das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]ist **reports**das standardmäßige virtuelle Verzeichnis.|
+|Virtuelles Verzeichnis|Standardmäßig werden die virtuellen Verzeichnisse im Format „ReportServer_\<*instance_name*>“ für den Berichtsserver-Webdienst und „Reports_\<*instance_name*> für das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] erstellt. Beim Berichtsserver-Webdienst lautet der Standardname für das virtuelle Verzeichnis **reportserver**. Für das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]ist **reports**das standardmäßige virtuelle Verzeichnis.|
 
 Ein Beispiel für die vollständige URL-Zeichenfolge könnte folgendermaßen aussehen:
 

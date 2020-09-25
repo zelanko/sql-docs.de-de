@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-ms.openlocfilehash: 37ec04307616bb0916c5fc42e6ab5af8ce874852
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 44d46bd260b1f59b9d1bcffd4a7bfb6ea46c248c
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009614"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713748"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>Download erweiterter SQL Server-Features und -Tools
 
@@ -44,13 +44,13 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 | Funktion | BESCHREIBUNG |
 |----|-----|
 | [Befehlszeilen-Hilfsprogramme für SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | Mit dem Hilfsprogramm SQLCMD können Benutzer Transact-SQL-Batches senden und Rowsetinformationen von SQL Server-Instanzen ausgeben. |
-| [Treiber für PHP für Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=239640) | Die Microsoft-Treiber für PHP für SQL Server sind PHP 5-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten aus PHP-Skripts ermöglichen. |
-| [JDBC-Treiber für Microsoft SQL Server®](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11774) | Der Microsoft JDBC-Treiber für SQL Server ermöglicht den Zugriff auf SQL Server aus sämtlichen Java-Anwendungen, Anwendungsservern oder Java-fähigen Applets.|
+| [Treiber für PHP für SQL Server](https://aka.ms/downloadmsphpsql) | Die Microsoft-Treiber für PHP für SQL Server sind PHP-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten aus PHP-Skripts ermöglichen. |
+| [JDBC-Treiber für SQL Server](https://aka.ms/downloadmssqljdbc) | Der Microsoft JDBC-Treiber für SQL Server ermöglicht den Zugriff auf SQL Server aus sämtlichen Java-Anwendungen, Anwendungsservern oder Java-fähigen Applets.|
 | [SQL Server Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=56508) | Das SQL Server Data-Tier Application (DAC) Framework ist eine Komponente, die auf .NET Framework basiert und Anwendungslebenszyklus-Dienste zur Datenbankentwicklung und -verwaltung bietet. |
-| [SQL Server Semantic Language Statistics](https://docs.microsoft.com/sql/relational-databases/search/install-and-configure-semantic-search) | Die Datenbank für die semantische Sprachstatistik ist eine erforderliche Komponente für die statistische semantische Suchfunktion in Microsoft SQL Server. |
-| [SQL Server Shared Management Objects](https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide) | Bei SQL Server Management Objects (SMO) handelt es sich um ein Objektmodell von .NET Framework, mit dem Softwareentwickler clientseitige Anwendungen zur Verwaltung von SQL Server-Objekten und -Diensten erstellen können. |
+| [SQL Server Semantic Language Statistics](../relational-databases/search/install-and-configure-semantic-search.md) | Die Datenbank für die semantische Sprachstatistik ist eine erforderliche Komponente für die statistische semantische Suchfunktion in Microsoft SQL Server. |
+| [SQL Server Shared Management Objects](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | Bei SQL Server Management Objects (SMO) handelt es sich um ein Objektmodell von .NET Framework, mit dem Softwareentwickler clientseitige Anwendungen zur Verwaltung von SQL Server-Objekten und -Diensten erstellen können. |
 | [System-CLR-Typen](https://go.microsoft.com/fwlink/?linkid=2108808) | Das Paket mit den SQL Server-System-CLR-Typen umfasst die Komponenten zur Implementierung der neuen Geometrie-, Geografie- und Hierarchie-ID-Typen in SQL Server. **Hinweis: Für diese Komponente ist außerdem [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)** erforderlich. |
-| [Windows PowerShell-Erweiterungen für Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-powershell?view=sql-server-2017) | Die Microsoft Windows PowerShell-Erweiterungen umfassen einen Anbieter und verschiedene Cmdlets, mit denen Administratoren und Entwickler PowerShell-Skripts zum Verwalten von SQL Server-Instanzen erstellen können. |
+| [Windows PowerShell-Erweiterungen für Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md?view=sql-server-2017) | Die Microsoft Windows PowerShell-Erweiterungen umfassen einen Anbieter und verschiedene Cmdlets, mit denen Administratoren und Entwickler PowerShell-Skripts zum Verwalten von SQL Server-Instanzen erstellen können. |
 |||
 
 ## <a name="database-engine"></a>Datenbank-Engine
@@ -59,14 +59,14 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 |----|-----|
 | [Befehlszeilen-Hilfsprogramme für SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | Mit dem Hilfsprogramm SQLCMD können Benutzer Transact-SQL-Batches senden und Rowsetinformationen von SQL Server-Instanzen ausgeben. |
 | [Remote Blob Store](https://go.microsoft.com/fwlink/?linkid=2109005) | Bei SQL Server Remote Blob Store (RBS) handelt es sich um eine Methode zum Speichern von unstrukturierten Daten-BLOBs in einem externen inhaltsadressierbaren Datenspeicher. Die Komponente umfasst eine clientseitige DLL, die mit einer Benutzeranwendung verknüpft ist, sowie eine Reihe gespeicherter Prozeduren, die auf dem SQL Server installiert werden. |
-| [Upgrade Advisor für SQL Server](https://docs.microsoft.com/sql/sql-server/install/how-to-install-upgrade-advisor) | Der Microsoft Upgrade Advisor analysiert SQL Server-Instanzen zur Vorbereitung eines Upgrades auf SQL Server. |
+| [Upgrade Advisor für SQL Server](../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md) | Der Microsoft Upgrade Advisor analysiert SQL Server-Instanzen zur Vorbereitung eines Upgrades auf SQL Server. |
 |||
 
 ## <a name="integration-services"></a>Integration Services
 
 | Funktion | BESCHREIBUNG |
 |----|-----|
-| [Integration Services Feature Pack für Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis) | Das Microsoft Integration Services Feature Pack für Azure bietet Tools für die Nutzung von Integration Services für die Verbindungsherstellung mit Azure Stack. |
+| [Integration Services Feature Pack für Azure](../integration-services/azure-feature-pack-for-integration-services-ssis.md) | Das Microsoft Integration Services Feature Pack für Azure bietet Tools für die Nutzung von Integration Services für die Verbindungsherstellung mit Azure Stack. |
 | [Integration Services-Feature Pack für die neueste Version von SQL Server](https://www.microsoft.com/download/details.aspx?id=100303) | Diese eigenständigen Pakete erweitern die neueste Version von Microsoft SQL Server Integration Services. |
 |||
 
@@ -89,7 +89,7 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 | Funktion | BESCHREIBUNG |
 |----|-----|
 | [ODBC-Treiber für Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=852531) | Die Microsoft ODBC-Treiber für SQL Server bieten native Konnektivität zwischen Windows/UNIX und Microsoft SQL Server/Microsoft Azure SQL-Datenbank. |
-| [OLE DB-Anbieter für DB2 für Microsoft SQL Server](https://docs.microsoft.com/host-integration-server/db2oledbv/installing-data-provider-version-6-0) | Der Microsoft OLE DB-Anbieter für DB2 v5.0 bietet verschiedene Technologien und Tools, mit denen wichtige Daten, die in IBM DB2-Datenbanken gespeichert sind, in neue Projektmappen integriert werden können. SQL Server-Entwickler und -Administratoren können den Datenanbieter mit Integration Services, Analysis Services, der Replikation, Reporting Services und dem Prozessor für verteilte Abfragen verwenden. Lesen Sie den Abschnitt zur Installation des Datenanbieters in der Produktdokumentation, die online oder als Download zur Verfügung steht. |
+| [OLE DB-Anbieter für DB2 für Microsoft SQL Server](/host-integration-server/db2oledbv/installing-data-provider-version-6-0) | Der Microsoft OLE DB-Anbieter für DB2 v5.0 bietet verschiedene Technologien und Tools, mit denen wichtige Daten, die in IBM DB2-Datenbanken gespeichert sind, in neue Projektmappen integriert werden können. SQL Server-Entwickler und -Administratoren können den Datenanbieter mit Integration Services, Analysis Services, der Replikation, Reporting Services und dem Prozessor für verteilte Abfragen verwenden. Lesen Sie den Abschnitt zur Installation des Datenanbieters in der Produktdokumentation, die online oder als Download zur Verfügung steht. |
 |||
 
 ## <a name="reporting-services"></a>Reporting Services
@@ -97,7 +97,7 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 | Funktion | BESCHREIBUNG |
 |----|-----|
 | [Report Builder (Berichts-Generator)](https://www.microsoft.com/download/details.aspx?id=53613) | Der Berichts-Generator stellt eine produktive Berichterstellungsumgebung für IT-Fachleute und Poweruser bereit. Es werden alle Berichterstellungsfunktionen von SQL Server Reporting Services unterstützt. |
-| [ Reporting Services-Add-In für Microsoft SharePoint](https://docs.microsoft.com/sql/reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products)| Das Reporting Services-Add-In für Microsoft SharePoint-Technologien ermöglicht Ihnen die Integration von Reporting Services-Features in die auf Zusammenarbeit ausgelegte SharePoint-Umgebung. |
+| [ Reporting Services-Add-In für Microsoft SharePoint](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)| Das Reporting Services-Add-In für Microsoft SharePoint-Technologien ermöglicht Ihnen die Integration von Reporting Services-Features in die auf Zusammenarbeit ausgelegte SharePoint-Umgebung. |
 | [Report Viewer-Steuerelement für ASP.NET Web Forms-Apps](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/) | Mit diesem Report Viewer-Steuerelement können Sie paginierte SQL Server Reporting Services-Berichte in Ihre ASP.NET Web Forms-Apps einbetten. |
 | [Report Viewer-Steuerelement für Windows Forms-Apps](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/) | Mit diesem Report Viewer-Steuerelement können Sie paginierte SQL Server Reporting Services-Berichte in Ihre Windows Forms-Apps einbetten. |
 |||
@@ -106,14 +106,14 @@ Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und 
 
 | Funktion | BESCHREIBUNG |
 |----|-----|
-| [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| SQL Server Data Tools ist ein modernes Entwicklungstool für relationale SQL Server-Datenbanken, Azure SQL-Datenbanken, IS-Pakete (Integration Services), AS-Datenmodelle (Analysis Services) und RS-Berichte (Reporting Services). Mit SSDT lassen sich Datenbanken und andere Inhaltstypen für SQL Server entwerfen und bereitstellen – und zwar ebenso einfach wie eine Anwendung in Visual Studio.|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)| SQL Server Data Tools ist ein modernes Entwicklungstool für relationale SQL Server-Datenbanken, Azure SQL-Datenbanken, IS-Pakete (Integration Services), AS-Datenmodelle (Analysis Services) und RS-Berichte (Reporting Services). Mit SSDT lassen sich Datenbanken und andere Inhaltstypen für SQL Server entwerfen und bereitstellen – und zwar ebenso einfach wie eine Anwendung in Visual Studio.|
 |||
 
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Dokumentation zu SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../azure-data-studio/download.md)
-- [Weitere Updates und Service Packs](https://technet.microsoft.com/sqlserver/ff803383.aspx)
+- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15)
+- [Weitere Updates und Service Packs](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md?view=sql-server-ver15)
 - [Download der neuesten SQL Server-Datatools](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

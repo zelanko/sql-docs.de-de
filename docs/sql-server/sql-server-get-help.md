@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 49bf5ae8b9ab88859bedaf114242b1dcf64bb641
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: ed931eb7a77026e4902f5591def3496eb30851bf
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732179"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569940"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server-Hilfe und -Feedback
 
@@ -31,21 +31,9 @@ Kunden ohne Supportplan können die Community um Hilfe bitten oder einen Fehler 
 
 Wenn Sie die Hilfe der dynamischen SQL Server-Community in Anspruch nehmen möchten, stehen Ihnen mehrere Optionen zur Verfügung.
 
+### <a name="microsoft-q--a"></a>Microsoft – Fragen und Antworten
 
-### <a name="msdn-forums"></a>MSDN-Foren
-
-Es gibt viele MSDN-Foren, die Ihnen bei Ihren Fragen zu SQL Server behilflich sein können. 
-- [SQL Server-Datenbank-Engine](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatabaseengine&filter=alltypes&sort=lastpostdesc)
-- [Setup und Upgrade](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
-- [Hochverfügbarkeit und Notfallwiederherstellung](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldisasterrecovery%2Csqldatabasemirroring&filter=alltypes&sort=lastpostdesc)
-- [SQL Server-Tools](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
-- [Security](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
-- [Replikation](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreplication&filter=alltypes&sort=lastpostdesc)
-- [Transact-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
-- [SQL Server Integration Services (SSIS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices&filter=alltypes&sort=lastpostdesc)
-- [SQL Server Reporting Services (SSRS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreportingservices&filter=alltypes&sort=lastpostdesc)
-- [SQL Server Analysis Services (SSAS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)
-- [SQL Server Data Warehouse](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatawarehousing&filter=alltypes&sort=lastpostdesc)
+Sie können auch Hilfe erhalten, indem Sie auf [Microsoft – Fragen und Antworten](https://docs.microsoft.com/answers/products/sql-server) nach Fragen suchen und Fragen veröffentlichen.
 
 ### <a name="communities"></a>Communitys
 
@@ -56,7 +44,7 @@ Es gibt einige Communitys, die Ihnen bei Ihren Problemen mit SQL Server behilfli
 - [Reddit](https://www.reddit.com/r/SQLServer/)
 - [Unter dem Hashtag #sqlhelp erhalten Sie Hilfe von der Community auf Twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
  
-## <a name="feedback"></a>Feedback
+## <a name="feedback-suggestions"></a>Feedback und Vorschläge
 
 Sie können Verbesserungsvorschläge einreichen und Fehler für Folgendes übermitteln:
 
@@ -91,8 +79,8 @@ Die folgenden Twitter-Konten stelle Updates SQL Server bereit:
 
 Die folgenden SQL Server-Blogs enthalten die neuesten Informationen zu SQL Server: 
 
-- [SQL Server Blog (SQL Server-Blog)](https://cloudblogs.microsoft.com/sqlserver/)
-- [SQL Repl Talk](https://blogs.msdn.microsoft.com/repltalk/)
+- [SQL Server-Blog](https://cloudblogs.microsoft.com/sqlserver/)
+- [SQL ReplTalk](https://blogs.msdn.microsoft.com/repltalk/)
 - [SQL Tiger Team](https://blogs.msdn.microsoft.com/sql_server_team/)
 - [SQL Server-Supportteam](https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/)
 

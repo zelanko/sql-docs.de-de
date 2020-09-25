@@ -1,4 +1,5 @@
 ---
+description: Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
 title: Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver | Microsoft-Dokumentation
 ms.date: 08/26/2016
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b2b130f85b556d6fdeb2e3c0c3c4a32644a80d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492640"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   Standardmäßig akzeptiert Reporting Services Anforderungen, die Negotiate- und NTLM-Authentifizierung angeben. Wenn Ihre Bereitstellung Client-Anwendungen oder Browser umfasst, die die Standardauthentifizierung verwenden, müssen Sie die Standardauthentifizierung in die Liste der unterstützten Typen aufnehmen. Zusätzlich müssen Sie den anonymen Zugriff auf die Dateien des Berichts-Generators aktivieren, wenn Sie mit dem Berichts-Generator arbeiten möchten.  
@@ -36,9 +37,9 @@ ms.locfileid: "81625869"
   
 1.  Öffnen Sie RSReportServer.config in einem Text-Editor.  
   
-     Die Datei befindet sich im Ordner *\<Laufwerk>:* \Programme\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
+     Die Datei befindet sich im Pfad *\<drive>:* \Programme\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Suchen Sie nach \<**Authentifizierung**>.  
+2.  Suchen Sie \<**Authentication**>.  
   
 3.  Kopieren Sie die XML-Struktur, die Ihren Anforderungen am besten entspricht. Die erste XML-Struktur stellt Platzhalter bereit, über die Sie alle im nächsten Abschnitt beschriebenen Elemente angegeben können:  
   
@@ -63,13 +64,13 @@ ms.locfileid: "81625869"
           </AuthenticationTypes>  
     ```  
   
-4.  Ersetzen Sie damit die vorhandenen Einträge für <\<**Authentifizierung**>.  
+4.  Ersetzen Sie damit die vorhandenen Einträge für \<**Authentication**>.  
   
      Wenn Sie mehrere Authentifizierungstypen verwenden, fügen Sie lediglich das **RSWindowsBasic** -Element ein, löschen Sie jedoch die Einträge für **RSWindowsNegotiate**, **RSWindowsNTLM**oder **RSWindowsKerberos**nicht.  
   
      Beachten Sie, dass Sie **Custom** nicht mit anderen Authentifizierungstypen verwenden können.  
   
-5.  Ersetzen Sie leere Werte für \<**Bereich**> oder \<**Standarddomäne**> durch Werte, die für Ihre Umgebung gültig sind.  
+5.  Ersetzen Sie leere Werte für \<**Realm**> oder \<**DefaultDomain**> durch Werte, die für Ihre Umgebung gültig sind.  
   
 6.  Speichern Sie die Datei .  
   

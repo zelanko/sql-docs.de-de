@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d373e347df9207a3cbea8bd0fc1682a865323c2
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4eea801493f87b2c6e11cdca0d42143d54f08bff
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458962"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988427"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Von Reporting Services unterstützte Datenquellen (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Berichtsdaten von Datenquellen über eine modulare und erweiterbare Datenschicht abgerufen, für die Datenverarbeitungserweiterungen verwendet werden. Zum Abrufen von Berichtsdaten von einer Datenquelle müssen Sie eine Datenverarbeitungserweiterung auswählen, die den Typ der Datenquelle, die Version der für die Datenquelle ausgeführten Software und die Plattform der Datenquelle (32-Bit oder 64-Bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) unterstützt.  
@@ -157,7 +157,7 @@ ms.locfileid: "86458962"
   
  Wenn Sie den Abfrage-Designer im grafischen Modus verwenden, wird die Abfrage analysiert und möglicherweise umgeschrieben. Ein textbasierter Abfrage-Designer ist ebenfalls für das Schreiben von Abfragen verfügbar. Wenn Sie die exakte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax für eine Abfrage steuern möchten, verwenden Sie den textbasierten Abfrage-Designer.   
   
- Das Abrufen von Daten aus [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SQL Data Warehouse und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist ähnlich, aber es gibt einige Anforderungen, die nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] gelten. Weitere Informationen finden Sie unter [SQL Azure-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
+ Das Abrufen von Daten aus [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SQL Data Warehouse und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist ähnlich, aber es gibt einige Anforderungen, die nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] gelten. Weitere Informationen finden Sie unter [Azure SQL-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
   
  [Zurück zur Datenquellentabelle](#DataSourcesTable)  
   

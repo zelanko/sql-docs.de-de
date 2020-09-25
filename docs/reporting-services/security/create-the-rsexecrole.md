@@ -1,4 +1,5 @@
 ---
+description: Erstellen der Rolle RSExecRole
 title: Erstellen der Rolle „RSExecRole“ | Microsoft-Dokumentation
 ms.date: 06/12/2019
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08895328856056d01b927a8c80962ff0b90570f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492633"
 ---
 # <a name="create-the-rsexecrole"></a>Erstellen der Rolle RSExecRole
 
@@ -208,7 +209,7 @@ ms.locfileid: "67140473"
   
 4.  Sie können auch auf **Wählen Sie eine vorhandene Berichtsserver-Datenbank aus**klicken.  
   
-5.  Geben Sie den Servernamen der Datenbank-Engine ein. Wenn Sie die Berichtsserver-Datenbanken an eine benannte Instanz angefügt haben, müssen Sie den Instanznamen im folgenden Format eingeben: \<Servername>\\<Instanzname\>.  
+5.  Geben Sie den Servernamen der Datenbank-Engine ein. Wenn Sie die Berichtsserver-Datenbanken an eine benannte Instanz angefügt haben, müssen Sie den Instanznamen im folgenden Format eingeben: \<servername>\\<Instanzname\>.  
   
 6.  Klicken Sie auf **Verbindung testen**. Es sollte ein Dialogfeld mit folgender Meldung angezeigt werden: „Der Verbindungstest war erfolgreich.“
   
@@ -216,7 +217,7 @@ ms.locfileid: "67140473"
   
 8.  Wählen Sie die Berichtsserver-Datenbank aus.  
   
-9.  Klicken Sie auf **Weiter** , und beenden Sie den Assistenten.  
+9.  Klicken Sie auf **Weiter** , und schließen Sie den Assistenten ab.  
   
 10. Klicken Sie auf **Verschlüsselungsschlüssel**.  
   
@@ -267,6 +268,6 @@ GO
 [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
 [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-[Verschlüsselungsschlüssel für SSRS: Sichern und Wiederherstellen von Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+[Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

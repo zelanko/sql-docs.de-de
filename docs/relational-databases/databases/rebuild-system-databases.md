@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 439c723463516ad046c6a37a6d327b289efc9eb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471168"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210625"
 ---
 # <a name="rebuild-system-databases"></a>Neuerstellen von Systemdatenbanken
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,21 +29,23 @@ ms.locfileid: "88471168"
   
  **In diesem Thema**  
   
--   **Vorbereitungen:**  
+   - **Vorbereitungen:**  
   
      [Einschränkungen](#Restrictions)  
   
      [Voraussetzungen](#Prerequisites)  
   
--   **Vorgehensweisen:**  
+   - **Vorgehensweisen:**  
   
      [Neuerstellen von Systemdatenbanken](#RebuildProcedure)  
   
      [Neuerstellen der resource-Datenbank](#Resource)  
   
-     [Erstellen einer neuen msdb-Datenbank](#CreateMSDB)  
+     [Erstellen einer neuen msdb-Datenbank](#CreateMSDB) 
+
+     [Neuerstellen der tempdb-Datenbank](#RebuildTempdb)  
   
--   **Nachverfolgung:**  
+   - **Nachverfolgung:**  
   
      [Problembehandlung von Fehlern bei der Neuerstellung](#Troubleshoot)  
   
@@ -55,15 +57,15 @@ ms.locfileid: "88471168"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Führen Sie die folgenden Aufgaben aus, bevor Sie die Systemdatenbanken neu erstellen, um sicherzustellen, dass Sie die Systemdatenbanken mit ihren aktuellen Einstellungen wiederherstellen können.  
   
-1.  Zeichnen Sie alle serverweiten Konfigurationswerte auf.  
+1. Zeichnen Sie alle serverweiten Konfigurationswerte auf.  
   
-    ```  
+    ```SQL  
     SELECT * FROM sys.configurations;  
     ```  
   
 2.  Zeichnen Sie alle Hotfixes auf, die auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz und die aktuelle Sortierung angewendet wurden. Sie müssen diese Hotfixes erneut anwenden, nachdem Sie die Systemdatenbanken neu erstellt haben.  
   
-    ```  
+    ```SQL  
     SELECT  
     SERVERPROPERTY('ProductVersion ') AS ProductVersion,  
     SERVERPROPERTY('ProductLevel') AS ProductLevel,  
@@ -74,7 +76,7 @@ ms.locfileid: "88471168"
   
 3.  Zeichnen Sie den aktuellen Speicherort aller Daten und Protokolldateien für die Systemdatenbanken auf. Durch die erneute Erstellung der Systemdatenbanken werden alle Systemdatenbanken an ihrem ursprünglichen Speicherort installiert. Wenn Sie Systemdatenbank-Daten oder Protokolldateien an einen anderen Speicherort verschoben haben, müssen Sie die Dateien erneut verschieben.  
   
-    ```  
+    ```SQL  
     SELECT name, physical_name AS current_file_location  
     FROM sys.master_files  
     WHERE database_id IN (DB_ID('master'), DB_ID('model'), DB_ID('msdb'), DB_ID('tempdb'));  
@@ -158,6 +160,7 @@ ms.locfileid: "88471168"
 6.  Klicken Sie auf der Seite **Bereit zum Reparieren** auf **Reparieren**. Wenn die Seite Abgeschlossen angezeigt wird, wurde der Vorgang abgeschlossen.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Erstellen einer neuen msdb-Datenbank  
+
  Wenn die **msdb** -Datenbank beschädigt ist und Sie keine Sicherung der **msdb** -Datenbank erstellt haben, können Sie mit dem Skript **instmsdb** eine neue **msdb** -Datenbank erstellen.  
   
 > [!WARNING]  
@@ -186,6 +189,33 @@ ms.locfileid: "88471168"
 9. Legen Sie die in der **msdb** -Datenbank gespeicherten Benutzerinhalte wie Aufträge, Warnungen usw. erneut an.  
   
 10. Sichern Sie die **msdb** -Datenbank.  
+
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> Neuerstellen der tempdb-Datenbank  
+
+Wenn die **tempdb**-Datenbank beschädigt ist und die Datenbank-Engine nicht startet, können Sie **tempdb** neu erstellen, ohne alle Systemdatenbanken neu erstellen zu müssen.
+  
+1. Benennen Sie die aktuellen Dateien „Tempdb.mdf“ und „Templog.ldf“ um, falls sie nicht fehlen. 
+1. Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Eingabeaufforderung aus mithilfe des folgenden Befehls. 
+
+   ```sql
+   sqlservr -c -f -T3608 -T4022 -s <instance> -mSQLCMD
+   ```
+
+   Für einen Standardinstanznamen verwenden Sie MSSQLSERVER, für eine benannte Instanz verwenden Sie MSSQL$<Instanzname>. Ablaufverfolgungsflag 4022 deaktiviert die Ausführung von gespeicherten Startprozeduren. Durch „-mSQLCMD“ wird nur [sqlcmd.exe](../../ssms/scripting/sqlcmd-use-the-utility.md) gestattet, eine Verbindung mit dem Server herzustellen (siehe [Weitere Startoptionen](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options))
+
+   > [!Note] 
+   > Stellen Sie sicher, dass das Eingabeaufforderungsfenster nach dem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geöffnet bleibt. Das Schließen des Eingabeaufforderungsfensters beendet den Prozess.
+
+1. Stellen Sie mithilfe von **sqlcmd** eine Verbindung mit dem Server her, und verwenden Sie dann die folgende gespeicherte Prozedur, um den Status der tempdb-Datenbank zurückzusetzen.
+
+   ```sql
+   exec master..sp_resetstatus Tempdb
+   ```
+
+1. Fahren Sie den Server herunter, indem Sie im Eingabeaufforderungsfenster STRG+C drücken.
+
+1. Starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst neu. Dadurch wird ein neuer Satz von tempdb-Datenbankdateien erstellt und die tempdb-Datenbank wiederhergestellt.
+
   
 ##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> Problembehandlung von Fehlern bei der Neuerstellung  
  Syntaxfehler und andere Laufzeitfehler werden im Eingabeaufforderungsfenster angezeigt. Überprüfen Sie die SETUP-Anweisung auf folgende Syntaxfehler:  

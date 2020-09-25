@@ -1,4 +1,5 @@
 ---
+description: Gleichzeitiges Installieren von Reporting Services und Internetinformationsdiensten
 title: Gleichzeitiges Installieren von Reporting Services und Internetinformationsdiensten | Microsoft-Dokumentation
 ms.date: 07/02/2017
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6e32958f17e4cdb57b37fcf4a85ad54a11b48821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "64330628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472682"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Gleichzeitiges Installieren von Reporting Services und Internetinformationsdiensten
 
@@ -54,8 +55,8 @@ Sie können SQL Server Reporting Services (SSRS) und die Internetinformationsdie
   
 |Application|URL-Reservierung|BESCHREIBUNG|Anforderungsempfang|  
 |-----------------|---------------------|-----------------|---------------------|  
-|Berichtsserver|`https://+:80/ReportServer`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "ReportServer".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "ReportServer" angeben. Der Berichtsserver-Webdienst empfängt alle Anforderungen an „https://\<Computername>/reportserver“.|  
-|Webportal|`https://+:80/Reports`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "Reports".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "reports" angeben. Das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] empfängt alle Anforderungen an „https://\<Computername>/reports“.|  
+|Berichtsserver|`https://+:80/ReportServer`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "ReportServer".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "ReportServer" angeben. Der Berichtsserver-Webdienst empfängt alle Anforderungen an „https://\<computername>/reportserver“.|  
+|Webportal|`https://+:80/Reports`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "Reports".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "reports" angeben. Das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] empfängt alle Anforderungen an „https://\<computername>/reports“.|  
 |IIS|`https://*:80/`|Schwacher Platzhalter an Port 80.|Empfängt an Port 80 alle verbleibenden Anforderungen, die nicht von einer anderen Anwendung empfangen wurden.|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Parallele Bereitstellungen von SQL Server Reporting Services in IIS 8.0, 8.5
@@ -66,7 +67,7 @@ Sie können SQL Server Reporting Services (SSRS) und die Internetinformationsdie
   
 -   Eine in der Standardkonfiguration installierte Berichtsserverinstanz, bei der die URL-Reservierung auch Port 80 angibt und die [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]-Anwendung auch „Reports“ als Namen des virtuellen Verzeichnisses verwendet.  
   
- Bei dieser Konfiguration wird eine an „https://\<Computername>:80/reports“ gesendete Anforderung vom [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] empfangen. Die Anwendung, auf die über das virtuelle Verzeichnis „Reports“ in IIS zugegriffen wird, empfängt nach der Installation der Berichtsserverinstanz keine Anforderungen mehr.  
+ Bei dieser Konfiguration wird eine an „https://\<computername>:80/reports“ gesendete Anforderung vom [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] empfangen. Die Anwendung, auf die über das virtuelle Verzeichnis „Reports“ in IIS zugegriffen wird, empfängt nach der Installation der Berichtsserverinstanz keine Anforderungen mehr.  
   
  Wenn Sie die Bereitstellungen älterer und neuerer Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gleichzeitig ausführen, tritt unter Umständen das gerade beschriebene Routingproblem auf. Dies liegt daran, dass alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Versionen „ReportServer“ und „Reports“ als Namen der virtuellen Verzeichnisse für den Berichtsserver und die [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] anwendungen verwenden und damit die Wahrscheinlichkeit erhöht wird, dass in IIS die virtuellen Verzeichnisse „reports“ und „reportserver“ vorhanden sind.  
   

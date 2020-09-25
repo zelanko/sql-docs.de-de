@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f82420b687c3714c75b69e778c1bcc881aad8e82
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742091"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396109"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung  
 Es gibt verschiedene Methoden zum Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Die in diesem Artikel beschriebenen Ansätze reichen vom Deaktivieren eines Abonnements bis hin zum Unterbrechen der Datenquellenverbindung. Nicht alle Ansätze sind mit beiden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Servermodi möglich. In den folgenden Tabellen werden die Methoden und unterstützten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Servermodi zusammengefasst:  
   
 ##  <a name="in-this-article"></a><a name="bkmk_top"></a> Inhalt dieses Artikels  
   
-||Unterstützter Servermodus|  
+|Vorgehensweise|Unterstützter Servermodus|  
 |-|---------------------------|  
 |[Aktivieren und Deaktivieren von Abonnements](#bkmk_disable_subscription)|Einheitlicher Modus|  
 |[Anhalten eines freigegebenen Zeitplans](#bkmk_pause_schedule)|Einheitlicher und SharePoint-Modus|  

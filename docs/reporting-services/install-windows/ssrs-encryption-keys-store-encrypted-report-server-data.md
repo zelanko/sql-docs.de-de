@@ -1,4 +1,5 @@
 ---
+description: Speichern verschlüsselter Berichtsserverdaten (Konfigurations-Manager)
 title: Speichern verschlüsselter Berichtsserverdaten (Konfigurations-Manager) | Microsoft-Dokumentation
 ms.date: 10/24/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94161a531c922642fa1c4cf34dc4a683073b957d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 70ca863145814a8d0e4e2e07903a69352af2b812
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446060"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert verschlüsselte Werte in der Berichtsserver-Datenbank und in Konfigurationsdateien. Die meisten verschlüsselten Werte stellen Anmeldeinformationen für den Zugriff auf externe Datenquellen dar, die Daten für Berichte bereitstellen. In diesem Thema werden die verschlüsselten Werte, die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwendeten Verschlüsselungsfunktionen sowie andere Arten von gespeicherten, vertraulichen Daten beschrieben, die Sie kennen sollten.  

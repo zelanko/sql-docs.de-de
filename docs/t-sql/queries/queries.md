@@ -14,18 +14,18 @@ ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 921d626eaacb0cdfd6f14988cd41e39efc35339b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41b99ede74cb7e8213fb50e95f1a9160b4d947af
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459130"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226903"
 ---
 # <a name="queries"></a>Abfragen
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Die Datenbearbeitungssprache (DML) ist ein Vokabular zum Abrufen und Bearbeiten von Daten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und SQL-Datenbank. Die meisten DML-Anweisungen können auch in SQL Data Warehouse und PDW verwendet werden. Weitere Informationen hierzu finden Sie in der Dokumentation zu den jeweiligen Anweisungen. Mit diesen können Sie einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank Daten hinzufügen oder diese ändern, abfragen oder entfernen.  
+  Die Datenbearbeitungssprache (DML) ist ein Vokabular zum Abrufen und Bearbeiten von Daten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und SQL-Datenbank. Die meisten arbeiten auch in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (überprüfen Sie jede einzelne Anweisung auf Details). Mit diesen können Sie einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank Daten hinzufügen oder diese ändern, abfragen oder entfernen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In der folgenden Tabelle sind die DML-Anweisungen aufgeführt, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.  

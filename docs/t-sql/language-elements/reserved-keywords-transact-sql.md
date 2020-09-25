@@ -19,19 +19,19 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70b2e52af1ae87f4cacdb2189609c3ead2e3bc4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c0264ccc6e2f083b61b4c80c98248be80e33675
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417106"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227358"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Reservierte Schlüsselwörter (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet reservierte Schlüsselwörter zum Definieren, Bearbeiten und Zugreifen auf Datenbanken. Reservierte Schlüsselwörter sind ein Bestandteil der Grammatik der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprache, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Batches zu analysieren und zu verstehen. Obwohl es syntaktisch möglich ist, reservierte Schlüsselwörter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Bezeichner und Objektnamen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts zu verwenden, ist hierzu die Verwendung von Begrenzungsbezeichnern erforderlich.  
   
- Die folgende Tabelle enthält für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Azure SQL Data Warehouse reservierte Schlüsselwörter.  
+ In der folgenden Tabelle werden die reservierten Schlüsselwörter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] aufgeführt.  
 
 :::row:::
     :::column:::
@@ -716,7 +716,7 @@ ms.locfileid: "88417106"
 :::row-end:::
 
   
-Die folgende Tabelle enthält die für **Azure SQL Data Warehouse** exklusiv reservierten Schlüsselwörter.
+Die folgende Tabelle enthält die für **[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]** exklusiv reservierten Schlüsselwörter.
   
 :::row:::
     :::column:::

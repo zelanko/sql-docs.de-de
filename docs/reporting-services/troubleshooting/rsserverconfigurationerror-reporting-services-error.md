@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ff0a0b7c59dc70e085c5a61d9b88e28dd41cded
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3076c0f00a358a1a2adbee57178561649e6a44c2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487209"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395190"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError – Reporting Services-Fehler
     
 ## <a name="details"></a>Details  
   
-|||  
+|Category|Wert|  
 |-|-|  
 |Produktname|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Ereignis-ID|rsServerConfiguration|  
@@ -46,7 +46,7 @@ ms.locfileid: "81487209"
 ## <a name="user-action"></a>Benutzeraktion  
  Wenn dieser Fehler auftritt, nachdem Sie manuell eine Konfigurationsdatei bearbeitet haben, machen Sie die Änderungen rückgängig, indem Sie den ursprünglichen Wert wieder eingeben, oder stellen Sie eine vorherige Version wieder her, wenn eine Sicherung existiert.  
   
- Öffnen Sie die Ablaufverfolgungsprotokolldatei des Berichtsservers unter \Microsoft SQL Server\MSRS12.\<Instanzname>\Reporting Services\LogFiles, um zusätzliche Fehlermeldungsinformationen zu überprüfen, die mit dem **rsServerConfiguration**-Fehler ausgegeben werden. Weitere Informationen finden Sie unter [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ Öffnen Sie die Ablaufverfolgungsprotokolldateien des Berichtsservers unter \Microsoft SQL Server\MSRS12.\<instancename >\Reporting Services\LogFiles, um zusätzliche Fehlermeldungsinformationen zu überprüfen, die mit dem **rsServerConfiguration**-Fehler ausgegeben werden. Weitere Informationen finden Sie unter [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Nur intern  
   

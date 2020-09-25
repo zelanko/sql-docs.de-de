@@ -10,12 +10,12 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3959d2bbf06cbb5ab106cc805e37f700d3be624f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97cabcda2e5b680e9fe2d5d6a4f0ce2130e19a27
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357516"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226880"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -23,12 +23,12 @@ ms.locfileid: "88357516"
 Benennt eine vom Benutzer erstellte Tabelle in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] um. Benennt eine vom Benutzer erstellte Tabelle, eine Spalte in einer vom Benutzer erstellten Tabelle oder eine Datenbank in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] um.
 
 > [!NOTE]
-> Verwenden Sie zum Umbenennen einer Datenbank in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)][ALTER DATABASE (Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Um eine Datenbank in Azure SQL-Datenbank umzubenennen, verwenden Sie die Anweisung [ALTER DATABASE (Azure SQL-Datenbank)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Verwenden Sie die gespeicherte Prozedur [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md), um eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umzubenennen.
+> Verwenden Sie [ALTER DATABASE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true), um eine Datenbank in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] umzubenennen. Um eine Datenbank in Azure SQL-Datenbank umzubenennen, verwenden Sie die Anweisung [ALTER DATABASE (Azure SQL-Datenbank)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true). Verwenden Sie die gespeicherte Prozedur [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md), um eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umzubenennen.
 
 ## <a name="syntax"></a>Syntax
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 -- Rename a table.
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name
@@ -61,7 +61,7 @@ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* 
 RENAME DATABASE [::] [ *Datenbankname* TO *neuer_Datenbankname*
 **GILT FÜR:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Ändern Sie den Namen einer benutzerdefinierten Datenbank von *database_name* in *new_database_name*. Sie können bei der Umbenennung der Datenbank keine der folgenden reservierten [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbanknamen verwenden:
+Ändern Sie den Namen einer benutzerdefinierten Datenbank von *database_name* in *new_database_name*. Sie können bei der Umbenennung der Datenbank keine der folgenden [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]reservierten Datenbanknamen verwenden:
 
 - master
 - model
@@ -93,7 +93,7 @@ Sie können keine externen Tabellen, Indizes oder Sichten umbenennen. Anstatt si
 
 ### <a name="cannot-rename-a-table-in-use"></a>Verwendete Tabelle kann nicht umbenannt werden
 
-Sie können keine Tabellen oder Datenbanken umbenennen, während diese verwendet werden. Das Umbenennen einer Tabelle erfordert eine exklusive Sperre für die Tabelle. Wenn die Tabelle verwendet wird, müssen Sie möglicherweise die Sitzungen beenden, die die Tabelle verwenden. Zum Beenden einer Sitzung können Sie den KILL-Befehl nutzen. Verwenden Sie den KILL-Befehl mit Bedacht, da für nicht per Commit festgeschriebene Arbeit ein Rollback ausgeführt wird, wenn eine Sitzung beendet wird. Sitzungen in SQL Data Warehouse wird die „SID“ vorangestellt. Geben Sie 'SID' und die Sitzungsnummer ein, wenn Sie den KILL-Befehl aufrufen. Dieses Beispiel zeigt eine Liste der aktiven oder im Leerlauf befindlichen Sitzungen an und beendet dann die Sitzung „SID1234“.
+Sie können keine Tabellen oder Datenbanken umbenennen, während diese verwendet werden. Das Umbenennen einer Tabelle erfordert eine exklusive Sperre für die Tabelle. Wenn die Tabelle verwendet wird, müssen Sie möglicherweise die Sitzungen beenden, die die Tabelle verwenden. Zum Beenden einer Sitzung können Sie den KILL-Befehl nutzen. Verwenden Sie den KILL-Befehl mit Bedacht, da für nicht per Commit festgeschriebene Arbeit ein Rollback ausgeführt wird, wenn eine Sitzung beendet wird. Sitzungen in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] wird das Präfix „SID“ vorangestellt. Geben Sie 'SID' und die Sitzungsnummer ein, wenn Sie den KILL-Befehl aufrufen. Dieses Beispiel zeigt eine Liste der aktiven oder im Leerlauf befindlichen Sitzungen an und beendet dann die Sitzung „SID1234“.
 
 ### <a name="rename-column-restrictions"></a>Einschränkungen für das Umbenennen von Spalten
 
@@ -156,7 +156,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 **GILT FÜR:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
-Es ist wichtig, zu beachten, dass Sie eine Tabelle nicht umbenennen können, während diese verwendet wird. Das Umbenennen einer Tabelle erfordert eine exklusive Sperre für die Tabelle. Wenn die Tabelle verwendet wird, müssen Sie möglicherweise die Sitzung beenden, die die Tabelle verwendet. Zum Beenden einer Sitzung können Sie den KILL-Befehl nutzen. Verwenden Sie den KILL-Befehl mit Bedacht, da für nicht per Commit festgeschriebene Arbeit ein Rollback ausgeführt wird, wenn eine Sitzung beendet wird. Sitzungen in SQL Data Warehouse wird die „SID“ vorangestellt. Sie müssen beim Aufruf des KILL-Befehls 'SID' und die Sitzungsnummer eingeben. Dieses Beispiel zeigt eine Liste der aktiven oder im Leerlauf befindlichen Sitzungen an und beendet dann die Sitzung „SID1234“.
+Eine Tabelle kann nicht umbenannt werden, während sie verwendet wird. Das Umbenennen einer Tabelle erfordert eine exklusive Sperre für die Tabelle. Wenn die Tabelle verwendet wird, müssen Sie möglicherweise die Sitzung beenden, die die Tabelle verwendet. Zum Beenden einer Sitzung können Sie den KILL-Befehl nutzen. Verwenden Sie den KILL-Befehl mit Bedacht, da für nicht per Commit festgeschriebene Arbeit ein Rollback ausgeführt wird, wenn eine Sitzung beendet wird. Sitzungen in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] wird das Präfix „SID“ vorangestellt. Sie müssen beim Aufruf des KILL-Befehls 'SID' und die Sitzungsnummer eingeben. Dieses Beispiel zeigt eine Liste der aktiven oder im Leerlauf befindlichen Sitzungen an und beendet dann die Sitzung „SID1234“.
 
 ```sql
 -- View a list of the current sessions

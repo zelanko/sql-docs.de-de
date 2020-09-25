@@ -1,6 +1,6 @@
 ---
-description: Transaktionen (SQL Data Warehouse)
-title: Transaktionen (SQL Data Warehouse) | Microsoft-Dokumentation
+title: Transaktionen (Azure Synapse Analytics)
+description: Eine Transaktion ist eine Gruppe von mindestens einer Datenbankanweisung, für die als Ganzes entweder ein Commit oder ein Rollback ausgeführt wird.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4928358ca724108611f91e36a480a7bade6d747e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688346"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227469"
 ---
-# <a name="transactions-sql-data-warehouse"></a>Transaktionen (SQL Data Warehouse)
+# <a name="transactions-azure-synapse-analytics"></a>Transaktionen (Azure Synapse Analytics)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Eine Transaktion ist eine Gruppe von mindestens einer Datenbankanweisung, für die als Ganzes entweder ein Commit oder ein Rollback ausgeführt wird. Alle Transaktionen sind unteilbar, konsistent, isoliert und von Dauer (atomic, consistent, isolated, durable: ACID). Wenn die Transaktion erfolgreich ist, wird für alle Anweisungen darin ein Commit ausgeführt. Wenn die Transaktion fehlschlägt, d.h. bei mindestens einer Anweisung in der Gruppe ein Fehler auftritt, wird für die gesamte Gruppe ein Rollback ausgeführt.  
@@ -93,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Nach der Ausgabe einer COMMIT-Anweisung kann kein Rollback für eine Transaktion ausgeführt werden, da die Datenänderungen zu einem dauerhaften Bestandteil der Datenbank geworden sind.  
   
- Die Befehle [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) und [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) können nicht innerhalb einer expliziten Transaktion verwendet werden.  
+ Die Befehle [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) und [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) können nicht innerhalb einer expliziten Transaktion verwendet werden.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] verfügt nicht über einen Mechanismus für die Freigabe von Transaktionen. Das bedeutet, dass zu einem bestimmten Zeitpunkt nur eine Sitzung an einer Transaktion im System arbeiten kann.  
   
@@ -114,8 +115,7 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. Ausführen eines Rollbacks für eine Transaktion  
  Im folgenden Beispiel werden die Auswirkungen des Rollbacks einer Transaktion veranschaulicht.  In diesem Beispiel führt die ROLLBACK-Anweisung ein Rollback der INSERT-Anweisung aus, die erstellte Tabelle bleibt jedoch weiterhin vorhanden.  
   
-
-```sql
+```sql  
 CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  

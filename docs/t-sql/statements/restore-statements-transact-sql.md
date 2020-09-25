@@ -41,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea50c64985b67dfbc4221f65dc1f4cc5daaab721
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d218ea2075e861b04eb7e3718d630eb19ffe28
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478652"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227274"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE-Anweisungen (Transact-SQL)
 
@@ -65,10 +65,10 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -737,13 +737,13 @@ RESTORE DATABASE Sales
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* SQL-Datenbank<br />Verwaltete Instanz \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -956,8 +956,8 @@ Erfordert die `CREATE ANY DATABASE`-Berechtigung.
 Es ist ein Windows-Konto mit der Berechtigung erforderlich, auf das Sicherungsverzeichnis zuzugreifen und es zu lesen. Sie müssen außerdem den Windows-Kontonamen und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] speichern.
 
 - Überprüfen Sie mit [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md), ob die Anmeldeinformationen bereits vorhanden sind.
-- Verwenden Sie [sp_pdw_add_network_credentials – SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) zum Hinzufügen oder Aktualisieren der Anmeldeinformationen.
-- Mit [sp_pdw_remove_network_credentials – SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) können Sie Anmeldeinformationen aus [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] entfernen.
+- Verwenden Sie [sp_pdw_add_network_credentials – [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) zum Hinzufügen oder Aktualisieren der Anmeldeinformationen.
+- Mit [sp_pdw_remove_network_credentials – [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) können Sie Anmeldeinformationen aus [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] entfernen.
 
 ## <a name="error-handling"></a>Fehlerbehandlung
 
@@ -980,13 +980,13 @@ Nach der Wiederherstellung verfügt die Benutzerdatenbank über einen Datenbank-
 
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Wiederherstellen auf einer Appliance mit einer größeren Anzahl von Computeknoten
 
-Führen Sie nach dem Wiederherstellen einer Datenbank von einer kleineren auf eine größere Appliance [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) aus, da das Transaktionsprotokoll durch die Umverteilung vergrößert wird.
+Führen Sie nach dem Wiederherstellen einer Datenbank von einer kleineren auf eine größere Appliance [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) aus, da das Transaktionsprotokoll durch die Umverteilung vergrößert wird.
 
 Beim Wiederherstellen einer Sicherung auf einer Appliance mit einer größeren Anzahl von Computeknoten wächst die Größe der zugeordneten Datenbank entsprechend der Anzahl der Computeknoten.
 
 Beispiel: Wenn Sie eine 60-GB-Datenbank von einer 2-Knoten-Appliance (30 GB pro Knoten) auf einer 6-Knoten-Appliance wiederherstellen, erstellt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] auf der 6-Knoten-Appliance eine 180-GB-Datenbank (6 Knoten à 30 GB). Zunächst stellt [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] die Datenbank entsprechend der Quellkonfiguration auf 2 Knoten wieder her und verteilt sie anschließend auf alle 6 Knoten.
 
-Nach der Umverteilung enthält jeder Computeknoten weniger tatsächliche Daten und mehr freien Speicherplatz als die einzelnen Computeknoten auf der kleineren Quellappliance. Dank des zusätzlichen Speicherplatzes können Sie der Datenbank weitere Daten hinzufügen. Ist die wiederhergestellte Datenbank größer als erforderlich, können Sie mit [sp_pdw_remove_network_credentials – SQL Data Warehouse](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7) die Größe der Datenbank verringern.
+Nach der Umverteilung enthält jeder Computeknoten weniger tatsächliche Daten und mehr freien Speicherplatz als die einzelnen Computeknoten auf der kleineren Quellappliance. Dank des zusätzlichen Speicherplatzes können Sie der Datenbank weitere Daten hinzufügen. Ist die wiederhergestellte Datenbank größer als erforderlich, können Sie mit [sp_pdw_remove_network_credentials – SQL Data Warehouse](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) die Größe der Datenbank verringern.
 
 ## <a name="limitations-and-restrictions"></a>Einschränkungen
 
@@ -1038,6 +1038,6 @@ RESTORE HEADERONLY
 Sie können die Headerinformationen verwenden, um den Inhalt einer Sicherung zu überprüfen. Sie können damit auch sicherstellen, dass die Zielappliance für die Wiederherstellung mit der Quellappliance der Sicherung kompatibel ist, bevor Sie mit dem Wiederherstellen der Sicherung beginnen.
 
 ## <a name="see-also"></a>Weitere Informationen
-[BACKUP DATABASE – Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
+[BACKUP DATABASE – Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)     
 
 ::: moniker-end

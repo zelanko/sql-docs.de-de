@@ -1,4 +1,5 @@
 ---
+description: 'GenerateDatabaseRightsScript-Methode (WMI: MSReportServer_ConfigurationSetting)'
 title: 'GenerateDatabaseRightsScript-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a54cd6367cea9caf2f72ec7412d15e878233a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423264"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting Method – GenerateDatabaseRightsScript (ConfigurationSetting-Methode: GenerateDatabaseRightsScript)
   Generiert ein SQL-Skript, das verwendet werden kann, um einem Benutzer Berechtigungen für die Berichtsserver-Datenbank sowie für andere Datenbanken zu gewähren, die für das Ausführen eines Berichtsservers erforderlich sind. Es wird erwartet, dass der Aufrufer eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankserver herstellt und das Skript ausführt.  
@@ -64,7 +65,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>Bemerkungen  
  Wenn *DatabaseName* leer ist, wird *IsRemote* ignoriert und der Wert aus der Konfigurationsdatei des Berichtsservers als Datenbankname verwendet.  
   
- Wenn *IsWindowsUser* auf **TRUE** festgelegt ist, muss *UserName* das Format \<Domäne>\\<Benutzername\> aufweisen.  
+ Wenn *IsWindowsUser* auf **TRUE** festgelegt ist, muss *UserName* das Format \<domain>\\<Benutzername\> aufweisen.  
   
  Wenn *IsWindowsUser* auf **TRUE**festgelegt ist, werden dem Benutzer durch das generierte Skript Anmeldeberechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erteilt, wobei die Berichtsserver-Datenbank als Standarddatenbank festgelegt wird. Außerdem wird ihm die **RSExec** -Rolle für die Berichtsserver-Datenbank, die temporäre Berichtsserver-Datenbank, die Masterdatenbank und die MSDB-Systemdatenbank erteilt.  
   
@@ -74,12 +75,12 @@ out Int32 HRESULT);
   
 |Konto/SID, das bzw. die übersetzt wird|Allgemeiner Name|Remotename|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Lokales System|\<Domäne>\\<Computername\>$|  
-|.\LocalSystem|Lokales System|\<Domäne>\\<Computername\>$|  
-|ComputerName\LocalSystem|Lokales System|\<Domäne>\\<Computername\>$|  
-|LocalSystem|Lokales System|\<Domäne>\\<Computername\>$|  
-|(S-1-5-20)|Netzwerkdienst|\<Domäne>\\<Computername\>$|  
-|NT AUTHORITY\NetworkService|Netzwerkdienst|\<Domäne>\\<Computername\>$|  
+|(S-1-5-18)|Lokales System|\<Domain>\\<Computername\>$|  
+|.\LocalSystem|Lokales System|\<Domain>\\<Computername\>$|  
+|ComputerName\LocalSystem|Lokales System|\<Domain>\\<Computername\>$|  
+|LocalSystem|Lokales System|\<Domain>\\<Computername\>$|  
+|(S-1-5-20)|Netzwerkdienst|\<Domain>\\<Computername\>$|  
+|NT AUTHORITY\NetworkService|Netzwerkdienst|\<Domain>\\<Computername\>$|  
 |(S-1-5-19)|Lokaler Dienst|Fehler – siehe unten.|  
 |NT AUTHORITY\LocalService|Lokaler Dienst|Fehler – siehe unten.|  
   
@@ -91,13 +92,13 @@ out Int32 HRESULT);
   
 |Wert von "DatabaseServerName"|Beispiel|  
 |---------------------------------|-------------|  
-|„.“||  
+|"."||  
 |„(local)“||  
 |„LOCAL“||  
 |localhost||  
-|\<Computername>|testlab14|  
-|\<ComputerFQDN>|example.redmond.microsoft.com|  
-|\<IP-Adresse>|180.012.345,678|  
+|\<Machinename>|testlab14|  
+|\<MachineFQDN>|example.redmond.microsoft.com|  
+|\<IPAddress>|180.012.345,678|  
   
  Wenn *IsWindowsUser* auf **TRUE**festgelegt ist, ruft der WMI-Anbieter LookupAccountName auf, um die SID für das Konto abzurufen. Anschließend ruft er LookupAccountSID auf, um den im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Skript einzufügenden Namen abzurufen. Hierdurch wird sichergestellt, dass der verwendete Kontoname die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überprüfung erfolgreich durchläuft.  
   

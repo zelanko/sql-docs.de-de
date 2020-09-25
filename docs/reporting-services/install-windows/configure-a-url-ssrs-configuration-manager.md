@@ -1,4 +1,5 @@
 ---
+description: Konfigurieren einer URL (SSRS-Konfigurations-Manager)
 title: Konfigurieren einer URL (Konfigurations-Manager) | Microsoft-Dokumentation
 ms.date: 05/26/2016
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ea8162493584be5d4cb9d312c57af16ff40d08a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427092"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Konfigurieren einer URL (SSRS-Konfigurations-Manager)
   Bevor Sie das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] oder den Berichtsserver-Webdienst verwenden können, müssen Sie mindestens eine URL für jede Anwendung konfigurieren. Die Konfiguration der URLs ist obligatorisch, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Modus zur ausschließlichen Installation von Dateien installiert haben (also durch Auswahl der Option **Server installieren, jedoch nicht konfigurieren** auf der Seite mit den Berichtsserver-Installationsoptionen im Installations-Assistenten). Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der Standardkonfiguration installiert haben, sind die URLs bereits für jede Anwendung konfiguriert.  
@@ -68,7 +69,7 @@ ms.locfileid: "81487169"
   
     -   **::1** ist die Loopback-Adresse im IPv6-Format.  
   
-    -   Bestimmte IP-Adressen werden ebenfalls in dieser Liste angezeigt. IP-Adressen können in den Formaten IPv4 und IPv6 vorliegen *Nnn.nnn.nnn.nnn* ist die 32-Bit-IPv4-Adresse einer Netzwerkadapterkarte auf dem Computer. IPv6-Adressen sind 128-Bit-Adressen mit acht 4-Byte-Feldern, die durch Doppelpunkte getrennt sind: \<Präfix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   Bestimmte IP-Adressen werden ebenfalls in dieser Liste angezeigt. IP-Adressen können in den Formaten IPv4 und IPv6 vorliegen *Nnn.nnn.nnn.nnn* ist die 32-Bit-IPv4-Adresse einer Netzwerkadapterkarte auf dem Computer. IPv6-Adressen sind 128-Bit-Adressen mit acht 4-Byte-Feldern, die durch Doppelpunkte getrennt sind: \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          Wenn Sie über mehrere Karten verfügen oder wenn Ihr Netzwerk sowohl IPv4- als auch IPv6-Adressen unterstützt, werden Ihnen mehrere IP-Adressen angezeigt. Wenn Sie nur eine einzige IP-Adresse auswählen, wird der Anwendungszugriff auf genau diese IP-Adresse (und jeden Hostnamen, den ein Domänennamenserver dieser Adresse zuordnet) beschränkt. Sie können mit localhost nicht auf einen Berichtsserver zugreifen, und Sie können nicht die IP-Adressen der anderen Netzwerkkarten verwenden, die auf dem Berichtsservercomputer installiert sind. Normalerweise wählen Sie diesen Wert aus, weil Sie mehrere URL-Reservierungen konfigurieren, die auch explizite IP-Adressen oder Hostnamen angeben (z. B. einen für eine Netzwerkadapterkarte für Intranetverbindungen und einen zweiten für Extranetverbindungen).  
   

@@ -26,20 +26,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
+ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1898259aef928b749396d0560965aea1d2816624
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 018bce8226fc534694b230c18bb2f272787ec144
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246622"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076765"
 ---
 # <a name="sqlcmd-utility"></a>SQLCMD-Hilfsprogramm
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-> Informationen zu SQL Server 2014 und niedrigeren Versionen finden Sie unter [sqlcmd-Hilfsprogramm](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014).
+> Informationen zu SQL Server 2014 und niedrigeren Versionen finden Sie unter [sqlcmd-Hilfsprogramm](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true).
 >
 > Informationen zur Verwendung von sqlcmd unter Linux finden Sie unter [Installieren von sqlcmd und bcp unter Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -54,25 +54,25 @@ Das Hilfsprogramm verwendet ODBC zum Ausführen von Transact-SQL-Batches.
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Herunterladen der aktuellen Version des sqlcmd-Hilfsprogramms
 
-**[![download](../ssdt/media/download.png)Microsoft Befehlszeilen-Hilfsprogramme 15 für SQL Server (x64) herunterladen (2,6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![download](../ssdt/media/download.png)Microsoft Befehlszeilen-Hilfsprogramme 15 für SQL Server (x86) herunterladen (2,3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![Download sqlcmd for x64](../ssdt/media/download.png) Microsoft-Befehlszeilen-Hilfsprogramme 15 für SQL Server (x64) herunterladen (2,6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**
+<br>**[![Download sqlcmd for x86](../ssdt/media/download.png) Microsoft-Befehlszeilen-Hilfsprogramme 15 für SQL Server (x86) herunterladen (2,3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 Die Befehlszeilentools sind allgemein verfügbar (GA-Version), sie werden jedoch mit dem Installationspaket für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] veröffentlicht.
 
 **Versionsinformationen**
 
-Releasenummer: 15.0 <br>
-Buildnummer: 15.0.1300.359<br>
-Veröffentlichungsdatum: 13. März 2019
+Releasenummer: 15.0.2<br>
+Buildnummer: 15.0.2000.5<br>
+Veröffentlichungsdatum: 11. September 2020
 
 Die neue Version von SQLCMD unterstützt die Azure AD-Authentifizierung, einschließlich der Multi-Factor Authentication-Unterstützung (MFA) für SQL-Datenbank, SQL Data Warehouse und Always Encrypted-Features.
 Die neue BCP unterstützt die Azure AD-Authentifizierung, einschließlich der Multi-Factor Authentication-Unterstützung (MFA) für SQL-Datenbank und SQL Data Warehouse.
 
 **Systemanforderungen:** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008 – 2019
 
-Für diese Komponente sind sowohl [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) als auch [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567) erforderlich.
+Für diese Komponente sind sowohl [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) als auch [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql) erforderlich.
  
-Zum Überprüfen der SQLCMD-Version führen Sie den Befehl `sqlcmd -?` aus, und vergewissern Sie sich, dass Version 15.0.1300.359 oder höher verwendet wird.
+Führen Sie zum Überprüfen der SQLCMD-Version den Befehl `sqlcmd -?` aus, und vergewissern Sie sich, dass Version 15.0.2000.5 oder höher verwendet wird.
 
 > [!NOTE]
 > Sie benötigen mindestens Version 13.1 zur Unterstützung von Always Encrypted (`-g`) und Azure Active Directory-Authentifizierung (`-G`). (Möglicherweise haben Sie mehrere Versionen von „sqlcmd.exe“ auf Ihrem Computer installiert. Achten Sie darauf, dass Sie die richtige Version verwenden. Um die Version zu bestimmen, führen Sie `sqlcmd -?`aus.)
@@ -89,8 +89,8 @@ Aktuell ist für **sqlcmd** kein Leerzeichen zwischen der Befehlszeilenoption un
 
  Weitere Themen: 
 
-- [Starten des Hilfsprogramms „sqlcmd“](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
-- [Verwenden des Hilfsprogramms sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Starten des Hilfsprogramms „sqlcmd“](../ssms/scripting/sqlcmd-start-the-utility.md)
+- [Verwenden des Hilfsprogramms sqlcmd](../ssms/scripting/sqlcmd-use-the-utility.md)
   
 ## <a name="syntax"></a>Syntax
 
@@ -169,11 +169,11 @@ Die Option **-E** ignoriert mögliche Umgebungsvariableneinstellungen für Benut
 Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hierzu finden Sie unter [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Es werden nur Hauptschlüssel unterstützt, die im Windows-Zertifikatspeicher gespeichert sind. Der Schalter -g erfordert mindestens **sqlcmd** Version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Um die Version zu bestimmen, führen Sie `sqlcmd -?`aus.
 
 **-G**  
-Dieser Schalter wird vom Client beim Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse verwendet, um anzugeben, dass der Benutzer mithilfe der Azure Active Directory-Authentifizierung authentifiziert werden soll. Durch diese Option wird die **sqlcmd** -Skriptvariable „SQLCMDUSEAAD = true“ festgelegt. Der Schalter -G erfordert mindestens **sqlcmd** Version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Um die Version zu bestimmen, führen Sie `sqlcmd -?`aus. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Die Option „-A“ wird mit der Option „-G“ nicht unterstützt.
+Dieser Schalter wird vom Client beim Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse verwendet, um anzugeben, dass der Benutzer mithilfe der Azure Active Directory-Authentifizierung authentifiziert werden soll. Durch diese Option wird die **sqlcmd** -Skriptvariable „SQLCMDUSEAAD = true“ festgelegt. Der Schalter -G erfordert mindestens **sqlcmd** Version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Um die Version zu bestimmen, führen Sie `sqlcmd -?`aus. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse unter Verwendung der Azure Active Directory-Authentifizierung](/azure/azure-sql/database/authentication-aad-overview). Die Option „-A“ wird mit der Option „-G“ nicht unterstützt.
 
 > [!IMPORTANT]
 > Die `-G`-Option gilt nur für Azure SQL-Datenbank und Azure Data Warehouse.
-> Die in AAD integrierte und interaktive Authentifizierung wird unter Linux und macOS derzeit nicht unterstützt.
+> Die interaktive AAD-Authentifizierung wird unter Linux oder macOS derzeit nicht unterstützt. Die integrierte AAD-Authentifizierung erfordert [Microsoft ODBC-Treiber 17 für SQL Server](https://aka.ms/downloadmsodbcsql) Version 17.6.1 oder höher und eine ordnungsgemäß konfigurierte Kerberos-Umgebung.
 
 - **Azure Active Directory-Benutzername und -Kennwort:** 
 
@@ -211,7 +211,7 @@ Dieser Schalter wird vom Client beim Herstellen einer Verbindung mit SQL-Datenba
 
     Durch die interaktive Azure AD-Authentifizierung für Azure SQL-Datenbank und SQL Data Warehouse können Sie eine interaktive Methode verwenden, die die mehrstufige Authentifizierung unterstützt. Weitere Informationen finden Sie unter [Interaktive Active Directory-Authentifizierung](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
-   Für die interaktive Azure AD-Authentifizierung sind **sqlcmd** in [Version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) oder höher und [ODBC in Version 17.2 oder höher](https://www.microsoft.com/download/details.aspx?id=56567) erforderlich.  
+   Für die interaktive Azure AD-Authentifizierung sind **sqlcmd** in [Version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) oder höher und [ODBC in Version 17.2 oder höher](https://aka.ms/downloadmsodbcsql) erforderlich.  
 
    Geben Sie zum Aktivieren der interaktiven Authentifizierung die Option „-G“ nur mit dem Benutzernamen (-U) und ohne ein Kennwort an.
 
@@ -235,7 +235,7 @@ Dieser Schalter wird vom Client beim Herstellen einer Verbindung mit SQL-Datenba
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
 
-   Die Gastbenutzeralias wird verwendet, wenn Gastbenutzer in einer bestimmten Azure AD-Instanz vorhanden und Teil einer Gruppe von SQL-Datenbank sind, die über Datenbankberechtigungen zum Ausführen des sqlcmd-Befehls verfügt (z. B. *keith0@adventureworks.com* ).
+   Der Gastbenutzeralias wird verwendet, wenn Gastbenutzer in einer bestimmten Azure AD-Instanz vorhanden sind und zu einer Gruppe gehören, die in SQL-Datenbank vorhanden ist und über Datenbankberechtigungen zum Ausführen des sqlcmd-Befehls verfügt (z. B. *keith0@adventureworks.com* ).
 
   >[!IMPORTANT]
   >Bei Verwendung der Optionen `-G` und `-U` mit SQLCMD gibt es ein bekanntes Problem: Wenn die Option `-U` vor die Option `-G` gesetzt wird, kann bei der Authentifizierung ein Fehler auftreten. Verwenden Sie die Option `-G` immer vor der Option `-U`.
@@ -251,7 +251,7 @@ Dieser Schalter wird vom Client beim Herstellen einer Verbindung mit SQL-Datenba
  Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben ist, unterstützt das sqlcmd-Hilfsprogramm keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 **-M** _Multisubnetzfailover_  
- Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer SQL Server-Verfügbarkeitsgruppe oder einer SQL Server-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen finden Sie unter [Listener, Clientkonnektivität, Anwendungsfailover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) und [Aktive Sekundäre: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](https://msdn.microsoft.com/library/ff878253.aspx).
+ Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer SQL Server-Verfügbarkeitsgruppe oder einer SQL Server-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen finden Sie unter [Listener, Clientkonnektivität, Anwendungsfailover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server)](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) und [Aktive Sekundäre: Lesbare sekundäre Replikate (Always On-Verfügbarkeitsgruppen)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
   
  **-N**  
  Dieser Schalter wird vom Client verwendet, um eine verschlüsselte Verbindung anzufordern.  
@@ -588,7 +588,7 @@ Wenn Sie **sqlcmd** interaktiv verwenden möchten, geben Sie **sqlcmd** an der E
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8" (Sekunden)|  
 |SQLCMDSTATTIMEOUT|-t|R/W|"0" = unbegrenzt warten|  
 |SQLCMDHEADERS|-H|R/W|"0"|  
-|SQLCMDCOLSEP|-S|R/W|„ “|  
+|SQLCMDCOLSEP|-S|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|R/W|0|  
@@ -612,7 +612,7 @@ Wenn Sie **sqlcmd** interaktiv verwenden möchten, geben Sie **sqlcmd** an der E
 |**GO** [*Anzahl*]|**:List**|  
 |[ **:** ] **RESET**|**:Error**|  
 |[ **:** ] **ED**|**:Out**|  
-|[ **:** ] **!!**|**:Perftrace**|  
+|[**:**] **!!**|**:Perftrace**|  
 |[ **:** ] **QUIT**|**:Connect**|  
 |[ **:** ] **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
@@ -928,9 +928,5 @@ Die folgenden Methoden haben sich dazu bewährt, Sicherheit und Effizienz zu opt
 - [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)
 - [Verwalten von Auftragsschritten](~/ssms/agent/manage-job-steps.md)   
 - [Erstellen eines CmdExec-Auftragsschritts](~/ssms/agent/create-a-cmdexec-job-step.md)  
-
-## <a name="feedback"></a>Feedback
-
-![Person_benötigt_Hilfe_Symbol](../ssms/media/needhelp_person_icon.png) [SQL Clienttools-Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -1,8 +1,8 @@
 ---
-title: Erste Schritte mit Berichts-Viewer-Steuerelementen
+title: Erste Schritte mit Report Viewer-Steuerelementen
 description: Die Report Viewer-Steuerelemente können verwendet werden, um RDL-Berichte von Reporting Services in Web- und WinForms-Apps zu integrieren.
 ms.custom: seo-lt-2019
-ms.date: 06/03/2020
+ms.date: 09/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -10,22 +10,24 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a559bdb5b525b8d95c121b8059076d86029a37fd
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943193"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569960"
 ---
-# <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrieren von Reporting Services mit den Report Viewer-Steuerelementen – erste Schritte
+# <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrieren von Reporting Services mit den ReportViewer-Steuerelementen – Erste Schritte
 
 Die Report Viewer-Steuerelemente können verwendet werden, um RDL-Berichte von Reporting Services in Web- und WinForms-Apps zu integrieren. Detaillierte Informationen zu aktuellen Updates finden Sie im [Änderungsprotokoll](changelog.md).
 
-## <a name="adding-the-report-viewer-control-to-a-new-web-project"></a>Hinzufügen des Report Viewer-Steuerelements zu einem neuen Webprojekt
+## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>Hinzufügen des ReportViewer-Steuerelements zu einem neuen Webprojekt
 
 1. Erstellen Sie eine **leere ASP.NET-Website**, oder öffnen Sie ein vorhandenes ASP.NET-Projekt.
 
-    ![ssRS-Erstellen-Neues-ASPNET-Projekt](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
+    Sie können .NET Framework 4.6 oder eine höhere Version verwenden.
+
+    ![Screenshot: Erstellen einer neuen, leeren ASP.NET-Website](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project-4-6.png)
 
 2. Installieren Sie das NuGet-Paket für Report Viewer-Steuerelemente über die **Manager-Konsole für NuGet-Pakete**.
 
@@ -73,7 +75,7 @@ Die letzte Seite sollte wie folgt aussehen:
 </html>
 ```
 
-## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>Aktualisieren eines vorhandenen Projekts zur Verwendung des Report Viewer-Steuerelements
+## <a name="update-an-existing-project-to-use-the-report-viewer-control"></a>Aktualisieren eines vorhandenen Projekts zur Verwendung des ReportViewer-Steuerelements
 
 Stellen Sie sicher, dass Sie alle Assemblyverweise auf Version *15.0.0.0* aktualisieren, einschließlich der web.config-Datei und sämtlicher ASPX-Seiten, die auf das Anzeigesteuerelement verweisen.
 
@@ -87,7 +89,7 @@ Stellen Sie sicher, dass Sie alle Assemblyverweise auf Version *15.0.0.0* aktual
   -->
 <configuration>
   <system.web>
-    <compilation debug="true" targetFramework="4.5.2">
+    <compilation debug="true" targetFramework="4.6">
       <assemblies>
         <!-- All assemblies updated to version 15.0.0.0. -->
         <add assembly="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
@@ -104,7 +106,7 @@ Stellen Sie sicher, dass Sie alle Assemblyverweise auf Version *15.0.0.0* aktual
           type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </buildProviders>
     </compilation>
-    <httpRuntime targetFramework="4.5.2"/>
+    <httpRuntime targetFramework="4.6"/>
     <httpHandlers>
       <!-- Version updated to 15.0.0.0 -->
       <add path="Reserved.ReportViewerWebControl.axd" verb="*"
@@ -135,18 +137,20 @@ Stellen Sie sicher, dass Sie alle Assemblyverweise auf Version *15.0.0.0* aktual
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-report-viewer-control-to-a-new-windows-forms-project"></a>Hinzufügen des Report Viewer-Steuerelements zu einem neuen Windows Forms-Projekt
+## <a name="add-the-report-viewer-control-to-a-new-windows-forms-project"></a>Hinzufügen des Report Viewer-Steuerelements zu einem neuen Windows Forms-Projekt
 
 1. Erstellen Sie eine neue **Windows Forms-Anwendung**, oder öffnen Sie ein vorhandenes Projekt.
 
-    ![ssRS-Erstellen-Neues-Winforms-Projekt](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
+    Sie können .NET Framework 4.6 oder eine höhere Version verwenden.
+    
+    ![Screenshot: Erstellen einer neuen Windows Forms-Anwendung](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project-4-6.png)
 
 2. Installieren Sie das NuGet-Paket für Report Viewer-Steuerelemente über die **Manager-Konsole für NuGet-Pakete**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. Fügen Sie entweder ein neues Steuerelement aus Code hinzu oder [fügen Sie der Toolbox das Steuerelement hinzu](#adding-control-to-visual-studio-toolbar).
+3. Fügen Sie entweder ein neues Steuerelement aus Code hinzu oder [fügen Sie der Toolbox das Steuerelement hinzu](#add-the-control-to-visual-studio-toolbar).
 
     ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
@@ -174,7 +178,7 @@ Stellen Sie sicher, dass Sie alle Assemblyverweise auf Version *15.0.0.0* aktual
 
 Wenn Sie die Höhe des Anzeigesteuerelements auf 100 % festlegen, muss das übergeordnete Element über eine definierte Höhe verfügen, oder alle Vorgängerelemente müssen prozentuale Höhenwerte aufweisen.
 
-### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>Festlegen der Höhe aller Vorgängerelemente auf 100 %
+### <a name="set-the-height-of-all-the-ancestors-to-100"></a>Festlegen der Höhe aller Vorgängerelemente auf 100 %
 
 ```html
 <!DOCTYPE html>
@@ -199,7 +203,7 @@ Wenn Sie die Höhe des Anzeigesteuerelements auf 100 % festlegen, muss das über
 </html>
 ```
 
-### <a name="setting-the-parents-height-attribute"></a>Festlegen der Höhe des übergeordneten Elements
+### <a name="set-the-parents-height-attribute"></a>Festlegen des Höhe-Attributs des übergeordneten Elements
 
 Weitere Informationen zu den Längen der Viewports in Prozent finden Sie unter [Viewport-percentage lengths (Längen der Viewports in Prozent)](http://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
@@ -221,7 +225,7 @@ Weitere Informationen zu den Längen der Viewports in Prozent finden Sie unter [
 </html>
 ```
 
-## <a name="adding-control-to-visual-studio-toolbar"></a>Hinzufügen eines Steuerelements zur Visual Studio-Symbolleiste
+## <a name="add-the-control-to-visual-studio-toolbar"></a>Hinzufügen des Steuerelements zur Visual Studio-Symbolleiste
 
 Das Report Viewer-Steuerelement wird jetzt als NuGet-Paket ausgeliefert und wird in der Visual Studio-Toolbox nicht mehr standardmäßig angezeigt. Sie können das Steuerelement manuell zur Toolbox hinzufügen.
 
@@ -229,15 +233,15 @@ Das Report Viewer-Steuerelement wird jetzt als NuGet-Paket ausgeliefert und wird
 
 2. Entfernen Sie das Report Viewer-Steuerelement aus der Toolbox.
 
-    ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
+    ![Screenshot: Löschen des ReportViewer-Steuerelements](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
 3. Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Toolbox, und klicken Sie anschließend auf **Elemente auswählen...** .
 
-    ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
+    ![Screenshot: Option „Elemente auswählen“ in der Toolbox](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
 4. Klicken Sie unter den **.NET Framework-Komponenten** auf **Durchsuchen**.
 
-    ![ssRS-toolbox-browse](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
+    ![Screenshot: Schaltfläche „Durchsuchen“ im Dialogfeld „.NET Framework-Komponenten“](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
 
 5. Klicken Sie in dem von Ihnen installierten NuGet-Paket auf **Microsoft.ReportViewer.WinForms.dll** oder **Microsoft.ReportViewer.WebForms.dll**.
 
@@ -246,7 +250,7 @@ Das Report Viewer-Steuerelement wird jetzt als NuGet-Paket ausgeliefert und wird
 
 6. Das neue Steuerelement sollte jetzt in der Toolbox angezeigt werden. Sie können es nun in eine andere Registerkarte in der Toolbox verschieben, wenn Sie möchten.
 
-    ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
+    ![Screenshot: Neues ReportViewer-Steuerelement in der Toolbox](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
 ## <a name="common-issues"></a>Häufige Probleme
     
@@ -264,12 +268,11 @@ Nachstehend finden Sie Links zu Artikeln auf der Website NuGet.org, die Informat
 - Microsoft.ReportingServices.ReportViewerControl.Winforms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
 
 
-## <a name="feedback"></a>Feedback
+## <a name="forum-feedback"></a>Forum-Feedback
 
-Informieren Sie das Team in den [Reporting Services-Foren](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) über Probleme.
+Informieren Sie das Team in den [Reporting Services-Foren](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html) über Probleme.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 [Datensammlung im Report Viewer-Steuerelement](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)
 

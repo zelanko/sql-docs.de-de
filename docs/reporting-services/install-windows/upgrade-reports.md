@@ -1,4 +1,5 @@
 ---
+description: Upgraden von Berichten (SSRS)
 title: Aktualisieren von Berichten | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1454c579739c892cc3d0c03211283589ba3e6b82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446024"
 ---
 # <a name="upgrade-reports-ssrs"></a>Upgraden von Berichten (SSRS)
 
@@ -127,7 +128,7 @@ Berichtsdefinitionsdateien (RDL) werden auf folgende Weise automatisch aktualisi
   
 -   **Nein** Wählen Sie **Nein** aus, wenn die CRIs im Bericht nicht konvertiert werden sollen. Diese CRIs können vom Berichtsprozessor nicht in ihrer aktuellen Version angezeigt werden. Wenn der Systemadministrator die Installation einer neuen CRI-Version von einem Softwaredrittanbieter plant, die mit dem neuen Berichtsdefinitionsformat kompatibel ist, sollten Sie **Nein**auswählen. Bis neue Versionen zur Verfügung stehen, werden die CRIs im Bericht als leere Textfelder mit einem roten X dargestellt.  
   
- In beiden Fällen wird der Bericht auf das neue Berichtsdefinitionsformat aktualisiert, und eine Sicherungskopie des ursprünglichen Berichts wird als „ *\<Berichtsname>* `-` Backup.rdl“ gespeichert. Wenn Sie den Bericht im Berichterstellungstool speichern, wird der aktualisierte Bericht im neuen Berichtsdefinitionsformat gespeichert. Beim Veröffentlichen des Berichts wird dieser zuerst auf Ihrem Computer gespeichert und dann auf dem Berichtsserver veröffentlicht. Sie veröffentlichen die aktualisierte Version des Berichts auf dem Berichtsserver.  
+ In beiden Fällen wird der Bericht auf das neue Berichtsdefinitionsformat aktualisiert, und eine Sicherungskopie des ursprünglichen Berichts wird als *\<Report Name>* `-` Backup.rdl gespeichert. Wenn Sie den Bericht im Berichterstellungstool speichern, wird der aktualisierte Bericht im neuen Berichtsdefinitionsformat gespeichert. Beim Veröffentlichen des Berichts wird dieser zuerst auf Ihrem Computer gespeichert und dann auf dem Berichtsserver veröffentlicht. Sie veröffentlichen die aktualisierte Version des Berichts auf dem Berichtsserver.  
   
  Wenn Sie den Bericht nicht speichern, bleibt der ursprüngliche Bericht unverändert. Sie können diesen Bericht jedoch nicht in der SQL Server 2016-Version von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder in einer Berichterstellungsumgebung bearbeiten, für die ein neueres Berichterstellungsformat verwendet wird. Die ursprüngliche Version des Berichts kann weiterhin ausgeführt werden, indem Sie diese mithilfe des Webportals auf einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]-Berichtsserver hochladen. Weitere Informationen finden Sie unter [Webportal](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -140,6 +141,6 @@ Berichtsdefinitionsdateien (RDL) werden auf folgende Weise automatisch aktualisi
 [Verhaltensänderungen in SQL Server Reporting Services in SQL Server 2016](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Benutzerdefinierte Berichtselemente](../../reporting-services/custom-report-items/custom-report-items.md)   
-[Upgrade a Report Server Database (Aktualisieren der Berichtsserver-Datenbank)](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
+[Aktualisieren der Berichtsserver-Datenbank](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

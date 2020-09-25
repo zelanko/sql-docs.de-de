@@ -1,4 +1,5 @@
 ---
+description: Gewähren von Benutzerzugriff auf einen Berichtsserver
 title: Gewähren von Benutzerzugriff auf einen Berichtsserver | Microsoft-Dokumentation
 ms.date: 05/6/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0eb38550a0fc9e395b651783af4d449626de1d63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373886"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Gewähren von Benutzerzugriff auf einen Berichtsserver
 
@@ -61,7 +62,7 @@ ms.locfileid: "65619617"
 
 4. Klicken Sie auf **Gruppe oder Benutzer hinzufügen**.
 
-5. Geben Sie unter **Gruppe oder Benutzer** ein Windows-Domänenbenutzer- oder -Gruppenkonto im folgenden Format ein: \<Domäne>\\<Konto\>.
+5. Geben Sie unter **Gruppe oder Benutzer** ein Windows-Domänenbenutzerkonto oder -Domänengruppenkonto im folgenden Format an: \<domain>\\<Konto\>.
 
     > [!NOTE]
     > Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.
@@ -76,7 +77,7 @@ ms.locfileid: "65619617"
 
 1. Starten Sie das **Webportal**, und suchen Sie das Berichtselement, für das Sie einen Benutzer oder eine Gruppe hinzufügen möchten.
 
-2. Klicken Sie auf die Auslassungspunkte ( **...** ) eines Elements.
+2. Klicken Sie auf die Auslassungspunkte (**...**) eines Elements.
 
 3. Klicken Sie im Dropdownmenü auf **Verwalten**.
 
@@ -87,7 +88,7 @@ ms.locfileid: "65619617"
     > [!NOTE]
     > Falls ein Element aktuell die Sicherheitseinstellungen eines übergeordneten Elements erbt, klicken Sie auf der Symbolleiste auf **Sicherheit anpassen**, um die Sicherheitseinstellungen zu ändern. Klicken Sie dann auf **Gruppe oder Benutzer hinzufügen**.
 
-6. Geben Sie unter **Gruppe oder Benutzer** ein Windows-Domänenbenutzer- oder -Gruppenkonto im folgenden Format ein: \<Domäne>\\<Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.
+6. Geben Sie unter **Gruppe oder Benutzer** ein Windows-Domänenbenutzerkonto oder -Domänengruppenkonto im folgenden Format an: \<domain>\\<Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.
 
 7. Wählen Sie mindestens eine Rollendefinition aus, die beschreibt, wie der Benutzer oder die Gruppe auf das Element zugreifen soll, und klicken Sie dann auf **OK**.
 

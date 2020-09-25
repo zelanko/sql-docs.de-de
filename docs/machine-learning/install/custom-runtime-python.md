@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c7bd834b1eedbb2f3e15aeeaa7d73e6266274bdd
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: ca8827f5dcee9b25d873ac7fed83679480bedb44
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210615"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227264"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Installieren einer benutzerdefinierten Python-Laufzeit für SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -134,7 +134,7 @@ Klicken Sie alternativ mit der rechten Maustaste auf den SQL Server-Launchpad-D
 
 ## <a name="download-python-language-extension"></a>Herunterladen der Python-Programmiersprachenerweiterung
 
-Laden Sie die ZIP-Datei mit der Python-Spracherweiterung [python-lang-extension.zip](https://github.com/microsoft/sql-server-language-extensions/releases) herunter.
+Laden Sie die [ZIP-Datei herunter, die die Python-Sprachenerweiterung für Windows](https://github.com/microsoft/sql-server-language-extensions/releases) enthält. Es wird empfohlen, die Releaseversion in der Produktionsumgebung zu verwenden. Verwenden Sie die Debugversion in der Entwicklungs- oder Testumgebung, da sie ausführliche Protokollierungsinformationen zur Untersuchung eventueller Fehler liefert.
 
 ## <a name="register-external-language"></a>Registrieren einer externen Sprache
 
@@ -280,7 +280,7 @@ sudo systemctl restart mssql-launchpadd
 ```
 ## <a name="download-python-language-extension"></a><a name="download-python-linux"></a> Herunterladen der Python-Programmiersprachenerweiterung
 
-Laden Sie die ZIP-Datei mit der Python-Spracherweiterung [python-lang-extension.zip](https://github.com/microsoft/sql-server-language-extensions/releases) herunter.
+Laden Sie die [ZIP-Datei herunter, die die Python-Sprachenerweiterung für Linux](https://github.com/microsoft/sql-server-language-extensions/releases) enthält. Es wird empfohlen, die Releaseversion in der Produktionsumgebung zu verwenden. Verwenden Sie die Debugversion in der Entwicklungs- oder Testumgebung, da sie ausführliche Protokollierungsinformationen zur Untersuchung eventueller Fehler liefert.
 
 ## <a name="register-external-language"></a>Registrieren einer externen Sprache
 

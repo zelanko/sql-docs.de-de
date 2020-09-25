@@ -1,4 +1,5 @@
 ---
+description: Behandlung von Problemen bei der Installation von Reporting Services
 title: Behandlung von Problemen bei der Installation von Reporting Services | Microsoft-Dokumentation
 ms.date: 01/17/2018
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b3d3bf132fb869ac2273a1db76dd34c4f24970ad
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68889700"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569890"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Behandlung von Problemen bei der Installation von Reporting Services
 
@@ -101,7 +102,7 @@ ms.locfileid: "68889700"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  Vergewissern Sie sich, dass der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst auf der folgenden Seite den Status „**Gestartet**“ aufweist: SharePoint 2013/2016-Zentraladministration > „**Anwendungsverwaltung**“ > „**Dienste auf dem Server verwalten**“.  
+2.  Überprüfen Sie, ob der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst auf der Seite als **Gestartet** angezeigt wird: SharePoint 2013/2016-Zentraladministration -> **Anwendungsverwaltung** -> **Dienste auf dem Server verwalten**  
   
  ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
   
@@ -137,7 +138,7 @@ ms.locfileid: "68889700"
  
  - Die SSRS-Dienstanwendung ist nicht dieser Webanwendung zugeordnet. Verwenden Sie, die SSRS-Dienstanwendungsseiten, um den Proxy der SSRS-Dienstanwendung der Anwendungsproxygruppe dieser Webanwendung zuzuordnen. 
   
- **Problemumgehung:** Die Fehlermeldung enthält drei vorgeschlagene Schritte, um dieses Problem zu beheben. Der erste Vorschlag in der Meldung „Es wurde keine Berichtsserver-URL konfiguriert.“ spielt bei der Integration der früheren Version des Berichtsservers in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eine wichtige Rolle. Die SharePoint-Konfiguration für die vorherigen Berichtsserverversionen wird auf der Seite **Allgemeine Anwendungseinstellungen** abgeschlossen und verwendet **SQL Server Reporting Services (2008 und 2008 R2)** .  
+ **Problemumgehung:** Die Fehlermeldung enthält drei vorgeschlagene Schritte, um dieses Problem zu beheben. Der erste Vorschlag in der Meldung „Es wurde keine Berichtsserver-URL konfiguriert.“ spielt bei der Integration der früheren Version des Berichtsservers in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eine wichtige Rolle. Die SharePoint-Konfiguration für die vorherigen Berichtsserverversionen wird auf der Seite **Allgemeine Anwendungseinstellungen** abgeschlossen und verwendet **SQL Server Reporting Services (2008 und 2008 R2)**.  
   
  **Weitere Informationen:** Diese Fehlermeldung wird beim Versuch angezeigt, eine der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen zu verwenden, die eine Verbindung zum [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst erfordern. Dies schließt Folgendes ein:  
   
@@ -163,7 +164,7 @@ ms.locfileid: "68889700"
 ###  <a name="sharepoint-central-administration-page-is-blank"></a><a name="bkmk_central_admin_blank"></a> Die Seite der SharePoint-Zentraladministration ist leer.  
  **Beschreibung:** Sie konnten SharePoint 2013/2016 ohne Installationsfehler erfolgreich installieren. Wenn Sie jedoch zur Zentraladministration wechseln, sehen Sie nur eine leere Seite:  
   
- **Problemumgehung:** Dieses Problem ist nicht typisch für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , bezieht sich jedoch auf die Konfiguration von Berechtigungen in der gesamten SharePoint-Installation. Hier einige Vorschläge:  
+ **Problemumgehung:** Dieses Problem ist nicht typisch für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , bezieht sich jedoch auf die Konfiguration von Berechtigungen in der gesamten SharePoint-Installation. Hier sehen Sie einige Vorschläge:  
   
 -   Sehen Sie sich den SharePoint-Artikel zu Entwicklungsumgebungen an. [Einrichten einer allgemeinen Entwicklungsumgebung für SharePoint](https://msdn.microsoft.com/library/ee554869)  
   
@@ -208,10 +209,10 @@ ms.locfileid: "68889700"
   
 2.  Öffnen Sie ein Eingabeaufforderungsfenster, und geben Sie den folgenden Befehl ein:  
   
-    -   **run \<** *.NET 4.0 Framework-Verzeichnis* **>\InstallUtil.exe \<** *Berichtsserver-Bin-Verzeichnis* **>\ReportingServicesLibrary.dll**  
+    -   **run \<** *.NET 4.0 Framework directory* **>\InstallUtil.exe \<** *Report Server Bin directory* **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  Ersetzen Sie \< *.NET 4.0 Framework directory*> (.NET 4.0-Framework-Verzeichnis) durch den physischen Pfad der .NET Framework 4.0-Dateien und \<*Report Server Bin directory*> (das Berichtsserver-Bin-Verzeichnis) durch den physischen Pfad der Berichtsserver-Binärdateien.  
+        >  Ersetzen Sie \<*.NET 4.0 Framework directory*> durch den physischen Pfad der .NET Framework 4.0-Dateien und \<*Report Server Bin directory*> durch den physischen Pfad der Berichtsserver-Binärdateien.  
   
 3.  Starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst neu.  
   
@@ -255,7 +256,7 @@ ms.locfileid: "68889700"
 
  Wenn Sie ein Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] durchführen und für das Berichtsserver-Dienstkonto die NTLM-Authentifizierung mit einem integrierten Konto verwenden, tritt nach dem Upgrade beim Zugriff auf das Webportal oder den Berichtsserver möglicherweise der Fehler „401 – Nicht autorisiert“ auf.  
   
- Sie sehen diese Meldung aufgrund einer Änderung in der [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]-Standardkonfiguration für Windows-Authentifizierung. In der Konfiguration ist Aushandeln festgelegt, wenn es sich bei dem Berichtsserver-Dienstkonto um einen Netzwerkdienst oder ein lokales System handelt. In der Konfiguration ist NTLM festgelegt, wenn es sich bei dem Berichtsserver-Dienstkonto um keines dieser integrierten Konten handelt. Um das Problem nach dem Upgrade zu beheben, können Sie die Datei „RSReportServer.config“ bearbeiten und **AuthentificationType** als **RSWindowsNTLM**konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md).  
+ Sie sehen diese Meldung aufgrund einer Änderung in der [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]-Standardkonfiguration für Windows-Authentifizierung. In der Konfiguration ist Aushandeln festgelegt, wenn es sich bei dem Berichtsserver-Dienstkonto um einen Netzwerkdienst oder ein lokales System handelt. In der Konfiguration ist NTLM festgelegt, wenn es sich bei dem Berichtsserver-Dienstkonto um keines dieser integrierten Konten handelt. Um das Problem nach dem Upgrade zu beheben, können Sie die Datei „RSReportServer.config“ bearbeiten und **AuthentificationType** als **RSWindowsNTLM**konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren der Windows-Authentifizierung für den Berichtsserver](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md).  
 
 ### <a name="uninstalling-32-bit-instance-of-sql-server-2016-reporting-services-in-side-by-side-deployment-with-a-64-bit-instance-breaks-the-64-bit-instance"></a><a name="Uninstall32BitBreaks64Bit"></a> Durch das Deinstallieren einer 32-Bit-Instanz von SQL Server 2016 Reporting Services in einer parallelen Bereitstellung mit einer 64-Bit-Instanz wird die 64-Bit-Instanz beschädigt.
 
@@ -266,14 +267,14 @@ ms.locfileid: "68889700"
  Um dieses Problem zu beheben, können Sie die 64-Bit-Instanz reparieren. Zwar wird empfohlen, die Reparatur auszuführen, Sie können jedoch mithilfe des Registrierungs-Editors die Registrierungsschlüssel manuell erneut hinzufügen.  
   
 > [!CAUTION]  
->  Ein fehlerhaftes Bearbeiten der Registrierung kann eine schwerwiegende Beschädigung des Systems zur Folge haben. Bevor Sie Änderungen an der Registrierung vornehmen, sollten Sie wichtige Daten auf dem Computer sichern.  
+>  Ein fehlerhaftes Bearbeiten der Registrierung kann eine schwerwiegende Beschädigung des Systems zur Folge haben. Bevor Sie Änderungen an der Registrierung vornehmen, sollten Sie alle wichtigen Computerdaten sichern.  
   
 ##  <a name="additional-resources"></a><a name="bkmk_additional"></a> Weiterführende Artikel  
  Zur Unterstützung bei der Problembehandlung können Sie zusätzlich folgende Ressourcen überprüfen:  
   
 -   TechNet Wiki: [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint 2010 Integrated Mode (Problembehandlung bei SQL Server Reporting Services im integrierten SharePoint 2010-Modus)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [Forum: SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
+-   [Microsoft – Fragen und Antworten: SQL Server Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html)  
   
 -   Haben Sie weitere Fragen oder Feedback? Besuchen Sie [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
   

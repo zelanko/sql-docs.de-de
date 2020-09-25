@@ -30,12 +30,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46622a1249834fa4d768abebf8864ba1ebe5d80e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e890507e66f328d513a270e0f9f6258d626d9aa
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445553"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227254"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ COMMIT [ { TRAN | TRANSACTION }  [ transaction_name | @tran_name_variable ] ] [ 
 ```  
  
 ```syntaxsql
--- Applies to Azure SQL Data Warehouse and Parallel Data Warehouse Database
+-- Applies to Azure Synapse Analytics and Parallel Data Warehouse Database
   
 COMMIT [ TRAN | TRANSACTION ] 
 [ ; ]  
@@ -98,7 +98,7 @@ Ist der Name einer benutzerdefinierten Variablen, die einen gültigen Transaktio
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-committing-a-transaction"></a>A. Ausführen eines Commits für eine Transaktion  
-**GILT FÜR:** SQL Server, Azure SQL-Datenbank, Azure SQL Data Warehouse und Parallel Data Warehouse   
+**GILT FÜR:** SQL Server, Azure SQL-Datenbank, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
 
 Im folgenden Beispiel wird ein Stellenbewerber gelöscht. AdventureWorks wird verwendet. 
   

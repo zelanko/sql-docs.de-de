@@ -1,20 +1,20 @@
 ---
 title: Optionen nach Ende des Supports
 description: Erfahren Sie mehr über die verschiedenen Optionen für SQL Server-Produkte, die das Ende des Supports erreicht haben, z. B. SQL Server 2005, SQL Server 2008 und SQL Server 2008 R2.
-ms.date: 12/18/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3143a586c54f0c908e80ca9e78041c9f1996931
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112101"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200289"
 ---
 # <a name="sql-server-end-of-support-options"></a>Optionen für SQL Server bei Ende des Supports 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -80,7 +80,7 @@ Hardwareanforderungen:
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)    
 
 Unterstützte Versions- und Editionsupgrades:
-- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) 
+- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true) 
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 
@@ -165,7 +165,7 @@ Wenn Sie die Wartung auslagern, Kosten senken und künftige Upgrades vermeiden m
 
 - **Kosten**: Eine Einzeldatenbank kann kostengünstig sein, da Hardware, Software und Wartung ausgelagert werden und die Nutzung sekunden- oder stundenweise abgerechnet werden kann. 
 - **Flexibilität:** Eine Einzeldatenbank eignet sich besonders gut für Cloudanwendungen, wenn Entwicklerproduktivität und die schnelle Markteinführung neuer Lösungen entscheidend sind oder externer Zugriff erforderlich ist.  
-- **Allgemeine Features**: Die am häufigsten verwendeten [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Features sind verfügbar, aber nicht so viele wie bei einer verwalteten Azure SQL-Datenbank-Instanz.  
+- **Allgemeine Features**: Die am häufigsten verwendeten [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Features sind verfügbar, aber nicht so viele wie bei SQL Managed Instance.  
 - **Schnelle Bereitstellung**: Sie können eine Einzeldatenbank schnell bereitstellen. 
 - **Skalierbarkeit:** Sie können je nach Bedarf für Ihr Unternehmen schnell und einfach eine Hoch- und Herunterskalierung vornehmen, was zusätzliche Kosteneinsparungen bringt. 
 - **Verfügbarkeit:** Die Kosten des Diensts umfassen sowohl Speicher als auch Hochverfügbarkeit, wobei eine Verfügbarkeit von 99,995 % garantiert wird.  
@@ -177,7 +177,7 @@ Wenn Sie die Wartung auslagern, Kosten senken und künftige Upgrades vermeiden m
 ### <a name="considerations"></a>Überlegungen
 
 - **Eingeschränkte Migrationsoptionen**:  Sie können immer nur eine Einzeldatenbank auf einmal migrieren, nicht aber eine ganze Instanz.   
-- **Eingeschränkte Features**:  Obwohl die am häufigsten verwendeten [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Features verfügbar sind, ist der Umfang für eine Einzeldatenbank nicht so umfassend wie für eine verwaltete [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Instanz oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+- **Eingeschränkte Features**:  Obwohl die am häufigsten verwendeten Azure SQL-Datenbankfeatures verfügbar sind, ist der Umfang für eine Einzeldatenbank nicht so umfangreich wie bei Azure SQL Managed Instance oder bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Unterschiede bei Transact-SQL**:  Es gibt einige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Unterschiede (T-SQL) zwischen einer Einzeldatenbank und einer lokalen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Größenbeschränkungen**:  Eine Einzeldatenbank hat eine maximale Datenbankgröße von 100 TB verglichen mit 524 PB für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Wartungszeit**: Es gibt keine Garantie für die genaue Wartungszeit, obwohl diese nahezu transparent ist. 
@@ -197,9 +197,9 @@ Tools:
 - [Data Migration Assistant](../../dma/dma-overview.md)
 - [Database Migration Service](/azure/dms/dms-overview)
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL-Datenbank – Verwaltete Instanz
+## <a name="sql-managed-instance"></a>Verwaltete SQL-Instanz
 
-Wenn Sie die Vorteile hinsichtlich Auslagerung von Wartung und Kosten nutzen möchten, aber den Umfang der Features einer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Einzeldatenbank zu eingeschränkt finden, können Sie auf eine [verwaltete Azure SQL-Datenbank-Instanz](/azure/sql-database/sql-database-managed-instance) umsteigen. Eine verwaltete Instanz ähnelt sehr einer lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie müssen sich allerdings nicht um Dinge wie Hardwareausfälle oder Patches Gedanken machen. Bei einer verwalteten Instanz handelt es sich um eine Sammlung von System- und Benutzerdatenbanken mit einem gemeinsam genutzten Ressourcensatz, der sich per Lift & Shift migrieren lässt und für die meisten Migrationen in die Cloud genutzt werden kann. Diese Option ist ideal für neue Anwendungen oder vorhandene lokale Anwendungen, für die Sie die neuesten stabilen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Features nutzen möchten und die bei minimalen Änderungen in die Cloud migriert werden sollen. 
+Wenn Sie die Vorteile in Bezug auf die Auslagerung von Wartung und Kosten nutzen möchten, aber den Funktionsumfang einer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Einzeldatenbank zu eingeschränkt finden, können Sie zu [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) wechseln. Eine verwaltete Instanz ähnelt sehr einer lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie müssen sich allerdings nicht um Dinge wie Hardwareausfälle oder Patches Gedanken machen. Bei SQL Managed Instance handelt es sich um eine Sammlung von System- und Benutzerdatenbanken mit einer gemeinsam genutzten Ressourcengruppe, die sich per Lift & Shift migrieren lässt und für die meisten Migrationen in die Cloud genutzt werden kann. Diese Option ist ideal für neue Anwendungen oder vorhandene lokale Anwendungen, für die Sie die neuesten stabilen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Features nutzen möchten und die bei minimalen Änderungen in die Cloud migriert werden sollen. 
 
 ### <a name="benefits"></a>Vorteile
 
@@ -225,10 +225,10 @@ Wenn Sie die Vorteile hinsichtlich Auslagerung von Wartung und Kosten nutzen mö
 
 ### <a name="resources"></a>Ressourcen
 
-[Übersicht über verwaltete Azure SQL-Datenbank-Instanzen](/azure/sql-database/sql-database-managed-instance)       
+[Übersicht über Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)       
 [Wählen einer Azure SQL-Option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
 [Azure SQL-Datenbank: Featurevergleich](/azure/sql-database/sql-database-features)       
-[Migrieren von SQL Server zu einer verwalteten Instanz](/azure/sql-database/sql-database-managed-instance-migrate)       
+[Migrieren von SQL Server zu Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-migrate)       
 [Umfassende Beschreibung des Migrationsprozesses](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
 Tools:

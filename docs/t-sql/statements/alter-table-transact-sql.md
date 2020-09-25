@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35c55f7a989899e46c1189909fd4d90041ac8165
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: df75737944bb7d21bf4a3f8884688915eca52827
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024445"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227411"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -1110,7 +1110,7 @@ ALTER TABLE-Berechtigungen gelten für beide an einer ALTER TABLE SWITCH-Anweisu
 
 Falls Sie Spalten in der ALTER TABLE-Anweisung mit einem benutzerdefinierten CLR-Typ (Common Language Runtime) oder Aliasdatentyp definieren, ist die REFERENCES-Berechtigung für den Typ erforderlich.
 
-Für das Hinzufügen einer Spalte, durch die die Zeilen der Tabelle aktualisiert werden, ist die **UPDATE**-Berechtigung für die Tabelle erforderlich. Dies gilt beispielsweise für das Hinzufügen einer **NOT NULL**-Spalte mit einem Standardwert oder für das Hinzufügen einer Identitätsspalte zu einer nicht leeren Tabelle.
+Für das Hinzufügen oder Ändern einer Spalte, durch die die Zeilen der Tabelle aktualisiert werden, ist die **UPDATE**-Berechtigung für die Tabelle erforderlich. Dies gilt beispielsweise für das Hinzufügen einer **NOT NULL**-Spalte mit einem Standardwert oder für das Hinzufügen einer Identitätsspalte zu einer nicht leeren Tabelle.
 
 ## <a name="examples"></a><a name="Example_Top"></a> Beispiele
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63770bce9243775e8c9c218371f016a23555b146
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549009"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227300"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -483,6 +483,9 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. Verwenden von MERGE zum Ausführen von INSERT oder UPDATE auf eine Edge-Zieltabelle in einer Graphdatenbank
 
 In diesem Beispiel erstellen Sie Knotentabellen `Person` und `City` und eine Edgetabelle `livesIn`. Sie verwenden die MERGE-Anweisung auf dem `livesIn`-Edge und fügen eine neue Zeile ein, wenn der Edge zwischen `Person` und `City` noch nicht vorhanden ist. Wenn der Edge bereits vorhanden ist, aktualisieren Sie nur das StreetAddress-Attribut auf dem `livesIn`-Edge.
+
+> [!NOTE]
+> Das folgende Beispiel gilt für SQL Server ab Version 2019.
 
 ```sql
 -- CREATE node and edge tables

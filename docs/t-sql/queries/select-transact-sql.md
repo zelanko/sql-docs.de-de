@@ -26,12 +26,12 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 575cff8e61661fc9fccb973b7ab83f455c2ec074
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d3bc17bec08636983f5a8c85395da758720a3e0
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422444"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227204"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ SELECT [ ALL | DISTINCT ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 [ WITH <common_table_expression> [ ,...n ] ]  
 SELECT <select_criteria>  
@@ -191,7 +191,7 @@ SELECT <select_criteria>
 > Nehmen wir als Beispiel einen gruppierten Index für eine Sicht, die manche Tabellenzeilen ausschließt und deren SELECT-Spaltenliste CONVERT verwendet, wodurch ein Datentyp von *varchar* in *integer* geändert wird. In diesem Fall kann CONVERT ausgeführt werden, bevor die WHERE-Klausel ausgeführt wird. Dies ist wirklich ein Ausnahmefall. Es gibt meistens eine Möglichkeit, die Sicht zu ändern, um die veränderte Reihenfolge zu vermeiden, falls dies in Ihrem Fall relevant ist. 
 
 ## <a name="permissions"></a>Berechtigungen  
- Die Auswahl von Daten erfordert die Berechtigung **SELECT** für die Tabelle oder Sicht, die über einen höheren Bereich, beispielsweise über die Berechtigung **SELECT** für das Schema oder die Berechtigung **CONTROL** für die Tabelle, vererbt werden kann. Oder sie erfordert die Mitgliedschaft in der festen Datenbankrolle **db_datareader** oder **db_owner** oder der festen Serverrolle **sysadmin**. Das Erstellen einer neuen Tabelle mit **SELECTINTO** erfordert auch die Berechtigungen **CREATETABLE** und **ALTERSCHEMA** für das Schema, das die neue Tabelle besitzt.  
+ Die Auswahl von Daten erfordert die Berechtigung **SELECT** für die Tabelle oder Sicht, die über einen höheren Bereich, beispielsweise über die Berechtigung **SELECT** für das Schema oder die Berechtigung **CONTROL** für die Tabelle, vererbt werden kann. Oder sie erfordert die Mitgliedschaft in der festen Datenbankrolle **db_datareader** oder **db_owner** oder der festen Serverrolle **sysadmin**. Das Erstellen einer neuen Tabelle mit **SELECT INTO** erfordert auch die Berechtigungen **CREATE TABLE** und **ALTER SCHEMA** für das Schema, das die neue Tabelle besitzt.  
   
 ## <a name="examples"></a>Beispiele:   
 In den folgenden Beispielen wird die [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]-Datenbank verwendet.

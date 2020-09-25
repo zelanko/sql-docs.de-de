@@ -11,18 +11,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 187dcb7ca6da6802b60b36e2ae7f0fa5c66b0df1
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 315960092f6c27c881a000c2c6a26f0b850f3072
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88858103"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227284"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  Dieser Befehl gibt den Abfrageplan für eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Anweisung zurück, ohne die Anweisung auszuführen. Verwenden Sie EXPLAIN, um eine Vorschau der Vorgänge zu erhalten, die Datenverschiebungen erfordern, und um die ungefähren Kosten der Abfragevorgänge anzuzeigen. `WITH RECOMMENDATIONS` gilt für Azure SQL Data Warehouse.
+  Dieser Befehl gibt den Abfrageplan für eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Anweisung zurück, ohne die Anweisung auszuführen. Verwenden Sie EXPLAIN, um eine Vorschau der Vorgänge zu erhalten, die Datenverschiebungen erfordern, und um die ungefähren Kosten der Abfragevorgänge anzuzeigen. `WITH RECOMMENDATIONS` gilt für [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ Gibt den Abfrageplan mit Empfehlungen zur Leistungsoptimierung der SQL-Anweisung
   
 ## <a name="permissions"></a>Berechtigungen
 
- Erfordert die **SHOWPLAN**-Berechtigung und die Berechtigung zum Ausführen von *SQL_statement*. Weitere Informationen finden Sie unter [Berechtigungen: GRANT, DENY, REVOKE &#40;Azure SQL Data Warehouse, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
+ Erfordert die **SHOWPLAN**-Berechtigung und die Berechtigung zum Ausführen von *SQL_statement*. Weitere Informationen finden Sie unter [Berechtigungen: GRANT, DENY, REVOKE &#40;Azure Synapse Analytics, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>Rückgabewert
 
@@ -621,6 +621,6 @@ FROM   (SELECT CONVERT (INT, [T2_1].[col], 0) AS [col]
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
 [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
-[SQL Data Warehouse- und Parallel Data Warehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[In Azure SQL Data Warehouse unterstützte Systemsichten](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[In Azure SQL Data Warehouse unterstützte T-SQL-Anweisungen](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+[Katalogsichten von Azure Synapse Analytics und Parallel Data Warehouse Catalog](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[In Azure Synapse Analytics unterstützte Systemsichten](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[In Azure Synapse Analytics unterstützte T-SQL-Anweisungen](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

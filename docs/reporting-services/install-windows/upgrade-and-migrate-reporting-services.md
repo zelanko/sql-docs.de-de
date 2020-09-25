@@ -1,4 +1,5 @@
 ---
+description: Upgrade and Migrate Reporting Services
 title: Aktualisieren und Migrieren von Reporting Services | Microsoft-Dokumentation
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: ca9ffd01b7553cb343a83565615a786467371891
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 41add7a1ac27a0fba9eb364ec5e5da3dde37585c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446081"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -114,7 +115,7 @@ ms.locfileid: "82719531"
   
 3.  Wenn das Upgrade fortgesetzt werden kann, fordert das Setup Sie auf, mit dem Upgradevorgang fortzufahren.  
   
-4.  Beim Setup werden neue Ordner für SQL Server Reporting Services-Programmdateien erstellt. Die Programmordner für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation enthalten MSRS13.\<*instanzname*>.  
+4.  Beim Setup werden neue Ordner für SQL Server Reporting Services-Programmdateien erstellt. Die Programmordner für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation enthalten MSRS13.\<*instance name*>.  
   
 5.  Beim Setup werden die Programmdateien des SQL Server Reporting Services-Berichtsservers, die Konfigurationstools und die Befehlszeilenhilfsprogramme hinzugefügt, die zur Berichtsserverfunktion gehören.  
   

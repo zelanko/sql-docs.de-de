@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: ab2f062e6dd712e7f001556bb60c10c9ea4fad83
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942475"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226960"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Erstellen und Ausführen eines Kusto-Notebooks (KQL) (Vorschau)
 
@@ -38,7 +38,7 @@ Führen Sie die folgenden Schritte aus, um eine Notebook-Datei in Azure Data Stu
 
 1. Stellen Sie in Azure Data Studio eine Verbindung mit Ihrem Azure Data Explorer-Cluster her.
 
-2. Navigieren Sie zum Bereich **Verbindungen**, klicken Sie im Fenster **Server** mit der rechten Maustaste auf die Kusto-Datenbank, und klicken Sie anschließend auf *New Notebook* (Neues Notebook).
+2. Navigieren Sie zum Bereich **Verbindungen**, klicken Sie im Fenster **Server** mit der rechten Maustaste auf die Kusto-Datenbank, und klicken Sie anschließend auf *New Notebook* (Neues Notebook). Sie können auch zu **Datei** > **Neues Notebook** wechseln.
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-new-notebook.png" alt-text="Notebook öffnen":::
 
@@ -78,7 +78,7 @@ Beispiel:
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Kusto-Kernelcodeblock":::
 
-2. Kopieren Sie das folgende Beispiel, fügen Sie es in die Zelle ein, und klicken Sie auf **Run cell** (Zelle ausführen). In diesem Beispiel werden die StormEvents-Daten für einen bestimmten Ereignistyp abgefragt.
+2. Kopieren Sie das folgende Beispiel, fügen Sie es in die Zelle ein, und klicken Sie auf **Run cell** (Zelle ausführen). In diesem Beispiel werden die StormEvent-Daten für einen bestimmten Ereignistyp abgefragt.
 
    ```kusto
     StormEvents
@@ -103,6 +103,12 @@ Wenn Sie ein Skript ausführen, das ein Ergebnis zurückgibt, können Sie dieses
 ```
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Speichern des Ergebnisses":::
+
+## <a name="limitations-and-considerations"></a>Einschränkungen und Überlegungen
+
+- Sie müssen eine Datenbank für Ihren Azure Data Explorer-Cluster auswählen, bevor Sie eine Kusto-Abfrage ausführen können.
+- Wenn Sie Ihren Azure Data Explorer-Cluster zu lange im Leerlauf belassen, kann die Verbindung getrennt werden.
+    - Problemumgehung: Trennen Sie die Verbindung zum Cluster und stellen Sie sie dann wieder her.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

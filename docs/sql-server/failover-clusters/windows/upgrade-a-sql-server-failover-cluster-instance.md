@@ -1,6 +1,6 @@
 ---
 title: Aktualisieren einer Failoverclusterinstanz
-description: In diesem Artikel erfahren Sie, wie Sie mithilfe eines Installationsmediums ein Upgrade auf eine SQL Server-Failoverclusterinstanz durchführen. Außerdem erhalten Sie Informationen zu parallelen Upgrades und zum Upgraden eines Clusters mit mehreren Subnetzen.
+description: Schritte zum Aktualisieren einer SQL Server Always On-Failoverclusterinstanz mithilfe eines Installationsmediums Außerdem erhalten Sie Informationen zu parallelen Upgrades und zum Upgraden eines Clusters mit mehreren Subnetzen.
 ms.custom: seo-lt-2019
 ms.date: 11/21/2019
 ms.prod: sql
@@ -8,45 +8,49 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
-- upgrading failover clusters
+- upgrading failover cluster instances
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 43447d1fbba7ceb9a1c3faa79443f6304e8e6015
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 196678dbb5c91e6c5acbaf2fda0b6a65f9ac369e
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858574"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442368"
 ---
-# <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)
+# <a name="upgrade-a-failover-cluster-instance"></a>Aktualisieren einer Failoverclusterinstanz 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt das Upgraden eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusters auf eine neue Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], auf ein neues [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Service Pack oder ein kumulatives Update, wobei die Downtime auf ein einzelnes manuelles Failover (oder bei einem Failback auf den ursprünglichen primären Cluster auf zwei manuelle Failovers) beschränkt ist. Das Gleiche gilt, wenn ein neues Windows Service Pack oder kumulatives Windows-Update einzeln auf allen Failoverclusterknoten installiert wird.  
+
   
- Das Upgraden des Windows-Betriebssystems eines Failoverclusters wird für Betriebssysteme, die älter als [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] sind, nicht unterstützt. Weitere Informationen zum Upgraden eines Clusterknotens, der unter [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] oder höher ausgeführt wird, finden Sie unter [Perform a rolling upgrade or update (Ausführen eines parallelen Upgrades oder Updates)](#perform-a-rolling-upgrade-or-update).  
+ Ein Upgrade für das Windows Server-Betriebssystem eines Knotens, der eine Failoverclusterinstanz enthält, wird für Betriebssysteme vor [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] nicht unterstützt. Weitere Informationen zum Upgraden eines Windows Server-Failoverclusterknotens, der unter [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] oder höher ausgeführt wird, finden Sie unter [Ausführen eines parallelen Upgrades oder Updates](#perform-a-rolling-upgrade-or-update).  
   
  Informationen zur Unterstützung:  
   
--   Ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Upgrade kann über die Benutzeroberfläche und über die Befehlszeile ausgeführt werden. Sie können das Upgrade auf jedem Failoverclusterknoten an der Eingabeaufforderung oder über die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setupbenutzeroberfläche ausführen, um die einzelnen Clusterknoten zu aktualisieren.  Weitere Informationen finden Sie unter [Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) und [Install SQL Server from the Command Prompt (Installieren von SQL Server über die Eingabeaufforderung)](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
-  
+-   Ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Upgrade kann über die Benutzeroberfläche und über die Befehlszeile ausgeführt werden. Sie können das Upgrade auf jedem Failoverclusterknoten an der Eingabeaufforderung ausführen oder die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setupbenutzeroberfläche verwenden, um die einzelnen Clusterknoten zu aktualisieren. Weitere Informationen finden Sie unter:
+
+   - Installieren einer neuen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusterinstanz
+   - [Installieren von SQL Server von der Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
+
 -   Die folgenden Szenarien werden bei einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Upgrade nicht unterstützt:  
   
-    -   Sie können kein Upgrade von einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einen Failovercluster ausführen.  
+    -   Für eine eigenständige Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie kein Upgrade auf eine Failoverclusterinstanz ausführen.  
   
-    -   Sie können einem Failovercluster keine Features hinzufügen. Beispielsweise können Sie einem vorhandenen Nur- [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Failovercluster nicht [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]hinzufügen.  
+    -   Einer Failoverclusterinstanz können Sie keine Features hinzufügen. Beispielsweise können Sie [!INCLUDE[ssDE](../../../includes/ssde-md.md)] keiner vorhandenen ausschließlichen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Failoverclusterinstanz hinzufügen.  
   
-    -   Sie können Failoverclusterknoten nicht zu einer eigenständigen Instanz herabstufen.  
+    -   Sie können auch kein Downgrade einer Failoverclusterinstanz auf irgendeinem Knoten des Windows Server-Failoverclusters auf eine eigenständige Instanz vornehmen.  
   
-    -   Änderungen der Edition des Failoverclusters sind auf bestimmte Szenarien beschränkt. Weitere Informationen finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+    -   Änderungen der Edition der Failoverclusterinstanz sind auf bestimmte Szenarien beschränkt. Weitere Informationen finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
--   Während des Failoverclusterupgrades wird die Ausfallzeit auf die Failoverzeit und auf die Ausführungszeit der Upgradeskripts begrenzt. Wenn Sie ein paralleles Upgrade eines Failoverclusters wie unten beschrieben ausführen und vor Beginn des Upgrades alle Voraussetzungen auf allen Knoten erfüllt sind, ist die Downtime minimal. Wenn während des Upgrades von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] speicheroptimierte Tabellen verwendet werden, erfordert das Upgrade zusätzliche Zeit. Weitere Informationen finden Sie unter [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+-   Während des Upgrades der Failoverclusterinstanz beschränkt sich die Ausfallzeit auf die Failoverzeit und die Ausführungszeit der Upgradeskripts. Wenn Sie ein paralleles Upgrade der Failoverclusterinstanz wie unten beschrieben ausführen und vor Beginn des Upgrades alle Voraussetzungen auf allen Knoten erfüllt sind, ist die Ausfallzeit minimal. Wenn während des Upgrades von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] speicheroptimierte Tabellen verwendet werden, erfordert das Upgrade zusätzliche Zeit. Weitere Informationen finden Sie unter [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  Lesen Sie die folgenden wichtigen Informationen, bevor Sie beginnen:  
   
--   [Unterstützte Versions- und Editionsupgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Überprüfen Sie, ob ein Upgrade von Ihrer Version des Windows-Betriebssystems und Ihrer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Version auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] möglich ist. Sie können beispielsweise kein direktes Upgrade von einer SQL Server 2005-Failoverclusterinstanz auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ausführen und keinen Failovercluster upgraden, der unter [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] ausgeführt wird.  
+-   [Unterstützte Versions- und Editionsupgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Überprüfen Sie, ob ein Upgrade von Ihrer Version des Windows-Betriebssystems und Ihrer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Version auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] möglich ist. Sie können beispielsweise kein direktes Upgrade von einer SQL Server 2005-Failoverclusterinstanz auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ausführen und keine Failoverclusterinstanz upgraden, die unter [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] ausgeführt wird.  
   
 -   [Auswählen einer Upgrademethode für die Datenbank-Engine](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Wählen Sie basierend auf Ihrer Prüfung der unterstützten Versions- und Editionsupgrades sowie basierend auf den anderen in Ihrer Umgebung installierten Komponenten die passende Upgrademethode und die passenden Upgradeschritte aus, um das Upgrade der Komponenten in der richtigen Reihenfolge durchzuführen.  
   
@@ -55,9 +59,9 @@ ms.locfileid: "85858574"
 -   [Hardware- und Softwareanforderungen für die Installation von SQL Server:](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>Ausführen eines parallelen Upgrades oder Updates  
- Verwenden Sie für das Upgrade eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup, um das Upgrade jedes Failoverclusterknotens einzeln nacheinander auszuführen. Dabei sollte mit den passiven Knoten begonnen werden. Beim Aktualisieren der einzelnen Knoten wird der jeweilige Knoten nicht als möglicher Besitzer des Failoverclusters angezeigt. Im Fall eines unerwarteten Failovers können die aktualisierten Knoten erst im Failover verwendet werden, wenn der Besitz von Clusterressourcengruppen vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup zu einem aktualisierten Knoten verschoben wurde.  
+ Verwenden Sie für das Upgrade einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusterinstanz auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setup, um nacheinander für jeden Knoten in der Failoverclusterinstanz das Upgrade auszuführen. Beginnen Sie dabei mit den passiven Knoten. Beim Upgrade der einzelnen Knoten wird der jeweilige Knoten nicht als möglicher Besitzer der Failoverclusterinstanz angezeigt. Im Fall eines unerwarteten Failovers können die aktualisierten Knoten erst dann im Failover verwendet werden, wenn das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setup den Besitz der Windows Server-Failoverclusterrolle zu einem aktualisierten Knoten verschiebt.  
   
- In der Standardeinstellung wird vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup automatisch festgelegt, wann ein Failover zu einem aktualisierten Knoten auszuführen ist. Dies ist von der Gesamtanzahl der Knoten in der Failoverclusterinstanz und der Anzahl der bereits aktualisierten Knoten abhängig. Wenn bereits mindestens die Hälfte der Knoten aktualisiert wurde und Sie das Upgrade für den nächsten Knoten ausführen, löst das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup einen Failover zu einem aktualisierten Knoten aus. Nach dem Failover zu einem aktualisierten Knoten wird die Clustergruppe in einen aktualisierten Knoten verschoben. Alle aktualisierten Knoten werden in die Liste möglicher Besitzer eingefügt. Alle Knoten, die noch nicht aktualisiert wurden, werden aus der Liste möglicher Besitzer entfernt. Jeder verbleibende Knoten, den Sie aktualisieren, wird der Liste möglicher Besitzer des Failoverclusters hinzugefügt.  
+ In der Standardeinstellung wird vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup automatisch festgelegt, wann ein Failover zu einem aktualisierten Knoten auszuführen ist. Dies ist von der Gesamtanzahl der Knoten in der Failoverclusterinstanz und der Anzahl der bereits aktualisierten Knoten abhängig. Wenn bereits mindestens die Hälfte der Knoten aktualisiert wurde und Sie das Upgrade für den nächsten Knoten ausführen, löst das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup einen Failover zu einem aktualisierten Knoten aus. Nach dem Failover zu einem aktualisierten Knoten wird die Clustergruppe in einen aktualisierten Knoten verschoben. Alle aktualisierten Knoten werden in die Liste möglicher Besitzer eingefügt. Alle Knoten, die noch nicht aktualisiert wurden, werden aus der Liste möglicher Besitzer entfernt. Jeder verbleibende Knoten, den Sie aktualisieren, wird der Liste der möglichen Besitzer der Failoverclusterinstanz hinzugefügt.  
   
  Durch diesen Vorgang wird die Ausfallzeit während der gesamten Failoverclusteraktualisierung auf eine Failoverzeit und die Ausführungszeit für Aktualisierungsskripts begrenzt.  
   
@@ -109,25 +113,25 @@ ms.locfileid: "85858574"
   
 19. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen zu Setupprotokolldateien finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-20. Wiederholen Sie diese Schritte in allen anderen Knoten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters, um den Upgradevorgang abzuschließen.  
+20. Wiederholen Sie diese Schritte für alle anderen Knoten der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusterinstanz, um den Upgradevorgang abzuschließen.  
   
-## <a name="upgrade-a-multi-subnet-failover-cluster"></a>Durchführen eines Upgrades für einen Multisubnetz-Failovercluster  
+## <a name="upgrade-a-multi-subnet-failover-cluster-instance"></a>Upgrade einer Multisubnetz-Failoverclusterinstanz  
 
-Führen Sie die folgenden Schritte aus, um Ihre SQL Server-Failoverclusterinstanz in einer Multisubnetzumgebung zu aktualisieren. 
+Führen Sie die folgenden Schritte aus, um Ihre Always On-Failoverclusterinstanz in einer Multisubnetzumgebung zu aktualisieren. 
   
-### <a name="to-upgrade-to-a-ssnoversion-multi-subnet-failover-cluster-existing-ssnoversion-cluster-is-a-non-multi-subnet-cluster"></a>Aktualisieren auf einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failovercluster (vorhandener [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Cluster ist kein Multisubnetzcluster)  
+### <a name="to-upgrade-to-a-ssnoversion-multi-subnet-failover-cluster-instance-existing-ssnoversion-cluster-is-a-non-multi-subnet-cluster"></a>Upgrade auf eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Multisubnetz-Failoverclusterinstanz (vorhandener [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cluster ist kein Multisubnetzcluster)  
   
-1.  Führen Sie die oben beschriebenen Schritte aus, um Ihren Cluster zu aktualisieren.  
+1.  Führen Sie die oben beschriebenen Schritte für das Upgrade Ihrer Failoverclusterinstanz aus.  
   
-2.  Fügen Sie mit der Setupaktion AddNode einen Knoten in einem anderen Subnetz hinzu, und bestätigen Sie auf der Seite **Netzwerkkonfiguration für Cluster** die Änderung der IP-Adressabhängigkeit in OR. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+2.  Fügen Sie mit der Setupaktion „AddNode“ einen Knoten in einem anderen Subnetz hinzu, und bestätigen Sie auf der Seite **Netzwerkkonfiguration für Cluster** die Änderung der IP-Adressabhängigkeit in „OR“. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einer Always On-Failoverclusterinstanz (Setup)](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-### <a name="to-upgrade-a-multi-subnet-cluster-currently-using-stretch-v-lan"></a>So aktualisieren Sie einen Multisubnetzcluster mit Stretch-V-Lan  
+### <a name="to-upgrade-a-multi-subnet-failover-cluster-instance-currently-using-stretch-vlan-to-use-multi-subnet"></a>Upgrade einer Multisubnetz-Failoverclusterinstanz, die derzeit Stretch-VLAN verwendet, auf die Verwendung von Multisubnetzen  
   
 1.  Führen Sie die oben beschriebenen Schritte zum Aktualisieren des Clusters auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]durch.  
   
 2.  Ändern Sie die Netzwerkeinstellungen, um den Remoteknoten in ein anderes Subnetz zu verschieben.  
   
-3.  Fügen Sie mit dem Failovercluster-Manager von Windows eine neue IP-Adresse für das neue Subnetz hinzu, und legen Sie die IP-Adressabhängigkeit auf OR fest.  
+3.  Fügen Sie mit dem Failovercluster-Manager oder mit PowerShell eine neue IP-Adresse für das neue Subnetz hinzu, und legen Sie die IP-Adressabhängigkeit auf „OR“ fest.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Führen Sie nach dem Aktualisieren auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]die folgenden Tasks aus:  

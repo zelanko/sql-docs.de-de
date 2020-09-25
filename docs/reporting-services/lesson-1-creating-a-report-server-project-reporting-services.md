@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db412b18a0189f9f68caff79f8e904db5424d673
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c4ed5c985340e45b46b664dc4b6a53ff70f1b1a
+ms.sourcegitcommit: 83e5cfd2654233befd95e3ff37de936f9dc8549c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244323"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468345"
 ---
 # <a name="lesson-1-create-a-report-server-project-reporting-services"></a>Lektion 1: Erstellen eines Berichtsserverprojekts (Reporting Services)
 
@@ -36,7 +36,8 @@ Wenn Sie Berichte mit dem Berichts-Designer erstellen, wird ein Berichtsserverpr
     ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
-    > Wenn in Visual Studio die Option „Reporting Services“ nicht in der linken Spalte angezeigt wird, fügen Sie den Berichts-Designer hinzu, indem Sie die SQL Server Data Tools-Workload installieren. Klicken Sie im Menü **Extras** auf **Tools und Features abrufen...** , und wählen Sie **SQL Server Data Tools** aus den angezeigten Workloads aus. Wenn keine Reporting Services-Objekte in der mittleren Spalte angezeigt werden, fügen Sie die Reporting Services-Erweiterungen hinzu. Wählen Sie aus dem Menü **Extras** **Erweiterungen und Updates** > **Online** aus. Wählen Sie in der mittleren Spalte **Microsoft Reporting Services Projects** > **Download** (Microsoft SQL Server Reporting Services-Projekte > Download) aus den angezeigten Erweiterungen aus. Weitere Informationen zu SQL Server Data Tools finden Sie unter [Herunterladen und Installieren von SQL Server Data Tools (SSDT) für Visual Studio](../ssdt/download-sql-server-data-tools-ssdt.md).
+    > Wenn in Visual Studio die Option „Reporting Services“ nicht in der linken Spalte angezeigt wird, fügen Sie den Berichts-Designer hinzu, indem Sie die SQL Server Data Tools-Workload installieren. Klicken Sie im Menü **Extras** auf **Tools und Features abrufen...** , und wählen Sie **SQL Server Data Tools** aus den angezeigten Workloads aus. Wenn keine Reporting Services-Objekte in der mittleren Spalte angezeigt werden, fügen Sie die Reporting Services-Erweiterungen hinzu. Wählen Sie aus dem Menü **Extras** **Erweiterungen und Updates** > **Online** aus. Wählen Sie in der mittleren Spalte **Microsoft Reporting Services Projects** > **Download** (Microsoft SQL Server Reporting Services-Projekte > Download) aus den angezeigten Erweiterungen aus. Weitere Informationen zu SQL Server Data Tools finden Sie unter [Herunterladen und Installieren von SQL Server Data Tools (SSDT) für Visual Studio](../ssdt/download-sql-server-data-tools-ssdt.md). Wenn die vorherigen Schritte in Visual Studio 2019 nicht funktionieren, versuchen Sie, die Erweiterung [Microsoft Reporting Service Project](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio) zu installieren.
+
 
 3. Klicken Sie auf das Symbol für das **Berichtsserverprojekt** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;in der mittleren Spalte des Dialogfelds **New Project** (Neues Projekt).
 
@@ -68,4 +69,4 @@ Bisher haben Sie das Berichtsprojekt „Tutorial“ und den Bericht „Sales Rep
 - Erstellen eines Datasets aus der Datenquelle
 - Entwerfen und Formatieren des Berichtslayouts
 
-Fahren Sie fort mit [Lektion 2: Angeben von Verbindungsinformationen &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).
+Fahren Sie mit [Lektion 2: Angeben von Verbindungsinformationen &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md) fort.

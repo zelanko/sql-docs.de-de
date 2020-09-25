@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 825e169f3819cc19b042715662f4ec554f02d65b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b413cf8f3fd5b8e85a94e5ed26add2717dcc2376
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247199"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396477"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML-Viewer und die Berichtssymbolleiste
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt einen HTML-Viewer bereit, in dem die Berichte bedarfsgesteuert angezeigt werden können, so wie sie vom Berichtsserver angefordert werden. Der HTML-Viewer stellt ein Framework für das Anzeigen von Berichten in HTML zur Verfügung. Er enthält eine Berichtssymbolleiste, einen Parameterabschnitt, einen Abschnitt mit den Anmeldeinformationen und eine Dokumentstruktur. Die Berichtssymbolleiste im HTML-Viewer enthält Funktionen zum Bearbeiten von Berichten. Dazu zählen auch Exportoptionen, mit deren Hilfe ein Bericht in anderen Formaten als HTML angezeigt werden kann. Der Parameterabschnitt und die Dokumentstruktur werden nur angezeigt, wenn Sie Berichte öffnen, die zum Verwenden von Parametern und eines Dokumentstruktur-Steuerelements konfiguriert sind.  
@@ -35,7 +35,7 @@ ms.locfileid: "87247199"
   
  In der folgenden Tabelle sind häufig verwendete Funktionen der Berichtssymbolleiste erläutert. Jede Funktion wird durch das Steuerelement identifiziert, das Sie für den Zugriff auf die entsprechende Funktion verwenden.  
   
-|Symbol oder Steuerelement||To|  
+|Symbol oder Steuerelement|Name|BESCHREIBUNG|  
 |------------------------------|-|--------|  
 |![Steuerelemente für die Seitennavigation](../reporting-services/media/htmlviewer-pagenav.gif "Steuerelemente für die Seitennavigation")|**Steuerelemente für die Seitennavigation**|Öffnen der ersten oder letzten Seite eines Berichts, seitenweises Durchführen eines Bildlaufs durch einen Bericht und Öffnen einer bestimmten Seite in einem Bericht. Um eine bestimmte Seite anzuzeigen, geben Sie die Seitenzahl ein, und drücken Sie die EINGABETASTE.|  
 |![Steuerelemente für die Seitenanzeige](../reporting-services/media/htmlviewer-pagesize.gif "Steuerelemente für die Seitenanzeige")|**Steuerelemente für die Seitenanzeige**|Vergrößern oder Verkleinern der Berichtsseite. Sie können die Größe der Anzeige prozentual ändern oder mithilfe von **Seitenbreite** die horizontale Breite eines Berichts im Browserfenster anpassen bzw. mithilfe von **Gesamte Seite** die vertikale Länge eines Berichts im Browserfenster anpassen. Die Option **Zoom** wird von [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer ab Version 5.5 unterstützt.|  

@@ -8,12 +8,13 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59cbdd31d32014d54240b4c20937918aaa2c0770
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.custom: references_regions
+ms.openlocfilehash: 8312ab1f13d5a85c6dfb43cd29d0ba734846a512
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942688"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210579"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>Azure Arc-fähige SQL-Server-Instanz (Vorschauversion)
 
@@ -25,7 +26,7 @@ SQL Server kann auf einem virtuellen oder physischen Computer installiert werden
 
 Die Public Preview von Azure Arc-fähigen SQL Server-Instanzen unterstützt eine Reihe von Lösungen, bei denen die Microsoft Monitoring Agent-Servererweiterung (MMA) installiert und mit einem Azure Log Analytics-Arbeitsbereich für die Datensammlung und Berichterstellung verbunden sein muss. Zu diesen Lösungen gehören erweiterte Datensicherheit mit dem Azure Security Center und Azure Sentinel sowie die Prüfung der SQL-Umgebungsintegrität mithilfe des Features zur bedarfsgesteuerten SQL-Bewertung.
 
-Das folgende Diagramm zeigt die Architektur von Azure Arc-fähigen SQL Server-Instanzen, die die virtuelle Umgebung nutzen.
+Das folgende Diagramm zeigt die Architektur von Azure Arc-fähigen SQL Server-Instanzen.
 
 ![Architektur der Public Preview](media/overview/pubic-preview-architecture.png)
 

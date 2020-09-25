@@ -1,7 +1,7 @@
 ---
 title: Versionshinweise für Reporting Services 2017 und höher | Microsoft-Dokumentation
 description: Hier erhalten Sie weitere Informationen zu den Änderungen in SQL Server Reporting Services (SSRS), Version 2017 und höher.
-ms.date: 04/28/2020
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -10,12 +10,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a97ab8d68a1b265a25eb3b97a5146a402aa9b3b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3b1984133387f1cbf5405f0c90b4532e56e776b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247509"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282392"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Versionshinweise für SQL Server Reporting Services (SSRS) 2017 und höher
 
@@ -53,12 +53,39 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
+## <a name="15075454810-20200831"></a>15.0.7545.4810, 31.08.2020 
+
+| Behobenes Problem | Details |
+| :---------- | :------ |
+| Sicherheitsupdates  | &nbsp; |
+| Unterstützung von eingeschränkten Kommentaranhängen, um keine PDF-Dokumente mehr zuzulassen  | &nbsp; |
+| Korrigiert wurde das Abschneiden von Dateinamen beim Exportieren von Berichten mit einem Punkt im Namen  | &nbsp; |
+| Behoben wurde ein Problem im Zusammenhang mit Abonnements und dem zh-TW-Sprachcode, das zu Fehlern mit einem ungültigen Datumsformat geführt hat  | &nbsp; |
+| Behoben wurde ein Problem mit bestimmten Berichten, bei denen der Zugriff auf die Parameteroption zu einer Endlosschleife führte  | &nbsp; |
+| Behoben wurden Probleme in Bezug auf einfache Anführungszeichen in Berichtsnamen  | &nbsp; |
+| Behoben wurde ein Problem beim URL-Zugriff, wodurch „FindString“ keine Übereinstimmungen finden konnte  | &nbsp; |
+| Behoben wurde ein Problem, bei dem Alternativtext für den PDF-Export nicht korrekt für Multibytezeichen codiert wurde  | &nbsp; |
+| Korrigiert wurde die unerwünschte Darstellung eines leeren Bilds unter einem linearen Element  | &nbsp; |
+| Korrigiert wurde der fälschlicherweise angezeigte Fehler „Nicht unterstützt“ bei der benutzerdefinierten Authentifizierung in Web Edition  | &nbsp; |
+| Behoben wurde ein Problem, bei dem die Bildschirmausgabe in einem Tablix-Bereich eine zusätzliche Zeile und eine zusätzliche Spalte gelesen hat  | &nbsp; |
+| Behoben wurde ein Problem mit dem Abschneiden von Bildern beim Zoomen auf Vollbildansicht und dem Befehl „An Größe anpassen“  | &nbsp; |
+| Beim Befehlszeilen-Upgrade ist das EULA-Flag nicht mehr erforderlich  | &nbsp; |
+
 ## <a name="150724337714-20191101"></a>15.0.7243.37714, 1. November 2019
 
 Erste Veröffentlichung
 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+## <a name="1406001669-20200831"></a>14.0.600.1669, 31.08.2020 
+
+| Behobenes Problem | Details |
+| :---------- | :------ |
+| Sicherheitsupdates  | &nbsp; |
+| Unterstützung von eingeschränkten Kommentaranhängen, um keine PDF-Dokumente mehr zuzulassen  | &nbsp; |
+| Korrigiert wurde das Abschneiden von Dateinamen beim Exportieren von Berichten mit einem Punkt im Namen  | &nbsp; |
+| Behoben wurde ein Problem im Zusammenhang mit Abonnements und dem zh-TW-Sprachcode, das zu Fehlern mit einem ungültigen Datumsformat geführt hat  | &nbsp; |
 
 ## <a name="1406001572-20200406"></a>14.0.600.1572, 06.04.2020 
 

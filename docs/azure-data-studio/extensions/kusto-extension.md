@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: eed9e8681ac8b4d0b9bbbe8c8e4f7d7104900bd1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111647"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226825"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Kusto-Erweiterung (KQL) für Azure Data Studio (Vorschau)
 
@@ -125,6 +125,12 @@ Die Erweiterungseinstellungen sehen wie folgt aus:
 Die [SandDance-Erweiterung](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) in Kombination mit der Kusto-Erweiterung (KQL) in Azure Data Studio bringt eine umfangreiche interaktive Visualisierung mit sich. Klicken Sie im Resultset der KQL-Abfrage auf die Schaltfläche **Schnellansicht**, um [SandDance](https://sanddance.js.org/) zu starten.
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance-Visualisierung":::
+
+## <a name="limitations-and-considerations"></a>Einschränkungen und Überlegungen
+
+- Sie müssen eine Datenbank für Ihren Azure Data Explorer-Cluster auswählen, bevor Sie eine Kusto-Abfrage ausführen können.
+- Wenn Sie Ihren Azure Data Explorer-Cluster zu lange im Leerlauf belassen, kann die Verbindung getrennt werden.
+    - Problemumgehung: Trennen Sie die Verbindung zum Cluster und stellen Sie sie dann wieder her.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

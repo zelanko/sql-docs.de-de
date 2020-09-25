@@ -7,14 +7,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/28/2020
+ms.date: 08/17/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e3ea21418a058f3d4b8db13ea498c1bb94564964
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286464"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282397"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Servereigenschaften – Seite „Erweitert“: Power BI-Berichtsserver und Reporting Services
 
@@ -51,7 +51,17 @@ Verwenden Sie diese Seite, um Systemeigenschaften auf dem Berichtsserver festzul
 
 (Nur Power BI-Berichtsserver, Version Januar 2020, sowie Reporting Services 2019 und höher)
 
-Hiermit werden Headerwerte für alle URLs festgelegt, die dem angegebenen RegEx-Muster entsprechen. Benutzer können den CustomHeaders-Wert mit gültigem XML-Code aktualisieren, um Headerwerte für ausgewählte Anforderungs-URLs festzulegen. Administratoren können dem XML-Code eine beliebige Anzahl von Headern hinzufügen. Standardmäßig sind keine benutzerdefinierten Header vorhanden, und der Wert ist leer. 
+Hiermit werden Headerwerte für alle URLs festgelegt, die dem angegebenen RegEx-Muster entsprechen. Benutzer können den CustomHeaders-Wert mit gültigem XML-Code aktualisieren, um Headerwerte für ausgewählte Anforderungs-URLs festzulegen. Administratoren können dem XML-Code eine beliebige Anzahl von Headern hinzufügen. In Reporting Services 2019 gibt es standardmäßig keine benutzerdefinierten Header. Der Wert ist leer. Im Power BI-Berichtsserver der Version von Januar 2020 und höher lautet der Wert:
+
+```xml
+<CustomHeaders>
+    <Header>
+        <Name>X-Frame-Options</Name>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(mobilereport|report|excel|pages|powerbi)\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Value>SAMEORIGIN</Value>
+    </Header>
+</CustomHeaders>
+```
 
 > [!NOTE]
 > Zu viele Header können sich auf die Leistung auswirken. 
@@ -125,7 +135,7 @@ Bestimmt, ob die integrierte Sicherheit von Windows für Berichtsdatenquellen-Ve
 
 |Werte|BESCHREIBUNG|
 |---------|---------|
-|**Wahr**|Die integrierte Sicherheit von Windows ist aktiviert.|
+|**True**|Die integrierte Sicherheit von Windows ist aktiviert.|
 |**False**|Die integrierte Sicherheit von Windows ist nicht aktiviert. Berichtsdatenquellen, die für die Verwendung der integrierten Sicherheit von Windows konfiguriert sind, werden nicht ausgeführt.|
 
 ### <a name="enableloadreportdefinition"></a>EnableLoadReportDefinition
@@ -154,7 +164,7 @@ Gibt an, ob ausführliche Fehlermeldungen an den Clientcomputer gesendet werden 
 Die Anzahl von Tagen, in denen die Berichtsausführungsdaten im Ausführungsprotokoll verbleiben. Gültige Werte für diese Eigenschaft sind **-1** bis **2**,**147**,**483**,**647**. Wenn der Wert **–1** ist, werden Einträge nicht aus der Ausführungsprotokolltabelle gelöscht. Der Standardwert lautet **60**.  
 
 > [!NOTE]
-> Wenn Sie den Wert auf **0** (null) festlegen, werden alle Einträge aus dem Ausführungsprotokoll *gelöscht*. Bei einem Wert von **–1** werden die Einträge des Ausführungsprotokolls beibehalten statt gelöscht.
+> Wenn Sie den Wert auf **0 (null) festlegen, werden alle Einträge aus dem Ausführungsprotokoll ** *gelöscht*. Bei einem Wert von **–1** werden die Einträge des Ausführungsprotokolls beibehalten statt gelöscht.
 
 ### <a name="executionloglevel"></a>ExecutionLogLevel
 Hiermit wird der Protokolliergrad der Ausführung festgelegt. *Der Standardwert ist „Normal“.*
@@ -205,7 +215,7 @@ Diese schreibgeschützte Eigenschaft gibt den Servermodus an. Wenn dieser Wert F
 (Nur Power BI-Berichtsserver, Reporting Services 2017 und höher) Aktiviert das Downloadmenü für Clienttools. *Der Standardwert ist TRUE.*
 
 ### <a name="sitename"></a>SiteName
-Der Name der Berichtsserversite, der im Seitentitel des Webportals angezeigt wird. Der Standardwert ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Diese Eigenschaft kann eine leere Zeichenfolge sein. Die maximale Länge beträgt 8,000 Zeichen.  
+Der Name der Berichtsserversite, der im Seitentitel des Webportals angezeigt wird. Standardwert: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Diese Eigenschaft kann eine leere Zeichenfolge sein. Die maximale Länge beträgt 8,000 Zeichen.  
 
 ### <a name="snapshotcompression"></a>SnapshotCompression
 Definiert, wie Momentaufnahmen komprimiert werden. Der Standardwert lautet **SQL**. Die folgenden Werte sind gültig:
@@ -213,7 +223,7 @@ Definiert, wie Momentaufnahmen komprimiert werden. Der Standardwert lautet **SQL
 |Werte|BESCHREIBUNG|
 |---------|---------|
 |**SQL**|Momentaufnahmen werden komprimiert, wenn sie in der Berichtsserver-Datenbank gespeichert werden. Diese Komprimierung entspricht dem aktuellen Verhalten.|
-|**None**|Momentaufnahmen werden nicht komprimiert.|
+|**Keine**|Momentaufnahmen werden nicht komprimiert.|
 |**Alle**|Momentaufnahmen werden bei allen Speicheroptionen komprimiert. Dazu gehören auch die Berichtsserver-Datenbank oder das Dateisystem.|
 
 ### <a name="storedparameterslifetime"></a>StoredParametersLifetime
@@ -223,7 +233,7 @@ Gibt die maximale Anzahl von Tagen an, während derer ein gespeicherter Paramete
 Gibt die maximale Anzahl von Parameterwerten an, die von dem Berichtsserver gespeichert werden können. Gültige Werte sind **-1**, **+1** bis **2.147.483.647**. Der Standardwert lautet **1500**.  
 
 ### <a name="supportedhyperlinkschemes"></a>SupportedHyperlinkSchemes 
-(Nur Power BI-Berichtsserver, Version Januar 2019, sowie Reporting Services 2019 und höher) Legt eine durch Trennzeichen getrennte Liste mit den URI-Schemas fest, die für Hyperlinkaktionen definiert werden dürfen, für die ein Rendering zulässig ist. Durch Angabe von „&ast;“ werden alle Hyperlinkschemas erlaubt. Mit der Einstellung „http,https“ sind beispielsweise Links zu „https://www. contoso.com“ zulässig. Links zu „mailto:bill@contoso.com“ oder „javascript:window.open(‘ www.contoso.com’, ‘_blank’)“ werden dagegen entfernt. Die Standardeinstellung ist „&ast;“.
+(Nur Power BI-Berichtsserver, Version Januar 2019, sowie Reporting Services 2019 und höher) Legt eine durch Trennzeichen getrennte Liste mit den URI-Schemas fest, die für Hyperlinkaktionen definiert werden dürfen, für die ein Rendering zulässig ist. Durch Angabe von „&ast;“ werden alle Hyperlinkschemas erlaubt. Mit der Einstellung „http,https“ sind beispielsweise Links zu „https://www. contoso.com“ zulässig, aber Hyperlinks zu „mailto:bill@contoso.com“ oder „javascript:window.open(‘ www.contoso.com’, ‘_blank’)“ werden entfernt. Der Standardwert lautet „&ast;“.
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
 Der Standard-Timeoutwert für die Berichtsverarbeitung in Sekunden für alle im Berichtsserver-Namespace verwalteten Berichte. Dieser Wert kann auf Berichtsebene überschrieben werden. Ist diese Eigenschaft festgelegt, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Wenn der Wert **-1**ist, tritt bei Berichten im Namespace während der Verarbeitung kein Timeout auf. Der Standardwert lautet **1800**.  

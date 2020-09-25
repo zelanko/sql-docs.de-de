@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d98e13b0d42dd61ae87e52ef3cc757d12093f4b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d01a7cdd6d81d0c27e9c8d8562f71f5605ed4df2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455672"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396689"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint-Listenverbindungstyp (SSRS)
 
@@ -40,7 +40,7 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
  **Tabelle 1**  
   
-||Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|*Anspruchsauthentifizierung|  
+|Abruftyp|Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|*Anspruchsauthentifizierung|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Ja|Ja|  
 ||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|Ja|Nein|  
@@ -51,7 +51,7 @@ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstelle
   
  **Tabelle 2**  
   
-||Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|*Anspruchsauthentifizierung|  
+|Abruftyp|Unterstützte Anmeldeinformationen|Windows-Authentifizierung im klassischen Modus|*Anspruchsauthentifizierung|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |SharePoint-Liste einer lokalen Farm|Windows-Authentifizierung (integriert) oder SharePoint-Benutzertoken|Ja|Ja|  
 ||Gespeichert, Eingabeaufforderung, Keine (mit Windows-Anmeldeinformationen)<br /><br /> Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden bei Nicht-Windows-Anmeldeinformationen nicht unterstützt.|Nein|Nein|  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f640506f2f247c31c74d111d30b64f4fa0016dae
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: c1f270bb3f26cada3944979ee32019737dcb13e3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548002"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392076"
 ---
 # <a name="report-server-http-log"></a>Berichtsserver-HTTP-Protokoll
   Die HTTP-Protokolldatei des Berichtsservers zeichnet alle HTTP-Anforderungen und -Antworten auf, die vom Berichtsserver verarbeitet werden. Da Anforderungsüberlauf- und Timeoutfehler den Berichtsserver nicht erreichen, werden sie nicht in der Protokolldatei aufgezeichnet.  
@@ -26,7 +26,7 @@ ms.locfileid: "84548002"
 ## <a name="viewing-log-information"></a>Anzeigen von Protokollinformationen  
  Das Protokoll ist eine ASCII-Textdatei. Sie können die Datei mithilfe eines Text-Editors anzeigen. Die Berichtsserver-HTTP-Protokolldatei ist identisch mit der erweiterten W3C-Protokolldatei in IIS und verwendet ähnliche Felder, sodass Sie vorhandene IIS-Protokolldatei-Viewer zum Lesen der Berichtsserver-HTTP-Protokolldatei verwenden können. Die folgende Tabelle enthält weitere Informationen über die HTTP-Protokolldatei:  
   
-|||  
+|Protokolldateiinformationen|BESCHREIBUNG|  
 |-|-|  
 |Dateiname|Der Standarddateiname lautet „ReportServerService_HTTP_\<timestamp>.log“. Sie können das Präfix des Dateinamens anpassen, indem Sie das HttpTraceFileName-Attribut in der Datei ReportingServicesService.exe.config ändern. Der Timestamp basiert auf der koordinierten Weltzeit (UTC).|  
 |Dateispeicherort|Die Datei befindet sich unter \Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles.|  

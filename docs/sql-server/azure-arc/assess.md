@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59a6ff65e25878aefe08cfd87bf1f9e36da7366b
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 9412348f0d4e76313557b326c18fcb7b2e7087d8
+ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942709"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145359"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Konfigurieren der bedarfsgesteuerten SQL-Bewertung für Azure Arc-fähige SQL Server-Instanzen
 
@@ -76,3 +76,5 @@ Der Arbeitsordner wird von Microsoft Monitoring Agent alle 15 Minuten gescannt,
 ## <a name="next-steps"></a>Nächste Schritte
 
 Sehen Sie sich das SQL Server-Dokument unter [Voraussetzungen für On-Demand-Bewertungen im Diensthub](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) an, um weitere Informationen zu erhalten.
+
+Um eine umfassende Unterstützung der bedarfsgesteuerten SQL-Bewertung zu erhalten, ist ein Premier- oder Unified Support-Abonnement erforderlich. Weitere Informationen finden Sie unter [Azure Premier Support](https://azure.microsoft.com/support/plans/premier).

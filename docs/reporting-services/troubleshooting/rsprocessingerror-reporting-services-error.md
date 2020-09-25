@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8a3ab7a079106cf009bbae82a1116a93499e0d71
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487219"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396833"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError – Reporting Services-Fehler
     
 ## <a name="details"></a>Details  
   
-|||  
+|Category|Wert|  
 |-|-|  
 |Produktname|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Ereignis-ID|rsProcessingError|  
@@ -71,7 +71,7 @@ ms.locfileid: "81487219"
   
 -   Wenn Sie einen Bericht auf dem Berichtsserver anzeigen und wenn Sie auf dem Berichtsserver als lokaler Administrator fungieren, können Sie die Aufrufliste anzeigen, wenn Sie mit der rechten Maustaste auf die Seite klicken und **Quelltext anzeigen**auswählen. Zusätzliche Informationen werden in der Aufrufliste angezeigt.  
   
--   Wenn Sie des Berichtsserver als lokaler Administrator ausführen, suchen Sie in der Protokolldatei nach `ReportProcessingException`. Weitere Informationen sind in den Protokolleinträgen enthalten. Die Berichtsserver-Protokolldatei befindet sich gewöhnlich unter \<*Laufwerk*>:\Programme\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log. Weitere Informationen finden Sie unter [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+-   Wenn Sie des Berichtsserver als lokaler Administrator ausführen, suchen Sie in der Protokolldatei nach `ReportProcessingException`. Weitere Informationen sind in den Protokolleinträgen enthalten. Die Berichtsserver-Protokolldatei befindet sich gewöhnlich im Pfad \<*drive*>:\Programme\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log. Weitere Informationen finden Sie unter [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>Fehler beim Laden der Ausdruckshostassembly  
  Benutzerdefinierte Assemblys müssen über starke Namenssignaturen verfügen, und das Attribut „AllowPartiallyTrustedCallers“ muss für die Assembly festgelegt sein. Weitere Informationen finden Sie unter [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md) und [Understanding Security Policies](../../reporting-services/extensions/secure-development/understanding-security-policies.md).  
@@ -97,11 +97,11 @@ ms.locfileid: "81487219"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Datentypen für einen Filter können nicht verglichen werden  
  In einer Filtergleichung müssen der Filterausdruck, mit dem die zu filternden Elemente definiert werden, und der Filterwert den gleichen Datentyp aufweisen, damit sie verglichen werden können. Wenn einer der folgenden Fehler angezeigt wird, ändern Sie den Filterausdruck oder den Filterwert, sodass die Datentypen übereinstimmen:  
   
--   Die Verarbeitung von *\<Berichtselementtyp>* kann für *\<Berichtselementname>* nicht ausgeführt werden. Daten der Typen *\<Typ>* und *\<Typ>* können nicht verglichen werden. Überprüfen Sie den von *\<Berichtselementname>* zurückgegebenen Datentyp.  
+-   Die Verarbeitung von *\<report item type>* kann für das *\<report item name>* -Objekt nicht ausgeführt werden. Daten vom Typ *\<type>* und *\<type>* können nicht verglichen werden. Überprüfen Sie den vom *\<report item name>* -Objekt zurückgegebenen Datentyp.  
   
--   Fehler beim Auswerten von *\<Eigenschaftenname>* .  
+-   Fehler beim Auswerten von *\<property name>* .  
   
--   Fehler beim Auswerten von *\<Eigenschaftenname>* . Es wird auf ein Datasetfeld verwiesen, das einen Fehler aufweist: *\<Fehlerzeichenfolge>* .  
+-   Fehler beim Auswerten von *\<property name>* . Es wird auf ein Datasetfeld verwiesen, das einen Fehler aufweist: *\<error string>* .  
   
  Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -110,13 +110,13 @@ ms.locfileid: "81487219"
   
  Sie können auch den Namen eines bestimmten Bereichs an eine Aggregatfunktion übergeben. Bereich bezieht sich auf den Namen eines Datasets, eines Datenbereichs oder auf den Namen eine Bereichs, der sich weiter oben in der Datenhierarchie befindet. Dies gilt für die folgenden Meldungen:  
   
--   Der *\<Berichtselementtyp>* *\<Berichtselementname>* weist einen ungültigen Bereich *\<Bereichsname>* auf. Der Bereich muss der aktuelle Bereich sein oder im aktuellen Bereich enthalten sein.  
+-   Das *\<report item type>* -Objekt „ *\<report item name>* “ weist einen ungültigen Bereich „ *\<scope name>* “ auf. Der Bereich muss der aktuelle Bereich sein oder im aktuellen Bereich enthalten sein.  
   
--   Der *\<Eigenschaftenname>* -Ausdruck für *\<Berichtselementtyp>* „ *\<Berichtselementname>* “ weist einen Bereichsparameter auf, der für eine Aggregatfunktion nicht gültig ist. Der Bereichsparameter muss auf eine Zeichenfolgenkonstante festgelegt sein, die einem der folgenden Werte entspricht: dem Namen einer enthaltenden Gruppe, dem Namen eines enthaltenden Datenbereichs oder dem Namen eines Datasets.  
+-   Der *\<property name>* -Ausdruck für das *\<report item type>* -Objekt „ *\<report item name>* “ weist einen Bereichsparameter auf, der für eine Aggregatfunktion ungültig ist. Der Bereichsparameter muss auf eine Zeichenfolgenkonstante festgelegt sein, die einem der folgenden Werte entspricht: dem Namen einer enthaltenden Gruppe, dem Namen eines enthaltenden Datenbereichs oder dem Namen eines Datasets.  
   
  Für Aggregatfunktionen, die laufende Summen berechnen (**Previous**, **RunningValue**oder **RowNumber**), können Sie einen Bereichsparameter angeben, bei dem es sich entweder um einen Zeilengruppennamen oder einen Spaltengruppennamen handelt. Beides ist nicht möglich. Dies gilt für die folgende Fehlermeldung:  
   
--   Die **Previous**-, **RunningValue**- oder **RowNumber**-Aggregatfunktionen, die in den Datenzellen von *\<Berichtselementtyps>* „ *\<Berichtselementname>* “ verwendet wurden, verweisen auf Gruppierungsbereiche in den Spalten und Zeilen von *\<Berichtselementtyp>* . Die Bereichsparameter aller **Previous**-, **RunningValue**- und **RowNumber**-Aggregatfunktionen in einem *\<Berichtselementtyp>* können nur auf Zeilen- oder Datenspaltengruppierungen, aber nicht auf beide Gruppierungen verweisen.  
+-   Die Aggregatfunktionen **Previous**, **RunningValue** oder **RowNumber**, die in den Datenzellen des *\<report item type>* -Objekts „ *\<report item name>* “ verwendet werden, verweisen auf Gruppierungsbereiche in den Spalten und Zeilen des *\<report item type>* -Objekts. Die Bereichsparameter aller Aggregatfunktionen (**Previous**, **RunningValue** und **RowNumber**) in einem *\<report item type>* können nur auf Zeilen- oder Datenspaltengruppierungen, aber nicht auf beides verweisen.  
   
  Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) und [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   

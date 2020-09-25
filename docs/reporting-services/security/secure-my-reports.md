@@ -1,4 +1,5 @@
 ---
+description: Sichern von Meine Berichte
 title: Sichern von „Meine Berichte“ | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aba081c02ca027a861ab6c7680e038bac7a18304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498033"
 ---
 # <a name="secure-my-reports"></a>Sichern von Meine Berichte
   Die Funktion Meine Berichte stellt einen vom Benutzer verwalteten Arbeitsbereich zum Verwenden von Berichten bereit. Damit der Ordner Meine Berichte seinen Zweck erfüllt, sind im Vergleich zu anderen Ordnern, die zur allgemeinen Verwendung dienen, für den Ordner Meine Berichte weniger stark einschränkende Berechtigungen erforderlich. Benutzer, die nur über die Berechtigung zum Anzeigen und Ausführen von Berichten in anderen Ordnern verfügen, benötigen möglicherweise erweiterte Berechtigungen, um den Ordner "Meine Berichte" und die in ihrem Besitz befindlichen Inhalt zu verwalten. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält zu diesem Zweck eine spezielle Rollenzuweisung und Rollendefinition.  
@@ -32,7 +33,7 @@ ms.locfileid: "65570699"
   
  Eine Rollenzuweisung für **Meine Berichte** setzt sich wie folgt zusammen:  
   
--   Der Benutzerordner „Meine Berichte“, der im Ordner „Benutzerordner\\ *\<Benutzername>* \Meine Berichte“ gespeichert ist.  
+-   Der Order „Meine Berichte“ des Benutzers, der sich im Pfad „Benutzerordner\\ *\<username>* \Meine Berichte“ befindet.  
   
 -   Das Benutzerkonto, das beim Aktivieren des Ordners Meine Berichte bestimmt wird. Ein Ordner wird aktiviert, wenn ein Benutzer auf einen Ordner Meine Berichte im Berichts-Manager klickt oder wenn ein Bericht im Berichts-Designer im Ordner Meine Berichte veröffentlicht wird. Dieser Ordner wird außerdem aktiviert, wenn ein Benutzer Eigenschaften über den Link Meine Berichte anfordert.  
   

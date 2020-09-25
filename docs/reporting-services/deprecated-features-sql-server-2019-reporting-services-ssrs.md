@@ -1,7 +1,7 @@
 ---
 title: Veraltete Funktionen in den Reporting Services von SQL Server 2019 | Microsoft-Dokumentation
-description: In diesem Artikel werden Features beschrieben, die in der nächsten Version von SQL Server Reporting Services veraltet sein werden.
-ms.date: 11/21/2019
+description: In diesem Artikel werden Features in SQL Server 2019 Reporting Services beschrieben, die in der nächsten Version von SQL Server Reporting Services veraltet sein werden.
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: eaa7edebe99a7c444fe1bfa23971317517399ea2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3e48ab45f34e583dbbeca883a64d04dc965b018
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74320274"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283816"
 ---
 # <a name="deprecated-features-in-sql-server-2019-reporting-services"></a>Als veraltet markierte Features in SQL Server 2019 Reporting Services
 
@@ -42,8 +42,9 @@ SQL Server Reporting Services unterstützt die folgenden Features in der nächst
 | Berichtsserver | Mobile Berichte und der Publisher für mobile Berichte | Die Power BI-Berichte im Power BI-Berichtsserver bieten mobile Funktionen. |
 | Berichtsserver | XLS- und DOC-Renderformate | Die Formate XLSX und DOCX stehen zur Verfügung und werden unterstützt. |
 | Berichtsserver | Atom-Datenfeed | Die Unterstützung des oData-Feeds ist für freigegebene Datasets in SSRS und Power BI-Berichtsserver verfügbar. |
+| Berichtsserver | Anheften an Power BI | Die Unterstützung paginierter Berichte ist nun direkt im Power BI-Dienst verfügbar.  |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 [Nicht mehr unterstützte Funktion in SQL Server 2019 Reporting Services (SSRS)](discontinued-functionality-sql-server-reporting-services-2019.md)
 

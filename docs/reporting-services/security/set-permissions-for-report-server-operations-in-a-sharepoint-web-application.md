@@ -1,4 +1,5 @@
 ---
+description: Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung
 title: Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung | Microsoft-Dokumentation
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce5ddca1cb39d7d4f375232e3588900b5b1ebe6a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af15f2a0d7116ea82144a42db423de289e771056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492558"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung
   Bei einem im integrierten SharePoint-Modus ausgeführten Berichtsserver wird durch die für die SharePoint-Website definierten Sicherheitseinstellungen bestimmt, wie Sie Berichte, Berichtsmodelle und freigegebene Datenquellen anzeigen und verwalten. Wenn Sie die standardmäßigen SharePoint-Gruppen, Berechtigungsebenen und Berechtigungszuweisungen verwenden, können Sie mit Berichten und anderen Dokumenten arbeiten und die aktuellen Sicherheitseinstellungen verwenden.  
@@ -49,7 +50,7 @@ ms.locfileid: "65570598"
   
  Wenn Sie vordefinierte Berechtigungsebenen verwenden, ist keine Aktion erforderlich, da die oben genannten Berechtigungen bereits in Full Control, Design, Contribute, Read und Limited Access enthalten sind. Wenn Sie jedoch benutzerdefinierte Berechtigungsebenen verwenden oder die einem bestimmten Benutzer oder einer Gruppe zugewiesenen Berechtigungen bearbeiten, müssen Sie die Berechtigung manuell hinzufügen.  
   
- Die Berechtigung "Benutzerinformationen durchsuchen" ermöglicht dem Berichtsserver die Rückgabe von Informationen zum Ersteller des Elements und zum Benutzer, der das Element zuletzt geändert hat. Ohne diese Berechtigung gibt der Berichtsserver die folgenden Fehler zurück. Bei Suchvorgängen lautet der Fehler: „SharePoint-Fehler beim Berichtsserver. ---> System.UnauthorizedAccessException: Der Zugriff wird verweigert.“ Bei Veröffentlichungsvorgängen lautet der Fehler: „The permissions granted to user ‘\<domain>\\<user\>' are insufficient for performing this operation.“ (Die dem Benutzer '<Domain>\<Benutzer>' erteilten Berechtigungen reichen zum Ausführen des Vorgangs nicht aus.)  
+ Die Berechtigung "Benutzerinformationen durchsuchen" ermöglicht dem Berichtsserver die Rückgabe von Informationen zum Ersteller des Elements und zum Benutzer, der das Element zuletzt geändert hat. Ohne diese Berechtigung gibt der Berichtsserver die folgenden Fehler zurück. Bei Suchvorgängen lautet der Fehler: „SharePoint-Fehler beim Berichtsserver. ---> System.UnauthorizedAccessException: Der Zugriff wird verweigert.“ Bei Veröffentlichungsvorgängen lautet der Fehler: „Die dem Benutzer '\<domain>\\<Benutzer\>' erteilten Berechtigungen reichen zum Ausführen des Vorgangs nicht aus.“  
   
 ##  <a name="permissions-for-viewing-and-managing-reports"></a><a name="permissionReports"></a> Berechtigungen zum Anzeigen und Verwalten von Berichten  
  Berechtigungen für Berichtsdefinitionen werden über Listenberechtigungen für die Bibliothek definiert, die den Bericht enthält. Sie können Berechtigungen jedoch für einzelne Berichte festlegen, wenn Sie den Zugriff einschränken möchten. Die folgende Tabelle enthält eine Liste von Aufgaben und der Berechtigungen, die diese jeweils unterstützen.  
@@ -133,6 +134,6 @@ ms.locfileid: "65570598"
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Use Built-in Security in Windows SharePoint Services for Report Server Items (Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente)](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   

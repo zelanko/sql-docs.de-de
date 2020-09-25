@@ -15,20 +15,27 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 05ee90e9ccbf781e0145665b8f1dd06ca2fb8d45
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742037"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396084"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Überwachen von Reporting Services-Abonnements
   Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements über die Benutzeroberfläche, Windows PowerShell oder Protokolldateien überwachen. Die für die Überwachung verfügbaren Optionen hängen davon ab, welchen Modus des Berichtsservers Sie ausführen.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|  
-  
+**[!INCLUDE[applies](../../includes/applies-md.md)]**
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus  
+    :::column-end:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus  
+    :::column-end:::
+:::row-end:::
+
  **In diesem Artikel:**  
   
 -   [Benutzeroberfläche des einheitlichen Modus](#bkmk_native_mode)  
@@ -48,17 +55,17 @@ ms.locfileid: "80742037"
 |------------|-----------------|  
 |Neues Abonnement|Wird beim Erstellen des Abonnements angezeigt.|  
 |Inaktiv|Dieser Status wird angezeigt, wenn ein Abonnement nicht verarbeitet werden kann. Weitere Informationen finden Sie weiter in diesem Artikel unter „Verwalten inaktiver Abonnements“.|  
-|Fertig: \<*Anzahl*> von insgesamt \<*Anzahl*> verarbeitet; \<*Anzahl*> Fehler.|Zeigt den Status der Ausführung eines datengesteuerten Abonnements an. Diese Meldung stammt vom Prozessor für Zeitplanung und Übermittlung.|  
-|\<*Anzahl*> verarbeitet|Die Anzahl von Benachrichtigungen, die der Prozessor für Zeitplanung und Übermittlung erfolgreich übermittelt hat oder nicht mehr zu übermitteln versucht. Beim Abschluss einer datengesteuerten Übermittlung sollte die Anzahl von verarbeiteten Benachrichtigungen den insgesamt generierten Benachrichtigungen entsprechen.|  
-|\<*Anzahl*> insgesamt|Die Gesamtzahl der Benachrichtigungen, die für die letzte Übermittlung für das Abonnement generiert wurden.|  
-|\<*Anzahl*> Fehler|Die Anzahl von Benachrichtigungen, die der Prozessor für Zeitplanung und Übermittlung nicht übermitteln konnte oder nicht mehr zu übermitteln versucht.|  
+|Fertig: \<*number*> von \<*number*> insgesamt verarbeitet; \<*number*> Fehler.|Zeigt den Status der Ausführung eines datengesteuerten Abonnements an. Diese Meldung stammt vom Prozessor für Zeitplanung und Übermittlung.|  
+|\<*number*> verarbeitet|Die Anzahl von Benachrichtigungen, die der Prozessor für Zeitplanung und Übermittlung erfolgreich übermittelt hat oder nicht mehr zu übermitteln versucht. Beim Abschluss einer datengesteuerten Übermittlung sollte die Anzahl von verarbeiteten Benachrichtigungen den insgesamt generierten Benachrichtigungen entsprechen.|  
+|\<*number*> insgesamt|Die Gesamtzahl der Benachrichtigungen, die für die letzte Übermittlung für das Abonnement generiert wurden.|  
+|\<*number*> Fehler|Die Anzahl von Benachrichtigungen, die der Prozessor für Zeitplanung und Übermittlung nicht übermitteln konnte oder nicht mehr zu übermitteln versucht.|  
 |Fehler beim Senden von E-Mail: Transportfehler beim Verbinden mit dem Server.|Zeigt an, dass der Berichtsserver keine Verbindung zum Mailserver hergestellt hat. Diese Meldung stammt von der E-Mail-Übermittlungserweiterung.|  
-|Die Datei \<*Dateiname*> wurde in \<Pfad> geschrieben.|Zeigt an, dass die Datei erfolgreich an den Speicherort der Dateifreigabe übermittelt wurde. Diese Meldung stammt von der Dateifreigabe-Übermittlungserweiterung.|  
+|Die Datei \<*filename*> wurde nach \<path> geschrieben.|Zeigt an, dass die Datei erfolgreich an den Speicherort der Dateifreigabe übermittelt wurde. Diese Meldung stammt von der Dateifreigabe-Übermittlungserweiterung.|  
 |Unbekannter Fehler beim Schreiben der Datei.|Zeigt an, dass die Datei nicht an den Speicherort der Dateifreigabe übermittelt werden konnte. Diese Meldung stammt von der Dateifreigabe-Übermittlungserweiterung.|  
-|Fehler beim Herstellen einer Verbindung zum Zielordner, \<Pfad>. Überprüfen Sie, ob der Zielordner oder die Dateifreigabe vorhanden ist.|Zeigt an, dass der angegebene Ordner nicht gefunden wurde. Diese Meldung stammt von der Dateifreigabe-Übermittlungserweiterung.|  
-|Die Datei \<Dateiname> konnte nicht in \<Pfad> geschrieben werden. Es erfolgt ein erneuter Versuch.|Zeigt an, dass die Datei nicht durch eine neuere Version aktualisiert werden konnte. Diese Meldung stammt von der Dateifreigabe-Übermittlungserweiterung.|  
-|Fehler beim Schreiben der Datei „\<Dateiname>“: \<Meldung>|Zeigt an, dass die Datei nicht an den Speicherort der Dateifreigabe übermittelt werden konnte. Diese Meldung stammt von der Dateifreigabe-Übermittlungserweiterung.|  
-|\<benutzerdefinierte Statusmeldungen>|Statusmeldungen zum Erfolg oder Fehlschlagen der Übermittlung. Diese Meldungen stammen von Übermittlungserweiterungen. Falls Sie eine Übermittlungserweiterung von einem Drittanbieter oder eine benutzerdefinierte Übermittlungserweiterung verwenden, werden möglicherweise zusätzliche Statusmeldungen angezeigt.|  
+|Fehler beim Herstellen einer Verbindung zum Zielordner, \<path>. Überprüfen Sie, ob der Zielordner oder die Dateifreigabe vorhanden ist.|Zeigt an, dass der angegebene Ordner nicht gefunden wurde. Diese Meldung stammt von der Dateifreigabe-Übermittlungserweiterung.|  
+|Die Datei \<filename> konnte nicht nach \<path> geschrieben werden. Es erfolgt ein erneuter Versuch.|Zeigt an, dass die Datei nicht durch eine neuere Version aktualisiert werden konnte. Diese Meldung stammt von der Dateifreigabe-Übermittlungserweiterung.|  
+|Fehler beim Schreiben der Datei \<filename>: \<message>|Zeigt an, dass die Datei nicht an den Speicherort der Dateifreigabe übermittelt werden konnte. Diese Meldung stammt von der Dateifreigabe-Übermittlungserweiterung.|  
+|\<custom status messages>|Statusmeldungen zum Erfolg oder Fehlschlagen der Übermittlung. Diese Meldungen stammen von Übermittlungserweiterungen. Falls Sie eine Übermittlungserweiterung von einem Drittanbieter oder eine benutzerdefinierte Übermittlungserweiterung verwenden, werden möglicherweise zusätzliche Statusmeldungen angezeigt.|  
   
  Berichtsserveradministratoren können auch Standardabonnements überwachen, die gerade verarbeitet werden. Datengesteuerte Abonnements können nicht überwacht werden. Weitere Informationen finden Sie unter [Verwalten eines ausgeführten Prozesses](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -95,9 +102,8 @@ ms.locfileid: "80742037"
 ### <a name="sharepoint-uls-log-files"></a>SharePoint ULS-Protokolldateien  
  Abonnementbezogene Informationen werden in das SharePoint ULS-Protokoll geschrieben. Weitere Informationen zum Konfigurieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Ereignissen für das ULS-Protokoll finden Sie unter [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  Das folgende Beispiel zeigt einen ULS-Protokolleintrag im Zusammenhang mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements.  
   
-||||||||  
-|-|-|-|-|-|-|-|  
 |Date|Prozess|Bereich|Category|Ebene|Correlation|`Message`|  
+|-|-|-|-|-|-|-|  
 |21.05.2019 14:34:06:15|App-Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Berichtsserver-E-Mail-Erweiterung|Unerwartet|(leer)|**Fehler beim Senden von E-Mail.** Ausnahme: System.Net.Mail.SmtpException: Postfach nicht verfügbar. Die Serverantwort lautete: 5.7.1 Client does not have permissions to send as this sender at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) at System.Net.Mail.SmtpClient.Send(MailMessage message) at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification) (5.7.1 Client ist nicht berechtigt, als dieser Absender zu senden: an System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse), an System.Net.Mail.DataStopCommand.Send(SmtpConnection conn), an System.Net.Mail.SmtpClient.Send(MailMessage message) und an Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification))|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> Verwenden von PowerShell zur Überwachung von Abonnements  

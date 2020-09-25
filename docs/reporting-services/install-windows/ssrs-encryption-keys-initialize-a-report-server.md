@@ -1,4 +1,5 @@
 ---
+description: Initialisieren eines Berichtsservers (Konfigurations-Manager)
 title: Initialisieren eines Berichtsservers (Konfigurations-Manager) | Microsoft-Dokumentation
 ms.date: 05/31/2016
 ms.prod: reporting-services
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 264159f4c892cc688b15293c0e4283fc46520720
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d04dce2fa829938ede09ebbceaa4980c110002cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446080"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS-Verschlüsselungsschlüssel: Initialisieren eines Berichtsservers
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kann ein initialisierter Server Daten in einer Berichtsserver-Datenbank verschlüsseln und entschlüsseln. Die Initialisierung ist die Voraussetzung für Berichtsservervorgänge. Die Initialisierung wird ausgeführt, wenn der Berichtsserverdienst zum ersten Mal gestartet wird. Sie wird ebenfalls ausgeführt, wenn Sie den Berichtsserver mit vorhandenen Bereitstellung verknüpfen, oder wenn Sie die Schlüssel manuell, als Teil des Wiederherstellungsprozesses neu erstellen. Weitere Informationen dazu, wie und warum Verschlüsselungsschlüssel verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) und [Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Verschlüsselungsschlüssel basieren teilweise auf den Profilinformationen des Berichtsserverdiensts. Wenn Sie die Benutzeridentität ändern, mit der Sie den Berichtsserverdienst ausführen, müssen Sie die Schlüssel entsprechend aktualisieren. Wenn Sie das Reporting Services-Konfigurationstool verwenden, um Ihre Identität zu ändern, wird dieser Schritt automatisch für Sie erledigt.  
   
- Falls die Initialisierung fehlschlägt, sendet der Berichtsserver einen **RSReportServerNotActivated** -Fehler als Antwort auf Benutzer- und Dienstanforderungen zurück. In diesem Fall müssen Sie möglicherweise die Problembehandlung für das System oder die Serverkonfiguration ausführen. Weitere Informationen finden Sie im Technet-Wiki unter [SSRS: Troubleshoot issues and errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (SSRS: Beheben von Problemen und Fehlern bei Reporting Services).  
+ Falls die Initialisierung fehlschlägt, sendet der Berichtsserver einen **RSReportServerNotActivated** -Fehler als Antwort auf Benutzer- und Dienstanforderungen zurück. In diesem Fall müssen Sie möglicherweise die Problembehandlung für das System oder die Serverkonfiguration ausführen. Weitere Informationen finden Sie im Artikel [SSRS: Beheben von Problemen und Fehlern bei Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) in TechNet Wiki.  
   
 ## <a name="overview-of-the-initialization-process"></a>Übersicht über den Initialisierungsprozess  
  Der Initialisierungsprozess erstellt und speichert einen symmetrischen Schlüssel, der zur Verschlüsselung verwendet wird. Der symmetrische Schlüssel wird von den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Kryptografiediensten erstellt und anschließend vom Berichtsserverdienst verwendet, um Daten zu ver- und entschlüsseln. Der symmetrische Schlüssel selbst wird mit einem asymmetrischen Schlüssel verschlüsselt.  
@@ -48,7 +49,7 @@ ms.locfileid: "77080828"
   
  Die ersten Schritte zum Initialisieren eines Berichtsservers zur Bereitstellung für horizontales Skalieren stimmen mit den ersten drei Schritten überein, die die Initialisierung einer Kombination aus einem einzelnen Server und einer Datenbank beschreiben.  
   
- Der Initialisierungsprozess für eine Bereitstellung für das Aufskalieren unterscheidet sich darin, wie der Berichtsserver den symmetrischen Schlüssel abruft. Wenn der erste Server initialisiert ist, ruft er von Windows den symmetrischen Schlüssel ab. Wenn der zweite Server während der Konfiguration der Bereitstellung für horizontales Skalieren initialisiert wird, ruft er den symmetrischen Schlüssel vom Berichtsserverdienst ab, der bereits initialisiert ist. Die erste Berichtsserverinstanz verwendet den öffentlichen Schlüssel der zweiten Instanz, um eine verschlüsselte Kopie des symmetrischen Schlüssels für die zweite Berichtsserverinstanz zu erstellen. Der symmetrische Schlüssel wird an keinem Punkt dieses Prozesses als Nur-Text offen gelegt  
+ Der Initialisierungsprozess für eine Bereitstellung für horizontales Skalieren unterscheidet sich darin, wie der Berichtsserver den symmetrischen Schlüssel abruft. Wenn der erste Server initialisiert ist, ruft er von Windows den symmetrischen Schlüssel ab. Wenn der zweite Server während der Konfiguration der Bereitstellung für horizontales Skalieren initialisiert wird, ruft er den symmetrischen Schlüssel vom Berichtsserverdienst ab, der bereits initialisiert ist. Die erste Berichtsserverinstanz verwendet den öffentlichen Schlüssel der zweiten Instanz, um eine verschlüsselte Kopie des symmetrischen Schlüssels für die zweite Berichtsserverinstanz zu erstellen. Der symmetrische Schlüssel wird an keinem Punkt dieses Prozesses als Nur-Text offen gelegt  
   
 ## <a name="how-to-initialize-a-report-server"></a>Initialisieren eines Berichtsservers  
   
@@ -65,7 +66,7 @@ ms.locfileid: "77080828"
 >  Sie können auch den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -WMI-Anbieter (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation) verwenden, um einen Berichtsserver programmgesteuert zu initialisieren. Weitere Informationen finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>Bestätigen der Initialisierung eines Berichtsservers  
- Wenn Sie die Initialisierung des Berichtsservers bestätigen möchten, pingen Sie den Berichtsserver-Webdienst, indem Sie **https://<Servername\</reportserver** in das Befehlsfenster eingeben. Wenn der **RSReportServerNotActivated** -Fehler auftritt, ist die Initialisierung fehlgeschlagen.  
+ Wenn Sie die Initialisierung des Berichtsservers bestätigen möchten, pingen Sie den Berichtsserver-Webdienst, indem Sie **https://\<servername>/reportserver** im Befehlsfenster eingeben. Wenn der **RSReportServerNotActivated** -Fehler auftritt, ist die Initialisierung fehlgeschlagen.  
   
 ## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
