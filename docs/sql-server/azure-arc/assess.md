@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9412348f0d4e76313557b326c18fcb7b2e7087d8
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145359"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227323"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Konfigurieren der bedarfsgesteuerten SQL-Bewertung für Azure Arc-fähige SQL Server-Instanzen
 
@@ -37,7 +37,7 @@ Sie können die SQL-Bewertung für Ihre SQL Server-Instanzen aktivieren, indem S
 
    ![Auswahl der SQL-Bewertung](media/assess/sql-assessment-heading-sql-server-arc.png)
 
-1. Geben Sie ein Arbeitsverzeichnis auf dem Computer für die Datensammlung an. Während der Sammlung und Analyse werden die Daten vorrübergehend in diesem Ordner gespeichert. Wenn der Ordner nicht vorhanden ist, wird er automatisch erstellt.
+1. Geben Sie ein Arbeitsverzeichnis auf dem Computer für die Datensammlung an. Standardmäßig wird `C:\sql_assessment\work_dir` verwendet. Während der Sammlung und Analyse werden die Daten vorrübergehend in diesem Ordner gespeichert. Wenn der Ordner nicht vorhanden ist, wird er automatisch erstellt.
 
 1. Klicken Sie auf __Konfigurationsskript herunterladen__, und kopieren Sie das heruntergeladene Skript auf den Zielcomputer.
 
