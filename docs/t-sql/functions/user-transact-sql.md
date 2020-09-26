@@ -24,12 +24,12 @@ ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4b1e652bfeff0646fb28da125a46b3ff222f54f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 500010c11f80bf36341631a90cf8dfcf49f49c5b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362636"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380575"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88362636"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 USER  
 ```  
   
@@ -63,8 +63,8 @@ USER
 ### <a name="a-using-user-to-return-the-database-user-name"></a>A. Verwenden von USER zum Zurückgeben des Datenbankbenutzernamens  
  Im folgenden Beispiel wird eine Variable als `char`-Datentyp deklariert, ihr wird der aktuelle Wert von USER zugewiesen, und anschließend wird die Variable mit einer Textbeschreibung gedruckt.  
   
-```  
-DECLARE @usr char(30)  
+```sql
+DECLARE @usr CHAR(30)  
 SET @usr = user  
 SELECT 'The current user''s database username is: '+ @usr  
 GO  
@@ -82,14 +82,14 @@ The current user's database username is: dbo
 ### <a name="b-using-user-with-default-constraints"></a>B. Verwenden von USER mit DEFAULT-Einschränkungen  
  Im folgenden Beispiel wird eine Tabelle mit `USER` als `DEFAULT`-Einschränkung für den Verkäufer in einer Zeile mit Verkaufszahlen erstellt.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE inventory22  
 (  
- part_id int IDENTITY(100, 1) NOT NULL,  
- description varchar(30) NOT NULL,  
- entry_person varchar(30) NOT NULL DEFAULT USER   
+ part_id INT IDENTITY(100, 1) NOT NULL,  
+ description VARCHAR(30) NOT NULL,  
+ entry_person VARCHAR(30) NOT NULL DEFAULT USER   
 )  
 GO  
 INSERT inventory22 (description)  
@@ -107,7 +107,7 @@ GO
   
  Im Folgenden wird die Abfrage zur Auswahl aller Informationen aus der `inventory22`-Tabelle aufgeführt:  
   
-```  
+```sql
 SELECT * FROM inventory22 ORDER BY part_id;  
 GO  
 ```  
@@ -129,7 +129,7 @@ part_id     description                    entry_person
 ### <a name="c-using-user-in-combination-with-execute-as"></a>C. Verwenden von USER in Kombination mit EXECUTE AS  
  Im folgenden Beispiel wird das Verhalten von `USER` bei Aufruf in einer Sitzung mit Identitätswechsel gezeigt.  
   
-```  
+```sql
 SELECT USER;  
 GO  
 EXECUTE AS USER = 'Mario';  

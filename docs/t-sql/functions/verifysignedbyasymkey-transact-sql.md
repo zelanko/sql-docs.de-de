@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0257bd8b66a915ec5d7f0b59e3aa85f197f38867
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f2a75cf3da8220e861d8320b2454683c3b65a1f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362246"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380595"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88362246"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```syntaxsql
 VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )  
 ```  
   
@@ -72,7 +71,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ### <a name="a-testing-for-data-with-a-valid-signature"></a>A. Testen von Daten mit einer gültigen Signatur  
  Im folgenden Beispiel wird 1 zurückgegeben, wenn die ausgewählten Daten nach der Signierung mit dem asymmetrischen Schlüssel `WillisKey74`nicht geändert wurden. Im Beispiel wird 0 zurückgegeben, wenn die Daten manipuliert wurden.  
   
-```  
+```sql
 SELECT Data,  
      VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), SignedData,  
      DataSignature ) as IsSignatureValid  
@@ -85,7 +84,7 @@ RETURN;
 ### <a name="b-returning-a-result-set-that-contains-data-with-a-valid-signature"></a>B. Zurückgeben eines Resultsets, das Daten mit einer gültigen Signatur enthält  
  Im folgenden Beispiel werden Zeilen in `SignedData04` mit Daten zurückgegeben, die nach der Signierung mit dem asymmetrischen Schlüssel `WillisKey74`nicht geändert wurden. Es wird die `AsymKey_ID` -Funktion aufgerufen, um die ID des asymmetrischen Schlüssels aus der Datenbank abzurufen.  
   
-```  
+```sql
 SELECT Data   
 FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), Data,  

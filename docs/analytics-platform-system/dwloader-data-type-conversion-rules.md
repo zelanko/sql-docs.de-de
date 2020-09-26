@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1ce48c3352ffbd0a1c112f7fd60db2f0d85c6e6
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401181"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379559"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Datentyp-Konvertierungsregeln für "dwloader-parallel Data Warehouse
 In diesem Thema werden die Eingabedaten Formate und die impliziten Datentyp Konvertierungen beschrieben, die vom [Befehlszeilen Lader von "dwloader](dwloader.md) unterstützt werden, wenn Daten in PDW geladen werden. Die impliziten Datenkonvertierungen treten auf, wenn die Eingabedaten nicht dem Datentyp in der SQL Server PDW Ziel Tabelle entsprechen. Verwenden Sie diese Informationen beim Entwerfen des Ladevorgangs, um sicherzustellen, dass Ihre Daten erfolgreich in SQL Server PDW geladen werden.  
@@ -129,7 +129,7 @@ In der folgenden Tabelle werden das Standardformat und die Regeln zum Laden von 
 |Decimal-Literale|fffnn. fffn<br /><br />Beispiel: 1234,5678|Ein Wert, der größer als 1 oder kleiner als 0 ist, wird in 1 konvertiert. Die Werte 123,45 und-123,45 werden z. b. in 1 konvertiert.|  
   
 ### <a name="decimal-data-type"></a>Decimal-Datentyp  
-In der folgenden Tabelle sind die Regeln zum Laden von Literalwerten in eine Spalte vom Typ " **Decimal** (*p, s*)" definiert. Daten Konvertierungsregeln sind identisch mit denen für SQL Server. Weitere Informationen finden Sie unter [Datentyp Konvertierung (Datenbank-Engine)](https://go.microsoft.com/fwlink/?LinkId=202128) auf MSDN.  
+In der folgenden Tabelle sind die Regeln zum Laden von Literalwerten in eine Spalte vom Typ " **Decimal** (*p, s*)" definiert. Daten Konvertierungsregeln sind identisch mit denen für SQL Server. Weitere Informationen finden Sie unter [Datentyp Konvertierung (Datenbank-Engine)](/previous-versions/sql/sql-server-2008-r2/ms191530(v=sql.105)) auf MSDN.  
   
 |Eingabe Datentyp|Beispiele für Eingabedaten|  
 |-------------------|-----------------------|  
@@ -185,4 +185,3 @@ In der folgenden Tabelle werden das Standardformat und die Regeln zum Laden von 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 
 -->
-  

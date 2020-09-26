@@ -23,12 +23,12 @@ ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: def376308310d249dfe65f0a66d38095e67733eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ddc348ba8ee7ccf9d37d9133272b48730965fb1
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459503"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379477"
 ---
 # <a name="type_name-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88459503"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 TYPE_NAME ( type_id )   
 ```  
   
@@ -67,7 +67,7 @@ TYPE_NAME ( type_id )
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden der Objektname, der Spaltenname und der Typname für jede Spalte in der `Vendor`-Tabelle der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank zurückgegeben.  
   
-```  
+```sql
 SELECT o.name AS obj_name, c.name AS col_name,  
        TYPE_NAME(c.user_type_id) AS type_name  
 FROM sys.objects AS o   
@@ -97,14 +97,14 @@ Vendor          PurchasingWebServiceURL  nvarchar
 ## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel wird die `TYPE ID` für den Datentyp mit der ID `1` zurückgegeben.  
   
-```  
+```sql
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  
 GO  
 ```  
   
  Fragen Sie „sys.types“ ab, um eine Liste von Typen zu erhalten.  
   
-```  
+```sql
 SELECT * FROM sys.types;  
 GO  
 ```  

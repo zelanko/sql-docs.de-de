@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ebbd18eda53dcedcfd0118c16bb5b16066c8fa7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d800de4adea71523c3ae05bed53c97697c718d70
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539884"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379645"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -109,7 +109,7 @@ ON ALL SERVER
 ### <a name="a-dropping-a-dml-trigger"></a>A. Löschen eines DML-Triggers  
  Im folgenden Beispiel wird der `employee_insupd`-Trigger in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank gelöscht. (Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie die Syntax DROP TRIGGER IF EXISTS verwenden.)  
   
-```  
+```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
    DROP TRIGGER employee_insupd;  
 ```  
@@ -120,7 +120,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
 > [!IMPORTANT]  
 >  Da DDL-Trigger nicht schemabezogen sind und deshalb nicht in der **sys.objects**-Katalogsicht angezeigt werden, kann die OBJECT_ID-Funktion nicht für Abfragen verwendet werden, über die festgestellt werden soll, ob DDL-Trigger in der Datenbank vorhanden sind. Objekte, die keine Bereiche als Schemas besitzen, müssen mithilfe der entsprechenden Katalogsicht abgerufen werden. Für DDL-Trigger verwenden Sie **sys.triggers**.  
   
-```  
+```sql  
 DROP TRIGGER safety  
 ON DATABASE;  
 ```  

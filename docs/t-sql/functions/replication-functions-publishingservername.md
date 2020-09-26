@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 67a2f52fa6fcf54204a28dc37604bebc1546736d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 369a738b274ffab474f9b2bab1c93d2370b3e64b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88309006"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380615"
 ---
 # <a name="replication-functions---publishingservername"></a>Replikationsfunktionen: PUBLISHINGSERVERNAME
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88309006"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```syntaxsql
 PUBLISHINGSERVERNAME()  
 ```  
   
@@ -52,7 +51,7 @@ PUBLISHINGSERVERNAME()
   
  Diese Funktion muss im Kontext einer Veröffentlichungsdatenbank ausgeführt werden. Wenn PUBLISHINGSERVERNAME für eine Veröffentlichungsdatenbank auf der Spiegelserverinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, wird der Name der Verlegerinstanz, von der die veröffentlichte Datenbank stammt, zurückgegeben. Wenn diese Funktion für eine Datenbank auf der Spiegelserverinstanz ausgeführt wird, die nicht veröffentlicht ist oder die von der Spiegelserverinstanz nach einem Failover veröffentlicht wird, wird der Name der Spiegelserverinstanz zurückgegeben. Wenn diese Funktion auf der ursprünglichen Verlegerinstanz ausgeführt wird, wird der Name des Verlegers zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbankspiegelung und Replikation (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [Replikationsfunktionen &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
   

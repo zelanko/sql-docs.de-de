@@ -26,12 +26,12 @@ ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc684b2a344594632fe02eb9e1ecfd6bcd45fa70
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0faa42d322baee3a2bdd36d09c08508b038c6fe7
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88308856"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379823"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88308856"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 -- Aggregate Function Syntax    
 SUM ( [ ALL | DISTINCT ] expression )  
 
@@ -86,7 +86,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### <a name="a-using-sum-to-return-summary-data"></a>A. Zurückgeben von Zusammenfassungsdaten mithilfe von SUM  
  Die folgenden Beispiele zeigen, wie Sie mit der SUM-Funktion Zusammenfassungsdaten in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgeben.  
   
-```  
+```sql
 SELECT Color, SUM(ListPrice), SUM(StandardCost)  
 FROM Production.Product  
 WHERE Color IS NOT NULL   
@@ -112,14 +112,14 @@ White           19.00                 6.7926
 ### <a name="b-using-the-over-clause"></a>B. Verwenden der OVER-Klausel  
  Im folgenden Beispiel wird die SUM-Funktion mit der OVER-Klausel verwendet, um einen kumulativen Gesamtwert der Jahresumsätze für jedes Gebiet in der `Sales.SalesPerson`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank bereitzustellen. Die Daten werden nach `TerritoryID` partitioniert und logisch nach `SalesYTD` sortiert. Folglich wird die SUM-Funktion auf Grundlage des Verkaufsjahres für jedes Gebiet berechnet. Beachten Sie, dass für `TerritoryID` 1 zwei Zeilen für das Verkaufsjahr 2005 vorhanden sind, die die beiden Vertriebsmitarbeiter mit dem Umsatz aus diesem Jahr darstellen. Der kumulierte Gesamtumsatz für diese zwei Zeilen wird berechnet, und anschließend wird die dritte Zeile, die den Umsatz für das Jahr 2006 darstellt, in die Berechnung einbezogen.  
   
-```  
+```sql
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -150,13 +150,13 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  In diesem Beispiel ist PARTITION BY nicht in der OVER-Klausel enthalten. Folglich wird die Funktion auf alle von der Abfrage zurückgegebenen Zeilen angewendet. Die in der OVER-Klausel angegebene ORDER BY-Klausel bestimmt die logische Reihenfolge, für die die SUM-Funktion übernommen wird. Die Abfrage gibt einen kumulierten Gesamtumsatz nach Jahr für alle Vertriebsgebiete zurück, die in der WHERE-Klausel angegeben sind. Die in der SELECT-Anweisung angegebene ORDER BY-Klausel bestimmt die Reihenfolge, in der die Zeilen der Abfrage angezeigt werden.  
   
-```  
+```sql
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -186,7 +186,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ### <a name="c-a-simple-sum-example"></a>C. Ein einfaches SUM-Beispiel  
  Im folgenden Beispiel wird die Gesamtanzahl der einzelnen verkauften Produkte im Jahr 2003 zurückgegeben.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT ProductKey, SUM(SalesAmount) AS TotalPerProduct  
@@ -212,7 +212,7 @@ ProductKey  TotalPerProduct
 ### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D: Berechnen von Gesamtsummen für Gruppen mit mehr als einer Spalte  
  Im folgenden Beispiel wird die Summe von `ListPrice` und `StandardCost` für jede in der `Product`-Tabelle aufgeführte Farbe berechnet.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT Color, SUM(ListPrice)AS TotalList,   

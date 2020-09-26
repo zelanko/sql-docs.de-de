@@ -19,12 +19,12 @@ ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 857ad909b2f471edaebf661ccab4cca0077bc099
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fbed016f7c4126f937fd2c376126ebd9f8e5f7b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417316"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380735"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88417316"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 POWER ( float_expression , y )  
 ```  
   
@@ -67,7 +67,7 @@ Wenn das Ergebnis nicht zum Rückgabetyp passt, wird ein Fehler durch einen arit
 ### <a name="a-using-power-to-return-the-cube-of-a-number"></a>A. Rückgabe der Kubikwurzel einer Zahl mit POWER  
  Im folgenden Beispiel wird das Potenzieren einer Zahl mit 3 (der Kubikwurzel der Zahl) veranschaulicht.  
   
-```  
+```sql  
 DECLARE @input1 FLOAT;  
 DECLARE @input2 FLOAT;  
 SET @input1= 2;  
@@ -88,7 +88,7 @@ Result1                Result2
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>B. Anzeigen der Ergebnisse einer Datentypkonvertierung mit POWER  
  Im folgenden Beispiel wird veranschaulicht, wie der Datentyp von *float_expression* beibehalten wird, was zu unerwarteten Ergebnissen führen kann.  
   
-```  
+```sql 
 SELECT   
 POWER(CAST(2.0 AS FLOAT), -100.0) AS FloatResult,  
 POWER(2, -100.0) AS IntegerResult,  
@@ -110,7 +110,7 @@ FloatResult            IntegerResult IntegerResult Decimal1Result Decimal2Result
 ### <a name="c-using-power"></a>C. Verwenden von POWER  
  Das folgende Beispiel gibt `POWER`-Ergebnisse für `2` zurück.  
   
-```  
+```sql  
 DECLARE @value INT, @counter INT;  
 SET @value = 2;  
 SET @counter = 1;  
@@ -154,7 +154,7 @@ GO
 ### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: Rückgabe des Cubes einer Zahl mit POWER  
  Im folgenden Beispiel wird die Rückgabe von `POWER`-Ergebnissen für `2.0` an die dritte Potenz dargestellt.  
   
-```  
+```sql  
 SELECT POWER(2.0, 3);  
 ```  
   
