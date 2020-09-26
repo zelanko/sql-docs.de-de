@@ -1,7 +1,7 @@
 ---
 title: 'Ausführen von Spark-Aufträgen: Azure Toolkit für IntelliJ'
 titleSuffix: SQL Server Big Data Clusters
-description: Übermitteln Sie Spark-Aufträge an Big Data-Cluster für SQL Server in Azure-Toolkit für IntelliJ.
+description: Erfahren Sie, wie Sie Spark-Aufträge an Big Data-Cluster in SQL Server in Azure-Toolkit für IntelliJ durch Übermitteln einer lokalen JAR- oder PY-Datei übermitteln.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25e200cf5a38a98289dcba91d08a1ce7c0cab340
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ef3a0d73535061ef2c9f2ce32556a0a86202d70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726726"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778539"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Übermitteln von Spark-Aufträgen auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ
 
@@ -28,7 +28,7 @@ Eines der Hauptszenarios für [!INCLUDE[big-data-clusters-2019](../includes/ssbi
 - Big-Data-Cluster für SQL Server.
 - Java Development Kit von Oracle. Sie können dieses von der [Oracle-Website](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) herunterladen und installieren.
 - IntelliJ IDEA. Sie können diese IDE von der [JetBrains-Website](https://www.jetbrains.com/idea/download/) herunterladen und installieren.
-- Azure-Toolkit für IntelliJ-Erweiterung. Installationsanweisungen finden Sie unter [Installieren des Azure-Toolkits für IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
+- Azure-Toolkit für IntelliJ-Erweiterung. Installationsanweisungen finden Sie unter [Installieren des Azure-Toolkits für IntelliJ](/azure/azure-toolkit-for-intellij-installation).
 
 ## <a name="link-sql-server-big-data-cluster"></a>Verknüpfen von Big-Data-Clustern für SQL Server
 1. Öffnen Sie das IntelliJ IDEA-Tool.
@@ -118,7 +118,7 @@ Nachdem Sie einen Big-Data-Cluster für SQL Server verknüpft haben, können Sie
       ![Dialogfeld mit Übersicht über (JAR-)Dateien zur Übermittlung von Spark-Aufträgen](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
        > [!NOTE]  
-       > Informationen zum Hochladen von JAR-Dateien und anderen Dateien, auf die verwiesen wird, finden Sie unter: [Hochladen von Ressourcen auf den Cluster](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-storage-explorer).
+       > Informationen zum Hochladen von JAR-Dateien und anderen Dateien, auf die verwiesen wird, finden Sie unter: [Hochladen von Ressourcen auf den Cluster](/azure/storage/blobs/storage-quickstart-blobs-storage-explorer).
                          
     * **Upload Path** (Uploadpfad): Sie können den Speicherort für die Übermittlung von JAR- oder Scala-Projektressourcen angeben. Es werden mehrere Speichertypen unterstützt: **Use Spark interactive session to upload** (Interaktive Spark-Sitzung für Upload verwenden) und **Use WebHDFS to upload** (WebHDFS für Upload verwenden).
     

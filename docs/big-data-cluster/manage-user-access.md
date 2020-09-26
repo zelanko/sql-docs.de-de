@@ -4,43 +4,39 @@ description: Verwalten des Zugriffs auf den Big Data-Cluster
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/06/2019
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94719ef65023b1afd4edcf7770887323d0267127
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef2df0bec343d73de90a43e411da92530c3c50c8
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730617"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790265"
 ---
 # <a name="manage-big-data-cluster-access-in-active-directory-mode"></a>Verwalten des Zugriffs auf Big Data-Cluster im Active Directory-Modus
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-In diesem Artikel wird beschrieben, wie Sie die Active Directory-Gruppen aktualisieren können, die während der Bereitstellung für Clusteradministratoren (clusterAdmins) und -benutzer (clusterUsers) bereitgestellt werden.
+In diesem Artikel wird beschrieben, wie Sie zusätzlich zu den im Rahmen der Bereitstellung über die Konfigurationseinstellung *clusterUsers* bereitgestellten Gruppen neue Active Directory-Gruppen mit *bdcUser*-Rollen hinzufügen.
+
+>[!IMPORTANT]
+>Verwenden Sie dieses Verfahren nicht, um neue Active Directory-Gruppen mit der Rolle *bdcAdmin* hinzuzufügen. Hadoop-Komponenten wie HDFS und Spark lassen nur eine Active Directory-Gruppe als Superuser-Gruppe zu. Diese entspricht der Rolle *bdcAdmin* in BDC. Um dem Big Data-Cluster nach der Bereitstellung zusätzliche Active Directory-Gruppen mit *bdcAdmin*-Berechtigungen hinzufügen zu können, müssen Sie während der Bereitstellung den bereits nominierten Gruppen zusätzliche Benutzer und Gruppen hinzufügen. Sie können dasselbe Verfahren anwenden, um die Gruppenmitgliedschaften zu aktualisieren, die über die Rolle *bdcUsers* verfügen.
 
 ## <a name="two-overarching-roles-in-the-big-data-cluster"></a>Zwei übergeordnete Rollen im Big Data-Cluster
 
 Active Directory-Gruppen können im Sicherheitsabschnitt des Bereitstellungsprofils als Teil von zwei übergreifenden Rollen für die Autorisierung innerhalb des Big Data-Clusters bereitgestellt werden:
 
-* `clusterAdmins`: Dieser Parameter akzeptiert eine einzelne Active Directory-Gruppe. Mitglieder dieser Gruppe erhalten Administratorberechtigungen im gesamten Cluster. Sie haben die Berechtigungen *sysadmin* in SQL Server, *superuser* in Hadoop Distributed File System (HDFS) und Spark sowie *Administrator*-Rechte auf dem Controller.
+* `clusterAdmins`: Dieser Parameter akzeptiert eine einzelne Active Directory-Gruppe. Mitglieder dieser Gruppe verfügen über die Rolle *bdcAdmin*, was bedeutet, dass sie Administratorberechtigungen für den gesamten Cluster erhalten. Sie haben die Berechtigungen *sysadmin* in SQL Server, *superuser* in Hadoop Distributed File System (HDFS) und Spark sowie *Administrator*-Rechte auf dem Controller.
 
-* `clusterUsers`: Diese Active Directory-Gruppen sind normale Benutzer ohne Administratorberechtigungen im Cluster. Sie verfügen über Berechtigungen für die Anmeldung bei der SQL Server-Masterinstanz. Standardmäßig haben sie jedoch keine Berechtigungen für Objekte oder Daten.
+* `clusterUsers`: Diese Active Directory-Gruppen werden der Rolle *bdcUsers* in BDC zugeordnet. Es handelt sich dabei um normale Benutzer ohne Administratorberechtigungen im Cluster. Sie verfügen über Berechtigungen für die Anmeldung bei der SQL Server-Masterinstanz. Standardmäßig haben sie jedoch keine Berechtigungen für Objekte oder Daten. Diese Benutzer sind in HDFS und Spark normale Benutzer ohne *Superuser*-Berechtigungen. Beim Herstellen einer Verbindung mit dem Controllerendpunkt können diese Benutzer nur die Endpunkte (mit *azdata bdc endpoints list*) abfragen.
 
-Eine Möglichkeit, dem Big Data-Cluster nach der Bereitstellung zusätzliche Berechtigungen für Active Directory-Gruppen zu erteilen, besteht darin, während der Bereitstellung den bereits nominierten Gruppen zusätzliche Benutzer und Gruppen hinzuzufügen. 
+Um zusätzlichen Active Directory-Gruppen *bdcUser*-Berechtigungen zu erteilen, ohne die Gruppenmitgliedschaften innerhalb von Active Directory zu ändern, führen Sie die Schritte in den folgenden Abschnitten aus.
 
-Allerdings ist es Administratoren nicht immer möglich, die Gruppenmitgliedschaften innerhalb von Active Directory zu ändern. Um zusätzliche Berechtigungen für Active Directory-Gruppen zu erteilen, ohne die Gruppenmitgliedschaft innerhalb von Active Directory zu ändern, führen Sie die Schritte in den folgenden Abschnitten aus.
+## <a name="grant-bdcuser-permissions-to-additional-active-directory-groups"></a>Erteilen von *bdcUser*-Berechtigungen für zusätzliche Active Directory-Gruppen
 
-## <a name="grant-administrator-permissions-to-additional-active-directory-groups"></a>Erteilen von Administratorberechtigungen für zusätzliche Active Directory-Gruppen
-
->[!IMPORTANT]
->Dieses Verfahren gewährt zusätzlichen Active Directory-Gruppen-Administratoren im Big Data-Cluster keinen Zugriff auf die Hadoop-Komponenten wie z. B. HDFS und Spark. Diese Komponenten lassen nur eine Active Directory-Gruppe als Superuser-Gruppe zu. Diese Einschränkung bedeutet, dass die Gruppe, die während der Bereitstellung in `clusterAdmins` angegeben wird, auch nach diesem Schritt die Superuser-Gruppe bleibt.
-
-Wenn Sie die Anweisungen in diesem Abschnitt befolgen, können Sie dem Administrator Zugriff sowohl auf den Controller als auch auf die SQL Server-Masterinstanz gewähren.
-
-### <a name="create-a-login-for-the-active-directory-user-or-group-in-the-sql-server-master-instance"></a>Erstellen einer Anmeldung für den Active Directory-Benutzer oder die Active Directory-Gruppe in der SQL Server-Masterinstanz 
+### <a name="create-a-login-for-the-active-directory-user-or-group-in-the-sql-server-master-instance"></a>Erstellen einer Anmeldung für den Active Directory-Benutzer oder die Active Directory-Gruppe in der SQL Server-Masterinstanz
 
 1. Stellen Sie mithilfe Ihres bevorzugten SQL-Clients eine Verbindung mit dem SQL-Masterendpunkt her. Verwenden Sie eine beliebige Administratoranmeldung (z. B. `AZDATA_USERNAME`), die während der Bereitstellung zur Verfügung gestellt wurde. Alternativ kann auch ein beliebiges Active Directory-Konto verwendet werden, das zur Active Directory-Gruppe gehört, die in der Sicherheitskonfiguration als `clusterAdmins` angegeben ist.
 
@@ -50,14 +46,16 @@ Wenn Sie die Anweisungen in diesem Abschnitt befolgen, können Sie dem Administr
    CREATE LOGIN [<domain>\<principal>] FROM WINDOWS;
    ```
 
-   Wenn Sie in der SQL Server-Instanz Administratorberechtigungen erteilen, erteilen Sie auch die folgende Berechtigung:
+   Erteilen Sie die gewünschten Berechtigungen in der SQL Server-Instanz:
 
    ```sql
-   ALTER SERVER ROLE sysadmin ADD MEMBER [<domain>\<principal>];
+   ALTER SERVER ROLE <server role> ADD MEMBER [<domain>\<principal>];
    GO
    ```
 
-### <a name="add-the-active-directory-user-or-group-to-the-roles-table-in-the-controller-database"></a>Hinzufügen des Active Directory-Benutzers oder der Active Directory-Gruppe zur Rollentabelle in der Controllerdatenbank 
+Eine vollständige Liste der Serverrollen finden Sie unter dem entsprechenden Thema zur SQL Server-Sicherheit [hier](../relational-databases/security/authentication-access/server-level-roles.md).
+
+### <a name="add-the-active-directory-user-or-group-to-the-roles-table-in-the-controller-database"></a>Hinzufügen des Active Directory-Benutzers oder der Active Directory-Gruppe zur Rollentabelle in der Controllerdatenbank
 
 1. Rufen Sie die SQL Server-Anmeldeinformationen des Controllers ab, indem Sie die folgenden Befehle ausführen:
 
@@ -79,25 +77,27 @@ Wenn Sie die Anweisungen in diesem Abschnitt befolgen, können Sie dem Administr
    kubectl port-forward controldb-0 1433:1433 --address 0.0.0.0 -n <cluster name>
    ```
 
-1. Verwenden Sie die vorhergehende Verbindung, um eine Zeile in die Rollentabelle einzufügen. Geben Sie den Wert *REALM* in Großbuchstaben ein.
-
-   Wenn Sie Administratorberechtigungen gewähren, verwenden Sie die Rolle *bdcAdmin* in der Rolle *\<role name>* . Verwenden Sie für Benutzer ohne Administratorrechte die Rolle *bdcUser*.
+1. Verwenden Sie die vorherige Verbindung, um eine neue Zeile in die Tabellen *roles* und *active_directory_principals* einzufügen. Geben Sie den Wert *REALM* in Großbuchstaben ein.
 
    ```sql
    USE controller;
    GO
 
-   INSERT INTO [controller].[auth].[roles] VALUES (N'<user or group name>@<REALM>', N'<role name>')
+   INSERT INTO [controller].[auth].[roles] VALUES (N'<user or group name>@<REALM>', 'bdcUser')
+   GO
+
+   INSERT INTO [controller].[auth].[active_directory_principals] VALUES (N'<user or group name>@<REALM>', N'<SID>')
    GO
    ```
 
-1. Vergewissern Sie sich, dass die Mitglieder der Gruppe, die Sie hinzugefügt haben, über Administratorrechte für Big Data-Cluster verfügen, indem Sie sich am Controllerendpunkt anmelden und den folgenden Befehl ausführen:
+   Zum Ermitteln der SID des hinzugefügten Benutzers oder der hinzugefügten Gruppe können Sie den PowerShell-Befehl [Get-ADUser](/powershell/module/addsadministration/get-aduser/) bzw. [Get-ADGroup](/powershell/module/addsadministration/get-adgroup/) verwenden.
+
+2. Vergewissern Sie sich, dass die Mitglieder der Gruppe, die Sie hinzugefügt haben, über die erwarteten *bdcUser*-Berechtigungen verfügen, indem Sie sich beim Controllerendpunkt anmelden oder die Authentifizierung bei der SQL Server-Masterinstanz ausführen. Beispiel:
 
    ```bash
-   azdata bdc config show
+   azdata login
+   azdata bdc endpoints list
    ```
-
-1. Für Benutzer ohne Administratorrechte können Sie den Zugriff durch Authentifizierung bei der SQL-Masterinstanz oder beim Controller mit `azdata login` überprüfen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

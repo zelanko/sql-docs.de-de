@@ -4,24 +4,27 @@ titleSuffix: ''
 description: Spracherweiterungen sind ein Feature von SQL Server, das zum Ausführen von externem Code verwendet wird. In SQL Server 2019 wird Java unterstützt. Die relationalen Daten können über das Erweiterbarkeitsframework im externen Code verwendet werden.
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 08/19/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f5ef0b9dd1023f662850e6e680507f5bf4041051
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3877e08c3f8976fc6a5c0aedfca594b8dee165a6
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921064"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645926"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>Was sind SQL Server-Spracherweiterungen?
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
 Spracherweiterungen sind ein Feature von SQL Server, das zum Ausführen von externem Code verwendet wird. Die relationalen Daten können über das [Erweiterbarkeitsframework](concepts/extensibility-framework.md) im externen Code verwendet werden.
 
 In SQL Server 2019 wird Java unterstützt. Die Java-Standardruntime ist Zulu Open JRE. Sie können auch eine andere Java-JRE oder ein anderes SDK verwenden.
+
+> [!NOTE]
+> Informationen zum Ausführen von Python oder R in SQL Server finden Sie in der Dokumentation zu [Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md).
 
 ## <a name="what-you-can-do-with-language-extensions"></a>Verwendungsmöglichkeiten von Spracherweiterungen
 
@@ -35,7 +38,7 @@ Spracherweiterungen bieten eine Reihe von Vorteilen:
 + Geschwindigkeit. Datenbanken sind für setbasierte Vorgänge optimiert. Dank neuer Innovationen bei Datenbanken wie z. B. arbeitsspeicherinternen Tabellen lassen sich Zusammenfassungen und Aggregationen im Handumdrehen ausführen – die perfekte Ergänzung für Data Science-Szenarien.
 + Einfache Bereitstellung und Integration. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist der Dreh- und Angelpunkt für viele andere Aufgaben und Anwendungen zur Datenverwaltung. Durch Nutzung von Daten, die sich bereits in der Datenbank befinden, stellen Sie sicher, dass die von Java verwendeten Daten konsistent und aktuell sind.
 
-## <a name="how-to-get-started"></a>Einstieg
+## <a name="how-to-get-started"></a>Erste Schritte
 
 ### <a name="step-1-install-the-software"></a>Schritt 1: Installieren der Software
 
@@ -48,11 +51,11 @@ Entwickler schreiben Code in der Regel auf ihrem eigenen Laptop oder auf einer A
 
 + **Verwenden Sie Ihre bevorzugte IDE** zum Entwickeln von Java-Code.
 
-+ **Installieren Sie das [Microsoft-Erweiterbarkeits-SDK für Java](how-to/extensibility-sdk-java-sql-server.md)** , um Java-Code in SQL Server auszuführen.
++ **Installieren Sie das [Microsoft-Erweiterbarkeits-SDK für Java](how-to/extensibility-sdk-java-sql-server.md)**, um Java-Code in SQL Server auszuführen.
 
-+ **Verwenden Sie [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) oder [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)** , um externen Code in SQL Server auszuführen.
++ **Verwenden Sie [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) oder [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)**, um externen Code in SQL Server auszuführen.
 
-+ **Verwenden Sie die gespeicherte Systemprozedur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)** , um Ihren Java-Code in SQL Server auszuführen.
++ **Verwenden Sie die gespeicherte Systemprozedur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)**, um Ihren Java-Code in SQL Server auszuführen.
 
 ### <a name="step-3-write-your-first-code"></a>Schritt 3: Schreiben von Code
 

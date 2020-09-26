@@ -1,7 +1,7 @@
 ---
 title: Was ist eine Anwendungsbereitstellung?
 titleSuffix: SQL Server Big Data Clusters
-description: In diesem Artikel wird die Anwendungsbereitstellung auf einem Big Data-Cluster für SQL Server 2019 beschrieben.
+description: Erfahren Sie, wie eine Anwendungsbereitstellung Schnittstellen zum Erstellen, Verwalten und Ausführen von Anwendungen in einem Big Data-Cluster in SQL Server 2019 bereitstellt.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 4bde49046ab8d4f4ea7217970ec85c7a7966f487
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215449"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765329"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Was hat es mit der Anwendungsbereitstellung in Big Data-Cluster auf sich?
 
@@ -57,7 +57,7 @@ Wenn eine Anwendung ausgeführt wird, leitet der Kubernetes-Dienst für die Anwe
 
 SQL Server 2019 CU5 umfasst die Unterstützung für die Bereitstellung von Big Data-Cluster in Red Hat OpenShift sowie ein aktualisiertes Sicherheitsmodell für Big Data-Cluster, für das keine privilegierten Container mehr erforderlich sind. Zusätzlich zu nicht privilegierten Containern werden Container standardmäßig für alle neuen Bereitstellungen unter Verwendung von SQL Server 2019 CU5 nicht als Root-Benutzer ausgeführt.
 
-Zum Zeitpunkt der Veröffentlichung von CU5 wird der Setupschritt der Anwendungen, die mit [App Deploy](concept-application-deployment.md)-Schnittstellen bereitgestellt wurden, weiterhin als *Root*-Benutzer ausgeführt. Dies ist erforderlich, da während des Setups zusätzliche, von der Anwendung verwendete Pakete installiert werden. Anderer Benutzercode, der als Teil der Anwendung bereitgestellt wird, wird als Benutzer mit niedrigen Berechtigungen ausgeführt. 
+Zum Zeitpunkt der Veröffentlichung von CU5 wird der Setupschritt der Anwendungen, die mit [App Deploy]()-Schnittstellen bereitgestellt wurden, weiterhin als *Root*-Benutzer ausgeführt. Dies ist erforderlich, da während des Setups zusätzliche, von der Anwendung verwendete Pakete installiert werden. Anderer Benutzercode, der als Teil der Anwendung bereitgestellt wird, wird als Benutzer mit niedrigen Berechtigungen ausgeführt. 
 
 Außerdem steht die optionale Funktion **CAP_AUDIT_WRITE** zur Verfügung, die benötigt wird, um mithilfe von Cron-Aufträgen Zeitpläne für SSIS-Anwendungen zu erstellen. Wenn die YAML-Spezifikationsdatei der Anwendung einen Zeitplan vorgibt, wird die Anwendung über einen Cron-Auftrag ausgelöst. Dafür wird diese zusätzliche Funktion benötigt.  Alternativ kann die Anwendung nach Bedarf mit dem Befehl *azdata app run* über einen Webdienstaufruf ausgelöst werden. Hierfür wird die Funktion „CAP_AUDIT_WRITE“ nicht benötigt. 
 
@@ -78,18 +78,18 @@ allowedCapabilities:
 ## <a name="how-to-work-with-application-deployment"></a>Vorgehensweise: Arbeiten mit der Anwendungsbereitstellung
 
 Die zwei Hauptschnittstellen für die Anwendungsbereitstellung lauten wie folgt: 
-- [Befehlszeilenschnittstelle`azdata`](big-data-cluster-create-apps.md)
+- [Befehlszeilenschnittstelle`azdata`](app-create.md)
 - [Visual Studio Code und Erweiterung Azure Data Studio](app-deployment-extension.md)
 
-Es ist auch möglich, dass eine Anwendung mit einem RESTful-Webdienst ausgeführt wird. Weitere Informationen finden Sie unter [Nutzen von Anwendungen auf Big Data-Clustern](big-data-cluster-consume-apps.md).
+Es ist auch möglich, dass eine Anwendung mit einem RESTful-Webdienst ausgeführt wird. Weitere Informationen finden Sie unter [Nutzen von Anwendungen auf Big Data-Clustern](app-consume.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zum Erstellen und Ausführen von Anwendungen auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie unter:
 
-- [Bereitstellen von Anwendungen mit „azdata“](big-data-cluster-create-apps.md)
+- [Bereitstellen von Anwendungen mit „azdata“](app-create.md)
 - [Vorgehensweise: Verwenden von Visual Studio Code zum Bereitstellen von Anwendungen für SQL Server-Big Data-Cluster](app-deployment-extension.md)
-- [Verwenden von Anwendungen auf Big Data-Clustern](big-data-cluster-consume-apps.md)
+- [Verwenden von Anwendungen auf Big Data-Clustern](app-consume.md)
 
 Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie in der folgenden Übersicht:
 

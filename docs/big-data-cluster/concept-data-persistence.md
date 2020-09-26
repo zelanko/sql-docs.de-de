@@ -1,7 +1,7 @@
 ---
 title: Datenpersistenz in Kubernetes
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie die Datenpersistenz in einem SQL Server 2019-Big-Data-Cluster funktioniert.
+description: Hier erfahren Sie, wie persistente Volumes ein Plug-In-Modell für Speicher in Kubernetes bereitstellen. Außerdem erfahren Sie, wie Datenpersistenz in einem Big Data-Cluster in SQL Server 2019 funktioniert.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661081"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765689"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Datenpersistenz mit SQL Server-Big Data-Clustern in Kubernetes
 
@@ -28,7 +28,7 @@ Ein SQL Server-Big Data-Cluster nutzt diese persistenten Volumes durch die Verwe
 
 Im Folgenden sind einige wichtige Aspekte aufgeführt, die beim Planen der Speicherkonfiguration für einen Big Data-Cluster zu beachten sind:
 
-- Für die erfolgreiche Bereitstellung eines Big Data-Clusters müssen Sie sicherstellen, dass die erforderliche Anzahl von persistenten Volumes verfügbar ist. Wenn Sie Ihr System in einem AKS-Cluster (Azure Kubernetes Service) bereitstellen und eine der integrierten Speicherklassen (`default` oder `managed-premium`) verwenden, unterstützen diese die dynamische Bereitstellung für die persistenten Volumes. Das bedeutet, dass Sie die persistenten Volumes nicht vorab erstellen müssen. Sie müssen jedoch sicherstellen, dass die im AKS-Cluster verfügbaren Workerknoten so viele Datenträger anfügen können, wie persistente Volumes für die Bereitstellung erforderlich sind. Abhängig von der [VM-Größe](https://docs.microsoft.com/azure/virtual-machines/linux/sizes), die für die Workerknoten angegeben wird, kann jeder Knoten eine bestimmte Anzahl von Datenträgern anfügen. Bei einem Cluster mit Standardgröße (ohne Hochverfügbarkeit) sind mindestens 24 Datenträger erforderlich. Wenn Sie Hochverfügbarkeit aktivieren oder einen Pool zentral hochskalieren, müssen Sie sicherstellen, dass für jedes zusätzliche Replikat mindestens zwei persistente Volumes vorhanden sind. Dies gilt unabhängig von der Ressource, die Sie zentral hochskalieren.
+- Für die erfolgreiche Bereitstellung eines Big Data-Clusters müssen Sie sicherstellen, dass die erforderliche Anzahl von persistenten Volumes verfügbar ist. Wenn Sie Ihr System in einem AKS-Cluster (Azure Kubernetes Service) bereitstellen und eine der integrierten Speicherklassen (`default` oder `managed-premium`) verwenden, unterstützen diese die dynamische Bereitstellung für die persistenten Volumes. Das bedeutet, dass Sie die persistenten Volumes nicht vorab erstellen müssen. Sie müssen jedoch sicherstellen, dass die im AKS-Cluster verfügbaren Workerknoten so viele Datenträger anfügen können, wie persistente Volumes für die Bereitstellung erforderlich sind. Abhängig von der [VM-Größe](/azure/virtual-machines/linux/sizes), die für die Workerknoten angegeben wird, kann jeder Knoten eine bestimmte Anzahl von Datenträgern anfügen. Bei einem Cluster mit Standardgröße (ohne Hochverfügbarkeit) sind mindestens 24 Datenträger erforderlich. Wenn Sie Hochverfügbarkeit aktivieren oder einen Pool zentral hochskalieren, müssen Sie sicherstellen, dass für jedes zusätzliche Replikat mindestens zwei persistente Volumes vorhanden sind. Dies gilt unabhängig von der Ressource, die Sie zentral hochskalieren.
 
 - Wenn der Speicheranbieter für die Speicherklasse, die Sie in der Konfiguration bereitstellen, keine dynamische Bereitstellung unterstützt, müssen Sie die persistenten Volumes vorab erstellen. Die dynamische Bereitstellung wird beispielsweise nicht vom `local-storage`-Anbieter unterstützt. Weitere Informationen zu einem mit `kubeadm` bereitgestellten Kubernetes-Cluster finden Sie in diesem [Beispielskript](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu).
 
@@ -40,7 +40,7 @@ Im Folgenden sind einige wichtige Aspekte aufgeführt, die beim Planen der Speic
 
 - Durch die Bereitstellung als Containeranwendungen in Kubernetes und die Verwendung von Features wie zustandsbehafteten Sätzen und permanentem Speicher stellt Kubernetes sicher, dass Pods im Falle von Integritätsproblemen neu gestartet und an denselben permanenten Speicher angefügt werden. Für den Fall, dass ein Knoten ausfällt und ein Pod auf einem anderen Knoten neu gestartet werden muss, besteht jedoch ein höheres Risiko der Nichtverfügbarkeit, wenn für den fehlerhaften Knoten lokaler Speicher verwendet wird. Um dieses Risiko zu mindern, müssen Sie entweder für zusätzliche Redundanz sorgen und [Funktionen für Hochverfügbarkeit](deployment-high-availability.md) aktivieren oder redundanten Remotespeicher verwenden. Hier finden Sie eine Übersicht über die Speicheroptionen für verschiedene Komponenten in den Big Data-Clustern.
 
-| Ressourcen | Speichertyp für Daten | Speichertyp für Protokoll |  Notizen |
+| Ressourcen | Speichertyp für Daten | Speichertyp für Protokoll |  Hinweise |
 |---|---|---|--|
 | SQL Server-Masterinstanz | Lokaler Speicher (Replikate >= 3) oder redundanter Remotespeicher (Replikat = 1) | Lokaler Speicher | Die auf einem zustandsbehafteten Satz basierende Implementierung, bei der Pods auf den Knoten verbleiben, stellt sicher, dass Neustarts und vorübergehende Fehler keinen Datenverlust verursachen. |
 | Computepool | Lokaler Speicher | Lokaler Speicher | Keine Benutzerdaten gespeichert |
@@ -71,7 +71,7 @@ Wie bei anderen Anpassungen können Sie zum Zeitpunkt der Bereitstellung in den 
     }
 ```
 
-Bei der Bereitstellung des Big Data-Clusters wird zum Speichern von Daten, Metadaten und Protokollen für verschiedene Komponenten persistenter Speicher verwendet. Sie können die Größe der als Teil der Bereitstellung erstellten persistenten Volumeansprüche anpassen. Es wird empfohlen, die Speicherklassen mit einer *Retain*-[Rückforderungsrichtlinie](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy) zu verwenden.
+Bei der Bereitstellung des Big Data-Clusters wird zum Speichern von Daten, Metadaten und Protokollen für verschiedene Komponenten persistenter Speicher verwendet. Sie können die Größe der als Teil der Bereitstellung erstellten persistenten Volumeansprüche anpassen. Es wird empfohlen, die Speicherklassen mit einer *Retain-* [Rückforderungsrichtlinie](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy) zu verwenden.
 
 > [!WARNING]
 > Die Ausführung ohne persistenten Speicher kann zwar in einer Testumgebung funktionieren, führt dann allerdings möglicherweise zu einem nicht funktionsfähigen Cluster. Beim Neustart eines Pods gehen Clustermetadaten und/oder Benutzerdaten dauerhaft verloren. Von dieser Konfiguration wird abgeraten.

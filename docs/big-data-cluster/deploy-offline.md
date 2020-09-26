@@ -1,7 +1,7 @@
 ---
 title: Offlinebereitstellung
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie eine Offlinebereitstellung von Big Data-Clustern für SQL Server durchführen.
+description: Erfahren Sie, wie Sie eine Offlinebereitstellung eines Big Data-Clusters in SQL Server 2019 durchführen und Containerimages in ein privates Repository laden.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
+ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423159"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89875559"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Durchführen einer Offlinebereitstellung von Big Data-Clustern für SQL Server
 
@@ -80,7 +80,6 @@ Die folgenden Big Data-Cluster-Containerimages sind für eine Offlineinstallatio
 - **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
-- **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
 - **mssql-ha-operator**

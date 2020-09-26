@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea5c622385b4350fb74362451eef3bb061d78fbc
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: fe4b026047ea98350283c1beedf87988d39df4bd
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160158"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472336"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>Verwenden eines Python-Skripts zum Bereitstellen eines Big Data-Clusters in SQL Server für Azure Red Hat OpenShift (ARO)
 
@@ -24,6 +24,10 @@ In diesem Tutorial verwenden Sie ein Python-Beispielskript, um [!INCLUDE[big-dat
 
 > [!TIP]
 > ARO ist nur eine Option, mit der Kubernetes für Ihre Big Data-Cluster gehostet werden kann. Informationen zu anderen Bereitstellungsoptionen und zum Anpassen dieser Optionen finden Sie unter [Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md).
+
+
+> [!WARNING]
+> Persistente Volumes, die mit der integrierten Speicherklasse *managed-premium* erstellt wurden, verfügen über eine *Delete*-Rückforderungsrichtlinie. Wenn Sie also den SQL Server-Big Data-Cluster löschen, werden sowohl die persistenten Volumeansprüche als auch die persistenten Volumes gelöscht. Sie sollten mithilfe des Provisioners „azure-disk“ benutzerdefinierte Speicherklassen mit einer *Retain*-Rückforderungsrichtlinie erstellen, wie unter [Speicherklassen](/azure/aks/concepts-storage/#storage-classes) beschrieben. Im folgenden Skript wird die Speicherklasse *managed-premium* verwendet. Ausführlichere Informationen finden Sie unter [Datenpersistenz](concept-data-persistence.md).
 
 Die hier verwendete Standardbereitstellung für Big-Data-Cluster besteht aus einer SQL-Masterinstanz, einer Computepoolinstanz, zwei Datenpoolinstanzen und zwei Speicherpoolinstanzen. Daten werden dauerhaft mit persistenten Kubernetes-Volumes gespeichert, die die Standardspeicherklassen von ARO verwenden. Die Standardkonfiguration, die in diesem Tutorial verwendet wird, eignet sich für Entwicklungs- und Testumgebungen.
 
