@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 571cd20813376fd3ed25bb89cf49890f8d75f718
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 39c6ae00a1416727740d09f2aab3436f8ef616e7
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111854"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379795"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ Gibt einen Teil eines Zeichen-, Binär-, Text- oder Bildausdrucks in [!INCLUDE[s
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 SUBSTRING ( expression ,start , length )  
 ```  
   
@@ -78,7 +78,7 @@ SUBSTRING ( expression ,start , length )
 ### <a name="a-using-substring-with-a-character-string"></a>A. Verwenden von SUBSTRING mit einer Zeichenfolge  
  Im folgenden Beispiel wird gezeigt, wie Sie nur einen Teil einer Zeichenfolge zurückgeben können. Diese Abfrage gibt aus der Tabelle `sys.databases` in der ersten Spalte die Namen der Systemdatenbank zurück, in der zweiten Spalten den ersten Buchstaben der Datenbank und in der letzten Spalte den dritten und vierten Buchstaben.  
   
-```  
+```sql
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
 SUBSTRING(name, 3, 2) AS ThirdAndFourthCharacters
 FROM sys.databases  
@@ -98,7 +98,7 @@ WHERE database_id < 5;
   
  So zeigen Sie den zweiten, dritten und vierten Buchstaben der Zeichenfolgenkonstanten `abcdef` an:  
   
-```  
+```sql
 SELECT x = SUBSTRING('abcdef', 2, 3);  
 ```  
   
@@ -119,7 +119,7 @@ bcd
   
  Im folgenden Beispiel wird gezeigt, wie die ersten 10 Zeichen aus allen **text**- und **image**-Datenspalten in der `pub_info`-Tabelle der `pubs`-Datenbank zurückgegeben werden. **text**-Daten werden als **varchar** zurückgegeben, und **image**-Daten werden als **varbinary** zurückgegeben.  
   
-```  
+```sql
 USE pubs;  
 SELECT pub_id, SUBSTRING(logo, 1, 10) AS logo,   
    SUBSTRING(pr_info, 1, 10) AS pr_info  
@@ -139,7 +139,7 @@ WHERE pub_id = '1756';
   
  Im folgenden Beispiel wird die Wirkung von SUBSTRING auf **text**- und auf **ntext**-Daten gezeigt. Zunächst wird in diesem Beispiel eine neue Tabelle in der `pubs`-Datenbank namens `npub_info` erstellt. Im nächsten Schritt wird die Spalte `pr_info` in der `npub_info`-Tabelle aus den ersten 80 Zeichen der `pub_info.pr_info`-Spalte erstellt und ein `ü` als erstes Zeichen hinzugefügt. Abschließend ruft ein `INNER JOIN` alle Verleger-IDs sowie den `SUBSTRING` der **text**- und **ntext**-Spalten mit Verlegerinformationen ab.  
   
-```  
+```sql
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
       WHERE table_name = 'npub_info')  
    DROP TABLE npub_info;  
@@ -149,7 +149,7 @@ USE pubs;
 GO  
 CREATE TABLE npub_info  
 (  
- pub_id char(4) NOT NULL  
+ pub_id CHAR(4) NOT NULL  
     REFERENCES publishers(pub_id)  
     CONSTRAINT UPKCL_npubinfo PRIMARY KEY CLUSTERED,  
 pr_info ntext NULL  
@@ -184,7 +184,7 @@ ORDER BY pr.pub_id ASC;
 ### <a name="c-using-substring-with-a-character-string"></a>C. Verwenden von SUBSTRING mit einer Zeichenfolge  
  Im folgenden Beispiel wird gezeigt, wie Sie nur einen Teil einer Zeichenfolge zurückgeben können. Diese Abfrage gibt aus der `dbo.DimEmployee`-Tabelle den Nachnamen eines jeden Autors in einer Spalte und den ersten Buchstaben des entsprechenden Vornamens in der zweiten Spalte zurück.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT LastName, SUBSTRING(FirstName, 1, 1) AS Initial  
@@ -205,7 +205,7 @@ Barreto de Mattos    P
   
  Das folgende Beispiel stellt dar, wie die zweiten, dritten und vierten Buchstaben der Zeichenfolgenkonstanten `abcdef` zurückgegeben werden.  
   
-```  
+```sql
 USE ssawPDW;  
   
 SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;  

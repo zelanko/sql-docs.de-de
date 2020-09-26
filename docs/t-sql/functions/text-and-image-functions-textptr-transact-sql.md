@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83e8edcea68c22bdd14154203c9bf13b84b42156
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422594"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380505"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Text- und Bildfunktionen: TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88422594"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```syntaxsql
 TEXTPTR ( column )  
 ```  
   
@@ -78,10 +77,10 @@ TEXTPTR ( column )
 ### <a name="a-using-textptr"></a>A. Verwenden von TEXTPTR  
  Im folgenden Beispiel wird die Funktion `TEXTPTR` verwendet, um die **image**-Spalte `logo`, die mit `New Moon Books` verknüpft ist, in der `pub_info`-Tabelle der `pubs`-Datenbank zu suchen. Der Textzeiger wird in der lokalen Variablen `@ptrval.` abgelegt.  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @ptrval varbinary(16);  
+DECLARE @ptrval VARBINARY(16);  
 SELECT @ptrval = TEXTPTR(logo)  
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   
@@ -92,8 +91,8 @@ GO
 ### <a name="b-using-textptr-with-in-row-text"></a>B. Verwenden von TEXTPTR mit Text in Zeilen  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss der Textzeiger in Zeilen innerhalb einer Transaktion verwendet werden, wie im folgenden Beispiel gezeigt.  
   
-```  
-CREATE TABLE t1 (c1 int, c2 text);  
+```sql
+CREATE TABLE t1 (c1 INT, c2 TEXT);  
 EXEC sp_tableoption 't1', 'text in row', 'on';  
 INSERT t1 VALUES ('1', 'This is text.');  
 GO  
@@ -109,7 +108,7 @@ COMMIT;
 ### <a name="c-returning-text-data"></a>C. Zurückgeben von Textdaten  
  Im folgenden Beispiel wird die Spalte `pub_id` und der 16 Byte lange Textzeiger der Spalte `pr_info` aus der Tabelle `pub_info` ausgewählt.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, TEXTPTR(pr_info)  
@@ -137,7 +136,7 @@ pub_id
   
  Das folgende Beispiel zeigt, wie die ersten `8000` Byte Text ohne Verwendung von TEXTPTR zurückgegeben werden.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SET TEXTSIZE 8000;  
@@ -168,10 +167,10 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ### <a name="d-returning-specific-text-data"></a>D: Zurückgeben von bestimmten Textdaten  
  Im folgenden Beispiel wird die Spalte `text` (`pr_info`), die mit `pub_id``0736` verknüpft ist, in der Tabelle `pub_info` der `pubs`-Datenbank gesucht. Es wird zunächst die lokale Variable `@val` deklariert. Der Textzeiger (eine lange Binärzeichenfolge) wird dann in der Variablen `@val` abgelegt und als Parameter der `READTEXT`-Anweisung übergeben. Diese Anweisung gibt beginnend beim fünften Byte (Offset 4) 10 Byte zurück.  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @val varbinary(16);  
+DECLARE @val VARBINARY(16);  
 SELECT @val = TEXTPTR(pr_info)   
 FROM pub_info  
 WHERE pub_id = '0736';  

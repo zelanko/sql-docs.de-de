@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 433ff155da65471abe8b3ebde3df437b0a3f55ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2524b2e828615ee1e413f36bd77cd8ebc3fa8b77
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362056"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380555"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88362056"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```syntaxsql
 VerifySignedByCert( Cert_ID , signed_data , signature )  
 ```  
   
@@ -73,7 +72,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>A. Überprüfen, dass signierte Daten nicht manipuliert wurden  
  Im folgenden Beispiel wird getestet, ob die Informationen in `Signed_Data` seit dem Signieren mithilfe des Zertifikats namens `Shipping04`geändert wurden. Die Signatur wird in `DataSignature`gespeichert. Das Zertifikat, `Shipping04`, wird an die `Cert_ID`-Funktion übergeben, die die ID des Zertifikats in der Datenbank zurückgibt. Gibt `VerifySignedByCert` den Wert 1 zurück, ist die Signatur einwandfrei. Gibt `VerifySignedByCert` den Wert 0 zurück, handelt es sich bei den Daten in `Signed_Data` nicht um die Daten, die zum Generieren von `DataSignature`verwendet wurden. In diesem Fall wurde entweder `Signed_Data` seit dem Signieren geändert, oder `Signed_Data` wurde mithilfe eines anderen Zertifikats signiert.  
   
-```  
+```sql
 SELECT Data, VerifySignedByCert( Cert_Id( 'Shipping04' ),  
     Signed_Data, DataSignature ) AS IsSignatureValid  
 FROM [AdventureWorks2012].[SignedData04]   
@@ -84,7 +83,7 @@ GO
 ### <a name="b-returning-only-records-that-have-a-valid-signature"></a>B. Zurückgeben von Datensätzen mit einer gültigen Signatur  
  Diese Abfrage gibt nur Datensätze zurück, die nicht geändert wurden, seit sie mithilfe des Zertifikats `Shipping04`signiert wurden.  
   
-```  
+```sql
 SELECT Data FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByCert( Cert_Id( 'Shipping04' ), Data,   
     DataSignature ) = 1   

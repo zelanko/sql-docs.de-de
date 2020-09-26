@@ -9,17 +9,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761904"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379578"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Konfigurieren von Windows Server Update Services (WSUS) in Analytics Platform System
 In diesen Anweisungen werden die Schritte zum Verwenden des Konfigurations-Assistenten für Windows Server Update Services (WSUS) zum Konfigurieren von WSUS für Analytics Platform System erläutert. Sie müssen WSUS konfigurieren, bevor Sie Software Updates auf das Gerät anwenden können. WSUS ist bereits auf dem virtuellen VMM-Computer des Geräts installiert.  
   
-Weitere Informationen zum Konfigurieren von WSUS finden Sie auf der WSUS-Website unterschritt Weise Anleitung für die [WSUS-Installation](https://go.microsoft.com/fwlink/?LinkId=202417) . Nach dem Konfigurieren von WSUS finden [Sie weitere Informationen unter herunterladen und Anwenden von Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) zum Initiieren eines Updates.  
+Weitere Informationen zum Konfigurieren von WSUS finden Sie auf der WSUS-Website unterschritt Weise Anleitung für die [WSUS-Installation](/windows/deployment/deploy-whats-new) . Nach dem Konfigurieren von WSUS finden [Sie weitere Informationen unter herunterladen und Anwenden von Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) zum Initiieren eines Updates.  
   
 > [!WARNING]  
 > Wenn während dieses Konfigurations Vorgangs Fehler auftreten, wenden Sie sich an den Support, und wenden Sie sich an den Support. Ignorieren Sie keine Fehler, oder fahren Sie fort, wenn Fehler auftreten.  
@@ -61,7 +61,7 @@ Zum Konfigurieren von WSUS müssen Sie folgende Schritte ausführen:
   
         ![Server-Manager-Dashboard (Menü)](./media/configure-windows-server-update-services-wsus/WSUS_Wiz0.png "WSUS_Wiz0")  
   
-    4.  Wenn Sie den WSUS-Assistenten zum ersten Mal ausführen, werden Sie möglicherweise aufgefordert, ein Verzeichnis zum Speichern der Updates zu konfigurieren. `C:\wsus`ist ein geeigneter Speicherort. Sie können jedoch einen anderen Pfad angeben.  
+    4.  Wenn Sie den WSUS-Assistenten zum ersten Mal ausführen, werden Sie möglicherweise aufgefordert, ein Verzeichnis zum Speichern der Updates zu konfigurieren. `C:\wsus` ist ein geeigneter Speicherort. Sie können jedoch einen anderen Pfad angeben.  
   
         ![WSUS-Pfad](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
@@ -176,7 +176,7 @@ Zum Konfigurieren von WSUS müssen Sie folgende Schritte ausführen:
 Nach dem Konfigurieren von WSUS für Analytics Platform System besteht der nächste Schritt im Gruppieren der Geräteserver. Wenn alle Geräteserver einer Gruppe hinzugefügt werden, kann WSUS Software Updates auf alle Server in der Appliance anwenden.  
   
 > [!NOTE]  
-> Das WSUS-System ist so konzipiert, dass es asynchron ausgeführt wird. Das Initiieren einer Aktivität führt nicht immer zu einem sofortigen Update. Daher müssen Sie möglicherweise eine Weile warten, bis die Computer in den WSUS-Dialogfeldern angezeigt werden. Wenn Sie `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` den am Ende des Themas beschriebenen Befehl zum [herunterladen und Anwenden von Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) ausführen, können Sie die Dialogfelder aktualisieren.  
+> Das WSUS-System ist so konzipiert, dass es asynchron ausgeführt wird. Das Initiieren einer Aktivität führt nicht immer zu einem sofortigen Update. Daher müssen Sie möglicherweise eine Weile warten, bis die Computer in den WSUS-Dialogfeldern angezeigt werden. Wenn `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` Sie den am Ende des Themas beschriebenen Befehl zum [herunterladen und Anwenden von Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) ausführen, können Sie die Dialogfelder aktualisieren.  
   
 #### <a name="to-group-the-appliance-servers"></a>So gruppieren Sie die Geräteserver  
   
@@ -203,4 +203,3 @@ Nach dem Konfigurieren von WSUS für Analytics Platform System besteht der näch
 6.  Wählen Sie die neue Computergruppe aus, ändern Sie Ihren **Status** in **any**, und klicken Sie dann auf **Aktualisieren**. Alle Computer sollten nun dieser Gruppe zugewiesen und im rechten Bereich aufgelistet werden. Im Allgemeinen ist es sicher, den Vorgang fortzusetzen, wenn Knoten Warnungen anzeigen, z. b. **dieser Knoten hat noch keinen Status gemeldet**.  
   
     ![Ändern Sie den Status in beliebig, und klicken Sie auf Aktualisieren](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  
-  

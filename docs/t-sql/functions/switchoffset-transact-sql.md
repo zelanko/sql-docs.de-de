@@ -25,12 +25,12 @@ ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8cffc510ca7d089be5326abf3d3823807b416e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e266c23c0fdc712f5bab15173e187043fede5de
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417196"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380845"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88417196"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 SWITCHOFFSET ( DATETIMEOFFSET, time_zone )   
 ```  
   
@@ -66,17 +66,16 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
   
  Bei Verwendung von SWITCHOFFSET mit der GETDATE()-Funktion wird die Abfrage u. U. langsam ausgeführt. Das liegt daran, dass der Abfrageoptimierer keine genauen Kardinalitätsschätzungen für den datetime-Wert abrufen kann. Um dieses Problem zu beheben, verwenden Sie den OPTION (RECOMPILE)-Abfragehinweis, um zu erzwingen, dass der Abfrageoptimierer einen Abfrageplan erneut kompiliert, sobald dieselbe Abfrage das nächste Mal ausgeführt wird. Auf diese Weise erhält der Optimierer exakte Kardinalitätsschätzungen und kann einen effizienteren Abfrageplan erzeugen. Weitere Informationen zum RECOMPILE-Abfragehinweis finden Sie unter [Query Hints &#40;Transact-SQL&#41; (Abfragehinweise (Transact-SQL))](../../t-sql/queries/hints-transact-sql-query.md).  
   
-```  
+```sql
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
 SELECT * FROM t    
 WHERE c1 > @dt OPTION (RECOMPILE);  
-  
 ```  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird `SWITCHOFFSET` verwendet, um einen anderen als den in der Datenbank gespeicherten Zeitzonenoffset-Wert anzuzeigen.  
   
-```  
+```sql  
 CREATE TABLE dbo.test   
     (  
     ColDatetimeoffset datetimeoffset  
