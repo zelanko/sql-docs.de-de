@@ -3,24 +3,24 @@ title: Entwickeln einer Assistenten-Erweiterung
 description: Dieses Tutorial veranschaulicht, wie Sie eine Assistenten-Erweiterung entwickeln, um Azure Data Studio benutzerdefinierte Funktionen hinzuzufügen.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan
-ms.topic: how-to
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
+ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 1ae3fe6606c926fedf7ff8c60a729c17d70b96be
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 50440aca120dad6cfd165262bd4bfd2e139393cf
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288142"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364057"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>Entwickeln einer Azure Data Studio-Erweiterung für einen Assistenten
 
 Dieses Tutorial veranschaulicht, wie Sie eine neue **Azure Data Studio-Erweiterung für einen Assistenten** entwickeln. Die Erweiterung stellt einen Assistenten für die Interaktion mit Azure Data Studio-Benutzern bereit.
 
-In diesem Tutorial lernen Sie Folgendes:
+In diesem Artikel wird Folgendes behandelt:
 > [!div class="checklist"]
 > - Installieren des Erweiterungsgenerators
 > - Erstellen der Erweiterung

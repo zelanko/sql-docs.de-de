@@ -3,18 +3,18 @@ title: Versionshinweise
 description: Dieser Artikel enthält Versionshinweise für Azure Data Studio-Releases von November 2017 bis heute. Für viele der zusammengefassten Issues werden Links zu weiteren Informationen bereitgestellt.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: overview
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 09/22/2020
-ms.openlocfilehash: 1eaeb177fbd4cdc16190cbbc40efc76a3b468ac5
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: aa55d393955eecaa4ba9af947985622334c59141
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989983"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364193"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
