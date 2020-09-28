@@ -2,7 +2,7 @@
 title: Versionshinweise für den JDBC-Treiber
 description: In diesem Artikel werden die Releases des Microsoft JDBC-Treibers für SQL Server aufgeführt. Für jede Version werden die Änderungen benannt und beschrieben.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +11,90 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f07f4e5f6e833419b922dd6f8e6d7b58becf96b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ba891b077e6144a97dfbfcb25597e00fc43b0b0d
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85793291"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062309"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Versionshinweise zum Microsoft JDBC-Treiber für SQL Server
 
 In diesem Artikel werden die Versionen des _Microsoft JDBC-Treibers für SQL Server_ aufgeführt. Für jede Version werden die Änderungen benannt und beschrieben.
+
+## <a name="84"></a><a id="84"></a> 8.4
+
+**[![Download](../../ssms/media/download-icon.png) Herunterladen des Microsoft JDBC-Treibers 8.4 für SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2137600)**  
+**[![Download](../../ssms/media/download-icon.png) Herunterladen des Microsoft JDBC-Treibers 8.4 für SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2137502)**  
+
+Versionsnummer: 8.4.1  
+Veröffentlichung: 27. August 2020
+
+Wenn Sie den Treiber in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Treiber in einer ZIP-Datei: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40a)  
+Treiber in einer tar.gz-Datei: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40a)  
+
+### <a name="compliance"></a>Kompatibilität
+
+| Kompatibilitäts-/Konformitätsänderung | Details |
+| :---------------- | :------ |
+| Laden Sie die neuesten Updates für den JDBC-Treiber 8.4 herunter. | &bull; &nbsp; [GitHub, 8.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Vollständig konform mit JDBC-API-Spezifikation 4.2. | Die JAR-Dateien im 8.4-Paket sind gemäß Java-Versionskompatibilität benannt.<br/><br/>Beispielsweise sollte die Datei „mssql-jdbc-8.4.1.jre14.jar“ aus dem 8.4-Paket mit Java 14 verwendet werden. |
+| Kompatibel mit dem Java Development Kit (JDK), Version 14.0, 11.0 und 1.8 | Der Microsoft JDBC-Treiber 8.4 für SQL Server ist jetzt zusätzlich zum JDK 11.0 (Java Development Kit) und 1.8 mit der JDK-Version 14.0 kompatibel. |
+| &nbsp; | &nbsp; |
+
+### <a name="releases"></a>Releases
+
+Versionsnummer: 8.4.1  
+Veröffentlichung: 27. August 2020  
+Behobene Probleme:  
+
+- Ein Problem mit der Inkompatibilität von `SQLServerConnectionPoolProxy` mit `delayLoadingLobs` wurde behoben.
+- Ein potenzielles Problem von `NullPointerException` mit `delayLoadingLobs` wurde behoben.
+- Ein Problem mit der Entschlüsselung von Spaltenverschlüsselungsschlüsseln bei Verwendung des Windows-Zertifikatspeichers wurde behoben.
+
+Versionsnummer: 8.4.0  
+Veröffentlichung: 31. Juli 2020  
+
+### <a name="support-for-jdk-14"></a>Unterstützung für JDK 14
+
+Der Microsoft JDBC-Treiber 8.4 für SQL Server ist jetzt zusätzlich zum JDK 11.0 (Java Development Kit) und 1.8 mit der JDK-Version 14.0 kompatibel.
+
+### <a name="added-support-for-authentication-to-azure-key-vault-using-managed-identity"></a>Die Authentifizierung bei Azure Key Vault mit einer verwalteten Identität wird jetzt unterstützt.
+
+| Zusätzlicher Authentifizierungstyp | Details |
+| :---------- | :------ |
+| Der Microsoft JDBC-Treiber 8.4 für SQL Server unterstützt jetzt die Authentifizierung bei Azure Key Vault mit einer verwalteten Identität. | Weitere Informationen finden Sie unter [Verwenden von Always Encrypted mit dem JDBC-Treiber](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="extended-support-for-bulk-copy-for-azure-data-warehouse"></a>Erweiterte Unterstützung für das Massenkopieren für Azure Data Warehouse
+
+| Änderungen am Massenkopiervorgang für Azure Data Warehouse | Details |
+| :------------------- | :------ |
+| Mit dem Microsoft JDBC-Treiber 8.4 wird die neue Verbindungseigenschaft `sendTemporalDataTypesAsStringForBulkCopy` hinzugefügt. Diese boolesche Eigenschaft ist standardmäßig auf TRUE festgelegt. | Weitere Informationen finden Sie unter [Verwenden von Massenkopieren mit dem JDBC-Treiber](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="added-support-for-azure-sql-dns-caching"></a>Die Azure SQL-DNS-Zwischenspeicherung wird jetzt unterstützt.
+
+| DNS-Zwischenspeicherung | Details |
+| :------------------- | :------ |
+| Der Microsoft JDBC-Treiber 8.4 für SQL Server unterstützt jetzt die DNS-Zwischenspeicherung für Azure SQL-Server. | &nbsp; |
+| &nbsp; | &nbsp; |
+
+### <a name="added-backwards-compatibility-for-streaming-lob-objects"></a>Das Streaming von LOB-Objekten ist jetzt abwärtskompatibel.
+
+| LOB-Streaming | Details |
+| :------------------- | :------ |
+| Dem Microsoft JDBC-Treiber 8.4 für SQL Server wurde die neue Verbindungseigenschaft `delayLoadingLobs` hinzugefügt. | Wenn `delayLoadingLobs` auf FALSE festgelegt wird, werden keine vom ResultSet abgerufenen LOB-Objekte gestreamt. Dies bedeutet, dass das gesamte LOB-Objekt auf einmal vom Treiber in den Arbeitsspeicher geladen wird, ähnlich wie der Treiber vor Version 6.4 funktioniert hat. |
+| &nbsp; | &nbsp; |
+
+### <a name="added-support-for-client-certificate-authentication-for-loopback-scenarios"></a>Die Clientzertifikatauthentifizierung für Loopbackszenarios wird jetzt unterstützt.
+
+| Clientzertifikatsauthentifizierung | Details |
+| :------------------- | :------ |
+| Mit dem Microsoft JDBC-Treiber 8.4 für SQL Server wurde eine neue Authentifizierungsmethode, die so genannte Clientzertifikatauthentifizierung für Loopbackszenarios, eingeführt. | Weitere Informationen finden Sie unter [Clientzertifikatauthentifizierung für Loopbackszenarios](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md). |
+
+## <a name="previous-releases"></a>Vorgängerversionen
 
 ## <a name="82"></a><a id="82"></a> 8.2
 
@@ -41,6 +115,23 @@ Treiber in einer tar.gz-Datei: [Chinesisch (vereinfacht)](https://go.microsoft.c
 | Vollständig konform mit JDBC-API-Spezifikation 4.2. | Die JAR-Dateien im 8.2-Paket sind gemäß Java-Versionskompatibilität benannt.<br/><br/>Beispielsweise sollte die Datei „mssql-jdbc-8.2.2.jre11.jar“ aus dem 8.2-Paket mit Java 11 verwendet werden. |
 | Kompatibel mit dem Java Development Kit (JDK), Version 13.0, 11.0 und 1.8 | Der Microsoft JDBC-Treiber 8.2 für SQL Server ist jetzt zusätzlich zu JDK 11.0 und 1.8 mit der JDK-Version 13.0 (Java Development Kit) kompatibel. |
 | &nbsp; | &nbsp; |
+
+### <a name="releases"></a>Releases
+
+Versionsnummer: 8.2.2  
+Veröffentlichung: 24. März 2020  
+Behobene Probleme:  
+
+- Es wurde eine Option zum Konfigurieren der Liste vertrauenswürdiger Azure Key Vault-Endpunkte hinzugefügt.
+
+Versionsnummer: 8.2.1  
+Veröffentlichung: 26. Februar 2020  
+Behobene Probleme:  
+
+- Ein potenzielles Problem von `NullPointerException` wurde behoben, das beim Abrufen von Daten als `java.time.LocalTime`- oder `java.time.LocalDate`-Typ mit `SQLServerResultSet.getObject()` auftrat.
+
+Versionsnummer: 8.2.0  
+Veröffentlichung: 31. Januar 2020  
 
 ### <a name="support-for-jdk-13"></a>Unterstützung für JDK 13
 
@@ -79,8 +170,6 @@ Der Microsoft JDBC-Treiber 8.2 für SQL Server ist jetzt zusätzlich zu JDK 11
 | Verwendung von Always Encrypted mit Secure Enclaves mit Java 8 | Benutzer müssen den BouncyCastle-Anbieter als Abhängigkeit abgeben oder einen Sicherheitsanbieter zuweisen oder laden, der den RSASSA-PSS-Signaturalgorithmus unterstützt. |
 | &nbsp; | &nbsp; |
 
-## <a name="previous-releases"></a>Vorgängerversionen
-
 ## <a name="a-id74-741"></a><a id="74"> 7.4.1
 
 **[![Download](../../ssms/media/download-icon.png) Herunterladen des Microsoft JDBC-Treibers 7.4.1 für SQL Server (selbstextrahierende EXE-Datei)](https://go.microsoft.com/fwlink/?linkid=2122712)**  
@@ -101,6 +190,17 @@ Treiber in einer tar.gz-Datei: [Chinesisch (vereinfacht)](https://go.microsoft.c
 | Vollständig konform mit JDBC-API-Spezifikation 4.2. | Die JAR-Dateien im 7.4-Paket sind gemäß Java-Versionskompatibilität benannt.<br/><br/>Beispielsweise muss die Datei „mssql-jdbc-7.4.1.jre11.jar“ aus dem 7.4-Paket mit Java 11 verwendet werden. |
 | Kompatibel mit dem Java Development Kit (JDK), Version 12.0, 11.0 und 1.8. | Der Microsoft JDBC-Treiber 7.4 für SQL Server ist jetzt zusätzlich zu JDK 11.0 und 1.8 mit der JDK-Version 12.0 (Java Development Kit) kompatibel. |
 | &nbsp; | &nbsp; |
+
+### <a name="releases"></a>Releases
+
+Versionsnummer: 7.4.1  
+Veröffentlichung: 2. August 2019  
+Behobene Probleme:  
+
+- Neue `hashCode()`- und `equals()`-API-Implementierungen von `SQLServerDataTable` und `SQLServerDataColumn` wurden rückgängig gemacht, weil die Abwärtskompatibilität durch die API-Änderung beeinträchtigt wurde.
+
+Versionsnummer: 7.4.0  
+Veröffentlichung: 31. Juli 2019  
 
 ### <a name="support-for-jdk-12"></a>Unterstützung für JDK 12
 
@@ -160,18 +260,28 @@ Treiber in einer tar.gz-Datei: [Chinesisch (vereinfacht)](https://go.microsoft.c
 | Kompatibel mit Java Development Kit (JDK), Version 11.0, zusätzlich zu JDK 1.8. | Der Microsoft JDBC-Treiber 7.2 für SQL Server ist jetzt mit Java Development Kit (JDK) Version 11.0 zusätzlich zu JDK 1.8 kompatibel. |
 | &nbsp; | &nbsp; |
 
-> [!NOTE]
-> In der am 31. Januar 2019 veröffentlichten Treiberversion JDBC 7.2 Release To Web (RTW) wurde ein Problem beim Analysieren von SQL-Anweisungen gefunden. Die Änderung wurde zurückgesetzt, und am 11. Februar 2019 wurden neue JAR-Dateien (Version 7.2.1) veröffentlicht.
->
-> Es wurde eine weitere Aktualisierung am Treiber vorgenommen, um Probleme mit Aktivitäts-IDs (ActivityIDs) zu beheben, die nicht ordnungsgemäß bereinigt wurden. Die neuen JAR-Dateien (Version 7.2.2) wurden am 16. April 2019 veröffentlicht.
->
-> Es wird empfohlen, Ihre Projekte zur Verwendung der JAR-Dateien der Version 7.2.2 zu aktualisieren. Weitere Informationen finden Sie in den Versionshinweisen unter [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) und [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
+### <a name="releases"></a>Releases
 
-### <a name="active-directory-_managed-service-identity_-msi-authentication"></a>Authentifizierung mit einer _verwalteten Dienstidentität_ (Managed Service Identity, MSI) von Active Directory
+Versionsnummer: 7.2.2  
+Veröffentlichung: 16. April 2019  
+Behobene Probleme:  
+
+- Probleme mit nicht ordnungsgemäß bereinigten Aktivitäts-IDs wurden behoben.
+
+Versionsnummer: 7.2.1  
+Veröffentlichung: 11. Februar 2019  
+Behobene Probleme:  
+
+- Fehler beim Analysieren bestimmter parametrisierter Abfragen wurden behoben.
+
+Versionsnummer: 7.2.0  
+Veröffentlichung: 31. Januar 2019  
+
+### <a name="active-directory-_managed-identity_-msi-authentication"></a>Active Directory-Authentifizierung mit einer _verwalteten Identität_ (MSI)
 
 | MSI-Änderung | Details |
 | :--------- | :------ |
-| Unterstützt den Authentifizierungsmodus für verwaltete Active Directory-Dienstidentitäten (MSI-Authentifizierungsmodus). | Dieser Authentifizierungsmodus gilt für Azure-Ressourcen, bei denen die Unterstützung der Identitätsfunktion aktiviert ist.<br/><br/>Beide Typen von verwalteten Systemidentitäten (Managed System Identities, MSI) werden vom Treiber unterstützt, um **Zugriffstoken** (accessToken) zum Herstellen sicherer Verbindungen abzurufen. |
+| Unterstützt den Active Directory-Authentifizierungsmodus mit einer verwalteten Identität (MSI). | Dieser Authentifizierungsmodus gilt für Azure-Ressourcen, bei denen die Unterstützung der Identitätsfunktion aktiviert ist.<br/><br/>Beide Typen von verwalteten Identitäten (MSI) werden vom Treiber unterstützt, um **Zugriffstoken** (accessToken) zum Herstellen sicherer Verbindungen abzurufen. |
 | Weitere Details und eine Beispielanwendung zum Verwenden dieses Authentifizierungsmodus. | Informationen hierzu finden Sie unter [Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung](connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
@@ -363,6 +473,23 @@ Treiber in einer selbstextrahierenden Datei: [Chinesisch (vereinfacht)](https://
 Treiber in einer tar.gz-Datei: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2122615&clcid=0x40a)  
 
 Microsoft JDBC-Treiber 6.2 für SQL Server ist mit den JDBC-Spezifikationen 4.1 und 4.2 vollständig konform. Die JAR-Dateien im 6.2-Paket sind gemäß der Java-Versionskompatibilität benannt. Beispielsweise sollte die Datei „mssql-jdbc-6.2.2.jre8.jar“ aus dem 6.2-Paket mit Java 8 verwendet werden.
+
+### <a name="releases"></a>Releases
+
+Versionsnummer: 6.2.2  
+Veröffentlichung: 3. Oktober 2017  
+Behobene Probleme:  
+
+- Die ADAL4J-Abhängigkeit wurde auf Version 1.2.0 und die Azure Key Vault-Abhängigkeit auf Version 1.0.0 aktualisiert.
+
+Versionsnummer: 6.2.1  
+Veröffentlichung: 14. Juli 2017  
+Behobene Probleme:  
+
+- Ein Problem bei der Ausführung von Abfragen ohne Parameter unter Verwendung von `preparedStatement` wurde behoben.
+
+Versionsnummer: 6.2.0  
+Veröffentlichung: 30. Juni 2017  
 
 > [!NOTE]  
 > In der am 29. Juni 2017 veröffentlichten Treiberversion JDBC 6.2 RTW wurde ein Problem bei der Verbesserung der Zwischenspeicherung von Metadaten gefunden. Die Verbesserung wurde zurückgesetzt, und am 17. Juli 2017 wurden neue JAR-Dateien (Version 6.2.1) veröffentlicht.

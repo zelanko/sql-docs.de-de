@@ -1,7 +1,7 @@
 ---
 title: Installation von Microsoft ODBC Driver for SQL Server (macOS)
 description: Erfahren Sie, wie Microsoft ODBC Driver for SQL Server auf macOS-Clients installieren, um Datenbankkonnektivität zu ermöglichen.
-ms.date: 03/05/2020
+ms.date: 09/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9daa17d8619fa05ac9abf52a768740eb3e223c77
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 24ddbbd8adaa646005c8e5ea3c945cb3ab164d48
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488518"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569820"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>Installation von Microsoft ODBC Driver for SQL Server (macOS)
 
@@ -70,7 +70,14 @@ Der Treiber muss die Ressourcendatei laden, um zu funktionieren. Diese Datei hei
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
-Wenn Sie mit dem ODBC-Treiber keine Verbindung mit SQL Server herstellen können, finden Sie im Artikel zu bekannten Problemen weitere Informationen zur [Problembehandlung bei Verbindungsproblemen](known-issues-in-this-version-of-the-driver.md#connectivity).
+Bei einigen Benutzern tritt ein Problem mit einer Fehlermeldung wie `"[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 17 for SQL Server' : file not found (0) (SQLDriverConnect)"` auf, wenn sie versuchen, eine Verbindung herzustellen, nachdem der ODBC-Treiber installiert wurde. In diesem Fall ist es möglich, dass unixODBC nicht ordnungsgemäß für die Ermittlung registrierter Treiber konfiguriert ist. In diesen Fällen lässt sich das Problem durch das Erstellen einiger symbolischer Verknüpfungen lösen.
+
+```bash
+sudo ln -s /usr/local/etc/odbcinst.ini /etc/odbcinst.ini
+sudo ln -s /usr/local/etc/odbc.ini /etc/odbc.ini
+```
+
+Wenn Sie aus anderen Gründen mit dem ODBC-Treiber keine Verbindung mit SQL Server herstellen können, finden Sie im Artikel zu bekannten Problemen unter [Beheben von Verbindungsproblemen](known-issues-in-this-version-of-the-driver.md#connectivity) weitere Informationen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

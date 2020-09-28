@@ -1,6 +1,6 @@
 ---
 title: API für das Massenkopieren für Batcheinfügevorgänge in JDBC
-description: Der Microsoft JDBC-Treiber für SQL Server unterstützt die Verwendung der API für das Massenkopieren für Batcheinfügevorgänge in Azure Data Warehouse.
+description: Der Microsoft JDBC-Treiber für SQL Server unterstützt die Verwendung der Massenkopierfunktion für Batcheinfügevorgänge in Azure Data Warehouse. So können Daten schneller in die Datenbank geladen werden.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633990"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943019"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Verwenden der Massenkopierungs-API für den Batcheinfügungsvorgang
 
@@ -71,7 +71,7 @@ Wenn die Abfrage aufgrund eines nicht SQL Server-bezogenen Fehlers nicht ausgef�
 
 ## <a name="example"></a>Beispiel
 
-Das nachfolgende Codebeispiel veranschaulicht einen Anwendungsfall für einen Batcheinfügevorgang in einem Azure Data Warehouse mit tausend Zeilen für beide Szenarien (regulär im Vergleich zur API für das Massenkopieren).
+Das nachfolgende Codebeispiel veranschaulicht einen Anwendungsfall für einen Batcheinfügevorgang in Azure Synapse Analytics (SQL DW) mit tausend Zeilen für beide Szenarios (regulär im Vergleich zur API für das Massenkopieren).
 
 ```java
     public static void main(String[] args) throws Exception

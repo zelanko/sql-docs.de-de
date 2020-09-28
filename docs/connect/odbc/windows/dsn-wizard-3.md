@@ -1,4 +1,5 @@
 ---
+description: Bildschirm 3 des Datenquellen-Assistenten (ODBC Driver for SQL Server)
 title: Anzeige 3 des Datenquellen-Assistenten (ODBC-Treiber für SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1775d89587522e1ad1036d2f0c514c9439b9403b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48b65f57ac4a47a372ff82db4bc92f5ee631ea36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462195"
 ---
 # <a name="data-source-wizard-screen-3"></a>Datenquellen-Assistent (Bildschirm 3)
 
 Geben Sie die Standarddatenbank, verschiedene ANSI-Optionen, die vom Treiber verwendet werden sollen, und den Namen eines Spiegelservers an.
 
-## <a name="options"></a>Tastatur
+## <a name="options"></a>Optionen
 
 ### <a name="change-the-default-database-to"></a>Standarddatenbank ändern in
 
@@ -81,7 +82,7 @@ Aktiviert automatische Ent- und Verschlüsselung von Datenübertragungen zwische
 
 Verwenden Sie die alte SET FMTONLY-Methode zur Metadatenermittlung, wenn Sie eine Verbindung mit SQL Server 2012 oder höher herstellen. Aktivieren Sie diese Option nur, wenn die Verwendung von Abfragen nicht von [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) unterstützt wird, z. B. wenn temporäre Tabellen enthalten sind. 
 
-### <a name="next"></a>Next (Weiter)
+### <a name="next"></a>Nächste
 
 Wechselt zum nächsten Bildschirm des Assistenten
 

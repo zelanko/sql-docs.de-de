@@ -2,7 +2,7 @@
 title: Treiberfähiges Verbindungspooling im ODBC Driver
 description: Erfahren Sie mehr über die Verbesserungen in Bezug auf das treiberfähige Verbindungspooling im Microsoft ODBC Driver for SQL Server unter Windows.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b1d8700e6868781480771c4a62f2a5fc6c92ddfc
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922084"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288102"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Treiberfähiges Verbindungspooling im ODBC-Treiber für SQL Server.
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -43,7 +43,7 @@ Wenn eine der folgenden Verbindungsattribut-IDs oder eines der Schlüsselwörter
   
 -   Gibt es einen Unterschied in einem der folgenden Verbindungsschlüsselwörter zwischen Ihrer Verbindungszeichenfolge und einer gepoolten Verbindungszeichenfolge, wird keine gepoolte Verbindung verwendet.  
   
-    |Schlüsselwort|ODBC-Treiber 13|ODBC-Treiber 11|
+    |Schlüsselwort|ODBC-Treiber 17/13|ODBC-Treiber 11|
     |-|-|-|
     |`Address`|Ja|Ja|
     |`AnsiNPW`|Ja|Ja|
@@ -68,7 +68,7 @@ Wenn eine der folgenden Verbindungsattribut-IDs oder eines der Schlüsselwörter
     
 - Gibt es einen Unterschied in einem der folgenden Verbindungsattribute zwischen Ihrer Verbindungszeichenfolge und einer gepoolten Verbindungszeichenfolge, wird keine gepoolte Verbindung verwendet.  
   
-    |attribute|ODBC-Treiber 13|ODBC-Treiber 11|  
+    |attribute|ODBC-Treiber 17/13|ODBC-Treiber 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Ja|Ja|
     |`SQL_ATTR_PACKET_SIZE`|Ja|Ja|
@@ -94,7 +94,7 @@ Wenn eine der folgenden Verbindungsattribut-IDs oder eines der Schlüsselwörter
   
      Diese Schlüsselwörter werden nicht berücksichtigt, wenn der Treiber-Manager versucht, eine Übereinstimmung zwischen Ihrer Verbindung und einer Verbindung im Pool zu erzielen. (Auch wenn Sie einen dieser Parameter ändern, kann eine vorhandene Verbindung wiederverwendet werden. Der Treiber setzt die Optionen nach Bedarf zurück.) Diese Attribute können clientseitig ohne einen zusätzliche Netzwerkaufruf zurückgesetzt werden.  
   
-    |Schlüsselwort|ODBC-Treiber 13|ODBC-Treiber 11|  
+    |Schlüsselwort|ODBC-Treiber 17/13|ODBC-Treiber 11|  
     |-|-|-|  
     |`AutoTranslate`|Ja|Ja|
     |`Description`|Ja|Ja|
@@ -108,7 +108,7 @@ Wenn eine der folgenden Verbindungsattribut-IDs oder eines der Schlüsselwörter
   
      Wenn Sie eine der folgenden Verbindungsattribute ändern, kann eine vorhandene Verbindung wiederverwendet werden.  Der Treiber wird je nach Bedarf den Wert zurücksetzen. Der Treiber kann diese Attribute clientseitig ohne einen zusätzliche Netzwerkaufruf zurücksetzen  
   
-    |attribute|ODBC-Treiber 13|ODBC-Treiber 11|  
+    |attribute|ODBC-Treiber 17/13|ODBC-Treiber 11|  
     |-|-|-|  
     |Alle Anweisungsattribute|Ja|Ja|
     |`SQL_ATTR_AUTOCOMMIT`|Ja|Ja|

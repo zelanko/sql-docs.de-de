@@ -2,7 +2,7 @@
 title: Supportmatrix für den Microsoft JDBC-Treiber für SQL Server
 description: Auf dieser Seite finden Sie die Supportmatrix und die Supportlebenszyklus-Richtlinie für den Microsoft JDBC-Treiber für SQL Server.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2cd2c88cc64f068cb2926fa17302063bd7f15193
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f8fc0f34c860c9919d56d3d2c4645e9fea8bb428
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487816"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042400"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Supportmatrix für den Microsoft JDBC-Treiber für SQL Server
 
@@ -34,9 +34,10 @@ Die folgenden Microsoft JDBC-Treiber werden bis zum angegebenen Supportende unte
   
 |Treibername|Version des Treiberpakets|Zutreffende JAR-Datei(en)|Ende des grundlegenden Supports|
 |-|-|-|-|  
-|Microsoft JDBC-Treiber 8.2 für SQL Server|8,2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|24. März 2025|
-|Microsoft JDBC-Treiber 7.4 für SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2\. August 2024|
-|Microsoft JDBC-Treiber 7.2 für SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16. April 2024|
+|Microsoft JDBC-Treiber 8.4 für SQL Server|8,4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|31. Juli 2025|
+|Microsoft JDBC-Treiber 8.2 für SQL Server|8,2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|31. Januar 2025|
+|Microsoft JDBC-Treiber 7.4 für SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|31. Juli 2024|
+|Microsoft JDBC-Treiber 7.2 für SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|31. Januar 2024|
 |Microsoft JDBC-Treiber 7.0 für SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31. Juli 2023|
 |Microsoft JDBC-Treiber 6.4 für SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27. Februar 2023|
 |Microsoft JDBC-Treiber 6.2 für SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30. Juni 2022|
@@ -58,40 +59,39 @@ Die folgenden Microsoft JDBC-Treiber werden bis zum angegebenen Supportende unte
   
 ## <a name="sql-version-compatibility"></a>SQL-Versionskompatibilität  
   
-|Treiberversion|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL-Datenbank|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
-|-|-|-|-|-|-|-|-|-|-|-|
-|8,2|N|N|J|J|J|J|J|J|J|
-|7.4|N|N|J|J|J|J|J|J|J|
-|7.2|N|J|J|J|J|J|J|J|N|
-|7.0|N|J|J|J|J|J|J|J|N|
-|6.4|N|J|J|J|J|J|J|J|N|
-|6.2|J|J|J|J|J|J|J|J|N|
-|6.1|J|J|J|J|J|J|J|N|N|
-|6.0|J|J|J|J|J|J|J|N|N|
-|4,2|J|J|J|J|J|J|J|N|N|
-|4,1|J|J|J|J|J|J|J|N|N|
-|4,0|J|J|J|J|J|J|J|N|N|
-|3.0|J|J|J<sup>1</sup>|J<sup>2</sup>|N|J<sup>5</sup>|N|N|N|
-|2.0|J<sup>3</sup>|J<sup>3</sup>|N|N|N|N|N|N|N|
-|1.2|J<sup>3</sup>|N|N|N|N|N|N|N|N|
-|1.1|N|N|N|N|N|N|N|N|N|
-|1.0|N|N|N|N|N|N|N|N|N|
-|2000|N|N|N|N|N|N|N|N|N|
+|Datenbankversion&nbsp;&#8594;<br />&#8595; Treiberversion|Azure SQL-Datenbank|Azure Synapse Analytics|Verwaltete Azure SQL-Instanz|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
+|---|---|---|---|---|---|---|---|---|---|---|---|
+|8,4|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |   |
+|8,2|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |   |
+|7.4|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |   |
+|7.2|Ja|Ja|Ja|   |Ja|Ja|Ja|Ja|Ja|Ja|   |
+|7.0|Ja|Ja|Ja|   |Ja|Ja|Ja|Ja|Ja|Ja|   |
+|6.4|Ja|Ja|Ja|   |Ja|Ja|Ja|Ja|Ja|Ja|   |
+|6.2|Ja|Ja|   |   |Ja|Ja|Ja|Ja|Ja|Ja|Ja|
+|6.1|Ja|   |   |   |   |Ja|Ja|Ja|Ja|Ja|Ja|
+|6.0|Ja|   |   |   |   |Ja|Ja|Ja|Ja|Ja|Ja|
+|4,2|Ja|   |   |   |   |Ja|Ja|Ja|Ja|Ja|Ja|
+|4,1|Ja|   |   |   |   |Ja|Ja|Ja|Ja|Ja|Ja|
+|4.0|Ja|   |   |   |   |Ja|Ja|Ja|Ja|Ja|Ja|
+|3.0|Ja<sup>2</sup>|   |   |   |   |   |Ja<sup>5</sup>|Ja<sup>1</sup>|   |Ja|Ja|
+|2.0|   |   |   |   |   |   |   |   |   |Ja<sup>3</sup>|Ja<sup>3</sup>|
+|1.2|   |   |   |   |   |   |   |   |   |   |Ja<sup>3</sup>|
+
+ <sup>1</sup> Mit Version 3.0 des JDBC-Treibers für Microsoft SQL Server kann als abwärtskompatibler Client eine Verbindung mit SQL Server 2012 hergestellt werden.  
   
- <sup>1</sup>Die Version 3.0 des Treibers Microsoft SQL Server JDBC Driver kann sich als kompatibler Client mit SQL Server 2012 verbinden.  
+ <sup>2</sup> Die Unterstützung für Azure SQL-Datenbank wurde im Treiber der Version 3.0 als Hotfix eingeführt. Es wird empfohlen, dass Azure SQL-Datenbank-Kunden die neuesten Treiber verwenden.  
   
- <sup>2</sup>Die Unterstützung für Azure SQL-Datenbank wurde in Version 3.0 als Hotfix eingeführt. Es wird empfohlen, dass Azure SQL-Datenbank-Kunden die neuesten Treiber verwenden.  
+ <sup>3</sup> Mit Version 2.0 des JDBC-Treibers für Microsoft SQL Server und der Version 1.2 des JDBC-Treibers für Microsoft SQL Server 2005 kann als abwärtskompatibler Client eine Verbindung mit SQL Server 2008 hergestellt werden. Sind abwärtskompatible Konvertierungen erlaubt, kann die Anwendung Abfragen ausführen und Aktualisierungen auf die neuen Datentypen von SQL Server 2008 durchführen, wie z. B. „time“, „date“, „datetime2“, „datetimeoffset“ und FILESTREAM. Weitere Informationen zur Verwendung dieser neuen Datentypen mit dem JDBC-Treiber finden Sie unter  [Verwenden der Date/Time-Datentypen in SQL Server 2008 mithilfe eines JDBC-Treibers](https://go.microsoft.com/fwlink/?LinkId=145198) und unter  [Verwenden von Filestream in SQL Server 2008 mithilfe eines JDBC-Treibers](https://go.microsoft.com/fwlink/?LinkId=145199). Weitere Informationen zur Abwärtskompatibilität dieser neuen Datentypen finden Sie in den Themen  [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkId=145211)und  [FILESTREAM-Unterstützung](https://go.microsoft.com/fwlink/?LinkId=145212) in der SQL Server-Onlinedokumentation  
   
- <sup>3</sup>Die Version 2.0 des Treibers Microsoft SQL Server JDBC Driver und die Version 2.1 des Treibers Microsoft SQL Server 2005 JDBC kann als Client eine abwärtskompatible Verbindung mit SQL Server 2008 herstellen. Sind abwärtskompatible Konvertierungen erlaubt, kann die Anwendung Abfragen ausführen und Aktualisierungen auf die neuen Datentypen von SQL Server 2008 durchführen, wie z. B. „time“, „date“, „datetime2“, „datetimeoffset“ und FILESTREAM. Weitere Informationen zur Verwendung dieser neuen Datentypen mit dem JDBC-Treiber finden Sie unter  [Verwenden der Date/Time-Datentypen in SQL Server 2008 mithilfe eines JDBC-Treibers](https://go.microsoft.com/fwlink/?LinkId=145198) und unter  [Verwenden von Filestream in SQL Server 2008 mithilfe eines JDBC-Treibers](https://go.microsoft.com/fwlink/?LinkId=145199). Weitere Informationen zur Abwärtskompatibilität dieser neuen Datentypen finden Sie in den Themen  [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkId=145211)und  [FILESTREAM-Unterstützung](https://go.microsoft.com/fwlink/?LinkId=145212) in der SQL Server-Onlinedokumentation  
+ <sup>4</sup> Die Unterstützung von Verbindungen zwischen dem Microsoft JDBC-Treiber und Parallel Data Warehouse wurde erstmals im Microsoft JDBC-Treiber 4.0 für SQL Server und in Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Update 3 eingeführt.  
   
- <sup>4</sup>Die Unterstützung von Verbindungen zwischen dem Microsoft JDBC-Treiber und Parallel Data Warehouse wurde erstmals in Microsoft JDBC-Treiber 4.0 für SQL Server und in Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Update 3 bereitgestellt.  
-  
- <sup>5</sup>Version 3.0 des JDBC-Treibers für Microsoft SQL Server kann sich als kompatibler Client mit SQL Server 2014 verbinden.  
+ <sup>5</sup> Mit Version 3.0 des JDBC-Treibers für Microsoft SQL Server kann als abwärtskompatibler Client eine Verbindung mit SQL Server 2014 hergestellt werden.  
   
 ## <a name="java-and-jdbc-specification-support"></a>Unterstützung der Java- und JDBC-Spezifikation
   
 |Version des JDCB-Treibers|JRE-Version|JDBC-API-Version|
 |-|-|-|
+|[8,4](release-notes-for-the-jdbc-driver.md#84)|1.8, 11, 14|4.2, 4.3 (teilweise)|
 |[8.2](release-notes-for-the-jdbc-driver.md#82)|1.8, 11, 13|4.2, 4.3 (teilweise)|
 |[7.4](release-notes-for-the-jdbc-driver.md#74)|1.8, 11, 12|4.2, 4.3 (teilweise)|
 |[7.2](release-notes-for-the-jdbc-driver.md#72)|1.8, 11|4.2, 4.3 (teilweise)|
@@ -112,7 +112,7 @@ Die folgenden Microsoft JDBC-Treiber werden bis zum angegebenen Supportende unte
 
 ## <a name="supported-operating-systems"></a>Unterstützte Betriebssysteme
 
-Der JDBC-Treiber ist für die Verwendung mit allen Betriebssystemen konzipiert, die die Java Virtual Machine (JVM) unterstützen. Zu den üblichsten Plattformen zählen u. a. Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX und macOS.  
+Der JDBC-Treiber ist für die Verwendung mit allen Betriebssystemen konzipiert, die die Java Virtual Machine (JVM) unterstützen. Zu den häufig verwendeten Plattformen zählen u. a. Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Linux, Unix, AIX und macOS.  
 
 Das JDBC-Produktteam testet unseren Treiber unter Windows, Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux und macOS.
 

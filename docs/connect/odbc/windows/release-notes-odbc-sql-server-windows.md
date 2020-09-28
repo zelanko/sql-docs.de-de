@@ -2,7 +2,7 @@
 title: Versionshinweise für Microsoft ODBC Driver for SQL Server für Windows
 description: In diesem Artikel mit Versionshinweisen werden die Änderungen in jedem Release von Microsoft ODBC Driver for SQL Server unter Windows beschrieben.
 ms.custom: ''
-ms.date: 03/10/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728459"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898819"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Versionshinweise für Microsoft ODBC Driver for SQL Server für Windows
 
@@ -43,13 +43,34 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="176"></a>17.6
+
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2137027)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2137028)  
+
+Versionsnummer: 17.6.1.1  
+Veröffentlichung: 31. Juli 2020
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40a)
+
+| Neues Feature | Details |
+| :------- | :------ |
+| Zwischenspeichern von Metadaten für vorbereitete Anweisungen | Weitere Informationen finden Sie unter [Verwenden von Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| SQL_COPT_SS_AUTOBEGINTXN-Verbindungsattribut, das steuert, ob die automatische BEGIN TRANSACTION-Anweisung nach ROLLBACK oder COMMIT auftritt | Siehe [Schlüsselwörter und Attribute von DSN- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md). |
+| Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>Vorgängerversionen
+
 ## <a name="1752"></a>17.5.2
 
 ![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120137)  
 ![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120140)  
 
 Versionsnummer: 17.5.2.1  
-Veröffentlichung: 6. März 2019
+Veröffentlichung: 6. März 2020
 
 Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
 Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)  
@@ -64,8 +85,6 @@ Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
 
-## <a name="previous-releases"></a>Vorgängerversionen
-
 Laden Sie frühere Versionen des ODBC-Treibers herunter, indem Sie auf die Downloadlinks in den folgenden Abschnitten klicken:
 
 ## <a name="175"></a>17,5
@@ -74,7 +93,7 @@ Laden Sie frühere Versionen des ODBC-Treibers herunter, indem Sie auf die Downl
 ![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2120353)  
 
 Versionsnummer: 17.5.1.1  
-Veröffentlichung: 31. Januar 2019
+Veröffentlichung: 31. Januar 2020
 
 Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
 Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40a)  
@@ -147,7 +166,7 @@ Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink
 
 | Neues Feature | Details |
 | :------------ | :------ |
-| Authentifizierungsmodus für (systemweite und benutzerseitig zugewiesene) verwaltete Azure Active Directory-Dienstidentitäten | Siehe [Using Azure Active Directory with the ODBC Driver (Verwenden von Azure Active Directory mit dem ODBC-Treiber)](../using-azure-active-directory.md) |
+| Modus für die Azure Active Directory-Authentifizierung mit einer (systemweit und benutzerseitig zugewiesenen) verwalteten Identität | Siehe [Using Azure Active Directory with the ODBC Driver (Verwenden von Azure Active Directory mit dem ODBC-Treiber)](../using-azure-active-directory.md) |
 | Übermitteln von Eingabeparametern für Always Encrypted-Spalten | Siehe [Limitations of the ODBC driver when using Always Encrypted (Einschränkungen des ODBC-Treibers bei Verwendung von Always Encrypted)](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted) |
 | Verteilte XA-Transaktionen | Siehe [Using XA Transactions (Verwenden von XA-Transaktionen)](../use-xa-with-dtc.md) |
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |

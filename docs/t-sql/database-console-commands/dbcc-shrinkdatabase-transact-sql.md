@@ -29,12 +29,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 48181379c0ad20f5e9d8dc1ac8a9dd304fbc5e81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57cab52a5edfde4e7469243d7d57ede2e22c0161
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479812"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076614"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -75,14 +75,14 @@ _target\_percent_
 Der gewünschte Prozentsatz an freiem Speicherplatz, der in der Datenbankdatei übrig bleiben soll, nachdem die Datenbank verkleinert wurde.  
   
 NOTRUNCATE  
-Hiermit werden zugewiesene Seiten vom Dateiende zu nicht zugewiesenen Seiten am Dateianfang verschoben. Mit dieser Aktion werden die Daten in der Datei komprimiert. Das Argument _target\_percent_ ist optional. Azure SQL Data Warehouse unterstützt diese Option nicht. 
+Hiermit werden zugewiesene Seiten vom Dateiende zu nicht zugewiesenen Seiten am Dateianfang verschoben. Mit dieser Aktion werden die Daten in der Datei komprimiert. Das Argument _target\_percent_ ist optional. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] unterstützt diese Option nicht. 
   
 Der freie Speicherplatz am Dateiende wird nicht an das Betriebssystem zurückgegeben, und die physische Größe der Datei bleibt unverändert. Daher scheint die Datenbank, bei Angabe von NOTRUNCATE nicht kleiner zu werden.  
   
 NOTRUNCATE gilt nur für Datendateien. NOTRUNCATE wirkt sich nicht auf die Protokolldatei aus.  
   
 TRUNCATEONLY  
-Hiermit wird der gesamte freie Speicherplatz am Ende der Datei für das Betriebssystem freigegeben. Seiten in der Datei werden nicht verschoben. Die Datendatei wird nur auf die zuletzt zugewiesene Erweiterung verkleinert. Das Argument _target\_percent_ wird ignoriert, wenn es mit TRUNCATEONLY angegeben wird. Azure SQL Data Warehouse unterstützt diese Option nicht.
+Hiermit wird der gesamte freie Speicherplatz am Ende der Datei für das Betriebssystem freigegeben. Seiten in der Datei werden nicht verschoben. Die Datendatei wird nur auf die zuletzt zugewiesene Erweiterung verkleinert. Das Argument _target\_percent_ wird ignoriert, wenn es mit TRUNCATEONLY angegeben wird. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] unterstützt diese Option nicht.
   
 TRUNCATEONLY wirkt sich auf die Protokolldatei aus. Um nur die Datendatei abzuschneiden, verwenden Sie DBCC SHRINKFILE.  
   

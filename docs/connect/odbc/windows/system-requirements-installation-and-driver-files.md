@@ -2,7 +2,7 @@
 title: Systemanforderungen, Installation und Treiberdateien
 description: Dieser Artikel beschreibt die Systemanforderungen für den Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 03/18/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2b56528a369d58238a545afc20b35787003b6b1
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2f0ce55639f5d6835c50744114a48d510d41c887
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484449"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930361"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Systemanforderungen, Installation und Treiberdateien
 
@@ -28,17 +28,18 @@ In diesem Artikel werden die ODBC-Treiber erläutert, die eine Verbindung mit SQ
 
 Die Kompatibilität gibt an, ob ein Treiber auf die Kompatibilität mit vorhandenen SQL-Versionen zum Zeitpunkt der Treiberfreigabe getestet wurde. In SQL Server-Versionen wird in der Regel versucht, die Abwärtskompatibilität mit vorhandenen Clienttreibern aufrechtzuerhalten. Neue Features in SQL Server-Versionen sind jedoch möglicherweise nicht für ältere Clienttreiber verfügbar.
 
-|Treiberversion|Azure SQL-Datenbank|Azure SQL DW|Verwaltete Azure SQL-Instanz|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
-|-|-|-|-|-|-|-|-|-|-|-|-|
-|17,5|J|J|J|J|J|J|J|J| | | |
-|17.4|J|J|J|J|J|J|J|J| | | |
-|17.3|J|J|J|J|J|J|J|J|J|J| |
-|17.2|J|J|J| |J|J|J|J|J|J| |
-|17.1|J|J|J| |J|J|J|J|J|J| |
-|17.0|J|J|J| |J|J|J|J|J|J| |
-|Version 13.1| | | | |J|J|J|J|J|J| |
-|13  | | | | | |J|J|J|J|J| |
-|11  | | | | | | |J|J|J|J|J|
+|Datenbankversion&nbsp;&#8594;<br />&#8595; Treiberversion|Azure SQL-Datenbank|Azure Synapse Analytics|Verwaltete Azure SQL-Instanz|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
+|----|---|---|---|---|---|---|---|---|---|---|---|
+|17.6|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |   |   |
+|17,5|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |   |   |
+|17.4|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |   |   |
+|17.3|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |
+|17.2|Ja|Ja|Ja|   |Ja|Ja|Ja|Ja|Ja|Ja|   |
+|17.1|Ja|Ja|Ja|   |Ja|Ja|Ja|Ja|Ja|Ja|   |
+|17.0|Ja|Ja|Ja|   |Ja|Ja|Ja|Ja|Ja|Ja|   |
+|Version 13.1|   |   |   |   |Ja|Ja|Ja|Ja|Ja|Ja|   |
+|13  |   |   |   |   |   |Ja|Ja|Ja|Ja|Ja|   |
+|11  |   |   |   |   |   |   |Ja|Ja|Ja|Ja|Ja|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ### <a name="connection-string-details"></a>Details zu Verbindungszeichenfolgen
@@ -49,17 +50,18 @@ Der in einer Verbindungszeichenfolge angegebene Treibername lautet `ODBC Driver 
 
 Die folgende Matrix zeigt die Unterstützung der Treiberversion für Windows-Betriebssystemversionen:
 
-|Treiberversion|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 10|Windows 8.1|Windows 7|Windows Vista SP2|
-|-|-|-|-|-|-|-|-|-|-|
-|17,5|J|J|J|J| |J|J| | |
-|17.4|J|J|J|J|J|J|J|J| |
-|17.3|J|J|J|J|J|J|J|J| |
-|17.2| |J|J|J|J|J|J|J| |
-|17.1| |J|J|J|J|J|J|J| |
-|17.0| |J|J|J|J|J|J|J| |
-|Version 13.1| |J|J|J|J|J|J|J| |
-|13  | | | |J|J| |J|J| |
-|11  | | | |J|J| | |J|J|
+|Betriebssystem&nbsp;&#8594;<br />&#8595; Treiberversion|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 10|Windows 8.1|Windows 7|Windows Vista SP2|
+|----|---|---|---|---|---|---|---|---|---|
+|17.6|Ja|Ja|Ja|Ja|   |Ja|Ja|   |   |
+|17,5|Ja|Ja|Ja|Ja|   |Ja|Ja|   |   |
+|17.4|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |
+|17.3|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |
+|17.2|   |Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |
+|17.1|   |Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |
+|17.0|   |Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |
+|Version 13.1|   |Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |
+|13  |   |   |   |Ja|Ja|   |Ja|Ja|   |
+|11  |   |   |   |Ja|Ja|   |   |Ja|Ja|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="installing-microsoft-odbc-driver-for-sql-server"></a>Installieren des Microsoft ODBC Driver for SQL Server

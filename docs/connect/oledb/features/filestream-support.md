@@ -1,6 +1,6 @@
 ---
 title: FILESTREAM-Unterstützung | Microsoft-Dokumentation
-description: FILESTREAM-Unterstützung im OLE DB-Treiber für SQL Server
+description: SQL Server unterstützt die erweiterte FILESTREAM-Funktion, mit der Sie große binäre Werte entweder über SQL Server oder das Dateisystem speichern und abrufen können.
 ms.custom: ''
 ms.date: 09/13/2019
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.topic: reference
 helpviewer_keywords:
 - FILESTREAM [SQL Server], OLE DB Driver for SQL Server
 - OLE DB Driver for SQL Server [FILESTREAM support]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f79511daab45aa03af93a05092a7e858547f6953
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c197dadade12e189e2914d01a19975d9d03b7de4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244989"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861488"
 ---
 # <a name="filestream-support-in-ole-db-driver-for-sql-server"></a>FILESTREAM-Unterstützung im OLE DB-Treiber für SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -2,10 +2,9 @@
 title: Bewährte Methoden für den Abfragespeicher | Microsoft-Dokumentation
 description: Lernen Sie bewährte Methoden für die Verwendung des SQL Server-Abfragespeichers mit Ihrer Workload kennen, wie das Verwenden der neuesten Versionen von SQL Server Management Studio und Query Performance Insight.
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 09/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: carlrab
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 721cb6dca81681fec19d30a30ae0067bb4df1745
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970081"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042818"
 ---
 # <a name="best-practices-with-query-store"></a>Bewährte Methoden für den Abfragespeicher
 
@@ -421,7 +420,7 @@ Ausführungspläne verweisen auf Objekte mithilfe von dreiteiligen Namen wie `da
 
 Wenn Sie eine Datenbank umbenennen, wird das Erzwingen eines Plans fehlschlagen, wodurch bei allen nachfolgenden Abfrageausführungen eine Neukompilierung durchgeführt wird.
 
-## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> Verwenden von Ablaufverfolgungsflags für unternehmenskritische Server
+## <a name="using-query-store-in-mission-critical-servers"></a><a name="Recovery"></a> Verwenden von Abfragespeicher in unternehmenskritischen Servern
 
 Die globalen Ablaufverfolgungsflags 7745 und 7752 können verwendet werden, um die Verfügbarkeit von Datenbanken mithilfe des Abfragespeichers zu verbessern. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -432,7 +431,10 @@ Die globalen Ablaufverfolgungsflags 7745 und 7752 können verwendet werden, um d
 > Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird dieses Verhalten durch die Engine gesteuert, und das Ablaufverfolgungsflag 7752 hat keine Auswirkungen.
 
 > [!IMPORTANT]
-> Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verwenden, planen Sie baldmöglichst die Installation der Fixes zur Leistungsskalierbarkeit in [KB 4340759](https://support.microsoft.com/help/4340759) ein.
+> Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verwenden, planen Sie baldmöglichst die Installation der Verbesserungen zur Leistungsskalierbarkeit in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) ein. Ohne diese Verbesserungen kann es bei hohen Workloads der Datenbank zu Spinlock-Konflikten kommen und die Serverleistung beeinträchtigt werden. Insbesondere beim `QUERY_STORE_ASYNC_PERSIST`- oder `SPL_QUERY_STORE_STATS_COOKIE_CACHE`-Spinlock kann es zu heftigen Konflikten kommen. Nachdem diese Verbesserungen angewendet wurden, führt der Abfragespeicher nicht mehr zu Spinlock-Konflikten.
+
+> [!IMPORTANT]
+> Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] verwenden, planen Sie baldmöglichst die Installation der Verbesserung zur Leistungsskalierbarkeit in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 ein. Ohne diese Verbesserung kann bei hoher Ad-hoc-Workload der Datenbank der Abfragespeicher einen großen Teil des Speichers in Anspruch nehmen und die Serverleistung kann beeinträchtigt werden. Nachdem diese Verbesserung angewendet wurde, legt der Abfragespeicher interne Grenzwerte für die Menge an Arbeitsspeicher fest, die von seinen verschiedenen Komponenten verwendet werden kann. Zudem kann der Betriebsmodus automatisch in „schreibgeschützt“ geändert werden, bis genügend Arbeitsspeicher an den [!INCLUDE[ssde_md](../../includes/ssde_md.md)] zurückgegeben wurde. Beachten Sie, dass die internen Grenzwerte für den Arbeitsspeicher des Abfragespeichers nicht dokumentiert sind, da sie sich ändern können.  
 
 ## <a name="see-also"></a>Weitere Informationen
 

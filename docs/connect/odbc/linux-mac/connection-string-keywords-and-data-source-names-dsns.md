@@ -2,7 +2,7 @@
 title: Herstellen von Verbindungen über ODBC
 description: Erfahren Sie, wie Sie eine Verbindung mit einer Datenbank aus Linux oder macOS mithilfe des Microsoft ODBC Driver for SQL Server herstellen.
 ms.custom: ''
-ms.date: 05/11/2020
+ms.date: 09/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a17f9a69adae4bc785560ac3e06b8025a34089a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: f667fc06ffe7ced9241e8bfdd2a00caba3b8b2a5
+ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152047"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90009336"
 ---
 # <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 
@@ -66,6 +66,8 @@ Um eine Verbindung mit einer benannten Instanz auf einem statischen Port herzust
 Alternativ können Sie die DSN-Informationen auch einer Vorlagendatei hinzufügen und den folgenden Befehl ausführen, um sie `~/.odbc.ini` hinzuzufügen:
  - **odbcinst -i -s -f** _Vorlagendatei_  
 
+Eine umfassende Dokumentation zu INI-Dateien und `odbcinst` finden Sie in der [unixODBC-Dokumentation](http://www.unixodbc.org/odbcinst.html). Einträge in der für den ODBC Driver for SQL Server spezifischen Datei `odbc.ini` finden Sie unter den unter Linux und macOS unterstützten [Schlüsselwörtern und Attributen von DNS- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md).
+
 Sie können die Verbindung mit `isql` testen, um zu überprüfen, ob Ihr Treiber funktioniert, oder diesen Befehl verwenden:
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
@@ -87,7 +89,7 @@ Unabhängig von den Einstellungen für **Encrypt** und **TrustServerCertificate*
 Standardmäßig überprüfen verschlüsselte Verbindungen immer das Zertifikat des Servers. Wenn Sie jedoch eine Verbindung mit einem Server herstellen, der über ein selbstsigniertes Zertifikat verfügt, müssen Sie auch die Option `TrustServerCertificate` hinzufügen, um die Überprüfung des Zertifikats anhand der Liste der vertrauenswürdigen Zertifizierungsstellen zu umgehen:  
 
 ```
-Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
+Driver={ODBC Driver 17 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   
 TLS verwendet die OpenSSL-Bibliothek. Die folgende Tabelle zeigt die minimalen unterstützten Versionen von OpenSSL und die Zertifikatsvertrauensspeicherorte für jede Plattform:
@@ -97,13 +99,13 @@ TLS verwendet die OpenSSL-Bibliothek. Die folgende Tabelle zeigt die minimalen u
 |Debian 10|1.1.1|/etc/ssl/certs|
 |Debian 9|1.1.0|/etc/ssl/certs|
 |Debian 8.71|1.0.1|/etc/ssl/certs|
-|OS X 10.11, macOS 10.12, 10.13, 10.14|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11, macOS 10.12-10.15|1.0.2|/usr/local/etc/openssl/certs|
 |Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
 |SUSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
 |SUSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
-|Ubuntu 18.10, 19.04|1.1.1|/etc/ssl/certs|
+|Ubuntu 18.10, 19.04, 19.10, 20.04|1.1.1|/etc/ssl/certs|
 |Ubuntu 18.04|1.1.0|/etc/ssl/certs|
 |Ubuntu 16.04, 16.10, 17.10|1.0.2|/etc/ssl/certs|
 |Ubuntu 14.04|1.0.1|/etc/ssl/certs|

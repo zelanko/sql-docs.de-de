@@ -2,7 +2,7 @@
 title: Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber
 description: Lernen Sie verschiedene Verfahren kennen, um die Leistung und Zuverlässigkeit von Anwendungen zu verbessern, wenn der Microsoft JDBC-Treiber für SQL Server verwendet wird.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: bc04a90569974acbc99dcb66680d66289db1c0d1
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728475"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565378"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber
 
@@ -37,6 +37,7 @@ Die Themen in diesem Abschnitt beschreiben verschiedene Verfahren, um die Leistu
 |[Sparsespalten](../../connect/jdbc/sparse-columns.md)|Erläutert, auf welche Weise vom JDBC-Treiber Sparsespalten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden.|  
 |[Vorbereitetes Caching von Anweisungsmetadaten für den JDBC-Treiber](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|In diesem Artikel werden Vorgehensweisen zum Verbessern der Leistung von Abfragen von Prepared Statements beschrieben.|
 |[Verwenden der Massenkopierungs-API für den Batcheinfügungsvorgang](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|In diesem Artikel wird beschrieben, wie Sie die API für Massenkopiervorgänge für Batcheinfügevorgänge und deren Vorteile aktivieren.|
+|[Zeichenfolgenparameter werden nicht als Unicode gesendet.](../../connect/jdbc/setting-the-connection-properties.md)|Bei Verwendung von **CHAR**-, **VARCHAR**- und **LONGVARCHAR**-Daten können Benutzer die Verbindungseigenschaft **sendStringParametersAsUnicode** auf `false` festlegen, um eine optimale Leistungssteigerung zu erzielen.|
 
 ## <a name="see-also"></a>Weitere Informationen
 

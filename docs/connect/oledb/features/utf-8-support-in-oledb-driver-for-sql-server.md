@@ -1,6 +1,6 @@
 ---
 title: UTF-8-Unterstützung im OLE DB-Treiber für SQL Server | Microsoft-Dokumentation
-description: UTF-8-Unterstützung im OLE DB-Treiber für SQL Server
+description: Erfahren Sie mehr über die Unterstützung des OLE DB-Treibers für SQL Server für die UTF-8-Servercodierung und UTF-8-Clientcodierung.
 ms.custom: ''
 ms.date: 05/25/2020
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: d2074ea992872da02a781ef48f633cd8539c931f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 424b18f18fb519b0e8755606d0af7488d9885007
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85986582"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147551"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>UTF-8-Unterstützung im OLE DB-Treiber für SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

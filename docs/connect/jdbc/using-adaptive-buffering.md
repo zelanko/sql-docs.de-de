@@ -1,4 +1,5 @@
 ---
+description: Verwenden der adaptiven Pufferung
 title: Verwenden der adaptiven Pufferung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44b4b01798ac0bf37ce6e8deaadd2d0f02d9e5d4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 720baad5c144148fae222bc19bb268aa9adae463
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487943"
 ---
 # <a name="using-adaptive-buffering"></a>Verwenden der adaptiven Pufferung
 
@@ -52,13 +53,13 @@ Mit Version 2.0 des JDBC-Treibers können Anwendungen jedoch die [isWrapperFor](
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>Abrufen umfangreicher Daten mit adaptiver Pufferung
 
-Wenn große Werte einmal mithilfe der get\<Typ>Stream-Methoden gelesen werden und auf die ResultSet-Spalten und die CallableStatement-OUT-Parameter in der Reihenfolge zugegriffen wird, in der sie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden, minimiert die adaptive Pufferung die Anwendungsspeicherauslastung beim Verarbeiten der Ergebnisse. Beim Verwenden der adaptiven Pufferung:
+Wenn große Werte einmal mithilfe der get\<Type>Stream-Methoden gelesen werden und auf die ResultSet-Spalten und die CallableStatement-OUT-Parameter in der Reihenfolge zugegriffen wird, in der sie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden, wird die Auslastung des Anwendungsspeichers bei der Verarbeitung der Ergebnisse durch die adaptive Pufferung minimiert. Beim Verwenden der adaptiven Pufferung:
 
-- Die in der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse und der [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse definierten get\<Type>Stream-Methoden geben schreibgeschützte Datenströme zurück, die zurückgesetzt werden können, wenn sie von der Anwendung gekennzeichnet werden. Wenn in der Anwendung `reset` für den Datenstrom ausgeführt werden soll, muss zunächst die `mark`-Methode für diesen Datenstrom aufgerufen werden.
+- Die in der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse und der [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse definierten get\<Type>Stream-Methoden geben standardmäßig einmal gelesene Datenströme zurück, obwohl die Datenströme zurückgesetzt werden können, wenn sie von der Anwendung gekennzeichnet wurden. Wenn in der Anwendung `reset` für den Datenstrom ausgeführt werden soll, muss zunächst die `mark`-Methode für diesen Datenstrom aufgerufen werden.
 
-- Die in der [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md)-Klasse und der [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md)-Klasse definierten get\<Type>Stream-Methoden geben Datenströme zurück, die immer wieder an der Anfangsposition des Datenstroms positioniert werden können, ohne die `mark`-Methode aufzurufen.
+- Die in der [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md)-Klasse und der [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md)-Klasse definierten get\<Type>Stream-Methoden geben Datenströme zurück, die immer wieder am Anfang des Datenstroms positioniert werden können, ohne die `mark`-Methode aufzurufen.
 
-Wenn die Anwendung adaptive Pufferung verwendet, können die von den get\<Type>Stream-Methoden abgerufenen Werte nur einmal abgerufen werden. Wenn Sie versuchen, eine get\<Type>-Methode für die gleiche Spalte oder den gleichen Parameter aufzurufen, nachdem die get\<Type>Stream-Methode des gleichen Objekts aufgerufen wurde, wird eine Ausnahme mit der folgenden Meldung ausgelöst: „Auf die Daten wurde zugegriffen; sie sind für diese Spalte oder diesen Parameter nicht verfügbar.“
+Wenn die Anwendung die adaptive Pufferung verwendet, können die von den get\<Type>Stream-Methoden abgerufenen Werte nur einmal abgerufen werden. Wenn Sie versuchen, eine get\<Type>-Methode für dieselbe Spalte oder denselben Parameter aufzurufen, nachdem die get\<Type>Stream-Methode desselben Objekts aufgerufen wurde, wird eine Ausnahme mit der folgenden Meldung ausgelöst: „Auf die Daten wurde zugegriffen; sie sind für diese Spalte oder diesen Parameter nicht verfügbar.“
 
 > [!NOTE]
 > Beim Abrufen von ResultSet.close() während der Verarbeitung eines Resultsets muss der Microsoft JDBC-Treiber für SQL Server alle verbleibenden Pakete lesen und verwerfen. Dies kann erhebliche Zeit in Anspruch nehmen, wenn die Abfrage ein großes Dataset zurückgegeben hat, insbesondere dann, wenn die Netzwerkverbindung langsam ist.
@@ -69,9 +70,9 @@ Entwickler sollten sich an diese wichtigen Richtlinien halten, um die Speicherau
 
 - Vermeiden Sie die Verwendung der Verbindungszeichenfolgeneigenschaft **selectMethod=cursor**, damit die Anwendung ein sehr großes Resultset verarbeiten kann. Die adaptive Pufferung ermöglicht Anwendungen, sehr große, schreibgeschützte Vorwärtsresultsets ohne die Verwendung eines Servercursors zu verarbeiten. Beachten Sie, dass das Festlegen von **selectMethod=cursor** sich auf alle schreibgeschützten Resultsets mit Vorwärtscursor auswirkt, die über diese Verbindung generiert werden. Das heißt, wenn die Anwendung wiederholt kleine Resultsets mit wenigen Zeilen verarbeitet, werden zum Erstellen, Lesen und Schließen eines Servercursors für jedes Resultset sowohl auf Clientseite als auch auf Serverseite mehr Ressourcen verwendet als bei der **selectMethod**, die auf einen anderen Wert als **cursor** festgelegt ist.
 
-- Lesen Sie große Text- oder Binärwerte als Datenströme, indem Sie die Methoden getAsciiStream, getBinaryStream oder getCharacterStream anstelle der getBlob- oder getClob-Methode verwenden. Ab Release 1.2 stellt die [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse neue get\<Type>Stream-Methoden hierfür bereit.
+- Lesen Sie große Text- oder Binärwerte als Datenströme, indem Sie die Methoden getAsciiStream, getBinaryStream oder getCharacterStream anstelle der getBlob- oder getClob-Methode verwenden. Ab Release 1.2 stellt die [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse neue get\<Type>Stream-Methoden hierfür bereit.
 
-- Stellen Sie sicher, dass Spalten mit potenziell großen Werten in der Liste der Spalten in einer SELECT-Anweisung am Ende platziert werden und dass die get\<Type>Stream-Methoden von [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) verwendet werden, um in der Reihenfolge auf die Spalten zuzugreifen, in der sie ausgewählt werden.
+- Stellen Sie sicher, dass Spalten mit potenziell großen Werten in der Liste der Spalten in einer SELECT-Anweisung am Ende platziert werden und dass die get\<Type>Stream-Methoden von [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) verwendet werden, um in der Reihenfolge auf die Spalten zuzugreifen, in der sie ausgewählt wurden.
 
 - Stellen Sie sicher, dass OUT-Parameter mit potenziell großen Werten in der Liste der Parameter im SQL zum Erstellen von [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) zuletzt deklariert werden. Stellen Sie außerdem sicher, dass die get\<Type>Stream-Methoden von [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) verwendet werden, um auf die OUT-Parameter in der Reihenfolge zuzugreifen, in der sie deklariert wurden.
 
@@ -89,7 +90,7 @@ Darüber hinaus enthält die folgende Liste einige Empfehlungen für scrollfähi
 
 - Bei scrollfähigen Resultsets liest der Treiber beim Abrufen eines Zeilenblocks immer die von der [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts angegebene Anzahl von Zeilen in den Speicher ein, auch bei aktivierter adaptiver Pufferung. Wenn das Scrolling einen OutOfMemoryError verursacht, können Sie die Anzahl der abgerufenen Zeilen verringern, indem Sie die [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts aufrufen, um die Abrufgröße auf eine kleinere Zeilenanzahl festzulegen und ggf. sogar auf eine Zeile verringern. Führt dies immer noch zu einem OutOfMemoryError, vermeiden Sie das Einschließen sehr großer Spalten in scrollfähigen Resultsets.
 
-- Bei aktualisierbaren Resultsets mit Vorwärtscursor liest der Treiber beim Abrufen eines Zeilenblocks normalerweise die von der [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts angegebene Anzahl von Zeilen in den Speicher ein, auch wenn die adaptive Pufferung für die Verbindung aktiviert ist. Wenn das Aufrufen der [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts einen OutOfMemoryError verursacht, können Sie die Anzahl der abgerufenen Zeilen verringern, indem Sie die [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts aufrufen, um die Abrufgröße auf eine kleinere Zeilenanzahl festzulegen und ggf. sogar auf eine Zeile verringern. Sie können auch erzwingen, dass der Treiber keine Zeilen puffert, indem Sie vor dem Ausführen der Anweisung die [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Methode des [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekts mit dem Parameter **adaptiv** aufrufen. Da das Resultset nicht scrollfähig ist, verwirft der Treiber einen großen Spaltenwert, auf den die Anwendung mit einer der get\<Type>Stream-Methoden zugreift, wie bei schreibgeschützten Resultsets mit Vorwärtscursor, sobald er von der Anwendung gelesen wurde.
+- Bei aktualisierbaren Resultsets mit Vorwärtscursor liest der Treiber beim Abrufen eines Zeilenblocks normalerweise die von der [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts angegebene Anzahl von Zeilen in den Speicher ein, auch wenn die adaptive Pufferung für die Verbindung aktiviert ist. Wenn das Aufrufen der [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts einen OutOfMemoryError verursacht, können Sie die Anzahl der abgerufenen Zeilen verringern, indem Sie die [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts aufrufen, um die Abrufgröße auf eine kleinere Zeilenanzahl festzulegen und ggf. sogar auf eine Zeile verringern. Sie können auch erzwingen, dass der Treiber keine Zeilen puffert, indem Sie vor dem Ausführen der Anweisung die [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Methode des [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekts mit dem Parameter **adaptiv** aufrufen. Da das Resultset nicht scrollbar ist, verwirft der Treiber einen großen Spaltenwert, auf den die Anwendung mit einer der get\<Type>Stream-Methoden zugreift, wie bei schreibgeschützten Resultsets mit Vorwärtscursor, sobald er von der Anwendung gelesen wurde.
 
 ## <a name="see-also"></a>Weitere Informationen
 

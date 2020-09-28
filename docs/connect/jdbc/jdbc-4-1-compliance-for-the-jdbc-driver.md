@@ -1,4 +1,5 @@
 ---
+description: JDBC 4.1-Kompatibilität für den JDBC-Treiber
 title: JDBC 4.1-Kompatibilität für den JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 501b5a6ad21fa9b5e6078e27547b612b9fba9fd6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0b5cbc32712a54d7e783c77e086761be4a274dfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438362"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>JDBC 4.1-Kompatibilität für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

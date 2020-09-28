@@ -2,7 +2,7 @@
 title: Überblick über den JDBC-Treiber | Microsoft-Dokumentation
 description: Beim Microsoft JDBC-Treiber für SQL Server handelt es sich um einen mit Type 4 Java Database Connectivity 4.2 (JDBC) kompatiblen Treiber, der Datenzugriff auf SQL-Datenbank-Instanzen ermöglicht.
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,22 +11,22 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a405918283f1e72c63cf56bd6ac9da1bcb498d36
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 5455169782503939330c32829a89bf0701aac25a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529335"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943625"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Übersicht über den JDBC-Treiber
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Der Microsoft JDBC-Treiber für SQL Server ist ein JDBC (Java Database Connectivity) 4.2-kompatibler Treiber vom Typ 4, der stabilen Datenzugriff auf SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 und Azure SQL Database bietet.  
+Beim Microsoft JDBC-Treiber für SQL Server handelt es sich um einen mit Type 4 Java Database Connectivity 4.2 (JDBC) kompatiblen Treiber, der einen stabilen Datenzugriff auf SQL Server- und Azure SQL-Datenbanken ermöglicht.  
 
 ## <a name="redistribution"></a>Weiterverteilung
 
-Die Versionen 6.0, 6.2, 6.4 und 7.0 des JDBC-Treibers dürfen weiterverteilt werden. Lesen Sie die Klausel _Verteilbarer Code_ in den jeweiligen Lizenzvereinbarungen.
+Die JDBC-Treiberversionen ab Version 6.0 sind weitervertreibbar. Lesen Sie die Klausel _Verteilbarer Code_ in den jeweiligen Lizenzvereinbarungen.
 
 Die JDBC-Treiberversionen 4.x sind veraltet. Die Unterstützung von 4.x wurde vor 2018 eingestellt.
 

@@ -1,4 +1,5 @@
 ---
+description: SQLXML-Schnittstelle
 title: SQLXML-Schnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 58fb89e88169a5ebabd63a39b9d2427fa63d5a9d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bac370362700a4a5f1b500ebd1b01eb8063d5f03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396266"
 ---
 # <a name="sqlxml-interface"></a>SQLXML-Schnittstelle
 
@@ -49,6 +50,6 @@ Nach dem Aufrufen einer der folgenden Abrufmethoden kann das SQLXML-Objekt nicht
   
 Nach dem Aufrufen einer der folgenden Festlegemethoden kann das SQLXML-Objekt nicht mehr gelesen oder geschrieben werden: setResult, setCharacterStream, setBinaryStream und setString.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen:  
 
 [Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md)  

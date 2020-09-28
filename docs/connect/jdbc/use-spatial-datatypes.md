@@ -1,7 +1,8 @@
 ---
+description: Verwenden von räumlichen Datentypen
 title: Verwenden von räumlichen Datentypen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 83f64df45036091985ccb6e26b86907882939313
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0f4b01775e2c78c0cc8602539169a794eb476f92
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487960"
 ---
 # <a name="using-spatial-datatypes"></a>Verwenden von räumlichen Datentypen
 
@@ -25,7 +26,7 @@ Räumliche Datentypen („Geometry“ and „Geography“) werden ab der Vorscha
 
 ## <a name="creating-a-geometry--geography-object"></a>Erstellen eines Geometry-/Geography-Objekts
 
-Es gibt zwei primäre Methoden zum Erstellen eines Geometry-/Geography-Objekts: entweder eine Konvertierung aus dem WKT- (Well-Known Text) oder aus dem WKB-Format (Well-Known Binary).
+Es gibt zwei primäre Methoden zum Erstellen eines Geometry-/Geography-Objekts: entweder eine Konvertierung aus dem WKT (Well-Known Text)-Format oder aus einem internen SQL Server-Format (CLR).
 
 ### <a name="creating-from-wkt"></a>Erstellen eines Objekts aus dem WKT-Format
 
@@ -37,14 +38,14 @@ Geography geogWKT = Geography.STGeomFromText(geoWKT, 4326);
 
 Durch diesen Vorgang wird ein Geometry-Objekt LINESTRING mit SRID 0 (Spatial Reference System Identifier) und ein Geography-Objekt mit SRID 4326 erstellt.
 
-### <a name="creating-from-wkb"></a>Erstellen eines Objekts aus dem WKB-Format
+### <a name="creating-from-clr"></a>Erstellen eines Objekts aus der CLR
 
 ```java
-byte[] geomWKB = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
-byte[] geogWKB = Hex.decodeHex("E61000000104030000000000000000000000000000000000F03F000000000000F03F00000000000000000000000000000000000000000000F0BF01000000010000000001000000FFFFFFFF0000000002".toCharArray());
+byte[] geomCLR = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
+byte[] geogCLR = Hex.decodeHex("E61000000104030000000000000000000000000000000000F03F000000000000F03F00000000000000000000000000000000000000000000F0BF01000000010000000001000000FFFFFFFF0000000002".toCharArray());
 
-Geometry geomWKT = Geometry.deserialize(geomWKB);
-Geography geogWKT = Geography.deserialize(geogWKB);
+Geometry geomWKT = Geometry.deserialize(geomCLR);
+Geography geogWKT = Geography.deserialize(geogCLR);
 ```
 
 Durch diesen Vorgang werden ein Geometry- und ein Geography-Objekt erstellt, die den oben erstellten Objekten aus dem WKT-Format entsprechen.
@@ -67,7 +68,7 @@ pstmt.setGeometry(1, geomWKT);
 pstmt.execute();
 ```
 
-Derselbe Vorgang kann für das entsprechende Geography-Objekt durchgeführt werden. Dabei wird eine Geography-Spalte und die **setGeography()** -Methode verwendet.
+Derselbe Vorgang kann für das entsprechende Geography-Objekt durchgeführt werden. Dabei wird eine Geography-Spalte und die **setGeography()**-Methode verwendet.
 
 So lesen Sie eine Geometry-/Geography-Spalte:
 
@@ -79,7 +80,7 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 }
 ```
 
-Derselbe Vorgang kann für das entsprechende Geography-Objekt durchgeführt werden. Dabei wird eine Geography-Spalte und die **getGeography()** -Methode verwendet.
+Derselbe Vorgang kann für das entsprechende Geography-Objekt durchgeführt werden. Dabei wird eine Geography-Spalte und die **getGeography()**-Methode verwendet.
 
 ## <a name="newly-introduced-apis"></a>Neu eingeführte APIs
 
@@ -106,12 +107,12 @@ Dies sind die neuen öffentlichen APIs, die mit dieser Erweiterung in den Klasse
 |Methode|BESCHREIBUNG|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| Konstruktor für eine Geometry-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium), die um alle von der Instanz getragenen Z- und M-Werte (Höhe/Measure) erweitert wurde.
-|Geometry STGeomFromWKB(byte[] wkb)| Konstruktor für eine Geometry-Instanz aus einer Darstellung des Typs „Open Geospatial-Konsortium (OGC) Well-Known Binary (WKB)“.
-|Geometries deserialize(byte[] wkb)| Konstruktor für eine Geometry-Instanz aus einem internen SQL Server-Format für räumliche Daten.
+|Geometry STGeomFromWKB(byte[] wkb)| Konstruktor für eine Geometry-Instanz aus einer Darstellung des Typs „Open Geospatial-Konsortium (OGC) Well-Known Binary (WKB)“. Hinweis: Diese Methode verwendet derzeit das interne SQL Server-Format (CLR) zum Erstellen einer Geometry-Instanz. Dies ist ein bekanntes Problem im Treiber und soll dahingehend geändert werden, dass stattdessen WKB-Daten akzeptiert werden. Für vorhandene Benutzer, die diese Methode bereits verwenden, sollten Sie in Erwägung ziehen, stattdessen zu deserialize(byte) zu wechseln.
+|Geometries deserialize(byte[] clr)| Konstruktor für eine Geometry-Instanz aus einem internen SQL Server-Format für räumliche Daten.
 |Geometry parse(String wkt)| Konstruktor für eine Geometry-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium). Der SRID (Spatial Reference Identifier) ist standardmäßig auf 0 festgelegt.
 |Geometry point(double x, double y, int SRID)| Konstruktor für eine Geometry-Instanz, die mit ihren X- und Y-Werten sowie mit einem Spatial Reference Identifier eine Point-Instanz darstellt.
 |String STAsText()| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geometry-Instanz zurück. Dieser Text enthält keine Z (Höhe)- oder M (Measure)-Werte, die von der Instanz getragen werden.
-|byte[] STAsBinary()| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geometry-Instanz zurück. Dieser Wert enthält keine Z- oder M-Werte, die von der Instanz getragen werden.
+|byte[] STAsBinary()| Gibt die Darstellung einer Geometry-Instanz im internen SQL Server-Format (CLR) zurück. Dieser Wert enthält keine Z- oder M-Werte, die von der Instanz getragen werden.
 |byte[] serialize()| Gibt die Bytes zurück, die ein internes SQL Server-Format vom Geometry-Typ darstellen.
 |boolean hasM()| Wird zurückgegeben, wenn das Objekt einen M-Wert (Maßeinheit) enthält.
 |boolean hasZ()| Wird zurückgegeben, wenn das Objekt einen Z-Wert (Höhe) enthält.
@@ -126,17 +127,17 @@ Dies sind die neuen öffentlichen APIs, die mit dieser Erweiterung in den Klasse
 |String asTextZM()| Gibt die WKT-Darstellung (Well-Known Text) des Geometry-Objekts zurück.
 |String toString()| Gibt die Zeichenfolgendarstellung des Geometry-Objekts zurück.
 
-### <a name="geography"></a>Gebiet
+### <a name="geography"></a>Geografie
 
 |Methode|BESCHREIBUNG|
 |:------|:----------|
 |Geography STGeomFromText(String wkt, int SRID)| Konstruktor für eine Geography-Instanz aus einer WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium), die um alle von der Instanz getragenen Z- und M-Werte (Höhe/Measure) erweitert wurde.
-|Geography STGeomFromWKB(byte[] wkb)| Konstruktor für eine Geography-Instanz aus einer Darstellung des Typs „Open Geospatial-Konsortium (OGC) Well-Known Binary (WKB)“.
-|Geography deserialize(byte[] wkb)| Konstruktor für eine Geography-Instanz aus einem internen SQL Server-Format für räumliche Daten.
+|Geography STGeomFromWKB(byte[] wkb)| Konstruktor für eine Geography-Instanz aus einer Darstellung des Typs „Open Geospatial-Konsortium (OGC) Well-Known Binary (WKB)“. Hinweis: Diese Methode verwendet derzeit das interne SQL Server-Format (CLR) zum Erstellen einer Geometry-Instanz. In Zukunft wird dieser Ansatz jedoch geändert, dass stattdessen WKB-Daten akzeptiert werden, da das SQL Server-Gegenstück zu dieser Methode (STGeomFromWKB) WKB verwendet. Für vorhandene Benutzer, die diese Methode bereits verwenden, sollten Sie in Erwägung ziehen, stattdessen zu deserialize(byte) zu wechseln.
+|Geography deserialize(byte[] clr)| Konstruktor für eine Geography-Instanz aus einem internen SQL Server-Format für räumliche Daten.
 |Geography parse(String wkt)| Konstruktor für eine Geography-Instanz aus WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium). Der SRID (Spatial Reference Identifier) ist standardmäßig auf 0 festgelegt.
 |Geography point(double lon, double lat, int SRID)| Konstruktor für eine Geography-Instanz, die mit Ihren Längen- und Breitengraden sowie mit einem Spatial Reference Identifier eine Point-Instanz darstellt.
 |String STAsText()| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geography-Instanz zurück. Dieser Text enthält keine Z (Höhe)- oder M (Measure)-Werte, die von der Instanz getragen werden.
-|byte[] STAsBinary())| Gibt die WKB-Darstellung (Well-Known Binary) von OGC (Open Geospatial Consortium) einer Geography-Instanz zurück. Dieser Wert enthält keine Z- oder M-Werte, die von der Instanz getragen werden.
+|byte[] STAsBinary())| Gibt die Darstellung einer Geography-Instanz im internen SQL Server-Format (CLR) zurück. Dieser Wert enthält keine Z- oder M-Werte, die von der Instanz getragen werden.
 |byte[] serialize()| Gibt die Bytes zurück, die ein internes SQL Server-Format vom Geography-Typ darstellen.
 |boolean hasM()| Wird zurückgegeben, wenn das Objekt einen M-Wert (Maßeinheit) enthält.
 |boolean hasZ()| Wird zurückgegeben, wenn das Objekt einen Z-Wert (Höhe) enthält.
@@ -159,6 +160,6 @@ Dies sind die neuen öffentlichen APIs, die mit dieser Erweiterung in den Klasse
 
 3. Gespeicherte Prozeduren, Tabellenwertparameter und BulkCopy-Vorgänge werden derzeit nicht mit räumlichen Datentypen unterstützt.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 [Beispiel für räumliche Datentypen (JDBC)](../../connect/jdbc/spatial-data-types-sample.md)

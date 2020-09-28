@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 483832a0460b404a76d11bac4beaf2836d5534fa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: fd2a061d3eba753530f7f86b858563b2168157a2
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900995"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042801"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Konfigurieren von Windows-Dienstkonten und -Berechtigungen
 
@@ -264,7 +264,7 @@ Je nach Dienstkonfiguration wird das Dienstkonto für einen Dienst oder eine Die
 
 ### <a name="windows-privileges-and-rights"></a><a name="Windows"></a> Windows-Berechtigungen und Rechte
 
-Für das zum Starten eines Diensts zugewiesene Konto ist die **Berechtigung zum Starten, Beenden und Anhalten** für den Dienst erforderlich. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupprogramm weist diese automatisch zu. Installieren Sie zuerst Remoteserver-Verwaltungstools (Remote Server Administration Tools, RSAT). Siehe [Remoteserver-Verwaltungstools für Windows 7](https://www.microsoft.com/download/details.aspx?id=7887).
+Für das zum Starten eines Diensts zugewiesene Konto ist die **Berechtigung zum Starten, Beenden und Anhalten** für den Dienst erforderlich. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupprogramm weist diese automatisch zu. Installieren Sie zuerst Remoteserver-Verwaltungstools (Remote Server Administration Tools, RSAT). Weitere Informationen finden Sie unter [Remoteserver-Verwaltungstools für Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
 
 Die folgende Tabelle enthält Berechtigungen, die beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup für die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten verwendeten Pro-Dienst-SIDs oder lokalen Windows-Gruppen erforderlich sind.
 

@@ -1,6 +1,6 @@
 ---
 title: Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen | Microsoft-Dokumentation
-description: Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
+description: Erfahren Sie, wie SQL Server den Dienstprinzipalnamen in Clientverbindungen unterstützt. Informieren Sie sich in den häufigsten Verwendungsszenarios.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -12,17 +12,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, SPNs
 - OLE DB, SPNs
 - SPNs [SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6c1cfc2ff97c29f7ee22f6b4050634c95ae6a846
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f369b492536ee432385e3babef0e42924f86926d
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007259"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195146"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -40,7 +41,7 @@ ms.locfileid: "86007259"
   
  Weitere Informationen zu Kerberos finden Sie in den folgenden Artikeln:  
   
--   [Kerberos – Technische Ergänzung für Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Kerberos – Technische Ergänzungfür Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
@@ -50,7 +51,7 @@ ms.locfileid: "86007259"
 |Szenario|BESCHREIBUNG|  
 |--------------|-----------------|  
 |Eine ältere Anwendung gibt keinen SPN an.|Dieses Kompatibilitätsszenario stellt sicher, dass sich das Verhalten von Anwendungen, die für frühere Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]entwickelt wurden, nicht verändert. Wenn kein SPN angegeben wurde, verwendet die Anwendung generierte SPNs und erkennt nicht, welche Methode zur Authentifizierung verwendet wurde.|  
-|Eine Clientanwendung, die die aktuelle Version von OLE DB-Treiber für SQL Server verwendet, gibt in der Verbindungszeichenfolge einen SPN als Domänenbenutzerkonto oder Computerkonto, als instanzabhängigen SPN oder als benutzerdefinierte Zeichenfolge an.|Das **ServerSPN** -Schlüsselwort kann von einem Anbieter, einer Initialisierung oder einer Verbindungszeichenfolge zu folgenden Zwecken verwendet werden:<br /><br /> \- Angeben des von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz verwendeten Kontos. Dies vereinfacht den Zugriff auf die Kerberos-Authentifizierung. Wenn ein Kerberos-Schlüsselverteilungscenter (Key Distribution Center, KDC) vorhanden ist und das richtige Konto angegeben wurde, wird wahrscheinlich die Kerberos- anstatt der NTLM-Authentifizierung durchgeführt. Das KDC befindet sich normalerweise auf dem gleichen Computer wie der Domänencontroller.<br /><br /> \- Angeben eines SPNs, um nach dem Dienstkonto der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz zu suchen. Für jede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz werden zwei Standard-SPNs generiert, die für diesen Zweck verwendet werden können. Diese Schlüssel sind jedoch nicht unbedingt in Active Directory vorhanden. Daher ist in dieser Situation die Kerberos-Authentifizierung nicht gewährleistet.<br /><br /> \- Angeben eines SPN, der für die Suche nach dem Dienstkonto der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz verwendet werden soll. Dies kann eine beliebige benutzerdefinierte Zeichenfolge sein, die dem Dienstkonto zugeordnet wird. In diesem Fall muss der Schlüssel im KDC manuell registriert werden und den Richtlinien für einen benutzerdefinierten SPN entsprechen.<br /><br /> Das **FailoverPartnerSPN** -Schlüsselwort kann verwendet werden, um den SPN für den Failoverpartnerserver anzugeben. Der Wertebereich des Kontos und des Active Directory-Schlüssels entspricht den Werten, die Sie für den Prinzipalserver angeben können.|  
+|Eine Clientanwendung, die die aktuelle Version von OLE DB-Treiber für SQL Server verwendet, gibt in der Verbindungszeichenfolge einen SPN als Domänenbenutzerkonto oder Computerkonto, als instanzabhängigen SPN oder als benutzerdefinierte Zeichenfolge an.|Das **ServerSPN** -Schlüsselwort kann von einem Anbieter, einer Initialisierung oder einer Verbindungszeichenfolge zu folgenden Zwecken verwendet werden:<br /><br /> - Angeben des von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz verwendeten Kontos. Dies vereinfacht den Zugriff auf die Kerberos-Authentifizierung. Wenn ein Kerberos-Schlüsselverteilungscenter (Key Distribution Center, KDC) vorhanden ist und das richtige Konto angegeben wurde, wird wahrscheinlich die Kerberos- anstatt der NTLM-Authentifizierung durchgeführt. Das KDC befindet sich normalerweise auf dem gleichen Computer wie der Domänencontroller.<br /><br /> - Angeben eines SPNs, um nach dem Dienstkonto der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz zu suchen. Für jede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz werden zwei Standard-SPNs generiert, die für diesen Zweck verwendet werden können. Diese Schlüssel sind jedoch nicht unbedingt in Active Directory vorhanden. Daher ist in dieser Situation die Kerberos-Authentifizierung nicht gewährleistet.<br /><br /> - Angeben eines SPN, der für die Suche nach dem Dienstkonto der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz verwendet werden soll. Dies kann eine beliebige benutzerdefinierte Zeichenfolge sein, die dem Dienstkonto zugeordnet wird. In diesem Fall muss der Schlüssel im KDC manuell registriert werden und den Richtlinien für einen benutzerdefinierten SPN entsprechen.<br /><br /> Das **FailoverPartnerSPN** -Schlüsselwort kann verwendet werden, um den SPN für den Failoverpartnerserver anzugeben. Der Wertebereich des Kontos und des Active Directory-Schlüssels entspricht den Werten, die Sie für den Prinzipalserver angeben können.|  
 |Eine OLE DB-Anwendung legt einen SPN als Initialisierungseigenschaft der Datenquelle für den Prinzipalserver oder einen Failoverpartnerserver fest.|Die Verbindungseigenschaft **SSPROP_INIT_SERVER_SPN** im **DBPROPSET_SQLSERVERDBINIT** -Eigenschaftensatz kann zur Festlegung des SPN für eine Verbindung verwendet werden.<br /><br /> Die Verbindungseigenschaft **SSPROP_INIT_FAILOVER_PARTNER_SPN** in **DBPROPSET_SQLSERVERDBINIT** kann zur Festlegung des SPN für eine Verbindung zum Failoverpartnerserver verwendet werden.|   
 |Der Benutzer legt einen SPN für einen Server oder Failoverpartnerserver in den OLE DB-Dialogfeldern **Datenlink** oder **Anmeldung** fest.|Der SPN kann im Dialogfeld **Datenlinks** oder **Anmeldung** angegeben werden.|   
 |Eine OLE DB-Anwendung bestimmt die Authentifizierungsmethode, die zum Herstellen einer Verbindung verwendet wird.|Wenn eine Verbindung erfolgreich hergestellt wurde, kann eine Anwendung die Verbindungseigenschaft **SSPROP_AUTHENTICATION_METHOD** im **DBPROPSET_SQLSERVERDATASOURCEINFO** -Eigenschaftensatz abfragen, um festzustellen, welche Authentifizierungsmethode verwendet wurde. Die Werte enthalten unter anderem **NTLM** und **Kerberos**.|  
@@ -102,7 +103,7 @@ ms.locfileid: "86007259"
 ## <a name="ole-db-syntax-supporting-spns"></a>OLE DB-Syntax, die SPN unterstützt  
  Informationen zur Syntax finden Sie in den folgenden Themen:  
   
--   [Dienstprinzipalnamen (SPN) &#40;SPNs&#41; in Clientverbindungen &#40;(OLE DB&#41;)](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Dienstprinzipalnamen (SPN) in Clientverbindungen (OLE DB)](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  Informationen zu Beispielanwendungen, die diese Funktion veranschaulichen, finden Sie unter [Beispiele zur Programmierbarkeit von SQL Server-Daten](https://msftdpprodsamples.codeplex.com/).  
   

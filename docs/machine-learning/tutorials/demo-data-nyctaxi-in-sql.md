@@ -8,16 +8,16 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 46ad967b9ecd40b84cf7871e7b9ef113fe686953
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 9371d2f988642a5f5ab0e7b715130772a693bb52
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814060"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173693"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>NYC Taxi-Demodaten für Python- und R-Tutorials in SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 In diesem Artikel wird beschrieben, wie eine Beispieldatenbank mit öffentlichen Daten von der [New York City Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) eingerichtet wird. Diese Daten werden in verschiedenen R- und Python-Tutorials für datenbankinterne Analysen unter SQL Server verwendet. Damit der Beispielcode schneller ausgeführt werden kann, haben wir ein repräsentatives 1 %-Sampling der Daten erstellt. In unserem System ist die Datenbanksicherungsdatei etwas größer als 90 MB, wobei sich in der primären Datentabelle 1,7 Millionen Datensätze befinden.
 
@@ -25,8 +25,8 @@ Für diese Übung benötigen Sie [SQL Server Management Studio](https://docs.mic
 
 Dieses Dataset wird in folgenden Tutorials und Schnellstarts verwendet:
 
-+ [Kennenlernen der datenbankinternen Analyse mithilfe von R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
-+ [Kennenlernen der datenbankinternen Analyse mithilfe von Python in SQL Server](sqldev-in-database-python-for-sql-developers.md)
++ [Kennenlernen der datenbankinternen Analyse mithilfe von R in SQL Server](r-taxi-classification-introduction.md)
++ [Kennenlernen der datenbankinternen Analyse mithilfe von Python in SQL Server](python-taxi-classification-introduction.md)
 
 ## <a name="download-files"></a>Herunterladen von Dateien
 
@@ -37,6 +37,11 @@ Die Dateigröße beträgt ungefähr 90 MB.
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 >[!NOTE]
 >Zur Wiederherstellung der Beispieldatenbank auf [Big Data-Cluster in SQL Server](../../big-data-cluster/big-data-cluster-overview.md) laden Sie [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) herunter, und Sie befolgen die Anweisungen unter [Wiederherstellen einer Datenbank in der Masterinstanz eines Big Data-Clusters für SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
+::: moniker-end
+
+::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+>[!NOTE]
+>Zur Wiederherstellung der Beispieldatenbank für [Machine Learning Services in Azure SQL Managed Instance (Vorschau)](/azure/azure-sql/managed-instance/machine-learning-services-overview) befolgen Sie die Anweisungen in [Schnellstart: Wiederherstellen einer Datenbank in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/restore-sample-database-quickstart) mithilfe der BAK-Datei der Demodatenbank für Taxifahrten in New York City: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak).
 ::: moniker-end
 
 1. Klicken Sie auf [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), um die Datenbanksicherungsdatei herunterzuladen.
@@ -64,19 +69,19 @@ In der folgenden Tabelle finden Sie eine Übersicht über die in der Demodatenba
 |**Objektname**|**Objekttyp**|**Beschreibung**|
 |----------|------------------------|---------------|
 |**NYCTaxi_Sample** | database | Erstellt eine Datenbank und zwei Tabellen:<br /><br />Tabelle „dbo.nyctaxi_sample“: Enthält das Hauptdataset von NYC Taxi. Einer Tabelle wird ein gruppierter Columnstore-Index hinzugefügt, um den Speicher und die Abfrageleistung zu verbessern. Die 1 %-Stichprobe des NYC Taxi-Datasets wird in diese Tabelle eingefügt.<br /><br />Tabelle „dbo.nyc_taxi_models“: Wird zum Speichern des trainierten Modells für die erweiterte Analyse verwendet.|
-|**fnCalculateDistance** |Skalarwertfunktion | Berechnet die direkte Entfernung zwischen Abhol- und Ablageorten. Diese Funktion wird in den Lektionen [Erstellen von Datenfeatures](sqldev-create-data-features-using-t-sql.md), [Trainieren und Speichern eines Modells](sqldev-train-and-save-a-model-using-t-sql.md) und [Operationalisieren des R-Modells](sqldev-operationalize-the-model.md) verwendet.|
-|**fnEngineerFeatures** |Tabellenwertfunktion | Erstellt neue Datenfeatures für das Modelltraining. Diese Funktion wird in den Lektionen [Erstellen von Datenfeatures](sqldev-create-data-features-using-t-sql.md) und [Operationalisieren des R-Modells](sqldev-operationalize-the-model.md) verwendet.|
+|**fnCalculateDistance** |Skalarwertfunktion | Berechnet die direkte Entfernung zwischen Abhol- und Ablageorten. Diese Funktion wird in den Lektionen [Erstellen von Datenfeatures](r-taxi-classification-create-features.md), [Trainieren und Speichern eines Modells](r-taxi-classification-train-model.md) und [Operationalisieren des R-Modells](r-taxi-classification-deploy-model.md) verwendet.|
+|**fnEngineerFeatures** |Tabellenwertfunktion | Erstellt neue Datenfeatures für das Modelltraining. Diese Funktion wird in den Lektionen [Erstellen von Datenfeatures](r-taxi-classification-create-features.md) und [Operationalisieren des R-Modells](r-taxi-classification-deploy-model.md) verwendet.|
 
 
 Gespeicherte Prozeduren werden mithilfe von R- und Python-Skripts erstellt, die sich in verschiedenen Tutorials befinden. In der folgenden Tabelle finden Sie eine Übersicht über die gespeicherten Prozeduren, die Sie der NYC Taxi-Demodatenbank optional hinzufügen können, wenn Sie die Skripts in den verschiedenen Lektion ausführen.
 
 |**Gespeicherte Prozedur**|**Sprache**|**Beschreibung**|
 |-------------------------|------------|---------------|
-|**RxPlotHistogram** |R | Ruft die RevoScaleR-Funktion „rxHistogram“ auf, um das Histogramm einer Variablen zu zeichnen und gibt anschließend das Diagramm als binäres Objekt zurück. Diese gespeicherte Prozedur wird in der Lektion [Untersuchen und Visualisieren von Daten](sqldev-explore-and-visualize-the-data.md) verwendet.|
-|**RPlotRHist** |R| Erstellt eine Grafik mithilfe einer Hist-Funktion, und speichert die Ausgabe als lokale PDF-Datei. Diese gespeicherte Prozedur wird in der Lektion [Untersuchen und Visualisieren von Daten](sqldev-explore-and-visualize-the-data.md) verwendet.|
-|**RxTrainLogitModel**  |R| Trainiert ein logistisches Regressionsmodell durch Aufrufen eines R-Pakets. Das Modell sagt den Wert der tipped-Spalte voraus und wird mithilfe von zufällig ausgewählten 70 % der Daten trainiert. Die Ausgabe der gespeicherten Prozedur ist das trainierte Modell, das in der Tabelle nyc_taxi_models gespeichert wird. Diese gespeicherte Prozedur wird in der Lektion [Trainieren und Speichern eines Modells](sqldev-train-and-save-a-model-using-t-sql.md).|
-|**RxPredictBatchOutput**  |R | Ruft das trainierte Modell zum Erstellen von Vorhersagen mit dem Modell auf. Die gespeicherte Prozedur akzeptiert eine Abfrage als Eingabeparameter und gibt eine Spalte mit numerischen Werten zurück, die die Bewertungen für die Eingabezeilen enthält. Diese gespeicherte Prozedur wird in der Lektion [Vorhersagen potenzieller Ergebnisse](sqldev-operationalize-the-model.md) verwendet.|
-|**RxPredictSingleRow**  |R| Ruft das trainierte Modell zum Erstellen von Vorhersagen mit dem Modell auf. Diese gespeicherte Prozedur akzeptiert als Eingabe eine neue Beobachtung mit einzelnen Funktionswerten, die als Inlineparameter übergeben werden, und gibt einen Wert zurück, der das Ergebnis für die neue Beobachtung vorhersagt. Diese gespeicherte Prozedur wird in der Lektion [Vorhersagen potenzieller Ergebnisse](sqldev-operationalize-the-model.md) verwendet.|
+|**RxPlotHistogram** |R | Ruft die RevoScaleR-Funktion „rxHistogram“ auf, um das Histogramm einer Variablen zu zeichnen und gibt anschließend das Diagramm als binäres Objekt zurück. Diese gespeicherte Prozedur wird in der Lektion [Untersuchen und Visualisieren von Daten](r-taxi-classification-explore-data.md) verwendet.|
+|**RPlotRHist** |R| Erstellt eine Grafik mithilfe einer Hist-Funktion, und speichert die Ausgabe als lokale PDF-Datei. Diese gespeicherte Prozedur wird in der Lektion [Untersuchen und Visualisieren von Daten](r-taxi-classification-explore-data.md) verwendet.|
+|**RxTrainLogitModel**  |R| Trainiert ein logistisches Regressionsmodell durch Aufrufen eines R-Pakets. Das Modell sagt den Wert der tipped-Spalte voraus und wird mithilfe von zufällig ausgewählten 70 % der Daten trainiert. Die Ausgabe der gespeicherten Prozedur ist das trainierte Modell, das in der Tabelle nyc_taxi_models gespeichert wird. Diese gespeicherte Prozedur wird in der Lektion [Trainieren und Speichern eines Modells](r-taxi-classification-train-model.md).|
+|**RxPredictBatchOutput**  |R | Ruft das trainierte Modell zum Erstellen von Vorhersagen mit dem Modell auf. Die gespeicherte Prozedur akzeptiert eine Abfrage als Eingabeparameter und gibt eine Spalte mit numerischen Werten zurück, die die Bewertungen für die Eingabezeilen enthält. Diese gespeicherte Prozedur wird in der Lektion [Vorhersagen potenzieller Ergebnisse](r-taxi-classification-deploy-model.md) verwendet.|
+|**RxPredictSingleRow**  |R| Ruft das trainierte Modell zum Erstellen von Vorhersagen mit dem Modell auf. Diese gespeicherte Prozedur akzeptiert als Eingabe eine neue Beobachtung mit einzelnen Funktionswerten, die als Inlineparameter übergeben werden, und gibt einen Wert zurück, der das Ergebnis für die neue Beobachtung vorhersagt. Diese gespeicherte Prozedur wird in der Lektion [Vorhersagen potenzieller Ergebnisse](r-taxi-classification-deploy-model.md) verwendet.|
 
 ## <a name="query-the-data"></a>Abfragen der Daten
 
@@ -110,5 +115,5 @@ Die Ergebnisse sollten ähnlich aussehen wie die im folgenden Screenshot.
 
 Die NYC Taxi-Beispieldaten sind nun für die praktischen Übungen verfügbar.
 
-+ [Kennenlernen der datenbankinternen Analyse mithilfe von R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
-+ [Kennenlernen der datenbankinternen Analyse mithilfe von Python in SQL Server](sqldev-in-database-python-for-sql-developers.md)
++ [Kennenlernen der datenbankinternen Analyse mithilfe von R in SQL Server](r-taxi-classification-introduction.md)
++ [Kennenlernen der datenbankinternen Analyse mithilfe von Python in SQL Server](python-taxi-classification-introduction.md)

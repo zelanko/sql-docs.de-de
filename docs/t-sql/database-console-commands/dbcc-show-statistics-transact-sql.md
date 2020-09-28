@@ -34,25 +34,32 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6c14ef618f8f2e64a4b3a59f7bd29dfaf327b6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bff0a596c457ee5ce24b665be3897f86e625b3b0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459902"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076717"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-DBCC SHOW_STATISTICS zeigt die aktuelle Abfrageoptimierungsstatistik für eine Tabelle oder eine indizierte Sicht an. Der Abfrageoptimierer verwendet Statistiken, um die Kardinalität oder Anzahl der Zeilen im Abfrageergebnis zu schätzen. Hierdurch wird es dem Abfrageoptimierer ermöglicht, einen hochwertigen Abfrageplan zu erstellen. Beispielsweise kann der Abfrageoptimierer Kardinalitätsschätzungen verwenden, um im Abfrageplan statt des Index Scan-Operators den Index Seek-Operator auszuwählen und so die Abfrageleistung zu verbessern, indem ein ressourcenintensiver Indexscan vermieden wird.
+DBCC SHOW_STATISTICS zeigt die aktuelle Abfrageoptimierungsstatistik für eine Tabelle oder eine indizierte Sicht an. Der Abfrageoptimierer verwendet Statistiken zur Schätzung der Kardinalität oder Zeilenanzahl im Abfrageergebnis und ermöglicht somit dem Abfrageoptimierer, einen Abfrageplan von hoher Qualität zu erstellen. Beispielsweise kann der Abfrageoptimierer Kardinalitätsschätzungen verwenden, um im Abfrageplan statt des Index Scan-Operators den Index Seek-Operator auszuwählen und so die Abfrageleistung zu verbessern, indem ein ressourcenintensiver Indexscan vermieden wird.
   
-Der Abfrageoptimierer speichert die Statistiken für eine Tabelle oder indizierte Sicht in einem Statistikobjekt. Für eine Tabelle wird das Statistikobjekt entweder für einen Index oder eine Liste mit Tabellenspalten erstellt. Das Statistikobjekt enthält einen Header mit Metadaten über die Statistik, ein Histogramm mit der Verteilung der Werte in der ersten Schlüsselspalte des Statistikobjekts sowie einen Dichtevektor zum Messen der Korrelation zwischen Spalten. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann Kardinalitätsschätzungen mit beliebigen Daten des Statistikobjekts berechnen.
+Der Abfrageoptimierer speichert die Statistiken für eine Tabelle oder indizierte Sicht in einem Statistikobjekt. Für eine Tabelle wird das Statistikobjekt entweder für einen Index oder eine Liste mit Tabellenspalten erstellt. Das Statistikobjekt enthält einen Header mit Metadaten über die Statistik, ein Histogramm mit der Verteilung der Werte in der ersten Schlüsselspalte des Statistikobjekts sowie einen Dichtevektor zum Messen der Korrelation zwischen Spalten. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann Kardinalitätsschätzungen mit beliebigen Daten des Statistikobjekts berechnen. Weitere Informationen finden Sie unter [Statistik](../../relational-databases/statistics/statistics.md) und [Kardinalitätsschätzung (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md).
   
 DBCC SHOW_STATISTICS zeigt den Header, das Histogramm und den Dichtevektor auf der Grundlage von Daten an, die im Statistikobjekt gespeichert sind. Die Syntax ermöglicht es Ihnen, eine Tabelle oder indizierte Sicht zusammen mit einem Zielindexnamen, Statistiknamen oder Spaltennamen anzugeben. In diesem Thema wird beschrieben, wie die Statistik angezeigt und die angezeigten Ergebnisse interpretiert werden.
-  
-Weitere Informationen finden Sie unter [Verwalten von Statistiken für Tabellen in SQL Data Warehouse](../../relational-databases/statistics/statistics.md).
-  
+
+> [!IMPORTANT]
+> Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 steht die dynamische Verwaltungssicht [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) zur Verfügung, um die im Statistikobjekt enthaltenen Headerinformationen für nicht inkrementelle Statistiken programmgesteuert abzurufen.
+
+> [!IMPORTANT]
+> Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 steht die dynamische Verwaltungssicht [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) zur Verfügung, um die im Statistikobjekt enthaltenen Headerinformationen für inkrementelle Statistiken programmgesteuert abzurufen.
+
+> [!IMPORTANT]
+> Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 steht die dynamische Verwaltungssicht [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) zur Verfügung, um Histogramminformationen, die im Statistikobjekt enthalten sind, programmgesteuert abzurufen.
+
 ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax
@@ -67,10 +74,10 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 DBCC SHOW_STATISTICS ( table_name , target )   
-    [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
+    [ WITH { STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
 [;]
 ```
 
@@ -162,15 +169,15 @@ Der Abfrageoptimierer verwendet Dichten, um Kardinalitätsschätzungen für Abfr
 |(CustomerId, ItemId, Price)|Zeilen mit übereinstimmenden Werten für CustomerId, ItemId und Price|  
   
 ## <a name="restrictions"></a>Beschränkungen  
- DBCC SHOW_STATISTICS stellt keine Statistik für räumliche oder speicheroptimierte xVelocity-columnstore-Indizes bereit.  
+ DBCC SHOW_STATISTICS stellt keine Statistik für räumliche Indizes oder speicheroptimierte columnstore-Indizes bereit.  
   
 ## <a name="permissions-for-ssnoversion-and-sssds"></a>Berechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-Zum Anzeigen des Statistikobjekts muss der Benutzer über die SELECT-Berechtigung für die Tabelle verfügen.
+Zum Anzeigen des Statistikobjekts muss der Benutzer über die `SELECT`-Berechtigung für die Tabelle verfügen.
 Die folgenden Voraussetzungen müssen erfüllt sein, damit der Befehl erfolgreich mit SELECT-Berechtigung ausgeführt werden kann:
 -   Die Benutzer benötigen eine Zugriffsberechtigung für alle Spalten im Statistikobjekt.  
 -   Die Benutzer benötigen eine Zugriffsberechtigung für alle Spalten in einer Filterbedingung (falls vorhanden).  
 -   Die Tabelle kann keine Sicherheitsrichtlinie auf Zeilenebene haben.
--   Wenn eine der Spalten innerhalb eines Statistikobjekts mit dynamischen Datenmaskierungsregeln maskiert ist, muss der Benutzer neben der SELECT-Berechtigung über die UNMASK-Berechtigung verfügen.
+-   Wenn eine der Spalten innerhalb eines Statistikobjekts mit dynamischen Datenmaskierungsregeln maskiert ist, muss der Benutzer neben der `SELECT`-Berechtigung über die `UNMASK`-Berechtigung verfügen.
 
 In Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 muss der Benutzer die Tabelle besitzen oder Mitglied der festen Serverrollen `sysadmin`, `db_owner` oder `db_ddladmin` sein.
 
@@ -178,10 +185,7 @@ In Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 muss der
  > Verwenden Sie das Ablaufverfolgungsflag 9485, um das Verhalten in das Verhalten vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 zu ändern.
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>Berechtigungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC SHOW_STATISTICS erfordert eine SELECT-Berechtigung in der Tabelle oder Mitgliedschaft in einer der folgenden Rollen:
--   Feste Serverrolle sysadmin  
--   Feste Datenbankrolle db_owner  
--   Feste Datenbankrolle db_ddladmin  
+DBCC SHOW_STATISTICS erfordert die `SELECT`-Berechtigung für die Tabelle oder Mitgliedschaft in der festen Serverrolle `sysadmin`, der festen Datenbankrolle `db_owner` oder der festen Datenbankrolle `db_ddladmin`.  
   
 ## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Einschränkungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS zeigt Statistiken an, die in der Shell-Datenbank auf der Ebene des Steuerelements gespeichert sind. Statistiken die automatisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf den Computeknoten erstellt wurden, werden nicht angezeigt.
@@ -234,3 +238,4 @@ Die Ergebnisse zeigen den Header, den Dichtevektor und einen Teil des Histogramm
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+[sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)   

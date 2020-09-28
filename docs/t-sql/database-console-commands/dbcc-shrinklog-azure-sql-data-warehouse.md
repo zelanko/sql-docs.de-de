@@ -12,12 +12,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dcf3a2f48eab092cf12d229685aa05f9e5e42f69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bae2ef1468110ba89d77d5f7a6360aecb324abd0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479793"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076696"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
 
@@ -41,7 +41,7 @@ DBCC SHRINKLOG
 SIZE = { *target_size* [ MB \| **GB** \| TB ]  } \| **DEFAULT**.  
 *target_size* ist die gewünschte Größe des Transaktionsprotokolls auf sämtlichen Computeknoten, nachdem DBCC SHRINKLOG abgeschlossen wurde. Dabei handelt es sich um einen Integer größer als 0 (null).  
 Die Protokollgröße wird in Megabyte (MB), Gigabyte (GB) oder Terabyte (TB) angegeben. Dabei handelt es sich um die Gesamtgröße aller Transaktionsprotokolle auf den Computeknoten.  
-Standardmäßig reduziert DBCC SHRINKLOG das Transaktionsprotokoll auf die Protokollgröße, die in den Metadaten der Datenbank gespeichert ist. Die Protokollgröße in den Metadaten wird von dem LOG_SIZE-Parameter in [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) oder [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) bestimmt. DBCC SHRINKLOG reduziert die Größe des Transaktionsprotokolls, wenn `SIZE=DEFAULT` angegeben oder die `SIZE`-Klausel weggelassen wird.
+Standardmäßig reduziert DBCC SHRINKLOG das Transaktionsprotokoll auf die Protokollgröße, die in den Metadaten der Datenbank gespeichert ist. Die Protokollgröße in den Metadaten wird von dem LOG_SIZE-Parameter in [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) oder [ALTER DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) bestimmt. DBCC SHRINKLOG reduziert die Größe des Transaktionsprotokolls, wenn `SIZE=DEFAULT` angegeben oder die `SIZE`-Klausel weggelassen wird.
   
 WITH NO_INFOMSGS  
 Informationsmeldungen werden nicht in den DBCC SHRINKLOG-Ergebnissen angezeigt.  

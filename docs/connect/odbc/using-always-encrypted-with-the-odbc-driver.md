@@ -2,19 +2,19 @@
 title: Verwenden von Always Encrypted mit dem ODBC Driver
 description: Erfahren Sie, wie Sie ODBC-Anwendungen mithilfe von Always Encrypted und dem Microsoft ODBC Driver for SQL Server entwickeln.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 938dba82797db23a9199c2c03fa8ec3c8bd010da
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886297"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288182"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -41,7 +41,7 @@ Konfigurieren Sie Always Encrypted in Ihrer Datenbank. Dies umfasst die Bereitst
 Die einfachste Möglichkeit zum Aktivieren von sowohl Parameterverschlüsselung als auch Spaltenentschlüsselung in verschlüsselten Resultsets besteht darin, den Wert für das Schlüsselwort der Verbindungszeichenfolge `ColumnEncryption` auf **Aktiviert** festzulegen. Im Folgenden finden Sie ein Beispiel für eine Verbindungszeichenfolge, mit der Always Encrypted aktiviert wird:
 
 ```
-SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
+SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
 ```
 
 Always Encrypted kann auch in der DSN-Konfiguration mit demselben Schlüssel und demselben Wert (die durch die Einstellung der Verbindungszeichenfolge, falls vorhanden, überschrieben werden) oder programmgesteuert über das Attribut `SQL_COPT_SS_COLUMN_ENCRYPTION` zur Verbindungsherstellung aktiviert werden. Wird es auf diese Weise festgelegt, wird der in der Verbindungszeichenfolge oder im DSN festgelegte Wert überschrieben:
@@ -309,6 +309,8 @@ In diesem Abschnitt werden die integrierten Leistungsoptimierungen in ODBC Drive
 
 Wenn Always Encrypted für eine Verbindung aktiviert ist, ruft der Treiber standardmäßig [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage auf, wobei die Abfrageanweisung (ohne Parameterwerte) an SQL Server übergeben wird. Die Abfrageanweisung wird von dieser gespeicherten Prozedur analysiert, um zu ermitteln, ob Parameter verschlüsselt werden müssen. In diesem Fall werden verschlüsselungsbezogene Informationen für jeden Parameter zurückgegeben, die der Treiber dann verschlüsseln kann. Das oben beschriebene Verhalten stellt einen hohen Grad an Transparenz für die Clientanwendung sicher: Die Anwendung (und der Anwendungsentwickler) muss nicht beachten, welche Abfragen Zugriff auf verschlüsselte Spalten haben, so lange die auf verschlüsselte Spalten ausgerichteten Werte in Parametern an den Treiber übergeben werden.
 
+Ab Version 17.6 werden vom Treiber auch die Verschlüsselungsmetadaten für vorbereitete Anweisungen zwischengespeichert. So wird die Leistung verbessert, da nachfolgende Aufrufe von `SQLExecute` keinen zusätzlichen Roundtrip zum Abrufen der Verschlüsselungsmetadaten erfordern.
+
 ### <a name="per-statement-always-encrypted-behavior"></a>Verhalten von Always Encrypted für einzelne Anweisungen
 
 Sie können das Verhalten von Always Encrypted für einzelne Abfragen ändern, wenn Sie es für die Verbindung aktiviert haben, um beim Abrufen von Verschlüsselungsmetadaten für parametrisierte Abfragen die Auswirkungen auf die Leistung zu steuern. Auf diese Weise können Sie sicherstellen, dass `sys.sp_describe_parameter_encryption` nur für Abfragen aufgerufen wird, bei denen Ihnen bekannt ist, dass sie über Parameter für verschlüsselte Spalten verfügen. Beachten Sie jedoch, dass Sie auf diese Weise die Transparenz der Verschlüsselung reduzieren: Wenn Sie zusätzliche Spalten in Ihrer Datenbank verschlüsseln, müssen Sie möglicherweise den Code der Anwendung ändern, um ihn auf die Schemaänderungen auszurichten.
@@ -330,6 +332,8 @@ Greifen die meisten Abfragen einer Clientanwendung auf verschlüsselte Spalten z
 - Legen Sie für Anweisungen, die nicht auf verschlüsselte Spalten zugreifen, das Attribut `SQL_SOPT_SS_COLUMN_ENCRYPTION` auf `SQL_CE_DISABLED` fest. Dadurch wird der Aufruf von `sys.sp_describe_parameter_encryption` deaktiviert, und es werden auch keine Werte im Resultset entschlüsselt.
     
 - Legen Sie für Anweisungen ohne Parameter, für die eine Verschlüsselung erforderlich wäre, und die Daten aus verschlüsselten Spalten abrufen, das Attribut `SQL_SOPT_SS_COLUMN_ENCRYPTION` auf `SQL_CE_RESULTSETONLY` fest. Dadurch werden der Aufruf von `sys.sp_describe_parameter_encryption` und die Parameterverschlüsselung deaktiviert. Ergebnisse mit verschlüsselten Spalten werden weiterhin entschlüsselt.
+
+- Verwenden Sie vorbereitete Anweisungen für Abfragen, die mehrmals ausgeführt werden. Bereiten Sie die Abfrage mit `SQLPrepare` vor, speichern Sie das Anweisungshandle, und verwenden Sie es bei jeder Ausführung mit `SQLExecute` erneut. Dies ist der bevorzugte leistungsorientierte Ansatz, auch wenn keine verschlüsselten Spalten vorhanden sind. Außerdem profitiert der Treiber von zwischengespeicherten Metadaten.
 
 ## <a name="always-encrypted-security-settings"></a>Always Encrypted-Sicherheitseinstellungen
 
@@ -395,7 +399,7 @@ Der Treiber unterstützt die Authentifizierung beim Azure Key Vault mithilfe der
 
 Verwenden Sie die folgenden Schlüsselwörter bestehend aus Verbindungszeichenfolgen, um dem Treiber für die Spaltenverschlüsselung die Verwendung der im Azure Key Vault gespeicherten CMKs zu erlauben:
 
-|Anmeldeinformationen| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
+|Anmeldeinformationen|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
 |-|-|-|-|
 |Benutzername/Kennwort| `KeyVaultPassword`|Benutzerprinzipalname|Kennwort|
 |Client-ID/Geheimnis| `KeyVaultClientSecret`|Client-ID|`Secret`|
@@ -408,13 +412,13 @@ Die folgenden Verbindungszeichenfolgen veranschaulichen die Authentifizierung be
 **Client-ID/geheimer Schlüssel**:
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
 **Benutzername/Kennwort**:
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
 **Verwaltete Identität (systemseitig zugewiesen)**
@@ -596,7 +600,7 @@ Gehen Sie bei Verwendung des **bcp**-Hilfsprogramms folgendermaßen vor: Um die 
 
 In der folgenden Tabelle werden die Aktionen beim Verarbeiten einer verschlüsselten Spalte zusammengefasst:
 
-|`ColumnEncryption`|BCP-Richtung|BESCHREIBUNG|
+|<code>ColumnEncryption</code>|BCP-Richtung|BESCHREIBUNG|
 |----------------|-------------|-----------|
 |`Disabled`|OUT (zum Client)|Ruft Chiffretext ab. Der observierte Datentyp lautet **varbinary(max)** .|
 |`Enabled`|OUT (zum Client)|Ruft Klartext ab. Die Spaltendaten werden vom Treiber entschlüsselt.|
@@ -623,7 +627,7 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 
 ### <a name="connection-attributes"></a>Verbindungsattribute
 
-|Name|type|BESCHREIBUNG|  
+|Name|Typ|BESCHREIBUNG|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Vor dem Herstellen einer Verbindung|`SQL_COLUMN_ENCRYPTION_DISABLE` (0): Always Encrypted wird deaktiviert. <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1): Always Encrypted wird aktiviert.<br> Zeiger auf *type*,*data* string (Version 17.4 und höher): Aktivierung mit Secure Enclave.|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Nach dem Herstellen einer Verbindung|[SET] Es wird versucht, „CEKeystoreProvider“ zu laden.<br>[GET] Ein CEKeystoreProvider-Name wird zurückgegeben.|
@@ -641,7 +645,7 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 
 |IPD-Feld|Größe/Typ|Standardwert|BESCHREIBUNG|
 |-|-|-|-|  
-|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 Bytes)|0|Bei 0 (Standardeinstellung): Entscheidung, ob dieser Parameter verschlüsselt wird, basiert auf der Verfügbarkeit von Verschlüsselungsmetadaten.<br><br>Bei ungleich 0: Parameter wird verschlüsselt, wenn Verschlüsselungsmetadaten dafür verfügbar sind. Andernfalls schlägt die Anforderung fehl [CE300] [Microsoft][ODBC Driver 13 for SQL Server] Die obligatorische Verschlüsselung wurde für einen Parameter angegeben, es wurden vom Server jedoch keine Verschlüsselungsmetadaten bereitgestellt.|
+|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 Bytes)|0|Bei 0 (Standardeinstellung): Entscheidung, ob dieser Parameter verschlüsselt wird, basiert auf der Verfügbarkeit von Verschlüsselungsmetadaten.<br><br>Bei ungleich 0: Parameter wird verschlüsselt, wenn Verschlüsselungsmetadaten dafür verfügbar sind. Andernfalls verursacht die Anforderung den Fehler [CE300] [Microsoft][ODBC Driver 17 for SQL Server]: Die obligatorische Verschlüsselung wurde für einen Parameter angegeben, es wurden vom Server jedoch keine Verschlüsselungsmetadaten bereitgestellt.|
 
 ### <a name="bcp_control-options"></a>Optionen für „bcp_control“
 

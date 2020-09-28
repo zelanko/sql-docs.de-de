@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2fe32e1a86273d071801fed9d2ffb8806d54ce6
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 79c86e34a759e65f858621932fea5772e51756e2
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922199"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899529"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Versionshinweise zu Microsoft ODBC Driver for SQL Server unter Linux und macOS
 
@@ -36,6 +36,18 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+
+## <a name="176-july-2020"></a>17.6 – Juli 2020
+
+| Neues Element | Details |
+| :------- | :------ |
+| Neue Verteilungen werden unterstützt | Ubuntu 20.04 |
+| Unterstützung der Verbundauthentifizierung | Weitere Informationen finden Sie unter [Verwenden von Azure Active Directory](../using-azure-active-directory.md). |
+| Zwischenspeichern von Metadaten für vorbereitete Anweisungen | Weitere Informationen finden Sie unter [Verwenden von Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| SQL_COPT_SS_AUTOBEGINTXN-Verbindungsattribut, das steuert, ob die automatische BEGIN TRANSACTION-Anweisung nach ROLLBACK oder COMMIT auftritt | Siehe [Schlüsselwörter und Attribute von DSN- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md). |
+| Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
+| &nbsp; | &nbsp; |
 
 ## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2, April 2020 (nur Alpine Linux)
 
@@ -91,7 +103,7 @@ Bei Verwendung von Always Encrypted mit Secure Enclaves und Azure Key Vault kön
 | Neues Element | Details |
 | :------- | :------ |
 | Neue Verteilungen werden unterstützt | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
-| Authentifizierungsmodus für (systemweite und benutzerseitig zugewiesene) verwaltete Azure Active Directory-Dienstidentitäten | Siehe [Using Azure Active Directory with the ODBC Driver (Verwenden von Azure Active Directory mit dem ODBC-Treiber)](../using-azure-active-directory.md) |
+| Modus für die Azure Active Directory-Authentifizierung mit einer (systemweit und benutzerseitig zugewiesenen) verwalteten Identität | Siehe [Using Azure Active Directory with the ODBC Driver (Verwenden von Azure Active Directory mit dem ODBC-Treiber)](../using-azure-active-directory.md) |
 | Übermitteln von Eingabeparametern für Always Encrypted-Spalten | Weitere Informationen finden Sie unter [Einschränkungen des ODBC-Treibers bei Verwendung von Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Verteilte XA-Transaktionen | Siehe [Using XA Transactions (Verwenden von XA-Transaktionen)](../use-xa-with-dtc.md)<br/><br/>XA ist ein Akronym für _eXtended Architecture_. Dabei handelt es sich um einen Standard für die Ausführung einer globalen Transaktion, die auf mehrere serverseitige Datenspeichersysteme zugreift. |
 | &nbsp; | &nbsp; |

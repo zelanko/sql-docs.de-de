@@ -1,6 +1,6 @@
 ---
 title: Verwenden der Datenbankspiegelung | Microsoft-Dokumentation
-description: In diesem Artikel wird die Verwendung der Datenbankspiegelung mit dem OLE DB-Treiber für SQL Server erläutert.
+description: Der OLE DB-Treiber für SQL Server unterstützt die Datenbankspiegelung. Entwickler müssen keine weiteren Schritte unternehmen, nachdem die Spiegelung für die Datenbank konfiguriert wurde.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], connecting clients to
 - MSOLEDBSQL, database mirroring
 - OLE DB Driver for SQL Server, database mirroring
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e52ee5af4b95ace60274846853d8d316363fe7da
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b396adab98a22b0f2c38a7f3e6aa4b169f72b395
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006866"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861637"
 ---
 # <a name="using-database-mirroring"></a>Verwenden der Datenbankspiegelung
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

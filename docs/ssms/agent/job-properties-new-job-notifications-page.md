@@ -1,4 +1,5 @@
 ---
+description: Auftragseigenschaften – Neuer Auftrag (Seite „Benachrichtigungen“)
 title: Auftragseigenschaften – Neuer Auftrag (Seite „Benachrichtigungen“)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,36 +14,36 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2d1bc2ec3aef699e491fdac2036352fd986fec85
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 81f82015ec76bbd17c2776c31ffdb22fb3856d05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85690607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88319476"
 ---
 # <a name="job-properties---new-job-notifications-page"></a>Auftragseigenschaften – Neuer Auftrag (Seite „Benachrichtigungen“)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Auf dieser Seite können Sie die Aktionen für den [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent festlegen, die bei Abschluss des Auftrags ausgeführt werden sollen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **E-Mail**  
-Diese Option wird ausgewählt, um bei Abschluss des Auftrags eine E-Mail zu senden. Nachdem Sie die Option ausgewählt haben, müssen Sie den zu benachrichtigenden Operator und die Bedingung auswählen, durch die die Benachrichtigung ausgelöst wird: **Bei erfolgreicher Auftragsausführung**; **bei Auftragsfehler** oder **beim Abschluss des Auftrags**.  
+Diese Option wird ausgewählt, um bei Abschluss des Auftrags eine E-Mail zu senden. Nachdem Sie die Option ausgewählt haben, müssen Sie den zu benachrichtigenden Operator und die Bedingung auswählen, durch die die Benachrichtigung ausgelöst wird. Die Bedingungen sind **Bei erfolgreicher Auftragsausführung**, **Bei Auftragsfehler**oder **Beim Abschluss des Auftrags**.  
   
 **Seite**  
-Diese Option wird ausgewählt, um eine E-Mail an den Pager des Operators zu senden, wenn der Auftrag abgeschlossen ist. Nachdem Sie die Option ausgewählt haben, müssen Sie den zu benachrichtigenden Operator und die Bedingung angeben, durch die die Benachrichtigung ausgelöst wird: **Bei erfolgreicher Auftragsausführung**; **bei Auftragsfehler** oder **beim Abschluss des Auftrags**.  
+Diese Option wird ausgewählt, um eine E-Mail an den Pager des Operators zu senden, wenn der Auftrag abgeschlossen ist. Nachdem Sie die Option ausgewählt haben, müssen Sie den zu benachrichtigenden Operator und die Bedingung auswählen, durch die die Benachrichtigung ausgelöst wird. Die Bedingungen sind **Bei erfolgreicher Auftragsausführung**, **Bei Auftragsfehler**oder **Beim Abschluss des Auftrags**.  
   
 **NET SEND**  
-Diese Option wird ausgewählt, um einen Operator bei Abschluss des Auftrags über net send zu benachrichtigen. Nachdem Sie die Option ausgewählt haben, müssen Sie den zu benachrichtigenden Operator und die Bedingung angeben, durch die die Benachrichtigung ausgelöst wird: **Bei erfolgreicher Auftragsausführung**; **bei Auftragsfehler** oder **beim Abschluss des Auftrags**.  
+Diese Option wird ausgewählt, um einen Operator bei Abschluss des Auftrags über net send zu benachrichtigen. Nachdem Sie die Option ausgewählt haben, müssen Sie den zu benachrichtigenden Operator und die Bedingung auswählen, durch die die Benachrichtigung ausgelöst wird. Die Bedingungen sind **Bei erfolgreicher Auftragsausführung**, **Bei Auftragsfehler**oder **Beim Abschluss des Auftrags**.  
   
 **In das Windows-Anwendungsereignisprotokoll schreiben**  
-Diese Option wird ausgewählt, um bei Abschluss des Auftrags einen Eintrag in das Anwendungsereignisprotokoll zu schreiben. Geben Sie nach Auswahl dieser Option die Bedingung an, durch die veranlasst wird, dass der Eintrag geschrieben wird: **Bei erfolgreicher Auftragsausführung**; **bei Auftragsfehler** oder **beim Abschluss des Auftrags**.  
+Diese Option wird ausgewählt, um bei Abschluss des Auftrags einen Eintrag in das Anwendungsereignisprotokoll zu schreiben. Nachdem Sie die Option ausgewählt haben, müssen Sie die Bedingung angeben, durch die veranlasst wird, dass der Eintrag geschrieben wird. Die Bedingungen sind **Bei erfolgreicher Auftragsausführung**, **Bei Auftragsfehler**und **Beim Abschluss des Auftrags**.  
   
 **Auftrag automatisch löschen**  
-Diese Option wird ausgewählt, um den Auftrag bei Abschluss zu löschen. Geben Sie nach Auswahl dieser Option die Bedingung an, durch die veranlasst wird, dass der Auftrag gelöscht wird: **Bei erfolgreicher Auftragsausführung**; **bei Auftragsfehler** oder **beim Abschluss des Auftrags**.  
+Diese Option wird ausgewählt, um den Auftrag bei Abschluss zu löschen. Nachdem Sie die Option ausgewählt haben, müssen Sie die Bedingung angeben, durch die veranlasst wird, dass der Auftrag gelöscht wird. Die Bedingungen sind **Bei erfolgreicher Auftragsausführung**, **Bei Auftragsfehler**und **Beim Abschluss des Auftrags**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)  

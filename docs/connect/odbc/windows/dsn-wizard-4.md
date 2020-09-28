@@ -1,4 +1,5 @@
 ---
+description: Bildschirm 4 des Datenquellen-Assistenten (ODBC Driver for SQL Server)
 title: Datenquellen-Assistent (Bildschirm 4); ODBC-Treiber für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e35eae2e827b1fb0885eeaf5c953f64bddc7c3d9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6d1f72323f3db7db1f0f9c0084ef3da9de034490
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462182"
 ---
 # <a name="data-source-wizard-screen-4"></a>Datenquellen-Assistent (Bildschirm 4)
 
 Geben Sie die Sprache an, die für SQL Server-Meldungen verwendet werden soll, die Übersetzung des Zeichensatzes, und ob der ODBC Driver for SQL Server Einstellungen für Land/Region verwenden soll. Sie können auch die Protokollierung von Abfragen mit langer Ausführungszeit und die Einstellungen der Treiberstatistik steuern.
 
-## <a name="options"></a>Tastatur
+## <a name="options"></a>Optionen
 
 ### <a name="change-the-language-of-sql-server-system-messages-to"></a>Ändern der Sprache von SQL Server-Systemmeldungen in
 

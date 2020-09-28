@@ -2,7 +2,7 @@
 title: Verwenden von Massenkopieren mit dem JDBC Driver
 description: Mit der SQLServerBulkCopy-Klasse können Sie Datenladelösungen in Java schreiben, die gegenüber den standardmäßigen JDBC-APIs bedeutende Leistungsvorteile bieten.
 ms.custom: ''
-ms.date: 07/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3af2624e46e6e61516ce015760544de3ca112e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245009"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042213"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Verwenden von Massenkopieren mit dem JDBC Driver
 
@@ -357,6 +357,36 @@ public class BulkCopyMultiple {
  Massenkopiervorgänge können als isolierte Vorgänge oder im Rahmen einer aus mehreren Schritten bestehenden Transaktion ausgeführt werden. Diese zweite Option ermöglicht Ihnen das Ausführen mehrerer Massenkopiervorgänge innerhalb der gleichen Transaktion sowie die Durchführung weiterer Datenbankvorgänge (wie etwa Einfüge-, Aktualisierungs- und Löschvorgänge), während die Möglichkeit zum Commit oder Rollback der gesamten Transaktion erhalten bleibt.  
   
  Standardmäßig wird ein Massenkopiervorgang als isolierter Vorgang ausgeführt. Der Massenkopiervorgang erfolgt nicht transaktional, ohne Möglichkeit zum Rollback. Wenn Sie für den Massenkopiervorgang beim Auftreten eines Fehlers einen teilweisen oder vollständigen Rollback ausführen müssen, können Sie eine von `SQLServerBulkCopy` verwaltete Transaktion verwenden oder den Massenkopiervorgang innerhalb einer vorhandenen Transaktion ausführen.  
+
+## <a name="extended-bulk-copy-for-azure-data-warehouse"></a>Erweitertes Massenkopieren für Azure Data Warehouse
+
+Mit der Treiberversion v8.4.1 wird die neue Verbindungseigenschaft `sendTemporalDataTypesAsStringForBulkCopy` hinzugefügt. Diese boolesche Eigenschaft ist standardmäßig auf `true` festgelegt.
+
+Wenn diese Verbindungseigenschaft auf `false` festgelegt ist, werden die Datentypen **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME** und **TIME** in Form ihrer jeweiligen Datentypen und nicht als Zeichenfolgen gesendet.
+
+Das Senden der temporalen Datentypen in Form ihrer jeweiligen Datentypen ermöglicht dem Benutzer das Senden von Daten an diese Spalten für Azure Synapse Analytics (SQL DW). Das war zuvor nicht möglich, weil der Treiber die Daten in Zeichenfolgen konvertierte. Das Senden von Zeichenfolgendaten an temporale Spalten funktioniert bei SQL Server, da SQL Server eine implizite Konvertierung für uns ausführt, was auf Azure Synapse Analytics (SQL DW) jedoch nicht zutrifft.
+
+Zusätzlich gilt: Selbst wenn diese Verbindungszeichenfolge nicht auf „false“ festgelegt wird, werden ab **v8.4.1** die Datentypen **MONEY** und **SMALLMONEY** als **MONEY** / **SMALLMONEY** anstatt als **DECIMAL** gesendet, wodurch diese Datentypen ebenfalls in einem Massenvorgang in Azure Synapse Analytics (SQL DW) kopiert werden können.
+
+### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>Einschränkungen beim erweiterten Massenkopieren für Azure Data Warehouse
+
+Derzeit gibt es zwei Einschränkungen:
+
+1. Wenn diese Verbindungseigenschaft auf `false` festgelegt ist, akzeptiert der Treiber für jeden temporalen Datentyp nur das Standardformat des Zeichenfolgenliterals. Beispiel:
+
+    `DATE: YYYY-MM-DD`
+
+    `DATETIME: YYYY-MM-DD hh:mm:ss[.nnn]`
+
+    `DATETIME2: YYYY-MM-DD hh:mm:ss[.nnnnnnn]`
+
+    `DATETIMEOFFSET: YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+/-}hh:mm]`
+
+    `SMALLDATETIME:YYYY-MM-DD hh:mm:ss`
+
+    `TIME: hh:mm:ss[.nnnnnnn]`
+
+2. Wenn diese Verbindungseigenschaft auf `false` festgelegt ist, muss bei dem für das Massenkopieren angegebenen Spaltentyp das [hier enthaltene](../../connect/jdbc/using-basic-data-types.md) Diagramm für Datentypzuordnungen berücksichtigt werden. Beispielsweise konnten Benutzer zuvor `java.sql.Types.TIMESTAMP` für das Massenkopieren von Daten in eine `DATE`-Spalte angeben. Wenn diese Funktion aktiviert ist, müssen sie jedoch `java.sql.Types.DATE` angeben, um denselben Vorgang auszuführen.
   
 ### <a name="performing-a-non-transacted-bulk-copy-operation"></a>Ausführen eines nicht transaktionalen Massenkopiervorgangs
 
@@ -455,7 +485,7 @@ public class BulkCopyNonTransacted {
 
 ### <a name="performing-a-dedicated-bulk-copy-operation-in-a-transaction"></a>Ausführen eines dedizierten Massenkopiervorgangs in einer Transaktion
 
-Standardmäßig werden bei einem Massenkopiervorgang keine Transaktionen selbst erstellt. Wenn Sie einen dedizierten Massenkopiervorgang ausführen möchten, erstellen Sie eine neue Instanz von `SQLServerBulkCopy` mit einer Verbindungszeichenfolge. In diesem Szenario wird jeder Batch des Massenkopiervorgangs implizit von der Datenbank committet. Sie können die `UseInternalTransaction`-Option in `SQLServerBulkCopyOptions` auf `true` festlegen, damit der Massenkopiervorgang Transaktionen erstellt und nach jedem Batch des Massenkopiervorgangs ein Commit ausgeführt wird.
+Standardmäßig werden bei einem Massenkopiervorgang keine Transaktionen selbst erstellt. Wenn Sie einen dedizierten Massenkopiervorgang ausführen möchten, erstellen Sie eine neue Instanz von `SQLServerBulkCopy` mit einer Verbindungszeichenfolge. In diesem Szenario wird jeder Batch des Massenkopiervorgangs implizit von der Datenbank committet. Sie können die `UseInternalTransaction`-Option in `SQLServerBulkCopyOptions` auf `true` festlegen, damit vom Massenkopiervorgang Transaktionen erstellt werden und nach jedem Batch des Massenkopiervorgangs ein Commit ausgeführt wird.
   
 ```java
 SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();
@@ -648,6 +678,15 @@ public class BulkCopyCSV {
     }
 }
 ```  
+
+### <a name="bulk-copy-with-delimiters-as-data-in-csv-file"></a>Massenkopieren mit Trennzeichen als Daten in einer CSV-Datei
+
+Mit der Treiberversion 8.4.1 wird die neue `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`-API eingeführt. Wenn diese auf „true“ festgelegt ist, gelten die folgenden Regeln:
+
+- Jedes Feld kann in doppelte Anführungszeichen eingeschlossen sein oder nicht.
+- Wenn Felder nicht in doppelte Anführungszeichen eingeschlossen sind, werden doppelte Anführungszeichen möglicherweise nicht innerhalb der Felder angezeigt.
+- Felder, die doppelte Anführungszeichen und Trennzeichen enthalten, müssen in doppelte Anführungszeichen eingeschlossen werden.
+- Wenn Felder mithilfe doppelter Anführungszeichen eingeschlossen werden, muss ein doppeltes Anführungszeichen innerhalb eines Felds mit einem Escapezeichen versehen werden, das einem weiteren vorangestellten doppelten Anführungszeichen entspricht.
 
 ### <a name="bulk-copy-with-always-encrypted-columns"></a>Massenkopieren mit Always Encrypted-Spalten  
 

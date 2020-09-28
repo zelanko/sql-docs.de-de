@@ -1,5 +1,6 @@
 ---
-title: Vorbereitetes Caching von Anweisungsmetadaten für den JDBC-Treiber | Microsoft-Dokumentation
+title: Vorbereitetes Caching von Anweisungsmetadaten für den JDBC-Treiber
+description: Erfahren Sie, wie vorbereitete Anweisungen vom JDBC-Treiber für SQL Server zwischengespeichert werden, um die Leistung zu verbessern, indem Aufrufe der Datenbank minimiert werden, und wie Sie dessen Verhalten steuern können.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8918be02b5dbb0e6decf49bc315b0ebd8c83e369
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 67b35e04ede8608d222c8fc31d89bfd01b093ba7
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923769"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435394"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Vorbereitetes Caching von Anweisungsmetadaten für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ Eine weitere Änderung, die von 6.1.6-preview eingeführt wurde, ist, dass der T
  
 |Methode „New“|BESCHREIBUNG|  
 |-----------|-----------------|  
-|int getDiscardedServerPreparedStatementCount()|Gibt die Anzahl der aktuell ausstehenden unprepare-Aktionen für ausstehende Prepared Statements zurück|
+|int getDiscardedServerPreparedStatementCount()|Gibt die Anzahl der aktuell ausstehenden Aktionen zum Rückgängigmachen der Vorbereitung für vorbereitete Anweisungen zurück.|
 |void closeUnreferencedPreparedStatementHandles()|Erzwingt, dass Anforderungen zum Rückgängigmachen der Vorbereitung für ausstehende verworfene vorbereitete Anweisungen ausgeführt werden.|
 |boolean getEnablePrepareOnFirstPreparedStatementCall()|Gibt das Verhalten einer bestimmten Verbindungsinstanz an. Bei „false“ ruft die erste Ausführung „sp_executesql“ auf und bereitet keine Anweisung vor. Sobald die zweite Ausführung erfolgt, ruft diese „sp_prepexec“ auf und richtet tatsächlich ein Handle für vorbereitete Anweisungen ein. Bei den folgenden Ausführungen wird „sp_execute“ aufgerufen. Dadurch ist „sp_unprepare“ nicht mehr für den Abschluss einer vorbereiteten Anweisung erforderlich, falls diese nur einmal ausgeführt wird. Der Standardwert für diese Option kann durch Aufrufen von setDefaultEnablePrepareOnFirstPreparedStatementCall() geändert werden.|
 |void setEnablePrepareOnFirstPreparedStatementCall(boolescher Wert)|Mit dieser Methode geben Sie das Verhalten einer bestimmten Verbindungsinstanz an. Bei „false“ ruft die erste Ausführung „sp_executesql“ auf und bereitet keine Anweisung vor. Sobald die zweite Ausführung erfolgt, ruft diese „sp_prepexec“ auf und richtet tatsächlich ein Handle für vorbereitete Anweisungen ein. Bei den folgenden Ausführungen wird „sp_execute“ aufgerufen. Dadurch ist „sp_unprepare“ nicht mehr für den Abschluss einer vorbereiteten Anweisung erforderlich, falls diese nur einmal ausgeführt wird.|
@@ -55,7 +56,7 @@ Eine weitere Änderung, die von 6.1.6-preview eingeführt wurde, ist, dass der T
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|Mit dieser Einstellung steuern Sie, wie viele ausstehende Aktionen zum Verwerfen vorbereiteter Anweisungen (sp_unprepare) pro Verbindung vorhanden sein dürfen, bevor ein Aufruf zum Bereinigen der ausstehenden Handles auf dem Server ausgeführt wird. Wenn diese Einstellung <= 1 ist, werden Aktionen zum Rückgängigmachen der Vorbereitung sofort nach Abschluss der vorbereiteten Anweisung ausgeführt. Wenn die Einstellung auf {@literal >} 1 festgelegt ist, werden diese Aufrufe in einem Batch zusammengefasst, um den Aufwand zu häufiger Aufrufe von „sp_unprepare“ zu vermeiden.|
 |int getServerPreparedStatementDiscardThreshold()|Mit dieser Einstellung steuern Sie, wie viele ausstehende Aktionen zum Verwerfen vorbereiteter Anweisungen (sp_unprepare) pro Verbindung vorhanden sein dürfen, bevor ein Aufruf zum Bereinigen der ausstehenden Handles auf dem Server ausgeführt wird. Wenn diese Einstellung <= 1 ist, werden Aktionen zum Rückgängigmachen der Vorbereitung sofort nach Abschluss der vorbereiteten Anweisung ausgeführt. Wenn die Einstellung auf {@literal >} 1 festgelegt ist, werden diese Aufrufe in einem Batch zusammengefasst, um den Aufwand zu häufiger Aufrufe von „sp_unprepare“ zu vermeiden.|
 
-## <a name="prepared-statement-metatada-caching"></a>Zwischenspeichern von Metadaten zu vorbereiteten Anweisungen
+## <a name="prepared-statement-metadata-caching"></a>Zwischenspeicherung von Metadaten einer vorbereiteten Anweisung
 Ab der 6.3.0-preview-Version unterstützt der Microsoft JDBC-Treiber für SQL Server das Zwischenspeichern vorbereiteter Anweisungen. Wenn vor v6.3.0-preview eine Abfrage ausgeführt wurde, die bereits vorbereitet war und im Cache gespeichert wurde, führte der erneute Aufruf derselben Abfrage nicht zu deren Vorbereitung. Nun sucht der Treiber die Abfrage im Cache, findet das Handle und führt es mit „sp_execute“ aus.
 Das Zwischenspeichern von Metadaten zu vorbereiteten Anweisungen ist **standardmäßig** deaktiviert. Um es zu aktivieren, müssen Sie die folgende Methode für das Verbindungsobjekt aufrufen:
 
@@ -74,8 +75,8 @@ Beispiel: `connection.setStatementPoolingCacheSize(10)`
 |void setDisableStatementPooling(boolescher Wert)|Diese Methode legt das Anweisungspooling auf TRUE oder FALSE fest.|
 |boolean getDisableStatementPooling()|Gibt „true“ zurück, wenn das Anweisungspooling deaktiviert ist.|
 |void setStatementPoolingCacheSize(int-Wert)|Legt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung fest. Bei einem kleineren Wert als 1 wird kein Cache verwendet.|
-|int getStatementPoolingCacheSize()|Gibt die Größe des Caches für Prepared Statements für diese Verbindung zurück Bei einem kleineren Wert als 1 wird kein Cache verwendet.|
-|int getStatementHandleCacheEntryCount()|Gibt die aktuelle Anzahl von Handles für Prepared Statements zurück, die in einem Pool zusammengefasst sind|
+|int getStatementPoolingCacheSize()|Sie gibt die Größe des Prepared Statement-Caches für diese Verbindung zurück. Bei einem kleineren Wert als 1 wird kein Cache verwendet.|
+|int getStatementHandleCacheEntryCount()|Gibt die aktuelle Anzahl von Handles für vorbereitete Anweisungen zurück, die in einem Pool zusammengefasst sind.|
 |boolean isPreparedStatementCachingEnabled()|Gibt zurück, ob für diese Verbindung Anweisungspooling aktiviert ist|
 
  **SQLServerDataSource**
@@ -85,7 +86,7 @@ Beispiel: `connection.setStatementPoolingCacheSize(10)`
 |void setDisableStatementPooling(boolesch disableStatementPooling)|Legt das Anweisungspooling auf „true“ oder „false“ fest.|
 |boolean getDisableStatementPooling()|Gibt „true“ zurück, wenn das Anweisungspooling deaktiviert ist.|
 |void setStatementPoolingCacheSize(int statementPoolingCacheSize)|Legt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung fest. Bei einem kleineren Wert als 1 wird kein Cache verwendet.|
-|int getStatementPoolingCacheSize()|Gibt die Größe des Caches für Prepared Statements für diese Verbindung zurück Bei einem kleineren Wert als 1 wird kein Cache verwendet.|
+|int getStatementPoolingCacheSize()|Sie gibt die Größe des Prepared Statement-Caches für diese Verbindung zurück. Bei einem kleineren Wert als 1 wird kein Cache verwendet.|
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  

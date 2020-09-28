@@ -1,7 +1,8 @@
 ---
-title: Ablaufverfolgung des Datenzugriffs mit dem ODBC-Treiber unter Linux und macOS | Microsoft-Dokumentation
+title: Datenzugriffs-Ablaufverfolgung mit dem ODBC-Treiber unter Linux und macOS
+description: Erfahren Sie, wie Sie mit dem Microsoft ODBC Driver for SQL Server die Ablaufverfolgung unter Linux und macOS aktivieren, um beim Behandeln von Problemen mit dem Anwendungsverhalten eine Protokolldatei auszugeben.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6abf282656681d3f798215282adb784b29c3846
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69f55104ed73f4d6468de3dcacca54d05cf0ac9a
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921989"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288203"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Datenzugriffs-Ablaufverfolgung mit dem ODBC-Treiber unter Linux und macOS
 
@@ -44,7 +45,7 @@ Die Ablaufverfolgung gilt für alle Anwendungen, die den Treiber in `odbcinst.in
 $ ODBCSYSINI=/home/myappuser myapp
 ```
 
-In diesem Fall können Sie `Trace=Yes` zum `[ODBC Driver 13 for SQL Server]`-Abschnitt von `/home/myappuser/odbcinst.ini` hinzufügen.
+In diesem Fall können Sie `Trace=Yes` zum `[ODBC Driver 17 for SQL Server]`-Abschnitt von `/home/myappuser/odbcinst.ini` hinzufügen.
 
 ## <a name="determining-which-odbcini-file-the-driver-is-using"></a>Bestimmen, welche odbc.ini-Datei der Treiber verwendet
 

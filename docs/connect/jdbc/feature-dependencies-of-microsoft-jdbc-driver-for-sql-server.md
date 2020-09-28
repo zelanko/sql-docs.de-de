@@ -2,7 +2,7 @@
 title: Featureabhängigkeiten des Microsoft JDBC-Treibers
 description: Erfahren Sie mehr über die Abhängigkeiten des Microsoft JDBC-Treibers für SQL Server und wie Sie ihnen gerecht werden.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 8/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a08c60322ba4cb75bef804eafb9a3e68e7df5de
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9e7c01c160848e5a0067db9d37b7e2dbe220386f
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631200"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042433"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server
 
@@ -45,20 +45,20 @@ Bei bestimmten Projekten, die eines der vorhergehenden Features benötigen, müs
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.2.jre11</version>
+    <version>8.4.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.6.4</version>
+    <version>1.6.5</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.7.0</version>
+    <version>1.7.4</version>
 </dependency>
 ```
 
@@ -68,26 +68,26 @@ Bei bestimmten Projekten, die eines der vorhergehenden Features benötigen, müs
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.2.jre11</version>
+    <version>8.4.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.6.4</version>
+    <version>1.6.5</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.7.0</version>
+    <version>1.7.4</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-keyvault</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.4</version>
 </dependency>
 ```
 
@@ -95,6 +95,7 @@ Bei bestimmten Projekten, die eines der vorhergehenden Features benötigen, müs
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Arbeiten mit dem Azure Key Vault-Anbieter:
 
+- Version 8.4.1 des JDBC-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.2.4), Adal4j (Version 1.6.5), Client-Runtime-for-AutoRest (1.7.4) und die jeweiligen Abhängigkeiten ([Beispielanwendung](azure-key-vault-sample-version-7.0.md))
 - Version 8.2.2 des JDBC-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.2.2), Adal4j (Version 1.6.4), Client-Runtime-for-AutoRest (1.7.0) und die jeweiligen Abhängigkeiten ([Beispielanwendung](azure-key-vault-sample-version-7.0.md))
 - Version 7.4.1 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.2.1), Adal4j (Version 1.6.4), Client-Runtime-for-AutoRest (1.6.10) und die jeweiligen Abhängigkeiten ([Beispielanwendung](azure-key-vault-sample-version-7.0.md))
 - Version 7.2.2 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.2.0), Azure-Keyvault-Webkey (Version 1.2.0), Adal4j (Version 1.6.3), Client-Runtime-for-AutoRest (1.6.5) und die jeweiligen Abhängigkeiten ([Beispielanwendung](azure-key-vault-sample-version-7.0.md))
@@ -110,6 +111,7 @@ Bei bestimmten Projekten, die eines der vorhergehenden Features benötigen, müs
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Arbeiten mit der Azure Active Directory-Authentifizierung:
 
+- Version 8.4.1 des JDBC-Treibers – Abhängigkeitsversionen: Adal4j (Version 1.6.5), Client-Runtime-for-AutoRest (1.7.4) und die jeweiligen Abhängigkeiten
 - Version 8.2.2 des JDBC-Treibers – Abhängigkeitsversionen: Adal4j (Version 1.6.4), Client-Runtime-for-AutoRest (1.7.0) und die jeweiligen Abhängigkeiten In dieser Treiberversion wurde „sqljdbc_auth.dll“ in „mssql-jdbc_auth-\<version>-\<arch>.dll“ umbenannt.
 - Version 7.4.1 des JDCB-Treibers – Abhängigkeitsversionen: Adal4j (Version 1.6.4), Client-Runtime-for-AutoRest (1.6.10) und die jeweiligen Abhängigkeiten
 - Version 7.2.2 des JDCB-Treibers – Abhängigkeitsversionen: Adal4j (Version 1.6.3), Client-Runtime-for-AutoRest (1.6.5) und die jeweiligen Abhängigkeiten

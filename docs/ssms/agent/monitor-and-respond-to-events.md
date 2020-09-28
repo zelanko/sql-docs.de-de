@@ -1,4 +1,5 @@
 ---
+description: Überwachen und Reagieren auf Ereignisse
 title: Überwachen und Reagieren auf Ereignisse
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,18 +23,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1a7ca692b7720906ead843b4579d7d023a4797e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4ffa92061bf4d3fca9214a9875a8bac41ec1c4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463101"
 ---
 # <a name="monitor-and-respond-to-events"></a>Überwachen und Reagieren auf Ereignisse
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann Ereignisse überwachen und automatisch auf *Ereignisse*reagieren. Zu diesen Ereignissen gehören Meldungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bestimmte Leistungsbedingungen, und WMI-Ereignisse (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation).  
   

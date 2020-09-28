@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d51ac079bf06938826bc343b1b3317e558964655
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487643"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installieren von Machine Learning in R und Python auf SQL Server-Computern ohne Internetzugang
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Standardmäßig stellen Installationsprogramme eine Verbindung mit Microsoft-Downloadwebsites her, um erforderliche und aktualisierte Komponenten für Machine Learning auf SQL Server-Instanzen zu erhalten. Wenn Firewallbeschränkungen den Zugriff des Installationsprogramms auf diese Websites verhindern, können Sie über ein mit dem Internet verbundenes Gerät Dateien herunterladen, die Dateien auf einen Offlineserver übertragen und dann das Setup ausführen.
 
@@ -215,4 +215,4 @@ Eine anfängliche Offlineinstallation von SQL Server R Services erfordert die gl
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Hilfe zu unbekannten Meldungen oder Protokolleinträgen finden Sie unter [Häufig gestellte Fragen zu Upgrade und Installation – Machine Learning Services](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md).
+Informationen zur Verwendung von Machine Learning Services zur Ausführung von Python- und R-Skripts in der Datenbank finden Sie unter [Installieren von SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).

@@ -1,6 +1,6 @@
 ---
 title: Erstellen von RxSqlServerData-Objekten
-description: 'Tutorial 2 zu RevoScaleR: Erstellen von Datenobjekten mithilfe der R-Programmiersprache unter SQL Server'
+description: Erfahren Sie, wie Sie die RevoScaleR-Funktionen mit SQL Server verwenden können. Dieses Tutorial ist eine Fortsetzung der Datenbankerstellung „Hinzufügen von Tabellen und Laden von Daten“.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2c7daa106429f4db1382a3e73aa6b280b14dc57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728614"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178807"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Erstellen von SQL Server-Datenobjekten mithilfe von RxSqlServerData (Tutorial zu SQL Server und RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Dies ist das zweite Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
@@ -145,7 +145,7 @@ Das **RevoScaleR**-Paket enthält Funktionen, die spezifisch für Datenquellenty
     
     Wenn nach einer kurzen Pause keine Probleme mit der Verbindungszeichenfolge auftreten, sollten Sie Ergebnisse wie diese sehen:
   
-    *Geschriebene Zeilen gesamt: 10.000, Gesamtzeit: 0,466* *Gelesene Zeilen: 10.000, Gesamte verarbeitete Zeilen: 10.000, Gesamte Blockzeit: 0,577 Sekunden*
+    *Total Rows written: 10000, Total time: 0.466* *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*
   
 5. Aktualisieren Sie die Liste der Tabellen. Um sicherzustellen, dass jede Variable über die korrekten Datentypen verfügt und erfolgreich importiert wurde, können Sie auch mit der rechten Maustaste in die Tabelle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] klicken und die Option **Oberste 1000 Zeilen auswählen** auswählen.
 

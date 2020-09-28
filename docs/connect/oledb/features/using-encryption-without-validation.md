@@ -1,6 +1,6 @@
 ---
 title: Verwenden von Verschlüsselung ohne Überprüfung | Microsoft-Dokumentation
-description: Verwenden von Verschlüsselung ohne Überprüfung
+description: Erfahren Sie mehr über die Verschlüsselung ohne Überprüfung für SQL Server-Verbindungen. Der OLE DB-Treiber für SQL Server unterstützt die Verschlüsselung ohne Überprüfung.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, encryption
 - encryption [OLE DB Driver for SQL Server]
 - OLE DB Driver for SQL Server, encryption
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e728440447e9e7dbdd13ce52a60781ea3b240ebe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b4e69fcc506f8e52dc8104067b9e7454e4022f5
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006858"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861623"
 ---
 # <a name="using-encryption-without-validation"></a>Verwenden von Verschlüsselung ohne Überprüfung
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,9 +42,9 @@ Weitere Informationen zu Verbindungszeichenfolgen-Schlüsselwörtern finden Sie 
   
 |Protokollverschlüsselung erzwingen - Clienteinstellung|Dem Serverzertifikat vertrauen|Verbindungszeichenfolge-/Verbindungsattribut 'Verschlüsseln/Verschlüsselung für Daten verwenden'|Verbindungszeichenfolge/Verbindungsattribut 'Dem Serverzertifikat vertrauen'|Ergebnis|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|Nein|–|Nein (Standard)|Wird ignoriert.|Keine Verschlüsselung.|  
-|Nein|–|Ja|Nein (Standard)|Eine Verschlüsselung findet nur statt, wenn ein überprüfbares Serverzertifikat vorliegt, anderenfalls schlägt der Verbindungsversuch fehl.|  
-|Nein|–|Ja|Ja|Verschlüsselung wird immer durchgeführt, es wird jedoch z. B. ein selbstsigniertes Serverzertifikat verwendet.|  
+|Nein|N/V|Nein (Standard)|Wird ignoriert.|Keine Verschlüsselung.|  
+|Nein|N/V|Ja|Nein (Standard)|Eine Verschlüsselung findet nur statt, wenn ein überprüfbares Serverzertifikat vorliegt, anderenfalls schlägt der Verbindungsversuch fehl.|  
+|Nein|N/V|Ja|Ja|Verschlüsselung wird immer durchgeführt, es wird jedoch z. B. ein selbstsigniertes Serverzertifikat verwendet.|  
 |Ja|Nein|Wird ignoriert.|Wird ignoriert.|Eine Verschlüsselung findet nur statt, wenn ein überprüfbares Serverzertifikat vorliegt, anderenfalls schlägt der Verbindungsversuch fehl.|  
 |Ja|Ja|Nein (Standard)|Wird ignoriert.|Verschlüsselung wird immer durchgeführt, es wird jedoch z. B. ein selbstsigniertes Serverzertifikat verwendet.|  
 |Ja|Ja|Ja|Nein (Standard)|Eine Verschlüsselung findet nur statt, wenn ein überprüfbares Serverzertifikat vorliegt, anderenfalls schlägt der Verbindungsversuch fehl.|  

@@ -1,4 +1,5 @@
 ---
+description: 'Always Encrypted: API-Referenz für den JDBC-Treiber'
 title: 'Always Encrypted: API-Referenz für den JDBC-Treiber | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7b5e17a6b7a98101eac8e3ddbb29a8438bc10075
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3f6ac184e3a514bab20802d3513691eb4b3295af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75681701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438512"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Always Encrypted: API-Referenz für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -75,8 +76,8 @@ ms.locfileid: "75681701"
   
 |Name|BESCHREIBUNG|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Entschlüsselt den angegebenen verschlüsselten Wert eines CEK. Es wird erwartet, dass der verschlüsselte Wert verschlüsselt wird, indem das Zertifikat mit dem angegebenen Schlüsselpfad sowie der angegebene Algorithmus verwendet wird.<br /><br /> **Das Format des Schlüsselpfads sollte eines der folgenden sein:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Überschreibt SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Verschlüsselt einen CEK, indem das Zertifikat mit dem angegebenen Schlüsselpfad und der angegebene Algorithmus verwendet wird.<br /><br /> **Das Format des Schlüsselpfads sollte eines der folgenden sein:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Überschreibt SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Entschlüsselt den angegebenen verschlüsselten Wert eines Spaltenverschlüsselungsschlüssels. Es wird erwartet, dass der verschlüsselte Wert mit dem Zertifikat mit dem angegebenen Schlüsselpfad und mit dem angegebenen Algorithmus verschlüsselt wird.<br /><br /> **Das Format des Schlüsselpfads sollte eines der folgenden sein:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Überschreibt SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Verschlüsselt einen Spaltenverschlüsselungsschlüssel mithilfe des Zertifikats mit dem angegebenen Schlüsselpfad und angegebenen Algorithmus.<br /><br /> **Das Format des Schlüsselpfads sollte eines der folgenden sein:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Überschreibt SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |`public void setName (String name)`|Legt den Namen dieses Keystoreanbieters fest.|
 |`public String getName ()`|Ruft den Namen dieses Keystoreanbieters ab.|
   
@@ -116,7 +117,7 @@ ms.locfileid: "75681701"
   
 |Name|BESCHREIBUNG|  
 |----------|-----------------|  
-|SQLServerColumnEncryptionKeyStoreProvider|Basisklasse für alle Schlüsselspeicheranbieter. Ein benutzerdefinierter Anbieter muss von dieser Klasse abgeleitet werden, seine Memberfunktionen überschreiben und dann mithilfe von SQLServerConnection registriert werden. registerColumnEncryptionKeyStoreProviders().|  
+|SQLServerColumnEncryptionKeyStoreProvider|Die Basisklasse für alle Schlüsselspeicheranbieter. Ein benutzerdefinierter Anbieter muss von dieser Klasse abgeleitet werden, seine Memberfunktionen überschreiben und dann mithilfe von SQLServerConnection registriert werden. registerColumnEncryptionKeyStoreProviders().|  
   
  Methoden  
   
@@ -161,7 +162,7 @@ Neue Typen in der **microsoft.sql.Types**-Klasse
   
  **SQLServerStatementColumnEncryptionSetting-Enumeration**  
   
- Gibt an, wie Daten beim Lesen und Schreiben von verschlüsselten Spalten gesendet und empfangen werden. Je nach Abfrage können Leistungseinbußen möglicherweise durch Umgehen der Verarbeitung des Always Encrypted-Treibers verringert werden, wenn nicht verschlüsselte Spalten verwendet werden. Beachten Sie, dass diese Einstellungen nicht dazu verwendet werden können, um die Verschlüsselung zu umgehen und Zugriff auf Klartextdaten zu erhalten.  
+ Gibt an, wie Daten beim Lesen und Schreiben von verschlüsselten Spalten gesendet und empfangen werden. Je nach spezifischer Abfrage können Leistungseinbußen möglicherweise durch Umgehen der Verarbeitung des Always Encrypted-Treibers verringert werden, wenn nicht verschlüsselte Spalten verwendet werden. Beachten Sie, dass diese Einstellungen nicht dazu verwendet werden können, um die Verschlüsselung zu umgehen und Zugriff auf Klartextdaten zu erhalten.  
   
  **Syntax**  
   
@@ -173,10 +174,10 @@ Public enum  SQLServerStatementColumnEncryptionSetting
   
 |Name|BESCHREIBUNG|  
 |----------|-----------------|  
-|UseConnectionSetting|Gibt an, dass der Befehl in der Verbindungszeichenfolge standardmäßig die Always Encrypted-Einstellung verwenden soll.|  
-|Enabled|Aktiviert Always Encrypted für die Abfrage.|  
-|ResultSetOnly|Gibt an, dass nur die Ergebnisse des Befehls von der Always Encrypted-Routine im Treiber verarbeitet werden sollen. Verwenden Sie diesen Wert, wenn der Befehl keine Parameter aufweist, die eine Verschlüsselung erfordern.|  
-|Disabled|Deaktiviert Always Encrypted für die Abfrage.|  
+|UseConnectionSetting|Gibt an, dass der Befehl standardmäßig die Einstellung für die grundsätzliche Verschlüsselung in der Verbindungszeichenfolge verwenden sollte.|  
+|Aktiviert|Aktiviert die grundsätzliche Verschlüsselung für die Abfrage.|  
+|ResultSetOnly|Gibt an, dass nur die Ergebnisse des Befehls von der Routine für die grundsätzliche Verschlüsselung im Treiber verarbeitet werden sollen. Verwenden Sie diesen Wert, wenn der Befehl keine Parameter aufweist, die eine Verschlüsselung erfordern.|  
+|Disabled|Deaktiviert die grundsätzliche Verschlüsselung für die Abfrage.|  
   
  Die Einstellung für Always Encrypted auf Anweisungsebene wird zur SQLServerConnection- und zur SQLServerConnectionPoolProxy-Klasse hinzugefügt. Die folgenden Methoden in diesen Klassen werden mit der neuen Einstellung überladen.  
   

@@ -2,7 +2,7 @@
 title: Verwenden von JDBC-Standarddatentypen
 description: Der Microsoft JDBC-Treiber für SQL Server verwendet grundlegende JDBC-Datentypen, um SQL Server-Datentypen in ein Format zu konvertieren, das von Java interpretiert werden kann.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 08/24/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 3c26c3c065ddf415d966c8fd3613e284c3c7a2b6
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728374"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807002"
 ---
 # <a name="using-basic-data-types"></a>Verwenden von Standarddatentypen
 
@@ -35,9 +35,9 @@ Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!
 | bit                | BIT                                                | boolean                      |
 | char               | CHAR                                               | String                       |
 | date               | DATE                                               | java.sql.Date                |
-| datetime           | timestamp                                          | java.sql.Timestamp           |
+| datetime<sup>3</sup>          | timestamp                               | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
-| datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
+| datetimeoffset<sup>2</sup> | microsoft.sql.Types.DATETIMEOFFSET         | microsoft.sql.DateTimeOffset |
 | Decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | float              | Double                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
@@ -53,7 +53,7 @@ Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!
 | SMALLINT           | SMALLINT                                           | short                        |
 | SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
-| time               | TIME (1)                                           | java.sql.Time (1)            |
+| time               | TIME<sup>1</sup>                                   | java.sql.Time<sup>1</sup>            |
 | timestamp          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
@@ -67,9 +67,11 @@ Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!
 | Geometrie           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) Zur Verwendung von java.sql.Time mit dem Zeittyp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf „false“ festlegen.  
+<sup>1</sup> Zur Verwendung von java.sql.Time mit dem Zeittyp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf „false“ festlegen.  
   
-(2) Sie können mit der [DateTimeOffset-Klasse](reference/datetimeoffset-class.md) programmgesteuert auf die Werte von **datetimeoffset** zugreifen.  
+<sup>2</sup> Sie können mit der [DateTimeOffset-Klasse](reference/datetimeoffset-class.md) programmgesteuert auf die Werte von **datetimeoffset** zugreifen.  
+  
+<sup>3</sup> Beachten Sie, dass die java.sql.Timestamp-Werte ab SQL Server 2016 nicht mehr zum Vergleichen von Werten aus einer datetime-Spalte verwendet werden können. Diese Einschränkung ist auf eine serverseitige Änderung zurückzuführen, durch die „datetime“ auf andere Weise in „datetime2“ konvertiert wird, wodurch die Werte nicht äquivalent sind. Sie können dieses Problem umgehen, indem Sie entweder die datetime-Spalten in „datetime2(3)“ ändern, „String“ anstelle von java.sql.Timestamp verwenden oder den Datenbankkompatibilitätsgrad mindestens auf 120 herabsetzen.
   
 Die folgenden Abschnitte enthalten Beispiele für die Verwendung des JDBC-Treibers und der Standarddatentypen. Ein ausführlicheres Beispiel für die Verwendung der Standarddatentypen in einer Java-Anwendung finden Sie unter [Standarddatentypen – Beispiel](basic-data-types-sample.md).  
   
@@ -81,7 +83,7 @@ Wenn Sie Daten aus einer Datenquelle abrufen müssen, die einem der JDBC-Standar
   
 ## <a name="retrieving-data-by-data-type"></a>Abrufen von Daten nach Datentyp
 
-Wenn Sie Daten aus einer Datenquelle abrufen müssen und den Typ der abgerufenen Daten kennen, verwenden Sie eine der get\<Type>-Methoden der SQLServerResultSet-Klasse, die auch als *getter*-Methoden bezeichnet werden. Sie können bei den get\<Type>-Methoden einen Spaltennamen oder einen Spaltenindex verwenden, wie im Folgenden dargestellt:  
+Wenn Sie Daten aus einer Datenquelle abrufen müssen und den Typ der abgerufenen Daten kennen, verwenden Sie eine der get\<Type>-Methoden der SQLServerResultSet-Klasse, die auch als *getter-Methoden* bezeichnet werden. Sie können bei den get\<Type>-Methoden einen Spaltennamen oder einen Spaltenindex verwenden, wie im Folgenden dargestellt:  
   
 [!code[JDBC#UsingBasicDataTypes2](codesnippet/Java/using-basic-data-types_2.java)]  
   
@@ -90,7 +92,7 @@ Wenn Sie Daten aus einer Datenquelle abrufen müssen und den Typ der abgerufenen
 
 ## <a name="updating-data-by-data-type"></a>Aktualisieren von Daten nach Datentyp
 
-Wenn Sie den Wert eines Felds in einer Datenquelle aktualisieren müssen, verwenden Sie eine der update\<Typ>-Methoden der SQLServerResultSet-Klasse. Im folgenden Beispiel wird die [updateInt](reference/updateint-method-sqlserverresultset.md)-Methode zusammen mit der [updateRow](reference/updaterow-method-sqlserverresultset.md)-Methode verwendet, um die Daten in der Datenquelle zu aktualisieren:  
+Wenn Sie den Wert eines Felds in einer Datenquelle aktualisieren müssen, verwenden Sie eine der update\<Type>-Methoden der SQLServerResultSet-Klasse. Im folgenden Beispiel wird die [updateInt](reference/updateint-method-sqlserverresultset.md)-Methode zusammen mit der [updateRow](reference/updaterow-method-sqlserverresultset.md)-Methode verwendet, um die Daten in der Datenquelle zu aktualisieren:  
   
 [!code[JDBC#UsingBasicDataTypes3](codesnippet/Java/using-basic-data-types_3.java)]  
   
