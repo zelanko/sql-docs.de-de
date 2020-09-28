@@ -2,7 +2,7 @@
 title: Unterstützungsmatrix für Microsoft-Treiber für PHP
 description: Auf dieser Seite finden Sie die Unterstützungsmatrix und die Support Lifecycle-Richtlinie für die Microsoft PHP-Treiber für SQL Server.
 ms.custom: ''
-ms.date: 04/15/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 635c6ecbe6404b7e5466ecf5929dd2330183e7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 778d9aa4ee666ba3719095508d5f5e28516f954d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85793146"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87942159"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Unterstützungsmatrix für Microsoft-PHP-Treiber für SQL Server
 
@@ -53,26 +53,29 @@ Die folgenden Microsoft PHP-Treiber werden nicht mehr unterstützt.
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>Zertifizierte Kompatibilität mit SQL Server-Version
- In der folgenden Matrix sind SQL Server-Versionen aufgelistet, die als kompatibel mit der entsprechenden Treiberversion getestet und zertifiziert wurden. Wir streben an, die Abwärtskompatibilität mit früheren Treiberversionen aufrechtzuerhalten, aber nur der neueste unterstützte Treiber wird mit neuen SQL Server-Versionen getestet und zertifiziert, wenn diese veröffentlicht werden.
+ In der folgenden Matrix sind Datenbankversionen aufgelistet, die als kompatibel mit der entsprechenden Treiberversion getestet und zertifiziert wurden. Wir streben an, die Abwärtskompatibilität mit früheren Treiberversionen aufrechtzuerhalten, aber nur der neueste unterstützte Treiber wird mit neuen SQL Server-Versionen getestet und zertifiziert, wenn diese veröffentlicht werden.
 
-|Version des PHP für SQL Server-Treibers &#8594;<br />&#8595; SQL Server-Version|5.8|5.6|5.3|5,2|4.3|4,0|3.2|
+|Treiberversion&nbsp;&#8594;<br />&#8595; Datenbankversion|5.8|5.6|5.3|5,2|4.3|4,0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Verwaltete Azure SQL-Instanz|J|J|J|J|J| | |
-|Azure SQL Data Warehouse|J|J|J|J|J| | |
-|SQL Server 2019         |J| | | | | | |
-|SQL Server 2017         |J|J|J|J|J| | |
-|SQL Server 2016         |J|J|J|J|J|J| |
-|SQL Server 2014         |J|J|J|J|J|J|J|
-|SQL Server 2012         |J|J|J|J|J|J|J|
-|SQL Server 2008 R2      | |J|J|J|J|J|J|
-|SQL Server 2008         | | | | | |J|J|
+|Azure SQL-Datenbank        |Ja|Ja|Ja|Ja|Ja|   |   |
+|Verwaltete Azure SQL-Instanz|Ja|Ja|Ja|Ja|Ja|   |   |
+|Azure Synapse Analytics   |Ja|Ja|Ja|Ja|Ja|   |   |
+|SQL Server 2019           |Ja|   |   |   |   |   |   |
+|SQL Server 2017           |Ja|Ja|Ja|Ja|Ja|   |   |
+|SQL Server 2016           |Ja|Ja|Ja|Ja|Ja|Ja|   |
+|SQL Server 2014           |Ja|Ja|Ja|Ja|Ja|Ja|Ja|
+|SQL Server 2012           |Ja|Ja|Ja|Ja|Ja|Ja|Ja|
+|SQL Server 2008 R2        |   |Ja|Ja|Ja|Ja|Ja|Ja|
+|SQL Server 2008           |   |   |   |   |   |Ja|Ja|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+Weitere Informationen zur Verwendung von PHP mit Azure SQL-Datenbank finden Sie unter [Herstellen einer Verbindung mit einer Microsoft Azure SQL-Datenbank](connecting-to-microsoft-azure-sql-database.md).
 
 ## <a name="php-version-support"></a>Unterstützung von PHP-Versionen
 
 Die folgenden PHP-Versionen werden mit der aufgelisteten Version der Microsoft PHP-Treiber unterstützt:
 
-|Version des PHP für SQL Server-Treibers &#8594;<br />&#8595; PHP-Version|5.8|5.6|5.3|5,2|4.3|4,0|3.2|
+|Treiberversion&nbsp;&#8594;<br />&#8595; PHP-Version|5.8|5.6|5.3|5,2|4.3|4,0|3.2|
 |:---:|---|---|---|---|---|---|---|
 |7.4|7.4.0+          |                |                |                |       |        |        |
 |7.3|7.3.0+          |7.3.0+          |                |                |       |        |        |
@@ -90,46 +93,47 @@ Die folgenden PHP-Versionen werden mit der aufgelisteten Version der Microsoft P
 
 Die folgenden Versionen des Windows-Betriebssystems werden mit der aufgelisteten Version der Microsoft PHP-Treiber unterstützt:
 
-|Version des PHP für SQL Server-Treibers &#8594;<br />&#8595; Betriebssystem|5.8|5.6|5.3|5,2|4.3|4,0|3.2|
+|Treiberversion&nbsp;&#8594;<br />&#8595; Betriebssystem|5.8|5.6|5.3|5,2|4.3|4,0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Windows Server 2019                 |J  |J  |   |   |   |   |   |
-|Windows Server 2016                 |J  |J  |J  |J  |J  |   |   |
-|Windows Server 2012 R2              |J  |J  |J  |J  |J  |J  |J  |
-|Windows Server 2012                 |J  |J  |J  |J  |J  |J  |J  |
-|Windows Server 2008 R2 SP1          |   |   |   |   |   |J  |J  |
+|Windows Server 2019                 |Ja|Ja|   |   |   |   |   |
+|Windows Server 2016                 |Ja|Ja|Ja|Ja|Ja|   |   |
+|Windows Server 2012 R2              |Ja|Ja|Ja|Ja|Ja|Ja|Ja|
+|Windows Server 2012                 |Ja|Ja|Ja|Ja|Ja|Ja|Ja|
+|Windows Server 2008 R2 SP1          |   |   |   |   |   |Ja|Ja|
 |Windows Server 2008 R2              |   |   |   |   |   |   |   |
-|Windows Server 2008 SP2             |   |   |   |   |   |J  |J  |
-|Windows 10                          |J  |J  |J  |J  |J  |J  |   |
-|Windows 8.1                         |J  |J  |J  |J  |J  |J  |J  |
-|Windows 8                           |   |   |   |   |J  |J  |J  |
-|Windows 7 SP1                       |   |   |   |   |   |J  |J  |
-|Windows Vista SP2                   |   |   |   |   |   |J  |J  |
+|Windows Server 2008 SP2             |   |   |   |   |   |Ja|Ja|
+|Windows 10                          |Ja|Ja|Ja|Ja|Ja|Ja|   |
+|Windows 8.1                         |Ja|Ja|Ja|Ja|Ja|Ja|Ja|
+|Windows 8                           |   |   |   |   |Ja|Ja|Ja|
+|Windows 7 SP1                       |   |   |   |   |   |Ja|Ja|
+|Windows Vista SP2                   |   |   |   |   |   |Ja|Ja|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 Die folgenden Versionen des Linux- und macOS-Betriebssystems (nur 64-Bit) werden mit der aufgelisteten Version der Microsoft PHP-Treiber unterstützt:
 
-|Version des PHP für SQL Server-Treibers &#8594;<br />&#8595; Betriebssystem|5.8|5.6|5.3|5,2|4.3|4,0|3.2|
+|Treiberversion&nbsp;&#8594;<br />&#8595; Betriebssystem|5.8|5.6|5.3|5,2|4.3|4,0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Ubuntu 19.10 (64-Bit)               |J  |   |   |   |   |   |   |
-|Ubuntu 18.10 (64 Bit)               |   |J  |   |   |   |   |   |
-|Ubuntu 18.04 (64 Bit)               |J  |J  |J  |   |   |   |   |
-|Ubuntu 17.10 (64 Bit)               |   |   |J  |J  |   |   |   |
-|Ubuntu 16.04 (64 Bit)               |J  |J  |J  |J  |J  |J  |   |
-|Ubuntu 15.10 (64 Bit)               |   |   |   |   |J  |   |   |
-|Ubuntu 15.04 (64 Bit)               |   |   |   |   |   |J  |   |
-|Debian 10 (nur 64-Bit)                  |J  |   |   |   |   |   |   |
-|Debian 9 (nur 64-Bit)                   |J  |J  |J  |J  |   |   |   |
-|Debian 8 (nur 64-Bit)                   |J  |J  |J  |J  |J  |   |   |
-|Red Hat Enterprise Linux 8 (64-Bit) |J  |   |   |   |   |   |   |
-|Red Hat Enterprise Linux 7 (64-Bit) |J  |J  |J  |J  |J  |J  |   |
-|Suse Enterprise Linux 15 (64-Bit)   |J  |J  |   |   |   |   |   |
-|Suse Enterprise Linux 12 (64-Bit)   |J  |J  |J  |J  |   |   |   |
-|Alpine Linux 3.11 (64-Bit)<sup>1</sup>|J  |   |   |   |   |   |   |
-|macOS Catalina (64-Bit)             |J  |   |   |   |   |   |   |
-|macOS Mojave (64-Bit)               |J  |J  |   |   |   |   |   |
-|macOS High Sierra (64-Bit)          |J  |J  |J  |   |   |   |   |
-|macOS Sierra (64-Bit)               |   |J  |J  |J  |J  |   |   |
-|macOS El Capitan (64-Bit)           |   |   |J  |J  |J  |   |   |
+|Ubuntu 20.04 (64 Bit)               |Ja|   |   |   |   |   |   |
+|Ubuntu 19.10 (64-Bit)               |Ja|   |   |   |   |   |   |
+|Ubuntu 18.10 (64 Bit)               |   |Ja|   |   |   |   |   |
+|Ubuntu 18.04 (64 Bit)               |Ja|Ja|Ja|   |   |   |   |
+|Ubuntu 17.10 (64 Bit)               |   |   |Ja|Ja|   |   |   |
+|Ubuntu 16.04 (64 Bit)               |Ja|Ja|Ja|Ja|Ja|Ja|   |
+|Ubuntu 15.10 (64 Bit)               |   |   |   |   |Ja|   |   |
+|Ubuntu 15.04 (64 Bit)               |   |   |   |   |   |Ja|   |
+|Debian 10 (nur 64-Bit)                  |Ja|   |   |   |   |   |   |
+|Debian 9 (nur 64-Bit)                   |Ja|Ja|Ja|Ja|   |   |   |
+|Debian 8 (nur 64-Bit)                   |Ja|Ja|Ja|Ja|Ja|   |   |
+|Red Hat Enterprise Linux 8 (64-Bit) |Ja|   |   |   |   |   |   |
+|Red Hat Enterprise Linux 7 (64-Bit) |Ja|Ja|Ja|Ja|Ja|Ja|   |
+|Suse Enterprise Linux 15 (64-Bit)   |Ja|Ja|   |   |   |   |   |
+|Suse Enterprise Linux 12 (64-Bit)   |Ja|Ja|Ja|Ja|   |   |   |
+|Alpine Linux 3.11 (64-Bit)<sup>1</sup>|Ja|   |   |   |   |   |   |
+|macOS Catalina (64-Bit)             |Ja|   |   |   |   |   |   |
+|macOS Mojave (64-Bit)               |Ja|Ja|   |   |   |   |   |
+|macOS High Sierra (64-Bit)          |Ja|Ja|Ja|   |   |   |   |
+|macOS Sierra (64-Bit)               |   |Ja|Ja|Ja|Ja|   |   |
+|macOS El Capitan (64-Bit)           |   |   |Ja|Ja|Ja|   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Experimentelle Unterstützung von Alpine Linux in Version 5.80. Produktionssupport seit Version 5.8.1.

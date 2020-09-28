@@ -1,6 +1,6 @@
 ---
 title: Ausführen einer benutzerdefinierten Funktion und Verarbeiten des Rückgabecodes (OLE DB) | Microsoft-Dokumentation
-description: Ausführen einer benutzerdefinierten Funktion und Verarbeiten des Rückgabecodes mithilfe des OLE DB-Treibers für SQL Server
+description: Erfahren Sie, wie Sie mit dem OLE DB-Treiber für SQL Server benutzerdefinierte Funktionen ausführen und einen Rückgabecode ausgeben können. In diesem Beispiel wird die AdventureWorks-Musterdatenbank verwendet.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: a1acbc1aaca3a4618ac0f74da0cc85c628b04d79
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 47b35cd2dfee25b1ab2d9a8e9c2810749f59a80e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012525"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860297"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Ausführen einer benutzerdefinierten Funktion und Verarbeiten des Rückgabecodes (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: Verteilte Abfrageunterstützung für Schemarowsets | Microsoft-Dokumentation
-description: Verteilte Abfrageunterstützung für Schemarowsets
+description: Die IDBSchemaRowset-Schnittstelle des OLE DB-Treibers für SQL Server gibt Metadaten zu verknüpften Servern zurück, um verteilte SQL Server-Abfragen zu unterstützen.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB, schema rowsets
 - OLE DB rowsets, schema
 - rowsets [OLE DB], schema
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9c1207278d194df83a69109b14768eb3b99a719e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 61105b2e974cd111cd4f5dfd10e7f528cd04519a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012792"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861566"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Schemarowsets: Verteilte Abfrageunterstützung
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

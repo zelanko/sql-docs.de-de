@@ -1,7 +1,8 @@
 ---
-title: 'Gewusst wie: Angeben von PHP-Datentypen | Microsoft-Dokumentation'
+title: 'Gewusst wie: Festlegen von PHP-Datentypen'
+description: Erfahren Sie, wie Sie PHP-Datentypen beim Abrufen von Daten mit den Microsoft-Treibern für PHP für SQL Server angeben.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8453b2cd2db36ed2c69b8ada941bcde0050a0759
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9a47fd479449a8725c2e8a86d960ef020d1ee1ba
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915806"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680675"
 ---
-# <a name="how-to-specify-php-data-types"></a>Gewusst wie: Festlegen von PHP-Datentypen
+# <a name="how-to-specify-php-data-types"></a>Vorgehensweise: PHP-Datentypen festlegen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Wenn Sie den PDO_SQLSRV-Treiber verwenden, können Sie mittels „PDOStatement::bindColumn“ und „PDOStatement::bindParam“ den PHP-Datentyp festlegen, wenn Sie Daten vom Server abrufen. Weitere Informationen finden Sie unter [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md) und [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) .  
@@ -99,17 +100,17 @@ sqlsrv_close( $conn);
   
 Im Beispiel sorgt der Abruf des zweiten Feldes (*ReviewDate*) als Zeichenfolge für die Millisekunden-Genauigkeit des SQL Server-Datentyps DATETIME. Standardmäßig wird der SQL Server-Datentyp DATETIME als PHP-DateTime-Objekt abgerufen, wobei die Millisekunden-Genauigkeit verloren geht.  
   
-Das vierte Feld (*Comments*) wird zu Vorführungszwecken als Stream abgerufen. Standardmäßig wird der SQL Server-Datentyp „nvarchar(3850)“ als eine Zeichenfolge abgerufen. Dies ist für die meisten Situationen akzeptabel.  
+Das vierte Feld (*Comments*) wird zu Vorführungszwecken als Stream abgerufen. Standardmäßig wird der SQL Server-Datentyp „nvarchar(3850)“ als eine Zeichenfolge abgerufen. Dies ist für die meisten Situationen akzeptabel.   
   
 > [!NOTE]  
-> Die [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) -Funktion bietet eine Möglichkeit, Feldinformationen inklusive Feldtypinformationen zu erhalten bevor eine Abfrage durchgeführt wird.  
+>  Die [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) -Funktion bietet eine Möglichkeit,  Feldinformationen inklusive Feldtypinformationen zu erhalten bevor eine Abfrage durchgeführt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Vorgehensweise: Abrufen von Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Vorgehensweise: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
-[Vorgehensweise: Abrufen von Eingabe- und Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[Gewusst wie: Abrufen von Eingabe- und Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

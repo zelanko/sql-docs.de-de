@@ -1,6 +1,6 @@
 ---
 title: IBCPSession2 (OLE DB-Treiber) | Microsoft-Dokumentation
-description: IBCPSession2-Schnittstelle (OLE DB)
+description: Erfahren Sie mehr über die IBCPSession2-Schnittstelle im OLE DB-Treiber für SQL Server, die BCPSetBulkMode, eine Alternative zu IBCPSession::BCPColFmt pro Spalte, bietet.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - IBCPSession2 interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d9fff0ba91fb7930ed04b75625461c0c11417ce9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 50cc43cec2e51162a887801bc52dcf34d4df26fa
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244519"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862323"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,7 +1,8 @@
 ---
-title: 'Gewusst wie: Behandeln von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Fehlerbehandlung und Warnungen bei Verwendung des SQLSRV-Treibers'
+description: Erfahren Sie, wie Sie Fehler und Warnungen bei der Verwendung des Microsoft SQLSRV-Treibers für PHP für SQL Server behandeln.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0605fc5a0fc27abfbcd15c22d5553587eecb0349
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ebb3ef454e23ad181bfee856a5b09d01b20632e9
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916264"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680645"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Vorgehensweise: Fehlerbehandlung und Warnungen bei Verwendung des SQLSRV-Treibers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -200,7 +201,7 @@ function DisplayWarnings()
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Gewusst wie: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
+[Vorgehensweise: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
   

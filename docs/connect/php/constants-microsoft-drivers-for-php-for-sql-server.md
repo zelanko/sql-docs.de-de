@@ -1,5 +1,6 @@
 ---
-title: Konstanten (Microsoft-Treiber für PHP für SQL Server) | Microsoft-Dokumentation
+title: Konstanten (Microsoft-Treiber für PHP für SQL Server)
+description: Erfahren Sie mehr über Konstanten, die in SQLSRV- und -PDO_SQLSRV-Treibern von Microsoft für PHP für SQL Server definiert sind.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c54021d6165d0fbf221c7af1c4f10235efb55820
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 771a14e8705af72f57571503c2dba9012c2e9879
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928080"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435252"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Konstanten (Microsoft-Treiber für PHP für SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -71,7 +72,7 @@ Mit den Attributen PDO::SQLSRV_ATTR_FORMAT_DECIMALS und PDO::SQLSRV_ATTR_DECIMAL
 
 ### <a name="handling-date-and-time-fetches"></a>Handhabung von Fetches für Datum und Uhrzeit
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE gibt an, ob Datums- und Uhrzeittypen als [PHP DateTime](http://php.net/manual/en/class.datetime.php)-Objekte abgerufen werden. Bei FALSE werden standardmäßig Zeichenfolgen zurückgegeben. Dieses Attribut kann mit [PDO::setAttribute](../../connect/php/pdo-setattribute.md) oder [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) auf Verbindungs- oder auf Anweisungsebene festgelegt werden, aber das entsprechende Verbindungsattribut wird vom Anweisungsattribut überschrieben. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE gibt an, ob Datums- und Uhrzeittypen als [PHP DateTime](http://php.net/manual/en/class.datetime.php)-Objekte abgerufen werden. Bei FALSE werden standardmäßig Zeichenfolgen zurückgegeben. Dieses Attribut kann mit [PDO::setAttribute](../../connect/php/pdo-setattribute.md) oder [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) auf Verbindungs- oder auf Anweisungsebene festgelegt werden, aber das entsprechende Verbindungsattribut wird vom Anweisungsattribut überschrieben. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-datetime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV-Treiberkonstanten  
 Die folgenden Abschnitte listen die Konstanten auf, die der SQLSRV-Treiber verwendet.  
@@ -79,7 +80,7 @@ Die folgenden Abschnitte listen die Konstanten auf, die der SQLSRV-Treiber verwe
 ### <a name="err-constants"></a>ERR-Konstanten  
 Die folgende Tabelle enthält die Konstanten, die verwendet werden, um anzugeben, ob [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) Fehler, Warnungen oder beides zurückgibt.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|Fehler und Warnungen, die beim letzten **sqlsrv** -Funktionsaufruf generiert wurden, werden zurückgegeben. Dies ist der Standardwert.|  
 |SQLSRV_ERR_ERRORS|Fehler und Warnungen aus dem letzten **sqlsrv** -Funktionsaufruf werden zurückgegeben.|  
@@ -143,7 +144,7 @@ Die folgende Tabelle enthält die Konstanten, die verwendet werden, um die PHP-D
 |SQLSRV_PHPTYPE_INT|Integer|  
 |SQLSRV_PHPTYPE_DATETIME|Datetime|  
 |SQLSRV_PHPTYPE_FLOAT|Float|  
-|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|Stream|  
 |SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** und **SQLSRV_PHPTYPE_STRING** akzeptieren einen Parameter, der die Codierung des Streams angibt. Die folgende Tabelle enthält die SQLSRV-Konstanten, die als Parameter akzeptiert werden sowie eine Beschreibung der zugehörigen Codierung.  
@@ -223,7 +224,7 @@ Die folgende Tabelle enthält die SQLTYPE-Konstanten, die Parameter und den Bere
 |SQLSRV_SQLTYPE_CHAR,<br /><br />SQLSRV_SQLTYPE_VARCHAR,|charCount|1 - 8000|  
 |SQLSRV_SQLTYPE_NCHAR,<br /><br />SQLSRV_SQLTYPE_NVARCHAR,|charCount|1 - 4000|  
 |SQLSRV_SQLTYPE_BINARY,<br /><br />SQLSRV_SQLTYPE_VARBINARY|byteCount|1 - 8000|  
-|SQLSRV_SQLTYPE_DECIMAL<br /><br />SQLSRV_SQLTYPE_NUMERIC|precision|1 - 38|  
+|SQLSRV_SQLTYPE_DECIMAL<br /><br />SQLSRV_SQLTYPE_NUMERIC|precision (Genauigkeit)|1 - 38|  
 |SQLSRV_SQLTYPE_DECIMAL<br /><br />SQLSRV_SQLTYPE_NUMERIC|Skalierung|1 - Genauigkeit|  
   
 ### <a name="transaction-isolation-level-constants"></a>Konstanten der Transaktionsisolationsebene  

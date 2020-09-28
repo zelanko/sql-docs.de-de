@@ -1,5 +1,5 @@
 ---
-title: Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
+title: Microsoft-Treiber für PHP für SQL Server
 description: Die Microsoft-Treiber für PHP für SQL Server ermöglichen die Integration von PHP-Anwendungen in SQL Server über PHP-Erweiterungen.
 ms.custom: ''
 ms.date: 03/26/2018
@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 007bc81ce5528d1f03f73716bf54b325c48a0ff9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 894361044f45d294ad19f7057c57aa741bb0d454
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486737"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680535"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft-Treiber für PHP für SQL Server
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Die Microsoft-Treiber für PHP für SQL Server ermöglichen die Integration in SQL Server für PHP-Anwendungen. Die Treiber sind PHP-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten aus PHP-Skripts ermöglichen. Die Treiber stellen Schnittstellen für den Zugriff auf Daten in Azure SQL-Datenbanken und in allen Editionen von SQL Server 2005 und höher (einschließlich Express-Editionen) bereit. Die Treiber verwenden PHP-Features, einschließlich PHP-Streams, um große Objekte zu lesen und zu schreiben.  
+Die Microsoft-Treiber für PHP für SQL Server ermöglichen die Integration in SQL Server für PHP-Anwendungen. Die Treiber sind PHP-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten aus PHP-Skripts ermöglichen. Die Treiber stellen Schnittstellen für den Zugriff auf Daten in Azure SQL-Datenbank und allen SQL Server-Editionen ab 2005 (einschließlich Express-Editionen) bereit. Die Treiber verwenden PHP-Features, einschließlich PHP-Streams, um große Objekte zu lesen und zu schreiben.  
   
 ## <a name="getting-started"></a>Erste Schritte  
 * [Schritt 1: Konfigurieren der Entwicklungsumgebung für die PHP-Entwicklung](step-1-configure-development-environment-for-php-development.md)  

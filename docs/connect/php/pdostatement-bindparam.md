@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::bindParam | Microsoft-Dokumentation
+title: PDOStatement::bindParam
+description: API-Referenz für die PDOStatement::bindParam-Funktion im Microsoft PDO_SQLSRV-Treiber für PHP für SQL Server.
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 245cdc56e47c87bc5c31435e1967ecb74a8c05bc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6b8b1f838ce3351299e4069e80f692efb487df1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918771"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646610"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,13 +31,13 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Parameter  
-$*parameter*: Dies ist ein (gemischter) Parameterbezeichner. Ein Parametername (:name) für eine Anweisung, die benannte Platzhalter verwendet. Für eine vorbereitete Anweisung mit der Fragezeichensyntax stellt dieser den 1-basierten Index des Parameters dar.  
+$*parameter*: Ein (gemischter) Parameterbezeichner. Ein Parametername (:name) für eine Anweisung, die benannte Platzhalter verwendet. Für eine vorbereitete Anweisung mit der Fragezeichensyntax stellt dieser den 1-basierten Index des Parameters dar.  
   
-&$*variable*: Dies ist der (gemischte) Name der PHP-Variable, die an den SQL-Anweisungsparameter gebunden werden soll.  
+&$*variable:* Der (gemischte) Name der PHP-Variablen, die an den SQL-Anweisungsparameter gebunden werden soll.  
   
-$*data_type*: Dies ist eine optionale (ganzzahlige) PDO::PARAM_*-Konstante. Der Standardwert ist PDO::PARAM_STR.  
+$*data_type:* Eine optionale (ganzzahlige) PDO::PARAM_*-Konstante. Der Standardwert ist PDO::PARAM_STR.  
   
-$*length*: Dies ist die optionale (ganzzahlige) Länge des Datentyps. Sie können PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE festlegen, um die Standardgröße anzugeben, wenn Sie PDO::PARAM_INT oder PDO::PARAM_BOOL in $*data_type* verwenden.  
+$*length:* Eine optionale (ganzzahlige) Länge des Datentyps. Sie können PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE festlegen, um die Standardgröße anzugeben, wenn Sie PDO::PARAM_INT oder PDO::PARAM_BOOL in $*data_type* verwenden.  
   
 $*driver_options*: Dies sind die optionalen (gemischten) treiberspezifischen Optionen. Beispielsweise können Sie PDO::SQLSRV_ENCODING_UTF8 angeben, um die Spalte an eine Variable als UTF-8-codierte Zeichenfolge zu binden.  
   

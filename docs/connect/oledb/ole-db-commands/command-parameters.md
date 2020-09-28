@@ -1,6 +1,6 @@
 ---
 title: Befehlsparameter (OLE DB-Treiber) | Microsoft-Dokumentation
-description: Befehlsparameter
+description: Erfahren Sie mehr über Befehlsparameter, einschließlich der Typen, die der OLE DB-Treiber für SQL Server für SQL-Anweisungs- und Prozeduraufrufbefehle unterstützt.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, commands
 - parameters [OLE DB Driver for SQL Server], OLE DB
 - commands [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d5538e11a121a61b4e5c93175bdecbf31be27127
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7c7266c3fd59e9883cb59ae81f42f651c2ea2b3e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942772"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860178"
 ---
 # <a name="command-parameters"></a>Befehlsparameter
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

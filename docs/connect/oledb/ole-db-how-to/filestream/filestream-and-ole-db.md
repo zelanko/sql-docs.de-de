@@ -1,6 +1,6 @@
 ---
 title: FILESTREAM und OLE DB (OLE DB-Treiber) | Microsoft-Dokumentation
-description: FILESTREAM und OLE DB
+description: Lernen Sie anhand der vier Beispiele in diesem Abschnitt, wie Sie den OLE DB-Treiber für SQL Server mit dem Feature „Filestream“ verwenden können.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: b341202b0941fb718bb03eb43e082a3b5af7633e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cf54843d4f033220ecada31291e83d3d39977c07
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244766"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860597"
 ---
 # <a name="filestream-and-ole-db"></a>FILESTREAM und OLE DB
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

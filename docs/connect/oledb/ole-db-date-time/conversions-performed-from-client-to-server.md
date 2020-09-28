@@ -1,6 +1,6 @@
 ---
 title: Konvertierungen von Client zu Server | Microsoft-Dokumentation
-description: Client-/Server-Konvertierungen
+description: Erfahren Sie mehr über date/time-Konvertierungen, die zwischen einer mit dem OLE DB-Treiber für SQL Server geschriebenen Clientanwendung und SQL Server durchgeführt werden.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ccf1505fd896b627a83fe2ee7b3d1e6e19ab556e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5a43604c485c2baf7bb5b4430303db7fedd9bd8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244882"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860223"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Client-/Server-Konvertierungen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,8 +70,8 @@ ms.locfileid: "87244882"
 |15|Die in Vorgängerversionen von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] gültige Konvertierungssemantik für **datetime** wird beibehalten. Sekunden werden zum nächstem 300stel einer Sekunde gerundet.|  
 |16|Das Konvertierungsverhalten eines in eine SSVARIANT-Clientstruktur eingebetteten Werts (eines bestimmten Typs) ist mit dem Verhalten desselben Werts und Typs identisch, wenn er nicht eingebettet ist.|  
   
-|type|Länge (in Zeichen)|Skalieren|  
-|-|-|-|  
+| type | Länge (in Zeichen) | Skalieren |  
+| ---- | ----------------- | ----- |  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28...36|0,1..9|  

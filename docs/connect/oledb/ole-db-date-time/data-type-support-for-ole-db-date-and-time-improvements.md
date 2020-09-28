@@ -1,6 +1,6 @@
 ---
 title: Datentypunterstützung für Verbesserungen von Datum und Uhrzeit (OLE DB-Treiber) | Microsoft-Dokumentation
-description: Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
+description: Erfahren Sie mehr über OLE DB-Typen, die date/time-Datentypen von SQL Server im OLE DB-Treiber für SQL Server unterstützen.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: c4306574aca251ad1f530cfeb3c26ce91e0a48b1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f914b211e1b573f1c3e91ac0fe50acf3e6f6a3a8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244872"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860017"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

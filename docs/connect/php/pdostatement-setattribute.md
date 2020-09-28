@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::setAttribute | Microsoft-Dokumentation
+title: PDOStatement::setAttribute
+description: API-Referenz für die PDOStatement::setAttribute-Funktion im Microsoft PDO_SQLSRV-Treiber für PHP für SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 329d9b5e-1c5d-40b0-9127-1051d0646fc7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e5c5c0670ceb9725c04a63a59a09b25cf72c810
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 33bd5d23ab35eda7fc6416dc18cf720eabd71f58
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925255"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646530"
 ---
 # <a name="pdostatementsetattribute"></a>PDOStatement::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,10 +43,10 @@ Die folgende Tabelle enthält die Liste mit den verfügbaren Attributen:
 |attribute|Werte|BESCHREIBUNG|  
 |-------------|----------|---------------|  
 |PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|1 bis zur Grenze des PHP-Speichers.|Konfiguriert die Größe des Puffers, der das Resultset für einen clientseitigen Cursor enthält.<br /><br />Die Standardeinstellung ist 10.240 KB (10 MB).<br /><br />Weitere Informationen zu clientseitigen Cursorn finden Sie unter [Cursortypen &#40;PDO_SQLSRV-Treiber&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
-|PDO::SQLSRV_ATTR_DATA_CLASSIFICATION|true oder false|Gibt an, ob die Metadaten für die Datenklassifizierung beim Aufruf von [PDOStatement::getColumnMeta](../../connect/php/pdostatement-getcolumnmeta.md) abgerufen werden sollen. Die Standardeinstellung ist „false“.|
+|PDO::SQLSRV_ATTR_DATA_CLASSIFICATION|true oder false|Gibt an, ob die Metadaten für die Datenklassifizierung beim Aufruf von [PDOStatement::getColumnMeta](../../connect/php/pdostatement-getcolumnmeta.md) abgerufen werden sollen. Der Standardwert ist false.|
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|Ganze Zahl zwischen 0 und (einschließlich) 4|Gibt die Anzahl der Dezimalstellen beim Formatieren abgerufener Geldwerte (vom Typ „money“) an.<br /><br />Negative ganze Zahlen oder Werte größer als 4 werden ignoriert.<br /><br />Diese Option funktioniert nur, wenn PDO::SQLSRV_ATTR_FORMAT_DECIMALS auf TRUE festgelegt ist.<br /><br />Diese Option kann auch auf Verbindungsebene festgelegt werden. In diesem Fall überschreibt diese Option die Option auf Verbindungsebene.<br /><br />Weitere Informationen finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_ENCODING|Integer<br /><br />PDO::SQLSRV_ENCODING_UTF8 (Standard)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|Legt die Zeichensatzcodierung fest, die vom Treiber verwendet wird, um mit dem Server zu kommunizieren.|  
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|true oder false|Gibt an, ob Datums- und Uhrzeittypen als [PHP-DateTime-Objekte](http://php.net/manual/en/class.datetime.php) abgerufen werden sollen. Bei FALSE erfolgt die Standardrückgabe als Zeichenfolgen.<br /><br />Diese Option kann auch auf Verbindungsebene festgelegt werden. In diesem Fall überschreibt diese Option die Option auf Verbindungsebene.<br /><br />Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|true oder false|Gibt an, ob Datums- und Uhrzeittypen als [PHP-DateTime-Objekte](http://php.net/manual/en/class.datetime.php) abgerufen werden sollen. Bei FALSE erfolgt die Standardrückgabe als Zeichenfolgen.<br /><br />Diese Option kann auch auf Verbindungsebene festgelegt werden. In diesem Fall überschreibt diese Option die Option auf Verbindungsebene.<br /><br />Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-datetime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|true oder false|Verarbeitet numerische Abrufvorgänge aus Spalten mit numerischen SQL-Typen („bit“, „integer“, „smallint“, „tinyint“, „float“ oder „real“).<br /><br />Wenn das Flag für die Verbindungsoption ATTR_STRINGIFY_FETCHES auf „On“ festgelegt ist, ist der Rückgabewert selbst dann eine Zeichenfolge, wenn SQLSRV_ATTR_FETCHES_NUMERIC_TYPE auf „On“ festgelegt ist.<br /><br />Wenn der zurückgegebene PDO-Typ in einer bind-Spalte PDO_PARAM_INT lautet, ist der Rückgabewert aus einer integer-Spalte vom Typ „int“, selbst wenn SQLSRV_ATTR_FETCHES_NUMERIC_TYPE auf „Off“ festgelegt ist.|  
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|true oder false|Gibt an, ob Dezimalzeichenfolgen gegebenenfalls führende Nullen hinzugefügt werden sollen. Bei Festlegung erlaubt diese Option der Option PDO::SQLSRV_ATTR_DECIMAL_PLACES das Formatieren von Datentypen vom Typ „money“. Bei FALSE wird als Standardverhalten die Rückgabe absoluter Genauigkeit und das Auslassen führender Nullen für Werte kleiner 1 verwendet.<br /><br />Diese Option kann auch auf Verbindungsebene festgelegt werden. In diesem Fall überschreibt diese Option die Option auf Verbindungsebene.<br /><br />Weitere Informationen finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Integer|Legt das Abfragetimeout in Sekunden fest.<br /><br />Standardmäßig wartet der Treiber unbegrenzt auf Ergebnisse. Negative Zahlen sind nicht zulässig.<br /><br />„0“ bedeutet „kein Timeout“.|  

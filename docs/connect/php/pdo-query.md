@@ -1,5 +1,6 @@
 ---
-title: PDO::query | Microsoft-Dokumentation
+title: PDO::query
+description: API-Referenz für die PDO::query-Funktion im Microsoft PDO_SQLSRV-Treiber für PHP für SQL Server.
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 809ced4a32081375ebd98c61f7429c22e06cb90a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dfceb71c40b7214d9570a62c7ff65925b4f19849
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919167"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410946"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>Parameter  
 *$statement*: Die SQL-Anweisung, die Sie ausführen möchten.  
   
-*$fetch_style:* Die optionalen Anweisungen zum Ausführen der Abfrage. Weitere Details finden Sie im Abschnitt „Anmerkungen“. $ *$fetch_style* in PDO::query kann mit $*fetch_style* in PDO::fetch überschrieben werden.  
+*$fetch_style:* Die optionalen Anweisungen zum Ausführen der Abfrage. Weitere Details finden Sie im Abschnitt „Anmerkungen“. $*$fetch_style* in PDO::query kann mit $*fetch_style* in PDO::fetch überschrieben werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Wenn der Aufruf erfolgreich ist, gibt PDO::query ein PDOStatement-Objekt zurück. Wenn der Aufruf fehlschlägt, löst PDO::query ein PDOException-Objekt aus oder gibt „false“ zurück, abhängig von der Einstellung für PDO::ATTR_ERRMODE.  

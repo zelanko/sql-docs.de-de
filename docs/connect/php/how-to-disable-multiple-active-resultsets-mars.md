@@ -1,7 +1,8 @@
 ---
-title: 'Gewusst wie: Deaktivieren von Multiple Active Resultsets (MARS) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Deaktivieren mehrerer aktiver Resultsets'
+description: Erfahren Sie, wie Sie die Unterstützung mehrerer aktiver Resultsets deaktivieren, wenn Sie die Microsoft-Treiber für PHP für SQL Server verwenden.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2fb65eee416fd82ae36b020049d318a2c5d2333d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 544d64a8c81342fbb3592371098a5e2ddec60ee5
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916326"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680695"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>Vorgehensweise: Deaktivieren von Multiple Active Resultsets (MARS)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Wenn Sie eine Verbindung mit einer SQL Server-Datenquelle herstellen müssen, die Multiple Active Resultsets (MARS) nicht ermöglicht, können Sie die Verbindungsoption „MultipleActiveResultSets“ verwenden, um MARS zu deaktivieren oder zu aktivieren.  
   
-## <a name="procedure"></a>Verfahren  
+## <a name="procedure"></a>Prozedur  
   
 #### <a name="to-disable-mars-support"></a>Gehen Sie wie folgt vor, um die MARS-Unterstützung zu deaktivieren:  
   

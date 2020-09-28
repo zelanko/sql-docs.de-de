@@ -1,8 +1,8 @@
 ---
-title: Herunterladen der Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
+title: Herunterladen von Microsoft-Treibern für PHP für SQL Server
 description: Laden Sie die Microsoft-Treiber für PHP für SQL Server herunter, um PHP-Anwendungen zu entwickeln, die eine Verbindung mit SQL Server und Azure SQL-Datenbank herstellen.
 ms.custom: ''
-ms.date: 05/05/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,16 +10,16 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3d583113b07c601010c89ef8796614c177c5e20
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 24dfef1b33b2a61c0d82c07ce6306e0b0449b8f3
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487942"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680765"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Herunterladen von Microsoft-Treibern für PHP für SQL Server
 
-Die Microsoft-Treiber für PHP für SQL Server ermöglichen die Integration in SQL Server für PHP-Anwendungen. Die Treiber sind PHP-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten aus PHP-Skripts ermöglichen. Die Treiber stellen Schnittstellen für den Zugriff auf Daten in Azure SQL-Datenbanken und in allen Editionen von SQL Server 2005 und höher (einschließlich Express-Editionen) bereit. Die Treiber verwenden PHP-Features, einschließlich PHP-Streams, um große Objekte zu lesen und zu schreiben.
+Die Microsoft-Treiber für PHP für SQL Server ermöglichen die Integration in SQL Server für PHP-Anwendungen. Die Treiber sind PHP-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten aus PHP-Skripts ermöglichen. Die Treiber stellen Schnittstellen für den Zugriff auf Daten in Azure SQL-Datenbank und allen SQL Server-Editionen ab 2005 (einschließlich Express-Editionen) bereit. Die Treiber verwenden PHP-Features, einschließlich PHP-Streams, um große Objekte zu lesen und zu schreiben.
 
 Unter Linux und macOS können die Treiber für PHP ganz einfach über die PECL heruntergeladen und installiert werden. Weitere Informationen finden Sie im [Tutorial zur Linux- und macOS-Installation](installation-tutorial-linux-mac.md). Wenn Sie die Treiber für PHP unter Linux und macOS manuell herunterladen und installieren müssen, finden Sie Pakete für diese Plattformen unter den entsprechenden Releasetags auf GitHub.
 

@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPWriteFmt (OLE DB) | Microsoft-Dokumentation
+title: IBCPSession::BCPWriteFmt (OLE DB-Treiber) | Microsoft-Dokumentation
 description: In diesem Artikel erfahren Sie, wie Sie mit IBCPSession::BCPWriteFmt die Formatdateien entweder im XML- oder im Textformat (OLE DB) speichern.
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,17 +13,17 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPWriteFmt method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 42a8b450fcc5536920ead44d4f401fb2e81d2b08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3dae7b78796e9e63260f46c455a9b5fee54a72e3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994538"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861923"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -53,7 +53,7 @@ HRESULT BCPWriteFmt(
  Die Methode wurde erfolgreich ausgeführt.  
   
  E_FAIL  
- Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)-Schnittstelle.  
+ Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)-Schnittstelle.  
   
  E_OUTOFMEMORY  
  Fehler aufgrund nicht genügenden Arbeitsspeichers  

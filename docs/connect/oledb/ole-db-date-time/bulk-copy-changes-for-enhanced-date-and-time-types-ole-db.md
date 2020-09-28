@@ -1,6 +1,6 @@
 ---
 title: Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen (OLE DB und ODBC) | Microsoft-Dokumentation
-description: Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen (OLE DB)
+description: Erfahren Sie mehr zu den Datum-/Uhrzeiterweiterungen, die die Massenkopierfunktionalität im OLE DB-Treiber für SQL Server unterstützen.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, bulk copy operations
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 89a19fa639c7ae20aad776bdcd196dea0f0c8700
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 808454606f24ab397f5423edf901393ab3f7ccfa
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004536"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860238"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,5 +1,6 @@
 ---
-title: PDO::prepare | Microsoft-Dokumentation
+title: PDO::prepare
+description: API-Referenz für die PDO::prepare-Funktion im Microsoft PDO_SQLSRV-Treiber für PHP für SQL Server.
 ms.custom: ''
 ms.date: 01/31/2020
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941207"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435205"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,9 +30,9 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>Parameter
-$*statement*: Eine Zeichenfolge, die die SQL-Anweisung enthält.
+$*statement*: Eine Zeichenfolge, die die SQL-Anweisung enthält
 
-*key_pair:* Ein Array, das einen Attributnamen und einen Wert enthält. Weitere Informationen finden Sie im Abschnitt zu den Hinweisen.
+*key_pair:* Ein Array, das einen Attributnamen und einen Wert enthält. Weitere Informationen finden Sie im Abschnitt Hinweise.
 
 ## <a name="return-value"></a>Rückgabewert
 Bei Erfolg wird ein PDOStatement-Objekt zurückgegeben. Bei einem Fehler wird entweder ein PDOException-Objekt oder „false“ zurückgegeben, abhängig vom Wert für `PDO::ATTR_ERRMODE`.
@@ -49,7 +50,7 @@ In der folgenden Tabelle sind die möglichen Werte für *key_pair* aufgelistet.
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|Gibt die Anzahl der Dezimalstellen beim Formatieren abgerufener Geldwerte (vom Typ „money“) an. Diese Option funktioniert nur, wenn `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` auf „true“ festgelegt ist. Weitere Informationen finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|Wird hierfür der Wert „true“ festgelegt, werden Abfragen direkt ausgeführt. Der Wert „false“ sorgt dafür, dass vorbereitete Anweisungen ausgeführt werden. Weitere Informationen zu `PDO::SQLSRV_ATTR_DIRECT_QUERY` finden Sie unter [Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (Standard)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Gibt an, ob Datums- und Uhrzeittypen als [PHP-DateTime-Objekte](http://php.net/manual/en/class.datetime.php) abgerufen werden sollen. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Gibt an, ob Datums- und Uhrzeittypen als [PHP-DateTime-Objekte](http://php.net/manual/en/class.datetime.php) abgerufen werden sollen. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-datetime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|Verarbeitet die Abrufe numerischer Werte aus Spalten mit numerischen SQL-Typen. Weitere Informationen finden Sie unter [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|Gibt an, ob Dezimalzeichenfolgen gegebenenfalls führende Nullen hinzugefügt werden sollen. Bei Festlegung erlaubt diese Option der Option `PDO::SQLSRV_ATTR_DECIMAL_PLACES` das Formatieren von Datentypen vom Typ „money“. Weitere Informationen finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Weitere Informationen finden Sie unter [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
@@ -60,7 +61,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 ```
 In der folgenden Tabelle sind die möglichen Werte für `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` aufgeführt. Weitere Informationen zu scrollbaren Cursorn finden Sie unter [Cursortypen &#40;PDO_SQLSRV-Treiber&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 
-|value|BESCHREIBUNG|
+|Wert|BESCHREIBUNG|
 |---------|---------------|
 |PDO::SQLSRV_CURSOR_BUFFERED|Erstellt einen clientseitigen (gepufferten) statischen Cursor, der das Resultset auf dem Clientcomputer in den Arbeitsspeicher puffert.|
 |PDO::SQLSRV_CURSOR_DYNAMIC|Erstellt einen serverseitigen (gepufferten) dynamischen Cursor, der es Ihnen erlaubt, auf Zeilen in beliebiger Reihenfolge zuzugreifen und Änderungen in der Datenbank widerspiegelt.|
@@ -155,7 +156,7 @@ $statement = $pdo->prepare(
 $statement->bindValue(':myVarcharValue', 'my data', PDO::PARAM_STR);
 ```
 
-**Option 2**
+**Option 2:**
 ```
 $statement = $pdo->prepare(
   'SELECT *
@@ -260,7 +261,7 @@ $stmt->bindParam(':value', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_UTF8);
 $stmt->execute();
 ```
 
-**Verwenden des Attributs PDO::SQLSRV_ATTR_ENCODING**
+**Verwenden des Attributs PDO::SQLSRV_ATTR_ENCODING **
 
 ```
 $p = '가각';

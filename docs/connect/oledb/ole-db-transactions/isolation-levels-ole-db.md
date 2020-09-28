@@ -1,6 +1,6 @@
 ---
 title: Isolationsstufen (OLE DB-Treiber) | Microsoft-Dokumentation
-description: Isolationsstufen (OLE DB)
+description: Erfahren Sie, wie ein Consumer des OLE DB-Treibers für SQL Server die Transaktionsisolationsebene für eine Verbindung steuern kann.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - isolation levels [OLE DB]
 - transactions [OLE DB]
 - OLE DB Driver for SQL Server, transactions
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 60fce8b96ff116f1c1e92a75e1335a33207d36d3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 87b3a348a7219eda5868223b167b2ecf851c2079
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244101"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861883"
 ---
 # <a name="isolation-levels-ole-db"></a>Isolationsstufen (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_prepare | Microsoft-Dokumentation
+title: sqlsrv_prepare
+description: API-Referenz für die sqlsrv_prepare-Funktion im Microsoft SQLSRV-Treiber für PHP für SQL Server.
 ms.custom: ''
 ms.date: 04/11/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef36e929b44517a6e4688346d72923a0a2f897ca
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9e82a25d3386de2f86d7e43fe5bde13eb25c6416
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925496"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435119"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +42,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$tsql*: Transact-SQL-Ausdruck, der der erstellten Anweisung entspricht.  
   
-*$params* [OPTIONAL]: Ein **Array** von Werten, die Parametern in einer parametrisierten Abfrage entsprechen. Jedes Element des Arrays kann eines der folgenden sein:
+*$params* [OPTIONAL]: Hierbei handelt es sich um ein **Array** von Werten, die Parametern in einer parametrisierten Abfrage entsprechen. Jedes Element des Arrays kann eines der folgenden sein:
   
 -   Ein Literalwert  
   
@@ -61,18 +62,18 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |Element|BESCHREIBUNG|  
     |-----------|---------------|  
     |*&$value*|Ein Literalwert oder ein Verweis auf eine PHP-Variable.|  
-    |*$direction*[OPTIONAL]|Eine der folgenden verwendeten **SQLSRV_PARAM_\*** -Konstanten, um die Parameterrichtung anzugeben: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Der Standardwert ist **SQLSRV_PARAM_IN**.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$direction*[OPTIONAL]|Eine der folgenden **SQLSRV_PARAM_\*** -Konstanten, die zum Angeben der Parameterrichtung verwendet werden: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Der Standardwert ist **SQLSRV_PARAM_IN**.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$phpType*[OPTIONAL]|Eine **SQLSRV_PHPTYPE_\*** -Konstante, die den PHP-Datentyp des zurückgegebenen Werts angibt.|  
     |*$sqlType*[OPTIONAL]|Eine **SQLSRV_SQLTYPE_\*** -Konstante, die den SQL Server-Datentyp des Eingabewerts angibt.|  
   
-*$options* [OPTIONAL]: Ein assoziatives Array, das <a name="properties">Abfrageeigenschaften</a> festlegt. In der folgenden Tabelle sind die unterstützten Schlüssel und die entsprechenden Werte aufgeführt:
+*$options* [OPTIONAL]: Hierbei handelt es sich um ein assoziatives Array, das <a name="properties">Abfrageeigenschaften</a> festlegt. In der folgenden Tabelle sind die unterstützten Schlüssel und die entsprechenden Werte aufgeführt:
 
 |Key|Unterstützte Werte|BESCHREIBUNG|  
 |-------|--------------------|---------------|  
-|ClientBufferMaxKBSize|Positive Ganzzahl|Konfiguriert die Größe des Puffers, der das Resultset für einen clientseitigen Cursor enthält.<br /><br />Die Standardeinstellung ist 10240 KB. Weitere Informationen finden Sie unter [Festlegen eines Cursortyps und Auswählen von Zeilen](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
+|ClientBufferMaxKBSize|Eine positive ganze Zahl|Konfiguriert die Größe des Puffers, der das Resultset für einen clientseitigen Cursor enthält.<br /><br />Die Standardeinstellung ist 10240 KB. Weitere Informationen finden Sie unter [Festlegen eines Cursortyps und Auswählen von Zeilen](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
 |Dezimalstellenanzeige|Eine ganze Zahl zwischen 0 und 4|Gibt die Dezimalstellen beim Formatieren abgerufener Geldwerte (Werte des Datentyps „money“) an.<br /><br />Negative ganze Zahlen oder Werte größer als 4 werden ignoriert.<br /><br />Diese Option funktioniert nur, wenn „FormatDecimals“ auf **true** festgelegt ist.|
 |FormatDecimals|**true** oder **false**<br /><br />Der Standardwert ist **false**.|Gibt an, ob Dezimalzeichenfolgen gegebenenfalls führende Nullen hinzugefügt werden sollen, und aktiviert die Option `DecimalPlaces` zum Formatieren von Datentypen der Kategorie „money“.<br /><br />Weitere Informationen finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
-|QueryTimeout|Positive Ganzzahl|Legt das Abfragetimeout in Sekunden fest. Standardmäßig wartet der Treiber unbegrenzt auf Ergebnisse.|  
+|QueryTimeout|Eine positive ganze Zahl|Legt das Abfragetimeout in Sekunden fest. Standardmäßig wartet der Treiber unbegrenzt auf Ergebnisse.|  
 |ReturnDatesAsStrings|**true** oder **false**<br /><br />Der Standardwert ist **false**.|Konfiguriert die Anweisung zum Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen (**true**). Weitere Informationen finden Sie unter [Gewusst wie: Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |Bildlauffähigkeit|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Weitere Informationen zu diesen Werten finden Sie unter [Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
 |SendStreamParamsAtExec|**true** oder **false**<br /><br />Der Standardwert lautet **true**.|Konfiguriert den Treiber, um alle Streamdaten bei der Ausführung zu senden (**TRUE**) oder Streamdaten in Blöcken (**FALSE**) zu senden. In der Standardeinstellung ist dieser Wert mit **true**festgelegt. Weitere Informationen finden Sie unter [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
@@ -87,7 +88,7 @@ Die Kombination von **sqlsrv_prepare** und **sqlsrv_execute** trennt Anweisungsv
   
 Alternative Strategien zum Schreiben und Lesen großer Datenmengen finden Sie unter [Batches von SQL-Anweisungen](../../odbc/reference/develop-app/batches-of-sql-statements.md) und [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-Weitere Informationen finden Sie unter [Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Beispiel  
 Im folgenden Beispiel wird eine Anweisung vorbereitet und ausgeführt. Wenn die Anweisung ausgeführt wird (siehe [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), aktualisiert diese ein Feld in der *Sales.SalesOrderDetail*-Tabelle der AdventureWorks-Datenbank. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
@@ -252,11 +253,11 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Gewusst wie: Ausführen von parametrisierten Abfragen](../../connect/php/how-to-perform-parameterized-queries.md)
+[Vorgehensweise: Ausführen parametrisierter Abfragen](../../connect/php/how-to-perform-parameterized-queries.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Gewusst wie: Streamen von Daten](../../connect/php/how-to-send-data-as-a-stream.md)
+[Vorgehensweise: Senden von Daten als Stream](../../connect/php/how-to-send-data-as-a-stream.md)
 
 [Verwenden direktionaler Parameter](../../connect/php/using-directional-parameters.md)
 

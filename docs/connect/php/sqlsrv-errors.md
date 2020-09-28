@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_errors | Microsoft-Dokumentation
+title: sqlsrv_errors
+description: API-Referenz für die sqlsrv_sqlsrv_errors-Funktion im Microsoft SQLSRV-Treiber für PHP für SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ffd866d5e4493fe327dfb29b54d2fadda8cda3be
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c0922e0ec7f3072b15b61f76908116bb86f4fe04
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928214"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435194"
 ---
 # <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -55,7 +56,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$errorsAndOrWarnings*[OPTIONAL]: Hierbei handelt es sich um eine vordefinierte Konstante. Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen:  
+*$errorsAndOrWarnings* (optional): eine vordefinierte Konstante Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen:  
   
 |Wert|BESCHREIBUNG|  
 |---------|---------------|  
@@ -68,7 +69,7 @@ Wenn kein Parameterwert angegeben wird, werden Fehler und Warnungen zurückgegeb
 ## <a name="return-value"></a>Rückgabewert  
 Ein **Array** von Arrays oder **NULL**. Jedes **Array** im zurückgegebenen **Array** enthält drei Schlüssel-Wert-Paare. In der folgenden Tabelle wird jeder Schlüssel und dessen Beschreibung aufgelistet.  
   
-|Schlüssel|BESCHREIBUNG|  
+|Key|BESCHREIBUNG|  
 |-------|---------------|  
 |SQLSTATE|Für Fehler, die aus dem ODBC-Treiber stammen, wird von ODBC der Wert SQLSTATE zurückgegeben Weitere Informationen zu SQLSTATE-Werten für ODBC finden Sie unter [ODBC-Fehlercodes](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Für Fehler, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]stammen, ein SQLSTATE von IMSSP<br /><br />Für Warnungen, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]stammen, ein SQLSTATE von 01SSP|  
 |code|Für Fehler, die vom SQL Server stammen, den systemeigenen SQL Server-Fehlercode<br /><br />Für Fehler, die aus dem ODBC-Treiber stammen, wird von ODBC der Fehlercode zurückgegeben<br /><br />Für Fehler, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]oder dem [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] -Fehlercode stammen Weitere Informationen finden Sie unter [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
