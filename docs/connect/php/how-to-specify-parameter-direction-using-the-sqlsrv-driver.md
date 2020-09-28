@@ -1,7 +1,8 @@
 ---
-title: 'Gewusst wie: Angeben der Parameterrichtung mit dem SQLSRV-Treiber | Microsoft-Dokumentation'
+title: 'Gewusst wie: Angeben der Parameterrichtung mit dem SQLSRV-Treiber'
+description: Erfahren Sie, wie Sie die Parameterrichtung beim Aufruf einer gespeicherten Prozedur mit dem Microsoft SQLSRV-Treiber für PHP für SQL Server angeben.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 85a106a8e6a7f9afcac449b241b0255a16c51233
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f085fc40ded15310b81d6a447f30676ed011e7f8
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915926"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680245"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Vorgehensweise: Angeben der Parameterrichtung mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +36,7 @@ In diesem Thema wird beschrieben, wie der SQLSRV-Treiber verwendet wird, um die 
     > [!NOTE]  
     > Die Verwendung kanonischer Syntax stellt die empfohlene Vorgehensweise für das Abrufen gespeicherter Prozeduren dar. Weitere Informationen zur kanonischen Syntax finden Sie unter [Aufrufen einer gespeicherten Prozedur](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-2.  Initialisieren oder aktualisieren Sie PHP-Variablen, die den Platzhaltern in der Transact-SQL-Abfrage entsprechen. Zum Beispiel aktualisiert folgender Code die zwei in der Prozedur UpdateVacationHours gespeicherten Parameter.  
+2.  Initialisieren oder aktualisieren Sie PHP-Variablen, die den Platzhaltern in der Transact-SQL-Abfrage entsprechen.  Zum Beispiel aktualisiert folgender Code die zwei in der Prozedur UpdateVacationHours gespeicherten Parameter.  
   
     ```  
     $employeeId = 101;  
@@ -43,7 +44,7 @@ In diesem Thema wird beschrieben, wie der SQLSRV-Treiber verwendet wird, um die 
     ```  
   
     > [!NOTE]  
-    > Variablen, die auf **NULL**, **DateTime**oder Streamtypen aktualisiert oder initialisiert werden, können nicht als Ausgabeparameter verwendet werden.  
+    >  Variablen, die auf **NULL**, **DateTime**oder Streamtypen aktualisiert oder initialisiert werden, können nicht als Ausgabeparameter verwendet werden.  
   
 3.  Verwenden Sie Ihre PHP-Variablen aus Schritt 2, um ein Array von Parameterwerten zu erstellen oder zu aktualisieren. Dieses soll der Reihenfolge der Parameterplatzhalter in der Transact-SQL-Zeichenfolge entsprechen. Geben Sie die Richtung  jedes Parameters im Array an. Die Richtung jedes einzelnen Parameter wird durch eine von zwei Möglichkeiten festgelegt: standardmäßig (für Eingabeparameter) oder mithilfe von **SQLSRV_PARAM_\*** -Konstanten (für Ausgabeparameter und bidirektionale Parameter). Der folgende Code gibt beispielsweise den *$employeeId* -Parameter als Eingabeparameter und den *$usedVacationHours* -Parameter als bidirektionaler Parameter an:  
   
@@ -83,7 +84,7 @@ In diesem Thema wird beschrieben, wie der SQLSRV-Treiber verwendet wird, um die 
     ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Vorgehensweise: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
 [Gewusst wie: Abrufen von Eingabe- und Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

@@ -1,7 +1,8 @@
 ---
-title: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers | Microsoft-Dokumentation
+title: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers
+description: In diesem Thema wird beschrieben, wie Sie den SQLSRV-Treiber konfigurieren, um Fehler und Warnungen bei der Verwendung des Microsoft SQLSRV-Treibers für PHP für SQL Server zu behandeln.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07ab941b5813ccd60bb3afcd5ba76718406fb446
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e4905b618c20d945946831c5492ec0e75ea882d
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916576"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680705"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Vorgehensweise: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +43,7 @@ Der Wert für **WarningsReturnAsErrors** kann auch in der Datei php.ini festgele
 Informationen zum Abrufen von Fehler- und Warnungsinformationen finden Sie unter [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) und unter [Vorgehensweise: Behandeln von Fehlern und Warnungen](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Codebeispiel veranschaulicht, wie das Standardverhalten der Fehlerbehandlung deaktiviert wird. Das Beispiel verwendet den Befehl PRINT von Transact-SQL, um eine Warnung zu generieren. Weitere Informationen zum Befehl PRINT finden Sie unter [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md).  
+Das folgende Codebeispiel veranschaulicht, wie das Standardverhalten der Fehlerbehandlung deaktiviert wird.  Das Beispiel verwendet den Befehl PRINT von Transact-SQL, um eine Warnung zu generieren. Weitere Informationen zum Befehl PRINT finden Sie unter [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md).  
   
 Das Beispiel veranschaulicht durch das Ausführen einer Abfrage, die eine Warnung generiert, zunächst das Standardverhalten der Fehlerbehandlung. Diese Warnung wird als Fehler behandelt. Nach Ändern der Konfiguration für die Fehlerbehandlung wird die gleiche Abfrage ausgeführt. Die Warnung wird nicht als Fehler behandelt.  
   

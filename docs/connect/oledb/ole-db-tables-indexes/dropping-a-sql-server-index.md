@@ -1,6 +1,6 @@
 ---
-title: Löschen eines SQL Server-Index | Microsoft-Dokumentation
-description: Löschen eines SQL Server-Index mit dem OLE DB-Treiber für SQL Server
+title: Löschen eines SQL Server-Index (OLE DB-Treiber) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die IIndexDefinition::DropIndex-Funktion im OLE DB-Treiber für SQL Server, mit der Consumer einen Index aus einer SQL Server-Tabelle entfernen können.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - dropping indexes
 - OLE DB Driver for SQL Server, indexes
 - indexes [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 708deecefe451115ca0fca97075f88311dec2f5a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 91b9dd9e5ae5978eb8e0290e8d023a0ebca5e9c3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015253"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858868"
 ---
 # <a name="dropping-a-sql-server-index"></a>Löschen eines SQL Server-Index
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

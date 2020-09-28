@@ -1,6 +1,6 @@
 ---
-title: Verwenden von IRow::GetColumns | Microsoft-Dokumentation
-description: Verwenden von IRow::GetColumns zum Zugreifen auf alle Spalten in einer Zeile
+title: Verwenden von IRow::GetColumns (OLE DB-Treiber)
+description: Erfahren Sie, wie Sie im OLE DB-Treiber für SQL Server mit IRow::GetColumns auf alle Spalten in einer Zeile zugreifen können. IRow ermöglicht einen ausschließlich vorwärtsgerichteten sequenziellen Zugriff auf Spalten.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB rowsets, fetching
 - rowsets [OLE DB], fetching
 - GetColumns method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6f00e7c205e559864ed495dccd43f3a4f979260f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 60ded2ad36346bcb05d75add252f0357c48398e7
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008773"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859934"
 ---
 # <a name="using-irowgetcolumns"></a>Verwenden von IRow::GetColumns
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,22 +1,22 @@
 ---
-title: Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber) | Microsoft-Dokumentation
+title: Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)
+description: Erfahren Sie, wie Sie bei Verwendung des PDO_SQLSRV-Treibers die Attribute PDO::SQLSRV_ATTR_FORMAT_DECIMALS und SQLSRV_ATTR_DECIMAL_PLACES verwenden, um Dezimal- oder Geldwerte zu formatieren.
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - formatting, decimal types, money values
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 76c314159faf15e63bf77b17a8a45abf217b205c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae61b239fca2a923645b9de963309c62a3919b3d
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265153"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680655"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ Standardmäßig ist `PDO::SQLSRV_ATTR_FORMAT_DECIMALS`**false**. Bei Festlegung 
 ## <a name="configure-number-of-decimal-places"></a>Konfigurieren der Anzahl von Dezimalstellen
 Wenn `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` aktiviert ist, können Benutzer das Verbindungs- oder Anweisungsattribut `PDO::SQLSRV_ATTR_DECIMAL_PLACES` verwenden, um die Anzahl von Dezimalstellen bei money- und smallmoney-Daten zu konfigurieren. Für dieses Attribut können ganzzahlige Werte von 0-4 angegeben werden. Bei der Anzeige werden die Werte möglicherweise gerundet. Die zugrunde liegenden money-Daten werden jedoch nicht geändert.
 
-Anweisungsattribute setzen die entsprechenden Verbindungseinstellungen stets außer Kraft. Beachten Sie, dass sich die Option `PDO::SQLSRV_ATTR_DECIMAL_PLACES` **ausschließlich** auf money-Daten auswirkt und `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` auf „true“ festgelegt sein muss. Anderenfalls ist die Formatierung unabhängig von der Einstellung `PDO::SQLSRV_ATTR_DECIMAL_PLACES` deaktiviert.
+Anweisungsattribute setzen die entsprechenden Verbindungseinstellungen stets außer Kraft. Beachten Sie, dass sich die Option `PDO::SQLSRV_ATTR_DECIMAL_PLACES`**ausschließlich** auf money-Daten auswirkt und `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` auf „true“ festgelegt sein muss. Anderenfalls ist die Formatierung unabhängig von der Einstellung `PDO::SQLSRV_ATTR_DECIMAL_PLACES` deaktiviert.
 
 > [!NOTE]
 > Da die Felder „money“ und „smallmoney“ über 4 Dezimalzeichen verfügen, wird `PDO::SQLSRV_ATTR_DECIMAL_PLACES` ignoriert, wenn ein negativer Wert oder ein höherer Wert als 4 festgelegt wird. Es wird nicht empfohlen, formatierte money-Daten als Eingabe für Berechnungen zu verwenden.

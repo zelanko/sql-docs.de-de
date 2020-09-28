@@ -1,6 +1,6 @@
 ---
-title: Transaktionen | Microsoft-Dokumentation
-description: Transaktionen im OLE DB-Treiber für SQL Server
+title: Transaktionen (OLE DB-Treiber)
+description: Erfahren Sie, wie der OLE DB-Treiber für SQL Server lokale Transaktionen unterstützt. Verwenden Sie für verteilte Transaktionen den Microsoft Distributed Transaction Coordinator.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB, transactions
 - transactions [OLE DB]
 - OLE DB Driver for SQL Server, transactions
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 64a05f57c40027a4db448a987d32f77d62f0a837
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e146dd9bc1f560cba4bf1902909dd6b8b317698f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011235"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861841"
 ---
 # <a name="transactions"></a>Transaktionen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: Abrufen von Daten aus einer FILESTREAM-Spalte mithilfe von ISequentialStream (OLE DB) | Microsoft-Dokumentation
-description: Abrufen von Daten aus einer FILESTREAM-Spalte mithilfe von ISequentialStream (OLE DB)
+description: Erfahren Sie, wie eine ISequentialStream-Schnittstelle in einer ICommandText-Schnittstelle verwendet wird, um im OLE DB-Treiber für SQL Server einen Datensatz aus einer Filestream-Spalte abzurufen.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 4962605ab84d08f7f964182815e618821381b725
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dbaf5ac5bce738a7af65ae269f423784e8cd3a09
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999925"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860562"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Abrufen von Daten aus einer FILESTREAM-Spalte mithilfe von ISequentialStream (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

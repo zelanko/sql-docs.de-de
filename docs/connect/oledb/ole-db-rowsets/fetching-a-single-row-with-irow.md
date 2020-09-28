@@ -1,6 +1,6 @@
 ---
-title: Abrufen einer einzelnen Zeile mit IRow | Microsoft-Dokumentation
-description: Abrufen einer einzelnen Zeile mithilfe der IRow-Schnittstelle des OLE DB-Treibers für SQL Server
+title: Abrufen einer einzelnen Zeile mit IRow (OLE DB-Treiber) | Microsoft-Dokumentation
+description: IRow lässt den direkten Zugriff auf Spalten eines einzelnen Zeilenobjekts zu. Die IRow-Schnittstelle des OLE DB-Treibers für SQL Server ist vereinfacht, um die Leistung zu erhöhen.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - OLE DB rowsets, fetching
 - rowsets [OLE DB], fetching
 - OLE DB Driver for SQL Server, fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 542875dc322cd94970c238747db0adb139b9a480
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a305692bb544d9a9bbb0572cbd93449781aaabe9
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994292"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862476"
 ---
-# <a name="fetching-a-single-row-with-irow"></a>Abrufen einer einzelnen Zeile mit IRow
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="fetching-a-single-row-with-irow-ole-db-driver"></a>Abrufen einer einzelnen Zeile mit IRow (OLE DB-Treiber)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

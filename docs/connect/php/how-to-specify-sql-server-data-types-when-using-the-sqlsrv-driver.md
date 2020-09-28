@@ -1,7 +1,8 @@
 ---
-title: 'Vorgehensweise: Angeben von SQL Server-Datentypen, wenn der SQLSRV-Treiber verwendet wird | Microsoft-Dokumentation'
+title: 'Gewusst wie: Angeben von SQL Server-Datentypen bei Verwenden des SQLSRV-Treibers'
+description: Erfahren Sie, wie Sie SQL Server-Datentypen mit dem optionalen Array *$params* in vorbereiteten Anweisungen oder direkten Abfragen angeben, wenn Sie den SQLSRV-Treiber für PHP verwenden.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ce7e541486412d6c309fdbf1a9fe6d155e38f5a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0720c14429aa4088d906a2063feeb34057065682
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922881"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680569"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>Vorgehensweise: Angeben von SQL Server-Datentypen, wenn der SQLSRV-Treiber verwendet wird.
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ Die folgenden Schritte fassen zusammen, wie der SQL Server-Datentyp angegeben wi
   
 3.  Erstellen Sie das *$params* -Array, das beim Vorbereiten oder Ausführen der Abfrage verwendet werden soll. Beachten Sie, dass jedes Element des *$params* -Arrays auch ein Array sein muss, wenn Sie den SQL Server-Datentyp angeben.  
   
-4.  Geben Sie den gewünschten SQL Server-Datentyp mit der entsprechenden **SQLSRV_SQLTYPE_&#42;** -Konstanten als vierten Parameter in jedem Unterarray des Arrays *$params* an. Eine vollständige Liste der **SQLSRV_SQLTYPE_&#42;** -Konstanten finden Sie im Abschnitt „SQLTYPES“ von [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Im folgenden Code werden z. B. *$changeDate*, *$rate*, und *$payFrequency* jeweils als die SQL Server-Datentypen **datetime**, **money**, und **tinyint** im *$params* -Array angegeben. Da kein SQL Server-Typ für *$employeeId* angegeben ist, und da er mit einem Integer initialisiert wird, wird der  SQL Server-Standardtyp **integer** verwendet.  
+4.  Geben Sie den gewünschten SQL Server-Datentyp mit der entsprechenden **SQLSRV_SQLTYPE_&#42;**-Konstanten als vierten Parameter in jedem Unterarray des Arrays *$params* an. Eine vollständige Liste der **SQLSRV_SQLTYPE_&#42;**-Konstanten finden Sie im Abschnitt „SQLTYPES“ von [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Im folgenden Code werden z. B. *$changeDate*, *$rate*, und *$payFrequency* jeweils als die SQL Server-Datentypen **datetime**, **money**, und **tinyint** im *$params* -Array angegeben. Da kein SQL Server-Typ für *$employeeId* angegeben ist, und da er mit einem Integer initialisiert wird, wird der  SQL Server-Standardtyp **integer** verwendet.  
   
     ```  
     $employeeId = 5;  
@@ -139,9 +140,9 @@ sqlsrv_close($conn);
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Gewusst wie: Festlegen von PHP-Datentypen](../../connect/php/how-to-specify-php-data-types.md)
+[Vorgehensweise: PHP-Datentypen festlegen](../../connect/php/how-to-specify-php-data-types.md)
 
 [Konvertieren von Datentypen](../../connect/php/converting-data-types.md)
 
-[Vorgehensweise: Senden und Abrufen von UTF-8-Daten mithilfe der integrierten UTF-8-Unterstützung](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
+[Gewusst wie: Senden und Abrufen von UTF-8-Daten mithilfe der integrierten UTF-8-Unterstützung](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
   

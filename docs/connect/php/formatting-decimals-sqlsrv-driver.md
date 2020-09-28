@@ -1,22 +1,22 @@
 ---
-title: Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber) | Microsoft-Dokumentation
+title: Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber)
+description: Erfahren Sie, wie Sie die Optionen FormatDecimals und DecimalPlaces verwenden, um Dezimal- oder Geldwerte zu formatieren, wenn Sie den Microsoft SQLSRV-Treiber für PHP für SQL Server verwenden.
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - formatting, decimal types, money values
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265143"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680725"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ Standardmäßig ist `FormatDecimals`**false**. Bei Festlegung auf „true“ wer
 ## <a name="configure-number-of-decimal-places"></a>Konfigurieren der Anzahl von Dezimalstellen
 Wenn `FormatDecimals` aktiviert ist, können Benutzer die Option `DecimalPlaces` verwenden, um die Anzahl von Dezimalstellen bei money- und smallmoney-Daten zu konfigurieren. Für dieses Attribut können ganzzahlige Werte von 0-4 angegeben werden. Bei der Anzeige werden die Werte möglicherweise gerundet. Die zugrunde liegenden money-Daten werden jedoch nicht geändert.
 
-Beide Optionen können auf Verbindungs- oder Anweisungsebene festgelegt werden. Die Anweisungseinstellung setzt stets die entsprechende Verbindungseinstellung außer Kraft. Beachten Sie, dass sich die Option `DecimalPlaces` **ausschließlich** auf money-Daten auswirkt und `FormatDecimals` auf „true“ festgelegt sein muss, damit `DecimalPlaces` wirksam wird. Anderenfalls ist die Formatierung unabhängig von der Einstellung `DecimalPlaces` deaktiviert.
+Beide Optionen können auf Verbindungs- oder Anweisungsebene festgelegt werden. Die Anweisungseinstellung setzt stets die entsprechende Verbindungseinstellung außer Kraft. Beachten Sie, dass sich die Option `DecimalPlaces`**ausschließlich** auf money-Daten auswirkt und `FormatDecimals` auf „true“ festgelegt sein muss, damit `DecimalPlaces` wirksam wird. Anderenfalls ist die Formatierung unabhängig von der Einstellung `DecimalPlaces` deaktiviert.
 
 > [!NOTE]
 > Da die Felder „money“ und „smallmoney“ über 4 Dezimalzeichen verfügen, wird `DecimalPlaces` ignoriert, wenn ein negativer Wert oder ein höherer Wert als 4 festgelegt wird. Es wird nicht empfohlen, formatierte money-Daten als Eingabe für Berechnungen zu verwenden.

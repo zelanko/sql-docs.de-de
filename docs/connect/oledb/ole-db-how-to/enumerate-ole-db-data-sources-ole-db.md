@@ -1,6 +1,6 @@
 ---
 title: Auflisten von OLE DB-Datenquellen (OLE DB-Treiber) | Microsoft-Dokumentation
-description: Auflisten von OLE DB-Datenquellen mithilfe des MSOLEDBSQL-Enumerators
+description: Erfahren Sie, wie Sie den Enumerator MSOLEDBSQL verwenden, um die in diesem Beispiel verfügbaren OLE DB-Treiber für SQL Server-Datenquellen aufzulisten.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - data sources [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 33006af4eee9d97566144e66c984d55cabd5765d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b165f5ceb5e8f08539cb48473a6f3d701623f6a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244802"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861381"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Auflisten von OLE DB-Datenquellen (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

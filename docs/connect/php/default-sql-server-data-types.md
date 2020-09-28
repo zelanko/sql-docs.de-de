@@ -1,7 +1,8 @@
 ---
-title: SQL Server-Standarddatentypen | Microsoft-Dokumentation
+title: SQL Server-Standarddatentypen
+description: In diesem Thema werden alle auf PHP-Datentypen basierenden SQL Server-Standarddatentypen aufgelistet, wenn der Microsoft SQLSRV-Treiber für PHP für SQL Server verwendet wird.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dcfe4dd998f320da7e23ea28df99a28c48d2abba
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a5f60111e8a98e3f187e4db39eec06ab35e38195
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928018"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680775"
 ---
 # <a name="default-sql-server-data-types"></a>SQL Server-Standarddatentypen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,11 +34,11 @@ Beim Senden von Daten an den Server konvertiert der [!INCLUDE[ssDriverPHP](../..
 |Float|float(24)|Nicht unterstützt|  
 |Zeichenfolge (Länge kleiner als 8000 Bytes)|varchar(<string length>)|varchar(<string length>)|  
 |Zeichenfolge (Länge größer als 8000 Bytes)|varchar(max)|varchar(max)|  
-|Resource|Wird nicht unterstützt.|Wird nicht unterstützt.|  
+|Ressource|Wird nicht unterstützt.|Wird nicht unterstützt.|  
 |Stream (Codierung: nicht binär)|varchar(max)|varchar(max)|  
 |Stream (Codierung: binär)|varbinary|varbinary|  
 |Array|Wird nicht unterstützt.|Wird nicht unterstützt.|  
-|Object|Wird nicht unterstützt.|Wird nicht unterstützt.|  
+|Objekt|Wird nicht unterstützt.|Wird nicht unterstützt.|  
 |DatumUhrzeit (1)|datetime|Wird nicht unterstützt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

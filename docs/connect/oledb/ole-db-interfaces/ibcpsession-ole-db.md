@@ -1,6 +1,6 @@
 ---
 title: IBCPSession (OLE DB-Treiber) | Microsoft-Dokumentation
-description: Schnittstelle „IBCPSession“ (OLE DB)
+description: Erfahren Sie, wie der OLE DB-Treiber für SQL Server IBCPSession verwendet, um dateibasierte Massenkopiervorgänge von SQL Server zu unterstützen, und mehr über seine Member.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - IBCPSession interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: fab636f43a8ee4f6e9e0040cf7400cb29e87873b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d00a0bff09785fde1c27b89426ca680b2a0f889
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244561"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861908"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: Datentypmapping in Rowsets und Parametern (OLE DB-Treiber) | Microsoft-Dokumentation
-description: Datentypzuordnung in Rowsets und Parametern
+description: Erfahren Sie, wie der OLE DB-Treiber für SQL Server SQL Serverdaten in Rowsets und als Parameterwerte darstellt, indem er die von OLE DB definierten Datentypen verwendet.
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SSPROP_ALLOWNATIVEVARIANT property
 - GetParameterInfo function
 - OLE DB, data types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 373bb0165c663232342b690711d5f56e18544211
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbe23a1e1edce96997968bf40075b2fc3b13db49
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244915"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861599"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

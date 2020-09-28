@@ -1,6 +1,6 @@
 ---
 title: Sitzungen (OLE DB-Treiber)
-description: Sitzungen im OLE DB-Treiber für SQL Server
+description: Erfahren Sie, wie Sie den OLE DB-Treiber für SQL Server verwenden, um eine Verbindung mit einer SQL Server-Datenbank herzustellen. Eine Sitzung stellt eine einzelne Verbindung mit einer Instanz von SQL Server dar.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - OLE DB Driver for SQL Server, sessions
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ba9d1dcfbc3ac57d9f24ba78e992443d6d7d6453
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0187f42ab9389f18d35d4f400c2ea494a6d6dcd4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244940"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862485"
 ---
 # <a name="sessions"></a>Sitzungen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

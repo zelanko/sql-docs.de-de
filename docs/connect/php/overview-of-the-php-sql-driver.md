@@ -1,5 +1,6 @@
 ---
-title: Übersicht über die Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
+title: Übersicht über die Microsoft-Treiber für PHP für SQL Server
+description: Verschaffen Sie sich einen Überblick über die Microsoft SQLSRV- und PDO_SQSRV-Treiber für PHP für SQL Server und erfahren Sie, wie Sie diese in einer PHP-Anwendung für den Zugriff auf Datenbanken verwenden können.
 ms.custom: ''
 ms.date: 03/27/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c8f5cbf011165b41b353a37d8973031f55c2db6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 556d13a5b29a53b323b41bc9b697d7ad934ca143
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922813"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042781"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Übersicht über die Microsoft-Treiber für PHP für SQL Server
 
@@ -30,12 +31,12 @@ Sie müssen über die richtige Version von SQL Server Native Client verfügen od
 |Thema|BESCHREIBUNG|  
 |---------|---------------|  
 | ![Download: eingekreister Pfeil nach unten](../../ssms/media/download-icon.png)[ Herunterladen von Microsoft-Treibern für PHP für SQL Server](download-drivers-php-sql-server.md) | Links zum Herunterladen von Microsoft-Treibern für PHP für SQL Server. |
-|[Anmerkungen zu dieser Version für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/release-notes-php-sql-driver.md)|Listet die Features auf, die für die Versionen 4.0, 3.2, 3.1, 3.0 und 2.0 hinzugefügt wurden.|  
+|[Versionshinweise für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/release-notes-php-sql-driver.md)|Listet die Features auf, die für die Versionen 4.0, 3.2, 3.1, 3.0 und 2.0 hinzugefügt wurden.|  
 |[Unterstützungsressourcen für Microsoft-Treiber für PHP für SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|Enthält Links zu Ressourcen, die hilfreich sein können, wenn Sie Anwendungen entwickeln, die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]nutzen.|  
 |[Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)|Enthält Informationen, die beim Ausführen der Codebeispiele in dieser Dokumentation hilfreich sind.|  
 | &nbsp; | &nbsp; |
 
-## <a name="reference"></a>Verweis
+## <a name="reference"></a>Referenz
 
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Referenz zum Treiber PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
@@ -43,8 +44,6 @@ Sie müssen über die richtige Version von SQL Server Native Client verfügen od
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Getting Started with the Microsoft Drivers for PHP for SQL Server (Erste Schritte mit dem Microsoft-Treiber für PHP für SQL Server)](../../connect/php/getting-started-with-the-php-sql-driver.md)
-
-[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
-
-[Beispielanwendung &#40;SQLSRV-Treiber&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+[Getting Started with the Microsoft Drivers for PHP for SQL Server (Erste Schritte mit dem Microsoft-Treiber für PHP für SQL Server)](../../connect/php/getting-started-with-the-php-sql-driver.md)  
+[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)  
+[Beispielanwendung &#40;SQLSRV-Treiber&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

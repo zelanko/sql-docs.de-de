@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Senden von Daten als Stream | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Streamen von Daten'
+description: Erfahren Sie, wie Streams verwendet werden, um große Objekte mithilfe der Microsoft SQLSRV- und PDO_SQLSRV-Treiber für PHP für SQL Server an die Datenbank zu senden.
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc5a0c6fc4c6331dfa0398b2d6faca4ac482ffe3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2d986336a369698b107b2437beae322d91508fb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915946"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411437"
 ---
-# <a name="how-to-send-data-as-a-stream"></a>Gewusst wie: Senden von Daten als Stream
+# <a name="how-to-send-data-as-a-stream"></a>Vorgehensweise: Streamen von Daten
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] nutzt PHP-Datenströme, um große Objekte an den Server zu senden. In diesem Thema wird erklärt, wie Sie Daten in Strömen senden können. Im ersten Beispiel wird mithilfe des SQLSRV-Treibers die Standardvorgehensweise veranschaulicht, bei der alle Datenstromdaten direkt bei der Abfrageausführung gesendet werden. Im zweiten Beispiel wird mithilfe des SQLSRV-Treibers veranschaulicht, wie Sie bis zu 8 Kilobyte (8 KB) an Streamdaten gleichzeitig an den Server senden können.  

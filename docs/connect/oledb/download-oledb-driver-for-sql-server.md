@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 000d7c39221f54459783fc9117a35a880fb02c92
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb1d1cff13865981f30495ac406495593a778180
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006986"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076775"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Herunterladen des Microsoft OLE DB-Treibers für SQL Server
 
@@ -21,6 +21,8 @@ ms.locfileid: "86006986"
 Der OLE DB-Treiber für SQL Server ist eine eigenständige Datenzugriffs-API (Anwendungsprogrammierschnittstelle), die für OLE DB verwendet wird. Der OLE DB-Treiber für SQL Server ist für Windows verfügbar und stellt den SQL OLE DB-Treiber in einer Dynamic Link Library (DLL) bereit.
 
 ## <a name="download"></a>Download
+
+Das weitervertreibbare Installationsprogramm für den Microsoft OLE DB-Treiber für SQL Server installiert die Clientkomponenten, die während der Laufzeit erforderlich sind, um neuere SQL Server-Features nutzen zu können. Ab Version 18.3 schließt das Installationsprogramm auch die Microsoft Active Directory-Authentifizierungsbibliothek (ADAL.dll) mit ein und installiert sie.
 
 Der Microsoft OLE DB-Treiber 18.4 für SQL Server ist die aktuelle allgemein verfügbare Version. Wenn Sie eine frühere Version des Microsoft OLE DB-Treibers 18 für SQL Server installiert haben, können Sie durch Installieren der Version 18.4 ein Upgrade auf Version 18.4 durchführen.
 

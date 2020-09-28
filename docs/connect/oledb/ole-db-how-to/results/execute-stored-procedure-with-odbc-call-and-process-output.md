@@ -1,6 +1,6 @@
 ---
 title: Ausführen der gespeicherten Prozedur mit ODBC CALL und der Prozessausgabe | Microsoft-Dokumentation
-description: Verarbeiten von Rückgabecodes und Ausgabeparametern mit dem OLE DB-Treiber für SQL Server
+description: Erfahren Sie, wie Rückgabecodes und Ausgabeparameter im OLE DB-Treiber für SQL Server verarbeitet werden, die nach der Freigabe des Rowsets im endgültigen Paket empfangen werden.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - stored procedures [ODBC]
 - ODBC CALL syntax
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 010b00088a2a4256a922a0f8f500f33d61036304
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 99c2603e310807ad3f15618082579de434f6dd75
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012518"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860313"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Ausführen der gespeicherten Prozedur mit ODBC CALL und der Prozessausgabe
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

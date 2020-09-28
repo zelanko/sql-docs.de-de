@@ -1,7 +1,8 @@
 ---
-title: PHP-Standarddatentypen | Microsoft-Dokumentation
+title: PHP-Standarddatentypen
+description: In diesem Thema werden alle PHP-Standarddatentypen mit ihren entsprechenden SQL Server-Datentypen aufgelistet, wenn der Microsoft SQLSRV-Treiber für PHP für SQL Server verwendet wird.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3f5210d54fdd5a0a693f9cb7fdf8a7d4fc0f183
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1e1cf91baf80fd6298eaaca9c9e12a0b5858d9f
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928029"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680790"
 ---
 # <a name="default-php-data-types"></a>PHP-Standarddatentypen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +30,7 @@ Wenn Daten mit dem Treiber PDO_SQLSRV zurückgegeben werden, wird als Datentyp e
   
 Im weiteren Verlauf dieses Themas werden die Standarddatentypen erläutert, die den SQLSRV-Treiber verwenden.  
   
-Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Server abgerufen wird), den PHP-Standarddatentyp (der Datentyp, in den Daten konvertiert werden) und die Standardcodierung für Datenströme und Zeichenfolgen. Weitere Informationen dazu, wie Sie Datentypen beim Abrufen von Daten vom Server festlegen, finden Sie unter [Vorgehensweise: Festlegen von PHP-Datentypen](../../connect/php/how-to-specify-php-data-types.md).  
+Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Server abgerufen wird), den PHP-Standarddatentyp (der Datentyp, in den Daten konvertiert werden) und die Standardcodierung für Datenströme und Zeichenfolgen. Weitere Informationen dazu, wie Sie Datentypen beim Abrufen von Daten vom Server festlegen, finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 |SQL Server-Typ|PHP-Standardtyp|Standardcodierung|  
 |-------------------|--------------------|--------------------|  
@@ -37,10 +38,10 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
 |BINARY|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |bit|Integer|8-Bit-Zeichen<sup>1</sup>|  
 |char|String|8-Bit-Zeichen<sup>1</sup>|  
-|Datum<sup>4</sup>|Datetime|Nicht verfügbar|  
-|datetime<sup>4</sup>|Datetime|Nicht verfügbar|  
-|datetime2<sup>4</sup>|Datetime|Nicht verfügbar|  
-|datetimeoffset<sup>4</sup>|Datetime|Nicht verfügbar|  
+|Datum<sup>4</sup>|Datetime|Nicht zutreffend|  
+|datetime<sup>4</sup>|Datetime|Nicht zutreffend|  
+|datetime2<sup>4</sup>|Datetime|Nicht zutreffend|  
+|datetimeoffset<sup>4</sup>|Datetime|Nicht zutreffend|  
 |Decimal|String|8-Bit-Zeichen<sup>1</sup>|  
 |float|Float|8-Bit-Zeichen<sup>1</sup>|  
 |geography|Datenstrom|Binär<sup>3</sup>|  
@@ -59,7 +60,7 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
 |SMALLMONEY|String|8-Bit-Zeichen<sup>1</sup>|  
 |sql_variant<sup>7</sup>|String|8-Bit-Zeichen<sup>1</sup>|  
 |text<sup>8</sup>|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
-|time<sup>4</sup>|Datetime|Nicht verfügbar|  
+|time<sup>4</sup>|Datetime|Nicht zutreffend|  
 |timestamp|String|8-Bit-Zeichen<sup>1</sup>|  
 |TINYINT|Integer|8-Bit-Zeichen<sup>1</sup>|  
 |UDT|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
@@ -77,7 +78,7 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
   
 3.  Die Daten werden als uncodierter und nicht übersetzter Strom aus unbearbeiteten Bytes vom Server zurückgegeben.  
 
-4.  Daten des Typs „Datum“ und „Uhrzeit“ können als Zeichenfolgen abgerufen werden. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen mittels des SQLSRV-Treibers](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).  
+4.  Daten des Typs „Datum“ und „Uhrzeit“ können als Zeichenfolgen abgerufen werden. Weitere Informationen finden Sie unter [So wird's gemacht: Datums- und Uhrzeittypen mittels des SQLSRV-Treibers als Zeichenfolgen abrufen](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).  
 
 5.  Dies ist ein veralteter Typ, der dem varbinary(max)-Typ zugeordnet ist.
 
@@ -95,15 +96,15 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>Weitere neue Datentypen und Funktionen in SQL Server 2008  
 Datentypen, die in SQL Server 2008 neu sind und die außerhalb von Spalten (z.B. Tabellenwertparameter) vorhanden sind, werden in [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] nicht unterstützt. Die folgende Tabelle fasst die PHP-Unterstützung für die neuen Features von SQL Server 2008 zusammen.  
   
-|Funktion|PHP-Unterstützung|  
+|Feature|PHP-Unterstützung|  
 |-----------|---------------|  
-|Tabellenwertparameter|Nein|  
-|Spalten mit geringer Dichte|Teilweise|  
+|Tabellenwertparameter|No|  
+|Spalten mit geringer Dichte|Partial|  
 |NULL-Bit-Komprimierung|Ja|  
 |Große benutzerdefinierte CLR-Typen (UDTs)|Ja|  
-|Dienstprinzipalname|Nein|  
+|Dienstprinzipalname|No|  
 |MERGE|Ja|  
-|FILESTREAM|Teilweise|  
+|FILESTREAM|Partial|  
   
 Teilweise Unterstützung besagt, dass Sie den Spaltentyp nicht programmgesteuert abfragen können.  
   

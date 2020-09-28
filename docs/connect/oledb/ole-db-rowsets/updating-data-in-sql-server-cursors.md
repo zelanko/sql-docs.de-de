@@ -1,6 +1,6 @@
 ---
-title: Aktualisieren von Daten in SQL Server-Cursorn | Microsoft-Dokumentation
-description: Aktualisieren von Daten in SQL Server-Cursorn
+title: Aktualisieren von Daten in Cursorn (OLE DB-Treiber)
+description: Erfahren Sie, wie eine Consumeranwendung des OLE DB-Treibers für SQL Server mit Anforderungen in einem modifizierbaren Rowset unter Verwendung von SQL Server-Cursorn arbeitet.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - immediate update mode [OLE DB]
 - cursors [OLE DB]
 - data updates [SQL Server], OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7a1a476c9e8588cb5dc14ce7f24b335c0b433b68
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eae7b9119803615a2d18fe4710ff1eda2b91ac5b
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999616"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859926"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Aktualisieren von Daten in SQL Server-Cursorn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Beim Abrufen und Aktualisieren von Daten mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursorn gelten für die Consumeranwendung eines OLE DB-Treibers für SQL Server die gleichen Überlegungen und Einschränkungen wie für jede andere Clientanwendung.  
+  Beim Abrufen und Aktualisieren von Daten mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursorn gelten für eine Consumeranwendung des OLE DB-Treibers für SQL Server die gleichen Überlegungen und Einschränkungen wie für jede andere Clientanwendung.  
   
  Nur Zeilen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursorn nehmen an der gleichzeitigen Datenzugriffssteuerung teil. Wenn der Consumer ein änderbares Rowset anfordert, wird die Parallelitätssteuerung von DBPROP_LOCKMODE kontrolliert. Um die Steuerungsebene für den gleichzeitigen Zugriff zu ändern, legt der Consumer die DBPROP_LOCKMODE-Eigenschaft vor dem Öffnen des Rowsets fest.  
   

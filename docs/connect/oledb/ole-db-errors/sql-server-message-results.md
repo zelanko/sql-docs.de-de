@@ -1,6 +1,6 @@
 ---
-title: SQL Server-Meldungsergebnisse | Microsoft-Dokumentation
-description: SQL Server-Meldungsergebnisse
+title: SQL Server-Meldungsergebnisse (OLE DB-Treiber)
+description: Erfahren Sie mehr über Transact-SQL-Anweisungen, die keine OLE DB-Treiber für SQL Server-Rowsets oder eine Anzahl generieren, und deren erwartete Rückgabewerte.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, errors
 - errors [OLE DB], SQL Server message results
 - OLE DB error handling, SQL Server message results
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: dfebd7443b24d09e6bf7696caba5449c1890e0d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dc3701313f920eead650435ca40538ad8a4b6ef0
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998286"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862503"
 ---
 # <a name="sql-server-message-results"></a>SQL Server-Meldungsergebnisse
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Die folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen generieren weder Rowsets für den OLE DB-Treiber für SQL Server noch eine Angabe betroffener Zeilen, wenn sie ausgeführt werden:  
+Die folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen generieren weder Rowsets für den OLE DB-Treiber für SQL Server noch eine Angabe betroffener Zeilen, wenn sie ausgeführt werden:  
   
 -   PRINT  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85998286"
   
  Der OLE DB-Treiber für SQL Server gibt S_OK zurück und weist eine oder mehrere Informationsmeldungen auf, nachdem eine Elementfunktion des OLE DB-Treibers für SQL Server durch den Consumer oder zahlreiche [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen ausgeführt wurden.  
   
- Wenn der Consumer des OLE DB-Treibers für SQL Server die dynamische Angabe von Abfragetext zulässt, sollten die Fehlerschnittstellen nach jeder Ausführung einer Elementfunktion überprüft werden. Dabei spielen der Wert des Rückgabecodes, die Anwesenheit oder Abwesenheit eines zurückgegebenen **IRowset**- oder **IMultipleResults**-Schnittstellenverweises oder die Angabe betroffener Zeilen keine Rolle.  
+Der Consumer des OLE DB-Treibers für SQL Server darf den Abfragetext dynamisch angeben. Der Consumer muss Fehlerschnittstellen nach der Ausführung _jeder_ Memberfunktion prüfen. Diese Prüfungen sollten stets durchgeführt werden, und zwar unabhängig vom Wert des Rückgabecodes und davon, ob ein Schnittstellenverweis auf `IRowset` oder `IMultipleResults` zurückgegeben wird oder nicht, und von der Anzahl der betroffenen Zeilen.
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Fehler](../../oledb/ole-db-errors/errors.md)  

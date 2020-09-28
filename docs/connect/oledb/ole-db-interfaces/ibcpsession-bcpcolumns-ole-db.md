@@ -1,6 +1,6 @@
 ---
 title: IBCPSession::BCPColumns (OLE DB-Treiber) | Microsoft-Dokumentation
-description: IBCPSession::BCPColumns (OLE DB)
+description: Erfahren Sie, wie die IBCPSession::BCPColumns-Methode die Anzahl der Felder festlegt, die an die Spalten in einer SQL Server-Tabelle im OLE DB-Treiber für SQL Server gebunden werden sollen.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,14 +12,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPColumns method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ba6126113fef947aa1253ff5ac4b9291ec2f6924
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2eb8456d75a1dd04be2c547db957edf2e01bcaca
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244687"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860217"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ HRESULT BCPColumns(
  Die Methode wurde erfolgreich ausgeführt.  
   
  E_FAIL  
- Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)-Schnittstelle.  
+ Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)-Schnittstelle.  
   
  E_UNEXPECTED  
  Die Methode wurde unerwartet aufgerufen. Die **BCPInit** -Methode wurde beispielsweise erst nach dem Aufruf dieser Methode aufgerufen. Tritt auch auf, wenn diese Methode mehr als einmal für einen Massenkopiervorgang aufgerufen wird.  

@@ -1,6 +1,6 @@
 ---
 title: ISSAsynchStatus::Abort (OLE DB-Treiber) | Microsoft-Dokumentation
-description: ISSAsynchStatus::Abort (OLE DB)
+description: Erfahren Sie, wie die ISSAsynchStatus::Abort-Methode einen asynchron ausgeführten Vorgang im OLE DB-Treiber für SQL Server abbricht.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - Abort method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e3c6e3ba45774362834c8a8391f5658670e01434
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbbef11ae17029500a6910e5b28c121f6312dce2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244339"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862206"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ HRESULT Abort(
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  S_OK  
- Die Anforderung zum Abbrechen des asynchronen Vorgangs wurde verarbeitet. Dies ist keine Garantie, dass der Vorgang selbst abgebrochen wurde. Um festzustellen, ob der Vorgang abgebrochen wurde, sollte der Consumer [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) aufrufen und auf den Wert DB_E_CANCELED prüfen. Dieser Wert wird unter Umständen jedoch nicht gleich im nächsten Aufruf zurückgegeben.  
+ Die Anforderung zum Abbrechen des asynchronen Vorgangs wurde verarbeitet. Dies ist keine Garantie, dass der Vorgang selbst abgebrochen wurde. Um festzustellen, ob der Vorgang abgebrochen wurde, muss der Consumer [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) aufrufen und auf den Wert DB_E_CANCELED prüfen. Dieser Wert wird ggf. jedoch nicht im nächsten Aufruf zurückgegeben.  
   
  DB_E_CANTCANCEL  
  Der asynchrone Vorgang kann nicht abgebrochen werden.  
@@ -64,18 +64,18 @@ HRESULT Abort(
  Der *hChapter*-Parameter ist nicht DB_NULL_HCHAPTER, oder *eOperation* ist nicht DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus::Abort** wurde für ein Datenquellobjekt aufgerufen, für das **IDBInitialize::Initialize** nicht aufgerufen oder nicht abgeschlossen wurde.  
+ `ISSAsynchStatus::Abort` wurde für ein Datenquellobjekt aufgerufen, für das `IDBInitialize::Initialize` nicht aufgerufen oder nicht abgeschlossen wurde.  
   
- **ISSAsynchStatus::Abort** wurde für ein Datenquellobjekt aufgerufen, für das **IDBInitialize::Initialize** aufgerufen wurde, das jedoch vor der Initialisierung abgebrochen wurde oder für das ein Timeout eingetreten ist. Das Datenquellobjekt wurde noch nicht initialisiert.  
+ `ISSAsynchStatus::Abort` wurde für ein Datenquellenobjekt aufgerufen, für das `IDBInitialize::Initialize` aufgerufen wurde, das dann aber vor der Initialisierung abgebrochen wurde oder das Zeitlimit überschritten hat. Das Datenquellobjekt wurde noch nicht initialisiert.  
   
- **ISSAsynchStatus::Abort** wurde für ein Rowset aufgerufen, für das zuvor **ITransaction::Commit** oder **ITransaction::Abort** aufgerufen wurde, und das Rowset blieb nach dem Commit oder Abbruch nicht bestehen und befindet sich in einem Zombiezustand.  
+ `ISSAsynchStatus::Abort` wurde für ein Rowset aufgerufen, für das zuvor `ITransaction::Commit` oder `ITransaction::Abort` aufgerufen wurde, und das Rowset blieb nach dem Commit oder Abbruch nicht bestehen und befindet sich in einem Zombiezustand.  
   
- **ISSAsynchStatus::Abort** wurde für ein Rowset aufgerufen, das in seiner Initialisierungsphase asynchron abgebrochen wurde. Das Rowset befindet sich in einem Zombiezustand.  
+ `ISSAsynchStatus::Abort` wurde für ein Rowset aufgerufen, das in seiner Initialisierungsphase asynchron abgebrochen wurde. Das Rowset befindet sich in einem Zombiezustand.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Durch Abbrechen der Initialisierung eines Rowsets oder eines Datenquellobjekts wird das Rowset bzw. das Datenquellobjekt möglicherweise in einen Zombiezustand versetzt, sodass für alle Methoden außer **IUnknown** -Methoden E_UNEXPECTED zurückgegeben wird. In diesem Fall hat der Consumer nur die Möglichkeit, das Rowset oder das Datenquellobjekt freizugeben.  
+ Durch Abbrechen der Initialisierung eines Rowsets oder eines Datenquellobjekts wird das Rowset bzw. das Datenquellobjekt möglicherweise in einen Zombiezustand versetzt, sodass für alle Methoden außer `IUnknown` -Methoden E_UNEXPECTED zurückgegeben wird. In diesem Fall hat der Consumer nur die Möglichkeit, das Rowset oder das Datenquellobjekt freizugeben.  
   
- Durch Aufrufen von **ISSAsynchStatus::Abort** und Übergeben eines anderen Werts für *eOperation* als DBASYNCHOP_OPEN wird S_OK zurückgegeben. Das bedeutet nicht, dass der Vorgang abgeschlossen oder abgebrochen wurde.  
+ Durch Aufrufen von `ISSAsynchStatus::Abort` und Übergeben eines anderen Werts für *eOperation* als DBASYNCHOP_OPEN wird S_OK zurückgegeben. Dieser Wert bedeutet nicht, dass der Vorgang abgeschlossen oder abgebrochen wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Ausführen asynchroner Vorgänge](../../oledb/features/performing-asynchronous-operations.md)  

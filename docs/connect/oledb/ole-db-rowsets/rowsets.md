@@ -1,6 +1,6 @@
 ---
 title: Rowsets (OLE DB-Treiber)
-description: Rowsets im OLE DB-Treiber für SQL Server
+description: Erfahren Sie mehr über Schnittstellen, die einen Consumer beim Erstellen eines Rowsets in einer Sitzung im OLE DB-Treiber für SQL Server unterstützen. Weitere Informationen finden Sie in den Artikeln in diesem Abschnitt.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB rowsets
 - OLE DB rowsets, about rowsets
 - rowsets [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7cb9a52e9b7b1cd5ec243db15f666a5b5ef9c4a9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55100932092abeb81da7fa1c156ccb5a61fc193c
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244175"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859947"
 ---
 # <a name="rowsets"></a>Rowsets
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
