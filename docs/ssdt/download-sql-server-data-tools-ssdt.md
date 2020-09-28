@@ -13,18 +13,18 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: dbaaa71b61129d0bb1917644c017122e6ed88bf4
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: eed51327477f40aa4e093d9b28cbaa641bfd4a86
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279000"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480532"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Herunterladen von SQL Server Data Tools (SSDT) für Visual Studio 2015
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-**SQL Server Data Tools (SSDT)** ist ein modernes Entwicklungstool für relationale SQL Server-Datenbank-Instanzen, Azure SQL-Datenbank-Instanzen, IS-Pakete (Integration Services), AS-Datenmodelle (Analysis Services) und RS-Berichte (Reporting Services). Mit SSDT lassen sich Datenbanken und andere Inhaltstypen für SQL Server entwerfen und bereitstellen – und zwar ebenso einfach wie eine Anwendung in Visual Studio.
+**SQL Server Data Tools (SSDT)** ist ein modernes Entwicklungstool für relationale SQL Server-Datenbanken, Datenbanken in Azure SQL, IS-Pakete (Integration Services), AS-Datenmodelle (Analysis Services) und RS-Berichte (Reporting Services). Mit SSDT lassen sich Datenbanken und andere Inhaltstypen für SQL Server entwerfen und bereitstellen – und zwar ebenso einfach wie eine Anwendung in Visual Studio.
 
 ## <a name="ssdt-for-visual-studio-2019"></a>SSDT für Visual Studio 2019
 
@@ -79,10 +79,10 @@ Der Installer listet verfügbare Visual Studio-Instanzen auf, denen die SSDT-Too
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT für VS 2017 (eigenständiger Installer)
 
-:::image type="icon" source="media/download.png" border="false"::: **[SSDT für Visual Studio 2017 (15.9.5) herunterladen](https://go.microsoft.com/fwlink/?linkid=2131035)**
+:::image type="icon" source="media/download.png" border="false"::: **[SSDT für Visual Studio 2017 (15.9.6) herunterladen](https://go.microsoft.com/fwlink/?linkid=2139376)**
 
 > [!IMPORTANT]
-> * Deinstallieren Sie vor der Installation von SSDT für Visual Studio 2017 (15.9.5) die Erweiterungen für *Analysis Services-* und *Reporting Services-Projekte*, wenn diese bereits installiert wurden, und schließen Sie alle VS-Instanzen. 
+> * Deinstallieren Sie vor der Installation von SSDT für Visual Studio 2017 (15.9.6) die Erweiterungen für *Analysis Services-* und *Reporting Services-Projekte*, wenn diese bereits installiert wurden, und schließen Sie alle VS-Instanzen. 
 > * Die Power Query-Quelle für SQL Server 2017 wurde in ihrer bisherigen Form als bereits enthaltene Komponente entfernt. Wir haben die Power Query-Quelle für SQL Server 2017 und 2019 nun als separate Komponente angekündigt, die [hier](https://www.microsoft.com/download/details.aspx?id=100619) heruntergeladen werden kann.
 > * Um Pakete mit Oracle- und Teradata-Connectors zu entwerfen, die auf eine frühere Version von SQL Server vor SQL Server 2019 abzielen, müssen Sie zusätzlich zum [Microsoft Oracle-Connector für SQL Server 2019](https://www.microsoft.com/download/details.aspx?id=58228) und [Microsoft Teradata-Connector für SQL Server 2019](https://www.microsoft.com/download/details.aspx?id=100599) auch die entsprechende Version des Microsoft-Connectors für Oracle und Teradata von Attunity installieren.
 >    * [Microsoft Connector-Version 5.0 für Oracle von Attunity für SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -102,17 +102,17 @@ SSDT für Visual Studio 2017 hat die gleichen [Systemanforderungen](https://docs
 
 Diese Version von **SSDT für Visual Studio 2017** kann in folgenden Sprachen installiert werden:
 
-* [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
-* [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
-* [Englisch (USA)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
-* [Französisch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
-* [Deutsch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
-* [Italienisch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
-* [Japanisch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
-* [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
-* [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
-* [Russisch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
-* [Spanisch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
+* [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x804)
+* [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x404)
+* [Englisch (USA)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x409)
+* [Französisch](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40c)
+* [Deutsch](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x407)
+* [Italienisch](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x410)
+* [Japanisch](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x411)
+* [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x412)
+* [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x416)
+* [Russisch](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x419)
+* [Spanisch](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>Überlegungen und Einschränkungen
 
@@ -166,7 +166,7 @@ In den [vorherigen Releases von SQL Server Data Tools (SSDT und SSDT-BI)](previo
 
 * [SSDT MSDN-Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [SSDT-Team-Blog](https://blogs.msdn.com/b/ssdt/)
+* [SSDT-Team-Blog](https://docs.microsoft.com/archive/blogs/ssdt/)
 
 * [DACFx-API-Referenz](https://msdn.microsoft.com/library/dn645454.aspx)
 

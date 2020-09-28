@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd90e97a8703e4d4a11f082b864555621542f745
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 2a96f6ae82354d243b4c95561e7fdd7b11c58441
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518850"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934111"
 ---
 # <a name="database-project-settings"></a>Datenbankprojekteinstellungen
 
@@ -87,7 +87,7 @@ Die Einstellungen in der folgenden Tabelle gelten für alle Konfigurationen dies
 |Feld|Standardwert|BESCHREIBUNG|  
 |---------|-----------------|---------------|  
 |Zielplattform|Microsoft SQL Server 2012|Gibt die Version von SQL Server an, die das Ziel dieses Datenbankprojekts ist.|  
-|Erweiterte Transact\-SQL-Überprüfung für gemeinsame Objekte aktivieren|Nicht aktiviert, wenn Sie ein neues Projekt erstellen.<br /><br />Aktiviert, wenn Sie ein Projekt aus dem SQL Server-Objekt-Explorer erstellen, das mit SQL Azure verbunden ist, eine SQL Azure-Datenbank in das Projekt importieren oder die Zielplattform eines Projekts in SQL Azure ändern.|Wenn diese Option aktiviert ist, werden Fehler im Projekt, dessen Überprüfung durch den SQL Server-Compiler fehlgeschlagen ist, gemeldet. Wenn Sie die Zielplattform in SQL Azure ändern, wird die erweiterte Überprüfung aktiviert. Die Option wird nicht deaktiviert, wenn Sie die Zielplattform ändern.<br /><br />Sie können diese Option für andere Versionen von SQL Server aktivieren, die Überprüfung ist jedoch auf teilweise eigenständige Datenbanken von Microsoft SQL Server 2012 sowie auf SQL Azure beschränkt. Nicht die gesamte Transact\-SQL-Syntax wird für alle Versionen von SQL Server unterstützt.<br /><br />Weitere Informationen finden Sie unter [Erweiterte Transact-SQL-Überprüfung](#bkmk_evf) weiter unten in diesem Thema.|  
+|Erweiterte Transact\-SQL-Überprüfung für gemeinsame Objekte aktivieren|Nicht aktiviert, wenn Sie ein neues Projekt erstellen.<br /><br />Aktiviert, wenn Sie ein Projekt aus dem SQL Server-Objekt-Explorer erstellen, das mit SQL Azure verbunden ist, eine Instanz der Azure SQL-Datenbank in das Projekt importieren oder die Zielplattform eines Projekts in SQL Azure ändern.|Wenn diese Option aktiviert ist, werden Fehler im Projekt, dessen Überprüfung durch den SQL Server-Compiler fehlgeschlagen ist, gemeldet. Wenn Sie die Zielplattform in SQL Azure ändern, wird die erweiterte Überprüfung aktiviert. Die Option wird nicht deaktiviert, wenn Sie die Zielplattform ändern.<br /><br />Sie können diese Option für andere Versionen von SQL Server aktivieren, die Überprüfung ist jedoch auf teilweise eigenständige Datenbanken von Microsoft SQL Server 2012 sowie auf SQL Azure beschränkt. Nicht die gesamte Transact\-SQL-Syntax wird für alle Versionen von SQL Server unterstützt.<br /><br />Weitere Informationen finden Sie unter [Erweiterte Transact-SQL-Überprüfung](#bkmk_evf) weiter unten in diesem Thema.|  
 |Ausgabetypen|||  
 |Datenebenenanwendung (DACPAC-Datei)|Aktiviert und gesperrt. In der Buildausgabe eines Datenbankprojekts wird beim Erstellen des Projekts immer ein DACPAC-Paket erzeugt.|Wenn Sie die SQL Server Data Tools-Version (SSDT) mit der Option „Zusätzliche DACPAC-Downleveldatei (v2.0) erstellen“ verwenden, aktivieren Sie die Option, wenn das Paket mit SQL Server Management Studio oder dem SQL Azure-Verwaltungsportal kompatibel sein soll. Sie können ein DACPAC-Paket direkt aus SSDT bereitstellen. Eine DACPAC-Datei der Version 2.0 kann jedoch über SQL Server Management Studio nur zum Zeitpunkt der Freigabe von SQL Server Data Tools bereitgestellt werden.|  
 |Skript erstellen (.sql-Datei)||Legt fest, ob beim Erstellen des Projekts ein vollständiges SQL-CREATE-Skript für alle Objekte im Projekt erstellt und im Ordner "bin\debug" abgelegt wird. Sie können mithilfe des Befehls **Projekt veröffentlichen** oder mit dem SQL Compare-Hilfsprogramm ein Skript für inkrementelle Updates erstellen.|  
@@ -132,7 +132,7 @@ Funktionen, die derzeit keine Validierung unterstützen, z. B.:
 -   SQL Azure-Metadatensortierung (der Compilerdienst verwendet die Metadatensortierung für teilweise eigenständige Datenbanken von SQL Server 2012 - Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### <a name="enablingdisabling-extended-verification"></a>Aktivieren/Deaktivieren der erweiterten Überprüfung  
-Bei Datenbankprojekten, die direkt aus einer SQL Azure-Datenbank erstellt wurden, bzw. bei Projekten, deren Zielplattform auf SQL Azure festgelegt ist, wird die erweiterte Transact-SQL-Überprüfung standardmäßig aktiviert. Es wird empfohlen, die erweiterte Überprüfung bei der Entwicklung für SQL Azure oder bei Verwendung einer Datenbank im Anwendungsbereich zu verwenden, die für SQL Server 2012 konzipiert ist. Weitere Informationen zu Datenbanken im Anwendungsbereich finden Sie unter [Teilweise eigenständige Datenbanken](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+Bei Datenbankprojekten, die direkt aus einer Azure SQL-Datenbank erstellt wurden, bzw. bei Projekten, deren Zielplattform auf SQL Azure festgelegt ist, wird die erweiterte Transact-SQL-Überprüfung standardmäßig aktiviert. Es wird empfohlen, die erweiterte Überprüfung bei der Entwicklung für SQL Azure oder bei Verwendung einer Datenbank im Anwendungsbereich zu verwenden, die für SQL Server 2012 konzipiert ist. Weitere Informationen zu Datenbanken im Anwendungsbereich finden Sie unter [Teilweise eigenständige Datenbanken](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 Die erweiterte Überprüfungsfunktion kann auch verwendet werden, wenn eine Datenbank im Anwendungsbereich für SQL Server 2008/R2 entwickelt wird, um Kompatibilität mit Microsoft SQL Server 2012 und SQL Azure zu erzielen.  
   
@@ -151,7 +151,7 @@ Die erweiterte Überprüfungsfunktion kann auch verwendet werden, wenn eine Date
   
 2.  Ändern Sie unter **Eigenschaften** die Eigenschaft **Erweiterte T-SQL-Überprüfung** in **False**.  
   
-![Dateieigenschaften](../ssdt/media/ssdt-evf.gif "Dateieigenschaften")  
+    ![Dateieigenschaften](../ssdt/media/ssdt-evf.gif "Dateieigenschaften")  
   
 ### <a name="special-considerations-for-collations"></a>Spezielle Überlegungen zu Sortierungen  
 Weitere Informationen zu Sortierungen in teilweise eigenständigen Datenbanken finden Sie unter [Sortierungen in eigenständigen Datenbanken](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  

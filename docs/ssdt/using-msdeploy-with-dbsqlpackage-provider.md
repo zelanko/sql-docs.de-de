@@ -1,6 +1,6 @@
 ---
 title: Verwenden von MSDeploy mit dem dbSqlPackage-Anbieter
-description: Hier erfahren Sie mehr über den veralteten MSDeploy-Anbieter DbSqlPackage. Sehen Sie sich Parameter, Beispiele und alternative Datenbankveröffentlichungstools für SQL Server und SQL Azure an.
+description: Hier erfahren Sie mehr über den veralteten MSDeploy-Anbieter DbSqlPackage. Sehen Sie sich Parameter, Beispiele und alternative Veröffentlichungstools für SQL Server und Azure SQL-Datenbank an.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: daeff5e44e714354cb8e0edc525779b197ec7d19
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899743"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934085"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Verwenden von MSDeploy mit dem dbSqlPackage-Anbieter
 
-**dbSqlPackage** ist ein **MSDeploy**-Anbieter, der Ihnen die Interaktion mit SQL Server- oder SQL Azure-Datenbanken ermöglicht. **dbSqlPackage** unterstützt die folgenden Aktionen:  
+**dbSqlPackage** ist ein **MSDeploy**-Anbieter, der Ihnen die Interaktion mit SQL Server oder Azure SQL-Datenbank ermöglicht. **dbSqlPackage** unterstützt die folgenden Aktionen:  
   
--   **Extract:** Erstellt eine Datenbankmomentaufnahme (DACPAC-Datei) von einer SQL Server- oder SQL Azure-Livedatenbank  
+-   **Extract:** Erstellt eine Datenbankmomentaufnahme (DACPAC-Datei) von einer SQL Server- oder Azure SQL-Livedatenbank.  
   
 -   **Veröffentlichen**: Aktualisiert ein Datenbankschema inkrementell, sodass dieses dem Schema einer DACPAC-Quelldatei entspricht  
   
@@ -57,7 +57,7 @@ Der **dbSqlPackage**-Anbieter akzeptiert eine Eingabe, die entweder einer gülti
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**N/V**|*input* ist eine gültige SQL Server- oder SQL Azure-Verbindungszeichenfolge bzw. ein Pfad zu einer DACPAC-Datei auf dem Datenträger.<br /><br />**HINWEIS**: Die einzigen Verbindungszeichenfolgeneigenschaften, die bei der Verwendung einer Verbindungszeichenfolge als Eingabequelle unterstützt werden, sind *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* und *ConnectionTimeout*.|  
   
-Wenn die Eingabequelle eine Verbindungszeichenfolge zu einer SQL Server- oder Azure SQL-Livedatenbank ist, extrahiert **dbSqlPackage** eine Datenbankmomentaufnahme in Form einer DACPAC-Datei aus einer SQL Server- oder SQL Azure-Livedatenbank.  
+Wenn die Eingabequelle eine Verbindungszeichenfolge zu SQL Server oder Azure SQL-Datenbank ist, extrahiert **dbSqlPackage** eine Datenbankmomentaufnahme in Form einer DACPAC-Datei aus SQL Server oder Azure SQL-Datenbank.  
   
 Die **Source**-Parameter sind Folgende:  
   

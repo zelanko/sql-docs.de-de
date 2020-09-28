@@ -1,6 +1,6 @@
 ---
 title: 'R-Tutorial: Entwickeln eines Modells in SQL'
-description: Tutorial für das Erstellen einer umfassenden R-Lösung für datenbankinterne Analysen
+description: Erfahren Sie, wie Sie eine umfassende Lösung für die Vorhersagemodellierung auf Grundlage der R-Unterstützung in SQL Server 2016 oder SQL Server 2017 erstellen.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 10/11/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 24f83b1bae1a550a56c64ffdd8ebc069bbc4d9f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc423acd1e8c703b5890984df556b65f46cf5d4a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781793"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179754"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: SQL-Entwicklung für R-Data-Scientists
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 In diesem Tutorial für Data Scientists erfahren Sie, wie Sie eine umfassende Lösung für die Vorhersagemodellierung auf Grundlage der R-Unterstützung in SQL Server 2016 oder SQL Server 2017 erstellen. Für dieses Tutorial wird die Datenbank [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) in SQL Server verwendet. 
 

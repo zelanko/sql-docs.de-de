@@ -1,4 +1,5 @@
 ---
+description: Aufträge mit Verweisen auf einen Zeitplan
 title: Aufträge mit Verweisen auf einen Zeitplan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,22 +17,22 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 798cb6414080f11ffc744cedccdfc8ed4f117bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 724fb57c6574f38232714b4af7dba9b10b538311
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85675097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418196"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Aufträge mit Verweisen auf einen Zeitplan
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Mithilfe dieses Dialogfelds können Sie Informationen zu Aufträgen anzeigen, die auf einen bestimmten Zeitplan verweisen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Zeitplan**  
 Zeigt den Namen des angezeigten Zeitplans an.  
   
@@ -41,7 +42,7 @@ Schreibgeschützt.
 **Name**  
 Name eines Auftrags, der diesen Zeitplan verwendet.  
   
-**Aktiviert**  
+**Enabled**  
 Schreibgeschützt. Zeigt an, ob dieser Auftrag aktuell aktiviert ist.  
   
 **Kategorie**  

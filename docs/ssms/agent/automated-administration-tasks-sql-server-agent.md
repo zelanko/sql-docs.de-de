@@ -1,4 +1,5 @@
 ---
+description: Automatisierte Administrationstasks (SQL Server-Agent)
 title: Automatisierte Administrationstasks (SQL Server-Agent)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8aac5f30a8ec5c1fddae0137eceebeef449626b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c3cb9af36adb7ea1212b23684ed335c26ce3fd53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418366"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Automatisierte Administrationstasks (SQL Server-Agent)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können administrative Tasks automatisiert werden. Zum Automatisieren der Administration definieren Sie voraussichtliche administrative Tasks und geben die Bedingungen an, unter denen die einzelnen Tasks ausgeführt werden. Durch die Verwendung der automatischen Administration für Routineaufgaben und -ereignisse haben Sie mehr Zeit für andere administrative Funktionen.  
   

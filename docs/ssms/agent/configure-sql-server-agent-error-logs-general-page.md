@@ -1,4 +1,5 @@
 ---
+description: Fehlerprotokolle des SQL Server-Agents konfigurieren (Seite Allgemein)
 title: Konfigurieren von Fehlerprotokollen (Seite „Allgemein“)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,23 +14,23 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6e23a0c27675a9d873387dc2face6924d7541fdc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4236deb3738c4b22dd9c676c96c320f08214b282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497636"
 ---
 # <a name="configure-sql-server-agent-error-logs-general-page"></a>Fehlerprotokolle des SQL Server-Agents konfigurieren (Seite Allgemein)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Verwenden Sie diese Seite zum Anzeigen und Aktualisieren der Einstellungen für die Fehlerprotokolle des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Fehlerprotokolldatei**  
 Gibt die Datei an, in die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent die Fehlerprotokolle schreibt.  
   
@@ -45,7 +46,7 @@ Schreibt nur Fehler und Informationsmeldungen in die Protokolldatei.
 **Warnungen**  
 Schreibt nur Warnungen und Informationsmeldungen in die Protokolldatei.  
   
-**Informationen**  
+**Information**  
 Schreibt nur Informationsmeldungen in die Protokolldatei.  
   
 ## <a name="see-also"></a>Weitere Informationen  

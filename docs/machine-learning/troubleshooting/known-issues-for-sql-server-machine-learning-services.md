@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2142e67f7e758b6e949b160842adc954390b42db
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 914f8626a297dd233d6b22230d579623e0e98cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495028"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Bekannte Probleme in SQL Server-Machine Learning Services
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 In diesem Artikel werden bekannte Probleme und Einschränkungen der Python- und R-Komponenten beschrieben, die in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) und [SQL Server 2016 R Services](../r/sql-server-r-services.md) bereitgestellt werden.
 
 ## <a name="setup-and-configuration-issues"></a>Einrichtungs- und Konfigurationsprobleme
 
-Eine Beschreibung der Prozesse und häufig gestellten Fragen im Zusammenhang mit der anfänglichen Einrichtung und Konfiguration finden Sie unter [Häufig gestellte Fragen zu Upgrade und Installation](upgrade-and-installation-faq-sql-server-r-services.md). Sie enthält Informationen über Upgrades, parallele Installationen und die Installation neuer R- oder Python-Komponenten.
+Eine Beschreibung der Prozesse zur ersten Einrichtung und Konfiguration finden Sie unter [Installieren von SQL Server-Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). Sie enthält Informationen über Upgrades, parallele Installationen und die Installation neuer R- oder Python-Komponenten.
 
 ### <a name="1-inconsistent-results-in-mkl-computations-due-to-missing-environment-variable"></a>1. Inkonsistente Ergebnisse in MKL-Berechnungen aufgrund fehlender Umgebungsvariablen
 

@@ -1,6 +1,6 @@
 ---
 title: Bewerten von Daten mithilfe von RevoScaleR
-description: 'Tutorial 8 zu RevoScaleR: Bewerten von Daten mithilfe der R-Programmiersprache in SQL Server'
+description: Verwenden Sie das logistische Regressionsmodell, das Sie im letzten Tutorial erstellt haben, um ein weiteres Dataset zu bewerten, das dieselben unabhängigen Variablen als Eingaben verwendet.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58e58dcf3112566c09070cc6e522b29ffff6f3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee2a12b8b45169d43b9dc86077fb0879c7413226
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757130"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178612"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Bewerten neuer Daten (SQL Server- und RevoScaleR-Tutorial)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Dies ist das achte Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 

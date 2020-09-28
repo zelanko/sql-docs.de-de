@@ -1,4 +1,5 @@
 ---
+description: Auftragsschritt-Eigenschaften – Neuer Auftragsschritt (Seite „Allgemein“)
 title: Eigenschaften eines neuen Auftragsschritts (Seite „Allgemein“)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,25 +14,25 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44b333c1865046f779581265fb49186810f8944c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c16c9895eb6fdcec859a20651f9912b78ee9946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497563"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Auftragsschritt-Eigenschaften – Neuer Auftragsschritt (Seite „Allgemein“)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Mithilfe dieser Seite können Sie die Eigenschaften eines Auftragsschritts für den [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent abrufen und ändern oder einen neuen Auftragsschritt definieren.  
   
 Erweitern Sie im Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent, klicken Sie mit der rechten Maustaste auf **Aufträge**, klicken Sie auf **Neuer Auftrag**, wählen Sie die Seite **Schritte** aus, und klicken Sie auf **Neu**, um zu dieser Seite zu navigieren. Sie können auch zu dieser Seite navigieren, indem Sie mit der rechten Maustaste auf einen Auftrag im Objekt-Explorer klicken, auf **Eigenschaften**klicken, die Seite **Schritte** auswählen, und auf **Neu**, **Einfügen**oder **Bearbeiten**klicken.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Schrittname**  
 Legt den Namen des Auftrags fest.  
   
@@ -54,13 +55,13 @@ Lädt den Befehl aus einer Datei.
 **Alles markieren**  
 Markiert den Text des Befehls.  
   
-**Copy**  
+**Kopieren**  
 Kopiert den ausgewählten Text in die Zwischenablage.  
   
 **Einfügen**  
 Fügt die Inhalte aus der Zwischenablage ein.  
   
-**Analysieren**  
+**Parse**  
 Überprüft die Syntax des Befehls.  
   
 ## <a name="options-for-activex-script-job-steps"></a>Optionen für Auftragsschritte von ActiveX-Skript  
@@ -83,7 +84,7 @@ Lädt den Befehl aus einer Datei.
 **Alles markieren**  
 Markiert den Text des Befehls.  
   
-**Copy**  
+**Kopieren**  
 Kopiert den markierten Text.  
   
 **Einfügen**  
@@ -99,7 +100,7 @@ Lädt den Befehl aus einer Datei.
 **Alles markieren**  
 Markiert den Text des Befehls.  
   
-**Copy**  
+**Kopieren**  
 Kopiert den markierten Text.  
   
 **Einfügen**  
@@ -112,7 +113,7 @@ Lädt das Skript aus einer Datei.
 **Alles markieren**  
 Markiert den Text des Skripts.  
   
-**Copy**  
+**Kopieren**  
 Kopiert den markierten Text.  
   
 **Einfügen**  
@@ -122,7 +123,7 @@ Fügt die Inhalte aus der Zwischenablage ein.
 **Alles markieren**  
 Markiert den Text des Befehls.  
   
-**Copy**  
+**Kopieren**  
 Kopiert den markierten Text.  
   
 **Einfügen**  
@@ -132,7 +133,7 @@ Fügt die Inhalte aus der Zwischenablage ein.
 **Alles markieren**  
 Markiert den Text des Befehls.  
   
-**Copy**  
+**Kopieren**  
 Kopiert den markierten Text.  
   
 **Einfügen**  
@@ -145,7 +146,7 @@ Die Datenbank, die für den Auftragsschritt verwendet werden soll.
 **Alles markieren**  
 Markiert den Text des Befehls.  
   
-**Copy**  
+**Kopieren**  
 Kopiert den markierten Text.  
   
 **Einfügen**  
@@ -155,7 +156,7 @@ Fügt die Inhalte aus der Zwischenablage ein.
 **Alles markieren**  
 Markiert den Text des Befehls.  
   
-**Copy**  
+**Kopieren**  
 Kopiert den markierten Text.  
   
 **Einfügen**  
@@ -165,7 +166,7 @@ Fügt die Inhalte aus der Zwischenablage ein.
 **Alles markieren**  
 Markiert den Text des Befehls.  
   
-**Copy**  
+**Kopieren**  
 Kopiert den markierten Text.  
   
 **Einfügen**  
@@ -181,7 +182,7 @@ Lädt den Befehl aus einer Datei.
 **Alles markieren**  
 Markiert den Text des Befehls.  
   
-**Copy**  
+**Kopieren**  
 Kopiert den markierten Text.  
   
 **Einfügen**  
@@ -200,7 +201,7 @@ Lädt den Befehl aus einer Datei.
 **Alles markieren**  
 Markiert den Text des Befehls.  
   
-**Copy**  
+**Kopieren**  
 Kopiert den markierten Text.  
   
 **Einfügen**  

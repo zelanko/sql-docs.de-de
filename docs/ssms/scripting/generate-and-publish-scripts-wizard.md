@@ -3,7 +3,7 @@ title: Assistenten zum Generieren und Veröffentlichen von Skripts
 description: Hier erfahren Sie, wie Sie mithilfe des Assistenten zum Generieren und Veröffentlichen von Skripts Skripts zur Übertragung einer Datenbank zwischen Datenbankinstanzen erstellen. Es kann sich um Instanzen der SQL Server-Datenbank-Engine oder von Azure SQL-Datenbank handeln.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e6b5619628bd9974a2b690fc9c8472543d3ca12
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122619"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901365"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
 
@@ -128,7 +128,7 @@ Auf dieser Seite können Sie angeben, ob Skripts vom Assistenten am ausgewählte
 
 **Skripts an einem bestimmten Speicherort speichern:** Speichern Sie mindestens eine Transact-SQL-Skriptdatei an einem angegebenen Speicherort.
 
-![Speichern](media/generate-and-publish-scripts-wizard/save.png)
+![Als Notebook speichern](media/generate-and-publish-scripts-wizard/save.png)
 
 - **[Als Notebook speichern](../../azure-data-studio/notebooks-guidance.md)** : Speichern Sie das Skript in einer oder mehreren SQL-Dateien. Wählen Sie die Schaltfläche zum Durchsuchen ( **…** ) aus, um einen Namen und Speicherort für die Datei anzugeben.
 
@@ -222,7 +222,7 @@ Verwenden Sie diese Seite, um festzulegen, wie dieser Assistent Skripts generier
 
 ### <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"
 
-![Zusammenfassung](media/generate-and-publish-scripts-wizard/summary.png)
+![GS-Zusammenfassung](media/generate-and-publish-scripts-wizard/summary.png)
 
 Auf dieser Seite sind die Optionen zusammengefasst, die Sie in diesem Assistenten ausgewählt haben. Um eine Option zu ändern, wählen Sie **Zurück** aus. Um mit der Generierung von Skripts zu beginnen, die gespeichert oder veröffentlicht werden, wählen Sie **Weiter** aus.
 
