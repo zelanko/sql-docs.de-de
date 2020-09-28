@@ -29,12 +29,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 57cab52a5edfde4e7469243d7d57ede2e22c0161
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 82a558d445d93e007b9402425426815922c7043b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076614"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115592"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -152,7 +152,7 @@ Berücksichtigen Sie die folgenden Informationen, wenn Sie eine Datenbank verkle
 ## <a name="troubleshooting"></a>Problembehandlung  
 Es kann vorkommen, dass Verkleinerungsvorgänge durch eine Transaktion blockiert werden, die auf einer auf [Zeilenversionsverwaltung basierenden Isolationsstufe](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) ausgeführt wird. Beispiel: Ein umfangreicher Löschvorgang wird auf einer auf Zeilenversionsverwaltung basierenden Isolationsstufe ausgeführt, und ein DBCC SHRINKDATABASE-Vorgang wird ausgeführt. In diesem Fall wartet der Verkleinerungsvorgang auf den Abschluss des Löschvorgangs, bevor die Dateien verkleinert werden. Während der Verkleinerungsvorgang wartet, wird von den DBCC SHRINKFILE- und DBCC SHRINKDATABASE-Vorgängen eine Informationsmeldung (5202 für SHRINKDATABASE und 5203 für SHRINKFILE) ausgegeben. Diese Meldung zeigt in der ersten Stunde alle fünf Minuten und dann jede Stunde das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll an. Das Fehlerprotokoll kann beispielsweise eine Fehlermeldung wie die folgende enthalten:  
   
-```sql
+```
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  
@@ -186,7 +186,7 @@ DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);
 ```  
 ### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>C. Verkleinern einer Anmeldung für eine Azure Synapse Analytics-Datenbank
 
-```
+```sql
 DBCC SHRINKDATABASE (database_A);
 DBCC SHRINKDATABASE (database_B, 10); 
 
