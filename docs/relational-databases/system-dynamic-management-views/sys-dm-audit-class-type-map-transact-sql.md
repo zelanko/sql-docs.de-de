@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ec65fe175cf3723bcab9e00811915f15c4075c2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b0f54982dba94080bc6d0ac19ed5148624770bfe
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544828"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412812"
 ---
 # <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89544828"
 |**securable_class_desc**|**nvarchar(120)**|Das sicherungsfähige Objekt, das dem überwachten class_type zugeordnet ist. Ist NULL, wenn class_type keinem sicherungsfähigen Objekt zugeordnet ist. Kann zu class_desc in sys.dm_audit_actions in Beziehung gesetzt werden.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Prinzipale müssen über **SELECT** -Berechtigung verfügen. Standardmäßig wird der Gruppe Public dies gewährt.  
+Diese Ansicht ist für die öffentliche sichtbar.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
