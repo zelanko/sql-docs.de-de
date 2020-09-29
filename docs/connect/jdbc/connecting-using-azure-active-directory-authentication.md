@@ -2,7 +2,7 @@
 title: Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 description: Erfahren Sie, wie Sie Java-Anwendungen entwickeln können, die dieses Azure Active Directory-Authentifizierungsfeature mit dem Microsoft-JDBC-Treiber für SQL Server verwenden.
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 09/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae19b292788af43226de12a342e870768ad2ac26
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899017"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117129"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 
@@ -33,7 +33,7 @@ Folgende Verbindungseigenschaften im Microsoft-JDBC-Treiber für SQL Server unte
     * **ActiveDirectoryIntegrated**
         * `authentication=ActiveDirectoryIntegrated` wird ab Treiberversion **v6.0** unterstützt und kann verwendet werden, um mithilfe der integrierten Authentifizierung eine Verbindung mit einer Azure SQL-Datenbank- oder Data Warehouse-Instanz herzustellen. Um diesen Authentifizierungsmodus zu verwenden, müssen Sie einen Verbund zwischen den lokalen Active Directory-Verbunddiensten (AD FS) und Azure Active Directory in der Cloud einrichten. Sobald dieser Verbund eingerichtet ist, können Sie eine Verbindung herstellen, indem Sie entweder die native Bibliothek „mssql-jdbc_auth-\<version>-\<arch>.dll“ zum Anwendungsklassenpfad im Windows-Betriebssystem hinzufügen oder ein Kerberos-Ticket einrichten, um eine plattformübergreifende Authentifizierung zu unterstützen. Wenn Sie bei einem in die Domäne eingebundenen Computer angemeldet sind, können Sie auf Azure SQL-Datenbank bzw. SQL Data Warehouse zugreifen, ohne zur Eingabe von Anmeldeinformationen aufgefordert zu werden.
     * **ActiveDirectoryPassword**
-        * `authentication=ActiveDirectoryPassword` wird ab Treiberversion **v6.0** unterstützt und kann verwendet werden, um mithilfe eines Azure AD-Prinzipalnamens und des zugehörigen Kennworts eine Verbindung mit einer Azure SQL-Datenbank- oder Data Warehouse-Instanz herzustellen.
+        * `authentication=ActiveDirectoryPassword` wird ab Treiberversion **v6.0** unterstützt und kann verwendet werden, um mithilfe eines Azure AD-Benutzernamens und des zugehörigen Kennworts eine Verbindung mit einer Azure SQL-Datenbank- oder Data Warehouse-Instanz herzustellen.
     * **SqlPassword**
         * Verwenden Sie `authentication=SqlPassword`, um unter Verwendung der Eigenschaften „userName/user“ und „password“ eine Verbindung mit einer SQL Server-Instanz herzustellen.
     * **NotSpecified**
@@ -113,7 +113,7 @@ Weitere Informationen finden Sie unter [Einrichten eines Kerberos-Tickets unter 
 > [!NOTE]
 >  Wenn Sie eine ältere Version des Treibers verwenden, finden Sie unter diesem [Link](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) Informationen zu den jeweiligen Abhängigkeiten, die zur Verwendung dieses Authentifizierungsmodus erforderlich sind. 
 
-Im folgenden Beispiel wird veranschaulicht, wie der Modus `authentication=ActiveDirectoryIntegrated` verwendet wird. Führen Sie dieses Beispiel auf einem Computer aus, der in die Domäne eingebunden ist und sich in einem Verbund mit Azure Active Directory befindet. Eine eigenständige Datenbank, die Ihren Azure AD-Prinzipal oder eine der Gruppen repräsentiert, denen Sie angehören, muss in der Datenbank vorhanden sein und über die Berechtigung CONNECT verfügen. 
+Im folgenden Beispiel wird veranschaulicht, wie der Modus `authentication=ActiveDirectoryIntegrated` verwendet wird. Führen Sie dieses Beispiel auf einem Computer aus, der in die Domäne eingebunden ist und sich in einem Verbund mit Azure Active Directory befindet. Eine eigenständige Datenbank, die Ihren Azure AD-Benutzer oder eine der Gruppen repräsentiert, denen Sie angehören, muss in der Datenbank vorhanden sein und über die Berechtigung CONNECT verfügen. 
 
 Bevor Sie das Beispiel erstellen und ausführen, laden Sie auf dem Clientcomputer, auf dem Sie das Beispiel ausführen möchten, die Bibliothek [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) und die zugehörigen Abhängigkeiten herunter, und schließen Sie diese in den Java-Buildpfad ein.
 

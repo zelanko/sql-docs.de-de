@@ -14,19 +14,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22c6da8545c07424f95b83a56d406fceffeb6d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e2103871e039484a12234a7e26a2783125e9ffae
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465562"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364227"
 ---
 # <a name="set-or-change-the-database-collation"></a>Festlegen oder Ändern der Datenbanksortierung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In diesem Thema wird beschrieben, wie die Datenbanksortierung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]festgelegt und geändert werden kann. Wenn keine Sortierung angegeben wird, wird die Sortierung des Servers verwendet.  
+  In diesem Thema wird beschrieben, wie die Datenbanksortierung mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] festgelegt und geändert werden kann. Wenn keine Sortierung angegeben wird, wird die Sortierung des Servers verwendet.  
   
 > [!IMPORTANT]
-> Das Ändern der Datenbanksortierung ist in Azure SQL-Datenbank nicht ausdrücklich verboten. Das Ändern der Datenbanksortierung erfordert jedoch eine exklusive Sperre für die Datenbank, und durch andere Benutzer- oder Hintergrundprozesse (z. B. für die Sicherung) gehaltene Datenbanksperren könnten eine Änderung der Sortierung verhindern. Die `ALTER DATABASE COLLATE`-Anweisung wird in Azure SQL-Datenbank nicht unterstützt.
+> Die `ALTER DATABASE COLLATE`-Anweisung wird in Azure SQL-Datenbank nicht unterstützt.
 
  **In diesem Thema**  
   

@@ -3,24 +3,24 @@ title: Entwickeln einer Tastenzuordnungserweiterung
 description: Dieses Tutorial veranschaulicht, wie Sie eine Tastenzuordnungserweiterung entwickeln, um benutzerdefinierte Funktionen zu Azure Data Studio hinzuzufügen.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: how-to
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: b1e1b5fb4d21e153133e76ff612f54c8153e0772
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111661"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364077"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Entwickeln einer Azure Data Studio-Erweiterung für Tastenzuordnungen
 
 Dieses Tutorial veranschaulicht, wie Sie eine neue Azure Data Studio-Erweiterung erstellen. Die Erweiterung erstellt bekannte SSMS-Tastenzuordnungen in Azure Data Studio.
 
-In diesem Tutorial lernen Sie Folgendes:
+In diesem Artikel wird Folgendes behandelt:
 > [!div class="checklist"]
 > - Erstellen eines Erweiterungsprojekts
 > - Installieren des Erweiterungsgenerators
@@ -41,7 +41,7 @@ Azure Data Studio ist auf dem gleichen Framework wie Visual Studio Code aufgebau
 
 ## <a name="install-the-extension-generator"></a>Installieren des Erweiterungsgenerators
 
-Um den Prozess der Erstellung von Erweiterungen zu vereinfachen, haben wir einen [Erweiterungsgenerator](https://code.visualstudio.com/docs/extensions/yocode) erstellt, der Yeoman verwendet. Um diesen zu installieren, führen Sie an der Eingabeaufforderung folgenden Befehl aus:
+Um den Prozess der Erstellung von Erweiterungen zu vereinfachen, haben wir einen [Erweiterungsgenerator](https://code.visualstudio.com/docs/extensions/yocode) erstellt, der Yeoman verwendet. Führen Sie den Code in der folgenden Eingabeaufforderung aus, um den Generator zu installieren:
 
 ```console
 `npm install -g yo generator-azuredatastudio`
@@ -79,40 +79,9 @@ Einige fehlende Aspekte sind mir aufgefallen:
 
 Diese Tastenzuordnungen lassen sich einfach finden und ersetzen. Führen Sie *Tastenkombinationen öffnen* aus, um die Registerkarte **Tastenkombinationen** in Azure Data Studio anzuzeigen. Suchen Sie nach *Abfrage*, und wählen Sie **Tastenzuordnung ändern** aus. Wenn Sie mit dem Ändern der Tastenzuordnungen fertig sind, können Sie die aktualisierte Zuordnung in der Datei „keybindings.json“ anzeigen (führen Sie dazu *Tastenkombinationen öffnen* aus).
 
-:::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="Tastenkombinationen":::
+:::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="Erweiterungsgenerator":::
 
-:::image type="content" source="media/keymap-extension/key-bindings-json.png" alt-text="Keybindings.json-Erweiterung":::
-
-**Schritt 2: Hinzufügen von Tastenkombinationen zur Erweiterung**
-
-Um der Erweiterung Tastenkombinationen hinzuzufügen, öffnen Sie die Datei *package.json* (in der Erweiterung), und ersetzen Sie den Abschnitt `contributes` durch Folgendes:
-
-```json
-"contributes": {
-  "keybindings": [
-    {
-      "key": "shift+cmd+e",
-      "command": "runQueryKeyboardAction"
-    },
-    {
-      "key": "ctrl+cmd+e",
-      "command": "workbench.view.explorer"
-    },
-    {
-      "key": "alt+f1",
-      "command": "workbench.action.query.shortcut1"
-    },
-    {
-      "key": "shift+alt+enter",
-      "command": "workbench.action.toggleFullScreen"
-    },
-    {
-      "key": "f8",
-      "command": "workbench.view.connections"
-    },
-    {
-      "key": "ctrl+m",
-      "command": "runCurrentQueryWithActualPlanKeyboardAction"
+:::image type="content" source="media/keymap-extension/key-bindings-json.png" alt-text="Erweiterungsgenerator"
     }
   ]
 }
@@ -126,15 +95,15 @@ Stellen Sie sicher, dass die Azure Data Studio-Debugerweiterung in Visual Studio
 
 Drücken Sie **F5**, um Azure Data Studio mit ausgeführter Erweiterung im Debugmodus zu starten:
 
-:::image type="content" source="media/keymap-extension/install-extension.png" alt-text="Installieren der Erweiterung":::
+:::image type="content" source="media/keymap-extension/install-extension.png" alt-text="Erweiterungsgenerator":::
 
-:::image type="content" source="media/keymap-extension/test-extension.png" alt-text="Testen der Erweiterung":::
+:::image type="content" source="media/keymap-extension/test-extension.png" alt-text="Erweiterungsgenerator":::
 
 Tastenzuordnungen gehören zu den Erweiterungen, die sich sehr schnell erstellen lassen, Ihre neue Erweiterung sollte jetzt also funktionsfähig und bereit für die Freigabe sein.
 
 ## <a name="package-your-extension"></a>Packen der Erweiterung
 
-Um Ihre Erweiterung für andere Benutzer freizugeben, müssen Sie sie in eine einzige Datei packen. Diese kann im Marketplace für Azure Data Studio-Erweiterungen veröffentlicht oder für Ihr Team oder Ihre Community freigegeben werden. Zu diesem Zweck müssen Sie über die Befehlszeile ein weiteres npm-Paket installieren:
+Um Ihre Erweiterung für andere Benutzer freizugeben, müssen Sie sie in eine einzelne Datei packen. Diese kann im Marketplace für Azure Data Studio-Erweiterungen veröffentlicht oder für Ihr Team oder Ihre Community freigegeben werden. Zu diesem Zweck müssen Sie über die Befehlszeile ein weiteres npm-Paket installieren:
 
 ```console
 `npm install -g vsce`
@@ -154,11 +123,11 @@ Navigieren Sie zum Basisverzeichnis der Erweiterung, und führen Sie `vsce packa
 
 Danach war meine ssmskeymap-0.1.0.vsix-Datei erstellt, und ich konnte die Erweiterung installieren und mit der ganzen Welt teilen!
 
-:::image type="content" source="media/keymap-extension/extensions.png" alt-text="Installieren":::
+:::image type="content" source="media/keymap-extension/extensions.png" alt-text="Erweiterungsgenerator":::
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Veröffentlichen der Erweiterung im Marketplace
 
-Der Marketplace für Azure Data Studio-Erweiterungen ist noch nicht vollständig implementiert. Zurzeit sieht der Prozess folgendermaßen aus: Sie hosten die VSIX-Datei der Erweiterung an einem beliebigen Ort (z.B. auf einer GitHub-Releaseseite) und führen einen Pull Request aus, mit dem [diese JSON-Datei](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) mit Ihren Erweiterungsinformationen aktualisiert wird.
+Da sich der Marketplace für Azure Data Studio-Erweiterungen noch in Bearbeitung befindet, wird die VSIX-Erweiterung an einem beliebigen Ort (z. B. auf einer GitHub-Releaseseite) gehostet. Anschließend führen einen Pull Request aus, der [diese JSON-Datei](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) mit Ihren Erweiterungsinformationen aktualisiert.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -174,7 +143,7 @@ In diesem Tutorial haben Sie Folgendes gelernt:
 
 Wir hoffen, dass dieser Artikel Sie auch dazu inspiriert, selbst eine Erweiterung für Azure Data Studio zu erstellen. Wir bieten Unterstützung für Dashboardeinblicke (ansprechende Diagramme, die in Ihrer SQL Server-Instanz ausgeführt werden können), eine Reihe von SQL-spezifischen APIs sowie eine Vielzahl von vorhandenen Erweiterungspunkten, die aus Visual Studio Code geerbt wurden.
 
-Wenn Sie eine Idee haben, aber nicht sicher sind, wo Sie anfangen sollen, eröffnen Sie ein Issue, oder senden Sie einen Tweet an das Team: [azuredatastudio](https://twitter.com/azuredatastudio).
+Wenn Sie eine Idee haben, aber nicht sicher sind, wie Sie anfangen sollen, eröffnen Sie ein Issue, oder senden Sie einen Tweet an das Team: [azuredatastudio](https://twitter.com/azuredatastudio).
 
 Sie können jederzeit im [Visual Studio Code-Erweiterungsleitfaden](https://code.visualstudio.com/docs/extensions/overview) nachschlagen, dieser enthält alle vorhandenen APIs und Muster.
 

@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226960"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379595"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Erstellen und Ausführen eines Kusto-Notebooks (KQL) (Vorschau)
 
-In diesem Artikel erfahren Sie, wie Sie mit der [Kusto-Erweiterung (KQL)](../extensions/kusto-extension.md) und einer Verbindung mit einem Azure Data Explorer-Cluster ein [Azure Data Studio-Notebook](../notebooks-guidance.md) erstellen und ausführen.
+In diesem Artikel erfahren Sie, wie Sie mit der [Kusto-Erweiterung (KQL)](../extensions/kusto-extension.md) und einer Verbindung mit einem Azure Data Explorer-Cluster ein [Azure Data Studio-Notebook](./notebooks-guidance.md) erstellen und ausführen.
 
 Mit der Kusto-Erweiterung (KQL) können Sie die Kerneloption in **Kusto** ändern.
 
@@ -44,7 +44,7 @@ Führen Sie die folgenden Schritte aus, um eine Notebook-Datei in Azure Data Stu
 
 3. Wählen Sie für den **Kernel** *Kusto* aus. Vergewissern Sie sich, dass im Menü **Attach to** (Anfügen an) der Clustername und die Datenbank festgelegt sind. In diesem Artikel werden der Cluster „help.kusto.windows.net“ und Daten aus der Datenbank „Samples“ verwendet.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="„Kernel“ und „Anfügen an“ festlegen":::
+   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Notebook öffnen":::
 
 Sie können das Notebook mit dem Befehl **Speichern** oder **Speichern unter...** im Menü **Datei** speichern.
 
@@ -56,14 +56,14 @@ So ändern Sie die Kusto-Verbindung für ein Notebook
 
 1. Klicken Sie in der Symbolleiste des Notebooks auf das Menü **Anfügen an**, und wählen Sie anschließend die Option **Verbindung ändern** aus.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="Ändern von Verbindungen":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="Notebook öffnen":::
 
    > [!Note]
    > Stellen Sie sicher, dass ein Wert für die Datenbank angegeben ist. Bei Kusto-Notebooks ist die Angabe einer Datenbank erforderlich.
 
 2. Hier können Sie entweder einen zuletzt verwendeten Verbindungsserver auswählen oder neue Verbindungsdetails für die Verbindung eingeben.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Auswählen eines anderen Clusters":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Notebook öffnen":::
 
    > [!Note]
    > Geben Sie den Clusternamen ohne `https://` an.
@@ -76,7 +76,7 @@ Beispiel:
 
 1. Klicken Sie auf der Symbolleiste auf den Befehl **+ Code**, um eine neue Codezelle hinzuzufügen.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Kusto-Kernelcodeblock":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Notebook öffnen":::
 
 2. Kopieren Sie das folgende Beispiel, fügen Sie es in die Zelle ein, und klicken Sie auf **Run cell** (Zelle ausführen). In diesem Beispiel werden die StormEvent-Daten für einen bestimmten Ereignistyp abgefragt.
 
@@ -85,7 +85,7 @@ Beispiel:
     | where EventType == "Waterspout"
    ```
 
-   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Run cell (Zelle ausführen)":::
+   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Notebook öffnen":::
 
 ## <a name="save-the-result-or-show-chart"></a>Speichern des Ergebnisses oder Anzeigen eines Diagramms
 
@@ -102,13 +102,16 @@ Wenn Sie ein Skript ausführen, das ein Ergebnis zurückgibt, können Sie dieses
     | limit 10
 ```
 
-:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Speichern des Ergebnisses":::
+:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Notebook öffnen":::
 
-## <a name="limitations-and-considerations"></a>Einschränkungen und Überlegungen
+## <a name="known-issues"></a>Bekannte Probleme
 
-- Sie müssen eine Datenbank für Ihren Azure Data Explorer-Cluster auswählen, bevor Sie eine Kusto-Abfrage ausführen können.
-- Wenn Sie Ihren Azure Data Explorer-Cluster zu lange im Leerlauf belassen, kann die Verbindung getrennt werden.
-    - Problemumgehung: Trennen Sie die Verbindung zum Cluster und stellen Sie sie dann wieder her.
+| Details | Problemumgehung |
+|---------|------------|
+| [Das Abfrageergebnis zeigt nur Spaltenheader an](https://github.com/microsoft/azuredatastudio/issues/12565). | N/V |
+
+Sie können eine [Featureanforderung](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) senden, um Feedback für das Produktteam bereitzustellen.  
+Sie können einen [Fehlerbericht](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) senden, um Feedback für das Produktteam bereitzustellen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

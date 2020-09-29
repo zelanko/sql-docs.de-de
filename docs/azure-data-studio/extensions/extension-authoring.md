@@ -9,14 +9,14 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/26/2020
-ms.openlocfilehash: 9dbb60dab5d2b1a5dc3a95189a93d6617ed83b6b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 92c6a5d9522d015786eafdefaeea64b46925b92b
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123432"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364037"
 ---
-# <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Erweitern der Funktionalität durch Erstellen von Erweiterungen zu Azure Data Studio
+# <a name="extend-functionality-by-creating-azure-data-studio-extensions"></a>Erweitern der Funktionalität durch Erstellen von Erweiterungen für Azure Data Studio
 
 Erweiterungen in Azure Data Studio bieten eine einfache Möglichkeit, der Basisinstallation von Azure Data Studio weitere Funktionen hinzuzufügen.
 
@@ -24,15 +24,15 @@ Erweiterungen werden vom Azure Data Studio-Team (Microsoft) sowie von der Dritta
 
 ## <a name="author-an-extension"></a>Erstellen einer Erweiterung
 
-Wenn Sie Azure Data Studio erweitern möchten, können Sie eine eigene Erweiterung erstellen und im Erweiterungenkatalog veröffentlichen.
+Wenn Sie Azure Data Studio erweitern möchten, können Sie eine eigene Erweiterung erstellen und im Erweiterungskatalog veröffentlichen.
 
-### <a name="writing-an-extension"></a>Schreiben einer Erweiterung
+### <a name="write-an-extension"></a>Erstellen einer Erweiterung
 
 #### <a name="prerequisites"></a>Voraussetzungen
 
 Zum Entwickeln einer Erweiterung muss [Node.js](https://nodejs.org/) in Ihrem `$PATH` installiert und verfügbar sein. Node.js enthält npm, den Node.js-Paket-Manager, der zum Installieren des Erweiterungsgenerators verwendet wird.
 
-Um die neue Erweiterung zu erstellen, können Sie den Azure Data Studio-Erweiterungs-Generator verwenden. Der Yeoman-[Erweiterungs-Generator](https://www.npmjs.com/package/generator-azuredatastudio) ist ein vorteilhafter Ausgangspunkt für Erweiterungsprojekte. Um den Generator zu starten, geben Sie Folgendes in einer Eingabeaufforderung ein:
+Zum Erstellen der neuen Erweiterung können Sie den Erweiterungs-Generator für Azure Data Studio verwenden. Der [Erweiterungs-Generator](https://www.npmjs.com/package/generator-azuredatastudio) von Yeoman ist ein guter Ausgangspunkt für Erweiterungsprojekte. Geben Sie den folgenden Befehl in eine Eingabeaufforderung ein, um den Generator zu starten:
 
 ```console
 npm install -g yo generator-azuredatastudio # Install the generator
@@ -41,7 +41,7 @@ yo azuredatastudio
 
 Ausführliche Anleitungen zu den ersten Schritten mit Ihrer Erweiterungsvorlage finden Sie unter [keymap-Erweiterung](keymap-extension.md). Dort erhalten Sie schrittweise Anleitungen zum Erstellen einer Erweiterung.
 
-### <a name="extensibility-references"></a>Erweiterbarkeitsreferenzen
+### <a name="extensibility-references"></a>Referenzen zur Erweiterbarkeit
 
 Weitere Informationen zur Erweiterbarkeit von Azure Data Studio finden Sie in der [Erweiterbarkeitsübersicht](../extensibility.md). [Hier](https://github.com/Microsoft/azuredatastudio/tree/main/samples) finden Sie auch Beispiele für die Verwendung der API.
 
@@ -49,12 +49,12 @@ Weitere Informationen zur Erweiterbarkeit von Azure Data Studio finden Sie in de
 
 Sie können die neue Erweiterung mithilfe der Visual Studio Code-Erweiterung [Azure Data Studio Debug](https://github.com/kevcunnane/sqlops-debug) debuggen.
 
-Schritte:
+So debuggen Sie die Erweiterung:
 
 1. Öffnen Sie Ihre Erweiterung mit [Visual Studio Code](https://code.visualstudio.com/).
 2. Installieren Sie die Azure Data Studio-Debug-Erweiterung.
-3. Drücken Sie **F5**, oder wählen Sie das Debugsymbol aus, und wählen Sie dann **Starten** aus.
-4. Eine neue Instanz von Azure Data Studio wird in einem speziellen Modus (Extension Development Host, Erweiterungsentwicklungshost) gestartet, und diese neue Instanz erkennt nun Ihre Erweiterung.
+3. Drücken Sie **F5**, oder wählen Sie das **Debugsymbol** aus, und klicken Sie dann auf **Starten**.
+4. Eine neue Instanz von Azure Data Studio wird in einem speziellen Modus (Extension Development Host, Erweiterungsentwicklungshost) gestartet. Diese neue Instanz erkennt nun Ihre Erweiterung.
 
 ## <a name="create-an-extension-package"></a>Erstellen eines Erweiterungspakets
 
@@ -67,20 +67,20 @@ vsce package
 # The myExtensionName.vsix file has now been generated
 ```
 
-Mit einem VSIX-Paket können Sie Ihre Erweiterung lokal und privat freigeben, indem Sie die `.vsix`-Datei freigeben und den Befehl **Erweiterungen: Aus VSIX-Datei installieren** aus der Befehlspalette verwenden, um die Erweiterung in Azure Data Studio zu installieren.
+Mit einem VSIX-Paket können Sie Ihre Erweiterung lokal und privat freigeben, indem Sie die VSIX-Datei freigeben und den Befehl **Extensions: Install From VSIX File** (Erweiterungen: Aus VSIX-Datei installieren) aus der Befehlspalette ausführen, um die Erweiterung in Azure Data Studio zu installieren.
 
 ## <a name="publish-an-extension"></a>Veröffentlichen einer Erweiterung
 
 So veröffentlichen Sie die neue Erweiterung in Azure Data Studio:
 
-1. Fügen Sie die Erweiterung https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json hinzu.
-2. Wir bieten derzeit keine Unterstützung zum Hosten von Erweiterungen von Drittanbietern. Anstatt die Erweiterung herunterzuladen, nutzen Sie die Option von Azure Data Studio, zu einer Downloadseite zu navigieren. Um eine Downloadseite für Ihre Erweiterung festzulegen, legen Sie den Wert der Ressource „Microsoft.AzureDataStudio.DownloadPage“ fest.
+1. Fügen Sie dem [Erweiterungskatalog](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) Ihre Erweiterung hinzu.
+2. Derzeit werden keine Drittanbietererweiterungen unterstützt. Anstatt die Erweiterung herunterzuladen, bietet Azure Data Studio die Option, eine Downloadseite aufzurufen. Zum Festlegen einer Downloadseite für Ihre Erweiterung müssen Sie den Wert der Ressource **Microsoft.AzureDataStudio.DownloadPage** festlegen.
 3. Erstellen Sie einen Pull Request für den release/extensions-Branch.
 4. Senden Sie eine Überprüfungsanforderung an das Team.
 
-Die Erweiterung wird überprüft und dem Erweiterungenkatalog hinzugefügt.
+Ihre Erweiterung wird überprüft und dem Erweiterungskatalog hinzugefügt.
 
-### <a name="publishing-extension-updates"></a>Veröffentlichen von Updates für Erweiterungen
+### <a name="publish-extension-updates"></a>Veröffentlichen von Updates für Erweiterungen
 
 Der Prozess zum Veröffentlichen von Updates entspricht der Veröffentlichung der Erweiterung. Stellen Sie sicher, dass die Version in „package.json“ aktualisiert wird.
 
@@ -90,6 +90,6 @@ In den folgenden Tutorials zum Entwickeln von Erweiterungen finden Sie ausführl
 
 - [Tutorial für eine Tastenzuordnungserweiterung](keymap-extension.md)
 - [Tutorial für eine Dashboarderweiterung](dashboard-extension.md)
-- [Tutorial für eine Notebookerweiterung](notebook-extension.md)
-- [Tutorial für eine Jupyter Notebook-Erweiterung](jupyter-book-extension.md)
+- [Tutorial für eine Notebook-Erweiterung](notebook-extension.md)
+- [Tutorial für eine Jupyter Book-Erweiterung](jupyter-book-extension.md)
 - [Tutorial für eine Assistenten-Erweiterung](wizard-extension.md)

@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d9eaba636c2567d60dfc62ce37080717e9c32e9
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b486d0fbb8e0f2c8595251de386bb9f133ac73cf
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680575"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379625"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>Was sind Datenpools in einem Big-Data-Cluster für SQL Server?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-In diesem Artikel ist die Rolle beschrieben, die *SQL Server-Datenpools* in einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] spielen. In den folgenden Abschnitten sind die Architektur und die Funktionalität eines SQL-Datenpools beschrieben.
+In diesem Artikel ist die Rolle beschrieben, die *SQL Server-Datenpools* in einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] spielen. In den folgenden Abschnitten werden die Architektur, die Funktionen und die Nutzungsszenarios eines SQL-Datenpools beschrieben.
 
 In diesem fünfminütigen Video werden Datenpools vorgestellt, und es wird gezeigt, wie Sie Daten aus Datenpools abfragen:
 
@@ -28,13 +28,15 @@ In diesem fünfminütigen Video werden Datenpools vorgestellt, und es wird gezei
 
 ## <a name="data-pool-architecture"></a>Datenpoolarchitektur
 
-Ein Datenpool besteht aus mindestens einer SQL Server-Datenpoolinstanz. SQL-Datenpoolinstanzen stellen persistenten SQL Server-Speicher für den Cluster bereit. Ein Datenpool wird verwendet, um Daten über SQL-Abfragen oder Spark-Aufträge einzulesen. Um eine bessere Leistung für große Datasets zu ermöglichen, werden Daten in einem Datenpool auf Shards in den zugehörigen SQL-Datenpoolinstanzen verteilt.
-
-## <a name="scale-out-data-marts"></a>Data Marts mit horizontaler Skalierung
-
-Datenpools ermöglichen das Erstellen von Data Marts mit horizontaler Skalierung, über die externe Daten aus mehreren Quellen in den Datenpool eingelesen werden. Da die Daten über die Datenpoolinstanzen verteilt sind, sind parallele Abfragen zu den zusammengestellten Daten effizienter.
+Ein Datenpool besteht aus mindestens einer SQL Server-Datenpoolinstanz, die einen persistenten SQL Server-Speicher für den Cluster bereitstellt. Datenpools ermöglichen das Abfragen von zwischengespeicherten Daten in Bezug auf externe Datenquellen und das Auslagern von Arbeit. Daten werden entweder mithilfe von T-SQL-Abfragen oder über Spark-Aufträge vom Datenpool erfasst. Zur Verbesserung der Leistung von großen Datasets werden die erfassten Daten in Shards unterteilt und auf alle SQL Server-Instanzen im Pool verteilt. Die Verteilungsmethoden Roundrobin sowie die Replikatverteilung werden unterstützt. Für die Optimierung des Lesezugriffs wird ein gruppierter Columnstore-Index für jede Tabelle in jeder Datenpoolinstanz erstellt. Ein Datenpool dient als Data Mart mit horizontaler Skalierung für SQL-Big Data-Cluster.
 
 ![Data Mart mit horizontaler Skalierung](media/concept-data-pool/data-virtualization-improvements.png)
+
+Der Zugriff auf die SQL Server-Instanzen im Datenpool wird über die SQL Server-Masterinstanz verwaltet. Neben externen PolyBase-Tabellen zum Speichen des Datencaches wird auch eine externe Datenquelle für den Datenpool erstellt. Im Hintergrund erstellt der Controller eine Datenbank im Datenpool mit Tabellen, die den externen Tabellen entsprechen. Der Workflow über die SQL Server-Masterinstanz ist transparent: Der Controller leitet die spezifischen Anforderungen, die an die externe Tabelle gesendet werden, an die SQL Server-Instanzen im Datenpool weiter, z. B. über den Computepool, führt Abfragen aus und gibt das Resultset zurück. Daten im Datenpool können nur erfasst oder abgefragt werden. Sie können nicht geändert werden. Zur Aktualisierung der Daten muss daher die Tabelle gelöscht und eine neue Tabelle erstellt werden, die anschließend wieder mit Daten aufgefüllt wird. 
+
+## <a name="data-pool-scenarios"></a>Datenpoolszenarios
+
+ Datenpools werden häufig zu Berichterstellungszwecken verwendet. Beispielsweise kann eine komplexe Abfrage, die mehrere PolyBase-Datenquellen verbindet und für einen Wochenbericht verwendet wird, in den Datenpool ausgelagert werden. Die zwischengespeicherten Daten ermöglichen schnelles Computing auf lokaler Ebene und sorgen dafür, dass Sie nicht zu den ursprünglichen Datasets zurückgehen müssen. Ebenso können Dashboarddaten, die regelmäßig aktualisiert werden müssen, im Datenpool zwischengespeichert werden, um die Berichterstellung zu optimieren. Darüber hinaus bietet das Zwischenspeichern von Datasets im Datenpool auch bei der Untersuchung von Wiederholungen in Bezug auf Machine Learning einen Vorteil.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
