@@ -4,22 +4,39 @@ description: Informieren Sie sich über Änderungen an SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: c456c383625f43a5fef7f675edcd86ede6ca2515
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 0c2ab60111951167bffb4d3bafd04bca27f23a4d
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862401"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497960"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Neues in SSMA für Oracle (oracleto SQL)
 
 In diesem Artikel wird SQL Server Migration Assistant (SSMA) für Oracle-Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v814"></a>SSMA v 8,14
+
+Zusätzlich zu den Verbesserungen, um mehr Barrierefreiheit für Personen mit Behinderungen sicherzustellen, enthält die v-Version von SSMA für Oracle die folgenden Änderungen:
+
+* Speichert die vollständige Quell-/zielserverversion in den Projekt Metadaten (erfordert ein Projekt Upgrade).
+* Verwenden Sie nach Möglichkeit DBA-Daten Wörterbücher für die Objekt Ermittlung
+* Beheben mehrerer Parser-Probleme ( `PIVOT` / `UNPIVOT` , `MERGE` , Alternative Anführungs Punkte)
+* Korrektur der Konvertierung `INSERTING` / `DELETING` / `UPDATING` spezieller Funktionen in Triggern
+
+## <a name="ssma-v813"></a>SSMA v 8,13
+
+Die Version 8,13 von SSMA für Oracle enthält die folgenden Änderungen:
+
+* Korrektur der Konvertierung von `SQLCODE` und `SQLERRM` speziellen Funktionen in lokalen Prozeduren
+* Implizite Typumwandlungen bei der Umwandlung von Prozeduren und Funktionsaufrufen beachten
+* Verbessern der Protokollierung für die Quell Verbindungs Zeichenfolge zur Behandlung von Verbindungsproblemen
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -206,7 +223,7 @@ Das Release v 7.8 von SSMA für Oracle enthält die folgenden Änderungen:
 * Unterstützung für:
   * Zeilen Ausdruck für die- `IN` Klausel.
   * Implizite Typumwandlungen.
-  * `UID`Konvertierung für Azure SQL-Datenbank.
+  * `UID` Konvertierung für Azure SQL-Datenbank.
 * Ändern Sie in den **Projekteinstellungen**hervorgehobene Typzuordnung.
 * Die Möglichkeit für Benutzer, Telemetriedaten zu deaktivieren.
 
@@ -403,10 +420,10 @@ Die Version vom Juni 2008 von SSMA für Oracle enthält die folgenden Änderunge
   * Änderung der Auflistung von Auflistungen und Einträgen, die Konvertierung von Datensätzen in einfachen Fällen, die für jedes Feld über separate Variablen freigegeben werden.
   * Verbesserungen der Implementierung von Datensätzen und Sammlungen.
   * Hinzugefügte Fenster Aggregations Funktionen.
-  * `ROLLUP`/`CUBE`hinzugefügte Klausel.
+  * `ROLLUP`/`CUBE` hinzugefügte Klausel.
   * Verbesserung für `NEXTVAL` / `CURVAL` .
   * Spalten Gruppierung in `SET` -Klausel, Gruppierungs Gruppen und Gruppierungs-ID wurden hinzugefügt.
-  * `MERGE`Anweisung hinzugefügt.
+  * `MERGE` Anweisung hinzugefügt.
   * Unterstützung neuer DateTime-Typen und Konvertierung von Datensätzen und Sammlungen als CLR-Datentypen hinzugefügt.
 * Neue Features von Tester hinzugefügt. Tabellen können jetzt mithilfe von Tester als Objekte getestet werden, eine Aufrufreihenfolge mehrerer testfähiger Objekte im Testfall kann geändert werden, Benutzer können Prozeduren und Funktionen mit Datensätzen und Auflistungen als Parameter und Rückgabewerte testen, und es wurde eine Abhängigkeits Analyse hinzugefügt, um nur verwendete Tabellen zu überprüfen.
   

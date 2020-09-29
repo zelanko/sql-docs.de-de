@@ -4,22 +4,34 @@ description: Informieren Sie sich über Änderungen an SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 9706f1f2313594ded00cc0fa7e1335bb194b8313
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 8f84892230de6e7070933657cd25636a2fc697d8
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862477"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498221"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Neues in SSMA für DB2 (DB2ToSQL)
 
 In diesem Artikel wird SQL Server Migration Assistant (SSMA) für DB2-Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v814"></a>SSMA v 8,14
+
+Zusätzlich zu den Verbesserungen, um mehr Barrierefreiheit für Menschen mit Behinderungen sicherzustellen, erfordert die v-Version von SSMA für DB2 ein Projekt Upgrade, da es nun vollständige Quell-/zielserverversion in den Projekt Metadaten speichert.
+
+## <a name="ssma-v813"></a>SSMA v 8,13
+
+Die Version 8,13 von SSMA für DB2 enthält die folgenden Änderungen:
+
+* Unterstützung für gefilterte eindeutige Indizes
+* Implizite Typumwandlungen bei der Umwandlung von Prozeduren und Funktionsaufrufen beachten
+* Verbessern der Protokollierung für die Quell Verbindungs Zeichenfolge zur Behandlung von Verbindungsproblemen
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -33,7 +45,7 @@ Die Version Version Version von SSMA für DB2 enthält die folgenden Änderungen
 Die Version Version 8.11 von SSMA für DB2 enthält die folgenden Änderungen:
 
 * Unterstützung für DB2 für i (v 7.1 und höher)
-* Übersetzung von `SQLSTATE` und`SQLCODE`
+* Übersetzung von `SQLSTATE` und `SQLCODE`
 * Konvertierungs Fehlermeldung für neben wirknde Operatoren innerhalb einer Funktion
 * Verwenden der MSAL.NET-Bibliothek für die interaktive Azure Active Directory Authentifizierung
 

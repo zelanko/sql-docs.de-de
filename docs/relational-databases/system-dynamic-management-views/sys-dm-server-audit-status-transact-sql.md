@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b31883200fdbee9aa4039fca75e4b034ab75cebf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2138e06195e8f8c34a5f8f9abde96306c2d92cc5
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543828"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498168"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Gibt eine Zeile für jede Serverüberwachung zurück, die den aktuellen Status der Überwachung angibt. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Die ID der Überwachung. Wird dem **audit_id** -Feld in der **sys.** Überwachungen-Katalog Sicht zugeordnet.|  
 |**name**|**sysname**|Der Name der Überwachung. Identisch mit dem **namens** Feld in der **sys. server_audits** -Katalog Sicht.|  
@@ -43,7 +43,7 @@ ms.locfileid: "89543828"
 |**audit_file_size**|**bigint**|Ungefähre Größe der Überwachungsdatei in Bytes. Nur bei Dateiüberwachungen angegeben.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Prinzipale müssen über **View Server State** -und **Select** -Berechtigungen verfügen.  
+ Prinzipale müssen über die **View Server State** -Berechtigung verfügen.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

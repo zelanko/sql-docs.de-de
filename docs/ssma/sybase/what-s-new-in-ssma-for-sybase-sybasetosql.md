@@ -4,22 +4,33 @@ description: Informieren Sie sich über Änderungen an SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: fdbe37ddb915e64c5f947a64078e574a8eed8bbd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864707"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497794"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Neues in SSMA für SAP ASE (sybasedesql)
 
 In diesem Artikel werden die Änderungen an SQL Server Migration Assistant (SSMA) für SAP ASE (ehemals SSMA für Sybase) in jeder Version aufgeführt.
+
+## <a name="ssma-v814"></a>SSMA v 8,14
+
+Zusätzlich zu den Verbesserungen, um mehr Barrierefreiheit für Menschen mit Behinderungen sicherzustellen, erfordert die v-Version von SSMA für SAP ASE ein Projekt Upgrade, da es nun vollständige Quell-/zielserverversion in den Projekt Metadaten speichert.
+
+## <a name="ssma-v813"></a>SSMA v 8,13
+
+Die Version 8,13 von SSMA für SAP ASE enthält die folgenden Änderungen:
+
+* Implizite Typumwandlungen bei der Umwandlung von Prozeduren und Funktionsaufrufen beachten
+* Verbessern der Protokollierung für die Quell Verbindungs Zeichenfolge zur Behandlung von Verbindungsproblemen
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -328,7 +339,7 @@ Die SSMA-Version vom November 2006 für Sybase enthält die folgenden Änderunge
   * Überprüft NULL-Werte in Gleichheits Ausdrücken.
   * Proxy Tabellen.
   * Fehlernummern für Benutzer Meldungen für `RAISERROR` .
-  * `UPDATE`Anweisungen, die nicht aufgelöste Bezeichner enthalten.
+  * `UPDATE` Anweisungen, die nicht aufgelöste Bezeichner enthalten.
 * Es wurde eine neue Migrations Option hinzugefügt, mit der Sie angeben können, wie SSMA Datumsangaben außerhalb des [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Datums Bereichs behandeln soll.
 * Auf der Registerkarte " **SQL** " wurde eine **formatierte SQL** -Einstellung hinzugefügt, die den Code für eine verbesserte Lesbarkeit formatiert.
 * Fehlerbehebungen, einschließlich:

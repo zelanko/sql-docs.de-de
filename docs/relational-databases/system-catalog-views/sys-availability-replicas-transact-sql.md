@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 645d927a66deba3d19c44872a28abc16b2054fd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fc41c7e1a848ffd7b57012f0fbb1093a9115da3e
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539732"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498263"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ Gibt eine Zeile für jedes Verfügbarkeitsreplikat zurück, das zu einer Always 
 Wenn die lokale Serverinstanz nicht mit dem WSFC-Failovercluster kommunizieren kann, beispielsweise beim Ausfall des Clusters oder im Fall eines verlorenen Quorums, werden nur Zielen für lokale Verfügbarkeitsreplikate zurückgegeben. Diese Zeilen enthalten nur die Spalten der Daten, die in Metadaten lokal zwischengespeichert sind.  
   
  
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|Eindeutige ID des Replikats.|  
 |**group_id**|**uniqueidentifier**|Eindeutige ID der Verfügbarkeitsgruppe, zu der das Replikat gehört.|  
@@ -57,8 +57,8 @@ Wenn die lokale Serverinstanz nicht mit dem WSFC-Failovercluster kommunizieren k
 |**modify_date**|**datetime**|Datum der letzten Änderung des Replikats.<br /><br /> NULL = Replikat befindet sich nicht auf dieser Serverinstanz.|  
 |**backup_priority**|**int**|Stellt die benutzerdefinierte Priorität für die Ausführung von Sicherungen auf diesem Replikat in Relation zu den anderen Replikaten in derselben Verfügbarkeitsgruppe dar. Der Wert liegt im Bereich von 0 bis 100 und ist eine ganze Zahl.<br /><br /> Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**read_only_routing_url**|**nvarchar(256)**|Konnektivitätsendpunkt (URL) der schreibgeschützten Verbindung für das Verfügbarkeitsreplikat. Weitere Informationen finden Sie unter [Konfigurieren des schreibgeschützten Routing für eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).|  
-|**seeding_mode**|**tinyint**|Enthält einen der folgenden Werte: </br></br> 0: manuell </br></br> 1: automatisch|
-|**seeding_mode_desc**|**nvarchar(60)**|Beschreibt den Seeding Modus. </br></br> MANUAL </br></br> AUTOMATIC|
+|**seeding_mode**|**tinyint**|Enthält einen der folgenden Werte: </br></br> 0: automatisch </br></br> 1: manuell|
+|**seeding_mode_desc**|**nvarchar(60)**|Beschreibt den Seeding Modus. </br></br> AUTOMATIC </br></br>MANUAL|
   
 ## <a name="security"></a>Sicherheit  
   
