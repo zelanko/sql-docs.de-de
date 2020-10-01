@@ -23,12 +23,12 @@ ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c14c26591e16c423564acafd9aeb33be6940002f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 677ad00bd29d3f689c1722e1fc1abd65374426a5
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548549"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624777"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "89548549"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Abfrage, zu der dieser DMS-Worker gehört. request_id, step_index und dms_step_index bilden den Schlüssel für diese Sicht.||  
+|execution_id|`nvarchar(32)`|Abfrage, zu der dieser DMS-Worker gehört. <br /><br /> execution_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.||  
 |step_index|`int`|Abfrage Schritt, zu dem dieser DMS-Worker gehört.|Weitere Informationen finden Sie unter Step Index in [sys. dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
 |dms_step_index|`int`|Schritt in den DMS-Plan, den dieser Worker ausgeführt wird.|Siehe [sys. dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|`int`|Knoten, auf dem der Worker ausgeführt wird.|Weitere Informationen finden Sie unter [sys. dm_exec_compute_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
-|Typ|`nvarcha(32)`|||  
+|type|`nvarchar(32)`|Der Typ des DMS-Arbeitsthreads, den dieser Eintrag darstellt.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' Writer '|  
 |status|`nvarchar(32)`|Status dieses Schritts|"Pending", "Running", "Complete", "failed", "undofailed", "stodingcancel", "abgebrochen", "Undone", "abgebrochen", "abgebrochen"|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
@@ -60,7 +60,7 @@ ms.locfileid: "89548549"
 |error_id|`nvarchar(36)`|||  
 |source_info|`nvarchar(4000)`|||  
 |destination_info|`nvarchar(4000)`|||  
-|-Befehl.|`nvarchar(4000)`|||
+|command|`nvarchar(4000)`|||
 |compute_pool_id|`int`|Eindeutiger Bezeichner für den Pool.|
 
 ## <a name="see-also"></a>Weitere Informationen  

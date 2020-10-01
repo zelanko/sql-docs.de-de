@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: b16ed1f153259f1301f78d82291c677337677643
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823242"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624797"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Bewerten eines Unternehmens und Konsolidieren der Bewertungsberichte mit DMA
 
@@ -36,7 +36,7 @@ Die folgenden Schritt-für-Schritt-Anweisungen helfen Ihnen bei der Verwendung d
   - [Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop).
   - [Azure PowerShell-Module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Herunterladen und extrahieren:
-  - Der [DMA-Bericht Power BI Vorlage](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+  - Der [DMA-Bericht Power BI Vorlage](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - Das [loadwarehouse-Skript](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Laden der PowerShell-Module
@@ -64,7 +64,7 @@ Führen Sie die folgenden Schritte aus, um die Module zu laden:
 
     PowerShell sollte diese Module jetzt automatisch laden, wenn eine neue PowerShell-Sitzung gestartet wird.
 
-## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>Erstellen eines Inventars von SQL-Servern
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a> Erstellen eines Inventars von SQL-Servern
 
 Bevor Sie das PowerShell-Skript zur Bewertung Ihrer SQL Server-Computer ausführen, müssen Sie eine Inventur der SQL Server-Computer erstellen, die Sie bewerten möchten.
 
@@ -126,12 +126,12 @@ Die der dmadatacollector-Funktion zugeordneten Parameter werden in der folgenden
 |Parameter  |BESCHREIBUNG |
 |---------|---------|
 |**getserverlistfrom** | Ihre Inventur. Mögliche Werte sind **SQLServer** und **CSV**.<br/>Weitere Informationen finden Sie unter [Erstellen eines Inventars von SQL-Servern](#create-inventory). |
-|**csvpath** | Der Pfad zu Ihrer CSV-Inventur Datei.  Wird nur verwendet, wenn **getserverlistfrom** auf **CSV**festgelegt ist. |
-|**Servername** | Der SQL Server Instanzname des Inventars, wenn **SQLServer** im **getserverlistfrom** -Parameter verwendet wird. |
+|**csvpath** | Der Pfad zu Ihrer CSV-Inventur Datei.  Wird nur verwendet, wenn **getserverlistfrom** auf  **CSV**festgelegt ist. |
+|**serverName** | Der SQL Server Instanzname des Inventars, wenn **SQLServer** im **getserverlistfrom** -Parameter verwendet wird. |
 |**databaseName** | Die Datenbank, in der die Inventur Tabelle gehostet wird. |
 |**nur ""** | Bitflag zum angeben, ob eine Liste von Instanzen zur Bewertung verwendet werden soll.  Wenn der Wert auf 0 festgelegt ist, wird die Tabelle databaseinventory verwendet, um die Liste der Bewertungs Ziele zu erstellen. |
 |**AssessmentName** | Der Name der DMA-Bewertung. |
-|**TargetPlatform** | Der Zieltyp der Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **azuresqldatabase**, **managedsqlserver**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**, **SqlServerWindows2019**und **SqlServerLinux2019**.  |
+|**TargetPlatform** | Der Zieltyp der Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **azuresqldatabase**, **managedsqlserver**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**,  **SqlServerWindows2019**und **SqlServerLinux2019**.  |
 |**AuthenticationMethod** | Die Authentifizierungsmethode für das Herstellen einer Verbindung mit den SQL Server Zielen, die Sie bewerten möchten. Mögliche Werte sind **SQLAuth** und **windowsauth**. |
 |**OutputLocation** | Das Verzeichnis, in dem die JSON-Bewertungs Ausgabedatei gespeichert werden soll. Abhängig von der Anzahl der Datenbanken, die bewertet werden, und der Anzahl der Objekte in den Datenbanken kann die Bewertung sehr lange dauern. Nachdem alle Bewertungen abgeschlossen sind, wird die Datei geschrieben. |
 
@@ -150,7 +150,7 @@ Die der dmaprocessor-Funktion zugeordneten Parameter werden in der folgenden Tab
 |Parameter  |BESCHREIBUNG |
 |---------|---------|
 |**processto** | Der Speicherort, an dem die JSON-Datei verarbeitet wird. Mögliche Werte sind **SQLServer** und **azuresqldatabase**. |
-|**Servername** | Die SQL Server Instanz, in die die Daten verarbeitet werden.  Wenn Sie für den **processto** -Parameter **azuresqldatabase** angeben, schließen Sie nur den SQL Server Namen ein (nicht include. Database.Windows.net). Sie werden zur Eingabe von zwei Anmeldungen aufgefordert, wenn Sie die Azure SQL-Datenbank als Ziel haben. die erste ist Ihre Azure-Mandanten-Anmelde Informationen, während die zweite die Administrator Anmeldung für den Azure-SQL Server ist. |
+|**serverName** | Die SQL Server Instanz, in die die Daten verarbeitet werden.  Wenn Sie für den **processto** -Parameter **azuresqldatabase** angeben, schließen Sie nur den SQL Server Namen ein (nicht include. Database.Windows.net). Sie werden zur Eingabe von zwei Anmeldungen aufgefordert, wenn Sie die Azure SQL-Datenbank als Ziel haben. die erste ist Ihre Azure-Mandanten-Anmelde Informationen, während die zweite die Administrator Anmeldung für den Azure-SQL Server ist. |
 |**"Kreatedmareporting"** | Die Stagingdatenbank, die für die Verarbeitung der JSON-Datei erstellt werden soll.  Wenn die angegebene Datenbank bereits vorhanden ist und Sie diesen Parameter auf einen Wert festlegen, werden die Objekte nicht erstellt.  Dieser Parameter ist hilfreich, um ein einzelnes Objekt neu zu erstellen, das gelöscht wurde. |
 |**"Kreatedatawarehouse"** | Erstellt die Data Warehouse, die vom Power BI Bericht verwendet werden. |
 |**databaseName** | Der Name der dmareporting-Datenbank. |
