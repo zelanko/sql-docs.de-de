@@ -24,13 +24,13 @@ ms.author: drskwier
 manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
-ms.openlocfilehash: 2d1eb8e37de9956352dad852d74760fecdc8086b
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.date: 09/28/2020
+ms.openlocfilehash: 502e9674d97addf23c89f4e24eb676c36f1d36fd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943080"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497731"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 
@@ -82,6 +82,9 @@ Es sind ein paar [Probleme](release-notes-ssms.md#known-issues-186) für dieses 
 ## <a name="previous-versions"></a>Vorgängerversionen
 
 Dieser Artikel gilt ausschließlich für die neueste SSMS-Version. Besuchen Sie [Vorgängerversionen von SSMS](../ssms/release-notes-ssms.md#previous-ssms-releases), wenn Sie die vorherigen Versionen von SSMS herunterladen möchten.
+
+> [!NOTE]
+> Im Dezember 2021 werden Releases von SSMS vor Version 18.6 nicht länger über Azure Active Directory mit MFA authentifiziert. Wenn Sie die Azure Active Directory-Authentifizierung mit MFA weiterhin nutzen möchten, installieren oder aktualisieren Sie auf die Version SSMS 18.6 oder höher.
 
 ## <a name="unattended-install"></a>Unbeaufsichtigtes Installieren
 
@@ -145,12 +148,12 @@ Unterstützte Betriebssysteme:
 
 Unterstützte Hardware:
 
-- 1,8-GHz-Prozessor oder schneller; Dual-Core oder besser empfohlen
+- x86-Prozessor mit 1,8 GHz oder schneller (Intel, AMD). Dual-Core oder besser empfohlen
 - 2 GB RAM; 4 GB RAM empfohlen (mindestens 2,5 GB bei Ausführung auf einem virtuellen Computer)
 - Festplattenspeicherplatz: Mindestens 2 GB bis zu 10 GB verfügbarer Speicherplatz
 
 > [!NOTE]
-> SSMS kann nur unter Windows (AMD oder Intel) ausgeführt werden. Wenn Sie ein Tool benötigen, das auf anderen Plattformen als Windows ausgeführt wird, sehen Sie sich Azure Data Studio an. Azure Data Studio ist ein neues plattformübergreifendes Tool, das unter macOS, Linux sowie Windows ausgeführt werden kann. Weitere Informationen finden Sie unter [Azure Data Studio](../azure-data-studio/what-is.md).
+> SSMS wird nur unter Windows ausgeführt. Wenn Sie ein Tool benötigen, das auf anderen Betriebssystemen als Windows ausgeführt wird, wird Azure Data Studio empfohlen. Azure Data Studio ist ein plattformübergreifendes Tool, das unter macOS, Linux sowie Windows ausgeführt werden kann. Weitere Informationen finden Sie unter [Azure Data Studio](../azure-data-studio/what-is.md).
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
