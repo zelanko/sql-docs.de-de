@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee493ec09c5cfc8a5198239cd5cafcb2579f50d8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 0d1cfed615144b947281b87f88965474e88031d1
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178624"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529486"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Zuordnungen von Datentypen zwischen Python und SQL Server
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88178624"
 
 Ein Teil der RevoScaleR-Funktionen (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees und eventuell weitere) wird mithilfe von Python-APIs bereitgestellt, die das neue Python-Paket **revoscalepy** verwenden. Sie können dieses Paket verwenden, um mithilfe von Pandas-Datenrahmen, XDF-Dateien oder SQL-Datenabfragen mit Daten zu arbeiten.
 
-Weitere Informationen finden Sie unter [revoscalepy (Python-Modul in SQL Server)](ref-py-revoscalepy.md) und [revoscalepy-Funktionsreferenz](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
+Weitere Informationen finden Sie unter [revoscalepy (Python-Modul in SQL Server)](ref-py-revoscalepy.md) und [revoscalepy-Funktionsreferenz](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package).
 
 Verglichen mit SQL Server unterstützt Python nur eine begrenzte Anzahl von Datentypen. Daher ist es möglich, dass bei der Verwendung von Daten aus SQL Server in Python-Skripts diese implizit in einen kompatiblen Datentyp konvertiert werden. Da eine exakte automatische Konvertierung jedoch häufig nicht möglich ist, wird ein Fehler zurückgegeben.
 
