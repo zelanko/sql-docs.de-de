@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 8df03adc67cb4ae97e099ad31d4af42c34a8533c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951225"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636170"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Wiedergeben einer Ablauf Verfolgung in Assistent für Datenbankexperimente
 
@@ -122,7 +122,7 @@ SQL Server ist ein Zustands behaftetes relationales Datenbankverwaltungssystem. 
 
 **F: welche Ablauf Verfolgungs Ereignisse werden von DEA während der Wiedergabe gesammelt?**
 
-Mit der DEA werden Ablauf Verfolgungs Ereignisse erfasst, die leistungsbezogene Informationen enthalten. Die Aufzeichnungs Konfiguration befindet sich im Skript startreplaycapturetrace. SQL. Diese Ereignisse sind typische SQL Server Ablauf Verfolgungs Ereignisse, die in der [sp_trace_setevent (Transact-SQL)-Referenz Dokumentation](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)aufgeführt sind.
+Mit der DEA werden Ablauf Verfolgungs Ereignisse erfasst, die leistungsbezogene Informationen enthalten. Die Aufzeichnungs Konfiguration befindet sich im Skript startreplaycapturetrace. SQL. Diese Ereignisse sind typische SQL Server Ablauf Verfolgungs Ereignisse, die in der [sp_trace_setevent (Transact-SQL)-Referenz Dokumentation](../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)aufgeführt sind.
 
 ## <a name="troubleshoot-trace-replay"></a>Problembehandlung bei der Ablauf Verfolgungs Wiedergabe
 
@@ -139,7 +139,7 @@ Weitere Details finden Sie in den Protokollen unter% Temp% \\ Dea. Wenn das Prob
 
 - Überprüfen Sie, ob der Distributed Replay Controller-Dienst auf dem Controller Computer ausgeführt wird. Um dies zu überprüfen, verwenden Sie die Distributed Replay Verwaltungs Tools (führen Sie den Befehl aus `dreplay.exe status -f 1` ).
 - Wenn die Wiedergabe Remote gestartet wird:
-  - Vergewissern Sie sich, dass der Computer, auf dem "DEA" ausgeführt wird, ein Ping Vergewissern Sie sich, dass die Firewalleinstellungen Verbindungen gemäß den Anweisungen auf der Seite " **Wiedergabe Umgebung konfigurieren** " zulassen. Weitere Informationen finden Sie im Artikel [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
+  - Vergewissern Sie sich, dass der Computer, auf dem "DEA" ausgeführt wird, ein Ping Vergewissern Sie sich, dass die Firewalleinstellungen Verbindungen gemäß den Anweisungen auf der Seite " **Wiedergabe Umgebung konfigurieren** " zulassen. Weitere Informationen finden Sie im Artikel [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017).
   - Stellen Sie sicher, dass DCOM-Remote Start und Remote Aktivierung für den Benutzer des Distributed Replay Controllers zulässig sind.
   - Stellen Sie sicher, dass die DCOM-RAS-Benutzerrechte für den Benutzer des Distributed Replay Controllers zulässig sind.
 

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 4caf97a9afb4a40ba82e2fe6730d46dbdcbea7f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 67b427e7d1d73b072ce2ec319bfc3cbcbbcfddf9
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951535"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636100"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Aufzeichnen einer Ablauf Verfolgung in Assistent für Datenbankexperimente
 
@@ -133,7 +133,7 @@ Wenn beim Ausführen einer Ablauf Verfolgungs Erfassung ein Fehler angezeigt wir
 
 - Der Name des Computers, auf dem SQL Server ausgeführt wird, ist gültig. Versuchen Sie, eine Verbindung mit dem Computer herzustellen, auf dem SQL Server ausgeführt wird, indem Sie SQL Server Management Studio (SSMS) verwenden.
 - Die Firewallkonfiguration blockiert keine Verbindungen mit dem Computer, auf dem SQL Server ausgeführt wird.
-- Der Benutzer verfügt über die Berechtigungen, die in den häufig gestellten Fragen zur wieder [Gabe](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)aufgeführt sind.
+- Der Benutzer verfügt über die Berechtigungen, die in den häufig gestellten Fragen zur wieder [Gabe](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)aufgeführt sind.
 - Der Ablauf Verfolgungs Name folgt nicht der standardrolloverkonvention (Erfassung \_ 1). Versuchen Sie stattdessen, Namen von Ablauf Verfolgungen wie z \_ . b. Capture 1A oder Capture1
 
 Im folgenden finden Sie einige mögliche Fehler, die möglicherweise angezeigt werden, und Lösungen für deren Behebung:
@@ -145,7 +145,7 @@ Im folgenden finden Sie einige mögliche Fehler, die möglicherweise angezeigt w
 |Auf dem Zielserver wird derzeit eine DEA-Ablauf Verfolgung ausgeführt.|Eine aktive Ablauf Verfolgung wird bereits auf dem Zielserver ausgeführt. Eine neue Ablauf Verfolgung kann nicht gestartet werden, wenn bereits eine Server weite Ablauf Verfolgung ausgeführt wird.|  
 |Die angeforderte Datenbank kann nicht zum Erfassen der Ablauf Verfolgung geöffnet werden. Dieser Fehler kann durch einen falschen Datenbanknamen verursacht werden.|Die angegebene Datenbank ist nicht vorhanden, oder der aktuelle Benutzer ist nicht verfügbar. Verwenden Sie den richtigen Datenbanknamen.|  
 
-Wenn Sie andere Fehler mit der Bezeichnung *SQL-Fehler Code*sehen, finden Sie unter [Datenbank-Engine Fehler](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) ausführliche Beschreibungen.
+Wenn Sie andere Fehler mit der Bezeichnung *SQL-Fehler Code*sehen, finden Sie unter [Datenbank-Engine Fehler](../relational-databases/errors-events/database-engine-events-and-errors.md) ausführliche Beschreibungen.
 
 ## <a name="see-also"></a>Weitere Informationen
 
