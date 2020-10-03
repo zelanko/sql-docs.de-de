@@ -8457,10 +8457,18 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ssms/sql-server-management-studio-ssms.md
-        - name: Tutorials
+        - name: Schnellstarts
           items:
             - name: Herstellen einer Verbindung mit und Abfragen von SQL Server
-              href: ssms/tutorials/connect-query-sql-server.md
+              href: ssms/quickstarts/connect-query-sql-server.md
+        - name: Lernprogramme
+          items:
+            - name: SSMS-Konfiguration
+              href: ssms/tutorials/ssms-configuration.md
+            - name: Verwenden von anderen Tipps und Tricks
+              href: ssms/tutorials/ssms-tricks.md
+            - name: Erstellen von Skripts für Objekte
+              href: ssms/tutorials/scripting-ssms.md
             - name: Importieren einer Flatfile
               href: relational-databases/import-export/import-flat-file-wizard.md
         - name: Konzepte
@@ -8747,12 +8755,6 @@
               href: ssms/install-other-languages.md
             - name: Verwenden von Vorlagen in SSMS
               href: ssms/template/templates-ssms.md
-            - name: Erstellen von Skripts für Objekte
-              href: ssms/tutorials/scripting-ssms.md
-            - name: SSMS-Konfiguration
-              href: ssms/tutorials/ssms-configuration.md
-            - name: Verwenden von anderen Tipps und Tricks
-              href: ssms/tutorials/ssms-tricks.md
             - name: Anpassen von Menüs und Tastenkombinationen
               href: ssms/customize-menus-and-shortcut-keys.md
             - name: Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools
