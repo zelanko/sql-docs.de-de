@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9d3876b358721c7d63b1bbbb0aca98c56721b83
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0ad7fcb2bb63d77bd50c89f11e9b818439b0d1d0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977851"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721401"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS-Tutorial (VBScript)
 Dies ist das RDS-Tutorial, das in Microsoft Visual Basic Scripting Edition geschrieben wurde. Eine Beschreibung des Zwecks dieses Tutorials finden Sie im RDS- [Tutorial](./rds-tutorial.md).  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  
   
  In diesem Tutorial [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md) und [RDS. DataSpace](../../reference/rds-api/dataspace-object-rds.md) werden zur Entwurfszeit erstellt, d. h., Sie werden mit Objekt Tags wie folgt definiert: `<OBJECT>...</OBJECT>` . Sie können auch zur Laufzeit mit der Methode der Methode " [Methode (Methode)](../../reference/rds-api/createobject-method-rds.md) " erstellt werden. Beispielsweise **RDS. Das DataControl** -Objekt könnte wie folgt erstellt werden:  
   

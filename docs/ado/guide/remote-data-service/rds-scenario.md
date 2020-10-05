@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4492a80690c99d1e5b7003763faf77effdeebec
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6c9b7563b940cd4340b7f07238fe50af56cf66e6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977881"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721411"
 ---
 # <a name="rds-scenario"></a>RDS-Szenario
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  
   
  Die Adressbuch Anwendung ist ein Szenario, das zeigt, wie Sie Remote Data Service (RDS) verwenden, um eine einfache, Daten kompatible Webanwendung zu erstellen, ein Online-Unternehmens Adressbuch. Dieses Szenario eignet sich für Microsoft Visual Basic Scripting Edition (VBScript) und com-Programmierer, die erfahren möchten, wie Sie Daten kompatible ActiveX-Steuerelemente mit RDS verwenden, und für erfahrene Softwareentwickler, die datenzentrierte Webanwendungen erstellen möchten.  
   

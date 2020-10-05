@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a459ddea3716bb918ed18a49d632e20a9e4557fd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ad1c9b0f36922f29ce015fd459a1be3e788e07f5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982521"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721201"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset-Methode (RDS)
 Erstellt ein leeres, nicht verbundenes [Recordset](../ado-api/recordset-object-ado.md).  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,10 +47,10 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  Ein **Variant** -Array von Attributen, das jede Spalte im erstellten **Recordset** definiert. Jede Spaltendefinition enthält ein Array von vier erforderlichen Attributen und ein optionales Attribut.  
   
-|attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Name|Der Name des Spalten Headers.|  
-|Typ|Ganzzahliger Wert des Datentyps.|  
+|type|Ganzzahliger Wert des Datentyps.|  
 |Size|Ganzzahlige Breite in Zeichen, unabhängig vom Datentyp.|  
 |NULL-Zulässigkeit|Boolescher Wert.|  
 |Skalieren (optional)|Dieses optionale Attribut definiert die Skala für numerische Felder. Wenn dieser Wert nicht angegeben wird, werden numerische Werte auf drei Dezimalstellen abgeschnitten. Die Genauigkeit ist nicht betroffen, aber die Anzahl der Ziffern nach dem Dezimaltrennzeichen wird auf drei gekürzt.|  
@@ -66,7 +66,7 @@ object.CreateRecordset(ColumnInfos)
   
  Für einige der Variablen Datentypen kann der Typ in den Typ umgewandelt werden, der in der Ersetzungs Spalte angegeben ist. Die Ersetzungen werden erst angezeigt, nachdem das **Recordset** erstellt und gefüllt wurde. Anschließend können Sie ggf. den tatsächlichen Datentyp überprüfen.  
   
-|Länge|Konstante|Number|Substitution|  
+|Länge|Konstant|Number|Substitution|  
 |------------|--------------|------------|------------------|  
 |Fest|**adTinyInt**|16||  
 |Fest|**adSmallInt**|2||  

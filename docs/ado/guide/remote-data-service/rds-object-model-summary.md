@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2650f9a80c56856133d1e694a5ea0eb807251f0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 456bfdf7e41b10c4a42708eabb21b485de463ca7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977981"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721421"
 ---
 # <a name="rds-object-model-summary"></a>Zusammenfassung zum RDS-Objektmodell
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  
   
-|Object|Beschreibung|  
+|Object|BESCHREIBUNG|  
 |------------|-----------------|  
 |[RDS. DataSpace](../../reference/rds-api/dataspace-object-rds.md)|Dieses Objekt enthält eine Methode zum Abrufen eines Server Proxys. Bei dem Proxy kann es sich um das Standard-oder ein benutzerdefiniertes Serverprogramm (Geschäftsobjekt) handeln. Das Serverprogramm kann über das Internet, ein Intranet, ein lokales Netzwerk oder eine lokale Dynamic Link Library aufgerufen werden.<br /><br /> Das **DataSpace** -Objekt ist für die Skripterstellung sicher.|  
 |[RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)|Dieses Objekt stellt das standardmäßige Serverprogramm dar. Er führt den standardmäßigen RDS-Datenabruf und das Aktualisierungs Verhalten aus.<br /><br /> Das **DataFactory** -Objekt ist für die Skripterstellung nicht sicher.|  

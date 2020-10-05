@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6b6bb99ea218268a7ccb988acb2f49fb4898f32
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0f5c98370ebb1a1b16e09e900455888d0c201905
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978441"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721571"
 ---
 # <a name="address-book-data-binding-object"></a>Adress Book-Datenbindungsobjekt
 Die Adressbuch Anwendung verwendet [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md) -Objekt zum Binden von Daten aus der SQL Server Datenbank an ein visuelles Objekt (in diesem Fall eine DHTML-Tabelle) auf der Client-HTML-Seite der Anwendung. Die ereignisgesteuerte VBScript-Programmlogik verwendet [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md) in:  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  
   
 -   Fragen Sie die Datenbank ab, senden Sie Aktualisierungen an die Datenbank, und aktualisieren Sie das Datenraster.  
   
@@ -51,7 +51,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="generic-object-tag-parameters"></a>Generische Objekttagparameter  
  In der folgenden Tabelle werden die Parameter beschrieben, die dem Objekttag zugeordnet sind.  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |***ClassID***|Eine eindeutige 128-Bit-Zahl, die den Typ des eingebetteten Objekts für das System identifiziert. Dieser Bezeichner wird in der Systemregistrierung des lokalen Computers verwaltet. (Für die Klassen-IDs der **RDS. DataControl** -Objekt finden Sie unter [RDS. DataControl-Objekt](../../reference/rds-api/datacontrol-object-rds.md).)|  
 |***ID***|Definiert einen Dokument weiten Bezeichner für das eingebettete Objekt, das zur Identifizierung im Code verwendet wird.|  
@@ -59,7 +59,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS. DataControl-Tagparameter  
  In der folgenden Tabelle werden die für RDS spezifischen Parameter beschrieben **. DataControl** -Objekt. (Eine komplette Liste der **RDS. DataControl** -Objekt Parameter und wann diese implementiert werden sollten, finden Sie unter [RDS. DataControl-Objekt](../../reference/rds-api/datacontrol-object-rds.md).)  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |[Servers](../../reference/rds-api/server-property-rds.md)|Wenn Sie http verwenden, ist der Wert der Name des Server Computers, dem vorangestellt ist `https://` .|  
 |[CONNECT](../../reference/rds-api/connect-property-rds.md)|Stellt die erforderlichen Verbindungsinformationen für **RDS bereit. DataControl** zum Herstellen einer Verbindung mit SQL Server.|  

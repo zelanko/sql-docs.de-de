@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b097d54015d9f48140aafb6feb360b8013edeaf
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 25f4837fb73f15c8626a0b2a558f38badb1f36ed
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977391"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721291"
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zur Anpassungsdatei
 Jeder Abschnitts Header in der Anpassungs Datei besteht aus eckigen Klammern (**[]**), die einen Typ und einen Parameter enthalten. Die vier Abschnitts Typen werden durch die Literalzeichenfolgen **Connect**, **SQL**, **userlist**oder **Logs**angegeben. Der-Parameter ist die Literalzeichenfolge, der Standardwert, ein vom Benutzer angegebener Bezeichner oder Nothing.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  
   
  Daher wird jeder Abschnitt mit einem der folgenden Abschnitts Header gekennzeichnet:  
   
@@ -42,10 +42,10 @@ identifier
   
  Die Abschnitts Header haben die folgenden Teile.  
   
-|Teil|Beschreibung|  
+|Teil|BESCHREIBUNG|  
 |----------|-----------------|  
 |**connect**|Eine Literalzeichenfolge, die eine Verbindungs Zeichenfolge ändert.|  
-|**SQL**|Eine Literalzeichenfolge, die eine Befehls Zeichenfolge ändert.|  
+|**sql**|Eine Literalzeichenfolge, die eine Befehls Zeichenfolge ändert.|  
 |**UserList**|Eine Literalzeichenfolge, die die Zugriffsrechte eines bestimmten Benutzers ändert.|  
 |**logs**|Eine Literalzeichenfolge, die eine Protokolldatei zum Aufzeichnen von Betriebsfehlern angibt.|  
 |**default**|Eine Literalzeichenfolge, die verwendet wird, wenn kein Bezeichner angegeben oder gefunden wird.|  

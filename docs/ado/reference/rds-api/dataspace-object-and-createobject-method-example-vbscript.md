@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cda8ddf7be69bd4c4f1b0e46e00dd882acd9160
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cc2887f46996450dc9d809439226dbef6cf76e97
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982341"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91720961"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace-Objekt und CreateObject-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  
   
  Im folgenden Beispiel wird gezeigt, wie die Methode "up [Object](./createobject-method-rds.md) " der RDS-Methode verwendet wird [. DataSpace](./dataspace-object-rds.md) mit dem Standard Geschäftsobjekt [RDSServer. DataFactory](./datafactory-object-rdsserver.md). Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \<Body> \</Body> Tags und in ein normales HTML-Dokument aus, und nennen Sie ihn " **dataspacevb. ASP**". Das ASP-Skript identifiziert Ihren Server.  
   
