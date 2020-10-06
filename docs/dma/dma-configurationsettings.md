@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 64c18c32cde0c29c120c8cb1b2d976bd983c774a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885997"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727791"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Konfigurieren von Einstellungen für Datenmigrations-Assistent
 
-Sie können ein bestimmtes Verhalten von Datenmigrations-Assistent optimieren, indem Sie Konfigurationswerte in der Datei "DMA. exe. config" festlegen. In diesem Artikel werden die wichtigsten Konfigurationswerte beschrieben.
+Sie können ein bestimmtes Verhalten von Datenmigrations-Assistent optimieren, indem Sie die Konfigurationswerte in der dma.exe.config-Datei festlegen. In diesem Artikel werden die wichtigsten Konfigurationswerte beschrieben.
 
-Sie finden die Datei "DMA. exe. config" für die Datenmigrations-Assistent Desktop Anwendung und das Befehlszeilen-Hilfsprogramm in den folgenden Ordnern auf dem Computer.
+Sie finden die dma.exe.config Datei für die Datenmigrations-Assistent-Desktop Anwendung und das Befehlszeilen-Hilfsprogramm in den folgenden Ordnern auf dem Computer.
 
 - Desktop Anwendung
 
-  % Program Files% \\ Microsoft-Datenmigrations-Assistent \\ DMA. exe. config
+  % Program Files% \\ Microsoft-Datenmigrations-Assistent \\dma.exe.config
 
 - Befehlszeilen-Hilfsprogramm
 
-  % Program Files% \\ Microsoft-Datenmigrations-Assistent \\ dmacmd. exe. config 
+  % Program Files% \\ Microsoft-Datenmigrations-Assistent \\dmacmd.exe.config 
 
 Stellen Sie sicher, dass Sie eine Kopie der ursprünglichen Konfigurationsdatei speichern, bevor Sie Änderungen vornehmen. Nachdem Sie die Änderungen vorgenommen haben, starten Sie Datenmigrations-Assistent neu, damit die neuen Konfigurationswerte wirksam werden.
 
@@ -111,7 +111,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Empfehlungs Schwellenwert
 
-Mit [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)können Sie sowohl warm-als auch kalte Transaktionsdaten dynamisch von Microsoft SQL Server 2016 auf Azure ausdehnen. Stretch Database als Ziel für Transaktions Datenbanken mit großen Mengen an kaltdaten. Die Stretch Database Empfehlung unter Empfehlung zu Speicher Features identifiziert zunächst die Tabellen, die von diesem Feature genutzt werden, und identifiziert dann Änderungen, die vorgenommen werden müssen, um die Tabelle für dieses Feature zu aktivieren.
+Mit [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md)können Sie sowohl warm-als auch kalte Transaktionsdaten dynamisch von Microsoft SQL Server 2016 auf Azure ausdehnen. Stretch Database als Ziel für Transaktions Datenbanken mit großen Mengen an kaltdaten. Die Stretch Database Empfehlung unter Empfehlung zu Speicher Features identifiziert zunächst die Tabellen, die von diesem Feature genutzt werden, und identifiziert dann Änderungen, die vorgenommen werden müssen, um die Tabelle für dieses Feature zu aktivieren.
 
 Ab Datenmigrations-Assistent v 2.0 können Sie diesen Schwellenwert für eine Tabelle steuern, damit Sie sich für die Stretch Database-Funktion mit dem Konfigurations Wert "Empfehlungs Konfigurations Wert" qualifizieren. Der Standardwert ist 100.000 Zeilen. Wenn Sie die Stretch-Funktionen für noch kleinere Tabellen analysieren möchten, verringern Sie den Wert entsprechend.
 
@@ -130,7 +130,7 @@ Ab Datenmigrations-Assistent v 2.0 können Sie diesen Schwellenwert für eine Ta
 
 ## <a name="sql-connection-timeout"></a>SQL-Verbindungs Timeout
 
-Sie können das Timeout der [SQL-Verbindung](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) für Quell-und Ziel Instanzen während der Ausführung einer Bewertung oder Migration steuern, indem Sie den Wert für das Verbindungs Timeout auf eine angegebene Anzahl von Sekunden festlegen. Der Standardwert beträgt 15 Sekunden.
+Sie können das Timeout der [SQL-Verbindung](/dotnet/api/system.data.sqlclient.sqlconnection.connectiontimeout) für Quell-und Ziel Instanzen während der Ausführung einer Bewertung oder Migration steuern, indem Sie den Wert für das Verbindungs Timeout auf eine angegebene Anzahl von Sekunden festlegen. Der Standardwert ist 15 Sekunden.
 
 ```
 <appSettings>

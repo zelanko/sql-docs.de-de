@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9762c84ba42a3d35d0d9ebbcbb3ffb5f114ac1c8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: bfb2db2c6ec11fa765d3554aef3daf853a305fa6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480403"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725414"
 ---
 # <a name="create-a-domain-rule"></a>Erstellen einer Domänenregel
 
@@ -98,7 +98,7 @@ ms.locfileid: "89480403"
   
 2.  Klicken Sie auf **Alle Änderungen verwerfen** , um alle Änderungen zu entfernen, die Sie an den Domänenregeln vorgenommen haben, und die zuvor angewendeten Regeln wiederherzustellen. Das führt dazu, dass alle Änderungen, die nach der letzten Anwendung der Regeln vorgenommen wurden, nicht mehr gelten. Die Gültigkeit jedes Werts in der Domäne wird dann nicht gemäß den verworfenen Änderungen, sondern gemäß den zuvor angewendeten Regeln aktualisiert.  
   
-3.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
+3.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))beschrieben.  
   
 ##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> Nachverfolgung: nach dem Erstellen einer Domänen Regel  
  Nachdem Sie eine Domänenregel erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen. Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
@@ -131,7 +131,6 @@ ms.locfileid: "89480403"
 |Wert entspricht keinem Muster|Nur die Werte, die dem Muster der Zeichen, Ziffern oder Sonderzeichen im Operanden nicht entsprechen, sind gültig.|Beispieloperand: A1 (Wert darf einem Muster eines *beliebigen* Zeichens, gefolgt von einer *beliebigen* Ziffer nicht entsprechen.)<br /><br /> Gültige Werte: AB1, A, A:5<br /><br /> Ungültige Werte: B7, c9|  
 |Wert enthält Muster|Nur die Werte, die das Muster der Zeichen, Ziffern oder Sonderzeichen im Operanden enthalten, sind gültig.|Beispieloperand: AA-12 (Wert enthält ein Muster von zwei *beliebigen* Zeichen, gefolgt von einem Bindestrich (-), wiederum gefolgt von zwei *beliebigen* Ziffern.)<br /><br /> Gültige Werte: AAA-01, ab-975<br /><br /> Ungültiger Wert: A7, AA-6, C-45, aa;98|  
 |Wert enthält kein Muster|Nur die Werte, die das Muster der Zeichen im Operanden nicht enthalten, sind gültig.|Beispieloperand: AB-12 (Wert darf ein Muster von zwei *beliebigen* Zeichen, gefolgt von einem Bindestrich (-), wiederum gefolgt von zwei *beliebigen* Ziffern nicht enthalten.)<br /><br /> Gültige Werte: A7, AA-6, C-45, aa;98<br /><br /> Ungültiger Wert: AAA-01, ab-975|  
-|Der Wert stimmt mit dem regulären Ausdruck überein|Nur die Werte, die dem regulären Ausdruck im Operanden entsprechen, werden als gültig angesehen.<br /><br /> Der reguläre Ausdruck darf nicht die Anker „^“ oder „$“ enthalten, da DQS diese Anker automatisch zu einer Klausel mit „Wert ist gleich regulärem Ausdruck“ hinzufügt. (Alternativ können Sie den regulären Ausdruck einschließen, der die Anker "^" und "$" mit Klammern enthält.) Weitere Informationen zu regulären Ausdrücken finden Sie unter [Sprachelemente für reguläre](https://go.microsoft.com/fwlink/?LinkId=225561)Ausdrücke.|Beispieloperand: [1-5] + (jedes Zeichen muss eine Ziffer von 1 bis 5 sein, die mindestens einmal vorkommt)<br /><br /> Gültige Werte: 123, 12345, 14352<br /><br /> Ungültige Werte: 456, ABC|  
+|Der Wert stimmt mit dem regulären Ausdruck überein|Nur die Werte, die dem regulären Ausdruck im Operanden entsprechen, werden als gültig angesehen.<br /><br /> Der reguläre Ausdruck darf nicht die Anker „^“ oder „$“ enthalten, da DQS diese Anker automatisch zu einer Klausel mit „Wert ist gleich regulärem Ausdruck“ hinzufügt. (Alternativ können Sie den regulären Ausdruck einschließen, der die Anker "^" und "$" mit Klammern enthält.) Weitere Informationen zu regulären Ausdrücken finden Sie unter [Sprachelemente für reguläre](/dotnet/standard/base-types/regular-expression-language-quick-reference)Ausdrücke.|Beispieloperand: [1-5] + (jedes Zeichen muss eine Ziffer von 1 bis 5 sein, die mindestens einmal vorkommt)<br /><br /> Gültige Werte: 123, 12345, 14352<br /><br /> Ungültige Werte: 456, ABC|  
 |Der Wert stimmt nicht mit einem regulären Ausdruck überein|Nur die Werte, die nicht dem regulären Ausdruck im Operanden entsprechen, werden als gültig angesehen.|Beispieloperand: [1-5] + (die Zeichenfolge darf nicht nur Ziffern von 1 bis 5 enthalten)<br /><br /> Gültige Werte: 456, ABC<br /><br /> Ungültige Werte: 123, 123456, 14352|  
-  
   

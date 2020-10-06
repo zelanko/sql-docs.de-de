@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df70a8726e9abc56d677c48ba8f3f995814866d4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496286"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727641"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Wählen Sie aus dem &lt; Modell aus &gt; . Inhalt (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -52,9 +52,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  In der folgenden Tabelle sind die im Miningmodellinhalt enthaltenen Spalten aufgeführt.  
   
 > [!NOTE]  
->  Algorithmen können die Spalten unterschiedlich auswerten, um den Inhalt richtig darzustellen. Eine Beschreibung des Mining Modell Inhalts für jeden Algorithmus und Tipps zur Interpretation und Abfrage des Mining Modell Inhalts für die einzelnen Modelltypen finden Sie unter [Mining Model Content &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
+>  Algorithmen können die Spalten unterschiedlich auswerten, um den Inhalt richtig darzustellen. Eine Beschreibung des Mining Modell Inhalts für jeden Algorithmus und Tipps zur Interpretation und Abfrage des Mining Modell Inhalts für die einzelnen Modelltypen finden Sie unter [Mining Model Content &#40;Analysis Services-Data Mining&#41;](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
-|CONTENT-Rowsetspalte|Beschreibung|  
+|CONTENT-Rowsetspalte|BESCHREIBUNG|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|Ein Katalogname. NULL, wenn der Anbieter Kataloge nicht unterstützt.|  
 |MODEL_SCHEMA|Ein nicht qualifizierter Schemaname. NULL, wenn der Anbieter Schemas nicht unterstützt.|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  Erwartete Ergebnisse:  
   
- Da das Modell ein Entscheidungsstrukturmodell ist, enthalten die nachfolgenden Elemente des übergeordneten Knotens des Modells einen einzelnen Knoten für Randstatistik, einen Knoten, der das vorhersagbare Attribut darstellt, und mehrere Knoten, die Eingabeattribute und Werte enthalten. Weitere Informationen finden Sie unter [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
+ Da das Modell ein Entscheidungsstrukturmodell ist, enthalten die nachfolgenden Elemente des übergeordneten Knotens des Modells einen einzelnen Knoten für Randstatistik, einen Knoten, der das vorhersagbare Attribut darstellt, und mehrere Knoten, die Eingabeattribute und Werte enthalten. Weitere Informationen finden Sie unter [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
   
 ## <a name="using-the-flattened-keyword"></a>Verwenden des FLATTENED-Schlüsselworts  
  Der Miningmodellinhalt enthält in geschachtelten Tabellenspalten häufig interessante Informationen über das Modell. Mithilfe des FLATTENED-Schlüsselworts können Sie Daten aus geschachtelten Tabellen abrufen, ohne einen Anbieter zu benötigen, der hierarchische Rowsets unterstützt.  
@@ -147,5 +147,4 @@ WHERE NODE_TYPE = 26
  [Wählen Sie &#40;DMX-&#41;](../dmx/select-dmx.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

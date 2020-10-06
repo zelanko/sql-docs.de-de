@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5388b3a4d59a80f3e4b030313cde4a5ea9361a3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37a7a0e8be59136eb3ab6e0454c7910b9c9e3198
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352916"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726161"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Verarbeitet das angegebene Data Mining-Objekt. Weitere Informationen zum Verarbeiten von Mining Modellen und Mining Strukturen finden Sie unter [Verarbeiten von Anforderungen und Überlegungen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
+  Verarbeitet das angegebene Data Mining-Objekt. Weitere Informationen zum Verarbeiten von Mining Modellen und Mining Strukturen finden Sie unter [Verarbeiten von Anforderungen und Überlegungen &#40;Data Mining-&#41;](/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
   
  Wenn eine Miningstruktur angegeben ist, verarbeitet die Anweisung die Miningstruktur sowie alle Miningmodelle, die der Struktur zugeordnet sind. Ist ein Miningmodell angegeben, verarbeitet die Anweisung nur das Miningmodell.  
   
@@ -49,7 +49,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
   
  Verwenden Sie das zweite Syntax Formular, und fügen Sie in ein *\<object>* . COLUMN_VALUES können Sie Daten direkt in die Modell Spalten einfügen, ohne das Modell zu trainieren. Bei dieser Methode werden dem Modell Spaltendaten in einer übersichtlichen, geordneten Weise bereitgestellt, die sich anbietet, wenn Sie mit Datasets arbeiten, die Hierarchien oder geordnete Spalten enthalten.  
   
- Wenn Sie **INSERT INTO** mit einem Mining Modell oder einer Mining Struktur verwenden und das \<mapped model columns> -Argument und das-Argument weglassen \<source data query> , verhält sich die-Anweisung wie **ProcessDefault**, wobei bereits vorhandene Bindungen verwendet werden. Wenn keine Bindungen vorhanden sind, gibt die Anweisung einen Fehler zurück. Weitere Informationen zu **ProcessDefault**finden Sie unter [Verarbeitungsoptionen und-Einstellungen &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). Das folgende Beispiel zeigt die Syntax:  
+ Wenn Sie **INSERT INTO** mit einem Mining Modell oder einer Mining Struktur verwenden und das \<mapped model columns> -Argument und das-Argument weglassen \<source data query> , verhält sich die-Anweisung wie **ProcessDefault**, wobei bereits vorhandene Bindungen verwendet werden. Wenn keine Bindungen vorhanden sind, gibt die Anweisung einen Fehler zurück. Weitere Informationen zu **ProcessDefault**finden Sie unter [Verarbeitungsoptionen und-Einstellungen &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). Das folgende Beispiel zeigt die Syntax:  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -59,7 +59,7 @@ INSERT INTO [MINING MODEL] <model>
   
  In der folgenden Tabelle sind die vom Status der Objekte abhängigen Ergebnisse der unterschiedlichen Formen der Anweisung beschrieben.  
   
-|-Anweisung.|Status der Objekte|Ergebnis|  
+|Anweisung|Status der Objekte|Ergebnis|  
 |---------------|----------------------|------------|  
 |in Mining Modell einfügen*\<model>*|Miningstruktur wird verarbeitet.|Miningmodell wird verarbeitet.|  
 ||Miningstruktur wird nicht verarbeitet.|Miningmodell und Miningstruktur werden verarbeitet.|  
@@ -124,5 +124,4 @@ AS [Models]
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

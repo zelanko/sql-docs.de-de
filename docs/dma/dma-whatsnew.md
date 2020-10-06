@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 11bbf0a39ed9a9bbaa19992f98e4e23d50d6fbe9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988506"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727759"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Neuerungen im Datenmigrations-Assistenten
 
@@ -83,7 +83,7 @@ Mit dem Bewertungs Workflow können Sie folgende Probleme erkennen, die sich auf
   - Verhaltensänderungen: die gemeldeten Schema Objekte funktionieren möglicherweise weiterhin, Sie weisen jedoch möglicherweise ein anderes Verhalten auf, z. b. Leistungseinbußen.
   - Informationsprobleme: diese Objekte haben keine Auswirkungen auf die Migration, sind aber möglicherweise nicht mehr im Funktions SQL Server Releases veraltet.
 
-Verwenden Sie nach Abschluss der Bewertung unsere [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS), um die Migration Ihrer SQL Server-Datenbanken zu SQL verwaltete Instanz durchzuführen.  DMS unterstützt die Datenbankmigrationen [Offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (einmalig) und [Online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (Minimale Ausfallzeit) in SQL verwaltete Instanz.
+Verwenden Sie nach Abschluss der Bewertung unsere [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS), um die Migration Ihrer SQL Server-Datenbanken zu SQL verwaltete Instanz durchzuführen.  DMS unterstützt die Datenbankmigrationen [Offline](/azure/dms/tutorial-sql-server-to-managed-instance) (einmalig) und [Online](/azure/dms/tutorial-sql-server-managed-instance-online) (Minimale Ausfallzeit) in SQL verwaltete Instanz.
 
 ## <a name="data-migration-assistant-v40"></a>Datenmigrations-Assistent v 4.0
 
@@ -141,7 +141,7 @@ Wenn sich die physische Sicherungsdatei auf einem Computer befindet, auf dem Fol
 
 ### <a name="migrating-windows-logins"></a>Migrieren von Windows-Anmeldungen
 
-Während die Migration von Active Directory-Anmeldungen (AD) offiziell von SQL Server 2017 unter Linux unterstützt wird, ist eine zusätzliche Konfiguration erforderlich, damit Sie erfolgreich funktioniert. Ausführliche Informationen zum Einrichten von Active Directory Anmeldungen auf SQL Server 2017 unter Linux finden Sie im Artikel [Active Directory Authentifizierung mit SQL Server für Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) . Nachdem Sie die erforderliche Konfiguration durchgeführt haben, ist das Setup fertiggestellt, und Sie können Active Directory Anmeldungen wie gewohnt migrieren. Die Standard mäßige SQL-Authentifizierung funktioniert erwartungsgemäß ohne weitere Einrichtung.
+Während die Migration von Active Directory-Anmeldungen (AD) offiziell von SQL Server 2017 unter Linux unterstützt wird, ist eine zusätzliche Konfiguration erforderlich, damit Sie erfolgreich funktioniert. Ausführliche Informationen zum Einrichten von Active Directory Anmeldungen auf SQL Server 2017 unter Linux finden Sie im Artikel [Active Directory Authentifizierung mit SQL Server für Linux](../linux/sql-server-linux-active-directory-authentication.md) . Nachdem Sie die erforderliche Konfiguration durchgeführt haben, ist das Setup fertiggestellt, und Sie können Active Directory Anmeldungen wie gewohnt migrieren. Die Standard mäßige SQL-Authentifizierung funktioniert erwartungsgemäß ohne weitere Einrichtung.
 
 ## <a name="data-migration-assistant-v32"></a>Datenmigrations-Assistent v 3.2
 

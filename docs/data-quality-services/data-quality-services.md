@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: dc765b9cca33e249e4efda60bad08781eee35b15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bea20a1eb563df3d2af9cddf640359673b05dc57
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462149"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725369"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
@@ -28,28 +28,27 @@ ms.locfileid: "88462149"
  Informationen zum Installieren von DQS finden Sie unter [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md). Informationen zum Aktualisieren der vorhandenen DQS-Version auf [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] finden Sie unter [Aktualisieren von Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md).  
   
  **Durchsuchen von Inhalt nach Bereich**  
- ![Kleines Datei Ordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [Data Quality-Client Anwendung](../data-quality-services/data-quality-client-application.md)  
+ ![Kleines Datei Ordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [Data Quality-Client Anwendung](../data-quality-services/data-quality-client-application.md)  
   
- ![Kleines Datei Ordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [DQS-Wissensdatenbanken und-Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ ![Kleines Datei Ordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [DQS-Wissensdatenbanken und-Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- ![Kleines Datei Ordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [Data Quality-Projekte](../data-quality-services/data-quality-projects-dqs.md)  
+ ![Kleines Datei Ordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [Data Quality-Projekte](../data-quality-services/data-quality-projects-dqs.md)  
   
- ![Kleines Datei Ordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [Datenbereinigung](../data-quality-services/data-cleansing.md)  
+ ![Kleines Datei Ordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [Datenbereinigung](../data-quality-services/data-cleansing.md)  
   
- ![Kleines Datei Ordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [Daten Übereinstimmung](../data-quality-services/data-matching.md)  
+ ![Kleines Datei Ordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [Daten Übereinstimmung](../data-quality-services/data-matching.md)  
   
- ![Kleines Datei Ordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [Referenz Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)  
+ ![Kleines Datei Ordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [Referenz Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)  
   
- ![Kleines Datei Ordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [Datenprofil Erstellung und Benachrichtigungen in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
+ ![Kleines Datei Ordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [Datenprofil Erstellung und Benachrichtigungen in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
- ![Kleines Datei Ordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [DQS-Verwaltung](../data-quality-services/dqs-administration.md)  
+ ![Kleines Datei Ordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [DQS-Verwaltung](../data-quality-services/dqs-administration.md)  
   
- ![Kleines Datei Ordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [DQS-Sicherheit](../data-quality-services/dqs-security.md)  
+ ![Kleines Datei Ordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") [DQS-Sicherheit](../data-quality-services/dqs-security.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Einführung in Data Quality Services](../data-quality-services/introduction-to-data-quality-services.md)   
  [Konzepte von Data Quality Services](../data-quality-services/data-quality-services-concepts.md)   
- [DQS-Ressourcen](https://technet.microsoft.com/sqlserver/hh780961)   
- [SQL Server-Ressourcencenter](https://go.microsoft.com/fwlink/?linkID=219676)  
-  
+ [DQS-Ressourcen](../sql-server/index.yml)   
+ [SQL Server-Ressourcencenter](/previous-versions/sql/sql-server-2012/hh231622(v=sql.110))  
   

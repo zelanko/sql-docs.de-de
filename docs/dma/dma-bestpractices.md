@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 440d6d12ed639d158ad0309209b60daa56e08322
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472366"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727781"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Best Practices für die Ausführung des Datenmigrations-Assistenten
 Dieser Artikel enthält Informationen zu bewährten Methoden für die Installation, Bewertung und Migration.
@@ -40,6 +40,6 @@ Installieren Sie die Datenmigrations-Assistent nicht direkt auf dem SQL Server H
 
 - Aktivieren Sie Verbindung verschlüsseln, wenn eine Verbindung mit den Quell-und Ziel Servern hergestellt wird. Die Verwendung der TLS-Verschlüsselung erhöht die Sicherheit von Daten, die über die Netzwerke zwischen Datenmigrations-Assistent und der SQL Server Instanz übertragen werden. Dies ist insbesondere bei der Migration von SQL-Anmeldungen vorteilhaft. Wenn die TLS-Verschlüsselung nicht verwendet wird und das Netzwerk von einem Angreifer kompromittiert wird, können die migrierten SQL-Anmeldungen ggf. vom Angreifer abgefangen und/oder geändert werden.
 
-    Wenn sich aber der gesamte Zugriff innerhalb einer sicheren Intranetkonfiguration abspielt, ist eine Verschlüsselung möglicherweise nicht erforderlich. Das Aktivieren der Verschlüsselung verlangsamt die Leistung, da der zusätzliche Aufwand zum Verschlüsseln und Entschlüsseln von Paketen erforderlich ist. Weitere Informationen finden Sie unter Verschlüsseln von [Verbindungen mit SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Wenn sich aber der gesamte Zugriff innerhalb einer sicheren Intranetkonfiguration abspielt, ist eine Verschlüsselung möglicherweise nicht erforderlich. Das Aktivieren der Verschlüsselung verlangsamt die Leistung, da der zusätzliche Aufwand zum Verschlüsseln und Entschlüsseln von Paketen erforderlich ist. Weitere Informationen finden Sie unter Verschlüsseln von [Verbindungen mit SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)).
     
 - Überprüfen Sie vor dem Migrieren von Daten, ob die Quelldatenbank und die Zieldatenbank nicht vertrauenswürdig sind. Analysieren Sie die Zieldatenbank nach der Migration erneut, um festzustellen, ob Einschränkungen im Rahmen der Daten Verschiebung als nicht vertrauenswürdig eingestuft wurden. Korrigieren Sie nach Bedarf nicht vertrauenswürdige Einschränkungen. Wenn die Einschränkungen nicht vertrauenswürdig sind, kann dies zu schlechten Ausführungsplänen führen, was sich auf die Leistung auswirken kann.

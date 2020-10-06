@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 849ef40c124cfe611f72c6ad5f258d678c24c963
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0e46994321b73166095acbb0891f5434a6fc86a1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977601"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723039"
 ---
 # <a name="solutions-for-remote-data-access"></a>Lösungen für den Remotedatenzugriff
 ## <a name="the-issue"></a>Das Problem  
  ADO ermöglicht Ihrer Anwendung den direkten Zugriff auf und das Ändern von Datenquellen (manchmal auch als System mit zwei Ebenen bezeichnet). Wenn beispielsweise die Verbindung mit der Datenquelle hergestellt wird, in der die Daten enthalten sind, handelt es sich um eine direkte Verbindung in einem System mit zwei Ebenen.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  
   
  Möglicherweise möchten Sie jedoch indirekt über einen Vermittler wie Microsoft® Internetinformationsdienste (IIS) auf Datenquellen zugreifen. Diese Anordnung wird manchmal als System mit drei Ebenen bezeichnet. Bei IIS handelt es sich um ein Client/Server-System, das eine effiziente Möglichkeit bietet, eine lokale oder Client Anwendung einen Remote Server oder-Server im Internet oder in einem Intranet aufzurufen. Das Serverprogramm erhält Zugriff auf die Datenquelle und verarbeitet optional die gesammelten Daten.  
   

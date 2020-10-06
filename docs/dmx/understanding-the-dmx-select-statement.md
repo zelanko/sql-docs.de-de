@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 93744da59ad7149203da8fd14179045b63dc798f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14e4c99cd907a5f9a18dd11d77988d728557c4bd
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395216"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726061"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Grundlegendes zur SELECT-Anweisung (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -48,42 +48,42 @@ ms.locfileid: "88395216"
 ##  <a name="select-types"></a><a name="Select_Types"></a> Typen auswählen  
  Die Syntax der **Select** -Anweisung unterstützt viele verschiedene Tasks. Diese Aufgaben führen Sie mithilfe der folgenden Muster aus:  
   
--   [Sagt](#Predicting)  
+-   [Vorhersage](#Predicting)  
   
 -   [Browsen](#Browsing)  
   
 -   [Wird kopiert](#Copying)  
   
--   [Drillthrough ausführen](#Drillthrough)  
+-   [Drillthrough](#Drillthrough)  
   
 ###  <a name="predicting"></a><a name="Predicting"></a> Sagt  
  Mit folgenden Abfragetypen können Sie Vorhersagen ausführen, die auf einem Miningmodell basieren.  
   
  Sie können eine **der SELECT-Anweisungen für** das Durchsuchen oder Vorhersagen in den **from** -und **Where** -Klauseln einer **Select** -Anweisung für einen Vorhersage Join einschließen.  
   
-|Abfragetyp|Beschreibung|  
+|Abfragetyp|BESCHREIBUNG|  
 |----------------|-----------------|  
-|Select from [Natural] Vorhersage Join|Gibt eine Vorhersage zurück, die erstellt wurde, indem die Spalten des Miningmodells mit den Spalten einer internen Datenquelle verknüpft wurden.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus den vorhersagbaren Spalten aus dem Modell und den Spalten aus der Eingabedatenquelle.<br /><br /> [Wählen Sie aus &#60;Modell&#62; Vorhersage Join &#40;DMX aus&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Vorhersageabfragen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
-|Select from *\<model>*|Gibt nur auf Basis des Miningmodells den wahrscheinlichsten Status der vorhersagbaren Spalte zurück. Dieser Abfragetyp ist eine Abkürzung für das Erstellen einer Vorhersage mit einem leeren PREDICTION JOIN.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus den vorhersagbaren Spalten aus dem Modell.<br /><br /> [Wählen Sie aus &#60;Modell&#62; &#40;DMX aus&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Vorhersageabfragen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
+|Select from [Natural] Vorhersage Join|Gibt eine Vorhersage zurück, die erstellt wurde, indem die Spalten des Miningmodells mit den Spalten einer internen Datenquelle verknüpft wurden.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus den vorhersagbaren Spalten aus dem Modell und den Spalten aus der Eingabedatenquelle.<br /><br /> [Wählen Sie aus &#60;Modell&#62; Vorhersage Join &#40;DMX aus&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Vorhersageabfragen &#40;Data Mining&#41;](/analysis-services/data-mining/prediction-queries-data-mining)|  
+|Select from *\<model>*|Gibt nur auf Basis des Miningmodells den wahrscheinlichsten Status der vorhersagbaren Spalte zurück. Dieser Abfragetyp ist eine Abkürzung für das Erstellen einer Vorhersage mit einem leeren PREDICTION JOIN.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus den vorhersagbaren Spalten aus dem Modell.<br /><br /> [Wählen Sie aus &#60;Modell&#62; &#40;DMX aus&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Vorhersageabfragen &#40;Data Mining&#41;](/analysis-services/data-mining/prediction-queries-data-mining)|  
   
  [Zurück zu SELECT-Typen](#Select_Types)  
   
 ###  <a name="browsing"></a><a name="Browsing"></a> Browser  
  Mit folgenden Abfragetypen können Sie die Inhalte eines Miningmodells durchsuchen.  
   
-|Abfragetyp|Beschreibung|  
+|Abfragetyp|BESCHREIBUNG|  
 |----------------|-----------------|  
-|SELECT verschieden von *\<model>*|Gibt alle Statuswerte vom Miningmodell für die angegebene Spalte zurück.<br /><br /> Die Datendomäne für diesen Abfragetyp entspricht dem Data Mining-Modell.<br /><br /> [Wählen Sie unterschiedliche &#60;Modell &#62; &#40;DMX aus&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Inhaltsabfragen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
-|Wählen Sie aus *\<model>* . Inhaltliche|Gibt Inhalte mit Beschreibungen zum Miningmodell zurück.<br /><br /> Die Datendomäne für diesen Abfragetyp entspricht dem CONTENT-Schemarowset.<br /><br /> [Wählen Sie aus &#60;Modell&#62; aus. Inhalt &#40;DMX-&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Inhaltsabfragen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|SELECT verschieden von *\<model>*|Gibt alle Statuswerte vom Miningmodell für die angegebene Spalte zurück.<br /><br /> Die Datendomäne für diesen Abfragetyp entspricht dem Data Mining-Modell.<br /><br /> [Wählen Sie unterschiedliche &#60;Modell &#62; &#40;DMX aus&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Inhaltsabfragen &#40;Data Mining&#41;](/analysis-services/data-mining/content-queries-data-mining)|  
+|Wählen Sie aus *\<model>* . Inhaltliche|Gibt Inhalte mit Beschreibungen zum Miningmodell zurück.<br /><br /> Die Datendomäne für diesen Abfragetyp entspricht dem CONTENT-Schemarowset.<br /><br /> [Wählen Sie aus &#60;Modell&#62; aus. Inhalt &#40;DMX-&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Inhaltsabfragen &#40;Data Mining&#41;](/analysis-services/data-mining/content-queries-data-mining)|  
 |Wählen Sie aus *\<model>* . DIMENSION_CONTENT|Gibt Inhalte mit Beschreibungen zum Miningmodell zurück.<br /><br /> Die Datendomäne für diesen Abfragetyp entspricht dem CONTENT-Schemarowset.<br /><br /> [Wählen Sie aus &#60;Modell&#62; aus. DIMENSION_CONTENT &#40;DMX-&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
-|Wählen Sie aus *\<model>* . PMML|Gibt für Algorithmen, die diese Funktionalität unterstützen, die PMML-Darstellung (Predictive Model Markup Language) des Miningmodells zurück.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus dem PMML-Schemarowset.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML-Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126283(v=sql.110))|  
+|Wählen Sie aus *\<model>* . PMML|Gibt für Algorithmen, die diese Funktionalität unterstützen, die PMML-Darstellung (Predictive Model Markup Language) des Miningmodells zurück.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus dem PMML-Schemarowset.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML-Rowset](/previous-versions/sql/sql-server-2012/ms126283(v=sql.110))|  
   
  [Zurück zu SELECT-Typen](#Select_Types)  
   
 ###  <a name="copying"></a><a name="Copying"></a> Vorgänge  
  Sie können ein Miningmodell sowie dessen zugeordnete Miningstruktur in ein neues Modell kopieren und das Modell anschließend innerhalb der Anweisung umbenennen.  
   
-|Abfragetyp|Beschreibung|  
+|Abfragetyp|BESCHREIBUNG|  
 |----------------|-----------------|  
 |SELECT INTO *\<new model>*|Erstellt eine Kopie des Miningmodells.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus dem Data Mining-Modell.<br /><br /> [Wählen Sie in &#40;DMX-&#41;](../dmx/select-into-dmx.md)|  
   
@@ -92,11 +92,11 @@ ms.locfileid: "88395216"
 ###  <a name="drillthrough"></a><a name="Drillthrough"></a> Drillthrough  
  Mit folgenden Abfragetypen können Sie die Fälle oder eine Darstellung der Fälle durchsuchen, die dazu verwendet wurden, das Modell zu trainieren.  
   
-|Abfragetyp|Beschreibung|  
+|Abfragetyp|BESCHREIBUNG|  
 |----------------|-----------------|  
-|Wählen Sie aus *\<model>* . Denen|Gibt die Fälle zurück, die zum Trainieren des Miningmodells verwendet werden.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus dem Data Mining-Modell.<br /><br /> [Wählen Sie aus &#60;Modell&#62; aus. Fälle &#40;DMX-&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Erstellen von Drillthroughabfragen mit DMX](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
+|Wählen Sie aus *\<model>* . Denen|Gibt die Fälle zurück, die zum Trainieren des Miningmodells verwendet werden.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus dem Data Mining-Modell.<br /><br /> [Wählen Sie aus &#60;Modell&#62; aus. Fälle &#40;DMX-&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Erstellen von Drillthroughabfragen mit DMX](/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
 |Wählen Sie aus *\<model>* . SAMPLE_CASES|Gibt einen Beispielfall zurück, der repräsentativ für die Fälle ist, die zum Trainieren des Miningmodells verwendet werden.<br /><br /> Die Datendomäne für diesen Abfragetyp besteht aus dem Data Mining-Modell.<br /><br /> [Wählen Sie aus &#60;Modell&#62; aus. SAMPLE_CASES &#40;DMX-&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|Wählen Sie aus *\<structure>* . Denen|Gibt die detaillierten Datenzeilen aus der zugrunde liegenden Miningstruktur zurück, auch wenn einige Details nicht zum Trainieren des Miningmodells verwendet wurden.<br /><br /> [Wählen Sie aus &#60;Struktur&#62; aus. Denen](../dmx/select-from-structure-cases.md)<br /><br /> [Drillthroughabfragen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
+|Wählen Sie aus *\<structure>* . Denen|Gibt die detaillierten Datenzeilen aus der zugrunde liegenden Miningstruktur zurück, auch wenn einige Details nicht zum Trainieren des Miningmodells verwendet wurden.<br /><br /> [Wählen Sie aus &#60;Struktur&#62; aus. Denen](../dmx/select-from-structure-cases.md)<br /><br /> [Drillthroughabfragen &#40;Data Mining&#41;](/analysis-services/data-mining/drillthrough-queries-data-mining)|  
   
  [Zurück zu SELECT-Typen](#Select_Types)  
   
@@ -104,5 +104,4 @@ ms.locfileid: "88395216"
  [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Syntax Konventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
-  
   

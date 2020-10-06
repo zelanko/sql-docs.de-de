@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6b93097b3a21e3858139146b50f15ddc79c6569
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2842d51c09585a9b954761ac31484e4cf717a9b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978131"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724721"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Sicherstellen, dass ausreichend TempDB-Speicherplatz vorhanden ist
 Wenn bei der Verarbeitung von [Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekten, für die ein Speicherplatz auf Microsoft SQL Server 6,5 erforderlich ist, Fehler auftreten, müssen Sie möglicherweise die Größe von tempdb erhöhen. (Für einige Abfragen ist ein temporärer Verarbeitungsbereich erforderlich, z. b. eine Abfrage mit einer ORDER BY-Klausel **, die einen**temporären Speicherplatz erfordert.)  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  
   
 > [!IMPORTANT]
 >  Lesen Sie dieses Verfahren, bevor Sie die Aktionen ausführen, da es nicht so einfach ist, ein Gerät zu verkleinern, sobald es erweitert wurde.  

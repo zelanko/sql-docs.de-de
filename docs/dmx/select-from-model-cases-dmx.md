@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 289a25088c61988382093f50526546bf5036a510
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466523"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727661"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Wählen Sie aus dem &lt; Modell aus &gt; . Fälle (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  Mithilfe der [IsInNode-&#40;DMX-&#41;](../dmx/isinnode-dmx.md) -Funktion in der **Where** -Klausel werden nur Fälle zurückgegeben, die dem Knoten zugeordnet sind, der durch die NODE_UNIQUE_NAME-Spalte des Schemarowsets angegeben wird.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele basieren auf der Mining Struktur Ziel-Mailing, die auf der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank und den zugehörigen Mining Modellen basiert. Weitere Informationen finden Sie unter [Tutorial zu Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Die folgenden Beispiele basieren auf der Mining Struktur Ziel-Mailing, die auf der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank und den zugehörigen Mining Modellen basiert. Weitere Informationen finden Sie unter [Tutorial zu Data Mining-Grundlagen](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Beispiel 1: Drillthrough zu Modellfällen und Strukturspalten  
  Im folgenden Beispiel werden die Spalten für alle Fälle zurückgegeben, die zum Testen des Target Mailing-Modells verwendet wurden. Wenn die Miningstruktur, auf der das Modell aufbaut, kein Zurückhaltungstestdataset enthält, werden bei dieser Abfrage 0 Fälle zurückgegeben. Sie können die Ausdrucksliste dazu verwenden, nur die benötigten Spalten zurückzugeben.  
@@ -85,12 +85,11 @@ AND IsInNode('002')
  Um eine Strukturspalte zurückzugeben, müssen Drillthroughberechtigungen sowohl im Miningmodell als auch in der Miningstruktur aktiviert sein.  
   
 > [!NOTE]  
->  Nicht alle Miningmodelltypen unterstützen Drillthrough. Informationen zu den Modellen, die Drillthrough unterstützen, finden Sie unter [Drillthrough-Abfragen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining).  
+>  Nicht alle Miningmodelltypen unterstützen Drillthrough. Informationen zu den Modellen, die Drillthrough unterstützen, finden Sie unter [Drillthrough-Abfragen &#40;Data Mining-&#41;](/analysis-services/data-mining/drillthrough-queries-data-mining).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Wählen Sie &#40;DMX-&#41;](../dmx/select-dmx.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

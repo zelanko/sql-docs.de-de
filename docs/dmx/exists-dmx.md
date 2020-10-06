@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a0fa41dfff8edc6ddddeb420027a436f235e54a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f45a4a1d0e709c6b8eb9bb7217d268420f31d07
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353336"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726231"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,9 +41,9 @@ EXISTS(<subquery>)
  Die Spaltenliste, die zum Unterabfrageargument EXISTS hinzugefügt wird, ist nicht relevant. Die Funktion überprüft lediglich, ob eine Zeile existiert, auf die die Bedingung zutrifft.  
   
 ## <a name="examples"></a>Beispiele  
- Sie können mit EXISTS und NOT EXISTS überprüfen, ob Bedingungen in einer geschachtelten Tabelle zutreffen. Dies ist hilfreich beim Erstellen eines Filters zum Überprüfen der Daten, die zum Trainieren oder Testen eines Data Mining-Modells verwendet werden. Weitere Informationen finden Sie unter [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ Sie können mit EXISTS und NOT EXISTS überprüfen, ob Bedingungen in einer geschachtelten Tabelle zutreffen. Dies ist hilfreich beim Erstellen eines Filters zum Überprüfen der Daten, die zum Trainieren oder Testen eines Data Mining-Modells verwendet werden. Weitere Informationen finden Sie unter [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
- Das folgende Beispiel basiert auf der `[Association]` Mining Struktur und dem Mining Modell, die Sie im Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellt haben. Die Abfrage gibt nur die Fälle zurück, in denen der Kunde mindestens ein Patchkit gekauft hat.  
+ Das folgende Beispiel basiert auf der `[Association]` Mining Struktur und dem Mining Modell, die Sie im Lernprogramm zu [Data Mining-Grundlagen](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))erstellt haben. Die Abfrage gibt nur die Fälle zurück, in denen der Kunde mindestens ein Patchkit gekauft hat.  
   
 ```  
 SELECT * FROM [Association].CASES  
@@ -58,6 +58,5 @@ WHERE [[Model] = 'Patch kit'
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
- [Modellfiltersyntax und Beispiele &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
-  
+ [Modellfiltersyntax und Beispiele &#40;Analysis Services – Data Mining&#41;](/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 860d151bb0071db6086629c8893795cadd47b821
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6a4e4fcec5217a9a9475f11d3a386c7436892ea6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990991"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724871"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Übersicht über den Microsoft OLE DB Remoting-Anbieter
 Der Microsoft OLE DB Remoting-Anbieter ermöglicht einem lokalen Benutzer auf einem Client Computer das Aufrufen von Datenanbietern auf einem Remote Computer. Geben Sie die Datenanbieter Parameter für den Remote Computer so an, als wären Sie ein lokaler Benutzer auf dem Remote Computer. Geben Sie dann die Parameter an, die vom Remote Anbieter für den Zugriff auf den Remote Computer verwendet werden. Sie können dann auf den Remote Computer zugreifen, als handele es sich um einen lokalen Benutzer.
 
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu  [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu  [WCF Data Service](/dotnet/framework/wcf/)migriert werden.
 
 ## <a name="provider-keyword"></a>Provider-Schlüsselwort
  Um den OLE DB Remoting-Anbieter aufzurufen, geben Sie das folgende Schlüsselwort und den Wert in der Verbindungs Zeichenfolge an. (Beachten Sie den Leerraum im Anbieter Namen.)
@@ -45,12 +45,12 @@ Der Microsoft OLE DB Remoting-Anbieter ermöglicht einem lokalen Benutzer auf ei
 ## <a name="dynamic-properties"></a>Dynamische Eigenschaften
  Wenn dieser Dienstanbieter aufgerufen wird, werden die folgenden dynamischen Eigenschaften der [Properties](../../reference/ado-api/properties-collection-ado.md) -Auflistung des [Verbindungs](../../reference/ado-api/connection-object-ado.md)Objekts hinzugefügt.
 
-|Name der dynamischen Eigenschaft|Beschreibung|
+|Name der dynamischen Eigenschaft|BESCHREIBUNG|
 |---------------------------|-----------------|
 |**DFMode**|Gibt den DataFactory-Modus an. Eine Zeichenfolge, die die gewünschte Version des [DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) -Objekts auf dem Server angibt. Legen Sie diese Eigenschaft fest, bevor Sie eine Verbindung öffnen, um eine bestimmte Version des **DataFactory**anzufordern. Wenn die angeforderte Version nicht verfügbar ist, wird versucht, die vorherige Version zu verwenden. Wenn keine vorangehende Version vorhanden ist, tritt ein Fehler auf. Wenn **DFMode** kleiner als die verfügbare Version ist, tritt ein Fehler auf. Diese Eigenschaft ist schreibgeschützt, nachdem eine Verbindung hergestellt wurde.<br /><br /> Kann einer der folgenden gültigen Zeichen folgen Werte sein:<br /><br /> -"25"-Version 2,5 (Standard)<br />-"21"-Version 2,1<br />-"20"-Version 2,0<br />-15, Version 1,5|
 |**Befehls Eigenschaften**|Gibt Werte an, die der Zeichenfolge der Command (Rowset)-Eigenschaften hinzugefügt werden, die vom MS-Remote Anbieter an den Server gesendet werden. Der Standardwert für diese Zeichenfolge ist VT_EMPTY.|
 |**Aktueller DFMode**|Gibt die tatsächliche Versionsnummer des **DataFactory** auf dem Server an. Überprüfen Sie diese Eigenschaft, um festzustellen, ob die in der **DFMode** -Eigenschaft angeforderte Version berücksichtigt wurde.<br /><br /> Kann einer der folgenden gültigen Long-ganzzahligen Werte sein:<br /><br /> -25-Version 2,5 (Standard)<br />-21-Version 2,1<br />-20-Version 2,0<br />-15-Version 1,5<br /><br /> Wenn Sie "DFMode = 20;" der Verbindungs Zeichenfolge hinzufügen, wenn Sie den **msremote** -Anbieter verwenden, kann die Leistung des Servers beim Aktualisieren von Daten verbessert werden. Mit dieser Einstellung verwendet das **RDSServer. DataFactory** -Objekt auf dem Server einen weniger ressourcenintensiven Modus. Die folgenden Funktionen sind in dieser Konfiguration jedoch nicht verfügbar:<br /><br /> -Verwenden von parametrisierten Abfragen.<br />: Abrufen von Parameter-oder Spalten Informationen vor dem Aufrufen der **Execute** -Methode.<br />-Die **Transact-Updates** werden auf **true**festgelegt.<br />-Zeilen Status wird erhalten.<br />-Aufrufen der **Resync** -Methode.<br />-Aktualisieren (explizit oder automatisch) über die Eigenschaft " **Resync aktualisieren** ".<br />-Festlegen von **Befehls** -oder **Recordseteigenschaften** .<br />-Verwenden von **adCmdTableDirect**.|
-|**Handler**|Gibt den Namen eines serverseitigen Anpassungsprogramms (oder-Handlers) an, das die Funktionalität von [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)erweitert, sowie alle Parameter, die vom Handler verwendet werden, die durch Kommas (",") getrennt sind. Ein **Zeichen** folgen Wert.|
+|**Handler**|Gibt den Namen eines serverseitigen Anpassungsprogramms (oder-Handlers) an, das die Funktionalität von [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)erweitert, sowie alle Parameter, die vom Handler verwendet werden, die durch Kommas (",") getrennt sind. Ein **String-Wert**.|
 |**Internet Timeout**|Gibt die maximale Anzahl von Millisekunden an, die auf die Übertragung einer Anforderung zum und vom Server gewartet werden soll. (Der Standardwert ist 5 Minuten.)|
 |**Remote Anbieter**|Gibt den Namen des Datenanbieters an, der auf dem Remote Server verwendet werden soll.|
 |**Remote Server**|Gibt den Servernamen und das Kommunikationsprotokoll an, die von dieser Verbindung verwendet werden sollen. Diese Eigenschaft entspricht dem [RDS. Datacontro](../../reference/rds-api/datacontrol-object-rds.md) Object [Server](../../reference/rds-api/server-property-rds.md) -Eigenschaft.|

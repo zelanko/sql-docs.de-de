@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a9477acb504bf68edf6c5b9caec72b0d8e8feed
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 220f4a8abfe37a12a7f0699b9aec8a634691cabe
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978121"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723221"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>Aktivieren einer DLL zur Ausführung unter DCOM
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  
   
  In den folgenden Schritten wird beschrieben, wie Sie eine Geschäftsobjekt-DLL für die Verwendung von DCOM und Microsoft Internetinformationsdienste (http) über Komponenten Dienste aktivieren.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "88978121"
   
 2.  Installieren Sie ein Geschäftsobjekt im Paket.  
   
-     - oder -  
+     Oder  
   
      Importieren Sie das [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) -Objekt in das Paket.  
   

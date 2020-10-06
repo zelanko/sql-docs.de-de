@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae44534ae51f0bc49ca687ce73a17f9486bc1b31
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23a9a1594c31bda040a22ad3914af8b8e7d3603f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395726"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726081"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  Es gibt jedoch Situationen, in denen Sie möglicherweise weiterhin TopCount verwenden müssen. DMX unterstützt z. b. den **Top** -Qualifizierer in einer untergeordneten SELECT-Anweisung nicht. Die Funktion " [präthistogram &#40;DMX-&#41;](../dmx/predicthistogram-dmx.md) " unterstützt auch das Hinzufügen von **Top**nicht.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele sind Vorhersage Abfragen für das Association-Modell, das Sie mit dem Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen. Die Abfragen geben die gleichen Ergebnisse zurück, im ersten Beispiel wird jedoch TopCount verwendet, und im zweiten Beispiel wird die Vorhersagefunktion verwendet.  
+ Die folgenden Beispiele sind Vorhersage Abfragen für das Association-Modell, das Sie mit dem Lernprogramm zu [Data Mining-Grundlagen](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))erstellen. Die Abfragen geben die gleichen Ergebnisse zurück, im ersten Beispiel wird jedoch TopCount verwendet, und im zweiten Beispiel wird die Vorhersagefunktion verwendet.  
   
  Um zu verstehen, wie TopCount funktioniert, ist es möglicherweise hilfreich, zunächst eine Vorhersage Abfrage auszuführen, die nur die geclusterte Tabelle zurückgibt.  
   
@@ -55,7 +55,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [Erstellen einer SINGLETON-Abfrage im Data Mining-Designer](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
+>  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [Erstellen einer SINGLETON-Abfrage im Data Mining-Designer](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Beispielergebnisse:  
   
@@ -117,5 +117,4 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  [BottomCount &#40;DMX-&#41;](../dmx/bottomcount-dmx.md)   
  [Topprozent &#40;DMX-&#41;](../dmx/toppercent-dmx.md)   
  [TopSum &#40;DMX-&#41;](../dmx/topsum-dmx.md)  
-  
   

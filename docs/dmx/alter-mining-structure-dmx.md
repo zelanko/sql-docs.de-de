@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2a5e81b7ae19b431f35b3fe0eac291718c4df3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6169d898479637d8f8c0a74aececd56cf1f62eb7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431182"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727811"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -56,7 +56,7 @@ USING <algorithm> [(<parameter list>)]
  Der Name eines Data Mining-Algorithmus, der vom Anbieter definiert wurde.  
   
 > [!NOTE]  
->  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe [DMSCHEMA_MINING_SERVICES Rowsets](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von unterstützten Algorithmen finden Sie unter [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe [DMSCHEMA_MINING_SERVICES Rowsets](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von unterstützten Algorithmen finden Sie unter [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [Data Mining-Eigenschaften](/analysis-services/server-properties/data-mining-properties).  
   
  *Parameterliste*  
  Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
@@ -97,7 +97,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>Spaltenname und Alias  
- Der Spaltenname, den Sie in der Spaltendefinitionsliste verwenden, muss mit dem in der Miningstruktur verwendeten Spaltennamen identisch sein. Sie können jedoch optional einen Alias definieren, um die Strukturspalte im Miningmodell darzustellen. Außerdem können Sie mehrere Spaltendefinitionen für dieselbe Strukturspalte erstellen und jeder Kopie der Spalte einen anderen Alias und eine andere Vorhersageverwendung zuweisen. Standardmäßig wird der Name der Strukturspalte verwendet, falls Sie keinen Alias definieren. Weitere Informationen finden Sie unter [Erstellen eines Alias für eine Modell Spalte](https://docs.microsoft.com/analysis-services/data-mining/create-an-alias-for-a-model-column).  
+ Der Spaltenname, den Sie in der Spaltendefinitionsliste verwenden, muss mit dem in der Miningstruktur verwendeten Spaltennamen identisch sein. Sie können jedoch optional einen Alias definieren, um die Strukturspalte im Miningmodell darzustellen. Außerdem können Sie mehrere Spaltendefinitionen für dieselbe Strukturspalte erstellen und jeder Kopie der Spalte einen anderen Alias und eine andere Vorhersageverwendung zuweisen. Standardmäßig wird der Name der Strukturspalte verwendet, falls Sie keinen Alias definieren. Weitere Informationen finden Sie unter [Erstellen eines Alias für eine Modell Spalte](/analysis-services/data-mining/create-an-alias-for-a-model-column).  
   
  Für geschachtelte Tabellen Spalten geben Sie den Namen der geschachtelten Tabelle an, geben den Datentyp als **Tabelle**an und stellen dann die Liste der geschachtelten Spalten bereit, die in Klammern eingeschlossen werden sollen.  
   
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |Klausel|BESCHREIBUNG|  
 |-|-|  
-|**Voraus**|Diese Spalte kann vom Modell vorhergesagt werden, und ihre Werte können als Eingabe verwendet werden, um den Wert anderer vorhersagbarer Spalten vorherzusagen.|  
+|**PREDICT**|Diese Spalte kann vom Modell vorhergesagt werden, und ihre Werte können als Eingabe verwendet werden, um den Wert anderer vorhersagbarer Spalten vorherzusagen.|  
 |**PREDICT_ONLY**|Diese Spalte kann vom Modell vorhergesagt werden, aber ihre Werte können in Eingabefällen nicht dazu verwendet werden, den Wert anderer vorhersagbarer Spalten vorherzusagen.|  
   
 ## <a name="filter-criteria-expressions"></a>Filterkriterienausdrücke  
@@ -129,15 +129,15 @@ USING <algorithm> [(<parameter list>)]
   
  Filterkriterienausdrücke sind vereinfachte DMX-Prädikate und ähneln einer WHERE-Klausel. Filterausdrücke werden auf Formeln reduziert, die grundlegende mathematische Operatoren, Skalare und Spaltennamen verwenden. Eine Ausnahme bildet der EXISTS-Operator. Seine Auswertung ergibt TRUE, wenn mindestens eine Zeile für die Unterabfrage zurückgegeben wird. Prädikate können mit den allgemeinen logischen Operatoren kombiniert werden: AND, OR und NOT.  
   
- Weitere Informationen zu filtern, die mit Mining Modellen verwendet werden, finden Sie unter [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ Weitere Informationen zu filtern, die mit Mining Modellen verwendet werden, finden Sie unter [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
 > [!NOTE]  
 >  Spalten in einem Filter müssen Miningstrukturspalten sein. Sie können keinen Filter für eine Modellspalte oder eine Spalte mit einem Alias erstellen.  
   
- Weitere Informationen zu DMX-Operatoren und-Syntax finden Sie unter [Mining Modell Spalten](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
+ Weitere Informationen zu DMX-Operatoren und-Syntax finden Sie unter [Mining Modell Spalten](/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="parameter-definition-list"></a>Parameterdefinitionsliste (Parameter Definition List)  
- Durch Hinzufügen von Algorithmusparametern zur Parameterliste können Sie die Leistung und die Funktionsweise eines Modells anpassen. Die Parameter, die Sie verwenden können, hängen vom Algorithmus ab, den Sie in der USING-Klausel angeben. Eine Liste der Parameter, die den einzelnen Algorithmen zugeordnet sind, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ Durch Hinzufügen von Algorithmusparametern zur Parameterliste können Sie die Leistung und die Funktionsweise eines Modells anpassen. Die Parameter, die Sie verwenden können, hängen vom Algorithmus ab, den Sie in der USING-Klausel angeben. Eine Liste der Parameter, die den einzelnen Algorithmen zugeordnet sind, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
  Die Syntax der Parameterliste sieht wie folgt aus:  
   
@@ -204,5 +204,4 @@ USING Microsoft_Decision Trees
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

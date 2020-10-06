@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b63c3925fd70f6075ab1131c275fa5e52a6e3ac8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 41652f73868380d4902c7c6815a7ee53868c0969
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979121"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724861"
 ---
 # <a name="using-a-connection-object"></a>Verwenden eines Connection-Objekts
 Vor dem Öffnen eines **Verbindungs** Objekts müssen Sie bestimmte Informationen über die Datenquelle und den Verbindungstyp definieren. Die meisten dieser Informationen werden durch den *ConnectionString* -Parameter der [Open-Methode](../../../ado/reference/ado-api/open-method-ado-connection.md) für das **Verbindungs** Objekt oder durch die [ConnectionString-Eigenschaft](../../../ado/reference/ado-api/connectionstring-property-ado.md) des **Connection** -Objekts gespeichert. Eine Verbindungs Zeichenfolge besteht aus einer Liste von Argument/Wert-Paaren, die durch Semikolons getrennt sind, wobei die Werte in einfache Anführungszeichen eingeschlossen sind. Beispiel:  
@@ -30,7 +30,7 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  Sie können auch einen ODBC-Datenquellen Namen (DSN) oder eine Daten Verknüpfungs Datei (UDL-Datei) in einer Verbindungs Zeichenfolge angeben. Weitere Informationen zu DSNs finden Sie unter [Verwalten von Datenquellen](../../../odbc/admin/managing-data-sources.md) in der ODBC Programmer es Reference. Weitere Informationen zu UDLs finden Sie unter [Übersicht über die Daten Link-API](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) in der OLE DB Programmierer-Referenz.  
+>  Sie können auch einen ODBC-Datenquellen Namen (DSN) oder eine Daten Verknüpfungs Datei (UDL-Datei) in einer Verbindungs Zeichenfolge angeben. Weitere Informationen zu DSNs finden Sie unter [Verwalten von Datenquellen](../../../odbc/admin/managing-data-sources.md) in der ODBC Programmer es Reference. Weitere Informationen zu UDLs finden Sie unter [Übersicht über die Daten Link-API](/previous-versions/windows/desktop/ms718102(v=vs.85)) in der OLE DB Programmierer-Referenz.  
   
  In der Regel stellen Sie eine Verbindung her, indem Sie die **Connection. Open** -Methode mit einer entsprechenden *Verbindungs Zeichenfolge* als Parameter aufrufen. Ein Beispiel finden Sie im folgenden Visual Basic-Code Ausschnitt:  
   

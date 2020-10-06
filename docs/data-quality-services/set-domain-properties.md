@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 73ec65fc7de346ada1232bee7a03dce2aedffa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a229aacb9110bdd5eefa9dc3987ce39fec8a1e66
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466627"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726618"
 ---
 # <a name="set-domain-properties"></a>Festlegen von Domäneneigenschaften
 
@@ -41,7 +41,7 @@ ms.locfileid: "88466627"
   
 2.  Legen Sie Eigenschaften für eine neue Domäne fest, nachdem Sie diese wie unter [Create a Domain](../data-quality-services/create-a-domain.md)beschrieben erstellt haben.  
   
-3.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)beschrieben.  
+3.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))beschrieben.  
   
 ##  <a name="follow-up-after-setting-domain-properties"></a><a name="FollowUp"></a> Nachverfolgung: nach dem Festlegen von Domänen Eigenschaften  
  Nachdem Sie Domäneneigenschaften festgelegt haben, können Sie andere Domänenverwaltungstasks in der Domäne ausführen, Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md).  
@@ -90,5 +90,4 @@ ms.locfileid: "88466627"
   
 ###  <a name="disable-syntax-error-algorithms"></a><a name="Syntax"></a> Syntax Fehler Algorithmen deaktivieren  
  Wenn der Datentyp **Zeichenfolge**ist, wählen Sie dies aus, um anzugeben, dass DQS während der Bereinigung keine Syntaxfehler in der Domäne identifiziert. Aktivieren Sie dieses Kontrollkästchen, wenn die Identifizierung von Syntaxfehlern für diese Domäne irrelevant ist. Die Identifizierung von Syntaxfehler ist für eine Seriennummer beispielsweise unwichtig. Dieses Steuerelement ist nur für den Datentyp „Zeichenfolge“ verfügbar. DQS überprüft keine anderen Datentypen als Zeichenfolgen auf Syntaxfehler.  
-  
   

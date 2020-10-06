@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6197fc8508e1334e5f8afdcb14aeaf7488890159
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd6830e46f10ba20642d1975f293b72b768f7e5b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414086"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726251"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Data Mining-Erweiterungen (DMX) - Referenz
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88414086"
   
  Die Spezifikation definiert die Basis von Data Mining als das virtuelle Data Mining-Modellobjekt. Das Data Mining-Modellobjekt kapselt alle Informationen, die zu einem bestimmten Miningmodell bekannt sind. Das Data Mining-Modellobjekt ist wie eine SQL-Tabelle strukturiert, mit Spalten, Datentypen und Metainformationen, die das Modell beschreiben. Diese Struktur ermöglicht es Ihnen, mit der Sprache DMX, die eine Erweiterung von SQL ist, Modelle zu erstellen und zu verwenden.  
   
- **Weitere Informationen finden Sie unter:** [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
+ **Weitere Informationen finden Sie unter:** [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
 ##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a> DMX-Anweisungen  
  Mit den DMX-Anweisungen können Sie Data Mining-Modelle erstellen, verarbeiten, kopieren, durchsuchen und für Vorhersagen verwenden. Es gibt zwei Arten von Anweisungen in DMX: Datendefinitionsanweisungen und Datenbearbeitungsanweisungen. Sie können jede Art von Anweisung zum Ausführen unterschiedlicher Arten von Aufgaben verwenden.  
@@ -109,5 +109,4 @@ ms.locfileid: "88414086"
  [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struktur und Verwendung von DMX-Vorhersage Abfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

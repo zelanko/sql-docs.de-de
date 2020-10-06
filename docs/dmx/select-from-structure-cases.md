@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e4a14565a0ac4b2aba19dd1ef0dfbbfdc4454b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf8afcdf84c5d33e91971c58dff5c1f93c68fd08
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500917"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726128"
 ---
 # <a name="select-from-ltstructuregtcases"></a>Wählen Sie eine &lt; Struktur aus &gt; . Denen
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -66,7 +66,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Daher sollten Sie zum Schutz sensibler Daten oder persönlicher Informationen die Datenquellen Sicht so erstellen, dass persönliche Informationen maskiert werden, und die **AllowDrillThrough** -Berechtigung für eine Mining Struktur oder ein Mining Modell nur bei Bedarf erteilen.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele basieren auf der Mining Struktur based Mailing, die auf der-Datenbank basiert, [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] und den zugehörigen Mining Modellen. Weitere Informationen finden Sie unter [Tutorial zu Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Die folgenden Beispiele basieren auf der Mining Struktur based Mailing, die auf der-Datenbank basiert, [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] und den zugehörigen Mining Modellen. Weitere Informationen finden Sie unter [Tutorial zu Data Mining-Grundlagen](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Beispiel 1: Ausführen eines Drillthrough zu Strukturfällen  
  Im folgenden Beispiel wird eine Liste der 500 ältesten Kunden in der Miningstruktur Targeted Mailing zurückgegeben. Die Abfrage gibt alle Spalten im Miningmodell zurück, beschränkt die Zeilen jedoch auf die Kunden, die ein Fahrrad gekauft haben, und sortiert diese nach Alter. Sie können die Ausdrucksliste auch so bearbeiten, dass nur die benötigten Spalten zurückgegeben werden.  
@@ -94,5 +94,4 @@ WHERE IsTestCase();
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 11795005d0a2a7cf97a515278a30a586ff640ef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0bc9e4ffe7da1f81bbd246e9cbfa7398bfec50e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352276"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726145"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,12 +37,12 @@ IsTestCase()
  Sie können ermitteln, ob ein Testsatz für eine bestimmte Miningstruktur erstellt wurde, indem Sie den Wert der Eigenschaften von <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> und <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> anzeigen.  
   
 > [!NOTE]  
->  Drillthrough muss für das Modell aktiviert sein, wenn Sie die IsTrainingCase-Funktion oder die IsTestCase-Funktion verwenden möchten, um Details zu den Fällen in einem bestimmten Modell zurückzugeben. Weitere Informationen finden Sie unter [Aktivieren von Drillthrough für ein Miningmodell](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
+>  Drillthrough muss für das Modell aktiviert sein, wenn Sie die IsTrainingCase-Funktion oder die IsTestCase-Funktion verwenden möchten, um Details zu den Fällen in einem bestimmten Modell zurückzugeben. Weitere Informationen finden Sie unter [Aktivieren von Drillthrough für ein Miningmodell](/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
   
  Verwenden Sie die [IsTrainingCase-Funktion &#40;DMX-&#41;](../dmx/istrainingcase-dmx.md), um die Fälle zurückzugeben, die Teil des Trainings Datasets sind.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die `Targeted Mailing` Mining Struktur verwendet, die im Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellt wird. Die Abfrage gibt alle Fälle der Struktur zurück, die für Tests verwendet werden.  
+ Im folgenden Beispiel wird die `Targeted Mailing` Mining Struktur verwendet, die im Lernprogramm zu [Data Mining-Grundlagen](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))erstellt wird. Die Abfrage gibt alle Fälle der Struktur zurück, die für Tests verwendet werden.  
   
 ```  
 SELECT *  
@@ -54,7 +54,6 @@ WHERE IsTestCase()
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
- [Data Mining-Abfragen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)   
- [Trainings- und Testdatasets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)  
-  
+ [Data Mining-Abfragen](/analysis-services/data-mining/data-mining-queries)   
+ [Trainings- und Testdatasets](/analysis-services/data-mining/training-and-testing-data-sets)  
   

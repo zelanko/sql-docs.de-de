@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7bc85d20ab3c1c087b6352d16777b2bb7d7dcd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 062e95b2030b3f4e3004fa1409f26fe82e38e05d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500865"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726113"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,7 +41,7 @@ FROM <existing model>
  Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
   
  *expression*  
- Ein Ausdruck, der auf den Trainingsdaten eine gültige Filterbedingung ergibt. Weitere Informationen zu Ausdrücken, die als Filter verwendet werden können, finden Sie unter [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ Ein Ausdruck, der auf den Trainingsdaten eine gültige Filterbedingung ergibt. Weitere Informationen zu Ausdrücken, die als Filter verwendet werden können, finden Sie unter [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
  *vorhandenes Modell*  
  Der Name des vorhandenen Modells, das kopiert werden soll.  
@@ -54,7 +54,7 @@ FROM <existing model>
  Die **with Drillthrough** -Klausel ermöglicht einen Drillthrough für das neue Mining Modell. Drillthrough kann nur aktiviert werden, wenn das Modell erstellt wird.  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>Beispiel 1: Ändern der Parameter des Modells  
- Im folgenden Beispiel wird ein neues Mining Modell erstellt, das auf einem vorhandenen Mining Modell basiert, `TM_Clustering` das Sie im Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen. In dem neuen Modell wird der CLUSTER_COUNT-Parameter geändert, sodass das neue Modell maximal fünf Cluster enthält. Demgegenüber verwendet das vorhandene Modell den Standardwert 10.  
+ Im folgenden Beispiel wird ein neues Mining Modell erstellt, das auf einem vorhandenen Mining Modell basiert, `TM_Clustering` das Sie im Lernprogramm zu [Data Mining-Grundlagen](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))erstellen. In dem neuen Modell wird der CLUSTER_COUNT-Parameter geändert, sodass das neue Modell maximal fünf Cluster enthält. Demgegenüber verwendet das vorhandene Modell den Standardwert 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  
@@ -78,5 +78,4 @@ FROM [TM Clustering]
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 3a061ede945ed8eda5264c2ef210bca5ac1d70e9
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: a5ebfaaf303a354124f3668b65716cd65bdb8043
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988487"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727771"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Ermitteln der richtigen Azure SQL-Datenbank/verwaltete Instanz-SKU für Ihre lokale Datenbank
 
@@ -41,8 +41,8 @@ Im folgenden finden Sie Anweisungen zum Bestimmen der SKU-Empfehlungen und zum B
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - Laden Sie die neueste Version von [DMA](https://aka.ms/get-dma)herunter, und installieren Sie Sie. Wenn Sie bereits über eine frühere Version des Tools verfügen, öffnen Sie Sie, und Sie werden aufgefordert, DMA zu aktualisieren.
-- Stellen Sie sicher, dass auf Ihrem Computer [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) oder höher angegeben ist, die zum Ausführen aller Skripts erforderlich ist. Informationen dazu, wie Sie herausfinden, welche Version von PowerShell auf Ihrem Computer installiert ist, finden Sie im Artikel [herunterladen und Installieren von Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
-- Stellen Sie sicher, dass auf Ihrem Computer das Azure PowerShell-Modul installiert ist. Weitere Informationen finden Sie im Artikel [Installieren des Azure PowerShell Moduls](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
+- Stellen Sie sicher, dass auf Ihrem Computer [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) oder höher angegeben ist, die zum Ausführen aller Skripts erforderlich ist. Informationen dazu, wie Sie herausfinden, welche Version von PowerShell auf Ihrem Computer installiert ist, finden Sie im Artikel [herunterladen und Installieren von Windows PowerShell 5,1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+- Stellen Sie sicher, dass auf Ihrem Computer das Azure PowerShell-Modul installiert ist. Weitere Informationen finden Sie im Artikel [Installieren des Azure PowerShell Moduls](/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Vergewissern Sie sich, dass die PowerShell-Datei **SkuRecommendationDataCollectionScript.ps1**, die für die Erfassung der Leistungsindikatoren erforderlich ist, im DMA-Ordner installiert ist.
 - Stellen Sie sicher, dass der Computer, auf dem Sie diesen Prozess ausführen, über Administrator Berechtigungen für den Computer verfügt, auf dem die Datenbanken gehostet werden.
 
@@ -237,4 +237,4 @@ Um Bereitstellungs Informationen einzugeben und Änderungen an den Empfehlungen 
 
 ## <a name="next-step"></a>Nächster Schritt
 
-- Eine komplette Liste der Befehle zum Ausführen von DMA über die CLI finden Sie im Artikel [Ausführen von Datenmigrations-Assistent von der Befehlszeile aus](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017).
+- Eine komplette Liste der Befehle zum Ausführen von DMA über die CLI finden Sie im Artikel [Ausführen von Datenmigrations-Assistent von der Befehlszeile aus](./dma-commandline.md?view=sql-server-2017).

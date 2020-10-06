@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 70e448c9d47dbffd4bc37e7b4dfd6e96bf0de9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8e5d887195e27f706ef995ff92e32aa41b9149
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353556"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726192"
 ---
 # <a name="functions-dmx"></a>Funktionen (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -49,7 +49,7 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>Gespeicherte Prozeduren  
  Mit den üblichen Programmiersprachen für Laufzeitprozeduren können Sie gespeicherte Prozeduren erstellen, die die Funktionalität von DMX erweitern. Beispielsweise gibt ein Regressions Struktur-Mining Modell Koeffizienten zurück, wie z. B. a, B usw., die die Regressionsgleichung beschreiben, aber das Modell gibt die Formel nicht zurück, wie z. B. a + BX = y. Für einen solchen Fall können Sie eine gespeicherte Prozedur schreiben, in der das Data Mining-Modellobjekt dazu verwendet wird, das Inhaltsschema auszuwerten und die Regressionsgleichung als Ausgabe zurückzugeben. Auf diese Weise kann eine DMX-Anweisung eine Liste der Regressionsgleichungen als Teil eines Abfrageergebnisses zurückgeben.  
   
- **Weitere Informationen: Verwaltung von mehr** [dimensionalen modellassemblys](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
+ **Weitere Informationen: Verwaltung von mehr** [dimensionalen modellassemblys](/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -61,5 +61,4 @@ FROM [TM_Decision_Tree].CONTENT
  [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struktur und Verwendung von DMX-Vorhersage Abfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

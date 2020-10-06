@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e31f1c575441c01c6ff7e9325179ae6776802276
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eb68d0aaa0d19fb903154b8d5c4d4135b57883e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352336"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726146"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,12 +37,12 @@ IsTrainingCase()
  Sie können ermitteln, ob die Daten in einer bestimmten Miningstruktur in Test- und Trainingssätze geteilt wurden, indem Sie den Wert der Eigenschaften von <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> und <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> anzeigen.  
   
 > [!NOTE]  
->  Drillthrough muss für das Modell aktiviert sein, wenn Sie die IsTrainingCase-Funktion oder die IsTestCase-Funktion verwenden möchten, um Details zu den Fällen im Modell zurückzugeben. Weitere Informationen finden Sie unter [Aktivieren von Drillthrough für ein Miningmodell](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
+>  Drillthrough muss für das Modell aktiviert sein, wenn Sie die IsTrainingCase-Funktion oder die IsTestCase-Funktion verwenden möchten, um Details zu den Fällen im Modell zurückzugeben. Weitere Informationen finden Sie unter [Aktivieren von Drillthrough für ein Miningmodell](/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
   
  Um Fälle zurückzugeben, die Teil des Test Datasets sind, verwenden Sie die Funktion [IsTestCase &#40;DMX-&#41;](../dmx/istestcase-dmx.md).  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird das Clustering-Data Mining Modell aus dem Ziel Mailing-Szenario im Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)verwendet. Die Abfrage gibt nur die Fälle zurück, die zum Trainieren des Miningmodells verwendet wurden. Darüber hinaus werden die Trainingsfälle auf Kunden unter 40 eingeschränkt.  
+ Im folgenden Beispiel wird das Clustering-Data Mining Modell aus dem Ziel Mailing-Szenario im Lernprogramm zu [Data Mining-Grundlagen](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))verwendet. Die Abfrage gibt nur die Fälle zurück, die zum Trainieren des Miningmodells verwendet wurden. Darüber hinaus werden die Trainingsfälle auf Kunden unter 40 eingeschränkt.  
   
 ```  
 SELECT *  
@@ -54,8 +54,7 @@ AND [Age] <40
  Weitere Beispiele für die Abfrage der in Data Mining verwendeten Fälle finden Sie unter [Select from &#60;Model&#62;. Fälle &#40;DMX-&#41;](../dmx/select-from-model-cases-dmx.md) und [Wählen aus &#60;Struktur&#62;. Fälle](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Trainings-und Test Datasets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)   
+ [Trainings-und Test Datasets](/analysis-services/data-mining/training-and-testing-data-sets)   
  [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
- [Data Mining-Abfragen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)  
-  
+ [Data Mining-Abfragen](/analysis-services/data-mining/data-mining-queries)  
   

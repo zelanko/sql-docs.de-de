@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a982f08323a9e852f555732b290d598412d3a802
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c20132fe933d232d38ee843a706e9ad923d0d376
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979611"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724931"
 ---
 # <a name="shape-commands-in-general"></a>Shape-Befehle im Allgemeinen
 Die Daten Strukturierung definiert die Spalten eines geformten **Recordsets**, die Beziehungen zwischen den Entitäten, die durch die Spalten dargestellt werden, und die Art und Weise, in der das **Recordset** mit Daten aufgefüllt wird.  
   
  Ein geformtes **Recordset** kann aus den folgenden Spaltentypen bestehen.  
   
-|Spaltentyp|Beschreibung|  
+|Spaltentyp|BESCHREIBUNG|  
 |-----------------|-----------------|  
-|data|Felder aus einem **Recordset** , das von einem Abfragebefehl an einen Datenanbieter, eine Tabelle oder ein zuvor geformtes **Recordset**zurückgegeben wurde.|  
+|Daten|Felder aus einem **Recordset** , das von einem Abfragebefehl an einen Datenanbieter, eine Tabelle oder ein zuvor geformtes **Recordset**zurückgegeben wurde.|  
 |geschlagen|Ein Verweis auf ein anderes **Recordset**, das als *Kapitel*bezeichnet wird. Mit den Kapitel Spalten können Sie eine Beziehung zwischen über *geordneten* und untergeordneten Elementen definieren, wobei das übergeordnete Element das **Recordset** ist, das die Kapitel-Spalte enthält, *und das unter* *geordnete* Element das **Recordset** , das durch das Kapitel|  
 |aggregate|Der Wert der Spalte wird durch Ausführen einer *Aggregatfunktion* für alle Zeilen oder eine Spalte aller Zeilen eines untergeordneten **Recordsets**abgeleitet. (Siehe Aggregatfunktionen im folgenden Thema, [Aggregatfunktionen, die Calc-Funktion und das New-Schlüsselwort](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
 |Berechneter Ausdruck|Der Wert der Spalte wird durch Berechnen eines Visual Basic for Applications Ausdrucks für Spalten in derselben Zeile des **Recordsets**abgeleitet. Der Ausdruck ist das Argument für die Calc-Funktion. (Siehe berechneter Ausdruck im folgenden Thema, [Aggregatfunktionen, die Calc-Funktion und das New-Schlüsselwort](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) und in [Visual Basic for Applications Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md).)|  
@@ -46,7 +46,7 @@ Die Daten Strukturierung definiert die Spalten eines geformten **Recordsets**, d
   
  Sie können Programm gesteuert oder über ein entsprechendes visuelles Steuerelement auf die **recordsetkomponenten** des geformten **Recordsets** zugreifen.  
   
- Microsoft stellt ein visuelles Tool bereit, das Shape-Befehle generiert (Weitere Informationen finden Sie im [Data Environment Designer](https://go.microsoft.com/fwlink/?LinkId=5689) in der Dokumentation zu Visual Basic 6) und eine weitere mit hierarchischen Cursorn (Weitere Informationen finden Sie in der Dokumentation zu Visual Basic 6 unter "Verwenden des hierarchischen Microsoft-Steuer Elements  
+ Microsoft stellt ein visuelles Tool bereit, das Shape-Befehle generiert (Weitere Informationen finden Sie im [Data Environment Designer](/previous-versions/visualstudio/aa445793(v=vs.60)) in der Dokumentation zu Visual Basic 6) und eine weitere mit hierarchischen Cursorn (Weitere Informationen finden Sie in der Dokumentation zu Visual Basic 6 unter "Verwenden des hierarchischen Microsoft-Steuer Elements  
   
  Informationen zum Navigieren in einem hierarchischen **Recordset**finden Sie unter [zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   

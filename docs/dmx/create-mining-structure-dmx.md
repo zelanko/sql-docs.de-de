@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab738433380302e0f3d8bc70113aa2a8d13f7ac8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414026"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726281"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -65,7 +65,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ## <a name="remarks"></a>Bemerkungen  
  Sie definieren eine Miningstruktur, indem Sie eine Liste mit Spalten und optional hierarchische Beziehungen zwischen den Spalten angeben und dann wahlweise die Miningstruktur in Trainings- und Testdatasets partitionieren.  
   
- Das optionale SESSION-Schlüsselwort gibt an, dass die Struktur eine temporäre Struktur ist, die Sie nur für die Dauer der aktuellen Sitzung verwenden können. Wenn die Sitzung beendet wird, werden die Struktur und alle Modelle auf Grundlage der Struktur gelöscht. Um temporäre Mining Strukturen und-Modelle zu erstellen, müssen Sie zuerst die Daten Bank Eigenschaft AllowSessionMiningModels festlegen. Weitere Informationen finden Sie unter [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+ Das optionale SESSION-Schlüsselwort gibt an, dass die Struktur eine temporäre Struktur ist, die Sie nur für die Dauer der aktuellen Sitzung verwenden können. Wenn die Sitzung beendet wird, werden die Struktur und alle Modelle auf Grundlage der Struktur gelöscht. Um temporäre Mining Strukturen und-Modelle zu erstellen, müssen Sie zuerst die Daten Bank Eigenschaft AllowSessionMiningModels festlegen. Weitere Informationen finden Sie unter [Data Mining Properties](/analysis-services/server-properties/data-mining-properties).  
   
 ## <a name="column-definition-list"></a>Spaltendefinitionsliste (Column Definition List)  
  Sie definieren eine Miningstruktur, indem Sie in der Spaltendefinitionsliste für jede Spalte folgende Informationen angeben:  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Eine Liste der Datentypen, Inhaltstypen, Spaltendistributionen und Modellierungsflags, mit denen Sie eine Strukturspalte definieren können, finden Sie in den folgenden Themen:  
   
--   [Datentypen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Datentypen &#40;Data Mining&#41;](/analysis-services/data-mining/data-types-data-mining)  
   
--   [Inhaltstypen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Inhaltstypen &#40;Data Mining&#41;](/analysis-services/data-mining/content-types-data-mining)  
   
--   [Spaltenverteilungen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Spaltenverteilungen &#40;Data Mining&#41;](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Modellierungsflags &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Modellierungsflags &#40;Data Mining&#41;](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  Sie können mehrere Modellierungsflagwerte für eine Spalte definieren. Für eine Spalte können jedoch nur jeweils ein Inhaltstyp und ein Datentyp gelten.  
   
@@ -113,7 +113,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Gibt eine Wertehierarchie an. Das Ziel einer RELATED TO-Spalte kann eine Schlüsselspalte einer geschachtelten Tabelle, eine Spalte mit diskreten Werten in der Fallzeile oder eine andere Spalte mit einer RELATED TO-Klausel sein, wodurch eine tiefere Hierarchie gekennzeichnet ist.  
   
 ## <a name="holdout-parameters"></a>Zurückhaltungsparameter  
- Wenn Sie Zurückhaltungsparameter angeben, erstellen Sie eine Partition der Strukturdaten. Der Wert, den Sie für die Zurückhaltung angeben, wird für Tests reserviert. Die übrigen Daten werden zum Training verwendet. Wenn Sie mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] eine Miningstruktur aufbauen, wird eine Zurückhaltungspartition mit 30 Prozent Testdaten und 70 Prozent Trainingsdaten erstellt. Weitere Informationen finden Sie unter [Training and Testing Data Sets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets).  
+ Wenn Sie Zurückhaltungsparameter angeben, erstellen Sie eine Partition der Strukturdaten. Der Wert, den Sie für die Zurückhaltung angeben, wird für Tests reserviert. Die übrigen Daten werden zum Training verwendet. Wenn Sie mit [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] eine Miningstruktur aufbauen, wird eine Zurückhaltungspartition mit 30 Prozent Testdaten und 70 Prozent Trainingsdaten erstellt. Weitere Informationen finden Sie unter [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets).  
   
  Wenn Sie eine Miningstruktur mit Data Mining-Erweiterungen (DMX) aufbauen, müssen Sie manuell angeben, dass eine Zurückhaltungspartition erstellt werden soll.  
   
@@ -182,5 +182,4 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   
