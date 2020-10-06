@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9445cf487917fd23a2189731b4177794b2d27c5c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 08e63ddb23da5eb97f749bde5db38ecc5f9b5f68
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116193"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724581"
 ---
 # <a name="administration-of-an-availability-group"></a>Verwalten einer Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -105,8 +105,8 @@ ms.locfileid: "91116193"
   
 -   **Blogs:**  
   
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)    
-[CSS SQL Server-Technikblogs](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](/archive/blogs/sqlalwayson/)    
+[CSS SQL Server-Technikblogs](/archive/blogs/psssql/)  
   
 -   **Videos:**  
   
@@ -132,4 +132,3 @@ ms.locfileid: "91116193"
  [Übersicht über Transact-SQL-Anweisungen für Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [Übersicht der PowerShell-Cmdlets für Always On-Verfügbarkeitsgruppen &#40;SQLServer&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
-   

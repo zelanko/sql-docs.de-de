@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc573bfaf7f68102631e4e65c607e76062c147ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41a59d34bd6b84388f9fc32443b703bdf94f3239
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350066"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728101"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung
 
@@ -100,9 +100,9 @@ Sie können die meisten Eigenschaften von Tasks und Containern im Fenster **Eige
   
 4.  Klicken Sie auf der Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** mit der rechten Maustaste auf den Task oder Container, und klicken Sie auf **Bearbeiten** , um den entsprechenden Task- bzw. Container-Editor zu öffnen.  
   
-     Informationen zum Konfigurieren eines For-Schleifencontainers finden Sie unter [Konfigurieren eines For-Schleifencontainers](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+     Informationen zum Konfigurieren eines For-Schleifencontainers finden Sie unter [Konfigurieren eines For-Schleifencontainers](./for-loop-container.md).  
   
-     Informationen zum Konfigurieren eines Foreach-Schleifencontainers finden Sie unter [Konfigurieren eines Foreach-Schleifencontainers](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+     Informationen zum Konfigurieren eines Foreach-Schleifencontainers finden Sie unter [Konfigurieren eines Foreach-Schleifencontainers](./foreach-loop-container.md).  
   
     > [!NOTE]  
     >  Der Sequenzcontainer weist keinen benutzerdefinierten Editor auf.  
@@ -119,5 +119,4 @@ Sie können die meisten Eigenschaften von Tasks und Containern im Fenster **Eige
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)   
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
-  
   

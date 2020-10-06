@@ -11,12 +11,12 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae4b8d87e475e4a2008f597ec754cef0eaf8a013
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0915b57e7bd73ab4991ae14c222669fd309f7d6a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115093"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726401"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Erstellen einer gruppierten DTC-Ressource für eine Always On-Verfügbarkeitsgruppe
 
@@ -26,7 +26,7 @@ In diesem Thema werden Sie durch eine vollständige Konfiguration einer gruppier
 
 In der exemplarischen Vorgehensweise werden eine gruppierte DTC-Clusterressource und die SQL Server-Verfügbarkeitsgruppen erstellt, um die Anforderungen zu erfüllen, die unter [Cluster-DTC für Verfügbarkeitsgruppen in SQL Server 2016](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md) formuliert sind.
 
-In der exemplarischen Vorgehensweise werden PowerShell- und T-SQL-Skripts (Transact-SQL) verwendet.  Für viele T-SQL-Skripts muss der **SQLCMD-Modus** aktiviert sein.  Weitere Informationen zum **SQLCMD-Modus**finden Sie unter [Aktivieren von SQLCMD-Skripts im Abfrage-Editor](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  Das PowerShell-Modul **FailoverClusters** muss importiert werden.  Informationen zum Importieren eines PowerShell-Moduls finden Sie unter [Importieren eines PowerShell-Moduls](/powershell/scripting/developer/module/importing-a-powershell-module).  Für diese exemplarische Vorgehensweise wird Folgendes angenommen:
+In der exemplarischen Vorgehensweise werden PowerShell- und T-SQL-Skripts (Transact-SQL) verwendet.  Für viele T-SQL-Skripts muss der **SQLCMD-Modus** aktiviert sein.  Weitere Informationen zum **SQLCMD-Modus**finden Sie unter [Aktivieren von SQLCMD-Skripts im Abfrage-Editor](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md).  Das PowerShell-Modul **FailoverClusters** muss importiert werden.  Informationen zum Importieren eines PowerShell-Moduls finden Sie unter [Importieren eines PowerShell-Moduls](/powershell/scripting/developer/module/importing-a-powershell-module).  Für diese exemplarische Vorgehensweise wird Folgendes angenommen:
 - Alle Anforderungen aus [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) sind erfüllt.  
 - Die Domäne ist `contoso.lab`.
 - Der Benutzer hat die Berechtigung zum Erstellen von Computerobjekten in der Organisationseinheit, in der die DTC-Netzwerknamenressource erstellt wird.

@@ -9,19 +9,19 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 5b4081d98a30daa61a1e10ecf4faa6000a0fe11c
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 972e715de4ec8504c488ce70c47fecc3f04b3fca
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364160"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725231"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Untersuchen und Verwalten von Azure SQL-Ressourcen mit dem Azure-Ressourcen-Explorer
 
 In diesem Dokument erfahren Sie, wie Sie Azure SQL Server, Azure SQL-Datenbank und verwaltete Azure SQL-Instanzen mit dem Azure-Ressourcen-Explorer in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] untersuchen und verwalten können.
 
 >[!NOTE]
->Der Azure-Ressourcen-Explorer wird in SQL Server 2019 unterstützt. Danach können Sie die Erweiterung über den [Erweiterungs-Manager](extensions.md) oder **Datei** > **Install Package from VSIX PackageP** (Paket aus dem VSIX-Paket installieren) installieren.
+>Der Azure-Ressourcen-Explorer wird in SQL Server 2019 unterstützt. Danach können Sie die Erweiterung über den [Erweiterungs-Manager](./extensions/add-extensions.md) oder **Datei** > **Install Package from VSIX PackageP** (Paket aus dem VSIX-Paket installieren) installieren.
 
 ## <a name="connect-to-azure"></a>Herstellen einer Verbindung mit Azure
 

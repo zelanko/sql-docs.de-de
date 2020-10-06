@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 89732af2b2fc5926193519b4a6508b97ac998c88
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 74901a5360e4b9badcc7569211bfaea90d2b94a3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364117"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725221"
 ---
 # <a name="deploy-azure-sql-edge-with-azure-data-studio-preview"></a>Bereitstellen von Azure SQL Edge mit Azure Data Studio (Vorschau)
 
-[Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview) ist eine optimierte Engine für relationale Datenbanken, die für IoT- und Azure IoT Edge-Bereitstellungen optimiert ist. Azure SQL Database Edge bietet die Möglichkeit zur Erstellung eines Hochleistungs-Datenspeichers und einer Verarbeitungsschicht für IoT-Anwendungen und -Lösungen. In diesem Artikel erfahren Sie, wie Sie eine Azure SQL Edge-Instanz mit Azure Data Studio und den Bereitstellungsszenarios bereitstellen, die vom Bereitstellungs-Assistenten unterstützt werden.  
+[Azure SQL Edge](/azure/azure-sql-edge/overview) ist eine optimierte Engine für relationale Datenbanken, die für IoT- und Azure IoT Edge-Bereitstellungen optimiert ist. Azure SQL Database Edge bietet die Möglichkeit zur Erstellung eines Hochleistungs-Datenspeichers und einer Verarbeitungsschicht für IoT-Anwendungen und -Lösungen. In diesem Artikel erfahren Sie, wie Sie eine Azure SQL Edge-Instanz mit Azure Data Studio und den Bereitstellungsszenarios bereitstellen, die vom Bereitstellungs-Assistenten unterstützt werden.  
 
 Die folgenden Szenarios werden vom Bereitstellungs-Assistenten in Azure Data Studio unterstützt:
 
@@ -76,11 +76,11 @@ Optional können Sie eine DACPAC-Datei als Ordner zippen und auf der neuen Azure
 
 ## <a name="multiple-devices-of-an-azure-iot-hub"></a>Mehrere Geräte einer Azure IoT Hub-Instanz
 
-Wenn Sie bereits über einen bestehenden IoT-Hub und verbundene Geräte verfügen, kann Azure SQL Edge anhand der Ressourcengruppe, des Namens des IoT-Hubs und einer [Zielbedingung](https://docs.microsoft.com/azure/iot-edge/module-deployment-monitoring#target-condition) für die Auswahl von mindestens einem Gerät auf dem Gerät bereitgestellt werden.
+Wenn Sie bereits über einen bestehenden IoT-Hub und verbundene Geräte verfügen, kann Azure SQL Edge anhand der Ressourcengruppe, des Namens des IoT-Hubs und einer [Zielbedingung](/azure/iot-edge/module-deployment-monitoring#target-condition) für die Auswahl von mindestens einem Gerät auf dem Gerät bereitgestellt werden.
 Mithilfe der im Bereitstellungs-Assistenten angegebenen IP-Adresse wird am unteren Rand des Notebooks ein Link für die schnelle Verbindungsherstellung generiert.
 
 Optional können Sie eine DACPAC-Datei als Ordner zippen und auf der neuen Azure SQL Edge-Instanz als Teil dieses Prozesses bereitstellen.  Wenn eine DACPAC-Datei bereitgestellt wird, wird ein Azure Blob Storage-Konto in derselben Ressourcengruppe erstellt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Weitere Informationen zu Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/)
+- [Weitere Informationen zu Azure SQL Edge](/azure/azure-sql-edge/)

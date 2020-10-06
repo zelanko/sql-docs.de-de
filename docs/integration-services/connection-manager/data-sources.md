@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d622a00995ec8a371ef531994e4f18c61173a20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25c17b0d61c5e1f58932eb6abc035e7862dcbe6e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477982"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728062"
 ---
 # <a name="data-sources-for-ssisnoversion-packages"></a>Datenquellen für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477982"
   
 > **HINWEIS:** Sie können Datenquellen nur Projekten hinzufügen, die für die Verwendung des Paketbereitstellungsmodells konfiguriert wurden. Wenn ein Projekt für die Verwendung des Projektbereitstellungsmodells konfiguriert wurde, können Sie anstelle von Datenquellen Verbindungs-Manager verwenden, die auf Projektebene zur Freigabe von Verbindungen erstellt wurden.  
 >   
->  Weitere Informationen zu Bereitstellungsmodellen finden Sie unter [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Weitere Informationen zum Konvertieren eines Projekts in das Projektbereitstellungsmodell finden Sie unter [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  Weitere Informationen zu Bereitstellungsmodellen finden Sie unter [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Weitere Informationen zum Konvertieren eines Projekts in das Projektbereitstellungsmodell finden Sie unter [Deploy Projects to Integration Services Server](../packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Die Verwendung von Datenquellen in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen bietet folgende Vorteile:  
   
@@ -47,5 +47,4 @@ ms.locfileid: "88477982"
  Ein Datenquellenobjekt stellt eine einfache Verbindung mit einer Datenquelle dar und ermöglicht den Zugriff auf die Objekte im Datenspeicher, auf die verwiesen wird. Beispielsweise enthält ein Datenquellenobjekt, das eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]AdventureWorks-Beispieldatenbank herstellt, alle 60 Tabellen aus der Datenbank.  
   
  Es gibt keine Abhängigkeit zwischen einer Datenquelle und den Verbindungs-Managern, die darauf verweisen. Falls eine Datenquelle nicht mehr zum Projekt gehört, sind die Pakete weiterhin gültig, weil Informationen zur Datenquelle, wie z. B. der Verbindungstyp und die Verbindungszeichenfolge, in der Paketdefinition enthalten sind.  
-  
   

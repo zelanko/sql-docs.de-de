@@ -166,6 +166,4 @@ Der TCP-Port in der Firewall muss für den Listenerport geöffnet sein.
 >[!IMPORTANT]
 >Für SQL Server 2017 ist `CERTIFICATE` die einzige Authentifizierungsmethode, die für den Datenbankspiegelungs-Endpunkt unterstützt wird. Die Option `WINDOWS` wird in einer zukünftigen Version aktiviert.
 
-Weitere Informationen finden Sie unter [Der Datenbankspiegelungs-Endpunkt (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx).
-
-
+Weitere Informationen finden Sie unter [Der Datenbankspiegelungs-Endpunkt (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).

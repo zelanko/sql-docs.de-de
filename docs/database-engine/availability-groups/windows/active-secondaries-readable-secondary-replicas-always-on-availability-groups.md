@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3208f04a990bc7cc07cfc8b1672e7534074bec70
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883005"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724601"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Auslagern von schreibgeschützten Arbeitsauslastungen auf ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "85883005"
   
 -   Schreibgeschützte Arbeitsauslastungen für datenträgerbasierte Tabellen verwenden die Zeilenversionsverwaltung, um Blockierungskonflikte für sekundäre Datenbanken aufzuheben. Alle Abfragen für sekundäre Datenbanken werden automatisch der Momentaufnahme-Transaktionsisolationsstufe zugeordnet, selbst wenn explizit andere Transaktionsisolationsstufen festgelegt wurden. Zudem werden alle Sperrhinweise ignoriert. Dies schließt Leser-/Schreiberkonflikte aus.  
   
--   Schreibgeschützte Arbeitsauslastungen für dauerhafte speicheroptimierte Tabellen greifen unter Verwendung von systemeigenen gespeicherten Prozeduren oder SQL-Interoperabilität, für die hinsichtlich der Transaktionsisolationsstufen dieselben Einschränkungen gelten (siehe [Isolationsstufen in der Datenbank-Engine](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)), auf genau dieselbe Weise auf Daten wie in der primären Datenbank zu. Auf dem primären Replikat ausgeführte Arbeitsauslastungen für die Berichterstellung oder schreibgeschützte Abfragen können unverändert auf dem sekundären Replikat ausgeführt werden. Analog dazu können auf einem sekundären Replikat ausgeführte Arbeitsauslastungen für die Berichterstellung oder schreibgeschützte Abfragen unverändert auf dem primären Replikat ausgeführt werden.  Ähnlich wie bei datenträgerbasierten Tabellen werden alle Abfragen für sekundäre Datenbanken automatisch der Momentaufnahme-Transaktionsisolationsstufe zugeordnet, selbst wenn explizit andere Transaktionsisolationsstufen festgelegt wurden.  
+-   Schreibgeschützte Arbeitsauslastungen für dauerhafte speicheroptimierte Tabellen greifen unter Verwendung von systemeigenen gespeicherten Prozeduren oder SQL-Interoperabilität, für die hinsichtlich der Transaktionsisolationsstufen dieselben Einschränkungen gelten (siehe [Isolationsstufen in der Datenbank-Engine](/previous-versions/sql/sql-server-2008-r2/ms189122(v=sql.105))), auf genau dieselbe Weise auf Daten wie in der primären Datenbank zu. Auf dem primären Replikat ausgeführte Arbeitsauslastungen für die Berichterstellung oder schreibgeschützte Abfragen können unverändert auf dem sekundären Replikat ausgeführt werden. Analog dazu können auf einem sekundären Replikat ausgeführte Arbeitsauslastungen für die Berichterstellung oder schreibgeschützte Abfragen unverändert auf dem primären Replikat ausgeführt werden.  Ähnlich wie bei datenträgerbasierten Tabellen werden alle Abfragen für sekundäre Datenbanken automatisch der Momentaufnahme-Transaktionsisolationsstufe zugeordnet, selbst wenn explizit andere Transaktionsisolationsstufen festgelegt wurden.  
   
 -   DML-Vorgänge sind für Tabellenvariablen datenträgerbasierter und speicheroptimierter Tabellentypen auf dem sekundären Replikat zulässig.  
   
@@ -240,12 +240,11 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Statistik](../../../relational-databases/statistics/statistics.md)  
-  
   

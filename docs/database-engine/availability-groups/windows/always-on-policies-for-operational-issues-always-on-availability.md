@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b621eca278c73b357b8d7c91c63dfc23a6147fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: de57f7518136cecca09041e0ce93971aeebe9fd9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115832"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724562"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Richtlinienbasierte Verwaltung von Betriebsproblemen mit Always On-Verfügbarkeitsgruppen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "91115832"
   
  Eine benutzerdefinierte Richtlinie kann beliebige der verfügbaren PBM-Facets verwenden, einschließlich der von vordefinierten Always On-Richtlinien verwendeten Facets (siehe [Vordefinierte Richtlinien und Probleme](#Always OnPBM)weiter oben in diesem Thema). Das Serverfacet stellt die folgenden Eigenschaften zum Überwachen des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Zustands bereit: **IsHadrEnabled** und **HadrManagerStatus**. Das Serverfacet stellt außerdem Eigenschaften der folgenden Richtlinien zum Überwachen der WSFC-Clusterkonfiguration bereit: **ClusterQuorumType** und **ClusterQuorumState**.  
   
- Weitere Informationen finden Sie im SQL Server-Always On-Teamblog unter [The Always On Health Model Part 2 – Extending the Health Model](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (Das Always On-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells).  
+ Weitere Informationen finden Sie im SQL Server-Always On-Teamblog unter [The Always On Health Model Part 2 – Extending the Health Model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (Das Always On-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -106,16 +106,15 @@ ms.locfileid: "91115832"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [The Always On Health Model Part 1 -- Health Model Architecture (Das Always On-Zustandsmodell Teil 1 – Zustandsmodellarchitektur)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
+-   [The Always On Health Model Part 1 -- Health Model Architecture (Das Always On-Zustandsmodell Teil 1 – Zustandsmodellarchitektur)](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)  
   
--   [The Always On Health Model Part 2 -- Extending the Health Model (Das Always On-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
+-   [The Always On Health Model Part 2 -- Extending the Health Model (Das Always On-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells)](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
--   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verwaltung einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

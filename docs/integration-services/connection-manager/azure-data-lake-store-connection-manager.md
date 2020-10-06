@@ -13,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: e128b510c9bd40eedd89f7750c65bbd03a7d8670
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aff32d53b663aa34b036fcfdb9202f7dadcd1ff5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477981"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724534"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store-Verbindungsmanager
 
@@ -45,7 +45,7 @@ Der Azure Data Lake Storage-Verbindungs-Manager ist eine Komponente von [SQL Ser
     1.  Wenn Sie die Authentifizierungsoption **Azure AD-Benutzeridentität** ausgewählt haben, gehen Sie wie folgt vor:
         1. Geben Sie Werte für die Felder **Benutzername** und **Kennwort** an. 
     
-        2. Klicken Sie auf **Verbindung testen**, um die Verbindung zu testen. Wenn Sie oder der Mandantenadministrator dem Zugriff von SSIS auf Ihre Data Lake Storage Gen1-Daten nicht zugestimmt haben, klicken Sie bei Aufforderung auf **Zustimmen**. Weitere Informationen über diese Zustimmungsoberfläche finden Sie unter [Integrieren von Anwendungen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
+        2. Klicken Sie auf **Verbindung testen**, um die Verbindung zu testen. Wenn Sie oder der Mandantenadministrator dem Zugriff von SSIS auf Ihre Data Lake Storage Gen1-Daten nicht zugestimmt haben, klicken Sie bei Aufforderung auf **Zustimmen**. Weitere Informationen über diese Zustimmungsoberfläche finden Sie unter [Integrieren von Anwendungen in Azure Active Directory](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
         > [!NOTE] 
         > Bei Auswahl der Authentifizierungsoption **Azure AD-Benutzeridentität** werden die mehrstufige Authentifizierung und die Authentifizierung mittels Microsoft-Konto nicht unterstützt.
@@ -53,7 +53,7 @@ Der Azure Data Lake Storage-Verbindungs-Manager ist eine Komponente von [SQL Ser
     2. Wenn Sie die Option **Azure AD Service Identity** (Azure AD-Dienstidentität) ausgewählt haben, gehen Sie wie folgt vor:
         1. Erstellen Sie eine AAD-Anwendung (Azure Active Directory) und einen Dienstprinzipal für den Zugriff auf Daten in Data Lake Storage Gen1.
     
-        2. Weisen Sie der AAD-Anwendung die entsprechenden Berechtigungen zu, damit diese auf Ihre Data Lake Storage Gen1-Ressourcen zugreifen kann. Weitere Informationen zu dieser Authentifizierungsoption finden Sie unter [Use portal to create Active Directory application and service principal that can access resources (Verwenden von Portal zum Erstellen von Active Directory-Anwendungen und Dienstprinzipal zum Zugriff auf Ressourcen)](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+        2. Weisen Sie der AAD-Anwendung die entsprechenden Berechtigungen zu, damit diese auf Ihre Data Lake Storage Gen1-Ressourcen zugreifen kann. Weitere Informationen zu dieser Authentifizierungsoption finden Sie unter [Use portal to create Active Directory application and service principal that can access resources (Verwenden von Portal zum Erstellen von Active Directory-Anwendungen und Dienstprinzipal zum Zugriff auf Ressourcen)](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
     
         3. Geben Sie Werte für die Felder **Client-ID**, **Geheimer Schlüssel** und **Mandantenname** an.
     
@@ -63,5 +63,4 @@ Der Azure Data Lake Storage-Verbindungs-Manager ist eine Komponente von [SQL Ser
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>Anzeigen der Eigenschaften des Verbindungs-Managers
 Die Eigenschaften des Verbindungs-Managers, die Sie im Fenster **Eigenschaften** erstellt haben, werden angezeigt.  
-  
   

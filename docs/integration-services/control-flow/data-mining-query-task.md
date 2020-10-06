@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 285bc5e3b2bdf9dfb1497539def56ecbaa77ccb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1af5f497be96f5c8b9808878aea9e5275c77ddf7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431022"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727586"
 ---
 # <a name="data-mining-query-task"></a>Data Mining-Abfragetask
 
@@ -44,9 +44,9 @@ ms.locfileid: "88431022"
 ## <a name="prediction-queries"></a>Vorhersageabfragen  
  Bei der Abfrage handelt es sich um eine DMX-Anweisung (Data Mining Extensions). Die DMX-Sprache ist eine Erweiterung der SQL-Sprache, die das Arbeiten mit Miningmodellen unterstützt. Weitere Informationen zum Verwenden der DMX-Sprache finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md).  
   
- Der Task kann mehrere Miningmodelle abfragen, die auf der gleichen Miningstruktur basieren. Ein Miningmodell wird mithilfe eines der Data Mining-Algorithmen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt. Die Miningstruktur des Data Mining-Abfragetasks kann mehrere Miningmodelle einschließen, die mit verschiedenen Algorithmen erstellt wurden. Weitere Informationen finden Sie unter [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) und [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ Der Task kann mehrere Miningmodelle abfragen, die auf der gleichen Miningstruktur basieren. Ein Miningmodell wird mithilfe eines der Data Mining-Algorithmen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt. Die Miningstruktur des Data Mining-Abfragetasks kann mehrere Miningmodelle einschließen, die mit verschiedenen Algorithmen erstellt wurden. Weitere Informationen finden Sie unter [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining) und [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
- Die Vorhersageabfrage, die der Data Mining-Abfragetask ausführt, gibt als Ergebnis eine einzelne Zeile oder ein Dataset zurück. Eine Abfrage, die eine einzelne Zeile zurückgibt, wird als SINGLETON-Abfrage bezeichnet: Beispielsweise gibt die Abfrage zur Vorhersage, wie viele Segelboote in den Sommermonaten verkauft werden, eine Zahl zurück. Weitere Informationen zu Vorhersageabfragen, die eine einzelne Zeile zurückgeben, finden Sie unter [Data Mining-Abfragetools](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools).  
+ Die Vorhersageabfrage, die der Data Mining-Abfragetask ausführt, gibt als Ergebnis eine einzelne Zeile oder ein Dataset zurück. Eine Abfrage, die eine einzelne Zeile zurückgibt, wird als SINGLETON-Abfrage bezeichnet: Beispielsweise gibt die Abfrage zur Vorhersage, wie viele Segelboote in den Sommermonaten verkauft werden, eine Zahl zurück. Weitere Informationen zu Vorhersageabfragen, die eine einzelne Zeile zurückgeben, finden Sie unter [Data Mining-Abfragetools](/analysis-services/data-mining/data-mining-query-tools).  
   
  Die Abfrageergebnisse werden in Tabellen gespeichert. Falls eine Tabelle mit dem vom Data Mining-Abfragetask angegebenen Namen bereits vorhanden ist, kann der Task eine neue Tabelle erstellen, wobei der gleiche Name verwendet und eine Zahl angefügt wird, oder der Tabelleninhalt kann überschrieben werden.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "88431022"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-data-mining-query-task"></a>Programmgesteuerte Konfiguration des Data Mining-Abfragetasks  
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften zu erhalten:  
@@ -72,7 +72,7 @@ ms.locfileid: "88431022"
 ## <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Miningmodell)
   Mithilfe der Registerkarte **Miningmodell** des Dialogfelds **Editor für Data Mining-Abfragetasks** können Sie die zu verwendende Miningstruktur sowie das Miningmodell angeben.  
   
- Weitere Informationen zur Implementierung von Data Mining in Paketen finden Sie unter [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md) und [Data Mining-Projektmappen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
+ Weitere Informationen zur Implementierung von Data Mining in Paketen finden Sie unter [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md) und [Data Mining-Projektmappen](/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Allgemeine Optionen  
  **Name**  
@@ -104,7 +104,7 @@ ms.locfileid: "88431022"
 ## <a name="data-mining-query-task-editor-query-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Abfrage)
   Mithilfe der Registerkarte **Abfrage** des Dialogfelds **Data Mining-Abfragetask** können Sie Vorhersageabfragen auf der Grundlage eines Miningmodells erstellen. In diesem Dialogfeld können Sie auch Parameter und Resultsets an Variablen anbinden.  
   
- Weitere Informationen zur Implementierung von Data Mining in Paketen finden Sie unter [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md) und [Data Mining-Projektmappen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
+ Weitere Informationen zur Implementierung von Data Mining in Paketen finden Sie unter [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md) und [Data Mining-Projektmappen](/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Allgemeine Optionen  
  **Name**  
@@ -160,7 +160,7 @@ ms.locfileid: "88431022"
 ## <a name="data-mining-query-task-editor-output-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Ausgabe)
   Mithilfe der Registerkarte **Ausgabe** des Dialogfelds **Editor für Data Mining-Abfragetasks** können Sie das Ziel der Vorhersageabfrage angeben.  
   
- Weitere Informationen zur Implementierung von Data Mining in Paketen finden Sie unter [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md) und [Data Mining-Projektmappen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
+ Weitere Informationen zur Implementierung von Data Mining in Paketen finden Sie unter [Data Mining-Abfragetask](../../integration-services/control-flow/data-mining-query-task.md) und [Data Mining-Projektmappen](/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Allgemeine Optionen  
  **Name**  
@@ -184,4 +184,3 @@ ms.locfileid: "88431022"
   
  **Ausgabetabelle löschen und erneut erstellen**  
  Gibt an, ob die Vorhersageabfrage den Inhalt in der Zieltabelle überschreiben soll, indem die Tabelle gelöscht und anschließend erneut erstellt wird.  
-  

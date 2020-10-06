@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21ef6f741ebfdd035630a40aba431c08a1ff9341
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: beb42ea05e69b9c806b0a0306b91e9c333bdd631
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431032"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725957"
 ---
 # <a name="data-flow-task"></a>Datenflusstask
 
@@ -108,7 +108,7 @@ ms.locfileid: "88431032"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im Fenster **Eigenschaften** zu erhalten:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Programmgesteuerte Konfiguration des Datenflusstasks  
  Klicken Sie auf das folgende Thema, um weitere Informationen zum programmgesteuerten Hinzufügen von Datenflusstasks zu Paketen und zum Festlegen von Datenflusseigenschaften anzuzeigen:  
@@ -116,9 +116,8 @@ ms.locfileid: "88431032"
 -   [Programmgesteuertes Hinzufügen des Datenflusstasks](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Festlegen der Eigenschaften eines Tasks oder Containers](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Video [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
-  
+ Video [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10))auf technet.microsoft.com  
   

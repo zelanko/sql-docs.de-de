@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5940e7b45288913bbda4930c267f1f806ed4937d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da836cc7f53f4a4d83aae28ea2a41ec646ca3bd0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477980"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728068"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure-Abonnementverbindungs-Manager
 
@@ -40,12 +40,11 @@ ms.locfileid: "88477980"
   
 3.  Wählen Sie **Verwaltungszertifikatspeicherort** und **Verwaltungszertifikatspeichername** aus den Dropdownlisten aus.  
   
-4.  Geben Sie **Management certificate thumbprint** (Fingerabdruck für as Verwaltungszertifikat) ein, oder klicken Sie auf **Durchsuchen...**, um ein Zertifikat aus dem ausgewählten Store auszuwählen. Das Zertifikat muss als Verwaltungszertifikat für das Abonnement hochgeladen werden. Klicken Sie hierzu auf der folgenden Seite des Azure-Portals auf **Hochladen** (in diesem [MSDN-Beitrag](https://msdn.microsoft.com/library/azure/gg551722.aspx) finden Sie weitere Informationen).  
+4.  Geben Sie **Management certificate thumbprint** (Fingerabdruck für as Verwaltungszertifikat) ein, oder klicken Sie auf **Durchsuchen...**, um ein Zertifikat aus dem ausgewählten Store auszuwählen. Das Zertifikat muss als Verwaltungszertifikat für das Abonnement hochgeladen werden. Klicken Sie hierzu auf der folgenden Seite des Azure-Portals auf **Hochladen** (in diesem [MSDN-Beitrag](/previous-versions/azure/gg551722(v=azure.100)) finden Sie weitere Informationen).  
   
      ![SSIS-AzureSettings-ManagementCertificate](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   
 5.  Klicken Sie auf **Verbindung testen** , um die Verbindung zu testen.  
   
 6.  Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
-  
   

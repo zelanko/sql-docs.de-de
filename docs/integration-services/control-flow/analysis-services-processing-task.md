@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2db38d2ad6c102b47b2a9f3349a3877a9d55a4c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349986"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727582"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services-Verarbeitungstask
 
@@ -75,7 +75,7 @@ ms.locfileid: "88349986"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Programmgesteuerte Konfiguration des Analysis Services-Verarbeitungstasks  
  Klicken Sie auf das folgende Thema, um weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften anzuzeigen:  
@@ -123,7 +123,7 @@ ms.locfileid: "88349986"
 |--------------|-----------------|  
 |**Objektnamen**|Listet die angegebenen Objektnamen auf.|  
 |**Type**|Listet die Typen der angegebenen Objekte auf.|  
-|**Verarbeitungsoptionen**|Wählen Sie eine Verarbeitungsoption in der Liste aus.<br /><br /> **Verwandte Themen:**[Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**Verarbeitungsoptionen**|Wählen Sie eine Verarbeitungsoption in der Liste aus.<br /><br /> **Verwandte Themen:**[Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Einstellungen**|Listet die Verarbeitungseinstellungen für die angegebenen Objekte auf.|  
   
  **Add (Hinzufügen)**  
@@ -135,7 +135,7 @@ ms.locfileid: "88349986"
  **Auswirkungsanalyse**  
  Führen Sie für das ausgewählte Objekt eine Auswirkungsanalyse aus.  
   
- **Verwandte Themen:** [Dialogfeld „Auswirkungsanalyse“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **Verwandte Themen:** [Dialogfeld „Auswirkungsanalyse“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)  
   
  **Zusammenfassung der Batcheinstellungen**  
  
@@ -150,4 +150,4 @@ ms.locfileid: "88349986"
  **Einstellungen ändern**  
  Ändern Sie die Verarbeitungsoptionen und die Fehlerbehandlung bei Dimensionsschlüsseln.  
   
- **Verwandte Themen:** [Dialogfeld „Einstellungen ändern“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **Verwandte Themen:** [Dialogfeld „Einstellungen ändern“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)

@@ -13,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: 87c4b6ca0ccb53087c2c4532631edfde9d0e6516
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d40fea72f0c39bf932146de239f4713dbe5eb247
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918574"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726677"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Azure Data Lake Analytics-Verbindungs-Manager
 
@@ -43,15 +43,15 @@ Der Data Lake Analytics-Verbindungs-Manager ist eine Komponente von [SQL Server 
    a. Wenn Sie die Authentifizierungsoption **Azure AD-Benutzeridentität** ausgewählt haben, gehen Sie wie folgt vor:
    
       i. Geben Sie Werte für die Felder **Benutzername** und **Kennwort** an.    
-      ii. Klicken Sie auf **Verbindung testen**, um die Verbindung zu testen. Wenn Sie oder der Mandantenadministrator dem Zugriff von SSIS auf Ihre Data Lake Analytics-Daten nicht zugestimmt haben, klicken Sie bei Aufforderung auf **Zustimmen**. Weitere Informationen über diese Zustimmungsoberfläche finden Sie unter [Integrieren von Anwendungen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
+      ii. Klicken Sie auf **Verbindung testen**, um die Verbindung zu testen. Wenn Sie oder der Mandantenadministrator dem Zugriff von SSIS auf Ihre Data Lake Analytics-Daten nicht zugestimmt haben, klicken Sie bei Aufforderung auf **Zustimmen**. Weitere Informationen über diese Zustimmungsoberfläche finden Sie unter [Integrieren von Anwendungen in Azure Active Directory](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
    > [!NOTE] 
    > Bei Auswahl der Authentifizierungsoption **Azure AD-Benutzeridentität** werden die mehrstufige Authentifizierung und die Authentifizierung mittels Microsoft-Konto nicht unterstützt.
     
    b. Wenn Sie die Authentifizierungsoption **Azure AD-Dienstidentität** ausgewählt haben, gehen Sie wie folgt vor:
    
-      i. Erstellen Sie eine Azure AD-Anwendung und einen Dienstprinzipal für den Zugriff auf das Data Lake Analytics-Konto. Weitere Informationen zu dieser Authentifizierungsoption finden Sie unter [Use portal to create Active Directory application and service principal that can access resources (Verwenden von Portal zum Erstellen von Active Directory-Anwendungen und Dienstprinzipal zum Zugriff auf Ressourcen)](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).    
-      ii. Weisen Sie der Azure AD-Anwendung die entsprechenden Berechtigungen zu, damit diese auf Ihr Data Lake Analytics-Konto zugreifen kann. Erfahren Sie, wie Sie Berechtigungen für Ihr Data Lake Analytics-Konto [mithilfe des Assistenten zum Hinzufügen eines Benutzers](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user) gewähren.    
+      i. Erstellen Sie eine Azure AD-Anwendung und einen Dienstprinzipal für den Zugriff auf das Data Lake Analytics-Konto. Weitere Informationen zu dieser Authentifizierungsoption finden Sie unter [Use portal to create Active Directory application and service principal that can access resources (Verwenden von Portal zum Erstellen von Active Directory-Anwendungen und Dienstprinzipal zum Zugriff auf Ressourcen)](/azure/azure-resource-manager/resource-group-create-service-principal-portal).    
+      ii. Weisen Sie der Azure AD-Anwendung die entsprechenden Berechtigungen zu, damit diese auf Ihr Data Lake Analytics-Konto zugreifen kann. Erfahren Sie, wie Sie Berechtigungen für Ihr Data Lake Analytics-Konto [mithilfe des Assistenten zum Hinzufügen eines Benutzers](/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user) gewähren.    
       iii. Geben Sie Werte für die Felder **Anwendungs-ID**, **Authentifizierungsschlüssel** und **Mandanten-ID** an.    
       iv. Klicken Sie auf **Verbindung testen**, um die Verbindung zu testen.  
 
@@ -59,5 +59,4 @@ Der Data Lake Analytics-Verbindungs-Manager ist eine Komponente von [SQL Server 
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>Anzeigen der Eigenschaften des Verbindungs-Managers
 Die Eigenschaften des Verbindungs-Managers, die Sie im Fenster **Eigenschaften** erstellt haben, werden angezeigt.  
-  
   

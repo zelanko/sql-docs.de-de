@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3307c81165731907f8252c99ebb03b057ca6af74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1215ca58f64c6e28f78e423bdee5a66b4c46b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457540"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725929"
 ---
 # <a name="execute-package-task"></a>Paket ausführen (Task)
 
@@ -67,7 +67,7 @@ ms.locfileid: "88457540"
  Die ExecuteOutOfProcess-Eigenschaft des Tasks „Paket ausführen“ ist standardmäßig auf **FALSE**festgelegt, und das untergeordnete Paket wird im selben Prozess wie das übergeordnete Paket ausgeführt. Wenn Sie diese Eigenschaft auf **True**festlegen, wird das untergeordnete Paket in einem separaten Prozess ausgeführt. Dadurch kann sich der Start des untergeordneten Pakets verlangsamen. Wenn Sie die Eigenschaft auf **TRUE**festlegen, ist außerdem das Debuggen des Pakets in einer Installation, die nur die Tools enthält, nicht möglich. Sie müssen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installieren. Weitere Informationen finden Sie unter [Installieren von Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Erweitern von Transaktionen  
- Die vom übergeordneten Paket verwendete Transaktion kann auf das untergeordnete Paket erweitert werden. Deshalb kann für die von beiden Paketen ausgeführte Arbeit ein Commit oder Rollback ausgeführt werden. Beispielsweise kann für Datenbankeinfügungen, die vom übergeordneten Paket ausgeführt werden, ein Commit oder Rollback ausgeführt werden, und zwar in Abhängigkeit von den vom untergeordneten Paket ausgeführten Datenbankeinfügungen und umgekehrt. Weitere Informationen finden Sie unter [Inherited Transactions](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
+ Die vom übergeordneten Paket verwendete Transaktion kann auf das untergeordnete Paket erweitert werden. Deshalb kann für die von beiden Paketen ausgeführte Arbeit ein Commit oder Rollback ausgeführt werden. Beispielsweise kann für Datenbankeinfügungen, die vom übergeordneten Paket ausgeführt werden, ein Commit oder Rollback ausgeführt werden, und zwar in Abhängigkeit von den vom untergeordneten Paket ausgeführten Datenbankeinfügungen und umgekehrt. Weitere Informationen finden Sie unter [Inherited Transactions](../integration-services-transactions.md).  
   
 ## <a name="propagating-logging-details"></a>Weitergeben von Protokollierungsdetails  
  Für das untergeordnete Paket, das der Task Paket ausführen ausführt, ist möglicherweise die Verwendung der Protokollierung konfiguriert. Das untergeordnete Paket leitet jedoch die Protokolldetails stets an das übergeordnete Paket weiter. Falls für den Task Paket ausführen die Verwendung der Protokollierung konfiguriert ist, protokolliert der Task die Protokolldetails des untergeordneten Pakets. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "88457540"
   
 -   **Parameter**  
   
-     Sie können den Task "Paket ausführen" konfigurieren, um Variablen für übergeordnete Pakete oder Parameter untergeordneten Paketparametern zuzuordnen. Das Projekt muss das Projektbereitstellungsmodell verwenden, und das untergeordnete Paket muss im gleichen Projekt enthalten sein wie das übergeordnete Paket. Weitere Informationen finden Sie unter [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md).  
+     Sie können den Task "Paket ausführen" konfigurieren, um Variablen für übergeordnete Pakete oder Parameter untergeordneten Paketparametern zuzuordnen. Das Projekt muss das Projektbereitstellungsmodell verwenden, und das untergeordnete Paket muss im gleichen Projekt enthalten sein wie das übergeordnete Paket. Weitere Informationen finden Sie unter [Execute Package Task Editor]().  
   
     > [!NOTE]  
     >  Wenn der untergeordnete Paketparameter nicht vertraulich ist und einem übergeordneten Parameter zugeordnet wird, der vertraulich ist, wird das untergeordnete Paket nicht ausgeführt.  
@@ -118,7 +118,7 @@ ms.locfileid: "88457540"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>Programmgesteuertes Konfigurieren des Tasks Paket ausführen  
  Klicken Sie auf das folgende Thema, um weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften anzuzeigen:  
@@ -224,5 +224,4 @@ ms.locfileid: "88457540"
   
  **Remove**  
  Klicken Sie, um eine Zuordnung zwischen einem Parameter oder einer Variable und einem untergeordneten Paketparameter zu entfernen.  
-  
   

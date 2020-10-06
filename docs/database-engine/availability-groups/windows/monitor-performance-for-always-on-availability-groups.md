@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 03c89633fa5b61a8d08e78bd90a06a5f8497be75
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362679"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727858"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Überwachen der Leistung von Always On-Verfügbarkeitsgruppen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "87362679"
 > [!IMPORTANT]  
 >  Wenn eine Verfügbarkeitsgruppe mehr als eine Verfügbarkeitsdatenbank enthält, wird die Verfügbarkeitsdatenbank mit dem höchsten Tfailover-Wert zum Grenzwert für die RTO-Konformität.  
   
- Die Ausfallerkennungszeit, Tdetection, ist der Zeitaufwand, den das System zur Erkennung des Fehlers benötigt. Diese Zeit hängt von den Einstellungen auf Clusterebene ab, nicht von den einzelnen Verfügbarkeitsreplikaten. Abhängig von der konfigurierten Bedingung für ein automatisches Failover kann ein Failover als sofortige Antwort auf einen kritischen internen SQL Server-Fehler wie verwaiste Spinlocks ausgelöst werden. In diesem Fall kann die Erkennung genauso schnell sein wie das Senden des Fehlerberichts [sp_server_diagnostics &#40;Transact-SQL&#41; ](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) an den WSFC-Cluster (das Standardintervall beträgt 1/3 des Timeout für die Integritätsprüfung). Ein Failover kann auch aufgrund eines Timeouts ausgelöst werden, z.B., wenn das Timeout für die Clusterintegritätsprüfung (standardmäßig 30 Sekunden) oder die Lease zwischen Ressourcen-DLLs und der SQL Server-Instanz (standardmäßig 20 Sekunden) abgelaufen ist. In diesem Fall ist die Erkennungszeit genauso lang wie das Timeoutintervall. Weitere Informationen finden Sie unter [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](https://msdn.microsoft.com/library/hh710061(SQL.120).aspx).  
+ Die Ausfallerkennungszeit, Tdetection, ist der Zeitaufwand, den das System zur Erkennung des Fehlers benötigt. Diese Zeit hängt von den Einstellungen auf Clusterebene ab, nicht von den einzelnen Verfügbarkeitsreplikaten. Abhängig von der konfigurierten Bedingung für ein automatisches Failover kann ein Failover als sofortige Antwort auf einen kritischen internen SQL Server-Fehler wie verwaiste Spinlocks ausgelöst werden. In diesem Fall kann die Erkennung genauso schnell sein wie das Senden des Fehlerberichts [sp_server_diagnostics &#40;Transact-SQL&#41; ](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) an den WSFC-Cluster (das Standardintervall beträgt 1/3 des Timeout für die Integritätsprüfung). Ein Failover kann auch aufgrund eines Timeouts ausgelöst werden, z.B., wenn das Timeout für die Clusterintegritätsprüfung (standardmäßig 30 Sekunden) oder die Lease zwischen Ressourcen-DLLs und der SQL Server-Instanz (standardmäßig 20 Sekunden) abgelaufen ist. In diesem Fall ist die Erkennungszeit genauso lang wie das Timeoutintervall. Weitere Informationen finden Sie unter [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md?viewFallbackFrom=sql-server-2014).  
   
  Um für ein Failover bereit zu sein, muss das sekundäre Replikat lediglich eine Wiederholung ausführen, um das Ende des Protokolls zu erreichen. Die Wiederholungszeit, Tredo, wird mit der folgenden Formel berechnet:  
   
@@ -310,7 +310,7 @@ Es ist möglich, die DMVs [sys.dm_hadr_database_replica_states](../../../relatio
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Überwachen von RTO und RPO  
- In diesem Abschnitt wird das Überwachen von Verfügbarkeitsgruppen für die Metriken RTO und RPO veranschaulicht. Diese Demonstration ähnelt dem GUI-Tutorial unter [The Always On health model, part 2: Extending the health model (Always On-Integritätsmodell, Teil 2: Erweitern des Integritätsmodells)](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model).  
+ In diesem Abschnitt wird das Überwachen von Verfügbarkeitsgruppen für die Metriken RTO und RPO veranschaulicht. Diese Demonstration ähnelt dem GUI-Tutorial unter [The Always On health model, part 2: Extending the health model (Always On-Integritätsmodell, Teil 2: Erweitern des Integritätsmodells)](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model).  
   
  Elemente der Failoverzeit und Berechnungen des möglichen Datenverlusts unter [Einschätzen der Failoverzeit (RTO)](#estimating-failover-time-rto) und [Einschätzen des möglichen Datenverlusts (RPO)](#estimating-potential-data-loss-rpo) werden praktischerweise als Leistungsmetriken in der Richtlinienverwaltungsfacets **Datenbankreplikatszustand** bereitgestellt (siehe [Anzeigen der Facets der richtlinienbasierten Verwaltung für ein SQL Server-Objekt](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Sie können diese beiden Metriken nach einem Zeitplan überwachen und werden benachrichtigt, wenn die Metriken Ihre RTO bzw. RPO überschreiten.  
   
@@ -454,4 +454,4 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
 |hadr_worker_pool_task|`alwayson`|Debuggen|Primär|  
 |hadr_dump_primary_progress|`alwayson`|Debuggen|Primär|  
 |hadr_dump_log_progress|`alwayson`|Debuggen|Primär|  
-|hadr_undo_of_redo_log_scan|`alwayson`|Analytic|Secondary|  
+|hadr_undo_of_redo_log_scan|`alwayson`|Analytic|Secondary|

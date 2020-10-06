@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28d57d973f0c1c33e46930c8fb0277aec70dc89f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: e3ca428410760ac224cccf513aa8e8ed2a3060e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115048"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726547"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Überwachung und Problembehandlung bei Verfügbarkeitsgruppen
  Dieser Leitfaden unterstützt Sie bei den ersten Schritten mit der Überwachung von Always On-Verfügbarkeitsgruppen und der Behandlung einiger gängiger Probleme in Bezug auf Verfügbarkeitsgruppen. Zudem bietet der Leitfaden Originalinhalte sowie eine Angebotsseite mit nützlichen Informationen, die an anderer Stelle veröffentlicht wurden. Im Rahmen dieses Leitfadens können zwar nicht alle Probleme, die auf dem umfassenden Gebiet der Verfügbarkeitsgruppen auftreten können, im Detail erläutert werden, allerdings kann auf die richtige Richtung bezüglich der Ursachenanalyse und Problemlösung gewiesen werden. 
@@ -35,7 +35,7 @@ ms.locfileid: "91115048"
 |[Problembehandlung: Verfügbarkeitsgruppe hat RTO überschritten](troubleshoot-availability-group-exceeded-rto.md)|Leistung|Nach einem automatischen Failover oder einem geplanten manuellen Failover ohne Datenverlust überschreitet die Failoverzeit die RTO. Ein anderer Fall: Wenn Sie die Failoverzeit eines sekundären Replikats im synchronen Commitmodus (z.B. eines Partners für das automatische Failover) einschätzen, stellen Sie fest, dass diese Ihre RTO überschreitet.|  
 |[Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten](troubleshoot-availability-group-exceeded-rpo.md)|Leistung|Nachdem Sie ein erzwungenes manuelles Failover ausgeführt haben, ist der Datenverlust größer als Ihre RPO. Ein anderer Fall: Wenn Sie den möglichen Datenverlust eines sekundäres Replikats im asynchronen Commitmodus berechnen, stellen Sie fest, dass dieser Ihre RPO überschreitet.|  
 |[Problembehandlung: Änderungen am primären Replikat spiegeln sich nicht im sekundären Replikat wider](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Leistung|Die Clientanwendung führt erfolgreich ein Update für das primäre Replikat durch, wobei jedoch die Abfrage des sekundären Replikats ergibt, dass die Änderung nicht widergespiegelt wird.|  
-|[Problembehandlung: Hoher HADR_SYNC_COMMIT-Wartetyp mit Always On-Verfügbarkeitsgruppen](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|Leistung|Wenn HADR_SYNC_COMMIT ungewöhnlich lang ist, besteht ein Leistungsproblem beim Datenverschiebungsfluss oder der Protokollfestschreibung für ein sekundäres Replikat.|  
+|[Problembehandlung: Hoher HADR_SYNC_COMMIT-Wartetyp mit Always On-Verfügbarkeitsgruppen](/archive/blogs/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups)|Leistung|Wenn HADR_SYNC_COMMIT ungewöhnlich lang ist, besteht ein Leistungsproblem beim Datenverschiebungsfluss oder der Protokollfestschreibung für ein sekundäres Replikat.|  
 
 ##  <a name="useful-tools-for-troubleshooting"></a><a name="BKMK_TOOLS"></a> Hilfreiche Tools für die Problembehandlung  
  Bei der Konfiguration oder Ausführung von Verfügbarkeitsgruppen können Sie mithilfe verschiedener Tools unterschiedliche Arten von Problemen diagnostizieren. Die folgende Tabelle enthält Links zu nützlichen Informationen über die Tools.  
@@ -64,15 +64,14 @@ ms.locfileid: "91115048"
 |-----------|-----------------|  
 |[Überwachen der Leistung von Always On-Verfügbarkeitsgruppen](monitor-performance-for-always-on-availability-groups.md)|In diesem Thema werden der Datensynchronisierungsprozess für Verfügbarkeitsgruppen, die Flusssteuerungsgates und nützliche Metriken für die Überwachung einer Verfügbarkeitsgruppe sowie der Prozess zum Erfassen der Metriken RTO und RPO beschrieben.|  
 |[Tools zum Überwachen von Always On-Verfügbarkeitsgruppen](monitoring-of-availability-groups-sql-server.md)|Dieses Thema enthält Informationen zu Tools für die Überwachung einer Verfügbarkeitsgruppe.|  
-|[The Always On Health Model Part 1 – Health Model Architecture (Das Always On-Integritätsmodell Teil 1 – Architektur des Integritätsmodells)](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Dieses Thema enthält eine Übersicht über das Always On-Integritätsmodell.|  
-|[The Always On Health Model Part 2 – Extending the Health Model (Das Always On-Integritätsmodell Teil 2 – Erweitern des Integritätsmodells)](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|In diesem Thema wird erläutert, wie das Always On-Integritätsmodell und das Always On-Dashboard zur Anzeige weiterer Informationen angepasst werden.|  
-|[Monitoring Always On Health with PowerShell – Part 1: Basic Cmdlet Overview (Überwachen der Always On-Integrität mit PowerShell – Teil 1: Übersicht über grundlegende Cmdlets)](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|Dieses Thema enthält eine grundlegende Übersicht über die PowerShell-Cmdlets, die zur Überwachung der Integrität einer Verfügbarkeitsgruppe verwendet werden können.|  
-|[Monitoring Always On Health with PowerShell – Part 2: Advanced Cmdlet Usage (Überwachen der Always On-Integrität mit PowerShell – Teil 2: Verwendung erweiterter Cmdlets)](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|Dieses Thema enthält Informationen über die erweiterte Verwendung der Always On-PowerShell-Cmdlets zum Überwachen der Integrität einer Verfügbarkeitsgruppe.|  
-|[Monitoring Always On Health with PowerShell – Part 3 : A Simple Monitoring Application (Überwachen der Always On-Integrität mit PowerShell – Teil 3: Eine einfache Überwachungsanwendung)](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|In diesem Thema wird erläutert, wie eine Verfügbarkeitsgruppe mit einer Anwendung automatisch überwacht wird.|  
-|[Monitoring Always On Health with PowerShell – Part 4 : Integration with SQL Server Agent (Überwachen der Always On-Integrität mit PowerShell – Teil 4: Integration im SQL Server-Agent)](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|Dieses Thema enthält Informationen darüber, wie die Überwachung der Verfügbarkeitsgruppe in SQL Server-Agent integriert und Benachrichtigung für die zuständigen Personen bei Problemen konfiguriert werden.|  
+|[The Always On Health Model Part 1 – Health Model Architecture (Das Always On-Integritätsmodell Teil 1 – Architektur des Integritätsmodells)](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Dieses Thema enthält eine Übersicht über das Always On-Integritätsmodell.|  
+|[The Always On Health Model Part 2 – Extending the Health Model (Das Always On-Integritätsmodell Teil 2 – Erweitern des Integritätsmodells)](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|In diesem Thema wird erläutert, wie das Always On-Integritätsmodell und das Always On-Dashboard zur Anzeige weiterer Informationen angepasst werden.|  
+|[Monitoring Always On Health with PowerShell – Part 1: Basic Cmdlet Overview (Überwachen der Always On-Integrität mit PowerShell – Teil 1: Übersicht über grundlegende Cmdlets)](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|Dieses Thema enthält eine grundlegende Übersicht über die PowerShell-Cmdlets, die zur Überwachung der Integrität einer Verfügbarkeitsgruppe verwendet werden können.|  
+|[Monitoring Always On Health with PowerShell – Part 2: Advanced Cmdlet Usage (Überwachen der Always On-Integrität mit PowerShell – Teil 2: Verwendung erweiterter Cmdlets)](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|Dieses Thema enthält Informationen über die erweiterte Verwendung der Always On-PowerShell-Cmdlets zum Überwachen der Integrität einer Verfügbarkeitsgruppe.|  
+|[Monitoring Always On Health with PowerShell – Part 3 : A Simple Monitoring Application (Überwachen der Always On-Integrität mit PowerShell – Teil 3: Eine einfache Überwachungsanwendung)](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|In diesem Thema wird erläutert, wie eine Verfügbarkeitsgruppe mit einer Anwendung automatisch überwacht wird.|  
+|[Monitoring Always On Health with PowerShell – Part 4 : Integration with SQL Server Agent (Überwachen der Always On-Integrität mit PowerShell – Teil 4: Integration im SQL Server-Agent)](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|Dieses Thema enthält Informationen darüber, wie die Überwachung der Verfügbarkeitsgruppe in SQL Server-Agent integriert und Benachrichtigung für die zuständigen Personen bei Problemen konfiguriert werden.|  
 
 ## <a name="next-steps"></a>Nächste Schritte  
- [SQL Server Always On-Teamblog](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [CSS SQL Server-Technikblogs](https://docs.microsoft.com/archive/blogs/psssql/)  
-  
+ [SQL Server Always On-Teamblog](/archive/blogs/sqlalwayson/)   
+ [CSS SQL Server-Technikblogs](/archive/blogs/psssql/)  
   

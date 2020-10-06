@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: bc3039207e083d2afc8f0850a6328facd1f1916f
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137018"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725145"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Machine Learning-Erweiterung für Azure Data Studio (Vorschau)
 
@@ -24,7 +24,7 @@ Mit der Machine-Learning-Erweiterung für [Azure Data Studio](../what-is.md) kö
 
 Die folgenden erforderlichen Komponenten müssen auf dem Computer installiert sein, auf dem Azure Data Studio ausgeführt wird.
 
-- [Python 3](https://www.python.org/downloads/). Nachdem Sie Python installiert haben, müssen Sie unter [Erweiterungseinstellungen](#settings) den lokalen Pfad zu einer Python-Installation angeben. Wenn Sie in Azure Data Studio ein [Python-Kernel-Notebook](../notebooks-tutorial-python-kernel.md) verwenden, übernimmt die Erweiterung automatisch den Pfad des Notebooks.
+- [Python 3](https://www.python.org/downloads/). Nachdem Sie Python installiert haben, müssen Sie unter [Erweiterungseinstellungen](#settings) den lokalen Pfad zu einer Python-Installation angeben. Wenn Sie in Azure Data Studio ein [Python-Kernel-Notebook](../notebooks/notebooks-python-kernel.md) verwenden, übernimmt die Erweiterung automatisch den Pfad des Notebooks.
 
 - [Microsoft ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) für Windows, macOS oder Linux
 
@@ -87,7 +87,7 @@ Führen Sie die folgenden Schritte aus, um die Machine Learning-Erweiterung zusa
 
 1. Stellen Sie sicher, dass **Machine Learning: Enable Python** (Machine Learning: Python aktivieren) aktiviert ist. Diese Einstellung ist standardmäßig aktiviert.
 
-1. Geben Sie den Pfad zu Ihrer bereits vorhandenen Python-Installation unter **Machine Learning: Python Path** (Machine Learning: Python-Pfad) an. Dies kann entweder der vollständige Pfad zur ausführbaren Python-Datei oder der Ordner sein, in dem sich die ausführbare Datei befindet. Wenn Sie in Azure Data Studio ein [Python-Kernel-Notebook](../notebooks-tutorial-python-kernel.md) verwenden, übernimmt die Erweiterung automatisch den Pfad des Notebooks.
+1. Geben Sie den Pfad zu Ihrer bereits vorhandenen Python-Installation unter **Machine Learning: Python Path** (Machine Learning: Python-Pfad) an. Dies kann entweder der vollständige Pfad zur ausführbaren Python-Datei oder der Ordner sein, in dem sich die ausführbare Datei befindet. Wenn Sie in Azure Data Studio ein [Python-Kernel-Notebook](../notebooks/notebooks-python-kernel.md) verwenden, übernimmt die Erweiterung automatisch den Pfad des Notebooks.
 
 ### <a name="enable-r"></a>Aktivieren von R
 
@@ -114,6 +114,6 @@ Führen Sie die folgenden Schritte aus, um die Machine-Learning-Erweiterung in A
 - [Verwalten von Paketen in der Datenbank](machine-learning-extension-manage-packages.md)
 - [Treffen von Vorhersagen](machine-learning-extension-predictions.md)
 - [Importieren und Anzeigen von Modellen](machine-learning-extension-import-view-models.md)
-- [Notebooks in Azure Data Studio](../notebooks-guidance.md)
+- [Notebooks in Azure Data Studio](../notebooks/notebooks-guidance.md)
 - [Machine-Learning-Dokumentation für SQL](../../machine-learning/index.yml)
 - [Machine Learning und KI mit ONNX in SQL Edge (Vorschau)](/azure/azure-sql-edge/onnx-overview)

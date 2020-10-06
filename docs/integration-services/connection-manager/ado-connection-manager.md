@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e909c0a84ae4f57e5eb6cbd6bf7041cf2361b62
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 420e34cc54d83d2f9f01aee1b794c7f37080c493
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394396"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724545"
 ---
 # <a name="ado-connection-manager"></a>ADO-Verbindungs-Manager
 
@@ -36,7 +36,7 @@ ms.locfileid: "88394396"
   
 |SQL Server-Datentyp|Ergebnis|  
 |--------------------------|------------|  
-|**time**, **datetimeoffset**|Das Paket erzeugt einen Fehler, sofern das Paket keine parametrisierten SQL-Befehle verwendet. Um parametrisierte SQL-Befehle zu verwenden, verwenden Sie den Task SQL ausführen im Paket. Weitere Informationen finden Sie unter [SQL ausführen (Task)](../../integration-services/control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).|  
+|**time**, **datetimeoffset**|Das Paket erzeugt einen Fehler, sofern das Paket keine parametrisierten SQL-Befehle verwendet. Um parametrisierte SQL-Befehle zu verwenden, verwenden Sie den Task SQL ausführen im Paket. Weitere Informationen finden Sie unter [SQL ausführen (Task)](../../integration-services/control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](../control-flow/execute-sql-task.md).|  
 |**datetime2**|Der ADO-Verbindungs-Manager schneidet den Millisekundenwert ab.|  
   
 > [!NOTE]  
@@ -57,11 +57,10 @@ ms.locfileid: "88394396"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Konfigurieren des OLE DB-Verbindungs-Managers](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
+-   [Konfigurieren des OLE DB-Verbindungs-Managers](./ole-db-connection-manager.md)  
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

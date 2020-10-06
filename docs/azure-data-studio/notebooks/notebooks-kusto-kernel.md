@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379595"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725124"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Erstellen und Ausführen eines Kusto-Notebooks (KQL) (Vorschau)
 
@@ -28,7 +28,7 @@ Diese Funktion steht derzeit als Vorschau zur Verfügung.
 
 Wenn Sie über kein Azure-Abonnement verfügen, können Sie ein [kostenloses Azure-Konto](https://azure.microsoft.com/free/) erstellen, bevor Sie beginnen.
 
-- [Ein Azure Data Explorer-Cluster mit einer Datenbank, mit der Sie eine Verbindung herstellen können](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal)
+- [Ein Azure Data Explorer-Cluster mit einer Datenbank, mit der Sie eine Verbindung herstellen können](/azure/data-explorer/create-cluster-database-portal)
 - [Azure Data Studio](../download-azure-data-studio.md)
 - [Kusto-Erweiterung (KQL) für Azure Data Studio](../extensions/kusto-extension.md)
 
@@ -118,6 +118,6 @@ Sie können einen [Fehlerbericht](https://github.com/microsoft/azuredatastudio/i
 Erfahren Sie mehr über Notebooks:
 
 - [Kusto-Erweiterung (KQL) für Azure Data Studio](../extensions/kusto-extension.md)
-- [Verwenden von Notebooks in Azure Data Studio](../notebooks-guidance.md)
-- [Erstellen und Ausführen eines Python-Notebooks](../notebooks-tutorial-python-kernel.md)
-- [Erstellen und Ausführen eines SQL Server-Notebooks](../notebooks-tutorial-sql-kernel.md)
+- [Verwenden von Notebooks in Azure Data Studio](./notebooks-guidance.md)
+- [Erstellen und Ausführen eines Python-Notebooks](./notebooks-python-kernel.md)
+- [Erstellen und Ausführen eines SQL Server-Notebooks](./notebooks-sql-kernel.md)

@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac2fe67316f32d372c4f8faddef32af1bcc7f805
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a0bcf32babdb30c59a43305edffd3f1718354ac0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116231"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727891"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Erstellen einer domänenunabhängigen Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Always On-Verfügbarkeitsgruppen (AGs) erfordern einen zugrunde liegenden Windows Server-Failovercluster (WSFC). Das Bereitstellen eines WSFC über Windows Server 2012 R2 erfordert, dass die Server, die an einem WSFC teilnehmen (auch als Knoten bekannt) mit derselben Domäne verknüpft sind. Weitere Informationen zu Active Directory Domain Services (AD DS), finden Sie [hier](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
+Always On-Verfügbarkeitsgruppen (AGs) erfordern einen zugrunde liegenden Windows Server-Failovercluster (WSFC). Das Bereitstellen eines WSFC über Windows Server 2012 R2 erfordert, dass die Server, die an einem WSFC teilnehmen (auch als Knoten bekannt) mit derselben Domäne verknüpft sind. Weitere Informationen zu Active Directory Domain Services (AD DS), finden Sie [hier](/previous-versions/windows/it-pro/windows-server-2003/cc759073(v=ws.10)).
 
 Die AD DS- sowie WSFC-Abhängigkeit ist komplexer als das, was zuvor mit einer Datenbankspiegelungskonfiguration (DBM) bereitgestellt wurde, da DBM über mehrere Rechenzentren hinweg mit Zertifikaten ohne solche Abhängigkeiten bereitgestellt werden.  Eine herkömmliche Verfügbarkeitsgruppe, die sich über mehrere Datencenter erstreckt, erfordert, dass alle Server mit derselben Active Directory-Domäne verknüpft sein sollen. Andere Domänen, auch vertrauenswürdige Domänen, funktionieren nicht. Alle Server müssen Knoten desselben WSFC sein. In der folgenden Abbildung wird diese Konfiguration veranschaulicht. SQL Server 2016 hat ebenfalls Verfügbarkeitsgruppen verteilt, die ebenfalls dieses Ziel auf eine andere Weise erreichen können.
 
 
 ![Der WSFC, der sich über zwei Rechenzentren erstreckt, die mit derselben Domäne verbunden sind][1]
 
-In Windows Server 2012 R2 wurde ein [von Active Directory getrennter Cluster](https://technet.microsoft.com/library/dn265970.aspx) eingeführt, eine spezielle Form eines Windows Server-Failoverclusters, der mit Verfügbarkeitsgruppen verwendet werden kann. Diese Art von WSFC benötigt noch immer die Knoten, um mit der gleichen Active Directory-Domäne verbunden zu sein. In diesem Fall verwendet der WSFC jedoch DNS, aber nicht die Domäne. Da eine Domäne noch beteiligt ist, bietet der von Active Directory getrennte Cluster noch immer keine vollständige Erfahrung ohne Domänen.
+In Windows Server 2012 R2 wurde ein [von Active Directory getrennter Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970(v=ws.11)) eingeführt, eine spezielle Form eines Windows Server-Failoverclusters, der mit Verfügbarkeitsgruppen verwendet werden kann. Diese Art von WSFC benötigt noch immer die Knoten, um mit der gleichen Active Directory-Domäne verbunden zu sein. In diesem Fall verwendet der WSFC jedoch DNS, aber nicht die Domäne. Da eine Domäne noch beteiligt ist, bietet der von Active Directory getrennte Cluster noch immer keine vollständige Erfahrung ohne Domänen.
 
 In Windows Server 2016 wurde eine neue Art eines Windows Server-Failoverclusters eingeführt, basierend auf dem von Active Directory getrennten Cluster: ein Workgroupcluster. Ein Workgroupcluster lässt zu, dass SQL Server 2016 eine Verfügbarkeitsgruppe auf einem WSFC platziert, der AD DS nicht benötigt. SQL Server erfordert die Verwendung von Zertifikaten für die Endpunktsicherheit, ebenso wie das Datenbankspiegelungsszenario Zertifikate erfordert.  Diese Art einer Verfügbarkeitsgruppe wird als domänenunabhängige Verfügbarkeitsgruppe bezeichnet. Das Bereitstellen einer Verfügbarkeitsgruppe mit einem zugrunde liegenden Workgroupcluster unterstützt die folgenden Kombinationen für die Knoten, aus denen der WSFC besteht:
 - Keine Knoten sind mit einer Domäne verknüpft.
@@ -47,7 +47,7 @@ Eine domänenunabhängige Verfügbarkeitsgruppe ist nicht nur für Multisite- od
 ![Überblick über eine Verfügbarkeitsgruppe in der Standard Edition][3]
 
 Das Bereitstellen einer domänenunanbhängigen Verfügbarkeitsgruppe hat einige bekannte Vorbehalte:
-- Die einzigen verfügbaren Zeugentypen, die für das Quorum vorhanden sind, sind die Datenträger und die [Cloud](https://technet.microsoft.com/windows-server-docs/failover-clustering/deploy-cloud-witness), die in Windows Server 2016 neu ist. Datenträger sind problematisch, da es für die Verfügbarkeitsgruppe aller Wahrscheinlichkeit nach keine Verwendung eines freigegebenen Datenträgers gibt.
+- Die einzigen verfügbaren Zeugentypen, die für das Quorum vorhanden sind, sind die Datenträger und die [Cloud](/windows-server/failover-clustering/deploy-cloud-witness), die in Windows Server 2016 neu ist. Datenträger sind problematisch, da es für die Verfügbarkeitsgruppe aller Wahrscheinlichkeit nach keine Verwendung eines freigegebenen Datenträgers gibt.
 - Die zugrunde liegende Variante des Workgroupclusters eines WSFCs kann nur mithilfe von PowerShell erstellt werden, kann dann jedoch mit dem Failovercluster-Manager verwaltet werden.
 - Wenn Kerberos erforderlich ist, müssen Sie einen Standard-WSFC bereitstellen, der einer Active Directory-Domäne angefügt ist. Eine domänenunabhängige Verfügbarkeitsgruppe ist sicherlich keine Option.
 - Während ein Listener konfiguriert werden kann, muss er in DNS registriert werden, um verwendet werden zu können. Wie oben bereits erwähnt, besteht keine Kerberos-Unterstützung für den Listener.
@@ -80,7 +80,7 @@ Ein allgemeines DNS-Suffix ist für den Workgroupcluster einer domänenunabhäng
 Die Erstellung einer domänenunabhängigen Verfügbarkeitsgruppe kann derzeit von SQL Server Management Studio nicht vollständig durchgeführt werden. Während die Erstellung der domänenunabhängigen Verfügbarkeitsgruppe im Grunde dasselbe wie die Erstellung einer normalen Verfügbarkeitsgruppe ist, sind manche Aspekte (wie das Erstellen der Zertifikate) nur mit Transact-SQL möglich. Im folgenden Beispiel wird von der Konfiguration einer Verfügbarkeitsgruppe mit zwei Replikaten ausgegangen: ein primäres und ein sekundäres Replikat. 
 
 1. [Mithilfe der Anweisungen unter diesem Link](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059) stellen Sie einen Workgroupcluster bereit, der aus allen Servern besteht, die in der Verfügbarkeitsgruppe vorhanden sein werden. Stellen Sie sicher, dass das allgemeine DNS-Suffix bereits konfiguriert ist, bevor Sie den Workgroupcluster konfigurieren.
-2. [Aktivieren Sie die Funktion „Always On-Verfügbarkeitsgruppen“](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) auf jeder Instanz, die an einer oder mehreren Verfügbarkeitsgruppen teilnehmen soll. Der Neustart jeder SQL Server-Instanz ist so erforderlich.
+2. [Aktivieren Sie die Funktion „Always On-Verfügbarkeitsgruppen“](./enable-and-disable-always-on-availability-groups-sql-server.md) auf jeder Instanz, die an einer oder mehreren Verfügbarkeitsgruppen teilnehmen soll. Der Neustart jeder SQL Server-Instanz ist so erforderlich.
 3. Jede Instanz, die das primäre Replikat hostet, erfordert einen Datenbankhauptschlüssel. Wenn nicht bereits ein Hauptschlüssel vorhanden ist, führen Sie den folgenden Befehl aus:
 
    ```sql
@@ -172,4 +172,4 @@ Die Erstellung einer domänenunabhängigen Verfügbarkeitsgruppe kann derzeit vo
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
-[4]: ./media/diag-successful-dns-suffix.png 
+[4]: ./media/diag-successful-dns-suffix.png

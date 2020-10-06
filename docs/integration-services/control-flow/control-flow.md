@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c483cab97fe4eb218ef1e823f53ed4cb6a7fd5f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ee2ebd23e6be8b78eee221b3e55485633b38786
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457572"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724544"
 ---
 # <a name="control-flow"></a>Ablaufsteuerung
 
@@ -62,7 +62,7 @@ ms.locfileid: "88457572"
   
 -   Hinzufügen von Verbindungs-Managern.  
   
-     Viele Tasks erfordern eine Verbindung mit einer Datenquelle, und Sie müssen dem Paket die vom Task benötigten Verbindungs-Manager hinzufügen. In Abhängigkeit vom verwendeten Enumeratortyp erfordert der Foreach-Schleifencontainer möglicherweise auch einen Verbindungs-Manager. Sie können die Verbindungs-Manager beim Erstellen der Ablaufsteuerung für jedes einzelne Element hinzufügen, oder aber bevor Sie mit dem Erstellen der Ablaufsteuerung beginnen. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+     Viele Tasks erfordern eine Verbindung mit einer Datenquelle, und Sie müssen dem Paket die vom Task benötigten Verbindungs-Manager hinzufügen. In Abhängigkeit vom verwendeten Enumeratortyp erfordert der Foreach-Schleifencontainer möglicherweise auch einen Verbindungs-Manager. Sie können die Verbindungs-Manager beim Erstellen der Ablaufsteuerung für jedes einzelne Element hinzufügen, oder aber bevor Sie mit dem Erstellen der Ablaufsteuerung beginnen. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](../connection-manager/integration-services-ssis-connections.md).  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer enthält außerdem viele Entwurfszeitfunktionen, mit denen Sie die Entwurfsoberfläche verwalten und die Ablaufsteuerung selbstdokumentierend gestalten können.  
   
@@ -70,8 +70,7 @@ ms.locfileid: "88457572"
   
 -   [Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [Gruppieren von Komponenten oder Aufheben der Gruppierung](../../integration-services/group-or-ungroup-components.md)  
-  
   

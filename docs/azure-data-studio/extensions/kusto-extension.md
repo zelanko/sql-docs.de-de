@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: fe620c08da690a61d41a0fef5f18132c246ef739
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 2ffe3945f8dd7e8c0ce9cf504c09622ca1a20331
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379615"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725189"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Kusto-Erweiterung (KQL) für Azure Data Studio (Vorschau)
 
-Die Kusto-Erweiterung (KQL) für [Azure Data Studio](../what-is.md) ermöglicht es Ihnen, eine Verbindung zu [Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)-Clustern herzustellen und sie abzufragen.
+Die Kusto-Erweiterung (KQL) für [Azure Data Studio](../what-is.md) ermöglicht es Ihnen, eine Verbindung zu [Azure Data Explorer](/azure/data-explorer/data-explorer-overview)-Clustern herzustellen und sie abzufragen.
 
 Benutzer können KQL-Abfragen schreiben und ausführen und Notebooks mit dem [Kusto-Kernel](../notebooks/notebooks-kusto-kernel.md) vollständig mit IntelliSense erstellen.
 
@@ -33,7 +33,7 @@ Wenn Sie über kein Azure-Abonnement verfügen, können Sie ein [kostenloses Azu
 Die folgenden Voraussetzungen müssen ebenfalls erfüllt sein:
 
 - [Azure Data Studio-Installation](../download-azure-data-studio.md).
-- [Schnellstart: Erstellen eines Azure Data Explorer-Clusters und einer Datenbank](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [Schnellstart: Erstellen eines Azure Data Explorer-Clusters und einer Datenbank](/azure/data-explorer/create-cluster-database-portal).
 
 ## <a name="install-the-kusto-kql-extension"></a>Installieren der Kusto-Erweiterung (KQL)
 
@@ -104,7 +104,7 @@ StormEvents
 | where EventType == "Waterspout"
 ```
 
-Weitere Informationen zum Schreiben von KQL-Abfragen finden Sie unter [Schreiben von Abfragen für Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/write-queries#overview-of-the-query-language).
+Weitere Informationen zum Schreiben von KQL-Abfragen finden Sie unter [Schreiben von Abfragen für Azure Data Explorer](/azure/data-explorer/write-queries#overview-of-the-query-language).
 
 ## <a name="view-extension-settings"></a>Anzeigen von Erweiterungseinstellungen
 
@@ -124,7 +124,7 @@ Die Erweiterungseinstellungen sehen wie folgt aus:
 
 ## <a name="sanddance-visualization"></a>SandDance-Visualisierung
 
-Die [SandDance-Erweiterung](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) in Kombination mit der Kusto-Erweiterung (KQL) in Azure Data Studio bringt eine umfangreiche interaktive Visualisierung mit sich. Klicken Sie im Resultset der KQL-Abfrage auf die Schaltfläche **Schnellansicht**, um [SandDance](https://sanddance.js.org/) zu starten.
+Die [SandDance-Erweiterung](../sanddance-extension.md) in Kombination mit der Kusto-Erweiterung (KQL) in Azure Data Studio bringt eine umfangreiche interaktive Visualisierung mit sich. Klicken Sie im Resultset der KQL-Abfrage auf die Schaltfläche **Schnellansicht**, um [SandDance](https://sanddance.js.org/) zu starten.
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Kusto-Erweiterung":::
 
@@ -145,6 +145,6 @@ Sie können einen [Fehlerbericht](https://github.com/microsoft/azuredatastudio/i
 
 - [Erstellen und Ausführen eines Kusto-Notebooks](../notebooks/notebooks-kusto-kernel.md)
 - [Kqlmagic-Notebook in Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
-- [Cheat Sheet für die Übersetzung von SQL in Kusto](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
-- [Was ist der Azure-Daten-Explorer?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
+- [Cheat Sheet für die Übersetzung von SQL in Kusto](/azure/data-explorer/kusto/query/sqlcheatsheet)
+- [Was ist der Azure-Daten-Explorer?](/azure/data-explorer/data-explorer-overview)
 - [Verwenden von SandDance-Visualisierungen](https://sanddance.js.org/)

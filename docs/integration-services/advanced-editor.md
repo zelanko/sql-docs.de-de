@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 343ebe85334869f97b374e5386c05b47fbc8b48e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca689a290e266c3e8476034ba0c8e7ec4737cef4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478064"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724291"
 ---
 # <a name="advanced-editor"></a>Erweiterter Editor
 
@@ -47,11 +47,11 @@ ms.locfileid: "88478064"
   
  Die angezeigten Eigenschaften variieren je nach Komponente. Weitere Informationen zu den Eigenschaften, die in **Erweiterter Editor**angezeigt werden können, finden Sie unter folgenden Themen:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [Pfadeigenschaften](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [Pfadeigenschaften](./data-flow/integration-services-paths.md)  
   
  Weitere Informationen zu den speziellen Komponenten, die Sie bearbeiten, finden Sie in der Beschreibung der Komponenten im Abschnitt zu den Datenflusselementen in der Objekt- und Konzeptdokumentation von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] :  
   
@@ -59,5 +59,4 @@ ms.locfileid: "88478064"
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehler- und Meldungsreferenz von Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
-  
   

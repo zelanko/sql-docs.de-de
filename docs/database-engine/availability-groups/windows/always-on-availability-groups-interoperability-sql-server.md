@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f0038fb53bb0f50dfd11551bed9a7c17a41971a1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 286a3e31caad83c421865626eee28d9f7d3f91f1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115707"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726581"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On-Verfügbarkeitsgruppen: Interoperabilität (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -63,15 +63,15 @@ Die folgenden Features wirken mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.
 
 - **Blogs:**
 
-  [Migration Guide: Migrating to SQL Server 2012 Failover Clustering and Availability Groups from Prior Clustering and Mirroring Deployments (Leitfaden: Migrieren zu SQL Server 2012-Failoverclustering und -Verfügbarkeitsgruppen von vorherigen Clustering- und Spiegelungsbereitstellungen)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments/)
-  [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)
-  [CSS SQL Server Engineers Blogs (Blogs der SQL Server-Engineers für CSS)](https://docs.microsoft.com/archive/blogs/psssql/)
+  [Migration Guide: Migrating to SQL Server 2012 Failover Clustering and Availability Groups from Prior Clustering and Mirroring Deployments (Leitfaden: Migrieren zu SQL Server 2012-Failoverclustering und -Verfügbarkeitsgruppen von vorherigen Clustering- und Spiegelungsbereitstellungen)](/archive/blogs/sqlalwayson/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments)
+  [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: der offizielle SQL Server Always On-Teamblog)](/archive/blogs/sqlalwayson/)
+  [CSS SQL Server Engineers Blogs (Blogs der SQL Server-Engineers für CSS)](/archive/blogs/psssql/)
 
 - **Whitepaper:**
 
-  [Migration Guide: Migrating to Always On Availability Groups from Prior Deployments Combining Database Mirroring and Log Shipping (Leitfaden: Migrieren zu Always On-Verfügbarkeitsgruppen von vorherigen Bereitstellungen mit Datenbankspiegelung und Protokollversand)](https://msdn.microsoft.com/library/jj635217)
-  [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Leitfaden zu Always On-Lösungen für Microsoft SQL Server zur Bereitstellung von Hochverfügbarkeit und Notfallwiederherstellung)](https://go.microsoft.com/fwlink/?LinkId=227600)
-  [Microsoft White Papers for SQL Server 2012 (Microsoft-Whitepapers zu SQL Server 2012)](https://msdn.microsoft.com/library/hh403491.aspx)
+  [Migration Guide: Migrating to Always On Availability Groups from Prior Deployments Combining Database Mirroring and Log Shipping (Leitfaden: Migrieren zu Always On-Verfügbarkeitsgruppen von vorherigen Bereitstellungen mit Datenbankspiegelung und Protokollversand)](/previous-versions/sql/sql-server-2012/jj635217(v=msdn.10))
+  [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Leitfaden zu Always On-Lösungen für Microsoft SQL Server zur Bereitstellung von Hochverfügbarkeit und Notfallwiederherstellung)](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))
+  [Microsoft White Papers for SQL Server 2012 (Microsoft-Whitepapers zu SQL Server 2012)](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)
   [SQL Server Customer Advisory Team Whitepapers (Whitepapers des Beratungsteams für SQL Server)](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)
 
 ## <a name="see-also"></a>Weitere Informationen

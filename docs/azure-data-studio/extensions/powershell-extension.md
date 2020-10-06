@@ -9,12 +9,12 @@ ms.author: aanelson
 ms.reviewer: alayu, maghan, sstein
 ms.custom: ''
 ms.date: 04/19/2019
-ms.openlocfilehash: 522f6c862f4c136afb0c7794d90ed83c83169d0c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ede862fe5bbfe975e7c8694782960ced974122b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123342"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725135"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>PowerShell-Editor-Unterstützung für Azure Data Studio
 
@@ -62,8 +62,8 @@ Wenn Sie Azure Data Studio unter macOS oder Linux ausführen, müssen Sie mögli
 PowerShell Core ist ein Open-Source-Projekt auf [GitHub](https://github.com/powershell/powershell).
 Weitere Informationen zur Installation von PowerShell Core auf macOS- oder Linux-Plattformen finden Sie in den folgenden Artikeln:
 
-- [Installieren von PowerShell Core unter Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux)
-- [Installieren von PowerShell Core unter macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos)
+- [Installieren von PowerShell Core unter Linux](/powershell/scripting/install/installing-powershell-core-on-linux)
+- [Installieren von PowerShell Core unter macOS](/powershell/scripting/install/installing-powershell-core-on-macos)
 
 ## <a name="example-scripts"></a>Beispielskripts
 

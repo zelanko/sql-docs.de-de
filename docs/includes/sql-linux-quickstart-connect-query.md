@@ -109,7 +109,7 @@ Zusätzlich zu **sqlcmd** können Sie die folgenden plattformübergreifenden Too
 | Tool | BESCHREIBUNG |
 | ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | Eine plattformübergreifende Anwendung mit grafischer Benutzeroberfläche zur Datenbankverwaltung. |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Ein plattformübergreifender Code-Editor mit grafischer Benutzeroberfläche, in dem Transact-SQL-Anweisungen mit der mssql-Erweiterung ausgeführt werden. |
+| [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) | Ein plattformübergreifender Code-Editor mit grafischer Benutzeroberfläche, in dem Transact-SQL-Anweisungen mit der mssql-Erweiterung ausgeführt werden. |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Ein plattformübergreifendes Automatisierungs- und Konfigurationstool, das auf-Cmdlets basiert. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Eine plattformübergreifende Befehlszeilenschnittstelle zum Ausführen von Transact-SQL-Befehlen. |
 

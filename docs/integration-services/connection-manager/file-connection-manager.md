@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 982ff5a4a48c22de9521d2df5d56cd31919794f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ebe86146e2ce4f25f05c9948071d3fc7a4d4edb8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351436"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728049"
 ---
 # <a name="file-connection-manager"></a>Dateiverbindungs-Manager
 
@@ -64,7 +64,7 @@ ms.locfileid: "88351436"
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md).  
+ Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [Dateiverbindungs-Manager-Editor]().  
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   
@@ -94,5 +94,4 @@ ms.locfileid: "88351436"
   
  **Durchsuchen**  
  Wählen Sie die Datei oder den Ordner mithilfe des Dialogfelds **Datei auswählen** oder des Dialogfelds **Ordner suchen** aus.  
-  
   

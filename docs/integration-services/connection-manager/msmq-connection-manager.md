@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d58122aeba74489981a387c2477699784778a60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7eb223aaa1ab8ece253e90db998b258e843f225e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394046"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724987"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ-Verbindungs-Manager
 
@@ -52,7 +52,7 @@ ms.locfileid: "88394046"
 ## <a name="configuration-of-the-msmq-connection-manager"></a>Konfiguration des MSMQ-Verbindungs-Managers  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [MSMQ-Verbindungs-Manager-Editor](../../integration-services/connection-manager/msmq-connection-manager-editor.md).  
+ Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [MSMQ-Verbindungs-Manager-Editor]().  
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   
@@ -87,5 +87,4 @@ ms.locfileid: "88394046"
 ## <a name="see-also"></a>Weitere Informationen  
  [Nachrichtenwarteschlange (Task)](../../integration-services/control-flow/message-queue-task.md)   
  [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

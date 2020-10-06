@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 643de07ff630c5f36147aac5c7721297236fc728
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350016"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725980"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW-Uploadtask
 
@@ -28,7 +28,7 @@ ms.locfileid: "88350016"
 
 
 Der **Azure SQL DW-Uploadtask** ermöglicht es einem SSIS-Paket, Tabellendaten aus dem Dateisystem oder Azure Blob Storage in Azure SQL Data Warehouse (DW) zu kopieren.
-Der Task nutzt PolyBase zur Leistungssteigerung gemäß der Beschreibung im Artikel [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Azure SQL Data Warehouse: Muster und Strategien zum Laden).
+Der Task nutzt PolyBase zur Leistungssteigerung gemäß der Beschreibung im Artikel [Azure SQL Data Warehouse Loading Patterns and Strategies](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)(Azure SQL Data Warehouse: Muster und Strategien zum Laden).
 Das gegenwärtig unterstützte Quelldatenformat ist Text mit Trennzeichen in UTF8-Codierung.
 Beim Kopieren aus einem Dateisystem werden Daten zunächst in Azure Blob Storage für das Staging und dann in Azure SQL Data Warehouse hochgeladen. Darum ist ein Azure Blob Storage-Konto erforderlich.
 

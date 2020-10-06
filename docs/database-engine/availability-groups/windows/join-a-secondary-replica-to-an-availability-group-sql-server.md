@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17c2b0f35dbd5eb682dc3844e1740ceb01e3fd64
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2b0c5baa06daf325034e349419b41bf9d6bb1ad6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116184"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726382"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Verknüpfen eines sekundären Replikats mit einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -91,11 +91,11 @@ ms.locfileid: "91116184"
     ```  
   
     > [!NOTE]  
-    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das **Get-Help** -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das **Get-Help** -Cmdlet in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   
--   [SQL Server PowerShell-Anbieter](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell-Anbieter](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="follow-up-configure-secondary-databases"></a><a name="FollowUp"></a> Nachverfolgung: Konfigurieren von sekundären Datenbanken  
  Für jede Datenbank in der Verfügbarkeitsgruppe benötigen Sie eine sekundäre Datenbank auf der Serverinstanz, die das sekundäre Replikat hostet. Sie können sekundäre Datenbanken entweder vor oder nach dem Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe konfigurieren. Gehen Sie wie folgt vor:  
@@ -108,5 +108,4 @@ ms.locfileid: "91116184"
  [Erstellung und Konfiguration von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Problembehandlung für die AlwaysOn-Verfügbarkeitsgruppenkonfiguration &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
-  
   

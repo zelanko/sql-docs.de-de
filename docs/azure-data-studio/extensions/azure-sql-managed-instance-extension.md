@@ -9,12 +9,12 @@ ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
 ms.custom: ''
 ms.date: 10/07/2019
-ms.openlocfilehash: e31895f09b06e51f76c745a9b00a1dfe7c41d759
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bc4a01ce30d05853c08b59b720452a3e09cb6417
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111747"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725201"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure SQL Managed Instance-Dashboard für Azure Data Studio (Vorschau)
 
@@ -28,7 +28,7 @@ Die Azure SQL Managed Instance-Erweiterung stellt ein Dashboard für die Arbeit 
 
 ## <a name="install"></a>Installieren
 
-Sie können das offizielle Release dieser Erweiterung installieren. Führen Sie die Schritte in der [Azure Data Studio-Dokumentation](../extensions.md) aus.
+Sie können das offizielle Release dieser Erweiterung installieren. Führen Sie die Schritte in der [Azure Data Studio-Dokumentation](./add-extensions.md) aus.
 Suchen Sie im Bereich **Erweiterungen** nach „Managed Instance“, und installieren Sie die Installation aus. Nach der Installation werden Sie automatisch über alle zukünftigen Updates der Erweiterung benachrichtigt.
 
 Wenn die Erweiterung installiert ist, wird die Registerkarte **Verwaltete Instanz** in Azure Data Studio angezeigt. Dort finden Sie spezifische Informationen zu Ihrer verwalteten Instanz.
@@ -50,7 +50,7 @@ Im oberen Bereich werden die folgenden Details angezeigt:
 
 Wenn Sie den zweiten Bereich auf der Registerkarte **Verwaltete Instanz** auswählen, erhalten Sie Empfehlungen und Warnungen, die Ihnen helfen, die verwaltete Instanz zu optimieren.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Managed Instance-Empfehlungen":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Managed Instance-Eigenschaften":::
 
 Möglicherweise werden einige der folgenden Empfehlungen angezeigt:
 
@@ -67,7 +67,7 @@ Möglicherweise werden einige der folgenden Empfehlungen angezeigt:
 
 Der dritte Bereich auf der Registerkarte **Verwaltete Instanz** zeigt Ihnen den Status von Datenbankreplikaten in Ihrer verwalteten Instanz an.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Managed Instance-Replikate":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Managed Instance-Eigenschaften":::
 
 Auf der universellen Dienstebene verfügt jede Datenbank über ein einziges (primäres) Replikat. Auf der unternehmenskritischen Ebene der Instanz verfügt jede Datenbank über ein primäres und drei sekundäre Replikate, wobei eines für schreibgeschützte Workloads verwendet wird. Im Bereich **Replikate** können Sie den Synchronisierungsprozess überwachen und sicherstellen, dass alle sekundären Replikate synchron mit dem primären Replikat sind.
 
@@ -75,7 +75,7 @@ Auf der universellen Dienstebene verfügt jede Datenbank über ein einziges (pri
 
 Im vierten Bereich unter **Verwaltete Instanz** werden die aktuellsten und relevantesten SQL-Fehlerprotokolleinträge angezeigt.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Managed Instance-Protokolleinträge":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Managed Instance-Eigenschaften":::
 
 Obwohl Ihre verwaltete Instanz eine große Anzahl von Protokolleinträgen generiert, sind die meisten davon interne und Systeminformationen. Zudem enthalten einige Protokolleinträge physische Datenbanknamen (`GUID`-Werte) anstelle tatsächlicher logischer Datenbanknamen.
 

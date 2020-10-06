@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b54697ebaad053c4fa7a598fa5407d150c6a51d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eba08dc813e869a6ce412dd185757d6b533407a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496157"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724985"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
 
@@ -35,7 +35,7 @@ ms.locfileid: "88496157"
   
 -   Einen Satz von Änderungstabellen und Änderungszugriffsfunktionen, die vom SQL Server CDC-Mechanismus generiert werden und identisch mit den Elementen sind, die beim normalen SQL Server CDC-Vorgang (nicht Oracle) verwendet werden.  
   
- Anfänglich können nur die Mitglieder der festen Datenbankrolle `cdc` dbowner **auf das** -Schema zugreifen. Der Zugriff auf die Änderungstabellen und Änderungsfunktionen wird über das gleiche Sicherheitsmodell wie für SQL Server CDC gesteuert. Weitere Informationen zum Sicherheitsmodell finden Sie unter [Sicherheitsmodell](https://go.microsoft.com/fwlink/?LinkId=231151).  
+ Anfänglich können nur die Mitglieder der festen Datenbankrolle `cdc` dbowner **auf das** -Schema zugreifen. Der Zugriff auf die Änderungstabellen und Änderungsfunktionen wird über das gleiche Sicherheitsmodell wie für SQL Server CDC gesteuert. Weitere Informationen zum Sicherheitsmodell finden Sie unter [Sicherheitsmodell](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105)).  
   
 ## <a name="creating-the-cdc-database"></a>Erstellen der CDC-Datenbank  
  In den meisten Fällen wird die CDC-Datenbank über die CDC Designer Console erstellt, aber sie kann auch mithilfe eines CDC-Bereitstellungsskripts erstellt werden, das mit der CDC Designer Console generiert wird. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministrator kann die Datenbankeinstellungen bei Bedarf ändern (z. B. in Bezug auf Speicherung, Sicherheit oder Verfügbarkeit).  
@@ -55,11 +55,11 @@ ms.locfileid: "88496157"
  Die Spiegeltabellen sind leer. Darin werden keine Daten gespeichert. Sie werden verwendet, um die standardmäßige SQL Server CDC-Infrastruktur zu aktivieren, die von der Oracle CDC-Instanz verwendet wird. Um zu verhindern, dass Daten in die Spiegeltabellen eingefügt oder darin aktualisiert werden, werden alle UPDATE-, DELETE- und INSERT-Vorgänge für PUBLIC verweigert. Dadurch wird sichergestellt, dass die Daten nicht geändert werden können.  
   
 ## <a name="access-to-change-data"></a>Zugreifen auf Änderungsdaten  
- Aufgrund des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsmodells, das zur Erlangung des Zugriffs auf die Änderungsdaten verwendet wird, die einer Aufzeichnungsinstanz zugeordnet sind, muss dem Benutzer der `select` -Zugriff auf alle aufgezeichneten Spalten der zugeordneten Spiegeltabelle gewährt werden (Zugriffsberechtigungen für die ursprünglichen Oracle-Tabellen bieten keinen Zugriff auf die Änderungstabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsmodell finden Sie unter [Sicherheitsmodell](https://go.microsoft.com/fwlink/?LinkId=231151).  
+ Aufgrund des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsmodells, das zur Erlangung des Zugriffs auf die Änderungsdaten verwendet wird, die einer Aufzeichnungsinstanz zugeordnet sind, muss dem Benutzer der `select` -Zugriff auf alle aufgezeichneten Spalten der zugeordneten Spiegeltabelle gewährt werden (Zugriffsberechtigungen für die ursprünglichen Oracle-Tabellen bieten keinen Zugriff auf die Änderungstabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsmodell finden Sie unter [Sicherheitsmodell](/previous-versions/sql/sql-server-2008-r2/cc645961(v=sql.105)).  
   
  Wenn bei Erstellung der Aufzeichnungsinstanz eine Gatingrolle angegeben wird, muss der Aufrufer außerdem Mitglied der angegebenen Gatingrolle sein. Andere allgemeine Change Data Capture-Funktionen für den Zugriff auf Metadaten stehen für alle Datenbankbenutzer mit der Rolle PUBLIC zur Verfügung. Der Zugriff auf die zurückgegebenen Metadaten wird jedoch in der Regel auch hier durch die Zugriffsberechtigungen auf die zugrunde liegenden Quelltabellen und die Mitgliedschaft in definierten Gatingrollen beschränkt.  
   
- Änderungsdaten können gelesen werden, indem spezielle tabellenbasierte Funktionen aufgerufen werden, die von der SQL Server CDC-Komponente beim Erstellen einer Aufzeichnungsinstanz generiert werden. Weitere Informationen zu diesen Funktionen finden Sie unter [Change Data Capture-Funktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
+ Änderungsdaten können gelesen werden, indem spezielle tabellenbasierte Funktionen aufgerufen werden, die von der SQL Server CDC-Komponente beim Erstellen einer Aufzeichnungsinstanz generiert werden. Weitere Informationen zu diesen Funktionen finden Sie unter [Change Data Capture-Funktionen (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md).  
   
  Der Zugriff auf die CDC-Daten über die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CDC-Quellkomponente unterliegt den gleichen Regeln.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88496157"
   
  Wenn die Aufzeichnung anfänglich für die Tabelle `<schema-name>.<table-name>`aktiviert ist, ist der Standardname der Aufzeichnungsinstanz `<schema-name>_<table-name>`. Der Standardname der Aufzeichnungsinstanz für die Oracle-Tabelle HR.EMPLOYEES ist z. B. HR_EMPLOYEES, und die zugeordnete Änderungstabelle ist [cdc]. [HR_EMPLOYEES_CT].  
   
- In die Aufzeichnungstabellen wird von der Oracle CDC-Instanz geschrieben. Sie werden mit speziellen Tabellenwertfunktionen gelesen, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Erstellen der Aufzeichnungsinstanz generiert werden. Beispiel: `fn_cdc_get_all_changes_HR_EMPLOYEES`. Weitere Informationen zu diesen CDC-Funktionen finden Sie unter [Change Data Capture-Funktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152).  
+ In die Aufzeichnungstabellen wird von der Oracle CDC-Instanz geschrieben. Sie werden mit speziellen Tabellenwertfunktionen gelesen, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Erstellen der Aufzeichnungsinstanz generiert werden. Beispiel: `fn_cdc_get_all_changes_HR_EMPLOYEES`. Weitere Informationen zu diesen CDC-Funktionen finden Sie unter [Change Data Capture-Funktionen (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md).  
   
 ###  <a name="cdclsn_time_mapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  Die Tabelle **[cdc].[lsn_time_mapping]** wird von der SQL Server-CDC-Komponente generiert. Sie wird in Verbindung mit Oracle CDC anders als sonst verwendet.  
@@ -192,5 +192,4 @@ ms.locfileid: "88496157"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Change Data Capture Designer für Oracle von Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
-  
   

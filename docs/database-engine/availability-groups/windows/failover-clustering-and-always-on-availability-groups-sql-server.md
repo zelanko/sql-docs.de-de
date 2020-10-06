@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c10980b60d41f107ff0104eedd5b51aa40cd6a6e
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eed9c3c7644345da76cda9882844e553691b9683
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480649"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727875"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
 
@@ -74,7 +74,7 @@ ms.locfileid: "89480649"
  **Failoverrichtlinieneinstellungen für die Verfügbarkeitsgruppe gelten für alle Replikate, unabhängig davon, ob sie in einer eigenständigen Instanz oder einer FCI-Instanz gehostet werden.  
   
 > [!NOTE]  
->  Weitere Informationen zur **Anzahl der Knoten** innerhalb von FCIs sowie zu **Always On-Verfügbarkeitsgruppen** für verschiedene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Editionen finden Sie unter [Features Supported by the Editions of SQL Server 2012 (Von den SQL Server 2012-Editionen unterstützte Features)](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) ).  
+>  Weitere Informationen zur **Anzahl der Knoten** innerhalb von FCIs sowie zu **Always On-Verfügbarkeitsgruppen** für verschiedene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Editionen finden Sie unter [Features Supported by the Editions of SQL Server 2012 (Von den SQL Server 2012-Editionen unterstützte Features)](/previous-versions/sql/sql-server-2012/cc645993(v=sql.110)) (https://go.microsoft.com/fwlink/?linkid=232473) ).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Überlegungen zum Hosten eines Verfügbarkeitsreplikats auf einer FCI  
   
@@ -107,23 +107,23 @@ ms.locfileid: "89480649"
 -   **Verwenden Sie den Failovercluster-Manager nicht zum Verschieben von Verfügbarkeitsgruppen auf verschiedene Knoten oder zum Ausführen eines Failovers für Verfügbarkeitsgruppen.** Der Synchronisierungsstatus der Verfügbarkeitsreplikate ist dem Failovercluster-Manager nicht bekannt, sodass ein solcher Vorgang die Downtime verlängern kann. Sie müssen [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwenden.  
 
   >[!WARNING]
-  > Die Verwendung des Failovercluster-Managers zum Verschieben einer *Failoverclusterinstanz*, die eine Verfügbarkeitsgruppe hostet, auf einen Knoten, der *bereits* ein Replikat derselben Verfügbarkeitsgruppe hostet, kann zum Verlust des Verfügbarkeitsgruppenreplikats führen, sodass dieses auf dem Zielknoten nicht online geschaltet werden kann. Ein einzelner Knoten eines Failoverclusters kann nicht mehr als ein Replikat für dieselbe Verfügbarkeitsgruppe hosten. Weitere Informationen dazu, wie eine solche Situation eintritt und wie sie gelöst werden kann, finden Sie im Blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Replikat in Verfügbarkeitsgruppe unerwartet gelöscht). 
+  > Die Verwendung des Failovercluster-Managers zum Verschieben einer *Failoverclusterinstanz*, die eine Verfügbarkeitsgruppe hostet, auf einen Knoten, der *bereits* ein Replikat derselben Verfügbarkeitsgruppe hostet, kann zum Verlust des Verfügbarkeitsgruppenreplikats führen, sodass dieses auf dem Zielknoten nicht online geschaltet werden kann. Ein einzelner Knoten eines Failoverclusters kann nicht mehr als ein Replikat für dieselbe Verfügbarkeitsgruppe hosten. Weitere Informationen dazu, wie eine solche Situation eintritt und wie sie gelöst werden kann, finden Sie im Blog [Replica unexpectedly dropped in availability group](/archive/blogs/alwaysonpro/issue-replica-unexpectedly-dropped-in-availability-group) (Replikat in Verfügbarkeitsgruppe unerwartet gelöscht). 
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   **Blogs:**  
   
-     [Konfigurieren von Windows-Failoverclustering für SQL Server (Verfügbarkeitsgruppe oder Failoverclusterinstanz) mit beschränkter Sicherheit](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
+     [Konfigurieren von Windows-Failoverclustering für SQL Server (Verfügbarkeitsgruppe oder Failoverclusterinstanz) mit beschränkter Sicherheit](/archive/blogs/sqlalwayson/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security)  
   
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblogs: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblogs: Der offizielle SQL Server Always On-Teamblog)](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server-Technikblogs](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server-Technikblogs](/archive/blogs/psssql/)  
   
 -   **Whitepaper:**  
   
-     [Always On-Architekturhandbuch: Erstellen einer Lösung für hohe Verfügbarkeit und Notfallwiederherstellung unter Verwendung von Failoverclusterinstanzen und Verfügbarkeitsgruppen](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [Always On-Architekturhandbuch: Erstellen einer Lösung für hohe Verfügbarkeit und Notfallwiederherstellung unter Verwendung von Failoverclusterinstanzen und Verfügbarkeitsgruppen](/previous-versions/sql/sql-server-2012/jj215886(v=msdn.10))  
   
-     [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
      [Microsoft-Whitepapers für SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -134,5 +134,4 @@ ms.locfileid: "89480649"
  [Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen (Transact-SQL)](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [AlwaysOn-Failoverclusterinstanzen &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
-  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8691874f1dc93371730b22f9ccaaa3d62cf84521
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2847f43835f70e2c1dd0f78cc58af551d728702f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394996"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725151"
 ---
 # <a name="working-with-variables-programmatically"></a>Programmgesteuertes Arbeiten mit Variablen
 
@@ -41,15 +41,15 @@ ms.locfileid: "88394996"
   
 -   Auffüllen von Parameterwerten für Transact-SQL-Anweisungen zur Laufzeit.  
   
--   Kontrollieren des Flusses einer Foreach-Schleife. Weitere Informationen finden Sie unter [Hinzufügen einer Enumeration zu einer Ablaufsteuerung](https://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a).  
+-   Kontrollieren des Flusses einer Foreach-Schleife. Weitere Informationen finden Sie unter [Hinzufügen einer Enumeration zu einer Ablaufsteuerung](../control-flow/foreach-loop-container.md).  
   
--   Steuern einer Rangfolgeneinschränkung durch ihre Verwendung in einem Ausdruck. Eine Rangfolgeneinschränkung kann Variablen in die Einschränkungsdefinition einschließen. Weitere Informationen finden Sie unter [Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
+-   Steuern einer Rangfolgeneinschränkung durch ihre Verwendung in einem Ausdruck. Eine Rangfolgeneinschränkung kann Variablen in die Einschränkungsdefinition einschließen. Weitere Informationen finden Sie unter [Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen](../control-flow/precedence-constraints.md).  
   
--   Kontrollieren der bedingten Wiederholung eines For-Schleifencontainers. Weitere Informationen finden Sie unter [Hinzufügen einer Iteration zu einer Ablaufsteuerung](https://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a).  
+-   Kontrollieren der bedingten Wiederholung eines For-Schleifencontainers. Weitere Informationen finden Sie unter [Hinzufügen einer Iteration zu einer Ablaufsteuerung](../control-flow/for-loop-container.md).  
   
 -   Erstellen von Ausdrücken, die Variablenwerte einschließen.  
   
--   Sie können benutzerdefinierte Variablen für alle Containertypen erstellen: Pakete, **Foreach-Schleifencontainer**, **For-Schleifencontainer**, **Sequenzcontainer**, TasksHosts und Ereignishandler. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   Sie können benutzerdefinierte Variablen für alle Containertypen erstellen: Pakete, **Foreach-Schleifencontainer**, **For-Schleifencontainer**, **Sequenzcontainer**, TasksHosts und Ereignishandler. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../integration-services-ssis-variables.md).  
   
 ## <a name="scope"></a>`Scope`  
  Jeder Container weist seine eigene <xref:Microsoft.SqlServer.Dts.Runtime.Variables>-Auflistung auf. Wenn eine neue Variable erstellt wird, liegt diese innerhalb des Bereichs seines übergeordneten Containers. Da sich der Paketcontainer ganz oben in der Containerhierarchie befindet, funktionieren Variablen mit Paketbereich wie globale Variablen und sind für alle Container innerhalb des Pakets sichtbar. Auf die Auflistung von Variablen für den Container kann über die <xref:Microsoft.SqlServer.Dts.Runtime.Variables>-Auflistung auch von untergeordneten Elementen des Containers zugegriffen werden, indem entweder der Variablenname oder der Index der Variablen in der Auflistung verwendet wird.  
@@ -231,10 +231,9 @@ End Module
  Der Ausdruck muss ein gültiger Ausdruck sein, der die [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Ausdruckssyntax verwendet. Neben den Operatoren und Funktionen, die der Ausdruck bereitstellt, sind Literale in Variablenausdrücke zulässig, Ausdrücke können jedoch nicht auf andere Variablen oder Spalten verweisen. Weitere Informationen finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)ausgewertet wird.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
- Wenn eine Konfigurationsdatei eine benutzerdefinierte Variable einschließt, kann die Variable zur Laufzeit aktualisiert werden. Dies bedeutet, dass der Wert der ursprünglich in dem Paket enthaltenen Variablen beim Ausführen des Pakets durch einen neuen Wert aus der Konfigurationsdatei ersetzt wird. Diese Ersetzungstechnik ist hilfreich, wenn ein Paket für mehrere Server bereitgestellt wird, die unterschiedliche Variablenwerte erfordern. In einer Variablen kann beispielsweise angegeben werden, wie oft ein **Foreach-Schleifencontainer** seinen Workflow wiederholt, oder es können die Empfänger aufgelistet werden, an die von einem Ereignishandler eine E-Mail gesendet wird, wenn ein Fehler ausgelöst wird. In einer Variablen kann auch die Anzahl von Fehlern geändert werden, die auftreten können, bevor für das Paket ein Fehler gemeldet wird. Diese Variablen werden dynamisch in Konfigurationsdateien für jede Umgebung bereitgestellt. Daher sind nur Lese-/Schreibvariablen in Konfigurationsdateien zulässig. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../../integration-services/packages/create-package-configurations.md).  
+ Wenn eine Konfigurationsdatei eine benutzerdefinierte Variable einschließt, kann die Variable zur Laufzeit aktualisiert werden. Dies bedeutet, dass der Wert der ursprünglich in dem Paket enthaltenen Variablen beim Ausführen des Pakets durch einen neuen Wert aus der Konfigurationsdatei ersetzt wird. Diese Ersetzungstechnik ist hilfreich, wenn ein Paket für mehrere Server bereitgestellt wird, die unterschiedliche Variablenwerte erfordern. In einer Variablen kann beispielsweise angegeben werden, wie oft ein **Foreach-Schleifencontainer** seinen Workflow wiederholt, oder es können die Empfänger aufgelistet werden, an die von einem Ereignishandler eine E-Mail gesendet wird, wenn ein Fehler ausgelöst wird. In einer Variablen kann auch die Anzahl von Fehlern geändert werden, die auftreten können, bevor für das Paket ein Fehler gemeldet wird. Diese Variablen werden dynamisch in Konfigurationsdateien für jede Umgebung bereitgestellt. Daher sind nur Lese-/Schreibvariablen in Konfigurationsdateien zulässig. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
- [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [Verwenden von Variablen in Paketen](../integration-services-ssis-variables.md)  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 35ea24eb9d4f5007bf45602cceca97811ef282fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 57af8645045039923fa59bacbc232bca8e435c91
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116964"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726363"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Verwalten von Anmeldungen für Aufträge mithilfe von Datenbanken in einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "91116964"
 > [!NOTE]  
 >  Dieses Problem betrifft lokale Windows-Konten auf unterschiedlichen Computern. Bei Domänenkonten tritt das Problem jedoch nicht auf, da die SID auf allen Computern identisch ist.  
   
- Weitere Informationen finden Sie unter [Verwaiste Benutzer bei Datenbankspiegelung und Protokollversand](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (Blog zur Datenbank-Engine).  
+ Weitere Informationen finden Sie unter [Verwaiste Benutzer bei Datenbankspiegelung und Protokollversand](/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (Blog zur Datenbank-Engine).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -70,5 +70,4 @@ ms.locfileid: "91116964"
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Eigenständige Datenbanken](../../../relational-databases/databases/contained-databases.md)   
  [Erstellen von Aufträgen](../../../ssms/agent/create-jobs.md)  
-  
   

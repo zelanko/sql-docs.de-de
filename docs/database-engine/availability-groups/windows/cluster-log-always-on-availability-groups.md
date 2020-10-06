@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1240bc202344762a48f4dde8e32b69789f1c0f46
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 754169b501dbc468e0e48f04e71534db61d80192
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114130"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726491"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Erstellen und Analysieren der Protokolldatei „CLUSTER.LOG“ für eine Always On-Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "91114130"
   
 1.  Verwenden Sie den Befehl `cluster /log /g` an der Eingabeaufforderung. Mit diesem Befehl werden auf jedem WSFC-Knoten die Clusterprotokolldateien im Verzeichnis „\windows\cluster\reports“ generiert. Der Vorteil dieser Methode besteht darin, dass Sie mithilfe der Option `/level` die Detailebene in den generierten Protokollen angeben können. Der Nachteil ist, dass Sie kein Zielverzeichnis für die generierten Clusterprotokolldateien festlegen können. Weitere Informationen finden Sie unter [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283) (Gewusst wie: Erstellen von „cluster.log“ im Windows Server 2008-Failoverclustering).  
   
-2.  Verwenden Sie das PowerShell-Cmdlet [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx). Der Vorteil dieser Methode ist, dass Sie das Clusterprotokolldatei von allen Knoten in einem Zielverzeichnis auf dem Knoten generieren können, auf dem Sie das Cmdlet ausführen. Der Nachteil ist, dass Sie die Detailebene in den generierten Protokollen nicht festlegen können.  
+2.  Verwenden Sie das PowerShell-Cmdlet [Get-ClusterLog](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10)). Der Vorteil dieser Methode ist, dass Sie das Clusterprotokolldatei von allen Knoten in einem Zielverzeichnis auf dem Knoten generieren können, auf dem Sie das Cmdlet ausführen. Der Nachteil ist, dass Sie die Detailebene in den generierten Protokollen nicht festlegen können.  
   
  Die folgenden PowerShell-Befehle generieren von allen Clusterknoten der letzten 15 Minuten Clusterprotokolldateien und platzieren diese im aktuellen Verzeichnis. Führen Sie die Befehle in einem PowerShell-Fenster mit Administratorrechten aus.  
   
@@ -55,7 +55,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 8.  Klicken Sie mit der rechten Maustaste erneut auf die Verfügbarkeitsgruppenressource, und klicken Sie auf **Diese Ressource online schalten**.  
   
 ## <a name="availability-group-resource-events"></a>Ereignisse der Verfügbarkeitsgruppenressource  
- Die folgende Tabelle zeigt die verschiedenen Arten von Ereignissen in CLUSTER.LOG, die die Verfügbarkeitsgruppenressource betreffen. Weitere Informationen zum Ressourcenhosting-Subsystem (RHS) und dem Ressourcensteuerungsmonitor (RCM) in WSFC finden Sie unter [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx) (Ressourcenhosting-Subsystem (RHS) In Windows Server 2008-Failoverclustern).  
+ Die folgende Tabelle zeigt die verschiedenen Arten von Ereignissen in CLUSTER.LOG, die die Verfügbarkeitsgruppenressource betreffen. Weitere Informationen zum Ressourcenhosting-Subsystem (RHS) und dem Ressourcensteuerungsmonitor (RCM) in WSFC finden Sie unter [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](/archive/blogs/askcore/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters) (Ressourcenhosting-Subsystem (RHS) In Windows Server 2008-Failoverclustern).  
   
 |Bezeichner|`Source`|Beispiel aus CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
@@ -76,5 +76,4 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 3.  Ändern Sie den Wert **SeparateMonitor** in **1**.  
   
 4.  Starten Sie den Clusterdienst für Ihre Verfügbarkeitsgruppe im WSFC-Cluster neu.  
-  
   

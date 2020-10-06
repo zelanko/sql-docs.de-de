@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ff79d4838b5982edf658dbb35cc40fa3d29e803
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 36828d66fb91f60bf920c18324c7e7ace479452b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116944"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727860"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Herstellen einer Verbindung mit einem Always On-Verfügbarkeitsgruppenlistener 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ Verbindungen werden automatisch an das schreibgeschützte Replikat weitergeleite
  
 -   Mindestens ein sekundäres Replikat ist auf schreibgeschützten Zugriff festgelegt, und jedes schreibgeschützte sekundäre Replikat sowie das primäre Replikat werden [konfiguriert, um schreibgeschütztes Routing zu unterstützen](configure-read-only-routing-for-an-availability-group-sql-server.md). 
 
--   Die Verbindungszeichenfolge verweist auf eine Datenbank innerhalb der Verfügbarkeitsgruppe. Eine Alternative dazu ist es, für den Anmeldenamen, der für die Verbindung verwendet wird, die Datenbank als Standarddatenbank zu konfigurieren. Weitere Informationen dazu finden Sie in [diesem Blogbeitrag zur Funktionsweise des Algorithmus mit dem schreibgeschützten Routing](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/) (in englischer Sprache).
+-   Die Verbindungszeichenfolge verweist auf eine Datenbank innerhalb der Verfügbarkeitsgruppe. Eine Alternative dazu ist es, für den Anmeldenamen, der für die Verbindung verwendet wird, die Datenbank als Standarddatenbank zu konfigurieren. Weitere Informationen dazu finden Sie in [diesem Blogbeitrag zur Funktionsweise des Algorithmus mit dem schreibgeschützten Routing](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson) (in englischer Sprache).
 
 -   Die Verbindungszeichenfolge verweist auf einen Verfügbarkeitsgruppenlistener, und die Anwendungsabsicht der eingehenden Verbindung wird auf schreibgeschützt festgelegt, z. B. mithilfe des Schlüsselworts **Application Intent=ReadOnly** in den ODBC- oder OLEBD-Verbindungszeichenfolgen, -Verbindungsattributen oder -Eigenschaften. 
 
@@ -198,4 +198,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2
 
 Nachdem Sie erfolgreich eine Verbindung mit dem Listener hergestellt haben, sollten Sie ein Offloading von [schreibgeschützten Workloads](overview-of-always-on-availability-groups-sql-server.md) und [Sicherungen](configure-backup-on-availability-replicas-sql-server.md) in Betracht ziehen, um die Leistung zu verbessern. Sie können auch verschiedene [Überwachungsstrategien für Verfügbarkeitsgruppen](monitoring-of-availability-groups-sql-server.md) überprüfen, mit denen Sie die Integrität Ihrer Verfügbarkeitsgruppe gewährleisten können. 
 
-Weitere Informationen finden Sie im Abschnitt „Verfügbarkeitsmodi“ des Themas [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). 
+Weitere Informationen finden Sie im Abschnitt „Verfügbarkeitsmodi“ des Themas [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).
