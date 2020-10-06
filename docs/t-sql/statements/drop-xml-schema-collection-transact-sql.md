@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f644ba5a1e42c309cc481d2ba7b42e6973d940e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77977886f4ccfca9fa41e4bdb685ac76ff96ff99
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496715"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497850"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,7 @@ Löscht die gesamte XML-Schemaauflistung und alle zugehörigen Komponenten.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```syntaxsql
 DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier  
 ```  
   
@@ -64,7 +63,7 @@ Eine XML-Schemaauflistung, die verwendet wird, kann nicht gelöscht werden. Also
   
 -   In einer schemagebundenen Funktion oder gespeicherten Prozedur darf nicht darauf verwiesen werden. Beispielsweise sperrt die folgende Funktion die XML-Schemaauflistung `MyCollection`, weil die Funktion `WITH SCHEMABINDING` angibt. Wenn Sie dies entfernen, ist für XML SCHEMA COLLECTION keine Sperre vorhanden.  
   
-    ```  
+    ```sql  
     CREATE FUNCTION dbo.MyFunction()  
     RETURNS int  
     WITH SCHEMABINDING  
@@ -82,7 +81,7 @@ Zum Löschen von XML SCHEMA COLLECTION ist die DROP-Berechtigung für die Auflis
 ## <a name="examples"></a>Beispiele  
 Das folgende Beispiel zeigt, wie eine XML-Schemaauflistung entfernt wird.  
   
-```  
+```sql  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  
 GO  
 ```  

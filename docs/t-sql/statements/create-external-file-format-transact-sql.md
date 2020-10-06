@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1beca4564978fc069a896eadd42ed257dc28414
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 9f9db43b930baffc31529a3e36fb014225957a39
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024362"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529391"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -322,7 +322,6 @@ Hinweise zur Tabelle:
    `Encoding = {'UTF8' | 'UTF16'}`
    
  In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU 7.4) kann PolyBase UTF8- und UFT16-LE-codierte durch Trennzeichen getrennte Textdateien lesen. In SQL Server unterstützt PolyBase nicht das Lesen UTF16-codierter Dateien.
-
 
 ## <a name="permissions"></a>Berechtigungen  
  Macht eine ALTER ANY EXTERNAL FILE FORMAT-Berechtigung erforderlich.

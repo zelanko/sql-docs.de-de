@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 999773d8e8406dac20f86e9f19a2b886a4988619
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e41272ce78e5bfb0dd1a0f746a11d6700ac11c59
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88358406"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498155"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS-Klausel (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,6 @@ Queues
 ```  
   
 ```syntaxsql
-  
 -- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
   
@@ -155,7 +154,7 @@ DDL Triggers with Database Scope
   
  Wenn die folgende `CREATE PROCEDURE`-Anweisung ausgeführt wird, wird `CompanyDomain\SqlUser1` implizit als Datenbankprinzipal in der `Sales`-Datenbank erstellt.  
   
-```  
+```sql  
 USE Sales;  
 GO  
 CREATE PROCEDURE dbo.usp_Demo  
@@ -170,7 +169,7 @@ GO
   
  Angenommen, die folgende gespeicherte Prozedur wird von `SqlUser2` aufgerufen.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.usp_Demo  
 WITH EXECUTE AS 'SqlUser1'  
 AS  
@@ -202,7 +201,7 @@ GO
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine gespeicherte Prozedur in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank erstellt und der Ausführungskontext `OWNER` zugewiesen.  
   
-```  
+```sql  
 CREATE PROCEDURE HumanResources.uspEmployeesInDepartment   
 @DeptValue int  
 WITH EXECUTE AS OWNER  
@@ -221,7 +220,6 @@ GO
 -- Execute the stored procedure by specifying department 5.  
 EXECUTE HumanResources.uspEmployeesInDepartment 5;  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

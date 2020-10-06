@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e466840015f0b5d82a8e6430434239db6655ee81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d966e11f3bb545ec4ac71a412958fc36de6885ee
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472228"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497744"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT-Berechtigungen für Volltext (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -138,7 +138,7 @@ AS *granting_principal*
 ### <a name="a-granting-permissions-to-a-full-text-catalog"></a>A. Gewähren von Berechtigungen für einen Volltextkatalog  
  Im folgenden Beispiel wird `Ted` die `CONTROL`-Berechtigung für den `ProductCatalog`-Volltextkatalog erteilt.  
   
-```  
+```sql  
 GRANT CONTROL  
     ON FULLTEXT CATALOG :: ProductCatalog  
     TO Ted ;  
@@ -147,7 +147,7 @@ GRANT CONTROL
 ### <a name="b-granting-permissions-to-a-stoplist"></a>B. Gewähren von Berechtigungen für eine Stoppliste  
  Im folgenden Beispiel wird `Mary` die `VIEW DEFINITION`-Berechtigung für die `ProductStoplist`-Volltextstoppliste erteilt.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON FULLTEXT STOPLIST :: ProductStoplist  
     TO Mary ;  

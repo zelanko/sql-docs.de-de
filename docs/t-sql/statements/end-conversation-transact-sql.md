@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6eafb66e4cc5f14803027d26f88dbf4baafbcd0c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 94fcbdfe06b99e0fb66cb6d462512c7d2a283914
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540634"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497935"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "89540634"
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-  
 END CONVERSATION conversation_handle  
    [   [ WITH ERROR = failure_code DESCRIPTION = 'failure_text' ]  
      | [ WITH CLEANUP ]  
@@ -96,14 +95,14 @@ END CONVERSATION conversation_handle
 ### <a name="a-ending-a-conversation"></a>A. Beenden einer Konversation  
  Im folgenden Beispiel wird der von `@dialog_handle` angegebene Dialog beendet.  
   
-```  
+```sql 
 END CONVERSATION @dialog_handle ;  
 ```  
   
 ### <a name="b-ending-a-conversation-with-an-error"></a>B. Beenden einer Konversation mit einem Fehler  
  Im folgenden Beispiel wird der von `@dialog_handle` angegebene Dialog mit einem Fehler beendet, wenn die verarbeitende Anweisung einen Fehler meldet. Dieser Ansatz der Fehlerbehandlung ist stark vereinfachend und möglicherweise nicht für alle Anwendungen geeignet.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
         @ErrorSave INT,  
         @ErrorDesc NVARCHAR(100) ;  
@@ -128,7 +127,7 @@ COMMIT TRANSACTION ;
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. Bereinigen einer Konversation, die nicht normal abgeschlossen werden kann  
  Im folgenden Beispiel wird der von `@dialog_handle` angegebene Dialog beendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt alle Nachrichten unmittelbar aus der Dienstwarteschlange und der Übertragungswarteschlange ohne den Remotedienst zu benachrichtigen. Da beim Beenden eines Dialogs mit Cleanup der Remotedienst nicht benachrichtigt wird, sollten Sie diese Option nur verwenden, wenn der Remotedienst keine **EndDialog**- oder **Error**-Nachricht empfangen kann.  
   
-```  
+```sql  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   

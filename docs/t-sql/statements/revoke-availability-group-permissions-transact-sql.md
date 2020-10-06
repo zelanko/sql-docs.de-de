@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5bdcb114316ea124200e7974f2ffd5675adbe052
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9f3bf6cabb705c194036bb123ed9f9e463777f94
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485349"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498056"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Aufheben von Verfügbarkeitsgruppenberechtigungen mit REVOKE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "86485349"
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     ON AVAILABILITY GROUP :: availability_group_name  
     { FROM | TO } < server_principal >  [ ,...n ]  
@@ -111,7 +110,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. Aufheben der VIEW DEFINITION-Berechtigung für eine Verfügbarkeitsgruppe  
  Im folgenden Beispiel wird die `VIEW DEFINITION`-Berechtigung für die Verfügbarkeitsgruppe `MyAg` für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `ZArifin` aufgehoben.  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;  
 GO  
@@ -120,7 +119,7 @@ GO
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. Aufheben der TAKE OWNERSHIP-Berechtigung mit CASCADE  
  Im folgenden Beispiel wird die `TAKE OWNERSHIP`-Berechtigung für die Verfügbarkeitsgruppe `MyAg` für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer `PKomosinski` und für alle Prinzipale aufgehoben, denen von `PKomosinski` die TAKE OWNERSHIP-Berechtigung für MyAg erteilt wurde.  
   
-```  
+```sql  
 USE master;  
 REVOKE TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     CASCADE;  
@@ -130,7 +129,7 @@ GO
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>C. Aufheben einer zuvor mit der WITH GRANT OPTION-Klausel erteilten Berechtigung  
  Wenn eine Berechtigung mit der WITH GRANT OPTION erteilt wurde, verwenden Sie REVOKE GRANT OPTION FOR … zum Entfernen von WITH GRANT OPTION. Im folgenden Beispiel wird die Berechtigung erteilt, und dann wird der WITH GRANT-Teil der Berechtigung entfernt.  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     WITH GRANT OPTION;  

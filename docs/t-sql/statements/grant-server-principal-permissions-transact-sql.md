@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e60093d5a81d01a88daac53593b2be721652df42
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 76dd1d69fe66b5165bdf3cad21c3d5b513c6bbe5
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472202"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498239"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT (Berechtigungen für Serverprinzipal) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "88472202"
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-  
 GRANT permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -115,7 +114,7 @@ GRANT permission [ ,...n ] }
 ### <a name="a-granting-impersonate-permission-on-a-login"></a>A. Erteilen der IMPERSONATE-Berechtigung für einen Anmeldenamen  
  Im folgenden Beispiel wird die `IMPERSONATE`-Berechtigung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `WanidaBenshoof` einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen erteilt, der aus dem Windows-Benutzer `AdvWorks\YoonM` erstellt wurde.  
   
-```  
+```sql  
 USE master;  
 GRANT IMPERSONATE ON LOGIN::WanidaBenshoof to [AdvWorks\YoonM];  
 GO  
@@ -124,7 +123,7 @@ GO
 ### <a name="b-granting-view-definition-permission-with-grant-option"></a>B. Erteilen der VIEW DEFINITION-Berechtigung mit GRANT OPTION  
  Im folgenden Beispiel wird die `VIEW DEFINITION`-Berechtigung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `EricKurjan` dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen `RMeyyappan` mit `GRANT OPTION` erteilt.  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan   
     WITH GRANT OPTION;  
@@ -134,7 +133,7 @@ GO
 ### <a name="c-granting-view-definition-permission-on-a-server-role"></a>C. Erteilen der VIEW DEFINITION-Berechtigung für eine Serverrolle  
  Im folgenden Beispiel wird `VIEW DEFINITION` für die Serverrolle `Sales` der Serverrolle `Auditors` gewährt.  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

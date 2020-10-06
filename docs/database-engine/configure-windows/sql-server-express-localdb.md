@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0073698d4cc7ce29912be8bbce3badf3eeea6742
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 1b0fea6ec995f383cd290ebbee786e31623b25f1
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288332"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669605"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -55,7 +55,7 @@ Eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB w
 
 Das LocalDB-Setupprogramm installiert mithilfe von `SqlLocalDB.msi` die notwendigen Dateien auf dem Computer. Nach der Installation ist LocalDB eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken erstellt und geöffnet werden können. Die Systemdatenbankdateien für die Datenbank werden im lokalen AppData-Pfad des Benutzers gespeichert, der normalerweise verborgen ist. Beispiel: `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. Benutzerdatenbankdateien werden an dem vom Benutzer angegebenen Speicherort gespeichert, in der Regel im Ordner `C:\Users\<user>\Documents\`.
 
-Weitere Informationen zur Einbindung von LocalDB in eine Anwendung finden Sie unter [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][Übersicht über lokale Daten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)) und [Erstellen einer Datenbank und Hinzufügen von Tabellen in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer).
+Weitere Informationen zur Einbindung von LocalDB in eine Anwendung finden Sie unter [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][Übersicht über lokale Daten](/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)) und [Erstellen einer Datenbank und Hinzufügen von Tabellen in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer).
 
 Weitere Informationen zur LocalDB-API finden Sie in der [Referenz zu SQL Server Express LocalDB](../../relational-databases/sql-server-express-localdb-reference.md).
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b79e3a75f0b3590bcc0485a4d24b2a001bd8390
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548963"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498188"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89548963"
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-  
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   
         <column_specifier> [ ,...n ]  
@@ -183,14 +182,14 @@ ms.locfileid: "89548963"
 ### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. Empfangen sämtlicher Spalten für alle Nachrichten in einer Konversationsgruppe  
  Im folgenden Beispiel werden alle verfügbaren Nachrichten für die nächste verfügbare Konversationsgruppe aus der `ExpenseQueue`-Warteschlange empfangen. Die Anweisung gibt die Nachrichten als Resultset zurück.  
   
-```  
+```sql  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>B. Empfangen angegebener Spalten für alle Nachrichten in einer Konversationsgruppe  
  Im folgenden Beispiel werden alle verfügbaren Nachrichten für die nächste verfügbare Konversationsgruppe aus der `ExpenseQueue`-Warteschlange empfangen. Die Anweisung gibt die Nachrichten als Resultset zurück, das die Spalten `conversation_handle`, `message_type_name` und `message_body` umfasst.  
   
-```  
+```sql  
 RECEIVE conversation_handle, message_type_name, message_body  
 FROM ExpenseQueue ;  
 ```  
@@ -198,14 +197,14 @@ FROM ExpenseQueue ;
 ### <a name="c-receiving-the-first-available-message-in-the-queue"></a>C. Empfangen der ersten verfügbaren Nachricht in der Warteschlange  
  Im folgenden Beispiel wird die erste verfügbare Nachricht aus der `ExpenseQueue`-Warteschlange als Resultset empfangen.  
   
-```  
+```sql  
 RECEIVE TOP (1) * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="d-receiving-all-messages-for-a-specified-conversation"></a>D: Empfangen aller Nachrichten für eine angegebene Konversation  
  Im folgenden Beispiel werden alle verfügbaren Nachrichten für die angegebene Konversation aus der `ExpenseQueue`-Warteschlange als Resultset empfangen.  
   
-```  
+```sql  
 DECLARE @conversation_handle UNIQUEIDENTIFIER ;  
   
 SET @conversation_handle = <retrieve conversation from database> ;  
@@ -218,7 +217,7 @@ WHERE conversation_handle = @conversation_handle ;
 ### <a name="e-receiving-messages-for-a-specified-conversation-group"></a>E. Empfangen von Nachrichten für eine angegebene Konversationsgruppe  
  Im folgenden Beispiel werden alle verfügbaren Nachrichten für die angegebene Konversationsgruppe aus der `ExpenseQueue`-Warteschlange als Resultset empfangen.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 SET @conversation_group_id =   
@@ -232,7 +231,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="f-receiving-into-a-table-variable"></a>F. Empfangen in einer Tabellenvariablen  
  Im folgenden Beispiel werden alle verfügbaren Nachrichten für eine angegebene Konversationsgruppe aus der `ExpenseQueue`-Warteschlange in einer Tabellenvariablen empfangen.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 DECLARE @procTable TABLE(  
@@ -264,7 +263,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="g-receiving-messages-and-waiting-indefinitely"></a>G. Empfangen von Nachrichten ohne Begrenzung der Wartezeit  
  Im folgenden Beispiel werden alle verfügbaren Nachrichten für die nächste verfügbare Konversationsgruppe in der `ExpenseQueue`-Warteschlange empfangen. Die Anweisung wartet, bis mindestens eine Nachricht verfügbar ist. Sie gibt dann ein Resultset zurück, das alle Nachrichtenspalten enthält.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue) ;  
@@ -273,7 +272,7 @@ WAITFOR (
 ### <a name="h-receiving-messages-and-waiting-for-a-specified-interval"></a>H. Empfangen von Nachrichten und Warten für ein angegebenes Intervall  
  Im folgenden Beispiel werden alle verfügbaren Nachrichten für die nächste verfügbare Konversationsgruppe in der `ExpenseQueue`-Warteschlange empfangen. Die Anweisung wartet 60 Sekunden oder so lange, bis mindestens eine Nachricht verfügbar ist, je nachdem, welches Ereignis zuerst eintritt. Die Anweisung gibt ein Resultset zurück, das alle Nachrichtenspalten enthält, wenn mindestens eine Nachricht verfügbar ist. Andernfalls gibt die Anweisung ein leeres Resultset zurück.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue ),  
@@ -283,7 +282,7 @@ TIMEOUT 60000 ;
 ### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>I. Empfangen von Nachrichten und Ändern des Typs einer Spalte  
  Im folgenden Beispiel werden alle verfügbaren Nachrichten für die nächste verfügbare Konversationsgruppe in der `ExpenseQueue`-Warteschlange empfangen. Wenn über den Nachrichtentyp angegeben wird, dass die Nachricht ein XML-Dokument enthält, dann konvertiert die Anweisung den Nachrichtentext in XML.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE message_type_name,  
         CASE  
@@ -297,7 +296,7 @@ TIMEOUT 60000 ;
 ### <a name="j-receiving-a-message-extracting-data-from-the-message-body-retrieving-conversation-state"></a>J. Empfangen einer Nachricht, Extrahieren von Daten aus dem Nachrichtentext und Abrufen des Konversationsstatus  
  Im folgenden Beispiel wird die nächste verfügbare Nachricht für die nächste verfügbare Konversationsgruppe in der `ExpenseQueue`-Warteschlange empfangen. Im Falle des Nachrichtentyps `//Adventure-Works.com/Expenses/SubmitExpense` extrahiert die Anweisung die Employee ID und eine Liste von Elementen aus dem Nachrichtentext. Die Anweisung ruft auch den Status der Konversation aus der `ConversationState`-Tabelle ab.  
   
-```  
+```sql  
 WAITFOR(  
     RECEIVE   
     TOP(1)  

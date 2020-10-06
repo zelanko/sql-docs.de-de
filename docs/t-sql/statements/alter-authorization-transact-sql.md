@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1f3c3e7cf586cfe70fc1e8d4198a6708c36d68b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: ae54518c8ff2d7a7ad4b6f55dd3b16ce9d0528eb
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024392"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529443"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -215,7 +215,6 @@ Der neue Besitzerprinzipal muss einer der folgenden sein:
 -   Ein Verbundbenutzer (keine Gruppe) in Azure AD  
 -   Ein verwalteter Benutzer (keine Gruppe) oder eine Anwendung in Azure AD    
 
-> [!NOTE]  
 > Wenn der neue Besitzer ein Azure Active Directory-Benutzer ist, darf dieser Benutzer nicht in der Datenbank vorhanden sein, für die der neue Besitzer der DBO werden soll. Der Azure AD-Benutzer muss zunächst aus der Datenbank entfernt werden, bevor die ALTER AUTHORIZATION-Anweisung ausgeführt wird, die den Datenbankbesitz auf den neuen Benutzer überträgt. Weitere Informationen zum Konfigurieren von Azure Active Directory-Benutzern mit SQL-Datenbank finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank oder [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] mithilfe der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
   
 **Anforderungen an die Person, die die ALTER AUTHORIZATION-Anweisung ausführt:**  

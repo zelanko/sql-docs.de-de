@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdcee07d25c05ca8571071dfe8f98b00c9259f9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aead1bff6950305af650040bffb65d92a436f769
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357856"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498086"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "88357856"
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-  
 OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>  
   
 <decryption_mechanism> ::=  
@@ -95,7 +94,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>A. Öffnen eines symmetrischen Schlüssels mithilfe eines Zertifikats  
  Im folgenden Beispiel wird der symmetrische Schlüssel `SymKeyMarketing3` geöffnet und mit dem privaten Schlüssel des `MarketingCert9`-Zertifikats entschlüsselt.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 OPEN SYMMETRIC KEY SymKeyMarketing3   
     DECRYPTION BY CERTIFICATE MarketingCert9;  
@@ -105,7 +104,7 @@ GO
 ### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>B. Öffnen eines symmetrischen Schlüssels mithilfe eines anderen symmetrischen Schlüssels  
  Im folgenden Beispiel wird der symmetrische Schlüssel `MarketingKey11` geöffnet und mit dem symmetrischen Schlüssel `HarnpadoungsatayaSE3` entschlüsselt.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 -- First open the symmetric key that you want for decryption.  
 OPEN SYMMETRIC KEY HarnpadoungsatayaSE3   
