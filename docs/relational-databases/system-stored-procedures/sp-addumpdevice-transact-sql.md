@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91af8d735fb27f5009d4c7067805523f02413ba4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f17681ffbb922b25cffc6b21ecf2f6317d400db
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549996"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753792"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](../../sql-server/what-s-new-in-sql-server-2016.md)).  
 
 Fügt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Sicherungsmedium hinzu.  
   
@@ -77,7 +77,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_addumpdevice** fügt der **sys. backup_devices** -Katalog Sicht ein Sicherungsmedium hinzu. Auf das Gerät kann dann in BACKUP- und RESTORE-Anweisungen logisch verwiesen werden. **sp_addumpdevice** führt keinen Zugriff auf das physische Gerät aus. Ein Zugriff auf das angegebene Medium erfolgt nur, wenn eine BACKUP- oder RESTORE-Anweisung ausgeführt wird. Das Erstellen eines logischen Sicherungsmediums kann BACKUP- und RESTORE-Anweisungen vereinfachen, wo das Angeben des Gerätenamens eine Alternative zu einer "TAPE ="- oder "DISK ="-Klausel zum Angeben des Pfades darstellt.  
+ **sp_addumpdevice** fügt der **sys.backup_devices** -Katalog Sicht ein Sicherungsmedium hinzu. Auf das Gerät kann dann in BACKUP- und RESTORE-Anweisungen logisch verwiesen werden. **sp_addumpdevice** führt keinen Zugriff auf das physische Gerät aus. Ein Zugriff auf das angegebene Medium erfolgt nur, wenn eine BACKUP- oder RESTORE-Anweisung ausgeführt wird. Das Erstellen eines logischen Sicherungsmediums kann BACKUP- und RESTORE-Anweisungen vereinfachen, wo das Angeben des Gerätenamens eine Alternative zu einer "TAPE ="- oder "DISK ="-Klausel zum Angeben des Pfades darstellt.  
   
  Besitz- und Berechtigungsprobleme können das Verwenden von Datenträger- oder Dateisicherungsmedien beeinträchtigen. Stellen Sie sicher, dass für das Windows-Konto, unter dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] gestartet wurde, entsprechende Dateiberechtigungen angegeben sind.  
   
@@ -148,5 +148,4 @@ GO
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

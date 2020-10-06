@@ -20,12 +20,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71985db395bd1574e40e1769093c30ec972f90a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: aad968588ff8e7ed454b35d74ce992cae0f9d836
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536834"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753992"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "89536834"
 |MAXIMUM_CARDINALITY|**bigint**|NULL. Für zukünftige Verwendung reserviert.|  
 |DTD_IDENTIFIER|**nvarchar (** 128 **)**|NULL. Für zukünftige Verwendung reserviert.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|Gibt SQL für eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion und EXTERNAL für eine extern geschriebene Funktion zurück.<br /><br /> Funktionen sind immer SQL.|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Gibt die ersten 4000 Zeichen des Definitionstexts der Funktion oder gespeicherten Prozedur zurück, wenn die Funktion oder gespeicherte Prozedur nicht verschlüsselt ist. Andernfalls wird NULL zurückgegeben.<br /><br /> Um sicherzustellen, dass Sie die gesamte Definition erhalten, Fragen Sie die [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) -Funktion oder die Definition-Spalte in der [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalog Sicht ab.|  
+|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Gibt die ersten 4000 Zeichen des Definitionstexts der Funktion oder gespeicherten Prozedur zurück, wenn die Funktion oder gespeicherte Prozedur nicht verschlüsselt ist. Andernfalls wird NULL zurückgegeben.<br /><br /> Um sicherzustellen, dass Sie die gesamte Definition erhalten, Fragen Sie die [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) -Funktion oder die Definition-Spalte in der [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalog Sicht ab.|  
 |EXTERNAL_NAME|**nvarchar (** 128 **)**|NULL. Für zukünftige Verwendung reserviert.|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL. Für zukünftige Verwendung reserviert.|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL. Für zukünftige Verwendung reserviert.|  
@@ -92,11 +92,10 @@ ms.locfileid: "89536834"
 |LAST_ALTERED|**datetime**|Zeitpunkt der letzten Änderung der Funktion.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [System Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [System Sichten &#40;Transact-SQL-&#41;](../../t-sql/language-reference.md)   
  [Informations Schema Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
-  
   

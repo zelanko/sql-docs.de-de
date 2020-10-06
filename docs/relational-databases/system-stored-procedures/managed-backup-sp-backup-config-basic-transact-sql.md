@@ -1,6 +1,6 @@
 ---
 description: managed_backup.sp_backup_config_basic (Transact-SQL)
-title: managed_backup. sp_backup_config_basic (Transact-SQL) | Microsoft-Dokumentation
+title: managed_backup managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d738a7cf10801366abaebe4ef7857475cd2aad5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549999"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753733"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89549999"
   Konfiguriert die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] grundlegenden Einstellungen für eine bestimmte Datenbank oder für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Diese Prozedur kann eigenständig aufgerufen werden, um eine grundlegende verwaltete Sicherungs Konfiguration zu erstellen. Wenn Sie jedoch erweiterte Features oder einen benutzerdefinierten Zeitplan hinzufügen möchten, konfigurieren Sie diese Einstellungen zuerst mithilfe von [managed_backup. sp_backup_config_advanced &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) und [managed_backup. sp_backup_config_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) , bevor Sie die verwaltete Sicherung mit diesem Verfahren aktivieren.  
+>  Diese Prozedur kann eigenständig aufgerufen werden, um eine grundlegende verwaltete Sicherungs Konfiguration zu erstellen. Wenn Sie jedoch planen, erweiterte Features oder einen benutzerdefinierten Zeitplan hinzuzufügen, konfigurieren Sie diese Einstellungen zuerst mithilfe von [managed_backup. sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) und [managed_backup. sp_backup_config_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) , bevor Sie die verwaltete Sicherung mit diesem Verfahren aktivieren.  
    
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  Der Datenbankname für die Aktivierung der verwalteten Sicherung für eine bestimmte Datenbank.  
   
  @container_url  
- Eine URL, die den Speicherort der Sicherung angibt. Wenn @credential_name NULL ist, ist diese URL eine SAS-URL (Shared Access Signature) für einen BlobContainer in Azure Storage, und die Sicherungen verwenden die neue Sicherung zum Blockieren der blobfunktionalität. Weitere Informationen finden Sie Untergrund Legendes zu [SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Wenn @credential_name angegeben wird, handelt es sich hierbei um eine Speicherkonto-URL, und für die Sicherungen wird die veraltete Sicherung auf seitenblob-Funktionalität verwendet.  
+ Eine URL, die den Speicherort der Sicherung angibt. Wenn @credential_name NULL ist, ist diese URL eine SAS-URL (Shared Access Signature) für einen BlobContainer in Azure Storage, und die Sicherungen verwenden die neue Sicherung zum Blockieren der blobfunktionalität. Weitere Informationen finden Sie Untergrund Legendes zu [SAS](/azure/storage/common/storage-sas-overview). Wenn @credential_name angegeben wird, handelt es sich hierbei um eine Speicherkonto-URL, und für die Sicherungen wird die veraltete Sicherung auf seitenblob-Funktionalität verwendet.  
   
 > [!NOTE]  
 >  Zurzeit wird nur eine SAS-URL für diesen Parameter unterstützt.  
@@ -110,7 +110,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [managed_backup. sp_backup_config_advanced &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+ [managed_backup managed_backup.sp_backup_config_advanced &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
-  
   

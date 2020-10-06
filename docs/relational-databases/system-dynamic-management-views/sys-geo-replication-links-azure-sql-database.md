@@ -1,6 +1,6 @@
 ---
 description: sys.geo_replication_links (Azure SQL-Datenbank)
-title: sys. geo_replication_links (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sys.geo_replication_links (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -18,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 36849d6fc285839ebf99b75452735ddf5073f4ec
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 568cda98a1bbb55e5c4f3e07bd53592ff642f0bd
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543747"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753690"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL-Datenbank)
 
@@ -44,7 +44,7 @@ ms.locfileid: "89543747"
 |Rolle (role)|**tinyint**|Die georeplikationsrolle ist eine der folgenden:<br /><br /> 0 = primär. Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.<br /><br /> 1 = sekundär.  Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Der sekundäre Typ, einer der folgenden:<br /><br /> 0 = Nein. Der Zugriff auf die sekundäre Datenbank ist bis zum Failover nicht möglich.<br /><br /> 1 = schreibgeschützt. Auf die sekundäre Datenbank kann nur für Clientverbindungen mit applicationintent = schreibgeschützt zugegriffen werden.<br /><br /> 2 = Alle. Auf die sekundäre Datenbank kann jede Client Verbindung zugreifen.|  
-|secondary_allow_connections _DESC|**nvarchar(256)**|No<br /><br /> All<br /><br /> Schreibgeschützt|  
+|secondary_allow_connections _DESC|**nvarchar(256)**|Nein<br /><br /> All<br /><br /> Schreibgeschützt|  
   
 ## <a name="permissions"></a>Berechtigungen
 
@@ -68,6 +68,6 @@ FROM sys.geo_replication_links;
 
 ## <a name="see-also"></a>Weitere Informationen
 
- [ALTER DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys. dm_geo_replication_link_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys. dm_operation_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
+ [ALTER DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.dm_geo_replication_link_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)

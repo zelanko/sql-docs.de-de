@@ -1,6 +1,6 @@
 ---
-description: sys. fn_hadr_distributed_ag_database_replica (Transact-SQL)
-title: sys. fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft-Dokumentation
+description: sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
+title: sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f54cfdf987474435b452421620246b6432892a36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b87e98f49941cfa9da555d54a10185d21e36d47e
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419504"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753677"
 ---
-# <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_database_replica (Transact-SQL)
+# <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Wird verwendet, um eine Datenbank in einer verteilten Verfügbarkeits Gruppe der-Datenbank in der lokalen Verfügbarkeits Gruppe zuzuordnen.  
@@ -57,7 +57,7 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Verwenden von sys. fn_hadr_distributed_ag_database_replica  
+### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Verwenden von sys.fn_hadr_distributed_ag_database_replica  
  Im folgenden Beispiel wird die Datenbank-ID in einer verteilten Verfügbarkeits Gruppe weitergegeben. Es wird eine Tabelle mit der Datenbank-ID zurückgegeben, die der lokalen Verfügbarkeits Gruppe zugeordnet ist.  
   
 ```  
@@ -71,8 +71,7 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [Always on-Verfügbarkeits Gruppenfunktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Verteilte Verfügbarkeits Gruppen &#40;Always on Verfügbarkeits Gruppen&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
+ [Verteilte Verfügbarkeits Gruppen &#40;Always on Verfügbarkeits Gruppen&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
-  
   

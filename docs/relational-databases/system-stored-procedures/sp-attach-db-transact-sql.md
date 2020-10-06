@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919558d10e0e5d16b93d6efc171825670da47778
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 79c3d518798c53342e67bfa42ce430d9ffe8e07a
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536761"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753472"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89536761"
   Fügt eine Datenbank an einen Server an.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Es empfiehlt sich, stattdessen CREATE DATABASE *database_name* for Attach zu verwenden. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Es empfiehlt sich, stattdessen CREATE DATABASE *database_name* for Attach zu verwenden. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
 > [!NOTE]  
 >  Zum erneuten Erstellen mehrerer Protokolldateien, wenn mindestens ein Speicherort vorhanden ist, verwenden Sie CREATE DATABASE *database_name* for ATTACH_REBUILD_LOG.  
@@ -53,7 +53,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 `[ @filename1 = ] 'filename_n'` Der physische Name einer Datenbankdatei, einschließlich des Pfads. *filename_n* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. Sie können bis zu 16 Dateinamen angeben. Die Parameternamen beginnen bei ** \@ filename1** und erhöhen zu ** \@ filename16**. Die Liste der Dateinamen muss mindestens die primäre Datei einschließen. Die primäre Datei enthält die Systemtabellen, die auf andere Dateien in der Datenbank zeigen. Die Liste muss außerdem alle Dateien enthalten, die nach dem Trennen der Datenbank verschoben wurden.  
   
 > [!NOTE]  
->  Dieses Argument entspricht dem FILENAME-Parameter der CREATE DATABASE-Anweisung. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  Dieses Argument entspricht dem FILENAME-Parameter der CREATE DATABASE-Anweisung. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
 >   
 >  Wenn Sie eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank mit Volltextkatalogdateien an eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Serverinstanz anfügen, werden die Katalogdateien von ihrem vorherigen Speicherort aus zusammen mit den anderen Datenbankdateien angefügt. Dies entspricht der Vorgehensweise in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Weitere Informationen finden Sie unter [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md).  
   
@@ -64,7 +64,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die gespeicherte Prozedur **sp_attach_db** sollte nur für Datenbanken ausgeführt werden, die zuvor vom Datenbankserver getrennt wurden, indem ein expliziter **sp_detach_db** Vorgang oder kopierte Datenbanken verwendet wurden. Wenn Sie mehr als 16 Dateien angeben müssen, verwenden Sie CREATE DATABASE *database_name* for Attach oder CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Die gespeicherte Prozedur **sp_attach_db** sollte nur für Datenbanken ausgeführt werden, die zuvor vom Datenbankserver getrennt wurden, indem ein expliziter **sp_detach_db** Vorgang oder kopierte Datenbanken verwendet wurden. Wenn Sie mehr als 16 Dateien angeben müssen, verwenden Sie CREATE DATABASE *database_name* for Attach oder CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
  Wird für eine Datei kein Pfad angegeben, wird davon ausgegangen, dass sie sich am zuletzt bekannten Speicherort befindet. Wenn Sie eine Datei an einem anderen Speicherort verwenden möchten, müssen Sie den neuen Speicherort angeben.  
   
@@ -84,7 +84,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  Wird eine Datenbank zum ersten Mal an eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt oder wiederhergestellt, ist noch keine Kopie des Datenbank-Hauptschlüssels (verschlüsselt vom Diensthauptschlüssel) auf dem Server gespeichert. Der Datenbank-Hauptschlüssel (Database Master Key, DMK) muss mithilfe der Anweisung **OPEN MASTER KEY** entschlüsselt werden. Nachdem der Datenbank-Hauptschlüssel entschlüsselt wurde, können Sie für die Zukunft die automatische Entschlüsselung aktivieren, indem Sie die Anweisung **ALTER MASTER KEY REGENERATE** verwenden. Auf diese Weise können Sie eine Kopie des mit dem Diensthauptschlüssel (Service Master Key, SMK) verschlüsselten Datenbank-Hauptschlüssels für den Server bereitstellen. Wenn eine Datenbank von einer früheren Version aktualisiert wurde, sollte der DMK neu generiert werden, damit er den neueren AES-Algorithmus verwendet. Weitere Informationen zum Neugenerieren des DMK finden Sie unter [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). Die zum Neugenerieren des DMK zum Upgrade auf AES erforderliche Zeit hängt von der Anzahl der Objekte ab, die durch den DMK geschützt werden. Der DMK muss nur einmal auf AES aktualisiert und neu generiert werden. Dies hat keine Auswirkungen auf zukünftige Neugenerierungen im Rahmen einer Schlüsselrotationsstrategie.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Informationen dazu, wie Berechtigungen verarbeitet werden, wenn eine Datenbank angefügt wird, finden Sie unter [Create Database &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Informationen dazu, wie Berechtigungen verarbeitet werden, wenn eine Datenbank angefügt wird, finden Sie unter [Create Database &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Dateien von [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] an den aktuellen Server angefügt.  
@@ -103,5 +103,4 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
  [sp_helpfile &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_removedbreplication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

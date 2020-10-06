@@ -34,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae9077610031075f71564eb5938b2a1415842827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454793"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753703"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ CONTAINSTABLE
 ## <a name="remarks"></a>Bemerkungen  
  Volltextprädikate und -funktionen gelten für eine einzelne Tabelle, die im FROM-Prädikat enthalten ist. Um eine Suche in mehreren Tabellen auszuführen, können Sie eine verknüpfte Tabelle in der FROM-Klausel verwenden, um in einem Resultset zu suchen, das aus mindestens zwei Tabellen erstellt wird.  
   
- Die zurückgegebene Tabelle verfügt über eine Spalte mit dem Namen **Key** , die voll Text Schlüsselwerte enthält. Jede voll Text indizierte Tabelle verfügt über eine Spalte, deren Werte garantiert eindeutig sind, und die Werte, die in der **Schlüssel** Spalte zurückgegeben werden, sind die voll Text Schlüsselwerte der Zeilen, die mit den Auswahlkriterien übereinstimmen, die in der Such Bedingung "enthält" angegeben sind. Die **TableFulltextKeyColumn** -Eigenschaft, die von der OBJECTPROPERTYEX-Funktion abgerufen wird, stellt die Identität dieser eindeutigen Schlüssel Spalte bereit. Zum Abrufen der ID der Spalte, die dem voll Text Schlüssel des voll Text Indexes zugeordnet ist, verwenden Sie **sys. fulltext_indexes**. Weitere Informationen finden Sie unter [sys. fulltext_indexes &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ Die zurückgegebene Tabelle verfügt über eine Spalte mit dem Namen **Key** , die voll Text Schlüsselwerte enthält. Jede voll Text indizierte Tabelle verfügt über eine Spalte, deren Werte garantiert eindeutig sind, und die Werte, die in der **Schlüssel** Spalte zurückgegeben werden, sind die voll Text Schlüsselwerte der Zeilen, die mit den Auswahlkriterien übereinstimmen, die in der Such Bedingung "enthält" angegeben sind. Die **TableFulltextKeyColumn** -Eigenschaft, die von der OBJECTPROPERTYEX-Funktion abgerufen wird, stellt die Identität dieser eindeutigen Schlüssel Spalte bereit. Zum Abrufen der ID der Spalte, die dem voll Text Schlüssel des voll Text Indexes zugeordnet ist, verwenden Sie **sys.fulltext_indexes**. Weitere Informationen finden Sie unter [sys.fulltext_indexes &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  Geben Sie einen Join mit den CONTAINSTABLE-Zeilen an, um die gewünschten Zeilen der Originaltabelle zu erhalten. CONTAINSTABLE wird meist in folgender Form in der FROM-Klausel einer SELECT-Anweisung verwendet:  
   
@@ -284,10 +284,9 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [Begrenzen von Suchergebnissen mit rank](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)   
- [Erstellen von Volltextsuchabfragen &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Erstellen von Volltextsuchabfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
-  
   

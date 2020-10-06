@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a3255e54b961effa6581875a332dc6651b7e1dce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ee456f7be6d59ded32a67908d69bf59028e931c6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542001"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753835"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,7 +69,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|Monatlich|  
 |**32**|Monatlich, relativ zu *freq_interval*|  
 |**64**|Beim Starten des SQL Agent-Dienstanbieter ausführen|  
-|**128**|Ausführen, wenn sich der Computer im Leerlauf befindet (wird in [Azure SQL-verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)nicht unterstützt) |  
+|**128**|Ausführen, wenn sich der Computer im Leerlauf befindet (wird in [Azure SQL-verwaltete Instanz](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)nicht unterstützt) |  
   
 `[ @freq_interval = ] freq_interval` Die Tage, an denen ein Auftrag ausgeführt wird. *freq_interval* ist vom Datentyp **int**und hat den Standardwert **1**und hängt vom Wert *freq_type*ab.  
   
@@ -99,10 +99,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|Sekunde|  
+|**2**|Second|  
 |**4**|Third|  
 |**8**|Vierter|  
-|**16**|Last (Letzter)|  
+|**16**|Letzter|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor` Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *freq_recurrence_factor* wird nur verwendet, *freq_type* wenn freq_type **8**, **16**oder **32**ist. *freq_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
@@ -136,7 +136,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -201,5 +201,4 @@ GO
  [sp_delete_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
-  
   

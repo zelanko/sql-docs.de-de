@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ce2e2ad16277c6ae5e21939976ede8ac89c8843
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3d909da06b0f8cf4520d92a9ba8cb8652a6b2a5a
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546249"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753887"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,10 +44,10 @@ sp_polybase_leave_group;
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Control Server-Berechtigung.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein Computeknoten kann nur aus einer Gruppe entfernt werden.  
   
- Starten Sie nach dem Ausführen der gespeicherten Prozedur die polybase-Engine und PolyBase-Datenverschiebungsdienst-Dienst auf dem Computer neu. Um zu überprüfen, ob die folgende DMV auf dem Haupt Knoten ausgeführt wird: **sys. dm_exec_compute_nodes**.  
+ Starten Sie nach dem Ausführen der gespeicherten Prozedur die polybase-Engine und PolyBase-Datenverschiebungsdienst-Dienst auf dem Computer neu. Um zu überprüfen, ob die folgende DMV auf dem Haupt Knoten ausgeführt wird: **sys.dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Beispiel  
  Im Beispiel wird der aktuelle Computer aus einer polybase-Gruppe entfernt.  
@@ -57,7 +57,6 @@ EXEC sp_polybase_leave_group ;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erste Schritte mit PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+ [Erste Schritte mit PolyBase](../polybase/polybase-guide.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

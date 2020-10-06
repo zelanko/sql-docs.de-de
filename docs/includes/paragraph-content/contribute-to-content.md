@@ -2,4 +2,4 @@
 
 Wussten Sie schon, dass Sie den Inhalt selbst bearbeiten könnten? Hierdurch wird nicht nur unsere Dokumentation besser, sondern Sie werden auch als Mitwirkender an der Seite aufgeführt.
 
-- [Mitwirken an der SQL Server-Dokumentation](https://docs.microsoft.com/sql/sql-server/sql-server-docs-contribute)
+- [Mitwirken an der SQL Server-Dokumentation](../../sql-server/sql-server-docs-contribute.md)

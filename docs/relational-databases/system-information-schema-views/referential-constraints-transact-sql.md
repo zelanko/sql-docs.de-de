@@ -20,12 +20,12 @@ ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c52f6d3c89051bd07143180410a0040c9d01144d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 42ebb05e1ec3bf70426cb0cef662623e2beb57f7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548460"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753946"
 ---
 # <a name="referential_constraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,10 +47,9 @@ ms.locfileid: "89548460"
 |**DELETE_RULE**|**varchar (** 11 **)**|Die Aktion, die ausgeführt wird, wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung die referenzielle Integrität verletzt, die durch diese Einschränkung definiert ist. Gibt einen der folgenden Werte zurück: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Wenn für diese Einschränkung NO ACTION für ON DELETE angegeben ist, wird das Löschen des Primärschlüssels, auf den in der Einschränkung verwiesen wird, nicht an den Fremdschlüssel weitergegeben. Wenn das Löschen eines Primärschlüssels einen Verstoß gegen die referenzielle Integrität verursacht, weil mindestens ein Fremdschlüssel den gleichen Wert enthält, werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keine Änderungen an der übergeordneten Tabelle und der verweisenden Tabelle vorgenommen. Außerdem löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler aus.<br /><br /> Wenn für diese Einschränkung CASCADE für ON DELETE angegeben ist, werden alle Änderungen des Primärschlüsselwerts automatisch an den Fremdschlüsselwert weitergegeben.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [System Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [System Sichten &#40;Transact-SQL-&#41;](../../t-sql/language-reference.md)   
  [Informations Schema Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. foreign_keys &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  
-  
+ [sys.foreign_keys &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  
   

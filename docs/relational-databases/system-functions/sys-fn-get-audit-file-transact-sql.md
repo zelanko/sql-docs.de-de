@@ -1,6 +1,6 @@
 ---
 description: sys.fn_get_audit_file (Transact-SQL)
-title: sys. fn_get_audit_file (Transact-SQL) | Microsoft-Dokumentation
+title: sys.fn_get_audit_file (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/19/2020
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b631c6a8139304bd716e4eb1f3969de706f31d6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321796"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753759"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
  In der folgenden Tabelle wird der Inhalt der Überwachungsdatei beschrieben, die von dieser Funktion zurückgegeben werden kann.  
   
-| Spaltenname | type | Beschreibung |  
+| Spaltenname | type | BESCHREIBUNG |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | ID der Aktion. Lässt keine NULL-Werte zu. |  
 | additional_information | **nvarchar(4000)** | Eindeutige Informationen, die nur für ein einzelnes Ereignis gelten, werden als XML zurückgegeben. Eine kleine Anzahl überwachbarer Aktionen enthält diese Art von Informationen.<br /><br /> Eine Ebene des TSQL-Stapels wird im XML-Format für Aktionen angezeigt, denen ein TSQL-Stapel zugeordnet ist. Das XML-Format sieht folgendermaßen aus:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level gibt die aktuelle Schachtelungsebene des Frames an. Der Modulname (database_name, schema_name und object_name) wird in einem aus drei Teilen bestehenden Format dargestellt.  Der Modulname wird so analysiert, dass ungültige XML-Zeichen wie,,, mit Escapezeichen versehen werden `'\<'` `'>'` `'/'` `'_x'` . Sie werden mit Escapezeichen versehen `_xHHHH\_` . HHHH steht für den vierstelligen hexadezimalen UCS 2-Code für das Zeichen<br /><br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn keine zusätzlichen vom Ereignis gemeldeten Informationen vorliegen. |
@@ -95,7 +95,7 @@ fn_get_audit_file ( file_pattern,
 | class_type | **varchar(2)** | Der Typ der überwachbaren Entität, bei der die Überwachung auftritt. Lässt keine NULL-Werte zu. |  
 | client_ip | **nvarchar(128)** | **Gilt für**: Azure SQL-Datenbank + SQL Server (beginnend mit 2017)<br /><br />  Quell-IP-Adresse der Clientanwendung |  
 | connection_id | GUID | **Gilt für**: Azure SQL-Datenbank und SQL verwaltete Instanz<br /><br /> ID der Verbindung auf dem Server |
-| data_sensitivity_information | nvarchar(4000) | **Gilt für**: nur Azure SQL-Datenbank<br /><br /> Informationstypen und Vertraulichkeitsbezeichnungen, die von der überwachten Abfrage zurückgegeben werden (je nach klassifizierter Spalte in der Datenbank) Weitere Informationen: [Azure SQL-Datenbank: Datenermittlung und -klassifizierung](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
+| data_sensitivity_information | nvarchar(4000) | **Gilt für**: nur Azure SQL-Datenbank<br /><br /> Informationstypen und Vertraulichkeitsbezeichnungen, die von der überwachten Abfrage zurückgegeben werden (je nach klassifizierter Spalte in der Datenbank) Weitere Informationen: [Azure SQL-Datenbank: Datenermittlung und -klassifizierung](/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | Der Datenbankkontext, in dem die Aktion aufgetreten ist. Lässt NULL-Werte zu. Gibt NULL für Überwachungen auf Serverebene zurück. |  
 | database_principal_id | **int** |ID des Datenbankbenutzerkontexts, in dem die Aktion ausgeführt wird. Lässt keine NULL-Werte zu. Wenn dies nicht anwendbar ist, wird 0 zurückgegeben. Zum Beispiel bei einem Servervorgang.|
 | database_principal_name | **sysname** | Aktueller Benutzer. Lässt NULL-Werte zu. Gibt NULL zurück, wenn nicht verfügbar. |  
@@ -103,8 +103,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | Datum und Uhrzeit, zu der die überprüfbare Aktion ausgelöst wird. Lässt keine NULL-Werte zu. |  
 | file_name | **varchar (260)** | Der Pfad und der Name der Überwachungsprotokolldatei, aus der der Datensatz stammt. Lässt keine NULL-Werte zu. |
 | is_column_permission | **bit** | Flag, das angibt, ob die Berechtigung auf Benutzerebene erteilt wurde Lässt keine NULL-Werte zu. Gibt 0 zurück wenn permission_bitmask = 0.<br /> 1 = TRUE<br /> 0 = false |
-| object_id | **int** | ID der Entität, für die die Überwachung durchgeführt wurde Hierzu gehören folgende Elemente:<br /> Serverobjekte<br /> Datenbanken<br /> Datenbankobjekte<br /> Schemaobjekte<br /> Lässt keine NULL-Werte zu. Gibt 0 zurück, wenn die Entität der Server selbst ist oder die Überwachung nicht auf Objektebene durchgeführt wird. Zum Beispiel bei der Authentifizierung. |  
-| object_name | **sysname** | Name der Entität, für die die Überwachung durchgeführt wurde Hierzu gehören folgende Elemente:<br /> Serverobjekte<br /> Datenbanken<br /> Datenbankobjekte<br /> Schemaobjekte<br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn die Entität der Server selbst ist oder die Überwachung nicht auf Objektebene durchgeführt wird. Zum Beispiel bei der Authentifizierung. |
+| object_id | **int** | ID der Entität, für die die Überwachung durchgeführt wurde Dazu gehören:<br /> Serverobjekte<br /> Datenbanken<br /> Datenbankobjekte<br /> Schemaobjekte<br /> Lässt keine NULL-Werte zu. Gibt 0 zurück, wenn die Entität der Server selbst ist oder die Überwachung nicht auf Objektebene durchgeführt wird. Zum Beispiel bei der Authentifizierung. |  
+| object_name | **sysname** | Name der Entität, für die die Überwachung durchgeführt wurde Dazu gehören:<br /> Serverobjekte<br /> Datenbanken<br /> Datenbankobjekte<br /> Schemaobjekte<br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn die Entität der Server selbst ist oder die Überwachung nicht auf Objektebene durchgeführt wird. Zum Beispiel bei der Authentifizierung. |
 | permission_bitmask | **varbinary(16)** | In einigen Aktionen sind dies die Berechtigungen, die gewährt, verweigert oder widerrufen wurden. |
 | response_rows | **bigint** | **Gilt für**: Azure SQL-Datenbank und SQL verwaltete Instanz<br /><br /> Anzahl der Zeilen, die im Resultset zurückgegeben werden. |  
 | schema_name | **sysname** | Schemakontext, in dem die Aktion durchgeführt wurde Lässt NULL-Werte zu. Gibt NULL für Überwachungen zurück, die außerhalb eines Schemas auftreten. |  
@@ -177,10 +177,10 @@ fn_get_audit_file ( file_pattern,
 
 Ein vollständiges Beispiel für das Erstellen einer Überwachung finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
-Informationen zum Einrichten der Azure SQL-Daten Bank Überwachung finden [Sie unter "Einstieg in die SQL-Daten Bank](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)Überwachung".
+Informationen zum Einrichten der Azure SQL-Daten Bank Überwachung finden [Sie unter "Einstieg in die SQL-Daten Bank](/azure/sql-database/sql-database-auditing)Überwachung".
   
-## <a name="see-also"></a>Weitere Informationen  
- [Create Server Audit &#40;Transact-SQL-&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+## <a name="see-also"></a>Siehe auch  
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
@@ -200,5 +200,4 @@ Informationen zum Einrichten der Azure SQL-Daten Bank Überwachung finden [Sie u
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
-  
   
