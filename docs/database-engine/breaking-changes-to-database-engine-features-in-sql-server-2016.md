@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bddfd0b06bfc64d68534548cfb90ea09ed2d4076
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 30d666e4793501831dc4fc4a06d3ae6c4a24f3cc
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87235986"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670359"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Breaking Changes an Features der Datenbank-Engine in SQL Server 2016
 
@@ -48,7 +48,7 @@ Informationen zu Breaking Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.m
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Abwärtskompatibilität der SQL Server-Datenbank-Engine](../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)   
+ [Abwärtskompatibilität der SQL Server-Datenbank-Engine](./discontinued-database-engine-functionality-in-sql-server.md)   
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [SQL Server 2016 or SQL Server 2017 on Windows improvements in handling some data types and uncommon operations (Verbesserungen der Verarbeitung einiger Datentypen und ungewöhnlicher Vorgänge für SQL Server 2016 oder SQL Server 2017 unter Windows)](https://support.microsoft.com/help/4010261).   
+ [SQL Server 2016 or SQL Server 2017 on Windows improvements in handling some data types and uncommon operations (Verbesserungen der Verarbeitung einiger Datentypen und ungewöhnlicher Vorgänge für SQL Server 2016 oder SQL Server 2017 unter Windows)](https://support.microsoft.com/help/4010261).

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 11492d2488fabdc4128844bca60c3ecbfac58ad6
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042841"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670685"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ Versuchen Sie zur Behandlung dieses Problems, ein Upgrade für Ihre Netzwerkband
  Ein Datenverlust wird verhindert, sobald der Protokollblock in die Protokolldatei festgeschrieben wurde. Aus diesem Grund ist es wichtig, die Protokolldatei von der Datendatei zu isolieren. Wenn die Protokoll- und Datendatei beide derselben Festplatte zugeordnet werden, verbraucht die meldende Workload mit intensiven Lesevorgängen in der Datendatei die gleichen E/A-Ressourcen, die vom Vorgang zur Protokollfestschreibung benötigt werden. Eine langsame Protokollfestschreibung kann zu einer langsamen Bestätigung gegenüber dem primären Replikat führen, das eine übermäßige Aktivierung der Flusssteuerung und lange Wartezeiten bei der Flusssteuerung führen kann.  
   
 ### <a name="diagnosis-and-resolution"></a>Diagnose und Lösung  
- Wenn Sie überprüft haben, ob im Netzwerk eine hohe Latenz oder ein geringer Durchsatz auftreten, sollten Sie das sekundäre Replikat auf E/A-Konflikte untersuchen. Abfragen von [SQL Server: Minimieren von Datenträger-E/As](https://technet.microsoft.com/magazine/jj643251.aspx) sind nützlich, um Konflikte zu identifizieren. Beispiele aus diesem Artikel werden der Übersichtlichkeit halber unten aufgeführt.  
+ Wenn Sie überprüft haben, ob im Netzwerk eine hohe Latenz oder ein geringer Durchsatz auftreten, sollten Sie das sekundäre Replikat auf E/A-Konflikte untersuchen. Abfragen von [SQL Server: Minimieren von Datenträger-E/As](/previous-versions/technet-magazine/jj643251(v=msdn.10)) sind nützlich, um Konflikte zu identifizieren. Beispiele aus diesem Artikel werden der Übersichtlichkeit halber unten aufgeführt.  
   
  Mit dem folgenden Skript können Sie die Anzahl der Lese- und Schreibvorgänge zu allen Daten- und Protokolldateien für jede Verfügbarkeitsdatenbank anzeigen, die auf einer Instanz von SQL Server ausgeführt wird. Diese ist nach der durchschnittlichen E/A-Verzögerungszeit in Millisekunden sortiert. Beachten Sie, dass die Zahlen kumulativ ausgehend vom letzten Zeitpunkt sind, an dem die Serverinstanz gestartet wurde. Aus diesem Grund sollten Sie nach einiger Weile die Differenz zwischen zwei Messungen messen.  
   
@@ -127,6 +127,5 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  Wenn Sie einen E/A-Engpass identifizieren und die Protokoll- und Datendatei auf derselben Festplatte platziert haben, sollten Sie im ersten Schritt die Daten- und die Protokolldatei auf separaten Datenträgern platzieren. Durch diese bewährte Vorgehensweise wird verhindert, dass die meldende Workload den Übertragungsprotokollpfad vom primären Replikat zum Protokollpuffer sowie dessen Fähigkeit zur Festschreibung der Transaktion auf dem sekundären Replikat beeinträchtigt.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Behandlung von Leistungsproblemen in SQL Server (gilt für SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
-  
+ [Behandlung von Leistungsproblemen in SQL Server (gilt für SQL Server 2012)](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))  
   

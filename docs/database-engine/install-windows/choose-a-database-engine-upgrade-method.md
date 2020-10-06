@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f3f9aef2003676c90d049a894a03c816225def3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: fd4acadbf94f45c1b155d10a70a376ea11c326e4
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244073"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670501"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Wählen einer Upgrademethode für die Datenbank-Engine
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -35,7 +35,7 @@ Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUD
 >  Sie können auch ein Upgrade auf Azure SQL-Datenbank erwägen oder Ihre SQL Server-Umgebung als Teil Ihres Upgradeplans virtualisieren. Diese Themen liegen außerhalb des Rahmens dieses Artikels, hier finden Sie jedoch einige Links:
 >   - [Übersicht zu SQL Server auf virtuellen Azure-Computern](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
 >   - [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/) 
->   - [Selecting a SQL Server option in Azure (Auswählen einer SQL Server-Option in Azure)](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
+>   - [Selecting a SQL Server option in Azure (Auswählen einer SQL Server-Option in Azure)](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview)  
   
 ## <a name="upgrade-in-place"></a>Direktes Upgrade  
  Bei diesem Ansatz aktualisiert das SQL Server-Setup-Programm die vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation durch Ersetzen der vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bits durch die neuen [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Bits und aktualisiert anschließend alle System- und Benutzerdatenbanken.  Der Ansatz für ein direktes Upgrade ist am einfachsten, erfordert gewisse Ausfallzeiten, erfordert nötigenfalls ein längeres Fallback und wird nicht für alle Szenarien unterstützt. Weitere Informationen zu unterstützten und nicht unterstützten direkten Aktualisierungsszenarien finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
@@ -81,7 +81,7 @@ Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUD
  Nach der Migration der Benutzerdatenbanken verweisen Sie neue Benutzer mithilfe verschiedener Methoden (z. B. Umbenennen des Servers, Verwenden eines DNS-Eintrags, Ändern von Verbindungszeichenfolgen) auf die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.  Durch diesen neuen Installationsansatz werden Risiken und Ausfallzeiten im Vergleich mit einem direkten Upgrade reduziert und Upgrades von Hardware und Betriebssystem im Zusammenspiel mit dem Upgrade auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erleichtert.  
   
 > [!NOTE]  
->  Falls Sie eine Lösung für Hochverfügbarkeit oder eine andere Umgebung mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen haben, fahren Sie mit dem [parallelen Upgrade](#rolling-upgrade)fort. Wenn keine Lösung für Hochverfügbarkeit vorhanden ist, können Sie entweder vorübergehend die [Datenbankspiegelung](../database-mirroring/setting-up-database-mirroring-sql-server.md) konfigurieren, um Ausfallzeiten zu minimieren und dieses Upgrade zu vereinfachen, oder die Chance wahrnehmen, eine [AlwayOn-Verfügbarkeitsgruppe](https://msdn.microsoft.com/library/hh510260.aspx) als dauerhafte Lösung für Hochverfügbarkeit zu konfigurieren.  
+>  Falls Sie eine Lösung für Hochverfügbarkeit oder eine andere Umgebung mit mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen haben, fahren Sie mit dem [parallelen Upgrade](#rolling-upgrade)fort. Wenn keine Lösung für Hochverfügbarkeit vorhanden ist, können Sie entweder vorübergehend die [Datenbankspiegelung](../database-mirroring/setting-up-database-mirroring-sql-server.md) konfigurieren, um Ausfallzeiten zu minimieren und dieses Upgrade zu vereinfachen, oder die Chance wahrnehmen, eine [AlwayOn-Verfügbarkeitsgruppe](../availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md) als dauerhafte Lösung für Hochverfügbarkeit zu konfigurieren.  
   
  Beispielsweise können Sie diesen Ansatz befolgen, um Folgendes zu aktualisieren:  
   
@@ -89,7 +89,7 @@ Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUD
 -   Eine x86-Installation von SQL Server, da [!INCLUDE[ss2016](../../includes/sssql15-md.md)] und höher keine x86-Installationen unterstützen.   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf neue Hardware und/oder eine neue Version des Betriebssystems.    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Verbindung mit einer Serverkonsolidierung.   
--   SQL Server 2005, da [!INCLUDE[ss2016](../../includes/sssql15-md.md)] und kein direktes Upgrade von SQL Server 2005 unterstützen. Weitere Informationen finden Sie unter [Führen Sie ein Upgrade von SQL Server 2005 aus?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).
+-   SQL Server 2005, da [!INCLUDE[ss2016](../../includes/sssql15-md.md)] und kein direktes Upgrade von SQL Server 2005 unterstützen. Weitere Informationen finden Sie unter [Führen Sie ein Upgrade von SQL Server 2005 aus?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).
 
   
 Die erforderlichen Schritte für ein Upgrade auf eine neue Installation hängen zum Teil davon ab, ob Sie zugeordneten oder SAN-Speicher verwenden.  
@@ -114,4 +114,4 @@ Die erforderlichen Schritte für ein Upgrade auf eine neue Installation hängen 
   
 ## <a name="next-steps"></a>Nächste Schritte
  [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
- [Abschließen des Datenbank-Engine-Upgrades](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
+ [Abschließen des Datenbank-Engine-Upgrades](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)

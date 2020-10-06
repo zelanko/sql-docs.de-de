@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 78fa87e1e36aef2752a6781410adfc5f1384802f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e3370f19992d439f13c06c5e2327cb47f93fc15a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900735"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670895"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Seite „Zusammenfassung“ (Always On-Verfügbarkeitsgruppen-Assistenten)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85900735"
  **Abbrechen**  
  Klicken Sie, um den Assistenten abzubrechen. Auf der Seite **Zusammenfassung** kann der Assistent durch Abbrechen beendet werden, ohne Aktionen auszuführen.  
   
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [&#91;Top&#93;](#Top) verwendet wird  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [&#91;Top&#93;](#Top) verwendet wird  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -54,9 +54,8 @@ ms.locfileid: "85900735"
   
 -   [Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [&#91;Top&#93;](#Top) verwendet wird  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [&#91;Top&#93;](#Top) verwendet wird  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
-  
   

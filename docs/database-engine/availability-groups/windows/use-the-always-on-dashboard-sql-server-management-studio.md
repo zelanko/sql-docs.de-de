@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848ac8820ec5150c8c3fc058f77ffa4261ed8aa2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6b63ae0e77cc521d6d882eab340cbfa3b761e41d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902363"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670383"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Verwenden des Dashboards „AlwaysOn-Verfügbarkeitsgruppen“ (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -331,7 +331,7 @@ Der Latenzbericht zur Verfügbarkeitsgruppe ist ein in das Dashboard der Verfüg
 
 Der SQL-Agent führt die Datensammlung aus und muss sowohl für das primäre Replikat als auch für mindestens eines der sekundären Replikate aktiviert sein. Zeigen Sie den Bericht an, indem Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe klicken und dann im **Objekt-Explorer** von SQL Server Management Studio auf „> Berichte > Standardberichte“ klicken.  
 
-Weitere Informationen finden Sie unter [Latenzberichte für Always On-Verfügbarkeitsgruppen](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
+Weitere Informationen finden Sie unter [Latenzberichte für Always On-Verfügbarkeitsgruppen](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports).
 
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -340,5 +340,4 @@ Weitere Informationen finden Sie unter [Latenzberichte für Always On-Verfügbar
 ## <a name="see-also"></a>Weitere Informationen  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a621a780f7bd0e9cc231630e5d20a02a3f95c0c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0609ea0b10cd5f656c78cbda8c3f2b7ad5be382f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425982"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719203"
 ---
 # <a name="smtp-connection-manager"></a>SMTP-Verbindungs-Manager
 
@@ -51,7 +51,7 @@ ms.locfileid: "88425982"
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
- Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [SMTP-Verbindungs-Manager-Editor](../../integration-services/connection-manager/smtp-connection-manager-editor.md).  
+ Weitere Informationen zu den Eigenschaften, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, finden Sie unter [SMTP-Verbindungs-Manager-Editor]().  
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   
@@ -81,4 +81,3 @@ ms.locfileid: "88425982"
   
  **Secure Sockets Layer (SSL) aktivieren**  
  Wählen Sie diese Option aus, um beim Senden von E-Mail-Nachrichten die Kommunikation mit TLS/SSL zu verschlüsseln.  
-  

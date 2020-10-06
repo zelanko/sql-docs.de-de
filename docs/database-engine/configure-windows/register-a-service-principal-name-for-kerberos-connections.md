@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/12/2020
-ms.openlocfilehash: 242b87166035c8ffc0e01272b5910f85a66620e7
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 27e19a66912c220e8c407c4182c3241906af5ea5
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200684"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670333"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen
 
@@ -68,7 +68,7 @@ Beim Starten des Datenbank-Engine-Diensts versucht dieser, den Dienstprinzipalna
 > [!NOTE]  
 >  Wenn die Windows-Domäne für die Ausführung auf einer niedrigeren Ebene als der Windows Server 2008 R2-Funktionsebene konfiguriert ist, verfügt das verwaltete Dienstkonto nicht über die notwendigen Berechtigungen zum Registrieren der Dienstprinzipalnamens für den [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Dienst. Ist die Kerberos-Authentifizierung erforderlich, muss der Domänenadministrator die Dienstprinzipalnamen für SQL Server manuell im verwalteten Dienstkonto registrieren.
 
-Weitere Informationen sind unter [Implementieren von eingeschränkter Kerberos-Delegierung mit SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)verfügbar  
+Weitere Informationen sind unter [Implementieren von eingeschränkter Kerberos-Delegierung mit SQL Server 2008](/previous-versions/sql/sql-server-2008/ee191523(v=sql.100))verfügbar  
 
 ##  <a name="spn-formats"></a><a name="Formats"></a> SPN-Formate
 
@@ -190,4 +190,4 @@ Wenn beim Herunterfahren keine Aufhebung der SPN-Registrierung erfolgt, wird die
 - [Dienstprinzipalnamen (SPN) in Clientverbindungen (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)
 - [Dienstprinzipalnamen (SPN) in Clientverbindungen (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)
 - [SQL Server Native Client-Funktionen](../../relational-databases/native-client/features/sql-server-native-client-features.md)
-- [Behandeln von Problemen mit der Kerberos-Authentifizierung in einer Reporting Services-Umgebung](https://technet.microsoft.com/library/ff679930.aspx)
+- [Behandeln von Problemen mit der Kerberos-Authentifizierung in einer Reporting Services-Umgebung](/previous-versions/sql/sql-server-2008/ff679930(v=sql.100))

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74014a2fe98646a5a25d337719636c3471562ff3
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888005"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670653"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Bestimmen, warum Änderungen an primären Replikaten nicht in sekundären Replikat einer Always On-Verfügbarkeitsgruppe angezeigt werden
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -127,6 +127,5 @@ from sys.dm_hadr_database_replica_states
  Wenn der Wiederholungsthread tatsächlich im Rückstand liegt, müssen Sie der Ursache für die Leistungsbeeinträchtigung beim sekundären Replikat auf den Grund gehen. Falls ein E/A-Konflikt bei der meldenden Workload besteht, können Sie mithilfe des [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) bis zu einem gewissen Grad die von der meldenden Workload verwendeten CPU-Zyklen und so indirekt die durchgeführten E/A-Zyklen steuern. Wenn die meldende Workload 10 Prozent der CPU verbraucht, die Workload jedoch E/A-gebunden ist, können Sie zur Drosselung von Leseworkloads den CPU-Ressourceneinsatz mithilfe des Resource Governor auf 5 % beschränken, wodurch die Auswirkungen auf die E/A minimiert werden.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Behandeln von Leistungsproblemen in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx)
-  
+ [Behandeln von Leistungsproblemen in SQL Server 2008](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))
   

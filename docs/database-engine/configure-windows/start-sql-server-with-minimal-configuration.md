@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6e301cd7dc29cc5e2a2cffc34066369ed67d57a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ae9ee2f231367ebf577f0c5c70e5e64ce32d6cc
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764002"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670763"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>Starten Sie von SQL Server mit Minimalkonfiguration
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85764002"
 
 -   `tempdb` wird auf die kleinstmögliche Größe konfiguriert.
 
--   Die Überwachung wird deaktiviert, aber die Überwachungs-DDL kann weiterhin ausgegeben werden. In der Praxis sollte **-m** in den meisten Fällen ausreichen, die eine Neukonfiguration der SQL Server-Überwachung erfordern. Weitere Informationen über die Sicherheit der Überwachungskonfiguration finden Sie unter [Überwachung in SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security).
+-   Die Überwachung wird deaktiviert, aber die Überwachungs-DDL kann weiterhin ausgegeben werden. In der Praxis sollte **-m** in den meisten Fällen ausreichen, die eine Neukonfiguration der SQL Server-Überwachung erfordern. Weitere Informationen über die Sicherheit der Überwachungskonfiguration finden Sie unter [Überwachung in SQL Server](/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security).
   
  Nach dem Starten des Servers mit Minimalkonfiguration sollten Sie den oder die entsprechenden Optionswert(e) des Servers ändern, den Server dann beenden und neu starten.  
   
@@ -44,11 +44,10 @@ ms.locfileid: "85764002"
 >  Stellen Sie mithilfe des **sqlcmd** -Hilfsprogramms und der dedizierten Administratorverbindung (Dedicated Administrator Connection; DAC) eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]her. Wenn Sie eine typische Verbindung verwenden, sollten Sie den SQL Server-Agent-Dienst beenden, bevor Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Modus der Minimalkonfiguration herstellen. Andernfalls verwendet der SQL Server-Agent-Dienst die Verbindung und blockiert sie dadurch.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
+ [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [Diagnoseverbindung für Datenbankadministratoren](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
  [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
-  
   

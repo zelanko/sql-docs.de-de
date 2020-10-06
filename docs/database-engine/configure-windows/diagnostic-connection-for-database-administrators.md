@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcec8cc2395f22774b853407fe5959286e539e7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7ecd953c8c383ef78c6e84221282eda76a5f7fca
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917127"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671134"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Diagnoseverbindung für Datenbankadministratoren
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "86917127"
   
  Nur Mitglieder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Rolle sysadmin können dedizierte Administratorverbindungen (DAC) herstellen.  
   
- Die DAC steht über das `sqlcmd`-Eingabeaufforderungs-Hilfsprogramm mit einem speziellen Administratorschalter (`-A`) zur Verfügung und wird von diesem Hilfsprogramm unterstützt. Weitere Informationen zum Verwenden von `sqlcmd` finden Sie unter [Verwenden von „sqlcmd“ mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Sie können die Verbindung auch herstellen, indem Sie `admin:` dem Instanznamen im folgenden Format voranstellen: `sqlcmd -S admin:<*instance_name*>`. Alternativ können Sie auch eine DAC in einem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor initiieren, indem Sie eine Verbindung mit `admin:\<*instance_name*>` herstellen.
+ Die DAC steht über das `sqlcmd`-Eingabeaufforderungs-Hilfsprogramm mit einem speziellen Administratorschalter (`-A`) zur Verfügung und wird von diesem Hilfsprogramm unterstützt. Weitere Informationen zum Verwenden von `sqlcmd` finden Sie unter [Verwenden von „sqlcmd“ mit Skriptvariablen](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md). Sie können die Verbindung auch herstellen, indem Sie `admin:` dem Instanznamen im folgenden Format voranstellen: `sqlcmd -S admin:<*instance_name*>`. Alternativ können Sie auch eine DAC in einem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor initiieren, indem Sie eine Verbindung mit `admin:\<*instance_name*>` herstellen.
 
 > [!Note]  
 > Gehen Sie wie folgt vor, um eine DAC über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen:
@@ -122,7 +122,7 @@ ms.locfileid: "86917127"
  `sqlcmd -S serverName.database.windows.net,1434 -U sa -P <xxx> -d AdventureWorks`  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
+ [Verwenden von sqlcmd mit Skriptvariablen](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
  [SQLCMD-Hilfsprogramm](../../tools/sqlcmd-utility.md)  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
@@ -136,5 +136,3 @@ ms.locfileid: "86917127"
  [Dynamische Verwaltungssichten und Funktionen in Verbindung mit Transaktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
  [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
-  
-

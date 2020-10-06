@@ -10,12 +10,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b187160fcc25119a5be65207138920969352b4aa
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8c2fb5fcd6c7f9902f52481a1e66350f4543a85a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110214"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670304"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Installieren von SQL Server mithilfe einer Konfigurationsdatei
 
@@ -66,7 +66,7 @@ FEATURES=SQL,Tools
 3. Brechen Sie das Setupprogramm ab, ohne dabei die Installation abzuschließen, um die INI-Datei zu generieren. 
   
     > [!NOTE]  
-    >  Die Setupinfrastruktur schreibt alle entsprechenden Parameter für die Aktionen, die ausgeführt wurden, mit Ausnahme vertraulicher Daten wie Kennwörter. Der /IAcceptSQLServerLicenseTerms-Parameter wird auch nicht in die Konfigurationsdatei geschrieben und erfordert entweder eine Änderung der Konfigurationsdatei oder die Angabe eines Werts an der Eingabeaufforderung. Weitere Informationen finden Sie unter [Installieren von SQL Server über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Zusätzlich wird bei booleschen Parametern, bei denen der Wert normalerweise nicht über die Eingabeaufforderung angegeben wird, ein Wert eingefügt. 
+    >  Die Setupinfrastruktur schreibt alle entsprechenden Parameter für die Aktionen, die ausgeführt wurden, mit Ausnahme vertraulicher Daten wie Kennwörter. Der /IAcceptSQLServerLicenseTerms-Parameter wird auch nicht in die Konfigurationsdatei geschrieben und erfordert entweder eine Änderung der Konfigurationsdatei oder die Angabe eines Werts an der Eingabeaufforderung. Weitere Informationen finden Sie unter [Installieren von SQL Server über die Eingabeaufforderung](./install-sql-server-from-the-command-prompt.md). Zusätzlich wird bei booleschen Parametern, bei denen der Wert normalerweise nicht über die Eingabeaufforderung angegeben wird, ein Wert eingefügt. 
   
 ## <a name="using-the-configuration-file-to-install-ssnoversion"></a>Verwenden der Konfigurationsdatei zur Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -145,8 +145,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Installieren von SQL Server von der Eingabeaufforderung](./install-sql-server-from-the-command-prompt.md)   
  [SQL Server-Failoverclusterinstallation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Upgrade einer SQL Server-Failoverclusterinstanz](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md).  
-  
   

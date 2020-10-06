@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a3bc9ad12e37cf5b208a98a1f9a09396d37d5cb8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e7c19d7e0294fb65a2a5ba1783e7ca65f3453ab3
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748555"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670819"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,9 +89,8 @@ ms.locfileid: "85748555"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Installieren von SQL Server 2016 von der Eingabeaufforderung](../install-windows/install-sql-server-from-the-command-prompt.md)   
  [Konfigurieren des Protokollversands (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   
  [Überwachen des Protokollversands (Transact-SQL)](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)   
  [Protokollversandtabellen und gespeicherte Prozeduren](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
-  
   

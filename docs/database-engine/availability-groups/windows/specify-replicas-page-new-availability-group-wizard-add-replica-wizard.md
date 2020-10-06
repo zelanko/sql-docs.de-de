@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a278ecf99626aef66dde768c18e8577dbb39c94
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea049ce576949df930aabafafb67adf56fe96c5c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898095"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671095"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85898095"
  **Serverinstanz**  
  Zeigt den Namen der Serverinstanz an, die als Host für das Verfügbarkeitsreplikat fungiert.  
   
- Falls eine Serverinstanz, mit der Sie ein sekundäres Replikat hosten möchten, nicht im Raster **Verfügbarkeitsreplikate** aufgeführt ist, klicken Sie auf die Schaltfläche **Replikat hinzufügen**. Wenn Sie eine Verfügbarkeitsgruppe in einer hybriden IT-Umgebung konfigurieren (siehe [Hochverfügbarkeit und Notfallwiederherstellung für SQL Server auf Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), können Sie auf die Schaltfläche **Azure-Replikat hinzufügen** klicken, um virtuelle Computer mit sekundären Replikaten in Azure zu erstellen.  
+ Falls eine Serverinstanz, mit der Sie ein sekundäres Replikat hosten möchten, nicht im Raster **Verfügbarkeitsreplikate** aufgeführt ist, klicken Sie auf die Schaltfläche **Replikat hinzufügen**. Wenn Sie eine Verfügbarkeitsgruppe in einer hybriden IT-Umgebung konfigurieren (siehe [Hochverfügbarkeit und Notfallwiederherstellung für SQL Server auf Azure Virtual Machines](/previous-versions/azure/jj870962(v=azure.100))), können Sie auf die Schaltfläche **Azure-Replikat hinzufügen** klicken, um virtuelle Computer mit sekundären Replikaten in Azure zu erstellen.  
   
  **Anfangsrolle**  
  Gibt die Rolle an, die das neue Replikat anfänglich ausführt: **Primary** (Primär) oder **Secondary** (Sekundär).  
@@ -67,7 +67,7 @@ ms.locfileid: "85898095"
  Klicken Sie, um ein sekundäres Replikat zur Verfügbarkeitsgruppe hinzuzufügen.  
   
  **Azure-Replikat hinzufügen**  
- Klicken Sie auf diese Option, um einen virtuellen Azure-Computer zu erstellen, auf dem ein sekundäres Replikat in der Verfügbarkeitsgruppe ausgeführt wird. Diese Option ist nur auf eine Verfügbarkeitsgruppe in der hybriden IT-Umgebung anwendbar, die lokale Replikate enthält. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Notfallwiederherstellung für SQL Server auf Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Klicken Sie auf diese Option, um einen virtuellen Azure-Computer zu erstellen, auf dem ein sekundäres Replikat in der Verfügbarkeitsgruppe ausgeführt wird. Diese Option ist nur auf eine Verfügbarkeitsgruppe in der hybriden IT-Umgebung anwendbar, die lokale Replikate enthält. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Notfallwiederherstellung für SQL Server auf Azure Virtual Machines](/previous-versions/azure/jj870962(v=azure.100)).  
   
  **Replikat entfernen**  
  Klicken Sie, um das ausgewählte sekundäre Replikat aus der Verfügbarkeitsgruppe zu entfernen.  
@@ -213,5 +213,4 @@ ms.locfileid: "85898095"
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
-  
   

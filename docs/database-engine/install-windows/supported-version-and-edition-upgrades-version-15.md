@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: ec6c743ea40da4d7ee6846c3a1373d3912ec0dc9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 687f314e776dcc049f03cb4c8a164fb5fa84073e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900302"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670199"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2019"></a>Unterstützte Versions- und Editionsupgrades in SQL Server 2019
 
@@ -44,7 +44,7 @@ ms.locfileid: "85900302"
   
 - [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] ist nur für 64-Bit-Plattformen verfügbar. Ein plattformübergreifendes Upgrade wird nicht unterstützt. Sie können keine 32-Bit-Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup auf systemeigenes 64-Bit aktualisieren. Sie können jedoch Datenbanken von einer 32-Bit-Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sichern oder trennen und sie in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-Bit) wiederherstellen oder anfügen, wenn die Datenbanken nicht in der Replikation veröffentlicht sind. Sie müssen alle Anmeldenamen und anderen Benutzerobjekte in den Systemdatenbanken „master“, „msdb“ und „model“ wiederherstellen.  
   
-- Sie können während des Upgrades der vorhandenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]keine neuen Funktionen hinzufügen. Nachdem Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] aktualisiert haben, können Sie Funktionen mit dem [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]-Setup hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen von Funktionen zu einer Instanz von SQL Server 40 (Setup)](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+- Sie können während des Upgrades der vorhandenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]keine neuen Funktionen hinzufügen. Nachdem Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] aktualisiert haben, können Sie Funktionen mit dem [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]-Setup hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen von Funktionen zu einer Instanz von SQL Server 40 (Setup)](./add-features-to-an-instance-of-sql-server-setup.md).  
  
 ## <a name="upgrades-from-earlier-versions-to-sssqlv15-md"></a>Upgrades von früheren Versionen auf [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
@@ -100,7 +100,7 @@ Weitere Informationen finden Sie unter [Leitfaden zur Azure-Datenbankmigration](
 
 Mithilfe der folgenden Tipps und Tools können Sie die Implementierung der Migration besser planen und implementieren:
 
-- Migrationstools: Die Migration wird durch den [Datenmigrations-Assistenten (DMA)](https://aka.ms/dma) unterstützt.
+- Migrationstools: Die Migration wird durch den [Datenmigrations-Assistenten (DMA)](../../dma/dma-overview.md) unterstützt.
 - Sichern und Wiederherstellen: Eine Sicherung von SQL Server 2008 oder SQL Server 2008 R2 kann in SQL Server 2019 wiederhergestellt werden.
 - Protokollversand: Der Protokollversand wird unterstützt, wenn auf dem primären Replikat SQL Server 2008 SP3 oder höher oder SQL Server 2008 R2 SP2 und auf dem sekundären Replikat SQL Server 2019 ausgeführt wird. 
 
@@ -149,4 +149,4 @@ Ausführliche Anweisungen zum Ausführen eines Editionsupgrades finden Sie unter
 
  [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
- [Aktualisieren von SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Aktualisieren von SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)

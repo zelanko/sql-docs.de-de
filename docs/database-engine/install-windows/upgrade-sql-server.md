@@ -13,19 +13,19 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8689e210cd0faf265fc1dcf96705a87cecccf5ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc4877a76b314baf13353e6fe979210244d81c48
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900215"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670231"
 ---
 # <a name="upgrade-sql-server"></a>Aktualisieren von SQL Server
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
  Sie können Instanzen von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql15-md.md)] oder [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] direkt auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisieren. Bei [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] müssen Sie entweder ein paralleles Upgrade oder eine Migration durchführen, um zu SQL Server 2019 zu wechseln, da es keine Überschneidungen mit einem der unterstützten Betriebssysteme gibt. Lesen Sie die folgenden Artikel zum Upgradeprozess und die Versionsanmerkungen, bevor Sie mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ausführen.  
   
-   - Weitere Informationen zu einem Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]finden Sie unter [Are you upgrading from SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)(Führen Sie ein Upgrade von SQL Server 2005 aus?).  
+   - Weitere Informationen zu einem Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]finden Sie unter [Are you upgrading from SQL Server 2005?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)(Führen Sie ein Upgrade von SQL Server 2005 aus?).  
    - [Versionsanmerkungen zu SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
    - [Versionsanmerkungen zu SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
   
@@ -34,7 +34,7 @@ Dieser Abschnitt enthält die folgenden Artikel:
   
 -   [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 -   [Vorbereiten der Aktualisierung durch Ausführen von Data Migration Assistant](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  
--   [Aktualisieren Sie von SQL Server 2005 aus?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)  
+-   [Aktualisieren Sie von SQL Server 2005 aus?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)  
 -   [Aktualisieren von Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
 -   [Aktualisieren der Datenbank-Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
 -   [Aktualisieren von Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)  
@@ -55,6 +55,5 @@ Dieser Abschnitt enthält die folgenden Artikel:
  [Aktualisieren von replizierten Datenbanken](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Aktualisieren von Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
  [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=436)   
- [Abwärtskompatibilität](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
-  
+ [Abwärtskompatibilität](../discontinued-database-engine-functionality-in-sql-server.md)  
   

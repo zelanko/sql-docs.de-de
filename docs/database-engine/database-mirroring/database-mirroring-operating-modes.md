@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fdcdc937ba8509f67b71352dd1b87d8f98f92d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 505f09118b4c1b4598936e59c57ce2202a4ddd55
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631422"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670849"
 ---
 # <a name="database-mirroring-operating-modes"></a>Betriebsmodi der Datenbankspiegelung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85631422"
  In diesem Abschnitt werden die Funktionsweise der asynchronen Datenbankspiegelung, die geeignete Verwendung des Modus für hohe Leistung sowie die entsprechende Reaktion auf den Fehlschlag des Prinzipalservers beschrieben.  
   
 > [!NOTE]  
->  Die meisten Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützen nur die synchrone Datenbankspiegelung (nur SAFETY FULL). Weitere Informationen zu Editionen, die die Datenbankspiegelung vollständig unterstützen, finden Sie unter „Hohe Verfügbarkeit (Always On)“ in [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
+>  Die meisten Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützen nur die synchrone Datenbankspiegelung (nur SAFETY FULL). Weitere Informationen zu Editionen, die die Datenbankspiegelung vollständig unterstützen, finden Sie unter „Hohe Verfügbarkeit (Always On)“ in [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-components-of-sql-server-2016.md).
   
  Wenn die Transaktionssicherheit auf OFF festgelegt ist, wird die Datenbank-Spiegelungssitzung asynchron ausgeführt. Im asynchronen Betrieb wird nur ein Betriebsmodus unterstützt, der Modus für hohe Leistung. Dieser Modus verbessert die Leistung auf Kosten der Hochverfügbarkeit. Im Modus für hohe Leistung werden nur der Prinzipalserver und der Spiegelserver verwendet. Probleme auf dem Spiegelserver haben nie Auswirkungen auf den Prinzipalserver. Bei einem Ausfall des Prinzipalservers wird die Spiegeldatenbank als DISCONNECTED gekennzeichnet, steht jedoch als betriebsbereit zur Verfügung.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "85631422"
  Der Modus für hohe Leistung kann bei der Wiederherstellung im Notfall hilfreich sein, wenn der Prinzipalserver und der Spiegelserver durch eine beträchtliche Distanz voneinander getrennt sind und wenn kleine Fehler den Prinzipalserver nicht beeinträchtigen sollen.  
   
 > [!NOTE]  
->  Protokollversand kann eine Ergänzung zur Datenbankspiegelung darstellen und ist eine empfehlenswerte Alternative zur asynchronen Datenbankspiegelung. Informationen zu den Vorteilen des Protokollversands finden Sie unter [Lösungen mit hoher Verfügbarkeit &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md). Informationen zum Verwenden des Protokollversands mit Datenbankspiegelung finden Sie unter [Datenbankspiegelung und Protokollversand &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  
+>  Protokollversand kann eine Ergänzung zur Datenbankspiegelung darstellen und ist eine empfehlenswerte Alternative zur asynchronen Datenbankspiegelung. Informationen zu den Vorteilen des Protokollversands finden Sie unter [Lösungen mit hoher Verfügbarkeit &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md). Informationen zum Verwenden des Protokollversands mit Datenbankspiegelung finden Sie unter [Datenbankspiegelung und Protokollversand &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  
   
 ###  <a name="the-impact-of-a-witness-on-high-performance-mode"></a><a name="WitnessImpactOnHighPerf"></a> Auswirkung eines Zeugen im Modus für hohe Leistung  
  Wenn Sie Transact-SQL zum Konfigurieren des Modus für hohe Leistung verwenden und die SAFETY-Eigenschaft auf OFF festgelegt ist, sollte unbedingt auch für die WITNESS-Eigenschaft OFF festgelegt sein. Ein Zeuge kann im Modus für hohe Leistung vorhanden sein, er stellt jedoch keinen Vorteil, sondern ein Risiko dar.  
@@ -287,5 +287,4 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)  
-  
   

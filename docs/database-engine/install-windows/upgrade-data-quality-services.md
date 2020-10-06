@@ -11,12 +11,12 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ebd08b11c99f8b5de54be9fc882c1fd2751afab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7ee0e76644b21493debd81c1b9b420e1a08a335c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900255"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670355"
 ---
 # <a name="upgrade-data-quality-services"></a>Aktualisieren von Data Quality Services
 
@@ -27,7 +27,7 @@ Dieser Artikel enthält Informationen dazu, wie Sie ein Upgrade der vorhandenen 
 > [!IMPORTANT]
 >  -   Sie müssen die DQS-Datenbanken sichern, bevor Sie DQS aktualisieren, um versehentliche Datenverluste während des Schemaupgrades zu verhindern. Informationen zum Sichern von DQS-Datenbanken finden Sie unter [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   Um eine Verbindung mit dem [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Data Quality-Servers herzustellen und Data Quality-Aufgaben auszuführen, können Sie die aktuelle oder eine frühere Version des Data Quality-Clients oder die [DQS-Bereinigungstransformation](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services verwenden.  
-> -   Nachdem Data Quality Services und Master Data Services aktualisiert wurden, wird keine frühere Version des Master Data Services-Add-Ins für Excel mehr funktionieren. Sie können die [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Version des Master Data Services-Add-Ins für Excel [hier](https://go.microsoft.com/fwlink/?LinkID=506665)herunterladen.  
+> -   Nachdem Data Quality Services und Master Data Services aktualisiert wurden, wird keine frühere Version des Master Data Services-Add-Ins für Excel mehr funktionieren. Sie können die [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Version des Master Data Services-Add-Ins für Excel [hier](../../master-data-services/master-data-services-installation-and-configuration.md)herunterladen.  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
@@ -101,5 +101,4 @@ Dieser Artikel enthält Informationen dazu, wie Sie ein Upgrade der vorhandenen 
  [Installieren von Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Entfernen von Data Quality Server-Objekten](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Aktualisieren von SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
   

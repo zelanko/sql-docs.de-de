@@ -14,12 +14,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 27f8f9e04bc78fb382a2f40826bc67215839460d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900199"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670239"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Upgrade von SQL Server mithilfe des Installations-Assistenten (Setup)
 
@@ -46,7 +46,7 @@ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Ass
 Sie müssen Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat und ein lokaler Administrator ist.  
   
 > [!WARNING]  
->  Sie können die zu aktualisierenden Funktionen nicht ändern und während des Aktualisierungsvorgangs keine Funktionen hinzufügen. Wenn Sie einer aktualisierten Instanz von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Funktionen hinzufügen möchten, nachdem der Upgradevorgang abgeschlossen wurde, finden Sie entsprechende Informationen unter [Add Features to an Instance of SQL Server (Setup) (Hinzufügen von Funktionen zu einer Instanz von SQL Server (Setup))](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+>  Sie können die zu aktualisierenden Funktionen nicht ändern und während des Aktualisierungsvorgangs keine Funktionen hinzufügen. Wenn Sie einer aktualisierten Instanz von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Funktionen hinzufügen möchten, nachdem der Upgradevorgang abgeschlossen wurde, finden Sie entsprechende Informationen unter [Add Features to an Instance of SQL Server (Setup) (Hinzufügen von Funktionen zu einer Instanz von SQL Server (Setup))](./add-features-to-an-instance-of-sql-server-setup.md).  
   
  Wenn Sie ein Upgrade von [!INCLUDE[ssDE](../../includes/ssde-md.md)]durchführen, lesen Sie zunächst [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) und führen Sie dann die folgenden Aufgaben je nach Umgebung durch:  
   
@@ -120,7 +120,7 @@ Sie müssen Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](
   
      Wenn Sie die Angabe der Anmeldeinformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste abgeschlossen haben, klicken Sie auf **Weiter**.  
   
-15. Geben Sie auf der Seite Upgradeoptionen für die Volltextsuche die Upgradeoptionen für die zu aktualisierenden Datenbanken an. Weitere Informationen finden Sie unter [Upgradeoptionen für die Volltextsuche](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+15. Geben Sie auf der Seite Upgradeoptionen für die Volltextsuche die Upgradeoptionen für die zu aktualisierenden Datenbanken an. Weitere Informationen finden Sie unter [Upgradeoptionen für die Volltextsuche](./install-sql-server.md).  
   
 16. Im Fenster Funktionsregeln wird automatisch fortgefahren, wenn alle Regeln gültig sind.  
   
@@ -143,6 +143,5 @@ Sie müssen Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Upgrade von SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Abwärtskompatibilität](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [Abwärtskompatibilität](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

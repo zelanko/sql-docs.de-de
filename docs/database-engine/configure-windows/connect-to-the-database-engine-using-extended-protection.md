@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22b1d58bac2433f9f5bae7dac5a6568050e38daf
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772641"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670283"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85772641"
 ### <a name="operating-system-support"></a>Betriebssystemunterstützung  
  Die folgenden Links enthalten weitere Informationen dazu, wie **Erweiterter Schutz**von Windows unterstützt wird:  
   
--   [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz" (möglicherweise auf Englisch)](https://msdn.microsoft.com/library/dd639324.aspx)  
+-   [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz" (möglicherweise auf Englisch)](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   
 -   [Microsoft-Sicherheitsempfehlung (973811): Erweiterter Schutz für die Authentifizierung (möglicherweise auf Englisch)](/security-updates/SecurityAdvisories/2009/973811)
   
@@ -100,12 +100,11 @@ ms.locfileid: "85772641"
 ## <a name="configuring-other-sql-server-components"></a>Konfigurieren anderer SQL Server-Komponenten  
  Weitere Informationen zur Konfiguration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]finden Sie unter [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)(Erweiterter Schutz für die Authentifizierung mit Reporting Services).  
   
- Wenn IIS verwendet wird, um über eine HTTP- oder HTTPS-Verbindung auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zuzugreifen, kann [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den von IIS bereitgestellten erweiterten Schutz nutzen. Weitere Informationen dazu, wie IIS für die Verwendung des erweiterten Schutzes konfiguriert wird, finden Sie unter [Konfigurieren von "Erweiterter Schutz" in IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105)(möglicherweise auf Englisch).  
+ Wenn IIS verwendet wird, um über eine HTTP- oder HTTPS-Verbindung auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Daten zuzugreifen, kann [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den von IIS bereitgestellten erweiterten Schutz nutzen. Weitere Informationen dazu, wie IIS für die Verwendung des erweiterten Schutzes konfiguriert wird, finden Sie unter [Konfigurieren von "Erweiterter Schutz" in IIS 7.5](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee909472(v=ws.10))(möglicherweise auf Englisch).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Server-Netzwerkkonfiguration](../../database-engine/configure-windows/server-network-configuration.md)   
  [Client-Netzwerkkonfiguration](../../database-engine/configure-windows/client-network-configuration.md)   
- [Übersicht über den erweiterten Schutz für die Authentifizierung (möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz" (möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkId=179922)  
-  
+ [Übersicht über den erweiterten Schutz für die Authentifizierung (möglicherweise auf Englisch)](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
+ [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz" (möglicherweise auf Englisch)](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))  
   

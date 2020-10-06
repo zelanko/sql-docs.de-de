@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e88eed3b4b49b15f65ad888725374d953b87806b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: b33827f37d02edf783c4688c9ad08cd4673706e7
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480362"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670884"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>SQL Server-Fehlerprotokoll (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "89480362"
 -   Konnektivitätsstatus von Verfügbarkeitsdatenbanken zwischen primären und sekundären Replikaten    
 -   Status der Verfügbarkeitsgruppenendpunkte    
 -   Status der Verfügbarkeitsgruppenlistener    
--   Status der Leasedauer zwischen der SQL Server-Ressourcen-DLL (die im WSFC-Cluster ausgeführt wird) und der SQL Server-Instanz (weitere Informationen finden Sie unter [How It Works: SQL Server Always On Lease Timeout](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout) (Funktionsweise: SQL Server Always On-Leasetimeout))    
+-   Status der Leasedauer zwischen der SQL Server-Ressourcen-DLL (die im WSFC-Cluster ausgeführt wird) und der SQL Server-Instanz (weitere Informationen finden Sie unter [How It Works: SQL Server Always On Lease Timeout](/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout) (Funktionsweise: SQL Server Always On-Leasetimeout))    
 -   Fehlerereignisse in der Verfügbarkeitsgruppe  
 
 Wenn die folgenden Aussagen zutreffen, sollten Sie sich das SQL Server-Fehlerprotokoll ansehen:  
@@ -38,5 +38,4 @@ Wenn die folgenden Aussagen zutreffen, sollten Sie sich das SQL Server-Fehlerpro
 -   Eine Verfügbarkeitsgruppe befindet sich in einem unbestimmten Status.  
   
 Weitere Informationen finden Sie unter [View the SQL Server error log &#40;SQL Server Management Studio&#41; (Anzeigen des SQL Server-Fehlerprotokolls &#40;SQL Server Management Studio&#41;)](~/relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md).  
-  
   

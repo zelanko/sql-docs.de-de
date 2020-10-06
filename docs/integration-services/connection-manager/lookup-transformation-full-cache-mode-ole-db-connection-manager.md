@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df4cde828997d68b15869000f111a99479369e55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55a439be88d422130e8a511a5c1d2071ece7fc2c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394206"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719745"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Suchtransformation im Vollcachemodus – OLE DB-Verbindungs-Manager
 
@@ -82,7 +82,7 @@ ms.locfileid: "88394206"
   
     2.  Geben Sie in der Liste **Suchvorgang** an, ob die Werte aus den Suchspalten Werte in der Eingabespalte ersetzen oder ob sie in eine neue Spalte geschrieben werden.  
   
-12. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+12. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../data-flow/transformations/lookup-transformation.md).  
   
 13. Klicken Sie auf **OK** , um die Änderungen an der Suchtransformation zu speichern, und führen Sie dann das Paket aus.  
   
@@ -90,5 +90,4 @@ ms.locfileid: "88394206"
  [Implementieren einer Suchtransformation im Vollcachemodus mit dem Cacheverbindungs-Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [Implementieren einer Suche im Modus „Kein Cache“ oder „Teilcache“](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

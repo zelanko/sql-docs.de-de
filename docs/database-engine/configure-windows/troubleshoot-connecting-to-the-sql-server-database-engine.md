@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: ceca51cf35e1a2e061d841336f0ab7a91b97dc9a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988643"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670731"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -193,7 +193,7 @@ Wenn Sie eine Verbindung mithilfe von TCP auf dem gleichen Computer herstellen k
    - Starten des SQL-Browserdiensts. Sehen Sie in den Anleitungen zum [Starten des Browsers im SQL Server-Konfigurations-Manager](#startbrowser) nach.
    - Der SQL Server-Browserdienst wird durch die Firewall blockiert. Öffnen von UDP-Port 1434 in der Firewall. Navigieren Sie zurück zum Abschnitt [Öffnen eines Ports in der Firewall](#open-a-port-in-the-firewall). Stellen Sie sicher, dass Sie einen UDP-Port öffnen, keinen TCP-Port.
    - Die Informationen über den UDP-Port 1434 werden durch einen Router gesperrt. Die UDP-Kommunikation (User Datagram-Protokoll) ist nicht dafür ausgelegt, Router zu durchlaufen. Dadurch wird verhindert, dass das Netzwerk mit Datenverkehr mit niedriger Priorität gefüllt wird. Möglicherweise können Sie Ihren Router so konfigurieren, dass er UDP-Datenverkehr weiterleitet, oder Sie stellen immer die Portnummer bereit, wenn Sie eine Verbindung herstellen.
-   - Wenn der Clientcomputer Windows 7 oder Windows Server 2008 (oder ein neueres Betriebssystem) verwendet, wird der UDP-Datenverkehr möglicherweise vom Clientbetriebssystem gelöscht, da die Antwort vom Server von einer anderen IP-Adresse zurückgegeben wird, als von der, von der abgefragt wurde. Hierbei handelt es sich um eine Sicherheitsfunktion, die „Loose Source Mapping“ (Lockere Quellzuordnung) blockiert. Weitere Informationen finden Sie im Abschnitt **Mehrere Server-IP-Adressen** der Onlinedokumentation [Problembehandlung: Das Timeout ist abgelaufen](https://msdn.microsoft.com/library/ms190181.aspx). Dies ist ein Artikel aus SQL Server 2008 R2, aber die Prinzipale sind weiterhin gültig. Möglicherweise können Sie den Client so konfigurieren, dass er die korrekte IP-Adresse verwendet, oder Sie stellen immer die Portnummer bereit, wenn Sie eine Verbindung herstellen.
+   - Wenn der Clientcomputer Windows 7 oder Windows Server 2008 (oder ein neueres Betriebssystem) verwendet, wird der UDP-Datenverkehr möglicherweise vom Clientbetriebssystem gelöscht, da die Antwort vom Server von einer anderen IP-Adresse zurückgegeben wird, als von der, von der abgefragt wurde. Hierbei handelt es sich um eine Sicherheitsfunktion, die „Loose Source Mapping“ (Lockere Quellzuordnung) blockiert. Weitere Informationen finden Sie im Abschnitt **Mehrere Server-IP-Adressen** der Onlinedokumentation [Problembehandlung: Das Timeout ist abgelaufen](/previous-versions/sql/sql-server-2008-r2/ms190181(v=sql.105)). Dies ist ein Artikel aus SQL Server 2008 R2, aber die Prinzipale sind weiterhin gültig. Möglicherweise können Sie den Client so konfigurieren, dass er die korrekte IP-Adresse verwendet, oder Sie stellen immer die Portnummer bereit, wenn Sie eine Verbindung herstellen.
 
 3. Nachdem Sie eine Verbindung mithilfe der IP-Adresse (oder mithilfe der IP-Adresse und des Instanznamens für eine benannte Instanz) hergestellt haben, versuchen Sie, eine Verbindung über den Computernamen (oder über einen Computernamen und einen Instanznamen für eine benannte Instanz) herzustellen. Fügen Sie `tcp:` vor dem Computernamen ein, um eine TCP/IP-Verbindung zu erzwingen. Verwenden Sie `ACCNT27`für die Standardinstanz auf einem Computer mit dem Namen `tcp:ACCNT27` . Verwenden Sie `PAYROLL`für eine benannte Instanz mit dem Namen `tcp:ACCNT27\PAYROLL` auf diesem Computer. Wenn Sie eine Verbindung über die IP-Adresse, jedoch nicht über den Computernamen herstellen können, haben Sie ein Problem mit der Auflösung des Computernamens. Navigieren Sie zurück zu Abschnitt 4 mit dem Titel **Testen der TCP-/IP-Konnektivität**.
 

@@ -12,12 +12,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: da776f4ccddcfaaa6c0f8e6af6363f2ef9a1f13d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3fd592913164d92851ca738090de9dd200df66f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913896"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719277"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics-Task
 
@@ -59,8 +59,8 @@ Für die U-SQL-Konfiguration gibt es zwei Einstellungen: **SourceType** und dyna
 |SourceType|Dynamische Optionen|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Geben Sie die zu übermittelnde U-SQL-Abfrage direkt in das Optionsfeld ein, oder wählen Sie die Schaltfläche zum Durchsuchen (...), um die U-SQL-Abfrage im Dialogfeld **U-SQL-Abfrage eingeben** anzugeben.|  
-|**SourceType = FileConnection**|Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder wählen Sie <**Neue Verbindung...** >, um eine neue Dateiverbindung zu erstellen. Weitere Informationen finden Sie in [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) und [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Wählen Sie eine vorhandene Variable aus, oder wählen Sie \<**New variable...**> aus, um eine neue Variable zu erstellen. Weitere Informationen finden Sie in [Integration Services-Variablen&#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Hinzufügen einer Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = FileConnection**|Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder wählen Sie <**Neue Verbindung...** >, um eine neue Dateiverbindung zu erstellen. Weitere Informationen finden Sie in [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) und [Dateiverbindungs-Manager-Editor](../connection-manager/file-connection-manager.md).|  
+|**SourceType = Variable**|Wählen Sie eine vorhandene Variable aus, oder wählen Sie \<**New variable...**> aus, um eine neue Variable zu erstellen. Weitere Informationen finden Sie in [Integration Services-Variablen&#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Hinzufügen einer Variable](../integration-services-ssis-variables.md).|
 | &nbsp; | &nbsp; |
 
 
@@ -137,4 +137,3 @@ Alle Eigenschaften in der Konfiguration auf der Seite „Allgemein“ können al
 - [Azure Data Lake Analytics-Verbindungs-Manager](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)
 - [Azure Data Lake Store-Dateisystemtask](../../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 - [Azure Data Lake Store Connection Manager (Azure Data Lake Store-Verbindungs-Manager)](../../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c4bd90a73c0723baf716b5c503f18d1f690d77e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d897301336c7697b658fbf40837b23b0a2e3797
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394216"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719817"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Suchtransformation im Vollcachemodus – Cacheverbindungs-Manager
 
@@ -28,7 +28,7 @@ ms.locfileid: "88394216"
   Sie können die Transformation für Suche so konfigurieren, dass der Vollcachemodus und ein Cacheverbindungs-Manager verwendet werden. Im Vollcachemodus wird das Verweisdataset in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  
   
 > [!NOTE]  
->  Der Cacheverbindungs-Manager unterstützt die BLOB-Datentypen (Binary Large Object) DT_TEXT, DT_NTEXT und DT_IMAGE nicht. Wenn das Verweisdataset einen BLOB-Datentyp enthält, schlägt die Komponente fehl, wenn Sie das Paket ausführen. Sie können den **Cacheverbindungs-Manager-Editor** verwenden, um Spaltendatentypen zu ändern. Weitere Informationen finden Sie unter [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+>  Der Cacheverbindungs-Manager unterstützt die BLOB-Datentypen (Binary Large Object) DT_TEXT, DT_NTEXT und DT_IMAGE nicht. Wenn das Verweisdataset einen BLOB-Datentyp enthält, schlägt die Komponente fehl, wenn Sie das Paket ausführen. Sie können den **Cacheverbindungs-Manager-Editor** verwenden, um Spaltendatentypen zu ändern. Weitere Informationen finden Sie unter [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
  Die Transformation für Suche führt Suchvorgänge aus, indem Daten in Eingabespalten aus einer verbundenen Datenquelle mit Spalten in einem Verweisdataset verknüpft werden. Weitere Informationen finden Sie unter [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88394216"
   
 -   [Sequenzcontainer](../../integration-services/control-flow/sequence-container.md)  
   
- Ein Video zur Veranschaulichung der Implementierung einer Transformation für Suche im Vollcachemodus mithilfe des Cacheverbindungs-Managers finden Sie unter [Gewusst wie: Implementieren einer Suchtransformation im Vollcachemodus (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Ein Video zur Veranschaulichung der Implementierung einer Transformation für Suche im Vollcachemodus mithilfe des Cacheverbindungs-Managers finden Sie unter [Gewusst wie: Implementieren einer Suchtransformation im Vollcachemodus (SQL Server-Video)](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100)).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>So implementieren Sie eine Transformation für Suche im Vollcachemodus in einem Paket mit dem Cacheverbindungs-Manager und einer Datenquelle im Datenfluss  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88394216"
      Für Nicht-Index-Spalten ist die Indexposition 0. Für Indexspalten ist die Indexposition eine fortlaufende positive Zahl.  
   
     > [!NOTE]  
-    >  Wenn die Transformation für Suche so konfiguriert ist, dass sie einen Cacheverbindungs-Manager verwendet, können nur Indexspalten im Verweisdataset Eingabespalten zugeordnet werden. Auch müssen alle Indexspalten zugeordnet werden. Weitere Informationen finden Sie unter [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Wenn die Transformation für Suche so konfiguriert ist, dass sie einen Cacheverbindungs-Manager verwendet, können nur Indexspalten im Verweisdataset Eingabespalten zugeordnet werden. Auch müssen alle Indexspalten zugeordnet werden. Weitere Informationen finden Sie unter [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
 6.  Um den Cache in einer Datei zu speichern, konfigurieren Sie den Cacheverbindungs-Manager im **Editor für den Cacheverbindungs-Manager**auf der Registerkarte **Allgemein** , indem Sie die folgenden Optionen festlegen:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88394216"
     > [!NOTE]  
     >  Die Schutzebene des Pakets gilt nicht für die Cachedatei. Wenn die Cachedatei vertrauliche Informationen enthält, schränken Sie den Zugriff auf den Speicherort oder Ordner, in dem Sie die Datei speichern, mithilfe einer Zugriffssteuerungsliste ein. Sie sollten nur bestimmten Konten den Zugriff ermöglichen. Weitere Informationen finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../../integration-services/security/security-overview-integration-services.md#files).  
   
-7.  Konfigurieren Sie die Cacheumwandlung nach Bedarf. Weitere Informationen finden Sie unter [Cachetransformations-Editor &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) und [Cachetransformations-Editor &#40;Seite „Zuordnungen“&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Konfigurieren Sie die Cacheumwandlung nach Bedarf. Weitere Informationen finden Sie unter [Cachetransformations-Editor &#40;Seite „Verbindungs-Manager“&#41;](../data-flow/transformations/cache-transform.md) und [Cachetransformations-Editor &#40;Seite „Zuordnungen“&#41;](../data-flow/transformations/cache-transform.md).  
   
 8.  Fügen Sie im zweiten Datenfluss eine Transformation für Suche hinzu, und konfigurieren Sie dann die Transformation, indem Sie die folgenden Tasks ausführen:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "88394216"
   
     8.  Wählen Sie Spalten aus der Liste **Verfügbare Suchspalten** aus. Geben Sie dann in der Liste **Suchvorgang** an, ob die Werte aus den Suchspalten Werte in der Eingabespalte ersetzen oder in eine neue Spalte geschrieben werden.  
   
-    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Klicken Sie auf **OK** , um die Änderungen an der Transformation für Suche zu speichern.  
   
@@ -161,9 +161,9 @@ ms.locfileid: "88394216"
      Für Nicht-Index-Spalten ist die Indexposition 0. Für Indexspalten ist die Indexposition eine fortlaufende positive Zahl.  
   
     > [!NOTE]  
-    >  Wenn die Transformation für Suche so konfiguriert ist, dass sie einen Cacheverbindungs-Manager verwendet, können nur Indexspalten im Verweisdataset Eingabespalten zugeordnet werden. Auch müssen alle Indexspalten zugeordnet werden. Weitere Informationen finden Sie unter [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Wenn die Transformation für Suche so konfiguriert ist, dass sie einen Cacheverbindungs-Manager verwendet, können nur Indexspalten im Verweisdataset Eingabespalten zugeordnet werden. Auch müssen alle Indexspalten zugeordnet werden. Weitere Informationen finden Sie unter [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
-7.  Konfigurieren Sie die Cacheumwandlung nach Bedarf. Weitere Informationen finden Sie unter [Cachetransformations-Editor &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) und [Cachetransformations-Editor &#40;Seite „Zuordnungen“&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Konfigurieren Sie die Cacheumwandlung nach Bedarf. Weitere Informationen finden Sie unter [Cachetransformations-Editor &#40;Seite „Verbindungs-Manager“&#41;](../data-flow/transformations/cache-transform.md) und [Cachetransformations-Editor &#40;Seite „Zuordnungen“&#41;](../data-flow/transformations/cache-transform.md).  
   
 8.  Führen Sie einen der folgenden Schritte aus, um Daten in den Cacheverbindungs-Manager zu laden, der im zweiten Paket verwendet wird:  
   
@@ -213,7 +213,7 @@ ms.locfileid: "88394216"
   
     8.  Wählen Sie Spalten aus der Liste **Verfügbare Suchspalten** aus. Geben Sie dann in der Liste **Suchvorgang** an, ob die Werte aus den Suchspalten Werte in der Eingabespalte ersetzen oder in eine neue Spalte geschrieben werden.  
   
-    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Klicken Sie auf **OK** , um die Änderungen an der Transformation für Suche zu speichern.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "88394216"
      Für Nicht-Index-Spalten ist die Indexposition 0. Für Indexspalten ist die Indexposition eine fortlaufende positive Zahl.  
   
     > [!NOTE]  
-    >  Wenn die Transformation für Suche so konfiguriert ist, dass sie einen Cacheverbindungs-Manager verwendet, können nur Indexspalten im Verweisdataset Eingabespalten zugeordnet werden. Auch müssen alle Indexspalten zugeordnet werden. Weitere Informationen finden Sie unter [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Wenn die Transformation für Suche so konfiguriert ist, dass sie einen Cacheverbindungs-Manager verwendet, können nur Indexspalten im Verweisdataset Eingabespalten zugeordnet werden. Auch müssen alle Indexspalten zugeordnet werden. Weitere Informationen finden Sie unter [Cache Connection Manager Editor](./cache-connection-manager.md).  
   
 7.  Fügen Sie dem Paket auf der Registerkarte **Ablaufsteuerung** einen Datenflusstask hinzu, und fügen Sie dem Datenfluss dann eine Transformation für Suche hinzu.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88394216"
   
     8.  Wählen Sie Spalten aus der Liste **Verfügbare Suchspalten** aus. Geben Sie dann in der Liste **Suchvorgang** an, ob die Werte aus den Suchspalten Werte in der Eingabespalte ersetzen oder in eine neue Spalte geschrieben werden.  
   
-    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Um die Fehlerausgabe zu konfigurieren, klicken Sie auf die Seite **Fehlerausgabe** , und legen Sie die Fehlerbehandlungsoptionen fest. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Klicken Sie auf **OK** , um die Änderungen an der Transformation für Suche zu speichern.  
   
@@ -288,5 +288,4 @@ ms.locfileid: "88394216"
  [Implementieren einer Suchtransformation im Vollcachemodus mit dem OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementieren einer Suche im Modus „Kein Cache“ oder „Teilcache“](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

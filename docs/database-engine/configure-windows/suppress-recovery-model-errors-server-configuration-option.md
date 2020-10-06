@@ -10,18 +10,18 @@ ms.technology: configuration
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 73681a19df18a7bdae9c49b78c283a8345820322
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 942dfc62bd55d1843babb78d89b95ad602f3d938
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496233"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670743"
 ---
 # <a name="suppress-recovery-model-errors-server-configuration-option"></a>Serverkonfigurationsoption für das Unterdrücken von Wiederherstellungsmodellfehlern
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
 
-[Wiederherstellungsmodelle](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server) von SQL Server steuern die Wartung des Transaktionsprotokolls. Das vollständige Wiederherstellungsmodell stellt sicher, dass keine Arbeit aufgrund einer verlorenen oder beschädigten Datendatei verloren geht, und es unterstützt die Wiederherstellung zu einem beliebigen Zeitpunkt innerhalb der Sicherungsaufbewahrungsrichtlinie. Das vollständige Wiederherstellungsmodell ist das standardmäßige und einzige in einer SQL Managed Instance unterstützte Wiederherstellungsmodell. Versuche, das Wiederherstellungsmodell in SQL Managed Instance zu ändern, geben eine Fehlermeldung zurück.
+[Wiederherstellungsmodelle](../../relational-databases/backup-restore/recovery-models-sql-server.md) von SQL Server steuern die Wartung des Transaktionsprotokolls. Das vollständige Wiederherstellungsmodell stellt sicher, dass keine Arbeit aufgrund einer verlorenen oder beschädigten Datendatei verloren geht, und es unterstützt die Wiederherstellung zu einem beliebigen Zeitpunkt innerhalb der Sicherungsaufbewahrungsrichtlinie. Das vollständige Wiederherstellungsmodell ist das standardmäßige und einzige in einer SQL Managed Instance unterstützte Wiederherstellungsmodell. Versuche, das Wiederherstellungsmodell in SQL Managed Instance zu ändern, geben eine Fehlermeldung zurück.
 
 Verwenden Sie die erweiterte Konfigurationsoption **Wiederherstellungsmodellfehler unterdrücken**, um anzugeben, ob Befehle zum Ändern des Datenbank-Wiederherstellungsmodells, die auf SQL Managed Instance ausgeführt werden, nur Fehler oder nur Warnungen zurückgeben. Wenn diese Option in SQL Managed Instance auf „1“ (EIN) festgelegt ist, wird durch das Ausführen des Befehls ALTER DATABASE SET RECOVERY nicht das Wiederherstellungsmodell der Datenbank geändert. Es gibt jedoch auch weiterhin keine Fehlermeldungen, sondern stattdessen Warnmeldung zurück. Wenn diese Option in SQL Managed Instance auf „0“ (AUS) festgelegt ist, wird beim Ausführen des Befehls ALTER DATABASE SET RECOVERY eine Fehlermeldung zurückgegeben.
 

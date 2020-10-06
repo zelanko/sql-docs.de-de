@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b8dd6ffa60bdf43b4e6d112ba26de959005f549
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729442"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670533"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -50,7 +50,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Category|Als veraltet markierte Funktion|Ersatz|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Sichern und Wiederherstellen|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD ist weiterhin veraltet. BACKUP { DATABASE &#124; LOG } WITH PASSWORD und BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD werden eingestellt.|Keine|BACKUP DATABASE oder LOG WITH PASSWORD<br /><br /> BACKUP DATABASE oder LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Kompatibilitätsgrade|Upgrade von Version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Wenn eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Version aus der [Unterstützung](https://aka.ms/sqllifecycle) herausfällt, wird der zugehörige Datenbankkompatibilitätsgrad als veraltet markiert. Wir werden jedoch so lange wie möglich Anwendungen unterstützen, die für irgendeinen unterstützten Datenbankkompatibilitätsgrad zertifiziert sind, um die Upgrades zu vereinfachen. Weitere Informationen zu den Kompatibilitätsgraden finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Datenbank-Kompatibilitätsgrad 100|108|  
+|Kompatibilitätsgrade|Upgrade von Version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Wenn eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Version aus der [Unterstützung](/lifecycle/products/?products=sql-server) herausfällt, wird der zugehörige Datenbankkompatibilitätsgrad als veraltet markiert. Wir werden jedoch so lange wie möglich Anwendungen unterstützen, die für irgendeinen unterstützten Datenbankkompatibilitätsgrad zertifiziert sind, um die Upgrades zu vereinfachen. Weitere Informationen zu den Kompatibilitätsgraden finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Datenbank-Kompatibilitätsgrad 100|108|  
 |Datenbankobjekte|Funktionalität zum Zurückgeben von Resultsets von Triggern|Keine|Zurückgeben von Ergebnissen aus Triggern|12|  
 |Verschlüsselung|Die Verschlüsselung mit RC4 oder RC4_128 ist veraltet. Die Entfernung ist für die nächste Version geplant. Die Entschlüsselung von RC4 und RC4_128 sind nicht veraltet.|Verwenden Sie einen anderen Verschlüsselungsalgorithmus, z. B. AES.|Veralteter Verschlüsselungsalgorithmus|253|  
 |Hashalgorithmen|Die Verwendung von MD2, MD4, MD5, SHA und SHA1 ist veraltet.|Verwenden Sie stattdessen SHA2_256 oder SHA2_512. Ältere Algorithmen funktionieren weiterhin, lösen jedoch ein Ereignis aus, das auf die Veraltung hinweist.|Veralteter Hashalgorithmus|Keine|  
@@ -174,5 +174,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > Der **OUTPUT** -Cookieparameter für **sp_setapprole** ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(50)** zurück. Wenn Entwickler **varbinary(50)** zugeordnet haben, erfordert die Anwendung möglicherweise Änderungen, wenn die Cookierückgabegröße in einer zukünftigen Version steigt. Obwohl es sich nicht um ein Veraltungsproblem handelt, wird dies in diesem Thema erwähnt, da die Anwendungsanpassungen ähnlich sind. Weitere Informationen finden Sie unter [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)     
- [Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)    
+ [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)     
+ [Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)

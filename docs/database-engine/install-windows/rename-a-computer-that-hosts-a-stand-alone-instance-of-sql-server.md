@@ -20,12 +20,12 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ce257e0e40af3d3ba207d4709c5e67f5bfbb619
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0426ae38b00a939ff852af21b3a3b376b4c236f3
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900322"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671021"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet
 
@@ -111,9 +111,8 @@ Die folgenden Schritte können nicht verwendet werden, um eine Instanz von [!INC
   
  **Verbindungsserverkonfigurationen** : Das Umbenennen von Computern wirkt sich auf die Verbindungsserverkonfigurationen aus. Verwenden Sie **sp_addlinkedserver** oder **sp_setnetname**, um Verweise auf Computernamen zu aktualisieren. Weitere Informationen finden Sie unter [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) oder [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md).  
   
- **Clientaliasnamen**: Das Umbenennen von Computern wirkt sich auf Clientaliasnamen aus, die Named Pipes verwenden. Wenn z. B. ein Alias "PROD_SRVR" erstellt wurde, um auf SRVR1 zu verweisen, und dieser das Named Pipes-Protokoll verwendet, lautet der Pipe-Name `\\SRVR1\pipe\sql\query`. Nachdem der Computer umbenannt wurde, ist der Pfad der Named Pipe nicht mehr gültig. Weitere Informationen zu Named Pipes finden Sie unter [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes](https://go.microsoft.com/fwlink/?LinkId=111063).  
+ **Clientaliasnamen**: Das Umbenennen von Computern wirkt sich auf Clientaliasnamen aus, die Named Pipes verwenden. Wenn z. B. ein Alias "PROD_SRVR" erstellt wurde, um auf SRVR1 zu verweisen, und dieser das Named Pipes-Protokoll verwendet, lautet der Pipe-Name `\\SRVR1\pipe\sql\query`. Nachdem der Computer umbenannt wurde, ist der Pfad der Named Pipe nicht mehr gültig. Weitere Informationen zu Named Pipes finden Sie unter [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes](/previous-versions/sql/sql-server-2008/ms189307(v=sql.100)).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Installieren von SQL Server](../../database-engine/install-windows/install-sql-server.md)  
-  
   

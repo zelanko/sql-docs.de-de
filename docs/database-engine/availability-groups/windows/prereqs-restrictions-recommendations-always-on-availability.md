@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: 38c643bf5faac76d895181476b7d92c469445c26
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88092010"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670123"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88092010"
 ###  <a name="permissions-windows-system"></a><a name="PermissionsWindows"></a> Berechtigungen (Windows-System)  
  Zur Verwaltung eines WSFC muss der Benutzer Systemadministrator auf jedem Clusterknoten sein.  
   
- Weitere Informationen über das Konto zum Verwalten des Clusters finden Sie unter [Appendix A: Failover Cluster Requirements (Anhang A: Failoverclusteranforderungen)](https://technet.microsoft.com/library/dd197454.aspx).  
+ Weitere Informationen über das Konto zum Verwalten des Clusters finden Sie unter [Appendix A: Failover Cluster Requirements (Anhang A: Failoverclusteranforderungen)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197454(v=ws.10)).  
   
 ###  <a name="related-tasks-windows-system"></a><a name="RelatedTasksWindows"></a> Verwandte Aufgaben (Windows-System)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88092010"
   
 -   [Erste Schritte mit Windows PowerShell auf einem Failovercluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Clusterressourcenbefehle und entsprechende Windows PowerShell-Cmdlets](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Clusterressourcenbefehle und entsprechende Windows PowerShell-Cmdlets](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619744(v=ws.10)#BKMK_resource)  
   
 ###  <a name="related-content-windows-system"></a><a name="RelatedContentWS"></a> Verwandte Inhalte (Windows-System)  
   
@@ -131,10 +131,10 @@ ms.locfileid: "88092010"
   
 |Voraussetzung|Links|  
 |------------------|-----------|  
-|Dieser Hostcomputer muss ein WSFC-Knoten sein. Die Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die Verfügbarkeitsreplikate für eine angegebene Verfügbarkeitsgruppe hosten, befinden sich jeweils in einem separaten Knoten des Clusters. Eine Verfügbarkeitsgruppe kann sich während der Migration zu einem anderen Cluster vorübergehend über zwei Cluster erstrecken. SQL Server 2016 führt verteilte Verfügbarkeitsgruppen ein. In einer verteilten Verfügbarkeitsgruppe befinden sich zwei Verfügbarkeitsgruppen auf verschiedenen Clustern.|[Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Failoverclustering und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Verteilte Verfügbarkeitsgruppen (Always On-Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
+|Dieser Hostcomputer muss ein WSFC-Knoten sein. Die Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die Verfügbarkeitsreplikate für eine angegebene Verfügbarkeitsgruppe hosten, befinden sich jeweils in einem separaten Knoten des Clusters. Eine Verfügbarkeitsgruppe kann sich während der Migration zu einem anderen Cluster vorübergehend über zwei Cluster erstrecken. SQL Server 2016 führt verteilte Verfügbarkeitsgruppen ein. In einer verteilten Verfügbarkeitsgruppe befinden sich zwei Verfügbarkeitsgruppen auf verschiedenen Clustern.|[Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Failoverclustering und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Verteilte Verfügbarkeitsgruppen (Always On-Verfügbarkeitsgruppen)](./distributed-availability-groups.md)|  
 |Wenn eine Verfügbarkeitsgruppe mit Kerberos verwendet werden soll:<br /><br /> Alle Serverinstanzen, die ein Verfügbarkeitsreplikat für die Verfügbarkeitsgruppe hosten, müssen das gleiche SQL Server-Dienstkonto verwenden.<br /><br /> Der Domänenadministrator muss manuell einen Dienstprinzipalnamen (SPN) für Active Directory auf dem SQL Server-Dienstkonto beim virtuellen Netzwerknamen (VNN) des Verfügbarkeitsgruppenlisteners registrieren. Wenn der SPN auf keinem SQL Server-Dienstkonto registriert wird, treten bei der Authentifizierung Fehler auf.<br /><br /> <br /><br /> <b>\*\* Wichtig \*\*</b> : Wenn Sie das SQL Server-Dienstkonto ändern, muss der Domänenadministrator den SPN erneut manuell registrieren.|[Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Kurze Erklärung:**<br /><br /> Kerberos und SPNs erzwingen die gegenseitige Authentifizierung. Dem Windows-Konto, das die SQL Server-Dienste startet, wird der SPN zugeordnet. Wenn die Registrierung des SPNs nicht richtig erfolgt oder dabei ein Fehler aufgetreten ist, kann die Windows-Sicherheitsschicht nicht das Konto bestimmen, das dem Dienstprinzipalname zugewiesen ist. Das bedeutet, die Kerberos-Authentifizierung kann nicht verwendet werden.<br /><br /> <br /><br /> Hinweis: Bei NTLM gibt es diese Anforderung nicht.|  
 |Wenn Sie planen, eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz (FCI) zu verwenden, um ein Verfügbarkeitsreplikat zu hosten, muss gewährleistet sein, dass Sie die FCI-Einschränkungen verstehen und dass die FCI-Anforderungen erfüllt werden.|[Voraussetzungen und Anforderungen für das Hosten eines Verfügbarkeitsreplikats mithilfe einer SQL Server-Failoverclusterinstanz (FCI)](#FciArLimitations) (weiter unten in diesem Artikel)|  
-|Auf jeder Serverinstanz muss die gleiche Version von SQL Server ausgeführt werden, um an einer Always On-Verfügbarkeitsgruppe teilzunehmen.|Editionen und unterstützte Funktionen von [SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016), [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017).|  
+|Auf jeder Serverinstanz muss die gleiche Version von SQL Server ausgeführt werden, um an einer Always On-Verfügbarkeitsgruppe teilzunehmen.|Editionen und unterstützte Funktionen von [SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md?view=sql-server-2016), [SQL 2017](../../../sql-server/editions-and-components-of-sql-server-2017.md?view=sql-server-2017).|  
 |Alle Serverinstanzen, die Verfügbarkeitsreplikate für eine Verfügbarkeitsgruppe hosten, müssen die gleiche [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sortierung verwenden.|[Festlegen oder Ändern der Serversortierung](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |Aktivieren Sie die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] auf jeder Serverinstanz, die ein Verfügbarkeitsreplikat für jede Verfügbarkeitsgruppe hostet. Auf einem angegebenen Computer können Sie so viele Serverinstanzen für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktivieren, wie Ihre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installation unterstützt.|[Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\*Wichtig\*\*</b>: Wenn Sie einen WSFC löschen und neu erstellen, müssen Sie die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] auf jeder Serverinstanz, die auf dem ursprünglichen Cluster für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert war, deaktivieren und erneut aktivieren.|  
 |Jede Serverinstanz erfordert einen Datenbankspiegelungs-Endpunkt. Beachten Sie, dass dieser Endpunkt von allen Verfügbarkeitsreplikaten, Datenbank-Spiegelungspartnern und Zeugen auf der Serverinstanz gemeinsam verwendet wird.<br /><br /> Wenn eine Serverinstanz, die Sie zum Hosten eines Verfügbarkeitsreplikats auswählen, unter einem Domänenbenutzerkonto ausgeführt wird und noch keinen Datenbankspiegelungs-Endpunkt aufweist, kann der [Assistent für neue Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (oder [Assistent zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) den Endpunkt erstellen und dem Dienstkonto der Serverinstanz die CONNECT-Berechtigung erteilen. Wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst jedoch als integriertes Konto, z. B. Lokales System, Lokaler Dienst oder Netzwerkdienst, oder als Nichtdomänenkonto ausgeführt wird, müssen Sie Zertifikate zur Endpunktauthentifizierung verwenden, und der Assistent kann keinen Datenbankspiegelungs-Endpunkt auf der Serverinstanz erstellen. In diesem Fall empfiehlt es sich, dass Sie die Datenbankspiegelungs-Endpunkte manuell erstellen, bevor Sie den Assistenten starten.<br /><br /> <br /><br /> <b>\*\* Sicherheitshinweis \*\*</b> : Die Transportsicherheit für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] entspricht derjenigen der Datenbankspiegelung.|[Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
@@ -166,7 +166,7 @@ ms.locfileid: "88092010"
 
 -  In SQL Server 2019 wurde eine parallele Rollforwardphase für arbeitsspeicheroptimierte Datenbanken in Verfügbarkeitsgruppen eingeführt. In SQL Server 2016 und 2017 verwenden datenträgerbasierte Tabellen keine parallele Rollforwardphase, wenn eine Datenbank in einer Verfügbarkeitsgruppe ebenfalls arbeitsspeicheroptimiert ist. 
   
- Weitere Informationen finden Sie unter [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (Always On – HADRON-Lernreihe: Nutzung des Arbeitspools für HADRON-fähige Datenbanken)](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (ein CSS-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Engineer-Blogbeitrag).  
+ Weitere Informationen finden Sie unter [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (Always On – HADRON-Lernreihe: Nutzung des Arbeitspools für HADRON-fähige Datenbanken)](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases) (ein CSS-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Engineer-Blogbeitrag).  
   
 ###  <a name="permissions-server-instance"></a><a name="PermissionsSI"></a> Berechtigungen (Serverinstanz)  
   
@@ -185,7 +185,7 @@ ms.locfileid: "88092010"
   
 ###  <a name="related-content-server-instance"></a><a name="RelatedContentSI"></a> Verwandte Inhalte (Serverinstanz)  
   
--   [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (Always On – HADRON-Lernreihe: Nutzung des Arbeitspools für HADRON-fähige Datenbanken)](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
+-   [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (Always On – HADRON-Lernreihe: Nutzung des Arbeitspools für HADRON-fähige Datenbanken)](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
 ##  <a name="network-connectivity-recommendations"></a><a name="NetworkConnect"></a> Empfehlungen zur Netzwerkkonnektivität  
  Es wird dringend empfohlen, für die Kommunikation zwischen WSFC-Knoten die gleichen Netzwerkverbindungen zu verwenden wie für die Kommunikation zwischen Verfügbarkeitsreplikaten.  Bei Verwendung separater Netzwerkverbindungen kann ein unerwartetes Verhalten auftreten, wenn einige Verbindungen (wenn auch nur vorübergehend) ausfallen.  
@@ -209,14 +209,14 @@ ms.locfileid: "88092010"
 ###  <a name="restrictions-fcis"></a><a name="RestrictionsFCI"></a> Einschränkungen (FCIs)  
   
 > [!NOTE]  
-> Failoverclusterinstanzen unterstützen freigegebene Clustervolumes (Cluster Shared Volumes, CSVs). Weitere Informationen zu CSVs finden Sie unter [Grundlegendes zu freigegebenen Clustervolumes in einem Failovercluster](https://technet.microsoft.com/library/dd759255.aspx).  
+> Failoverclusterinstanzen unterstützen freigegebene Clustervolumes (Cluster Shared Volumes, CSVs). Weitere Informationen zu CSVs finden Sie unter [Grundlegendes zu freigegebenen Clustervolumes in einem Failovercluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759255(v=ws.11)).  
   
 -   **Ein FCI-Clusterknoten kann nur ein Replikat für eine bestimmte Verfügbarkeitsgruppe hosten:**  Wenn Sie ein Verfügbarkeitsreplikat in eine FCI hinzufügen, können die WSFC-Knoten, die mögliche FCI-Besitzer sind, kein anderes Replikat für dieselbe Verfügbarkeitsgruppe hosten.  Um potenzielle Konflikte zu vermeiden, empfiehlt es sich, mögliche Besitzer für die Failoverclusterinstanz zu konfigurieren. Damit kann verhindert werden, dass ein einzelner WSFC versucht, zwei Verfügbarkeitsreplikat für dieselbe Verfügbarkeitsgruppe zu hosten.
   
      Darüber hinaus muss jedes weitere Replikat von einer SQL Server 2016-Instanz gehostet werden, die sich auf einem anderen Clusterknoten im selben WSFC befindet. Die einzige Ausnahme besteht darin, dass sich eine Verfügbarkeitsgruppe während der Migration zu einem anderen Cluster vorübergehend auf zwei Cluster erstrecken kann. 
 
   >[!WARNING]
-  > Die Verwendung des Failovercluster-Managers zum Verschieben einer *Failoverclusterinstanz*, die eine Verfügbarkeitsgruppe hostet, auf einen Knoten, der *bereits* ein Replikat derselben Verfügbarkeitsgruppe hostet, kann zum Verlust des Verfügbarkeitsgruppenreplikats führen, sodass dieses auf dem Zielknoten nicht online geschaltet werden kann. Ein einzelner Knoten eines Failoverclusters kann nicht mehr als ein Replikat für dieselbe Verfügbarkeitsgruppe hosten. Weitere Informationen dazu, wie eine solche Situation eintritt und wie sie gelöst werden kann, finden Sie im Blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Replikat in Verfügbarkeitsgruppe unerwartet gelöscht). 
+  > Die Verwendung des Failovercluster-Managers zum Verschieben einer *Failoverclusterinstanz*, die eine Verfügbarkeitsgruppe hostet, auf einen Knoten, der *bereits* ein Replikat derselben Verfügbarkeitsgruppe hostet, kann zum Verlust des Verfügbarkeitsgruppenreplikats führen, sodass dieses auf dem Zielknoten nicht online geschaltet werden kann. Ein einzelner Knoten eines Failoverclusters kann nicht mehr als ein Replikat für dieselbe Verfügbarkeitsgruppe hosten. Weitere Informationen dazu, wie eine solche Situation eintritt und wie sie gelöst werden kann, finden Sie im Blog [Replica unexpectedly dropped in availability group](/archive/blogs/alwaysonpro/issue-replica-unexpectedly-dropped-in-availability-group) (Replikat in Verfügbarkeitsgruppe unerwartet gelöscht). 
 
   
 -   **FCIs unterstützen kein automatisches Failover durch Verfügbarkeitsgruppen:**  FCIs unterstützen kein automatisches Always On-Failover durch Verfügbarkeitsgruppen. Daher können die Verfügbarkeitsreplikate, die von einer FCI gehostet werden, ausschließlich für manuelle Failovers konfiguriert werden.  
@@ -234,14 +234,14 @@ ms.locfileid: "88092010"
 |Aufgabe|Artikel|  
 |----------|-----------|  
 |Installieren eines SQL Server-Failoverclusters|[Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Direktes Upgrade des vorhandenen SQL Server-Failoverclusters|[Aktualisieren einer SQL Server-Failoverclusterinstanz &#40;Setup&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
+|Direktes Upgrade des vorhandenen SQL Server-Failoverclusters|[Aktualisieren einer SQL Server-Failoverclusterinstanz &#40;Setup&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
 |Beibehalten des vorhandenen SQL Server-Failoverclusters|[Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
   
 ###  <a name="related-content-fcis"></a><a name="RelatedContentFCIs"></a> Verwandte Inhalte (FCIs)  
   
 -   [Failoverclustering und Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Always On-Architekturhandbuch: Erstellen einer Lösung für Hochverfügbarkeit und Notfallwiederherstellung unter Verwendung von Failoverclusterinstanzen und Verfügbarkeitsgruppen](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Always On-Architekturhandbuch: Erstellen einer Lösung für Hochverfügbarkeit und Notfallwiederherstellung unter Verwendung von Failoverclusterinstanzen und Verfügbarkeitsgruppen](/previous-versions/sql/sql-server-2012/jj215886(v=msdn.10))  
   
 ##  <a name="availability-group-prerequisites-and-restrictions"></a><a name="PrerequisitesForAGs"></a> Voraussetzungen und Einschränkungen für Verfügbarkeitsdatenbanken  
  **In diesem Abschnitt:**  
@@ -381,11 +381,11 @@ ms.locfileid: "88092010"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog (SQL Server Always On-Teamblog: Der offizielle SQL Server Always On-Teamblog)](/archive/blogs/sqlalwayson/)  
   
--   [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (Always On – HADRON-Lernreihe: Nutzung des Arbeitspools für HADRON-fähige Datenbanken)](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
+-   [Always On – HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (Always On – HADRON-Lernreihe: Nutzung des Arbeitspools für HADRON-fähige Datenbanken)](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
@@ -394,5 +394,4 @@ ms.locfileid: "88092010"
   
     
   
---------------------------------------------------  
-
+--------------------------------------------------

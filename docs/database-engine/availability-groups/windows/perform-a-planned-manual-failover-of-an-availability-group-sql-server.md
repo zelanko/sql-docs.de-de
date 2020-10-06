@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 646db60d22175c298a686bed903fdd9246c2a59f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 43b80003afbb83090aa7575aa038f6bebe7958a4
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897023"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670899"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Ausführen eines geplanten manuellen Failovers einer Always On-Verfügbarkeitsgruppe (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ Ein geplantes manuelles Failover wird nur unterstützt, wenn das primäre Replik
 2. Verwenden Sie das Cmdlet **Switch-SqlAvailabilityGroup** . 
   
     > [!NOTE] 
-    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das **Get-Help** -Cmdlet in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help for SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) (Hilfe zu SQL Server-PowerShell anfordern). 
+    >  Um die Syntax eines Cmdlets anzuzeigen, verwenden Sie das **Get-Help** -Cmdlet in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell-Umgebung. Weitere Informationen finden Sie unter [Get Help for SQL Server PowerShell](../../../powershell/sql-server-powershell.md) (Hilfe zu SQL Server-PowerShell anfordern). 
   
      Im folgenden Beispiel wird manuell ein Failover der *MyAg*-Verfügbarkeitsgruppe zum sekundären Replikat mit dem angegebenen Pfad ausgeführt: 
   
@@ -104,8 +104,8 @@ Ein geplantes manuelles Failover wird nur unterstützt, wenn das primäre Replik
   
     So richten Sie den SQL Server PowerShell-Anbieter ein und verwenden ihn: 
   
-    -   [SQL Server PowerShell-Anbieter](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
-    -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) (Hilfe zu SQL Server PowerShell anfordern) 
+    -   [SQL Server PowerShell-Anbieter](../../../powershell/sql-server-powershell-provider.md) 
+    -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md) (Hilfe zu SQL Server PowerShell anfordern) 
 
 ##  <a name="follow-up-after-you-manually-fail-over-an-availability-group"></a><a name="FollowUp"></a> Nachverfolgung: Nach dem manuellen Ausführen eines Failovers für eine Verfügbarkeitsgruppe 
  Wenn Sie ein Failover außerhalb des [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] der Verfügbarkeitsgruppe ausgeführt haben, passen Sie die Quorumabstimmungen der WSFC-Knoten (Windows Server-Failoverclustering) an die Konfiguration der neuen Verfügbarkeitsgruppe an. Weitere Informationen finden Sie unter [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
@@ -121,5 +121,4 @@ Ein geplantes manuelles Failover wird nur unterstützt, wenn das primäre Replik
  * [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 
  * [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 
-  
   

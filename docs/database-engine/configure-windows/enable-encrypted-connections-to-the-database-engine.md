@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: d147177be88db5bba50955711a8585ff11d872d9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027291"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670966"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine
 
@@ -74,7 +74,7 @@ Das Aktivieren der TLS-Verschlüsselung erhöht die Sicherheit von Daten, die ne
 > Wenn Sie die Verschlüsselung bei einem Failovercluster verwenden möchten, müssen Sie das Serverzertifikat mit dem vollqualifizierten DNS-Namen des virtuellen Servers auf allen Knoten im Failovercluster installieren. Wenn Sie beispielsweise über einen Cluster mit zwei Knoten (mit den Namen ***test1.\*\<your company>\*.com*** und ***test2.\*\<your company>\*.com***) und einen virtuellen Server mit dem Namen ***virtsql*** verfügen, müssen Sie auf beiden Knoten ein Zertifikat für ***virtsql.\*\<your company>\*.com*** installieren. Sie können den Wert der Option **ForceEncryption** im Eigenschaftsfeld **Protokolle für virtsql** von **SQL Server-Netzwerkkonfiguration** auf **Ja** setzen.
 
 > [!NOTE]
-> Wenn Sie eine verschlüsselte Verbindung für einen Azure Search-Indexer zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einer Azure-VM erstellen wollen, finden Sie weitere Informationen unter [Konfigurieren einer Verbindung eines Azure Search-Indexers mit SQL Server auf einer Azure-VM](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
+> Wenn Sie eine verschlüsselte Verbindung für einen Azure Search-Indexer zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einer Azure-VM erstellen wollen, finden Sie weitere Informationen unter [Konfigurieren einer Verbindung eines Azure Search-Indexers mit SQL Server auf einer Azure-VM](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers). 
 
 ## <a name="certificate-requirements"></a>Zertifikatanforderungen
 
@@ -126,7 +126,7 @@ Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL
 
 > [!IMPORTANT]
 > In Produktionsumgebungen wird die Verwendung eines von einer Zertifizierungsstelle ausgestellten vertrauenswürdigen Zertifikats empfohlen.    
-> Zu Testzwecken kann auch ein selbstsigniertes Zertifikat verwendet werden. Informationen zum Erstellen eines selbstsignierten Zertifikats finden Sie in den Artikeln zum [PowerShell-Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) bzw. dem [certreq-Befehl](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1).
+> Zu Testzwecken kann auch ein selbstsigniertes Zertifikat verwendet werden. Informationen zum Erstellen eines selbstsignierten Zertifikats finden Sie in den Artikeln zum [PowerShell-Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) bzw. dem [certreq-Befehl](/windows-server/administration/windows-commands/certreq_1).
   
 ## <a name="install-across-multiple-servers"></a>Installieren auf mehreren Servern
 
@@ -187,4 +187,4 @@ Mithilfe von IPSec können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 + [TLS 1.2-Unterstützung für Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-+ [Powershell-Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)
++ [Powershell-Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)

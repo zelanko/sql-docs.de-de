@@ -12,12 +12,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b350c746d498dbaeb63f952f1ca172d4ffeaefff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91c7f3a0ef51b752b2c1460578319929f7ae4113
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395876"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670998"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>Reparieren von Fehlern bei einer SQL Server-Installation
 
@@ -82,6 +82,5 @@ Der Reparaturvorgang kann in den folgenden Szenarien verwendet werden:
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [Artikel zu Vorgehensweisen für die Installation](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [Artikel zu Vorgehensweisen für die Installation](/previous-versions/sql/)  
   

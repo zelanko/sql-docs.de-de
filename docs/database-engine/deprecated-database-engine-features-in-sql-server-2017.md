@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244078"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670519"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2017
 
@@ -62,7 +62,7 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 
 | Als veraltet markierte Funktion | Ersatz | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
-Upgrade von Version 100 (SQL Server 2008 und SQL Server 2008 R2) | Wenn die [Unterstützung](https://aka.ms/sqllifecycle) für eine SQL Server-Version eingestellt wird, wird der zugehörige Datenbank-Kompatibilitätsgrad als veraltet markiert. Anwendungen, die für einen der unterstützten Datenbank-Kompatibilitätsgrade zertifiziert sind, werden jedoch so lange wie möglich unterstützt, um die Upgrades zu vereinfachen. Weitere Informationen zu den Kompatibilitätsgraden finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Datenbank-Kompatibilitätsgrad 100 | 108 |
+Upgrade von Version 100 (SQL Server 2008 und SQL Server 2008 R2) | Wenn die [Unterstützung](/lifecycle/products/?products=sql-server) für eine SQL Server-Version eingestellt wird, wird der zugehörige Datenbank-Kompatibilitätsgrad als veraltet markiert. Anwendungen, die für einen der unterstützten Datenbank-Kompatibilitätsgrade zertifiziert sind, werden jedoch so lange wie möglich unterstützt, um die Upgrades zu vereinfachen. Weitere Informationen zu den Kompatibilitätsgraden finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Datenbank-Kompatibilitätsgrad 100 | 108 |
 
 ### <a name="database-objects"></a>Datenbankobjekte
 
@@ -370,6 +370,4 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 > Der **OUTPUT** -Cookieparameter für **sp_setapprole** ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(50)** zurück. Wenn Entwickler **varbinary(50)** zugeordnet haben, erfordert die Anwendung möglicherweise Änderungen, wenn die Cookierückgabegröße in einer zukünftigen Version steigt. Obwohl es sich nicht um ein Veraltungsproblem handelt, wird dies in diesem Thema erwähnt, da die Anwendungsanpassungen ähnlich sind. Weitere Informationen finden Sie unter [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
-
+ [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)  

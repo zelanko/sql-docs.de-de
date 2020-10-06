@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69d363980f09ecf0bd732bafc119bd5dd511d29f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772592"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670723"
 ---
 # <a name="database-engine-instances-sql-server"></a>Datenbank-Engine-Instanzen (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85772592"
 |Beschreibt, wie der einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]zugeordnete Dienst verwaltet wird. Dazu zählen Aktionen wie das Starten und Beenden des Diensts und das Konfigurieren von Startoptionen.|[Verwalten der Datenbank-Engine-Dienste](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
 |Beschreibt, wie Servernetzwerk-Konfigurationstasks ausgeführt werden müssen, z. B. das Aktivieren von Protokollen, das Ändern eines von einem Protokoll verwendeten Ports oder einer Pipe, das Konfigurieren von Verschlüsselungen, das Konfigurieren des SQL Server-Browserdiensts, das Anzeigen oder das Ausblenden der SQL Server-Datenbank-Engine im Netzwerk und das Registrieren des Serverprinzipalnamens.|[Server-Netzwerkkonfiguration](../../database-engine/configure-windows/server-network-configuration.md)|  
 |Beschreibt, wie Clientnetzwerk-Konfigurationstasks (beispielsweise das Konfigurieren von Clientprotokollen und das Erstellen oder Löschen eines Serveralias) ausgeführt werden.|[Client-Netzwerkkonfiguration](../../database-engine/configure-windows/client-network-configuration.md)|  
-|Beschreibt die [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Editoren, die zum Entwerfen, Debuggen und Ausführen von Skripts, z. B. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, verwendet werden können. Beschreibt darüber hinaus, wie Windows PowerShell-Skripts für die Verwendung mit SQL Server-Komponenten codiert werden.|[Datenbank-Engine-Skripterstellung](../../relational-databases/scripting/database-engine-scripting.md)|  
+|Beschreibt die [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Editoren, die zum Entwerfen, Debuggen und Ausführen von Skripts, z. B. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, verwendet werden können. Beschreibt darüber hinaus, wie Windows PowerShell-Skripts für die Verwendung mit SQL Server-Komponenten codiert werden.|[Datenbank-Engine-Skripterstellung](../../ssms/scripting/database-engine-scripting.md)|  
 |Beschreibt, wie Wartungspläne verwendet werden, um für eine Instanz einen Workflow für allgemeine Verwaltungsaufgaben anzugeben. Workflows schließen Tasks wie das Sichern von Datenbanken und das Aktualisieren von Statistiken zur Leistungsverbesserung ein.|[Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
 |Beschreibt, wie die Ressourcenkontrolle zum Verwalten von Ressourcenverbrauch und Arbeitslasten verwendet wird, indem Beschränkungen für die CPU- und Arbeitsspeicherressourcen angegeben werden, die von Anwendungsanforderungen verwendet werden können.|[Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)|  
 |Beschreibt, wie Datenbankanwendungen Datenbank-E-Mails verwenden können, um E-Mail-Nachrichten von [!INCLUDE[ssDE](../../includes/ssde-md.md)]aus zu senden.|[Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)|  
@@ -55,7 +55,6 @@ ms.locfileid: "85772592"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sqlservr (Anwendung)](../../tools/sqlservr-application.md)   
- [Datenbankfunktionen](../../relational-databases/database-features.md)   
- [Instanzübergreifende Datenbank-Engine-Funktionen](../../relational-databases/database-engine-cross-instance-features.md)  
-  
+ [Datenbankfunktionen](../../relational-databases/databases/databases.md)   
+ [Instanzübergreifende Datenbank-Engine-Funktionen](../../relational-databases/databases/databases.md)  
   
