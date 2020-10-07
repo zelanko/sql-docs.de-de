@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: eafad9ac648994c1a8ce24746401728caa4b1500
-ms.sourcegitcommit: 5be63bf337f765dfe04972c034dbd9e93c834dc5
-ms.translationtype: MT
+ms.openlocfilehash: a443b615a6a04b588ed6dc84c6a8a4f6ed12e2f0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721418"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726756"
 ---
 ## <a name="specifying-application-intent"></a>Angeben des Anwendungszwecks
 
@@ -31,9 +31,9 @@ Wenn eine Verbindung **ReadOnly** auswählt, wird sie einer der folgenden spezie
 - [Always On](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
     - Eine Datenbank kann Lesearbeitslasten in der Always On-Zieldatenbank zulassen bzw. nicht zulassen. Diese Auswahl wird mit der **ALLOW_CONNECTIONS**-Klausel der Transact-SQL-Anweisungen **PRIMARY_ROLE** und **SECONDARY_ROLE** gesteuert.
 
-- [Georeplikation](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)
+- [Georeplikation](/azure/sql-database/sql-database-geo-replication-overview)
 
-- [Horizontale Leseskalierung](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
+- [Horizontale Leseskalierung](/azure/sql-database/sql-database-read-scale-out)
 
 Wenn keins dieser speziellen Ziele verfügbar ist, erfolgt der Lesevorgang in der regulären Datenbank.
 
@@ -54,5 +54,4 @@ Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit des sch
 
 Mehrere Verbindungen, die jeweils das schreibgeschützte Routing verwenden, erfolgen möglicherweise nicht alle mit demselben schreibgeschützten Replikat. Änderungen in der Datenbanksynchronisierung oder Änderungen in der Routingkonfiguration des Servers können zu Clientverbindungen mit anderen schreibgeschützten Replikaten führen. Sie können sicherstellen, dass alle schreibgeschützten Anforderungen eine Verbindung mit demselben schreibgeschützten Replikat herstellen. Um dies zu erreichen, übergeben Sie *keinen* Verfügbarkeitsgruppenlistener an das Schlüsselwort **Server** der Verbindungszeichenfolge. Geben Sie stattdessen den Namen der schreibgeschützten Instanz an.
 
-Das schreibgeschützte Routing kann länger dauern als das Herstellen einer Verbindung mit der primären Instanz. Die längere Dauer liegt darin begründet, dass schreibgeschütztes Routing zunächst eine Verbindung mit dem primären Replikat herstellt und dann nach dem besten verfügbaren lesbaren sekundären Replikat sucht. Aufgrund dieser mehrfachen Schritte sollten Sie das Anmeldungs Timeout auf mindestens 30 Sekunden erhöhen.
-
+Das schreibgeschützte Routing kann länger dauern als das Herstellen einer Verbindung mit der primären Instanz. Die längere Dauer liegt darin begründet, dass schreibgeschütztes Routing zunächst eine Verbindung mit dem primären Replikat herstellt und dann nach dem besten verfügbaren lesbaren sekundären Replikat sucht. Da mehrere Schritte ausgeführt werden, sollten Sie das Anmeldungstimeout auf mindestens 30 Sekunden erhöhen.
