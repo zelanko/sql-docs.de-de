@@ -1,7 +1,7 @@
 ---
 description: Ergänzende Datenschutzbestimmungen zu SQL Server
 title: Ergänzende Datenschutzbestimmungen zu SQL Server | Microsoft-Dokumentation
-ms.date: 01/19/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: mikeray
@@ -11,21 +11,23 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9e2619cf1bfc8994481c6f310977c77a7292911
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480687"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603410"
 ---
 # <a name="sql-server-privacy-supplement"></a>Ergänzende Datenschutzbestimmungen zu SQL Server
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-Dieser Artikel beschreibt internetfähige Features, die anonyme Featurenutzungs- und Diagnosedaten sammeln und an Microsoft senden können. SQL Server sammelt möglicherweise Standardinformationen zu Ihrem Computer, und Daten zur Nutzung und Leistung werden möglicherweise an Microsoft übermittelt und analysiert, um die Qualität, Sicherheit und Zuverlässigkeit des Produkts zu optimieren. Wenn Sie SQL Server auf einem virtuellen Computer in Microsoft Azure installieren, werden möglicherweise Umgebungsinformationen an Microsoft gesendet, damit Microsoft Ihre SQL Server-VM-Ressource beim Ressourcenanbieter in Ihrem Azure-Abonnement registrieren kann. Weitere Informationen dazu finden Sie [hier](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). Im Rahmen der Registrierung der SQL Server VM-Ressource wird die SQL Server-IaaS-Agent-Erweiterung auf dem virtuellen Computer installiert, wie [hier](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)beschrieben. Dieser Artikel ist ein Nachtrag zu den [Microsoft-Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkId=521839). Die Datenklassifizierung in diesem Artikel gilt nur für lokale Versionen von SQL Server. Sie gilt nicht für folgende Produkte:
+Dieser Artikel beschreibt internetfähige Features, die anonyme Featurenutzungs- und Diagnosedaten sammeln und an Microsoft senden können. SQL Server sammelt möglicherweise Standardinformationen zu Ihrem Computer, und Daten zur Nutzung und Leistung werden möglicherweise an Microsoft übermittelt und analysiert, um die Qualität, Sicherheit und Zuverlässigkeit des Produkts zu optimieren.
+
+Dieser Artikel ist ein Nachtrag zu den [Microsoft-Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkId=521839). Die Datenklassifizierung in diesem Artikel gilt nur für lokale Versionen von SQL Server. Sie gilt nicht für folgende Produkte:
 
 - Azure SQL-Datenbank
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-telemetry-ssms.md)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Datenbankmigrations-Assistent
@@ -115,6 +117,20 @@ Daten, die gemäß der SQL Server-Lizenzbedingungen für die Bereitstellung von 
 |Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |Der Zugriff ist auf den internen Gebrauch von Microsoft ohne Zugriff von Drittanbietern begrenzt. |Benutzerfeedback, das Kundeninhalt enthält, kann mit Zustimmung der Kunden an Microsoft gesendet werden. |
 |Power View und Kartenelemente von SQL Reporting Services können Daten für die Verwendung von Bing Maps freigeben. |Der Zugriff ist auf Sitzungsdaten begrenzt. |- |
 
+## <a name="organization-identifiable-information-oii"></a>Organisationsbezogene Informationen (Organization Identifiable Information, OII)
+
+Daten, die von einer Organisation stammen oder durch die Verwendung des Produkts erstellt wurden.
+-   Bezogen auf eine Organisation.
+-   Enthält keinen Inhalt.
+
+### <a name="examples-of-organization-identifiable-information"></a>Beispiele für organisationsbezogene Informationen
+-   Name der Organisation (Beispiel: Microsoft Corp.)
+
+### <a name="permitted-usage-scenarios"></a>Szenarios für die zulässige Verwendung
+|Szenario  |Zugriffseinschränkungen  |Aufbewahrungsanforderungen|
+|---------|---------|---------|
+| Microsoft kann allgemeine Nutzungsdaten von SQL Server-Instanzen sammeln, die in Azure Virtual Machines ausgeführt werden, um Kunden innerhalb von Azure optionale Vorteile für die Verwendung von SQL Server in Azure Virtual Machines zu bieten. | Microsoft kann Daten für den Kunden z.B. über das Azure-Portal verfügbar machen, damit Kunden, die SQL Server in Azure Virtual Machines ausführen, die Vorteile von SQL Server in Azure nutzen können. </br></br>Microsoft verwendet diese Daten ohne vorherige Zustimmung des Kunden nicht für Lizenzierungsüberprüfungen. | Mindestens 90 Tage bis maximal 3 Jahre. |
+
 ## <a name="system-metadata"></a>Systemmetadaten
 
 Daten, die generiert werden, während der Server ausgeführt wird.  Diese Daten enthalten keinen Kundeninhalt.
@@ -134,7 +150,7 @@ Folgende Daten gelten als Systemmetadaten, wenn sie keine Kundeninhalte, Objektm
 - Ereignisnamen und Fehlercodes
 - Hardwareeinstellungen und -identifizierung, z.B. OEM-Hersteller
 
-Microsoft untersucht die Werte von Anwendungsnamen, die von anderen Programmen, die SQL Server verwenden, festgelegt wurden (z.B. SharePoint oder oder von Drittanbietern gepackte Programme), und schließt diese Informationen in die Systemmetadaten ein, die an Microsoft gesendet werden, wenn die Nutzungsdaten aktiviert sind. Kunden sollten keine persönlichen Daten, wie z.B. personenbezogene Endbenutzerinformationen, in Systemmetadatenfelder platzieren oder Anwendungen zum Speichern von persönlichen Daten in diese Felder eingeben. 
+Microsoft untersucht die Werte von Anwendungsnamen, die von anderen Programmen, die SQL Server verwenden, festgelegt wurden (z. B. SharePoint oder von Drittanbietern zusammengestellte Programme), und schließt diese Informationen in die Systemmetadaten ein, die an Microsoft gesendet werden, wenn die Nutzungsdaten aktiviert sind. Kunden sollten keine persönlichen Daten, wie z.B. personenbezogene Endbenutzerinformationen, in Systemmetadatenfelder platzieren oder Anwendungen zum Speichern von persönlichen Daten in diese Felder eingeben. 
 
 ### <a name="permitted-usage-scenarios"></a>Szenarios für die zulässige Verwendung
 

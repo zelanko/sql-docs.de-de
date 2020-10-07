@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238438"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497723"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -127,20 +127,20 @@ Standardmäßig werden von SQL Server verwendete Ports und verknüpften Datenban
   
  Eine Alternative zum Konfigurieren einer benannten Instanz für das Lauschen auf einem festen Port ist die Erstellung einer Ausnahme für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Programm wie z.B. **sqlservr.exe** (für [!INCLUDE[ssDE](../../includes/ssde-md.md)]) in der Firewall. Dies kann zwar zweckmäßig sein, aber die Portnummer wird nicht in der Spalte **Lokaler Port** auf der Seite **Eingehende Regeln** angezeigt, wenn Sie das MMC-Snap-In „Windows-Firewall mit erweiterter Sicherheit“ verwenden. Damit kann es schwieriger werden, zu verfolgen, welche Ports geöffnet sind. Ein weiterer Aspekt ist, dass ein Service Pack oder kumulatives Update den Pfad zur ausführbaren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datei ändern kann, wodurch die Firewallregel ungültig wird.  
   
-##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>So fügen Sie mithilfe von „Windows-Firewall mit erweiterter Sicherheit“ eine Programmausnahme hinzu
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-defender-firewall-with-advanced-security"></a>So fügen Sie mithilfe von Windows Defender Firewall mit erweiterter Sicherheit eine Programmausnahme zur Firewall hinzu
   
-1. Geben Sie im Startmenü *wf.msc* ein. Wählen Sie **Windows-Firewall mit erweiterter Sicherheit** aus.
+1. Geben Sie im Startmenü *wf.msc* ein. Drücken Sie die EINGABETASTE, oder klicken Sie auf das Suchergebnis „wf.msc“, um **Windows Defender Firewall mit erweiterter Sicherheit** zu öffnen.
 1. Wählen Sie im linken Bereich **Eingehende Regeln** aus.
-1. Wählen Sie im rechten Bereich unter **Aktionen** die Option **Neue Regel...** aus. Daraufhin wird der **Assistent für neue eingehende Regel** geöffnet.
+1. Klicken Sie im rechten Bereich unter **Aktionen** auf **Neue Regel...** . Daraufhin wird der **Assistent für neue eingehende Regel** geöffnet.
 1. Wählen Sie unter **Regeltyp** die Option **Programm** aus. Wählen Sie **Weiter** aus.
 1. Wählen Sie unter **Programm** die Option **Dieser Programmpfad** aus. Klicken Sie auf **Durchsuchen**, um Ihre SQL Server-Instanz zu lokalisieren. Das Programm heißt „sqlservr.exe“. Es befindet sich normalerweise unter:
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
    Wählen Sie **Weiter** aus.
 
-1. Klicken Sie auf der Seite **Aktion** auf **Verbindung zulassen**.  
-1. Profil, einschließlich alle drei Profile. Wählen Sie **Weiter** aus.
+1. Klicken Sie auf der Seite **Aktion** auf **Verbindung zulassen**. Wählen Sie **Weiter** aus.
+1. Geben Sie auf der Seite **Profil** alle drei Profile an. Wählen Sie **Weiter** aus.
 1. Geben Sie in **Name** einen Namen für die Regel ein. Wählen Sie **Fertig stellen** aus.
 
 Weitere Informationen über Endpunkte finden Sie unter [Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) und [Endpunkte-Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 

@@ -1,6 +1,6 @@
 ---
-description: Suchen von zusätzlichen Informationen zum JDBC-Treiber
-title: Suchen von zusätzlichen Informationen zum JDBC-Treiber | Microsoft-Dokumentation
+title: Suchen von zusätzlichen Informationen zum JDBC-Treiber
+description: Weitere Informationen zum Microsoft JDBC-Treiber für SQL Server und zur SQL-Entwicklung allgemein finden Sie in den folgenden weiteren Ressourcen.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df6fa7bc4b5352ead02f66f6f5e38756030820ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19fe89b6d0e5837ac917117301e17f4bad213077
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438482"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603338"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>Suchen von zusätzlichen Informationen zum JDBC-Treiber
 

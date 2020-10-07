@@ -1,7 +1,7 @@
 ---
 title: Einführung in den Namespace „Microsoft.Data.SqlClient“
-description: Die Einführungsseite für den Namespace Microsoft.Data.SqlClient.
-ms.date: 06/23/2019
+description: Hier erfahren Sie mehr über den Namespace „Microsoft.Data.SqlClient“ sowie darüber, warum es sich dabei um die bevorzugte Methode für .NET-Anwendungen zum Herstellen einer Verbindung mit SQL handelt.
+ms.date: 09/29/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3a4f0611d3708aba9557deb81ab702f29e7a7462
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: c3af23cb3816ad45fa75516633749d1f011c930d
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334589"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529351"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Einführung in den Namespace „Microsoft.Data.SqlClient“
 
@@ -206,11 +206,11 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>Unterstützung für UTF-8
 
-Für UTF-8-Unterstützung sind keine Änderungen am Anwendungscode erforderlich. Diese SqlClient-Änderungen optimieren die Kommunikation zwischen Client und Server, wenn der Server UTF-8 unterstützt und die zugrunde liegende Spaltensortierung UTF-8 ist. Weitere Informationen finden Sie unter [Neuerungen in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) im Abschnitt „UTF-8“.
+Für UTF-8-Unterstützung sind keine Änderungen am Anwendungscode erforderlich. Diese SqlClient-Änderungen optimieren die Kommunikation zwischen Client und Server, wenn der Server UTF-8 unterstützt und die zugrunde liegende Spaltensortierung UTF-8 ist. Weitere Informationen finden Sie im Abschnitt über UTF-8 unter [Neues in SQL Server 2019 (15.x)](../../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ### <a name="always-encrypted-with-enclaves"></a>Always Encrypted mit Enclaves
 
-Im Allgemeinen sollte die vorhandene Dokumentation zu System.Data.SqlClient in .NET Framework **und integrierten Anbietern von Speichern für Spaltenhauptschlüssel** nun auch für .NET Core gelten.
+Im Allgemeinen sollte die vorhandene Dokumentation zu System.Data.SqlClient im .NET Framework **und integrierten Anbietern von Speicher für Spaltenhauptschlüssel** nun auch für .NET Core gelten.
 
  [Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 

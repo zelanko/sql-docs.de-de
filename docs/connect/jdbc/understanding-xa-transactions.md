@@ -2,7 +2,7 @@
 title: Grundlegendes zu XA-Transaktionen
 description: Der Microsoft JDBC-Treiber für SQL Server unterstützt optional verteilte Transaktionen für die Java-Plattform und Enterprise Edition/JDBC 2.0.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: f64cbc7b054f6e60285b3a34921e3219ddd507ff
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293998"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529331"
 ---
 # <a name="understanding-xa-transactions"></a>Grundlegendes zu XA-Transaktionen
 
@@ -63,7 +63,7 @@ Die folgenden Schritte sind erforderlich, wenn Sie XA-Datenquellen zusammen mit 
 > Die JDBC-Komponenten für verteilte Transaktionen sind im Verzeichnis "xa" der JDBC-Treiberinstallation enthalten. Zu diesen Komponenten zählen die Dateien "xa_install.sql" und "sqljdbc_xa.dll". Wenn Sie auf verschiedenen Clients verschiedene Versionen des JDBC-Treibers installiert haben, empfiehlt sich die Verwendung der aktuellen sqljdbc_xa.dll-Datei auf dem Server.  
 
 > [!NOTE]  
-> Ab SQL Server 2019 CTP 2.0 (Public Preview) sind die verteilten JDBC-XA-Transaktionskomponenten in der SQL Server-Engine enthalten. Außerdem können diese mithilfe einer gespeicherten Systemprozedur aktiviert oder deaktiviert werden.
+> Die JDBC-Komponenten für verteilte XA-Transaktionen sind in SQL Server 2017 ab dem kumulativen Update 16 und in SQL Server 2019 in der SQL Server-Engine enthalten. Sie können über eine gespeicherte Systemprozedur aktiviert oder deaktiviert werden.
 > Führen Sie die folgende gespeicherte Prozedur aus, um die erforderlichen Komponenten zum Durchführen von verteilten XA-Transaktionen mit dem JDBC-Treiber zu aktivieren.
 >
 > EXEC sp_sqljdbc_xa_install
@@ -90,7 +90,7 @@ Unter Windows Vista und höher:
   
 6. Klicken Sie erneut auf **OK**, um das Dialogfeld **Eigenschaften** zu schließen, und schließen Sie anschließend **Komponentendienste**.  
   
-7. Beenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und starten Sie diesen erneut, damit die MS DTC-Änderungen synchronisiert werden.  
+7. Beenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und starten Sie die Plattform dann neu, um sicherzustellen, dass die MS DTC-Änderungen synchronisiert werden.  
 
 ### <a name="configuring-the-jdbc-distributed-transaction-components"></a>Konfigurieren der JDBC-Komponenten für verteilte Transaktionen  
 
@@ -145,15 +145,15 @@ Ein Timeoutwert wird für jede Transaktion bei deren Start festgelegt, und es er
   
 - `XADefaultTimeout = 60`, `XAMaxTimeout = 0`
   
-     Bedeutet, dass alle Transaktionen ein Timeout von 60 Sekunden aufweisen, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird dieser Timeoutwert verwendet. Es wird kein maximaler Wert für das Timeout durchgesetzt.  
+     Dies bedeutet, dass bei allen Transaktionen nach 60 Sekunden ein Timeout auftritt, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird dieser Timeoutwert verwendet. Es wird kein maximaler Wert für das Timeout durchgesetzt.  
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     Bedeutet, dass alle Transaktionen ein Timeout von 30 Sekunden aufweisen, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird das Timeout des Clients verwendet, sofern es weniger als 60 Sekunden (den Maximalwert) beträgt.  
+     Dies bedeutet, dass bei allen Transaktionen nach 30 Sekunden ein Timeout auftritt, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird das Timeout des Clients verwendet, sofern es weniger als 60 Sekunden (den Maximalwert) beträgt.  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     Bedeutet, dass alle Transaktionen ein Timeout von 30 Sekunden (den Maximalwert) aufweisen, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird das Timeout des Clients verwendet, sofern es weniger als 30 Sekunden (den Maximalwert) beträgt.  
+     Dies bedeutet, dass bei allen Transaktionen nach 30 Sekunden (dem Maximalwert) ein Timeout auftritt, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird das Timeout des Clients verwendet, sofern es weniger als 30 Sekunden (den Maximalwert) beträgt.  
   
 ### <a name="upgrading-sqljdbc_xadll"></a>Aktualisieren von "sqljdbc_xa.dll"
 
@@ -170,14 +170,14 @@ Wenn Sie eine neue Version des JDBC-Treibers installieren, sollten Sie auch sqlj
   
 ### <a name="configuring-the-user-defined-roles"></a>Konfigurieren der benutzerdefinierten Rollen
 
-Um einem bestimmten Benutzer die Berechtigungen für die Teilnahme an verteilten Transaktionen mit dem JDBC-Treiber zu gewähren, fügen Sie den Benutzer der Rolle "SqlJDBCXAUser" hinzu. Mit dem folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code können Sie z.B. der Rolle „SqlJDBCXAUser“ einen Benutzer mit dem Namen „shelby“ (Benutzer mit dem Namen „shelby“, der die normale SQL-Anmeldung verwendet) hinzufügen:  
+Um einem bestimmten Benutzer die Berechtigungen für die Teilnahme an verteilten Transaktionen mit dem JDBC-Treiber zu gewähren, fügen Sie den Benutzer der Rolle "SqlJDBCXAUser" hinzu. Verwenden Sie z. B. den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code, um der Rolle „SqlJDBCXAUser“ einen Benutzer mit dem Namen „shelly“ (Benutzer, der die normale SQL-Anmeldung verwendet, mit dem Namen „shelly“) hinzuzufügen:  
 
 ```sql
 USE master  
 GO  
-EXEC sp_grantdbaccess 'shelby', 'shelby'  
+EXEC sp_grantdbaccess 'shelly', 'shelly'  
 GO  
-EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
+EXEC sp_addrolemember [SqlJDBCXAUser], 'shelly'  
 ```
 
 Benutzerdefinierte SQL-Rollen werden jeweils für eine Datenbank definiert. Wenn Sie aus Sicherheitsgründen eigene Rollen erstellen möchten, müssen Sie die Rolle in jeder Datenbank definieren und die Benutzer den jeweiligen Datenbanken hinzufügen. Die Rolle "SqlJDBCXAUser" ist ausschließlich in der Masterdatenbank definiert, da damit Zugriff auf die erweiterten gespeicherten SQL JDBC-Prozeduren gewährt wird, die sich in der Masterdatenbank befinden. Sie müssen den einzelnen Benutzern zuerst Zugriff auf die Masterdatenbank und dann auf die Rolle "SqlJDBCXAUser" gewähren. Dazu müssen Sie bei der Masterdatenbank angemeldet sein.  

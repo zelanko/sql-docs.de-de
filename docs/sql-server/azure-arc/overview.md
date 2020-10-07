@@ -9,18 +9,18 @@ ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 8312ab1f13d5a85c6dfb43cd29d0ba734846a512
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: c647a1cdf767b7dacef5b7e376d6e787af688469
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210579"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589299"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>Azure Arc-fähige SQL-Server-Instanz (Vorschauversion)
 
 Azure Arc-fähige SQL Server-Instanzen sind Teil von Azure Arc für Server. Sie weiten Azure-Dienste auf SQL Server-Instanzen aus, die außerhalb von Azure im Rechenzentrum des Kunden, am Edge oder in einer Multicloudumgebung gehostet werden.
 
-Damit Azure-Dienste aktiviert werden können, muss eine ausgeführte SQL Server-Instanz mithilfe des Azure-Portals und eines Registrierungsskripts bei Azure Arc registriert werden. Nach der Registrierung wird die Instanz in Azure als Ressource vom Typ __SQL Server – Azure Arc__ dargestellt. Die Eigenschaften dieser Ressource spiegeln einen Teil der Widerlegungseinstellungen in SQL Server wider.
+Damit Azure-Dienste aktiviert werden können, muss eine ausgeführte SQL Server-Instanz mithilfe des Azure-Portals und eines Registrierungsskripts bei Azure Arc registriert werden. Nach der Registrierung wird die Instanz in Azure als Ressource vom Typ __SQL Server – Azure Arc__ dargestellt. Die Eigenschaften dieser Ressource spiegeln einen Teil der Konfigurationseinstellungen in SQL Server wider.
 
 SQL Server kann auf einem virtuellen oder physischen Computer installiert werden, auf dem Windows oder Linux ausgeführt wird und der über den Connected Machine-Agent mit Azure Arc verbunden ist. Im Rahmen der Registrierung der SQL Server-Instanz wird der Agent installiert und der Computer automatisch registriert. Der Connected Machine-Agent kommuniziert ausgehend sicher über den TCP-Port 443 mit Azure Arc. Wenn der Computer bei der Kommunikation über das Internet die Verbindung durch eine Firewall oder über einen HTTP-Proxyserver herstellt, sehen Sie sich die [Anforderungen für die Netzwerkkonfiguration für den Connected Machine-Agent](/azure/azure-arc/servers/agent-overview#prerequisites) an.
 
@@ -38,7 +38,7 @@ Azure Arc-fähige SQL Server-Instanzen unterstützen SQL Server 2012 und höher
 
 - Windows Server 2012 R2 und höhere Versionen
 - Ubuntu 16.04 und 18.04 (x64)
-- CentOS Linux 7 (x64)
+- Red Hat Enterprise Linux (RHEL) 7 (x64) 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
 ### <a name="required-permissions"></a>Erforderliche Berechtigungen

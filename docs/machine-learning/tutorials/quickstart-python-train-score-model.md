@@ -4,32 +4,24 @@ titleSuffix: SQL machine learning
 description: In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Außerdem lernen Sie, wie Sie das Modell in einer Tabelle in Ihrer Datenbank speichern und anschließend dazu verwenden, Werte aus neuen Daten mithilfe von SQL-Machine-Learning vorherzusagen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 0198ec9c27523c3465a90fa569b819072bf6014d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 98c1b6235af6b521d668853a4fdcf75e75066ee8
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178487"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497986"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in Python mit SQL-Machine-Learning
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Sie lernen, wie Sie das Modell in Ihrer SQL Server-Instanz in einer Tabelle speichern und es anschließend verwenden, um Werte aus neuen Daten mithilfe von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) vorherzusagen.
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Sie lernen, wie Sie das Modell in Ihrer SQL Server-Instanz in einer Tabelle speichern und es anschließend verwenden, um Werte aus neuen Daten mithilfe von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) vorherzusagen.
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Außerdem lernen Sie, wie Sie das Modell in einer Tabelle in Ihrer Datenbank speichern und anschließend dazu verwenden, Werte aus neuen Daten mithilfe von [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) vorherzusagen.
-::: moniker-end
+In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Sie lernen, wie Sie das Modell in Ihrer SQL Server-Instanz in einer Tabelle speichern und es anschließend verwenden, um Werte basierend auf neuen Daten mithilfe von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md), [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) oder [SQL Server Big Data-Cluster](../../big-data-cluster/machine-learning-services.md) vorherzusagen.
 
 Hierzu erstellen Sie zwei gespeicherte Prozeduren, die in SQL ausgeführt werden. Die erste verwendet das klassische Irisblüten-Datenset und generiert ein Naïve Bayes-Modell, um eine Irisart anhand der Blumenmerkmale vorherzusagen. Die zweite Prozedur ist für die Bewertung vorgesehen: Sie ruft das in der ersten Prozedur generierte Modell auf, um mehrere Vorhersagen basierend auf neuen Daten auszugeben. Durch das Platzieren von Python-Code in einer gespeicherten SQL-Prozedur sind Vorgänge in SQL enthalten. Sie sind wiederverwendbar und können von anderen gespeicherten Prozeduren und Clientanwendungen aufgerufen werden.
 
@@ -44,15 +36,10 @@ In diesem Schnellstart lernen Sie Folgendes:
 
 Zum Durchführen dieser Schnellstartanleitung benötigen Sie folgende Voraussetzungen.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md) oder im [Linux-Installationshandbuch](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Sie können auch [Machine Learning Services in Big Data-Clustern unter SQL Server aktivieren](../../big-data-cluster/machine-learning-services.md).
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md). 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Machine Learning Services in Azure SQL Managed Instance. In der Übersicht [Machine Learning Services in Azure SQL Managed Instance (Vorschauversion)](/azure/azure-sql/managed-instance/machine-learning-services-overview) finden Sie Informationen zur Registrierung.
-::: moniker-end
+- Eine SQL-Datenbank auf einer der folgenden Plattformen:
+  - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md) oder im [Linux-Installationshandbuch](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
+  - Big Data-Cluster für SQL Server. Weitere Informationen finden Sie unter [Aktivieren von Machine Learning Services auf SQL Server-Big Data-Clustern](../../big-data-cluster/machine-learning-services.md).
+  - Machine Learning Services in Azure SQL Managed Instance. In der Übersicht [Machine Learning Services in Azure SQL Managed Instance (Vorschauversion)](/azure/azure-sql/managed-instance/machine-learning-services-overview) finden Sie Informationen zur Registrierung.
 
 - Ein Tool zum Ausführen von SQL-Abfragen, die Python-Skripts enthalten. In dieser Schnellstartanleitung wird [Azure Data Studio](../../azure-data-studio/what-is.md) verwendet.
 

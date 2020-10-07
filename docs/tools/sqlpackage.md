@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
-ms.date: 07/06/2020
-ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.date: 09/29/2020
+ms.openlocfilehash: 52a67ff5c77bebb1fb122af29759b9a440ef6931
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989443"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498215"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -136,7 +136,7 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 |---|---|---|---|
 |**/Action:**|**/a**|Veröffentlichen|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |
-|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Gibt an, welche Authentifizierungsmethode für den Zugriff auf Azure Key Vault verwendet wird. |
+|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Gibt an, welche Authentifizierungsmethode für den Zugriff auf Azure Key Vault verwendet werden soll, wenn ein Veröffentlichungsvorgang Änderungen an einer verschlüsselten Tabelle/Spalte umfasst |
 |**/ClientId:**|**/cid**|{string}|Gibt die Client-ID an, die zur Authentifizierung bei Azure Key Vault verwendet wird (sofern erforderlich). |
 |**/DeployScriptPath:**|**/dsp**|{string}|Hiermit wird ein optionaler Dateipfad zur Ausgabe des Bereitstellungsskripts angegeben. Wenn bei Azure-Bereitstellungen TSQL-Befehle zum Erstellen oder Ändern der Masterdatenbank verwendet werden, wird ein Skript in den gleichen Pfad geschrieben, wobei der Name der Ausgabedatei „Dateiname_Master.sql“ lautet. |
 |**/DeployReportPath:**|**/drp**|{string}|Hiermit wird ein optionaler Dateipfad zur Ausgabe der XML-Datei mit dem Bereitstellungsbericht angegeben. |
@@ -313,7 +313,7 @@ Durch eine SqlPackage.exe-Exportaktion wird eine Livedatenbank aus SQL Server bz
 |**/p:**|TableData=(STRING)|Gibt die Tabelle an, aus der Daten extrahiert werden. Geben Sie den Tabellennamen mit oder ohne Klammern um die Namensteile im folgenden Format an: Schemaname.Tabellen-ID. Diese Option kann mehrfach angegeben werden.|
 |**/p:**|TempDirectoryForTableData=(STRING)|Gibt das temporäre Verzeichnis an, das zum Puffern von Tabellendaten verwendet wird, bevor diese in die Paketdatei geschrieben werden.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Gibt an, wie die Ziel-Engine-Version erwartet wird. Dies hat Auswirkungen darauf, ob Objekte zugelassen werden, die von Microsoft Azure SQL-Datenbank-Servern mit V12-Funktionen unterstützt werden, z. B. speicheroptimierte Tabellen in der generierten BACPAC.|
-|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Gibt an, ob die unterstützten Volltextdokumenttypen für die Microsoft Azure SQL-Datenbank v12 überprüft werden sollen.|
+|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Gibt an, ob die unterstützten Volltextdokumenttypen für Microsoft Azure SQL-Datenbank Version 12 überprüft werden sollen|
   
 ## <a name="import-parameters-and-properties"></a>Parameter und Eigenschaften für den Import
 

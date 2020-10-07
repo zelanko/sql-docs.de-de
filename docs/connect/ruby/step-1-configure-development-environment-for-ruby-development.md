@@ -1,6 +1,6 @@
 ---
 title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für Ruby'
-description: Erfahren Sie, wie Sie Ihre Entwicklungsumgebung für Ruby konfigurieren.
+description: Schritt 1 dieses Leitfadens für die ersten Schritte umfasst das Installieren von Ruby und eines ODBC-Treibers für SQL Server in Ihrer Entwicklungsumgebung.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 700b0c1979b0eccc1544afb59296fba867e24c53
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a6412015000a5f9dda09ea5d489c8080fd2e1c09
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634592"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603361"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für die Ruby-Entwicklung
 Sie müssen Ihre Entwicklungsumgebung entsprechend den Voraussetzungen konfigurieren, um mithilfe des Ruby-Treibers für SQL Server eine Anwendung entwickeln zu können.    
