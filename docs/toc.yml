@@ -6030,8 +6030,6 @@
       items:
         - name: Neues
           href: dma/dma-whatsnew.md
-        - name: Bewerten der SQL-Datenbank
-          href: dma/dma-assesssqlonprem.md
         - name: "Bewerten von SQL\_Server\_2008 Integration\_Services (SSIS)"
           href: dma/dma-assess-ssis.md
         - name: Speichern und Laden von Bewertungen
@@ -6044,8 +6042,6 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: Migrieren von SQL Server-Anmeldungen
           href: dma/dma-migrateserverlogins.md
-        - name: Bewerten einer SQL Server-Datensammlung für die Azure SQL-Datenbank-Bereitschaft
-          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: Bewährte Methoden
           href: dma/dma-bestpractices.md
         - name: Konsolidieren von Bewertungsberichten
@@ -6056,6 +6052,14 @@
           href: dma/dma-commandline.md
         - name: Konfigurieren von Einstellungen
           href: dma/dma-configurationsettings.md
+        - name: Bewerten der Bereitschaft von Azure SQL-Datenbank
+          items:
+            - name: Bewertung erstellen
+              href: dma/dma-assesssqlonprem.md
+            - name: Verwenden der DMA-GUI
+              href: dma/dma-assess-sql-data-estate-to-sqldb.md
+            - name: Verwenden der DMA-Befehlszeile
+              href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
     - name: SQL Server Migration Assistant (SSMA)
       href: ssma/toc.yml
 - name: 'Überwachung, Verwaltung und Optimierung'
@@ -8461,7 +8465,7 @@
           items:
             - name: Herstellen einer Verbindung mit und Abfragen von SQL Server
               href: ssms/quickstarts/connect-query-sql-server.md
-        - name: Lernprogramme
+        - name: Tutorials
           items:
             - name: SSMS-Konfiguration
               href: ssms/tutorials/ssms-configuration.md
