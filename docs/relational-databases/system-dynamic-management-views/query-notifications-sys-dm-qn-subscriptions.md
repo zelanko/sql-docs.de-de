@@ -1,6 +1,6 @@
 ---
-description: Abfrage Benachrichtigungen-sys. dm_qn_subscriptions
-title: sys. dm_qn_subscriptions (Transact-SQL) | Microsoft-Dokumentation
+description: Abfrage Benachrichtigungen-sys.dm_qn_subscriptions
+title: sys.dm_qn_subscriptions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 197d3fd3ab4108c898c9377bbeed2f0e16e83d76
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542380"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834473"
 ---
-# <a name="query-notifications---sysdm_qn_subscriptions"></a>Abfrage Benachrichtigungen-sys. dm_qn_subscriptions
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>Abfrage Benachrichtigungen-sys.dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zu den aktiven Abfragebenachrichtigungsabonnements auf dem Server zurück. Diese Sicht können Sie verwenden, um in der Serverdatenbank oder in einer angegebenen Datenbank eine Überprüfung auf aktive Abonnements vorzunehmen oder um auf eine Überprüfung auf einen angegebenen Serverprinzipal vorzunehmen.  
@@ -43,7 +43,7 @@ ms.locfileid: "89542380"
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|From|To|Ein|type|  
+|From|An|Ein|type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|n:1|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|n:1|  
@@ -58,7 +58,7 @@ ms.locfileid: "89542380"
 |65798|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Abonnement wurde durch eine Einfügung ausgelöst.|  
 |65799|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Löschen|  
 |65800|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Aktualisieren|  
-|65801|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Zusammenführen|  
+|65801|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Merge|  
 |65802|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Tabelle kürzen|  
 |66048|Abonnement wurde ausgelöst, da das Timeout abgelaufen ist.|Nicht definierter Infomodus|  
 |66315|Abonnement wurde ausgelöst, da sich ein Objekt geändert hat.|Objekt oder Benutzer wurde gelöscht.|  
@@ -133,7 +133,6 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Abfrage Benachrichtigungen mit dynamischen Verwaltungs Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [Abfrage Benachrichtigungen mit dynamischen Verwaltungs Sichten &#40;Transact-SQL-&#41;](./system-dynamic-management-views.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
-  
   

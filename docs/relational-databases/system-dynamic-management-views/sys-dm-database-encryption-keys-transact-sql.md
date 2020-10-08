@@ -1,6 +1,6 @@
 ---
 description: sys.dm_database_encryption_keys (Transact-SQL)
-title: sys. dm_database_encryption_keys (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_database_encryption_keys (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6795fed58b8c368e838746d107325c221c58fcf4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b876db6159985e600536439f587004b33fd6fc6f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546647"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834282"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt Informationen über den Verschlüsselungsstatus einer Datenbank und die ihr zugeordneten Verschlüsselungsschlüssel für die Datenbank zurück. Weitere Informationen zur Datenbankverschlüsselung finden Sie unter [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
  
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Die ID der Datenbank.|  
 |encryption_state|**int**|Gibt an, ob die Datenbank verschlüsselt oder nicht verschlüsselt ist.<br /><br /> 0 = Kein Verschlüsselungsschlüssel für die Datenbank vorhanden, keine Verschlüsselung<br /><br /> 1 = Unverschlüsselt<br /><br /> 2 = Verschlüsselung wird ausgeführt<br /><br /> 3 = Verschlüsselt.<br /><br /> 4 = Schlüsseländerung wird ausgeführt<br /><br /> 5 = Entschlüsselung wird ausgeführt<br /><br /> 6 = Schutzänderung wird ausgeführt (Das Zertifikat oder der asymmetrische Schlüssel, das bzw. der zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet wird, wird geändert.)|  
@@ -45,7 +45,7 @@ ms.locfileid: "89546647"
 |key_algorithm|**nvarchar(32)**|Zeigt den Algorithmus an, der für den Schlüssel verwendet wird.|  
 |key_length|**int**|Zeigt die Länge des Schlüssels an.|  
 |encryptor_thumbprint|**varbinary(20)**|Zeigt den Fingerabdruck der Verschlüsselung an.|  
-|encryptor_type|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Beschreibt die Verschlüsselung.|  
+|encryptor_type|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [aktuelle Version](../../sql-server/what-s-new-in-sql-server-2016.md)).<br /><br /> Beschreibt die Verschlüsselung.|  
 |percent_complete|**real**|Prozentualer Anteil der bereits abgeschlossenen Änderung des Verschlüsselungsstatus einer Datenbank. Dieser Wert ist 0, wenn es keine Statusänderung gibt.|
 |encryption_state_desc|**nvarchar(32)**|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.<br><br> Eine Zeichenfolge, die angibt, ob die Datenbank verschlüsselt oder nicht verschlüsselt ist.<br><br>Keine<br><br>Unverschlüsselte<br><br>.<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
 |encryption_scan_state|**int**|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.<br><br>Gibt den aktuellen Status des Verschlüsselungs Scans an. <br><br>0 = Es wurde kein Scan initiiert, TDE ist nicht aktiviert.<br><br>1 = Überprüfung wird ausgeführt.<br><br>2 = Scan wird ausgeführt, aber angehalten, der Benutzer kann fortgesetzt werden.<br><br>3 = die Überprüfung wurde aus irgendeinem Grund abgebrochen. es ist ein manueller Eingriff erforderlich. Weitere Unterstützung erhalten Sie Microsoft-Support.<br><br>4 = die Überprüfung wurde erfolgreich abgeschlossen, TDE ist aktiviert, und die Verschlüsselung ist abgeschlossen.|
@@ -68,5 +68,4 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `V
  [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
-  
   

@@ -1,5 +1,5 @@
 ---
-title: sys. dm_pdw_nodes_exec_query_profiles (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL) | Microsoft-Dokumentation
 description: Dynamische Verwaltungs Sicht, die zum Überwachen von Echt Zeit Data Warehouse Abfrage Status während der Ausführung der Abfrage verwendet werden kann.
 ms.custom: ''
 ms.date: 10/14/2019
@@ -13,14 +13,14 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cb63045fa1a34898e9c195e7a5c75bdf6b34b15a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cd4f8ad0ae52876015df815089733f49a37d2f35
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394345"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834335"
 ---
-# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles (Transact-SQL)
+# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Überwacht die Echt Zeit Data Warehouse Abfrage Status während der Ausführung der Abfrage.   
@@ -28,7 +28,7 @@ ms.locfileid: "87394345"
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
 Die zurückgegebenen Leistungsindikatoren gelten pro Operator und pro Thread. Die Ergebnisse sind dynamisch und stimmen nicht mit den Ergebnissen vorhandener Optionen, wie z `SET STATISTICS XML ON` . b. der Ausgabe der Ausgabe ab, wenn die Abfrage abgeschlossen ist.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|Eindeutige numerische ID, die dem Knoten zugeordnet ist.|
 |session_id|**smallint**|Identifiziert die Sitzung, in der die Abfrage ausgeführt wird. Verweist auf dm_exec_sessions.session_id.|  
@@ -68,8 +68,8 @@ Die zurückgegebenen Leistungsindikatoren gelten pro Operator und pro Thread. Di
 |actual_read_row_count|**bigint**|Anzahl der von einem Operator gelesenen Zeilen, bevor das Rest-Prädikat angewendet wurde.| 
 |estimated_read_row_count|**bigint**|**Gilt für:** Ab [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Anzahl der Zeilen, die von einem Operator vor dem Anwenden des Rest-Prädikats gelesen werden sollen.|  
   
-## <a name="remarks"></a>Bemerkungen  
-Die gleichen Hinweise in [sys. dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15) werden angewendet.  
+## <a name="remarks"></a>Hinweise  
+Die gleichen Hinweise in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) gelten.  
 
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung auf dem Server.  
@@ -79,4 +79,4 @@ Die gleichen Hinweise in [sys. dm_exec_query_profiles](https://docs.microsoft.co
    
 
  ## <a name="next-steps"></a>Nächste Schritte
- Weitere Hinweise zur Entwicklung finden Sie in der [Entwicklungsübersicht für SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ Weitere Hinweise zur Entwicklung finden Sie in der [Entwicklungsübersicht für SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

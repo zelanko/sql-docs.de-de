@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 433bcea8a7d0a1f719aac9f76a782f666113189f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548473"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834248"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL-Datenbank)
 
@@ -32,7 +32,7 @@ ms.locfileid: "89548473"
 
   Enthält eine Zeile für jeden Replikations Link zwischen primären und sekundären Datenbanken in einer Partnerschaft für die georeplikation. Dies schließt primäre und sekundäre Datenbanken ein. Wenn für eine bestimmte primäre Datenbank mehrere Verknüpfungen für die fortlaufende Replikation vorhanden sind, enthält die Tabelle eine Zeile für jede der Beziehungen. Die Sicht wird in allen Datenbanken, einschließlich der logischen „master“-Datenbank, erstellt. Wenn aber diese Sicht in der logischen master-Datenbank abgerufen wird, wird ein leeres Set zurückgegeben.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|Eindeutige ID des Replikations Links.|  
 |partner_server|**sysname**|Der Name des SQL-Datenbankservers, der die verknüpfte Datenbank enthält.|  
@@ -44,14 +44,14 @@ ms.locfileid: "89548473"
 |Rolle (role)|**tinyint**|Die georeplikationsrolle ist eine der folgenden:<br /><br /> 0 = primär. Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.<br /><br /> 1 = sekundär.  Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Der sekundäre Typ, einer der folgenden:<br /><br /> 0 = Es sind keine direkten Verbindungen mit der sekundären Datenbank zulässig, und die Datenbank ist für den Lesezugriff nicht verfügbar.<br /><br /> 2 = alle Verbindungen sind für die Datenbank in der sekundären repl zulässig; ikation für schreibgeschützten Zugriff.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar(256)**|Nein<br /><br /> Alle|  
 |last_commit|**datetimeoffset**|Zeitpunkt der letzten Transaktion, für die ein Commit an die Datenbank ausgeführt wurde. Wenn die Datenbank in der primären Datenbank abgerufen wird, gibt Sie den Zeitpunkt des letzten Commit in der primären Datenbank an. Wenn Sie in der sekundären Datenbank abgerufen wird, gibt Sie den Zeitpunkt des letzten Commit in der sekundären Datenbank an. Wenn Sie in der sekundären Datenbank abgerufen werden, wenn der primäre Replikations Link nicht aktiv ist, wird angezeigt, bis der von der sekundären Datenbank aufgefasste Punkt erreicht wurde|
   
 > [!NOTE]  
->  Wenn die Replikations Beziehung durch Entfernen der sekundären Datenbank (Abschnitt 4,2) beendet wird, wird die Zeile für diese Datenbank in der **sys. dm_geo_replication_link_status** -Sicht nicht mehr angezeigt.  
+>  Wenn die Replikations Beziehung durch Entfernen der sekundären Datenbank (Abschnitt 4,2) beendet wird, wird die Zeile für diese Datenbank in der **sys.dm_geo_replication_link_status** Sicht nicht mehr angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Alle Konten mit view_database_state Berechtigung können **sys. dm_geo_replication_link_status**Abfragen.  
+ Alle Konten mit view_database_state Berechtigung können **sys.dm_geo_replication_link_status**Abfragen.  
   
 ## <a name="example"></a>Beispiel  
  Replikations Verzögerungen und Zeitpunkt der letzten Replikation der sekundären Datenbanken anzeigen.  
@@ -66,8 +66,7 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Alter Database &#40;Azure SQL-Datenbank&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys. geo_replication_links &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [sys. dm_operation_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
+ [Alter Database &#40;Azure SQL-Datenbank&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.geo_replication_links &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
  [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
-  

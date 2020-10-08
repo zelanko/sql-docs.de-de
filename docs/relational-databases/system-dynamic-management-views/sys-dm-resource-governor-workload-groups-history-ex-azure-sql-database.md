@@ -1,6 +1,6 @@
 ---
 description: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL-Datenbank)
-title: sys. dm_resource_governor_workload_groups_history_ex (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: eee98e604fad74b58db9acd5e1f5b20a0189f216
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d761d1ca80037e26f8757ec681929dd5356b182f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489742"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834398"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Gibt eine Momentaufnahme für die letzten 32 Minuten (insgesamt 128 Sekunden) der Ressourcenpool Statistik für eine Azure SQL-Datenbank zurück.
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**pool_id**| INT |ID des Ressourcenpools. Lässt keine NULL-Werte zu.|
 |**group_id**| INT |ID der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|
@@ -80,7 +80,7 @@ Gibt eine Momentaufnahme für die letzten 32 Minuten (insgesamt 128 Sekunden) de
 
 Diese Sicht erfordert die View Server State-Berechtigung.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Benutzer können auf diese dynamische Verwaltungs Sicht zugreifen, um den Ressourcenverbrauch nahezu in Echtzeit für den benutzerworkloadpool sowie systeminterne Pools der Azure SQL-Daten Bank Instanz zu überwachen.
 
@@ -101,8 +101,8 @@ WHERE name LIKE 'User%'
 ORDER BY snapshot_time DESC;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Governanceprotokoll Raten-Governance](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Pool für elastische Datenbanken: DTU-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Pool für elastische Datenbanken: V-Kern-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Governanceprotokoll Raten-Governance](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Pool für elastische Datenbanken: DTU-Ressourcenlimits](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Pool für elastische Datenbanken: V-Kern-Ressourcenlimits](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_operation_status
-title: sys. dm_operation_status | Microsoft-Dokumentation
+title: sys.dm_operation_status | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 201d7b1c0a15299817edfc663a0176f98ad72156
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 777dd89339ef2eefccdb5ee180178100a16b5216
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89531900"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834149"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -33,7 +33,7 @@ ms.locfileid: "89531900"
 
   Gibt Informationen zu den Vorgängen zurück, die für Datenbanken auf einem [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Server ausgeführt werden.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|ID des Vorgangs. Nicht NULL.|  
 |resource_type|**int**|Bezeichnet den Typ der Ressource, für die der Vorgang ausgeführt wird. Nicht NULL. In der aktuellen Version verfolgt diese Sicht nur die Vorgänge nach, die für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausgeführt werden. Der entsprechende ganzzahlige Wert ist 0.|  
@@ -46,7 +46,7 @@ ms.locfileid: "89531900"
 |percent_complete|**int**|Prozentsatz des Vorgangs, der abgeschlossen wurde. Werte sind nicht kontinuierlich, und die gültigen Werte sind unten aufgeführt. Nicht NULL.<br/><br/>0 = Vorgang wurde nicht gestartet.<br/>50 = Vorgang wird ausgeführt<br/>100 = Vorgang wurde beendet.|  
 |error_code|**int**|Code, der den Fehler angibt, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Wenn der Wert 0 ist, bedeutet dies, dass der Vorgang erfolgreich abgeschlossen wurde.|  
 |error_desc|**nvarchar (2048)**|Beschreibung des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist.|  
-|error_severity|**int**|Schweregrad des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Weitere Informationen zu Schweregraden von Fehlern finden Sie unter [Datenbank-Engine schwere](https://go.microsoft.com/fwlink/?LinkId=251052)Grade von Fehlern.|  
+|error_severity|**int**|Schweregrad des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Weitere Informationen zu Schweregraden von Fehlern finden Sie unter [Datenbank-Engine schwere](../errors-events/database-engine-error-severities.md)Grade von Fehlern.|  
 |error_state|**int**|Für zukünftige Verwendung reserviert. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |start_time|**datetime**|Zeitstempel, an dem der Vorgang begonnen wurde.|  
 |last_modify_time|**datetime**|Zeitstempel, an dem der Datensatz zuletzt für einen länger ausgeführten Vorgang geändert wurde. Im Fall von erfolgreich abgeschlossenen Vorgängen wird in diesem Feld der Zeitstempel angezeigt, an dem der Vorgang abgeschlossen wurde.|  
@@ -75,7 +75,7 @@ ms.locfileid: "89531900"
   
 -   Datenbank löschen  
 
-Die Informationen in dieser Ansicht werden ungefähr eine Stunde lang aufbewahrt. Verwenden Sie das [Azure-Aktivitätsprotokoll](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) , um Details zu den Vorgängen in den letzten 90 Tagen anzuzeigen. Wenn Sie mehr als 90 Tage aufbewahren möchten, sollten Sie [Aktivitätsprotokoll](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) Einträge an einen Log Analytics Arbeitsbereich senden.
+Die Informationen in dieser Ansicht werden ungefähr eine Stunde lang aufbewahrt. Verwenden Sie das [Azure-Aktivitätsprotokoll](/azure/azure-monitor/platform/activity-log) , um Details zu den Vorgängen in den letzten 90 Tagen anzuzeigen. Wenn Sie mehr als 90 Tage aufbewahren möchten, sollten Sie [Aktivitätsprotokoll](/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) Einträge an einen Log Analytics Arbeitsbereich senden.
 
 ## <a name="example"></a>Beispiel  
  Zeigt die letzten georeplikationsvorgänge an, die der Datenbank "MyDB" zugeordnet sind.  
@@ -88,8 +88,7 @@ SELECT * FROM sys.dm_operation_status
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungs Sichten und-Funktionen für die georeplikation &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
- [sys. dm_geo_replication_link_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
- [sys. geo_replication_links &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [ALTER DATABASE &#40;Azure SQL-Datenbank&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
-  
+ [sys.dm_geo_replication_link_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
+ [sys.geo_replication_links &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [ALTER DATABASE &#40;Azure SQL-Datenbank&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   

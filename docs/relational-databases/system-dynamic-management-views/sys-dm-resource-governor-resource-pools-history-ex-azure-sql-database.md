@@ -1,6 +1,6 @@
 ---
-description: sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
-title: sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft-Dokumentation
+description: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+title: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 62aec7de63493a94ea05f91883e506d0fc0f6f7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cbc5d23a7c7843a2186cd951fd5bb16079489d3
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481789"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834320"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Gibt die Momentaufnahme für die letzten 32 Minuten (insgesamt 128 RECS) der Ressourcenpool Statistik für eine Azure SQL-Datenbank zurück.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|INT|Die ID des Ressourcenpools. Lässt keine NULL-Werte zu.
 |**name**|sysname|Der Name des Ressourcenpools. Lässt keine NULL-Werte zu.|
@@ -104,7 +104,7 @@ Gibt die Momentaufnahme für die letzten 32 Minuten (insgesamt 128 RECS) der Res
 
 Diese Sicht erfordert die View Server State-Berechtigung.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Benutzer können auf diese dynamische Verwaltungs Sicht zugreifen, um den Ressourcenverbrauch nahezu in Echtzeit für den benutzerworkloadpool sowie systeminterne Pools der Azure SQL-Daten Bank Instanz zu überwachen.
 
@@ -119,7 +119,7 @@ Im folgenden Beispiel werden die maximalen Protokoll Raten Daten und der Verbrau
 select snapshot_time, name, max_log_rate_kb, delta_log_bytes_used from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-Im folgenden Beispiel werden ähnliche Informationen wie sys. elastic_pool_resource_stats zurückgegeben, ohne eine Verbindung mit dem logischen Master herstellen zu müssen.
+Im folgenden Beispiel werden ähnliche Informationen wie sys.elastic_pool_resource_stats zurückgegeben, ohne eine Verbindung mit dem logischen Master herstellen zu müssen.
 
 ```sql
 select snapshot_time, name, cap_vcores_used_percent,
@@ -135,6 +135,6 @@ select snapshot_time, name, cap_vcores_used_percent,
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Governanceprotokoll Raten-Governance](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Pool für elastische Datenbanken: DTU-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Pool für elastische Datenbanken: V-Kern-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Governanceprotokoll Raten-Governance](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Pool für elastische Datenbanken: DTU-Ressourcenlimits](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Pool für elastische Datenbanken: V-Kern-Ressourcenlimits](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

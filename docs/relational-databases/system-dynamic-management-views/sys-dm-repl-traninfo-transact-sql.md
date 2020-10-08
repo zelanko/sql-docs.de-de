@@ -1,6 +1,6 @@
 ---
 description: sys.dm_repl_traninfo (Transact-SQL)
-title: sys. dm_repl_traninfo (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_repl_traninfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccac1a54db0fb5395f76205713fe65c9cba3f8e1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6369fc0d1ee2c0b70cb3e6e13fd201fd718236dc
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542098"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834568"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen über jede replizierte Transaktion bzw. jede Change Data Capture-Transaktion zurück.  
 
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|Gibt an, ob sich die Transaktion in einer Datenbank befindet, die mithilfe der Peer-zu-Peer-Transaktionsreplikation veröffentlicht wurde. Wenn True, ist der Wert gleich 1; andernfalls ist der Wert 0.|  
 |**db_ver**|**int**|Die Datenbankversion.|  
@@ -77,7 +77,5 @@ ms.locfileid: "89542098"
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Replikation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
- [Dynamische Verwaltungssichten in Bezug auf Change Data Capture &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [Dynamische Verwaltungssichten in Bezug auf Change Data Capture &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)  
   
-  
-

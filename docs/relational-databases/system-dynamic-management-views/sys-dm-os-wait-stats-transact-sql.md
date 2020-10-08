@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_wait_stats (Transact-SQL)
-title: sys. dm_os_wait_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/19/2020
 ms.prod: sql
@@ -21,22 +21,22 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678c6710e17d8383077be4acff8921268e9a0b6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bdf67ebe15b869cb295c3090fe24ed5cd4f50413
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532210"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834236"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die ausgeführt wurden. In dieser aggregierten Sicht können Sie Leistungsprobleme bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie bei bestimmten Abfragen und Batches diagnostizieren. [sys. dm_exec_session_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) stellt ähnliche Informationen nach Sitzung bereit.  
+Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die ausgeführt wurden. In dieser aggregierten Sicht können Sie Leistungsprobleme bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie bei bestimmten Abfragen und Batches diagnostizieren. [sys.dm_exec_session_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) von der Sitzung ähnliche Informationen bereit.  
   
 > [!NOTE] 
-> Um dies von ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_wait_stats**.  
+> Um dies von ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] oder **aus aufzurufen, verwenden Sie den Namen **sys.dm_pdw_nodes_os_wait_stats**.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|Der Name des Wartetyps. Weitere Informationen finden Sie unter [Wartetypen](#WaitTypes) weiter unten in diesem Thema.|  
 |waiting_tasks_count|**bigint**|Anzahl von Wartevorgängen für diesen Wartetyp. Dieser Leistungsindikator wird beim Starten eines Wartevorgangs inkrementiert.|  
@@ -87,7 +87,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
   
  In der folgenden Tabelle werden die Wartetypen für Tasks in einer Liste aufgeführt.  
 
-|Typ |BESCHREIBUNG| 
+|type |Beschreibung| 
 |-------------------------- |--------------------------| 
 |ABR |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| | 
 |AM_INDBUILD_ALLOCATION |Nur interne Verwendung. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
@@ -136,7 +136,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |BROKER_TRANSMISSION_OBJECT |Nur interne Verwendung. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |BROKER_TRANSMISSION_TABLE |Nur interne Verwendung. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |BROKER_TRANSMISSION_WORK |Nur interne Verwendung. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
-|BROKER_TRANSMITTER |Tritt auf, wenn der Service Broker Sender auf Arbeit wartet. Service Broker verfügt über eine Komponente, die als Sender bezeichnet wird, der Nachrichten aus mehreren Dialogfeldern plant, die über das Netzwerk über eine oder mehrere Verbindungs Endpunkte gesendet werden sollen. Der Sender verfügt zu diesem Zweck über zwei dedizierte Threads. Dieser Wartetyp wird in Rechnung gestellt, wenn diese senderthreads darauf warten, dass Dialog Meldungen mithilfe der Transportverbindungen gesendet werden. Hohe Werte waiting_tasks_count für diesen Wartetyp zeigen auf zeitweilig auftretende Arbeit für diese senderthreads und sind keine Anzeichen für Leistungsprobleme. Wenn Service Broker überhaupt nicht verwendet wird, sollte waiting_tasks_count 2 (für die zwei Übermittlers) und wait_time_ms die doppelte Dauer seit dem Instanzstart sein. Siehe [Service Broker-warte Statistik](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types).|
+|BROKER_TRANSMITTER |Tritt auf, wenn der Service Broker Sender auf Arbeit wartet. Service Broker verfügt über eine Komponente, die als Sender bezeichnet wird, der Nachrichten aus mehreren Dialogfeldern plant, die über das Netzwerk über eine oder mehrere Verbindungs Endpunkte gesendet werden sollen. Der Sender verfügt zu diesem Zweck über zwei dedizierte Threads. Dieser Wartetyp wird in Rechnung gestellt, wenn diese senderthreads darauf warten, dass Dialog Meldungen mithilfe der Transportverbindungen gesendet werden. Hohe Werte waiting_tasks_count für diesen Wartetyp zeigen auf zeitweilig auftretende Arbeit für diese senderthreads und sind keine Anzeichen für Leistungsprobleme. Wenn Service Broker überhaupt nicht verwendet wird, sollte waiting_tasks_count 2 (für die zwei Übermittlers) und wait_time_ms die doppelte Dauer seit dem Instanzstart sein. Siehe [Service Broker-warte Statistik](/archive/blogs/sql_service_broker/service-broker-wait-types).|
 |BUILTIN_HASHKEY_MUTEX |Kann nach dem Start einer Instanz auftreten, während interne Datenstrukturen initialisiert werden. Tritt nach dem Initialisieren der Datenstrukturen nicht erneut auf.| 
 |CHANGE_TRACKING_WAITFORCHANGES |Nur interne Verwendung. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |CHECK_PRINT_RECORD |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
@@ -331,7 +331,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |Ein Hintergrundtask wartet auf den Abschluss des Starts eines Hintergrundtasks, der Windows Server-Failoverclusteringbenachrichtigungen verarbeitet. Nur interne Verwendung. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |Ein Hintergrundtask wartet auf den Abschluss eines Hintergrundtasks, der Windows Server-Failoverclusteringbenachrichtigungen verarbeitet. Nur interne Verwendung. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |HADR_PARTNER_SYNC |Parallelitätssteuerungs-Wartevorgang für der Partnerliste. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
-|HADR_READ_ALL_NETWORKS |Wartet auf Lese- oder Schreibzugriff für die List mit WSFC-Netzwerken. Nur interne Verwendung. Hinweis: die Engine speichert eine Liste von wsfc-Netzwerken, die in dynamischen Verwaltungs Sichten (z. b. sys. dm_hadr_cluster_networks) verwendet werden, oder zum Validieren Always on Transact-SQL-Anweisungen, die auf wsfc-Netzwerkinformationen verweisen. Diese Liste wird nach dem Start der Engine, den wsfc-bezogenen Benachrichtigungen und dem internen Always on Neustart aktualisiert (z. b. Verlust und Wiederherstellung des wsfc-Quorums). Tasks werden normalerweise blockiert, wenn ein Update in dieser Liste ausgeführt wird. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
+|HADR_READ_ALL_NETWORKS |Wartet auf Lese- oder Schreibzugriff für die List mit WSFC-Netzwerken. Nur interne Verwendung. Hinweis: die Engine speichert eine Liste mit wsfc-Netzwerken, die in dynamischen Verwaltungs Sichten (z. b. sys.dm_hadr_cluster_networks) verwendet werden, oder um Always on Transact-SQL-Anweisungen zu validieren, die auf wsfc-Netzwerkinformationen verweisen. Diese Liste wird nach dem Start der Engine, den wsfc-bezogenen Benachrichtigungen und dem internen Always on Neustart aktualisiert (z. b. Verlust und Wiederherstellung des wsfc-Quorums). Tasks werden normalerweise blockiert, wenn ein Update in dieser Liste ausgeführt wird. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |Warten, bis die sekundäre Datenbank vor dem Ausführen der Wiederherstellung eine Verbindung mit der primären Datenbank herstellt. Dies ist ein erwarteter Wartevorgang, der länger dauern kann, wenn die Verbindung zur primären Datenbank nur langsam aufgebaut wird. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |Die Datenbankwiederherstellung wartet, bis die sekundäre Datenbank die Wiederherstellungs- und Initialisierungsphase beendet hat, um diese mit der primären Datenbank auf den allgemeinen Protokollpunkt zurückzubringen. Dies ist ein erwarteter Wartevorgang nach Failovers. Der Undo-Status kann mit dem Windows-Systemmonitor (perfmon.exe) und den dynamischen Verwaltungssichten nachverfolgt werden. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |HADR_REPLICAINFO_SYNC |Warten, bis die Parallelitätssteuerung den aktuellen Replikatstatus aktualisiert. <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
@@ -381,12 +381,12 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |KTM_ENLISTMENT |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |KTM_RECOVERY_MANAGER |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |KTM_RECOVERY_RESOLUTION |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|LATCH_DT |Tritt beim Warten auf einen DT-Latch (Löschlatch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys. dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
-|LATCH_EX |Tritt beim Warten auf einen EX-Latch (exklusiven Latch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys. dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
-|LATCH_KP |Tritt beim Warten auf einen KP-Latch (Beibehaltungslatch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys. dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
+|LATCH_DT |Tritt beim Warten auf einen DT-Latch (Löschlatch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys.dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
+|LATCH_EX |Tritt beim Warten auf einen EX-Latch (exklusiven Latch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys.dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
+|LATCH_KP |Tritt beim Warten auf einen KP-Latch (Beibehaltungslatch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys.dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
 |LATCH_NL |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|LATCH_SH |Tritt beim Warten auf einen SH-Latch (gemeinsamen Latch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys. dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
-|LATCH_UP |Tritt beim Warten auf einen UP-Latch (Updatelatch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys. dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
+|LATCH_SH |Tritt beim Warten auf einen SH-Latch (gemeinsamen Latch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys.dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
+|LATCH_UP |Tritt beim Warten auf einen UP-Latch (Updatelatch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys.dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
 |LAZYWRITER_SLEEP |Tritt auf, wenn Lazy Writer-Tasks angehalten werden. Dieser Wartetyp gibt die Zeitdauer von wartenden Hintergrundtasks an. Wenn Sie nach durch den Benutzer bedingtem Hängen des Computers suchen, sollten Sie diesen Status nicht verwenden.| 
 |LCK_M_BU |Tritt auf, wenn ein Task darauf wartet, eine Massenupdatesperre (BU-Sperre) abzurufen.| 
 |LCK_M_BU_ABORT_BLOCKERS |Tritt auf, wenn ein Task darauf wartet, eine Massenupdatesperre (BU-Sperre) mit Abbruchs-Blockern abzurufen. (Im Zusammenhang mit der Wait-Option mit niedriger Priorität von ALTER TABLE und Alter Index.), <br /><br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
@@ -1024,12 +1024,11 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
   
 -   ddl_with_wait_at_low_priority  
   
- Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
+ Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys.dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
     
  [SQL Server dynamischen Verwaltungs Sichten im Zusammenhang mit dem Betriebs System &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys. dm_exec_session_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys. dm_db_wait_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
-  
+ [sys.dm_exec_session_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_db_wait_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   

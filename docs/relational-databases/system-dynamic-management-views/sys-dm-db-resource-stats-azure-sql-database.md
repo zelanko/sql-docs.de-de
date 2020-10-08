@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_resource_stats (Azure SQL-Datenbank)
-title: sys. dm_db_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sys.dm_db_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/27/2020
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 083a9d14803d0a8c4e34c43e338f58a0b44be5ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21cef237634891d4795e46f96f63eba701f55852
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475020"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833702"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88475020"
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC-Zeit, die das Ende des aktuellen Berichtsintervalls angibt.|  
 |avg_cpu_percent|**Dezimalzahl (5, 2)**|Die durchschnittliche Servernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.|  
-|avg_data_io_percent|**Dezimalzahl (5, 2)**|Durchschnittliche Daten-e/a-Auslastung als Prozentsatz des Limits der Dienst Ebene. Informationen zu den Datenbanken mit hyperskalierung finden Sie unter Daten-e/a [in Statistiken](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)|  
+|avg_data_io_percent|**Dezimalzahl (5, 2)**|Durchschnittliche Daten-e/a-Auslastung als Prozentsatz des Limits der Dienst Ebene. Informationen zu den Datenbanken mit hyperskalierung finden Sie unter Daten-e/a [in Statistiken](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)|  
 |avg_log_write_percent|**Dezimalzahl (5, 2)**|Durchschnittliche Transaktionsprotokoll Schreibvorgänge (in Mbit/s) als Prozentsatz der Dienst Ebene.|  
 |avg_memory_usage_percent|**Dezimalzahl (5, 2)**|Die durchschnittliche Arbeitsspeichernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.<br /><br /> Dies schließt den für Pufferpool Seiten und die Speicherung von in-Memory-OLTP-Objekten verwendeten Arbeitsspeicher ein.|  
 |xtp_storage_percent|**Dezimalzahl (5, 2)**|Die Speicherauslastung für in-Memory-OLTP als Prozentsatz des Limits der Dienst Ebene (am Ende des Berichts Intervalls). Dazu gehört auch der Arbeitsspeicher, der für die Speicherung der folgenden in-Memory-OLTP-Objekte verwendet wird: Speicher optimierte Tabellen, Indizes und Tabellen Variablen. Sie enthält auch Speicher, der zum Verarbeiten von ALTER TABLE-Vorgängen verwendet wird<br /><br /> Gibt 0 zurück, wenn in-Memory-OLTP nicht in der Datenbank verwendet wird.|  
@@ -51,17 +51,17 @@ ms.locfileid: "88475020"
 |||
   
 > [!TIP]  
-> Weitere Informationen zu diesen Grenzwerten und Dienst Ebenen finden Sie in den Themen [Dienst Ebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Manuelles Optimieren der Abfrageleistung in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)und [Ressourcen Limits für SQL-Datenbank und Ressourcen](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)Kontrolle.
+> Weitere Informationen zu diesen Grenzwerten und Dienst Ebenen finden Sie in den Themen [Dienst Ebenen](/azure/azure-sql/database/purchasing-models), [Manuelles Optimieren der Abfrageleistung in Azure SQL-Datenbank](/azure/azure-sql/database/performance-guidance)und [Ressourcen Limits für SQL-Datenbank und Ressourcen](/azure/sql-database/sql-database-resource-limits-database-server)Kontrolle.
   
 ## <a name="permissions"></a>Berechtigungen
  Diese Sicht erfordert die VIEW DATABASE STATE-Berechtigung.  
   
-## <a name="remarks"></a>Bemerkungen
- Die von **sys. dm_db_resource_stats** zurückgegebenen Daten werden als Prozentsatz der maximal zulässigen Grenzwerte für die Dienst Ebene/Leistungsstufe ausgedrückt, die Sie ausführen.
+## <a name="remarks"></a>Hinweise
+ Die von **sys.dm_db_resource_stats** zurückgegebenen Daten werden als Prozentsatz der maximal zulässigen Grenzwerte für die Dienst Ebene/Leistungsstufe ausgedrückt, die Sie ausführen.
  
  Wenn für die Datenbank innerhalb der letzten 60 Minuten ein Failover auf einen anderen Server durchgeführt wurde, gibt die Sicht nur Daten für den Zeitraum seit dem Failover zurück.  
   
- Verwenden Sie die **sys. resource_stats** -Katalog Sicht in der **Master** -Datenbank, um eine weniger präzise Ansicht dieser Daten mit längerer Beibehaltungs Dauer zu erhalten. Diese Sicht erfasst die Daten jede 5 Minuten und behält die Verlaufsdaten 14 Tage bei.  Weitere Informationen finden Sie unter [sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Verwenden Sie **sys.resource_stats** Katalog Sicht in der **Master** -Datenbank, um eine weniger präzise Ansicht dieser Daten mit längerer Beibehaltungs Dauer zu erhalten. Diese Sicht erfasst die Daten jede 5 Minuten und behält die Verlaufsdaten 14 Tage bei.  Weitere Informationen finden Sie unter [sys.resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
  Wenn eine Datenbank Mitglied eines Pools für elastische Datenbanken ist, werden Ressourcen Statistiken, die als Prozentwerte dargestellt werden, als Prozentsatz der maximalen Beschränkung für die Datenbanken ausgedrückt, die in der Konfiguration des elastischen Pools festgelegt sind.  
   
@@ -102,4 +102,4 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [Dienst Ebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)
+ [sys.resource_stats &#40;&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [Dienst Ebenen](/azure/azure-sql/database/purchasing-models) von Azure SQL-Datenbank

@@ -1,5 +1,5 @@
 ---
-title: sys. dm_pdw_nodes_exec_query_statistics_xml (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_pdw_nodes_exec_query_statistics_xml (Transact-SQL) | Microsoft-Dokumentation
 description: Dynamische Verwaltungs Sicht, die den Abfrage Ausführungsplan für in-Flight-Anforderungen zurückgibt. Verwenden Sie diese DMV zum Abrufen von Showplan XML mit vorübergehenden Statistiken.
 ms.custom: ''
 ms.date: 10/14/2019
@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0fea3a43ccf786d5ebc6f9c19acb977097bea1e4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 790431cd6effe4d1b3d21db46325782e05419e4f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394333"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834193"
 ---
 # <a name="dm_pdw_nodes_exec_query_statistics_xml-transact-sql"></a>dm_pdw_nodes_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -27,7 +27,7 @@ Gibt den Abfrage Ausführungsplan für in-Flight-Anforderungen zurück. Verwende
 
 ## <a name="table-returned"></a>Zurückgegebene Tabelle
 
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|
 |node_id|**int**|Eindeutige numerische ID, die dem Knoten zugeordnet ist.|
 |session_id|**smallint**|ID der Sitzung. Lässt keine NULL-Werte zu.|
@@ -36,8 +36,8 @@ Gibt den Abfrage Ausführungsplan für in-Flight-Anforderungen zurück. Verwende
 |plan_handle|**varbinary(64)**|Ein Token, das einen Abfrage Ausführungsplan für einen momentan ausgeführten Batch eindeutig identifiziert. NULL-Werte sind zulässig.|
 |query_plan|**xml**|Enthält die Showplan-Lauf Zeit Darstellung des Abfrage Ausführungs Plans, der mit *plan_handle* angegeben wird, die partielle Statistiken enthält. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert. NULL-Werte sind zulässig.|
 
-## <a name="remarks"></a>Bemerkungen
-Die gleichen Hinweise in [sys. dm_exec_query_statistics_xml](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql?view=sql-server-ver15) werden angewendet.   
+## <a name="remarks"></a>Hinweise
+Die gleichen Hinweise in [sys.dm_exec_query_statistics_xml](./sys-dm-exec-query-statistics-xml-transact-sql.md?view=sql-server-ver15) gelten.   
 
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung auf dem Server.  
@@ -46,5 +46,4 @@ Die gleichen Hinweise in [sys. dm_exec_query_statistics_xml](https://docs.micros
  [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
  ## <a name="next-steps"></a>Nächste Schritte
- Weitere Hinweise zur Entwicklung finden Sie in der [Entwicklungsübersicht für SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
-
+ Weitere Hinweise zur Entwicklung finden Sie in der [Entwicklungsübersicht für SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

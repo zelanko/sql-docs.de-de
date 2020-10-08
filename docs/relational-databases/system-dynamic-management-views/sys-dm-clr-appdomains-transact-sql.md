@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_appdomains (Transact-SQL)
-title: sys. dm_clr_appdomains (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_clr_appdomains (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ac0a451dd88d79ab1847d4c5414fadeb01724e3d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7f1357535d22306f09f8378e8e71aef6801975ae
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545342"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834107"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "89545342"
   
  Es stehen mehrere Typen von CLR-Integrationsobjekten für verwaltete Datenbanken zur Verfügung. Allgemeine Informationen zu diesen Objekten finden Sie im Thema zum [aufbauen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Wenn diese Objekte ausgeführt werden, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine **AppDomain** erstellt, unter der der erforderliche Code geladen und ausgeführt werden kann. Die Isolationsstufe für eine **AppDomain** ist eine **AppDomain** pro Datenbank pro Besitzer. Das heißt, dass alle CLR-Objekte, die sich im Besitz eines Benutzers befinden, stets in derselben **AppDomain** pro Datenbank ausgeführt werden (wenn ein Benutzer CLR-Datenbankobjekte in verschiedenen Datenbanken registriert, werden die CLR-Datenbankobjekte in verschiedenen Anwendungs Domänen ausgeführt). Eine **AppDomain** wird nicht zerstört, nachdem die Ausführung des Codes abgeschlossen ist. Stattdessen wird sie für die zukünftige Ausführung im Arbeitsspeicher zwischengespeichert. Dadurch wird die Leistung verbessert.  
   
- Weitere Informationen finden Sie unter [Anwendungs Domänen](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ Weitere Informationen finden Sie unter [Anwendungs Domänen](../../sql-server/what-s-new-in-sql-server-2016.md).  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary(8)**|Adresse der **AppDomain**. Alle verwalteten Datenbankobjekte, die sich im Besitz eines Benutzers befinden, werden immer in derselben **AppDomain**geladen. Sie können diese Spalte verwenden, um alle zurzeit in dieser **AppDomain** geladenen Assemblys in **sys. dm_clr_loaded_assemblies**zu suchen.|  
+|**appdomain_address**|**varbinary(8)**|Adresse der **AppDomain**. Alle verwalteten Datenbankobjekte, die sich im Besitz eines Benutzers befinden, werden immer in derselben **AppDomain**geladen. Sie können diese Spalte verwenden, um alle zurzeit in dieser **AppDomain** geladenen Assemblys in **sys.dm_clr_loaded_assemblies**zu suchen.|  
 |**appdomain_id**|**int**|Die ID der **AppDomain**. Jede **AppDomain** verfügt über eine eindeutige ID.|  
 |**appdomain_name**|**varchar (386)**|Der Name der **AppDomain** , die von zugewiesen wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**creation_time**|**datetime**|Uhrzeit, zu der die **AppDomain** erstellt wurde. Da **AppDomains** zwischengespeichert und wieder verwendet werden, um die Leistung zu verbessern, ist **creation_time** nicht notwendigerweise die Zeit, zu der der Code ausgeführt wurde.|  
@@ -53,19 +53,19 @@ ms.locfileid: "89545342"
 |**survived_memory_kb**|**bigint**|Menge der Daten in KB, die die letzte vollständige Sammlung mit exklusivem Zugriff überdauert haben, und von denen bekannt ist, dass sie von der aktuellen Anwendungsdomäne referenziert werden. Dies entspricht **System. AppDomain. MonitoringSurvivedMemorySize**.|  
   
 ## <a name="remarks"></a>Hinweise  
- Zwischen **dm_clr_appdomains. appdomain_address** und **dm_clr_loaded_assemblies. appdomain_address**besteht eine 1: Mai-Beziehung.  
+ Es besteht eine 1: Mai-Beziehung zwischen **dm_clr_appdomains. appdomain_address** und **dm_clr_loaded_assemblies. appdomain_address**.  
   
  In den folgenden Tabellen sind mögliche **Zustands** Werte, deren Beschreibungen und deren Auftreten im **AppDomain** -Lebenszyklus aufgeführt. Sie können diese Informationen verwenden, um den Lebenszyklus einer **AppDomain** zu verfolgen und um zu überwachen, dass verdächtige oder sich wiederholende **AppDomain** -Instanzen entladen werden, ohne dass das Windows-Ereignisprotokoll analysiert werden muss.  
   
 ## <a name="appdomain-initialization"></a>AppDomain-Initialisierung  
   
-|State|BESCHREIBUNG|  
+|State|Beschreibung|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|Die **AppDomain** wird erstellt.|  
   
 ## <a name="appdomain-usage"></a>AppDomain-Verwendung  
   
-|State|BESCHREIBUNG|  
+|State|Beschreibung|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|Die **AppDomain** der Laufzeit kann von mehreren Benutzern verwendet werden.|  
 |E_APPDOMAIN_SINGLEUSER|Die **AppDomain** ist bereit für die Verwendung in DDL-Vorgängen. Diese unterscheiden sich von E_APPDOMAIN_SHARED, indem im Gegensatz zu DDL-Vorgängen freigegebene AppDomains für die CLR-Integration verwendet werden, . Solche AppDomains werden von anderen gleichzeitigen Vorgängen isoliert.|  
@@ -73,7 +73,7 @@ ms.locfileid: "89545342"
   
 ## <a name="appdomain-cleanup"></a>AppDomain-Cleanup  
   
-|State|BESCHREIBUNG|  
+|State|Beschreibung|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat angefordert, dass die CLR die **AppDomain**entladen soll, in der Regel, weil die Assembly, die die verwalteten Datenbankobjekte enthält, geändert oder gelöscht wurde.|  
 |E_APPDOMAIN_UNLOADED|Die CLR hat die **AppDomain**entladen. Dies ist normalerweise das Ergebnis eines Eskalations Verfahrens aufgrund von **ThreadAbort**, **outhfmemory**oder einer nicht behandelten Ausnahme im Benutzercode.|  
@@ -110,7 +110,6 @@ where appdomain_id = 15);
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. dm_clr_loaded_assemblies &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
+ [sys.dm_clr_loaded_assemblies &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Common Language Runtime &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
-  
   

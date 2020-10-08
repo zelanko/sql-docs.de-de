@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_job_object (Azure SQL-Datenbank)
-title: sys. dm_os_job_object (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sys.dm_os_job_object (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/03/2020
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3ed298216393b59d723eb58cac783f9836ce93d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8ee9c4054a9bb39f7eebcd30aa0fa9c85d7bde7
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489849"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834070"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -55,7 +55,6 @@ Ein Auftrags Objekt ist ein Windows-Konstrukt, das CPU-, Arbeitsspeicher-und e/A
 ## <a name="permissions"></a>Berechtigungen  
 In SQL verwaltete Instanz ist die- `VIEW SERVER STATE` Berechtigung erforderlich. In der SQL-Datenbank ist die `VIEW DATABASE STATE`-Berechtigung für die Datenbank erforderlich.  
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 
-Informationen zu verwalteten Instanzen finden Sie unter [SQL verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
-  
+Informationen zu verwalteten Instanzen finden Sie unter [SQL verwaltete Instanz](/azure/sql-database/sql-database-managed-instance).

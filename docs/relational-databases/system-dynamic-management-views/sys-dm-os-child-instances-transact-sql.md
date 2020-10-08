@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_child_instances (Transact-SQL)
-title: sys. dm_os_child_instances (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_os_child_instances (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9c148c6d3bab448d89294eba4af7ebec8cd2cf6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 81cceff6a1336fadecb84f1d70c5f41c7625dc07
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539360"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834455"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "89539360"
   
 > **WICHTIG!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Die von **sys. dm_os_child_instances** zurückgegebenen Informationen können verwendet werden, um den Status der einzelnen Benutzer Instanzen (heart_beat) zu bestimmen und um den Pipenamen (instance_pipe_name) abzurufen, der zum Erstellen einer Verbindung mit der Benutzer Instanz mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder sqlcmd verwendet werden kann. Die Verbindung zur Benutzerinstanz kann erst hergestellt werden, wenn die Benutzerinstanz von einem externen Vorgang, wie z. B. einer Clientanwendung, gestartet worden ist. Mit den SQL-Verwaltungstools selbst können keine Benutzerinstanzen gestartet werden.  
+ Die von **sys.dm_os_child_instances** zurückgegebenen Informationen können verwendet werden, um den Status der einzelnen Benutzer Instanzen (heart_beat) zu bestimmen und den Pipenamen (instance_pipe_name) abzurufen, der zum Erstellen einer Verbindung mit der Benutzer Instanz mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder sqlcmd verwendet werden kann. Die Verbindung zur Benutzerinstanz kann erst hergestellt werden, wenn die Benutzerinstanz von einem externen Vorgang, wie z. B. einer Clientanwendung, gestartet worden ist. Mit den SQL-Verwaltungstools selbst können keine Benutzerinstanzen gestartet werden.  
   
 > **Hinweis:** Benutzer Instanzen sind nur eine Funktion von [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] .  
 > 
-> **Hinweis** Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_os_child_instances**.  
+> **Hinweis** Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_os_child_instances**.  
   
-|Column|Datentyp|BESCHREIBUNG|  
+|Column|Datentyp|Beschreibung|  
 |------------|---------------|-----------------|  
 |**owning_principal_name**|**nvarchar(256)**|Der Name des Benutzers, für den diese Benutzerinstanz erstellt wurde.|  
 |owning_principal_sid|nvarchar(256)|Die SID (Sicherheits-ID) des Prinzipals, der Besitzer der Benutzerinstanz ist. Diese SID stimmt mit der Windows-SID überein.|  
@@ -60,9 +60,5 @@ ms.locfileid: "89539360"
  Weitere Informationen zur dynamischen Verwaltungs Sicht finden Sie unter [dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Online Dokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Benutzerinstanzen für Nichtadministratoren](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
+ [Benutzerinstanzen für Nichtadministratoren](/previous-versions/sql/)  
   
-  
-
-
-
