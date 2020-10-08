@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 2648f8efbae6cc6665ea3ab984b27012a2a1ebc7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1fae73102dbbb29b6772213c4d021c273271458a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920429"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725635"
 ---
 # <a name="enabling-query-notifications"></a>Aktivieren von Abfragebenachrichtigungen
 
@@ -40,23 +40,23 @@ Abfragebenachrichtigungen werden nur für SELECT-Anweisungen unterstützt, die e
   
 **SQL Server-Dokumentation**  
   
-- [Erstellen einer Abfrage für die Benachrichtigung](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [Erstellen einer Abfrage für die Benachrichtigung](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Sicherheitsaspekte für Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
+- [Sicherheitsaspekte für Service Broker](/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
-- [Sicherheit und Schutz (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
+- [Sicherheit und Schutz (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
-- [Sicherheitsaspekte für Notification Services](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
+- [Sicherheitsaspekte für Notification Services](/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
-- [Berechtigungen für Abfragebenachrichtigungen](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
+- [Berechtigungen für Abfragebenachrichtigungen](/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
-- [Internationale Gesichtspunkte bei Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
+- [Internationale Gesichtspunkte bei Service Broker](/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
-- [Überlegungen zu Lösungsentwürfen (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
+- [Überlegungen zu Lösungsentwürfen (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
-- [Service Broker Developer InfoCenter](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker Developer InfoCenter](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [Entwicklerhandbuch (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [Entwicklerhandbuch (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>Aktivieren von Abfragebenachrichtigungen zum Ausführen von Beispielcode  
 Führen Sie zum Aktivieren von Service Broker in der **AdventureWorks**-Datenbank mit SQL Server Management Studio die folgende Transact-SQL-Anweisung aus:  

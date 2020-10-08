@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d3905604b45eec2f1e9c7c1c93bd53b1863695f3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b5f4500645b60a98dd97166e12bdf0899149b1c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925468"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725601"
 ---
 # <a name="query-notifications-in-sql-server"></a>Abfragebenachrichtigungen in SQL Server
 
@@ -35,19 +35,19 @@ Abfragebenachrichtigungen sind für Anwendungen sinnvoll, die Anzeigen oder Cach
   
 Sie können Benachrichtigungen für SELECT- und EXECUTE-Anweisungen einrichten. Wenn eine EXECUTE-Anweisung verwendet wird, registriert SQL Server eine Benachrichtigung für den ausgeführten Befehl anstelle der EXECUTE-Anweisung selbst. Der Befehl muss den Anforderungen und Einschränkungen für eine SELECT-Anweisung genügen. Wenn ein Befehl, der eine Benachrichtigung registriert, mehrere Anweisungen enthält, erstellt die Datenbank-Engine eine Benachrichtigung für jede Anweisung im Batch.  
   
-Wenn Sie eine Anwendung entwickeln, in der Sie bei Datenänderungen zuverlässige Benachrichtigungen unter einer Sekunde benötigen, lesen Sie die Abschnitte **Planen einer effizienten Abfragebenachrichtigungs-Strategie** und **Alternativen zu Abfragebenachrichtigungen** im Thema [Planen von Benachrichtigungen](https://go.microsoft.com/fwlink/?LinkId=211984) in der SQL Server-Onlinedokumentation. Weitere Informationen zu Abfragebenachrichtigungen und SQL Server Service Broker finden Sie unter den folgenden Links zu Themen in der SQL Server-Onlinedokumentation.  
+Wenn Sie eine Anwendung entwickeln, in der Sie bei Datenänderungen zuverlässige Benachrichtigungen unter einer Sekunde benötigen, lesen Sie die Abschnitte **Planen einer effizienten Abfragebenachrichtigungs-Strategie** und **Alternativen zu Abfragebenachrichtigungen** im Thema [Planen von Benachrichtigungen](/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105)) in der SQL Server-Onlinedokumentation. Weitere Informationen zu Abfragebenachrichtigungen und SQL Server Service Broker finden Sie unter den folgenden Links zu Themen in der SQL Server-Onlinedokumentation.  
   
 **SQL Server-Dokumentation**  
   
-- [Verwenden von Abfragebenachrichtigungen](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [Verwenden von Abfragebenachrichtigungen](/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [Erstellen einer Abfrage für die Benachrichtigung](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [Erstellen einer Abfrage für die Benachrichtigung](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Entwicklung (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [Entwicklung (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
-- [Service Broker Developer InfoCenter](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker Developer InfoCenter](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [Entwicklerhandbuch (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [Entwicklerhandbuch (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Aktivieren von Abfragebenachrichtigungen](enable-query-notifications.md)  

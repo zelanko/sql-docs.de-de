@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c8dad935a404d682cf5c627a09795bf257efc209
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86553025"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725881"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] lokal auf OpenShift und Azure Red Hat OpenShift
 
@@ -88,7 +88,7 @@ In diesem Artikel werden die Bereitstellungsschritte beschrieben, die für die O
 
 ## <a name="deploy-big-data-cluster"></a>Bereitstellen eines Big Data-Clusters
 
-1. Installieren Sie das neueste [azdata](deploy-install-azdata.md)-Hilfsprogramm.
+1. Installieren Sie das neueste [azdata](../azdata/install/deploy-install-azdata.md)-Hilfsprogramm.
 
 1. Klonen Sie eine der integrierten Konfigurationsdateien für OpenShift, abhängig von Ihrer Zielumgebung (OpenShift lokal oder ARO) und dem Bereitstellungsszenario. Informationen zu den Einstellungen, die für OpenShift in den integrierten Konfigurationsdateien spezifisch sind, finden Sie weiter unten im Abschnitt *Für OpenShift spezifische Einstellung in Bereitstellungskonfigurationsdateien*. Weitere Informationen zu verfügbaren Konfigurationsdateien finden Sie im [Bereitstellungsleitfaden](deployment-guidance.md).
 

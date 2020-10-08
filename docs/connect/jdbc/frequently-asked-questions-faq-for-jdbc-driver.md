@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4ca5823ac73868400d9f9a370e053d263143c0f
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: f1fe92ec4216998d36826c518a5dce40c26253c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042421"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725461"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Häufig gestellte Fragen (FAQ) zum JDBC-Treiber
 
@@ -146,7 +146,7 @@ Die verfügbaren Authentifizierungsoptionen sind in der folgenden Tabelle aufgel
 Ja. Der Treiber unterstützt die Verwendung von IPv6-Adressen. Verwenden Sie die Sammlung von Verbindungseigenschaften und die Verbindungszeichenfolgeneigenschaft „serverName“. Weitere Informationen finden Sie unter [Erstellen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md).
 
 **Was ist die adaptive Pufferung?**  
-Die adaptive Pufferung wurde in Version 1.2 des Microsoft JDBC-Treibers für SQL Server 2005 eingeführt. Mit der adaptiven Pufferung können Daten mit einer großen Menge an Werten ohne den durch Servercursor verursachten Overhead abgerufen werden. Die adaptive Pufferung des Microsoft SQL Server JDBC Drivers stellt mit „responseBuffering“ eine Eigenschaft für Verbindungszeichenfolgen bereit, die auf „adaptive“ oder „full“ festgelegt werden kann. In Version 1.2 lautet der Puffermodus standardmäßig „full“, und die Anwendung muss den Modus für die adaptive Pufferung explizit festlegen. Ab Version 2.0 des JDBC-Treibers ist das Standardverhalten des Treibers „adaptive“. Daher muss Ihre Anwendung das adaptive Verhalten nicht explizit anfordern, um ein adaptives Pufferverhalten zu erzielen. Weitere Informationen finden Sie unter [Using Adaptive Buffering (Verwenden der adaptiven Pufferung)](../../connect/jdbc/using-adaptive-buffering.md) und im Blogbeitrag [What is adaptive response buffering and why should I use it? (Was ist die adaptive Pufferung und warum sollte ich sie verwenden?)](https://go.microsoft.com/fwlink/?LinkId=111575).
+Die adaptive Pufferung wurde in Version 1.2 des Microsoft JDBC-Treibers für SQL Server 2005 eingeführt. Mit der adaptiven Pufferung können Daten mit einer großen Menge an Werten ohne den durch Servercursor verursachten Overhead abgerufen werden. Die adaptive Pufferung des Microsoft SQL Server JDBC Drivers stellt mit „responseBuffering“ eine Eigenschaft für Verbindungszeichenfolgen bereit, die auf „adaptive“ oder „full“ festgelegt werden kann. In Version 1.2 lautet der Puffermodus standardmäßig „full“, und die Anwendung muss den Modus für die adaptive Pufferung explizit festlegen. Ab Version 2.0 des JDBC-Treibers ist das Standardverhalten des Treibers „adaptive“. Daher muss Ihre Anwendung das adaptive Verhalten nicht explizit anfordern, um ein adaptives Pufferverhalten zu erzielen. Weitere Informationen finden Sie unter [Using Adaptive Buffering (Verwenden der adaptiven Pufferung)](../../connect/jdbc/using-adaptive-buffering.md) und im Blogbeitrag [What is adaptive response buffering and why should I use it? (Was ist die adaptive Pufferung und warum sollte ich sie verwenden?)](/archive/blogs/jdbcteam/).
 
 **Unterstützt der Treiber das Verbindungspooling?**  
 Der Treiber unterstützt das Verbindungspooling unter Java Platform, Enterprise Edition 5 (Java EE 5). Der Treiber implementiert die erforderlichen JDBC 3.0-Schnittstellen, damit er implementiertes Verbindungspooling von Anbietern für Anwendungsserver auf Middleware-Ebene nutzen kann. Der Treiber nutzt in diesen Umgebungen Verbindungspool. Weitere Informationen finden Sie unter [Verwenden des Verbindungspoolings](../../connect/jdbc/using-connection-pooling.md). Der Treiber bietet keine eigene Implementierung des Poolings, sondern es beruht auf Java-Anwendungsservern von Drittanbietern.
@@ -158,7 +158,7 @@ Es sind zahlreiche Optionen verfügbar. Sie können Ihre Frage oder Ihr Problem 
 Der Treiber wurde mit allen wichtigen Anwendungsserver getestet, wie z. B. IBM WebSphere und SAP NetWeaver.
 
 **Wie aktiviere ich die Ablaufverfolgung?**  
-Der Treiber unterstützt die Verwendung der Ablaufverfolgung (oder Protokollierung). Dies hilft Probleme zu lösen, die bei der Verwendung des JDBC-Treibers in Ihrer Anwendung auftreten können. Der JDBC-Treiber verwendet die Logging-API in java.util.logging, um die clientseitige JAR-Ablaufverfolgung zu aktivieren. Weitere Informationen finden Sie unter [Tracing Driver Operation (Ablaufverfolgung für Treibervorgänge)](../../connect/jdbc/tracing-driver-operation.md). Weitere Informationen zur serverseitigen XA-Ablaufverfolgung finden Sie unter [Verfolgung des Datenzugriffs in SQL Server](https://go.microsoft.com/fwlink/?LinkId=248705).
+Der Treiber unterstützt die Verwendung der Ablaufverfolgung (oder Protokollierung). Dies hilft Probleme zu lösen, die bei der Verwendung des JDBC-Treibers in Ihrer Anwendung auftreten können. Der JDBC-Treiber verwendet die Logging-API in java.util.logging, um die clientseitige JAR-Ablaufverfolgung zu aktivieren. Weitere Informationen finden Sie unter [Tracing Driver Operation (Ablaufverfolgung für Treibervorgänge)](../../connect/jdbc/tracing-driver-operation.md). Weitere Informationen zur serverseitigen XA-Ablaufverfolgung finden Sie unter [Verfolgung des Datenzugriffs in SQL Server](/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10)).
 
 **Wo kann ich ältere Versionen des Treibers herunterladen, z.B. den JDBC-Treiber für SQL Server 2000, den 2005-Treiber oder Treiber für 1.0, 1.1 oder 1.2?**  
 Diese Treiberversionen stehen nicht zum Download zur Verfügung, da sie nicht mehr unterstützt werden. Wir arbeiten laufend daran, die Unterstützung der Java-Konnektivität zu verbessern. Daher raten wir dringend zur Verwendung der neuesten Version des Microsoft JDBC-Treibers.

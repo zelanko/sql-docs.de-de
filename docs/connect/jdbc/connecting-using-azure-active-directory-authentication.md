@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117129"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725469"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 
@@ -24,7 +24,7 @@ ms.locfileid: "91117129"
 
 Dieser Artikel enthält Informationen zum Entwickeln von Java-Anwendungen, die das Azure Active Directory-Authentifizierungsfeature mit dem Microsoft-JDBC-Treiber für SQL Server verwenden.
 
-Sie können die Azure Active Directory-Authentifizierung (Azure AD) verwenden. Hierbei handelt es sich um einen Mechanismus zum Herstellen einer Verbindung mit einer Azure SQL-Datenbank v12 unter Verwendung von Identitäten in Azure Active Directory. Verwenden Sie AAD-Authentifizierung zur zentralen Verwaltung von Identitäten von Datenbankbenutzern und als Alternative zur SQL Server-Authentifizierung. Mit dem JDBC-Treiber können Sie Ihre Azure Active Directory-Anmeldeinformationen in der JDBC-Verbindungszeichenfolge angeben, um eine Verbindung mit Azure SQL-Datenbank herzustellen. Informationen zum Konfigurieren der Azure Active Directory-Authentifizierung finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
+Sie können die Azure Active Directory-Authentifizierung (Azure AD) verwenden. Hierbei handelt es sich um einen Mechanismus zum Herstellen einer Verbindung mit einer Azure SQL-Datenbank v12 unter Verwendung von Identitäten in Azure Active Directory. Verwenden Sie AAD-Authentifizierung zur zentralen Verwaltung von Identitäten von Datenbankbenutzern und als Alternative zur SQL Server-Authentifizierung. Mit dem JDBC-Treiber können Sie Ihre Azure Active Directory-Anmeldeinformationen in der JDBC-Verbindungszeichenfolge angeben, um eine Verbindung mit Azure SQL-Datenbank herzustellen. Informationen zum Konfigurieren der Azure Active Directory-Authentifizierung finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](/azure/azure-sql/database/authentication-aad-overview). 
 
 Folgende Verbindungseigenschaften im Microsoft-JDBC-Treiber für SQL Server unterstützen die Azure Active Directory-Authentifizierung:
 *   **authentication**:  Verwenden Sie diese Eigenschaft, um anzugeben, welche SQL-Authentifizierungsmethode für die Verbindung verwendet werden soll. Mögliche Werte: 
@@ -287,7 +287,7 @@ Das folgende Beispiel enthält eine einfache Java-Anwendung, die mithilfe der zu
     12. Klicken Sie im linken Navigationsbereich auf „Azure Active Directory“. Suchen Sie die Registerkarte „Endpunkte“ unter „App-Registrierungen“. Kopieren Sie die URL unter „OATH 2.0-TOKENENDPUNKT“ – dies ist Ihre STS-URL.
     
     ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. Melden Sie sich als Azure Active Directory-Administrator bei Ihrer Azure-SQL Server-Benutzerdatenbank an, und geben Sie mithilfe eines T-SQL-Befehls einen Benutzer der eigenständigen Datenbank als Anwendungsprinzipal an. Weitere Informationen zum Erstellen eines Azure Active Directory-Administrators und eines Benutzers einer eigenständigen Datenbank finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).
+2. Melden Sie sich als Azure Active Directory-Administrator bei Ihrer Azure-SQL Server-Benutzerdatenbank an, und geben Sie mithilfe eines T-SQL-Befehls einen Benutzer der eigenständigen Datenbank als Anwendungsprinzipal an. Weitere Informationen zum Erstellen eines Azure Active Directory-Administrators und eines Benutzers einer eigenständigen Datenbank finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse unter Verwendung der Azure Active Directory-Authentifizierung](/azure/azure-sql/database/authentication-aad-overview).
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
@@ -351,4 +351,4 @@ Wenn die Verbindung erfolgreich hergestellt wurde, sollte die folgende Meldung a
 ```bash
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    
-``` 
+```

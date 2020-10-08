@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 43a7f03a4e8a9a3c67a3263f792f2f921eef7a78
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ff8e80314210dee9c227360e54f8ba1e6b1a3691
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928860"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725651"
 ---
 # <a name="date-and-time-data"></a>Datums- und Zeitdaten
 
@@ -27,7 +27,7 @@ SQL Server 2008 bietet neue Datentypen für Datums- und Uhrzeitinformationen. 
   
 SQL Server-Versionen vor SQL Server 2008 hatten nur zwei Datentypen für das Arbeiten mit Datums- und Uhrzeitwerten: `datetime` und `smalldatetime`. Beide Datentypen enthalten sowohl einen Datumswert als auch einen Uhrzeitwert, wodurch es schwierig ist, nur mit den Datums- oder nur mit den Uhrzeitwerten zu arbeiten. Außerdem unterstützen diese Datentypen nur Datumsangaben nach Einführung des gregorianischen Kalenders in England im Jahr 1753. Eine weitere Einschränkung besteht darin, dass diese älteren Datentypen keine Zeitzonen berücksichtigen, was es schwierig macht, mit Daten zu arbeiten, die aus mehreren Zeitzonen stammen.  
   
-Eine vollständige Dokumentation der SQL Server-Datentypen finden Sie in der SQL Server-Onlinedokumentation. Informationen zu Datums- und Uhrzeitdaten für Themen auf Einstiegsebene finden Sie unter [Verwenden von Datums- und Uhrzeitdaten](https://go.microsoft.com/fwlink/?LinkID=98361).
+Eine vollständige Dokumentation der SQL Server-Datentypen finden Sie in der SQL Server-Onlinedokumentation. Informationen zu Datums- und Uhrzeitdaten für Themen auf Einstiegsebene finden Sie unter [Verwenden von Datums- und Uhrzeitdaten](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Einführung von Datum/Uhrzeit-Datentypen in SQL Server 2008  
  In der folgenden Tabelle werden die Datums- und Uhrzeit-Datentypen beschrieben.  
@@ -47,12 +47,12 @@ Wie SQL Server Datums- und Uhrzeitwerte analysiert, hängt nicht nur von der Typ
   
 Die Transact-SQL-Anweisung SET LANGUAGE legt implizit das DATEFORMAT fest, das die Reihenfolge der Datumsteile bestimmt. Sie können die Transact-SQL-Anweisung SET DATEFORMAT für eine Verbindung verwenden, um Datumswerte eindeutig zu bestimmen, indem Sie die Datumsteile in der Reihenfolge MTJ, TMJ, JMT, JTM, MJT oder TJM sortieren.  
   
-Wenn Sie kein DATEFORMAT für die Verbindung angeben, verwendet SQL Server die der Verbindung zugeordnete Standardsprache. Beispiel: Die Datumszeichenfolge 01/02/03 würde auf einem Server mit der Spracheinstellung „Englisch (USA)“ als MTJ (Januar 2, 2003) und auf einem Server mit der Spracheinstellung „Englisch (UK)“ als TMJ (1. Februar 2003) interpretiert. Das Jahr wird mithilfe der SQL Server-Regel für das Umstellungsjahr bestimmt, die das Umstellungsdatum für die Zuweisung des Jahrhundertwerts definiert. Weitere Informationen finden Sie in der SQL Server-Onlinedokumentation unter [Umstellungsjahr für Angaben mit zwei Ziffern (Option)](https://go.microsoft.com/fwlink/?LinkId=120473).  
+Wenn Sie kein DATEFORMAT für die Verbindung angeben, verwendet SQL Server die der Verbindung zugeordnete Standardsprache. Beispiel: Die Datumszeichenfolge 01/02/03 würde auf einem Server mit der Spracheinstellung „Englisch (USA)“ als MTJ (Januar 2, 2003) und auf einem Server mit der Spracheinstellung „Englisch (UK)“ als TMJ (1. Februar 2003) interpretiert. Das Jahr wird mithilfe der SQL Server-Regel für das Umstellungsjahr bestimmt, die das Umstellungsdatum für die Zuweisung des Jahrhundertwerts definiert. Weitere Informationen finden Sie in der SQL Server-Onlinedokumentation unter [Umstellungsjahr für Angaben mit zwei Ziffern (Option)](/previous-versions/sql/sql-server-2008-r2/ms189577(v=sql.105)).  
   
 > [!NOTE]
 >  Das Datumsformat JTM wird bei der Konvertierung aus einem Zeichenfolgenformat in `date`, `time`, `datetime2` oder `datetimeoffset` nicht unterstützt.  
   
-Weitere Informationen zur Interpretation von Datums- und Zeitdaten in SQL Server finden Sie in der SQL Server 2008-Onlinedokumentation unter [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkID=98361).  
+Weitere Informationen zur Interpretation von Datums- und Zeitdaten in SQL Server finden Sie in der SQL Server 2008-Onlinedokumentation unter [Verwenden von Datums- und Zeitdaten](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).  
   
 ## <a name="datetime-data-types-and-parameters"></a>Datums- und Uhrzeitdatentypen und -parameter  
 Die folgenden Enumerationen wurden <xref:System.Data.SqlDbType> hinzugefügt, um die neuen Datums- und Uhrzeitdatentypen zu unterstützen.  
@@ -208,9 +208,9 @@ Weitere Informationen zum Arbeiten mit Datums- und Uhrzeitwerten in SQL Server 
   
 |Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Bietet eine Übersicht über alle Transact-SQL-Datentypen und -Funktionen zur Angabe des Datums und der Uhrzeit.|  
-|[Verwenden von Datums- und Uhrzeitdaten](https://go.microsoft.com/fwlink/?LinkId=98361)|Stellt Informationen zu den Datentypen und Funktionen zur Angabe des Datums und der Uhrzeit sowie Beispiele für deren Verwendung bereit.|  
-|[Datentypen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Beschreibt Systemdatentypen in SQL Server 2008.|  
+|[Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms186724(v=sql.100))|Bietet eine Übersicht über alle Transact-SQL-Datentypen und -Funktionen zur Angabe des Datums und der Uhrzeit.|  
+|[Verwenden von Datums- und Uhrzeitdaten](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Stellt Informationen zu den Datentypen und Funktionen zur Angabe des Datums und der Uhrzeit sowie Beispiele für deren Verwendung bereit.|  
+|[Datentypen (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100))|Beschreibt Systemdatentypen in SQL Server 2008.|  
   
 ## <a name="next-steps"></a>Nächste Schritte
 - [SQL Server-Datentypen und ADO.NET](sql-server-data-types.md)

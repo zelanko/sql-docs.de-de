@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 8d5c44c11d9f5158abc52634f648a4159f86c143
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988515"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726611"
 ---
 # <a name="connection-modules-for-microsoft-sql-database"></a>Verbindungsmodule für Microsoft SQL-Datenbank
 
-Dieser Artikel bietet Links zum Download von Verbindungsmodulen oder *Treibern*, die Ihre Clientprogramme für die Interaktion mit der Plattform [Microsoft SQL Server](../relational-databases/database-features.md) und ihrem Pendant in der Cloud, [Azure SQL-Datenbank](/azure/sql-database/), verwenden können. Treiber sind für verschiedene Programmiersprachen verfügbar und können unter folgenden Betriebssystemen ausgeführt werden:
+Dieser Artikel bietet Links zum Download von Verbindungsmodulen oder *Treibern*, die Ihre Clientprogramme für die Interaktion mit der Plattform [Microsoft SQL Server](../relational-databases/databases/databases.md) und ihrem Pendant in der Cloud, [Azure SQL-Datenbank](/azure/sql-database/), verwenden können. Treiber sind für verschiedene Programmiersprachen verfügbar und können unter folgenden Betriebssystemen ausgeführt werden:
 
 - Linux
 - macOS
@@ -54,7 +54,7 @@ In der folgenden Tabelle sind Beispiele für ORM-Frameworks aufgelistet, die Cli
 
 | Sprache | Download des ORM-Treibers |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x oder höher)](https://docs.microsoft.com/ef/) |
+| C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework (6.x oder höher)](/ef/) |
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, enthalten in der Laravel-Installation](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/) |
@@ -85,7 +85,7 @@ In der folgenden Tabelle sind Beispiele für ORM-Frameworks aufgelistet, die Cli
 
 ## <a name="related-links"></a>Verwandte Links
 
-- [Codebeispiele zum Herstellen einer Verbindung mit Azure SQL-Datenbank in der Cloud mit Java und anderen Sprachen](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)
+- [Codebeispiele zum Herstellen einer Verbindung mit Azure SQL-Datenbank in der Cloud mit Java und anderen Sprachen](/azure/sql-database/sql-database-connect-query-java)
 
 <!--
 Image references, **obsolete** markdown syntax alternative:

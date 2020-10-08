@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d1c1911905c1ddf0af01a2592d0be49796cd3596
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 86d0abbc216deeb583cf4a091e0c36b9cebc4ee1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393108"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725564"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server-Features und ADO.NET
 
@@ -23,7 +23,7 @@ ms.locfileid: "86393108"
 
 In den Themen dieses Abschnitts werden Funktionen von SQL Server diskutiert, die für die Entwicklung von Datenbankanwendungen mit ADO.NET vorgesehen sind.  
   
-Weitere Informationen finden Sie unter [Entwicklung (Datenbank-Engine)](https://go.microsoft.com/fwlink/?LinkId=115245) in der SQL Server-Onlinedokumentation.
+Weitere Informationen finden Sie unter [Entwicklung (Datenbank-Engine)](/previous-versions/sql/sql-server-2008/bb500155(v=sql.100)) in der SQL Server-Onlinedokumentation.
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Auflisten von SQL Server-Instanzen (ADO.NET)](enumerate-instances-sql-server.md)  

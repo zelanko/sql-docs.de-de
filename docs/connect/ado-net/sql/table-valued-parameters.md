@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: f51e5326d29d7edd6a518c02f7042cc9ed104b4f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02b05f65928aad5f0022d31e00847baeeb42e75c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78895954"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725551"
 ---
 # <a name="table-valued-parameters"></a>Tabellenwertparameter
 
@@ -34,8 +34,8 @@ Weitere Informationen zu Tabellenwertparametern finden Sie in den folgenden Ress
   
 |Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[Tabellenwertparameter (Datenbankmodul)](https://go.microsoft.com/fwlink/?LinkId=98363) in der SQL Server-Onlinedokumentation|Beschreibt, wie Sie Tabellenwertparameter erstellen und verwenden.|  
-|[Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkId=98364) in der SQL Server-Onlinedokumentation|Beschreibt die benutzerdefinierten Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden.|  
+|[Tabellenwertparameter (Datenbankmodul)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) in der SQL Server-Onlinedokumentation|Beschreibt, wie Sie Tabellenwertparameter erstellen und verwenden.|  
+|[Benutzerdefinierte Tabellentypen](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in der SQL Server-Onlinedokumentation|Beschreibt die benutzerdefinierten Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Übergeben mehrerer Zeilen in früheren Versionen von SQL Server  
 Vor der Einführung von Tabellenwertparametern in SQL Server 2008 bestanden nur eingeschränkte Möglichkeiten zum Übergeben mehrerer Datenzeilen an eine gespeicherte Prozedur oder einen parametrisierten SQL-Befehl. Entwickler hatten folgende Möglichkeiten, um mehrere Zeilen an den Server zu übergeben:  
@@ -49,7 +49,7 @@ Vor der Einführung von Tabellenwertparametern in SQL Server 2008 bestanden nur 
 - Verwenden des `bcp`-Hilfsprogramms oder des <xref:Microsoft.Data.SqlClient.SqlBulkCopy>-Objekts, um eine Vielzahl von Datenzeilen in eine Tabelle zu laden. Wenngleich dieses Verfahren sehr effizient ist, wird die serverseitige Verarbeitung nur dann unterstützt, wenn die Daten in eine temporäre Tabelle oder Tabellenvariable geladen werden.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Erstellen von Tabellenwertparameter-Typen  
-Tabellenwertparameter basieren auf stark typisierten Tabellenstrukturen, die mit CREATE TYPE-Anweisungen in Transact-SQL definiert werden. Sie müssen einen Tabellentyp erstellen und die Struktur in SQL Server definieren, bevor Sie Tabellenwertparameter in Ihren Clientanwendungen verwenden können. Weitere Informationen über das Erstellen von Tabellentypen finden Sie unter [Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkID=98364) in der SQL Server-Onlinedokumentation.  
+Tabellenwertparameter basieren auf stark typisierten Tabellenstrukturen, die mit CREATE TYPE-Anweisungen in Transact-SQL definiert werden. Sie müssen einen Tabellentyp erstellen und die Struktur in SQL Server definieren, bevor Sie Tabellenwertparameter in Ihren Clientanwendungen verwenden können. Weitere Informationen über das Erstellen von Tabellentypen finden Sie unter [Benutzerdefinierte Tabellentypen](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in der SQL Server-Onlinedokumentation.  
   
 Mit der folgenden Anweisung wird ein Tabellentyp namens „CategoryTableType“ erstellt, der aus den Spalten „CategoryID“ und „CategoryName“ besteht:  
   
@@ -119,7 +119,7 @@ tvpParam.SqlDbType = SqlDbType.Structured;
 ```  
   
 ## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> Übergeben eines Tabellenwertparameters an eine gespeicherte Prozedur  
-In diesem Beispiel wird veranschaulicht, wie Daten aus Tabellenwertparametern an eine gespeicherte Prozedur übergeben werden. Der Code extrahiert hinzugefügte Zeilen mithilfe der <xref:System.Data.DataTable.GetChanges%2A>-Methode in eine neue <xref:System.Data.DataTable>. Im Code wird dann ein <xref:Microsoft.Data.SqlClient.SqlCommand> definiert, wobei für die Eigenschaft <xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> der Wert <xref:System.Data.CommandType.StoredProcedure> festgelegt wird. Der <xref:Microsoft.Data.SqlClient.SqlParameter> wird mit der <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>-Methode aufgefüllt und für <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> wird `Structured` festgelegt. Anschließend wird der <xref:Microsoft.Data.SqlClient.SqlCommand> mit der Methode <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> ausgeführt.  
+In diesem Beispiel wird veranschaulicht, wie Daten aus Tabellenwertparametern an eine gespeicherte Prozedur übergeben werden. Der Code extrahiert hinzugefügte Zeilen mithilfe der <xref:System.Data.DataTable>-Methode in eine neue <xref:System.Data.DataTable.GetChanges%2A>. Im Code wird dann ein <xref:Microsoft.Data.SqlClient.SqlCommand> definiert, wobei für die Eigenschaft <xref:Microsoft.Data.SqlClient.SqlCommand.CommandType%2A> der Wert <xref:System.Data.CommandType.StoredProcedure> festgelegt wird. Der <xref:Microsoft.Data.SqlClient.SqlParameter> wird mit der <xref:Microsoft.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>-Methode aufgefüllt und für <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A> wird `Structured` festgelegt. Anschließend wird der <xref:Microsoft.Data.SqlClient.SqlCommand> mit der Methode <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> ausgeführt.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 6d9b75ea8c722ca753e831811226b8128df15266
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922253"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725506"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "82922253"
   
  Sie können die Clientverbindungs-ID programmgesteuert abrufen, und zwar mit der [ISQLServerConnection-Schnittstelle](../../connect/jdbc/reference/isqlserverconnection-interface.md). Die Verbindungs-ID ist auch in verbindungsbezogenen Ausnahmen enthalten.  
   
- Bei einem Verbindungsfehler kann die Clientverbindungs-ID in den BID-Ablaufverfolgungsinformationen (integrierte Diagnose) des Servers und im Konnektivitätsringpuffer nützlich sein, um die Clientverbindungen mit Verbindungen auf dem Server zu korrelieren. Weitere Informationen zur BID-Ablaufverfolgung auf dem Server finden Sie unter [Data Access Tracing (Datenzugriffsablaufverfolgung)](https://go.microsoft.com/fwlink/?LinkId=125805). Der Artikel zur Datenzugriffsablaufverfolgung enthält auch Informationen zu Datenzugriffsablaufverfolgungen, die sich nicht auf [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] beziehen. Informationen zum Ausführen einer Datenzugriffsablaufverfolgung unter Verwendung von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] finden Sie unter [Ablaufverfolgung für Treibervorgänge](../../connect/jdbc/tracing-driver-operation.md).  
+ Bei einem Verbindungsfehler kann die Clientverbindungs-ID in den BID-Ablaufverfolgungsinformationen (integrierte Diagnose) des Servers und im Konnektivitätsringpuffer nützlich sein, um die Clientverbindungen mit Verbindungen auf dem Server zu korrelieren. Weitere Informationen zur BID-Ablaufverfolgung auf dem Server finden Sie unter [Data Access Tracing (Datenzugriffsablaufverfolgung)](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)). Der Artikel zur Datenzugriffsablaufverfolgung enthält auch Informationen zu Datenzugriffsablaufverfolgungen, die sich nicht auf [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] beziehen. Informationen zum Ausführen einer Datenzugriffsablaufverfolgung unter Verwendung von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] finden Sie unter [Ablaufverfolgung für Treibervorgänge](../../connect/jdbc/tracing-driver-operation.md).  
   
  Der JDBC-Treiber sendet außerdem eine threadspezifische Aktivitäts-ID. Die Aktivitäts-ID wird in den Sitzungen für erweiterte Ereignisse aufgezeichnet, wenn die Sitzungen bei aktivierter TRACK_CAUSAILITY-Option gestartet werden. Bei Leistungsproblemen mit einer aktiven Verbindung können Sie die Aktivitäts-ID aus der Ablaufverfolgung des Clients (Feld ActivityID) abrufen und dann in der Ausgabe der erweiterten Ereignisse nach der Aktivitäts-ID suchen. Die Aktivitäts-ID in erweiterten Ereignissen ist eine 16-Byte-GUID (entspricht nicht der GUID für die Clientverbindungs-ID), an die eine 4-Byte-Sequenznummer angehängt ist. Die Sequenznummer stellt die Reihenfolge einer Anforderung in einem Thread dar. Die ActivityId wird bei SQL-Stapelanweisungen und RPC-Anforderungen gesendet. Zum Aktivieren des Sendens der ActivityId an den Server müssen Sie zunächst das folgende Schlüssel-Wert-Par in der Datei „Logging.Properties“ angeben:  
   
@@ -54,4 +54,4 @@ add target ring_buffer with (track_causality=on)
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+[Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)

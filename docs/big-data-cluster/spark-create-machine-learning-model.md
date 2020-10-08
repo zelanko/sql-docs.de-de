@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: be8a2e43c120f154cf998e49027c5025bd4feac4
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 3ccd54d4e5e73da6492de753084ffa924341b63a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438082"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725731"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>Erstellen, Exportieren und Bewerten von Machine Learning-Modellen in Spark auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -52,7 +52,7 @@ In diesem Beispiel werden Erhebungsdaten (**AdultCensusIncome.csv**) zum Erstell
 
    Dieses Notebook enthält Zellen mit den erforderlichen Befehlen für diesen Beispielabschnitt.
 
-1. Öffnen Sie das Notebook in Azure Data Studio, und führen Sie jeden Codeblock aus. Weitere Informationen zum Arbeiten mit Notebooks finden Sie unter [Verwenden von Notebooks mit SQL Server](../azure-data-studio/notebooks-guidance.md).
+1. Öffnen Sie das Notebook in Azure Data Studio, und führen Sie jeden Codeblock aus. Weitere Informationen zum Arbeiten mit Notebooks finden Sie unter [Verwenden von Notebooks mit SQL Server](../azure-data-studio/notebooks/notebooks-guidance.md).
 
 Die Daten werden zuerst in Spark eingelesen und in Trainings-und Testdatasets aufgeteilt. Anschließend trainiert der Code ein Pipelinemodell mit den Trainingsdaten. Abschließend wird das Modell in ein MLeap-Bundle exportiert.
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d2cfd61efa1ffed78b96f4ef22e01de20f200dfb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 57e0cec178c407cda530e6699e51743094c57dca
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920964"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725591"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server-Datentypen und ADO.NET
 
@@ -25,7 +25,7 @@ SQL Server und .NET basieren auf unterschiedlichen Typsystemen. Dies kann zu Dat
   
 In SQL Server 2008 werden neue Datentypen eingeführt, um geschäftliche Anforderungen zu erfüllen. Diese Datentypen ermöglichen die Arbeit mit Datums- und Uhrzeitangaben sowie mit strukturierten, teilweise strukturierten und unstrukturierten Daten. Diese sind in der SQL Server 2008-Onlinedokumentation dokumentiert.  
   
-Welche SQL Server-Datentypen in Ihrer Anwendung verwendet werden können, hängt von Ihrer SQL Server-Version ab. Weitere Informationen finden Sie unter [Datentypen (Datenbankmodul)](https://go.microsoft.com/fwlink/?LinkID=107468) in der SQL Server-Onlinedokumentation.
+Welche SQL Server-Datentypen in Ihrer Anwendung verwendet werden können, hängt von Ihrer SQL Server-Version ab. Weitere Informationen finden Sie unter [Datentypen (Datenbankmodul)](/previous-versions/sql/sql-server-2008-r2/ms187594(v=sql.105)) in der SQL Server-Onlinedokumentation.
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [SqlTypes und das DataSet](sqltypes-dataset.md)  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 4c88a8ccbc242b0fd85c66acfb3539ec260c58dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3923db97ce144662f7fe5410c13278862d1ab6a1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928940"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725679"
 ---
 # <a name="asynchronous-operations"></a>Asynchrone Vorgänge
 
@@ -26,7 +26,7 @@ Einige Datenbankvorgänge, z. B. Befehlsausführungen, können beträchtliche Z
 .NET bietet mehrere asynchrone Standardentwurfsmuster, die Entwickler verwenden können, um die Vorteile von Hintergrundthreads zu nutzen und die Benutzeroberfläche oder Threads mit hoher Priorität freizugeben, um andere Vorgänge in seiner <xref:Microsoft.Data.SqlClient.SqlCommand>-Klasse abzuschließen. Insbesondere die Methoden <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> und <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> gepaart mit den Methoden <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A> und <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> bieten die asynchrone Unterstützung.  
   
 > [!NOTE]
->  Die asynchrone Programmierung ist ein Kernmerkmal von .NET. Weitere Informationen zu den verschiedenen asynchronen Techniken, die Entwicklern zur Verfügung stehen, finden Sie unter [Asynchrones Aufrufen von synchronen Methoden](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously).  
+>  Die asynchrone Programmierung ist ein Kernmerkmal von .NET. Weitere Informationen zu den verschiedenen asynchronen Techniken, die Entwicklern zur Verfügung stehen, finden Sie unter [Asynchrones Aufrufen von synchronen Methoden](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously).  
   
 Obwohl die Verwendung asynchroner Techniken mit ADO.NET-Features keine besonderen Überlegungen erfordert, ist es wichtig, sich der Vorteile und Tücken der Erstellung von Anwendungen mit mehreren Threads bewusst zu sein. Die folgenden Beispiele in diesem Abschnitt weisen auf mehrere wichtige Punkte hin, die Entwickler bei der Erstellung von Anwendungen mit Multithread-Funktionalität berücksichtigen müssen.  
   
@@ -42,4 +42,4 @@ Enthält ein Beispiel, das die Verwendung von Abrufen demonstriert, um in einer 
   
 ## <a name="next-steps"></a>Nächste Schritte
 - [SQL Server und ADO.NET](index.md)
-- [Asynchrones Aufrufen von synchronen Methoden](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)
+- [Asynchrones Aufrufen von synchronen Methoden](/dotnet/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously)

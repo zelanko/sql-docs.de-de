@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8fc0f34c860c9919d56d3d2c4645e9fea8bb428
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 341b021bbc582b2273f7601bfb993b4db40a4590
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042400"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725451"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Supportmatrix für den Microsoft JDBC-Treiber für SQL Server
 
@@ -81,7 +81,7 @@ Die folgenden Microsoft JDBC-Treiber werden bis zum angegebenen Supportende unte
   
  <sup>2</sup> Die Unterstützung für Azure SQL-Datenbank wurde im Treiber der Version 3.0 als Hotfix eingeführt. Es wird empfohlen, dass Azure SQL-Datenbank-Kunden die neuesten Treiber verwenden.  
   
- <sup>3</sup> Mit Version 2.0 des JDBC-Treibers für Microsoft SQL Server und der Version 1.2 des JDBC-Treibers für Microsoft SQL Server 2005 kann als abwärtskompatibler Client eine Verbindung mit SQL Server 2008 hergestellt werden. Sind abwärtskompatible Konvertierungen erlaubt, kann die Anwendung Abfragen ausführen und Aktualisierungen auf die neuen Datentypen von SQL Server 2008 durchführen, wie z. B. „time“, „date“, „datetime2“, „datetimeoffset“ und FILESTREAM. Weitere Informationen zur Verwendung dieser neuen Datentypen mit dem JDBC-Treiber finden Sie unter  [Verwenden der Date/Time-Datentypen in SQL Server 2008 mithilfe eines JDBC-Treibers](https://go.microsoft.com/fwlink/?LinkId=145198) und unter  [Verwenden von Filestream in SQL Server 2008 mithilfe eines JDBC-Treibers](https://go.microsoft.com/fwlink/?LinkId=145199). Weitere Informationen zur Abwärtskompatibilität dieser neuen Datentypen finden Sie in den Themen  [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkId=145211)und  [FILESTREAM-Unterstützung](https://go.microsoft.com/fwlink/?LinkId=145212) in der SQL Server-Onlinedokumentation  
+ <sup>3</sup> Mit Version 2.0 des JDBC-Treibers für Microsoft SQL Server und der Version 1.2 des JDBC-Treibers für Microsoft SQL Server 2005 kann als abwärtskompatibler Client eine Verbindung mit SQL Server 2008 hergestellt werden. Sind abwärtskompatible Konvertierungen erlaubt, kann die Anwendung Abfragen ausführen und Aktualisierungen auf die neuen Datentypen von SQL Server 2008 durchführen, wie z. B. „time“, „date“, „datetime2“, „datetimeoffset“ und FILESTREAM. Weitere Informationen zur Verwendung dieser neuen Datentypen mit dem JDBC-Treiber finden Sie unter  [Verwenden der Date/Time-Datentypen in SQL Server 2008 mithilfe eines JDBC-Treibers](/archive/blogs/jdbcteam/) und unter  [Verwenden von Filestream in SQL Server 2008 mithilfe eines JDBC-Treibers](/archive/blogs/jdbcteam/). Weitere Informationen zur Abwärtskompatibilität dieser neuen Datentypen finden Sie in den Themen  [Verwenden von Datums- und Zeitdaten](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105))und  [FILESTREAM-Unterstützung](../../relational-databases/native-client/features/filestream-support.md) in der SQL Server-Onlinedokumentation  
   
  <sup>4</sup> Die Unterstützung von Verbindungen zwischen dem Microsoft JDBC-Treiber und Parallel Data Warehouse wurde erstmals im Microsoft JDBC-Treiber 4.0 für SQL Server und in Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Update 3 eingeführt.  
   

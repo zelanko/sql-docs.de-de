@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f5b3b210cb4e20bdf9585a7efdfd0f10aa19f29
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772818"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725785"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Anzeigen des Status eines Big-Data-Clusters 
 
@@ -24,7 +24,7 @@ In diesem Artikel wird beschrieben, wie Sie auf die Dienstendpunkte zugreifen un
 
 ## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Verwenden von Azure Data Studio
 
-Nachdem Sie den neuesten **Insider-Build** von [Azure Data Studio](https://aka.ms/getazuredatastudio) heruntergeladen haben, können Sie mithilfe des Dashboards des Big-Data-Clusters für SQL Server Dienstendpunkte sowie den Status eines Big-Data-Clusters anzeigen. Einige der unten aufgeführten Features sind erstmals im Insider-Build von Azure Data Studio verfügbar.
+Nachdem Sie den neuesten **Insider-Build** von [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) heruntergeladen haben, können Sie mithilfe des Dashboards des Big-Data-Clusters für SQL Server Dienstendpunkte sowie den Status eines Big-Data-Clusters anzeigen. Einige der unten aufgeführten Features sind erstmals im Insider-Build von Azure Data Studio verfügbar.
 
 1. Stellen Sie zunächst eine Verbindung mit Ihrem Big-Data-Cluster in Azure Data Studio her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem Big-Data-Cluster für SQL Server mithilfe von Azure Data Studio](connect-to-big-data-cluster.md).
 
@@ -83,11 +83,11 @@ Sie können direkt auf diese Links klicken. Sie müssen sich beim Zugriff auf di
 
 ## <a name="use-azdata"></a>Verwenden von azdata
 
-Sie können auch [azdata](deploy-install-azdata.md)-Befehle zum Anzeigen beider Endpunkte sowie des Clusterstatus verwenden.
+Sie können auch [azdata](../azdata/install/deploy-install-azdata.md)-Befehle zum Anzeigen beider Endpunkte sowie des Clusterstatus verwenden.
 
 ### <a name="service-endpoints"></a>Dienstendpunkte
 
-1. Melden Sie sich beim Big-Data-Cluster mit [azdata login](reference-azdata.md) an. Legen Sie den Parameter **--controller-endpoint** auf die externe IP-Adresse des Controllerendpunkts fest.
+1. Melden Sie sich beim Big-Data-Cluster mit [azdata login](../azdata/reference/reference-azdata.md) an. Legen Sie den Parameter **--controller-endpoint** auf die externe IP-Adresse des Controllerendpunkts fest.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -100,7 +100,7 @@ Sie können auch [azdata](deploy-install-azdata.md)-Befehle zum Anzeigen beider 
    azdata login --endpoint https://<control_domain_name>:30080 --auth ad
    ```
 
-1. Führen Sie [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md) aus, um eine Liste mit Beschreibungen jedes Endpunkts sowie deren entsprechende IP-Adressen und Portwerte abzurufen. 
+1. Führen Sie [`azdata bdc endpoint list`](../azdata/reference/reference-azdata-bdc-endpoint.md) aus, um eine Liste mit Beschreibungen jedes Endpunkts sowie deren entsprechende IP-Adressen und Portwerte abzurufen. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -126,7 +126,7 @@ Sie können auch [azdata](deploy-install-azdata.md)-Befehle zum Anzeigen beider 
 
 ### <a name="view-cluster-status"></a>Clusterstatus anzeigen
 
-Sie können den Status des Clusters mit dem Befehl [`azdata bdc status show`](reference-azdata-bdc-status.md) anzeigen.
+Sie können den Status des Clusters mit dem Befehl [`azdata bdc status show`](../azdata/reference/reference-azdata-bdc-status.md) anzeigen.
 
 ```bash
 azdata bdc status show
@@ -211,7 +211,7 @@ Im Folgenden wird eine Beispielausgabe dieses Befehls angezeigt:
 
 ### <a name="view-specific-resource-status"></a>Anzeigen des Status einer bestimmten Ressource
 
-Sie können den Status einer bestimmten Ressource im Cluster mit dem Befehl [azdata bdc status show](reference-azdata-bdc-status.md) anzeigen. Wenn Sie diesen Befehl verwenden, können Sie mit dem `--resource`-Parameter filtern. Beispiele für `--resource`-Parametereingaben
+Sie können den Status einer bestimmten Ressource im Cluster mit dem Befehl [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) anzeigen. Wenn Sie diesen Befehl verwenden, können Sie mit dem `--resource`-Parameter filtern. Beispiele für `--resource`-Parametereingaben
 
 - master
 - Steuerung
@@ -316,7 +316,7 @@ Die Werte für `nodeMetricsUrl` und `sqlMetricsUrl` verweisen auf ein Grafana-Da
 
 ### <a name="view-controller-status"></a>Anzeigen des Controllerstatus
 
-Sie können den Controllerstatus mit dem Befehl [`azdata bdc control status show`](reference-azdata-bdc-control-status.md) anzeigen. Dieser stellt ähnliche Links zu den Dashboards für die Überwachung bereit, die im Zusammenhang mit den Controllerkomponenten des Big Data-Clusters stehen.
+Sie können den Controllerstatus mit dem Befehl [`azdata bdc control status show`](../azdata/reference/reference-azdata-bdc-control-status.md) anzeigen. Dieser stellt ähnliche Links zu den Dashboards für die Überwachung bereit, die im Zusammenhang mit den Controllerkomponenten des Big Data-Clusters stehen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

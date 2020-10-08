@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 06abbc88d80dffba14a48d82561dd4db1a2eb68e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cbeac11486783b8eb2f0de59bd34e72234c8ea68
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924326"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725611"
 ---
 # <a name="large-udts"></a>Große UDTs
 
@@ -27,7 +27,7 @@ Benutzerdefinierte Typen (UDTs) gestatten Entwicklern, das Skalartypsystem durch
   
 Vorher waren UDTs auf eine Dateigröße von maximal 8 Kilobyte beschränkt. In SQL Server 2008 besteht diese Beschränkung für UDTs mit dem <xref:Microsoft.Data.SqlClient.Server.Format.UserDefined>-Format nicht mehr.  
   
-Die vollständige Dokumentation zu benutzerdefinierten Typen finden Sie in der SQL Server-Onlinedokumentation unter [Benutzerdefinierte CLR-Typen](https://go.microsoft.com/fwlink/?LinkId=98366).
+Die vollständige Dokumentation zu benutzerdefinierten Typen finden Sie in der SQL Server-Onlinedokumentation unter [Benutzerdefinierte CLR-Typen](/previous-versions/sql/sql-server-2008/ms131120(v=sql.100)).
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Abrufen von UDT-Schemas mithilfe von GetSchema  
 Die <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A>-Methode von <xref:Microsoft.Data.SqlClient.SqlConnection> gibt in einer <xref:System.Data.DataTable>Informationen zum Datenbankschema zurück.
@@ -110,4 +110,3 @@ reader.close
   
 ## <a name="next-steps"></a>Nächste Schritte
 - [Binäre Daten und Daten mit umfangreichen Werten in SQL Server](sql-server-binary-large-value-data.md)
- 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52821d92728e5d54f98e6d977e7829dd13ed5bf0
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: bda9c33588c8248d0aff62f555ec46451d0e9e78
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988596"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725491"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank
 
@@ -24,9 +24,9 @@ ms.locfileid: "87988596"
 
 In diesem Artikel werden Probleme behandelt, die auftreten können, wenn mit dem [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] hergestellt wird. Weitere Informationen zur Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] finden Sie unter:  
   
-- [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
+- [Azure SQL-Datenbank](/azure/sql-database/sql-database-technical-overview)  
   
-- [Vorgehensweise: Herstellen einer Verbindung mit Azure SQL über JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [Vorgehensweise: Herstellen einer Verbindung mit Azure SQL über JDBC](/azure/sql-database/sql-database-connect-query-java)  
 
 - [Connecting using Azure Active Directory Authentication (Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung)](connecting-using-azure-active-directory-authentication.md)  
   
@@ -91,4 +91,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Verbinden mit SQL Server mit dem JDBC-Treiber](connecting-to-sql-server-with-the-jdbc-driver.md)  
+[Verbinden mit SQL Server mit dem JDBC-Treiber](connecting-to-sql-server-with-the-jdbc-driver.md)

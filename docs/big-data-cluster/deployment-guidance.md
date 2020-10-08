@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10c3e83451efd0f7ac5868fd25d540191821b72c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765769"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725871"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
 
@@ -80,7 +80,7 @@ Bevor Sie einen Big-Data-Cluster für SQL Server 2019 bereitstellen können, mü
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- [Datenvirtualisierungserweiterung](../azure-data-studio/data-virtualization-extension.md) für Azure Data Studio
+- [Datenvirtualisierungserweiterung](../azure-data-studio/extensions/data-virtualization-extension.md) für Azure Data Studio
 
 
 ## <a name="deployment-overview"></a><a id="deploy"></a> Übersicht über die Bereitstellung
@@ -255,7 +255,7 @@ Nachdem das Bereitstellungsskript erfolgreich ausgeführt wurde, können Sie die
    > [!TIP]
    > Wenn Sie den Standardnamen während der Bereitstellung nicht geändert haben, verwenden Sie im vorherigen Befehl `-n mssql-cluster`. `mssql-cluster` ist der Standardname für den Big Data-Cluster.
 
-1. Melden Sie sich beim Big-Data-Cluster mit [azdata login](reference-azdata.md) an. Legen Sie den Parameter `--endpoint` auf die externe IP-Adresse des Controllerendpunkts fest.
+1. Melden Sie sich beim Big-Data-Cluster mit [azdata login](../azdata/reference/reference-azdata.md) an. Legen Sie den Parameter `--endpoint` auf die externe IP-Adresse des Controllerendpunkts fest.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -266,7 +266,7 @@ Nachdem das Bereitstellungsskript erfolgreich ausgeführt wurde, können Sie die
    > [!TIP]
    > Wenn Sie der Kubernetes-Clusteradministrator sind und Zugriff auf die Clusterkonfigurationsdatei (Kube-Konfigurationsdatei) haben, können Sie den aktuellen Kontext so konfigurieren, dass er auf den Kubernetes-Zielcluster verweist. In diesem Fall können Sie sich mit `azdata login -n <namespaceName>` anmelden, wobei `namespace` der Big Data-Clustername ist. Sie werden zur Eingabe von Anmeldeinformationen aufgefordert, wenn diese im Anmeldebefehl nicht angegeben sind.
    
-1. Führen Sie [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) aus, um eine Liste mit Beschreibungen jedes Endpunkts sowie deren entsprechende IP-Adressen und Portwerte abzurufen. 
+1. Führen Sie [azdata bdc endpoint list](../azdata/reference/reference-azdata-bdc-endpoint.md) aus, um eine Liste mit Beschreibungen jedes Endpunkts sowie deren entsprechende IP-Adressen und Portwerte abzurufen. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -298,7 +298,7 @@ kubectl get svc -n <your-big-data-cluster-name>
 
 ## <a name="verify-the-cluster-status"></a><a id="status"></a> Überprüfen des Clusterstatus
 
-Nach der Bereitstellung können Sie den Status des Clusters mit dem Befehl [azdata bdc status show](reference-azdata-bdc-status.md) überprüfen.
+Nach der Bereitstellung können Sie den Status des Clusters mit dem Befehl [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) überprüfen.
 
 ```bash
 azdata bdc status show
@@ -381,7 +381,7 @@ Bdc: ready                                                                      
 
 Mit den folgenden Befehlen können Sie sich zusätzliche Statusinformationen anzeigen lassen:
 
-- [azdata bdc control status show](reference-azdata-bdc-control-status.md) gibt den Integritätsstatus für alle Komponenten zurück, die dem Steuerungsverwaltungsdienst zugeordnet sind.
+- [azdata bdc control status show](../azdata/reference/reference-azdata-bdc-control-status.md) gibt den Integritätsstatus für alle Komponenten zurück, die dem Steuerungsverwaltungsdienst zugeordnet sind.
 ```
 azdata bdc control status show
 ```

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 646eb9359dc5e7dfaad77bc3746fbfdf9ed9ce7a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f44991b2ea59d3f6cf6e1cf5a2bd653f270aa1ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920363"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725581"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express-Benutzerinstanzen
 
@@ -143,7 +143,7 @@ Szenarien für Benutzerinstanzen sind u. a.:
   
 - Einzelbenutzeranwendungen, bei denen das Freigeben von Daten nicht erforderlich ist.  
   
-- ClickOnce-Bereitstellung. Auf Computern, auf denen .NET Framework 2.0 (oder höher) oder .NET Core 1.0 (oder höher) und SQL Server Express bereits installiert sind, kann das im Rahmen einer ClickOnce-Aktion heruntergeladene Installationspaket installiert und von Benutzern ohne Administratorberechtigung verwendet werden. Beachten Sie, dass ein Administrator SQL Server Express installieren muss, wenn dies Teil des Setups ist. Weitere Informationen finden Sie unter [ClickOnce-Bereitstellung für Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms).
+- ClickOnce-Bereitstellung. Auf Computern, auf denen .NET Framework 2.0 (oder höher) oder .NET Core 1.0 (oder höher) und SQL Server Express bereits installiert sind, kann das im Rahmen einer ClickOnce-Aktion heruntergeladene Installationspaket installiert und von Benutzern ohne Administratorberechtigung verwendet werden. Beachten Sie, dass ein Administrator SQL Server Express installieren muss, wenn dies Teil des Setups ist. Weitere Informationen finden Sie unter [ClickOnce-Bereitstellung für Windows Forms](/dotnet/framework/winforms/clickonce-deployment-for-windows-forms).
   
 - Dediziertes ASP.NET-Hosting mithilfe der Windows-Authentifizierung. Eine einzelne SQL Server Express-Instanz kann in einem Intranet gehostet werden. Die Anwendung stellt die Verbindung über das Windows-Konto ASPNET und nicht per Identitätswechsel her. Benutzerinstanzen dürfen nicht in Szenarien mit Drittanbietern oder freigegebenem Hosting verwendet werden, bei denen alle Anwendungen dieselbe Benutzerinstanz gemeinsam nutzen und nicht mehr voneinander isoliert bleiben.  
   

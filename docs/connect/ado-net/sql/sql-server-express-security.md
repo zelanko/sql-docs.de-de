@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed42778724b468892ff72203695e976d176459b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243424"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725566"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express-Sicherheit
 
@@ -42,8 +42,8 @@ Weitere Informationen zu SQL Server Express finden Sie in den folgenden Ressourc
   
 |Resource|BESCHREIBUNG|
 |-|-|  
-|[Microsoft SQL Server 2005 Express Edition-Onlinedokumentation](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Vollständige Dokumentation für SQL Server 2005 Express Edition.|  
-|[Benutzerinstanzen für Nichtadministratoren](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) in der SQL Server-Onlinedokumentation|Beschreibt die Erstellung und Bereitstellung von Benutzerinstanzen.|  
+|[Microsoft SQL Server 2005 Express Edition-Onlinedokumentation](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Vollständige Dokumentation für SQL Server 2005 Express Edition.|  
+|[Benutzerinstanzen für Nichtadministratoren](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) in der SQL Server-Onlinedokumentation|Beschreibt die Erstellung und Bereitstellung von Benutzerinstanzen.|  
 |[SQL Server Express-Benutzerinstanzen](sql-server-express-user-instances.md)|Beschreibt Benutzerinstanzfunktionen in einer ADO.NET-Anwendung. Bietet Informationen über das Aktivieren einer Benutzerinstanz, das Herstellen einer Verbindung mit einer Benutzerinstanz mithilfe von <xref:Microsoft.Data.SqlClient.SqlConnection>, die Lebensdauer der Benutzerinstanz und Szenarien mit Benutzerinstanzen.|  
   
 ## <a name="next-steps"></a>Nächste Schritte

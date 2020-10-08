@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d0c4f21d6fcf8f90026164dded1007de4e34164
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c901147ec1481f93bb76a9bf013d393b47be97ab
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765839"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725892"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installieren von Big Data-Tools für SQL Server 2019
 
@@ -29,10 +29,10 @@ In der folgenden Tabelle sind die allgemeinen Big Data-Cluster-Tools und deren I
 | Tool | Erforderlich | BESCHREIBUNG | Installation |
 |---|---|---|---|
 | `python` | Ja | Python ist eine interpretierte, objektorientierte Programmiersprache auf hoher Ebene mit dynamischer Semantik. Viele Teile von Big Data-Clustern für SQL Server verwenden Python. | [Installieren von Python](#python)|
-| `azdata` | Ja | Befehlszeilentool für die Installation und Verwaltung eines Big Data-Clusters. | [Installieren](deploy-install-azdata.md) |
+| `azdata` | Ja | Befehlszeilentool für die Installation und Verwaltung eines Big Data-Clusters. | [Installieren](../azdata/install/deploy-install-azdata.md) |
 | `kubectl`<sup>1</sup> | Ja | Befehlszeilentool zum Überwachen des zugrunde liegenden Kubernetes-Clusters ([Weitere Informationen](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
-| **Azure Data Studio** | Ja | Plattformübergreifendes grafisches Tool zum Abfragen von SQL Server. | [Installieren](https://aka.ms/getazuredatastudio) |
-| **Datenvirtualisierungserweiterung** | Ja | Erweiterung für Azure Data Studio, die einen Datenvirtualisierungs-Assistenten bereitstellt. | [Installieren](../azure-data-studio/data-virtualization-extension.md) |
+| **Azure Data Studio** | Ja | Plattformübergreifendes grafisches Tool zum Abfragen von SQL Server. | [Installieren](../azure-data-studio/download-azure-data-studio.md) |
+| **Datenvirtualisierungserweiterung** | Ja | Erweiterung für Azure Data Studio, die einen Datenvirtualisierungs-Assistenten bereitstellt. | [Installieren](../azure-data-studio/extensions/data-virtualization-extension.md) |
 | **Azure CLI**<sup>2</sup> | Für AKS | Moderne Befehlszeilenschnittstelle zum Verwalten von Azure-Diensten. Wird mit AKS-Big Data-Cluster-Bereitstellungen verwendet ([Weitere Informationen](/cli/azure/?view=azure-cli-latest)). | [Installieren](/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Optional | Moderne Befehlszeilenschnittstelle zum Abfragen von SQL Server ([Weitere Informationen](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Für einige Skripts | Legacybefehlszeilentool zum Abfragen von SQL Server ([Weitere Informationen](../tools/sqlcmd-utility.md?view=sql-server-ver15)). Möglicherweise müssen Sie Microsoft ODBC Driver 11 für SQL Server installieren, bevor Sie das SQLCMD-Paket installieren. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
@@ -85,7 +85,7 @@ Die verbleibenden Tools sind nur in bestimmten Szenarien erforderlich. **Azure C
 
 Azure Data Studio bietet Funktionen und Features speziell für SQL Server-Big Data-Cluster.
 
-[Erwerben Sie die neueste Version von Azure Data Studio](https://aka.ms/getazuredatastudio).
+[Erwerben Sie die neueste Version von Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).
 
 Weitere Informationen über die neueste Version finden Sie in den [Versionshinweisen](./release-notes-big-data-cluster.md).
 

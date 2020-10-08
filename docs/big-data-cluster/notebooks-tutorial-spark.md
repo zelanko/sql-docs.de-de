@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7f42b454ebfc1b9b4ea8e841cba6fe2a4b209ebc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cdcca2e4052374e7f26d59a3caf35f200cd47d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85660378"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725805"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>Ausführen eines Beispielnotebooks mithilfe von Spark
 
@@ -69,11 +69,11 @@ Sie können jede Notebookzelle ausführen, indem Sie auf das Symbol für Ausfüh
 
 Führen Sie nacheinander jede der Zellen im Beispielnotebook aus. Weitere Informationen zur Verwendung von Notebooks mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie in den folgenden Quellen:
 
-- [Verwenden von Notebooks](../azure-data-studio/notebooks-guidance.md)
+- [Verwenden von Notebooks](../azure-data-studio/notebooks/notebooks-guidance.md)
 - [How to manage notebooks in Azure Data Studio (Vorgehensweise: Verwalten von Notebooks in Azure Data Studio)](notebooks-manage-bdc.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Erfahren Sie mehr über Notebooks:
 > [!div class="nextstepaction"]
-> [Verwenden von Notebooks](../azure-data-studio/notebooks-guidance.md)
+> [Verwenden von Notebooks](../azure-data-studio/notebooks/notebooks-guidance.md)

@@ -11,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a6faff357f036f521a88fa37b15db5ead82b5758
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: 85b7c9f681a79a3678b932c63f755fc01d543100
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529401"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726592"
 ---
 # <a name="sql-data-developer"></a>SQL Data Developer
 Verwenden Sie die SQL-Datenplattform von Microsoft, um datenzentrierte Lösungen für mobile Geräte und Desktops für Webserver, Unternehmensserver und die Cloud zu erstellen.  
 
 ## <a name="sql-data-storage"></a>SQL-Datenspeicher
 * [SQL Server-Datenbank-Engine](../database-engine/install-windows/install-sql-server-database-engine.md): Verwenden Sie die SQL Server-Datenbank-Engine, um relationale Datenbanken für die Onlinetransaktionsverarbeitung oder die analytische Onlineverarbeitung zu erstellen. 
-* [Azure SQL](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview): Verwenden von Azure SQL zum Verlagern Ihrer Datenbank in die Cloud 
+* [Azure SQL](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview): Verwenden von Azure SQL zum Verlagern Ihrer Datenbank in die Cloud 
 * [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): Verwenden Sie SQL Server Compact, um eigenständige und nur gelegentlich verbundene Anwendungen für mobile Geräte, Desktops und Webclients zu erstellen.
-* [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): Verwenden Sie LocalDB, um Transact-SQL-Code zu schreiben und zu testen, ohne eine vollständige Instanz von SQL Server verwalten zu müssen.
+* [LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md): Verwenden Sie LocalDB, um Transact-SQL-Code zu schreiben und zu testen, ohne eine vollständige Instanz von SQL Server verwalten zu müssen.
 
 ## <a name="sql-data-tools"></a>SQL-Datentools
 * [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md): Verwenden Sie Azure Data Studio unter Windows, macOS und Linux, um SQL Server, Azure SQL-Datenbank, PostgreSQL, Jupyter Notebook uvm. auszuführen.

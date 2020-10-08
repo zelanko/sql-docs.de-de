@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 960f689f39007b4fbe4d7aa01d935ef1aaf640cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2d9b12cb2042b1e67e13057345056cfcb0105f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438402"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725504"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Internationale Funktionen des JDBC-Treibers
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,15 +55,14 @@ ms.locfileid: "88438402"
 ## <a name="collation-support"></a>Unterstützung für Sortierungen  
  Der JDBC-Treiber 3.0 unterstützt alle Sortierungen, die von [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und den in [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] eingeführten neuen Sortierungen bzw. neuen Versionen der Windows-Sortierungsnamen unterstützt werden.  
   
- Weitere Informationen zu Sortierungen finden Sie unter [Collation and Unicode Support (Sortierung und Unicode-Unterstützung)](https://go.microsoft.com/fwlink/?LinkId=131366) und [Name der Windows-Sortierung (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+ Weitere Informationen zu Sortierungen finden Sie unter [Collation and Unicode Support (Sortierung und Unicode-Unterstützung)](/previous-versions/sql/sql-server-2008-r2/ms143503(v=sql.105)) und [Name der Windows-Sortierung (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 ## <a name="using-international-domain-names-idn"></a>Verwendung internationaler Domänennamen (IDN)  
  Der JDBC-Treiber 6.0 für SQL Server unterstützt die Verwendung internationaler Domänennamen (IDNs) und kann bei Bedarf während einer Verbindung einen Unicode-Servernamen in ASCII-kompatible Codierung (Punycode) konvertieren.  Wenn die IDNs im Domain Name System (DNS) als ASCII-Zeichenfolgen im Punycode-Format (angegeben durch RFC 3490) gespeichert sind, aktivieren Sie die Konvertierung der Unicode-ServerName, indem Sie die ServerNameAsACE-Eigenschaft auf „true“ setzen.  Wenn der DNS-Dienst für die Verwendung von Unicode-Zeichen konfiguriert ist, setzen Sie die ServerNameAsACE-Eigenschaft auf „false“ (Standard).  Bei älteren Versionen des JDBC-Treibers können Sie den Servernamen in Punycode konvertieren, indem Sie die [IDN.toASCII-Methoden von Java](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) verwenden, bevor Sie die Eigenschaft für eine Verbindung festlegen.  
   
 > [!NOTE]  
->  Der Großteil der für Windows-Plattformen geschriebenen Konfliktlösersoftware basiert auf den Internet-DSN-Standards und verwendet aus diesem Grund mit hoher Wahrscheinlichkeit das Punycode-Format für IDN. Ein Windows-basierter DNS-Server in einem privaten Netzwerk kann hingegen so konfiguriert werden, dass die Verwendung von UTF-8-Zeichen auf Serverbasis möglich ist.  Weitere Informationen finden Sie unter [Unicode character support (Unterstützung von Unicode-Zeichen)](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
+>  Der Großteil der für Windows-Plattformen geschriebenen Konfliktlösersoftware basiert auf den Internet-DSN-Standards und verwendet aus diesem Grund mit hoher Wahrscheinlichkeit das Punycode-Format für IDN. Ein Windows-basierter DNS-Server in einem privaten Netzwerk kann hingegen so konfiguriert werden, dass die Verwendung von UTF-8-Zeichen auf Serverbasis möglich ist.  Weitere Informationen finden Sie unter [Unicode character support (Unterstützung von Unicode-Zeichen)](/previous-versions/windows/it-pro/windows-server-2003/cc738403(v=ws.10)).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
   

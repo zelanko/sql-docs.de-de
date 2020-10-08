@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 9acbd8fb795fe1a14e77e5d746f729d37c11cc8d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f55cb14a95844558e4a759a4acce71509d62d4ba
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896684"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725621"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Ändern von Daten mit umfangreichen Werten (max) in ADO.NET
 
@@ -27,7 +27,7 @@ Bei Large Object-Datentypen (LOB) übersteigt die Zeilengröße die maximal zul�
   
 Die `max`-Datentypen können für Vergleiche, als Transact-SQL-Variablen und zum Verketten verwendet werden. Sie können auch in den Klauseln DISTINCT, ORDER BY und GROUP BY einer SELECT-Anweisung sowie in Aggregaten, Joins und Unterabfragen verwendet werden.
 
-Weitere Informationen zu Datentypen mit großen Werten finden Sie in der SQL Server-Onlinedokumentation unter [Verwenden von Datentypen mit großen Werten](https://go.microsoft.com/fwlink/?LinkId=120498).
+Weitere Informationen zu Datentypen mit großen Werten finden Sie in der SQL Server-Onlinedokumentation unter [Verwenden von Datentypen mit großen Werten](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100)).
   
 ## <a name="large-value-type-restrictions"></a>Einschränkungen für große Werttypen  
 Die folgenden Einschränkungen gelten für die `max`-Datentypen, die es für kleinere Datentypen nicht gibt:  
@@ -146,7 +146,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getbytes-to-retrieve-data"></a>Verwenden von GetBytes zum Abrufen von Daten  
-Die `GetBytes`-Methode von <xref:Microsoft.Data.SqlClient.SqlDataReader> liest einen Strom von Bytes aus dem angegebenen Spaltenoffset in ein Bytearray, das am angegebenen Arrayoffset beginnt. Das folgende Codefragment geht von einem <xref:Microsoft.Data.SqlClient.SqlDataReader>-Objekt namens `reader` aus, das Bytes in ein Bytearray abruft. Beachten Sie, dass `GetBytes` im Gegensatz zu `GetSqlBytes` eine Größe für den Arraypuffer fordert.  
+Die `GetBytes`-Methode von <xref:Microsoft.Data.SqlClient.SqlDataReader> liest einen Strom von Bytes aus dem angegebenen Spaltenoffset in ein Bytearray, das am angegebenen Arrayoffset beginnt. Das folgende Codefragment geht von einem <xref:Microsoft.Data.SqlClient.SqlDataReader>-Objekt namens `reader` aus, das Bytes in ein Bytearray abruft. Beachten Sie, dass `GetSqlBytes` im Gegensatz zu `GetBytes` eine Größe für den Arraypuffer fordert.  
   
 ```csharp  
 while (reader.Read())  
