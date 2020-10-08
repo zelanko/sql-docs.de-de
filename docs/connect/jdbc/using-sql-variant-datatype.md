@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf29942e5d427a4a4852a6d1a856d81765690050
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 198c8a21fcea9a1386effe8d30c8d954180d6dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414526"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727483"
 ---
 # <a name="using-sql_variant-data-type"></a>Verwenden des Sql_variant-Datentyps
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Ab Version 6.3.0 unterstützt der JDBC-Treiber den Datentyp sql_variant. Sql_variant wird bei Verwendung von Features wie Tabellenwertparametern und BulkCopy ebenfalls unterstützt, allerdings gelten in diesem Fall einige Einschränkungen, die später in diesem Artikel erläutert werden. Nicht alle Datentypen können im sql_variant-Datentyp gespeichert werden. Eine Liste der unterstützten Datentypen, die mit sql_variant verwendet werden können, finden Sie in der SQL Server-[Dokumentation](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql).
+Ab Version 6.3.0 unterstützt der JDBC-Treiber den Datentyp sql_variant. Sql_variant wird bei Verwendung von Features wie Tabellenwertparametern und BulkCopy ebenfalls unterstützt, allerdings gelten in diesem Fall einige Einschränkungen, die später in diesem Artikel erläutert werden. Nicht alle Datentypen können im sql_variant-Datentyp gespeichert werden. Eine Liste der unterstützten Datentypen, die mit sql_variant verwendet werden können, finden Sie in der SQL Server-[Dokumentation](../../t-sql/data-types/sql-variant-transact-sql.md).
 
 ##  <a name="populating-and-retrieving-a-table"></a>Auffüllen und Abrufen einer Tabelle:
 Angenommen, eine Tabelle enthält eine sql_variant-Spalte wie diese:
@@ -95,4 +95,4 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

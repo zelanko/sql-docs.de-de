@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, additional resources
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7f0beae794a4958a74b0ffa1b80b72bc41b0a396
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 39ae7839934055ac1845ee94ff1e8decaae5e223
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480628"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727258"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>Weitere Informationen zum OLE DB-Treiber für SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89480628"
  [Datenzugriffs-Blog](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers)  
  Diese Blog-Site bietet Informationen zu Datenzugriffstechnologien und ermöglicht Ihnen, direkt mit Mitgliedern des Microsoft DataWorks-Produktteams zu kommunizieren.  
   
- [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  
+ [Windows Data Access Components](/previous-versions/windows/desktop/ms692897(v=vs.85))  
  Diese Website enthält die neueste Windows Data Access Components (Windows DAC) SDK-Dokumentation. Windows DAC ist die Version der Datenzugriffskomponenten (in früheren Versionen MDAC genannt), die zum Lieferumfang von Windows Vista und Windows Server 2008 gehört.  
   
  Das Window DAC SDK enthält Dokumentationen zu ADO (ActiveX Data Objects), OLE DB und ODBC (Open Database Connectivity).  
@@ -41,5 +41,4 @@ ms.locfileid: "89480628"
 
 ## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL-Server](../oledb/oledb-driver-for-sql-server.md)  
-  
   

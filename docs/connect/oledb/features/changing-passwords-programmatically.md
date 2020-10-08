@@ -20,12 +20,12 @@ helpviewer_keywords:
 - modifying passwords
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: afd00e1de90941c3e5c1ff069c1f1413dfc9f2df
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 61134cf281a5e3aa7eab8c2404f2d3dbfac13972
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861504"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727320"
 ---
 # <a name="changing-passwords-programmatically"></a>Programmgesteuertes Ändern von Kennwörtern
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88861504"
   Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] unterstützt der OLE DB-Treiber für SQL Server die programmgesteuerte Verwaltung von abgelaufenen Kennwörtern sowohl durch den OLE DB-Treiber, als auch durch Änderungen an den Dialogfeldern zur **SQL Server-Anmeldung**.  
   
 > [!NOTE]  
->  Fordern Sie, wenn möglich, Benutzer dazu auf, ihre Anmeldeinformationen zur Laufzeit einzugeben, um zu vermeiden, diese Informationen in einem persistenten Format speichern zu müssen. Wenn Sie die Anmeldeinformationen persistent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532). Weitere Informationen zur Verwendung von Kennwörtern finden Sie unter [Sichere Kennwörter](../../../relational-databases/security/strong-passwords.md).  
+>  Fordern Sie, wenn möglich, Benutzer dazu auf, ihre Anmeldeinformationen zur Laufzeit einzugeben, um zu vermeiden, diese Informationen in einem persistenten Format speichern zu müssen. Wenn Sie die Anmeldeinformationen persistent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference). Weitere Informationen zur Verwendung von Kennwörtern finden Sie unter [Sichere Kennwörter](../../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Fehlercodes bei der SQL Server-Anmeldung  
  Wenn eine Verbindung aufgrund von Authentifizierungsproblemen nicht hergestellt werden kann, wird für die Anwendung einer der folgenden SQL Server-Fehlercodes bereitgestellt, um Diagnose und Wiederherstellung zu erleichtern.  
@@ -94,5 +94,4 @@ ms.locfileid: "88861504"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b165f5ceb5e8f08539cb48473a6f3d701623f6a
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 327a4ca587a577bdca3fe8f42748998f29060146
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861381"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727144"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Auflisten von OLE DB-Datenquellen (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88861381"
 
   Dieses Beispiel zeigt, wie das Enumeratorobjekt zum Auflisten der verfügbaren Datenquellen verwendet wird.  
   
- Um die Datenquellen aufzulisten, die für den MSOLEDBSQL-Enumerator sichtbar sind, ruft der Consumer die [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312)-Methode auf. Diese Methode gibt ein Rowset der Informationen zu den gerade sichtbaren Datenquellen zurück.  
+ Um die Datenquellen aufzulisten, die für den MSOLEDBSQL-Enumerator sichtbar sind, ruft der Consumer die [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85))-Methode auf. Diese Methode gibt ein Rowset der Informationen zu den gerade sichtbaren Datenquellen zurück.  
   
  Je nach verwendeter Netzwerkbibliothek wird in der entsprechenden Domäne nach den Datenquellen gesucht. Für Named Pipes ist dies die Domäne, an der der Client angemeldet ist. Für AppleTalk ist dies die Standardzone. Für SPX/IPX ist dies die Liste von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationen, die in der Bindery gefunden wird. Für Banyan VINES sind dies die auf dem lokalen Netzwerk gefundenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installationen. Multiprotokoll und TCP/IP-Sockets werden nicht unterstützt.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88861381"
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>So listen Sie OLE DB-Datenquellen auf  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

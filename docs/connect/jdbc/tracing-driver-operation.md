@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c25f97d79477497d60d458c994ef5dbdc102463d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393128"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727538"
 ---
 # <a name="tracing-driver-operation"></a>Ablaufverfolgung für Treibervorgänge
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "86393128"
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt die Verwendung der Ablaufverfolgung (oder Protokollierung), um die Lösung von Problemen mit dem JDBC-Treiber in der Anwendung zu ermöglichen. Für die Ablaufverfolgung verwendet der JDBC-Treiber die Protokollierungs-APIs in „java.util.logging“, die eine Reihe von Klassen zum Erstellen der Objekte „Logger“ und „LogRecord“ bereitstellen.  
   
 > [!NOTE]  
->  Für die im JDBC-Treiber enthaltene systemeigene Komponente ("sqljdbc_xa.dll") wird die Ablaufverfolgung durch das BID-Framework (Built-In Diagnostics) ermöglicht. Informationen zu BID finden Sie unter [Verfolgung des Datenzugriffs in SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
+>  Für die im JDBC-Treiber enthaltene systemeigene Komponente ("sqljdbc_xa.dll") wird die Ablaufverfolgung durch das BID-Framework (Built-In Diagnostics) ermöglicht. Informationen zu BID finden Sie unter [Verfolgung des Datenzugriffs in SQL Server](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)).  
   
  Wenn Sie Ihre Anwendung entwickeln, können Sie Aufrufe an Logger-Objekte absetzen, die wiederum LogRecord-Objekte erstellen. Diese werden anschließend zur Verarbeitung an Handler-Objekte übergeben. Protokollierungs- und Handlerobjekte verwenden Protokolliergrade sowie optional Protokollierungsfilter, um zu bestimmen, welche LogRecords verarbeitet werden. Nach Abschluss der Protokolliervorgänge können die Handler-Objekte die Protokollinformationen ggf. mit Formatter-Objekten veröffentlichen.  
   
@@ -161,5 +161,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
   

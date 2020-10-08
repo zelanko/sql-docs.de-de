@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetColumns method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eeaebe20dd27eb24edc1d23060d7a64fec8f0916
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 65c7bdd5413b2ac320f7c9338978ab54012dabd4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860604"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727121"
 ---
 # <a name="fetch-columns-by-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (oder IRow::Open) und ISequentialStream
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860604"
   Umfangreiche Daten können mit der **ISequentialStream**-Schnittstelle gebunden oder abgerufen werden. Bei gebundenen Spalten gibt das Statusflag DBSTATUS_S_TRUNCATED an, dass die Daten abgeschnitten werden.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>So rufen Sie Spalten mithilfe von IRow::GetColumns (oder IRow::Open) und ISequentialStream ab  
   
@@ -675,5 +675,4 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Vorgehensweisen für OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

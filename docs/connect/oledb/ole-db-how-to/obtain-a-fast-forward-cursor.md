@@ -12,12 +12,12 @@ helpviewer_keywords:
 - fast forward-only cursors
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a6b5aec6440a666413a06e1c7307a6d8c83aaaac
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: de4b4d600e6b83d1c2eede7ed7ef3d5970b6ac74
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860334"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727099"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>Abrufen eines FAST_FORWARD-Cursors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860334"
  In einem vollständigen Beispiel wird gezeigt, wie Sie die Rowseteigenschaften zum Abrufen eines FAST_FORWARD-Cursors festlegen. Nach dem Festlegen der Eigenschaften wird eine SELECT-Anweisung ausgeführt, um die **Name** -Spalte der **Purchasing.Vendor** -Tabelle in der **AdventureWorks** -Datenbank abzurufen und anzuzeigen.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>So rufen Sie einen FAST_FORWARD-Cursor ab  
   
@@ -409,5 +409,4 @@ void Cleanup() {
    OleUninitialize();  
 }  
 ```  
-  
   

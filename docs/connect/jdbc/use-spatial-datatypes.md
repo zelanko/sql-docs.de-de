@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0f4b01775e2c78c0cc8602539169a794eb476f92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02b545ec1d33d17674266d58a2a120f07af423ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487960"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727527"
 ---
 # <a name="using-spatial-datatypes"></a>Verwenden von räumlichen Datentypen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Räumliche Datentypen („Geometry“ and „Geography“) werden ab der Vorschauversion 6.5.0 des JDBC-Treibers unterstützt. Räumliche Datentypen werden bei gespeicherten Prozeduren, Tabellenwertparametern, BulkCopy-Vorgängen und Always Encrypted aktuell nicht unterstützt. Diese Seite zeigt verschiedene Anwendungsfälle der Geometry- und Geography-Datentypen mit dem JDBC-Treiber. Eine Übersicht über räumliche Datentypen finden Sie unter [Übersicht über räumliche Datentypen](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview).
+Räumliche Datentypen („Geometry“ and „Geography“) werden ab der Vorschauversion 6.5.0 des JDBC-Treibers unterstützt. Räumliche Datentypen werden bei gespeicherten Prozeduren, Tabellenwertparametern, BulkCopy-Vorgängen und Always Encrypted aktuell nicht unterstützt. Diese Seite zeigt verschiedene Anwendungsfälle der Geometry- und Geography-Datentypen mit dem JDBC-Treiber. Eine Übersicht über räumliche Datentypen finden Sie unter [Übersicht über räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md).
 
 ## <a name="creating-a-geometry--geography-object"></a>Erstellen eines Geometry-/Geography-Objekts
 

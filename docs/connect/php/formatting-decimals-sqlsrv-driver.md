@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b111dd925a98c4f0380dfceb0a09ddffadb96592
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680725"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726820"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Für maximale Genauigkeit werden [Dezimal- oder numerische Typen](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) immer als Zeichenfolgen mit der exakten Anzahl von Zeichen und Dezimalzeichen abgerufen. Wenn ein Wert geringer als 1 ist, fehlt die führende Null. Gleiches gilt für die Felder „money“ und „smallmoney“, da es sich um Dezimalfelder mit einer festen Anzahl von Dezimalzeichen (4) handelt.
+Für maximale Genauigkeit werden [Dezimal- oder numerische Typen](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) immer als Zeichenfolgen mit der exakten Anzahl von Zeichen und Dezimalzeichen abgerufen. Wenn ein Wert geringer als 1 ist, fehlt die führende Null. Gleiches gilt für die Felder „money“ und „smallmoney“, da es sich um Dezimalfelder mit einer festen Anzahl von Dezimalzeichen (4) handelt.
 
 ## <a name="add-leading-zeroes-if-missing"></a>Hinzufügen von fehlenden führenden Nullen
 Ab Version 5.6.0 können Benutzer die Option `FormatDecimals` auf sqlsrv-Verbindungs- und -Anweisungsebene verwenden, um Dezimalzeichenfolgen zu formatieren. Diese Option wird mit einem booleschen Wert (true oder false) verwendet und wirkt sich ausschließlich auf die Formatierung der Dezimal- oder numerischen Werte in den abgerufenen Ergebnissen aus. Mit anderen Worten, die Option `FormatDecimals` hat keine Auswirkungen auf andere Vorgänge wie beispielsweise Einfüge- oder Aktualisierungsvorgänge.

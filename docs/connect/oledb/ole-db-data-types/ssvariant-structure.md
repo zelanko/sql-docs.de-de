@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 701476b8e1cea1f84d7fdbf970a345311d686cfd
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: b6cef1fb9b92df92cba00ea9e9aa8c9591e887a6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860067"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727225"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT-Struktur
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860067"
 
   Die in „msoledbsql.h“ definierte **SSVARIANT**-Struktur entspricht einem DBTYPE_SQLVARIANT-Wert im OLE DB-Treiber für SQL Server.  
   
- **SSVARIANT** ist eine unterscheidende Union. Abhängig vom Wert des vt-Elements kann der Consumer feststellen, welches Element gelesen werden soll. vt-Werte entsprechen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen. Die **SSVARIANT**-Struktur kann daher jeden SQL Server-Typ enthalten. Weitere Informationen zur Datenstruktur für standardmäßige OLE DB-Typen finden Sie unter [Typindikatoren](https://go.microsoft.com/fwlink/?LinkId=122171).  
+ **SSVARIANT** ist eine unterscheidende Union. Abhängig vom Wert des vt-Elements kann der Consumer feststellen, welches Element gelesen werden soll. vt-Werte entsprechen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen. Die **SSVARIANT**-Struktur kann daher jeden SQL Server-Typ enthalten. Weitere Informationen zur Datenstruktur für standardmäßige OLE DB-Typen finden Sie unter [Typindikatoren](/previous-versions/windows/desktop/ms711251(v=vs.85)).  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn DataTypeCompat auf „80“ festgelegt ist, werden verschiedene **SSVARIANT**-Untertypen zu Zeichenfolgen. Beispielsweise werden die folgenden vt-Werte in **SSVARIANT** als VT_SS_WVARSTRING angezeigt:  
@@ -87,7 +87,7 @@ Vor Version 18.4 des OLE DB-Treibers konnte das Einfügen in eine `sql_variant`
 - Die Codepage des Clientcomputers entsprach nicht der Codepage für die Datenbanksortierung.
 - Der einzufügende Clientpuffer enthielt der Clientcodepage entsprechend codierte Zeichen aus schmalen Nicht-ASCII-Zeichenfolgen.
 - Eine der folgenden Bedingungen traf zu:
-  - Das `pwszDataSourceType`-Feld in der `DBPARAMBINDINFO`-Struktur, das den Parameter beschreibt, der der `sql_variant`-Spalte entspricht, wurde auf `L"DBTYPE_SQLVARIANT"`, `L"DBTYPE_VARIANT"`oder `L"sql_variant"` festgelegt. Einzelheiten dazu finden Sie unter: [ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85)).
+  - Das `pwszDataSourceType`-Feld in der `DBPARAMBINDINFO`-Struktur, das den Parameter beschreibt, der der `sql_variant`-Spalte entspricht, wurde auf `L"DBTYPE_SQLVARIANT"`, `L"DBTYPE_VARIANT"`oder `L"sql_variant"` festgelegt. Einzelheiten dazu finden Sie unter: [ICommandWithParameters::SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85)).
 
     *or*
   - Die zum Einfügen verwendete parametrisierte SQL-Abfrage wurde vorbereitet.
@@ -153,5 +153,4 @@ UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <Fi
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Datentypen &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
-  
   

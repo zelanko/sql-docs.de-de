@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba388925b96be073ed72208b2e795ea0b292cf17
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: f1ce60f3b96036ff9483782379728ad6e57e3288
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860136"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727143"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Ändern eines SQL Server-Authentifizierungsbenutzerkennworts (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88860136"
   Dieses Beispiel veranschaulicht die Verwendung von OLE DB zum Ändern des Kennworts eines Benutzerkontos mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference).  
   
 ## <a name="example"></a>Beispiel  
  Aktualisieren Sie vor dem Erstellen den C++-Code, um die Benutzer-ID, das alte Kennwort und das neue Kennwort anzugeben.  
@@ -324,5 +324,4 @@ void DumpErrorInfo (IUnknown* pObjectWithError, REFIID IID_InterfaceWithError, B
       pISupportErrorInfo->Release();  
 }  
 ```  
-  
   

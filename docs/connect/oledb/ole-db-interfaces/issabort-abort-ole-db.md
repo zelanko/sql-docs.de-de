@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Abort method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18e8c8544c557292bd5a7cc813d809ea0f9cf061
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 0b177fcb4a86c614116b414902be808862721abf
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860077"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726945"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,12 +62,11 @@ HRESULT Abort(void);
  Der Batch wurde nicht abgebrochen.  
   
  E_FAIL  
- Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)-Schnittstelle.  
+ Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15)-Schnittstelle.  
   
  E_UNEXPECTED  
  Die Methode wurde unerwartet aufgerufen. Zum Beispiel ist das Objekt in einem Zombiezustand, da `ISSAbort::Abort` bereits aufgerufen wurde.  
   
  E_OUTOFMEMORY  
  Fehler aufgrund von nicht genügend Arbeitsspeicher.  
-  
   

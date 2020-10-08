@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f211fffa4d3fd9cbafec9180894c5760f876c98
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: ec60fe007ff784c2ff19ad82bd9d212f685ef6d6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728412"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726683"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -157,7 +157,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> Es wird empfohlen, beim Binden von Werten an eine [Spalte des Datentyps „decimal“ oder „numeric“](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) Zeichenfolgen als Eingabe zu verwenden, um Präzision und Genauigkeit sicherzustellen, da die Genauigkeit von PHP für [Gleitkommazahlen](https://php.net/manual/en/language.types.float.php) begrenzt ist. Dasselbe gilt für Spalten des Datentyps „bigint“, insbesondere, wenn die Werte außerhalb des Bereichs einer [ganzen Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) liegen.
+> Es wird empfohlen, beim Binden von Werten an eine [Spalte des Datentyps „decimal“ oder „numeric“](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) Zeichenfolgen als Eingabe zu verwenden, um Präzision und Genauigkeit sicherzustellen, da die Genauigkeit von PHP für [Gleitkommazahlen](https://php.net/manual/en/language.types.float.php) begrenzt ist. Dasselbe gilt für Spalten des Datentyps „bigint“, insbesondere, wenn die Werte außerhalb des Bereichs einer [ganzen Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) liegen.
 
 ## <a name="example"></a>Beispiel  
 In diesem Codebeispiel wird das Binden eines Dezimalwerts als Eingabeparameter veranschaulicht.  
@@ -184,7 +184,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>Beispiel
-In diesem Codebeispiel wird das Erstellen einer Tabelle mit Werten des Datentyps [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) und das Abrufen der eingefügten Daten veranschaulicht.
+In diesem Codebeispiel wird das Erstellen einer Tabelle mit Werten des Datentyps [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) und das Abrufen der eingefügten Daten veranschaulicht.
 
 ```
 <?php
@@ -252,4 +252,3 @@ Second field:  test_data
 
 [Verwenden direktionaler Parameter](../../connect/php/using-directional-parameters.md)  
 
-  

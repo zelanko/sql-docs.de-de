@@ -13,12 +13,12 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01adeff5f66d1d37309967147b00f63b1d5b75a4
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: d456e16308944d8678d5938e0e56d094a0afa196
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860256"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727045"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Abrufen von Zeilen mithilfe von Lesezeichen (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860256"
   Der Consumer legt den Wert des Felds **dwFlag** der Bindungsstruktur auf DBCOLUMNSINFO_ISBOOKMARK fest, um anzugeben, dass die Spalte als Lesezeichen verwendet wird. Der Consumer legt zudem die Rowseteigenschaft DBPROP_BOOKMARKS auf VARIANT_TRUE fest. Daher kann die Spalte 0 im Rowset vorhanden sein. Anschließend wird**IRowsetLocate::GetRowsAt** verwendet, um Zeilen abzurufen und dabei mit der Zeile zu beginnen, die in einem Lesezeichen als Offset angegeben wird.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>So rufen Sie Zeilen mithilfe von Lesezeichen auf  
   
@@ -385,5 +385,4 @@ int ProcessResultSet() {
    return 0;  
 }  
 ```  
-  
   

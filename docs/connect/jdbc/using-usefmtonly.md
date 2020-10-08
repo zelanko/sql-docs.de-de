@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: da61e1881d4c7df01cdc92ad41f6a78c95dda8b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad8f30b236ca9d4fe8a134db3e1726aaeb17a2d3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450040"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727461"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>Abrufen von ParameterMetaData über useFmtOnly
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -91,7 +91,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  Die Funktion unterstützt ausschließlich `SELECT/INSERT/UPDATE/DELETE`-Abfragen. Abfragen sollten mit einem der vier unterstützten Schlüsselwörter oder einem [allgemeinen Tabellenausdruck](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017) beginnen, auf das bzw. den eine der unterstützten Abfragen folgt. Parameter innerhalb von allgemeine Tabellenausdrücken werden nicht unterstützt.
+>  Die Funktion unterstützt ausschließlich `SELECT/INSERT/UPDATE/DELETE`-Abfragen. Abfragen sollten mit einem der vier unterstützten Schlüsselwörter oder einem [allgemeinen Tabellenausdruck](../../t-sql/queries/with-common-table-expression-transact-sql.md?view=sql-server-2017) beginnen, auf das bzw. den eine der unterstützten Abfragen folgt. Parameter innerhalb von allgemeine Tabellenausdrücken werden nicht unterstützt.
 
 ## <a name="known-issues"></a>Bekannte Probleme
   Es gibt derzeit einige Probleme mit diesem Feature, die auf Mängel in der SQL-Analyselogik zurückzuführen sind. Diese Probleme werden möglicherweise in einem zukünftigen Update der Funktion behoben und sind im Folgenden mit entsprechenden Vorschlägen für Problemumgehungen dokumentiert.
@@ -129,7 +129,7 @@ SELECT * FROM (SELECT * FROM Foo WHERE c1 = ?) WHERE c1 = ?; --Incorrect syntax 
 --Workaround: N/A
 ```
 
-D: Unterabfragen in einer SET-Klausel
+D. Unterabfragen in einer SET-Klausel
 ```sql
 CREATE TABLE Foo(c1 int)
 
@@ -139,7 +139,6 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo) WHERE c1 = ?; --Incorrect syntax near '
 UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md)  
-  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 919a0f04eb0d6c4f15125dc9514d11930bd13f8e
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: b1f77ce4eb0b329fdb6911bd38f6e120e4ff7d3d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901330"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727521"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Herunterladen des ODBC-Treibers für SQL Server
 
@@ -38,7 +38,7 @@ Version 17.6.1 ist die neueste allgemein verfügbare Version. Wenn Sie eine fr�
 - Veröffentlichung: 31. Juli 2020
 
 > [!Note]
-> Wenn Sie von einer nicht englischsprachigen Version auf diese Seite zugreifen und den neuesten Inhalt anzeigen möchten, besuchen Sie die [US-englische Version der Website](https://aka.ms/downloadmsodbcsqlenglish). Sie können verschiedene Sprachen von der US-englischen Website herunterladen, indem Sie [available languages](#available-languages) (verfügbare Sprachen) auswählen.
+> Wenn Sie von einer nicht englischsprachigen Version auf diese Seite zugreifen und den neuesten Inhalt anzeigen möchten, besuchen Sie die [US-englische Version der Website](). Sie können verschiedene Sprachen von der US-englischen Website herunterladen, indem Sie [available languages](#available-languages) (verfügbare Sprachen) auswählen.
 
 ## <a name="available-languages"></a>Verfügbare Sprachen
 

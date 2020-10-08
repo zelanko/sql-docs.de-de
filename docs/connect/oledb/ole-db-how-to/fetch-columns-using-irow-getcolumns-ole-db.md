@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IRow interface
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c22a948cad5fdc2b41f1ac14b73d728be06b9c3f
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 005748886f0a0e3b6e35b97ac02d1ca77b290b0c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860609"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727145"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88860609"
 -   Wie zweimal auf eine Spalte zugegriffen wird. Das erste Mal wird die Spaltenbreite erfasst, und später wird auf die eigentlichen Daten zugegriffen. Wenn in der DBCOLUMNACCESS-Struktur **pData** NULL und **cbMaxLen** 0 ist, wird beim Aufruf von **IRow**-**GetColumns()** nur die Spaltenlänge zurückgegeben. In diesem Fall kann **IRow->GetColumns()** wieder in der gleichen Spalte aufgerufen werden, um die eigentlichen Daten abzurufen.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>So rufen Sie Spalten mithilfe von IRow::GetColumns ab  
   
@@ -522,5 +522,4 @@ go
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Vorgehensweisen für OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

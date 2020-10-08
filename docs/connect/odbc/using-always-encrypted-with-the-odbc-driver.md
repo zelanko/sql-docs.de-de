@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 378403eec3b99d8f916a92fc768f1277a7b18572
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288182"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727391"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ Beachten Sie, dass das Aktivieren von Always Encrypted für eine erfolgreiche Ve
 > [!NOTE]
 > Unter Linux und macOS ist zur Verwendung von Always Encrypted mit Secure Enclaves die OpenSSL-Version 1.0.1 oder höher erforderlich.
 
-Ab Version 17.4 unterstützt der Treiber Always Encrypted mit Secure Enclaves. Um die Verwendung der Enclave beim Herstellen einer Verbindung mit SQL Server 2019 oder höher zu ermöglichen, legen Sie den `ColumnEncryption`-DSN, die Verbindungszeichenfolge oder das Verbindungsattribut auf den Namen des Enclavetyps und des Nachweisprotokolls sowie auf die zugehörigen Nachweisdaten fest (getrennt durch Komma). In Version 17.4 werden nur der Enclavetyp [Virtualisierungsbasierte Sicherheit](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) und das Nachweisprotokoll [Host-Überwachungsdienst](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) (angegeben durch `VBS-HGS`) unterstützt; geben Sie zur Verwendung die URL des Nachweisservers an, z. B.:
+Ab Version 17.4 unterstützt der Treiber Always Encrypted mit Secure Enclaves. Um die Verwendung der Enclave beim Herstellen einer Verbindung mit SQL Server 2019 oder höher zu ermöglichen, legen Sie den `ColumnEncryption`-DSN, die Verbindungszeichenfolge oder das Verbindungsattribut auf den Namen des Enclavetyps und des Nachweisprotokolls sowie auf die zugehörigen Nachweisdaten fest (getrennt durch Komma). In Version 17.4 werden nur der Enclavetyp [Virtualisierungsbasierte Sicherheit](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) und das Nachweisprotokoll [Host-Überwachungsdienst](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) (angegeben durch `VBS-HGS`) unterstützt; geben Sie zur Verwendung die URL des Nachweisservers an, z. B.:
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -383,7 +383,7 @@ ODBC Driver for SQL Server verfügt über die folgenden integrierten Schlüssels
 
 ### <a name="using-the-azure-key-vault-provider"></a>Verwenden des Azure Key Vault-Anbieters
 
-Azure Key Vault (AKV) ist eine praktische Möglichkeit zum Speichern und Verwalten von Spaltenhauptschlüsseln für Always Encrypted (insbesondere, wenn Ihre Anwendungen in Azure gehostet werden). Unter Linux, macOS und Windows enthält ODBC Driver for SQL Server einen integrierten CMK-Speicheranbieter für den Azure Key Vault. Weitere Informationen zum Konfigurieren von Azure Key Vault für Always Encrypted finden Sie unter [Azure Key Vault – Step by Step (Ausführliche Anleitung zu Azure Key Vault)](/archive/blogs/kv/azure-key-vault-step-by-step), [Getting Started with Key Vault (Erste Schritte mit dem Azure Key Vault)](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) und [Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+Azure Key Vault (AKV) ist eine praktische Möglichkeit zum Speichern und Verwalten von Spaltenhauptschlüsseln für Always Encrypted (insbesondere, wenn Ihre Anwendungen in Azure gehostet werden). Unter Linux, macOS und Windows enthält ODBC Driver for SQL Server einen integrierten CMK-Speicheranbieter für den Azure Key Vault. Weitere Informationen zum Konfigurieren von Azure Key Vault für Always Encrypted finden Sie unter [Azure Key Vault – Step by Step (Ausführliche Anleitung zu Azure Key Vault)](/archive/blogs/kv/azure-key-vault-step-by-step), [Getting Started with Key Vault (Erste Schritte mit dem Azure Key Vault)](/azure/key-vault/general/overview) und [Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 > [!NOTE]
 > Der ODBC-Treiber unterstützt die Azure Key Vault-Authentifizierung nur direkt für Azure Active Directory. Wenn Sie die Azure Active Directory-Authentifizierung bei Azure Key Vault verwenden und Ihre Active Directory-Konfiguration die Authentifizierung für einen Active Directory-Verbunddienstendpunkt erfordert, kann bei der Authentifizierung ein Fehler auftreten.
@@ -395,7 +395,7 @@ Der Treiber unterstützt die Authentifizierung beim Azure Key Vault mithilfe der
 
 - Client-ID/Geheimnis: Bei dieser Methode bestehen die Anmeldeinformationen aus einer Anwendungsclient-ID und einem Anwendungsgeheimnis.
 
-- Verwaltete Identität (17.5.2+): entweder system- oder benutzerseitig zugewiesen; unter [Verwaltete Azure AD-Identitäten für Azure-Ressourcen: Dokumentation](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/) finden Sie weitere Informationen.
+- Verwaltete Identität (17.5.2+): entweder system- oder benutzerseitig zugewiesen; unter [Verwaltete Azure AD-Identitäten für Azure-Ressourcen: Dokumentation](/azure/active-directory/managed-identities-azure-resources/) finden Sie weitere Informationen.
 
 Verwenden Sie die folgenden Schlüsselwörter bestehend aus Verbindungszeichenfolgen, um dem Treiber für die Spaltenverschlüsselung die Verwendung der im Azure Key Vault gespeicherten CMKs zu erlauben:
 

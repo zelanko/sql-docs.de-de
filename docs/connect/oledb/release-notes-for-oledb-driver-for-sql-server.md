@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011909"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726923"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Anmerkungen zu dieser Version vom OLE DB-Treiber für SQL Server
 
@@ -49,8 +49,8 @@ Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink
 
 | Behobene Fehler | Details |
 | :-------- | :------ |
-| Verschiedene Fehler der Schnittstelle [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) wurden behoben. | Einige Fehler, die sich auf Multibytecodepages auswirken, ergaben, dass die Schnittstelle das Ende des Streams während des Lesevorgangs vorzeitig gemeldet hat.|
-| Ein Arbeitsspeicherverlust der Schnittstelle [IopenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) wurde behoben. | Ein Arbeitsspeicherverlust der Schnittstelle [IopenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) wurde behoben, als die Eigenschaft `SSPROP_IRowsetFastLoad` aktiviert war. |
+| Verschiedene Fehler der Schnittstelle [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) wurden behoben. | Einige Fehler, die sich auf Multibytecodepages auswirken, ergaben, dass die Schnittstelle das Ende des Streams während des Lesevorgangs vorzeitig gemeldet hat.|
+| Ein Arbeitsspeicherverlust der Schnittstelle [IopenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) wurde behoben. | Ein Arbeitsspeicherverlust der Schnittstelle [IopenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) wurde behoben, als die Eigenschaft `SSPROP_IRowsetFastLoad` aktiviert war. |
 | Ein Fehler in Szenarios mit einem Datentyp `sql_variant` und ASCII-Zeichenfolgen wurde behoben. | Das Ausführen bestimmter Szenarios mit einem Datentyp `sql_variant` und ASCII-Zeichenfolgen kann zu einer Datenbeschädigung führen. Einzelheiten dazu finden Sie unter: [Bekannte Probleme](ole-db-data-types/ssvariant-structure.md#known-issues). |
 | Probleme mit der Schaltfläche *Verbindung testen* im Dialogfeld [UDL-Konfiguration](help-topics/data-link-pages.md) wurden behoben. | Die Schaltfläche *Verbindung testen* im Dialogfeld [UDL-Konfiguration](help-topics/data-link-pages.md) berücksichtigt nun auf der Registerkarte *Alle* festgelegte Initialisierungseigenschaften. |
 | Die Standardwertbehandlung der Eigenschaft `SSPROP_INIT_PACKETSIZE` wurde behoben. | Ein unerwarteter Fehler beim Festlegen der Eigenschaft `SSPROP_INIT_PACKETSIZE` auf den Standardwert `0` wurde behoben. Weitere Informationen zu dieser Eigenschaft finden Sie unter [Initialisierungs- und Autorisierungseigenschaften](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
@@ -82,7 +82,7 @@ Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink
 
 | Behobene Fehler | Details |
 | :-------- | :------ |
-| Probleme mit der DROP INDEX-Logik in [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448) wurden behoben. | Frühere Versionen des OLE DB-Treibers können keinen Primärschlüsselindex ablegen, wenn die Schema- und die Benutzer-ID des Indexbesitzers nicht gleich sind. |
+| Probleme mit der DROP INDEX-Logik in [IIndexDefinition::DropIndex](/previous-versions/windows/desktop/ms722733(v=vs.85)) wurden behoben. | Frühere Versionen des OLE DB-Treibers können keinen Primärschlüsselindex ablegen, wenn die Schema- und die Benutzer-ID des Indexbesitzers nicht gleich sind. |
 | &nbsp; | &nbsp; |
 
 Laden Sie frühere Versionen des OLE DB Treibers herunter, indem Sie auf die Downloadlinks in den folgenden Abschnitten klicken:
@@ -120,7 +120,7 @@ Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink
 
 | Behobene Fehler | Details |
 | :-------- | :------ |
-| Die nicht interaktive Azure Active Directory-Authentifizierung im Multithread-Apartment-Modus (MTA) wurde behoben. | Der OLE DB-Treiber Version 18.2.1 versucht fälschlicherweise das COM-Parallelitätsmodell für ein Apartment zu ändern, das zuvor als Multithread-Apartment (MTA) initialisiert wurde. Daher kann der Treiber in einer Anwendung, die vor dem Aufruf der Schnittstelle [IDBInitialize::Initialize](https://go.microsoft.com/fwlink/?linkid=2092522) mehr als einen nachfolgenden Aufruf von [CoInitialize](https://go.microsoft.com/fwlink/?linkid=2092520) oder [CoInitializeEx](https://go.microsoft.com/fwlink/?linkid=2092521) durchführt, keine Verbindung herstellen, wenn ein Azure Active Directory-Authentifizierungsmodus verwendet wird. |
+| Die nicht interaktive Azure Active Directory-Authentifizierung im Multithread-Apartment-Modus (MTA) wurde behoben. | Der OLE DB-Treiber Version 18.2.1 versucht fälschlicherweise das COM-Parallelitätsmodell für ein Apartment zu ändern, das zuvor als Multithread-Apartment (MTA) initialisiert wurde. Daher kann der Treiber in einer Anwendung, die vor dem Aufruf der Schnittstelle [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) mehr als einen nachfolgenden Aufruf von [CoInitialize](/windows/win32/api/objbase/nf-objbase-coinitialize) oder [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) durchführt, keine Verbindung herstellen, wenn ein Azure Active Directory-Authentifizierungsmodus verwendet wird. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1821"></a>18.2.1

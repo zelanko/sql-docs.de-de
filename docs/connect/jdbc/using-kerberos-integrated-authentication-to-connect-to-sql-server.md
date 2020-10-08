@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ecbffed0e29bc3a36a1129dbade504c9b03484c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d015565b114641f2c44c28da1f2dc03e4fdda773
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414596"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727515"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Herstellen von Verbindungen mit SQL Server mit der integrierten Kerberos-Authentifizierung
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Ab [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] können Anwendungen mithilfe der Verbindungseigenschaft **authenticationScheme** angeben, dass eine Verbindung mit einer Datenbank unter Verwendung der integrierten Kerberos-Authentifizierung Typ 4 hergestellt werden soll. Weitere Informationen zu Verbindungseigenschaften finden Sie unter [Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md). Weitere Informationen zu Kerberos finden Sie unter [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758).
+Ab [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] können Anwendungen mithilfe der Verbindungseigenschaft **authenticationScheme** angeben, dass eine Verbindung mit einer Datenbank unter Verwendung der integrierten Kerberos-Authentifizierung Typ 4 hergestellt werden soll. Weitere Informationen zu Verbindungseigenschaften finden Sie unter [Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md). Weitere Informationen zu Kerberos finden Sie unter [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos).
 
 Bei Verwendung der integrierten Authentifizierung mit dem Java-**Krb5LoginModule** können Sie das Modul mithilfe der [Klasse Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html) konfigurieren.
 
@@ -74,7 +74,7 @@ Weitere Informationen zu Dienstprinzipalnamen (SPNs) finden Sie in folgendem The
 
 - [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
-- [Verwenden von Kerberos mit SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
+- [Verwenden von Kerberos mit SQL Server](/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > Vor Release 6.2 des JDBC-Treibers mussten Sie den **serverSpn** explizit festlegen, damit die bereichsübergreifende Kerberos-Authentifizierung ordnungsgemäß verwendet wurde.

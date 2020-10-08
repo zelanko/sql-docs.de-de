@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b9e62ebb5b8060c3b19e06d4e0af71981a63660c
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 27acbce6e1c8a93878c0f7d803264c568d9e46b9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860305"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727088"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Ausführen der gespeicherten Prozedur mit dem RPC und der Prozessausgabe
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860305"
   Gespeicherte [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]-Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter enthalten. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung demnach erst zur Verfügung, wenn das Rowset vollständig freigegeben wurde. Wenn der Befehl mehrere Ergebnisse zurückgibt, stehen Ausgabeparameterdaten zur Verfügung, wenn **IMultipleResults::GetResult** DB_S_NORESULT zurückgibt oder die **IMultipleResults**-Schnittstelle vollständig freigegeben wird, je nachdem, was zuerst eintritt.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen persistent speichern müssen, sollten Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen persistent speichern müssen, sollten Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference)verschlüsseln.  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>So verarbeiten Sie Rückgabecodes und Ausgabeparameter  
   
@@ -399,5 +399,4 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Vorgehensweisen zum Verarbeiten von Ergebnissen &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

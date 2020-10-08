@@ -15,12 +15,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 00bf7bad226fc793c17a80a0e10e86c970aae195
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 3676f8daad2e597510323577a67f37c9a901f2b0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862132"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726931"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>OLE DB-Treiber für SQL Server-Schnittstellen (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88862132"
   
  In dieser Programmierungsdokumentation für den OLE DB-Treiber für SQL Server werden nicht alle OLE DB-Schnittstellen und -Methoden behandelt, sondern nur solche, die eine anbieterspezifische Funktionsweise aufweisen, wenn der OLE DB-Treiber für SQL Server verwendet wird.  
   
- Eine vollständige Beschreibung der wichtigsten OLE DB-Schnittstellen und -Methoden finden Sie unter [OLE DB Programmer's Reference (Programmierreferenz für OLE DB)](https://go.microsoft.com/fwlink/?LinkId=45232).  
+ Eine vollständige Beschreibung der wichtigsten OLE DB-Schnittstellen und -Methoden finden Sie unter [OLE DB Programmer's Reference (Programmierreferenz für OLE DB)](/previous-versions/windows/desktop/ms713643(v=vs.85)).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -39,5 +39,4 @@ ms.locfileid: "88862132"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

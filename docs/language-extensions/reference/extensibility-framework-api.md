@@ -9,12 +9,12 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a0eb128a4b1c299d8a2d939582312cdc22ae4d40
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180497"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765770"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>Erweiterbarkeitsframework-API für SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -541,7 +541,7 @@ Wenn in [sp_execute_external_script](../../relational-databases/system-stored-pr
 
 ## <a name="installexternallibrary"></a>InstallExternalLibrary
 
-Dieser Wert installiert eine Bibliothek. Die Funktion ist optional und erfordert keine Implementierung. Die Standardimplementierung besteht darin, den Inhalt der Bibliothek (siehe [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)) in eine Datei am richtigen Speicherort zu kopieren. Der Dateiname ist der Bibliotheksname.
+Dieser Wert installiert eine Bibliothek. Die Funktion ist optional und erfordert keine Implementierung. Die Standardimplementierung besteht darin, den Inhalt der Bibliothek (siehe [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)) in eine Datei am richtigen Speicherort zu kopieren. Der Dateiname ist der Bibliotheksname.
 
 ### <a name="syntax"></a>Syntax
 
@@ -571,7 +571,7 @@ SQLRETURN InstallExternalLibrary(
 \[Eingabe\] Die Länge des Bibliotheksnamens
 
 *LibraryFile*  
-\[Eingabe\] Der Pfad (als Zeichenfolge) zu der Bibliotheksdatei, die den von [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) angegebenen binären Inhalt enthält
+\[Eingabe\] Der Pfad (als Zeichenfolge) zu der Bibliotheksdatei, die den von [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) angegebenen binären Inhalt enthält
 
 *LibraryFileLength*  
 \[Eingabe\] Die Länge der „LibraryFile“-Zeichenfolge
@@ -637,4 +637,4 @@ SQLRETURN UninstallExternalLibrary(
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Microsoft-Erweiterbarkeits-SDK für Java für SQL Server](../how-to/extensibility-sdk-java-sql-server.md) 
+- [Microsoft-Erweiterbarkeits-SDK für Java für SQL Server](../how-to/extensibility-sdk-java-sql-server.md)

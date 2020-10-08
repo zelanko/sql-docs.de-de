@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 44f32695e91c3c273b024b9f8d7259c59b43014d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180307"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765692"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Erweiterbarkeitsarchitektur in SQL Server-Spracherweiterungen
 
@@ -58,7 +58,7 @@ Zu den Komponenten gehört ein **Launchpad**-Dienst, der zum Aufrufen externer R
 |-------------------|-----------|---------------------|
 | JavaLauncher.dll für Java | Java-Erweiterung | SQL Server 2019 |
 
-Der [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]-Dienst wird unter **SQLRUserGroup** ausgeführt, das [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) für die Ausführungsisolierung verwendet.
+Der [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]-Dienst wird unter **SQLRUserGroup** ausgeführt, das [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) für die Ausführungsisolierung verwendet.
 
 Für jede Instanz der Datenbank-Engine, der Sie SQL Server-Spracherweiterungen hinzugefügt haben, wird ein separater [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]-Dienst erstellt. Es gibt einen Launchpad-Dienst pro Datenbank-Engine-Instanz. Wenn Sie also über mehrere Instanzen mit externer Skriptunterstützung verfügen, haben Sie für jede Instanz einen Launchpad-Dienst. Eine Datenbank-Engine-Instanz ist an den für sie erstellten Launchpad-Dienst gebunden. Alle Aufrufe externer Skripts in einer gespeicherten Prozedur oder in T-SQL führen dazu, dass der SQL Server-Dienst den für dieselbe Instanz erstellten Launchpad-Dienst aufruft.
 
@@ -86,7 +86,7 @@ Im folgenden Abschnitt werden die Kommunikationsprotokolle zwischen Komponenten 
 
 + **Weitere Protokolle**
 
-  Prozesse, die möglicherweise in „Blöcken“ arbeiten oder Daten zurück an einen Remoteclient übertragen müssen, können auch das [XDF-Dateiformat](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf) verwenden. Die tatsächliche Datenübertragung erfolgt über codierte Blobs.
+  Prozesse, die möglicherweise in „Blöcken“ arbeiten oder Daten zurück an einen Remoteclient übertragen müssen, können auch das [XDF-Dateiformat](/machine-learning-server/r/concept-what-is-xdf) verwenden. Die tatsächliche Datenübertragung erfolgt über codierte Blobs.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f369b492536ee432385e3babef0e42924f86926d
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: f335fef3f9918ebcd04362cd6b1edf2df6a29dfc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195146"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727297"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
 
@@ -41,9 +41,9 @@ ms.locfileid: "89195146"
   
  Weitere Informationen zu Kerberos finden Sie in den folgenden Artikeln:  
   
--   [Kerberos – Technische Ergänzungfür Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Kerberos – Technische Ergänzungfür Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
--   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
+-   [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos)  
   
 ## <a name="usage"></a>Verwendung  
  In der folgenden Tabelle werden die häufigsten Szenarien beschrieben, in denen Clientanwendungen die sichere Authentifizierung aktivieren können.  
@@ -110,4 +110,3 @@ ms.locfileid: "89195146"
 ## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
-  

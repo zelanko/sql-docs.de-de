@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b425d57a0b1aee0c01db62d3fd1b77eb59c8aed
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4008dd4f023170b50bdf28f1f026da9ee892f970
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632950"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726861"
 ---
 # <a name="idle-connection-resiliency"></a>Resilienz von Verbindungen im Leerlauf
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ Die Verbindungsresilienz gilt auch, wenn eine Verbindung sich im Leerlauf befind
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code stellt eine Verbindung mit einer Datenbank her und führt eine Abfrage aus. Die Verbindung wird durch Beendigung der Sitzung unterbrochen, und es wird versucht, über die unterbrochene Verbindung eine neue Abfrage zu senden. In diesem Beispiel wird die [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx)-Beispieldatenbank verwendet.
+Der folgende Code stellt eine Verbindung mit einer Datenbank her und führt eine Abfrage aus. Die Verbindung wird durch Beendigung der Sitzung unterbrochen, und es wird versucht, über die unterbrochene Verbindung eine neue Abfrage zu senden. In diesem Beispiel wird die [AdventureWorks](/previous-versions/sql/sql-server-2008/ms124501(v=sql.100))-Beispieldatenbank verwendet.
 
 In diesem Beispiel geben wir einen gepufferten Cursor an, bevor die Verbindung unterbrochen wird. Ohne die Angabe eines gepufferten Cursors würde die Verbindung nicht wiederhergestellt, weil ein aktiver serverseitiger Cursor vorhanden wäre und sich daher die Verbindung im Moment der Unterbrechung nicht im Leerlauf befände. In diesem Fall könnten wir allerdings „sqlsrv_free_stmt()“ aufrufen, bevor die Verbindung unterbrochen wird, um den Cursor freizugeben. Dann würde die Verbindung erfolgreich wiederhergestellt.
 

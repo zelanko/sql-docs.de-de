@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: e4591d74ba5e11b65cc3ede83533d72a11dbec96
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: bace88bd8ccf42cbef96a34ddb2af2593cedd7be
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899059"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727291"
 ---
 # <a name="using-azure-active-directory"></a>Verwenden von Azure Active Directory
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -259,8 +259,8 @@ Cleanup:
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
-- [Autorisieren des Zugriffs auf Azure Active Directory-Webanwendungen mit dem Flow zum Erteilen des OAuth 2.0-Codes](https://go.microsoft.com/fwlink/?linkid=2072672)
+- [Autorisieren des Zugriffs auf Azure Active Directory-Webanwendungen mit dem Flow zum Erteilen des OAuth 2.0-Codes](/azure/active-directory/azuread-dev/v1-protocols-oauth-code)
 
-- Erfahren Sie mehr über die [Azure Active Directory-Authentifizierung](https://go.microsoft.com/fwlink/?linkid=2073783) bei SQL Server.
+- Erfahren Sie mehr über die [Azure Active Directory-Authentifizierung](/azure/azure-sql/database/authentication-aad-overview) bei SQL Server.
 
 - Konfigurieren Sie Treiberverbindungen mithilfe von [Verbindungszeichenfolgen-Schlüsselwörtern](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md), die der OLE DB-Treiber unterstützt.

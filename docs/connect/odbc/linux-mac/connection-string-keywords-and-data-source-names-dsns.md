@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f667fc06ffe7ced9241e8bfdd2a00caba3b8b2a5
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009336"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727436"
 ---
 # <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 
@@ -77,7 +77,7 @@ Für die Verschlüsselung von Verbindungen mit [!INCLUDE[ssNoVersion](../../../i
 
 Das Aktivieren der Verschlüsselung erhöht die Sicherheit auf Kosten der Leistung.
 
-Weitere Informationen dazu finden Sie unter [Verschlüsseln von Verbindungen zu SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) und [Verwenden von Verschlüsselung ohne Überprüfung](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+Weitere Informationen dazu finden Sie unter [Verschlüsseln von Verbindungen zu SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) und [Verwenden von Verschlüsselung ohne Überprüfung](../../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
 Unabhängig von den Einstellungen für **Encrypt** und **TrustServerCertificate**werden die Serveranmeldeinformationen (Benutzername und Kennwort) immer verschlüsselt. Die folgende Tabelle zeigt den Effekt der Einstellungen für **Encrypt** und **TrustServerCertificate** .  
 

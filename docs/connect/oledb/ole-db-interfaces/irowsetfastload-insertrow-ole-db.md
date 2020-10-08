@@ -15,12 +15,12 @@ helpviewer_keywords:
 - InsertRow method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c48064ea8b75206d593f674335470ec6ae737dc
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 5a631a9385b323b3b8b8ac0d276ff9eb2d560ef3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860108"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726940"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ HRESULT InsertRow(
  Das Handle des Accessors, der die Zeilendaten für das Massenkopieren definiert. Der Accessor, auf den verwiesen wird, ist ein Zeilenaccessor, der den consumer-eigenen Speicher bindet, in dem sich die Datenwerte befinden.  
   
  *pData*[in]  
- Ein Zeiger zum consumer-eigenen Speicher, in dem sich die Datenwerte befinden. Weitere Informationen finden Sie unter [DBBINDING-Strukturen](https://go.microsoft.com/fwlink/?LinkId=65955).  
+ Ein Zeiger zum consumer-eigenen Speicher, in dem sich die Datenwerte befinden. Weitere Informationen finden Sie unter [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845(v=vs.85)).  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  S_OK  
@@ -76,5 +76,4 @@ HRESULT InsertRow(
   
 ## <a name="see-also"></a>Weitere Informationen  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
-  
   

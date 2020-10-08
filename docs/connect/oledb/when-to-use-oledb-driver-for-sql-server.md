@@ -14,19 +14,19 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bd5237556ec0bbe1bf4101cb5adde9734088217c
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: cca9bd078060ee9a03df996a62353d051c9625b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860189"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726901"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>Verwendung des OLE DB-Treibers für SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server ist eine Technologie, die Sie verwenden können, um auf Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zuzugreifen.  Eine Besprechung der unterschiedlichen Datenzugriffstechnologien finden Sie unter [Data Access Technologies Road Map (Übersicht über Datenzugriffstechnologien)](https://go.microsoft.com/fwlink/?LinkID=179186).  
+  Der OLE DB-Treiber für SQL Server ist eine Technologie, die Sie verwenden können, um auf Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zuzugreifen.  Eine Besprechung der unterschiedlichen Datenzugriffstechnologien finden Sie unter [Data Access Technologies Road Map (Übersicht über Datenzugriffstechnologien)](../connect-history.md).  
   
  Sie sollten bei der Entscheidung, ob Sie den OLE DB-Treiber für SQL Server als Datenzugriffstechnologie in einer Anwendung verwenden möchten, verschiedene Faktoren berücksichtigen.  
   
@@ -43,5 +43,4 @@ ms.locfileid: "88860189"
 ## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL-Server](oledb-driver-for-sql-server.md)  
  [Vorgehensweisen für OLE DB](ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

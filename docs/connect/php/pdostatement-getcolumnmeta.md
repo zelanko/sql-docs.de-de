@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 58b6882fe4f0fce4ddf948121cb6ad35e5828fd7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645075"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726741"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -72,7 +72,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>Klassifizierungsmetadaten zu Vertraulichkeitsdaten
 
-Ab Version 5.8.0 ist ein neues Anweisungsattribut `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` verfügbar, damit Benutzer in Microsoft SQL Server 2019 mithilfe von `PDOStatement::getColumnMeta` auf die [Klassifizierungsmetadaten zu Vertraulichkeitsdaten](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4) zugreifen können. Hierfür wird der Microsoft ODBC Driver 17.4.2 oder höher benötigt.
+Ab Version 5.8.0 ist ein neues Anweisungsattribut `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` verfügbar, damit Benutzer in Microsoft SQL Server 2019 mithilfe von `PDOStatement::getColumnMeta` auf die [Klassifizierungsmetadaten zu Vertraulichkeitsdaten](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4) zugreifen können. Hierfür wird der Microsoft ODBC Driver 17.4.2 oder höher benötigt.
 
 Beachten Sie, dass das Attribut `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` standardmäßig auf `false` festgelegt ist. Wird es jedoch auf `true` festgelegt, wird das zuvor erwähnte Arrayfeld (`flags`) mit den Klassifizierungsmetadaten zu Vertraulichkeitsdaten befüllt, falls vorhanden. 
 
@@ -136,4 +136,3 @@ Wenn Sie den obigen Codeausschnitt ändern, indem Sie `PDO::SQLSRV_ATTR_DATA_CLA
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

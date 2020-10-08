@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 782d9ed7f3ca08583e994db3428a66eb9a38051f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20b44230f2872fe1df98625614e57f487b9e8c1d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727885"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807479"
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>Benutzerdefinierte CLR-Aggregate: Anforderungen
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Ein Typ in einer CLR-Assembly (Common Language Runtime) kann als benutzerdefinierte Aggregatfunktion registriert werden, solange der erforderliche Aggregationsvertrag implementiert wird. Dieser Vertrag besteht aus dem **SqlUserDefinedAggregate** -Attribut und den Aggregations Vertrags Methoden. Der Aggregations Vertrag enthält den Mechanismus zum Speichern des zwischen Status der Aggregation und den Mechanismus zum kumulieren neuer Werte, der aus vier Methoden besteht: **Init**, **Kumulierung**, **Merge**und **End.** Wenn Sie diese Anforderungen erfüllt haben, sind Sie in der Lage, benutzerdefinierte Aggregate in in vollem Umfang zu nutzen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die folgenden Abschnitte zu diesem Thema enthalten zusätzliche Details zum Erstellen von benutzerdefinierten Aggregaten und ihrer Verwendungsweise. Ein Beispiel finden Sie unter [Aufrufen von benutzerdefinierten CLR-Aggregatfunktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
- Weitere Informationen finden Sie unter [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626).  
+ Weitere Informationen finden Sie unter [SqlUserDefinedAggregateAttribute](/dotnet/api/microsoft.sqlserver.server.sqluserdefinedaggregateattribute).  
   
 ## <a name="aggregation-methods"></a>Aggregationsmethoden  
  Die als benutzerdefiniertes Aggregat registrierte Klasse muss die folgenden Instanzmethoden unterstützen. Diese Methoden werden vom Abfrageprozessor verwendet, um die Aggregation zu berechnen:  
@@ -56,5 +56,4 @@ ms.locfileid: "85727885"
 ## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [Aufrufen von CLR-benutzerdefinierten Aggregatfunktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)  
-  
   
