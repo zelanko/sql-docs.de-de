@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 485ba65479e002a960e3e15bf7ce8d0cc9032e0b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 39db2d1bd2d3525e1dc2902c11e362d70b212ebd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990163"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809862"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "90990163"
 |**max_session_percent**|**Dezimalzahl (5, 2)**|Maximale Anzahl der gleichzeitigen Sitzungen als Prozentwert basierend auf der maximalen Kapazität des Pools.|  
 |**elastic_pool_dtu_limit**|**int**|Aktuelle maximale DTU-Einstellung des Pools für elastische Datenbanken für einen bestimmten Pool für elastische Datenbanken und ein bestimmtes Intervall.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Aktuelle maximale Speicherbeschränkung des Pools für elastische Datenbanken für einen bestimmten Pool für elastische Datenbanken und ein bestimmtes Intervall in MB.|
-|**avg_allocated_storage_percent**|**Dezimalzahl (5, 2)**|Der Prozentsatz des Daten Speicherplatzes, der von allen Datenbanken im elastischen Pool zugewiesen wird.  Dies ist das Verhältnis des Daten Speicherplatzes, der der maximalen Datengröße für den Pool für elastische Datenbanken zugeordnet ist.  Weitere Informationen finden Sie [unter: Dateispeicher Platz Verwaltung in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**Dezimalzahl (5, 2)**|Der Prozentsatz des Daten Speicherplatzes, der von allen Datenbanken im elastischen Pool zugewiesen wird.  Dies ist das Verhältnis des Daten Speicherplatzes, der der maximalen Datengröße für den Pool für elastische Datenbanken zugeordnet ist.  Weitere Informationen finden Sie [unter: Dateispeicher Platz Verwaltung in SQL-Datenbank](/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
- Diese Sicht ist in der Master-Datenbank des SQL-Datenbankservers vorhanden. Sie müssen mit der Master-Datenbank verbunden sein, um **sys. elastic_pool_resource_stats**Abfragen zu können.  
+ Diese Sicht ist in der Master-Datenbank des SQL-Datenbankservers vorhanden. Sie müssen mit der Master-Datenbank verbunden sein, um **sys.elastic_pool_resource_stats**abzufragen.  
   
 ## <a name="permissions"></a>Berechtigungen
 
@@ -80,9 +80,8 @@ ORDER BY end_time DESC;
 
 ## <a name="see-also"></a>Weitere Informationen
 
- [Zämes explocwachstum mit elastischen Datenbanken](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [Erstellen und Verwalten eines Pools für elastische SQL-Datenbank-Datenbanken](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [sys. dm_db_resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
-  
+ [Zämes explocwachstum mit elastischen Datenbanken](/azure/azure-sql/database/elastic-pool-overview)   
+ [Erstellen und Verwalten eines Pools für elastische SQL-Datenbank-Datenbanken](/azure/azure-sql/database/elastic-pool-overview)   
+ [sys.resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys.dm_db_resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   

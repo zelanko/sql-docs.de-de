@@ -1,6 +1,6 @@
 ---
 description: sys.sp_cdc_help_change_data_capture (Transact-SQL)
-title: sys. sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 06e66a24884d243ebd5df2698ebb5c86eddf83de
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 13f78f25cd02ccf9c698518b5aa10f7fda0b7694
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541141"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809821"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Gibt die Change Data Capture-Konfiguration für jede Tabelle zurück, die in der aktuellen Datenbank für Change Data Capture aktiviert ist. Für jede Quelltabelle können bis zu zwei Zeilen zurückgegeben werden: eine Zeile für jede Aufzeichnungsinstanz. Change Data Capture ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Gibt die Change Data Capture-Konfiguration für jede Tabelle zurück, die in der aktuellen Datenbank für Change Data Capture aktiviert ist. Für jede Quelltabelle können bis zu zwei Zeilen zurückgegeben werden: eine Zeile für jede Aufzeichnungsinstanz. Change Data Capture ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +65,7 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Name des Quelltabellenschemas.|  
 |source_table|**sysname**|Name der Quelltabelle.|  
@@ -112,5 +112,4 @@ GO
 EXECUTE sys.sp_cdc_help_change_data_capture;  
 GO  
 ```  
-  
   

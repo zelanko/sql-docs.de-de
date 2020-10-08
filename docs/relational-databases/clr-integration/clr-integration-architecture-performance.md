@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1d72f658cf957a9dfb78eae4186cdd35d6e9849
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727626"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809570"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR-Integrationsarchitektur: Leistung
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85727626"
  Der Kompilierungsprozess erzeugt einen Funktionszeiger, der zur Laufzeit über systemeigenen Code aufgerufen werden kann. Bei benutzerdefinierten Skalarwertfunktionen erfolgt dieser Funktionsaufruf auf Zeilenbasis. Um die Kosten für den Übergang zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und CLR zu minimieren, verfügen Anweisungen, die verwaltete Aufrufe beinhalten, über einen Startschritt zur Identifizierung der Zielanwendungsdomäne. Dieser Identifizierungsschritt reduziert die Kosten für den Übergang der einzelnen Zeilen.  
   
 ## <a name="performance-considerations"></a>Überlegungen zur Leistung  
- Im Folgenden werden Informationen über Leistungsaspekte in Bezug auf die CLR-Integration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gegeben. Ausführlichere Informationen finden Sie unter "[Verwenden der CLR-Integration in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" auf der MSDN-Website. Allgemeine Informationen zur Leistung von verwaltetem Code finden Sie auf der MSDN-Website unter "[verbessern der Leistung und Skalierbarkeit von .NET-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=50333)".  
+ Im Folgenden werden Informationen über Leistungsaspekte in Bezug auf die CLR-Integration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gegeben. Ausführlichere Informationen finden Sie unter "[Verwenden der CLR-Integration in SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/ms345136(v=sql.90))" auf der MSDN-Website. Allgemeine Informationen zur Leistung von verwaltetem Code finden Sie auf der MSDN-Website unter "[verbessern der Leistung und Skalierbarkeit von .NET-Anwendungen](/previous-versions/msp-n-p/ff649152(v=pandp.10))".  
   
 ### <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen  
  CLR-Funktionen profitieren im Vergleich zu benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen von einem schnelleren Aufrufpfad. Zudem bietet verwalteter Code im Vergleich zu [!INCLUDE[tsql](../../includes/tsql-md.md)] deutliche Leistungsvorteile in Bezug auf den prozeduralen Code, die Berechnung und die Zeichenfolgenbearbeitung. Rechenintensive CLR-Funktionen, die keinen Datenzugriff ausführen, sollten bevorzugt in verwaltetem Code geschrieben werden. [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen führen Datenzugriffe jedoch effizienter aus als die CLR-Integration.  
@@ -53,7 +53,7 @@ ms.locfileid: "85727626"
  Wenn [!INCLUDE[tsql](../../includes/tsql-md.md)]-Cursor Daten traversieren müssen, die als Array einfacher auszudrücken sind, kann verwalteter Code verwendet und die Leistung dadurch gesteigert werden.  
   
 ### <a name="string-data"></a>Zeichenfolgendaten  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Zeichendaten, wie z. b. **varchar**, können in verwalteten Funktionen vom Typ SqlString oder SqlChars sein. SqlString-Variablen erstellen im Arbeitsspeicher eine Instanz des gesamten Werts. SqlChars-Variablen stellen eine Streamingschnittstelle bereit, mit der eine höhere Leistung und bessere Skalierbarkeit erreicht wird, die jedoch nicht zum Erstellen einer Instanz des gesamten Werts im Arbeitsspeicher verwendet werden kann. Dies ist besonders für Daten großer Objekte (Large Objects, LOB) wichtig. Darüber hinaus kann auf die Server-XML-Daten über eine von **SQLXML. kreatereader ()** zurückgegebene Streamingschnittstelle zugegriffen werden.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichendaten, wie z. b. **varchar**, können in verwalteten Funktionen vom Typ SqlString oder SqlChars sein. SqlString-Variablen erstellen im Arbeitsspeicher eine Instanz des gesamten Werts. SqlChars-Variablen stellen eine Streamingschnittstelle bereit, mit der eine höhere Leistung und bessere Skalierbarkeit erreicht wird, die jedoch nicht zum Erstellen einer Instanz des gesamten Werts im Arbeitsspeicher verwendet werden kann. Dies ist besonders für Daten großer Objekte (Large Objects, LOB) wichtig. Darüber hinaus kann auf die Server-XML-Daten über eine von **SQLXML. kreatereader ()** zurückgegebene Streamingschnittstelle zugegriffen werden.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR und erweiterte gespeicherte Prozeduren im Vergleich  
  Die Microsoft.SqlServer.Server-APIs (Application Programming Interfaces), die es verwalteten Prozeduren ermöglichen, Resultsets zurück an den Client zu senden, sind leistungsfähiger als die von erweiterten gespeicherten Prozeduren verwendeten Open Data Services(ODS)-APIs. Außerdem unterstützen die System. Data. SqlServer-APIs Datentypen wie **XML**, **varchar (max)**, **nvarchar (max)** und **varbinary (max)**, die in eingeführt wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , während die ODS-APIs nicht für die Unterstützung der neuen Datentypen erweitert wurden.  
@@ -66,7 +66,7 @@ ms.locfileid: "85727626"
 >  Es wird jedoch empfohlen, keine neuen erweiterten gespeicherten Prozeduren zu entwickeln, da diese Funktion veraltet ist.  
   
 ### <a name="native-serialization-for-user-defined-types"></a>Systemeigene Serialisierung für benutzerdefinierte Typen  
- Benutzerdefinierte Typen (UDTs) wurden als Erweiterungsmechanismus für das Skalartypsystem entworfen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implementiert ein Serialisierungsformat für UDTs, die als **Format. Native**bezeichnet werden. Während der Kompilierung wird die Struktur des Typs zur Generierung von MSIL geprüft, das für die betreffende Typdefinition angepasst wird.  
+ Benutzerdefinierte Typen (UDTs) wurden als Erweiterungsmechanismus für das Skalartypsystem entworfen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert ein Serialisierungsformat für UDTs, die als **Format. Native**bezeichnet werden. Während der Kompilierung wird die Struktur des Typs zur Generierung von MSIL geprüft, das für die betreffende Typdefinition angepasst wird.  
   
  Die systemeigene Serialisierung ist die Standardimplementierung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die benutzerdefinierte Serialisierung ruft eine Methode auf, die vom Typautor für die Durchführung der Serialisierung definiert wurde. **Format. Native** Serialisierung sollte verwendet werden, wenn möglich, um eine optimale Leistung zu erzielen.  
   
@@ -80,5 +80,4 @@ ms.locfileid: "85727626"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
-  
   

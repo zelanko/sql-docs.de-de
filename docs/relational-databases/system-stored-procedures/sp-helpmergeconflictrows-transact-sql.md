@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d9a0f2326951609a22dfe5647f8eceb7af28c581
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d6d8ea39fd9ccc48f96c838367d5f859226098d1
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547998"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809836"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="result-sets"></a>Resultsets  
  **sp_helpmergeconflictrows** gibt ein Resultset zurück, das aus der Basistabellen Struktur und diesen zusätzlichen Spalten besteht.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**origin_datasource**|**varchar (255)**|Ursprung des Konflikts.|  
 |**conflict_type**|**int**|Code zur Angabe des Konflikttyps:<br /><br /> **1** = Aktualisierungs Konflikt: der Konflikt wurde auf Zeilenebene erkannt.<br /><br /> **2** = Konflikt bei der Spalten Aktualisierung: der Konflikt wurde auf Spaltenebene erkannt.<br /><br /> **3** = Update-DELETE-Konflikt: der Löschvorgang gewinnt den Konflikt.<br /><br /> **4** = Update-DELETE-Konflikt: die gelöschte ROWGUID, die den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **5** = Fehler beim Hochladen der Einfügung: der Einfügevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **6** = Fehler beim Herunterladen der Einfügung: die Einfügung vom Verleger konnte nicht auf dem Abonnenten angewendet werden.<br /><br /> **7** = Fehler beim Hochladen der Löschung: der Löschvorgang auf dem Abonnenten konnte nicht auf den Verleger hochgeladen werden.<br /><br /> **8** = Fehler beim Herunterladen der Löschung: der Löschvorgang für den Verleger konnte nicht auf den Abonnenten heruntergeladen werden.<br /><br /> **9** = Fehler beim Hochladen des Updates: das Update auf dem Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **10** = Fehler beim Herunterladen des Updates: das Update auf dem Verleger konnte nicht auf den Abonnenten angewendet werden.<br /><br /> **12** = logischer Daten Satz Update WINS löschen: der gelöschte logische Datensatz, der den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **13** = logischer Daten Satz Konflikt Insert-Update: das Einfügen in einen logischen Datensatz steht in Konflikt mit einem Update.<br /><br /> **14** = logischer Datensatz: Delete WINS-Update Konflikt: der aktualisierte logische Datensatz, der den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.|  
@@ -74,7 +74,6 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** und der Rolle **replmonitor** in der Verteilungs Datenbank können **sp_helpmergeconflictrows**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Anzeigen von Konflikt Informationen für Mergeveröffentlichungen &#40;Replikations Programmierung mit Transact-SQL&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+ [Anzeigen von Konflikt Informationen für Mergeveröffentlichungen &#40;Replikations Programmierung mit Transact-SQL&#41;](../replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
-  
   

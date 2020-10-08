@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8824e427b71c26a8b6145db7cf60bbfc110e9ed5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f0bdba9e6d1e91560f78ea3eb91c8cf8aa419b5d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934380"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809537"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR-Integrationsarchitektur: Von CLR gehostete Umgebung
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "87934380"
  Als typsicherer Code wird Code bezeichnet, der nur auf genau definierte Weise auf Arbeitsspeicherstrukturen zugreift. Bei typsicherem Code ist z. B. bei einem gültigen Objektverweis der Speicherzugriff an festen Offsets möglich, die tatsächlichen Feldmembern entsprechen. Wenn der Code jedoch auf den Speicher an beliebigen Offsets innerhalb oder außerhalb des Gültigkeitsbereichs des Speichers zugreift, der zu dem Objekt gehört, ist er nicht typsicher. Wenn Assemblys in die CLR geladen werden, bevor die MSIL mithilfe der JIT-Kompilierung (Just-In-Time) kompiliert wurde, führt die Laufzeit eine Überprüfungsphase aus, die den Code hinsichtlich seiner Typsicherheit untersucht. Code, der diese Überprüfung erfolgreich besteht, wird nachweisbar typsicherer Code genannt.  
   
 ###### <a name="application-domains"></a>Anwendungsdomänen  
- Die CLR unterstützt die Definition von Anwendungsdomänen als Ausführungszonen in einem Hostprozess, bei dem verwaltete Codeassemblys geladen und ausgeführt werden können. Die Anwendungsdomänengrenze bietet Isolierung zwischen Assemblys. Die Assemblys werden hinsichtlich der Sichtbarkeit von statischen Variablen und Datenelementen und der Möglichkeit, Code dynamisch aufzurufen, isoliert. Anwendungsdomänen sind auch der Mechanismus zum Laden und Entladen von Code. Code kann aus dem Arbeitsspeicher durch das Entladen der Anwendungsdomäne entfernt werden. Weitere Informationen finden Sie unter [Anwendungs Domänen und Sicherheit der CLR-Integration](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014).  
+ Die CLR unterstützt die Definition von Anwendungsdomänen als Ausführungszonen in einem Hostprozess, bei dem verwaltete Codeassemblys geladen und ausgeführt werden können. Die Anwendungsdomänengrenze bietet Isolierung zwischen Assemblys. Die Assemblys werden hinsichtlich der Sichtbarkeit von statischen Variablen und Datenelementen und der Möglichkeit, Code dynamisch aufzurufen, isoliert. Anwendungsdomänen sind auch der Mechanismus zum Laden und Entladen von Code. Code kann aus dem Arbeitsspeicher durch das Entladen der Anwendungsdomäne entfernt werden. Weitere Informationen finden Sie unter [Anwendungs Domänen und Sicherheit der CLR-Integration](/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014).  
   
 ###### <a name="code-access-security-cas"></a>Codezugriffssicherheit (Code Access Security, CAS)  
  Das CLR-Sicherheitssystem bietet eine Methode zum Steuern der Vorgangstypen, die von verwaltetem Code ausgeführt werden können, indem dem Code Berechtigungen zugewiesen werden. Codezugriffsberechtigungen werden auf der Grundlage der Identität des Codes (z. B. die Signatur der Assembly oder die Quelle des Codes) zugewiesen.  
@@ -174,10 +174,9 @@ Thread.EndThreadAffinity();
   
  Aus diesen Gründen raten wir von der Verwendung von statischen Variablen und Datenelementen von Klassen ab, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Bei Assemblys vom Typ SAFE und EXTERNAL_ACCESS untersucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei der Ausführung von CREATE ASSEMBLY die Metadaten der Assembly. Wenn die Verwendung statischer Datenelemente oder Variablen ermittelt wird, wird die Assembly nicht erstellt.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lässt auch Aufrufe von .NET Framework-APIs nicht zu, die mit den Host Schutz Attributen " **SharedState**", " **Synchronisierung**" und " **ExternalProcessMgmt** " kommentiert werden. Dies verhindert, dass Assemblys des Typs SAFE und EXTERNAL_ACCESS APIs aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen und die Integrität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen. Weitere Informationen finden Sie unter [Einschränkungen für das CLR-Integrations Programmiermodell](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt auch Aufrufe von .NET Framework-APIs nicht zu, die mit den Host Schutz Attributen " **SharedState**", " **Synchronisierung**" und " **ExternalProcessMgmt** " kommentiert werden. Dies verhindert, dass Assemblys des Typs SAFE und EXTERNAL_ACCESS APIs aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen und die Integrität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen. Weitere Informationen finden Sie unter [Einschränkungen für das CLR-Integrations Programmiermodell](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sicherheit der CLR-Integration](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Leistungsfähigkeit der CLR-Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
-  
   

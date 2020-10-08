@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9cdf2a8a9e5b608c68f544e3f31357dbca07228a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b2b519fd8e52af2a67c37941a4868622aa254599
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538778"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810344"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Berechtigungen  
  Dem Benutzer muss eine PUBLIC-Rolle zugewiesen werden, um auf die Prozedur zuzugreifen. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird verwendet `sp_help_spatial_geography_index` , um den räumlichen **geografieindex** **SIndx_SpatialTable_geography_col2** , der für die-Tabelle **geography_col** für das angegebene Abfrage Beispiel in ** \@ QS**definiert ist Dieses Beispiel gibt nur die Kerneigenschaften des angegebenen Indexes zurück.  
@@ -67,9 +67,8 @@ exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geogra
 ## <a name="requirements"></a>Requirements (Anforderungen)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Prozeduren für räumliche Indizes](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Gespeicherte Prozeduren für räumliche Indizes](./spatial-index-stored-procedures-arguments-and-properties.md)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
-  
   

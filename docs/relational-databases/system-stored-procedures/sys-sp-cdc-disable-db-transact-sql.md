@@ -1,6 +1,6 @@
 ---
 description: sys.sp_cdc_disable_db (Transact-SQL)
-title: sys. sp_cdc_disable_db (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sp_cdc_disable_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9b5f17c01ebaa6a55cc5e9afa1ab83c6d924111
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a8af0c694673275ab2dc5bd5b606f5d69ce77f61
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551156"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810315"
 ---
 # <a name="syssp_cdc_disable_db-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deaktiviert Change Data Capture für die aktuelle Datenbank. Change Data Capture ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](../../sql-server/what-s-new-in-sql-server-2016.md)).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sys.sp_cdc_disable_db
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sys. sp_cdc_disable_db** deaktiviert Change Data Capture für alle Tabellen in der Datenbank, die derzeit aktiviert sind. Alle Systemobjekte, die sich auf Change Data Capture beziehen, z. B. Änderungstabellen, Aufträge, gespeicherte Prozeduren und Funktionen, werden gelöscht. Die **is_cdc_enabled** Spalte für den Datenbankeintrag in der [sys. Database](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalog Sicht wird auf 0 festgelegt.  
+ **sys.sp_cdc_disable_db** deaktiviert Change Data Capture für alle Tabellen in der Datenbank, die derzeit aktiviert sind. Alle Systemobjekte, die sich auf Change Data Capture beziehen, z. B. Änderungstabellen, Aufträge, gespeicherte Prozeduren und Funktionen, werden gelöscht. Die **is_cdc_enabled** Spalte für den Datenbankeintrag in der [sys. Database](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalog Sicht wird auf 0 festgelegt.  
   
 > [!NOTE]  
 >  Wenn zum Zeitpunkt der Deaktivierung von Change Data Capture viele Aufzeichnungsinstanzen für die Datenbank definiert sind, kann eine Transaktion mit langer Ausführungszeit dazu führen, dass die Ausführung von sys.sp_cdc_disable_db fehlschlägt. Dieses Problem kann vermieden werden, indem die einzelnen Aufzeichnungsinstanzen vor der Ausführung von sys.sp_cdc_disable_db mithilfe von sys.sp_cdc_disable_table deaktiviert werden.  
@@ -70,7 +70,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. sp_cdc_enable_db &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)   
- [sys. sp_cdc_disable_table &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)  
-  
+ [sys.sp_cdc_enable_db &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)   
+ [sys.sp_cdc_disable_table &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)  
   

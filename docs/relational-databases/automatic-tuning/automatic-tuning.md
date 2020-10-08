@@ -18,12 +18,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f59aee58735b3b38cf8de3a47461cad1c59f6b81
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 65fc7918a3e8064310757a2875e62d6e001f750c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497951"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91808496"
 ---
 # <a name="automatic-tuning"></a>Automatische Optimierung
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -99,9 +99,9 @@ Ohne automatische Optimierung müssen Benutzer das System in regelmäßigen Abst
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet alle notwendigen Sichten und Prozeduren, die zur Überwachung der Leistung und Behebung von Problemen in Abfragespeicher erforderlich sind.
 
-In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] können Sie mit Abfragespeicher System Sichten Plan Auswahl Regressionen suchen. Ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erkennt und zeigt mögliche Regressionen der Plan Auswahl und die empfohlenen Aktionen an, die in der [sys. dm_db_tuning_recommendations &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) -DMV angewendet werden sollen. Die DMV zeigt Informationen über das Problem, die Wichtigkeit des Problems und Details wie z. b. die identifizierte Abfrage, die ID des zurück gestellten Plans, die ID des Plans, der als Baseline für den Vergleich verwendet wurde, und die Anweisung, die [!INCLUDE[tsql_md](../../includes/tsql-md.md)] ausgeführt werden kann, um das Problem zu beheben.
+In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] können Sie mit Abfragespeicher System Sichten Plan Auswahl Regressionen suchen. Ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erkennt und zeigt mögliche Regressionen der Plan Auswahl und die empfohlenen Aktionen an, die im [sys.dm_db_tuning_recommendations &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) -DMV angewendet werden sollten. Die DMV zeigt Informationen über das Problem, die Wichtigkeit des Problems und Details wie z. b. die identifizierte Abfrage, die ID des zurück gestellten Plans, die ID des Plans, der als Baseline für den Vergleich verwendet wurde, und die Anweisung, die [!INCLUDE[tsql_md](../../includes/tsql-md.md)] ausgeführt werden kann, um das Problem zu beheben.
 
-| Typ | description | datetime | Ergebnis Ihrer App | Details | ... |
+| type | description | datetime | Ergebnis Ihrer App | Details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Die CPU-Zeit wurde von 4 ms auf 14 ms geändert. | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Die CPU-Zeit wurde von 37 MS auf 84 MS geändert. | 16.3.2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -111,7 +111,7 @@ Einige Spalten aus dieser Sicht werden in der folgenden Liste beschrieben:
  - Beschreibung, die Informationen enthält, weshalb der der [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Meinung ist, dass diese Planänderung eine potenzielle Leistungs Regression ist.
  - DateTime, wenn die potenzielle Regression erkannt wird.
  - Bewertung dieser Empfehlung.
- - Details zu den Problemen, wie z. b. die ID des erkannten Plans, die ID des zurück gestellten Plans, die ID des Plans, der zur Behebung des Problems gezwungen werden soll, das Skript, das ggf [!INCLUDE[tsql_md](../../includes/tsql-md.md)] . zur Behebung des Problems verwendet werden kann, usw. Details werden im [JSON-Format](../../relational-databases/json/index.md)gespeichert.
+ - Details zu den Problemen, wie z. b. die ID des erkannten Plans, die ID des zurück gestellten Plans, die ID des Plans, der zur Behebung des Problems gezwungen werden soll, das Skript, das ggf [!INCLUDE[tsql_md](../../includes/tsql-md.md)] . zur Behebung des Problems verwendet werden kann, usw. Details werden im [JSON-Format](../json/json-data-sql-server.md)gespeichert.
 
 Verwenden Sie die folgende Abfrage zum Abrufen eines Skripts, das das Problem behebt, und zusätzliche Informationen zum geschätzten Gewinn:
 
@@ -178,19 +178,19 @@ Aktionen, die erforderlich sind, um erforderliche Indizes in zu erstellen, [!INC
 
 ### <a name="alternative---manual-index-management"></a>Alternative: manuelle Index Verwaltung
 
-Ohne automatische Index Verwaltung muss ein Benutzer oder DBA die [sys. dm_db_missing_index_details &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) anzeigen oder mithilfe des Leistungs dashboardberichts in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] nach Indizes suchen, mit denen die Leistung verbessert, Indizes mithilfe der in dieser Ansicht bereitgestellten Details erstellt und die Leistung der Abfrage manuell überwacht werden kann. Um die Indizes zu ermitteln, die gelöscht werden sollen, sollten die Benutzer die Betriebs Verwendungs Statistik der Indizes überwachen, um selten verwendete Indizes zu finden.
+Ohne die automatische Index Verwaltung muss ein Benutzer oder DBA die [sys.dm_db_missing_index_details &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) anzeigen oder den Leistungs Dashboard-Bericht in verwenden, [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] um Indizes zu suchen, die möglicherweise die Leistung verbessern, Indizes mithilfe der in dieser Ansicht bereitgestellten Details erstellen und die Leistung der Abfrage manuell überwachen. Um die Indizes zu ermitteln, die gelöscht werden sollen, sollten die Benutzer die Betriebs Verwendungs Statistik der Indizes überwachen, um selten verwendete Indizes zu finden.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] vereinfacht diesen Prozess. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analysiert ihre Arbeitsauslastung, identifiziert die Abfragen, die mit einem neuen Index schneller ausgeführt werden können, und identifiziert nicht verwendete oder duplizierte Indizes. Weitere Informationen zur Identifikation von Indizes, die geändert werden sollten, finden Sie unter [Azure SQL Database Advisor im Azure-Portal](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal).
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] vereinfacht diesen Prozess. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analysiert ihre Arbeitsauslastung, identifiziert die Abfragen, die mit einem neuen Index schneller ausgeführt werden können, und identifiziert nicht verwendete oder duplizierte Indizes. Weitere Informationen zur Identifikation von Indizes, die geändert werden sollten, finden Sie unter [Azure SQL Database Advisor im Azure-Portal](/azure/sql-database/sql-database-advisor-portal).
 
 ## <a name="see-also"></a>Weitere Informationen  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys. database_automatic_tuning_options &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [sys. dm_db_tuning_recommendations &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
- [sys. dm_db_missing_index_details &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [sys.database_automatic_tuning_options &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
+ [sys.dm_db_tuning_recommendations &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   
+ [sys.dm_db_missing_index_details &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sp_query_store_force_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
- [sys. database_query_store_options &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [JSON-Funktionen](../../relational-databases/json/index.md)    
+ [sys.database_query_store_options &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [JSON-Funktionen](../json/json-data-sql-server.md)    
  [Ausführungspläne](../../relational-databases/performance/execution-plans.md)    
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Tools für die Leistungsüberwachung und -optimierung](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     

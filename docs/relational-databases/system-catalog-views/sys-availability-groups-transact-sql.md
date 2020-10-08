@@ -1,6 +1,6 @@
 ---
 description: sys.availability_groups (Transact-SQL)
-title: sys. availability_groups (Transact-SQL) | Microsoft-Dokumentation
+title: sys.availability_groups (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d68c407a7a9e34cf5362f34e749f414a99130bd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: eabda9900b854037eca713ac343e04e930eea1e2
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537511"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810194"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile für jede Verfügbarkeitsgruppe zurück, für die die lokale SQL Server-Instanz ein Verfügbarkeitsreplikat hostet. Jede Zeile enthält eine zwischengespeicherte Kopie der Metadaten der Verfügbarkeitsgruppe.  
    
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|Eindeutiger Bezeichner (GUID) der Verfügbarkeitsgruppe.|  
 |**name**|**sysname**|Der Name der Verfügbarkeitsgruppe. Dies ist ein vom Benutzer angegebener Name, der innerhalb des Windows Server-Failoverclusters (WSFC) eindeutig sein muss.|  
@@ -47,7 +47,7 @@ ms.locfileid: "89537511"
 |**basic_features**|**bit**|Gibt an, ob dies eine Basis-Verfügbarkeits Gruppe ist. Weitere Informationen finden Sie unter [Basis-Verfügbarkeitsgruppen &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**bit**|Gibt an, ob die DTC-Unterstützung für diese Verfügbarkeits Gruppe aktiviert wurde. Die Option **DTC_SUPPORT** von **Create Availability Group** steuert diese Einstellung.|  
 |**db_failover**|**bit**|Gibt an, ob die Verfügbarkeits Gruppe Failover für Daten Bank Integritäts Bedingungen unterstützt. Die Option **DB_FAILOVER** von **Create Availability Group** steuert diese Einstellung.|  
-|**is_distributed**|**bit**|Gibt an, ob es sich um eine verteilte Verfügbarkeits Gruppe handelt. Weitere Informationen finden Sie unter [Verteilte Verfügbarkeitsgruppen &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|
+|**is_distributed**|**bit**|Gibt an, ob es sich um eine verteilte Verfügbarkeits Gruppe handelt. Weitere Informationen finden Sie unter [Verteilte Verfügbarkeitsgruppen &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md).|
 |**cluster_type**|**tinyint**|0: Windows Server-Failovercluster <br/><br/>1: externer Cluster (z. b. Linux-Pacemaker)<br/><br/>2: keine|
 |**cluster_type_desc**|**nvarchar(60)**|Text Beschreibung des Cluster Typs|
 |**required_synchronized_secondaries_to_commit**|**int**| Die Anzahl der sekundären Replikate, die sich im synchronisierten Zustand befinden müssen, damit ein Commit ausgeführt wird.|
@@ -75,5 +75,4 @@ ms.locfileid: "89537511"
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Überwachen von Verfügbarkeits Gruppen &#40;Transact-SQL-&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
-  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56da705b29be712942fec337e84aec5d68a31bad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 09f898ac65e48977b98b55c1f6b5e5ed9057ee49
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547026"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810208"
 ---
 # <a name="system-base-tables"></a>Systembasistabellen
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89547026"
 ## <a name="system-base-tables"></a>Systembasistabellen  
  In der folgenden Tabelle werden die Systembasistabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt und beschrieben.  
   
-|Basistabelle|BESCHREIBUNG|  
+|Basistabelle|Beschreibung|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|Ist in jeder Datenbank vorhanden. Jede Zeile stellt ein Objekt in der Datenbank dar.|  
 |**sys.sysschobjs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede Service Broker-Entität in der Datenbank. Service Broker-Entitäten schließen Folgendes ein:<br /><br /> Nachrichtentyp<br /><br /> Dienstvertrag<br /><br /> Dienst<br /><br /> Die Namen und Typen verwenden binäre Sortierung, die nicht geändert wird.|  
@@ -100,4 +100,4 @@ Meldung 3859: Warnung: der System Katalog wurde direkt in der Datenbank mit der 
 ### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>Ausführen des DBCC_CHECKDB Befehls nach dem manuellen Aktualisieren einer Systemtabelle
 Meldung 3859: Warnung: der System Katalog wurde direkt in der Datenbank mit der ID 17 aktualisiert, zuletzt bei date_time.
 
-Wenn Sie manuelle Updates für eine Systemtabelle ausführen und ein Problem auftritt, werden Sie möglicherweise aufgefordert, eine Wiederherstellung aus einer Sicherung durchzuführen oder die Daten aus der betroffenen Datenbank in eine neue Datenbank zu kopieren. Weitere Informationen zu [Benutzer Aktions Fehlermeldungen](https://docs.microsoft.com/sql/relational-databases/errors-events/mssqlserver-8992-database-engine-error?view=sql-server-ver15#user-action).
+Wenn Sie manuelle Updates für eine Systemtabelle ausführen und ein Problem auftritt, werden Sie möglicherweise aufgefordert, eine Wiederherstellung aus einer Sicherung durchzuführen oder die Daten aus der betroffenen Datenbank in eine neue Datenbank zu kopieren. Weitere Informationen zu [Benutzer Aktions Fehlermeldungen](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action).

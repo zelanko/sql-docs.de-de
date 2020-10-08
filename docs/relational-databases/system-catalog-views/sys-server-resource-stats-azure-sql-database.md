@@ -1,6 +1,6 @@
 ---
-description: sys. server_resource_stats (Azure SQL-Datenbank)
-title: sys. server_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
+description: sys.server_resource_stats (Azure SQL-Datenbank)
+title: sys.server_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
@@ -19,24 +19,24 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ed975dd768bc9d7979dd254fddec715ed07b3b2f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 57d0a8e10eb79213de7eb29a2d18ea8837d7f908
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542498"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809318"
 ---
-# <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (Azure SQL-Datenbank)
+# <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Gibt CPU-Auslastung, e/a und Speicherdaten für Azure SQL-verwaltete Instanz zurück. Die Daten werden in Intervallen von fünf Minuten gesammelt und aggregiert. Für jede 15-Sekunden-Berichterstattung ist eine Zeile vorhanden. Die zurückgegebenen Daten umfassen CPU-Auslastung, Speichergröße, e/a-Auslastung und SKU. Verlaufsdaten werden ungefähr 14 Tage lang beibehalten.
 
-Die **sys. server_resource_stats** -Sicht hat abhängig von der Version der Azure SQL-verwaltete Instanz, der die Datenbank zugeordnet ist, unterschiedliche Definitionen. Berücksichtigen Sie diese Unterschiede und alle Änderungen, die Ihre Anwendung erfordert, beim Upgrade auf eine neue Serverversion.
+Die **sys.server_resource_stats** Ansicht hat abhängig von der Version der Azure SQL-verwaltete Instanz, der die Datenbank zugeordnet ist, unterschiedliche Definitionen. Berücksichtigen Sie diese Unterschiede und alle Änderungen, die Ihre Anwendung erfordert, beim Upgrade auf eine neue Serverversion.
  
   
  Die folgende Tabelle beschreibt die verfügbaren Spalten bei einem Server mit der Version 12:  
   
-|Spalten|Datentyp|BESCHREIBUNG|  
+|Spalten|Datentyp|Beschreibung|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|UTC-Zeit, die den Beginn des 15-Sekunden-Berichts Intervalls angibt|  
 |end_time|**datetime**|UTC-Zeit, die das Ende des Berichts Intervalls von 15 Sekunden angibt|
@@ -54,13 +54,13 @@ Die **sys. server_resource_stats** -Sicht hat abhängig von der Version der Azur
 
  
 > [!TIP]  
->  Weitere Informationen zu diesen Grenzwerten und Dienst Ebenen finden Sie in den Themen [verwaltete Instanz Dienst Ebenen](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
+>  Weitere Informationen zu diesen Grenzwerten und Dienst Ebenen finden Sie in den Themen [verwaltete Instanz Dienst Ebenen](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
     
 ## <a name="permissions"></a>Berechtigungen  
  Diese Ansicht ist für alle Benutzer Rollen verfügbar, die über Berechtigungen zum Herstellen einer Verbindung mit der **Master** -Datenbank verfügen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Daten, die von **sys. server_resource_stats** zurückgegeben werden, werden als der Gesamtwert ausgedrückt, der in Byte oder Megabyte (angegeben in Spaltennamen) verwendet wird, und nicht als avg_cpu, der als Prozentsatz der maximal zulässigen Grenzwerte für die Dienst Ebene/Leistungsstufe ausgedrückt wird, die Sie ausführen.  
+ Die von **sys.server_resource_stats** zurückgegebenen Daten werden als der Gesamtwert ausgedrückt, der in Byte oder Megabyte (in Spaltennamen) verwendet wird, und nicht als avg_cpu, der als Prozentsatz der maximal zulässigen Grenzwerte für die von Ihnen ausgegebene Dienst Ebene/Leistungsstufe angegeben wird.  
  
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden alle Datenbanken zurückgegeben, die in der letzten Woche mindestens 80 % der Serverkapazität genutzt haben.  
@@ -78,4 +78,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>Weitere Informationen  
- [Dienst Ebenen verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+ [Dienst Ebenen verwaltete Instanz](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

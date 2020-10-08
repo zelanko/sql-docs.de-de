@@ -21,12 +21,12 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c426c12b38adc491e42b9392d7a36c47f3fd46f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cfac86a5cb8000203873f2434212bf2b50749a6d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536469"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810096"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -50,20 +50,20 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  Ein interner Dokumentbezeichner (DocId), der dem Schlüsselwert entspricht. Ein ungültiger *docid* -Wert gibt keine Ergebnisse zurück.  
   
  *key*  
- Der Wert des Volltextschlüssels aus der angegebenen Tabelle. Ein ungültiger *key* -Wert gibt keine Ergebnisse zurück. Weitere Informationen zu voll Text Schlüsselwerten finden Sie unter [Verwalten von Volltextindizes](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Der Wert des Volltextschlüssels aus der angegebenen Tabelle. Ein ungültiger *key* -Wert gibt keine Ergebnisse zurück. Weitere Informationen zu voll Text Schlüsselwerten finden Sie unter [Verwalten von Volltextindizes](../search/create-and-manage-full-text-indexes.md).  
   
 > [!IMPORTANT]  
 >  Informationen zur Verwendung von einem, zwei oder drei Parametern finden Sie unter "Hinweise" später in diesem Thema.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ Keine.  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|Eine interne Dokumentbezeichnerspalte (DocId), die dem Schlüsselwert entspricht.|  
-|Schlüssel|*|Der Wert des Volltextschlüssels aus der angegebenen Tabelle.<br /><br /> Wenn in der Zuordnungstabelle keine Volltextschlüssel vorhanden sind, wird ein leeres Rowset zurückgegeben.|  
+|Key|*|Der Wert des Volltextschlüssels aus der angegebenen Tabelle.<br /><br /> Wenn in der Zuordnungstabelle keine Volltextschlüssel vorhanden sind, wird ein leeres Rowset zurückgegeben.|  
   
  <sup>*</sup> Der Datentyp für Key ist identisch mit dem Datentyp der voll Text Schlüssel Spalte in der Basistabelle.  
   
@@ -75,7 +75,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 |Diese Parameterliste...|Hat dieses Ergebnis...|  
 |--------------------------|----------------------|  
-|*table_id*|Wenn nur mit dem *table_id* -Parameter aufgerufen wird, gibt sp_fulltext_keymappings alle voll Text Schlüsselwerte (Key) aus der angegebenen Basistabelle sowie die DocId zurück, die jedem Schlüssel entspricht. Dies schließt auch Schlüssel mit ein, für die ein Löschvorgang aussteht.<br /><br /> Diese Funktion ist hilfreich zur Behebung zahlreicher Probleme. Insbesondere bietet sie sich zum Anzeigen des Inhalts des Volltextindex an, wenn der ausgewählte Volltextschlüssel keinen ganzzahligen Datentyp aufweist. Dies umfasst das beitreten der Ergebnisse sp_fulltext_keymappings mit den Ergebnissen von **sys. dm_fts_index_keywords_by_document**. Weitere Informationen finden Sie unter [sys. dm_fts_index_keywords_by_document &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> Im Allgemeinen sollten Sie jedoch , falls möglich, sp_fulltext_keymappings mit Parametern ausführen, die einen bestimmten Volltextschlüssel oder DocId angeben. Dies ist erheblich effizienter als eine gesamte Schlüsselzuordnung zurückzugeben, insbesondere für eine sehr große Tabelle, für die die Leistungskosten der Rückgabe der gesamten Schlüsselzuordnung erheblich sein könnten.|  
+|*table_id*|Wenn nur mit dem *table_id* -Parameter aufgerufen wird, gibt sp_fulltext_keymappings alle voll Text Schlüsselwerte (Key) aus der angegebenen Basistabelle sowie die DocId zurück, die jedem Schlüssel entspricht. Dies schließt auch Schlüssel mit ein, für die ein Löschvorgang aussteht.<br /><br /> Diese Funktion ist hilfreich zur Behebung zahlreicher Probleme. Insbesondere bietet sie sich zum Anzeigen des Inhalts des Volltextindex an, wenn der ausgewählte Volltextschlüssel keinen ganzzahligen Datentyp aufweist. Dies umfasst das beitreten der Ergebnisse sp_fulltext_keymappings mit den Ergebnissen **sys.dm_fts_index_keywords_by_document**. Weitere Informationen finden Sie unter [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> Im Allgemeinen sollten Sie jedoch , falls möglich, sp_fulltext_keymappings mit Parametern ausführen, die einen bestimmten Volltextschlüssel oder DocId angeben. Dies ist erheblich effizienter als eine gesamte Schlüsselzuordnung zurückzugeben, insbesondere für eine sehr große Tabelle, für die die Leistungskosten der Rückgabe der gesamten Schlüsselzuordnung erheblich sein könnten.|  
 |*table_id*, *docid*|Wenn nur die *table_id* und die *docid* angegeben werden, muss *docid* nicht NULL sein und in der angegebenen Tabelle eine gültige docid angeben. Diese Funktion ist hilfreich, um den benutzerdefinierten Volltextschlüssel aus der Basistabelle zu isolieren, die der DocId eines bestimmten Volltextindex entspricht.|  
 |*table_id*, NULL, *Schlüssel*|Wenn drei Parameter vorhanden sind, muss der zweite Parameter NULL sein, und der *Schlüssel* darf nicht NULL sein, und es muss ein gültiger Volltext-Schlüsselwert aus der angegebenen Tabelle angegeben werden. Diese Funktion ist hilfreich, um die DocID zu isolieren, die einem bestimmten Volltextschlüssel aus der Basistabelle entspricht.|  
   
@@ -139,5 +139,4 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Prozeduren für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
-  
   

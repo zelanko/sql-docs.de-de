@@ -15,12 +15,12 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cfa5203d9be4b89d94173abc000c6fdb1d76d07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f44f2e1c9754096ae08bc64298815a8849f92478
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428312"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810596"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88428312"
   
  In der folgenden Tabelle werden die vom Resultset zurückgegebenen Spalten aufgeführt:  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |DATA_TYPE|Gibt SQL_VARCHAR, SQL_VARBINARY oder SQL_WVARCHAR für die **varchar (max)** -Datentypen zurück.|  
 |TYPE_NAME|Gibt "varchar", "varbinary" oder "nvarchar" für die Datentypen **varchar (max)**, **varbinary (max)** und **nvarchar (max)** zurück.|  
@@ -80,7 +80,7 @@ ms.locfileid: "88428312"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns-Unterstützung für Spalten mit geringer Dichte  
  Zwei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spezifische Spalten wurden dem Resultset für SQLColumns hinzugefügt:  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|SQL_TRUE, wenn die Spalte eine Sparsespalte ist, andernfalls SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Wenn es sich bei der Spalte um die **column_set** Spalte handelt, ist dies SQL_TRUE. andernfalls SQL_FALSE.|  
@@ -92,7 +92,6 @@ ms.locfileid: "88428312"
  Weitere Informationen zu sparsespalten in ODBC finden Sie [unter Unterstützung für sparsespalten &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQLColumns-Funktion](https://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns-Funktion](../../odbc/reference/syntax/sqlcolumns-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

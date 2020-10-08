@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12f6c532c03330f5e56446bcc6d5e22dcb9a3b71
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 30cfb208d709f19743216369b23e6b7bef9dfc38
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539754"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810396"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Meldungskatalogsichten (für Fehlermeldungen): sys.messages
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jede **message_id** oder **language_id** der Fehlermeldungen im System, sowohl für System definierte als auch für benutzerdefinierte Meldungen. Weitere Informationen finden Sie unter [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
    
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|ID der Meldung. Ist innerhalb des gesamten Servers eindeutig. Bei Meldungs-IDs unterhalb von 50000 handelt es sich um Systemmeldungen.|  
 |**language_id**|**smallint**|Die Sprach-ID, für die der Text in **Text** verwendet wird, wie in " **syslanguages**" definiert. Dies ist für eine angegebene **message_id**eindeutig.|  
@@ -48,9 +48,8 @@ ms.locfileid: "89539754"
 ## <a name="see-also"></a>Weitere Informationen  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Nachrichten &#40;für Fehler&#41; Katalog Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
- [Programmierung von Ausnahme Meldungs Feldern](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
+ [Nachrichten &#40;für Fehler&#41; Katalog Sichten &#40;Transact-SQL-&#41;]()   
+ [Programmierung von Ausnahme Meldungs Feldern](/previous-versions/sql/sql-server-2016/ms166343(v=sql.130))   
  [Fehlermeldungen](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [Datenbank-Engine (Fehler und Ereignisse)](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
-  
   

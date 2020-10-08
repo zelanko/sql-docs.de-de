@@ -1,6 +1,6 @@
 ---
 description: sys.sensitivity_classifications (Transact-SQL)
-title: sys. sensitivity_classifications (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sensitivity_classifications (Transact-SQL) | Microsoft-Dokumentation
 ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
@@ -24,24 +24,24 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f1dfa43dba7848732e57acf4abf8cfa915be255
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d37eb7cd82ceeba6ae844c82dea5763564c689dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475312"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809346"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Gibt eine Zeile für jedes klassifizierte Element in der Datenbank zurück.
 
-|Spaltenname|Datentyp|BESCHREIBUNG|
+|Spaltenname|Datentyp|Beschreibung|
 |-----------------|---------------|-----------------|  
 |**class**|**int**|Identifiziert die Klasse des Elements, für das die Klassifizierung vorhanden ist. Hat immer den Wert 1 (die eine Spalte darstellt)|  
 |**class_desc**|**varchar (16)**|Eine Beschreibung der Klasse des Elements, für das die Klassifizierung vorhanden ist. hat immer den Wert *OBJECT_OR_COLUMN*|  
-|**major_id**|**int**|Stellt die ID der Tabelle dar, die die klassifizierte Spalte enthält. Dies entspricht sys. all_objects. object_id|  
-|**minor_id**|**int**|Stellt die ID der Spalte dar, für die die Klassifizierung vorhanden ist. Dies entspricht sys. ALL_COLUMNS. column_id|   
+|**major_id**|**int**|Stellt die ID der Tabelle mit der klassifizierten Spalte dar, die sys. all _objects. object_id entspricht.|  
+|**minor_id**|**int**|Stellt die ID der Spalte dar, für die die Klassifizierung vorhanden ist. Dies entspricht sys. all _columns. column_id.|   
 |**label**|**sysname**|Die Bezeichnung (Menschen lesbar), die für die Vertraulichkeits Klassifizierung zugewiesen ist.|  
 |**label_id**|**sysname**|Eine ID, die der Bezeichnung zugeordnet ist und von einem Informationsschutz System wie z. b. Azure Information Protection (AIP) verwendet werden kann.|  
 |**information_type**|**sysname**|Der Informationstyp (Menschen lesbar), der der Sensitivität-Klassifizierung zugewiesen ist.|  
@@ -50,7 +50,7 @@ Gibt eine Zeile für jedes klassifizierte Element in der Datenbank zurück.
 |**rank_desc**|**sysname**|Textdarstellung des Rangs:  <br><br>keine, niedrig, Mittel, hoch, kritisch|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 
 - Diese Ansicht bietet Einblick in den Klassifizierungs Status der Datenbank. Sie kann zum Verwalten der Daten Bank Klassifizierungen sowie zum Erstellen von Berichten verwendet werden.
 - Derzeit wird nur die Klassifizierung von Daten Bank Spalten unterstützt.
@@ -87,4 +87,4 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[Azure SQL-Datenbank – Datenermittlung und -klassifizierung](https://aka.ms/sqlip)
+[Azure SQL-Datenbank – Datenermittlung und -klassifizierung](/azure/azure-sql/database/data-discovery-and-classification-overview)

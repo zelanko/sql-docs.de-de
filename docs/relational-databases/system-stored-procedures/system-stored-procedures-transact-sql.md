@@ -23,12 +23,12 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05be8467516ff84c45268357eb6ab743d5599a05
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 581ac92066750ac578cf8103383087fddeb01e65
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645076"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810296"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Gespeicherte Systemprozeduren (Transact-SQL)
 
@@ -38,9 +38,9 @@ ms.locfileid: "88645076"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Category|BESCHREIBUNG|  
+|Category|Beschreibung|  
 |--------------|-----------------|  
-|[Gespeicherte Prozeduren für die aktive georeplikation](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Dient zum Verwalten von zum Verwalten von Konfigurationen für die aktive georeplikation in Azure SQL-Datenbank.|  
+|[Gespeicherte Prozeduren für die aktive georeplikation]()|Dient zum Verwalten von zum Verwalten von Konfigurationen für die aktive georeplikation in Azure SQL-Datenbank.|  
 |[Gespeicherte Katalogprozeduren](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Implementieren Funktionen ODBC-Datenwörterbüchern und isolieren ODBC-Anwendungen von Änderungen an den zugrunde liegenden Systemtabellen.|  
 |[Gespeicherte Prozeduren für Change Data Capture](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Wird verwendet, um Change Data Capture-Objekte zu aktivieren, zu deaktivieren oder über sie zu berichten.|  
 |[Gespeicherte Cursorprozeduren](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Werden zum Implementieren von Cursorvariablenfunktionen verwendet.|  
@@ -49,7 +49,7 @@ ms.locfileid: "88645076"
 |[Datenbank-E-Mail gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Werden zum Ausführen von E-Mail-Operationen innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.|  
 |[Gespeicherte Prozeduren für Datenbank-Wartungspläne](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Werden zum Einrichten zentraler Wartungsaufgaben verwendet, die zur Optimierung der Datenbankleistung ausgeführt werden müssen.|  
 |[Gespeicherte Prozeduren für verteilte Abfragen](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Werden zum Implementieren und Verwalten verteilter Abfragen verwendet.|  
-|[Gespeicherte FILESTREAM-und FILETABLE-Prozeduren &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Werden zum Konfigurieren und Verwalten der FILESTREAM- und FileTable-Funktionen verwendet.|  
+|[Gespeicherte FILESTREAM-und FILETABLE-Prozeduren &#40;Transact-SQL-&#41;](./filestream-and-filetable-sp-filestream-force-garbage-collection.md)|Werden zum Konfigurieren und Verwalten der FILESTREAM- und FileTable-Funktionen verwendet.|  
 |[Gespeicherte Prozeduren für Firewallregeln &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Wird zum Konfigurieren der Firewall für die Azure SQL-Datenbank verwendet.|  
 |[Gespeicherte Prozeduren für die Volltextsuche](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Werden zum Implementieren und Abfragen von Volltextindizes verwendet.|  
 |[Gespeicherte allgemeine erweiterte Prozeduren](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|Werden zur Bereitstellung einer Schnittstelle zwischen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und externen Programmen für verschiedene Wartungsaktivitäten verwendet.|  
@@ -57,16 +57,16 @@ ms.locfileid: "88645076"
 |[Gespeicherte Prozeduren für das Verwaltungs-Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Wird verwendet, um die Verwaltungs Data Warehouse zu konfigurieren.|  
 |[Gespeicherte OLE-Automatisierungs Prozeduren](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Werden zur Aktivierung standardmäßiger Automatisierungsobjekte für die Verwendung innerhalb eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Standardbatches verwendet.|  
 |[Gespeicherte Prozeduren für die richtlinienbasierte Verwaltung](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Werden für die richtlinienbasierte Verwaltung verwendet.|  
-|[Gespeicherte PolyBase-Prozeduren](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Hinzufügen oder Entfernen eines Computers aus einer polybase-Erweiterungsgruppe.|  
+|[Gespeicherte PolyBase-Prozeduren](./polybase-stored-procedures-sp-polybase-join-group.md)|Hinzufügen oder Entfernen eines Computers aus einer polybase-Erweiterungsgruppe.|  
 |[Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Dient zum Optimieren der Leistung.|  
 |[Gespeicherte Replikations Prozedur](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Werden für die Replikation verwendet.|  
 |[Gespeicherte Sicherheitsprozeduren](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Werden für die Verwaltung der Sicherheit verwendet.|  
-|[Gespeicherte Momentaufnahme Sicherungs Prozeduren](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Wird verwendet, um die FILE_SNAPSHOT Sicherung zusammen mit allen zugehörigen Momentaufnahmen zu löschen oder eine einzelne Sicherungsdatei-Momentaufnahme zu löschen.|  
-|[Gespeicherte Prozeduren für Räumlichkeitsindizes](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Wird verwendet, um die Indexleistung räumlicher Indizes zu analysieren und zu verbessern.|  
+|[Gespeicherte Momentaufnahme Sicherungs Prozeduren](./snapshot-backup-sp-delete-backup.md)|Wird verwendet, um die FILE_SNAPSHOT Sicherung zusammen mit allen zugehörigen Momentaufnahmen zu löschen oder eine einzelne Sicherungsdatei-Momentaufnahme zu löschen.|  
+|[Gespeicherte Prozeduren für Räumlichkeitsindizes](./spatial-index-stored-procedures-arguments-and-properties.md)|Wird verwendet, um die Indexleistung räumlicher Indizes zu analysieren und zu verbessern.|  
 |[Gespeicherte SQL Server-Agent-Prozeduren](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Werden von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verwendet, um die Leistung und die Aktivitäten zu überwachen.|  
 |[Gespeicherte Prozeduren für SQL Server Profiler](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zum Verwalten geplanter und ereignisgesteuerter Aktivitäten verwendet.|  
 |[Gespeicherte Prozeduren Stretch Database](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Wird zum Verwalten von Stretch-Datenbanken verwendet.|  
-|[Temporale Tabellen gespeicherte Prozeduren](https://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Verwendung für temporale Tabellen|  
+|[Temporale Tabellen gespeicherte Prozeduren](./spatial-index-stored-procedures-arguments-and-properties.md)|Verwendung für temporale Tabellen|  
 |[Gespeicherte XML-Prozeduren](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|Werden für die XML-Textverwaltung verwendet.|  
   
 > [!NOTE]  
@@ -751,5 +751,4 @@ Die folgenden gespeicherten Prozeduren sind nicht dokumentiert:
  [Gespeicherte Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Ausführen gespeicherter Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
-  
   

@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447192"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810190"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` Eine Liste von Werten für die Eingabeparameter, die vom externen Skript verwendet werden.  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!IMPORTANT]
 > Die Abfrage Struktur wird von SQL Machine Learning gesteuert, und Benutzer können keine beliebigen Vorgänge für die Abfrage ausführen.
@@ -165,14 +165,14 @@ Sie können die Ressourcen steuern, die von externen Skripts verwendet werden, i
 
 ### <a name="monitor-script-execution"></a>Überwachen der Skriptausführung
 
-Überwachen Sie die Skriptausführung mit [sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) und [sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
+Überwachen Sie die Skriptausführung mithilfe von [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) und [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### <a name="parameters-for-partition-modeling"></a>Parameter für die Partitions Modellierung
 
 Sie können zwei zusätzliche Parameter festlegen, die das Modellieren von partitionierten Daten ermöglichen. Partitionen basieren auf einer oder mehreren Spalten, die Sie bereitstellen, die auf natürliche Weise ein Dataset in logische Partitionen segmentieren, die nur während der Skriptausführung erstellt und verwendet werden. Spalten mit sich wiederholenden Werten für Alter, Geschlecht, geografische Region, Datum oder Uhrzeit sind einige Beispiele, die partitionierten DataSets verleihen.
 
-Die beiden Parameter sind **input_data_1_partition_by_columns** und **input_data_1_order_by_columns**, wobei der zweite Parameter verwendet wird, um das Resultset zu sortieren. Die Parameter werden als Eingaben an, `sp_execute_external_script` wobei das externe Skript einmal für jede Partition ausgeführt wird. Weitere Informationen und Beispiele finden Sie unter [Tutorial: Erstellen von Partitions basierten Modellen](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition).
+Die beiden Parameter sind **input_data_1_partition_by_columns** und **input_data_1_order_by_columns**, wobei der zweite Parameter verwendet wird, um das Resultset zu sortieren. Die Parameter werden als Eingaben an, `sp_execute_external_script` wobei das externe Skript einmal für jede Partition ausgeführt wird. Weitere Informationen und Beispiele finden Sie unter [Tutorial: Erstellen von Partitions basierten Modellen](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).
 
 Sie können das Skript parallel ausführen, indem Sie angeben `@parallel=1` . Wenn die Eingabe Abfrage parallelisiert werden kann, sollten Sie `@parallel=1` als Teil ihrer Argumente auf festlegen `sp_execute_external_script` . Standardmäßig arbeitet der Abfrageoptimierer unter `@parallel=1` Tabellen mit mehr als 256 Zeilen, aber wenn Sie diesen explizit behandeln möchten, enthält dieses Skript den Parameter als Demonstration.
 
@@ -324,7 +324,7 @@ Zur Bewertung können Sie auch die native [PREDICT](../../t-sql/queries/predict-
 
 ## <a name="see-also"></a>Weitere Informationen
 
-+ [Maschinelles Lernen mit SQL](../../machine-learning/index.yml)
++ [SQL Machine Learning](../../machine-learning/index.yml)
 + [SQL Server Spracherweiterungen](../../language-extensions/language-extensions-overview.md). 
 + [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
 + [Externe Bibliothek &#40;Transact-SQL-&#41;erstellen ](../../t-sql/statements/create-external-library-transact-sql.md)  
@@ -334,4 +334,4 @@ Zur Bewertung können Sie auch die native [PREDICT](../../t-sql/queries/predict-
 + [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
 + [SQL Server, Externes Skript-Objekt](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
-+ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

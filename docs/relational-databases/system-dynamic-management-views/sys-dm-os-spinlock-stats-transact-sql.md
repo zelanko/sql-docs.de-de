@@ -1,6 +1,6 @@
 ---
-description: sys. dm_os_spinlock_stats (Transact-SQL)
-title: sys. dm_os_spinlock_stats (Transact-SQL) | Microsoft-Dokumentation
+description: sys.dm_os_spinlock_stats (Transact-SQL)
+title: sys.dm_os_spinlock_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,21 +23,21 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042751"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810106"
 ---
-# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Gibt Informationen zu allen Spinlock-warte Vorgängen nach Typ organisiert zurück.  
   
 
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|Der Name des Spinlock-Typs.|  
 |Stöße|**bigint**|Gibt an, wie oft ein Thread versucht, die Spinlock abzurufen, und wird blockiert, da ein anderer Thread derzeit die Spinlock-Sperre besitzt.|  
@@ -51,11 +51,11 @@ Gibt Informationen zu allen Spinlock-warte Vorgängen nach Typ organisiert zurü
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.    
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  
- sys. dm_os_spinlock_stats kann zum Identifizieren der Quelle von Spinlock-Konflikten verwendet werden. In einigen Situationen können Sie möglicherweise Spinlock-Konflikte auflösen oder verringern. Es kann jedoch Situationen geben, in denen Sie sich mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services in Verbindung setzen müssen.  
+ sys.dm_os_spinlock_stats kann verwendet werden, um die Quelle von Spinlock-Konflikten zu identifizieren. In einigen Situationen können Sie möglicherweise Spinlock-Konflikte auflösen oder verringern. Es kann jedoch Situationen geben, in denen Sie sich mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services in Verbindung setzen müssen.  
   
- Sie können den Inhalt von sys. dm_os_spinlock_stats zurücksetzen, indem Sie `DBCC SQLPERF` wie folgt verwenden:  
+ Sie können den Inhalt sys.dm_os_spinlock_stats mithilfe von `DBCC SQLPERF` wie folgt zurücksetzen:  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -72,7 +72,7 @@ GO
    
  Die folgende Tabelle enthält kurze Beschreibungen einiger der gängigsten Spinlock-Typen.  
   
-|SpinLock-Typ|BESCHREIBUNG|  
+|SpinLock-Typ|Beschreibung|  
 |-----------------|-----------------|  
 |ABR|Nur interne Verwendung.|
 |ADB_CACHE|Nur interne Verwendung.|
@@ -413,6 +413,7 @@ GO
 
  [Wann ist Spinlock ein bedeutender Treiber der CPU-Auslastung in SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
+ [Diagnostizieren und Beheben von Spinlock-Konflikten auf SQL Server](../diagnose-resolve-spinlock-contention.md)
   
   
 

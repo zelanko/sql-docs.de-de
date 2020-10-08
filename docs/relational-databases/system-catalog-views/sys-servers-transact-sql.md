@@ -21,23 +21,23 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bcead6ebe4064dc43e97d0c0aa9d74920f69bbb8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a3befa2740bd11fcd88233cef3000deec0d7006e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539577"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809323"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Enthält eine Zeile für jeden registrierten Verbindungs- oder Remoteserver sowie eine Zeile für den lokalen Server, bei dem **server_id** = 0 ist.  
 
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Lokale ID des Verbindungsservers.|  
 |**name**|**sysname**|Wenn **server_id** = 0 ist, ist der zurückgegebene Wert der Servername.<br /><br /> Wenn **server_id** > 0, ist der zurückgegebene Wert der lokale Name des Verbindungs Servers.|  
-|**Product**|**sysname**|Der Produktname des Verbindungsservers. Der Wert "SQL Server" gibt eine andere Instanz von an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**product**|**sysname**|Der Produktname des Verbindungsservers. Der Wert "SQL Server" gibt eine andere Instanz von an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**ab**|**sysname**|Der Name des OLE DB-Anbieters zum Herstellen einer Verbindung mit Verbindungsservern.<br /><br />Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird der Wert "sqlncli" standardmäßig dem [Microsoft OLE DB-Treiber für SQL Server (msoledbsql)](../../connect/oledb/oledb-driver-for-sql-server.md) zugeordnet. In früheren Versionen wird der Wert "sqlncli" dem [SQL Server Native Client OLE DB-Anbieters (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md)zugeordnet.|  
 |**data_source**|**nvarchar(4000)**|Die Verbindungseigenschaft der OLE DB-Datenquelle.|  
 |**location**|**nvarchar(4000)**|Die Verbindungseigenschaft des OLE DB-Standortes. Ist NULL, wenn nichts angegeben wird.|  
@@ -60,7 +60,7 @@ ms.locfileid: "89539577"
 |**is_nonsql_subscriber**|**bit**|Der Server ist ein Replikationsabonnent ohne SQL Server.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Wenn diese Option auf 1 festgelegt ist und eine remote gespeicherte Prozedur aufgerufen wird, wird eine verteilte Transaktion gestartet und bei MS DTC eingetragen. Weitere Informationen finden Sie unter [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)erläutert.|  
 |**modify_date**|**datetime**|Datum, an dem die Serverinformationen zuletzt geändert wurden.|  
-|**is_rda_server**|**bit**|**Gilt für:** Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Server ist Remote Data Archive enable (Stretch-fähig). Weitere Informationen finden Sie unter [Aktivieren von Stretch Database auf dem Server](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer).|
+|**is_rda_server**|**bit**|**Gilt für:** Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Server ist Remote Data Archive enable (Stretch-fähig). Weitere Informationen finden Sie unter [Aktivieren von Stretch Database auf dem Server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
   
 ## <a name="permissions"></a>Berechtigungen  
  Der Wert in **provider_string** ist immer NULL, wenn der Aufrufer nicht über die ALTER ANY LINKED SERVER-Berechtigung verfügt.  
@@ -80,4 +80,3 @@ ms.locfileid: "89539577"
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
- 

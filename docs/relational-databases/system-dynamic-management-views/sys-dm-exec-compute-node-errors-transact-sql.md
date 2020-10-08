@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_compute_node_errors (Transact-SQL)
-title: sys. dm_exec_compute_node_errors (Transact-SQL) | Microsoft-Dokumentation
+description: sys.dm_exec_compute_node_errors (Transact-SQL)
+title: sys.dm_exec_compute_node_errors (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -23,14 +23,14 @@ ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e65469192e14c7a2cb9d3facf3be3730a08428
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 68f260aa547550d08c853b69cc6fb6e3e46d9a72
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546611"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833561"
 ---
-# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-SQL)
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
@@ -40,9 +40,9 @@ ms.locfileid: "89546611"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|Eindeutige numerische ID, die dem Fehler zugeordnet ist.|Eindeutig in allen Abfrage Fehlern im System|  
 |source|`nvarchar(255)`|Quellthread oder PROZESSBESCHREIBUNG||  
-|Typ|`nvarchar(255)`|Fehlertyp.||  
+|type|`nvarchar(255)`|Fehlertyp.||  
 |create_time|`datetime`|Der Zeitpunkt des Auftretens des Fehlers.||  
-|compute_node_id|`int`|Bezeichner des spezifischen computeknotens|Weitere Informationen finden Sie unter compute_node_id von [sys. dm_exec_compute_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|compute_node_id|`int`|Bezeichner des spezifischen computeknotens|Weitere Informationen finden Sie unter compute_node_id [sys.dm_exec_compute_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Der Bezeichner der polybase-Abfrage, falls vorhanden.||  
 |spid|`int`|Bezeichner der SQL Server Sitzung||  
 |thread_id|`int`|Numerischer Bezeichner des Threads, in dem der Fehler aufgetreten ist.||  
@@ -51,8 +51,7 @@ ms.locfileid: "89546611"
 
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Problembehandlung bei polybase mit dynamischen Verwaltungs Sichten](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Problembehandlung bei polybase mit dynamischen Verwaltungs Sichten](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Datenbank &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

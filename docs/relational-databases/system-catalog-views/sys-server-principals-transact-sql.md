@@ -1,6 +1,6 @@
 ---
 description: sys.server_principals (Transact-SQL)
-title: sys. server_principals (Transact-SQL) | Microsoft-Dokumentation
+title: sys.server_principals (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,24 +21,25 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3d8a54afa21c46a7881b95d100c4c7746c6e3f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f7d0f7afb3d432bdf0c266ee3dfb66813102709
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377296"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809336"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Enthält eine Zeile für jeden Prinzipal auf Serverebene.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name des Prinzipals. Ist innerhalb eines Servers eindeutig.|  
 |**principal_id**|**int**|Die ID des Prinzipals. Ist innerhalb eines Servers eindeutig.|  
 |**sid**|**varbinary(85)**|Sicherheitsbezeichner (SID, Security-IDentifier) des Prinzipals. Bei einem Windows-Prinzipal entspricht dies Windows SID.|  
-|**type**|**char (1)**|Prinzipaltyp:<br /><br /> S = SQL-Anmeldename<br /><br /> U = Windows-Anmeldename<br /><br /> G = Windows-Gruppe<br /><br /> R = Serverrolle<br /><br /> C = Einem Zertifikat zugeordneter Anmeldename<br /><br /> K = Einem asymmetrischen Schlüssel zugeordneter Anmeldename|  
+|**type**|**char(1)**|Prinzipaltyp:<br /><br /> S = SQL-Anmeldename<br /><br /> U = Windows-Anmeldename<br /><br /> G = Windows-Gruppe<br /><br /> R = Serverrolle<br /><br /> C = Einem Zertifikat zugeordneter Anmeldename<br /><br /> E = externe Anmeldung von Azure Active Directory<br /><br /> X = externe Gruppe aus Azure Active Directory Gruppe oder Anwendungen
+<br /><br /> K = Einem asymmetrischen Schlüssel zugeordneter Anmeldename|  
 |**type_desc**|**nvarchar(60)**|Beschreibung des Prinzipaltyps:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = Anmeldename ist deaktiviert.|  
 |**create_date**|**datetime**|Der Zeitpunkt, zu dem der Prinzipal erstellt wurde.|  
@@ -58,7 +59,7 @@ ms.locfileid: "88377296"
  Mit der folgenden Abfrage werden die Berechtigungen aufgelistet, die Serverprinzipalen ausdrücklich gewährt oder verweigert wurden.  
   
 > [!IMPORTANT]  
->  Die Berechtigungen fester Server Rollen (außer Public) werden in sys. server_permissions nicht angezeigt. Daher können Serverprinzipale über zusätzliche Berechtigungen verfügen, die hier nicht aufgeführt werden.  
+>  Die Berechtigungen fester Server Rollen (außer Public) werden in sys.server_permissions nicht angezeigt. Daher können Serverprinzipale über zusätzliche Berechtigungen verfügen, die hier nicht aufgeführt werden.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

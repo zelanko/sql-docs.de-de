@@ -16,19 +16,19 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1fbd97400ced46a70026b832ad4721d9f33cf690
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd5b35e6c999f69b7adda16fd4590942cd2da63b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543449"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810246"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Führt eine- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung für eine einzelne Azure SQL-Remote Datenbank oder eine Gruppe von Datenbanken aus, die als Shards in einem horizontalen Partitionierungsschema fungieren.  
   
- Die gespeicherte Prozedur ist Teil des Features für elastische Abfragen.  Informationen finden Sie unter [Übersicht über elastische Datenbankabfragen in Azure SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) -Datenbank und [elastische Datenbankabfragen für Sharding (Horizontale Partitionierung)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/)  
+ Die gespeicherte Prozedur ist Teil des Features für elastische Abfragen.  Informationen finden Sie unter [Übersicht über elastische Datenbankabfragen in Azure SQL](/azure/azure-sql/database/elastic-query-overview) -Datenbank und [elastische Datenbankabfragen für Sharding (Horizontale Partitionierung)](/azure/azure-sql/database/elastic-query-horizontal-partitioning)  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -106,4 +106,3 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
-    
