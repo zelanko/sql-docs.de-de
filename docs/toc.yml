@@ -4330,6 +4330,10 @@
       href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
     - name: Architektur der Speicherverwaltung
       href: relational-databases/memory-management-architecture-guide.md
+    - name: Diagnostizieren von Latchkonflikten
+      href: relational-databases/diagnose-resolve-latch-contention.md
+    - name: Diagnostizieren von Spinlock-Konflikten
+      href: relational-databases/diagnose-resolve-spinlock-contention.md
 - name: Installation
   items:
     - name: Übersicht
