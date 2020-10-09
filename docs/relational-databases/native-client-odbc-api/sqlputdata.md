@@ -15,12 +15,12 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd4bb999be51961d11dccf5cae107706dae9f6d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42323e6fbf35ddb6093ac4e764e81e7f0274cbb2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423982"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867475"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88423982"
 ## <a name="diagnostics"></a>Diagnose  
  Es gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-spezifischen SQLSTATE für SQLPutData:  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |22026|Zeichenfolgendaten, nicht übereinstimmende Länge|Wenn die Länge der zu sendenden Daten in Bytes von einer Anwendung angegeben wurde, z. b. mit SQL_LEN_DATA_AT_EXEC (*n*), wobei *n* größer als 0 ist, muss die Gesamtanzahl der Bytes, die von der Anwendung über SQLPutData angegeben werden, mit der angegebenen Länge identisch sein.|  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88423982"
   
 -   Ein Wert unter 0 zeigt einen Fehler an und führt dazu, dass ein Diagnosedatensatz mit SQLState HY090 aufgezeichnet und die Meldung „Ungültige Zeichenfolge oder Pufferlänge“ ausgegeben wird.  
   
- Der *DataPtr* -Parameter wird ignoriert, muss jedoch auf einen Wert festgelegt werden, der nicht NULL ist. Weitere Informationen finden Sie im Abschnitt zur TVP-Variablen-Zeilen Bindung in [Bindung und Datenübertragung von Tabellenwert Parametern und Spaltenwerten](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+ Der *DataPtr* -Parameter wird ignoriert, muss jedoch auf einen Wert festgelegt werden, der nicht NULL ist. Weitere Informationen finden Sie im Abschnitt über die TVP-Zeilen Bindung in der [Bindung und Datenübertragung von Table-Valued Parametern und Spaltenwerten](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
  Wenn *StrLen_Or_Ind* einen anderen Wert als SQL_DEFAULT_PARAM oder eine Zahl zwischen 0 und dem SQL_PARAMSET_SIZE (d. h. dem *ColumnSize* -Parameter von SQLBindParameter) aufweist, handelt es sich um einen Fehler. Dieser Fehler bewirkt, dass SQLPutData SQL_ERROR: SQLSTATE=HY090, "Ungültige Zeichenfolge oder Pufferlänge" zurückgibt.  
   
@@ -64,10 +64,9 @@ ms.locfileid: "88423982"
  Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>SQLPutData-Unterstützung für große CLR-UDTs  
- **SQLPutData** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLPutData** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große CLR-User-Defined Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQLPutData-Funktion](https://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData-Funktion](../../odbc/reference/syntax/sqlputdata-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

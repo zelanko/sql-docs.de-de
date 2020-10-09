@@ -20,11 +20,12 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a8ebd8eb539190c65e1e1a97ce55579eb93f180
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2b96446e0d73da09bb6dbbb547c6a0171cb20170
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004652"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867035"
 ---
 # <a name="calling-a-stored-procedure"></a>Aufrufen von gespeicherten Prozeduren
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "86004652"
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt sowohl die ODBC-Rückruf-Escapesequenz als auch die [!INCLUDE[tsql](../../includes/tsql-md.md)] [Execute](../../t-sql/language-elements/execute-transact-sql.md) -Anweisung zum Ausführen gespeicherter Prozeduren. die ODBC-Rückruf Sequenz ist die bevorzugte Methode Mithilfe der ODBC-Syntax kann eine Anwendung die Rückgabecodes von gespeicherten Prozeduren abrufen. Zudem wurde der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber für die Verwendung eines ursprünglich zum Senden von Remoteprozeduraufrufen (RPC) zwischen Computern, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, entwickelten Protokolls optimiert. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  
   
 > [!NOTE]  
->  Beim Aufrufen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherter Prozeduren mit benannten Parametern mit ODBC (Weitere Informationen finden Sie unter [Binden von Parametern anhand des Namens (benannte Parameter)](https://go.microsoft.com/fwlink/?LinkID=209721)) müssen die Parameternamen mit dem \@ Zeichen "" beginnen. Dies ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Einschränkung. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODCB-Treiber erzwingt diese Einschränkung strenger als die MDAC (Microsoft Data Access Components).  
+>  Beim Aufrufen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherter Prozeduren mit benannten Parametern mit ODBC (Weitere Informationen finden Sie unter [Binden von Parametern anhand des Namens (benannte Parameter)](../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)) müssen die Parameternamen mit dem \@ Zeichen "" beginnen. Dies ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Einschränkung. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODCB-Treiber erzwingt diese Einschränkung strenger als die MDAC (Microsoft Data Access Components).  
   
  Die ODBC CALL-Escapesequenz für das Aufrufen einer Prozedur lautet wie folgt:  
   
@@ -95,5 +96,4 @@ ms.locfileid: "86004652"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Ausführen gespeicherter Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
-  
   

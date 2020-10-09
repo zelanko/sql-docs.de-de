@@ -12,12 +12,12 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f567277dd128095222633c0694412fd477bc623b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f472c3354e2cfefe10aeeedd8935360e3a4751a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455533"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868259"
 ---
 # <a name="overview-smo"></a>Übersicht (SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "88455533"
   
 -   Verwaltung von Datenbank-E-Mail zur Erstellung von E-Mail-Servern, E-Mail-Profilen und E-Mail-Konten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md).  
   
--   Unterstützung registrierter Server zum Registrieren von Verbindungsinformationen. Weitere Informationen finden Sie unter [Registrieren von Servern](../../tools/sql-server-management-studio/register-servers.md).  
+-   Unterstützung registrierter Server zum Registrieren von Verbindungsinformationen. Weitere Informationen finden Sie unter [Registrieren von Servern](../../ssms/register-servers/register-servers.md).  
   
 -   Ablaufverfolgung und Wiederholung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignissen. Weitere Informationen finden Sie unter [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL](../../relational-databases/sql-trace/sql-trace.md)-Ablauf Verfolgung, [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)und [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md).  
   
@@ -175,5 +175,4 @@ ms.locfileid: "88455533"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-  
   

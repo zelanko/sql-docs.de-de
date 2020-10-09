@@ -14,12 +14,12 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d3a6cead69651eedec63d9c34e24674ec6dd6ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1610a48081c8eb8e4cab0829527516e9ee44246
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470424"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867702"
 ---
 # <a name="use-a-statement-odbc"></a>Verwenden einer Anweisung (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,23 +27,23 @@ ms.locfileid: "88470424"
     
 ### <a name="to-use-a-statement"></a>So verwenden Sie eine Anweisung  
   
-1.  Rufen Sie [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) mit einem *HandleType* von SQL_HANDLE_STMT auf, um ein Anweisungshandle zuzuweisen.  
+1.  Rufen Sie [SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md) mit einem *HandleType* von SQL_HANDLE_STMT auf, um ein Anweisungshandle zuzuweisen.  
   
 2.  Rufen Sie optional [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) auf, um Anweisungsoptionen festzulegen, oder [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md), um Anweisungsattribute abzurufen.  
   
      Um Servercursor zu verwenden, müssen Sie die Cursorattribute auf Werte setzen, die von den Standardwerten abweichen.  
   
-3.  Bereiten Sie optional die Anweisung mit der [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360)auf die Ausführung vor, wenn die Anweisung mehrmals ausgeführt wird.  
+3.  Bereiten Sie optional die Anweisung mit der [SQLPrepare-Funktion](../../../odbc/reference/syntax/sqlprepare-function.md)auf die Ausführung vor, wenn die Anweisung mehrmals ausgeführt wird.  
   
-4.  Binden Sie optional mit [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)die Parametermarkierungen an Programmvariablen, wenn die Anweisung über gebundene Parametermarkierungen verfügt. Wenn die Anweisung vorbereitet wurde, können Sie [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) und [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) to find the number und characteristics of the parameters.  
+4.  Binden Sie optional mit [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)die Parametermarkierungen an Programmvariablen, wenn die Anweisung über gebundene Parametermarkierungen verfügt. Wenn die Anweisung vorbereitet wurde, können Sie [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) und [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) to find the number und characteristics of the parameters.  
   
 5.  Führen Sie eine Anweisung direkt mit SQLExecDirect aus.  
   
-     \- oder –  
+     \- oder -  
   
-     Wenn die Anweisung vorbereitet wurde, führen Sie sie mehrmals mit [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)aus.  
+     Wenn die Anweisung vorbereitet wurde, führen Sie sie mehrmals mit [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)aus.  
   
-     \- oder –  
+     \- oder -  
   
      Rufen Sie eine Katalogfunktion auf, die Ergebnisse zurückgibt.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "88470424"
   
      Rufen Sie eine Zeile nach der anderen über das Resultset einer Anweisung ab.  
   
-     \- oder –  
+     \- oder -  
   
      Rufen Sie mehrere Zeilen gleichzeitig über das Resultset mithilfe eines Blockcursors ab.  
   
-     \- oder –  
+     \- oder -  
   
      Rufen Sie [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) auf, um die Anzahl der Zeilen, die von einer INSERT-, UPDATE- oder DELETE-Anweisung betroffen sind, zu bestimmen.  
   
@@ -75,5 +75,4 @@ ms.locfileid: "88470424"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gewusst-wie-Themen zum Ausführen von Abfragen &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

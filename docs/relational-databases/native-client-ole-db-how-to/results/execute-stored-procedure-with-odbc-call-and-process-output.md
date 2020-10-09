@@ -15,12 +15,12 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 934e25540b7d5b96f803c776d8ddda3fc8c29473
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5785874d7046cfe1822feeb43a9ee9e3c9b191b0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448458"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867655"
 ---
 # <a name="execute-sql-server-native-client-stored-procedure-with-odbc-call-and-process-output"></a>Ausführen SQL Server Native Client gespeicherter Prozedur mit ODBC-Aufrufe und Prozess Ausgabe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88448458"
   Gespeicherte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter enthalten. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung demnach erst zur Verfügung, wenn das Rowset vollständig freigegeben wurde. Wenn der Befehl mehrere Ergebnisse zurückgibt, stehen Ausgabeparameterdaten zur Verfügung, wenn **IMultipleResults::GetResult** DB_S_NORESULT zurückgibt oder die **IMultipleResults** -Schnittstelle vollständig freigegeben wird, je nachdem, was zuerst eintritt.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen persistent speichern müssen, sollten Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen persistent speichern müssen, sollten Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference)verschlüsseln.  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>So verarbeiten Sie Rückgabecodes und Ausgabeparameter  
   
@@ -359,5 +359,4 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Vorgehensweisen zum Verarbeiten von Ergebnissen &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

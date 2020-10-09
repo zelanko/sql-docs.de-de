@@ -24,19 +24,19 @@ ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dff6003bf6671f4b3e7867daa4e6c444c6cd8854
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2644a34817c4319dff877a162963b2525d259cae
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247926"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869294"
 ---
 # <a name="return-codes-native-client-ole-db-provider"></a>Rückgabe Codes (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Auf der grundlegenden Ebene wird eine Elementfunktion entweder erfolgreich ausgeführt, oder sie schlägt fehl. Auf einer genaueren Ebene kann eine Funktion erfolgreich ausgeführt werden, ohne dass das Ergebnis dem entspricht, was vom Anwendungsentwickler beabsichtigt war.  
   
- Weitere Informationen zu OLE DB-Rückgabecodes finden Sie unter [Rückgabecodes (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
+ Weitere Informationen zu OLE DB-Rückgabecodes finden Sie unter [Rückgabecodes (OLE DB)](/previous-versions/windows/desktop/ms725451(v=vs.85)).  
   
  Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Member-Funktion eines Native Client OLE DB-Anbieters S_OK zurückgibt, wurde die Funktion erfolgreich ausgeführt.  
   
@@ -44,11 +44,10 @@ ms.locfileid: "87247926"
   
  Wenn ein Fehler aufgetreten ist oder IS_ERROR "true" zurückgibt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist der Consumer des Native Client OLE DB Anbieters sicher, dass die Ausführung der Element Funktion Wenn ein Fehler aufgetreten ist oder IS_ERROR false zurückgeben und das HRESULT nicht gleich S_OK ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Consumer des Native Client OLE DB Anbieters sicher sein, dass die Funktion in gewisser Hinsicht erfolgreich war. Der Consumer kann ausführliche Informationen zu diesem "Erfolg mit Informationen" von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieter-Fehler Schnittstellen abrufen. Außerdem ist in dem Fall, in dem eine Funktion eindeutig fehlschlägt (das fehlgeschlagene Makro gibt true zurück), erweiterte Fehlerinformationen über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehler Schnittstellen des Native Client OLE DB Anbieters verfügbar.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der Consumer des Native Client OLE DB-Anbieters stößt häufig auf die DB_S_ERRORSOCCURRED "Erfolg mit Informationen" HRESULT zurück. In der Regel definieren Elementfunktionen, die DB_S_ERRORSOCCURRED zurückgeben, einen oder mehrere Parameter, die Statuswerte an den Consumer übermitteln. Möglicherweise stehen dem Consumer nur die Fehlerinformationen zur Verfügung, die in Statuswertparametern zurückgegeben werden. Daher sollten Consumer Anwendungslogik implementieren, um Statuswerte abzurufen, wenn diese verfügbar sind.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Der Consumer des Native Client OLE DB-Anbieters stößt häufig auf die DB_S_ERRORSOCCURRED "Erfolg mit Informationen" HRESULT zurück. In der Regel definieren Elementfunktionen, die DB_S_ERRORSOCCURRED zurückgeben, einen oder mehrere Parameter, die Statuswerte an den Consumer übermitteln. Möglicherweise stehen dem Consumer nur die Fehlerinformationen zur Verfügung, die in Statuswertparametern zurückgegeben werden. Daher sollten Consumer Anwendungslogik implementieren, um Statuswerte abzurufen, wenn diese verfügbar sind.  
   
  Die Element [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktionen des Native Client OLE DB-Anbieters geben den Erfolgs Code S_FALSE nicht zurück. Alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Member von Native Client OLE DB-Anbieter Membern geben immer S_OK zurück, um einen Erfolg anzugeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Fehler](../../relational-databases/native-client-ole-db-errors/errors.md)  
-  
   

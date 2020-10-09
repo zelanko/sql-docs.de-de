@@ -14,12 +14,12 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fbb647cc83c9d98aedc15531c919c54f9ae7d53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8d8b297afe44f990b7d0fa685ffa4aff51accf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494076"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867787"
 ---
 # <a name="use-cursors-odbc"></a>Verwenden von Cursorn (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "88494076"
   
      Legen Sie die Attribute SQL_ATTR_CURSOR_TYPE und SQL_ATTR_CONCURRENCY fest (dies ist die bevorzugte Option).  
   
-     oder  
+     Oder  
   
      Legen Sie die Attribute SQL_CURSOR_SCROLLABLE und SQL_CURSOR_SENSITIVITY fest.  
   
 2.  Rufen Sie [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) auf, um die Rowsetgröße mit dem SQL_ATTR_ROW_ARRAY_SIZE-Attribut festzulegen.  
   
-3.  Sie können auch [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) aufrufen, um einen Cursornamen festzulegen, wenn positionierte Updates mit der WHERE CURRENT OF-Klausel durchgeführt werden.  
+3.  Sie können auch [SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md) aufrufen, um einen Cursornamen festzulegen, wenn positionierte Updates mit der WHERE CURRENT OF-Klausel durchgeführt werden.  
   
 4.  Führen Sie die SQL-Anweisung aus.  
   
-5.  Sie können optional auch [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) aufrufen, um den Cursornamen abzurufen, wenn positionierte Updates mit der WHERE CURRENT OF-Klausel durchgeführt werden und in Schritt 3 mit [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) kein Cursorname angegeben wurde.  
+5.  Sie können optional auch [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) aufrufen, um den Cursornamen abzurufen, wenn positionierte Updates mit der WHERE CURRENT OF-Klausel durchgeführt werden und in Schritt 3 mit [SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md) kein Cursorname angegeben wurde.  
   
 6.  Rufen Sie [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) auf, um die Anzahl von Spalten (C) im Rowset abzurufen.  
   
      Verwenden Sie spaltenbezogene Bindungen.  
   
-     \- oder –  
+     \- oder -  
   
      Verwenden Sie zeilenbezogene Bindungen.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "88494076"
   
     -   Wenn SQL_NO_DATA zurückgegeben wird, sind keine weiteren Resultsets verfügbar.  
   
-    -   Wenn SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurückgegeben wird, rufen Sie [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) auf, um festzustellen, ob die Ausgabe von einer PRINT- oder RAISERROR-Anweisung verfügbar ist.  
+    -   Wenn SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurückgegeben wird, rufen Sie [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) auf, um festzustellen, ob die Ausgabe von einer PRINT- oder RAISERROR-Anweisung verfügbar ist.  
   
      Wenn für Ausgabeparameter oder für den Rückgabewert einer gespeicherten Prozedur gebundene Anweisungsparameter verwendet werden, verwenden Sie die jetzt in den Puffern für gebundene Parameter verfügbaren Daten.  
   
-     Wenn gebundene Parameter verwendet werden, hat jeder Aufruf von [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) oder [SQLExecDirect die SQL](https://go.microsoft.com/fwlink/?LinkId=58399)-Anweisung S mal ausgeführt, wobei S die Anzahl der Elemente im Array von gebundenen Parametern ist. Das bedeutet, dass S Ergebnismengen verarbeitet werden müssen, wobei jede Ergebnismenge sämtliche Resultsets, Ausgabeparameter und Rückgabecodes enthält, die in der Regel von einer einzelnen Ausführung der SQL-Anweisung zurückgegeben werden.  
+     Wenn gebundene Parameter verwendet werden, hat jeder Aufruf von [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) oder [SQLExecDirect die SQL](../../../odbc/reference/syntax/sqlexecdirect-function.md)-Anweisung S mal ausgeführt, wobei S die Anzahl der Elemente im Array von gebundenen Parametern ist. Das bedeutet, dass S Ergebnismengen verarbeitet werden müssen, wobei jede Ergebnismenge sämtliche Resultsets, Ausgabeparameter und Rückgabecodes enthält, die in der Regel von einer einzelnen Ausführung der SQL-Anweisung zurückgegeben werden.  
   
      Wenn ein Resultset COMPUTE-Zeilen enthält, wird jede COMPUTE-Zeile als eigenes Resultset verfügbar gemacht. Diese COMPUTE-Resultsets werden in die normalen Zeilen eingefügt und teilen normale Zeilen in mehrere Resultsets.  
   
@@ -77,5 +77,4 @@ ms.locfileid: "88494076"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gewusst-wie-Themen zur Verwendung von Cursorn &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
-  
   

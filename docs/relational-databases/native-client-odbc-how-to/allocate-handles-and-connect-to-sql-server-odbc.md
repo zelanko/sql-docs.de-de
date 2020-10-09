@@ -16,12 +16,12 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bb6b097a811bc134a94ede766cc5774df5dfc3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 100973ff2e7ae4d3bf066bfe49f09aa3a979230f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420554"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866968"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Zuordnen von Handles und Herstellen einer Verbindung mit SQL Server (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,19 +33,19 @@ ms.locfileid: "88420554"
   
 2.  Schließen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-treiberspezifische Headerdatei Odbcss.h ein.  
   
-3.  Nennen Sie [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) mit dem **Typ** "SQL_HANDLE_ENV", um ODBC zu initialisieren und ein Umgebungs Handle zuzuordnen.  
+3.  Nennen Sie [SQLAllocHandle](../../odbc/reference/syntax/sqlallochandle-function.md) mit dem **Typ** "SQL_HANDLE_ENV", um ODBC zu initialisieren und ein Umgebungs Handle zuzuordnen.  
   
 4.  Rufen Sie [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) auf, wobei **Attribute** auf SQL_ATTR_ODBC_VERSION und **ValuePtr** auf SQL_OV_ODBC3 festgelegt ist, um anzugeben, dass die Anwendung ODBC 3. x-formatfunktionsaufrufe verwendet.  
   
-5.  Sie können optional auch [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) aufrufen, um andere Umgebungsoptionen festzulegen, oder [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) aufrufen, um Umgebungsoptionen abzurufen.  
+5.  Sie können optional auch [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) aufrufen, um andere Umgebungsoptionen festzulegen, oder [SQLGetEnvAttr](../../odbc/reference/syntax/sqlgetenvattr-function.md) aufrufen, um Umgebungsoptionen abzurufen.  
   
-6.  Nennen Sie [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) mit dem **Handlertyp** SQL_HANDLE_DBC, um ein Verbindungs Handle zuzuordnen.  
+6.  Nennen Sie [SQLAllocHandle](../../odbc/reference/syntax/sqlallochandle-function.md) mit dem **Handlertyp** SQL_HANDLE_DBC, um ein Verbindungs Handle zuzuordnen.  
   
 7.  Sie können optional auch [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) aufrufen, um Verbindungsoptionen festzulegen, oder [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) aufrufen, um die Verbindungsoptionen abzurufen.  
   
 8.  Verwenden Sie SQLConnect, um eine vorhandene Datenquelle zum Herstellen einer Verbindung mit zu verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     oder  
+     Oder  
   
      Verwenden Sie [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) , um eine Verbindungs Zeichenfolge zum Herstellen einer Verbindung mit zu verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -58,7 +58,7 @@ ms.locfileid: "88420554"
   
      Wenn die Verbindungs Zeichenfolge nicht fertig ist, kann **SQLDriverConnect** zur Eingabe der erforderlichen Informationen aufgefordert werden. Dies wird durch den für den *DriverCompletion* -Parameter angegebenen Wert gesteuert.  
   
-     \- oder –  
+     \- oder -  
   
      Sie können [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) mehrmals auf iterative Weise aufzurufen, um die Verbindungs Zeichenfolge zu erstellen und eine Verbindung mit herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -73,7 +73,7 @@ ms.locfileid: "88420554"
 13. Nennen Sie **SQLFreeHandle** mit dem **Handlertyp** SQL_HANDLE_ENV, um das Umgebungs Handle freizugeben.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference).  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt einen **SQLDriverConnect** -Befehl, um eine Verbindung mit einer Instanz von herzustellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ohne dass eine vorhandene ODBC-Datenquelle erforderlich ist. Durch die Übergabe einer unvollständigen Verbindungs Zeichenfolge an **SQLDriverConnect**bewirkt dies, dass der ODBC-Treiber den Benutzer zur Eingabe der fehlenden Informationen auffordert.  
@@ -105,5 +105,4 @@ retcode = SQLDriverConnect(hdbc1,      // Connection handle
                   &cbConnStrOut,   // Address of output length  
                   SQL_DRIVER_PROMPT);  
 ```  
-  
   

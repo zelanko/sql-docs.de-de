@@ -1,6 +1,6 @@
 ---
-description: Ausführen einer SQL Server Native Client benutzerdefinierten Funktion und Verarbeiten des Rückgabecodes (OLE DB)
-title: Benutzerdefinierte Funktion, Rückgabe Code (OLE DB)
+description: Ausführen eines SQL Server Native Client User-Defined Funktion und Verarbeiten des Rückgabecodes (OLE DB)
+title: User-Defined Funktion, Rückgabe Code (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e50cdc551c609f5a30e7b70aa844cb4e46739070
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0f9f31caa5b026df62d509db5c276e60839877b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475732"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866648"
 ---
-# <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>Ausführen einer SQL Server Native Client benutzerdefinierten Funktion und Verarbeiten des Rückgabecodes (OLE DB)
+# <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>Ausführen eines SQL Server Native Client User-Defined Funktion und Verarbeiten des Rückgabecodes (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In diesem Beispiel wird eine benutzerdefinierte Funktion ausgeführt, und der Rückgabecode wird ausgegeben. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
@@ -29,7 +29,7 @@ ms.locfileid: "88475732"
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference).  
   
 ## <a name="example"></a>Beispiel  
  Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete gespeicherte Prozedur zu erstellen.  
@@ -369,5 +369,4 @@ go
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Vorgehensweisen zum Verarbeiten von Ergebnissen &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

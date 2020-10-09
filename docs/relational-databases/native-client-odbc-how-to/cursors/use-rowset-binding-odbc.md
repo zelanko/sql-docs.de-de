@@ -14,12 +14,12 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 763477caaba41016b5137463c6d607f548d1d5a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 78c7df4d425848db41137c457f2d413b18553c64
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494063"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864025"
 ---
 # <a name="use-rowset-binding-odbc"></a>Verwenden der Rowsetbindung (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88494063"
   
 3.  Ausführen der Anweisung.  
   
-4.  Jeder Aufruf von [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oder [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) ruft R-Zeilen ab und überträgt die Daten in die gebundenen Spalten.  
+4.  Jeder Aufruf von [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md) oder [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) ruft R-Zeilen ab und überträgt die Daten in die gebundenen Spalten.  
 
 ### <a name="to-use-row-wise-binding"></a>So verwenden Sie zeilenbezogene Bindungen  
   
@@ -71,11 +71,10 @@ ms.locfileid: "88494063"
   
 4.  Ausführen der Anweisung.  
   
-5.  Jeder Aufruf von [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oder [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) ruft R-Zeilen ab und überträgt die Daten in die gebundenen Spalten.  
+5.  Jeder Aufruf von [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md) oder [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) ruft R-Zeilen ab und überträgt die Daten in die gebundenen Spalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gewusst-wie-Themen zur Verwendung von Cursorn &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
  [Implementierung von Cursorn](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
  [Verwenden von Cursorn &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
-  
   

@@ -14,12 +14,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02b21f406a010d55724f73562361d1bc92486d8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7ada6dd2eea49f407731cb8ef985c9f12405b2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420544"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868925"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Verwalten von Text- und Image-Spalten: Verwenden von Data-at-Execution-Spalten
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "88420544"
   
     -   Setzen Sie für den vierten Parameter eine programmdefinierte Spalten-ID.  
   
-2.  Durch Aufrufen von [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) wird SQL_NEED_DATA zurückgegeben. Dies bedeutet, dass Data-at-Execution-Spalten für die Verarbeitung bereit sind.  
+2.  Durch Aufrufen von [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) wird SQL_NEED_DATA zurückgegeben. Dies bedeutet, dass Data-at-Execution-Spalten für die Verarbeitung bereit sind.  
   
 3.  Für jede Data-at-Execution-Spalte:  
   
-    -   Rufen Sie [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) auf, um den Spaltenarrayzeiger abzurufen. Es wird SQL_NEED_DATA zurückgegeben, wenn eine andere Data-at-Execution-Spalte vorhanden ist.  
+    -   Rufen Sie [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) auf, um den Spaltenarrayzeiger abzurufen. Es wird SQL_NEED_DATA zurückgegeben, wenn eine andere Data-at-Execution-Spalte vorhanden ist.  
   
     -   Rufen Sie zum Senden der Spaltendaten [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) mindestens einmal auf, bis die gesamte Länge gesendet wurde.  
   
-4.  Rufen Sie [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) auf, um anzugeben, dass alle Daten für die letzte Data-at-Execution-Spalte gesendet wurden. Es wird kein SQL_NEED_DATA zurückgegeben.  
+4.  Rufen Sie [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) auf, um anzugeben, dass alle Daten für die letzte Data-at-Execution-Spalte gesendet wurden. Es wird kein SQL_NEED_DATA zurückgegeben.  
 
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie mithilfe von SQLGetData SQL_LONG-Zeichendaten variabler Länge gelesen werden. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
@@ -188,6 +188,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gewusst-wie-Themen zum Verwalten von Text-und image-Spalten &#40;ODBC-&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [Gewusst-wie-Themen zum Verwalten von Text-und image-Spalten &#40;ODBC-&#41;](./odbc-how-to-topics.md)  
   

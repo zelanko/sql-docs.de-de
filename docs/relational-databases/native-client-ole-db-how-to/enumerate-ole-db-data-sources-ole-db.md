@@ -14,19 +14,19 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a27332a7948c535b768f6507aad81ca72bbcbb26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8fc37fff75c3ba078c104e87af38cbcc03954563
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455979"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867990"
 ---
 # <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>SQL Server Native Client OLE DB Datenquellen aufzählen (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Dieses Beispiel zeigt, wie das Enumeratorobjekt zum Auflisten der verfügbaren Datenquellen verwendet wird.  
   
- Um die Datenquellen aufzulisten, die für den SQLOLEDB-Enumerator sichtbar sind, ruft der Consumer die [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) -Methode auf. Diese Methode gibt ein Rowset der Informationen zu den gerade sichtbaren Datenquellen zurück.  
+ Um die Datenquellen aufzulisten, die für den SQLOLEDB-Enumerator sichtbar sind, ruft der Consumer die [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) -Methode auf. Diese Methode gibt ein Rowset der Informationen zu den gerade sichtbaren Datenquellen zurück.  
   
  Je nach verwendeter Netzwerkbibliothek wird in der entsprechenden Domäne nach den Datenquellen gesucht. Für Named Pipes ist dies die Domäne, an der der Client angemeldet ist. Für AppleTalk ist dies die Standardzone. Für SPX/IPX ist dies die Liste von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationen, die in der Bindery gefunden wird. Für Banyan VINES sind dies die auf dem lokalen Netzwerk gefundenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationen. Multiprotokoll und TCP/IP-Sockets werden nicht unterstützt.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88455979"
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>So listen Sie OLE DB-Datenquellen auf  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

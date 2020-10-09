@@ -1,6 +1,6 @@
 ---
 description: Tabellenwertparameter (ODBC)
-title: Tabellenwert Parameter (ODBC) | Microsoft-Dokumentation
+title: Table-Valued Parameter (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f263b0ade88e21f79182f2667714de2e1a105155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b82ec830d04f89fd4a166a999673a6182429a66
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420504"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867865"
 ---
 # <a name="table-valued-parameters-odbc"></a>Tabellenwertparameter (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Die ODBC-Unterstützung für Tabellenwertparameter ermöglicht einer Clientanwendung die effizientere Versendung von parametrisierten Daten an einen Server, indem mehrere Zeilen über einen Aufruf an den Server gesendet werden.  
   
- Informationen zu Tabellenwert Parametern auf dem Server finden Sie unter [Verwenden von Tabellenwert Parametern &#40;Datenbank-Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Informationen zu Tabellenwert Parametern auf dem Server finden Sie unter [Use Table-Valued Parameters &#40;Datenbank-Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  In ODBC gibt es zwei Methoden zum Versenden von Tabellenwertparametern an den Server:  
   
@@ -77,12 +77,8 @@ ms.locfileid: "88420504"
   
  [Zusammenfassung der ODBC-Tabellenwertparameter-API](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  Listet die ODBC-Funktionen auf, die Tabellenwertparameter unterstützen.  
-  
- [Programmierbeispiele für ODBC-Tabellenwertparameter](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
- Beschreibt die Durchführung der häufigsten Aufgaben.  
-  
+
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Tabellenwert Parameter &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
-  
   

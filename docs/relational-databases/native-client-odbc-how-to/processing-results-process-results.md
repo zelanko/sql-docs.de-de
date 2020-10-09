@@ -14,12 +14,12 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48143270af2a56f9662d742ec41e5984972b30c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d61cdfb974a59f61fe53ba65656d49002a816d32
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490847"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868859"
 ---
 # <a name="processing-results---process-results"></a>Verarbeiten von Ergebnissen: Prozessergebnisse
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ Bei der Verarbeitung von Ergebnissen in einer ODBC-Anwendung werden zunächst di
   
 3.  Für jede Zeile im Resultset wird Folgendes ausgeführt:  
   
-    -   Rufen Sie [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) auf, um die nächste Zeile abzurufen.  
+    -   Rufen Sie [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) auf, um die nächste Zeile abzurufen.  
   
     -   Bei der Verwendung von gebundenen Spalten verwenden Sie die Daten, die nun in den Puffern mit gebundenen Spalten verfügbar sind.  
   
@@ -42,15 +42,15 @@ Bei der Verarbeitung von Ergebnissen in einer ODBC-Anwendung werden zunächst di
   
     -   Rufen Sie **SQLGetData** mehrere Male auf, um Daten aus einer text- oder image-Spalte abzurufen.  
   
-4.  Wenn [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) das Ende des Resultsets durch Rückgabe von SQL_NO_DATA signalisiert, rufen Sie [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) auf, um zu bestimmen, ob ein weiteres Resultset verfügbar ist.  
+4.  Wenn [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) das Ende des Resultsets durch Rückgabe von SQL_NO_DATA signalisiert, rufen Sie [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) auf, um zu bestimmen, ob ein weiteres Resultset verfügbar ist.  
   
     -   Wenn SQL_SUCCESS zurückgegeben wird, ist ein anderes Resultset verfügbar.  
   
     -   Wenn SQL_NO_DATA zurückgegeben wird, sind keine weiteren Resultsets verfügbar.  
   
-    -   Wenn SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurückgegeben wird, rufen Sie [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) auf, um festzustellen, ob die Ausgabe von einer PRINT- oder RAISERROR-Anweisung verfügbar ist.  
+    -   Wenn SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurückgegeben wird, rufen Sie [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) auf, um festzustellen, ob die Ausgabe von einer PRINT- oder RAISERROR-Anweisung verfügbar ist.  
   
-         Wenn für Ausgabeparameter oder für den Rückgabewert einer gespeicherten Prozedur gebundene Anweisungsparameter verwendet werden, verwenden Sie die jetzt in den Puffern für gebundene Parameter verfügbaren Daten. Wenn gebundene Parameter verwendet werden, hat jeder Aufruf von [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) oder [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) die SQL-Anweisung *S*-mal ausgeführt, wobei *S* die Anzahl der Elemente im Array von gebundenen Parametern ist. Dies bedeutet, dass *S* Sätze von Ergebnissen verarbeitet werden müssen, wobei jeder Resultset alle Resultsets, Ausgabeparameter und Rückgabecodes enthält, die normalerweise von einer einzelnen Ausführung der SQL-Anweisung zurückgegeben werden.  
+         Wenn für Ausgabeparameter oder für den Rückgabewert einer gespeicherten Prozedur gebundene Anweisungsparameter verwendet werden, verwenden Sie die jetzt in den Puffern für gebundene Parameter verfügbaren Daten. Wenn gebundene Parameter verwendet werden, hat jeder Aufruf von [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) oder [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) die SQL-Anweisung *S*-mal ausgeführt, wobei *S* die Anzahl der Elemente im Array von gebundenen Parametern ist. Dies bedeutet, dass *S* Sätze von Ergebnissen verarbeitet werden müssen, wobei jeder Resultset alle Resultsets, Ausgabeparameter und Rückgabecodes enthält, die normalerweise von einer einzelnen Ausführung der SQL-Anweisung zurückgegeben werden.  
   
     > [!NOTE]  
     >  Wenn ein Resultset COMPUTE-Zeilen (Berechnungszeilen) enthält, wird jede COMPUTE-Zeile als eigenes Resultset verfügbar gemacht. Diese COMPUTE-Resultsets werden in die normalen Zeilen eingefügt und teilen normale Zeilen in mehrere Resultsets.  
@@ -60,9 +60,8 @@ Bei der Verarbeitung von Ergebnissen in einer ODBC-Anwendung werden zunächst di
 6.  Wenn ein weiteres Resultset verfügbar ist, fahren Sie mit Schritt 1 fort.  
 
 > [!NOTE]  
->  Um das Verarbeiten eines Resultsets abzubrechen, bevor [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) SQL_NO_DATA zurückgibt, rufen Sie [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) auf.  
+>  Um das Verarbeiten eines Resultsets abzubrechen, bevor [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) SQL_NO_DATA zurückgibt, rufen Sie [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) auf.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Abrufen von Resultsetinformationen &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
-  
   

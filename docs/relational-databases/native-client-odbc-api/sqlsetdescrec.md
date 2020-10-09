@@ -14,12 +14,12 @@ ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f0bd2a767a3ee99d1ffa1609d87e62b05c5af30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55de82affa5ea60acb5bd284f4876501d96b5404
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420814"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868498"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "88420814"
 |Parameter|Verknüpftes Attribut für nicht-Tabellenwert Parameter-Typen, einschließlich Tabellenwert Parameter-Spalten|Verknüpftes Attribut für Tabellenwertparameter|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Typ*|SQL_DESC_TYPE|SQL_SS_TABLE|  
-|*SubType*|Wird ignoriert.|Für Datensätze des Typs SQL_DATETIME oder SQL_INTERVAL wird es auf SQL_DESC_DATETIME_INTERVAL_CODE festgelegt.|  
+|*Untertyp*|Wird ignoriert.|Für Datensätze des Typs SQL_DATETIME oder SQL_INTERVAL wird es auf SQL_DESC_DATETIME_INTERVAL_CODE festgelegt.|  
 |*Länge*|SQL_DESC_OCTET_LENGTH|Die Länge des Typnamens des Tabellenwertparameters. Kann SQL_NTS sein, wenn der Typname NULL-termininiert ist, oder Null (0), wenn der Typname des Tabellenwertparameters nicht erforderlich ist.|  
 |*Genauigkeit*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
-|*Skalierung*|SQL_DESC_SCALE|Nicht verwendet. Dieser Parameter sollte 0 (null) sein.|  
+|*Skalieren*|SQL_DESC_SCALE|Nicht verwendet. Dieser Parameter sollte 0 (null) sein.|  
 |*DataPtr*|SQL_DESC_DATA_PTR in APD|SQL_CA_SS_TYPE_NAME<br /><br /> Dies ist ein optionaler Parameter für gespeicherte Prozeduren, und NULL kann angegeben werden, wenn er nicht erforderlich ist. Dieser Parameter muss für SQL-Anweisungen angegeben werden, die keine Prozeduraufrufe sind.<br /><br /> *DataPtr* dient auch als eindeutiger Wert, der von der Anwendung verwendet werden kann, um diesen Tabellenwert Parameter zu identifizieren, wenn die Variable Zeilen Bindung verwendet wird.|  
 |*Stringlengthptr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> Bei einem Tabellenwertparameter ist dies die Anzahl der zu übertragenden Zeilen oder SQL_DATA_AT_EXEC. Dies ist ein Zeiger auf einen Wert, der die Anzahl der Zeilen enthält, die mit SQLExecDirect übertragen werden sollen.|  
 |*"Indikatorptr"*|SQL_DESC_INDICATOR_PTR|SQL_DESC_INDICATOR_PTR|  
@@ -47,7 +47,7 @@ ms.locfileid: "88420814"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>SQLSetDescRec-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die für Datums-/Uhrzeittypen zulässigen Werte lauten wie folgt:  
   
-| attribute | *Typ* | *SubType* | *Länge* | *Genauigkeit* | *Skalierung* |
+| attribute | *Typ* | *Untertyp* | *Länge* | *Genauigkeit* | *Skalierung* |
 | --------- | ------ | --------- | -------- | ----------- | ------- |
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
@@ -59,10 +59,9 @@ ms.locfileid: "88420814"
  Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlsetdescrec-support-for-large-clr-udts"></a>SQLSetDescRec-Unterstützung für große CLR-UDTs  
- **Sqlsetopscrec** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **Sqlsetopscrec** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große CLR-User-Defined Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
+ [SQLSetDescRec](../../odbc/reference/syntax/sqlsetdescrec-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

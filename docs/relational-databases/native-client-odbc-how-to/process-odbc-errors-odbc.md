@@ -14,29 +14,29 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5bade3c381024ef8e20ac069ed3effd16ac1e55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21cab8507af433b39a6be6e35063d8a89c713af3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490875"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868869"
 ---
 # <a name="process-odbc-errors-odbc"></a>Verarbeiten von ODBC-Fehlern (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Zwei ODBC-Funktionsaufrufe können verwendet werden, um ODBC-Meldungen abzurufen: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) und [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Um primäre, mit ODBC verbundene Informationen in den Feldern **SQLState**, **pfNative**and **ErrorMessage** zu erhalten, rufen Sie [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) auf, bis SQL_NO_DATA zurückgegeben wird. Für jeden Diagnosedatensatz kann [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) aufgerufen werden, um einzelne Felder abzurufen. Alle treiberspezifischen Felder müssen mit **SQLGetDiagField**abgerufen werden.  
+  Zwei ODBC-Funktionsaufrufe können verwendet werden, um ODBC-Meldungen abzurufen: [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) und [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Um primäre, mit ODBC verbundene Informationen in den Feldern **SQLState**, **pfNative**and **ErrorMessage** zu erhalten, rufen Sie [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) auf, bis SQL_NO_DATA zurückgegeben wird. Für jeden Diagnosedatensatz kann [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) aufgerufen werden, um einzelne Felder abzurufen. Alle treiberspezifischen Felder müssen mit **SQLGetDiagField**abgerufen werden.  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) und [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) werden vom ODBC-Treiber-Manager, nicht von einem einzelnen Treiber, verarbeitet. Der ODBC-Treiber-Manager speichert treiberspezifische Diagnosefelder erst zwischen, wenn eine erfolgreiche Verbindung hergestellt wurde. Der Aufruf von [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) für treiberspezifische Diagnosefelder ist vor dem erfolgreichen Herstellen einer Verbindung nicht möglich. Dies betrifft auch die ODBC-Verbindungsbefehle, auch wenn sie SQL_SUCCESS_WITH_INFO zurückgeben. Treiberspezifische Diagnosefelder sind bis zum nächsten ODBC-Funktionsaufruf nicht verfügbar.  
+ [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) und [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) werden vom ODBC-Treiber-Manager, nicht von einem einzelnen Treiber, verarbeitet. Der ODBC-Treiber-Manager speichert treiberspezifische Diagnosefelder erst zwischen, wenn eine erfolgreiche Verbindung hergestellt wurde. Der Aufruf von [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) für treiberspezifische Diagnosefelder ist vor dem erfolgreichen Herstellen einer Verbindung nicht möglich. Dies betrifft auch die ODBC-Verbindungsbefehle, auch wenn sie SQL_SUCCESS_WITH_INFO zurückgeben. Treiberspezifische Diagnosefelder sind bis zum nächsten ODBC-Funktionsaufruf nicht verfügbar.  
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
- Dieses Beispiel zeigt einen einfachen Fehlerhandler, der [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) für die Standard-ODBC-Informationen aufruft. Anschließend wird geprüft, ob eine gültige Verbindung vorhanden ist. Ist dies der Fall, wird **SQLGetDiagField** für die ODBC-treiberspezifischen Diagnosefelder von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgerufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
+### <a name="description"></a>BESCHREIBUNG  
+ Dieses Beispiel zeigt einen einfachen Fehlerhandler, der [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) für die Standard-ODBC-Informationen aufruft. Anschließend wird geprüft, ob eine gültige Verbindung vorhanden ist. Ist dies der Fall, wird **SQLGetDiagField** für die ODBC-treiberspezifischen Diagnosefelder von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgerufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
  Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](/windows/win32/seccrypto/cryptography-reference).  
   
  Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Startseite [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treiber Name ist "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
   
@@ -241,5 +241,4 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
-  
   

@@ -15,14 +15,14 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: a631ed40344fc8661cef23b9758aa35feb041c45
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91729253"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867695"
 ---
-# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database"></a>Dmacmd: Bewerten der Bereitschaft eines SQL Server-Daten Estate Migrieren zu Azure SQL-Datenbank 
+# <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>Dmacmd: Bewerten der Bereitschaft einer SQL Server-Datenbankmigration zu Azure SQL 
 
 Wenn viele Organisationen versuchen, zu Azure zu migrieren, ist es wichtig, vorhandene lokale SQL Server Instanzen zu bewerten und das richtige Azure SQL-Ziel zu identifizieren: Azure SQL-Datenbank, Azure SQL-verwaltete Instanz oder SQL Server auf Azure-VMS. 
 
@@ -87,7 +87,7 @@ Die XML-Elemente, die an dmacmd übermittelt werden, werden in der folgenden Tab
 |**XML-Element** |**Definition**  |
 |---------|---------|
 |`AssessmentName`|Der Name der Bewertung.|
-|`AssessmentSourcePlatform`|Quelle SQL Server Plattform. Standardwert: `SqlOnPrem`.|
+|`AssessmentSourcePlatform`|Quelle SQL Server Plattform. Der Standardwert ist `SqlOnPrem`.|
 |`AssessmentTargetPlatform`|Ziel SQL Server Plattform.  </br> `AzureSqlDatabase` ist für ein Azure SQL-Daten Bank Ziel. </br> `ManagedSqlServer` ist für ein Azure SQL-verwaltete Instanz Ziel. </br></br>Das Beispiel " **Assessment-for-azuresqlmi** " bewertet ein SQL verwaltete Instanz-Ziel.|
 |`AssessmentDatabases`|Wenn Sie alle Datenbanken in einer Instanz bewerten müssen, geben Sie nur den Instanznamen an, und geben Sie in jeder Zeile bestimmte Datenbanken an. </br></br>Das Beispiel **Assessment-for-azuresqlmi** bewertet alle Datenbanken in der Instanz `Servername\SQL2017` und zwei bestimmte Datenbanken in der Instanz `Servername\SQL2016` .  |
 |`AssessmentResultDma` </br> `AssessmentResultJson` </br> `AssessmentResultCsv` | Gibt das Format der Ergebnisdatei an. `.DMA`, `.JSON` `.CSV` bzw. Doppelklicken Sie `.DMA` , um in der DMA-Benutzeroberfläche zu öffnen. <br> `AssessmentResultDma` ist erforderlich, um Bewertungsergebnisse in Azure migrate Hub hochzuladen.  |
