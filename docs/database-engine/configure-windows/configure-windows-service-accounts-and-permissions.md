@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd2a061d3eba753530f7f86b858563b2168157a2
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: c3a609c9d9cdf4f01fea153fa85316920b674e88
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042801"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670313"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Konfigurieren von Windows-Dienstkonten und -Berechtigungen
 
@@ -72,7 +72,6 @@ Jeder Dienst in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|
 
 ## <a name="services-installed-by-ssnoversion"></a><a name="Service_Details"></a> Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -172,7 +171,7 @@ Verwaltete Dienstkonten, gruppenverwaltete Dienstkonten und virtuellen Konten so
 
   Sie benötigen Windows Server 2012 R2 oder höher als Betriebssystem, um ein gMSA für SQL Server 2014 oder höher zu verwenden. Server mit Windows Server 2012 R2 erfordern [KB 2998082](https://support.microsoft.com/kb/2998082) , damit die Dienste sich ohne Unterbrechung nach einer Änderung des Kennworts direkt anmelden können.
 
-  Weitere Informationen finden Sie unter [Gruppenverwaltete Dienstkonten: Übersicht](https://technet.microsoft.com/library/hh831782.aspx).
+  Weitere Informationen finden Sie unter [Gruppenverwaltete Dienstkonten: Übersicht](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11)).
 
   > [!NOTE]
   > Das gMSA muss vom Domänenadministrator in Active Directory erstellt werden, bevor es beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste verwendet werden kann.
@@ -195,7 +194,7 @@ Verwaltete Dienstkonten, gruppenverwaltete Dienstkonten und virtuellen Konten so
 
 Weitere Informationen zu verwalteten Dienstkonten und virtuellen Konten finden Sie im Abschnitt **Managed service account and virtual account concepts** (Konzepte verwalteter Dienstkonten und virtueller Konten) in der [Service Accounts Step-by-Step Guide](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) (Schritt-für-Schritt-Anleitung für Dienstkonten) und den [Managed Service Accounts Frequently Asked Questions (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)(Häufig gestellten Fragen (FAQ) zu verwalteten Dienstkonten).
 
-**Sicherheitshinweis:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Verwenden Sie möglichst ein [verwaltetes Dienstkonto](#MSA) oder ein [virtuelles Konto](#VA_Desc). Wenn die Verwendung von verwalteten Dienstkonten und virtuellen Konten nicht möglich ist, verwenden Sie ein bestimmtes Benutzerkonto oder Domänenkonto mit niedrigen Berechtigungen anstelle eines freigegebenen Kontos für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste. Verwenden Sie separate Konten für andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste. Gewähren Sie dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto oder den Dienstgruppen keine zusätzlichen Berechtigungen. Berechtigungen werden durch Gruppenmitgliedschaft oder direkt für eine Dienst-SID gewährt, sofern eine Dienst-SID unterstützt wird.
+**Sicherheitshinweis:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Verwenden Sie nach Möglichkeit ein [MSA](#MSA), ein [gMSA](#GMSA) oder ein [virtuelles Konto](#VA_Desc). Wenn die Verwendung von MSAs, gMSAs und virtuellen Konten nicht möglich ist, verwenden Sie ein bestimmtes Benutzerkonto oder Domänenkonto mit niedrigen Berechtigungen anstelle eines gemeinsam genutzten Kontos für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste. Verwenden Sie separate Konten für andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste. Gewähren Sie dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto oder den Dienstgruppen keine zusätzlichen Berechtigungen. Berechtigungen werden durch Gruppenmitgliedschaft oder direkt für eine Dienst-SID gewährt, sofern eine Dienst-SID unterstützt wird.
 
 ### <a name="automatic-startup"></a><a name="Auto_Start"></a> Automatischer Start
 
@@ -223,7 +222,7 @@ In der folgenden Tabelle sind die [!INCLUDE[ssNoVersion](../../includes/ssnovers
 |R Services oder Machine Learning Services|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
 |PolyBase-Engine| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT, PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
 
-\*Weitere Informationen und eine Beispielsyntax zu unbeaufsichtigten Installationen finden Sie unter [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
+\*Weitere Informationen und eine Beispielsyntax zu unbeaufsichtigten Installationen finden Sie unter [Installieren von SQL Server 2016 von der Eingabeaufforderung](../install-windows/install-sql-server-from-the-command-prompt.md).
 
 \*\*Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst ist auf Instanzen von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] und [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] mit Advanced Services deaktiviert.
 
@@ -249,7 +248,7 @@ In diesem Abschnitt werden die Berechtigungen beschrieben, die beim [!INCLUDE[ss
 
 ### <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> Dienstkonfiguration und Zugriffssteuerung
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktiviert die Pro-Dienst-SID für alle seine Dienste, um Dienstisolierung und tiefgreifende Vorbeugungsmaßnahmen zu ermöglichen. Die Pro-Dienst-SID ergibt sich aus dem Dienstnamen und ist für diesen Dienst eindeutig. Ein Name einer Dienst-SID für den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Dienst könnte beispielsweise **NT Service\MSSQL$** _\<InstanceName>_ lauten. Die Dienstisolierung ermöglicht den Zugriff auf bestimmte Objekte, ohne dass hierzu ein Konto mit umfangreichen Berechtigungen verwendet oder die Sicherheit des Objekts gefährdet werden muss. Durch die Verwendung eines Zugriffssteuerungseintrags mit einer Dienst-SID kann ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst den Zugriff auf die eigenen Ressourcen einschränken.
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktiviert die Pro-Dienst-SID für alle seine Dienste, um Dienstisolierung und tiefgreifende Vorbeugungsmaßnahmen zu ermöglichen. Die Pro-Dienst-SID ergibt sich aus dem Dienstnamen und ist für diesen Dienst eindeutig. Ein möglicher Dienst-SID-Name für eine benannte Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Diensts wäre **NT Service\MSSQL$** _\<InstanceName>_ . Die Dienstisolierung ermöglicht den Zugriff auf bestimmte Objekte, ohne dass hierzu ein Konto mit umfangreichen Berechtigungen verwendet oder die Sicherheit des Objekts gefährdet werden muss. Durch die Verwendung eines Zugriffssteuerungseintrags mit einer Dienst-SID kann ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst den Zugriff auf die eigenen Ressourcen einschränken.
 
 > [!NOTE]
 > Unter Windows 7 und [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (und höher) kann die Pro-Dienst-SID das virtuelle vom Dienst verwendete Konto sein.
@@ -426,7 +425,7 @@ In der folgenden Tabelle werden die Berechtigungen angezeigt, die für [!INCLUDE
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber|Optimiert Datenbanken für eine optimale Abfrageleistung.|Bei der ersten Verwendung muss ein Benutzer mit Anmeldeinformationen als Systemadministrator die Anwendung initialisieren. Nach der Initialisierung können dbo-Benutzer mithilfe des Optimierungsratgebers für [!INCLUDE[ssDE](../../includes/ssde-md.md)] nur diejenigen Tabellen optimieren, die sie besitzen. Weitere Informationen finden Sie unter "Initialisieren des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.|
 
 > [!IMPORTANT]
-> Aktivieren Sie vor dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Upgrade die Windows-Authentifizierung für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent, und überprüfen Sie die erforderliche Standardkonfiguration: Das Konto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Diensts muss Mitglied der sysadmin-Gruppe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein.
+> Aktivieren Sie vor dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Upgrade den SQL Server-Agent, und überprüfen Sie die erforderliche Standardkonfiguration: Das Konto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Diensts muss Mitglied der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Serverrolle **sysadmin** sein.
 
 ### <a name="registry-permissions"></a><a name="Registry"></a> Registrierungsberechtigungen
 
@@ -446,7 +445,7 @@ Die Registrierung verwaltet auch eine Zuordnung der Instanz-ID zum Instanznamen.
 
 Windows-Verwaltungsinstrumentation (WMI) muss eine Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]herstellen können. Dazu wird die Pro-Dienst-SID des Windows-WMI-Anbieters (**NT SERVICE\winmgmt**) in [!INCLUDE[ssDE](../../includes/ssde-md.md)]bereitgestellt.
 
-Der SQL-WMI-Anbieter erfordert die folgenden Berechtigungen:
+Der SQL-WMI-Anbieter benötigt die folgenden Mindestberechtigungen:
 
 - Mitgliedschaft in der festen Datenbankrolle **db_ddladmin** oder **db_owner** in der msdb-Datenbank
 - **CREATE DDL EVENT NOTIFICATION** -Berechtigung auf dem Server
@@ -485,11 +484,11 @@ Während des Setups wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 
 #### <a name="sa-account"></a><a name="sa"></a> sa-Konto
 
-Das **sa** -Konto ist immer als [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Anmeldung vorhanden und ist Mitglied der festen Serverrolle **sysadmin** . Wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] nur mit der Windows-Authentifizierung installiert wird, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung also nicht aktiviert ist, ist die **sa** -Anmeldung zwar vorhanden, aber deaktiviert. Weitere Informationen zum Aktivieren des **sa** -Kontos finden Sie unter [Ändern des Serverauthentifizierungsmodus](../../database-engine/configure-windows/change-server-authentication-mode.md).
+Das **sa** -Konto ist immer als [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Anmeldung vorhanden und ist Mitglied der festen Serverrolle **sysadmin** . Wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] nur mit der Windows-Authentifizierung installiert wird (die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung also nicht aktiviert ist), ist die **sa**-Anmeldung zwar vorhanden, aber deaktiviert. Das Kennwort ist in diesem Fall zufällig und komplex. Weitere Informationen zum Aktivieren des **sa** -Kontos finden Sie unter [Ändern des Serverauthentifizierungsmodus](../../database-engine/configure-windows/change-server-authentication-mode.md).
 
 #### <a name="sql-server-per-service-sid-login-and-privileges"></a><a name="Logins"></a> Pro-Dienst-SID-Anmeldung für SQL Server und Berechtigungen
 
-Die Pro-Dienst-SID des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts wird als [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Anmeldung bereitgestellt. Die Pro-Dienst-SID-Anmeldung ist Mitglied der festen Serverrolle **sysadmin** .
+Die Dienst-SID (auch als Dienstsicherheitsprinzipal bezeichnet) des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Diensts wird als [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Anmeldename bereitgestellt. Die Pro-Dienst-SID-Anmeldung ist Mitglied der festen Serverrolle **sysadmin** . Weitere Informationen zur Dienst-SID finden Sie unter [Verwenden von Dienst-SIDs zum Erteilen von Berechtigungen für Dienste in SQL Server](../../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md).
 
 #### <a name="sql-server-agent-login-and-privileges"></a><a name="Agent"></a> SQL Server-Agent-Anmeldung und Berechtigungen
 
@@ -513,9 +512,9 @@ Das während des Setups angegebene Konto wird als Mitglied der Datenbankrolle **
 
 ### <a name="ssas-provisioning"></a><a name="SSAS"></a> SSAS-Bereitstellung
 
-[!INCLUDE[ssAS](../../includes/ssas-md.md)] -Dienstkontoanforderungen unterscheiden sich je nach Bereitstellung des Servers. Bei der Installation von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]fordert das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup die Konfiguration des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Diensts zur Ausführung unter einem Domänenkonto. Domänenkonten sind erforderlich, um die in SharePoint integrierte Funktion für verwaltete Konten zu unterstützen. Aus diesem Grund wird beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup kein Standarddienstkonto, z. B. ein virtuelles Konto, für die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Installation bereitgestellt. Weitere Informationen zur Bereitstellung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint, finden Sie unter [Konfigurieren von Power Pivot-Dienstkonten](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts).
+[!INCLUDE[ssAS](../../includes/ssas-md.md)] -Dienstkontoanforderungen unterscheiden sich je nach Bereitstellung des Servers. Bei der Installation von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]fordert das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup die Konfiguration des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Diensts zur Ausführung unter einem Domänenkonto. Domänenkonten sind erforderlich, um die in SharePoint integrierte Funktion für verwaltete Konten zu unterstützen. Aus diesem Grund wird beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup kein Standarddienstkonto, z. B. ein virtuelles Konto, für die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Installation bereitgestellt. Weitere Informationen zur Bereitstellung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint, finden Sie unter [Konfigurieren von Power Pivot-Dienstkonten](/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts).
 
-Für alle anderen eigenständigen [!INCLUDE[ssAS](../../includes/ssas-md.md)] -Installationen können Sie den Dienst zur Ausführung unter einem Domänenkonto, integriertem Systemkonto, verwaltetem Konto oder virtuellem Konto bereitstellen. Weitere Informationen zur Bereitstellung von Konten finden Sie unter [Konfigurieren von Dienstkonten &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services).
+Für alle anderen eigenständigen [!INCLUDE[ssAS](../../includes/ssas-md.md)] -Installationen können Sie den Dienst zur Ausführung unter einem Domänenkonto, integriertem Systemkonto, verwaltetem Konto oder virtuellem Konto bereitstellen. Weitere Informationen zur Bereitstellung von Konten finden Sie unter [Konfigurieren von Dienstkonten &#40;Analysis Services&#41;](/analysis-services/instances/configure-service-accounts-analysis-services).
 
 Für gruppierte Installationen müssen Sie ein Domänenkonto oder integriertes Systemkonto angeben. Weder verwaltete noch virtuelle Konten werden für [!INCLUDE[ssAS](../../includes/ssas-md.md)] -Failovercluster unterstützt.
 
@@ -551,18 +550,18 @@ Dieser Abschnitt enthält weitere Informationen zu [!INCLUDE[ssNoVersion](../../
 
 ### <a name="description-of-service-accounts"></a><a name="Serv_Accts"></a> Beschreibung von Dienstkonten
 
-Beim Dienstkonto handelt es sich um das Konto, das für das Starten eines Windows-Dienst verwendet wird, wie z. B. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
+Beim Dienstkonto handelt es sich um das Konto, das für das Starten eines Windows-Dienst verwendet wird, wie z. B. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Für die Ausführung von SQL Server muss kein Dienstkonto zusätzlich zur Dienst-SID als Anmeldekonto für SQL Server hinzugefügt werden. Die Dienst-SID ist immer vorhanden und ein Mitglied der festen Serverrolle **sysadmin**.
 
 #### <a name="accounts-available-with-any-operating-system"></a><a name="Any_OS"></a> Mit einem beliebigen Betriebssystem verfügbare Konten
 
-Neben den zuvor beschriebenen neuen [MSAs](#MSA) und [virtuellen Konten](#VA_Desc) können folgende Konten verwendet werden:
+Neben den zuvor beschriebenen neuen [MSAs](#MSA), [gMSAs](#GMSA) und [virtuellen Konten](#VA_Desc) können folgende Konten verwendet werden:
 
 <a name="Domain_User"></a> **Domänenbenutzerkonto**
 
 Wenn der Dienst mit Netzwerkdiensten interagieren und auf Domänenressourcen wie Dateifreigaben zugreifen muss oder verknüpfte Serververbindungen mit anderen Computern mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet, kann ein Domänenkonto mit minimalen Rechten verwendet werden. Viele Server-zu-Server-Aktivitäten können nur mit einem Domänenbenutzerkonto ausgeführt werden. Dieses Konto sollte in Ihrer Umgebung von der Domänenverwaltung vorab erstellt werden.
 
 > [!NOTE]
-> Wenn Sie die Anwendung zur Verwendung eines Domänenkontos konfigurieren, können Sie zwar die Berechtigungen für die Anwendung isolieren, müssen aber Kennwörter manuell verwalten oder eine benutzerdefinierte Lösung für die Verwaltung dieser Kennwörter erstellen. Viele Serveranwendungen erhöhen die Sicherheit mithilfe dieser Strategie, aber diese Strategie erfordert zusätzliche Verwaltung und Komplexität. Bei diesem Bereitstellungen wenden Dienstadministratoren viel Zeit für Wartungstasks wie die Verwaltung von Dienstkennwörtern und Dienstprinzipalnamen (SPNs) auf, die für die Kerberos-Authentifizierung erforderlich sind. Außerdem können diese Wartungstasks den Dienst stören.
+> Wenn Sie SQL Server für die Verwendung eines Domänenkontos konfigurieren, können Sie zwar die Berechtigungen für den Dienst isolieren, müssen aber Kennwörter manuell verwalten oder eine benutzerdefinierte Lösung für die Verwaltung dieser Kennwörter erstellen. Viele Serveranwendungen erhöhen die Sicherheit mithilfe dieser Strategie, aber diese Strategie erfordert zusätzliche Verwaltung und Komplexität. Bei diesem Bereitstellungen wenden Dienstadministratoren viel Zeit für Wartungstasks wie die Verwaltung von Dienstkennwörtern und Dienstprinzipalnamen (SPNs) auf, die für die Kerberos-Authentifizierung erforderlich sind. Außerdem können diese Wartungstasks den Dienst stören.
 
 <a name="Local_User"></a> **Lokale Benutzerkonten**
 
@@ -570,7 +569,10 @@ Wenn der Computer nicht Teil einer Domäne ist, empfiehlt sich ein lokales Benut
 
 <a name="Local_Service"></a> **Lokales Dienstkonto**
 
-Das lokale Dienstkonto ist ein integriertes Konto, das dieselben Zugriffsrechte für Ressourcen und Objekte besitzt wie die Mitglieder der Gruppe Benutzer. Durch diesen beschränkten Zugriff wird das System bei Gefährdung einzelner Dienste oder Prozesse geschützt. Dienste, die unter dem lokalen Dienstkonto ausgeführt werden, greifen als NULL-Sitzung ohne Anmeldeinformationen auf Netzwerkressourcen zu. Beachten Sie, dass das lokale Dienstkonto nicht für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst unterstützt wird. Der lokale Dienst wird nicht als das Konto unterstützt, unter dem diese Dienste ausgeführt werden, da es sich um einen freigegebenen Dienst handelt und alle anderen Dienste, die unter dem lokalen Dienst ausgeführt werden, Systemadministratorzugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hätten. Der tatsächliche Name des Kontos lautet **NT AUTHORITY\LOCAL SERVICE**.
+Das lokale Dienstkonto ist ein integriertes Konto, das dieselben Zugriffsrechte für Ressourcen und Objekte besitzt wie die Mitglieder der Gruppe Benutzer. Durch diesen beschränkten Zugriff wird das System bei Gefährdung einzelner Dienste oder Prozesse geschützt. Dienste, die unter dem lokalen Dienstkonto ausgeführt werden, greifen als NULL-Sitzung ohne Anmeldeinformationen auf Netzwerkressourcen zu. 
+> [!NOTE]
+> Das lokale Dienstkonto wird für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienste nicht unterstützt. Der lokale Dienst wird nicht als das Konto unterstützt, unter dem diese Dienste ausgeführt werden, da es sich um einen freigegebenen Dienst handelt und alle anderen Dienste, die unter dem lokalen Dienst ausgeführt werden, Systemadministratorzugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hätten.
+Der tatsächliche Name des Kontos lautet **NT AUTHORITY\LOCAL SERVICE**.
 
 <a name="Network_Service"></a> **Netzwerkdienstkonto**
 

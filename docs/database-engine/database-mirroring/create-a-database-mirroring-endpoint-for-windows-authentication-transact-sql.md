@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 15b7fe1a4a8ad78402226814e46ffc9d47964439
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c364aab699f49a4a9c4814a572a6a7295273650b
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789732"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529448"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "85789732"
 ###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Die Authentifizierungs- und Verschlüsselungsmethoden der Serverinstanz werden vom Systemadministrator festgelegt.  
   
-> [!IMPORTANT]  
+> [!WARNING]  
 >  Der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
- Erfordert die CREATE ENDPOINT-Berechtigung oder die Mitgliedschaft in der festen Serverrolle "sysadmin". Weitere Informationen finden Sie unter [GRANT (Endpunktberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Erfordert die `CREATE ENDPOINT`-Berechtigung oder die Mitgliedschaft in der festen `sysadmin`-Serverrolle. Weitere Informationen finden Sie unter [GRANT (Endpunktberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
@@ -58,15 +58,16 @@ ms.locfileid: "85789732"
   
 3.  Ermitteln Sie mithilfe der folgenden Anweisung, ob ein Endpunkt für die Datenbankspiegelung bereits vorhanden ist:  
   
-    ```  
+    ```sql  
     SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
     ```  
   
     > [!IMPORTANT]  
     >  Falls bereits ein Endpunkt der Datenbankspiegelung für die Serverinstanz vorhanden ist, verwenden Sie diesen Endpunkt für alle anderen Sitzungen, die Sie für die Serverinstanz einrichten.  
   
-4.  Wenn Sie Transact-SQL zum Erstellen eines Endpunktes verwenden möchten, der mit Windows-Authentifizierung verwendet werden soll, verwenden Sie eine CREATE ENDPOINT-Anweisung. Die Anweisung weist folgende allgemeine Form auf:  
+4.  Wenn Sie Transact-SQL zum Erstellen eines Endpunkts mit Windows-Authentifizierung verwenden möchten, verwenden Sie eine `CREATE ENDPOINT`-Anweisung. Die Anweisung weist folgende allgemeine Form auf:  
   
+     ```syntaxsql
      CREATE ENDPOINT *\<endpointName>*  
   
      STATE=STARTED  
@@ -81,16 +82,17 @@ ms.locfileid: "85789732"
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
      [ ALGORITHM { *\<algorithm>* } ]  
   
      ]  
   
-     [ **,** ] ROLE = *\<role>*  
+     [**,**] ROLE = *\<role>*  
   
      )  
-  
+     ```
+     
      Hierbei gilt:  
   
     -   *\<endpointName>* ist der eindeutige Name für den Endpunkt der Datenbankspiegelung der Serverinstanz.  
@@ -101,7 +103,7 @@ ms.locfileid: "85789732"
   
          Eine Portnummer kann in einem Computersystem nur einmal verwendet werden. Ein Datenbankspiegelungsendpunkt kann einen beliebigen Port verwenden, der auf dem lokalen System verfügbar ist, wenn der Endpunkt erstellt wird. Verwenden Sie die folgende Transact-SQL-Anweisung, um den Port anzugeben, der zurzeit von TCP-Endpunkten im System verwendet wird:  
   
-        ```  
+        ```sql  
         SELECT name, port FROM sys.tcp_endpoints;  
         ```  
   
@@ -124,12 +126,12 @@ ms.locfileid: "85789732"
   
          AES RC4 gibt an, dass dieser Endpunkt den Verschlüsselungsalgorithmus verhandelt, wobei der AES-Algorithmus bevorzugt wird. RC4 AES gibt an, dass dieser Endpunkt den Verschlüsselungsalgorithmus verhandelt, wobei der RC4-Algorithmus bevorzugt wird. Wenn beide Endpunkte beide Algorithmen angeben, jedoch in unterschiedlicher Reihenfolge, gewinnt der Endpunkt, der die Verbindung annimmt. Stellen Sie explizit denselben Algorithmus bereit, um Verbindungsfehler zwischen verschiedenen Servern zu verhindern.
   
-        > [!NOTE]  
+        > [!WARNING]  
         >  Der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.  
   
     -   *\<role>* definiert die Rolle bzw. Rollen, die der Server ausführen kann. Die Angabe von ROLE ist erforderlich. Die Rolle des Endpunkts ist jedoch nur für die Datenbankspiegelung relevant. Für [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]wird die Rolle des Endpunkts ignoriert.  
   
-         Damit eine Serverinstanz als eine Rolle für eine Datenbankspiegelungssitzung und eine andere Rolle für eine andere Sitzung fungieren kann, geben Sie ROLE=ALL an. Wenn Sie eine Serverinstanz auf die Partner- oder Zeugenrolle beschränken möchten, geben Sie ROLE=PARTNER bzw. ROLE=WITNESS an.  
+         Damit eine Serverinstanz als eine Rolle für eine Datenbankspiegelungssitzung und eine andere Rolle für eine andere Sitzung fungieren kann, geben Sie ROLE=ALL an. Wenn Sie eine Serverinstanz auf die Partner- oder Zeugenrolle beschränken möchten, geben Sie `ROLE = PARTNER` bzw. `ROLE = WITNESS` an.  
   
         > [!NOTE]  
         >  Weitere Informationen zu den Datenbank-Spiegelungsoptionen für die verschiedenen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -155,7 +157,7 @@ ms.locfileid: "85789732"
 > [!IMPORTANT]  
 >  Jede Serverinstanz kann nur einen Endpunkt besitzen. Wenn Sie daher wollen, dass eine Serverinstanz in einigen Sitzungen als Partner und in anderen als Zeuge agiert, müssen Sie ROLE=ALL festlegen.  
   
-```  
+```sql  
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  

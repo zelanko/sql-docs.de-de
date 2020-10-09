@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 68bfdb9d087539efaf05d9f3f78bb5348d2a2831
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988745"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624834"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,6 +85,9 @@ Die Sicherung einer großen Datenbank im Blobspeicher unterliegt den Einschränk
   
 -   SQL Server schränkt die maximale Sicherungsgröße, die mit einem Seitenblob unterstützt wird, auf 1 TB ein. Die maximal unterstützte Größe für Sicherungen mit Blockblobs ist auf ca. 200 GB (50.000 Blöcke * 4 MB MAXTRANSFERSIZE) beschränkt. Für Blockblobs wird Striping unterstützt, damit erheblich größere Sicherungen unterstützt werden.  
   
+    > [!IMPORTANT]  
+    >  Obwohl die maximal unterstützte Sicherungsgröße durch einen einzelnen Blockblob bei 200 GB liegt, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in kleinere Blocks schreiben. Dadurch kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Limit von 50.000 Blocks erreichen, bevor die Sicherung vollständig übertragen wurde. Teilen Sie Sicherungen auf, auch wenn diese kleiner als 200 GB sind, um zu vermeiden, dass das Blocklimit erreicht wird. Das gilt insbesondere dann, wenn Sie differenzielle oder nicht komprimierte Sicherungen verwenden.
+
 -   Sie können Sicherungs- oder Wiederherstellungsanweisungen ausgeben, indem Sie TSQL, SMO, PowerShell-Cmdlets, SQL Server Management Studio Backup oder den Wiederherstellungs-Assistenten verwenden.   
   
 -   Das Erstellen von Namen für logische Geräte wird nicht unterstützt. Folglich ist es nicht möglich, eine URL mithilfe von sp_dumpdevice oder über SQL Server Management Studio als Sicherungsmedium hinzuzufügen.  

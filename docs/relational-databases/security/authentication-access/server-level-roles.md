@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e955b167d1ce496ca14585d16c470502e9bffbe
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334021"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636140"
 ---
 # <a name="server-level-roles"></a>Rollen auf Serverebene
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -58,6 +58,9 @@ ms.locfileid: "85334021"
 |**diskadmin**|Die feste Serverrolle **diskadmin** wird zum Verwalten von Datenträgerdateien verwendet.|  
 |**dbcreator**|Mitglieder der festen Serverrolle **dbcreator** können beliebige Datenbanken erstellen, ändern, löschen und wiederherstellen.|  
 |**öffentlich**|Jede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldung gehört zur Serverrolle **public**. Wenn einem Serverprinzipal keine bestimmten Berechtigungen für ein sicherungsfähiges Objekt erteilt oder verweigert werden, erbt der Benutzer die Berechtigungen, die der Rolle public für dieses Objekt erteilt wurden. Weisen Sie einem Objekt nur dann public-Berechtigungen zu, wenn das Objekt für alle Benutzer verfügbar sein soll. Sie können keine Mitgliedschaft in „public“ ändern.<br /><br /> **Hinweis:** Die feste Serverrolle **public** wird anders implementiert als andere Rollen, da Berechtigungen gewährt, verweigert oder widerrufen werden können.|  
+  
+> [!IMPORTANT] 
+> Die meisten Berechtigungen, die über die folgenden Serverrollen gewährt werden, sind nicht auf Synapse SQL anwendbar: **processadmin**, **serveradmin**, **setupadmin** und **diskadmin**.
   
 ## <a name="permissions-of-fixed-server-roles"></a>Berechtigungen fester Serverrollen  
  Jede feste Serverrolle besitzt bestimmte Berechtigungen. Die folgende Grafik zeigt die den Serverrollen zugewiesenen Berechtigungen:   

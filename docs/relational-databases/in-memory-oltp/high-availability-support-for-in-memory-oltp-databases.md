@@ -11,28 +11,28 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2caa0afdd029b630b0c10f1e3c3c0ea3c0ea0ca5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 92a09ac4702cae987c4fa5f4ccd420819c29073a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537083"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529431"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Unterstützung für Hochverfügbarkeit für In-Memory OLTP-Datenbanken
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Datenbanken mit speicheroptimierten Tabellen mit bzw. ohne systemeigene kompilierte gespeicherte Prozeduren werden mit AlwaysOn-Verfügbarkeitsgruppen vollständig unterstützt.  Es gibt keinen Unterschied bei der Konfiguration und Unterstützung von Datenbanken mit [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Objekten und solchen ohne diese Objekte.  
+  Datenbanken mit speicheroptimierten Tabellen mit bzw. ohne systemeigene kompilierte gespeicherte Prozeduren werden mit AlwaysOn-Verfügbarkeitsgruppen vollständig unterstützt.  Es gibt keinen Unterschied bei der Konfiguration und Unterstützung von Datenbanken mit [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Objekten oder ohne diese Objekte.  
 
  Änderungen an speicheroptimierten Tabellen im primären Replikat werden während der Rollforwardphase auf die Tabellen im sekundären Replikat angewendet. So ist ein schnelles Failover auf das sekundäre Replikat möglich, weil sich die Daten bereits im Arbeitsspeicher befinden. Tabellen sind für Leseabfragen in sekundären Replikaten verfügbar, die für den Lesezugriff konfiguriert wurden.  
 
   
 ## <a name="always-on-availability-groups-and-in-memory-oltp-databases"></a>AlwaysOn-Verfügbarkeitsgruppen und In-Memory OLTP-Datenbanken  
- Die Konfiguration von Datenbanken mit [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Komponenten ermöglicht Folgendes:  
+ Die Konfiguration von Datenbanken mit [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Komponenten bietet folgende Vorteile:  
   
 -   **Eine vollständig integrierte Lösung**   
     Sie können Ihre Datenbanken mit speicheroptimierten Tabellen unter Verwendung des gleichen Assistenten mit der gleichen Ebene der Unterstützung für synchrone und asynchrone sekundäre Replikate konfigurieren. Darüber hinaus erfolgt die Systemüberwachung über das vertraute AlwaysOn-Dashboard in SQL Server Management Studio.  
   
 -   **Vergleichbare Failoverzeit**   
-    Sekundäre Replikate behalten den im Speicher enthaltenen Status der dauerhaften speicheroptimierten Tabellen. Bei einem automatischen oder erzwungenen Failover ist die für das Failover auf das neue primäre Replikat erforderliche Zeit mit der für datenträgerbasierte Tabellen vergleichbar, da keine Wiederherstellung notwendig ist. Speicheroptimierte Tabellen, die als SCHEMA_ONLY erstellt wurden, werden in dieser Konfiguration unterstützt. Änderungen an diesen Tabellen werden jedoch nicht protokolliert. Deshalb sind in diesen Tabellen keine Daten auf dem sekundären Replikat vorhanden.  
+    Sekundäre Replikate behalten den im Speicher enthaltenen Status der dauerhaften speicheroptimierten Tabellen. Bei einem automatischen oder erzwungenen Failover ist die für das Failover auf das neue primäre Replikat erforderliche Zeit mit der für datenträgerbasierte Tabellen vergleichbar, da keine Wiederherstellung notwendig ist. Speicheroptimierte Tabellen, die als SCHEMA_ONLY erstellt wurden, werden in dieser Konfiguration unterstützt. Änderungen an diesen Tabellen werden jedoch nicht protokolliert. Deshalb sind in diesen Tabellen auf dem sekundären Replikat keine Daten vorhanden.  
   
 -   **Lesbares sekundäres Replikat**   
     Sie können auf speicheroptimierte Tabellen im sekundären Replikat zugreifen und sie abfragen, wenn es für den Lesezugriff konfiguriert wurde. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist der Lesezeitstempel im sekundären Replikat eng mit dem Lesezeitstempel im primären Replikat synchronisiert. Änderungen am primären Replikat sind daher schnell im sekundären Replikat sichtbar. Diese enge Synchronisierung unterscheidet sich von In-Memory OLTP von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

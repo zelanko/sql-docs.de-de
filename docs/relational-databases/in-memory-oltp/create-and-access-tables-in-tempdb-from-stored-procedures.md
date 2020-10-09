@@ -1,6 +1,6 @@
 ---
 title: Erstellen von und Zugreifen auf tempdb-Tabellen über gespeicherte Prozeduren
-description: tempdb unterstützt das Erstellen von und Zugreifen auf Tabellen aus nativ kompilierten gespeicherten Prozeduren nicht. Verwenden Sie speicheroptimierte Tabellen oder Tabellentypen und Tabellenvariablen.
+description: tempdb unterstützt das Erstellen von und Zugreifen auf Tabellen über nativ kompilierte gespeicherte Prozeduren nicht. Verwenden Sie speicheroptimierte Tabellen oder Tabellentypen und Tabellenvariablen.
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,21 +12,21 @@ ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60be5a470cffa69ab58251b57c1668ab5213a212
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 076d1d07ea0f28ccabe2d90930ce9f77c3d13bdc
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723353"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529505"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>Erstellen und Zugreifen auf Tabellen in TempDB aus gespeicherten Prozeduren
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Das Erstellen von und Zugreifen auf Tabellen in TempDB aus systemintern kompilierten gespeicherten Prozeduren wird nicht unterstützt. Verwenden Sie stattdessen entweder speicheroptimierte Tabellen mit DURABILITY=SCHEMA_ONLY, oder verwenden Sie Tabellentypen und Tabellenvariablen. 
+  Das Erstellen von und Zugreifen auf Tabellen über nativ kompilierte gespeicherte Prozeduren in tempdb wird nicht unterstützt. Verwenden Sie stattdessen entweder speicheroptimierte Tabellen mit DURABILITY=SCHEMA_ONLY, oder verwenden Sie Tabellentypen und Tabellenvariablen. 
 
-Weitere Informationen zur Speicheroptimierung temporärer Tabellen und Tabellenvariablenszenarien finden Sie unter: [Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
+Weitere Informationen zur Speicheroptimierung von temporären Tabellen und Tabellenvariablenszenarios finden Sie unter: [Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
-  Im folgenden Beispiel wird veranschaulicht, wie Sie anstelle einer temporären Tabelle mit drei Spalten (ID, ProductID, Quantity) eine Tabellenvariable **\@OrderQuantityByProduct** des Typs **dbo.OrderQuantityByProduct** verwenden können:  
+  Im folgenden Beispiel wird gezeigt, wie Sie anstelle einer temporären Tabelle mit drei Spalten (ID, ProductID, Quantity) eine Tabellenvariable **\@OrderQuantityByProduct** des Typs **dbo.OrderQuantityByProduct** verwenden können:  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

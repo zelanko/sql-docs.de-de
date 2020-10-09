@@ -11,12 +11,12 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0da2cd346f2f71b190d4192646bc58a70c116933
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 08fb58f77382dae2d6455cc181c983798c89050a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730423"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529411"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen
 
@@ -24,7 +24,7 @@ ms.locfileid: "85730423"
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] unterstützt ein Anwendungsentwurfsmuster, das Leistungsressourcen für relativ aktuelle Daten bereitstellt. Dieses Muster kann angewendet werden, wenn aktuelle Daten wesentlich häufiger gelesen oder aktualisiert werden als ältere Daten. In diesem Fall werden die aktuellen Daten als *aktiv* oder *heiß* und die älteren Daten als *kalt* bezeichnet.
 
-Der Hauptgedanke besteht darin, *heiße* Daten in einer speicheroptimierten Tabelle zu speichern. Ältere und somit *kalte* Daten werden dann vielleicht auf einer wöchentlichen oder monatlichen Basis in eine partitionierte Tabelle verschoben. In der partitionierten Tabelle werden die Daten auf einem Datenträger oder auf einer anderen Festplatte und nicht im Arbeitsspeicher gespeichert.
+Der Hauptgedanke besteht darin, *heiße* Daten in einer speicheroptimierten Tabelle zu speichern. Ältere und somit *kalte* Daten werden wöchentlich oder monatlich in eine partitionierte Tabelle verschoben. In der partitionierten Tabelle werden die Daten auf einem Datenträger oder auf einer anderen Festplatte und nicht im Arbeitsspeicher gespeichert.
 
 In der Regel wird bei diesem Entwurf ein **datetime**-Schlüssel verwendet, damit der Verschiebungsvorgang effizient zwischen heißen und kalten Daten unterscheiden kann.
 

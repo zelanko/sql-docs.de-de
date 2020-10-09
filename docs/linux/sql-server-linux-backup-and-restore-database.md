@@ -9,18 +9,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 6a590b895a1929e0c83ebef76cc2d6dc544ae5af
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088964"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753512"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken für Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Es stehen viele verschiedene Optionen bereit, um Sicherungen von Datenbanken über SQL Server 2017 für Linux zu erstellen. Auf einem Linux-Server können Sie mit **sqlcmd** eine Verbindung mit dem SQL Server herstellen und Sicherungen erstellen. Von Windows aus können Sie eine Verbindung mit SQL Server für Linux herstellen und Sicherungen über die Benutzeroberfläche erstellen. Die Sicherungsfunktionalität ist plattformübergreifend identisch. Beispielsweise können Sie Datenbanken lokal, auf Remotelaufwerken oder im [Microsoft Azure Blob-Speicherdienst](../relational-databases/backup-restore/sql-server-backup-to-url.md) sichern.
+
+> [!IMPORTANT]
+> SQL Server für Linux unterstützt nur das Sichern im Azure Blob Storage mit Blockblobs. Die Verwendung eines Speicherschlüssels für die Sicherung und Wiederherstellung führt zur Verwendung eines Seitenblobs, was nicht unterstützt wird. Verwenden Sie stattdessen eine Shared Access Signature. Weitere Informationen zu Unterschieden zwischen Blockblobs und Seitenblobs finden Sie unter [Sicherung: Blockblobs vs. Seitenblobs](../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob).
 
 ## <a name="backup-a-database"></a>Sichern einer Datenbank
 

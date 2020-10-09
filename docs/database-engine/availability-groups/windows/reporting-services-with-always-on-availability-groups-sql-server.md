@@ -14,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 2aec52249b366eac2057fe8cde5e3829e5125a5d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0f38c60868785a9487e848fd9617e2b2feedf481
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893103"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670064"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "85893103"
   
  Ein entscheidender Vorteil bei der Verwendung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Datenquellen liegt darin, dass lesbare sekundäre Replikate als Berichtsdatenquelle genutzt werden, während gleichzeitig die sekundären Replikate ein Failover für eine primäre Datenbank bereitstellen.  
   
- Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Always On FAQ for SQL Server 2012 (Häufig gestellte Fragen zu Always On für SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768))).  
+ Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Häufig gestellte Fragen zu Always On für SQL Server 2012 (../../../sql-server/index.yml)](../../../sql-server/index.yml).  
 
 ##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Anforderungen für die Verwendung von Reporting Services und Always On-Verfügbarkeitsgruppen  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und Power BI-Berichtsserver verwenden .NET Framework 4.0 und unterstützen die Verwendung der Verbindungszeichenfolgen-Eigenschaften von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit Datenquellen.  
@@ -125,7 +125,7 @@ ms.locfileid: "85893103"
   
 -   ReportServerTempDB  
   
- Der einheitliche Modus unterstützt bzw. verwendet Warnungsdatenbanken und zugehörige Funktionen nicht. Berichtsserver im einheitlichen Modus konfigurieren Sie im [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager. Im SharePoint-Modus konfigurieren Sie den Dienstanwendungsdatenbanknamen als Namen des „Clientzugriffspunkts“, den Sie als Teil der SharePoint-Konfiguration erstellten. Weitere Informationen zum Konfigurieren von SharePoint mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Konfigurieren und Verwalten von SQL Server-Verfügbarkeitsgruppen für SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165)).  
+ Der einheitliche Modus unterstützt bzw. verwendet Warnungsdatenbanken und zugehörige Funktionen nicht. Berichtsserver im einheitlichen Modus konfigurieren Sie im [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager. Im SharePoint-Modus konfigurieren Sie den Dienstanwendungsdatenbanknamen als Namen des „Clientzugriffspunkts“, den Sie als Teil der SharePoint-Konfiguration erstellten. Weitere Informationen zum Konfigurieren von SharePoint mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Konfigurieren und Verwalten von SQL Server-Verfügbarkeitsgruppen für SharePoint Server (/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14))](/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14)).  
   
 > [!NOTE]
 >  Berichtsserver im SharePoint-Modus verwenden einen Synchronisierungsvorgang zwischen den [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienstanwendungsdatenbanken und den SharePoint-Inhaltsdatenbanken. Es ist wichtig, die Berichtsserver-Datenbanken und Inhaltsdatenbanken zusammen zu verwalten. Sie sollten erwägen, sie in den gleichen Verfügbarkeitsgruppen zu konfigurieren, damit sie bei Failover und Wiederherstellung als Satz behandelt werden. Nehmen Sie das folgende Szenario als Beispiel:  
@@ -181,5 +181,3 @@ ms.locfileid: "85893103"
  [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
-  
-

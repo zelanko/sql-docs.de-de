@@ -1,8 +1,8 @@
 ---
 title: CREATE DATABASE (Transact-SQL) | Microsoft-Dokumentation
 description: Erstellen von Datenbanksyntax für SQL Server, Azure SQL-Datenbank, Azure Synapse Analytics und Analytics Platform System
-ms.custom: ''
-ms.date: 07/21/2020
+ms.custom: references_regions
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4738bbf83c73ae8f2e58b10196e1fc1394d43383
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b488b5861c807bbac66599b71feb71d70d261ba9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539874"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723501"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -133,14 +133,6 @@ CREATE DATABASE database_name
 FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]
     <filespec> [ ,...n ]
 }
-
-<service_broker_option> ::=
-{
-    ENABLE_BROKER
-  | NEW_BROKER
-  | ERROR_BROKER_CONVERSATIONS
-}
-
 ```
 
 Anfügen einer Datenbank
@@ -157,6 +149,13 @@ CREATE DATABASE database_name
       <service_broker_option>
     | RESTRICTED_USER
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )
+}
+
+<service_broker_option> ::=
+{
+    ENABLE_BROKER
+  | NEW_BROKER
+  | ERROR_BROKER_CONVERSATIONS
 }
 ```
 
@@ -207,7 +206,7 @@ Weitere Informationen zu den Namen von Windows- und SQL-Sortierungen finden Sie 
 > Eigenständige Datenbanken werden anders sortiert als nicht eigenständige Datenbanken. Weitere Informationen finden Sie unter [Enthaltene Datenbanksortierungen](../../relational-databases/databases/contained-database-collations.md).
 
 WITH \<option>
- **\<filestream_options>**
+ **\<filestream_option>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.
 
@@ -897,8 +896,14 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
 }
-[ WITH CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }]
+[ WITH <with_options> [,..n]]
 [;]
+
+<with_options> ::=
+{
+  CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+}
 
 <edition_options> ::=
 {
@@ -971,6 +976,11 @@ CATALOG_COLLATION gibt die Standardsortierung für den Metadatenkatalog an. *DAT
 
 *SQL_Latin1_General_CP1_CI_AS* gibt an, dass der Metadatenkatalog, der für Systemansichten und -tabellen verwendet wird, für die feste Sortierung „SQL_Latin1_General_CP1_CI_AS“ sortiert werden muss. Sofern nichts anderes angegeben ist, entspricht dies der Standardeinstellung für Azure SQL-Datenbank.
 
+BACKUP_STORAGE_REDUNDANCY gibt an, wie die Zeitpunktwiederherstellung und LTR-Sicherungen (Long-Term Retention, Langzeitaufbewahrung) für eine Datenbank repliziert werden. Die Geowiederherstellung und die Wiederherstellung nach regionalen Ausfällen sind nur verfügbar, wenn die Datenbank mit der Sicherungsspeicherredundanz GEO erstellt wird. Mit T-SQL erstellte Datenbanken verwenden georedundanten Sicherungsspeicher, sofern nichts anderes angegeben wird. 
+
+> [!IMPORTANT]
+> Die Option BACKUP_STORAGE_REDUNDANCY für Azure SQL-Datenbank ist derzeit nur in der Azure-Region „Asien, Südosten“ als Public Preview verfügbar.  
+
 EDITION gibt die Dienstebene der Datenbank an.
 
 Einzel- und Pooldatenbanken Die verfügbaren Werte sind: „Basic“, „Standard“, „Premium“, „GeneralPurpose“, „BusinessCritical“ und „Hyperscale“.
@@ -999,12 +1009,12 @@ MAXSIZE gibt die maximale Größe der Datenbank an. MAXSIZE muss für die angege
 |150 GB|–|√|√|√|√|
 |200 GB|–|√|√|√|√|
 |250 GB|–|√ (S)|√ (S)|√|√|
-|300 GB|Nicht zutreffend|Nicht zutreffend|√|√|√|
-|400 GB|Nicht zutreffend|Nicht zutreffend|√|√|√|
-|500 GB|Nicht zutreffend|Nicht zutreffend|√|√ (S)|√|
-|750 GB|Nicht zutreffend|Nicht zutreffend|√|√|√|
-|1024 GB|Nicht zutreffend|Nicht zutreffend|√|√|√ (S)|
-|Von 1024 GB bis 4096 GB in Inkrementen von 256 GB* |–|Nicht zutreffend|Nicht zutreffend|–|√|√|
+|300 GB|–|–|√|√|√|
+|400 GB|–|–|√|√|√|
+|500 GB|–|–|√|√ (S)|√|
+|750 GB|–|–|√|√|√|
+|1024 GB|–|–|√|√|√ (S)|
+|Von 1024 GB bis 4096 GB in Inkrementen von 256 GB* |–|NICHT ZUTREFFEND|NICHT ZUTREFFEND|–|√|√|
 
 \* P11 und P15 ermöglichen, dass die Größe von MAXSIZE bis zu 4 TB beträgt, wobei 1024 GB die Standardgröße darstellt. P11 und P15 können bis zu 4 TB des enthaltenen Speichers ohne Aufpreis verwenden. Im Premium-Tarif ist MAXSIZE mit einer Größe von mehr als 1 TB derzeit in den folgenden Regionen verfügbar: USA, Osten 2; USA, Westen; US Gov Virginia; Europa, Westen; Deutschland, Mitte; Asien, Südosten; Japan, Osten; Australien, Osten; Kanada, Mitte und Kanada, Osten. Zusätzliche Informationen bezüglich der Ressourcenbeschränkungen für das DTU-Modell finden Sie unter [DTU-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -1170,6 +1180,10 @@ Die folgende Syntax und die folgenden semantischen Regeln gelten für die Verwen
 
 Weitere Informationen finden Sie unter [Create a copy of an Azure SQL database using Transact-SQL (Erstellen einer Kopie einer Azure SQL-Datenbank mithilfe von Transact-SQL)](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).
 
+> [!IMPORTANT]
+> Standardmäßig wird die Datenbankkopie mit der gleichen Sicherungsspeicherredundanz wie die Quelldatenbank erstellt. Das Ändern der Sicherungsspeicherredundanz während des Erstellens einer Datenbankkopie wird von T-SQL nicht unterstützt. 
+
+
 ## <a name="permissions"></a>Berechtigungen
 
 Für das Erstellen einer Datenbank muss das Konto des Benutzers einem der Folgenden entsprechen:
@@ -1258,6 +1272,15 @@ Im folgenden Beispiel wird die Katalogsortierung während der Erstellung der Dat
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
+```
+
+### <a name="create-database-using-zone-redundancy-for-backups"></a>Erstellen einer Datenbank mit Zonenredundanz für Sicherungen
+
+Im folgenden Beispiel wird die Zonenredundanz für Datenbanksicherungen festgelegt. Sicherungen für die Zeitpunktwiederherstellung und die Langzeitaufbewahrung (falls konfiguriert) verwenden die gleiche Sicherungsspeicherredundanz.
+
+```sql
+CREATE DATABASE test_zone_redundancy 
+  WITH BACKUP_STORAGE_REDUNDANCY = 'ZONE';
 ```
 
 ## <a name="see-also"></a>Weitere Informationen
@@ -1380,6 +1403,7 @@ In Azure Synapse kann diese Anweisung mit einer Azure SQL-Datenbank-Serverinsta
 
 ## <a name="syntax"></a>Syntax
 
+### <a name="sql-pool"></a>[SQL-Pool](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1400,6 +1424,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
+### <a name="sql-on-demand-preview"></a>[SQL On-Demand (Vorschauversion)](#tab/sqlod)
+```syntaxsql
+CREATE DATABASE database_name [ COLLATE collation_name ]
+[;] 
+```
+---
 
 ## <a name="arguments"></a>Argumente
 

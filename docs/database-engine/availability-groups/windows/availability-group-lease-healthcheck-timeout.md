@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9b71fc08356731cdc3e536cea9c6ad17b651fe
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 074a66a094b08f843eed67cfb0276f8c9e635a63
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116985"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753749"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mechanismen und Richtlinien der Timeouts für Leases, Cluster und Integritätsprüfung für Always On-Verfügbarkeitsgruppen 
 
@@ -157,7 +157,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | Timeout für Lease </br> **Standardwert: 20000** | Split Brain verhindern | Vom primären Replikat auf den Cluster </br> (HADR) | [Windows event objects (Windows-Ereignisobjekte)](/windows/desktop/Sync/event-objects)| Wird in beiden verwendet | Nicht reagierendes Betriebssystems, unzureichender virtueller Arbeitsspeicher, Arbeitssatzpaging, Generieren von Speicherabbildern, voll ausgelastete CPU, WSFC ist offline (Verlust des Quorums) | Verfügbarkeitsgruppenressource von offline zu online geschalten, dann wird ein Failover ausgeführt |  
  | Sitzungstimeout </br> **Standardwert: 10000** | Melden von Kommunikationsproblemen zwischen dem primären und sekundären Replikat | Sekundäres Replikat auf primäres Replikat </br> (HADR) | [TCP Sockets (messages sent via DBM endpoint) (TCP-Sockets (über einen DBM-Endpunkt gesendete Meldungen))](/windows/desktop/WinSock/windows-sockets-start-page-2) | In keinem von beiden verwendet | Netzwerkkommunikation, </br> Probleme auf dem sekundären Replikat (offline), nicht reagierendes Betriebssystem, Ressourcenkonflikte | Verbindung des sekundären Replikats wird getrennt | 
- |HealthCheck-Timeout  </br> **Standardwert: 30000** | Angeben von Timeouts, während die Integrität des primären Replikats ermittelt wird | Cluster auf primäres Replikat </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Wird in beiden verwendet | Erfüllte Fehlerbedingungen, nicht reagierendes Betriebssystem, unzureichender virtueller Speicher, Kürzung des Arbeitssatzes, WSFC ist offline (Verlust des Quorums), Probleme mit dem Scheduler (Deadlock)| Verfügbarkeitsgruppenressource wird offline geschalten oder ein Failover wird ausgeführt, Neustart oder Failover der FCI |  
+ |HealthCheck-Timeout  </br> **Standardwert: 30000** | Angeben von Timeouts, während die Integrität des primären Replikats ermittelt wird | Cluster auf primäres Replikat </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Wird in beiden verwendet | Erfüllte Fehlerbedingungen, nicht reagierendes Betriebssystem, unzureichender virtueller Speicher, Kürzung des Arbeitssatzes, WSFC ist offline (Verlust des Quorums), Probleme mit dem Scheduler (Deadlock)| Verfügbarkeitsgruppenressource wird von offline zu online geschaltet, oder es wird ein Failover dafür ausgeführt, FCI-Neustart oder -Failover |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Weitere Informationen    

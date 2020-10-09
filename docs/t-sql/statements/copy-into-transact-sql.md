@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380835"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624817"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -99,7 +99,7 @@ Speicherorte, wo die Dateien bereitgestellt werden, die die Daten enthalten. Der
 - *Externer Speicherort* für ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> Der Blobendpunkt ist zum Zweck der Abwärtskompatibilität für ADLS Gen2 verfügbar. Verwenden Sie den **Blobendpunkt**, um eine optimale Leistung zu erzielen.
+> Der .blob-Endpunkt ist auch für ADLS Gen2 verfügbar und führt derzeit zur besten Leistung. Verwenden Sie den .blob-Endpunkt, wenn .dfs für Ihre Authentifizierungsmethode nicht erforderlich ist.
 
 - *Konto*: Der Speicherkontoname
 
@@ -141,14 +141,15 @@ Es können nur mehrere Dateispeicherorte aus demselben Speicherkonto und Contain
 |  **Azure Blob Storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1: Sie müssen den Blob-Endpunkt ( **.blob**.core.windows.net) in Ihrem externen Speicherortpfad verwenden.
+1: Der .blob-Endpunkt ( **.blob**.core.windows.net) unter Ihrem externen Speicherortpfad ist für diese Authentifizierungsmethode erforderlich.
 
-2: Sie müssen den dfs-Endpunkt ( **.dfs**.core.windows.net) im externen Speicherortpfad verwenden.
+2: Der .dfs-Endpunkt ( **.dfs**.core.windows.net) unter Ihrem externen Speicherortpfad ist für diese Authentifizierungsmethode erforderlich.
+
 
 > [!NOTE]  
 >
 > - Bei der Authentifizierung mit AAD oder bei einem öffentlichen Speicherkonto muss CREDENTIAL nicht angegeben werden. 
->  - Wenn Ihr Speicherkonto einem VNET zugeordnet ist, müssen Sie sich mit verwalteten Identitäten für Azure-Ressourcen authentifizieren.
+> - Wenn Ihr Speicherkonto einem VNET zugeordnet ist, müssen Sie sich mit verwalteten Identitäten für Azure-Ressourcen authentifizieren.
 
 - Authentifizieren mit Shared Access Signatures (SAS)
   
@@ -428,9 +429,6 @@ Anweisungen zur Anzahl der Dateien sind in der Tabelle unten aufgeführt. Sobald
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Welche Anweisungen gibt es zur Dateiaufteilung für den COPY-Befehl beim Laden von Parquet- oder ORC-Dateien?
 Das Aufteilen von Parquet- und ORC-Dateien ist nicht erforderlich, da der COPY-Befehl Dateien automatisch aufteilt. Die Parquet- und ORC-Dateien im Azure Storage-Konto sollten mindestens 256 MB groß sein, um optimale Leistung zu erzielen. 
-
-### <a name="when-will-the-copy-command-be-generally-available"></a>Wann wird der COPY-Befehl allgemein verfügbar sein?
-Der COPY-Befehl wird Ende dieses Kalenderjahres (2020) allgemein verfügbar. 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Gibt es Einschränkungen hinsichtlich der Anzahl oder Größe von Dateien?
 Es gibt keine Einschränkungen in Bezug auf die Anzahl oder Größe von Dateien. Um eine optimale Leistung zu erzielen, wird jedoch eine Dateigröße von mindestens 4 MB empfohlen.

@@ -18,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511312"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726011"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -263,7 +263,7 @@ Ein logischer Join ist dann für adaptive Joins im Batchmodus zulässig, wenn er
 - Der Datenbank-Kompatibilitätsgrad ist 140 oder höher.
 - Die Abfrage ist eine `SELECT`-Anweisung (Anweisungen zur Datenänderung sind aktuell nicht verfügbar).
 - Der Join kann sowohl vom physischen Algorithmus eines indizierten Joins geschachtelter Schleifen als auch eines Hashjoins ausgeführt werden.
-- Der Hashjoin verwendet den Batchmodus, der über einen vorhandenen Columnstore-Index in der Abfrage, durch eine mit Columnstore indizierte Tabelle oder durch die Verwendung der [„Batchmodus für Rowstore“-Funktion](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) aktiviert wird.
+- Der Hashjoin verwendet den Batchmodus, der durch das Vorhandensein eines Columnstore-Index in der Abfrage, durch einen direkten Verweis auf eine Tabelle im Columnstore-Index im Join oder durch die Verwendung des [Batchmodus für Rowstore](./intelligent-query-processing.md#batch-mode-on-rowstore) aktiviert wird.
 - Die generierten alternativen Lösungen des Joins geschachtelter Schleifen und Hashjoins sollten dasselbe erste untergeordnete Element haben (äußerer Verweis).
 
 ### <a name="adaptive-threshold-rows"></a>Adaptive Schwellenwertzeilen

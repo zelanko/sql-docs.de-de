@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37f49a006b0fe17120af2309f9b3991ab594ebda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423714"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412763"
 ---
 # <a name="import-a-policy-based-management-policy"></a>Importieren einer Richtlinie der richtlinienbasierten Verwaltung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,4 +46,4 @@ ms.locfileid: "88423714"
 
 
 ## <a name="example-policies"></a>Beispielrichtlinien
- Beispielrichtlinien sind nicht in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] enthalten, jedoch können Sie weiterhin auf zuvor verteilte Beispielrichtlinien zugreifen, indem Sie [SQL Server Management Studio v17](../../ssms/release-notes-ssms.md#previous-ssms-releases) installieren.  Sobald SQL Server Management Studio v17 installiert wurde, finden Sie die Beispielrichtlinien unter `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies`. Diese Richtlinien können importiert und als Grundlage für Ihre eigenen richtlinienbasierten Verwaltungsrichtlinien verwendet werden.
+ Beispielrichtlinien sind im [SQL Server-Beispielcoderepository](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) verfügbar. Diese Richtlinien können importiert und als Grundlage für Ihre eigenen richtlinienbasierten Verwaltungsrichtlinien verwendet werden.

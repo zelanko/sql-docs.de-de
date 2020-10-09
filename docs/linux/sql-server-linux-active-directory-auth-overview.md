@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 27a215b868101b17b7db6ec3f25dfc5456777ab1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: efce6c9f297c3dba58a37a3d097a9c8176efa287
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900129"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497991"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Active Directory-Authentifizierung für SQL Server für Linux
 
@@ -52,6 +52,7 @@ Ausführliche Informationen dazu, wie AD-Authentifizierung konfiguriert wird, fi
 ## <a name="known-issues"></a>Bekannte Probleme
 
 - Derzeit ist CERTIFICATE die einzige unterstützte Authentifizierungsmethode für einen Datenbankspiegelungs-Endpunkt. Die WINDOWS-Authentifizierungsmethode wird in einer zukünftigen Version aktiviert.
+- SQL Server für Linux unterstützt das NTLM-Protokoll nicht für Remoteverbindungen. Für lokale Verbindungen kann NTLM möglicherweise verwendet werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

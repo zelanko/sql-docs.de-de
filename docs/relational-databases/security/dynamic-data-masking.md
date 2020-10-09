@@ -11,12 +11,12 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eb0c19820d7f3dcb4ff60c39d0cf3cbd6661b062
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005595"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727608"
 ---
 # <a name="dynamic-data-masking"></a>Dynamische Datenmaskierung
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -32,8 +32,6 @@ Mit der dynamischen Datenmaskierung können Sie unbefugten Zugriff auf sensible 
 * DDM umfasst Funktionen zur vollständigen und partiellen Maskierung sowie eine willkürliche Maske für numerische Daten.
 * Einfache [!INCLUDE[tsql_md](../../includes/tsql-md.md)]-Befehle dienen zum Definieren und Verwalten von Masken.
 
-Ein Supportmitarbeiter in einem Call Center kann z. B. Anrufer anhand mehrerer Ziffern seiner Sozialversicherungs- oder Kreditkartennummer identifizieren.  Supportmitarbeiter sollten US-Sozialversicherungsnummern oder Kreditkartennummern nicht vollständig einsehen können. Es kann eine Maskierungsregel definiert werden, mit der die US-Sozialversicherungsnummer oder Kreditkartennummer im Resultset einer Abfrage bis auf die letzten vier Ziffern ausgeblendet wird. Als weiteres Beispiel kann ein Entwickler Produktionsumgebungen zu Problembehandlungszwecken abfragen, ohne gegen Genehmigungsregeln zu verstoßen, indem er die entsprechende Datenmaske zum Schützen von personenbezogenen Daten verwendet.
-
 Der Zweck der dynamischen Datenmaskierung besteht darin, die Offenlegung sensibler Daten zu beschränken, die Benutzer an der Anzeige der Daten hindert, die keinen Zugriff auf diese erhalten sollten. Die dynamische Datenmaskierung ist nicht darauf ausgerichtet, Datenbankbenutzer daran zu hindern, eine direkte Verbindung zur Datenbank herzustellen und umfassende Abfragen auszuführen, die Teile der vertraulichen Daten verfügbar machen. Die dynamische Datenmaskierung ist eine Ergänzung zu anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherheitsfeatures (Überwachung, Verschlüsselung, Sicherheit auf Zeilenebene usw.), und es wird dringend empfohlen, dieses Feature in Verbindung mit diesen anderen Features zu verwenden, um die sensiblen Daten in der Datenbank besser zu schützen.  
   
 Die dynamische Datenmaskierung steht in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]zur Verfügung und wird mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehlen konfiguriert. Weitere Informationen zum Konfigurieren der dynamischen Datenmaskierung über das Azure-Portal finden Sie unter [Erste Schritte mit der dynamischen Datenmaskierung für SQL-Datenbank (Azure-Portal)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/).  
@@ -41,12 +39,12 @@ Die dynamische Datenmaskierung steht in [!INCLUDE[ssSQL15](../../includes/sssql1
 ## <a name="defining-a-dynamic-data-mask"></a>Definieren einer dynamischen Datenmaske
  Eine Maskierungsregel kann für eine Spalte in einer Tabelle definiert werden, um die Daten in dieser Spalte zu verschleiern. Es stehen vier Arten von Masken zur Verfügung.  
   
-|Funktion|BESCHREIBUNG|Beispiele|  
+|Funktion|Beschreibung|Beispiele|  
 |--------------|-----------------|--------------|  
 |Standard|Die vollständige Maskierung gemäß der Datentypen der festgelegten Felder.<br /><br /> Verwenden Sie XXXX oder weniger X-Platzhalter für Zeichenfolge-Datentypen, wenn die Größe des Felds weniger als vier Zeichen umfasst (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Verwenden Sie für numerische Datentypen den Wert 0 (null) (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Verwenden Sie für die Datentypen für Datum und Uhrzeit 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Verwenden Sie für binäre Datentypen ein Einzelbyte des ASCII-Werts 0 (**binary**, **varbinary**, **image**).|Beispielsyntax der Spaltendefinition: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Beispiel für die alter-Syntax: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|Eine Maskierungsmethode, die den ersten Buchstaben einer E-Mail-Adresse und das konstante Suffix „.com“ in Form einer E-Mail-Adresse verfügbar macht. `aXXX@XXXX.com`.|Beispielsyntax der Definition: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Beispiel für die alter-Syntax: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Zufällig|Eine zufällige Maskierungsfunktion, die für alle numerischen Typen verwendet werden kann, um den ursprünglichen Wert mit einem zufälligen Wert innerhalb eines bestimmten Bereichs zu maskieren.|Beispielsyntax der Definition: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Beispiel für die alter-Syntax: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|Benutzerdefinierte Zeichenfolge|Eine Maskierungsmethode, die den ersten und letzten Buchstaben verfügbar macht und in der Mitte eine benutzerdefinierte Zeichenfolge zur Auffüllung hinzufügt. `prefix,[padding],suffix`<br /><br /> Hinweis: Wenn der ursprüngliche Wert zu kurz ist, um die gesamte Maske zu vervollständigen, wird ein Teil des Präfixes oder Suffixes nicht verfügbar gemacht.|Beispielsyntax der Definition: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Beispiel für die alter-Syntax: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Zusätzliche Beispiele:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|Benutzerdefinierte Zeichenfolge|Eine Maskierungsmethode, die den ersten und letzten Buchstaben verfügbar macht und in der Mitte eine benutzerdefinierte Zeichenfolge zur Auffüllung hinzufügt. `prefix,[padding],suffix`<br /><br /> Hinweis: Wenn der ursprüngliche Wert zu kurz ist, um die gesamte Maske zu vervollständigen, wird ein Teil des Präfixes oder Suffixes nicht verfügbar gemacht.|Beispielsyntax der Definition: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Beispiel für die alter-Syntax: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Weiteres Beispiel:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Sie benötigen keine speziellen Berechtigungen zum Erstellen einer Tabelle mit einer dynamischen Datenmaske. Lediglich die Standardschemaberechtigungen **CREATE TABLE** und **ALTER** sind erforderlich.  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 9d4dd55daf26c9f927e23c0f269a084c711d0481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 107e25f9d4307532e4d1bd6d413e05347fc5209b
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215744"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624737"
 ---
 # <a name="type-mapping-with-polybase"></a>Typzuordnung mit PolyBase
 
@@ -64,7 +64,8 @@ Für externe Tabellen, die auf Dateien in externen Datenquellen verweisen, müss
 | Oracle-Datentyp | SQL Server-Typ | 
 | -------------    | --------------- |
 |Float             |Float            |
-|NUMBER            |Decimal          |
+|NUMBER            |Float            |
+|NUMBER (p,s)      |Decimal (p, s)   |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
 |BINARY_DOUBLE     |Float            | 
@@ -95,17 +96,17 @@ Für externe Tabellen, die auf Dateien in externen Datenquellen verweisen, müss
 | BSON-Datentyp     | SQL Server-Typ |
 | ------------------ | --------------- |
 | Double             | Float           |
-| String             | nvarchar        |
+| Zeichenfolge             | nvarchar        |
 | Binärdaten        | nvarchar        |
 | ObjectID          | nvarchar        |
 | Boolean            | bit             |
 | Date               | Datetime2       |
 | 32-bit integer     | Int             |
 | Timestamp          | nvarchar        |
-| 64-bit integer     | BigInt          |
+| 64-Bit-Integer     | BigInt          |
 |Decimal 128         | Decimal         | 
 | DBPointer          | nvarchar        |
-| Javascript         | nvarchar        |
+| JavaScript         | nvarchar        |
 | Max Key            | nvarchar        |
 | Min Key            | nvarchar        |
 | Symbol             | nvarchar        |
@@ -139,7 +140,7 @@ MongoDB verwendet BSON-Dokumente zur Speicherung von Datensätzen. Im Gegensatz 
 |timestamp           |Datetime2        |
 |TIME                |Time             |
 |TIME WITH TIME ZONE |Time             |
-|TIMESTAMP WITH TIME ZONE|Time         |
+|TIMESTAMP WITH TIME ZONE|Zeit         |
 
 ::: moniker-end
 

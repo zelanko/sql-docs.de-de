@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cdc5c87275af6056e9044ed534d6e916772a3dc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7c29522d20a3d263c602884daa0277a8e1a2095
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537061"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753529"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Auflösen der Indexfragmentierung durch Neuorganisieren oder Neuerstellen von Indizes
 
@@ -86,7 +86,7 @@ Nachdem der Grad der Fragmentierung bekannt ist, verwenden Sie die folgende Tabe
 
 <sup>2</sup> Das Neuerstellen eines Indexes kann online oder offline erfolgen. Das Neuorganisieren eines Indexes erfolgt immer online. Damit eine Verfügbarkeit ähnlich der Neuorganisierungsoption erreicht wird, sollten Indizes online neu erstellt werden. Weitere Informationen finden Sie unter [Neuerstellen eines Indexes](#rebuild-an-index) und [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md).
 
-Indizes mit einer Fragmentierung oder einem Fragmentierungsgrad unter fünf Prozent müssen nicht defragmentiert werden, da die Vorteile des Entfernens eines so geringen Umfangs der Fragmentierung die CPU-Kosten für das Neuorganisieren und Neuerstellen des Indexes nicht aufwiegen. Außerdem wird durch das Neuerstellen oder Neuorganisieren kleiner Rowstore-Indizes die tatsächliche Fragmentierung häufig nicht verringert. Bis einschließlich [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ordnet die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Speicherplatz mithilfe von gemischten Blöcken zu. Daher werden die Seiten kleiner Indizes manchmal in gemischten Blöcken gespeichert. Da gemischte Blöcke von bis zu acht Objekten gemeinsam genutzt werden, lässt sich die Fragmentierung in einem kleinen Index durch die erneute Erstellung oder Organisation des Indexes möglicherweise nicht verringern. Weitere Informationen finden Sie unter [Überlegungen zur Neuerstellung eines Rowstore-Index](#considerations-specific-to-rebuilding-rowstore-indexes). Weitere Informationen zu Blöcken finden Sie im [Handbuch zur Architektur von Seiten und Blöcken](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
+Indizes mit einer Fragmentierung von weniger als 5 Prozent müssen nicht defragmentiert werden, da die Vorteile des Entfernens einer so geringen Fragmentierung so gut wie nie im Verhältnis zu den CPU-Kosten für das Neuorganisieren und Neuerstellen des Index stehen. Außerdem wird durch das Neuerstellen oder Neuorganisieren kleiner Rowstore-Indizes die tatsächliche Fragmentierung in der Regel nicht verringert. Bis einschließlich [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ordnet die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Speicherplatz mithilfe von gemischten Blöcken zu. Daher werden die Seiten kleiner Indizes manchmal in gemischten Blöcken gespeichert. Da gemischte Blöcke von bis zu acht Objekten gemeinsam genutzt werden, lässt sich die Fragmentierung in einem kleinen Index durch die erneute Erstellung oder Organisation des Indexes möglicherweise nicht verringern. Weitere Informationen finden Sie unter [Überlegungen zur Neuerstellung eines Rowstore-Index](#considerations-specific-to-rebuilding-rowstore-indexes). Weitere Informationen zu Blöcken finden Sie im [Handbuch zur Architektur von Seiten und Blöcken](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>Erkennen einer Fragmentierung von Columnstore-Indizes
 

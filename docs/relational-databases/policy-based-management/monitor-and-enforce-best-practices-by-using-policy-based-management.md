@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8560ed40c5a50ca16c6bad6b78d4a2eddcb0f0e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785084"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412747"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Mit der richtlinienbasierten Verwaltung können Sie bewährte Methoden für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]überwachen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine Reihe von Richtliniendateien bereit, die Sie als Richtlinien für Best Practices importieren und für die Auswertung der Richtlinien für einen Zielsatz mit Instanzen, Instanzobjekten, Datenbanken oder Datenbankobjekten verwenden können. Sie können Richtlinien manuell auswerten, Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Zeitplan festlegen oder Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Ereignis angeben. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+  Mit der richtlinienbasierten Verwaltung können Sie bewährte Methoden für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]überwachen.  Sie können Richtlinien manuell auswerten, Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Zeitplan festlegen oder Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Ereignis angeben. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  Es steht eine Sammlung von [Beispielrichtliniendateien](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) zur Verfügung, die Sie als Best-Practices-Richtlinien importieren und für die Auswertung der Richtlinien für eine Zielgruppe von Instanzen, Instanzobjekten, Datenbanken oder Datenbankobjekten verwenden können.
   
 ## <a name="policy-and-rules-for-database-engine"></a>Richtlinie und Regeln für Datenbank-Engine  
- Die folgende Tabelle enthält die Richtlinien, die in der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten sind, sowie Informationen über die Regeln für bewährte Methoden, die von den einzelnen Richtlinien ausgewertet werden. Die Richtlinien werden als XML-Dateien gespeichert und werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]importiert. Weitere Informationen über das Importieren von Richtlinien finden Sie unter [Importieren einer Richtlinie der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
+ Die folgende Tabelle enthält die Richtlinien, die in der Sammlung von [Beispielrichtlinien](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies) enthalten sind, sowie Informationen über die Best-Practices-Regeln, die von den einzelnen Richtlinien ausgewertet werden. Die Richtlinien werden als XML-Dateien gespeichert und werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]importiert. Weitere Informationen über das Importieren von Richtlinien finden Sie unter [Importieren einer Richtlinie der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
   
 |Richtlinienname|Regel für Best Practice|  
 |-----------------|------------------------|  

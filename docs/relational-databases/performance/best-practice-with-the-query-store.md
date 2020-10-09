@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042818"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529483"
 ---
 # <a name="best-practices-with-query-store"></a>Bewährte Methoden für den Abfragespeicher
 
@@ -434,7 +434,7 @@ Die globalen Ablaufverfolgungsflags 7745 und 7752 können verwendet werden, um d
 > Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verwenden, planen Sie baldmöglichst die Installation der Verbesserungen zur Leistungsskalierbarkeit in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) ein. Ohne diese Verbesserungen kann es bei hohen Workloads der Datenbank zu Spinlock-Konflikten kommen und die Serverleistung beeinträchtigt werden. Insbesondere beim `QUERY_STORE_ASYNC_PERSIST`- oder `SPL_QUERY_STORE_STATS_COOKIE_CACHE`-Spinlock kann es zu heftigen Konflikten kommen. Nachdem diese Verbesserungen angewendet wurden, führt der Abfragespeicher nicht mehr zu Spinlock-Konflikten.
 
 > [!IMPORTANT]
-> Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] verwenden, planen Sie baldmöglichst die Installation der Verbesserung zur Leistungsskalierbarkeit in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 ein. Ohne diese Verbesserung kann bei hoher Ad-hoc-Workload der Datenbank der Abfragespeicher einen großen Teil des Speichers in Anspruch nehmen und die Serverleistung kann beeinträchtigt werden. Nachdem diese Verbesserung angewendet wurde, legt der Abfragespeicher interne Grenzwerte für die Menge an Arbeitsspeicher fest, die von seinen verschiedenen Komponenten verwendet werden kann. Zudem kann der Betriebsmodus automatisch in „schreibgeschützt“ geändert werden, bis genügend Arbeitsspeicher an den [!INCLUDE[ssde_md](../../includes/ssde_md.md)] zurückgegeben wurde. Beachten Sie, dass die internen Grenzwerte für den Arbeitsspeicher des Abfragespeichers nicht dokumentiert sind, da sie sich ändern können.  
+> Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) verwenden, planen Sie baldmöglichst die Installation der Verbesserung zur Leistungsskalierbarkeit in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22. Ohne diese Verbesserung kann bei hoher Ad-hoc-Workload der Datenbank der Abfragespeicher einen großen Teil des Speichers in Anspruch nehmen und die Serverleistung kann beeinträchtigt werden. Nachdem diese Verbesserung angewendet wurde, legt der Abfragespeicher interne Grenzwerte für die Menge an Arbeitsspeicher fest, die von seinen verschiedenen Komponenten verwendet werden kann. Zudem kann der Betriebsmodus automatisch in „schreibgeschützt“ geändert werden, bis genügend Arbeitsspeicher an den [!INCLUDE[ssde_md](../../includes/ssde_md.md)] zurückgegeben wurde. Beachten Sie, dass die internen Grenzwerte für den Arbeitsspeicher des Abfragespeichers nicht dokumentiert sind, da sie sich ändern können.  
 
 ## <a name="see-also"></a>Weitere Informationen
 
