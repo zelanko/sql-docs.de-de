@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51b686edb6ac9e93862c5f90f06bb7370fe47a9a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 40ebe80960ca238cce4ff923a2e2457c45cd77f5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89522922"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889174"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>ProtocolOrder-Eigenschaft (ClientNetworkProtocol-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,10 +43,9 @@ object.ProtocolOrder [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der die fortlaufende Nummer des derzeitig referenzierten Clientnetzwerkprotokolls angibt, das durch die **OrderValue** -Methode festgelegt ist. Wenn das Clientnetzwerkprotokoll deaktiviert ist, ist dieser Wert Null.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren von Client Protokollen](https://technet.microsoft.com/library/ms181035.aspx)   
- [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Konfigurieren von Client Protokollen](../../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

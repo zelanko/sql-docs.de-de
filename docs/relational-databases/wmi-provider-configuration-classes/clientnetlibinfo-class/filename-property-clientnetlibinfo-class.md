@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de72ccb7342266b58d90c7949b92bdd2053cffb4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fbf2678182a72f0782eea785a757580f7cf578c0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523575"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890940"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>FileName-Eigenschaft (ClientNetLibInfo-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,8 @@ object.FileName [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der den Namen der Clientnetzwerk-Bibliotheksdatei angibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Konfigurieren von Clientprotokollen](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

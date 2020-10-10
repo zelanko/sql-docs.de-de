@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 216c6415a7897f3363f0404d199e9b64a62c33e7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 412075bd466962e9e87f4a3892c0b5fafc9ddbb2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523145"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890588"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version-Eigenschaft (ClientNetLibInfo-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,8 @@ object.Version [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der die Version der Clientnetzwerk-Bibliotheksdatei angibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Konfigurieren von Clientprotokollen](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

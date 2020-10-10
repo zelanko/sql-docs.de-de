@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 71a76870ac25eb7c918bd13e91a5b8c10287ae84
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e0779c737456a9b898895cab2b187fa090b0a6fc
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537293"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91888962"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>ProtocolDisplayName-Eigenschaft (ClientNetworkProtocol-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Ruft den Anzeigenamen des Clientnetzwerkprotokolls ab, das in [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)angegeben ist.  
+  Ruft den Anzeigenamen des Clientnetzwerkprotokolls ab, das in [Konfigurieren von Clientprotokollen](../../../database-engine/configure-windows/configure-client-protocols.md)angegeben ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,9 +43,8 @@ object.ProtocolDisplayName [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der den Anzeigenamen des Clientnetzwerkprotokolls angibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a99b8bbc94bf8e62cd8125e01327a4691a296cb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 99771d12be4c10d8d4b823ceb788e9722d417fca
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545313"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890980"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance-Klasse – SetDefaults-Methode
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,9 +49,8 @@ object.SetDefaults(OverwriteAll)
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Konfigurieren von Clientprotokollen](../../database-engine/configure-windows/configure-client-protocols.md)  
   

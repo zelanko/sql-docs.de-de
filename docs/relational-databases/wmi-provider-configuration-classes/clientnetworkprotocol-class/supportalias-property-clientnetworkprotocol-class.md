@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6fb8143dd78695ad32028d520263beccdfee40b7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 456f4bfd3d2051bff614d1d65710366ea39b08b5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521237"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91888931"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias-Eigenschaft (ClientNetworkProtocol-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -47,9 +47,8 @@ object.SupportAlias [= value]
   
  Wenn der Wert "False" lautet, unterstützt das Clientnetzwerkprotokoll keine Aliase.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Konfigurieren von Clientprotokollen](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

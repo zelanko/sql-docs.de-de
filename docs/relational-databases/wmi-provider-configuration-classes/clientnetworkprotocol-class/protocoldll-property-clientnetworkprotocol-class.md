@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6704808520b77867bd1a0b39af5118225398dae2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 54d992dd3d9b3604644f985f9e7db5f523b553f9
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537281"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91888949"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL-Eigenschaft (ClientNetworkProtocol-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Ruft den Namen der DLL-Datei ab, die von dem in [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)angegebenen Netzwerkprotokoll benötigt wird.  
+  Ruft den Namen der DLL-Datei ab, die von dem in [Konfigurieren von Clientprotokollen](../../../database-engine/configure-windows/configure-client-protocols.md)angegebenen Netzwerkprotokoll benötigt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,9 +43,8 @@ object.ProtocolDLL [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgewert, der den Namen der -dll-Datei angibt, die vom Clientnetzwerkprotokoll benötigt wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

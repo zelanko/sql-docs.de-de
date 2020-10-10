@@ -18,11 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7732b2e0f975ad1cd026a75f9614b3cb59ec7d8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b20ac97f52b9429c1d3ab0b0db5230100af2e19f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009741"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892260"
 ---
 # <a name="create-a-distributed-transaction"></a>Erstellen einer verteilten Transaktion
 
@@ -59,7 +60,7 @@ _(1)_ MSDTC kann ohne ODBC aufgerufen werden. In einem solchen Fall wird MSDTC z
 
 Angenommen, Ihre C++ Native Client-ODBC-Anwendung ist in einer verteilten Transaktion eingetragen. Im nächsten Schritt wird die Anwendung in einer zweiten verteilten Transaktion eingetragen. In diesem Fall verlässt der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber die ursprüngliche verteilte Transaktion und trägt in die neue verteilte Transaktion ein.
 
-Weitere Informationen finden Sie in der [DTC-Programmierreferenz](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\)).
+Weitere Informationen finden Sie in der [DTC-Programmierreferenz](/previous-versions/windows/desktop/ms686108(v=vs.85)).
 
 ## <a name="c-alternative-for-sql-database-in-the-cloud"></a>C#-Alternative für die SQL-Datenbank in der Cloud
 
@@ -75,6 +76,6 @@ Die folgenden anderen Programmiersprachen bieten möglicherweise keine Unterstü
 - Verbindungs Server mit Transact-SQL
 - JDBC-Treiber
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Durchführen von Transaktionen (ODBC)](performing-transactions-in-odbc.md)

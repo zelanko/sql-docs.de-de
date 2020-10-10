@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 076c91605c245ad49f6c51a2a656d48c7dba2109
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f65cd55570312a4d86e795d224c900fa7517236e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545164"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891240"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- Das Argument in der `FROM`-Klausel der WQL-Abfrage (`DDL_DATABASE_LEVEL_EVENTS`) kann ein beliebiges gültiges Ereignis sein, für das eine Ereignisbenachrichtigung erstellt werden kann. Für die Argumente in den Klauseln `SELECT` und `WHERE` können beliebige Ereigniseigenschaften angegeben werden, die mit einem Ereignis oder dessen übergeordnetem Ereignis verbunden sind. Eine Liste der gültigen Ereignisse und Ereignis Eigenschaften finden Sie unter [Ereignis Benachrichtigungen (Datenbank-Engine)](https://technet.microsoft.com/library/ms182602.aspx).  
+ Das Argument in der `FROM`-Klausel der WQL-Abfrage (`DDL_DATABASE_LEVEL_EVENTS`) kann ein beliebiges gültiges Ereignis sein, für das eine Ereignisbenachrichtigung erstellt werden kann. Für die Argumente in den Klauseln `SELECT` und `WHERE` können beliebige Ereigniseigenschaften angegeben werden, die mit einem Ereignis oder dessen übergeordnetem Ereignis verbunden sind. Eine Liste der gültigen Ereignisse und Ereignis Eigenschaften finden Sie unter [Ereignis Benachrichtigungen (Datenbank-Engine)](/previous-versions/sql/sql-server-2008-r2/ms182602(v=sql.105)).  
   
  Die folgende WQL-Syntax wird explizit vom WMI-Anbieter für Serverereignisse unterstützt. Zusätzliche WQL-Syntaxelemente können angegeben werden; sie sind jedoch nicht anbieterspezifisch für diesen Anbieter, sondern werden stattdessen vom WMI-Hostdienst analysiert. Weitere Informationen zur WMI Query Language finden Sie in der WQL-Dokumentation im Microsoft Developer Network (MSDN).  
   
@@ -74,7 +74,7 @@ WHERE where_condition
  Gibt an, dass alle einem Ereignis zugeordneten Eigenschaften abgefragt werden.  
   
  *event_type*  
- Jedes Ereignis, für das eine Ereignisbenachrichtigung erstellt werden kann. Eine Liste der verfügbaren Ereignisse finden Sie unter [Klassen und Eigenschaften für den WMI-Anbieter für Server Ereignisse](https://technet.microsoft.com/library/ms186449.aspx). Beachten Sie, dass *Ereignistyp* Namen denselben *event_type*  |  *event_group* entsprechen, die angegeben werden können, wenn Sie eine Ereignis Benachrichtigung mithilfe von CREATE Event Notification manuell erstellen. Beispiele für *Ereignistyp* sind CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS und TRC_DATABASE.  
+ Jedes Ereignis, für das eine Ereignisbenachrichtigung erstellt werden kann. Eine Liste der verfügbaren Ereignisse finden Sie unter [Klassen und Eigenschaften für den WMI-Anbieter für Server Ereignisse](./wmi-provider-for-server-events-classes-and-properties.md). Beachten Sie, dass *Ereignistyp* Namen denselben *event_type*  |  *event_group* entsprechen, die angegeben werden können, wenn Sie eine Ereignis Benachrichtigung mithilfe von CREATE Event Notification manuell erstellen. Beispiele für *Ereignistyp* sind CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS und TRC_DATABASE.  
   
 > [!NOTE]  
 >  Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können auch Ereignisbenachrichtigungen auslösen. Testen Sie die Ereignisbenachrichtigungen, um ihre Reaktion auf gespeicherte Systemprozeduren, die ausgeführt werden, zu bestimmen. Beispielsweise lösen die CREATE TYPE-Anweisung und die gespeicherte Prozedur **sp_addtype** eine Ereignis Benachrichtigung aus, die für ein CREATE_TYPE-Ereignis erstellt wird. Allerdings werden von der gespeicherten Prozedur **sp_rename** keine Ereignis Benachrichtigungen ausgelöst. Weitere Informationen finden Sie unter[DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md).  
@@ -84,7 +84,7 @@ WHERE where_condition
   
  Nur der `=` Operand kann mit **DatabaseName**, Schema Name und **SchemaName** **objectName**verwendet werden. Andere Ausdrücke können nicht mit diesen Ereigniseigenschaften verwendet werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die *where_condition* der Syntax des WMI-Anbieters für Server Ereignisse bestimmt Folgendes:  
   
 -   Der Bereich, in dem der Anbieter versucht, die angegebene *event_type*abzurufen: Serverebene, Datenbankebene oder Objektebene (das einzige derzeit unterstützte Objekt ist Queue). Letztlich bestimmt dieser Bereich den Typ der in der Zieldatenbank erstellten Ereignisbenachrichtigung. Dieser Prozess wird Ereignisbenachrichtigungsregistrierung genannt.  
@@ -111,9 +111,9 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  Beachten Sie, dass nicht bei allen Ereignissen ein bestimmter Gültigkeitsbereich abgefragt werden kann. Beispielsweise können die WQL-Abfrage für ein Ablaufverfolgungsereignis wie Lock_Deadlock oder eine Ablaufverfolgungsereignisgruppe wie TRC_LOCKS nur auf Serverebene registriert werden. Auch das CREATE_ENDPOINT-Ereignis und das DDL_ENDPOINT_EVENTS-Ereignis können nur auf Serverebene registriert werden. Weitere Informationen zum entsprechenden Bereich für das Registrieren von Ereignissen finden Sie unter [Entwerfen von Ereignis Benachrichtigungen](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). Der Versuch, eine WQL-Abfrage zu registrieren, deren *event_type* nur auf Serverebene registriert werden kann, erfolgt immer auf Serverebene. Die Registrierung ist erfolgreich, wenn der WMI-Client die erforderlichen Berechtigungen hat. Andernfalls wird an den Client ein Fehler zurückgegeben. In bestimmten Fällen können Sie, abhängig von den Eigenschaften des Ereignisses, die WHERE-Klausel jedoch trotzdem als Filter für serverbasierte Ereignisse verwenden. Viele Ablauf Verfolgungs Ereignisse verfügen z. b. über eine **DatabaseName** -Eigenschaft, die in der WHERE-Klausel als Filter verwendet werden kann.  
   
- Ereignis Benachrichtigungen im Server Bereich werden in der **Master** -Datenbank erstellt und können mithilfe der [sys. server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) -Katalog Sicht für Metadaten abgefragt werden.  
+ Ereignis Benachrichtigungen im Server Bereich werden in der **Master** -Datenbank erstellt und können mithilfe der [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) -Katalog Sicht für Metadaten abgefragt werden.  
   
- Ereignis Benachrichtigungen mit Daten Bankbereich oder Objektbereich werden in der angegebenen Datenbank erstellt und können mithilfe der [sys. event_notifications](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md) -Katalog Sicht für Metadaten abgefragt werden. (Sie müssen der Katalogsicht den entsprechenden Datenbanknamen als Präfix hinzufügen.)  
+ Ereignis Benachrichtigungen mit Daten Bankbereich oder Objektbereich werden in der angegebenen Datenbank erstellt und können mithilfe der [sys.event_notifications](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md) -Katalog Sicht für Metadaten abgefragt werden. (Sie müssen der Katalogsicht den entsprechenden Datenbanknamen als Präfix hinzufügen.)  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -142,7 +142,6 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konzepte des WMI-Anbieters für Server Ereignisse](https://technet.microsoft.com/library/ms180560.aspx)   
- [Ereignisbenachrichtigung (Datenbank-Engine)](https://technet.microsoft.com/library/ms182602.aspx)  
-  
+ [Konzepte des WMI-Anbieters für Server Ereignisse](./wmi-provider-for-server-events-concepts.md)   
+ [Ereignisbenachrichtigung (Datenbank-Engine)](/previous-versions/sql/sql-server-2008-r2/ms182602(v=sql.105))  
   

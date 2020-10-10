@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 10d2eb061a4ee6d9ff9c8d0594561667dd882dc9
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 60ee13c6715362ba821575a3f8b9f9d5bc3e2bfa
+ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511588"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589329"
 ---
 # <a name="secure-sql-server-docker-containers"></a>Sichern von SQL Server Docker-Containern
 
@@ -126,6 +126,60 @@ Dies kann der standardmäßig festgelegte Nicht-Root-Benutzer oder ein anderer N
 ```bash
 chown -R 10001:0 <database file dir>
 ```
+## <a name="encrypting-connections-to-sql-server-linux-containers"></a>Verschlüsseln von Verbindungen mit SQL Server für Linux-Containern
+
+Zum Verschlüsseln von Verbindungen mit SQL Server für Linux-Containern benötigen Sie ein Zertifikat, das die [hier] dokumentierten Anforderungen erfüllt.
+
+Das folgende Beispiel zeigt, wie Sie Verbindungen mit SQL Server für Linux-Containern verschlüsseln können. In diesem Fall wird ein selbstsigniertes Zertifikat verwendet. In Produktionsszenarios für solche Umgebungen sollten Sie stattdessen Zertifizierungsstellenzertifikate verwenden.
+
+1. Erstellen Sie ein ausschließlich für Test- und Nichtproduktionsumgebungen geeignetes selbstsigniertes Zertifikat.
+  
+      ```bash
+      openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=sql1.contoso.com' -keyout /container/sql1/mssql.key -out /container/sql1/mssql.pem -days 365
+      ```
+     Der Hostname des SQL-Containers ist „sql1“, sodass beim Herstellen einer Verbindung mit diesem Container der in der Verbindungszeichenfolge verwendete Name \'sql1.contoso.com,port\' ist.
+
+    > [!NOTE]
+    > Stellen Sie sicher, dass der Ordnerpfad „/container/sql1/“ bereits vorhanden ist, bevor Sie den obigen Befehl ausführen.
+
+2. Stellen Sie sicher, dass Sie die richtigen Berechtigungen für die Dateien „mssql.key“ und „mssql.pem“ festlegen, um Fehler beim Einbinden der Dateien in den SQL-Container zu vermeiden:
+
+    ```bash
+    chmod 440 /container/sql1/mssql.pem
+    chmod 440 /container/sql1/mssql.key
+    ```
+
+3. Erstellen Sie nun eine Datei namens „mssql.conf“ mit dem folgenden Inhalt, um die vom Server initiierte Verschlüsselung zu aktivieren. Wenn Sie vom Client initiierte Verschlüsselung verwenden möchten, ändern Sie die letzte Zeile in „forceencryption = 0“.
+
+    ```bash
+    [network]
+    tlscert = /etc/ssl/certs/mssql.pem
+    tlskey = /etc/ssl/private/mssql.key
+    tlsprotocols = 1.2
+    forceencryption = 1
+    ```
+
+    > [!NOTE]
+    > Bei einigen Linux-Distributionen kann der Pfad zum Speichern des Zertifikats bzw. des Schlüssels auch „/etc/pki/tls/certs/“ bzw. „/etc/pki/tls/private/“ lauten. Überprüfen Sie den Pfad, bevor Sie die Datei „mssql.conf“ für SQL-Container aktualisieren. Der Speicherort, den Sie in „mssql.conf“ festlegen, ist der, an dem SQL Server im Container nach dem Zertifikat und dessen Schlüssel suchen wird. In diesem Fall ist dieser Ort „/etc/ssl/certs/ and /etc/ssl/private/“.
+
+    Die Datei „mssql.conf“ wird im selben Ordner unter „/container/sql1/“ erstellt. Wenn Sie die obigen Schritte ausgeführt haben, sollten Sie über drei Dateien im Ordner „sql1“ verfügen: „mssql.conf“, „mssql.key“ und „mssql.pem“.
+
+4. Stellen Sie den SQL-Container über den unten gezeigten Befehl bereit:
+
+    ```bash
+    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@ssw0rd" -p 5434:1433 --name sql1 -h sql1 -v /container/sql1/mssql.conf:/var/opt/mssql/mssql.conf -v   /container/sql1/mssql.pem:/etc/ssl/certs/mssql.pem -v /container/sql1/mssql.key:/etc/ssl/private/mssql.key -d mcr.microsoft.com/mssql/server:2019-latest
+    ```
+
+    Im obigen Befehl haben Sie die Dateien „mssql.conf“, „mssql.pem“ und „mssql.key“ in den Container eingebunden und Port 1433 (SQL Server-Standardport) im Container Port 5434 des Hosts zugeordnet. 
+
+    > [!NOTE]
+    > Wenn Sie RHEL 8 oder höher verwenden, können Sie auch den Befehl \'podman run\' anstelle von \'docker run\' verwenden. 
+
+Befolgen Sie die Anweisungen in den [hier][1] dokumentierten Abschnitten \"Registrieren des Zertifikats auf dem Clientcomputer\" und \"Exemplarische Verbindungszeichenfolgen\", um mit der Verschlüsselung von Verbindungen mit SQL Server für Linux-Containern zu beginnen.
+
+  [Encrypting connection to SQL Server Linux]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true
+  [hier]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#requirements-for-certificates
+  [1]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#client-initiated-encryption
 
 ## <a name="next-steps"></a>Nächste Schritte
 
