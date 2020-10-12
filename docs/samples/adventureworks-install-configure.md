@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9c60bea64ad528a953101da7625347ca659b1c6d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f4140db7be7367105832ff564d927ba6bc40ed25
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485096"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955891"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks-Beispieldatenbanken
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,10 +45,10 @@ Wenn Sie nicht sicher sind, was Sie benötigen, beginnen Sie mit der OLTP-Versio
 |[AdventureWorks2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)|[AdventureWorksDW2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak)|[AdventureWorksLT2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak)|
 |[AdventureWorks2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)|[AdventureWorksDW2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)|[AdventureWorksLT2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak)|
 |[AdventureWorks2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016.bak)|[AdventureWorksDW2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016.bak)|[AdventureWorksLT2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2016.bak)|
-|[AdventureWorks2016_EXT. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| Nicht zutreffend |
+|[AdventureWorks2016_EXT. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| – |
 |[AdventureWorks2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2014.bak)|[AdventureWorksDW2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2014.bak)|[AdventureWorksLT2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2014.bak)|
 |[AdventureWorks2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2012.bak)|[AdventureWorksDW2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2012.bak)|[AdventureWorksLT2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2012.bak)|
-|[AdventureWorks2008R2. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2. bak](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | Nicht zutreffend |
+|[AdventureWorks2008R2. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2. bak](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | – |
 
 Weitere Dateien finden Sie direkt auf GitHub: 
 
@@ -63,7 +63,7 @@ Sie können die- `.bak` Datei verwenden, um die Beispieldatenbank auf Ihrer SQL 
 
 # <a name="sql-server-management-studio-ssms"></a>[SQL Server Management Studio (SSMS)](#tab/ssms)
 
-Wenn Sie mit der Verwendung von SQL Server Management Studio (SSMS) nicht vertraut sind, finden Sie unter [Connect & Query](../ssms/tutorials/connect-query-sql-server.md) to Started. 
+Wenn Sie mit der Verwendung von SQL Server Management Studio (SSMS) nicht vertraut sind, finden Sie unter [Connect & Query](../ssms/quickstarts/connect-query-sql-server.md) to Started. 
 
 Führen Sie die folgenden Schritte aus, um die Datenbank in SQL Server Management Studio wiederherzustellen:
 
@@ -75,7 +75,7 @@ Führen Sie die folgenden Schritte aus, um die Datenbank in SQL Server Managemen
 3. Öffnen Sie SQL Server Management Studio (SSMS), und stellen Sie eine Verbindung mit Ihrem SQL Server in her. 
 4. Klicken Sie mit der rechten Maustaste auf **Datenbanken** **Objekt-Explorer**  >  **Restore Database...** , um den **Wiederherstellungs** -Assistenten zu starten. 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
 
 
 1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
@@ -84,7 +84,13 @@ Führen Sie die folgenden Schritte aus, um die Datenbank in SQL Server Managemen
 1. Überprüfen Sie die Registerkarte " **Dateien** ", um zu bestätigen, dass die **Wiederherstellung als** Speicherort und Dateinamen **mit dem gewünschten** Speicherort und den Dateinamen im Assistenten 
 1. Klicken Sie auf **OK**, um die Datenbank wiederherzustellen. 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+
+
+1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
+1. Wählen Sie **Hinzufügen** aus, und wählen Sie dann die `.bak` Datei aus, die Sie vor kurzem in diesen Wenn Sie die Datei an diesen Speicherort verschoben haben, Sie aber nicht im Assistenten sehen können, weist dies in der Regel auf ein Berechtigungsproblem hin. SQL Server oder der Benutzer, der sich bei SQL Server angemeldet hat, verfügt nicht über die Berechtigung für diese Datei in diesem Ordner. 
+1. Wählen Sie **OK** aus, um die Auswahl der Datenbanksicherung zu bestätigen und das Fenster **Sicherungsmedien auswählen** zu schließen. 
+1. Überprüfen Sie die Registerkarte ":::
 
 Weitere Informationen zum Wiederherstellen einer SQL Server Datenbank finden [Sie unter Wiederherstellen einer Datenbanksicherung mit SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
@@ -117,25 +123,55 @@ Führen Sie die folgenden Schritte aus, um die Datenbank in Azure Data Studio wi
 1. Öffnen Sie Azure Data Studio Studio, und stellen Sie eine Verbindung mit Ihrer SQL Server Instanz her
 1. Klicken Sie mit der rechten Maustaste auf Ihren Server, und wählen Sie **Verwalten**.
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+
+
+1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
+1. Wählen Sie **Hinzufügen** aus, und wählen Sie dann die `.bak` Datei aus, die Sie vor kurzem in diesen Wenn Sie die Datei an diesen Speicherort verschoben haben, Sie aber nicht im Assistenten sehen können, weist dies in der Regel auf ein Berechtigungsproblem hin. SQL Server oder der Benutzer, der sich bei SQL Server angemeldet hat, verfügt nicht über die Berechtigung für diese Datei in diesem Ordner. 
+1. Wählen Sie **OK** aus, um die Auswahl der Datenbanksicherung zu bestätigen und das Fenster **Sicherungsmedien auswählen** zu schließen. 
+1. Überprüfen Sie die Registerkarte ":::
 
 1. Auswählen der **Wiederherstellung**
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Wählen Sie im oberen Menü wiederherstellen aus, um die Datenbank wiederherzustellen.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+
+
+1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
+1. Wählen Sie **Hinzufügen** aus, und wählen Sie dann die `.bak` Datei aus, die Sie vor kurzem in diesen Wenn Sie die Datei an diesen Speicherort verschoben haben, Sie aber nicht im Assistenten sehen können, weist dies in der Regel auf ein Berechtigungsproblem hin. SQL Server oder der Benutzer, der sich bei SQL Server angemeldet hat, verfügt nicht über die Berechtigung für diese Datei in diesem Ordner. 
+1. Wählen Sie **OK** aus, um die Auswahl der Datenbanksicherung zu bestätigen und das Fenster **Sicherungsmedien auswählen** zu schließen. 
+1. Überprüfen Sie die Registerkarte ":::
 
 1. Geben Sie auf der Registerkarte **Allgemein** die unter **Quelle**aufgeführten Werte ein.
     1. Wählen Sie unter **Wiederherstellen von**die Option *Sicherungsdatei*aus.
     1. Wählen Sie unter **Pfad der Sicherungsdatei**den Speicherort aus, an dem Sie die BAK-Datei gespeichert haben. 
     
-   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Wählen Sie den Pfad der Sicherungsdatei.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+
+
+1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
+1. Wählen Sie **Hinzufügen** aus, und wählen Sie dann die `.bak` Datei aus, die Sie vor kurzem in diesen Wenn Sie die Datei an diesen Speicherort verschoben haben, Sie aber nicht im Assistenten sehen können, weist dies in der Regel auf ein Berechtigungsproblem hin. SQL Server oder der Benutzer, der sich bei SQL Server angemeldet hat, verfügt nicht über die Berechtigung für diese Datei in diesem Ordner. 
+1. Wählen Sie **OK** aus, um die Auswahl der Datenbanksicherung zu bestätigen und das Fenster **Sicherungsmedien auswählen** zu schließen. 
+1. Überprüfen Sie die Registerkarte ":::
     
     Mit diesem Vorgang werden die restlichen Felder automatisch aufgefüllt, z. b. **Datenbank**, **Zieldatenbank** und **Wiederherstellung**. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Nachdem Sie einen Pfad für die Sicherungsdatei ausgewählt haben, wird der Rest der Felder unter":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+
+
+1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
+1. Wählen Sie **Hinzufügen** aus, und wählen Sie dann die `.bak` Datei aus, die Sie vor kurzem in diesen Wenn Sie die Datei an diesen Speicherort verschoben haben, Sie aber nicht im Assistenten sehen können, weist dies in der Regel auf ein Berechtigungsproblem hin. SQL Server oder der Benutzer, der sich bei SQL Server angemeldet hat, verfügt nicht über die Berechtigung für diese Datei in diesem Ordner. 
+1. Wählen Sie **OK** aus, um die Auswahl der Datenbanksicherung zu bestätigen und das Fenster **Sicherungsmedien auswählen** zu schließen. 
+1. Überprüfen Sie die Registerkarte ":::
 
 1. Wählen Sie **Wiederherstellen** aus, um die Datenbank wiederherzustellen. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Wenn Sie fertig sind, wählen Sie wiederherstellen aus, um die Datenbank wiederherzustellen.":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+
+
+1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
+1. Wählen Sie **Hinzufügen** aus, und wählen Sie dann die `.bak` Datei aus, die Sie vor kurzem in diesen Wenn Sie die Datei an diesen Speicherort verschoben haben, Sie aber nicht im Assistenten sehen können, weist dies in der Regel auf ein Berechtigungsproblem hin. SQL Server oder der Benutzer, der sich bei SQL Server angemeldet hat, verfügt nicht über die Berechtigung für diese Datei in diesem Ordner. 
+1. Wählen Sie **OK** aus, um die Auswahl der Datenbanksicherung zu bestätigen und das Fenster **Sicherungsmedien auswählen** zu schließen. 
+1. Überprüfen Sie die Registerkarte ":::
 
 ---
 
@@ -157,7 +193,13 @@ Führen Sie die folgenden Schritte aus, um eine-Beispieldatenbank zum Erstellen 
 1. Geben Sie die angeforderten Informationen ein, um die Datenbank zu erstellen. 
 1. Wählen Sie auf der Registerkarte **zusätzliche Einstellungen** die Option **Sample** als vorhandene Daten unter **Datenquelle**aus: 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Wählen Sie Beispiel als Datenquelle auf der Registerkarte zusätzliche Einstellungen in der Azure-Portal aus, wenn Sie die Azure SQL-Datenbank erstellen.":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+
+
+1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
+1. Wählen Sie **Hinzufügen** aus, und wählen Sie dann die `.bak` Datei aus, die Sie vor kurzem in diesen Wenn Sie die Datei an diesen Speicherort verschoben haben, Sie aber nicht im Assistenten sehen können, weist dies in der Regel auf ein Berechtigungsproblem hin. SQL Server oder der Benutzer, der sich bei SQL Server angemeldet hat, verfügt nicht über die Berechtigung für diese Datei in diesem Ordner. 
+1. Wählen Sie **OK** aus, um die Auswahl der Datenbanksicherung zu bestätigen und das Fenster **Sicherungsmedien auswählen** zu schließen. 
+1. Überprüfen Sie die Registerkarte ":::
 
 1. Wählen Sie **Erstellen** aus, um die neue SQL-Datenbank zu erstellen. Dies ist die wiederhergestellte Kopie der AdventureWorksLT-Datenbank. 
 
@@ -172,7 +214,13 @@ Führen Sie die folgenden Schritte aus, um eine Beispieldatenbank aus SQL Server
 1. Wenn Sie dies noch nicht getan haben, stellen Sie [die-Beispieldatenbank in SQL Server wieder her](#restore-to-sql-server). 
 1. Klicken Sie mit der rechten Maustaste auf die wiederhergestellte Datenbank in **Objekt-Explorer**  >  **Tasks**  >  **Datenbank in Microsoft Azure SQL-Datenbank**bereitstellen.... 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Wählen Sie die Bereitstellung der Datenbank auf Microsoft Azure SQL-Datenbank aus, indem Sie mit der rechten Maustaste auf die Datenbank klicken und Aufgaben":::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+
+
+1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
+1. Wählen Sie **Hinzufügen** aus, und wählen Sie dann die `.bak` Datei aus, die Sie vor kurzem in diesen Wenn Sie die Datei an diesen Speicherort verschoben haben, Sie aber nicht im Assistenten sehen können, weist dies in der Regel auf ein Berechtigungsproblem hin. SQL Server oder der Benutzer, der sich bei SQL Server angemeldet hat, verfügt nicht über die Berechtigung für diese Datei in diesem Ordner. 
+1. Wählen Sie **OK** aus, um die Auswahl der Datenbanksicherung zu bestätigen und das Fenster **Sicherungsmedien auswählen** zu schließen. 
+1. Überprüfen Sie die Registerkarte ":::
 
 1. Befolgen Sie den Assistenten, um eine Verbindung mit Azure SQL-Datenbank herzustellen und die Datenbank bereitzustellen. 
 
@@ -194,5 +242,5 @@ Nachdem Sie die Beispieldatenbank wieder hergestellt haben, verwenden Sie die fo
 
 
 [Tutorials für SQL Server Datenbank-Engine](../relational-databases/database-engine-tutorials.md)   
-[Verbinden und Abfragen mit SQL Server Management Studio (SSMS)](../ssms/tutorials/connect-query-sql-server.md)   
-[Verbinden und Abfragen mit Azure Data Studio](../ssms/tutorials/connect-query-sql-server.md)
+[Verbinden und Abfragen mit SQL Server Management Studio (SSMS)](../ssms/quickstarts/connect-query-sql-server.md)   
+[Verbinden und Abfragen mit Azure Data Studio](../ssms/quickstarts/connect-query-sql-server.md)

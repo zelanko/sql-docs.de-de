@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c9757642736362745bd37607cacf74eeee962125
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 9868b414d627c7ea98504120432c0c3a662d463b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87824065"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956551"
 ---
 # <a name="installation-and-configuration"></a>Installation und Konfiguration
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -24,7 +24,7 @@ Anweisungen zur Installation und Konfiguration der OLTP-Datenbank für Wide Worl
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (oder höher) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Verwenden Sie für die vollständige Version des Beispiels SQL Server Evaluation/Developer/Enterprise Edition.
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Um die besten Ergebnisse zu erzielen, verwenden Sie die Version vom Juni 2016 oder höher.
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md): Um die besten Ergebnisse zu erzielen, verwenden Sie die Version vom Juni 2016 oder höher.
 
 ## <a name="download"></a>Download
 
@@ -57,9 +57,9 @@ Zum Wiederherstellen einer Sicherung in einer SQL Server Instanz können Sie Man
 Zum Importieren einer BacPac-Datenbank in eine neue SQL-Datenbank können Sie Management Studio verwenden.
 
 1. optionale Wenn Sie noch keine SQL Server in Azure haben, navigieren Sie zum [Azure-Portal](https://portal.azure.com/) , und erstellen Sie eine neue SQL-Datenbank. Beim Erstellen einer Datenbank erstellen Sie einen Server. Notieren Sie sich den Server.
-   - In [diesem Tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) finden Sie Informationen zum Erstellen einer Datenbank in wenigen Minuten.
+   - In [diesem Tutorial](/azure/azure-sql/database/single-database-create-quickstart) finden Sie Informationen zum Erstellen einer Datenbank in wenigen Minuten.
 2. Öffnen Sie SQL Server Management Studio, und stellen Sie in Azure eine Verbindung mit Ihrem Server her
-3. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Datenebenenanwendung importieren**aus.
+3. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Data-Tier Anwendung importieren**aus.
 4. Wählen Sie unter **Import Einstellungen** die Option **aus lokalem Datenträger importieren aus** , und wählen Sie die BacPac-Datei der Beispieldatenbank aus dem Dateisystem aus.
 5. Ändern Sie unter **Datenbankeinstellungen** den Datenbanknamen in *wideworldimporters* , und wählen Sie die zu verwendende Ziel Edition und das Dienst Ziel aus.
 6. Klicken Sie auf **weiter** und **Beenden** , um die Bereitstellung zu starten. Es dauert einige Minuten, bis ein P1-Vorgang abgeschlossen ist. Wenn ein niedrigerer Tarif erwünscht ist, empfiehlt es sich, in eine neue P1-Datenbank zu importieren und dann den Tarif auf die gewünschte Stufe zu ändern.
@@ -68,10 +68,10 @@ Zum Importieren einer BacPac-Datenbank in eine neue SQL-Datenbank können Sie Ma
 
 ### <a name="full-text-indexing"></a>Volltextindizierung
 
-In der-Beispieldatenbank kann die voll Text Indizierung verwendet werden. Dieses Feature wird jedoch nicht standardmäßig mit SQL Server installiert. Sie müssen es während SQL Server Setup auswählen (es ist standardmäßig in Azure SQL-Datenbank aktiviert). Daher ist ein Schritt nach der Installation erforderlich.
+In der-Beispieldatenbank können Full-Text Indizierung verwendet werden. Dieses Feature wird jedoch nicht standardmäßig mit SQL Server installiert. Sie müssen es während SQL Server Setup auswählen (es ist standardmäßig in Azure SQL-Datenbank aktiviert). Daher ist ein Schritt nach der Installation erforderlich.
 
 1. Stellen Sie in SQL Server Management Studio eine Verbindung mit der Datenbank wideworldimporters her, und öffnen Sie ein neues Abfragefenster.
-2. Führen Sie den folgenden T-SQL-Befehl aus, um die Verwendung der voll Text Indizierung in der-Datenbank zu aktivieren:`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. Führen Sie den folgenden T-SQL-Befehl aus, um die Verwendung Full-Text Indizierung in der Datenbank zu aktivieren:  `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit
@@ -90,9 +90,8 @@ In Azure SQL-Datenbank wird Audit über den [Azure-Portal](https://portal.azure.
 
 Gilt für: Azure SQL-Datenbank
 
-Die Sicherheit auf Zeilenebene ist im BacPac-Download von wideworldimporters standardmäßig nicht aktiviert. Führen Sie die folgende gespeicherte Prozedur aus, um die Sicherheit auf Zeilenebene in der Datenbank zu aktivieren:
+Row-Level Sicherheit ist im BacPac-Download von wideworldimporters standardmäßig nicht aktiviert. Um Row-Level Sicherheit in der Datenbank zu aktivieren, führen Sie die folgende gespeicherte Prozedur aus:
 
 ```sql
 EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 ```
-
