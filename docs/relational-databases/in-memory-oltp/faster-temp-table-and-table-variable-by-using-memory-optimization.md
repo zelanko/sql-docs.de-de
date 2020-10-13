@@ -12,12 +12,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f6369de798c04805e2c5facb01fcfd6dc31153
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 699819c74630687f4548d248632536e6e713e68b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723242"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869378"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -429,11 +429,10 @@ Wenn auf die speicheroptimierten Tabellenvariablen nur mit einem exakten Schlüs
   
 ## <a name="h-see-also"></a>H. Weitere Informationen  
   
-- [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [Speicheroptimierte Tabellen](./sample-database-for-in-memory-oltp.md)
 
 - [Definieren von Dauerhaftigkeit für speicheroptimierte Objekte](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)
 
 - [Kumulatives Update zum Eliminieren ungültiger Fehler aufgrund von nicht genügend Arbeitsspeicher (im Blogbeitrag von September 2017 angekündigt)](https://support.microsoft.com/help/4025208/fix-memory-leak-occurs-when-you-use-memory-optimized-tables-in-microso)
     - Unter [SQL Server 2016 Build-Versionen](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions) erhalten Sie ausführliche Informationen zu Releases, Service Packs und kumulativen Updates.
     - Diese zufälligen Fehler sind nicht in der SQL Server Enterprise-Edition aufgetreten.
-

@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 40763d6caadc420a3bb1794a4759c848d579007c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 137a4156dde6cfe89ff76998b383fb4ab17ea672
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173379"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891340"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase-Transact-SQL-Referenz
 
@@ -198,7 +198,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Erstellen externer Tabellen für Azure Data Lake Store
 Gilt für: Azure SQL Data Warehouse
 
-Weitere Informationen finden Sie unter [Laden von Daten aus Azure Data Lake Store in SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
+Weitere Informationen finden Sie unter [Laden von Daten aus Azure Data Lake Store in SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
 
 **1. Erstellen datenbankweiter Anmeldeinformationen**   
 
@@ -567,5 +567,5 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 Beispiele für Abfragen finden Sie unter [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md)(PolyBase-Abfragen).  
   
 ## <a name="see-also"></a>Siehe auch  
-[Erste Schritte mit PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+[Erste Schritte mit PolyBase](./polybase-guide.md)   
 [PolyBase-Handbuch](../../relational-databases/polybase/polybase-guide.md)

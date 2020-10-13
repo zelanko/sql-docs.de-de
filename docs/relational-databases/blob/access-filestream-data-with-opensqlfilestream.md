@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f2f87e037f16d2d0dc46d9f677403076148868b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 959bc875e314f0fbb79b51e4f9ea36dbf5414dc9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85745170"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810276"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Die OpenSqlFilestream-API ruft ein Win32-kompatibles Dateihandle für ein im Dateisystem gespeichertes FILESTREAM-Blob (Binary Large Object) ab. Das Handle kann an eine der folgenden Win32-APIs übergeben werden: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) oder [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Wenn Sie dieses Handle an eine andere Win32-API übergeben, wird der Fehler ERROR_ACCESS_DENIED zurückgegeben. Sie müssen das Handle schließen, indem Sie es an die Win32- [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) -API übergeben, bevor für die Transaktion ein Commit oder ein Rollback ausgeführt wird. Wenn das Handle nicht geschlossen wird, treten serverseitige Ressourcenverluste auf.  
+  Die OpenSqlFilestream-API ruft ein Win32-kompatibles Dateihandle für ein im Dateisystem gespeichertes FILESTREAM-Blob (Binary Large Object) ab. Das Handle kann an eine der folgenden Win32-APIs übergeben werden: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile), [TransmitFile](/windows/win32/api/mswsock/nf-mswsock-transmitfile), [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer), [SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile) oder [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers). Wenn Sie dieses Handle an eine andere Win32-API übergeben, wird der Fehler ERROR_ACCESS_DENIED zurückgegeben. Sie müssen das Handle schließen, indem Sie es an die Win32- [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) -API übergeben, bevor für die Transaktion ein Commit oder ein Rollback ausgeführt wird. Wenn das Handle nicht geschlossen wird, treten serverseitige Ressourcenverluste auf.  
   
  ALLE Zugriffe auf FILESTREAM-Datencontainer müssen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktion erfolgen. [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen können ebenfalls in der gleichen Transaktion ausgeführt werden. Damit wird die Konsistenz zwischen SQL-Daten und FILESTREAM-BLOB gewahrt.  
   
@@ -54,7 +54,7 @@ HANDLE OpenSqlFilestream (
  [in] Ist der **nvarchar(max)** -Pfad, der von der Funktion [PathName](../../relational-databases/system-functions/pathname-transact-sql.md) zurückgegeben wird. Der Aufruf von PathName muss von einem Konto erfolgen, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT- oder UPDATE-Berechtigungen für die FILESTREAM-Tabelle und -Spalte hat.  
   
  *DesiredAccess*  
- [in] Legt den verwenden Modus so fest, dass ein Zugriff auf FILESTREAM-BLOB-Daten erfolgt. Dieser Wert wird an die Funktion [DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527)übergeben.  
+ [in] Legt den verwenden Modus so fest, dass ein Zugriff auf FILESTREAM-BLOB-Daten erfolgt. Dieser Wert wird an die Funktion [DeviceIoControl](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)übergeben.  
   
 |Name|Wert|Bedeutung|  
 |----------|-----------|-------------|  
@@ -105,5 +105,4 @@ HANDLE OpenSqlFilestream (
  [Binary Large Object &#40;Blob&#41; Daten &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [Vornehmen von Teilupdates an FILESTREAM-Daten](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)   
  [Vermeiden von Konflikten mit Datenbankvorgängen in FILESTREAM-Anwendungen](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
-  
   

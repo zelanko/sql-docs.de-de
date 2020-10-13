@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 280fae3d260995a15a7baa9e40a861cb2cfdecc4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458334"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892230"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, Datenbankreplikat
 
@@ -42,7 +42,7 @@ ms.locfileid: "86458334"
 |**Verbleibende Wiederholungsbytes**|Die zur Wiederholung verbleibende Protokollmenge in Kilobytes bis zum Abschließen der Wiederherstellungsphase.|Sekundäres Replikat|  
 |**Wiederholte Bytes/s**|Menge an Protokolldatensätzen, die in der letzten Sekunde auf der sekundären Datenbank wiederholt wurden.|Sekundäres Replikat|  
 |**Rückgängig zu machendes Gesamtprotokoll**|Gesamtanzahl an Kilobytes von Protokollen, die rückgängig zu machen sind.|Sekundäres Replikat|  
-|**Transaktionsverzögerung**|Verzögerung beim Warten auf die Bestätigung eines nicht abgeschlossenen Commits für alle aktuellen Transaktionen in Millisekunden. Dividieren Sie den Wert durch *Gespiegelte Schreibtransaktionen/Sekunde*, um die *Durchschnittliche Transaktionsverzögerung* zu erhalten. Weitere Informationen finden Sie unter [SQL Server 2012 AlwaysOn – Teil 12 – Leistungsaspekte und Lesitungsüberwachung II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/).|Primäres Replikat|  
+|**Transaktionsverzögerung**|Verzögerung beim Warten auf die Bestätigung eines nicht abgeschlossenen Commits für alle aktuellen Transaktionen in Millisekunden. Dividieren Sie den Wert durch *Gespiegelte Schreibtransaktionen/Sekunde*, um die *Durchschnittliche Transaktionsverzögerung* zu erhalten. Weitere Informationen finden Sie unter [SQL Server 2012 AlwaysOn – Teil 12 – Leistungsaspekte und Lesitungsüberwachung II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii).|Primäres Replikat|  
   
 ## <a name="see-also"></a>Weitere Informationen
   
@@ -50,4 +50,3 @@ ms.locfileid: "86458334"
  [SQL Server, Verfügbarkeitsreplikat](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server, Datenbanken-Objekt](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  

@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0b5f120e82f44966d42a9c511f8c240e9d74c493
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0dd256b071ce3621f02e6c4a6a152670e2fd5c0f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458612"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892220"
 ---
 # <a name="use-sql-server-objects"></a>Verwenden von SQL Server-Objekten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86458612"
   
  Einige Objekte verfügen über mehrere Instanzen, wenn mehrere Ressourcen eines bestimmten Typs auf dem Computer vorhanden sind. So weist z.B. der Objekttyp **Prozessor** mehrere Instanzen auf, wenn ein System über mehrere Prozessoren verfügt. Der Objekttyp **Datenbanken** verfügt über eine Instanz für jede Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Einige Objekttypen (z.B. für den **Speicher-Manager** ) verfügen nur über eine Instanz. Wenn ein Objekttyp über mehrere Instanzen verfügt, können Sie Leistungsindikatoren hinzufügen, um die Statistiken für jede Instanz (oder in vielen Fällen für alle Instanzen gleichzeitig) nachzuverfolgen. Leistungsindikatoren für die Standardinstanz werden im Format **SQLServer:** _\<object name>_ angezeigt. Leistungsindikatoren für benannte Instanzen werden im Format **MSSQL$** _\<instance name>_ **:** _\<counter name>_ oder **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ angezeigt.  
   
-Werte von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsindikatoren werden mithilfe der Windows-Leistungsindikator-Engine (Windows Performance Counter, WPC) generiert. Einige Indikatorwerte werden nicht direkt von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] berechnet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Basiswerte für die WPC-Engine bereit, die die erforderlichen Berechnungen durchführt (z. B. die der Prozentsätze). Die dynamische Verwaltungssicht [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) stellt alle Indikatoren mit dem ursprünglichen, von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierten Wert bereit. Die Spalte `cntr_type` gibt den Typ des Indikators an. Wie die WPC-Engine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Indikatorwerte verarbeitet, hängt von diesem Typ ab. Weitere Informationen zu Typen von Leistungsindikatoren finden Sie in der [WMI-Dokumentation](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types).
+Werte von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsindikatoren werden mithilfe der Windows-Leistungsindikator-Engine (Windows Performance Counter, WPC) generiert. Einige Indikatorwerte werden nicht direkt von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] berechnet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Basiswerte für die WPC-Engine bereit, die die erforderlichen Berechnungen durchführt (z. B. die der Prozentsätze). Die dynamische Verwaltungssicht [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) stellt alle Indikatoren mit dem ursprünglichen, von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierten Wert bereit. Die Spalte `cntr_type` gibt den Typ des Indikators an. Wie die WPC-Engine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Indikatorwerte verarbeitet, hängt von diesem Typ ab. Weitere Informationen zu Typen von Leistungsindikatoren finden Sie in der [WMI-Dokumentation](/windows/win32/wmisdk/wmi-performance-counter-types).
   
  Durch Hinzufügen oder Entfernen von Leistungsindikatoren zum bzw. aus dem Diagramm und Speichern der Diagrammeinstellungen können Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte und -Leistungsindikatoren angeben, die beim Starten des Systemmonitors überwacht werden.  
   
@@ -144,5 +144,4 @@ Werte von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsind
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Leistungsobjekten](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85729b4f194cedb1a0682387ab7047f332a2ceb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90bb710e57e87bfb6bf86f4ae0543329a4500940
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490473"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863645"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Direkte Konfiguration der Spaltenverschlüsselung mit Transact-SQL
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -36,7 +36,7 @@ Wie jede Abfrage, die eine serverseitige Secure Enclave verwendet, muss eine `AL
 Im weiteren Verlauf dieses Artikels wird beschrieben, wie Sie eine direkte Verschlüsselung mithilfe der `ALTER TABLE`/`ALTER COLUMN`-Anweisung aus SQL Server Management Studio auslösen. Alternativ können Sie `ALTER TABLE`/`ALTER COLUMN` aus Ihrer Anwendung ausgeben. 
 
 > [!NOTE]
-> Derzeit unterstützen andere Tools als SSMS, einschließlich des [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd)-Cmdlets im SqlServer PowerShell-Modul und [sqlcmd](../../../tools/sqlcmd-utility.md),nicht die Verwendung von `ALTER TABLE`/`ALTER COLUMN` für direkte Kryptografievorgänge.
+> Derzeit unterstützen andere Tools als SSMS, einschließlich des [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd)-Cmdlets im SqlServer PowerShell-Modul und [sqlcmd](../../../tools/sqlcmd-utility.md),nicht die Verwendung von `ALTER TABLE`/`ALTER COLUMN` für direkte Kryptografievorgänge.
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>Durchführen einer direkten Verschlüsselung mit Transact-SQL in SSMS
 ### <a name="pre-requisites"></a>Voraussetzungen

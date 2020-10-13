@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a26b04b1acc7ac829bb8fe79db2d3eaeede502dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea4b3c26cba886b5150b1bef7b8f3b08380c7a98
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760470"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892480"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lektion 1: Erstellen und Anwenden der Richtlinie „Standardmäßig deaktiviert“
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ Mit richtlinienbasierten Verwaltungsrichtlinien können Sie ein oder mehrere Ins
 ## <a name="prerequisites"></a>Voraussetzungen
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio und Zugriff auf einen Server, auf dem SQL Server ausgeführt wird. 
 
-- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installieren Sie [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
   
 ## <a name="create-the-mail-off-condition"></a>Erstellen der Bedingung „Mail aus“
@@ -92,6 +92,5 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio u
    
 ## <a name="next-lesson"></a>Nächste Lektion  
 [Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
-  
   
   

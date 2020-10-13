@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480406"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810704"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Übersicht über Wiederherstellungsvorgänge (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ Im Falle eines Ausfalls oder bei einem sonstigen nicht ordnungsgemäßen Herunte
 
 -   In der **Rollbackphase** wird ein Rollback aller in der ATT gefundenen unvollständigen Transaktionen ausgeführt, um die Integrität der Datenbank sicherzustellen. Nach dem Rollback wird die Datenbank online geschaltet, und es können keine weiteren Transaktionsprotokollsicherungen auf die Datenbank angewendet werden.
 
-Informationen zum Fortschritt der einzelnen Phasen der Datenbankwiederherstellung werden im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Fehlerprotokoll](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) erfasst. Der Fortschritt der Datenbankwiederherstellung kann auch mit erweiterten Ereignissen nachverfolgt werden. Weitere Informationen finden Sie im Blogbeitrag [New extended events for database recovery progress](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/) (Neue erweiterte Ereignisse für den Fortschritt der Datenbankwiederherstellung).
+Informationen zum Fortschritt der einzelnen Phasen der Datenbankwiederherstellung werden im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Fehlerprotokoll](../../tools/configuration-manager/viewing-the-sql-server-error-log.md) erfasst. Der Fortschritt der Datenbankwiederherstellung kann auch mit erweiterten Ereignissen nachverfolgt werden. Weitere Informationen finden Sie im Blogbeitrag [New extended events for database recovery progress](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress) (Neue erweiterte Ereignisse für den Fortschritt der Datenbankwiederherstellung).
 
 > [!NOTE]
 > Wenn in einem Szenario einer schrittweisen Wiederherstellung eine schreibgeschützte Dateigruppe bereits vor der Erstellung der Dateisicherung schreibgeschützt war, ist die Anwendung von Protokollsicherungen auf die Dateigruppe unnötig und wird von der Dateiwiederherstellung ausgelassen. 
@@ -174,9 +174,9 @@ Der Datenbankwiederherstellungsberater erleichtert das Erstellen von Wiederherst
   
 Weitere Informationen zum Datenbankwiederherstellungsberater finden Sie in den folgenden Blogs zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltbarkeit:  
   
--   [Wiederherstellungsberater: Einführung](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
+-   [Wiederherstellungsberater: Einführung](/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
--   [Wiederherstellungsberater: Verwenden von SSMS zum Erstellen/Wiederherstellen von Teilungssicherungen](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
+-   [Wiederherstellungsberater: Verwenden von SSMS zum Erstellen/Wiederherstellen von Teilungssicherungen](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Verbesserte Wiederherstellung von Datenbanken
 Die [verbesserte Wiederherstellung von Datenbanken](/azure/sql-database/sql-database-accelerated-database-recovery/) ist in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verfügbar. Durch die verbesserte Wiederherstellung von Datenbanken wird die Verfügbarkeit von Datenbanken enorm verbessert, insbesondere bei zeitintensiven Transaktionen. Hierfür wurde der [Wiederherstellungsprozess](#TlogAndRecovery) der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vollständig überarbeitet. Eine Datenbank, für die die verbesserte Wiederherstellung von Datenbanken aktiviert wurde, wird nach einem Failover oder einem nicht sauberen Herunterfahren deutlich schneller wiederhergestellt. Ist diese Option aktiviert, wird bei der verbesserten Wiederherstellung von Datenbanken auch das Rollback von abgebrochenen Transaktionen mit langer Ausführungszeit deutlich schneller.
@@ -195,4 +195,4 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
- [Anwenden von Transaktionsprotokollsicherungen (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [Anwenden von Transaktionsprotokollsicherungen (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)

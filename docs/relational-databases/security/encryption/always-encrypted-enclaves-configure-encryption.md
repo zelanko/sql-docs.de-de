@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 38f421815202b16fe5d7d2570ce5661be5097109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb922b1dc85706e0630dd3d67dcb33459c490124
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490489"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863693"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Konfigurieren einer direkten Spaltenverschlüsselung mithilfe von Always Encrypted mit Secure Enclaves 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -43,7 +43,7 @@ Ein Benutzer oder eine Anwendung, der oder die kryptografische Vorgänge auslös
 Sie können die direkte Verschlüsselung nur mithilfe der Anweisung [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) von SQL Server Management Studio oder Ihrer benutzerdefinierten Anwendung auslösen. Weitere Informationen finden Sie unter [Direkte Konfiguration der Spaltenverschlüsselung mit Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md).
 
 > [!NOTE]
-> Zurzeit unterstützen der [Always Encrypted-Assistent](always-encrypted-wizard.md) und das [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption)-Cmdlet keine direkte Verschlüsselung und laden die Daten für kryptografische Vorgänge immer herunter, auch wenn Ihre Konfiguration die oben genannten Anforderungen erfüllt. 
+> Zurzeit unterstützen der [Always Encrypted-Assistent](always-encrypted-wizard.md) und das [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption)-Cmdlet keine direkte Verschlüsselung und laden die Daten für kryptografische Vorgänge immer herunter, auch wenn Ihre Konfiguration die oben genannten Anforderungen erfüllt. 
 
 ## <a name="next-steps"></a>Nächste Schritte
 - [Direkte Konfiguration der Spaltenverschlüsselung mit Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)

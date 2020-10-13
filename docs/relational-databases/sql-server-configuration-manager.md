@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5602b8796eaa9981f89037c16af0abbeab8e838e
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: fee95de639217481b3278fcf4f5f3315564a0be8
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435559"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809671"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server-Konfigurations-Manager
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -87,14 +87,13 @@ ms.locfileid: "87435559"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die Protokolle Shared Memory, TCP/IP und Named Pipes. Informationen zur Auswahl eines Netzwerkprotokolls finden Sie unter [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt nicht die Netzwerkprotokolle VIA, Banyan VINES Sequenced Packet Protocol (SSP), Multiprotocol, AppleTalk oder NWLink IPX/SPX. Clients, die zuvor Verbindungen mit diesen Protokollen hergestellt haben, müssen zum Herstellen der Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ein anderes Protokoll auswählen. Sie können den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager nicht zum Konfigurieren des Winsockproxy verwenden. Informationen zum Konfigurieren des Winsockproxys finden Sie in der ISA Server-Dokumentation.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Verwalten von Diensten: Themen zur Vorgehensweise &#40;SQL Server-Konfigurations-Manager&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+ [Verwalten von Diensten: Themen zur Vorgehensweise &#40;SQL Server-Konfigurations-Manager&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)  
   
  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
- [Starten, Beenden oder Anhalten des SQL Server-Agent-Diensts](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
+ [Starten, Beenden oder Anhalten des SQL Server-Agent-Diensts](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
  [Festlegen des automatischen Starts einer Instanz von SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   
  [Verhindern des automatischen Starts einer Instanz von SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
-  
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e49dc9ad226d9a9a1bd3cc277a1944f7b5b6622e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45cfba1078dbe72e09f760f24fc0c9f47c0c0b1f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482512"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891020"
 ---
 # <a name="manage-partition-wizard"></a>Assistent zum Verwalten von Partitionen 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "88482512"
  **Partitionierte Daten in einem Szenario mit gleitendem Fenster verwalten**  
  Fügt eine leere Partition an die vorhandene Tabelle an, die zum Einfügen und Auslagern von Daten verwendet werden kann. Der Assistent unterstützt derzeit das Einfügen in die letzte Partition und das Auslagern aus der ersten Partition.  
   
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Partitionseinfügeoptionen auswählen (Seite)  
  Auf der Seite **Partitionseinfügeoptionen auswählen** können Sie die Stagingtabelle erstellen, die Sie in die partitionierte Tabelle einfügen.  
@@ -105,7 +105,7 @@ ms.locfileid: "88482512"
  **Einzufügende Tabelle**  
  Wählen Sie die Stagingtabelle aus, die die Partition enthält, die Sie der partitionierten Tabelle hinzufügen möchten. Sie müssen diese Stagingtabelle erstellen, bevor Sie Partitionen mit dem Assistenten zum **Verwalten von Partitionen**einfügen können.  
   
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Partitionsauslagerungsoptionen auswählen (Seite)  
  Auf der Seite **Partitionsauslagerungsoptionen auswählen** können Sie die Partition und die Stagingtabelle für die partitionierten Daten auswählen, die aus der partitionierten Tabelle ausgelagert werden.  
@@ -123,7 +123,7 @@ ms.locfileid: "88482512"
  **Vorhanden**  
  Wählen Sie die vorhandene Stagingtabelle aus, die zum Auslagern der Partition aus der aktuellen Quelltabelle verwendet werden soll. Wenn die vorhandene Tabelle Daten enthält, werden diese mit den Daten überschrieben, die Sie auslagern.  
   
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
 ##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> Stagingtabellenoptionen auswählen (Seite)  
  Auf der Seite **Stagingtabellenoptionen auswählen** können Sie die Stagingtabelle erstellen, die zum Verschieben der partitionierten Daten verwendet werden soll.  
@@ -145,7 +145,7 @@ ms.locfileid: "88482512"
  **Dateigruppe**  
  Wählen Sie eine Dateigruppe für die neue Tabelle aus.  
   
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
 ##  <a name="select-output-option-page"></a><a name="OutputOption"></a> Ausgabeoption auswählen (Seite)  
  Geben Sie auf der Seite **Ausgabeoption auswählen** an, wie Sie die Änderungen für Ihre Partitionen abschließen möchten.  
@@ -172,7 +172,7 @@ ms.locfileid: "88482512"
  **Zeitplan ändern**  
  Hiermit wird das Dialogfeld **Neuer Auftragszeitplan** geöffnet, in dem Sie die Eigenschaften des geplanten Auftrags auswählen, ändern oder anzeigen können.  
   
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
 ##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> Neuer Auftragszeitplan (Seite)  
  Verwenden Sie die Seite **Neuer Auftragszeitplan** , um die Eigenschaften des Zeitplans anzuzeigen und zu ändern.  
@@ -255,7 +255,7 @@ ms.locfileid: "88482512"
  **Time**  
  Wählen Sie die Uhrzeit aus, zu der der Auftrag ausgeführt wird.  
   
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
 ##  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Mithilfe der Seite **Zusammenfassung** können Sie die Optionen überprüfen, die Sie auf den vorherigen Seiten ausgewählt haben.  
@@ -264,7 +264,7 @@ ms.locfileid: "88482512"
  **Überprüfen Sie Ihre Auswahl**  
  Zeigt die auf den einzelnen Seiten des Assistenten getroffene Auswahl an. Klicken Sie auf einen Knoten, um diesen zu erweitern und die ausgewählten Optionen anzuzeigen.  
   
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
 ##  <a name="progress-page"></a><a name="Progress"></a> Status (Seite)  
  Auf der Seite **Status** können Sie Statusinformationen zu den Aktionen im **Assistenten zum Verwalten von Partitionen**anzeigen. Je nach den im Assistenten ausgewählten Optionen enthält die Seite **Status** eine oder mehrere Aktionen. Im oberen Feld werden der Gesamtstatus des Assistenten und die Anzahl der empfangenen Status-, Fehler- und Warnmeldungen angezeigt.  
@@ -302,9 +302,8 @@ ms.locfileid: "88482512"
  **Close**  
  Schließen Sie den Assistenten.  
   
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
-  
   

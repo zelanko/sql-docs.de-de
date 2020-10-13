@@ -14,12 +14,12 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dda5e49aa6f51382beb390ae48a544565e2703d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: baa0397320f725f401099c00e9887069b5ec6cd1
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418924"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891920"
 ---
 # <a name="views"></a>Ansichten
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88418924"
  Mithilfe einer partitionierte Sicht werden partitionierte Daten aus einem Satz von Elementtabellen über einen oder mehrere Server hinweg horizontal verknüpft. Die Daten werden so dargestellt, als würden sie aus einer Tabelle stammen. Eine Sicht, die Elementtabellen für die gleiche Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verknüpft, ist eine lokale partitionierte Sicht.  
   
  Systemsichten  
- Systemsichten machen Katalogmetadaten verfügbar. Mithilfe von Systemsichten können Sie Informationen zu der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den Objekten zurückgeben, die in der Instanz definiert wurden. Sie können z.B. die sys.databases-Katalogsicht abfragen, um Informationen zu den benutzerdefinierten Datenbanken zurückzugeben, die in der Instanz verfügbar sind. Weitere Informationen finden Sie unter [Systemsichten &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ Systemsichten machen Katalogmetadaten verfügbar. Mithilfe von Systemsichten können Sie Informationen zu der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den Objekten zurückgeben, die in der Instanz definiert wurden. Sie können z.B. die sys.databases-Katalogsicht abfragen, um Informationen zu den benutzerdefinierten Datenbanken zurückzugeben, die in der Instanz verfügbar sind. Weitere Informationen finden Sie unter [Systemsichten &#40;Transact-SQL&#41;](../../t-sql/language-reference.md).  
   
 ## <a name="common-view-tasks"></a>Allgemeine Sichttasks  
  Die folgende Tabelle enthält Links zu häufigen Tasks im Zusammenhang mit der Erstellung und Änderung von Sichten.  
@@ -57,5 +57,4 @@ ms.locfileid: "88418924"
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Sichten über XML-Spalten](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
-  
   

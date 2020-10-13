@@ -15,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: db5d05ce1b3712eebbd77d34e8ae0b380e18dcbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36e196d2778407207ece407ddbb72c3b8788b510
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420374"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869200"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,6 @@ Der SQL-Volltextfilterdaemon-Startprogrammdienst ist ein instanzabhängiger Dien
      Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst fungiert als Named Pipe-Server für den Client des SQL-Volltextfilterdaemon-Startprogrammdiensts. Wenn die Named Pipe bereits vor dem Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einem anderen Prozess erstellt wurde, wird im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und im Windows-Ereignisprotokoll ein Fehler ausgegeben. Die Volltextsuche kann nicht ausgeführt werden.  Stellen Sie fest, welcher Prozess bzw. welche Anwendung versucht, die Named Pipe zu verwenden, und beenden Sie die betreffende Anwendung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von Diensten: Themen zur Vorgehensweise &#40;SQL Server-Konfigurations-Manager&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
+ [Verwalten von Diensten: Themen zur Vorgehensweise &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)   
  [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md)  
-  
   

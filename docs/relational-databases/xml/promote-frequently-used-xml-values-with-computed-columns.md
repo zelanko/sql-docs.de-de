@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5881835f6a415b47825181d7d5a74ec24677e3c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772099"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891940"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  Dazu erstellen Sie zuerst die Streaming-CLR-Funktion. Der **xml** -Datentyp wird als eine verwaltete SqlXml-Klasse in ADO.NET verfügbar gemacht und unterstützt die **CreateReader()** -Methode, die einen XmlReader zurückgibt.  
   
 > [!NOTE]  
->  Der Beispielcode in diesem Abschnitt verwendet XPathDocument und XPathNavigator. Diese zwingen Sie, alle XML-Dokumente in den Arbeitsspeicher zu laden. Wenn Sie ähnlichen Code in Ihrer Anwendung verwenden, um mehrere große XML-Dokumente zu verarbeiten, ist dieser Code nicht skalierbar. Halten Sie stattdessen die Speicherbelegung gering, und verwenden Sie wenn möglich Streaming-Schnittstellen. Weitere Informationen zur Leistung finden Sie unter [Architektur der CLR-Integration](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
+>  Der Beispielcode in diesem Abschnitt verwendet XPathDocument und XPathNavigator. Diese zwingen Sie, alle XML-Dokumente in den Arbeitsspeicher zu laden. Wenn Sie ähnlichen Code in Ihrer Anwendung verwenden, um mehrere große XML-Dokumente zu verarbeiten, ist dieser Code nicht skalierbar. Halten Sie stattdessen die Speicherbelegung gering, und verwenden Sie wenn möglich Streaming-Schnittstellen. Weitere Informationen zur Leistung finden Sie unter [Architektur der CLR-Integration](../clr-integration/clr-integration-architecture-clr-hosted-environment.md).  
   
 ```  
 public class c_streaming_xml_tvf {  
@@ -257,5 +257,4 @@ as
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von XML in berechneten Spalten](../../relational-databases/xml/use-xml-in-computed-columns.md)  
-  
   

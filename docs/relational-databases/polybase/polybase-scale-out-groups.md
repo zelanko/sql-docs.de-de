@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: b636a615544cdf3ab642e34b1d02c59db2e11872
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818230"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892510"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase-Erweiterungsgruppen
 
@@ -27,7 +27,7 @@ ms.locfileid: "84818230"
 
 Eine eigenständige SQL Server-Instanz mit PolyBase kann bei der Verarbeitung von sehr großen Datasets in Hadoop oder Azure Blob Storage zu einem Leistungsengpass werden. Die PolyBase-Gruppenfunktion ermöglicht Ihnen die Erstellung eines Clusters aus SQL Server-Instanzen, um große Datasets in einer Skalierungsart zu verarbeiten, die zu besseren Abfrageleistungen führt. Diese Datasets stammen aus externen Datenquellen, wie beispielsweise Hadoop oder Azure Blob Storage. Nun können Sie Ihre SQL Server-Computeressourcen skalieren, um den Leistungsanforderungen Ihrer Workload gerecht zu werden. Mit PolyBase-Erweiterungsgruppen, einer Gruppe von SQL Server-Instanzen, können Sie große externe Datasets in einer Architektur für die Parallelverarbeitung verarbeiten. Durch das Hinzufügen von weiteren SQL Server-Instanzen zur Gruppe kann die Datenlade- und -abfrageleistung linear erhöht werden. 
   
-Siehe [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) (Erste Schritte mit PolyBase) und [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)(PolyBase-Handbuch).
+Siehe [Get started with PolyBase](./polybase-guide.md) (Erste Schritte mit PolyBase) und [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)(PolyBase-Handbuch).
   
 ![PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase-Erweiterungsgruppen")  
   
@@ -68,5 +68,4 @@ Um eine PolyBase-Erweiterungsgruppe konfigurieren zu können, lesen Sie den folg
 
  [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
  [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
- [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
-
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)

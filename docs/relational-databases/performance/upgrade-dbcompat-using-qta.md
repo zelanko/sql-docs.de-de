@@ -21,12 +21,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ed1a88ec860edfc34535bbf812fd51f9930edb11
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: aafbba1fe5c4d7fe8c20b1d50d97bbd8a4277bae
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569915"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890970"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten
 
@@ -230,4 +230,5 @@ Erfordert Mitgliedschaft in der Rolle **db_owner**.
 - [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [USE HINT-Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md#use_hint)
 - [Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [Automatic Tuning (Automatische Optimierung)](../../relational-databases/automatic-tuning/automatic-tuning.md)
+- [Automatic Tuning (Automatische Optimierung)](../../relational-databases/automatic-tuning/automatic-tuning.md)   
+- [Verwenden des SQL Server-Abfrageoptimierungs-Assistenten](https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/)

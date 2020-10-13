@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 912aca78675b1cf5a0a088ba9a2264fe23b2b2eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 322f977207bb593ddc6a4c8c78fae7621bd2aad4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548895"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810681"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
 
@@ -38,10 +38,10 @@ Das Verwalten der Datenbeibehaltung für temporale Tabellen beginnt damit, die B
 
 Nachdem Sie die Beibehaltungsdauer bestimmt haben, ist der nächste Schritt, einen Plan für die Verwaltung von Verlaufsdaten zu entwickeln. Dazu gehört, wie und wo Sie Verlaufsdaten speichern und wie Sie Verlaufsdaten löschen, die älter sind, als die Beibehaltungsanforderungen vorsehen. Die folgenden vier Ansätze für das Verwalten von Verlaufsdaten in der temporalen Verlaufstabelle stehen Ihnen zur Verfügung:
 
-- [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)
-- [Tabellenpartitionierung](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)
-- [Benutzerdefiniertes Bereinigungsskript](https://msdn.microsoft.com/library/mt637341.aspx#using-custom-cleanup-script-approach)
-- [Beibehaltungsrichtlinie](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)
+- [Stretch Database](#using-stretch-database-approach)
+- [Tabellenpartitionierung](#using-table-partitioning-approach)
+- [Benutzerdefiniertes Bereinigungsskript](#using-custom-cleanup-script-approach)
+- [Beibehaltungsrichtlinie](#using-temporal-history-retention-policy-approach)
 
  Bei jedem dieser Ansätze basiert die Logik für die Migration oder Bereinigung von Verlaufsdaten auf der Spalte, die dem Ende der Dauer in der aktuellen Tabelle entspricht. Der Wert für das Ende der Dauer für jede Zeile bestimmt den Moment, an dem die Zeilenversion „geschlossen“ wird, an dem sie also in die Verlaufstabelle aufgenommen wird. Beispielsweise gibt die Bedingung `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` an, dass Verlaufsdaten, die älter als einen Monat sind, aus der Verlaufstabelle entfernt oder verschoben werden müssen.
 
@@ -53,7 +53,7 @@ Nachdem Sie die Beibehaltungsdauer bestimmt haben, ist der nächste Schritt, ein
 > [!NOTE]
 > Der Ansatz mit Stretch Database kann nur für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet werden, aber nicht für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migriert die Verlaufsdaten transparent zu Azure. Zur Erhöhung der Sicherheit können Sie Daten während der Übertragung mit der SQL Server-Funktion [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) verschlüsseln. Darüber hinaus können Sie zum Schutz Ihrer Daten [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) und andere erweiterte SQL Server-Sicherheitsfeatures für eine temporale Datenbank und Stretch Database verwenden.
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migriert die Verlaufsdaten transparent zu Azure. Zur Erhöhung der Sicherheit können Sie Daten während der Übertragung mit der SQL Server-Funktion [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) verschlüsseln. Darüber hinaus können Sie zum Schutz Ihrer Daten [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) und andere erweiterte SQL Server-Sicherheitsfeatures für eine temporale Datenbank und Stretch Database verwenden.
 
 Mit Stretch Database können Sie für einige oder alle Ihrer temporalen Verlaufstabellen ein Stretching auf Azure durchführen, und SQL Server verschiebt Verlaufsdaten im Hintergrund nach Azure. Durch die Aktivierung von Stretch für eine Verlaufstabelle ändert sich die Interaktion mit der temporalen Tabelle im Hinblick auf Datenänderungen und temporale Abfragen nicht.
 
@@ -98,7 +98,7 @@ Weitere Informationen:
 
 ### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Verwenden von Transact-SQL zum Durchführen eines Stretchings der gesamten Verlaufstabelle
 
-Sie können alternativ Transact-SQL verwenden, um die Streckung für den lokalen Server zu aktivieren, und [Stretch Database für eine Datenbank zu aktivieren](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Sie können dann [Transact-SQL verwenden, um Stretch Database für eine Tabelle zu aktivieren](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Führen Sie mit einer Datenbank, die zuvor für Stretch Database aktiviert wurde, das folgende Transact-SQL-Skript aus, um für eine vorhandene temporale Verlaufstabelle mit Systemversionsverwaltung ein Stretching durchzuführen:
+Sie können alternativ Transact-SQL verwenden, um die Streckung für den lokalen Server zu aktivieren, und [Stretch Database für eine Datenbank zu aktivieren](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Sie können dann [Transact-SQL verwenden, um Stretch Database für eine Tabelle zu aktivieren](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). Führen Sie mit einer Datenbank, die zuvor für Stretch Database aktiviert wurde, das folgende Transact-SQL-Skript aus, um für eine vorhandene temporale Verlaufstabelle mit Systemversionsverwaltung ein Stretching durchzuführen:
 
 ```sql
 ALTER TABLE <history table name>
@@ -315,7 +315,7 @@ Sie können das obige Skript etwas ändern und im regelmäßigen monatlichen War
 4. Ändern Sie in Schritt (6) die Partitionsfunktion durch Zusammenführen der unteren Grenze: `MERGE RANGE(N'2015-10-31T23:59:59.999'` nach dem Auslagern der Daten für Oktober.
 5. Teilen Sie in Schritt (7) die Partitionsfunktion durch Erstellen der neuen oberen Grenze: `SPLIT RANGE (N'2016-04-30T23:59:59.999'` nach dem Auslagern der Daten für Oktober.
 
-Die optimale Lösung wäre jedoch, regelmäßig ein generisches Transact-SQL-Skript auszuführen, das die entsprechende Aktion monatlich ohne Skriptänderungen durchführen kann. Es ist möglich, das oben angeführte Skript zu verallgemeinern, um die bereitgestellten Parameter zu bearbeiten (die untere Grenze, die zusammengeführt werden muss, und die neue Grenze, die durch Teilen der Partition erstellt wird). Um zu vermeiden, dass jeden Monat Stagingtabellen erstellt werden, können Sie eine Stagingtabelle im Voraus erstellen und wiederverwenden, indem Sie die CHECK-Einschränkung entsprechend der Partition ändern, die ausgelagert wird. Sehen Sie sich die folgenden Seiten an, um Ideen für [die vollständige Automatisierung eines gleitenden Fensters](https://msdn.microsoft.com/library/aa964122.aspx) mithilfe eines Transact-SQL-Skripts zu bekommen.
+Die optimale Lösung wäre jedoch, regelmäßig ein generisches Transact-SQL-Skript auszuführen, das die entsprechende Aktion monatlich ohne Skriptänderungen durchführen kann. Es ist möglich, das oben angeführte Skript zu verallgemeinern, um die bereitgestellten Parameter zu bearbeiten (die untere Grenze, die zusammengeführt werden muss, und die neue Grenze, die durch Teilen der Partition erstellt wird). Um zu vermeiden, dass jeden Monat Stagingtabellen erstellt werden, können Sie eine Stagingtabelle im Voraus erstellen und wiederverwenden, indem Sie die CHECK-Einschränkung entsprechend der Partition ändern, die ausgelagert wird. Sehen Sie sich die folgenden Seiten an, um Ideen für [die vollständige Automatisierung eines gleitenden Fensters](/previous-versions/sql/sql-server-2005/administrator/aa964122(v=sql.90)) mithilfe eines Transact-SQL-Skripts zu bekommen.
 
 ### <a name="performance-considerations-with-table-partitioning"></a>Überlegungen zur Leistung bei der Tabellenpartitionierung
 
@@ -502,7 +502,7 @@ Der Bereinigungstask für den gruppierten Columnstore entfernt ganze Zeilengrupp
 
 Die hervorragende Datenkompression und die effiziente Beibehaltungsbereinigung machen den gruppierten Columnstore-Index zur perfekten Lösung für Szenarios, bei denen Ihre Workload in kürzester Zeit eine große Menge an Verlaufsdaten generiert. Dieses Muster ist typisch für intensive Transaktionsverarbeitungs-Workloads, die temporale Tabellen verwenden, um die Änderungsnachverfolgung und -überwachung, Trendanalysen oder die Erfassung von IoT-Daten durchzuführen.
 
-Weitere Details finden Sie unter: [Verwalten von Verlaufsdaten in temporalen Tabellen mit Beibehaltungsrichtlinien](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy).
+Weitere Details finden Sie unter: [Verwalten von Verlaufsdaten in temporalen Tabellen mit Beibehaltungsrichtlinien](/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

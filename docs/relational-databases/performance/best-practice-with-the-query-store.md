@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: aab93dcc8036e0e1273a1c9444d7418214ad8926
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529483"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891050"
 ---
 # <a name="best-practices-with-query-store"></a>Bewährte Methoden für den Abfragespeicher
 
@@ -28,13 +28,13 @@ In diesem Artikel werden die bewährten Methoden für den Einsatz des SQL Server
 
 ## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a> Verwenden des neuesten [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über mehrere Benutzeroberflächen, die zum Konfigurieren des Abfragespeichers und zur Nutzung der gesammelten Daten über Ihre Arbeitsauslastung konzipiert wurden. Laden Sie die neueste Version von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [hier](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) herunter.
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über mehrere Benutzeroberflächen, die zum Konfigurieren des Abfragespeichers und zur Nutzung der gesammelten Daten über Ihre Arbeitsauslastung konzipiert wurden. Laden Sie die neueste Version von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [hier](../../ssms/download-sql-server-management-studio-ssms.md) herunter.
 
 Eine kurze Beschreibung zur Verwendung des Abfragespeichers bei Fehlerbehebungen finden Sie in den [@AzureBlogs zu Abfragespeichern](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Verwenden von Query Performance Insight in Azure SQL-Datenbank
 
-Wenn Sie den Abfragespeicher in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ausführen, können Sie mit [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) die Ressourcennutzung im Verlauf der Zeit analysieren. Sie können zwar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und [Azure Data Studio](../../azure-data-studio/what-is.md) verwenden, um detaillierte Ressourcennutzungswerte für alle Ihre Abfragen wie CPU, Arbeitsspeicher und E/A abzurufen, Query Performance Insight bietet Ihnen jedoch eine schnelle und effiziente Möglichkeit, um deren Auswirkung auf den DTU-Verbrauch Ihrer Datenbank insgesamt zu ermitteln. Weitere Informationen finden Sie unter [Query Performance Insight für Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+Wenn Sie den Abfragespeicher in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ausführen, können Sie mit [Query Performance Insight](/azure/sql-database/sql-database-query-performance) die Ressourcennutzung im Verlauf der Zeit analysieren. Sie können zwar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und [Azure Data Studio](../../azure-data-studio/what-is.md) verwenden, um detaillierte Ressourcennutzungswerte für alle Ihre Abfragen wie CPU, Arbeitsspeicher und E/A abzurufen, Query Performance Insight bietet Ihnen jedoch eine schnelle und effiziente Möglichkeit, um deren Auswirkung auf den DTU-Verbrauch Ihrer Datenbank insgesamt zu ermitteln. Weitere Informationen finden Sie unter [Query Performance Insight für Azure SQL-Datenbank](/azure/azure-sql/database/query-performance-insight-use).
 
 Dieser Abschnitt beschreibt die optimalen Standardeinstellungen der Konfiguration, mit denen der zuverlässige Betrieb des Abfragespeichers und der abhängigen Features sichergestellt wird. Die Standardkonfiguration ist für die fortlaufende Datensammlung optimiert. Dies bedeutet, dass möglichst wenig Zeit im Status OFF bzw. READ_ONLY verbracht wird. Weitere Informationen zu allen verfügbaren Abfragespeicheroptionen finden Sie unter [ALTER DATABASE SET-Optionen (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 

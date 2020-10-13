@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 89907738aa2e496e082a633f00882a72de5c07aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ce6e6c625850f1723fe2e0bed6332404a3ef117
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781599"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869472"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Fehler- und Ereignisreferenz (Datenbank-Engine)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "85781599"
   
 |Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[SQL Server-Community](https://go.microsoft.com/fwlink/?LinkId=42455)|Diese Site bietet Links zu Newsgroups und Foren, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community überwacht werden. Hier sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community ist bei Problemen ausgesprochen hilfreich, obwohl die Beantwortung von Fragen nicht unbedingt sichergestellt ist.|  
-|[SQL Server Developer Center-Community](/sql/sql-server/)|Diese Site ist speziell auf Newsgroups, Foren und andere Communityressourcen ausgerichtet, die für Entwickler von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Interesse sind.|  
+|[SQL Server-Community](../../sql-server/index.yml)|Diese Site bietet Links zu Newsgroups und Foren, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community überwacht werden. Hier sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community ist bei Problemen ausgesprochen hilfreich, obwohl die Beantwortung von Fragen nicht unbedingt sichergestellt ist.|  
+|[SQL Server Developer Center-Community](../../sql-server/index.yml)|Diese Site ist speziell auf Newsgroups, Foren und andere Communityressourcen ausgerichtet, die für Entwickler von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Interesse sind.|  
 |[Microsoft Hilfe- und Supportcenter](https://go.microsoft.com/fwlink/?linkid=16419)|Verwenden Sie diese Website, um sich mit einer Frage an einen Supportmitarbeiter von [!INCLUDE[msCoName](../../includes/msconame-md.md)] zu wenden.|  
-  
   

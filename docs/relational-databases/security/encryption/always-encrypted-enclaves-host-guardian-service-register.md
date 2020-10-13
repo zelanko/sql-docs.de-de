@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd8b43e431a4e67eb1933548935fb37562dcdeb7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: e161eff506c1aa5398752f052f00dc4dd69ae8d9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411146"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868902"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>Registrieren des Computers beim Host-Überwachungsdienst
 
@@ -120,7 +120,7 @@ Für den TPM-Nachweis werden drei Datendateien gesammelt, von denen einige wiede
 | -------------------- | ---------------- | ---------- |
 | Plattformbezeichner  | Der öffentliche Endorsement Key im TPM des Computers und das Endorsement Key-Zertifikat vom TPM-Hersteller. | 1 pro Computer |
 | TPM-Baseline | Die Plattform-Steuerungsregister (Platform Control Registers, PCRs) im TPM, die die während des Bootvorgangs geladene Firmware- und Betriebssystemkonfiguration messen. Beispiele: Secure Boot-Status und Angabe, ob Crashdumps verschlüsselt werden. | Eine Baseline pro eindeutiger Computerkonfiguration (identische Hard- und Software kann sich auf die gleiche Baseline stützen) |
-| Codeintegritätsrichtlinie | Die [Windows Defender-Anwendungssteuerungs](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)-Richtlinie, der Sie den Schutz der Computer anvertrauen | Eine pro eindeutiger CI-Richtlinie, die auf den Computern bereitgestellt ist. |
+| Codeintegritätsrichtlinie | Die [Windows Defender-Anwendungssteuerungs](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)-Richtlinie, der Sie den Schutz der Computer anvertrauen | Eine pro eindeutiger CI-Richtlinie, die auf den Computern bereitgestellt ist. |
 
 Von jedem Nachweisartefakt können in HGS mehrere Instanzen konfiguriert werden, um eine in Hard- und Software gemischte Flotte zu unterstützen.
 HGS schreibt für beglaubigte Computer lediglich vor, dass einer Richtlinie aus jeder Richtlinienkategorie genügt wird.
@@ -147,7 +147,7 @@ Wenn Sie bereits eine benutzerdefinierte WDAC-Codeintegritätsrichtlinie auf den
     ConvertFrom-CIPolicy -XmlFilePath $temppolicy -BinaryFilePath "$HOME\Desktop\allowall_cipolicy.bin"
     ```
 
-2. Befolgen Sie die Anweisungen im [Windows Defender Application Control-Bereitstellungshandbuch](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide), um die `allowall_cipolicy.bin`-Datei mithilfe von [Gruppenrichtlinien](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) auf den [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Computern bereitzustellen. Verwenden Sie für Arbeitsgruppencomputer denselben Prozess mit dem Editor für lokale Gruppenrichtlinien (`gpedit.msc`).
+2. Befolgen Sie die Anweisungen im [Windows Defender Application Control-Bereitstellungshandbuch](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide), um die `allowall_cipolicy.bin`-Datei mithilfe von [Gruppenrichtlinien](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) auf den [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Computern bereitzustellen. Verwenden Sie für Arbeitsgruppencomputer denselben Prozess mit dem Editor für lokale Gruppenrichtlinien (`gpedit.msc`).
 
 3. Führen Sie `gpupdate /force` auf den [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Computern aus, um die neue Codeintegritätsrichtlinie zu konfigurieren, und starten Sie die Computer dann neu, um die Richtlinie anzuwenden.
 
@@ -243,7 +243,7 @@ Wiederholen Sie Schritt 4B für jeden [!INCLUDE [ssnoversion-md](../../../includ
 
 Nachdem Sie den [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Computer bei HGS registriert haben ([Schritt 4A](#step-4a-register-a-computer-in-tpm-mode) für den TPM-Modus, [Schritt 4B](#step-4b-register-a-computer-in-host-key-mode) für den Hostschlüsselmodus), sollten Sie überprüfen, ob er erfolgreich beglaubigen kann.
 
-Sie können die Konfiguration des HGS-Nachweisclients überprüfen und jederzeit mithilfe von [Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps) einen Beglaubigungsversuch durchführen.
+Sie können die Konfiguration des HGS-Nachweisclients überprüfen und jederzeit mithilfe von [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps) einen Beglaubigungsversuch durchführen.
 Die Ausgabe des Befehls sieht etwa wie folgt aus:
 
 ```

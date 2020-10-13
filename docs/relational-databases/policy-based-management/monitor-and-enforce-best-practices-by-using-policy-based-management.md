@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 189ce28ed2480a6efedd14c91a96ebae12c862e2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412747"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892160"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "91412747"
 |Richtlinienname|Regel für Best Practice|  
 |-----------------|------------------------|  
 |Verschlüsselungsalgorithmus für asymmetrischen Schlüssel|[Verschlüsselungsstärke von asymmetrischen Schlüsseln](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Speicherort für Sicherung und Datendatei|[Sicherungsdateien und Datenbankdateien müssen auf separaten Medien gespeichert sein](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|Speicherort für Sicherung und Datendatei|[Sicherungsdateien und Datenbankdateien müssen auf separaten Medien gespeichert sein](../backup-restore/backup-devices-sql-server.md)|  
 |Sicherungs- und Datendateispeicherort|[Platzieren von Daten- und Protokolldateien auf separaten Laufwerken](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Automatisches Schließen der Datenbank|[Festlegen der Datenbankoption AUTO_CLOSE auf OFF](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Automatisches Verkleinern der Datenbank|[Festlegen der AUTO_SHRINK-Datenbankoption auf OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Datenbanksortierung|[Festlegen der Sortierung benutzerdefinierter Datenbanken übereinstimmend zu jener der master- und model-Datenbanken](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|Datenbanksortierung|[Festlegen der Sortierung benutzerdefinierter Datenbanken übereinstimmend zu jener der master- und model-Datenbanken](/previous-versions/sql/sql-server-2016/bb402915(v=sql.130))|  
 |Datenbankseitenüberprüfung|[Festlegen der PAGE_VERIFY-Datenbankoption auf CHECKSUM](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |Datenbankseitenstatus|[Prüfen der Integrität von Datenbanken mit fehlerverdächtigen Seiten](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Gastberechtigungen|[Gastberechtigungen für Benutzerdatenbanken](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -70,5 +70,4 @@ ms.locfileid: "91412747"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit Facets der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
-  
   

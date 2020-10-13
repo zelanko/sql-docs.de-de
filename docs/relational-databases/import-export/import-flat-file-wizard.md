@@ -13,16 +13,16 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 68144fbcffdc2535471c279b5771963fcfb05fec
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646045"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868733"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistent zum Importieren von Flatfiles in SQL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-> Inhalte im Zusammenhang mit dem Import/Export-Assistenten finden Sie unter [SQL Server-Import/Export-Assistent](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+> Inhalte im Zusammenhang mit dem Import/Export-Assistenten finden Sie unter [SQL Server-Import/Export-Assistent](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 Mit dem Assistenten zum Importieren von Flatfiles können Daten mühelos aus einer Flatfile (CSV, TXT) in eine neue Tabelle in Ihrer Datenbank kopiert werden.  Der Assistent zum Importieren von Flatfiles unterstützt sowohl durch Kommas getrennte Formatdateien als auch Formatdateien mit fester Breite. In dieser Übersicht werden die Gründe für die Verwendung dieses Assistenten beschrieben. Außerdem erfahren Sie, wie er zu finden ist, und erhalten ein einfaches Beispiel, dem Sie folgen können.
 
@@ -36,7 +36,7 @@ Um noch mehr über die Verbesserung der Benutzerfreundlichkeit des Assistenten z
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Voraussetzungen
-Dieses Feature ist in SQL Server Management Studio (SSMS) v17.3 oder höher verfügbar. Stellen Sie sicher, dass Sie die neueste Version verwenden. Die neueste Version ist [hier](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) zu finden.
+Dieses Feature ist in SQL Server Management Studio (SSMS) v17.3 oder höher verfügbar. Stellen Sie sicher, dass Sie die neueste Version verwenden. Die neueste Version ist [hier](../../ssms/download-sql-server-management-studio-ssms.md) zu finden.
  
 ## <a name="getting-started"></a><a id="started"></a>Erste Schritte
 Um den Assistenten zum Importieren von Flatfiles aufzurufen, gehen Sie folgendermaßen vor:
@@ -124,7 +124,6 @@ Failed to convert parameter value from a String to a Double. (System.Data)
 
 Weitere Informationen zum Assistenten.
  
-- **Weitere Informationen zum Importieren anderer Quellen.** Wenn Sie außer Flatfiles noch andere Dateien importieren möchten, finden Sie weitere Informationen unter [SQL Server-Import/Export-Assistent](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
-- **Weitere Informationen zum Herstellen einer Verbindung mit Flatfilequellen.** Weitere Informationen zum Herstellen einer Verbindung mit Flatfilequellen finden Sie unter [Herstellen einer Verbindung mit einer Flatfile-Datenquelle](https://docs.microsoft.com/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
+- **Weitere Informationen zum Importieren anderer Quellen.** Wenn Sie außer Flatfiles noch andere Dateien importieren möchten, finden Sie weitere Informationen unter [SQL Server-Import/Export-Assistent](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+- **Weitere Informationen zum Herstellen einer Verbindung mit Flatfilequellen.** Weitere Informationen zum Herstellen einer Verbindung mit Flatfilequellen finden Sie unter [Herstellen einer Verbindung mit einer Flatfile-Datenquelle](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).
 - **Weitere Informationen zu PROSE.** Eine Übersicht über das intelligente Framework, das von diesem Assistenten verwendet wird, finden Sie unter [PROSE SDK](https://microsoft.github.io/prose/).
-

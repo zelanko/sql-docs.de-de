@@ -23,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3af77a60678e8286fadfbafcf46f742439e9bf7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: de468b09b6f6b1f05545cb4a93b6db6082cef48e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902447"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891120"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Verbessern der Leistung der Transaktionsreplikation
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ Die Ergebnisse:
     - Die Erhöhung des Werts **SubscriptionStreams** trägt zu einem höheren Gesamtdurchsatz des Verteilungs-Agents bei, da mehrere Verbindungen zum Abonnenten mehrere Änderungsbatches parallel anwenden. Abhängig von der Anzahl der Prozessoren und anderen Metadatenbedingungen (wie Primärschlüssel, Fremdschlüssel, einzigartige Einschränkungen und Indizes) kann sich der höhere Wert von „SubscriptionStreams“ jedoch nachteilig auswirken. Kann zudem ein Datenstrom nicht ausgeführt oder committet werden, greift der Verteilungs-Agent auf einen einzelnen Datenstrom zurück, um die nicht erfolgreichen Batches erneut zu verarbeiten.
 
 
-Weitere Informationen zu diesem Test finden Sie im Blog [Optimizing replication agent profile parameters for better performance](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/) (Optimierung der Profilparameter des Replikations-Agents für eine bessere Leistung).
+Weitere Informationen zu diesem Test finden Sie im Blog [Optimizing replication agent profile parameters for better performance](/archive/blogs/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance) (Optimierung der Profilparameter des Replikations-Agents für eine bessere Leistung).
 
 
 ### <a name="log-reader-agent"></a>Protokolllese-Agent
@@ -162,5 +162,4 @@ Das Ausführen (Commit) eines Satzes an Transaktionen führt zu einem bestimmten
 [Arbeiten mit Replikations-Agent-Profilen](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
   
