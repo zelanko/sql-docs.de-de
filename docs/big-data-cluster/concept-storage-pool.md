@@ -5,26 +5,37 @@ description: Erfahren Sie mehr über die Rolle des SQL Server-Speicherpools in 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd7a38d555cbf6e2f64743f0907fbfbbdec4d41f
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 16a0309eda16ceab13720c83e1c36045dee2c1ff
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87806462"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725059"
 ---
 # <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>Was ist der Speicherpool ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-In diesem Artikel ist die Rolle beschrieben, die der *SQL Server-Speicherpool* in einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] spielt. In den folgenden Abschnitten sind die Architektur und die Funktionalität eines SQL-Speicherpools beschrieben.
+In diesem Artikel wird die Rolle beschrieben, die der *SQL Server-Speicherpool* in einer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]-Instanz (BDC) spielt. In den folgenden Abschnitten sind die Architektur und die Funktionalität eines SQL-Speicherpools beschrieben.
 
 ## <a name="storage-pool-architecture"></a>Speicherpoolarchitektur
 
-Der Speicherpool besteht aus Speicherknoten, bestehend aus SQL Server für Linux, Spark und HDFS. Alle Speicherknoten in einem Big-Data-Cluster für SQL Server sind Mitglieder eines HDFS-Clusters.
+Der Speicherpool ist der lokale HDFS-Cluster (Hadoop) im SQL Server BDC-Ökosystem. Er bietet beständigen Speicher für unstrukturierte und semistrukturierte Daten. Datendateien, z. B. Parquet-Dateien oder durch Trennzeichen getrennte Textdateien, können im Speicherpool gespeichert werden. Für die beständige Speicherung wird jedem Pod im Pool ein beständiges Volume zugeordnet. Der Zugriff auf die Speicherpooldateien ist über [PolyBase](../relational-databases/polybase/polybase-guide.md) in SQL Server oder direkt mithilfe einer Apache Knox Gateway-Instanz möglich.
+
+Ein klassisches HDFS-Setup besteht aus einer Gruppe von Standardhardwarecomputern mit zugeordnetem Speicher. Die Daten werden in Blöcken auf die Knoten verteilt, um Fehlertoleranz und die Verwendung von Parallelverarbeitung zu ermöglichen. Einer der Knoten im Cluster fungiert als Namensknoten und enthält die Metadateninformationen zu den Dateien in den Datenknoten.
+
+![Klassisches HDFS-Setup](media/concept-storage-pool/classic-hdfs-setup.png)
+
+Der Speicherpool besteht aus Speicherknoten, die Mitglieder eines HDFS-Clusters sind. Er führt einen oder mehrere Kubernetes-Pods aus, wobei jeder dieser Pods die folgenden Container hostet:
+
+- Einen Hadoop-Container, der mit einem beständigen Volume (Speicher) verknüpft ist. Alle Container dieses Typs bilden zusammen den Hadoop-Cluster. In diesem Hadoop-Container befindet sich ein YARN-Knotenverwaltungsprozess, der bedarfsgesteuerte Apache Spark-Workerprozesse erstellen kann. Der Spark-Hauptknoten hostet die Container für den Hive-Metastore, den Spark-Verlauf und den YARN-Auftragsverlauf.
+- Eine SQL Server-Instanz zum Lesen von Daten aus dem HDFS mithilfe der OpenRowSet-Technologie
+- `collectd` zum Erfassen von Metrikdaten
+- `fluentbit` zum Erfassen von Protokolldaten
 
 ![Speicherpoolarchitektur](media/concept-storage-pool/scale-big-data-on-demand.png)
 
@@ -32,9 +43,23 @@ Der Speicherpool besteht aus Speicherknoten, bestehend aus SQL Server für Linux
 
 Speicherknoten werden für folgende Aufgaben verwendet:
 
-- Datenerfassung über Spark.
-- Datenspeicherung in HDFS (Parquet-Format und durch Trennzeichen getrenntes Textformat). HDFS bietet auch Datenpersistenz, weil HDFS-Daten auf alle Speicherknoten im Big Data-Cluster für SQL Server verteilt werden.
+- Datenerfassung über Apache Spark
+- Datenspeicherung in HDFS (Parquet-Format und durch Trennzeichen getrenntes Textformat). Das HDFS bietet auch Datenbeständigkeit, da HDFS-Daten auf alle Speicherknoten in SQL Server BDC verteilt werden.
 - Datenzugriff über HDFS und SQL Server-Endpunkte.
+
+## <a name="accessing-data"></a>Datenzugriff (Accessing data)
+
+Die Hauptmethoden für den Zugriff auf die Daten im Speicherpool sind die folgenden:
+
+- Spark-Aufträge
+- Verwendung von externen SQL Server-Tabellen, um das Abfragen der Daten mithilfe von PolyBase-Serverknoten und der SQL Server-Instanzen zu ermöglichen, die auf den HDFS-Knoten ausgeführt werden
+
+Sie können auch Folgendes verwenden, um mit dem HDFS zu interagieren:
+
+- Azure Data Studio.
+- azdata-Clienttool
+- kubectl zum Senden von Befehlen an den Hadoop-Container
+- HDFS-HTTP-Gateway
 
 ## <a name="next-steps"></a>Nächste Schritte
 

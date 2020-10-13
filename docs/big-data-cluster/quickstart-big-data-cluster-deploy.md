@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d547dc374de8171097ceda77afb234d4e5dfa451
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6457c4bfe1579453a68e8d5ea11f45b67980ca8b
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772389"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785105"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Verwenden eines Python-Skripts zum Bereitstellen eines Big-Data-Clusters für SQL Server in Azure Kubernetes Service (AKS)
 
@@ -75,17 +75,23 @@ Führen Sie das Bereitstellungsskript anhand der folgenden Schritte in einer Bas
    | **Azure-Abonnement-ID** | Die Azure-Abonnement-ID, die für AKS verwendet werden soll. Sie können Ihre Abonnements und deren IDs auflisten, indem Sie `az account list` über eine andere Befehlszeile ausführen. |
    | **Azure-Ressourcengruppe** | Der Name der Azure-Ressourcengruppe, die für den AKS-Cluster erstellt werden soll. |
    | **Azure-Region** | Die Azure-Region für den neuen AKS-Cluster (Standardwert: **westus** (USA, Westen)). |
-   | **Größe des Computers** | Die [Größe des Computers](/azure/virtual-machines/windows/sizes), die für Knoten im AKS-Cluster verwendet werden soll (Standardwert: **Standard_L8s**). |
+   | **Größe des Computers** | Die [Größe des Computers](/azure/virtual-machines/windows/sizes), die für Knoten im AKS-Cluster verwendet werden soll (Standardwert: **Standard_D16s_v3**) |
    | **Workerknoten** | Die Anzahl der Workerknoten im AKS-Cluster (Standardwert: **1**). |
    | **Clustername** | Der Name des AKS-Clusters und des Big-Data-Clusters. Der Name Ihres Big-Data-Clusters darf nur alphanumerische Zeichen enthalten. Außerdem darf er nur aus Kleinbuchstaben bestehen und keine Leerzeichen enthalten (Standardwert: **sqlbigdata**). |
    | **Kennwort** | Das Kennwort für den Controller, das HDFS/Spark-Gateway und die Masterinstanz (Standardwert: **MySQLBigData2019**). |
    | **Benutzername** | Der Benutzername für den Controllerbenutzer (Standardwert: **admin**). |
 
    > [!IMPORTANT]
-   > Die Standardgröße **Standard_L8s** für Computer ist möglicherweise nicht in allen Azure-Regionen verfügbar. Wenn Sie eine andere Größe auswählen, müssen Sie sicherstellen, dass die Gesamtzahl der Datenträger, die den Knoten im Cluster angefügt werden können, größer oder gleich 24 ist. Auf dem Cluster ist für jeden PersistentVolumeClaim ein angefügter Datenträger erforderlich. Aktuell sind für Big-Data-Cluster 24 PersistentVolumeClaims erforderlich. Für die Computergröße [Standard_L8s](/azure/virtual-machines/lsv2-series) werden beispielsweise 32 angefügte Datenträger unterstützt, sodass Sie Big-Data-Cluster mit einem einzelnen Knoten dieser Größe auswerten können.
+   > Die Standardcomputergröße **Standard_D16s_v3** ist möglicherweise nicht in allen Azure-Regionen verfügbar. Wenn Sie eine andere Größe auswählen, müssen Sie sicherstellen, dass die Gesamtzahl der Datenträger, die den Knoten im Cluster angefügt werden können, größer oder gleich 24 ist. Auf dem Cluster ist für jeden PersistentVolumeClaim ein angefügter Datenträger erforderlich. Aktuell sind für Big-Data-Cluster 24 PersistentVolumeClaims erforderlich.
+   >
+   >Führen Sie den folgenden Befehl aus, um die verfügbaren VM-Typen zu ermitteln.
+   >
+   >```azurecli-interactive
+   >az vm list-sizes --query "sort_by(@,&name)[?contains(name,'Standard_D16s')]" -l westus2 -o table
+   >```
 
    > [!NOTE]
-   > Das SQL Server-Konto `sa` ist während der Bereitstellung eines Big Data-Clusters deaktiviert. In der SQL Server-Masterinstanz wird eine neue SysAdmin-Anmeldung bereitgestellt, die den gleichen Namen wie für die Eingabe **Benutzername** und das der Eingabe **Kennwort** entsprechende Kennwort verwendet. Die gleichen Werte für **Benutzername** und **Kennwort** werden zur Bereitstellung eines Controller-Administratorbenutzers verwendet. Bei vor SQL Server 2019 CU5 bereitgestellten Clustern ist der einzige für das Gateway (Knox) unterstützte Benutzer **root** und das Kennwort das gleiche wie oben.
+   > Das SQL Server-Konto `sa` ist während der Bereitstellung eines Big Data-Clusters deaktiviert. In der SQL Server-Masterinstanz werden neue SysAdmin-Anmeldeinformationen bereitgestellt, bei denen der Name der Eingabe für **Benutzername** und das Kennwort der Eingabe für **Kennwort** entspricht. Die gleichen Werte für **Benutzername** und **Kennwort** werden zur Bereitstellung eines Controller-Administratorbenutzers verwendet. Bei vor SQL Server 2019 CU5 bereitgestellten Clustern ist der einzige für das Gateway (Knox) unterstützte Benutzer **root** und das Kennwort das gleiche wie oben.
    >[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 1. Das Skript erstellt zunächst einen AKS-Cluster mithilfe der Parameter, die Sie angegeben haben. Dieser Schritt dauert einige Minuten.

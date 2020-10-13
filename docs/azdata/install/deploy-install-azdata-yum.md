@@ -5,23 +5,24 @@ description: Hier erfahren Sie, wie Sie das Tool „azdata“ mit yum installier
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eae81ccee65899335b161b3a32fbb260d0a8517a
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 7f2f06c22b56e2afbe7c51198efbbfe1eecbc8c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914893"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725271"
 ---
 # <a name="install-azdata-with-yum"></a>Installieren von `azdata` mit yum
+
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
 Für Linux-Distributionen mit `yum` gibt es ein Paket für die `azdata-cli`. Das CLI-Paket wurde mit den folgenden Linux-Versionen getestet, die `yum` verwenden:
 
 - RHEL 7, RHEL 8
-
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
@@ -29,6 +30,12 @@ Für Linux-Distributionen mit `yum` gibt es ein Paket für die `azdata-cli`. Das
 
 >[!IMPORTANT]
 > Das RPM-Paket von `azdata-cli` ist vom Python 3-Paket abhängig. Auf Ihrem System handelt es sich dabei möglicherweise um eine ältere Python-Version als die erforderliche *Version 3.6.x*. Sollte dies ein Problem für Sie darstellen, ersetzen Sie das Python 3-Paket, oder führen Sie die Anweisungen zur manuellen Installation mit [`pip`](../install/deploy-install-azdata-pip.md) aus.
+
+1. Installieren Sie die für die Installation von `azdata-cli` erforderlichen Abhängigkeiten.
+
+   ```bash
+   sudo yum install -y curl
+   ```
 
 1. Importieren Sie den Microsoft-Repositoryschlüssel.
 
@@ -50,7 +57,7 @@ Für Linux-Distributionen mit `yum` gibt es ein Paket für die `azdata-cli`. Das
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
 
-1. Installieren Sie das Paket mit dem Befehl `yum install`.
+1. Installieren von `azdata-cli`.
 
    ```bash
    sudo yum install azdata-cli
@@ -58,7 +65,7 @@ Für Linux-Distributionen mit `yum` gibt es ein Paket für die `azdata-cli`. Das
 
 ## <a name="verify-install"></a>Überprüfen der Installation
 
-```
+```bash
 azdata
 azdata --version
 ```

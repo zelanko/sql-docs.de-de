@@ -2,7 +2,7 @@
 description: Create an ActiveX Script Job Step
 title: Create an ActiveX Script Job Step
 ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+ms.date: 10/06/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -14,47 +14,37 @@ ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1d602a87258cd126d217353e94c0c600870e5a61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: <= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8bac45061aa165808202b2a08b71618bd6513954
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418226"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784991"
 ---
-# <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+# <a name="create-an-activex-script-job-step"></a>Erstellen eines ActiveX-Skriptauftragsschritts
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+Das ActiveX-Subsystem wird ab SQL Server 2016 nicht mehr unterstützt. Konvertieren Sie alle vorhandenen Auftragsschritte, die ActiveX-Skripts verwenden, in [PowerShell-Skriptauftragsschritte](create-a-powershell-script-job-step.md). Verwenden Sie in Zukunft PowerShell für die Entwicklung.
 
 > [!IMPORTANT]  
-> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [Azure SQL Managed Instance von SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details hierzu finden Sie unter [Unterschiede bei T-SQL zwischen SQL Server und Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In diesem Artikel wird beschrieben, wie Sie einen Auftragsschritt des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellen und definieren, der ein ActiveX-Skript mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects ausführt.  
+In diesem Artikel wird beschrieben, wie Sie einen Auftragsschritt für den [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent in SQL Server 2014 und früher erstellen und definieren, der ein ActiveX-Skript mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects ausführt.  
 
-**Wichtig** [!INCLUDEssNoteDepFutureAvoid]
-  
--   **Vorbereitungen:**  
-  
-    [Einschränkungen](#Restrictions)  
-  
-    [Security](#Security)  
-  
--   **So erstellen Sie einen Transact-SQL-Auftragsschritt mit**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server Management Objects](#SMO)  
-  
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Vorbereitung  
   
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>Einschränkungen  
+
 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+
   
 ### <a name="security"></a><a name="Security"></a>Sicherheit  
+
 Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Verwenden von SQL Server Management Studio  
+## <a name="use-sql-server-management-studio"></a><a name="SSMS"></a>Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-an-activex-script-job-step"></a>So erstellen Sie einen ActiveX-Skript-Auftragsschritt  
   
@@ -78,7 +68,7 @@ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agen
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>Verwenden von Transact-SQL  
   
-#### <a name="to-create-an-activex-script-job-step"></a>So erstellen Sie einen ActiveX-Skript-Auftragsschritt  
+#### <a name="to-create-an-activex-script-job-step"></a>So erstellen Sie einen ActiveX-Skriptauftragsschritt  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde_md.md)]-Instanz her.  
   

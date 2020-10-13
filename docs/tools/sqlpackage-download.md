@@ -8,14 +8,14 @@ ms.technology: tools-other
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.reviewer: alayu; sstein
-ms.date: 06/20/2018
-ms.openlocfilehash: 40c95546496b6b79aeb95bc63db7750646f833fc
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.reviewer: drskwier; sstein
+ms.date: 10/02/2020
+ms.openlocfilehash: 1a722b41576136bdcc509c96626f8cf4351629e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990143"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721581"
 ---
 # <a name="download-and-install-sqlpackage"></a>Herunterladen und Installieren von „Sqlpackage“
 
@@ -25,14 +25,24 @@ Laden Sie die neueste.NET Framework-Version und die MacOS- und Linux-Vorschau he
 
 |Plattform|Download|Veröffentlichungsdatum|Version|Entwickeln
 |:---|:---|:---|:---|:---|
-|Windows|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2143544)|18. September 2020| 18.6 | 15.0.4897.1 |
-|macOS .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2143659)|18. September 2020| 18.6| 15.0.4897.1 |
-|Linux .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2143497)|18. September 2020| 18.6| 15.0.4897.1 |
-|Windows .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2143496)|18. September 2020| 18.6| 15.0.4897.1 |
+|[Windows](#get-sqlpackage-for-windows)|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2143544)|18. September 2020| 18.6 | 15.0.4897.1 |
+|[macOS .NET Core](#get-sqlpackage-net-core-for-macos) |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2143659)|18. September 2020| 18.6| 15.0.4897.1 |
+|[Linux .NET Core](#get-sqlpackage-net-core-for-linux) |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2143497)|18. September 2020| 18.6| 15.0.4897.1 |
+|[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2143496)|18. September 2020| 18.6| 15.0.4897.1 |
 
 Weitere Informationen über die neueste Version finden Sie in den [Versionshinweisen](release-notes-sqlpackage.md). Informationen zum Herunterladen zusätzlicher Sprachen finden Sie im Abschnitt [Verfügbare Sprachen](#available-languages).
 
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+## <a name="dacfx"></a>DacFX
+DacServices ([Microsoft.SqlServer.Dac](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.dac.dacservices)) ist ein verwandter Mechanismus zum Integrieren der Datenbankbereitstellung in Ihre Anwendungspipeline.  Die DacServices-API ist in einem NuGet-Paket verfügbar ([Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx)).  Die aktuelle Version von DacFx ist 150.4897.1.
+
+Das NuGet-Paket wird mit dem folgenden Befehl über die .NET-CLI installiert:
+
+```cmd
+> dotnet add package Microsoft.SqlServer.DACFx
+```
+
+>[!NOTE]
+> Es wurden auch noch weitere DacFx-NuGet-Pakete veröffentlicht, nämlich „Microsoft.SqlServer.DacFx.x64“ und „Microsoft.SqlServer.DacFx.x86“. Das Paket „Microsoft.SqlServer.DACFx“ unterstützt beide Plattformen. Neue Verweise sollten auf dieses Paket verweisen und nicht auf die x64- oder die x86-Variante.
 
 ## <a name="get-sqlpackage-for-windows"></a>Abrufen von „sqlpackage“ für Windows
 
@@ -129,7 +139,7 @@ Wenn Sie „sqlpackage“ über eine ZIP-Datei oder ein anderes Archiv installie
 
 ## <a name="supported-operating-systems"></a>Unterstützte Betriebssysteme
 
-sqlpackage wird unter Windows, macOS und Linux ausgeführt und wurde mit .NET Core 3.1 erstellt.  Die [Anforderungen für das .NET Core 3.1-Betriebssystem](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) gelten für sqlpackage.
+sqlpackage wird unter Windows, macOS und Linux ausgeführt und wurde mit .NET Core 3.1 erstellt.  Für sqlpackage gelten die [Betriebssystemanforderungen für .NET Core 3.1](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).
 
 ### <a name="windows-x64"></a>Windows (x64)
 
@@ -168,6 +178,7 @@ sqlpackage .NET Core macOS:
 
 sqlpackage .NET Core Linux:  
 [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40a)
+
 
 ## <a name="next-steps"></a>Nächste Schritte
 

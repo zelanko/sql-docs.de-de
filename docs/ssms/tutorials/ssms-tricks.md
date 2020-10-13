@@ -1,12 +1,12 @@
 ---
 title: Tipps und Tricks für SSMS
 description: Hier erfahren Sie, wie Sie mithilfe von SQL Server Management Studio Kommentare zu Ihrem Code hinzufügen und wieder aus diesem entfernen, Text einrücken, Objekte filtern, auf Fehlerprotokolle zugreifen und Namen von SQL Server-Instanzen finden können.
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
-author: MashaMSFT
-ms.author: mathoma
+ms.topic: tutorial
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
@@ -19,43 +19,43 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462344"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724511"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Tipps und Tricks zur Verwendung von SQL Server Management Studio (SSMS)
 
-Dieser Artikel enthält einige Tipps und Tricks für die Verwendung von SQL Server Management Studio (SSMS). In diesem Artikel lernen Sie Folgendes: 
+Dieser Artikel enthält einige Tipps und Tricks für die Verwendung des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). In diesem Artikel lernen Sie Folgendes: 
 
 > [!div class="checklist"]
 > * Kommentieren bzw. Aufheben der Auskommentierung Ihres T-SQL-Texts (Transact-SQL)
 > * Einziehen Ihres Texts
 > * Filtern von Objekten im Objekt-Explorer
-> * Zugreifen auf Ihr SQL Server-Fehlerprotokoll
-> * Suchen des Namens Ihrer SQL Server-Instanz
+> * Zugreifen auf das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll
+> * Herausfinden des Namens Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Zum Testen der in diesem Artikel beschriebenen Schritte benötigen Sie SQL Server Management Studio, Zugriff auf einen SQL-Server und eine AdventureWorks-Datenbank. 
+Zum Testen der in diesem Artikel beschriebenen Schritte benötigen Sie das [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Zugriff auf eine SQL Server-Instanz und eine AdventureWorks-Datenbank. 
 
 * Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-* Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Installieren Sie [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Laden Sie eine [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Restoring a database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>Kommentieren und Aufheben der Auskommentierung in T-SQL-Code
 
 Mit der Schaltfläche **Kommentar** in der Symbolleiste können Sie bei Teilen Ihres Texts Kommentare hinzufügen und Auskommentierungen aufheben. Auskommentierter Text wird nicht ausgeführt.
 
-1. Öffnen Sie SQL Server Management Studio.
+1. Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 2. Stellen Sie eine Verbindung mit SQL Server her.
 
 3. Öffnen Sie das Fenster „Neue Abfrage“.
 
-4. Fügen Sie den folgenden T-SQL-Code in Ihr Textfenster ein.
+4. Fügen Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code in Ihr Textfenster ein.
 
     ```sql
     USE master
@@ -105,7 +105,7 @@ Sie können die Schaltflächen für den Einzug auf der Symbolleiste verwenden, u
 
 1. Öffnen Sie das Fenster „Neue Abfrage“.
 
-2. Fügen Sie den folgenden T-SQL-Code in Ihr Textfenster ein:
+2. Fügen Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code in Ihr Textfenster ein:
 
     ```sql
     USE master
@@ -163,11 +163,11 @@ In Datenbanken, die über viele Objekte verfügen, können Sie nach bestimmten T
 
 ## <a name="access-your-sql-server-error-log"></a>Zugreifen auf Ihr SQL Server-Fehlerprotokoll
 
-Das Fehlerprotokoll ist eine Datei mit Details zu Ereignissen, die in Ihrer SQL Server-Instanz auftreten. Sie können das Fehlerprotokoll in SSMS durchsuchen und abfragen. Das Fehlerprotokoll ist eine LOG-Datei, die sich auf Ihrem Datenträger befindet.
+Das Fehlerprotokoll ist eine Datei mit Details zu Ereignissen, die in Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz auftreten. Sie können das Fehlerprotokoll im SSMS durchsuchen und abfragen. Das Fehlerprotokoll ist eine LOG-Datei, die sich auf Ihrem Datenträger befindet.
 
 ### <a name="open-the-error-log-in-ssms"></a>Öffnen des Fehlerprotokolls in SSMS
 
-1. Stellen Sie eine Verbindung mit SQL Server her.  
+1. Stellen Sie eine Verbindung mit Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz her.  
 
 2. Erweitern Sie **Verwaltung** > **SQL Server-Protokolle**. 
 
@@ -181,7 +181,7 @@ Das Fehlerprotokoll ist eine Datei mit Details zu Ereignissen, die in Ihrer SQL 
 
 2. Öffnen Sie das Fenster „Neue Abfrage“.
 
-3. Fügen Sie den folgenden T-SQL-Code in Ihr Abfragefenster ein:
+3. Fügen Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code in Ihr Abfragefenster ein:
 
      ```sql
        sp_readerrorlog 0,1,'Server process ID'
@@ -195,11 +195,11 @@ Das Fehlerprotokoll ist eine Datei mit Details zu Ereignissen, die in Ihrer SQL 
 
 ### <a name="find-the-error-log-location-if-youre-connected-to-sql-server"></a>Suchen des Speicherorts des Fehlerprotokolls, wenn Sie mit SQL Server verbunden sind
 
-1. Stellen Sie eine Verbindung mit SQL Server her.
+1. Stellen Sie eine Verbindung mit Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz her.
 
 2. Öffnen Sie das Fenster „Neue Abfrage“.
 
-3. Fügen Sie den folgenden T-SQL-Code in das Abfragefenster ein, und klicken Sie auf **Ausführen**:
+3. Fügen Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code in Ihr Abfragefenster ein, und klicken Sie dann auf **Ausführen**:
 
      ```sql
         SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
@@ -211,13 +211,13 @@ Das Fehlerprotokoll ist eine Datei mit Details zu Ereignissen, die in Ihrer SQL 
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Suchen des Speicherorts des Fehlerprotokolls, wenn keine Verbindung mit SQL Server möglich ist
 
-Der Pfad für Ihr SQL Server-Fehlerprotokoll kann abhängig von Ihren Konfigurationseinstellungen variieren. Der Pfad für das Fehlerprotokoll ist in den Startparametern im SQL Server-Konfigurations-Manager enthalten. Führen Sie die folgenden Schritte aus, um den relevanten Startparameter zu finden, der den Speicherort Ihres SQL Server-Fehlerprotokolls angibt. *Ihr Pfad weicht möglicherweise vom unten angegebenen Pfad ab.*
+Der Pfad für Ihr [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll kann abhängig von Ihren Konfigurationseinstellungen abweichen. Der Pfad für das Fehlerprotokoll ist in den Startparametern im SQL Server-Konfigurations-Manager enthalten. Führen Sie die folgenden Schritte aus, um den relevanten Startparameter zu finden, der den Speicherort Ihres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokolls angibt. *Ihr Pfad weicht möglicherweise vom unten angegebenen Pfad ab.*
 
 1. Öffnen Sie den SQL Server-Konfigurations-Manager.
 
 2. Erweitern Sie **Dienste**.
 
-3. Klicken Sie mit der rechten Maustaste auf Ihre SQL Server-Instanz, und klicken Sie dann auf **Eigenschaften**:
+3. Klicken Sie mit der rechten Maustaste auf Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, und klicken Sie dann auf **Eigenschaften**:
 
     ![Konfigurations-Manager-Servereigenschaften](media/ssms-tricks/serverproperties.PNG)
 
@@ -227,13 +227,13 @@ Der Pfad für Ihr SQL Server-Fehlerprotokoll kann abhängig von Ihren Konfigurat
 
     ![Fehlerprotokoll](media/ssms-tricks/errorlog.png)
 
-    Dort sind mehrere ERRORLOG.*-Dateien gespeichert. Der Dateiname, der auf „*.log“ endet, gehört zur aktuellen Fehlerprotokolldatei. Dateien mit Namen, die auf Zahlen enden, sind vorherige Protokolldateien. Jedes Mal, wenn SQL Server neu gestartet wird, wird ein neues Protokoll erstellt.
+    Dort sind mehrere Fehlerprotokolldateien gespeichert. Der Dateiname, der auf „*.log“ endet, gehört zur aktuellen Fehlerprotokolldatei. Dateien mit Namen, die auf Zahlen enden, sind vorherige Protokolldateien. Jedes Mal, wenn SQL Server neu gestartet wird, wird ein neues Protokoll erstellt.
 
-6. Öffnen Sie die Datei „errorlog.log“ in Notepad. 
+6. Öffnen Sie die Datei „errorlog.log“ in Notepad.
 
-## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>Suchen des Namens der SQL Server-Instanz
+## <a name="find-sql-server-instance-name"></a>Suchen des Namens der SQL Server-Instanz
 
-Es gibt mehrere Optionen, den Namen Ihres SQL-Servers zu finden, bevor oder nachdem eine Verbindung mit SQL Server hergestellt wurde.  
+Es gibt mehrere Möglichkeiten, den Namen Ihrer SQL Server-Instanz herauszufinden, bevor oder nachdem eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt wurde.  
 
 ### <a name="before-you-connect-to-sql-server"></a>Vor dem Herstellen einer Verbindung mit SQL Server
 
@@ -243,7 +243,7 @@ Es gibt mehrere Optionen, den Namen Ihres SQL-Servers zu finden, bevor oder nach
 
 3. Suchen Sie nach dem Text *Server name is* (Der Servername lautet).
 
-    Das, was in einfachen Anführungszeichen steht, ist der Name der SQL Server-Instanz, mit der Sie eine Verbindung herstellen:
+    Das, was in einfachen Anführungszeichen steht, ist der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, mit der Sie eine Verbindung herstellen:
 
     ![Servername im Fehlerprotokoll suchen](media/ssms-tricks/servernameinlog.png)
 
@@ -251,7 +251,7 @@ Es gibt mehrere Optionen, den Namen Ihres SQL-Servers zu finden, bevor oder nach
 
 ### <a name="when-youre-connected-to-sql-server"></a>Wenn Sie eine Verbindung mit SQL Server hergestellt haben
 
-Wenn Sie eine Verbindung mit SQL Server hergestellt haben, können Sie den Servernamen an drei Stellen finden: 
+Wenn Sie eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt haben, finden Sie den Servernamen an drei Stellen: 
 
 1. Der Name des Servers wird im Objekt-Explorer aufgeführt:
 
@@ -266,19 +266,19 @@ Wenn Sie eine Verbindung mit SQL Server hergestellt haben, können Sie den Serve
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>Wenn Sie mit einem Alias oder einem Verfügbarkeitsgruppenlistener verbunden sind
 
-Wenn Sie mit einem Alias oder einem Verfügbarkeitsgruppenlistener verbunden sind, werden Ihnen diese Information im Objekt-Explorer und in den Eigenschaften angezeigt. In diesem Fall ist der SQL Server-Name möglicherweise nicht sofort erkennbar und muss abgefragt werden:
+Wenn Sie mit einem Alias oder einem Verfügbarkeitsgruppenlistener verbunden sind, werden Ihnen diese Information im Objekt-Explorer und in den Eigenschaften angezeigt. In diesem Fall ist der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Name möglicherweise nicht sofort erkennbar und muss abgefragt werden:
 
 1. Stellen Sie eine Verbindung mit SQL Server her.
 
 2. Öffnen Sie das Fenster „Neue Abfrage“.
 
-3. Fügen Sie den folgenden T-SQL-Code in das Fenster ein:
+3. Fügen Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code in das Fenster ein:
 
       ```sql
        select @@Servername
      ```
 
-4. Zeigen Sie die Ergebnisse der Abfrage an, um den Namen der SQL Server-Instanz zu ermitteln, mit der Sie verbunden sind: 
+4. Zeigen Sie die Ergebnisse der Abfrage an, um den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu ermitteln, mit der eine Verbindung besteht: 
 
     ![Abfragen des Namens vom SQL-Server](media/ssms-tricks/queryservername.png)
 

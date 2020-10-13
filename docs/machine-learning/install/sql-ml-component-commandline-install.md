@@ -1,25 +1,25 @@
 ---
 title: Installation über die Eingabeaufforderung
-description: Führen Sie die SQL Server-Einrichtung über die Befehlszeile aus, um die Integration für die Sprache R und für Python zu einer Instanz einer SQL Server-Datenbank-Engine hinzuzufügen.
+description: Führen Sie die SQL Server-Einrichtung über die Befehlszeile aus, um einer SQL Server-Datenbank-Engine-Instanz Machine Learning Services mit R und Python hinzuzufügen.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 09/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c496778731a972603019450be15b3ea72d4c415
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179799"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624757"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installieren von R- und Python-Komponenten für SQL Server für maschinelles Lernen über die Befehlszeile
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Installieren von SQL Server Machine Learning Services mit R und Python über die Befehlszeile
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Dieser Artikel enthält Anweisungen zum Installieren von SQL Server-Komponenten für maschinelles Lernen über eine Befehlszeile:
+Dieser Artikel enthält Anweisungen zum Installieren von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) über eine Befehlszeile:
 
 + [Neue datenbankinterne Instanz](#indb)
 + [Hinzufügen zu einer vorhandenen Datenbank-Engine-Instanz](#add-existing)

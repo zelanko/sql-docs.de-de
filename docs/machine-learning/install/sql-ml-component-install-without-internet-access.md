@@ -1,23 +1,25 @@
 ---
-title: Installieren ohne Internetzugang
-description: Installieren Sie SQL Server Machine Learning in R und Python auf Computern, die sich isoliert hinter einer Netzwerkfirewall befinden.
+title: Offlineinstallation ohne Internetzugriff
+description: Installieren Sie SQL Server Machine Learning Services mit Python und R offline auf Computern, die sich isoliert hinter einer Netzwerkfirewall befinden.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 10/01/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487643"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636156"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installieren von Machine Learning in R und Python auf SQL Server-Computern ohne Internetzugang
+# <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>Offlineinstallation von SQL Server Machine Learning Services mit Python und R auf Computern ohne Internetzugriff
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+In diesem Artikel wird beschrieben, wie Sie SQL Server Machine Learning Services offline auf Computern ohne Internetzugriff installieren, die sich isoliert hinter einer Netzwerkfirewall befinden.
 
 Standardmäßig stellen Installationsprogramme eine Verbindung mit Microsoft-Downloadwebsites her, um erforderliche und aktualisierte Komponenten für Machine Learning auf SQL Server-Instanzen zu erhalten. Wenn Firewallbeschränkungen den Zugriff des Installationsprogramms auf diese Websites verhindern, können Sie über ein mit dem Internet verbundenes Gerät Dateien herunterladen, die Dateien auf einen Offlineserver übertragen und dann das Setup ausführen.
 

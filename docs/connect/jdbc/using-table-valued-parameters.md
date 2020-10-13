@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eac620d522408ff9fb4de5550d92cfcbd0f3ec4a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631938"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727471"
 ---
 # <a name="using-table-valued-parameters"></a>Verwenden von Tabellenwertparametern
 
@@ -35,8 +35,8 @@ Für den Zugriff auf Spaltenwerte in Tabellenwertparametern können Standard-SEL
   
 | Resource                                                                                                             | BESCHREIBUNG                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Tabellenwertparameter (Datenbankmodul)](https://go.microsoft.com/fwlink/?LinkId=98363) in der SQL Server-Onlinedokumentation | Beschreibt, wie Sie Tabellenwertparameter erstellen und verwenden.                             |
-| [Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkId=98364) in der SQL Server-Onlinedokumentation.                  | Beschreibt die benutzerdefinierten Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden. |
+| [Tabellenwertparameter (Datenbankmodul)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) in der SQL Server-Onlinedokumentation | Beschreibt, wie Sie Tabellenwertparameter erstellen und verwenden.                             |
+| [Benutzerdefinierte Tabellentypen](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in der SQL Server-Onlinedokumentation.                  | Beschreibt die benutzerdefinierten Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden. |
 | Der Abschnitt [Microsoft SQL Server-Datenbank-Engine](https://go.microsoft.com/fwlink/?LinkId=120507) von CodePlex.        | Enthält Beispiele, in denen die Verwendung von SQL Server-Features und -Funktionalität veranschaulicht wird.  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Übergeben mehrerer Zeilen in früheren Versionen von SQL Server  
@@ -53,7 +53,7 @@ Vor der Einführung von Tabellenwertparametern in SQL Server 2008 bestanden nur 
   
 ## <a name="creating-table-valued-parameter-types"></a>Erstellen von Tabellenwertparameter-Typen  
 
-Tabellenwertparameter basieren auf stark typisierten Tabellenstrukturen, die mit `CREATE TYPE`-Anweisungen in Transact-SQL definiert werden. Sie müssen einen Tabellentyp erstellen und die Struktur in SQL Server definieren, bevor Sie Tabellenwertparameter in Ihren Clientanwendungen verwenden können. Weitere Informationen über das Erstellen von Tabellentypen finden Sie unter [Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkID=98364) in der SQL Server-Onlinedokumentation.  
+Tabellenwertparameter basieren auf stark typisierten Tabellenstrukturen, die mit `CREATE TYPE`-Anweisungen in Transact-SQL definiert werden. Sie müssen einen Tabellentyp erstellen und die Struktur in SQL Server definieren, bevor Sie Tabellenwertparameter in Ihren Clientanwendungen verwenden können. Weitere Informationen über das Erstellen von Tabellentypen finden Sie unter [Benutzerdefinierte Tabellentypen](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) in der SQL Server-Onlinedokumentation.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -315,4 +315,4 @@ Die folgenden Methoden wurden dieser Klasse hinzugefügt, um die Übergabe von T
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Übersicht über den JDBC-Treiber](overview-of-the-jdbc-driver.md)  
+[Übersicht über den JDBC-Treiber](overview-of-the-jdbc-driver.md)

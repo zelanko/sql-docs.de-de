@@ -11,12 +11,12 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: contperfq1
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a2db492306aff5b4980bb97a6f65b93515dbfe1b
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 93237f9d23bf0972d8c4ba6fb08752b41aa6e7a5
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497826"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834186"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>Schnellstart: Ausführen einfacher Python-Skripts mit SQL Machine Learning
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -28,7 +28,7 @@ In diesem Schnellstart führen Sie eine Reihe einfacher Python-Skripts mit [SQL�
 Zum Durchführen dieser Schnellstartanleitung benötigen Sie folgende Voraussetzungen.
 
 - Eine SQL-Datenbank auf einer der folgenden Plattformen:
-  - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md) oder im [Linux-Installationshandbuch](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
+  - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Informationen zur Installation finden Sie im [Windows-Installationsleitfaden](../install/sql-machine-learning-services-windows-install.md) oder im [Linux-Installationsleitfaden](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
   - Big Data-Cluster für SQL Server. Weitere Informationen finden Sie unter [Aktivieren von Machine Learning Services auf SQL Server-Big Data-Clustern](../../big-data-cluster/machine-learning-services.md).
   - Machine Learning Services in Azure SQL Managed Instance. In der Übersicht [Machine Learning Services in Azure SQL Managed Instance (Vorschauversion)](/azure/azure-sql/managed-instance/machine-learning-services-overview) finden Sie Informationen zur Registrierung.
 

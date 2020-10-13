@@ -5,16 +5,16 @@ description: In diesem Artikel werden die neuesten Updates und bekannten Problem
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 09/02/2020
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 75af471239529587cf51b151c04a541a612949c0
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: 4217e2be765e29fe58ff423be8632f7e18e1b2eb
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145389"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834513"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Versionshinweise zu Big Data-Clustern für SQL Server 2019
 
@@ -54,7 +54,7 @@ In diesem Abschnitt werden die Plattformen aufgeführt, die mit BDC unterstützt
 |Plattform|Unterstützte Versionen|
 |---------|---------|
 |`azdata`|Es wird empfohlen, die neuste verfügbare Version zu verwenden. Ab SQL Server 2019 CU5 verfügt `azdata` über eine unabhängige semantische Version des Servers. <br/><br/>Führen Sie `azdata –-version` aus, um die Version zu überprüfen.<br/><br/>Die aktuelle Version finden Sie unter [Releaseverlauf](#release-history).|
-|Azure Data Studio|Rufen Sie den neuesten Build von [Azure Data Studio](https://aka.ms/getazuredatastudio) ab.|
+|Azure Data Studio|Rufen Sie den neuesten Build von [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) ab.|
 
 Eine umfassende Liste finden Sie unter [Welche Tools sind erforderlich?](deploy-big-data-tools.md#which-tools-are-required)
 
@@ -62,7 +62,7 @@ Eine umfassende Liste finden Sie unter [Welche Tools sind erforderlich?](deploy-
 
 In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] aufgelistet.
 
-| Release | Big Data-Cluster-Version  | `azdata` Version <sup>1</sup> | Veröffentlichungsdatum |
+| Release<sup>1</sup> | Big Data-Cluster-Version  | `azdata` Version <sup>2</sup> | Veröffentlichungsdatum |
 |----------------------|--------------|-------------------------------|--------------|
 | [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 4\.8.2020   |
 | [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
@@ -72,7 +72,11 @@ In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[big-data-clusters
 | [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 01.07.2020   |
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
-<sup>1</sup> Die `azdata`-Version entspricht der Version des Tools zum Zeitpunkt der CU-Veröffentlichung. `azdata` kann auch unabhängig von der Serververöffentlichung veröffentlicht werden. Daher erhalten Sie möglicherweise neuere Versionen, wenn Sie die neuesten Pakete installieren. Neuere Versionen sind mit zuvor veröffentlichten CUs kompatibel.
+<sup>1</sup>Die folgenden Releases sind für BDC nicht verfügbar:
+- CU7
+- CU8
+
+<sup>2</sup>Die `azdata`-Version entspricht der Version des Tools zum Zeitpunkt der CU-Veröffentlichung. `azdata` kann auch unabhängig von der Serververöffentlichung veröffentlicht werden. Daher erhalten Sie möglicherweise neuere Versionen, wenn Sie die neuesten Pakete installieren. Neuere Versionen sind mit zuvor veröffentlichten CUs kompatibel.
 
 ## <a name="how-to-install-updates"></a>Installieren von Updates
 
@@ -111,7 +115,7 @@ Kumulatives Update 5 (CU5) für SQL Server 2019.
 - Das Sicherheitsmodell für die Big Data-Cluster-Bereitstellung wurde aktualisiert, wodurch privilegierte Container, die als Teil von Big Data-Cluster bereitgestellt werden, nicht mehr *erforderlich* sind. Zusätzlich zu nicht privilegierten Containern werden Container standardmäßig für alle neuen Bereitstellungen unter Verwendung von SQL Server 2019 CU5 nicht als Root-Benutzer ausgeführt. 
 - Unterstützung für die Bereitstellung mehrerer Big Data-Cluster für eine Active Directory-Domäne wurde hinzugefügt.
 - Die `azdata`-CLI verfügt über eine eigene semantische Version, die unabhängig vom Server ist. Alle Abhängigkeiten zwischen dem Client und der Serverversion von „azdata“ wurden entfernt. Es wird empfohlen, die neuesten Versionen des Clients und des Servers zu verwenden, damit Sie von den neusten Erweiterungen und Fixes profitieren können.
-- Es wurden zwei neue gespeicherte Prozeduren („sp_data_source_objects“ und „sp_data_source_table_columns“) eingeführt, um die Introspektion bestimmter externer Datenquellen zu unterstützen. Diese können von Kunden direkt über T-SQL für die Schemaermittlung verwendet werden, um herauszufinden, welche Tabellen für die Virtualisierung verfügbar sind. Wir nutzen diese Änderungen im Assistenten für externe Tabellen der [Datenvirtualisierungserweiterung](../azure-data-studio/data-virtualization-extension.md) für Azure Data Studio, mit dem Sie über SQL Server, Oracle, MongoDB und Teradata externe Tabellen erstellen können.
+- Es wurden zwei neue gespeicherte Prozeduren („sp_data_source_objects“ und „sp_data_source_table_columns“) eingeführt, um die Introspektion bestimmter externer Datenquellen zu unterstützen. Diese können von Kunden direkt über T-SQL für die Schemaermittlung verwendet werden, um herauszufinden, welche Tabellen für die Virtualisierung verfügbar sind. Wir nutzen diese Änderungen im Assistenten für externe Tabellen der [Datenvirtualisierungserweiterung](../azure-data-studio/extensions/data-virtualization-extension.md) für Azure Data Studio, mit dem Sie über SQL Server, Oracle, MongoDB und Teradata externe Tabellen erstellen können.
 - Unterstützung wurde hinzugefügt, um in Grafana vorgenommene Anpassungen dauerhaft zu speichern. In der Vergangenheit haben CU5-Kunden festgestellt, dass Änderungen an Grafana-Konfigurationen bei einem Neustart von Pod `metricsui` (der das Grafana-Dashboard hostet) verloren gingen. Dieses Problem wurde behoben, und alle Konfigurationen werden nun dauerhaft gespeichert. 
 - Es wurde ein Sicherheitsproblem behoben, das im Zusammenhang mit der API stand, die zum Sammeln von Pod- und Knotenmetriken mithilfe von Telegraf (in den `metricsdc`-Pods gehostet) verwendet wird. Aufgrund dieser Änderung wird für Telegraf nun ein Dienstkonto, eine Clusterrolle sowie Clusterbindungen benötigt, um die Pod- und Knotenmetriken zu sammeln. Weitere Informationen finden Sie unter [Zum Sammeln von Pod- und Knotenmetriken erforderliche Clusterrolle](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection).
 - Es wurden zwei neue Featureparameter eigeführt, um die Sammlung von Pod- und Knotenmetriken zu steuern. Wenn Sie Ihre Kubernetes-Infrastruktur mithilfe anderer Lösungen überwachen, können Sie die integrierte Metriksammlung für Pods und Hostknoten deaktivieren, indem Sie *allowNodeMetricsCollection* und *allowPodMetricsCollection* in der Bereitstellungskonfigurationsdatei control.json auf „False“ festlegen. Bei OpenShift-Umgebungen werden diese Einstellungen in den integrierten Bereitstellungsprofilen standardmäßig auf „False“ festgelegt, da für das Sammeln von Pod- und Knotenmetriken privilegierte Funktionen erforderlich sind.

@@ -1,114 +1,117 @@
 ---
-title: Installieren von azdata mit dem Installationsprogramm unter Linux
-titleSuffix: ''
-description: Hier erfahren Sie, wie Sie das azdata-Tool mithilfe des Installationsprogramms unter Linux installieren.
+title: Installieren von azdata mit apt
+description: Hier erfahren Sie, wie Sie das Tool „azdata“ mit apt installieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2dc1c3d58ee5f7b6ea032a2e41f7c18431229881
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 0d268bc5ed31f844c28499b95054e5edbbd14848
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914966"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725289"
 ---
 # <a name="install-azdata-with-apt"></a>Installieren von `azdata` mit apt
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-In diesem Artikel wird beschrieben, wie `azdata` unter Linux installiert wird. Bevor diese Paket-Manager verfügbar waren, was `pip` für die Installation von `azdata` erforderlich.
+Für Linux-Distributionen mit `apt` gibt es ein Paket für die `azdata-cli`. Das CLI-Paket wurde mit den folgenden Linux-Versionen getestet, die `apt` verwenden:
+
+- Ubuntu 16.04, Ubuntu 18.04
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
-## <a name="install-azdata-for-linux"></a><a id="linux"></a>Installieren von `azdata` für Linux
+## <a name="install-with-apt"></a>Installieren mit apt
 
-Das `azdata`-Installationspaket ist mit `apt` für Ubuntu verfügbar.
+>[!IMPORTANT]
+> Das RPM-Paket von `azdata-cli` ist vom Python 3-Paket abhängig. Auf Ihrem System handelt es sich dabei möglicherweise um eine ältere Python-Version als die erforderliche *Version 3.6.x*. Sollte dies ein Problem für Sie darstellen, ersetzen Sie das Python 3-Paket, oder führen Sie die Anweisungen zur manuellen Installation mit [`pip`](../install/deploy-install-azdata-pip.md) aus.
 
-### <a name="install-azdata-with-apt-ubuntu"></a><a id="azdata-apt"></a>Installieren von `azdata` mit apt (Ubuntu)
+1. Installieren Sie die für die Installation von `azdata-cli` erforderlichen Abhängigkeiten.
 
->[!NOTE]
->Das `azdata` Paket verwendet nicht die Systemversion von Python, stattdessen wird ein eigener Python-Interpreter installiert.
+   ```bash
+   sudo apt-get update
+   sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
+   ```
 
-1. Rufen Sie die für die Installation erforderlichen Pakete ab:
+2. Importieren Sie den Microsoft-Repositoryschlüssel.
 
-    ```bash
-    sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
-    ```
+   ```bash
+   curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+   gpg --dearmor |
+   sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
+   ```
 
-2. Laden Sie den Signaturschlüssel herunter, und installieren Sie diesen:
-
-    ```bash
-    curl -sL https://packages.microsoft.com/keys/microsoft.asc |
-    gpg --dearmor |
-    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
-    ```
-
-3. Fügen Sie die Repositoryinformationen für `azdata` hinzu.
+3. Erstellen Sie lokale Repositoryinformationen.
 
    Führen Sie für Ubuntu 16.04-Clients den folgenden Befehl aus:
+
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
     ```
 
    Führen Sie für Ubuntu 18.04-Clients den folgenden Befehl aus:
+
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
     ```
 
-4. Aktualisieren Sie die Repositoryinformationen, und installieren Sie `azdata`:
+   Führen Sie für Ubuntu 20.04-Clients den folgenden Befehl aus:
 
     ```bash
-    sudo apt-get update
-    sudo apt-get install -y azdata-cli
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)
     ```
 
-5. Überprüfen Sie die Installation:
+4. Installieren von `azdata-cli`.
 
-    ```bash
-    azdata --version
-    ```
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y azdata-cli
+   ```
 
-### <a name="update"></a>Aktualisieren
+## <a name="verify-install"></a>Überprüfen der Installation
 
-Führen Sie ein Upgrade nur für `azdata` durch:
+```bash
+azdata
+azdata --version
+```
+
+## <a name="update"></a>Aktualisieren
+
+Aktualisieren Sie die `azdata-cli` mit den Befehlen `apt-get update` und `apt-get install`.
 
 ```bash
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ```
 
-### <a name="uninstall"></a>Deinstallieren
+## <a name="uninstall"></a>Deinstallieren
 
-1. Führen Sie die Deinstallation mit „apt-get remove“ durch:
+1. Entfernen Sie das Paket aus Ihrem System.
 
-    ```bash
-    sudo apt-get remove -y azdata-cli
-    ```
+   ```bash
+   sudo apt-get remove -y azdata-cli
+   ```
 
-2. Entfernen Sie die Repositoryinformationen für `azdata`:
+2. Entfernen Sie die Repositoryinformationen, wenn Sie nicht planen, `azdata-cli` neu zu installieren.
 
-    >[!NOTE]
-    >Dieser Schritt ist nicht erforderlich, wenn Sie planen, `azdata` in der Zukunft zu installieren.
+   ```bash
+   sudo rm /etc/apt/sources.list.d/azdata-cli.list
+   ```
 
-    ```bash
-    sudo rm /etc/apt/sources.list.d/azdata-cli.list
-    ```
+3. Entfernen Sie den Repositoryschlüssel.
 
-3. Entfernen Sie den Signaturschlüssel:
+   ```bash
+   sudo rm /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg
+   ```
 
-    ```bash
-    sudo rm /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg
-    ```
+4. Entfernen Sie Abhängigkeiten, die nicht mehr benötigt werden.
 
-4. Entfernen Sie alle nicht benötigten Abhängigkeiten, die mit der Azdata-CLI installiert wurden:
-
-    ```bash
-    sudo apt autoremove
-    ```
+   ```bash
+   sudo apt autoremove
+   ```
 
 ## <a name="next-steps"></a>Nächste Schritte
 
