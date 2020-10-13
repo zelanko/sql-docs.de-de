@@ -12,12 +12,12 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9677adb821528d7188a64415c344548a7ea400ed
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723116"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868678"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Einführung in speicheroptimierte Tabellen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ Ab SQL Server 2016 und in der Azure SQL-Datenbank gibt es keine Einschränkungen
   
 ## <a name="accessing-data-in-memory-optimized-tables"></a>Zugriff auf Daten in speicheroptimierten Tabellen  
 
-Auf speicheroptimierte Tabellen kann am effizientesten mit systemintern kompilierten gespeicherten Prozeduren ([Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)) zugegriffen werden. Auf speicheroptimierte Tabellen kann außerdem mit (herkömmlichem) interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)]zugegriffen werden. "Interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)] " bezieht sich auf den Zugriff auf speicheroptimierte Tabellen ohne eine systemintern kompilierte gespeicherte Prozedur. Beispiele für den Zugriff auf interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)] sind der Zugriff auf eine speicheroptimierte Tabelle über einen DML-Trigger, einen Ad-Hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batch, eine Sicht und eine Tabellenwertfunktion.  
+Auf speicheroptimierte Tabellen kann am effizientesten mit systemintern kompilierten gespeicherten Prozeduren ([Systemintern kompilierte gespeicherte Prozeduren](./a-guide-to-query-processing-for-memory-optimized-tables.md)) zugegriffen werden. Auf speicheroptimierte Tabellen kann außerdem mit (herkömmlichem) interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)]zugegriffen werden. "Interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)] " bezieht sich auf den Zugriff auf speicheroptimierte Tabellen ohne eine systemintern kompilierte gespeicherte Prozedur. Beispiele für den Zugriff auf interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)] sind der Zugriff auf eine speicheroptimierte Tabelle über einen DML-Trigger, einen Ad-Hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batch, eine Sicht und eine Tabellenwertfunktion.  
   
  In der folgenden Tabelle wird der systemeigene und interpretierte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff für verschiedene Objekte zusammengefasst.  
   
@@ -108,5 +108,4 @@ Eine kurze Erläuterung typischer Szenarien, in denen die Leistung mit [!INCLUDE
 ## <a name="see-also"></a>Weitere Informationen
 
 [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

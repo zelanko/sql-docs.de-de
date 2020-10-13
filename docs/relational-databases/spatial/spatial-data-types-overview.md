@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: befee8aca5a1c9d7a66015a02c8851c56d0e5a8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0939dd9a38e049fc0db732c1635fdb73b686f04
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464910"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809534"
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
 
@@ -74,7 +74,7 @@ Kreisbogensegmente für geometry-Typen werden in der kartesischen XY-Koordinaten
 
 Im planaren bzw. euklidischen System werden Maße von Entfernungen und Flächen in der gleichen Maßeinheit angegeben wie die Koordinaten. Bei Verwendung des **geometry**-Datentyps beträgt die Entfernung zwischen (2, 2) und (5, 6) ungeachtet der verwendeten Maßeinheit fünf Einheiten.  
 
-Im ellipsenförmigen System werden Koordinaten in Breiten- und Längengraden angegeben. Längen und Flächen werden in der Regel in Meter und Quadratmeter gemessen. Die Maßeinheit kann jedoch von den [SRID (Spatial Reference Identifiers)](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) der **geography**-Instanz abhängen. Die gängigste Maßeinheit für den **geography** -Datentyp ist Meter.  
+Im ellipsenförmigen System werden Koordinaten in Breiten- und Längengraden angegeben. Längen und Flächen werden in der Regel in Meter und Quadratmeter gemessen. Die Maßeinheit kann jedoch von den [SRID (Spatial Reference Identifiers)](./spatial-reference-identifiers-srids.md) der **geography**-Instanz abhängen. Die gängigste Maßeinheit für den **geography** -Datentyp ist Meter.  
 
 ### <a name="orientation-of-spatial-data"></a>Ausrichtung von räumlichen Daten
 
@@ -201,10 +201,10 @@ SELECT @g.ToString(), @g.STLength();
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Räumliche Daten (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx)
-- [geometry-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/bb933973.aspx)
-- [geography-Datentyp-Methodenverweis](https://docs.microsoft.com/sql/t-sql/spatial-geography/spatial-types-geography)
+- [Räumliche Daten (SQL Server)](./spatial-data-sql-server.md)
+- [geometry-Datentyp-Methodenverweis](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+- [geography-Datentyp-Methodenverweis](../../t-sql/spatial-geography/spatial-types-geography.md)
 - [STNumCurves &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)
 - [STNumCurves &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)
 - [STGeomFromText &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)
-- [STGeomFromText &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+- [STGeomFromText &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)

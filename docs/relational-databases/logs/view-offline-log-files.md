@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f0f124b9073335a5dc681c34fb7fa977123f04c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667856"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869285"
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "85667856"
   
  Wenn Sie Registrierte Server verwenden, muss die Instanz, mit der Sie eine Verbindung herstellen möchten, unter **Lokale Servergruppen** oder **Zentrale Verwaltungsserver**registriert sein. (Die Instanz kann eigenständig oder als Mitglied einer Servergruppe registriert werden.) Weitere Informationen zum Hinzufügen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu Registrierte Server finden Sie in den folgenden Themen:  
   
--   [Erstellen oder Bearbeiten einer Servergruppe &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
+-   [Erstellen oder Bearbeiten einer Servergruppe &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
--   [Registrieren eines verbundenen Servers &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)  
+-   [Registrieren eines verbundenen Servers &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md)  
   
--   [Erstellen eines zentralen Verwaltungsservers und einer Servergruppe &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)  
+-   [Erstellen eines zentralen Verwaltungsservers und einer Servergruppe &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-a-central-management-server-and-server-group.md)  
   
  Weitere Informationen zum programmgesteuerten Anzeigen der Offlineprotokolldateien mit WMI- und WQL-Abfragen finden Sie in den folgenden Themen:  
   
@@ -122,5 +122,4 @@ ms.locfileid: "85667856"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Protokolldatei-Viewer](../../relational-databases/logs/log-file-viewer.md)  
-  
   

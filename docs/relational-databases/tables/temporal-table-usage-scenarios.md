@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 77d47d7492b9c4973d58113c80e5cca737315282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540838"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809194"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Verwendungsszenarios für temporale Tabellen
 
@@ -59,7 +59,7 @@ Verschiedene Optionen zum Erstellen von temporalen Tabellen mit Systemversionsve
 
 ### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>Aktivieren der Systemversionsverwaltung für eine vorhandene Tabelle zur Datenüberwachung
 
-Wenn Sie in vorhandenen Datenbanken eine Datenüberwachung durchführen müssen, verwenden Sie ALTER TABLE, um nicht temporale Tabellen mit der Systemversionsverwaltung zu erweitern. Fügen Sie zum Vermeiden von Breaking Changes wie unter [Erstellen einer temporalen Tabelle mit Systemversionsverwaltung](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3) beschrieben Zeitraumspalten als verborgen (HIDDEN) hinzu. Das folgende Beispiel veranschaulicht die Aktivierung der Systemversionsverwaltung für eine vorhandene Mitarbeitertabelle in einer hypothetischen Personaldatenbank:
+Wenn Sie in vorhandenen Datenbanken eine Datenüberwachung durchführen müssen, verwenden Sie ALTER TABLE, um nicht temporale Tabellen mit der Systemversionsverwaltung zu erweitern. Fügen Sie zum Vermeiden von Breaking Changes wie unter [Erstellen einer temporalen Tabelle mit Systemversionsverwaltung](./creating-a-system-versioned-temporal-table.md) beschrieben Zeitraumspalten als verborgen (HIDDEN) hinzu. Das folgende Beispiel veranschaulicht die Aktivierung der Systemversionsverwaltung für eine vorhandene Mitarbeitertabelle in einer hypothetischen Personaldatenbank:
 
 ```sql
 /*

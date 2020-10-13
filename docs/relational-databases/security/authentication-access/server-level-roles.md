@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636140"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869019"
 ---
 # <a name="server-level-roles"></a>Rollen auf Serverebene
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91636140"
   
  Sie können Prinzipale auf Serverebene ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldungen, Windows-Konten und Windows-Gruppen) zu Rollen auf Serverebene zusammenfassen. Jedes Mitglied einer festen Serverrolle kann der gleichen Rolle andere Anmeldenamen hinzufügen. Mitglieder benutzerdefinierter Serverrollen können der Rolle keine weiteren Serverprinzipale hinzufügen.  
 > [!NOTE]
->  Berechtigungen auf Serverebene sind in der SQL-Datenbank oder SQL Data Warehouse nicht verfügbar. Weitere Informationen zur SQL-Datenbank finden Sie unter [Steuern und Gewähren des Datenbankzugriffs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+>  Berechtigungen auf Serverebene sind in der SQL-Datenbank oder SQL Data Warehouse nicht verfügbar. Weitere Informationen zur SQL-Datenbank finden Sie unter [Steuern und Gewähren des Datenbankzugriffs](/azure/sql-database/sql-database-manage-logins).
   
 ## <a name="fixed-server-level-roles"></a>Feste Rollen auf Serverebene  
  In der folgenden Tabelle werden die festen Rollen auf Serverebene und deren Möglichkeiten angezeigt.  
@@ -104,5 +104,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [REVOKE (Berechtigungen für Serverprinzipal) &#40;Transact-SQL&#41;](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [DENY (Berechtigungen für Serverprinzipal) &#40;Transact-SQL&#41;](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
  [Erstellen einer Serverrolle](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
-  
   

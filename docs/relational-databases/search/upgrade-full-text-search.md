@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 763184ba374d004001b33357591a89668c3dd0a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490586"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868946"
 ---
 # <a name="upgrade-full-text-search"></a>Upgrade der Volltextsuche
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,7 +113,7 @@ Wenn eine Datenbank von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] au
 ## <a name="backup-and-imported-full-text-catalogs"></a>Sichern und Importieren von Volltextkatalogen  
  Für während des Upgrades neu erstellte oder zurückgesetzte Volltextkataloge (oder für neue Volltextkataloge) ist der Volltextkatalog ein logisches Konzept und nicht in einer Dateigruppe enthalten. Um in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]einen Volltextkatalog zu sichern, müssen Sie daher jede Dateigruppe identifizieren, die einen Volltextindex des Katalogs enthält, und diese einzeln sichern. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen und Indizes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
- Bei Volltextkatalogen, die aus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]importiert werden, ist der Volltextkatalog immer noch eine Datenbankdatei in einer eigenen Dateigruppe. Der Sicherungsprozess von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] für Volltextkataloge gilt weiterhin, jedoch mit der Ausnahme, dass der MSFTESQL-Dienst in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht vorhanden ist. Weitere Informationen zum [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Prozess finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen](https://go.microsoft.com/fwlink/?LinkId=209154) in der SQL Server 2005-Onlinedokumentation.  
+ Bei Volltextkatalogen, die aus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]importiert werden, ist der Volltextkatalog immer noch eine Datenbankdatei in einer eigenen Dateigruppe. Der Sicherungsprozess von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] für Volltextkataloge gilt weiterhin, jedoch mit der Ausnahme, dass der MSFTESQL-Dienst in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht vorhanden ist. Weitere Informationen zum [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Prozess finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen](/previous-versions/sql/sql-server-2005/ms142511(v=sql.90)) in der SQL Server 2005-Onlinedokumentation.  
   
 ##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a> Migrieren von Volltextindizes beim Aktualisieren einer Datenbank auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Datenbankdateien und Volltextkataloge einer vorherigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können durch Anfügen, Wiederherstellen oder mithilfe des Assistenten zum Kopieren von Datenbanken auf eine vorhandene [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Serverinstanz aktualisiert werden. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Volltextindizes werden, falls vorhanden, importiert, zurückgesetzt oder neu erstellt. Die Servereigenschaft **upgrade_option** steuert, welche Volltextupgrade-Option die Serverinstanz während dieser Datenbankupgrades verwendet.  
@@ -135,7 +135,7 @@ Wenn eine Datenbank von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] au
   
 -   Wenn der Volltextkatalog offline ist, kann die Sicherung nicht ausgeführt werden.  
   
- Weitere Informationen zur Sicherung und Wiederherstellung von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Volltextkatalogen finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen](https://go.microsoft.com/fwlink/?LinkId=121052) und [Dateisicherung und -wiederherstellung und Volltextkataloge](https://go.microsoft.com/fwlink/?LinkId=121053)in der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Onlinedokumentation.  
+ Weitere Informationen zur Sicherung und Wiederherstellung von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Volltextkatalogen finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen](./back-up-and-restore-full-text-catalogs-and-indexes.md) und [Dateisicherung und -wiederherstellung und Volltextkataloge](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))in der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Onlinedokumentation.  
   
  Wenn die Datenbank für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederhergestellt wird, wird für den Volltextkatalog eine neue Datenbankdatei erstellt. Der Standardname dieser Datei lautet ftrow_*catalog-name*.ndf. Wenn Sie für *catalog-name* (Katalogname) zum Beispiel `cat1`verwenden, lautet der Standardname der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbankdatei `ftrow_cat1.ndf`. Wenn der Standardname im Zielverzeichnis jedoch bereits verwendet wird, erhält die neue Datenbankdatei den Namen `ftrow_`*catalog-name*`{`*GUID*`}.ndf`, wobei *GUID* für den eindeutigen Bezeichner (Globally Unique Identifier, GUID) der neuen Datei steht.  
   
@@ -176,11 +176,10 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Wenn [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] keine Volltextkatalogdatei finden kann oder wenn die Volltextdatei während des Anfügens verschoben und ein neuer Speicherort angegeben wurde, ist das Verhalten von der gewählten Volltextupgrade-Option abhängig. Wenn die Volltextupgrade-Option **Importieren** oder **Neu erstellen**lautet, wird der angefügte Volltextkatalog neu erstellt. Wenn die Volltextupgrade-Option **Zurücksetzen** lautet, wird der angefügte Volltextkatalog zurückgesetzt.  
   
- Weitere Informationen zum Trennen oder Anfügen einer Datenbank finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md), und [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
+ Weitere Informationen zum Trennen oder Anfügen einer Datenbank finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md), und [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erste Schritte mit der Volltextsuche](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

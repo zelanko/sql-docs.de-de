@@ -2,19 +2,19 @@
 title: Konfigurieren einer Verfügbarkeitsgruppe zur Leseskalierung (SQL Server für Linux)
 description: Erfahren Sie, wie Sie eine SQL Server-Always On-Verfügbarkeitsgruppe unter Linux für Workloads zur Leseskalierung konfigurieren.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 332160202b3972339c2d9c668f31e373443d5217
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b1472c1cbe3bdb9611ffcb06ff3404c28c431545
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892291"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784847"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Konfigurieren einer SQL Server-Verfügbarkeitsgruppe zur Leseskalierung unter Linux
 

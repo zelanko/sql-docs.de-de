@@ -15,12 +15,12 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b4aad088298790c4add3ddea318131a1ed61d70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b89a8841bd679b9100e43b0b8d7d79dc6bb8165
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756817"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868580"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Verwenden des PowerShell-Anbieters für erweiterte Ereignisse
 
@@ -114,8 +114,7 @@ $session.Create()
  Zum Erstellen, Ändern oder Löschen einer Sitzung für erweiterte Ereignisse müssen Sie über die ALTER ANY EVENT SESSION-Berechtigung verfügen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
+ [SQL Server-PowerShell](../../powershell/sql-server-powershell.md)   
  [Verwenden der system_health-Sitzung](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Tools für erweiterte Ereignisse](../../relational-databases/extended-events/extended-events-tools.md)  
-  
   

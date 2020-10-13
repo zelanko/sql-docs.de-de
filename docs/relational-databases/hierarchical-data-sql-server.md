@@ -19,12 +19,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1638e581a384f79842109c83352fc7292fa15de7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 994adada7ecef047967b07d03cd2a9a129c8f227
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88382526"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869055"
 ---
 # <a name="hierarchical-data-sql-server"></a>Hierarchische Daten (SQL Server)
 
@@ -44,7 +44,7 @@ ms.locfileid: "88382526"
   
 -   Ein Diagramm der Links zwischen Webseiten  
   
- Mit dem Datentyp [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) können Sie Tabellen mit einer hierarchischen Struktur erstellen oder die hierarchische Struktur der Daten an einem anderen Speicherort beschreiben. Verwenden Sie die [hierarchyid-Funktionen](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) in [!INCLUDE[tsql](../includes/tsql-md.md)] , um hierarchische Daten abzufragen und zu verwalten.  
+ Mit dem Datentyp [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) können Sie Tabellen mit einer hierarchischen Struktur erstellen oder die hierarchische Struktur der Daten an einem anderen Speicherort beschreiben. Verwenden Sie die [hierarchyid-Funktionen](../t-sql/data-types/hierarchyid-data-type-method-reference.md) in [!INCLUDE[tsql](../includes/tsql-md.md)] , um hierarchische Daten abzufragen und zu verwalten.  
   
 ##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> Haupteigenschaften von hierarchyid  
  Ein Wert des **hierarchyid** -Datentyps stellt eine Position in einer Strukturhierarchie dar. Werte des Typs **hierarchyid** verfügen über die folgenden Eigenschaften:  
@@ -540,8 +540,7 @@ GO
   
   
 ## <a name="see-also"></a>Siehe auch  
- [hierarchyid-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [hierarchyid-Datentyp-Methodenverweis](../t-sql/data-types/hierarchyid-data-type-method-reference.md)   
  [Tutorial: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-  
   

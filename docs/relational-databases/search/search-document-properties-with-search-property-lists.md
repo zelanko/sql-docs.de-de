@@ -20,12 +20,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4938844b0014745dd50060b0e1da43b4e574a20e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 399a09695b14fa3b3f55fcae8c3d88ba16324057
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464964"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868959"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "88464964"
   
     -   **Von einer vorhandenen Sucheigenschaftenliste erstellen**  
   
-     Weitere Informationen finden Sie unter [New Search Property List](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql).  
+     Weitere Informationen finden Sie unter [New Search Property List](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -202,7 +202,7 @@ GO
   
     2.  Klicken Sie zum Hinzufügen einer Dokumenteigenschaft auf die leere Zeile am unteren Rand der Liste (rechts vom **\*** ), und geben Sie die Werte für die neue Eigenschaft ein.  
   
-         Weitere Informationen zu diesen Werten finden Sie unter [Sucheigenschaftenlisten-Editor](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql). Wie Sie diese Werte für die von Microsoft definierte Eigenschaften erhalten, erfahren Sie unter [Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschaft-IDs für Sucheigenschaften](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Weitere Informationen zu Eigenschaften, die von einem unabhängigen Softwareanbieter (ISV) definiert wurden, finden Sie in der Dokumentation des betreffenden Anbieters.  
+         Weitere Informationen zu diesen Werten finden Sie unter [Sucheigenschaftenlisten-Editor](../../t-sql/statements/create-search-property-list-transact-sql.md). Wie Sie diese Werte für die von Microsoft definierte Eigenschaften erhalten, erfahren Sie unter [Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschaft-IDs für Sucheigenschaften](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Weitere Informationen zu Eigenschaften, die von einem unabhängigen Softwareanbieter (ISV) definiert wurden, finden Sie in der Dokumentation des betreffenden Anbieters.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -228,5 +228,4 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschaft-IDs für Sucheigenschaften](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

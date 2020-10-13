@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f51c01570aa5149e24ca1cb37af4b6bafe35ee0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95b7165fb16832b8b76e6a9c7a331433d49ff0a9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737820"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809636"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Löschen von Blob-Sicherungsdateien mit aktiven Leases
 
@@ -24,7 +24,7 @@ ms.locfileid: "85737820"
 
 Wenn Sicherungs- oder Wiederherstellungsvorgänge in Microsoft Azure Storage ausgeführt werden, reserviert SQL Server eine Lease für eine unbegrenzte Dauer, um den exklusiven Zugriff auf das Blob zu gewährleisten. Nachdem die Sicherung oder Wiederherstellung erfolgreich abgeschlossen wurde, wird die Lease wieder freigegeben. Wenn eine Sicherung oder Wiederherstellung fehlschlägt, wird im Rahmen des Sicherungsvorgangs versucht, ungültige Blobs zu bereinigen. Kann die Sicherung jedoch aufgrund eines längeren bzw. dauerhaften Netzwerkverbindungsfehlers nicht ausgeführt werden, ist der Sicherungsvorgang u. U. nicht in der Lage, auf das BLOB zuzugreifen, sodass das BLOB verwaist ist. Dies bedeutet, dass das Blob erst wieder beschreibbar ist bzw. gelöscht werden kann, nachdem die Lease freigegeben wurde. In diesem Thema wird beschrieben, wie die Lease freigegeben (abgeschaltet) und das Blob gelöscht wird.
   
-Weitere Informationen zu Leasetypen finden Sie [in diesem Artikel](https://go.microsoft.com/fwlink/?LinkId=275664).  
+Weitere Informationen zu Leasetypen finden Sie [in diesem Artikel](/rest/api/storageservices/Lease-Blob).  
   
 Ist der Sicherungsvorgang fehlerhaft, kann eine ungültige Sicherungsdatei generiert werden. Außerdem kann für die BLOB-Sicherungsdatei eine aktive Lease bestehen, die verhindert, dass sie gelöscht oder überschrieben wird. Zum Löschen oder Überschreiben derartiger Blobs sollte die Lease zuerst freigegeben (abgeschaltet) werden. Bei Backupfehlern wird empfohlen, dass Sie die Leases bereinigen und Blobs löschen. Im Rahmen Ihrer Speicherverwaltungsaufgaben können Sie auch in regelmäßigen Abständen Leases bereinigen und Blobs löschen.  
   
@@ -36,7 +36,7 @@ In den folgenden Schritten wird beschrieben, wie nach einem fehlerhaften Sicheru
   
 1. **Ermitteln von Blobs mit Leases:** Falls Sie über ein Skript oder einen Prozess zum Ausführen der Sicherungsvorgänge verfügen, können Sie den Fehler möglicherweise innerhalb des Skripts oder Prozesses ermitteln und die Blobs entsprechend bereinigen.  Sie können die Blobs mit aktiven Leases auch mithilfe den Eigenschaften „LeaseStats“ und „LeastState“ identifizieren. Nachdem Sie die Blobs identifiziert haben, überprüfen Sie die Liste, stellen Sie sicher, dass die Sicherungsdatei gültig ist, und löschen Sie erst dann das Blob.  
   
-1. **Unterbrechen der Lease:** Durch eine autorisierte Anforderung kann die Lease ohne Angabe einer Lease-ID unterbrochen werden. Weitere Informationen finden Sie [hier](https://go.microsoft.com/fwlink/?LinkID=275664) .  
+1. **Unterbrechen der Lease:** Durch eine autorisierte Anforderung kann die Lease ohne Angabe einer Lease-ID unterbrochen werden. Weitere Informationen finden Sie [hier](/rest/api/storageservices/Lease-Blob) .  
   
     > [!TIP]  
     > SQL Server gibt eine Lease-ID aus, um während des Wiederherstellungsvorgangs einen exklusiven Zugriff zu gewährleisten. Die ID für die Wiederherstellungslease lautet BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
@@ -46,7 +46,7 @@ In den folgenden Schritten wird beschrieben, wie nach einem fehlerhaften Sicheru
 ###  <a name="powershell-script-example"></a><a name="Code_Example"></a> Beispiel für ein PowerShell-Skript  
   
 > [!IMPORTANT]
-> Bei Verwendung von PowerShell 2.0 können Probleme beim Laden der Assembly Microsoft.WindowsAzure.Storage.dll auftreten. Es wird empfohlen, ein Upgrade von [PowerShell](https://docs.microsoft.com/powershell/) auszuführen, um das Problem zu beheben. Lassen Sie die .NET 2.0- und .NET 4.0-Assemblys zur Laufzeit laden. Dazu können Sie auch die folgende Problemumgehung verwenden, um die Datei powershell.exe.config zu erstellen bzw. eine bereits vorhandene Datei mit folgendem Code zu ändern:  
+> Bei Verwendung von PowerShell 2.0 können Probleme beim Laden der Assembly Microsoft.WindowsAzure.Storage.dll auftreten. Es wird empfohlen, ein Upgrade von [PowerShell](/powershell/) auszuführen, um das Problem zu beheben. Lassen Sie die .NET 2.0- und .NET 4.0-Assemblys zur Laufzeit laden. Dazu können Sie auch die folgende Problemumgehung verwenden, um die Datei powershell.exe.config zu erstellen bzw. eine bereits vorhandene Datei mit folgendem Code zu ändern:  
 >
 > ```xml
 > <?xml version="1.0"?>
@@ -128,4 +128,4 @@ if($lockedBlobs.Count -gt 0)
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[SQL Server-Sicherung über URLs – bewährte Methoden und Problembehandlung](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[SQL Server-Sicherung über URLs – bewährte Methoden und Problembehandlung](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

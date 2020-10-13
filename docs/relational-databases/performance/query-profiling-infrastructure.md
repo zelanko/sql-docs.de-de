@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719425"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890774"
 ---
 # <a name="query-profiling-infrastructure"></a>Profilerstellungsinfrastruktur für Abfragen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung finden Sie im Blogbeitrag [Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) 
+> Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung finden Sie im Blogbeitrag [Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) 
 
 Wenn Sie eine erweiterte Ereignissitzung ausführen, die das Ereignis *query_thread_profile* verwendet, dann wird die [sys.dm_exec_query_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)-DMV ebenfalls unter Verwendung von einfacher Profilerstellung mit Daten aufgefüllt. Dies ermöglicht Live-Abfragestatistiken für alle Sitzungen, indem der [Aktivitätsmonitor](../../relational-databases/performance-monitor/activity-monitor.md) verwendet oder die DMV direkt abgefragt wird.
 
@@ -212,4 +212,4 @@ Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung f
  [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Tatsächlicher Ausführungsplan](../../relational-databases/performance/display-an-actual-execution-plan.md)    
- [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)      
+ [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)

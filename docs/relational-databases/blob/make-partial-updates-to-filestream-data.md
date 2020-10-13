@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: d6f7661e-6c14-4d31-9541-4520ca0f82b2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 133cbfadceaf782e72fe5a3b604e37e9d56f61f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b47cdacd079bfa1235427938b3fa214a1babeb7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767950"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809900"
 ---
 # <a name="make-partial-updates-to-filestream-data"></a>Vornehmen von Teilupdates an FILESTREAM-Daten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Eine Anwendung verwendet FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT, um Teilaktualisierungen für FILESTREAM-BLOB-Daten vorzunehmen. Die Funktion [DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527) übergibt diesen Wert und das Handle, das von [OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) zurückgegeben wird, an den FILESTREAM-Treiber. Der Treiber erzwingt dann eine serverseitige Kopie der aktuellen FILESTREAM-Daten in die Datei, auf die das Handle verweist. Wenn die Anwendung den FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT-Wert ausgibt, nachdem in die durch das Handle bezeichnete Datei geschrieben wurde, werden die Daten des letzten Schreibvorgangs persistent gespeichert und alle für das Handle zuvor geschriebenen Daten gehen verloren.  
+  Eine Anwendung verwendet FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT, um Teilaktualisierungen für FILESTREAM-BLOB-Daten vorzunehmen. Die Funktion [DeviceIoControl](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol) übergibt diesen Wert und das Handle, das von [OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) zurückgegeben wird, an den FILESTREAM-Treiber. Der Treiber erzwingt dann eine serverseitige Kopie der aktuellen FILESTREAM-Daten in die Datei, auf die das Handle verweist. Wenn die Anwendung den FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT-Wert ausgibt, nachdem in die durch das Handle bezeichnete Datei geschrieben wurde, werden die Daten des letzten Schreibvorgangs persistent gespeichert und alle für das Handle zuvor geschriebenen Daten gehen verloren.  
   
 > [!NOTE]  
->  FILESTREAM benötigt für den Remotezugriff das [SMB-Protokoll](https://go.microsoft.com/fwlink/?LinkId=112454) .  
+>  FILESTREAM benötigt für den Remotezugriff das [SMB-Protokoll](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview) .  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie den `FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT` -Wert verwenden, um ein Teilupdate eines eingefügten FILESTREAM-BLOB-Elements durchzuführen.  
@@ -39,5 +39,4 @@ ms.locfileid: "85767950"
 ## <a name="see-also"></a>Weitere Informationen  
  [ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Erstellen von Clientanwendungen für FILESTREAM-Daten](../../relational-databases/blob/create-client-applications-for-filestream-data.md)  
-  
   

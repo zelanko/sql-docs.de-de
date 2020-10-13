@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c6a6dace6d14ea38aa411924f0c74dfec2218f77
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458573"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890910"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers (DTA)
 
@@ -45,7 +45,7 @@ ms.locfileid: "86458573"
  Sie können die GUI auch dazu verwenden, die Optimierungsausgabe anzuzeigen, die vom Befehlszeilen-Hilfsprogramm **dta** generiert wird.  
   
 > [!NOTE]  
->  Falls Sie das Befehlszeilen-Hilfsprogramm **dta** verwenden und mithilfe des Arguments **-ox** angeben, dass die Ausgabe in eine XML-Datei geschrieben wird, können Sie die XML-Ausgabedatei öffnen und anzeigen, indem Sie im Menü **Datei** von **auf** Datei öffnen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]klicken. Weitere Informationen finden Sie unter [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Informationen zum Befehlszeilen-Hilfsprogramm **dta** finden Sie unter [dta (Hilfsprogramm)](../../tools/dta/dta-utility.md).  
+>  Falls Sie das Befehlszeilen-Hilfsprogramm **dta** verwenden und mithilfe des Arguments **-ox** angeben, dass die Ausgabe in eine XML-Datei geschrieben wird, können Sie die XML-Ausgabedatei öffnen und anzeigen, indem Sie im Menü **Datei** von **auf** Datei öffnen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]klicken. Weitere Informationen finden Sie unter [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md). Informationen zum Befehlszeilen-Hilfsprogramm **dta** finden Sie unter [dta (Hilfsprogramm)](../../tools/dta/dta-utility.md).  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>So zeigen Sie Optimierungsempfehlungen mithilfe der GUI des Datenbankoptimierungsratgebers an  
   
@@ -392,5 +392,4 @@ ms.locfileid: "86458573"
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [dta (Hilfsprogramm)](../../tools/dta/dta-utility.md)  
-  
   

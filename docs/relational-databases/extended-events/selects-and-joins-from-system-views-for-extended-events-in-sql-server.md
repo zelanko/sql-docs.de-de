@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58c105d3f4d4d49cd7bf064a2c3c6b88fc5a7eae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756869"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868793"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server
 
@@ -80,7 +80,7 @@ Die folgende Berichtigung ist notwendig, um SELECT für Systemsichten ausführen
 
 Dieser Abschnitt stimmt mit drei verschiedenen technologischen Perspektiven auf der gleichen definierten Ereignissitzung überein und bezieht sich auf sie. Die Sitzung wurde definiert und kann im **Objekt-Explorer** von SQL Server Management Studio (SSMS.exe) angezeigt werden. Diese Sitzung wird derzeit jedoch nicht ausgeführt.
 
-Es wird empfohlen, jeden Monat [das neueste Update von SSMS zu installieren](https://msdn.microsoft.com/library/mt238290.aspx), um unerwartete Fehler zu vermeiden.
+Es wird empfohlen, jeden Monat [das neueste Update von SSMS zu installieren](../../ssms/download-sql-server-management-studio-ssms.md), um unerwartete Fehler zu vermeiden.
 
 
 Die Referenzdokumentation zu den Katalogsichten für erweiterte Ereignisse finden Sie unter [Katalogsichten für erweiterte Ereignisse (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).
@@ -891,5 +891,3 @@ Hier wird der Inhalt der ersten XML-Zelle aus dem vorherigen zurückgegebenen Ro
   </action>
 </event>
 ```
-
-

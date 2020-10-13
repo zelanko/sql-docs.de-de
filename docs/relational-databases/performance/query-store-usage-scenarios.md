@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8801e4727beba94c95408716606208c122e96204
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 3ededb226b10f99c1c064f08bfd2d75cfafcbad0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480352"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890763"
 ---
 # <a name="query-store-usage-scenarios"></a>Verwendungsszenarien für den Abfragespeicher
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,7 +77,7 @@ Wenn Sie eine Abfrage mit nicht optimaler Leistung identifiziert haben, richtet 
   
 -   Erstellen von fehlenden Indizes in Tabellen, auf die von aufwendigen Abfragen verwiesen wird  
   
--   Anwenden einer Filterrichtlinie für Sicherheit auf Zeilenebene. Weitere Informationen finden Sie unter [Optimieren von Sicherheit auf Zeilenebene mithilfe des Abfragespeichers](https://docs.microsoft.com/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store).  
+-   Anwenden einer Filterrichtlinie für Sicherheit auf Zeilenebene. Weitere Informationen finden Sie unter [Optimieren von Sicherheit auf Zeilenebene mithilfe des Abfragespeichers](/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store).  
   
 -   Hinzufügen von temporaler Verwaltung durch das System zu Tabellen, die häufigen Änderungen durch OLTP-Anwendungen unterliegen.  
   
@@ -222,4 +222,3 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Best Practices für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
-  

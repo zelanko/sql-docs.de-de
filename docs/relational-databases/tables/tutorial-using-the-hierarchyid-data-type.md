@@ -15,12 +15,12 @@ ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1abc4ab38086afd380707b2eb12fafc48713bf08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eece1dc9ea612e37c466d57e074ae105ea0608c4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418994"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809649"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Tutorial: Verwenden des hierarchyid-Datentyps
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ In dieser Lektion verschieben Sie die Daten einer vorhandenen Angestelltentabell
 [Lektion 2: Erstellen und Verwalten von Daten in einer hierarchischen Tabelle](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
 In dieser Lektion erstellen Sie eine Tabelle, in der die Hierarchie mithilfe des **hierarchyid** -Datentyps dargestellt wird. Dann bearbeiten Sie die Daten in der Tabelle, indem Sie hierarchische Methoden verwenden.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
 Auf dem System muss Folgendes installiert sein:  
   
 -   Eine beliebige Edition von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher.  
@@ -47,9 +47,8 @@ Auf dem System muss Folgendes installiert sein:
 ## <a name="see-also"></a>Weitere Informationen  
 [Tutorial: Erste Schritte mit der Datenbank-Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 [Tutorial: Schreiben von Transact-SQL-Anweisungen](../../t-sql/tutorial-writing-transact-sql-statements.md)  
-[hierarchyid-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid-Datentyp-Methodenverweis](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
 [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-  
   
   

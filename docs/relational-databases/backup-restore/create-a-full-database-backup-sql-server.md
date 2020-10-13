@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c691d1e4a6164087ee3bee776e27a786f68effe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d534efe7cf6de24acad83604b7ed6e42efa9ce6f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89519323"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809273"
 ---
 # <a name="create-a-full-database-backup"></a>Erstellen einer vollständigen Datenbanksicherung
 
@@ -208,7 +208,7 @@ In diesem Beispiel wird die `SQLTestDB`-Datenbank mit Verschlüsselung am standa
 
 Im nachstehenden Beispiel wird eine vollständige Sicherung der `SQLTestDB`-Datenbank in den Azure Blob Storage-Dienst ausgeführt. Dabei wird in diesem Beispiel davon ausgegangen, dass Sie bereits über ein Speicherkonto mit einem Blobcontainer verfügen. In diesem Beispiel wird eine Shared Access Signature für Sie erstellt. Dies ist nicht möglich, wenn der Container bereits über eine vorhandene Shared Access Signatur verfügt.
 
-Wenn Sie noch keinen Azure-Blobcontainer in einem Speicherkonto haben, erstellen Sie zunächst einen, bevor Sie fortfahren. Weitere Informationen finden Sie unter [Erstellen eines universellen Speicherkontos](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) und [Erstellen eines Containers](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+Wenn Sie noch keinen Azure-Blobcontainer in einem Speicherkonto haben, erstellen Sie zunächst einen, bevor Sie fortfahren. Weitere Informationen finden Sie unter [Erstellen eines universellen Speicherkontos](/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) und [Erstellen eines Containers](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Erweitern Sie im **Objekt-Explorer** nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die Serverstruktur.
 
@@ -368,7 +368,7 @@ Verwenden Sie das **Backup-SqlDatabase** -Cmdlet. Um ausdrücklich anzugeben, da
 > [!NOTE]
 > Für diese Beispiele wird das SqlServer-Modul benötigt. Führen Sie `Get-Module -Name SqlServer` aus, um festzustellen, ob es installiert ist. Zur Installation dieses Modul führen Sie `Install-Module -Name SqlServer` in einer Administratorsitzung von PowerShell aus.
 >
-> Weitere Informationen finden Sie unter [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).
+> Weitere Informationen finden Sie unter [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md).
 
 > [!IMPORTANT]
 > Wenn Sie ein PowerShell-Fenster aus SQL Server Management Studio öffnen, um eine Verbindung zu einer Installation von SQL Server herzustellen, können Sie den Teil mit den Anmeldeinformationen in diesem Beispiel weglassen, da Ihre Anmeldeinformationen in SSMS automatisch zum Herstellen der Verbindung zwischen PowerShell und Ihrer SQL Server-Instanz verwendet werden.
@@ -379,7 +379,7 @@ Verwenden Sie das **Backup-SqlDatabase** -Cmdlet. Um ausdrücklich anzugeben, da
 
 Im folgenden Beispiel wird eine vollständige Datenbanksicherung der `<myDatabase>` -Datenbank am standardmäßigen Sicherungsspeicherort der Serverinstanz `Computer\Instance`erstellt. Optional wird im Beispiel **-BackupAction Database**angegeben.
 
-Die vollständige Syntax und weitere Beispiele finden Sie unter [Backup-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-sqldatabase).
+Die vollständige Syntax und weitere Beispiele finden Sie unter [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase).
 
 ```powershell
 $credential = Get-Credential

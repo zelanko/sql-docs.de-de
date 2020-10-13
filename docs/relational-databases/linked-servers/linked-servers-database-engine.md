@@ -20,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b471d7e0f6ab13c5718e1ec37a87d423e7115f94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea8f2b873b8990a00bc61cd8ce45c192feefaaa5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420924"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869417"
 ---
 # <a name="linked-servers-database-engine"></a>Verbindungsserver (Datenbank-Engine)
 
@@ -34,7 +34,7 @@ ms.locfileid: "88420924"
   Mithilfe von Verbindungsservern können [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] Daten aus Remotedatenquellen lesen und Befehle für Remotedatenbankserver (z. B. OLE DB-Datenquellen) außerhalb der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen. In der Regel werden Verbindungsserver so konfiguriert, um [!INCLUDE[ssDE](../../includes/ssde-md.md)] für die Ausführung einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die Tabellen in einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthält, oder ein anderes Datenbankprodukt z. B. Oracle zu aktivieren. Viele Typen von OLE DB-Datenquellen können als Verbindungsserver konfiguriert werden, einschließlich [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel und Azure CosmosDB.
 
 > [!NOTE]
-> Verbindungsserver sind in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] verfügbar. Sie sind in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singleton und in Pools für elastische Datenbanken nicht aktiviert. [Einschränkungen in einer verwalteten Instanz finden Sie hier](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+> Verbindungsserver sind in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] verfügbar. Sie sind in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singleton und in Pools für elastische Datenbanken nicht aktiviert. [Einschränkungen in einer verwalteten Instanz finden Sie hier](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
 
 ## <a name="when-to-use-linked-servers"></a>Wann sollten Verbindungsserver verwendet werden?
 
@@ -76,7 +76,7 @@ Verbindungsserver werden in der Regel für die Verarbeitung verteilter Abfragen 
 > Wenn ein OLE DB-Anbieter verwendet wird, müssen dem Konto, mit dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst ausgeführt wird, Lese- und Ausführungsberechtigungen für das Verzeichnis (und alle Unterverzeichnisse) erteilt worden sein, in dem der Anbieter installiert ist. Dies schließt den Anbieter von Microsoft und alle Anbieter von Drittanbietern ein.
 
 > [!NOTE]
-> Verbindungsserver unterstützen bei der vollständigen Delegierung die Passthrough-Authentifizierung von Active Directory. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17 wird auch die Passthrough-Authentifizierung mit eingeschränkter Delegierung unterstützt. Die [ressourcenbasierte eingeschränkte Delegierung](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) wird jedoch nicht unterstützt.
+> Verbindungsserver unterstützen bei der vollständigen Delegierung die Passthrough-Authentifizierung von Active Directory. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17 wird auch die Passthrough-Authentifizierung mit eingeschränkter Delegierung unterstützt. Die [ressourcenbasierte eingeschränkte Delegierung](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) wird jedoch nicht unterstützt.
 
 ## <a name="managing-providers"></a>Verwalten von Anbietern  
 Eine Gruppe von Optionen steuert, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB-Anbieter lädt und verwendet, die in der Registrierung angegeben werden.  
@@ -107,5 +107,4 @@ Sie können Verbindungsserver auch mithilfe von [!INCLUDE[ssManStudioFull](../..
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)

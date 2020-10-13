@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdca475c71f2f1b81dac9b2a37850cea697a4414
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e8ba3ebb2aca0f1afd435e654427250901f9d83a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727337"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868566"
 ---
 # <a name="extended-events-overview"></a>Übersicht über erweiterte Ereignisse
 
@@ -45,7 +45,7 @@ Weitere Informationen zu „Erweiterte Ereignisse“ finden Sie unter [Schnellst
 |Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Pakete für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Beschreibt die „Erweiterte Ereignisse“-Pakete, die Objekte enthalten. Diese Objekte werden verwendet, um Daten abzurufen und zu verarbeiten, wenn eine „Erweiterte Ereignisse“-Sitzung ausgeführt wird.|  
-|[Ziele für erweiterte Ereignisse von SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Beschreibt die Ereignisconsumer, die während einer Ereignissitzung Daten empfangen können.|  
+|[Ziele für erweiterte Ereignisse von SQL Server](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))|Beschreibt die Ereignisconsumer, die während einer Ereignissitzung Daten empfangen können.|  
 |[Engine für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|Beschreibt die Engine, die eine Sitzung für erweiterte Ereignisse implementiert und verwaltet.|  
 |[Sitzungen für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|Beschreibt die Sitzung für erweiterte Ereignisse.|  
 | &nbsp; | &nbsp; |
@@ -68,7 +68,7 @@ Alle Anwendungen weisen Ausführungspunkte auf, die sowohl innerhalb der Anwendu
   
 -   Die Engine für erweiterte Ereignisse ist ereignisagnostisch. In der Engine kann jedes beliebige Ereignis an jedes beliebige Ziel gebunden werden, weil die Engine nicht durch den Ereignisinhalt eingeschränkt ist. Weitere Informationen zum Modul für erweiterte Ereignisse finden Sie unter [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
   
--   Ereignisse werden von Ereignisconsumern getrennt, die in erweiterten Ereignissen als *Ziele* bezeichnet werden. Das bedeutet, dass jedes Ziel jedes Ereignis empfangen kann. Zusätzlich kann jedes ausgelöste Ereignis automatisch vom Ziel verarbeitet werden, das dann wiederum die Protokollierung ausführen oder zusätzlichen Ereigniskontext bereitstellen kann. Weitere Informationen finden Sie unter [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+-   Ereignisse werden von Ereignisconsumern getrennt, die in erweiterten Ereignissen als *Ziele* bezeichnet werden. Das bedeutet, dass jedes Ziel jedes Ereignis empfangen kann. Zusätzlich kann jedes ausgelöste Ereignis automatisch vom Ziel verarbeitet werden, das dann wiederum die Protokollierung ausführen oder zusätzlichen Ereigniskontext bereitstellen kann. Weitere Informationen finden Sie unter [SQL Server Extended Events Targets](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130)).  
   
 -   Ereignisse unterscheiden sich von der Aktion, die ausgeführt werden soll, wenn ein Ereignis auftritt. Dies führt dazu, dass jede beliebige Aktion jedem beliebigen Ereignis zugeordnet werden kann.  
   
@@ -93,15 +93,15 @@ Durch Verwenden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] od
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Verwenden Sie den **Objekt-Explorer** , um Ereignissitzungen zu verwalten.|[Verwalten von Ereignissitzungen im Objekt-Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)|  
-|Beschreibt, wie Sie eine Sitzung für erweiterte Ereignisse erstellen.|[Erstellen einer Sitzung für erweiterte Ereignisse](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)|  
+|Beschreibt, wie Sie eine Sitzung für erweiterte Ereignisse erstellen.|[Erstellen einer Sitzung für erweiterte Ereignisse](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130))|  
 |Beschreibt, wie Sie Zieldaten anzeigen und aktualisieren.| [Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)|  
 |Beschreibt, wie Sie die folgenden Tools von erweiterten Ereignissen zum Erstellen und Verwalten von erweiterten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignissitzungen verwenden:|[Tools für erweiterte Ereignisse](../../relational-databases/extended-events/extended-events-tools.md)|  
 |Beschreibt, wie Sie eine Sitzung für erweiterte Ereignisse ändern.|[Ändern einer Sitzung für erweiterte Ereignisse](../../relational-databases/extended-events/alter-an-extended-events-session.md)|  
-|Beschreibt, wie Sie Informationen zu den den Ereignissen zugeordneten Feldern abrufen.|[Abrufen der Felder für alle Ereignisse](https://msdn.microsoft.com/library/4e4ee03f-5bca-42ed-a37c-db1c82e3aad2)|  
-|Beschreibt, wie Sie herausfinden, welche Ereignisse in den registrierten Paketen verfügbar sind.|[Anzeigen der Ereignisse für registrierte Pakete](https://msdn.microsoft.com/library/9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f)|  
-|Beschreibt, wie Sie ermitteln, welche Ziele für erweiterte Ereignisse in den registrierten Paketen verfügbar sind.|[Anzeigen der Ziele von erweiterten Ereignissen für registrierte Pakete](https://msdn.microsoft.com/library/4985aa5f-ac99-49f6-852c-9d25916549e9)|  
+|Beschreibt, wie Sie Informationen zu den den Ereignissen zugeordneten Feldern abrufen.|[Abrufen der Felder für alle Ereignisse](/previous-versions/sql/sql-server-2016/bb677249(v=sql.130))|  
+|Beschreibt, wie Sie herausfinden, welche Ereignisse in den registrierten Paketen verfügbar sind.|[Anzeigen der Ereignisse für registrierte Pakete](./selects-and-joins-from-system-views-for-extended-events-in-sql-server.md)|  
+|Beschreibt, wie Sie ermitteln, welche Ziele für erweiterte Ereignisse in den registrierten Paketen verfügbar sind.|[Anzeigen der Ziele von erweiterten Ereignissen für registrierte Pakete](/previous-versions/sql/sql-server-2016/bb677247(v=sql.130))|  
 |Beschreibt, wie Sie die Ereignisse und Aktionen für erweiterte Ereignisse anzeigen, die den einzelnen SQL-Ablaufverfolgungsereignissen und deren zugeordneten Spalten entsprechen.|[Anzeigen der Entsprechungen von erweiterten Ereignissen für SQL-Ablaufverfolgungsklassen](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
-|Beschreibt, wie Sie die Parameter suchen, die sich festlegen lassen, wenn Sie das ADD TARGET-Argument in CREATE EVENT SESSION oder ALTER EVENT SESSION verwenden.|[Abrufen der konfigurierbaren Parameter für das ADD TARGET-Argument](https://msdn.microsoft.com/library/08454543-c5c8-4ca3-9af9-f1d82264471c)|  
+|Beschreibt, wie Sie die Parameter suchen, die sich festlegen lassen, wenn Sie das ADD TARGET-Argument in CREATE EVENT SESSION oder ALTER EVENT SESSION verwenden.|[Abrufen der konfigurierbaren Parameter für das ADD TARGET-Argument](/previous-versions/sql/sql-server-2016/bb677176(v=sql.130))|  
 |Beschreibt, wie Sie ein vorhandenes SQL-Ablaufverfolgungsskript in eine Sitzung für erweiterte Ereignisse konvertieren.|[Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |Beschreibt die Ermittlung der gesperrten Abfragen, des Plans der Abfrage und des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Stapels zum Zeitpunkt der Sperrung.|[Feststellen, welche Abfragen Sperren enthalten](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Beschreibt, wie Sie die Quelle von Sperren identifizieren, die die Datenbankleistung beeinträchtigen.|[Suchen der Objekte, die über die meisten Sperren verfügen](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
@@ -133,7 +133,7 @@ SELECT
 ## <a name="see-also"></a>Weitere Informationen
 
 [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-[DAC-Unterstützung für SQL Server-Objekte und -Versionen](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
+[DAC-Unterstützung für SQL Server-Objekte und -Versionen](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
 [Bereitstellen einer Datenebenenanwendung](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
 [Überwachen von Datenebenenanwendungen](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
 &nbsp;  
@@ -142,4 +142,4 @@ SELECT
 &nbsp;  
 [XELite: Plattformübergreifende Bibliothek zum Lesen von XEvents aus XEL-Dateien oder SQL-Livestreams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/) (Veröffentlicht: Mai 2019).  
 [PowerShell-Cmdlet Read-SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent) (Veröffentlicht: Juni 2019).  
-[SQL Mysteries: Causality tracking vs Event Sequence for XEvent Sessions](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/) (Blogbeitrag, der am 1. April 2019 veröffentlicht wurde)  
+[SQL Mysteries: Causality tracking vs Event Sequence for XEvent Sessions](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/) (Blogbeitrag, der am 1. April 2019 veröffentlicht wurde)

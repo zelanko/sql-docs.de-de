@@ -27,12 +27,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: aaf9bcf9387d4414959e569301e16f348f1164c0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116224"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809819"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 
@@ -81,7 +81,7 @@ Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie f
 <sup>6</sup> Wenn die Berechtigung „Lock Pages in Memory (LPIM)“ erteilt wird (entweder für 32-Bit zur Unterstützung von AWE oder für 64-Bit als eigenständige Option), wird empfohlen, auch die Option „Max. Serverarbeitsspeicher“ festzulegen. Weitere Informationen zu LPIM finden Sie unter [Konfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
 > [!NOTE]
-> Ältere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können unter einem 32-Bit-Betriebssystem ausgeführt. Für den Zugriff auf mehr als 4 GB (Gigabyte) Arbeitsspeicher auf einem 32-Bit-Betriebssystem ist Address Windowing Extensions (AWE) erforderlich, um den Speicher zu verwalten. Dies ist nicht erforderlich, wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter 64-Bit-Betriebssystemen ausgeführt wird. Weitere Informationen zu AWE finden Sie unter [Prozessadressraum](https://msdn.microsoft.com/library/ms189334.aspx) und [Verwalten von Arbeitsspeicher für große Datenbanken](https://msdn.microsoft.com/library/ms191481.aspx) in der Dokumentation zu [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
+> Ältere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können unter einem 32-Bit-Betriebssystem ausgeführt. Für den Zugriff auf mehr als 4 GB (Gigabyte) Arbeitsspeicher auf einem 32-Bit-Betriebssystem ist Address Windowing Extensions (AWE) erforderlich, um den Speicher zu verwalten. Dies ist nicht erforderlich, wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter 64-Bit-Betriebssystemen ausgeführt wird. Weitere Informationen zu AWE finden Sie unter [Prozessadressraum](/previous-versions/sql/sql-server-2008-r2/ms189334(v=sql.105)) und [Verwalten von Arbeitsspeicher für große Datenbanken](/previous-versions/sql/sql-server-2008-r2/ms191481(v=sql.105)) in der Dokumentation zu [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 

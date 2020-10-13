@@ -26,12 +26,12 @@ ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 18b3914f2ed9be429f29b929bc74623af9f707bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a60d78abb92552e6413fd827d2223e507a0a439e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922841"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890950"
 ---
 # <a name="replication-agents-overview"></a>Replikations-Agents (Übersicht)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "86922841"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent beinhaltet und plant die Agents, die bei der Replikation verwendet werden, und bietet so eine einfache Möglichkeit, die Replikations-Agents auszuführen. Der[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent steuert und überwacht auch Vorgänge, die nicht im Rahmen der Replikation erfolgen. Weitere Informationen finden Sie unter [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
 > [!IMPORTANT]  
->  Standardmäßig ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienst bei der Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deaktiviert, es sei denn, Sie haben den automatischen Start des Diensts während der Installation explizit ausgewählt. Weitere Informationen zum Starten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienstes finden Sie unter [Start, Stop, or Pause the SQL Server Agent Service](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)verwaltet werden.  
+>  Standardmäßig ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienst bei der Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deaktiviert, es sei denn, Sie haben den automatischen Start des Diensts während der Installation explizit ausgewählt. Weitere Informationen zum Starten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienstes finden Sie unter [Start, Stop, or Pause the SQL Server Agent Service](../../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)verwaltet werden.  
   
 ## <a name="snapshot-agent"></a>Momentaufnahme-Agent  
  Der Momentaufnahme-Agent wird in der Regel bei allen Replikationstypen verwendet. Er bereitet Schema und Anfangsdatendateien der veröffentlichten Tabellen und anderer Objekte vor, speichert die Momentaufnahmedateien und zeichnet Informationen zur Synchronisierung in der Verteilungsdatenbank auf. Der Momentaufnahme-Agent wird auf dem Verteiler ausgeführt. Weitere Informationen finden Sie unter [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md).  
@@ -66,5 +66,4 @@ ms.locfileid: "86922841"
  [Ausführen von Aufträgen zur Replikationswartung &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [Ausführbare Konzepte für den Replikations-Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [Replikations-Agent-Verwaltung](../../../relational-databases/replication/agents/replication-agent-administration.md)  
-  
   

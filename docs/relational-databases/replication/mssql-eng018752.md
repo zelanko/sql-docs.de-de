@@ -14,12 +14,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b81ec42b06c310a7ac0d3ef038795aeb538ed768
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed7d71fb9c4e1306826c281806c66db38285e06d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448195"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868627"
 ---
 # <a name="mssql_eng018752"></a>MSSQL_ENG018752
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88448195"
   
 -   Starten Sie den Protokolllese-Agent neu. Weitere Informationen finden Sie unter [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
--   Starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst auf dem Verteiler neu (schalten Sie ihn in einem Cluster offline oder online). Wenn die Möglichkeit besteht, dass **sp_repldone**, **sp_replcmds**oder **sp_replshowcmds** durch einen geplanten Auftrag von einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wurde, starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent für die betreffenden Instanzen ebenfalls neu. Weitere Informationen finden Sie unter [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c).  
+-   Starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst auf dem Verteiler neu (schalten Sie ihn in einem Cluster offline oder online). Wenn die Möglichkeit besteht, dass **sp_repldone**, **sp_replcmds**oder **sp_replshowcmds** durch einen geplanten Auftrag von einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wurde, starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent für die betreffenden Instanzen ebenfalls neu. Weitere Informationen finden Sie unter [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md).  
   
 -   Führen Sie auf dem Verleger in der Veröffentlichungsdatenbank [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md) aus, und starten Sie den Protokolllese-Agent anschließend neu.  
   
@@ -66,5 +66,4 @@ ms.locfileid: "88448195"
 ## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Replikationsprotokolllese-Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
-  
   

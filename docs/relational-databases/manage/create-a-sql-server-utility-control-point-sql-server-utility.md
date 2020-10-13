@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d29ab79c75adb436b45faab5e8161c8d01e6c533
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 1d0951c4b5a51596db015a39ff146383a0b2aa6a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196881"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809532"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Erstellen eines Steuerungspunkts für das SQL Server-Hilfsprogramm (SQL Server-Hilfsprogramm)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "86196881"
   
 -   Die Prozedur muss von einem Benutzer mit sysadmin-Berechtigungen ausgeführt werden, die gleichen Berechtigungen, die auch zum Erstellen eines UCP erforderlich sind.  
   
--   Alle verwalteten Instanzen von SQL Server müssen von dem UCP entfernt werden. Der UCP ist eine verwaltete Instanz von SQL Server. Weitere Informationen finden Sie unter [Vorgehensweise: Entfernen einer Instanz von SQL Server aus dem SQL Server-Hilfsprogramm](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Alle verwalteten Instanzen von SQL Server müssen von dem UCP entfernt werden. Der UCP ist eine verwaltete Instanz von SQL Server. Weitere Informationen finden Sie unter [Vorgehensweise: Entfernen einer Instanz von SQL Server aus dem SQL Server-Hilfsprogramm](/previous-versions/sql/sql-server-2008-r2/ee210565(v=sql.105)).  
   
  Verwenden Sie diese Vorgehensweise, um einen SQL Server-UCP aus dem SQL Server-Hilfsprogramm zu entfernen. Wenn der Vorgang abgeschlossen ist, kann auf der SQL Server-Instanz wieder ein UCP erstellt werden.  
   
@@ -140,7 +140,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 ##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Dialogfeld „Verbindung“  
- Überprüfen Sie im Dialogfeld Verbindung mit Server herstellen den Servertyp, den Computernamen und die Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Überprüfen Sie im Dialogfeld Verbindung mit Server herstellen den Servertyp, den Computernamen und die Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
 >  Wenn die Verbindung verschlüsselt ist, wird dieser Verbindungstyp verwendet. Wenn die Verbindung nicht verschlüsselt ist, stellt das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm über eine verschlüsselte Verbindung erneut eine Verbindung her.  
@@ -170,7 +170,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] darf keine Datenbank namens „sysutility_mdw“ enthalten.|Bei der Erstellung des UCPs wird das Utility Management Data Warehouse (UMDW) mit dem Namen "sysutility_mdw" erstellt. Der Vorgang erfordert, dass der Name während der Ausführung der Überprüfungsregeln nicht auf dem Computer vorhanden ist. Um den Vorgang fortzusetzen, müssen Sie jede Datenbank unter dem Namen "sysutility_mdw" entfernen oder umbenennen. Weitere Informationen zu Umbenennungsvorgängen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |Sammlungssätze für die angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen beendet werden.|Beenden Sie bereits vorhandene Sammlungssätze, während der UCP für die angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt wird. Wenn der Datensammler deaktiviert ist, aktivieren Sie ihn, beenden alle aktiven Sammlungssätze und führen die Überprüfungsregeln für den Vorgang UCP erstellen erneut aus.<br /><br /> So aktivieren Sie den Datensammler<br /><br /> Erweitern Sie im Objekt-Explorer den Knoten **Verwaltung** .<br /><br /> Klicken Sie mit der rechten Maustaste auf **Datensammlung**, und klicken Sie anschließend auf **Datensammlung aktivieren**.<br /><br /> So beenden Sie einen Sammlungssatz<br /><br /> Erweitern Sie im Objekt-Explorer nacheinander die Knoten **Verwaltung**, **Datensammlung**und dann Systemdaten-Sammlungssätze.<br /><br /> Klicken Sie mit der rechten Maustaste auf den Sammlungssatz, den Sie beenden möchten, und klicken Sie anschließend auf **Datensammlungssatz beenden**.<br /><br /> In einem Meldungsfeld wird das Ergebnis dieser Aktion angezeigt, und ein roter Kreis auf dem Symbol für den Sammlungssatz weist darauf hin, dass der Sammlungssatz beendet wurde.|  
 |Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst auf der angegebenen Instanz muss gestartet werden. Wenn die angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz ist, konfigurieren Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst für den manuellen Start. Andernfalls müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst für den automatischen Start konfigurieren.|Starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst. Wenn die angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz ist, konfigurieren Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst für den manuellen Start. Konfigurieren Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst andernfalls für den automatischen Start.|  
-|WMI muss korrekt konfiguriert sein.|Informationen zur Problembehandlung einer WMI-Konfiguration finden Sie unter [Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|WMI muss korrekt konfiguriert sein.|Informationen zur Problembehandlung einer WMI-Konfiguration finden Sie unter [Problembehandlung beim SQL Server-Hilfsprogramm](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130)).|  
 |Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto kann kein integriertes Konto, z. B. „Netzwerkdienst“, sein.|Wenn das Proxykonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ein integriertes Konto, z. B. „Netzwerkdienst“ ist, weisen Sie das Konto neu einem Windows-Domänenkonto mit sysadmin-Rechten zu.|  
 |Wenn Sie die Proxykonto-Option auswählen, muss das Proxykonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ein gültiges Windows-Domänenkonto sein.|Geben Sie ein gültiges Windows-Domänenkonto an. Um sicherzustellen, dass das Konto gültig ist, melden Sie sich unter dem Windows-Domänenkonto bei der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.|  
 |Wenn Sie die Dienstkonto-Option auswählen, darf das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto kein integriertes Konto wie „Netzwerkdienst“ sein.|Wenn das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto ein integriertes Konto, z. B. „Netzwerkdienst“, ist, weisen Sie das Konto einem Windows-Domänenkonto neu zu.|  
@@ -229,6 +229,5 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [Problembehandlung beim SQL Server-Hilfsprogramm](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

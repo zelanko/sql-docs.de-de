@@ -18,12 +18,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f69f19c766fc0768bf72101955ee5bc08b9e8702
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4710900a9a33de2be669ddf1204080068aad0220
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110573"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869251"
 ---
 # <a name="create-a-push-subscription"></a>Erstellen eines Pushabonnements
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ Sie können Pushabonnements mithilfe von gespeicherten Replikationsprozeduren pr
  Sie können Pushabonnements mithilfe von Replikationsverwaltungsobjekten (RMO) programmgesteuert erstellen. Die RMO-Klassen, die Sie zum Erstellen eines Pushabonnements verwenden, hängen vom Typ der Veröffentlichung ab, für die das Abonnement erstellt wird.  
   
 > [!IMPORTANT]
-> Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+> Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](/previous-versions/aa719848(v=vs.71)) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>So erstellen Sie ein Pushabonnement für eine Momentaufnahme- oder Transaktionsveröffentlichung.  
   
@@ -266,6 +266,5 @@ Sie können Pushabonnements mithilfe von gespeicherten Replikationsprozeduren pr
  [Grundlegendes zu Replikationsverwaltungsobjekten](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Synchronisieren eines Pushabonnements](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
- [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
+ [Verwenden von sqlcmd mit Skriptvariablen](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
   

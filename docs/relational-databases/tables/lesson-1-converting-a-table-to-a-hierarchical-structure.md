@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1a4d64425d6d02fbc57bde9f84159c4f09f4929
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a56b34301386287ef954edae0528decd4d03fee
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488572"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809479"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lektion 1: Konvertieren einer Tabelle in eine hierarchische Struktur
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,11 +30,11 @@ In dieser Lektion wird eine vorhandene Tabelle untersucht und eine neue Tabelle 
 ## <a name="prerequisites"></a>Voraussetzungen  
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, Zugriff auf einen Server, auf dem SQL-Server ausgeführt wird, und eine AdventureWorks-Datenbank.
 
-- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installieren Sie [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Laden Sie die [AdventureWorks 2017-Beispieldatenbank](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) herunter.
+- Laden Sie die [AdventureWorks 2017-Beispieldatenbank](../../samples/adventureworks-install-configure.md) herunter.
 
-Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](../backup-restore/restore-a-database-backup-using-ssms.md).  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Untersuchen der aktuellen Struktur der Mitarbeitertabelle
 Die Beispieldatenbank Adventureworks2017 (oder höher) enthält im Schema **HumanResources** die Tabelle **Employee**. Um Änderungen an der ursprünglichen Tabelle zu vermeiden, wird in diesem Schritt eine Kopie der Tabelle **Employee** mit dem Namen **EmployeeDemo**erstellt. Um das Beispiel zu vereinfachen, kopieren Sie nur fünf Spalten aus der ursprünglichen Tabelle. Dann fragen Sie die Tabelle **HumanResources.EmployeeDemo** ab, um zu sehen, wie die Daten in einer Tabelle strukturiert werden, wenn der **hierarchyid** -Datentyp nicht verwendet wird.  
@@ -224,7 +224,7 @@ Beachten Sie, dass die **ORDER BY** -Klausel bewirkt, dass die Mitarbeiter, die 
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>Optimieren der NewOrg-Tabelle
-Die **NewOrd** -Tabelle, die Sie in der Aufgabe [Populating a Table with Existing Hierarchical Data](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) erstellt haben, enthält alle Angestellteninformationen und stellt die hierarchische Struktur mithilfe des **hierarchyid** -Datentyps dar. In dieser Aufgabe werden neue Indizes hinzugefügt, die das Suchen in der **hierarchyid** -Spalte unterstützen.  
+Die **NewOrd** -Tabelle, die Sie in der Aufgabe [Populating a Table with Existing Hierarchical Data]() erstellt haben, enthält alle Angestellteninformationen und stellt die hierarchische Struktur mithilfe des **hierarchyid** -Datentyps dar. In dieser Aufgabe werden neue Indizes hinzugefügt, die das Suchen in der **hierarchyid** -Spalte unterstützen.  
   
 
 Die Spalte **hierarchyid** (**OrgNode**) ist der Primärschlüssel für die **NewOrg** -Tabelle. Als die Tabelle erstellt wurde, enthielt sie den gruppierten Index **PK_NewOrg_OrgNode** , der die Eindeutigkeit der **OrgNode** -Spalte erzwingen sollte. Dieser gruppierte Index unterstützt auch eine Tiefensuche in der Tabelle.  

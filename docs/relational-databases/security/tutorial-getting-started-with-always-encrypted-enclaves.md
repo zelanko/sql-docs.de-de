@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279366"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868163"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Always Encrypted mit Secure Enclaves mithilfe von SSMS
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -42,8 +42,8 @@ Für die ersten Schritte mit Always Encrypted mit Secure Enclaves benötigen Sie
   - Intel VT-x mit erweiterten Seitentabellen
   - AMD-V mit schneller Virtualisierungsindizierung
   - Wenn Sie [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in einer VM (virtueller Computer) ausführen, müssen der Hypervisor und die physische CPU Funktionen für die geschachtelte Virtualisierung bereitstellen. 
-    - Für Hyper-V 2016 oder höher [aktivieren Sie die Erweiterungen für geschachtelte Virtualisierung für den VM-Prozessor](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
-    - Wählen Sie in Azure eine VM-Größe aus, die die geschachtelte Virtualisierung unterstützt. Hierzu gehören alle VMs der v3-Serie, z. B. Dv3 und Ev3. Siehe [Erstellen einer schachtelungsfähigen Azure-VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+    - Für Hyper-V 2016 oder höher [aktivieren Sie die Erweiterungen für geschachtelte Virtualisierung für den VM-Prozessor](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - Wählen Sie in Azure eine VM-Größe aus, die die geschachtelte Virtualisierung unterstützt. Hierzu gehören alle VMs der v3-Serie, z. B. Dv3 und Ev3. Siehe [Erstellen einer schachtelungsfähigen Azure-VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
     - Bei VMware vSphere 6.7 oder höher aktivieren Sie die Unterstützung für virtualisierungsbasierte Sicherheit für den virtuellen Computer, wie in der [VMware-Dokumentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) beschrieben.
     - Andere Hypervisoren und öffentliche Clouds unterstützen möglicherweise Funktionen für eine geschachtelte Virtualisierung, die auch die Nutzung von Always Encrypted mit VSB-Enclaves ermöglichen. Informationen zur Kompatibilität und Konfigurationsanweisungen finden Sie in der Dokumentation zu Ihrer Virtualisierungslösung.
 - [SQL Server Management Studio 18.3 (SSMS) oder höher](../../ssms/download-sql-server-management-studio-ssms.md)
@@ -264,7 +264,7 @@ In diesem Schritt erstellen Sie einen Spaltenhauptschlüssel und einen Spaltenve
     2. Wählen Sie den Namen des Spaltenhauptschlüssels aus: **CMK1**.
     3. Stellen Sie sicher, dass Sie entweder **Windows-Zertifikatspeicher (Aktueller Benutzer oder lokaler Computer)** oder **Azure Key Vault** auswählen.
     4. Wählen Sie **Enclave-Berechnungen zulassen**.
-    5. Wenn Sie Azure Key Vault ausgewählt haben, melden Sie sich bei Azure an, und wählen Sie Ihren Schlüsseltresor. Weitere Informationen zum Erstellen eines Schlüsseltresors für Always Encrypted finden Sie unter [Verwalten Ihrer Schlüsseltresore im Azure-Portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
+    5. Wenn Sie Azure Key Vault ausgewählt haben, melden Sie sich bei Azure an, und wählen Sie Ihren Schlüsseltresor. Weitere Informationen zum Erstellen eines Schlüsseltresors für Always Encrypted finden Sie unter [Verwalten Ihrer Schlüsseltresore im Azure-Portal](/archive/blogs/kv/manage-your-key-vaults-from-new-azure-portal).
     6. Wählen Sie Ihr Zertifikat oder Ihren Azure-Schlüsselwertschlüssel aus, wenn bereits vorhanden, oder klicken Sie auf die Schaltfläche **Zertifikat generieren**, um ein neues zu erstellen.
     7. Klicken Sie auf **OK**.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b26b475fbef54f501d1b40dc1c1b35df796b27ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4c1494efa032ba58315e8a5f7fe5fd855b3e51f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472961"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809366"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Besitzketten und Kontextwechsel
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -46,11 +46,11 @@ Jeder Codeblock dieses Beispiels wird jeweils sofort erläutert. Informationen, 
 ## <a name="prerequisites"></a>Voraussetzungen
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, Zugriff auf einen Server, auf dem SQL-Server ausgeführt wird, und eine AdventureWorks-Datenbank.
 
-- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installieren Sie [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Laden Sie die [AdventureWorks 2017-Beispieldatenbank](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) herunter.
+- Laden Sie die [AdventureWorks 2017-Beispieldatenbank](../samples/adventureworks-install-configure.md) herunter.
 
-Weitere Informationen zum Wiederherstellen einer Datenbank in SQL Server Management Studio finden Sie unter [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Weitere Informationen zum Wiederherstellen einer Datenbank in SQL Server Management Studio finden Sie unter [Wiederherstellen einer Datenbank](./backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## <a name="1-configure-the-environment"></a>1. Konfigurieren der Umgebung  
 Verwenden Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sowie den folgenden Code, um die Datenbank `AdventureWorks2017` zu öffnen. Vergewissern Sie sich mithilfe der [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung `CURRENT_USER`, dass der Benutzer „dbo“ als Kontext angezeigt wird.  
@@ -334,6 +334,5 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

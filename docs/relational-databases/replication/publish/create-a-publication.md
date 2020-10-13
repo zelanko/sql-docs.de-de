@@ -17,12 +17,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7c3c7ec81176b4124a78322cc5601ac8f049ca34
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 216e497c9d0e7a9e2090ad734bdb945c42bb792e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922826"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869114"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "86922826"
 -   Veröffentlichungs- und Artikelnamen dürfen folgende Zeichen nicht enthalten: % , \* , [ , ] , | , : , " , ? , ' , \ , / , < , >. Wenn Objekte in der Datenbank eines dieser Zeichen enthalten und Sie die Objekte replizieren möchten, müssen Sie im Dialogfeld **Artikeleigenschaften – \<Article>** einen Artikelnamen angeben, der sich vom Objektnamen unterscheidet. Dieses Dialogfeld ist im Assistenten auf der Seite **Artikel** verfügbar.  
   
 ###  <a name="security"></a><a name="Security"></a> Sicherheit  
- Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+ Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](/previous-versions/aa719848(v=vs.71)) von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Mit dem Assistenten für neue Veröffentlichung erstellen Sie Veröffentlichungen und definieren Artikel. Nach dem Erstellen einer Veröffentlichung können Sie deren Eigenschaften im Dialogfeld **Veröffentlichungseigenschaften – \<Publication>** anzeigen und ändern. Weitere Informationen zum Erstellen von Veröffentlichungen aus einer Oracle-Datenbank finden Sie unter [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
@@ -252,7 +252,7 @@ ms.locfileid: "86922826"
  [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwenden von sqlcmd mit Skriptvariablen](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
+ [Verwenden von sqlcmd mit Skriptvariablen](../../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)   
@@ -260,5 +260,4 @@ ms.locfileid: "86922826"
  [Verteilung konfigurieren](../../../relational-databases/replication/configure-distribution.md)   
  [Schützen des Verteilers](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [Sichern des Verlegers](../../../relational-databases/replication/security/secure-the-publisher.md)  
-  
   

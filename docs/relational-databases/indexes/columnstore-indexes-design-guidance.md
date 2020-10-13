@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e601f2b89000902647631fda9ee46a90a92e5b39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2af78d5af858f6faad29c8baaf260610f377cb4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409176"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868649"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Leitfaden zum Entwerfen von Columnstore-Indizes
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ Verwenden Sie in den folgenden Fällen keinen gruppierten Columnstore-Index:
 * Die Tabelle erfordert die Datentypen varchar(max), nvarchar(max) oder varbinary(max). Oder entwerfen Sie den Columnstore-Index so, dass er diese Spalten nicht enthält.
 * Die Tabellendaten sind nicht dauerhaft. Überlegen Sie, ob die Verwendung einer Heap-Tabelle oder einer temporären Tabelle sinnvoll ist, wenn Sie die Daten schnell speichern und löschen müssen.
 * Die Tabelle hat weniger als einer Million Zeilen pro Partition. 
-* Mehr als 10 % der Vorgänge in der Tabelle sind Aktualisierungs- und Löschvorgänge. Eine große Anzahl von Aktualisierungs- und Löschvorgängen führt zu einer Fragmentierung. Die Fragmentierung wirkt sich auf die Komprimierungsraten und die Abfrageleistung aus, bis Sie eine Reorganisation durchführen, bei der alle Daten in den Columnstore gezwungen werden und eine Defragmentierung durchgeführt wird. Weitere Informationen finden Sie unter [Minimieren der Indexfragmentierung in Columnstore-Indizes](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/).
+* Mehr als 10 % der Vorgänge in der Tabelle sind Aktualisierungs- und Löschvorgänge. Eine große Anzahl von Aktualisierungs- und Löschvorgängen führt zu einer Fragmentierung. Die Fragmentierung wirkt sich auf die Komprimierungsraten und die Abfrageleistung aus, bis Sie eine Reorganisation durchführen, bei der alle Daten in den Columnstore gezwungen werden und eine Defragmentierung durchgeführt wird. Weitere Informationen finden Sie unter [Minimieren der Indexfragmentierung in Columnstore-Indizes](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command).
 
 Weitere Informationen finden Sie unter [Columnstore-Indizes - Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
@@ -100,7 +100,7 @@ Sie können die Analyse für eine lesbare sekundäre Datenbank ausführen, um zu
 
 Weitere Informationen finden Sie unter [Erste Schritte mit Columnstore-Indizes für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).
 
-Weitere Informationen zur Auswahl des am besten geeigneten Columnstore-Indexes finden Sie im Blog [Which columnstore index is right for my workload? (Welcher Columnstore-Index eignet sich für meine Arbeitsauslastung)](https://blogs.msdn.microsoft.com/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload) von Sunil Agarwal.
+Weitere Informationen zur Auswahl des am besten geeigneten Columnstore-Indexes finden Sie im Blog [Which columnstore index is right for my workload? (Welcher Columnstore-Index eignet sich für meine Arbeitsauslastung)](/archive/blogs/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload) von Sunil Agarwal.
 
 ## <a name="use-table-partitions-for-data-management-and-query-performance"></a>Verwenden von Tabellenpartitionen für eine bessere Datenverwaltung und Abfrageleistung
 Columnstore-Indizes unterstützen die Partitionierung, die eine gute Möglichkeit zum Verwalten und Archivieren von Daten bietet. Durch die Partitionierung wird die Abfrageleistung verbessert, da Vorgänge auf eine oder mehrere Partitionen begrenzt werden.
@@ -130,7 +130,7 @@ Beispiel:
 * Laden Sie 1.000.000 Zeilen in eine Partition oder in eine nicht partitionierte Tabelle. Daraufhin erhalten Sie eine komprimierte Zeilengruppe mit 1.000.000 Zeilen. Dies ist für eine starke Datenkomprimierung und eine optimale Abfrageleistung nützlich.
 * Laden Sie 1.000.000 Zeilen gleichmäßig in 10 Partitionen. Jede Partition erhält 100.000 Zeilen, also weniger als die Mindestanzahl für die Columnstore-Komprimierung. Daher kann der Columnstore-Index 10 Delta-Zeilengruppen mit je 100.000 Zeilen aufweisen. Es gibt Möglichkeiten, ein Ablegen der Delta-Zeilengruppen im Columnstore durchzusetzen. Wenn dies jedoch die einzigen Zeilen im Columnstore-Index sind, sind die komprimierten Zeilengruppen zu klein für eine optimale Komprimierung und Abfrageleistung.
 
-Weitere Informationen zur Partitionierung finden Sie im Blogbeitrag [Should I partition my columnstore index? (Sollte ich meinen Columnstore-Index partitionieren)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/) von Sunil Agarwal.
+Weitere Informationen zur Partitionierung finden Sie im Blogbeitrag [Should I partition my columnstore index? (Sollte ich meinen Columnstore-Index partitionieren)](/archive/blogs/sqlserverstorageengine/columnstore-index-should-i-partition-my-columnstore-index) von Sunil Agarwal.
 
 ## <a name="choose-the-appropriate-data-compression-method"></a>Auswählen der geeigneten Datenkomprimierungsmethode
 Der Columnstore-Index biete zwei Möglichkeiten für die Datenkomprimierung: die Columnstore-Komprimierung und die Archivkomprimierung. Sie können eine Komprimierungsoption wählen, wenn Sie den Index erstellen oder die Einstellung später mit [ALTER INDEX anpassen. REBUILD](../../t-sql/statements/alter-index-transact-sql.md) ändern.
@@ -193,4 +193,3 @@ So erstellen Sie einen leeren Columnstore-Index für:
 * [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Weitere Informationen finden Sie unter [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
 Weitere Informationen zum Konvertieren eines vorhandenen Rowstore-Indexes mit Heap- oder B-Struktur in einen gruppierten Columnstore-Index oder zum Erstellen eines nicht gruppierten Columnstore-Indexes finden Sie unter [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
-

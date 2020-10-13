@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de70d3235e6c8087b4932fdab5006e12a56d5734
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1683231db68ea20fda3082a8ade8f945fcae4c29
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885316"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868549"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit-Datensätze
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85885316"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Datum und Uhrzeit der Auslösung des überwachbaren Vorgangs.|**datetime2**|Ja|  
 |**sequence_no**|Hält die Reihenfolge der Datensätze innerhalb eines einzelnen Überwachungsdatensatzes fest, der zu groß für den Schreibpuffer für Überwachungen ist.|**int**|Ja|  
-|**action_id**|ID der Aktion<br /><br /> Tipp: Damit **action_id** als Prädikat verwendet werden kann, muss eine Konvertierung von einer Zeichenfolge in einen numerischen Wert durchgeführt werden. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate).|**varchar(4)**|Ja|  
+|**action_id**|ID der Aktion<br /><br /> Tipp: Damit **action_id** als Prädikat verwendet werden kann, muss eine Konvertierung von einer Zeichenfolge in einen numerischen Wert durchgeführt werden. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate).|**varchar(4)**|Ja|  
 |**succeeded**|Gibt an, ob die Berechtigungsprüfung für die Aktion, die das Überwachungsereignis ausgelöst hat, erfolgreich war oder fehlgeschlagen ist. |**bit**<br /> - 1 = Success (Erfolg), <br />0 = Fehler|Ja|  
 |**permission_bitmask**|Zeigt die gewährten, verweigerten oder widerrufenen Berechtigungen an (falls verfügbar)|**bigint**|Nein|  
 |**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|**bit** <br />- 1 = True, <br />0 = False|Nein|  
@@ -110,5 +110,4 @@ ms.locfileid: "85885316"
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)  
   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
-  
   

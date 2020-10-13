@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 98b00f32fd2a49d8a326a2df94d84c72fa999cf3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e2348d17f2ccb3181441e2d816af83b6636f0f6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759114"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809736"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Wiederherstellen der master-Datenbank (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85759114"
   
      `RESTORE DATABASE master FROM`  *<backup_device>*  `WITH REPLACE`  
   
-     Die REPLACE-Option weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die angegebene Datenbank wiederherzustellen, selbst wenn eine Datenbank mit dem gleichen Namen bereits vorhanden ist. Die vorhandene Datenbank wird ggf. gelöscht. Für den Einzelbenutzermodus empfiehlt sich die Eingabe der RESTORE DATABASE-Anweisung im [Hilfsprogramm sqlcmd](../../tools/sqlcmd-utility.md). Weitere Informationen finden Sie unter [Verwenden des Hilfsprogramms sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+     Die REPLACE-Option weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die angegebene Datenbank wiederherzustellen, selbst wenn eine Datenbank mit dem gleichen Namen bereits vorhanden ist. Die vorhandene Datenbank wird ggf. gelöscht. Für den Einzelbenutzermodus empfiehlt sich die Eingabe der RESTORE DATABASE-Anweisung im [Hilfsprogramm sqlcmd](../../tools/sqlcmd-utility.md). Weitere Informationen finden Sie unter [Verwenden des Hilfsprogramms sqlcmd](../../ssms/scripting/sqlcmd-use-the-utility.md).  
   
     > [!IMPORTANT]  
     >  Nach der Wiederherstellung von **master** wird die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] heruntergefahren, und der **sqlcmd** -Prozess wird beendet. Vor dem Neustarten der Serverinstanz muss der Einzelbenutzer-Startparameter entfernt werden. Weitere Informationen finden Sie unter [Konfigurieren von Serverstartoptionen &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
@@ -66,5 +66,4 @@ ms.locfileid: "85759114"
  [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Starten von SQL Server im Einzelbenutzermodus](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)  
-  
   

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 425a463cce75440a40551b0487015bd2d39c203a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: bca6797111b59257e96e447fc3d9e4ba9ba8bb80
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480273"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890880"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Verwalten von Servern mit der richtlinienbasierten Verwaltung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
   
  Für Fehler bei Richtlinien wird im Objekt-Explorer eine kritische Zustandswarnung in Form eines roten Symbols neben dem Ziel und den übergeordneten Knoten in der Strukturansicht des Objekt-Explorers angezeigt.  
   
-> **HINWEIS:** Wenn das System den Objektsatz für eine Richtlinie berechnet, werden die Systemobjekte standardmäßig ausgeschlossen.  Falls der Objektsatz der Richtlinie z. B. auf alle Tabellen verweist, gilt die Richtlinie nicht für Systemtabellen. Wenn Benutzer eine Richtlinie in Verbindung mit Systemobjekten auswerten möchten, können sie dem Objektsatz Systemobjekte explizit hinzufügen. Obwohl alle Richtlinien für den Auswertungsmodus **Zeitplan prüfen** unterstützt werden, werden aus Leistungsgründen jedoch nicht alle Richtlinien mit beliebigen Objektsätzen für den Auswertungsmodus **Änderungen prüfen** unterstützt. Weitere Informationen finden Sie unter [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes).  
+> **HINWEIS:** Wenn das System den Objektsatz für eine Richtlinie berechnet, werden die Systemobjekte standardmäßig ausgeschlossen.  Falls der Objektsatz der Richtlinie z. B. auf alle Tabellen verweist, gilt die Richtlinie nicht für Systemtabellen. Wenn Benutzer eine Richtlinie in Verbindung mit Systemobjekten auswerten möchten, können sie dem Objektsatz Systemobjekte explizit hinzufügen. Obwohl alle Richtlinien für den Auswertungsmodus **Zeitplan prüfen** unterstützt werden, werden aus Leistungsgründen jedoch nicht alle Richtlinien mit beliebigen Objektsätzen für den Auswertungsmodus **Änderungen prüfen** unterstützt. Weitere Informationen finden Sie unter [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](/archive/blogs/sqlpbm/policy-evaluation-modes).  
   
 ## <a name="three-policy-based-management-components"></a>Drei Komponenten für richtlinienbasierte Verwaltung  
  Die richtlinienbasierte Verwaltung besteht aus drei Komponenten:  
@@ -119,4 +119,4 @@ Beispielsweise könnte es sein, dass Sie als Datenbankadministrator sicherstelle
  
  - [Tutorial: Erstellen und Anwenden der Richtlinie „Standardmäßig aus“](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [Tutorial: Erstellen und Anwenden einer Richtlinie für Benennungsstandards](lesson-2-create-and-apply-a-naming-standards-policy.md)
- - [Sichten der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ - [Sichten der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)

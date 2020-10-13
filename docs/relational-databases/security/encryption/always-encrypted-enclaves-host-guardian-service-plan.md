@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: b2fcf4a523331260cea82a8537d83c891ea4a1c4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411378"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869165"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planen des Nachweises des Host-Überwachungsdiensts
 
@@ -42,7 +42,7 @@ Der Computer, auf dem [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-m
 ### <a name="high-availability"></a>Hochverfügbarkeit
 
 Über die HGS-Funktion wird automatisch ein Failovercluster installiert und konfiguriert.
-Es wird empfohlen, für Hochverfügbarkeit in einer Produktionsumgebung drei HGS-Server zu verwenden. Weitere Informationen zu der Bestimmung eines Clusterquorums und alternative Konfigurationen, einschließlich zweier Knotencluster mit einem externen Zeugen, finden Sie in der [Dokumentation zu Failoverclustern](https://docs.microsoft.com/windows-server/failover-clustering/manage-cluster-quorum).
+Es wird empfohlen, für Hochverfügbarkeit in einer Produktionsumgebung drei HGS-Server zu verwenden. Weitere Informationen zu der Bestimmung eines Clusterquorums und alternative Konfigurationen, einschließlich zweier Knotencluster mit einem externen Zeugen, finden Sie in der [Dokumentation zu Failoverclustern](/windows-server/failover-clustering/manage-cluster-quorum).
 
 Die HGS-Knoten müssen keinen gemeinsamen Speicher nutzen. Eine Kopie der Nachweisdatenbank ist auf jedem HGS-Server gespeichert und wird vom Clusterdienst automatisch über das Netzwerk repliziert.
 
@@ -67,7 +67,7 @@ HGS unterstützt zwei Nachweismodi für die Verwendung mit [!INCLUDE [ssnoversio
 Generell wird Folgendes empfohlen:
 
 - Für **physische Produktionsserver** empfehlen wir, den TPM-Nachweis zu verwenden, da dieser zusätzlichen Schutz bietet.
-- Für **virtuelle Produktionsserver** wird der empfohlen, den Hostschlüsselnachweis zu verwenden, da die meisten virtuellen Computer keine virtuellen TPMs oder keinen sicheren Start aufweisen. Wenn Sie einen virtuellen Computer mit erweiterter Sicherheit verwenden, wie z. B. eine [lokal abgeschirmte VM](https://aka.ms/shieldedvms), können Sie den TPM-Modus verwenden. Bei allen virtualisierten Bereitstellungen analysiert der Nachweisprozess nur Ihre VM-Umgebung und nicht die Virtualisierungsplattform unterhalb der VM.
+- Für **virtuelle Produktionsserver** wird der empfohlen, den Hostschlüsselnachweis zu verwenden, da die meisten virtuellen Computer keine virtuellen TPMs oder keinen sicheren Start aufweisen. Wenn Sie einen virtuellen Computer mit erweiterter Sicherheit verwenden, wie z. B. eine [lokal abgeschirmte VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node), können Sie den TPM-Modus verwenden. Bei allen virtualisierten Bereitstellungen analysiert der Nachweisprozess nur Ihre VM-Umgebung und nicht die Virtualisierungsplattform unterhalb der VM.
 - Für **Entwicklungs- und Testszenarios** wird empfohlen, den Hostschlüsselnachweis zu verwenden, da dieser einfacher einzurichten ist.
 
 ### <a name="trust-model"></a>Vertrauenswürdiges Modell
@@ -114,7 +114,7 @@ Stellen Sie keine Verknüpfung des HGS-Computers mit einer Domäne her, bevor Si
 
 ### <a name="ssnoversion-md-computer-prerequisites"></a>Voraussetzungen für [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Computer
 
-Die Computer, auf denen [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] ausgeführt wird, müssen sowohl die [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) als auch die [Hyper-V-Hardwareanforderungen](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) erfüllen.
+Die Computer, auf denen [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] ausgeführt wird, müssen sowohl die [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) als auch die [Hyper-V-Hardwareanforderungen](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) erfüllen.
 
 Folgende Anforderungen müssen erfüllt sein:
 
@@ -124,7 +124,7 @@ Folgende Anforderungen müssen erfüllt sein:
   - Intel VT-x mit erweiterten Seitentabellen
   - AMD-V mit schneller Virtualisierungsindizierung
   - Wenn Sie [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] in einer VM (virtueller Computer) ausführen, müssen der Hypervisor und die physische CPU Funktionen für die geschachtelte Virtualisierung bereitstellen. Informationen zu den Vertrauensstellungen beim Ausführen von VSB-Enclaves auf einem virtuellen Computer finden Sie im Abschnitt [Vertrauenswürdiges Modell](#trust-model).
-    - Für Hyper-V 2016 oder höher [aktivieren Sie die Erweiterungen für geschachtelte Virtualisierung für den VM-Prozessor](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - Für Hyper-V 2016 oder höher [aktivieren Sie die Erweiterungen für geschachtelte Virtualisierung für den VM-Prozessor](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - Wählen Sie in Azure eine VM-Größe aus, die die geschachtelte Virtualisierung unterstützt. Alle VMs der v3-Serie unterstützen die geschachtelte Virtualisierung, z. B. Dv3 und Ev3. Siehe [Erstellen einer schachtelungsfähigen Azure-VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
     - Aktivieren Sie bei VMware vSphere 6.7 oder höher die Unterstützung für virtualisierungsbasierte Sicherheit für den virtuellen Computer, wie in der [VMware-Dokumentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) beschrieben.
     - Andere Hypervisoren und öffentliche Clouds unterstützen möglicherweise Funktionen für eine geschachtelte Virtualisierung, die auch die Nutzung von Always Encrypted mit VSB-Enclaves ermöglichen. Informationen zur Kompatibilität und Konfigurationsanweisungen finden Sie in der Dokumentation zu Ihrer Virtualisierungslösung.

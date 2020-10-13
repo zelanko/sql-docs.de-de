@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423384"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869405"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ Verwenden Sie [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-
   
     -   **Aus vorhandener Volltext-Stoppliste erstellen**  
   
-     Weitere Informationen finden Sie unter [Neue Volltext-Stoppliste &#40;Seite 'Allgemein'&#41;](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309).  
+     Weitere Informationen finden Sie unter [Neue Volltext-Stoppliste &#40;Seite 'Allgemein'&#41;](/previous-versions/sql/sql-server-2016/cc280518(v=sql.130)).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,7 +96,7 @@ Verwenden Sie [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/state
   
 4.  Klicken Sie mit der rechten Maustaste auf die Stoppliste, deren Eigenschaften Sie ändern möchten, und wählen Sie **Eigenschaften**aus.  
   
-5.  Im Dialogfeld [Volltext-Stopplisten-Eigenschaften](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) :  
+5.  Im Dialogfeld [Volltext-Stopplisten-Eigenschaften](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) :  
   
     1.  Wählen Sie im Listenfeld **Aktion** eine der folgenden Aktionen aus: **Stoppwort hinzufügen**, **Stoppwort löschen**, **Alle Stoppwörter löschen**oder **Inhalt der Stoppliste löschen**.  
   
@@ -139,6 +139,5 @@ Verwenden Sie die [Füllwörtertransformation (Serverkonfigurationsoption)](../.
   
 ## <a name="upgrade-noise-words-from-sql-server-2005"></a>Aktualisieren von Füllwörtern von SQL Server 2005  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Füllwörter wurden durch Stoppwörter ersetzt. Wenn eine Datenbank von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]aktualisiert wird, werden die Füllwortdateien nicht mehr verwendet. Die Füllwortdateien werden jedoch im Ordner "FTDATA\FTNoiseThesaurusBak" gespeichert, und Sie können sie später beim Aktualisieren oder Erstellen der entsprechenden Stoplisten verwenden. Informationen zum Upgrade von Füllwortdateien auf Stoplisten finden Sie unter [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md).  
-  
   
   

@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a017eb6d2f9267408387413782a83488fa39d542
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3073607520bc6ebe25debf39e9ccc3a4b5b29d64
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748451"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809876"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>Herstellen einer Verbindung mit einem Microsoft Azure-Abonnement
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Verwenden Sie **Mit einem Microsoft-Abonnement verbinden** , um einen vorhandenen Azure-Blobcontainer bei Ihrer Instanz von SQL Server zu registrieren.  Das Dialogfeld erstellt eine SAS und die gespeicherte Zugriffsrichtlinie für einen Azure-Blobcontainer und dann SQL Server-Anmeldeinformationen.  Dieses Dialogfeld wird angezeigt, wenn die Sicherungs- oder Wiederherstellungsaufgabe von SQL Server Management Studio verwendet wird, und der Vorgang ein URL-Medium einbezieht.
 
 ## <a name="limitation"></a>Einschränkung
-**Mit einem Microsoft-Abonnement verbinden** funktioniert nur mit einem Azure Storage-Konto, das über das Dienstverwaltungs-Bereitstellungsmodell (klassisch) erstellt wurde.  Weitere Informationen zu Azure-Bereitstellungsmodellen finden Sie unter [Azure Resource Manager-Bereitstellung im Vergleich zur klassischen Bereitstellung: Grundlegendes zu Bereitstellungsmodellen und zum Status von Ressourcen](https://azure.microsoft.com/documentation/articles/resource-manager-deployment-model/).
+**Mit einem Microsoft-Abonnement verbinden** funktioniert nur mit einem Azure Storage-Konto, das über das Dienstverwaltungs-Bereitstellungsmodell (klassisch) erstellt wurde.  Weitere Informationen zu Azure-Bereitstellungsmodellen finden Sie unter [Azure Resource Manager-Bereitstellung im Vergleich zur klassischen Bereitstellung: Grundlegendes zu Bereitstellungsmodellen und zum Status von Ressourcen](/azure/azure-resource-manager/management/deployment-models).
 
 ## <a name="options"></a>Tastatur
 **Anmelden**     

@@ -15,12 +15,12 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730857"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868570"
 ---
 # <a name="memory-optimization-advisor"></a>Ratgeber für die Speicheroptimierung
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85730857"
   
 -   Migrieren von Tabellen und deren Daten in speicheroptimierte Tabellen (sofern diese keine nicht unterstützten Funktionen enthalten)  
     
- Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](/previous-versions/dn673538(v=msdn.10)).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Exemplarische Vorgehensweise: Ratgeber für die Speicheroptimierung  
  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle, die Sie konvertieren möchten, und wählen Sie **Ratgeber für die Speicheroptimierung**aus. Daraufhin wird die Willkommensseite für **Ratgeber für die Speicheroptimierung von Tabellen**angezeigt.  
@@ -99,7 +99,7 @@ ms.locfileid: "85730857"
   
  Wenn kein Primärschlüssel vorhanden ist und die Tabelle in eine nicht dauerhafte Tabelle migriert wird, wird dieser Bildschirm nicht angezeigt.  
   
- Bei Textspalten (mit dem Typ **char**, **nchar**, **varchar**und **nvarchar**) müssen Sie eine entsprechende Sortierung auswählen. In-Memory OLTP unterstützt BIN2-Sortierungen nur für Spalten in einer speicheroptimierten Tabelle. Sortierungen mit zusätzlichen Zeichen werden nicht unterstützt. Unter [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) finden Sie Informationen zu den unterstützten Sortierungen und den möglichen Auswirkungen, die eine Änderung der Sortierung mit sich bringen kann.  
+ Bei Textspalten (mit dem Typ **char**, **nchar**, **varchar**und **nvarchar**) müssen Sie eine entsprechende Sortierung auswählen. In-Memory OLTP unterstützt BIN2-Sortierungen nur für Spalten in einer speicheroptimierten Tabelle. Sortierungen mit zusätzlichen Zeichen werden nicht unterstützt. Unter [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) finden Sie Informationen zu den unterstützten Sortierungen und den möglichen Auswirkungen, die eine Änderung der Sortierung mit sich bringen kann.  
   
  Sie können die folgenden Parameter für den Primärschlüssel konfigurieren:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "85730857"
   
 -   Ein NONCLUSTERED-Index. Dieser Indextyp eignet sich am besten für Indizes mit zahlreichen Bereichsabfragen. Sie können die Sortierreihenfolge jeder Spalte in der Liste **Sortierspalte und -reihenfolge** konfigurieren.  
   
- Welcher Indextyp am besten für den Primärschlüssel geeignet ist, erfahren Sie unter [Hashindizes](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+ Welcher Indextyp am besten für den Primärschlüssel geeignet ist, erfahren Sie unter [Hashindizes](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130)).  
   
  Klicken Sie auf **Weiter** , nachdem Sie die Primärschlüsseloptionen ausgewählt haben.  
   
@@ -130,6 +130,5 @@ ms.locfileid: "85730857"
  Aktualisieren Sie nach Ende des Prozesses den **Objekt-Explorer** , um die neue speicheroptimierte Tabelle und die alte datenträgerbasierte Tabelle anzuzeigen. Sie können die alte Tabelle beibehalten oder löschen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migrieren zu In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

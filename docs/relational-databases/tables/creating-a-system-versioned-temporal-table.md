@@ -12,12 +12,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035b1793515779102b9b6b24d0377a4d33cba3c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990396"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809296"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
 
@@ -84,7 +84,7 @@ Die Verlaufstabelle wird unter Anwendung der gleichen Regeln erstellt, die für 
 
 - Der Schemaname ist für den Parameter **HISTORY_TABLE** obligatorisch.
 - Wenn das angegebene Schema nicht vorhanden ist, tritt bei der Anweisung **CREATE TABLE** ein Fehler auf.
-- Wenn die im Parameter **HISTORY_TABLE** angegebene Tabelle bereits vorhanden ist, wird sie mit der neu erstellten temporalen Tabelle auf [Schemakonsistenz und temporale Datenkonsistenz](https://msdn.microsoft.com/library/dn935015.aspx)verglichen. Wenn Sie eine ungültige Verlaufstabelle angeben, tritt bei der Anweisung **CREATE TABLE** ein Fehler auf.
+- Wenn die im Parameter **HISTORY_TABLE** angegebene Tabelle bereits vorhanden ist, wird sie mit der neu erstellten temporalen Tabelle auf [Schemakonsistenz und temporale Datenkonsistenz](./temporal-tables.md)verglichen. Wenn Sie eine ungültige Verlaufstabelle angeben, tritt bei der Anweisung **CREATE TABLE** ein Fehler auf.
 
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>Erstellen einer temporalen Tabelle mit einer benutzerdefinierten Verlaufstabelle
 
@@ -207,4 +207,4 @@ ALTER TABLE ProjectTaskCurrent
 - [Ändern von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 - [Ändern vom Schema einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [Beenden der Versionsverwaltung auf einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
+- [Beenden der Versionsverwaltung auf einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)

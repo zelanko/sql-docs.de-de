@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cd8b8d0ecf3e7be9a8a68710c32e15b65497e173
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 83abd087cab67c0b048ed6333e912ac1edc76f7c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480968"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810157"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,12 +59,12 @@ ms.locfileid: "89480968"
  Eine Reihe von Speicherlösungen von Drittanbietern haben RBS-Anbieter entwickelt, die diesen Standard-APIs entsprechen und BLOB-Speicherung auf verschiedenen Speicherplattformen unterstützen.  
   
 ## <a name="rbs-requirements"></a>RSB-Anforderungen  
- - RSB erfordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise für den Hauptdatenbankserver, in dem die BLOB-Metadaten gespeichert werden.  Wenn Sie jedoch den bereitgestellten FILESTREAM-Anbieter verwenden, können Sie die BLOBs selbst auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard speichern. RBS erfordert mindestens ODBC-Treiberversion 11 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und ODBC-Treiber, Version 13 für [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] , um eine Verbindung mit [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]herzustellen. Treiber stehen unter [Herunterladen von ODBC-Treibern für SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)zur Verfügung.    
+ - RSB erfordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise für den Hauptdatenbankserver, in dem die BLOB-Metadaten gespeichert werden.  Wenn Sie jedoch den bereitgestellten FILESTREAM-Anbieter verwenden, können Sie die BLOBs selbst auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard speichern. RBS erfordert mindestens ODBC-Treiberversion 11 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und ODBC-Treiber, Version 13 für [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] , um eine Verbindung mit [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]herzustellen. Treiber stehen unter [Herunterladen von ODBC-Treibern für SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)zur Verfügung.    
   
  RBS beinhaltet einen FILESTREAM-Anbieter, mit dem Sie BLOBs mithilfe von RBS auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichern können. Wenn Sie BLOBs mithilfe von RBS in einer anderen Speicherlösung speichern möchten, müssen Sie einen für diese Speicherlösung entwickelten RSB-Anbieter eines Drittanbieters verwenden oder einen benutzerdefinierten RBS-Anbieter mithilfe der RBS-API entwickeln. Ein Beispielanbieter, der BLOBs im NTFS-Dateisystem speichert, steht als Lernressource auf [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)zur Verfügung.  
   
 ## <a name="rbs-security"></a>RSB-Sicherheit  
- Der SQL Remote Blob Storage-Teamblog ist eine gute Informationsquelle für diese Funktion. Das RBS-Sicherheitsmodell wird in dem Beitrag unter [RBS Security Model](https://docs.microsoft.com/archive/blogs/sqlrbs/rbs-security-model)(RBS-Sicherheitsmodell) beschrieben.  
+ Der SQL Remote Blob Storage-Teamblog ist eine gute Informationsquelle für diese Funktion. Das RBS-Sicherheitsmodell wird in dem Beitrag unter [RBS Security Model](/archive/blogs/sqlrbs/rbs-security-model)(RBS-Sicherheitsmodell) beschrieben.  
   
 ### <a name="custom-providers"></a>Benutzerdefinierte Anbieter  
  Wenn Sie einen benutzerdefinierten Anbieter zum Speichern von Blobs außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden, stellen Sie sicher, dass die gespeicherten Blobs anhand von Berechtigungen und Verschlüsselungsoptionen geschützt sind, die für das vom benutzerdefinierten Anbieter verwendete Speichermedium geeignet sind.  
@@ -89,7 +89,7 @@ Wenn Ihre Sicherheitsrichtlinien verschiedene Schlüsseleigenschaften (z.B. Algo
  In den auf [CodePlex](https://go.microsoft.com/fwlink/?LinkId=210190) verfügbaren RSB-Beispielen wird veranschaulicht, wie Sie eine RBS-Anwendung entwickeln und einen benutzerdefinierten RBS-Anbieter installieren.  
   
  **RBS-Blog**  
- Der [RBS-Blog](https://docs.microsoft.com/archive/blogs/sqlrbs/) bietet zusätzliche Informationen, durch die Sie RBS besser verstehen, bereitstellen und verwalten können.  
+ Der [RBS-Blog](/archive/blogs/sqlrbs/) bietet zusätzliche Informationen, durch die Sie RBS besser verstehen, bereitstellen und verwalten können.  
   
 ##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> Skript zur Schlüsselrotation  
  In diesem Beispiel wird eine gespeicherte Prozedur namens `sp_rotate_rbs_symmetric_credential_key` erstellt, um den aktuell verwendeten symmetrischen Schlüssel des RBS-Anmeldeinformationsspeichers  
@@ -241,5 +241,4 @@ SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';
 ## <a name="see-also"></a>Weitere Informationen  
 [Remoteblobspeicher und Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
-  
   

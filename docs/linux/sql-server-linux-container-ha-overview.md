@@ -1,20 +1,20 @@
 ---
 title: Hochverfügbarkeit für SQL Server-Container
 description: Informieren Sie sich über die Hochverfügbarkeit für SQL Server-Container. Erfahren Sie außerdem, wie Sie einen Container mit SQL Server auf Kubernetes bereitstellen.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 00665a8306dbf586b92cfec14a8fe21f631f96c9
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: c4d14e0b7f76aaebd0a0bdac00c93267b91d0ab8
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088895"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785116"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>Hochverfügbarkeit für SQL Server-Container
 

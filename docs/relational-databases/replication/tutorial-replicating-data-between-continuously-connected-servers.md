@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 15b114b66462be069b4c67d3bedc662af6c6cbfd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e22b9695d229c83cbf95a08c0ef81462b8074a63
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720707"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868285"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Die Transaktionsreplikation stellt eine bewährte Lösung für das Problem des Verschiebens von Daten zwischen Servern mit kontinuierlicher Verbindung dar. Mithilfe des Replikations-Assistenten können Sie eine Replikationstopologie auf einfache Weise konfigurieren und verwalten. 
 
-In diesem Tutorial wird die Konfiguration einer Topologie für Transaktionsreplikationen für Server mit kontinuierlicher Verbindung erläutert. Weitere Informationen zur Funktionsweise der Transaktionsreplikation finden Sie unter [Übersicht über die Transaktionsreplikation](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication). 
+In diesem Tutorial wird die Konfiguration einer Topologie für Transaktionsreplikationen für Server mit kontinuierlicher Verbindung erläutert. Weitere Informationen zur Funktionsweise der Transaktionsreplikation finden Sie unter [Übersicht über die Transaktionsreplikation](./transactional/transactional-replication.md). 
   
 ## <a name="what-you-will-learn"></a>Lernziele  
 In diesem Tutorial erfahren Sie, wie Sie Daten aus einer Datenbank mithilfe der Transaktionsreplikation in einer anderen Datenbank veröffentlichen.  
@@ -50,13 +50,13 @@ Für dieses Tutorial benötigen Sie SQL Server, SQL Server Management Studio (SS
   
 - Installieren Sie auf dem Abonnentenserver (Ziel) eine beliebige Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Ausnahme von [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] kann nicht als Abonnent einer Transaktionsreplikation verwendet werden.  
   
-- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installieren Sie [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Laden Sie die [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Laden Sie die [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Wiederherstellen einer Datenbank](../backup-restore/restore-a-database-backup-using-ssms.md). 
  
 >[!NOTE]
 > - Die Replikation wird für SQL Server-Instanzen, zwischen denen mehr als zwei Versionen liegen, nicht unterstützt. Weitere Informationen finden Sie unter [In der Replikationstopologie unterstützte SQL Server-Versionen](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
-> - Sie müssen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger und dem Abonnenten herstellen. Dazu verwenden Sie einen Anmeldenamen eines Mitglieds der festen Serverrolle **sysadmin** ist. Weitere Informationen zu dieser Rolle finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - Sie müssen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger und dem Abonnenten herstellen. Dazu verwenden Sie einen Anmeldenamen eines Mitglieds der festen Serverrolle **sysadmin** ist. Weitere Informationen zu dieser Rolle finden Sie unter [Rollen auf Serverebene](../security/authentication-access/server-level-roles.md).  
   
   
 **Ungefähre Dauer dieses Tutorials: 60 Minuten**  
@@ -168,7 +168,7 @@ In diesem Abschnitt fügen Sie der zuvor erstellten Veröffentlichung einen Abon
 
    ![Seite „Veröffentlichung“ mit ausgewählter Veröffentlichung](media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
   
-4. Aktivieren Sie auf der Seite **Speicherort des Verteilungs-Agents** das Optionsfeld neben **Alle Agents auf dem Verteiler ausführen**, und klicken Sie anschließend auf **Weiter**.  Weitere Informationen zu Push- und Pullabonnements finden Sie unter [Abonnieren von Veröffentlichungen](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications).
+4. Aktivieren Sie auf der Seite **Speicherort des Verteilungs-Agents** das Optionsfeld neben **Alle Agents auf dem Verteiler ausführen**, und klicken Sie anschließend auf **Weiter**.  Weitere Informationen zu Push- und Pullabonnements finden Sie unter [Abonnieren von Veröffentlichungen](./subscribe-to-publications.md).
 
    ![Seite „Speicherort des Verteilungs-Agents“ mit aktivierter Option zur Ausführung aller Agents auf dem Verteiler](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
   

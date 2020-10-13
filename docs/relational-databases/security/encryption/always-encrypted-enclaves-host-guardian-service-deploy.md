@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d8fd7e4164807789939ba0c3fd515d1a2d8dc67
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 88ab6e015f26cf97e002bc4e21a4430bf30d9cba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410986"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868206"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>Bereitstellen des Host-Überwachungsdiensts für [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
@@ -53,7 +53,7 @@ Bevor Sie beginnen, vergewissern Sie sich, dass auf dem verwendeten Computer Win
     Install-HgsServer -HgsDomainName $HgsDomainName -SafeModeAdministratorPassword $DSRMPassword -Restart
     ```
 
-    Der HGS-Computer wird erneut neu gestartet, um die Konfiguration der Active Directory-Gesamtstruktur abzuschließen. Wenn Sie sich das nächste Mal anmelden, wird Ihr Administratorkonto als Domänenadministratorkonto verwendet. Weitere Informationen zum Verwalten und Schützen Ihrer neuen Gesamtstruktur finden Sie in der [Active Directory Domain Services Operations-Dokumentation](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations).
+    Der HGS-Computer wird erneut neu gestartet, um die Konfiguration der Active Directory-Gesamtstruktur abzuschließen. Wenn Sie sich das nächste Mal anmelden, wird Ihr Administratorkonto als Domänenadministratorkonto verwendet. Weitere Informationen zum Verwalten und Schützen Ihrer neuen Gesamtstruktur finden Sie in der [Active Directory Domain Services Operations-Dokumentation](/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations).
 
 3. Anschließend richten Sie den HGS-Cluster ein und installieren den Nachweisdienst, indem Sie den folgenden Befehl in einer Windows PowerShell-Konsole mit erhöhten Rechten ausführen:
 
@@ -218,7 +218,7 @@ Es empfiehlt sich, für alle Produktionsinstanzen von HGS HTTPS-Bindung zu verwe
 
 1. Rufen Sie ein TLS-Zertifikat bei Ihrer Zertifizierungsstelle ab, indem Sie den vollqualifizierten HGS-Dienstnamen aus Schritt 1.3 als Antragstellernamen verwenden. Wenn Sie Ihren Dienstnamen nicht kennen, können Sie ihn ermitteln, indem Sie auf einem beliebigen HGS-Computer `Get-HgsServer` ausführen. Sie können der Liste mit alternativen Antragstellernamen alternative DNS-Namen hinzufügen, wenn Ihre [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Computer für Verbindungen mit dem HGS-Cluster einen anderen DNS-Namen verwenden (beispielsweise wenn sich HGS hinter einem Netzwerklastenausgleich mit einer anderen Adresse befinden).
 
-2. Verwenden Sie auf dem HGS-Computer [Set-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/set-hgsserver), um die HTTPS-Bindung zu aktivieren, und geben Sie das im vorherigen Schritt abgerufene TLS-Zertifikat an. Wenn Ihr Zertifikat bereits auf dem Computer im lokalen Zertifikatspeicher installiert ist, verwenden Sie den folgenden Befehl, um es bei HGS zu registrieren:
+2. Verwenden Sie auf dem HGS-Computer [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver), um die HTTPS-Bindung zu aktivieren, und geben Sie das im vorherigen Schritt abgerufene TLS-Zertifikat an. Wenn Ihr Zertifikat bereits auf dem Computer im lokalen Zertifikatspeicher installiert ist, verwenden Sie den folgenden Befehl, um es bei HGS zu registrieren:
 
     ```powershell
     # Note: you'll need to know the thumbprint for your certificate to configure HGS this way

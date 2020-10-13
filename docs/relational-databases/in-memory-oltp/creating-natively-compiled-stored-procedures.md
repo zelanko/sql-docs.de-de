@@ -12,12 +12,12 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd6c808ecc53838feb9466283c83919231ce67ad
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 10379c4109cd786dfbc2cdc81a0cb78e04a264da
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537585"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869320"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Erstellen systemintern kompilierter gespeicherter Prozeduren
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,9 +66,8 @@ Im Codebeispiel ist an **NATIVE_COMPILATION** erkennbar, dass diese gespeicherte
 |Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**SCHEMABINDING**|Eine systemintern kompilierte gespeicherte Prozedur muss an das Schema der Objekte gebunden werden, auf die sie verweist. Dies bedeutet, dass Tabellen, auf die von der Prozedur verwiesen wird, nicht gelöscht werden können. Die Tabellen, auf die in der Prozedur verwiesen wird, müssen den Schemanamen enthalten, und Platzhalterzeichen (\*) sind in Abfragen nicht zulässig (also ohne `SELECT * from...`). **SCHEMABINDING** wird nur in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für systemintern kompilierte gespeicherte Prozeduren unterstützt.|  
-|**BEGIN ATOMIC**|Der Text einer systemintern kompilierten gespeicherten Prozedur muss genau ein ATOMIC-Block sein. ATOMIC-Blöcke gewährleisten die unteilbare Ausführung der gespeicherten Prozedur. Wenn die Prozedur außerhalb des Kontexts einer aktiven Transaktion aufgerufen wird, wird eine neue Transaktion gestartet, für die am Ende des ATOMIC-Blocks ein Commit ausgeführt wird. ATOMIC-Blöcke in systemintern kompilierten gespeicherten Prozeduren weisen zwei erforderliche Optionen auf:<br /><br /> **TRANSACTION ISOLATION LEVEL**. Informationen zu unterstützten Isolationsstufen finden Sie unter [Transaktionsisolationsstufen für speicheroptimierte Tabellen](https://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) .<br /><br /> **LANGUAGE**. Die Sprache der gespeicherten Prozedur muss auf eine der verfügbaren Sprachen bzw. einen der verfügbaren Sprachenaliase festgelegt werden.|  
+|**BEGIN ATOMIC**|Der Text einer systemintern kompilierten gespeicherten Prozedur muss genau ein ATOMIC-Block sein. ATOMIC-Blöcke gewährleisten die unteilbare Ausführung der gespeicherten Prozedur. Wenn die Prozedur außerhalb des Kontexts einer aktiven Transaktion aufgerufen wird, wird eine neue Transaktion gestartet, für die am Ende des ATOMIC-Blocks ein Commit ausgeführt wird. ATOMIC-Blöcke in systemintern kompilierten gespeicherten Prozeduren weisen zwei erforderliche Optionen auf:<br /><br /> **TRANSACTION ISOLATION LEVEL**. Informationen zu unterstützten Isolationsstufen finden Sie unter [Transaktionsisolationsstufen für speicheroptimierte Tabellen](/previous-versions/sql/sql-server-2016/dn133175(v=sql.130)) .<br /><br /> **LANGUAGE**. Die Sprache der gespeicherten Prozedur muss auf eine der verfügbaren Sprachen bzw. einen der verfügbaren Sprachenaliase festgelegt werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
+ [Nativ kompilierte gespeicherte Prozeduren](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   

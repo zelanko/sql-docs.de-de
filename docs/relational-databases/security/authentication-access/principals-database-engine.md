@@ -30,12 +30,12 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 213babf7e34fac642bd91374b2f008776dbbd8d1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 22a6beec87891408ef34039675dd4a2b9ede5758
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005609"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869061"
 ---
 # <a name="principals-database-engine"></a>Prinzipale (Datenbank-Engine)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -93,7 +93,7 @@ Jeder Anmeldename gehört zu der festen Serverrolle `public`, und jeder Datenban
   
  Dieser Abschnitt der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation umfasst die folgenden Themen:  
   
--   [Verwalten von Anmeldungen, Benutzern und Schemas: Vorgehensweisen](../../../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md)  
+-   [Verwalten von Anmeldungen, Benutzern und Schemas: Vorgehensweisen](./create-a-login.md)  
   
 -   [Rollen auf Serverebene](../../../relational-databases/security/authentication-access/server-level-roles.md)  
   
@@ -109,5 +109,4 @@ Jeder Anmeldename gehört zu der festen Serverrolle `public`, und jeder Datenban
  [sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [Rollen auf Serverebene](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Rollen auf Datenbankebene](../../../relational-databases/security/authentication-access/database-level-roles.md)  
-  
   

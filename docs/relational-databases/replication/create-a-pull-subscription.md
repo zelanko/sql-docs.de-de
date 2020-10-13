@@ -18,12 +18,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4f2cf1f98203b89e25fa3b6c5d165c40798163df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca2d2b650e8691e34445a4b239fb6eff71b25557
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773934"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869108"
 ---
 # <a name="create-a-pull-subscription"></a>Create a Pull Subscription
 
@@ -308,7 +308,7 @@ GO
     -   (Optional) Den Wert **true** für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> , um einen Agentauftrag zu erstellen, mit dem das Abonnement synchronisiert wird. Wenn Sie **false** angeben (Standard), kann das Abonnement nur programmgesteuert synchronisiert werden, und Sie müssen zusätzliche Eigenschaften für <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> angeben, wenn Sie von der <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> -Eigenschaft auf dieses Objekt zugreifen. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
         > [!NOTE]  
-        >  Der SQL Server-Agent ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Wenn Sie den Wert **true** für Express-Abonnenten angeben, wird der Agentauftrag nicht erstellt. Jedoch werden wichtige abonnementbezogene Metadaten auf dem Abonnenten gespeichert.  
+        >  Der SQL Server-Agent ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-components-of-sql-server-2016.md). Wenn Sie den Wert **true** für Express-Abonnenten angeben, wird der Agentauftrag nicht erstellt. Jedoch werden wichtige abonnementbezogene Metadaten auf dem Abonnenten gespeichert.  
   
     -   (Optional) Legen Sie die Werte der Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> für <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> fest, wenn Sie die SQL Server-Authentifizierung verwenden, um die Verbindung zum Verteiler herzustellen.  
   
@@ -1136,5 +1136,4 @@ End Try
  [Konfigurieren der Websynchronisierung](../../relational-databases/replication/configure-web-synchronization.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
  [Bewährte Methoden für die Replikationssicherheit](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

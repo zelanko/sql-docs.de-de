@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9139d4e5b0ab2df1074774dc90af44bc711804ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7ddce7f64c33d0646f3d79aa91b75f05ff11ffe
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404476"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869273"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Websynchronisierung für die Mergereplikation
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88404476"
   
  Die IT-Abteilung von [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] hat jeden Laptop mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konfiguriert und die Mergereplikation für die Verwendung der Websynchronisierung aktiviert. Der Merge-Agent auf jedem Laptop verfügt über eine Internet-URL. Diese URL verweist auf die Replikationskomponenten, die auf einem Computer mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS (Internet Information Services) installiert sind. Diese Komponenten synchronisieren den Abonnenten mit dem Verleger. Jeder Mitarbeiter kann nun über jede verfügbare Internetverbindung ohne Verwendung einer Remote-DFÜ-Verbindung eine Verbindung herstellen und die entsprechenden Daten hoch- und herunterladen. Die Internetverbindung verwendet Transport Layer Security (TLS), früher als Secure Sockets Layer (SSL) bezeichnet. Somit ist kein virtuelles privates Netzwerk (VPN) erforderlich.  
   
- Informationen zum Konfigurieren der für die Websynchronisierung erforderlichen Komponenten finden Sie unter [Konfigurieren der Websynchronisierung](../../relational-databases/replication/configure-web-synchronization.md), [Konfigurieren von IIS für die Websynchronisierung](../../relational-databases/replication/configure-iis-for-web-synchronization.md) und[Konfigurieren von IIS 7 für die Websynchronisierung](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
+ Informationen zum Konfigurieren der für die Websynchronisierung erforderlichen Komponenten finden Sie unter [Konfigurieren der Websynchronisierung](../../relational-databases/replication/configure-web-synchronization.md), [Konfigurieren von IIS für die Websynchronisierung](./configure-iis-7-for-web-synchronization.md) und[Konfigurieren von IIS 7 für die Websynchronisierung](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
   
 > [!NOTE]  
 >  Die Websynchronisierung ist für die Synchronisierung von Daten mit Laptops, Handhelds und anderen Clients entwickelt worden. Sie eignet sich nicht für Server-zu-Server-Anwendungen für hohes Volumen.  
@@ -85,5 +85,4 @@ ms.locfileid: "88404476"
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren der Websynchronisierung](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologien für die Websynchronisierung](../../relational-databases/replication/topologies-for-web-synchronization.md)  
-  
   

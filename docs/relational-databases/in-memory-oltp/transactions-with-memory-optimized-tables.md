@@ -12,12 +12,12 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c41b7f8fc9f1851daa72ca5189fee433c217f20
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753182"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868659"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transaktionen mit speicheroptimierten Tabellen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -143,7 +143,7 @@ Im Folgenden finden Sie eine Auflistung der Fehlerbedingungen, die dazu führen 
 | Fehlercode | BESCHREIBUNG | Ursache |
 | :-- | :-- | :-- |
 | **41302** | Es wurde versucht, eine Zeile zu aktualisieren, die seit dem Start der aktuellen Transaktion in einer anderen Transaktion aktualisiert wurde. | Diese Fehlerbedingung tritt auf, wenn zwei gleichzeitige Transaktionen versuchen, die gleiche Zeile zur gleichen Zeit zu aktualisieren oder zu löschen. Eine der beiden Transaktionen empfängt diese Fehlermeldung und muss wiederholt werden. <br/><br/>  | 
-| **41305**| REPEATABLE READ-Überprüfungsfehler. Eine Zeile einer speicheroptimierten Tabelle, die von dieser Transaktion gelesen wird, wurde von einer anderen Transaktion aktualisiert, für die vor dem Commit dieser Transaktion ein Commit ausgeführt wurde. | Dieser Fehler kann bei Verwendung der REPEATABLE READ- oder SERIALIZABLE-Isolation auftreten. Er kann auch auftreten, wenn die Aktionen einer gleichzeitigen Transaktion eine FOREIGN KEY-Einschränkung verletzen. <br/><br/>Solche Verletzungen von FOREIGN KEY-Einschränkungen sind selten und weisen in der Regel auf ein Problem mit der Anwendungslogik oder der Dateneingabe hin. Dieser Fehler kann allerdings auch auftreten, wenn in den Spalten, die an der FOREIGN KEY-Einschränkung beteiligt sind, kein Index vorhanden ist. Es empfiehlt sich daher, in FOREIGN KEY-Spalten einer speicheroptimierten Tabelle immer einen Index zu erstellen. <br/><br/> Ausführlichere Überlegungen zu Überprüfungsfehlern, die durch FOREIGN KEY-Verletzungen verursacht werden, finden Sie in [diesem Blogbeitrag](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) des SQL Server-Kundenberatungsteams. |  
+| **41305**| REPEATABLE READ-Überprüfungsfehler. Eine Zeile einer speicheroptimierten Tabelle, die von dieser Transaktion gelesen wird, wurde von einer anderen Transaktion aktualisiert, für die vor dem Commit dieser Transaktion ein Commit ausgeführt wurde. | Dieser Fehler kann bei Verwendung der REPEATABLE READ- oder SERIALIZABLE-Isolation auftreten. Er kann auch auftreten, wenn die Aktionen einer gleichzeitigen Transaktion eine FOREIGN KEY-Einschränkung verletzen. <br/><br/>Solche Verletzungen von FOREIGN KEY-Einschränkungen sind selten und weisen in der Regel auf ein Problem mit der Anwendungslogik oder der Dateneingabe hin. Dieser Fehler kann allerdings auch auftreten, wenn in den Spalten, die an der FOREIGN KEY-Einschränkung beteiligt sind, kein Index vorhanden ist. Es empfiehlt sich daher, in FOREIGN KEY-Spalten einer speicheroptimierten Tabelle immer einen Index zu erstellen. <br/><br/> Ausführlichere Überlegungen zu Überprüfungsfehlern, die durch FOREIGN KEY-Verletzungen verursacht werden, finden Sie in [diesem Blogbeitrag](/archive/blogs/sqlcat/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys) des SQL Server-Kundenberatungsteams. |  
 | **41325** | SERIALIZABLE-Überprüfungsfehler. Eine Zeile wurde in einen Bereich eingefügt, der zuvor von der aktuellen Transaktion gescannt wurde. Dies wird als Phantomzeile bezeichnet | Dieser Fehler kann bei Verwendung der SERIALIZABLE-Isolation auftreten. Er kann auch auftreten, wenn die Aktionen einer gleichzeitigen Transaktion eine PRIMARY KEY-, UNIQUE- oder FOREIGN KEY-Einschränkung verletzen. <br/><br/> Solche Einschränkungsverletzungen durch gleichzeitige Transaktionen sind selten und weisen in der Regel auf ein Problem mit der Anwendungslogik oder der Dateneingabe hin. Ähnlich wie bei REPEATABLE READ-Überprüfungsfehlern kann dieser Fehler auch auftreten, wenn für die an einer FOREIGN KEY-Einschränkung beteiligten Spalten kein Index vorhanden ist. |  
 | **41301** | Abhängigkeitsfehler: Es besteht eine Abhängigkeit von einer anderen Transaktion, bei der später ein Commitfehler auftritt. | Für diese Transaktion (Tx1) entstand eine Abhängigkeit von einer anderen Transaktion (Tx2), während die Transaktion (Tx2) sich in der Überprüfungs- oder Commitverarbeitungsphase befand. Der Grund: Tx1 hat Daten gelesen, die von Tx2 geschrieben wurden. Bei Tx2 trat anschließend ein Fehler beim Commit auf. Die häufigsten Ursachen für Fehler beim Commit von Tx2 sind REPEATABLE READ-Überprüfungsfehler (41305) und SERIALIZABLE-Überprüfungsfehler (41325). Eine weniger häufige Ursache ist ein Protokoll-E/A-Fehler. |
 | **41823** und **41840** | Das Kontingent für Benutzerdaten in speicheroptimierten Tabellen und Tabellenvariablen wurde erreicht. | Der Fehler 41823 bezieht sich auf SQL Server Express/Web/Standard Edition sowie Singletons in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. Der Fehler 41840 bezieht sich auf Pools für elastische Datenbanken in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> In den meisten Fällen geben diese Fehler an, dass die maximalen Kapazität für Benutzerdaten erreicht wurde. Der Fehler kann behoben werden, indem Daten aus den speicheroptimierten Tabellen gelöscht werden. Es gibt jedoch seltene Fälle, in denen dieser Fehler nur vorübergehend ist. Deshalb wird empfohlen, dass Sie es zunächst erneut versuchen, wenn dieser Fehler zum ersten Mal auftritt.<br/><br/> Wie andere Fehler in dieser Liste verursachen die Fehler 41823 und 41840 einen Abbruch der aktiven Transaktion. |
@@ -281,6 +281,6 @@ go
   
 - [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [Auf Zeilenversionsverwaltung basierende Isolationsstufen in der Datenbank-Engine](https://msdn.microsoft.com/library/ms177404.aspx)  
+- [Auf Zeilenversionsverwaltung basierende Isolationsstufen in der Datenbank-Engine](/previous-versions/sql/sql-server-2008-r2/ms177404(v=sql.105))  
   
-- [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md)   
+- [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md)

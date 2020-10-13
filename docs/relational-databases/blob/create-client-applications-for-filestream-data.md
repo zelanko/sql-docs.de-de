@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f3eaf19bb73d4b36f5ba31ce61c0cc62b14a923d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5de9ab4b9a0e89197173dcee5f0e6f7ffb1b7e75
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768009"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809942"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Erstellen von Clientanwendungen für FILESTREAM-Daten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85768009"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) gibt ein Token zurück, das die aktuelle Transaktion einer Sitzung darstellt. Anwendungen verwenden dieses Token, um FILESTREAM-Dateisystem-Streamingvorgänge an die Transaktion zu binden.  
   
--   Die [OpenSqlFilestream-API](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) bezieht ein Win32-Dateihandle. Die Anwendung verwendet das Handle zum Streamen der FILESTREAM-Daten und kann das Handle dann an die folgenden Win32-APIs übergeben: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) oder [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Wenn die Anwendung mit dem Handle irgendeine andere API anruft, wird ein ERROR_ACCESS_DENIED-Fehler zurückgegeben. Die Anwendung sollte das Handle mit [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)schließen.  
+-   Die [OpenSqlFilestream-API](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) bezieht ein Win32-Dateihandle. Die Anwendung verwendet das Handle zum Streamen der FILESTREAM-Daten und kann das Handle dann an die folgenden Win32-APIs übergeben: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile), [TransmitFile](/windows/win32/api/mswsock/nf-mswsock-transmitfile), [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer), [SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile) oder [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers). Wenn die Anwendung mit dem Handle irgendeine andere API anruft, wird ein ERROR_ACCESS_DENIED-Fehler zurückgegeben. Die Anwendung sollte das Handle mit [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle)schließen.  
   
  Alle Zugriffe auf FILESTREAM-Datencontainer müssen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktion erfolgen. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen können auch in der gleichen Transaktion ausgeführt werden, damit die SQL-Daten mit den FILESTREAM-Daten konsistent bleiben.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "85768009"
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
 ###  <a name="obtaining-a-win32-file-handle"></a><a name="handle"></a> Abrufen eines Win32-Dateihandles  
- Um ein Win32-Dateihandle abzurufen, rufen Sie die OpenSqlFilestream-API auf. Diese API wird aus der Datei sqlncli.dll exportiert. Das zurückgegebene Handle kann an eine der folgenden Win32-APIs übergeben werden: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) oder [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Die folgenden Beispiele veranschaulichen, wie Sie ein Win32-Handle abrufen und zum Lesen und Schreiben von FILESTREAM BLOB-Daten verwenden.  
+ Um ein Win32-Dateihandle abzurufen, rufen Sie die OpenSqlFilestream-API auf. Diese API wird aus der Datei sqlncli.dll exportiert. Das zurückgegebene Handle kann an eine der folgenden Win32-APIs übergeben werden: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile), [TransmitFile](/windows/win32/api/mswsock/nf-mswsock-transmitfile), [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer), [SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile) oder [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers). Die folgenden Beispiele veranschaulichen, wie Sie ein Win32-Handle abrufen und zum Lesen und Schreiben von FILESTREAM BLOB-Daten verwenden.  
   
  [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   
@@ -91,5 +91,4 @@ ms.locfileid: "85768009"
  [ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Binary Large Object &#40;Blob&#41; Daten &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [Vornehmen von Teilupdates an FILESTREAM-Daten](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)  
-  
   

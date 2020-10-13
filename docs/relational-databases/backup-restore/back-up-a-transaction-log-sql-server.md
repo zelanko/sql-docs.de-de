@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e01e01544a0417210a8f2e3a40bb10398875c37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c953e5a707bb197457d76e9d5d4f64635515ffce
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719961"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807584"
 ---
 # <a name="back-up-a-transaction-log"></a>Sichern eines Transaktionsprotokolls
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -153,7 +153,7 @@ GO
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell
 
-Richten Sie den [SQL Server PowerShell-Anbieter ein](../../relational-databases/scripting/sql-server-powershell-provider.md), und verwenden Sie ihn. Verwenden Sie das Cmdlet **Backup-SqlDatabase** , und geben Sie **Log** als Wert für den Parameter **-BackupAction** an.  
+Richten Sie den [SQL Server PowerShell-Anbieter ein](../../powershell/sql-server-powershell-provider.md), und verwenden Sie ihn. Verwenden Sie das Cmdlet **Backup-SqlDatabase** , und geben Sie **Log** als Wert für den Parameter **-BackupAction** an.  
   
 Im folgenden Beispiel wird eine Protokollsicherung der `<myDatabase>` -Datenbank am standardmäßigen Sicherungsspeicherort der Serverinstanz `Computer\Instance`erstellt.  
   
@@ -174,4 +174,4 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Vollständige Dateisicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)  
+ [Vollständige Dateisicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)

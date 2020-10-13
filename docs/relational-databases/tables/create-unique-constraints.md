@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: fa72cf50aed832d92d0351ceb699df0646debacd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195096"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809652"
 ---
 # <a name="create-unique-constraints"></a>Erstellen von Unique-Einschränkungen
 
@@ -32,7 +32,7 @@ ms.locfileid: "89195096"
   Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine UNIQUE-Einschränkung in [!INCLUDE[tsql](../../includes/tsql-md.md)] erstellen, um sicherzustellen, dass in bestimmte Spalten, die nicht zum Primärschlüssel gehören, Werte nicht mehrfach eingegeben werden können. Durch die Erstellung einer UNIQUE-Einschränkung wird automatisch ein entsprechender eindeutiger Index erstellt.  
   
 > [!NOTE]    
-> Unter [Primärschlüssel, Fremdschlüssel und eindeutiger Schlüssel in SQL Analytics](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints) finden Sie weitere Informationen zu UNIQUE-Einschränkungen in Azure Synapse Analytics.
+> Unter [Primärschlüssel, Fremdschlüssel und eindeutiger Schlüssel in SQL Analytics](/azure/sql-data-warehouse/sql-data-warehouse-table-constraints) finden Sie weitere Informationen zu UNIQUE-Einschränkungen in Azure Synapse Analytics.
   
  **In diesem Thema**  
   
@@ -128,4 +128,4 @@ ms.locfileid: "89195096"
   
      Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) und [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).  
   
-###  <a name="TsqlExample"></a>  
+###  <a name="TsqlExample"></a>

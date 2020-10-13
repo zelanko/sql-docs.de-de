@@ -15,12 +15,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1ac8f70f642faaa7b9cb9c1afa4ec721b8876599
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40b77254e3c9dfd6640d1649b1e2236a34cd644d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654340"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868295"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Erstellen und Anwenden der Anfangsmomentaufnahme
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -172,7 +172,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  Momentaufnahmen werden nach dem Erstellen einer Veröffentlichung vom Momentaufnahme-Agent generiert. Sie können diese Momentaufnahmen mit Replikationsverwaltungsobjekten (RMO) und dem direkten Zugriff von verwaltetem Code auf Funktionen des Replikations-Agents programmgesteuert generieren. Welche Objekte Sie verwenden, hängt vom Typ der Replikation ab. Der Momentaufnahme-Agent kann synchron mit dem <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> -Objekt oder asynchron mit dem Agentauftrag gestartet werden. Nachdem die Anfangsmomentaufnahme generiert wurde, wird sie an den Abonnenten übertragen und auf diesen angewendet, sobald die erste Synchronisierung für das Abonnement durchgeführt wird. Sie müssen den Agent immer dann erneut ausführen, wenn die vorhandene Momentaufnahme keine gültigen und aktuellen Daten mehr enthält. Weitere Informationen finden Sie unter [Verwalten von Veröffentlichungen](../../relational-databases/replication/publish/maintain-publications.md).  
   
 > [!IMPORTANT]  
->  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](/previous-versions/aa719848(v=vs.71)) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>So generieren Sie die Anfangsmomentaufnahme für eine Momentaufnahme- oder Transaktionsveröffentlichung durch Starten des Auftrags des Momentaufnahme-Agents (asynchron)  
   
@@ -264,6 +264,5 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
+ [Verwenden von sqlcmd mit Skriptvariablen](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
   

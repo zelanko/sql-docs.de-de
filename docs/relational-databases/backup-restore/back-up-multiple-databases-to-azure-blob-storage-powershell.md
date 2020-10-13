@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e8cd67af06699c929e1f84f948606a6411c5e1a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e79840f828a7891ac3e01cd52721eb5755a97c7b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722502"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809236"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Sichern mehrerer Datenbanken in Azure Blob Storage – PowerShell
 
@@ -44,7 +44,7 @@ Folgende Überlegungen sind bei Beispielskripts zu bedenken:
   
 - SQL Server PowerShell implementiert Cmdlets, um in der Pfadstruktur zu navigieren, die die Hierarchie von Objekten darstellt, die von einem PowerShell-Anbieter unterstützt werden. Wenn Sie zu einem Knoten im Pfad navigiert haben, können Sie andere Cmdlets verwenden, um grundlegende Vorgänge für das aktuelle Objekt auszuführen.
 
-  Weitere Informationen finden Sie unter [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).
+  Weitere Informationen finden Sie unter [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).
 
 - **Get-ChildItem**-Cmdlet: Welche Informationen von **Get-ChildItem** zurückgegeben werden, hängt vom Speicherort in einem SQL Server PowerShell-Pfad ab. Wenn der Speicherort auf der Computerebene liegt, gibt dieses Cmdlets alle SQL Server-Datenbank-Engine-Instanzen zurück, die auf dem Computer installiert sind. Oder, wenn der Speicherort aber auf Objektebene, wie z. B. Datenbanken, liegt, dann gibt dieses Cmdlet eine Liste von Datenbankobjekten zurück. Standardmäßig gibt das **Get-ChildItem** -Cmdlet keine Systemobjekte zurück. Verwenden Sie den Parameter `–Force`, um die Systemobjekte anzuzeigen.
 

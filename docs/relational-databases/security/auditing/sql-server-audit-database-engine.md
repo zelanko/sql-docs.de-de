@@ -17,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f37e26803ebc57479d0c70dcd69dc951881c119a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 83fdbfc82724e7c3c1a41210a44e6371f9191f9e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923934"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868593"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "86923934"
  Alle Editionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützen Überwachungen auf Serverebene. Alle Editionen ab [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 unterstützen Überwachungen auf Datenbankebene. Zuvor war die Überwachung auf Datenbankebene auf die Editionen Enterprise, Developer und Evaluation beschränkt. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
->  Dieses Thema gilt für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Für [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]finden Sie Informationen unter [Erste Schritte mit SQL-Datenbanküberwachung](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/).  
+>  Dieses Thema gilt für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Für [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]finden Sie Informationen unter [Erste Schritte mit SQL-Datenbanküberwachung](/azure/azure-sql/database/auditing-overview).  
   
 ## <a name="sql-server-audit-components"></a>SQL Server Audit-Komponenten  
  Eine *Überwachung* besteht aus mehreren Elementen, die in einem einzelnen Paket für eine bestimmte Gruppe von Server- oder Datenbankaktionen zusammengefasst werden. Die Komponenten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit geben zusammen eine Ausgabe aus, die als Überwachung bezeichnet wird, ebenso wie durch die Kombination von Berichtsdefinitionen mit Grafiken und Datenelementen ein Bericht erstellt wird.  
@@ -70,7 +70,7 @@ ms.locfileid: "86923934"
 > [!IMPORTANT]  
 >  Jeder authentifizierte Benutzer kann das Windows-Anwendungsereignisprotokoll lesen und Datensätze darin schreiben. Für das Anwendungsereignisprotokoll sind niedrigere Berechtigungen als für das Windows-Sicherheitsereignisprotokoll erforderlich, daher ist es jedoch auch weniger sicher als das Windows-Sicherheitsereignisprotokoll.  
   
- Wenn Sie einen Datensatz im Windows-Sicherheitsprotokoll schreiben möchten, muss das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto der Richtlinie **Generieren von Sicherheitsüberwachungen** hinzugefügt werden. Standardmäßig sind das lokale System, der lokale Dienst und der Netzwerkdienst ein Teil dieser Richtlinie. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. Darüber hinaus muss die Sicherheitsrichtlinie **Objektzugriffsversuche überwachen** sowohl für **Erfolg** als auch für **Fehler**aktiviert sein. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] oder Windows Server 2008 können Sie die **automatisch generierte** Richtlinie mit feinerer Granularität über die Befehlszeile mit dem Überwachungsrichtlinienprogramm (**AuditPol.exe)** festlegen. Weitere Informationen zu den Schritten zum Aktivieren des Schreibens in das Windows-Sicherheitsprotokoll finden Sie unter [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Weitere Informationen über das Programm Auditpol.exe finden Sie im Knowledge Base-Artikel 921469, [How to use Group Policy to configure detailed security auditing](https://support.microsoft.com/kb/921469/)(in englischer Sprache). Die Windows-Ereignisprotokolle gelten global für das Windows-Betriebssystem. Weitere Informationen zu den Windows-Ereignisprotokollen finden Sie unter [Ereignisanzeige (Übersicht)](https://go.microsoft.com/fwlink/?LinkId=101455). Wenn Sie präzisere Berechtigungen für die Überwachung benötigen, verwenden Sie das Binärdateiziel.  
+ Wenn Sie einen Datensatz im Windows-Sicherheitsprotokoll schreiben möchten, muss das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto der Richtlinie **Generieren von Sicherheitsüberwachungen** hinzugefügt werden. Standardmäßig sind das lokale System, der lokale Dienst und der Netzwerkdienst ein Teil dieser Richtlinie. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. Darüber hinaus muss die Sicherheitsrichtlinie **Objektzugriffsversuche überwachen** sowohl für **Erfolg** als auch für **Fehler**aktiviert sein. Diese Einstellung kann mit dem Sicherheitsrichtlinien-Snap-In (secpol.msc) konfiguriert werden. In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] oder Windows Server 2008 können Sie die **automatisch generierte** Richtlinie mit feinerer Granularität über die Befehlszeile mit dem Überwachungsrichtlinienprogramm (**AuditPol.exe)** festlegen. Weitere Informationen zu den Schritten zum Aktivieren des Schreibens in das Windows-Sicherheitsprotokoll finden Sie unter [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Weitere Informationen über das Programm Auditpol.exe finden Sie im Knowledge Base-Artikel 921469, [How to use Group Policy to configure detailed security auditing](https://support.microsoft.com/kb/921469/)(in englischer Sprache). Die Windows-Ereignisprotokolle gelten global für das Windows-Betriebssystem. Weitere Informationen zu den Windows-Ereignisprotokollen finden Sie unter [Ereignisanzeige (Übersicht)](/previous-versions/windows/it-pro/windows-server-2003/cc737015(v=ws.10)). Wenn Sie präzisere Berechtigungen für die Überwachung benötigen, verwenden Sie das Binärdateiziel.  
   
  Um beim Speichern von Überwachungsinformationen in eine Datei Manipulationen zu verhindern, können Sie den Zugriff auf deren Speicherort auf folgende Weise einschränken:  
   
@@ -215,12 +215,10 @@ ms.locfileid: "86923934"
  [DDL-Trigger](../../../relational-databases/triggers/ddl-triggers.md)  
  Erklärt, wie Sie DDL-Trigger (Data Definition Language) zum Nachverfolgen von Änderungen an den Datenbanken verwenden können.  
   
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005, Sicherheit und Schutz](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005, Sicherheit und Schutz](../../../sql-server/index.yml)  
  Stellt aktuelle Informationen zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheit bereit.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Überwachung-Aktionsgruppen und -Aktionen](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [SQL Server-Überwachungsdatensätze](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
-  
-

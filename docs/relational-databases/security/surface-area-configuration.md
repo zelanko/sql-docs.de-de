@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6ad0881cbc1c00bdebdd9244b56007ed51a66b86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f439f07e8bdc374e5457c946e3b57120b0c6b0c8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736989"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869157"
 ---
 # <a name="surface-area-configuration"></a>Oberflächenkonfiguration
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "85736989"
  Verwenden Sie die Eigenschaftseinstellungen in **, um die** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs.md)]-Eigenschaft von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu ändern. Bearbeiten Sie die Konfigurationsdatei **RSReportServer.config** , um die Eigenschaften **Geplante Ereignisse und Berichtsübermittlung** und **Webdienst und HTTP-Zugriff** zu ändern.  
   
 ## <a name="command-prompt-options"></a>Befehlszeilenoptionen  
- Mit dem PowerShell-Cmdlet **Invoke-PolicyEvaluation** von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie Oberflächenkonfigurations-Richtlinien aufrufen. Weitere Informationen finden Sie unter [Verwenden der Datenbank-Engine-Cmdlets](../../relational-databases/scripting/use-the-database-engine-cmdlets.md).  
+ Mit dem PowerShell-Cmdlet **Invoke-PolicyEvaluation** von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie Oberflächenkonfigurations-Richtlinien aufrufen. Weitere Informationen finden Sie unter [Verwenden der Datenbank-Engine-Cmdlets](../../powershell/sql-server-powershell.md).  
   
 ## <a name="soap-and-service-broker-endpoints"></a>SOAP- und Service Broker-Endpunkte  
  Mithilfe der richtlinienbasierte Verwaltung können Sie Endpunkte ausschalten. Verwenden Sie zum Erstellen und Ändern der Eigenschaften von Endpunkten [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md) und [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
@@ -76,5 +76,4 @@ ms.locfileid: "85736989"
  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
   

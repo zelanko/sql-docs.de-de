@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0a774ce3918388e8df23de43a01b8b0930f9336d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89006f322ce113808deb989010b62ff9df49f04c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460222"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809466"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lektion 2: Erstellen und Verwalten von Daten in einer hierarchischen Tabelle
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "88460222"
 ## <a name="prerequisites"></a>Voraussetzungen  
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, Zugriff auf einen Server, auf dem SQL-Server ausgeführt wird, und eine AdventureWorks-Datenbank.
 
-- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installieren Sie [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Laden Sie die [AdventureWorks 2017-Beispieldatenbank](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) herunter.
+- Laden Sie die [AdventureWorks 2017-Beispieldatenbank](../../samples/adventureworks-install-configure.md) herunter.
 
-Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](../backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>Erstellen einer Tabelle mit dem Datentyp „hierarchyid“
 Im folgenden Beispiel wird eine Tabelle namens EmployeeOrg erstellt, die Mitarbeiterdaten zusammen mit ihrer Berichtshierarchie aufnimmt. Das Beispiel erstellt die neue Tabelle in der Datenbank AdventureWorks2017, was jedoch optional ist. Um das Beispiel einfach zu halten, enthält die Tabelle nur fünf Spalten:  
@@ -392,4 +392,3 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
 Die gesamte Organisationsstruktur, die Jill (sowohl Wanida als auch Kevin) berichtet hatte, berichtet jetzt Sariya.  
   
 Eine gespeicherte Prozedur für die Neuorganisation eines Bereichs einer Hierarchie finden Sie im Abschnitt „Verschieben von Teilstrukturen“ unter [Hierarchische Daten (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md#BKMK_MovingSubtrees).  
-  
