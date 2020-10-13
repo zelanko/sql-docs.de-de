@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435444"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867249"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -125,7 +125,7 @@ Wenn eine SQL Server-Instanz ausfällt, können ihre Datenbanken in einem Zustan
 > [!IMPORTANT]
 > Microsoft empfiehlt dringend, die [Schnellere Datenbankwiederherstellung (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) für Ihre Datenbank zu aktivieren, **bevor** Sie den ersten Index auf einer Enclave-fähigen Spalte verwenden, die mit zufälliger Verschlüsselung verschlüsselt wurde.
 
-Beim herkömmlichen [Datenbankwiederherstellungsprozess](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (gemäß dem [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)-Wiederherstellungsmodell) muss SQL Server zum Rückgängigmachen einer Änderung an einem Index warten, bis eine Anwendung den Spaltenverschlüsselungsschlüssel für die Spalte an die Enclave übermittelt. Dies kann sehr lange dauern. ADR reduziert die Anzahl der Vorgänge zum Rückgängigmachen von Änderungen, die verschoben werden müssen, da ein Spaltenverschlüsselungsschlüssel im Cache innerhalb der Enclave nicht verfügbar ist. Infolgedessen wird die Verfügbarkeit der Datenbank erheblich erhöht, indem die Wahrscheinlichkeit, dass eine neue Transaktion blockiert wird, minimiert wird. Wenn ADR aktiviert ist, benötigt SQL Server möglicherweise immer noch einen Spaltenverschlüsselungsschlüssel, um die Bereinigung alter Datenversionen abzuschließen, aber er erledigt dies als Hintergrundaufgabe, die sich nicht auf die Verfügbarkeit der Datenbank oder Benutzertransaktionen auswirkt. Es kann jedoch vorkommen, dass Fehlermeldungen im Fehlerprotokoll angezeigt werden, die auf fehlgeschlagene Bereinigungsvorgänge aufgrund eines fehlenden Spaltenverschlüsselungsschlüssels hinweisen.
+Beim herkömmlichen [Datenbankwiederherstellungsprozess](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (gemäß dem [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)-Wiederherstellungsmodell) muss SQL Server zum Rückgängigmachen einer Änderung an einem Index warten, bis eine Anwendung den Spaltenverschlüsselungsschlüssel für die Spalte an die Enclave übermittelt. Dies kann sehr lange dauern. ADR reduziert die Anzahl der Vorgänge zum Rückgängigmachen von Änderungen, die verschoben werden müssen, da ein Spaltenverschlüsselungsschlüssel im Cache innerhalb der Enclave nicht verfügbar ist. Infolgedessen wird die Verfügbarkeit der Datenbank erheblich erhöht, indem die Wahrscheinlichkeit, dass eine neue Transaktion blockiert wird, minimiert wird. Wenn ADR aktiviert ist, benötigt SQL Server möglicherweise immer noch einen Spaltenverschlüsselungsschlüssel, um die Bereinigung alter Datenversionen abzuschließen, aber er erledigt dies als Hintergrundaufgabe, die sich nicht auf die Verfügbarkeit der Datenbank oder Benutzertransaktionen auswirkt. Es kann jedoch vorkommen, dass Fehlermeldungen im Fehlerprotokoll angezeigt werden, die auf fehlgeschlagene Bereinigungsvorgänge aufgrund eines fehlenden Spaltenverschlüsselungsschlüssels hinweisen.
 
 ### <a name="indexes-on-enclave-enabled-columns-using-deterministic-encryption"></a>Indizes auf Enclave-fähige Spalten mit deterministischer Verschlüsselung
 
@@ -187,5 +187,3 @@ Die folgenden Einschränkungen sind für Always Encrypted mit Secure Enclaves zu
 - [Abfragen von Spalten mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-query-columns.md)
 - [Aktivieren von Always Encrypted mit Secure Enclaves für vorhandene verschlüsselte Spalten](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Erstellen und Verwenden von Indizes in Spalten mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-create-use-indexes.md)
-
-

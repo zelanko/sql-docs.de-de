@@ -12,12 +12,12 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72c4b76489628e29825a7a212232a8f4aad99fde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546990"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810459"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen
 
@@ -25,7 +25,7 @@ ms.locfileid: "89546990"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-Temporale Tabellen mit Systemversionsverwaltung für [speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) bieten eine kostengünstige Lösung für Szenarien, in denen zusätzlich zur Datensammlung mit In-Memory-OLTP-Arbeitsauslastungen [Datenüberwachung und Zeitpunktanalyse](https://msdn.microsoft.com/library/mt631669.aspx) erforderlich sind. Sie bieten hohen Transaktionsdurchsatz, sperrenfreie Parallelität und gleichzeitig die Möglichkeit, große Mengen von Verlaufsdaten zu speichern, die leicht abgefragt werden können.
+Temporale Tabellen mit Systemversionsverwaltung für [speicheroptimierte Tabellen](../in-memory-oltp/sample-database-for-in-memory-oltp.md) bieten eine kostengünstige Lösung für Szenarien, in denen zusätzlich zur Datensammlung mit In-Memory-OLTP-Arbeitsauslastungen [Datenüberwachung und Zeitpunktanalyse](./temporal-table-usage-scenarios.md) erforderlich sind. Sie bieten hohen Transaktionsdurchsatz, sperrenfreie Parallelität und gleichzeitig die Möglichkeit, große Mengen von Verlaufsdaten zu speichern, die leicht abgefragt werden können.
 
 ## <a name="overview"></a>Übersicht
 
@@ -43,7 +43,7 @@ Die folgenden Fakten über temporale Tabellen mit Systemversionsverwaltung und s
 
 - Nur dauerhafte speicheroptimierte Tabellen können der Systemversionsverwaltung unterliegen (**DURABILITY = SCHEMA_AND_DATA**).
 - Die Verlaufstabelle für speicheroptimierte Tabellen mit Systemversionsverwaltung muss datenträgerbasiert sein, unabhängig davon, ob sie vom Endbenutzer oder vom System erstellt wurde.
-- Abfragen, die nur die aktuelle (speicherinterne) Tabelle betreffen, können in [nativ kompilierten T-SQL-Modulen](https://msdn.microsoft.com/library/dn133184.aspx)verwendet werden. Temporale Abfragen mit der Klausel FOR SYSTEM TIME werden in nativ kompilierten Modulen nicht unterstützt. In Ad-hoc-Abfragen und nicht nativen Modulen wird die Verwendung der Klausel FOR SYSTEM TIME mit speicheroptimierten Tabellen unterstützt.
+- Abfragen, die nur die aktuelle (speicherinterne) Tabelle betreffen, können in [nativ kompilierten T-SQL-Modulen](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)verwendet werden. Temporale Abfragen mit der Klausel FOR SYSTEM TIME werden in nativ kompilierten Modulen nicht unterstützt. In Ad-hoc-Abfragen und nicht nativen Modulen wird die Verwendung der Klausel FOR SYSTEM TIME mit speicheroptimierten Tabellen unterstützt.
 - Wenn **SYSTEM_VERSIONING = ON**, wird automatisch eine interne speicheroptimierte Stagingtabelle erstellt, um die neuesten mit der Systemversionsverwaltung erfassten Änderungen, zu übernehmen, die das Ergebnis von Aktualisierungs- und Löschvorgängen in der aktuellen speicheroptimierten Tabelle sind.
 - Daten aus der internen speicheroptimierten Stagingtabelle werden vom asynchronen Datenleerungstask regelmäßig in die datenträgerbasierte Verlaufstabelle verschoben. Dieser Datenleerungsmechanismus hat zum Ziel, die internen Speicherpuffer bei unter 10 % der Arbeitsspeichernutzung der übergeordneten Objekte zu halten. Sie können die gesamte Arbeitsspeichernutzung der speicheroptimierten temporalen Tabelle mit Systemversionsverwaltung nachhalten, indem Sie [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md) abfragen und die Daten für die interne speicheroptimierte Stagingtabelle sowie die aktuelle temporale Tabelle zusammenfassen.
 - Sie können eine Datenleerung erzwingen, indem Sie [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)aufrufen.

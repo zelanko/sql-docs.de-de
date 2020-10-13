@@ -14,12 +14,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce93ba3d2049315911ec7297991bf7ce416fab64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7cf573478ce602b15718a54cfb71b03b243d601b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756850"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867050"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pakete für erweiterte Ereignisse von SQL Server
 
@@ -98,7 +98,7 @@ where name = 'keyword_map'
 >  Schlüsselwörter weisen eine hohe Übereinstimmung mit der aktuellen Gruppierung von Ereignissen der SQL-Ablaufverfolgung auf.  
   
 ### <a name="targets"></a>Ziele  
- Ziele sind Ereignisconsumer. Ziele verarbeiten Ereignisse entweder synchron für den Thread, der das Ereignis auslöst, oder asynchron für einen vom System bereitgestellten Thread. Erweiterte Ereignisse stellt mehrere Ziele zur Verfügung, mit denen Sie die Ereignisausgabe lenken können. Weitere Informationen finden Sie unter [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+ Ziele sind Ereignisconsumer. Ziele verarbeiten Ereignisse entweder synchron für den Thread, der das Ereignis auslöst, oder asynchron für einen vom System bereitgestellten Thread. Erweiterte Ereignisse stellt mehrere Ziele zur Verfügung, mit denen Sie die Ereignisausgabe lenken können. Weitere Informationen finden Sie unter [SQL Server Extended Events Targets](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130)).  
   
 ### <a name="actions"></a>Aktionen  
  Eine Aktion ist eine programmgesteuerte Reaktion oder Folge von Reaktionen auf ein Ereignis. Aktionen sind an ein Ereignis gebunden, und jedes Ereignis kann eine eindeutige Gruppe von Aktionen aufweisen.  
@@ -220,6 +220,5 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Engine für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [Ziele für erweiterte Ereignisse von SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
-  
+ [Ziele für erweiterte Ereignisse von SQL Server](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))  
   

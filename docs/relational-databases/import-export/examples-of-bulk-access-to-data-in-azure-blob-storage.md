@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7d05c7c6b049958f2f6280f3ee8ed2ae56ce325d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b067b668cfdf0dc42596d7fb6858240ad8d944e9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650834"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867713"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Beispiele für Massenzugriff auf Daten in Azure Blob Storage
 
@@ -40,7 +40,7 @@ Für den Massenzugriff auf Azure Blob Storage über SQL Server wird mindestens [
 Alle nachfolgenden Beispiele erfordern für die komplette Datenbank gültige Anmeldeinformationen mit einem Verweis auf eine Shared Access Signature.
 
 > [!IMPORTANT]
-> Die externe Datenquelle muss mit für die komplette Datenbank gültige Anmeldeinformationen erstellt werden, die die `SHARED ACCESS SIGNATURE`-Identität verwenden. Informationen zum Erstellen einer Shared Access Signature für das Speicherkonto finden Sie unter der Eigenschaft **Shared Access Signature** auf der Eigenschaftenseite des Speicherkontos im Azure-Portal. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Weitere Informationen finden Sie unter [ (Erstellen von datenbankweit gültigen Anmeldeinformationen)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+> Die externe Datenquelle muss mit für die komplette Datenbank gültige Anmeldeinformationen erstellt werden, die die `SHARED ACCESS SIGNATURE`-Identität verwenden. Informationen zum Erstellen einer Shared Access Signature für das Speicherkonto finden Sie unter der Eigenschaft **Shared Access Signature** auf der Eigenschaftenseite des Speicherkontos im Azure-Portal. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Weitere Informationen finden Sie unter [ (Erstellen von datenbankweit gültigen Anmeldeinformationen)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 Erstellen Sie datenbankweit gültige Anmeldeinformationen mithilfe von `IDENTITY`, die auf `SHARED ACCESS SIGNATURE` festgelegt sein muss. Verwenden Sie das SAS-Token, das für das Blobspeicherkonto generiert wurde. Vergewissern Sie sich, dass Ihr SAS-Token keine führende `?` aufweist, dass Sie mindestens über Leseberechtigung für das Objekt verfügen, das geladen werden soll, und dass der Ablaufzeitraum gültig ist (alle Datumsangaben werden in UTC-Zeit angegeben).
 

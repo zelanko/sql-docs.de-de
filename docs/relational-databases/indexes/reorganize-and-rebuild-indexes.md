@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7c29522d20a3d263c602884daa0277a8e1a2095
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: ba0eb3c9907acfe02939c49ea253869adbfc992b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753529"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867343"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Auflösen der Indexfragmentierung durch Neuorganisieren oder Neuerstellen von Indizes
 
@@ -434,4 +434,4 @@ Ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] sind Sie u. U. weiterhin
 - [Abfrageleistung für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-query-performance.md)
 - [Erste Schritte mit Columnstore für die operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 - [Columnstore-Indizes für Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)
-- [Columnstore-Indizes und Zusammenführungsrichtlinien für Zeilengruppen](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)
+- [Columnstore-Indizes und Zusammenführungsrichtlinien für Zeilengruppen](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)

@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cf9e3f2273cf4b85365d7c44f9587e02c62b984
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: d6cd4c4988b07e19c04d72efe2fc19200313f355
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227051"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866638"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE (Transparent Data Encryption)
 
@@ -51,12 +51,12 @@ TDE schützt ruhende Daten, also die Daten- und Protokolldateien. Sie entspricht
 >
 >**Verwandte Themen:**
 >
-> - [Transparent Data Encryption mit Azure SQL-Datenbank](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)
-> - [Erste Schritte mit transparenter Datenverschlüsselung (TDE) in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)
+> - [Transparent Data Encryption mit Azure SQL-Datenbank](/azure/azure-sql/database/transparent-data-encryption-tde-overview)
+> - [Erste Schritte mit transparenter Datenverschlüsselung (TDE) in SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
 > - [Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)
 > - [Aktivieren von TDE in SQL Server mithilfe von EKM](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)
 > - [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)
-> - [SQL Server Security Blog on TDE with FAQ (SQL Server Blog zu Sicherheitsthemen über TDE mit FAQ)](https://blogs.msdn.microsoft.com/sqlsecurity/2016/10/05/feature-spotlight-transparent-data-encryption-tde/)
+> - [SQL Server Security Blog on TDE with FAQ (SQL Server Blog zu Sicherheitsthemen über TDE mit FAQ)](/archive/blogs/sqlsecurity/feature-spotlight-transparent-data-encryption-tde)
 
 ## <a name="about-tde"></a>Informationen zu TDE
 
@@ -64,7 +64,7 @@ Die Verschlüsselung der Datenbankdatei erfolgt auf Seitenebene. In einer versch
 
 ### <a name="information-applicable-to-sssds"></a>Informationen zu [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]
 
-Wenn Sie TDE mit [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 verwenden, erstellt [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] automatisch das Zertifikat auf Serverebene, das in der Masterdatenbank gespeichert wird. Beim Verschieben einer TDE-Datenbank nach [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] muss die Datenbank für den Verschiebevorgang nicht entschlüsselt werden. Weitere Informationen zur Verwendung von TDE mit [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] finden Sie unter [Transparente Datenverschlüsselung in Azure SQL-Datenbank](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+Wenn Sie TDE mit [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 verwenden, erstellt [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] automatisch das Zertifikat auf Serverebene, das in der Masterdatenbank gespeichert wird. Beim Verschieben einer TDE-Datenbank nach [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] muss die Datenbank für den Verschiebevorgang nicht entschlüsselt werden. Weitere Informationen zur Verwendung von TDE mit [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] finden Sie unter [Transparente Datenverschlüsselung in Azure SQL-Datenbank](/azure/azure-sql/database/transparent-data-encryption-tde-overview).
 
 ### <a name="information-applicable-to-ssnoversion"></a>Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
@@ -324,12 +324,12 @@ Sie können TDE für eine Datenbank aktivieren, die über In-Memory OLTP-Objekte
 
 ## <a name="related-content"></a>Verwandte Inhalte
 
-[Transparent Data Encryption mit Azure SQL-Datenbank](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
-[Erste Schritte mit transparenter Datenverschlüsselung (TDE) in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
+[Transparent Data Encryption mit Azure SQL-Datenbank](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
+[Erste Schritte mit transparenter Datenverschlüsselung (TDE) in SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
 [SQL Server-Verschlüsselung](../../../relational-databases/security/encryption/sql-server-encryption.md)  
 [Verschlüsselungsschlüssel für SQL Server und SQL-Datenbank (Datenbank-Engine)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
 ## <a name="see-also"></a>Weitere Informationen
 
 [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)  
+[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)

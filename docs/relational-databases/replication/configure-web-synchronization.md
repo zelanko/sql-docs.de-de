@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0c28163aab72b8011bb4fdf4984813cbd026091
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 797c213fcba4e74cc9fe2a376985352120d5898b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455616"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868138"
 ---
 # <a name="configure-web-synchronization"></a>Websynchronisierung konfigurieren
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "88455616"
   
  **So konfigurieren Sie IIS für die Websynchronisierung**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Konfigurieren von IIS für die Websynchronisierung](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Konfigurieren von IIS für die Websynchronisierung](./configure-iis-7-for-web-synchronization.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Konfigurieren von IIS 7 für die Websynchronisierung](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
@@ -160,7 +160,7 @@ ms.locfileid: "88455616"
   
 -   Jede Veröffentlichung sollte ein separates virtuelles Verzeichnis für IIS verwenden.  
   
--   Das Konto, unter dem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung (Replisapi.dll) ausgeführt wird, ist auch das Konto, das während der Synchronisierung eine Verbindung mit dem Verleger und dem Verteiler herstellt. Dieses Konto muss einem SQL-Anmeldekonto auf dem Verleger und dem Verteiler zugeordnet werden. Weitere Informationen finden Sie im Abschnitt „Festlegen von Berechtigungen für die SQL-Replikationsüberwachung“ unter [Konfigurieren von IIS für die Websynchronisierung](../../relational-databases/replication/configure-iis-for-web-synchronization.md).  
+-   Das Konto, unter dem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung (Replisapi.dll) ausgeführt wird, ist auch das Konto, das während der Synchronisierung eine Verbindung mit dem Verleger und dem Verteiler herstellt. Dieses Konto muss einem SQL-Anmeldekonto auf dem Verleger und dem Verteiler zugeordnet werden. Weitere Informationen finden Sie im Abschnitt „Festlegen von Berechtigungen für die SQL-Replikationsüberwachung“ unter [Konfigurieren von IIS für die Websynchronisierung](./configure-iis-7-for-web-synchronization.md).  
   
 -   Sie können FTP verwenden, um die Momentaufnahme vom Verleger an den Computer mit IIS zu übermitteln. Die Momentaufnahme wird von dem Computer mit IIS immer mithilfe von HTTPS an den Abonnenten übermittelt. Weitere Informationen finden Sie unter [Übertragen von Momentaufnahmen über FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
@@ -177,5 +177,4 @@ ms.locfileid: "88455616"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Websynchronisierung für die Mergereplikation](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
-  
   

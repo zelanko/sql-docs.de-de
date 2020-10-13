@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 71145a184d13ad4ca4393cd1468293e40f0ad594
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3b4cb86e387e076ac6dab0ca86642a3cb7860cd3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896852"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867834"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85896852"
    
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector dient als Brücke zwischen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und Azure Key Vault, sodass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] von der Skalierbarkeit, hohen Leistung und hohen Verfügbarkeit des Azure Key Vault-Diensts profitieren kann. In der folgenden Abbildung ist dargestellt, wie die Schlüsselhierarchie in der EKM-Anbieterarchitektur mit Azure Key Vault und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector funktioniert.  
   
-  Azure Key Vault kann mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationen auf virtuellen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure-Computern und für lokale Server verwendet werden. Der Schlüsseltresordienst bietet auch die Option, genau gesteuerte und stark überwachte Hardwaresicherheitsmodule (HSMs) für ein höheres Maß an Schutz für asymmetrische Schlüssel zu verwenden. Weitere Informationen zum Schlüsseltresor finden Sie unter [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401).  
+  Azure Key Vault kann mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationen auf virtuellen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure-Computern und für lokale Server verwendet werden. Der Schlüsseltresordienst bietet auch die Option, genau gesteuerte und stark überwachte Hardwaresicherheitsmodule (HSMs) für ein höheres Maß an Schutz für asymmetrische Schlüssel zu verwenden. Weitere Informationen zum Schlüsseltresor finden Sie unter [Azure Key Vault](/azure/key-vault/general/basic-concepts).  
   
  Die folgende Grafik enthält eine Zusammenfassung des Prozessablaufs der erweiterbaren Schlüsselverwaltung mit Schlüsseltresor. (Die Nummern der Prozessschritte in der Grafik stimmen nicht mit den Nummern der Einrichtungsschritte, die auf die Grafik folgen, überein.)  
   
@@ -56,5 +56,4 @@ ms.locfileid: "85896852"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
-  
   

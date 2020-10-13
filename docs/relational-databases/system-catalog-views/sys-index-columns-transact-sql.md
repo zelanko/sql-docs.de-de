@@ -1,6 +1,6 @@
 ---
 description: sys.index_columns (Transact-SQL)
-title: sys. index_columns (Transact-SQL) | Microsoft-Dokumentation
+title: sys.index_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dccbbac037400f0addda79c3fc61adfb0b971f3d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e77661ec4ddd9a53a5279dd433d20ab58e4263d0
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546804"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006531"
 ---
 # <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Enthält eine Zeile pro Spalte, die Teil eines **sys. Indexes** -Indexes oder einer ungeordneten Tabelle (Heap) ist.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID des Objekts, für das der Index definiert wird|  
 |**index_id**|**int**|ID des Indexes, in dem die Spalte definiert wird|  
@@ -42,8 +42,8 @@ ms.locfileid: "89546804"
 |**key_ordinal**|**tinyint**|Ordinalzahl (auf 1 basierend) innerhalb einer Gruppe von Schlüsselspalten.<br /><br /> 0 = Keine Schlüsselspalte oder ein XML-Index, columnstore-Index oder räumlicher Index.<br /><br /> Hinweis: ein XML-Index oder räumlicher Index kann kein Schlüssel sein, da die zugrunde liegenden Spalten nicht vergleichbar sind. Dies bedeutet, dass ihre Werte nicht geordnet werden können.|  
 |**partition_ordinal**|**tinyint**|Ordinalzahl (1-basiert) innerhalb einer Gruppe von Partitionierungsspalten. Ein gruppierter columnstore-Index kann maximal 1 Partitionierungsspalte aufweisen.<br /><br /> 0 = Keine Partitionierungsspalte.|  
 |**is_descending_key**|**bit**|1 = Indexschlüsselspalte hat eine absteigende Sortierreihenfolge.<br /><br /> 0 = Indexschlüsselspalte hat eine aufsteigende Sortierreihenfolge, oder die Spalte ist Teil eines columnstore-Indexes oder Hashindexes.|  
-|**is_included_column**|**bit**|1 = Spalte ist eine Nichtschlüsselspalte, die dem Index mit der CREATE INDEX INCLUDE-Klausel hinzugefügt wurde, oder die Spalte ist Teil eines columnstore-Indexes.<br /><br /> 0 = Spalte ist keine eingeschlossene Spalte.<br /><br /> Spalten, die implizit hinzugefügt werden, da Sie Teil des Clustering-Schlüssels sind, sind nicht in **sys. index_columns**aufgeführt.<br /><br /> Spalten, die implizit hinzugefügt wurden, da sie eine Partitionierungsspalte sind, werden als 0 zurückgegeben.| 
-|**column_store_order_ordinal**</br> Gilt für: Azure SQL Data Warehouse (Vorschau)|**tinyint**|Ordinalzahl (1-basiert) innerhalb des Satzes von Order-Spalten in einem geordneten gruppierten columnstore--Index.|
+|**is_included_column**|**bit**|1 = Spalte ist eine Nichtschlüsselspalte, die dem Index mit der CREATE INDEX INCLUDE-Klausel hinzugefügt wurde, oder die Spalte ist Teil eines columnstore-Indexes.<br /><br /> 0 = Spalte ist keine eingeschlossene Spalte.<br /><br /> Spalten, die implizit hinzugefügt werden, da Sie Teil des Clustering-Schlüssels sind, sind nicht in **sys.index_columns**aufgeführt.<br /><br /> Spalten, die implizit hinzugefügt wurden, da sie eine Partitionierungsspalte sind, werden als 0 zurückgegeben.| 
+|**column_store_order_ordinal**</br> Gilt für: Azure Synapse Analytics (Vorschau)|**tinyint**|Ordinalzahl (1-basiert) innerhalb des Satzes von Order-Spalten in einem geordneten gruppierten columnstore--Index.|
   
 ## <a name="permissions"></a>Berechtigungen
 

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_io_virtual_file_stats (Transact-SQL)
-title: sys. dm_io_virtual_file_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_io_virtual_file_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330c14ca06fab7a67c580c1aa1337d1d5c7699cb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 70311ec54cd2eb49894751a2891259800552afc6
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532466"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005619"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89532466"
   Gibt E/A-Statistiken für Daten- und Protokolldateien zurück. Diese dynamische Verwaltungs Sicht ersetzt die [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) Funktion.  
   
 > [!NOTE]  
->  Um dies in aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_io_virtual_file_stats**. 
+>  Um dies in aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_io_virtual_file_stats**. 
 
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ sys.dm_io_virtual_file_stats (
 ```  
 
 ```  
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 sys.dm_pdw_nodes_io_virtual_file_stats
 ```
@@ -74,7 +74,7 @@ Die ID der Datei. *file_id* ist vom Datentyp int und hat keinen Standardwert. Ei
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Datenbankname.</br></br>Bei SQL Data Warehouse handelt es sich hierbei um den Namen der Datenbank, die auf dem Knoten gespeichert ist, der durch pdw_node_id identifiziert wird. Jeder Knoten verfügt über eine tempdb-Datenbank, die über 13 Dateien verfügt. Jeder Knoten verfügt auch über eine Datenbank pro Verteilung, und jede Verteilungs Datenbank verfügt über fünf Dateien. Wenn z. b. jeder Knoten vier Verteilungen enthält, werden in den Ergebnissen 20 Verteilungsdaten Bank Dateien pro pdw_node_id angezeigt. 
 |**database_id**|**smallint**|ID der Datenbank.|  
@@ -89,11 +89,11 @@ Die ID der Datei. *file_id* ist vom Datentyp int und hat keinen Standardwert. Ei
 |**io_stall**|**bigint**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass E/A-Vorgänge für die Datei abgeschlossen werden.|  
 |**size_on_disk_bytes**|**bigint**|Anzahl von Bytes, die auf dem Datenträger für diese Datei verwendet werden. Für Sparsedateien ist dies die tatsächliche Anzahl von Bytes auf dem Datenträger, die für Datenbankmomentaufnahmen verwendet werden.|  
 |**file_handle**|**varbinary**|Windows-Dateihandle für diese Datei.|  
-|**io_stall_queued_read_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br /> Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Lesevorgänge eingeführt wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [sys. dm_resource_governor_resource_pools &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_read_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br /> Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Lesevorgänge eingeführt wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [sys.dm_resource_governor_resource_pools &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br />  Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Schreibvorgänge eingeführt wird. Lässt keine NULL-Werte zu.|
 |**pdw_node_id**|**int**|**Gilt für:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Der Bezeichner des Knotens für die Verteilung.
  
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 Die Indikatoren werden so initialisiert, dass Sie bei jedem Start des SQL Server-Dienstanbieter (MSSQLSERVER) leer sind.
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -114,7 +114,7 @@ GO
   
 ### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Statistik für Datei in tempdb zurückgeben
 
-**Gilt für:** Azure SQL Data Warehouse
+**Gilt für:** Azure-Synapse-Analyse
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 

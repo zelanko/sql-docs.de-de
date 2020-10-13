@@ -18,12 +18,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4aeb545a92ef4eca7bdb7542b951021336de9800
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d422c78227a4fcfa6ef26bb39197a8639eeb98ba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455440"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866578"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Erstellen, Ändern und Löschen von räumlichen Indizes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "88455440"
   
 4.  Klicken Sie im Dialogfeld **räumliche Indizes** auf **Hinzufügen**.  
   
-5.  Wählen Sie den neuen Index aus der Liste **Ausgewählter räumlicher Index** aus, und legen Sie im Raster rechts die Eigenschaften für den räumlichen Index fest. Informationen zu den Eigenschaften finden Sie unter [Dialogfeld 'Räumliche Indizes' &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
+5.  Wählen Sie den neuen Index aus der Liste **Ausgewählter räumlicher Index** aus, und legen Sie im Raster rechts die Eigenschaften für den räumlichen Index fest. Informationen zu den Eigenschaften finden Sie unter [Dialogfeld 'Räumliche Indizes' &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md).  
   
   
 ###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> So ändern Sie einen räumlichen Index  
@@ -157,5 +157,4 @@ ms.locfileid: "88455440"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)  
-  
   

@@ -17,22 +17,22 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: b62bccc5d3633a4f9f69416a49dfc3511c8370e2
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: ceaed72b9a7005cadc20e185099105282693cc95
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809232"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006037"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL-Datenbank)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
-Gibt ggf. die Edition (Dienst Ebene), das Dienst Ziel (Tarif) und den Namen des elastischen Pools für eine Azure SQL-Datenbank oder eine Azure SQL Data Warehouse zurück. Wenn eine Anmeldung an der Masterdatenbank in einem Azure SQL-Datenbank-Server besteht, werden Informationen zu allen Datenbanken zurückgegeben. Für Azure SQL Data Warehouse müssen Sie über eine Verbindung mit der Masterdatenbank verfügen.  
+Gibt die Edition (Dienst Ebene), das Dienst Ziel (Tarif) und den Namen des elastischen Pools (sofern vorhanden) für eine Azure SQL-Datenbank oder eine Azure-Synapse-Analyse zurück. Wenn eine Anmeldung an der Masterdatenbank in einem Azure SQL-Datenbank-Server besteht, werden Informationen zu allen Datenbanken zurückgegeben. Für Azure Synapse Analytics müssen Sie mit der Masterdatenbank verbunden sein, um eine Anmeldung erstellen zu können.  
   
   
  Informationen zu den Preisen finden Sie unter [SQL-Daten Bankoptionen und-Leistung: Preis](https://azure.microsoft.com/pricing/details/sql-database/) -und [SQL Data Warehouse Preise](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)für SQL-Datenbank.  
   
- Informationen zum Ändern der Dienst Einstellungen finden Sie unter [ALTER DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/alter-database-transact-sql.md) und [ALTER DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
+ Informationen zum Ändern der Dienst Einstellungen finden Sie unter [ALTER DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/alter-database-transact-sql.md) und [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
   
  Die sys.database_service_objectives Sicht enthält die folgenden Spalten.  
   

@@ -13,12 +13,12 @@ ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d575705919219b038c3fd98126c0b751bf496a57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fef4e9070349168d64ddb7a5a19e4e37f0a9f027
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88383967"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866762"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88383967"
   
  Die Showplan XML Statistics Profile-Ereignisklasse zeigt vollständige Kompilierzeitdaten an, sodass Ablaufverfolgungen, in denen diese Ereignisklasse enthalten ist, zu einer deutlich geringeren Systemleistung führen können. Beschränken Sie die Verwendung dieser Ereignisklasse auf Ablaufverfolgungen, die für kurze Zeit spezielle Probleme überwachen, um die Leistungsbeeinträchtigung möglichst gering zu halten.  
   
- Mit Showplan XML-Dokumenten ist ein Schema verknüpft. Dieses Schema finden Sie auf der [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkId=41740). Außerdem ist es Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation.  
+ Mit Showplan XML-Dokumenten ist ein Schema verknüpft. Dieses Schema finden Sie auf der [Microsoft-Website](/previous-versions/aa720019(v=vs.71)). Außerdem ist es Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation.  
   
 ## <a name="showplan-xml-statistics-profile-event-class-data-columns"></a>Datenspalten der Showplan XML Statistics Profile-Ereignisklasse  
   
@@ -64,5 +64,4 @@ ms.locfileid: "88383967"
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Referenz zu logischen und physischen Showplanoperatoren](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
-  
   

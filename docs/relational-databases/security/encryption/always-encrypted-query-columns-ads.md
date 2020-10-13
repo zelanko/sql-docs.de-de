@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d039034a5c76f5f7e98b2eed84f92c27a039832d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493823"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866695"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Abfragen von Spalten mithilfe von Always Encrypted mit Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-In diesem Artikel wird beschrieben, wie Sie mit [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) mithilfe von [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) verschlüsselte Spalten abfragen. Azure Data Studio bietet folgende Möglichkeiten:
+In diesem Artikel wird beschrieben, wie Sie mit [Azure Data Studio](../../../azure-data-studio/what-is.md) mithilfe von [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) verschlüsselte Spalten abfragen. Azure Data Studio bietet folgende Möglichkeiten:
 - Abrufen von in verschlüsselten Spalten gespeicherten Chiffretextwerten 
 - Abrufen von in verschlüsselten Spalten gespeicherten Klartextwerten  
 - Senden von Klartextwerten an verschlüsselte Spalten (z.B. in `INSERT`- oder `UPDATE`-Anweisungen und als Nachschlageparameter von `WHERE`-Klauseln in `SELECT`-Anweisungen). 
@@ -113,7 +113,7 @@ So aktivieren (oder deaktivieren) Sie Always Encrypted:
 
 ## <a name="parameterization-for-always-encrypted"></a>Parametrisierung für Always Encrypted
 
-„Parametrisierung für Always Encrypted“ ist ein Feature in Azure Data Studio Version 18.1. und höher, das Transact-SQL-Variablen automatisch in Abfrageparameter ([SqlParameter Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)-Instanzen) konvertiert. Dies ermöglicht dem zugrunde liegenden [Microsoft .NET-Datenanbieter für SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) das Erkennen von Daten für verschlüsselte Spalten sowie das Verschlüsseln dieser Daten, ehe sie an die Datenbank gesendet werden.
+„Parametrisierung für Always Encrypted“ ist ein Feature in Azure Data Studio Version 18.1. und höher, das Transact-SQL-Variablen automatisch in Abfrageparameter ([SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter)-Instanzen) konvertiert. Dies ermöglicht dem zugrunde liegenden [Microsoft .NET-Datenanbieter für SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) das Erkennen von Daten für verschlüsselte Spalten sowie das Verschlüsseln dieser Daten, ehe sie an die Datenbank gesendet werden.
   
 Ohne Parametrisierung übergibt der Microsoft .NET-Datenanbieter für SQL Server jede Anweisung, die Sie im Abfragefenster erstellen, als nicht parametrisierte Abfrage. Wenn die Abfrage Literale oder Transact-SQL-Variablen für verschlüsselte Spalten enthält, kann der .NET Framework-Datenanbieter für SQL Server diese nicht erkennen und verschlüsseln, ehe die Abfrage an die Datenbank gesendet wird. Daher misslingt die Abfrage aufgrund eine Typkonflikts (zwischen dem Literal oder der Transact-SQL-Variablen in Klartext und der verschlüsselten Spalte). Die folgende Abfrage misslingt beispielsweise ohne Parametrisierung, sofern die Spalte `SSN` verschlüsselt ist.   
 
@@ -180,7 +180,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio nutzt Intellisense, um Sie zu informieren, welche Variablen erfolgreich parametrisiert werden können und welche Parametrisierungsversuche fehlschlagen (samt Grund).   
 
-Eine Deklaration einer Variablen, die erfolgreich parametrisiert werden kann, wird im Abfragefenster mit einer Unterstreichung gekennzeichnet, die auf eine zugrunde liegende Informationsmeldung verweist. Wenn Sie mit der Maus auf eine Deklarationsanweisung zeigen, die mit einer zugrunde liegenden Informationsmeldung gekennzeichnet wurde, wird die Meldung mit den Ergebnissen des Parametrisierungsvorgangs, einschließlich der Werte der Haupteigenschaften des resultierenden [SqlParameter Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)-Objekts, angezeigt (die Variable ist zugeordnet zu: [SqlDbType](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale) und [SqlValue](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Eine vollständige Liste aller Variablen, die erfolgreich parametrisiert wurden, finden Sie in der Ansicht **Probleme**. Um die Ansicht **Probleme** zu öffnen, wählen Sie **Ansicht** > **Probleme** aus.    
+Eine Deklaration einer Variablen, die erfolgreich parametrisiert werden kann, wird im Abfragefenster mit einer Unterstreichung gekennzeichnet, die auf eine zugrunde liegende Informationsmeldung verweist. Wenn Sie mit der Maus auf eine Deklarationsanweisung zeigen, die mit einer zugrunde liegenden Informationsmeldung gekennzeichnet wurde, wird die Meldung mit den Ergebnissen des Parametrisierungsvorgangs, einschließlich der Werte der Haupteigenschaften des resultierenden [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter)-Objekts, angezeigt (die Variable ist zugeordnet zu: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale) und [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Eine vollständige Liste aller Variablen, die erfolgreich parametrisiert wurden, finden Sie in der Ansicht **Probleme**. Um die Ansicht **Probleme** zu öffnen, wählen Sie **Ansicht** > **Probleme** aus.    
 
 
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4479093323ceb6bb235fd1adab6eed7d796774af
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197263"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810553"
 ---
 # <a name="utility-explorer-f1-help"></a>Hilfsprogramm-Explorer (F1-Hilfe)
 
@@ -68,7 +68,7 @@ ms.locfileid: "86197263"
   
  Beachten Sie, dass der entsprechende Knoten im Hilfsprogramm-Explorer-Navigationsbereich mit **(gefiltert)** angefügt wird, wenn Sie auf einen Link für eine Auslastungskategorie klicken, d.h., **Verwaltete Instanzen** wird als **Verwaltete Instanzen (gefiltert)** bezeichnet. Um Filtereinstellungen anzuzeigen, klicken Sie mit der rechten Maustaste auf den Knoten im Navigationsbereich, wählen Sie **Filter**aus, und klicken Sie dann auf **Filtereinstellungen**. Um Filtereinstellungen zu löschen, klicken Sie mit der rechten Maustaste auf den Knoten im Navigationsbereich, wählen **Filter** aus und klicken dann auf **Filter entfernen**.  
   
- Weitere Informationen zum Anzeigen des Zustands einzelner Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bzw. zum Anzeigen oder Ändern der Einstellungen für die Richtlinienkonfiguration finden Sie unter [Details zu verwalteten Instanzen &#40;SQL Server-Hilfsprogramm&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2).  
+ Weitere Informationen zum Anzeigen des Zustands einzelner Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bzw. zum Anzeigen oder Ändern der Einstellungen für die Richtlinienkonfiguration finden Sie unter [Details zu verwalteten Instanzen &#40;SQL Server-Hilfsprogramm&#41;]().  
   
  Hilfsprogrammzusammenfassung  
  Zeigt die Anzahl der verwalteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Anzahl der Datenebenenanwendungen an, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verwaltet werden.  
@@ -96,10 +96,10 @@ ms.locfileid: "86197263"
   
 -   Keine Daten verfügbar – Für Datenebenenanwendungen sind keine Daten verfügbar, weil die verwaltete Instanz von SQL Server, die die Datenebenenanwendung enthält, keine Daten übermittelt.  
   
- Der ausführliche Status für Zustandsparameter kann an verschiebbaren Indikatoren abgelesen werden. Der Teil rechts neben den verschiebbaren Indikatoren zeigt an, wie viele Datenebenenanwendungen in jeder Statuskategorie enthalten sind. Weitere Informationen zum Anzeigen des Zustands einzelner Datenebenenanwendungen bzw. zum Anzeigen oder Ändern der Richtlinienkonfigurationseinstellungen finden Sie unter [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ Der ausführliche Status für Zustandsparameter kann an verschiebbaren Indikatoren abgelesen werden. Der Teil rechts neben den verschiebbaren Indikatoren zeigt an, wie viele Datenebenenanwendungen in jeder Statuskategorie enthalten sind. Weitere Informationen zum Anzeigen des Zustands einzelner Datenebenenanwendungen bzw. zum Anzeigen oder Ändern der Richtlinienkonfigurationseinstellungen finden Sie unter [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130)).  
   
  Verlauf der Auslastung des Hilfsprogrammspeichers  
- Der Verlauf der Auslastung wird in einem Zeitdiagramm unten im Dashboard des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms angezeigt. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+ Der Verlauf der Auslastung wird in einem Zeitdiagramm unten im Dashboard des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms angezeigt. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) .  
   
  Verwenden Sie die Optionsfelder links neben dem Anzeigebereich, um den Berichtszeitraum für das Diagramm zu ändern.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "86197263"
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
- Um auf Filteroptionen für die Listenansicht des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste auf den Knoten **Bereitgestellte Datenebenenanwendungen** im Navigationsbereich des Hilfsprogramm-Explorers, und wählen Sie **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Bereitgestellte Datenebenenanwendungen** im Hilfsprogramm-Explorer die Beschriftung **Bereitgestellte Datenebenenanwendungen (gefiltert)** . Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Um auf Filteroptionen für die Listenansicht des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste auf den Knoten **Bereitgestellte Datenebenenanwendungen** im Navigationsbereich des Hilfsprogramm-Explorers, und wählen Sie **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Bereitgestellte Datenebenenanwendungen** im Hilfsprogramm-Explorer die Beschriftung **Bereitgestellte Datenebenenanwendungen (gefiltert)** . Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](../../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  In den folgenden Spalten werden standardmäßig Zustandsinformationen zu den einzelnen Datenebenenanwendungen angezeigt.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "86197263"
   
 -   Recovery Model (Wiederherstellungsmodus): (Simple (Einfach), Full (Vollständig) oder Bulk-Logged (Massenprotokolliert))  
   
--   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) .  
   
  Registerkarte CPU-Auslastung  
  Die Registerkarte CPU-Auslastung enthält Vergleichsdiagramme mit Verlaufsdaten für die Datenebenenanwendung und die CPU-Auslastung des Computers.  
@@ -197,7 +197,7 @@ ms.locfileid: "86197263"
 -   1 Jahr, in Intervallen von 1 Monat  
   
  Registerkarte Speicherauslastung  
- Die Registerkarte Speicherauslastung verfügt über eine Strukturansicht, in der Details zur Speicherauslastung für Datenbankdateien und Protokolldateien angezeigt werden, die zu der in der Listenansicht ausgewählten Datenebenenanwendung gehören. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+ Die Registerkarte Speicherauslastung verfügt über eine Strukturansicht, in der Details zur Speicherauslastung für Datenbankdateien und Protokolldateien angezeigt werden, die zu der in der Listenansicht ausgewählten Datenebenenanwendung gehören. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) .  
   
  Die Anzeige kann nach Dateigruppe oder nach Volume gruppiert werden. Um die Strukturansicht für Dateigruppen zu verwenden, aktivieren Sie im Bereich **Dateien gruppieren nach** das Optionsfeld **Dateigruppe** .  
   
@@ -256,7 +256,7 @@ ms.locfileid: "86197263"
   
 -   Recovery Model (Wiederherstellungsmodus): (Simple (Einfach), Full (Vollständig) oder Bulk-Logged (Massenprotokolliert))  
   
--   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Details zu verwalteten Instanzen (SQL Server-Hilfsprogramm)
  Die Informationen in der Listenansicht Verwaltete Instanzen des Hilfsprogramm-Explorers enthalten Auslastungsdaten für einzelne Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Verlaufsdaten zur CPU-Auslastung sowie Details zur Speicherplatzauslastung auf Dateiebene. Zudem können Sie hier Richtlinienschwellenwerte anzeigen und aktualisieren. Richtlinienschwellenwerte können auf der Ebene von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen, per Computer, für Datenbank- und Protokolldateien sowie auf der Ebene von Speichervolumes gesteuert werden. Darüber hinaus können Sie Eigenschaftendetails für einzelne verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anzeigen.  
@@ -275,7 +275,7 @@ ms.locfileid: "86197263"
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
- Um auf Filteroptionen für die Listenansicht des Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste im Navigationsbereich des Hilfsprogramm-Explorers auf den Knoten **Verwaltete Instanzen** und wählen **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Verwaltete Instanzen** im Hilfsprogramm-Explorer die Beschriftung **Verwaltete Instanzen (gefiltert)** . Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Um auf Filteroptionen für die Listenansicht des Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste im Navigationsbereich des Hilfsprogramm-Explorers auf den Knoten **Verwaltete Instanzen** und wählen **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Verwaltete Instanzen** im Hilfsprogramm-Explorer die Beschriftung **Verwaltete Instanzen (gefiltert)** . Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](../../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  Die folgenden Spalten enthalten standardmäßig Zustandsinformationen zu den einzelnen verwalteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -319,7 +319,7 @@ ms.locfileid: "86197263"
   
 -   Sprache:  
   
--   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) .  
   
  Registerkarte CPU-Auslastung  
  Die Registerkarte CPU-Auslastung enthält Vergleichsdiagramme mit Verlaufsdaten für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und die CPU-Auslastung des Computers.  
@@ -337,7 +337,7 @@ ms.locfileid: "86197263"
 -   1 Jahr, in Intervallen von 1 Monat  
   
  Registerkarte Speicherauslastung  
- Die Registerkarte Speicherauslastung verfügt über eine Strukturansicht, in der Details zur Speicherauslastung angezeigt werden. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+ Die Registerkarte Speicherauslastung verfügt über eine Strukturansicht, in der Details zur Speicherauslastung angezeigt werden. Die Zeitangaben zeigen das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) .  
   
  Die Informationen in der Anzeige können nach Datenbank oder nach Volume gruppiert werden. Um die Datenbankstrukturansicht zu verwenden, aktivieren Sie im Auswahlbereich **Dateien gruppieren nach** das Optionsfeld **Datenbank** . Um den Status der Speicherauslastung für einzelne Datenbankdateien anzuzeigen, klicken Sie neben einem Datenbanknamen in der Strukturansicht auf das Pluszeichen. Die aufgeführten Datenbankdateien enthalten alle System- und Benutzerdatenbanken, die der verwalteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angehören, die Sie in der Listenansicht ausgewählt haben.  
   
@@ -513,6 +513,5 @@ Verwenden Sie die Registerkarten der Hilfsprogrammverwaltung zum Verwalten von R
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [Problembehandlung beim SQL Server-Hilfsprogramm](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

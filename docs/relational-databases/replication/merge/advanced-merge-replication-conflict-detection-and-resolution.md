@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a031fdb7c4a71c26990d26a524e5a75ac784565
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a894198a994f98f9bcb2586c9b1b6a1428f562c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901869"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867915"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Erweiterte Konflikterkennung und -lösung bei der Mergereplikation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +124,7 @@ Lösen von Konflikten bei einer Mergereplikation
  Die einfachste Möglichkeit zum Anzeigen von Konflikten ist die Verwendung des Replikationskonflikt-Viewers, der ab [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] verfügbar ist ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet ebenfalls gespeicherte Prozeduren, mit denen die Konflikttabellen abgefragt werden können). Der Konflikt-Viewer und die interaktive Konfliktlöser sind ähnliche Tools, im interaktiven Konfliktlöser können Sie jedoch bei der Synchronisierung Konflikte lösen, während der Konflikt-Viewer für die Anzeige von Konflikten nach der Konfliktlösung bestimmt ist. Wenn die Konfliktmetadaten weiterhin in den Systemtabellen verfügbar sind (Konfliktmetadaten werden standardmäßig 14 Tage lang beibehalten), können Sie die Ergebnisse der Konfliktlösung überschreiben. Wenn jedoch regelmäßig ein direktes Eingreifen erforderlich ist, sollten Sie die Verwendung des interaktiven Konfliktlösers in Betracht ziehen.  
   
 > [!NOTE]  
->  Konflikte, die logische Datensätze einschließen, werden im Konflikt-Viewer nicht angezeigt. Mit den gespeicherten Replikationsprozeduren können Informationen zu diesen Konflikten angezeigt werden. Weitere Informationen finden Sie unter [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+>  Konflikte, die logische Datensätze einschließen, werden im Konflikt-Viewer nicht angezeigt. Mit den gespeicherten Replikationsprozeduren können Informationen zu diesen Konflikten angezeigt werden. Weitere Informationen finden Sie unter [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
  Im Konflikt-Viewer werden Informationen aus drei Systemtabellen angezeigt:  
   
@@ -148,9 +148,8 @@ Lösen von Konflikten bei einer Mergereplikation
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Synchronisieren von Daten](../../../relational-databases/replication/synchronize-data.md)  
-  
   

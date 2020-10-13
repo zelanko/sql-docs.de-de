@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 6421c442c5cbb45b9e076d3353abcbad6217fa53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0524aa4738ae7003d763422c20db17e39e89e964
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896791"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867844"
 ---
 # <a name="extensible-key-management-ekm"></a>Erweiterbare Schlüsselverwaltung (Extensible Key Management, EKM)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85896791"
   
  Durch die erweiterbare Schlüsselverwaltung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können EKM-/HSM-Drittanbieter ihre Module bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]registrieren. Nach der Registrierung können [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Benutzer die auf den EKM-Modulen gespeicherten Verschlüsselungsschlüssel verwenden. Auf diese Weise kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die von diesen Modulen unterstützten erweiterten Verschlüsselungsfunktionen wie die Massenverschlüsselung und -entschlüsselung und Schlüsselverwaltungsfunktionen wie die Schlüsselablaufzeit und die Schlüsselrotation nutzen.  
   
- Beim Ausführen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einer Azure-VM können von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Schlüssel verwendet werden, die im [Azure-Schlüsseltresor](https://go.microsoft.com/fwlink/?LinkId=521401)gespeichert sind. Weitere Informationen finden Sie im Thema [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+ Beim Ausführen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einer Azure-VM können von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Schlüssel verwendet werden, die im [Azure-Schlüsseltresor](/azure/key-vault/general/basic-concepts)gespeichert sind. Weitere Informationen finden Sie im Thema [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 ## <a name="ekm-configuration"></a>EKM-Konfiguration  
  Die erweiterbare Schlüsselverwaltung wird nicht in jeder Edition von [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -169,5 +169,4 @@ DECRYPTION BY EKM_AKey1
  [Sichern eines Datenbank-Hauptschlüssels](../../../relational-databases/security/encryption/back-up-a-database-master-key.md)   
  [Wiederherstellen eines Datenbank-Hauptschlüssels](../../../relational-databases/security/encryption/restore-a-database-master-key.md)   
  [Erstellen identischer symmetrischer Schlüssel auf zwei Servern](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
-  
   

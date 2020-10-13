@@ -12,12 +12,12 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed92a4bce43ec105992bfd41dbde825d72fc2a22
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784011"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867599"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Übersicht über die Schlüsselverwaltung für Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ Wenn Always Encrypted-Schlüssel ohne Rollentrennung verwaltet werden, kann eine
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>Tools zum Verwalten von Always Encrypted-Schlüsseln
 
-Always Encrypted-Schlüssel können mithilfe von [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) und [PowerShell](../../scripting/sql-server-powershell.md)verwaltet werden:
+Always Encrypted-Schlüssel können mithilfe von [SQL Server Management Studio (SSMS)](../../../ssms/sql-server-management-studio-ssms.md) und [PowerShell](../../../powershell/sql-server-powershell.md)verwaltet werden:
 
 - **SQL Server Management Studio (SSMS)** stellt die Dialogfelder und Assistenten bereit, die Aufgaben im Zusammenhang mit dem Zugriff auf den Schlüsselspeicher und die Datenbank kombinieren. SSMS unterstützt die Rollentrennung daher nicht, vereinfacht jedoch das Konfigurieren Ihrer Schlüssel. Weitere Informationen zum Verwalten von Schlüsseln mithilfe von SSMS finden Sie hier:
     - [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
@@ -101,9 +101,5 @@ Ihr Schlüsselverwaltungsprozess muss sicherstellen, dass die Spaltenhauptschlü
 
 ## <a name="see-also"></a>Weitere Informationen
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Tutorial zum Always Encrypted-Assistenten (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
-- [Tutorial zum Always Encrypted-Assistenten (Windows-Zertifikatspeicher)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
-
-
-
+- [Tutorial zum Always Encrypted-Assistenten (Azure Key Vault)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)
+- [Tutorial zum Always Encrypted-Assistenten (Windows-Zertifikatspeicher)](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

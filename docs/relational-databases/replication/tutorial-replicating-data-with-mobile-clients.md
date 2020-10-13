@@ -14,18 +14,18 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4ffeb0300e8211110ba3a8b303ff21b230626b9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720692"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866911"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Die Mergereplikation stellt eine geeignete Lösung für das Problem des Verschiebens von Daten zwischen einem zentralen Server und mobilen Clients dar, die nur gelegentlich miteinander verbunden sind. Mithilfe der Replikations-Assistenten können Sie eine Mergereplikationstopologie auf einfache Weise konfigurieren und verwalten. 
 
-In diesem Lernprogramm wird die Konfiguration einer Replikationstopologie für mobile Clients erläutert. Weitere Informationen zur Mergereplikation finden Sie unter [Mergereplikation](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).
+In diesem Lernprogramm wird die Konfiguration einer Replikationstopologie für mobile Clients erläutert. Weitere Informationen zur Mergereplikation finden Sie unter [Mergereplikation](./merge/merge-replication.md).
   
 ## <a name="what-you-will-learn"></a>Lernziele  
 In diesem Tutorial werden mithilfe einer Mergereplikation Daten aus einer zentralen Datenbank für mindestens einen mobilen Benutzer veröffentlicht, sodass jeder Benutzer eine eindeutig gefilterte Teilmenge von Daten erhält. 
@@ -48,14 +48,14 @@ Für dieses Tutorial benötigen Sie SQL Server, SQL Server Management Studio (SS
   
 - Installieren Sie auf dem Abonnentenserver (Ziel) eine beliebige Edition von SQL Server mit Ausnahme von SQL Server Express oder SQL Server Compact. Die Veröffentlichung, die in diesem Tutorial erstellt wird, unterstützt weder SQL Server Express noch SQL Server Compact. 
 
-- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installieren Sie [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Laden Sie die [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+- Laden Sie die [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Wiederherstellen einer Datenbank](../backup-restore/restore-a-database-backup-using-ssms.md).  
  
   
 >[!NOTE]
 > - Die Replikation wird für SQL Server-Instanzen, zwischen denen mehr als zwei Versionen liegen, nicht unterstützt. Weitere Informationen finden Sie unter [In der Replikationstopologie unterstützte SQL Server-Versionen](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
-> - Sie müssen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger und dem Abonnenten herstellen. Dazu verwenden Sie einen Anmeldenamen eines Mitglieds der festen Serverrolle **sysadmin** ist. Weitere Informationen zu dieser Rolle finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - Sie müssen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger und dem Abonnenten herstellen. Dazu verwenden Sie einen Anmeldenamen eines Mitglieds der festen Serverrolle **sysadmin** ist. Weitere Informationen zu dieser Rolle finden Sie unter [Rollen auf Serverebene](../security/authentication-access/server-level-roles.md).  
   
   
 **Ungefähre Dauer dieses Tutorials: 60 Minuten**  
@@ -91,7 +91,7 @@ In diesem Abschnitt erfahren Sie, wie Sie mithilfe von [!INCLUDE[ssManStudioFull
    >
    > Wenn Sie einen früheren Build als SQL Server 2017 verwenden, wird unten auf dem Bildschirm eine Meldung angezeigt, in der Sie darüber informiert werden, dass möglicherweise Daten verloren gehen können, wenn Sie diese Spalte in einer bidirektionalen Replikation verwenden. Sie können diese Meldung für dieses Tutorial ignorieren. Trotzdem sollte dieser Datentyp nur in einer Produktionsumgebung repliziert werden, wenn Sie den unterstützten Build verwenden.
    > 
-   > Weitere Informationen zum Replizieren des Datentyps **hierarchyid** finden Sie unter [Verwenden von hierarchyid-Spalten in replizierten Tabellen](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
+   > Weitere Informationen zum Replizieren des Datentyps **hierarchyid** finden Sie unter [Verwenden von hierarchyid-Spalten in replizierten Tabellen](../../t-sql/data-types/hierarchyid-data-type-method-reference.md#using-hierarchyid-columns-in-replicated-tables).
     
   
 7. Klicken Sie auf der Seite **Tabellenzeilen filtern** auf **Hinzufügen**, und klicken Sie anschließend auf **Filter hinzufügen**.  
@@ -281,7 +281,6 @@ Weitere Informationen finden Sie unter
 - [Initialisieren eines Abonnements mit einer Momentaufnahme](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [Synchronisieren von Daten](../../relational-databases/replication/synchronize-data.md)  
 - [Synchronisieren eines Pullabonnements](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
-  
   
   
   

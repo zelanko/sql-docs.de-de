@@ -12,12 +12,12 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5711115843a32b18a1a16f50cd8eaf79fefb2f63
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ab153d8d28e2f8005f0b0a370ffa4def42f81c58
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537081"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868028"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demo: Leistungsverbesserungen von In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ go
   
 2.  Wenn Sie eine neue Testdatenbank erstellen möchten, verwenden Sie das [Azure-Portal](https://portal.azure.com) , und erstellen Sie eine Datenbank namens **imoltp**.  
   
- Wenn Sie Anleitungen zur Erstellung einer Testdatenbank mit dem Azure-Portal suchen, lesen Sie [Erste Schritte mit Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
+ Wenn Sie Anleitungen zur Erstellung einer Testdatenbank mit dem Azure-Portal suchen, lesen Sie [Erste Schritte mit Azure SQL-Datenbank](/azure/azure-sql/database/single-database-create-quickstart).  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Schritt 2: Erstellen von speicheroptimierten Tabellen und NCSProc  
  In diesem Schritt wird die Erstellung einer speicheroptimierten Tabelle und einer nativ kompilierten gespeicherten Prozedur (NCSProc) erläutert. Gehen Sie folgendermaßen vor:  
@@ -198,5 +198,4 @@ go
   
 ## <a name="see-also"></a>Weitere Informationen  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

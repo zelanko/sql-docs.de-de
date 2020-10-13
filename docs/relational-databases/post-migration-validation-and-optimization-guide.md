@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 6af3d91a76dd1964b7ef2e929392f85eb4b9245c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482483"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891130"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
 
@@ -38,7 +38,7 @@ Wenn Sie von einer älteren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 Seit [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] sind daher alle Änderungen des Abfrageoptimierers an den neuesten [Datenbank-Kompatibilitätsgrad](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) gebunden, sodass Pläne nicht sofort im Moment des Upgrades geändert werden, sondern erst, wenn ein Benutzer die Datenbankoption `COMPATIBILITY_LEVEL` auf die neuste aktualisiert. Diese Möglichkeit gibt Ihnen in Kombination mit dem Abfragespeicher ein großes Maß an Kontrolle über die Abfrageleistung im Upgradeprozess. 
 
-Weitere Informationen zu Änderungen des Abfrageoptimierers, der in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] eingeführt wurde, finden Sie unter [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der Kardinalitätsschätzung von SQL Server 2014)](https://msdn.microsoft.com/library/dn673537.aspx).
+Weitere Informationen zu Änderungen des Abfrageoptimierers, der in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] eingeführt wurde, finden Sie unter [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der Kardinalitätsschätzung von SQL Server 2014)](/previous-versions/dn673537(v=msdn.10)).
 
 ### <a name="steps-to-resolve"></a>Schritte zum Beheben
 
@@ -67,7 +67,7 @@ Ein mögliches Problem tritt auf, wenn diese erste Kompilierung möglicherweise 
 5.  Schreiben Sie die Abfrage neu, sodass der Hinweis `DISABLE_PARAMETER_SNIFFING` verwendet wird. Dies hat denselben Effekt wie die Verwendung der lokalen Variablen: Die Parameterermittlung wird vollständig deaktiviert, es sei denn, `OPTION(RECOMPILE)`, `WITH RECOMPILE` oder `OPTIMIZE FOR <value>` wird verwendet.
 
 > [!TIP] 
-> Nutzen Sie die Vorteile der [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]-Plananalyse, um schnell zu ermitteln, ob es sich um ein Problem handelt. Weitere Informationen dazu finden Sie [unter diesem Link](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
+> Nutzen Sie die Vorteile der [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]-Plananalyse, um schnell zu ermitteln, ob es sich um ein Problem handelt. Weitere Informationen dazu finden Sie [unter diesem Link](/archive/blogs/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier).
 
 ## <a name="missing-indexes"></a><a name="MissingIndexes"></a> Fehlende Indizes
 
@@ -166,8 +166,8 @@ Tabellenwertfunktionen geben einen table-Datentyp zurück, der eine Alternative 
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Zusätzliches Lesematerial
 
  [Bewährte Methoden für den Abfragespeicher](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[Speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[Speicheroptimierte Tabellen](./in-memory-oltp/sample-database-for-in-memory-oltp.md)  
 [Benutzerdefinierte Funktionen](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[Table Variables and Row Estimations - Part 1 (Tabellenvariablen und Zeilenschätzungen – Teil 1)](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
-[Table Variables and Row Estimations - Part 1 (Tabellenvariablen und Zeilenschätzungen – Teil 2)](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
+[Table Variables and Row Estimations - Part 1 (Tabellenvariablen und Zeilenschätzungen – Teil 1)](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-1)  
+[Table Variables and Row Estimations - Part 1 (Tabellenvariablen und Zeilenschätzungen – Teil 2)](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-2)  
 [Zwischenspeichern und Wiederverwenden von Ausführungsplänen](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)

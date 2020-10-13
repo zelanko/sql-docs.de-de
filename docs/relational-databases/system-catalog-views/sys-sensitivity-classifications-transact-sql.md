@@ -24,12 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d37eb7cd82ceeba6ae844c82dea5763564c689dd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 4021751337e7c49b22d6ec8bc2d24cc4e144e763
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809346"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006003"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -50,7 +50,7 @@ Gibt eine Zeile für jedes klassifizierte Element in der Datenbank zurück.
 |**rank_desc**|**sysname**|Textdarstellung des Rangs:  <br><br>keine, niedrig, Mittel, hoch, kritisch|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 
 - Diese Ansicht bietet Einblick in den Klassifizierungs Status der Datenbank. Sie kann zum Verwalten der Daten Bank Klassifizierungen sowie zum Erstellen von Berichten verwendet werden.
 - Derzeit wird nur die Klassifizierung von Daten Bank Spalten unterstützt.
@@ -62,7 +62,7 @@ Gibt eine Zeile für jedes klassifizierte Element in der Datenbank zurück.
 Im folgenden Beispiel wird eine Tabelle zurückgegeben, in der der Tabellenname, der Spaltenname, die Bezeichnung, die Bezeichnungs-ID, der Informationstyp, die Informationstyp-ID, der Rang und die Rang Beschreibung für jede klassifizierte Spalte in der Datenbank
 
 > [!NOTE]
-> Bezeichnung ist ein Schlüsselwort für Azure SQL Data Warehouse.
+> Bezeichnung ist ein Schlüsselwort für die Azure-Synapse-Analyse.
 
 ```sql
 SELECT

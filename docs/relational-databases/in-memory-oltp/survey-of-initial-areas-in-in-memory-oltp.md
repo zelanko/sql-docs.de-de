@@ -12,12 +12,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d150330a700b8580f561c4459d50ceab355eb8de
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 92be3a1844fde38aca090dd8032736f34fe99361
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942902"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866681"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Überblick des Anfangsbereichs in In-Memory OLTP
 
@@ -72,7 +72,7 @@ In-Memory-Analyse bezieht sich auf SQL SELECT-Anweisungen, die in der Regel Tran
 Es gibt zwei wichtige Szenarios:  
   
 - *Operative Analyseprozesse im Batchmodus* verweist auf Aggregationsprozesse, die entweder nach den Geschäftsstunden ausgeführt werden oder auf sekundärer Hardware, die über Kopien der Transaktionsdaten verfügt.  
-  - [Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-what-is/) bezieht sich auch auf operative Analyseprozesse, die im Batchmodus ausgeführt werden.  
+  - [Azure SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) bezieht sich auch auf operative Analyseprozesse, die im Batchmodus ausgeführt werden.  
 - *Operative Echtzeitanalyse* verweist auf Aggregationsprozesse, die entweder während der Geschäftsstunden ausgeführt werden oder auf der primären Hardware, die für Transaktionsarbeitsauslastung verwendet wird.  
   
   
@@ -93,24 +93,24 @@ Eine Reihe exzellenter Blogbeiträge erklärt Ihnen aus verschiedenen Blickwinke
 #### <a name="real-time-operational-analytics"></a>Operative Echtzeitanalyse
 
 1. [Real-Time Operational Analytics Using In-Memory Technology (Operative Echtzeitanalyse mit In-Memory-Technologie)](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
-2. [Real-Time Operational Analytics – Overview nonclustered columnstore index (NCCI) (Operative Echtzeitanalyse: Überblick über den nicht gruppierten Columnstore-Index [Nonclustered Columnstore Index, NCCI])](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
-3. [Real-Time Operational Analytics: Simple example using nonclustered clustered columnstore index (NCCI) in SQL Server 2016 (Operative Echtzeitanalyse: Einfaches Beispiel mit Verwendung des geclusterten/nicht geclusterten Columnstore-Index (Nonclustered Columnstore Index, NCCI) in SQL Server 2016)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
-4. [Real-Time Operational Analytics: DML operations and nonclustered columnstore index (NCCI) in SQL Server 2016 (Operative Echtzeitanalyse: DML-Vorgänge und nicht geclusterter Columnstore-Index (Nonclustered Columnstore Index, NCCI) in SQL Server 2016)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
-5. [Real-Time Operational Analytics: Filtered nonclustered columnstore index (NCCI) (Operative Echtzeitanalyse: gefilterte, nicht geclusterte Columnstore-Indizes)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
-6. [Real-Time Operational Analytics: Compression Delay Option for Nonclustered Columnstore Index (NCCI) (Operative Echtzeitanalyse: Die Option „Kompressionsverzögerung“ für einen nicht geclusterten Columnstore-Index (Nonclustered Columnstore Index, NCCI))](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
-7. [Real-Time Operational Analytics: Compression Delay option with NCCI and the performance (Operative Echtzeitanalyse: Leistung des nicht geclusterten Columnstore-Index (Nonclustered Columnstore Index, NCCI) mit aktivierter Option „Kompressionsverzögerung“)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
-8. [Real-Time Operational Analytics: Memory-Optimized Tables and Columnstore Index (Speicheroptimierte Tabellen und der Columnstore-Index)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
+2. [Real-Time Operational Analytics – Overview nonclustered columnstore index (NCCI) (Operative Echtzeitanalyse: Überblick über den nicht gruppierten Columnstore-Index [Nonclustered Columnstore Index, NCCI])](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-using-nonclustered-columnstore-index)
+3. [Real-Time Operational Analytics: Simple example using nonclustered clustered columnstore index (NCCI) in SQL Server 2016 (Operative Echtzeitanalyse: Einfaches Beispiel mit Verwendung des geclusterten/nicht geclusterten Columnstore-Index (Nonclustered Columnstore Index, NCCI) in SQL Server 2016)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci)
+4. [Real-Time Operational Analytics: DML operations and nonclustered columnstore index (NCCI) in SQL Server 2016 (Operative Echtzeitanalyse: DML-Vorgänge und nicht geclusterter Columnstore-Index (Nonclustered Columnstore Index, NCCI) in SQL Server 2016)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016)
+5. [Real-Time Operational Analytics: Filtered nonclustered columnstore index (NCCI) (Operative Echtzeitanalyse: gefilterte, nicht geclusterte Columnstore-Indizes)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)
+6. [Real-Time Operational Analytics: Compression Delay Option for Nonclustered Columnstore Index (NCCI) (Operative Echtzeitanalyse: Die Option „Kompressionsverzögerung“ für einen nicht geclusterten Columnstore-Index (Nonclustered Columnstore Index, NCCI))](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)
+7. [Real-Time Operational Analytics: Compression Delay option with NCCI and the performance (Operative Echtzeitanalyse: Leistung des nicht geclusterten Columnstore-Index (Nonclustered Columnstore Index, NCCI) mit aktivierter Option „Kompressionsverzögerung“)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)
+8. [Real-Time Operational Analytics: Memory-Optimized Tables and Columnstore Index (Speicheroptimierte Tabellen und der Columnstore-Index)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)
 
 #### <a name="defragment-a-columnstore-index"></a>Defragmentieren eines Columnstore-Index
 
-1. [Columnstore Index Defragmentation using REORGANIZE Command (Defragmentieren des Columnstore-Index mithilfe des Befehls REORGANIZE)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)
-2. [Columnstore Index Merge Policy for REORGANIZE (Zusammenführungsrichtlinie für REORGANIZE des Columnstore-Index)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)
+1. [Columnstore Index Defragmentation using REORGANIZE Command (Defragmentieren des Columnstore-Index mithilfe des Befehls REORGANIZE)](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
+2. [Columnstore Index Merge Policy for REORGANIZE (Zusammenführungsrichtlinie für REORGANIZE des Columnstore-Index)](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
 
 #### <a name="bulk-importation-of-data"></a>Ausführen eines Massenimports von Daten
 
-1. [Clustered Column Store: Bulk Load (Geclusterter Columnstore: Massenladen)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [Clustered Columnstore Index: Data Load Optimizations - Minimal Logging (Geclusterter Columnstore-Index: Optimierungen des Ladens von Daten – minimale Protokollierung)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
-3. [Clustered columnstore Index: Data Load Optimizations – Parallel Bulk Import (Gruppierter Columnstore-Index: Optimieren des Ladens von Daten – Paralleler Massenimport)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
+1. [Clustered Column Store: Bulk Load (Geclusterter Columnstore: Massenladen)](/archive/blogs/sqlserverstorageengine/clustered-column-store-index-bulk-loading-the-data)
+2. [Clustered Columnstore Index: Data Load Optimizations - Minimal Logging (Geclusterter Columnstore-Index: Optimierungen des Ladens von Daten – minimale Protokollierung)](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging)
+3. [Clustered columnstore Index: Data Load Optimizations – Parallel Bulk Import (Gruppierter Columnstore-Index: Optimieren des Ladens von Daten – Paralleler Massenimport)](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-parallel-bulk-import)
 
 
 
@@ -128,7 +128,7 @@ Betrachten wir nun die wichtigsten Funktionen von In-Memory-OLTP.
 Das T-SQL-Schlüsselwort MEMORY_OPTIMIZED in der CREATE TABLE-Anweisung zeigt wie eine Tabelle erstellt wird, um im aktiven Arbeitsspeicher zu existieren, anstatt auf dem Datenträger.  
   
   
-Eine [speicheroptimierte Tabelle](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) hat eine Darstellung von sich selbst im aktiven Arbeitsspeicher und eine sekundäre Kopie auf dem Datenträger.  
+Eine [speicheroptimierte Tabelle](./sample-database-for-in-memory-oltp.md) hat eine Darstellung von sich selbst im aktiven Arbeitsspeicher und eine sekundäre Kopie auf dem Datenträger.  
   
 - Die Kopie auf dem Datenträger ist für die routinemäßige Wiederherstellung nach einem Herunterfahren und anschließendem Neustart des Servers oder der Datenbank. Diese In-Memory-plus-Datenträger-Dualität ist vollständig unsichtbar für Sie und Ihren Code.  
   
@@ -144,14 +144,14 @@ Ein natives Modul kann nur speicheroptimierte Tabellen verweisen. Sie kann keine
   
 Es gibt drei Arten von nativ kompilierten Modulen:  
   
-- [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+- [Nativ kompilierte gespeicherte Prozeduren](./a-guide-to-query-processing-for-memory-optimized-tables.md).  
 - Nativ kompilierte benutzerdefinierte Funktionen (UDFs), die skalare sind.  
 - Nativ kompilierte Trigger.  
   
   
 #### <a name="availability-in-azure-sql-database"></a>Verfügbarkeit in Azure SQL-Datenbank  
   
-In-Memory-OLTP und Columnstore sind in Azure SQL-Datenbank verfügbar. Weitere Informationen finden Sie unter [Optimieren der Leistung mithilfe von In-Memory-Technologien in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory).
+In-Memory-OLTP und Columnstore sind in Azure SQL-Datenbank verfügbar. Weitere Informationen finden Sie unter [Optimieren der Leistung mithilfe von In-Memory-Technologien in SQL-Datenbank](/azure/sql-database/sql-database-in-memory).
   
   
 <a name="ensure-compatibility-level-gteq-130-99c"></a>  
@@ -452,7 +452,7 @@ Die Typen von nativ kompilierten Modulen, die über Transact-SQL verfügbar sind
 - Nativ kompilierte Trigger (native Trigger).  
   - Nur Trigger, die nativ kompiliert werden, sind für speicheroptimierte Tabellen zulässig.  
 - Nativ kompilierte [Tabellenwertfunktionen](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
-  - [Improving temp table and table variable performance using memory optimization (Verbesserung der temporären Tabelle und Tabellenvariablenleistung mithilfe der Speicheroptimierung)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
+  - [Improving temp table and table variable performance using memory optimization (Verbesserung der temporären Tabelle und Tabellenvariablenleistung mithilfe der Speicheroptimierung)](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)  
   
 Eine nativ kompilierte benutzerdefinierte Funktion (UDF) wird schneller ausgeführt als eine interpretierte UDF. Hier sind einige Punkte, die bei UDFs zu beachten sind:  
   
@@ -463,7 +463,7 @@ Eine nativ kompilierte benutzerdefinierte Funktion (UDF) wird schneller ausgefü
   
 Testdaten und Erläuterung zur Leistung von nativen UDFs finden Sie unter:  
   
-  - [Soften the RBAR impact with Native Compiled UDFs in SQL Server 2016 (Weichzeichnen der RBAR Wirkung mit nativ kompilierten UDFs in SQL Server 2016)](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
+  - [Soften the RBAR impact with Native Compiled UDFs in SQL Server 2016 (Weichzeichnen der RBAR Wirkung mit nativ kompilierten UDFs in SQL Server 2016)](/archive/blogs/sqlcat/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016)  
   - [Natively Compiled User Defined Functions (Nativ kompilierte benutzerdefinierte Funktionen)](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/), ein Blogbeitrag von Gail Shaw vom Januar 2016.  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
@@ -472,11 +472,11 @@ Testdaten und Erläuterung zur Leistung von nativen UDFs finden Sie unter:
   
 Weitere Informationen finden Sie in diesen Artikeln, in denen spezielle Überlegungen zu speicheroptimierten Tabellen erläutert werden:  
   
-- [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+- [Migrieren zu In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   - [Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory-OLTP portiert werden soll](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - Der Transaktionsleistungs-Analysebericht in SQL Server Management Studio hilft Ihnen zu bewerten, ob In-Memory-OLTP die Leistung Ihrer Datenbankanwendungen verbessern wird.  
   - Verwenden Sie den [Ratgeber für die Speicheroptimierung](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) , um die datenträgerbasierte Datenbanktabelle zu In-Memory-OLTP zu migrieren.   
-- [Sichern und Wiederherstellen speicheroptimierter Tabellen](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [Sichern und Wiederherstellen speicheroptimierter Tabellen](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   - Der von speicheroptimierten Tabellen genutzte Speicher kann wesentlich größer als die belegte Arbeitsspeicherkapazität sein, was sich auf die Größe der Datenbanksicherung auswirkt.  
 - [Transaktionen mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Enthält Informationen zur Wiederholungslogik in T-SQL für Transaktionen in speicheroptimierten Tabellen.  
@@ -490,7 +490,7 @@ Weitere Informationen finden Sie in diesen Artikeln, in denen spezielle Überleg
 
 Im folgenden Artikel und dessen untergeordneten Artikel im Inhaltsverzeichnis sind die Details zu nativ kompilierten gespeicherten Prozeduren aufgeführt.
 
-- [Nativ kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)
+- [Nativ kompilierte gespeicherte Prozeduren](./a-guide-to-query-processing-for-memory-optimized-tables.md)
   
 <a name="related-links-43f"></a>  
   
@@ -501,4 +501,4 @@ Im folgenden Artikel und dessen untergeordneten Artikel im Inhaltsverzeichnis si
 Hier finden Sie Artikel, die Code zum Veranschaulichen der Leistungsverbesserungen bieten, die Sie mit In-Memory-OLTP erreichen können.  
   
 - [Demo: Leistungsverbesserungen von In-Memory-OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) bietet eine kleine Demonstration der größeren potenziellen Leistungsgewinne.  
-- [Sample Database for In-Memory-OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (Beispieldatenbank für In-Memory-OLTP) bietet eine genauere Erläuterung.  
+- [Sample Database for In-Memory-OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (Beispieldatenbank für In-Memory-OLTP) bietet eine genauere Erläuterung.

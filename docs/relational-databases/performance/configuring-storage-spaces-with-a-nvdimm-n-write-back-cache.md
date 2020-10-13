@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bbd255dc2cd1a9bcb4bc146bcc6c6489b0cb1071
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 438bb53d76763ecb7179638591f0353cb1bedf6f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457345"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891890"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,8 +77,7 @@ New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyNam
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Speicherplätze unter Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   
- [Speicherplätze unter Windows 2012 R2](https://technet.microsoft.com/library/hh831739.aspx)   
+ [Speicherplätze unter Windows 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11))   
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [Anzeigen oder Ändern der Standardspeicherorte für Daten- und Protokolldateien &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
-  
   

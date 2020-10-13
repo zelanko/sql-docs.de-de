@@ -12,12 +12,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 38626888302f4644a8cdc36c1c370cf43a8134cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46fb0f6fa4e8607296ead7a2f5e77ac97e75f9d5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493856"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866986"
 ---
 # <a name="customize-behavior-of-word-breakers-with-a-custom-dictionary-sql-server-search"></a>Anpassen des Verhaltens von Wörtertrennungen mithilfe eines benutzerdefinierten Wörterbuchs (SQL Server-Suche)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88493856"
   
  Weitere Informationen finden Sie im folgenden SharePoint-Artikel:  
   
- [Erstellen eines Benutzerwörterbuchs (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=215011)  
+ [Erstellen eines Benutzerwörterbuchs (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/cc263242(v=office.14))  
   
  Speichern Sie Benutzerwörterbuchdateien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in dem folgenden Ordner:  
   
@@ -34,5 +34,4 @@ ms.locfileid: "88493856"
  Starten Sie nach dem Erstellen oder Ändern von Benutzerwörterbuchdateien das Startprogramm für den SQL-Volltextfilterdaemon mit dem folgenden Befehl neu:  
   
  `exec sp_fulltext_service 'restart_all_fdhosts'`  
-  
   
