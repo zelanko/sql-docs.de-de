@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497847"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988676"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Zuordnung von Quell-und Ziel Datentypen (accesstosql)
 Zugriffsdaten Bank Typen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanktypen. Wenn Sie Access-Datenbankobjekte in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte konvertieren, müssen Sie angeben, wie Datentypen aus dem Zugriff zugeordnet werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Prozeduren gezeigt.  
   
 ## <a name="default-mappings"></a>Standardzuordnungen  
-SSMA verfügt über einen Standardsatz von Datentyp Zuordnungen. Die Liste der Standard Zuordnungen finden Sie unter [Projekteinstellungen (Typzuordnung)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+SSMA verfügt über einen Standardsatz von Datentyp Zuordnungen. Die Liste der Standard Zuordnungen finden Sie unter [Projekteinstellungen (Typzuordnung)](./project-settings-type-mapping-accesstosql.md).  
   
 ## <a name="customizing-data-type-mappings"></a>Anpassen von Datentyp Zuordnungen  
 Mit dem Dialogfeld **Projekteinstellungen** können Sie anpassen, wie Typen für alle Datenbanken und Datenbankobjekte in einem Projekt zugeordnet werden. Die Typzuordnungen für ein Projekt gelten für alle Datenbanken und Datenbankobjekte, die keine benutzerdefinierten Typzuordnungen aufweisen.  
@@ -91,6 +91,5 @@ Im folgenden Verfahren wird gezeigt, wie Datentypen auf der Projekt-, Datenbank-
 ## <a name="next-steps"></a>Nächste Schritte  
 Der nächste Schritt des Migrations Vorgangs ist das [Konvertieren des Zugriffs auf Datenbankobjekte in SQL Server Objekte](converting-access-database-objects-accesstosql.md) .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 48054f25a5c7156a6d9d25d4770d19437d9dbadf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c39bc03cb6a1da09c7be6aac41c18b9d3bbd871
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454302"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987526"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Projekteinstellungen (Typzuordnung) (accesstosql)
 Mit den Projekteinstellungen für die Typzuordnung können Sie Standardtypmappings für das SSMA-Projekt festlegen. Sie können auch Typzuordnungen für einzelne Datenbankobjekte angeben. Weitere Informationen finden Sie unter [Zuordnung von Quell-und Ziel Datentypen](mapping-source-and-target-data-types-accesstosql.md).  
@@ -34,7 +34,7 @@ Die Typzuordnung ist in den Dialogfeldern **Projekteinstellungen** und **Standar
 -   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die typzuordnungseinstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp, für den die Einstellungen angezeigt werden müssen/Changed in der Dropdown Liste **Migrations Ziel Version** aus, und klicken Sie im linken Bereich auf **Typzuordnung** .  
   
 ## <a name="options"></a>Tastatur  
-**Quelltyp**  
+**Quellentyp**  
 Der zuzuordnende Zugriffs Datentyp.  
   
 **Zieltyp**  
@@ -46,7 +46,7 @@ Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datent
 |--------------------|------------------------|  
 |**Binär [ \* .. \* ]**|**varbinary [ \* ]**|  
 |**boolean**|**bit**|  
-|**Byte**|**tinyint**|  
+|**byte**|**tinyint**|  
 |**Währungs**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
@@ -55,7 +55,7 @@ Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datent
 |**integer**|**smallint**|  
 |**long**|**int**|  
 |**LONGBINARY**|**varbinary(max)**|  
-|**Memo**|**nvarchar(max)**|  
+|**Anruf**|**nvarchar(max)**|  
 |**Memo** für Zugriff 97|**varchar(max)**|  
 |**single**|**real**|  
 |**Text [ \* .. \* ]**|**nvarchar [ \* ]**|  
@@ -67,7 +67,7 @@ Klicken Sie hier, um der Zuordnungsliste einen Datentyp hinzuzufügen.
 **Bearbeiten**  
 Klicken Sie hierauf, um einen Datentyp in der Liste Zuordnung zu bearbeiten.  
   
-**Remove**  
+**Entfernen**  
 Klicken Sie hierauf, um die ausgewählte Datentyp Zuordnung aus der Liste Zuordnung zu entfernen.  
   
 **Standard wiederherstellen**  
@@ -75,5 +75,4 @@ Klicken Sie hier, um alle Datentyp Zuordnungen auf die SSMA-Standardwerte zurüc
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Zuordnen von Quell- und Zieldatentypen](mapping-source-and-target-data-types-accesstosql.md)  
-[Referenz zur Benutzeroberfläche (Zugriff)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Referenz zur Benutzeroberfläche (Zugriff)](./user-interface-reference-accesstosql.md)  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7547984e97bb47a640c162743fe0b069b38f7dff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1652913173dcd7427515db8c74d15afc75077820
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418466"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988636"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Konvertierungseinstellungen (MySqlToSql)
 Auf der Registerkarte **"Einstellungen"** können Benutzereinstellungen auf Knotenebene festlegen. Die Registerkarte wird auf den folgenden Metabasisknoten verfügbar sein:  
@@ -76,5 +76,4 @@ Diese Einstellungen werden basierend auf dem Typ der Metabasisknoten verfügbar.
     3.  Die vom Benutzer vorgenommenen Einstellungen werden in der Datei mit der überlappenden Einstellungen gespeichert, wenn Sie auf die Schaltfläche **anwenden** klicken.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Projekteinstellungen (Konvertierung) (MySQL in SQL)](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
-  
+[Projekteinstellungen (Konvertierung) (MySQL in SQL)](./project-settings-conversion-mysqltosql.md)  

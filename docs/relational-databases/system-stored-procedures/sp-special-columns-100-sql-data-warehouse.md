@@ -1,6 +1,6 @@
 ---
-description: sp_special_columns_100 (SQL Data Warehouse)
-title: sp_special_columns_100 (SQL Data Warehouse) | Microsoft-Dokumentation
+description: sp_special_columns_100 (Azure-Synapse-Analyse)
+title: sp_special_columns_100 (Azure-Synapse-Analyse)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
@@ -14,14 +14,14 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7089187cc0eaa6c0cc3667d8bbf34aeca93bc3f2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 605bc7a9a446139a637d5e960643fd49e3ca62a7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725041"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987812"
 ---
-# <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
+# <a name="sp_special_columns_100-azure-synapse-analytics"></a>sp_special_columns_100 (Azure-Synapse-Analyse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Gibt die optimale Gruppe von Spalten zurück, die eine Zeile in der Tabelle eindeutig identifizieren. Außerdem werden Spalten zurückgegeben, die automatisch aktualisiert werden, wenn ein Wert in der Zeile durch eine Transaktion aktualisiert wird.  
@@ -31,7 +31,7 @@ ms.locfileid: "91725041"
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_special_columns_100 [ @table_name = ] 'table_name'     
      [ , [ @table_owner = ] 'table_owner' ]   
@@ -77,7 +77,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|Der Bereich der Zeilen-ID. Kann 0, 1 oder 2 sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt immer 0 zurück. Dieses Feld gibt immer einen Wert zurück.<br /><br /> 0 = SQL_SCOPE_CURROW. Die Zeilen-ID ist nur garantiert gültig, wenn sie sich in dieser Zeile befindet. Eine spätere erneute Auswahl mit dieser Zeilen-ID gibt möglicherweise keine Zeile zurück, wenn die Zeile durch eine andere Transaktion aktualisiert oder gelöscht wurde.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. Die Zeilen-ID ist für die Dauer der aktuellen Transaktion garantiert gültig.<br /><br /> 2 = SQL_SCOPE_SESSION. Die Zeilen-ID ist für die Dauer der Sitzung garantiert gültig (über Transaktionsgrenzen hinweg).|  
-|COLUMN_NAME|**sysname**|Der Spaltenname für jede Spalte der zurückgegebenen *Tabelle*. Dieses Feld gibt immer einen Wert zurück.|  
+|COLUMN_NAME|**sysname**|Der Spaltenname für jede Spalte der zurückgegebenen *Tabelle* . Dieses Feld gibt immer einen Wert zurück.|  
 |DATA_TYPE|**smallint**|ODBC-SQL-Datentyp.|  
 |TYPE_NAME|**sysname**|Datenquellen abhängiger Datentyp Name; beispielsweise " **char**", " **varchar**", " **Money**" oder " **Text**".|  
 |PRECISION|**Int**|Die Genauigkeit der Spalte bezüglich der Datenquelle. Dieses Feld gibt immer einen Wert zurück.|  

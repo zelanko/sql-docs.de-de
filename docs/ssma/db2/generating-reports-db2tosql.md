@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 75ed10de8af160939689fdaa883c6d7d9dc7915d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20c7e28e46f4a522f1532db69bf4e7260dced0da
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468863"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987426"
 ---
 # <a name="generating-reports-db2tosql"></a>Erstellen von Berichten (DB2ToSQL)
 Die Berichte bestimmter Aktivitäten, die mithilfe von Befehlen ausgeführt werden, werden in der SSMA-Konsole auf Objektstruktur Ebene generiert.  
@@ -135,5 +135,4 @@ Der Befehl **Refresh-from-Database** weist einen **Report-Errors-to-Parameter au
 -   Fehler-Skript  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Ausführen der SSMA-Konsole](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[Ausführen der SSMA-Konsole](./executing-the-ssma-console-db2tosql.md)  

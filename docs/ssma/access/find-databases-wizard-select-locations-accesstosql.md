@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 15e065410a32b0902ad065a1903f4e28da044149
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1babfbf6364371cbd1f96b310f29416b84f2b031
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488311"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984946"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Assistent zum Suchen von Datenbanken (Speicherorte auswählen) (accesstosql)
 Geben Sie auf der Seite Speicherorte auswählen des Assistenten zum Suchen von Datenbanken die Suchparameter für die Suche nach Access-Datenbanken ein.  
@@ -40,7 +40,7 @@ Fügt die Position im Textfeld Pfad der Liste der Speicherorte hinzu.
 **Replace**  
 Wenn ein Element in der Liste der Speicherorte ausgewählt ist, ersetzt das Element im Textfeld Pfad das ausgewählte Element.  
   
-**Remove**  
+**Entfernen**  
 Entfernt das ausgewählte Element aus der Liste der zu durchsuchenden Speicherorte.  
   
 **Ganz oder teilweise der Dateiname**  
@@ -58,7 +58,6 @@ Wenn Sie Datenbanken suchen möchten, die mit einem Größen Kriterium übereins
 **Besitzer**  
 Geben Sie den vollständigen Windows-Benutzernamen des Besitzers ein. Dies kann als *Domänen* \\ *Benutzer*formatiert sein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md)  
-[Referenz zur Benutzeroberfläche (Zugriff)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Referenz zur Benutzeroberfläche (Zugriff)](./user-interface-reference-accesstosql.md)  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5dde1168e8107f01f06d5e60fb2b1853d47abc43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3dfef8a72c8c578b468ebcf34372e603579d13ed
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472523"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987436"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Befehlszeilenoptionen in der SSMA-Konsole (DB2ToSQL)
 Microsoft stellt Ihnen eine robuste Befehlszeilenoption zur Verfügung, mit der Sie SSMA-Aktivitäten ausführen und steuern können. Die nachfolgenden Abschnitte beschreiben die gleichen.  
@@ -120,7 +120,7 @@ Dies kennzeichnet den Ordner mit den Projekt Umgebungseinstellungen für das akt
 ### <a name="secure-password-option--psecurepassword"></a>Sichere Kenn Wort Option:-p/SecurePassword  
 Diese Option gibt das verschlüsselte Kennwort für Serververbindungen an. Dies unterscheidet sich von allen anderen Optionen: die Option führt keines der Skripts aus und unterstützt keine migrationsbezogenen Aktivitäten, sondern hilft bei der Verwaltung der Kenn Wort Verschlüsselung für die Serververbindungen, die im Migrationsprojekt verwendet werden.  
   
-Sie können keine andere Option oder kein anderes Kennwort als Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie im Abschnitt Verwalten von Kenn [Wörtern](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) .  
+Sie können keine andere Option oder kein anderes Kennwort als Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie im Abschnitt Verwalten von Kenn [Wörtern](./managing-passwords-db2tosql.md) .  
   
 Die folgenden unter Optionen werden für unterstützt `-p/securepassword` :  
   
@@ -170,4 +170,3 @@ Der nächste Schritt hängt von Ihren Projektanforderungen ab:
 2.  Informationen zum Erstellen von Berichten finden Sie unter [Erstellen von Berichten &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
   
 3.  Informationen zur Behebung von Problemen in der-Konsole finden Sie unter [Problembehandlung &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
-  

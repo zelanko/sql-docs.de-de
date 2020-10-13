@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8815b6d3f6d4f825082b0c2eac4d8bfa45cb98de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8f84909de05efc5d53b924eb298adcaab93d7f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320876"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985033"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Erstellen von Variablen Wert Dateien (accesstosql)
 Eine Variablen Wert Datei ist eine XML-Datei, die die Parameterwerte von Befehlen (z. b. der Quell-oder Zielserver Name) umfasst, die sich häufig über Server Migrationen hinweg ändern. Wenn eine große Anzahl von Datenbankmigrationen auftritt, werden mehrere Variablen Dateien zum Speichern des Werts jedes Quell Servers erstellt und in einer Master Skriptdatei mit dem Schalter **-v** in der Befehlszeile referenziert. Dieses Verhalten trägt dazu bei, statische Werte in einigen Skriptdateien mit den Variablen Werten in mehreren Variablen Dateien beizubehalten.  
@@ -95,5 +95,4 @@ Der Benutzer kann die Datei mit den Variablen Werten auf einfache Weise anhand d
 Der nächste Schritt bei der Betriebs Konsole besteht darin, [die Server Verbindungs Dateien &#40;Access Token zu erstellen&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Erstellen der Server Verbindungs Dateien (Access)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
-  
+[Erstellen der Server Verbindungs Dateien (Access)](./creating-the-server-connection-files-accesstosql.md)  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2454ec9d594977a89ddf867645bc7e2d8fe26e57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dbcef29550276241cb638b6224914e43e2e88ec
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454152"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988462"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Arbeiten mit SSMA-Projekten (DB2ToSQL)
 Wenn Sie DB2-Datenbanken zu migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , erstellen Sie zunächst ein SSMA-Projekt. Das Projekt ist eine Datei, die die folgenden Informationen enthält:  
@@ -116,10 +116,9 @@ Wenn Sie ein Projekt öffnen, wird es von DB2 und von getrennt [!INCLUDE[ssNoVer
 3.  Um erneut eine Verbindung mit herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , klicken Sie im Menü **Datei** auf **Verbindung wiederherstellen, um SQL Server**.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt des Migrations Vorgangs besteht darin, eine [Verbindung mit der DB2-Datenbank](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)herzustellen.  
+Der nächste Schritt des Migrations Vorgangs besteht darin, eine [Verbindung mit der DB2-Datenbank](./connecting-to-db2-database-db2tosql.md)herzustellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Migrieren von DB2-Datenbanken zu SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [Herstellen einer Verbindung mit der DB2-Datenbank &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
 [Herstellen einer Verbindung mit SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
-  

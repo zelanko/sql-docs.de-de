@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a5c60984f9f1ed8da7238c254ac8b939dc1a9dee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b609bfa0b29e289a8b2225d969d131112a8f532
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472507"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987446"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Zuordnung von DB2-Schemas zu SQL Server Schemas (DB2ToSQL)
 In DB2 verfügt jede Datenbank über ein oder mehrere Schemas. Standardmäßig migriert SSMA alle Objekte in einem DB2-Schema zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank mit dem Namen für das Schema. Sie können jedoch die Zuordnung zwischen DB2-Schemas und- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken anpassen.  
@@ -60,9 +60,8 @@ Wenn Sie die Zuordnung zwischen einem DB2-Schema und einem [!INCLUDE[ssNoVersion
 1.  Wählen Sie auf der Registerkarte Schema Zuordnung eine beliebige Zeile aus, und klicken Sie auf **Standard zurücksetzen** , um die Standarddatenbank und das Standardschema wiederherzustellen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Wenn Sie die Konvertierung von DB2-Objekten in Objekte analysieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie [Daten Migrationsbericht (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241).  
+Wenn Sie die Konvertierung von DB2-Objekten in Objekte analysieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie [Daten Migrationsbericht (SSMA Common)](../sybase/data-migration-report-sybasetosql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Herstellen einer Verbindung mit SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
 [Migrieren von DB2-Datenbanken zu SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
-  

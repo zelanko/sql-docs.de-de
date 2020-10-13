@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2b1aeed74dc475d3e14130ace1772ce5f604d63b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 973d2ec0a740e07aac94a4f44ab08051294d5128
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488323"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985011"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Assistent zum Suchen von Datenbanken (Dateien auswählen) (accesstosql)
 Auf der Seite Dateien auswählen des Assistenten zum Suchen von Datenbanken werden die Dateien aufgelistet, die während der Suche gefunden wurden. Wählen Sie die Zeile aus, die den Dateinamen enthält, um eine Datei auszuwählen, die Sie SSMA hinzufügen möchten. Wenn Sie mit der Auswahl von Dateien fertig sind, klicken Sie auf **weiter** , um die Seite Auswahl überprüfen anzuzeigen.  
@@ -27,7 +27,7 @@ Klicken Sie im Menü **Datei** auf **Datenbanken**suchen, um den Assistenten fü
 Aktivieren Sie das Kontrollkästchen neben dem Dateinamen, um eine Datei zum Hinzufügen zu SSMA auszuwählen. Wenn Sie die Dateien ausgewählt haben, klicken Sie auf **weiter** , um die Seite Abschluss anzuzeigen.  
   
 ## <a name="options"></a>Tastatur  
-**Alle auswählen**  
+**Alles auswählen**  
 Aktivieren Sie dieses Kontrollkästchen, um alle Datenbanken in der Liste auszuwählen.  
   
 **Auswahl für alle deaktivieren**  
@@ -51,6 +51,5 @@ Das Datum und die Uhrzeit der Erstellung der Datenbank.
 **Geändert**  
 Das Datum und die Uhrzeit, zu der die Datenbank zuletzt aktualisiert wurde.  
   
-## <a name="see-also"></a>Siehe auch  
-[Referenz zur Benutzeroberfläche (Zugriff)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+## <a name="see-also"></a>Weitere Informationen  
+[Referenz zur Benutzeroberfläche (Zugriff)](./user-interface-reference-accesstosql.md)  

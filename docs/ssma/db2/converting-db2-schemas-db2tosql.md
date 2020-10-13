@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9dbf89c8027737a02d4eded9dc2e743e683b65e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418556"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985120"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Umstellen von DB2-Schemas (DB2ToSQL)
 Nachdem Sie eine Verbindung mit DB2 hergestellt, eine Verbindung mit hergestellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Projekt-und Daten Zuordnungsoptionen festgelegt haben, können Sie DB2-Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbankobjekte konvertieren.  
@@ -39,7 +39,7 @@ Die folgende Tabelle zeigt, welche DB2-Objekte konvertiert werden, und die resul
 |CREATE TABLE|**SSMA ordnet CREATE TABLE mit den folgenden Ausnahmen zu:**<br /><br />Multidimensionale Clustering-Tabellen (MDC)<br /><br />Range-Clustered Tables (RCT)<br /><br />Partitionierte Tabellen<br /><br />Getrennte Tabelle<br /><br />Data Capture-Klausel<br /><br />Implizit verborgene Option<br /><br />VOLATILE-Option|  
 |CREATE VIEW|SSMA Maps Create View mit der Option with local Check Option, andere Optionen werden jedoch nicht der SQL Server-Semantik zugeordnet.|  
 |CREATE INDEX|**SSMA Maps Create Index mit den folgenden Ausnahmen:**<br /><br />XML-Index<br /><br />BUSINESS_TIME ohne Überschneidungen (Option)<br /><br />Partitionierte Klausel<br /><br />Option nur für Spezifikation<br /><br />Option "erweitern mit"<br /><br />Minpctused (Option)<br /><br />Seiten Teilung (Option)|  
-|Auslöser|**SSMA ordnet die folgende auslösersemantik zu:**<br /><br />After/for each-Zeilen Trigger<br /><br />After/for each-Anweisung auslösen<br /><br />Vor/für jede Zeile und anstelle von/für jeden Zeilen Trigger|  
+|Trigger|**SSMA ordnet die folgende auslösersemantik zu:**<br /><br />After/for each-Zeilen Trigger<br /><br />After/for each-Anweisung auslösen<br /><br />Vor/für jede Zeile und anstelle von/für jeden Zeilen Trigger|  
 |Sequenzen|Sind zugeordnet.|  
 |SELECT-Anweisung|**SSMA Maps wählen Sie mit den folgenden Ausnahmen aus:**<br /><br />Data-Change-Table-Reference-Klausel: teilweise zugeordnet, aber endgültige Tabellen werden nicht unterstützt.<br /><br />Tabellen Verweis Klausel: teilweise zugeordnet, aber nur-Table-Reference, Outer-Table-Reference, analyze_table-Expression, Collection-abgeleitete Tabelle, XMLTable-Expression ist nicht der SQL Server-Semantik zugeordnet.<br /><br />Die Period-Specification-Klausel ist nicht zugeordnet.<br /><br />Die Continue-Handler-Klausel ist nicht zugeordnet.<br /><br />Die typisierte Korrelations Klausel ist nicht zugeordnet.<br /><br />Die Klausel für die gleichzeitige Zugriffs Auflösung ist nicht zugeordnet.|  
 |Values-Anweisung|Wird zugeordnet.|  
@@ -147,8 +147,7 @@ Sie müssen für jedes Element, das nicht konvertiert werden konnte, bestimmen, 
 -   Sie können das Objekt von der Migration ausschließen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Deaktivieren Sie im metadatenexplorer und im DB2-metadatenexplorer das Kontrollkästchen neben dem Element, bevor Sie die Objekte in Laden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Daten aus DB2 migrieren.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt des Migrations Vorgangs besteht darin, [die konvertierten Objekte in SQL Server zu laden](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  
+Der nächste Schritt des Migrations Vorgangs besteht darin, [die konvertierten Objekte in SQL Server zu laden](./loading-converted-database-objects-into-sql-server-db2tosql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Migrieren von DB2-Daten in SQL Server &#40;DB2ToSQL-&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
-  

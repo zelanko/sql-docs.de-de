@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3dbf44933ae4abe26f5dacfc79bad0d971bfe5ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bc5427d17a8678e81ee148d247d743bda9d53ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492444"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988716"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Einstellungen für die Datenmigration (MySqlToSql)
   
 ## <a name="data-migration-settings"></a>Einstellungen für die Datenmigration  
 **Daten Migrations Einstellungen** ermöglichen es dem Benutzer, benutzerdefinierte Abfragen für die Datenmigration zu schreiben.  
   
--   Diese Registerkarte ist verfügbar, wenn **Erweiterte Daten Migrations Optionen** auf **anzeigen** festgelegt ist und ausgeblendet ist, wenn die Einstellung in den Projekteinstellungen **Ausblenden** festgelegt ist. Weitere Informationen zu den Einstellungen für die Projekt Migration finden Sie unter [Project Settings (Migration)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9) .  
+-   Diese Registerkarte ist verfügbar, wenn **Erweiterte Daten Migrations Optionen** auf **anzeigen** festgelegt ist und ausgeblendet ist, wenn die Einstellung in den Projekteinstellungen **Ausblenden** festgelegt ist. Weitere Informationen zu den Einstellungen für die Projekt Migration finden Sie unter [Project Settings (Migration)](./project-settings-migration-mysqltosql.md) .  
   
 -   Die Verarbeitung von benutzerdefinierten SQL-Anweisungen wird auf der Registerkarte **Daten Migrations Einstellungen** des Tabellen Knotens implementiert.  
   
@@ -52,6 +52,5 @@ Es stehen zwei Schaltflächen zur Verfügung:
   
 -   **Abbrechen:** Klicken Sie auf **Abbrechen** , um die vorhandenen Einstellungen wiederherzustellen, bevor die Änderungen vorgenommen wurden.  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von MySQL-Daten zu SQL Server/SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
-  
+## <a name="see-also"></a>Weitere Informationen  
+[Migrieren von MySQL-Daten zu SQL Server/SQL Azure](./migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  

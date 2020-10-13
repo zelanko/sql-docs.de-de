@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 597de64479014e44f38c7073b6bc88e76a3137b4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 12c51ce9a3b4bdd83a1d1c4c7295f2ff438bc707
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934131"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987716"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Hinzufügen und Entfernen von Access-Datenbankdateien (accesstosql)
 Zum Migrieren von Zugriffsdaten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure müssen Sie dem SSMA-Projekt eine oder mehrere Access-Datenbanken hinzufügen. Diese Datenbanken müssen auf 97 oder höhere Versionen zugreifen. Wenn Sie über Datenbanken aus einer früheren Zugriffs Version verfügen, müssen Sie die Datenbanken in eine neuere Version konvertieren. Hierzu öffnen und speichern Sie die Datenbanken in Access 97 oder einer höheren Version, bevor Sie Sie SSMA hinzufügen.  
@@ -129,9 +129,8 @@ Sie können eine Access-Datenbank aus einem-Projekt entfernen, indem Sie die fol
 2.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie dann **Datenbank entfernen**aus.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt des Migrations Vorgangs besteht darin, eine [Verbindung mit SQL Server herzustellen](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
+Der nächste Schritt des Migrations Vorgangs besteht darin, eine [Verbindung mit SQL Server herzustellen](../sybase/connecting-to-sql-server-sybasetosql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Erstellen und Verwalten von Projekten](creating-and-managing-projects-accesstosql.md)  
-  

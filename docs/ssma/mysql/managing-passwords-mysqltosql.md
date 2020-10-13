@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2caaa5f0a7fca36dcd5cf7aebcadaee4c8f715e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50238d3cbcd65077ad724d41c907221d5d8be998
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463342"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988526"
 ---
 # <a name="managing-passwords-mysqltosql"></a>Verwalten von Kennwörtern (MySqlToSql)
 In diesem Artikel geht es um das Sichern von Daten Bank Kennwörtern und das Verfahren zum Importieren oder Exportieren von Datenbankservern.
@@ -135,5 +135,4 @@ Die Import Funktion liest die Server-ID und die Kenn Wort Informationen aus der 
 8. Bestätigen Sie das Kennwort: xxxxxxxx  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Ausführen der SSMA-Konsole (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+[Ausführen der SSMA-Konsole (MySQL)](./executing-the-ssma-console-mysqltosql.md)  

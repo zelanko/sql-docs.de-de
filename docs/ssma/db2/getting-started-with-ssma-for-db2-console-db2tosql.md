@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cb55f49a063ba58b526cccafbd2f400f4f889f17
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57cf454c5d13bf4a40325024e51bd19c4d56c446
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454282"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985121"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Getting Started with SSMA for DB2 Console (DB2ToSQL)
 In diesem Abschnitt wird das Verfahren zum Starten und Starten der DB2-Konsolenanwendung beschrieben. Hier sind auch die Konventionen aufgeführt, die in einem typischen Ausgabefenster der SSMA-Konsole verwendet werden.  
@@ -42,9 +42,9 @@ Nachdem die Konsole erfolgreich auf Ihrem Windows-System gestartet wurde, könne
   
 Zusätzliche Funktionen:  
   
-1.  [Verwalten](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) von Kenn Wörtern und Exportieren/Importieren von Kenn Wörtern auf andere Windows-Computer  
+1.  [Verwalten](./managing-passwords-db2tosql.md) von Kenn Wörtern und Exportieren/Importieren von Kenn Wörtern auf andere Windows-Computer  
   
-2.  [Erstellen von Berichten](https://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883) zum Anzeigen der detaillierten XML-Ausgabe Berichte für Assessment/Conversion und Datenmigration. Ausführliche Fehlerberichte können auch für Aktualisierungs-und Synchronisierungs Befehle generiert werden.  
+2.  [Erstellen von Berichten](./generating-reports-db2tosql.md) zum Anzeigen der detaillierten XML-Ausgabe Berichte für Assessment/Conversion und Datenmigration. Ausführliche Fehlerberichte können auch für Aktualisierungs-und Synchronisierungs Befehle generiert werden.  
   
 ## <a name="ssma-console-output-conventions"></a>Ausgabe Konventionen der SSMA-Konsole  
 Beim Ausführen der SSMA-Skript Befehle und-Optionen zeigt das Konsolenprogramm die Ergebnisse und Meldungen (Informationen, Fehler usw.) an den Benutzer in der-Konsole an oder leitet ggf. eine Umleitung an eine XML-Ausgabedatei. Jeder Nachrichtentyp in der Ausgabe wird durch eine eindeutige Farbe gekennzeichnet. Beispielsweise gibt die Textnachricht in der weißen Farbe Skriptdatei Befehle an. der eine in grüner Farbe stellt eine Eingabeaufforderung für Benutzereingaben dar usw.  
@@ -57,11 +57,10 @@ Farb Interpretation der Konsolenausgabe in der folgenden Tabelle:
 |---------|---------------|  
 |Red|Schwerwiegender Fehler während der Ausführung|  
 |Grau|Datums-und Zeitstempel, Meldung an den Benutzer|  
-|White|Skriptdatei Befehle, Nachrichtentyp|  
+|Weiß|Skriptdatei Befehle, Nachrichtentyp|  
 |Gelb|Warnung|  
 |Grün|Eingabeaufforderung für Benutzereingabe|  
 |Cyan|Starten, beenden und Ergebnis eines Vorgangs|  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Installieren von SSMA für DB2](https://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
-  
+[Installieren von SSMA für DB2](./installing-ssma-for-db2-db2tosql.md)  

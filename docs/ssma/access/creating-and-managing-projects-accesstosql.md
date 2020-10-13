@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 078b7f511d8120a0b5fa7cd182024cf7a124e84a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee6cf3bea905b169503851efe375fd614c4589e9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373056"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988196"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Erstellen und Verwalten von Projekten (accesstosql)
 Wenn Sie Access-Datenbanken zu oder SQL Azure migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , müssen Sie zunächst ein SSMA-Projekt erstellen. Das Projekt ist eine Datei mit Metadaten zu den Access-Datenbanken, die Sie zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, Metadaten zur Ziel Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, die die migrierten Objekte und Daten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindungsinformationen und Projekteinstellungen empfängt.  
@@ -39,19 +39,19 @@ SSMA enthält mehrere Optionen zum umrechnen und Synchronisieren von Datenbankob
   
 3.  Klicken Sie im linken Bereich auf **Konvertierung**.  
   
-4.  Überprüfen Sie im rechten Bereich die Optionen. Weitere Informationen zu diesen Optionen finden Sie unter [Projekteinstellungen (Konvertierung)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388).  
+4.  Überprüfen Sie im rechten Bereich die Optionen. Weitere Informationen zu diesen Optionen finden Sie unter [Projekteinstellungen (Konvertierung)](./project-settings-conversion-accesstosql.md).  
   
 5.  Ändern Sie die Optionen nach Bedarf.  
   
 6.  Wiederholen Sie die vorherigen Schritte für die Seiten " **Migration**", " **GUI**" und " **Typzuordnung** ".  
   
-    -   Informationen zu den Migrations Optionen finden Sie unter [Projekteinstellungen (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+    -   Informationen zu den Migrations Optionen finden Sie unter [Projekteinstellungen (Migration)](./project-settings-migration-accesstosql.md).  
   
-    -   Weitere Informationen zu den Optionen der Benutzeroberfläche finden Sie unter [Projekteinstellungen (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+    -   Weitere Informationen zu den Optionen der Benutzeroberfläche finden Sie unter [Projekteinstellungen (GUI)](../sybase/project-settings-gui-sybasetosql.md).  
   
-    -   Weitere Informationen zu den Einstellungen für die Datentyp Zuordnung finden Sie unter [Projekteinstellungen (Typzuordnung)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+    -   Weitere Informationen zu den Einstellungen für die Datentyp Zuordnung finden Sie unter [Projekteinstellungen (Typzuordnung)](./project-settings-type-mapping-accesstosql.md).  
   
-    -   Weitere Informationen zu SQL Azure Einstellungen finden Sie unter [Project Settings (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e).  
+    -   Weitere Informationen zu SQL Azure Einstellungen finden Sie unter [Project Settings (SQL Azure)](./project-settings-azure-sql-db-accesstosql.md).  
   
 **Hinweis** SQL Azure Einstellungen stehen nur zur Verfügung, wenn beim Erstellen eines Projekts Migration zum SQL Azure ausgewählt wird.  
   
@@ -115,4 +115,3 @@ Der nächste Schritt des Migrations Vorgangs besteht darin, [eine oder mehrere Z
 ## <a name="see-also"></a>Weitere Informationen  
 [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md)  
-  

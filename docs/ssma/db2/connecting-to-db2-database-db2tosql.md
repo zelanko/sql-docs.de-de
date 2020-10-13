@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4c6f964c0acbd6536818edef5b7e6ec25fc13bf2
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 9372a12b6ebaa47096c4ad8b6429db61b00a6188
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391780"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987456"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Herstellen einer Verbindung mit der DB2-Datenbank (DB2ToSQL)
 
@@ -101,7 +101,7 @@ Metadaten über die DB2-Datenbank werden nicht automatisch aktualisiert. Bei den
 
 ## <a name="next-step"></a>Nächster Schritt
 
-- Der nächste Schritt des Migrations Vorgangs besteht darin, eine [Verbindung mit SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)herzustellen.
+- Der nächste Schritt des Migrations Vorgangs besteht darin, eine [Verbindung mit SQL Server](./connecting-to-sql-server-db2etosql.md)herzustellen.
 
 ## <a name="see-also"></a>Weitere Informationen
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 642d6df01fc5855ece9bd06ea2860de076f754bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df2a29b2d411c2502573ede95feefe9c1e061c5b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418426"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987896"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Festlegen von Projektoptionen (MySqlToSql)
 Für jedes SSMA-Projekt können Sie Optionen auf Projektebene festlegen. Diese Optionen geben an, wie Objekte konvertiert werden, wie Daten migriert werden und wie Quell Datentypen den Ziel Datentypen zugeordnet werden.  Überprüfen Sie vor dem Konvertieren von Objekten in SQL Server oder SQL Azure oder Migrieren von Daten in SQL Server oder SQL Azure, ob die Konfigurationsoptionen für das Projekt geeignet sind.  
@@ -55,7 +55,7 @@ Weitere Informationen zu den Einstellungen und zum Anwenden der Einstellungen in
   
 -   [Projekteinstellungen &#40;Migration&#41; &#40;mysqldesql-&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [Projekteinstellungen (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Projekteinstellungen (GUI) (SSMA Common)](../sybase/project-settings-gui-sybasetosql.md)  
   
 -   [Projekteinstellungen &#40;Typzuordnung&#41; &#40;mysqldesql-&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
@@ -103,4 +103,3 @@ Der nächste Schritt der Migration hängt von Ihren Projektanforderungen ab:
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Zuordnung von MySQL-und SQL Server Datentypen &#40;mysqltosql&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
-  
