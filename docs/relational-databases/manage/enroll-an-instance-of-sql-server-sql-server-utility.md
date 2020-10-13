@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 211b16d4b03439295c4970449ef61855c09addc4
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 04a4513ed886c29a18d5bee3d45324a35b3d63ea
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988556"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810426"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrieren einer Instanz von SQL Server (SQL Server-Hilfsprogramm)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,12 +94,12 @@ ms.locfileid: "87988556"
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 ##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> Angeben der Instanz von SQL Server  
- Um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Verbindungsdialogfeld auszuwählen, klicken Sie auf **Verbinden**. Stellen Sie den Computernamen und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanznamen im Format „Computername\Instanzname“ bereit. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Verbindungsdialogfeld auszuwählen, klicken Sie auf **Verbinden**. Stellen Sie den Computernamen und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanznamen im Format „Computername\Instanzname“ bereit. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 ##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Dialogfeld „Verbindung“  
- Überprüfen Sie im Dialogfeld Verbindung mit Server herstellen den Servertyp, den Computernamen und die Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Überprüfen Sie im Dialogfeld Verbindung mit Server herstellen den Servertyp, den Computernamen und die Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
 >  Wenn die Verbindung verschlüsselt ist, wird dieser Verbindungstyp verwendet. Wenn die Verbindung nicht verschlüsselt ist, stellt das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm über eine verschlüsselte Verbindung erneut eine Verbindung her.  
@@ -129,7 +129,7 @@ ms.locfileid: "87988556"
 |Sammlungssätze für die angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen beendet werden.|Beenden Sie bereits vorhandene Sammlungssätze für die angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn der Datensammler deaktiviert ist, aktivieren Sie ihn, beenden alle aktiven Sammlungssätze und führen die Überprüfungsregeln für den Vorgang UCP erstellen erneut aus.<br /><br /> So aktivieren Sie den Datensammler<br /><br /> Erweitern Sie im Objekt-Explorer den Knoten **Verwaltung** .<br /><br /> Klicken Sie mit der rechten Maustaste auf **Datensammlung**, und klicken Sie anschließend auf **Datensammlung aktivieren**.<br /><br /> So beenden Sie einen Sammlungssatz<br /><br /> Erweitern Sie im Objekt-Explorer nacheinander die Knoten **Verwaltung**, **Datensammlung**und dann Systemdaten-Sammlungssätze.<br /><br /> Klicken Sie mit der rechten Maustaste auf den Sammlungssatz, den Sie beenden möchten, und klicken Sie anschließend auf **Datensammlungssatz beenden**.<br /><br /> In einem Meldungsfeld wird das Ergebnis dieser Aktion angezeigt, und ein roter Kreis auf dem Symbol für den Sammlungssatz weist darauf hin, dass der Sammlungssatz beendet wurde.|  
 |Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst auf der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss gestartet werden.|Starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst auf der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn die angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz ist, konfigurieren Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst für den manuellen Start. Konfigurieren Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst andernfalls für den automatischen Start.|  
 |Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst auf dem UCP muss gestartet werden.|Starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst auf dem UCP. Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -UCP eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz ist, konfigurieren Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst für den manuellen Start. Konfigurieren Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst andernfalls für den automatischen Start.|  
-|WMI muss korrekt konfiguriert sein.|Informationen zur Problembehandlung einer WMI-Konfiguration finden Sie unter [Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|WMI muss korrekt konfiguriert sein.|Informationen zur Problembehandlung einer WMI-Konfiguration finden Sie unter [Problembehandlung beim SQL Server-Hilfsprogramm](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130)).|  
 |Das Proxykonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents muss ein gültiges Windows-Domänenkonto auf dem UCP sein.|Geben Sie ein gültiges Windows-Domänenkonto an. Um sicherzustellen, dass das Konto gültig ist, melden Sie sich unter dem Windows-Domänenkonto beim UCP an.|  
 |Wenn Sie die Proxykonto-Option auswählen, muss das Proxykonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ein gültiges Windows-Domänenkonto auf der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein.|Geben Sie ein gültiges Windows-Domänenkonto an. Um sicherzustellen, dass das Konto gültig ist, melden Sie sich unter dem Windows-Domänenkonto bei der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.|  
 |Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto kann kein integriertes Konto, z. B. Netzwerkdienst, sein.|Weisen Sie das Konto einem Windows-Domänenkonto erneut zu. Um sicherzustellen, dass das Konto gültig ist, melden Sie sich unter dem Windows-Domänenkonto bei der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.|  
@@ -173,7 +173,7 @@ ms.locfileid: "87988556"
 >   
 >  Zusätzliche Informationen:  Die Informationen über Windows NT-Gruppe oder -Benutzer „\<DomainName\AccountName>“ konnten nicht abgerufen werden, Fehlercode 0x5. (Microsoft SQL Server, Fehler: 15404)  
 >   
->  Weitere Informationen zur Fehlerbehebung finden Sie unter [Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
+>  Weitere Informationen zur Fehlerbehebung finden Sie unter [Problembehandlung beim SQL Server-Hilfsprogramm](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130)).  
   
 > [!IMPORTANT]  
 >  Ändern Sie keine Eigenschaften des Sammlungssatzes „Hilfsprogramminformationen“ in einer verwalteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und aktivieren/deaktivieren Sie die Datensammlung nicht manuell, da die Datensammlung von einem Hilfsprogramm-Agentauftrag gesteuert wird.  
@@ -199,6 +199,5 @@ ms.locfileid: "87988556"
 ## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [Problembehandlung beim SQL Server-Hilfsprogramm](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

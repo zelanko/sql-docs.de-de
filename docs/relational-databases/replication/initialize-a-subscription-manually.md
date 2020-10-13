@@ -16,12 +16,12 @@ ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 84d8c205fad36848874ec5f8dd8714755c74fad2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bfa7cc36898aa521fed2e0e20fd08a5296147fcf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490605"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869223"
 ---
 # <a name="initialize-a-subscription-manually"></a>Manuelles Initialisieren eines Abonnements
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88490605"
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)aus. Geben Sie **\@publication**, **\@subscriber**, den Namen der Datenbank auf dem Abonnenten mit den veröffentlichten Daten für **\@destination_db**, den Wert **pull** für **\@subscription_type** und den Wert **replication support only** für **\@sync_type** an. Weitere Informationen finden Sie unter [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-3.  Führen Sie auf dem Abonnenten [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)aus. Informationen zum Aktualisieren von Abonnements finden Sie unter [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
+3.  Führen Sie auf dem Abonnenten [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)aus. Informationen zum Aktualisieren von Abonnements finden Sie unter [Create an Updatable Subscription to a Transactional Publication](./publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 4.  Führen Sie auf dem Abonnenten [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)aus. Weitere Informationen finden Sie unter [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88490605"
   
 1.  Stellen Sie sicher, dass das Schema und die Daten in der Abonnementdatenbank vorhanden sind. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)aus. Geben Sie den Namen der Datenbank auf dem Abonnenten mit den veröffentlichten Daten für **\@destination_db**, den Wert **push** für **\@subscription_type** und den Wert **replication support only** für **\@sync_type** an. Informationen zum Aktualisieren von Abonnements finden Sie unter [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)aus. Geben Sie den Namen der Datenbank auf dem Abonnenten mit den veröffentlichten Daten für **\@destination_db**, den Wert **push** für **\@subscription_type** und den Wert **replication support only** für **\@sync_type** an. Informationen zum Aktualisieren von Abonnements finden Sie unter [Create an Updatable Subscription to a Transactional Publication](./publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)aus. Weitere Informationen finden Sie unter [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
@@ -96,5 +96,4 @@ ms.locfileid: "88490605"
  [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)   
  [Sichern und Wiederherstellen von replizierten Datenbanken](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Bewährte Methoden für die Replikationssicherheit](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

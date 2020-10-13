@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a0fffe198adc37a9cabe232d5509e9df1652013b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864957"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809096"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Schnellstart: Sicherung und Wiederherstellung von SQL Server mit dem Azure Blob Storage-Dienst
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -26,10 +26,10 @@ In diesem Schnellstart erfahren Sie, wie Sie Sicherungen in den Azure Blob Stora
 Um diesen Schnellstart abzuschließen, müssen Sie mit den Sicherungs- und Wiederherstellungskonzepten in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und der T-SQL-Syntax vertraut sein.  Sie benötigen ein Azure-Speicherkonto, SSMS (SQL Server Management Studio) und Zugriff auf einen Server, auf dem entweder SQL Server oder Azure SQL Managed Instance ausgeführt wird. Darüber hinaus sollte das zum Ausgeben von BACKUP- oder RESTORE-Befehlen verwendete Benutzerkonto Mitglied der Datenbankrolle **db_backupoperator** sein und über Berechtigungen zum **Ändern beliebiger Anmeldeinformationen** verfügen. 
 
 - Erstellen Sie ein kostenloses [Azure-Konto](https://azure.microsoft.com/offers/ms-azr-0044p/).
-- Erstellen Sie ein [Azure-Speicherkonto](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
-- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Erstellen Sie ein [Azure-Speicherkonto](/azure/storage/common/storage-quickstart-create-account?tabs=portal).
+- Installieren Sie [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Installieren Sie [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) oder stellen Sie [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started) mit einer bestehenden Verbindung über eine [Azure SQL-VM](/azure/sql-database/sql-database-managed-instance-configure-vm) oder einer [Point-to-Site-Verbindung](/azure/sql-database/sql-database-managed-instance-configure-p2s) bereit.
-- Weisen Sie das Benutzerkonto der Rolle des [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) zu und gewähren Sie die Berechtigung zum [Ändern beliebiger Anmeldeinformationen](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
+- Weisen Sie das Benutzerkonto der Rolle des [db_backupoperator](./security/authentication-access/database-level-roles.md) zu und gewähren Sie die Berechtigung zum [Ändern beliebiger Anmeldeinformationen](../t-sql/statements/alter-credential-transact-sql.md). 
 
 ## <a name="create-azure-blob-container"></a>Erstellen eines Azure-Blobcontainers
 Ein Container stellt eine Gruppierung eines Blob-Satzes bereit. Alle BLOBs müssen sich in einem Container befinden. Die Anzahl der Container für ein Speicherkonto ist unbegrenzt, muss jedoch mindestens 1 betragen. In einem Container kann eine unbegrenzte Anzahl von BLOBs gespeichert werden. 
@@ -46,7 +46,7 @@ Führen Sie die folgenden Schritte aus, um einen Container zu erstellen:
     ![Neuer Container](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
   > [!NOTE]
-  > Sowohl Sicherungs- als auch Wiederherstellungsvorgänge in SQL Server erfordern eine Authentifizierung beim Speicherkonto. Dies gilt auch, wenn Sie einen öffentlichen Container erstellen. Container können mithilfe der REST-APIs auch programmgesteuert erstellt werden. Weitere Informationen finden Sie unter [Erstellen von Containern](https://docs.microsoft.com/rest/api/storageservices/Create-Container).
+  > Sowohl Sicherungs- als auch Wiederherstellungsvorgänge in SQL Server erfordern eine Authentifizierung beim Speicherkonto. Dies gilt auch, wenn Sie einen öffentlichen Container erstellen. Container können mithilfe der REST-APIs auch programmgesteuert erstellt werden. Weitere Informationen finden Sie unter [Erstellen von Containern](/rest/api/storageservices/Create-Container).
 
 ## <a name="create-a-test-database"></a>Erstellen einer Testdatenbank 
 In diesem Schritt erstellen Sie mithilfe von SQL Server Management Studio (SSMS) eine Testdatenbank. 
@@ -235,4 +235,3 @@ Die folgenden Themen werden empfohlen, um das Verständnis der Konzepte und bew�
   
 -   [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
 -   [SQL Server-Sicherung über URLs – bewährte Methoden und Problembehandlung](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  

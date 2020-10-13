@@ -20,12 +20,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 08cca6276b93515385f342a591376b45c9898d04
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8a95adc8ad2b4a9c5c2b97a1d5e36820d1fe7ac1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480624"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868105"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -131,9 +131,9 @@ GO
  Sobald ein Replikationsskript erstellt wurde, kann es wie folgt ausgeführt werden:  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Erstellen einer SQL-Abfragedatei in SQL Server Management Studio  
- Eine [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Replikationsskriptdatei kann als SQL-Abfragedatei in einem [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Projekt erstellt werden. Nachdem das Skript geschrieben wurde, kann für diese Abfragedatei eine Verbindung mit der Datenbank hergestellt und das Skript ausgeführt werden. Weitere Informationen zum Erstellen von [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skripts mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], finden Sie unter [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15).  
+ Eine [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Replikationsskriptdatei kann als SQL-Abfragedatei in einem [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Projekt erstellt werden. Nachdem das Skript geschrieben wurde, kann für diese Abfragedatei eine Verbindung mit der Datenbank hergestellt und das Skript ausgeführt werden. Weitere Informationen zum Erstellen von [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skripts mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], finden Sie unter [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15).  
   
- Um ein Skript zu verwenden, das Skriptvariablen enthält, muss [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] im **sqlcmd**-Modus ausgeführt werden. Im **sqlcmd**-Modus lässt der Abfrage-Editor zusätzliche **sqlcmd**-spezifische Syntax zu, wie `:setvar` zum Festlegen eines Werts für eine Variable. Weitere Informationen zum **sqlcmd**-Modus finden Sie unter [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md). Im folgenden Skript wird `:setvar` verwendet, um einen Wert für die `$(DistPubServer)`-Variable bereitzustellen.  
+ Um ein Skript zu verwenden, das Skriptvariablen enthält, muss [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] im **sqlcmd**-Modus ausgeführt werden. Im **sqlcmd**-Modus lässt der Abfrage-Editor zusätzliche **sqlcmd**-spezifische Syntax zu, wie `:setvar` zum Festlegen eines Werts für eine Variable. Weitere Informationen zum **sqlcmd**-Modus finden Sie unter [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md). Im folgenden Skript wird `:setvar` verwendet, um einen Wert für die `$(DistPubServer)`-Variable bereitzustellen.  
   
 ```  
 :setvar DistPubServer N'MyPublisherAndDistributor';  
@@ -230,5 +230,4 @@ REM -- The following must be supplied on one line.
  [Konzepte für die Replikationsprogrammierung](../../../relational-databases/replication/concepts/replication-programming-concepts.md)   
  [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Erstellen von Skripts für die Replikation](../../../relational-databases/replication/scripting-replication.md)  
-  
   

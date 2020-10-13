@@ -12,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10f95ba72bbb57481d5753e4a26d2fde3ecf1f16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765051"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867820"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Erstellen und Speichern von Spaltenhauptschlüsseln für Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>Erstellen eines selbstsignierten Zertifikats in SQL Server Management Studio (SSMS)
 
 Informationen finden Sie unter [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-Ein Schritt-für-Schritt-Tutorial, das SSMS verwendet und Always Encrypted-Schlüssel im Windows-Zertifikatspeicher speichert, finden Sie unter [Tutorial zum Always Encrypted-Assistenten (Windows-Zertifikatspeicher)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
+Ein Schritt-für-Schritt-Tutorial, das SSMS verwendet und Always Encrypted-Schlüssel im Windows-Zertifikatspeicher speichert, finden Sie unter [Tutorial zum Always Encrypted-Assistenten (Windows-Zertifikatspeicher)](/azure/azure-sql/database/always-encrypted-certificate-store-configure).
 
 
 ### <a name="making-certificates-available-to-applications-and-users"></a>Verfügbarmachen von Zertifikaten für Anwendungen und Benutzer
@@ -104,7 +104,7 @@ Um einem Benutzer die Berechtigung *Lesen* für ein im Zertifikatspeicherort des
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Erstellen von Spaltenhauptschlüsseln in Azure Key Vault
 
-Azure Key Vault hilft beim Schutz kryptografischer und geheimer Schlüssel und ist eine praktische Möglichkeit zum Speichern von Spaltenhauptschlüsseln für Always Encrypted, insbesondere, wenn Ihre Anwendungen in Azure gehostet werden. Um einen Schlüssel in [Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)zu erstellen, benötigen Sie ein [Azure-Abonnement](https://azure.microsoft.com/free/) und einen Azure-Schlüsseltresor.
+Azure Key Vault hilft beim Schutz kryptografischer und geheimer Schlüssel und ist eine praktische Möglichkeit zum Speichern von Spaltenhauptschlüsseln für Always Encrypted, insbesondere, wenn Ihre Anwendungen in Azure gehostet werden. Um einen Schlüssel in [Azure Key Vault](/azure/key-vault/general/overview)zu erstellen, benötigen Sie ein [Azure-Abonnement](https://azure.microsoft.com/free/) und einen Azure-Schlüsseltresor.
 
 ### <a name="using-powershell"></a>PowerShell
 
@@ -128,7 +128,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 ### <a name="using-sql-server-management-studio-ssms"></a>Verwenden von SQL Server Management Studio (SSMS)
 
 Informationen zum Erstellen eines Spaltenhauptschlüssels in Azure Key Vault mithilfe von SSMS finden Sie unter [Bereitstellen von Always Encrypted-Schlüsseln mithilfe von SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-Ein Schritt-für-Schritt-Tutorial, das SSMS verwendet und Always Encrypted-Schlüssel in einem Azure-Schlüsseltresor speichert, finden Sie unter [Tutorial zum Always Encrypted-Assistenten (Windows Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
+Ein Schritt-für-Schritt-Tutorial, das SSMS verwendet und Always Encrypted-Schlüssel in einem Azure-Schlüsseltresor speichert, finden Sie unter [Tutorial zum Always Encrypted-Assistenten (Windows Key Vault)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Verfügbarmachen von Azure Key Vault-Schlüsseln für Anwendungen und Benutzer
 
@@ -138,7 +138,7 @@ Um Spaltenverschlüsselungsschlüssel bereitzustellen, die mit einem in Azure Ke
 
 #### <a name="using-powershell"></a>PowerShell
 
-Um Benutzern und Anwendungen den Zugriff auf die tatsächlichen Schlüssel in Azure Key Vault zu ermöglichen, müssen Sie die Tresorzugriffsrichtlinie ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)) einrichten:
+Um Benutzern und Anwendungen den Zugriff auf die tatsächlichen Schlüssel in Azure Key Vault zu ermöglichen, müssen Sie die Tresorzugriffsrichtlinie ([Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)) einrichten:
 
 ```
 $vaultName = "<vault name>"
@@ -227,4 +227,4 @@ Informieren Sie sich in der Dokumentation zu Ihrem HSM und CSP, wie Sie den CSP 
   
 ## <a name="see-also"></a>Weitere Informationen 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+- [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

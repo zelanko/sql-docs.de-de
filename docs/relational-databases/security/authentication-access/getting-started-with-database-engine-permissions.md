@@ -14,12 +14,12 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5d6f2daf6b37c260b84683e3f85395a88b1f218
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2c5d2d1f0af5abdf24fce8be780c15a73f2a778a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005654"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864475"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für die Datenbank-Engine
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -233,7 +233,7 @@ JOIN sys.database_principals AS dRole
 
 -   [Erstellen einer Datenbank &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   
--   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [Tutorial: SQL Server Management Studio](../../../ssms/quickstarts/connect-query-sql-server.md)  
   
 -   [Tutorial: Schreiben von Transact-SQL-Anweisungen](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
@@ -244,5 +244,4 @@ JOIN sys.database_principals AS dRole
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Ermitteln effektiver Datenbank-Engine-Berechtigungen](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
-  
   

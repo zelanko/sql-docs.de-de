@@ -12,12 +12,12 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 817e126cfcd6bd4f825cb8e3158cc96d0a78e30c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723111"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866614"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
 
@@ -143,7 +143,7 @@ Angenommen, Sie haben eine Tabelle `Customers` mit einem Primärschlüssel für 
 
 In diesem Szenario hat sich die Verwendung eines nicht gruppierten Index für `(CustomerCategoryID, CustomerId)` bewährt. Dieser Index kann für Abfragen verwendet werden, die ein Prädikat unter Einbeziehung von `CustomerCategoryID` verwenden, doch enthält der Indexschlüssel keine Duplikate. Daher wird weder durch die doppelten „CustomerCategoryID“-Werte noch durch die zusätzliche Spalte im Index eine ineffiziente Indexwartung verursacht.
 
-Die folgende Abfrage zeigt die durchschnittliche Anzahl doppelter Indexschlüsselwerte für `CustomerCategoryID` in der Tabelle `Sales.Customers`in der Beispieldatenbank [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
+Die folgende Abfrage zeigt die durchschnittliche Anzahl doppelter Indexschlüsselwerte für `CustomerCategoryID` in der Tabelle `Sales.Customers`in der Beispieldatenbank [WideWorldImporters](../../samples/wide-world-importers-what-is.md).
 
 ```sql
 SELECT AVG(row_count) FROM
@@ -235,4 +235,4 @@ Nutzen Sie Lösungen wie [Adaptive Index Defrag](https://github.com/Microsoft/ti
  [Handbuch zum SQL Server Indexentwurf](../../relational-databases/sql-server-index-design-guide.md)   
  [Hashindizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Nicht gruppierte Indizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [Adaptive Indexdefragmentierung](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [Adaptive Indexdefragmentierung](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

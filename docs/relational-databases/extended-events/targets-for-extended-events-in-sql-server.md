@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 706aa149b51b2cc56b524ad39db0e1453324bd00
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 45f347cb606773ad5e568a8d443bbe010e1a3fd1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863360"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868777"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Ziele für erweiterte Ereignisse in SQL Server
 
@@ -156,7 +156,7 @@ Das Ziel **event_file** schreibt Ereignissitzungsausgaben vom Puffer in eine Dat
 > [!NOTE]
 > Azure SQL-Datenbank unterstützt nur das Speichern von `xel`-Dateien in Azure-Blobspeicher. 
 >
-> Ein Codebeispiel für **event_file** speziell für SQL-Datenbank (und SQL Managed Instance) finden Sie unter [Code des Ereignisdateiziels für erweiterte Ereignisse in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+> Ein Codebeispiel für **event_file** speziell für SQL-Datenbank (und SQL Managed Instance) finden Sie unter [Code des Ereignisdateiziels für erweiterte Ereignisse in SQL-Datenbank](/azure/sql-database/sql-database-xevent-code-event-file).
 
 ::: moniker-end
 
@@ -792,9 +792,6 @@ Wenn er auftritt, bedeutet Fehler **25726** , dass der Ereignisstream sich schne
 ### <a name="xevent-namespaces"></a>XEvent-Namespaces
 
 
-- [Microsoft.SqlServer.Management.XEvent Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
+- [Microsoft.SqlServer.Management.XEvent Namespace](/dotnet/api/microsoft.sqlserver.management.xevent)
 
-- [Microsoft.SqlServer.XEvent.Linq Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
-
-
-
+- [Microsoft.SqlServer.XEvent.Linq Namespace](/dotnet/api/microsoft.sqlserver.xevent.linq)

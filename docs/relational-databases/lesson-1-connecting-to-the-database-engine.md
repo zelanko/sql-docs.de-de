@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a3dedb6c503983cf2d916ffecbbf78e8fe1fc06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba85689470e29ee45390f6f59ad44ec222cdf945
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424112"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864056"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ Diese Lektion enthält die folgenden Aufgaben:
 - Im Lieferumfang von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sind eine Vielzahl von Tools enthalten. In diesem Thema wird beschrieben, welche Tools Sie zuerst benötigen und wie das richtige Tool für den Auftrag ausgewählt wird. Auf alle Tools kann über das Menü **Start** zugegriffen werden. Einige Tools wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]werden nicht standardmäßig installiert. Die Tools müssen als Teil der Clientkomponenten während der Ausführung des Setupprogramms installiert werden. Eine vollständige Beschreibung der unten aufgeführten Tools finden Sie, indem Sie in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation danach suchen. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] enthält nur eine Teilmenge der Tools.  
 
 ### <a name="basic-tools"></a>Haupttools
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) ist das Haupttool zum Verwalten von [!INCLUDE[ssDE](../includes/ssde-md.md)] und Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)] -Code. Es wird in der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Shell gehostet. SSMS steht im [Microsoft Download Center](https://msdn.microsoft.com/library/mt238290.aspx)zum Herunterladen zur Verfügung. Die neueste Version kann mit älteren Versionen des [!INCLUDE[ssDE_md](../includes/ssde-md.md)]verwendet werden.  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) ist das Haupttool zum Verwalten von [!INCLUDE[ssDE](../includes/ssde-md.md)] und Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)] -Code. Es wird in der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Shell gehostet. SSMS steht im [Microsoft Download Center](../ssms/download-sql-server-management-studio-ssms.md)zum Herunterladen zur Verfügung. Die neueste Version kann mit älteren Versionen des [!INCLUDE[ssDE_md](../includes/ssde-md.md)]verwendet werden.  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager wird sowohl mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als auch mit den Clienttools installiert. Sie können damit Serverprotokolle aktivieren, Protokolloptionen wie z. B. TCP-Ports konfigurieren, Serverdienste so konfigurieren, dass sie automatisch gestartet werden, und Clientcomputer so konfigurieren, dass sie mit dem von Ihnen bevorzugten Verfahren gestartet werden. Mit diesem Tool können erweiterte Konnektivitätselemente konfiguriert, aber keine Funktionen aktiviert werden.  
 
@@ -51,7 +51,7 @@ Die Beispieldatenbanken und Beispiele werden nicht standardmäßig mit [!INCLUDE
 - Es ist sehr einfach, mithilfe von Tools, die auf demselben Computer ausgeführt werden, eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] herzustellen, wenn Sie den Namen der Instanz kennen und wenn Sie die Verbindung als Mitglied der lokalen Administratorengruppe auf dem Computer herstellen. Die folgenden Vorgänge müssen auf dem Computer ausgeführt werden, der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]hostet.  
 
 > [!NOTE]  
-> Dieses Thema beschreibt das Herstellen einer Verbindung mit einem lokalen SQL Server. Informationen zum Herstellen einer Verbindung mit der Azure SQL-Datenbank finden Sie unter [Herstellen einer Verbindung mit einer SQL-Datenbank mit SQL Server Management Studio und Ausführen einer T-SQL-Beispielabfrage](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/).  
+> Dieses Thema beschreibt das Herstellen einer Verbindung mit einem lokalen SQL Server. Informationen zum Herstellen einer Verbindung mit der Azure SQL-Datenbank finden Sie unter [Herstellen einer Verbindung mit einer SQL-Datenbank mit SQL Server Management Studio und Ausführen einer T-SQL-Beispielabfrage](/azure/azure-sql/database/connect-query-ssms).  
 
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>So bestimmen Sie den Namen der Instanz der Datenbank-Engine  
 
@@ -111,4 +111,3 @@ Nachdem Sie eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-m
 
 ## <a name="next-lesson"></a>Nächste Lektion  
 [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](../relational-databases/lesson-2-connecting-from-another-computer.md)    
-  

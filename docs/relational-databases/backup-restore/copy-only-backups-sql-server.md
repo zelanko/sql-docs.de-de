@@ -16,12 +16,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: acaf5441ee5ca80468d6795071f99979ac3bcda9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 85f30b310f6878e9090dcf55e63be41c16f1490e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863375"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809859"
 ---
 # <a name="copy-only-backups"></a>Kopiesicherungen
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +45,7 @@ Eine *Kopiesicherung* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion
  Kopiesicherungen werden in der **is_copy_only** -Spalte der [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) -Tabelle aufgezeichnet.  
  
  > [!IMPORTANT]  
-> In Azure SQL Managed Instance kann keine Kopiesicherung für Datenbanken erstellt werden, die mit [TDE (Transparent Data Encryption) mit Verwaltung durch einen Dienst](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption) verschlüsselt sind. Bei TDE mit Verwaltung durch einen Dienst wird ein interner Schlüssel zum Verschlüsseln von Daten verwendet. Dieser Schlüssel kann nicht exportiert werden, weshalb Sie die Sicherung nicht woanders speichern können. Sie sollten stattdessen [TDE mit Verwaltung durch Kunden](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql) in Betracht ziehen, um Kopiesicherungen von verschlüsselten Datenbanken erstellen zu können, aber stellen Sie dabei sicher, dass Sie über einen Verschlüsselungsschlüssel für spätere Wiederherstellungen verfügen.
+> In Azure SQL Managed Instance kann keine Kopiesicherung für Datenbanken erstellt werden, die mit [TDE (Transparent Data Encryption) mit Verwaltung durch einen Dienst](/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption) verschlüsselt sind. Bei TDE mit Verwaltung durch einen Dienst wird ein interner Schlüssel zum Verschlüsseln von Daten verwendet. Dieser Schlüssel kann nicht exportiert werden, weshalb Sie die Sicherung nicht woanders speichern können. Sie sollten stattdessen [TDE mit Verwaltung durch Kunden](/azure/sql-database/transparent-data-encryption-byok-azure-sql) in Betracht ziehen, um Kopiesicherungen von verschlüsselten Datenbanken erstellen zu können, aber stellen Sie dabei sicher, dass Sie über einen Verschlüsselungsschlüssel für spätere Wiederherstellungen verfügen.
   
 ## <a name="to-create-a-copy-only-backup"></a>So erstellen Sie eine Kopiesicherung  
  Kopiesicherungen können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell erstellt werden.  
@@ -98,7 +98,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **Einrichten und Verwenden des SQL Server PowerShell-Anbieters**  
   
-- [SQL Server PowerShell-Anbieter](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+- [SQL Server PowerShell-Anbieter](../../powershell/sql-server-powershell-provider.md)  
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
@@ -108,4 +108,3 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)
 
-  

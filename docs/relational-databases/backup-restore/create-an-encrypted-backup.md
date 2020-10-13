@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fbf54c1e384357a423ee9c2c1f086edbc5c947f9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748435"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809256"
 ---
 # <a name="create-an-encrypted-backup"></a>Erstellen einer verschlüsselten Sicherung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "85748435"
   
  **Voraussetzungen:**  
   
--   Ein Windows-Speicherkonto und ein Container. Weitere Informationen finden Sie weiter oben unter [Lektion 1: Erstellen von Azure Storage-Objekten](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
+-   Ein Windows-Speicherkonto und ein Container. Weitere Informationen finden Sie weiter oben unter [Lektion 1: Erstellen von Azure Storage-Objekten](/previous-versions/sql/sql-server-2016/jj720557(v=sql.130)).  
   
 -   Ein Datenbank-Hauptschlüssel für die Masterdatenbank und ein Zertifikat oder ein asymmetrischer Schlüssel in der SQL Server-Instanz. Informationen zu Verschlüsselungsanforderungen und Berechtigungen finden Sie unter [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   
@@ -129,5 +129,4 @@ ms.locfileid: "85748435"
     GO  
   
     ```  
-  
   

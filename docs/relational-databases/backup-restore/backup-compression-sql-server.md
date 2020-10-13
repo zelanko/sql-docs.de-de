@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f3351a709eef1550ab172e90b61d2cb67673ba27
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 56c2f2cadd998a6daba51b46e46e2c141e1f0f38
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196944"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810286"
 ---
 # <a name="backup-compression-sql-server"></a>Sicherungskomprimierung (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
 
 ## <a name="backup-compression-with-tde"></a>Sicherungskomprimierung mit TDE
 
-Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ermöglicht die Einstellung `MAXTRANSFERSIZE` **größer als 65.536 (64 KB)** einen optimierten Komprimierungsalgorithmus für TDE-verschlüsselte Datenbanken ([Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)), der eine Seite zuerst entschlüsselt, komprimiert und dann wieder verschlüsselt. Wenn `MAXTRANSFERSIZE` nicht angegeben ist, oder wenn `MAXTRANSFERSIZE = 65536` (64 KB) verwendet wird, komprimiert die Sicherungskomprimierung mit TDE-verschlüsselten Datenbanken die verschlüsselten Seiten direkt und gibt möglicherweise keine guten Komprimierungsraten aus. Weitere Informationen finden Sie unter [Backup Compression for TDE-enabled Databases (Sicherungskomprimierung für TDE-fähige Datenbanken)](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ermöglicht die Einstellung `MAXTRANSFERSIZE` **größer als 65.536 (64 KB)** einen optimierten Komprimierungsalgorithmus für TDE-verschlüsselte Datenbanken ([Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)), der eine Seite zuerst entschlüsselt, komprimiert und dann wieder verschlüsselt. Wenn `MAXTRANSFERSIZE` nicht angegeben ist, oder wenn `MAXTRANSFERSIZE = 65536` (64 KB) verwendet wird, komprimiert die Sicherungskomprimierung mit TDE-verschlüsselten Datenbanken die verschlüsselten Seiten direkt und gibt möglicherweise keine guten Komprimierungsraten aus. Weitere Informationen finden Sie unter [Backup Compression for TDE-enabled Databases (Sicherungskomprimierung für TDE-fähige Datenbanken)](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases).
 
 Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 muss `MAXTRANSFERSIZE` nicht mehr festgelegt werden, um diesen optimierten Komprimierungsalgorithmus mit TDE zu aktivieren. Wenn der Sicherungsbefehl `WITH COMPRESSION` angegeben ist, oder wenn die Serverkonfiguration *backup compression default* auf 1 festgelegt ist, wird `MAXTRANSFERSIZE` automatisch auf 128.000 erhöht, um den optimierten Algorithmus zu aktivieren. Wenn `MAXTRANSFERSIZE` für den Sicherungsbefehl mit einem Wert > 64.000 angegeben wird, wird der angegebene Wert berücksichtigt. Anders ausgedrückt: SQL Server verringert den Wert nie automatisch, sondern erhöht ihn nur. Wenn Sie eine TDE-verschlüsselte Datenbank mit `MAXTRANSFERSIZE = 65536` sichern müssen, müssen Sie `WITH NO_COMPRESSION` angeben oder sicherstellen, dass die Serverkonfiguration *backup compression default* auf 0 festgelegt ist.
 
@@ -120,5 +120,4 @@ Weitere Informationen finden Sie unter [BACKUP (Transact-SQL)](../../t-sql/state
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
-  
   

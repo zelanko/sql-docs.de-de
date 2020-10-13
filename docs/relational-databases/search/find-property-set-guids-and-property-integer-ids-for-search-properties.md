@@ -15,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b405768f889e73d1885b67b05d8cf124d3f28d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c916bcaa0ff0a3fb294038df30e65e7f53f367aa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498613"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867456"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschafts-IDs für Sucheigenschaften
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88498613"
 |type|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Auf der Grundlage des zugehörigen kanonischen Typs erkannter Dateityp.|  
 |Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titel des Elements. Dabei kann es sich z. B. um den Titel eines Dokuments, den Betreff einer Nachricht, die Beschriftung eines Fotos oder den Namen eines Musiktitels handeln.|  
   
- Um die Einheitlichkeit unter den Dateiformaten zu fördern, hat Microsoft Teilmengen von häufig verwendeten Dokumenteigenschaften mit hoher Priorität für verschiedene Kategorien von Dokumenten angegeben. Hierzu zählen Nachrichten, Kontakte, Dokumente, Musikdateien, Bilder und Videos. Weitere Informationen zu den wichtigsten Eigenschaften für die einzelnen Kategorien finden Sie unter [Systemdefinierte Eigenschaften für benutzerdefinierte Dateiformate](https://go.microsoft.com/fwlink/?LinkId=144336) in der Windows Search-Dokumentation.  
+ Um die Einheitlichkeit unter den Dateiformaten zu fördern, hat Microsoft Teilmengen von häufig verwendeten Dokumenteigenschaften mit hoher Priorität für verschiedene Kategorien von Dokumenten angegeben. Hierzu zählen Nachrichten, Kontakte, Dokumente, Musikdateien, Bilder und Videos. Weitere Informationen zu den wichtigsten Eigenschaften für die einzelnen Kategorien finden Sie unter [Systemdefinierte Eigenschaften für benutzerdefinierte Dateiformate](/windows/win32/search/-shell-systemdefinedpropertiesforfileformats) in der Windows Search-Dokumentation.  
   
  Ein Dateiformat kann Eigenschaften der folgenden drei Typen implementieren:  
   
@@ -84,9 +84,9 @@ propID = 4
 ...  
 ```  
   
- Eine vollständige Beschreibung dieser Eigenschaft finden Sie unter [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) in der Windows Search-Dokumentation.  
+ Eine vollständige Beschreibung dieser Eigenschaft finden Sie unter [System.Author](/windows/win32/properties/props-system-author) in der Windows Search-Dokumentation.  
   
- Eine vollständige Liste der Windows-Eigenschaften finden Sie ebenfalls in der Windows Search-Dokumentation unter [Windows-Eigenschaften](https://go.microsoft.com/fwlink/?LinkId=215013).  
+ Eine vollständige Liste der Windows-Eigenschaften finden Sie ebenfalls in der Windows Search-Dokumentation unter [Windows-Eigenschaften](/windows/win32/properties/props).  
   
 ##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a> Hinzufügen einer Eigenschaft zu einer Sucheigenschaftenliste  
  Das folgende Beispiel zeigt, wie einer Sucheigenschaftenliste eine Eigenschaft hinzugefügt wird. Im Beispiel wird einer Sucheigenschaftenliste mit dem Namen [mithilfe einer](../../t-sql/statements/alter-search-property-list-transact-sql.md) ALTER SEARCH PROPERTY LIST `System.Author` -Anweisung die `PropertyList1`-Eigenschaft hinzugefügt und für die Eigenschaft der Anzeigename `Author`angegeben.  
@@ -107,5 +107,4 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

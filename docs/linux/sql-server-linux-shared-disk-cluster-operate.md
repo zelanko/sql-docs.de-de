@@ -2,20 +2,20 @@
 title: Manuelles Ausführen eines Failovers für FCI – SQL Server für Linux
 description: Erfahren Sie, wie Sie manuell ein Failover für eine Failoverclusterinstanz von SQL Server für Linux ausführen. Die Informationen gelten speziell für Red Hat Linux Enterprise, Ubuntu und Suse Linux Enterprise Server.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2be454ad7d2ca85f1648ba7f98ea503627d6c437
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: c37157d47e2eddaaf47f787de364603cbaaa250a
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088746"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785089"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Ausführen einer Failoverclusterinstanz – SQL Server unter Linux
 

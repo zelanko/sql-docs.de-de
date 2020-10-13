@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448073"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867945"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Häufige Fehler bei Transparent Data Encryption (TDE) mit vom Kunden verwalteten Schlüsseln in Azure Key Vault
 
@@ -34,7 +34,7 @@ Wenn das zugrunde liegende Azure Key Vault-Schlüsselzugriffsproblem innerhalb d
 
 Wenn eine unzugängliche Datenbank nicht länger benötigt wird, kann sie sofort gelöscht werden, um Kosten zu vermeiden. Alle weiteren Aktionen für die Datenbank sind erst dann erlaubt, wenn der Zugriff auf den Azure Key Vault-Schlüssel wiederhergestellt wurde und die Datenbank wieder online ist. Das Ändern der TDE-Option von kundenseitig verwalteten Schlüsseln zu dienstseitig verwalteten Schlüsseln ist ebenfalls nicht möglich, wenn eine mit kundenseitig verwalteten Schlüsseln verschlüsselte Datenbank nicht zugänglich ist. Dies ist erforderlich, um die Daten vor einem nicht autorisierten Zugriff zu schützen, wenn die Berechtigungen für den TDE-Schutz widerrufen wurden. 
 
-Wenn eine Datenbank länger als 8 Stunden nicht zugänglich ist, ist eine automatische Reparatur nicht mehr möglich. Wenn der erforderliche Azure Key Vault-Schlüsselzugriff erst danach wiederhergestellt wurde, müssen Sie den Zugriff auf den Schlüssel manuell noch mal validieren, um die Datenbank wieder online zu schalten. Das Onlineschalten der Datenbank kann in diesem Fall je nach Größe der Datenbank sehr lange dauern. Sobald die Datenbank wieder online ist, gehen zuvor konfigurierte Einstellungen wie die [Failovergruppe](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group), der PITR-Verlauf und Tags **verloren**. Daher wird empfohlen, ein Benachrichtigungssystem mit [Aktionsgruppen](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) zu implementieren, mit dem zugrunde liegende Probleme mit dem Azure Key Vault-Schlüsselzugriff erkannt und gelöst werden können. 
+Wenn eine Datenbank länger als 8 Stunden nicht zugänglich ist, ist eine automatische Reparatur nicht mehr möglich. Wenn der erforderliche Azure Key Vault-Schlüsselzugriff erst danach wiederhergestellt wurde, müssen Sie den Zugriff auf den Schlüssel manuell noch mal validieren, um die Datenbank wieder online zu schalten. Das Onlineschalten der Datenbank kann in diesem Fall je nach Größe der Datenbank sehr lange dauern. Sobald die Datenbank wieder online ist, gehen zuvor konfigurierte Einstellungen wie die [Failovergruppe](/azure/sql-database/sql-database-auto-failover-group), der PITR-Verlauf und Tags **verloren**. Daher wird empfohlen, ein Benachrichtigungssystem mit [Aktionsgruppen](/azure/azure-monitor/platform/action-groups) zu implementieren, mit dem zugrunde liegende Probleme mit dem Azure Key Vault-Schlüsselzugriff erkannt und gelöst werden können. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Häufige Fehler, die zu unzugänglichen Datenbanken führen
 
@@ -68,17 +68,17 @@ _401 AzureKeyVaultNoServerIdentity: Die Serveridentität ist auf dem Server nich
 
 Verwenden Sie das folgende Cmdlet oder den folgenden Befehl, um sicherzustellen, dass der logischen SQL Server-Instanz eine Identität zugewiesen wurde:
 
-- Azure PowerShell: [Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- Azure PowerShell: [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-- Azure CLI: [az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- Azure CLI: [az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
 
 **Abhilfe**
 
 Verwenden Sie das folgende Cmdlet oder den folgenden Befehl, um eine Azure AD-Identität (eine AppId) für die logische SQL Server-Instanz zu konfigurieren:
 
-- Azure PowerShell: [Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) mit der Option `-AssignIdentity`.
+- Azure PowerShell: [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) mit der Option `-AssignIdentity`.
 
-- Azure CLI: [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) mit der Option `--assign_identity`.
+- Azure CLI: [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) mit der Option `--assign_identity`.
 
 Navigieren Sie im Azure-Portal zum Schlüsseltresor und anschließend zu **Zugriffsrichtlinien**. Führen Sie die folgenden Schritte aus: 
 
@@ -103,9 +103,9 @@ So ermitteln Sie den Schlüssel-URI und den Schlüsseltresor:
 
 1. Verwenden Sie das folgende Cmdlet oder den folgenden Befehl, um den Schlüssel-URI einer bestimmten logischen SQL Server-Instanz abzurufen:
 
-    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - Azure CLI: [az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - Azure CLI: [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
 1. Verwenden Sie den Schlüssel-URI, um den Schlüsseltresor zu identifizieren.
 
@@ -165,7 +165,7 @@ Vergewissern Sie sich, dass die logische SQL Server-Instanz über Berechtigungen
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>Abrufen des TDE-Status aus dem Aktivitätsprotokoll
 
-Um die Überwachung des Datenbankstatus im Hinblick auf Azure Key Vault-Schlüsselzugriffsprobleme zu ermöglichen, werden die folgenden Ereignisse im [Aktivitätsprotokoll](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) protokolliert. Die Ressourcen-ID basiert auf der Azure Resource Manager-URL und Abonnement+Ressourcengruppe+Servername+Datenbankname: 
+Um die Überwachung des Datenbankstatus im Hinblick auf Azure Key Vault-Schlüsselzugriffsprobleme zu ermöglichen, werden die folgenden Ereignisse im [Aktivitätsprotokoll](/azure/service-health/alerts-activity-log-service-notifications) protokolliert. Die Ressourcen-ID basiert auf der Azure Resource Manager-URL und Abonnement+Ressourcengruppe+Servername+Datenbankname: 
 
 **Ereignis, wenn der Dienst den Zugriff auf den Azure Key Vault-Schlüssel verliert**
 
@@ -238,7 +238,5 @@ Beschreibung: Bei der Wiederherstellung des Datenbankzugriffs auf den Azure Key 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Erfahren Sie mehr über [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview).
-- Richten Sie [Aktionsgruppen](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) ein, um Benachrichtigungen und Warnungen auf die von Ihnen bevorzugte Weise zu erhalten, z. B. per E-Mail/SMS/Push/Voice, Logik-App, Webhook, ITSM oder Automation Runbook. 
-
-
+- Erfahren Sie mehr über [Azure Resource Health](/azure/service-health/resource-health-overview).
+- Richten Sie [Aktionsgruppen](/azure/azure-monitor/platform/action-groups) ein, um Benachrichtigungen und Warnungen auf die von Ihnen bevorzugte Weise zu erhalten, z. B. per E-Mail/SMS/Push/Voice, Logik-App, Webhook, ITSM oder Automation Runbook.

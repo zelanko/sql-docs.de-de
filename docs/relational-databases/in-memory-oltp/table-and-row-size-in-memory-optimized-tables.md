@@ -12,17 +12,17 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7b59adddba4266499b90ec0ee523aeb7308673
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 975e14a1a17422949f5ef848b0b0a69d71e58593
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651006"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866626"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Vor [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] konnte die Größe von Daten in Zeilen einer speicheroptimierten Tabelle nicht größer als [8.060 Bytes](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx) sein. Jedoch ist es jetzt in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und Azure SQL Database möglich, eine speicheroptimierte Tabelle mit mehreren großen Spalten (z.B. mehreren varbinary(8000)-Spalten) und LOB-Spalten (z.B. varbinary(max), varchar(max) und nvarchar(max)) zu erstellen sowie Vorgänge für sie mithilfe nativ kompilierter T-SQL-Module und Tabellentypen auszuführen. 
+Vor [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] konnte die Größe von Daten in Zeilen einer speicheroptimierten Tabelle nicht größer als [8.060 Bytes](?viewFallbackFrom=sql-server-2014) sein. Jedoch ist es jetzt in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und Azure SQL Database möglich, eine speicheroptimierte Tabelle mit mehreren großen Spalten (z.B. mehreren varbinary(8000)-Spalten) und LOB-Spalten (z.B. varbinary(max), varchar(max) und nvarchar(max)) zu erstellen sowie Vorgänge für sie mithilfe nativ kompilierter T-SQL-Module und Tabellentypen auszuführen. 
   
 Spalten, die nicht in das Zeilenlimit von 8060 Bytes passen, werden außerhalb der Zeile in einer separaten internen Tabelle platziert. Jede Spalte außerhalb einer Zeile verfügt über eine entsprechende interne Tabelle, die wiederum über einen einzelnen, nicht gruppierten Index verfügt. Informationen zu diesen internen Tabellen für Spalten außerhalb von Zeilen finden Sie unter [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
  
@@ -238,9 +238,8 @@ where object_id = object_id('dbo.Orders')
 -   Für LOBs spiegelt die Größenbeschränkung diejenige datenbasierter Tabellen wider (maximal 2 GB auf LOB-Werten). 
 -   Für eine optimale Leistung wird empfohlen, dass die meisten Spalten in 8.060 Bytes passen. 
 
-Weitere Informationen zu einigen dieser Eigenheiten finden Sie im Blogbeitrag [Für In-Memory-OLTP in SQL Server 2016 seit CTP3 Neuigkeiten](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3).   
+Weitere Informationen zu einigen dieser Eigenheiten finden Sie im Blogbeitrag [Für In-Memory-OLTP in SQL Server 2016 seit CTP3 Neuigkeiten](/archive/blogs/sqlserverstorageengine/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3).   
  
 ## <a name="see-also"></a>Weitere Informationen  
- [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [Speicheroptimierte Tabellen](./sample-database-for-in-memory-oltp.md)  
   

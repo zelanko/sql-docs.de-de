@@ -17,12 +17,12 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f592004e96a9b469a56bc9ff85b8f4080af38406
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e130997ff6e81ffaef45597b0f4fbe9a238154c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627445"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866685"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Konfigurieren der Spaltenverschlüsselung mit dem Always Encrypted-Assistenten
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -46,8 +46,8 @@ Dabei verschiebt der Assistent Daten aus der Datenbank und führt kryptografisch
 Die Verwendung von PowerShell wird für die folgenden Szenarios empfohlen: 
 
  - Eine End-to-End-Vorgehensweise, die das Konfigurieren von Always Encrypted mit dem Assistenten sowie die Verwendung von Always Encrypted in einer Clientanwendung veranschaulicht, finden Sie in den folgenden Tutorials zu Azure SQL-Datenbank:
-    - [Schützen von sensiblen Daten in Azure SQL-Datenbank mit Always Encrypted und Spaltenhauptschlüsseln im Windows-Zertifikatspeicher](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-    - [Schützen von sensiblen Daten in Azure SQL-Datenbank mit Always Encrypted und Spaltenhauptschlüsseln in Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
+    - [Schützen von sensiblen Daten in Azure SQL-Datenbank mit Always Encrypted und Spaltenhauptschlüsseln im Windows-Zertifikatspeicher](/azure/azure-sql/database/always-encrypted-certificate-store-configure)
+    - [Schützen von sensiblen Daten in Azure SQL-Datenbank mit Always Encrypted und Spaltenhauptschlüsseln in Azure Key Vault](/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
  - Ein Video, das die Verwendung des Assistenten erläutert, finden Sie unter [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Sensible Daten mit Always Encrypted schützen). Weitere Informationen finden Sie auch im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Security-Teamblog [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545).  
  - Informationen zu Always Encrypted-Schlüsseln finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](overview-of-key-management-for-always-encrypted.md).

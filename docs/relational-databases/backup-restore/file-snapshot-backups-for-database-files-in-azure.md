@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe74f56af2726a32d6216852ca2d8dec341ee6dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718066"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809440"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85718066"
   
 -   RESTORE WITH MOVE ist erforderlich.  
   
--   Weitere Informationen zu Storage Premium finden Sie unter [Storage Premium: Hochleistungsspeicher für Arbeitslasten auf virtuellen Azure-Computern](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/).  
+-   Weitere Informationen zu Storage Premium finden Sie unter [Storage Premium: Hochleistungsspeicher für Arbeitslasten auf virtuellen Azure-Computern](/azure/virtual-machines/disks-types).  
   
  **Ein einziges Speicherkonto:** Die Dateimomentaufnahme und die Ziel-BLOBs müssen dasselbe Speicherkonto verwenden.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85718066"
   
  **Onlinewiederherstellung:** Bei Verwendung von Dateimomentaufnahme-Sicherungen können Sie keine Onlinewiederherstellung ausführen. Weitere Informationen zur Onlinewiederherstellung finden Sie unter [Onlinewiederherstellungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
- **Abrechnung:** Bei Verwendung von SQL Server-Dateimomentaufnahme-Sicherungen fallen zusätzliche Gebühren an, wenn sich Daten ändern. Weitere Informationen finden Sie unter [Grundlegendes zur Ermittlung der Gebühren für Momentaufnahmen](https://msdn.microsoft.com/library/azure/hh768807.aspx).  
+ **Abrechnung:** Bei Verwendung von SQL Server-Dateimomentaufnahme-Sicherungen fallen zusätzliche Gebühren an, wenn sich Daten ändern. Weitere Informationen finden Sie unter [Grundlegendes zur Ermittlung der Gebühren für Momentaufnahmen](/rest/api/storageservices/Understanding-How-Snapshots-Accrue-Charges).  
   
  **Archivierung:** Sie können Dateimomentaufnahme-Sicherungen in einem Blob-Speicher oder einer Streamingsicherung archivieren. Kopieren Sie zum Archivieren in einem Blob-Speicher die Momentaufnahmen im Dateimomentaufnahme-Sicherungssatz in getrennte Blobs. Zum Archivieren in eine Streamingsicherung stellen Sie die Dateimomentaufnahme-Sicherung als neue Datenbank wieder her, und führen Sie dann eine normale Streamingsicherung mit Komprimierung und/oder Verschlüsselung durch, und archivieren Sie diese für die gewünschte Dauer, unabhängig von den Basis-BLOBs.  
   
@@ -178,5 +178,4 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
   

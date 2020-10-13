@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: e5486dddb1b71d2a32055cb4175ed300ce19320f
-ms.sourcegitcommit: 7a47aaffbd82bab2707cd69f44571a9037d2273b
+ms.openlocfilehash: cae884233c329e97c1cd1294780cb9c796ceee8e
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85377621"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867254"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>Überlegungen zur Hardware für In-Memory-OLTP in SQL Server
 
@@ -25,7 +25,7 @@ In-Memory-OLTP verwendet Arbeitsspeicher und Datenträger anders als herkömmlic
 > [!NOTE]
 > Dieser Artikel war ein Blog, der am 1. August 2013 vom Microsoft SQL Server 2014-Team veröffentlicht wurde. Die Webseite des Blogs wird außer Betrieb gesetzt.
 >
-> [SQL Server In-Memory-OLTP](index.md)
+> [SQL Server In-Memory-OLTP](./in-memory-oltp-in-memory-optimization.md)
 
 <!--
     Here was the link to the blog. This blog was captured into this new article on 2018/11/30, by GeneMi (MightyPen).

@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2de53e7c941e28a3a498f984fc544f4733f71694
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b2dbc06494347c3c69798b5c45e779e0ebda6238
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87240270"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810440"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -984,7 +984,7 @@ Die Leistung eines nicht gruppierten Indexes ist beim Abfragen von speicheroptim
 [CREATE XML INDEX (Transact-SQL)](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [Neuorganisieren und Neuerstellen von Indizes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
-[Verbessern der Leistung mit indizierten Sichten in SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Verbessern der Leistung mit indizierten Sichten in SQL Server 2008](/previous-versions/sql/sql-server-2008/dd171921(v=sql.100))  
 [Partitionierte Tabellen und Indizes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Erstellen eines Primärschlüssels](../relational-databases/tables/create-primary-keys.md)    
 [Indizes für speicheroptimierte Tabellen](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
@@ -994,4 +994,4 @@ Die Leistung eines nicht gruppierten Indexes ist beim Abfragen von speicheroptim
 [Index Related Dynamic Management Views and Functions (Transact-SQL) (Indexbezogene dynamische Verwaltungssichten und -funktionen (Transact-SQL))](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Indizes in berechneten Spalten](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [Indizes und ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
-[Adaptive Indexdefragmentierung](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
+[Adaptive Indexdefragmentierung](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

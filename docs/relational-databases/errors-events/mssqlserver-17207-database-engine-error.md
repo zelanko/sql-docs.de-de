@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: a7938f28af84596f620246d3d70ad491cb22828c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1c0face9315a38d4748cffef71e135401102dd0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456449"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869459"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 ```
 
 ## <a name="cause"></a>Ursache
-Bevor eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank verwendet werden kann, muss die Datenbank gestartet werden. Der Datenbank-Startvorgang umfasst die Initialisierung verschiedener Datenstrukturen, die die Datenbank und ihre Dateien darstellen, das Öffnen aller Dateien, die zur Datenbank gehören und schließlich das Ausführen der Wiederherstellung für die Datenbank. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet die Windows-API-Funktion [CreateFile](https://docs.microsoft.com/windows/win32/api/fileapi/nf-fileapi-createfilea), um die Dateien zu öffnen, die zu einer Datenbank gehören.
+Bevor eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank verwendet werden kann, muss die Datenbank gestartet werden. Der Datenbank-Startvorgang umfasst die Initialisierung verschiedener Datenstrukturen, die die Datenbank und ihre Dateien darstellen, das Öffnen aller Dateien, die zur Datenbank gehören und schließlich das Ausführen der Wiederherstellung für die Datenbank. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet die Windows-API-Funktion [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea), um die Dateien zu öffnen, die zu einer Datenbank gehören.
  
 Die Nachrichten 17207 (und 17204) weisen darauf hin, dass ein Fehler auftrat, während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versuchte, die Datenbankdateien während des Startvorgangs zu öffnen.
  
@@ -83,7 +83,7 @@ Die Betriebssystem-Fehlerinformationen die in diesen Fehlermeldungen angegeben w
 1. Wenn Sie den ```Access is Denied```-Betriebssystemfehler „5“ empfangen, ziehen Sie diese Methoden in Erwägung:
    -  Überprüfen Sie die für die Datei festgelegten Berechtigungen, indem Sie die Dateieigenschaften im Windows-Explorer aufrufen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die Zugriffssteuerung für die verschiedenen Dateiressourcen mithilfe von Windows-Gruppen bereit. Vergewissern Sie sich, dass die richtige Gruppe (mit einem Namen wie SQLServerMSSQLUser$ComputerName$MSSQLSERVER oder SQLServerMSSQLUser$ComputerName$InstanceName) über die erforderlichen Berechtigungen für die Datenbankdatei verfügt, die in der Fehlermeldung genannt wird. Weitere Details finden Sie unter [Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014). Achten Sie darauf, dass die Windows-Gruppe das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienststartkonto oder die Dienst-SID tatsächlich enthält.
    -  Überprüfen Sie das Benutzerkonto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst aktuell ausgeführt wird. Sie können diese Informationen mithilfe des Windows Task-Managers abrufen. Suchen Sie nach dem Wert für „Benutzername“ der „sqlservr.exe“-Programmdatei. Wenn Sie vor Kurzem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto geändert haben, berücksichtigen Sie außerdem, dass bei der unterstützten Durchführung dieses Vorgangs das SQL Server-Konfigurations-Manager-Hilfsprogramm verwendet wird. Weitere Informationen dazu finden Sie unter [SQL Server-Konfigurations-Manager](../sql-server-configuration-manager.md). 
-   -  Das Konto, das für den Identitätswechsel und den Zugriff auf die Datenbankdatei verwendet wird, kann je nach Typ des Vorgangs (Öffnen von Datenbanken während des Serverstarts, Anfügen einer Datenbank, Datenbankwiederherstellung usw.) variieren. Arbeiten Sie das Thema [Sichern von Daten- und Protokolldateien](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) durch, um zu verstehen, welcher Vorgang welche Berechtigungen für welche Konten festlegt. Mit Tools wie dem [Prozessmonitor](https://docs.microsoft.com/sysinternals/downloads/procmon) von Windows SysInternals können Sie nachvollziehen, ob der Dateizugriff im Sicherheitskontext des Dienststartkontos der SQL Server-Instanz (oder Dienst-SID) oder eines Identitätswechselkontos erfolgt.
+   -  Das Konto, das für den Identitätswechsel und den Zugriff auf die Datenbankdatei verwendet wird, kann je nach Typ des Vorgangs (Öffnen von Datenbanken während des Serverstarts, Anfügen einer Datenbank, Datenbankwiederherstellung usw.) variieren. Arbeiten Sie das Thema [Sichern von Daten- und Protokolldateien](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) durch, um zu verstehen, welcher Vorgang welche Berechtigungen für welche Konten festlegt. Mit Tools wie dem [Prozessmonitor](/sysinternals/downloads/procmon) von Windows SysInternals können Sie nachvollziehen, ob der Dateizugriff im Sicherheitskontext des Dienststartkontos der SQL Server-Instanz (oder Dienst-SID) oder eines Identitätswechselkontos erfolgt.
 
       Wenn SQL Server die Identität des Benutzerkontos annimmt, mit dem der ALTER DATABASE- oder CREATE DATABASE-Vorgang ausgeführt wird, finden Sie im Tool „Prozessmonitor“ die folgenden Informationen (Beispiel).
 
@@ -115,7 +115,6 @@ Die Betriebssystem-Fehlerinformationen die in diesen Fehlermeldungen angegeben w
    - Stellen Sie sicher, dass ein beliebiger Datenträger oder eine beliebige Netzwerkadresse (z. B. ein iSCSI-Laufwerk) verfügbar ist, bevor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, auf die Datenbankdateien an diesen Speicherorten zuzugreifen. Bei Bedarf können Sie die erforderlichen Abhängigkeiten in der Clusterverwaltung oder im Dienststeuerungs-Manager erstellen.
 
 1. Wenn Sie den Betriebssystemfehler 32 `The process cannot access the file because it is being used by another process` erhalten:
-   - Mit Windows Sysinternals-Tools wie [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) oder [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) können Sie herausfinden, ob ein anderer Prozess oder Dienst eine exklusive Sperre für diese Datenbankdatei erhalten hat.
+   - Mit Windows Sysinternals-Tools wie [Process Explorer](/sysinternals/downloads/process-explorer) oder [Handle](/sysinternals/downloads/handle) können Sie herausfinden, ob ein anderer Prozess oder Dienst eine exklusive Sperre für diese Datenbankdatei erhalten hat.
    - Verhindern Sie, dass dieser Prozess auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankdateien zugreift. Ein gängiges Beispiel hierfür ist z. B. Antivirussoftware (weitere Informationen im folgenden [KB-Artikel](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)).
    - Stellen Sie in einer Clusterumgebung sicher, dass der Prozess „sqlservr.exe“ aus dem vorherigen besitzenden Knoten tatsächlich die Handles für die Datenbankdateien freigegeben hat. Obwohl dies normalerweise nicht der Fall ist, können Fehlkonfigurationen des Clusters oder der E/A-Pfade zu solchen Problemen führen.
-  
