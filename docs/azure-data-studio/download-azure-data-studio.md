@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 9/30/2020
-ms.openlocfilehash: 2e8d8175daebc99cd414e9deef4bb8692f4de833
-ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
+ms.openlocfilehash: 0d318fedc053c4d01db2fc192375c499daa4573d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589319"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987839"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
@@ -178,7 +178,7 @@ In einer Offlineumgebung können Updates durch [Installieren der neuesten Versio
 
 ## <a name="supported-sql-offerings"></a>Unterstützte SQL-Angebote
 
-- Diese Version von Azure Data Studio funktioniert mit allen [unterstützten Versionen von SQL Server 2014 – [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) und bietet Unterstützung für die Arbeit mit den neuesten Cloudfunktionen in Azure SQL-Datenbank und Azure SQL Data Warehouse. Azure Data Studio bietet auch Unterstützung für die Vorschau der verwalteten Azure SQL-Datenbank-Instanz.
+- Diese Version von Azure Data Studio funktioniert mit allen [unterstützten Versionen von SQL Server 2014 – [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) und bietet Unterstützung für die Arbeit mit den neuesten Cloudfunktionen in Azure SQL-Datenbank und Azure Synapse Analytics. Azure Data Studio bietet auch Unterstützung für die Vorschau der verwalteten Azure SQL-Datenbank-Instanz.
 
 ## <a name="upgrade-from-sql-operations-studio"></a>Upgrade von SQL Operations Studio
 
