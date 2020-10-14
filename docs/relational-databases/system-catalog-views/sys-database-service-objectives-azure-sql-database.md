@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ceaed72b9a7005cadc20e185099105282693cc95
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: fd660dcd2e4e79515065bfc9d221afbb3fe2806e
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006037"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059340"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL-Datenbank)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "92006037"
 Gibt die Edition (Dienst Ebene), das Dienst Ziel (Tarif) und den Namen des elastischen Pools (sofern vorhanden) für eine Azure SQL-Datenbank oder eine Azure-Synapse-Analyse zurück. Wenn eine Anmeldung an der Masterdatenbank in einem Azure SQL-Datenbank-Server besteht, werden Informationen zu allen Datenbanken zurückgegeben. Für Azure Synapse Analytics müssen Sie mit der Masterdatenbank verbunden sein, um eine Anmeldung erstellen zu können.  
   
   
- Informationen zu den Preisen finden Sie unter [SQL-Daten Bankoptionen und-Leistung: Preis](https://azure.microsoft.com/pricing/details/sql-database/) -und [SQL Data Warehouse Preise](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)für SQL-Datenbank.  
+ Informationen zu den Preisen finden Sie unter [SQL-Daten Bankoptionen und-Leistung:](https://azure.microsoft.com/pricing/details/sql-database/) Preise für SQL-Datenbank und Preise für [Azure Synapse-Analysen](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
  Informationen zum Ändern der Dienst Einstellungen finden Sie unter [ALTER DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/alter-database-transact-sql.md) und [ALTER DATABASE (Azure Synapse Analytics)](../../t-sql/statements/alter-database-transact-sql.md?view=azure-sqldw-latest).  
   
@@ -40,7 +40,7 @@ Gibt die Edition (Dienst Ebene), das Dienst Ziel (Tarif) und den Namen des elast
 |-----------------|---------------|-----------------|  
 |database_id|INT|Die ID der Datenbank, die innerhalb einer Instanz von Azure SQL-Datenbankserver eindeutig ist. Joinfähig mit [sys.-Datenbanken &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |Edition|sysname|Die Dienst Ebene für die Datenbank oder Data Warehouse: **Basic**, **Standard**, **Premium** oder **Data Warehouse**.|  
-|service_objective|sysname|Der Tarif der Datenbank. Wenn sich die Datenbank in einem Pool für elastische Datenbanken befindet, wird **elasticpool**zurückgegeben.<br /><br /> Auf dem **Basic** -Level gibt **Basic**zurück.<br /><br /> Eine **einzelne Datenbank in einer Standard Dienst Ebene** gibt eine der folgenden zurück: S0, S1, S2, S3, S4, S6, S7, S9 oder S12.<br /><br /> **Eine Einzel Datenbank in einem Premium** -Tarif gibt Folgendes zurück: P1, P2, P4, P6, P11 oder P15.<br /><br /> **SQL Data Warehouse** gibt DW100 bis DW30000c zurück.<br /><br /> Weitere Informationen finden Sie unter [Einzel Datenbanken](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [Pools für elastische](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)Datenbanken, [Data](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) Warehouse|  
+|service_objective|sysname|Der Tarif der Datenbank. Wenn sich die Datenbank in einem Pool für elastische Datenbanken befindet, wird **elasticpool**zurückgegeben.<br /><br /> Auf dem **Basic** -Level gibt **Basic**zurück.<br /><br /> Eine **einzelne Datenbank in einer Standard Dienst Ebene** gibt eine der folgenden zurück: S0, S1, S2, S3, S4, S6, S7, S9 oder S12.<br /><br /> **Eine Einzel Datenbank in einem Premium** -Tarif gibt Folgendes zurück: P1, P2, P4, P6, P11 oder P15.<br /><br /> **Azure Synapse Analytics** gibt DW100 über DW30000c zurück.<br /><br /> Weitere Informationen finden Sie unter [Einzel Datenbanken](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [Pools für elastische](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)Datenbanken, [Data](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) Warehouse|  
 |elastic_pool_name|sysname|Der Name des [Pools für elastische](/azure/azure-sql/database/elastic-pool-overview) Datenbanken, zu dem die Datenbank gehört. Gibt **null** zurück, wenn die Datenbank eine einzelne Datenbank oder eine Data Warehouse ist.|  
   
 ## <a name="permissions"></a>Berechtigungen  

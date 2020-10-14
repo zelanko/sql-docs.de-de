@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8546b7b345dfdab44674c9d6960389ffed133329
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 985c1eff05d5b1d3323d8b99818a48258b6c5ed4
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991231"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059078"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>ADO-Programmiererhandbuch zur Verwendung von ADO-Objekten
 Diese Dokumentation bietet einen Überblick über die Verwendung von ADO-Objekten zum Arbeiten mit Daten aus verschiedenen Datenquellen. Zuerst werden die neuen Features und die Voraussetzungen für die Installation, Verwendung und Neuverteilung der ADO-Komponente zusammengefasst. In den nächsten Abschnitten wird die Verwendung der verschiedenen Typen von ADO-Objekten erörtert. Zum Schluss erörtern die Anhänge verschiedene von Microsoft bereitgestellte Daten und Dienstanbieter, Fehlermeldungen und Tipps zur Verwendung von ADO in mehreren Programmiersprachen, zusätzlich zu Beispielen und einem Glossar.
@@ -27,7 +27,7 @@ Diese Dokumentation bietet einen Überblick über die Verwendung von ADO-Objekte
 
 -   [Introduction (Einführung)](./ado-introduction.md)
 
--   [ActiveX-Datenobjekte (ADO)](./data/ado-fundamentals.md?view=sql-server-ver15)
+-   [ActiveX-Datenobjekte (ADO)](./data/ado-fundamentals.md?view=sql-server-ver15&preserve-view=true)
 
 -   [Remote Data Services (RDS)](./remote-data-service/remote-data-service-rds.md)
 
@@ -35,4 +35,4 @@ Diese Dokumentation bietet einen Überblick über die Verwendung von ADO-Objekte
 
 -   [ADO-Erweiterungen für Datendefinitionssprache und Sicherheit (ADOX)](./extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
--   [Anhänge](./appendixes/appendix-a-providers.md?view=sql-server-ver15)
+-   [Anhänge](./appendixes/appendix-a-providers.md?view=sql-server-ver15&preserve-view=true)
