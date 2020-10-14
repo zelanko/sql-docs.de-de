@@ -1,6 +1,6 @@
 ---
-description: sys. dm_workload_management_workload_groups_stats (Transact-SQL)
-title: sys. dm_workload_management_workload_groups_stats (Transact-SQL) | Microsoft-Dokumentation
+description: sys.dm_workload_management_workload_groups_stats (Transact-SQL)
+title: sys.dm_workload_management_workload_groups_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/02/2019
 ms.prod: sql
@@ -12,14 +12,14 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: a439ebecacd29c2ca412e5ba90fac6b6b5af2b24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc36846a62b8b71e0e21d7ea61d088a0f16c674d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498313"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035179"
 ---
-# <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-SQL)
+# <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys.dm_workload_management_workload_groups_stats (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Gibt Statistiken zu Arbeits Auslastungs Gruppen und die effektiven Werte der Arbeits Auslastungs [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Gruppe in zurück  
@@ -39,6 +39,6 @@ Gibt Statistiken zu Arbeits Auslastungs Gruppen und die effektiven Werte der Arb
 |effective_request_max_resource_grant_percent|**Dezimalzahl (5, 2)**|Der effektive Lauf Zeitwert für request_max_resource_grant_percent der Arbeits Auslastungs Gruppe, der die Konfiguration aller Arbeits Auslastungs Gruppen berücksichtigt.||
 |||||
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
- [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics und parallele Data Warehouse dynamische Verwaltungs Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

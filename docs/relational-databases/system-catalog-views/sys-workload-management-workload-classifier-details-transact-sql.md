@@ -13,12 +13,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 2135b567509ef9df5f3c8df7a317a9ea45b92ec7
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 63b415b74692e58b453cd483983844bfa9d724d4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006414"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034583"
 ---
 # <a name="sysworkload_management_workload_classifier_details-transact-sql"></a>sys.workload_management_workload_classifier_details (Transact-SQL)
 
@@ -38,4 +38,4 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
 
 ## <a name="next-steps"></a>Nächste Schritte
   
-Eine Liste aller Katalog Sichten für Azure Synapse-Analysen und parallele Data Warehouse finden Sie unter [SQL Data Warehouse und parallel Data Warehouse-Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Informationen zum Erstellen eines workloadklassifizierers finden Sie unter CREATE worklofier [Classifier](../../t-sql/statements/create-workload-classifier-transact-sql.md) Weitere Informationen zur Klassifizierung der Arbeitsauslastung finden Sie unter Azure Synapse Analytics-Arbeits Auslastungs [Klassifizierung](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) und [Arbeitsauslastung](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) .
+Eine Liste aller Katalog Sichten für Azure Synapse-Analysen und parallele Data Warehouse finden Sie unter [Azure-Synapse-Analysen und parallele Data Warehouse-Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Informationen zum Erstellen eines workloadklassifizierers finden Sie unter CREATE worklofier [Classifier](../../t-sql/statements/create-workload-classifier-transact-sql.md) Weitere Informationen zur Klassifizierung der Arbeitsauslastung finden Sie unter Azure Synapse Analytics-Arbeits Auslastungs [Klassifizierung](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) und [Arbeitsauslastung](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) .

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 76eb6b52b988fc0a4c0f62e4c295b36beeab0078
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47633dca91b3cf240ef745b186e01d4795de7d37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463300"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035153"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Referenz zur Benutzeroberfläche (MySqlToSql)
 Dieser Abschnitt enthält Hilfe Themen für SQL Server Migration Assistant (SSMA) für MySQL.  
@@ -28,15 +28,15 @@ In der folgenden Tabelle sind die SSMA-Dialogfelder aufgeführt:
 |[Erweiterte Objektauswahl &#40;mysqlto SQL&#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|Verwenden Sie das Dialogfeld **Erweiterte Objektauswahl** , um mithilfe von Filterkriterien Datenbankobjekte zu suchen, und wählen Sie diese Objekte aus, oder löschen Sie Sie.|  
 |[Bewertungsbericht &#40;mysqlto SQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Verwenden Sie den Bericht, um die Ergebnisse der Konvertierung von MySQL-Objekten in die Transact-SQL-Syntax anzuzeigen und um die Zeit und die Komplexität einer Migration zu SQL Server einzuschätzen.|  
 |[Herstellen einer Verbindung mit MySQL &#40;mysqlto SQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|Verwenden Sie das Dialogfeld **mit MySQL verbinden** , um eine Verbindung mit der MySQL-Datenbank herzustellen, die Sie migrieren möchten.|  
-|[Herstellen der Verbindung mit der SQL Server-Instanz](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|Verwenden Sie das Dialogfeld **mit SQL Server verbinden** , um eine Verbindung mit der Instanz von SQL Server herzustellen, zu der Sie migrieren möchten.|  
+|[Herstellen der Verbindung mit der SQL Server-Instanz](./connect-to-sql-server-mysqltosql.md)|Verwenden Sie das Dialogfeld **mit SQL Server verbinden** , um eine Verbindung mit der Instanz von SQL Server herzustellen, zu der Sie migrieren möchten.|  
 |[Herstellen einer Verbindung mit Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Verwenden Sie das Dialogfeld **mit SQL Azure verbinden** , um eine Verbindung mit der Instanz von SQL Azure herzustellen, zu der Sie migrieren möchten.|  
-|[Konvertierungs Einstellungen (MySQL)](https://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Verwenden Sie die Registerkarte **Einstellungen** , um Einstellungen auf Knotenebene festzulegen.|  
+|[Konvertierungs Einstellungen (MySQL)](./conversion-settings-mysqltosql.md)|Verwenden Sie die Registerkarte **Einstellungen** , um Einstellungen auf Knotenebene festzulegen.|  
 |[Daten Migrationsbericht &#40;mysqlto SQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Zeigt die Ergebnisse der Migration von Daten aus MySQL zu SQL Server oder SQL Azure an.|  
 |[Einstellungen für die Datenmigration](data-migration-settings-mysqltosql.md)|Verwenden Sie die Registerkarte **Einstellungen für Erweiterte Datenmigration** , um benutzerdefinierte Abfragen für die Datenmigration zu schreiben.|  
 |[Typzuordnung &#40;mysqlto SQL-&#41;bearbeiten ](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Verwenden Sie das Dialogfeld **Typzuordnung bearbeiten** , um die Zuordnung von Datentypen zwischen den Quell-und Ziel Datenbanken und Datenbankobjekten zu erstellen oder zu ändern.|  
 |[Globale Einstellungen &#40;Editor&#41; &#40;mysqldesql&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|Mithilfe der Seite Editor des Dialog Felds **globale Einstellungen** können Sie Optionen für den Code-Editor konfigurieren.|  
 |[Globale Einstellungen &#40;Dialoge&#41; &#40;mysqltosql&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|Im Dialogfeld **globale Einstellungen** können Sie auf der Seite Dialogfelder die Standardeinstellungen für Dialogfeld und Warnungen konfigurieren.|  
-|[Global Settings (Logging) (Globale Einstellungen (Protokollierung))](https://msdn.microsoft.com/0d033492-5ec3-473a-8de1-821894ec9518)|Verwenden Sie die Seite Protokollierung des Dialog Felds **globale Einstellungen** , um die Protokollierung zu konfigurieren.|  
+|[Global Settings (Logging) (Globale Einstellungen (Protokollierung))](./global-settings-logging-mysqltosql.md)|Verwenden Sie die Seite Protokollierung des Dialog Felds **globale Einstellungen** , um die Protokollierung zu konfigurieren.|  
 |[Globale Einstellungen &#40;Ausgabefenster&#41; &#40;mysqldesql&#41;](../../ssma/mysql/global-settings-output-window-mysqltosql.md)|Verwenden Sie das Dialogfeld **globale Einstellungen** , um die Einstellungen für die SSMA für MySQL-Benutzeroberfläche festzulegen.|  
 |[Neues Projekt &#40;SSMA&#41; &#40;mysqldesql&#41;](../../ssma/mysql/new-project-ssma-mysqltosql.md)|Verwenden Sie das Dialogfeld **Neues Projekt** , um ein neues SSMA für MySQL-Projekt zu erstellen.|  
 |[Projekteinstellungen &#40;Konvertierung&#41; &#40;mysqltoisql-&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|Verwenden Sie die Seite Konvertierung des Dialog Felds **Projekteinstellungen** , um anzugeben, wie SSMA für MySQL Funktionen und globale Variablen konvertiert.|  
@@ -51,4 +51,3 @@ In der folgenden Tabelle sind die SSMA-Dialogfelder aufgeführt:
 ## <a name="see-also"></a>Weitere Informationen  
 [Informationen zu den ersten Schritten mit SSMA für MySQL &#40;mysqlto SQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [Migrieren von MySQL-Datenbanken zu SQL Server Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
-  

@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_dms_workers (Transact-SQL)
-title: sys. dm_pdw_dms_workers (Transact-SQL) | Microsoft-Dokumentation
+description: sys.dm_pdw_dms_workers (Transact-SQL)
+title: sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,31 +13,31 @@ ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 886b96bebe2d7535694dc724d7ad236ae1c2b5f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf53d8d1ae8787ee8cff12ea944398f90707d7ea
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474770"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035393"
 ---
-# <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys. dm_pdw_dms_workers (Transact-SQL)
+# <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Enthält Informationen zu allen Workern, die DMS-Schritte abschließen.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|Abfrage, zu der dieser DMS-Worker gehört.<br /><br /> request_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.|Weitere Informationen finden Sie unter request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|step_index|**int**|Abfrage Schritt, zu dem dieser DMS-Worker gehört.<br /><br /> request_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.|Weitere Informationen finden Sie unter step_index in [sys. dm_pdw_request_steps &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|request_id|**nvarchar(32)**|Abfrage, zu der dieser DMS-Worker gehört.<br /><br /> request_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.|Weitere Informationen finden Sie unter request_id in [sys.dm_pdw_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|step_index|**int**|Abfrage Schritt, zu dem dieser DMS-Worker gehört.<br /><br /> request_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.|Weitere Informationen finden Sie unter step_index in [sys.dm_pdw_request_steps &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Schritt in den DMS-Plan, den dieser Worker ausgeführt wird.<br /><br /> request_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.||  
-|pdw_node_id|**int**|Knoten, auf dem der Worker ausgeführt wird.|Weitere Informationen finden Sie unter node_id in [sys. dm_pdw_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|distribution_id|**Int**|Die Verteilung, auf der der Worker ausgeführt wird (sofern vorhanden).|Weitere Informationen finden Sie unter distribution_id in [sys. pdw_distributions &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
+|pdw_node_id|**int**|Knoten, auf dem der Worker ausgeführt wird.|Weitere Informationen finden Sie unter node_id in [sys.dm_pdw_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
+|distribution_id|**Int**|Die Verteilung, auf der der Worker ausgeführt wird (sofern vorhanden).|Weitere Informationen finden Sie unter distribution_id in [sys.pdw_distributions &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
 |type|**nvarchar(32)**|Der Typ des DMS-Arbeitsthreads, den dieser Eintrag darstellt.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' Writer '|  
 |status|**nvarchar(32)**|Der Status des DMS-Workers.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Lese-oder Schreibdurchsatz in der letzten Sekunde.|Größer oder gleich 0 (null). NULL, wenn die Abfrage abgebrochen wurde oder fehlgeschlagen ist, bevor der Worker ausgeführt werden konnte.|  
 |bytes_processed|**bigint**|Gesamtanzahl der Bytes, die von diesem Worker verarbeitet wurden.|Größer oder gleich 0 (null). NULL, wenn die Abfrage abgebrochen wurde oder fehlgeschlagen ist, bevor der Worker ausgeführt werden konnte.|  
 |rows_processed|**bigint**|Anzahl der für diesen Worker gelesenen oder geschriebenen Zeilen.|Größer oder gleich 0 (null). NULL, wenn die Abfrage abgebrochen wurde oder fehlgeschlagen ist, bevor der Worker ausgeführt werden konnte.|  
-|start_time|**datetime**|Der Zeitpunkt, zu dem die Ausführung dieses Workers gestartet wurde.|Die Startzeit ist größer als oder gleich der Startzeit des Abfrage Schritts, zu dem dieser Worker gehört. Weitere Informationen finden Sie unter [sys. dm_pdw_request_steps &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|start_time|**datetime**|Der Zeitpunkt, zu dem die Ausführung dieses Workers gestartet wurde.|Die Startzeit ist größer als oder gleich der Startzeit des Abfrage Schritts, zu dem dieser Worker gehört. Weitere Informationen finden Sie unter [sys.dm_pdw_request_steps &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |end_time|**datetime**|Der Zeitpunkt, zu dem die Ausführung beendet wurde, fehlgeschlagen ist oder abgebrochen wurde.|NULL für laufende oder in der Warteschlange eingereihte Worker. Andernfalls größer als start_time.|  
 |total_elapsed_time|**int**|Gesamtzeit für die Ausführung in Millisekunden.|Größer oder gleich 0 (null).<br /><br /> Gesamtzeit seit dem Start oder Neustart des Systems. Wenn total_elapsed_time den maximalen Wert für eine ganze Zahl (24,8 Tage in Millisekunden) überschreitet, führt dies zu einem Materialisierungs Fehler aufgrund eines Überlaufs.<br /><br /> Der maximale Wert in Millisekunden entspricht 24,8 Tagen.|  
 |cpu_time|**bigint**|Die von diesem Worker verbrauchte CPU-Zeit in Millisekunden.|Größer oder gleich 0 (null).|  
@@ -45,13 +45,13 @@ ms.locfileid: "88474770"
 |buffers_available|**int**|Anzahl der nicht verwendeten Puffer.| NULL, wenn die Abfrage abgebrochen wurde oder fehlgeschlagen ist, bevor der Worker ausgeführt werden konnte.|  
 |sql_spid|**int**|Sitzungs-ID für die SQL Server-Instanz, die die Arbeit für diesen DMS-Worker ausführt.||  
 |dms_cpid|**int**|Prozess-ID des aktuellen Threads, der ausgeführt wird.||  
-|error_id|**nvarchar (36)**|Eindeutiger Bezeichner des Fehlers, der bei der Ausführung dieses Workers aufgetreten ist, sofern vorhanden.|Weitere Informationen finden Sie unter error_id in [sys. dm_pdw_request_steps &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|error_id|**nvarchar (36)**|Eindeutiger Bezeichner des Fehlers, der bei der Ausführung dieses Workers aufgetreten ist, sofern vorhanden.|Weitere Informationen finden Sie unter error_id in [sys.dm_pdw_request_steps &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |source_info|**nvarchar(4000)**|Für einen Reader die Angabe der Quell Tabellen und-Spalten.||  
 |destination_info|**nvarchar(4000)**|Für einen Writer die Angabe der Ziel Tabellen.||  
   
  Informationen über die maximale Anzahl von Zeilen, die in dieser Sicht beibehalten werden, finden Sie im Abschnitt "Metadaten" im Thema [Kapazitäts Limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics und parallele Data Warehouse dynamische Verwaltungs Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

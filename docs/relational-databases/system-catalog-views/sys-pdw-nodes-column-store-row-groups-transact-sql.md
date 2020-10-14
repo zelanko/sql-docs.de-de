@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
-title: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+description: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+title: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 08/05/2020
 ms.prod: sql
@@ -13,21 +13,21 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e712d2b5adafbb3f47ef132c701a82d3c9026c9
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062349"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038296"
 ---
-# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Stellt Informationen zu gruppierten columnstore--Indizes auf Segment Basis bereit, damit Administratoren Entscheidungen zur Systemverwaltung in treffen können [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **sys. pdw_nodes_column_store_row_groups** verfügt über eine Spalte für die Gesamtzahl der physisch gespeicherten Zeilen (einschließlich der als gelöscht markierten Zeilen) und eine Spalte für die Anzahl der Zeilen, die als gelöscht markiert sind. Verwenden Sie **sys. pdw_nodes_column_store_row_groups** , um zu bestimmen, welche Zeilen Gruppen einen hohen Prozentsatz gelöschter Zeilen aufweisen und neu erstellt werden sollten.  
+  Stellt Informationen zu gruppierten columnstore--Indizes auf Segment Basis bereit, damit Administratoren Entscheidungen zur Systemverwaltung in treffen können [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **sys.pdw_nodes_column_store_row_groups** verfügt über eine Spalte für die Gesamtanzahl der physisch gespeicherten Zeilen (einschließlich der als gelöscht markierten Zeilen) und eine Spalte für die Anzahl der Zeilen, die als gelöscht markiert sind. Verwenden Sie **sys.pdw_nodes_column_store_row_groups** , um zu bestimmen, welche Zeilen Gruppen einen hohen Prozentsatz gelöschter Zeilen aufweisen und neu erstellt werden sollten.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID der zugrunde liegenden Tabelle. Dabei handelt es sich um die physische Tabelle auf dem Computeknoten, nicht um die object_id für die logische Tabelle auf dem Steuerelement Knoten. Beispielsweise stimmt object_id nicht mit dem object_id in sys. Tables.<br /><br /> Verwenden Sie zum Verknüpfen mit sys. Tables sys. pdw_index_mappings.|  
+|**object_id**|**int**|ID der zugrunde liegenden Tabelle. Dabei handelt es sich um die physische Tabelle auf dem Computeknoten, nicht um die object_id für die logische Tabelle auf dem Steuerelement Knoten. Beispielsweise stimmt object_id nicht mit dem object_id in sys. Tables.<br /><br /> Verwenden Sie sys.pdw_index_mappings, um mit sys. Tables zu verknüpfen.|  
 |**index_id**|**int**|ID des gruppierten columnstore--Indexes in *object_id* Tabelle.|  
 |**partition_number**|**int**|ID der Tabellen Partition, die Zeilen Gruppen *row_group_id*enthält. Sie können *partition_number* verwenden, um diese DMV mit sys. Partitions zu verknüpfen.|  
 |**row_group_id**|**int**|ID dieser Zeilen Gruppe. Diese ist innerhalb der Partition eindeutig.|  
@@ -40,10 +40,10 @@ ms.locfileid: "89062349"
 |**pdw_node_id**|**int**|Eindeutige ID eines [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knotens.|  
 |**distribution_id**|**int**|Eindeutige ID der Verteilung.|
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Gibt eine Zeile für jede columnstore-Zeilengruppe für jede Tabelle zurück, die über einen gruppierten oder nicht gruppierten columnstore-Index verfügt.  
   
- Verwenden Sie **sys. pdw_nodes_column_store_row_groups** , um die Anzahl der Zeilen, die in der Zeilen Gruppe enthalten sind, und die Größe der Zeilen Gruppe zu bestimmen.  
+ Verwenden Sie **sys.pdw_nodes_column_store_row_groups** , um die Anzahl der Zeilen, die in der Zeilen Gruppe enthalten sind, und die Größe der Zeilen Gruppe zu bestimmen.  
   
  Wenn die Anzahl der gelöschten Zeilen in einer Zeilengruppe auf einen hohen Prozentsatz der Gesamtzeilen ansteigt, wird die Tabelle weniger effizient. Erstellen Sie den columnstore-Index neu, um die Tabellengröße zu verringern und die Datenträger-E/A zu reduzieren, die zum Lesen der Tabelle erforderlich ist. Verwenden Sie die **Rebuild** -Option der **Alter Index** -Anweisung, um den columnstore--Index neu zu erstellen.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "89062349"
  Erfordert die **VIEW SERVER STATE**-Berechtigung.  
   
 ## <a name="examples-sssdw-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Im folgenden Beispiel wird die **sys. pdw_nodes_column_store_row_groups** -Tabelle mit anderen Systemtabellen verbunden, um Informationen zu bestimmten Tabellen zurückzugeben. Die berechnete `PercentFull`-Spalte ist eine Schätzung der Effizienz der Zeilengruppe. Wenn Sie Informationen zu einer einzelnen Tabelle suchen möchten, entfernen Sie die Kommentar-Bindestriche vor der WHERE-Klausel, und geben Sie einen Tabellennamen an.  
+ Im folgenden Beispiel wird die **sys.pdw_nodes_column_store_row_groups** Tabelle mit anderen Systemtabellen verbunden, um Informationen zu bestimmten Tabellen zurückzugeben. Die berechnete `PercentFull`-Spalte ist eine Schätzung der Effizienz der Zeilengruppe. Wenn Sie Informationen zu einer einzelnen Tabelle suchen möchten, entfernen Sie die Kommentar-Bindestriche vor der WHERE-Klausel, und geben Sie einen Tabellennamen an.  
   
 ```sql
 SELECT IndexMap.object_id,   
@@ -109,9 +109,9 @@ ORDER BY 1, 2
 ```
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Data Warehouse- und Parallel Data Warehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Katalogsichten von Azure Synapse Analytics und Parallel Data Warehouse Catalog](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [Erstellen eines columnstore-Indexes &#40;Transact-SQL-&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys. pdw_nodes_column_store_segments &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys. pdw_nodes_column_store_dictionaries &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_segments &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

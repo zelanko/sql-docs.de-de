@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58522408e025b45c2424272942055bb7e0d374d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ed19a835b6df605a6ec735a8063a192ea32148fd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920054"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034833"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funktionen für Knoten – namespace-uri
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -107,7 +107,6 @@ WHERE ProductModelID=19
 -   Die **Namespace-URI ()-** Funktion gibt Instanzen vom Typ xs: String anstelle von xs: anyURI zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Funktionen auf Knoten](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Funktionen auf Knoten](./xquery-functions-against-the-xml-data-type.md)   
  [local-name-Funktion &#40;XQuery-&#41;](../xquery/functions-on-nodes-local-name.md)  
-  
   

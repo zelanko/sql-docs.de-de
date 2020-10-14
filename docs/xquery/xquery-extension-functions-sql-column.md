@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b3aeded0476c809bd1bcdfbfdacb4eac3381751
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55a38974ec5e85eeec58195c18edd1f6fb8b5cb4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775414"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038063"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery-Erweiterungsfunktionen – sql:column()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85775414"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Beachten Sie, dass der Verweis auf eine Spalte, die in der **SQL: column ()** -Funktion in einer XQuery angegeben ist, auf eine Spalte in der Zeile verweist, die verarbeitet wird.  
   
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können Sie nur auf eine **XML** -Instanz im Kontext des Quell Ausdrucks einer XML-DML-INSERT-Anweisung verweisen. andernfalls können Sie nicht auf Spalten verweisen, die vom Typ **XML** oder von einem benutzerdefinierten CLR-Typ sind.  
@@ -131,11 +131,10 @@ select @x
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server XQuery-Erweiterungsfunktionen](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server XQuery-Erweiterungsfunktionen]()   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [SQL Server der XML-Daten &#40;&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Erstellen von Instanzen der XML-Daten](../relational-databases/xml/create-instances-of-xml-data.md)   
  [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md)   
  [XML DML &#40;Data Modification Language&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
   

@@ -13,12 +13,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e6366de9514f625ef1c0a008b0ca6e0e331b5669
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: a2d573ef8cfc97d40451ad59d0fe51f98542c677
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006402"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033722"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys.workload_management_workload_groups (Transact-SQL)
 
@@ -47,4 +47,4 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
- Eine Liste aller Katalog Sichten für Azure Synapse-Analysen und parallele Data Warehouse finden Sie unter [SQL Data Warehouse und parallel Data Warehouse-Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Informationen zum Erstellen einer Arbeits Auslastungs Gruppe finden Sie unter [Create](../../t-sql/statements/create-workload-group-transact-sql.md)beitragen Weitere Informationen zur Klassifizierung der Arbeitsauslastung finden [Workload Isolation](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation) Sie unter workloadisolation.
+ Eine Liste aller Katalog Sichten für Azure Synapse-Analysen und parallele Data Warehouse finden Sie unter [Azure-Synapse-Analysen und parallele Data Warehouse-Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Informationen zum Erstellen einer Arbeits Auslastungs Gruppe finden Sie unter [Create](../../t-sql/statements/create-workload-group-transact-sql.md)beitragen Weitere Informationen zur Klassifizierung der Arbeitsauslastung finden [Workload Isolation](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation) Sie unter workloadisolation.

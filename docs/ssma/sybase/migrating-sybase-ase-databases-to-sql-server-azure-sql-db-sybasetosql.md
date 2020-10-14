@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e0a938d615b15dc7b280a6c6b9337a546e0059bf
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f37f80cda41279b7c773d7a2c89216c5f24e9000
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934679"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034978"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>Migrieren von SAP ASE-Datenbanken zu SQL Server Azure SQL-Datenbank (sybaseto SQL)
 SQL Server Migration Assistant (SSMA) für SAP Adaptive Server Enterprise (ASE) ist eine umfassende Umgebung, die Sie bei der schnellen Migration von SAP ASE-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank unterstützt. Mithilfe von SSMA für SAP ASE können Sie Datenbankobjekte und-Daten überprüfen, Datenbanken für die Migration bewerten, Datenbankobjekte zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank migrieren und dann Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank migrieren.  
@@ -31,21 +31,20 @@ Verwenden Sie den folgenden Prozess, um Objekte und Daten aus SAP ASE-Datenbanke
   
 3.  Stellen [Sie eine Verbindung mit einer Instanz SQL Server](connecting-to-sql-server-sybasetosql.md) , oder stellen [Sie eine Verbindung mit einer Instanz von Azure SQL-Datenbank](connecting-to-azure-sql-db-sybasetosql.md)  
   
-4.  Ordnen [Sie SAP ASE-Datenbankschemas SQL Server/Azure SQL-Datenbank-Datenbankschemas zu](https://msdn.microsoft.com/2c927003-c49d-4fe1-8e3e-5b2899166268).  
+4.  Ordnen [Sie SAP ASE-Datenbankschemas SQL Server/Azure SQL-Datenbank-Datenbankschemas zu](./mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md).  
   
 5.  Erstellen Sie optional [Bewertungsberichte](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) , um die Datenbankobjekte zu konvertieren und die Konvertierungs Zeit einzuschätzen.  
   
-6.  [Konvertieren von SAP ASE-Datenbankschemas in SQL Server/Azure SQL-Datenbankschemas](https://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3).  
+6.  [Konvertieren von SAP ASE-Datenbankschemas in SQL Server/Azure SQL-Datenbankschemas](./converting-sybase-ase-database-objects-sybasetosql.md).  
   
-7.  [Laden Sie die konvertierten Datenbankobjekte in SQL Server/Azure SQL-Datenbank](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
+7.  [Laden Sie die konvertierten Datenbankobjekte in SQL Server/Azure SQL-Datenbank](./loading-converted-database-objects-into-sql-server-sybasetosql.md).  
   
     Speichern Sie ein Skript, und führen Sie es in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank aus, oder synchronisieren Sie die Datenbankobjekte.  
   
-8.  [Migrieren von Daten zu SQL Server/Azure SQL-Datenbank](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
+8.  [Migrieren von Daten zu SQL Server/Azure SQL-Datenbank](./migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md).  
   
 9. Aktualisieren Sie ggf. die Datenbankanwendungen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Installieren von SSMA für SAP ASE &#40;sybasedesql&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
 [Informationen zu den ersten Schritten mit SSMA für SAP ASE &#40;sybaseto SQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
-  

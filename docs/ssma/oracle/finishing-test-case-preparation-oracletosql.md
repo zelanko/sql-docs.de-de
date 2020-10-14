@@ -11,12 +11,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: a0498953c28a90498aa3e15439840180efdd25f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4707c68c0b744e092844d57bd6f235a69dbec9ce
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463225"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038043"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Beenden der Vorbereitung für Testfälle (OracleToSQL)
 Auf der letzten Seite des Assistenten werden die Test Fallbeschreibung und Informationen zu den am Test beteiligten Objekten angezeigt. Außerdem können Sie auf dieser Seite die Test Ausführungs Optionen festlegen.  
@@ -55,10 +55,9 @@ Definiert den Speicher Modus für die während der Testausführung erstellten Hi
   
 -   Wenn Sie bei **fehlgeschlagenen Tabellen vergleichen die Option Benutzer anfordern**auswählen, kann der Benutzer die erforderliche Aktion auswählen, wenn ein Fehler auftritt.  
   
-Klicken Sie auf die Schaltfläche **Fertig** stellen, um den vorbereiteten Testfall in [mithilfe von Test Depots (oracleto SQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)zu speichern.  
+Klicken Sie auf die Schaltfläche **Fertig** stellen, um den vorbereiteten Testfall in [mithilfe von Test Depots (oracleto SQL)](./using-test-repositories-oracletosql.md)zu speichern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Verwenden von Test Depots &#40;oracleto SQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
 [Ausführen von Test Fällen &#40;oracleto SQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Testen von migrierten Datenbankobjekten &#40;oracleto SQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dacb3e54898ece6222d2f9eb3d7a546c8aa7b76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c27ed4fad982831288f1e115f6da94bc70114c61
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753549"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037430"
 ---
 # <a name="functions-on-sequences---id"></a>Funktionen für Sequenzen – id
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Ein oder mehrere xs:IDREF-Werte.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Das Ergebnis der Funktion ist eine Sequenz von Elementen in der XML-Instanz in der Dokumentreihenfolge, die einen xs:ID-Wert gleich einem oder mehreren xs:IDREF-Werten in der Liste der xs:IDREF-Kandidaten besitzt.  
   
  Wenn der xs:IDREF-Wert keinem Element entspricht, gibt die Funktion die leere Sequenz zurück.  
@@ -177,11 +177,10 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Einschränkungen sind zu beachten:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]die zwei-Argument-Version der **ID ()** wird von nicht unterstützt.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die zwei-Argument-Version der **ID ()** wird von nicht unterstützt.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]erfordert, dass der Argumenttyp von **ID ()** ein Untertyp von xs: IDREF * ist.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erfordert, dass der Argumenttyp von **ID ()** ein Untertyp von xs: IDREF * ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Funktionen für Sequenzen](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
-  
+ [Funktionen für Sequenzen](./xquery-functions-against-the-xml-data-type.md)  
   

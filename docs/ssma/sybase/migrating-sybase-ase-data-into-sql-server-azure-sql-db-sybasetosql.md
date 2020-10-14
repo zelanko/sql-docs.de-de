@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 89603e61a51ebac9ccf8d834e493bbd463645a02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2268615b8a8ed25883d7d9dce92d8e775f228a4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497666"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034981"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>Migrieren von Sybase ASE-Daten in SQL Server Azure SQL-Datenbank (sybaseto SQL)
 Nachdem Sie die Datenbankobjekte von Sybase Adaptive Server Enterprise (ASE) erfolgreich in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank geladen haben, können Sie Daten von ASE zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank migrieren.  
   
 > [!IMPORTANT]  
-> Wenn es sich bei der verwendeten Engine um ein Server seitiges Daten Migrations Modul handelt, müssen Sie vor dem Migrieren von Daten das SSMA für Sybase ASE Extension Pack und die Sybase ASE-Anbieter auf dem Computer installieren, auf dem SSMA ausgeführt wird. Der SQL Server-Agent-Dienst muss ebenfalls ausgeführt werden. Weitere Informationen zum Installieren des Erweiterungspakets finden Sie unter Installieren von [SSMA-Komponenten auf SQL Server (sybasedesql)](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d) .  
+> Wenn es sich bei der verwendeten Engine um ein Server seitiges Daten Migrations Modul handelt, müssen Sie vor dem Migrieren von Daten das SSMA für Sybase ASE Extension Pack und die Sybase ASE-Anbieter auf dem Computer installieren, auf dem SSMA ausgeführt wird. Der SQL Server-Agent-Dienst muss ebenfalls ausgeführt werden. Weitere Informationen zum Installieren des Erweiterungspakets finden Sie unter Installieren von [SSMA-Komponenten auf SQL Server (sybasedesql)](./installing-ssma-components-on-sql-server-sybasetosql.md) .  
   
 ## <a name="setting-migration-options"></a>Festlegen von Migrations Optionen  
 Überprüfen Sie vor dem Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank die Projekt Migrations Optionen im Dialogfeld **Projekteinstellungen** .  
   
--   Mithilfe dieses Dialog Felds können Sie Optionen wie die Batch Größe für die Migration, das Sperren von Tabellen, die Einschränkungs Überprüfung, die Verarbeitung von NULL-Werten und die Verarbeitung von Identitäts Werten festlegen. Weitere Informationen zu den Projekt Migrations Einstellungen finden Sie unter [Projekteinstellungen (Migration) (Sybase)](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924).  
+-   Mithilfe dieses Dialog Felds können Sie Optionen wie die Batch Größe für die Migration, das Sperren von Tabellen, die Einschränkungs Überprüfung, die Verarbeitung von NULL-Werten und die Verarbeitung von Identitäts Werten festlegen. Weitere Informationen zu den Projekt Migrations Einstellungen finden Sie unter [Projekteinstellungen (Migration) (Sybase)](./project-settings-migration-sybasetosql.md).  
   
     Weitere Informationen zu **erweiterten Daten Migrations Einstellungen**finden Sie unter [Einstellungen für die Datenmigration](data-migration-settings-sybasetosql.md) .  
   
@@ -46,11 +46,11 @@ Nachdem Sie die Datenbankobjekte von Sybase Adaptive Server Enterprise (ASE) erf
 -   In den **Projekteinstellungen**ist die Option **Client seitiges Daten Migrations** Modul standardmäßig festgelegt.  
   
     > [!NOTE]  
-    > Die Client seitige Daten Migrations-Engine befindet sich in der SSMA-Anwendung und ist daher nicht von der Verfügbarkeit des Erweiterungspakets abhängig.  
+    > Die Client-Side-Datenmigrations-Engine befindet sich in der SSMA-Anwendung und ist daher nicht von der Verfügbarkeit des Erweiterungspakets abhängig.  
   
 **Server seitige Daten Migration:**  
   
--   Bei der Server seitigen Datenmigration befindet sich die-Engine in der Zieldatenbank. Sie wird über das Erweiterungspaket installiert. Weitere Informationen zum Installieren des Erweiterungspakets finden Sie unter Installieren von [SSMA-Komponenten auf SQL Server (sybasedesql)](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d) .  
+-   Bei der Server seitigen Datenmigration befindet sich die-Engine in der Zieldatenbank. Sie wird über das Erweiterungspaket installiert. Weitere Informationen zum Installieren des Erweiterungspakets finden Sie unter Installieren von [SSMA-Komponenten auf SQL Server (sybasedesql)](./installing-ssma-components-on-sql-server-sybasetosql.md) .  
   
 -   Um die Migration auf dem Server zu initiieren, wählen Sie im Dialogfeld **Projekteinstellungen** die Option **serverseitiges Datenmigrations-Engine** aus.  
   
@@ -99,15 +99,14 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um die Migrations Me
   
 5.  Geben Sie im Dialogfeld **mit Sybase-ASE verbinden** die Anmelde Informationen für die Verbindung ein, und klicken Sie dann auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit der Sybase-ASE finden Sie unter Herstellen einer Verbindung [mit Sybase &#40;sybasedesql&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   
-    Wenn die Zieldatenbank SQL Server ist, geben Sie im Dialogfeld **mit SQL Server verbinden** die Anmelde Informationen für die Verbindung ein, und klicken Sie auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit SQL Server finden Sie unter Herstellen einer Verbindung [mit SQL Server (sybasedesql)](https://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) .  
+    Wenn die Zieldatenbank SQL Server ist, geben Sie im Dialogfeld **mit SQL Server verbinden** die Anmelde Informationen für die Verbindung ein, und klicken Sie auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit SQL Server finden Sie unter Herstellen einer Verbindung [mit SQL Server (sybasedesql)](./connecting-to-sql-server-sybasetosql.md) .  
   
     Wenn die Zieldatenbank Azure SQL-Datenbank ist, geben Sie im Dialogfeld Verbindung **mit Azure SQL-Datenbank herstellen** die Anmelde Informationen für die Verbindung ein, und klicken Sie auf **verbinden**. Weitere Informationen zum Herstellen einer Verbindung mit Azure SQL-Datenbank finden Sie unter [Herstellen einer Verbindung mit Azure SQL-Datenbank &#40;sybasedesql&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
-    Nachrichten werden im **Ausgabe** Bereich angezeigt. Wenn die Migration beendet ist, wird der **Daten Migrationsbericht** angezeigt. Wenn keine Daten migriert wurden, klicken Sie auf die Zeile, die die Fehler enthält, und klicken Sie dann auf **Details**. Wenn Sie den Bericht fertiggestellt haben, klicken Sie auf **Schließen**. Weitere Informationen zum Daten Migrationsbericht finden Sie unter [Daten Migrationsbericht (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241) .  
+    Nachrichten werden im **Ausgabe** Bereich angezeigt. Wenn die Migration beendet ist, wird der **Daten Migrationsbericht** angezeigt. Wenn keine Daten migriert wurden, klicken Sie auf die Zeile, die die Fehler enthält, und klicken Sie dann auf **Details**. Wenn Sie den Bericht fertiggestellt haben, klicken Sie auf **Schließen**. Weitere Informationen zum Daten Migrationsbericht finden Sie unter [Daten Migrationsbericht (SSMA Common)](./data-migration-report-sybasetosql.md) .  
   
 > [!NOTE]  
 > Wenn die SQL Express-Edition als Zieldatenbank verwendet wird, ist nur die Client seitige Datenmigration zulässig, und die serverseitige Datenmigration wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Migrieren von Sybase ASE-Datenbanken zu SQL Server-Azure SQL-Datenbank &#40;sybaseto SQL-&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-  

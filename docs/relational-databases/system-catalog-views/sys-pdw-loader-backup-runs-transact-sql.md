@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_loader_backup_runs (Transact-SQL)
-title: sys. pdw_loader_backup_runs (Transact-SQL) | Microsoft-Dokumentation
+description: sys.pdw_loader_backup_runs (Transact-SQL)
+title: sys.pdw_loader_backup_runs (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fc85ec89f07359714c4661b3b7c4c8d8d5138b1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 31d8ae2e196d116b6e3ff58c23deedc20425fdf5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490258"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036980"
 ---
-# <a name="syspdw_loader_backup_runs-transact-sql"></a>sys. pdw_loader_backup_runs (Transact-SQL)
+# <a name="syspdw_loader_backup_runs-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Enthält Informationen zu laufenden und abgeschlossenen Sicherungs-und Wiederherstellungs Vorgängen in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sowie zu laufenden und abgeschlossenen Sicherungs-, Wiederherstellungs-und Ladevorgängen in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] . Die Informationen persistieren über Systemneustarts.  
@@ -38,8 +38,8 @@ ms.locfileid: "88490258"
 |database_name|**nvarchar(255)**|Der Name der Datenbank, die den Kontext dieses Vorgangs ist.||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|ID des Benutzers, der den Vorgang anfordert.||  
-|session_id|**nvarchar(32)**|Die ID der Sitzung, die den Vorgang ausführt.|Weitere Informationen finden Sie unter session_id in [sys. dm_pdw_exec_sessions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|request_id|**nvarchar(32)**|Die ID der Anforderung, die den Vorgang ausführt. Bei Lasten ist dies die aktuelle oder letzte Anforderung, die dieser Last zugeordnet ist.|Weitere Informationen finden Sie unter request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|session_id|**nvarchar(32)**|Die ID der Sitzung, die den Vorgang ausführt.|Weitere Informationen finden Sie unter session_id in [sys.dm_pdw_exec_sessions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|request_id|**nvarchar(32)**|Die ID der Anforderung, die den Vorgang ausführt. Bei Lasten ist dies die aktuelle oder letzte Anforderung, die dieser Last zugeordnet ist.|Weitere Informationen finden Sie unter request_id in [sys.dm_pdw_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |status|**nvarchar (16)**|Der Status des Testlaufs.|"abgebrochen", "abgeschlossen", "fehlerhaft", "in Warteschlange", "wird ausgeführt"|  
 |Fortschritt|**int**|Prozentsatz abgeschlossen.|0 bis 100|  
 |command|**nvarchar(4000)**|Der vollständige Text des Befehls, der vom Benutzer gesendet wurde.|Wird abgeschnitten, wenn mehr als 4000 Zeichen (zählungs Zeichen) enthalten sind.|  
@@ -48,6 +48,6 @@ ms.locfileid: "88490258"
 |rows_inserted|**bigint**|Anzahl der Zeilen, die im Rahmen dieses Vorgangs in die Datenbanktabelle (n) eingefügt werden.||  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Data Warehouse- und Parallel Data Warehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Katalogsichten von Azure Synapse Analytics und Parallel Data Warehouse Catalog](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

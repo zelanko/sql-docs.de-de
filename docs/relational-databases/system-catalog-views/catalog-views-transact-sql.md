@@ -24,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3af547afd4b35c10358ce24be2fbcce96801144
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9d139633c9f1e38f7509696ce228c6e0559da52f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546886"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038299"
 ---
 # <a name="system-catalog-views-transact-sql"></a>System Katalog Sichten (Transact-SQL)
 
@@ -46,7 +46,7 @@ Katalogsichten geben Informationen zurück, die von [!INCLUDE[ssDEnoversion](../
 - Die abgeleitete Sicht enthält eine Obermenge der Spalten und eine Teilmenge der Zeilen.
 
 > [!IMPORTANT]
-> In zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die Definition der Systemkatalogsichten von [!INCLUDE[msCoName](../../includes/msconame-md.md)] möglicherweise erweitert, indem am Ende der Spaltenliste Spalten hinzugefügt werden. Es wird empfohlen, die Syntax SELECT \* from *sys. catalog_view_name* im Produktionscode zu verwenden, da sich die Anzahl der zurückgegebenen Spalten möglicherweise ändert und Ihre Anwendung unterbricht.
+> In zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die Definition der Systemkatalogsichten von [!INCLUDE[msCoName](../../includes/msconame-md.md)] möglicherweise erweitert, indem am Ende der Spaltenliste Spalten hinzugefügt werden. Es wird empfohlen, die Syntax SELECT \* from *sys.catalog_view_name* in Production Code zu verwenden, da sich die Anzahl der zurückgegebenen Spalten möglicherweise ändert und Ihre Anwendung unterbricht.
 
 Die Katalogsichten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurden in den folgenden Kategorien organisiert:
 
@@ -109,7 +109,7 @@ Die Katalogsichten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
         
         [Katalogsichten für räumliche Daten](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)
         
-        [SQL Data Warehouse- und Parallel Data Warehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+        [Katalogsichten von Azure Synapse Analytics und Parallel Data Warehouse Catalog](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
         
         [Stretch Database Katalog Sichten &#40;Transact-SQL-&#41;](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
         

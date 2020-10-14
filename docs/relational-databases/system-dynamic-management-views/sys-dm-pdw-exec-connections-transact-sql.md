@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_exec_connections (Transact-SQL)
-title: sys. dm_pdw_exec_connections (Transact-SQL) | Microsoft-Dokumentation
+description: sys.dm_pdw_exec_connections (Transact-SQL)
+title: sys.dm_pdw_exec_connections (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 25b5edb0d1c89042b876fc0cefac278b867fb5ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 507853f50ede1c652e81b24d60121deadad239d3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474769"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035383"
 ---
-# <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-SQL)
+# <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Gibt Informationen über die zu dieser Instanz von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] hergestellten Verbindungen zurück, sowie Details zu jeder der Verbindungen.  
@@ -39,10 +39,10 @@ ms.locfileid: "88474769"
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-| Von | An | Beziehung |
+| From | Beschreibung | Relationship |
 | ---- | -- | ------------ |
-|dm_pdw_exec_sessions. session_id|dm_pdw_exec_connections. session_id|1:1|  
-|dm_pdw_exec_requests. connection_id|dm_pdw_exec_connections. connection_id|n:1|  
+|dm_pdw_exec_sessions dm_pdw_exec_sessions.session_id|dm_pdw_exec_connections dm_pdw_exec_connections.session_id|1:1|  
+|dm_pdw_exec_requests dm_pdw_exec_requests.connection_id|dm_pdw_exec_connections dm_pdw_exec_connections.connection_id|n:1|  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Typische Abfrage zum Sammeln von Informationen über die eigene Verbindung einer Abfrage.  
@@ -59,7 +59,7 @@ WHERE c.session_id = SESSION_ID();
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics und parallele Data Warehouse dynamische Verwaltungs Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
 
