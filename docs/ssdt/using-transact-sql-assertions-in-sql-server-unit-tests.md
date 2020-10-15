@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 8ef278073056bbe6958ed61ce415aa2130156edb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73a11047ecfe6b797cb2c79fd2c48e3c7386882f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898982"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987746"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Verwenden von Transact-SQL-Assertionen in SQL Server-Komponententests
 
@@ -79,11 +79,10 @@ Dabei gilt:
   
 @ErrorState ist eine willkürliche ganze Zahl zwischen 1 und 127. Sie können diese ganze Zahl verwenden, um Vorkommen eines einzelnen Fehlers zu unterscheiden, die an verschiedenen Stellen im Code vorkommen.  
   
-Weitere Informationen finden Sie unter [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Ein Beispiel zur Verwendung von RAISERROR in einem SQL Server-Komponententest finden Sie im Thema [Gewusst wie: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Weitere Informationen finden Sie unter [RAISERROR (Transact-SQL)](../t-sql/language-elements/raiserror-transact-sql.md). Ein Beispiel zur Verwendung von RAISERROR in einem SQL Server-Komponententest finden Sie im Thema [Gewusst wie: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Verwenden von Testbedingungen in SQL Server-Komponententests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [Vorgehensweise: Öffnen eines SQL Server-Komponententests zur Bearbeitung](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
-  

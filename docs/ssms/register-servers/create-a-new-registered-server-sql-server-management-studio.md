@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5b75fa312f06fa91d7ffbe9a4a4226f0e3852449
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9bdbf68766e6c271f17254afc4262de341deaeb3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480161"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037596"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Erstellen eines neu registrierten Servers (SQL Server Management Studio)
 
@@ -33,7 +33,7 @@ In diesem Thema wird beschrieben, wie Sie die Verbindungsinformationen für Serv
   
 -   Lokale Servergruppen  
   
-     Verwenden Sie lokale Servergruppen, um mühelos eine Verbindung zu Servern herzustellen, die Sie häufig verwalten. Sowohl lokale als auch nicht lokale Server sind in lokalen Servergruppen registriert. Lokale Servergruppen sind für jeden Benutzer eindeutig. Informationen zum Freigeben registrierter Serverinformationen finden Sie unter [Exportieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md) und [Importieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)registrieren.  
+     Verwenden Sie lokale Servergruppen, um mühelos eine Verbindung zu Servern herzustellen, die Sie häufig verwalten. Sowohl lokale als auch nicht lokale Server sind in lokalen Servergruppen registriert. Lokale Servergruppen sind für jeden Benutzer eindeutig. Informationen zum Freigeben registrierter Serverinformationen finden Sie unter [Exportieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md) und [Importieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)registrieren.  
   
     > [!NOTE]  
     >  Sie sollten nach Möglichkeit immer die Windows-Authentifizierung verwenden.  
@@ -98,7 +98,7 @@ In diesem Thema wird beschrieben, wie Sie die Verbindungsinformationen für Serv
      Klicken Sie hier, um die Einstellungen des registrierten Servers zu speichern.  
   
 ## <a name="multiserver-queries"></a>Multiserverabfragen  
- Das Abfrage-Editorfenster in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kann gleichzeitig eine Verbindung zu mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und diese abfragen. Die von der Abfrage zurückgegebenen Ergebnisse können in einem einzigen Ergebnisbereich zusammengefasst oder in gesonderten Ergebnisbereichen ausgegeben werden. Als Option kann der Abfrage-Editor Spalten umfassen, die den Namen des jede Zeile generierenden Servers und den Anmeldenamen liefern, der zum Herstellen der Verbindung mit dem diese Zeile generierenden Server verwendet wurde. Weitere Informationen zum Ausführen von Multiserverabfragen finden Sie unter [Gleichzeitiges Ausführen von Anweisungen für mehrere Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md).  
+ Das Abfrage-Editorfenster in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kann gleichzeitig eine Verbindung zu mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und diese abfragen. Die von der Abfrage zurückgegebenen Ergebnisse können in einem einzigen Ergebnisbereich zusammengefasst oder in gesonderten Ergebnisbereichen ausgegeben werden. Als Option kann der Abfrage-Editor Spalten umfassen, die den Namen des jede Zeile generierenden Servers und den Anmeldenamen liefern, der zum Herstellen der Verbindung mit dem diese Zeile generierenden Server verwendet wurde. Weitere Informationen zum Ausführen von Multiserverabfragen finden Sie unter [Gleichzeitiges Ausführen von Anweisungen für mehrere Server &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md).  
   
  Um Abfragen für alle Server in einer lokalen Servergruppe auszuführen, klicken Sie mit der rechten Maustaste auf die Servergruppe, zeigen Sie auf **Verbinden**, und klicken Sie anschließend auf **Neue Abfrage**. Wenn Abfragen im neuen Abfrage-Editor-Fenster ausgeführt werden, werden sie unter Verwendung der gespeicherten Verbindungsinformationen, einschließlich des Kontexts für die Benutzerauthentifizierung, für alle Server in der Gruppe ausgeführt. Server, die mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung registriert wurden, das Kennwort jedoch nicht speichern, können keine Verbindung herstellen.  
   
@@ -106,7 +106,6 @@ In diesem Thema wird beschrieben, wie Sie die Verbindungsinformationen für Serv
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Ausblenden von Systemobjekten im Objekt-Explorer](../object/hide-system-objects-in-object-explorer.md)   
- [Exportieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [Importieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
-  
+ [Exportieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)   
+ [Importieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)  
   

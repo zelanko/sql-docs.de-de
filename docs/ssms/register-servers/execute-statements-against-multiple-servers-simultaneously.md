@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
-ms.openlocfilehash: 627eff46acaae38b675814e84ea76e7a7ea64f2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91a18087a9bf3f844988dec16e84a1cdbbfb1948
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417956"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037575"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>Gleichzeitiges Ausführen von Anweisungen für mehrere Server
 
@@ -30,7 +30,7 @@ In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes
 
 Die von der Abfrage zurückgegebenen Ergebnisse können in einem einzigen Ergebnisbereich zusammengefasst oder in gesonderten Ergebnisbereichen ausgegeben werden. Das Resultset kann zusätzliche Spalten für den Servernamen und den Anmeldenamen umfassen, der für die Abfrage auf jedem einzelnen Server verwendet wird. Zentrale Verwaltungsserver und untergeordnete registrierte Server können nur mithilfe der Windows-Authentifizierung registriert werden. Server in lokalen Servergruppen können mithilfe der Windows-Authentifizierung oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung registriert werden.  
   
-> **HINWEIS!** Bevor Sie die folgenden Schritte ausführen, erstellen Sie einen zentralen Verwaltungsserver und eine Servergruppe. Weitere Informationen finden Sie unter [Erstellen eines zentralen Verwaltungsservers und einer Servergruppe &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md).  
+> **HINWEIS!** Bevor Sie die folgenden Schritte ausführen, erstellen Sie einen zentralen Verwaltungsserver und eine Servergruppe. Weitere Informationen finden Sie unter [Erstellen eines zentralen Verwaltungsservers und einer Servergruppe &#40;SQL Server Management Studio&#41;](./create-a-central-management-server-and-server-group.md).  
 
   
 ##  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
@@ -63,5 +63,4 @@ Die von der Abfrage zurückgegebenen Ergebnisse können in einem einzigen Ergebn
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwalten mehrerer Server mithilfe von zentralen Verwaltungsservern](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

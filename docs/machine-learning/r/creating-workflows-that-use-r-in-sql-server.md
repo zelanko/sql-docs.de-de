@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288284"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956621"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Erstellen von SSIS- und SSRS-Workflows mit R unter SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,9 +47,9 @@ Im Folgenden finden Sie einige Anregungen zum Automatisieren von Datenverarbeitu
 
 Das folgende Beispiel stammt aus einem inzwischen eingestellten MSDN-Blogbeitrag, der von Jimmy Wong unter dieser URL verfasst wurde: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
-In diesem Beispiel wird gezeigt, wie Aufgaben mithilfe von SSIS automatisiert werden. Gespeicherte Prozeduren mit eingebettetem R-Skript werden mithilfe von SQL Server Management Studio erstellt und dann über den Task [T-SQL-Anweisung ausführen](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) in einem SSIS-Paket ausgeführt.
+In diesem Beispiel wird gezeigt, wie Aufgaben mithilfe von SSIS automatisiert werden. Gespeicherte Prozeduren mit eingebettetem R-Skript werden mithilfe von SQL Server Management Studio erstellt und dann über den Task [T-SQL-Anweisung ausführen](../../integration-services/control-flow/execute-t-sql-statement-task.md) in einem SSIS-Paket ausgeführt.
 
-Wenn Sie die einzelnen Schritte dieses Beispiels ausführen möchten, müssen Sie mit Management Studio, SSIS, SSIS Designer, Package Design und T-SQL vertraut sein. Vom SSIS-Paket werden drei Tasks vom Typ [T-SQL-Anweisungen ausführen](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) verwendet, mit denen Trainingsdaten in eine Tabelle eingefügt, die Daten modelliert und die Daten bewertet werden, um ein Vorhersageergebnis zu erhalten.
+Wenn Sie die einzelnen Schritte dieses Beispiels ausführen möchten, müssen Sie mit Management Studio, SSIS, SSIS Designer, Package Design und T-SQL vertraut sein. Vom SSIS-Paket werden drei Tasks vom Typ [T-SQL-Anweisungen ausführen](../../integration-services/control-flow/execute-t-sql-statement-task.md) verwendet, mit denen Trainingsdaten in eine Tabelle eingefügt, die Daten modelliert und die Daten bewertet werden, um ein Vorhersageergebnis zu erhalten.
 
 ### <a name="load-training-data"></a>Laden von Trainingsdaten
 
@@ -83,7 +83,7 @@ begin
 end;
 ```
 
-Erstellen Sie in SSIS Designer den Task [SQL ausführen](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task), mit dem die gespeicherte Prozedur ausgeführt wird, die Sie eben definiert haben. Mit dem Skript für **SQLStatement** werden vorhandene Daten entfernt, angegeben, welche Daten eingefügt werden sollen, und anschließend die gespeicherte Prozedur zum Bereitstellen der Daten aufgerufen.
+Erstellen Sie in SSIS Designer den Task [SQL ausführen](../../integration-services/control-flow/execute-sql-task.md), mit dem die gespeicherte Prozedur ausgeführt wird, die Sie eben definiert haben. Mit dem Skript für **SQLStatement** werden vorhandene Daten entfernt, angegeben, welche Daten eingefügt werden sollen, und anschließend die gespeicherte Prozedur zum Bereitstellen der Daten aufgerufen.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -108,7 +108,7 @@ Create table ssis_iris_models (
 GO
 ```
 
-Erstellen Sie eine gespeicherte Prozedur zum Generieren eines linearen Modells mithilfe von [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod). Die Bibliotheken RevoScaleR und RevoScalePy sind in R und Python-Sitzungen unter SQL Server automatisch verfügbar und müssen daher nicht importiert werden.
+Erstellen Sie eine gespeicherte Prozedur zum Generieren eines linearen Modells mithilfe von [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod). Die Bibliotheken RevoScaleR und RevoScalePy sind in R und Python-Sitzungen unter SQL Server automatisch verfügbar und müssen daher nicht importiert werden.
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-Erstellen Sie in SSIS Designer den Task [SQL ausführen](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task), um die gespeicherte Prozedur **generate_iris_rx_model** auszuführen. Das Modell wird serialisiert und in der Tabelle „ssis_iris_models“ gespeichert. Das Skript für **SQLStatement** sieht wie folgt aus:
+Erstellen Sie in SSIS Designer den Task [SQL ausführen](../../integration-services/control-flow/execute-sql-task.md), um die gespeicherte Prozedur **generate_iris_rx_model** auszuführen. Das Modell wird serialisiert und in der Tabelle „ssis_iris_models“ gespeichert. Das Skript für **SQLStatement** sieht wie folgt aus:
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ Nach Abschluss dieser Aufgabe können Sie als Prüfpunkt die Tabelle „ssis_iri
 
 Nachdem Sie nun über Code verfügen, mit dem Sie Trainingsdaten laden und ein Modell generieren können, müssen Sie jetzt nur noch mit dem Modell Vorhersagen generieren. 
 
-Fügen Sie hierzu das R-Skript in die SQL-Abfrage ein, um die in die R-Funktion in ssis_iris_model integrierte Funktion [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) auszulösen. Dieser Task wird von der gespeicherten Prozedur **predict_species_length** ausgeführt.
+Fügen Sie hierzu das R-Skript in die SQL-Abfrage ein, um die in die R-Funktion in ssis_iris_model integrierte Funktion [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) auszulösen. Dieser Task wird von der gespeicherten Prozedur **predict_species_length** ausgeführt.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-Erstellen Sie in SSIS Designer den Task [SQL ausführen](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task), mit dem die gespeicherte Prozedur **predict_species_length** ausgeführt wird, um die vorhergesagte Länge des Datenblatts zu generieren.
+Erstellen Sie in SSIS Designer den Task [SQL ausführen](../../integration-services/control-flow/execute-sql-task.md), mit dem die gespeicherte Prozedur **predict_species_length** ausgeführt wird, um die vorhergesagte Länge des Datenblatts zu generieren.
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';

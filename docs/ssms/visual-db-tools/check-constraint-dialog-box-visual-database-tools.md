@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: c210bb02d44b22727b74cb49e635b47e6d1f3dba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b37e339dc13577bd30491f1c155ebb8114868d60
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491748"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038940"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>CHECK-Einschränkung (Dialogfeld) (Visual Database Tools)
 
@@ -44,7 +44,7 @@ Entfernt die ausgewählte Einschränkung aus der Tabelle. Verwenden Sie diese Sc
 Wenn die Kategorie erweitert ist, wird das Eigenschaftenfeld **Ausdruck** angezeigt.  
   
 **Ausdruck**  
-Zeigt den Ausdruck für die ausgewählte CHECK-Einschränkung an. Bei neuen Einschränkungen müssen Sie den Ausdruck vor dem Verlassen dieses Felds eingeben. Sie können auch vorhandene CHECK-Einschränkungen bearbeiten. Weitere Informationen finden Sie unter [Arbeiten mit Einschränkungen](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Zeigt den Ausdruck für die ausgewählte CHECK-Einschränkung an. Bei neuen Einschränkungen müssen Sie den Ausdruck vor dem Verlassen dieses Felds eingeben. Sie können auch vorhandene CHECK-Einschränkungen bearbeiten. Weitere Informationen finden Sie unter [Arbeiten mit Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 **Kategorie Identität**  
 Wenn die Kategorie erweitert ist, wird die Eigenschaften für **Name** und **Beschreibung**angezeigt.  
@@ -69,5 +69,5 @@ Gibt an, ob die Einschränkung erzwungen wird, wenn durch einen Replikations-Age
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[UNIQUE- und CHECK-Einschränkungen](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[UNIQUE- und CHECK-Einschränkungen](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 [Indizes – Schlüssel (Dialogfeld) &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

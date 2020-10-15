@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bf9391bfb9a705379caa6c9f34ae752d2dcc3c6
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: e40a80f58bcc3eb2210ebb127248746e8a45a4f1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767101"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935535"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Sichern und Wiederherstellen von Reporting Services-SharePoint-Dienstanwendungen
 
@@ -72,9 +72,9 @@ So sichern Sie die Dienstanwendung:
   
  Weitere Information finden Sie in den folgenden Themen in der SharePoint-Dokumentation:  
   
- [Sichern einer Dienstanwendung (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748601.aspx)in der SharePoint-Dokumentation.  
+ [Sichern einer Dienstanwendung (SharePoint Foundation 2010)](/previous-versions/office/sharepoint-foundation-2010/ee748601(v=office.14))in der SharePoint-Dokumentation.  
   
- [Sichern einer Dienstanwendung (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
+ [Sichern einer Dienstanwendung (SharePoint Server 2010)](/SharePoint/administration/back-up-a-service-application)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Überprüfen der Kontoausführung und Datenbankauthentifizierung
 
@@ -126,9 +126,9 @@ So sichern Sie die Dienstanwendung:
   
  Weitere Information finden Sie in den folgenden Themen in der SharePoint-Dokumentation:  
   
- [Wiederherstellen einer Dienstanwendung (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx)  
+ [Wiederherstellen einer Dienstanwendung (SharePoint Foundation 2010)](/previous-versions/office/sharepoint-foundation-2010/ee748615(v=office.14))  
   
- [Wiederherstellen einer Dienstanwendung (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)  
+ [Wiederherstellen einer Dienstanwendung (SharePoint Server 2010)](/SharePoint/administration/restore-a-service-application)  
 
 ### <a name="restore-the-encryption-keys-using-sharepoint-central-administration"></a>Wiederherstellen der Verschlüsselungsschlüssel mithilfe der SharePoint-Zentraladministration
 

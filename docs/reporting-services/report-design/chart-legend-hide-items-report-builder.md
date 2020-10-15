@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f745b3eb2c862f4105bcdd872a8915845341942
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: cf51a3b08b8296ddfd2e7bf470d36d575485888b
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681419"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935309"
 ---
 # <a name="chart-legend---hide-items-report-builder"></a>Diagrammlegende: Ausblenden von Elementen (Berichts-Generator)
 Standardmäßig werden alle in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht einem Nicht-Formdiagramm hinzugefügten Reihen in der Legende als Element hinzugefügt. Für Kreis-, Ring-, Trichter- und Pyramidendiagramme werden für alle dem Diagramm hinzugefügten Reihen der Legende einzelne Datenpunkte hinzugefügt.  
@@ -38,6 +38,5 @@ Standardmäßig werden alle in einem paginierten [!INCLUDE[ssRSnoversion](../../
  [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Ändern des Texts eines Legendenelements (Berichts-Generator und SSRS)](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [Hinzufügen eines gleitenden Durchschnitts zu einem Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
- [Legendeneigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)  
-  
+ [Legendeneigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)](./chart-legend-formatting-report-builder.md)  
   

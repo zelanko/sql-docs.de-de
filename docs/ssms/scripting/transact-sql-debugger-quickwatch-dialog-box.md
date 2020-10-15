@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a958b77c4ad0bec747ec6a39bc25781eb96156cb
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 54e2bb30bb2527d8b932b64b037a5809587173b4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900444"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036116"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL-Debugger – Dialogfeld „Schnellüberwachung“
 
@@ -82,11 +82,10 @@ Mithilfe des Dialogfelds **Schnellüberwachung** können Sie beim Debuggen von [
  Zeigt den Datentyp des Ausdrucks an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Überwachung (Fenster)](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Lokal (Fenster)](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Fenster 'Aufrufliste'](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
+ [Transact-SQL-Debugger](./transact-sql-debugger.md)   
+ [Transact-SQL-Debuggerinformationen](./transact-sql-debugger-information.md)   
+ [Überwachung (Fenster)](./transact-sql-debugger-watch-window.md)   
+ [Lokal (Fenster)](./transact-sql-debugger-locals-window.md)   
+ [Fenster 'Aufrufliste'](./transact-sql-debugger-call-stack-window.md)   
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-  
   

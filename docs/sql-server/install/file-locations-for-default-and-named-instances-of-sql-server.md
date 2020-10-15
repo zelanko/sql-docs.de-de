@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d0532f2705a926cc9395e62759aef3eb1dc9f69
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 69458d99f5c7a594915c2539b57e01102df1042e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858671"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988104"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Dateispeicherorte für Standard- und benannte Instanzen von SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -142,7 +142,6 @@ Beachten Sie, dass das Standardlaufwerk für Dateispeicherorte *systemdrive*laut
 >  Datendateien werden erwartungsgemäß immer in einem untergeordneten Verzeichnis mit dem Namen Data gesucht. Geben Sie beispielsweise beim Upgrade „C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceName>\“ als Stammpfad zum Datenverzeichnis der Systemdatenbanken an, wenn sich die Datendateien unter „C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL\{nn}.\<InstanceName>\MSSQL\Data“ befinden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfiguration der Datenbank-Engine – Datenverzeichnisse](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
- [Konfigurationseigenschaften von Analysis Services – Datenverzeichnisse](https://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
-  
+ [Konfiguration der Datenbank-Engine – Datenverzeichnisse](../../database-engine/install-windows/install-sql-server.md)   
+ [Konfigurationseigenschaften von Analysis Services – Datenverzeichnisse](../../database-engine/install-windows/install-sql-server.md)  
   

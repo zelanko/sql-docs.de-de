@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f341d4dd956bd032bd5dcee264cbf48a5fd05e22
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 14ad38d835e4ef96cbf91a009026e35d504ca8cb
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093433"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039036"
 ---
 # <a name="drag-and-drop-text"></a>Verschieben von Text mit Drag und Drop
 
@@ -49,6 +49,5 @@ Sie können Text auswählen und dann mit Drag und Drop an eine andere Position v
  Beim Ziehen wird der Text an der ursprünglichen Stelle gelöscht und an die neue Stelle verschoben. Wenn Sie beim Ziehen die STRG-TASTE drücken, wird der Text an die neue Stelle kopiert. Beim Ziehen eines Objekts aus dem Objekt-Explorer handelt es sich um eine Ausnahme. In diesem Fall wird der Objektname nicht aus dem Objekt-Explorer gelöscht.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Navigieren in Code und Text](../../relational-databases/scripting/navigate-code-and-text.md)  
-  
+ [Navigieren in Code und Text](./navigate-code-and-text.md)  
   

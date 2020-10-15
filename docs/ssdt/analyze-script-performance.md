@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: dbaec18d8f28e820af1905047de89aa6c00e9743
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 2abb12c7df083de7e19148729cb64e16b96d528d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519110"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988236"
 ---
 # <a name="analyze-script-performance"></a>Analysieren der Skriptleistung
 
@@ -30,7 +30,7 @@ Um die Erfassung von Clientstatistiken zu aktivieren oder zu deaktivieren, zeige
   
 Wenn Sie Clientstatistiken aktiviert haben, wird nach Ausführen der Abfrage die Registerkarte **Statistik** neben der Registerkarte **Meldung** angezeigt. Wenn Sie Clientstatistiken deaktiviert haben, wird die Registerkarte **Statistik** nicht angezeigt. Statistiken von aufeinander ausgeführten Abfragen werden mit Durchschnittswerten aufgelistet.  
   
-Weitere Informationen zu den gesammelten Statistiken finden Sie unter [Statistikbereich im Abfragefenster](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) und im Abschnitt zur [Registerkarte „Clientstatistiken“ in diesem Artikel](https://msdn.microsoft.com/library/aa833205.aspx).  
+Weitere Informationen zu den gesammelten Statistiken finden Sie unter [Statistikbereich im Abfragefenster](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) und im Abschnitt zur [Registerkarte „Clientstatistiken“ in diesem Artikel](/previous-versions/visualstudio/visual-studio-2010/aa833205(v=vs.100)).  
   
 ## <a name="using-execution-plans"></a>Verwenden von Ausführungsplänen  
 In Ausführungsplänen wird angezeigt, wie die Datenbank-Engine in Tabellen navigiert und Indizes verwendet, um auf die Daten für eine Abfrage oder eine andere DML-Anweisung wie ein Update zuzugreifen oder diese zu verarbeiten. Durch diese grafische Darstellung sind die Leistungsmerkmale einer Abfrage wesentlich leichter zu verstehen.  
@@ -39,7 +39,7 @@ In Ausführungsplänen wird angezeigt, wie die Datenbank-Engine in Tabellen navi
   
 Nachdem das Skript analysiert oder ausgeführt wurde, klicken Sie auf die Registerkarte **Ausführungsplan**, um eine grafische Darstellung der Ausführungsplanausgabe anzuzeigen.  
   
-Die Ausgabe des grafischen Ausführungsplans wird von rechts nach links und von oben nach unten gelesen. Jede Abfrage im Batch, die analysiert wird, wird einschließlich des prozentualen Kostenanteils der Abfrage an den Batchgesamtkosten angezeigt. Um weitere Informationen wie Kosten und Operation für die einzelnen Schritte anzuzeigen, platzieren Sie den Mauszeiger über den [Symbolen der logischen und physischen Operatoren](https://msdn.microsoft.com/library/ms175913.aspx) im grafischen Plan.  
+Die Ausgabe des grafischen Ausführungsplans wird von rechts nach links und von oben nach unten gelesen. Jede Abfrage im Batch, die analysiert wird, wird einschließlich des prozentualen Kostenanteils der Abfrage an den Batchgesamtkosten angezeigt. Um weitere Informationen wie Kosten und Operation für die einzelnen Schritte anzuzeigen, platzieren Sie den Mauszeiger über den [Symbolen der logischen und physischen Operatoren](/previous-versions/sql/sql-server-2008-r2/ms175913(v=sql.105)) im grafischen Plan.  
   
 Um die Anzeige des Ausführungsplans zu ändern, klicken Sie mit der rechten Maustaste auf den **Ausführungsplan**, und klicken Sie auf **Vergrößern**, **Verkleinern**, **Vergrößern/Verkleinern** oder **Mit Zoom anpassen**. Mit**Vergrößern** und **Verkleinern** können Sie den Ausführungsplan in festgelegten Schritten vergrößern oder verkleinern. **Vergrößern/Verkleinern** ermöglicht Ihnen, die Anzeigevergrößerung nach Wunsch festzulegen, etwa auf 80 Prozent.  **Mit Zoom anpassen** passt den Ausführungsplan an den Ergebnisbereich an.  
   
@@ -50,5 +50,4 @@ Mithilfe der Codeanalyse können Sie potenzielle Probleme in den Skripts ermitte
   
 Um die Codeanalyse manuell auszuführen, klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie auf **Codeanalyse ausführen** aus. Warnungen der Codeanalyse werden im Fenster **Fehlerliste** aufgelistet. Sie können auf eine Warnung doppelklicken, um zum Quellcode zu navigieren, der das betreffende Problem enthält. Außerdem können Sie über das Kontextmenü **Hilfe zu Fehlern anzeigen** weitere Informationen und mögliche Korrekturen für eine Warnung aufrufen.  
   
-Weitere Informationen zur Codeanalyse finden Sie unter [Analysieren von Datenbankcode zum Verbessern der Codequalität](https://msdn.microsoft.com/library/dd172133.aspx).  
-  
+Weitere Informationen zur Codeanalyse finden Sie unter [Analysieren von Datenbankcode zum Verbessern der Codequalität](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100)).  

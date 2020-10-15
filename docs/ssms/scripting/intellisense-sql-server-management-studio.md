@@ -12,12 +12,12 @@ ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff6f5f8cd3bd9300e38f0eaaebd9d7c442ab95e8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 2e5902be2e28aaa2b3f020664ac31b8582de2a42
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89479575"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038978"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,14 +30,13 @@ ms.locfileid: "89479575"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt, wie IntelliSense-Optionen z. B. Anweisungsvervollständigungsoptionen oder die Größe von Transact-SQL-Skripts konfiguriert werden, für die IntelliSense deaktiviert werden soll.|[Konfigurieren von IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)|  
-|Beschreibt, wie Parameterinfo verwendet wird, um Informationen zu Anzahl, Namen und Größen der Parameter für eine Funktion oder eine gespeicherte Prozedur abzurufen.|[Parameterinfo &#40;IntelliSense&#41;](../../relational-databases/scripting/parameter-info-intellisense.md)|  
-|Beschreibt, wie QuickInfo zum Abrufen von QuickInfos verwendet wird, in denen ein Bezeichner (z. B. Tabellen- oder Sichtname) beschrieben wird.|[QuickInfo &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md)|  
-|Beschreibt, wie IntelliSense den Rest eines Bezeichners vervollständigt, nachdem Sie so viele Zeichen des Namens eingegeben haben, dass eine kurze Liste der Objekte abgerufen werden kann, deren Namen mit derselben Zeichenfolge beginnen.|[Vervollständigen des Worts &#40;IntelliSense&#41;](../../relational-databases/scripting/complete-word-intellisense.md)|  
-|Beschreibt, wie IntelliSense beide Enden eines Paars von Trennzeichen identifizieren kann, und wie Sie zwischen den zwei Enden des Paars hin- und herwechseln können.|[Automatischer Vergleich von Syntaxpaaren](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
+|Beschreibt, wie IntelliSense-Optionen z. B. Anweisungsvervollständigungsoptionen oder die Größe von Transact-SQL-Skripts konfiguriert werden, für die IntelliSense deaktiviert werden soll.|[Konfigurieren von IntelliSense &#40;SQL Server Management Studio&#41;](./configure-intellisense-sql-server-management-studio.md)|  
+|Beschreibt, wie Parameterinfo verwendet wird, um Informationen zu Anzahl, Namen und Größen der Parameter für eine Funktion oder eine gespeicherte Prozedur abzurufen.|[Parameterinfo &#40;IntelliSense&#41;](./parameter-info-intellisense.md)|  
+|Beschreibt, wie QuickInfo zum Abrufen von QuickInfos verwendet wird, in denen ein Bezeichner (z. B. Tabellen- oder Sichtname) beschrieben wird.|[QuickInfo &#40;IntelliSense&#41;](./quick-info-intellisense.md)|  
+|Beschreibt, wie IntelliSense den Rest eines Bezeichners vervollständigt, nachdem Sie so viele Zeichen des Namens eingegeben haben, dass eine kurze Liste der Objekte abgerufen werden kann, deren Namen mit derselben Zeichenfolge beginnen.|[Vervollständigen des Worts &#40;IntelliSense&#41;](./complete-word-intellisense.md)|  
+|Beschreibt, wie IntelliSense beide Enden eines Paars von Trennzeichen identifizieren kann, und wie Sie zwischen den zwei Enden des Paars hin- und herwechseln können.|[Automatischer Vergleich von Syntaxpaaren](./automatic-matching-of-syntax-pairs.md)|  
 |Beschreibt die Bedingungen, unter denen IntelliSense möglicherweise nicht funktioniert.|Problembehandlung von IntelliSense (SQL Server Management Studio)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)  
-  
+ [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
   

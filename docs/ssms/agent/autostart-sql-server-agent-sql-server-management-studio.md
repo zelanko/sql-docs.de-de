@@ -15,19 +15,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 796f2169a43d1d1e0741b88bc2d9a7c36e90356d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9916bd14969b7bf9065e98ecb07fc131d8391f30
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418356"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035744"
 ---
 # <a name="autostart-sql-server-agent"></a>Automatisches Starten des SQL Server-Agents
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 In diesem Artikel wird beschrieben, wie der [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent konfiguriert wird, sodass er automatisch neu gestartet wird, wenn es zu einer unerwarteten Beendigung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kommt.  
   
@@ -60,4 +60,3 @@ Weitere Informationen zu den Windows-Berechtigungen, die für das [!INCLUDE[ssNo
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, und klicken Sie anschließend auf **Eigenschaften**.  
   
 3.  Aktivieren Sie auf der Seite **Allgemein** das Kontrollkästchen **SQL Server-Agent nach unerwartetem Beenden automatisch neu starten**.  
-  

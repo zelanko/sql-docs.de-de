@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 196e542698af55c3469a1851b3f7b315d9410f8d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8c0ee25b36c64a8b151c6d816d47dd0e8c1e90b4
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939240"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935027"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)
  In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht gibt ein Messgerätzeiger den aktuellen Wert des Messgeräts an.   
@@ -44,7 +44,7 @@ ms.locfileid: "87939240"
  Eine Nadelabdeckung, die über oder unter dem Zeiger gezeichnet werden kann, kann nur für ein radiales Messgerät angegeben werden. Alle Arten für Nadelabdeckungen werden mit integrierten Farbverläufen gezeichnet, die nicht geändert werden können. Eine Ausnahme stellt der **RoundedDark** -Stil dar, für den Sie eine Verlaufsfarbe und die Art des Farbverlaufs angeben können.  
   
 ##  <a name="setting-a-snapping-interval"></a><a name="SettingSnappingInterval"></a> Festlegen eines Ausrichtungsintervalls  
- Durch das Ausrichtungsintervall wird das Vielfache festgelegt, auf das Werte gerundet werden. Standardmäßig zeigt das Messgerät auf den exakten Wert des Felds, das Sie im Datenbereich angegeben haben. Möglicherweise soll der exakte Wert jedoch nach oben oder unten gerundet werden, sodass der Zeiger an einem vordefinierten Intervall ausgerichtet wird. Beispiel: Wenn der Wert auf dem Messgerät 34,2 beträgt und Sie ein Ausrichtungsintervall von 5 festlegen, zeigt der Messgerätzeiger auf 35. Wenn der Wert auf dem Messgerät 31,2 beträgt und Sie ein Ausrichtungsintervall von 5 festlegen, zeigt der Messgerätzeiger auf 30. Weitere Informationen finden Sie unter [Festlegen eines Ausrichtungsintervalls auf einem Messgerät (Berichts-Generator und SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs).  
+ Durch das Ausrichtungsintervall wird das Vielfache festgelegt, auf das Werte gerundet werden. Standardmäßig zeigt das Messgerät auf den exakten Wert des Felds, das Sie im Datenbereich angegeben haben. Möglicherweise soll der exakte Wert jedoch nach oben oder unten gerundet werden, sodass der Zeiger an einem vordefinierten Intervall ausgerichtet wird. Beispiel: Wenn der Wert auf dem Messgerät 34,2 beträgt und Sie ein Ausrichtungsintervall von 5 festlegen, zeigt der Messgerätzeiger auf 35. Wenn der Wert auf dem Messgerät 31,2 beträgt und Sie ein Ausrichtungsintervall von 5 festlegen, zeigt der Messgerätzeiger auf 30. Weitere Informationen finden Sie unter [Festlegen eines Ausrichtungsintervalls auf einem Messgerät (Berichts-Generator und SSRS)](./set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
 ##  <a name="specifying-an-image-as-a-pointer-on-a-radial-gauge"></a><a name="SpecifyingImage"></a> Festlegen eines Bilds als Zeiger auf einem radialen Messgerät  
  Neben der Auswahl aus der integrierten Liste von Zeigerstilen können Sie auch ein Bild als Zeiger angeben. Dies ist insbesondere dann effektiv, wenn Sie einen vorhandenen Nadelzeigerstil durch ein Bild ersetzen. Der Zeiger wird mit dem Bild überlagert, sämtliche Zeigerfunktionen bleiben jedoch erhalten. Farb- und Farbverlaufsoptionen sind nicht verfügbar, wenn ein Bild für den Zeiger verwendet wird.  
@@ -55,5 +55,4 @@ ms.locfileid: "87939240"
  [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatieren von Bereichen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6144c7ef647f9108f9ac6619d971696b643e7648
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: bbea3e2cf7d8a8eaf3ab62b20e0dd0472053def4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115754"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988366"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Umbenennen einer SQL Server-Failoverclusterinstanz
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "91115754"
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Dienst:** Überprüfen Sie die unten genannten zusätzlichen Aktionen für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Dienst, und führen Sie diese aus:  
   
--   Korrigieren Sie die Registrierungseinstellungen, wenn SQL Agent für die Ereignisweiterleitung konfiguriert ist. Weitere Informationen finden Sie unter [Bestimmen eines Ereignisweiterleitungsservers &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
+-   Korrigieren Sie die Registrierungseinstellungen, wenn SQL Agent für die Ereignisweiterleitung konfiguriert ist. Weitere Informationen finden Sie unter [Bestimmen eines Ereignisweiterleitungsservers &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
 -   Korrigieren Sie die Instanznamen von Masterserver (MSX) und Zielservern (TSX), wenn der Netzwerkname von Computern/Cluster umbenannt wird. Weitere Informationen finden Sie in den folgenden Themen:  
   
@@ -84,5 +84,4 @@ ms.locfileid: "91115754"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
-  
   

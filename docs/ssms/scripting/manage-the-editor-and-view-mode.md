@@ -21,12 +21,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093430"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038979"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Verwalten des Editors und des Ansichtsmodus
 
@@ -91,7 +91,7 @@ Der Editor bietet mehrere Möglichkeiten, die Ansicht des Codes zu steuern.
  Wenn der Modus des virtuellen Bereichs nicht aktiviert ist, bricht die Zeile am Ende mit dem ersten Zeichen der nächsten Zeile um und umgekehrt.  
   
 ## <a name="displaying-line-numbers"></a>Anzeigen von Zeilennummern  
- Sie können Zeilennummerierung für den Code aktivieren. Zeilennummern sind hilfreich zum Navigieren im Code. Weitere Informationen finden Sie unter [Navigieren in Code und Text](../../relational-databases/scripting/navigate-code-and-text.md).  
+ Sie können Zeilennummerierung für den Code aktivieren. Zeilennummern sind hilfreich zum Navigieren im Code. Weitere Informationen finden Sie unter [Navigieren in Code und Text](./navigate-code-and-text.md).  
   
 > [!NOTE]  
 >  Das Aktivieren der Zeilennummerierung bedeutet nicht, dass das Dokument mit Zeilennummern gedruckt wird. Zum Drucken von Zeilennummern müssen Sie im Menü **Datei** im Befehl **Seite einrichten** das Kontrollkästchen **Zeilennummern** aktivieren.  
@@ -122,5 +122,4 @@ Der Editor bietet mehrere Möglichkeiten, die Ansicht des Codes zu steuern.
 #### <a name="to-hide-all-the-tool-windows-at-once"></a>So blenden Sie alle Toolfenster gleichzeitig aus  
   
 1.  Wählen Sie im Menü **Fenster** die Option **Alle automatisch ausblenden** .  
-  
   

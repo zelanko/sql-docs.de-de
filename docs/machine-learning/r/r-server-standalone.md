@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1259cc5d536e66b95db4e6575237484efafcc581
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 342c9bd2f83fed2b74cbce1f5ea7b7d942e9fd63
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179960"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956911"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>Was ist eine eigenständige Machine Learning Server- oder R Server-Instanz in SQL Server?
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -24,7 +24,7 @@ SQL Server ermöglicht die Installation von eigenständigen R Server- bzw. Machi
 In SQL Server 2016 heißt dieses Feature **R Server (Standalone)** und schließt nur R ein. In SQL Server 2017 wird dieses Feature **Machine Learning Server (eigenständig)** genannt und es umfasst R und Python.  
 
 > [!Note]
-> Der beim SQL Server-Setup installierte, eigenständige Server entspricht funktional den Nicht-SQL-Versionen von [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), die dieselben Benutzerszenarios, wie Remoteausführung, Operationalisierung und Webdienste, sowie die komplette Sammlung von R- und Python-Bibliotheken unterstützen.
+> Der beim SQL Server-Setup installierte, eigenständige Server entspricht funktional den Nicht-SQL-Versionen von [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server), die dieselben Benutzerszenarios, wie Remoteausführung, Operationalisierung und Webdienste, sowie die komplette Sammlung von R- und Python-Bibliotheken unterstützen.
 
 ## <a name="components"></a>Komponenten
 
@@ -48,7 +48,7 @@ R- und Python-Entwickler entscheiden sich in der Regel für einen eigenständige
 
 Da es sich um einen von SQL Server getrennten unabhängigen Server handelt, erfolgen Konfiguration, Sicherung und Zugriff auf R- und Python-Umgebungen mithilfe des zugrunde liegenden Betriebssystems und der Standardtools des eigenständigen Servers und nicht mit SQL Server. Es gibt keine integrierte Unterstützung für relationale SQL Server-Daten. Wenn Sie SQL Server-Daten verwenden möchten, können Sie Datenquellenobjekte und -verbindungen genauso wie von jedem anderen Client aus erstellen.
 
-Als Ergänzung zu SQL Server ist ein eigenständiger Server auch als leistungsstarke Entwicklungsumgebung nützlich, wenn Sie sowohl lokales als auch Remotecomputing benötigen. Die R- und Python-Pakete auf einem eigenständigen Server entsprechen denen, die mit der Installation einer Datenbank-Engine bereitgestellt werden, wodurch Codeportabilität und [Computekontextwechsel](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context) ermöglicht werden.
+Als Ergänzung zu SQL Server ist ein eigenständiger Server auch als leistungsstarke Entwicklungsumgebung nützlich, wenn Sie sowohl lokales als auch Remotecomputing benötigen. Die R- und Python-Pakete auf einem eigenständigen Server entsprechen denen, die mit der Installation einer Datenbank-Engine bereitgestellt werden, wodurch Codeportabilität und [Computekontextwechsel](/machine-learning-server/r/concept-what-is-compute-context) ermöglicht werden.
 
 ## <a name="how-to-get-started"></a>Einstieg
 
@@ -72,15 +72,15 @@ Auf einem eigenständigen Server ist es üblich, lokal mit einer auf dem gleiche
 
 Schreiben Sie mithilfe von Funktionen aus revoscaler bzw. revoscalepy und den Machine Learning-Algorithmen ein R- oder Python-Skript.
   
-  + [Erkunden von R und RevoScaleR in 25 Funktionen](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): Beginnen Sie mit grundlegenden R-Befehlen und wechseln Sie dann zu den verteilbaren Analysefunktionen von RevoScaleR, die eine hohe Leistung und Skalierung für R-Lösungen bereitstellen. Enthält parallelisierbare Versionen von vielen der beliebtesten R-Modellierpakete wie K-Means-Clustering, Entscheidungsstrukturen, Entscheidungswälder und Tools für die Datenbearbeitung.
+  + [Erkunden von R und RevoScaleR in 25 Funktionen](/machine-learning-server/r/tutorial-r-to-revoscaler): Beginnen Sie mit grundlegenden R-Befehlen und wechseln Sie dann zu den verteilbaren Analysefunktionen von RevoScaleR, die eine hohe Leistung und Skalierung für R-Lösungen bereitstellen. Enthält parallelisierbare Versionen von vielen der beliebtesten R-Modellierpakete wie K-Means-Clustering, Entscheidungsstrukturen, Entscheidungswälder und Tools für die Datenbearbeitung.
 
-  + [Schnellstart: An example of binary classification with the microsoftml Python package (Ein Beispiel für die binäre Klassifizierung mit dem microsoftml-Python-Paket)](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): Erstellen Sie ein binäres Klassifizierungsmodell mit den Funktionen von microsoftml und dem bekannten Dataset für Brustkrebs.
+  + [Schnellstart: An example of binary classification with the microsoftml Python package (Ein Beispiel für die binäre Klassifizierung mit dem microsoftml-Python-Paket)](/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): Erstellen Sie ein binäres Klassifizierungsmodell mit den Funktionen von microsoftml und dem bekannten Dataset für Brustkrebs.
 
 Wählen Sie die für diese Aufgabe am besten geeignete Sprache aus. R ist für schwer mit SQL implementierbare statistische Berechnungen besser geeignet. Für satzbasierte Vorgänge zu Daten nutzen Sie die Leistungsfähigkeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um die bestmöglichen Ergebnisse zu erzielen. Verwenden Sie die In-Memory-Database-Engine für sehr schnelle Berechnungen von Spalten.
 
 ### <a name="step-4-operationalize-your-solution"></a>Schritt 4: Operationalisieren der Lösung
 
-Eigenständige Server können die Funktionalität zur [Operationalisierung](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) der Nicht-SQL-Instanz [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) nutzen. Es ist möglich, einen eigenständigen Server für die Operationalisierung zu konfigurieren, wodurch Sie folgende Vorteile erhalten: Bereitstellung und Hosting Ihres Codes als Webdienst, Ausführung von Diagnosen und Testen der Webdienstleistung.
+Eigenständige Server können die Funktionalität zur [Operationalisierung](//machine-learning-server/what-is-operationalization) der Nicht-SQL-Instanz [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) nutzen. Es ist möglich, einen eigenständigen Server für die Operationalisierung zu konfigurieren, wodurch Sie folgende Vorteile erhalten: Bereitstellung und Hosting Ihres Codes als Webdienst, Ausführung von Diagnosen und Testen der Webdienstleistung.
 
 ### <a name="step-5-maintain-your-server"></a>Schritt 5: Warten des Servers
 
@@ -93,4 +93,3 @@ Weitere Informationen zum Anwenden von Updates auf eine vorhandene Instanz finde
 ## <a name="see-also"></a>Weitere Informationen
 
  [Installieren von Machine Learning Server (eigenständig) oder R Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md)
-

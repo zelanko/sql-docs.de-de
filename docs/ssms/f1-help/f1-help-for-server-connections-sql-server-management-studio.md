@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: e4ef2a2727b66324dd0f28efab6382d8de265885
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bc2a96d8814415f62acdb923e3dda09a2d6eebb
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492083"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035453"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>Hilfe (F1) für Serververbindungen (SQL Server Management Studio)
 
@@ -30,32 +30,32 @@ ms.locfileid: "88492083"
 
 Dieser Abschnitt enthält die F1-Hilfethemen für die Dialogfeldseiten von **Verbindung mit Server herstellen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-[Nach Servern suchen &#40;lokale Server&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
+[Nach Servern suchen &#40;lokale Server&#41;](../../tools/configuration-manager/sql-server-browser-service.md)  
   
-[Nach Servern suchen &#40;Netzwerkserver&#41;](../../ssms/f1-help/browse-for-servers-network-servers.md)  
+[Nach Servern suchen &#40;Netzwerkserver&#41;](../../tools/configuration-manager/sql-server-browser-service.md)  
   
-[Verbindung mit Server herstellen &#40;Analysis Services&#41;](../../ssms/f1-help/connect-to-server-analysis-services.md)  
+[Verbindung mit Server herstellen &#40;Analysis Services&#41;](/analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15)  
   
-[Verbinden mit SQL Server Analysis Services &#40;Eigenschaftenseite Verbindung&#41;](../../ssms/f1-help/connect-to-server-connection-properties-page-analysis-services.md)  
+[Verbinden mit SQL Server Analysis Services &#40;Eigenschaftenseite Verbindung&#41;](/analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15)  
   
 [Verbinden mit SQL Server-Datenbank-Engine &#40;Eigenschaftenseite Verbindung&#41;](../../ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md)  
   
-[Verbinden mit SQL Server Integration Services &#41;Eigenschaftenseite Verbindung&#40;](../../ssms/f1-help/connect-to-server-connection-properties-page-integration-services.md)  
+[Verbinden mit SQL Server Integration Services &#41;Eigenschaftenseite Verbindung&#40;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
-[Verbinden mit SQL Server Reporting Services &#40;Seite „Verbindungseigenschaften“&#41;](../../ssms/f1-help/connect-to-server-connection-properties-page-reporting-services.md)  
+[Verbinden mit SQL Server Reporting Services &#40;Seite „Verbindungseigenschaften“&#41;](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   
 [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)  
   
-[Verbindung mit Server herstellen &#40;Integration Services&#41;](../../ssms/f1-help/connect-to-server-integration-services.md)  
+[Verbindung mit Server herstellen &#40;Integration Services&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
-[Verbinden mit SQL Server Analysis Services &#40;Seite Anmeldung&#41;](../../ssms/f1-help/connect-to-server-login-page-analysis-services.md)  
+[Verbinden mit SQL Server Analysis Services &#40;Seite Anmeldung&#41;](/analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15)  
   
 [Verbindung mit Server herstellen &#40;Seite Anmeldung in der Datenbank-Engine&#41;](../../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
-[Verbinden mit SQL Server Integration Services &#40;Seite Anmeldung&#41;](../../ssms/f1-help/connect-to-server-login-page-integration-services.md)  
+[Verbinden mit SQL Server Integration Services &#40;Seite Anmeldung&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
-[Verbinden mit SQL Server Reporting Services &#40;Seite Anmeldung&#41;](../../ssms/f1-help/connect-to-server-login-page-reporting-services.md)  
+[Verbinden mit SQL Server Reporting Services &#40;Seite Anmeldung&#41;](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   
-[Verbindung mit Server herstellen &#40;Reporting Services&#41;](../../ssms/f1-help/connect-to-server-reporting-services.md)  
+[Verbindung mit Server herstellen &#40;Reporting Services&#41;](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   
-[Kennwort abgelaufen](../../ssms/f1-help/password-expired.md)
+[Kennwort abgelaufen](../../relational-databases/security/choose-an-authentication-mode.md)

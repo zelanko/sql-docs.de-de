@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 46269e242cab25708006b8f1432ac12b72570779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4427101e26905c21e093eca61a5579026522991b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893853"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988683"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Gewusst wie: Arbeiten mit CLR-Datenbankobjekten
 
-Neben der Programmiersprache Transact\-SQL können Sie .NET Framework-Sprachen zum Erstellen von Datenbankobjekten verwenden, durch die Daten abgerufen und aktualisiert werden. Datenbankobjekte, die in verwaltetem Code geschrieben sind, werden als SQL Server-CLR-Datenbankobjekte (Common Language Runtime) bezeichnet. Eine Erläuterung der Vorteile bei der Verwendung von CLR-Datenbankobjekten in SQL Server sowie der Kriterien für die Wahl zwischen Transact\-SQL und CLR finden Sie unter [Vorteile der CLR-Integration](../relational-databases/clr-integration/clr-integration-overview.md) und [Vorteile von verwaltetem Code bei der Erstellung von Datenbankobjekten](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
+Neben der Programmiersprache Transact\-SQL können Sie .NET Framework-Sprachen zum Erstellen von Datenbankobjekten verwenden, durch die Daten abgerufen und aktualisiert werden. Datenbankobjekte, die in verwaltetem Code geschrieben sind, werden als SQL Server-CLR-Datenbankobjekte (Common Language Runtime) bezeichnet. Eine Erläuterung der Vorteile bei der Verwendung von CLR-Datenbankobjekten in SQL Server sowie der Kriterien für die Wahl zwischen Transact\-SQL und CLR finden Sie unter [Vorteile der CLR-Integration](../relational-databases/clr-integration/clr-integration-overview.md) und [Vorteile von verwaltetem Code bei der Erstellung von Datenbankobjekten](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100)).  
   
 Zum Erstellen eines CLR-Datenbankobjekts in SQL Server Data Tools erstellen Sie ein Datenbankprojekt und fügen ihm dann ein CLR-Datenbankobjekt hinzu. Im Unterschied zu früheren Versionen von Visual Studio müssen Sie kein eigenes CLR-Projekt erstellen und dann einen Verweis vom Datenbankprojekt auf dieses CLR-Projekt hinzufügen. Wenn Sie das Datenbankprojekt erstellen und veröffentlichen, werden die CLR-Objekte zur selben Zeit automatisch im Projekt veröffentlicht. Nachdem Sie die CLR-Objekte veröffentlicht haben, können sie wie jedes andere Datenbankobjekt aufgerufen und ausgeführt werden.  
   
@@ -29,7 +29,7 @@ Die Eigenschaftenseiten CLR und CLR Build enthalten viele Einstellungen zum Verw
   
 Zum Aktivieren des Debuggens von CLR-Datenbankobjekten öffnen Sie den **SQL Server-Objekt-Explorer**. Klicken Sie mit der rechten Maustaste auf den Server mit den CLR-Datenbankartefakten, die Sie debuggen möchten, und wählen Sie **SQL/CLR-Debuggen zulassen** aus. Es wird ein Meldungsfeld mit folgender Warnung angezeigt: „Beachten Sie, dass während des Debuggens alle verwalteten Threads auf diesem Server beendet werden.“ Möchten Sie das SQL CLR-Debugging auf diesem Server aktivieren?“ Beim Debuggen von CLR-Datenbankobjekten werden durch Unterbrechen der Ausführung alle Threads auf dem Server unterbrochen. Dies hat Auswirkungen auf andere Benutzer. Daher sollten Sie Anwendungen für CLR-Datenbankobjekte nicht auf einem Produktionsserver debuggen. Außerdem sollten Sie berücksichtigen, dass die Einstellungen nicht mehr im **SQL Server-Objekt-Explorer** geändert werden können, sobald Sie mit dem Debuggen begonnen haben. Im **SQL Server-Objekt-Explorer** vorgenommene Änderungen werden erst beim Start der nächsten Debugsitzung wirksam.  
   
-Weitere Informationen über die Anforderungen zum Erstellen von CLR-Datenbankobjekten finden Sie in den entsprechenden Themen unter [Erstellen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)](https://msdn.microsoft.com/library/ms131046.aspx).  
+Weitere Informationen über die Anforderungen zum Erstellen von CLR-Datenbankobjekten finden Sie in den entsprechenden Themen unter [Erstellen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
   
 > [!WARNING]  
 > Bei den folgenden Vorgehensweisen werden Entitäten verwendet, die in vorherigen Vorgehensweisen in den Abschnitten [Entwicklung verbundener Datenbanken](../ssdt/connected-database-development.md) und [Projektorientierte Entwicklung von Offlinedatenbanken](../ssdt/project-oriented-offline-database-development.md) erstellt wurden.  
@@ -103,6 +103,5 @@ Weitere Informationen über die Anforderungen zum Erstellen von CLR-Datenbankobj
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Vorteile der CLR-Integration](../relational-databases/clr-integration/clr-integration-overview.md)  
-[Vorteile der Verwendung von verwaltetem Code beim Erstellen von Datenbankobjekten](https://msdn.microsoft.com/library/k2e1fb36.aspx)  
-[Erstellen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)](https://msdn.microsoft.com/library/ms131046.aspx)  
-  
+[Vorteile der Verwendung von verwaltetem Code beim Erstellen von Datenbankobjekten](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100))  
+[Erstellen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  

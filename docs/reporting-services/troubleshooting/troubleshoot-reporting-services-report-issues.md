@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18809d6d6d5937355fedebf72f50e82fadad10ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662803"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988374"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Problembehandlung bei Reporting Services-Problemen mit Berichten
 In diesem Thema erhalten Sie Informationen zum Behandeln von Problemen mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] -Berichtsentwurf, dem Anzeigen der Vorschau eines Berichts, dem Veröffentlichen eines Berichts auf einem Berichtsserver im einheitlichen Modus oder im SharePoint-Modus, dem Anzeigen eines Berichts auf dem Berichtsserver oder dem Exportierten eines Berichts in ein anderes Dateiformat.  
@@ -38,7 +38,7 @@ Melden Sie sich zum Anzeigen der Aufrufliste als lokaler Administrator am Berich
 ## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>Verwenden von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] zum Überprüfen von Abfragen und Anmeldeinformationen  
 Sie können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] komplexe Abfragen überprüfen, bevor Sie sie in den Bericht einschließen.   
   
-Weitere Informationen finden Sie in den Artikeln zum [Database Engine (Datenbankmodul)-Abfrage-Editor](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) und zum [Verwalten von Objekten mithilfe des Objekt-Explorers](~/ssms/object/manage-objects-by-using-object-explorer.md).  
+Weitere Informationen finden Sie in den Artikeln zum [Database Engine (Datenbankmodul)-Abfrage-Editor](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) und zum [Verwalten von Objekten mithilfe des Objekt-Explorers](~/ssms/object/manage-objects-by-using-object-explorer.md).  
   
 ## <a name="analyze-problem-reports-with-report-data-cached-on-the-client"></a>Analysieren von Problemberichten mit auf dem Client zwischengespeicherten Berichtsdaten  
 Wenn ein Berichtsautor einen Bericht in Business Intelligence Development Studio erstellt, speichert der Berichterstellungsclient die Daten als RDL.DATA-Datei zwischen, die beim Anzeigen der Vorschau eines Berichts verwendet wird. Bei jeder Änderung der Abfrage wird der Cache aktualisiert. Zum Debuggen von Berichtsproblemen ist es in einigen Fällen sinnvoll, das Aktualisieren der Berichtsdaten zu verhindern, damit die Daten beim Debuggen nicht geändert werden.   
@@ -60,5 +60,3 @@ Solange der Wert auf 1 festgelegt ist, werden nur zwischengespeicherte Berichtsd
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-

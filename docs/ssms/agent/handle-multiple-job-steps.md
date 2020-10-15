@@ -18,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27c19395f8962cd994ea82e0d52ede9a0131fb16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d331ee59e933f6a9b06ea3c7280b5529f0604a37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492183"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037350"
 ---
 # <a name="handle-multiple-job-steps"></a>Handhaben mehrerer Auftragsschritte
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Wenn Ihr Auftrag aus mehr als einem Auftragsschritt besteht, müssen Sie die Reihenfolge angeben, in der die Auftragsschritte ausgeführt werden. Dies wird *Ablaufsteuerung* genannt. Sie können jederzeit neue Auftragsschritte hinzufügen und den Ablauf der Auftragsschritte neu ordnen. Die Änderungen werden bei der nächsten Ausführung des Auftrags wirksam. In dieser Abbildung ist die Ablaufsteuerung eines Auftrags für die Datenbanksicherung dargestellt.  
   
@@ -52,8 +52,7 @@ Auftragsschritte müssen eigenständig sein. Ein Auftrag kann keine booleschen W
 ## <a name="see-also"></a>Weitere Informationen  
 [sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
 [sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
-[sysjobs (Transact-SQL)](https://msdn.microsoft.com/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
+[sysjobs (Transact-SQL)](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
 [sysjobsteps](../../relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)  
 [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)  
 [Verwalten von Auftragsschritten](../../ssms/agent/manage-job-steps.md)  
-  

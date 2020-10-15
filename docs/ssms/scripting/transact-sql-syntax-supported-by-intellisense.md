@@ -16,19 +16,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8609537fdd61fb40ee88c0e1cb3c05b21a7e5e47
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: d7525f558f3afd86beedde300b078c82ce0e6206
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901011"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036103"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Von IntelliSense unterstützte Transact-SQL-Syntax
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Dieses Thema beschreibt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und Syntaxelemente, die von IntelliSense in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt werden.  
   
 ## <a name="statements-supported-by-intellisense"></a>Von IntelliSense unterstützte Anweisungen  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt IntelliSense nur die am häufigsten verwendeten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. Einige allgemeine [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Bedingungen könnten verhindern, dass IntelliSense funktioniert. Weitere Informationen finden Sie unter [Problembehandlung von IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md).  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt IntelliSense nur die am häufigsten verwendeten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. Einige allgemeine [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Bedingungen könnten verhindern, dass IntelliSense funktioniert. Weitere Informationen finden Sie unter [Problembehandlung von IntelliSense &#40;SQL Server Management Studio&#41;](./troubleshooting-intellisense.md).  
   
 > [!NOTE]  
 >  IntelliSense ist nicht für verschlüsselte Datenbankobjekte verfügbar, z. B. verschlüsselte gespeicherte Prozeduren oder benutzerdefinierte Funktionen. Für Parameter von erweiterten gespeicherten Prozeduren und benutzerdefinierten Typen für die CLR-Integration stehen weder Parameterhilfe noch QuickInfo zur Verfügung.  
@@ -166,5 +166,4 @@ SELECT
 ```  
   
  Wenn Sie `SELECT`eingegeben haben, listet IntelliSense **PrimaryKeyCol**, **FirstNameCol**und **LastNameCol** als mögliche Elemente in der Auswahlliste auf, auch wenn das Skript nicht ausgeführt wurde und `MyTable` noch nicht in `MyTestDB`vorhanden ist.  
-  
   

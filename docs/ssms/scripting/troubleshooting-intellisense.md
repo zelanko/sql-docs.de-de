@@ -16,12 +16,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 613633dced2e5e906ad5d676e05b519e5f1708a5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: decdf70e29d907e8f95b7e16cbd88ac94e16b857
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901873"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036083"
 ---
 # <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>Identifizieren von Problemen mit IntelliSense (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "88901873"
   
      Viele IntelliSense-Funktionen funktionieren standardmäßig automatisch. Sie können die einzelnen Funktionen deaktivieren.  
   
-     Auch wenn die automatische Anweisungsvervollständigung deaktiviert ist, können Sie eine IntelliSense-Funktion verwenden. Weitere Informationen finden Sie unter [Konfigurieren von IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md).  
+     Auch wenn die automatische Anweisungsvervollständigung deaktiviert ist, können Sie eine IntelliSense-Funktion verwenden. Weitere Informationen finden Sie unter [Konfigurieren von IntelliSense &#40;SQL Server Management Studio&#41;](./configure-intellisense-sql-server-management-studio.md).  
   
 ## <a name="database-engine-query-intellisense"></a>IntelliSense in der Datenbank-Engine-Abfrage  
  Die folgenden Probleme gelten für den [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Abfrage-Editor:  
   
--   Die IntelliSense-Funktionalität des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors unterstützt nicht alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntaxelemente. Die Parameterhilfe unterstützt nicht die Parameter in manchen Objekten, z. B. in erweiterten gespeicherten Prozeduren. Weitere Informationen finden Sie unter [Von IntelliSense unterstützte Transact-SQL-Syntax](../../relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md).  
+-   Die IntelliSense-Funktionalität des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors unterstützt nicht alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntaxelemente. Die Parameterhilfe unterstützt nicht die Parameter in manchen Objekten, z. B. in erweiterten gespeicherten Prozeduren. Weitere Informationen finden Sie unter [Von IntelliSense unterstützte Transact-SQL-Syntax](./transact-sql-syntax-supported-by-intellisense.md).  
   
 -   IntelliSense ist nur verfügbar, wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher verbunden ist. IntelliSense ist nicht verfügbar, wenn der Abfrage-Editor mit früheren Versionen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbunden ist.  
   
@@ -70,5 +70,4 @@ ms.locfileid: "88901873"
 -   Vervollständigungslisten enthalten keine Datenbankobjekte, für die Sie keine Berechtigungen haben. IntelliSense kennzeichnet Verweise auf Objekte, für die Sie Berechtigungen haben. Wenn Sie z. B. ein Skript öffnen, das von einer anderen Person geschrieben wurde, werden alle Verweise auf Objekte, für die diese Person über Berechtigungen verfügt, Sie dagegen nicht, als inkorrekt gekennzeichnet.  
   
 -   Vervollständigungslisten funktionieren möglicherweise nicht mehr, wenn die Verbindung zur Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verloren geht. Stellen Sie erneut eine Verbindung zur Instanz her.  
-  
   

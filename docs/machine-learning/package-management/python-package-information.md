@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2232b844fc6955118e2da878caf9ff425f160c55
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6513c3333bb852b0d899b785073f4ecbc31daab3
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178947"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956952"
 ---
 # <a name="get-python-package-information"></a>Abrufen von Paketinformationen für Python
 
@@ -82,8 +82,8 @@ Wenn Sie bei der Installation die Microsoft Python-Funktion auswählen, werden d
 
 | Pakete | Version |  BESCHREIBUNG |
 | ---------|---------|--------------|
-| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.4.7 | Wird für Remotecomputekontexte, Streaming, parallele Ausführung von RX-Funktionen für Datenimport und Transformation, Modellierung, Visualisierung und Analyse verwendet. |
-| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.4.7 | Fügt Machine Learning-Algorithmen in Python hinzu. |
+| [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.4.7 | Wird für Remotecomputekontexte, Streaming, parallele Ausführung von RX-Funktionen für Datenimport und Transformation, Modellierung, Visualisierung und Analyse verwendet. |
+| [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.4.7 | Fügt Machine Learning-Algorithmen in Python hinzu. |
 
 Informationen zu der enthaltenen Python-Version finden Sie unter [Python- und R-Pakete](../sql-server-machine-learning-services.md#versions).
 

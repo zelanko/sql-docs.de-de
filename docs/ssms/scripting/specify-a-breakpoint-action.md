@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9f25e1c75bfeef51562dddd71f5dc376d46b927
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 843963d6c056151842fc5f1edaf786ecc0ced79e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901617"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036323"
 ---
 # <a name="specify-a-breakpoint-action"></a>Angeben einer Breakpointaktion
 
@@ -73,5 +73,5 @@ Ausgabemeldungen werden mit der Option **Meldung drucken** festgelegt und als Te
 3.  Klicken Sie auf **OK** , um die Änderungen zu implementieren, oder auf **Abbrechen** , um den Vorgang zu beenden, ohne die Änderungen zu übernehmen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Angeben einer Breakpointbedingung](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Angeben einer Trefferanzahl](../../relational-databases/scripting/specify-a-hit-count.md)  
+ [Angeben einer Breakpointbedingung](./specify-a-breakpoint-condition.md)   
+ [Angeben einer Trefferanzahl](./specify-a-hit-count.md)

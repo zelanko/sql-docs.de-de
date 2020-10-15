@@ -14,19 +14,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8133db62cb2805ad0f267b9779a5f9ef64535dc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28f72b2b6aafc89d43d4cc493a0c3b8b19c6a8ac
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418146"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036554"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>Auftragsschritt-Eigenschaften – Neuer Auftragsschritt (Seite „Erweitert“)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Mithilfe dieser Seite können Sie die Eigenschaften für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftragsschritt anzeigen und ändern.  
   
@@ -155,4 +155,3 @@ Wählen Sie diese Option aus, wenn die Ausgabe des Auftragsschritts in den Auftr
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Verwalten von Auftragsschritten](../../ssms/agent/manage-job-steps.md)  
-  

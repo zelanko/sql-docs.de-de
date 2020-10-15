@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02516b35a75c39c967b916d2e424362114008480
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 431d76d63d08ed23fd62669dc52548082582f2ef
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173270"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956517"
 ---
 # <a name="r-language-extension-in-sql-server-machine-learning-services"></a>R-Spracherweiterung in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ In diesem Artikel wird die R-Erweiterung für die Ausführung externer Python-Sk
 
 SQL Server enthält sowohl Open Source- als auch proprietäre Pakete. Die Basis-R-Bibliotheken werden über die Microsoft-Verteilung von Open Source-R installiert: Microsoft R Open (MRO). Aktuelle Benutzer von R sollten in der Lage sein, ihren R-Code zu portieren und mit wenigen oder keinen Änderungen als externen Prozess auf SQL Server auszuführen. MRO wird unabhängig von SQL-Tools installiert und außerhalb der Kernprozesse der Engine im Erweiterbarkeitsframework ausgeführt. Während der Installation müssen Sie den Bedingungen der Open-Source-Lizenz zustimmen. Anschließend können Sie Standard-R-Pakete ohne weitere Änderungen ausführen, wie Sie es von jeder anderen Open-Source-Verteilung von R gewohnt sind. 
 
-SQL Server ändert die ausführbaren R-Basisdateien nicht, Sie müssen jedoch die Version von R verwenden, die von Setup installiert wird, da auf dieser Version die proprietären Pakete erstellt und getestet werden. Weitere Informationen über die Unterschiede zwischen MRO und einer Basisverteilung von R, die Sie möglicherweise von CRAN erhalten, finden Sie unter [Interoperabilität mit R-Sprache und Microsoft R-Produkten und-Funktionen](https://docs.microsoft.com/r-server/what-is-r-server-interoperability).
+SQL Server ändert die ausführbaren R-Basisdateien nicht, Sie müssen jedoch die Version von R verwenden, die von Setup installiert wird, da auf dieser Version die proprietären Pakete erstellt und getestet werden. Weitere Informationen über die Unterschiede zwischen MRO und einer Basisverteilung von R, die Sie möglicherweise von CRAN erhalten, finden Sie unter [Interoperabilität mit R-Sprache und Microsoft R-Produkten und-Funktionen](/r-server/what-is-r-server-interoperability).
 
 Die von Setup installierte R-Basispaketverteilung befindet sich in dem der Instanz zugeordneten Ordner. Wenn Sie beispielsweise R Services auf einer SQL Server-Standardinstanz installiert haben, befinden sich die R-Bibliotheken standardmäßig in diesem Ordner: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`. Entsprechend befinden sich die mit der Standardinstanz verknüpften R-Tools standardmäßig in folgendem Ordner: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`.
 
@@ -40,8 +40,8 @@ R-Pakete, die von Microsoft für parallele und verteilte Workloads hinzugefügt 
 
 | Bibliothek | BESCHREIBUNG |
 |---------|-------------|
-| [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | Unterstützt Datenquellenobjekte sowie die Exploration, Manipulation, Transformation und Visualisierung von Daten. Unterstützt die Erstellung von Remotecomputekontexten sowie verschiedene skalierbare Machine Learning-Modelle wie **rxLinMod**. Die APIs wurden optimiert, um Datensätze zu analysieren, die zu groß sind, um in den Arbeitsspeicher zu passen und Berechnungen über mehrere Kerne oder Prozessoren verteilt auszuführen. Das RevoScaleR-Paket unterstützt auch das XDF-Dateiformat für schnellere Verschiebungen und die Speicherung von Daten, die für die Analyse verwendet werden. Das XDF-Format verwendet die spaltenweise Speicherung, ist übertragbar und kann zum Laden und anschließend zum Ändern der Daten aus verschiedenen Quellen, z.B. Text, SPSS oder eine ODBC-Verbindung verwendet werden. |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | Enthält Algorithmen für das maschinelle Lernen, die hinsichtlich Geschwindigkeit und Genauigkeit optimiert wurden, sowie Inline-Transformationen für die Arbeit mit Text und Bildern. Weitere Informationen finden Sie unter [MicrosoftML in SQL Server](../r/ref-r-microsoftml.md). | 
+| [**RevoScaleR**](/machine-learning-server/r-reference/revoscaler/revoscaler) | Unterstützt Datenquellenobjekte sowie die Exploration, Manipulation, Transformation und Visualisierung von Daten. Unterstützt die Erstellung von Remotecomputekontexten sowie verschiedene skalierbare Machine Learning-Modelle wie **rxLinMod**. Die APIs wurden optimiert, um Datensätze zu analysieren, die zu groß sind, um in den Arbeitsspeicher zu passen und Berechnungen über mehrere Kerne oder Prozessoren verteilt auszuführen. Das RevoScaleR-Paket unterstützt auch das XDF-Dateiformat für schnellere Verschiebungen und die Speicherung von Daten, die für die Analyse verwendet werden. Das XDF-Format verwendet die spaltenweise Speicherung, ist übertragbar und kann zum Laden und anschließend zum Ändern der Daten aus verschiedenen Quellen, z.B. Text, SPSS oder eine ODBC-Verbindung verwendet werden. |
+| [**MicrosoftML**](/r-server/r/concept-what-is-the-microsoftml-package) | Enthält Algorithmen für das maschinelle Lernen, die hinsichtlich Geschwindigkeit und Genauigkeit optimiert wurden, sowie Inline-Transformationen für die Arbeit mit Text und Bildern. Weitere Informationen finden Sie unter [MicrosoftML in SQL Server](../r/ref-r-microsoftml.md). | 
 
 ## <a name="using-r-in-sql-server"></a>Verwenden von R in SQL Server
 

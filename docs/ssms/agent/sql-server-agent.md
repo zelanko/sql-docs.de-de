@@ -15,19 +15,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ec94ebc0b62194a8b6201ccd9a7a2c6cfe8c3ba8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0270966cb84ee7fab587f92a5c84f9f52ad128f0
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418016"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036601"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] als *Jobs* bezeichnet werden.  
 
@@ -177,4 +177,3 @@ Verwenden Sie für die ersten Schritte mit dem [!INCLUDE[ssNoVersion](../../incl
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Oberflächenkonfiguration](../../relational-databases/security/surface-area-configuration.md)  
-  

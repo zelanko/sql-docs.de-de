@@ -8,16 +8,16 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07b140aceae2eae1a63b826b0bb4f95c8cfc515b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990353"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988006"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>Herstellen einer Verbindung zwischen SQL Server-Instanzen und Azure Arc im großen Stil
 
-Sie können das [für einen einzelnen Computer generierte Skript](connect.md) auch verwenden, um mehrere SQL Server-Instanzen, die auf verschiedenen Windows- oder Linux-Computern installiert sind, mit Azure Arc zu verbinden. Das Skript stellt für alle Computer und die darauf installierten SQL Server-Instanzen eine Verbindung mit Azure Arc her und registriert sie dort. Für optimale Ergebnisse wird die Verwendung eines Azure Active Directory-[Dienstprinzipals](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals) empfohlen. Bei einem Dienstprinzipal handelt es sich um eine spezielle eingeschränkte Verwaltungsidentität, der nur die Mindestberechtigungen erteilt werden, die erforderlich sind, um Computer mit Azure zu verbinden und die Azure-Ressourcen für Azure Arc-fähige Server und Azure Arc-fähige SQL Server-Instanzen zu erstellen. Dies ist sicherer als die Verwendung eines Kontos mit höherer Berechtigung, wie z. B. einem Mandantenadministrator, und befolgt unsere bewährten Methoden für die Sicherheit der Zugriffssteuerung.  
+Sie können das [für einen einzelnen Computer generierte Skript](connect.md) auch verwenden, um mehrere SQL Server-Instanzen, die auf verschiedenen Windows- oder Linux-Computern installiert sind, mit Azure Arc zu verbinden. Das Skript stellt für alle Computer und die darauf installierten SQL Server-Instanzen eine Verbindung mit Azure Arc her und registriert sie dort. Für optimale Ergebnisse wird die Verwendung eines Azure Active Directory-[Dienstprinzipals](/azure/active-directory/develop/app-objects-and-service-principals) empfohlen. Bei einem Dienstprinzipal handelt es sich um eine spezielle eingeschränkte Verwaltungsidentität, der nur die Mindestberechtigungen erteilt werden, die erforderlich sind, um Computer mit Azure zu verbinden und die Azure-Ressourcen für Azure Arc-fähige Server und Azure Arc-fähige SQL Server-Instanzen zu erstellen. Dies ist sicherer als die Verwendung eines Kontos mit höherer Berechtigung, wie z. B. einem Mandantenadministrator, und befolgt unsere bewährten Methoden für die Sicherheit der Zugriffssteuerung.  
 
 Die Methoden zum Installieren und Konfigurieren des Connected Machine-Agents erfordern, dass die von Ihnen verwendete automatisierte Methode über Administratorberechtigungen auf den Computern verfügt. Unter Linux muss hierfür das root-Konto verwendet werden. Unter Windows müssen Sie Mitglied der Gruppe „Lokale Administratoren“ sein.
 

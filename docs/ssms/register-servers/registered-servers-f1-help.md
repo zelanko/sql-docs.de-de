@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32adf127957504d85d071e7b59ad0ab6a0590547
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abc9fccd9c81f26b872a991c05a2d653384ad123
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462943"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036906"
 ---
 # <a name="registered-servers-f1-help"></a>Registrierte Server (F1-Hilfe)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Dieser Abschnitt enthält die F1-Hilfe zur Komponente Registrierte Server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Er beschreibt die verschiedenen Optionen.
   
- Informationen zu registrierten Servern und Links zu den mit ihnen möglichen Aktionen finden Sie im Thema [Registrieren von Servern](../../tools/sql-server-management-studio/register-servers.md) . 
+ Informationen zu registrierten Servern und Links zu den mit ihnen möglichen Aktionen finden Sie im Thema [Registrieren von Servern](./register-servers.md) . 
  
 
  Klicken Sie hier, um die Einstellungen für die registrierten Server zu speichern. 
@@ -147,4 +147,3 @@ ms.locfileid: "88462943"
 
  
  
-  

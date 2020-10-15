@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67a423a34d0b641e15daf5828748d572e504e329
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 36bc03b94c42d8cf660039eb04c73ce88cf18223
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547900"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934954"
 ---
 # <a name="cache-a-report-report-manager"></a>Zwischenspeichern eines Berichts (Berichts-Manager)
   Eine Möglichkeit, die Leistung zu verbessern, ist die Konfiguration von Zwischenspeichereigenschaften für einen Bericht. Beim Zwischenspeichern eines Berichts wird eine Kopie des gerenderten Berichts für einen kurzen Zeitraum gespeichert. Der erste Benutzer, der den Bericht anfordert, muss warten, bis die gesamte Verarbeitung abgeschlossen ist, bevor er den Bericht anzeigen kann. Nachfolgende Benutzer, die den Bericht innerhalb des Zeitraums der Zwischenspeicherung anfordern, können ihn sofort anzeigen, da die Verarbeitung bereits durchgeführt wurde.  
@@ -29,7 +29,7 @@ ms.locfileid: "84547900"
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>So planen Sie den Ablauf eines zwischengespeicherten Berichts  
   
-1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../web-portal-ssrs-native-mode.md).  
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** . Navigieren Sie zum Bericht, für den Sie Zwischenspeichereigenschaften festlegen möchten, zeigen Sie auf das Element, und klicken Sie auf den Dropdownpfeil.  
   
@@ -50,5 +50,4 @@ ms.locfileid: "84547900"
 ## <a name="see-also"></a>Weitere Informationen  
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
-  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e619e457bf538a0a8c75e0615e45ca52567ea43a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7bd83a9a7526466d1a7798ab9ef3d71647d4fd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491941"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037670"
 ---
 # <a name="open-with-new-file"></a>Öffnen mit (neue Datei)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,4 +44,4 @@ Um einen Standardeditor (und ggf. eine Sprachcodierungsoption) für den ausgewä
 > In der Programmliste unter **Wählen Sie das zu öffnende Programm aus**ist an den Namen des Standardeditors für den ausgewählten Dateityp der Vermerk **(Standard)** angehängt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Zuordnen von Dateierweiterungen zu einem Code-Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+[Zuordnen von Dateierweiterungen zu einem Code-Editor](../scripting/associate-file-extensions-to-a-code-editor.md)

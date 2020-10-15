@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 1effcdd44d04b3125cdeaf9983372cdcb00bd429
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245733"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935323"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Hinzufügen einer Momentaufnahme zum Berichtsverlauf
 
@@ -71,7 +71,7 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
 - [Konfigurieren von Ausführungseigenschaften für einen Bericht &#40;Berichts-Manager&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Einschränken des Berichtsverlaufs (Berichts-Manager)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Zeitpläne](../../reporting-services/subscriptions/schedules.md)   
-- [Berichts-Manager (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Berichts-Manager (einheitlicher SSRS-Modus)](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end
 
@@ -160,6 +160,6 @@ Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert.
 - [Configure Execution Properties for a Report (Konfigurieren von Ausführungseigenschaften für einen Bericht (Webportal))](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Einschränken des Berichtsverlaufs (Webportal)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Zeitpläne](../../reporting-services/subscriptions/schedules.md)   
-- [Webportal &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Webportal &#40;einheitlicher SSRS-Modus&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end

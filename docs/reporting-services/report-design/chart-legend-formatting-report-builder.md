@@ -26,12 +26,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc2f10905bdf80c1853aecefd6783bdc60819a82
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 5916b79410568a1fd2a89b753f9a3ff8ca606780
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255323"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935351"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Diagrammlegende: Formatierung (Berichts-Generator)
   Die Diagrammlegende enthält Beschreibungen für jede Kategorie in einem Diagramm. Eine Legende umfasst immer ein oder mehrere Legendenelemente. Jedes Legendenelement besteht aus einem farbigen Kästchen, das für die Reihe steht, und einer Textzeichenfolge, die die Reihe beschreibt. Dies ist in der folgenden Abbildung dargestellt.  
@@ -78,12 +78,11 @@ ms.locfileid: "84255323"
  Standardmäßig wird der Legendentext nicht optimiert, damit er dem Legendenbereich entspricht. Um den Legendentext automatisch an den zugewiesenen Platz anzupassen, setzen Sie die „AutoFitTextDisabled“-Eigenschaft auf **False** und legen für die „MinFontSize“-Eigenschaft die niedrigste Größe fest, die noch akzeptabel ist und eine Optimierung der Legende ermöglicht.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Legendeneigenschaften (Dialogfeld), Allgemein &#40;Berichts-Generator und SSRS&#41;](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
+ [Legendeneigenschaften (Dialogfeld), Allgemein &#40;Berichts-Generator und SSRS&#41;]()   
  [Ändern des Texts eines Legendenelements (Berichts-Generator und SSRS)](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Ausblenden von Legendenelementen im Diagramm (Berichts-Generator und SSRS)](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [Definieren von Farben in einem Diagramm mit einer Palette &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
-  
   

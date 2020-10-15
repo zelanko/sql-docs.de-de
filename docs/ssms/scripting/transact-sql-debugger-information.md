@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35bd9f8d1870c45b5c2b401639e261806e9d3f91
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: ad70e5f88163668c8b0802b6b66996e608f0ffd9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902101"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036173"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL-Debuggerinformationen
 
@@ -70,10 +70,10 @@ Im Debuggermodus öffnet der Debugger zwei Fenster am unteren Rand des [!INCLUDE
   
  Sie können die Datenwerte für Variablen in den Fenstern **Lokal**, **Überwachung**oder **Schnellüberwachung** festlegen, indem Sie mit der rechten Maustaste auf die Zeile klicken und dann **Wert bearbeiten**auswählen. Die **Wert** -Spalten im Fenster **Lokal** , im Fenster **Überwachung** und im Dialogfeld **Schnellüberwachung** unterstützen alle Text-, XML- und HTML-Datenschnellansichten. Die Schnellansichten werden durch einen Vergrößerungsglas-Datentipp ganz rechts neben der Spalte **Werte** dargestellt. Mithilfe der Schnellansichten können Sie Text-, XML- oder HTML-Datenwerte in Anzeigen für die entsprechenden Datentypen, z. B. XML-Dateien in einem Browserfenster, betrachten.  
   
- Wenn Sie im Debugmodus mit der Maus auf einen Bezeichner zeigen, werden in einem **QuickInfo** -Popupfenster der Name des Ausdrucks und sein aktueller Wert angezeigt. Weitere Informationen finden Sie unter [QuickInfo &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md).  
+ Wenn Sie im Debugmodus mit der Maus auf einen Bezeichner zeigen, werden in einem **QuickInfo** -Popupfenster der Name des Ausdrucks und sein aktueller Wert angezeigt. Weitere Informationen finden Sie unter [QuickInfo &#40;IntelliSense&#41;](./quick-info-intellisense.md).  
   
 ## <a name="breakpoints"></a>Breakpoints  
- Im Fenster **Breakpoints** können Sie die aktuell festgelegten Breakpoints anzeigen und verwalten. Weitere Informationen finden Sie unter [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+ Im Fenster **Breakpoints** können Sie die aktuell festgelegten Breakpoints anzeigen und verwalten. Weitere Informationen finden Sie unter [Schrittweises Durchlaufen von Transact-SQL-Code](./step-through-transact-sql-code.md).  
   
 ## <a name="call-stacks"></a>Aufruflisten  
  Das Fenster **Aufrufliste** zeigt den aktuellen Ausführungsort sowie Informationen über die Art und Weise an, in der die Ausführung vom ursprünglichen Editor-Fenster über [!INCLUDE[tsql](../../includes/tsql-md.md)] -Module (Funktionen, gespeicherte Prozeduren oder Trigger) übergeben wurde, um den aktuellen Ausführungsort zu erreichen. Jede Zeile im Fenster **Aufrufliste** wird als Stapelrahmen bezeichnet und stellt eines der folgenden Elemente dar:  
@@ -104,13 +104,12 @@ Im Debuggermodus öffnet der Debugger zwei Fenster am unteren Rand des [!INCLUDE
  Im Debugmodus sind die Registerkarten **Ergebnisse** und **Meldungen** nach wie vor im Abfrage-Editor aktiv. Auf der Registerkarte **Ergebnisse** werden weiterhin die Resultsets aus den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen angezeigt, die während einer Debuggingsitzung ausgeführt werden. Auf der Registerkarte **Meldungen** werden weiterhin Systemmeldungen angezeigt, wie z. B. „ *xx* Zeilen betroffen“, und die Ausgabe von PRINT- und RAISERROR-Anweisungen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Lokal (Fenster)](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Überwachung (Fenster)](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Dialogfeld 'Schnellüberwachung'](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Fenster 'Breakpoints'](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
- [Fenster 'Aufrufliste'](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Fenster 'Threads'](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
- [Ausgabefenster](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
- [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
+ [Lokal (Fenster)](./transact-sql-debugger-locals-window.md)   
+ [Überwachung (Fenster)](./transact-sql-debugger-watch-window.md)   
+ [Dialogfeld 'Schnellüberwachung'](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Fenster 'Breakpoints'](./transact-sql-debugger-breakpoints-window.md)   
+ [Fenster 'Aufrufliste'](./transact-sql-debugger-call-stack-window.md)   
+ [Fenster 'Threads'](./transact-sql-debugger-threads-window.md)   
+ [Ausgabefenster](./transact-sql-debugger-output-window.md)   
+ [Transact-SQL-Debugger](./transact-sql-debugger.md)  
   

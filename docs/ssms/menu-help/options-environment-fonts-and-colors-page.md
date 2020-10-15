@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8981ada42e88eadcb263e01dd65f1b2cf9015852
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 018a84c06eb9d74032b5d2eaf5dc7041372a14f9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480232"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037233"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Optionen (Umgebung – Seite „Schriftarten und Farben“)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,4 +83,4 @@ Aktivieren Sie dieses Kontrollkästchen, wenn der Text ausgewählter Anzeigeelem
 Zeigt ein Beispiel für den Schriftschnitt, den Schriftgrad und das Farbschema für die unter **Einstellungen anzeigen für** und **Elemente anzeigen**ausgewählten Werte an. In diesem Textfeld können Sie beim Ausprobieren der verschiedenen Formatierungsoptionen eine Vorschau der Ergebnisse anzeigen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Farbcodierung in Code-Editoren](../../relational-databases/scripting/color-coding-in-query-editors.md)  
+[Farbcodierung in Code-Editoren](../scripting/color-coding-in-query-editors.md)
