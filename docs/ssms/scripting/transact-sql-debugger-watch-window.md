@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4a19d53dc1c7788a2e5002bc1189b9df47b3ee5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 182f6805ee452f065bda86ee23bfec60bc8b8999
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901812"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036124"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL-Debugger – Überwachung (Fenster)
 
@@ -64,9 +64,9 @@ Im Fenster **Überwachung** werden Informationen über die Ausdrücke angezeigt,
  Zeigt den Datentyp des Ausdrucks an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Lokal (Fenster)](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Fenster 'Aufrufliste'](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Dialogfeld 'Schnellüberwachung'](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Transact-SQL-Debugger](./transact-sql-debugger.md)   
+ [Transact-SQL-Debuggerinformationen](./transact-sql-debugger-information.md)   
+ [Lokal (Fenster)](./transact-sql-debugger-locals-window.md)   
+ [Fenster 'Aufrufliste'](./transact-sql-debugger-call-stack-window.md)   
+ [Dialogfeld 'Schnellüberwachung'](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 79053a7dcf91b220bdb288fc7efc711c80684aa0
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88171849"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956844"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Überwachen von PREDICT-T-SQL-Anweisungen mit erweiterten Ereignissen in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -23,7 +23,7 @@ Erfahren Sie, wie Sie erweiterte Ereignisse verwenden, um [PREDICT](../../t-sql/
 
 ## <a name="table-of-extended-events"></a>Tabelle erweiterter Ereignisse
 
-Die folgenden erweiterten Ereignisse sind in allen Versionen von SQL Server verfügbar, die die [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)-T-SQL-Anweisung unterstützen. 
+Die folgenden erweiterten Ereignisse sind in allen Versionen von SQL Server verfügbar, die die [PREDICT](../../t-sql/queries/predict-transact-sql.md)-T-SQL-Anweisung unterstützen. 
 
 |name |object_type|description| 
 |----|----|----|
@@ -47,7 +47,7 @@ WHERE object_name LIKE `predict%'
 
 So erfassen Sie Informationen zur Leistung einer Bewertungssitzung mithilfe von PREDICT:
 
-1. Erstellen Sie eine neue Sitzung für erweiterte Ereignisse, indem Sie Management Studio oder ein anderes unterstütztes [Tool](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools) verwenden.
+1. Erstellen Sie eine neue Sitzung für erweiterte Ereignisse, indem Sie Management Studio oder ein anderes unterstütztes [Tool](../../relational-databases/extended-events/extended-events-tools.md) verwenden.
 2. Fügen Sie die Ereignisse `predict_function_completed` und `predict_model_cache_hit` der Sitzung hinzu.
 3. Starten Sie die Sitzung für erweiterte Ereignisse.
 4. Führen Sie die Abfrage mit der PREDICT-Anweisung aus.
@@ -82,6 +82,6 @@ WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 Weitere Informationen zu erweiterten Ereignissen (manchmal auch als XEvents bezeichnet) und zum Nachverfolgen von Ereignissen in einer Sitzung finden Sie in diesen Artikeln:
 
 + [Überwachen von Python- und R-Skripts mit erweiterten Ereignissen in SQL Server Machine Learning Services](extended-events.md)
-+ [Übersicht über erweiterte Ereignisse](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [Schnellstart: Erweiterte Ereignisse in SQL Server](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [Verwalten von Ereignissitzungen im Objekt-Explorer](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
++ [Übersicht über erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)
++ [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
++ [Verwalten von Ereignissitzungen im Objekt-Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)

@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50ff7c29e6718d8d38829d9cb23f5fafb6cf4dea
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: fa3f4741e4b1eec0acc218c3be3a4df73c0ed694
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767050"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935066"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Anpassen des Berichts-Viewer-Webparts
 
@@ -85,7 +85,7 @@ ms.locfileid: "83767050"
 |Breite des Parameterbereichs|Sie können die Maßeinheit und den Wert auswählen. Der Standardwert ist 200 Pixel. Die einzige Anforderung für diese Eigenschaft lautet, dass sie größer als 0 sein muss.|  
 |Dokumentstruktur|Ein Steuerelement für die Berichtsnavigation, das im Bericht definiert und zum Bereitstellen eines Zugriffs auf bestimmte Abschnitte eines Berichts mit einem Klick verwendet wird. Es ist in HTML-Berichten verfügbar. Die Dokumentstruktur wird in einem reduzierbaren Bereich neben dem Berichtsansichtsbereich angezeigt. Gültige Werte sind unter anderem **Displayed**, **Collapsed**und **Hidden**. Wenn für einen Bericht eine Dokumentstruktur definiert ist, ist der Bereich standardmäßig erweitert, sofern er nicht in den Webparteigenschaften als ausgeblendet oder reduziert markiert ist. Wenn die Dokumentstruktur reduziert ist, können Sie auf den Pfeil klicken, um sie zu erweitern.|  
 |Breite des Dokumentstrukturbereichs|Sie können die Maßeinheit und den Wert auswählen. Der Standardwert ist 200 Pixel. Die einzige Anforderung für diese Eigenschaft lautet, dass sie größer als 0 sein muss.|  
-|Parameter laden|Abrufen von Parametereigenschaften für den Bericht. Nicht alle Berichte verfügen über Parameter. Wenn der Bericht nicht über Parameter verfügt, werden keine Werte zurückgegeben. Wenn Sie Eigenschaften für einen soeben hochgeladenen Bericht festlegen, erhalten Sie möglicherweise eine Fehlermeldung, die angibt, dass die Datenquellenverbindung gelöscht wurde. Wenn dies auftritt, setzen Sie die Verbindung zurück, und stellen Sie das Festlegen der Parametereigenschaften fertig, nachdem die Verbindung angegeben wurde. Weitere Informationen zum Einrichten der Verbindung finden Sie unter [Erstellen und Verwalten von freigegebenen Datenquellen (Reporting Services im integrierten SharePoint-Modus)](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).<br /><br /> Optimale Ergebnisse erzielen Sie, indem Sie auf **Anwenden** klicken, bevor Sie auf Parameter laden klicken.<br /><br /> Nach dem Laden von Parametereigenschaften können Sie sie auf die gleiche Weise festlegen, wie Sie dies auf den Parametereigenschaftenseiten des Berichts tun würden. Weitere Informationen zum Festlegen von Parametern finden Sie unter [Festlegen von Parametern für einen veröffentlichten Bericht (Reporting Services im integrierten SharePoint-Modus)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
+|Parameter laden|Abrufen von Parametereigenschaften für den Bericht. Nicht alle Berichte verfügen über Parameter. Wenn der Bericht nicht über Parameter verfügt, werden keine Werte zurückgegeben. Wenn Sie Eigenschaften für einen soeben hochgeladenen Bericht festlegen, erhalten Sie möglicherweise eine Fehlermeldung, die angibt, dass die Datenquellenverbindung gelöscht wurde. Wenn dies auftritt, setzen Sie die Verbindung zurück, und stellen Sie das Festlegen der Parametereigenschaften fertig, nachdem die Verbindung angegeben wurde. Weitere Informationen zum Einrichten der Verbindung finden Sie unter [Erstellen und Verwalten von freigegebenen Datenquellen (Reporting Services im integrierten SharePoint-Modus)](/previous-versions/sql/).<br /><br /> Optimale Ergebnisse erzielen Sie, indem Sie auf **Anwenden** klicken, bevor Sie auf Parameter laden klicken.<br /><br /> Nach dem Laden von Parametereigenschaften können Sie sie auf die gleiche Weise festlegen, wie Sie dies auf den Parametereigenschaftenseiten des Berichts tun würden. Weitere Informationen zum Festlegen von Parametern finden Sie unter [Festlegen von Parametern für einen veröffentlichten Bericht (Reporting Services im integrierten SharePoint-Modus)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
 
 ## <a name="customizing-the-toolbar"></a>Anpassen der Symbolleiste
 
@@ -95,13 +95,13 @@ ms.locfileid: "83767050"
 
 ## <a name="customizing-the-viewing-area"></a>Anpassen des Ansichtsbereichs
 
- Der Ansichtsbereich wird für das Anzeigen von Berichten verwendet. Der Berichtsansichtsbereich wird ggf. mit den Bereichen Parameter und Anmeldeinformationen gemeinsam verwendet. Wenn Anmeldeinformationen erforderlich sind, wird der Bereich Anmeldeinformationen neben einem leeren Berichtsansichtsbereich angezeigt. Der Bereich Anmeldeinformationen wird geschlossen, nachdem der Benutzer Anmeldeinformationen eingegeben und den Bericht ausgeführt hat. Wenn Sie den Text anpassen möchten, mit dem Benutzer zum Festlegen von Anmeldeinformationen aufgefordert werden, ändern Sie die Datenquellen-Verbindungseigenschaften. Weitere Informationen finden Sie unter [Erstellen und Verwalten von freigegebenen Datenquellen (Reporting Services im integrierten SharePoint-Modus)](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Der Ansichtsbereich wird für das Anzeigen von Berichten verwendet. Der Berichtsansichtsbereich wird ggf. mit den Bereichen Parameter und Anmeldeinformationen gemeinsam verwendet. Wenn Anmeldeinformationen erforderlich sind, wird der Bereich Anmeldeinformationen neben einem leeren Berichtsansichtsbereich angezeigt. Der Bereich Anmeldeinformationen wird geschlossen, nachdem der Benutzer Anmeldeinformationen eingegeben und den Bericht ausgeführt hat. Wenn Sie den Text anpassen möchten, mit dem Benutzer zum Festlegen von Anmeldeinformationen aufgefordert werden, ändern Sie die Datenquellen-Verbindungseigenschaften. Weitere Informationen finden Sie unter [Erstellen und Verwalten von freigegebenen Datenquellen (Reporting Services im integrierten SharePoint-Modus)](/previous-versions/sql/).  
   
  Im Parameterbereich werden Felder zum Eingeben von Werten vor dem Ausführen des Berichts bereitgestellt. Er wird nur verwendet, wenn eine Berichtsdefinition Parameter enthält. Bei Anzeige des Parameterbereichs oder des Bereichs für Anmeldeinformationen wird die Berichtsansicht so angepasst, dass die verbleibende Breite des Webparts verwendet wird. Sie können Eigenschaften für das Webpart festlegen, um die Breite des Parameterbereichs anzupassen. Sie können auch die Bezeichnungen festlegen, die neben den einzelnen Parametern auf der Seite angezeigt werden. Weitere Informationen zum Bearbeiten von Parameterbezeichnungen finden Sie unter [Festlegen von Parametern für einen veröffentlichten Bericht (Reporting Services im integrierten SharePoint-Modus)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
 ## <a name="see-also"></a>Weitere Informationen
 
- [Berichts-Viewer-Webpart auf einer SharePoint-Website](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Berichts-Viewer-Webpart auf einer SharePoint-Website](./report-viewer-web-part-sharepoint-site.md)   
  [Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

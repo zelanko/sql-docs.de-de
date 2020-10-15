@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: dc5e5817952ea19f12879079c572a3c79594e070
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 43dbf8c960e45ab0b9099951b7b03b331170ad53
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895111"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987756"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Verwenden von Testbedingungen in SQL Server-Komponententests
 
-In einem SQL Server-Komponententest wird mindestens ein Transact\-SQL-Testskript ausgeführt. Die Ergebnisse können innerhalb des Transact\-SQL-Skripts ausgewertet werden, wobei durch THROW oder RAISERROR zurückgegeben wird, dass ein Fehler aufgetreten bzw. der Test nicht erfolgreich war. Alternativ können Testbedingungen im Test definiert werden, um die Ergebnisse auszuwerten. Der Test gibt eine Instanz der Klasse [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) zurück. Die Instanz dieser Klasse enthält mindestens ein DataSet, die Ausführungszeit sowie die vom Skript betroffenen Zeilen. Alle diese Informationen werden während der Skriptausführung gesammelt. Diese Ergebnisse können mithilfe von Testbedingungen ausgewertet werden. SQL Server Data Tools stellt eine Reihe von vordefinierten Testbedingungen bereit. Sie können auch benutzerdefinierte Bedingungen erstellen und verwenden. Lesen Sie hierzu [Benutzerdefinierte Testbedingungen für SQL Server-Komponententests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
+In einem SQL Server-Komponententest wird mindestens ein Transact\-SQL-Testskript ausgeführt. Die Ergebnisse können innerhalb des Transact\-SQL-Skripts ausgewertet werden, wobei durch THROW oder RAISERROR zurückgegeben wird, dass ein Fehler aufgetreten bzw. der Test nicht erfolgreich war. Alternativ können Testbedingungen im Test definiert werden, um die Ergebnisse auszuwerten. Der Test gibt eine Instanz der Klasse [SqlExecutionResult](/previous-versions/sql/sql-server-data-tools/jj856590(v=vs.103)) zurück. Die Instanz dieser Klasse enthält mindestens ein DataSet, die Ausführungszeit sowie die vom Skript betroffenen Zeilen. Alle diese Informationen werden während der Skriptausführung gesammelt. Diese Ergebnisse können mithilfe von Testbedingungen ausgewertet werden. SQL Server Data Tools stellt eine Reihe von vordefinierten Testbedingungen bereit. Sie können auch benutzerdefinierte Bedingungen erstellen und verwenden. Lesen Sie hierzu [Benutzerdefinierte Testbedingungen für SQL Server-Komponententests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
   
 ## <a name="predefined-test-conditions"></a>Vordefinierte Testbedingungen  
 In der folgenden Tabelle sind die vordefinierten Testbedingungen aufgeführt, die Sie im Bereich „Testbedingungen“ des SQL Server-Komponententest-Designers hinzufügen können.  
@@ -92,7 +92,7 @@ Nachdem Sie dem Datenbankkomponententest die Testbedingung „Datenprüfsumme“
   
     Das Dialogfeld **Konfiguration für TestConditionName** wird angezeigt.  
   
-5.  Geben Sie eine Verbindung mit der Datenbank an, die getestet werden soll. Weitere Informationen finden Sie unter [Vorgehensweise: Create a Database Connection (Vorgehensweise: Erstellen einer Datenbankverbindung)](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Geben Sie eine Verbindung mit der Datenbank an, die getestet werden soll. Weitere Informationen finden Sie unter [Vorgehensweise: Create a Database Connection (Vorgehensweise: Erstellen einer Datenbankverbindung)](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100)).  
   
 6.  Standardmäßig wird der Transact\-SQL-Text des Tests im Bearbeitungsbereich angezeigt. Sie können ggf. den Code ändern, um die erwarteten Ergebnisse zu erzeugen. Wenn im Vortest des Tests z. B. Code enthalten ist, müssen Sie diesen Code u. U. hinzufügen.  
   
@@ -122,7 +122,7 @@ Nachdem Sie einem SQL Server-Komponententest die Testbedingung „Erwartetes Sch
   
     Das Dialogfeld **Konfiguration für TestConditionName** wird angezeigt.  
   
-5.  Geben Sie eine Verbindung mit der Datenbank an, die getestet werden soll. Weitere Informationen finden Sie unter [Vorgehensweise: Create a Database Connection (Vorgehensweise: Erstellen einer Datenbankverbindung)](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Geben Sie eine Verbindung mit der Datenbank an, die getestet werden soll. Weitere Informationen finden Sie unter [Vorgehensweise: Create a Database Connection (Vorgehensweise: Erstellen einer Datenbankverbindung)](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100)).  
   
 6.  Standardmäßig wird der Transact\-SQL-Text des Tests im Bearbeitungsbereich angezeigt. Sie können ggf. den Code ändern, um die erwarteten Ergebnisse zu erzeugen. Wenn im Vortest des Tests z. B. Code enthalten ist, müssen Sie diesen Code u. U. hinzufügen.  
   
@@ -144,4 +144,3 @@ Neben den sechs vordefinierten Testbedingungen können Sie eigene neue Testbedin
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Verwenden von Transact-SQL-Assertionen in SQL Server-Komponententests](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)  
 [Skripts in SQL Server-Komponententests](../ssdt/scripts-in-sql-server-unit-tests.md)  
-  

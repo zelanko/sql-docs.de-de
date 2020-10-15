@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0f5235969a2289220e7a70b035296e1ba0092714
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4ca036a22497f05141a7777ddb00ac6ca53dab84
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883373"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987776"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Datenbank-Build und -Bereitstellung anpassen durch Verwendung von Erstellungs- und Bereitstellungs-Contributors
 
@@ -33,11 +33,11 @@ Sie können eine Erweiterung für die Erweiterungspunkte erstellen, wie in der f
 ### <a name="supported-extensibility-scenarios"></a>Unterstützte Erweiterungsszenarien  
 Sie können Erstellungs- oder Bereitstellungs-Contributors implementieren, um folgende Beispielszenarien zu ermöglichen:  
   
--   **Generieren einer Schemadokumentation im Rahmen der Projekterstellung**: Für dieses Szenario wird ein Element vom Typ [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) implementiert und die OnExecute-Methode überschrieben, um die Schemadokumentation zu generieren. Sie können eine Zieldatei mit Definitionen von Standardargumenten erstellen, die steuern, ob die Erweiterung ausgeführt wird. Außerdem können Sie den Namen der Ausgabedatei angeben.  
+-   **Generieren einer Schemadokumentation im Rahmen der Projekterstellung**: Für dieses Szenario wird ein Element vom Typ [BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor) implementiert und die OnExecute-Methode überschrieben, um die Schemadokumentation zu generieren. Sie können eine Zieldatei mit Definitionen von Standardargumenten erstellen, die steuern, ob die Erweiterung ausgeführt wird. Außerdem können Sie den Namen der Ausgabedatei angeben.  
   
--   **Generieren eines Unterschiedeberichts beim Bereitstellen eines SQL-Projekts**: Für dieses Szenario wird ein Element vom Typ [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) implementiert, durch das die XML-Datei beim Bereitstellen des SQL-Projekts generiert wird.  
+-   **Generieren eines Unterschiedeberichts beim Bereitstellen eines SQL-Projekts**: Für dieses Szenario wird ein Element vom Typ [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) implementiert, durch das die XML-Datei beim Bereitstellen des SQL-Projekts generiert wird.  
   
--   **Ändern des Bereitstellungsplans, um den Verschiebungszeitpunkt von Daten zu ändern**: Für dieses Szenario wird ein Element vom Typ [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) implementiert und der Bereitstellungsplan durchlaufen. Für jedes im Plan enthaltene Element vom Typ SqlTableMigrationStep wird das Vergleichsergebnis untersucht, um zu ermitteln, ob der Schritt ausgeführt oder übersprungen werden soll.  
+-   **Ändern des Bereitstellungsplans, um den Verschiebungszeitpunkt von Daten zu ändern**: Für dieses Szenario wird ein Element vom Typ [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) implementiert und der Bereitstellungsplan durchlaufen. Für jedes im Plan enthaltene Element vom Typ SqlTableMigrationStep wird das Vergleichsergebnis untersucht, um zu ermitteln, ob der Schritt ausgeführt oder übersprungen werden soll.  
   
 -   **Kopieren von Dateien in das generierte DACPAC-Paket beim Bereitstellen eines SQL-Projekts**: Für dieses Szenario wird ein Bereitstellungs-Contributor implementiert und die OnEstablishDeploymentConfiguration-Methode überschrieben, um die Dateien anzugeben, die vom Projektsystem als DeploymentExtensionConfiguration markiert wurden. Diese Dateien sollen in den Ausgabeordner kopiert und dem generierten DACPAC-Paket hinzugefügt werden. Sie können den Contributor auch ändern, um mehrere Dateien zu einer neuen Datei zusammenzufassen, die dann in den Ausgabeordner kopiert und dem Bereitstellungsmanifest hinzugefügt wird. Im Rahmen der Bereitstellung können Sie die OnApplyDeploymentConfiguration-Methode implementieren, um die Dateien aus dem DACPAC-Paket zu extrahieren und sie für die Verwendung in der OnExecute-Methode vorbereiten.  
   
@@ -47,9 +47,8 @@ Darüber hinaus können Sie angepasste Name/Wert-Argumentpaare aus Ihrem Contrib
   
 |**Allgemeine Aufgaben**|**Hilfreiche Themen**|  
 |--------------------|--------------------------|  
-|**Weitere Informationen über Erweiterungspunkte:** Informieren Sie sich über die Basisklassen für die Implementierung von Mitwirkenden an der Erstellung und Bereitstellung.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**Weitere Informationen über Erweiterungspunkte:** Informieren Sie sich über die Basisklassen für die Implementierung von Mitwirkenden an der Erstellung und Bereitstellung.|[BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor)<br /><br />[DeploymentContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentcontributor)|  
 |**Beispielmitwirkende erstellen:** Lernen Sie die erforderlichen Schritte zum Erstellen eines Mitwirkenden an der Erstellung oder Bereitstellung kennen. In diesen exemplarischen Vorgehensweisen lernen Sie Folgendes:<br /><br />–   Erstellen eines Erstellungs-Contributors zum Generieren eines Berichts mit einer Liste aller im Modell enthaltenen Elemente<br />–   Erstellen eines Bereitstellungs-Contributors zum Ändern des Bereitstellungsplans vor dessen Ausführung<br />–   Erstellen eines Bereitstellungs-Contributors zum Generieren eines Bereitstellungsberichts beim Bereitstellen eines SQL-Projekts<br /><br />Contributors können alle in einer einzelnen Assembly oder in mehreren Assemblys erstellt werden – je nachdem, wie Sie die Contributors auf Ihr Team verteilen möchten.|[Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Exemplarische Vorgehensweise: Erweitern der Bereitstellung von Datenbankprojekten zum Ändern des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts zum Analysieren des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Definieren benutzerdefinierter Bedingungen für SQL-Komponententests](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  
-  
+[Definieren benutzerdefinierter Bedingungen für SQL-Komponententests](/previous-versions/sql/sql-server-data-tools/jj860449(v=vs.103))  

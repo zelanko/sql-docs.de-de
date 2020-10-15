@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f72af2024ffaf6ae2694ee645db768aac39090e
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 3df3d33392751bcdc98b2c9efd2ea7b6b24ed5ab
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901451"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036183"
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL-Debugger – Fenster „Aufrufliste“
 
@@ -77,6 +77,6 @@ Alle Ausdrücke in den Fenstern **Lokal**, **Überwachung**und **Schnellüberwac
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)
+- [Transact-SQL-Debugger](./transact-sql-debugger.md)
+- [Transact-SQL-Debuggerinformationen](./transact-sql-debugger-information.md)
+- [Schrittweises Durchlaufen von Transact-SQL-Code](./step-through-transact-sql-code.md)

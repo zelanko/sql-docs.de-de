@@ -18,12 +18,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3a7425eebb86ae2afd5d9e41af51fa0badbb304
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901517"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036263"
 ---
 # <a name="sqlcmd---use-the-utility"></a>Verwenden des Hilfsprogramms „sqlcmd“
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88901517"
   
 -   Der Benutzer sendet einen **sqlcmd** -Auftrag entweder durch die Angabe einer einzelnen auszuführenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, oder indem er das Hilfsprogramm an eine Textdatei verweist, in der die auszuführenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen enthalten sind. Die Ausgabe wird normalerweise in einer Textdatei gespeichert, sie kann jedoch auch an der Eingabeaufforderung angezeigt werden.  
   
--   [SQLCMD-Modus](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor.  
+-   [SQLCMD-Modus](./edit-sqlcmd-scripts-with-query-editor.md) im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor.  
   
 -   SQL Server Management Objects (SMO)  
   
@@ -202,7 +202,7 @@ ms.locfileid: "88901517"
  Bei den Zeilen im Anschluss an die Zeile `3> GO` handelt es sich um die Ausgabe einer `SELECT` -Anweisung. Nach dem Generieren einer Ausgabe wird die `sqlcmd` -Eingabeaufforderung durch `sqlcmd` zurückgesetzt, und es wird `1>`angezeigt. Nach der Eingabe von `EXIT` in der Zeile `1>`wird im Eingabeaufforderungsfenster dieselbe Zeile wie beim ersten Öffnen der Eingabeaufforderung angezeigt. Dies bedeutet, dass die Sitzung von `sqlcmd` beendet ist. Sie können das Eingabeaufforderungsfenster nun schließen, indem Sie einen weiteren `EXIT` -Befehl eingeben.  
   
 ## <a name="running-transact-sql-script-files-using-sqlcmd"></a>Ausführen von Transact-SQL-Skriptdateien mithilfe von „sqlcmd“  
- Sie können **sqlcmd** zum Ausführen von Datenbankskriptdateien verwenden. Bei Skriptdateien handelt es sich um Textdateien, die eine Kombination aus [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, **sqlcmd** -Befehlen und Skriptvariablen enthalten. Weitere Informationen zum Definieren von Skriptvariablen finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). In**sqlcmd** werden Anweisungen, Befehle und Skriptvariablen in einer Skriptdatei verwendet, ähnlich wie bei der Verwendung interaktiv eingegebener Anweisungen und Befehle. Der Hauptunterschied besteht darin, dass **sqlcmd** die Eingabedatei ohne Pause durchliest, anstatt darauf zu warten, dass ein Benutzer die Anweisungen, Befehle und Skriptvariablen eingibt.  
+ Sie können **sqlcmd** zum Ausführen von Datenbankskriptdateien verwenden. Bei Skriptdateien handelt es sich um Textdateien, die eine Kombination aus [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, **sqlcmd** -Befehlen und Skriptvariablen enthalten. Weitere Informationen zum Definieren von Skriptvariablen finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](./sqlcmd-use-with-scripting-variables.md). In**sqlcmd** werden Anweisungen, Befehle und Skriptvariablen in einer Skriptdatei verwendet, ähnlich wie bei der Verwendung interaktiv eingegebener Anweisungen und Befehle. Der Hauptunterschied besteht darin, dass **sqlcmd** die Eingabedatei ohne Pause durchliest, anstatt darauf zu warten, dass ein Benutzer die Anweisungen, Befehle und Skriptvariablen eingibt.  
   
  Es gibt verschiedene Möglichkeiten, um Datenbankskriptdateien zu erstellen:  
   
@@ -535,9 +535,8 @@ SQLCMD -E -N -C
   
 ## <a name="more-about-sqlcmd"></a>Weitere Informationen zu „sqlcmd“  
  [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)   
- [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
- [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
+ [Verwenden von sqlcmd mit Skriptvariablen](./sqlcmd-use-with-scripting-variables.md)   
+ [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](./edit-sqlcmd-scripts-with-query-editor.md)   
  [Verwalten von Auftragsschritten](../../ssms/agent/manage-job-steps.md)   
  [Erstellen eines CmdExec-Auftragsschritts](../../ssms/agent/create-a-cmdexec-job-step.md)  
-  
   

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: daeff5e44e714354cb8e0edc525779b197ec7d19
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b0cf5e6c46add1ce49b4d95f6eebe1feb2fb496f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934085"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987766"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Verwenden von MSDeploy mit dem dbSqlPackage-Anbieter
 
@@ -29,7 +29,7 @@ ms.locfileid: "87934085"
   
 -   **Script:** Erstellt ein Transact\-SQL-Skript, das dem von der Veröffentlichungsaktion ausgeführten Skript entspricht  
   
-Weitere Informationen über DACFx finden Sie in der Dokumentation zur verwalteten DACFx-API unter [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) oder in [SqlPackage.exe](../tools/sqlpackage.md) (DACFx-Befehlszeilentool).  
+Weitere Informationen über DACFx finden Sie in der Dokumentation zur verwalteten DACFx-API unter [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) oder in [SqlPackage.exe](../tools/sqlpackage.md) (DACFx-Befehlszeilentool).  
   
 > [!IMPORTANT]  
 > Die „dbSqlPackage“-Anbieterfunktion wird aus der nächsten Hauptversion von Visual Studio entfernt. Informationen zur Datenbankveröffentlichung mithilfe von Web Deploy finden Sie unter [dbDacFx-Anbieter für die inkrementelle Datenbankveröffentlichung](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
@@ -203,4 +203,3 @@ Im folgenden Beispiel wird die Syntax für einen **Script**-Vorgang veranschauli
 ```  
 MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
 ```  
-  

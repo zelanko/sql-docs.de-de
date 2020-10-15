@@ -11,12 +11,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 685d82d043d3041c375b9d1fe67962b698e8723a
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: f792898232017b0573813b7fb73e6f783e6e3936
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227120"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956724"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Erstellen eines lokalen R-Paketrepositorys mithilfe von miniCRAN
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -196,4 +196,4 @@ Nachdem Sie über ein lokales Repository mit den für Sie erforderlichen Paketen
 ## <a name="see-also"></a>Weitere Informationen
 
 + [Abrufen von R-Paketinformationen](../package-management/r-package-information.md)
-+ [R-Tutorials](../tutorials/sql-server-r-tutorials.md)
++ [R-Tutorials](../tutorials/r-tutorials.md)

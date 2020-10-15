@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: ed8fa9e9ecb2f5f94d177c588584478fae8e8d81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d1074f9247e8c46a027bde25e3b6a01cc185cb9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417926"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035471"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Mit Microsoft Azure Storage verbinden
 
@@ -32,7 +32,7 @@ Geben Sie die folgenden Informationen zu Ihrem Azure-Konto an, und klicken Sie d
 1.  **Speicherkonto** – Geben Sie den Speicherkontonamen an.
 
    >[!NOTE]
-   > Sie können nur Verbindungen zu [allgemeinen Speicherkonten](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services) herstellen. Die Verbindungserstellung zu anderen Arten von Speicherkonten kann zu einem Fehler wie dem folgenden führen:
+   > Sie können nur Verbindungen zu [allgemeinen Speicherkonten](/azure/storage/common/storage-introduction#azure-storage-services) herstellen. Die Verbindungserstellung zu anderen Arten von Speicherkonten kann zu einem Fehler wie dem folgenden führen:
    >
    >  Der Wert eines der HTTP-Header weist nicht das richtige Format auf. (Microsoft.SqlServer.StorageClient).
    >
@@ -43,4 +43,3 @@ Geben Sie die folgenden Informationen zu Ihrem Azure-Konto an, und klicken Sie d
 3.  **Sichere Endpunkte verwenden (HTTPS)** : Bei Aktivierung dieser Option wird die Kommunikation verschlüsselt, und für Netzwerkwebserver wird eine sichere Identifikation verwendet.  
   
 4.  **Kontoschlüssel speichern** – Bei Aktivierung dieser Option wird das Kennwort in einer verschlüsselten Datei gespeichert.  
-  

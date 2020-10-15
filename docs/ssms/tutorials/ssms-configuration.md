@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein
 ms.date: 03/16/2018
-ms.openlocfilehash: 2b2590229fa175ac41f2af236c5f87d541895d95
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: 238df1200d88023abec54fdf3fa2c37df758f0f8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662029"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038945"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio-Komponenten und -Konfiguration
 
@@ -33,7 +33,7 @@ In diesem Tutorial werden die verschiedenen Fensterkomponenten in SQL Server Man
 
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio.  
 
-* Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Installieren Sie [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 ## <a name="sql-server-management-studio-components"></a>Komponenten von SQL Server Management Studio
 
@@ -138,7 +138,7 @@ In diesem Abschnitt wird beschrieben, wie Sie einige Standardeinstellungen in SS
 
 Am besten machen Sie sich mit SSMS vertraut, indem Sie einige praktische Aufgaben durchführen. Dieses *Tutorial* und Artikel zu *Vorgehensweisen* unterstützen Sie bei der Verwendung der verschiedenen Features, die in SSMS verfügbar sind.  In diesen Artikeln erfahren Sie, wie Sie die Komponenten von SSMS verwalten und wie Sie die Funktionen finden, die Sie regelmäßig verwenden.
 
-* [Herstellen einer Verbindung mit einer Instanz und Abfragen einer Instanz](connect-query-sql-server.md)
+* [Herstellen einer Verbindung mit einer Instanz und Abfragen einer Instanz](../quickstarts/connect-query-sql-server.md)
 * [Skripterstellung](scripting-ssms.md)
 * [Verwenden von Vorlagen in SSMS](../template/templates-ssms.md)
 * [Zusätzliche Tipps und Tricks für die Verwendung von SSMS](ssms-tricks.md)

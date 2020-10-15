@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83e1ea4c96144f7188812522ee121530bac351c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178657"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956802"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installieren von Machine Learning Server (eigenständig) oder R Server (Standalone) mithilfe des SQL Server-Setups
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -26,7 +26,7 @@ Das SQL Server-Setup umfasst eine Option für **freigegebene Features** zum Inst
 Das SQL Server-Setup umfasst eine Option für **freigegebene Features** zum Installieren eines eigenständigen Machine Learning-Servers, der außerhalb von SQL Server ausgeführt wird. In SQL Server 2016 heißt dieses Feature **R Server (Standalone)** .  
 ::: moniker-end
 
-Ein per SQL Server-Setup installierter eigenständiger Server stimmt funktionell mit nicht-SQL-Versionen von [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) überein und unterstützt dieselben Anwendungsfälle und Szenarios, einschließlich der folgenden:
+Ein per SQL Server-Setup installierter eigenständiger Server stimmt funktionell mit nicht-SQL-Versionen von [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) überein und unterstützt dieselben Anwendungsfälle und Szenarios, einschließlich der folgenden:
 
 + Remoteausführung mit Wechsel zwischen der lokalen und der Remotesitzung in derselben Konsole
 + Operationalisierung mit Web- und Computeknoten
@@ -192,7 +192,7 @@ Auf getrennten Servern sind zusätzliche Schritte erforderlich. Sie müssen das 
 
 3. Wenn Sie die Ausführung der Operationalisierung als Web- und Computeknoten für Webdienstbereitstellungen aktiviert haben, legen Sie vorsichtshalber eine Sicherung der Datei **AppSettings.json** an. Durch Anwendung von SQL Server 2017 CU13 wird diese Datei überarbeitet, daher sollten Sie möglicherweise eine Sicherungskopie anlegen, um die ursprüngliche Version beizubehalten.
 
-4. Laden Sie auf einem mit dem Internet verbundenen Computer das neueste kumulative Update für Ihre Version von der Website [Neueste Updates für Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server) herunter.
+4. Laden Sie auf einem mit dem Internet verbundenen Computer das neueste kumulative Update für Ihre Version von der Website [Neueste Updates für Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) herunter.
 
 5. Laden Sie das neueste kumulative Update herunter. Dabei handelt es sich um eine ausführbare Datei.
 
@@ -215,7 +215,7 @@ Auf getrennten Servern sind zusätzliche Schritte erforderlich. Sie müssen das 
     }
     ```
 
-9. [Führen Sie das Hilfsprogramm für die Administrator-CLI aus](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch), um die Web- und Computeknoten neu zu starten. Informationen zu den Schritten und der Syntax finden Sie unter [Überwachen, Starten und Stoppen von Web- und Computeknoten](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start).
+9. [Führen Sie das Hilfsprogramm für die Administrator-CLI aus](/machine-learning-server/operationalize/configure-admin-cli-launch), um die Web- und Computeknoten neu zu starten. Informationen zu den Schritten und der Syntax finden Sie unter [Überwachen, Starten und Stoppen von Web- und Computeknoten](/machine-learning-server/operationalize/configure-admin-cli-stop-start).
 
 ## <a name="development-tools"></a>Entwicklungstools
 

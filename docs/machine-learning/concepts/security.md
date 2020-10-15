@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: contperfq1, seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61294897524a0e260e457cbf98e892cad940ca54
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: f51998b722748bdfe51b773e251de88c8cac07a2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989837"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956516"
 ---
 # <a name="security-architecture-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Sicherheitsarchitektur für das Erweiterbarkeitsframework in SQL Server Machine Learning Services
 
@@ -153,7 +153,7 @@ Während der Ausführung erstellt Launchpad temporäre Ordner zum Speichern von 
 
 ## <a name="appcontainer-isolation"></a>Informationen zur AppContainer-Isolation
 
-Die Isolation wird durch [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)-Instanzen erzielt. Wenn zur Laufzeit ein externes Skript in einer gespeicherten Prozedur oder Abfrage erkannt wird, ruft SQL Server Launchpad mit der Anforderung eines erweiterungsspezifischen Startprogramms auf. Launchpad ruft die entsprechende Laufzeitumgebung in einem Prozess unter seiner Identität auf und instanziiert einen AppContainer, um ihn aufzunehmen. Diese Änderung hat den Vorteil, dass keine lokalen Konten und Kennwörter mehr verwaltet werden müssen. Zudem kann dank dem Wegfall der Abhängigkeit von lokalen Benutzerkonten dieses Feature nun in Installationen verwendet werden, bei denen lokale Benutzerkonten nicht zulässig sind.
+Die Isolation wird durch [AppContainer](/windows/desktop/secauthz/appcontainer-isolation)-Instanzen erzielt. Wenn zur Laufzeit ein externes Skript in einer gespeicherten Prozedur oder Abfrage erkannt wird, ruft SQL Server Launchpad mit der Anforderung eines erweiterungsspezifischen Startprogramms auf. Launchpad ruft die entsprechende Laufzeitumgebung in einem Prozess unter seiner Identität auf und instanziiert einen AppContainer, um ihn aufzunehmen. Diese Änderung hat den Vorteil, dass keine lokalen Konten und Kennwörter mehr verwaltet werden müssen. Zudem kann dank dem Wegfall der Abhängigkeit von lokalen Benutzerkonten dieses Feature nun in Installationen verwendet werden, bei denen lokale Benutzerkonten nicht zulässig sind.
 
 Gemäß der Implementierung durch SQL Server handelt es sich bei AppContainern um einen internen Mechanismus. Obwohl sich AppContainer im Prozessmonitor physisch nicht nachweisen lassen, sind sie dennoch in Firewallregeln für ausgehenden Datenverkehr zu finden, die beim Setup erstellt werden, um zu verhindern, dass Prozesse Netzwerkaufrufe ausführen. Weitere Informationen finden Sie unter [Firewallkonfiguration für SQL Server Machine Learning Services](../../machine-learning/security/firewall-configuration.md).
 
@@ -216,7 +216,7 @@ Das folgende Diagramm zeigt die Interaktion von SQL Server-Komponenten mit der L
 
 Eine *implizierte Authentifizierung* beschreibt das Verhalten von Verbindungsanforderungen, bei dem externe Prozesse in AppContainer-Instanzen, als vertrauenswürdige Benutzeridentität für SQL Server bei Loopbackanforderungen für Daten oder Vorgänge dargestellt werden. Als Konzept ist die implizite Authentifizierung nicht mehr einzigartig für die Windows-Authentifizierung, bei SQL Server-Verbindungszeichenfolgen, die eine vertrauenswürdige Verbindung angeben, und bei Anforderungen, die von externen Prozessen wie R- oder Python-Skripts stammen. Sie wird manchmal auch als *Loopback* bezeichnet.
 
-Durch die Verwaltung von Identitäten und Anmeldeinformationen verhindert die AppContainer-Instanz die Verwendung von Benutzeranmeldeinformationen, um Zugriff auf Ressourcen zu erhalten oder eine Anmeldung bei anderen Umgebungen durchzuführen. Die AppContainer-Umgebung erstellt einen Bezeichner, der die kombinierten Identitäten des Benutzers und der Anwendung verwendet, damit die Anmeldeinformationen für jeden Benutzer und jede Anwendung eindeutig sind und die Anwendung nicht die Identität des Benutzers annehmen kann. Weitere Informationen finden Sie unter [AppContainer-Isolation](https://docs.microsoft.com/windows/win32/secauthz/appcontainer-isolation).
+Durch die Verwaltung von Identitäten und Anmeldeinformationen verhindert die AppContainer-Instanz die Verwendung von Benutzeranmeldeinformationen, um Zugriff auf Ressourcen zu erhalten oder eine Anmeldung bei anderen Umgebungen durchzuführen. Die AppContainer-Umgebung erstellt einen Bezeichner, der die kombinierten Identitäten des Benutzers und der Anwendung verwendet, damit die Anmeldeinformationen für jeden Benutzer und jede Anwendung eindeutig sind und die Anwendung nicht die Identität des Benutzers annehmen kann. Weitere Informationen finden Sie unter [AppContainer-Isolation](/windows/win32/secauthz/appcontainer-isolation).
 
 Weitere Informationen zu Loopbackverbindungen finden Sie unter [Loopbackverbindung mit SQL Server mithilfe eines Python- oder R-Skripts](../connect/loopback-connection.md).
 

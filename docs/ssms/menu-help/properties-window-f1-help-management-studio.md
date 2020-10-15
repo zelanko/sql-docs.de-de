@@ -24,12 +24,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: f38ebd07eedcfe8ece4cc904def24186b76b7a8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60446c708927de250ef664728fe4046ae5099d66
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88317446"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037215"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Eigenschaftenfenster (F1-Hilfe, Management Studio)
 
@@ -58,4 +58,4 @@ Der Beschreibungsbereich befindet sich unten im Fenster **Eigenschaften** und ze
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Eigenschaftenfenster in SQL Server Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)
+- [Eigenschaftenfenster in SQL Server Management Studio](../scripting/use-the-properties-window-in-management-studio.md)

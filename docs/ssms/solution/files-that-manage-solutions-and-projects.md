@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d611776bc72c9c95786f40269acb069d56fa5a48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 367b305c8866f922192b2b67bc5beda9daa8d372
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88315846"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036033"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>Dateien zum Verwalten von Projektmappen und Projekten
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,5 +57,4 @@ Wenn eine Verzeichnisstruktur vorhanden ist, die der logischen Struktur im Proje
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
 [Projektmappen (SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Projekte (SQL Server Management Studio)](../../ssms/solution/projects-sql-server-management-studio.md)  
-[Quellcodeverwaltung des Projektmappen-Explorers](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
-  
+[Quellcodeverwaltung des Projektmappen-Explorers](./solution-explorer.md)  

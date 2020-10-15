@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99fb2ac932b3fde03c024d1ecce06de2ef37d5b1
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 7da0e6a9eff582e69fa37ccd4396039fe6ac1727
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093504"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039094"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Konfigurieren von Editoren (SQL Server Management Studio)
 
@@ -42,7 +42,7 @@ Sie können die Operation der [!INCLUDE[ssManStudioFull](../../includes/ssmanstu
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt das Vorgehen für die Festlegung, dass ein Editor durch Doppelklicken auf eine Datei mit einer angegebenen Erweiterung in Windows-Explorer geöffnet werden soll.|[Zuordnen von Dateierweiterungen zu einem Code-Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)|  
-|Beschreibt die Anpassung von Schriftarten für eine bessere Lesbarkeit von Code und Text.|[Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt](../../relational-databases/scripting/change-font-color-size-and-style.md)|  
-|Beschreibt das Vorgehen zur Anzeige von Eigenschaften|[Verwenden des Eigenschaftenfensters in Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)|  
-|Speicherort der F1-Hilfeseiten zu den Dialogfeldern für Editoroptionen.|[Abfrageoptionen (Seiten; F1-Hilfe)](https://docs.microsoft.com/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio)|
+|Beschreibt das Vorgehen für die Festlegung, dass ein Editor durch Doppelklicken auf eine Datei mit einer angegebenen Erweiterung in Windows-Explorer geöffnet werden soll.|[Zuordnen von Dateierweiterungen zu einem Code-Editor](./associate-file-extensions-to-a-code-editor.md)|  
+|Beschreibt die Anpassung von Schriftarten für eine bessere Lesbarkeit von Code und Text.|[Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt](./change-font-color-size-and-style.md)|  
+|Beschreibt das Vorgehen zur Anzeige von Eigenschaften|[Verwenden des Eigenschaftenfensters in Management Studio](./use-the-properties-window-in-management-studio.md)|  
+|Speicherort der F1-Hilfeseiten zu den Dialogfeldern für Editoroptionen.|[Abfrageoptionen (Seiten; F1-Hilfe)](../f1-help/f1-help-for-server-connections-sql-server-management-studio.md)|

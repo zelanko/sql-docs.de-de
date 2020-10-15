@@ -16,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 314318a46e6d93aa71f3715d781cf66379fe0863
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 880286e2ffa649316aa3c92c37f4bca461d62d4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468631"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037918"
 ---
 # <a name="job-categories---manage-job-categories"></a>Auftragskategorien – Auftragskategorien verwalten
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Mithilfe des Dialogfelds **Auftragskategorien** können Sie Auftragskategorien hinzufügen oder löschen. Integrierte Auftragskategorien können nicht gelöscht werden.  
   
@@ -53,4 +53,3 @@ Fragt den Server nach aktuellen Informationen ab.
 #### <a name="to-access-the-job-categories-dialog-box"></a>So greifen Sie auf das Dialogfeld Auftragskategorien zu  
   
 1.  Erweitern Sie in **Objekt-Explorer**den verwendeten Server und anschließend **SQL Server-Agent**. Klicken Sie mit der rechten Maustaste auf **Aufträge**, und klicken Sie dann auf **Auftragskategorien verwalten**.  
-  
