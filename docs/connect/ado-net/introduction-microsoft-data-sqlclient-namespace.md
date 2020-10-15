@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d72beeaf5b7652e040dd5bbe5f20373e655f822a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d02c12998f1083774727c33a261292396151a352
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725701"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081469"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Einführung in den Namespace „Microsoft.Data.SqlClient“
 
@@ -218,7 +218,7 @@ Im Allgemeinen sollte die vorhandene Dokumentation zu System.Data.SqlClient im .
 
 ### <a name="authentication"></a>Authentifizierung
 
-Unterschiedliche Authentifizierungsmodi können angegeben werden, indem in der Verbindungszeichenfolge die Option _Authentifizierung_ verwendet wird. Weitere Informationen finden Sie in der Dokumentation zu [SqlAuthenticationMethod](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2).
+Unterschiedliche Authentifizierungsmodi können angegeben werden, indem in der Verbindungszeichenfolge die Option _Authentifizierung_ verwendet wird. Weitere Informationen finden Sie in der Dokumentation zu [SqlAuthenticationMethod](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2&preserve-view=true).
 
 > [!NOTE]
 > Anbieter benutzerdefinierter Schlüsselspeicher wie der Azure Key Vault-Anbieter müssen aktualisiert werden, damit Microsoft.Data.SqlClient unterstützt wird. Ebenso müssen auch die Enclave-Anbieter aktualisiert werden, um Microsoft.Data.SqlClient zu unterstützen.

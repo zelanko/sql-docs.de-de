@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1c8338fe9c477f8885839a0236f2aaaa0e9ebde
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971385"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890847"
 ---
 # <a name="install-report-builder"></a>Installieren des Berichts-Generators
 
@@ -43,7 +43,7 @@ ms.locfileid: "76971385"
  
 ## <a name="install-ssrbnoversion-with-microsoft-endpoint-configuration-manager"></a>Installieren des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] mit Microsoft Endpoint Configuration Manager 
   
- Administratoren können auch Software wie Microsoft Endpoint Configuration Manager verwenden, um das Programm auf Ihren Computer zu pushen. In der Dokumentation für die Software wird beschrieben, wie spezifische Software zur Installation des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s verwendet wird. Weitere Informationen finden Sie in der [Dokumentation zu Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/configmgr/).  
+ Administratoren können auch Software wie Microsoft Endpoint Configuration Manager verwenden, um das Programm auf Ihren Computer zu pushen. In der Dokumentation für die Software wird beschrieben, wie spezifische Software zur Installation des [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]s verwendet wird. Weitere Informationen finden Sie in der [Dokumentation zu Microsoft Endpoint Configuration Manager](/configmgr/).  
   
 > [!IMPORTANT]  
 >  Die Sicherheitsfunktionen von Windows Vista und Windows 7 erfordern erweiterte Berechtigungen zum Ausführen von Befehlszeilenvorgängen. Auch wird die Angabe der Berechtigung zum Ausführen von Vorgängen über die Befehlszeile angefordert. Die Installation erfolgt nicht automatisch. Für eine unbeaufsichtigte Installation müssen Sie die Befehlszeile als Administrator ausführen.  
@@ -117,6 +117,5 @@ ms.locfileid: "76971385"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten des Berichts-Generators](../../reporting-services/report-builder/start-report-builder.md)   
- [Uninstall Report Builder (Deinstallieren des Berichts-Generators)](../../reporting-services/install-windows/uninstall-report-builder.md)  
-  
+ [Deinstallieren des Berichts-Generators](../../reporting-services/install-windows/uninstall-report-builder.md)  
   

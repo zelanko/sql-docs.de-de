@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: ae0b544fb49a1161699a1a9e2d152abea2d847bb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518890"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985938"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Gewusst wie: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer
 
-Mit der erweiterbaren [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)-Klasse können neue Testbedingungen erstellt werden. Beispielsweise können Sie eine neue Testbedingung erstellen, mit der die Anzahl der Spalten oder die Werte in einem Resultset überprüft werden.  
+Mit der erweiterbaren [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103))-Klasse können neue Testbedingungen erstellt werden. Beispielsweise können Sie eine neue Testbedingung erstellen, mit der die Anzahl der Spalten oder die Werte in einem Resultset überprüft werden.  
   
 ## <a name="to-create-a-test-condition"></a>So erstellen Sie eine Testbedingung  
 Im folgenden Verfahren wird erläutert, wie Sie eine Testbedingung erstellen, die im SQL Server-Komponententest-Designer angezeigt wird.  
@@ -47,9 +47,9 @@ Im folgenden Verfahren wird erläutert, wie Sie eine Testbedingung erstellen, di
   
 9. Speichern Sie die Datei, und schließen Sie sie. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt erneut laden** aus.  
   
-10. Leiten Sie die Klasse von der [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)-Klasse ab.  
+10. Leiten Sie die Klasse von der [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103))-Klasse ab.  
   
-11. Signieren Sie die Assembly mit einem starken Namen. Weitere Informationen finden Sie unter [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Signieren Sie die Assembly mit einem starken Namen. Weitere Informationen finden Sie unter [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](/dotnet/standard/assembly/sign-strong-name).  
   
 12. Erstellen Sie die Klassenbibliothek.  
   
@@ -172,9 +172,9 @@ namespace Ssdt.Samples.SqlUnitTesting
 }  
 ```  
   
-Die Klasse für die benutzerdefinierte Testbedingung erbt von der [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)-Basisklasse. Da die benutzerdefinierte Testbedingung über zusätzliche Eigenschaften verfügt, können Benutzer die Bedingung nach der Installation im Eigenschaftenfenster konfigurieren.  
+Die Klasse für die benutzerdefinierte Testbedingung erbt von der [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103))-Basisklasse. Da die benutzerdefinierte Testbedingung über zusätzliche Eigenschaften verfügt, können Benutzer die Bedingung nach der Installation im Eigenschaftenfenster konfigurieren.  
   
-[ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) muss Klassen zur Erweiterung von [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) hinzugefügt werden. Durch dieses Attribut kann die Klasse von SQL Server Data Tools ermittelt und während des Entwurfs und der Ausführung von Komponententests verwendet werden. Das Attribut verwendet zwei Parameter:  
+[ExportTestConditionAttribute](/previous-versions/sql/sql-server-data-tools/jj856578(v=vs.103)) muss Klassen zur Erweiterung von [TestCondition](/previous-versions/sql/sql-server-data-tools/jj856583(v=vs.103)) hinzugefügt werden. Durch dieses Attribut kann die Klasse von SQL Server Data Tools ermittelt und während des Entwurfs und der Ausführung von Komponententests verwendet werden. Das Attribut verwendet zwei Parameter:  
   
 |Attributparameter|Position|BESCHREIBUNG|  
 |-----------------------|------------|---------------|  
@@ -205,4 +205,3 @@ Sie müssen die Klassenbibliothek festlegen, die die zu signierende Testbedingun
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Benutzerdefinierte Testbedingungen für SQL Server-Komponententests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
-  

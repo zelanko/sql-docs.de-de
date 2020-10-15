@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f10a69247a442c1fa7b369f46b65d8c0c04e7237
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7d88913a06e44bdec247793b0080f3ba860025
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426232"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081259"
 ---
 # <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_next_result( resource $stmt )
 ## <a name="return-value"></a>Rückgabewert  
 Wenn das nächste Ergebnis erfolgreich aktiviert wurde, wird der boolesche Wert **true** zurückgegeben. Wenn beim Aktivieren des nächsten Ergebnisses ein Fehler auftritt, wird **false** zurückgegeben. Wenn keine weiteren Ergebnisse verfügbar sind, wird **NULL** zurückgegeben.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example-1"></a>Beispiel 1  
 Im folgenden Beispiel wird eine gespeicherte Prozedur erstellt und ausgeführt, die eine Produktprüfung in die *Production.ProductReview* -Tabelle einfügt und dann alle Bewertungen für das angegebene Produkt wählt. Nach der Ausführung der gespeicherten Prozedur wird das erste Ergebnis (die Anzahl der Zeilen, die von der INSERT-Abfrage in der gespeicherten Prozedur betroffen sind) genutzt, ohne **sqlsrv_next_result** aufzurufen. Das nächste Ergebnis (die von der SELECT-Abfrage in der gespeicherten Prozedur zurückgegebenen Zeilen) wird durch Aufrufen von **sqlsrv_next_result** zur Verfügung gestellt und mit [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) verarbeitet.  
   
 > [!NOTE]  
@@ -180,7 +180,7 @@ sqlsrv_close( $conn );
   
 Beim Ausführen einer gespeicherten Prozedur, die Ausgabeparameter besitzt, wird empfohlen, dass alle anderen Ergebnisse verarbeitet werden, bevor der Zugriff auf die Werte von Ausgabeparametern erfolgt. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben der Parameterrichtung mit dem SQLSRV-Treiber](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)  
   
-## <a name="example"></a>Beispiel  
+## <a name="example-2"></a>Beispiel 2  
 Im folgenden Beispiel wird eine Batchabfrage durchgeführt, die eine Produktprüfungsinformation für eine angegebene Produkt-ID abruft, dann eine Prüfung für das Produkt einfügt und anschließend erneut die Produktprüfungsinformationen für die angegebene Produkt-ID abruft. Die neu eingefügte Produktprüfung wird im endgültigen Resultset der Batchabfrage enthalten sein. Im Beispiel wird [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) verwendet, um von einem Ergebnis der Batchabfrage zum nächsten zu wechseln.  
   
 > [!NOTE]  

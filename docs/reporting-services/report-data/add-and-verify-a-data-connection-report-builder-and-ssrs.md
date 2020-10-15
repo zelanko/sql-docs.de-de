@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: e128bf4402074ecce5b65951f0d2463368c08bf6
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: cfddbdca35d24589b3fa87976cbfb547f14a46ee
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812145"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891790"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Hinzufügen und Prüfen einer Datenverbindung (Berichts-Generator und SSRS)
 
@@ -25,7 +25,7 @@ Navigieren Sie zu einem Berichtsserver, und wählen Sie eine freigegebene Datenq
 
 Zum Erstellen einer eingebetteten Datenquelle benötigen Sie Informationen über die Verbindung mit der externen Datenquelle, und Sie müssen wissen, welche Berechtigungen für den Zugriff auf die Daten erforderlich sind. Diese Informationen erhalten Sie normalerweise vom Besitzer der Datenquelle. Sie können die Verbindung testen, um zu überprüfen, ob die angegebenen Anmeldeinformationen ausreichend sind.
 
-Weitere Informationen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) sowie [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017).
+Weitere Informationen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) sowie [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017).
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -59,7 +59,7 @@ Die Datenquelle wird im Berichtsdatenbereich angezeigt.
 
 5. Klicken Sie auf **Details**, und beheben Sie das Problem mithilfe der angezeigten Informationen.
 
-    Weitere Informationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017).
+    Weitere Informationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017).
 
 6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

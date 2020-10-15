@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 65f2fb2148e1a33aacb9d0b1e82039d594ea3524
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 429933e4491a7e0f7382e5ca8faa3b6ae26f3c82
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88396786"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891600"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) und Reporting Services
 
@@ -29,9 +29,9 @@ C2WTS ist außerdem im SharePoint-Modus von SQL Server Reporting Services erford
 
 Das Berichts-Viewer-Webpart kann verwendet werden, um SQL Server Reporting Services-Berichte im einheitlichen Modus in Ihre SharePoint-Website einzubetten. Dieses Webpart ist für SharePoint 2013 und SharePoint 2016 verfügbar. Sowohl SharePoint 2013 als auch SharePoint 2016 verwenden die Forderungsauthentifizierung. Aus diesem Grund muss C2WTS ordnungsgemäß konfiguriert werden. Reporting Services muss für die Kerberos-Authentifizierung konfiguriert werden, damit die Berichte korrekt gerendert werden.
 
-1. Konfigurieren Sie Ihre Reporting Services-Instanz (einheitlicher Modus) für die Kerberos-Authentifizierung, indem Sie das SSRS-Dienstkonto bestimmen, einen SPN festlegen und die Datei „rsreportserver.config“ so aktualisieren, dass der Authentifizierungstyp „RSWindowsNegotiate“ verwendet wird. [Register a Service Principal Name (SPN) for a Report Server (Registrieren eines Dienstprinzipalnamens (SPON) für einen Berichtsserver)](https://docs.microsoft.com/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+1. Konfigurieren Sie Ihre Reporting Services-Instanz (einheitlicher Modus) für die Kerberos-Authentifizierung, indem Sie das SSRS-Dienstkonto bestimmen, einen SPN festlegen und die Datei „rsreportserver.config“ so aktualisieren, dass der Authentifizierungstyp „RSWindowsNegotiate“ verwendet wird. [Register a Service Principal Name (SPN) for a Report Server (Registrieren eines Dienstprinzipalnamens (SPON) für einen Berichtsserver)](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. Ausführen der [grundlegenden Schritte für die C2WTS-Konfiguration](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)
+2. Ausführen der [grundlegenden Schritte für die C2WTS-Konfiguration](?view=sql-server-2017#steps-needed-to-configure-c2wts)
  
 
 ## <a name="sharepoint-mode-integration"></a>Integration des SharePoint-Modus
@@ -44,7 +44,7 @@ Der SharePoint-Dienst Claims to Windows Token Service (C2WTS) ist im SharePoint-
 
 Die von C2WTS erstellten Token funktionieren nur bei der eingeschränkten Delegierung (Einschränkungen für bestimmte Dienste) und bei Verwendung der Konfigurationsoption „Beliebiges Authentifizierungsprotokoll verwenden“ (Protokollübergang).
 
-Wenn in der Umgebung die eingeschränkte Kerberos-Delegierung verwendet wird, dann müssen sich der SharePoint Server-Dienst und externe Datenquellen in derselben Windows-Domäne befinden. Jeder Dienst, der auf C2WTS (Claims to Windows Token Service) basiert, muss die **eingeschränkte** Kerberos-Delegierung verwenden, damit C2WTS den Kerberos-Protokollübergang verwenden kann, um Ansprüche (Claims) in Windows-Anmeldeinformationen zu übersetzen. Diese Anforderungen gelten für alle gemeinsamen SharePoint-Dienste. Weitere Informationen finden Sie unter [Planen der Kerberos-Authentifizierung in SharePoint 2013](https://technet.microsoft.com/library/ee806870.aspx).  
+Wenn in der Umgebung die eingeschränkte Kerberos-Delegierung verwendet wird, dann müssen sich der SharePoint Server-Dienst und externe Datenquellen in derselben Windows-Domäne befinden. Jeder Dienst, der auf C2WTS (Claims to Windows Token Service) basiert, muss die **eingeschränkte** Kerberos-Delegierung verwenden, damit C2WTS den Kerberos-Protokollübergang verwenden kann, um Ansprüche (Claims) in Windows-Anmeldeinformationen zu übersetzen. Diese Anforderungen gelten für alle gemeinsamen SharePoint-Dienste. Weitere Informationen finden Sie unter [Planen der Kerberos-Authentifizierung in SharePoint 2013](/SharePoint/security-for-sharepoint-server/kerberos-authentication-planning).  
 
 1. Konfigurieren Sie das C2WTS-Dienstdomänenkonto. 
 
@@ -84,7 +84,7 @@ Wenn in der Umgebung die eingeschränkte Kerberos-Delegierung verwendet wird, da
     * Klicken Sie auf **Benutzer oder Computer...&#42;** , und geben Sie das Konto ein, das den Dienst hostet. Wenn ein SQL Server beispielsweise unter einem Konto namens *sqlservice* ausgeführt wird, geben Sie `sqlservice` ein. 
       Für das **Report Viewer-Webpart** ist dies das Dienstkonto für die Reporting Services-Instanz (einheitlicher Modus).
 
-    * Wählen Sie die Darstellung des Diensts. Dadurch werden die SPNs angezeigt, die über dieses Konto verfügbar sind. Wenn der Dienst unter diesem Konto nicht angezeigt wird, fehlt er möglicherweise oder befindet auf einem anderen Konto. Sie können das SetSPN-Dienstprogramm verwenden, um die SPNs anzupassen. Für das **Report Viewer-Webpart** finden Sie den konfigurierten HTTP-SPN unter [Konfiguration des Report Viewer-Webparts](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
+    * Wählen Sie die Darstellung des Diensts. Dadurch werden die SPNs angezeigt, die über dieses Konto verfügbar sind. Wenn der Dienst unter diesem Konto nicht angezeigt wird, fehlt er möglicherweise oder befindet auf einem anderen Konto. Sie können das SetSPN-Dienstprogramm verwenden, um die SPNs anzupassen. Für das **Report Viewer-Webpart** finden Sie den konfigurierten HTTP-SPN unter [Konfiguration des Report Viewer-Webparts](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
 
     * Wählen Sie „OK“ aus, um die Dialogfelder zu verlassen.
 

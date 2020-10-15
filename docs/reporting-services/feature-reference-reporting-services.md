@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b0b603e2abb775383083942f93279c8c117a3829
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247239"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891490"
 ---
 # <a name="feature-reference-reporting-services"></a>Funktionsreferenz (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthält zahlreiche Tools und Anwendungen, die Sie zum Erstellen, Verwalten und Anzeigen von Berichten verwenden können. Dieser Abschnitt enthält Themen zu den einzelnen Dialogfeldern, Webseiten und Assistenten dieser Tools und Anwendungen.  
@@ -29,9 +29,6 @@ ms.locfileid: "87247239"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Report Designer F1 Help (Berichts-Designer (F1-Hilfe))](../reporting-services/tools/report-designer-f1-help.md)  
  Stellt die Hilfe für den Berichts-Designer und die dazugehörigen Dialogfelder, den Berichts-Assistenten und den Bild-Assistenten bereit.  
-  
- [Reporting Services-Konfigurationsmanager-Hilfethemen](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
- Stellt die Hilfe für das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konfigurationstool bereit, das für die Bereitstellung und die Verwaltung von Berichtsserverinstanzen verwendet wird.  
   
  [Berichtsserver im Management Studio (F1-Hilfe)](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  Dieser Artikel stellt die Hilfe zu Dialogfeldern bereit, mit denen Berichte und Berichtsserver in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] verwaltet werden.  

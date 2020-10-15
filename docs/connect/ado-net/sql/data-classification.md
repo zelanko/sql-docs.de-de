@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: b53e71c4c302145af14c1f2e37f30fe0e3c8f8e2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6d82bfd3c49576a35b24f5a04cdc2c03dceeb766
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725721"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081499"
 ---
 # <a name="data-discovery-and-classification-in-sqlclient"></a>Datenermittlung und -klassifizierung in SqlClient
 
@@ -24,7 +24,7 @@ ms.locfileid: "91725721"
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-Bei der [Datenermittlung und -klassifizierung](../../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017) handelt es sich um mehrere erweiterte Dienste für die Ermittlung, Klassifizierung, Bezeichnung und Berichterstellung für vertrauliche Daten in Ihren Datenbanken. SqlClient stellt eine API bereit, die schreibgeschützte Datenermittlungs- und Datenklassifizierungsinformationen verfügbar macht, wenn die zugrunde liegende Quelle das Feature unterstützt. Der Zugriff auf diese Informationen erfolgt über SqlDataReader.
+Bei der [Datenermittlung und -klassifizierung](../../../relational-databases/security/sql-data-discovery-and-classification.md) handelt es sich um mehrere erweiterte Dienste für die Ermittlung, Klassifizierung, Bezeichnung und Berichterstellung für vertrauliche Daten in Ihren Datenbanken. SqlClient stellt eine API bereit, die schreibgeschützte Datenermittlungs- und Datenklassifizierungsinformationen verfügbar macht, wenn die zugrunde liegende Quelle das Feature unterstützt. Der Zugriff auf diese Informationen erfolgt über SqlDataReader.
 
 Diese Beispielanwendung zeigt, wie auf die Datenklassifizierungseigenschaften von SqlDataReader zugegriffen wird.
 
