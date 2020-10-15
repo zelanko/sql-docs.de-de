@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e79359d8d9cdfb6af624f86fca5ca2a5648ecb10
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: c3922a25108de54db68075589a5832a2f90832b7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779502"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934030"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Hinzufügen eines Lesezeichens zu einem Bericht (Berichts-Generator und SSRS)
   Fügen Sie einem Bericht Lesezeichen und Lesezeichenlinks hinzu, wenn Sie ein benutzerdefiniertes Inhaltsverzeichnis oder benutzerdefinierte interne Navigationslinks bereitstellen möchten. In der Regel fügen Sie Lesezeichen an Positionen im Bericht hinzu, an die Benutzer verwiesen werden sollen, wie beispielsweise Tabellen, Diagramme oder eindeutige Gruppenwerte, die in einer Tabelle oder Matrix angezeigt werden. Sie können eigene Zeichenfolgen zur Verwendung als Lesezeichen erstellen. Bei Gruppen können Sie das Lesezeichen auf den Gruppierungsausdruck festlegen.  
@@ -23,7 +23,7 @@ ms.locfileid: "84779502"
   
  Wenn der Bericht beispielsweise eine nach Farbe gruppierte Tabelle enthält, fügen Sie dem Gruppenkopf ein Lesezeichen hinzu, das auf dem Gruppierungsausdruck basiert. Anschließend fügen Sie am Anfang des Berichts eine Tabelle mit einem einzelnen Textfeld hinzu, das die Farbwerte anzeigt, und legen den Lesezeichenlink auf dieses Textfeld fest. Wenn der Benutzer auf eine Farbe klickt, wird er zu der Seite mit der Gruppenkopfzeile für diese Farbe geleitet.  
   
- Sie können jedem beliebigen Berichtselement Lesezeichen und jedem Element mit einer Eigenschaft **Aktion** Lesezeichenlinks hinzufügen (z. B. einem Textfeld, einem Bild oder einer berechneten Reihe in einem Diagramm). Weitere Informationen finden Sie unter [Aktionseigenschaften (Dialogfeld) (Berichts-Generator und SSRS)](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9).  
+ Sie können jedem beliebigen Berichtselement Lesezeichen und jedem Element mit einer Eigenschaft **Aktion** Lesezeichenlinks hinzufügen (z. B. einem Textfeld, einem Bild oder einer berechneten Reihe in einem Diagramm). Weitere Informationen finden Sie unter [Aktionseigenschaften (Dialogfeld) (Berichts-Generator und SSRS)](./add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -57,5 +57,4 @@ ms.locfileid: "84779502"
  [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
   

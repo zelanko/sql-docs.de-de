@@ -2,7 +2,6 @@
 title: SQL Server PowerShell-Anbieter | Microsoft-Dokumentation
 description: Hier erfahren Sie mehr über den SQL Server-Anbieter für Windows PowerShell, der durch Pfade, die den Dateisystempfaden ähneln, Zugriff auf SQL Server-Objekte bietet.
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,25 +14,23 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: markingmyname
 ms.author: maghan
+ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: 06288ab89e61b3ff2203949de2b3ef6373e3aefc
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 68546680f73674b416aa42d141c7ea5d2f8b51b7
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714288"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081909"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell-Anbieter
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter für Windows PowerShell macht die Hierarchie von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekten auf ähnliche Weise wie in Dateisystempfaden verfügbar. Mithilfe der Pfade können Sie Objekte finden und dann Methoden der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object-Modelle (SMO) verwenden, um Aktionen für die Objekte auszuführen.  
-  
-> [!NOTE]
-> Es gibt zwei SQL Server PowerShell-Module: **SqlServer** und **SQLPS**. Das **SQLPS**-Modul ist zwar in der SQL Server-Installation (für die Abwärtskompatibilität) enthalten, wird jedoch nicht mehr aktualisiert. Das **SqlServer**-Modul ist das aktuellste PowerShell-Modul. Das **SqlServer**-Modul enthält aktualisierte Versionen der Cmdlets in **SQLPS** sowie neue Cmdlets zur Unterstützung der neuesten SQL-Funktionen.  
-> Vorherige Versionen des **SqlServer**-Moduls *waren* in SQL Server Management Studio (SSMS) enthalten, allerdings nur in den Versionen 16.x. Das **SqlServer**-Modul muss über den PowerShell-Katalog installiert werden, damit PowerShell mit SSMS 17.0 und höher verwendet werden kann.
-> Informationen zur Installation des **SqlServer**-Moduls finden Sie unter [Installieren von SQL Server PowerShell](download-sql-server-ps-module.md).
+
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 ## <a name="benefits-of-the-sql-server-powershell-provider"></a>Vorteile des SQL Server PowerShell-Anbieters
 
@@ -51,11 +48,11 @@ Produkte, deren Daten oder Objektmodelle in einer Hierarchie dargestellt werden 
 |`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Richtlinienbasierte Verwaltungsobjekte, z. B. Richtlinien und Facets|  
 |`SQLSERVER:\SQLRegistration`|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|Registrierte Serverobjekte, z. B. Servergruppen und registrierte Server|  
 |`SQLSERVER:\Utility`|<xref:Microsoft.SqlServer.Management.Utility>|Hilfsprogrammobjekte, z. B. verwaltete [!INCLUDE[ssDE](../includes/ssde-md.md)]-Instanzen|  
-|`SQLSERVER:\DAC`|[Microsoft.SqlServer.Management.Dac](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ee212127(v=sql.110))|Datenebenenanwendungs-Objekte z. B. DAC-Pakete und Vorgänge wie das Bereitstellen einer DAC|  
+|`SQLSERVER:\DAC`|[Microsoft.SqlServer.Management.Dac](/previous-versions/sql/sql-server-2012/ee212127(v=sql.110))|Datenebenenanwendungs-Objekte z. B. DAC-Pakete und Vorgänge wie das Bereitstellen einer DAC|  
 |`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|Datensammler-Objekte, z. B. Sammlungssätze und Konfigurationsspeicher|  
 |`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objekte, z. B. Projekte, Pakete und Umgebungen|  
 |`SQLSERVER:\XEvent`|<xref:Microsoft.SqlServer.Management.XEvent>|Erweiterte Ereignisse von SQL Server|
-|`SQLSERVER:\DatabaseXEvent`|[Microsoft.SqlServer.Management.XEventDbScoped](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.management.xeventdbscoped)|Erweiterte Ereignisse von SQL Server|
+|`SQLSERVER:\DatabaseXEvent`|[Microsoft.SqlServer.Management.XEventDbScoped](/dotnet/api/microsoft.sqlserver.management.xeventdbscoped)|Erweiterte Ereignisse von SQL Server|
 |`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte, z. B. Cubes, Aggregationen und Dimensionen|  
   
  Sie können z. B. mit dem Ordner "SQLSERVER:\SQL" Pfade beginnen, die jedes vom SMO-Objektmodell unterstützte Objekt darstellen können. Der erste Teil eines SQLSERVER:\SQL-Pfads ist SQLSERVER:\SQL\\*Computername*\\*Instanzname*. Die Knoten nach dem Instanznamen sind Objektsammlungen (wie *Datenbanken* oder *Sichten*) und Objektnamen (wie AdventureWorks2012). Schemas werden nicht als Objektklassen dargestellt. Wenn Sie den Knoten für ein Objekt der höchsten Ebene in einem Schema angeben, wie beispielsweise eine Tabelle oder eine Sicht, müssen Sie den Objektnamen im Format *Schemaname.Objektname*angeben.  
@@ -81,7 +78,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |----------------------|-----------|  
 |Beschreibt, wie Windows PowerShell-Cmdlets verwendet werden, um durch die Knoten in einem Pfad zu navigieren und an jedem Knoten eine Liste der Objekte in diesem Knoten abzurufen.|[Navigieren in SQL Server PowerShell-Pfaden](navigate-sql-server-powershell-paths.md)|  
 |Beschreibt, wie die SMO-Methoden und SMO-Eigenschaften verwendet werden, um Berichte über ein Objekt, das von einem Knoten in einem Pfad dargestellt wird, zu erstellen und es zu verarbeiten. Beschreibt darüber hinaus, wie eine Liste der SMO-Methoden und SMO-Eigenschaften für diesen Knoten abgerufen wird.|[Verwenden von SQL Server PowerShell-Pfaden](work-with-sql-server-powershell-paths.md)|  
-|Beschreibt, wie ein SMO Uniform Resource Name (URN) in einen SQL Server-Anbieterpfad konvertiert wird.|[Konvertieren von URNs in SQL Server-Anbieterpfade](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
+|Beschreibt, wie ein SMO Uniform Resource Name (URN) in einen SQL Server-Anbieterpfad konvertiert wird.|[Konvertieren von URNs in SQL Server-Anbieterpfade](/powershell/module/sqlserver/Convert-UrnToPath)|  
 |Beschreibt, wie SQL Server-Authentifizierungsverbindungen mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter geöffnet werden. Standardmäßig verwendet der Anbieter Windows-Authentifizierungsverbindungen, die mit den Anmeldeinformationen des Windows-Kontos hergestellt wurden, das die Windows PowerShell-Sitzung ausführt.|[Verwalten der Authentifizierung in PowerShell der Datenbank-Engine](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="next-steps"></a>Nächste Schritte

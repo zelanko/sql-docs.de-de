@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/16/2020
-ms.openlocfilehash: 0a05f23265bd6e81c639bc8342699bf3bb8ab661
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: b0174f0b7705c9a7c7c678782a4b17fb4a1a74af
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742186"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985886"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Verwalten von Abonnementbesitzern und Ausführen von PowerShell-Abonnement
 
@@ -23,7 +23,7 @@ ms.locfileid: "80742186"
 
 Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können Sie den Besitz eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements programmgesteuert von einem Benutzer auf einen anderen übertragen. Dieses Thema enthält mehrere Windows PowerShell-Skripts, die Sie verwenden können, um den Besitz von Abonnements zu ändern oder einfach aufzulisten. Jedes Beispiel enthält Beispielsyntax sowohl für den einheitlichen als auch den SharePoint-Modus. Wenn Sie den Abonnementbesitzer ändern, wird das Abonnement dann im Sicherheitskontext des neuen Besitzers ausgeführt, und das User!UserID-Feld des Berichts zeigt den Wert für den neuen Besitzer an. Weitere Informationen zum Objektmodell des PowerShell-Beispielaufrufs finden Sie unter <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt")
+![PowerShell-Inhalt](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt")
 
 ##  <a name="in-this-topic"></a><a name="bkmk_top"></a> In diesem Thema:
   
@@ -47,17 +47,17 @@ Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INC
 
 In diesem Abschnitt werden die erforderlichen Berechtigungsstufen für die Verwendung der Methoden für den einheitlichen und den SharePoint-Modus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]zusammengefasst. Die Skripts in diesem Thema verwenden die folgenden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Methoden:  
   
-- [ReportingService2010.ListSubscriptions Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [ReportingService2010.ListSubscriptions Method](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
   
-- [ReportingService2010.ChangeSubscriptionOwner Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+- [ReportingService2010.ChangeSubscriptionOwner Method](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)  
   
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
   
-- Die Methode [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) wird nur im letzten Skript verwendet, um zu veranlassen, dass ein bestimmtes Abonnement ausgeführt wird. Wenn Sie dieses Skript nicht verwenden möchten, können Sie die Berechtigungsanforderungen für die FireEvent-Methode ignorieren.  
+- Die Methode [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent) wird nur im letzten Skript verwendet, um zu veranlassen, dass ein bestimmtes Abonnement ausgeführt wird. Wenn Sie dieses Skript nicht verwenden möchten, können Sie die Berechtigungsanforderungen für die FireEvent-Methode ignorieren.  
   
 **Einheitlicher Modus :**
   
-- Abonnements auflisten: [ReportOperation-Enumeration](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) im Bericht UND der Benutzer, der Besitzer des Abonnements ist, ODER ReadAnySubscription  
+- Abonnements auflisten: [ReportOperation-Enumeration](/dotnet/api/microsoft.reportingservices.interfaces.reportoperation) im Bericht UND der Benutzer, der Besitzer des Abonnements ist, ODER ReadAnySubscription  
   
 - Abonnements ändern: Der Benutzer muss ein Mitglied der Gruppe "BUILTIN\Administrators" sein.  
   
@@ -67,7 +67,7 @@ In diesem Abschnitt werden die erforderlichen Berechtigungsstufen für die Verwe
   
  **SharePoint-Modus:**
   
-- Abonnements auflisten: ManageAlerts ODER [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) im Bericht UND der Benutzer, der Abonnementbesitzer ist, dabei muss es sich um ein geplantes Abonnement handeln.  
+- Abonnements auflisten: ManageAlerts ODER [CreateAlerts](/previous-versions/office/sharepoint-server/ms412690(v=office.15)) im Bericht UND der Benutzer, der Abonnementbesitzer ist, dabei muss es sich um ein geplantes Abonnement handeln.  
   
 - Abonnements ändern: ManageWeb  
   
@@ -387,10 +387,10 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 
 ## <a name="see-also"></a>Weitere Informationen  
 
-- [ReportingService2010.ListSubscriptions Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [ReportingService2010.ListSubscriptions Method](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
 
-- [ReportingService2010.ChangeSubscriptionOwner Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+- [ReportingService2010.ChangeSubscriptionOwner Method](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)   
 
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
 
-- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
+- [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent)

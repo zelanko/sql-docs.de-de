@@ -17,12 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25115cc1e5d34624b13c6218cef256e686d39e3d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7651d01bef5b17981c0e4c93c450f26e7970524d
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727189"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081919"
 ---
 # <a name="information-in-error-interfaces"></a>Informationen in Fehlerschnittstellen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "91727189"
 |Memberfunktion|BESCHREIBUNG|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Füllt eine ERRORINFO-Struktur mit grundlegenden Informationen über einen Fehler aus. Eine ERRORINFO-Struktur enthält Elemente, die den HRESULT-Rückgabewert für den Fehler sowie den Anbieter und die Schnittstelle, für die der Fehler gilt, identifizieren.|  
-|**GetCustomErrorObject**|Gibt einen Verweis auf die Schnittstellen **ISQLErrorInfo,** und [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) zurück.|  
+|**GetCustomErrorObject**|Gibt einen Verweis auf die Schnittstellen **ISQLErrorInfo,** und [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md) zurück.|  
 |**GetErrorInfo**|Gibt einen Verweis auf eine **IErrorInfo**-Schnittstelle zurück.|  
 |**GetErrorParameters**|Der OLE DB-Treiber für SQL Server gibt keine Parameter über **GetErrorParameters** an den Consumer zurück.|  
 |**GetRecordCount**|Anzahl der verfügbaren Fehlerdatensätze.|  

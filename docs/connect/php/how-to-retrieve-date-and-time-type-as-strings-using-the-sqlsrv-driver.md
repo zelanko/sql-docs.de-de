@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51135c202b40cbae5a251a2ab36a695f6981c68e
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 2dd1bd53b5ce3304b48fe8ed022e538d4d705154
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410963"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081439"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Gewusst wie: Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ Der Standardwert ist **false**, was bedeutet, dass die Typen **smalldatetime**, 
 
 Der PDO_SQLSRV-Treiber gibt Datums-und Uhrzeittypen standardmäßig als Zeichenfolgen zurück. Wenn Sie möchten, dass sie als PHP-DateTime-Objekte abgerufen werden, lesen Sie den Artikel [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 
-## <a name="example"></a>Beispiel
+## <a name="example-1"></a>Beispiel 1
 Das folgende Beispiel zeigt die Syntax, welche festlegt, dass die Datums- und Uhrzeittypen als Zeichenfolgen abgerufen werden.
 
 ```php
@@ -50,7 +50,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="example-2"></a>Beispiel 2
 Das folgende Beispiel zeigt, dass Sie verschiedene Datumsangaben als Zeichenfolge abrufen können, sofern Sie beim Abruf UTF-8 spezifizieren. Dies gilt auch, wenn die Verbindung mittels `"ReturnDatesAsStrings" => false` erstellt wurde.
 
 ```php
@@ -87,7 +87,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="example-3"></a>Beispiel 3
 Das folgende Beispiel zeigt, wie Datumsangaben als Zeichenfolgen abgerufen werden können, indem UTF-8 und `"ReturnDatesAsStrings" => true` in der Verbindungszeichenfolge spezifiziert werden.
 
 ```php
@@ -123,7 +123,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="example-4"></a>Beispiel 4
 Das folgende Beispiel zeigt, wie das Datum als PHP-Typ abgerufen wird. `'ReturnDatesAsStrings'=> false` ist standardmäßig aktiviert.
 
 ```php
@@ -161,7 +161,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="example-5"></a>Beispiel 5
 Die Option ReturnDatesAsStrings auf Anweisungsebene überschreibt die entsprechende Verbindungsoption.
 
 ```php

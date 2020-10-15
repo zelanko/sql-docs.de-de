@@ -18,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8ea00fa23ac95563955ff989f83a027b885cea2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e2ff9d591745d6c8859ea35f5e98a90100802d4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497591"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92030396"
 ---
 # <a name="poll-servers"></a>Abfragen von Servern
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Auf [Azure SQL Managed Instance/docs.microsoft.com/azure/sql-database/sql-database-managed-instance] werden derzeit die meisten, aber nicht alle Features des SQL Server-Agents unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Auf [Azure SQL Managed Instance/docs.microsoft.com/azure/sql-database/sql-database-managed-instance] werden derzeit die meisten, aber nicht alle Features des SQL Server-Agents unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Wenn die Multiserververwaltung implementiert ist, stellen die Zielserver regelmäßig eine Verbindung mit dem Masterserver her, um Informationen zu ausgeführten Aufträgen hochzuladen und neue Aufträge herunterzuladen. Der Vorgang der Verbindungsherstellung mit dem Masterserver wird als *Serverabruf* bezeichnet und findet in regelmäßigen *Abrufintervallen*statt.  
   
@@ -62,8 +62,7 @@ Es ist nicht notwendig, Vorgänge explizit bereitzustellen, wenn Sie folgende El
   
 -   [SQL Server Management Studio](../../ssms/agent/force-a-target-server-to-poll-the-master-server.md)  
   
--   [Transact-SQL](https://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Verwalten von Ereignissen](../../ssms/agent/manage-events.md)  
-  

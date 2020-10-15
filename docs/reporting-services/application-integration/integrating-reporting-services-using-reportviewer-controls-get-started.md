@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d4195123fbe1660c1c081c810d2b5b6b0feebd80
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569960"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891510"
 ---
 # <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrieren von Reporting Services mit den ReportViewer-Steuerelementen – Erste Schritte
 
-Die Report Viewer-Steuerelemente können verwendet werden, um RDL-Berichte von Reporting Services in Web- und WinForms-Apps zu integrieren. Detaillierte Informationen zu aktuellen Updates finden Sie im [Änderungsprotokoll](changelog.md).
+Die Report Viewer-Steuerelemente können verwendet werden, um RDL-Berichte von Reporting Services in Web- und WinForms-Apps zu integrieren. Detaillierte Informationen zu aktuellen Updates finden Sie im [Änderungsprotokoll](./release-notes-ssrs-application-integration.md).
 
 ## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>Hinzufügen des ReportViewer-Steuerelements zu einem neuen Webprojekt
 
@@ -270,9 +270,8 @@ Nachstehend finden Sie Links zu Artikeln auf der Website NuGet.org, die Informat
 
 ## <a name="forum-feedback"></a>Forum-Feedback
 
-Informieren Sie das Team in den [Reporting Services-Foren](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html) über Probleme.
+Informieren Sie das Team in den [Reporting Services-Foren](/answers/topics/sql-server-reporting-services.html) über Probleme.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Datensammlung im Report Viewer-Steuerelement](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-
+[Datensammlung im Report Viewer-Steuerelement](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)

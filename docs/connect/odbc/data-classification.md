@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 38439c3eff4eee2eef3b3e39f7b2b2b5454b2bec
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a4c7664c35d4c98ebcf8f8ae4a57d2948a83624c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727448"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081519"
 ---
 # <a name="data-classification"></a>Datenklassifizierung
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "91727448"
 ## <a name="overview"></a>Übersicht
 Für die Arbeit mit vertraulichen Daten wurde in SQL Server und Azure SQL Server die Möglichkeit eingeführt, Datenbankspalten mit Vertraulichkeitsmetadaten anzugeben. Dadurch kann die Clientanwendung unterschiedliche Arten von vertraulichen Daten (z.B. Gesundheits- oder Finanzdaten) in Übereinstimmung mit den jeweiligen Datenschutzrichtlinien behandeln und verarbeiten.
 
-Weitere Informationen zum Zuweisen von Spaltenklassifizierungen finden Sie unter [SQL-Datenermittlung und -klassifizierung](../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017).
+Weitere Informationen zum Zuweisen von Spaltenklassifizierungen finden Sie unter [SQL-Datenermittlung und -klassifizierung](../../relational-databases/security/sql-data-discovery-and-classification.md).
 
 Mit dem Microsoft ODBC-Treiber 17.2 können diese Metadaten mithilfe von SQLGetDescField und dem Feldbezeichner SQL_CA_SS_DATA_CLASSIFICATION abgerufen werden.
 

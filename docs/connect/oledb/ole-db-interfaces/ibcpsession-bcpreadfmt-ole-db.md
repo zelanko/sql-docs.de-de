@@ -15,12 +15,12 @@ helpviewer_keywords:
 - BCPReadFmt method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8cedd89e54d7d7a6bde2ef31e3bb37ae607be0e5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ee5dd620981f2e41c20dd6a51c52c0b3d536a126
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726946"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081779"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>'IBCPSession::BCPReadFmt' (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ HRESULT BCPReadFmt(
  Die Methode wurde erfolgreich ausgeführt.  
   
  E_FAIL  
- Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15)-Schnittstelle.  
+ Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md)-Schnittstelle.  
   
  E_OUTOFMEMORY  
  Fehler aufgrund von nicht genügend Arbeitsspeicher.  

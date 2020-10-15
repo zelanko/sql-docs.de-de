@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aa838fc8920469921063ebdface6680e3bc5a3bf
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725881"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892490"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] lokal auf OpenShift und Azure Red Hat OpenShift
 
@@ -37,8 +37,8 @@ In diesem Artikel werden die Bereitstellungsschritte beschrieben, die für die O
 > [!IMPORTANT]
 > Die folgenden Voraussetzungen müssen von einem OpenShift-Clusteradministrator (Clusterrolle „Clusteradministrator“) ausgeführt werden, der über ausreichende Berechtigungen zum Erstellen dieser Clusterebenenobjekte verfügt. Weitere Informationen zu Clusterrollen in OpenShift finden Sie unter [Verwenden von RBAC zum Definieren und Anwenden von Berechtigungen](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html).
 
-1. Stellen Sie sicher, dass die **pidsLimit**-Einstellung auf OpenShift aktualisiert wurde, um SQL Server-Workloads zu unterstützen. Der Standardwert in OpenShift ist zu niedrig für Produktionsumgebungen wie Workloads. Es wird mindestens der Wert **4096** empfohlen, jedoch hängt der optimale Wert von der Einstellung *Max. Anzahl von Arbeitsthreads* in SQL Server sowie der Anzahl der CPU-Prozessoren auf dem OpenShift-Hostknoten ab. 
-    - Befolgen Sie **diese Anweisungen**, um herauszufinden, wie Sie das [pidsLimit]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md) für Ihren OpenShift-Cluster aktualisieren. Beachten Sie, dass OpenShift-Versionen vor **4.3.5** einen Fehler aufweisen, der dazu führt, dass der aktualisierte Wert nicht übernommen wird. Aktualisieren Sie OpenShift daher unbedingt auf die neueste Version. 
+1. Stellen Sie sicher, dass die `pidsLimit`-Einstellung auf OpenShift aktualisiert wurde, um SQL Server-Workloads zu unterstützen. Der Standardwert in OpenShift ist zu niedrig für Produktionsumgebungen wie Workloads. Es wird mindestens der Wert `4096` empfohlen, jedoch hängt der optimale Wert von der Einstellung `max worker threads` in SQL Server sowie der Anzahl der CPU-Prozessoren auf dem OpenShift-Hostknoten ab. 
+    - Befolgen Sie `pidsLimit`, um herauszufinden, wie Sie das [pidsLimit]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md) für Ihren OpenShift-Cluster aktualisieren. Beachten Sie, dass OpenShift-Versionen vor `4.3.5` einen Fehler aufweisen, der dazu führt, dass der aktualisierte Wert nicht übernommen wird. Aktualisieren Sie OpenShift daher unbedingt auf die neueste Version. 
     - Wenn Sie den optimalen Wert abhängig von Ihrer Umgebung und den geplanten SQL Server-Workloads berechnen möchten, können Sie die folgende Schätzung und die folgenden Beispiele verwenden:
 
     |Anzahl der Prozessoren|Max. Anzahl von Arbeitsthreads|Standardworker pro Prozessor|Minimaler pidsLimit-Wert|
@@ -56,7 +56,7 @@ In diesem Artikel werden die Bereitstellungsschritte beschrieben, die für die O
     ```
 
     > [!NOTE]
-    > Die benutzerdefinierte SCC für BDC basiert auf der integrierten *nonroot*-SCC in OpenShift mit zusätzlichen Berechtigungen. Weitere Informationen zu Sicherheitskontexteinschränkungen in OpenShift finden Sie unter [Verwalten von Sicherheitskontexteinschränkungen](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). Ausführliche Informationen darüber, welche Berechtigungen für Big Data-Cluster zusätzlich zur *nonroot*-SCC erforderlich sind, finden Sie in [diesem Whitepaper](https://aka.ms/sql-bdc-openshift-security).
+    > Die benutzerdefinierte SCC für BDC basiert auf der integrierten `nonroot`-SCC in OpenShift mit zusätzlichen Berechtigungen. Weitere Informationen zu Sicherheitskontexteinschränkungen in OpenShift finden Sie unter [Verwalten von Sicherheitskontexteinschränkungen](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). Ausführliche Informationen darüber, welche Berechtigungen für Big Data-Cluster zusätzlich zur `nonroot`-SCC erforderlich sind, finden Sie in [diesem Whitepaper](https://aka.ms/sql-bdc-openshift-security).
 
 3. Erstellen eines Namespace/Projekts:
 
@@ -104,7 +104,7 @@ In diesem Artikel werden die Bereitstellungsschritte beschrieben, die für die O
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
-   Für eine Bereitstellung unter ARO wird empfohlen, mit einem der *aro-* -Profile zu beginnen, das Standardwerte für *serviceType* und *storageClass* enthält, die für diese Umgebung geeignet sind. Beispiel:
+   Für eine Bereitstellung unter ARO wird empfohlen, mit einem der `aro-` -Profile zu beginnen, das Standardwerte für `serviceType` und `storageClass` enthält, die für diese Umgebung geeignet sind. Beispiel:
 
    ```console
    azdata bdc config init --source aro-dev-test --target custom-openshift
@@ -113,7 +113,7 @@ In diesem Artikel werden die Bereitstellungsschritte beschrieben, die für die O
 1. Passen Sie die Konfigurationsdateien „control.json“ und „bdc.json“ an. Im Folgenden finden Sie einige zusätzliche Ressourcen, die Sie durch die für verschiedene Anwendungsfälle unterstützten Anpassungen führen:
 
    - [Storage](concept-data-persistence.md)
-   - [AD-bezogene Einstellungen](deploy-active-directory.md)
+   - [AD-bezogene Einstellungen](active-directory-deploy.md)
    - [Weitere Anpassungen](deployment-custom-configuration.md)
 
    > [!NOTE]
@@ -136,7 +136,7 @@ In diesem Artikel werden die Bereitstellungsschritte beschrieben, die für die O
 
 ## <a name="openshift-specific-settings-in-the-deployment-configuration-files"></a>OpenShift-spezifische Einstellungen in den Bereitstellungskonfigurationsdateien
 
-SQL Server 2019 CU5 führt zwei Funktionsparameter ein, um die Sammlung von Pod- und Knotenmetriken zu steuern. Diese Parameter werden in den integrierten Profilen für OpenShift standardmäßig auf *false* festgelegt, da für die Überwachungscontainer [privilegierter Sicherheitskontext](https://www.openshift.com/blog/managing-sccs-in-openshift) erforderlich ist. Dadurch werden einige der Sicherheitseinschränkungen für den Namespace gelockert, auf dem BDC bereitgestellt ist.
+SQL Server 2019 CU5 führt zwei Funktionsparameter ein, um die Sammlung von Pod- und Knotenmetriken zu steuern. Diese Parameter werden in den integrierten Profilen für OpenShift standardmäßig auf `false` festgelegt, da für die Überwachungscontainer [privilegierter Sicherheitskontext](https://www.openshift.com/blog/managing-sccs-in-openshift) erforderlich ist. Dadurch werden einige der Sicherheitseinschränkungen für den Namespace gelockert, auf dem BDC bereitgestellt ist.
 
 ```json
     "security": {

@@ -17,19 +17,19 @@ helpviewer_keywords:
 - ISQLServerErrorInfo interface
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 265919d6117298ee1501aa4773a944e7e13f95d2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 527f69fddc65e31d72b65726fe4b7ace5434af60
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727155"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081479"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server-Fehlerdetail
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server definiert die anbieterspezifische Fehlerschnittstelle für [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15). Diese Schnittstelle stellt Details zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Fehlern bereit und ist daher eine nützliche Informationsquelle, wenn Fehler bei der Ausführung von Befehlen oder Rowsetvorgängen auftreten.  
+  Der OLE DB-Treiber für SQL Server definiert die anbieterspezifische Fehlerschnittstelle für [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md). Diese Schnittstelle stellt Details zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Fehlern bereit und ist daher eine nützliche Informationsquelle, wenn Fehler bei der Ausführung von Befehlen oder Rowsetvorgängen auftreten.  
   
  Für den Zugriff auf die **ISQLServerErrorInfo**-Schnittstelle gibt es zwei Möglichkeiten.  
   

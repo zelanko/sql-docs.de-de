@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec60fe007ff784c2ff19ad82bd9d212f685ef6d6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5c2b60fa120863c5ca33fb21ae158649b1d1adcf
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726683"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081099"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,7 +73,7 @@ Die **sqlsrv_query**-Funktion eignet sich ideal für einmalige Abfragen und soll
   
 Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a>Beispiel  
+## <a name="example-1"></a>Beispiel 1  
 Im folgenden Beispiel wird eine einzelne Zeile in die *Sales.SalesOrderDetail* -Tabelle der AdventureWorks-Datenbank eingefügt. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 > [!NOTE]  
@@ -120,7 +120,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="example"></a>Beispiel  
+## <a name="example-2"></a>Beispiel 2  
 Im folgenden Beispiel wird ein Feld in der *Sales.SalesOrderDetail*-Tabelle der AdventureWorks-Datenbank aktualisiert. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
@@ -159,7 +159,7 @@ sqlsrv_close($conn);
 > [!NOTE]
 > Es wird empfohlen, beim Binden von Werten an eine [Spalte des Datentyps „decimal“ oder „numeric“](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) Zeichenfolgen als Eingabe zu verwenden, um Präzision und Genauigkeit sicherzustellen, da die Genauigkeit von PHP für [Gleitkommazahlen](https://php.net/manual/en/language.types.float.php) begrenzt ist. Dasselbe gilt für Spalten des Datentyps „bigint“, insbesondere, wenn die Werte außerhalb des Bereichs einer [ganzen Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) liegen.
 
-## <a name="example"></a>Beispiel  
+## <a name="example-3"></a>Beispiel 3  
 In diesem Codebeispiel wird das Binden eines Dezimalwerts als Eingabeparameter veranschaulicht.  
 
 ```
@@ -183,7 +183,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="example-4"></a>Beispiel 4
 In diesem Codebeispiel wird das Erstellen einer Tabelle mit Werten des Datentyps [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) und das Abrufen der eingefügten Daten veranschaulicht.
 
 ```

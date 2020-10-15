@@ -1,10 +1,7 @@
 ---
 title: Abfrageausdrücke und eindeutige Ressourcennamen | Microsoft-Dokumentation
 description: In diesem Artikel erfahren Sie mehr über Abfrageausdrücke, die mindestens ein Objekt in einer Objektmodellhierarchie auflisten, sowie über Uniform Resource Names (URNs), die einzelne Objekte eindeutig kennzeichnen.
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +11,15 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26483454e805bf8dcaa780fed352cbe984c61f71
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: ''
+ms.date: 10/14/2020
+ms.openlocfilehash: 839bef5d4b3aba3a9d95664c549556d6c05206e5
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714118"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081899"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Abfrageausdrücke und eindeutige Ressourcennamen
 
@@ -27,15 +27,11 @@ ms.locfileid: "88714118"
 
 Die SMO-Modelle ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell-Snap-Ins verwenden zwei Typen von Ausdruckszeichenfolgen, die XPath-Ausdrücken ähneln. Bei Abfrageausdrücken handelt es sich um Zeichenfolgen, die eine Gruppe von Kriterien angeben, mit der ein oder mehrere Objekte in einer Objektmodellhierarchie aufgezählt werden. Ein eindeutiger Ressourcenname (Uniform Resource Name, URN) ist ein spezieller Typ einer Abfrageausdrucks-Zeichenfolge, der ein einzelnes Objekt eindeutig kennzeichnet.  
 
-> [!NOTE]
-> Es gibt zwei SQL Server PowerShell-Module: **SqlServer** und **SQLPS**. Das **SQLPS**-Modul ist zwar in der SQL Server-Installation (für die Abwärtskompatibilität) enthalten, wird jedoch nicht mehr aktualisiert. Das **SqlServer**-Modul ist das aktuellste PowerShell-Modul. Das **SqlServer**-Modul enthält aktualisierte Versionen der Cmdlets in **SQLPS** sowie neue Cmdlets zur Unterstützung der neuesten SQL-Funktionen.  
-> Vorherige Versionen des **SqlServer**-Moduls *waren* in SQL Server Management Studio (SSMS) enthalten, allerdings nur in den Versionen 16.x. Das **SqlServer**-Modul muss über den PowerShell-Katalog installiert werden, damit PowerShell mit SSMS 17.0 und höher verwendet werden kann.
-> Informationen zur Installation des **SqlServer**-Moduls finden Sie unter [Installieren von SQL Server PowerShell](download-sql-server-ps-module.md).
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
-  
 ## <a name="syntax"></a>Syntax  
-  
-```  
+
+```powershell
   
 Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]  
   
@@ -50,48 +46,48 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  | @DatePropertyName=datetime('DateString')  
  | is_null(@PropertyName)  
  | not(<PropertyExpression>)  
-  
 ```  
+
+## <a name="arguments"></a>Argumente
+
+*Object*  
+Gibt den Typ des Objekts an, der an diesem Knoten der Ausdruckszeichenfolge dargestellt wird. Jedes Objekt stellt eine Auflistungsklasse von diesen SMO-Objektmodellnamespaces dar:  
+
+<xref:Microsoft.SqlServer.Management.Smo>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Agent>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Broker>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Mail>  
+
+<xref:Microsoft.SqlServer.Management.Dmf>  
+
+<xref:Microsoft.SqlServer.Management.Facets>  
+
+<xref:Microsoft.SqlServer.Management.RegisteredServers>  
+
+<xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
+
+Geben Sie z.B. „Server“ für die **ServerCollection** -Klasse und „Database“ für die **DatabaseCollection** -Klasse an.  
+
+\@*PropertyName*  
+Gibt den Namen einer Eigenschaft der Klasse an, die mit dem in *Object*angegebenen Objekt verknüpft ist. Dem Namen der Eigenschaft muss das Zeichen \@ vorangestellt werden. Geben Sie z. B. \@IsAnsiNull für die **Database**-Klasseneigenschaft **IsAnsiNull** an.  
   
-## <a name="arguments"></a>Argumente  
- *Object*  
- Gibt den Typ des Objekts an, der an diesem Knoten der Ausdruckszeichenfolge dargestellt wird. Jedes Objekt stellt eine Auflistungsklasse von diesen SMO-Objektmodellnamespaces dar:  
+\@*BooleanPropertyName*=true()  
+Listet alle Objekte auf, bei denen die angegebene boolesche Eigenschaft auf TRUE gesetzt ist.  
   
- <xref:Microsoft.SqlServer.Management.Smo>  
+\@*BooleanPropertyName*=false()  
+Listet alle Objekte auf, bei denen die angegebene boolesche Eigenschaft auf FALSE gesetzt ist.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Agent>  
+contains(\@*StringPropertyName*, '*PatternString*')  
+Listet alle Objekte auf, bei denen die angegebene Zeichenfolgeneigenschaft mindestens ein Vorkommen des Zeichensatzes enthält, der in '*PatternString*' angegeben ist.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Broker>  
+\@*StringPropertyName*='*PatternString*'  
+Listet alle Objekte auf, bei denen der Wert der angegebenen Zeichenfolgeneigenschaft mit dem Zeichenmuster identisch ist, das in '*PatternString*' angegeben ist.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Mail>  
-  
- <xref:Microsoft.SqlServer.Management.Dmf>  
-  
- <xref:Microsoft.SqlServer.Management.Facets>  
-  
- <xref:Microsoft.SqlServer.Management.RegisteredServers>  
-  
- <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
-  
- Geben Sie z.B. „Server“ für die **ServerCollection** -Klasse und „Database“ für die **DatabaseCollection** -Klasse an.  
-  
- \@*PropertyName*  
- Gibt den Namen einer Eigenschaft der Klasse an, die mit dem in *Object*angegebenen Objekt verknüpft ist. Dem Namen der Eigenschaft muss das Zeichen \@ vorangestellt werden. Geben Sie z. B. \@IsAnsiNull für die **Database**-Klasseneigenschaft **IsAnsiNull** an.  
-  
- \@*BooleanPropertyName*=true()  
- Listet alle Objekte auf, bei denen die angegebene boolesche Eigenschaft auf TRUE gesetzt ist.  
-  
- \@*BooleanPropertyName*=false()  
- Listet alle Objekte auf, bei denen die angegebene boolesche Eigenschaft auf FALSE gesetzt ist.  
-  
- contains(\@*StringPropertyName*, '*PatternString*')  
- Listet alle Objekte auf, bei denen die angegebene Zeichenfolgeneigenschaft mindestens ein Vorkommen des Zeichensatzes enthält, der in '*PatternString*' angegeben ist.  
-  
- \@*StringPropertyName*='*PatternString*'  
- Listet alle Objekte auf, bei denen der Wert der angegebenen Zeichenfolgeneigenschaft mit dem Zeichenmuster identisch ist, das in '*PatternString*' angegeben ist.  
-  
- \@*DatePropertyName*= datetime('*DateString*')  
- Listet alle Objekte auf, bei denen der Wert der angegebenen Datumseigenschaft mit dem in '*DateString*' angegebenen Datum übereinstimmt. *DateString* muss dem Format „yyyy-mm-dd hh:mi:ss.mmm“ entsprechen.  
+\@*DatePropertyName*= datetime('*DateString*')  
+Listet alle Objekte auf, bei denen der Wert der angegebenen Datumseigenschaft mit dem in '*DateString*' angegebenen Datum übereinstimmt. *DateString* muss dem Format „yyyy-mm-dd hh:mi:ss.mmm“ entsprechen.  
   
 |DateString-Komponente|BESCHREIBUNG|  
 |-|-|  
@@ -112,18 +108,20 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  Negiert den Evaluierungswert von *PropertyExpression*und listet alle Objekte auf, die nicht der in *PropertyExpression*angegebenen Bedingung entsprechen. Zum Beispiel listet „not(contains(\@Name, 'xyz'))“ alle Objekte auf, deren Name nicht die Zeichenfolge xyz aufweist.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Abfrageausdrücke sind Zeichenfolgen, die die Knoten in einer SMO-Modellhierarchie auflisten. Jeder Knoten besitzt einen Filterausdruck, der die Kriterien angibt, mit denen bestimmt werden kann, welche Objekte an diesem Knoten aufgelistet sind. Abfrageausdrücke werden anhand der XPath-Ausdruckssprache modelliert. Abfrageausdrücke implementieren eine kleine Teilmenge von Ausdrücken, die von XPath unterstützt werden, und weisen zudem einige Erweiterungen auf, die nicht in XPath zu finden sind. Bei XPath-Ausdrücken handelt es sich um Zeichenfolgen, die eine Gruppe von Kriterien angeben, mit der ein oder mehrere Tags in einem XML-Dokument aufgezählt werden. Weitere Informationen zu XPath finden Sie unter [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
-  
- Abfrageausdrücke müssen mit einem absoluten Verweis auf das Serverobjekt beginnen. Relative Ausdrücke mit einem vorangestellten Schrägstrich (/) sind nicht zulässig. Die Sequenz der Objekte, die in einem Abfrageausdruck angegeben sind, muss der Hierarchie der Auflistungsobjekte im zugeordneten Objektmodell entsprechen. Ein Abfrageausdruck beispielsweise, der auf Objekte im Microsoft.SqlServer.Management.Smo-Namespace verweist, muss mit einem Serverknoten beginnen, gefolgt von einem Datenbankknoten usw.  
-  
- Wenn *\<FilterExpression>* nicht für ein Objekt angegeben wird, werden alle Objekte an diesem Knoten aufgelistet.  
+
+Abfrageausdrücke sind Zeichenfolgen, die die Knoten in einer SMO-Modellhierarchie auflisten. Jeder Knoten besitzt einen Filterausdruck, der die Kriterien angibt, mit denen bestimmt werden kann, welche Objekte an diesem Knoten aufgelistet sind. Abfrageausdrücke werden anhand der XPath-Ausdruckssprache modelliert. Abfrageausdrücke implementieren eine kleine Teilmenge von Ausdrücken, die von XPath unterstützt werden, und weisen zudem einige Erweiterungen auf, die nicht in XPath zu finden sind. Bei XPath-Ausdrücken handelt es sich um Zeichenfolgen, die eine Gruppe von Kriterien angeben, mit der ein oder mehrere Tags in einem XML-Dokument aufgezählt werden. Weitere Informationen zu XPath finden Sie unter [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
+
+Abfrageausdrücke müssen mit einem absoluten Verweis auf das Serverobjekt beginnen. Relative Ausdrücke mit einem vorangestellten Schrägstrich (/) sind nicht zulässig. Die Sequenz der Objekte, die in einem Abfrageausdruck angegeben sind, muss der Hierarchie der Auflistungsobjekte im zugeordneten Objektmodell entsprechen. Ein Abfrageausdruck beispielsweise, der auf Objekte im Microsoft.SqlServer.Management.Smo-Namespace verweist, muss mit einem Serverknoten beginnen, gefolgt von einem Datenbankknoten usw.  
+
+Wenn *\<FilterExpression>* nicht für ein Objekt angegeben wird, werden alle Objekte an diesem Knoten aufgelistet.  
   
 ## <a name="uniform-resource-names-urn"></a>Uniform Resource Name (URN)  
- URNs sind eine Teilmenge von Abfrageausdrücken. Jeder URN bildet einen voll qualifizierten Verweis auf ein einzelnes Objekt. Ein typischer URN verwendet die Eigenschaft Name, um ein einzelnes Objekt an jedem Knoten zu identifizieren. Zum Beispiel verweist dieser URN auf eine bestimmte Spalte:  
+
+URNs sind eine Teilmenge von Abfrageausdrücken. Jeder URN bildet einen voll qualifizierten Verweis auf ein einzelnes Objekt. Ein typischer URN verwendet die Eigenschaft Name, um ein einzelnes Objekt an jedem Knoten zu identifizieren. Zum Beispiel verweist dieser URN auf eine bestimmte Spalte:  
   
-```  
+```powershell
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='SalesPerson' and @Schema='Sales']/Column[@Name='SalesPersonID']  
-```  
+```
   
 ## <a name="examples"></a>Beispiele  
   
@@ -169,8 +167,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Invoke-PolicyEvaluation-Cmdlet](invoke-policyevaluation-cmdlet.md)   
- [SQL Server Audit &#40;Datenbank-Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
-  
-  
+## <a name="see-also"></a>Weitere Informationen
+
+- [Invoke-PolicyEvaluation-Cmdlet](invoke-policyevaluation-cmdlet.md)
+- [SQL Server Audit &#40;Datenbank-Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)

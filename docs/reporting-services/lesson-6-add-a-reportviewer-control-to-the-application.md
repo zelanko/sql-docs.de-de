@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4090a01d4aa50fcbbfa64182dcd23a3e01c50e78
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a1874b3253136a12973a60e6619e199995b5314
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245099"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891550"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lektion 6: Hinzufügen eines ReportViewer-Steuerelements zur Anwendung
 Nachdem Sie den untergeordneten Bericht mit dem Berichts-Assistenten entworfen haben, fügen Sie der Websiteanwendung im nächsten Schritt ein ReportViewer-Steuerelement hinzu. Wenn Sie die ASP.NET-Berichtswebsite verwenden, wurde das ReportViewer-Steuerelement bereits zur Seite „default.aspx“ hinzugefügt.   
@@ -31,7 +31,7 @@ Nachdem Sie den untergeordneten Bericht mit dem Berichts-Assistenten entworfen h
   
 5.  Wählen Sie im Feld **Bericht auswählen** den erstellten übergeordneten Bericht aus.  
   
-    Nachdem Sie einen Bericht ausgewählt haben, werden automatisch Instanzen der im Bericht verwendeten Datenquellen erstellt. Der Code wird generiert, um jede DataTable (und den zugehörigen [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) -Container) zu instanziieren. Gemäß den einzelnen, im Bericht verwendeten Datenquellen wird der Entwurfsoberfläche ein [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx) -Steuerelement hinzugefügt. Dieses Datenquellen-Steuerelement wird automatisch konfiguriert.  
+    Nachdem Sie einen Bericht ausgewählt haben, werden automatisch Instanzen der im Bericht verwendeten Datenquellen erstellt. Der Code wird generiert, um jede DataTable (und den zugehörigen [DataSet](/dotnet/api/system.data.dataset) -Container) zu instanziieren. Gemäß den einzelnen, im Bericht verwendeten Datenquellen wird der Entwurfsoberfläche ein [ObjectDataSource](/dotnet/api/system.web.ui.webcontrols.objectdatasource) -Steuerelement hinzugefügt. Dieses Datenquellen-Steuerelement wird automatisch konfiguriert.  
   
 6.  Klicken Sie im Menü Erstellen auf Website erstellen.  
   
@@ -39,5 +39,3 @@ Nachdem Sie den untergeordneten Bericht mit dem Berichts-Assistenten entworfen h
   
 ## <a name="next-task"></a>Nächste Aufgabe  
 Sie haben der Websiteanwendung erfolgreich ein ReportViewer-Steuerelement hinzugefügt. Als Nächstes fügen Sie dem übergeordneten Bericht eine Drillthroughaktion hinzu. Siehe [Lektion 7: Hinzufügen einer Drillthroughaktion zum übergeordneten Bericht](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
-  
-
