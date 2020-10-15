@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 623c0e6b5a1bafa033ddc9a6fd34a1911d6ecf5b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111122"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988536"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -30,27 +30,27 @@ SQL Server 2014 SP2 enthält Rollups von veröffentlichten Hotfixes für SQL Ser
 
 |Funktion|BESCHREIBUNG|Weitere Informationen finden Sie unter|
 |---|---|---|
-|Automatische Soft-NUMA-Partitionierung|Sie können Soft-NUMA automatisch auf Systemen konfigurieren, die über mindestens 8 CPUs pro NUMA-Knoten verfügen.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
-|Pufferpoolerweiterung|Ermöglicht eine Skalierung des SQL Server-Pufferpools über 8 TB hinaus.|[Pufferpoolerweiterung](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
-|Skalierung dynamischer Arbeitsspeicherobjekte| Dynamische Partitionierung von Arbeitsspeicherobjekten basierend auf der Anzahl von Knoten und Kernen. Durch diese Erweiterung wird das Ablaufverfolgungsflag 8048 nach SQL 2014 SP2 nicht mehr benötigt.|[Dynamic Memory Object Scaling](https://blogs.msdn.microsoft.com/sql_server_team/dynamic-memory-object-scaling/) (Skalierung dynamischer Arbeitsspeicherobjekte)|
-|MAXDOP-Hinweis für DBCC CHECK*-Befehle|Diese Verbesserung ist für die Ausführung von DBCC CHECKDB mit einer anderen MAXDOP-Einstellung als dem Wert „sp_configure“ hilfreich.|[Hinweise (Transact-SQL) – Abfrage](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)|
-|Verbesserung des SOS_RWLock-Spinlocks|Dadurch ist der SOS_RWLock-Spinlock nicht mehr erforderlich. Stattdessen können Techniken ohne Sperren verwendet werden, die mit In-Memory OLTP vergleichbar sind. |[Änderung von SOS_RWLock](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
+|Automatische Soft-NUMA-Partitionierung|Sie können Soft-NUMA automatisch auf Systemen konfigurieren, die über mindestens 8 CPUs pro NUMA-Knoten verfügen.|[Soft-NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md)|
+|Pufferpoolerweiterung|Ermöglicht eine Skalierung des SQL Server-Pufferpools über 8 TB hinaus.|[Pufferpoolerweiterung](../database-engine/configure-windows/buffer-pool-extension.md)|
+|Skalierung dynamischer Arbeitsspeicherobjekte| Dynamische Partitionierung von Arbeitsspeicherobjekten basierend auf der Anzahl von Knoten und Kernen. Durch diese Erweiterung wird das Ablaufverfolgungsflag 8048 nach SQL 2014 SP2 nicht mehr benötigt.|[Dynamic Memory Object Scaling](/archive/blogs/sql_server_team/dynamic-memory-object-scaling) (Skalierung dynamischer Arbeitsspeicherobjekte)|
+|MAXDOP-Hinweis für DBCC CHECK*-Befehle|Diese Verbesserung ist für die Ausführung von DBCC CHECKDB mit einer anderen MAXDOP-Einstellung als dem Wert „sp_configure“ hilfreich.|[Hinweise (Transact-SQL) – Abfrage](../t-sql/queries/hints-transact-sql-query.md)|
+|Verbesserung des SOS_RWLock-Spinlocks|Dadurch ist der SOS_RWLock-Spinlock nicht mehr erforderlich. Stattdessen können Techniken ohne Sperren verwendet werden, die mit In-Memory OLTP vergleichbar sind. |[Änderung von SOS_RWLock](/archive/blogs/psssql/sql-2016-it-just-runs-faster-sos_rwlock-redesign)|
 |Räumliche native Implementierung|Erhebliche Verbesserung der Leistung bei Abfragen nach räumlichen Daten.|[Spatial performance improvements in SQL Server 2012 and 2014 (Leistungsverbesserungen für räumliche Funktionen in SQL Server 2012 und 2014)](https://support.microsoft.com/help/3107399/spatial-performance-improvements-in-sql-server-2012-and-2014)
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>Verbesserte Unterstützung und Diagnose in SP2
 
 |Funktion|BESCHREIBUNG|Weitere Informationen finden Sie unter|
 |---|---|---|
-|Protokollierung des Always On-Zeitlimits|Für Leasezeitlimit-Nachrichten wurde eine neue Protokollierungsfunktion hinzugefügt, mit der die aktuelle Zeit und die Zeiten für die erwartete Erneuerung protokolliert werden. |[Improved Always On Availability Group Lease Timeout Diagnostics (Verbesserte Leasezeitlimit-Diagnose bei Always On-Verfügbarkeitsgruppe)](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
+|Protokollierung des Always On-Zeitlimits|Für Leasezeitlimit-Nachrichten wurde eine neue Protokollierungsfunktion hinzugefügt, mit der die aktuelle Zeit und die Zeiten für die erwartete Erneuerung protokolliert werden. |[Improved Always On Availability Group Lease Timeout Diagnostics (Verbesserte Leasezeitlimit-Diagnose bei Always On-Verfügbarkeitsgruppe)](/archive/blogs/alwaysonpro/improved-alwayson-availability-group-lease-timeout-diagnostics)
 |Always On-XEvents und -Leistungsindikatoren|Neue Always On-XEvents und -Leistungsindikatoren zur Verbesserung der Diagnose von Problemen mit Always On in Bezug auf die Wartezeit bei der Problembehandlung. |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) und [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
 |Bereinigen der Änderungsnachverfolgung|Eine neue gespeicherte Prozedur, sp_flush_CT_internal_table_on_demand, bereinigt bedarfsgesteuert interne Tabellen der Änderungsnachverfolgung.|[KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)
 |Klonen von Datenbanken|Verwenden Sie den neuen DBCC-Befehl, um durch Klonen von Schema, Metadaten und Statistiken, jedoch ohne die Daten, eine Fehlerbehebung bei vorhandenen Produktionsdatenbanken durchzuführen. Geklonte Datenbanken sind nicht für die Verwendung in Produktionsumgebungen bestimmt.|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
 |DMF-Ergänzungen|Neue sys.dm_db_incremental_stats_properties der DMF machen Informationen pro Partition zu inkrementellen Statistiken verfügbar.|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
-|DMF zum Abrufen von Eingabepuffer in SQL Server|Eine neue DMF zum Abrufen des Eingabepuffers für eine Sitzung/Anforderung (sys.dm_exec_input_buffer) ist jetzt verfügbar. Diese ist funktionell äquivalent zu DBCC INPUTBUFFER.|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
+|DMF zum Abrufen von Eingabepuffer in SQL Server|Eine neue DMF zum Abrufen des Eingabepuffers für eine Sitzung/Anforderung (sys.dm_exec_input_buffer) ist jetzt verfügbar. Diese ist funktionell äquivalent zu DBCC INPUTBUFFER.|[sys.dm_exec_input_buffer](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
 |DROP DDL-Unterstützung für die Replikation|Ermöglicht das Löschen einer Tabelle aus der Datenbank und der Veröffentlichung, die als Artikel in der Veröffentlichung einer Transaktionsreplikation enthalten ist.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
-|IFI-Berechtigung für SQL-Dienstkonto|Bestimmt, ob die schnelle Dateiinitialisierung (Instant File Initialization, IFI) beim Starten des SQL Server-Dienstes aktiviert ist.|[Datenbankdatei-Initialisierung](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
+|IFI-Berechtigung für SQL-Dienstkonto|Bestimmt, ob die schnelle Dateiinitialisierung (Instant File Initialization, IFI) beim Starten des SQL Server-Dienstes aktiviert ist.|[Datenbankdatei-Initialisierung](../relational-databases/databases/database-instant-file-initialization.md)
 |Arbeitsspeicherzuweisungen – Behandlung von Problemen|Sie können während der Ausführung von Abfragen Diagnosehinweise nutzen, indem Sie zur Vermeidung eines Speicherkonflikts die zugehörigen Speicherzuweisungen beschränken.|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|Lightweight-Profilerstellung für die Abfrageausführung pro Operator |Optimiert die Erfassung von Statistiken zur Abfrageausführung pro Operator, wie z.B. die tatsächliche Anzahl von Zeilen.|[Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+|Lightweight-Profilerstellung für die Abfrageausführung pro Operator |Optimiert die Erfassung von Statistiken zur Abfrageausführung pro Operator, wie z.B. die tatsächliche Anzahl von Zeilen.|[Developers Choice: Query progress - anytime, anywhere (Von Entwicklern inspiriert: Abfragestatus – jederzeit und überall)](/archive/blogs/sql_server_team/query-progress-anytime-anywhere)
 |Abfrageausführungsdiagnose|Tatsächlich gelesene Zeilen werden jetzt zur Verbesserung der Behebung von Abfrageleistungsproblemen in Abfrageausführungsplänen gemeldet.|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |Abfrageausführungsdiagnose bei tempdb spill|Hash Warning und Sort Warnings verfügen jetzt über zusätzliche Spalten zum Nachverfolgen von physischen E/A-Statistiken, verwendetem Speicher und betroffenen Zeilen. |[Verbesserte Diagnose von temptdb spill](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |Tempdb-Unterstützbarkeit |Verwenden Sie beim Serverstart eine neue Errorlog-Nachricht für die Anzahl der tempdb-Dateien und tempdb-Datendateiänderungen.|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -82,7 +82,7 @@ SQL Server 2014 SP1 enthält in SQL Server 2014 CU 1 bis einschließlich CU 5 be
 ### <a name="download-pages-and-more-information-for-sp1"></a>Downloadseiten und weitere Informationen zu SP1
 
 - [Service Pack 1 für Microsoft SQL Server 2014 herunterladen](https://www.microsoft.com/download/details.aspx?id=46694)
-- [SQL Server 2014 Service Pack 1 wurde freigegeben – aktualisiert](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
+- [SQL Server 2014 Service Pack 1 wurde freigegeben – aktualisiert](/archive/blogs/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
 - [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
 
@@ -103,7 +103,7 @@ Das Upgrade wird vollständig unterstützt. Sie haben insbesondere folgende Mög
 1.  Anfügen einer SQL Server 2014-CTP 2-Datenbank an eine Instanz von SQL Server 2014 RTM.    
 2.  Wiederherstellen einer Datenbanksicherung, die unter SQL Server 2014 CTP 2 erstellt wurde, auf einer Instanz von SQL Server 2014 RTM.    
 3.  Direktes Upgrade auf SQL Server 2014 RTM.
-4.  Paralleles Upgrade auf SQL Server 2014 RTM. Bevor Sie das parallele Upgrade initiieren, müssen Sie in den manuellen Failovermodus wechseln. Ausführliche Informationen finden Sie unter [Upgraden und Update von Verfügbarkeitsgruppenservern bei minimaler Downtime und minimalem Datenverlust](https://msdn.microsoft.com/library/dn178483.aspx).    
+4.  Paralleles Upgrade auf SQL Server 2014 RTM. Bevor Sie das parallele Upgrade initiieren, müssen Sie in den manuellen Failovermodus wechseln. Ausführliche Informationen finden Sie unter [Upgraden und Update von Verfügbarkeitsgruppenservern bei minimaler Downtime und minimalem Datenverlust](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).    
 5.  Daten, die durch die in SQL Server 2014 CTP 2 installierten Transaktionsleistungs-Sammlungssätze gesammelt werden, können von SQL Server Management Studio in SQL Server 2014 RTM nicht angezeigt werden und umgekehrt.
   
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>Durchführen eines Downgrades von SQL Server 2014 RTM auf SQL Server 2014 CTP 2  
@@ -158,7 +158,7 @@ SQL Server 2014 Standard weist die folgenden Änderungen auf:
 -   Der maximale Arbeitsspeicher wurde von 64 GB auf 128 GB erweitert.  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>Der Ratgeber für die Speicheroptimierung kennzeichnet Standardeinschränkungen als inkompatibel  
-**Problem:** Der Advisor für die Speicheroptimierung in SQL Server Management Studio kennzeichnet alle Standardeinschränkungen als inkompatibel. In einer speicheroptimierten Tabelle werden nicht alle Standardeinschränkungen unterstützt. Der Ratgeber unterscheidet nicht zwischen unterstützten und nicht unterstützten Typen von Standardeinschränkungen. Zu den unterstützten Standardeinschränkungen gehören alle Konstanten, Ausdrücke und integrierten Funktionen, die innerhalb nativer kompilierter gespeicherter Prozeduren unterstützt werden. Die Liste der in systemintern kompilierten gespeicherten Prozeduren unterstützten Funktionen finden Sie unter [Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Problem:** Der Advisor für die Speicheroptimierung in SQL Server Management Studio kennzeichnet alle Standardeinschränkungen als inkompatibel. In einer speicheroptimierten Tabelle werden nicht alle Standardeinschränkungen unterstützt. Der Ratgeber unterscheidet nicht zwischen unterstützten und nicht unterstützten Typen von Standardeinschränkungen. Zu den unterstützten Standardeinschränkungen gehören alle Konstanten, Ausdrücke und integrierten Funktionen, die innerhalb nativer kompilierter gespeicherter Prozeduren unterstützt werden. Die Liste der in systemintern kompilierten gespeicherten Prozeduren unterstützten Funktionen finden Sie unter [Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md?viewFallbackFrom=sql-server-2014).  
   
 **Problemumgehung:** Wenn Sie den Ratgeber zum Identifizieren von Blockierungen verwenden möchten, sollten Sie die kompatiblen Standardeinschränkungen ignorieren. Um den Ratgeber für die Speicheroptimierung zum Migrieren von Tabellen zu verwenden, die über kompatible Standardeinschränkungen, aber keine anderen Blockierungen verfügen, führen Sie folgende Schritte aus:  
   
@@ -348,7 +348,7 @@ Grund für dieses Problem ist, dass Verfügbarkeitsgruppenlistenern in jedem Sub
   
     Durch diese Problemumgehung kann der Assistent das Replikat in Azure endgültig hinzufügen.  
   
-2.  Nachdem der Assistent beendet ist, müssen Sie die Konfiguration des Listeners in Azure, wie in [Listenerkonfiguration für AlwaysOn-Verfügbarkeitsgruppen in Azure](https://msdn.microsoft.com/library/dn376546.aspx) beschrieben, abschließen.  
+2.  Nachdem der Assistent beendet ist, müssen Sie die Konfiguration des Listeners in Azure, wie in [Listenerkonfiguration für AlwaysOn-Verfügbarkeitsgruppen in Azure](/previous-versions/azure/dn376546(v=azure.100)) beschrieben, abschließen.  
   
 ### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services (RTM)
   
@@ -361,7 +361,7 @@ Grund für dieses Problem ist, dass Verfügbarkeitsgruppenlistenern in jedem Sub
   
 1.  Laden Sie den MSOLAP.5-Anbieter aus dem [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack herunter. Installieren Sie den Anbieter auf den Anwendungsservern, auf denen Excel Services ausgeführt wird. Weitere Informationen finden Sie im Abschnitt „Microsoft Analysis Services OLE DB-Anbieter für Microsoft SQL Server 2012 SP1“ im [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registrieren Sie MSOLAP.5 als vertrauenswürdigen Anbieter bei SharePoint Excel Services. Weitere Informationen finden Sie unter [Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registrieren Sie MSOLAP.5 als vertrauenswürdigen Anbieter bei SharePoint Excel Services. Weitere Informationen finden Sie unter [Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15).  
   
 **Weitere Informationen**  
   
@@ -376,7 +376,7 @@ Grund für dieses Problem ist, dass Verfügbarkeitsgruppenlistenern in jedem Sub
   
 1.  Laden Sie den MSOLAP.5-Anbieter aus dem [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack herunter. Installieren Sie den Anbieter auf den Anwendungsservern, auf denen Excel Services ausgeführt wird. Weitere Informationen finden Sie im Abschnitt „Microsoft Analysis Services OLE DB-Anbieter für Microsoft SQL Server 2012 SP1“ im [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registrieren Sie MSOLAP.5 als vertrauenswürdigen Anbieter bei SharePoint Excel Services. Weitere Informationen finden Sie unter [Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registrieren Sie MSOLAP.5 als vertrauenswürdigen Anbieter bei SharePoint Excel Services. Weitere Informationen finden Sie unter [Hinzufügen von MSOLAP.5 als vertrauenswürdigen Datenanbieter in Excel Services](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15).  
   
 **Weitere Informationen**  
   

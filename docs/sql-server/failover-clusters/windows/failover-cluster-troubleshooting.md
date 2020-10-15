@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bf4e441352bce868d80ba00fe185c7494c0917
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111026"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988299"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Problembehandlung bei Failoverclustern
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91111026"
 -   Verwenden von erweiterten gespeicherten Prozeduren und COM-Objekten.  
   
 ## <a name="basic-troubleshooting-steps"></a>Grundlegende Schritte bei der Problembehandlung  
- Als erster Schritt für die Diagnose sollte eine neue Überprüfung der Clustervalidierung ausgeführt werden. Details zur Validierung finden Sie unter [Failover Cluster Step-by-Step Guide: Validating Hardware for a Failover Cluster](https://technet.microsoft.com/library/cc732035.aspx) (Schrittweise Anleitung für Failovercluster: Prüfen der Hardware auf einen Failovercluster).  Diese kann ohne Unterbrechung des Diensts abgeschlossen werden, da sie keine Auswirkungen auf irgendwelche Onlineclusterressourcen hat. Die Validierung kann jederzeit ausgeführt werden, sobald die Failoverclustering-Funktion installiert wurde, auch vor der Clusterbereitstellung, während der Clustererstellung oder -ausführung. Tatsächlich werden, sobald der Cluster verwendet wird, zusätzliche Tests ausgeführt, die prüfen, ob die bewährten Methoden für hoch verfügbare Workloads befolgt wurden. Von diesen Dutzenden Tests wirken sich nur wenige auf ausgeführte Clusterworkloads aus. Diese Tests gehören alle zur Speicherkategorie, das Überspringen dieser gesamten Kategorie stellt somit eine einfache Methode dar, störende Tests zu vermeiden.  
+ Als erster Schritt für die Diagnose sollte eine neue Überprüfung der Clustervalidierung ausgeführt werden. Details zur Validierung finden Sie unter [Failover Cluster Step-by-Step Guide: Validating Hardware for a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)) (Schrittweise Anleitung für Failovercluster: Prüfen der Hardware auf einen Failovercluster).  Diese kann ohne Unterbrechung des Diensts abgeschlossen werden, da sie keine Auswirkungen auf irgendwelche Onlineclusterressourcen hat. Die Validierung kann jederzeit ausgeführt werden, sobald die Failoverclustering-Funktion installiert wurde, auch vor der Clusterbereitstellung, während der Clustererstellung oder -ausführung. Tatsächlich werden, sobald der Cluster verwendet wird, zusätzliche Tests ausgeführt, die prüfen, ob die bewährten Methoden für hoch verfügbare Workloads befolgt wurden. Von diesen Dutzenden Tests wirken sich nur wenige auf ausgeführte Clusterworkloads aus. Diese Tests gehören alle zur Speicherkategorie, das Überspringen dieser gesamten Kategorie stellt somit eine einfache Methode dar, störende Tests zu vermeiden.  
 Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um beim Ausführen der Speichertests während der Validierung unbeabsichtigte Downtime zu verhindern. Falls der Cluster bei der Initiierung der Validierung über Onlinegruppen verfügt und die Speichertests ausgewählt bleiben, wird der Benutzer dazu aufgefordert, zu entscheiden, ob alle Tests durchgeführt werden sollen (und Downtime verursacht wird) oder ob die Tests der Datenträger aller Onlinegruppen zur Vermeidung von Downtime übersprungen werden sollen. Falls die gesamte Speicherkategorie von den Tests ausgeschlossen wird, wird diese Aufforderung nicht angezeigt. Dadurch wird die Clustervalidierung ohne Downtime aktiviert.  
   
 #### <a name="how-to-revalidate-your-cluster"></a>So validieren Sie Ihren Cluster erneut  
@@ -189,5 +189,4 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Funktionsweise erweiterter gespeicherter Prozeduren](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [Ausführungsmerkmale erweiterter gespeicherter Prozeduren](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-  
   

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 51e2fc3b5e95fe022bd758d72fefb34611db0b79
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b2d0b76423ab5a391351783970a6c9a057896bf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519030"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987966"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Gewusst wie: Konfigurieren der Ausführung von SQL Server-Komponententests
 
@@ -30,7 +30,7 @@ Diese Einstellungen steuern, auf welche Weise der Test mit der zu testenden Date
 -   **Schemabereitstellung**: Ein Datenbankprojekt ist eine Offlinedarstellung der Datenbank. Im Datenbankprojekt wird die Struktur der Datenbankobjekte dargestellt, ohne dass es Daten enthält. Nachdem Sie in einem Datenbankprojekt Änderungen am Schema vorgenommen haben, können Sie sie in einer realen Datenbank testen. In der Schemabereitstellungsphase werden die zu testenden Datenbankobjekte aus dem Datenbankprojekt in die Datenbank kopiert, für die die Tests ausgeführt werden. Weitere Informationen zur Schemabereitstellung finden Sie unter [Bereitstellen eines Datenbankschemas](#DeployingDBSchema).  
   
     > [!NOTE]  
-    > Tests werden nicht im Projektmappenordner, sondern in einem separaten Ordner auf der lokalen Festplatte ausgeführt. Obwohl verschiedene Aspekte der Testbereitstellung konfiguriert werden können, müssen diese für Komponententests in der Regel nicht konfiguriert werden. Weitere Informationen zur Testbereitstellung finden Sie unter [Ausführen von Tests](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
+    > Tests werden nicht im Projektmappenordner, sondern in einem separaten Ordner auf der lokalen Festplatte ausgeführt. Obwohl verschiedene Aspekte der Testbereitstellung konfiguriert werden können, müssen diese für Komponententests in der Regel nicht konfiguriert werden. Weitere Informationen zur Testbereitstellung finden Sie unter [Ausführen von Tests](/previous-versions/visualstudio/visual-studio-2010/dd286680(v=vs.100)).  
   
 ## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>Angeben von Verbindungszeichenfolgen  
   
@@ -85,4 +85,3 @@ Diese Einstellungen steuern, auf welche Weise der Test mit der zu testenden Date
 ## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

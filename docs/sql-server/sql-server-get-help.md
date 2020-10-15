@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed931eb7a77026e4902f5591def3496eb30851bf
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 38930a6380ab38a2c95086435481857e91518d2e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569940"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985173"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server-Hilfe und -Feedback
 
@@ -33,7 +33,7 @@ Wenn Sie die Hilfe der dynamischen SQL Server-Community in Anspruch nehmen möch
 
 ### <a name="microsoft-q--a"></a>Microsoft – Fragen und Antworten
 
-Sie können auch Hilfe erhalten, indem Sie auf [Microsoft – Fragen und Antworten](https://docs.microsoft.com/answers/products/sql-server) nach Fragen suchen und Fragen veröffentlichen.
+Sie können auch Hilfe erhalten, indem Sie auf [Microsoft – Fragen und Antworten](/answers/products/sql-server) nach Fragen suchen und Fragen veröffentlichen.
 
 ### <a name="communities"></a>Communitys
 
@@ -81,7 +81,7 @@ Die folgenden SQL Server-Blogs enthalten die neuesten Informationen zu SQL Serve
 
 - [SQL Server-Blog](https://cloudblogs.microsoft.com/sqlserver/)
 - [SQL ReplTalk](https://blogs.msdn.microsoft.com/repltalk/)
-- [SQL Tiger Team](https://blogs.msdn.microsoft.com/sql_server_team/)
+- [SQL Tiger Team](/archive/blogs/sql_server_team/)
 - [SQL Server-Supportteam](https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/)
 
 
@@ -91,5 +91,3 @@ Wenn Sie die Lizenzinformationen für SQL Server herunterladen und prüfen möch
 
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-

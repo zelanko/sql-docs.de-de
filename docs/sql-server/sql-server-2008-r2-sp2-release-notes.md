@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d9fee236a710d7bc742f9a8fed27e12801daa550
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570309"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988266"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ In diesem Dokument mit Versionsanmerkungen werden bekannte Probleme beschrieben,
 Die dynamische Verwaltungsansicht (DMV) **sys.dm_db_stats_properties**wurde hinzugefügt. Mit dieser DMV können Statistikeigenschaften für eine angegebene Tabelle oder indizierte Sicht in der aktuellen Datenbank zurückgegeben werden. Beispielsweise gibt diese DMV die Anzahl der als Stichprobe entnommenen Zeilen und die Anzahl der Schritte im Histogramm zurück.  
   
 ## <a name="20-before-you-install"></a>2.0 Vor der Installation  
-Informationen zum Installieren von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Updates finden Sie in der [SQL Server 2008 R2-Wartungsdokumentation](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
+Informationen zum Installieren von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Updates finden Sie in der [SQL Server 2008 R2-Wartungsdokumentation](/previous-versions/sql/sql-server-2008-r2/dd638062(v=sql.105)).  
   
 Allgemeine Informationen zu den ersten Schritten sowie zur Installation von SQL Server 2008 R2 finden Sie in der SQL Server 2008 R2-Infodatei. Die Infodatei steht auf dem Installationsmedium zur Verfügung.
   
@@ -65,4 +65,3 @@ Eine vollständige Liste von Fehlern und bekannten Problemen, die in diesem Serv
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Ermitteln der Version und Edition von SQL Server](https://support.microsoft.com/kb/321185)  
-  

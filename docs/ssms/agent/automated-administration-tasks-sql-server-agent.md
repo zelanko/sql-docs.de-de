@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c3cb9af36adb7ea1212b23684ed335c26ce3fd53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fbf48eb7ad2b960006a9e1c5987378a06d8fc44e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418366"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035750"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Automatisierte Administrationstasks (SQL Server-Agent)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> In [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> In [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können administrative Tasks automatisiert werden. Zum Automatisieren der Administration definieren Sie voraussichtliche administrative Tasks und geben die Bedingungen an, unter denen die einzelnen Tasks ausgeführt werden. Durch die Verwendung der automatischen Administration für Routineaufgaben und -ereignisse haben Sie mehr Zeit für andere administrative Funktionen.  
   
@@ -40,4 +40,3 @@ In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können a
 [Überwachen und Reagieren auf Ereignisse](../../ssms/agent/monitor-and-respond-to-events.md)  
   
 [Automatisierte Verwaltung in einem Unternehmen](../../ssms/agent/automated-administration-across-an-enterprise.md)  
-  

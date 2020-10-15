@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 0cc9ba049ab56b65165fd1ba016ecd913df49a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 242dc262053aefe5a95e6e65d99ae98965491e55
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480216"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034920"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Anpassen von Menüs und Tastenkombinationen
 
@@ -163,5 +163,4 @@ Zugriffstasten für gespeicherte Prozeduren mit der STRG-TASTE können über die
 > Einige Befehle sind nur verfügbar, wenn in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] relevanter Inhalt angezeigt wird. Wenn keine Befehle im Menü verfügbar sind, ist das Menüelement nicht verfügbar.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Funktionen in SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  
-  
+[Funktionen in SQL Server Management Studio](./sql-server-management-studio-ssms.md)  

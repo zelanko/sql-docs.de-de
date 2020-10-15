@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db5dbec0733140f39abe377513ff23bc7dd7b880
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a560f2d421675b3e01e8c1350b37112187dc3aa8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117039"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988568"
 ---
 # <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>Hinzufügen oder Entfernen von Knoten in einer Failoverclusterinstanz (Setup)
 
@@ -68,7 +68,7 @@ ms.locfileid: "91117039"
   
 8.  Verwenden Sie auf der Seite Clusterknotenkonfiguration das Dropdownfeld, um den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz anzugeben, die bei diesem Setupvorgang geändert werden soll.  
   
-9. Geben Sie auf der Seite „Serverkonfiguration > Dienstkonten“ Anmeldekonten für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, hängt von den Funktionen ab, die Sie für die Installation ausgewählt haben. Bei Installationen von Failoverclusterinstanzen werden der Kontoname und die Informationen zum Starttyp anhand der Einstellungen für den aktiven Knoten auf dieser Seite vorausgefüllt. Sie müssen Kennwörter für jedes Konto bereitstellen. Weitere Informationen finden Sie unter [Serverkonfiguration – Dienstkonten](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) und [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. Geben Sie auf der Seite „Serverkonfiguration > Dienstkonten“ Anmeldekonten für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, hängt von den Funktionen ab, die Sie für die Installation ausgewählt haben. Bei Installationen von Failoverclusterinstanzen werden der Kontoname und die Informationen zum Starttyp anhand der Einstellungen für den aktiven Knoten auf dieser Seite vorausgefüllt. Sie müssen Kennwörter für jedes Konto bereitstellen. Weitere Informationen finden Sie unter [Serverkonfiguration – Dienstkonten](../../../database-engine/install-windows/install-sql-server.md) und [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Sicherheitshinweis:** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -108,5 +108,4 @@ ms.locfileid: "91117039"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

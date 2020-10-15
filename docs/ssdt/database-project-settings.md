@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2a96f6ae82354d243b4c95561e7fdd7b11c58441
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 126a649f2555b2a66ba7ce4378378ff9e401f6fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934111"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987226"
 ---
 # <a name="database-project-settings"></a>Datenbankprojekteinstellungen
 
@@ -105,9 +105,9 @@ Die Einstellungen in der folgenden Tabelle gelten für alle Konfigurationen dies
 Die erweiterte Transact-SQL-Überprüfung ist eine Funktion innerhalb des Datenbankprojektsystems, mit deren Hilfe Entwickler ihr Datenbankprojekt zur Buildzeit vom Transact-SQL-Compilerdienst für Microsoft SQL Server 2014 überprüfen lassen können, indem der Projektcode mit dem Parser und Interpreter von SQL Server Engine überprüft wird.  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
-Der Transact-SQL-Compilerdienst ist eine Komponente, die auf der Microsoft SQL Server 2012-Datenbank-Engine basiert. Dieser Dienst ist in der Lage, die Syntax und Semantik von DDL-Anweisungen mit derselben Genauigkeit wie eine Microsoft SQL Server 2012-Datenbank-Engine zu überprüfen. Dies bedeutet auch, dass der Compilerdienst keine Syntax oder Funktionen unterstützt, die in Microsoft SQL Server 2012 als veraltet markiert wurden. Weitere Informationen zu veralteten Funktionen finden Sie unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
+Der Transact-SQL-Compilerdienst ist eine Komponente, die auf der Microsoft SQL Server 2012-Datenbank-Engine basiert. Dieser Dienst ist in der Lage, die Syntax und Semantik von DDL-Anweisungen mit derselben Genauigkeit wie eine Microsoft SQL Server 2012-Datenbank-Engine zu überprüfen. Dies bedeutet auch, dass der Compilerdienst keine Syntax oder Funktionen unterstützt, die in Microsoft SQL Server 2012 als veraltet markiert wurden. Weitere Informationen zu veralteten Funktionen finden Sie unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server.md).  
   
-Zur Validierung des Datenbankprojekts erstellt der Compilerdienst eine teilweise eigenständige Datenbank und simuliert die Ausführung der DDL-Anweisungen für die Datenbank. Weitere Informationen finden Sie unter [Teilweise eigenständige Datenbanken](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+Zur Validierung des Datenbankprojekts erstellt der Compilerdienst eine teilweise eigenständige Datenbank und simuliert die Ausführung der DDL-Anweisungen für die Datenbank. Weitere Informationen finden Sie unter [Teilweise eigenständige Datenbanken](/previous-versions/sql/sql-server-2012/ff929071(v=sql.110)).  
   
 Der Compilerdienst weist zwei unterschiedliche Einschränkungen auf.  
   
@@ -132,7 +132,7 @@ Funktionen, die derzeit keine Validierung unterstützen, z. B.:
 -   SQL Azure-Metadatensortierung (der Compilerdienst verwendet die Metadatensortierung für teilweise eigenständige Datenbanken von SQL Server 2012 - Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### <a name="enablingdisabling-extended-verification"></a>Aktivieren/Deaktivieren der erweiterten Überprüfung  
-Bei Datenbankprojekten, die direkt aus einer Azure SQL-Datenbank erstellt wurden, bzw. bei Projekten, deren Zielplattform auf SQL Azure festgelegt ist, wird die erweiterte Transact-SQL-Überprüfung standardmäßig aktiviert. Es wird empfohlen, die erweiterte Überprüfung bei der Entwicklung für SQL Azure oder bei Verwendung einer Datenbank im Anwendungsbereich zu verwenden, die für SQL Server 2012 konzipiert ist. Weitere Informationen zu Datenbanken im Anwendungsbereich finden Sie unter [Teilweise eigenständige Datenbanken](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+Bei Datenbankprojekten, die direkt aus einer Azure SQL-Datenbank erstellt wurden, bzw. bei Projekten, deren Zielplattform auf SQL Azure festgelegt ist, wird die erweiterte Transact-SQL-Überprüfung standardmäßig aktiviert. Es wird empfohlen, die erweiterte Überprüfung bei der Entwicklung für SQL Azure oder bei Verwendung einer Datenbank im Anwendungsbereich zu verwenden, die für SQL Server 2012 konzipiert ist. Weitere Informationen zu Datenbanken im Anwendungsbereich finden Sie unter [Teilweise eigenständige Datenbanken](/previous-versions/sql/sql-server-2012/ff929071(v=sql.110)).  
   
 Die erweiterte Überprüfungsfunktion kann auch verwendet werden, wenn eine Datenbank im Anwendungsbereich für SQL Server 2008/R2 entwickelt wird, um Kompatibilität mit Microsoft SQL Server 2012 und SQL Azure zu erzielen.  
   
@@ -154,21 +154,21 @@ Die erweiterte Überprüfungsfunktion kann auch verwendet werden, wenn eine Date
     ![Dateieigenschaften](../ssdt/media/ssdt-evf.gif "Dateieigenschaften")  
   
 ### <a name="special-considerations-for-collations"></a>Spezielle Überlegungen zu Sortierungen  
-Weitere Informationen zu Sortierungen in teilweise eigenständigen Datenbanken finden Sie unter [Sortierungen in eigenständigen Datenbanken](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
+Weitere Informationen zu Sortierungen in teilweise eigenständigen Datenbanken finden Sie unter [Sortierungen in eigenständigen Datenbanken](/previous-versions/sql/sql-server-2012/ff929080(v=sql.110)).  
   
 ## <a name="sqlclr"></a><a name="bkmk_sqlclr"></a>SQLCLR  
-Weitere Informationen zu den Assemblyoptionen finden Sie unter [Dialogfeld "Assemblyinformationen"](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
+Weitere Informationen zu den Assemblyoptionen finden Sie unter [Dialogfeld "Assemblyinformationen"](/visualstudio/ide/reference/assembly-information-dialog-box?queryresult=true).  
   
-Weitere Informationen zum Signieren finden Sie im Abschnitt **Signieren von Assemblys** im Thema [Seite "Signierung", Projekt-Designer](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
+Weitere Informationen zum Signieren finden Sie im Abschnitt **Signieren von Assemblys** im Thema [Seite "Signierung", Projekt-Designer](/visualstudio/ide/reference/signing-page-project-designer?queryresult=true) .  
   
 ## <a name="sqlclr-and-sqlclr-build"></a><a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR- und SQLCLR-Build  
 Die Eigenschaftenseiten **SQLCLR** und **SQLCLR Build** enthalten viele Einstellungen zum Verwenden von SQL CLR-Objekten im Projekt. Insbesondere enthält die Eigenschaftenseite **SQLCLR** eine Berechtigungsstufeneinstellung zum Festlegen von Berechtigungen für die SQLCLR-Assembly. Sie enthält außerdem die Einstellung „DDL generieren“, um zu steuern, ob DDL (Dynamic Data Language) für die dem Projekt hinzugefügten SQLCLR-Objekte generiert wird. Die Eigenschaftenseite **SQLCLR Build** enthält alle Compileroptionen, die Sie festlegen können, um die Kompilierung des SQLCLR-Codes im Projekt zu konfigurieren.  
   
 Die Eigenschaftenseite **SQLCLR Build** enthält erweiterte Buildeinstellungen zum Erstellen von SQL CLR-Objekten. Je nach der für die Programmierung der SQL CLR-Objekte verwendeten Sprache (VB oder C#) sind unterschiedliche Optionen verfügbar.  
   
-1.  Wenn das Objekt in C# geschrieben ist, können Sie auf die Optionen zugreifen, indem Sie auf der Eigenschaftenseite **SQLCLR-Build** auf die Schaltfläche **Erweitert** klicken. Beschreibungen für C#-Optionen finden Sie unter [Dialogfeld „Erweiterte Buildeinstellungen“ (C#)](https://msdn.microsoft.com/library/s4wcexbc.aspx).  
+1.  Wenn das Objekt in C# geschrieben ist, können Sie auf die Optionen zugreifen, indem Sie auf der Eigenschaftenseite **SQLCLR-Build** auf die Schaltfläche **Erweitert** klicken. Beschreibungen für C#-Optionen finden Sie unter [Dialogfeld „Erweiterte Buildeinstellungen“ (C#)](/visualstudio/ide/reference/advanced-build-settings-dialog-box-csharp).  
   
-2.  Wenn das Objekt in VB geschrieben ist, können Sie zunächst in der Dropdownliste **Sprache** "VB" auswählen und dann auf die Schaltfläche **Erweitert** klicken. Beschreibungen für VB-Optionen finden Sie unter [Dialogfeld „Erweiterte Compilereinstellungen“ (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx).  
+2.  Wenn das Objekt in VB geschrieben ist, können Sie zunächst in der Dropdownliste **Sprache** "VB" auswählen und dann auf die Schaltfläche **Erweitert** klicken. Beschreibungen für VB-Optionen finden Sie unter [Dialogfeld „Erweiterte Compilereinstellungen“ (Visual Basic)](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic).  
   
 
 ## <a name="build"></a><a name="bkmk_build"></a>Build  
@@ -228,10 +228,9 @@ Mit diesen Einstellungen können Sie das Debuggen des Datenbankprojekts steuern.
 |Erweitert...|Nein|Befehlsschaltfläche, die Ihnen das Angeben von Optionen ermöglicht, die Ereignisse und das Verhalten der Bereitstellung steuern.|  
   
 ## <a name="reference-paths"></a><a name="bkmk_ref_paths"></a>Verweispfade  
-Sie können diese Seite verwenden, um Servervariablen und Datenbankvariablen zu definieren, die einem datenbankübergreifenden Verweis zugeordnet sind. Außerdem können Sie die Werte dieser Variablen angeben. Weitere Informationen finden Sie unter [Verwenden von Verweisen in Datenbankprojekten](https://msdn.microsoft.com/library/bb386242.aspx).  
+Sie können diese Seite verwenden, um Servervariablen und Datenbankvariablen zu definieren, die einem datenbankübergreifenden Verweis zugeordnet sind. Außerdem können Sie die Werte dieser Variablen angeben. Weitere Informationen finden Sie unter [Verwenden von Verweisen in Datenbankprojekten](/previous-versions/visualstudio/visual-studio-2010/bb386242(v=vs.100)).  
   
 ## <a name="code-analysis"></a><a name="bkmk_code_analysis"></a>Codeanalyse  
 Mithilfe der Codeanalyse können Sie potenzielle Probleme in den Skripts ermitteln, z. B. Entwurfs-, Benennungs- und Leistungsprobleme. Regeln für Datenbankprojekte sind in vordefinierten Regelsätzen organisiert, die auf bestimmte Bereiche abzielen. Sie können die einzelnen Regeln auf der Registerkarte **Codeanalyse** der Eigenschaftenseite **Projekteigenschaften** aktivieren oder deaktivieren. Auf derselben Registerkarte können Sie festlegen, dass die Codeanalyse bei jedem Erstellen eines Projekts automatisch ausgeführt werden soll. Zudem können Sie angeben, ob Warnungen als Fehler behandelt werden sollen.  
   
-Um die Codeanalyse manuell auszuführen, klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie auf **Codeanalyse ausführen** aus. Warnungen der Codeanalyse werden im Fenster **Fehlerliste** aufgelistet. Sie können auf eine Warnung doppelklicken, um zum Quellcode zu navigieren, der das betreffende Problem enthält. Außerdem können Sie über das Kontextmenü **Hilfe zu Fehlern anzeigen** weitere Informationen und mögliche Korrekturen für eine Warnung aufrufen. Weitere Informationen zur Codeanalyse finden Sie unter [Analysieren von Datenbankcode zum Verbessern der Codequalität](https://msdn.microsoft.com/library/dd172133.aspx).  
-  
+Um die Codeanalyse manuell auszuführen, klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie auf **Codeanalyse ausführen** aus. Warnungen der Codeanalyse werden im Fenster **Fehlerliste** aufgelistet. Sie können auf eine Warnung doppelklicken, um zum Quellcode zu navigieren, der das betreffende Problem enthält. Außerdem können Sie über das Kontextmenü **Hilfe zu Fehlern anzeigen** weitere Informationen und mögliche Korrekturen für eine Warnung aufrufen. Weitere Informationen zur Codeanalyse finden Sie unter [Analysieren von Datenbankcode zum Verbessern der Codequalität](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100)).  

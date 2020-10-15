@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 8f89371787c66271d8298beed886b04b2b4aade1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3df8294e7028573518fe349d8c490fe6b5a266d1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497426"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034905"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>Herstellen einer Verbindung mit einer beliebigen SQL Server-Komponente aus SQL Server Management Studio
 
@@ -51,6 +51,5 @@ Wenn Sie einen Server registrieren, speichert [!INCLUDE[ssManStudio](../../inclu
 Mit dem Projektmappen-Explorer können Sie zugehörige Abfragen, Skripts, Verbindungen und andere Informationen in einem Projekt speichern. Jedes Skriptprojekt enthält einen Knoten namens **Verbindungen**, in dem Sie eine oder mehrere Verbindungen speichern können. Klicken Sie zum Hinzufügen einer Verbindung mit der rechten Maustaste auf **Verbindungen**, und klicken Sie dann auf **Neue Verbindung**. Erweitern Sie zum Zugreifen auf eine gespeicherte Verbindung **Verbindungen**, und doppelklicken Sie auf die Verbindung. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] öffnet ein dieser Verbindung zugeordnetes Abfragefenster. Beim Speichern behalten Skripts die Verknüpfung zu einer bestimmten Verbindung bei.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Verwenden von SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
+[Verwenden von SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
 [Objekt-Explorers](../../ssms/object/object-explorer.md)  
-  

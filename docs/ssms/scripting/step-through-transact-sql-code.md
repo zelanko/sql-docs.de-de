@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087e3837ed8b1876216f847c956e0a4421f8a95c
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2a953cd71bc267622dd158569da80bc924e89b83
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901506"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036233"
 ---
 # <a name="step-through-transact-sql-code"></a>Schrittweises Durchlaufen von Transact-SQL-Code
 
@@ -33,7 +33,7 @@ Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ermöglicht es Ihnen, 
 
 ## <a name="breakpoints"></a>Breakpoints
 
-Ein Breakpoint signalisiert dem Debugger, die Ausführung bei einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung anzuhalten. Weitere Informationen über Breakpoints finden Sie unter [Verwenden von Transact-SQL-Breakpoints](../../relational-databases/scripting/transact-sql-breakpoints.md).  
+Ein Breakpoint signalisiert dem Debugger, die Ausführung bei einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung anzuhalten. Weitere Informationen über Breakpoints finden Sie unter [Verwenden von Transact-SQL-Breakpoints](./transact-sql-breakpoints.md).  
   
 ## <a name="controlling-statement-execution"></a>Steuern der Anweisungsausführung
 
@@ -67,4 +67,4 @@ Im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger können Sie die folgend
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Transact-SQL-Debuggerinformationen](./transact-sql-debugger-information.md)

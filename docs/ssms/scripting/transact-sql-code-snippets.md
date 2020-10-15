@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a70d930b53ac4c43428f2bb0dbe0da26ab5fbfc1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5a805fe8c32828dffc740959385ba599641ac03b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480709"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036223"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL-Codeausschnitte
 
@@ -28,11 +28,11 @@ Ein [!INCLUDE[tsql](../../includes/tsql-md.md)].code-Ausschnitt ist eine Vorlage
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt, wie ein vorhandener Ausschnitt eingefügt wird, z. B. ein CREATE TABLE- oder SELECT-Ausschnitt.|[Einfügen von Transact-SQL-Ausschnitten](../../relational-databases/scripting/insert-transact-sql-snippets.md)|  
-|Beschreibt, wie ein Satz von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem BEGIN-, IF- oder WHILE-Block eingeschlossen wird.|[Einfügen von Transact-SQL-Umschließungsausschnitten](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)|  
-|Beschreibt, wie die Erstellung einer vollständigen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung bzw. eines Blocks nach dem Einfügen eines Codeausschnitts abgeschlossen wird.|[Abschließen von Transact-SQL-Ausschnitten](../../relational-databases/scripting/complete-transact-sql-snippets.md)|  
-|Beschreibt, wie eigene benutzerdefinierte Ausschnitte erstellt und zum Satz der SQL Server-Ausschnitte hinzugefügt werden.|[Hinzufügen von Transact-SQL-Ausschnitten](../../relational-databases/scripting/add-transact-sql-snippets.md)|  
+|Beschreibt, wie ein vorhandener Ausschnitt eingefügt wird, z. B. ein CREATE TABLE- oder SELECT-Ausschnitt.|[Einfügen von Transact-SQL-Ausschnitten](./insert-transact-sql-snippets.md)|  
+|Beschreibt, wie ein Satz von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem BEGIN-, IF- oder WHILE-Block eingeschlossen wird.|[Einfügen von Transact-SQL-Umschließungsausschnitten](./insert-surround-with-transact-sql-snippets.md)|  
+|Beschreibt, wie die Erstellung einer vollständigen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung bzw. eines Blocks nach dem Einfügen eines Codeausschnitts abgeschlossen wird.|[Abschließen von Transact-SQL-Ausschnitten](./complete-transact-sql-snippets.md)|  
+|Beschreibt, wie eigene benutzerdefinierte Ausschnitte erstellt und zum Satz der SQL Server-Ausschnitte hinzugefügt werden.|[Hinzufügen von Transact-SQL-Ausschnitten](./add-transact-sql-snippets.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: aef5ceb3446f11f320ed4f8205e07bacc3556d4c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8ed1f08f02b22aabc85a18068b5bbbe02b5a7ee9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880440"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987949"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>Gewusst wie: Öffnen eines SQL Server-Komponententests zur Bearbeitung
 
 Nachdem Sie einen SQL Server-Komponententest erstellt haben, verwenden Sie den **SQL Server-Komponententest-Designer**, um Transact\-SQL-Anweisungen und -Testbedingungen hinzuzufügen. Durch die vom Designer erstellten Tests wird Visual C#- oder Visual Basic-Code generiert. Dieser Code wird zusammen mit dem Test ausgeführt.  
   
-Wenn der Test zu Ihrer Zufriedenheit verläuft, können Sie ihn in dieser Form ausführen. Wenn Sie dem Komponententest weitere Funktionen hinzufügen möchten, können Sie den zugehörigen Code bearbeiten. Der Code ist im Testprojekt in der Datei mit der Endung .cs oder .vb enthalten. Weitere Informationen finden Sie unter [SQL Server-Komponententestdateien](../ssdt/sql-server-unit-test-files.md). Sie können die Tests auch anpassen, indem Sie neue Testbedingungen erstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Testbedingungen für den Datenbankkomponententest-Designer](https://msdn.microsoft.com/library/aa833409(VS.100).aspx).  
+Wenn der Test zu Ihrer Zufriedenheit verläuft, können Sie ihn in dieser Form ausführen. Wenn Sie dem Komponententest weitere Funktionen hinzufügen möchten, können Sie den zugehörigen Code bearbeiten. Der Code ist im Testprojekt in der Datei mit der Endung .cs oder .vb enthalten. Weitere Informationen finden Sie unter [SQL Server-Komponententestdateien](../ssdt/sql-server-unit-test-files.md). Sie können die Tests auch anpassen, indem Sie neue Testbedingungen erstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Testbedingungen für den Datenbankkomponententest-Designer](/previous-versions/visualstudio/visual-studio-2010/aa833409(v=vs.100)).  
   
 > [!NOTE]  
 > Wenn Sie eine Testmethode durch Bearbeiten der CS- oder VB-Datei löschen, wird die Testmethode weiterhin im **SQL Server-Komponententest-Designer** angezeigt. Diese Situation tritt ein, weil die InitializeComponent-Methode der Testklasse immer noch die Membervariablen für diesen Test enthält. Obwohl der Test im Designer angezeigt wird, können Sie ihn nicht ausführen, weil der Code nicht mehr vorhanden ist. Um die Testmethode für diesen Test erneut zu generieren, bearbeiten Sie Transact\-SQL im Editor und speichern dann die CS- oder VB-Testdatei bzw. erstellen das Testprojekt neu.  
@@ -51,4 +51,3 @@ Wenn der Test zu Ihrer Zufriedenheit verläuft, können Sie ihn in dieser Form a
 ## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

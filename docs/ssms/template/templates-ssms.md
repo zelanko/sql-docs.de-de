@@ -19,12 +19,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 60b44b3676f7943cb6a2e5c1fdb7981ca47c965f
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 4662b6e9bcea26bc93ab0d5bf07a767797a98d70
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522992"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035938"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Verwenden von Vorlagen in SQL Server Management Studio
 
@@ -34,7 +34,7 @@ In diesem Tutorial werden die vorgefertigten T-SQL-Vorlagen (Transact-SQL) vorge
 
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio und Zugriff auf einen SQL-Server.
 
-* Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Installieren Sie [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 * Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
@@ -118,7 +118,7 @@ Sie können im Vorlagenbrowser auch eine neue Vorlage erstellen. In den folgende
 
 Am besten machen Sie sich mit SSMS vertraut, indem Sie einige praktische Aufgaben durchführen. Dieses *Tutorial* und Artikel zu *Vorgehensweisen* unterstützen Sie bei der Verwendung der verschiedenen Features, die in SSMS verfügbar sind.  In diesen Artikeln erfahren Sie, wie Sie die Komponenten von SSMS verwalten und wie Sie die Funktionen finden, die Sie regelmäßig verwenden.
 
-* [Herstellen einer Verbindung mit einer Instanz und Abfragen einer Instanz](../tutorials/connect-query-sql-server.md)
+* [Herstellen einer Verbindung mit einer Instanz und Abfragen einer Instanz](../quickstarts/connect-query-sql-server.md)
 * [Skripterstellung](../tutorials/scripting-ssms.md)
 * [SSMS-Konfiguration](../tutorials/ssms-configuration.md)
 * [Zusätzliche Tipps und Tricks für die Verwendung von SSMS](../tutorials/ssms-tricks.md)

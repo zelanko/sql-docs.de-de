@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 54ea252e2fbe828200339fdbfb4d25ef83451cb3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897477"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987546"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts für die Analyse des Bereitstellungsplans
 
@@ -46,7 +46,7 @@ Zum Erstellen eines Bereitstellungs-Contributors führen Sie folgende Aufgaben a
   
 -   Erstellen Sie ein Klassenbibliotheksprojekt, und fügen Sie die erforderlichen Verweise hinzu.  
   
--   Definieren Sie eine Klasse mit der Bezeichnung „DeploymentUpdateReportContributor“, die von [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) erbt.  
+-   Definieren Sie eine Klasse mit der Bezeichnung „DeploymentUpdateReportContributor“, die von [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) erbt.  
   
 -   Überschreiben Sie die OnExecute-Methode.  
   
@@ -105,7 +105,7 @@ Zum Erstellen eines Bereitstellungs-Contributors führen Sie folgende Aufgaben a
   
     ```  
   
-    Sie haben jetzt Ihren Bereitstellungs-Contributor definiert, der von DeploymentPlanExecutor erbt. Während des Erstellungs- und Bereitstellungsprozesses werden benutzerdefinierte Contributors aus dem Standarderweiterungsverzeichnis geladen. Den Bereitstellungsplan ausführende Contributors werden anhand eines [ExportDeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx)-Attributs identifiziert.  
+    Sie haben jetzt Ihren Bereitstellungs-Contributor definiert, der von DeploymentPlanExecutor erbt. Während des Erstellungs- und Bereitstellungsprozesses werden benutzerdefinierte Contributors aus dem Standarderweiterungsverzeichnis geladen. Den Bereitstellungsplan ausführende Contributors werden anhand eines [ExportDeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute)-Attributs identifiziert.  
   
     Dieses Attribut muss angegeben werden, damit die Contributors ermittelt werden können. Es sollte ungefähr wie folgt aussehen:  
   
@@ -249,9 +249,9 @@ Zum Erstellen eines Bereitstellungs-Contributors führen Sie folgende Aufgaben a
             }  
     ```  
   
-    An die OnExecute-Methode wird ein [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx)-Objekt übergeben, das Zugriff auf alle angegebenen Argumente, das Quell- und Zieldatenbankmodell, die Erstellungseigenschaften und die Erweiterungsdateien bietet. In diesem Beispiel rufen wir das Modell ab und anschließend Hilfefunktionen auf, mit denen Informationen über das Modell ausgegeben werden. Wir verwenden die PublishMessage-Hilfemethode in der Basisklasse, um sämtliche auftretenden Fehler zu melden.  
+    An die OnExecute-Methode wird ein [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext)-Objekt übergeben, das Zugriff auf alle angegebenen Argumente, das Quell- und Zieldatenbankmodell, die Erstellungseigenschaften und die Erweiterungsdateien bietet. In diesem Beispiel rufen wir das Modell ab und anschließend Hilfefunktionen auf, mit denen Informationen über das Modell ausgegeben werden. Wir verwenden die PublishMessage-Hilfemethode in der Basisklasse, um sämtliche auftretenden Fehler zu melden.  
   
-    Weitere interessante Typen und Methoden: [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) und [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
+    Weitere interessante Typen und Methoden: [TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel), [ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult), [DeploymentPlanHandle](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanhandle) und [SqlDeploymentOptions](/dotnet/api/microsoft.sqlserver.dac.deployment.sqldeploymentoptions).  
   
     Als Nächstes definieren Sie die Hilfsklasse, die in die Details des Bereitstellungsplans eintaucht.  
   
@@ -524,11 +524,11 @@ Zum Erstellen eines Bereitstellungs-Contributors führen Sie folgende Aufgaben a
   
     |**Codebereich**|**Hilfreiche Typen**|  
     |-----------------|--------------------|  
-    |Klassenmember|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
+    |Klassenmember|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel), [ModelComparisonResult](/dotnet/api/microsoft.sqlserver.dac.deployment.modelcomparisonresult), [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep)|  
     |WriteReport-Methode|XmlWriter und XmlWriterSettings|  
-    |ReportPlanOperations-Methode|Interessante Typen: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Es gibt zahlreiche andere Schritte. Eine vollständige Liste der Schritte finden Sie in der API-Dokumentation.|  
-    |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
-    |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |ReportPlanOperations-Methode|Interessante Typen: [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep), [SqlRenameStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlrenamestep), [SqlMoveSchemaStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlmoveschemastep), [SqlTableMigrationStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqltablemigrationstep), [CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep), [AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep), [DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep).<br /><br />Es gibt zahlreiche andere Schritte. Eine vollständige Liste der Schritte finden Sie in der API-Dokumentation.|  
+    |GetElementCategory|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
+    |GetElementName|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|  
   
     Als Nächstes erstellen Sie die Klassenbibliothek.  
   
@@ -738,10 +738,9 @@ Ihr Projekt kann in Visual Studio normal veröffentlicht oder bereitgestellt wer
     Durch Analysieren des Bereitstellungsplans während der Ausführung können Sie sämtliche Informationen melden, die in der Bereitstellung enthalten sind, und weitere Maßnahmen auf Grundlage der Schritte in diesem Plan ergreifen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Sie können weitere Tools erstellen, um die Verarbeitung der Ausgabe-XML-Dateien durchzuführen. Dies ist nur ein Beispiel für einen [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Sie können auch einen [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) erstellen, um einen Bereitstellungsplan zu ändern, bevor er ausgeführt wird.  
+Sie können weitere Tools erstellen, um die Verarbeitung der Ausgabe-XML-Dateien durchzuführen. Dies ist nur ein Beispiel für einen [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor). Sie können auch einen [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) erstellen, um einen Bereitstellungsplan zu ändern, bevor er ausgeführt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Exemplarische Vorgehensweise: Erweitern der Bereitstellung von Datenbankprojekten zum Ändern des Bereitstellungsplans](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
-[Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
-  
+[Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken](/previous-versions/visualstudio/visual-studio-2010/ee461508(v=vs.100))  
+[Exemplarische Vorgehensweise: Erweitern der Bereitstellung von Datenbankprojekten zum Ändern des Bereitstellungsplans](/previous-versions/visualstudio/visual-studio-2010/ee461507(v=vs.100))  
+[Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors](/previous-versions/visualstudio/visual-studio-2010/ee461505(v=vs.100))  

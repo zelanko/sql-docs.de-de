@@ -9,12 +9,12 @@ ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 59a3dab4136749f85e1f752ee823f8815080fd76
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834310"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987986"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>Azure Arc-fähige SQL-Server-Instanz (Vorschauversion)
 
@@ -49,7 +49,7 @@ Für das Herstellen einer Verbindung für die SQL Server-Instanzen und das Hoste
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-Für optimale Sicherheit wird empfohlen, eine benutzerdefinierte Rolle in Azure zu erstellen, die über die aufgeführten Mindestberechtigungen verfügt. Informationen zum Erstellen einer benutzerdefinierten Rolle in Azure mit diesen Berechtigungen finden Sie unter [Benutzerdefinierte Administratorrollen in Azure Active Directory (Vorschau)](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-custom-overview). Informationen zum Hinzufügen von Rollenzuweisungen finden Sie unter [Hinzufügen oder Entfernen von Azure-Rollenzuweisungen über das Azure-Portal](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) oder [Hinzufügen oder Entfernen von Azure-Rollenzuweisungen mithilfe der Azure-Befehlszeilenschnittstelle](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-cli).
+Für optimale Sicherheit wird empfohlen, eine benutzerdefinierte Rolle in Azure zu erstellen, die über die aufgeführten Mindestberechtigungen verfügt. Informationen zum Erstellen einer benutzerdefinierten Rolle in Azure mit diesen Berechtigungen finden Sie unter [Benutzerdefinierte Administratorrollen in Azure Active Directory (Vorschau)](/azure/active-directory/users-groups-roles/roles-custom-overview). Informationen zum Hinzufügen von Rollenzuweisungen finden Sie unter [Hinzufügen oder Entfernen von Azure-Rollenzuweisungen über das Azure-Portal](/azure/role-based-access-control/role-assignments-portal) oder [Hinzufügen oder Entfernen von Azure-Rollenzuweisungen mithilfe der Azure-Befehlszeilenschnittstelle](/azure/role-based-access-control/role-assignments-cli).
 
 ### <a name="azure-subscription-and-service-limits"></a>Einschränkungen von Azure-Abonnements und -Diensten
 
