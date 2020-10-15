@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 30097342700a9daccb6107f5fafe9e5acef3e225
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4a4f32c73d1fdf0cd47caaa031321eaa0ef52092
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179293"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956741"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>SQL Server 2019 unter Windows: Isolationsänderungen für Machine Learning Services
 [!INCLUDE [SQL Server 2019 - Windows only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -24,7 +24,7 @@ Weitere Informationen finden Sie unter [Installieren von SQL Server Machine Lear
 
 ## <a name="changes-to-isolation-mechanism"></a>Änderungen am Isolationsmechanismus
 
-Bei SQL Server 2019-Setup wurde unter Windows der Isolationsmechanismus für externe Prozesse geändert. Im Rahmen dieser Änderung wurden lokale Workerkonten durch [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) ersetzt. Hierbei handelt es sich um eine Isolationstechnologie für Clientanwendungen, die unter Windows ausgeführt werden. 
+Bei SQL Server 2019-Setup wurde unter Windows der Isolationsmechanismus für externe Prozesse geändert. Im Rahmen dieser Änderung wurden lokale Workerkonten durch [AppContainer](/windows/desktop/secauthz/appcontainer-isolation) ersetzt. Hierbei handelt es sich um eine Isolationstechnologie für Clientanwendungen, die unter Windows ausgeführt werden. 
 
 Aufgrund der Änderung sind für den Administrator keine bestimmten Aktionselemente vorhanden. Auf einem neuen oder aktualisierten Server gehorchen alle externen Skripts und Codes, die über [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ausgeführt werden, automatisch dem neuen Isolationsmodell. 
 
@@ -39,7 +39,7 @@ Obwohl sich das Isolationsmodell geändert hat, bleiben Installations-Assistent 
 
 In früheren Releases enthielt **SQLRUserGroup** einen Pool mit lokalen Windows-Benutzerkonten (MSSQLSERVER00-MSSQLSERVER20), die zum Isolieren und Ausführen externer Prozesse verwendet wurden. Wenn ein externer Prozess ausgeführt werden musste, hat der SQL Server-Launchpad-Dienst dazu ein verfügbares Konto verwendet. 
 
-In SQL Server 2019 werden von Setup keine lokalen Workerkonten mehr erstellt. Stattdessen wird die Isolation durch [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) erreicht. Wenn zur Laufzeit in einer gespeicherten Prozedur oder Abfrage eingebettete Skripts oder Codes erkannt werden, ruft SQL Server Launchpad mit der Anforderung eines erweiterungsspezifischen Startprogramms auf. Launchpad ruft die entsprechende Laufzeitumgebung in einem Prozess unter seiner Identität auf und instanziiert einen AppContainer, um ihn aufzunehmen. Diese Änderung hat den Vorteil, dass keine lokalen Konten und Kennwörter mehr verwaltet werden müssen. Zudem kann dank dem Wegfall der Abhängigkeit von lokalen Benutzerkonten dieses Feature nun in Installationen verwendet werden, bei denen lokale Benutzerkonten nicht zulässig sind.
+In SQL Server 2019 werden von Setup keine lokalen Workerkonten mehr erstellt. Stattdessen wird die Isolation durch [AppContainer](/windows/desktop/secauthz/appcontainer-isolation) erreicht. Wenn zur Laufzeit in einer gespeicherten Prozedur oder Abfrage eingebettete Skripts oder Codes erkannt werden, ruft SQL Server Launchpad mit der Anforderung eines erweiterungsspezifischen Startprogramms auf. Launchpad ruft die entsprechende Laufzeitumgebung in einem Prozess unter seiner Identität auf und instanziiert einen AppContainer, um ihn aufzunehmen. Diese Änderung hat den Vorteil, dass keine lokalen Konten und Kennwörter mehr verwaltet werden müssen. Zudem kann dank dem Wegfall der Abhängigkeit von lokalen Benutzerkonten dieses Feature nun in Installationen verwendet werden, bei denen lokale Benutzerkonten nicht zulässig sind.
 
 Gemäß der Implementierung durch SQL Server handelt es sich bei AppContainern um einen internen Mechanismus. Obwohl sich AppContainer im Prozessmonitor physisch nicht nachweisen lassen, sind sie dennoch in Firewallregeln für ausgehenden Datenverkehr zu finden, die beim Setup erstellt werden, um zu verhindern, dass Prozesse Netzwerkaufrufe ausführen.
 

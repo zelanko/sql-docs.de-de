@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093478"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036483"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Öffnen eines Editors (SQL Server Management Studio)
 
@@ -52,7 +52,7 @@ In diesem Thema wird beschrieben, wie die [!INCLUDE[ssDE](../../includes/ssde-md
 ### <a name="using-the-fileopen-menu"></a>Verwenden des Menüs "Datei/Öffnen"  
  Klicken Sie im Menü **Datei** auf **Öffnen**, und navigieren Sie anschließend zu einer Datei, und öffnen Sie sie. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] wird der entsprechende Editor-Typ für die Dateierweiterung geöffnet, der Inhalt der Datei ins Editor-Fenster kopiert und außerdem ggf. ein Dialogfeld für die Verbindung geöffnet. Wenn Sie z. B. eine Datei mit der Erweiterung ".sql" öffnen, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein Fenster des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors geöffnet, der Inhalt in die SQL-Datei kopiert und ein Verbindungsdialogfeld geöffnet. Wenn Sie eine Datei mit einer Erweiterung öffnen, die keinem bestimmten Editor zugeordnet ist, wird von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ein Text-Editor-Fenster geöffnet und der Inhalt der Datei dort hinein kopiert.  
   
- Weitere Informationen finden Sie unter [Zuordnen von Dateierweiterungen zu einem Code-Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+ Weitere Informationen finden Sie unter [Zuordnen von Dateierweiterungen zu einem Code-Editor](./associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="using-the-toolbar"></a>Verwenden der Symbolleiste  
  Klicken Sie auf der Symbolleiste **Standard** auf eine der folgenden Schaltflächen:  

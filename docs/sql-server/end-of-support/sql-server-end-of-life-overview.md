@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: 49cb6fddf2906583d64aa732d222a1d1a100e6c8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200289"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988596"
 ---
 # <a name="sql-server-end-of-support-options"></a>Optionen für SQL Server bei Ende des Supports 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -37,7 +37,7 @@ Wenn Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz das 
 - Upgrade auf eine aktuelle Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 - Erwerben eines [Abonnements für erweiterte Sicherheitsupdates](https://www.microsoft.com/cloud-platform/extended-security-updates) 
 - Migrieren Ihrer Workload im Istzustand auf eine Azure-VM, um [erweiterte Sicherheitsupdates kostenlos](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support) zu erhalten
-- Migrieren Ihrer Workload in einen [Azure SQL-Datenbank-Dienst](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas) 
+- Migrieren Ihrer Workload in einen [Azure SQL-Datenbank-Dienst](/azure/sql-database/sql-database-paas-vs-sql-server-iaas) 
 
 Weitere Informationen, Anleitungen und Tools zum Planen und Automatisieren Ihres Upgrades oder Ihrer Migration finden Sie unter [Ende des Supports für SQL Server 2005](https://www.microsoft.com/sql-server/sql-server-2005) und [Ende des Supports für SQL Server 2008](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).  
 
@@ -241,7 +241,7 @@ Für bestimmte Arten von Anwendungen können Sie auch eine nicht relationale ode
 
 ### <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Erwägen Sie Azure Cosmos DB für moderne skalierbare Webanwendungen und mobile Anwendungen, die JSON-Daten verwenden und eine Kombination aus stabiler Abfrage- und Transaktionsdatenverarbeitung benötigen. Weitere Informationen finden Sie unter [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/). Informationen zum Importieren von Daten finden Sie unter [Import data to Cosmos DB (Importieren von Daten in Cosmos DB)](https://docs.microsoft.com/azure/cosmos-db/import-data/).
+Erwägen Sie Azure Cosmos DB für moderne skalierbare Webanwendungen und mobile Anwendungen, die JSON-Daten verwenden und eine Kombination aus stabiler Abfrage- und Transaktionsdatenverarbeitung benötigen. Weitere Informationen finden Sie unter [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/). Informationen zum Importieren von Daten finden Sie unter [Import data to Cosmos DB (Importieren von Daten in Cosmos DB)](/azure/cosmos-db/import-data/).
 
 Azure Cosmos DB bietet die folgenden Vorteile:
 - Ihre Dokumente werden indiziert, und Sie können die vertraute SQL-Syntax für Abfragen darauf verwenden.
@@ -274,7 +274,7 @@ Die folgende Tabelle enthält ungefähre Angaben zu den Lebenszyklusterminen fü
 | [SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008%20R2) | 2010 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2008](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008) | 2008 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2005](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202005) | 2006 | 2011 | [2016](https://www.microsoft.com/sql-server/sql-server-2005) |
-| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](https://blogs.technet.microsoft.com/cdnitmanagers/2012/12/06/sql-server-2000-end-of-support-april-2013/) |
+| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](/archive/blogs/cdnitmanagers/sql-server-2000-end-of-support-april-2013) |
 
 > [!IMPORTANT]
 > Wenn eine Diskrepanz zwischen dieser Tabelle und der Seite mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Lebenszyklus besteht, dann ersetzt der [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Lebenszyklus die Angaben in dieser Tabelle, da diese als Referenz für angedachte Termine gedacht ist.  
@@ -286,5 +286,4 @@ Die folgende Tabelle enthält ungefähre Angaben zu den Lebenszyklusterminen fü
 [Übersicht über erweiterte Sicherheitsupdates (ESUs)](sql-server-extended-security-updates.md)   
 [Kostenlose erweiterte Sicherheitsupdates bei Migration im Istzustand zu Azure](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)   
 [Übersicht über SQL Server-VMs](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)   
-[Übersicht über Azure SQL-Datenbank](/azure/sql-database/sql-database-technical-overview)    
-
+[Übersicht über Azure SQL-Datenbank](/azure/sql-database/sql-database-technical-overview)

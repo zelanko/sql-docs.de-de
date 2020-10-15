@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 95600d85c02d120f1bb4df2e7a73411a9965550a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: eaabfce536283644a0ccedcc315d91e11f33eade
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179993"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956577"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Leistung für R Services – Datenoptimierung
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -131,19 +131,19 @@ Dieser Abschnitt enthält verschiedene Tipps und Ressourcen, die für RevoScaleR
 
 Viele RevoScaleR-Algorithmen unterstützen Parameter, um zu steuern, wie das Trainingsmodell generiert wird. Zwar sind die Genauigkeit und Richtigkeit des Modells wichtig, die Leistung des Algorithmus ist möglicherweise jedoch genauso wichtig. Um das richtige Gleichgewicht zwischen der Genauigkeit und der Trainingszeit zu erzielen, können Sie Parameter zum Beschleunigen der Berechnung ändern, und in vielen Fällen können Sie die Leistung verbessern, ohne die Genauigkeit und Richtigkeit zu reduzieren.
 
-+ [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
++ [rxDTree](/r-server/r-reference/revoscaler/rxdtree)
 
     `rxDTree` unterstützt den `maxDepth`-Parameter, der die Tiefe der Entscheidungsstruktur steuert. Wenn `maxDepth` erhöht wird, kann die Leistung beeinträchtigt werden. Daher ist es wichtig, die Vorteile einer größeren Tiefe im Vergleich zu den Auswirkungen auf die Leistung zu analysieren.
 
     Sie können ebenfalls das Gleichgewicht zwischen Zeitkomplexität und Vorhersagegenauigkeit steuern, indem Sie Parameter wie `maxNumBins`, `maxDepth`, `maxComplete` und `maxSurrogate` anpassen. Das Erhöhen der Tiefe auf mehr als 10 oder 15 kann die Berechnung sehr teuer machen.
 
-+ [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
++ [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
 
     Verwenden Sie das `cube`-Argument, wenn die erste abhängige Variable der Formel eine Faktorvariable ist.
     
     Wenn der `cube`-Wert auf `TRUE` festgelegt ist, erfolgt die Regression mithilfe einer partitionierten Inverse, die möglicherweise schneller ist und weniger Arbeitsspeicher beansprucht als die Berechnung durch Standardregression. Wenn die Formel über eine große Anzahl von Variablen verfügt, kann die Leistungssteigerung erheblich sein.
 
-+ [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
++ [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
 
     Verwenden Sie das `cube`-Argument, wenn die erste abhängige Variable eine Faktorvariable ist.
     
@@ -153,31 +153,31 @@ Weitere Anleitungen zur Optimierung von RevoScaleR finden Sie in den folgenden A
 
 + Supportartikel: [Optionen für die Leistungsoptimierung für rxDForest und rxDTree](https://support.microsoft.com/kb/3104235)
 
-+ Methoden zum Steuern der Modellanpassung in einem verstärktem Strukturmodell: [Schätzen von Modellen mit Stochastic Gradient Boosting](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ Methoden zum Steuern der Modellanpassung in einem verstärktem Strukturmodell: [Schätzen von Modellen mit Stochastic Gradient Boosting](/r-server/r/how-to-revoscaler-boosting)
 
-+ Übersicht über die Verschiebung und Verarbeitung von Daten durch RevoScaleR: [Schreiben von benutzerdefinierten Segmentierungsalgorithmen in ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ Übersicht über die Verschiebung und Verarbeitung von Daten durch RevoScaleR: [Schreiben von benutzerdefinierten Segmentierungsalgorithmen in ScaleR](/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ Programmiermodell für RevoScaleR: [Verwalten von Threads in RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ Programmiermodell für RevoScaleR: [Verwalten von Threads in RevoScaleR](/r-server/r/how-to-developer-manage-threads)
 
-+ Funktionsreferenz für [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
++ Funktionsreferenz für [rxDForest](/r-server/r-reference/revoscaler/rxdforest)
 
-+ Funktionsreferenz für [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
++ Funktionsreferenz für [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees)
 
 ### <a name="use-microsoftml"></a>Verwenden von MicrosoftML
 
 Außerdem wird empfohlen, dass Sie sich das neue **MicrosoftML**-Paket ansehen, das skalierbare Machine Learning-Algorithmen bereitstellt, die die von RevoScaleR bereitgestellten Computekontexte und Transformationen verwenden können.
 
-+ [Erste Schritte mit MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
++ [Erste Schritte mit MicrosoftML](/r-server/r/concept-what-is-the-microsoftml-package)
 
-+ [Auswählen eines MicrosoftML-Algorithmus](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
++ [Auswählen eines MicrosoftML-Algorithmus](/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
 
 ### <a name="operationalize-a-solution-using-microsoft-r-server"></a>Operationalisierung einer Lösung mithilfe von Microsoft R Server
 
-Wenn Ihr Szenario schnelle Vorhersagen mit einem gespeicherten Modell oder die Integration von Machine Learning in eine Anwendung umfasst, können Sie auch die Funktionen [Operationalisierung](https://docs.microsoft.com/r-server/what-is-operationalization) (ehemals DeployR) in Microsoft R Server verwenden.
+Wenn Ihr Szenario schnelle Vorhersagen mit einem gespeicherten Modell oder die Integration von Machine Learning in eine Anwendung umfasst, können Sie auch die Funktionen [Operationalisierung](/r-server/what-is-operationalization) (ehemals DeployR) in Microsoft R Server verwenden.
 
-+ **Datenanalysten** können das [mrsdeploy-Paket](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) verwenden, um den R-Code für andere Computer freizugeben und R Analytics in Web-, Desktop-, Mobil- und Dashboardanwendungen zu integrieren. [Veröffentlichen und Verwalten von R-Webdiensten in R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ **Datenanalysten** können das [mrsdeploy-Paket](/r-server/r-reference/mrsdeploy/mrsdeploy-package) verwenden, um den R-Code für andere Computer freizugeben und R Analytics in Web-, Desktop-, Mobil- und Dashboardanwendungen zu integrieren. [Veröffentlichen und Verwalten von R-Webdiensten in R Server](/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ **Administratoren** können im Folgenden erfahren, wie sie Pakete verwalten, Webknoten und Computeknoten überwachen und die Sicherheit für R-Aufträge steuern: [Interagieren mit und Verwenden von Webdiensten in R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ **Administratoren** können im Folgenden erfahren, wie sie Pakete verwalten, Webknoten und Computeknoten überwachen und die Sicherheit für R-Aufträge steuern: [Interagieren mit und Verwenden von Webdiensten in R](/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>Artikel in dieser Reihe
 

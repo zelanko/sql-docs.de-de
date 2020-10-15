@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 386b9f506e86f294aa4fefaf6f859763443f6c04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d433b5816919642b0d7b25b580f4314a949cf0c2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491783"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036910"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Verschieben eines registrierten Servers bzw. einer registrierte Servergruppe
 
@@ -40,6 +40,6 @@ In diesem Thema wird beschrieben, wie Sie die Server in Registrierte Server orga
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Registrieren von Servern](../../tools/sql-server-management-studio/register-servers.md)
+[Registrieren von Servern](./register-servers.md)
 
-[Erstellen oder Bearbeiten einer Servergruppe &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)
+[Erstellen oder Bearbeiten einer Servergruppe &#40;SQL Server Management Studio&#41;](./create-or-edit-a-server-group-sql-server-management-studio.md)

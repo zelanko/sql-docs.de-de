@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882921"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987936"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests
 
@@ -40,7 +40,7 @@ In dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:
 Nachdem durch einen der Komponententests ein Fehler in einer gespeicherten Prozedur erkannt wurde, beheben Sie den Fehler und führen den Test erneut aus.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
-Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie in der Lage sein, eine Verbindung mit einem Datenbankserver (bzw. LocalDB-Datenbank) herzustellen, auf dem bzw. der Sie über Berechtigungen zum Erstellen und Bereitstellen einer Datenbank verfügen. Weitere Informationen finden Sie unter [Erforderliche Berechtigungen für Datenbankfunktionen von Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
+Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie in der Lage sein, eine Verbindung mit einem Datenbankserver (bzw. LocalDB-Datenbank) herzustellen, auf dem bzw. der Sie über Berechtigungen zum Erstellen und Bereitstellen einer Datenbank verfügen. Weitere Informationen finden Sie unter [Erforderliche Berechtigungen für Datenbankfunktionen von Visual Studio](/previous-versions/visualstudio/visual-studio-2010/aa833413(v=vs.100)).  
   
 ## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>Erstellen eines Skripts, das ein Datenbankschema enthält  
   
@@ -992,4 +992,3 @@ Nachdem Sie eine Basis geschaffen haben, können Sie Datenbankobjekte erstellen,
 [Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [Vorgehensweise: Erstellen eines leeren SQL Server-Komponententests](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
 [Vorgehensweise: Konfigurieren der Ausführung von SQL Server-Komponententests](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
-  

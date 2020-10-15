@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 19a1854a939f776f8eb75d9adf9d6d43856f920b
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: e246374476c3dff300aaf6c53ee3c6e8a1896db5
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519040"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987976"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Gewusst wie: Vergleichen und Synchronisieren von Daten aus zwei Datenbanken
 
@@ -83,7 +83,7 @@ Weitere Informationen finden Sie unter [Vergleichen und Synchronisieren von Date
   
     Ersetzen Sie die Platzhalter (*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword* und *tDisplayName*) durch die Werte für Ihre Quell- und Zieldatenbanken.  
   
-    Falls Sie keine Quelle und kein Ziel angeben, wird das Dialogfeld **Neuer Datenvergleich** angezeigt. Weitere Informationen zu den Parametern für den Befehl „Sql.NewDataComparison“ finden Sie unter [Referenz der Automatisierungsbefehle für Datenbankfunktionen von Visual Studio](https://msdn.microsoft.com/library/dd470565.aspx).  
+    Falls Sie keine Quelle und kein Ziel angeben, wird das Dialogfeld **Neuer Datenvergleich** angezeigt. Weitere Informationen zu den Parametern für den Befehl „Sql.NewDataComparison“ finden Sie unter [Referenz der Automatisierungsbefehle für Datenbankfunktionen von Visual Studio](/previous-versions/visualstudio/visual-studio-2010/dd470565(v=vs.100)).  
   
     Die Daten in der angegebenen Quell- und Zieldatenbank werden verglichen. Die Ergebnisse erscheinen in einer Datenvergleichssitzung. Weitere Informationen zum Anzeigen von Ergebnissen oder zum Synchronisieren von Daten finden Sie unter [Anzeigen von Datenunterschieden](#ViewDifferences) bzw. unter [Synchronisieren von Datenbankdaten](#Synchronize).  
   
@@ -168,4 +168,3 @@ Nach dem Vergleich der Daten in zwei Datenbanken können Sie die Datenbanken syn
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Vergleichen und Synchronisieren von Daten in einer oder mehreren Tabellen anhand von Daten aus einer Verweisdatenbank](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)  
-  

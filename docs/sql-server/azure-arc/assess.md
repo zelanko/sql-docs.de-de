@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 41a7f1f4edc247f211ee5b3cdcaddfd139c5027c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227323"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988016"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Konfigurieren der bedarfsgesteuerten SQL-Bewertung für Azure Arc-fähige SQL Server-Instanzen
 
@@ -23,13 +23,13 @@ Sie können die SQL-Bewertung für Ihre SQL Server-Instanzen aktivieren, indem S
 
 * Ihre SQL Server-Instanz ist mit Azure Arc verbunden. Befolgen Sie diese Anleitung, um [ein Onboarding für Ihre SQL Server-Instanz für eine Arc-fähige SQL Server-Instanz durchzuführen](connect.md).
 
-* Die MMA-Erweiterung ist auf dem Computer installiert und konfiguriert. Befolgen Sie diese Anleitung, um [Microsoft Monitoring Agent (MMA) zu installieren](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma). Weitere Informationen finden Sie unter [Log Analytics-Agent](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent).
+* Die MMA-Erweiterung ist auf dem Computer installiert und konfiguriert. Befolgen Sie diese Anleitung, um [Microsoft Monitoring Agent (MMA) zu installieren](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma). Weitere Informationen finden Sie unter [Log Analytics-Agent](/azure/azure-monitor/platform/log-analytics-agent).
 
 * Für Ihre SQL Server-Instanz wurde das [TCP/IP-Protokoll aktiviert](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
 * Der [SQL Server-Browser](../../tools/configuration-manager/sql-server-browser-service.md) wird ausgeführt, wenn Sie eine benannte Instanz von SQL Server ausführen.
 
-* Sie haben sich das SQL Server-Dokument unter [Voraussetzungen für On-Demand-Bewertungen im Diensthub](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) angesehen.
+* Sie haben sich das SQL Server-Dokument unter [Voraussetzungen für On-Demand-Bewertungen im Diensthub](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) angesehen.
 
 ## <a name="enable-on-demand-sql-assessment"></a>Aktivieren der bedarfsgesteuerten SQL-Bewertung
 
@@ -75,6 +75,6 @@ Der Arbeitsordner wird von Microsoft Monitoring Agent alle 15 Minuten gescannt,
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sehen Sie sich das SQL Server-Dokument unter [Voraussetzungen für On-Demand-Bewertungen im Diensthub](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) an, um weitere Informationen zu erhalten.
+Sehen Sie sich das SQL Server-Dokument unter [Voraussetzungen für On-Demand-Bewertungen im Diensthub](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) an, um weitere Informationen zu erhalten.
 
 Um eine umfassende Unterstützung der bedarfsgesteuerten SQL-Bewertung zu erhalten, ist ein Premier- oder Unified Support-Abonnement erforderlich. Weitere Informationen finden Sie unter [Azure Premier Support](https://azure.microsoft.com/support/plans/premier).

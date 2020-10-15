@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 1e8a30b5c8ff29155c58f940de8d800075c84c1e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901964"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036390"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ausführen des Transact-SQL-Debuggers
 
@@ -42,7 +42,7 @@ Sie können den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger starten, n
 
 Um den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger zu starten, müssen folgende Anforderungen erfüllt sein:
 
-- Wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einem anderen Computer verbunden ist, müssen Sie den Debugger für das Remotedebuggen konfiguriert haben. Weitere Informationen finden Sie unter [Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
+- Wenn der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einem anderen Computer verbunden ist, müssen Sie den Debugger für das Remotedebuggen konfiguriert haben. Weitere Informationen finden Sie unter [Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers](./configure-firewall-rules-before-running-the-tsql-debugger.md).
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muss unter einem Windows-Konto ausgeführt werden, das Mitglied der festen Serverrolle sysadmin ist.
 
@@ -114,8 +114,8 @@ Um den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger zu starten, müssen
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Transact-SQL-Debugger](./transact-sql-debugger.md)
+- [Schrittweises Durchlaufen von Transact-SQL-Code](./step-through-transact-sql-code.md)
+- [Transact-SQL-Debuggerinformationen](./transact-sql-debugger-information.md)
+- [Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)

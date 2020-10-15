@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22a60f2f696a132bbcf7cc6b1497c286f5670cb5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 091f6a4fbe7650152eaf7b3c605618875013f92a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901270"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039053"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Aktivieren, Deaktivieren und Löschen von Breakpoints
 
@@ -29,7 +29,7 @@ Zum Anzeigen und Verwalten aller offenen Breakpoints können Sie das Fenster **B
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
 ## <a name="the-breakpoints-window"></a>Fenster "Breakpoints"  
- Das Fenster **Breakpoints** enthält Informationen, z. B. auf welcher Codezeile sich der Breakpoint befindet. Außerdem können Sie im Fenster **Breakpoints** Breakpoints löschen, deaktivieren und aktivieren. Weitere Informationen zum Fenster **Breakpoints** finden Sie unter [Breakpoints Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  
+ Das Fenster **Breakpoints** enthält Informationen, z. B. auf welcher Codezeile sich der Breakpoint befindet. Außerdem können Sie im Fenster **Breakpoints** Breakpoints löschen, deaktivieren und aktivieren. Weitere Informationen zum Fenster **Breakpoints** finden Sie unter [Breakpoints Window](./transact-sql-debugger-breakpoints-window.md).  
   
  Durch das Deaktivieren von Breakpoints wird verhindert, dass der Breakpoint die Ausführung anhält, wobei die Definition jedoch beibehalten wird, falls Sie den Breakpoint später aktivieren möchten. Durch das Löschen von Breakpoints werden sie endgültig gelöscht. Sie müssen einen neuen Breakpoint umschalten, um die Ausführung für die Anweisung anzuhalten.  
   
@@ -101,6 +101,5 @@ Zum Anzeigen und Verwalten aller offenen Breakpoints können Sie das Fenster **B
 -   Klicken Sie auf der Symbolleiste des Fensters **Breakpoints** auf die Schaltfläche **Alle Breakpoints löschen** .  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Ein- und Ausschalten eines Breakpoints](../../relational-databases/scripting/toggle-a-breakpoint.md)  
-  
+ [Ein- und Ausschalten eines Breakpoints](./toggle-a-breakpoint.md)  
   

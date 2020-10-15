@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59c98e39bccbb6d4f74ddb5e9494e7fc4bced3eb
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894027"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985076"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken
 
@@ -56,12 +56,12 @@ Hier sind einige der Befehle, die vom Beispiel-Contributor in dieser exemplarisc
   
 |**Klasse**|**Methode/Eigenschaft**|**Beschreibung**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Fragt das Modell für Objekte ab und ist der Haupteinstiegspunkt für die Modell-API. Nur Typen auf der obersten Ebene wie etwa Tabelle oder Ansicht können abgerufen werden. Typen wie etwa Spalten können nur durch Durchsuchen des Modells gefunden werden. Falls keine ModelTypeClass-Filter angegeben werden, werden alle Typen auf oberster Ebene zurückgegeben.|  
-|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Sucht Beziehungen zu Elementen, auf die vom aktuellen TSqlObject verwiesen wird. Für eine Tabelle werden hiermit beispielsweise Objekte wie Spalten einer Tabelle zurückgegeben. In diesem Fall kann ein ModelRelationshipClass-Filter verwendet werden, um exakte Beziehung anzugeben, die abgefragt werden sollen (Die Verwendung des Filters „Table.Columns“ würde beispielsweise sicherstellen, dass nur Spalten zurückgegeben werden).<br /><br />Es gibt zahlreiche ähnliche Methoden wie etwa GetReferencingRelationshipInstances, GetChildren und GetParent. Weitere Informationen finden Sie in der API-Dokumentation.|  
+|[TSqlModel](/dotnet/api/microsoft.sqlserver.dac.model.tsqlmodel)|GetObjects()|Fragt das Modell für Objekte ab und ist der Haupteinstiegspunkt für die Modell-API. Nur Typen auf der obersten Ebene wie etwa Tabelle oder Ansicht können abgerufen werden. Typen wie etwa Spalten können nur durch Durchsuchen des Modells gefunden werden. Falls keine ModelTypeClass-Filter angegeben werden, werden alle Typen auf oberster Ebene zurückgegeben.|  
+|[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)|GetReferencedRelationshipInstances()|Sucht Beziehungen zu Elementen, auf die vom aktuellen TSqlObject verwiesen wird. Für eine Tabelle werden hiermit beispielsweise Objekte wie Spalten einer Tabelle zurückgegeben. In diesem Fall kann ein ModelRelationshipClass-Filter verwendet werden, um exakte Beziehung anzugeben, die abgefragt werden sollen (Die Verwendung des Filters „Table.Columns“ würde beispielsweise sicherstellen, dass nur Spalten zurückgegeben werden).<br /><br />Es gibt zahlreiche ähnliche Methoden wie etwa GetReferencingRelationshipInstances, GetChildren und GetParent. Weitere Informationen finden Sie in der API-Dokumentation.|  
   
 **Eindeutiges Identifizieren Ihres Contributors**  
   
-Während des Erstellungsprozesses werden benutzerdefinierte Contributors aus dem Standarderweiterungsverzeichnis geladen. Erstellungscontributors werden anhand eines [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx)-Attributs gekennzeichnet. Dieses Attribut muss angegeben werden, damit die Contributors ermittelt werden können. Dieses Attribut sollte folgendem ähnlich sehen:  
+Während des Erstellungsprozesses werden benutzerdefinierte Contributors aus dem Standarderweiterungsverzeichnis geladen. Erstellungscontributors werden anhand eines [ExportBuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute)-Attributs gekennzeichnet. Dieses Attribut muss angegeben werden, damit die Contributors ermittelt werden können. Dieses Attribut sollte folgendem ähnlich sehen:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -75,7 +75,7 @@ Zum Erstellen eines Erstellungs-Contributors führen Sie folgende Aufgaben aus:
   
 -   Erstellen Sie ein Klassenbibliotheksprojekt, und fügen Sie die erforderlichen Verweise hinzu.  
   
--   Definieren Sie eine Klasse mit der Bezeichnung „ModelStatistics“, die von [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) erbt.  
+-   Definieren Sie eine Klasse mit der Bezeichnung „ModelStatistics“, die von [BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor) erbt.  
   
 -   Überschreiben Sie die OnExecute-Methode.  
   
@@ -594,4 +594,3 @@ Sie können weitere Tools erstellen, um die Verarbeitung der Ausgabe-XML-Datei d
 ## <a name="see-also"></a>Weitere Informationen  
 [Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts zum Analysieren des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
-  

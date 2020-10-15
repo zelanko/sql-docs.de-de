@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ba5f9677022eb07a8810f3ea9c5dcffeaa716e7c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f34a6d26e48c1a77d7e289b197495d707bb9fd12
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179927"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956871"
 ---
 # <a name="olapr-r-package-in-sql-server-machine-learning-services"></a>„olapR“ (R-Paket in SQL Server Machine Learning Services)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -36,7 +36,7 @@ library(olapR)
 
 ## <a name="full-reference-documentation"></a>Vollständige Referenzdokumentation
 
-Das Paket **olapR** ist im Lieferumfang von mehreren Microsoft-Produkten enthalten. Die Verwendung ist jedoch immer gleich, unabhängig davon, ob Sie das Paket in SQL Server oder einem anderen Produkt erworben haben. Aus diesem Grund wird die [Dokumentation für einzelne sqlrutils-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) nur an einer Stelle in der [R-Referenz](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) für Microsoft Machine Learning Server veröffentlicht. Abweichungen durch produktspezifisches Verhalten finden Sie ggf. auf der Hilfeseite der Funktion.
+Das Paket **olapR** ist im Lieferumfang von mehreren Microsoft-Produkten enthalten. Die Verwendung ist jedoch immer gleich, unabhängig davon, ob Sie das Paket in SQL Server oder einem anderen Produkt erworben haben. Aus diesem Grund wird die [Dokumentation für einzelne sqlrutils-Funktionen](/machine-learning-server/r-reference/olapr/olapr) nur an einer Stelle in der [R-Referenz](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) für Microsoft Machine Learning Server veröffentlicht. Abweichungen durch produktspezifisches Verhalten finden Sie ggf. auf der Hilfeseite der Funktion.
 
 ## <a name="availability-and-location"></a>Verfügbarkeit und Speicherort
 

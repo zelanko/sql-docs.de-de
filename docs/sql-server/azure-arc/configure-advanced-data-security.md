@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a51ec53b5b5e928bd19dd66cb1ac6a8da162e817
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 2bd589ebacd9ea35e15881eaaeb022d4f2302986
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990373"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988026"
 ---
 # <a name="configure-advanced-data-security-for-azure-arc-enabled-sql-server-instance"></a>Konfigurieren der erweiterten Datensicherheit für Azure Arc-fähige SQL Server-Instanzen
 
@@ -77,7 +77,7 @@ Untersuchen Sie Sicherheitsanomalien und Bedrohungen in Azure Security Center.
 
    ![Bericht zu Sicherheitsrisiken](media/configure-advanced-data-security/vulnerabilities-report.png)
 
-1. Klicken Sie auf eine beliebige Sicherheitswarnung, um ausführliche Informationen anzuzeigen und den Angriff in [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview) zu untersuchen. Im folgenden Diagramm wird ein Beispiel der Brute-Force-Warnung veranschaulicht.
+1. Klicken Sie auf eine beliebige Sicherheitswarnung, um ausführliche Informationen anzuzeigen und den Angriff in [Azure Sentinel](/azure/sentinel/overview) zu untersuchen. Im folgenden Diagramm wird ein Beispiel der Brute-Force-Warnung veranschaulicht.
 
    ![Brute-Force-Warnung](media/configure-advanced-data-security/brute-force-alert.png)
 

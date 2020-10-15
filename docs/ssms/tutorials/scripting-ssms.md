@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: a2fe23c032c9e11d31586b25064c2ede386fa3e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662039"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038961"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Erstellen von Skripts für Objekte in SQL Server Management Studio
 
@@ -43,11 +43,11 @@ Zum Erstellen eines Skripts für ein beliebiges Objekt im **Objekt-Explorer** kl
 
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, Zugriff auf einen Server, auf dem SQL-Server ausgeführt wird, und eine AdventureWorks-Datenbank.
 
-* Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Installieren Sie [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Laden Sie die [AdventureWorks 2016-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter.
 
-Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restore a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restore a Database (Wiederherstellen einer Datenbank)](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## <a name="script-queries-from-the-gui"></a>Erstellen von Skripts für Abfragen über die grafische Benutzeroberfläche
 
@@ -146,7 +146,7 @@ Im folgenden Abschnitt erfahren Sie, wie Sie mit den Optionen **Script As** (Skr
    ![Erstellen von Skripts für Objekte](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > Sie können für die Datenbank Skripts für die Daten erstellen, indem Sie für die Option **Datentypen, für die ein Skript erstellt wird***Schema und Daten* auswählen. Allerdings ist dies bei großen Datenbanken nicht ideal. Möglicherweise ist mehr Arbeitsspeicher erforderlich, als SSMS zuordnen kann. Diese Einschränkung ist für kleine Datenbanken aber unproblematisch. Wenn Sie Daten für eine größere Datenbank verschieben möchten, verwenden Sie den [Import- und Export-Assistenten](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+   > Sie können für die Datenbank Skripts für die Daten erstellen, indem Sie für die Option **Datentypen, für die ein Skript erstellt wird***Schema und Daten* auswählen. Allerdings ist dies bei großen Datenbanken nicht ideal. Möglicherweise ist mehr Arbeitsspeicher erforderlich, als SSMS zuordnen kann. Diese Einschränkung ist für kleine Datenbanken aber unproblematisch. Wenn Sie Daten für eine größere Datenbank verschieben möchten, verwenden Sie den [Import- und Export-Assistenten](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 6. Wählen Sie **OK** und anschließend **Weiter** aus.
 
@@ -199,7 +199,7 @@ In diesem Abschnitt erfahren Sie, wie Sie eine gespeicherte Prozedur löschen un
 
 ## <a name="script-extended-events"></a>Erstellen von Skripts für erweiterte Ereignisse
 
-In diesem Abschnitt wird beschrieben, wie Sie ein Skript für [erweiterte Ereignisse](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events) erstellen.
+In diesem Abschnitt wird beschrieben, wie Sie ein Skript für [erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md) erstellen.
 
 1. Stellen Sie eine Verbindung mit einem Server her, der SQL Server ausführt.
 
@@ -226,7 +226,7 @@ In diesem Abschnitt wird beschrieben, wie Sie ein Skript für [erweiterte Ereign
 
 Am besten machen Sie sich mit SSMS vertraut, indem Sie einige praktische Aufgaben durchführen. Dieses *Tutorial* und Artikel zu *Vorgehensweisen* unterstützen Sie bei der Verwendung der verschiedenen Features, die in SSMS verfügbar sind. In diesen Artikeln erfahren Sie, wie Sie die Komponenten von SSMS verwalten und wie Sie die Funktionen finden, die Sie regelmäßig verwenden.
 
-* [Herstellen einer Verbindung mit einer Instanz und Abfragen einer Instanz](connect-query-sql-server.md)
+* [Herstellen einer Verbindung mit einer Instanz und Abfragen einer Instanz](../quickstarts/connect-query-sql-server.md)
 * [Verwenden von Vorlagen in SSMS](../template/templates-ssms.md)
 * [SSMS-Konfiguration](ssms-configuration.md)
 * [Zusätzliche Tipps und Tricks für die Verwendung von SSMS](ssms-tricks.md)

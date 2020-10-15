@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 861014b336d9f75c2df1dfc7888a28eb663575de
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 0db07a60c00e499cb86b5efb1113bbfd49807dc4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518750"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988216"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Erstellen und Definieren von SQL Server-Komponententests
 
@@ -43,9 +43,8 @@ Die folgende Tabelle enthält Beschreibungen allgemeiner Aufgaben, die dieses Sz
 [Ausführen von SQL Server-Komponententests](../ssdt/running-sql-server-unit-tests.md)  
 Nachdem Sie SQL Server-Komponententests erstellt haben, können Sie sie im Fenster „Testansicht“, im SQL Server-Komponententest-Designer oder über Team Foundation Build ausführen.  
   
-[Szenario: Definieren benutzerdefinierter Testbedingungen für Datenbankkomponententests](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Szenario: Definieren benutzerdefinierter Testbedingungen für Datenbankkomponententests](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))  
 Sie können eine benutzerdefinierte Testbedingung erstellen, wenn Sie ein bestimmtes Verhalten testen möchten, das anhand von Standardtestbedingungen nicht überprüft werden kann.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

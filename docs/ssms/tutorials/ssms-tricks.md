@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1f05ea22f092573364e663165559be73857ca320
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724511"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038914"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Tipps und Tricks zur Verwendung von SQL Server Management Studio (SSMS)
 
@@ -41,9 +41,9 @@ Dieser Artikel enthält einige Tipps und Tricks für die Verwendung des [!INCLUD
 
 Zum Testen der in diesem Artikel beschriebenen Schritte benötigen Sie das [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Zugriff auf eine SQL Server-Instanz und eine AdventureWorks-Datenbank. 
 
-* Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Installieren Sie [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Installieren Sie [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-* Laden Sie eine [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Restoring a database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+* Laden Sie eine [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Restoring a database (Wiederherstellen einer Datenbank)](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>Kommentieren und Aufheben der Auskommentierung in T-SQL-Code
 
@@ -286,7 +286,7 @@ Wenn Sie mit einem Alias oder einem Verfügbarkeitsgruppenlistener verbunden sin
 
 Am besten machen Sie sich mit SSMS vertraut, indem Sie einige praktische Aufgaben durchführen. Dieses *Tutorial* und Artikel zu *Vorgehensweisen* unterstützen Sie bei der Verwendung der verschiedenen Features, die in SSMS verfügbar sind.  In diesen Artikeln erfahren Sie, wie Sie die Komponenten von SSMS verwalten und wie Sie die Funktionen finden, die Sie regelmäßig verwenden.
 
-* [Herstellen einer Verbindung mit einer Instanz und Abfragen einer Instanz](connect-query-sql-server.md)
+* [Herstellen einer Verbindung mit einer Instanz und Abfragen einer Instanz](../quickstarts/connect-query-sql-server.md)
 * [Skripterstellung](scripting-ssms.md)
 * [Verwenden von Vorlagen in SSMS](../template/templates-ssms.md)
 * [SSMS-Konfiguration](ssms-configuration.md)

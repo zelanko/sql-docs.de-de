@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2228819de295edf29d5b2b1ca6bfcc43626a42a0
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480084"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038934"
 ---
 # <a name="column-properties-visual-database-tools"></a>Spalteneigenschaften (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ Zeigt den Namen der Datenquelle für die ausgewählte Spalte an. (Gilt nur für 
 Wird erweitert, um die restlichen Eigenschaften anzuzeigen.  
   
 **Datentyp**  
-Zeigt den Datentyp der ausgewählten Spalte an. Weitere Informationen finden Sie unter [Datentypen (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Zeigt den Datentyp der ausgewählten Spalte an. Weitere Informationen finden Sie unter [Datentypen (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 **ID-Schrittweite**  
 Zeigt an, in welchen Schrittweiten der **ID-Startwert** für jede weitere Zeile der Identitätsspalte erhöht wird. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
@@ -95,7 +95,7 @@ Zeigt den Namen der Spalte an. Bearbeiten Sie das Textfeld, um den Namen zu änd
 Zeigt an, ob der Datentyp der Spalte NULL-Werte zulässt.  
   
 **Datentyp**  
-Zeigt den Datentyp der ausgewählten Spalte an. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus. Weitere Informationen finden Sie unter [Datentypen (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Zeigt den Datentyp der ausgewählten Spalte an. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus. Weitere Informationen finden Sie unter [Datentypen (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 **Standardwert oder -bindung**  
 Zeigt, welcher Standardwert für die Spalte verwendet wird, wenn kein Wert angegeben ist. Die Dropdownliste enthält alle in der Datenquelle definierten globalen Standards. Um die Spalte an einen globalen Standard zu binden, wählen Sie diesen aus der Dropdownliste aus. Sie können den Standardwert aber auch direkt als Text eingeben, um eine Standardeinschränkung für die Spalte zu erstellen.  
@@ -143,7 +143,7 @@ Zeigt, welche Spalte verwendet wird, um den Dokumenttyp einer Spalte vom Typ Ima
 Gibt die für die Indizierung der Spalte verwendete Sprache an.  
   
 **Statistische Semantik**  
-Wählen Sie aus, ob die statistische semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Wählen Sie aus, ob die statistische semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche](../../relational-databases/search/semantic-search-sql-server.md).  
   
 Wenn Sie eine **Sprache** vor der Option **Statistische Semantik**auswählen und die ausgewählte Sprache über kein zugeordnetes semantisches Sprachmodell verfügt, ist die Option **Statistische Semantik** auf **Nein** festgelegt, und sie kann nicht geändert werden. Wenn Sie die Option **Statistische Semantik** auf **Ja** festlegen, bevor Sie eine **Sprache**auswählen, sind in der Spalte **Sprache** nur die Sprachen verfügbar, für die das semantische Sprachmodell unterstützt wird.  
   
@@ -188,4 +188,3 @@ Zeigt die für den Datentyp der Spalte zulässige Größe in Byte an. Beispiel: 
   
 > [!NOTE]  
 > Die Länge eines **varchar(max)** -Datentyps variiert für jede Zeile. „sp_help“ gibt (-1) als Länge von **varchar(max)** -Spalten zurück. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zeigt -1 als Spaltengröße an.  
-  

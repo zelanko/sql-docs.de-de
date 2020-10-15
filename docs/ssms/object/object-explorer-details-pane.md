@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 846c2707e5fe04e080460241e41df0ebf7ec8329
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88370786"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037188"
 ---
 # <a name="object-explorer-details-pane"></a>Detailbereich des Objekt-Explorers
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ Details zum Objekt-Explorer unterstützt die Mehrfachauswahl von Objekten. Wenn 
 ## <a name="sql-server-object-search"></a>SQL Server-Objektsuche  
 Platzhalter  
   
--   Standardmäßige Platzhalterzeichen werden unterstützt. Beispielsweise gibt eine Suche nach **dm_os%counters** die beiden Ergebnisse „dm_os_memory_cache_counters“ und „dm_os_performance_counters“ zurück. Weitere Informationen finden Sie unter [Vorgehensweise: Suchen mit Platzhaltern](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Standardmäßige Platzhalterzeichen werden unterstützt. Beispielsweise gibt eine Suche nach **dm_os%counters** die beiden Ergebnisse „dm_os_memory_cache_counters“ und „dm_os_performance_counters“ zurück. Weitere Informationen finden Sie unter [Vorgehensweise: Suchen mit Platzhaltern](../scripting/search-text-with-wildcards.md).  
   
 Suchbereich  
   
@@ -101,4 +101,3 @@ Große Objektsätze
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Objekt-Explorers](../../ssms/object/object-explorer.md)  
-  

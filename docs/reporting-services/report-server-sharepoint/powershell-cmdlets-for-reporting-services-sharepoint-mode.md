@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a92cb1a23c4c1d7062945bc24961a2c37d25950
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 69fbb16e0671c14426fc550d61bdb929b64d06ab
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764958"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935517"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell-Cmdlets für den SharePoint-Modus von Reporting Services
 
@@ -35,7 +35,7 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
 
 ## <a name="cmdlet-summary"></a>Cmdlet-Zusammenfassung
 
- Um die Cmdlets auszuführen, müssen Sie die SharePoint-Verwaltungsshell öffnen. Sie können auch den Editor für grafische Benutzeroberflächen **Windows PowerShell Integrated Scripting Environment (ISE)** verwenden, der in Microsoft Windows enthalten ist. Weitere Informationen finden Sie unter [Starting Windows PowerShell on Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)verwenden, der in Microsoft Windows enthalten ist. In den folgenden Zusammenfassungen von Cmdlets wird mit den Verweisen auf die Dienstanwendung „Databases“ auf sämtliche mit einer Reporting Services-Dienstanwendung erstellten und von ihr verwendeten Datenbanken verwiesen. Dies schließt die Konfigurations- und Warnungsdatenbanken sowie temporären Datenbanken ein.  
+ Um die Cmdlets auszuführen, müssen Sie die SharePoint-Verwaltungsshell öffnen. Sie können auch den Editor für grafische Benutzeroberflächen **Windows PowerShell Integrated Scripting Environment (ISE)** verwenden, der in Microsoft Windows enthalten ist. Weitere Informationen finden Sie unter [Starting Windows PowerShell on Windows Server](/powershell/scripting/getting-started/starting-windows-powershell)verwenden, der in Microsoft Windows enthalten ist. In den folgenden Zusammenfassungen von Cmdlets wird mit den Verweisen auf die Dienstanwendung „Databases“ auf sämtliche mit einer Reporting Services-Dienstanwendung erstellten und von ihr verwendeten Datenbanken verwiesen. Dies schließt die Konfigurations- und Warnungsdatenbanken sowie temporären Datenbanken ein.  
   
  Wenn Sie bei der Eingabe der PowerShell-Beispiele eine Fehlermeldung mit etwa folgendem Wortlaut sehen:  
   
@@ -52,7 +52,7 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Weitere Informationen finden Sie unter [Verwenden von Windows PowerShell zur Verwaltung von SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx)verwenden, der in Microsoft Windows enthalten ist.  
+ Weitere Informationen finden Sie unter [Verwenden von Windows PowerShell zur Verwaltung von SharePoint 2013](/powershell/module/sharepoint-server/)verwenden, der in Microsoft Windows enthalten ist.  
   
 ### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>Öffnen der SharePoint-Verwaltungsshell und Ausführen von Cmdlets
   
@@ -291,7 +291,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription (Verwenden von PowerShell zum Ändern und Auflisten von Reporting Services-Abonnementbesitzern und zum Ausführen eines Abonnements)](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Prüfliste: Überprüfen von Power Pivot für SharePoint mithilfe von PowerShell](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
-[Get Help SQL Server PowerShell (Hilfe für SQL Server PowerShell)](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[Prüfliste: Überprüfen von Power Pivot für SharePoint mithilfe von PowerShell](/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[Get Help SQL Server PowerShell (Hilfe für SQL Server PowerShell)](../../powershell/sql-server-powershell.md)   
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)
