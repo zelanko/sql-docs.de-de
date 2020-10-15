@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1ea16180c9a4e67f40302de7d70ae357b8393010
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396109"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986626"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung  
 Es gibt verschiedene Methoden zum Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Die in diesem Artikel beschriebenen Ansätze reichen vom Deaktivieren eines Abonnements bis hin zum Unterbrechen der Datenquellenverbindung. Nicht alle Ansätze sind mit beiden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Servermodi möglich. In den folgenden Tabellen werden die Methoden und unterstützten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Servermodi zusammengefasst:  
@@ -60,7 +60,7 @@ Wechseln Sie im Webportal zum Abonnement. Verwenden Sie dafür entweder die Seit
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt"): **Verwenden von Windows PowerShell zum Deaktivieren eines einzelnen Abonnements:** Verwenden Sie das folgende PowerShell-Skript, um ein bestimmtes Abonnement zu deaktivieren. Aktualisieren Sie den Servernamen und die Abonnement-ID im Skript.  
+![PowerShell-Inhalt](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt"): **Verwenden von Windows PowerShell zum Deaktivieren eines einzelnen Abonnements:** Verwenden Sie das folgende PowerShell-Skript, um ein bestimmtes Abonnement zu deaktivieren. Aktualisieren Sie den Servernamen und die Abonnement-ID im Skript.  
   
 ```PS  
 #disable specific subscription  
@@ -80,7 +80,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") **Verwenden von Windows PowerShell zum Auflisten aller deaktivierten Abonnements:** Verwenden Sie das folgende PowerShell-Skript, um alle deaktivierten Abonnements auf dem aktuellen Berichtsserver im einheitlichen Modus aufzulisten. Aktualisieren Sie den Servernamen.  
+ ![PowerShell-Inhalt](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") **Verwenden von Windows PowerShell zum Auflisten aller deaktivierten Abonnements:** Verwenden Sie das folgende PowerShell-Skript, um alle deaktivierten Abonnements auf dem aktuellen Berichtsserver im einheitlichen Modus aufzulisten. Aktualisieren Sie den Servernamen.  
   
 ```  
 #list all disabled subscriptions  
@@ -91,7 +91,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") **Verwenden von Windows PowerShell zum Aktivieren aller deaktivierten Abonnements:** Verwenden Sie das folgende PowerShell-Skript, um alle zurzeit deaktivierten Abonnements zu aktivieren. Aktualisieren Sie den Servernamen.  
+ ![PowerShell-Inhalt](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") **Verwenden von Windows PowerShell zum Aktivieren aller deaktivierten Abonnements:** Verwenden Sie das folgende PowerShell-Skript, um alle zurzeit deaktivierten Abonnements zu aktivieren. Aktualisieren Sie den Servernamen.  
   
 ```  
 #enable all subscriptions  
@@ -105,7 +105,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") **Verwenden von Windows PowerShell zum Deaktivieren aller Abonnements:** Verwenden Sie das folgende PowerShell-Skript, um **ALLE** Abonnements zu deaktivieren.  
+ ![PowerShell-Inhalt](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell-Inhalt") **Verwenden von Windows PowerShell zum Deaktivieren aller Abonnements:** Verwenden Sie das folgende PowerShell-Skript, um **ALLE** Abonnements zu deaktivieren.  
   
 ```  
 #DISABLE all subscriptions  
@@ -121,7 +121,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> Anhalten eines freigegebenen Zeitplans  
  Wenn ein Bericht oder ein Abonnement mit einem freigegebenen Zeitplan ausgeführt wird, können Sie den Zeitplan anhalten, um die Verarbeitung zu verhindern. Alle Berichts- und Abonnementverarbeitungen, die durch den Zeitplan gesteuert werden, werden zurückgestellt, bis der Zeitplan fortgesetzt wird.  
   
--   **SharePoint-Modus:** ![SharePoint-Einstellungen](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen"): Wählen Sie unter **Standorteinstellungen** die Option **Freigegebene Zeitpläne verwalten** aus. Wählen Sie den Zeitplan aus, und klicken Sie auf **Ausgewählte Zeitpläne anhalten**.  
+-   **SharePoint-Modus:** ![SharePoint-Einstellungen](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen"): Wählen Sie unter **Standorteinstellungen** die Option **Freigegebene Zeitpläne verwalten** aus. Wählen Sie den Zeitplan aus, und klicken Sie auf **Ausgewählte Zeitpläne anhalten**.  
   
 -   **Einheitlicher Modus :** Klicken Sie im Webportal auf der oberen Menüleiste auf die Schaltfläche **Einstellungen** ![Schaltfläche „Einstellungen“](media/ssrs-portal-settings-gear.png), und wählen Sie aus dem Dropdownmenü die Option **Standorteinstellungen** aus. Wählen Sie die Registerkarte **Zeitpläne** aus, um die Seite „Zeitpläne“ anzuzeigen. Aktivieren Sie die Kontrollkästchen neben den Zeitplänen, die Sie aktivieren oder deaktivieren möchten, und klicken Sie auf die Schaltfläche **Aktivieren** bzw. **Deaktivieren**, um die gewünschte Aktion auszuführen. Die Statusspalte wird entsprechend in „Aktiviert“ bzw. „Deaktiviert“ aktualisiert.  
   
@@ -177,4 +177,3 @@ Eine Möglichkeit, um einen Bericht nicht verfügbar zu machen, ist das vorüber
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Das Webportal eines Berichtsservers (einheitlicher SSRS-Modus)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [Securable Items (Sicherbare Elemente)](../../reporting-services/security/securable-items.md) 
-  

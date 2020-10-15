@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e7fa3484063a5d57de1540e54454b674d8d687c9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 24cf362c711abd450533b218c699fc7f2bc1dd18
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967521"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987256"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Was ist neu in SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
@@ -59,10 +59,10 @@ SQL Server 2016 Analysis Services bietet eine verbesserte Leistung und Funktiona
 - Der neue **Datenbankkonsistenzprüfung (Database Consistency Checker, DBCC)** wird intern ausgeführt, um potenzielle Probleme durch Datenbeschädigung zu erkennen.
 - Die **direkte Abfrage**, die externe Daten live abfragt, anstatt sie vorher zu importieren, unterstützt jetzt weitere Datenquellen einschließlich Azure SQL, Oracle und Teradata. 
 - Es gibt eine Vielzahl neuer **DAX-Funktionen (Data Access Expressions)** .
-- Der neue Namespace **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** verwaltet Instanzen und Modelle im tabellarischen Modus. 
-- [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) wurde überarbeitet und enthält jetzt eine zweite Assembly: **Microsoft.AnalysisServices.Core.dll**.
+- Der neue Namespace **[Microsoft.AnalysisServices.Tabular](/dotnet/api/microsoft.analysisservices.tabular)** verwaltet Instanzen und Modelle im tabellarischen Modus. 
+- [Analysis Services Management Objects (AMO)](/dotnet/api/) wurde überarbeitet und enthält jetzt eine zweite Assembly: **Microsoft.AnalysisServices.Core.dll**.
 
-Weitere Informationen finden Sie unter [Analysis Services-Engine (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services). 
+Weitere Informationen finden Sie unter [Analysis Services-Engine (SSAS)](/analysis-services/what-s-new-in-analysis-services). 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
 - Unterstützung für **Always On-Verfügbarkeitsgruppen**
@@ -97,13 +97,13 @@ Microsoft hat die Reporting Services in diesem Release sehr gründlich überarbe
 Weitere Informationen finden Sie unter [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## <a name="next-steps"></a>Nächste Schritte   
-- [SQL Server-Setup](../database-engine/install-windows/installation-for-sql-server-2016.md)   
+- [SQL Server-Setup](../database-engine/install-windows/install-sql-server.md)   
 - [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
 - [SQL Server 2016-Datenblatt](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
-- [Von den SQL Server-Editionen unterstützte Funktionen](https://msdn.microsoft.com/library/cc645993.aspx)
+- [Von den SQL Server-Editionen unterstützte Funktionen](./editions-and-components-of-sql-server-2016.md)
 - [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Installieren von SQL Server 2016 über den Installations-Assistenten](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [Setup und Wartungsinstallation](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [Setup und Wartungsinstallation](../database-engine/install-windows/install-sql-server-servicing-updates.md)
 - [Neues SQL PowerShell-Modul](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

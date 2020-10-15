@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bd75bde9e125ffc99f1af6f382aa91d2f1e0caf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362510"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987276"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Lokale Überwachung für SQL Server-Nutzungs- und -Diagnosedatensammlung (CEIP)
 
@@ -333,7 +333,7 @@ Das Bereinigen der Dateien im Verzeichnis muss von den Datenbankadministratoren 
 
 **Gibt es einen Client oder ein Tool, mit dem diese JSON-Ausgabe gelesen werden kann?**
 Die Ausgabe kann mit Editor, Visual Studio oder einem beliebigen JSON-Reader gelesen werden.
-Alternativ können Sie die JSON-Datei lesen und die Daten in einer SQL Server-Instanz analysieren, wie unten dargestellt. Weitere Informationen zum Lesen von JSON-Datei in SQL Server finden Sie unter [Importieren von JSON-Dateien in SQL Server mithilfe von OPENROWSET (BULK) und OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
+Alternativ können Sie die JSON-Datei lesen und die Daten in einer SQL Server-Instanz analysieren, wie unten dargestellt. Weitere Informationen zum Lesen von JSON-Datei in SQL Server finden Sie unter [Importieren von JSON-Dateien in SQL Server mithilfe von OPENROWSET (BULK) und OPENJSON (Transact-SQL)](/archive/blogs/sqlserverstorageengine/bulk-importing-json-files-into-sql-server).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

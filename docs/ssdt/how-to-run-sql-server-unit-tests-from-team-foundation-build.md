@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed4241fb1aeac7faaceadc250f0c2e61f10179fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893924"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987536"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Gewusst wie: Ausführen von SQL Server-Komponententests aus Team Foundation Build
 
@@ -23,15 +23,15 @@ Sie können Team Foundation Build verwenden, um SQL Server-Komponententests im R
   
 -   [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Vorgehensweise: Konfigurieren und Ausführen von geplanten Tests nach dem Erstellen der Anwendung](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Vorgehensweise: Konfigurieren und Ausführen von geplanten Tests nach dem Erstellen der Anwendung](/previous-versions/visualstudio/visual-studio-2010/ms182465(v=vs.100))  
   
--   [Erstellen oder Bearbeiten einer Builddefinition](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [Erstellen oder Bearbeiten einer Builddefinition](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
   
 Bevor Sie diese Schritte ausführen, müssen Sie erst die Arbeitsumgebung anhand der folgenden Aufgaben konfigurieren:  
   
 -   Installieren Sie Team Foundation Build sowie die Team Foundation-Versionskontrolle. Team Foundation Build und Team Foundation-Versionskontrolle müssen u. U. auf unterschiedlichen Computern installiert werden.  
   
--   Installieren Sie die Microsoft SQL Server Data Tools-Buildhilfsprogramme auf demselben Computer wie Team Foundation Build. Zum Installieren der SQL Server Data Tools-Buildhilfsprogramme führen Sie zunächst einen Administratorinstallationspfad aus. Weitere Informationen zu Administratorinstallationspfaden finden Sie unter [Installieren von SQL Server Data Tools](../ssdt/install-sql-server-data-tools.md). Installieren Sie anschließend SSDTBuildUtilties.msi von dem für den Administratorinstallationspunkt verwendeten Pfad (/location) auf dem Buildserver.  
+-   Installieren Sie die Microsoft SQL Server Data Tools-Buildhilfsprogramme auf demselben Computer wie Team Foundation Build. Zum Installieren der SQL Server Data Tools-Buildhilfsprogramme führen Sie zunächst einen Administratorinstallationspfad aus. Weitere Informationen zu Administratorinstallationspfaden finden Sie unter [Installieren von SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md). Installieren Sie anschließend SSDTBuildUtilties.msi von dem für den Administratorinstallationspunkt verwendeten Pfad (/location) auf dem Buildserver.  
   
 -   Stellen Sie eine Verbindung mit einer Instanz von Visual Studio Team Foundation Server her.  
   
@@ -215,22 +215,22 @@ In dieser Prozedur checken Sie alle Dateien der Projektmappe ein. Diese Dateien 
   
 1.  Stellen Sie eine Verbindung mit einem Computer her, auf dem Team Foundation Server ausgeführt wird.  
   
-    Weitere Informationen finden Sie unter [Verwenden des Quellcodeverwaltungs-Explorers](https://msdn.microsoft.com/library/ms181370(VS.100).aspx).  
+    Weitere Informationen finden Sie unter [Verwenden des Quellcodeverwaltungs-Explorers](/previous-versions/visualstudio/visual-studio-2010/ms181370(v=vs.100)).  
   
 2.  Wenn die Projektmappe nicht bereits in der Quellcodeverwaltung enthalten ist, fügen Sie sie der Quellcodeverwaltung hinzu.  
   
-    Weitere Informationen finden Sie unter [Hinzufügen eines Projekts oder einer Projektmappe zur Versionskontrolle](https://msdn.microsoft.com/library/ms181374(VS.100).aspx).  
+    Weitere Informationen finden Sie unter [Hinzufügen eines Projekts oder einer Projektmappe zur Versionskontrolle](/previous-versions/visualstudio/visual-studio-2010/ms181374(v=vs.100)).  
   
 3.  Klicken Sie auf **Ansicht** und dann auf **Anstehende Eincheckvorgänge**.  
   
 4.  Checken Sie alle Dateien der Projektmappe ein.  
   
-    Weitere Informationen finden Sie unter [Einchecken ausstehender Änderungen](https://msdn.microsoft.com/library/ms181411(VS.100).aspx).  
+    Weitere Informationen finden Sie unter [Einchecken ausstehender Änderungen](/previous-versions/visualstudio/visual-studio-2010/ms181411(v=vs.100)).  
   
     > [!NOTE]  
     > Möglicherweise unterliegen die Schritte einem spezifischen Teamprozess, der regelt, wie automatisierte Tests erstellt und verwaltet werden. Beispielsweise kann der Prozess erforderlich machen, dass Sie den Build lokal überprüfen, bevor Sie diesen Code zusammen mit den Tests einchecken, die für den Code ausgeführt werden sollen.  
   
-    Im **Projektmappen-Explorer** wird neben jeder Datei ein Vorhängeschloss als Symbol angezeigt, um anzugeben, dass sie eingecheckt ist. Weitere Informationen finden Sie unter [Anzeigen der Eigenschaften von Dateien und Ordnern, die der Versionskontrolle unterliegen](https://msdn.microsoft.com/library/ms245468(VS.100).aspx).  
+    Im **Projektmappen-Explorer** wird neben jeder Datei ein Vorhängeschloss als Symbol angezeigt, um anzugeben, dass sie eingecheckt ist. Weitere Informationen finden Sie unter [Anzeigen der Eigenschaften von Dateien und Ordnern, die der Versionskontrolle unterliegen](/previous-versions/visualstudio/visual-studio-2010/ms245468(v=vs.100)).  
   
     Die Tests stehen Team Foundation Build zur Verfügung. Sie können jetzt eine Builddefinition erstellen, in der die auszuführenden Tests enthalten sind.  
   
@@ -280,11 +280,10 @@ In dieser Prozedur checken Sie alle Dateien der Projektmappe ein. Diese Dateien 
   
 3.  Überprüfen Sie, ob die Werte in den Feldern **Builddefinition**, **Build-Agent** und **Ablageordner für diesen Build** richtig sind, und klicken Sie auf **Warteschlange**.  
   
-    Die Registerkarte **In Warteschlange gestellt** wird im **Build-Explorer** angezeigt. Weitere Informationen finden Sie unter [Verwalten und Anzeigen abgeschlossener Builds (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) oder [Verwalten von Builds im Build-Explorer (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx).  
+    Die Registerkarte **In Warteschlange gestellt** wird im **Build-Explorer** angezeigt. Weitere Informationen finden Sie unter [Verwalten und Anzeigen abgeschlossener Builds (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms181730(v=vs.100)) oder [Verwalten von Builds im Build-Explorer (Visual Studio 2012)](/previous-versions/ms181732(v=vs.140)).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Ausführen von SQL Server-Komponententests](../ssdt/running-sql-server-unit-tests.md)  
-[Erstellen oder Bearbeiten einer Builddefinition](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[Einreihen eines Builds in die Warteschlange](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[Überwachen des Status eines Builds während der Ausführung](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
-  
+[Erstellen oder Bearbeiten einer Builddefinition](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
+[Einreihen eines Builds in die Warteschlange](/previous-versions/visualstudio/visual-studio-2010/ms181722(v=vs.100))  
+[Überwachen des Status eines Builds während der Ausführung](/previous-versions/visualstudio/visual-studio-2010/ms181724(v=vs.100))  

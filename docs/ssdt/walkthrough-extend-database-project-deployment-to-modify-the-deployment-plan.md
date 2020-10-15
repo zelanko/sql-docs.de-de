@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3fa3d424d3c6d46ba129c96d935612ce687b3ba0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882908"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987704"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts für die Bearbeitung des Bereitstellungsplans
 
-Sie können Bereitstellungs-Contributors erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein SQL-Projekt bereitstellen. Sie können [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) oder [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) erstellen. Verwenden Sie [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx), um den Plan zu ändern, bevor er ausgeführt wird, und [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx), um Vorgänge durchzuführen, während der Plan ausgeführt wird. In dieser exemplarischen Vorgehensweise erstellen Sie einen [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) mit der Bezeichnung „SqlRestartableScriptContributor“, der den Batches im Bereitstellungsskript IF-Anweisungen hinzufügt, um ein erneutes Ausführen des Skripts zu ermöglichen, bis es fertig gestellt ist, falls während der Ausführung ein Fehler auftritt.  
+Sie können Bereitstellungs-Contributors erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein SQL-Projekt bereitstellen. Sie können [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) oder [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) erstellen. Verwenden Sie [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier), um den Plan zu ändern, bevor er ausgeführt wird, und [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor), um Vorgänge durchzuführen, während der Plan ausgeführt wird. In dieser exemplarischen Vorgehensweise erstellen Sie einen [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) mit der Bezeichnung „SqlRestartableScriptContributor“, der den Batches im Bereitstellungsskript IF-Anweisungen hinzufügt, um ein erneutes Ausführen des Skripts zu ermöglichen, bis es fertig gestellt ist, falls während der Ausführung ein Fehler auftritt.  
   
 In dieser exemplarischen Vorgehensweise führen Sie folgende Hauptaufgaben aus:  
   
@@ -46,9 +46,9 @@ Zum Erstellen eines Bereitstellungs-Contributors führen Sie folgende Aufgaben a
   
 -   Erstellen Sie ein Klassenbibliotheksprojekt, und fügen Sie die erforderlichen Verweise hinzu.  
   
--   Definieren Sie eine Klasse mit der Bezeichnung „SqlRestartableScriptContributor“, die von [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) erbt.  
+-   Definieren Sie eine Klasse mit der Bezeichnung „SqlRestartableScriptContributor“, die von [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) erbt.  
   
--   Überschreiben Sie die [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx)-Methode.  
+-   Überschreiben Sie die [OnExecute](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute)-Methode.  
   
 -   Fügen Sie private Hilfemethoden hinzu.  
   
@@ -99,7 +99,7 @@ Beginnen Sie als Nächstes, der Klasse Code hinzuzufügen.
   
     ```  
   
-    Sie haben jetzt Ihren Bereitstellungs-Contributor definiert, der von [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) erbt. Während des Erstellungs- und Bereitstellungsprozesses werden benutzerdefinierte Contributors aus dem Standarderweiterungsverzeichnis geladen. Den Bereitstellungsplan ändernde Contributors werden anhand eines [ExportDeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanmodifierattribute.aspx)-Attributs identifiziert. Dieses Attribut muss angegeben werden, damit die Contributors ermittelt werden können. Dieses Attribut sollte folgendem ähnlich sehen:  
+    Sie haben jetzt Ihren Bereitstellungs-Contributor definiert, der von [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) erbt. Während des Erstellungs- und Bereitstellungsprozesses werden benutzerdefinierte Contributors aus dem Standarderweiterungsverzeichnis geladen. Den Bereitstellungsplan ändernde Contributors werden anhand eines [ExportDeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanmodifierattribute)-Attributs identifiziert. Dieses Attribut muss angegeben werden, damit die Contributors ermittelt werden können. Dieses Attribut sollte folgendem ähnlich sehen:  
   
     ```csharp  
     [ExportDeploymentPlanModifier("MyOtherDeploymentContributor.RestartableScriptContributor", "1.0.0.0")]  
@@ -149,7 +149,7 @@ Beginnen Sie als Nächstes, der Klasse Code hinzuzufügen.
   
     ```  
   
-    Sie überschreiben die [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx)-Methode über die Basisklasse, [DeploymentPlanContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.aspx), die die Basisklasse für [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) und [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) ist. An die „OnExecute“-Methode wird ein [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx)-Objekt übergeben, das Zugriff auf alle angegebenen Argumente, das Quell- und Zieldatenbankmodell, den Bereitstellungsplan und die Bereitstellungsoptionen bietet. In diesem Beispiel erhalten wir den Bereitstellungsplan und den Namen der Zieldatenbank.  
+    Sie überschreiben die [OnExecute](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute)-Methode über die Basisklasse, [DeploymentPlanContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor), die die Basisklasse für [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) und [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) ist. An die „OnExecute“-Methode wird ein [DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext)-Objekt übergeben, das Zugriff auf alle angegebenen Argumente, das Quell- und Zieldatenbankmodell, den Bereitstellungsplan und die Bereitstellungsoptionen bietet. In diesem Beispiel erhalten wir den Bereitstellungsplan und den Namen der Zieldatenbank.  
   
 2.  Fügen Sie jetzt die Anfänge eines Texts der OnExecute-Methode hinzu:  
   
@@ -181,7 +181,7 @@ Beginnen Sie als Nächstes, der Klasse Code hinzuzufügen.
   
     ```  
   
-    In diesem Code definieren wir einige lokale Variablen und richten die Schleife ein, die die Verarbeitung aller Schritte im Bereitstellungsplan verarbeitet. Nach Fertigstellung der Schleife müssen wir die Nachbearbeitung durchführen und dann die temporäre Tabelle löschen, die wir während der Bereitstellung erstellt haben, um während der Ausführung des Plans den Fortschritt nachzuverfolgen. Wichtige Typen sind: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) und [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx). Eine wichtige Methode ist „AddAfter“.  
+    In diesem Code definieren wir einige lokale Variablen und richten die Schleife ein, die die Verarbeitung aller Schritte im Bereitstellungsplan verarbeitet. Nach Fertigstellung der Schleife müssen wir die Nachbearbeitung durchführen und dann die temporäre Tabelle löschen, die wir während der Bereitstellung erstellt haben, um während der Ausführung des Plans den Fortschritt nachzuverfolgen. Wichtige Typen sind: [DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep) und [DeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptstep). Eine wichtige Methode ist „AddAfter“.  
   
 3.  Fügen Sie jetzt die Verarbeitung des zusätzlichen Schritts hinzu, und ersetzen Sie dadurch folgenden Kommentar: "Verarbeitung des zusätzlichen Schritts hier hinzufügen":  
   
@@ -248,7 +248,7 @@ Beginnen Sie als Nächstes, der Klasse Code hinzuzufügen.
   
     ```  
   
-    Die Kommentare zum Code erklären die Verarbeitung. Dieser Code sucht auf hoher Ebene nach den Schritten, um die Sie sich kümmern, wobei andere übersprungen und angehalten werden, wenn Sie den Anfang der Schritte nach der Bereitstellung erreichen. Falls der Schritt Anweisungen enthält, die wir mit Bedingungen umgeben müssen, führen wir die weitere Verarbeitung durch. Wichtige Typen, Methoden und Eigenschaften: [BeginPreDeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep.aspx), [BeginPostDeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [TSqlScript](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlscript.aspx), Script, [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx) und [SqlPrintStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlprintstep.aspx).  
+    Die Kommentare zum Code erklären die Verarbeitung. Dieser Code sucht auf hoher Ebene nach den Schritten, um die Sie sich kümmern, wobei andere übersprungen und angehalten werden, wenn Sie den Anfang der Schritte nach der Bereitstellung erreichen. Falls der Schritt Anweisungen enthält, die wir mit Bedingungen umgeben müssen, führen wir die weitere Verarbeitung durch. Wichtige Typen, Methoden und Eigenschaften: [BeginPreDeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep), [BeginPostDeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep), [TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject), [TSqlScript](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlscript), Script, [DeploymentScriptDomStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep) und [SqlPrintStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlprintstep).  
   
 4.  Fügen Sie jetzt den Batchverarbeitungscode hinzu, indem Sie den Kommentar "Batchverarbeitung hier hinzufügen" ersetzen:  
   
@@ -298,7 +298,7 @@ Beginnen Sie als Nächstes, der Klasse Code hinzuzufügen.
   
     ```  
   
-    Mit diesem Code wird eine IF-Anweisung neben dem BEGIN/END-Block erstellt. Wir führen anschließend die weitere Verarbeitung an den Anweisungen im Batch durch. Ist diese abgeschlossen, fügen wir eine INSERT-Anweisung hinzu, um der temporären Tabelle Informationen hinzuzufügen, die den Fortschritt der Skriptausführung nachzuverfolgen. Aktualisieren Sie schließlich den Batch, und ersetzen Sie die vorherigen Anweisungen durch die neue IF-Anweisung, die diese Anweisungen enthält. Wichtige Typen, Methoden und Eigenschaften: [IfStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.ifstatement.aspx), [BeginEndBlockStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.beginendblockstatement.aspx), [StatementList](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.statementlist.aspx), [TSqlBatch](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlbatch.aspx), [PredicateSetStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.predicatesetstatement.aspx), [SetOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.setoptions.aspx) und [InsertStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.insertstatement.aspx).  
+    Mit diesem Code wird eine IF-Anweisung neben dem BEGIN/END-Block erstellt. Wir führen anschließend die weitere Verarbeitung an den Anweisungen im Batch durch. Ist diese abgeschlossen, fügen wir eine INSERT-Anweisung hinzu, um der temporären Tabelle Informationen hinzuzufügen, die den Fortschritt der Skriptausführung nachzuverfolgen. Aktualisieren Sie schließlich den Batch, und ersetzen Sie die vorherigen Anweisungen durch die neue IF-Anweisung, die diese Anweisungen enthält. Wichtige Typen, Methoden und Eigenschaften: [IfStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.ifstatement), [BeginEndBlockStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.beginendblockstatement), [StatementList](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.statementlist), [TSqlBatch](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlbatch), [PredicateSetStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.predicatesetstatement), [SetOptions](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.setoptions) und [InsertStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.insertstatement).  
   
 5.  Fügen Sie jetzt den Text der Anweisungsverarbeitungsschleife hinzu. Ersetzen Sie den Kommentar "Verarbeitung der zusätzlichen Anweisung hier hinzufügen":  
   
@@ -318,7 +318,7 @@ Beginnen Sie als Nächstes, der Klasse Code hinzuzufügen.
   
     ```  
   
-    Ändern Sie jede Anweisung im Batch entsprechend, falls die Anweisung in einem Typ vorliegt, der in eine sp_executesql-Anweisung eingebunden sein muss. Vom Code wird die Anweisung dann zur Anweisungsliste für den von Ihnen erstellten BEGIN/END-Block hinzugefügt. Zu den wichtigen Typen, Methoden und Eigenschaften gehören [TSqlStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlstatement.aspx) und [ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx).  
+    Ändern Sie jede Anweisung im Batch entsprechend, falls die Anweisung in einem Typ vorliegt, der in eine sp_executesql-Anweisung eingebunden sein muss. Vom Code wird die Anweisung dann zur Anweisungsliste für den von Ihnen erstellten BEGIN/END-Block hinzugefügt. Zu den wichtigen Typen, Methoden und Eigenschaften gehören [TSqlStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlstatement) und [ExecuteStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executestatement).  
   
 6.  Fügen Sie schließlich den Nachbearbeitungsabschnitt anstelle des folgenden Kommentars hinzu: "Nachbearbeitung hier hinzufügen":  
   
@@ -353,7 +353,7 @@ Beginnen Sie als Nächstes, der Klasse Code hinzuzufügen.
   
     Weitere interessante Typen, Eigenschaften und Methoden:  
   
-    „StringBuilder“, [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx) und „AddBefore“.  
+    „StringBuilder“, [DeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptstep) und „AddBefore“.  
   
     Als Nächstes definieren Sie die von dieser Methode aufgerufenen Hilfemethoden.  
   
@@ -363,12 +363,12 @@ Beginnen Sie als Nächstes, der Klasse Code hinzuzufügen.
   
     |**Methode**|**Beschreibung**|  
     |--------------|-------------------|  
-    |CreateExecuteSQL|Definieren Sie die CreateExecuteSQL-Methode so, dass eine angegebene Anweisung von einer EXEC sp_executesql-Anweisung umgeben wird. Wichtige Typen, Methoden und Eigenschaften: [ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx), [ExecutableProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx), [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx), [ProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx) und [ExecuteParameter](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx).|  
-    |CreateCompletedBatchesName|Definieren Sie die CreateCompletedBatchesName-Methode. Von dieser Methode wird der Name erstellt, der in die temporäre Tabelle für einen Batch eingefügt wird. Wichtige Typen, Methoden und Eigenschaften: [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx).|  
+    |CreateExecuteSQL|Definieren Sie die CreateExecuteSQL-Methode so, dass eine angegebene Anweisung von einer EXEC sp_executesql-Anweisung umgeben wird. Wichtige Typen, Methoden und Eigenschaften: [ExecuteStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executestatement), [ExecutableProcedureReference](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference), [SchemaObjectName](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname), [ProcedureReference](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.procedurereference) und [ExecuteParameter](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executeparameter).|  
+    |CreateCompletedBatchesName|Definieren Sie die CreateCompletedBatchesName-Methode. Von dieser Methode wird der Name erstellt, der in die temporäre Tabelle für einen Batch eingefügt wird. Wichtige Typen, Methoden und Eigenschaften: [SchemaObjectName](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname).|  
     |IsStatementEscaped|Definieren Sie die IsStatementEscaped-Methode. Diese Methode bestimmt, ob ein Typ des Modellelements erfordert, dass die Anweisung von einer EXEC sp_executesql-Anweisung umgeben wird, bevor sie in eine IF-Anweisung eingefügt werden kann. Zu den wichtigen Typen, Methoden und Eigenschaften zählen: „TSqlObject.ObjectType“, „ModelTypeClass“ und die „TypeClass“-Eigenschaft für die folgenden Modelltypen: „Schema“, „Procedure“, „View“, „TableValuedFunction“, „ScalarFunction“, „DatabaseDdlTrigger“, „DmlTrigger“, „ServerDdlTrigger“.|  
     |CreateBatchCompleteInsert|Definieren Sie die CreateBatchCompleteInsert-Methode. Von dieser Methode wird die INSERT-Anweisung erstellt, die dem Bereitstellungsskript hinzugefügt wird, um den Fortschritt der Ausführung des Skripts nachzuverfolgen. Wichtige Typen, Methoden und Eigenschaften enthalten Folgendes: InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource und RowValue.|  
     |CreateIfNotExecutedStatement|Definieren Sie die CreateIfNotExecutedStatement-Methode. Von dieser Methode wird eine IF-Anweisung generiert, die prüft, ob die von den temporären Batches ausgeführte Tabelle angibt, dass dieser Batch bereits ausgeführt wurde. Zu den wichtigen Typen, Methoden und Eigenschaften zählen diese: „IfStatement“, „ExistsPredicate“, „ScalarSubquery“, „NamedTableReference“, „WhereClause“, „ColumnReferenceExpression“, „IntegerLiteral“, „BooleanComparisonExpression“ und „BooleanNotExpression“.|  
-    |GetStepInfo|Definieren Sie die GetStepInfo-Methode. Mit dieser Methode werden neben dem Namen des Schritts Informationen zum Modellelement extrahiert, das zum Erstellen des Skripts dieses Schritts verwendet wird. Interessante Typen und Methoden:[DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) und [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).|  
+    |GetStepInfo|Definieren Sie die GetStepInfo-Methode. Mit dieser Methode werden neben dem Namen des Schritts Informationen zum Modellelement extrahiert, das zum Erstellen des Skripts dieses Schritts verwendet wird. Interessante Typen und Methoden:[DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext), [DeploymentScriptDomStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep), [TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject), [CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep), [AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep) und [DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep).|  
     |GetElementName|Erstellt einen formatierten Namen für ein TSqlObject.|  
   
 1.  Fügen Sie den folgenden Code hinzu, um die Hilfemethoden zu definieren:  
@@ -775,7 +775,7 @@ Nach dem Durchführen einer dieser Vorgehensweisen können Sie MSBuild verwenden
         > Falls Sie ein Datenbankprojekt bereitstellen, das mit der Zieldatenbank identisch ist, ist der daraus resultierende Bericht nicht sehr aussagekräftig. Weitere aussagekräftige Ergebnisse erhalten Sie, wenn Sie Änderungen an einer Datenbank bereitstellen oder eine neue Datenbank bereitstellen.  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>Befehlszeilenbereitstellung mit der generierten DACPAC-Datei  
-Sobald ein SQL-Projekt erstellt wurde, wird eine DACPAC-Datei erstellt, die zum Bereitstellen des Schemas über die Befehlszeile verwendet werden kann und die die Bereitstellung über einen anderen Computer als einen Buildcomputer aktivieren kann. SqlPackage ist ein Befehlszeilen-Hilfsprogramm, das die Bereitstellung von DACPAC-Dateien mit vollem Optionsumfang ermöglicht, mit denen Benutzer unter anderem eine DACPAC-Datei bereitstellen oder ein Bereitstellungsskript generieren können. Weitere Informationen finden Sie unter [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080(v=VS.103).aspx).  
+Sobald ein SQL-Projekt erstellt wurde, wird eine DACPAC-Datei erstellt, die zum Bereitstellen des Schemas über die Befehlszeile verwendet werden kann und die die Bereitstellung über einen anderen Computer als einen Buildcomputer aktivieren kann. SqlPackage ist ein Befehlszeilen-Hilfsprogramm, das die Bereitstellung von DACPAC-Dateien mit vollem Optionsumfang ermöglicht, mit denen Benutzer unter anderem eine DACPAC-Datei bereitstellen oder ein Bereitstellungsskript generieren können. Weitere Informationen finden Sie unter [SqlPackage.exe](../tools/sqlpackage.md).  
   
 > [!NOTE]  
 > Zur erfolgreichen Bereitstellung von DACPAC-Dateien, die über Projekte mit definierter DeploymentContributors-Eigenschaft erstellt wurden, müssen die DLLs, die Ihre Bereitstellungs-Contributors enthalten, auf dem verwendeten Computer installiert sein. Dies ist der Fall, weil sie für eine erfolgreiche Bereitstellung als erforderlich markiert wurden.  
@@ -793,4 +793,3 @@ Sie können mit anderen Änderungen an Bereitstellungsplänen experimentieren, b
 [Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
 [Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts zum Analysieren des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
-  

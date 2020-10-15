@@ -11,16 +11,16 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 93d7520da2d011de53c0dc6d80eea9f131f9a470
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfddd7509a8ff9a038cb5ec6bee060deae8d3a09
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718501"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987576"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
-SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Plattform zu machen, auf der Sie verschiedene Wahlmöglichkeiten haben: Wählen Sie zwischen verschiedenen Entwicklungssprachen und Datentypen, zwischen lokaler Ausführung oder Ausführung in der Cloud sowie zwischen verschiedenen Betriebssystemen, indem die Leistungsfähigkeit von SQL Server für Linux, Linux-basierte Docker-Container und Windows bereitgestellt wird. Im Folgenden werden die Neuerungen für bestimmte Funktionsbereiche zusammengefasst und Links mit zusätzlichen Details zur Verfügung gestellt. Weitere Informationen zu SQL Server für Linux finden Sie in der Dokumentation zu [SQL Server für Linux](https://docs.microsoft.com/sql/linux/).
+SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Plattform zu machen, auf der Sie verschiedene Wahlmöglichkeiten haben: Wählen Sie zwischen verschiedenen Entwicklungssprachen und Datentypen, zwischen lokaler Ausführung oder Ausführung in der Cloud sowie zwischen verschiedenen Betriebssystemen, indem die Leistungsfähigkeit von SQL Server für Linux, Linux-basierte Docker-Container und Windows bereitgestellt wird. Im Folgenden werden die Neuerungen für bestimmte Funktionsbereiche zusammengefasst und Links mit zusätzlichen Details zur Verfügung gestellt. Weitere Informationen zu SQL Server für Linux finden Sie in der Dokumentation zu [SQL Server für Linux](/sql/linux/).
 
 [![Download aus dem Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Jetzt ausprobieren:** [Download von SQL Server 2017 Release – Oktober 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
 
@@ -84,7 +84,7 @@ SQL Server Analysis Services 2017 führt zahlreiche Verbesserungen für tabellar
 - DAX-Editor für SSDT. (CTP 2.0)
 - Codierungshinweise, eine erweiterte Funktion für die Optimierung der Datenaktualisierung von großen tabellarischen In-Memory-Modellen. (CTP 1.3)
 - Unterstützung für den **1400 Kompatibilitätsgrad** für tabellarische Modelle. Um neue Tabellenmodellprojekte zu erstellen oder vorhandene Projekte auf den Kompatibilitätsgrad 1400 zu aktualisieren, müssen Sie [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939) herunterladen und installieren. (CTP 1.1)
-- Eine moderne **Get Data**-Erfahrung für tabellarische Modelle mit dem Kompatibilitätsgrad 1400. Weitere Informationen finden Sie unter [Analysis Services-Teamblog](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
+- Eine moderne **Get Data**-Erfahrung für tabellarische Modelle mit dem Kompatibilitätsgrad 1400. Weitere Informationen finden Sie unter [Analysis Services-Teamblog](/archive/blogs/analysisservices/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services). (CTP 1.1)
 - Eigenschaft **Elemente ausblenden**, um leere Elemente in unregelmäßigen Hierarchien auszublenden. (CTP 1.1)
 - Neue **Detailzeilen**-Endbenutzeraktion, um für aggregierte Informationen **Details anzeigen** zu können. Die Funktionen [SELECTCOLUMNS](/dax/selectcolumns-function-dax) und **DETAILROWS** zum Erstellen von Detailzeilenausdrücken. (CTP 1.1)
 - Der Operator DAX **IN** für die Angabe mehrerer Werte. (CTP 1.1)
@@ -94,7 +94,7 @@ Weitere Informationen finden Sie unter [Neues in SQL Server Analysis Services](
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 SQL Server Reporting Services kann nicht mehr über das SQL Server-Setup installiert werden. Wechseln Sie zum Microsoft Download Center, um [Microsoft SQL Server 2017 Reporting Services herunterzuladen](https://www.microsoft.com/download/details.aspx?id=55252). 
 - Kommentare sind jetzt für Berichte verfügbar, um Perspektive und Zusammenarbeit mit anderen Benutzern hinzuzufügen. Sie können auch die Anlagen mit Ihren Kommentar einschließen.
-- In den neuesten Versionen von Berichts-Generator und SQL Server Data Tools können Sie native DAX-Abfragen für unterstützte Tabellendatenmodelle von SQL Server Analysis Services erstellen, indem Sie die gewünschten Felder in den Abfrage-Designer ziehen und ablegen. Weitere Informationen finden Sie unter [Reporting Services-Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+- In den neuesten Versionen von Berichts-Generator und SQL Server Data Tools können Sie native DAX-Abfragen für unterstützte Tabellendatenmodelle von SQL Server Analysis Services erstellen, indem Sie die gewünschten Felder in den Abfrage-Designer ziehen und ablegen. Weitere Informationen finden Sie unter [Reporting Services-Blog](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools).
 - SSRS unterstützt eine vollständige, mit OpenAPI kompatible RESTful-API, um die Entwicklung von modernen Anwendungen und Anpassungen zu ermöglichen. Die vollständige API-Spezifikation und -Dokumentation finden Sie im [SwaggerHub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 Weitere Informationen finden Sie unter [Neues in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
@@ -118,7 +118,7 @@ Weitere Informationen finden Sie unter [What's new in SQL Server Machine Learnin
 
 ## <a name="next-steps"></a>Nächste Schritte
 - Lesen Sie sich den Artikel [Versionsanmerkungen zu SQL Server 2017](sql-server-2017-release-notes.md) durch.
-- Finden Sie heraus, was es [Neues in SQL Server 2017 unter Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new) gibt.
+- Finden Sie heraus, was es [Neues in SQL Server 2017 unter Linux](../linux/sql-server-linux-whats-new.md) gibt.
 - Lesen Sie sich den Artikel [Neues in SQL Server 2016](what-s-new-in-sql-server-2016.md) durch.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

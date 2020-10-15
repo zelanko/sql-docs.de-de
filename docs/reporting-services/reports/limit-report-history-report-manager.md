@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634a033c06b2ed6815e32cf97829118dafa13b5f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 809d11c82a9b09a23590592ec3f7b433e3c9ca43
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510121"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986656"
 ---
 # <a name="limit-report-history---reporting-services"></a>Einschränken des Berichtsverlaufs – Reporting Services
   Der Berichtsverlauf stellt eine Auflistung von Berichtsmomentaufnahmen dar, die Sie im Laufe der Zeit erstellen. Sie können den Berichtsverlauf nach Bedarf erstellen oder aber anhand eines Zeitplans festlegen, wie oft eine Momentaufnahme erstellt und dem Berichtsverlauf hinzugefügt wird.  
@@ -45,11 +45,11 @@ ms.locfileid: "79510121"
   
 3.  Klicken Sie auf die Registerkarte **Verlauf** .  
   
-4.  Wählen Sie die Optionen für Ihren Bericht aus, und klicken Sie auf **Anwenden**. Weitere Informationen zu den einzelnen Optionen finden Sie unter [Momentaufnahmeoptionen Eigenschaftenseite (Berichts-Manager)](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).  
+4.  Wählen Sie die Optionen für Ihren Bericht aus, und klicken Sie auf **Anwenden**. Weitere Informationen zu den einzelnen Optionen finden Sie unter [Momentaufnahmeoptionen Eigenschaftenseite (Berichts-Manager)](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130)).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Berichts-Manager (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Berichts-Manager (einheitlicher SSRS-Modus)](../web-portal-ssrs-native-mode.md)  
 
 ::: moniker-end
 
@@ -71,10 +71,9 @@ ms.locfileid: "79510121"
   
 3.  Klicken Sie auf die Registerkarte **Verlauf** .  
   
-4.  Wählen Sie die Optionen für Ihren Bericht aus, und klicken Sie auf **Anwenden**. Weitere Informationen zu den einzelnen Optionen finden Sie unter [Snapshot Options Properties Page (Momentaufnahmeoptionen (Eigenschaftenseite))](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).  
+4.  Wählen Sie die Optionen für Ihren Bericht aus, und klicken Sie auf **Anwenden**. Weitere Informationen zu den einzelnen Optionen finden Sie unter [Snapshot Options Properties Page (Momentaufnahmeoptionen (Eigenschaftenseite))](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130)).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Add a Snapshot to Report History (Hinzufügen einer Momentaufnahme zum Berichtsverlauf)](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
 
 ::: moniker-end
-  

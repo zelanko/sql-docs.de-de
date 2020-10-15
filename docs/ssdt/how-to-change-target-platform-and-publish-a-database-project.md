@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c5ee0b9febeec7da287e26a40adcb6910b80991d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942466"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987216"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts
 
@@ -43,7 +43,7 @@ SSDT vereinfacht auch diese Aufgabe durch Berücksichtigung der Zielplattform un
   
 3.  Beachten Sie, dass im Bereich **Fehlerliste** der folgende Fehler angezeigt wird: „SQL70015: "Dateigruppenverweis und Partitionierungsschema" wird in SQL Azure nicht unterstützt.“  
   
-    SSDT überprüft das Skript automatisch auf Grundlage der Zielplattform. Da Dateigruppen in SQL Azure nicht unterstützt werden, gibt SSDT in diesem Fall einen Fehler zurück. Eine Liste der in SQL Azure nicht unterstützten Transact\-SQL-Anweisungen finden Sie unter [Teilweise unterstützte Transact-SQL-Anweisungen (Microsoft Azure SQL-Datenbank)](https://msdn.microsoft.com/library/ee336267.aspx).  
+    SSDT überprüft das Skript automatisch auf Grundlage der Zielplattform. Da Dateigruppen in SQL Azure nicht unterstützt werden, gibt SSDT in diesem Fall einen Fehler zurück. Eine Liste der in SQL Azure nicht unterstützten Transact\-SQL-Anweisungen finden Sie unter [Teilweise unterstützte Transact-SQL-Anweisungen (Microsoft Azure SQL-Datenbank)](/previous-versions/azure/ee336267(v=azure.100)).  
   
 4.  Entfernen Sie die `ON` -Klausel. Beachten Sie, dass der Fehler unmittelbar darauf nicht mehr in der **Fehlerliste**angezeigt wird.  
   
@@ -68,4 +68,3 @@ SSDT vereinfacht auch diese Aufgabe durch Berücksichtigung der Zielplattform un
 **Bei einem Projekt, bei dem Microsoft SQL Server 2012 als Zielplattform angegeben ist, können möglicherweise Kompatibilitätsprobleme mit SQL Server 2008 auftreten.** Enthält ein solches Projekt Entitäten (z.B. ein Sequenzobjekt), die in Microsoft SQL Server 2012 eingeführt wurden, tritt beim Veröffentlichungsvorgang ein Fehler auf.  
   
 Bei der Bereitstellung tritt ein Fehler auf, wenn Objektprädikate **CONTAINS** oder **FREETEXT** für einen neu erstellten Volltextindex verwenden und Transaktionsskripts eingesetzt werden. Wenn die Option zum Einschließen von Transaktionsskripts während der Bereitstellung aktiviert ist, werden Prozeduren und Sichten innerhalb einer Transaktion definiert, während ein Volltextindex außerhalb einer Transaktion am Ende des Bereitstellungsskripts definiert wird. Aufgrund dieser im Skript vorgegebenen Reihenfolge werden Prozeduren oder Sichten, die CONTAINS oder FREETEXT verwenden, nicht anhand des Volltextindexes aufgelöst, was zu einem Bereitstellungsfehler führt.  
-  

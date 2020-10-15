@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c0929f82f7f9a086fa58856b6e1357807c198f7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454522"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987390"
 ---
 # <a name="role-definitions---predefined-roles"></a>Rollendefinitionen: vordefinierte Rollen
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird mit vordefinierten Rollen installiert, mit denen Sie den Zugriff auf Berichtsservervorgänge gewähren können. Jede vordefinierte Rolle beschreibt eine Auflistung verwandter Aufgaben. Sie können Gruppen und Benutzerkonten vordefinierten Rollen zuweisen, um den unmittelbaren Zugriff auf Berichtsservervorgänge bereitzustellen.  
@@ -60,11 +60,11 @@ ms.locfileid: "88454522"
 |----------|-----------------|  
 |Berichte lesen|Lesen von Berichtsdefinitionen.|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen, die auf einem nicht verknüpften Bericht basieren.|  
-|Alle Abonnements verwalten|Ein Abonnement für Berichte und verknüpfte Berichte anzeigen, ändern und löschen, unabhängig vom Besitzer des Abonnements. Diese Aufgabe ermöglicht das Erstellen von datengesteuerten Abonnements. Außerdem wird die Bearbeitung und Ausführung von [geplanten Aktualisierungen für Power BI-Dateien (.pbix) im Power BI-Berichtsserver](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh) unterstützt.|  
+|Alle Abonnements verwalten|Ein Abonnement für Berichte und verknüpfte Berichte anzeigen, ändern und löschen, unabhängig vom Besitzer des Abonnements. Diese Aufgabe ermöglicht das Erstellen von datengesteuerten Abonnements. Außerdem wird die Bearbeitung und Ausführung von [geplanten Aktualisierungen für Power BI-Dateien (.pbix) im Power BI-Berichtsserver](/power-bi/report-server/configure-scheduled-refresh) unterstützt.|  
 |Datenquellen verwalten|Freigegebene Datenquellenelemente erstellen und löschen, Datenquelleneigenschaften und Inhalt anzeigen und ändern.|  
 |Ordner verwalten|Ordner erstellen, anzeigen und löschen sowie Ordnereigenschaften anzeigen und ändern.|  
 |Verwalten von Modellen|Ermöglicht das Erstellen, Anzeigen und Löschen von Modellen sowie das Anzeigen und Ändern von Modelleigenschaften.|  
-|Einzelne Abonnements verwalten|Abonnements für Berichte und verknüpfte Berichte, die dem Benutzer gehören, erstellen, anzeigen, ändern und löschen. Dieser Task unterstützt darüber hinaus das Bearbeiten und Ausführen von [geplanten Aktualisierungen für Power BI-Dateien (.pbix) im Power BI-Berichtsserver](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
+|Einzelne Abonnements verwalten|Abonnements für Berichte und verknüpfte Berichte, die dem Benutzer gehören, erstellen, anzeigen, ändern und löschen. Dieser Task unterstützt darüber hinaus das Bearbeiten und Ausführen von [geplanten Aktualisierungen für Power BI-Dateien (.pbix) im Power BI-Berichtsserver](/power-bi/report-server/configure-scheduled-refresh).|  
 |Berichtsverlauf verwalten|Erstellen, Anzeigen und Löschen des Berichtsverlaufs, Anzeigen von Berichtsverlaufeigenschaften sowie Anzeigen und Ändern von Einstellungen, die Grenzwerte für den Momentaufnahmeverlauf und die Funktionsweise der Zwischenspeicherung bestimmen.|  
 |Berichte verwalten|Berichte hinzufügen und löschen, Berichtsparameter ändern, Berichtseigenschaften anzeigen und ändern, Datenquellen, die Inhalt für den Bericht bereitstellen, anzeigen und ändern, Berichtsdefinitionen anzeigen und ändern sowie Sicherheitsrichtlinien auf Berichtsebene festlegen.|  
 |Ressourcen verwalten|Ressourcen erstellen, ändern und löschen sowie Ressourceneigenschaften anzeigen und ändern.|  
@@ -216,4 +216,3 @@ In der folgenden Tabelle werden die in der **Systembenutzer**-Rollendefinition e
 [Ändern oder Löschen einer Rollenzuweisung &#40;SSRS-Webportal&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
 [Granting Permissions on a Native Mode Report Server (Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus)](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
 [Tasks and Permissions (Aufgaben und Berechtigungen)](../../reporting-services/security/tasks-and-permissions.md)
-  
