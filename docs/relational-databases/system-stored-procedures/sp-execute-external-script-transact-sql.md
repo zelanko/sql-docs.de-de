@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7953c9aafda19182395311b7adc648c04d5c1f39
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810190"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155073"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ Die gespeicherte Prozedur **sp_execute_external_script** führt ein als Eingabe 
 
 Für Machine Learning Services werden [python](../../machine-learning/concepts/extension-python.md) und [R](../../machine-learning/concepts/extension-r.md) unterstützte Sprachen. Für Spracherweiterungen wird Java unterstützt, muss aber mit [Create externe Language](../../t-sql/statements/create-external-language-transact-sql.md)definiert werden.
 
-Zum Ausführen von **sp_execute_external_script**müssen Sie zuerst Machine Learning Services oder Spracherweiterungen installieren. Weitere Informationen finden Sie unter [Installieren von SQL Server Machine Learning Services (python und R) unter Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) und [Linux](../../linux/sql-server-linux-setup-machine-learning.md)oder [Installieren von SQL Server Spracherweiterungen unter Windows](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md) und [Linux](../../linux/sql-server-linux-setup-language-extensions.md).
+Zum Ausführen von **sp_execute_external_script**müssen Sie zuerst Machine Learning Services oder Spracherweiterungen installieren. Weitere Informationen finden Sie unter [Installieren von SQL Server Machine Learning Services (python und R) unter Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) und [Linux](../../linux/sql-server-linux-setup-machine-learning.md)oder [Installieren von SQL Server Spracherweiterungen unter Windows](../../language-extensions/install/windows-java.md) und [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md).
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -322,7 +322,7 @@ Um ein ähnliches Modell mithilfe von Python zu generieren, ändern Sie die Spra
 
 Zur Bewertung können Sie auch die native [PREDICT](../../t-sql/queries/predict-transact-sql.md)-Funktion verwenden, die in der Regel schneller ist, weil sie die Python- bzw. R-Laufzeit nicht aufrufen muss.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 + [SQL Machine Learning](../../machine-learning/index.yml)
 + [SQL Server Spracherweiterungen](../../language-extensions/language-extensions-overview.md). 
