@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
-ms.openlocfilehash: b8bd6d8e99549cb6228a46f04b1532bbf872a066
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: b5bf533e9b74edd11d6c39d10d97eeb385c9e1a9
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545572"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933848"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Konfigurieren eines Berichtsservers in einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich)
 
@@ -36,7 +36,7 @@ ms.locfileid: "84545572"
 |1|Überprüfen Sie vor der Installation von Reporting Services auf Serverknoten in einem NLB-Cluster die Anforderungen für die Bereitstellung für horizontales Skalieren.|[Konfigurieren der Bereitstellung für horizontales Skalieren für Berichtsserver im einheitlichen Modus](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|Konfigurieren Sie den NLB-Cluster, und überprüfen Sie, ob er ordnungsgemäß arbeitet.<br /><br /> Ordnen Sie unbedingt der virtuellen Server-IP-Adresse des NLB-Clusters einen Hostheadernamen zu. Der Hostheadername wird in der Berichtsserver-URL verwendet, und er ist leichter zu behalten als eine IP-Adresse.|Weitere Informationen finden Sie in der Windows Server-Produktdokumentation für die Version des verwendeten Windows-Betriebssystems.|  
 |3|Fügen Sie den NetBIOS-Namen und den vollqualifizierten Domänennamen (Fully Qualified Domain Name oder FQDN) für den Hostheader der in der Windows-Registrierung gespeicherten Liste **BackConnectionHostNames** hinzu.<br /><br /> Wenn z. B. der Hostheadername \<MyServer> ein virtueller Name für den Windows-Computernamen „contoso“ ist, können Sie wahrscheinlich mit „contoso.domain.com“ auf das FQDN-Formular verweisen. Sie müssen sowohl den Hostheadernamen (MyServer ) als auch den FQDN-Namen (contoso.domain.com) zur Liste in **BackConnectionHostNames**hinzufügen.  <br /><br /> Starten Sie dann den Computer neu, damit die Änderungen wirksam werden.|Dieser Schritt ist erforderlich, wenn Ihre Serverumgebung die NTLM-Authentifizierung auf dem lokalen Computer verwendet und eine Loopbackverbindung erstellt.<br /><br /> In diesem Fall tritt bei Anforderungen zwischen dem Berichts-Manager und dem Berichtsserver der Fehler 401 (Nicht autorisiert) auf.|  
-|4|Installieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im reinen Dateimodus auf Knoten, die bereits zu einem NLB-Cluster gehören, oder konfigurieren Sie die Berichtsserverinstanzen für die Bereitstellung für horizontales Skalieren.<br /><br /> Die konfigurierte Bereitstellung für horizontales Skalieren antwortet möglicherweise nicht auf Anforderungen, die an die IP des virtuellen Servers gerichtet sind. Sie wird erst in einem späteren Schritt so konfiguriert, dass die IP des virtuellen Servers verwendet wird, und zwar nach dem Konfigurieren der Anzeigestatusüberprüfung.|[Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
+|4|Installieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im reinen Dateimodus auf Knoten, die bereits zu einem NLB-Cluster gehören, oder konfigurieren Sie die Berichtsserverinstanzen für die Bereitstellung für horizontales Skalieren.<br /><br /> Die konfigurierte Bereitstellung für horizontales Skalieren antwortet möglicherweise nicht auf Anforderungen, die an die IP des virtuellen Servers gerichtet sind. Sie wird erst in einem späteren Schritt so konfiguriert, dass die IP des virtuellen Servers verwendet wird, und zwar nach dem Konfigurieren der Anzeigestatusüberprüfung.|[Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|Konfigurieren der Anzeigestatusüberprüfung<br /><br /> Optimale Ergebnisse erzielen Sie, wenn Sie diesen Schritt nach dem Konfigurieren der Bereitstellung für horizontales Skalieren und vor dem Konfigurieren der Berichtsserverinstanzen für die Verwendung der virtuellen Server-IP-Adresse ausführen. Indem Sie zuerst die Anzeigestatusüberprüfung konfigurieren, können Sie Ausnahmen für fehlgeschlagene Statusüberprüfungen vermeiden, wenn Benutzer versuchen, auf interaktive Berichte zuzugreifen.|[Vorgehensweise: Konfigurieren der Anzeigestatusüberprüfung](#ViewState) in diesem Thema|  
 |6|Konfigurieren Sie **Hostname** und **UrlRoot** so, dass die IP des virtuellen Servers des NLB-Clusters verwendet wird.|[So konfigurieren Sie HostName und UrlRoot](#SpecifyingVirtualServerName) in diesem Thema.|  
 |7|Überprüfen Sie, ob der Zugriff auf die Server mit dem angegebenen Hostnamen möglich ist.|[Überprüfen des Zugriffs auf Berichtsserver](#Verify) in diesem Thema.|  
@@ -105,7 +105,7 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
   
  Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 oder [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 integrieren oder Ihre Berichte in einer benutzerdefinierten Webanwendung hosten, müssen Sie unter Umständen nur die **UrlRoot** -Eigenschaft konfigurieren. In diesem Fall legen Sie die **UrlRoot** -Eigenschaft auf die URL der SharePoint-Site oder Webanwendung fest. Damit wird der Netzwerkverkehr für die Berichtsumgebung an die Anwendung geleitet, welche die Berichte handhabt, statt an den Berichtsserver oder NLB-Cluster.  
   
- Ändern Sie **ReportServerUrl**nicht. Wenn Sie diese URL ändern, führt dies dazu, dass jedes Mal, wenn eine interne Anforderungen verarbeitet wird, ein zusätzlicher Roundtrip über den virtuellen Server ausgeführt wird. Weitere Informationen zu finden Sie unter [URLs in Konfigurationsdateien (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Weitere Informationen zum Bearbeiten von Konfigurationsdateien finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Ändern Sie **ReportServerUrl**nicht. Wenn Sie diese URL ändern, führt dies dazu, dass jedes Mal, wenn eine interne Anforderungen verarbeitet wird, ein zusätzlicher Roundtrip über den virtuellen Server ausgeführt wird. Weitere Informationen zu finden Sie unter [URLs in Konfigurationsdateien &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Weitere Informationen zum Bearbeiten von Konfigurationsdateien finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 1. Öffnen Sie RSReportServer.config in einem Text-Editor.  
   
@@ -143,7 +143,7 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
   
 ## <a name="see-also"></a>Weitere Informationen
 
- [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Konfigurieren einer URL &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Berichtsserver-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Manage a Reporting Services Native Mode Report Server (Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus)](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

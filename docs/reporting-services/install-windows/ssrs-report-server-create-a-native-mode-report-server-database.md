@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4cf54be2376dede022b0f6905e21685184a6b122
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866333"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934747"
 ---
-# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)
+# <a name="create-a-native-mode-report-server-database-report-server-configuration-manager"></a>Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (Berichtsserver-Konfigurations-Manager)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -36,7 +36,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
  Das Erstellen bzw. die Konfiguration einer Berichtsserver-Datenbank erfolgt in mehreren Schritten. Bevor Sie die Berichtsserver-Datenbank erstellen, sollten Sie sich überlegen, wie Sie die folgenden Elemente angeben möchten:  
   
  **Datenbankserver auswählen**  
- Überprüfen Sie die unterstützten Versionen der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], und überprüfen Sie die unterstützten Editionen im Thema [Erstellen einer Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
+ Überprüfen Sie die unterstützten Versionen der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], und überprüfen Sie die unterstützten Editionen im Thema [Erstellen einer Berichtsserver-Datenbank &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
   
  **TCP/IP-Verbindungen aktivieren**  
  Aktivieren Sie TCP/IP-Verbindungen für das [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Bei einigen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Editionen wird TCP/IP nicht standardmäßig aktiviert. In diesem Thema finden Sie Anweisungen.  
@@ -47,7 +47,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
  **Berichtsserver-Anmeldeinformationen festlegen**  
  Legen Sie fest, wie der Berichtsserver eine Verbindung mit den Berichtsserver-Datenbanken herstellen soll. Zu den Anmeldeinformations-Typen gehören das Domänenbenutzerkonto, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank-Benutzerkonto und das Berichtsserver-Dienstkonto.  
   
- Diese Anmeldeinformationen werden verschlüsselt und in der Datei RSReportServer.config gespeichert. Der Berichtsserver verwendet diese Anmeldeinformationen für ausgehende Verbindungen zur Berichtsserver-Datenbank. Wenn Sie ein Windows-Benutzerkonto oder ein Datenbank-Benutzerkonto verwenden möchten, müssen Sie ein bereits bestehendes Konto angeben. Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager erstellt zwar einen Benutzernamen für die Anmeldung und legt die erforderlichen Berechtigungen fest, erstellt jedoch kein Konto. Weitere Informationen finden Sie unter [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Diese Anmeldeinformationen werden verschlüsselt und in der Datei RSReportServer.config gespeichert. Der Berichtsserver verwendet diese Anmeldeinformationen für ausgehende Verbindungen zur Berichtsserver-Datenbank. Wenn Sie ein Windows-Benutzerkonto oder ein Datenbank-Benutzerkonto verwenden möchten, müssen Sie ein bereits bestehendes Konto angeben. Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager erstellt zwar einen Benutzernamen für die Anmeldung und legt die erforderlichen Berechtigungen fest, erstellt jedoch kein Konto. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Sprache für den Berichtsserver festlegen**  
  Wählen Sie eine Sprache für den Berichtsserver aus. Vordefinierte Rollennamen, Beschreibungen und die Ordner vom Typ Meine Berichte werden nicht in verschiedenen Sprachen angezeigt, wenn sich die Benutzer mit verschiedenen Sprachversionen eines Browsers beim Server anmelden.  
@@ -73,7 +73,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
   
 ### <a name="to-create-a-local-report-server-database"></a>So erstellen Sie eine lokale Berichtsserver-Datenbank  
   
-1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und stellen Sie eine Verbindung mit der Berichtsserverinstanz her, für die Sie die Datenbank erstellen. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und stellen Sie eine Verbindung mit der Berichtsserverinstanz her, für die Sie die Datenbank erstellen. Weitere Informationen finden Sie unter [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md) (Konfigurations-Manager des Berichtsservers – &#40;einheitlicher Modus&#41;).  
   
 2.  Wählen Sie auf der Seite „Datenbank“ die Option **Datenbank ändern**aus.  
   
@@ -81,7 +81,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
   
 4.  Stellen Sie eine Verbindung mit der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, die Sie zum Erstellen und Hosten der Berichtsserver-Datenbank verwenden möchten.  
   
-    1.  Geben Sie die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz ein, die Sie verwenden möchten. Der Assistent zeigt eine lokale [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz an, die als Standardinstanz ausgeführt wird, sofern sie verfügbar ist. Andernfalls müssen Sie den Server und die Instanz eingeben, die verwendet werden sollen. Benannte Instanzen werden in folgendem Format angegeben: \<Servername>\\<Instanzenname\>.  
+    1.  Geben Sie die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz ein, die Sie verwenden möchten. Der Assistent zeigt eine lokale [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz an, die als Standardinstanz ausgeführt wird, sofern sie verfügbar ist. Andernfalls müssen Sie den Server und die Instanz eingeben, die verwendet werden sollen. Benannte Instanzen werden in folgendem Format angegeben: \<servername>\\<Instanzname\>.  
   
     2.  Geben Sie die Anmeldeinformationen ein, die für eine einmalige Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet werden, um die Berichtsserver-Datenbanken zu erstellen. Weitere Informationen zur Verwendung dieser Anmeldeinformationen finden Sie in diesem Thema unter [Vorbereitungen](#rsdbrequirements) .  
   
@@ -119,7 +119,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
 
 Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager stellt einen Assistenten zum Ändern der Anmeldeinformationen bereit, der Sie durch alle Schritte der Neukonfiguration des Kontos führt, anhand dessen der Berichtsserver die Verbindung mit der Berichtsserverdatenbank herstellt. Wenn Sie die Anmeldeinformationen ändern, aktualisiert der Konfigurations-Manager alle Berechtigungen und Datenbank-Anmeldedaten auf dem Datenbankserver für die Berichtsserver-Datenbank, die vom Berichtsserver verwendet wird. 
 
-1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und stellen Sie eine Verbindung mit der Berichtsserverinstanz her, für die Sie die Datenbank erstellen. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und stellen Sie eine Verbindung mit der Berichtsserverinstanz her, für die Sie die Datenbank erstellen. Weitere Informationen finden Sie unter [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md) (Konfigurations-Manager des Berichtsservers – &#40;einheitlicher Modus&#41;).  
   
 2.  Wählen Sie auf der Seite „Datenbank“ die Option **Anmeldeinformationen ändern**aus. 
 
@@ -151,6 +151,6 @@ Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration
 
 [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[Reporting Services-Konfigurations-Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[Berichtsserver-Konfigurations-Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f90a0f31355b5225533728efb25dfb5f6c96de16
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 22f5064c4d861c3f10f88ce4ff1a5727f545fb72
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462165"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934957"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: So suchen und starten Sie Reporting Services-Tools (SSRS)
 
 In diesem Tutorial werden die Tools vorgestellt, mit denen Berichtsserver konfiguriert, Berichtsserverinhalte und -vorgänge verwaltet sowie paginierte und mobile [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte erstellt und veröffentlicht werden. Wenn Sie mit den Tools bereits vertraut sind, können Sie zu anderen Tutorials wechseln, in denen Sie wichtige Funktionen für die Verwendung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen lernen. Weitere Tutorials finden Sie unter [Reporting Services-Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)kennen lernen.
 
-## <a name="reporting-services-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a> Reporting Services-Konfigurations-Manager (einheitlicher Modus)
+## <a name="report-server-configuration-manager-native-mode"></a><a name="bkmk_configuration_manager"></a>Berichtsserver-Konfigurations-Manager (einheitlicher Modus)
 Verwenden Sie den Konfigurations-Manager im einheitlichen Modus, um folgende Aufgaben auszuführen:
 
 - Angeben des Dienstkontos.
@@ -43,15 +43,15 @@ Verwenden Sie den Konfigurations-Manager im einheitlichen Modus, um folgende Auf
 
 **Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Configuration Manager wird bei der Installation des einheitlichen Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installiert. Weitere Informationen finden Sie unter [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md).
 
-### <a name="to-start-the-reporting-services-configuration-manager"></a>So starten Sie den Reporting Services-Konfigurations-Manager
+### <a name="to-start-the-report-server-configuration-manager"></a>Starten des Berichtsserver-Konfigurations-Managers
 
-1. Geben Sie im Windows-Startbildschirm **reporting** ein und klicken Sie in den Suchergebnissen in **Apps** auf **Reporting Services-Konfigurations-Manager**.
+1. Geben Sie im Windows-Startbildschirm **reporting** ein, und klicken Sie in den Suchergebnissen in **Apps** auf **Berichtsserver-Konfigurations-Manager**.
 
-    ![Reporting Services-Konfigurations-Manager beim Start](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Reporting Services-Konfigurations-Manager beim Start")
+    ![Berichtsserver-Konfigurations-Manager beim Start](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Berichtsserver-Konfigurations-Manager beim Start")
 
     **Oder**
 
-    Klicken Sie auf **Starten**, auf **Programme**, auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], auf **Konfigurationstools**und dann auf **Konfigurations-Manager für Reporting Services**.
+    Klicken Sie auf **Starten**, auf **Programme**, auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], auf **Konfigurationstools**und dann auf **Berichtsserver-Konfigurations-Manager**.
 
     Das Dialogfeld **Auswahl der Berichtsserver-Installationsinstanz** wird angezeigt, mit dem Sie die Berichtsserverinstanz auswählen können, die Sie konfigurieren möchten.
 
@@ -67,7 +67,7 @@ Verwenden Sie den Konfigurations-Manager im einheitlichen Modus, um folgende Auf
 
     ![Reporting Services-Konfigurationstool](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services-Konfigurationstool")
 
- **Nächste Schritte:** [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) und [Konfigurations-Manager für Reporting Services &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+ **Nächste Schritte:** [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) und [Berichtsserver-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 ## <a name="web-portal-native-mode"></a>Webportal (einheitlicher Modus)
 
@@ -81,7 +81,7 @@ Damit Sie das Webportal öffnen können, müssen Sie über ausreichende Berechti
 
 1. Öffnen Sie Ihren Browser. Informationen zu unterstützten Browsern und Browserversionen finden Sie unter [Browserunterstützung für Reporting Services und Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
-2. Geben Sie in die Adressleiste des Webbrowsers die URL des Webportals ein. Standardmäßig lautet die URL `https://<serverName>/reports`kennen lernen. Zur Bestätigung des Servernamens und der URL können Sie das Reporting Services-Konfigurationstool verwenden. Weitere Informationen zu URLs in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
+2. Geben Sie in die Adressleiste des Webbrowsers die URL des Webportals ein. Standardmäßig lautet die URL `https://<serverName>/reports`kennen lernen. Zur Bestätigung des Servernamens und der URL können Sie das Reporting Services-Konfigurationstool verwenden. Weitere Informationen zu URLs in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Konfigurieren von Berichtsserver-URLs &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
 
 3. Das Webportal wird im Browserfenster geöffnet. Die Startseite entspricht dem Basisordner. In Abhängigkeit von den Berechtigungen werden möglicherweise zusätzliche Ordner, Links zu Berichten sowie Ressourcendateien auf der Startseite angezeigt. Möglicherweise werden auf der Symbolleiste auch zusätzliche Schaltflächen und Befehle angezeigt.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a433169d694f9f2d71a049c906267a64b6c0756
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 85f40936b589ac5a1f90ec47a81756998c5e9db7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458257"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934923"
 ---
 # <a name="manage-report-data-sources"></a>Verwalten von Berichtsdatenquellen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]rufen Berichte, Berichtsmodelle und datengesteuerte Abonnements Daten von externen Datenquellen ab. Zum Herstellen einer Verbindung mit einer externen Datenquelle verwendet ein Berichtsserver Verbindungsinformationen für die Datenquelle, die im Bericht, Modell oder Abonnement definiert werden oder auf die dort verwiesen wird. Verbindungseigenschaften der Datenquellen werden bei Erstellung des Berichts oder Modells definiert. Sie können jedoch unabhängig verwaltet werden, nachdem der Bericht oder das Modell auf einem Berichtsserver veröffentlicht wurde.  
@@ -62,17 +62,17 @@ ms.locfileid: "86458257"
 |----------|----------|----------|  
 |Anzeigen von Beispielen für Verbindungszeichenfolgen||[Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Wählen Sie eine Methode zum Abrufen von Anmeldeinformationen, um eine Verbindung mit einer Datenquelle herzustellen.||[Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
-|Hinzufügen von Eigenschaften für die Datenquellenverbindung zu einer Berichtsdefinitionsdatei (.rdl)|Berichts-Designer|[Erstellen einer eingebetteten oder freigegebenen Datenquelle &#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
+|Hinzufügen von Eigenschaften für die Datenquellenverbindung zu einer Berichtsdefinitionsdatei (.rdl)|Berichts-Designer|[Erstellen einer eingebetteten oder freigegebenen Datenquelle &#40;SSRS&#41;](/previous-versions/sql/)|  
 |Hinzufügen und Verknüpfen mit einer freigegebenen Datenquellendatei (.rds) im Berichtsprojekt|Berichts-Designer|[Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Erstellen einer vordefinierten Liste von Datenquellen, die Benutzer zur Laufzeit auswählen können. Wenn Benutzer Berichte anfordern, stellt der Bericht eine Liste von Datenquellen bereit. Benutzer müssen auswählen, welche Datenquelle vor dem Ausführen des Berichts verwendet werden soll. Um einem Bericht eine Liste der auszuwählenden Datenquellen hinzuzufügen, verwenden Sie einen Ausdruck.<br /><br /> Dies wird als dynamische Datenquellenverbindung bezeichnet.|Berichts-Designer|[Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Erstellen eines freigegebenen Datenquellenelements auf einem Berichtsserver|[Create, Modify, and Delete Shared Data Sources (Erstellen, Ändern und Löschen von freigegebenen Datenquellen)](create-modify-and-delete-shared-data-sources-ssrs.md) |  
 |Speichern von Anmeldeinformationen als Voraussetzung für das Erstellen von Abonnements oder Berichtsmomentaufnahmen|Das Webportal|[Store Credentials in a Reporting Services Data Source (Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle)](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
 |Bearbeiten von Eigenschaften für die Datenquellenverbindung in einem veröffentlichten Bericht|Das Webportal|[Configure Data Source Properties for a Report (Konfigurieren von Datenquelleneigenschaften für einen Bericht)](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
-|Erstellen eines freigegebenen Datenquellenelements auf einem Berichtsserver|SharePoint-Site|[Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
+|Erstellen eines freigegebenen Datenquellenelements auf einem Berichtsserver|SharePoint-Site|[Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](/previous-versions/sql/)|  
 |Verwenden vorhandener ODC-Verbindungsinformationen mit einem Bericht|SharePoint-Site|[Verwenden einer Office Data Connection &#40;.odc&#41; für Berichte &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
->  Das Verwalten von Datenquellenverbindungen mit Berichtsdatenquellen ist nicht identisch mit dem Verwalten der Berichtsserververbindung mit der Berichtsserver-Datenbank. Weitere Informationen zur Verbindung eines Berichtsservers mit seinem internen Datenspeicher finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+>  Das Verwalten von Datenquellenverbindungen mit Berichtsdatenquellen ist nicht identisch mit dem Verwalten der Berichtsserververbindung mit der Berichtsserver-Datenbank. Weitere Informationen zur Verbindung eines Berichtsservers mit seinem internen Datenspeicher finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Binden eines Berichts oder Modells an eine freigegebene Datenquelle &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
@@ -80,5 +80,4 @@ ms.locfileid: "86458257"
  [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [Berichtsserver Content Management (einheitlicher SSRS-Modus)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
-  
   

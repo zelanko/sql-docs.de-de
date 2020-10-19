@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67efc6d07c437288c96a954c2b6d748282102e29
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: afbf987cdebb4239d96d2c1cd4fcf87301093d76
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629168"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081749"
 ---
 # <a name="example-application-pdo_sqlsrv-driver"></a>Beispielanwendung (PDO_SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ Um die Beispielanwendung „AdventureWorks Product Reviews“ auszuführen, muss
 -   SQL Server 2005 oder SQL Server 2008 mit der [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank ist auf dem lokalen Computer installiert.  
 -   Ein Webbrowser ist installiert.  
   
-## <a name="demonstrates"></a>Zeigt  
+## <a name="adventureworks-example"></a>AdventureWorks-Beispiel  
 Die Beispielanwendung „AdventureWorks Product Reviews“ demonstriert Folgendes:  
   
 -   Öffnen einer Verbindung zu SQL Server mithilfe der Windows-Authentifizierung  
@@ -46,8 +46,7 @@ Die Beispielanwendung „AdventureWorks Product Reviews“ demonstriert Folgende
 -   Abrufen von Daten  
 -   Suchen nach Fehlern  
   
-## <a name="example"></a>Beispiel  
-Die Beispielanwendung „AdventureWorks Product Reviews“ gibt Produktinformationen für alle Produkte, deren Namen die vom Benutzer eingegebene Zeichenfolge enthalten, von der Datenbank zurück. In der Liste der zurückgegebenen Produkte kann der Benutzer Prüfungen und Bilder sehen, ein Bild hinzufügen und eine Prüfung für ein gewähltes Produkt schreiben.  
+In diesem Beispiel werden Produktinformationen für alle Produkte, deren Namen die vom Benutzer eingegebene Zeichenfolge enthalten, von der Datenbank zurückgegeben. In der Liste der zurückgegebenen Produkte kann der Benutzer Prüfungen und Bilder sehen, ein Bild hinzufügen und eine Prüfung für ein gewähltes Produkt schreiben.  
   
 Platzieren Sie den folgenden Code in einer Datei namens „adventureworks_demo_pdo.php“:  
   
@@ -452,7 +451,7 @@ function PopulateProductsTable( $values )
 </html>  
 ```  
   
-## <a name="example"></a>Beispiel  
+## <a name="lob-example"></a>LOB-Beispiel  
 Das „photo.php“-Skript gibt ein Produktfoto für die angegebene **ProduktID**zurück. Das Skript wird aus dem „adventureworks_demo.php“-Skript aufgerufen.  
   
 Platzieren Sie den folgenden Code in einer Datei namens „photo_pdo.php“:  

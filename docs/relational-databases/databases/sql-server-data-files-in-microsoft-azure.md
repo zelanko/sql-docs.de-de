@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715490"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987586"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>SQL Server-Datendateien in Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -177,25 +177,28 @@ Weitere Informationen finden Sie unter [Verwalten des anonymen Lesezugriffs auf 
   
  **Datenbankfehler**  
   
-1.  *Fehler beim Erstellen einer Datenbank*   
-    Lösung: Lesen Sie die Hinweise in Lektion 4 im [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
+**Fehler beim Erstellen einer Datenbank.** Lösung: Lesen Sie die Hinweise in Lektion 4 im [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
   
-2.  *Fehler beim Ausführen der ALTER-Anweisung*   
-    Lösung: Stellen Sie sicher, dass die ALTER DATABASE-Anweisung ausgeführt wird, während die Datenbank online ist. Wenn Sie die Datendateien in den Azure-Speicher kopieren, erstellen Sie immer ein Seitenblob und kein Blockblob. Andernfalls erzeugt ALTER DATABASE einen Fehler. Lesen Sie die Hinweise in Lektion 7 im [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+**Fehler beim Ausführen der ALTER-Anweisung.** Lösung: Stellen Sie sicher, dass die ALTER DATABASE-Anweisung ausgeführt wird, während die Datenbank online ist. Wenn Sie die Datendateien in den Azure-Speicher kopieren, erstellen Sie immer ein Seitenblob und kein Blockblob. Andernfalls erzeugt ALTER DATABASE einen Fehler. Lesen Sie die Hinweise in Lektion 7 im [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Fehlercode 5120: Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“*   
+**Fehlercode 5120: Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“**   
 
-    Lösung: Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB, der auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, versehentlich gestartet wird, kann die Datenbank des zweiten Servers nicht gestartet werden. Es wird der Fehlercode „*5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden.“ angezeigt. Betriebssystemfehler %d: „%ls“* .  
+Lösung: Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB, der auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, versehentlich gestartet wird, kann die Datenbank des zweiten Servers nicht gestartet werden. Es wird der Fehlercode „*5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden.“ angezeigt. Betriebssystemfehler %d: „%ls“* .  
   
-     Um dieses Problem zu beheben, stellen Sie zuerst fest, ob „ServerA“ auf die Datenbankdatei im Azure-Speicher zugreifen muss oder nicht. Ist dies nicht der Fall, entfernen Sie jegliche Verbindungen zwischen ServerA und den Datenbankdateien in Azure Storage. Gehen Sie dazu folgendermaßen vor:  
-  
-    1.  Legen Sie den Dateipfad von Server A mit der ALTER DATABASE-Anweisung auf einen lokalen Ordner fest.  
-  
-    2.  Schalten Sie die Datenbank auf Server A offline.  
-  
-    3.  Kopieren Sie dann die Datenbankdateien aus Azure Storage im lokalen Ordner auf Server A. Dadurch wird sichergestellt, dass „ServerA“ noch lokal eine Kopie der Datenbank hat.  
-  
-    4.  Schalten Sie die Datenbank online.  
+Um dieses Problem zu beheben, stellen Sie zuerst fest, ob „ServerA“ auf die Datenbankdatei im Azure-Speicher zugreifen muss oder nicht. Ist dies nicht der Fall, entfernen Sie jegliche Verbindungen zwischen ServerA und den Datenbankdateien in Azure Storage. Gehen Sie dazu folgendermaßen vor:  
+
+1.  Legen Sie den Dateipfad von Server A mit der ALTER DATABASE-Anweisung auf einen lokalen Ordner fest.  
+
+2.  Schalten Sie die Datenbank auf Server A offline.  
+
+3.  Kopieren Sie dann die Datenbankdateien aus Azure Storage im lokalen Ordner auf Server A. Dadurch wird sichergestellt, dass „ServerA“ noch lokal eine Kopie der Datenbank hat.  
+
+4.  Schalten Sie die Datenbank online.
+
+**Fehlercode 833: Bei E/A-Anforderungen wurden mehr als 15 Sekunden zum Abschließen des Vorgangs benötigt.** 
+   
+   Dieser Fehler weist darauf hin, dass das Speichersystem die Anforderungen der SQL Server-Workload nicht erfüllen kann. Senken Sie entweder die E/A-Aktivität auf der Anwendungsschicht, oder steigern Sie die Durchsatzkapazität auf der Speicherschicht. Weitere Informationen finden Sie unter [Fehler 833](../errors-events/mssqlserver-833-database-engine-error.md). Wenn die Leistungsprobleme weiterhin bestehen, sollten Sie in Betracht ziehen, die Dateien in eine andere Speicherebene zu verschieben, z. B. zu Premium oder SSD Ultra. Informationen zu SQL Server auf Azure-VMs finden Sie unter [Azure Storage Premium: Entwurf für hohe Leistung](/azure/virtual-machines/premium-storage-performance).
+
 
 ## <a name="next-steps"></a>Nächste Schritte  
   

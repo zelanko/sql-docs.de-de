@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6753c10c7fd753be5bf370c3c937d2d9dec1ad9f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7f8b963f2b46ec68d0306e29e487f6c59f537ae
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320936"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934480"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Überprüfen einer Installation von Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver können in zwei Modi installiert werden: einheitlich oder SharePoint. Die Schritte, die Sie zum Überprüfen der Installation ausführen sollten, hängen vom Berichtsservermodus ab.  
@@ -89,7 +89,7 @@ ms.locfileid: "88320936"
   
 2.  Öffnen Sie Konsolenanwendungen für die Dienste, und überprüfen Sie, ob der Berichtsserver-Dienst ausgeführt wird. Um den Status des Berichtsserver-Diensts anzuzeigen, klicken Sie auf **Start**, zeigen Sie auf **Systemsteuerung**, doppelklicken Sie auf **Verwaltung**, und doppelklicken Sie anschließend auf **Dienste**. Führen Sie in der Liste mit den Diensten einen Bildlauf zu **Berichtsserver (MSSQLSERVER)** durch. Der Status sollte **Gestartet**lauten.  
   
-3.  Öffnen Sie einen Browser, und geben Sie die Berichtsserver-URL in der Adressleiste ein. Die Adresse besteht aus dem Servernamen und dem Namen des virtuellen Verzeichnisses, das Sie bei beim Setup für den Berichtsserver angegeben haben. Standardmäßig lautet das virtuelle Verzeichnis des Berichtsservers **ReportServer**. Mit der folgenden URL können Sie die Berichtsserverinstallation überprüfen: https:// *\<computer name>* /ReportServer *\<_instance name>* . Wenn der Berichtsserver als eine benannte Instanz installiert wurde, lautet die URL anders. Weitere Informationen zum URL-Format finden Sie unter [Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Informationen für lokale Administratoren unter Windows Vista oder Windows Server 2008 finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Öffnen Sie einen Browser, und geben Sie die Berichtsserver-URL in der Adressleiste ein. Die Adresse besteht aus dem Servernamen und dem Namen des virtuellen Verzeichnisses, das Sie bei beim Setup für den Berichtsserver angegeben haben. Standardmäßig lautet das virtuelle Verzeichnis des Berichtsservers **ReportServer**. Mit der folgenden URL können Sie die Berichtsserverinstallation überprüfen: https:// *\<computer name>* /ReportServer *\<_instance name>* . Wenn der Berichtsserver als eine benannte Instanz installiert wurde, lautet die URL anders. Weitere Informationen zum URL-Format finden Sie unter [Konfigurieren von Berichtsserver-URLs &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Informationen für lokale Administratoren unter Windows Vista oder Windows Server 2008 finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 4.  Führen Sie Berichte aus, um die Berichtsservervorgänge zu testen. Für diesen Schritt können Sie einen Beispielbericht aus einem Lernprogramm erstellen. Weitere Informationen finden Sie unter [Erstellen eines einfachen Tabellenberichts (SSRS-Tutorial)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   

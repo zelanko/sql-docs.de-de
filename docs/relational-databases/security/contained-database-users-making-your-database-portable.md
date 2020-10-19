@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a76bc720df1808290a09e2cec5fad1c0667ae389
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 935729861e3cd2a1119290cab46eaa76a1b36621
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988789"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864049"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel
 
@@ -41,7 +41,7 @@ ms.locfileid: "87988789"
 
  Die Anmeldung in der Masterdatenbank ist im eigenständigen Datenbankbenutzermodell nicht vorhanden. Stattdessen findet der Authentifizierungsprozess in der Benutzerdatenbank statt, und in der Masterdatenbank ist keine zugeordnete Anmeldung für den Datenbankbenutzer in der Benutzerdatenbank vorhanden. Das eigenständige Datenbankbenutzermodell unterstützt sowohl die Windows-Authentifizierung als auch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung und kann sowohl in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als auch in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]verwendet werden. Um als eigenständiger Datenbankbenutzer eine Verbindung herzustellen, muss die Verbindungszeichenfolge immer einen Parameter für die Benutzerdatenbank enthalten, damit das [!INCLUDE[ssDE](../../includes/ssde-md.md)] weiß, welche Datenbank für die Verwaltung des Authentifizierungsprozesses verantwortlich ist. Die Aktivität des eigenständigen Datenbankbenutzers ist auf den Authentifizierungsserver beschränkt. Beim Herstellen einer Verbindung als eigenständiger Datenbankbenutzer muss das Datenbankbenutzerkonto also unabhängig in jeder Datenbank erstellt werden, die der Benutzer benötigt. Um die Datenbanken zu ändern, müssen [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Benutzer eine neue Verbindung erstellen. Eigenständige Datenbankbenutzer in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Datenbanken ändern, wenn ein identischer Benutzer in einer anderen Datenbank vorhanden ist.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] unterstützen Azure Active Directory-Identitäten als Benutzer einer eigenständigen Datenbank. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] unterstützt Benutzer einer eigenständigen Datenbank mit [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] aber [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] dies nicht. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Wird Azure Active Directory-Authentifizierung verwendet, können Verbindungen von SSMS über die universelle Active Directory-Authentifizierung hergestellt werden.  Administratoren können die universelle Authentifizierung so konfigurieren, dass Multi-Factor Authentication verwendet wird, bei der die Identität mit einem Telefonanruf, einer SMS, einer Smartcard mit PIN oder einer Benachrichtigung über mobile App überprüft wird. Weitere Informationen finden Sie unter [SSMS-Unterstützung für Azure AD MFA mit SQL-Datenbank und SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] unterstützen Azure Active Directory-Identitäten als Benutzer einer eigenständigen Datenbank. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] unterstützt Benutzer einer eigenständigen Datenbank mit [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] aber [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] dies nicht. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](/azure/azure-sql/database/authentication-aad-overview). Wird Azure Active Directory-Authentifizierung verwendet, können Verbindungen von SSMS über die universelle Active Directory-Authentifizierung hergestellt werden.  Administratoren können die universelle Authentifizierung so konfigurieren, dass Multi-Factor Authentication verwendet wird, bei der die Identität mit einem Telefonanruf, einer SMS, einer Smartcard mit PIN oder einer Benachrichtigung über mobile App überprüft wird. Weitere Informationen finden Sie unter [SSMS-Unterstützung für Azure AD MFA mit SQL-Datenbank und SQL Data Warehouse](/azure/azure-sql/database/authentication-mfa-ssms-overview).  
   
  Für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]sind, weil der Datenbankname in der Verbindungszeichenfolge immer erforderlich ist, beim Wechseln vom traditionellen Modell auf das eigenständige Datenbankbenutzermodell keine Änderungen an der Verbindungszeichenfolge erforderlich. Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindungen muss der Name der Datenbank zur Verbindungszeichenfolge hinzugefügt werden, falls nicht bereits geschehen.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "87988789"
   
  Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Firewall-Regeln finden Sie unter den folgenden Themen:  
   
-- [Firewall für die Azure SQL-Datenbank](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
-- [Vorgehensweise: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+- [Firewall für die Azure SQL-Datenbank](/previous-versions/azure/ee621782(v=azure.100))  
+- [Vorgehensweise: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](/previous-versions/azure/jj553530(v=azure.100))  
 - [sp_set_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
@@ -79,24 +79,34 @@ ms.locfileid: "87988789"
 
 Azure SQL Managed Instance verhält sich im Kontext von eigenständigen Datenbanken wie lokale SQL Server-Instanzen. Stellen Sie sicher, dass Sie den Kontext Ihrer Datenbank von dem der Masterdatenbank in den der Benutzerdatenbank ändern, wenn Sie Ihren eigenständigen Benutzer erstellen. Außerdem sollten keine aktiven Verbindungen mit der Benutzerdatenbank bestehen, wenn Sie die Eigenständigkeit festlegen. 
 
-Beispiel: 
+
+Beispiel:
+
+> [!WARNING]
+> Bevor Sie das folgende Skript ausführen, sollten Sie dafür sorgen, dass keine anderen aktiven Verbindungen in der Datenbank Ihrer verwalteten Instanz vorhanden sind. Das Skript unterbricht möglicherweise andere Prozesse, die in der Datenbank ausgeführt werden.
 
 ```sql
 Use MASTER;
 GO 
 
 ALTER DATABASE Test
-SET containment=partial
+SET RESTRICTED_USER
+WITH ROLLBACK IMMEDIATE;
 
+ALTER DATABASE Test
+SET containment=partial;
+
+ALTER DATABASE Test
+SET MULTI_USER;
 
 USE Test;  
-GO  
+GO 
+
 CREATE USER Carlo  
 WITH PASSWORD='Enterpwdhere*'  
 
-
 SELECT containment_desc FROM sys.databases
-WHERE name='test'
+WHERE name='Test'
 ```
 
   
@@ -115,5 +125,4 @@ WHERE name='test'
  [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)   
  [Bewährte Methoden für die Sicherheit eigenständiger Datenbanken](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
-  
+ [Herstellen einer Verbindung mit SQL-Datenbank unter Verwendung der Azure Active Directory-Authentifizierung](/azure/azure-sql/database/authentication-aad-overview)  

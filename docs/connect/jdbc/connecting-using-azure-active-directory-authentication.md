@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94950f346ddaf4264926438ca107c49350577b27
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cf829dfabdd291367990ef21280208ac0741154c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725469"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081309"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 
@@ -31,7 +31,7 @@ Folgende Verbindungseigenschaften im Microsoft-JDBC-Treiber für SQL Server unte
     * **ActiveDirectoryMSI**
         * `authentication=ActiveDirectoryMSI` wird ab Treiberversion **v7.2** unterstützt und kann verwendet werden, um aus einer Azure-Ressource mit aktivierter Identitätsunterstützung heraus eine Verbindung mit einer Azure SQL-Datenbank- oder Data Warehouse-Instanz herzustellen. Optional kann in den Verbindungs-/DataSource-Eigenschafen zusätzlich zu diesem Authentifizierungsmodus auch **msiClientId** angegeben werden. Diese Eigenschaft muss die Client-ID einer verwalteten Identität enthalten, mit der das **accessToken** zum Herstellen der Verbindung abgerufen wird.
     * **ActiveDirectoryIntegrated**
-        * `authentication=ActiveDirectoryIntegrated` wird ab Treiberversion **v6.0** unterstützt und kann verwendet werden, um mithilfe der integrierten Authentifizierung eine Verbindung mit einer Azure SQL-Datenbank- oder Data Warehouse-Instanz herzustellen. Um diesen Authentifizierungsmodus zu verwenden, müssen Sie einen Verbund zwischen den lokalen Active Directory-Verbunddiensten (AD FS) und Azure Active Directory in der Cloud einrichten. Sobald dieser Verbund eingerichtet ist, können Sie eine Verbindung herstellen, indem Sie entweder die native Bibliothek „mssql-jdbc_auth-\<version>-\<arch>.dll“ zum Anwendungsklassenpfad im Windows-Betriebssystem hinzufügen oder ein Kerberos-Ticket einrichten, um eine plattformübergreifende Authentifizierung zu unterstützen. Wenn Sie bei einem in die Domäne eingebundenen Computer angemeldet sind, können Sie auf Azure SQL-Datenbank bzw. SQL Data Warehouse zugreifen, ohne zur Eingabe von Anmeldeinformationen aufgefordert zu werden.
+        * `authentication=ActiveDirectoryIntegrated` wird ab Treiberversion **v6.0** unterstützt und kann verwendet werden, um mithilfe der integrierten Authentifizierung eine Verbindung mit einer Azure SQL-Datenbank- oder Data Warehouse-Instanz herzustellen. Um diesen Authentifizierungsmodus zu verwenden, müssen Sie einen Verbund zwischen den lokalen Active Directory-Verbunddiensten (AD FS) und Azure Active Directory in der Cloud einrichten. Sobald dieser Verbund eingerichtet ist, können Sie eine Verbindung herstellen, indem Sie entweder die native Bibliothek „mssql-jdbc_auth-\<version>-\<arch>.dll“ zum Anwendungsklassenpfad im Windows-Betriebssystem hinzufügen oder ein Kerberos-Ticket einrichten, um eine plattformübergreifende Authentifizierung zu unterstützen. Wenn Sie bei einem in die Domäne eingebundenen Computer angemeldet sind, können Sie auf Azure SQL-Datenbank bzw. Azure Synapse Analytics zugreifen, ohne zur Eingabe von Anmeldeinformationen aufgefordert zu werden.
     * **ActiveDirectoryPassword**
         * `authentication=ActiveDirectoryPassword` wird ab Treiberversion **v6.0** unterstützt und kann verwendet werden, um mithilfe eines Azure AD-Benutzernamens und des zugehörigen Kennworts eine Verbindung mit einer Azure SQL-Datenbank- oder Data Warehouse-Instanz herzustellen.
     * **SqlPassword**
@@ -286,8 +286,8 @@ Das folgende Beispiel enthält eine einfache Java-Anwendung, die mithilfe der zu
     11. Erstellen Sie im Abschnitt „Schlüssel“ einen Schlüssel, indem Sie das Namensfeld ausfüllen, die Dauer des Schlüssels auswählen und die Konfiguration speichern (lassen Sie das Wertfeld leer). Nach dem Speichern ist das Wertfeld automatisch ausgefüllt. Kopieren Sie den generierten Wert. Dies ist der geheime Clientschlüssel.
     12. Klicken Sie im linken Navigationsbereich auf „Azure Active Directory“. Suchen Sie die Registerkarte „Endpunkte“ unter „App-Registrierungen“. Kopieren Sie die URL unter „OATH 2.0-TOKENENDPUNKT“ – dies ist Ihre STS-URL.
     
-    ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
-2. Melden Sie sich als Azure Active Directory-Administrator bei Ihrer Azure-SQL Server-Benutzerdatenbank an, und geben Sie mithilfe eines T-SQL-Befehls einen Benutzer der eigenständigen Datenbank als Anwendungsprinzipal an. Weitere Informationen zum Erstellen eines Azure Active Directory-Administrators und eines Benutzers einer eigenständigen Datenbank finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse unter Verwendung der Azure Active Directory-Authentifizierung](/azure/azure-sql/database/authentication-aad-overview).
+    ![Endpunkt für App-Registrierungen im Azure-Portal – STS-URL](media/jdbc_aad_token.png)  
+2. Melden Sie sich als Azure Active Directory-Administrator bei Ihrer Azure-SQL Server-Benutzerdatenbank an, und geben Sie mithilfe eines T-SQL-Befehls einen Benutzer der eigenständigen Datenbank als Anwendungsprinzipal an. Weitere Informationen zum Erstellen eines Azure Active Directory-Administrators und eines Benutzers einer eigenständigen Datenbank finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank oder Azure Synapse Analytics unter Verwendung der Azure Active Directory-Authentifizierung](/azure/azure-sql/database/authentication-aad-overview).
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER

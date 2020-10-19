@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243576"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935408"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Arbeiten mit paginierten Berichten (Webportal)
 
@@ -117,7 +117,7 @@ Sie können auch den Typ der Anmeldeinformationen auswählen, der hier infrage k
   
 Durch Auswahl dieser Option haben Sie die Möglichkeit, keinerlei Anmeldeinformationen für die Datenquelle bereitzustellen. Wenn für die Datenquelle eine Benutzeranmeldung erforderlich ist, hat die Auswahl dieser Option keine Auswirkungen. Sie sollten diese Option nur auswählen, wenn für die Datenquellenverbindung keine Benutzeranmeldeinformationen erforderlich sind.  
   
-Bevor Sie diese Option verwenden können, müssen Sie für den Berichtsserver das Konto für die unbeaufsichtigte Ausführung konfigurieren. Das Konto für die unbeaufsichtigte Ausführung wird zum Herstellen der Verbindung mit externen Datenquellen verwendet, wenn auf anderen Wegen keine Anmeldeinformationen verfügbar sind. Wenn Sie diese Option angeben und das Konto nicht konfiguriert ist, schlägt die Verbindung mit der Berichtsdatenquelle fehl, und der Bericht wird nicht verarbeitet. Weitere Informationen zu diesem Konto finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung (SSRS-Konfigurations-Manager)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+Bevor Sie diese Option verwenden können, müssen Sie für den Berichtsserver das Konto für die unbeaufsichtigte Ausführung konfigurieren. Das Konto für die unbeaufsichtigte Ausführung wird zum Herstellen der Verbindung mit externen Datenquellen verwendet, wenn auf anderen Wegen keine Anmeldeinformationen verfügbar sind. Wenn Sie diese Option angeben und das Konto nicht konfiguriert ist, schlägt die Verbindung mit der Berichtsdatenquelle fehl, und der Bericht wird nicht verarbeitet. Weitere Informationen zu diesem Konto finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung (Berichtsserver-Konfigurations-Manager)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="subscriptions"></a>Abonnements  
 Ein Reporting Services-Abonnement ist eine Konfiguration zur Übermittlung eines Berichts zu einem bestimmten Zeitpunkt oder als Reaktion auf ein Ereignis, und zwar in einem von Ihnen angegebenen Dateiformat. Speichern Sie beispielsweise jeden Donnerstag den Bericht MonthlySales.rdl als Microsoft Word-Dokument in eine Dateifreigabe. Sie können Abonnements verwenden, um die Übermittlung eines Berichts mit einem spezifischen Satz an Berichtsparameterwerten zeitlich festzulegen und zu automatisieren. Weitere Informationen finden Sie unter [Arbeiten mit Abonnements](working-with-subscriptions-web-portal.md).

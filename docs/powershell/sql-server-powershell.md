@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: e320408fd569cbf747c9f9ada68f51dd2bea8a41
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 968bcd1560fd4fd24dddfaf45cfe606518235b60
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714328"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081889"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 
@@ -23,13 +23,19 @@ ms.locfileid: "88714328"
 
 **[Installieren von SQL Server PowerShell](download-sql-server-ps-module.md)**
 
-Es gibt zwei SQL Server PowerShell-Module: **SqlServer** und **SQLPS**. Das **SQLPS**-Modul ist zwar in der SQL Server-Installation (für die Abwärtskompatibilität) enthalten, wird jedoch nicht mehr aktualisiert. Das **SqlServer**-Modul ist das aktuellste PowerShell-Modul. Das **SqlServer**-Modul enthält aktualisierte Versionen der Cmdlets in **SQLPS** sowie neue Cmdlets zur Unterstützung der neuesten SQL-Funktionen.  
+Es gibt zwei SQL Server PowerShell-Module, **[SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)** und **[SQLPS](https://docs.microsoft.com/powershell/module/sqlps)** .
 
-Vorherige Versionen des **SqlServer**-Moduls waren im SQL Server Management Studio (SSMS) enthalten, allerdings nur in den Versionen 16.x.
+Das **SqlServer**-Modul ist das zu verwendende aktuelle PowerShell-Modul.
 
-Das **SqlServer**-Modul muss über den PowerShell-Katalog installiert werden, damit PowerShell mit SSMS 17.0 und höher verwendet werden kann.
+Das **SQLPS**-Modul ist zwar in der SQL Server-Installation (für die Abwärtskompatibilität) enthalten, wird jedoch nicht mehr aktualisiert.
 
-Informationen zur Installation des **SqlServer**-Moduls finden Sie unter [Installieren von SQL Server PowerShell](download-sql-server-ps-module.md).
+Das **SqlServer**-Modul enthält aktualisierte Versionen der Cmdlets in **SQLPS** sowie neue Cmdlets zur Unterstützung der neuesten SQL-Funktionen.
+
+Vorherige Versionen des **SqlServer**-Moduls *waren* im [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) enthalten, allerdings nur in den Versionen 16.x von SSMS.
+
+Um PowerShell mit SSMS 17.0 und höher zu verwenden, installieren Sie das **SqlServer**-Modul über den [PowerShell-Katalog](https://www.powershellgallery.com/packages/SqlServer).
+
+Sie können auch [PowerShell mit Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md) verwenden.
 
 **Warum wurde das Modul von „SQLPS“ in „SqlServer“ geändert?**
 
@@ -47,7 +53,7 @@ Dieser Abschnitt gilt für Skripts, die von PowerShell und nicht vom SQL-Agent a
 
 Das **SqlServer**-Modul umfasst Folgendes:
 
-- [PowerShell-Anbieter](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_providers), was einen einfachen Navigationsmechanismus wie bei Dateisystempfaden ermöglicht. Sie können Dateisystempfaden ähnelnde Pfade erstellen, in denen das Laufwerk einem SQL Server-Management Object-Modell zugeordnet ist und deren Knoten auf Objektmodellklassen basieren. Sie können dann vertraute Befehle wie **cd** und **dir** verwenden, um auf den Pfaden zu navigieren, auf ähnliche Weise, wie Sie in einem Eingabeaufforderungsfenster in Ordnern navigieren. Mit anderen Befehlen, wie **ren** oder **del**, können Sie Aktionen für die Knoten im Pfad ausführen.
+- [PowerShell-Anbieter](/powershell/module/microsoft.powershell.core/about/about_providers), was einen einfachen Navigationsmechanismus wie bei Dateisystempfaden ermöglicht. Sie können Dateisystempfaden ähnelnde Pfade erstellen, in denen das Laufwerk einem SQL Server-Management Object-Modell zugeordnet ist und deren Knoten auf Objektmodellklassen basieren. Sie können dann vertraute Befehle wie **cd** und **dir** verwenden, um auf den Pfaden zu navigieren, auf ähnliche Weise, wie Sie in einem Eingabeaufforderungsfenster in Ordnern navigieren. Mit anderen Befehlen, wie **ren** oder **del**, können Sie Aktionen für die Knoten im Pfad ausführen.
 
 - mehrere Cmdlets, die Aktionen wie das Ausführen eines **sqlcmd**-Skripts unterstützen, das Transact-SQL- oder XQuery-Anweisungen enthält  
 
@@ -55,13 +61,13 @@ Das **SqlServer**-Modul umfasst Folgendes:
 
 ## <a name="sql-server-versions"></a>SQL Server-Versionen
 
-SQL PowerShell-Cmdlets können verwendet werden, um Instanzen von Azure SQL-Datenbank und Azure SQL Data Warehouse sowie alle [unterstützten SQL Server-Produkte](https://support.microsoft.com/lifecycle/search/1044) zu verwalten.
+SQL PowerShell-Cmdlets können verwendet werden, um Instanzen von Azure SQL-Datenbank und Azure Synapse Analytics sowie alle [unterstützten SQL Server-Produkte](https://support.microsoft.com/lifecycle/search/1044) zu verwalten.
 
 ## <a name="sql-server-identifiers-that-contain-characters-not-supported-in-powershell-paths"></a>SQL Server-Bezeichner mit Zeichen, die in PowerShell-Pfaden nicht unterstützt werden.
 
 Das **Encode-Sqlname** -Cmdlet und das **Decode-Sqlname** -Cmdlet helfen Ihnen, SQL Server-Bezeichner mit Zeichen anzugeben, die in PowerShell-Pfaden nicht unterstützt werden. Weitere Informationen finden Sie unter [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).
 
-Verwenden Sie das **Convert-UrnToPath**-Cmdlet, um einen eindeutigen Ressourcennamen (Unique Resource Name, URN) für ein Datenbank-Engine-Objekt in einen Pfad für den SQL Server PowerShell-Anbieter zu konvertieren. Weitere Informationen finden Sie unter [Convert URNs to SQL Server Provider Paths](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath).
+Verwenden Sie das **Convert-UrnToPath**-Cmdlet, um einen eindeutigen Ressourcennamen (Unique Resource Name, URN) für ein Datenbank-Engine-Objekt in einen Pfad für den SQL Server PowerShell-Anbieter zu konvertieren. Weitere Informationen finden Sie unter [Convert URNs to SQL Server Provider Paths](/powershell/module/sqlserver/Convert-UrnToPath).
   
 ## <a name="query-expressions-and-unique-resource-names"></a>Abfrageausdrücke und eindeutige Ressourcennamen  
 
@@ -80,9 +86,11 @@ Import-Module -Name SqlServer
 
 ## <a name="cmdlet-reference"></a>Cmdlet-Referenz
 
-- [SqlServer-Cmdlets](https://docs.microsoft.com/powershell/module/sqlserver)
-- [SQLPS-Cmdlets](https://docs.microsoft.com/powershell/module/sqlps)
+- [SqlServer-Cmdlets](/powershell/module/sqlserver)
+- [SQLPS-Cmdlets](/powershell/module/sqlps)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Herunterladen des SQL Server PowerShell-Moduls](download-sql-server-ps-module.md)
+- [Herunterladen des SQL Server PowerShell-Moduls](download-sql-server-ps-module.md)
+- [SQL Server PowerShell-Cmdlets](/powershell/module/sqlserver)
+- [Verwenden von PowerShell mit Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

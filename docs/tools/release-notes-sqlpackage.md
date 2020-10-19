@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989433"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005978"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Versionshinweise zu „SqlPackage.exe“
 
@@ -51,7 +51,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Always Encrypted | Hinzufügung von Unterstützung des Imports und Exports von Secure Enclaves für SQL Server 2019 |
 | Bereitstellung | Hinzufügung von Unterstützung des Ignorierens von Change Data Capture-fähigen Tabellen beim Exportieren aus Azure SQL-Datenbank |
 | Bereitstellung | Hinzufügung von Unterstützung der Indexoption OPTIMIZE_FOR_SEQUENTIAL_KEY in Azure SQL-Datenbank |
-| Bereitstellung | Hinzufügung von Unterstützung von Identitätsspalten für Azure SQL Data Warehouse | 
+| Bereitstellung | Hinzufügung von Unterstützung von Identitätsspalten für Azure Synapse Analytics | 
 | Hilfe | Ausgabe der sqlpackage-Version im Hilfeparameter (/?) und Unterstützung des Parameters „/version“ | 
 
 ### <a name="fixes"></a>Fehlerbehebungen
@@ -63,12 +63,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Bereitstellung | Behebung eines Fehlers bei der DACPAC-Registrierung im Rahmen der Bereitstellung für .NET Core | 
 | Bereitstellung | Behebung eines Fehlers in sqlpackage bei der Verarbeitung des Parameters „/accessToken“ („/at“) durch .NET Core | 
 | Bereitstellung | Zulassen von ALTER TABLE-Anweisungen in gespeicherten Prozeduren als Anweisungen auf anderen Ebenen als der obersten | 
-| Bereitstellung | Problembehandlung durch Nichtberücksichtigung der Groß-/Kleinschreibung bei der Überprüfung von materialisierten Sichten in Azure SQL Data Warehouse | 
+| Bereitstellung | Problembehandlung durch Nichtberücksichtigung der Groß-/Kleinschreibung bei der Überprüfung von materialisierten Sichten in Azure Synapse Analytics | 
 
 ### <a name="known-issues"></a>Bekannte Probleme
 | Funktion | Details |
 | :------ | :------ |
-| Bereitstellung | Das Azure SQL Data Warehouse-Feature „Arbeitsauslastungsverwaltung“ (Arbeitsauslastungsgruppen und Arbeitsauslastungsklassifizierer) wird noch nicht unterstützt. | 
+| Bereitstellung | Das Azure Synapse Analytics-Feature „Arbeitsauslastungsverwaltung“ (Arbeitsauslastungsgruppen und Arbeitsauslastungsklassifizierer) wird noch nicht unterstützt. | 
 
 ## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
 
@@ -96,14 +96,14 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="features"></a>Features
 | Funktion | Details |
 | :------ | :------ |
-| Bereitstellung | Die Datenvertraulichkeitsklassifizierung wird jetzt für SQL Server 2008 und höher, Azure SQL-Datenbank und Azure SQL Data Warehouse unterstützt. |
-| Bereitstellung | Unterstützung von Tabellenconstraints in Azure SQL Data Warehouse wurde hinzugefügt. |
-| Bereitstellung | Unterstützung von sortiertem gruppiertem Columnstore-Index in Azure SQL Data Warehouse wurde hinzugefügt. |
+| Bereitstellung | Die Datenvertraulichkeitsklassifizierung wird jetzt für SQL Server 2008 und höher, Azure SQL-Datenbank und Azure Synapse Analytics unterstützt. |
+| Bereitstellung | Unterstützung von Tabellenconstraints in Azure Synapse Analytics wurde hinzugefügt. |
+| Bereitstellung | Unterstützung von sortiertem gruppiertem Columnstore-Index in Azure Synapse Analytics wurde hinzugefügt. |
 | Bereitstellung | Unterstützung von externen Datenquellen (für Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data-Cluster) und externen Tabellen für SQL Server 2019-Big Data-Cluster wurde hinzugefügt. |
 | Bereitstellung | SQL Database Edge-Instanz wurde als unterstützte Edition hinzugefügt. |
 | Bereitstellung | Unterstützung von Servernamen für verwaltete Instanzen im Format „\<server>.\<dnszone>.database.windows.net“ wurde hinzugefügt. |
-| Bereitstellung | Unterstützung des Kopierbefehls in Azure SQL Data Warehouse wurde hinzufügt. |
-| Bereitstellung | Die Bereitstellungsoption „IgnoreTablePartitionOptions“ für während der Veröffentlichung wurde hinzugefügt, um die Neuerstellung von Tabellen zu vermeiden, wenn die Partitionsfunktion für eine Tabelle für Azure SQL Data Warehouse geändert wird. |
+| Bereitstellung | Unterstützung des Kopierbefehls in Azure Synapse Analytics wurde hinzufügt. |
+| Bereitstellung | Die Bereitstellungsoption „IgnoreTablePartitionOptions“ zur Verwendung während der Veröffentlichung wurde hinzugefügt, um die Neuerstellung von Tabellen zu vermeiden, wenn die Partitionsfunktion für eine Tabelle für Azure Synapse Analytics geändert wird. |
 | .NET Core | Unterstützung von Microsoft.Data.SqlClient in der .NET Core-Version von sqlpackage wurde hinzugefügt. |
 | &nbsp; | &nbsp; |
 
@@ -114,9 +114,9 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Bereitstellung | Korrektur der Erstellung von GRANT-Anweisungen für die Berechtigungen AlterAnyDatabaseScopedConfiguration und AlterAnySensitivityClassification |
 | Bereitstellung | Behebung eines Fehlers, aufgrund dessen die Berechtigung für externe Skripts nicht erkannt wurde |
 | Bereitstellung | Korrektur für die Inline-Eigenschaft: Das implizite Hinzufügen der Eigenschaft sollte nicht als Unterschied angezeigt werden, aber die explizite Erwähnung sollte per Skript angezeigt werden. |
-| Bereitstellung | Behebung eines Problems, bei dem Änderungen an einer Tabelle, auf die eine materialisierte Sicht verweist, dazu führen, dass ALTER VIEW-Anweisungen generiert werden, was in Azure SQL Data Warehouse für materialisierte Sichten nicht unterstützt wird |
-| Bereitstellung | Behebung eines beim Veröffentlichen auftretenden Fehlers beim Hinzufügen einer Spalte zu einer Tabelle mit Daten für Azure SQL Data Warehouse |
-| Bereitstellung | Behebung eines Fehlers in Bezug auf das Updateskript, das Daten in eine neue Tabelle verschieben sollte, wenn der Typ der Verteilungsspalte für Azure SQL Data Warehouse geändert wird (Datenverlustszenario) |
+| Bereitstellung | Behebung eines Problems, bei dem Änderungen an einer Tabelle, auf die eine materialisierte Sicht verweist, dazu führen, dass ALTER VIEW-Anweisungen generiert werden, was in Azure Synapse Analytics für materialisierte Sichten nicht unterstützt wird |
+| Bereitstellung | Behebung eines beim Veröffentlichen auftretenden Fehlers beim Hinzufügen einer Spalte zu einer Tabelle mit Daten für Azure Synapse Analytics |
+| Bereitstellung | Behebung eines Fehlers in Bezug auf das Updateskript, das Daten in eine neue Tabelle verschieben sollte, wenn der Typ der Verteilungsspalte für Azure Synapse Analytics geändert wird (Datenverlustszenario) |
 | ScriptDom | Behebung eines ScriptDom-Fehlers, bei dem keine nach einem Inlineindex definierten Inlineeinschränkungen erkannt werden konnten |
 | ScriptDom | Ergänzung der fehlenden schließenden Klammer bei SYSTEM_TIME in ScriptDom in einer Batchanweisung |
 | Always Encrypted | Behebung eines Fehlers, bei dem eine #tmpErrors-Tabelle nicht gelöscht wird, wenn sqlpackage die Verbindung erneut herstellt und die temporäre Tabelle bereits entfernt wurde, da diese entfernt wird, wenn die Verbindung getrennt wird |
@@ -164,7 +164,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Funktion | Details |
 | :------ | :------ |
-| Bereitstellung | Unterstützung für die Bereitstellung in Azure SQL Data Warehouse (GA) hinzugefügt. | 
+| Bereitstellung | Unterstützung für die Bereitstellung in Azure Synapse Analytics (GA) hinzugefügt. | 
 | Plattform | sqlpackage .NET Core GA für macOS, Linux und Windows. | 
 | Sicherheit | SHA1-Codesignierung entfernt. |
 | Bereitstellung | Unterstützung für neue Azure-Datenbankeditionen hinzugefügt: GeneralPurpose, BusinessCritical, Hyperscale |
@@ -203,7 +203,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Funktion | Details |
 | :------ | :------ |
-| Bereitstellung | Unterstützung für die Bereitstellung in Azure SQL Data Warehouse (Vorschau) hinzugefügt. | 
+| Bereitstellung | Unterstützung für die Bereitstellung in Azure Synapse Analytics (Vorschau) hinzugefügt. | 
 | Bereitstellung | Parameter „/p:DatabaseLockTimeout=(INT32 '60')“ zu sqlpackage hinzugefügt. | 
 | Bereitstellung | Parameter „/p:LongRunningCommandTimeout=(INT32)“ zu sqlpackage hinzugefügt. |
 | Exportieren/Extrahieren | Parameter „/p:TempDirectoryForTableData=(STRING)“ zu sqlpackage hinzugefügt. |

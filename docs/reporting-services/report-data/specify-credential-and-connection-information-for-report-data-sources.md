@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f07e5cbcbe3604f140f197d64c4666d992f8112e
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244563"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934866"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen
   Ein Berichtsserver verwendet Anmeldeinformationen zum Herstellen einer Verbindung zu externen Datenquellen, die Inhalt für Berichte oder Empfängerinformationen für ein datengesteuertes Abonnement bereitstellen. Sie können Anmeldeinformationen angeben, die die Windows-Authentifizierung, Datenbankauthentifizierung, keine Authentifizierung oder benutzerdefinierte Authentifizierung verwenden. Beim Senden einer Verbindungsanforderung über das Netzwerk nimmt der Berichtsserver entweder die Identität eines Benutzerkontos oder des Kontos für die unbeaufsichtigte Ausführung an. Weitere Informationen zum Sicherheitskontext, in dem eine Verbindungsanforderung gestellt wird, finden Sie unter [Datenquellenkonfiguration und Netzwerkverbindungen](#DataSourceConfigurationConnections) weiter unten in diesem Thema.  
@@ -49,7 +49,7 @@ ms.locfileid: "75244563"
   
      Beim erstmaligen Speichern, Veröffentlichen oder Navigieren auf einem Berichtsserver oder einer SharePoint-Website müssen unter Umständen Anmeldeinformationen angegeben werden. Die eingegebenen Anmeldeinformationen werden bis zum Ende der Berichts-Generator-Sitzung verwendet. Wenn Sie sich zum Speichern der Anmeldeinformationen entschließen, werden diese zusammen mit den Benutzereinstellungen sicher auf dem Computer gespeichert. In nachfolgenden Berichts-Generator-Sitzungen werden gespeicherte Anmeldeinformationen verwendet, um eine Verbindung mit dem gleichen Berichtsserver oder der gleichen SharePoint-Website herzustellen. Der Berichtsserveradministrator oder SharePoint-Administrator legt fest, welcher Anmeldeinformationstyp verwendet wird.  
   
--   Anmeldeinformationen für die Datenquelle, die Sie auf der Seite [Datenquellen-Anmeldeinformationen eingeben (Dialogfeld), (Berichts-Generator)](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) für eine eingebettete Datenquelle eingeben.  
+-   Anmeldeinformationen für die Datenquelle, die Sie auf der Seite [Datenquellen-Anmeldeinformationen eingeben (Dialogfeld), (Berichts-Generator)](/previous-versions/sql/) für eine eingebettete Datenquelle eingeben.  
   
      Diese Anmeldeinformationen werden vom Berichtsserver verwendet, um eine Datenverbindung mit der externen Datenquelle herzustellen. Für einige Datenquellentypen können Anmeldeinformationen auf dem Berichtsserver sicher gespeichert werden. Dank dieser Anmeldeinformationen können andere Benutzer den Bericht ausführen, ohne Anmeldeinformationen für die zugrunde liegende Datenverbindung angeben zu müssen.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75244563"
   
      Verwenden Sie für freigegebene Datenquellen die Option **Kennwort speichern** , um die Anmeldeinformationen zusammen mit den Benutzereinstellungen lokal auf dem Computer zu speichern. Die gespeicherten Anmeldeinformationen werden vom Berichts-Generator bei jeder Verbindungsherstellung mit der entsprechenden externen Datenquelle verwendet.  
   
- Weitere Informationen finden Sie unter [Datenquelleneigenschaften, Dialogfeld „Allgemein“ (Berichts-Generator)](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) und [Anzeigen einer Berichtsvorschau in Berichts-Generator](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Weitere Informationen finden Sie unter [Datenquelleneigenschaften, Dialogfeld „Allgemein“ (Berichts-Generator)](/previous-versions/sql/) und [Anzeigen einer Berichtsvorschau in Berichts-Generator](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="using-remote-data-sources"></a>Verwenden von Remotedatenquellen  
  Wenn der Bericht Daten von einem Remote-Datenbankserver abruft, überprüfen Sie Folgendes:  
@@ -142,7 +142,7 @@ ms.locfileid: "75244563"
   
 -   Der Bericht ist ein Unterbericht, der die Anmeldeinformationen des übergeordneten Berichts verwendet.  
   
- Unter diesen Bedingungen stellt der Berichtsserver eine Verbindung zu einer Remotedatenquelle mithilfe des Kontos für die unbeaufsichtigte Ausführung her, das Sie vorher definieren müssen. Da der Berichtsserver die Verbindung zu einem Remoteserver nicht mit seinen Dienstanmeldeinformationen herstellt, müssen Sie ein Konto angeben, mit dem der Berichtsserver die Verbindung herstellen kann. Weitere Informationen zum Erstellen dieses Kontos finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Unter diesen Bedingungen stellt der Berichtsserver eine Verbindung zu einer Remotedatenquelle mithilfe des Kontos für die unbeaufsichtigte Ausführung her, das Sie vorher definieren müssen. Da der Berichtsserver die Verbindung zu einem Remoteserver nicht mit seinen Dienstanmeldeinformationen herstellt, müssen Sie ein Konto angeben, mit dem der Berichtsserver die Verbindung herstellen kann. Weitere Informationen zum Erstellen dieses Kontos finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="user-name-and-password-login"></a>Anmeldung mit Benutzername und Kennwort  
  Wenn Sie **Diesen Benutzernamen und dieses Kennwort verwenden**auswählen, müssen Benutzername und Kennwort für den Zugriff auf die Datenquelle angegeben werden. Bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank sind dies möglicherweise die Anmeldeinformationen für eine Datenbankanmeldung. Die Anmeldeinformationen werden zur Authentifizierung an die Datenquelle übergeben.  
@@ -165,5 +165,4 @@ ms.locfileid: "75244563"
  [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Verwalten von Berichtsdatenquellen](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Configure Data Source Properties for a Report (Konfigurieren von Datenquelleneigenschaften für einen Bericht)](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
-  
   

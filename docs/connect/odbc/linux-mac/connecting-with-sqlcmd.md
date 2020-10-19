@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ab5cad910efcf73ab5b708f6a6a9bbf55c0df9b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5d69f1a19e0494b7426eebbac7d8732794f90be8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727416"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987906"
 ---
 # <a name="connecting-with-sqlcmd"></a>Herstellen einer Verbindung mit sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -215,9 +215,13 @@ Sie können bei der Option `-S` von **sqlcmd** oder **bcp** (oder im **sqlcmd** 
   
 System-DSNs werden in der Datei `odbc.ini` im ODBC-SysConfigDir-Verzeichnis (`/etc/odbc.ini` in Standardinstallationen) gespeichert. Benutzer-DSNs werden in `.odbc.ini` im Basisverzeichnis eines Benutzers (`~/.odbc.ini`) gespeichert.
 
+Auf Windows-Systemen sind System- und Benutzer-DSNs in der Registrierung gespeichert und werden mithilfe von odbcad32 verwaltet. Datei-DSNs werden von bcp und sqlcmd nicht unterstützt.
+
 Eine Liste der Einträge, die vom Treiber unterstützt werden, finden Sie unter [Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md).
 
-In einem DSN ist nur der Eintrag DRIVER erforderlich. Für die Verbindung mit einem Server benötigt `sqlcmd` oder `bcp` allerdings den Wert im Eintrag SERVER.  
+In einem DSN ist nur der Eintrag DRIVER erforderlich. Für die Verbindung mit einem Remoteserver benötigt `sqlcmd` oder `bcp` allerdings einen Wert im SERVER-Element. Wenn das SERVER-Element leer oder nicht im DSN vorhanden ist, versuchen `sqlcmd` und `bcp`, eine Verbindung mit der Standardinstanz auf dem lokalen System herzustellen.
+
+Wenn bcp auf Windows-Systemen verwendet wird, benötigen [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] und frühere Versionen den SQL Native Client 11-Treiber (sqlncli11.dll), während für [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] und höher der Microsoft ODBC Driver 17 für SQL Server-Treiber (msodbcsql17.dll) erforderlich ist.  
 
 Wenn diese Option sowohl im DSN als auch in der `sqlcmd`- oder `bcp`-Befehlszeile angegeben ist, überschreibt die Befehlszeilenoption den im DSN verwendeten Wert. Wenn der DSN z.B. einen DATABASE-Eintrag enthält und `sqlcmd`-Befehlszeile **-d** enthält, wird der an **-d** übergebene Wert verwendet. Wenn **Trusted_Connection=yes** im DSN angegeben ist, werden die Kerberos-Authentifizierung sowie der Benutzername ( **–U**) verwendet und das Kennwort ( **–P**), falls vorhanden, ignoriert.
 

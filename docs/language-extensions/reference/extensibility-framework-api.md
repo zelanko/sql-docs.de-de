@@ -4,24 +4,24 @@ titleSuffix: SQL Server Language Extensions
 description: Sie können das Erweiterbarkeitsframework verwenden, um Programmiersprachenerweiterungen für SQL Server zu schreiben. Bei der Erweiterbarkeitsframework-API für Microsoft SQL Server handelt es sich um eine API, die von einer Programmiersprachenerweiterung verwendet werden kann, um mit SQL Server zu interagieren und um Daten mit SQL Server auszutauschen.
 author: dphansen
 ms.author: davidph
-ms.date: 04/09/2020
+ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a918ca8acb263e843915c48fc16e563433d32c2
-ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
+ms.openlocfilehash: 3cc4e75f044476579859443b6a7407d01c3e92ea
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765770"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956861"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>Erweiterbarkeitsframework-API für SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Sie können das Erweiterbarkeitsframework verwenden, um Programmiersprachenerweiterungen für SQL Server zu schreiben. Bei der Erweiterbarkeitsframework-API für Microsoft SQL Server handelt es sich um eine API, die von einer Programmiersprachenerweiterung verwendet werden kann, um mit SQL Server zu interagieren und um Daten mit SQL Server auszutauschen.
 
-Als Ersteller einer Programmiersprachenerweiterung erfahren Sie mithilfe dieses Artikels und des Open-Source-Programms [Java-Programmiersprachenerweiterung für SQL Server](../how-to/extensibility-sdk-java-sql-server.md), wie Sie die API zum Schreiben Ihrer eigenen Programmiersprachenerweiterung verwenden. Den Quellcode für die Java-Programmiersprachenerweiterung finden Sie unter [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
+Als Ersteller einer Programmiersprachenerweiterung können Sie diese Referenz und die Open-Source-Programmiersprachenerweiterungen verwenden, um ein Verständnis dafür zu erwerben, wie Sie die API zum Schreiben eigener Programmiersprachenerweiterungen verwenden können. Den Quellcode für die Programmiersprachenerweiterungen finden Sie unter [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
 
 Im Folgenden finden Sie die Syntax- und Argumentinformationen zu allen API-Funktionen.
 
@@ -36,7 +36,7 @@ Alle Ausgaben der Erweiterung zur Standardausgabe oder zu Fehlerstreams werden i
 
 ## <a name="init"></a>Init
 
-Diese Funktion wird nur einmal aufgerufen und zum Initialisieren der Laufzeit für die Ausführung verwendet. Beispielsweise initialisiert die Java-Erweiterung JVM.
+Diese Funktion wird nur einmal aufgerufen und zum Initialisieren der Laufzeit für die Ausführung verwendet. 
 
 ### <a name="syntax"></a>Syntax
 
@@ -304,7 +304,7 @@ Wenn in [sp_execute_external_script](../../relational-databases/system-stored-pr
 \[Eingabe\] Die Anzahl der Zeilen in *Data*
 
 *Daten*  
-\[Eingabe\] Ein zweidimensionales Array, das das Resultset von `@input_data_1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) enthält
+\[Eingabe\] Ein zweidimensionales Array, das das Resultset von `@input_data_1` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) enthält.
 
 Die Gesamtanzahl der Spalten ist der Wert *InputSchemaColumnsNumber*, der beim [InitSession](#initsession)-Aufruf abgerufen wurde. Jede Spalte enthält *RowsNumber*-Elemente, die gemäß dem Spaltentyp aus [InitColumn](#initcolumn) interpretiert werden sollten.
 
@@ -407,7 +407,7 @@ Wenn in [sp_execute_external_script](../../relational-databases/system-stored-pr
 \[Ausgabe\] Ein Zeiger auf einen Puffer, der die Anzahl der Zeilen in *Data* enthält
 
 *Daten*  
-\[Ausgabe\] Ein Zeiger auf ein zweidimensionales Array, das von der Erweiterung zugeordnet wurde und das Resultset von `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) enthält
+\[Ausgabe\] Ein Zeiger auf ein zweidimensionales Array, das von der Erweiterung zugeordnet wurde und das Resultset von `@script` in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) enthält.
 
 Die Gesamtanzahl der Spalten sollte dem Wert *OutputSchemaColumnsNumber* entsprechen, der beim [Execute](#execute)-Aufruf abgerufen wurde. Jede Spalte sollte *RowsNumber*-Elemente enthalten, die gemäß dem Spaltentyp aus [GetResultColumn](#getresultcolumn) interpretiert werden sollten.
 
@@ -638,3 +638,5 @@ SQLRETURN UninstallExternalLibrary(
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [Microsoft-Erweiterbarkeits-SDK für Java für SQL Server](../how-to/extensibility-sdk-java-sql-server.md)
+- [Benutzerdefinierte Python-Runtime](../../machine-learning/install/custom-runtime-python.md)
+- [Benutzerdefinierte R-Runtime](../../machine-learning/install/custom-runtime-r.md).

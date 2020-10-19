@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 88c6ae8820997bf1544ac497df6cb251c215a1ac
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: da34a74163bae218b13d8f95ebcf5797731790ac
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603494"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006456"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Von Reporting Services unterstützte Datenquellen (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Berichtsdaten von Datenquellen über eine modulare und erweiterbare Datenschicht abgerufen, für die Datenverarbeitungserweiterungen verwendet werden. Zum Abrufen von Berichtsdaten von einer Datenquelle müssen Sie eine Datenverarbeitungserweiterung auswählen, die den Typ der Datenquelle, die Version der für die Datenquelle ausgeführten Software und die Plattform der Datenquelle (32-Bit oder 64-Bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) unterstützt.  
@@ -157,7 +157,7 @@ ms.locfileid: "91603494"
   
  Wenn Sie den Abfrage-Designer im grafischen Modus verwenden, wird die Abfrage analysiert und möglicherweise umgeschrieben. Ein textbasierter Abfrage-Designer ist ebenfalls für das Schreiben von Abfragen verfügbar. Wenn Sie die exakte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax für eine Abfrage steuern möchten, verwenden Sie den textbasierten Abfrage-Designer.   
   
- Das Abrufen von Daten aus [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SQL Data Warehouse und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist ähnlich, aber es gibt einige Anforderungen, die nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] gelten. Weitere Informationen finden Sie unter [Azure SQL-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
+ Das Abrufen von Daten aus [!INCLUDE[ssSDS](../../includes/sssds-md.md)], Azure Synapse Analytics und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist ähnlich, aber es gibt einige Anforderungen, die nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]gelten. Weitere Informationen finden Sie unter [Azure SQL-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
   
  [Zurück zur Datenquellentabelle](#DataSourcesTable)  
   
@@ -171,7 +171,7 @@ Die Unterstützung für diese Datenquelle wurde eingestellt. Verwenden Sie den S
   
  Für diesen Datenanbieter wird das ADOMD.NET-Objektmodell verwendet, um Abfragen mit XMLA (XML for Analysis), Version 1.0, zu erstellen. Ergebnisse werden als vereinfachtes Rowset zurückgegeben. Weitere Informationen finden Sie unter [Analysis Services Connection Type for MDX (SSRS) (Analysis Services-Verbindungstyp für MDX (SSRS))](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Analysis Services Connection Type for DMX (SSRS) (Analysis Services-Verbindungstyp für DMX (SSRS))](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX Query Designer User Interface (Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services)](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) und [Analysis Services DMX Query Designer User Interface (Benutzeroberfläche des DMX-Abfrage-Designers für Analysis Services)](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md). 
  
- Beachten Sie bei Azure Analysis Services und Power BI Premium-Datasetdatenquellen, dass die mehrstufige Authentifizierung für die Anmeldeinformationen, mit denen eine Verbindung zur Datenquelle hergestellt wird, deaktiviert sein muss. Wenn für Ihre Umgebung die mehrstufige Authentifizierung aktiviert werden muss, ziehen Sie den <a href="https://docs.microsoft.com/azure/active-directory/conditional-access/overview">bedingten Azure Active Directory-Zugriff</a> als Option in Betracht, um die mehrstufige Authentifizierung für die in der Datenquelle verwendeten Anmeldeinformationen zu deaktivieren.
+ Beachten Sie bei Azure Analysis Services und Power BI Premium-Datasetdatenquellen, dass die mehrstufige Authentifizierung für die Anmeldeinformationen, mit denen eine Verbindung zur Datenquelle hergestellt wird, deaktiviert sein muss. Wenn für Ihre Umgebung die mehrstufige Authentifizierung aktiviert werden muss, ziehen Sie den <a href="/azure/active-directory/conditional-access/overview">bedingten Azure Active Directory-Zugriff</a> als Option in Betracht, um die mehrstufige Authentifizierung für die in der Datenquelle verwendeten Anmeldeinformationen zu deaktivieren.
   
  Bei Verbindung mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquelle unterstützt die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenverarbeitungserweiterung mehrwertige Parameter und ordnet Zell- und Elementeigenschaften erweiterten Eigenschaften zu, die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt werden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
@@ -240,7 +240,7 @@ Um die Oracle-Clienttools zu installieren, gehen Sie folgendermaßen vor:
   
  Benannte Parameter werden von dieser Erweiterung unterstützt. Oracle Version 11g oder höher unterstützt Parameter mit mehreren Werten. Verwenden Sie bei unbenannten, positionsabhängigen Parametern die OLE DB-Datenverarbeitungserweiterung mit dem Datenanbieter „ [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für Oracle“. Weitere Informationen zum Konfigurieren von Oracle als Datenquelle finden Sie unter [Verwenden von Reporting Services zum Konfigurieren und Zugreifen auf eine Oracle-Datenquelle](https://support.microsoft.com/kb/834305). Weitere Informationen zur Konfiguration zusätzlicher Berechtigungen finden Sie in der [Knowledge Base unter](https://support.microsoft.com/kb/870668) Hinzufügen von Berechtigunen für den NETWORK SERVICE-Sicherheitsprinzipal [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- Sie können von gespeicherten Prozeduren mit mehreren Eingabeparametern Daten abrufen, die gespeicherte Prozedur darf jedoch nur einen Ausgabecursor zurückgeben. Weitere Informationen finden Sie im Abschnitt [Zurückgeben von Ergebnissen mit Oracle-CURSORs vom Typ REF](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) des Artikels „Abrufen von Daten mithilfe eines DataReader“.
+ Sie können von gespeicherten Prozeduren mit mehreren Eingabeparametern Daten abrufen, die gespeicherte Prozedur darf jedoch nur einen Ausgabecursor zurückgeben. Weitere Informationen finden Sie im Abschnitt [Zurückgeben von Ergebnissen mit Oracle-CURSORs vom Typ REF](/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) des Artikels „Abrufen von Daten mithilfe eines DataReader“.
   
  Weitere Informationen finden Sie unter [Oracle-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md). Weitere Informationen zum zugeordneten Abfrage-Designer finden Sie unter [Grafische Benutzeroberfläche des Abfrage-Designers](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -317,5 +317,4 @@ Um die Oracle-Clienttools zu installieren, gehen Sie folgendermaßen vor:
  [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
   

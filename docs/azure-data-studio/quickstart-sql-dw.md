@@ -1,6 +1,6 @@
 ---
-title: Herstellen einer Verbindung mit und Abfragen einer Azure SQL Data Warehouse-Datenbank
-description: In diesem Schnellstart erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit einer Azure SQL Data Warehouse-Datenbank herstellen und eine Abfrage ausführen.
+title: Verbinden und Abfragen mit Azure Synapse Analytics
+description: In diesem Schnellstart erfahren Sie, wie Sie mithilfe von Azure Data Studio eine Verbindung herstellen, um einen dedizierten SQL-Pool in Azure Synapse Analytics zu verwenden und eine Abfrage auszuführen.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
@@ -9,30 +9,30 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c2282220dff18a7f054cc5fd01b3670b6fd14d43
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766369"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005483"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Schnellstart: Verwenden von Azure Data Studio, um eine Verbindung mit Daten in Azure SQL Data Warehouse herzustellen und sie abzufragen
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>Schnellstart: Verwenden von Azure Data Studio zum Verbinden mit und Abfragen von Daten mithilfe eines dedizierten SQL-Pools in Azure Synapse Analytics
 
-In diesem Schnellstart erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit Azure SQL Data Warehouse herstellen und anschließend Transact-SQL-Anweisungen verwenden, um Daten zu erstellen, einzufügen und auszuwählen. 
+In diesem Schnellstart erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit einem dedizierten SQL-Pool in Azure Synapse Analytics herstellen und anschließend Transact-SQL-Anweisungen verwenden, um Daten zu erstellen, einzufügen und auszuwählen. 
 
 ## <a name="prerequisites"></a>Voraussetzungen
-Um diesen Schnellstart ausführen zu können, benötigen Sie Azure Data Studio und eine Azure SQL Data Warehouse-Datenbank.
+Um diesen Schnellstart ausführen zu können, benötigen Sie Azure Data Studio und einen dedizierten SQL-Pool in Azure Synapse Analytics.
 
 - [Installieren Sie Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
-Wenn Sie noch keine SQL Data Warehouse-Datenbank haben, lesen Sie [Erstellen einer Azure SQL Data Warehouse-Instanz](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+Wenn Sie noch nicht über einen dedizierten SQL-Pool verfügen, lesen Sie [Erstellen eines dedizierten SQL-Pools](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 Merken Sie sich den Servernamen und die Anmeldeinformationen!
 
 
-## <a name="connect-to-your-data-warehouse"></a>Herstellen einer Verbindung mit Ihrer Data Warehouse-Datenbank
+## <a name="connect-to-your-dedicated-sql-pool"></a>Herstellen einer Verbindung mit Ihrem dedizierten SQL-Pool
 
-Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure SQL Data Warehouse-Server herzustellen.
+Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure Synapse Analytics-Server herzustellen.
 
 1. Wenn Sie Azure Data Studio zum ersten Mal ausführen, sollte die **Verbindungsseite** geöffnet werden. Wird die Seite **Verbindung** nicht angezeigt, klicken Sie auf **Verbindung hinzufügen**, oder klicken Sie in der Randleiste **SERVER** auf das Symbol **Neue Verbindung**:
    
@@ -58,7 +58,7 @@ Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure SQL Data War
 
 4. Nachdem die Verbindung erfolgreich hergestellt wurde, wird Ihr Server in der Randleiste *SERVER* geöffnet.
 
-## <a name="create-the-tutorial-data-warehouse"></a>Erstellen der Data Warehouse-Datenbank für das Tutorial
+## <a name="create-the-tutorial-dedicated-sql-pool"></a>Erstellen des dedizierten SQL-Pools für das Tutorial
 1. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf Ihren Server, und wählen Sie **Neue Abfrage** aus.
 
 1. Fügen Sie den folgenden Codeausschnitt in den Abfrage-Editor ein, und klicken Sie auf **Ausführen**:
@@ -145,4 +145,4 @@ Bereinigen Sie die Ressourcen, indem Sie die Ressourcengruppen löschen, die Sie
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie erfolgreich eine Verbindung mit einer Azure SQL Data Warehouse-Datenbank hergestellt und eine Abfrage ausgeführt haben, wechseln Sie zum [Tutorial zum Code-Editor](tutorial-sql-editor.md).
+Nachdem Sie erfolgreich eine Verbindung mit Azure Synapse Analytics hergestellt und eine Abfrage ausgeführt haben, wechseln Sie zum [Tutorial zum Code-Editor](tutorial-sql-editor.md).

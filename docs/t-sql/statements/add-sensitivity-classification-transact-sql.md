@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/10/2020
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: 641896fb407beabdedbd30d98cc8d94d16d31efe
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cc5f77d8590434d8d8d03e5ef8ab68365be3c4ca
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991881"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784786"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "88991881"
 
 Diese Anweisung fügt einer oder mehreren Datenbankspalten Metadaten zur Vertraulichkeitsklassifizierung hinzu. Die Klassifizierung kann eine Vertraulichkeitsbezeichnung und einen Informationstyp umfassen.
 
-Für SQL Server wurde dies in SQL Server 2019 eingeführt.
+Für SQL Server wurde dies in SQL Server 2012 eingeführt.
 
 Die Klassifizierung sensibler Daten in Ihrer Datenbankumgebung ermöglicht größere Transparenz und besseren Schutz. Weitere Informationen finden Sie unter [Azure SQL-Datenbank – Datenermittlung und -klassifizierung](https://aka.ms/sqlip).
 

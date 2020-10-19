@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8f194c043ded9b8f663a6bcbfdb77ef408461468
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 851452d2fa7df6cab7771da294e01fea926b7af3
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726791"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081849"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,7 +62,7 @@ Wird für alle Daten in einem Resultset kein Abrufvorgang (FETCH) ausgeführt, w
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
-## <a name="example"></a>Beispiel  
+## <a name="query-example"></a>Abfragebeispiel  
 Dieses Beispiel zeigt mehrere Abfragen.  
   
 ```  
@@ -118,7 +118,7 @@ $stmt = null;
 ?>  
 ```
 
-## <a name="example"></a>Beispiel
+## <a name="sql_variant-example"></a>Sql_variant-Beispiel
 In diesem Codebeispiel wird das Erstellen einer Tabelle mit Werten des Datentyps [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) und das Abrufen der eingefügten Daten veranschaulicht.
 
 ```

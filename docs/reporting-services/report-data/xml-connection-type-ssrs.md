@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c4bbc8f1c5b96f659936cb955c1f6f31bd0ef0da
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458498"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933443"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer XML-Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "XML" basiert. Dieser integrierte Datenquellentyp basiert auf der XML-Datenerweiterung. Verwenden Sie diesen Datenquellentyp, um eine Verbindung mit XML-Dokumenten, Webdiensten oder in die Abfrage eingebetteten XML-Daten herzustellen und Daten abzurufen.  
@@ -45,7 +45,7 @@ ms.locfileid: "86458498"
   
 -   Aktueller Windows-Benutzer (auch bekannt als integrierte Sicherheit).  
   
--   Anmeldeinformationen sind nicht erforderlich. Wenn Sie keine Anmeldeinformationen auswählen, wird der anonyme Zugriff verwendet. Stellen Sie sicher, dass für die Verbindung des Berichtsservers mit einer externen Datenquelle ein Konto für die unbeaufsichtigte Ausführung definiert ist. Die XML-Datenverarbeitungserweiterung übergibt keine Anmeldeinformationen an die Ziel-URL oder den Webdienst. Die Verbindung wird nur dann hergestellt, wenn Sie das Konto für die unbeaufsichtigte Ausführung definiert haben. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+-   Anmeldeinformationen sind nicht erforderlich. Wenn Sie keine Anmeldeinformationen auswählen, wird der anonyme Zugriff verwendet. Stellen Sie sicher, dass für die Verbindung des Berichtsservers mit einer externen Datenquelle ein Konto für die unbeaufsichtigte Ausführung definiert ist. Die XML-Datenverarbeitungserweiterung übergibt keine Anmeldeinformationen an die Ziel-URL oder den Webdienst. Die Verbindung wird nur dann hergestellt, wenn Sie das Konto für die unbeaufsichtigte Ausführung definiert haben. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Gespeicherte Anmeldeinformationen oder Aufforderungen zur Eingabe von Anmeldeinformationen werden nicht unterstützt. Wenn Sie die integrierte Sicherheit von Windows deaktiviert haben, können Sie sie nicht zum Abrufen von Daten verwenden. Wenn Sie gespeicherte Anmeldeinformationen oder auf Anforderung einzugebende Anmeldeinformationen angeben, tritt ein Laufzeitfehler auf.  
   

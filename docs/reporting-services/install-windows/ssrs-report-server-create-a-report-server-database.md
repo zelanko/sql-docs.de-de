@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603379"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935567"
 ---
-# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Erstellen einer Berichtsserver-Datenbank, SSRS-Konfigurations-Manager  
+# <a name="create-a-report-server-database-report-server-configuration-manager"></a>Erstellen einer Berichtsserver-Datenbank, Berichtsserver-Konfigurations-Manager  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -49,7 +49,7 @@ Im Folgenden finden Sie Beispielnamen der drei Datenbanken im SharePoint-Modus:
  ### <a name="native-mode"></a>Einheitlicher Modus
  Sie können die Berichtsserver-Datenbank im einheitlichen Modus wie folgt erstellen:  
   
-- **Automatisch**. Verwenden Sie den Setup-Assistenten für SQL Server, wenn Sie die Standardkonfigurationsoption für eine Installation auswählen. Im SQL Server-Installations-Assistenten ist diese Option die Option **Installieren und konfigurieren** auf der Seite **Berichtsserver-Installationsoptionen**. Wenn Sie die Option **Nur installieren** auswählen, müssen Sie die Datenbank mit dem SQL Server-Konfigurations-Manager für Reporting Services erstellen.  
+- **Automatisch**. Verwenden Sie den Setup-Assistenten für SQL Server, wenn Sie die Standardkonfigurationsoption für eine Installation auswählen. Im SQL Server-Installations-Assistenten ist diese Option die Option **Installieren und konfigurieren** auf der Seite **Berichtsserver-Installationsoptionen**. Wenn Sie die Option **Nur installieren** auswählen, müssen Sie die Datenbank mit dem SQL Server-Berichtsserver-Konfigurations-Manager erstellen.  
   
 - **Manuell**. Verwenden Sie den SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurations-Manager. Erstellen Sie die Berichtsserver-Datenbank manuell, wenn Sie zum Hosten der Datenbank eine Remote-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwenden. Weitere Informationen finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
@@ -85,7 +85,7 @@ Die Seite **Berichtsserver-Installationsoptionen** hat nur eine Option für den 
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
 
-Wenn Sie die Berichtsserver-Datenbank auf einem Remotecomputer erstellen, konfigurieren Sie die Verbindung so, dass ein Domänenbenutzerkonto oder ein Dienstkonto mit Netzwerkzugriff verwendet wird. Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Remoteinstanz verwenden, sollten Sie überlegen, welche Anmeldeinformationen der Berichtsserver für die Verbindung zur Instanz verwenden soll. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Wenn Sie die Berichtsserver-Datenbank auf einem Remotecomputer erstellen, konfigurieren Sie die Verbindung so, dass ein Domänenbenutzerkonto oder ein Dienstkonto mit Netzwerkzugriff verwendet wird. Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Remoteinstanz verwenden, sollten Sie überlegen, welche Anmeldeinformationen der Berichtsserver für die Verbindung zur Instanz verwenden soll. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
 > Der Berichtsserver und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die die Berichtsserver-Datenbank hostet, können sich in verschiedenen Domänen befinden. Bei einer Internetbereitstellung ist es üblich, einen Server zu verwenden, der sich hinter einer Firewall befindet. 
@@ -98,6 +98,6 @@ Wenn Sie die Berichtsserver-Datenbank auf einem Remotecomputer erstellen, konfig
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Lesen Sie [Reporting Services-Konfigurations-Manager](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434).  
+Informieren Sie sich über den [Berichtsserver-Konfigurations-Manager](reporting-services-configuration-manager-native-mode.md).  
 
 Haben Sie dazu Fragen? Stellen Sie Ihre Frage im [Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231).

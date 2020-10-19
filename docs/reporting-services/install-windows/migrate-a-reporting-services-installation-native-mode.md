@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d45e00b7d99f87ec3edc9bdd123d5392412dcf73
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454579"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934844"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrieren einer Reporting Services-Installation (einheitlicher Modus)
 
@@ -122,7 +122,7 @@ Weitere Informationen zu Änderungen in Microsoft SQL Server Reporting Services 
 
  Vor dem Installieren einer neuen Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]müssen Sie alle Dateien der aktuellen Installation sichern.  
   
-1. Sichern Sie den Verschlüsselungsschlüssel für die Berichtsserver-Datenbank. Dieser Schritt ist für den Erfolg der Migration entscheidend. Im weiteren Verlauf des Migrationsprozesses müssen Sie den Schlüssel wiederherstellen, damit der Berichtsserver wieder auf verschlüsselte Daten zugreifen kann. Verwenden Sie den Reporting Services-Konfigurations-Manager, um den Schlüssel zu sichern.  
+1. Sichern Sie den Verschlüsselungsschlüssel für die Berichtsserver-Datenbank. Dieser Schritt ist für den Erfolg der Migration entscheidend. Im weiteren Verlauf des Migrationsprozesses müssen Sie den Schlüssel wiederherstellen, damit der Berichtsserver wieder auf verschlüsselte Daten zugreifen kann. Verwenden Sie den Berichtsserver-Konfigurations-Manager, um den Schlüssel zu sichern.  
   
 2. Sichern Sie die Berichtsserver-Datenbank mit einer der unterstützten Methoden zum Sichern einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank. Weitere Informationen finden Sie in der Anleitung zum Sichern der Berichtsserver-Datenbank unter [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus)](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
@@ -202,7 +202,7 @@ Weitere Informationen zu Änderungen in Microsoft SQL Server Reporting Services 
   
 1. Ermitteln Sie, ob die Assemblys unterstützt werden oder neu kompiliert werden müssen:
 
-    * Benutzerdefinierte Sicherheitserweiterungen müssen mithilfe der [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx)-Schnittstelle umgeschrieben werden.
+    * Benutzerdefinierte Sicherheitserweiterungen müssen mithilfe der [IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2)-Schnittstelle umgeschrieben werden.
   
     * Benutzerdefinierte Renderingerweiterungen für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] müssen mithilfe des Renderingobjektmodells (ROM) umgeschrieben werden.  
   
@@ -237,15 +237,15 @@ Weitere Informationen zu Änderungen in Microsoft SQL Server Reporting Services 
 > [!IMPORTANT]
 >  Wenn Berichtsserver in der Bereitstellung für die horizontales Skalieren online sind und nicht migriert wurden, könnte die Ausnahme *rsInvalidReportServerDatabase* auftreten, weil sie ein älteres Schema verwenden, wenn sie mit den aktualisierten verbunden werden.  
 
-Wenn der migrierte Berichtsserver als freigegebene Datenbank für eine Bereitstellung für horizontales Skalieren konfiguriert wurde, müssen Sie alle alten Verschlüsselungsschlüssel aus der Tabelle **Keys** in der **ReportServer**-Datenbank vor dem Konfigurieren des Berichtsserverdiensts löschen. Wenn die Schlüssel nicht entfernt werden, versucht der migrierte Berichtsserver, im Bereitstellungsmodus für horizontales Skalieren zu initialisieren. Weitere Informationen finden Sie unter [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) und [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+Wenn der migrierte Berichtsserver als freigegebene Datenbank für eine Bereitstellung für horizontales Skalieren konfiguriert wurde, müssen Sie alle alten Verschlüsselungsschlüssel aus der Tabelle **Keys** in der **ReportServer**-Datenbank vor dem Konfigurieren des Berichtsserverdiensts löschen. Wenn die Schlüssel nicht entfernt werden, versucht der migrierte Berichtsserver, im Bereitstellungsmodus für horizontales Skalieren zu initialisieren. Weitere Informationen finden Sie unter [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) und [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
 
 Die Schlüssel für horizontales Skalieren können nicht mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager gelöscht werden. Die alten Schlüssel müssen mit SQL Server Management Studio aus der Tabelle **Keys** in der **ReportServer** -Datenbank gelöscht werden. Löschen Sie alle Zeilen in der Keys-Tabelle. Durch diese Aktion wird die Tabelle wie in den folgenden Schritten dargestellt bereinigt und auf das Wiederherstellen des symmetrischen Schlüssels vorbereitet.  
 
 Vor dem Löschen der Schlüssel wird empfohlen, die symmetrischen Verschlüsselungsschlüssel zu sichern. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie den Schlüssel sichern. Öffnen Sie den Konfigurations-Manager, klicken Sie auf die Registerkarte „Verschlüsselungsschlüssel“, und klicken Sie dann auf **Sichern**. Sie können auch WMI-Befehle zum Sichern des Verschlüsselungsschlüssels schreiben. Weitere Informationen finden Sie unter [BackupEncryptionKey-Methode (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md).  
   
-1. Starten Sie den Konfigurations-Manager für Reporting Services, und stellen Sie eine Verbindung mit der installierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Instanz her. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1. Starten Sie den Berichtsserver-Konfigurations-Manager, und stellen Sie eine Verbindung mit der installierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Instanz her. Weitere Informationen finden Sie unter [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md) (Konfigurations-Manager des Berichtsservers – &#40;einheitlicher Modus&#41;).  
   
-2. Konfigurieren Sie URLs für den Berichtsserver und das Webportal. Weitere Informationen finden Sie unter [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2. Konfigurieren Sie URLs für den Berichtsserver und das Webportal. Weitere Informationen finden Sie unter [Konfigurieren einer URL &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 3. Konfigurieren Sie die Berichtsserver-Datenbank, und wählen Sie dabei die vorhandene Berichtsserver-Datenbank aus der vorherigen Installation aus. Nach einer erfolgreichen Konfiguration werden die Berichtsserverdienste neu gestartet, und nach Herstellung einer Verbindung mit der Berichtsserver-Datenbank wird die Datenbank automatisch auf SQL Server Reporting Services aktualisiert. Informationen zum Ausführen des Assistenten zum Ändern der Datenbank, mit dem Sie eine Berichtsserver-Datenbank erstellen oder auswählen, finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
@@ -300,6 +300,6 @@ Nachdem Sie Ihren Berichtsserver erfolgreich zu einer neuen Instanz migriert hab
 * [Berichtsserver-Datenbank](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 * [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 * [Reporting Services-Abwärtskompatibilität](../../reporting-services/reporting-services-backward-compatibility.md)   
-* [Reporting Services-Konfigurations-Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+* [Berichtsserver-Konfigurations-Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

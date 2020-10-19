@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8397412801d38107c3532bea377d7bd150561f17
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4b9f2d2db41914062d791d675577bc8f8664e903
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913638"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935237"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig-Hilfsprogramm (SSRS)
   Mit dem Hilfsprogramm **rsconfig.exe** werden Verbindungs- und Kontowerte in der Datei „RSReportServer.config“ verschlüsselt und gespeichert. Die verschlüsselten Werte umfassen Verbindungsinformationen für Berichtsserver-Datenbanken und Kontowerte, die für die unbeaufsichtigte Berichtsverarbeitung verwendet werden.  
@@ -121,10 +121,10 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  (Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;Berichtsserver-Konfigurations-Manager&#41;)  
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Speichern verschlüsselter Berichtsserverdaten &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services-Konfigurationsdateien](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
  [RsReportServer.config Configuration File (RSReportServer.config-Konfigurationsdatei)](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  

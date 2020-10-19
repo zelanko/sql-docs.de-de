@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2c05251bb8ac19f3c4594a263c7b108a8dbc90a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b741c74a2cc614ecab4e866f9bcfe26618133aa4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498083"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891900"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Installieren des Reporting Services 2016-Berichtsservers im einheitlichen Modus
 
@@ -58,7 +58,7 @@ Beim Setup werden die folgenden [!INCLUDE[ssRSnoversion](../../includes/ssrsnove
 
 - Verbindungsinformationen, auch als Datenquellenname (Data Source Name, DSN) bezeichnet, für die Berichtsserver-Datenbanken.
 
- Setup konfiguriert weder das unbeaufsichtigte Ausführungskonto noch Berichtsserver-E-Mail, Sicherung der Verschlüsselungsschlüssel noch die Bereitstellung für horizontales Skalieren. Sie können diese Eigenschaften mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager konfigurieren. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+ Setup konfiguriert weder das unbeaufsichtigte Ausführungskonto noch Berichtsserver-E-Mail, Sicherung der Verschlüsselungsschlüssel noch die Bereitstellung für horizontales Skalieren. Sie können diese Eigenschaften mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager konfigurieren. Weitere Informationen finden Sie unter [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md) (Konfigurations-Manager des Berichtsservers – &#40;einheitlicher Modus&#41;).
 
 ## <a name="when-to-install-the-default-configuration-for-native-mode"></a><a name="bkmk_whentoinstalldefaultconfig"></a> Sinnvoller Einsatz für die Installation der Standardkonfiguration im einheitlichen Modus
 

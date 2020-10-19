@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: 20a1d961035974c3c268be3e727133d731f673c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042851"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935447"
 ---
-# <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Konfigurieren des Berichtsserver-Dienstkontos (SSRS-Konfigurations-Manager)
+# <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>Configure the Report Server Service Account (SSRS Configuration Manager) (Konfigurieren des Berichtsserver-Dienstkontos (Berichtsserver-Konfigurations-Manager))
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird als Einzeldienst mit einem Report Server-Webdienst (Berichts-Manager), [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], und einer Hintergrundverarbeitungsanwendung implementiert, die für die geplante Berichtsverarbeitung und die Abonnementübermittlung verwendet wird. In diesem Thema wird erläutert, wie das Dienstkonto zu Beginn konfiguriert wird. Außerdem wird beschrieben, wie das Konto oder das Kennwort mit dem Reporting Services-Konfigurationstool geändert wird.  
   
@@ -99,7 +99,7 @@ Die folgenden Richtlinien und Links in diesem Abschnitt können Ihnen helfen, de
   
 ## <a name="updating-an-expired-password"></a>Aktualisieren eines abgelaufenen Kennworts
 
- Wenn der Berichtsserverdienst unter einem Domänenkonto ausgeführt wird und das Kennwort abläuft, bevor Sie es im Konfigurations-Manager für Reporting Services aktualisieren können, wird der Dienst erst wieder gestartet, wenn Sie ein neues Kennwort festlegen.  
+ Wenn der Berichtsserverdienst unter einem Domänenkonto ausgeführt wird und das Kennwort abläuft, bevor Sie es im Berichtsserver-Konfigurations-Manager aktualisieren können, wird der Dienst erst wieder gestartet, wenn Sie ein neues Kennwort festlegen.  
   
  Wenn das Kennwort des Dienstkontos für das [!INCLUDE[ssDE](../../includes/ssde-md.md)] abgelaufen ist, tritt beim Versuch, eine Verbindung mit dem Berichtsserver herzustellen, der Fehler **rsReportServerDatabaseUnavailable** auf. Durch Zurücksetzen des Kennworts wird der Fehler behoben.  
   
@@ -115,5 +115,4 @@ Die folgenden Richtlinien und Links in diesem Abschnitt können Ihnen helfen, de
   
 ## <a name="next-steps"></a>Nächste Schritte
 
- [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Konfigurieren von Berichtsserver-URLs &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Berichtsserver-Konfigurations-Manager&#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

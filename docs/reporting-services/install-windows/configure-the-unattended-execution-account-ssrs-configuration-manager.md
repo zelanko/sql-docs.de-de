@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866317"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933556"
 ---
-# <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
+# <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>Configure the Unattended Execution Account (Report Server Configuration Manager) (Konfigurieren des unbeaufsichtigten Ausführungskontos (Berichtsserver-Konfigurations-Manager))
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt ein besonderes Konto bereit, das für die unbeaufsichtigte Berichtsverarbeitung und zum Senden von Verbindungsanforderungen über das Netzwerk verwendet wird. Das Konto wird bei folgenden Vorgängen verwendet:  
   
 -   Senden Sie Verbindungsanforderungen über das Netzwerk für Berichte, die Datenbankauthentifizierung verwenden, oder stellen Sie die Verbindung mit externen Berichtsdatenquellen her, für die keine Authentifizierung erforderlich ist oder verwendet wird. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
@@ -41,7 +41,7 @@ ms.locfileid: "74866317"
   
  Verwenden Sie zum Angeben des Kontos das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool oder das Hilfsprogramm **rsconfig** . Das einfachste Verfahren zum Konfigurieren des Kontos für die unbeaufsichtigte Ausführung besteht darin, das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool auszuführen und die Anmeldeinformationen auf der Seite Ausführungskonto anzugeben.  
   
-1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool, und stellen Sie eine Verbindung zu der zu konfigurierenden Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool, und stellen Sie eine Verbindung zu der zu konfigurierenden Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Berichtsserver-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Wählen Sie auf der Seite „Ausführungskonto“ die Option **Ausführungskonto angeben**aus.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74866317"
   
 3.  Geben Sie den folgenden Befehl ein, um das Konto in einer lokalen Berichtsserverinstanz zu konfigurieren:  
   
-     **rsConfig -e -u\<Domäne/Benutzername> -p\<Kennwort**  
+     **rsconfig -e -u\<domain/username> -p\<password>**  
   
  **rsconfig -e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie unter [rsconfig-Hilfsprogramm &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
  
@@ -106,6 +106,6 @@ ms.locfileid: "74866317"
  Die Kontoinformationen werden aus der Datei RSReportServer.config entfernt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Reporting Services-Konfigurations-Manager (einheitlicher SSRS-Modus)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Berichtsserver-Konfigurations-Manager (einheitlicher SSRS-Modus)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

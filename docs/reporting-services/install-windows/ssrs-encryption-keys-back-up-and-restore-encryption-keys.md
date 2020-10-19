@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5da541204707bc3ad3b47a8ade5f1f1af6506ad5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454564"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933764"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS-Verschlüsselungsschlüssel: Sichern und Wiederherstellen
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88454564"
   
  Das Wiederherstellen der Sicherungskopie des Verschlüsselungsschlüssels ist nach folgenden Ereignissen erforderlich:  
   
--   Ändern des Kontonamens des Report Server-Windows-Dienstes oder Zurücksetzen des Kennwortes. Wenn Sie den Reporting Services-Konfigurations-Manager verwenden, wird der Schlüssel beim Ändern des Dienstkontonamens automatisch gesichert.  
+-   Ändern des Kontonamens des Report Server-Windows-Dienstes oder Zurücksetzen des Kennwortes. Wenn Sie den Berichtsserver-Konfigurations-Manager verwenden, wird der Schlüssel beim Ändern des Dienstkontonamens automatisch gesichert.  
   
     > [!NOTE]
     > Das Zurücksetzen des Kennwortes ist nicht dasselbe wie das Ändern des Kennwortes. Für das Zurücksetzen eines Kennwortes ist eine Berechtigung zum Überschreiben von Kontoinformationen auf dem Domänencontroller erforderlich. Das Zurücksetzen von Kennwörtern wird von einem Systemadministrator ausgeführt, wenn Sie ein bestimmtes Kennwort vergessen oder nicht kennen. Nur das Zurücksetzen von Kennwörtern erfordert das Wiederherstellen des symmetrischen Schlüssels. Wenn Sie das Kennwort für ein Konto regelmäßig ändern, müssen Sie den symmetrischen Schlüssel nicht zurücksetzen.  
@@ -47,7 +47,7 @@ ms.locfileid: "88454564"
 
  Beim Sichern des symmetrischen Schlüssels wird der Schlüssel in die von Ihnen angegebene Datei geschrieben. Anschließend wird der Schlüssel mithilfe des von Ihnen angegebenen Kennwortes verschlüsselt. Der symmetrische Schlüssel darf keinesfalls unverschlüsselt gespeichert werden, d. h., Sie müssen beim Speichern auf einem Datenträger ein Kennwort angeben, um den Schlüssel zu verschlüsseln. Sie sollten die erstellte Datei an einem sicheren Ort speichern und sich das Kennwort zum Entsperren der Datei **unbedingt merken** . Zum Sichern des symmetrischen Schlüssels können Sie die folgenden Tools verwenden:  
   
- **Einheitlicher Modus:** Entweder den Reporting Services-Konfigurations-Manager oder das Hilfsprogramm **rskeymgmt** .  
+ **Einheitlicher Modus:** Entweder den Berichtsserver-Konfigurations-Manager oder das Hilfsprogramm **rskeymgmt**.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,7 +58,7 @@ ms.locfileid: "88454564"
 
 ::: moniker-end
   
-##  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Sichern von Verschlüsselungsschlüsseln mit dem Reporting Services-Konfigurations-Manager (einheitlicher Modus)  
+##  <a name="back-up-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Sichern von Verschlüsselungsschlüsseln mit dem Berichtsserver-Konfigurations-Manager (einheitlicher Modus)  
   
 1.  Starten Sie den Konfigurations-Manager für den Berichtsserver, und stellen Sie anschließend eine Verbindung mit der zu konfigurierenden Berichtsserverinstanz her.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "88454564"
   
 -   Die zuvor gespeicherten Daten für den symmetrischen Schlüssel (z. B. Schlüsselinformationen, die aus einer vorherigen Bereitstellung bereits in der Berichtsserver-Datenbank gespeichert waren) werden gelöscht.  
   
- Zum Wiederherstellen des Verschlüsselungsschlüssels benötigen Sie eine Kopie des Verschlüsselungsschlüssels in einer Datei. Außerdem müssen Sie das Kennwort zum Entsperren der gespeicherten Kopie kennen. Wenn Sie den Schlüssel und das Kennwort haben, können Sie den Schlüssel mithilfe des Reporting Services-Konfigurationstools oder des Hilfsprogramms **rskeymgmt** wiederherstellen. Beim symmetrischen Schlüssel muss es sich um denselben Schlüssel handeln, der zum Sperren oder Entsperren der verschlüsselten Daten verwendet werden kann, die zurzeit in der Berichtsserver-Datenbank gespeichert sind. Wenn Sie eine ungültige Kopie wiederherstellen, kann der Berichtsserver nicht auf die verschlüsselten Daten zugreifen, die zurzeit in der Berichtsserver-Datenbank gespeichert sind. In diesem Fall müssen Sie unter Umständen alle verschlüsselten Werte löschen, falls Sie keinen gültigen Schlüssel wiederherstellen können. Falls Sie den Verschlüsselungsschlüssel aus irgendeinem Grund nicht wiederherstellen können (z. B. wenn Sie nicht über eine Sicherungskopie verfügen), müssen Sie den vorhandenen Schlüssel und die verschlüsselten Inhalte löschen. Weitere Informationen finden Sie unter [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Weitere Informationen zum Erstellen von symmetrischen Schlüsseln finden Sie unter [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Zum Wiederherstellen des Verschlüsselungsschlüssels benötigen Sie eine Kopie des Verschlüsselungsschlüssels in einer Datei. Außerdem müssen Sie das Kennwort zum Entsperren der gespeicherten Kopie kennen. Wenn Sie den Schlüssel und das Kennwort haben, können Sie den Schlüssel mithilfe des Reporting Services-Konfigurationstools oder des Hilfsprogramms **rskeymgmt** wiederherstellen. Beim symmetrischen Schlüssel muss es sich um denselben Schlüssel handeln, der zum Sperren oder Entsperren der verschlüsselten Daten verwendet werden kann, die zurzeit in der Berichtsserver-Datenbank gespeichert sind. Wenn Sie eine ungültige Kopie wiederherstellen, kann der Berichtsserver nicht auf die verschlüsselten Daten zugreifen, die zurzeit in der Berichtsserver-Datenbank gespeichert sind. In diesem Fall müssen Sie unter Umständen alle verschlüsselten Werte löschen, falls Sie keinen gültigen Schlüssel wiederherstellen können. Falls Sie den Verschlüsselungsschlüssel aus irgendeinem Grund nicht wiederherstellen können (z. B. wenn Sie nicht über eine Sicherungskopie verfügen), müssen Sie den vorhandenen Schlüssel und die verschlüsselten Inhalte löschen. Weitere Informationen finden Sie unter [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Weitere Informationen zum Erstellen von symmetrischen Schlüsseln finden Sie unter [Initialisieren eines Berichtsservers &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-###  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> Wiederherstellen von Verschlüsselungsschlüsseln mit dem Reporting Services-Konfigurations-Manager (einheitlicher Modus)  
+###  <a name="restore-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> Wiederherstellen von Verschlüsselungsschlüsseln mit dem Berichtsserver-Konfigurations-Manager (einheitlicher Modus)  
   
-1.  Starten Sie den Reporting Services-Konfigurations-Manager, und stellen Sie anschließend eine Verbindung mit der zu konfigurierenden Berichtsserverinstanz her.  
+1.  Starten Sie den Konfigurations-Manager für den Berichtsserver, und stellen Sie anschließend eine Verbindung mit der zu konfigurierenden Berichtsserverinstanz her.  
   
 2.  Klicken Sie auf der Seite „Verschlüsselungsschlüssel“ auf **Wiederherstellen**.  
   
@@ -112,6 +112,6 @@ ms.locfileid: "88454564"
     ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

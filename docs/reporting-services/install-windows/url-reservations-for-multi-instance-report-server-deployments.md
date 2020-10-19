@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 661dc1ee0e259cc2f1457e555ca685e8e581dc0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53d12c7441b796bf4564bbaf05a84ecfd7aae86a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445962"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934567"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen
   Wenn Sie mehrere Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Computer installieren, müssen Sie überlegen, wie Sie die URL-Reservierungen für die einzelnen Instanzen definieren. Innerhalb jeder Instanz müssen Sie dem Berichtsserver-Webdienst und dem [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] mindestens jeweils eine URL-Reservierung zuweisen. Der gesamte Reservierungssatz muss in HTTP.SYS eindeutig sein.  
@@ -46,7 +46,7 @@ ms.locfileid: "88445962"
  Die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendeten zugrunde liegenden Technologien erzwingen Anforderungen für eindeutige Namen. HTTP.SYS erfordert, dass alle URLs innerhalb des Repositorys eindeutig sind. Zum Erstellen einer eindeutigen URL können Sie den Portnamen, den Hostnamen oder den Namen des virtuellen Verzeichnisses ändern. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] erfordert, dass alle Anwendungsidentitäten innerhalb eines Prozesses eindeutig sind. Diese Anforderung wirkt sich auf die Namen virtueller Verzeichnisse aus. Sie legt fest, dass innerhalb einer Berichtsserverinstanz keine identischen Verzeichnisnamen zulässig sind.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Konfigurieren von Berichtsserver-URLs &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Konfigurieren einer URL &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   

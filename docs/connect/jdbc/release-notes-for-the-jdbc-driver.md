@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba891b077e6144a97dfbfcb25597e00fc43b0b0d
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062309"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005672"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Versionshinweise zum Microsoft JDBC-Treiber für SQL Server
 
@@ -361,9 +361,9 @@ Weitere Informationen zum Verwenden dieser Funktion mit dem JDBC-Treiber finden 
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>Zusätzliche Verbindungseigenschaft: useBulkCopyForBatchInsert
 
-In Microsoft JDBC-Treiber 7.0 für SQL Server wird die neue Verbindungseigenschaft `useBulkCopyForBatchInsert` eingeführt. Diese Eigenschaft wird nur für Azure SQL Data Warehouse unterstützt.
+In Microsoft JDBC-Treiber 7.0 für SQL Server wird die neue Verbindungseigenschaft `useBulkCopyForBatchInsert` eingeführt. Diese Eigenschaft wird nur für Azure Synapse Analytics unterstützt.
 
-Diese Eigenschaft ist standardmäßig deaktiviert. Sie können sie aktivieren, um die Leistung von Benutzeranwendungen zu erhöhen, wenn Sie große Mengen von Daten in Azure SQL Data Warehouse übertragen. Wenn Sie diese Eigenschaft aktivieren, ändert sich das Verhalten von Batcheinfügungsvorgängen, um zu Massenkopiervorgängen mit vom Benutzer bereitgestellten Daten zu wechseln. Weitere Informationen zu dieser Eigenschaft und ihren Einschränkungen finden Sie unter [Verwenden der Massenkopierungs-API für den Batcheinfügungsvorgang](use-bulk-copy-api-batch-insert-operation.md).
+Diese Eigenschaft ist standardmäßig deaktiviert. Sie können sie aktivieren, um die Leistung von Benutzeranwendungen zu erhöhen, wenn Sie große Mengen von Daten in Azure Synapse Analytics übertragen. Wenn Sie diese Eigenschaft aktivieren, ändert sich das Verhalten von Batcheinfügungsvorgängen, um zu Massenkopiervorgängen mit vom Benutzer bereitgestellten Daten zu wechseln. Weitere Informationen zu dieser Eigenschaft und ihren Einschränkungen finden Sie unter [Verwenden der Massenkopierungs-API für den Batcheinfügungsvorgang](use-bulk-copy-api-batch-insert-operation.md).
 
 ### <a name="added-connection-property-cancelquerytimeout"></a>Zusätzliche Verbindungseigenschaft: cancelQueryTimeout
 

@@ -10,12 +10,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc01d1323d3145b16c9a6317509e72715f5a12ce
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286244"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890864"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint (SSRS)
 
@@ -53,7 +53,7 @@ ms.locfileid: "79286244"
 ##  <a name="overview-of-the-installation-methods"></a><a name="bkmk_3ways_to_install"></a> Übersicht über die Installationsmethoden  
  Das SQL Server 2016 Reporting Services-Add-In für SharePoint-Produkte kann mithilfe einer der folgenden zwei Methoden installiert werden:  
   
--   **Installations-Assistent**: ![Hinweis](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Hinweis") Das Add-In kann in SQL Server 2016 mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistenten installiert werden. Wählen Sie im Assistenten auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte** .  
+-   **Installations-Assistent**: ![Hinweis](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Hinweis") Das Add-In kann in SQL Server 2016 mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistenten installiert werden. Wählen Sie im Assistenten auf der Seite **Funktionsauswahl** die Option **Reporting Services-Add-In für SharePoint-Produkte** .  
   
 -   **rsSharepoint.msi:** Das Add-In kann direkt von den Installationsmedien installiert bzw. heruntergeladen und installiert werden. rsSharepoint.msi unterstützt sowohl die Installation über die grafische Benutzeroberfläche als auch über die Befehlszeile. Sie müssen die MSI-Datei mit Administratorrechten ausführen, indem Sie zuerst eine Eingabeaufforderung mit erhöhten Rechten öffnen und dann die Datei rsSharepoint.msi über die Befehlszeile ausführen. Weitere Informationen zum Herunterladen des Add-Ins finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -213,7 +213,7 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="setup-log-files"></a><a name="bkmk_logfiles"></a> Setupprotokolldateien  
- Beim Ausführen von Setup werden Informationen zum Benutzer, der das **-Add-In installiert hat, in einer Protokolldatei im Ordner** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] protokolliert. Beispiel: **C:\Benutzer\\<Benutzername\>\AppData\Local\Temp**. Der Dateiname lautet **RS_SP_\<Nummer>.log**, also beispielsweise **RS_SP_0.log**. Alle Fehler im Protokoll beginnen mit der Zeichenfolge SSRSCustomActionError.  
+ Beim Ausführen von Setup werden Informationen zum Benutzer, der das **-Add-In installiert hat, in einer Protokolldatei im Ordner** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] protokolliert. Beispielsweise **C:\Users\\<Benutzername\>\AppData\Local\Temp**. Der Dateiname ist **RS_SP_\<number>.log**, z. B. **RS_SP_0.log**. Alle Fehler im Protokoll beginnen mit der Zeichenfolge SSRSCustomActionError.  
   
 > [!NOTE]  
 >  AppData ist ein ausgeblendeter Ordner im Betriebssystem Windows. Sie müssen möglicherweise die Windows-Explorer-Ordnereinstellungen ändern, damit ausgeblendete Dateien und Ordner angezeigt werden.  

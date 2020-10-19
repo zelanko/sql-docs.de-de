@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 83ccbac5d01fca3e7ca237e0debedcd4c1ad9e83
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 1b8e0ae12bb4b0d0f7cce0ca5ff690af83531be0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688806"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891150"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -472,27 +472,9 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
-Eine weitere Möglichkeit, auf das Speicherkonto zuzugreifen, sind [verwaltete Identitäten](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). Befolgen Sie hierzu die [Schritte 1 bis 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps), um SQL-Datenbank für den Zugriff auf den Speicher über die verwaltete Identität zu konfigurieren. Anschließend können Sie Codebeispiele wie unten beschrieben implementieren.
-```sql
---> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
-GO
---> Change to using Managed Identity instead of SAS key 
-CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
-GO
-CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
-WITH ( TYPE = BLOB_STORAGE,
-          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
-          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
-);
-
-BULK INSERT Sales.Invoices
-FROM 'inv-2017-12-08.csv'
-WITH (DATA_SOURCE = 'MyAzureBlobStorage');
-```
 
 > [!IMPORTANT]
-> Azure SQL-Datenbank unterstützt nur das Lesen aus Azure Blob Storage.
+> Azure SQL unterstützt nur das Lesen aus Azure Blob Storage.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importieren von Daten aus einer Datei im Azure Blob Storage und Festlegen einer Fehlerdatei
 

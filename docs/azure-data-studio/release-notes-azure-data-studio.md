@@ -1,5 +1,5 @@
 ---
-title: Versionshinweise
+title: Azure Data Studio-Versionshinweise
 description: Dieser Artikel enthält Versionshinweise für Azure Data Studio-Releases von November 2017 bis heute. Für viele der zusammengefassten Issues werden Links zu weiteren Informationen bereitgestellt.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -8,17 +8,32 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/30/2020
-ms.openlocfilehash: 1d23774a2e722c85593af0238ef924569585ff62
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.date: 10/14/2020
+ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725101"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059188"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](./download-azure-data-studio.md)**
+
+## <a name="october-2020"></a>Oktober 2020
+
+14. Oktober 2020 &nbsp; / &nbsp;, Version: 1.23.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Azure SQL Edge | Unterstützung für Azure SQL Edge-Objekte. |
+| Fehlerbehebungen | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is:issue+milestone:%22October+2020+Release%22+is:closed). |
+| Datenbanken| Unterstützung für Verweise auf die gleiche Datenbank. |
+| Updates für Erweiterungen | [Azure Arc](extensions/azure-arc-extension.md)</br>[azdata](../azdata/install/deploy-install-azdata.md)</br>[Machine Learning](extensions/machine-learning-extension.md)</br>[Kusto (KQL)](extensions/kusto-extension.md)</br>[Schemavergleich](extensions/schema-compare-extension.md)</br>SQL Assessment</br>[SQL-Datenbankprojekte](extensions/sql-database-project-extension.md)</br>[SQL Server-Import](extensions/sql-server-import-extension.md) |
+| Neue Bereitstellungsfunktionen | Azure SQL-Datenbank und VM-Bereitstellungen wurden hinzugefügt. |
+| PowerShell | Unterstützung für das Streaming von PowerShell-Kernelergebnissen wurde hinzugefügt. |
 
 ## <a name="september-2020-hotfix"></a>September 2020 (Hotfix)
 
@@ -68,8 +83,8 @@ ms.locfileid: "91725101"
 
 | Change | Details |
 | :----- | :------ |
-| Korrektur von Fehler #11372 Objekt-Explorer Drag & Drop-Tabelle führt fälschlicherweise Umbrüche von Tabellennamen durch. | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
-| Korrektur von Fehler #11356 Dunkles Design ist nun das Standarddesign. | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| Korrektur von Fehler #11372 Objekt-Explorer Drag & Drop-Tabelle führt fälschlicherweise Umbrüche von Tabellennamen durch. | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372) |
+| Korrektur von Fehler #11356 Dunkles Design ist nun das Standarddesign. | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356) |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>Bekanntes Problem
@@ -90,7 +105,6 @@ ms.locfileid: "91725101"
 | Azure-Kontosymbol wurde zur Aktivitätsleiste hinzugefügt | Benutzer können jetzt leicht erkennen, wo sie sich bei Azure anmelden können. |
 | Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
-
 
 ## <a name="june-2020"></a>Juni 2020
 
@@ -882,7 +896,7 @@ Die im *Dezember veröffentlichte Public Preview* enthält mehrere Fehlerbehebun
 
 | Change | Details |
 | :----- | :------ |
-| Das Dialogfeld „Firewallregel erstellen“ unterstützt nun den Benutzer dabei, eine Verbindung mit Azure SQL-Datenbank und Azure SQL Data Warehouse herzustellen. | &nbsp; |
+| Das Dialogfeld „Firewallregel erstellen“ unterstützt nun den Benutzer dabei, eine Verbindung mit Azure SQL-Datenbank und Azure Synapse Analytics herzustellen. | &nbsp; |
 | Ein Windows Setup sowie DEB- und RPM-Installationspakete für Linux wurden hinzugefügt. | &nbsp; |
 | Layout-Editor für „Manage Dashboard“ (Dashboard verwalten). | &nbsp; |
 | Befehle *Script As Alter* (ALTER-Skript) und *Script As Execute* (EXECUTE-Skript). | &nbsp; |
@@ -904,7 +918,7 @@ In den folgenden Schnellstarts finden Sie Hinweise zu den ersten Schritten:
 
 - [Herstellen einer Verbindung mit und Abfragen von SQL Server](quickstart-sql-server.md)
 - [Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank](quickstart-sql-database.md)
-- [Herstellen einer Verbindung mit und Abfragen von Azure SQL Data Warehouse](quickstart-sql-dw.md)
+- [Herstellen einer Verbindung mit und Abfragen von Azure Synapse Analytics](quickstart-sql-dw.md)
 
 Wirken Sie an Azure Data Studio mit:
 

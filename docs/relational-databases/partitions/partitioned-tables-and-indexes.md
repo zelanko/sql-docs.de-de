@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cbc395652b7c829fe3694bf5d040a319073e958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470365"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891010"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Tabellen- und Indexpartitionierung. Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt sein können. Die Daten werden horizontal partitioniert, sodass Gruppen von Zeilen einzelnen Partitionen zugeordnet werden. Alle Partitionen eines einzelnen Indexes oder einer Tabelle müssen sich in der gleichen Datenbank befinden. Die Tabelle oder der Index wird als einzelne logische Entität behandelt, wenn Abfragen oder Aktualisierungen für die Daten ausgeführt werden. Vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 waren partitionierte Tabellen und Indizes nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Tabellen- und Indexpartitionierung. Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt sein können. Die Daten werden horizontal partitioniert, sodass Gruppen von Zeilen einzelnen Partitionen zugeordnet werden. Alle Partitionen eines einzelnen Indexes oder einer Tabelle müssen sich in der gleichen Datenbank befinden. Die Tabelle oder der Index wird als einzelne logische Entität behandelt, wenn Abfragen oder Aktualisierungen für die Daten ausgeführt werden. Vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 waren partitionierte Tabellen und Indizes nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt standardmäßig bis zu 15.000 Partitionen. In früheren Versionen als [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde die Anzahl der Partitionen standardmäßig auf 1.000 beschränkt. Auf x86-basierten Systemen ist das Erstellen einer Tabelle oder eines Indexes mit mehr als 1.000 Partitionen möglich, wird aber nicht unterstützt.  
@@ -48,7 +48,7 @@ Darüber hinaus kann die Leistung verbessert werden, indem eine Sperrenausweitun
 Die folgenden Begriffe beziehen sich auf die Tabellen- und Indexpartitionierung.  
   
 ### <a name="partition-function"></a>Partitionsfunktion  
-Ein Datenbankobjekt, das definiert, wie die Zeilen einer Tabelle oder eines Index basierend auf den Werten bestimmter Spalten, den sogenannten Partitionierungsspalten, einem Satz von Partitionen zugeordnet werden. Das heißt, die Partitionsfunktion definiert die Anzahl von Partitionen, über die die Tabelle verfügt, und wie die Begrenzungen der Partitionen definiert werden. Angenommen, Sie verfügen über eine Tabelle, die Verkaufsauftragsdaten enthält, und möchten die Tabelle möglicherweise in zwölf (monatliche) Partitionen auf Grundlage einer **datetime** -Spalte (z.B. Verkaufsdatum) partitionieren.  
+Hierbei handelt es sich um ein Datenbankobjekt, das definiert, wie die Zeilen einer Tabelle oder eines Index basierend auf den Werten einer bestimmten Spalte, einer sogenannten Partitionierungsspalte, mehreren Partitionen zugeordnet werden. Bei den einzelnen Werten in der Partitionierungsspalte handelt es sich um eine Eingabe für die Partitionsfunktion, die einen Partitionswert zurückgibt. Die Partitionsfunktion definiert die Anzahl von Partitionen sowie die Begrenzungen der Partitionen, über die die Tabelle verfügt. Angenommen, Sie verfügen über eine Tabelle, die Verkaufsauftragsdaten enthält, und möchten die Tabelle möglicherweise in zwölf (monatliche) Partitionen auf Grundlage einer **datetime** -Spalte (z.B. Verkaufsdatum) partitionieren.  
   
 ### <a name="partition-scheme"></a>Partitionsschema 
 Ein Datenbankobjekt, das die Partitionen einer Partitionsfunktion Dateigruppen zuordnet. Der wichtigste Grund dafür, dass Partitionen in separaten Dateigruppen platziert werden, besteht darin, sicherzustellen, dass Sie Sicherungsvorgänge unabhängig für Partitionen ausführen können. Dies liegt daran, dass Sie Sicherungen für einzelne Dateigruppen ausführen können.  
@@ -129,9 +129,8 @@ Dies ermöglicht dem Abfrageoptimierer, den Join schneller zu verarbeiten, da di
  Die folgenden Whitepaper zu partitionierten Tabellen und Indexstrategien sowie Implementierungen sind möglicherweise für Sie interessant.  
 -   [Partitionierte Tabellen- und Indexstrategien für SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
 -   [So implementieren Sie ein automatisch gleitendes Fenster](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [Massenladen in eine partitionierte Tabelle](https://msdn.microsoft.com/library/cc966380.aspx)    
--   [Project REAL: Data Lifecycle -- Partitioning (Project REAL: Lebenszyklus von Daten, Partitionierung)](https://technet.microsoft.com/library/cc966424.aspx)    
--   [Verbesserte Abfrageverarbeitung bei partitionierten Tabellen und Indizes](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [Massenladen in eine partitionierte Tabelle](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
+-   [Project REAL: Data Lifecycle -- Partitioning (Project REAL: Lebenszyklus von Daten, Partitionierung)](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10))    
+-   [Verbesserte Abfrageverarbeitung bei partitionierten Tabellen und Indizes](/previous-versions/sql/sql-server-2008-r2/ms345599(v=sql.105))    
 -   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse (Top 10 Best Practices zum Erstellen eines umfassenden relationalen Data Warehouse)](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) in _SQLCATs Handbuch zu Relational Engineering_
-  
   

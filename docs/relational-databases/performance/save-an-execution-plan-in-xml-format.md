@@ -18,12 +18,12 @@ ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bcf97d3f0e3607d9444c6ab5b3b101004d3926b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: f10e2cd6b6b146bb7c91d9732ba04b7f6a4d5ebb
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457618"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784733"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Speichern eines Ausführungsplans im XML-Format
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "86457618"
   
 5.  Klicken Sie im Dialogfeld **Speichern** \<Grid or Text> **Ergebnisse** im Feld **Dateityp** auf **Alle Dateien (\*.\*)** .  
   
-6.  Geben Sie in das Feld **Dateiname** einen Namen im Format \<name**>.sqlplan** ein, und klicken Sie dann auf **Speichern**.  
+6.  Geben Sie in das Feld **Dateiname** einen Namen im Format \<name> **.sqlplan** ein, und klicken Sie dann auf **Speichern**.  
 
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>So speichern Sie einen Ausführungsplan mithilfe der SQL Server Management Studio-Optionen  
   
@@ -83,7 +83,7 @@ ms.locfileid: "86457618"
   
 3.  Stellen Sie im Dialogfeld **Speichern unter** sicher, dass der **Dateityp** auf **Ausführungsplandateien (\*.sqlplan)** festgelegt ist.  
   
-4.  Geben Sie in das Feld **Dateiname** einen Namen im Format \<name**>.sqlplan** ein, und klicken Sie dann auf **Speichern**.  
+4.  Geben Sie in das Feld **Dateiname** einen Namen im Format \<name> **.sqlplan** ein, und klicken Sie dann auf **Speichern**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>So öffnen Sie einen gespeicherten XML-Abfrageplan in SQL Server Management Studio  
   

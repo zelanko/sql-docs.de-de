@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 6c13a720a9578600d80bb989ef740d3654cc4ae6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216766"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810006"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ Always Encrypted wird für die Spalten mit den folgenden Merkmalen nicht unterst
 - Spalten mit der `ROWGUIDCOL`-Eigenschaft  
 - Zeichenfolgenspalten (`varchar`, `char` usw.) mit Nicht-BIN2-Sortierungen  
 - Spalten, die bei Verwendung der zufälligen Verschlüsselung Schlüssel für gruppierte und nicht gruppierte Indizes darstellen (deterministische Verschlüsselung wird unterstützt)
-- Spalten, die bei Verwendung der zufälligen Verschlüsselung Schlüssel für Volltextindizes darstellen (deterministische Verschlüsselung wird unterstützt)  
+- In Volltextindizes eingeschlossene Spalten (Always Encrypted unterstützt die [Volltextsuche](../../../relational-databases/search/full-text-search.md) nicht)  
 - Berechnete Spalten.
 - Spalten, auf die berechnete Spalten verweisen (wenn der Ausdruck nicht unterstützte Vorgänge für Always Encrypted ausführt)  
 - Sparsespalten  

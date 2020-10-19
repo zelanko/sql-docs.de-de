@@ -15,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89d7d4acbb9edda1e6bb5edd78f6bc043c429529
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3b2d48c507043b59455f04011d3d75e45727866
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238243"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986989"
 ---
 # <a name="technical-reference-ssrs"></a>Technische Referenz (SSRS)
 
   Hier finden Sie die Tools und die PowerShell-Referenzdokumentation zum Verwenden oder Verwalten von SQL Server Reporting Services.  
   
- ![Kleines Dateiordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Fehler und Ereignisse**  
+ ![Kleines Dateiordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Fehler und Ereignisse**  
  [Cause and Resolution of Reporting Services Errors (Ursachen und Lösungen für Reporting Services-Fehler)](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Kleines Dateiordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Featurereferenz**  
+ ![Kleines Dateiordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Featurereferenz**  
  [Report Designer F1 Help (Berichts-Designer (F1-Hilfe))](../reporting-services/tools/report-designer-f1-help.md)  
   
- [Berichts-Manager (F1-Hilfe)](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Berichts-Manager (F1-Hilfe)](./web-portal-ssrs-native-mode.md)  
   
- [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Berichtsserver-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
- [Hilfe des Berichts-Assistenten](https://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
+ [Hilfe des Berichts-Assistenten](/previous-versions/sql/sql-server-2016/ms186558(v=sql.130))  
   
  [HTML Viewer and the Report Toolbar (HTML-Viewer und die Berichtssymbolleiste)](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
  [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Kleines Dateiordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Hilfsprogramme für die Eingabeaufforderung im Berichtsserver**  
+ ![Kleines Dateiordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Hilfsprogramme für die Eingabeaufforderung im Berichtsserver**  
  [Hilfsprogramm RS.exe (SSRS)](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
  [rsconfig-Hilfsprogramm (SSRS)](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
  [rskeymgmt-Hilfsprogramm &#40;SSRS&#41;](../reporting-services/tools/rskeymgmt-utility-ssrs.md)  
   
- ![Kleines Dateiordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Klassenbibliothek für den WMI-Anbieter für Reporting Services**  
+ ![Kleines Dateiordnersymbol](/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Klassenbibliothek für den WMI-Anbieter für Reporting Services**  
  [Reporting Services WMI Provider-Bibliotheksreferenz (SSRS)](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

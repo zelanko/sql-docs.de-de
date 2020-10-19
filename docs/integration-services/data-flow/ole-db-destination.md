@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa8723e3db746c614d3a9e44c37ea702506d2c45
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477792"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987638"
 ---
 # <a name="ole-db-destination"></a>OLE DB-Ziel
 
@@ -96,7 +96,7 @@ ms.locfileid: "88477792"
   
 |Option für schnelles Laden|BESCHREIBUNG|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Gibt die einzufügende Größe in Kilobyte an. Die Option hat die folgende Form: **KILOBYTES_PER_BATCH** = \<positive integer value**>**.|  
+|KILOBYTES_PER_BATCH|Gibt die einzufügende Größe in Kilobyte an. Die Option hat die folgende Form: **KILOBYTES_PER_BATCH** =  *\<positive integer value>* .|  
 |FIRE_TRIGGERS|Gibt an, ob in der Einfügetabelle Trigger ausgelöst werden. Die Option hat die Form **FIRE_TRIGGERS**. Das Vorhandensein der Option gibt an, dass Trigger ausgelöst werden.|  
 |ORDER|Gibt die Sortierung der Eingabedaten an. Die Option hat die folgende Form: ORDER \<column name> ASC&#124;DESC. Es kann eine beliebige Anzahl an Spalten aufgelistet werden. Optional kann die Sortierreihenfolge eingeschlossen werden. Wird die Sortierreihenfolge ausgelassen, geht der Einfügevorgang davon aus, dass die Daten nicht sortiert sind.<br /><br /> Hinweis: Die Leistung wird verbessert, wenn die Eingabedaten entsprechend dem gruppierten Index der Tabelle mit der ORDER-Option sortiert werden.|  
   

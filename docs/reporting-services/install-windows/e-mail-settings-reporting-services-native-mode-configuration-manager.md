@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71c58ed673834c0226f9998b80fa4b12f14538e0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866003"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892080"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>E-Mail-Einstellungen – Einheitlicher Modus von Reporting Services (Konfigurations-Manager)
 SQL Server Reporting Services enthält eine Erweiterung zur E-Mail-Übermittlung, mit der Sie Berichte per E-Mail verteilen können. Je nachdem, wie Sie das Abonnieren von E-Mails definieren, kann eine E-Mail-Übermittlung aus einer Nachricht, einem Link, einem Anhang oder einem eingebetteten Bericht bestehen. Die Erweiterung der E-Mail-Übermittlung arbeitet mit Ihrer vorhandenen E-Mail-Server-Technologie. Der E-Mail-Server muss ein SMTP-Server oder eine Weiterleitung sein. Der Berichtsserver stellt über CDO-Bibliotheken (Collaboration Data Objects, cdosys.dll), die das Betriebssystem stellt, eine Verbindung zu einem SMTP-Server her.
 
-Die E-Mail-Übermittlungserweiterung des Berichtsservers ist standardmäßig nicht konfiguriert. Sie müssen den Reporting Services-Konfigurations-Manager verwenden, um die Erweiterung minimal zu konfigurieren. Sie müssen die Datei RSReportServer.config bearbeiten, um die erweiterten Eigenschaften festzulegen. Wenn Sie den Berichtsserver für die Verwendung dieser Erweiterung nicht konfigurieren können, können Sie stattdessen Berichte an einen freigegebenen Ordner übermitteln. Weitere Informationen finden Sie unter „Dateifreigabeübermittlung in Reporting Services“.
+Die E-Mail-Übermittlungserweiterung des Berichtsservers ist standardmäßig nicht konfiguriert. Sie müssen den Berichtsserver-Konfigurations-Manager verwenden, um die Erweiterung minimal zu konfigurieren. Sie müssen die Datei RSReportServer.config bearbeiten, um die erweiterten Eigenschaften festzulegen. Wenn Sie den Berichtsserver für die Verwendung dieser Erweiterung nicht konfigurieren können, können Sie stattdessen Berichte an einen freigegebenen Ordner übermitteln. Weitere Informationen finden Sie unter „Dateifreigabeübermittlung in Reporting Services“.
 
 ## <a name="configuration-requirements"></a>Konfigurationsanforderungen
 
@@ -41,16 +41,16 @@ Bevor Sie die E-Mail-Übermittlung des Berichtsservers verwenden können, müsse
 
 Gehen Sie wie folgt vor, um einen Berichtsserver für die E-Mail-Übermittlung zu konfigurieren:
 
-- Verwenden Sie den Reporting Services-Konfigurations-Manager, wenn Sie nur einen SMTP-Server und ein Benutzerkonto angeben, das über die Berechtigung zum Senden von E-Mail verfügt. Dies sind die zum Konfigurieren der E-Mail-Übermittlungserweiterung für einen Berichtsserver erforderlichen Mindesteinstellungen.
+- Verwenden Sie den Berichtsserver-Konfigurations-Manager, wenn Sie nur einen SMTP-Server und ein Benutzerkonto angeben, das über die Berechtigung zum Senden von E-Mail verfügt. Dies sind die zum Konfigurieren der E-Mail-Übermittlungserweiterung für einen Berichtsserver erforderlichen Mindesteinstellungen.
 
 - (Optional) Verwenden Sie einen Text-Editor, um zusätzliche Einstellungen in der Datei RSreportserver.config anzugeben. Diese Datei enthält alle Konfigurationseinstellungen für die Berichtsserver-E-Mail-Übermittlung. Wenn Sie einen lokalen SMTP-Server verwenden oder die E-Mail-Übermittlung auf bestimmte Hosts beschränken, müssen Sie zusätzliche Einstellungen in diesen Dateien angeben. Weitere Informationen zum Suchen und Ändern von Konfigurationsdateien finden Sie unter [Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).
 
 > [!NOTE] 
 > E-Mail-Einstellungen für den Berichtsserver basieren auf CDO (Collaboration Data Objects). Ausführlichere Informationen zu bestimmten Einstellungen finden Sie in der CDO-Produktdokumentation.
 
-## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Konfigurieren der Berichtsserver-E-Mail mit dem Konfigurations-Manager für Reporting Services
+## <a name="configure-report-server-e-mail-using-the-report-server-configuration-manager"></a><a name="rsconfigman"/>Konfigurieren der Berichtsserver-E-Mail mit dem Berichtsserver-Konfigurations-Manager
 
-1. Starten Sie den Reporting Services-Konfigurations-Manager, und stellen Sie eine Verbindung mit der Berichtsserverinstanz her.
+1. Starten Sie den Berichtsserver-Konfigurations-Manager, und stellen Sie eine Verbindung mit der Berichtsserverinstanz her.
 
 2. Geben Sie in **Absenderadresse**die E-Mail-Adresse an, die im Feld **Von:** einer generierten E-Mail verwendet werden soll. 
 
@@ -137,12 +137,12 @@ Andere Werte, die für den SMTP-Remotedienst verwendet werden, sind folgende (di
 
 - `<SMTPServerPort>` wird standardmäßig für Port 25 konfiguriert.
 - `<SMTPAuthenticate>` gibt an, wie der Berichtsserver eine Verbindung mit dem SMTP-Remoteserver herstellt. Der Standardwert ist **0** (d.h. keine Authentifizierung). In diesem Fall wird die Verbindung über den anonymen Zugriff hergestellt. Je nach Domänenkonfiguration müssen der Berichtsserver und der SMTP-Server unter Umständen zu derselben Domäne gehören.
-- Um E-Mail an eingeschränkte Verteilerlisten zu senden (z.B. Verteilerlisten, die nur eingehende Nachrichten von authentifizierten Konten akzeptieren), legen Sie `<SMTPAuthenticate>` auf **1** oder **2**fest. Wenn Sie den Wert auf **1**festlegen, müssen Sie auch `<SendUserName>` und `<SendPassword>`festlegen. Es wird empfohlen, dazu den Konfigurations-Manager für Reporting Services zu verwenden, weil dieser die Werte für `<SendUserName>` und `<SendPassword>`verschlüsselt.
+- Um E-Mail an eingeschränkte Verteilerlisten zu senden (z.B. Verteilerlisten, die nur eingehende Nachrichten von authentifizierten Konten akzeptieren), legen Sie `<SMTPAuthenticate>` auf **1** oder **2**fest. Wenn Sie den Wert auf **1**festlegen, müssen Sie auch `<SendUserName>` und `<SendPassword>`festlegen. Es wird empfohlen, dazu den Berichtsserver-Konfigurations-Manager zu verwenden, weil dieser die Werte für `<SendUserName>` und `<SendPassword>`verschlüsselt.
 
 ### <a name="to-configure-a-remote-smtp-service-for-the-report-server"></a>So konfigurieren Sie einen Remote-SMTP-Dienst für den Berichtsserver
 
 > [!NOTE] 
-> Es wird empfohlen, den Mailserver über den Konfigurations-Manager für Reporting Services zu konfigurieren.
+> Es wird empfohlen, den Mailserver über den Berichtsserver-Konfigurations-Manager zu konfigurieren.
 
 1. Überprüfen Sie, ob der Report Server-Windows-Dienst über **Send As** -Berechtigungen auf dem SMTP-Server verfügt.
 
@@ -154,7 +154,7 @@ Andere Werte, die für den SMTP-Remotedienst verwendet werden, sind folgende (di
      
 5. Geben Sie in `<SMTPServer>`den Namen des SMTP-Servers ein. Bei diesem Wert kann es sich um eine IP-Adresse, den UNC-Namen eines Computers im Firmenintranet oder um einen vollqualifizierten Domänennamen handeln.
 
-6. Legen Sie `<SendUsing>` auf den Wert **2** fest, um das Dienstkonto für den Berichtsserver zu verwenden. Legen Sie `<SendUsing>` auf den Wert **1** fest, um die Standardauthentifizierung zu verwenden. Wenn Sie den Wert **1**festlegen, müssen Sie außerdem einen Wert für `<SendUserName>` und `<SendPassword>`festlegen. Wenn diese Werte verschlüsselt werden sollen, müssen Sie die Authentifizierung mit dem Konfigurations-Manager für Reporting Services festlegen.
+6. Legen Sie `<SendUsing>` auf den Wert **2** fest, um das Dienstkonto für den Berichtsserver zu verwenden. Legen Sie `<SendUsing>` auf den Wert **1** fest, um die Standardauthentifizierung zu verwenden. Wenn Sie den Wert **1**festlegen, müssen Sie außerdem einen Wert für `<SendUserName>` und `<SendPassword>`festlegen. Wenn diese Werte verschlüsselt werden sollen, müssen Sie die Authentifizierung mit dem Berichtsserver-Konfigurations-Manager festlegen.
 
 7. Legen Sie `<SMTPAuthenticate>` auf den Wert **1** fest, wenn Sie `<SendUsing>` auf 1 oder 2 festlegen.
 
@@ -222,7 +222,7 @@ Die Verbindung zwischen dem Berichtsserver und einem lokalen SMTP-Server oder ei
 17. Speichern Sie die Datei .
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Reporting Services Configuration Manager (Native Mode) (Reporting Services-Konfigurations-Manager (einheitlicher Modus))](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[Berichtsserver-Konfigurations-Manager (nativer Modus)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   

@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d91801bd8fa23cdb14112c98af6584d9a7b9250
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c5d469cdf48a6c03a332a370e4c2b173ae7d18d1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934249"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934686"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Vergleich zwischen nativen Berichtsservern und SharePoint-Berichtsservern in Reporting Services
 
@@ -40,7 +40,7 @@ Ein Reporting Services-Berichtsserver wird in einem von zwei Bereitstellungsmodi
   
  Ein Reporting Services-Berichtsserver unterstützt zwei Bereitstellungsmodi für Berichtsserverinstanzen:  
   
--   **Einheitlicher Modus:** Umfasst den einheitlichen Modus mit SharePoint-Webparts, bei dem ein Berichtsserver als Anwendungsserver ausgeführt wird, der alle Verarbeitungs- und Verwaltungsfunktionen ausschließlich über Reporting Services-Komponenten bietet. Sie konfigurieren einen Berichtsserver im einheitlichen Modus mit Konfigurations-Manager für Reporting Services und SQL Server Management Studio.  
+-   **Einheitlicher Modus:** Umfasst den einheitlichen Modus mit SharePoint-Webparts, bei dem ein Berichtsserver als Anwendungsserver ausgeführt wird, der alle Verarbeitungs- und Verwaltungsfunktionen ausschließlich über Reporting Services-Komponenten bietet. Sie konfigurieren einen Berichtsserver im einheitlichen Modus mit dem Berichtsserver-Konfigurations-Manager und SQL Server Management Studio.  
   
 -   **SharePoint-Modus**: Bei diesem Modus wird ein Berichtsserver als Teil einer SharePoint-Serverfarm installiert.  Verwenden Sie PowerShell-Befehle oder SharePoint-Inhaltsverwaltungsseiten, um den SharePoint-Modus bereitzustellen und zu konfigurieren.  
   
@@ -137,8 +137,8 @@ Ein Reporting Services-Berichtsserver wird in einem von zwei Bereitstellungsmodi
   
 |Aufgabe|Link|  
 |----------|----------|  
-|Prüfen Sie die Hardware- und Softwareanforderungen.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
-|Installieren Sie Reporting Services im SharePoint-Modus.|[Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)|  
+|Prüfen Sie die Hardware- und Softwareanforderungen.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](/previous-versions/sql/sql-server-2016/jj714188(v=sql.130)).|  
+|Installieren Sie Reporting Services im SharePoint-Modus.|[Installieren des SharePoint-Modus von Reporting Services für SharePoint 2010](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)|  
 |Erläutert, wie die Speichereinstellungen für den Report Server-Webdienst und den Windows-Dienst angepasst werden können.|[Configure Available Memory for Report Server Applications (Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen)](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Erläutert empfohlene Schritte zur Konfiguration des Berichtsservers für die Remoteverwaltung.|[Configure a Report Server for Remote Administration (Konfigurieren eines Berichtsservers für die Remoteverwaltung)](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |Stellt Anweisungen zum Konfigurieren der Verfügbarkeit von **Meine Berichte** auf einer einheitlichen Berichtsserverinstanz bereit.|[Aktivieren und Deaktivieren von "Meine Berichte"](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

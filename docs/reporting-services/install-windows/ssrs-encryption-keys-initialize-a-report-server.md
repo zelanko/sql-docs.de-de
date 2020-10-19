@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d04dce2fa829938ede09ebbceaa4980c110002cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7cbe27857ba31dc8b91ac8d93ae08ca8dd219f6
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446080"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934672"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS-Verschlüsselungsschlüssel: Initialisieren eines Berichtsservers
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kann ein initialisierter Server Daten in einer Berichtsserver-Datenbank verschlüsseln und entschlüsseln. Die Initialisierung ist die Voraussetzung für Berichtsservervorgänge. Die Initialisierung wird ausgeführt, wenn der Berichtsserverdienst zum ersten Mal gestartet wird. Sie wird ebenfalls ausgeführt, wenn Sie den Berichtsserver mit vorhandenen Bereitstellung verknüpfen, oder wenn Sie die Schlüssel manuell, als Teil des Wiederherstellungsprozesses neu erstellen. Weitere Informationen dazu, wie und warum Verschlüsselungsschlüssel verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) und [Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kann ein initialisierter Server Daten in einer Berichtsserver-Datenbank verschlüsseln und entschlüsseln. Die Initialisierung ist die Voraussetzung für Berichtsservervorgänge. Die Initialisierung wird ausgeführt, wenn der Berichtsserverdienst zum ersten Mal gestartet wird. Sie wird ebenfalls ausgeführt, wenn Sie den Berichtsserver mit vorhandenen Bereitstellung verknüpfen, oder wenn Sie die Schlüssel manuell, als Teil des Wiederherstellungsprozesses neu erstellen. Weitere Informationen dazu, wie und warum Verschlüsselungsschlüssel verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) und [Speichern verschlüsselter Berichtsserverdaten &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Verschlüsselungsschlüssel basieren teilweise auf den Profilinformationen des Berichtsserverdiensts. Wenn Sie die Benutzeridentität ändern, mit der Sie den Berichtsserverdienst ausführen, müssen Sie die Schlüssel entsprechend aktualisieren. Wenn Sie das Reporting Services-Konfigurationstool verwenden, um Ihre Identität zu ändern, wird dieser Schritt automatisch für Sie erledigt.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "88446080"
   
 ## <a name="how-to-initialize-a-report-server"></a>Initialisieren eines Berichtsservers  
   
--   Verwenden Sie das Reporting Services-Konfigurationstool, um den Berichtsserver zu initialisieren. Die Initialisierung findet automatisch beim Erstellen und Konfigurieren der Berichtsserver-Datenbank statt. Weitere Informationen finden Sie unter [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+-   Verwenden Sie das Reporting Services-Konfigurationstool, um den Berichtsserver zu initialisieren. Die Initialisierung findet automatisch beim Erstellen und Konfigurieren der Berichtsserver-Datenbank statt. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
--   Um einen Berichtsserver für die Bereitstellung für horizontales Skalieren zu initialisieren, verwenden Sie die Initialisierungsseite im Reporting Services-Konfigurationstool oder das Hilfsprogramm **RSKeymgmt** . Detaillierte Anleitungen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   Um einen Berichtsserver für die Bereitstellung für horizontales Skalieren zu initialisieren, verwenden Sie die Initialisierungsseite im Reporting Services-Konfigurationstool oder das Hilfsprogramm **RSKeymgmt** . Detaillierte Anleitungen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 > [!NOTE]  
 >  **RSKeymgmt** ist eine Konsolenanwendung, die Sie über eine Befehlszeile auf einem Computer ausführen, der eine Berichtsserverinstanz hostet, die bereits Teil einer Bereitstellung für horizontales Skalieren ist. Wenn Sie das Hilfsprogramm ausführen, geben Sie Argumente zum Auswählen einer Remote-Berichtsserverinstanz an, die Sie initialisieren möchten.  
   
- Ein Berichtsserver wird nur initialisiert, wenn eine Übereinstimmung zwischen der Installations-ID und dem öffentlichen Schlüssel vorliegt. Bei einer Übereinstimmung wird ein symmetrischer Schlüssel erstellt, der die umkehrbare Verschlüsselung ermöglicht. Wenn die Übereinstimmung fehlschlägt, wird der Berichtsserver deaktiviert. In diesem Fall werden Sie möglicherweise aufgefordert, einen Sicherungsschlüssel anzuwenden oder die verschlüsselten Daten zu löschen, wenn ein Sicherungsschlüssel nicht verfügbar oder ungültig ist. Weitere Informationen zu Verschlüsselungsschlüsseln, die von einem Berichtsserver verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+ Ein Berichtsserver wird nur initialisiert, wenn eine Übereinstimmung zwischen der Installations-ID und dem öffentlichen Schlüssel vorliegt. Bei einer Übereinstimmung wird ein symmetrischer Schlüssel erstellt, der die umkehrbare Verschlüsselung ermöglicht. Wenn die Übereinstimmung fehlschlägt, wird der Berichtsserver deaktiviert. In diesem Fall werden Sie möglicherweise aufgefordert, einen Sicherungsschlüssel anzuwenden oder die verschlüsselten Daten zu löschen, wenn ein Sicherungsschlüssel nicht verfügbar oder ungültig ist. Weitere Informationen zu Verschlüsselungsschlüsseln, die von einem Berichtsserver verwendet werden, finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
   
 > [!NOTE]  
 >  Sie können auch den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -WMI-Anbieter (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation) verwenden, um einen Berichtsserver programmgesteuert zu initialisieren. Weitere Informationen finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
@@ -69,6 +69,6 @@ ms.locfileid: "88446080"
  Wenn Sie die Initialisierung des Berichtsservers bestätigen möchten, pingen Sie den Berichtsserver-Webdienst, indem Sie **https://\<servername>/reportserver** im Befehlsfenster eingeben. Wenn der **RSReportServerNotActivated** -Fehler auftritt, ist die Initialisierung fehlgeschlagen.  
   
 ## <a name="see-also"></a>Weitere Informationen
-[Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
+[Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (Berichtsserver-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
   
   

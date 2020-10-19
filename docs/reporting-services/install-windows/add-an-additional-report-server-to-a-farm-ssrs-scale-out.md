@@ -9,12 +9,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2b69bf8be4eef05ae8bb332afb4078eb1bca404
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 689d304798da13a8c8647598ac13d9ca232c6bfc
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418676"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934703"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm (Horizontales Skalieren für SSRS)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88418676"
 > [!TIP]  
 >  Ab Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] verwenden Sie nicht mehr den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurations-Manager, um Server hinzuzufügen und Berichtsserver aufzuskalieren. SharePoint-Produkte verwalten das horizontale Skalieren von Berichtsdiensten, da SharePoint-Server mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst der Farm hinzugefügt werden.  
   
- Informationen zum horizontalen Skalieren von Berichtsservern im einheitlichen Modus finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+ Informationen zum horizontalen Skalieren von Berichtsservern im einheitlichen Modus finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ##  <a name="load-balancing"></a><a name="bkmk_loadbalancing"></a> Lastenausgleich  
  Der Lastenausgleich von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendungen wird automatisch von SharePoint verwaltet, außer wenn die Umgebung eine benutzerdefinierte oder eine Drittanbieter-Lastenausgleichslösung hat. Das Standard-SharePoint-Lastenausgleichsverhalten ist, dass jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung von allen Anwendungsservern ausgeglichen wird, wo Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst gestartet haben. Um zu überprüfen, ob der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst installiert und gestartet ist, klicken Sie auf **Dienste auf dem Server verwalten** in der SharePoint-Zentraladministration.  
@@ -81,7 +81,7 @@ The Reporting Services Web Service is not enabled. Configure at least one instan
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Hinzufügen eines SharePoint-Servers zu einer Farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
-[Hinzufügen eines SharePoint-Servers zu einer Farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
+[Hinzufügen eines SharePoint-Servers zu einer Farm in SharePoint Server 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
+[Hinzufügen eines SharePoint-Servers zu einer Farm in SharePoint Server 2013](/SharePoint/install/add-web-or-application-server-to-the-farm)
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

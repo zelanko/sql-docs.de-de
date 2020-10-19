@@ -12,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: 41add7a1ac27a0fba9eb364ec5e5da3dde37585c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f473590243956cd2fcba1961d3580fa052d6f4c1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446081"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934635"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -139,13 +139,13 @@ ms.locfileid: "88446081"
 ##  <a name="upgrade-a-reporting-services-native-mode-scale-out-deployment"></a><a name="bkmk_native_scaleout"></a> Aktualisieren einer Bereitstellung für horizontales Skalieren mit Reporting Services im einheitlichen Modus  
  Im Folgenden erhalten Sie eine Übersicht darüber, wie Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bereitstellung im einheitlichen Modus aktualisieren, die horizontal auf mehr als einen Berichtsserver skaliert ist. Bei diesem Vorgang muss die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung außer Betrieb gesetzt werden:  
   
-1.  Sichern Sie die Berichtsserver-Datenbanken und die Verschlüsselungsschlüssel. Weitere Informationen finden Sie unter [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) und [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
+1.  Sichern Sie die Berichtsserver-Datenbanken und die Verschlüsselungsschlüssel. Weitere Informationen finden Sie unter [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) und [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
-2.  Verwenden Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und entfernen Sie alle Berichtsserver aus der horizontal skalierten Bereitstellung. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+2.  Verwenden Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und entfernen Sie alle Berichtsserver aus der horizontal skalierten Bereitstellung. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 3.  Aktualisieren Sie einen der Berichtsserver auf SQL Server Reporting Services.  
   
-4.  Verwenden Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, um die Berichtsserver der Bereitstellung für horizontales Skalieren wieder hinzuzufügen. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+4.  Verwenden Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, um die Berichtsserver der Bereitstellung für horizontales Skalieren wieder hinzuzufügen. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
      Wiederholen Sie für jeden Server die Schritte für das Upgrade und das horizontale Skalieren.  
   

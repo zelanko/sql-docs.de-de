@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426302"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080669"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -92,7 +92,7 @@ Falls die Ergebnisse dieser Abfrage mit **sqlsrv_fetch_object**abgerufen werden,
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## <a name="example"></a>Beispiel  
+## <a name="object-example"></a>Objektbeispiel  
 Im folgenden Beispiel wird jede Zeile eines Resultsets als PHP-Objekt abgerufen. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ``` 
@@ -131,7 +131,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Beispiel  
+## <a name="class-example"></a>Klassenbeispiel  
 Im folgenden Beispiel wird jede Zeile eines Resultsets als eine Instanz der im Skript definierten *Product* -Klasse abgerufen. Im Beispiel werden Produktinformationen aus den Tabellen *Purchasing.PurchaseOrderDetail* und *Production.Product* der AdventureWorks-Datenbank für Produkte mit einem angegebenen Fälligkeitsdatum (*DueDate*) und einer gelagerten Menge (*StockQty*), die kleiner als ein angegebener Wert ist, abgerufen. In diesem Beispiel sind einige der Regeln, die beim Spezifizieren einer Klasse in einem Aufruf an **sqlsrv_fetch_object**zur Anwendung kommen, noch einmal deutlich herausgestellt:  
   
 -   Die *$product* -Variable ist eine Instanz der *Product* -Klasse, da „Produkt“ mit dem *$className* -Parameter spezifiziert wurde und die *Product* -Klasse existiert.  

@@ -1,5 +1,5 @@
 ---
-description: URLs in Konfigurationsdateien (SSRS-Konfigurations-Manager)
+description: URLs in Konfigurationsdateien (Berichtsserver-Konfigurations-Manager)
 title: URLs in Konfigurationsdateien (Configuration Manager) | Microsoft-Dokumentation
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3382a5d51a46d1fb2fdbe33f94ca56e398bfd3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 17eaa59595b8a35fe1d9aa7fa3c69e6d0b39860f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472662"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934505"
 ---
-# <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URLs in Konfigurationsdateien (SSRS-Konfigurations-Manager)
+# <a name="urls-in-configuration-files--report-server-configuration-manager"></a>URLs in Konfigurationsdateien (Berichtsserver-Konfigurations-Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert Anwendungseinstellungen in einer RSReportServer.config-Datei. In dieser Datei befinden sich Konfigurationseinstellungen sowohl für URLs als auch für URL-Reservierungen. Diese Konfigurationseinstellungen haben ganz verschiedene Zwecke und Regeln für Änderungen. Wenn Sie es gewohnt sind, Konfigurationsdateien zu ändern, um eine Bereitstellung zu optimieren, finden Sie in diesem Thema hilfreiche Informationen dazu, wie jede URL-Einstellung verwendet wird.  
   
 ## <a name="url-settings-in-rsreportserverconfig-file"></a>URL-Einstellungen in der RSReportServer.config-Datei  
@@ -28,9 +28,9 @@ ms.locfileid: "88472662"
   
 -   Die Beschreibungen der einzelnen Elemente finden Sie im Abschnitt **URLReservations** des Artikels [RSReportServer-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
--   Weitere Informationen zur Syntax des **UrlString**-Elements finden Sie unter [Syntax für URL-Reservierungen (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
+-   Weitere Informationen zur Syntax des **UrlString**-Elements finden Sie unter [Syntax für URL-Reservierungen &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
--   Anweisungen zum Konfigurieren von URLs für den Anwendungszugriff finden Sie unter [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)verwendet.  
+-   Anweisungen zum Konfigurieren von URLs für den Anwendungszugriff finden Sie unter [Konfigurieren einer URL &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 #### <a name="urls-for-report-access"></a>URLs für Berichtszugriff  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst eine Berichtsserver-E-Mail-Übermittlungserweiterung, mit der Sie Berichtslinks oder Anlagen senden können. Ein Berichtshyperlink wird erstellt, wenn der Bericht übermittelt wird. Die Berichtsserver-E-Mail-Übermittlungserweiterung erstellt den Link mithilfe der **UrlRoot** -Einstellung in der Konfigurationsdatei. Die**UrlRoot** -Einstellung wird außerdem dazu verwendet, Links in einem gerenderten Bericht, der über die unbeaufsichtigte Berichtsverarbeitung generiert wird, aufzulösen.  
@@ -57,5 +57,5 @@ ms.locfileid: "88472662"
 |**ReportServerExternalUrl**|Optional. Dieses Element ist nicht in der RSReportServer.config-Datei enthalten, es sei denn, Sie fügen es selbst hinzu.<br /><br /> Legen Sie dieses Element nur fest, wenn Sie SharePoint 2.0 Webparts verwenden und möchten, dass Benutzer einen Bericht abrufen und in einem neuen Browserfenster öffnen können.<br /><br /> Fügen Sie \<**ReportServerExternalUrl**> unter dem \<**ReportServerUrl**>-Element hinzu, und legen Sie dieses anschließend auf einen vollqualifizierten Berichtsservernamen fest, der bei Zugriff in einem separaten Browserfenster in eine Berichtsserver-Instanz aufgelöst wird. Löschen Sie \<**ReportServerUrl**> nicht.<br /><br /> Das folgende Beispiel veranschaulicht die Syntax:<br /><br /> `<ReportServerExternalUrl>https://myserver/reportserver</ReportServerExternalUrl>`|Dieser Wert wird von SharePoint 2.0 Webparts verwendet.<br /><br /> In früheren Versionen wurde empfohlen, diesen Wert festzulegen, um den Berichts-Generator auf einem mit dem Internet verbundenen Berichtsserver bereitzustellen. Dies ist ein ungeprüftes Bereitstellungsszenario. Wenn Sie diese Einstellung in der Vergangenheit verwendet haben, um den Zugriff auf den Berichts-Generator aus dem Internet zu unterstützen, sollten Sie sich eine Alternative überlegen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+ [Konfigurieren von Berichtsserver-URLs &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Konfigurieren einer URL &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)

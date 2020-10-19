@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7730435d762d6e9e9bc4690dbdc644f0801fe20a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460002"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890869"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Konfigurieren der Bereitstellung für horizontales Skalieren für Berichtsserver im einheitlichen Modus
 
@@ -62,7 +62,7 @@ Für SQL Server 2016 Reporting Services verwenden Berichtsserver im SharePoint-
   
          Damit Datenbank-Kompatibilitätsfehler vermieden werden, wenn Sie die Serverinstanzen mit der freigegebenen Datenbank verbinden, müssen Sie sicherstellen, dass alle Instanzen dieselbe Version aufweisen. Wenn Sie beispielsweise die Berichtsserverdatenbank mithilfe einer SQL Server 2016-Berichtsserverinstanz erstellen, müssen alle anderen Instanzen in dieser Anwendung auch SQL Server 2016-Instanzen sein.  
   
-    -   Mit dem Konfigurations-Manager für Reporting Services stellen Sie eine Verbindung von den einzelnen Berichtsservern zu der gemeinsamen Datenbank her. Sie können nur jeweils eine Verbindung zu einem Berichtsserver herstellen und diesen Berichtsserver konfigurieren.  
+    -   Mit dem Berichtsserver-Konfigurations-Manager stellen Sie eine Verbindung von den einzelnen Berichtsservern zu der gemeinsamen Datenbank her. Sie können nur jeweils eine Verbindung zu einem Berichtsserver herstellen und diesen Berichtsserver konfigurieren.  
   
     -   Mit dem Konfigurationstool für Reporting Services können Sie die horizontale Skalierung durchführen, indem Sie eine Verbindung von den neuen Berichtsserverinstanzen zur ersten Berichtsserverinstanz herstellen, die bereits an die Berichtsserverdatenbank angeschlossen ist.  
   

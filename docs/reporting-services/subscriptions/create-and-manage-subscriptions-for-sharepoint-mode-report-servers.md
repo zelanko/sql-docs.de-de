@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0da2edb5af1484d6d8f9428ec6ec9a7f9e7c554f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 289483df5c80b4524a281e62b4d63147b6f61bb0
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945330"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986836"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus
   Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements erstellen, um Berichte von einer SharePoint-Webanwendung zu übermitteln, die in einem im SharePoint-Modus ausgeführten Berichtsserver integriert ist. Abonnements können Berichte an eine Dokumentbibliothek, einen Dateiordner oder als E-Mail übermitteln. Dieses Thema fasst die Anforderungen und Schritte zum Erstellen eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements zusammen.  
@@ -160,6 +160,6 @@ ms.locfileid: "87945330"
  [E-Mail Delivery in Reporting Services (E-Mail-Übermittlung in Reporting Services)](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Dateifreigabeübermittlung in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [SharePoint-Bibliotheksübermittlung in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
- [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (SSRS-Konfigurations-Manager)](https://docs.microsoft.com/sql/reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager)  
+ [Konfigurieren eines Berichtsservers für die E-Mail-Übermittlung (Berichtsserver-Konfigurations-Manager)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
   

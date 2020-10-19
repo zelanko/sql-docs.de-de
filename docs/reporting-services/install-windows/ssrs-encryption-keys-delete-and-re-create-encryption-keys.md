@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 60e0814a72d09ff8612ef6d14a6ef7abfd2e92f1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866303"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934663"
 ---
-# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)
+# <a name="delete-and-recreate-encryption-keys-report-server-configuration-manager"></a>Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln (Berichtsserver-Konfigurations-Manager)
   Das Löschen und erneute Erstellen von Verschlüsselungsschlüsseln gehört nicht zu den routinemäßigen Aktivitäten bei der Verwaltung von Schlüsseln. Sie führen diese Aufgaben als Reaktion auf eine bestimmte Gefahr für den Berichtsserver oder als letzte Möglichkeit vor dem Verlust des Zugriffs auf die Datenbank des Berichtsservers aus.  
   
 -   Erstellen Sie den symmetrischen Schlüssel neu, wenn Sie annehmen, dass der vorhandene symmetrische Schlüssel nicht mehr sicher ist. Sie können den Schlüssel auch regelmäßig neu erstellen. Dies ist eine bewährte Sicherheitsmethode.  
@@ -35,7 +35,7 @@ ms.locfileid: "74866303"
   
  Sie können den symmetrischen Schlüssel nur dann neu erstellen, wenn der Server ausgeführt wird. Wenn Sie die Verschlüsselungsschlüssel neu erstellen und den Inhalt wieder verschlüsseln, werden die Servervorgänge unterbrochen. Sie müssen den Server offline nehmen, während die erneute Verschlüsselung ausgeführt wird. Während dieser Zeit sollten keine Anforderungen an den Server gestellt werden.  
   
- Sie können das Reporting Services-Konfigurationstool oder das Hilfsprogramm **rskeymgmt** verwenden, um den symmetrischen Schlüssel und die verschlüsselten Daten zurückzusetzen. Weitere Informationen dazu, wie der symmetrische Schlüssel erstellt wird, finden Sie unter [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Sie können das Reporting Services-Konfigurationstool oder das Hilfsprogramm **rskeymgmt** verwenden, um den symmetrischen Schlüssel und die verschlüsselten Daten zurückzusetzen. Weitere Informationen dazu, wie der symmetrische Schlüssel erstellt wird, finden Sie unter [Initialisieren eines Berichtsservers &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>Erneutes Erstellen der Verschlüsselungsschlüssel (Reporting Services-Konfigurationstool)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "74866303"
 4.  Für Abonnements, die verschlüsselte Daten verwenden (d. h. die Dateifreigabe-Übermittlungserweiterung und alle verschlüsselten Übermittlungserweiterungen von Drittanbietern) öffnen Sie jedes Abonnement, und geben Sie die Anmeldeinformationen erneut ein. Abonnements, die Übermittlungsoption Berichtsserver-E-Mail verwenden, verwenden keine verschlüsselten Daten und sind bei einer Schlüsseländerung nicht betroffen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Speichern verschlüsselter Berichtsserverdaten &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

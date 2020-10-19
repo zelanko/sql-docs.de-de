@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2aa39f932c0fed1a64155037f32cfc207bfede4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3f8b6fb8aa45357318c398773708ecd2c66dba30
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458992"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935074"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Analysis Services-Verbindungstyp für MDX (SSRS)
   Wenn Sie Daten aus einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle des Typs „[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]“ basiert. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenerweiterung. Sie können Metadaten über Dimensionen, Hierarchien, Ebenen, Key Performance Indicators (KPIs), Measures und Attribute aus einem [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube abrufen, um sie als Berichtsdaten zu verwenden.  
@@ -46,7 +46,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   Aufforderung zur Eingabe der Anmeldeinformationen. Diese Option unterstützt nur die integrierte Windows-Sicherheit.  
   
--   Anmeldeinformationen sind nicht erforderlich. Zur Verwendung dieser Option müssen Sie zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).
+-   Anmeldeinformationen sind nicht erforderlich. Zur Verwendung dieser Option müssen Sie zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).
   
  Weitere Informationen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oder [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -78,7 +78,7 @@ data source=<server name>;initial catalog=<database name>
   
   
 ##  <a name="remarks"></a><a name="Remarks"></a> Hinweise  
- Die Analysis Services-Datenerweiterung basiert auf dem XMLA-Protokoll (XML for Analysis). Resultsets von Cubes werden durch das XMLA-Protokoll als vereinfachtes Rowset abgerufen. Unregelmäßige Hierarchien werden nicht unterstützt. Weitere Informationen finden Sie unter [Unregelmäßige Hierarchien](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
+ Die Analysis Services-Datenerweiterung basiert auf dem XMLA-Protokoll (XML for Analysis). Resultsets von Cubes werden durch das XMLA-Protokoll als vereinfachtes Rowset abgerufen. Unregelmäßige Hierarchien werden nicht unterstützt. Weitere Informationen finden Sie unter [Unregelmäßige Hierarchien](/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
   
  Sie können auch mit dem OLE DB-Datenquellentyp Daten aus einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube abrufen. Weitere Informationen finden Sie unter [OLE DB-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   
@@ -111,5 +111,4 @@ data source=<server name>;initial catalog=<database name>
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

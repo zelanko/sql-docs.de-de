@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1cd71f267fb6e249116cda4ba9c54069e8ee570
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b368b02ebfe37e63b4d02e6e69d6eed2bdb831ea
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509642"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934595"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Berichtsserver-Eigenschaften: Berichtsserver-Elementeigenschaften
   Elementeigenschaften sind Eigenschaften, die für Elemente in der Berichtsserver-Datenbank spezifisch sind. Zu diesen Elementen gehören Berichte, verlinkte Berichte, Ordner, Ressourcen, Modelle und Datenquellen.  
@@ -59,7 +59,7 @@ ms.locfileid: "79509642"
 |**Sprache**|Die in einem Bericht verwendete Sprache. Der Wert ist ein Sprachcode, der in der IETF-Spezifikation (Internet Engineering Task Force) RFC1766 definiert ist. Der erste Teil ist eine Bezeichnung aus zwei Zeichen für die Basissprache. Der zweite Teil ist durch einen Bindestrich getrennt und legt die Variation oder den Dialekt der Sprache fest. Wenn der Wert nicht im **Style**-Element angegeben ist, das zum **Body**-Element in der Berichtsdefinition gehört, ist der Standardwert gleich der Sprache des Berichtsservers.|  
 |**ReportProcessingTimeout**|Timeout (in Sekunden) für einen einzelnen Bericht. Wenn dieser Wert festgelegt ist, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind **-1** bis **2**.**147**.**483**.**647**. Wenn der Wert **–1** ist, gibt es für den Bericht während der Verarbeitung kein Timeout. Wenn der Wert **NULL** ist, wird für das Timeout bei der Berichtsverarbeitung der Wert der Systemeigenschaft **ReportProcessingTimeout** verwendet. Der Standardwert ist **NULL**. Weitere Informationen finden Sie unter [Berichtsserver-Systemeigenschaften](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Zeitpunkt (Datum und Uhrzeit), zu dem zuletzt eine Berichtsmomentaufnahme für einen Bericht erstellt wurde.|  
-|**CanRunUnattended**|Ein Wert, der angibt, ob ein Bericht unbeaufsichtigt nach einem Zeitplan ausgeführt werden kann. Ist diese Eigenschaft auf **TRUE** festgelegt, sind die Standardwerte für die Berichtsparameter definiert, und die Anmeldeinformationen für die Datenquelle werden mit dem Bericht gespeichert, oder die Option zum Abrufen der Anmeldeinformationen ist auf **None** festgelegt. Ist diese Eigenschaft auf **FALSE** festgelegt, sind die Voraussetzungen zum unbeaufsichtigten Ausführen eines Berichts nicht erfüllt. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
+|**CanRunUnattended**|Ein Wert, der angibt, ob ein Bericht unbeaufsichtigt nach einem Zeitplan ausgeführt werden kann. Ist diese Eigenschaft auf **TRUE** festgelegt, sind die Standardwerte für die Berichtsparameter definiert, und die Anmeldeinformationen für die Datenquelle werden mit dem Bericht gespeichert, oder die Option zum Abrufen der Anmeldeinformationen ist auf **None** festgelegt. Ist diese Eigenschaft auf **FALSE** festgelegt, sind die Voraussetzungen zum unbeaufsichtigten Ausführen eines Berichts nicht erfüllt. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;Berichtsserver-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
 |**HasParameterDefaultValues**|Ein Wert, der angibt, ob im Bericht gültige Standardwerte für alle Berichtsparameter festgelegt wurden. Der Wert lautet auch **TRUE**, wenn ein Bericht keine Berichtsparameter hat. Wenn diese Eigenschaft auf **false** festgelegt ist, hat mindestens ein Berichtsparameter keinen gültigen Standardwert.|  
 |**HasDataSourceCredentials**|Ein Wert, der angibt, dass die Option zum Abrufen der Anmeldeinformationen für alle zum Bericht gehörenden Datenquellen entweder gleich **None** oder gleich **Store** ist. Wenn diese Eigenschaft auf **false** festgelegt ist, ist eine Option zum Abrufen der Anmeldeinformationen für eine der zum Bericht gehörenden Datenquellen gleich **Integrated** oder gleich **Prompt**.|  
 |**IsSnapshotExecution**|Ein Wert, der angibt, ob der Bericht eine Momentaufnahme ist.|  

@@ -3,18 +3,18 @@ title: Bereitstellen von R-Code in gespeicherten Prozeduren
 description: Betten Sie R-Sprachcode in eine gespeicherte Prozedur von SQL Server ein, um ihn für alle Clientanwendungen mit Zugriff auf eine SQL Server-Datenbank verfügbar zu machen.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/28/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 81cc8f392275093f370a0dda12d1aaf1fca542e5
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 67176b65c8fe285d87bd56fff0b547b7bf5b8428
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288263"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956624"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Operationalisieren von R-Code mithilfe von gespeicherten Prozeduren in SQL Server-Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -28,7 +28,7 @@ In der Regel erfordert die Integration von Data Science-Lösungen eine umfangrei
 + [Erstellen und Ausführen einfacher R-Skripts in SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-Ein umfangreicheres Beispiel für die Bereitstellung von R-Code in der Produktion mithilfe von gespeicherten Prozeduren finden Sie unter [Tutorial: R-Datenanalysen für SQL-Entwickler](../../machine-learning/tutorials/r-taxi-classification-introduction.md).
+Ein umfangreicheres Beispiel für die Bereitstellung von R-Code in der Produktion mithilfe von gespeicherten Prozeduren finden Sie unter [R-Tutorial: Vorhersagen von Taxi-Fahrpreisen in New York City mit binärer Klassifizierung](../tutorials/r-taxi-classification-introduction.md).
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>Richtlinien zur Optimierung von R-Code für SQL
 
@@ -39,7 +39,7 @@ Die Konvertierung von R-Code in SQL gestaltet sich einfacher, wenn der R- oder P
 
 ## <a name="integrate-r-and-python-with-applications"></a>Integrieren von R und Python in Anwendungen
 
-Da R oder Python aus einer gespeicherten Prozedur ausgeführt werden kann, können Sie Skripts aus jeder beliebigen Anwendung ausführen, die eine T-SQL-Anweisung senden und die Ergebnisse verarbeiten kann. Beispielsweise können Sie ein Modell nach einem Zeitplan erneut trainieren, indem Sie die Aufgabe [T-SQL-Anweisung ausführen](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) in Integration Services oder einen anderen Auftragsplaner verwenden, der eine gespeicherte Prozedur ausführen kann.
+Da R oder Python aus einer gespeicherten Prozedur ausgeführt werden kann, können Sie Skripts aus jeder beliebigen Anwendung ausführen, die eine T-SQL-Anweisung senden und die Ergebnisse verarbeiten kann. Beispielsweise können Sie ein Modell nach einem Zeitplan erneut trainieren, indem Sie die Aufgabe [T-SQL-Anweisung ausführen](../../integration-services/control-flow/execute-t-sql-statement-task.md) in Integration Services oder einen anderen Auftragsplaner verwenden, der eine gespeicherte Prozedur ausführen kann.
 
 Die Bewertung ist eine wichtige Aufgabe, die auf einfache Weise automatisiert oder aus externen Anwendungen gestartet werden kann. Das Modell wird im Voraus mit R, Python oder einer gespeicherten Prozedur trainiert und in einer Tabelle [im Binärformat gespeichert](../tutorials/walkthrough-build-and-save-the-model.md). Anschließend kann das Modell als Teil des Aufrufs einer gespeicherten Prozedur in eine Variable geladen werden, wobei eine der folgenden T-SQL-Optionen für die Bewertung verwendet wird:
 
@@ -47,10 +47,15 @@ Die Bewertung ist eine wichtige Aufgabe, die auf einfache Weise automatisiert od
 + Bewertung einer einzelnen Zeile (für Aufrufe aus einer Anwendung)
 + [Native Bewertung](../predictions/native-scoring-predict-transact-sql.md) (für eine schnelle Batchvorhersage in SQL Server ohne Aufruf von R)
 
-Die folgende exemplarische Vorgehensweise enthält ein Beispiel für die Bewertung mithilfe einer gespeicherten Prozedur sowohl im Batchmodus als auch für eine einzelne Zeile:
+Das folgende Tutorial enthält ein Beispiel für die Bewertung mithilfe einer gespeicherten Prozedur sowohl im Batchmodus als auch für eine einzelne Zeile:
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Exemplarische End-to-End-Vorgehensweise zu Data Science für R in SQL Server](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+::: moniker-end
 
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ [R-Tutorial: Vorhersagen von Taxi-Fahrpreisen in New York City mit binärer Klassifizierung](../tutorials/r-taxi-classification-introduction.md)
+::: moniker-end
 
 ## <a name="boost-performance-and-scale"></a>Steigern von Leistung und Skalierung
 
@@ -58,8 +63,12 @@ Obwohl die Open-Source-Sprache R bekannte Einschränkungen in Bezug auf große D
 
 Wenn Ihre R-Lösung komplexe Aggregationen verwendet oder große Datasets enthält, können Sie die hocheffizienten In-Memory-Aggregationen und die Columnstore-Indizes von SQL Server nutzen und die statistischen Berechnungen und Bewertungen mit R-Code verarbeiten.
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>Anpassen von R-Code für andere Plattformen oder Computekontexte
 
 Den R-Code, den Sie für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten ausführen, können Sie auch für andere Datenquellen verwenden, wie z. B. Spark mit HDFS, wenn Sie beim SQL Server-Setup die Option [Eigenständiger Server](../install/sql-machine-learning-standalone-windows-install.md) aktivieren oder das Nicht-SQL-Markenprodukt Microsoft Machine Learning Server (früher **Microsoft R Server**) verwenden:
 
-+ [Dokumentation zu Machine Learning Server](https://docs.microsoft.com/r-server/)
++ [Dokumentation zu Machine Learning Server](/r-server/)
+
+::: moniker-end

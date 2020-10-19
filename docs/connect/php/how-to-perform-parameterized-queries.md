@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1fb2cb13055a53ba12a500b1a552e6fc2cdb431c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b146a03031f71b9385d5a51d161b822bd4ed832f
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392808"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081799"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Gewusst wie: Ausführen parametrisierter Abfragen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ Im weiteren Verlauf dieses Themas werden parametrisierte Abfragen erläutert, di
 > [!NOTE]  
 > Parameter sind implizit gebunden, wenn Sie **sqlsrv_prepare**. Dies bedeutet, dass wenn eine parametrisierte Abfrage mit **sqlsrv_prepare** vorbereitet wird und Werte im Parameterarray aktualisiert werden, bei der nächsten Ausführung der Abfrage die aktualisierten Werte verwendet werden. Weitere Informationen finden Sie im zweiten Beispiel dieses Themas.  
   
-## <a name="example"></a>Beispiel  
+## <a name="query-example"></a>Abfragebeispiel  
 Das folgende Beispiel aktualisiert die Menge für eine angegebene Produkt-ID in der *Production.ProductInventory* -Tabelle der AdventureWorks-Datenbank. Die Menge und die Produkt-ID sind Parameter in der UPDATE-Abfrage.  
   
 Das Beispiel fragt dann die Datenbank ab, um sicherzustellen, dass die Menge korrekt aktualisiert wurde. Die Produkt-ID ist ein Parameter in der SELECT-Abfrage.  
@@ -113,7 +113,7 @@ sqlsrv_close( $conn);
   
 Das vorhergehende Beispiel verwendet die Funktion **sqlsrv_query** , um Abfragen ausführen. Diese Funktion eignet sich zum Ausführen von einmaligen Abfragen, da sie jeweils die Anweisungsvorbereitung als auch die -Ausführung durchführt. Die Kombination von **sqlsrv_prepare**/**sqlsrv_execute** eignet sich für die erneute Ausführung einer Abfrage mit anderen Parameterwerten. Ein Beispiel für die erneute Ausführung einer Abfrage mit anderen Parameterwerten finden Sie im nächsten Beispiel.  
   
-## <a name="example"></a>Beispiel  
+## <a name="prepare-example"></a>Prepare-Beispiel  
 Das folgende Beispiel veranschaulicht die implizite Bindung von Variablen bei Verwendung der **sqlsrv_prepare** -Funktion. Das Beispiel fügt mehrere Verkaufsaufträge in die *Sales.SalesOrderDetail* -Tabelle ein Das $*params*-Array ist an die $*stmt*-Anweisung gebunden, wenn **sqlsrv_prepare** aufgerufen wird. Vor jeder Ausführung einer Abfrage, die einen neuen Verkaufsauftrag in die Tabelle einfügt, wird das *$params* -Array mit neuen Werten entsprechend der Auftragsdetails aktualisiert. Die Ausführung der nachfolgenden Abfrage verwendet die neuen Parameterwerte.  
   
 Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  

@@ -3,55 +3,52 @@ title: Konvertieren von Python- und SQL-Datentypen
 description: Überprüfen Sie die implizite und explizite Konvertierung von Datentypen zwischen Python und SQL Server in Data Science- und Machine Learning-Lösungen.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/30/2020
+ms.date: 10/06/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d1cfed615144b947281b87f88965474e88031d1
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: da92713dbf514e2500d0d5f8eb3e776523830041
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529486"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891350"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Zuordnungen von Datentypen zwischen Python und SQL Server
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-Überprüfen Sie für Python-Lösungen, die in der Python-Integrationsfunktion in SQL Server-Machine Learning Services ausgeführt werden, die Liste der nicht unterstützten Datentypen und Datentypkonvertierungen, die bei der Übergabe von Daten zwischen Python und SQL Server möglicherweise implizit ausgeführt werden.
+In diesem Artikel werden die unterstützten Datentypen aufgelistet und die Datentypkonvertierungen ausgeführt, die für die Verwendung des Features zur Python-Integration in SQL Server Machine Learning Services gelten.
 
-## <a name="python-version"></a>Python-Version
-
-Ein Teil der RevoScaleR-Funktionen (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees und eventuell weitere) wird mithilfe von Python-APIs bereitgestellt, die das neue Python-Paket **revoscalepy** verwenden. Sie können dieses Paket verwenden, um mithilfe von Pandas-Datenrahmen, XDF-Dateien oder SQL-Datenabfragen mit Daten zu arbeiten.
-
-Weitere Informationen finden Sie unter [revoscalepy (Python-Modul in SQL Server)](ref-py-revoscalepy.md) und [revoscalepy-Funktionsreferenz](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package).
-
-Verglichen mit SQL Server unterstützt Python nur eine begrenzte Anzahl von Datentypen. Daher ist es möglich, dass bei der Verwendung von Daten aus SQL Server in Python-Skripts diese implizit in einen kompatiblen Datentyp konvertiert werden. Da eine exakte automatische Konvertierung jedoch häufig nicht möglich ist, wird ein Fehler zurückgegeben.
+Verglichen mit SQL Server unterstützt Python nur eine begrenzte Anzahl von Datentypen. Daher ist es möglich, dass SQL-Daten aus SQL Server bei der Verwendung in Python-Skripts implizit in einen kompatiblen Python-Datentyp konvertiert werden. Häufig kann jedoch keine exakte automatische Konvertierung durchgeführt werden, dann wird ein Fehler zurückgegeben.
 
 ## <a name="python-and-sql-data-types"></a>Python- und SQL-Datentypen
 
 In der folgenden Tabelle werden die impliziten Konvertierungen aufgeführt, die bereitgestellt werden. Andere Datentypen werden nicht unterstützt.
 
-|SQLType|Python-Typ|BESCHREIBUNG
-|-------|-----------|---------------------------------------------------------------------------------------------|
-|**bigint**|`float64`|
-|**binary**|`bytes`|
-|**bit**|`bool`|
-|**char**|`str`|
-|**date**|`datetime`|
-|**datetime**|`datetime`|Dieser Typ wird in SQL Server 2017 CU6 und höher (mit **NumPy**-Arrays vom Typ `datetime.datetime` oder **Pandas** `pandas.Timestamp`) unterstützt. `sp_execute_external_script` unterstützt jetzt `datetime`-Typen mit Sekundenbruchteilen.|
-|**float**|`float64`|
-|**int**|`int32`|
-|**nchar**|`str`|
-|**nvarchar**|`str`|
-|**nvarchar(max)**|`str`|
-|**real**|`float64`|
-|**smalldatetime**|`datetime`|
-|**smallint**|`int32`|
-|**tinyint**|`int32`|
-|**uniqueidentifier**|`str`|
-|**varbinary**|`bytes`|
-|**varbinary(max)**|`bytes`|
-|**varchar(n)**|`str`|
-|**varchar(max)**|`str`|
+| SQL-Typ             | Python-Typ | BESCHREIBUNG |
+|----------------------|-------------|-------------|
+| **bigint**           | `float64`   |
+| **binary**           | `bytes`     |
+| **bit**              | `bool`      |
+| **char**             | `str`       |
+| **date**             | `datetime`  |
+| **datetime**         |`datetime`   | Dieser Typ wird in SQL Server 2017 CU6 und höher (mit **NumPy**-Arrays vom Typ `datetime.datetime` oder **Pandas** `pandas.Timestamp`) unterstützt. `sp_execute_external_script` unterstützt jetzt `datetime`-Typen mit Sekundenbruchteilen.|
+| **float**            | `float64`   |
+| **nchar**            | `str`       |
+| **nvarchar**         | `str`       |
+| **nvarchar(max)**    | `str`       |
+| **real**             | `float64`   |
+| **smalldatetime**    | `datetime`  |
+| **smallint**         | `int32`     |
+| **tinyint**          | `int32`     |
+| **uniqueidentifier** | `str`       |
+| **varbinary**        | `bytes`     |
+| **varbinary(max)**   | `bytes`     |
+| **varchar(n)**       | `str`       |
+| **varchar(max)**     | `str`       |
+
+## <a name="see-also"></a>Weitere Informationen
+
++ [Zuordnungen von Datentypen zwischen R und SQL Server](../r/r-libraries-and-data-types.md)

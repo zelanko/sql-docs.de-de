@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3acdc15b2d5eaf5e8e38e0929757fd44157a148
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a38fe4c1a8b627b5a45e30254f8eeac62f4452ad
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916264"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988136"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt-Hilfsprogramm (SSRS)
   Dient zum Extrahieren, Wiederherstellen, Erstellen und Löschen des symmetrischen Schlüssels, der verwendet wird, um vertrauliche Berichtsserverdaten vor nicht autorisiertem Zugriff zu schützen. Dieses Hilfsprogramm wird auch verwendet, um Berichtsserverinstanzen in einer Bereitstellung für horizontales Skalieren zu verknüpfen. Eine *Berichtsserverbereitstellung für horizontales Skalieren* bezeichnet mehrere Berichtsserverinstanzen, die gemeinsam eine einzelne Berichtsserver-Datenbank nutzen.  
@@ -129,7 +129,7 @@ rskeymgmt -a -f a:\backupkey\keys -p <password>
 ```  
   
 #### <a name="deleting-encryption-keys-and-encrypted-content"></a>Löschen von Verschlüsselungsschlüsseln und verschlüsselten Inhalten  
- In diesem Beispiel wird gezeigt, wie alle auf einem Berichtsserver gespeicherten Verschlüsselungsschlüssel gelöscht werden. Wenn es sich bei der Installation um eine Berichtsserverbereitstellung für horizontales Skalieren handelt, werden die Verschlüsselungsschlüssel für alle Berichtsserverinstanzen gelöscht, die in die Bereitstellung eingeschlossen sind. Durch das Löschen eines Verschlüsselungsschlüssels werden auch alle verschlüsselten Werte in der Berichtsserver-Datenbank gelöscht. Weitere Informationen zu verschlüsselten Inhalten finden Sie unter [Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+ In diesem Beispiel wird gezeigt, wie alle auf einem Berichtsserver gespeicherten Verschlüsselungsschlüssel gelöscht werden. Wenn es sich bei der Installation um eine Berichtsserverbereitstellung für horizontales Skalieren handelt, werden die Verschlüsselungsschlüssel für alle Berichtsserverinstanzen gelöscht, die in die Bereitstellung eingeschlossen sind. Durch das Löschen eines Verschlüsselungsschlüssels werden auch alle verschlüsselten Werte in der Berichtsserver-Datenbank gelöscht. Weitere Informationen zu verschlüsselten Inhalten finden Sie unter [Speichern verschlüsselter Berichtsserverdaten &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
 ```  
 rskeymgmt -d  
@@ -171,12 +171,11 @@ rskeymgmt -r <installationID>
   
  Das Hilfsprogramm **rskeymgmt** wird zum Verwalten des Schlüsselsatzes verwendet, der während der Installation oder Initialisierung definiert wurde. Über einen RPC-Endpunkt (Remote Procedure Call, Remoteprozeduraufruf) stellt es eine Verbindung mit dem Windows-Dienst des lokalen Berichtsservers her. Der Windows-Dienst des Berichtsservers muss ausgeführt werden, damit dieses Hilfsprogramm funktionsfähig ist.  
   
- Weitere Informationen zu den Verschlüsselungsschlüsseln finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) und [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Weitere Informationen zu den Verschlüsselungsschlüsseln finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) und [Initialisieren eines Berichtsservers &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Bereitstellung für horizontales Skalieren – Reporting Services im einheitlichen Modus &#40;Konfigurations-Manager&#41;](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
+ [Bereitstellung für horizontales Skalieren – Reporting Services im einheitlichen Modus &#40;Konfigurations-Manager&#41;](/previous-versions/sql/sql-server-2016/ms181357(v=sql.130))   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
-  
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97b9d710ef77a7555d4e9bbe16157469ceaa4b74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a268ef27e1f2e5337e2325fb464656e255b454c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480612"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005838"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Mitwirken an der SQL Server-Dokumentation
 
@@ -34,7 +34,7 @@ Alle öffentlichen Beiträge werden vom SQL-Inhaltsteam auf technische Richtigke
 
 ## <a name="edit-in-your-browser"></a><a id="githubui"></a> Bearbeiten von Inhalten im Browser
 
-Sie können im Browser einfache Änderungen an SQL Server-Inhalten vornehmen und diese dann an Microsoft übermitteln. Weitere Informationen finden Sie im [Leitfaden für Mitwirkende der Microsoft-Dokumentation: Übersicht](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
+Sie können im Browser einfache Änderungen an SQL Server-Inhalten vornehmen und diese dann an Microsoft übermitteln. Weitere Informationen finden Sie im [Leitfaden für Mitwirkende der Microsoft-Dokumentation: Übersicht](/contribute/#quick-edits-to-existing-documents). 
 
 Die folgenden Schritte fassen den Prozess zusammen: 
 
@@ -59,10 +59,10 @@ Eine weitere Bearbeitungsoption besteht darin, das **sql-docs**- oder **azure-do
 
 Weitere Informationen zu dieser Bearbeitungsoption finden Sie in den folgenden Artikeln:
 
-- [Einrichten eines GitHub-Kontos](https://docs.microsoft.com/contribute/get-started-setup-github)
-- [Install content authoring tools (Installieren von Erstellungstools für Inhalte)](https://docs.microsoft.com/contribute/get-started-setup-tools)
-- [Lokales Einrichten von Git für die Dokumentation](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Verwenden von Tools zum Einreichen von Änderungen](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
+- [Einrichten eines GitHub-Kontos](/contribute/get-started-setup-github)
+- [Install content authoring tools (Installieren von Erstellungstools für Inhalte)](/contribute/get-started-setup-tools)
+- [Lokales Einrichten von Git für die Dokumentation](/contribute/get-started-setup-local)
+- [Verwenden von Tools zum Einreichen von Änderungen](/contribute/how-to-write-workflows-major)
 
 Wenn Sie einen Pull Request mit umfassenden Änderungen an der Dokumentation einreichen, wird in GitHub ein Kommentar angezeigt, in dem Sie aufgefordert werden, online eine **Lizenzvereinbarung für Mitwirkende** zu übermitteln. Sie müssen dieses Onlineformular ausfüllen, damit Ihr Pull Request akzeptiert wird.
 
@@ -107,13 +107,13 @@ Mit den folgenden Tipps finden Sie die richtige applies-to-Includedatei für Ihr
 - Eine Liste häufig verwendeter Includedateien finden Sie unter [SQL Server-Includedateien für die Versionsverwaltung und „Applies-to“](applies-to-includes.md).
 - Suchen Sie nach anderen Artikeln, in denen es um dasselbe Feature oder um eine vergleichbare Aufgabe geht. Wenn Sie diese Artikel bearbeiten, können Sie das Markdown-Element für den Link zur applies-to-Includedatei kopieren. Dabei können Sie die Bearbeitung abbrechen, ohne die Änderungen zu senden.
 - Durchsuchen Sie das Verzeichnis [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) nach Dateien, die den Text „applies-to“ enthalten. Über die Schaltfläche **Find** (Suchen) können Sie in GitHub die Ergebnisse schnell filtern. Klicken Sie auf die Datei, um festzustellen, wie diese gerendert wird.
-- Beachten Sie die Namenskonvention. Wenn der Name mehrmals den Buchstaben „x“ enthält, ist dieser vermutlich ein Platzhalter, der darauf hinweist, dass ein bestimmter Dienst nicht unterstützt wird. Durch **appliesto-xx-xxxx-asdw-xxx-md.md** wird beispielsweise angegeben, dass ausschließlich Azure SQL Data Warehouse unterstützt wird, da nur die Zeichenfolge **asdw** vorhanden ist. Die anderen Felder enthalten hingegen nur den Buchstaben „x“.
+- Beachten Sie die Namenskonvention. Wenn der Name mehrmals den Buchstaben „x“ enthält, ist dieser vermutlich ein Platzhalter, der darauf hinweist, dass ein bestimmter Dienst nicht unterstützt wird. Durch **appliesto-xx-xxxx-asdw-xxx-md.md** wird beispielsweise angegeben, dass ausschließlich Azure Synapse Analytics unterstützt wird, da nur die Zeichenfolge **asdw** vorhanden ist. Die anderen Felder enthalten hingegen nur den Buchstaben „x“.
 - In einigen Includedateien werden Versionsnummern wie **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md** angegeben. Verwenden Sie diese Includedateien nur, wenn Sie wissen, dass dieses Feature mit einer bestimmten Version von SQL Server eingeführt wurde.
 
 ## <a name="contributor-resources"></a>Ressourcen für Mitwirkende
 
-- [Leitfaden für Mitwirkende an der Dokumentation auf docs.microsoft.com](https://docs.microsoft.com/contribute/)
-- [Microsoft-Styleguide](https://docs.microsoft.com/teamblog/style-guide)
+- [Leitfaden für Mitwirkende an der Dokumentation auf docs.microsoft.com](/contribute/)
+- [Microsoft-Styleguide](/teamblog/style-guide)
 - [Markdown-Grundlagen](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]

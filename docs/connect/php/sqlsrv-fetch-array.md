@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391805"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080640"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -82,7 +82,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
   
 Wenn ein Resultset mehrere Spalten ohne Namen enthält, wird der Wert der letzten unbenannten Spalte dem Schlüssel einer leeren Zeichenfolge ("") zugewiesen.  
   
-## <a name="example"></a>Beispiel  
+## <a name="associative-array-example"></a>Beispiel für ein assoziatives Array  
 Das folgende Beispiel ruft jede Zeile eines Resultsets als assoziatives **Array**auf. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
@@ -121,7 +121,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Beispiel  
+## <a name="indexed-array-xample"></a>Beispiel für ein indiziertes Array  
 Das folgende Beispiel ruft jede Zeile eines Resultsets als numerisch indiziertes Array auf.  
   
 Im Beispiel wird die Produktinformation aus der *Purchasing.PurchaseOrderDetail*-Tabelle der AdventureWorks-Datenbank für Produkte mit einem angegebenen Datum und einer gelagerten Menge (*StockQty*), die kleiner als ein angegebener Wert ist, abgerufen.  

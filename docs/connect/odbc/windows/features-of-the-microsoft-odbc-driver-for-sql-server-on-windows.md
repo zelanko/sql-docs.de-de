@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 4a692483bc07ee6de0aa2a6793790ecf336f1f0a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 5fc07a171e42338ca76d51d66c04af187cb6beda
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922096"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005903"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funktionen von Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -42,7 +42,7 @@ Der ODBC Driver 13.1 for SQL Server enthält alle Funktionen der vorherigen Ver
   
 „Immer verschlüsselt“ ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an SQL Server weiterzugeben. Ein auf dem Clientcomputer installierter Treiber, bei dem „Immer verschlüsselt“ aktiviert ist, erreicht dies durch die automatische Ver- und Entschlüsselung von sensiblen Daten in der SQL Server-Clientanwendung. Der Treiber verschlüsselt die Daten in vertraulichen Spalten, bevor er sie an SQL Server weitergibt, und schreibt Abfragen automatisch neu, sodass die Semantik der Anwendung beibehalten wird. Auf ähnliche Weise entschlüsselt der Treiber transparent Daten in verschlüsselten Datenbankspalten, die in Abfrageergebnissen enthalten sind. Weitere Informationen finden Sie unter [Using Always Encrypted with the ODBC Driver (Verwenden von Always Encrypted mit dem ODBC-Treiber)](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md).
  
-Azure Active Directory ermöglicht es Benutzern, Datenbankadministratoren und Anwendungsprogrammierern, die Azure Active Directory-Authentifizierung als Mechanismus zu verwenden, mit dem unter Verwendung von Identitäten in Azure Active Directory (Azure AD) eine Verbindung mit Microsoft Azure SQL-Datenbank und Microsoft SQL Server 2016 hergestellt werden kann. Weitere Informationen finden Sie unter [Verwenden von Azure Active Directory mit dem ODBC Driver](../using-azure-active-directory.md) und [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse unter Verwendung der Azure Active Directory-Authentifizierung](/azure/sql-database/sql-database-aad-authentication).   
+Azure Active Directory ermöglicht es Benutzern, Datenbankadministratoren und Anwendungsprogrammierern, die Azure Active Directory-Authentifizierung als Mechanismus zu verwenden, mit dem unter Verwendung von Identitäten in Azure Active Directory (Azure AD) eine Verbindung mit Microsoft Azure SQL-Datenbank und Microsoft SQL Server 2016 hergestellt werden kann. Weitere Informationen finden Sie unter [Verwenden von Azure Active Directory mit dem ODBC Driver](../using-azure-active-directory.md) und [Herstellen einer Verbindung mit SQL-Datenbank oder Azure Synapse Analytics unter Verwendung der Azure Active Directory-Authentifizierung](/azure/sql-database/sql-database-aad-authentication).   
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Microsoft ODBC Driver 11 für SQL Server unter Windows  
 

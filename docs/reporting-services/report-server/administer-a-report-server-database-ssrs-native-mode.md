@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e288b9b92f4fed7f103b3e4f37ed696b76a1f32f
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: da113897d64fc06a736455320f638ad4c0d82387
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548092"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934167"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Verwalten einer Berichtsserver-Datenbank (einheitlicher SSRS-Modus)
   Eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung verwendet zwei relationale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken für den Zentralspeicher. Die Namen der Datenbanken lauten standardmäßig ReportServer und ReportServerTempdb. ReportServerTempdb wird mit der primären Berichtsserver-Datenbank erstellt und dient zur Speicherung von temporären Daten, Sitzungsinformationen und zwischengespeicherten Berichten.  
@@ -34,7 +34,7 @@ ms.locfileid: "84548092"
   
 -   Um vorhandene Datenbankinhalte in eine andere Berichtsserver-Datenbank zu kopieren, können Sie eine Kopie einer Berichtsserver-Datenbank anfügen und sie mit einer anderen Berichtsserverinstanz verwenden. Oder Sie können ein Skript erstellen und ausführen, das SOAP-Aufrufe verwendet, um Berichtsserverinhalte in einer neuen Datenbank neu zu erstellen. Sie können das Hilfsprogramm **rs** verwenden, um das Skript auszuführen.  
   
--   Um Verbindungen zwischen dem Berichtsserver und der Berichtsserver-Datenbank zu verwalten und um festzustellen, welche Berichtsserver-Datenbank von einer bestimmten Berichtsserverinstanz verwendet wird, steht Ihnen die Seite "Setup" der Datenbank im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationstool zur Verfügung. Weitere Informationen zur Berichtsserververbindung mit der Datenbank finden Sie unter [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+-   Um Verbindungen zwischen dem Berichtsserver und der Berichtsserver-Datenbank zu verwalten und um festzustellen, welche Berichtsserver-Datenbank von einer bestimmten Berichtsserverinstanz verwendet wird, steht Ihnen die Seite "Setup" der Datenbank im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationstool zur Verfügung. Weitere Informationen zur Berichtsserververbindung mit der Datenbank finden Sie unter [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="sql-server-login-and-database-permissions"></a>SQL Server-Anmelde- und Datenbankberechtigungen  
  Die Berichtsserver-Datenbanken werden intern vom Berichtserver verwendet. Die Verbindungen zu Datenbanken werden durch den Berichtsserverdienst hergestellt. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool können Sie die Berichtsserververbindung zur Berichtsserver-Datenbank konfigurieren.  
@@ -78,15 +78,16 @@ SET READ_COMMITTED_SNAPSHOT OFF
  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]stehen keine expliziten Informationen zur Datenbankversion zur Verfügung. Da Datenbankversionen jedoch immer mit Produktversionen synchronisiert werden, können Sie anhand der Informationen zur Produktversion erkennen, wenn sich die Datenbankversion geändert hat. Die Informationen zur Produktversion für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden über die Dateiversionsinformationen in den Protokolldateien, in den Headern aller SOAP-Aufrufe und beim Herstellen einer Verbindung mit der Berichtsserver-URL angezeigt (z.B. beim Öffnen eines Browsers und Eingabe von `https://localhost/reportserver`).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Erstellen einer Berichtsserver-Datenbank](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+
+ [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Configure the Report Server Service Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  (Konfigurieren des Berichtsserver-Dienstkontos &#40;Berichtsserver-Konfigurations-Manager&#41;)  
+ [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Erstellen einer Berichtsserver-Datenbank &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Berichtsserver-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)   
  [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Speichern verschlüsselter Berichtsserverdaten &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

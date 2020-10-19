@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: ba646353b0ded0a1cc4617c1b4c9ffc3c159662e
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: d44e59e8dfdd9ba38feb2c860348f44af325c768
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662791"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038384"
 ---
 # <a name="quickstart-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Schnellstart: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio (SSMS)
 
@@ -35,12 +35,12 @@ In diesem Schnellstart erfahren Sie, wie Sie mit dem SQL Server Management Studi
 
 Zum Ausführen der Schritte in diesem Artikel benötigen Sie das SQL Server Management Studio und Zugriff auf eine SQL Server-Instanz.
 
-* Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Installieren Sie [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 Wenn Sie über keinen Zugriff auf eine SQL Server-Instanz verfügen, wählen Sie Ihre Plattform aus den folgenden Links aus. Wenn Sie die SQL-Authentifizierung wählen, verwenden Sie Ihre SQL Server-Anmeldeinformationen.
 
 * **Windows**: [Laden Sie SQL Server 2019 Developer Edition herunter.](https://www.microsoft.com/sql-server/sql-server-downloads)
-* **macOS**: [Laden Sie SQL Server 2019 über Docker herunter.](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+* **macOS**: [Laden Sie SQL Server 2019 über Docker herunter.](../../linux/quickstart-install-connect-docker.md)
 
 ## <a name="connect-to-a-sql-server-instance"></a>Eine Verbindung mit einer SQL Server-Instanz herstellen
 
@@ -54,7 +54,7 @@ Wenn Sie über keinen Zugriff auf eine SQL Server-Instanz verfügen, wählen Sie
 
     * Wählen Sie für **Servertyp** die Option **Datenbank-Engine** (normalerweise die Standardoption) aus.
     * Geben Sie für **Servername** den Namen Ihrer SQL Server-Instanz ein. (In diesem Artikel wird der Instanzname „SQL2016ST“ auf dem Hostnamen „NODE5“ [NODE5\SQL2016ST] verwendet.) Wenn Sie nicht genau wissen, wie Sie Ihren SQL Server-Instanznamen bestimmen sollen, erhalten Sie hier [zusätzliche Tipps und Tricks für die Verwendung von SSMS](../tutorials/ssms-tricks.md#find-sql-server-instance-name).
-    * Wählen Sie für **Authentifizierung** die Option **Windows-Authentifizierung** aus. In diesem Artikel wird die Windows-Authentifizierung verwendet, jedoch wird ebenso die SQL Server-Anmeldung unterstützt. Wenn Sie **SQL-Anmeldung** auswählen, werden Sie aufgefordert, einen Benutzernamen und ein Kennwort einzugeben. Weitere Informationen zu Authentifizierungstypen finden Sie unter [Verbindung mit Server herstellen (Datenbank-Engine)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
+    * Wählen Sie für **Authentifizierung** die Option **Windows-Authentifizierung** aus. In diesem Artikel wird die Windows-Authentifizierung verwendet, jedoch wird ebenso die SQL Server-Anmeldung unterstützt. Wenn Sie **SQL-Anmeldung** auswählen, werden Sie aufgefordert, einen Benutzernamen und ein Kennwort einzugeben. Weitere Informationen zu Authentifizierungstypen finden Sie unter [Verbindung mit Server herstellen (Datenbank-Engine)](../f1-help/connect-to-server-database-engine.md).
 
     ![Feld „Servername“ mit der Option zur Verwendung der SQL Server-Instanz](media/connect-query-sql-server/connection-2.png)
 
@@ -71,7 +71,7 @@ Um zu prüfen, ob eine Verbindung mit SQL Server erfolgreich hergestellt wurde, 
 * Herstellen einer Verbindung mit einer SQL Azure-Datenbank – in diesem Fall „msftestserver.database.windows.net“: ![Herstellen einer Verbindung mit einer SQL Azure-Datenbank](media/connect-query-sql-server/connect-sql-azure.png)
 
 > [!NOTE]
-> In diesem Artikel haben Sie bereits die *Windows-Authentifizierung* verwendet, um eine Verbindung mit Ihrer lokalen SQL Server-Instanz herzustellen. Diese Methode wird für SQL Azure-Datenbanken jedoch nicht unterstützt. Daher ist in diesem Bild gezeigt, wie über SQL-Authentifizierung eine Verbindung mit der SQL Azure-Datenbank hergestellt wird. Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md) und [SQL Azure-Authentifizierung](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management).
+> In diesem Artikel haben Sie bereits die *Windows-Authentifizierung* verwendet, um eine Verbindung mit Ihrer lokalen SQL Server-Instanz herzustellen. Diese Methode wird für SQL Azure-Datenbanken jedoch nicht unterstützt. Daher ist in diesem Bild gezeigt, wie über SQL-Authentifizierung eine Verbindung mit der SQL Azure-Datenbank hergestellt wird. Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md) und [SQL Azure-Authentifizierung](/azure/sql-database/sql-database-security-overview#access-management).
 
 ## <a name="create-a-database"></a>Erstellen einer Datenbank
 
@@ -198,7 +198,7 @@ Mit den nachfolgenden Schritten können Sie die Serververbindung für das aktuel
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-Sie können mithilfe von Azure Data Studio auch Verbindungen mit [SQL Server](../../azure-data-studio/quickstart-sql-server.md), einer [Azure SQL-Datenbank](../../azure-data-studio/quickstart-sql-database.md) und [Azure SQL Data Warehouse-Instanzen](../../azure-data-studio/quickstart-sql-dw.md) herstellen und diese abfragen.
+Sie können mithilfe von Azure Data Studio auch Verbindungen mit [SQL Server](../../azure-data-studio/quickstart-sql-server.md), einer [Azure SQL-Datenbank](../../azure-data-studio/quickstart-sql-database.md) und [Azure Synapse Analytics -Instanzen](../../azure-data-studio/quickstart-sql-dw.md) herstellen und diese abfragen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

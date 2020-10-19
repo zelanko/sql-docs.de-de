@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901365"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039019"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
 
@@ -57,7 +57,7 @@ ms.locfileid: "88901365"
 
 Sie können mit dem **Assistenten zum Generieren und Veröffentlichen von Skripts** Skripts zur Übertragung einer Datenbank zwischen Instanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]erstellen. Sie können Skripts für eine Datenbank auf einer Datenbank-Engine-Instanz im lokalen Netzwerk oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aus generieren. Die generierten Skripts können auf einer anderen Datenbank-Engine-Instanz oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] aus ausgeführt werden. Sie können den Assistenten außerdem dazu verwenden, den Inhalt einer Datenbank direkt in einem Webdienst zu veröffentlichen, der mit den Datenbank-Veröffentlichungsdiensten erstellt wurde. Sie können Skripts für eine gesamte Datenbank oder für eine Auswahl bestimmter Objekte erstellen.
 
-Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und Veröffentlichen von Skripts finden Sie unter [Tutorial: Assistent zum Generieren von Skripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
+Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und Veröffentlichen von Skripts finden Sie unter [Tutorial: Assistent zum Generieren von Skripts](../tutorials/scripting-ssms.md#script-databases).
 
 ## <a name="before-you-begin"></a>Vorbereitungen
 
@@ -130,7 +130,7 @@ Auf dieser Seite können Sie angeben, ob Skripts vom Assistenten am ausgewählte
 
 ![Als Notebook speichern](media/generate-and-publish-scripts-wizard/save.png)
 
-- **[Als Notebook speichern](../../azure-data-studio/notebooks-guidance.md)** : Speichern Sie das Skript in einer oder mehreren SQL-Dateien. Wählen Sie die Schaltfläche zum Durchsuchen ( **…** ) aus, um einen Namen und Speicherort für die Datei anzugeben.
+- **[Als Notebook speichern](../../azure-data-studio/notebooks/notebooks-guidance.md)** : Speichern Sie das Skript in einer oder mehreren SQL-Dateien. Wählen Sie die Schaltfläche zum Durchsuchen ( **…** ) aus, um einen Namen und Speicherort für die Datei anzugeben.
 
 - **Als Skriptdatei speichern** Speichert das Skript in einer oder mehreren SQL-Dateien. Wählen Sie die Schaltfläche zum Durchsuchen ( **…** ) aus, um einen Namen und Speicherort für die Datei anzugeben. Aktivieren Sie das Kontrollkästchen **Vorhandene Datei überschreiben** , um die Datei zu ersetzen, wenn bereits eine Datei mit dem gleichen Namen vorhanden ist. Wählen Sie **Einzelne Skriptdatei** oder **Einzelne Skriptdatei pro Objekt** aus, um anzugeben, wie die Skripts generiert werden sollen. Wählen Sie **Unicode-Text** oder **ANSI-Text** aus, um die Art von Text anzugeben, die im Skript verwendet werden soll.
 
@@ -246,7 +246,7 @@ Mithilfe dieser Seite können Sie den Status des Assistenten überwachen.
 
 Wenn alle Einstellungen richtig sind, wird die Konfiguration erfolgreich abgeschlossen.
 
-## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Generieren von Skripts in Azure SQL Data Warehouse
+## <a name="generating-scripts-on-azure-synapse-analytics"></a>Generieren von Skripts in Azure Synapse Analytics
 
 Wenn die generiert Syntax bei Verwenden von „Skripterstellung als...“ nicht wie die [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]-Syntax aussieht, oder Sie eine Fehlermeldung erhalten, müssen Sie möglicherweise Ihre Optionen für die Skripterstellung in SQL Server Management Studio auf [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] festlegen.
 

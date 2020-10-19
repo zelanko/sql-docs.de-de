@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 49fd020cbbe8162dd82b51ab4743730a85762598
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603377"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892440"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist
 - Arithmetische Ausdrücke wie 1+1, 5/3*2, die nur Konstanten enthalten.
 - Logische Ausdrücke wie 1=1 und 1>2 AND 3>4, die nur Konstanten enthalten.
 - Integrierte Funktionen, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zur Kompilierzeit reduziert werden können, einschließlich `CAST` und `CONVERT`. Im Allgemeinen gilt eine systeminterne Funktion als zur Kompilierzeit reduzierbar, wenn sie ausschließlich aus Eingaben besteht – ohne weitere kontextbezogene Informationen wie SET-Optionen, Spracheinstellungen, Datenbankoptionen oder Verschlüsselungsschlüssel. Nicht deterministische Funktionen sind nicht zur Kompilierzeit reduzierbar. Deterministische integrierte Funktionen sind bis auf einige Ausnahmen zur Kompilierzeit reduzierbar.
-- Deterministische Methoden von CLR-benutzerdefinierten Typen sowie deterministische CLR-benutzerdefinierte Skalarwertfunktionen (beginnend mit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Weitere Informationen finden Sie unter [Reduktion konstanter Ausdrücke für benutzerdefinierte CLR-Funktionen und -Methoden](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15).
+- Deterministische Methoden von CLR-benutzerdefinierten Typen sowie deterministische CLR-benutzerdefinierte Skalarwertfunktionen (beginnend mit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Weitere Informationen finden Sie unter [Reduktion konstanter Ausdrücke für benutzerdefinierte CLR-Funktionen und -Methoden](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE] 
 > Eine Ausnahme sind große Objekte. Wenn der Ausgabetyp des Reduktionsprozesses ein großes Objekt (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) oder XML) ist, reduziert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] den Ausdruck nicht zur Kompilierzeit.
@@ -1030,7 +1030,7 @@ Zu den Konstrukten, die Parallelität verhindern, gehören:
     Weitere Informationen zu Cursorn finden Sie unter [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
     
 -   **Rekursive Abfragen**        
-    Weitere Informationen zur Rekursion finden Sie unter [Richtlinien zum Definieren und Verwenden rekursiver allgemeiner Tabellenausdrücke](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) und [Rekursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
+    Weitere Informationen zur Rekursion finden Sie unter [Richtlinien zum Definieren und Verwenden rekursiver allgemeiner Tabellenausdrücke](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) und [Rekursion in T-SQL](/previous-versions/sql/legacy/aa175801(v=sql.80)).
 
 -   **Tabellenwertfunktionen mit mehreren Anweisungen (Multi-statement table-valued functions, MSTVFs)**         
     Weitere Informationen zu MSTVFs finden Sie unter [Erstellen benutzerdefinierter Funktionen (Datenbank-Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
@@ -1270,7 +1270,8 @@ Wenn möglich, verlagert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] hat für viele parallele Pläne eine bessere Leistung bei der Verarbeitung von Abfragen in partitionierten Tabellen, eine geänderte Art der Darstellung paralleler und serieller Pläne und bessere Partitionierungsinformationen in Kompilierzeit- und Laufzeitausführungsplänen ermöglicht. In diesem Thema werden diese Verbesserungen vorgestellt. Außerdem erhalten Sie Hinweise zur Interpretation der Abfrageausführungspläne für partitionierte Tabellen und Indizes sowie zu bewährten Methoden zur Verbesserung der Abfrageleistung bei partitionierten Objekten. 
 
 > [!NOTE]
-> Partitionierte Tabellen und Indizes werden nur in der Enterprise Edition, Developer Edition und Evaluation Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt.
+> Partitionierte Tabellen und Indizes werden bis [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] nur in der Enterprise-, Developer- und Evaluation-Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt.   
+> Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 werden partitionierte Tabellen und Indizes auch in der Standard-Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt. 
 
 ### <a name="new-partition-aware-seek-operation"></a>Neuer partitionsgerichteter Suchvorgang (SEEK)
 
@@ -1435,7 +1436,7 @@ Wir empfehlen die folgenden bewährten Vorgehensweisen, um die Leistung von Abfr
 * Verwenden Sie einen Server mit schnellen und möglichst vielen Prozessoren, um sich die Vorteile der parallelen Abfrageverarbeitung zu Nutze zu machen.
 * Stellen Sie sicher, dass der Server über eine ausreichend große E/A-Controllerbandbreite verfügt. 
 * Erstellen Sie für jede große partitionierte Tabelle einen gruppierten Index, um den optimierten B-Strukturscan voll nutzen zu können.
-* Beachten Sie die Empfehlungen für bewährte Vorgehensweisen im Whitepaper [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](https://msdn.microsoft.com/library/dd425070.aspx), wenn Sie mittels Massenladen Daten in partitionierte Tabellen laden.
+* Beachten Sie die Empfehlungen für bewährte Vorgehensweisen im Whitepaper [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)), wenn Sie mittels Massenladen Daten in partitionierte Tabellen laden.
 
 ### <a name="example"></a>Beispiel
 

@@ -9,17 +9,17 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ca8827f5dcee9b25d873ac7fed83679480bedb44
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: d02217eaae3cf402a1ccb6e08780f4e9406d446f
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227264"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956316"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Installieren einer benutzerdefinierten Python-Laufzeit für SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-In diesem Artikel wird beschrieben, wie Sie eine benutzerdefinierte Laufzeit zum Ausführen von Python-Skripts mit SQL Server installieren. Die benutzerdefinierte Laufzeit für Python kann in folgenden Szenarien verwendet werden:
+In diesem Artikel wird beschrieben, wie Sie eine benutzerdefinierte Laufzeit zum Ausführen von Python-Skripts mit SQL Server installieren. Die benutzerdefinierte Runtime verwendet Technologie zur Sprachenerweiterung, die auf einem Erweiterbarkeitsframework für die Ausführung von externem Code aufbaut. Die benutzerdefinierte Laufzeit für Python kann in folgenden Szenarien verwendet werden:
 
 + In einer Installation von SQL Server mit dem Erweiterbarkeitsframework.
 
@@ -29,6 +29,8 @@ In diesem Artikel wird beschrieben, wie Sie eine benutzerdefinierte Laufzeit zum
 
 > [!NOTE]
 > In diesem Artikel wird beschrieben, wie Sie eine benutzerdefinierte Laufzeit für Python unter Windows installieren. Informationen zur Installation unter Linux finden Sie unter [Installieren einer benutzerdefinierten Python-Laufzeit für SQL Server unter Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
+
+
 
 ## <a name="pre-install-checklist"></a>Prüfliste vor der Installation
 
@@ -73,14 +75,14 @@ Spracherweiterungen verwenden das Erweiterbarkeitsframework zum Ausführen von e
     + -Datenbank-Engine-Dienste
     + Machine Learning-Dienste und -Spracherweiterungen
 
-1. Wenn Sie nach Abschluss des Setups dazu aufgefordert werden, starten Sie jetzt den Computer neu. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen finden Sie unter [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Wenn Sie nach Abschluss des Setups dazu aufgefordert werden, starten Sie jetzt den Computer neu. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen finden Sie unter [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 
 ## <a name="install-python-37"></a>Installation von Python 3.7 
 
 Installieren Sie [Python 3.7]( https://www.python.org/downloads/release/python-379/), und fügen Sie die Installation PATH hinzu.
 
-![Hinzufügen von Python 3.7 zum Pfad.](../install/media/python-379.png) **Abbildung zur Aktualisierung: Hinweis**
+![Hinzufügen von Python 3.7 zum Pfad.](../install/media/python-379.png) 
 
 
 #### <a name="install-pandas"></a>Installieren von Pandas
@@ -105,7 +107,7 @@ Wenn PYTHONHOME bereits vorhanden ist, wählen Sie **Bearbeiten** aus, um auf de
 
 ## <a name="grant-access-to-the-custom-python-installation-folder"></a>Gewähren des Zugriffs auf den benutzerdefinierten Python-Installationsordner
 
-Führen Sie die folgenden **icacls**-Befehle in einer neuen Eingabeaufforderung mit *erhöhten Rechten* aus, um PYTHONHOME für den **SQL Server-Launchpad-Dienst** und SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**) LESE- und AUSFÜHRUNGSZUGRIFF zu gewähren. Der Benutzername des Launchpad-Diensts weist die Form `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` auf und ist der Instanzname Ihrer SQL Server-Instanz. Die Befehle gewähren rekursiv Zugriff auf alle Dateien und Ordner unter dem angegebenen Verzeichnispfad.
+Führen Sie die folgenden **icacls**-Befehle in einer neuen Eingabeaufforderung mit *erhöhten Rechten* aus, um PYTHONHOME für den **SQL Server-Launchpad-Dienst** und SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**) LESE- und AUSFÜHRUNGSZUGRIFF zu gewähren. Der Benutzername des Launchpad-Diensts ist `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME`, der Instanzname Ihrer SQL Server-Instanz. Die Befehle gewähren rekursiv Zugriff auf alle Dateien und Ordner unter dem angegebenen Verzeichnispfad.
 
 Fügen Sie den Instanznamen an `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`) an. In diesem Beispiel ist INSTANCENAME die Standardinstanz `MSSQLSERVER`.
 
@@ -138,7 +140,7 @@ Laden Sie die [ZIP-Datei herunter, die die Python-Sprachenerweiterung für Windo
 
 ## <a name="register-external-language"></a>Registrieren einer externen Sprache
 
-Registrieren Sie diese Python-Spracherweiterung mit [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) für jede Datenbank, in der Sie sie verwenden möchten. Verwenden Sie [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), um eine Verbindung mit SQL Server herzustellen und den folgenden T-SQL-Befehl auszuführen. Ändern Sie den Pfad in dieser Anweisung, um den Speicherort der heruntergeladenen ZIP-Spracherweiterungsdatei („python-lang-extension.zip“) anzugeben.
+Registrieren Sie diese Python-Spracherweiterung mit [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) für jede Datenbank, in der Sie sie verwenden möchten. Verwenden Sie [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), um eine Verbindung mit SQL Server herzustellen und den folgenden T-SQL-Befehl auszuführen. Ändern Sie den Pfad in dieser Anweisung, um den Speicherort der heruntergeladenen ZIP-Spracherweiterungsdatei („python-lang-extension.zip“) anzugeben.
 
 > [!NOTE]
 > Python ist ein reserviertes Wort. Verwenden Sie einen anderen Namen für die externe Sprache, z. B. „myPython“.
@@ -284,7 +286,7 @@ Laden Sie die [ZIP-Datei herunter, die die Python-Sprachenerweiterung für Linux
 
 ## <a name="register-external-language"></a>Registrieren einer externen Sprache
 
-Registrieren Sie diese Python-Spracherweiterung mit [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) für jede Datenbank, in der Sie sie verwenden möchten. Verwenden Sie [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), um eine Verbindung mit SQL Server herzustellen und den folgenden T-SQL-Befehl auszuführen. 
+Registrieren Sie diese Python-Spracherweiterung mit [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) für jede Datenbank, in der Sie sie verwenden möchten. Verwenden Sie [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), um eine Verbindung mit SQL Server herzustellen und den folgenden T-SQL-Befehl auszuführen. 
 Ändern Sie den Pfad in dieser Anweisung, um den Speicherort der heruntergeladenen ZIP-Spracherweiterungsdatei („python-lang-extension.zip“) anzugeben.
 
 > [!NOTE]
@@ -302,7 +304,7 @@ GO
 
 Ein externes Skript in Python kann über die gespeicherte Prozedur [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ausgeführt werden, die für SQL Server ausgeführt wird. 
 
-Um externe Skripts zu aktivieren, führen Sie die folgenden SQL-Befehle mit [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) aus, während eine Verbindung mit SQL Server besteht.
+Um externe Skripts zu aktivieren, führen Sie die folgenden SQL-Befehle mit [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) aus, während eine Verbindung mit SQL Server besteht.
 
 ```sql
 sp_configure 'external scripts enabled', 1;

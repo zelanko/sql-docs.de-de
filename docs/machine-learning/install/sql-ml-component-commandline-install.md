@@ -1,30 +1,25 @@
 ---
 title: Installation über die Eingabeaufforderung
-description: Führen Sie die SQL Server-Einrichtung über die Befehlszeile aus, um einer SQL Server-Datenbank-Engine-Instanz Machine Learning Services mit R und Python hinzuzufügen.
+description: Führen Sie die SQL Server-Einrichtung über die Befehlszeile aus, um einer SQL Server-Datenbank-Engine-Instanz Machine Learning Services mit Python und R hinzuzufügen.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/30/2020
+ms.date: 10/12/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: cd9e1e261790c301ceac8198a76fbe2906c8ccf6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624757"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956764"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Installieren von SQL Server Machine Learning Services mit R und Python über die Befehlszeile
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Dieser Artikel enthält Anweisungen zum Installieren von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) über eine Befehlszeile:
-
-+ [Neue datenbankinterne Instanz](#indb)
-+ [Hinzufügen zu einer vorhandenen Datenbank-Engine-Instanz](#add-existing)
-+ [Automatische Installation](#silent)
-+ [Neuer eigenständiger Server](#shared-feature)
+Dieser Artikel enthält Anweisungen zum Installieren von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) mit Python und R über eine Befehlszeile.
 
 Über die Setupbenutzeroberfläche können Sie eine automatische, eine Standard- oder eine vollständige Interaktion festlegen. Dieser Artikel ergänzt [Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) und beschreibt die Parameter, die für die R- und Python-Komponenten für maschinelles Lernen erforderlich sind.
 
@@ -39,7 +34,6 @@ Dieser Artikel enthält Anweisungen zum Installieren von [SQL Server Machine Lea
 + Führen Sie die Installation nicht auf einem Domänencontroller aus. Bei dem Teil des Setups, der sich auf Machine Learning Services bezieht, tritt ein Fehler auf.
 
 + Vermeiden Sie es, eigenständige und datenbankinterne Instanzen auf demselben Computer zu installieren. Ein eigenständiger Server wird die gleichen Ressourcen nutzen, wodurch die Leistung beider Installationen untergraben wird.
-
 
 ## <a name="command-line-arguments"></a>Befehlszeilenargumente
 
@@ -202,7 +196,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 Nach Abschluss des Setups verfügen Sie über einen Server, Microsoft-Pakete, Open-Source-Distributionen von R und Python, Tools, Beispiele und Skripts, die zur Distribution gehören. 
 
-Um ein R-Konsolenfenster zu öffnen, wechseln Sie zu `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64`, und doppelklicken Sie auf **RGui.exe**. Haben Sie noch keine Erfahrung mit R? Sehen Sie sich dieses Tutorial an: [Grundlegende R-Befehle und RevoScaleR-Funktionen: 25 allgemeine Beispiele](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
+Um ein R-Konsolenfenster zu öffnen, wechseln Sie zu `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64`, und doppelklicken Sie auf **RGui.exe**. Haben Sie noch keine Erfahrung mit R? Sehen Sie sich dieses Tutorial an: [Grundlegende R-Befehle und RevoScaleR-Funktionen: 25 allgemeine Beispiele](/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 Um einen Python-Befehl zu öffnen, wechseln Sie zu `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64`, und doppelklicken Sie auf **python.exe**.
 

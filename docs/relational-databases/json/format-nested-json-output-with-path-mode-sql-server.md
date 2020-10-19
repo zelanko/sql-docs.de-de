@@ -11,12 +11,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f4bc2ab48ca1d7d741eb7de8056f1566daadb47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c091618be5e414faa15e200fc8b30230f793eaf
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499381"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765720"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>Formatieren einer geschachtelten JSON-Ausgabe im PATH-Modus (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +29,7 @@ Alternativ können Sie die Option **AUTO** verwenden, um die Ausgabe automatisch
  -   Weitere Informationen zur Option **AUTO** finden Sie unter [Format JSON Output Automatically with AUTO Mode (Automatisches Formatieren der JSON-Ausgabe im AUTO-Modus)](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
  -   Einen Überblick über die beiden Optionen finden Sie unter [Format Query Results as JSON with FOR JSON (Formatieren von Abfrageergebnissen als JSON mit FOR JSON)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).
  
-Hier sind einige Beispiele für die **FOR JSON** -Klausel mit der Option **PATH** . Geschachtelte Ergebnisse formatieren Sie, wie nachfolgend gezeigt, mit durch Punkte getrennten Spaltennamen oder mit verschachtelten Abfragen. Nullwerte sind standardmäßig nicht in der **FOR JSON**-Ausgabe enthalten.  
+Hier sind einige Beispiele für die **FOR JSON** -Klausel mit der Option **PATH** . Geschachtelte Ergebnisse formatieren Sie, wie nachfolgend gezeigt, mit durch Punkte getrennten Spaltennamen oder mit verschachtelten Abfragen. Nullwerte sind standardmäßig nicht in der **FOR JSON**-Ausgabe enthalten.  [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) ist der empfohlene Abfrage-Editor für JSON-Abfragen, da hierbei die JSON-Ergebnisse (wie in diesem Artikel gezeigt) automatisch formatiert werden, anstatt dass eine flache Zeichenfolge angezeigt wird.
 
 ## <a name="example---dot-separated-column-names"></a>Beispiel – Durch Punkte getrennte Spaltennamen  
 Die ersten fünf Zeilen der AdventureWorks-Tabelle `Person` werden durch die Abfrage als JSON formatiert.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 544d64a8c81342fbb3592371098a5e2ddec60ee5
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 11ca08618f0b8d7675e8ec74ec259d4225d44aba
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680695"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080619"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>Vorgehensweise: Deaktivieren von Multiple Active Resultsets (MARS)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ Wenn Sie eine Verbindung mit einer SQL Server-Datenquelle herstellen müssen, di
   
     Die Verbindung kann diesen Vorgang nicht verarbeiten, da für eine Anweisung noch Ergebnisse ausstehen.  Rufen Sie entweder alle Ergebnisse auf, brechen Sie die Anweisung ab oder geben Sie sie frei, um die Verbindung anderen Abfragen zur Verfügung zu stellen. Weitere Informationen über die Verbindungsoption MultipleActiveResultSets finden Sie unter [Connection Options](../../connect/php/connection-options.md).  
   
-## <a name="example"></a>Beispiel  
+## <a name="sqlsrv-example"></a>SQLSRV-Beispiel  
 Das folgende Beispiel zeigt die Vorgehensweise zum Deaktivieren der MARS-Unterstützung, unter Verwendung des SQLSRV-Treibers der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ```  
@@ -60,7 +60,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Beispiel  
+## <a name="pdo_sqlsrv-example"></a>PDO_SQLSRV-Beispiel  
 Das folgende Beispiel zeigt die Vorgehensweise zum Deaktivieren der MARS-Unterstützung, unter Verwendung des PDO_SQLSRV-Treibers der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ```  

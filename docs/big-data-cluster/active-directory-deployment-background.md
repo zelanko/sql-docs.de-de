@@ -1,20 +1,20 @@
 ---
 title: Bereitstellen mehrerer SQL Server-Big Data-Cluster in einer Active Directory-Domäne
 titleSuffix: SQL Server Big Data Cluster
-description: Hier erfahren Sie mehr über die Bereitstellung von SQL Server-Big Data-Clustern in der Active Directory-Domäne.
-author: mihaelablendea
-ms.author: mihaelab
+description: Erfahren Sie, wie mehrere SQL Server Big Data-Cluster in einer einzelnen Active Directory-Domäne bereitgestellt werden.
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9617e4a447db1d2cef3aa9e6afc7927eb007a981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d5c30e4c3d7c3188920ecd15104b20a5472e306
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730940"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892500"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>Bereitstellen mehrerer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in derselben Active Directory-Domäne
 

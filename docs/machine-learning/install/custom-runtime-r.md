@@ -9,18 +9,18 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227160"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956315"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Installieren einer benutzerdefinierten R-Laufzeit für SQL Server
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-In diesem Artikel wird beschrieben, wie Sie eine benutzerdefinierte Laufzeit zum Ausführen von R-Skripts mit SQL Server installieren. Die benutzerdefinierte Laufzeit für R kann in folgenden Szenarien verwendet werden:
+In diesem Artikel wird beschrieben, wie Sie eine benutzerdefinierte Laufzeit zum Ausführen von R-Skripts mit SQL Server installieren. Die benutzerdefinierte Runtime verwendet Technologie zur Sprachenerweiterung, die auf einem Erweiterbarkeitsframework für die Ausführung von externem Code aufbaut. Die benutzerdefinierte Laufzeit für R kann in folgenden Szenarien verwendet werden:
 
 + In einer Installation von SQL Server mit dem Erweiterbarkeitsframework.
 
@@ -71,7 +71,7 @@ Spracherweiterungen verwenden das Erweiterbarkeitsframework zum Ausführen von e
     + -Datenbank-Engine-Dienste
     + Machine Learning-Dienste und -Spracherweiterungen
 
-1. Wenn Sie nach Abschluss des Setups dazu aufgefordert werden, starten Sie jetzt den Computer neu. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen finden Sie unter [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Wenn Sie nach Abschluss des Setups dazu aufgefordert werden, starten Sie jetzt den Computer neu. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen finden Sie unter [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## <a name="install-r"></a>Installieren von R
 

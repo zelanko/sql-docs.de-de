@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 46a8b73155fea5c22ef7d94acc3f128f42138410
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 7115c3c36f79b35fbb66d39ec530b320d7929c0e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603448"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039154"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Versionshinweise zu SQL Server Management Studio (SSMS)
 
@@ -66,8 +66,8 @@ SSMS 18.6 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 | Datenklassifizierung | SSMS wurde so aktualisiert, dass der Import/Export von Richtlinien unterstützt wird, die über PowerShell-Cmdlets exportiert werden. |
 | Importieren einer Flatfile | Die Unterstützung für Dateien mit fester Breite und die Dateityperkennung für CSV/TSV-Dateien wurde hinzugefügt, um sicherzustellen, dass diese als CSV/TSV-Dateien analysiert werden. |
 | Integration Services | Die Unterstützung für Azure SQL Managed Instance-Agent-Aufträge zum Ausführen eines SSIS-Pakets aus dem Paketspeicher in Azure-SSIS IR wurde hinzugefügt. |
-| SMO/Skripterstellung | Die Unterstützung für das Erstellen der dynamischen Datenmaskierung für [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (zuvor SQL Azure Data Warehouse) wurde hinzugefügt. |
-| SMO/Skripterstellung | Die Unterstützung zum Erstellen von Sicherheitsrichtlinien für [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (zuvor SQL Data Warehouse) wurde hinzugefügt. |
+| SMO/Skripterstellung | Die Unterstützung für das Erstellen der dynamischen Datenmaskierung für [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (zuvor SQL Azure Data Warehouse) wurde hinzugefügt. |
+| SMO/Skripterstellung | Die Unterstützung zum Erstellen von Sicherheitsrichtlinien für [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (zuvor SQL Data Warehouse) wurde hinzugefügt. |
 
 ### <a name="bug-fixes-in-186"></a>Fehlerkorrekturen in Version 18.6
 
@@ -376,7 +376,7 @@ Bei anderen Problemen können Sie auf [SQL Server-Benutzerfeedback](https://feed
 | Abfrageausführung oder Ergebnisse | In den Meldungen wurde eine *Abschlusszeit* hinzugefügt, um nachzuverfolgen, wann die Ausführung einer bestimmten Abfrage abgeschlossen wurde. |
 | Abfrageausführung oder Ergebnisse | Ermöglicht, mehr Daten anzuzeigen (Ergebnis in Text) und in Zellen zu speichern (Ergebnis in Raster). SSMS ermöglicht nun bis zu 2 Millionen Zeichen für beides (Steigerung von 256 bzw. 64 Tausend). Damit ist auch das Problem gelöst, dass Benutzer nicht in der Lage waren, mehr als 43.680 Zeichen aus den Zellen des Rasters abzurufen. |
 | Showplan | In QueryPlan wurde ein neues Attribut hinzugefügt für den Fall, dass das [Inlining benutzerdefinierter Skalarfunktionen](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) aktiviert ist (ContainsInlineScalarTsqludfs). |
-| SMO | Unterstützung für die *SQL-Bewertungs-API* wurde hinzugefügt. Weitere Informationen finden Sie unter [SQL-Bewertungs-API](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview). |
+| SMO | Unterstützung für die *SQL-Bewertungs-API* wurde hinzugefügt. Weitere Informationen finden Sie unter [SQL-Bewertungs-API](../tools/sql-assessment-api/sql-assessment-api-overview.md). |
 |  |  |
 
 #### <a name="bug-fixes-in-182"></a>Fehlerkorrekturen in Version 18.2
@@ -526,7 +526,7 @@ Bei anderen Problemen können Sie auf [SQL Server-Benutzerfeedback](https://feed
 |SSMS erfordert NetFx 4.7.2 oder höher.|Wir haben die Mindestanforderung von NetFx 4.6.1 auf NetFx 4.7.2 erhöht, damit die neuen Funktionen genutzt werden können, die vom neuen Framework bereitgestellt werden.|
 |Möglichkeit zum Migrieren von SSMS-Einstellungen| Beim ersten Starten von SSMS 18 wird der Benutzer dazu aufgefordert, die Einstellungen aus 17.x zu migrieren. Die Dateien für Benutzereinstellungen werden jetzt als XML-Textdatei gespeichert, wodurch die Portabilität verbessert und eine Bearbeitung ermöglicht werden.|
 |Unterstützung für hohe DPI-Werte| Hohe DPI-Werte sind nun standardmäßig aktiviert.|
-|SSMS wird mit dem Microsoft OLE DB-Treiber geliefert| Informationen hierzu finden Sie unter [Herunterladen des Microsoft OLE DB-Treibers für SQL Server](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server).|
+|SSMS wird mit dem Microsoft OLE DB-Treiber geliefert| Informationen hierzu finden Sie unter [Herunterladen des Microsoft OLE DB-Treibers für SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md).|
 |SSMS wird unter Windows 8 nicht unterstützt. Windows 10 und Windows Server 2016 erfordern Version 1607 (10.0.14393) oder höher|Aufgrund der neuen Abhängigkeit von NetFx 4.7.2 wird SSMS 18.0 nicht unter Windows 8 und älteren Versionen von Windows 10 und Windows Server 2016 installiert. Diese Systeme werden vom SSMS-Setup blockiert. Windows 8.1 wird weiterhin unterstützt.|
 |SSMS wird nicht mehr der PATH-Umgebungsvariable hinzugefügt|Der Pfad zu SSMS.EXE (und Tools im Allgemeinen) wird nicht mehr zum Pfad hinzugefügt. Benutzer können diesen entweder manuell hinzufügen oder bei einem modernen Windows-Computer das Startmenü verwenden.|
 |Paket-IDs sind zum Entwickeln von SSMS-Erweiterungen nicht mehr erforderlich| In der Vergangenheit wurden in SSMS nur bekannte Pakete selektiv geladen, sodass Entwickler ihr eigenes Paket registrieren mussten. Das ist nicht mehr der Fall.|
@@ -553,10 +553,10 @@ Bei anderen Problemen können Sie auf [SQL Server-Benutzerfeedback](https://feed
 |Always Encrypted mit Secure Enclaves| Die folgenden Verbesserungen zur Unterstützung von Always Encrypted mit Secure Enclaves wurden in SQL Server 2019 vorgenommen:  Ein Textfeld zum Angeben der Enclave-Nachweis-URL im Dialogfeld „Mit Server verbinden“ (die neue Registerkarte „Always Encrypted“).  Das neue Kontrollkästchen im Dialogfeld „Neuer Spaltenhauptschlüssel“, um zu steuern, ob ein neuer Spaltenhauptschlüssel Enclave-Berechnungen zulässt.  Weitere Dialogfelder für die Always Encrypted-Schlüsselverwaltung stellen nun Informationen dazu bereit, welche Spaltenhauptschlüssel Enclave-Berechnungen zulassen.|
 |Überwachungsdateien|Die Authentifizierungsmethode wurde von der Authentifizierung auf Basis des Speicherkontoschlüssel in die Azure AD-basierte Authentifizierung geändert.|
 |Datenklassifizierung| Das Aufgabenmenü für die Datenklassifizierung wurde neu organisiert: Dem Datenbankaufgabenmenü wurde ein Untermenü hinzugefügt sowie eine Option zum Öffnen des Berichts aus dem Menü, ohne zuerst das Fenster „Daten klassifizieren“ öffnen zu müssen.|
-|Datenklassifizierung|In SMO wurde die neue Funktion „Datenklassifizierung“ hinzugefügt. Spaltenobjekt macht neue Eigenschaften verfügbar: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId und IsClassified (schreibgeschützt). Weitere Informationen finden Sie unter [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql).|
+|Datenklassifizierung|In SMO wurde die neue Funktion „Datenklassifizierung“ hinzugefügt. Spaltenobjekt macht neue Eigenschaften verfügbar: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId und IsClassified (schreibgeschützt). Weitere Informationen finden Sie unter [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
 |Datenklassifizierung|Das neue Menüelement „Klassifizierungsbericht“ wurde dem Flyout „Datenklassifizierung“ hinzugefügt.|
 |Datenklassifizierung| Empfehlungen wurden aktualisiert.|
-|Upgrade des Datenbank-Kompatibilitätsgrads|Eine neue Option wurde unter ***Datenbankname*** > ***Tasks*** > ***Datenbankupgrade*** hinzugefügt. Mit ihr wird der neue **Abfrageoptimierungs-Assistent** gestartet, der den Benutzer durch folgende Prozesse führt: Sammeln einer Leistungsbaseline, bevor ein Upgrade des Datenbank-Kompatibilitätsgrads durchgeführt wird Durchführen eines Upgrades auf den gewünschten Datenbank-Kompatibilitätsgrad  Sammeln eines zweiten Durchlaufs von Leistungsdaten der gesamten Arbeitsauslastung Ermitteln von Regressionen der Arbeitsauslastung und Bereitstellen getesteter Empfehlungen zur Verbesserung der Arbeitsauslastungsleistung  Dies ähnelt dem unter [Verwendungsszenarios für den Abfragespeicher](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade) beschriebenen Datenbankupgrade mit Ausnahme des letzten Schritts, bei dem der Abfrageoptimierungs-Assistent sich nicht auf den letzten als funktionierend bekannten Zustand beruft, um Empfehlungen zu generieren.|
+|Upgrade des Datenbank-Kompatibilitätsgrads|Eine neue Option wurde unter ***Datenbankname*** > ***Tasks*** > ***Datenbankupgrade*** hinzugefügt. Mit ihr wird der neue **Abfrageoptimierungs-Assistent** gestartet, der den Benutzer durch folgende Prozesse führt: Sammeln einer Leistungsbaseline, bevor ein Upgrade des Datenbank-Kompatibilitätsgrads durchgeführt wird Durchführen eines Upgrades auf den gewünschten Datenbank-Kompatibilitätsgrad  Sammeln eines zweiten Durchlaufs von Leistungsdaten der gesamten Arbeitsauslastung Ermitteln von Regressionen der Arbeitsauslastung und Bereitstellen getesteter Empfehlungen zur Verbesserung der Arbeitsauslastungsleistung  Dies ähnelt dem unter [Verwendungsszenarios für den Abfragespeicher](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) beschriebenen Datenbankupgrade mit Ausnahme des letzten Schritts, bei dem der Abfrageoptimierungs-Assistent sich nicht auf den letzten als funktionierend bekannten Zustand beruft, um Empfehlungen zu generieren.|
 |Datenschichtanwendungs-Assistent|Unterstützung für das Importieren und Exportieren von Datenschichtanwendungen mit Graphtabellen wurde hinzugefügt.|
 |Assistent zum Importieren von Flatfiles|Logik zum Benachrichtigen des Benutzers, dass der Import möglicherweise zu einer Umbenennung der Spalten geführt hat, wurde hinzugefügt.|
 |Integration Services (SSIS)|Unterstützung wurde hinzugefügt, durch die Kunden SSIS-Pakete für Azure-SSIS Integration Runtime planen können, die sich in einer Azure Government-Cloud befinden.|
@@ -576,7 +576,7 @@ Bei anderen Problemen können Sie auf [SQL Server-Benutzerfeedback](https://feed
 |Showplan|Eine Logik zum Anzeigen von „Materializer-Operator (externer SELECT)“ wurde hinzugefügt.|
 |Showplan|Ein neues Showplan-Attribut „BatchModeOnRowStoreUsed“ wurde hinzugefügt, um Abfragen leicht erkennen zu können, bei denen die Funktion zur Überprüfung von Zeilenspeichern im Batchmodus verwendet wird. Jedes Mal, wenn eine Abfrage die Überprüfung von Zeilenspeichern im Batchmodus ausführt, wird ein neues Attribut (BatchModeOnRowStoreUsed="true") zum StmtSimple-Element hinzugefügt.|
 |Showplan|Showplan-Unterstützung für das RelOp-Element in „LocalCube“ für ROLLUP und CUBE wurde hinzugefügt.|
-|Showplan|Der neue Operator „LocalCube“ für die neuen Aggregationsfunktionen ROLLUP und CUBE wurde in Azure SQL Data Warehouse hinzugefügt.|
+|Showplan|Der neue Operator „LocalCube“ für die neuen Aggregationsfunktionen ROLLUP und CUBE wurde in Azure Synapse Analytics hinzugefügt.|
 |SMO| Die SMO-Unterstützung für die Erstellung eines fortsetzbaren Index wurde erweitert.|
 |SMO| Ein neues Ereignis für SMO-Objekte (PropertyMissing) wurde hinzugefügt, damit Anwendungsautoren SMO-Leistungsprobleme früher erkennen können.|
 |SMO| Die neue Eigenschaft „DefaultBackupChecksum“ für das Konfigurationsobjekt wurde bereitgestellt, die der Serverkonfiguration „Standardeinstellung der Sicherungsprüfsumme“ zugeordnet ist.|

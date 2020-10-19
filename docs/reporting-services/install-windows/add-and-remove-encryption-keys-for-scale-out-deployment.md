@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70dde30aeade9841a317bc8a2b9db418ba5ccd79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 508743337b7de7b6655b66d718b8bad02882b4a1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418616"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935436"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren
   Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in einem Bereitstellungsmodell für horizontales Skalieren ausführen, indem Sie mehrere Berichtsserver für die Verwendung einer freigegebenen Berichtsserver-Datenbank konfigurieren. Die Mitgliedschaft in einer Bereitstellung für horizontales Skalieren basiert darauf, ob der Berichtsserver in der Berichtsserver-Datenbank einen Verschlüsselungsschlüssel gespeichert hat. Sie können die Mitgliedschaft in einer Bereitstellung für horizontales Skalieren überwachen, indem Sie für bestimmte Berichtsserverinstanzen Verschlüsselungsschlüssel hinzufügen und entfernen. Sie können Knoten aus einer Bereitstellung in beliebiger Reihenfolge entfernen. Beim Hinzufügen von Knoten zu einer Bereitstellung müssen Sie neue Instanzen von einem Berichtsserver aus verknüpfen, der bereits Teil der Bereitstellung ist.  
   
 ## <a name="using-the-reporting-services-configuration-tool-to-configure-scale-out-deployment"></a>Verwenden des Reporting Services-Konfigurationstools zum Konfigurieren der Bereitstellung für horizontales Skalieren  
- Die einfachste Möglichkeit, eine Bereitstellung für horizontales Skalieren zu konfigurieren, ist die Verwendung des Reporting Services-Konfigurationstools. Weitere Informationen und ausführliche Anleitungen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+ Die einfachste Möglichkeit, eine Bereitstellung für horizontales Skalieren zu konfigurieren, ist die Verwendung des Reporting Services-Konfigurationstools. Weitere Informationen und ausführliche Anleitungen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="using-rskeymgmt-to-configure-scale-out-deployment"></a>Verwenden von Rskeymgmt zum Konfigurieren der Bereitstellung für horizontales Skalieren  
  Verwenden Sie das Hilfsprogramm **rskeymgmt** , um eine Berichtsserverinstanz für die Verwendung einer freigegebenen Berichtsserver-Datenbank zu initialisieren. Für das Hinzufügen eines Berichtsservers zu einer Bereitstellung für horizontales Skalieren müssen Sie den Berichtsserver initialisieren. Für die Initialisierung sind Administratorberechtigungen erforderlich. Sie müssen Administratoranmeldeinformationen für den Remotecomputer haben, der den Berichtsserver hostet, den Sie zur Bereitstellung hinzufügen möchten.  
@@ -62,7 +62,7 @@ ms.locfileid: "88418616"
  Mit diesen Schritten entfernen Sie den Berichtsserver aus einer Bereitstellung für horizontales Skalieren. Dabei wird die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz auf dem Berichtsserver jedoch nicht deinstalliert. Nachdem Sie den Berichtsserver aus einer Bereitstellung für horizontales Skalieren entfernt haben, können Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vom Server deinstallieren, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf dem Server nicht mehr benötigen. Weitere Informationen finden Sie unter [Deinstallieren einer vorhandenen SQL Server-Instanz &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Initialisieren eines Berichtsservers &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

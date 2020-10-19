@@ -1,20 +1,20 @@
 ---
 title: Active Directory-Objekte
 titleSuffix: SQL Server Big Data Cluster
-description: Hier erfahren Sie mehr über die Bereitstellung von SQL Server-Big Data-Clustern in der Active Directory-Domäne.
-author: mihaelablendea
-ms.author: mihaelab
+description: Es werden Active Directory-Objekte beschrieben, die für SQL Server Big Data-Cluster erstellt werden.
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 06/22/2020
-ms.topic: conceptual
+ms.date: 09/30/2020
+ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e4f8736beeac2e92d25092c60c3fe7e60127ea94
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: fcd045c07e7300478e811b2bbc4b9a0f5dfaab52
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942742"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892450"
 ---
 # <a name="auto-generated-active-directory-objects"></a>Automatisch generierte Active Directory-Objekte
 
@@ -467,6 +467,6 @@ Die folgenden Gruppen werden in der vom Benutzer bereitgestellten Organisationse
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus](deploy-active-directory.md)
+[Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus](active-directory-deploy.md)
 
 [Bereitstellen mehrerer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in derselben Active Directory-Domäne](active-directory-deployment-background.md)

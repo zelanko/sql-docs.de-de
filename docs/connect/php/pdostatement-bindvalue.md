@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 602b368e8d36a39b3350c0e61e290da053484e38
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 225b29beb82bf8ee010dc96fff92da2b82bcc28a
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726781"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081409"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +44,7 @@ $*data_type*: Der optionale Datentyp (Integer), der durch die Konstante PDO::PAR
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
-## <a name="example"></a>Beispiel  
+## <a name="parameter-example"></a>Parameterbeispiel  
 Dieses Beispiel zeigt, dass nachdem der Wert für $contact gebunden wurde, eine Änderung des Werts nicht den in der Abfrage übergebenen Wert ändert.  
   
 ```  
@@ -79,7 +79,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 > [!NOTE]
 > Es wird empfohlen, beim Binden von Werten an eine [Spalte des Datentyps „decimal“ oder „numeric“](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) Zeichenfolgen als Eingabe zu verwenden, um Präzision und Genauigkeit sicherzustellen, da die Genauigkeit von PHP für [Gleitkommazahlen](https://php.net/manual/en/language.types.float.php) begrenzt ist. Dasselbe gilt für Spalten des Datentyps „bigint“, insbesondere, wenn die Werte außerhalb des Bereichs einer [ganzen Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) liegen.
 
-## <a name="example"></a>Beispiel  
+## <a name="decimal-input-example"></a>Dezimaleingabebeispiel  
 In diesem Codebeispiel wird das Binden eines Dezimalwerts als Eingabeparameter veranschaulicht.  
 
 ```

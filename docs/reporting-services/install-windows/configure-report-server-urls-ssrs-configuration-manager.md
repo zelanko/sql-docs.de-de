@@ -1,5 +1,5 @@
 ---
-description: Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)
+description: Konfigurieren von Berichtsserver-URLs (Berichtsserver-Konfigurations-Manager)
 title: Konfigurieren von Berichtsserver-URLs (Konfigurations-Manager) | Microsoft-Dokumentation
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f80b3232fa7631add5850777db4affc5d25a67d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70d112c5468929f41b6073c7f001edbad2f86eb7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463522"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934763"
 ---
-# <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)
+# <a name="configure-report-server-urls--report-server-configuration-manager"></a>Konfigurieren von Berichtsserver-URLs (Berichtsserver-Konfigurations-Manager)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]werden URLs für den Zugriff auf den Report Server-Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]verwendet. Bevor Sie die eine der Anwendungen verwenden können, müssen Sie mindestens je eine URL für den Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]konfigurieren. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet Standardwerte für beide Anwendungs-URLs, die in den meisten Bereitstellungsszenarien gut funktionieren, auch in parallelen Bereitstellungen mit anderen Webdiensten und -anwendungen.  
   
 -   Wenn Sie die Standardkonfiguration installiert haben, wurden die URLs automatisch anhand der Standardwerte erstellt.  
   
--   Wenn Sie die URLs mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool erstellen oder ändern, können Sie die Standardwerte für eine URL übernehmen oder eigene Werte angeben. Wenn Sie die URL definieren, wird auf der Seite ein Testlink der URL angezeigt, sodass Sie sofort bestätigen können, dass die von Ihnen angegebenen Einstellungen zu einer gültigen Verbindung führen. Schrittanleitungen zum Konfigurieren einer URL finden Sie unter [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)verwendet.  
+-   Wenn Sie die URLs mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool erstellen oder ändern, können Sie die Standardwerte für eine URL übernehmen oder eigene Werte angeben. Wenn Sie die URL definieren, wird auf der Seite ein Testlink der URL angezeigt, sodass Sie sofort bestätigen können, dass die von Ihnen angegebenen Einstellungen zu einer gültigen Verbindung führen. Schrittanleitungen zum Konfigurieren einer URL finden Sie unter [Konfigurieren einer URL &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)verwendet.  
   
 ## <a name="defining-a-report-server-url"></a>Definieren einer Berichtsserver-URL  
  Die URL gibt den Ort für die Instanz einer Berichtsserveranwendung genau im Netzwerk an. Wenn Sie eine Berichtsserver-URL erstellen, müssen Sie die folgenden Teile angeben.  
@@ -52,29 +52,29 @@ ms.locfileid: "88463522"
 |Virtuelles Verzeichnis|ReportServer|Beachten Sie, dass beide Beispiel-URLs den Namen des virtuellen Verzeichnisses enthalten. Wenn Sie die URL-Definition nicht anpassen, müssen Sie stets den Namen des virtuellen Verzeichnisses der Anwendung in der URL angeben.|  
   
 > [!NOTE]  
->  Eine zugrunde liegende URL-Reservierung macht es möglich, dass jeder gültige Hostname in einer URL verwendet werden kann. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool erstellt eine URL-Reservierung in HTTP.SYS und verwendet eine Syntax, die Variationen des Hostnamens zulässt, damit dieser in eine bestimmte Berichtsserverinstanz aufgelöst werden kann. Weitere Informationen zu URL-Reservierungen finden Sie unter [Informationen zu URL-Reservierungen und -Registrierungen &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)verwendet.  
+>  Eine zugrunde liegende URL-Reservierung macht es möglich, dass jeder gültige Hostname in einer URL verwendet werden kann. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool erstellt eine URL-Reservierung in HTTP.SYS und verwendet eine Syntax, die Variationen des Hostnamens zulässt, damit dieser in eine bestimmte Berichtsserverinstanz aufgelöst werden kann. Weitere Informationen zu URL-Reservierungen finden Sie unter [Informationen zu URL-Reservierungen und -Registrierungen &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)verwendet.  
   
 ## <a name="server-side-permissions-on-a-report-server-url"></a>Serverseitige Berechtigungen für eine Berichtsserver-URL  
- Die Berechtigungen für jeden URL-Endpunkt gelten ausschließlich für das Berichtsserver-Dienstkonto. Nur dieses Konto ist berechtigt, Anforderungen zu akzeptieren, die an die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URLs geleitet werden. Es werden freigegebene Zugriffssteuerungslisten (Discretionary Access Control List, DACL) für das Konto erstellt und verwaltet, wenn Sie die Dienst-ID über Setup oder das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool konfigurieren. Wenn Sie das Dienstkonto ändern, aktualisiert das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool alle von Ihnen erstellten URL-Reservierungen, um die neuen Kontodaten aufzunehmen. Weitere Informationen finden Sie unter [URL-Reservierungssyntax &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)verwendet.  
+ Die Berechtigungen für jeden URL-Endpunkt gelten ausschließlich für das Berichtsserver-Dienstkonto. Nur dieses Konto ist berechtigt, Anforderungen zu akzeptieren, die an die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URLs geleitet werden. Es werden freigegebene Zugriffssteuerungslisten (Discretionary Access Control List, DACL) für das Konto erstellt und verwaltet, wenn Sie die Dienst-ID über Setup oder das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool konfigurieren. Wenn Sie das Dienstkonto ändern, aktualisiert das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool alle von Ihnen erstellten URL-Reservierungen, um die neuen Kontodaten aufzunehmen. Weitere Informationen finden Sie unter [URL-Reservierungssyntax &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)verwendet.  
   
 ## <a name="authenticating-client-requests-sent-to-a-report-server-url"></a>Authentifizieren von Clientanforderungen, die an eine Berichtsserver-URL gesendet wurden  
  Als Standardwert für die in den URL-Endpunkten unterstützte Authentifizierung wird die Windows-Authentifizierung vorgegeben. Dies ist die Standardsicherheitserweiterung. Wenn Sie einen Anbieter für eine benutzerdefinierte oder eine Formularauthentifizierung implementieren, müssen Sie die Authentifizierungseinstellungen auf dem Berichtsserver ändern. Optional können Sie auch die Windows-Authentifizierungseinstellungen ändern, sodass sie dem in Ihrem Netzwerk verwendeten Authentifizierungssubsystem entsprechen. Weitere Informationen finden Sie unter [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Konfigurieren einer URL &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  Dieses Thema enthält Anweisungen für das Einstellen und Ändern einer URL-Reservierung im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool.  
   
- [Informationen zu URL-Reservierungen und -Registrierungen &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)  
+ [Informationen zu URL-Reservierungen und der Registrierung &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  Mithilfe von URLs greifen Sie auf Anwendungen und Berichte zu. Dieses Thema behandelt Anwendungs-URLs, Standard-URLs und die Funktionsweise der URL-Reservierung und -Registrierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [URL-Reservierungssyntax &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [URL-Reservierungssyntax &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
  Die Standard-URL-Reservierungen, die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet werden, sind für die meisten Szenarien gültig. Wenn Sie jedoch den Zugriff einschränken oder die Verwendung auf Internet- oder Extranetzugang erweitern möchten, müssen Sie die Einstellungen möglicherweise an Ihre Anforderungen anpassen. Diese Thema behandelt die Syntax einer URL-Reservierung und gibt Empfehlungen zur Erstellung eigener Reservierungen, die Ihrer Verwendung entsprechen.  
   
- [URLs in Konfigurationsdateien &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)  
+ [URLs in Konfigurationsdateien &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)  
  Die Datei RSReportServer.config enthält mehrere Einträge für URL-Reservierungen und die URLs, die vom [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] und der Berichtsserver-E-Mail-Übermittlung verwendet werden. Dieses Thema fasst die URL-Konfigurationseinstellungen zusammen, damit Sie verstehen können, wie sich diese unterscheiden.  
   
- [URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)  
+ [URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)  
  Wenn Sie mehrere Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf einem Computer installieren, erhöht sich die Wahrscheinlichkeit, dass beim Registrieren einer URL doppelte URLs auftreten. Um diese Fehler zu vermeiden, befolgen Sie in diesem Thema die Empfehlungen zum Erstellen von instanzenspezifischen URL-Reservierungen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) 
+ [Konfigurieren einer URL &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) 

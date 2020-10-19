@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 691b3c495db0280b2ae1f50b2d877677c66dc768
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669862"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866558"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat (Always On-Verfügbarkeitsgruppen)
 
@@ -89,7 +89,7 @@ In diesem Beispiel weist die Verfügbarkeitsgruppe drei Replikat auf:
 
 Die folgende Abbildung zeigt die Verfügbarkeitsgruppe.
 
-![Ursprüngliche Verfügbarkeitsgruppe](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
+![Verfügbarkeitsgruppe mit primärem, sekundärem und asynchronen sekundärem Replikat](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
 Das folgende Transact-SQL-Skript erstellt diese Verfügbarkeitsgruppe. In diesem Beispiel gibt jedes Replikat die `READ_WRITE_ROUTING_URL` an.
 ```sql
@@ -144,18 +144,13 @@ GO
 
 Im folgenden Diagramm stellt eine Clientanwendung mit `ApplicationIntent=ReadWrite` eine Verbindung mit COMPUTER02 her. Die Verbindung wird an das primäre Replikat umgeleitet. 
 
-![Ursprüngliche Verfügbarkeitsgruppe](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
+![Die Verbindung zu Computer 2 wird wieder zum primären Replikat weitergeleitet.](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
 Das sekundäre Replikat leitet Lese-/Schreibaufrufe an das primäre Replikat um. Eine Schreibverbindung an eines der Replikate wird an das primäre Replikat umgeleitet. 
 
 Im folgenden Diagramm wurde für das primäre Replikat ein manuelles Failover zu COMPUTER02 ausgeführt. Eine Clientanwendung stellt mit `ApplicationIntent=ReadWrite` eine Verbindung mit COMPUTER01 her. Die Verbindung wird an das primäre Replikat umgeleitet. 
 
-![Ursprüngliche Verfügbarkeitsgruppe](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
-
-
-## <a name="sql-server-instance-offline"></a>SQL Server-Instanz offline
-
-Wenn die in der Verbindungszeichenfolge angegebene SQL Server-Instanz nicht verfügbar ist (ausgefallen ist), kann keine Verbindung hergestellt werden, unabhängig davon, welche Rolle das Replikat auf dem Zielserver innehat. Um längere Ausfallzeiten für Anwendungen zu verhindert, konfigurieren Sie einen alternativen `FailoverPartner` in der Verbindungszeichenfolge. Die Anwendung muss eine Wiederholungslogik implementieren, um die Verarbeitung sicherzustellen, falls sowohl das primäre als auch das sekundäre Replikat während des tatsächlichen Failovers nicht online sind. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [SqlConnection.ConnectionString-Eigenschaft](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
+![Die Verbindung wird zum neuen primären Replikat auf Computer 2 weitergeleitet.](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
 ## <a name="see-also"></a>Weitere Informationen
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 375387ca85b13572014d206cf7a37ed3fc19d907
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4e68ffa14bfe98bc55e5424abe0dbdac944950a1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394565"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933704"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>Report Server-Windows-Dienst (MSSQLServer) 107
     
@@ -49,8 +49,10 @@ ms.locfileid: "87394565"
 ## <a name="internal-only"></a>Nur intern  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+
+ [Configure the Report Server Service Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  (Konfigurieren des Berichtsserver-Dienstkontos &#40;Berichtsserver-Konfigurations-Manager&#41;)  
+ [Berichtsserver-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+
  [Start and Stop the Report Server Service (Starten und Beenden des Berichtsserverdiensts)](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   

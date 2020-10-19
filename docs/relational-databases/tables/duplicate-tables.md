@@ -1,8 +1,8 @@
 ---
-description: Duplizieren von Tabellenstrukturen
-title: Duplizieren von Tabellenstrukturen | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie eine duplizierte Kopie einer Tabelle ohne Zeilendaten erstellen.
+title: Duplizieren von Tabellen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/05/2020
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb4e0ebc6160dce0a1f6db3ee4d59141712e78a6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a8faa1aab3237152934f0ce9eb4cb9ce541d5d3d
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725021"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765806"
 ---
-# <a name="duplicate-table-structures"></a>Duplizieren von Tabellenstrukturen
+# <a name="duplicate-tables"></a>Duplizieren von Tabellen
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-  Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine vorhandene Tabelle in [!INCLUDE[tsql](../../includes/tsql-md.md)] duplizieren, indem Sie eine neue Tabelle erstellen und dann Spalteninformationen aus einer vorhandenen Tabelle kopieren.  
+Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine vorhandene Tabelle in [!INCLUDE[tsql](../../includes/tsql-md.md)] duplizieren, indem Sie eine neue Tabelle erstellen und dann Spalteninformationen aus einer vorhandenen Tabelle kopieren.  
   
 > [!IMPORTANT]  
 >  Mit diesem Vorgang wird nur die Struktur einer Tabelle dupliziert, nicht die einzelnen Tabellenzeilen.  
@@ -85,5 +85,3 @@ ms.locfileid: "91725021"
 4.  Entfernen Sie alle Spalten, die nicht in der neuen Tabelle benötigt werden.  
   
 5.  Klicken Sie auf **Ausführen**.  
-  
-  

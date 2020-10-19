@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480948"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868191"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -810,7 +810,7 @@ GO
 ## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Dynamische Sperre
  Wenn Sie Sperren auf niedriger Ebene verwenden, z. B. Zeilensperren, wird die Parallelität erhöht, da die Wahrscheinlichkeit geringer ist, dass zwei Transaktionen gleichzeitig Sperren für die gleichen Daten anfordern. Das Verwenden von Sperren auf niedriger Ebene erhöht außerdem die Anzahl der Sperren sowie der Ressourcen, die für deren Verwaltung erforderlich sind. Wenn Sie Tabellen- oder Seitensperren auf hoher Ebene verwenden, wird der Aufwand zwar gesenkt, jedoch auf Kosten der Parallelität.  
   
- ![lockcht](../relational-databases/media/lockcht.png) 
+ ![Sperrkosten vs. Parallelitätskosten](../relational-databases/media/lockcht.png) 
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] legt Sperren dynamisch fest, um die kosteneffektivsten Sperren zu bestimmen. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] bestimmt beim Ausführen einer Abfrage automatisch, welche Sperren, basierend auf den Merkmalen des Schemas und der Abfrage, am sinnvollsten sind. Um beispielsweise den Aufwand für die Sperren zu senken, kann der Abfrageoptimierer festlegen, dass beim Ausführen eines Indexscans Sperren auf Seitenebene für einen Index eingerichtet werden.  
   
@@ -940,7 +940,7 @@ ORDER BY [Date] DESC
 
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
-![system_health_qry](../relational-databases/media/system_health_qry.png)
+![system_health_xevent_query_result](../relational-databases/media/system_health_qry.png)
 
 Das folgende Beispiel zeigt die Ausgabe nach dem Klicken auf den ersten Link der vorhergehenden Ergebnisse:
 
@@ -2080,8 +2080,15 @@ GO
   
 -   Während einer Transaktion sollte auf so wenige Daten wie möglich zugegriffen werden.  
     Dadurch wird die Anzahl der gesperrten Zeilen gesenkt und Konflikte zwischen Transaktionen vermieden.  
+    
+-   Vermeiden Sie wenn möglich einschränkende Sperrhinweise wie HOLDLOCK. 
+    Hinweise wie HOLDLOCK oder eine SERIALIZABLE-Isolationsstufe können dazu führen, dass Prozesse auch bei gemeinsamen Sperren warten und die Parallelität dadurch einschränken.
+
+-   Vermeiden Sie die Verwendung impliziter Transaktionen. Implizite Transaktionen können aufgrund ihrer Merkmale unvorhersehbares Verhalten einführen. Weitere Informationen finden Sie unter [Implizite Transaktionen und Vermeiden von Parallelitäts- und Ressourcenproblemen](#implicit-transactions-and-avoiding-concurrency-and-resource-problems).
+
+-   Entwerfen Sie Indizes mit reduziertem [Füllfaktor](indexes/specify-fill-factor-for-an-index.md). Ein reduzierter Füllfaktor kann Sie dabei unterstützen, die Fragmentierung von Indexseiten zu vermeiden oder zu senken. Damit können auch Suchzeiten für Indizes reduziert werden, insbesondere wenn diese von einem Datenträger abgerufen werden. Zum Anzeigen der Fragmentierungsinformationen für die Daten und Indizes einer Tabelle oder Sicht können Sie sys.dm_db_index_physical_stats verwenden. 
   
-#### <a name="avoiding-concurrency-and-resource-problems"></a>Vermeiden von Parallelitäts- und Ressourcenproblemen  
+#### <a name="implicit-transactions-and-avoiding-concurrency-and-resource-problems"></a>Implizite Transaktionen und Vermeiden von Parallelitäts- und Ressourcenproblemen  
  Wenn Sie Parallelitäts- und Ressourcenprobleme vermeiden möchten, sollten implizite Transaktionen sorgfältig verwaltet werden. Bei impliziten Transaktionen wird durch die nächste [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung nach `COMMIT` oder `ROLLBACK` automatisch eine neue Transaktion gestartet. Dadurch kann eine neue Transaktion geöffnet werden, während die Anwendung Daten durchsucht oder sogar wenn Eingaben des Benutzers erforderlich sind. Nach Abschluss der letzten Transaktion, die zum Schutz von Datenänderungen erforderlich ist, sollten Sie die impliziten Transaktionen deaktivieren, bis erneut eine Transaktion benötigt wird, um Datenänderungen zu schützen. Auf diese Weise kann [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] den Autocommitmodus verwenden, während die Anwendung Daten durchsucht und Benutzereingaben vorgenommen werden.  
   
  Wenn die Momentaufnahme-Isolationsstufe aktiviert ist, obwohl eine neue Transaktion keine Sperren beibehält, verhindert außerdem eine Transaktion mit langer Ausführungszeit, dass die alten Versionen aus `tempdb` entfernt werden.  
@@ -2112,8 +2119,8 @@ GO
  Unter Umständen müssen Sie die KILL-Anweisung ausführen. Verwenden Sie diese Anweisung jedoch sehr vorsichtig, besonders wenn gerade kritische Prozesse ausgeführt werden. Weitere Informationen finden Sie unter [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Zusätzliches Lesematerial   
-[Mehraufwand der Zeilenversionsverwaltung](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
+[Mehraufwand der Zeilenversionsverwaltung](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      
-[Dynamische Verwaltungssichten und Funktionen in Verbindung mit Transaktionen &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)     
+[Dynamische Verwaltungssichten und Funktionen in Verbindung mit Transaktionen &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)

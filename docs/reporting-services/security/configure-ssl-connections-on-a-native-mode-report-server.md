@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6d978ab86f2e6f6a1ed85345685eb1da00928a6
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 15f8fddb50f1cc814c88cc721fd46ceba1581faf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603352"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934773"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>Konfigurieren von TLS-Verbindungen auf einem Berichtsserver im einheitlichen Modus
 
@@ -86,12 +86,12 @@ ms.locfileid: "91603352"
   
  TLS-Bindungen stellen in Microsoft Windows eine freigegebene Ressource dar. Die vom Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oder anderen Tools wie IIS-Manager vorgenommenen Änderungen können sich auf andere Anwendungen auf demselben Computer auswirken. Es empfiehlt sich, zum Bearbeiten von Bindungen dasselbe Tool zu verwenden, mit dem Sie die Bindungen erstellt haben.  Wenn Sie beispielsweise TLS-Bindungen mit dem Konfigurations-Manager erstellt haben, empfiehlt es sich, den Lebenszyklus der Bindungen mit dem Konfigurations-Manager zu verwalten. Wenn Sie Bindungen mit dem IIS-Manager erstellt haben, empfiehlt es sich, den Lebenszyklus der Bindungen mit dem IIS-Manager zu verwalten. Wenn IIS vor der Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf dem Computer installiert wurde, empfiehlt es sich, die TLS-Konfiguration in IIS vor der Konfiguration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zu überprüfen.  
   
- Wenn Sie TLS-Bindungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mithilfe des Konfigurations-Managers für Reporting Services entfernen, funktioniert TLS möglicherweise nicht mehr für Websites auf einem Server, auf dem IIS ausgeführt werden, oder auf einem anderen HTTP.SYS-Server. Der Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entfernt den folgenden Registrierungsschlüssel: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443**. Wenn dieser Registrierungsschlüssel entfernt wird, wird die TLS-Bindung für IIS ebenfalls entfernt. Ohne diese Bindung wird TLS nicht für das HTTPS-Protokoll bereitgestellt. Um dieses Problem zu diagnostizieren, verwenden Sie den IIS-Manager oder das Befehlszeilen-Hilfsprogramm „HTTPCFG.exe“. Um das Problem zu lösen, stellen Sie die TLS-Bindung für Ihre Websites mithilfe des IIS-Managers wieder her. Um dieses Problem in Zukunft zu vermeiden, verwenden Sie den IIS-Manager, um die TLS-Bindungen zu entfernen und dann die Bindung für die gewünschten Websites wiederherzustellen. Weitere Informationen finden Sie im Knowledge Base-Artikel [SSL funktioniert nach dem Entfernen einer SSL-Bindung nicht mehr (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n)).  
+ Wenn Sie TLS-Bindungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mithilfe des Berichtsserver-Konfigurations-Managers entfernen, funktioniert TLS möglicherweise nicht mehr für Websites auf einem Server, auf dem IIS (Internetinformationsdienste) ausgeführt wird, oder auf einem anderen HTTP.SYS-Server. Der Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entfernt den folgenden Registrierungsschlüssel: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443**. Wenn dieser Registrierungsschlüssel entfernt wird, wird die TLS-Bindung für IIS ebenfalls entfernt. Ohne diese Bindung wird TLS nicht für das HTTPS-Protokoll bereitgestellt. Um dieses Problem zu diagnostizieren, verwenden Sie den IIS-Manager oder das Befehlszeilen-Hilfsprogramm „HTTPCFG.exe“. Um das Problem zu lösen, stellen Sie die TLS-Bindung für Ihre Websites mithilfe des IIS-Managers wieder her. Um dieses Problem in Zukunft zu vermeiden, verwenden Sie den IIS-Manager, um die TLS-Bindungen zu entfernen und dann die Bindung für die gewünschten Websites wiederherzustellen. Weitere Informationen finden Sie im Knowledge Base-Artikel [SSL funktioniert nach dem Entfernen einer SSL-Bindung nicht mehr (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n)).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
+ [Konfigurieren von Berichtsserver-URLs &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

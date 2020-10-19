@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa84b420b4100e74a9e57047f1bfbbd386fa5fa6
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 266db3efac0fb737ccb36900ef3b27f24c8c8888
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435314"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081679"
 ---
 # <a name="understanding-data-type-conversions"></a>Grundlegendes zu Datentypkonvertierungen
 
@@ -28,7 +28,7 @@ Um eine Konvertierung der Datentypen der Programmiersprache Java in [!INCLUDE[ss
 
 Das folgende Diagramm enthält auf Grundlage der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen das Konvertierungsschema des JDBC-Treibers für die get\<Type>()-Methoden der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse und die unterstützten Konvertierungen für die get\<Type>-Methoden der [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse.
 
-![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
+![Typkonvertierungsmatrix für die Konvertierung von JDBC zu SQL Server](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
 Von den Abrufmethoden des JDBC-Treibers werden drei Konvertierungskategorien unterstützt:
 

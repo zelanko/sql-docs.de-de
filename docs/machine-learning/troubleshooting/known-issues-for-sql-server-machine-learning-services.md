@@ -3,18 +3,18 @@ title: Bekannte Probleme bei Python und R
 description: In diesem Artikel werden bekannte Probleme und Einschränkungen der Python- und R-Komponenten beschrieben, die in SQL Server Machine Learning Services und SQL Server 2016 R Services bereitgestellt werden.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/15/2020
+ms.date: 10/13/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 914f8626a297dd233d6b22230d579623e0e98cf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e756203bb9eba1ec4646ff3e40686cd3838a0dbf
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495028"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059558"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Bekannte Probleme in SQL Server-Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -718,7 +718,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ### <a name="9-cannot-install-tensorflow-package-using-sqlmlutils"></a>9. Installation des **tensorflow**-Pakets mit **sqlmlutils** ist nicht möglich
 
-Das [sqlmlutils-Paket](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) wird zum Installieren von Python-Paketen in SQL Server 2019 verwendet. Allerdings kann das Paket **tensorflow** nicht mit sqlmlutils installiert werden. Das tensorflow-Paket hängt von einer numpy-Version ab, die neuer als die in SQL Server installierte Version ist. Bei numpy handelt es sich jedoch um ein vorinstalliertes Systempaket, das sqlmlutils nicht aktualisieren kann, wenn versucht wird, tensorflow zu installieren.
+Das [sqlmlutils-Paket](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) wird zum Installieren von Python-Paketen in SQL Server 2019 verwendet. Sie müssen das [Microsoft Visual C++ 2015–2019 Redistributable (x64)](https://visualstudio.microsoft.com/downloads/) herunterladen, installieren und aktualisieren. Allerdings kann das Paket **tensorflow** nicht mit sqlmlutils installiert werden. Das tensorflow-Paket hängt von einer numpy-Version ab, die neuer als die in SQL Server installierte Version ist. Bei numpy handelt es sich jedoch um ein vorinstalliertes Systempaket, das sqlmlutils nicht aktualisieren kann, wenn versucht wird, tensorflow zu installieren.
 
 **Problemumgehung**
 

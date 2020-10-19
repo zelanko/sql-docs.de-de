@@ -1,6 +1,6 @@
 ---
 title: Abonnementeinstellungen und ein Dateifreigabekonto (Configuration Manager) | Microsoft-Dokumentation
-description: Über die Seite „Abonnementeinstellungen“ im Konfigurations-Manager für Reporting Services können Sie ein Dateifreigabekonto für Berichtsserver im einheitlichen Modus und Dateifreigabeabonnements konfigurieren.
+description: Über die Seite „Abonnementeinstellungen“ im Berichtsserver-Konfigurations-Manager können Sie ein Dateifreigabekonto für Berichtsserver im einheitlichen Modus und Dateifreigabeabonnements konfigurieren.
 ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,14 +11,14 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05441d59b725a172fddfb83ae116cda2d3ca5596
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866273"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935553"
 ---
-# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>Abonnementeinstellungen und ein Dateifreigabekonto (SSRS-Configuration Manager)
+# <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>Abonnementeinstellungen und ein Dateifreigabekonto (Berichtsserver-Konfigurations-Manager)
   Verwenden Sie die Seite **Abonnementeinstellungen** im Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um ein Dateifreigabekonto für Berichtsserver im einheitlichen Modus und Dateifreigabeabonnements zu konfigurieren. Mit dem Dateifreigabekonto können Sie einen einzelnen Anmeldeinformationssatz in mehreren Abonnements verwenden, die Berichte an eine Dateifreigabe übermitteln. Wenn die Anmeldeinformationen geändert werden müssen, konfigurieren Sie die Änderung für das Dateifreigabekonto. So müssen Sie nicht jedes einzelne Abonnement aktualisieren.  
   
  Es gibt zwei Workflows für Dateifreigabeabonnements in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  

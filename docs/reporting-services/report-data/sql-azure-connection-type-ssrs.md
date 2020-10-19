@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988473"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935195"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Azure SQL-Verbindungstyp (SSRS)
 
@@ -27,7 +27,7 @@ Diese Datenerweiterung unterstützt mehrwertige Parameter, Serveraggregate und g
 > [!NOTE]  
 > Legen Sie das Verbindungstimeout beim Öffnen einer Verbindung mit einer [!INCLUDE[ssSDS](../../includes/sssds-md.md)]auf 30 Sekunden fest.
   
-Weitere Informationen finden Sie unter [Microsoft Azure SQL-Datenbank auf docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/).  
+Weitere Informationen finden Sie unter [Microsoft Azure SQL-Datenbank auf docs.microsoft.com](/azure/sql-database/).  
   
 Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Eine Schritt-für-Schritt-Anleitung finden Sie unter [Hinzufügen und Prüfen einer Datenverbindung &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -55,7 +55,7 @@ Auf einem Berichterstellungsclient sind die folgenden Optionen zum Angeben von A
   
 - Verwendung eines gespeicherten Benutzernamens und eines gespeicherten Kennworts. Aktivieren Sie Optionen zur Verwendung der Anmeldeinformationen als Windows-Anmeldeinformationen, um den doppelten Sprung auszuhandeln, der auftritt, wenn sich die Datenbank mit den Berichtsdaten vom Berichtsserver unterscheidet. Sie können auch die Identität des authentifizierten Benutzers annehmen, nachdem die Verbindung mit der Datenquelle hergestellt wurde.  
   
-- Anmeldeinformationen sind nicht erforderlich. Zur Verwendung dieser Option müssen Sie zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+- Anmeldeinformationen sind nicht erforderlich. Zur Verwendung dieser Option müssen Sie zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;Berichtsserver-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 Weitere Informationen finden Sie unter [Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oder [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -79,7 +79,7 @@ Der textbasierte Abfrage-Designer unterstützt die folgenden zwei Modi:
   
 Weitere Informationen finden Sie unter [Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator)](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) und [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-Der in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwendete grafische Abfrage-Designer bietet integrierte Unterstützung für das Gruppieren und für Aggregate, sodass Sie Abfragen schreiben können, durch die nur Zusammenfassungsdaten abgerufen werden. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sprachfunktionen sind die GROUP BY-Klausel, das DISTINCT-Schlüsselwort und Aggregate wie SUM und COUNT. Der textbasierte Abfrage-Designer bietet vollständige Unterstützung für die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sprache, einschließlich Gruppieren und Aggregate. Weitere Informationen über [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+Der in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwendete grafische Abfrage-Designer bietet integrierte Unterstützung für das Gruppieren und für Aggregate, sodass Sie Abfragen schreiben können, durch die nur Zusammenfassungsdaten abgerufen werden. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sprachfunktionen sind die GROUP BY-Klausel, das DISTINCT-Schlüsselwort und Aggregate wie SUM und COUNT. Der textbasierte Abfrage-Designer bietet vollständige Unterstützung für die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sprache, einschließlich Gruppieren und Aggregate. Weitere Informationen über [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../../t-sql/language-reference.md).  
   
 ### <a name="using-query-type-text"></a><a name="QueryText"></a> Verwenden des Abfragetyps "Text"
 
@@ -161,9 +161,9 @@ Sie können die Azure SQL-Datenbank mit der Passthrough-Authentifizierung von Az
 Dieses Szenario wird unterstützt, wenn Sie die folgenden Elemente ordnungsgemäß einrichten:
 
 - Die [Active Directory-Authentifizierungsbibliothek für SQL Server (Active Directory Authentication Library for SQL Server, ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742) ist auf dem Berichtsserver installiert.
-- Die [Active Directory-Verbunddienste (Active Directory Federation Services, AD FS)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) sind zum Herstellen eines Verbunds über lokales Active Directory (AD) und AAD hinweg konfiguriert.
-- Die [eingeschränkte Kerberos-Delegierung Delegation (Kerberos Constrained Delegation, KCD)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) ist vom Berichtsserver zum AD FS-Server konfiguriert.
-- Konfigurieren Sie die Berichts-/Datenquelle für die Authentifizierung bei [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview), wenn der Benutzer den Bericht anzeigt.
+- Die [Active Directory-Verbunddienste (Active Directory Federation Services, AD FS)](/windows-server/identity/active-directory-federation-services) sind zum Herstellen eines Verbunds über lokales Active Directory (AD) und AAD hinweg konfiguriert.
+- Die [eingeschränkte Kerberos-Delegierung Delegation (Kerberos Constrained Delegation, KCD)](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) ist vom Berichtsserver zum AD FS-Server konfiguriert.
+- Konfigurieren Sie die Berichts-/Datenquelle für die Authentifizierung bei [Azure SQL-Datenbank](/azure/sql-database/sql-database-technical-overview), wenn der Benutzer den Bericht anzeigt.
 
 ::: moniker-end
 
@@ -198,8 +198,7 @@ Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung f
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[Microsoft Azure SQL-Datenbank auf docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/)  
+[Microsoft Azure SQL-Datenbank auf docs.microsoft.com](/azure/sql-database/)  
 [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
-[Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-
+[Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)

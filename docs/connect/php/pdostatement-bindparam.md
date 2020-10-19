@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6b8b1f838ce3351299e4069e80f692efb487df1
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: dd2d1feb1ae156d685dbd18595447a248836eba9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646610"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081419"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ Beim Binden von NULL-Daten an Serverspalten vom Typ „varbinary“, „binary�
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
 
-## <a name="example"></a>Beispiel  
+## <a name="parameter-example"></a>Parameterbeispiel  
 Dieses Codebeispiel zeigt, dass, nachdem $contact an den Parameter gebunden wurde, das Ändern des Werts nicht den in der Abfrage übergebenen Wert ändert.  
   
 ```  
@@ -81,7 +81,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ?>  
 ```  
   
-## <a name="example"></a>Beispiel  
+## <a name="output-parameter-example"></a>Ausgabeparameterbeispiel  
 In diesem Codebeispiel wird veranschaulicht, wie auf einen Output-Parameter zugegriffen wird.  
   
 ```  
@@ -102,7 +102,7 @@ echo $input1;
 > [!NOTE]
 > Wenn beim Binden eines Ausgabeparameters an einen bigint-Typ der Wert möglicherweise außerhalb des Bereichs einer [ganzen Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) liegt, kann die Verwendung von PDO::PARAM_INT mit PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE zu einem „Wert außerhalb des gültigen Bereichs“ führen. Verwenden Sie stattdessen den Standardwert PDO::PARAM_STR, und geben Sie die Größe der resultierenden Zeichenfolge an (höchstens 21). Dabei handelt es sich um die maximale Anzahl von Ziffern (einschließlich des negativen Zeichens) eines beliebigen bigint-Werts. 
 
-## <a name="example"></a>Beispiel  
+## <a name="inputoutput-example"></a>Eingabe-/Ausgabebeispiel  
 In diesem Codebeispiel wird veranschaulicht, wie ein Input/Output-Parameter verwendet wird.  
   
 ```  
@@ -124,7 +124,7 @@ In diesem Codebeispiel wird veranschaulicht, wie ein Input/Output-Parameter verw
 > [!NOTE]
 > Es wird empfohlen, beim Binden von Werten an eine [Spalte des Datentyps „decimal“ oder „numeric“](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) Zeichenfolgen als Eingabe zu verwenden, um Präzision und Genauigkeit sicherzustellen, da die Genauigkeit von PHP für [Gleitkommazahlen](https://php.net/manual/en/language.types.float.php) begrenzt ist. Dasselbe gilt für Spalten des Datentyps „bigint“, insbesondere, wenn die Werte außerhalb des Bereichs einer [ganzen Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) liegen.
 
-## <a name="example"></a>Beispiel  
+## <a name="decimal-input-example"></a>Dezimaleingabebeispiel  
 In diesem Codebeispiel wird das Binden eines Dezimalwerts als Eingabeparameter veranschaulicht.  
 
 ```

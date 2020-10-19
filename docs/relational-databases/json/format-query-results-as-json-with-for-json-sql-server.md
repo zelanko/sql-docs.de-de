@@ -15,18 +15,18 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7862fa1b8454fba689edda2f8a451320315c1021
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3621fcc105d7b03d2347bc723f2ddb552bc9e81
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499313"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765712"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Formatieren von Abfrageergebnisse als JSON mit FOR JSON (SQL Server)
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Formatieren Sie Abfrageergebnisse als JSON, oder exportieren Sie Daten aus SQL Server als JSON, indem Sie die **FOR JSON**-Klausel einer **SELECT**-Anweisung hinzufügen. Verwenden der **FOR JSON**-Klausel, um Clientanwendungen zu vereinfachen, indem Sie die Formatierung der JSON-Ausgabe von der App zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delegieren.
+Formatieren Sie Abfrageergebnisse als JSON, oder exportieren Sie Daten aus SQL Server als JSON, indem Sie die **FOR JSON**-Klausel einer **SELECT**-Anweisung hinzufügen. Verwenden der **FOR JSON**-Klausel, um Clientanwendungen zu vereinfachen, indem Sie die Formatierung der JSON-Ausgabe von der App zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delegieren. [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) ist der empfohlene Abfrage-Editor für JSON-Abfragen, da hierbei die JSON-Ergebnisse (wie in diesem Artikel gezeigt) automatisch formatiert werden, anstatt dass eine flache Zeichenfolge angezeigt wird.
   
  Bei Verwendung der **FOR JSON** -Klausel, können Sie die Struktur der JSON-Ausgabe explizit angeben, oder lassen Sie die Struktur der SELECT-Anweisung die Ausgabe bestimmen.  
   

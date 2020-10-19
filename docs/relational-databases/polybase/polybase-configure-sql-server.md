@@ -1,7 +1,7 @@
 ---
 title: 'Zugreifen auf externe Daten: SQL Server – PolyBase'
 description: In diesem Artikel wird erläutert, wie Sie PolyBase in einer SQL Server-Instanz verwenden, um externe Daten in einer anderen SQL Server-Instanz abzufragen. Hier erfahren Sie, wie Sie externe Tabellen erstellen, um auf externe Daten zu verweisen.
-ms.date: 12/13/2019
+ms.date: 10/06/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3bb2528613bc4e13cf5c3559e8d257e64e276fd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31b07b70e5a90d36a7094f38eab7b99f3bac821e
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741323"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834019"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in SQL Server
 
@@ -27,11 +27,13 @@ In diesem Artikel wird erläutert, wie Sie PolyBase in einer SQL Server-Instanz 
 
 Wenn Sie PolyBase nicht installiert haben, finden Sie weitere Informationen unter [PolyBase installation (Installieren von PolyBase)](polybase-installation.md). Die Voraussetzungen für die Installation werden im entsprechenden Artikel erläutert. Stellen Sie nach der Installation auch sicher, dass Sie [PolyBase aktivieren](polybase-installation.md#enable).
 
+Die externe SQL Server-Datenquelle verwendet die SQL-Authentifizierung.
+
 Bevor datenbankweit gültige Anmeldeinformationen erstellt werden können, muss ein [Hauptschlüssel](../../t-sql/statements/create-master-key-transact-sql.md) erstellt werden. 
 
 ## <a name="configure-a-sql-server-external-data-source"></a>Konfigurieren einer externen SQL Server-Datenquelle
 
-Um die Daten einer SQL Server-Datenquelle abzufragen, müssen Sie externe Tabellen zum Referenzieren der externen Daten erstellen. Dieser Abschnitt enthält Beispielcode zum Erstellen dieser externen Tabellen. 
+Um die Daten einer SQL Server-Datenquelle abzufragen, müssen Sie externe Tabellen zum Referenzieren der externen Daten erstellen. Dieser Abschnitt enthält Beispielcode zum Erstellen dieser externen Tabellen.
  
 Damit eine optimale Abfrageleistung erzielt werden kann, sollten Sie Statistiken für externe Tabellenspalten erstellen, insbesondere für die Spalten, die für Joins, Filter und Aggregate verwendet werden.
 
@@ -47,12 +49,14 @@ In diesem Abschnitt werden die folgenden Transact-SQL-Befehle verwendet:
     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
     WITH IDENTITY = 'username', SECRET = 'password';
     ```
+   >[!IMPORTANT]
+   >Der SQL ODBC-Connector für PolyBase unterstützt nur die einfache Authentifizierung, nicht die Kerberos-Authentifizierung.
 
-1. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle. Im folgenden Beispiel:
+1. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle. Im Beispiel unten geschieht Folgendes:
 
    - wird eine externe Datenquelle mit dem Namen `SQLServerInstance` erstellt.
    - werden externe Datenquellen (`LOCATION = '<vendor>://<server>[:<port>]'`) identifiziert. Im Beispiel verweist sie auf eine SQL Server-Standardinstanz.
-   - wird identifiziert, ob die Berechnung zur Quelle (`PUSHDOWN`) gepusht werden soll. `PUSHDOWN` ist standardmäßig `ON`.
+   - wird identifiziert, ob die Berechnung zur Quelle (`PUSHDOWN`) gepusht werden soll. `PUSHDOWN` ist `ON` standardmäßig.
 
    Schließlich werden im Beispiel die zuvor erstellten Anmeldeinformationen verwendet.
 
@@ -72,7 +76,7 @@ In diesem Abschnitt werden die folgenden Transact-SQL-Befehle verwendet:
     WITH FULLSCAN;
   ```
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 >Sobald Sie eine externe Datenquelle erstellt haben, können Sie über den Befehl [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) eine abfragbare Tabelle für diese Quelle erstellen.
 
 ## <a name="sql-server-connector-compatible-types"></a>Mit dem SQL Server-Connector kompatible Typen

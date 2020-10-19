@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ab1ef128b86f3426193b648c41f6cac6b324e71
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741765"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834045"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in MongoDB
 
@@ -49,6 +49,10 @@ In diesem Abschnitt werden die folgenden Transact-SQL-Befehle verwendet:
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+    
+   > [!IMPORTANT] 
+   > Der MongoDB ODBC-Connector für PolyBase unterstützt nur die einfache Authentifizierung, nicht die Kerberos-Authentifizierung.    
+    
 1. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle.
 
     ```sql
@@ -72,7 +76,9 @@ In diesem Abschnitt werden die folgenden Transact-SQL-Befehle verwendet:
     ```
 
 >[!IMPORTANT] 
->Sobald Sie eine externe Datenquelle erstellt haben, können Sie über den Befehl [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) eine abfragbare Tabelle für diese Quelle erstellen. 
+>Sobald Sie eine externe Datenquelle erstellt haben, können Sie über den Befehl [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) eine abfragbare Tabelle für diese Quelle erstellen.
+>
+>Ein Beispiel finden Sie unter [Erstellen einer externen Tabelle für MongoDB](../../t-sql/statements/create-external-table-transact-sql.md#k-create-an-external-table-for-mongodb).
 
 ## <a name="flattening"></a>Vereinfachen
 Die Vereinfachung (Flattening) ist für geschachtelte und wiederholte Daten aus MongoDB-Dokumentsammlungen aktiviert. Der Benutzer muss `create an external table` aktivieren und ein relationales Schema über MongoDB-Dokumentsammlungen explizit angeben, die möglicherweise geschachtelte und/oder wiederholte Daten besitzen. Geschachtelte/wiederholte JSON-Datentypen werden wie folgt vereinfacht

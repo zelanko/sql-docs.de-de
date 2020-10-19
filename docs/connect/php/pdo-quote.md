@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2cc39e175c46317428836af6562abc9af3d02dd9
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 31756cbc2f0ede497ea34077f1bdd760412c716c
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645550"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081839"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ Eine Zeichenfolge in Anführungszeichen, die an eine SQL-Anweisung oder bei eine
 ## <a name="remarks"></a>Bemerkungen  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
-## <a name="example"></a>Beispiel  
+## <a name="string-escape-example"></a>Beispiel für ein Escape von Zeichenfolgen  
   
 ```  
 <?php  
@@ -70,7 +70,7 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## <a name="example"></a>Beispiel  
+## <a name="pdo-quote-example"></a>PDO-Angebotsbeispiel  
 
 Das folgende Skript enthält einige Beispiele für die Auswirkung erweiterter Zeichenfolgetypen auf PDO::quote() in PHP 7.2 und höher.
 

@@ -1,50 +1,46 @@
 ---
-title: Laden der SMO-Assemblys in Windows PowerShell | Microsoft-Dokumentation
+title: Laden der SMO-Assemblys in Windows PowerShell
 description: Hier erfahren Sie, wie die SQL Server Management Objects-Assemblys (SMO) in PowerShell-Skripts unter Windows geladen werden, die nicht den SQL Server PowerShell-Anbieter verwenden.
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 673e94da44cbdd46a8873468b4421a1a8ea4e037
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: ''
+ms.date: 10/14/2020
+ms.openlocfilehash: 0879219da144a234f89de7434630cbf3d15c01bb
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714228"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005392"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Laden der SMO-Assemblys in Windows PowerShell
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 In diesem Artikel wird beschrieben, wie die Assemblys von SQL Server Management Objects (SMO) in Windows PowerShell-Skripts geladen werden, die nicht den SQL Server PowerShell-Anbieter verwenden.  
-  
-> [!NOTE]
-> Es gibt zwei SQL Server PowerShell-Module: **SqlServer** und **SQLPS**. Das **SQLPS**-Modul ist zwar in der SQL Server-Installation (für die Abwärtskompatibilität) enthalten, wird jedoch nicht mehr aktualisiert. Das **SqlServer**-Modul ist das aktuellste PowerShell-Modul. Das **SqlServer**-Modul enthält aktualisierte Versionen der Cmdlets in **SQLPS** sowie neue Cmdlets zur Unterstützung der neuesten SQL-Funktionen.  
-> Vorherige Versionen des **SqlServer**-Moduls *waren* in SQL Server Management Studio (SSMS) enthalten, allerdings nur in den Versionen 16.x. Das **SqlServer**-Modul muss über den PowerShell-Katalog installiert werden, damit PowerShell mit SSMS 17.0 und höher verwendet werden kann.
-> Informationen zur Installation des **SqlServer**-Moduls finden Sie unter [Installieren von SQL Server PowerShell](download-sql-server-ps-module.md).
 
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 Der bevorzugte Mechanismus zum Laden der SMO-Assemblys besteht im Laden des **SqlServer**-Moduls. Der im Modul enthaltene [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter lädt die SMO-Assemblys automatisch und implementiert außerdem Funktionen, die die Nützlichkeit der SMO-Objekte in PowerShell-Skripts erweitern.
-  
+
 In zwei Szenarien müssen die SMO-Assemblys direkt geladen werden:  
-  
--   Das Skript verweist vor dem ersten Befehl, der auf den Anbieter oder die Cmdlets der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Snap-Ins verweist, auf ein SMO-Objekt.  
-  
--   Sie möchten SMO-Code portieren, der in einer anderen Sprache geschrieben wurde, die weder den Anbieter noch Cmdlets verwendet (z. B. C# oder Visual Basic).  
-  
-## <a name="example-loading-the-sql-server-management-objects"></a>Beispiel: Laden von SQL Server Management Objects  
- Mit folgendem Code werden die SMO-Assemblys geladen:  
-  
-```  
-#  
+
+- Das Skript verweist vor dem ersten Befehl, der auf den Anbieter oder die Cmdlets der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Snap-Ins verweist, auf ein SMO-Objekt.  
+
+- Sie möchten SMO-Code portieren, der in einer anderen Sprache geschrieben wurde, die weder den Anbieter noch Cmdlets verwendet (z. B. C# oder Visual Basic).  
+
+## <a name="example-loading-the-sql-server-management-objects"></a>Beispiel: Laden von SQL Server Management Objects
+
+Mit folgendem Code werden die SMO-Assemblys geladen:  
+
+```powershell
 # Loads the SQL Server Management Objects (SMO)  
-#  
-  
-$ErrorActionPreference = "Stop"  
+
+$ErrorActionPreference = "Stop"
   
 $sqlpsreg="HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
   
@@ -58,7 +54,7 @@ else
     $sqlpsPath = [System.IO.Path]::GetDirectoryName($item.Path)  
 }  
   
-$assemblylist =   
+$assemblylist =
 "Microsoft.SqlServer.Management.Common",  
 "Microsoft.SqlServer.Smo",  
 "Microsoft.SqlServer.Dmf ",  
@@ -88,11 +84,10 @@ foreach ($asm in $assemblylist)
   
 Push-Location  
 cd $sqlpsPath  
-update-FormatData -prependpath SQLProvider.Format.ps1xml   
+update-FormatData -prependpath SQLProvider.Format.ps1xml
 Pop-Location  
-```  
-  
-## <a name="see-also"></a>Weitere Informationen  
- [SQL Server-PowerShell](sql-server-powershell.md)  
-  
-  
+```
+
+## <a name="see-also"></a>Weitere Informationen
+
+- [SQL Server-PowerShell](sql-server-powershell.md)

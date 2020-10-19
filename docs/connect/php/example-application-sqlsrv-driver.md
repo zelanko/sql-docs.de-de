@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae39afd504cd412ffe3f1182bcd2b3e5598c9376
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 69df287d23713b1465a44f46e68f190bf3e25b09
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728346"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081739"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Beispielanwendung (SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ Um die Beispielanwendung „AdventureWorks Product Reviews“ auszuführen, muss
 -   SQL Server 2005 oder SQL Server 2008 mit der [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank ist auf dem lokalen Computer installiert.  
 -   Ein Webbrowser ist installiert.  
   
-## <a name="demonstrates"></a>Zeigt  
+## <a name="adventureworks-example"></a>AdventureWorks-Beispiel  
 Die Beispielanwendung „AdventureWorks Product Reviews“ demonstriert Folgendes:  
   
 -   Öffnen einer Verbindung zu SQL Server mithilfe der Windows-Authentifizierung  
@@ -52,8 +52,7 @@ Die Beispielanwendung „AdventureWorks Product Reviews“ demonstriert Folgende
 -   Senden von Datenströmen  
 -   Suchen nach Fehlern  
   
-## <a name="example"></a>Beispiel  
-Die Beispielanwendung „AdventureWorks Product Reviews“ gibt Produktinformationen für alle Produkte, deren Namen die vom Benutzer eingegebene Zeichenfolge enthalten, von der Datenbank zurück. In der Liste der zurückgegebenen Produkte kann der Benutzer Prüfungen und Bilder sehen, ein Bild hinzufügen und eine Prüfung für ein gewähltes Produkt schreiben.  
+In diesem Beispiel werden Produktinformationen für alle Produkte, deren Namen die vom Benutzer eingegebene Zeichenfolge enthalten, von der Datenbank zurückgegeben. In der Liste der zurückgegebenen Produkte kann der Benutzer Prüfungen und Bilder sehen, ein Bild hinzufügen und eine Prüfung für ein gewähltes Produkt schreiben.  
   
 Platzieren Sie den folgenden Code in einer Datei namens „adventureworks_demo.php“:  
   
@@ -492,7 +491,7 @@ function FormatErrors( $errors )
 </html>  
 ```  
   
-## <a name="example"></a>Beispiel  
+## <a name="lob-example"></a>LOB-Beispiel  
 Das „photo.php“-Skript gibt ein Produktfoto für die angegebene **ProduktID**zurück. Das Skript wird aus dem „adventureworks_demo.php“-Skript aufgerufen.  
   
 Platzieren Sie den folgenden Code in einer Datei namens „photo.php“:  

@@ -1,19 +1,19 @@
 ---
 title: Active Directory- und Kubernetes-DNS-Abstimmung in Big Data-Cluster-Bereitstellungen
-description: Verwalten des Zugriffs auf den Big Data-Cluster
-author: mihaelablendea
-ms.author: mihaelab
+description: Konfigurieren des DNS-Abgleichs für SQL Server Big Data-Cluster im Active Directory-Modus
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 07/06/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 411d713734db080b036a98bd18b0618326dbd70f
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 63a5c53e64ece7650e65414fd24ddd82d6da5324
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279428"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892460"
 ---
 # <a name="active-directory-and-kubernetes-dns-reconciliation-in-big-data-clusters-deployments"></a>Active Directory- und Kubernetes-DNS-Abstimmung in Big Data-Cluster-Bereitstellungen
 
@@ -89,6 +89,6 @@ Wenn BDC gelöscht wurde, ist keine zusätzliche dynamische Arbeit zum Löschen 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Bereitstellen von Big Data-Cluster für SQL Server im Active Directory-Modus](deploy-active-directory.md)
+- [Bereitstellen von Big Data-Cluster für SQL Server im Active Directory-Modus](active-directory-deploy.md)
 - [Verwalten des Zugriffs auf Big Data-Cluster im Active Directory-Modus](active-directory-objects.md)
 - [Bereitstellen von mehreren Big Data-Clustern für SQL Server in derselben Active Directory-Domäne](active-directory-deployment-background.md)

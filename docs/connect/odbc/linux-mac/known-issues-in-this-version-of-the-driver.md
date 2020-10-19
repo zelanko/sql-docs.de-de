@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6729d46fe498c6efe8e49f941c0ef1b007870b2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: af611dcc4ca45ae18d650af6248b0f53ab8bcb0b
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727401"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847300"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Bekannte Probleme des ODBC-Treibers unter Linux und macOS
 
@@ -33,7 +33,7 @@ Weitere Probleme werden im [Blog zu SQL Server-Treibern](https://techcommunity.m
 
 - Wenn der Client die UTF-8-Codierung aufweist, führt der Treiber-Manager die Konvertierung von UTF-8 auf UTF-16 nicht immer ordnungsgemäß durch. Derzeit tritt Datenbeschädigung auf, wenn mindestens ein Zeichen in der Zeichenfolge kein gültiges UTF-8-Zeichen ist. ASCII-Zeichen werden ordnungsgemäß zugeordnet. Der Treiber-Manager versucht, diese Konvertierung beim Aufruf der SQLCHAR-Versionen der ODBC-API (z.B. SQLDriverConnectA) durchzuführen. Der Treiber-Manager wird nicht versuchen, diese Konvertierung beim Aufruf der SQLWCHAR-Versionen der ODBC-API (zum Beispiel SQLDriverConnectW) durchzuführen.  
 
-- Der Parameter *ColumnSize* von **SQLBindParameter** bezieht sich auch die Anzahl von Zeichen im SQL-Typ, während *BufferLength* der Anzahl von Bytes im Puffer der Anwendung entspricht. Wenn jedoch der SQL-Datentyp `varchar(n)` oder `char(n)` ist und die Anwendung den Parameter als SQL_C_CHAR oder SQL_C_VARCHAR bindet, und wenn die Zeichencodierung des Clients UTF-8 ist, erhalten Sie vom Treiber eventuell die Fehlermeldung „Die Zeichenfolgedaten wurden rechts abgeschnitten.“, selbst wenn der Wert von *ColumnSize* auf die Größe des Datentyps auf dem Server ausgerichtet ist. Dieser Fehler tritt auf, weil Konvertierungen zwischen Zeichencodierungen die Länge der Daten ändern können. Ein rechtes Anführungszeichen (U+2019) wird beispielsweise in CP-1252 als das einzelne Byte „0x92“ codiert, während es in der UTF-8-Codierung jedoch als Sequenz der drei Bytes „0xe2“, „0x80“ und „0x99“ codiert wird.
+- Der Parameter *ColumnSize* von **SQLBindParameter** bezieht sich auch die Anzahl von Zeichen im SQL-Typ, während *BufferLength* der Anzahl von Bytes im Puffer der Anwendung entspricht. Wenn jedoch der SQL-Datentyp `varchar(n)` oder `char(n)` ist und die Anwendung den Parameter als SQL_C_CHAR für den C-Typ und SQL_CHAR oder SQL_C_VARCHAR für den SQL-Typ bindet und zugleich der Client die Zeichencodierung UTF-8 verwendet, erhalten Sie vom Treiber eventuell die Fehlermeldung „Die Zeichenfolgedaten wurden rechts abgeschnitten.“, selbst wenn der Wert von *ColumnSize* auf die Größe des Datentyps auf dem Server ausgerichtet ist. Dieser Fehler tritt auf, weil Konvertierungen zwischen Zeichencodierungen die Länge der Daten ändern können. Ein rechtes Anführungszeichen (U+2019) wird beispielsweise in CP-1252 als das einzelne Byte „0x92“ codiert, während es in der UTF-8-Codierung jedoch als Sequenz der drei Bytes „0xe2“, „0x80“ und „0x99“ codiert wird.
 
 Wenn Sie beispielsweise die UTF-8-Codierung verwenden, „1“ für *BufferLength* und *ColumnSize* für einen Out-Parameter in **SQLBindParameter** angeben und anschließend versuchen, das vorhergehende Zeichen abzurufen, das auf dem Server in einer `char(1)`-Spalte gespeichert ist (mit CP-1252), versucht der Treiber, ihn in die UTF-8-Codierung mit drei Bytes zu konvertieren. Das Ergebnis passt jedoch nicht in einen Puffer mit einem Byte. Andererseits wird *ColumnSize* mit dem Wert von *BufferLength* in **SQLBindParameter** verglichen, bevor die Konvertierung zwischen den verschiedenen Codepages für den Client und den Server durchgeführt wird. Da ein *ColumnSize* von 1 kleiner ist als eine *Pufferlänge* von (z. B.) 3, generiert der Treiber einen Fehler. Stellen Sie sicher, dass die Länge der Daten nach der Konvertierung in den angegebenen Puffer oder die Spalte passt, um diesen Fehler zu vermeiden. Beachten Sie, dass der Wert von *ColumnSize* mit dem Typ `varchar(n)` nicht größer als 8.000 sein darf.
 

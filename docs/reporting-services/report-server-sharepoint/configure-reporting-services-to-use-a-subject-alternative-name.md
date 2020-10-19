@@ -8,12 +8,12 @@ ms.technology: security
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf1db4f6e07609ce6da38569732f7dba333f86ff
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 40ddab224d24e566ad346d64d5238ca5c81d9f48
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497204"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891590"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name-san"></a>Konfigurieren der Reporting Services für die Verwendung eines alternativen Antragstellernamens (Subject Alternative Name, SAN)
 
@@ -33,11 +33,11 @@ Weitere Informationen zu TLS-Einstellungen für Reporting Services finden Sie un
   
 1.  Starten Sie den Berichtsserver-Konfigurations-Manager.  
   
-     Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+     Weitere Informationen finden Sie unter [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md) (Berichtsserver-Konfigurations-Manager &#40;einheitlicher Modus&#41;).  
   
 2.  Wählen Sie auf der Seite **Webdienst-URL** einen TLS/SSL-Port und ein TLS/SSL-Zertifikat aus.  
   
-     ![Reporting Services-Konfigurations-Manager](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services-Konfigurations-Manager")  
+     ![Berichtsserver-Konfigurations-Manager](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Berichtsserver-Konfigurations-Manager")  
   
      Der Konfigurations-Manager registriert das TLS/SSL-Zertifikat für den Port.  
   
@@ -155,7 +155,7 @@ Weitere Informationen zu TLS-Einstellungen für Reporting Services finden Sie un
 ## <a name="see-also"></a>Weitere Informationen
 
  [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Konfigurations-Manager für Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Berichtsserver-Konfigurations-Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Ändern einer Reporting Services-Konfigurationsdatei](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Konfigurieren von Berichtsserver-URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 

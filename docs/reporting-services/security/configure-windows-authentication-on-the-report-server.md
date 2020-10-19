@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb6981b3396afdc387693c7ae89430179a6d68b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b41e35d48f6add25f4ff8c535fb7e96ed7afe67f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492653"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935417"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   In der Standardeinstellung werden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Anforderungen übergeben, die die Negotiate- oder die NTLM-Authentifizierung angeben. Wenn eine Bereitstellung Clientanwendungen und Browser umfasst, die diese Sicherheitsanbieter nutzen, können Sie die Standardwerte ohne zusätzliche Konfiguration verwenden. Wenn Sie einen anderen Sicherheitsanbieter für die integrierte Sicherheit von Windows nutzen möchten (wenn Sie beispielsweise Kerberos direkt verwenden möchten) oder wenn Sie die Standardwerte verändert haben und die ursprünglichen Einstellungen wiederherstellen möchten, können Sie mithilfe der in diesem Thema enthaltenen Informationen die Authentifizierungseinstellungen auf dem Berichtsserver festlegen.  
@@ -131,7 +131,7 @@ ms.locfileid: "88492653"
   
 -   Registrieren Sie unter dem Domänenbenutzerkonto einen SPN für den Berichtsserverdienst. Weitere Informationen finden Sie unter [Registrieren eines Dienstprinzipalnamens (SPN) für einen Berichtsserver](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
--   Ändern Sie das Dienstkonto so, dass es unter einem integrierten Konto ausgeführt wird, z. B. als Netzwerkdienst. Integrierte Konten ordnen den HTTP-SPN dem Host-SPN zu, der definiert wird, wenn Sie einen Computer in ein Netzwerk aufnehmen. Weitere Informationen finden Sie unter [Konfigurieren eines Dienstkontos (SSRS-Konfigurations-Manager)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
+-   Ändern Sie das Dienstkonto so, dass es unter einem integrierten Konto ausgeführt wird, z. B. als Netzwerkdienst. Integrierte Konten ordnen den HTTP-SPN dem Host-SPN zu, der definiert wird, wenn Sie einen Computer in ein Netzwerk aufnehmen. Weitere Informationen finden Sie unter [Konfigurieren eines Dienstkontos &#40;Berichtsserver-Konfigurations-Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
   
 -   Verwenden Sie NTLM. NTLM funktioniert im Allgemeinen in Fällen, in denen die Kerberos-Authentifizierung fehlschlägt. Zur Verwendung von NTLM entfernen Sie den Eintrag **RSWindowsNegotiate** aus der Datei RSReportServer.config, und stellen Sie sicher, dass nur **RSWindowsNTLM** angegeben ist. Wenn Sie sich für diese Vorgehensweise entscheiden, können Sie auch dann weiterhin ein Domänenbenutzerkonto für den Berichtsserverdienst verwenden, wenn Sie keinen SPN dafür definiert haben.  
   

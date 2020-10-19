@@ -11,12 +11,12 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: dde55bd4afd162869606e336126c32c274ea7445
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2e9f0619f26abf8b077059c7e12c7fc34c51a2e6
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633316"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081299"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für die ADO.NET-Entwicklung
 
@@ -30,7 +30,7 @@ Im vorliegenden Codebeispiel wird ADO.NET des .NET Frameworks für Windows verwe
 
 ### <a name="adonet-for-windows"></a>ADO.NET, für Windows
 
-- ![Download-Abwärtspfeil-eingekreist](../../ssms/media/download-icon.png)[Herunterladen und Installieren von .NET Framework einschließlich ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Eingekreister Pfeil für den Framework-Download](../../ssms/media/download-icon.png)[Zum Herunterladen und Installieren von .NET Framework einschließlich ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 - Installieren Sie Visual Studio Community oder eine ähnliche integrierte Entwicklungsumgebung für das Schreiben und Kompilieren von C#-Quellcode. Microsoft bietet Visual Studio Community jetzt *kostenlos*an.  
     - [Laden Sie Visual Studio Community herunter](https://www.visualstudio.com/products/visual-studio-community-vs)  
@@ -41,4 +41,4 @@ Im vorliegenden Codebeispiel wird ADO.NET des .NET Frameworks für Windows verwe
 
 Downloadlinks für .NET Core für unterschiedliche Betriebssysteme finden Sie unter:
 
-- ![Download-Abwärtspfeil-eingekreist](../../ssms/media/download-icon.png)[Herunterladen und Installieren von .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Eingekreister Pfeil für den Core-Download](../../ssms/media/download-icon.png)[Zum Herunterladen und Installieren von .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

@@ -9,12 +9,12 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 972e715de4ec8504c488ce70c47fecc3f04b3fca
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7107c1489521f733eb685887e6c1bcc543a2c147
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725231"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987851"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Untersuchen und Verwalten von Azure SQL-Ressourcen mit dem Azure-Ressourcen-Explorer
 
@@ -101,4 +101,4 @@ Der Azure-Ressourcen-Explorer ermöglicht einen schnellen Zugriff, der Ihnen das
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [Verwenden von [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)], um eine Verbindung mit einer Azure SQL-Datenbank-Instanz herzustellen und sie abzufragen](quickstart-sql-database.md)
-- [Verwenden von [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)], um eine Verbindung mit Daten in Azure SQL Data Warehouse herzustellen und sie abzufragen](quickstart-sql-dw.md)
+- [Schnellstart: Verwenden von [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)], um eine Verbindung mit Daten in Azure SQL Data Warehouse herzustellen und sie abzufragen](quickstart-sql-dw.md)
