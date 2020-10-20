@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fddf4562e1d2899e667f245b32309617c4147b29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f4d8059ee7e0e2f9d466289f4b40f9f51ff950
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495740"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194668"
 ---
 # <a name="cache-transform"></a>Cachetransformation
 
@@ -33,7 +33,7 @@ ms.locfileid: "88495740"
   
  Sie können den Cacheverbindungs-Manager verwenden, wenn Sie die Transformation für Suche für die Ausführung im Vollcachemodus konfigurieren möchten. In diesem Modus wird das Verweisdataset in den Cache geladen, bevor die Transformation für Suche ausgeführt wird.  
   
- Anweisungen dazu, wie die Transformation für Suche im Vollcachemodus mit dem Cacheverbindungs-Manager und der Transformation für Cachetransformation konfiguriert wird, finden Sie unter [Implementieren einer Suchtransformation im Vollcachemodus mit dem Cacheverbindungs-Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
+ Anweisungen dazu, wie die Transformation für Suche im Vollcachemodus mit dem Cacheverbindungs-Manager und der Transformation für Cachetransformation konfiguriert wird, finden Sie unter [Implementieren einer Suchtransformation im Vollcachemodus mit dem Cacheverbindungs-Manager](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md).  
   
  Weitere Informationen zum Zwischenspeichern des Verweisdatasets finden Sie unter [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88495740"
   
  In einem einzelnen Paket kann nur eine Cachetransformation Daten in den gleichen Cacheverbindungs-Manager schreiben. Wenn das Paket mehrere Cachetransformationen enthält, schreibt die erste beim Ausführen des Pakets aufgerufene Cachetransformation die Daten in den Verbindungs-Manager. Bei den Schreibvorgängen nachfolgender Cachetransformationen treten Fehler auf.  
   
- Weitere Informationen finden Sie unter [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) (Cacheverbindungs-Manager).  
+ Weitere Informationen finden Sie unter [Cache Connection Manager](../../connection-manager/cache-connection-manager.md) (Cacheverbindungs-Manager).  
   
 ## <a name="configuration-of-the-cache-transform"></a>Konfiguration der Cachetransformation  
  Sie können den Cacheverbindungs-Manager so konfigurieren, dass die Daten in einer Cachedatei (.caw) gespeichert werden.  
@@ -65,7 +65,7 @@ ms.locfileid: "88495740"
 ## <a name="cache-transformation-editor-connection-manager-page"></a>Cachetransformations-Editor (Seite 'Verbindungs-Manager')
   Mithilfe der Registerkarte **Verbindungs-Manager** des Dialogfelds **Cachetransformations-Editor** können Sie einen vorhandenen Cacheverbindungs-Manager auswählen oder einen neuen erstellen.  
   
- Weitere Informationen zum Cacheverbindungs-Manager finden Sie unter [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Weitere Informationen zum Cacheverbindungs-Manager finden Sie unter [Cache Connection Manager](../../connection-manager/cache-connection-manager.md).  
   
 ### <a name="options"></a>Tastatur  
  **Allgemein**  
@@ -80,5 +80,4 @@ ms.locfileid: "88495740"
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)  
-  
   

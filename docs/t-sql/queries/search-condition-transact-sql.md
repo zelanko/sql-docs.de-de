@@ -38,12 +38,12 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d51a3b2339fc1b44897bf3be9087b086bb81878
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 55a88376c7c12870455b2d575ffcb0da601c0dda
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226800"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187744"
 ---
 # <a name="search-condition-transact-sql"></a>Suchbedingung (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -211,7 +211,7 @@ ms.locfileid: "91226800"
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. Verwenden von WHERE mit der LIKE- und ESCAPE-Syntax  
  Im folgenden Beispiel wird nach den Zeilen gesucht, in denen die `LargePhotoFileName`-Spalte die Zeichen `green_` aufweist, und es wird die `ESCAPE`-Option verwendet, da es sich bei _ um ein Platzhalterzeichen handelt. Ohne Angeben der `ESCAPE`-Option würde die Abfrage nach allen Beschreibungswerten suchen, die das Wort `green` gefolgt von einem anderen Zeichen als _ enthalten.  
   
-```sql
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT *   
@@ -222,7 +222,7 @@ WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;
 ### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>B. Verwenden der WHERE- und LIKE-Syntax mit Unicodedaten  
  Im folgenden Beispiel wird die `WHERE`-Klausel zum Abrufen der Postanschrift für Unternehmen außerhalb der USA (`US`) in einer Stadt, deren Namen mit `Pa` beginnt, abgerufen.  
   
-```sql
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT AddressLine1, AddressLine2, City, PostalCode, CountryRegionCode    
@@ -237,7 +237,7 @@ AND City LIKE N'Pa%' ;
 ### <a name="c-using-where-with-like"></a>C. Verwenden von WHERE mit LIKE  
  Im folgenden Beispiel wird nach den Zeilen gesucht, in denen die `LastName`-Spalte die Zeichen `and` aufweist.  
   
-```sql
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  
@@ -248,7 +248,7 @@ WHERE LastName LIKE '%and%';
 ### <a name="d-using-where-and-like-syntax-with-unicode-data"></a>D: Verwenden der WHERE- und LIKE-Syntax mit Unicodedaten  
  Im folgenden Beispiel wird die `WHERE`-Klausel verwendet, um einen Unicode-Suchvorgang in der `LastName`-Spalte durchzuführen.  
   
-```sql
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  

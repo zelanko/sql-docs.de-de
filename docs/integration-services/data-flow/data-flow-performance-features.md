@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf9cc8d20f6cf8c380524806700373229cf22995
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480882"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196437"
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
 
@@ -139,7 +139,7 @@ ms.locfileid: "89480882"
  Wenn Sie in einem Datenfluss mehrere Aggregationen erstellen müssen, sollten Sie diese mit einer einzigen Transformation für das Aggregieren erstellen, anstatt mehrere Transformationen zu verwenden. Durch diesen Ansatz wird die Leistung verbessert, wenn eine Aggregation eine Untergruppe einer anderen Aggregation ist, da die Transformation den internen Speicher optimieren kann und die Eingangsdaten nur einmal durchsuchen muss. Wenn eine Aggregation z. B. eine GROUP BY-Klausel und eine AVG-Aggregation verwendet, kann die Leistung dadurch verbessert werden, dass sie in eine Transformation kombiniert werden. Das Ausführen mehrerer Aggregationen innerhalb einer Transformation für das Aggregieren serialisiert jedoch die Aggregationsvorgänge und verbessert daher möglicherweise nicht die Leistung, wenn mehrere Aggregationen unabhängig voneinander berechnet werden müssen.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformationen für Fuzzysuche und Fuzzygruppierung  
- Informationen zur Leistungsoptimierung der Transformationen für die Fuzzysuche und Fuzzygruppierung finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(in Englisch).  
+ Informationen zur Leistungsoptimierung der Transformationen für die Fuzzysuche und Fuzzygruppierung finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90))(in Englisch).  
   
 #### <a name="lookup-transformation"></a>Transformation für Suche  
  Minimieren Sie die Größe der Verweisdaten im Speicher, indem Sie eine SELECT-Anweisung eingeben, die nur die von Ihnen benötigten Spalten durchsucht. Diese Option bietet eine bessere Leistung als die Auswahl einer gesamten Tabelle oder Sicht, wodurch eine große Menge an unnötigen Daten zurückgegeben wird.  
@@ -175,15 +175,15 @@ ms.locfileid: "89480882"
 ## <a name="related-content"></a>Verwandte Inhalte  
  **Artikel und Blogbeiträge**  
   
--   Technischer Artikel [SQL Server 2005 Integration Services: Eine Leistungsstrategie](https://go.microsoft.com/fwlink/?LinkId=98899)auf technet.microsoft.com  
+-   Technischer Artikel [SQL Server 2005 Integration Services: Eine Leistungsstrategie](/previous-versions/sql/sql-server-2005/administrator/cc966530(v=technet.10))auf technet.microsoft.com  
   
--   Technischer Artikel [Integration Services: Leistungsoptimierungstechniken](https://go.microsoft.com/fwlink/?LinkId=98900)auf technet.microsoft.com  
+-   Technischer Artikel [Integration Services: Leistungsoptimierungstechniken](/previous-versions/sql/sql-server-2005/administrator/cc966529(v=technet.10))auf technet.microsoft.com  
   
 -   Technischer Artikel [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks (Erhöhen des Durchsatzes von Pipelines durch Aufteilen synchroner Transformationen in mehreren Tasks)](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf) in _SQLCATs Handbuch zu BI und Analytics_
   
--   Technischer Artikel [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](https://go.microsoft.com/fwlink/?LinkId=220816)auf msdn.microsoft.com  
+-   Technischer Artikel [The Data Loading Performance Guide (Leistungsleitfaden für das Laden von Daten)](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))auf msdn.microsoft.com  
   
--   Technischer Artikel mit [Empfehlungen zum schnellen Laden großer Datenmengen (1 TB in 30 Minuten)](https://go.microsoft.com/fwlink/?LinkId=220817)auf msdn.microsoft.com  
+-   Technischer Artikel mit [Empfehlungen zum schnellen Laden großer Datenmengen (1 TB in 30 Minuten)](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100))auf msdn.microsoft.com  
   
 -   Technischer Artikel mit den [Top 10-Empfehlungen für SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=220818)auf sqlcat.com  
   
@@ -195,18 +195,17 @@ ms.locfileid: "89480882"
   
 -   Videoserie zum [Entwerfen und Optimieren der Leistung von SSIS-Paketen im Unternehmen (SQL-Videoserie)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Video [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686901.aspx)(Optimieren des SSIS-Paketdatenflusses im Unternehmen) auf technet.microsoft.com  
+-   Video [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](/previous-versions/ff686901(v=msdn.10))(Optimieren des SSIS-Paketdatenflusses im Unternehmen) auf technet.microsoft.com  
   
--   Video [Understanding SSIS Data Flow Buffers (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686905.aspx)(Grundlegendes zu SSIS-Datenflusspuffern) auf technet.microsoft.com  
+-   Video [Understanding SSIS Data Flow Buffers (SQL Server Video)](/previous-versions/ff686905(v=msdn.10))(Grundlegendes zu SSIS-Datenflusspuffern) auf technet.microsoft.com  
   
 -   Video [Leistungsentwurfsmuster zu Microsoft SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)auf channel9.msdn.com  
   
 -   Präsentation zur [Nutzung der Verbesserungen am SQL Server 2008 SSIS-Datenfluss-Engine bei Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=217660)auf sqlcat.com  
   
--   Video [Ausgeglichener Datenverteiler](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)auf technet.microsoft.com  
+-   Video [Ausgeglichener Datenverteiler](/previous-versions/dn912438(v=msdn.10))auf technet.microsoft.com  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tools zur Problembehandlung für die Paketentwicklung](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Behandlung von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
-  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8e1e0b55183e2d1a2093d4726abdfd39f55f19ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d27181eac591f6c66166810e9662c04b6b97fc40
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425372"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196418"
 ---
 # <a name="using-variables-in-the-script-component"></a>Verwenden von Variablen in der Skriptkomponente
 
@@ -32,7 +32,7 @@ ms.locfileid: "88425372"
 > [!IMPORTANT]  
 >  Die Auflistung von **ReadWriteVariables** ist nur in der **PostExecute**-Methode verfügbar, um das Risiko von Sperrkonflikten zu vermindern und die Leistung zu maximieren. Sie können daher den Wert einer Paketvariablen nicht direkt inkrementieren, während Sie jede Datenzeile verarbeiten. Inkrementieren Sie stattdessen den Wert einer lokalen Variablen, und legen Sie den Wert der Paketvariablen auf den Wert der lokalen Variablen in der **PostExecute**-Methode fest, nachdem alle Daten verarbeitet wurden. Sie können auch die Eigenschaft <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> verwenden, um diese Einschränkung zu umgehen, wie später in diesem Thema beschrieben ist. Wenn Sie jedoch direkt in eine Paketvariable schreiben, während jede Zeile verarbeitet wird, wird die Leistung beeinträchtigt und das Risiko von Sperrkonflikten erhöht.  
   
- Weitere Informationen über die Seite **Skript** im **Transformations-Editor für Skripterstellung** finden Sie unter [Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) und [Transformations-Editor für Skripterstellung &#40;Script Page&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Weitere Informationen über die Seite **Skript** im **Transformations-Editor für Skripterstellung** finden Sie unter [Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) und [Transformations-Editor für Skripterstellung &#40;Script Page&#41;](../../data-flow/transformations/script-component.md).  
   
  Die Skriptkomponente erstellt eine **Variables**-Auflistungsklasse im **ComponentWrapper**-Projektelement mit einer Accessoreigenschaft mit starker Typbindung für den Wert jeder vorkonfigurierten Variable, wobei die Eigenschaft denselben Namen wie die Variable selbst hat. Diese Auflistung wird von der **Variables**-Eigenschaft der **ScriptMain**-Klasse verfügbar gemacht. Die Accessoreigenschaft bietet entsprechend Lese- oder Lese-/Schreibberechtigung für den Wert der Variable. Wenn Sie beispielsweise eine Ganzzahlvariable namens `MyIntegerVariable` der Liste **ReadOnlyVariables** hinzugefügt haben, können Sie ihren Wert mit dem folgenden Code in das Skript abrufen:  
   
@@ -42,6 +42,5 @@ ms.locfileid: "88425372"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Variablen &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-variables.md)   
- [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [Verwenden von Variablen in Paketen](../../integration-services-ssis-variables.md)  
   

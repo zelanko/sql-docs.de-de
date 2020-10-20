@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cf51661228dcb9b6dd5e42ff900b3770b540898
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27b28672540d25fe84573c37004161992d3d3827
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495779"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194196"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
 
@@ -129,7 +129,7 @@ ms.locfileid: "88495779"
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Benutzerdefinierte Eigenschaften der Rohdatendatei](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -226,5 +226,4 @@ ms.locfileid: "88495779"
 ## <a name="see-also"></a>Siehe auch  
  [Rohdatendatei-Quelle](../../integration-services/data-flow/raw-file-source.md)   
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
-  
   

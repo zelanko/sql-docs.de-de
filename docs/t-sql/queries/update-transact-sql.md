@@ -39,12 +39,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8bde11240927cc7f20581c1f9a9fd7655b38f19
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 56eaaeb3dfc90ee9de1f5ee769417eb75c232e4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115931"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035813"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +105,7 @@ UPDATE
 ```  
   
 ```syntaxsql 
--- Syntax for Azure Synapse Analysis (formerly SQL Data Warehouse) 
+-- Syntax for Azure Synapse Analysis
 
 [ WITH <common_table_expression> [ ,...n ] ]
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
@@ -785,7 +785,7 @@ GO
 ```  
   
 ###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> Aktualisieren von Zeilen in einer Remotetabelle  
- In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen in einer Remotezieltabelle mit einem [Verbindungsserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) oder einer [Rowsetfunktion](../../t-sql/functions/rowset-functions-transact-sql.md) aktualisiert werden, um auf die Remotetabelle zu verweisen.  
+ In den Beispielen in diesem Abschnitt wird veranschaulicht, wie Zeilen in einer Remotezieltabelle mit einem [Verbindungsserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) oder einer [Rowsetfunktion](../functions/opendatasource-transact-sql.md) aktualisiert werden, um auf die Remotetabelle zu verweisen.  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. Aktualisieren von Daten in einer Remotetabelle mithilfe eines Verbindungsservers  
  Im folgenden Beispiel wird eine Tabelle auf einem Remoteserver aktualisiert. In diesem Beispiel wird zunächst mithilfe von [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ein Link zur Remotedatenquelle erstellt. Der Name des Verbindungsservers (`MyLinkedServer`) wird anschließend als Teil des vierteiligen Objektnamens in der Form server.catalog.schema.object angegeben. Beachten Sie, dass Sie einen gültigen Servernamen für `@datasrc` angeben müssen.  
@@ -1190,9 +1190,8 @@ GO
  [Cursors &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Text- und Bildfunktionen &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Text- und Bildfunktionen &#40;Transact-SQL&#41;](../functions/text-and-image-functions-textptr-transact-sql.md)   
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
  [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md)    
- [Einzelbyte- und Mehrbyte-Zeichensätze](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  
- 
+ [Einzelbyte- und Mehrbyte-Zeichensätze](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  

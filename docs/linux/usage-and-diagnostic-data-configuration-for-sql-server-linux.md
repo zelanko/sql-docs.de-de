@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8d137a12cdb11fc0f5d5cd9065db9a758de57154
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 96c58159a020ba11708b12a4e5732438044b3291
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902340"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115729"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server für Linux
 
@@ -21,7 +21,7 @@ ms.locfileid: "85902340"
 
 Microsoft SQL Server erfasst standardmäßig Informationen darüber, wie Kunden die Anwendung verwenden. Dies bedeutet, dass SQL Server Informationen zur Installationserfahrung, Nutzung und Leistung sammelt. Mit diesen Informationen kann Microsoft besser an die Bedürfnisse der Kunden anpassen. Microsoft erfasst z.B. Informationen zu Fehlercodes von Kunden, sodass wir damit verknüpfte Probleme beheben, die Dokumentation zu SQL Server verbessern und bestimmen können, ob wir dem Produkt weitere Funktionen hinzufügen müssen, um die Benutzererfahrung zu optimieren.
 
-Dieses Dokument enthält ausführliche Informationen dazu, welche Arten von Informationen gesammelt werden, und wie Microsoft SQL Server für Linux konfiguriert wird, um diese gesammelten Informationen an Microsoft zu senden. SQL Server 2017 enthält eine Datenschutzerklärung, in der erläutert wird, welche Informationen von den Benutzern gesammelt werden. Weitere Informationen finden Sie in den [Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkID=868444).
+Dieses Dokument enthält ausführliche Informationen dazu, welche Arten von Informationen gesammelt werden, und wie Microsoft SQL Server für Linux konfiguriert wird, um diese gesammelten Informationen an Microsoft zu senden. SQL Server 2017 enthält eine Datenschutzerklärung, in der erläutert wird, welche Informationen von den Benutzern gesammelt werden. Weitere Informationen finden Sie in den [Datenschutzbestimmungen](../sql-server/sql-server-privacy.md).
 
 Microsoft sendet nicht die folgenden Informationen mit diesem Mechanismus:
 
@@ -56,7 +56,7 @@ Mit dieser Option können Sie ändern, ob SQL Server die Nutzungs- und Diagnosed
    ```
    
 ### <a name="on-docker"></a>Unter Docker
-Zum Deaktivieren der Nutzungs- und Diagnosedatensammlung in Docker muss Docker [Ihre Daten persistent speichern](sql-server-linux-configure-docker.md). 
+Zum Deaktivieren der Nutzungs- und Diagnosedatensammlung in Docker muss Docker [Ihre Daten persistent speichern](./sql-server-linux-docker-container-deployment.md). 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -143,7 +143,7 @@ Mit dieser Option wird die lokale Überwachung aktiviert. Zusätzlich können Si
    ```
    
 ### <a name="on-docker"></a>Unter Docker
-Um die lokale Überwachung für Docker zu aktivieren, muss Docker [Ihre Daten persistent speichern](sql-server-linux-configure-docker.md). 
+Um die lokale Überwachung für Docker zu aktivieren, muss Docker [Ihre Daten persistent speichern](./sql-server-linux-docker-container-deployment.md). 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

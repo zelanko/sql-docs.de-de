@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1056cfe7d80bdf97c97c344d3b9f3dfc4dc6fdcd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 754aff825e0da8fd888deafb927936599a4d8631
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494643"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196764"
 ---
 # <a name="manage-data-collection"></a>Verwalten von Datensammlungen
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "88494643"
   
 >**WICHTIG!** Im Gegensatz zu regulären gespeicherten Prozeduren verwenden die gespeicherten Prozeduren des Datensammlers genau eingegebene Parameter und unterstützen die automatische Datentypkonvertierung nicht. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
   
- Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um die bereitgestellten Codebeispiele zu erstellen und auszuführen. Weitere Informationen finden Sie unter [Objekt-Explorer](../../ssms/object/object-explorer.md). Alternativ können Sie die Abfrage in einem Editor erstellen und in einer Textdatei mit der Dateinamenerweiterung ".sql" speichern. Sie können die Abfrage mithilfe des Hilfsprogramms **sqlcmd** von der Windows-Eingabeaufforderung aus ausführen. Weitere Informationen finden Sie unter [Verwenden des Hilfsprogramms sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+ Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um die bereitgestellten Codebeispiele zu erstellen und auszuführen. Weitere Informationen finden Sie unter [Objekt-Explorer](../../ssms/object/object-explorer.md). Alternativ können Sie die Abfrage in einem Editor erstellen und in einer Textdatei mit der Dateinamenerweiterung ".sql" speichern. Sie können die Abfrage mithilfe des Hilfsprogramms **sqlcmd** von der Windows-Eingabeaufforderung aus ausführen. Weitere Informationen finden Sie unter [Verwenden des Hilfsprogramms sqlcmd](../../ssms/scripting/sqlcmd-use-the-utility.md).  
   
 ### <a name="stored-procedures-and-views"></a>Gespeicherte Prozeduren und Sichten  
  **Arbeiten mit dem Datensammler**  
@@ -174,7 +174,6 @@ ms.locfileid: "88494643"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Ausführen einer gespeicherten Prozedur](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [Verwenden von SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
+ [Verwenden von SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)  
-  
   

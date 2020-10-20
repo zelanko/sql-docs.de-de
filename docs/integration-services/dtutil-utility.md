@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae472556993fafc52719fcf929bf88c35098e196
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41d40f419497ccb2917052ac477c888a9338c135
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392156"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195262"
 ---
 # <a name="dtutil-utility"></a>dtutil Utility
 
@@ -268,7 +268,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  Bei dem in diesem Beispiel verwendeten Hash handelt es sich nicht um einen echten Hash.  
   
- Weitere Informationen finden Sie im Abschnitt „CertMgr“ unter [Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)(Signieren und Überprüfen von Code mit Authenticode).  
+ Weitere Informationen finden Sie im Abschnitt „CertMgr“ unter [Signing and Checking Code with Authenticode](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))(Signieren und Überprüfen von Code mit Authenticode).  
   
 ### <a name="encrypt-examples"></a>Beispiele für Verschlüsselungsvorgänge  
  Im folgenden Beispiel wird das dateibasierte Paket PackageToEncrypt.dtsx mithilfe der vollständigen Paketverschlüsselung mit einem Kennwort verschlüsselt. Das Ergebnis ist das dateibasierte Paket EncryptedPackage.dtsx. Das für die Verschlüsselung verwendete Kennwort lautet *EncPswd*.  
@@ -279,5 +279,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Ausführen von Integration Services-Paketen (SSIS)](../integration-services/packages/run-integration-services-ssis-packages.md)  
-  
   

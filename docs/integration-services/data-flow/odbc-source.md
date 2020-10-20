@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392116"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194769"
 ---
 # <a name="odbc-source"></a>ODBC-Quelle
 
@@ -51,7 +51,7 @@ ms.locfileid: "88392116"
   
 -   Die Spalten mit den Standardausgabedaten.  
   
- Je nach Einstellung des Fehlerverhaltens unterstützt die ODBC-Quelle das Zurückgeben von Fehlern (Datenkonvertierung, Abschneiden), die während des Extraktionsprozesses in der Fehlerausgabe auftreten. Weitere Informationen finden Sie unter [Ziel-Editor für ODBC &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
+ Je nach Einstellung des Fehlerverhaltens unterstützt die ODBC-Quelle das Zurückgeben von Fehlern (Datenkonvertierung, Abschneiden), die während des Extraktionsprozesses in der Fehlerausgabe auftreten. Weitere Informationen finden Sie unter [Ziel-Editor für ODBC &#40;Seite „Verbindungs-Manager“&#41;](./odbc-destination.md).  
   
 ## <a name="data-type-support"></a>Datentypunterstützung  
  Informationen zu den Datentypen, die von der ODBC-Quelle unterstützt werden, finden Sie unter „Connector für Open Database Connectivity (ODBC) von Attunity“.  
@@ -195,5 +195,4 @@ ms.locfileid: "88392116"
   
 #### <a name="redirect-flow"></a>Zeile umleiten  
  Die Zeile, die den Fehler oder die Kürzung verursacht, wird an die Fehlerausgabe der ODBC-Quelle umgeleitet.  
-  
   

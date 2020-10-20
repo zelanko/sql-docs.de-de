@@ -1,5 +1,6 @@
 ---
-title: Erstellen eines Blattelements (Master Data Services) | Microsoft-Dokumentation
+description: Erstellen eines Blattelements (Master Data Services)
+title: Erstellen eines Blattelements
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a7204fb8183ed84390bd3eaec38b16833dd8eb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1f5436cf2d553209a80ae5f9bb9f32b3df1c7d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257817"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Erstellen eines Blattelements (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]erstellen Sie ein Blattelement, wenn Sie dem System Masterdaten hinzufügen möchten. Wenn Sie Daten in einer Massenoperation hinzufügen möchten, verwenden Sie stattdessen Stagingtabellen. Weitere Informationen finden Sie unter [Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
+  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]erstellen Sie ein Blattelement, wenn Sie dem System Masterdaten hinzufügen möchten. Wenn Sie Daten in einer Massenoperation hinzufügen möchten, verwenden Sie stattdessen Stagingtabellen. Weitere Informationen finden Sie unter  [Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   
  Sie können zum Importieren von Daten auch [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] verwenden.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen.  
@@ -48,7 +49,7 @@ ms.locfileid: "67906742"
   
 4.  Zeigen Sie auf der Menüleiste auf **Entitäten** , und klicken Sie auf den Namen der Entität, der Sie ein Element hinzufügen möchten.  
   
-5.  Klicken Sie auf **Element hinzufügen**.  
+5.  Klicken Sie auf **Mitglied hinzufügen**.  
   
 6.  Vervollständigen Sie die Felder im Bereich **Details** .  
   
@@ -60,8 +61,8 @@ ms.locfileid: "67906742"
   
 8.  Klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines konsolidierten Elements &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen Sie ein konsolidiertes Element &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
  [Elemente &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
   

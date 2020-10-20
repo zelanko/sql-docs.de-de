@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: b4bcae3e857fd6dfa7a64acd828529bf9a599552
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3be7312cceacd7d6cef6c60fbe54515c7577c5f2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990029"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194098"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutorial: Bereitstellen und Ausführen eines SSIS-Pakets in Azure
 
@@ -26,9 +26,9 @@ In diesem Tutorial wird gezeigt, wie ein SSIS-Projekt für den SSIS-Katalog in e
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management Studio verfügen, bevor Sie beginnen. Die neueste Version von SSMS können Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) herunterladen.
+Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management Studio verfügen, bevor Sie beginnen. Die neueste Version von SSMS können Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) herunterladen.
 
-Vergewissern Sie sich auch, dass Sie die SSIS-Datenbank in Azure eingerichtet und die Azure SSIS Integration Runtime bereitgestellt haben. Informationen dazu, wie SSIS in Azure bereitgestellt wird, finden Sie unter [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Vergewissern Sie sich auch, dass Sie die SSIS-Datenbank in Azure eingerichtet und die Azure SSIS Integration Runtime bereitgestellt haben. Informationen dazu, wie SSIS in Azure bereitgestellt wird, finden Sie unter [Bereitstellen von SQL Server Integration Services-Paketen in Azure](/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>Abrufen der Verbindungsinformationen für Azure SQL-Datenbank
 
@@ -192,7 +192,7 @@ Um die Status der ausgeführten Integration Services-Vorgänge, wie Bereitstellu
 
 Sie können auch im Objekt-Explorer ein Paket auswählen, mit der rechten Maustaste darauf klicken, und dann auf **Berichte** > **Standardberichte** > **Alle Ausführungen** klicken.
 
-Weitere Informationen zum Überwachen von ausgeführten Paketen in SSMS finden Sie unter [Monitor Running Packages and Other Operations (Überwachen ausgeführter Pakete und anderer Vorgänge)](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
+Weitere Informationen zum Überwachen von ausgeführten Paketen in SSMS finden Sie unter [Monitor Running Packages and Other Operations (Überwachen ausgeführter Pakete und anderer Vorgänge)](../performance/monitor-running-packages-and-other-operations.md).
 
 ## <a name="monitor-the-execute-ssis-package-activity"></a>Überwachen der SSIS-Paketaktivität
 
@@ -204,7 +204,7 @@ Wenn Sie ein Paket als Teil einer Azure Data Factory-Pipeline mit der Aktivität
 
 Um die Statusinformationen über die Azure SSIS Integration Runtime-Komponente abzurufen, in der Pakete ausgeführt werden, verwenden Sie die folgenden PowerShell-Befehle. Stellen Sie für jeden Befehl die Namen der Data Factory, Azure SSIS IR sowie die Ressourcengruppe bereit.
 
-Weitere Informationen finden Sie unter [Monitor Azure-SSIS integration runtime (Überwachen der Azure SSIS Integration Runtime)](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
+Weitere Informationen finden Sie unter [Monitor Azure-SSIS integration runtime (Überwachen der Azure SSIS Integration Runtime)](/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Abrufen von Metadaten über Azure SSIS Integration Runtime
 

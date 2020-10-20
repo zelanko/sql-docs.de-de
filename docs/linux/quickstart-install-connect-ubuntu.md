@@ -9,12 +9,12 @@ ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: cce5af380f3706ef6fd6f22578c2b693aff1ad7c
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 95581e7cfd8fbddd80aff1f4086d7f44e5812159
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438112"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115960"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Schnellstart: Installieren von SQL Server und Erstellen einer Datenbank unter Ubuntu
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -47,17 +47,17 @@ In diesem Schnellstart installieren Sie SQL Server 2019 unter Ubuntu 18.04. Da
 
 Sie müssen über einen Computer mit Ubuntu 16.04 oder 18.04 mit **mindestens 2 GB** Arbeitsspeicher verfügen.
 
-Rufen Sie <http://releases.ubuntu.com/bionic/> auf, um Ubuntu 18.04 auf Ihrem eigenen Computer zu installieren. Sie können auch virtuelle Ubuntu-Computer in Azure erstellen. Weitere Informationen finden Sie unter [Erstellen und Verwalten virtueller Linux-Computer mit der Azure-Befehlszeilenschnittstelle](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Rufen Sie <http://releases.ubuntu.com/bionic/> auf, um Ubuntu 18.04 auf Ihrem eigenen Computer zu installieren. Sie können auch virtuelle Ubuntu-Computer in Azure erstellen. Weitere Informationen finden Sie unter [Erstellen und Verwalten virtueller Linux-Computer mit der Azure-Befehlszeilenschnittstelle](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> Zurzeit wird das [Windows-Subsystem für Linux](https://msdn.microsoft.com/commandline/wsl/about) für Windows 10 als Installationsziel nicht unterstützt.
+> Zurzeit wird das [Windows-Subsystem für Linux](/windows/wsl/about) für Windows 10 als Installationsziel nicht unterstützt.
 
 Weitere Systemanforderungen finden Sie unter [Systemanforderungen für SQL Server für Linux](sql-server-linux-setup.md#system).
 
 > [!NOTE]
 > Ubuntu 18.04 wird ab SQL Server 2017 CU20 unterstützt. Wenn Sie die Anweisungen in diesem Artikel mit Ubuntu 18.04 ausführen möchten, stellen Sie sicher, dass Sie den richtigen [Repositorypfad](sql-server-linux-change-repo.md) verwenden: `18.04` anstatt `16.04`.
 >
-> Wenn Sie SQL Server mit einer niedrigeren Version ausführen, ist die Konfiguration mit [Änderungen](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/) möglich.
+> Wenn Sie SQL Server mit einer niedrigeren Version ausführen, ist die Konfiguration mit [Änderungen](/archive/blogs/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts) möglich.
 
 ::: moniker-end
 
@@ -66,10 +66,10 @@ Weitere Systemanforderungen finden Sie unter [Systemanforderungen für SQL Serve
 
 Sie müssen über einen Computer mit Ubuntu 16.04 oder 18.04 mit **mindestens 2 GB** Arbeitsspeicher verfügen.
 
-Rufen Sie <http://releases.ubuntu.com/bionic/> auf, um Ubuntu 18.04 auf Ihrem eigenen Computer zu installieren. Sie können auch virtuelle Ubuntu-Computer in Azure erstellen. Weitere Informationen finden Sie unter [Erstellen und Verwalten virtueller Linux-Computer mit der Azure-Befehlszeilenschnittstelle](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Rufen Sie <http://releases.ubuntu.com/bionic/> auf, um Ubuntu 18.04 auf Ihrem eigenen Computer zu installieren. Sie können auch virtuelle Ubuntu-Computer in Azure erstellen. Weitere Informationen finden Sie unter [Erstellen und Verwalten virtueller Linux-Computer mit der Azure-Befehlszeilenschnittstelle](/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
-> Zurzeit wird das [Windows-Subsystem für Linux](https://msdn.microsoft.com/commandline/wsl/about) für Windows 10 als Installationsziel nicht unterstützt.
+> Zurzeit wird das [Windows-Subsystem für Linux](/windows/wsl/about) für Windows 10 als Installationsziel nicht unterstützt.
 
 Weitere Systemanforderungen finden Sie unter [Systemanforderungen für SQL Server für Linux](sql-server-linux-setup.md#system).
 

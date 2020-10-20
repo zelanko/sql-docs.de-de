@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cecf1f8803b0180ef6127cde203659be26f3c6c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ff964cda9e4e9687a61d50db7c7d53c6e9e24ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477902"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196004"
 ---
 # <a name="web-service-task"></a>Webdienst (Task)
 
@@ -52,7 +52,7 @@ ms.locfileid: "88477902"
   
  In der WSDL-Datei sind die Methoden des Webdienstes, die für die Methoden erforderlichen Eingabeparameter, die von den Methoden zurückgegebenen Antworten und die Kommunikationsmethode mit dem Webdienst aufgelistet.  
   
- Falls die Methode Eingabeparameter verwendet, erfordert der Task Webdienst Parameterwerte. Beispielsweise muss für eine Webdienstmethode, die anhand Ihrer Größe die zu kaufende Skilänge empfiehlt, Ihre Größe mithilfe eines Eingabeparameters übergeben werden. Die Parameterwerte können entweder über im Task definierte Zeichenfolgen oder über im Bereich des Tasks bzw. im übergeordneten Container definierte Variablen übergeben werden. Die Verwendung von Variablen bietet den Vorteil, dass die Parameterwerte über Paketkonfigurationen oder Skripts dynamisch aktualisiert werden können. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Paketkonfigurationen](../../integration-services/packages/package-configurations.md).  
+ Falls die Methode Eingabeparameter verwendet, erfordert der Task Webdienst Parameterwerte. Beispielsweise muss für eine Webdienstmethode, die anhand Ihrer Größe die zu kaufende Skilänge empfiehlt, Ihre Größe mithilfe eines Eingabeparameters übergeben werden. Die Parameterwerte können entweder über im Task definierte Zeichenfolgen oder über im Bereich des Tasks bzw. im übergeordneten Container definierte Variablen übergeben werden. Die Verwendung von Variablen bietet den Vorteil, dass die Parameterwerte über Paketkonfigurationen oder Skripts dynamisch aktualisiert werden können. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Paketkonfigurationen](../packages/legacy-package-deployment-ssis.md).  
   
  Viele Webdienstmethoden verwenden keine Eingabeparameter. Beispielsweise ist für eine Webdienstmethode, die die Namen der im aktuellen Monat geborenen Präsidenten abruft, kein Eingabeparameter notwendig, weil der Webdienst den aktuellen Monat lokal bestimmen kann.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88477902"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Programmgesteuerte Konfiguration des Task "Webdienst"  
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften zu erhalten:  
@@ -93,7 +93,7 @@ ms.locfileid: "88477902"
 > [!IMPORTANT]  
 >  Der HTTP-Verbindungs-Manager unterstützt nur die anonyme Authentifizierung und die Standardauthentifizierung. Er unterstützt keine Windows-Authentifizierung.  
   
- **Verwandte Themen:**  [HTTP-Verbindungs-Manager](../../integration-services/connection-manager/http-connection-manager.md), [HTTP-Verbindungs-Manager-Editor &#40;Seite „Server“&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **Verwandte Themen:**  [HTTP-Verbindungs-Manager](../../integration-services/connection-manager/http-connection-manager.md), [HTTP-Verbindungs-Manager-Editor &#40;Seite „Server“&#41;](../connection-manager/http-connection-manager.md)  
   
  **WSDLFile**  
  Geben Sie den vollqualifizierten Pfad der auf dem Computer lokalen WSDL-Datei an, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um nach dieser Datei zu suchen.  
@@ -176,13 +176,13 @@ ms.locfileid: "88477902"
  **File**  
  Wählen Sie einen Dateiverbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**New Connection...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../connection-manager/file-connection-manager.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variable**  
  Wählen Sie eine Variable aus der Liste aus, oder klicken Sie auf \<**New Variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:**  [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Verwandte Themen:**  [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](../integration-services-ssis-variables.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Video, [Vorgehensweise: Aufrufen eines Webdiensts mit dem Task „Webdienst“ (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=259642) auf technet.microsoft.com.  
+ Video, [Vorgehensweise: Aufrufen eines Webdiensts mit dem Task „Webdienst“ (SQL Server-Video)](/previous-versions/dn912438(v=msdn.10)) auf technet.microsoft.com.

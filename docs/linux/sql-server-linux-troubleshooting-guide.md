@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 144da58b008e79e368e3505b7aebb2cb8e4d7035
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088745"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115798"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Problembehandlung bei SQL Server unter Linux
 
@@ -42,11 +42,11 @@ Wenn Sie Probleme beim Herstellen einer Verbindung mit Ihrem SQL Server unter Li
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > Eine Ausnahme von dieser Methode stellen Azure-VMs dar. Die [öffentliche IP-Adresse für Azure-VMs finden Sie im Azure-Portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
+   > Eine Ausnahme von dieser Methode stellen Azure-VMs dar. Die [öffentliche IP-Adresse für Azure-VMs finden Sie im Azure-Portal](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - Überprüfen Sie ggf., ob Sie den SQL Server-Port (standardmäßig 1433) in der Firewall geöffnet haben.
 
-- Überprüfen Sie bei Verwendung von Azure-VMs, [ob für den SQL Server-Standardport eine Netzwerksicherheitsgruppen-Regel festgelegt ist](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
+- Überprüfen Sie bei Verwendung von Azure-VMs, [ob für den SQL Server-Standardport eine Netzwerksicherheitsgruppen-Regel festgelegt ist](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
 - Vergewissern Sie sich, dass der Benutzername und das Kennwort keine Tippfehler oder zusätzliche Leerzeichen enthalten oder falsch geschrieben wurden.
 
@@ -90,7 +90,7 @@ Sie können den SQL Server-Dienst nach Bedarf mit den folgenden Befehlen beenden
    ```
 
 > [!TIP]
-> Weitere Tipps zur Problembehandlung für Docker finden Sie unter [Troubleshooting SQL Server Docker containers (Problembehandlung bei SQL Server in Docker-Containern)](sql-server-linux-configure-docker.md#troubleshooting).
+> Weitere Tipps zur Problembehandlung für Docker finden Sie unter [Troubleshooting SQL Server Docker containers (Problembehandlung bei SQL Server in Docker-Containern)](./sql-server-linux-docker-container-troubleshooting.md).
 
 ## <a name="access-the-log-files"></a>Zugreifen auf die Protokolldateien
    
@@ -109,7 +109,7 @@ Wenn Sie möchten, können Sie die Dateien auch in UTF-8 konvertieren, um sie mi
    ```
 ## <a name="extended-events"></a>Erweiterte Ereignisse
 
-Erweiterte Ereignisse können über einen SQL-Befehl abgefragt werden.  Weitere Informationen zu erweiterten Ereignissen finden Sie [hier](https://technet.microsoft.com/library/bb630282.aspx):
+Erweiterte Ereignisse können über einen SQL-Befehl abgefragt werden.  Weitere Informationen zu erweiterten Ereignissen finden Sie [hier](../relational-databases/extended-events/extended-events.md):
 
 ## <a name="crash-dumps"></a>Absturzabbilder 
 
@@ -197,7 +197,7 @@ Es gibt zahlreiche Faktoren, wie z. B. Datenbankentwurf, Hardware und Workloada
 
 - [Abfragespeicher](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Dynamische Systemverwaltungssichten (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Leistungsdashboard in SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
+- [Leistungsdashboard in SQL Server Management Studio](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)
 
 ## <a name="common-issues"></a>Häufige Probleme
 

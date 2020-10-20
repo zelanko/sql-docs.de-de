@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d5fd2e96e9d0695f098eab02fb3d4ab86e5d256
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0e35acbb3bd331117170a41eb3665ddc2fb9f9ab
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902328"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115863"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Docker-Container in Linux
 
@@ -85,7 +85,7 @@ In diesem Tutorial erfahren Sie, wie Sie eine SQL Server-Sicherungsdatei in ein 
    Mit diesem Befehl wird ein Container von SQL Server 2017 erstellt, der standardmäßig die Developer Edition enthält. Der SQL Server-Port **1433** wird auf dem Host als Port **1401** bereitgestellt. Mit dem optionalen Parameter `-v sql1data:/var/opt/mssql` wird ein Datenvolumecontainer namens **sql1ddata** erstellt. Dieser wird verwendet, um die von SQL Server erstellten Daten permanent zu speichern.
 
    > [!IMPORTANT]
-   > In diesem Beispiel wird ein Datenvolumecontainer innerhalb von Docker verwendet. Wenn Sie stattdessen die Zuordnung eines Hostverzeichnisses gewählt haben, beachten Sie, dass es für diesen Ansatz Einschränkungen in Docker für Mac und Windows gibt. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server-Containerimages in Docker](sql-server-linux-configure-docker.md#persist).
+   > In diesem Beispiel wird ein Datenvolumecontainer innerhalb von Docker verwendet. Wenn Sie stattdessen die Zuordnung eines Hostverzeichnisses gewählt haben, beachten Sie, dass es für diesen Ansatz Einschränkungen in Docker für Mac und Windows gibt. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server-Containerimages in Docker](./sql-server-linux-docker-container-configure.md#persist).
 
 1. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
 
@@ -97,7 +97,7 @@ In diesem Tutorial erfahren Sie, wie Sie eine SQL Server-Sicherungsdatei in ein 
    docker ps -a
    ```
 
-1. Wenn in der Spalte **STATUS** **Up** (Aktiv) eingetragen ist, wird SQL Server im Container ausgeführt und überwacht den Port, der in der Spalte **PORTS** angegeben ist. Wenn in der Spalte **STATUS** Ihres SQL Server-Containers **Exited** (Beendet) steht, lesen Sie bitte im [Abschnitt „Problembehebung“ im Konfigurationshandbuch](sql-server-linux-configure-docker.md#troubleshooting) nach.
+1. Wenn in der Spalte **STATUS** **Up** (Aktiv) eingetragen ist, wird SQL Server im Container ausgeführt und überwacht den Port, der in der Spalte **PORTS** angegeben ist. Wenn in der Spalte **STATUS** Ihres SQL Server-Containers **Exited** (Beendet) steht, lesen Sie bitte im [Abschnitt „Problembehebung“ im Konfigurationshandbuch](./sql-server-linux-docker-container-troubleshooting.md) nach.
 
   ```bash
   $ sudo docker ps -a
@@ -153,7 +153,7 @@ In diesem Tutorial erfahren Sie, wie Sie eine SQL Server-Sicherungsdatei in ein 
    docker ps -a
    ```
 
-1. Wenn in der Spalte **STATUS** **Up** (Aktiv) eingetragen ist, wird SQL Server im Container ausgeführt und überwacht den Port, der in der Spalte **PORTS** angegeben ist. Wenn in der Spalte **STATUS** Ihres SQL Server-Containers **Exited** (Beendet) steht, lesen Sie bitte im [Abschnitt „Problembehebung“ im Konfigurationshandbuch](sql-server-linux-configure-docker.md#troubleshooting) nach.
+1. Wenn in der Spalte **STATUS** **Up** (Aktiv) eingetragen ist, wird SQL Server im Container ausgeführt und überwacht den Port, der in der Spalte **PORTS** angegeben ist. Wenn in der Spalte **STATUS** Ihres SQL Server-Containers **Exited** (Beendet) steht, lesen Sie bitte im [Abschnitt „Problembehebung“ im Konfigurationshandbuch](./sql-server-linux-docker-container-troubleshooting.md) nach.
 
    ```bash
    $ sudo docker ps -a
@@ -170,7 +170,7 @@ In diesem Tutorial erfahren Sie, wie Sie eine SQL Server-Sicherungsdatei in ein 
 
 ## <a name="copy-a-backup-file-into-the-container"></a>Kopieren einer Sicherungsdatei in den Container
 
-In diesem Tutorial wird die [Beispieldatenbank von Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) verwendet. Führen Sie die folgenden Schritte aus, um die Sicherungsdatei der Datenbank von Wide World Importers in Ihren SQL Server-Container herunterzuladen und zu kopieren:
+In diesem Tutorial wird die [Beispieldatenbank von Wide World Importers](../samples/wide-world-importers-what-is.md) verwendet. Führen Sie die folgenden Schritte aus, um die Sicherungsdatei der Datenbank von Wide World Importers in Ihren SQL Server-Container herunterzuladen und zu kopieren:
 
 1. Erstellen Sie zunächst mit dem Befehl **docker exec** einen Sicherungsordner. Mit dem folgenden Befehl wird im SQL Server-Container ein Verzeichnis vom Typ **/var/opt/mssql/backup** erstellt:
 
@@ -208,7 +208,7 @@ In diesem Tutorial wird die [Beispieldatenbank von Wide World Importers](../samp
 Die Sicherungsdatei befindet sich nun im Container. Bevor Sie die Sicherung wiederherstellen können, müssen Sie die logischen Dateinamen und Dateitypen in der Sicherung kennen. Mit den folgenden Transact-SQL-Befehlen überprüfen Sie die Sicherung und führen die Wiederherstellung aus, indem Sie den Befehl **sqlcmd** im Container verwenden.
 
 > [!TIP]
-> In diesem Tutorial wird der Befehl **sqlcmd** im Container verwendet, da er dieses vorinstallierte Tool bereits enthält. Sie können Transact-SQL-Anweisungen jedoch auch außerhalb des Containers mit anderen Clienttools wie [Visual Studio Code](sql-server-linux-develop-use-vscode.md) oder [SQL Server Management Studio](sql-server-linux-manage-ssms.md) ausführen. Verwenden Sie zum Herstellen einer Verbindung den Hostport, der Port 1433 im Container zugeordnet wurde. In diesem Beispiel ist dies **localhost, 1401** auf dem Hostcomputer und **Host_IP_Address,1401** für den Remotezugriff.
+> In diesem Tutorial wird der Befehl **sqlcmd** im Container verwendet, da er dieses vorinstallierte Tool bereits enthält. Sie können Transact-SQL-Anweisungen jedoch auch außerhalb des Containers mit anderen Clienttools wie [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) oder [SQL Server Management Studio](sql-server-linux-manage-ssms.md) ausführen. Verwenden Sie zum Herstellen einer Verbindung den Hostport, der Port 1433 im Container zugeordnet wurde. In diesem Beispiel ist dies **localhost, 1401** auf dem Hostcomputer und **Host_IP_Address,1401** für den Remotezugriff.
 
 1. Führen Sie im Container den Befehl **sqlcmd** aus, um die logischen Dateinamen und Pfade in der Sicherung aufzulisten. Dies geschieht über die Transact-SQL-Anweisung **RESTORE FILELISTONLY**.
 
@@ -545,4 +545,4 @@ In diesem Tutorial haben Sie gelernt, wie Sie eine Datenbank unter Windows siche
 Erfahren Sie nun mehr zu weiteren Szenarios für Docker-Konfigurationen und -Problembehandlung:
 
 > [!div class="nextstepaction"]
->[Configuration guide for SQL Server 2017 on Docker (Konfigurationsleitfaden für SQL Server 2017 in Docker)](sql-server-linux-configure-docker.md)
+>[Configuration guide for SQL Server 2017 on Docker (Konfigurationsleitfaden für SQL Server 2017 in Docker)](./sql-server-linux-docker-container-deployment.md)

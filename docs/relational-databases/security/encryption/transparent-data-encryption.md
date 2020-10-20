@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6cd4c4988b07e19c04d72efe2fc19200313f355
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: edb5d6b73305b9acc840c2f34461c3056a3b9cbd
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866638"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006478"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE (Transparent Data Encryption)
 
@@ -52,7 +52,7 @@ TDE schützt ruhende Daten, also die Daten- und Protokolldateien. Sie entspricht
 >**Verwandte Themen:**
 >
 > - [Transparent Data Encryption mit Azure SQL-Datenbank](/azure/azure-sql/database/transparent-data-encryption-tde-overview)
-> - [Erste Schritte mit transparenter Datenverschlüsselung (TDE) in SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
+> - [Erste Schritte mit Transparent Data Encryption (TDE) in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
 > - [Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)
 > - [Aktivieren von TDE in SQL Server mithilfe von EKM](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)
 > - [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)
@@ -325,7 +325,7 @@ Sie können TDE für eine Datenbank aktivieren, die über In-Memory OLTP-Objekte
 ## <a name="related-content"></a>Verwandte Inhalte
 
 [Transparent Data Encryption mit Azure SQL-Datenbank](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
-[Erste Schritte mit transparenter Datenverschlüsselung (TDE) in SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
+[Erste Schritte mit Transparent Data Encryption (TDE) in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
 [SQL Server-Verschlüsselung](../../../relational-databases/security/encryption/sql-server-encryption.md)  
 [Verschlüsselungsschlüssel für SQL Server und SQL-Datenbank (Datenbank-Engine)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 

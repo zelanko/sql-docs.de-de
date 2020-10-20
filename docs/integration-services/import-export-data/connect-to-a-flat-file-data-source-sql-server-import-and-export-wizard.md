@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbbd57a1f195b3e2363357e653ff77129bb9f224
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495643"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195187"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Flatfile-Datenquelle (SQL Server-Import/Export-Assistent)
 
@@ -261,7 +261,7 @@ Weitere Informationen finden Sie unter [Suggest Column Types Dialog Box UI Refer
  **Aktualisieren**  
  Zeigen Sie an, welche Auswirkung die Änderung der Anzahl der auszulassenden Zeilen hat, indem Sie auf **Aktualisieren**klicken. Diese Schaltfläche wird erst angezeigt, nachdem Sie andere Verbindungsoptionen geändert haben.  
  
-Weitere Informationen zur Seite **Vorschau** finden Sie auf der folgenden Referenzseite zu Integration Services: [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Vorschau“&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md).
+Weitere Informationen zur Seite **Vorschau** finden Sie auf der folgenden Referenzseite zu Integration Services: [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Vorschau“&#41;](../connection-manager/flat-file-connection-manager.md).
 
 ## <a name="connect-to-a-flat-file-destination"></a>Herstellen einer Verbindung mit einem Flatfileziel
 Für ein Flatfileziel gibt es wie im folgenden Screenshot dargestellt nur eine Seite mit Optionen. Suchen Sie nach der Datei, und wählen Sie sie aus. Überprüfen Sie dann die Einstellungen im Abschnitt **Format**.
@@ -303,4 +303,3 @@ Für ein Flatfileziel gibt es wie im folgenden Screenshot dargestellt nur eine S
 ## <a name="see-also"></a>Weitere Informationen
 [Auswählen einer Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Auswählen eines Ziels](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

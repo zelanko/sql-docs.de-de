@@ -29,12 +29,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 427310d9693e4845290b1cbb06dba13a3d3101d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6525a5ba3352a2d841cea556bcaffc40c1ce5472
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467620"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037101"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL-Syntaxkonventionen (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -118,10 +118,8 @@ Am oberen Rand jedes Artikels befindet sich ein Abschnitt, der angibt, welche Pr
 Der allgemeine Betreff des Artikels könnte auf ein Produkt zutreffen, aber in einigen Fällen werden nicht alle Argumente unterstützt. Beispielsweise wurden Benutzer für eigenständige Datenbank in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführt. Verwenden Sie die Anweisung **CREATE USER** in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Produkt, die Syntax **WITH PASSWORD** kann jedoch nicht mit älteren Versionen verwendet werden. Zusätzliche **Applies to**-Abschnitte werden in den entsprechenden Argumentbeschreibungen in den Text des Artikels eingefügt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)    
+[Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../language-reference.md)    
 [Reservierte Schlüsselwörter &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)      
-[Transact-SQL-Entwurfsprobleme](https://msdn.microsoft.com/library/dd193411.aspx)    
-[Transact-SQL-Benennungsprobleme](https://msdn.microsoft.com/library/dd193246.aspx)        
-[Transact-SQL-Leistungsprobleme](https://msdn.microsoft.com/library/dd172117.aspx)    
-
-
+[Transact-SQL-Entwurfsprobleme](/previous-versions/visualstudio/visual-studio-2010/dd193411(v=vs.100))    
+[Transact-SQL-Benennungsprobleme](/previous-versions/visualstudio/visual-studio-2010/dd193246(v=vs.100))        
+[Transact-SQL-Leistungsprobleme](/previous-versions/visualstudio/visual-studio-2010/dd172117(v=vs.100))

@@ -24,12 +24,12 @@ ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 498c2a81c0d7b94cd6288c24165f051bfc073fbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd89533ee030204cfb0b57a3c51d4a03bb790462
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459468"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92189229"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (Bitweises NOT) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88459468"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 ~ expression  
 ```  
   
@@ -71,7 +71,7 @@ ms.locfileid: "88459468"
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Tabelle mithilfe des **int**-Datentyps erstellt, um die Werte zu speichern, und die beiden Werte in eine Zeile eingefügt.  
   
-```  
+```sql  
 CREATE TABLE bitwise (  
   a_int_value INT NOT NULL,  
   b_int_value INT NOT NULL); 
@@ -82,7 +82,7 @@ GO
   
  Die folgende Abfrage führt das bitweise NOT für die Spalten `a_int_value` und `b_int_value` durch.  
   
-```  
+```sql  
 SELECT ~ a_int_value, ~ b_int_value  
 FROM bitwise;  
 ```  

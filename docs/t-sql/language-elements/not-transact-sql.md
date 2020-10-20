@@ -22,12 +22,12 @@ ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e70dbb22c231a6d4eeb2367ad2e5231c93f4d07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bdaf68bd8f119fa0c0cba7c8cd16a11d927d310c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479437"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92188098"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88479437"
 ## <a name="result-value"></a>Ergebniswert  
  NOT kehrt den Wert eines beliebigen booleschen Ausdrucks um.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Durch NOT wird ein Ausdruck negiert.  
   
  Die folgende Tabelle zeigt die Ergebnisse des Vergleichs von TRUE- und FALSE-Werten mithilfe des NOT-Operators.  
@@ -68,7 +68,7 @@ ms.locfileid: "88479437"
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden alle silberfarbenen Fahrräder gefunden, deren Standardpreis nicht über 400 € liegt.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID, Name, Color, StandardCost  
@@ -93,7 +93,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel werden nur die Ergebnisse angezeigt, bei denen `SalesOrderNumber`-Werte mit `SO6` beginnen und `ProductKeys`-Werte größer oder gleich 400 sind.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductKey, CustomerKey, OrderDateKey, ShipDateKey  

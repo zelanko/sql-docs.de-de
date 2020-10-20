@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: efa93b1d85e0aec5be7ea62ce76cb0270c68178f
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: f353230ecedbec6e30347a6999fabc706c9b09c8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784868"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081719"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Konfigurieren von SLES-Clustern für eine SQL Server-Verfügbarkeitsgruppe
 
@@ -320,7 +320,7 @@ Die Kollokationseinschränkung weist eine implizite Sortierungseinschränkung au
 Fügen Sie eine Sortierungseinschränkung hinzu, um zu vermeiden, dass die IP-Adresse vorübergehend auf den Knoten mit dem sekundären Replikat vor dem Failover verweist. Führen Sie den folgenden Befehl auf einem Knoten aus, um eine Sortierungseinschränkung hinzuzufügen: 
 
 ```bash
-crm crm configure \
+sudo crm configure \
    order ag_first inf: ms-ag_cluster:promote admin_addr:start
 ```
 

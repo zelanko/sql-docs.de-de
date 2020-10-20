@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6138e30bf4794fff847dd7a0750d59c8d8fb884a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8155db361eeffd3b84ba1aadf313ecef4652e9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394166"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196538"
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
 
@@ -69,7 +69,7 @@ ms.locfileid: "88394166"
 >  Gültige SQL-Anweisungen, die außerhalb des Tasks "SQL ausführen" erstellt wurden, werden vom Task "SQL ausführen" möglicherweise nicht erfolgreich analysiert.  
   
 > [!NOTE]  
->  Der Task "SQL ausführen" verwendet den **RecognizeAll** ParseMode-Enumerationswert. Weitere Informationen finden Sie unter [ManagedBatchParser-Namespace](https://go.microsoft.com/fwlink/?LinkId=223617).  
+>  Der Task "SQL ausführen" verwendet den **RecognizeAll** ParseMode-Enumerationswert. Weitere Informationen finden Sie unter [ManagedBatchParser-Namespace](/dotnet/api/managedbatchparser).  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>Senden mehrerer Anweisungen in einem Batch  
  Wenn Sie für den Task "SQL ausführen" mehrere Anweisungen einschließen, können Sie diese gruppieren und als Batch ausführen. Verwenden Sie den GO-Befehl, um das Ende eines Batches zu signalisieren. Alle SQL-Anweisungen zwischen zwei GO-Befehlen werden als Batch an den OLE DB-Anbieter zum Ausführen gesendet. Der SQL-Befehl kann mehrere durch GO-Befehle getrennte Batches einschließen.  
@@ -115,7 +115,7 @@ ms.locfileid: "88394166"
 ## <a name="general-page---execute-sql-task-editor"></a>Seite „Allgemein“ – Editor für den Task „SQL ausführen“
  Mithilfe der Seite **Allgemein** im Dialogfeld **Editor für den Task „SQL ausführen“** können Sie den Task „SQL ausführen“ konfigurieren und die SQL-Anweisung bereitstellen, die vom Task ausgeführt wird.  
 
-Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../../t-sql/language-reference.md).  
   
 ### <a name="static-options"></a>Statische Optionen  
  **Name**  
@@ -186,19 +186,19 @@ Weitere Informationen zur Transact-SQL-Abfragesprache finden Sie unter [Transact
  **SQLStatement**  
  Geben Sie die auszuführende SQL-Anweisung in das Optionsfeld ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen (…), um die SQL-Anweisung in das Dialogfeld **SQL-Abfrage eingeben** einzugeben. Sie können auch auf **Abfrage erstellen** klicken, um die Anweisung mithilfe des Dialogfelds **Abfrage-Generator** zusammenzustellen.  
   
- **Verwandte Themen:** [Abfrage-Generator](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **Verwandte Themen:** [Abfrage-Generator](../integration-services-ssis-queries.md)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = File connection  
  **FileConnection**  
  Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**New connection...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../connection-manager/file-connection-manager.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
  Wählen Sie eine vorhandene Variable aus der Liste aus, oder klicken Sie auf \<**New variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](../integration-services-ssis-variables.md)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Seite „Parameterzuordnung“ – Editor für den Task „SQL ausführen“
 Mithilfe der Seite **Parameterzuordnung** des Dialogfelds **Editor für den Task 'SQL ausführen'** können Sie Parametern in der SQL-Anweisung Variablen zuordnen.  
@@ -385,7 +385,7 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
 |Verbindungstyp|EXEC-Syntax|  
 |---------------------|-----------------|  
 |EXCEL und OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Weitere Informationen über die ODBC-Aufrufsyntax finden Sie im Thema [Prozedurparameter](https://go.microsoft.com/fwlink/?LinkId=89462)in der ODBC Programmer's Reference in der MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Weitere Informationen über die ODBC-Aufrufsyntax finden Sie im Thema [Prozedurparameter](../../odbc/reference/develop-app/procedure-parameters.md)in der ODBC Programmer's Reference in der MSDN Library.|  
 |ADO|Wenn IsQueryStoredProcedure auf **FALSE** festgelegt ist, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Wenn IsQueryStoredProcedure auf **TRUE** festgelegt ist, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Wenn IsQueryStoredProcedure auf **FALSE** festgelegt ist, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Wenn IsQueryStoredProcedure auf **TRUE** festgelegt ist, `uspGetBillOfMaterials`|  
   
@@ -448,7 +448,7 @@ In diesem Abschnitt wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung
     |ODBC|1, 2, 3, ...|  
     |EXCEL und OLE DB|0, 1, 2, 3, ...|  
   
-10. Wählen Sie in der Liste **Variablenname** eine Variable aus. Weitere Informationen finden Sie unter [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+10. Wählen Sie in der Liste **Variablenname** eine Variable aus. Weitere Informationen finden Sie unter [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](../integration-services-ssis-variables.md).  
   
 11. Geben Sie in der Liste **Richtung** an, ob der Parameter eine Eingabe, eine Ausgabe oder ein Rückgabewert ist.  
   
@@ -474,7 +474,7 @@ In diesem Abschnitt wird beschrieben, wie Sie eine parametrisierte SQL-Anweisung
 |Verbindungstyp|EXEC-Syntax|  
 |---------------------|-----------------|  
 |EXCEL und OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Weitere Informationen über die ODBC-Aufrufsyntax finden Sie im Thema [Prozedurparameter](https://go.microsoft.com/fwlink/?LinkId=89462)in der ODBC Programmer's Reference in der MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Weitere Informationen über die ODBC-Aufrufsyntax finden Sie im Thema [Prozedurparameter](../../odbc/reference/develop-app/procedure-parameters.md)in der ODBC Programmer's Reference in der MSDN Library.|  
 |ADO|Wenn IsQueryStoreProcedure auf **FALSE** festgelegt ist, `EXEC ? = myStoredProcedure 1`<br /><br /> Wenn IsQueryStoreProcedure auf **TRUE** festgelegt ist, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Legen Sie IsQueryStoreProcedure auf **TRUE**fest.<br /><br /> `myStoredProcedure`|  
   
@@ -557,7 +557,7 @@ In diesem Abschnitt wird das Erstellen einer Zuordnung zwischen einem Resultset 
   
 8.  Klicken Sie auf **Hinzufügen**, um eine Resultsetzuordnung hinzuzufügen.  
   
-9. Wählen Sie in der Liste **Variablenname** eine Variable aus, oder erstellen Sie eine neue Variable. Weitere Informationen finden Sie unter [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+9. Wählen Sie in der Liste **Variablenname** eine Variable aus, oder erstellen Sie eine neue Variable. Weitere Informationen finden Sie unter [Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket](../integration-services-ssis-variables.md).  
   
 10. Ändern Sie in der Liste **Ergebnisname** optional den Namen des Resultsets.  
   
@@ -579,5 +579,4 @@ In diesem Abschnitt wird das Erstellen einer Zuordnung zwischen einem Resultset 
   
 |Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
-|**ExecuteSQLExecutingQuery**|Enthält Informationen zu den Ausführungsphasen der SQL-Anweisung. Protokolleinträge werden geschrieben, wenn der Task eine Verbindung mit der Datenbank erhält, wenn der Task beginnt, die SQL-Anweisung vorzubereiten, und nachdem die Ausführung der SQL-Anweisung abgeschlossen wurde. Der Protokolleintrag für die Vorbereitungsphase schließt die vom Task verwendete SQL-Anweisung ein.|  
-
+|**ExecuteSQLExecutingQuery**|Enthält Informationen zu den Ausführungsphasen der SQL-Anweisung. Protokolleinträge werden geschrieben, wenn der Task eine Verbindung mit der Datenbank erhält, wenn der Task beginnt, die SQL-Anweisung vorzubereiten, und nachdem die Ausführung der SQL-Anweisung abgeschlossen wurde. Der Protokolleintrag für die Vorbereitungsphase schließt die vom Task verwendete SQL-Anweisung ein.|

@@ -1,6 +1,7 @@
 ---
-title: Master Data Services-Add-In für Microsoft Excel | Microsoft-Dokumentation
-ms.custom: microsoft-excel-add-in
+title: Übersicht
+description: Erfahren Sie, wie Sie Daten aus Master Data Services in Excel laden und mithilfe der Master Data Services-Add-in für Excel wieder in Master Data Services veröffentlichen.
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec72b2bd94d1ac7fbf68943be3081f39ed2d3e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec0059471e10db953db26cfdd4c7b620a3378316
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074587"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "92257794"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Master Data Services-Add-In für Microsoft Excel
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] können Sie gefilterte Listen der Daten von MDS in Excel laden, wo Sie damit genauso arbeiten können, wie Sie es mit beliebigen anderen Daten auch tun würden. Wenn Sie fertig sind, können Sie die Daten in MDS veröffentlichen, wo sie zentral gespeichert werden. Mit Sicherheit wird festgelegt, welche Daten Sie anzeigen und aktualisieren können.  
+  Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] können Sie gefilterte Listen der Daten von MDS in Excel laden, wo Sie damit genauso arbeiten können, wie Sie es mit beliebigen anderen Daten auch tun würden. Wenn Sie fertig sind, können Sie die Daten in MDS veröffentlichen, wo sie zentral gespeichert werden. Mit Sicherheit wird festgelegt, welche Daten Sie anzeigen und aktualisieren können.  
   
  Wenn Sie Administrator sind, verwenden Sie [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] , um Entitäten und Attribute zu erstellen und sie mit Daten zu laden. Dadurch ist es nicht mehr erforderlich, beliebige andere Tools zum Laden von Daten in die Modelle zu verwenden.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "68074587"
 ## <a name="downloads"></a>Downloads 
 >*  Sie können das Master Data Services Add-In für Excel und SQL Server 2016 SP2 von [dieser Microsoft Download Center-Seite](https://www.microsoft.com/download/details.aspx?id=56838) herunterladen. 
 >* Laden Sie das [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] für SQL Server 2017 auf [dieser Microsoft Download Center-Seite](https://go.microsoft.com/fwlink/?linkid=836867) herunter.
->*  Das Master Data Services-Add-in für Excel für SQL Server 2019 CTP von herunterladen [dieser Microsoft Download Center-Seite](https://go.microsoft.com/fwlink/?linkid=2086948). 
+>*  Laden Sie die Master Data Services-Add-in für Excel für SQL Server 2019 CTP von [dieser Microsoft Download Center-Seite](https://go.microsoft.com/fwlink/?linkid=2086948)herunter. 
  
   
 ## <a name="terms"></a>Begriffe  
@@ -46,18 +47,18 @@ ms.locfileid: "68074587"
   
 -   Ein *Element* ist eine Zeile mit Daten (ein Datensatz). Jede Entität enthält Elemente. Ein Beispiel für ein Element ist **Blau**. Weitere Informationen finden Sie unter [Elemente &#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md).  
   
--   Ein *attribute* ist eine Spalte mit Daten. Jedes Element verfügt über Attribute. Das Attrribut **Code** für das Element **Blau** ist z.B. **B**. Weitere Informationen zu Attributen finden Sie unter [Attribute &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md).  
+-   Ein *attribute* ist eine Spalte mit Daten. Jedes Element verfügt über Attribute. Beispielsweise ist das **Code** -Attribut für den **blauen** Member **B**. Weitere Informationen zu Attributen finden Sie unter [Attribute &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Erstellen Sie eine Verbindung zu einem [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Repository.|[Herstellen einer Verbindung mit einem MDS-Repository &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
-|Laden Sie von MDS verwaltete Daten in Excel.|[Exportieren von Daten nach Excel aus Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|Laden Sie von MDS verwaltete Daten in Excel.|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |Speichern Sie eine Shortcutabfrage, die Sie zum Öffnen der gerade angezeigten, von MDS verwalteten Daten verwenden können.|[Speichern einer Shortcutabfragedatei &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |Geben Sie Verknüpfungen für andere frei.|[Senden einer Shortcutabfragedatei &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |Zeigen Sie alle Änderungen an, die an einem Element vorgenommen wurden.|[Anzeigen aller Anmerkungen oder Transaktionen für ein Element &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
-|Ermitteln Sie vor dem Veröffentlichen von neuen Daten, ob doppelte Werte vorhanden sind.|[Abgleichen ähnlicher Daten &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)|  
+|Ermitteln Sie vor dem Veröffentlichen von neuen Daten, ob doppelte Werte vorhanden sind.|[Abgleichen ähnlicher Daten (MDS-Add-In für Excel)](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)|  
 |Veröffentlichen Sie Daten eines Arbeitsblatts im MDS-Repository.|[Importieren von Daten aus Excel in Master Data Services &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |Erstellen Sie im Arbeitsblatt eine neue Entität mit Daten. (Nur Administratoren)|[Erstellen einer Entität &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)|  
 |Erstellen Sie ein domänenbasiertes Attribut, das auch als eingeschränkte Liste bezeichnet wird. (Nur Administratoren)|[Erstellen eines domänenbasierten Attributs &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
@@ -67,13 +68,13 @@ ms.locfileid: "68074587"
   
 -   [Verbindungen &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [Übersicht: Exportieren von Daten nach Excel &#40;MDS-Add-in für Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [Overview: Exporting Data to Excel &#40;MDS Add-in for Excel&#41; (Übersicht: Exportieren von Daten nach Excel (MDS-Add-in für Excel))](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [Shortcutabfragedateien &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Aktualisieren von Daten &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [Übersicht: Importieren von Daten aus Excel &#40;MDS-Add-in für Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Übersicht: Importieren von Daten aus Excel &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [Überprüfen von Daten &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   

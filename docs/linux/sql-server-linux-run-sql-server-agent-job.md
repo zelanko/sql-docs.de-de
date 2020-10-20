@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 49d8dab49fef03b3bf06269ef4397656dfa888e3
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088820"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115831"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Erstellen und Ausführen eines SQL Server-Agent-Auftrags unter Linux
 
@@ -39,7 +39,7 @@ Zur Durchführung dieses Tutorials ist Folgendes erforderlich:
 Die folgenden Voraussetzungen sind optional:
 
 * Windows-Computer mit SSMS:
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) für optionale SSMS-Schritte.
+  * [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) für optionale SSMS-Schritte.
 
 ## <a name="enable-sql-server-agent"></a>Aktivieren des SQL Server-Agents.
 
@@ -81,7 +81,7 @@ Führen Sie die folgenden Schritte aus, um eine Beispieldatenbank mit dem Namen 
 Mit den folgenden Schritten erstellen Sie einen SQL Server-Agent-Auftrag unter Linux mit Transact-SQL-Befehlen. Der Auftrag führt eine tägliche Sicherung der Beispieldatenbank **SampleDB** aus.
 
 > [!TIP]
-> Sie können einen beliebigen T-SQL-Client verwenden, um diese Befehle auszuführen. Unter Linux können Sie z.B. [sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](sql-server-linux-develop-use-vscode.md) verwenden. Von einem Remote-Windows-Server aus können Sie auch Abfragen in SQL Server Management Studio (SSMS) ausführen oder die Benutzeroberflächen-Schnittstelle für die Auftragsverwaltung verwenden, die im nächsten Abschnitt beschrieben wird.
+> Sie können einen beliebigen T-SQL-Client verwenden, um diese Befehle auszuführen. Unter Linux können Sie z.B. [sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) verwenden. Von einem Remote-Windows-Server aus können Sie auch Abfragen in SQL Server Management Studio (SSMS) ausführen oder die Benutzeroberflächen-Schnittstelle für die Auftragsverwaltung verwenden, die im nächsten Abschnitt beschrieben wird.
 
 1. Führen Sie [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) aus, um einen Auftrag namens `Daily SampleDB Backup` zu erstellen.
 
@@ -200,4 +200,4 @@ In diesem Tutorial haben Sie Folgendes gelernt:
 Lernen Sie als nächstes weitere Möglichkeiten zum Erstellen und Verwalten von Aufträgen kennen:
 
 > [!div class="nextstepaction"]
->[SQL Server-Agent-Dokumentation](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
+>[SQL Server-Agent-Dokumentation](../ssms/agent/sql-server-agent.md)

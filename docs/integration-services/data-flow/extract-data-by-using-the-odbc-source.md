@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6684e36201e20ee84821f25694dd8326915aaf46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26df10981a17b2c5f94fbe47c6e765264c8944e1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430862"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194812"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extrahieren von Daten mithilfe der ODBC-Quelle
 
@@ -56,8 +56,7 @@ ms.locfileid: "88430862"
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Quellen-Editor für ODBC &#40;Seite Verbindungs-Manager&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [Quellen-Editor für ODBC &#40;Seite „Spalten“&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
- [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
+ [Quellen-Editor für ODBC &#40;Seite Verbindungs-Manager&#41;](./odbc-source.md)   
+ [Quellen-Editor für ODBC &#40;Seite „Spalten“&#41;](./odbc-source.md)   
+ [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](./odbc-source.md)  
   

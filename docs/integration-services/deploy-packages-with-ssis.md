@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430652"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194585"
 ---
 # <a name="deploy-packages-with-ssis"></a>Bereitstellen von Paketen mit SSIS
 
@@ -37,9 +37,9 @@ ms.locfileid: "88430652"
     
 Zuerst führen Sie Aufgaben aus, um die Bereitstellung vorzubereiten. Sie erstellen zunächst ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] und fügen diesem vorhandene Pakete und Datendateien hinzu. Sie erstellen keine neuen Pakete. Stattdessen arbeiten Sie nur mit fertigen Paketen, die speziell für dieses Lernprogramm erstellt wurden. Sie nehmen in diesem Lernprogramm keine Änderung der Funktionalität der Pakete vor. Nachdem Sie die Pakete dem Projekt hinzugefügt haben, sollten Sie sie jedoch im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer öffnen und ihren Inhalt überprüfen. Durch Untersuchen der Pakete erhalten Sie Informationen zu Paketabhängigkeiten wie Protokolldateien und weiteren interessanten Funktionen der Pakete.    
     
-Bei der Vorbereitung der Bereitstellung aktualisieren Sie die Pakete auch, um Konfigurationen zu verwenden. Durch die Konfigurationen können die Eigenschaften von Paketen und Paketobjekten zur Laufzeit aktualisiert werden. In diesem Lernprogramm verwenden Sie Konfigurationen, um die Verbindungszeichenfolgen der Protokoll- und Textdateien und die Speicherorte der XML- und XSD-Dateien, die vom Paket verwendet werden, zu aktualisieren. Weitere Informationen zu Konfigurationen finden Sie unter [Paketkonfigurationen](../integration-services/packages/package-configurations.md) und [Erstellen von Paketkonfigurationen](../integration-services/packages/create-package-configurations.md).    
+Bei der Vorbereitung der Bereitstellung aktualisieren Sie die Pakete auch, um Konfigurationen zu verwenden. Durch die Konfigurationen können die Eigenschaften von Paketen und Paketobjekten zur Laufzeit aktualisiert werden. In diesem Lernprogramm verwenden Sie Konfigurationen, um die Verbindungszeichenfolgen der Protokoll- und Textdateien und die Speicherorte der XML- und XSD-Dateien, die vom Paket verwendet werden, zu aktualisieren. Weitere Informationen zu Konfigurationen finden Sie unter [Paketkonfigurationen](./packages/legacy-package-deployment-ssis.md) und [Erstellen von Paketkonfigurationen](./packages/legacy-package-deployment-ssis.md).    
     
-Nachdem Sie überprüft haben, ob die Pakete erfolgreich in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ausgeführt werden, erstellen Sie die Bereitstellungsgruppe, um die Pakete zu installieren. Die Bereitstellungsgruppe besteht aus den Paketdateien und weiteren Elementen, die Sie dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt hinzugefügt haben, den Paketabhängigkeiten, die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] automatisch enthält, und dem von Ihnen erstellten Bereitstellungshilfsprogramm. Weitere Informationen finden Sie unter [Create a Deployment Utility](../integration-services/packages/create-a-deployment-utility.md).    
+Nachdem Sie überprüft haben, ob die Pakete erfolgreich in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ausgeführt werden, erstellen Sie die Bereitstellungsgruppe, um die Pakete zu installieren. Die Bereitstellungsgruppe besteht aus den Paketdateien und weiteren Elementen, die Sie dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt hinzugefügt haben, den Paketabhängigkeiten, die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] automatisch enthält, und dem von Ihnen erstellten Bereitstellungshilfsprogramm. Weitere Informationen finden Sie unter [Create a Deployment Utility](./packages/legacy-package-deployment-ssis.md).    
     
 Sie kopieren dann die Bereitstellungsgruppe zum Zielrechner und führen den Paketinstallations-Assistenten aus, um die Pakete und Paketabhängigkeiten zu installieren. Die Pakete werden in der SQL Server-Datenbank msdb installiert, und die Unterstützungs- und Hilfsdateien werden im Dateisystem installiert. Da die bereitgestellten Pakete Konfigurationen verwenden, aktualisieren Sie die Konfiguration zur Verwendung neuer Werte, damit die Pakete erfolgreich in der neuen Umgebung ausgeführt werden können.    
     
@@ -98,5 +98,3 @@ In dieser Lektion erstellen Sie ein Bereitstellungshilfsprogramm und überprüfe
     
 [Lektion 3: Installieren von SSIS-Paketen](../integration-services/lesson-3-install-ssis-packages.md)    
 In dieser Lektion kopieren Sie das Bereitstellungspaket auf den Zielcomputer, installieren die Pakete und führen diese dann aus.    
-    
-

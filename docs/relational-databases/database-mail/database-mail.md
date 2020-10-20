@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 36dbf63620fa42d923605e83505b3f13212528ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1097198ea9d1545068494bb198b24c8aa5d2cc6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476310"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194412"
 ---
 # <a name="database-mail"></a>Datenbank-E-Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Die Datenbank-E-Mail ist eine Unternehmenslösung zum Senden von E-Mails von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Mit Datenbank-E-Mail können Datenbankanwendungen E-Mail-Nachrichten an Benutzer senden. Diese Nachrichten können neben Abfrageergebnissen auch Dateien von anderen Ressourcen im Netzwerk enthalten.  
+  Die Datenbank-E-Mail ist eine Unternehmenslösung zum Senden von E-Mails von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index). Mit Datenbank-E-Mail können Datenbankanwendungen E-Mail-Nachrichten an Benutzer senden. Diese Nachrichten können neben Abfrageergebnissen auch Dateien von anderen Ressourcen im Netzwerk enthalten.  
   
 > [!NOTE] 
-> Die Datenbank-E-Mail ist in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und in der [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) verfügbar, aber nicht in Azure SQL-Datenbank Singleton und Pools für elastische Datenbanken. 
+> Die Datenbank-E-Mail ist in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und in der [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index) verfügbar, aber nicht in Azure SQL-Datenbank Singleton und Pools für elastische Datenbanken. 
 
 ##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> Vorteile der Verwendung von Datenbank-E-Mail  
  Datenbank-E-Mail zeichnet sich durch Zuverlässigkeit, Skalierbarkeit, Sicherheit sowie Unterstützbarkeit aus.  
@@ -127,6 +127,5 @@ ms.locfileid: "88476310"
 -   [Datenbank-E-Mail-Protokoll und -Überwachung](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
 -   [Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
-  
   
   

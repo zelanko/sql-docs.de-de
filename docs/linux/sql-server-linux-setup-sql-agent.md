@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 6554acf46da19a9833cf649bce34a455cbc92e5b
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 9492b8fcdbcd4ddf930d9f5d1d5ee43415fb2a1c
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088799"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115773"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Installieren des SQL Server-Agent unter Linux
 
@@ -21,7 +21,7 @@ ms.locfileid: "88088799"
 
 In diesem Artikel wird beschrieben, wie der SQL Server-Agent unter Linux aktiviert oder installiert wird.
 
-Der [SQL Server-Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) führt geplante SQL Server-Aufträge aus. Ab SQL Server 2017 CU4 ist der SQL Server-Agent im **mssql-server**-Paket enthalten und standardmäßig deaktiviert. Informationen zu den Funktionen, die in dieser Version des SQL Server-Agent unterstützt werden, sowie Versionsinformationen finden Sie in den [Versionshinweisen](sql-server-linux-release-notes.md).
+Der [SQL Server-Agent](../ssms/agent/sql-server-agent.md) führt geplante SQL Server-Aufträge aus. Ab SQL Server 2017 CU4 ist der SQL Server-Agent im **mssql-server**-Paket enthalten und standardmäßig deaktiviert. Informationen zu den Funktionen, die in dieser Version des SQL Server-Agent unterstützt werden, sowie Versionsinformationen finden Sie in den [Versionshinweisen](sql-server-linux-release-notes.md).
 
 ## <a name="instructions"></a>Instructions
 

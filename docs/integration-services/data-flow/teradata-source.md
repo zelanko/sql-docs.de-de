@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b4e64c2d7ada0db923f1aa623576e7b2994d8e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484481"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194702"
 ---
 # <a name="connect-to-the-teradata-source"></a>Stellen Sie eine Verbindung mit der Teradata-Quelle her.
 
@@ -31,7 +31,7 @@ Die Quelle verwendet den Teradata-Verbindungs-Manager, um eine Verbindung mit de
 
 Sie können die Aufrufe der Teradata-Quelle an die TPT-API (Teradata Parallel Transporter) protokollieren. Aktivieren Sie hierzu die Paketprotokollierung, und wählen Sie dann auf Paketebene das Ereignis **Diagnose** aus.
 
-Sie können die ODBC-Aufrufe (Open Database Connectivity) der Teradata-Quelle an den Teradata-ODBC-Treiber protokollieren, indem Sie die Ablaufverfolgung für den ODBC-Treiber-Manager aktivieren. Weitere Informationen finden Sie unter [Generieren einer ODBC-Ablaufverfolgung mit dem ODBC-Datenquellen-Administrator](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options).
+Sie können die ODBC-Aufrufe (Open Database Connectivity) der Teradata-Quelle an den Teradata-ODBC-Treiber protokollieren, indem Sie die Ablaufverfolgung für den ODBC-Treiber-Manager aktivieren. Weitere Informationen finden Sie unter [Generieren einer ODBC-Ablaufverfolgung mit dem ODBC-Datenquellen-Administrator](../../odbc/admin/setting-tracing-options.md).
 
 ## <a name="parallelism"></a>Parallelität
 

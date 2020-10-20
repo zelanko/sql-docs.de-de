@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f72f8f6aff6b5861a9bf4ba91ff77ef6e80719b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbb4b442c50e8a40c0c0db20dd45073339ea48b8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349346"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195399"
 ---
 # <a name="define-a-state-variable"></a>Definieren einer Statusvariablen
 
@@ -85,12 +85,11 @@ ms.locfileid: "88349346"
   
  Weisen Sie der Variablen als Teil ihrer Definition keinen Wert zu. Der Wert muss vom CDC-Steuerungstask festgelegt werden.  
   
- Wenn Sie den CDC-Steuerungstask mit der Option **Automatic State Persistence**verwenden möchten, wird die CDC-Statusvariable aus der von Ihnen angegebenen Datenbankstatustabelle gelesen. Wenn sich der Wert ändert, wird die Aktualisierung dann ebenfalls für diese Tabelle durchgeführt. Weitere Informationen zur Statustabelle finden Sie unter [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)und [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
+ Wenn Sie den CDC-Steuerungstask mit der Option **Automatic State Persistence**verwenden möchten, wird die CDC-Statusvariable aus der von Ihnen angegebenen Datenbankstatustabelle gelesen. Wenn sich der Wert ändert, wird die Aktualisierung dann ebenfalls für diese Tabelle durchgeführt. Weitere Informationen zur Statustabelle finden Sie unter [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)und [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
  Wenn Sie den CDC-Steuerungstask nicht mit der Option Automatic State Persistence verwenden, müssen Sie den Variablenwert aus dem persistentem Speicher laden, in dem der Wert bei der letzten Ausführung des Pakets gespeichert wurde. In diesen persistenten Speicher wird der Wert auch zurückgeschrieben, nachdem die Verarbeitung des aktuellen Verarbeitungsbereichs abgeschlossen wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
-  
+ [CDC Control Task Editor](../control-flow/cdc-control-task.md)  
   

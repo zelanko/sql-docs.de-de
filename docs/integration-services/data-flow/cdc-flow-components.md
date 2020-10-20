@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb7897aa3f14a043eef6f983daafe8121a07c8bf
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480892"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196484"
 ---
 # <a name="cdc-flow-components"></a>CDC-Flusskomponenten
 
@@ -86,7 +86,7 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
   
  Diese [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ablaufsteuerung enthält zwei CDC-Steuerungstasks und den Datenflusstask. Der erste Task mit dem Namen **Get CDC Processing Range** legt den LSN-Bereich für die Änderungen fest, die im Datenflusstask mit dem Namen **Process Changes**verarbeitet werden. Dieser Bereich wird auf Grundlage dessen festgelegt, was während der letzten Paketausführung verarbeitet und in einem permanenten Speicher gespeichert wurde.  
   
- Weitere Informationen zur Verwendung der CDC-Steuerungstasks finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md) und [CDC-Steuerungstask-Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
+ Weitere Informationen zur Verwendung der CDC-Steuerungstasks finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md) und [CDC-Steuerungstask-Editor](../control-flow/cdc-control-task.md).  
   
  Die folgende Abbildung zeigt den Datenfluss für die **Änderungsverarbeitung** und veranschaulicht, wie Änderungen verarbeitet werden.  
   
@@ -104,11 +104,11 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
   
  [CDC-Quelle](../../integration-services/data-flow/cdc-source.md)  
   
- [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](./cdc-source.md)  
   
- [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](./cdc-source.md)  
   
- [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](./cdc-source.md)  
   
  Weitere Informationen zum CDC-Splitter finden Sie unter:  
   
@@ -217,9 +217,8 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
   
 -   Technischer Artikel [Behandeln von Fehlern bei CDC-Instanzen in Microsoft Change Data Capture für Oracle von Attunity](https://go.microsoft.com/fwlink/?LinkId=252961)auf social.technet.microsoft.com.  
   
--   Video [CDC für Oracle-Datenbanken mit SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898)auf technet.microsoft.com.  
+-   Video [CDC für Oracle-Datenbanken mit SQL Server Integration Services 2012 (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))auf technet.microsoft.com.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
-  
   

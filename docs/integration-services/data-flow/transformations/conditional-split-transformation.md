@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f70d8f963a6f26131099e6cd7d09d5019f9c6bc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477767"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194663"
 ---
 # <a name="conditional-split-transformation"></a>Transformation für bedingtes Teilen
 
@@ -60,7 +60,7 @@ ms.locfileid: "88477767"
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -97,10 +97,9 @@ ms.locfileid: "88477767"
  Geben Sie einen Namen für die Standardausgabe ein, oder verwenden Sie den Standardnamen.  
   
  **Fehlerausgabe konfigurieren**  
- Geben Sie mithilfe des Dialogfelds [Fehlerausgabe konfigurieren](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) an, wie Fehler behandelt werden sollen.  
+ Geben Sie mithilfe des Dialogfelds [Fehlerausgabe konfigurieren](../error-handling-in-data.md) an, wie Fehler behandelt werden sollen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

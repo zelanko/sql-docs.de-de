@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 4539ce49614004d9187d8f503fe165eb14bee2b0
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 89f048ea2caf80412d3b8d607582016d8a88f8b7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088880"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115633"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Verwenden von PowerShell unter Windows zum Verwalten von SQL Server für Linux
 
@@ -92,7 +92,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## <a name="using-the-sql-server-powershell-provider"></a>Verwenden des SQL Server PowerShell-Anbieters
 
-Die Verwendung des [SQL Server PowerShell-Anbieters](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider) ist eine weitere Option zum Herstellen einer Verbindung mit Ihrer SQL Server-Instanz.  Dieser Anbieter ermöglicht Ihnen die Navigation Ihrer SQL Server-Instanz über die Befehlszeile, als würden Sie in der Struktur im Objekt-Explorer navigieren.  Dieser Anbieter wird standardmäßig als PSDrive (PowerShell-Laufwerk) namens `SQLSERVER:\` dargestellt, das Sie verwenden können, um Verbindungen mit SQL Server-Instanzen herzustellen, auf die Ihr Domänenkonto zugreifen kann, und in diesen zu navigieren.  Informationen zum Einrichten der Active Directory-Authentifizierung für SQL Server für Linux finden Sie in den [Konfigurationsschritten](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps).
+Die Verwendung des [SQL Server PowerShell-Anbieters](../powershell/sql-server-powershell-provider.md) ist eine weitere Option zum Herstellen einer Verbindung mit Ihrer SQL Server-Instanz.  Dieser Anbieter ermöglicht Ihnen die Navigation Ihrer SQL Server-Instanz über die Befehlszeile, als würden Sie in der Struktur im Objekt-Explorer navigieren.  Dieser Anbieter wird standardmäßig als PSDrive (PowerShell-Laufwerk) namens `SQLSERVER:\` dargestellt, das Sie verwenden können, um Verbindungen mit SQL Server-Instanzen herzustellen, auf die Ihr Domänenkonto zugreifen kann, und in diesen zu navigieren.  Informationen zum Einrichten der Active Directory-Authentifizierung für SQL Server für Linux finden Sie in den [Konfigurationsschritten](./sql-server-linux-active-directory-auth-overview.md#configuration-steps).
 
 Für den SQL Server PowerShell-Anbieter können Sie auch die SQL-Authentifizierung verwenden. Verwenden Sie hierzu das Cmdlet `New-PSDrive`, um einen neuen PSDrive zu erstellen und die entsprechenden Anmeldeinformationen zum Herstellen einer Verbindung bereitzustellen.
 
@@ -128,7 +128,7 @@ AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
 AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
-Wenn Sie alle Datenbanken in Ihrer Instanz anzeigen müssen, bietet sich beispielsweise das Cmdlet [Get-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlDatabase) an.
+Wenn Sie alle Datenbanken in Ihrer Instanz anzeigen müssen, bietet sich beispielsweise das Cmdlet [Get-SqlDatabase](/powershell/module/sqlserver/Get-SqlDatabase) an.
 
 ## <a name="examine-sql-server-error-logs"></a>Untersuchen von SQL Server-Fehlerprotokollen
 
@@ -152,5 +152,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>Weitere Informationen
-- [SQL Server-PowerShell](../relational-databases/scripting/sql-server-powershell.md)
-- [SqlServer-Cmdlets](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQL Server-PowerShell](../powershell/sql-server-powershell.md)
+- [SqlServer-Cmdlets](/powershell/module/sqlserver)

@@ -12,12 +12,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4814fe709fb28141d00fd5302feab845d39d5331
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: f58faca8cb3e83057cef9c2e214ffcccabf9dd9f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458520"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196194"
 ---
 # <a name="database-engine-tutorials"></a>Lernprogramme zur Datenbank-Engine
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ Dieser Abschnitt enthält Lernprogramme für [!INCLUDE[ssDECurrent](../includes/
 [Tutorial: Erste Schritte mit der Datenbank-Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 In diesem Lernprogramm erfahren Sie, wie Sie eine Verbindung mit einer [!INCLUDE[ssDE](../includes/ssde-md.md)]instanz herstellen.  
   
-[Tutorial: SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+[Tutorial: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
 Dieses Tutorial bietet eine Einführung in die integrierte Umgebung zum Verwalten der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Infrastruktur. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verfügt über eine grafische Oberfläche zum Konfigurieren, Überwachen und Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzen. Darüber hinaus vermittelt Ihnen das Lernprogramm, wie Sie die von Ihren Anwendungen, z. B. Datenbanken und Data Warehouses, verwendeten Datenebenenkomponenten bereitstellen, überwachen und aktualisieren. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] stellt auch Editoren für die [!INCLUDE[tsql](../includes/tsql-md.md)]-, MDX-, DMX- und XML-Sprache bereit, um Skripts zu bearbeiten und zu debuggen.  
   
 [Tutorial: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)  
@@ -58,5 +58,3 @@ Dieses Tutorial hilft Ihnen, zu verstehen, wie Sie SQL Server-Datendateien direk
 [TechNet Wiki: SQL Server 2012-Beispiele](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   
-  
-
