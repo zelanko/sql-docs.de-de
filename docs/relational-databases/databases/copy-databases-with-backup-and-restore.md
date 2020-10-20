@@ -19,19 +19,20 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 828963dabc79c53c831efd3c2acac797d109555d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f8148fa7d0a648bd7ad34ee766ff2a4488dceb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763553"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115731"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Kopieren von Datenbanken durch Sichern und Wiederherstellen
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie eine neue Datenbank erstellen, indem Sie die Sicherung einer Benutzerdatenbank wiederherstellen, die mithilfe von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder einer höheren Version erstellt wurde. Sicherungen der **master**-, **model** - und **msdb** -Datenbank, die mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurden, können von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht wiederhergestellt werden. Außerdem können [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Sicherungen nicht mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wiederhergestellt werden.  
   
->**WICHTIG!** SQL Server 2016 verwendet im Vergleich zu früheren Versionen einen anderen Standardpfad. Daher muss zur Wiederherstellung von Sicherungen einer Datenbank, die im Standardverzeichnis früherer Versionen erstellt wurden, die MOVE-Option verwendet werden. Informationen zum neuen Standardpfad finden Sie unter [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Weitere Informationen zum Verschieben von Datenbankdateien finden Sie weiter unten in diesem Thema unter "Verschieben der Datenbankdateien".  
+> [!IMPORTANT]
+> SQL Server 2016 verwendet im Vergleich zu früheren Versionen einen anderen Standardpfad. Daher muss zur Wiederherstellung von Sicherungen einer Datenbank, die im Standardverzeichnis früherer Versionen erstellt wurden, die MOVE-Option verwendet werden. Informationen zum neuen Standardpfad finden Sie unter [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Weitere Informationen zum Verschieben von Datenbankdateien finden Sie weiter unten in diesem Thema unter "Verschieben der Datenbankdateien".  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Allgemeine Schritte zum Verwenden der Sicherung und Wiederherstellung zum Kopieren einer Datenbank  
  Wenn Sie durch Sichern und Wiederherstellen eine Datenbank in eine andere Instanz von SQL Server kopieren, kann es sich beim Quell- und Zielcomputer um eine beliebige Plattform handeln, auf der SQL Server ausgeführt wird.  

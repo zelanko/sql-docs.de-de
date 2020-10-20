@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1dfeeecf62ad33ab5d2d66e0fdf454f89036d047
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449769"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193826"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
 
@@ -50,7 +50,7 @@ ms.locfileid: "88449769"
 ## <a name="system-and-user-defined-variables"></a>Systemvariablen und benutzerdefinierte Variablen  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt zwei Arten von Variablen: Benutzerdefinierte Variablen und Systemvariablen. Benutzerdefinierte Variablen werden von Paketentwicklern definiert, und Systemvariablen werden von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]definiert. Sie können so viele benutzerdefinierte Variablen erstellen, wie für das Paket erforderlich sind. Zusätzliche Systemvariablen können jedoch nicht erstellt werden.  
   
- Alle Variablen, seien es Systemvariablen oder benutzerdefinierte Variablen, können in den Parameterbindungen verwendet werden, die der Task „SQL ausführen“ zum Zuordnen von Variablen zu Parametern in SQL-Anweisungen verwendet. Weitere Informationen finden Sie unter [SQL ausführen (Task)](../integration-services/control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ Alle Variablen, seien es Systemvariablen oder benutzerdefinierte Variablen, können in den Parameterbindungen verwendet werden, die der Task „SQL ausführen“ zum Zuordnen von Variablen zu Parametern in SQL-Anweisungen verwendet. Weitere Informationen finden Sie unter [SQL ausführen (Task)](../integration-services/control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](./control-flow/execute-sql-task.md).  
   
 > [!NOTE]  
 >  Bei den Namen von benutzerdefinierten und Systemvariablen wird nach Groß-/Kleinschreibung unterschieden.  
@@ -79,7 +79,7 @@ ms.locfileid: "88449769"
   
  Ein anderer Systemvariablensatz ist für andere Containertypen verfügbar. Weitere Informationen zu den Systemvariablen, die von Paketen und deren Elementen verwendet werden, finden Sie unter [Systemvariablen](../integration-services/system-variables.md).  
   
- Weitere Informationen zu Szenarien für die Verwendung von Variablen in der Praxis finden Sie unter [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Weitere Informationen zu Szenarien für die Verwendung von Variablen in der Praxis finden Sie unter [Verwenden von Variablen in Paketen]().  
   
 ## <a name="properties-of-variables"></a>Eigenschaften von Variablen  
  Sie können benutzerdefinierte Variablen konfigurieren, indem Sie die folgenden Eigenschaften im Fenster **Variablen** oder im Fenster **Eigenschaften** festlegen. Bestimmte Eigenschaften sind nur im Eigenschaftenfenster verfügbar.  
@@ -114,7 +114,7 @@ ms.locfileid: "88449769"
   
  Eine Variable wird im Bereich eines Pakets oder im Bereich eines Containers, Tasks oder Ereignishandlers im Paket erstellt. Der Paketcontainer befindet sich ganz oben in der Containerhierarchie. Deshalb verhalten sich Variablen mit Paketbereichsfunktion wie globale Variablen und können von allen Containern im Paket verwendet werden. Entsprechend können Variablen, die im Bereich eines Containers definiert sind, wie z. B. eines For-Schleifencontainers, von allen Tasks oder Containern innerhalb des For-Schleifencontainers verwendet werden.  
   
- Falls ein Paket mithilfe des Tasks Paket ausführen andere Pakete ausführt, können die Variablen, die im Bereich des aufrufenden Pakets oder des Tasks Paket ausführen definiert sind, dem aufgerufenen Paket mithilfe des Konfigurationstyps Variable für das übergeordnete Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Package Configurations](../integration-services/packages/package-configurations.md).  
+ Falls ein Paket mithilfe des Tasks Paket ausführen andere Pakete ausführt, können die Variablen, die im Bereich des aufrufenden Pakets oder des Tasks Paket ausführen definiert sind, dem aufgerufenen Paket mithilfe des Konfigurationstyps Variable für das übergeordnete Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Package Configurations](./packages/legacy-package-deployment-ssis.md).  
   
 **IncludeInDebugDump**  
  Geben Sie an, ob der Variablenwert in den Debugdumpdateien enthalten ist.  
@@ -159,13 +159,13 @@ Eine Variable enthält Optionen zum Festlegen des Variablenwerts und des Datenty
   
  **Datenflussausdrücke** Verwendet Variablen, um Werte in den Ausdrücken bereitzustellen, die die Transformationen Abgeleitete Spalten und Bedingtes Teilen zum Auffüllen der Spalten verwenden, oder um Datenzeilen an verschiedene Transformationsausgaben weiterzuleiten. Beispielsweise verkettet der `@varSalutation + LastName`-Ausdruck den Wert in der `VarSalutation` -Variablen und der `LastName` -Spalte. Der `Income < @HighIncome`-Ausdruck leitet Datenzeilen, in denen der Wert der `Income` -Spalte niedriger ist als der Wert in der `HighIncome` -Variablen an eine Ausgabe weiter. Weitere Informationen finden Sie unter [Transformation für abgeleitete Spalten](../integration-services/data-flow/transformations/derived-column-transformation.md), [Transformation für bedingtes Teilen](../integration-services/data-flow/transformations/conditional-split-transformation.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- **Rangfolgeneinschränkungs-Ausdrücke** Stellen Werte in Rangfolgeneinschränkungen bereit, um zu bestimmen, ob eine ausführbare Datei ausgeführt wird. Die Ausdrücke können entweder gemeinsam mit einem Ausführungsergebnis (Erfolg, Fehler, Beendigung) oder stattdessen mit einem Ausführungsergebnis verwendet werden. Wenn der Ausdruck `@varMax > @varMin`beispielsweise zu **TRUE**ausgewertet wird, werden die ausführbaren Dateien ausgeführt. Weitere Informationen finden Sie unter [Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
+ **Rangfolgeneinschränkungs-Ausdrücke** Stellen Werte in Rangfolgeneinschränkungen bereit, um zu bestimmen, ob eine ausführbare Datei ausgeführt wird. Die Ausdrücke können entweder gemeinsam mit einem Ausführungsergebnis (Erfolg, Fehler, Beendigung) oder stattdessen mit einem Ausführungsergebnis verwendet werden. Wenn der Ausdruck `@varMax > @varMin`beispielsweise zu **TRUE**ausgewertet wird, werden die ausführbaren Dateien ausgeführt. Weitere Informationen finden Sie unter [Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen](./control-flow/precedence-constraints.md).  
   
- **Parameter und Rückgabecode** Stellt Eingabeparametern Werte bereit oder speichert die Ausgabeparameter und den Rückgabecode. Dies erfolgt durch Zuordnen der Variablen zu Parametern und Rückgabewerten. Wenn sie beispielsweise die `varProductId` -Variable auf 23 festlegen und die `SELECT * from Production.Product WHERE ProductID = ?`-SQL-Anweisung ausführen, ruft die Abfrage das Produkt mit einer `ProductID` von 23 ab. Weitere Informationen finden Sie unter [SQL ausführen (Task)](../integration-services/control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ **Parameter und Rückgabecode** Stellt Eingabeparametern Werte bereit oder speichert die Ausgabeparameter und den Rückgabecode. Dies erfolgt durch Zuordnen der Variablen zu Parametern und Rückgabewerten. Wenn sie beispielsweise die `varProductId` -Variable auf 23 festlegen und die `SELECT * from Production.Product WHERE ProductID = ?`-SQL-Anweisung ausführen, ruft die Abfrage das Produkt mit einer `ProductID` von 23 ab. Weitere Informationen finden Sie unter [SQL ausführen (Task)](../integration-services/control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](./control-flow/execute-sql-task.md).  
   
  **For-Schleifenausdrücke** Stellt Werte bereit, die bei der Initialisierung, bei der Auswertung und bei der Zuordnung von Ausdrücken für die For-Schleife verwendet werden. Wenn der Wert für die `varCount` -Variable beispielsweise 2 und der Wert für `varMaxCount` 10, der Initialisierungsausdruck `@varCount`, der Auswertungsausdruck  `@varCount < @varMaxCount`und der Zuordnungsausdruck `@varCount =@varCount +1`lautet, dann wiederholt sich die Schleife acht Mal. Weitere Informationen finden Sie unter [For-Schleifencontainer](../integration-services/control-flow/for-loop-container.md)ausgewertet wird.  
   
- **Variablenkonfiguration für übergeordnete Pakete** Übergibt Werte von übergeordneten Paketen an untergeordnete Paketen. Untergeordnete Pakete können auf Variablen in übergeordneten Paketen mithilfe der Variablenkonfiguration für übergeordnete Pakete zugreifen. Wenn beispielsweise ein untergeordnetes Paket die gleichen Daten wie das übergeordnete Paket verwenden muss, kann das untergeordnete Paket eine Variablenkonfiguration definieren, die eine Variable angibt, die durch die GETDATE-Funktion in dem übergeordneten Paket festgelegt wurde. Weitere Informationen finden Sie unter [Execute Package Task](../integration-services/control-flow/execute-package-task.md) und [Package Configurations](../integration-services/packages/package-configurations.md).  
+ **Variablenkonfiguration für übergeordnete Pakete** Übergibt Werte von übergeordneten Paketen an untergeordnete Paketen. Untergeordnete Pakete können auf Variablen in übergeordneten Paketen mithilfe der Variablenkonfiguration für übergeordnete Pakete zugreifen. Wenn beispielsweise ein untergeordnetes Paket die gleichen Daten wie das übergeordnete Paket verwenden muss, kann das untergeordnete Paket eine Variablenkonfiguration definieren, die eine Variable angibt, die durch die GETDATE-Funktion in dem übergeordneten Paket festgelegt wurde. Weitere Informationen finden Sie unter [Execute Package Task](../integration-services/control-flow/execute-package-task.md) und [Package Configurations](./packages/legacy-package-deployment-ssis.md).  
   
  **Skripttasks und Skriptkomponenten** Stellt eine Liste von schreibgeschützten und Lese-/Schreibvariablen für Skripttasks oder Skriptkomponenten bereit, aktualisiert die Lese/Schreibvariablen innerhalb des Skripts und verwendet dann die aktualisierten Werte innerhalb oder außerhalb des Skripts. Beispielsweise im `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`-Code wird die `numberOfCars` -Skriptvariable durch den Wert in der `NumberOfCars`-Variable aktualisiert. Weitere Informationen finden Sie unter [Using Variables in the Script Task](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md).  
 
@@ -189,7 +189,7 @@ Eine Variable enthält Optionen zum Festlegen des Variablenwerts und des Datenty
   
 6.  Klicken Sie wahlweise auf das Symbol **Rasteroptionen** , wählen Sie zusätzliche Spalten aus, die im Dialogfeld **Variable Rasteroptionen** angezeigt werden sollen, und klicken Sie dann auf **OK**.  
   
-7.  Legen Sie optional die Variableneigenschaften fest. Weitere Informationen finden Sie unter [Festlegen der Eigenschaften von benutzerdefinierten Variablen](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)definiert.  
+7.  Legen Sie optional die Variableneigenschaften fest. Weitere Informationen finden Sie unter [Festlegen der Eigenschaften von benutzerdefinierten Variablen]()definiert.  
   
 8.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
 
@@ -320,9 +320,9 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
 8.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern**, um das aktualisierte Paket zu speichern.  
 
 ## <a name="update-a-variable-dynamically-with-configurations"></a>Dynamisches Aktualisieren einer Variable mit Konfigurationen  
- Zum dynamischen Aktualisieren von Variablen können Sie Konfigurationen für die Variablen erstellen, die Konfigurationen zusammen mit dem Paket bereitstellen und dann die Variablenwerte in der Konfigurationsdatei aktualisieren, wenn Sie die Pakete bereitstellen. Zur Laufzeit verwendet das Paket die aktualisierten Variablenwerte. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../integration-services/packages/create-package-configurations.md).  
+ Zum dynamischen Aktualisieren von Variablen können Sie Konfigurationen für die Variablen erstellen, die Konfigurationen zusammen mit dem Paket bereitstellen und dann die Variablenwerte in der Konfigurationsdatei aktualisieren, wenn Sie die Pakete bereitstellen. Zur Laufzeit verwendet das Paket die aktualisierten Variablenwerte. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](./packages/legacy-package-deployment-ssis.md).  
 
 ## <a name="related-tasks"></a>Related Tasks  
  [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
- [Zuordnen von Abfrageparametern zu Variablen in einer Datenflusskomponente](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
+ [Zuordnen von Abfrageparametern zu Variablen in einer Datenflusskomponente](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5b3784e4af35afe5fdf0b84290cdf33fc8c77496
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05fefa983f3b58f8ca8be95772d3fbc49f3e9afb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430152"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194060"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
 
@@ -45,7 +45,7 @@ ms.locfileid: "88430152"
   
 -   **SAP BW-Verbindungs-Manager:** Der SAP BW-Verbindungs-Manager verbindet eine SAP BW-Quelle oder ein SAP BW-Ziel mit einem SAP NetWeaver BW 7-System.  
   
- Eine exemplarische Vorgehensweise, die zeigt, wie der SAP BW-Verbindungs-Manager sowie die zugehörige Quelle und das zugehörige Ziel konfiguriert und verwendet werden, finden Sie im Whitepaper [Using SQL Server Integration Services with SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897)(Verwenden von SQL Server Integration Services und SAP BI 7.0). In diesem Whitepaper wird auch erläutert, wie die erforderlichen Objekte in SAP BW konfiguriert werden.  
+ Eine exemplarische Vorgehensweise, die zeigt, wie der SAP BW-Verbindungs-Manager sowie die zugehörige Quelle und das zugehörige Ziel konfiguriert und verwendet werden, finden Sie im Whitepaper [Using SQL Server Integration Services with SAP BI 7.0](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100))(Verwenden von SQL Server Integration Services und SAP BI 7.0). In diesem Whitepaper wird auch erläutert, wie die erforderlichen Objekte in SAP BW konfiguriert werden.  
   
 ## <a name="documentation"></a>Dokumentation  
  Diese Hilfedatei für den [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector für SAP BW enthält die folgenden Themen und die Abschnitte:  
@@ -58,5 +58,4 @@ ms.locfileid: "88430152"
   
  [F1-Hilfe zum Microsoft Connector for SAP BW](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
  Beschreibt die Benutzeroberfläche der einzelnen Komponenten im [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector für SAP BW.  
-  
   

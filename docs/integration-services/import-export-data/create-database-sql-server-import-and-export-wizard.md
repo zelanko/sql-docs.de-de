@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db38bcb37a0b7167a7d4c27b62a34438d77c343
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477271"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195886"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Datenbank erstellen (SQL Server-Import/Export-Assistent)
 
@@ -29,7 +29,7 @@ Wenn Sie auf der Seite **Ziel auswählen** die Option **Neu** auswählen, um ein
 Das Dialogfeld **Datenbank erstellen** des Assistenten bietet nur die grundlegenden Optionen, die zum Erstellen einer neuen SQL Server-Datenbank verfügbar sind. Um alle Optionen für eine neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank anzuzeigen und zu konfigurieren, verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zum Erstellen der Datenbank, oder um sie zu konfigurieren, nachdem der Assistent sie erstellt hat. 
 
 > [!NOTE]
-> Wenn Sie Informationen zur [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung CREATE DATABASE und nicht zum Dialogfeld **Datenbank erstellen** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistenten suchen, lesen Sie den Artikel [CREATE DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+> Wenn Sie Informationen zur [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung CREATE DATABASE und nicht zum Dialogfeld **Datenbank erstellen** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistenten suchen, lesen Sie den Artikel [CREATE DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>Screenshot der Seite „Datenbank erstellen“  
 Der folgende Screenshot zeigt das Dialogfeld **Datenbank erstellen** des Assistenten an.  
@@ -89,8 +89,7 @@ Ausführliche Informationen zu diesen Anforderungen finden Sie unter [Datenbankb
  Geben Sie die Anzahl der Megabytes an, um die die Protokolldatei wachsen kann.  
 
 ### <a name="more-info"></a>Weitere Informationen
-Weitere Informationen zu den Optionen für die Dateigröße, die auf dieser Seite angezeigt werden, finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
+Weitere Informationen zu den Optionen für die Dateigröße, die auf dieser Seite angezeigt werden, finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md). 
 
-## <a name="whats-next"></a>Nächste Schritte  
- Nachdem Sie einen Namen für die neue Datenbank angegeben und auf **OK**geklickt haben, wechselt das Dialogfeld **Datenbank erstellen** wieder zurück zur Seite **Ziel auswählen** . Weitere Informationen finden Sie unter [Ziel auswählen](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
-
+## <a name="whats-next"></a>Wie geht es weiter?  
+ Nachdem Sie einen Namen für die neue Datenbank angegeben und auf **OK**geklickt haben, wechselt das Dialogfeld **Datenbank erstellen** wieder zurück zur Seite **Ziel auswählen** . Weitere Informationen finden Sie unter [Ziel auswählen](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).

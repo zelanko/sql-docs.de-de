@@ -22,12 +22,12 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6acac2a2a67974945c6e934994c7823fc3d75bde
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3923bc7a36387e3ccef353f43aafcbaea2600658
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422514"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196574"
 ---
 # <a name="-equals-transact-sql"></a>= (Gleich) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422514"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 expression = expression  
 ```  
   
@@ -68,13 +68,12 @@ Weitere Informationen finden Sie unter [SET ANSI_NULLS &#40;Transact-SQL&#41;](.
 ### <a name="a-using--in-a-simple-query"></a>A. Verwenden des Gleichheitszeichens (") in einer einfachen Abfrage  
  Im folgenden Beispiel wird der Gleich-Operator verwendet, um alle Zeilen in der `HumanResources.Department`-Tabelle zurückzugeben, in denen der Wert der `GroupName`-Spalte gleich dem Wort "Manufacturing" ist.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
 FROM HumanResources.Department  
 WHERE GroupName = 'Manufacturing';  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -93,7 +92,7 @@ DepartmentID Name
 ### <a name="b-comparing-null-and-non-null-values"></a>B. Vergleichen von NULL- und Nicht-NULL-Werten  
  Im folgenden Beispiel werden mithilfe der Vergleichsoperatoren Gleich (`=`) und Ungleich (`<>`) Vergleiche mit `NULL`-Werten und mit Werten ungleich NULL in einer Tabelle ausgeführt. Das Beispiel zeigt ebenfalls, dass `IS NULL` durch die `SET ANSI_NULLS`-Einstellung nicht beeinflusst wird.  
   
-```  
+```sql  
 -- Create table t1 and insert 3 rows.  
 CREATE TABLE dbo.t1 (a INT NULL);  
 INSERT INTO dbo.t1 VALUES (NULL),(0),(1);  
@@ -158,7 +157,6 @@ GO
   
 -- Drop table t1.  
 DROP TABLE dbo.t1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 829d60517864d9df7f8019a92e00664c1a1337ea
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: dd4827f08c9e21ccd45f128bcc64ab9e03c1474b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943610"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193420"
 ---
 # <a name="data-collection"></a>Datensammlung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "87943610"
   
  Mit dem Datensammler können Sie außerdem den Umfang der Datensammlung an Ihre Test- und Produktionsumgebungen anpassen. Der Datensammler verwendet auch ein Data Warehouse, eine relationale Datenbank, mit der Sie die gesammelten Daten durch Festlegen unterschiedlicher Aufbewahrungsdauern verwalten können.  
   
- Der Datensammler unterstützt eine dynamische Optimierung der Datensammlung und ist durch seine API erweiterbar. Weitere Informationen finden Sie unter [Data Collector Programming](https://docs.microsoft.com/sql/relational-databases/system-functions/data-collector-functions-transact-sql).  
+ Der Datensammler unterstützt eine dynamische Optimierung der Datensammlung und ist durch seine API erweiterbar. Weitere Informationen finden Sie unter [Data Collector Programming](../system-functions/data-collector-functions-transact-sql.md).  
   
  In den folgenden Abbildungen wird dargestellt, wie der Datensammler in die Gesamtstrategie für die Datensammlung und Datenverwaltung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]passt.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "87943610"
   
 -   Proxykonten  
   
- Weitere Informationen finden Sie unter [Automatisierte Administrationstasks &#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
+ Weitere Informationen finden Sie unter [Automatisierte Administrationstasks &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md).  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) wird verwendet, um Pakete auszuführen, die Daten von einzelnen Datenanbietern auflisten. Sie sollten mit den folgenden Tools und Konzepten von [!INCLUDE[ssIS](../../includes/ssis-md.md)] vertraut sein:  
   
@@ -119,5 +119,3 @@ ms.locfileid: "87943610"
 |Verwenden des Verwaltungs-Data Warehouse, um Daten von einem Server zu erfassen, der ein Datensammlungsziel ist.|[Verwaltungs-Data Warehouse](../../relational-databases/data-collection/management-data-warehouse.md)| 
 |Nutzen der serverseitigen Ablaufverfolgungsfunktionen von SQL Server Profiler, um eine Ablaufverfolgungsdefinition für das Erstellen eines Sammlungssatzes zu exportieren, der den generischen Sammlertyp für die SQL-Ablaufverfolgung verwendet.| [Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes der SQL-Ablaufverfolgung (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
-  
-

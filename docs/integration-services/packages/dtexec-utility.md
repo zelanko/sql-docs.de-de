@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 206f7d54967eea85c96198e78471f026197a6a64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27f8433667f68bb654fae4317295358a45c82825
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477240"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197069"
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
 
@@ -180,13 +180,13 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Conf[igFile]** _filespec_: (Optional). Gibt eine Konfigurationsdatei an, aus der Werte extrahiert werden sollen. Mithilfe dieser Option können Sie eine Laufzeitkonfiguration festlegen, die sich von der Konfiguration unterscheidet, die zur Entwurfszeit für das Paket angegeben wurde. Sie können abweichende Konfigurationseinstellungen in einer XML-Konfigurationsdatei speichern und die Einstellungen dann mithilfe der Option **/ConfigFile** vor der Paketausführung laden.  
   
-     Sie können die Option **/ConfigFile** verwenden, um zur Laufzeit zusätzliche Konfigurationen zu laden, die Sie zur Entwurfszeit nicht angegeben haben. Sie können die Option **/ConfigFile** jedoch nicht verwenden, um konfigurierte Werte zu ersetzen, die Sie auch zur Entwurfszeit angegeben haben. Weitere Informationen zur Anwendung von Paketkonfigurationen finden Sie unter [Paketkonfigurationen](../../integration-services/packages/package-configurations.md).  
+     Sie können die Option **/ConfigFile** verwenden, um zur Laufzeit zusätzliche Konfigurationen zu laden, die Sie zur Entwurfszeit nicht angegeben haben. Sie können die Option **/ConfigFile** jedoch nicht verwenden, um konfigurierte Werte zu ersetzen, die Sie auch zur Entwurfszeit angegeben haben. Weitere Informationen zur Anwendung von Paketkonfigurationen finden Sie unter [Paketkonfigurationen](./legacy-package-deployment-ssis.md).  
   
 -   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_ : (Optional). Gibt an, dass sich der Verbindungs-Manager mit dem angegebenen Namen oder GUID im Paket befindet. Eine Verbindungszeichenfolge wird ebenfalls angegeben.  
   
      Wenn diese Option verwendet wird, müssen beide Parameter angegeben werden: Der Name oder die GUID des Verbindungs-Managers muss mit dem *ID_oder_Name* -Argument bereitgestellt werden, und mit dem *Verbindungszeichenfolge* -Argument muss eine gültige Verbindungszeichenfolge angegeben werden. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-     Sie können zur Laufzeit die Option **/Connection** verwenden, um Paketkonfigurationen von einem anderen Speicherort als dem zur Entwurfszeit angegebenen Speicherort zu laden. Die Werte dieser Konfigurationen ersetzen dann die Werte, die ursprünglich angegeben wurden. Sie können die Option **/Connection** jedoch nur für Konfigurationen verwenden, die einen Verbindungs-Manager verwenden (z.B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurationen). Um zu verstehen, wie Paketkonfigurationen angewendet werden, lesen Sie [SSIS-Paketkonfigurationen](../../integration-services/packages/package-configurations.md) und [Behavior Changes to Integration Services Features in SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)(Verhaltensänderungen von Integration Services Features in SQL Server 2016).  
+     Sie können zur Laufzeit die Option **/Connection** verwenden, um Paketkonfigurationen von einem anderen Speicherort als dem zur Entwurfszeit angegebenen Speicherort zu laden. Die Werte dieser Konfigurationen ersetzen dann die Werte, die ursprünglich angegeben wurden. Sie können die Option **/Connection** jedoch nur für Konfigurationen verwenden, die einen Verbindungs-Manager verwenden (z.B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurationen). Um zu verstehen, wie Paketkonfigurationen angewendet werden, lesen Sie [SSIS-Paketkonfigurationen](./legacy-package-deployment-ssis.md) und [Behavior Changes to Integration Services Features in SQL Server 2016](/previous-versions/sql/sql-server-2016/bb500430(v=sql.130))(Verhaltensänderungen von Integration Services Features in SQL Server 2016).  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (Optional). Zeigt während der Paketausführung bestimmte Protokolleinträge an der Konsole an. Wenn die Option nicht angegeben wird, werden keine Protokolleinträge an der Konsole angezeigt. Wenn die Option ohne Parameter zur Begrenzung der Anzeige angegeben wird, werden alle Protokolleinträge angezeigt. Wenn Sie die an der Konsole angezeigten Einträge begrenzen möchten, können Sie die anzuzeigenden Spalten mithilfe des *Anzeigeoptionen* -Parameters angeben und die Protokolleintragstypen mithilfe des *Listenoptionen* -Parameters begrenzen.  
   
@@ -228,7 +228,7 @@ dtexec /option [value] [/option [value]]...
   
      Im Abschnitt **Hinweise** finden Sie mehrere Beispiele für die Verwendung der **/ConsoleLog** -Option.  
   
--   **/D[ts]** _package_path_: (Optional). Lädt ein Paket aus dem SSIS-Paketspeicher. Pakete, die im SSIS-Paketspeicher gespeichert wurden, werden mithilfe des Legacy-Projektbereitstellungsmodells bereitgestellt. Verwenden Sie die Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISServer **, um Pakete auszuführen, die mithilfe des Projektbereitstellungsmodells auf dem** -Server bereitgestellt werden. Weitere Informationen zu Paket- und Projektbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen](https://msdn.microsoft.com/library/hh213290.aspx).  
+-   **/D[ts]** _package_path_: (Optional). Lädt ein Paket aus dem SSIS-Paketspeicher. Pakete, die im SSIS-Paketspeicher gespeichert wurden, werden mithilfe des Legacy-Projektbereitstellungsmodells bereitgestellt. Verwenden Sie die Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISServer **, um Pakete auszuführen, die mithilfe des Projektbereitstellungsmodells auf dem** -Server bereitgestellt werden. Weitere Informationen zu Paket- und Projektbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen](./deploy-integration-services-ssis-projects-and-packages.md).  
   
      Mit dem *Paketpfad* -Argument wird der relative Pfad des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Pakets, der am Stammverzeichnis des SSIS-Paketspeichers beginnt, sowie der Name des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Pakets angegeben. Enthält der im *Paketpfad* -Argument angegebene Pfad- oder Dateiname ein Leerzeichen, müssen Sie das *Paketpfad* -Argument in Anführungszeichen setzen.  
   
@@ -417,13 +417,13 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     Sie können die Option **/Set** verwenden, um den Speicherort zu ändern, von dem Paketkonfigurationen geladen werden. Sie können die Option **/Set** jedoch nicht verwenden, um einen Wert zu überschreiben, der zur Entwurfszeit von einer Konfiguration angegeben wurde. Um zu verstehen, wie Paketkonfigurationen angewendet werden, lesen Sie [SSIS-Paketkonfigurationen](../../integration-services/packages/package-configurations.md) und [Behavior Changes to Integration Services Features in SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)(Verhaltensänderungen von Integration Services Features in SQL Server 2016).  
+     Sie können die Option **/Set** verwenden, um den Speicherort zu ändern, von dem Paketkonfigurationen geladen werden. Sie können die Option **/Set** jedoch nicht verwenden, um einen Wert zu überschreiben, der zur Entwurfszeit von einer Konfiguration angegeben wurde. Um zu verstehen, wie Paketkonfigurationen angewendet werden, lesen Sie [SSIS-Paketkonfigurationen](./legacy-package-deployment-ssis.md) und [Behavior Changes to Integration Services Features in SQL Server 2016](/previous-versions/sql/sql-server-2016/bb500430(v=sql.130))(Verhaltensänderungen von Integration Services Features in SQL Server 2016).  
   
 -   **/Ser[ver]** _server_: (Optional). Wenn die Option **/SQL** oder **/DTS** verwendet wurde, gibt diese Option den Namen des Servers an, von dem das Paket abgerufen werden soll. Wenn Sie die Option **/Server** nicht angeben, die Option **/SQL** oder **/DTS** jedoch angegeben wird, wird versucht, das Paket auf den lokalen Server anzuwenden. Der *Serverinstanz* -Wert kann in Anführungszeichen eingeschlossen werden.  
   
      Die Option **/Ser[ver]** ist erforderlich, wenn die Option **/ISServer** angegeben wird.  
   
--   **/SQ[L]** _package_path_: Lädt ein in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichertes Paket in die **msdb**-Datenbank. Pakete, die in der **msdb** -Datenbank gespeichert sind, werden mithilfe des Paketbereitstellungsmodells bereitgestellt. Verwenden Sie die Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISServer **, um Pakete auszuführen, die mithilfe des Projektbereitstellungsmodells auf dem** -Server bereitgestellt werden. Weitere Informationen zu Paket- und Projektbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen](https://msdn.microsoft.com/library/hh213290.aspx).   
+-   **/SQ[L]** _package_path_: Lädt ein in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichertes Paket in die **msdb**-Datenbank. Pakete, die in der **msdb** -Datenbank gespeichert sind, werden mithilfe des Paketbereitstellungsmodells bereitgestellt. Verwenden Sie die Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISServer **, um Pakete auszuführen, die mithilfe des Projektbereitstellungsmodells auf dem** -Server bereitgestellt werden. Weitere Informationen zu Paket- und Projektbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen](./deploy-integration-services-ssis-projects-and-packages.md).   
   
 -   Mit dem *Paketpfad* -Argument wird der Name des abzurufenden Pakets angegeben. Werden Ordner in die Pfadangabe eingeschlossen, werden sie mit umgekehrten Schrägstrichen („\\“) abgeschlossen. Der *Paketpfad* -Wert kann in Anführungszeichen eingeschlossen werden. Enthält der im *Paketpfad* -Argument angegebene Pfad- oder Dateiname ein Leerzeichen, müssen Sie das *Paketpfad* -Argument in Anführungszeichen setzen.  
   
@@ -645,5 +645,4 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Blogeintrag zu [Exitcodes, DTEXEC und SSIS-Katalog](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)auf www.mattmasson.com.  
-  
   

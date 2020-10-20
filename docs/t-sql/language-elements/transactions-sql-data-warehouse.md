@@ -13,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 5a8b1aa27a301d67df200967b6cba36f042a7f75
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227469"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038894"
 ---
 # <a name="transactions-azure-synapse-analytics"></a>Transaktionen (Azure Synapse Analytics)
 
@@ -80,7 +80,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Wenn eine explizite Transaktion aufgrund eines anderen Fehlers als eines Anweisungsfehlers zur Laufzeit nicht erfolgreich beendet werden kann, führt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] automatisch ein Rollback für die Transaktion aus und gibt alle Ressourcen frei, die von der Transaktion beansprucht wurden. Wenn z.B. die Netzwerkverbindung des Clients mit einer Instanz von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] unterbrochen ist oder sich der Client von der Anwendung abmeldet, wird für alle Transaktionen dieser Verbindung, für die noch kein Commit ausgeführt wurde, ein Rollback ausgeführt, sobald das Netzwerk die Instanz über die Unterbrechung benachrichtigt.  
   
- Wenn ein Anwendungsfehler zur Laufzeit in einem Batch auftritt, verhält sich [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] konsistent mit der auf **ON** festgelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT**-Einstellung, und für die gesamte Transaktion wird ein Rollback ausgeführt. Weitere Informationen zur **XACT_ABORT**-Einstellung finden Sie unter [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Wenn ein Anwendungsfehler zur Laufzeit in einem Batch auftritt, verhält sich [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] konsistent mit der auf **ON** festgelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT**-Einstellung, und für die gesamte Transaktion wird ein Rollback ausgeführt. Weitere Informationen zur **XACT_ABORT**-Einstellung finden Sie unter [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md).  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Eine Sitzung kann jeweils nur eine Transaktion zu einem bestimmten Zeitpunkt ausführen. Sicherungspunkte und geschachtelte Transaktionen werden nicht unterstützt.  
@@ -94,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Nach der Ausgabe einer COMMIT-Anweisung kann kein Rollback für eine Transaktion ausgeführt werden, da die Datenänderungen zu einem dauerhaften Bestandteil der Datenbank geworden sind.  
   
- Die Befehle [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) und [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) können nicht innerhalb einer expliziten Transaktion verwendet werden.  
+ Die Befehle [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) und [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) können nicht innerhalb einer expliziten Transaktion verwendet werden.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] verfügt nicht über einen Mechanismus für die Freigabe von Transaktionen. Das bedeutet, dass zu einem bestimmten Zeitpunkt nur eine Sitzung an einer Transaktion im System arbeiten kann.  
   
@@ -150,5 +150,4 @@ COMMIT;
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

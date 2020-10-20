@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: df26e437d7c03510f7e634693296a928696a96b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab0e3826b20df90102bfc97d5d3730b4e83806dd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430682"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195944"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Transformation für Fuzzysuche
 
@@ -49,7 +49,7 @@ ms.locfileid: "88430682"
   Die Transformation für Fuzzysuche führt Aufgaben zum Datencleanup durch, wie das Standardisieren von Daten, das Korrigieren von Daten und das Bereitstellen fehlender Werte.  
   
 > [!NOTE]  
->  Ausführliche Informationen über die Transformationen für Fuzzysuche wie Leistungs- und Speicherbeschränkungen finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(Fuzzysuche und Fuzzygruppierung in SQL Server Integration Services 2005).  
+>  Ausführliche Informationen über die Transformationen für Fuzzysuche wie Leistungs- und Speicherbeschränkungen finden Sie im Whitepaper [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90))(Fuzzysuche und Fuzzygruppierung in SQL Server Integration Services 2005).  
   
  Die Transformation für Fuzzysuche weicht in ihrer Verwendung der Fuzzyübereinstimmung von der Transformation für Suche ab. Die Transformation für Suche verwendet einen Gleichheitsjoin zum Suchen von übereinstimmenden Datensätzen in der Verweistabelle. Sie gibt Datensätze mit mindestens einem übereinstimmendem Datensatz Datensätze ohne übereinstimmende Datensätze zurück. Im Gegensatz dazu verwendet die Transformation für Fuzzysuche die Fuzzyübereinstimmung, um mindestens eine nahe Übereinstimmung in der Verweistabelle zurückzugeben.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "88430682"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -222,5 +222,4 @@ ms.locfileid: "88430682"
  [Transformation für Suche](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

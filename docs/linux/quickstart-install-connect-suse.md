@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 1d917c3f205f6b4b8d5872cf0b853316ed6e913d
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 8babcb8b849360ba4a025d62a8e89f5ad92175c2
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990131"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115939"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Schnellstart: Installieren von SQL Server und Erstellen einer Datenbank unter SUSE Linux Enterprise Server
 
@@ -54,12 +54,12 @@ Sie müssen über einen Computer mit SLES v12 SP2, SP3, SP4 oder SP5 und **min
 
 ::: moniker-end
 
-Um SUSE Linux Enterprise Server auf Ihrem eigenen Computer zu installieren, wechseln Sie zu [https://www.suse.com/products/server](https://www.suse.com/products/server). Sie können auch virtuelle SLES-Computer in Azure erstellen. Weitere Informationen finden Sie unter [Erstellen und Verwalten virtueller Linux-Computer mit der Azure-Befehlszeilenschnittstelle](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm). Verwenden Sie `--image SLES` im Aufruf von `az vm create`.
+Um SUSE Linux Enterprise Server auf Ihrem eigenen Computer zu installieren, wechseln Sie zu [https://www.suse.com/products/server](https://www.suse.com/products/server). Sie können auch virtuelle SLES-Computer in Azure erstellen. Weitere Informationen finden Sie unter [Erstellen und Verwalten virtueller Linux-Computer mit der Azure-Befehlszeilenschnittstelle](/azure/virtual-machines/linux/tutorial-manage-vm). Verwenden Sie `--image SLES` im Aufruf von `az vm create`.
 
 Wenn Sie bereits eine CTP- oder RC-Version von SQL Server installiert haben, müssen Sie zuerst das alte Repository entfernen, bevor Sie die folgenden Schritte ausführen. Weitere Informationen finden Sie unter [Konfigurieren von Linux-Repositorys für SQL Server 2017 und 2019](sql-server-linux-change-repo.md).
 
 > [!NOTE]
-> Zurzeit wird das [Windows-Subsystem für Linux](https://msdn.microsoft.com/commandline/wsl/about) für Windows 10 als Installationsziel nicht unterstützt.
+> Zurzeit wird das [Windows-Subsystem für Linux](/windows/wsl/about) für Windows 10 als Installationsziel nicht unterstützt.
 
 Weitere Systemanforderungen finden Sie unter [Systemanforderungen für SQL Server für Linux](sql-server-linux-setup.md#system).
 

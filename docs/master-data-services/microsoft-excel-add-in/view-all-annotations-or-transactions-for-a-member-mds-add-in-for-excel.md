@@ -1,6 +1,7 @@
 ---
-title: Anzeigen aller Anmerkungen oder Transaktionen für ein Element (MDS-Add-In für Excel) | Microsoft-Dokumentation
-ms.custom: microsoft-excel-add-in
+description: Anzeigen aller Anmerkungen oder Transaktionen für ein Element (MDS-Add-In für Excel)
+title: Anzeigen von Anmerkungen oder Transaktionen
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4960e80bf8f1bb48c30d2a5aeff2da169adb093c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 332afe4eaca5e694fa0fa75aeede689a8a92fdde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257850"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Anzeigen aller Anmerkungen oder Transaktionen für ein Element (MDS-Add-In für Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Zeigen Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]Anmerkungen (Kommentare) und Transaktionen für Datenzeilen (Elemente) an, wenn Sie die Updates der Daten im Zeitverlauf anzeigen möchten.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über ein aktives Arbeitsblatt mit von MDS verwalteten Daten verfügen.  
@@ -34,11 +35,9 @@ ms.locfileid: "68074384"
   
 1.  Klicken Sie in die Zeile, die Transaktionen enthält, die Sie anzeigen möchten.  
   
-2.  Öffnen Sie durch einen Klick mit der rechten Maustaste das Kontextmenü, und wählen Sie **Transaktionen anzeigen** oder **Verlauf anzeigen** aus.  
+2.  Klicken Sie mit der rechten Maustaste, und klicken Sie im angezeigten Menü auf **Transaktionen anzeigen** oder **Verlauf anzeigen**.  
   
 3.  Im Dialogfeld **Transaktionen anzeigen** wird die Liste der Transaktionen angezeigt. Um alle einer Transaktion zugeordneten Anmerkungen anzuzeigen, klicken Sie im Raster auf eine Zeile.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht: Importieren von Daten aus Excel &#40;MDS-Add-in für Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
-  
-  
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht: Importieren von Daten aus Excel &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  

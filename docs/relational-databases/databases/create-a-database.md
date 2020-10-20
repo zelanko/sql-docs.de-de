@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 463f442c15fdd6bfa29e97c650d5b7d8ee95fe91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fddf58b0f7473ea2ae46812d9908dcbbafb7b66
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631023"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195663"
 ---
 # <a name="create-a-database"></a>Erstellen einer Datenbank
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird.  
 
 > [!NOTE]
-> Weitere Informationen zum Erstellen einer Datenbank in Azure SQL-Datenbank mithilfe von T-SQL finden Sie unter [CREATE DATABASE (Azure SQL-Datenbank)](https://docs.microsoft.com/sql/t-sql/statements/create-database-azure-sql-database).
+> Weitere Informationen zum Erstellen einer Datenbank in Azure SQL-Datenbank mithilfe von T-SQL finden Sie unter [CREATE DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/create-database-transact-sql.md).
   
  **In diesem Thema**  
   
@@ -134,12 +134,11 @@ LOG ON
 GO  
 ```  
   
- Weitere Beispiele finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Weitere Beispiele finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
-  
   

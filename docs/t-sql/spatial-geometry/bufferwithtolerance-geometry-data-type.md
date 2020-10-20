@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fc0cfc790f933935de0f9aee96dd7c6e7b66425f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a039118dc0abe85b065d74b96f551c2991820333
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472537"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037066"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +83,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punktwerte dar
   
  Ein negativer Puffer entfernt alle Punkte innerhalb des angegebenen Abstands von der Begrenzung der **geometry** -Instanz.  
   
- Die Abweichung zwischen dem theoretischen und dem berechneten Puffer beträgt max(tolerance, extents \* 1,E-7), wobei die Toleranz der Wert des Parameters *tolerance* ist. Weitere Informationen zu Erweiterungen finden Sie unter [geometry-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ Die Abweichung zwischen dem theoretischen und dem berechneten Puffer beträgt max(tolerance, extents \* 1,E-7), wobei die Toleranz der Wert des Parameters *tolerance* ist. Weitere Informationen zu Erweiterungen finden Sie unter [geometry-Datentyp-Methodenverweis](./spatial-types-geometry-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `Point` -Instanz erstellt und `BufferWithTolerance()` verwendet, um einen groben Puffer um die Instanz zu erhalten.  
@@ -98,5 +98,3 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
  [STBuffer &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
  [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
-  
-

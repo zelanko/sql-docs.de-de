@@ -9,12 +9,12 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b1472c1cbe3bdb9611ffcb06ff3404c28c431545
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 4c0057327466773d759752ad6760b2e736b84ebb
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784847"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115955"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Konfigurieren einer SQL Server-Verfügbarkeitsgruppe zur Leseskalierung unter Linux
 
@@ -82,6 +82,6 @@ Es gibt zwei Möglichkeiten für die Verbindung mit schreibgeschützten sekundä
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-* [Konfigurieren verteilter Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [Konfigurieren verteilter Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/distributed-availability-groups.md)
 * [Weitere Informationen zu Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [Ausführen eines erzwungenen manuellen Failovers](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

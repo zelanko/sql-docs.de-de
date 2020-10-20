@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289688"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257446"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Paralleles Verwalten von Berechtigungen Data Warehouse
 In diesem Artikel werden die Anforderungen und Optionen für die Verwaltung von Daten Bank Berechtigungen für SQL Server PDW beschrieben.
@@ -48,9 +48,9 @@ Das folgende Beispiel zeigt eine allgemeine und empfohlene Methode zum Konfiguri
 
 5.  Erteilen Sie den benutzerdefinierten Datenbankrollen Berechtigungen.
 
-Anmeldungen sind Objekte auf Serverebene und können durch Anzeigen von [sys. server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)aufgelistet werden. Server Prinzipale können nur Berechtigungen auf Serverebene erteilt werden.
+Anmeldungen sind Objekte auf Serverebene und können durch anzeigen [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)aufgelistet werden. Server Prinzipale können nur Berechtigungen auf Serverebene erteilt werden.
 
-Benutzer und Daten bankrollen sind Objekte auf Datenbankebene und können durch Anzeigen von [sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)aufgelistet werden. Daten Bank Prinzipale können nur Berechtigungen auf Datenbankebene erteilt werden.
+Benutzer und Daten bankrollen sind Objekte auf Datenbankebene und können durch anzeigen [sys.database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)aufgelistet werden. Daten Bank Prinzipale können nur Berechtigungen auf Datenbankebene erteilt werden.
 
 ## <a name="default-permissions"></a><a name="BackupTypes"></a>Standardberechtigungen
 In der folgenden Liste werden die Standardberechtigungen beschrieben:
@@ -84,7 +84,7 @@ Alle neuen Appliance-Anmeldungen gehören automatisch zur public-Rolle. Die öff
 Ob ein Anmelde Name über die Berechtigung zum Durchführen einer bestimmten Aktion verfügt, hängt von den Berechtigungen ab, die für die Anmeldung, den Benutzer und die Rollen erteilt oder verweigert werden, bei denen der Benutzer Mitglied ist. Berechtigungen auf Serverebene (z. b. **Create Login** und **View Server State**) sind für Prinzipale auf Serverebene (Anmeldungen) verfügbar. Berechtigungen auf Datenbankebene (z. b. **Select** from a Table oder **Execute** for a Procedure) sind für Prinzipale auf Datenbankebene (Benutzer und Daten bankrollen) verfügbar.
 
 ### <a name="implicit-and-explicit-permissions"></a>Implizite und explizite Berechtigungen
-Eine *explizite Berechtigung* ist eine **GRANT**- oder **DENY**-Berechtigung, die einem Prinzipal durch eine **GRANT**- oder **DENY**-Anweisung zugewiesen wurde. Berechtigungen auf Datenbankebene werden in der [sys. database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) -Sicht aufgelistet. Berechtigungen auf Server Ebene werden in der [sys. server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) -Sicht aufgelistet.
+Eine *explizite Berechtigung* ist eine **GRANT**- oder **DENY**-Berechtigung, die einem Prinzipal durch eine **GRANT**- oder **DENY**-Anweisung zugewiesen wurde. Berechtigungen auf Datenbankebene werden in der [sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) Ansicht aufgeführt. Berechtigungen auf Server Ebene werden in der [sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) Ansicht aufgeführt.
 
 Eine *implizite Berechtigung* ist eine **Grant** -oder **Deny** -Berechtigung, die ein Prinzipal (-Anmelde Name oder Server Rolle) geerbt hat. Eine Berechtigung kann auf folgende Weise geerbt werden.
 
@@ -92,7 +92,7 @@ Eine *implizite Berechtigung* ist eine **Grant** -oder **Deny** -Berechtigung, d
 
 -   Ein Prinzipal kann eine Berechtigung für ein untergeordnetes Objekt (z. b. eine Tabelle) erben, wenn der Prinzipal über eine Berechtigung für eines der übergeordneten Objekte (z. b. das Schema der Tabelle oder die Berechtigung für die gesamte Datenbank) verfügt.
 
--   Ein Prinzipal kann eine Berechtigung erben, indem er über eine Berechtigung verfügt, die eine untergeordnete Berechtigung enthält. Die Berechtigung **ALTER ANY User** umfasst z. b. die **Berechtigungen CREATE User** und **Alter on User::** _<name>_ .
+-   Ein Prinzipal kann eine Berechtigung erben, indem er über eine Berechtigung verfügt, die eine untergeordnete Berechtigung enthält. Die Berechtigung **ALTER ANY User** umfasst z. b. die Berechtigungen **Create User** und **Alter on User::** _<name>_ .
 
 ### <a name="determining-permissions-when-performing-actions"></a>Festlegen von Berechtigungen beim Ausführen von Aktionen
 Der Prozess der Bestimmung, welche Berechtigung einem Prinzipal zugewiesen werden soll, ist komplex. Die Komplexität tritt auf, wenn implizite Berechtigungen festgelegt werden, da Prinzipale Mitglieder mehrerer Rollen sein können und Berechtigungen über mehrere Ebenen in der Rollen Hierarchie übermittelt werden können.
@@ -178,7 +178,7 @@ In der folgenden Liste werden allgemeine Regeln zum Bestimmen von Berechtigungen
 ## <a name="fixed-database-roles"></a>Feste Datenbankrollen
 SQL Server stellt vorkonfigurierte (fixierte) Rollen auf Datenbankebene bereit, um Sie bei der Verwaltung der Berechtigungen auf einem Server zu unterstützen. Die vorkonfigurierten Rollen wurden in korrigiert, sodass Sie die Ihnen zugewiesenen Berechtigungen nicht ändern können. Benutzerdefinierte Daten bankrollen können auch erstellt werden. Sie können die Berechtigungen ändern, die benutzerdefinierten Daten bankrollen zugewiesen sind.
 
-Rollen sind Sicherheits Prinzipale, die andere Prinzipale gruppieren. Daten bankrollen sind im Berechtigungs Bereich Daten Bank weit. Datenbankbenutzer und andere Daten bankrollen können als Mitglieder von Daten bankrollen hinzugefügt werden. Die fixierten Daten bankrollen können nicht einander hinzugefügt werden. (*Rollen* entsprechen den *Gruppen* im Betriebssystem Windows.)
+Bei Rollen handelt es sich um Sicherheitsprinzipale, die andere Prinzipale gruppieren. Daten bankrollen sind im Berechtigungs Bereich Daten Bank weit. Datenbankbenutzer und andere Daten bankrollen können als Mitglieder von Daten bankrollen hinzugefügt werden. Die fixierten Daten bankrollen können nicht einander hinzugefügt werden. (*Rollen* entsprechen den *Gruppen* im Betriebssystem Windows.)
 
 Es gibt 9 Daten bankrollen.
 
@@ -214,7 +214,7 @@ Das System fester Server Rollen und fester Daten bankrollen ist ein Legacy Syste
 Festes Server Rollen werden automatisch von SQL Server erstellt. SQL Server PDW verfügt über eine begrenzte Implementierung SQL Server fester Server Rollen. Nur " **sysadmin** " und " **Public** " verfügen über Benutzeranmeldungen als Mitglieder. Die Rollen **festen setupadmin** und **dbcreator** werden intern von SQL Server PDW verwendet. Weitere Mitglieder können keiner Rolle hinzugefügt oder entfernt werden.
 
 ### <a name="sysadmin-fixed-server-role"></a>festen Server Rolle "sysadmin"
-Mitglieder der festen Server Rolle **sysadmin** können alle Aktivitäten auf dem Server ausführen. Der **sa** -Anmelde Name ist das einzige Mitglied der festen Server Rolle **sysadmin** . Zusätzliche Anmeldungen können nicht der festen Server Rolle **sysadmin** hinzugefügt werden. Das Erteilen der Berechtigung **CONTROL SERVER** gleicht der Mitgliedschaft in der festen Serverrolle **sysadmin**. Im folgenden Beispiel wird die **Control Server** -Berechtigung für einen Anmelde Namen mit dem Namen Fay erteilt.
+Mitglieder der festen Serverrolle **sysadmin** können alle Aktivitäten auf dem Server ausführen. Der **sa** -Anmelde Name ist das einzige Mitglied der festen Server Rolle **sysadmin** . Zusätzliche Anmeldungen können nicht der festen Server Rolle **sysadmin** hinzugefügt werden. Das Erteilen der Berechtigung **CONTROL SERVER** gleicht der Mitgliedschaft in der festen Serverrolle **sysadmin**. Im folgenden Beispiel wird die **Control Server** -Berechtigung für einen Anmelde Namen mit dem Namen Fay erteilt.
 
 ```sql
 USE master;
@@ -229,7 +229,7 @@ GRANT CONTROL SERVER TO Fay;
 Jeder Anmelde Name, der eine Verbindung mit SQL Server PDW herstellen kann, ist ein Mitglied der **öffentlichen** Server Rolle. Alle-Anmeldungen erben die Berechtigungen, die für ein beliebiges Objekt **Public** erteilt wurden. Weisen Sie nur **öffentliche** Berechtigungen für ein Objekt zu, wenn Sie möchten, dass das Objekt für alle Benutzer verfügbar ist. Die Mitgliedschaft in der **Public** -Rolle kann nicht geändert werden.
 
 > [!NOTE]
-> **Public** wird anders implementiert als andere Rollen. Da alle Server Prinzipale Mitglieder von Public sind, wird die Mitgliedschaft in der **Public** -Rolle nicht in der **sys. server_role_members** -DMV aufgeführt.
+> **Public** wird anders implementiert als andere Rollen. Da alle Server Prinzipale Mitglieder von Public sind, wird die Mitgliedschaft in der **Public** -Rolle nicht in der **sys.server_role_members** -DMV aufgeführt.
 
 ### <a name="fixed-server-roles-vs-granting-permissions"></a>Korrigieren von Server Rollen im Vergleich zum Erteilen von Berechtigungen
 Das System fester Server Rollen und fester Daten bankrollen ist ein Legacy System, das in den 80er Jahren entstanden ist. Behobene Rollen werden weiterhin unterstützt und sind in Umgebungen nützlich, in denen es nur wenige Benutzer gibt und die Sicherheitsanforderungen einfach sind. Ab SQL Server 2005 wurde ein ausführlicheres System zum Erteilen der Berechtigung erstellt. Dieses neue System ist präziser und bietet viele weitere Optionen für das erteilen und Verweigern von Berechtigungen. Die zusätzliche Komplexität des differenzierteren Systems erschwert das Erlernen, aber die meisten Unternehmenssysteme sollten Berechtigungen erteilen, anstatt die Fixed-Rollen zu verwenden. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->

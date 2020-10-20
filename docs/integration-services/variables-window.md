@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad545578e9d3baf019be37b1bc9c7969df5ee1ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa326be8b57eed58f0aa52876d0d32b889320c58
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495101"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193739"
 ---
 # <a name="variables-window"></a>Variablen (Fenster)
 
@@ -50,7 +50,7 @@ ms.locfileid: "88495101"
  Wählen Sie in der Liste eine Variable aus, und klicken Sie auf **Variable löschen**.  
   
  **Rasteroptionen**  
- Klicken Sie auf diese Option, um das Dialogfeld **Variable Rasteroptionen** zu öffnen. Hier können Sie die Spaltenauswahl ändern und Filter auf das Fenster **Variablen** anwenden. Weitere Informationen finden Sie unter [Variable Rasteroptionen](../integration-services/variable-grid-options.md).  
+ Klicken Sie auf diese Option, um das Dialogfeld **Variable Rasteroptionen** zu öffnen. Hier können Sie die Spaltenauswahl ändern und Filter auf das Fenster **Variablen** anwenden. Weitere Informationen finden Sie unter [Variable Rasteroptionen]().  
   
  **Name**  
  Zeigt den Variablennamen an. Bei benutzerdefinierten Variablen können Sie den Namen der Variablen aktualisieren.  
@@ -116,8 +116,7 @@ ms.locfileid: "88495101"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Variablen &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
- [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Verwenden von Variablen in Paketen](./integration-services-ssis-variables.md)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Generieren von Dumpdateien für die Paketausführung](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
-  
   

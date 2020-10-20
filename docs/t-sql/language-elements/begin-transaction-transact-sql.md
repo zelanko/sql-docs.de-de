@@ -31,12 +31,12 @@ ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7c01e9612661d80294cb92e0348428e469b5b2f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: b40f7e725c4f0a413963e772a741b56aabb65140
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226946"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196834"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -117,7 +117,7 @@ Mit BEGIN TRANSACTION wird eine lokale Transaktion für die Verbindung gestartet
   
  BEGIN TRAN *new_name* WITH MARK kann innerhalb einer vorhandenen Transaktion, die nicht markiert ist, geschachtelt werden. Ist dies der Fall, wird *new_name* der Markierungsname der Transaktion, und zwar unabhängig von dem Namen, den die Transaktion möglicherweise bereits hat. Im folgenden Beispiel ist `M2` der Name der Markierung.  
   
-```  
+```sql  
 BEGIN TRAN T1;  
 UPDATE table1 ...;  
 BEGIN TRAN M2 WITH MARK;  
@@ -152,7 +152,7 @@ COMMIT TRAN T1;
 
 In diesem Beispiel wird AdventureWorks verwendet. 
 
-```
+```sql
 BEGIN TRANSACTION;  
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
@@ -164,9 +164,8 @@ COMMIT;
 
 Im folgenden Beispiel werden die Auswirkungen des Rollbacks einer Transaktion veranschaulicht. In diesem Beispiel führt die ROLLBACK-Anweisung ein Rollback der INSERT-Anweisung aus, die erstellte Tabelle bleibt jedoch weiterhin vorhanden.
 
-```
- 
-CREATE TABLE ValueTable (id int);  
+```sql
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -179,7 +178,7 @@ ROLLBACK;
 
 Im folgenden Beispiel wird gezeigt, wie eine Transaktion benannt wird.  
   
-```  
+```sql
 DECLARE @TranName VARCHAR(20);  
 SELECT @TranName = 'MyTransaction';  
   
@@ -197,7 +196,7 @@ GO
 
 Im folgenden Beispiel wird gezeigt, wie eine Transaktion markiert wird. Die Transaktion `CandidateDelete` wird markiert.  
   
-```  
+```sql  
 BEGIN TRANSACTION CandidateDelete  
     WITH MARK N'Deleting a Job Candidate';  
 GO  

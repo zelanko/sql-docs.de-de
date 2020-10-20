@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0eaa6b0cbe19656096cdb47a31ec73b5fd4ade7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c6e986f032f755f73db249f7ddeff539fca4a8c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392626"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197172"
 ---
 # <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer
 
@@ -40,7 +40,7 @@ ms.locfileid: "88392626"
   
      Wenn Sie keine Variable für das Argument "Erweiterte Eigenschaften" verwenden, müssen Sie es dem Ausdruck, der die Verbindungszeichenfolge enthält, manuell hinzufügen.  
   
-3.  Fügen Sie der Registerkarte **Ablaufsteuerung** einen Foreach-Schleifencontainer hinzu. Informationen zum Konfigurieren eines Foreach-Schleifencontainers finden Sie unter [Konfigurieren eines Foreach-Schleifencontainers](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+3.  Fügen Sie der Registerkarte **Ablaufsteuerung** einen Foreach-Schleifencontainer hinzu. Informationen zum Konfigurieren eines Foreach-Schleifencontainers finden Sie unter [Konfigurieren eines Foreach-Schleifencontainers](./foreach-loop-container.md).  
   
 4.  Wählen Sie auf der Seite **Sammlung** des **Foreach-Schleifen-Editors** den Foreach-Dateienumerator aus, geben Sie den Ordner an, in dem sich die Excel-Arbeitsmappen befinden, und geben Sie den Dateifilter an (normalerweise *.xlsx).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "88392626"
   
 6.  Schließen Sie den **Foreach-Schleifen-Editor**.  
   
-7.  Fügen Sie dem Paket einen Excel-Verbindungs-Manager hinzu, wie unter [Hinzufügen, Löschen oder Freigeben eines Verbindungs-Managers in einem Paket](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)beschrieben. Wählen Sie für die Verbindung eine vorhandene Excel-Arbeitsmappendatei aus, um Überprüfungsfehler zu vermeiden.  
+7.  Fügen Sie dem Paket einen Excel-Verbindungs-Manager hinzu, wie unter [Hinzufügen, Löschen oder Freigeben eines Verbindungs-Managers in einem Paket](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))beschrieben. Wählen Sie für die Verbindung eine vorhandene Excel-Arbeitsmappendatei aus, um Überprüfungsfehler zu vermeiden.  
   
     > [!IMPORTANT]  
     >  Wählen Sie im **Verbindungs-Manager-Editor für Excel** eine vorhandene Excel-Arbeitsmappe aus, um Überprüfungsfehler zu vermeiden, wenn Sie Tasks und Datenflusskomponenten konfigurieren, die diesen Excel-Verbindungs-Manager verwenden. Diese Arbeitsmappe wird vom Verbindungs-Manager zur Laufzeit nicht mehr verwendet, wenn Sie, wie in den folgenden Schritten beschrieben, einen Ausdruck für die **ConnectionString**-Eigenschaft konfigurieren. Nachdem Sie das Paket erstellt und konfiguriert haben, können Sie im Eigenschaftenfenster den Wert der **ConnectionString** -Eigenschaft löschen. Wenn Sie diesen Wert löschen, ist die Verbindungszeichenfolgen-Eigenschaft des Excel-Verbindungs-Managers allerdings erst dann wieder gültig, wenn die Foreach-Schleife ausgeführt wird. Daher müssen Sie für die Tasks, in denen der Verbindungs-Manager verwendet wird, oder für das Paket die **DelayValidation**-Eigenschaft auf **True** festlegen, um Überprüfungsfehler zu vermeiden.  
@@ -77,11 +77,11 @@ ms.locfileid: "88392626"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>So durchlaufen Sie Excel-Tabellen mithilfe des Enumerators für Foreach-ADO.NET-Schemarowset  
   
-1.  Erstellen Sie einen ADO.NET-Verbindungs-Manager, der mit dem Microsoft ACE OLE DB-Anbieter eine Verbindung mit einer Excel-Arbeitsmappe herstellt. Stellen Sie auf der Seite „Alle“ des Dialogfelds **Verbindungs-Manager** sicher, dass Sie die Excel-Version (12.0 in diesem Fall) als Wert der Eigenschaft „Erweiterte Eigenschaften“ eingeben. Weitere Informationen finden Sie unter [Hinzufügen, Löschen oder Freigeben eines Verbindungs-Managers in einem Paket](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)  
+1.  Erstellen Sie einen ADO.NET-Verbindungs-Manager, der mit dem Microsoft ACE OLE DB-Anbieter eine Verbindung mit einer Excel-Arbeitsmappe herstellt. Stellen Sie auf der Seite „Alle“ des Dialogfelds **Verbindungs-Manager** sicher, dass Sie die Excel-Version (12.0 in diesem Fall) als Wert der Eigenschaft „Erweiterte Eigenschaften“ eingeben. Weitere Informationen finden Sie unter [Hinzufügen, Löschen oder Freigeben eines Verbindungs-Managers in einem Paket](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))  
   
 2.  Erstellen Sie eine Zeichenfolgenvariable, die bei jeder Iteration der Schleife den Namen der aktuellen Tabelle empfangen wird.  
   
-3.  Fügen Sie der Registerkarte **Ablaufsteuerung** einen Foreach-Schleifencontainer hinzu. Informationen zum Konfigurieren eines Foreach-Schleifencontainers finden Sie unter [Konfigurieren eines Foreach-Schleifencontainers](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+3.  Fügen Sie der Registerkarte **Ablaufsteuerung** einen Foreach-Schleifencontainer hinzu. Informationen zum Konfigurieren eines Foreach-Schleifencontainers finden Sie unter [Konfigurieren eines Foreach-Schleifencontainers](./foreach-loop-container.md).  
   
 4.  Wählen Sie auf der Seite **Auflistung** des **Foreach-Schleifen-Editors** den Enumerator für Foreach-ADO.NET-Schemarowset aus.  
   
@@ -100,11 +100,10 @@ ms.locfileid: "88392626"
   
 ## <a name="see-also"></a>Siehe auch  
  [Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
- [Konfigurieren eines Foreach-Schleifencontainers](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
+ [Konfigurieren eines Foreach-Schleifencontainers](./foreach-loop-container.md)   
  [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel-Verbindungs-Manager](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Excel-Quelle](../../integration-services/data-flow/excel-source.md)   
  [Excel-Ziel](../../integration-services/data-flow/excel-destination.md)   
  [Arbeiten mit Excel-Dateien mit dem Skripttask](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
-  
   

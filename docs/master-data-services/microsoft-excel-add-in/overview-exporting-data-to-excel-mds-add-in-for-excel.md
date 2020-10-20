@@ -1,5 +1,6 @@
 ---
-title: 'Übersicht: Exportieren von Daten nach Excel (MDS-Add-in für Excel) | Microsoft-Dokumentation'
+description: 'Übersicht: Exportieren von Daten nach Excel (MDS-Add-in für Excel)'
+title: Exportieren von Daten nach Excel
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 75a23041a3e822ec103012aa18475a092b27b816
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14ebf23101358677f0c9f0afdf4ed069199614ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257630"
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Übersicht: Exportieren von Daten nach Excel (MDS-Add-in für Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]müssen Sie Daten aus dem MDS-Repository in ein aktives Excel-Arbeitsblatt exportieren, bevor Sie damit arbeiten können. Wenn Sie die Daten nicht mehr für Ihre Arbeit benötigen, importieren Sie sie in das MDS-Repository, um sie für andere Benutzer freizugeben.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68074500"
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Filtern Sie MDS-Daten, bevor Sie sie in Excel laden.|[Filter Data before Exporting &#40;MDS Add-in for Excel&#41; (Filtern von Daten vor dem Exportieren (MDS-Add-In für Excel))](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)|  
-|Laden Sie MDS-Daten in Excel.|[Exportieren von Daten nach Excel aus Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|Laden Sie MDS-Daten in Excel.|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |Ändern Sie die Reihenfolge der Spalten, bevor Sie Daten herunterladen.|[Neuanordnen von Spalten &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f5f18f3306256906d6c419957aa3d97d3506e7d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425882"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197137"
 ---
 # <a name="script-task"></a>Skripttask
 
@@ -79,15 +79,15 @@ ms.locfileid: "88425882"
   
  Klicken Sie auf die folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Skripttask-Editor &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/script-task-editor-general-page.md)  
+-   [Skripttask-Editor &#40;Seite „Allgemein“&#41;]()  
   
--   [Skripttask-Editor &#40;Seite Skript&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
+-   [Skripttask-Editor &#40;Seite Skript&#41;]()  
   
 -   [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)  
   
  Weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer finden Sie im folgenden Thema:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>Programmgesteuertes Konfigurieren des Skripttasks  
  Weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie im folgenden Thema:  
@@ -123,7 +123,7 @@ ms.locfileid: "88425882"
   
  Nachdem Sie ein Skript für den Task erstellt haben, können Sie den Wert der **ScriptLanguage** -Eigenschaft nicht mehr ändern.  
   
- Um die Standardskriptsprache für den Skripttask festzulegen, verwenden Sie im Dialogfeld **Optionen** auf der Seite **Allgemein** die Option **Skriptsprache** . Weitere Informationen finden Sie unter [General Page](../../integration-services/control-flow/script-task-editor-general-page.md).  
+ Um die Standardskriptsprache für den Skripttask festzulegen, verwenden Sie im Dialogfeld **Optionen** auf der Seite **Allgemein** die Option **Skriptsprache** . Weitere Informationen finden Sie unter [General Page]().  
   
  **EntryPoint**  
  Geben Sie die Methode an, die die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Laufzeit als Einstiegspunkt in den Code des Skripttasks aufruft. Die angegebene Methode muss in der ScriptMain-Klasse des Projekts der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Tools für Anwendungen (VSTA) angegeben werden. ScriptMain ist die Standardklasse, die von den Skriptvorlagen generiert wird.  
@@ -148,5 +148,4 @@ ms.locfileid: "88425882"
 ## <a name="related-content"></a>Verwandte Inhalte  
   
 -   Technischer Artikel [Vorgehensweise: Senden von E-Mails mit Zustellungsbenachrichtigung in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Gewusst wie: Senden von E-Mails mit Zustellungsbenachrichtigung in C#) auf shareourideas.com  
-  
   

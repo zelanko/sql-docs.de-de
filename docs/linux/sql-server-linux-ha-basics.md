@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fa9fc496d10a189d75686e3c72f2453b89184626
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 411fe456ae96afdd5a01c0d6cb649035e121fb1b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785134"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115643"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Grundlagen zur SQL Server-Verfügbarkeit für Linux-Bereitstellungen
 
@@ -216,7 +216,7 @@ Wenn Sie virtuelle Computer für Linux-basierte [!INCLUDE[ssnoversion-md](../inc
 Bei der Virtualisierung von Verfügbarkeitsgruppen und Failoverclusterinstanzen müssen Sie sicherstellen, dass für die Knoten eines bestimmten Pacemaker-Clusters Antiaffinität festgelegt ist. Wenn in einer Verfügbarkeitsgruppe oder Failoverclusterinstanz die VMs, die [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] hosten, für Hochverfügbarkeit konfiguriert sind, sollten diese niemals auf demselben Hypervisorhost ausgeführt werden. Wenn z. B. eine Failoverclusterinstanz mit zwei Knoten bereitgestellt wird, müssen *mindestens* drei Hypervisorhosts vorhanden sein, damit eine VM, die einen Knoten hostet, bei einem Hostausfall an anderer Stelle platziert werden kann. Das ist vor allem dann wichtig, wenn Features wie die Livemigration oder vMotion verwendet werden.
 
 Weitere Informationen finden Sie in den folgenden Dokumenten:
--   Hyper-V-Dokumentation: [Verwenden von Gastclustering für Hochverfügbarkeit](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
+-   Hyper-V-Dokumentation: [Verwenden von Gastclustering für Hochverfügbarkeit](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn440540(v=ws.11))
 -   Whitepaper (für Windows-basierte Bereitstellungen geschrieben; die meisten Informationen sind aber auf Linux übertragbar): [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere (Planen hochverfügbarer, unternehmenskritischer SQL Server-Bereitstellungen mit VMware vSphere)](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 ### <a name="networking"></a>Netzwerk

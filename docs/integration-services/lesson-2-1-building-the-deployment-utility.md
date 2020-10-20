@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bf91bcb1f0f9db399980c7650ae9b7491c47c78a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e1b6c318bd971e5352ad0191ccad51e20f5560a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461965"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193800"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lektion 2-1: Erstellen des Bereitstellungshilfsprogramms
 
@@ -69,7 +69,6 @@ Vor dem Erstellen des Bereitstellungshilfsprogramms müssen Sie die Eigenschafte
 [Schritt 2: Überprüfen des Bereitstellungspakets](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Erstellen eines Bereitstellungs-Hilfsprogramms](../integration-services/packages/create-a-deployment-utility.md)  
-  
+[Erstellen eines Bereitstellungs-Hilfsprogramms](./packages/legacy-package-deployment-ssis.md)  
   
   

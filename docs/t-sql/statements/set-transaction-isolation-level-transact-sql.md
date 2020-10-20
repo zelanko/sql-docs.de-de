@@ -28,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88cbb1203595203af88cf9e9da6e122cc7db5322
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 6d8b590e304120015f6333546a08c8c78a26493c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227455"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038333"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   Verwendung der READ COMMITTED-Isolationsstufe und gleichzeitiges Festlegen der Datenbankoption READ_COMMITTED_SNAPSHOT auf ON.  
   
--   Verwendung der SNAPSHOT-Isolationsstufe. Weitere Informationen zur Momentaufnahmeisolation finden Sie unter [Momentaufnahmeisolation in SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
+-   Verwendung der SNAPSHOT-Isolationsstufe. Weitere Informationen zur Momentaufnahmeisolation finden Sie unter [Momentaufnahmeisolation in SQL Server](/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
   
  READ COMMITTED  
  Gibt an, dass Anweisungen Zeilen nicht lesen können, die von anderen Transaktionen geändert wurden, für die jedoch noch kein Commit ausgeführt wurde. Dadurch werden Dirty Reads verhindert. Daten können von anderen Transaktionen zwischen einzelnen Anweisungen innerhalb der aktuellen Transaktion geändert werden, was zu nicht wiederholbaren Lesevorgängen oder Phantomdaten führt. Diese Option ist die Standardeinstellung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -90,7 +90,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 -   Wenn READ_COMMITTED_SNAPSHOT auf ON festgelegt ist (Standardeinstellung bei Azure SQL-Datenbank), verwendet [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Zeilenversionsverwaltung, um jede Anweisung mit einer hinsichtlich der Transaktion konsistenten Momentaufnahme der Daten so darzustellen, wie die Daten zu Beginn der Anweisung vorhanden waren. Es werden keine Sperren verwendet, um die Daten vor Updates durch andere Transaktionen zu schützen.
 
 > [!IMPORTANT]  
-> Das Auswählen einer Transaktionsisolationsstufe hat keine Auswirkungen auf die Sperren, die zum Schutz der Datenänderung eingerichtet werden. Eine Transaktion erhält immer eine exklusive Sperre für alle von ihr geänderten Daten und hält diese Sperre bis zum Abschluss der Transaktion aufrecht, und zwar unabhängig davon, welche Isolationsstufe für diese Transaktion festgelegt wurde. Darüber hinaus verwendet ein auf der Isolationsstufe READ_COMMITTED ausgeführtes Update Aktualisierungssperren für die ausgewählten Datenzeilen, während ein auf der Isolationsstufe SNAPSHOT ausgeführtes Update Zeilenversionen verwendet, um die zu aktualisierenden Zeilen auszuwählen. Für Lesevorgänge wird durch die Transaktionsisolationsstufen in erster Linie der Grad des Schutzes vor den Auswirkungen der Änderungen definiert, die durch andere Transaktionen vorgenommen werden. Weitere Informationen finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
+> Das Auswählen einer Transaktionsisolationsstufe hat keine Auswirkungen auf die Sperren, die zum Schutz der Datenänderung eingerichtet werden. Eine Transaktion erhält immer eine exklusive Sperre für alle von ihr geänderten Daten und hält diese Sperre bis zum Abschluss der Transaktion aufrecht, und zwar unabhängig davon, welche Isolationsstufe für diese Transaktion festgelegt wurde. Darüber hinaus verwendet ein auf der Isolationsstufe READ_COMMITTED ausgeführtes Update Aktualisierungssperren für die ausgewählten Datenzeilen, während ein auf der Isolationsstufe SNAPSHOT ausgeführtes Update Zeilenversionen verwendet, um die zu aktualisierenden Zeilen auszuwählen. Für Lesevorgänge wird durch die Transaktionsisolationsstufen in erster Linie der Grad des Schutzes vor den Auswirkungen der Änderungen definiert, die durch andere Transaktionen vorgenommen werden. Weitere Informationen finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md).
 
 > [!NOTE]  
 >  Die Momentaufnahmeisolation unterstützt FILESTREAM-Daten. Im Momentaufnahmeisolationsmodus entsprechen die von einer beliebigen Anweisung in einer Transaktion gelesenen FILESTREAM-Daten der im Hinblick auf Transaktionen konsistenten Version der Daten, die zu Beginn der Transaktion vorhanden waren.  
@@ -197,5 +197,4 @@ GO
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
-  
   

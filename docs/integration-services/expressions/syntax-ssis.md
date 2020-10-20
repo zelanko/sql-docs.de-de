@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3262135632cc10036bf03c93edd448de16fbbc79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ad0ccea1ed870f09b9d9fc15e12730ff67c6475
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484395"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195272"
 ---
 # <a name="syntax-ssis"></a>Syntax (SSIS)
 
@@ -69,7 +69,7 @@ ms.locfileid: "88484395"
 ###### <a name="equality-operators"></a>Gleichheitsoperatoren  
  Die Ausdrucksauswertungsgrammatik enthält den Gleichheitsoperator (==). Dieser Operator ist das Äquivalent zum =-Operator in Transact-SQL bzw. zum ==-Operator in C#.  
   
-## <a name="functions"></a>Functions  
+## <a name="functions"></a>Funktionen  
  Die Ausdruckssprache enthält Datums- und Zeitfunktionen, mathematische Funktionen und Zeichenfolgenfunktionen, die mit Transact-SQL-Funktionen und C#-Methoden vergleichbar sind.  
   
  Einige Funktionen besitzen zwar denselben Namen wie Transact-SQL-Funktionen, weisen jedoch in der Ausdrucksauswertung eine etwas andere Funktionalität auf.  
@@ -81,12 +81,11 @@ ms.locfileid: "88484395"
  Weitere Informationen finden Sie unter [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Verwenden eines Ausdrucks in einer Datenflusskomponente](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Verwenden eines Ausdrucks in einer Datenflusskomponente](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
 -   Technischer Artikel, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), auf pragmaticworks.com  
   
 -   Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
-  
   
