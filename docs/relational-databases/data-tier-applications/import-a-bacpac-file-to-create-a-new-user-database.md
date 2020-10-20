@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412436"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195582"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -122,8 +122,8 @@ ms.locfileid: "88412436"
   
  **Für eine Azure SQL-Datenbank:**  
   
- - Im Artikel **[Importieren einer BACPAC-Datei zum Erstellen einer neuen Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-import/)** finden Sie ausführliche Anweisungen zur Verwendung des Azure-Portals, von PowerShell, SSMS oder SqlPackage.  
- - In **[SQL-Datenbankoptionen und -leistung: Grundlegendes zum Angebot in den einzelnen Tarifen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** erhalten Sie einen detaillierten Einblick in die verschiedenen Dienstebenen.  
+ - Im Artikel **[Importieren einer BACPAC-Datei zum Erstellen einer neuen Azure SQL-Datenbank](/azure/azure-sql/database/database-import)** finden Sie ausführliche Anweisungen zur Verwendung des Azure-Portals, von PowerShell, SSMS oder SqlPackage.  
+ - In **[SQL-Datenbankoptionen und -leistung: Grundlegendes zum Angebot in den einzelnen Tarifen](/azure/azure-sql/database/purchasing-models)** erhalten Sie einen detaillierten Einblick in die verschiedenen Dienstebenen.  
 
 ### <a name="validation-page"></a>Überprüfung (Seite)  
  Verwenden Sie diese Seite, um sämtliche Probleme zu überprüfen, die den Vorgang blockieren. Beheben Sie zum Fortfahren die Blockierungsprobleme, und klicken Sie dann auf **Überprüfung erneut ausführen** , um sicherzustellen, dass die Überprüfung erfolgreich ist.  
@@ -144,8 +144,7 @@ ms.locfileid: "88412436"
  Klicken Sie auf **Schließen** , um den Assistenten zu schließen.  
   
 ## <a name="see-also"></a>Siehe auch  
-[Importieren einer BACPAC-Datei zum Erstellen einer neuen Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[Importieren einer BACPAC-Datei zum Erstellen einer neuen Azure SQL-Datenbank](/azure/azure-sql/database/database-import)  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportieren einer Datenebenenanwendung](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
-  
   

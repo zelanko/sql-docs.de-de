@@ -19,12 +19,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: cf3289d9d233da56c22739d3912045c2cdaa7554
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c80562f844c096bd836d9db8f57ae408c6602d3d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476201"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196207"
 ---
 # <a name="add-persisted-log-buffer-to-a-database"></a>Hinzufügen von persistentem Protokollpuffer zu einer Datenbank
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,6 +83,6 @@ Es gelten normale Wiederherstellungsbedingungen. Wenn persistenter Protokollpuff
   
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Funktionsweise (schnellere Ausführung): Nicht flüchtiger SQL Server-Speicher: Protokollfragmentzwischenspeicherung auf NVDIMM](https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)
+- [Funktionsweise (schnellere Ausführung): Nicht flüchtiger SQL Server-Speicher: Protokollfragmentzwischenspeicherung auf NVDIMM](/archive/blogs/bobsql/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm)
 - [Verfügbar gemachte Daten: Wartezeit und Dauerhaftigkeit mit SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Latency-and-Durability-with-SQL-Server-2016)
-- [Beschleunigung der Transaktionscommitwartezeit mit Speicherklassenspeicher in Windows Server 2016/SQL Server 2016 SP1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)
+- [Beschleunigung der Transaktionscommitwartezeit mit Speicherklassenspeicher in Windows Server 2016/SQL Server 2016 SP1](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)

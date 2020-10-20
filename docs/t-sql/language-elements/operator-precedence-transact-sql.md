@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d95c22ef26f7e0cbecad3c0f2e6b04f2ac8c8b37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eab9aaf31173a9aaa40b6cfb32c27dbaf6474428
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467573"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187313"
 ---
 # <a name="operator-precedence-transact-sql"></a>Operatorrangfolge (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88467573"
  Wenn zwei Operatoren die gleiche Position in der Rangfolge belegen, werden sie anhand ihrer Position im Ausdruck von links nach rechts ausgewertet. So wird in dem Ausdruck, der in der folgenden `SET`-Anweisung verwendet wird, der Subtraktionsoperator vor dem Additionsoperator ausgewertet.  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 4 - 2 + 27;  
 -- Evaluates to 2 + 27 which yields an expression result of 29.  
 SELECT @MyNumber;  
@@ -57,7 +57,7 @@ SELECT @MyNumber;
  In dem Ausdruck, der in der folgenden `SET`-Anweisung verwendet wird, besitzt der Multiplikationsoperator Vorrang vor dem Additionsoperator. Der Multiplikationsvorgang wird zuerst ausgewertet. Das Ergebnis des Ausdrucks lautet `13`.  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 2 * 4 + 5;  
 -- Evaluates to 8 + 5 which yields an expression result of 13.  
 SELECT @MyNumber;  
@@ -66,7 +66,7 @@ SELECT @MyNumber;
  In dem Ausdruck, der in der folgenden `SET`-Anweisung verwendet wird, bewirken die Klammern, dass die Addition zuerst ausgewertet wird. Das Ergebnis des Ausdrucks lautet `18`.  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 2 * (4 + 5);  
 -- Evaluates to 2 * 9 which yields an expression result of 18.  
 SELECT @MyNumber;  
@@ -75,7 +75,7 @@ SELECT @MyNumber;
  In einem Ausdruck mit geschachtelten Klammern wird der Ausdruck der höchsten Schachtelungstiefe zuerst ausgewertet. Das folgende Beispiel enthält geschachtelte Klammern, und der Ausdruck `5 - 3` ist der Ausdruck mit der höchsten Schachtelungstiefe. Dieser Ausdruck ergibt den Wert `2`. Danach wird mit dem Additionsoperator (`+`) dieses Ergebnis zu `4` addiert, was den Wert `6` ergibt. Schließlich wird `6` mit `2` multipliziert, sodass sich als Ergebnis des Ausdrucks `12` ergibt.  
   
 ```sql  
-DECLARE @MyNumber int;  
+DECLARE @MyNumber INT;  
 SET @MyNumber = 2 * (4 + (5 - 3) );  
 -- Evaluates to 2 * (4 + 2) which then evaluates to 2 * 6, and   
 -- yields an expression result of 12.  

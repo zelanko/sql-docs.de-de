@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d213c8849c23ec1cb57e2628403542a31655a495
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913751"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193772"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generieren von Dumpdateien für die Paketausführung
 
@@ -35,7 +35,7 @@ In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Debu
   
      Rufen Sie diese gespeicherte Prozedur auf, um ein ausgeführtes Paket zu veranlassen, eine Dumpdatei anzuhalten und zu erstellen.  
   
- Wenn Sie das Paketbereitstellungsmodell verwenden, erstellen Sie die Debugdumpdateien, indem Sie entweder mit dem Hilfsprogramm **dtexec** oder dem Hilfsprogramm **dtutil** in der Befehlszeile eine Debugdumpoption angeben. Weitere Informationen finden Sie unter [dtexec Utility](../../integration-services/packages/dtexec-utility.md) und [dtutil Utility](../../integration-services/dtutil-utility.md). Weitere Informationen zu Paketbereitstellungsmodellen finden Sie unter [Bereitstellung von Integration Services-Projekten (SSIS) und -Paketen](https://msdn.microsoft.com/library/hh213290.aspx) und [Legacy-Paketbereitstellung &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
+ Wenn Sie das Paketbereitstellungsmodell verwenden, erstellen Sie die Debugdumpdateien, indem Sie entweder mit dem Hilfsprogramm **dtexec** oder dem Hilfsprogramm **dtutil** in der Befehlszeile eine Debugdumpoption angeben. Weitere Informationen finden Sie unter [dtexec Utility](../../integration-services/packages/dtexec-utility.md) und [dtutil Utility](../../integration-services/dtutil-utility.md). Weitere Informationen zu Paketbereitstellungsmodellen finden Sie unter [Bereitstellung von Integration Services-Projekten (SSIS) und -Paketen](../packages/deploy-integration-services-ssis-projects-and-packages.md) und [Legacy-Paketbereitstellung &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
   
 ## <a name="debug-dump-file-format"></a>Format der Debugdumpdateien  
  Wenn Sie eine Debugdumpoption angeben, erstellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die folgenden Debugdumpdateien:  
@@ -55,4 +55,4 @@ In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Debu
 |Letzte Meldungen|Letzte Meldungen, die vom System ausgegeben wurden. Schließt die Zeit, Typ, Beschreibung und Thread-ID jeder Meldung ein.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description: Die Komponente fehlt, ist nicht registriert, nicht aktualisierbar, oder es fehlen erforderliche Schnittstellen. Die Kontaktinformationen für diese Komponente lauten "".|  
   
 ## <a name="related-information"></a>Verwandte Informationen  
-[Paket ausführen (Dialogfeld)](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+[Paket ausführen (Dialogfeld)](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)

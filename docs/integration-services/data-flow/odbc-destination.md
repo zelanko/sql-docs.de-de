@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 80b988844668fbc5ea1e06af2852ffc9bc1a7785
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04bf343142c1e89affe6ebb056f09771226da6e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392106"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194780"
 ---
 # <a name="odbc-destination"></a>ODBC-Ziel
 
@@ -35,7 +35,7 @@ ms.locfileid: "88392106"
  Das ODBC-Ziel weist eine reguläre Ausgabe und eine Fehlerausgabe auf.  
   
 ##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Ladeoptionen  
- Das ODBC-Ziel kann eines von zwei Zugriffslademodulen verwenden. Sie legen den Modus im [Quellen-Editor für ODBC &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md) fest. Die beiden Modi sind:  
+ Das ODBC-Ziel kann eines von zwei Zugriffslademodulen verwenden. Sie legen den Modus im [Quellen-Editor für ODBC &#40;Seite „Verbindungs-Manager“&#41;](./odbc-source.md) fest. Die beiden Modi sind:  
   
 -   **Batch**: In diesem Modus versucht das ODBC-Ziel, basierend auf den erkannten Funktionen des ODBC-Anbieters die effizienteste Einfügemethode zu verwenden. Für die meisten modernen ODBC-Anbieter umfasst dies das Vorbereiten einer INSERT-Anweisung mit Parametern und das anschließende Verwenden einer Arrayparameterbindung pro Zeile (wobei die Arraygröße über die **BatchSize** -Eigenschaft gesteuert wird). Wenn Sie **Batch** auswählen und der Anbieter diese Methode nicht unterstützt, wechselt das ODBC-Ziel automatisch zum Modus **Zeile für Zeile** .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88392106"
   
 -   Die Spalten mit den Standardausgabedaten.  
   
- Je nach Einstellung des Fehlerverhaltens unterstützt das ODBC-Ziel das Zurückgeben von Fehlern (Datenkonvertierung, Abschneiden), die während des Extraktionsprozesses in der Fehlerausgabe auftreten. Weitere Informationen finden Sie unter [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md).  
+ Je nach Einstellung des Fehlerverhaltens unterstützt das ODBC-Ziel das Zurückgeben von Fehlern (Datenkonvertierung, Abschneiden), die während des Extraktionsprozesses in der Fehlerausgabe auftreten. Weitere Informationen finden Sie unter [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](./odbc-source.md).  
   
 ## <a name="parallelism"></a>Parallelität  
  Es gilt keine Einschränkung in Bezug auf die Anzahl von ODBC-Zielkomponenten, die parallel für dieselbe Tabelle oder verschiedene Tabellen, auf demselben Computer oder auf unterschiedlichen Computern ausgeführt werden können (mit Ausnahme normaler Einschränkungen für globale Sitzungen).  
@@ -67,11 +67,11 @@ ms.locfileid: "88392106"
   
  Weitere Informationen finden Sie in einem der folgenden Themen:  
   
--   [Ziel-Editor für ODBC &#40;Verbindungs-Manager-Seite&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für ODBC &#40;Verbindungs-Manager-Seite&#41;]()  
   
--   [Ziel-Editor für ODBC &#40;Seite Zuordnungen&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für ODBC &#40;Seite Zuordnungen&#41;]()  
   
--   [Ziel-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Ziel-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;]()  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können.  
   
@@ -185,4 +185,3 @@ ms.locfileid: "88392106"
   
 #### <a name="redirect-flow"></a>Zeile umleiten  
  Die Zeile, die den Fehler oder die Kürzung verursacht, wird an die Fehlerausgabe des ODBC-Ziels umgeleitet. Weitere Informationen finden Sie unter "ODBC-Ziel".  
-  

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c3306032f1ee69b99a2b7fd3c080003a93644ac3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bbda2ed08797343b328cf5764a5e73dc9b418e3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457006"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195841"
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
 
@@ -93,7 +93,7 @@ ms.locfileid: "88457006"
 ### <a name="event-handlers-tab"></a>Registerkarte Ereignishandler  
  Die Ereignisse in einem Paket erstellen Sie in der Entwurfsoberfläche der Registerkarte **Ereignishandler** . Wählen Sie auf der Registerkarte **Ereignishandler** das Paket oder das Paketobjekt aus, für das Sie einen Ereignishandler erstellen möchten, und wählen Sie anschließend das Ereignis aus, das dem Ereignishandler zugeordnet werden soll. Ein Ereignishandler weist eine Ablaufsteuerung und optional Datenflüsse auf.  
   
- Weitere Informationen finden Sie unter [Hinzufügen eines Ereignishandlers zu einem Paket](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Weitere Informationen finden Sie unter [Hinzufügen eines Ereignishandlers zu einem Paket](./integration-services-ssis-event-handlers.md).  
   
 ### <a name="package-explorer-tab"></a>Registerkarte Paket-Explorer  
  Pakete können komplex sein und viele Tasks, Verbindungs-Manager, Variablen und sonstige Elemente einschließen. Im Paket-Explorer wird eine vollständige Liste der Paketelemente angezeigt.  
@@ -108,7 +108,7 @@ ms.locfileid: "88457006"
 #### <a name="connection-managers-area"></a>Verbindungs-Manager (Bereich)  
  Die Verbindungs-Manager, die ein Paket verwendet, können Sie im Bereich **Verbindungs-Manager** hinzufügen und ändern. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält Verbindungs-Manager zum Herstellen von Verbindungen mit verschiedenen Datenquellen, beispielsweise mit Textdateien, OLE DB-Datenbanken und .NET-Providern.  
   
- Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](./connection-manager/integration-services-ssis-connections.md).  
  
 ## <a name="control-flow-tab"></a>Ablaufsteuerung (Registerkarte)
 Verwenden Sie die Registerkarte **Ablaufsteuerung** des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers, um die Ablaufsteuerung eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakets zu erstellen.  
@@ -191,5 +191,4 @@ Pakete verwenden Verbindungs-Manager, um Verbindungen mit Datenquellen, beispiel
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services-Benutzeroberfläche](../integration-services/integration-services-user-interface.md)  
-  
   

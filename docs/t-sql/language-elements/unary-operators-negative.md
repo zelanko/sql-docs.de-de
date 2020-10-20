@@ -20,12 +20,12 @@ ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 873bff9e761f83f0b15493810d0c684afa189748
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 808fbbb25bbd91071e4274d29133da11e420d8fc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459242"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196808"
 ---
 # <a name="unary-operators---negative"></a>Unäre Operatoren - Negative
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,10 +62,10 @@ ms.locfileid: "88459242"
 ### <a name="a-setting-a-variable-to-a-negative-value"></a>A. Festlegen einer Variablen auf einen negativen Wert  
  Im folgenden Beispiel wird eine Variable auf einen negativen Wert festgelegt.  
   
-```  
+```sql 
 USE tempdb;  
 GO  
-DECLARE @MyNumber decimal(10,2);  
+DECLARE @MyNumber DECIMAL(10,2);  
 SET @MyNumber = -123.45;  
 SELECT @MyNumber AS NegativeValue;  
 GO  
@@ -85,14 +85,13 @@ NegativeValue
 ### <a name="b-changing-a-variable-to-a-negative-value"></a>B. Ändern einer Variablen in einen negativen Wert  
  Im folgenden Beispiel wird eine Variable in einen negativen Wert geändert.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
-DECLARE @Num1 int;  
+DECLARE @Num1 INT;  
 SET @Num1 = 5;  
 SELECT @Num1 AS VariableValue, -@Num1 AS NegativeValue;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -111,7 +110,7 @@ VariableValue NegativeValue
 ### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. Zurückgeben des negativen Werts einer positiven Konstante  
  Im folgenden Beispiel wird der negative Wert einer positiven Konstante zurückgegeben.  
   
-```  
+```sql  
 USE ssawPDW;  
   
 SELECT TOP (1) - 17 FROM DimEmployee;  
@@ -126,7 +125,7 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 ### <a name="d-returning-the-positive-of-a-negative-constant"></a>D: Zurückgeben des positiven Werts einer negativen Konstante  
  Im folgenden Beispiel wird der positive Wert einer negativen Konstante zurückgegeben.  
   
-```  
+```sql  
 USE ssawPDW;  
   
 SELECT TOP (1) - ( - 17) FROM DimEmployee;  
@@ -141,7 +140,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ### <a name="e-returning-the-negative-of-a-column"></a>E. Zurückgeben des negativen Werts einer Spalte  
  Im folgenden Beispiel wird der negative Wert des `BaseRate`-Werts für jeden Mitarbeiter in der `dimEmployee`-Tabelle zurückgegeben.  
   
-```  
+```sql  
 USE ssawPDW;  
   
 SELECT - BaseRate FROM DimEmployee;  

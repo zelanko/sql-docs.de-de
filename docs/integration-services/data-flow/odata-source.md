@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 064b6294a33b87e41a9439e2759be2461131e388
-ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
+ms.openlocfilehash: 8f872916b7b93a1aab3447bad6579dd672c915e1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89424420"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194798"
 ---
 # <a name="odata-source"></a>OData-Quelle
 
@@ -42,7 +42,7 @@ Die Komponente unterstützt die OData v3 und v4-Protokolle.
 
 Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
 -   Microsoft Dynamics AX Online und Microsoft Dynamics CRM Online
--   SharePoint-Listen. Um alle Listen auf einem SharePoint-Server anzuzeigen, verwenden Sie die folgende URL: `https://<server>/_vti_bin/ListData.svc`. Weitere Informationen zu den URL-Konventionen in SharePoint finden Sie unter [SharePoint Foundation-REST-Schnittstelle](https://msdn.microsoft.com/library/ff521587.aspx).
+-   SharePoint-Listen. Um alle Listen auf einem SharePoint-Server anzuzeigen, verwenden Sie die folgende URL: `https://<server>/_vti_bin/ListData.svc`. Weitere Informationen zu den URL-Konventionen in SharePoint finden Sie unter [SharePoint Foundation-REST-Schnittstelle](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)).
 
 ## <a name="supported-data-types"></a>Unterstützte Datentypen
 
@@ -159,5 +159,4 @@ Beim Datentyp **Decimal** werden Genauigkeit und Skalierung durch die Quellmetad
   
 ## <a name="see-also"></a>Weitere Informationen  
  [OData-Verbindungs-Manager](../../integration-services/connection-manager/odata-connection-manager.md)  
-  
   

@@ -32,12 +32,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c36813bee6c6b75d869bc4f04d47665c206cfcc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 604fbce3aebe8e6e902e2dc9292a24779471c86e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781608"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196212"
 ---
 # <a name="database-lifecycle-management"></a>Datenbank-Lebenszyklusverwaltung
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "85781608"
   
  Zu Beginn werden Design und Intention des DLM-Projekts festgelegt. Darauf folgen die Entwicklung, Überprüfung, Erstellung, Bereitstellung, Verwaltung, Überwachung und Sicherung der Datenbanken, und zuletzt wird ein Datenarchiv angelegt. Dieser Artikel bietet eine Übersicht über die DLM-Phasen, die von der Datenbankentwicklung über die Erstellung und Bereitstellung bis hin zur Überwachung reichen. Zusätzlich werden Aktivitäten zur Datenverwaltung und Datenportabilität erörtert, z. B. Import/Export, Sicherung, Migration und Synchronisierung.  
   
- Die vollständigen Ausführungen finden Sie unter [Datenbank-Lebenszyklusverwaltung (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
+ Die vollständigen Ausführungen finden Sie unter [Datenbank-Lebenszyklusverwaltung (DLM)](/previous-versions/sql/sql-server-guides/jj907294(v=sql.110)).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Azure-Startseite](https://www.windowsazure.com/)   
@@ -53,5 +53,4 @@ ms.locfileid: "85781608"
  [Azure Manage Center](https://www.windowsazure.com/manage/overview/)   
  [Azure-Teamblog](https://www.windowsazure.com/community/blog/)   
  [Azure-Supportoptionen](https://www.windowsazure.com/support/contact/)  
-  
   

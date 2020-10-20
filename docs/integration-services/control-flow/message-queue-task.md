@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e5eab167ddaa471ac0bddbd4b048b38e040b62e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28d2bac4024f067f4c3eb07318a47ef0d91fd171
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484603"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194282"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -46,7 +46,7 @@ ms.locfileid: "88484603"
   
  Beim Senden oder Empfangen von Nachrichten verwendet der Task Nachrichtenwarteschlange einen von vier Nachrichtentypen: Datendatei, Zeichenfolge, Zeichenfolgennachricht an Variable oder Variable. Der Nachrichtentyp Zeichenfolgennachricht an Variable kann nur zum Empfangen von Nachrichten verwendet werden.  
   
- Dieser Task verwendet einen MSMQ-Verbindungs-Manager, um eine Verbindung mit einer Nachrichtenwarteschlange herzustellen. Weitere Informationen finden Sie unter [MSMQ-Verbindungs-Manager](../../integration-services/connection-manager/msmq-connection-manager.md). Weitere Informationen zu Message Queuing finden Sie in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ Dieser Task verwendet einen MSMQ-Verbindungs-Manager, um eine Verbindung mit einer Nachrichtenwarteschlange herzustellen. Weitere Informationen finden Sie unter [MSMQ-Verbindungs-Manager](../../integration-services/connection-manager/msmq-connection-manager.md). Weitere Informationen zu Message Queuing finden Sie in der [MSDN Library](../../sql-server/index.yml).  
   
  Für den Task Nachrichtenwarteschlange muss der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst installiert sein. Manche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten, die Sie für die Installation auf der Seite **Zu installierende Komponenten** oder der Seite **Funktionsauswahl** des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen können, installieren eine Teilmenge der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten. Diese Komponenten sind für bestimmte Tasks hilfreich, aber die Funktionalität von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ist begrenzt. Beispielsweise installiert die [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten, die zum Entwerfen eines Pakets erforderlich sind, aber der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst wird nicht installiert. Deshalb kann der Task Nachrichtenwarteschlange nicht ausgeführt werden. Um eine vollständige Installation von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]sicherzustellen, müssen Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf der Seite **Zu installierende Komponenten** auswählen. Weitere Informationen zum Installieren und Ausführen des Tasks „Nachrichtenwarteschlange“ finden Sie unter [Installieren von Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "88484603"
  Weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften finden Sie in der Dokumentation zur **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** -Klasse im Entwicklerhandbuch.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- Weitere Informationen zum Anzeigen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Weitere Informationen zum Anzeigen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## <a name="message-queue-task-editor-general-page"></a>Editor für den Task 'Nachrichtenwarteschlange' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task „Nachrichtenwarteschlange“** können Sie den Task „Nachrichtenwarteschlange“ benennen und beschreiben, das Nachrichtenformat angeben und kennzeichnen, ob vom Task Nachrichten gesendet oder empfangen werden.  
@@ -123,7 +123,7 @@ ms.locfileid: "88484603"
  **MSMQConnection**  
  Wählen Sie einen vorhandenen MSMQ-Verbindungs-Manager aus, oder klicken Sie auf \<**New connection...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- **Verwandte Themen:** [MSMQ-Verbindungs-Manager ](../../integration-services/connection-manager/msmq-connection-manager.md), [MSMQ-Verbindungs-Manager-Editor](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **Verwandte Themen:** [MSMQ-Verbindungs-Manager ](../../integration-services/connection-manager/msmq-connection-manager.md), [MSMQ-Verbindungs-Manager-Editor](../connection-manager/msmq-connection-manager.md)  
   
  **Meldung**  
  Geben Sie an, ob Nachrichten vom Task Nachrichtenwarteschlange gesendet oder empfangen werden. Wenn Sie **Nachricht senden**auswählen, wird im linken Bereich des Dialogfelds die Seite Senden angezeigt; wenn Sie **Nachricht empfangen**auswählen, wird die Seite Empfangen aufgelistet. Standardmäßig ist dieser Wert auf **Nachricht senden**festgelegt.  
@@ -233,7 +233,7 @@ ms.locfileid: "88484603"
  **Variable**  
  Geben Sie den Variablennamen ein, oder klicken Sie auf \<**New variable...**>, und konfigurieren Sie dann eine neue Variable.  
   
- **Verwandte Themen:** [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Verwandte Themen:** [Hinzufügen von Variablen](../integration-services-ssis-variables.md)  
   
 #### <a name="filter-dynamic-options"></a>Filter (dynamische Optionen)  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88484603"
  **Variable**  
  Geben Sie den Namen der Variablen ein, die die empfangene Nachricht enthalten soll, oder klicken Sie auf \<**New variable...**>, und konfigurieren Sie dann eine neue Variable.  
   
- **Verwandte Themen:** [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Verwandte Themen:** [Hinzufügen von Variablen](../integration-services-ssis-variables.md)  
   
 ## <a name="select-variables"></a>Variablen auswählen
   Mithilfe des Dialogfelds **Variablen auswählen** geben Sie die Variablen an, die beim Vorgang des Sendens einer Nachricht im Task Nachrichtenwarteschlange verwendet werden. Die Liste **Verfügbare Variablen** enthält Systemvariablen und benutzerdefinierte Variablen, die sich auf den Task „Nachrichtenwarteschlange“ oder dessen übergeordneten Container beziehen. Der Task verwendet die Variablen der Liste **Ausgewählte Variablen** .  
@@ -299,9 +299,8 @@ ms.locfileid: "88484603"
  **Neue Variable**  
  Erstellt eine neue Variable.  
   
- **Verwandte Themen:** [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Verwandte Themen:** [Hinzufügen von Variablen](../integration-services-ssis-variables.md)  
 ## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
-  
   

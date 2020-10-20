@@ -21,12 +21,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e15d2d46f6bf1d7c922b11a210825cf78509ebe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 889e473669093646ae7c976025ed4032c17beeff
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468046"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038346"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Was sind SQL-Datenbankfunktionen?
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ Verarbeiten einen einzelnen Wert und geben einen einzelnen Wert zurück. Skalare
 |[Zeichenfolgenfunktionen](string-functions-transact-sql.md)|Führen Operationen für den Eingabewert einer Zeichenfolge (**char** oder **varchar**) aus und geben eine Zeichenfolge oder einen numerischen Wert zurück.|  
 |[Systemfunktionen](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Führen Operationen bezüglich Werten, Objekten und Einstellungen in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und geben Informationen zu diesen zurück.|  
 |[Statistische Systemfunktionen](system-statistical-functions-transact-sql.md)|Geben statistische Informationen zum System zurück.|  
-|[Text- und Imagefunktionen](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Führen Operationen zu Text- bzw. Image-Eingabewerten oder -Spalten aus und geben Informationen zu diesen Werten zurück.|  
+|[Text- und Imagefunktionen](./text-and-image-functions-textptr-transact-sql.md)|Führen Operationen zu Text- bzw. Image-Eingabewerten oder -Spalten aus und geben Informationen zu diesen Werten zurück.|  
   
 ## <a name="function-determinism"></a>Funktionsdeterminismus  
  Eine integrierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktion ist entweder deterministisch oder nicht deterministisch. Funktionen sind deterministisch, wenn sie bei jedem Aufrufen mit bestimmten Eingabewerten immer das gleiche Ergebnis zurückgeben. Funktionen sind nicht deterministisch, wenn sie bei jedem Aufrufen selbst mit denselben bestimmten Eingabewerten verschiedene Ergebnisse zurückgeben können. Weitere Informationen finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -83,5 +83,4 @@ Verarbeiten einen einzelnen Wert und geben einen einzelnen Wert zurück. Skalare
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [Verwenden von gespeicherten Prozeduren &#40;MDX&#41;](../../mdx/using-stored-procedures-mdx.md)  
-  
   

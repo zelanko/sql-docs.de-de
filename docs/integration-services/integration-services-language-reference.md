@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2563d0029f9330dc07402e190d8553c8f509ef97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53c23b16efed8909186d17cfcfafc6e91f283ef3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449872"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193893"
 ---
 # <a name="integration-services-language-reference"></a>Integration Services-Sprachreferenz
 
@@ -40,7 +40,6 @@ ms.locfileid: "88449872"
  [Gespeicherte Prozeduren &#40;Integration Services-Katalog&#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
  Aufrufen der gespeicherten Prozeduren, um [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Objekte und Einstellungen hinzuzufügen, zu entfernen oder zu ändern.  
   
- [Funktionen &#40;Integration Services-Katalog&#41;](https://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f)  
+ [Funktionen &#40;Integration Services-Katalog&#41;](./functions-dm-execution-performance-counters.md)  
  Aufrufen der Funktionen, um [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekte zu verwalten.  
-  
   

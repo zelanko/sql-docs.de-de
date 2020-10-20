@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 264a277c45ebd1f067318625f7b0f1fb986389d4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807029"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196146"
 ---
 # <a name="variables-transact-sql"></a>Variablen (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +43,12 @@ Das folgende Skript erstellt eine kleine Testtabelle, die mit 26 Zeilen aufgefü
 
 ```sql
 -- Create the table.
-CREATE TABLE TestTable (cola int, colb char(3));
+CREATE TABLE TestTable (cola INT, colb CHAR(3));
 GO
 SET NOCOUNT ON;
 GO
 -- Declare the variable to be used.
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 
 -- Initialize the variable.
 SET @MyCounter = 0;
@@ -90,20 +90,20 @@ Die DECLARE-Anweisung initialisiert eine Transact-SQL-Variable auf die folgende 
 
 Beispielsweise erstellt die folgende **DECLARE**-Anweisung eine lokale Variable namens **\@mycounter** vom int-Datentyp.  
 ```sql
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 ```
 Zum Deklarieren von mehreren lokalen Variablen verwenden Sie ein Komma nach der ersten definierten lokalen Variablen und geben dann den Namen und den Datentyp der nächsten lokalen Variablen an.
 
 Diese **DECLARE**-Anweisung erstellt z. B. drei lokale Variablen namens **\@LastName**, **\@FirstName** und **\@StateProvince** und initialisiert alle mit NULL:  
 ```sql
-DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
+DECLARE @LastName NVARCHAR(30), @FirstName NVARCHAR(20), @StateProvince NCHAR(2);
 ```
 
 Der Gültigkeitsbereich einer Variablen ist der Bereich von Transact-SQL-Anweisungen, die auf die Variable verweisen können. Der Gültigkeitsbereich einer Variablen reicht von dem Punkt, an dem sie deklariert wurde, bis zum Ende des Batches oder der gespeicherten Prozedur, in dem bzw. der sie deklariert wurde. Das folgende Skript generiert z. B. einen Syntaxfehler, weil die Variable in einem Batch deklariert wird und dann in einem anderen Batch auf sie verwiesen wird:  
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 -- Terminate the batch by using the GO keyword.
 GO 
@@ -119,7 +119,7 @@ WHERE BusinessEntityID = @MyVariable;
 Variablen haben einen lokalen Gültigkeitsbereich und sind nur im Batch bzw. in der Prozedur sichtbar, in dem bzw. in der sie definiert sind. Im folgenden Beispiel bietet der zur Ausführung von sp_executesql erstellte geschachtelte Gültigkeitsbereich keinen Zugriff auf die Variable, die im höheren Geltungsbereich deklariert ist, und gibt einen Fehler zurück.  
 
 ```sql
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 ```
@@ -134,8 +134,8 @@ Wenn Sie einer Variablen einen Wert mit der SET-Anweisung zuweisen, geben Sie de
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
-DECLARE @FirstNameVariable nvarchar(50),
-   @PostalCodeVariable nvarchar(15);
+DECLARE @FirstNameVariable NVARCHAR(50),
+   @PostalCodeVariable NVARCHAR(15);
 
 -- Set their values.
 SET @FirstNameVariable = N'Amy';
@@ -154,7 +154,7 @@ Einer Variablen kann außerdem ein Wert zugewiesen werden, indem auf sie in eine
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = MAX(EmployeeID)
 FROM HumanResources.Employee;
@@ -169,7 +169,7 @@ Wenn eine SELECT-Anweisung mehrere Zeilen zurückgibt und die Variable auf einen
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = BusinessEntityID
 FROM HumanResources.Employee

@@ -15,12 +15,12 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d842186c057df54276d19c2b5b5774225961b3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9058445789197a3ddcf8b2412028f0bfc5fc85f4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426472"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036833"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Schreiben von Transact-SQL-Anweisungen
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,7 +29,7 @@ Willkommen beim Lernprogramm zum Schreiben von [!INCLUDE[tsql](../includes/tsql-
 >**HINWEIS:** Wenn Sie ein Anfänger auf diesem Gebiet sind, ist es möglicherweise einfacher für Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zu verwenden, anstatt [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen zu schreiben.  
   
 ## <a name="finding-more-information"></a>Weitere Informationsquellen  
-Weitere Informationen zu bestimmten Anweisungen erhalten Sie, indem Sie in der SQL Server-Onlinedokumentation nach dem Namen der jeweiligen Anweisung suchen oder die 1.800 alphabetisch geordneten Sprachelemente unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../t-sql/transact-sql-reference-database-engine.md) über das Inhaltsverzeichnis durchsuchen. Eine weitere gute Strategie zum Suchen von Informationen besteht darin, Stichwörtern zu verwenden, die mit dem betreffenden Fachgebiet zu tun haben. Wenn Sie z.B. wissen möchten, wie Teile eines Datums zurückgegeben werden (z.B. der Monat), suchen Sie im Index nach **Datumsangaben [SQL Server]**, und wählen Sie die **Datumsbestandteile**aus. Dadurch gelangen Sie zum Thema [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md). Wenn Sie beispielsweise Informationen zur Verwendung von Zeichenfolgen benötigen, suchen Sie nach **Zeichenfolgenfunktionen**. Dadurch gelangen Sie zum Thema [Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md).  
+Weitere Informationen zu bestimmten Anweisungen erhalten Sie, indem Sie in der SQL Server-Onlinedokumentation nach dem Namen der jeweiligen Anweisung suchen oder die 1.800 alphabetisch geordneten Sprachelemente unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](./language-reference.md) über das Inhaltsverzeichnis durchsuchen. Eine weitere gute Strategie zum Suchen von Informationen besteht darin, Stichwörtern zu verwenden, die mit dem betreffenden Fachgebiet zu tun haben. Wenn Sie z.B. wissen möchten, wie Teile eines Datums zurückgegeben werden (z.B. der Monat), suchen Sie im Index nach **Datumsangaben [SQL Server]**, und wählen Sie die **Datumsbestandteile**aus. Dadurch gelangen Sie zum Thema [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md). Wenn Sie beispielsweise Informationen zur Verwendung von Zeichenfolgen benötigen, suchen Sie nach **Zeichenfolgenfunktionen**. Dadurch gelangen Sie zum Thema [Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md).  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
 In diesem Lernprogramm wird Ihnen gezeigt, wie eine Datenbank erstellt wird, eine Tabelle in der Datenbank erstellt wird, Daten in die Tabelle eingefügt werden, die Daten aktualisiert, gelesen und gelöscht werden und die Tabelle anschließend gelöscht wird. Sie erstellen Sichten und gespeicherte Prozeduren und konfigurieren einen Benutzer für die Datenbank und die Daten.  
@@ -45,7 +45,7 @@ In dieser Lektion erstellen Sie einen Anmeldenamen und einen Benutzer. Sie erste
 [Lektion 3: Löschen von Datenbankobjekten](../t-sql/lesson-3-deleting-database-objects.md)  
 In dieser Lektion entfernen Sie den Zugriff auf Daten, löschen Daten aus einer Tabelle und löschen die Tabelle und anschließend die Datenbank.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
 Damit Sie dieses Lernprogramm ausführen können, müssen Sie die SQL-Sprache nicht beherrschen, sollten jedoch grundlegende Konzepte einer Datenbank, wie z. B. Tabellen, kennen. Im Verlauf dieses Lernprogramms erstellen Sie eine Datenbank und einen Windows-Benutzer. Für diese Aufgaben sind Berechtigungen auf höherer Ebene erforderlich. Sie sollten sich deshalb als Administrator am Computer anmelden.  
   
 Auf dem System muss Folgendes installiert sein:  
@@ -58,5 +58,3 @@ Auf dem System muss Folgendes installiert sein:
  
   
   
-  
-

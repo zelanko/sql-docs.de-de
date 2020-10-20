@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 940b0ab0250a626673c883542fc2e1f1700f0c52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34df520dcb0f193e2b548a909ea10cd4113995fc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307399"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196654"
 ---
 # <a name="comparison-operators-transact-sql"></a>Vergleichsoperatoren (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +54,10 @@ ms.locfileid: "88307399"
   
  Ausdrücke mit **Boolean**-Datentypen werden in drt WHERE-Klausel zum Filtern von Zeilen verwendet, die bestimmten Suchbedingungen entsprechen. Außerdem werden sie in den Sprachkonstrukten zur Ablaufsteuerung, wie IF und WHILE, verwendet. Beispiel:  
   
-```  
+```syntaxsql  
 -- Uses AdventureWorks  
   
-DECLARE @MyProduct int;  
+DECLARE @MyProduct INT;  
 SET @MyProduct = 750;  
 IF (@MyProduct <> 0)  
    SELECT ProductID, Name, ProductNumber  

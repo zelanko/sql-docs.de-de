@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 227414c3527633c941f7db123cd75083e1b6207b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc8ff10121320da5b291c3c10cdcdac36f0cc364
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495177"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194053"
 ---
 # <a name="debugging-data-flow"></a>Debuggen des Datenflusses
 
@@ -214,7 +214,7 @@ order by source_component_name desc
 9. Wählen Sie im Bereich Anzuzeigende Spalten die Spalten aus, die im Daten-Viewer angezeigt werden sollen. Standardmäßig werden alle verfügbaren Spalten ausgewählt und in der Liste **Angezeigte Spalten** aufgeführt. Verschieben Sie Spalten, die Sie nicht verwenden möchten, in die Liste **Nicht verwendete Spalten** , indem Sie diese auswählen und dann auf den linken Pfeil klicken.  
   
     > [!NOTE]  
-    >  Im Raster werden Werte, die die Datentypen DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 und DT_DBTIMESTAMPOFFSET darstellen, als ISO 8601-formatierte Zeichenfolgen angezeigt, und das **T** -Trennzeichen wird durch ein Leerzeichen ersetzt. Werte, die den DT_DATE-Datentyp und den DT_FILETIME-Datentyp darstellen, enthalten sieben Ziffern für Sekundenbruchteile. Da der DT_FILETIME-Datentyp nur drei Ziffern von Sekundenbruchteilen speichert, zeigt das Raster Nullen für die restlichen vier Ziffern an. Werte, die den DT_DBTIMESTAMP-Datentyp darstellen, enthalten drei Ziffern für Sekundenbruchteile. Für Werte, die die Datentypen DT_DBTIME2, DT_DBTIMESTAMP2 und DT_DBTIMESTAMPOFFSET darstellen, entspricht die Anzahl der Ziffern für Sekundenbruchteile der für den Datentyp der Spalte festgelegten Skala. Weitere Informationen zu ISO 8601-Formaten finden Sie unter [Date and Time Formats](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). Weitere Informationen zu Datentypen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+    >  Im Raster werden Werte, die die Datentypen DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 und DT_DBTIMESTAMPOFFSET darstellen, als ISO 8601-formatierte Zeichenfolgen angezeigt, und das **T** -Trennzeichen wird durch ein Leerzeichen ersetzt. Werte, die den DT_DATE-Datentyp und den DT_FILETIME-Datentyp darstellen, enthalten sieben Ziffern für Sekundenbruchteile. Da der DT_FILETIME-Datentyp nur drei Ziffern von Sekundenbruchteilen speichert, zeigt das Raster Nullen für die restlichen vier Ziffern an. Werte, die den DT_DBTIMESTAMP-Datentyp darstellen, enthalten drei Ziffern für Sekundenbruchteile. Für Werte, die die Datentypen DT_DBTIME2, DT_DBTIMESTAMP2 und DT_DBTIMESTAMPOFFSET darstellen, entspricht die Anzahl der Ziffern für Sekundenbruchteile der für den Datentyp der Spalte festgelegten Skala. Weitere Informationen zu ISO 8601-Formaten finden Sie unter [Date and Time Formats](../data-flow/parsing-data.md). Weitere Informationen zu Datentypen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 10. Klicken Sie auf **OK**.  
 
@@ -274,9 +274,8 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  Wenn Sie den ausführlichen Protokolliergrad aktivieren und Datenabzweigungen hinzufügen, erhöhen sich die von der Datenintegrationslösung ausgeführten E/A-Vorgänge. Daher wird empfohlen, Datenabzweigungen nur zur Problembehandlung hinzuzufügen.  
   
 ### <a name="video"></a>Video  
- Das [Video auf TechNet](https://technet.microsoft.com/sqlserver/dn600163) zeigt, wie Sie Datenabzweigungen im SQL Server 2012 SSISDB-Katalog hinzufügen bzw. verwenden, die das programmgesteuerte Debuggen von Paketen und die Erfassung von Teilergebnissen zur Laufzeit unterstützen. Das Video zeigt außerdem, wie Sie diese Datenabzweigungen auflisten bzw. entfernen, und welche bewährten Methoden für Datenabzweigungen in SSIS-Paketen empfohlen werden.  
+ Das [Video auf TechNet](../../sql-server/index.yml) zeigt, wie Sie Datenabzweigungen im SQL Server 2012 SSISDB-Katalog hinzufügen bzw. verwenden, die das programmgesteuerte Debuggen von Paketen und die Erfassung von Teilergebnissen zur Laufzeit unterstützen. Das Video zeigt außerdem, wie Sie diese Datenabzweigungen auflisten bzw. entfernen, und welche bewährten Methoden für Datenabzweigungen in SSIS-Paketen empfohlen werden.  
  
 ## <a name="see-also"></a>Weitere Informationen  
  [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md)  
-  
   
