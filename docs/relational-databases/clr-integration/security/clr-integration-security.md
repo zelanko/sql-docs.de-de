@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db3a0122abd82506f24464fb7131eeb557c596c8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b0f5c1ba58efb8fddcf5375d2a38fbf9f227f43f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947154"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196869"
 ---
 # <a name="clr-integration-security"></a>Sicherheit der CLR-Integration
 
@@ -47,10 +47,10 @@ ms.locfileid: "87947154"
  [Hostschutzattribute und Programmierung der CLR-Integration](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Stellt Informationen zu den Hostschutzattributwerten bereit, die in SAFE-Assemblys und EXTERNAL_ACCESS-Assemblys nicht zulässig sind.  
   
- [Links in Sicherheit der CLR-Integration](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [Links in Sicherheit der CLR-Integration]()  
  Beschreibt, wie Teile von Benutzercode in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einander aufrufen können.  
   
- [Identitätswechsel und Sicherheit der CLR-Integration](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [Identitätswechsel und Sicherheit der CLR-Integration](../data-access/impersonation-and-credentials-for-connections.md)  
  Erläutert, wie verwalteter Code mithilfe des Identitätswechsels auf externe Ressourcen zugreift.  
   
  Erläutert Probleme, die auftreten, wenn eine verwaltete Methode eine Methode in einer Klasse aufruft, die in einer anderen Assembly enthalten ist.  
@@ -60,5 +60,4 @@ ms.locfileid: "87947154"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von CLR-Integrationsassemblys](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
-  
   

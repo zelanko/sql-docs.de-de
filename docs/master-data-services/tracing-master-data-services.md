@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eda1a559e9936deae31a5511dacd695e8ec6f24e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480435"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195035"
 ---
 # <a name="tracing-master-data-services"></a>Ablaufverfolgung (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "89480435"
   
 -   Ablaufverfolgung wird für Warnungs- und ActivityTracing-Nachrichten aktiviert.  
   
-     Weitere Informationen finden Sie unter [SourceLevels-Enumeration](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels).  
+     Weitere Informationen finden Sie unter [SourceLevels-Enumeration](/dotnet/api/system.diagnostics.sourcelevels).  
   
 -   Die Protokolle werden im Ordner "Logs" unter dem Ordner "WebApplication" gespeichert. Der Standardspeicherort ist "C:\Programme\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs".  
   
@@ -67,9 +67,8 @@ ms.locfileid: "89480435"
     |CorrelationID|Eine Korrelations-ID wird für jede Anforderung zugewiesen. Alle Ablaufverfolgungen, die durch diese Anforderung ausgelöst werden, haben die gleiche Korrelations-ID.<br /><br /> Tritt ein Fehler in der Benutzeroberfläche auf, wird die Korrelations-ID in der Fehlermeldung angezeigt.|  
     |Vorgang|Vorgangsname anfordern. Wenn die Anforderung eine Web-UI-Anforderung ist, ist der Vorgangsname die URL. Wenn die Anforderung eine API-Anforderung ist, ist der Vorgangsname der Dienstname.|  
     |Ebene|Ebene dieses Ablaufverfolgungseintrags.|  
-    |Nachricht|Nachrichtentext der Ablaufverfolgung|  
+    |`Message`|Nachrichtentext der Ablaufverfolgung|  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogbeitrag [Troubleshooting Logging Improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)(Problembehandlung der Protokollierungsverbesserung) auf msdn.com.  
-  
   

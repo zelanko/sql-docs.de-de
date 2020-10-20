@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d52751978dbe2973ecab9506094fad6a6f6c29a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9ad1f77a8e023d55a34e64d6c40ad956b0dac92
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471772"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193490"
 ---
 # <a name="operators-mdx-syntax"></a>Operatoren (MDX-Syntax)
 
@@ -37,7 +37,7 @@ ms.locfileid: "88471772"
 |Addition, Subtraktion, Multiplikation, Division.|[Arithmetic Operators (Arithmetische Operatoren)](../mdx/arithmetic-operators.md)|  
 |Testen, ob eine Bedingung wahr ist (z. B. AND, OR, NOT oder XOR).|[Bitwise Operators (Bitweise Operatoren)](../mdx/bitwise-operators.md)|  
 |Vergleichen eines Werts mit einem anderen Wert oder einem Ausdruck.|[Comparison Operators (Vergleichsoperatoren)](../mdx/comparison-operators.md)|  
-|Dauerhaftes oder temporäres Kombinieren von zwei Zeichenfolgen zu einer Zeichenfolge.|[Verkettungs Operatoren](../mdx/concatenation-operators.md)|  
+|Dauerhaftes oder temporäres Kombinieren von zwei Zeichenfolgen zu einer Zeichenfolge.|[Verkettungsoperatoren](../mdx/concatenation-operators.md)|  
 |Dauerhaftes oder temporäres Kombinieren von zwei Mengenausdrücken zu einer Menge.|[Mengenoperatoren](../mdx/set-operators.md)|  
 |Ausführen einer Operation für einen Operanden.|[Unary Operators (Unäre Operatoren)](../mdx/unary-operators.md)|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "88471772"
   
 -   NICHT  
   
--   UND  
+-   AND  
   
 -   XOR  
   
@@ -83,7 +83,7 @@ ms.locfileid: "88471772"
 ### <a name="determining-results"></a>Bestimmen von Ergebnissen  
  Wenn Sie einfache Ausdrücke zu einem komplexen Ausdruck kombinieren, wird der Datentyp des sich ergebenden Werts bestimmt, indem die Regeln für die Operatoren mit den Regeln für die Rangfolge der Datentypen kombiniert werden.  
   
- Wenn das Ergebnis ein Zeichen- oder ein Unicode-Wert ist, wird die Sortierung des Ergebnisses bestimmt, indem die Regeln für die Operatoren mit den Regeln für die Sortierungsrangfolge kombiniert werden. Weitere Informationen zu Sortierungen finden Sie unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
+ Wenn das Ergebnis ein Zeichen- oder ein Unicode-Wert ist, wird die Sortierung des Ergebnisses bestimmt, indem die Regeln für die Operatoren mit den Regeln für die Sortierungsrangfolge kombiniert werden. Weitere Informationen zu Sortierungen finden Sie unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](/analysis-services/languages-and-collations-analysis-services).  
   
  Außerdem gibt es Regeln, mit denen die Genauigkeit, die Dezimalstellen und die Länge des Ergebnisses basierend auf der Genauigkeit, der Skala und der Länge der einfachen Ausdrücke bestimmt werden.  
   
@@ -101,5 +101,4 @@ ms.locfileid: "88471772"
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [MDX-Syntaxelemente &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

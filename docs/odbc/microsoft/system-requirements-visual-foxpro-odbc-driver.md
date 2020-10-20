@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d48f5ddf105d8ecc315387c0c42c3cb84c104bda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e1347695456e42fa7f140d8caceb9d2e12a2bb1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466322"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196900"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Systemanforderungen (Visual FoxPro-ODBC-Treiber)
 Die Systemanforderungen für die Installation geben das mindestens erforderliche Betriebssystem und den erforderlichen Speicherplatz für die erfolgreiche Installation des Treibers an. Nachdem Sie den Treiber installiert haben, können Sie die jeweilige Anwendungssoftware auswählen, die Sie für den Zugriff auf Visual FoxPro-Daten verwenden möchten.  
   
 ## <a name="installation-requirements"></a>Installationsanforderungen  
- Informationen zu den Installationsanforderungen und anderen Informationen finden [Sie auf der Visual FoxPro-ODBC-Treiber-Download Website](https://go.microsoft.com/fwlink/?LinkId=121318).  
+ Informationen zu den Installationsanforderungen und anderen Informationen finden [Sie auf der Visual FoxPro-ODBC-Treiber-Download Website](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)).  
   
 ## <a name="accessing-visual-foxpro-data"></a>Zugreifen auf Visual FoxPro-Daten  
  Für den Zugriff auf Microsoft Visual FoxPro oder FoxPro 2. *x* -Daten benötigen Sie Folgendes:  

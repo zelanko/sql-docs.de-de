@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e04dd1146bc55d8d68475770a9077fc8d962b56d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5778a8b1d56fa568fe97dba104c1b46da1a005cf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471872"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196044"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -75,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- Das aktuelle Element ändert sich in einer Hierarchie, die auf einer Achse in einer Abfrage verwendet wird. Daher kann sich der aktuelle Member in anderen Hierarchien in derselben Dimension, die nicht auf einer Achse verwendet werden, auch ändern; Dieses Verhalten wird als "Auto-vorhanden" bezeichnet. Weitere Informationen finden Sie unter [Schlüsselkonzepte in MDX-&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Die folgende Abfrage zeigt beispielsweise, wie sich das aktuelle Element in der Calendar Year-Hierarchie der Date-Dimension mit dem aktuellen Element der Calendar-Hierarchie ändert, wenn dieses auf der ROWS-Achse angezeigt wird:  
+ Das aktuelle Element ändert sich in einer Hierarchie, die auf einer Achse in einer Abfrage verwendet wird. Daher kann sich der aktuelle Member in anderen Hierarchien in derselben Dimension, die nicht auf einer Achse verwendet werden, auch ändern; Dieses Verhalten wird als "Auto-vorhanden" bezeichnet. Weitere Informationen finden Sie unter [Schlüsselkonzepte in MDX-&#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Die folgende Abfrage zeigt beispielsweise, wie sich das aktuelle Element in der Calendar Year-Hierarchie der Date-Dimension mit dem aktuellen Element der Calendar-Hierarchie ändert, wenn dieses auf der ROWS-Achse angezeigt wird:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -119,5 +119,4 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

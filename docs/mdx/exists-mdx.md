@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e025449634106003ea6e5d624f0d4a621ef3b93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c879d9091c692cfa7a93490b34c70ad84fa81c4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494913"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193972"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  Gibt die Menge der Tupel der ersten angegebenen Menge zurück, die zusammen mit einem oder mehreren Tupeln der zweiten angegebenen Menge vorhanden sind. Diese Funktion führt die Operationen manuell aus, die Auto-exist automatisch ausführt. Weitere Informationen zu "automatisch vorhanden" finden Sie unter [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
+  Gibt die Menge der Tupel der ersten angegebenen Menge zurück, die zusammen mit einem oder mehreren Tupeln der zweiten angegebenen Menge vorhanden sind. Diese Funktion führt die Operationen manuell aus, die Auto-exist automatisch ausführt. Weitere Informationen zu "automatisch vorhanden" finden Sie unter [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
  Wenn das optionale \<Measure Group Name> -bereitgestellt wird, gibt die-Funktion Tupel zurück, die mit einem oder mehreren Tupeln aus der zweiten Menge vorhanden sind, und den Tupeln, die Zeilen in der Fakten Tabelle der angegebenen Measure-Gruppe zugeordnet sind.  
   
@@ -99,5 +99,4 @@ FROM [Adventure Works]
  [NonEmptyCrossjoin-&#40;MDX-&#41;](../mdx/nonemptycrossjoin-mdx.md)   
  [Nicht leere &#40;MDX-&#41;](../mdx/nonempty-mdx.md)   
  [IsEmpty &#40;MDX-&#41;](../mdx/isempty-mdx.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 623d798a3794da7577cf036cb8a32b2cf9cd7b84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9660b546fbfa293cab2442db3546838dbde80467
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477012"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196743"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX-Datenbearbeitung – SELECT
 
@@ -117,7 +117,7 @@ FROM
   
  Mit der NON VISUAL-Option in der untergeordneten SELECT-Anweisung können Sie Member durch Filtern ausschließen und gleichzeitig die tatsächlichen Gesamtwerte anstelle der gefilterten Gesamtwerte beibehalten. So können Sie die besten zehn Verkaufswerte (Personen/Produkte/Regionen) abfragen und die tatsächliche Summe aller Verkaufswerte für alle abgefragten Member beibehalten und nicht den Gesamtwert der Verkäufe für die zurückgegebenen besten zehn. Weitere Informationen finden Sie unten in den Beispielen.  
   
- Berechnete Elemente können in eingefügt werden \<SELECT query axis clause> , wenn die Verbindung mithilfe des Verbindungs Zeichenfolgen-Parameters *subqueries = 1*geöffnet wurde. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> zur Parameter Verwendung. Es wird ein Beispiel für berechnete Elemente in untergeordneten SELECT-Anweisungen bereitgestellt.  
+ Berechnete Elemente können in eingefügt werden \<SELECT query axis clause> , wenn die Verbindung mithilfe des Verbindungs Zeichenfolgen-Parameters *subqueries = 1*geöffnet wurde. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> zur Parameter Verwendung. Es wird ein Beispiel für berechnete Elemente in untergeordneten SELECT-Anweisungen bereitgestellt.  
   
 ## <a name="autoexists"></a>Autoexists  
  Wenn mindestens zwei Attribute der Dimension in einer SELECT-Anweisung verwendet werden, wertet Analysis Services die Ausdrücke der Attribute aus, damit die Elemente dieser Attribute ordnungsgemäß so beschränkt werden, dass sie die Kriterien aller anderen Attribute erfüllen. Angenommen, Sie arbeiten mit Attributen der Geography-Dimension. Wenn Sie über einen Ausdruck verfügen, der alle Elemente des City-Attributs zurückgibt, und einen weiteren Ausdruck, der Member des Country-Attributs auf alle Länder in Europa einschränkt, führt dies dazu, dass die City-Member nur auf die Städte beschränkt werden, die zu den Ländern in Europa gehören. Diese Eigenschaft von Analysis Services wird als Autoexists bezeichnet und gilt nur für Attribute in der gleichen Dimension. Autoexists gilt nur für Attribute der gleichen Dimension, denn es versucht zu verhindern, dass die in einem Attributausdruck ausgeschlossenen Dimensionsdatensätze von den anderen Attributausdrücken eingeschlossen werden. Autoexists kann auch als resultierende Schnittmenge der unterschiedlichen Attributausdrücke in den Dimensionsdatensätzen bezeichnet werden. Weitere Informationen finden Sie in den folgenden Beispielen:  
@@ -162,8 +162,8 @@ FROM
   
 |Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
-|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04%**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
+|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04 %**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
 |**Touring-1000**|**6.723.794,29 €**|**166.144,17 €**|**2,47%**|  
@@ -213,8 +213,8 @@ FROM
   
 |Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
-|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04%**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
+|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04 %**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
 |**Touring-1000**|**6.723.794,29 €**|**166.144,17 €**|**2,47%**|  
@@ -246,14 +246,14 @@ FROM
   
 |Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
 |**Mountain-300**|**1.907.249,38 €**|**876,95 €**|**0,05%**|  
 |**Mountain-500**|**1.067.327,31 €**|**17.266,09 €**|**1,62%**|  
 |**Mountain-400-W**|**592.450,05 €**|**303,49 €**|**0,05%**|  
 |**LL Mountain Frame**|**521.864,42 €**|**252,41 €**|**0,05%**|  
-|**ML Mountain Frame-W**|**482.953,16 €**|**$206,95**|**0,04%**|  
+|**ML Mountain Frame-W**|**482.953,16 €**|**$206,95**|**0,04 %**|  
 |**ML Mountain Frame**|**343.785,29 €**|**161,82 €**|**0,05%**|  
 |**Women's Mountain Shorts**|**260.304,09 €**|**6.675,56 €**|**2,56%**|  
   
@@ -303,7 +303,7 @@ FROM
   
 |Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
   
@@ -331,11 +331,11 @@ FROM
   
 |Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
   
- Das autoes-Verhalten kann mithilfe des Parameters autoist = [1 | 2 | 3] in der Verbindungs Zeichenfolge geändert werden. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> zur Parameter Verwendung.  
+ Das autoes-Verhalten kann mithilfe des Parameters autoist = [1 | 2 | 3] in der Verbindungs Zeichenfolge geändert werden. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> zur Parameter Verwendung.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Summe des-Elements `Measures.[Order Quantity]` , aggregiert über die ersten acht Monate des Kalender Jahrs 2003, das in der `Date` Dimension enthalten ist, aus dem **Adventure Works** -Cube zurückgegeben.  
@@ -371,7 +371,7 @@ WHERE
   
  Hierdurch werden folgende Ergebnisse erzielt:  
   
-|Geschäftstyp + Kategorie|All Products|Accessories|Fahrräder|Kleidung|Komponenten|  
+|Geschäftstyp + Kategorie|All Products|Accessories|Bikes|Kleidung|Komponenten|  
 |-|-|-|-|-|-|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
@@ -455,9 +455,7 @@ WHERE
 |$80,450,596.98|$79.980.114,38|$470.482,60|0,58%|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Wichtige Konzepte in MDX-&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [Wichtige Konzepte in MDX-&#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [MDX-Daten Bearbeitungsanweisungen &#40;MDX-&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Einschränken der Abfrage mit Abfrage- und Slicerachsen &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
-  
-

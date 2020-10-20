@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8a0fcbcee1d17a98025a1c8adbc02c3409b1db06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0b20fde852e02662780f75bd14e4b9023e01d80
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389296"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192405"
 ---
 # <a name="entity-dependencies-explorer"></a>Entitätsabhängigkeiten-Explorer
 
@@ -29,7 +29,7 @@ ms.locfileid: "88389296"
   
 Sie hilft beim Beantworten folgender Frage: „ Wer verwendet meine Entität und wie?“. Die Ansicht ist ähnlich der Explorer-Seite der abgeleiteten Hierarchie, umfasst jedoch mehr. Sie zeigt alle DBA-Beziehungen an, nicht nur die, die als Teil einer bestimmten Hierarchie definiert sind. Eine Hierarchiedefinition ist nicht erforderlich, da die angezeigte hierarchische Struktur einfach aus vorhandenen DBAs abgeleitet wird.  
   
-Im Menü der Explorer-Seite listet das Entitätsabhängigkeiten-Menüelement alle Entitäten in dem Modell auf, von denen mindestens eine Entität abhängig ist. (D.h. mindestens eine Entität verfügt über ein DBA, das auf die aufgelistete Entität verweist). Die Anzahl der Abhängigkeiten (sowohl direkte als auch indirekte) wird neben dem Namen der Entität angezeigt, und die Liste wird anhand dieser Anzahl sortiert, wobei die Entitäten auf die am häufigsten verwiesen wird, oben stehen. Der nachfolgende Screenshot aus dem Kundenmodell der [Beispieldaten](https://msdn.microsoft.com/library/master-data-services-sample.aspx)zeigt, dass sieben Entitäten (direkt oder indirekt) auf die Entität „BigArea“ verweisen:  
+Im Menü der Explorer-Seite listet das Entitätsabhängigkeiten-Menüelement alle Entitäten in dem Modell auf, von denen mindestens eine Entität abhängig ist. (D.h. mindestens eine Entität verfügt über ein DBA, das auf die aufgelistete Entität verweist). Die Anzahl der Abhängigkeiten (sowohl direkte als auch indirekte) wird neben dem Namen der Entität angezeigt, und die Liste wird anhand dieser Anzahl sortiert, wobei die Entitäten auf die am häufigsten verwiesen wird, oben stehen. Der nachfolgende Screenshot aus dem Kundenmodell der [Beispieldaten](./sql-server-samples-model-deployment-packages-mds.md)zeigt, dass sieben Entitäten (direkt oder indirekt) auf die Entität „BigArea“ verweisen:  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     
@@ -47,5 +47,3 @@ Die Ansicht ist vollständig bearbeitbar, genau wie die Hierarchie-Explorer-Seit
   
   
   
-  
-

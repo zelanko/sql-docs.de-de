@@ -1,6 +1,6 @@
 ---
 description: Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber
-title: Entwickeln von Verbindungs Pool Informationen in einem ODBC-Treiber | Microsoft-Dokumentation
+title: Entwickeln von Connection-Pool Awareness in einem ODBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 519a2b64f6a5330b8c8fde458323c6c900941025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f22be001a7434c13158deae8677b8c7bcb2f0630
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476272"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192310"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber
 In diesem Thema werden die Details der Entwicklung eines ODBC-Treibers erläutert, der Informationen darüber enthält, wie der Treiber Verbindungspooling-Dienste bereitstellen soll.  
   
-## <a name="enabling-driver-aware-connection-pooling"></a>Aktivieren von Treiber fähiger Verbindungs Pooling  
+## <a name="enabling-driver-aware-connection-pooling"></a>Aktivieren von Driver-Aware Verbindungs Pooling  
  Ein Treiber muss die folgenden SPI-Funktionen (ODBC Service Provider Interface) implementieren:  
   
 -   Sqlsetconnectattrfordbcinfo  
@@ -68,7 +68,7 @@ In diesem Thema werden die Details der Entwicklung eines ODBC-Treibers erläuter
 ## <a name="the-connection-rating"></a>Die Verbindungs Bewertung  
  Im Vergleich zum Einrichten einer neuen Verbindung können Sie eine bessere Leistung erzielen, indem Sie einige Verbindungsinformationen (z. b. Datenbank) in einer gepoolten Verbindung zurücksetzen. Daher ist es möglich, dass der Datenbankname nicht in Ihrem Satz von Schlüssel Attributen angezeigt wird. Andernfalls können Sie für jede Datenbank einen separaten Pool verwenden, der in Mid-Tier-Anwendungen möglicherweise nicht gut geeignet ist, wenn Kunden verschiedene Verbindungs Zeichenfolgen verwenden.  
   
- Wenn Sie eine Verbindung mit einem Attribut Konflikt wieder verwenden, sollten Sie die nicht übereinstimmenden Attribute auf der Grundlage der neuen Anwendungsanforderung zurücksetzen, sodass die zurückgegebene Verbindung mit der Anwendungsanforderung identisch ist (Weitere Informationen finden Sie in der Beschreibung des Attributs SQL_ATTR_DBC_INFO_TOKEN in der [SQLSetConnectAttr-Funktion](https://go.microsoft.com/fwlink/?LinkId=59368)). Durch das Zurücksetzen dieser Attribute kann jedoch die Leistung beeinträchtigt werden. Zum Zurücksetzen einer Datenbank ist beispielsweise ein Netzwerkserver Server erforderlich. Verwenden Sie daher eine Verbindung, die vollständig abgeglichen wird, wenn eine Verbindung verfügbar ist.  
+ Wenn Sie eine Verbindung mit einem Attribut Konflikt wieder verwenden, sollten Sie die nicht übereinstimmenden Attribute auf der Grundlage der neuen Anwendungsanforderung zurücksetzen, sodass die zurückgegebene Verbindung mit der Anwendungsanforderung identisch ist (Weitere Informationen finden Sie in der Beschreibung des Attributs SQL_ATTR_DBC_INFO_TOKEN in der [SQLSetConnectAttr-Funktion](../syntax/sqlsetconnectattr-function.md)). Durch das Zurücksetzen dieser Attribute kann jedoch die Leistung beeinträchtigt werden. Zum Zurücksetzen einer Datenbank ist beispielsweise ein Netzwerkserver Server erforderlich. Verwenden Sie daher eine Verbindung, die vollständig abgeglichen wird, wenn eine Verbindung verfügbar ist.  
   
  Eine Bewertungsfunktion im Treiber kann eine vorhandene Verbindung mit einer neuen Verbindungsanforderung auswerten. Beispielsweise kann die Bewertungsfunktion des Treibers Folgendes bestimmen:  
   
@@ -148,4 +148,4 @@ In diesem Thema werden die Details der Entwicklung eines ODBC-Treibers erläuter
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Treiber fähiges Verbindungs Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [ODBC-Dienstanbieterschnittstelle (Service Provider Interface, SPI) – Referenz](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)
+ [ODBC-Dienstanbieterschnittstelle – Referenz](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

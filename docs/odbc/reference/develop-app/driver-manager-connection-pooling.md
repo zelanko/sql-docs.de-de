@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 397aed6cd2b2066bd73343ad861f0212e8357570
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c3c2fecc26cf2d8bbf5d53598a7b28ce7db5612
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483083"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195572"
 ---
 # <a name="driver-manager-connection-pooling"></a>Verbindungspooling des Treiber-Managers
 Das Verbindungspooling ermöglicht einer Anwendung, eine Verbindung aus einem Pool von Verbindungen zu verwenden, die nicht für jede Verwendung wieder hergestellt werden müssen. Nachdem eine Verbindung erstellt und in einen Pool eingefügt wurde, kann eine Anwendung diese Verbindung wieder verwenden, ohne den gesamten Verbindungsprozess auszuführen.  
@@ -60,11 +60,11 @@ Das Verbindungspooling ermöglicht einer Anwendung, eine Verbindung aus einem Po
     > [!NOTE]  
     >  Die Art und Weise, wie eine angeforderte Verbindung mit einer gepoolten Verbindung abgeglichen wird, hängt vom SQL_ATTR_CP_MATCH Environment-Attribut ab Weitere Informationen finden Sie unter [sqlsertenvattr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   
-     ODBC-Anwendungen, die das Verbindungspooling verwenden, sollten während der Anwendungs Initialisierung [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) aufrufen und bei Schließen der Anwendung [initialisieren](https://go.microsoft.com/fwlink/?LinkId=116310) .  
+     ODBC-Anwendungen, die das Verbindungspooling verwenden, sollten während der Anwendungs Initialisierung [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) aufrufen und bei Schließen der Anwendung [initialisieren](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) .  
   
 5.  Ruft **SQLDisconnect** auf, wenn die Verbindung abgeschlossen ist. Die Verbindung wird an den Verbindungspool zurückgegeben und steht zur erneuten Verwendung zur Verfügung.  
   
- Eine ausführliche Erläuterung finden Sie unter [Pooling in den Microsoft Data Access Components](https://go.microsoft.com/fwlink/?LinkId=120776).  
+ Eine ausführliche Erläuterung finden Sie unter [Pooling in den Microsoft Data Access Components](/previous-versions/ms810829(v=msdn.10)).  
   
 ## <a name="connection-pooling-considerations"></a>Überlegungen zum Verbindungs Pooling  
  Das Ausführen einer der folgenden Aktionen mithilfe eines SQL-Befehls (anstelle der ODBC-API) kann den Status der Verbindung beeinflussen und unerwartete Probleme verursachen, wenn Verbindungspooling aktiv ist:  
@@ -83,7 +83,7 @@ Das Verbindungspooling ermöglicht einer Anwendung, eine Verbindung aus einem Po
 ## <a name="driver-aware-connection-pooling"></a>Treiberfähiges Verbindungspooling  
  Ab Windows 8 kann ein ODBC-Treiber Verbindungen im Pool effizienter nutzen. Weitere Informationen finden Sie unter [Treiber fähiges Verbindungs Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Herstellen einer Verbindung mit einer Datenquelle oder einem Treiber](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Entwickeln eines ODBC-Treibers](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Pooling in den Microsoft Data Access-Komponenten](https://go.microsoft.com/fwlink/?LinkId=120776)
+ [Pooling in den Microsoft Data Access-Komponenten](/previous-versions/ms810829(v=msdn.10))

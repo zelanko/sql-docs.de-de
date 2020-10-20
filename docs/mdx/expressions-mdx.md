@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 78e1bc6056906130422db0aa69aff60977af1d0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3b0943d8e493edf60cc491ca8fa7af1447b59ee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387526"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196012"
 ---
 # <a name="expressions-mdx"></a>Ausdrücke (MDX)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88387526"
   
  Ein einfacher Ausdruck kann einer der folgenden Ausdrücke sein:  
   
- Konstant  
+ Konstante  
  Eine Konstante ist ein Symbol, das einen bestimmten Datenwert in MDX darstellt. Zeichenfolgen-, numerische und Datumswerte können als Konstanten gerendert werden. Im Gegensatz zu numerischen Konstanten müssen Zeichenfolgen- und Datumskonstanten in einfache Anführungszeichen (') eingeschlossen werden.  
   
  Skalarfunktion  
@@ -86,6 +86,5 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Sprachreferenz &#40;MDX-&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
-  
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   

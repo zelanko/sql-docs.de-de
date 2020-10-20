@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bc939e8aa055a2a36216a6c94fd032e561cbabf5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bd1f2214820a1795ae8d279c88a0d86c2ca5843
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484003"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194012"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -53,7 +53,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  Wenn weder ein Ebenenausdruck noch ein Indexwert angegeben wird, erstellt die Funktion eine Menge in einer hierarchischen Reihenfolge, indem die untergeordneten Elemente von nur den Elementen abgerufen werden, die sich auf der untersten Ebene der ersten Dimension befinden, auf die in der angegebenen Menge verwiesen wird.  
   
- Durch Abfragen der XMLA-Eigenschaft "mdpropmdxdrillfunctions" können Sie den Grad der Unterstützung überprüfen, den der Server für die Bohr Funktionen bereitstellt. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ Durch Abfragen der XMLA-Eigenschaft "mdpropmdxdrillfunctions" können Sie den Grad der Unterstützung überprüfen, den der Server für die Bohr Funktionen bereitstellt. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="examples"></a>Beispiele  
  Sie können die folgenden Beispiele im MDX-Abfragefenster in SSMS ausprobieren. Verwenden Sie dafür den Adventure Works-Cube.  
@@ -119,5 +119,4 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

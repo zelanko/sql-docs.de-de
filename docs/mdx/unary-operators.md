@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 32f5084190642bd4237d225404c92f0c4754da7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 391b39dd92011ce43b146d740b232d0c4fca6669
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466472"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193480"
 ---
 # <a name="unary-operators"></a>Unäre Operatoren
 
@@ -41,9 +41,8 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- Außerdem verwendet MDX spezielle unäre Operatoren, um den Aggregations Vorgang zu bestimmen, der von der [RollupChildren](../mdx/rollupchildren-mdx.md) -Funktion ausgeführt wird. Weitere Informationen zu diesen besonderen unären Operatoren finden [Sie unter Hinzufügen einer benutzerdefinierten Aggregation zu einer Dimension](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension).  
+ Außerdem verwendet MDX spezielle unäre Operatoren, um den Aggregations Vorgang zu bestimmen, der von der [RollupChildren](../mdx/rollupchildren-mdx.md) -Funktion ausgeführt wird. Weitere Informationen zu diesen besonderen unären Operatoren finden [Sie unter Hinzufügen einer benutzerdefinierten Aggregation zu einer Dimension](/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Operatoren &#40;MDX-Syntax&#41;](../mdx/operators-mdx-syntax.md)  
-  
   

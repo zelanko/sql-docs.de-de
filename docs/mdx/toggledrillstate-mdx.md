@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e10c62742e28b69545efac51f70bf9628b43e08d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd716e631adc3ded77f81278c20f754b28199b49
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412906"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192320"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -46,7 +46,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  Wenn das optionale **rekursive** Flag verwendet wird, werden Drillup und Drilldown rekursiv angewendet. Weitere Informationen zum rekursiven Flag finden Sie unter den [DrillupMember](../mdx/drillupmember-mdx.md) -und [DrilldownMember](../mdx/drilldownmember-mdx.md) -Funktionen.  
   
- Durch Abfragen der XMLA-Eigenschaft "mdpropmdxdrillfunctions" können Sie den Grad der Unterstützung überprüfen, den der Server für die Bohr Funktionen bereitstellt. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ Durch Abfragen der XMLA-Eigenschaft "mdpropmdxdrillfunctions" können Sie den Grad der Unterstützung überprüfen, den der Server für die Bohr Funktionen bereitstellt. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
  Weitere Informationen finden Sie [unter Daten Bank Journal: MDX-Set-Funktionen: die Funktion "deggledrillstate ()](https://go.microsoft.com/fwlink/?LinkId=517759) " für Szenarien und Beispiele für diese Funktion.  
   
@@ -66,5 +66,4 @@ SELECT ToggleDrillState
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d47372f2e90f96aca99eb05bd6a2565c08567611
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddcdee57bd708bc8eb4c3c07d8e86a70705e01e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491384"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193466"
 ---
 # <a name="using-set-expressions"></a>Verwenden von Mengenausdrücken
 
@@ -58,9 +58,8 @@ ms.locfileid: "88491384"
   
  aus drei Tupeln, von denen jede zwei explizite Verweise auf Elemente in der Product Categories-Hierarchie der Product-Dimension und der Calendar-Hierarchie der Date-Dimension enthält.  
   
- Beispiele für Funktionen, die Mengen zurückgeben, finden Sie unter [Arbeiten mit Membern, Tupeln und Mengen &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+ Beispiele für Funktionen, die Mengen zurückgeben, finden Sie unter [Arbeiten mit Membern, Tupeln und Mengen &#40;MDX-&#41;](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;MDX-&#41;](../mdx/expressions-mdx.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: a6cc30d907d6b8c0c14d177106da3457eb828bef
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522004"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194095"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 
@@ -180,13 +180,13 @@ Sobald das WSFC-Feature auf allen Instanzen installiert ist, können Sie den WSF
 
    Wenn Sie später einen Knoten hinzufügen möchten, klicken Sie auf die Aktion **Knoten hinzufügen** im rechten Bereich im **Failovercluster-Manager**.
 
-Notizen:
+Hinweise:
 
 - Das WSFC-Feature ist womöglich nicht in allen Editionen von Windows Server verfügbar. Stellen Sie sicher, dass Ihre Edition über diese Funktion verfügt.
 
-- Stellen Sie sicher, dass Sie über die erforderlichen Berechtigungen zum Einrichten von WSFC in Active Directory verfügen. Sehen Sie sich bei Problemen die Seite [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory (Ausführliche Anleitung für den Failovercluster: Konfigurieren von Konten in Active Directory)](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) an.
+- Stellen Sie sicher, dass Sie über die erforderlichen Berechtigungen zum Einrichten von WSFC in Active Directory verfügen. Sehen Sie sich bei Problemen die Seite [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory (Ausführliche Anleitung für den Failovercluster: Konfigurieren von Konten in Active Directory)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10)) an.
 
-Ausführlichere Informationen zum WSFC finden Sie unter [Failover Clusters (Failovercluster)](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx).
+Ausführlichere Informationen zum WSFC finden Sie unter [Failover Clusters (Failovercluster)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732488(v=ws.10)).
 
 ## <a name="sql-server-always-on-availability-group"></a>SQL Server Always on Verfügbarkeits Gruppe
 
@@ -309,7 +309,7 @@ Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Kn
 
 8. Klicken Sie auf der Seite **Replikate angeben** auf die Registerkarte **Listener** und tun Sie Folgendes: Weitere Informationen in Abbildung 18.
 
-   ein. Klicken Sie auf **Verfügbarkeitsgruppenlistener erstellen**, um einen Verfügbarkeitsgruppenlistener für die MDS-Datenbankverbindung einzurichten.
+   a. Klicken Sie auf **Verfügbarkeitsgruppenlistener erstellen**, um einen Verfügbarkeitsgruppenlistener für die MDS-Datenbankverbindung einzurichten.
 
    b. Geben Sie einen **DNS-Namen des Listeners** ein, z.B. MDSSQLServer.
 
@@ -324,7 +324,7 @@ Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Kn
 
    Abbildung 18
 
-9. Klicken Sie auf der Seite **Datensynchronisierung auswählen** auf **Vollständig**, und geben Sie eine Netzwerkfreigabe an, auf die jeder Knoten zugreifen kann. Klicken Sie auf zum Fortfahren auf **Weiter**. Weitere Informationen in Abbildung 19.
+9. Klicken Sie auf der Seite **Datensynchronisierung auswählen** auf **Vollständig**, und geben Sie eine Netzwerkfreigabe an, auf die jeder Knoten zugreifen kann. Klicken Sie zum Fortfahren auf **Weiter** . Weitere Informationen in Abbildung 19.
 
    Diese Netzwerkfreigabe dient zum Speichern der Datenbanksicherung zum Erstellen von sekundären Replikaten. Wenn diese nicht für Ihre Organisation verfügbar ist, wählen Sie eine andere Einstellung für die Datensynchronisierung aus. Informationen zur Verwendung anderer Optionen zum Erstellen sekundärer Replikate finden Sie unter [SQL Server 2016 Always on Availability Group](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) . In der Abbildung 17 sind auch andere Optionen aufgeführt.
 
@@ -332,7 +332,7 @@ Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Kn
 
    Abbildung 19 
 
-10. Stellen Sie auf der Seite **Überprüfung** sicher, dass Überprüfungen erfolgreich übergeben werden, und beheben Sie aufgetretene Fehler. Klicken Sie auf zum Fortfahren auf **Weiter**.
+10. Stellen Sie auf der Seite **Überprüfung** sicher, dass Überprüfungen erfolgreich übergeben werden, und beheben Sie aufgetretene Fehler. Klicken Sie zum Fortfahren auf **Weiter** .
 
 11. Überprüfen Sie auf der Seite **Zusammenfassung** alle Konfigurationseinstellungen, und klicken Sie dann auf **Beenden**. Dadurch wird die Verfügbarkeitsgruppe erstellt und konfiguriert.
 
@@ -394,5 +394,4 @@ In diesem Whitepaper haben wir gesehen, wie Sie die Master Data Services-Back-En
 
 War dieses Dokument hilfreich? Senden Sie uns Ihr Feedback, indem Sie auf oben im Artikel auf **Kommentare** klicken. 
 
-Ihr Feedback unterstützt uns bei der Verbesserung der Qualität unserer Whitepaper. 
-
+Ihr Feedback unterstützt uns bei der Verbesserung der Qualität unserer Whitepaper.

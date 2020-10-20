@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d6bf8edd7cbeefefa723c1acc374daa8d2c9407
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 52224625f5e2e6fc70ca9a76f750ed374108c52c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449612"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196728"
 ---
 # <a name="value-mdx"></a>Value (MDX)
 
@@ -33,7 +33,7 @@ Member_Expression[.Value]
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die **value** -Funktion gibt den Wert des angegebenen Elements als Zeichenfolge zurück. Das **value** -Argument ist optional, weil der Wert eines Members die Standard Eigenschaft eines Members ist, und ist ein Wert, der für ein Element zurückgegeben wird, wenn kein anderer Wert angegeben wird. Weitere Informationen zu Eigenschaften von Membern finden Sie unter systeminterne Element [Eigenschaften &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) und [benutzerdefinierte Element Eigenschaften &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
+ Die **value** -Funktion gibt den Wert des angegebenen Elements als Zeichenfolge zurück. Das **value** -Argument ist optional, weil der Wert eines Members die Standard Eigenschaft eines Members ist, und ist ein Wert, der für ein Element zurückgegeben wird, wenn kein anderer Wert angegeben wird. Weitere Informationen zu Eigenschaften von Membern finden Sie unter systeminterne Element [Eigenschaften &#40;MDX-&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) und [benutzerdefinierte Element Eigenschaften &#40;MDX-&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Wert eines Elements sowie explizit dessen Name zurückgegeben.  
@@ -59,5 +59,4 @@ from [Adventure Works]
  [Name &#40;MDX-&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX-&#41;](../mdx/uniquename-mdx.md)   
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

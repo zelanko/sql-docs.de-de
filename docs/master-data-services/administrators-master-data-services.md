@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 7e65024ac3673e6579e614ad64931ab772b599f3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480317"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193657"
 ---
 # <a name="administrators-master-data-services"></a>Administratoren (Master Data Services)
 
@@ -65,18 +65,17 @@ ms.locfileid: "89480317"
   
 ## <a name="comparing-administrator-types"></a>Vergleichen von Administratortypen  
   
-|Administratortyp|BESCHREIBUNG|  
+|Administratortyp|Beschreibung|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Administrator|Im [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] zugewiesene Berechtigungen wirken sich nicht auf den Zugriff des Administrators aus.<br /><br /> Kann ein Administrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Berechtigungen für Funktionsbereiche.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Modelle.<br /><br /> Verfügt automatisch über Zugriff auf alle Funktionsbereiche.|  
 |Modelladministrator|Kann ein Modelladministrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Adminberechtigungen.<br /><br /> Verfügt nur über Zugriff auf Funktionsbereiche, für die ihm eine Berechtigung gewährt wurde.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Objekte und Elemente in dem bestimmten Modell.|  
 |Entitätsadministrator|Kann ein Entitätsadministrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Administratorberechtigungen.<br /><br /> Verfügt nur über Zugriff auf Funktionsbereiche, für die ihm eine Berechtigung gewährt wurde.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Objekte und Elemente in der bestimmten Entität.<br /><br /> Können die ausstehenden Changesets genehmigen, wenn die Entitätsänderungen genehmigt werden müssen.|  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogbeitrag [Sicherheitsverbesserungen](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay), auf msdn.com.  
+ Blogbeitrag [Sicherheitsverbesserungen](/archive/blogs/e7/improvements-to-autoplay), auf msdn.com.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen Sie einen Modell Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Erstellen einer Master Data Services Datenbank](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
-  
   

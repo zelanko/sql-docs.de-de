@@ -21,12 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7d0f7afb3d432bdf0c266ee3dfb66813102709
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 41147a1b5a644c5af7a155635c0e7c690f2e4916
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809336"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196714"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -38,9 +38,8 @@ ms.locfileid: "91809336"
 |**name**|**sysname**|Name des Prinzipals. Ist innerhalb eines Servers eindeutig.|  
 |**principal_id**|**int**|Die ID des Prinzipals. Ist innerhalb eines Servers eindeutig.|  
 |**sid**|**varbinary(85)**|Sicherheitsbezeichner (SID, Security-IDentifier) des Prinzipals. Bei einem Windows-Prinzipal entspricht dies Windows SID.|  
-|**type**|**char(1)**|Prinzipaltyp:<br /><br /> S = SQL-Anmeldename<br /><br /> U = Windows-Anmeldename<br /><br /> G = Windows-Gruppe<br /><br /> R = Serverrolle<br /><br /> C = Einem Zertifikat zugeordneter Anmeldename<br /><br /> E = externe Anmeldung von Azure Active Directory<br /><br /> X = externe Gruppe aus Azure Active Directory Gruppe oder Anwendungen
-<br /><br /> K = Einem asymmetrischen Schlüssel zugeordneter Anmeldename|  
-|**type_desc**|**nvarchar(60)**|Beschreibung des Prinzipaltyps:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**type**|**char(1)**|Prinzipaltyp:<br /><br /> S = SQL-Anmeldename<br /><br /> U = Windows-Anmeldename<br /><br /> G = Windows-Gruppe<br /><br /> R = Serverrolle<br /><br /> C = Einem Zertifikat zugeordneter Anmeldename<br /><br /> E = externe Anmeldung von Azure Active Directory<br /><br /> X = externe Gruppe aus Azure Active Directory Gruppe oder Anwendungen<br /><br /> K = Einem asymmetrischen Schlüssel zugeordneter Anmeldename|  
+|**type_desc**|**nvarchar(60)**|Beschreibung des Prinzipaltyps:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> EXTERNAL_LOGIN<br /><br /> EXTERNAL_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = Anmeldename ist deaktiviert.|  
 |**create_date**|**datetime**|Der Zeitpunkt, zu dem der Prinzipal erstellt wurde.|  
 |**modify_date**|**datetime**|Zeitpunkt, zu dem die Prinzipaldefinition zuletzt geändert wurde.|  

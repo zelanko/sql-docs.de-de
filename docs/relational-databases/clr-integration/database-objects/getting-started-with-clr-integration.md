@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc5169c81b53f45ca036b064b47d370f21ec2e32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c307172d7bf8b258cbd56b4ef4abfe6704750358
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885925"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192360"
 ---
 # <a name="getting-started-with-clr-integration"></a>Erste Schritte mit der CLR-Integration
 
@@ -90,7 +90,7 @@ End Class
   
 ```  
   
-Dieses einfache Programm enthält eine einzelne statische Methode in einer öffentlichen Klasse. Diese Methode verwendet zwei neue Klassen, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** und **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** zum Erstellen von verwalteten Datenbankobjekten, um eine einfache Textnachricht auszugeben. Die-Methode weist auch die Zeichenfolge "Hello World!" zu. als Wert eines out-Parameters. Diese Methode kann als gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deklariert und anschließend auf dieselbe Weise wie eine gespeicherte [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Prozedur ausgeführt werden.  
+Dieses einfache Programm enthält eine einzelne statische Methode in einer öffentlichen Klasse. Diese Methode verwendet zwei neue Klassen, **[SqlContext](/dotnet/api/microsoft.sqlserver.server.sqlcontext)** und **[SqlPipe](/dotnet/api/microsoft.sqlserver.server.sqlpipe)** zum Erstellen von verwalteten Datenbankobjekten, um eine einfache Textnachricht auszugeben. Die-Methode weist auch die Zeichenfolge "Hello World!" zu. als Wert eines out-Parameters. Diese Methode kann als gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deklariert und anschließend auf dieselbe Weise wie eine gespeicherte [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Prozedur ausgeführt werden.  
   
 Kompilieren Sie dieses Programm als Bibliothek, laden Sie es in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , und führen Sie es als gespeicherte Prozedur aus.  
   
@@ -175,7 +175,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
 
 Weitere Informationen zur CLR-Integration in SQL Server finden Sie in den folgenden Artikeln:
 
-- [Gespeicherte CLR-Prozeduren](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)
+- [CLR-gespeicherte Prozeduren](/dotnet/framework/data/adonet/sql/clr-stored-procedures)
 - [Von SQL Server verwendete prozessinterne spezifische Erweiterungen für ADO.NET](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)
 - [Debuggen von CLR-Datenbankobjekten](../../../relational-databases/clr-integration/debugging-clr-database-objects.md)
 - [Sicherheit der CLR-Integration](../../../relational-databases/clr-integration/security/clr-integration-security.md)

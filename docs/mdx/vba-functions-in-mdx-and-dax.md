@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 10658daae1321ac7e22af337ef946f5cfb6004cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dcbf0f0321ddc0c1959c4681c0b1dddf49c1aba
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429702"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192290"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>VBA-Funktionen in MDX und DAX
 
 
-  Dieses Dokument enthält einen über kreuzten Verweis auf alle VBA-Funktionen, die in [Visual Basic for Applications Funktionen](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) verfügbar sind, die in MDX unterstützt werden. Außerdem enthält die Liste eine Notiz, wenn funktionale Äquivalenz mit der DAX-Sprache vorliegt.  
+  Dieses Dokument enthält einen über kreuzten Verweis auf alle VBA-Funktionen, die in [Visual Basic for Applications Funktionen](/office/vba/Language/Reference/functions-visual-basic-for-applications) verfügbar sind, die in MDX unterstützt werden. Außerdem enthält die Liste eine Notiz, wenn funktionale Äquivalenz mit der DAX-Sprache vorliegt.  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Referenz zu VBA (Visual Basic für Applikationen)-Funktionen  
   
@@ -51,13 +51,13 @@ ms.locfileid: "88429702"
 |CurDir|Nicht unterstützt||  
 |ZVariant|Nur MDX||  
 |CVErr|Nicht unterstützt||  
-|Datum|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit demselben Namen. die Funktion Date (Year, month, Day), mit der ein Date-Type-Wert aus den angegebenen Argumenten generiert wird.|  
+|Date|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit demselben Namen. die Funktion Date (Year, month, Day), mit der ein Date-Type-Wert aus den angegebenen Argumenten generiert wird.|  
 |DateAdd|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit demselben Namen. die DATEADD ( \<dates> , <number_of_intervals> \<interval> )-Funktion, die verwendet wird, um die angegebenen Datumsangaben um eine bestimmte Anzahl von Intervallen zu verschieben.|  
 |DateDiff|Nur MDX||  
 |DatTeil|Nur MDX||  
 |DatSeriell|Nur MDX||  
 |DatWert|DAX, MDX||  
-|Tag|DAX, MDX||  
+|Day (Tag)|DAX, MDX||  
 |GDA|Nur MDX||  
 |Dir|Nicht unterstützt||  
 |DoEvents|Nicht unterstützt||  
@@ -68,7 +68,7 @@ ms.locfileid: "88429702"
 |FileAttr|Nicht unterstützt||  
 |FileDateTime|Nicht unterstützt||  
 |FileLen|Nicht unterstützt||  
-|Filtern|Nicht unterstützt|**Warnung** MDX implementiert eine andere Funktion mit demselben Namen. die Filter (set_expression Logical_Expression)-Funktion gibt die Menge zurück, die sich aus dem Filtern einer angegebenen Menge basierend auf einer Such Bedingung aus den angegebenen Argumenten ergibt.<br /><br /> **Warnung** DAX implementiert eine andere Funktion mit demselben Namen. die Filter ( \<table> , \<filter> )-Funktion gibt eine Tabelle zurück, die eine Teilmenge einer anderen Tabelle oder eines Ausdrucks aus den angegebenen Argumenten darstellt.|  
+|Filter|Nicht unterstützt|**Warnung** MDX implementiert eine andere Funktion mit demselben Namen. die Filter (set_expression Logical_Expression)-Funktion gibt die Menge zurück, die sich aus dem Filtern einer angegebenen Menge basierend auf einer Such Bedingung aus den angegebenen Argumenten ergibt.<br /><br /> **Warnung** DAX implementiert eine andere Funktion mit demselben Namen. die Filter ( \<table> , \<filter> )-Funktion gibt eine Tabelle zurück, die eine Teilmenge einer anderen Tabelle oder eines Ausdrucks aus den angegebenen Argumenten darstellt.|  
 |Fix|Nur MDX||  
 |Format (Visual Basic für Applikationen)|DAX, MDX||  
 |FormatWährung|Nicht unterstützt||  
@@ -146,17 +146,17 @@ ms.locfileid: "88429702"
 |Str|Nur MDX||  
 |StrVgl|Nur MDX||  
 |StrKonv|Nur MDX||  
-|Zeichenfolge|Nur MDX||  
+|String|Nur MDX||  
 |StrReverse|Nicht unterstützt||  
 |Schalter|Nur MDX||  
 |DIA|Nur MDX||  
 |Registerkarte|Nicht unterstützt||  
 |Tan|Nur MDX||  
 |Time|Nicht unterstützt||  
-|Timer|Nur MDX||  
+|Zeitgeber|Nur MDX||  
 |ZeitSeriell|Nur MDX||  
 |ZeitSeriellStr|DAX, MDX||  
-|Glätten|DAX, MDX||  
+|Trim|DAX, MDX||  
 |TypName|Nur MDX||  
 |UBound|Nicht unterstützt||  
 |Großbst|Nur MDX||  
@@ -165,5 +165,4 @@ ms.locfileid: "88429702"
 |Wochentag|DAX, MDX||  
 |WeekdayName|Nicht unterstützt||  
 |Jahr|DAX, MDX||  
-  
   

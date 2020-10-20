@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d571ed020c1b36ea2e09beca7d2ccbef5899951f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbdae47b3ede8ad2b22258e83a69b4f2776115d9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500473"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192340"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 
@@ -36,7 +36,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  Ein gültiger Zeichenfolgenausdruck, der den Namen einer Elementeigenschaft enthält.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die **Properties** -Funktion gibt den Wert des angegebenen Members für die angegebene Element Eigenschaft zurück. Die Element Eigenschaft kann eine beliebige der systeminternen Element Eigenschaften sein, z. b. " **Name**", " **ID**", " **Key**" oder " **Caption**", oder es kann sich um eine benutzerdefinierte Element Eigenschaft handeln. Weitere Informationen finden Sie unter systeminterne Element [Eigenschaften &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) und [benutzerdefinierte Element Eigenschaften &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
+ Die **Properties** -Funktion gibt den Wert des angegebenen Members für die angegebene Element Eigenschaft zurück. Die Element Eigenschaft kann eine beliebige der systeminternen Element Eigenschaften sein, z. b. " **Name**", " **ID**", " **Key**" oder " **Caption**", oder es kann sich um eine benutzerdefinierte Element Eigenschaft handeln. Weitere Informationen finden Sie unter systeminterne Element [Eigenschaften &#40;MDX-&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) und [benutzerdefinierte Element Eigenschaften &#40;MDX-&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
  Standardmäßig muss der Wert zwingend eine Zeichenfolge sein. Wenn **eingegeben** angegeben wird, ist der Rückgabewert stark typisiert.  
   
@@ -106,7 +106,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwenden von Element Eigenschaften &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
+ [Verwenden von Element Eigenschaften &#40;MDX-&#41;](/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

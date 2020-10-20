@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 142783612b495d7968fec1574e182654ac83fb64
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: e4ee6d69057745486ed72f00721f9ab38833ca2e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480670"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196975"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX-Datenbearbeitung – UPDATE CUBE
 
 
-  Mithilfe der UPDATE CUBE-Anweisung werden Daten in eine beliebige Zelle in einem Cube zurückgeschrieben, der mit der SUM-Aggregation in den übergeordneten Cube aggregiert wird. Eine ausführlichere Erläuterung und ein Beispiel finden Sie unter "Grundlegendes zu Zuordnungen" in diesem Blogbeitrag: [Building a Write Back Application with Analysis Services (Blog)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
+  Mithilfe der UPDATE CUBE-Anweisung werden Daten in eine beliebige Zelle in einem Cube zurückgeschrieben, der mit der SUM-Aggregation in den übergeordneten Cube aggregiert wird. Eine ausführlichere Erläuterung und ein Beispiel finden Sie unter "Grundlegendes zu Zuordnungen" in diesem Blogbeitrag: [Building a Write Back Application with Analysis Services (Blog)](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -110,5 +110,4 @@ Weight_Expression = <leaf cell value> / <existing value>
 ## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [MDX-Daten Bearbeitungsanweisungen &#40;MDX-&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

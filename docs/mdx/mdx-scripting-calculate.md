@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6ec4d0e86c2719613527ec7ea8206f980deebc3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff995f08ffef27abca65db10ff2cd38f2dd01e95
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429762"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196964"
 ---
 # <a name="mdx-scripting---calculate"></a>MDX-Skripts – CALCULATE
 
@@ -41,7 +41,6 @@ CALCULATE
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Skript Anweisungen &#40;MDX-&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [Grundlagen der MDX-Skripterstellung &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)   
- [Definieren von Zuweisungen und anderen Skriptbefehlen](https://docs.microsoft.com/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
-  
+ [Grundlagen der MDX-Skripterstellung &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)   
+ [Definieren von Zuweisungen und anderen Skriptbefehlen](/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   

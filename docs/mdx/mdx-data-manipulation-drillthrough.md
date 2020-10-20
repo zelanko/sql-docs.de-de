@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ee68e6cbb22bc817d478490315ab88ccb87e4ad4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8899c5a9325c638549383683b82724eefa2b1464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387038"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196184"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX-Datenbearbeitung – DRILLTHROUGH
 
@@ -50,7 +50,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  Eine MDX-Anweisung gibt die betreffende Zelle an. Der durch das **MaxRows** -Argument angegebene Wert gibt die maximale Anzahl von Zeilen an, die vom resultierenden Rowset zurückgegeben werden sollen.  
   
- Standardmäßig werden maximal 10.000 Zeilen zurückgegeben. Dies bedeutet, dass Sie, wenn Sie **MaxRows** nicht angeben, mindestens 10.000 Zeilen erhalten. Wenn dieser Wert für Ihr Szenario zu niedrig ist, können Sie **MaxRows** auf eine höhere Zahl festlegen, z `MAXROWS 20000` . b.. Wenn die Gesamtzahl zu niedrig ist, können Sie die Standardeinstellung erhöhen, indem Sie die Server Eigenschaft **olap\query\defaultdrillthrough MaxRows** ändern. Weitere Informationen zum Ändern dieser Eigenschaft finden Sie unter [Server Eigenschaften in Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
+ Standardmäßig werden maximal 10.000 Zeilen zurückgegeben. Dies bedeutet, dass Sie, wenn Sie **MaxRows** nicht angeben, mindestens 10.000 Zeilen erhalten. Wenn dieser Wert für Ihr Szenario zu niedrig ist, können Sie **MaxRows** auf eine höhere Zahl festlegen, z `MAXROWS 20000` . b.. Wenn die Gesamtzahl zu niedrig ist, können Sie die Standardeinstellung erhöhen, indem Sie die Server Eigenschaft **olap\query\defaultdrillthrough MaxRows** ändern. Weitere Informationen zum Ändern dieser Eigenschaft finden Sie unter [Server Eigenschaften in Analysis Services](/analysis-services/server-properties/server-properties-in-analysis-services).  
   
  Sofern nicht anders angegeben, enthalten die zurückgegebenen Spalten alle Granularitätsattribute aller Dimensionen, die mit der Measuregruppe des angegebenen Measures verbunden sind und keine m:n-Dimensionen sind. Cubedimensionen ist zur Unterscheidung von Dimensionen und Measuregruppen ein $-Zeichen vorangestellt. Die **Return** -Klausel wird verwendet, um die Spalten anzugeben, die von der Drillthrough-Abfrage zurückgegeben werden. Die folgenden Funktionen können von der **Return** -Klausel auf ein einzelnes Attribut oder Measure angewendet werden.  
   
@@ -99,5 +99,4 @@ RETURN
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Daten Bearbeitungsanweisungen &#40;MDX-&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

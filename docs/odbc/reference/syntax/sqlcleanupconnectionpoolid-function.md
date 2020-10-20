@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 12046405d10c41796b8ad989f746aaac242f430d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20ad05559aa172ff7e8937359bad93f85347a92a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448840"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193445"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID-Funktion
 **Konformitäts**  
  Eingeführte Version: ODBC 3,81 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
- **Sqlcleanupconnectionpoolid** informiert einen Treiber darüber, dass ein Timeout für eine Pool-ID aufgetreten ist. Ein Timeout für eine Pool-ID kann auftreten, wenn für alle Verbindungen in einem Pool, der dieser Pool-ID zugeordnet ist, ein Timeout Weitere Informationen zum Verbindungs Timeout finden Sie unter [Pooling in den Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) .  
+ **Sqlcleanupconnectionpoolid** informiert einen Treiber darüber, dass ein Timeout für eine Pool-ID aufgetreten ist. Ein Timeout für eine Pool-ID kann auftreten, wenn für alle Verbindungen in einem Pool, der dieser Pool-ID zugeordnet ist, ein Timeout Weitere Informationen zum Verbindungs Timeout finden Sie unter [Pooling in den Microsoft Data Access Components](/previous-versions/ms810829(v=msdn.10)) .  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
  *Poolid*  
  Der Der Pool, der der Pool-ID zugeordnet ist, für die ein Timeout aufgetreten ist.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
@@ -63,4 +63,4 @@ SQLRETURN  SQLCleanupConnectionPoolID (
 ## <a name="see-also"></a>Weitere Informationen  
  [Entwickeln eines ODBC-Treibers](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Treiber fähiges Verbindungs Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [Developing Connection-Pool Awareness in an ODBC Driver (Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber)](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
+ [Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0317d67b62efb84a0447543ca59836da6717f33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483903"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196986"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX-Datendefinition – CREATE MEMBER
 
@@ -48,9 +48,9 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  Ein gültiger Skalarausdruck, der den Wert der Eigenschaft eines berechneten Elements definiert.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die CREATE MEMBER-Anweisung definiert berechnete Elemente, die während der gesamten Sitzung verfügbar sind und somit in mehreren Abfragen im Verlauf der Sitzung verwendet werden können. Weitere Informationen finden Sie unter [Erstellen berechneter Elemente im Bereich einer Sitzung &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
+ Die CREATE MEMBER-Anweisung definiert berechnete Elemente, die während der gesamten Sitzung verfügbar sind und somit in mehreren Abfragen im Verlauf der Sitzung verwendet werden können. Weitere Informationen finden Sie unter [erstellen Session-Scoped berechneter Elemente &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
   
- Sie können auch ein berechnetes Element definieren, das in einer einzelnen Abfrage verwendet wird. Wenn Sie ein berechnetes Element definieren möchten, das auf eine einzelne Abfrage beschränkt ist, verwenden Sie die WITH-Klausel in der SELECT-Anweisung. Weitere Informationen finden Sie unter [Erstellen berechneter Elemente im Bereich einer Abfrage &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ Sie können auch ein berechnetes Element definieren, das in einer einzelnen Abfrage verwendet wird. Wenn Sie ein berechnetes Element definieren möchten, das auf eine einzelne Abfrage beschränkt ist, verwenden Sie die WITH-Klausel in der SELECT-Anweisung. Weitere Informationen finden Sie unter [erstellen Query-Scoped berechneter Elemente &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  *Property_name* kann entweder auf Standardeigenschaften oder optionale Eigenschaften berechneter Elemente verweisen. Standardelementeigenschaften sind in diesem Thema weiter unten aufgelistet. Berechnete Elemente, die mit CREATE Member ohne einen **Sitzungs** Wert erstellt wurden, haben einen Sitzungs Bereich. Außerdem müssen Zeichenfolgen, die in der Definition eines berechneten Elements stehen, in doppelte Anführungszeichen gesetzt werden. Dies unterscheidet sich von der für OLE DB definierten Methode, die angibt, dass Zeichenfolgen in einfachen Anführungszeichen stehen müssen.  
   
@@ -58,11 +58,11 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  Weitere Informationen zu Elementeigenschaften, die durch OLE DB definiert sind, finden Sie in der OLE DB-Dokumentation.  
   
-## <a name="scope"></a>`Scope`  
+## <a name="scope"></a>Bereich  
  Ein berechnetes Element kann in einem der Gültigkeitsbereiche auftreten, die in der folgenden Tabelle aufgeführt sind.  
   
  Abfragebereich  
- Die Sichtbarkeit und Lebensdauer des berechneten Elements ist auf die Abfrage beschränkt. Das berechnete Element ist in einer einzelnen Abfrage definiert. Der Abfragebereich hat Vorrang vor dem Sitzungsbereich. Weitere Informationen finden Sie unter [Erstellen berechneter Elemente im Bereich einer Abfrage &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ Die Sichtbarkeit und Lebensdauer des berechneten Elements ist auf die Abfrage beschränkt. Das berechnete Element ist in einer einzelnen Abfrage definiert. Der Abfragebereich hat Vorrang vor dem Sitzungsbereich. Weitere Informationen finden Sie unter [erstellen Query-Scoped berechneter Elemente &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  Bereich einer Sitzung  
  Die Sichtbarkeit und Lebensdauer des berechneten Elements ist auf die Sitzung beschränkt, in der das Element erstellt wurde. (Die Lebensdauer ist kleiner als die Sitzungsdauer, wenn eine Drop Member-Anweisung für das berechnete Element ausgegeben wird.) Die CREATE Member-Anweisung erstellt ein berechnetes Element mit dem Sitzungs Bereich.  
@@ -124,5 +124,4 @@ WHERE ProfitRatio
  [Drop Member-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [Aktualisieren der Member-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-update-member.md)   
  [MDX-Daten Definitions Anweisungen &#40;MDX-&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

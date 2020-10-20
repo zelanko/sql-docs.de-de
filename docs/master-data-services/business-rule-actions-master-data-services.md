@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 056335a32c0e7f1ae02979190cdf64b0829177df
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 18f95be4c33c1d9695a16f7183407e177bc02925
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813684"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193670"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Geschäftsregelaktionen (Master Data Services)
 
@@ -49,11 +49,11 @@ ms.locfileid: "85813684"
   
  Die einzigen Ausnahmen sind die Aktionen **ist verbindlich** und **ist ungültig** . Diese Aktionen müssen mit einer Aktion zum Ändern von Werten kombiniert werden, damit die Daten erfolgreich überprüft werden können und ein Commit für die Version ausgeführt werden kann.  
   
-|Name der Überprüfung|BESCHREIBUNG|  
+|Name der Überprüfung|Beschreibung|  
 |---------------------|-----------------|  
 |**ist erforderlich**|Das ausgewählte Attribut **ist erforderlich**, es kann also nicht NULL lauten oder leer sein.<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
 |**ist ungültig**|Das ausgewählte Attribut **ist ungültig**.<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
-|**Muss das Muster enthalten**|Das ausgewählte Attribut **muss das Muster enthalten** , das angegeben ist. Verwenden Sie reguläre Ausdrücke von .NET Framework, um das Muster anzugeben.<br /><br /> Weitere Informationen zu regulären Ausdrücken finden Sie unter [Sprachelemente für reguläre Ausdrücke](https://go.microsoft.com/fwlink/?LinkId=164401) in der MSDN Library.<br /><br /> Diese Aktion ist für Text- und Linkwerte gültig.|  
+|**Muss das Muster enthalten**|Das ausgewählte Attribut **muss das Muster enthalten** , das angegeben ist. Verwenden Sie reguläre Ausdrücke von .NET Framework, um das Muster anzugeben.<br /><br /> Weitere Informationen zu regulären Ausdrücken finden Sie unter [Sprachelemente für reguläre Ausdrücke](/dotnet/standard/base-types/regular-expression-language-quick-reference) in der MSDN Library.<br /><br /> Diese Aktion ist für Text- und Linkwerte gültig.|  
 |**muss eindeutig sein**|Das ausgewählte Attribut **muss eindeutig sein** , und zwar unabhängig von definierten Attributen oder in Kombination mit ihnen.<br /><br /> **Bewährte Methode** : Kombinieren Sie diese Aktion mit einer verbindlichen Bedingung, um sicherzustellen, dass Indexfelder in Abonnementsystemen gültig sind.<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.<br /><br /> **HINWEIS**: Wenn das erste Attribut vom Typ „DateTime“ ist, kann es nicht in Kombination mit einem Attribut vom Typ „Numeric“ oder „Text“ verwendet werden. Wenn das erste Attribut vom Typ „Numerisch“ ist, kann es nicht in Kombination mit einem Attribut vom Typ „DateTime“ verwendet werden.|  
 |**Muss einen der folgenden Werte aufweisen**|Das ausgewählte Attribut **muss einen der folgenden Werte aufweisen** , die in einer Liste angegeben sind.<br /><br /> Diese Aktion ist für Textwerte gültig.|  
 |**Muss größer sein als**|Das ausgewählte Attribut **muss größer sein als** ein bestimmtes Attribut oder ein bestimmter Attributwert bzw. muss leer sein.<br /><br /> Diese Aktion ist für Text-, Zahlen- und Datumswerte gültig.|  
@@ -68,13 +68,12 @@ ms.locfileid: "85813684"
 ## <a name="external-action"></a>Externe Aktion  
  **Externe** Aktionen interagieren mit Anwendungen außerhalb von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-|Aktionsname|BESCHREIBUNG|  
+|Aktionsname|Beschreibung|  
 |-----------------|-----------------|  
-|**start workflow**|Initiiert einen externen Workflow. Die Daten, die diese Aktion bewirkt haben, werden an den Workflow übergeben. Weitere Informationen finden Sie unter [SharePoint Workflow Integration with Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
+|**start workflow**|Initiiert einen externen Workflow. Die Daten, die diese Aktion bewirkt haben, werden an den Workflow übergeben. Weitere Informationen finden Sie unter [SharePoint Workflow Integration with Master Data Services](/previous-versions/sql/sql-server-2008-r2/gg690195(v=msdn.10)).<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Geschäftsregel Bedingungen &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Master Data Services von Geschäftsregeln &#40;&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Erstellen und Veröffentlichen einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
-  
   

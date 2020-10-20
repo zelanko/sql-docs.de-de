@@ -9,21 +9,20 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 786df2b518a42f2b04c69f56c56586ca3416d781
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0218782dcd723f0f0dacfb953ff5af36a9c3b08e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484063"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196064"
 ---
 # <a name="assignment-operators"></a>Zuweisungsoperatoren
 
 
   In MDX (Multidimensional Expressions) wird das Gleichheitszeichen (=) als Zuweisungsoperator verwendet.  
   
- Der Zuweisungsoperator wird verwendet, um Teilcubes Werte im MDX-Skript zuzuweisen. Weitere Informationen finden Sie unter [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services).  
+ Der Zuweisungsoperator wird verwendet, um Teilcubes Werte im MDX-Skript zuzuweisen. Weitere Informationen finden Sie unter [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Operatoren &#40;MDX-Syntax&#41;](../mdx/operators-mdx-syntax.md)  
-  
   

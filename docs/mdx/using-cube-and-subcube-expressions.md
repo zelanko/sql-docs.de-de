@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b431d82f24e5bf531dfa407d459ff9f36b543160
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37f23c75d8a947e52daf47ef9648ccbd1587b9a8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88341126"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192300"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Verwenden von Cube- und Teilcubeausdrücken
 
@@ -70,10 +70,9 @@ ms.locfileid: "88341126"
  Ein Teilcubebezeichner wird als *Subcube_Name*angezeigt. in BNF-Schreibweisebeschreibungen von MDX-Anweisungen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Die grundlegende MDX-Abfrage &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
- [Entwickeln von Teilcubes in MDX-&#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [Die grundlegende MDX-Abfrage &#40;MDX-&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [Entwickeln von Teilcubes in MDX-&#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
  [CREATE SUBCUBE-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [Ausdrücke &#40;MDX-&#41;](../mdx/expressions-mdx.md)   
  [SCOPE-Anweisung &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
-  
   

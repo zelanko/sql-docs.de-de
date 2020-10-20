@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c69f0ed73b638fd17183c5efba1c1f5e8e3c74f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88f297829a13c1b7d132230aebab76b9f546704d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756305"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192607"
 ---
 # <a name="deploying-clr-database-objects"></a>Bereitstellen von CLR-Datenbankobjekten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "85756305"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Weitere Informationen zum Erstellen der verschiedenen Typen von verwalteten Datenbankobjekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [CLR-benutzerdefinierte Funktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), benutzerdefinierte CLR [-Aggregate](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR-benutzerdefinierte Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [gespeicherte CLR-Prozeduren](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)und [CLR-Trigger](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Weitere Informationen zum Erstellen der verschiedenen Typen von verwalteten Datenbankobjekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [clr-User-Defined Funktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [clr-User-Defined Aggregate](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR-User-Defined Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [gespeicherte CLR-Prozeduren](/dotnet/framework/data/adonet/sql/clr-stored-procedures)und [CLR-Trigger](/dotnet/framework/data/adonet/sql/clr-triggers).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Bereitstellen der Assembly auf einem Produktionsserver  
  Sobald die CLR-Datenbankobjekte auf dem Testserver getestet und verifiziert wurden, können sie mit einem Bereitstellungsskript auf die Produktionsserver verteilt werden. Weitere Informationen zum Debuggen von verwalteten Datenbankobjekten finden Sie unter [Debugging von CLR-Datenbankobjekten](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
@@ -108,5 +108,4 @@ ms.locfileid: "85756305"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Programmierkonzepte für die Integration der Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

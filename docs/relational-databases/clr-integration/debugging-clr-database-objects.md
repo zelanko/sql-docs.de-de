@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a6e723c8ad5ff8c97a3b57edb554092211da4d7
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 1be293f98a3b78280b16f80ab7dcfcb656f7e0ec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785163"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196893"
 ---
 # <a name="how-to-debug-clr-database-objects"></a>Debuggen von CLR-Datenbankobjekten
 
@@ -47,7 +47,7 @@ Aufgrund der oben genannten Einschränkungen empfehlen wir, dass [!INCLUDE[tsql]
 
 Das Debuggen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfolgt nach einem Pro-Verbindungsmodell. Ein Debugger kann nur Aktivitäten zu einer Clientverbindung erkennen und debuggen, mit der er verknüpft ist. Da die Funktionalität eines Debuggers nicht durch den Verbindungstyp eingeschränkt wird, können sowohl TDS- (Tabular Data Stream) als auch HTTP-Verbindungen gedebuggt werden. Allerdings ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht das Debuggen vorhandener Verbindungen. Das Debuggen unterstützt alle üblichen Debugfunktionen innerhalb von Routinen, die auf dem Server ausgeführt werden. Die Interaktion zwischen einem Debugger und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geschieht durch DCOM (Distributed Component Object Model).  
   
-Weitere Informationen und Szenarien zum Debuggen von verwalteten gespeicherten Prozeduren, Funktionen, Triggern, benutzerdefinierten Typen und Aggregaten finden Sie unter [SQL Server CLR-Integration Datenbank-Debuggen](https://go.microsoft.com/fwlink/?LinkId=120378) in der Visual Studio-Dokumentation.  
+Weitere Informationen und Szenarien zum Debuggen von verwalteten gespeicherten Prozeduren, Funktionen, Triggern, benutzerdefinierten Typen und Aggregaten finden Sie unter [SQL Server CLR-Integration Datenbank-Debuggen](/previous-versions/ms165050(v=vs.100)) in der Visual Studio-Dokumentation.  
   
 Das TCP/IP-Netzwerkprotokoll muss in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aktiviert werden, damit Visual Studio von einem Remotecomputer aus zum Entwickeln, Debuggen und Bereitstellen verwendet werden kann. Weitere Informationen zum Aktivieren des TCP/IP-Protokolls auf dem Server finden Sie unter [Konfigurieren von Client Protokollen](../../database-engine/configure-windows/configure-client-protocols.md).  
   
@@ -60,7 +60,7 @@ Verwenden Sie die folgenden Schritte zum Debuggen eines CLR-Datenbankobjekts in 
 2. Erstellen Sie einen neuen SQL CLR-Typ (c#):
 
    1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Hinzufügen**, **Neues Element...** aus. 
-   1. Wählen Sie im Fenster **Neues Element hinzufügen** die Option **gespeicherte SQL CLR c#-Prozedur**, **benutzerdefinierte SQL CLR c#-Funktion**, benutzerdefinierter SQL CLR **c#-Typ**, **SQL CLR c#-Triggertyp**, **SQL CLR c#-Aggregat**oder **Klasse**aus.
+   1. Wählen Sie im Fenster **Neues Element hinzufügen** die Option **gespeicherte SQL CLR c#-Prozedur**, **SQL CLR c#-User-Defined Funktion**, **SQL CLR c# User-Defined Typ**, **SQL CLR c#-Triggertyp**, **SQL CLR c#-Aggregat**oder **Klasse**aus.
    1. Geben Sie einen Namen für die Quelldatei des neuen Typs an, und klicken Sie dann auf **Hinzufügen**.
 
 3. Fügen Sie Code für den neuen Typ zum Texteditor hinzu. Beispielcode für eine gespeicherte Beispiel Prozedur finden Sie im folgenden Beispiel Abschnitt in diesem Artikel.
@@ -116,6 +116,6 @@ EXEC GetVersion
 
 ## <a name="next-steps"></a>Nächste Schritte
   
-Weitere Informationen zum Debuggen von verwaltetem Code mithilfe von Visual Studio finden Sie unter [Debugging von verwaltetem Code](https://go.microsoft.com/fwlink/?LinkId=120377) in der Visual Studio-Dokumentation.  
+Weitere Informationen zum Debuggen von verwaltetem Code mithilfe von Visual Studio finden Sie unter [Debugging von verwaltetem Code](/visualstudio/debugger/debugging-managed-code) in der Visual Studio-Dokumentation.  
 
 Weitere Informationen finden Sie unter [Programmier Konzepte für die Common Language Runtime-Integration](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md) .  

@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823752"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195804"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
 
@@ -90,7 +90,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
    
 9. Bestätigen Sie auf der Seite **Funktionen**, dass die folgenden Funktionen ausgewählt sind, und klicken Sie dann auf **Weiter**. Diese Funktionen werden für [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] unter [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] benötigt.
   
-    |Features|Features|  
+    |Funktionen|Funktionen|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -110,7 +110,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
  Weitere Informationen über die Installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe des Setups finden Sie unter [Installieren von SQL Server 2016 vom Installations-Assistenten aus &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
- Weitere Informationen zur Installation von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe einer Eingabeaufforderung finden Sie unter [Installieren von SQL Server 2016 von der Eingabeaufforderung](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Wenn Sie eine Eingabeaufforderung verwenden, ist [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] als Funktionsparameter verfügbar.  
+ Weitere Informationen zur Installation von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe einer Eingabeaufforderung finden Sie unter [Installieren von SQL Server 2016 von der Eingabeaufforderung](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Wenn Sie eine Eingabeaufforderung verwenden, ist [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] als Funktionsparameter verfügbar.  
   
  Eine kurze Beschreibung mit Links zu weiteren Informationen zur Installationsvorbereitung finden Sie unter [Installieren von Master Data Services](../master-data-services/install-windows/install-master-data-services.md).  
   
@@ -130,7 +130,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
 3.  Geben Sie auf der Seite **Daten Bank Server** die SQL Server Instanz an. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Fügt Unterstützung für SQL Server verwaltete Instanz hinzu. Legen Sie den Wert **SQL Server Instanz** auf den Host der verwalteten Instanz fest. Beispielsweise `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Fügt Unterstützung für SQL Server verwaltete Instanz hinzu. Legen Sie den Wert **SQL Server Instanz** auf den Host der verwalteten Instanz fest. Beispiel: `xxxxxx.xxxxxx.database.windows.net`.
 
 4. Wählen Sie den **Authentifizierungstyp** aus, und klicken Sie dann auf **Verbindung testen** , um zu bestätigen, dass Sie mithilfe der Anmelde Informationen für den von Ihnen ausgewählten Authentifizierungstyp eine Verbindung Klicken Sie auf **Weiter**.
 
@@ -294,5 +294,4 @@ Weitere Informationen zu den Einstellungen auf der Seite „Webkonfiguration“ 
  [Webanwendung Master Data Manager](../master-data-services/master-data-manager-web-application.md)   
  [Die Seite "Daten Bank Konfiguration" &#40;Konfigurations-Manager für Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [Neues in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  
   

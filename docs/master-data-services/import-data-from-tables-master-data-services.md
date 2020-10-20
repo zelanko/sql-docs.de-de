@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 119ee04be796eb58e0661f02e001ac0b1a2e7a85
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f4b7f610ca23940c676befc107331b406c124cb2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812966"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197021"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importieren von Daten aus Tabellen (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "85812966"
   
 -   Sie müssen über die Berechtigung zum Einfügen von Daten in den STG verfügen. \<name> _Leaf das STG. \<name> _Consolidated, STG. \<name> _Relationship Tabelle in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank.  
   
--   Sie müssen über die Berechtigung verfügen, die gespeicherte Prozedur STG. udp_ \<name> _Leaf, STG. UDP \_ \<name> _Consolidated oder die gespeicherte Prozedur STG. UDP \_ \<name> _Relationship in der- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank auszuführen.  
+-   Sie müssen über Berechtigungen verfügen, um entweder den STG.udp_ \<name> _Leaf, STG. UDP \_ \<name> _Consolidated oder die gespeicherte Prozedur STG. UDP \_ \<name> _Relationship in der- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank auszuführen.  
   
 -   Das Modell darf nicht den Status **Commit wurde ausgeführt**haben.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "85812966"
   
 2.  Öffnen Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , und stellen Sie eine Verbindung zur Datenbank-Engine-Instanz für Ihre [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank her.  
   
-     Weitere Informationen finden Sie unter [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
+     Weitere Informationen finden Sie unter [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md).  
   
 3.  Importieren Sie Daten in die Stagingtabellen mithilfe des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Import- und -Export-Assistenten.  
   
@@ -77,5 +77,4 @@ ms.locfileid: "85812966"
      Navigieren Sie im Master Data Manager zum Funktionsbereich **Explorer** für Ihr Modell, und wenden Sie dann Geschäftsregeln zur Überprüfung Ihrer Daten an. Weitere Informationen finden Sie unter [Überprüfen von bestimmten Elementen auf Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md). Sie können auch eine gespeicherte Prozedur zum Überprüfen der Daten verwenden. Weitere Informationen finden Sie unter [Gespeicherte Überprüfungsprozedur &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
      Wenn Sie Daten aus den Stagingtabellen laden, werden die Daten nicht automatisch im Hinblick auf Geschäftsregeln überprüft. Weitere Informationen dazu, was eine Überprüfung ist und wann sie stattfindet, finden Sie unter [Überprüfung &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md).  
-  
   

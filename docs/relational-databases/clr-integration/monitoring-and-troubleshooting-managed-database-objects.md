@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 760fcc2212991f0841f4ded3dd2932e551c26060
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cdf362f2b45df7cb419d5dc5161cb3428de7e7bb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87948092"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192599"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Überwachung und Problembehandlung von verwalteten Datenbankobjekten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "87948092"
 ## <a name="profiler-trace-events"></a>Profiler-Ablaufverfolgungsereignisse  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die SQL-Ablaufverfolgung und Ereignisbenachrichtigungen bereit, um Ereignisse zu überwachen, die in der Datenbank-Engine auftreten. Durch Aufzeichnen angegebener Ereignisse können Sie mit der SQL-Ablaufverfolgung Leistungsprobleme behandeln, die Datenbankaktivität überwachen, Stichprobendaten für eine Testumgebung sammeln, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und gespeicherte Prozeduren debuggen sowie Daten für Leistungsanalysetools sammeln. Weitere Informationen finden Sie unter [SQL](../../relational-databases/sql-trace/sql-trace.md) -Ablauf Verfolgung und [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md).  
   
-|Ereignis|BESCHREIBUNG|  
+|Ereignis|Beschreibung|  
 |-----------|-----------------|  
-|[Assembly Load-Ereignisklasse](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|Wird verwendet, um Assembly-Ladeanforderungen (Erfolg und Fehler) zu überwachen.|  
+|[Assembly Load-Ereignisklasse](../event-classes/sql-server-event-class-reference.md)|Wird verwendet, um Assembly-Ladeanforderungen (Erfolg und Fehler) zu überwachen.|  
 |[SQL: BatchStarting-Ereignisklasse](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [SQL: batchabgeschlossene-Ereignisklasse](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Stellt Informationen über [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches bereit, die gestartet oder beendet wurden.|  
 |[SP: Starting-Ereignisklasse](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Abgeschlossene Ereignisklasse](../../relational-databases/event-classes/sp-completed-event-class.md)|Wird verwendet, um die Ausführung von gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren zu überwachen.|  
 |[SQL: StmtStarting-Ereignisklasse](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [SQL: stmtabgeschlossene-Ereignisklasse](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Wird verwendet, um die Ausführung von CLR- und [!INCLUDE[tsql](../../includes/tsql-md.md)]-Routinen zu überwachen.|  
@@ -38,14 +38,14 @@ ms.locfileid: "87948092"
 ## <a name="performance-counters"></a>Leistungsindikatoren  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Objekte und Leistungsindikatoren bereitgestellt, die vom Systemmonitor zum Überwachen der Aktivität von Computern, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, verwendet werden können. Ein Objekt ist eine beliebige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressource, z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperre oder ein Windows-Prozess. Jedes Objekt enthält einen oder mehrere Leistungsindikatoren, die verschiedene Aspekte der zu überwachenden Objekte ermitteln. Weitere Informationen finden Sie unter [Verwenden von SQL Server-Objekten](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
-|Object|BESCHREIBUNG|  
+|Object|Beschreibung|  
 |------------|-----------------|  
 |[SQL Server, CLR-Objekt](../../relational-databases/performance-monitor/sql-server-clr-object.md)|Gesamtausführungszeit in CLR.|  
   
 ## <a name="windows-system-monitor-perfmonexe-counters"></a>Windows-Systemmonitor-Leistungsindikatoren (PERFMON.EXE)  
  Der Windows-Systemmonitor (PERFMON.EXE) enthält mehrere Leistungsindikatoren, die zur Überwachung der CLR-Integrationsanwendungen verwendet werden können. Die .NET CLR-Leistungsindikatoren können durch den Prozessnamen "sqlservr" gefiltert werden, um CLR-Integrationsanwendungen zu verfolgen, die derzeit ausgeführt werden.  
   
-|Leistungsobjekt|BESCHREIBUNG|  
+|Leistungsobjekt|Beschreibung|  
 |------------------------|-----------------|  
 |SqlServer:CLR|Stellt CPU-Statistiken für den Server bereit.|  
 |.NET CLR-Ausnahmen|Erfasst die Anzahl der pro Sekunde ausgelösten Ausnahmen.|  
@@ -56,7 +56,7 @@ ms.locfileid: "87948092"
 ## <a name="catalog-views"></a>Katalogsichten  
  Katalogsichten geben Informationen zurück, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine verwendet werden. Sie sollten Katalogsichten verwenden, da sie die allgemeinste Schnittstelle zu den Katalogmetadaten darstellen und die effizienteste Methode zum Abrufen, Transformieren und Präsentieren dieser Informationen in benutzerdefinierter Form bereitstellen. Alle für Benutzer verfügbaren Katalogmetadaten werden über Katalogsichten verfügbar gemacht. Weitere Informationen finden Sie unter [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-|Katalogsicht|BESCHREIBUNG|  
+|Katalogsicht|Beschreibung|  
 |------------------|-----------------|  
 |[sys.assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|Gibt Informationen über die Assemblys zurück, die in einer Datenbank registriert sind.|  
 |[sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Identifiziert Assemblys, die auf andere Assemblys verweisen.|  
@@ -73,7 +73,7 @@ ms.locfileid: "87948092"
 ## <a name="dynamic-management-views"></a>Dynamische Verwaltungssichten  
  Dynamische Verwaltungssichten (DMVs) und -funktionen geben Serverstatusinformationen zurück, mit denen der Zustand einer Serverinstanz überwacht, Probleme diagnostiziert und die Leistung optimiert werden kann. Weitere Informationen finden Sie unter [dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-|DMV|BESCHREIBUNG|  
+|DMV|Beschreibung|  
 |---------|-----------------|  
 |[sys.dm_clr_appdomains &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|Stellt Informationen zu jeder Anwendungsdomäne auf dem Server bereit.|  
 |[sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|Identifiziert jede auf dem Server registrierte verwaltete Assembly.|  
@@ -86,5 +86,4 @@ ms.locfileid: "87948092"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Programmierkonzepte für die Integration der Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

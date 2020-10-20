@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9d96811924faed2d48c58a3fcc516536e63d7385
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 79fcb613f985f363631b1ce26c75228bb7ab5862
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480315"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193622"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Berechtigungen für Modellobjekte (Master Data Services)
 
@@ -41,7 +41,7 @@ ms.locfileid: "89480315"
  Im Allgemeinen sollten Sie dem Modellobjekt die Berechtigung **ALLE** zuweisen und anschließend untergeordneten Objekten die Berechtigung explizit zuweisen.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogbeitrag [Sicherheitsverbesserungen](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay), auf msdn.com.  
+ Blogbeitrag [Sicherheitsverbesserungen](/archive/blogs/e7/improvements-to-autoplay), auf msdn.com.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuweisen von Berechtigungen für Modell Objekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
@@ -49,5 +49,4 @@ ms.locfileid: "89480315"
  [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
  [Hierarchie Element Berechtigungen &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
-  
   

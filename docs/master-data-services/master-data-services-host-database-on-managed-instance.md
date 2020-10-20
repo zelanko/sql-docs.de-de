@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 671ae0d9578c81d56c3324f73a4240152594dd49
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87878945"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194432"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hosten einer MDS-Datenbank auf einer verwalteten Instanz
 
@@ -31,15 +31,15 @@ Zum Vorbereiten von müssen Sie eine Azure SQL-verwaltete Instanz erstellen und 
 
 ### <a name="create-and-configure-the-database"></a>Erstellen und Konfigurieren der Datenbank
 
-1. Erstellen Sie eine verwaltete Instanz mit einem virtuellen Netzwerk. Weitere Informationen finden Sie unter [Schnellstart: Erstellen eines SQL-verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) .
+1. Erstellen Sie eine verwaltete Instanz mit einem virtuellen Netzwerk. Weitere Informationen finden Sie unter [Schnellstart: Erstellen eines SQL-verwaltete Instanz](/azure/sql-database/sql-database-managed-instance-get-started) .
 
-1. Konfigurieren Sie eine Point-to-Site-Verbindung. Weitere Informationen finden Sie [unter Konfigurieren einer Point-to-Site-Verbindung mit einem vnet unter Verwendung der nativen Azure-Zertifikat Authentifizierung: Azure-Portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
+1. Konfigurieren Sie eine Point-to-Site-Verbindung. Weitere Informationen finden Sie [unter Konfigurieren einer Point-to-Site-Verbindung mit einem vnet unter Verwendung der nativen Azure-Zertifikat Authentifizierung: Azure-Portal](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
-1. Konfigurieren Sie Azure Active Directory Authentifizierung mit SQL verwaltete Instanz. Ausführliche Informationen finden Sie [unter Konfigurieren und Verwalten der Azure Active Directory Authentifizierung mit SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) .
+1. Konfigurieren Sie Azure Active Directory Authentifizierung mit SQL verwaltete Instanz. Ausführliche Informationen finden Sie [unter Konfigurieren und Verwalten der Azure Active Directory Authentifizierung mit SQL](/azure/sql-database/sql-database-aad-authentication-configure) .
 
 ### <a name="configure-web-application-machine"></a>Webanwendungs Computer konfigurieren
 
-1. Installieren Sie ein Point-to-Site-Verbindungs Zertifikat und ein VPN, um sicherzustellen, dass der Computer auf die verwaltete Instanz zugreifen kann. Anweisungen hierzu finden Sie unter [Konfigurieren einer Point-to-Site-Verbindung mit einem vnet unter Verwendung der nativen Azure-Zertifikat Authentifizierung: Azure-Portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
+1. Installieren Sie ein Point-to-Site-Verbindungs Zertifikat und ein VPN, um sicherzustellen, dass der Computer auf die verwaltete Instanz zugreifen kann. Anweisungen hierzu finden Sie unter [Konfigurieren einer Point-to-Site-Verbindung mit einem vnet unter Verwendung der nativen Azure-Zertifikat Authentifizierung: Azure-Portal](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
 1. Installieren Sie die folgenden Rollen und Features:
    - Rollen:
@@ -131,7 +131,7 @@ Mit dieser Aktion wird Folgendes installiert:
 
    ![MDS-SQLServer2019-config-Mi-buildsername](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "MDS-SQLServer2019-config-MI_createDBUserName")
 
-1. Wählen Sie **weiter** aus, um eine Zusammenfassung der Einstellungen für die [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Datenbank anzuzeigen. Klicken Sie erneut auf **weiter** , um die Datenbank zu erstellen. Die Seite Status **und fertig** Stellung wird angezeigt.
+1. Wählen Sie **weiter** aus, um eine Zusammenfassung der Einstellungen für die [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Datenbank anzuzeigen. Klicken Sie erneut auf  **weiter** , um die Datenbank zu erstellen. Die Seite Status **und fertig** Stellung wird angezeigt.
 
 1. Nachdem die Datenbank erstellt und konfiguriert wurde, klicken Sie auf **Fertig**stellen.
 
@@ -199,9 +199,9 @@ MDS unterstützt auch Active Directory Kenn Wort Authentifizierung und SQL Serve
 
 ## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>Upgrade [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] und SQL-Datenbankversion
 
-### <a name="upgrade-ssmdsshort_md"></a>Zuführen[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>Zuführen [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
-Installieren Sie das **kumulative Update SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]wird automatisch aktualisiert.
+Installieren Sie das **kumulative Update SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] wird automatisch aktualisiert.
 
 ### <a name="upgrade-sql-server"></a>Aktualisieren von SQL Server
 
@@ -210,7 +210,7 @@ Möglicherweise wird der folgende Fehler angezeigt: `The client version is incom
 
 Um dieses Problem zu beheben, müssen Sie die Datenbankversion aktualisieren:
 
-1. Öffnen [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] Sie das, und wählen Sie dann im linken Bereich **Daten Bank Konfiguration** aus.
+1. Öffnen [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] Sie das, und wählen Sie dann im linken Bereich  **Daten Bank Konfiguration** aus.
 
 1. Wählen Sie auf der Seite **Daten Bank Konfiguration** in der die Option [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] **Datenbank auswählen**aus.
 
@@ -228,7 +228,7 @@ Um dieses Problem zu beheben, müssen Sie die Datenbankversion aktualisieren:
 
 1. Wählen Sie **Fertig** stellen aus, nachdem alle Aufgaben abgeschlossen sind.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Master Data Services-Datenbank](../master-data-services/master-data-services-database.md)
 - [Master Data Manager-Webanwendung [Master Data Services]](../master-data-services/master-data-manager-web-application.md)
