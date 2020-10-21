@@ -40,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421084"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192592"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -440,7 +440,7 @@ ms.locfileid: "88421084"
  Die **mailitem_id** der Test-E-Mail.  
   
  **Problembehandlung**  
- Klicken Sie, um die Onlinedokumentation für das Thema [Problembehandlung bei Datenbank-E-Mail](https://msdn.microsoft.com/library/ms188663.aspx)zu öffnen.  
+ Klicken Sie, um die Onlinedokumentation für das Thema [Problembehandlung bei Datenbank-E-Mail](/previous-versions/sql/sql-server-2008-r2/ms188663(v=sql.105))zu öffnen.  
   
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
@@ -460,5 +460,4 @@ ms.locfileid: "88421084"
 6.  Führen Sie das Skript aus, damit die Konfiguration erstellt wird.  
   
 7.  Das Skript gewährt keinem Datenbankbenutzer den Zugriff auf das Profil. Aus diesem Grund kann das Profil standardmäßig nur durch Mitglieder der festen Sicherheitsrolle **sysadmin** verwendet werden. Weitere Informationen zum Gewähren des Zugriffs auf Profile finden Sie unter [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md).  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 23b04ae0e205a70b195b7da39a666256463bfa1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987586"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192850"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>SQL Server-Datendateien in Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ Grundsätzlich wird die Verwendung von Azure-Datenträgern empfohlen. Eine Ausna
 ### <a name="azure-storage-concepts"></a>Azure-Speicherkonzepte  
 Bei Verwendung von SQL Server-Datendateien in Azure müssen Sie ein Speicherkonto und einen Container in Azure erstellen. Anschließend müssen Sie SQL Server-Anmeldeinformationen erstellen, die Informationen zur Containerrichtlinie sowie eine SAS (Shared Access Signature, Signatur für gemeinsamen Zugriff) enthalten, die für den Zugriff auf den Container erforderlich ist.  
 
-In [Microsoft Azure](https://azure.microsoft.com) stellt ein [Azure-Speicherkonto](https://azure.microsoft.com/services/storage/) die höchste Namespaceebene für den Zugriff auf Blobs dar. Ein Speicherkonto kann eine unbegrenzte Anzahl von Containern enthalten. Allerdings darf deren Gesamtgröße das Speicherlimit nicht überschreiten. Aktuelle Informationen zu Speichergrößenbeschränkungen finden Sie unter [Azure-Abonnement und Dienstbeschränkungen, Kontingente und Einschränkungen](https://docs.microsoft.com/azure/azure-subscription-service-limits). Ein Container stellt eine Gruppierung von mehreren [Blobs](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage) bereit. Alle BLOBs müssen sich in einem Container befinden. Ein Konto kann eine unbegrenzte Anzahl von Containern enthalten. Analog dazu kann in einem Container eine unbegrenzte Anzahl von Blobs gespeichert werden. Es gibt zwei Arten von BLOBs, die im Azure-Speicher gespeichert werden können: Blockblobs und Seitenblobs. Diese neue Funktion verwendet Seitenblobs, die effizienter sind, wenn die Bytebereiche in einer Datei häufig geändert werden. Mit dem folgendem URL-Format können Sie auf Blobs zugreifen: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+In [Microsoft Azure](https://azure.microsoft.com) stellt ein [Azure-Speicherkonto](https://azure.microsoft.com/services/storage/) die höchste Namespaceebene für den Zugriff auf Blobs dar. Ein Speicherkonto kann eine unbegrenzte Anzahl von Containern enthalten. Allerdings darf deren Gesamtgröße das Speicherlimit nicht überschreiten. Aktuelle Informationen zu Speichergrößenbeschränkungen finden Sie unter [Azure-Abonnement und Dienstbeschränkungen, Kontingente und Einschränkungen](/azure/azure-subscription-service-limits). Ein Container stellt eine Gruppierung von mehreren [Blobs](/azure/storage/common/storage-introduction#blob-storage) bereit. Alle BLOBs müssen sich in einem Container befinden. Ein Konto kann eine unbegrenzte Anzahl von Containern enthalten. Analog dazu kann in einem Container eine unbegrenzte Anzahl von Blobs gespeichert werden. Es gibt zwei Arten von BLOBs, die im Azure-Speicher gespeichert werden können: Blockblobs und Seitenblobs. Diese neue Funktion verwendet Seitenblobs, die effizienter sind, wenn die Bytebereiche in einer Datei häufig geändert werden. Mit dem folgendem URL-Format können Sie auf Blobs zugreifen: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
 
 ### <a name="azure-billing-considerations"></a>Überlegungen zur Abrechnung in Azure  
 
@@ -91,7 +91,7 @@ ON
 >[!IMPORTANT]
 >Wenn ein Container aktive Verweise auf Datendateien enthält, schlagen Versuche, die entsprechenden SQL Server-Anmeldeinformationen zu löschen, fehl.
 
-Weitere Informationen finden Sie unter [Verwalten des anonymen Lesezugriffs auf Container und Blobs](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources).  
+Weitere Informationen finden Sie unter [Verwalten des anonymen Lesezugriffs auf Container und Blobs](/azure/storage/blobs/storage-manage-access-to-resources).  
 
 ### <a name="security"></a>Sicherheit  
  Die folgenden Sicherheitsüberlegungen und -anforderungen sollten beim Speichern von SQL Server-Datendateien im Azure-Speicher berücksichtigt werden.
@@ -120,7 +120,7 @@ Weitere Informationen finden Sie unter [Verwalten des anonymen Lesezugriffs auf 
   
 - Wenn Sie das Feature für SQL Server-Datendateien in Azure nutzen, wird die Georeplikation für Ihr Speicherkonto nicht unterstützt. Wenn für ein Speicherkonto eine Georeplikation ausgeführt wird und ein Geo-Failover auftritt, kann die Datenbank beschädigt werden.  
   
-- Nähere Informationen zu Kapazitätsbeschränkungen finden Sie unter [Einführung in Blob Storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
+- Nähere Informationen zu Kapazitätsbeschränkungen finden Sie unter [Einführung in Blob Storage](/azure/storage/blobs/storage-blobs-introduction).  
   
 - Es ist nicht möglich, In-Memory-OLTP-Daten mithilfe des Features „SQL Server-Datendateien“ in Azure Storage in einem Blobspeicher zu speichern. Das liegt daran, dass In-Memory-OLTP von **FileStream** abhängig ist und das Speichern von **FileStream** -Daten im Azure-Speicher von dem Feature in der derzeitigen Version nicht unterstützt wird.  
   
@@ -166,10 +166,10 @@ Weitere Informationen finden Sie unter [Verwalten des anonymen Lesezugriffs auf 
     Lösung: Dieser Fehler kann angezeigt werden, wenn Sie versuchen, Anmeldeinformationen zu löschen, die noch von einer aktiven Datenbankdatei im Azure-Speicher verwendet werden. Um die Anmeldeinformationen zu löschen, müssen Sie zuerst das zugeordnete BLOB löschen, das diese Datenbankdatei enthält. Zum Löschen eines Blobs, das über eine aktive Lease verfügt, müssen Sie zunächst die Lease freigeben.  
   
 - *Für den Container wurde nicht ordnungsgemäß eine SAS (Shared Access Signature) erstellt.*    
-     Lösung: Stellen Sie sicher, dass eine SAS ordnungsgemäß für den Container erstellt wurde. Lesen Sie die Hinweise in Lektion 2 im [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
+     Lösung: Stellen Sie sicher, dass eine SAS ordnungsgemäß für den Container erstellt wurde. Lesen Sie die Hinweise in Lektion 2 im [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature).  
   
 - *SQL Server-Anmeldeinformationen wurden nicht ordnungsgemäß erstellt.*    
-    Lösung: Vergewissern Sie sich, dass Sie für das Feld **Identität** die Option „Shared Access Signature“ verwendet und ordnungsgemäß einen geheimen Schlüssel erstellt haben. Lesen Sie die Hinweise in Lektion 3 im [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../lesson-3-database-backup-to-url.md).  
+    Lösung: Vergewissern Sie sich, dass Sie für das Feld **Identität** die Option „Shared Access Signature“ verwendet und ordnungsgemäß einen geheimen Schlüssel erstellt haben. Lesen Sie die Hinweise in Lektion 3 im [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#3---database-backup-to-url).  
   
  **Fehler bei BLOB-Leasedauer:**  
   

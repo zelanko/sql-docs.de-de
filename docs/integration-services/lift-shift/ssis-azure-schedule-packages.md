@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 42624909f59c1e25d8c75b99c60c19da8b04da85
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 7c61b1b032ef4ff08301c91f080f188d89e2aadc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989973"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195172"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Planen der Ausführung von in Azure bereitgestellten SSIS-Paketen
 
@@ -44,13 +44,13 @@ Dieses Feature erfordert SQL Server Management Studio, Version 17.7 oder höher.
 
 ## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> Planen eines Pakets mit SQL-Datenbank für elastische Aufträge
 
-Weitere Informationen zu elastischen Aufträgen auf SQL-Datenbank finden Sie unter [Verwalten von Scale Out-Clouddatenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+Weitere Informationen zu elastischen Aufträgen auf SQL-Datenbank finden Sie unter [Verwalten von Scale Out-Clouddatenbanken](/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 Sie müssen zunächst folgende Schritte ausführen, damit Sie elastische Aufträge verwenden können, um SSIS-Pakete zu planen, die in der SSIS-Katalogdatenbank auf einem Azure SQL-Datenbank-Server gespeichert sind:
 
-1.  Installieren und Konfigurieren Sie die Komponenten für Aufträge für die elastische Datenbank. Informationen dazu finden Sie unter [Installieren von Aufträgen für die elastische Datenbank – Übersicht](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Installieren und Konfigurieren Sie die Komponenten für Aufträge für die elastische Datenbank. Informationen dazu finden Sie unter [Installieren von Aufträgen für die elastische Datenbank – Übersicht](/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Erstellen Sie datenbankbezogene Anmeldeinformationen, die Aufträge nutzen können, um Befehle an die SSIS-Katalogdatenbank zu senden. Informationen dazu finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) (Erstellen von datenbankbezogenen Anmeldeinformationen (Transact-SQL))](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -166,17 +166,17 @@ Sie können ein Paket indirekt planen, indem Sie einen Trigger verwenden, um ein
 
 Verwenden Sie einen der folgenden Trigger, um eine Data Factory-Pipeline zu planen:
 
-- [Zeitplantrigger](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+- [Zeitplantrigger](/azure/data-factory/how-to-create-schedule-trigger)
 
-- [Trigger für rollierende Fenster](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+- [Trigger für rollierende Fenster](/azure/data-factory/how-to-create-tumbling-window-trigger)
 
-- [Ereignisbasierter Trigger](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+- [Ereignisbasierter Trigger](/azure/data-factory/how-to-create-event-trigger)
 
 Verwenden Sie eine der folgenden Aktivitäten, um ein SSIS-Paket als Teil einer Data Factory-Pipeline auszuführen:
 
-- [Ausführen einer SSIS-Paketaktivität](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
+- [Ausführen einer SSIS-Paketaktivität](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
 
-- [Aktivität der gespeicherten Prozedur](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+- [Aktivität der gespeicherten Prozedur](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

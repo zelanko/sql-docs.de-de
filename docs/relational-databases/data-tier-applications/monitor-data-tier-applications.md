@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d485d827f94c3ed9fe8e30fa48fd978aca6971a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad3aeaa27bba3594489a70d4f98492596fd0d747
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456522"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195052"
 ---
 # <a name="monitor-data-tier-applications"></a>Überwachen von Datenebenenanwendungen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "88456522"
  Der SSMS- **Objekt-Explorer** zeigt grundlegende Konfigurationsinformationen zu den einzelnen DACs an, die auf einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]bereitgestellt werden, unabhängig von, ob die Instanz im SQL Server-Hilfsprogramm verwaltet wird. Darüber hinaus kann die Datenbank, die mit einer bereitgestellten DAC verknüpft ist, mit den gleichen Prozeduren zum Überwachen aller Datenbanken überwacht werden.  
   
 ## <a name="using-the-sql-server-utility"></a>Verwenden des SQL Server-Hilfsprogramms  
- Auf der Detailseite **Bereitgestellte Datenschichtanwendungen** im **Hilfsprogramm-Explorer** von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] wird ein Dashboard angezeigt, das über die Ressourcenverwendung aller DACs berichtet, die in den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanzen bereitgestellt wurden. Im oberen Bereich der Detailseite wird jede bereitgestellte DAC mit visuellen Indikatoren aufgeführt, die aufzeigen, ob die Nutzungswerte der CPU und der Dateiressourcen außerhalb der für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm definierten Richtlinien liegen. Wenn Sie eine DAC in der Listenansicht auswählen, werden weitere Details auf Registerkarten im unteren Bereich der Seite angezeigt. Weitere Informationen zu den auf der Detailseite angezeigten Informationen finden Sie unter [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ Auf der Detailseite **Bereitgestellte Datenschichtanwendungen** im **Hilfsprogramm-Explorer** von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] wird ein Dashboard angezeigt, das über die Ressourcenverwendung aller DACs berichtet, die in den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanzen bereitgestellt wurden. Im oberen Bereich der Detailseite wird jede bereitgestellte DAC mit visuellen Indikatoren aufgeführt, die aufzeigen, ob die Nutzungswerte der CPU und der Dateiressourcen außerhalb der für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm definierten Richtlinien liegen. Wenn Sie eine DAC in der Listenansicht auswählen, werden weitere Details auf Registerkarten im unteren Bereich der Seite angezeigt. Weitere Informationen zu den auf der Detailseite angezeigten Informationen finden Sie unter [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130)).  
   
  Nachdem Sie mithilfe der Detailseite **Bereitgestellte Datenebenenanwendungen** schnell die DACs ermittelt haben, bei denen eine Unter- oder Überauslastung der Hardwareressource vorliegt, können Sie Pläne zur Lösung eines bestimmten Problems erarbeiten. Mehrere DACs, die ihre aktuellen Hardwareressourcen nicht vollständig ausnutzen, könnten auf einem einzelnen Server konsolidiert werden, sodass einige der Server für andere Zwecke freigegeben werden. Wenn eine DAC die Ressourcen auf ihrem aktuellen Server überbeansprucht, kann sie auf einen größeren Server umgelagert werden, oder Sie können dem aktuellen Server weitere Ressourcen hinzufügen.  
   
- Die minimalen und maximalen Grenzwerte für die Ressourcenverwendung werden von Richtlinien zur Anwendungsüberwachung definiert, die auf der Detailseite **Hilfsprogrammverwaltung** festgelegt werden. Datenbankadministratoren können die Richtlinien an die von ihrem Unternehmen festgelegten Grenzwerte anpassen. Beispielweise könnte ein Unternehmen die maximale CPU-Auslastung für eine DAC auf 75 % festlegen, während ein anderes Unternehmen diesen Wert auf 80 % festlegt. Weitere Informationen zum Festlegen von Richtlinien für die Anwendungsüberwachung finden Sie unter [Hilfsprogrammverwaltung &#40;SQL Server-Hilfsprogramm&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d).  
+ Die minimalen und maximalen Grenzwerte für die Ressourcenverwendung werden von Richtlinien zur Anwendungsüberwachung definiert, die auf der Detailseite **Hilfsprogrammverwaltung** festgelegt werden. Datenbankadministratoren können die Richtlinien an die von ihrem Unternehmen festgelegten Grenzwerte anpassen. Beispielweise könnte ein Unternehmen die maximale CPU-Auslastung für eine DAC auf 75 % festlegen, während ein anderes Unternehmen diesen Wert auf 80 % festlegt. Weitere Informationen zum Festlegen von Richtlinien für die Anwendungsüberwachung finden Sie unter [Hilfsprogrammverwaltung &#40;SQL Server-Hilfsprogramm&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130)).  
   
  So zeigen Sie die Detailseite **Bereitgestellte Datenebenenanwendungen** an:  
   
@@ -68,7 +68,7 @@ ms.locfileid: "88456522"
 ## <a name="using-the-dac-system-views-and-tables"></a>Verwenden von DAC-Systemsichten und -tabellen  
  In der Systemtabelle msdb.dbo.sysdac_history_internal wird aufgezeichnet, ob die für eine [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz ausgeführten DAC-Verwaltungsaktionen erfolgreich oder fehlerhaft waren. Die Tabelle enthält den Zeitpunkt jeder Aktion sowie den Anmeldenamen, unter dem die Aktion initiiert wurde. Weitere Informationen finden Sie unter [sysdac_history_internal &#40;Transact-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-history-internal.md).  
   
- Die DAC-Systemsichten enthalten grundlegende Kataloginformationen. Weitere Informationen finden Sie unter [Sichten von Datenebenenanwendungen &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4).  
+ Die DAC-Systemsichten enthalten grundlegende Kataloginformationen. Weitere Informationen finden Sie unter [Sichten von Datenebenenanwendungen &#40;Transact-SQL&#41;](../system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).  
   
 ## <a name="monitoring-dac-databases"></a>Überwachen von DAC-Datenbanken  
  Nachdem eine DAC erfolgreich bereitgestellt wurde, funktioniert die in der DAC enthaltene Datenbank genauso wie jede andere Datenbank. Verwenden Sie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Standardtechniken und -tools zum Überwachen von Leistung, Protokollen, Ereignissen und Ressourcennutzung der Datenbank.  
@@ -76,5 +76,4 @@ ms.locfileid: "88456522"
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Bereitstellen einer Datenebenenanwendung](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8d4425da7d337a6628ae6197bedbe03d84897910
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b13b4fcc5fd0071a5b008f4fa8186379ffecf41
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386936"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193050"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "88386936"
 -   **UPGRADE**: Eine Datenbank kann mit einer DACPAC-Datei aktualisiert werden. Ein Upgrade wird sogar auf Datenbanken, die zuvor nicht als Datenebenenanwendungen registriert waren, unterstützt, doch aufgrund des Upgrades wird die Datenbank implizit registriert.  
   
 ## <a name="bacpac"></a>BACPAC  
- Eine BACPAC-Datei ist eine Windows-Datei mit der Erweiterung „.bacpac“, die das Schema und die Daten einer Datenbank kapselt. Der Hauptzweck einer BACPAC-Datei besteht darin, eine Datenbank von einem Server auf einen anderen zu verschieben – oder eine [Datenbank von einem lokalen Server zur Cloud zu migrieren](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/) – und eine vorhandene Datenbank in einem offenen Format zu archivieren.  
+ Eine BACPAC-Datei ist eine Windows-Datei mit der Erweiterung „.bacpac“, die das Schema und die Daten einer Datenbank kapselt. Der Hauptzweck einer BACPAC-Datei besteht darin, eine Datenbank von einem Server auf einen anderen zu verschieben – oder eine [Datenbank von einem lokalen Server zur Cloud zu migrieren](/azure/azure-sql/database/migrate-to-database-from-sql-server) – und eine vorhandene Datenbank in einem offenen Format zu archivieren.  
  Das BACPAC-Dateiformat ist ein offenes Dateiformat (vergleichbar mit DACPAC). Die Schemainhalte von BACPAC sind mit DACPAC identisch. Die Daten in einer BACPAC-Datei werden im JSON-Format gespeichert.  
   
  DACPAC und BACPAC sind ähnlich, aber sie zielen auf andere Szenarien ab. Ein DACPAC dient zum Erfassen und Bereitstellen von Schemas, einschließlich der Aktualisierung einer vorhandenen Datenbank. DACPAC-Dateien werden primär zum Bereitstellen eines streng definierten Schemas für die Entwicklung, Tests und anschließenden Produktionsumgebungen genutzt. Umgekehrt kann das Produktionsschema erfasst und erneut in Test- und Entwicklungsumgebungen angewendet werden.  
@@ -130,6 +130,5 @@ ms.locfileid: "88386936"
 |Beschreibt die Verwendung eines Assistenten, um eine vorhandene Datenbank bereitzustellen. Der Assistent führt die Bereitstellung mithilfe von DACs aus.|[Bereitstellen einer Datenbank mit DAC](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DAC-Unterstützung für SQL Server-Objekte und -Versionen](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
-  
+ [DAC-Unterstützung für SQL Server-Objekte und -Versionen](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
   

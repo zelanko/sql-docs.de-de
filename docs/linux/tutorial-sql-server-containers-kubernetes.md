@@ -9,12 +9,12 @@ ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1e9234e6d429dcd95fa9556426871a4726f4f7f9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: c8563738c8d1465c6573ca2a92f0839f54c8e29c
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808626"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155110"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes Service
 
@@ -52,7 +52,7 @@ Im folgenden Diagramm ist der Knoten fehlgeschlagen, der den `mssql-server`-Cont
 * **Kubernetes-Cluster**
    - Für das Tutorial ist ein Kubernetes-Cluster erforderlich. In den Schritten wird [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) zum Verwalten des Clusters verwendet. 
 
-   - Unter [Bereitstellen eines Azure Kubernetes Service-Clusters (AKS)](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) erfahren Sie, wie Sie einen Kubernetes-Cluster mit einem einzelnen Knoten mithilfe von `kubectl` in AKS erstellen und eine Verbindung mit diesem herstellen. 
+   - Unter [Bereitstellen eines Azure Kubernetes Service-Clusters (AKS)](/azure/aks/tutorial-kubernetes-deploy-cluster) erfahren Sie, wie Sie einen Kubernetes-Cluster mit einem einzelnen Knoten mithilfe von `kubectl` in AKS erstellen und eine Verbindung mit diesem herstellen. 
 
    >[!NOTE]
    >Ein Kubernetes-Cluster benötigt mehrere Knoten zum Schutz vor Knotenausfällen.
@@ -175,6 +175,7 @@ In diesem Schritt erstellen Sie ein Manifest, um den Container zu beschreiben, d
            app: mssql
        spec:
          terminationGracePeriodSeconds: 30
+         hostname: mssqlinst
          securityContext:
            fsGroup: 10001
          containers:
@@ -296,9 +297,9 @@ Wenn Sie den Container gemäß der Beschreibung konfiguriert haben, können Sie 
 
 Sie können die folgenden Anwendungen verwenden, um eine Verbindung mit der SQL Server-Instanz herzustellen. 
 
-* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](./sql-server-linux-manage-ssms.md)
 
-* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](./sql-server-linux-develop-use-ssdt.md)
 
 * sqlcmd
 
@@ -349,4 +350,4 @@ In diesem Tutorial haben Sie gelernt, wie Sie SQL Server-Container in einen Kube
 ## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="nextstepaction"]
->[Einführung in Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Einführung in Kubernetes](/azure/aks/intro-kubernetes)

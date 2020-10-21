@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.openlocfilehash: 51feab9c5cc38f1e9b67b3de68ce29c597cdb83a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 899d215abe7d0308c4fd0c42ed992defa3b198da
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883907"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115561"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Auswählen des richtigen Tools zum Verwalten von SQL Server für Linux
 
@@ -27,7 +27,7 @@ Mit dem **mssql-conf**-Tool wird SQL Server für Linux konfiguriert. Weitere Inf
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-Fast alle Aktionen, die Sie in einem Clienttool ausführen können, können auch mit Transact-SQL-Anweisungen ausgeführt werden. SQL Server stellt [dynamische Verwaltungssichten](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) (Dynamic Management Views, DMVs) bereit, mit denen der Status und die Konfiguration von SQL Server abgefragt werden können. Außerdem gibt es [Transact-SQL-Befehle](../t-sql/language-reference.md) für Datenbankverwaltungsaufgaben. Sie können diese Befehle in jedem Clienttool ausführen, das Herstellen von Verbindungen mit SQL Server und Ausführen von Transact-SQL-Abfragen unterstützt, etwa [sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+Fast alle Aktionen, die Sie in einem Clienttool ausführen können, können auch mit Transact-SQL-Anweisungen ausgeführt werden. SQL Server stellt [dynamische Verwaltungssichten](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) (Dynamic Management Views, DMVs) bereit, mit denen der Status und die Konfiguration von SQL Server abgefragt werden können. Außerdem gibt es [Transact-SQL-Befehle](../t-sql/language-reference.md) für Datenbankverwaltungsaufgaben. Sie können diese Befehle in jedem Clienttool ausführen, das Herstellen von Verbindungen mit SQL Server und Ausführen von Transact-SQL-Abfragen unterstützt, etwa [sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md).
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 

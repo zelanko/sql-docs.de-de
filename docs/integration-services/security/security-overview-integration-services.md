@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d663d75f7588ad91973f3bce5f416136bc5583e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487683"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193782"
 ---
 # <a name="security-overview-integration-services"></a>Sicherheitsübersicht (Integration Services)
 
@@ -100,7 +100,7 @@ ms.locfileid: "88487683"
   
  Wenn Sie Konfigurationen statt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]im Dateisystem speichern, müssen Sie die Ordner, die die Paketkonfigurationsdateien enthalten, sichern.  
   
- Weitere Informationen zu Konfigurationen finden Sie unter [Package Configurations](../../integration-services/packages/package-configurations.md).  
+ Weitere Informationen zu Konfigurationen finden Sie unter [Package Configurations](../packages/legacy-package-deployment-ssis.md).  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Steuern des Zugriffs auf den Integration Services-Dienst  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst zum Auflisten der gespeicherten Pakete verwendet. Damit nicht autorisierte Benutzer keine Informationen über Pakete anzeigen können, die auf lokalen und Remotecomputern gespeichert sind, und auf diese Weise Zugriff auf private Daten erhalten, müssen Sie den Zugriff auf Computer, auf denen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, einschränken.  
@@ -121,7 +121,7 @@ ms.locfileid: "88487683"
 ### <a name="configuration-files"></a>Konfigurationsdateien  
  Wenn in einer Konfiguration vertrauliche Informationen enthalten sind, wie z.B. der Anmeldename und das Kennwort, sollten Sie die Konfiguration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichern oder eine Zugriffssteuerungsliste (ACL, Access Control List) verwenden, um den Zugriff auf den Speicherort bzw. auf den Ordner, in dem die Dateien gespeichert sind, zu beschränken und den Zugriff nur bestimmten Konten zu gewähren. In der Regel wird den Konten Zugriff gewährt, denen die Berechtigung zum Ausführen von Paketen erteilt wird, und den Konten, die Pakete verwalten und Probleme bei Paketen beheben. Hierzu gehört z. B. das Überprüfen der Inhalte der Konfiguration, des Prüfpunkts und der Protokolldateien. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Speicher ist sicherer, da er Schutz auf Server- und Datenbankebene bietet. Verwenden Sie zum Speichern der Konfigurationen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurationstyp. Verwenden Sie zum Speichern im Dateisystem den XML-Konfigurationstyp.  
   
- Weitere Informationen finden Sie unter [Paketkonfigurationen](../../integration-services/packages/package-configurations.md), [Erstellen von Paketkonfigurationen](../../integration-services/packages/create-package-configurations.md)und [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+ Weitere Informationen finden Sie unter [Paketkonfigurationen](../packages/legacy-package-deployment-ssis.md), [Erstellen von Paketkonfigurationen](../packages/legacy-package-deployment-ssis.md)und [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ### <a name="checkpoint-files"></a>Prüfpunktdateien  
  Wenn die vom Paket verwendete Prüfpunktdatei vertrauliche Informationen enthält, sollten Sie entsprechend mithilfe einer Zugriffssteuerungsliste den Speicherort oder Ordner schützen, in dem Sie die Datei speichern. In Prüfpunktdateien werden aktuelle Statusinformationen zum Fortschritt des Pakets sowie die aktuellen Werte von Variablen gespeichert. Beispielsweise kann das Paket eine benutzerdefinierte Variable mit einer Telefonnummer enthalten. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
@@ -147,4 +147,4 @@ ms.locfileid: "88487683"
   
 -   [Signieren eines Pakets mit einem digitalen Zertifikat](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [Festlegen oder Ändern der Schutzebene von Paketen](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [Festlegen oder Ändern der Schutzebene von Paketen](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)

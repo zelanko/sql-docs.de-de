@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed29244d06e0fcf08c5f56af59c3e1f9feeb2883
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6efa57a482943b6dbef2ebecdc0668dac017a01a
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178255"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115760"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Installieren von SQL Server Machine Learning Services (Python und R) unter Linux
 
@@ -47,7 +47,7 @@ In diesem Artikel werden Sie durch die Installation von [SQL Server Machine Lear
 
 * Sie sollten über ein Tool zum Ausführen von T-SQL-Befehlen verfügen. 
 
-  * Sie können z. B. [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) verwenden, ein kostenloses Datenbanktool, das unter Linux, Windows und macOS ausgeführt werden kann.
+  * Sie können z. B. [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) verwenden, ein kostenloses Datenbanktool, das unter Linux, Windows und macOS ausgeführt werden kann.
 
 ## <a name="package-list"></a>Paketliste
 
@@ -439,4 +439,4 @@ Python-Entwickler können in den folgenden Tutorials erfahren, wie Python mit SQ
 R-Entwickler können mit einigen einfachen Beispielen loslegen und die Grundlagen der Funktionen von R unter SQL Server kennenlernen. Informationen zu den nächsten Schritten finden Sie unter den folgenden Links:
 
 + [Schnellstart: Ausführen von R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: Datenbankinterne Analysen für R-Entwickler](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Datenbankinterne Analysen für R-Entwickler](../machine-learning/tutorials/r-taxi-classification-introduction.md)

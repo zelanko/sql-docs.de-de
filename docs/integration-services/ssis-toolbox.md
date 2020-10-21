@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2523c8ac095a576d243aef661092e7939e27863b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c67835df192436ce3b8264849589a1db3f66fee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487663"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192376"
 ---
 # <a name="ssis-toolbox"></a>SSIS-Toolbox
 
@@ -34,7 +34,7 @@ ms.locfileid: "88487663"
  > [!NOTE]
 > Wenn die Toolbox nicht angezeigt wird, wechseln Sie zu „ANSICHT -> Andere Fenster -> SSIS-Toolbox“.
  
-Um auf weitere Informationen zu einer Komponente in der Toolbox zuzugreifen, klicken Sie auf die Komponente, um am unteren Rand der Toolbox deren Beschreibung anzuzeigen. Für einige Komponenten sind auch Beispiele verfügbar, in denen die Konfiguration und Verwendung der Komponenten veranschaulicht wird. Die Beispiele sind auf [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189)verfügbar. Um über die **SSIS-Toolbox**auf die Beispiele zuzugreifen, klicken Sie auf den unterhalb der Beschreibung angezeigten Link **Beispiele suchen** .  
+Um auf weitere Informationen zu einer Komponente in der Toolbox zuzugreifen, klicken Sie auf die Komponente, um am unteren Rand der Toolbox deren Beschreibung anzuzeigen. Für einige Komponenten sind auch Beispiele verfügbar, in denen die Konfiguration und Verwendung der Komponenten veranschaulicht wird. Die Beispiele sind auf [MSDN](/samples/browse/)verfügbar. Um über die **SSIS-Toolbox**auf die Beispiele zuzugreifen, klicken Sie auf den unterhalb der Beschreibung angezeigten Link **Beispiele suchen** .  
   
 > [!NOTE]
 > Sie können installierte Komponenten nicht aus der Toolbox *entfernen*.  
@@ -65,5 +65,4 @@ Um auf weitere Informationen zu einer Komponente in der Toolbox zuzugreifen, kli
   
 ## <a name="refresh-the-ssis-toolbox"></a>Aktualisieren der SSIS-Toolbox  
   
-1.  Klicken Sie mit der rechten Maustaste auf die SSIS-Toolbox, und klicken Sie anschließend auf **Toolbox aktualisieren**.  
-
+1.  Klicken Sie mit der rechten Maustaste auf die SSIS-Toolbox, und klicken Sie anschließend auf **Toolbox aktualisieren**.

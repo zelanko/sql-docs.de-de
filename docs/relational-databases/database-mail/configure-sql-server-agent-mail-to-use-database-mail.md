@@ -13,12 +13,12 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 318ba0af0be327cbe938fd9498dcbce9e418650d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385806"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192578"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88385806"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
   > [!NOTE]
-  > In einer verwalteten Instanz ist der SQL-Agent immer so konfiguriert, dass Datenbank-E-Mail verwendet wird. Daher gilt dieser Artikel nicht für verwaltete Instanzen. In einer verwalteten Instanz benötigen Sie ein Profil mit dem Namen **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)**, um den SQL-Agent an Datenbank-E-Mail zu binden. 
+  > In einer verwalteten Instanz ist der SQL-Agent immer so konfiguriert, dass Datenbank-E-Mail verwendet wird. Daher gilt dieser Artikel nicht für verwaltete Instanzen. In einer verwalteten Instanz benötigen Sie ein Profil mit dem Namen **[AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)**, um den SQL-Agent an Datenbank-E-Mail zu binden. 
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
@@ -81,5 +81,4 @@ ms.locfileid: "88385806"
 -   [Operatoren](../../ssms/agent/operators.md)  
   
      Operatoren sind Aliase für Personen oder Gruppen, die elektronische Benachrichtigung empfangen können.  
-  
   

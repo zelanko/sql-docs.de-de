@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1df84869443257dbfc73d5ef3984f3e37a15b6c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425642"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194574"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht
 
@@ -256,7 +256,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  „Timeout“ gibt die Anzahl der Sekunden an, die der OLE DB-Anbieter für SSIS warten kann, bevor neue Daten aus dem SSIS-Paket eingehen. Der Standardwert für „Timeout“ beträgt 60 Sekunden. Sie können einen ganzzahligen Wert für „Timeout“ zwischen 20 und 32000 angeben.  
   
- Parameter enthalten den Wert von Paket- und Projektparametern. Die Regeln für die Parameter sind mit denen für die Parameter in [DTExec](https://msdn.microsoft.com/library/hh231187.aspx)identisch.  
+ Parameter enthalten den Wert von Paket- und Projektparametern. Die Regeln für die Parameter sind mit denen für die Parameter in [DTExec](../packages/dtexec-utility.md)identisch.  
   
  Die folgende Liste gibt die in der Abfrageklausel zulässigen Sonderzeichen an:  
   
@@ -270,6 +270,5 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenstreamingziel](../../integration-services/data-flow/data-streaming-destination.md)   
- [Konfigurieren des Datenstreamingziels](../../integration-services/data-flow/configure-data-streaming-destination.md)  
-  
+ [Konfigurieren des Datenstreamingziels](./data-streaming-destination.md)  
   
