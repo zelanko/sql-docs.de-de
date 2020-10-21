@@ -352,6 +352,14 @@
               href: big-data-cluster/change-azdata-password.md
             - name: Nichtstammcontainer
               href: big-data-cluster/non-root-containers.md
+            - name: Verschlüsselung ruhender Daten
+              items:
+                - name: Konzepte und Konfiguration
+                  href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+                - name: SQL Server TDE
+                  href: big-data-cluster/encryption-at-rest-sql-server-tde.md
+                - name: HDFS-Verschlüsselungszonen
+                  href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
         - name: Spark-Aufträge
           items:
             - name: Übermitteln von Spark-Aufträgen in Azure Data Studio
