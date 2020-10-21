@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6ae5739b4309c9f56d2f67a17573722f141ec5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb1fc17be92259e0fe642c90f760c375e5eacb0f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430882"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192739"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Extrahieren von Änderungsdaten mithilfe der CDC-Quelle
 
@@ -76,8 +76,7 @@ ms.locfileid: "88430882"
 15. Klicken Sie auf **OK**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
-  
+ [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](./cdc-source.md)   
+ [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](./cdc-source.md)   
+ [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](./cdc-source.md)  
   

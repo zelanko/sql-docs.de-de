@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5799d85c7978505503fcbd56aa85eb693da6665e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 69e968fbeb5f02b98393a466eadb96922b581916
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346436"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195866"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Schritte im SQL Server-Import/Export-Assistenten
 
@@ -60,6 +60,4 @@ Im Folgenden werden einige weitere grundlegenden Tasks aufgelistet.
 
 -   **Starten Sie den Assistenten.** Wenn Sie bereit sind, den Assistenten auszuführen, und nur wissen möchten, wie Sie ihn starten, lesen Sie [Starten des SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--   **Installieren des Assistenten** Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den Import- und Export-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
-
-
+-   **Installieren des Assistenten** Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den Import- und Export-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).

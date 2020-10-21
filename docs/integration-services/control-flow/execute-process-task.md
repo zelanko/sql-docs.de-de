@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e34be2d218041a4c8994bf0bea5579942f444ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b19a591448da6e14c6275462ba6cb5ae595092a0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430982"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197212"
 ---
 # <a name="execute-process-task"></a>Prozess ausführen (Task)
 
@@ -46,12 +46,12 @@ ms.locfileid: "88430982"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="property-settings"></a>Eigenschafteneinstellungen  
  Wenn der Task "Prozess ausführen" eine benutzerdefinierte Anwendung ausführt, stellt der Task mithilfe einer der beiden folgenden Methoden eine Eingabe für die Anwendung bereit:  
   
--   Eine Variable, die Sie in der Eigenschaftseinstellung **StandardInputVariable** angeben. Weitere Informationen zu Variablen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   Eine Variable, die Sie in der Eigenschaftseinstellung **StandardInputVariable** angeben. Weitere Informationen zu Variablen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../integration-services-ssis-variables.md).  
   
 -   Ein Argument, das Sie in der Eigenschaftseinstellung **Argumente** angeben. (Wenn der Task beispielsweise ein Dokument in Word öffnet, kann mit dem Argument die DOC-Datei angegeben werden.)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "88430982"
   
  Sie können einen Ausdruck verwenden, um verschiedene Eigenschaften des Tasks 'Prozess ausführen' festzulegen.  
   
- Wenn Sie zum Konfigurieren des Tasks Prozess ausführen für Eingaben die Eigenschaft **StandardInputVariable** verwenden, rufen Sie zum Lesen der Eingabe die **Console.ReadLine** -Methode der Anwendung auf. Weitere Informationen finden Sie im Artikel [Console.ReadLine-Methode](https://go.microsoft.com/fwlink/?LinkId=129201) in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Klassenbibliothek.  
+ Wenn Sie zum Konfigurieren des Tasks Prozess ausführen für Eingaben die Eigenschaft **StandardInputVariable** verwenden, rufen Sie zum Lesen der Eingabe die **Console.ReadLine** -Methode der Anwendung auf. Weitere Informationen finden Sie im Artikel [Console.ReadLine-Methode](/dotnet/api/system.console.readline) in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Klassenbibliothek.  
   
  Wenn Sie zum Konfigurieren des Tasks Prozess ausführen für Eingaben die Eigenschaft **Argumente** verwenden, führen Sie zum Abrufen der Argumente einen der folgenden Schritte aus:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88430982"
   
 -   Verwenden Sie die **Main**-Methode, wenn Sie die Anwendung mit Microsoft Visual C# schreiben.  
   
-     Weitere Informationen finden Sie im C#-Programmierhandbuch unter [Befehlszeilenargumente (C#-Programmierhandbuch)](https://go.microsoft.com/fwlink/?LinkId=129406).  
+     Weitere Informationen finden Sie im C#-Programmierhandbuch unter [Befehlszeilenargumente (C#-Programmierhandbuch)](/dotnet/csharp/programming-guide/main-and-command-args/command-line-arguments).  
   
  Der Task 'Prozess ausführen' enthält außerdem die Eigenschaften **StandardOutputVariable** und **StandardErrorVariable** zum Angeben der Variablen, die jeweils die Standardausgabe und die Fehlerausgabe der Anwendung in Anspruch nehmen.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88430982"
  **StandardInputVariable**  
  Wählen Sie eine Variable für die Bereitstellung der Eingabe zum Prozess aus, oder klicken Sie auf \<**New variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Verwandte Themen:** [Hinzufügen von Variablen](../integration-services-ssis-variables.md)  
   
  **StandardOutputVariable**  
  Wählen Sie eine Variable zum Erfassen der Ausgabe des Prozess aus, oder klicken Sie auf \<**New variable...**>, um eine neue Variable zu erstellen.  
@@ -145,5 +145,4 @@ ms.locfileid: "88430982"
 ## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
-  
   

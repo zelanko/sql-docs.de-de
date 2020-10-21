@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9eb0bd04dc50aac286b72983ee4b3d196f04c60c
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006539"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175908"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Problembehandlung bei vollen Transaktionsprotokollen (SQL Server-Fehler 9002)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86006539"
  
  Mithilfe der Spalten **log_reuse_wait** und **log_reuse_wait_desc** der **sys.database**-Katalogsicht können Sie feststellen, wodurch eine Protokollkürzung verhindert wurde. Weitere Informationen finden Sie unter [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Eine Beschreibung von Faktoren, die eine Protokollkürzung verzögern können, finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-> **WICHTIG!**  
+> [!IMPORTANT]  
 >  Wenn sich die Datenbank zu dem Zeitpunkt, als der Fehler 9002 auftrat, gerade im Wiederherstellungsmodus befand, müssen Sie nach Behebung des Problems die Datenbank mithilfe von [ALTER DATABASE *database_name* SET ONLINE](../../t-sql/statements/alter-database-transact-sql-set-options.md) wiederherstellen.  
   
  Alternativ sind als Reaktion auf ein volles Transaktionsprotokoll auch folgende Aktionen möglich:  
@@ -61,8 +61,8 @@ ms.locfileid: "86006539"
   
  **So erstellen Sie eine Transaktionsprotokollsicherung**  
   
-> **WICHTIG**  
->  Wenn die Datenbank beschädigt ist, gehen Sie unter [Protokollfragmentsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+> [!IMPORTANT]  
+> Wenn die Datenbank beschädigt ist, gehen Sie unter [Protokollfragmentsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 -   [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
@@ -74,7 +74,8 @@ ms.locfileid: "86006539"
 ### <a name="move-the-log-file-to-a-different-disk"></a>Verschieben der Protokolldatei auf einen anderen Datenträger  
  Wenn Sie auf dem Datenträger, auf dem die Protokolldatei aktuell gespeichert ist, nicht genügend Speicherplatz freigeben können, können Sie die Datei auf einen anderen Datenträger mit ausreichendem Speicherplatz verschieben.  
   
-> **WICHTIG!** Protokolldateien sollten unter keinen Umständen in komprimierten Dateisystemen gespeichert werden.  
+> [!IMPORTANT]
+> Protokolldateien sollten unter keinen Umständen in komprimierten Dateisystemen gespeichert werden.  
   
  **Verschieben einer Protokolldatei**  
   
@@ -91,7 +92,8 @@ ms.locfileid: "86006539"
   
 -   Aktivieren Sie die automatische Vergrößerung, indem Sie mit der ALTER DATABASE-Anweisung für die Option FILEGROWTH ein Vergrößerungsinkrement ungleich Null festlegen.  
   
-> **HINWEIS:** Erhöhen Sie in beiden Fällen den MAXSIZE-Wert, wenn die aktuelle Größenbeschränkung erreicht wurde.  
+> [!NOTE]
+> Erhöhen Sie in beiden Fällen den MAXSIZE-Wert, wenn die aktuelle Größenbeschränkung erreicht wurde.  
   
 ### <a name="add-a-log-file-on-a-different-disk"></a>Hinzufügen einer Protokolldatei auf einem anderen Datenträger  
  Fügen Sie der Datenbank mithilfe von ALTER DATABASE <database_name> ADD LOG FILE eine neue Protokolldatei auf einem anderen Datenträger hinzu, auf dem ausreichend Speicherplatz vorhanden ist.  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b7d0f0a75c924151b2548a71a2f52389abc95577
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456892"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193722"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Neuigkeiten in Integration Services in SQL Server 2017
 
@@ -78,7 +78,7 @@ Sie können nun SSIS-Projekte und -Pakete für SQL Server 2012 bis 2017 in Visua
 -   Die Leistung der Protokollierung in SSISDB für die Ausführungen von Paketen in Scale Out wurde verbessert. Die Protokolle „Ereignismeldung“ und „Meldungskontext“ werden in SSISDB nun im Batchmodus statt einzeln geschrieben. Im Folgenden finden Sie einige zusätzliche Anmerkungen zu dieser Verbesserung:        
     - Einige Berichte in der aktuellen Version von SQL Server Management Studio (SSMS) zeigen diese Protokolle für Ausführungen in Scale Out derzeit nicht an. Dies soll im nächsten Release von SSMS unterstützt werden. Zu den betroffenen Berichten gehören die Berichte *Alle Verbindungen* und *Fehlerkontext* sowie der Abschnitt *Verbindungsinformationen* im Integration Services-Dashboard.
     - Die neue Spalte **event_message_guid** wurde hinzugefügt. Verwenden Sie diese Spalte, um die Sichten [catalog].[event_message_context] und [catalog].[event_messages] zu verknüpfen, anstatt **event_message_id** zu verwenden, wenn Sie diese Ausführungsprotokolle in Scale Out abfragen.
--   Laden Sie [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 oder höher herunter, um die Verwaltungsanwendung für SSIS Scale Out zu erhalten.
+-   Laden Sie [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 17.1 oder höher herunter, um die Verwaltungsanwendung für SSIS Scale Out zu erhalten.
 
 ## <a name="new-in-ssis-in-sql-server-2017-ctp-20"></a>Neues in SSIS in SQL Server 2017 CTP 2.0
 
@@ -113,4 +113,3 @@ Weitere Informationen finden Sie unter [Integration Services Scale Out](../integ
 ### <a name="support-for-microsoft-dynamics-online-resources"></a>Unterstützung für Onlineressourcen von Microsoft Dynamics
 
 Die OData-Quelle und der OData-Verbindungs-Manager unterstützen jetzt Verbindungen mit den OData-Feeds von Microsoft Dynamics AX Online und Microsoft Dynamics CRM Online.
-

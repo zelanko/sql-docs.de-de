@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 913345034da936d6ed7a0c9ea3678c427b4f34ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf44509a479e66175d89c38c42595e418dc6c750
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495313"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192404"
 ---
 # <a name="system-variables"></a>Systemvariablen
 
@@ -109,6 +109,5 @@ ms.locfileid: "88495313"
  Diese Regel gilt auch für benutzerdefinierte Variablen. Während die Datentypen der Systemvariablen nicht geändert werden können, und Sie diese Variablen den Datentypen entsprechend anpassen müssen, sind benutzerdefinierte Variablen jedoch im Vergleich hierzu flexibler. Die in Parameterbindungen verwendeten benutzerdefinierten Variablen sind in der Regel mit den Datentypen definiert, die mit den zugeordneten Datentypen der Parameter kompatibel sind.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Zuordnen von Abfrageparametern zu Variablen in einem Task SQL ausführen](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
-  
+ [Zuordnen von Abfrageparametern zu Variablen in einem Task SQL ausführen](./control-flow/execute-sql-task.md)  
   

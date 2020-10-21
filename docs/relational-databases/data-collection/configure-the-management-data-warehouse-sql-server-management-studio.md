@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6dc0705d65cf77dc0aa1f334fee2d78d2ca2e400
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733867"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193434"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85733867"
  Auf dieser Seite können Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankserver und ein Verwaltungs-Data Warehouse auswählen. Das Verwaltungs-Data Warehouse ist eine relationale Datenbank, in der aufgelistete Daten gespeichert werden.  
   
 > [!NOTE]  
->  Sie müssen die erforderlichen Berechtigungen zum Erstellen des Verwaltungs-Data Warehouses auf dem Server besitzen. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). Zudem müssen Sie die erforderlichen Berechtigungen zum Erstellen von Anmeldenamen für Verwaltungs-Data Warehouse-Rollen besitzen.  
+>  Sie müssen die erforderlichen Berechtigungen zum Erstellen des Verwaltungs-Data Warehouses auf dem Server besitzen. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md). Zudem müssen Sie die erforderlichen Berechtigungen zum Erstellen von Anmeldenamen für Verwaltungs-Data Warehouse-Rollen besitzen.  
   
  **Servername**  
  Gibt den Namen des Servers an, der als Host für das Verwaltungs-Data Warehouse fungiert.  
@@ -139,5 +139,4 @@ ms.locfileid: "85733867"
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   
  [Verwalten von Datensammlungen](../../relational-databases/data-collection/manage-data-collection.md)  
-  
   

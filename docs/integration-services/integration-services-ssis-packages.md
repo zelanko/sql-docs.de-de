@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7dea5e9016b9168131c5b809e9f1776dbbd1236
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449813"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193853"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services-Pakete (SSIS)
 
@@ -61,7 +61,7 @@ ms.locfileid: "88449813"
 ### <a name="configurations"></a>Konfigurationen  
  Eine Konfiguration enthält Paare aus einer Eigenschaft und einem Wert, die die Eigenschaften des Pakets und der zugehörigen Tasks, Containers, Variablen, Verbindungen und Ereignishandler beschreiben, wenn das Paket ausgeführt wird. Mithilfe von Konfigurationen können Eigenschaften aktualisiert werden, ohne das Paket zu ändern. Wenn das Paket ausgeführt wird, werden die Konfigurationsinformationen geladen und die Eigenschaftswerte aktualisiert. Beispielsweise kann mit einer Konfiguration die Verbindungszeichenfolge der Verbindung aktualisiert werden.  
   
- Die Konfiguration wird gespeichert und mit dem Paket bereitgestellt, wenn das Paket auf einem anderen Computer installiert wird. Die Konfigurationswerte können aktualisiert werden, wenn das Paket installiert wird, damit das Paket in einer anderen Umgebung unterstützt wird. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../integration-services/packages/create-package-configurations.md).  
+ Die Konfiguration wird gespeichert und mit dem Paket bereitgestellt, wenn das Paket auf einem anderen Computer installiert wird. Die Konfigurationswerte können aktualisiert werden, wenn das Paket installiert wird, damit das Paket in einer anderen Umgebung unterstützt wird. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](./packages/legacy-package-deployment-ssis.md).  
   
 ### <a name="logging-and-log-providers"></a>Protokollierung und Protokollanbieter  
  Bei einem Protokoll handelt es sich um eine Auflistung von Informationen zu dem Paket, die beim Ausführen des Pakets gesammelt werden. Beispielsweise kann ein Protokoll die Start- und Beendigungszeit für die Ausführung eines Pakets bereitstellen. Ein Protokollanbieter definiert den Zieltyp und das Format, der bzw. das vom Paket und dessen Containern und Tasks zum Protokollieren von Laufzeitinformationen verwendet werden kann. Die Protokolle sind einem Paket zugeordnet, aber die Tasks und Container im Paket können Informationen in einem beliebigen Paketprotokoll protokollieren. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält eine Reihe von integrierten Protokollanbietern für die Protokollierung. Beispielsweise enthält [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Protokollanbieter für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Textdateien. Darüber hinaus können Sie benutzerdefinierte Protokollanbieter erstellen und zur Protokollierung verwenden. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
@@ -117,5 +117,4 @@ ms.locfileid: "88449813"
 -   [Erstellen von Paketen in SQL Server-Datentools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 -   Weitere Informationen finden Sie unter [Programmgesteuertes Erstellen von Paketen](../integration-services/building-packages-programmatically/building-packages-programmatically.md) im Entwicklerhandbuch. 
-  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fdad63c6b5d97d9b6b8193babc67ad8a57a32f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a694df5f4920ecd70e4aa27def778712fbbf953
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425742"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195299"
 ---
 # <a name="script-component"></a>Skriptkomponente
 
@@ -66,7 +66,7 @@ ms.locfileid: "88425742"
  Im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer weist die Skriptkomponente zwei Modi auf: Metadatenentwurfsmodus und Codeentwurfsmodus. Im Metadatenentwurfsmodus können Sie Eingaben und Ausgaben der Skriptkomponente hinzufügen und ändern, aber Sie können keinen Code erstellen. Nachdem Sie alle Eingaben und Ausgaben konfiguriert haben, wechseln Sie zum Codeentwurfsmodus, um das Skript zu erstellen. Die Skriptkomponente generiert von den Metadaten der Eingaben und Ausgaben automatisch Basiscode. Wenn Sie die Metadaten ändern, nachdem die Skriptkomponente den Basiscode generiert hat, kann es sein, dass der Code nicht mehr kompiliert wird, weil der aktualisierte Basiscode mit Ihrem Code inkompatibel ist.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>Erstellen des von der Komponente verwendeten Skripts  
- Die Skriptkomponente verwendet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) als Umgebung zum Erstellen der Skripts. Sie greifen auf VSTA im **Transformations-Editor für Skripterstellung**zu. Weitere Informationen finden Sie unter [Transformations-Editor für Skripterstellung &#40;Seite Skript&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Die Skriptkomponente verwendet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) als Umgebung zum Erstellen der Skripts. Sie greifen auf VSTA im **Transformations-Editor für Skripterstellung**zu. Weitere Informationen finden Sie unter [Transformations-Editor für Skripterstellung &#40;Seite Skript&#41;]().  
   
  Die Skriptkomponente stellt ein VSTA-Projekt bereit, das eine automatisch generierte Klasse namens ScriptMain generiert, die die Komponentenmetadaten darstellt. Wenn z. B. die Skriptkomponente als Transformation mit drei Ausgaben verwendet wird, enthält ScriptMain eine Methode für jede Ausgabe. ScriptMain ist der Einstiegspunkt in das Skript.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "88425742"
 ### <a name="configuring-the-script-component-programmatically"></a>Programmgesteuertes Konfigurieren der Skriptkomponente im Designer  
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Fenster **Eigenschaften** oder programmgesteuert festlegen können:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -181,7 +181,7 @@ ms.locfileid: "88425742"
  **Inputs and outputs**  
  Wählen Sie auf der linken Seite eine Eingabe oder Ausgabe, um die entsprechenden Eigenschaften in der Tabelle auf der rechten Seite anzuzeigen. Welche Eigenschaften bearbeitet werden können, ist von der getroffenen Auswahl abhängig. Viele dieser Eigenschaften sind schreibgeschützt. Weitere Informationen zu den einzelnen Eigenschaften finden Sie unter den folgenden Themen.  
   
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
  [Benutzerdefinierte Eigenschaften von Transformationen](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -224,5 +224,4 @@ ms.locfileid: "88425742"
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
  [Erweitern des Datenflusses mit der Skriptkomponente](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
-  
   

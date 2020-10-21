@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e25927358f87c63c2c7d6dcbfb92b565d02994e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88a927a23696e5de7a1e079cb517078dc318b69c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495113"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193762"
 ---
 # <a name="use-annotations-in-packages"></a>Verwenden von Anmerkungen in Paketen
 
@@ -31,7 +31,7 @@ ms.locfileid: "88495113"
   
  Wenn Sie die EINGABETASTE drücken, wird der Text in die nächste Zeile umbrochen. Das Anmerkungsfeld wird automatisch vergrößert, wenn Sie weitere Textzeilen hinzufügen. Paketanmerkungen werden als Klartext im CDATA-Abschnitt der Paketdatei beibehalten.  
   
- Weitere Informationen zu Änderungen am Format der Paketdatei finden Sie unter [SSIS-Paketformat](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94).  
+ Weitere Informationen zu Änderungen am Format der Paketdatei finden Sie unter [SSIS-Paketformat](./integration-services-ssis-packages.md).  
   
  Wenn Sie ein Paket speichern, speichert der [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer die Anmerkungen im Paket.  
   
@@ -56,4 +56,4 @@ ms.locfileid: "88495113"
   
 7.  Wenn Sie eine Anmerkung einer Gruppe hinzufügen möchten, klicken Sie mit der rechten Maustaste auf die Anmerkung, und klicken Sie dann auf **Gruppe**.  
   
-8.  Klicken Sie im Menü **Datei** auf **Alle Speichern**, um das aktualisierte Paket zu speichern.  
+8.  Klicken Sie im Menü **Datei** auf **Alle Speichern**, um das aktualisierte Paket zu speichern.

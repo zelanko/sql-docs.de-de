@@ -1,5 +1,6 @@
 ---
-title: 'Übersicht: Importieren von Daten aus Tabellen (Master Data Services) | Microsoft-Dokumentation'
+title: Importieren von Daten aus Tabellen
+description: Importieren Sie Daten aus Tabellen, und nehmen Sie Änderungen an den Daten vor, nachdem Sie ein Modell für Ihre Daten in Master Data Services erstellt haben.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 45dcf3f21a87d81289d6445014f4157db4ab8e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 232900f14580db1e09fe0b54c4dfcd77e5310283
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257555"
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>Übersicht: Importieren von Daten aus Tabellen (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Nach der Erstellung eines Modells für Ihre Daten in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie beginnen, Daten hinzufügen und Änderungen an den Daten vorzunehmen.   Sie verwenden [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Stagingtabellen, gespeicherte Prozeduren und Master Data Manager.  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68097380"
  Löschen bedeutet, das Element dauerhaft vom System zu entfernen. Alle Transaktionen für das Element, alle Beziehungen und alle Attribute werden dauerhaft gelöscht.  
   
 > [!NOTE]  
->  Per Staging können Sie keine Elemente erneut aktivieren. Diesen Vorgang müssen Sie manuell in Master Data Manager ausführen. Weitere Informationen finden Sie unter [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md).  
+>  Per Staging können Sie keine Elemente erneut aktivieren. Diesen Vorgang müssen Sie manuell in Master Data Manager ausführen. Weitere Informationen finden Sie unter [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41](../master-data-services/reactivate-a-member-or-collection-master-data-services.md).  
 >   
 >  Per Staging können Sie keine Auflistungen löschen oder deaktivieren. Weitere Informationen zum manuellen Deaktivieren von Sammlungen finden Sie unter [Löschen eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md).  
   
@@ -83,21 +84,21 @@ ms.locfileid: "68097380"
   
  Für jede Entität im Modell gibt es eine Stagingtabelle. Der Tabellenname gibt die entsprechende Entität und den Entitätstyp an, wie etwa ein Blattelement. In der folgenden Abbildung sind die Stagingtabellen für die Entitäten „Währung“, „Kunde“ und „Produkt“ dargestellt.  
   
- ![Stagingtabellen in der MDS-Datenbank](../master-data-services/media/mds-staging-tables.png "Staging Tables in MDS database")  
+ ![Stagingtabellen in der MDS-Datenbank](../master-data-services/media/mds-staging-tables.png "Stagingtabellen in der MDS-Datenbank")  
   
  Der Name der Tabelle wird beim Erstellen einer Entität angegeben und kann nicht geändert werden. Wenn der Stagingtabellenname eine _1 oder eine andere Zahl enthält, war eine andere Tabelle dieses Namens bereits vorhanden, als die Entität erstellt wurde.  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] beinhaltet die folgenden Typen von gespeicherten Stagingprozeduren.  
   
--   stg.udp_\<name>_Leaf  
+-   STG.udp_ \<name> _Leaf  
   
--   stg.udp_\<name>_Consolidated  
+-   STG.udp_ \<name> _Consolidated  
   
--   stg.udp_\<name>_Relationship  
+-   STG.udp_ \<name> _Relationship  
   
  Für jede Entität im Modell gibt es drei gespeicherte Prozeduren, die dem Blattelement, dem konsolidierten Element und der Stagingtabelle für Beziehungen entsprechen.  In der folgenden Abbildung sind die gespeicherten Stagingprozeduren für die Entitäten „Währung“, „Kunde“ und „Produkt“ dargestellt.  
   
- ![Gespeicherte Stagingprozeduren in der MDS-Datenbank](../master-data-services/media/mds-staging-storedprocedures.png "Staging stored procedures in the MDS database")  
+ ![Staging gespeicherter Prozeduren in der MDS-Datenbank](../master-data-services/media/mds-staging-storedprocedures.png "Staging gespeicherter Prozeduren in der MDS-Datenbank")  
   
  Weitere Informationen zu den gespeicherten Prozeduren finden Sie unter [Gespeicherte Stagingprozedur &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   

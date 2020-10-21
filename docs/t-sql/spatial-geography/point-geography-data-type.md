@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f833aeaa63838281eaff92c0dfe1e9fed799cdb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47df12a85a22251a9cd962834e8e2a97170a4528
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360326"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038321"
 ---
 # <a name="point-geography-data-type"></a>Point (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ Point ( Lat, Long, SRID )
  Ein **float**-Ausdruck, der die X-Koordinate der zu erstellenden **Point**-Instanz darstellt. Weitere Informationen zu gültigen Breiten- und Längenwerten finden Sie unter [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- Ein **int**-Ausdruck, der die [Spatial Reference ID](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) der **geography**-Instanz darstellt, die Sie zurückgeben möchten.  
+ Ein **int**-Ausdruck, der die [Spatial Reference ID](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) der **geography**-Instanz darstellt, die Sie zurückgeben möchten.  
   
 > [!NOTE]  
 >  Argumente für die Punktemethode (Geography-Datentyp) besitzen umgekehrte Koordinaten im Vergleich zu WKT.  
@@ -68,4 +68,4 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erweiterte statische geography-Methoden](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [Erweiterte statische geography-Methoden](../../t-sql/spatial-geography/extended-static-geography-methods.md)

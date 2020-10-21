@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d9422574f80febefc6458b389f04b4b1625b22c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5189cda62a168db3cedff0d57666df7e15a0d65c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425652"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193170"
 ---
 # <a name="transform-data-with-transformations"></a>Transformieren von Daten mit Transformationen
 
@@ -49,7 +49,7 @@ ms.locfileid: "88425652"
   
  Sie können auch benutzerdefinierte Transformationen erstellen. Weitere Informationen finden Sie unter [Entwickeln einer benutzerdefinierten Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) und [Entwickeln bestimmter Arten von Datenflusskomponenten](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
- Nachdem Sie dem Datenfluss-Designer die Transformation hinzugefügt haben, jedoch bevor Sie die Transformation konfigurieren, verbinden Sie die Transformation mit dem Datenfluss. Hierzu verbinden Sie die Ausgabe einer anderen Transformation oder Quelle im Datenfluss mit der Eingabe dieser Transformation. Der Konnektor zwischen den beiden Datenflusskomponenten wird als Pfad bezeichnet. Weitere Informationen zum Verbinden von Komponenten und zum Verwenden von Pfaden finden Sie unter [Verbinden von Komponenten mit Pfaden](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
+ Nachdem Sie dem Datenfluss-Designer die Transformation hinzugefügt haben, jedoch bevor Sie die Transformation konfigurieren, verbinden Sie die Transformation mit dem Datenfluss. Hierzu verbinden Sie die Ausgabe einer anderen Transformation oder Quelle im Datenfluss mit der Eingabe dieser Transformation. Der Konnektor zwischen den beiden Datenflusskomponenten wird als Pfad bezeichnet. Weitere Informationen zum Verbinden von Komponenten und zum Verwenden von Pfaden finden Sie unter [Verbinden von Komponenten mit Pfaden](../connect-components-in-a-data-flow.md).  
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>So fügen Sie einem Datenfluss eine Transformation hinzu  
   
@@ -66,8 +66,7 @@ ms.locfileid: "88425652"
 ## <a name="see-also"></a>Siehe auch  
  [Datenflusstask](../../../integration-services/control-flow/data-flow-task.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
- [Verbinden von Komponenten mit Pfaden](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Verbinden von Komponenten mit Pfaden](../connect-components-in-a-data-flow.md)   
  [Fehlerbehandlung in Daten](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)  
-  
   

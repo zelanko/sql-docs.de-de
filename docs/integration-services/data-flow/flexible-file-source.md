@@ -13,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e91be4a96d91117448def702a617d9e44acc70a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 230ada5b116e5789b008a1562ba5e2ba9325a9e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477823"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197084"
 ---
 # <a name="flexible-file-source"></a>Flexible Dateiquelle
 
@@ -28,7 +28,7 @@ Die Komponente **Flexible Dateiquelle** ermöglicht einem SSIS-Paket das Lesen v
 Zurzeit unterstützte Speicherdienste:
 
 - [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
   
 Um den Editor für die flexible Dateiquelle aufzurufen, ziehen Sie die **flexible Dateiquelle** auf den Datenfluss-Designer, und doppelklicken Sie darauf, um den Editor zu öffnen.
   
@@ -51,7 +51,7 @@ Die folgenden Eigenschaften stehen im **Erweiterten Editor** zur Verfügung.
 - **escapeChar:** Das Sonderzeichen, mit dem ein Spaltentrennzeichen im Inhalt der Eingabedatei mit Escapezeichen versehen werden kann. Sie können nicht gleichzeitig „escapeChar“ und „quoteChar“ für eine Tabelle angeben. Es ist nur ein Zeichen zulässig. Für dieses Feld gibt es keinen Standardwert.
 - **quoteChar:** Das Zeichen, mit dem ein Zeichenfolgenwert in Anführungszeichen gesetzt wird. Die Spalten- und Zeilentrennzeichen innerhalb der Anführungszeichen werden als Teil des Zeichenfolgenwerts behandelt. Diese Eigenschaft gilt sowohl für Eingabe- als auch Ausgabedatasets. Sie können nicht gleichzeitig „escapeChar“ und „quoteChar“ für eine Tabelle angeben. Es ist nur ein Zeichen zulässig. Für dieses Feld gibt es keinen Standardwert.
 - **nullValue:** Ein oder mehrere Zeichen, mit denen ein NULL-Wert dargestellt wird. Der **Standardwert** ist „\N“.
-- **encodingName:** Geben Sie den Codierungsnamen an. Siehe Eigenschaft [Encoding.EncodingName](https://docs.microsoft.com/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8).
+- **encodingName:** Geben Sie den Codierungsnamen an. Siehe Eigenschaft [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8).
 - **skipLineCount:**  Gibt die Anzahl der nicht leeren Zeilen an, die beim Lesen von Daten aus Eingabedateien übersprungen werden sollen. Wenn „skipLineCount“ und „firstRowAsHeader“ gleichzeitig angegeben sind, werden die Zeilen zuerst übersprungen, und anschließend werden die Kopfzeileninformationen aus der Eingabedatei gelesen.
 - **treatEmptyAsNull:** Gibt an, ob Null- oder leere Zeichenfolgen beim Lesen von Daten aus einer Eingabedatei als NULL-Werte behandelt werden sollen. Der Standardwert ist **True**.
 
@@ -60,16 +60,16 @@ Nachdem Sie die Verbindungsinformationen angegeben haben, wechseln Sie zur Seite
 **Hinweise zur Konfiguration der Dienstprinzipalberechtigung**
 
 Damit die **Testverbindung** funktioniert (Blob Storage oder Data Lake Storage Gen2), müssen Sie dem Dienstprinzipal mindestens die Rolle **Storage-Blobdatenleser** zuweisen.
-Dies erfolgt mit der [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+Dies erfolgt mit der [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 
 Für Blob Storage wird die Leseberechtigung gewährt, indem mindestens die Rolle **Storage-Blobdatenleser** zugewiesen wird.
 
-Für Data Lake Storage Gen2 wird die Berechtigung durch die RBAC und [ACLs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) bestimmt.
-Beachten Sie, dass ACLs wie [hier](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal) beschrieben mithilfe der Objekt-ID (OID) des Dienstprinzipals für die App-Registrierung konfiguriert werden.
+Für Data Lake Storage Gen2 wird die Berechtigung durch die RBAC und [ACLs](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) bestimmt.
+Beachten Sie, dass ACLs wie [hier](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal) beschrieben mithilfe der Objekt-ID (OID) des Dienstprinzipals für die App-Registrierung konfiguriert werden.
 Dies unterscheidet sich von der Anwendungs-ID (Client-ID), die mit der RBAC-Konfiguration verwendet wird.
 Wenn ein Sicherheitsprinzipal durch eine integrierte Rolle oder eine benutzerdefinierte Rolle RBAC-Datenberechtigungen erhält, werden diese Berechtigungen vor der Autorisierung einer Anforderung zunächst ausgewertet.
 Wenn der Anforderungsvorgang von den RBAC-Zuweisungen des Sicherheitsprinzipals autorisiert wurde, wird die Autorisierung sofort aufgelöst, und es werden keine weiteren ACL-Prüfungen durchgeführt.
 Wenn der Sicherheitsprinzipal über keine RBAC-Zuweisung verfügt oder der Vorgang der Anforderung nicht mit der zugewiesenen Berechtigung übereinstimmt, werden alternativ ACL-Prüfungen durchgeführt, um zu bestimmen, ob der Sicherheitsprinzipal für die Durchführung des angeforderten Vorgangs autorisiert ist.
 Für die Leseberechtigung müssen Sie mindestens die Berechtigung **Execute** (Ausführen) ab dem Quelldateisystem sowie die Berechtigung **Read** (Lesen) für die zu lesenden Dateien gewähren.
 Gewähren Sie alternativ mindestens die Rolle **Storage-Blobdatenleser** mit der RBAC.
-Weitere Informationen finden Sie in [diesem Artikel](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
+Weitere Informationen finden Sie in [diesem Artikel](/azure/storage/blobs/data-lake-storage-access-control).

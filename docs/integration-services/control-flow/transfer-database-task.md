@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 919b6b31618b1fcf36f0834aa6a3c5c2436c198b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3421b1c839504c01ecb256530cb579c18f043b86
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484513"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192797"
 ---
 # <a name="transfer-database-task"></a>Datenbanken übertragen (Task)
 
@@ -47,7 +47,7 @@ ms.locfileid: "88484513"
 ## <a name="execution-value"></a>Ausführungswert  
  Der in der **ExecutionValue** -Eigenschaft des Tasks definierte Ausführungswert gibt den Wert 1 zurück, da der Task "Datenbank übertragen" im Gegensatz zu anderen Übertragungstasks nur eine Datenbank übertragen kann.  
   
- Indem der **ExecValueVariable** -Eigenschaft des Tasks „Datenbanken übertragen“ eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Fehlermeldungsübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Indem der **ExecValueVariable** -Eigenschaft des Tasks „Datenbanken übertragen“ eine benutzerdefinierte Variable zugewiesen wird, können Informationen über die Fehlermeldungsübertragung anderen Objekten im Paket zur Verfügung gestellt werden. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Protokolleinträge  
  Der Task "Datenbanken übertragen" enthält die folgenden benutzerdefinierten Protokolleinträge:  
@@ -84,7 +84,7 @@ ms.locfileid: "88484513"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu erhalten:  
   
--   [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Festlegen der Eigenschaften eines Tasks oder Containers](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-database-task"></a>Programmgesteuerte Konfiguration des Tasks "Datenbank übertragen"  
  Klicken Sie auf das folgende Thema, um weitere Informationen zum programmgesteuerten Festlegen dieser Eigenschaften anzuzeigen:  
@@ -210,4 +210,4 @@ ms.locfileid: "88484513"
   
  Geben Sie den Speicherort der Netzwerkdateifreigabe ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen, um zu dieser Netzwerkdateifreigabe zu navigieren.  
   
- Beim Übertragen einer Datenbank im Offlinemodus werden die Datenbankdateien zunächst in den als **Netzwerkdateifreigabe** angegebenen Speicherort kopiert, bevor sie in den als **Zielordner** gekennzeichneten Speicherort übertragen werden.  
+ Beim Übertragen einer Datenbank im Offlinemodus werden die Datenbankdateien zunächst in den als **Netzwerkdateifreigabe** angegebenen Speicherort kopiert, bevor sie in den als **Zielordner** gekennzeichneten Speicherort übertragen werden.

@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 75eeaf7b9402de747c49ad69f64731c2de6962c9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 19db6aeab39dc93c2dcfd6a869d3b54e0a1ceaa6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522892"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192463"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out-Unterstützung für Hochverfügbarkeit
 
@@ -98,9 +98,9 @@ Rufen Sie die gespeicherte Prozedur `[catalog].[update_logdb_info]` mithilfe der
 
 Auf virtuellen Azure-Computern erfordert diese Konfiguration zusätzliche Schritte. Eine vollständige Erläuterung dieser Konzepte und dieser Schritte ist nicht Gegenstand dieses Artikels.
 
-1.  Sie müssen eine Azure-Domäne einrichten. Windows Server-Failoverclustering erfordert, dass alle Computer im Cluster Mitglieder derselben Domäne sind. Weitere Informationen finden Sie unter [Enable Azure Active Directory Domain Services using the Azure portal (Aktivieren von Azure Active Directory Domain Services über das Azure-Portal)](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
+1.  Sie müssen eine Azure-Domäne einrichten. Windows Server-Failoverclustering erfordert, dass alle Computer im Cluster Mitglieder derselben Domäne sind. Weitere Informationen finden Sie unter [Enable Azure Active Directory Domain Services using the Azure portal (Aktivieren von Azure Active Directory Domain Services über das Azure-Portal)](/azure/active-directory-domain-services/create-instance).
 
-2. Sie müssen einen Azure Load Balancer einrichten. Dies ist für den Verfügbarkeitsgruppenlistener erforderlich. Weitere Informationen finden Sie unter [Tutorial: Ausgleichen der internen Datenverkehrslast mithilfe eines Lastenausgleichs im Tarif „Basic“ über das Azure-Portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
+2. Sie müssen einen Azure Load Balancer einrichten. Dies ist für den Verfügbarkeitsgruppenlistener erforderlich. Weitere Informationen finden Sie unter [Tutorial: Ausgleichen der internen Datenverkehrslast mithilfe eines Lastenausgleichs im Tarif „Basic“ über das Azure-Portal](/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Aktualisieren der Scale Out-Masteradresse in SSISDB
 

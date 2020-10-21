@@ -16,12 +16,12 @@ ms.author: chugu
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/18/2019
-ms.openlocfilehash: adbb8eee477e9f021c011b91e586492e64747851
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bf52643a67557e808ccf10a29d82d0e4ed6e9ff
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346576"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195892"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Starten des SQL Server-Import/Export-Assistenten
 
@@ -41,7 +41,7 @@ So starten Sie den Assistenten
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Voraussetzung: Installation des Assistenten auf dem Computer
 
-Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den Import- und Export-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den Import- und Export-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 > [!NOTE]
 > Sie müssen SQL Server installieren, um die 64-Bit-Version des SQL Server-Import/Export-Assistenten verwenden zu können. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen und installieren daher auch nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten.
@@ -117,7 +117,7 @@ Wenn Sie Visual Studio nicht installiert haben, bzw. Visual Studio installiert h
 
 ## <a name="get-the-wizard"></a>Installieren des Assistenten
 
-Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den Import- und Export-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den Import- und Export-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="get-help-while-the-wizard-is-running"></a>Aufrufen der Hilfe während der Ausführung des Assistent
 
