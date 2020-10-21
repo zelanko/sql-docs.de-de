@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6eaaacea73d119961f7db31e75ba7089387674c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd3951ce785fc8444009a0af9442a85a41b0fbfa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484241"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193160"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Entwurfszeitmethoden einer Datenflusskomponente
 
@@ -105,7 +105,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- Weitere Informationen finden Sie unter „Verallgemeinerte Typkonvertierung“ und „Implementieren eines Typkonverters“ in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ Weitere Informationen finden Sie unter „Verallgemeinerte Typkonvertierung“ und „Implementieren eines Typkonverters“ in der [MSDN Library](../../../sql-server/index.yml).  
   
  Sie können ein benutzerdefiniertes Bearbeitungsdialogfeld für den Wert der benutzerdefinierten Eigenschaft angeben, indem Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A>-Eigenschaft wie im folgenden Beispiel gezeigt verwenden. Erstellen Sie zuerst einen benutzerdefinierten Typeditor, der von **System.Drawing.Design.UITypeEditor** erbt, falls Sie keine geeignete vorhandene Typ-Editorklasse für die Benutzeroberfläche finden.  
   
@@ -139,9 +139,8 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- Weitere Informationen finden Sie unter „Implementieren eines Typ-Editors für die Benutzeroberfläche“ in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
+ Weitere Informationen finden Sie unter „Implementieren eines Typ-Editors für die Benutzeroberfläche“ in der [MSDN Library](../../../sql-server/index.yml).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Laufzeitmethoden einer Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
-  
   

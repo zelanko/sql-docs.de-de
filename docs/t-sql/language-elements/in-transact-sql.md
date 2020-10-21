@@ -24,12 +24,12 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a642ad617c1c466306f5beb3f11d41f9181b8458
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0751b396deef4a8617b18e9555aae50fdb835010
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459372"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193380"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,7 +85,7 @@ test_expression [ NOT ] IN
 ### <a name="a-comparing-or-and-in"></a>A. Vergleichen von OR und IN  
  Im folgenden Beispiel wird eine Liste der Namen von Mitarbeitern ausgewählt, die Konstruktionsingenieure, Werkzeugkonstrukteure oder Marketingassistenten sind.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -100,7 +100,7 @@ GO
   
  Sie können jedoch dieselben Ergebnisse mithilfe von IN abrufen.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -131,7 +131,7 @@ Mary        Dempsey     Marketing Assistant
 ### <a name="b-using-in-with-a-subquery"></a>B. Verwenden von IN mit einer Unterabfrage  
  Im folgenden Beispiel werden alle IDs der Vertriebsmitarbeiter in der `SalesPerson`-Tabelle der Mitarbeiter ermittelt, deren jährliche Sollvorgabe über 250.000 EUR liegt, und aus der `Employee`-Tabelle die Namen aller Mitarbeiter ausgewählt, bei denen `EmployeeID` mit den Ergebnissen der `SELECT`-Unterabfrage übereinstimmt.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -160,7 +160,7 @@ Tete         Mensa-Annan
 ### <a name="c-using-not-in-with-a-subquery"></a>C. Verwenden von NOT IN mit einer Unterabfrage  
  Im folgenden Beispiel werden die Vertriebsmitarbeiter gesucht, deren Quote 250.000 $ nicht übersteigt. `NOT IN` sucht die Vertriebsmitarbeiter, die nicht den Elementen in der Werteliste entsprechen.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -179,7 +179,7 @@ GO
 ### <a name="d-using-in-and-not-in"></a>D: Verwenden von IN und NOT IN  
  Im folgenden Beispiel werden alle Einträge in der Tabelle `FactInternetSales` gefunden, die den Werten von `SalesReasonKey` in der Tabelle `DimSalesReason` entsprechen.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -189,7 +189,7 @@ IN (SELECT SalesReasonKey FROM DimSalesReason);
   
  Im folgenden Beispiel werden alle Einträge in der Tabelle `FactInternetSalesReason` gefunden, die den Werten von `SalesReasonKey` in der Tabelle `DimSalesReason` nicht entsprechen.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -200,7 +200,7 @@ NOT IN (SELECT SalesReasonKey FROM DimSalesReason);
 ### <a name="e-using-in-with-an-expression-list"></a>E. Verwendung von IN mit einer Ausdrucksliste  
  Im folgenden Beispiel werden alle IDs der Vertriebsmitarbeiter in der Tabelle `DimEmployee` gefunden, die den Vornamen `Mike` oder `Michael` haben.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName  

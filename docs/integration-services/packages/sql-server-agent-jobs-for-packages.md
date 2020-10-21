@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 83eaa525c9cfa6ca80be2712fd0d21e42cc4f180
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04007ee3165838669fd1b0faefdcb20d09940af7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425192"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192470"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Aufträge des SQL Server-Agents für Pakete
 
@@ -45,17 +45,17 @@ ms.locfileid: "88425192"
 -   [Problembehandlung von geplanten Paketen](#trouble)  
   
 ##  <a name="scheduling-jobs-in-sql-server-agent"></a><a name="jobs"></a> Scheduling Jobs in SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ist ein Dienst, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wird und mit dem Sie Aufgaben durch Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen automatisieren und planen können. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst muss ausgeführt werden, um die automatische Ausführung von Aufträgen zu ermöglichen. Weitere Informationen finden Sie unter [Configure SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/configure-sql-server-agent).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ist ein Dienst, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wird und mit dem Sie Aufgaben durch Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen automatisieren und planen können. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst muss ausgeführt werden, um die automatische Ausführung von Aufträgen zu ermöglichen. Weitere Informationen finden Sie unter [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
   
  Der Knoten **SQL Server-Agent** wird im Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angezeigt, wenn Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]herstellen.  
   
- Erstellen Sie einen Auftrag im Dialogfeld **Neuer Auftrag** , um eine sich wiederholende Aufgabe zu automatisieren. Weitere Informationen finden Sie unter [Implementieren von Aufträgen](https://docs.microsoft.com/sql/ssms/agent/implement-jobs).  
+ Erstellen Sie einen Auftrag im Dialogfeld **Neuer Auftrag** , um eine sich wiederholende Aufgabe zu automatisieren. Weitere Informationen finden Sie unter [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md).  
   
- Nachdem Sie den Auftrag erstellt haben, müssen Sie mindestens einen Schritt hinzufügen. Ein Auftrag kann mehrere Schritte enthalten, und in jedem Schritt kann eine andere Aufgabe ausgeführt werden. Weitere Informationen finden Sie unter [Manage Job Steps](https://docs.microsoft.com/sql/ssms/agent/manage-job-steps).  
+ Nachdem Sie den Auftrag erstellt haben, müssen Sie mindestens einen Schritt hinzufügen. Ein Auftrag kann mehrere Schritte enthalten, und in jedem Schritt kann eine andere Aufgabe ausgeführt werden. Weitere Informationen finden Sie unter [Manage Job Steps](../../ssms/agent/manage-job-steps.md).  
   
- Nachdem Sie den Auftrag und die Auftragsschritte erstellt haben, können Sie einen Zeitplan zur Ausführung des Auftrags erstellen. Sie können jedoch auch einen ungeplanten Auftrag erstellen und manuell ausführen. Weitere Informationen finden Sie unter [Anlegen und Zuweisen von Zeitplänen zu Aufträgen](https://docs.microsoft.com/sql/ssms/agent/create-and-attach-schedules-to-jobs).  
+ Nachdem Sie den Auftrag und die Auftragsschritte erstellt haben, können Sie einen Zeitplan zur Ausführung des Auftrags erstellen. Sie können jedoch auch einen ungeplanten Auftrag erstellen und manuell ausführen. Weitere Informationen finden Sie unter [Anlegen und Zuweisen von Zeitplänen zu Aufträgen](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
- Sie können den Auftrag durch Benachrichtigungsoptionen erweitern, z. B. indem Sie einen Operator zum Senden einer E-Mail-Nachricht beim Abschluss des Auftrags festlegen oder Warnungen hinzufügen. Weitere Informationen finden Sie unter [Warnungen](https://docs.microsoft.com/sql/ssms/agent/alerts).  
+ Sie können den Auftrag durch Benachrichtigungsoptionen erweitern, z. B. indem Sie einen Operator zum Senden einer E-Mail-Nachricht beim Abschluss des Auftrags festlegen oder Warnungen hinzufügen. Weitere Informationen finden Sie unter [Warnungen](../../ssms/agent/alerts.md).  
   
 ##  <a name="scheduling-integration-services-packages"></a><a name="packages"></a> Scheduling Integration Services Packages  
  Nachdem Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag erstellt haben, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete zu planen, müssen Sie mindestens einen Schritt hinzufügen und den Typ des Schrittes als **SQL Server Integration Services-Paket**definieren. Ein Auftrag kann mehrere Schritte enthalten, und in jedem Schritt kann ein anderes Paket ausgeführt werden.  
@@ -64,14 +64,14 @@ ms.locfileid: "88425192"
   
  Weitere Informationen finden Sie unter [Planen eines Pakets mit dem SQL Server-Agent](#schedule).  
   
- Ein Video, das die Ausführung eines Pakets mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent veranschaulicht, finden Sie auf der Videohomepage unter [Vorgehensweise: Automatisieren der SSIS-Paketausführung mit dem SQL Server-Agent (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=141771) in der MSDN Library.  
+ Ein Video, das die Ausführung eines Pakets mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent veranschaulicht, finden Sie auf der Videohomepage unter [Vorgehensweise: Automatisieren der SSIS-Paketausführung mit dem SQL Server-Agent (SQL Server-Video)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100)) in der MSDN Library.  
   
 ##  <a name="troubleshooting"></a><a name="trouble"></a> Problembehandlung  
  Es kann vorkommen, dass ein Paket durch einen Auftragsschritt des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents nicht gestartet werden kann, obwohl das Paket in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sowie über die Befehlszeile erfolgreich ausgeführt wird. Es gibt einige häufige Ursachen für dieses Problem und mehrere empfohlene Lösungen. Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base-Artikel [Beim Aufrufen aus einem SQL Server-Agentauftragsschritt wird ein SSIS-Paket nicht ausgeführt](https://support.microsoft.com/kb/918760)  
   
--   Video, [Problembehandlung: SSIS-Paketausführung mit SQL Server-Agent (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=141772) in der MSDN Library.  
+-   Video, [Problembehandlung: SSIS-Paketausführung mit SQL Server-Agent (SQL Server-Video)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100)) in der MSDN Library.  
   
  Nachdem ein Paket durch einen Auftragsschritt des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents gestartet wurde, tritt bei der Paketausführung u. U. ein Fehler auf, oder das Paket wird zwar erfolgreich, aber mit unerwarteten Ergebnissen ausgeführt. Diese Probleme können mithilfe der folgenden Tools behandelt werden.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "88425192"
 
         > **HINWEIS:** Wenn das Kennwort für die vom Proxykonto verwendeten Anmeldeinformationen geändert wird, muss das Kennwort in den Anmeldeinformationen aktualisiert werden. Andernfalls verursacht der Auftragsschritt einen Fehler.  
 
-        Informationen zum Konfigurieren des SQL Server-Agent-Dienstkontos finden Sie unter [Festlegen des Dienststartkontos für den SQL Server-Agent &#40;SQL Server-Konfigurations-Manager&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
+        Informationen zum Konfigurieren des SQL Server-Agent-Dienstkontos finden Sie unter [Festlegen des Dienststartkontos für den SQL Server-Agent &#40;SQL Server-Konfigurations-Manager&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md).  
 
 8.  Klicken Sie im Listenfeld **Paketquelle** auf die Quelle des Pakets, und konfigurieren Sie anschließend die Optionen für den Auftragsschritt.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "88425192"
     ||**Kennwort**|  
     ||**Paket**<br /><br /> Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, und wählen Sie das Paket aus.<br /><br /> Sie wählen ein Paket in einem Ordner unter dem Knoten **Gespeicherte Pakete** im **Objekt-Explorer**aus.|  
     |**Paket**<br /><br /> Diese Registerkartenoptionen sind auf Pakete anwendbar, die im Dateisystem gespeichert sind.|**Paket**<br /><br /> Geben Sie den vollständigen Pfad für die Paketdatei ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um das Paket auszuwählen.|  
-    |**Konfigurationen**|Fügen Sie eine XML-Konfigurationsdatei hinzu, um das Paket mit einer bestimmten Konfiguration auszuführen. Sie verwenden eine Paketkonfiguration, um die Werte von Paketeigenschaften zur Laufzeit zu aktualisieren.<br /><br /> Diese Option entspricht der Option **/ConfigFile** für **dtexec**.<br /><br /> Weitere Informationen zur Anwendung von Paketkonfigurationen finden Sie unter [Paketkonfigurationen](../../integration-services/packages/package-configurations.md). Informationen zum Erstellen von Paketkonfigurationen finden Sie unter [Erstellen von Paketkonfigurationen](../../integration-services/packages/create-package-configurations.md).|  
+    |**Konfigurationen**|Fügen Sie eine XML-Konfigurationsdatei hinzu, um das Paket mit einer bestimmten Konfiguration auszuführen. Sie verwenden eine Paketkonfiguration, um die Werte von Paketeigenschaften zur Laufzeit zu aktualisieren.<br /><br /> Diese Option entspricht der Option **/ConfigFile** für **dtexec**.<br /><br /> Weitere Informationen zur Anwendung von Paketkonfigurationen finden Sie unter [Paketkonfigurationen](./legacy-package-deployment-ssis.md). Informationen zum Erstellen von Paketkonfigurationen finden Sie unter [Erstellen von Paketkonfigurationen](./legacy-package-deployment-ssis.md).|  
     |**Befehlsdateien**|Geben Sie weitere Optionen, die Sie mit **dtexec**ausführen möchten, in einer separaten Datei an.<br /><br /> Beispielsweise können Sie eine Datei einschließen, die die Option /Dump *errorcode* enthält, um Debugdumpdateien zu generieren, wenn während der Paketausführung eines oder mehrere angegebene Ereignisse auftreten.<br /><br /> Sie können ein Paket mit unterschiedlichen Gruppen von Optionen ausführen, indem Sie mehrere Dateien erstellen und anschließend die entsprechende Datei mithilfe der Option **Befehlsdateien** angeben.<br /><br /> Die Option **Befehlsdateien** entspricht der Option **/CommandFile** für **dtexec**.|  
     |**Data Sources** (Datenquellen)|Zeigen Sie die im Paket enthaltenen Verbindungs-Manager an. Um eine Verbindungszeichenfolge zu ändern, klicken Sie auf den Verbindungs-Manager und dann auf die Verbindungszeichenfolge.<br /><br /> Diese Option entspricht der Option **/Connection** für **dtexec**.|  
     |**Ausführungsoptionen**|**Paket bei Überprüfungswarnungen als fehlerhaft kennzeichnen**<br /> Gibt an, ob eine Warnmeldung als Fehler angesehen wird. Wenn Sie diese Option auswählen und während der Überprüfung eine Warnung ausgegeben wird, verursacht das Paket während der Überprüfung einen Fehler. Diese Option entspricht der Option **/WarnAsError** für **dtexec**.<br /><br /> **Paket ohne Ausführung überprüfen**<br /> Gibt an, ob die Paketausführung nach der Überprüfungsphase beendet wird, ohne das Paket tatsächlich auszuführen. Diese Option entspricht der Option **/Validate** für **dtexec**.<br /><br /> **MaxConcurrentExecutables-Eigenschaft überschreiben**<br /> Gibt die Anzahl von ausführbaren Dateien an, die das Paket gleichzeitig ausführen kann. Der Wert "-1" bedeutet, dass vom Paket maximal so viele ausführbare Dateien plus zwei Dateien ausgeführt werden können, wie Prozessoren auf dem Computer vorhanden sind, auf dem das Paket ausgeführt wird. Diese Option entspricht der Option **/MaxConcurrent** für **dtexec**.<br /><br /> **Paketprüfpunkte aktivieren**<br /> Gibt an, ob das Paket Prüfpunkte bei der Paketausführung verwendet. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../../integration-services/packages/restart-packages-by-using-checkpoints.md).<br /><br /> Diese Option entspricht der Option **/CheckPointing** für **dtexec**.<br /><br /> **Neustartoptionen überschreiben**<br /> Gibt an, ob ein neuer Wert für die **CheckpointUsage** -Eigenschaft des Pakets festgelegt ist. Wählen Sie einen Wert aus dem Listenfeld **Neustartoption** aus.<br /><br /> Diese Option entspricht der Option **/Restart** für **dtexec**.<br /><br /> **32-Bit-Laufzeitumgebung verwenden**<br /> Geben Sie an, ob das Paket mit der 32-Bit-Version des Hilfsprogramms dtexec auf einem 64-Bit-Computer ausgeführt werden soll, auf dem die 64-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent installiert sind.<br /><br /> Möglicherweise müssen Sie das Paket mithilfe der 32-Bit-Version von dtexec ausführen, beispielsweise, wenn das Paket einen systemeigenen OLE DB-Anbieter verwendet, der in einer 64-Bit-Version nicht verfügbar ist. Weitere Informationen finden Sie unter [Überlegungen zu Integration Services auf 64-Bit-Computern](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> Wenn Sie den Auftragsschritt vom Typ **SQL Server Integration Services-Paket** auswählen, führt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent das Paket standardmäßig unter Verwendung der Version des Hilfsprogramms „dtexec“ aus, die automatisch vom System aufgerufen wird. Das System ruft abhängig vom Computerprozessor sowie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Version, die auf dem Computer ausgeführt wird, entweder die 32-Bit- oder 64-Bit-Version des Hilfsprogramms auf.|  
@@ -212,14 +212,13 @@ ms.locfileid: "88425192"
   
 -   Knowledge Base-Artikel [Beim Aufrufen aus einem SQL Server-Agentauftragsschritt wird ein SSIS-Paket nicht ausgeführt](https://support.microsoft.com/kb/918760)auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Website  
   
--   Video, [Problembehandlung: SSIS-Paketausführung mit SQL Server-Agent (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=141772) in der MSDN Library  
+-   Video, [Problembehandlung: SSIS-Paketausführung mit SQL Server-Agent (SQL Server-Video)](/previous-versions/sql/sql-server-2008/dd440760(v=sql.100)) in der MSDN Library  
   
--   Video, [Vorgehensweise: Automatisieren der SSIS-Paketausführung mit dem SQL Server-Agent (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=141771) in der MSDN Library  
+-   Video, [Vorgehensweise: Automatisieren der SSIS-Paketausführung mit dem SQL Server-Agent (SQL Server-Video)](/previous-versions/sql/sql-server-2008/dd440761(v=sql.100)) in der MSDN Library  
   
 -   Technischer Artikel [Überprüfen von Aufträgen des SQL Server-Agents mit Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)auf mssqltips.com  
   
 -   Technischer Artikel, [Auto alert for SQL Agent jobs when they are enabled or disabled](https://go.microsoft.com/fwlink/?LinkId=165676), auf mssqltips.com  
   
 -   Blogeintrag [Konfigurieren von SQL-Agentaufträgen für das Schreiben in das Windows-Ereignisprotokoll](https://go.microsoft.com/fwlink/?LinkId=220745)auf mssqltips.com  
-  
   

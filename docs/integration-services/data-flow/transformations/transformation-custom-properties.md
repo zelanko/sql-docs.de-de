@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1219bf8b502d7e91194b3413910aa7ae16ec09c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed5b4ad8fb62b326f48c85dced98fdb2686750c4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425692"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194622"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
 
@@ -56,9 +56,9 @@ ms.locfileid: "88425692"
 
   Neben den Eigenschaften, die die meisten Datenflussobjekte im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Objektmodell aufweisen, verfügen zahlreiche Datenflussobjekte über benutzerdefinierte objektspezifische Eigenschaften. Diese benutzerdefinierten Eigenschaften sind nur zur Laufzeit verfügbar und sind nicht in der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Referenz-Dokumentation dokumentiert.  
   
- In diesem Thema werden die benutzerdefinierten Eigenschaften der verschiedenen Datenflusstransformationen aufgelistet und beschrieben. Informationen über die gemeinsamen Eigenschaften der meisten Datenflussobjekte finden Sie unter [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ In diesem Thema werden die benutzerdefinierten Eigenschaften der verschiedenen Datenflusstransformationen aufgelistet und beschrieben. Informationen über die gemeinsamen Eigenschaften der meisten Datenflussobjekte finden Sie unter [Common Properties](../set-the-properties-of-a-data-flow-component.md).  
   
- Einige Eigenschaften von Transformationen können mit Eigenschaftsausdrücken festgelegt werden. Weitere Informationen finden Sie unter [Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
+ Einige Eigenschaften von Transformationen können mit Eigenschaftsausdrücken festgelegt werden. Weitere Informationen finden Sie unter [Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130)).  
   
 ## <a name="transformations-with-custom-properties"></a>Transformationen mit benutzerdefinierten Eigenschaften  
 
@@ -159,7 +159,7 @@ ms.locfileid: "88425692"
 |ValidateExternalMetadata|Boolean|Gibt an, ob die Cachetransformation zur Entwurfszeit mit externen Datenquellen überprüft wird. Wenn die Eigenschaft auf **False**festgelegt wird, erfolgt zur Laufzeit eine Überprüfung anhand externer Datenquellen.<br /><br /> Der Standardwert lautet **True**.|  
 |AvailableInputColumns|String|Eine Liste der verfügbaren Eingabespalten.|  
 |InputColumns|String|Eine Liste der ausgewählten Eingabespalten.|  
-|CacheColumnName|String|Gibt den Namen der Spalte an, die einer ausgewählten Eingabespalte zugeordnet wird.<br /><br /> Der Name der Spalte in der CacheColumnName-Eigenschaft muss mit dem Namen der entsprechenden Spalte übereinstimmen, die auf der Seite **Spalten** des **Editors für den Cacheverbindungs-Manager**aufgelistet ist.<br /><br /> Weitere Informationen finden Sie unter [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).|  
+|CacheColumnName|String|Gibt den Namen der Spalte an, die einer ausgewählten Eingabespalte zugeordnet wird.<br /><br /> Der Name der Spalte in der CacheColumnName-Eigenschaft muss mit dem Namen der entsprechenden Spalte übereinstimmen, die auf der Seite **Spalten** des **Editors für den Cacheverbindungs-Manager**aufgelistet ist.<br /><br /> Weitere Informationen finden Sie unter [Cache Connection Manager Editor](../../connection-manager/cache-connection-manager.md).|  
   
 ##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> Benutzerdefinierte Eigenschaften der Transformation zum Zuordnen der Zeichen  
  Die Transformation zum Zuordnen der Zeichen verfügt lediglich über die Eigenschaften, die allen Datenflusskomponenten auf Komponentenebene gemeinsam sind.  
@@ -211,7 +211,7 @@ ms.locfileid: "88425692"
   
 |Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|Ein Wert, der angibt, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] oder die gebietsschemabezogenen Standardanalyseroutinen verwendet. Der Standardwert dieser Eigenschaft ist **False**. Weitere Informationen finden Sie unter [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) und [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). .<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Datenkonvertierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
+|FastParse|Boolean|Ein Wert, der angibt, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] oder die gebietsschemabezogenen Standardanalyseroutinen verwendet. Der Standardwert dieser Eigenschaft ist **False**. Weitere Informationen finden Sie unter [Fast Parse](../parsing-data.md) und [Standard Parse](../parsing-data.md). .<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Datenkonvertierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |SourceInputColumnLineageId|Integer|Die **LineageID** der Eingabespalte, die die Quelle der Ausgabespalte ist.|  
   
  Die Eingabe, die Eingabespalten und die Ausgabe der Transformation für Datenkonvertierung verfügen nicht über benutzerdefinierte Eigenschaften.  
@@ -370,7 +370,7 @@ ms.locfileid: "88425692"
 |DefaultCodePage|Integer|Die zu verwendende Standardcodepage, wenn keine Codepageinformationen aus der Datenquelle verfügbar sind.|  
 |MaxMemoryUsage|Integer|Die maximale Cachegröße für die Suchtabelle. Der Standardwert dieser Eigenschaft ist **25**. Das bedeutet, dass es kein Limit für die Cachegröße gibt.|  
 |MaxMemoryUsage64|Integer|Die maximale Cachegröße für die Suchtabelle auf einem 64-Bit-Computer.|  
-|NoMatchBehavior|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob Zeilen ohne übereinstimmende Einträge im Verweisdataset als Fehler behandelt werden.<br /><br /> Wenn die Eigenschaft auf „ **Zeilen ohne übereinstimmende Einträge als Fehler behandeln** (0)“ festgelegt wird, werden die Zeilen, die keine übereinstimmenden Einträge aufweisen, als Fehler behandelt. Mit der Seite **Fehlerausgabe** im Dialogfeld **Transformations-Editor für Suche** können Sie angeben, welche Aktionen ausgeführt werden sollen, wenn diese Art von Fehler auftritt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).<br /><br /> Wenn die Eigenschaft auf „ **Zeilen ohne übereinstimmende Einträge an die Ausgabe nicht übereinstimmender Einträge senden** (1)“ festgelegt ist, werden die Zeilen nicht als Fehler behandelt.<br /><br /> Der Standardwert ist „ **Zeilen ohne übereinstimmende Einträge als Fehler behandeln** (0)“.|  
+|NoMatchBehavior|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob Zeilen ohne übereinstimmende Einträge im Verweisdataset als Fehler behandelt werden.<br /><br /> Wenn die Eigenschaft auf „ **Zeilen ohne übereinstimmende Einträge als Fehler behandeln** (0)“ festgelegt wird, werden die Zeilen, die keine übereinstimmenden Einträge aufweisen, als Fehler behandelt. Mit der Seite **Fehlerausgabe** im Dialogfeld **Transformations-Editor für Suche** können Sie angeben, welche Aktionen ausgeführt werden sollen, wenn diese Art von Fehler auftritt. Weitere Informationen finden Sie unter [Transformations-Editor für Suche &#40;Seite Fehlerausgabe&#41;](./lookup-transformation.md).<br /><br /> Wenn die Eigenschaft auf „ **Zeilen ohne übereinstimmende Einträge an die Ausgabe nicht übereinstimmender Einträge senden** (1)“ festgelegt ist, werden die Zeilen nicht als Fehler behandelt.<br /><br /> Der Standardwert ist „ **Zeilen ohne übereinstimmende Einträge als Fehler behandeln** (0)“.|  
 |ParameterMap|String|Eine durch Semikolons getrennte Liste von Herkunfts-IDs, die den in der **SqlCommand** -Anweisung verwendeten Parametern zugeordnet werden.|  
 |ReferenceMetadataXML|String|Metadaten für die Spalten in der Suchtabelle, die die Transformation in ihre Ausgabe kopiert.|  
 |SqlCommand|String|Die SELECT-Anweisung, die Daten in die Suchtabelle lädt.|  
@@ -656,8 +656,7 @@ ms.locfileid: "88425692"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Allgemeine Eigenschaften](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [Pfadeigenschaften](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
-  
+ [Allgemeine Eigenschaften](../set-the-properties-of-a-data-flow-component.md)   
+ [Pfadeigenschaften](../integration-services-paths.md)   
+ [Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können](/previous-versions/sql/sql-server-2016/ms136104(v=sql.130))  
   

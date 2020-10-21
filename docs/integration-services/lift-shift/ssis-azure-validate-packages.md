@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 41985e8d39de843c8319ac3ac5622c4cb8b4aa51
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: d92a41782ec094b323aaaec3eaff5fb584637dc7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195136"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192523"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Überprüfen von in Azure bereitgestellten SSIS-Paketen
 
@@ -33,7 +33,7 @@ Weitere Informationen zum Assistenten für die Paketbereitstellung finden sie un
 ## <a name="validate-connection-managers"></a>Überprüfen von Verbindungs-Managern
 
 Der Assistent überprüft bestimmte Verbindungs-Manager auf die folgenden Probleme, die zu einem Verbindungsfehler führen können:
-- **Windows-Authentifizierung**. Wenn eine Verbindung Windows-Authentifizierung verwendet, löst die Überprüfung eine Warnung aus. Für Windows-Authentifizierung sind zusätzliche Konfigurationsschritte erforderlich. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Datenquellen und Dateifreigaben mit der Windows-Authentifizierung](ssis-azure-connect-with-windows-auth.md).
+- **Windows-Authentifizierung**. Wenn eine Verbindung Windows-Authentifizierung verwendet, löst die Überprüfung eine Warnung aus. Für Windows-Authentifizierung sind zusätzliche Konfigurationsschritte erforderlich. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Datenquellen und Dateifreigaben mit der Windows-Authentifizierung](/azure/data-factory/ssis-azure-connect-with-windows-auth).
 - **Dateipfad**. Wenn eine Verbindungszeichenfolge einen hartcodierten lokalen Dateipfad wie `C:\\...` enthält, löst die Überprüfung eine Warnung aus. Bei Paketen, die einen absoluten Pfad enthalten, tritt möglicherweise ein Fehler auf.
 - **UNC-Pfad**. Wenn eine Verbindungszeichenfolge einen UNC-Pfad enthält, löst die Überprüfung eine Warnung aus. Bei Paketen, die einen UNC-Pfad enthalten, tritt möglicherweise ein Fehler auf, normalerweise, weil für den Zugriff auf einen UNC-Pfad Windows-Authentifizierung erforderlich ist.
 - **HostName**. Wenn eine Servereigenschaft den Hostnamen anstelle der IP-Adresse enthält, löst die Überprüfung eine Warnung aus. Bei Paketen, die einen Hostnamen enthalten, tritt möglicherweise ein Fehler auf, normalerweise, weil für das virtuelle Azure-Netzwerk die richtige DNS-Konfiguration erforderlich ist, damit die DNS-Namensauflösung unterstützt werden kann.

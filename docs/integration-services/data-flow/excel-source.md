@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9664786703f0d9b81ce2a939bd422ea41a2fd8f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e00a786dfb9d9ffe55274822b276a2d2497efd82
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484580"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192758"
 ---
 # <a name="excel-source"></a>Excel-Quelle
 
@@ -56,7 +56,7 @@ ms.locfileid: "88484580"
   
  Das Dialogfeld **Erweiterter Editor** enthält alle Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "88484580"
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Tabelle oder Sicht|Ruft Daten aus einem Arbeitsblatt oder dem benannten Bereich einer Excel-Datei ab.|  
-|Variable für Tabellenname oder Sichtname|Geben Sie den Namen des Arbeitsblatts oder Bereichs in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Variable für Tabellenname oder Sichtname|Geben Sie den Namen des Arbeitsblatts oder Bereichs in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](../integration-services-ssis-variables.md)|  
 |SQL-Befehl|Ruft mithilfe einer SQL-Abfrage Daten aus einer Excel-Datei ab. |  
 |SQL-Befehl aus Variable|Gibt den SQL-Abfragetext in einer Variablen an.|  
   

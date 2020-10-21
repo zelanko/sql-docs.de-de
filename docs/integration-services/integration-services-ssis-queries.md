@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79d6e93c536828e0de44c77ebd1377fab5021d69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54a577a2a94c64eafe3817ccd9a041125629f846
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449799"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193842"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services-Abfragen (SSIS)
 
@@ -62,13 +62,13 @@ Sie können die SQL-Anweisung auf folgende Arten angeben:
   
  Die Direkteingabe kann auch durch Eingeben der Abfrage in das Dialogfeld des Tasks oder der Datenflusskomponente oder in das Eigenschaften-Fenster erfolgen.  
   
- Weitere Informationen finden Sie unter [Query Builder](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
+ Weitere Informationen finden Sie unter [Query Builder]().  
   
 ## <a name="sql-in-files"></a>SQL in Dateien  
  Die SQL-Anweisung für den Task "SQL ausführen" kann sich auch in einer getrennten Datei befinden. Sie können z. B. Abfragen mithilfe von Tools wie beispielsweise dem Abfrage-Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]schreiben, die Abfrage in einer Datei speichern und dann die Abfrage aus dieser Datei auslesen, wenn ein Paket ausgeführt wird. Die Datei darf nur die auszuführenden SQL-Anweisungen sowie Kommentare enthalten. Zum Verwenden einer in einer Datei gespeicherten SQL-Anweisung müssen Sie eine Dateiverbindung bereitstellen, die den Dateinamen und den Speicherort der Datei angibt. Weitere Informationen finden Sie unter [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md).  
   
 ## <a name="sql-in-variables"></a>SQL in Variablen  
- Wenn die Quelle der SQL-Anweisung im Task "SQL ausführen" eine Variable ist, geben Sie den Namen der Variablen an, die die Abfrage enthält. Die „Value“-Eigenschaft der Variablen enthält den Abfragetext. Sie legen die „ValueType“-Eigenschaft der Variablen auf einen Zeichenfolgendatentyp fest. Geben dann die SQL-Anweisung in die „Value“-Eigenschaft ein, oder kopieren Sie sie in die Eigenschaft. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Wenn die Quelle der SQL-Anweisung im Task "SQL ausführen" eine Variable ist, geben Sie den Namen der Variablen an, die die Abfrage enthält. Die „Value“-Eigenschaft der Variablen enthält den Abfragetext. Sie legen die „ValueType“-Eigenschaft der Variablen auf einen Zeichenfolgendatentyp fest. Geben dann die SQL-Anweisung in die „Value“-Eigenschaft ein, oder kopieren Sie sie in die Eigenschaft. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](./integration-services-ssis-variables.md).  
 
 ## <a name="query-builder-dialog-box"></a>Abfrage-Generator (Dialogfeld)
 Verwenden Sie das Dialogfeld **Abfrage-Generator** , um Abfragen zum Verwenden mit dem Task 'SQL ausführen', der OLE DB-Quelle, dem OLE DB-Ziel und der Transformation für die Suche zu erstellen.  
@@ -85,9 +85,9 @@ Verwenden Sie das Dialogfeld **Abfrage-Generator** , um Abfragen zum Verwenden m
   
  Mit den grafischen Tools im Dialogfeld **Abfrage-Generator** können Sie Abfragen mithilfe von Drag &amp; Drop konstruieren. Standardmäßig erstellt der Abfrage-Generator SELECT-Abfragen. Sie können jedoch auch INSERT-, UPDATE- oder DELETE-Abfragen erstellen. Alle Typen von SQL-Anweisungen können im Dialogfeld **Abfrage-Generator** analysiert und ausgeführt werden. Weitere Informationen zu SQL-Anweisungen in Paketen finden Sie unter [Integration Services-Abfragen &#40;SSIS&#41;](../integration-services/integration-services-ssis-queries.md).  
   
- Weitere Informationen zur Transact-SQL-Sprache und -Syntax finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../t-sql/transact-sql-reference-database-engine.md).  
+ Weitere Informationen zur Transact-SQL-Sprache und -Syntax finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../t-sql/language-reference.md).  
   
- Sie können Variablen auch in einer Abfrage verwenden, um Werte für einen Eingabeparameter bereitzustellen, um Werte von Ausgabeparametern aufzuzeichnen und um Rückgabecodes zu speichern. Weitere Informationen zum Verwenden von Variablen in Abfragen, die in Paketen verwendet werden, finden Sie unter [SQL ausführen (Task)](../integration-services/control-flow/execute-sql-task.md), [OLE DB-Quelle](../integration-services/data-flow/ole-db-source.md)und [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Weitere Informationen zum Verwenden von Variablen im Task „SQL ausführen“ finden Sie unter [Parameter und Rückgabecodes im Task „SQL ausführen“](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) und [Resultsets im Task „SQL ausführen“](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
+ Sie können Variablen auch in einer Abfrage verwenden, um Werte für einen Eingabeparameter bereitzustellen, um Werte von Ausgabeparametern aufzuzeichnen und um Rückgabecodes zu speichern. Weitere Informationen zum Verwenden von Variablen in Abfragen, die in Paketen verwendet werden, finden Sie unter [SQL ausführen (Task)](../integration-services/control-flow/execute-sql-task.md), [OLE DB-Quelle](../integration-services/data-flow/ole-db-source.md)und [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Weitere Informationen zum Verwenden von Variablen im Task „SQL ausführen“ finden Sie unter [Parameter und Rückgabecodes im Task „SQL ausführen“](./control-flow/execute-sql-task.md) und [Resultsets im Task „SQL ausführen“](./control-flow/execute-sql-task.md).  
   
  Die Transformationen für Suche und Fuzzysuche können ebenfalls Variablen mit Parametern und Rückgabecodes verwenden. Die Informationen zur OLE DB-Quelle gelten auch für diese beiden Transformationen.  
   
@@ -119,4 +119,3 @@ Verwenden Sie das Dialogfeld **Abfrage-Generator** , um Abfragen zum Verwenden m
 |Bereich**SQL**|Zeigt die Abfrage als SQL-Text an. Änderungen, die in den Bereichen **Diagramm** und **Raster** vorgenommen worden sind, werden hier angezeigt, genauso wie hier vorgenommene Änderungen in den Bereichen **Diagramm** und **Raster** angezeigt werden.|  
 |Bereich**Ergebnisse**|Zeigt die Ergebnisse der Abfrage an, wenn Sie auf die Schaltfläche **Ausführen** auf der Symbolleiste klicken.| 
 
-  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: def15673fbc8c92148fa8ab025d6e1769b2ee236
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e24e9006219d659a6a3700c8b922a8e0745166a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425502"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92190796"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services-Ausdrücke (SSIS)
 
@@ -68,12 +68,11 @@ ms.locfileid: "88425502"
  Variablen verfügen über einen Gültigkeitsbereich, und im Ordner **Variablen** im Ausdrucks-Generator werden nur die Variablen aufgeführt, die im Gültigkeitsbereich enthalten sind und verwendet werden können. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Verwenden eines Ausdrucks in einer Datenflusskomponente](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Verwenden eines Ausdrucks in einer Datenflusskomponente](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Technischer Artikel, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), auf social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
   

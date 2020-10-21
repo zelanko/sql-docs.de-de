@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6949a8130601bf0bf3ffac5903d7584a16d7d83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 662b52803ddca54f5c660fa79c457cdc05ced3fa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449827"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193859"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services-Paket- und Projektparameter (SSIS)
 
@@ -28,7 +28,7 @@ ms.locfileid: "88449827"
 
   Mit[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -(SSIS-)Parametern können Sie Eigenschaften in Paketen zur Zeit der Paketausführung Werte zuweisen. Sie können *Projektparameter* auf Projektebene und *Paketparameter* auf Paketebene erstellen. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen.  
   
- In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] können Sie im Fenster **Project.params** Projektparameter erstellen, ändern oder löschen. Sie erstellen, ändern und löschen Paketparameter mit der Registerkarte **Parameter** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer. Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter einer Taskeigenschaft zuordnen. Weitere Informationen zum Verwenden des Fensters **Project.params** und der Registerkarte **Parameter** finden Sie unter [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99). Weitere Informationen zum Dialogfeld **Parametrisieren** finden Sie unter [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
+ In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] können Sie im Fenster **Project.params** Projektparameter erstellen, ändern oder löschen. Sie erstellen, ändern und löschen Paketparameter mit der Registerkarte **Parameter** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer. Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter einer Taskeigenschaft zuordnen. Weitere Informationen zum Verwenden des Fensters **Project.params** und der Registerkarte **Parameter** finden Sie unter [Create Parameters](). Weitere Informationen zum Dialogfeld **Parametrisieren** finden Sie unter [Parameterize Dialog Box]().  
   
 ## <a name="parameters-and-package-deployment-model"></a>Parameter und Paketbereitstellungsmodell  
  Im Allgemeinen sollten Sie beim Bereitstellen eines Pakets mit dem Paketbereitstellungsmodell Konfigurationen anstelle von Parametern verwenden.  
@@ -42,7 +42,7 @@ ms.locfileid: "88449827"
   
 -   [Gespeicherte Prozeduren &#40;Integration Services-Katalog&#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
--   [Konfigurieren (Dialogfeld)](../integration-services/service/configure-dialog-box.md)  
+-   [Konfigurieren (Dialogfeld)](./catalog/configure-dialog-box.md)  
   
 -   [Paket ausführen (Dialogfeld)](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "88449827"
 ### <a name="parameter-validation"></a>Parameterüberprüfung  
  Wenn Parameterwerte nicht aufgelöst werden können, schlägt die entsprechende Paketausführung fehl. Zur Fehlervermeidung können Sie Projekte und Pakete im Dialogfeld **Überprüfen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]überprüfen. Mit der Überprüfung stellen Sie sicher, dass alle Parameter über die notwendigen Werte verfügen oder die notwendigen Werte mit bestimmten Umgebungsverweisen auflösen können. Mit der Überprüfung können auch andere häufig auftretende Paketprobleme überprüft werden.  
   
- Weitere Informationen finden Sie unter [Validate Dialog Box](../integration-services/service/validate-dialog-box.md).  
+ Weitere Informationen finden Sie unter [Validate Dialog Box](./catalog/validate-dialog-box.md).  
   
 ### <a name="parameter-example"></a>Parameterbeispiel  
  In diesem Beispiel wird ein Parameter mit dem Namen **pkgOptions** beschrieben, der für die Angabe von Optionen für das Paket verwendet wird, in dem er sich befindet.  
@@ -166,7 +166,7 @@ Sie verwenden [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]
     > **WARNUNG:** Nehmen Sie Bearbeitungen direkt in der Liste vor, oder verwenden Sie das Fenster **Eigenschaften**, um die Werte von Parametereigenschaften zu ändern. Sie können mit der Symbolleistenschaltfläche **Löschen (X)** einen Parameter löschen. Über die letzte Symbolleistenschaltfläche können Sie das Dialogfeld **Parameterwerte verwalten** öffnen, um einen Wert für einen Parameter anzugeben, der nur verwendet wird, wenn Sie das Paket in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]ausführen.  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter einer Eigenschaft oder einem Task zuordnen. Sie öffnen das Dialogfeld, indem Sie mit der rechten Maustaste auf einen Task oder die Registerkarte „Ablaufsteuerung“ im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer klicken und dann auf **Parametrisieren** klicken. Die folgende Liste beschreibt Benutzeroberflächenelemente im Dialogfeld. Weitere Informationen zu Parametern finden Sie unter [Integration Services-Parameter (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
+Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter einer Eigenschaft oder einem Task zuordnen. Sie öffnen das Dialogfeld, indem Sie mit der rechten Maustaste auf einen Task oder die Registerkarte „Ablaufsteuerung“ im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer klicken und dann auf **Parametrisieren** klicken. Die folgende Liste beschreibt Benutzeroberflächenelemente im Dialogfeld. Weitere Informationen zu Parametern finden Sie unter [Integration Services-Parameter (SSIS)]().
   
 ### <a name="options"></a>Tastatur  
  **Eigenschaft**  
@@ -219,5 +219,4 @@ Mit dem Bereitstellungs-Assistenten können Sie Serverstandardparameterwerte fes
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Blogeintrag [SSIS-Quicktipp: Erforderliche Parameter](https://go.microsoft.com/fwlink/?LinkId=239781)auf mattmasson.com.  
-  
   

@@ -11,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6405d6be70477297fb9ca02637c92b9e458144a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459174"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035883"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lektion 1: Erstellen und Abfragen von Datenbankobjekten
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,11 +38,11 @@ Damit Sie [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen in [!INCLUDE[ssM
 ## <a name="prerequisites"></a>Voraussetzungen
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio und Zugriff auf eine SQL Server-Instanz. 
 
-- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installieren Sie [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 
 Wenn Sie keine SQL Server-Instanz haben, erstellen Sie eine. Wählen Sie dazu aus den folgenden Links Ihre Plattform aus. Wenn Sie die SQL-Authentifizierung wählen, verwenden Sie Ihre SQL Server-Anmeldeinformationen.
 - **Windows**: [Herunterladen der SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
-- **macOS**: [Herunterladen von SQL Server 2017 für Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+- **macOS**: [Herunterladen von SQL Server 2017 für Docker](../linux/quickstart-install-connect-docker.md)
 
 ## <a name="create-a-database"></a>Erstellen einer Datenbank
 Wie viele [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen verfügt auch die [`CREATE DATABASE`](statements/create-database-transact-sql.md)-Anweisung über einen erforderlichen Parameter: den Namen der Datenbank. ` CREATE DATABASE` verfügt auch über viele optionale Parameter wie den Speicherort auf dem Datenträger, an den Sie die Datenbankdateien kopieren möchten. Wenn Sie `CREATE DATABASE` ohne optionale Parameter ausführen, werden von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standardwerte für viele dieser Parameter verwendet.
@@ -241,7 +241,7 @@ Weitere Informationen zu bestimmten Funktionen, die zum Bearbeiten von Daten in 
         [Mathematische Funktionen &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)
     :::column-end:::
     :::column:::
-        [Text- und Bildfunktionen &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)
+        [Text- und Bildfunktionen &#40;Transact-SQL&#41;](./functions/text-and-image-functions-textptr-transact-sql.md)
     :::column-end:::
 :::row-end:::
 
@@ -304,6 +304,5 @@ Im nächsten Artikel erfahren Sie, wie Sie Berechtigungen für Datenbankobjekte 
 Zum nächsten Artikel wechseln, um mehr zu erfahren:
 > [!div class="nextstepaction"]
 > [Nächste Schritte](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
-  
   
   

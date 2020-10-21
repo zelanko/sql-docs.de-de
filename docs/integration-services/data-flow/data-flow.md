@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4bbd5718a5c57bdb874af00ba57dafedc9dd8654
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430962"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195964"
 ---
 # <a name="data-flow"></a>Datenfluss
 
@@ -37,7 +37,7 @@ ms.locfileid: "88430962"
   
  Darüber hinaus stellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pfade bereit, mit denen die Ausgabe einer Komponente mit der Eingabe einer anderen Komponente verbunden werden. Pfade definieren die Reihenfolge von Komponenten und ermöglichen das Hinzufügen von Anmerkungen zum Datenfluss oder das Anzeigen der Quelle der Spalte.  
   
- Sie verbinden Datenflusskomponenten durch Verbinden der Ausgabe von Quellen und Zielen mit der Eingabe von Transformationen und Zielen. Beim Erstellen eines Datenflusses verbinden Sie in der Regel die zweite und nachfolgenden Komponenten, wenn Sie diese dem Datenfluss hinzufügen. Nachdem Sie die Komponente verbunden haben, können die Eingabespalten zum Konfigurieren der Komponente verwendet werden. Wenn keine Eingabespalten verfügbar sind, müssen Sie die Konfiguration der Komponente abschließen, nachdem sie mit dem Datenfluss verbunden wurde. Weitere Informationen finden Sie unter [Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md) und [Verbinden von Komponenten mit Pfaden](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
+ Sie verbinden Datenflusskomponenten durch Verbinden der Ausgabe von Quellen und Zielen mit der Eingabe von Transformationen und Zielen. Beim Erstellen eines Datenflusses verbinden Sie in der Regel die zweite und nachfolgenden Komponenten, wenn Sie diese dem Datenfluss hinzufügen. Nachdem Sie die Komponente verbunden haben, können die Eingabespalten zum Konfigurieren der Komponente verwendet werden. Wenn keine Eingabespalten verfügbar sind, müssen Sie die Konfiguration der Komponente abschließen, nachdem sie mit dem Datenfluss verbunden wurde. Weitere Informationen finden Sie unter [Integration Services-Pfade](../../integration-services/data-flow/integration-services-paths.md) und [Verbinden von Komponenten mit Pfaden](./connect-components-in-a-data-flow.md).  
   
  Im folgenden Diagramm wird ein Datenfluss angezeigt, der eine Quelle, eine Transformation mit einer Eingabe und einer Ausgabe sowie ein Ziel aufweist. Dieses Diagramm enthält die Eingaben, Ausgaben und Fehlerausgaben sowie die Eingabespalten, Ausgabespalten und externen Spalten.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "88430962"
 |SAP BI-Quelle|Die SAP BI-Quelle ist die Quellkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für SAP BI enthält außerdem einen Verbindungsmanager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
 |Teradata-Quelle|Die Teradata-Quelle ist die Quellkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Teradata von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Teradata von Attunity umfasst auch einen Verbindungs-Manager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
   
- Wie Sie die Leistungsverbesserungen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity nutzen, wird unter [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) veranschaulicht.  
+ Wie Sie die Leistungsverbesserungen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity nutzen, wird unter [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))(Leistung von Microsoft Connector für Oracle von Attunity) veranschaulicht.  
   
 ## <a name="transformations"></a>Transformationen  
  Die Funktionalität von Transformationen variiert erheblich. Mit Transformationen können Aufgaben wie z. B. das Aktualisieren, Zusammenfassen, Bereinigen, Zusammenführen und Verteilen von Daten ausgeführt werden. Sie können Werte in Spalten ändern, Werte in Tabellen nachschlagen, Daten bereinigen und Spaltenwerte aggregieren.  
@@ -169,10 +169,10 @@ ms.locfileid: "88430962"
 |SAP BI-Ziel|Das SAP BI-Ziel ist die Zielkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connectors für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für SAP BI enthält auch einen Verbindungsmanager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
 |Teradata-Ziel|Das Teradata-Ziel ist die Zielkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connectors für Teradata von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Teradata von Attunity enthält auch einen Verbindungs-Manager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
   
- Wie Sie die Leistungsverbesserungen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity nutzen, wird unter [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) veranschaulicht.  
+ Wie Sie die Leistungsverbesserungen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity nutzen, wird unter [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))(Leistung von Microsoft Connector für Oracle von Attunity) veranschaulicht.  
   
 ## <a name="connection-managers"></a>Verbindungs-Manager  
- Viele Datenflusskomponenten stellen eine Verbindung mit Datenquellen her, und Sie müssen dem Paket die Verbindungs-Manager hinzufügen, die die Komponenten benötigen, damit die Komponente ordnungsgemäß konfiguriert werden kann. Sie können die Verbindungs-Manager beim Erstellen des Datenflusses hinzufügen, oder bevor Sie mit dem Erstellen des Datenflusses beginnen. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Viele Datenflusskomponenten stellen eine Verbindung mit Datenquellen her, und Sie müssen dem Paket die Verbindungs-Manager hinzufügen, die die Komponenten benötigen, damit die Komponente ordnungsgemäß konfiguriert werden kann. Sie können die Verbindungs-Manager beim Erstellen des Datenflusses hinzufügen, oder bevor Sie mit dem Erstellen des Datenflusses beginnen. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](../connection-manager/integration-services-ssis-connections.md).  
   
 ## <a name="external-metadata"></a>Externe Metadaten  
  Wenn Sie einen Datenfluss in einem Paket mithilfe des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers erstellen, werden die Metadaten aus den Quellen und Zielen in die externen Spalten in Quellen und Zielen kopiert, die als Momentaufnahme des Schemas dienen. Wenn [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] das Paket überprüft, vergleicht der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer diese Momentaufnahme mit dem Schema der Quelle oder des Ziels und zeigt in Abhängigkeit von den Änderungen Fehler und Warnungen an.  
@@ -220,4 +220,4 @@ ms.locfileid: "88430962"
  [Verbinden von Komponenten in einem Datenfluss](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Video [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369)(Leistung von Microsoft Connector für Oracle von Attunity) auf technet.microsoft.com.  
+ Video [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](/previous-versions/dn912438(v=msdn.10))(Leistung von Microsoft Connector für Oracle von Attunity) auf technet.microsoft.com.

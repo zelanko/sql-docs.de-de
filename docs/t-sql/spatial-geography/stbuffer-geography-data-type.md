@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9e869aa4f5f5056ef29968b6ad0d7446b0849a25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d39e58c6dd4fa648d8d4118414925777eb3535b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417046"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038315"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "88417046"
   
  Die Begrenzung des maximal möglichen Abstands ermöglicht das Erstellen von äußerst flexiblen Puffern.  
   
- Die Abweichung zwischen dem theoretischen und dem berechneten Puffer beträgt max(tolerance, extents * 1,E-7), wobei tolerance = distance \* 0,001 ist. Weitere Informationen zu Erweiterungen finden Sie unter [geography-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ Die Abweichung zwischen dem theoretischen und dem berechneten Puffer beträgt max(tolerance, extents * 1,E-7), wobei tolerance = distance \* 0,001 ist. Weitere Informationen zu Erweiterungen finden Sie unter [geography-Datentyp-Methodenverweis](./stequals-geography-data-type.md).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `LineString``geography`-Instanz erstellt. Anschließend wird `STBuffer()` verwendet, um den Bereich innerhalb von 1 Meter Umkreis um die Instanz zurückzugeben.  
@@ -79,5 +79,4 @@ SELECT @g.STBuffer(1).ToString();
 ## <a name="see-also"></a>Weitere Informationen  
  [BufferWithTolerance &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
   

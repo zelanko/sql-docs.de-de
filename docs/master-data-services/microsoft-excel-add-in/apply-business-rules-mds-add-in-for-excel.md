@@ -1,5 +1,6 @@
 ---
-title: Anwenden von Geschäftsregeln (MDS-Add-In für Excel) | Microsoft-Dokumentation
+description: Anwenden von Geschäftsregeln (MDS-Add-In für Excel)
+title: Anwenden von Geschäftsregeln
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,23 +11,23 @@ ms.topic: conceptual
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 75bbf9f18a6cbc7dd8ef78ff63e505299cf596c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 582c3245d69d1a2bc92b3a4ab3442797116571d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257597"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>Anwenden von Geschäftsregeln (MDS-Add-In für Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Wenden Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] Geschäftsregeln an, wenn Sie Daten überprüfen und bestätigen möchten, dass sie gültig sind. Sie können Überprüfungen korrigieren und die Daten erneut veröffentlichen.  
   
 > [!NOTE]  
 >  Die Datenüberprüfung findet automatisch statt, wenn Sie Daten veröffentlichen. Weitere Informationen finden Sie unter [Überprüfung &#40;Master Data Services&#41;](../../master-data-services/validation-master-data-services.md).  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über den Zugriff auf den Funktionsbereich **Explorer** verfügen.  
@@ -42,7 +43,7 @@ ms.locfileid: "67988149"
   
 2.  Die Daten werden anhand von Geschäftsregeln überprüft, und zwei Statusspalten werden angezeigt. Wenn diese Spalten nicht automatisch angezeigt werden, klicken Sie in der Gruppe **Veröffentlichen und Validieren** auf **Status anzeigen** , um sie anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht: Importieren von Daten aus Excel &#40;MDS-Add-in für Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht: Importieren von Daten aus Excel &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

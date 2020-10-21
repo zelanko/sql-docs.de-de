@@ -22,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0a6f3b475e09a0a154bc6bcee83ca21167295f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: a9e762c88291deb0643acef0db3bfc7c4e79e8a1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227220"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191850"
 ---
 # <a name="expressions-transact-sql"></a>Ausdrücke (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "91227220"
   
  In einer Programmiersprache wie C oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] wird ein Ausdruck immer zu einem einzelnen Ergebnis ausgewertet. Für Ausdrücke in einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auswahlliste gilt eine Abwandlung dieser Regel: Der Ausdruck wird für jede Zeile des Resultsets einzeln ausgewertet. Ein einzelner Ausdruck kann für jede Zeile im Resultset einen anderen Wert annehmen, aber jede Zeile hat nur genau einen Wert für den Ausdruck. In der folgenden `SELECT`-Anweisung sind beispielsweise sowohl der Verweis auf `ProductID` als auch der Term `1+2` in der Auswahlliste Ausdrücke:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, 1+2  

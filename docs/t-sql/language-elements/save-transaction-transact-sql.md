@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03af390ecf43a70d3d80ad876e1d9944cd9297bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f13fcea7eaf2958ba2ebd9c856a86a743e050ffc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445455"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195496"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,6 @@ ms.locfileid: "88445455"
  ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-  
 SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }  
 [ ; ]  
 ```  
@@ -73,7 +72,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird das Verwenden eines Sicherungspunkts für eine Transaktion zur Ausführung eines Rollbacks nur der Änderungen veranschaulicht, die von einer gespeicherten Prozedur vorgenommen werden, wenn eine aktive Transaktion vor der Ausführung der gespeicherten Prozedur gestartet wird.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d212a870d0b66108cb1b905249fc8ba2a611a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26f08ee42a1fae6ac5a5d3a50d8b32282c2a2fde
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477745"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192685"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Erstellen und Bereitstellen eines Cache für die Transformation für Suche
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477745"
   
  Die Transformation für Suche führt Suchvorgänge aus, indem Daten in Eingabespalten aus einer verbundenen Datenquelle mit Spalten in einem Verweisdataset verknüpft werden.  
   
- Sie erstellen eine Cachedatei, indem Sie einen Cacheverbindungs-Manager und eine Transformation für Cachetransformation verwenden. Weitere Informationen finden Sie unter [Cacheverbindungs-Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md) und [Cachetransformation](../../../integration-services/data-flow/transformations/cache-transform.md).  
+ Sie erstellen eine Cachedatei, indem Sie einen Cacheverbindungs-Manager und eine Transformation für Cachetransformation verwenden. Weitere Informationen finden Sie unter [Cacheverbindungs-Manager](../../connection-manager/cache-connection-manager.md) und [Cachetransformation](../../../integration-services/data-flow/transformations/cache-transform.md).  
   
  Weitere Informationen zur Transformation für Suche und zu Cachedateien finden Sie unter [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -65,11 +65,11 @@ ms.locfileid: "88477745"
     > [!NOTE]  
     >  Wenn die Transformation für Suche so konfiguriert ist, dass sie einen Cacheverbindungs-Manager verwendet, können nur Indexspalten im Verweisdataset Eingabespalten zugeordnet werden. Auch müssen alle Indexspalten zugeordnet werden.  
   
-     Weitere Informationen finden Sie unter [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+     Weitere Informationen finden Sie unter [Cache Connection Manager Editor](../../connection-manager/cache-connection-manager.md).  
   
 7.  Konfigurieren Sie die Cacheumwandlung nach Bedarf.  
   
-     Weitere Informationen finden Sie unter [Cachetransformations-Editor &#40;Seite „Verbindungs-Manager“&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) und [Cachetransformations-Editor &#40;Seite „Zuordnungen“&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+     Weitere Informationen finden Sie unter [Cachetransformations-Editor &#40;Seite „Verbindungs-Manager“&#41;](./cache-transform.md) und [Cachetransformations-Editor &#40;Seite „Zuordnungen“&#41;](./cache-transform.md).  
   
 8.  Führen Sie das Paket aus.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88477745"
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket, und öffnen Sie dann das Paket.  
   
-2.  Erstellen Sie optional eine Paketkonfiguration. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../../../integration-services/packages/create-package-configurations.md).  
+2.  Erstellen Sie optional eine Paketkonfiguration. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../../packages/legacy-package-deployment-ssis.md).  
   
 3.  Fügen Sie die Cachedatei dem Projekt hinzu, indem Sie wie folgt vorgehen:  
   
@@ -89,13 +89,12 @@ ms.locfileid: "88477745"
   
      Die Datei wird im Projektmappen-Explorer im Ordner **Sonstige** angezeigt.  
   
-4.  Konfigurieren Sie das Projekt, um ein Bereitstellungshilfsprogramm zu erstellen, und erstellen Sie anschließend das Projekt. Weitere Informationen finden Sie unter [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md).  
+4.  Konfigurieren Sie das Projekt, um ein Bereitstellungshilfsprogramm zu erstellen, und erstellen Sie anschließend das Projekt. Weitere Informationen finden Sie unter [Create a Deployment Utility](../../packages/legacy-package-deployment-ssis.md).  
   
      Die Manifestdatei „\<*project name*>SSISDeploymentManifest.xml“ wird erstellt. Diese Datei enthält eine Auflistung der verschiedenen Dateien im Projekt, der Pakete und der Paketkonfigurationen.  
   
-5.  Stellen Sie das Paket für das Dateisystem bereit. Weitere Informationen finden Sie unter [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
+5.  Stellen Sie das Paket für das Dateisystem bereit. Weitere Informationen finden Sie unter [Deploy Packages by Using the Deployment Utility](../../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen eines Bereitstellungs-Hilfsprogramms](../../../integration-services/packages/create-a-deployment-utility.md)  
-  
+ [Erstellen eines Bereitstellungs-Hilfsprogramms](../../packages/legacy-package-deployment-ssis.md)  
   

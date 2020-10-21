@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289698"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257473"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Erteilen von T-SQL-Berechtigungen für parallele Data Warehouse
 Erteilen Sie T-SQL-Berechtigungen für Daten Bank Vorgänge parallel Data Warehouse.
@@ -63,7 +63,7 @@ In diesem Abschnitt wird beschrieben, wie Sie Anmeldungen Berechtigungen für di
   
 **Verwenden der Verwaltungskonsole**  
   
-Um die Verwaltungskonsole zu verwenden, ist für eine Anmeldung die Berechtigung Server **Status anzeigen auf** Serverebene erforderlich. Mit der folgenden SQL-Anweisung wird dem Anmelde `KimAbercrombie` Namen die **View Server State** -Berechtigung erteilt, sodass Sven die SQL Server PDW Appliance mithilfe der Verwaltungskonsole überwachen kann.  
+Um die Verwaltungskonsole zu verwenden, ist für eine Anmeldung die Berechtigung Server **Status anzeigen auf** Serverebene erforderlich. Mit der folgenden SQL-Anweisung wird dem Anmelde Namen die **View Server State** -Berechtigung erteilt, sodass Sven die `KimAbercrombie` SQL Server PDW Appliance mithilfe der Verwaltungskonsole überwachen kann.  
   
 ```sql  
 USE master;  
@@ -133,7 +133,7 @@ Wenn das Ziel für die Daten ein weiteres SQL Server PDW ist, muss der Benutzer 
 ## <a name="grant-permissions-to-manage-databases"></a>Erteilen von Berechtigungen zum Verwalten von Datenbanken
 In diesem Abschnitt wird beschrieben, wie einem Datenbankbenutzer Berechtigungen zum Verwalten einer Datenbank auf der SQL Server PDW Appliance erteilt werden.  
   
-In einigen Situationen weist ein Unternehmen einen Vorgesetzten für eine Datenbank zu. Der Manager steuert den Zugriff auf die Datenbank durch andere Anmeldungen sowie die Daten und Objekte in der Datenbank. Erteilen Sie dem Benutzer die **Control** -Berechtigung für die Datenbank, um alle Objekte, Rollen und Benutzer in einer Datenbank zu verwalten. Die folgende Anweisung erteilt dem Benutzer `KimAbercrombie`die **Control** -Berechtigung für die **AdventureWorksPDW2012** -Datenbank.  
+In einigen Situationen weist ein Unternehmen einen Vorgesetzten für eine Datenbank zu. Der Manager steuert den Zugriff auf die Datenbank durch andere Anmeldungen sowie die Daten und Objekte in der Datenbank. Erteilen Sie dem Benutzer die **Control** -Berechtigung für die Datenbank, um alle Objekte, Rollen und Benutzer in einer Datenbank zu verwalten. Die folgende Anweisung erteilt dem Benutzer die **Control** -Berechtigung für die **AdventureWorksPDW2012** -Datenbank `KimAbercrombie` .  
   
 ```sql
 USE AdventureWorksPDW2012;  
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 Die SQL Server PDW Appliance kann entweder über die Verwaltungskonsole oder über SQL Server PDW System Sichten überwacht werden. Anmeldungen erfordern die Berechtigung Server **Status anzeigen** auf Serverebene, um das Gerät zu überwachen. Für-Anmeldungen ist die Berechtigung **ALTER ANY Connection** zum Beenden von Verbindungen über die Verwaltungskonsole oder den **Kill** -Befehl erforderlich. Informationen zu den Berechtigungen, die für die Verwendung der-Verwaltungskonsole erforderlich sind, finden [Sie unter Erteilen von Berechtigungen für die Verwendung der Verwaltungskonsole &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
 ### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>Erteilen der Berechtigung zum Überwachen der Appliance mithilfe von System Sichten  
-Die folgenden SQL-Anweisungen erstellen eine Anmeldung `monitor_login` mit dem Namen und gewähren der `monitor_login` Anmeldung die **View Server State** -Berechtigung.  
+Die folgenden SQL-Anweisungen erstellen eine Anmeldung `monitor_login` mit dem Namen und gewähren der Anmeldung die **View Server State** -Berechtigung `monitor_login` .  
   
 ```sql  
 USE master;  
@@ -232,7 +232,7 @@ GO
 ```  
   
 ### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>Erteilen der Berechtigung zum Überwachen der Appliance mithilfe von System Sichten und Beenden von Verbindungen  
-Die folgenden SQL-Anweisungen erstellen eine Anmeldung `monitor_and_terminate_login` mit dem Namen und gewähren der `monitor_and_terminate_login` Anmeldung die Berechtigungen **View Server State** und **ALTER ANY Connection** .  
+Die folgenden SQL-Anweisungen erstellen eine Anmeldung `monitor_and_terminate_login` mit dem Namen und gewähren der Anmeldung die Berechtigungen **View Server State** und **ALTER ANY Connection** `monitor_and_terminate_login` .  
   
 ```sql  
 USE master;  
@@ -245,8 +245,8 @@ GO
   
 Informationen zum Erstellen von Administrator Anmeldungen finden Sie unter [Fixed Server Rollen](pdw-permissions.md#fixed-server-roles).  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
-[Laden](load-overview.md)  
+[Load](load-overview.md)  
