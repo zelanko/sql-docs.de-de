@@ -1,1 +1,0 @@
-**Dieses Thema bezieht sich auf:**![keine](media/no.png)-SQL Server 2016![Ja](media/yes.png)-SQL Server 2017![Ja](media/yes.png)-Power-BI-Berichtsserver
