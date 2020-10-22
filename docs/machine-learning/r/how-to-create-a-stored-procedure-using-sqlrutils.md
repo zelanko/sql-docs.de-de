@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 44654b5c2ba4d145fa8551bd25b07c82498c4746
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 5af17aa003de878a79d6c7a5b9710851b8655d0b
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892320"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098829"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 In diesem Artikel werden die Schritte beschrieben, in denen Sie R-Code so konvertieren, dass er als gespeicherte T-SQL-Prozedur ausgeführt werden kann. Zum Erzielen bestmöglicher Ergebnisse kann es erforderlich sein, dass Ihr Code ein wenig geändert wird, damit sichergestellt ist, dass alle Eingaben parametrisiert werden können.
 

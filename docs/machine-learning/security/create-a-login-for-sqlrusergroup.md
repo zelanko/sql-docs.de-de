@@ -8,17 +8,17 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8273250360c9e60aae8ac1ae19ccebf4d76d8598
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: fcdb8353abe029291352f031d5261849514ef8fd
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180427"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92195754"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Erstellen von Anmeldeinformationen für SQLRUserGroup
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Erstellen Sie [Anmeldeinformationen in SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) für [SQLRUserGroup](../concepts/security.md#sqlrusergroup), wenn eine [Loopbackverbindung](../../machine-learning/concepts/security.md#implied-authentication) in Ihrem Skript eine *vertrauenswürdige Verbindung* angibt und die Identität, die zum Ausführen eines Objekts mit Ihrem Code verwendet wird, ein Windows-Benutzerkonto ist.
+Erstellen Sie [Anmeldeinformationen in SQL Server](../../relational-databases/security/authentication-access/create-a-login.md) für [SQLRUserGroup](../concepts/security.md#sqlrusergroup), wenn eine [Loopbackverbindung](../../machine-learning/concepts/security.md#implied-authentication) in Ihrem Skript eine *vertrauenswürdige Verbindung* angibt und die Identität, die zum Ausführen eines Objekts mit Ihrem Code verwendet wird, ein Windows-Benutzerkonto ist.
 
 Bei vertrauenswürdigen Verbindungen ist in der Verbindungszeichenfolge `Trusted_Connection=True` enthalten. Wenn SQL Server eine Anforderung mit einer vertrauenswürdigen Verbindung empfängt, wird überprüft, ob die Identität des aktuellen Windows-Benutzers Anmeldeinformationen enthält. Bei externen Prozessen, die als Workerkonto ausgeführt werden (z. B. MSSQLSERVER01 aus **SQLRUserGroup**), schlägt die Anforderung fehl, da diese Konten standardmäßig keine Anmeldeinformationen enthalten.
 

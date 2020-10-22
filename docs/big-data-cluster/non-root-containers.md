@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6371d142609b095eb6d30fcdac63cb051db22c4f
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85218184"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257120"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>Bereitstellen von anderen Containern als dem Stammcontainer in Big Data-Clustern
 
@@ -47,7 +47,7 @@ Wenn Dienste innerhalb des BDC mit einem anderen Benutzerkonto als dem Root-Benu
 
 Azure Data Studio verarbeitet die Änderung der Anmeldeinformationen transparent für die Verbindung, die über das Gateway hergestellt wurde, um das Durchsuchen von HDFS im Objekt-Explorer oder das Senden von Spark-Aufträgen über Notebooks zu ermöglichen. Installieren Sie [die neueste Version des Insider-Builds von Azure Data Studio](../azure-data-studio/download-azure-data-studio.md#download-insiders-build-of-azure-data-studio). Dieser Build enthält die erforderlichen Änderungen für diesen Anwendungsfall.
 
-In anderen Szenarios, in denen Sie Anmeldeinformationen für den Zugriff auf den Dienst über das Gateway angeben müssen (z. B. Anmelden mit `azdata`, Zugreifen auf Webdashboards für Spark), sollten Sie sicherstellen, dass die richtigen Anmeldeinformationen verwendet werden. Wenn die Bereitstellung in einem vorhandenen Cluster erfolgen soll, der vor CU5 bereitgestellt wurde, verwenden Sie weiterhin den `root`-Benutzernamen, um eine Verbindung mit dem Gateway herzustellen. Dies gilt auch nachdem Sie den Cluster auf CU5 aktualisiert haben. Wenn Sie einen neuen Cluster mithilfe des CU5-Builds bereitstellen, melden Sie sich mithilfe des Benutzernamens an, der zur Umgebungsvariablen `AZDATA_USERNAME` gehört.
+In anderen Szenarios, in denen Sie Anmeldeinformationen für den Zugriff auf den Dienst über das Gateway angeben müssen (z. B. Anmelden mit [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], Zugreifen auf Webdashboards für Spark), sollten Sie sicherstellen, dass die richtigen Anmeldeinformationen verwendet werden. Wenn die Bereitstellung in einem vorhandenen Cluster erfolgen soll, der vor CU5 bereitgestellt wurde, verwenden Sie weiterhin den `root`-Benutzernamen, um eine Verbindung mit dem Gateway herzustellen. Dies gilt auch nachdem Sie den Cluster auf CU5 aktualisiert haben. Wenn Sie einen neuen Cluster mithilfe des CU5-Builds bereitstellen, melden Sie sich mithilfe des Benutzernamens an, der zur Umgebungsvariablen `AZDATA_USERNAME` gehört.
 
 ## <a name="configuration-file-switches"></a>Optionen in der Konfigurationsdatei
 

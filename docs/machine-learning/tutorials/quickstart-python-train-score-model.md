@@ -11,12 +11,12 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 43453738d9351a18e4ed6e9887fdf75bb2e9521a
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: e5a64e3de5dae2e879c4537783d33aab81dd9662
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834053"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194455"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in Python mit SQL-Machine-Learning
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -95,7 +95,7 @@ In diesem Schritt erstellen Sie eine gespeicherte Prozedur, die ein Modell zur V
 
 In diesem Schritt führen Sie den eingebetteten Code mithilfe der Prozedur aus und erstellen ein trainiertes und serialisiertes Modell als Ausgabe. 
 
-Modelle, die zur Wiederverwendung in Ihrer Datenbank gespeichert werden, werden als Bytestream serialisiert und in einer „VARBINARY(MAX)“-Spalte einer Datenbanktabelle gespeichert. Sobald das Modell erstellt, trainiert, serialisiert und in einer Datenbank gespeichert ist, kann es durch andere Prozeduren oder durch die [PREDICT-T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)-Funktion zur Bewertung von Workloads aufgerufen werden.
+Modelle, die zur Wiederverwendung in Ihrer Datenbank gespeichert werden, werden als Bytestream serialisiert und in einer „VARBINARY(MAX)“-Spalte einer Datenbanktabelle gespeichert. Sobald das Modell erstellt, trainiert, serialisiert und in einer Datenbank gespeichert ist, kann es durch andere Prozeduren oder durch die [PREDICT-T-SQL](../../t-sql/queries/predict-transact-sql.md)-Funktion zur Bewertung von Workloads aufgerufen werden.
 
 1. Führen Sie das folgende Skript aus, um die Prozedur auszuführen. Die spezifische Anweisung zum Ausführen einer gespeicherten Prozedur finden Sie in der vierten Zeile: `EXECUTE`.
 

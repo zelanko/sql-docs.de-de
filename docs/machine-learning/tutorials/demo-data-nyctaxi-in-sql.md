@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9371d2f988642a5f5ab0e7b715130772a693bb52
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1e5e4a4856b91cd717e9498fb96567ecd6c70ca6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173693"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192640"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>NYC Taxi-Demodaten für Python- und R-Tutorials in SQL Server
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 In diesem Artikel wird beschrieben, wie eine Beispieldatenbank mit öffentlichen Daten von der [New York City Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) eingerichtet wird. Diese Daten werden in verschiedenen R- und Python-Tutorials für datenbankinterne Analysen unter SQL Server verwendet. Damit der Beispielcode schneller ausgeführt werden kann, haben wir ein repräsentatives 1 %-Sampling der Daten erstellt. In unserem System ist die Datenbanksicherungsdatei etwas größer als 90 MB, wobei sich in der primären Datentabelle 1,7 Millionen Datensätze befinden.
 
-Für diese Übung benötigen Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) oder ein anderes Tool zum Wiederherstellen einer Datenbanksicherungsdatei sowie zum Ausführen von T-SQL-Abfragen.
+Für diese Übung benötigen Sie [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) oder ein anderes Tool zum Wiederherstellen einer Datenbanksicherungsdatei sowie zum Ausführen von T-SQL-Abfragen.
 
 Dieses Dataset wird in folgenden Tutorials und Schnellstarts verwendet:
 

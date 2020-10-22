@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bff067202bccf585cce43c35443d466c033eff7d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7e48e25444acc2f84794afc487c95bdd5af64f30
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179762"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195072"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>Anzeigen und Zusammenfassen von SQL Server-Daten mithilfe von R (exemplarische Vorgehensweise)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -69,11 +69,11 @@ Führen Sie die folgenden R-Anweisungen in einer R-Umgebung auf der Clientarbeit
 
     - R nutzt ein temporäres Verzeichnis, das bei der Serialisierung von R-Objekten zwischen Ihrer Arbeitsstation und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Computer verwendet wird. Sie können das lokale Verzeichnis angeben, das als *SqlShareDir*verwendet wird, oder den Standardnamen übernehmen.
   
-    - Verwenden Sie *sqlWait*, um anzugeben, ob R auf Ergebnisse vom Server warten soll.  Eine Erläuterung zu wartenden und nicht wartenden Aufträgen finden Sie unter [Verteiltes und paralleles Computing mit RevoScaleR in Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing).
+    - Verwenden Sie *sqlWait*, um anzugeben, ob R auf Ergebnisse vom Server warten soll.  Eine Erläuterung zu wartenden und nicht wartenden Aufträgen finden Sie unter [Verteiltes und paralleles Computing mit RevoScaleR in Microsoft R](/r-server/r/how-to-revoscaler-distributed-computing).
   
     - Verwenden Sie das Argument *sqlConsoleOutput*, um anzugeben, dass Sie die Ausgabe der R-Konsole nicht anzeigen möchten.
 
-4. Rufen Sie den [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)-Konstruktor auf, um das Computekontextobjekt mit den bereits definierten Variablen und Verbindungszeichenfolgen zu erstellen, und speichern Sie das neue Objekt in der R-Variablen *sqlcc*.
+4. Rufen Sie den [RxInSqlServer](/r-server/r-reference/revoscaler/rxinsqlserver)-Konstruktor auf, um das Computekontextobjekt mit den bereits definierten Variablen und Verbindungszeichenfolgen zu erstellen, und speichern Sie das neue Objekt in der R-Variablen *sqlcc*.
   
     ```R
     sqlcc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -85,14 +85,14 @@ Führen Sie die folgenden R-Anweisungen in einer R-Umgebung auf der Clientarbeit
     rxSetComputeContext(sqlcc)
     ```
 
-    + [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) gibt den zuvor aktiven Computekontext im Hintergrund zurück, sodass Sie ihn verwenden können.
-    + [rxGetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) gibt den aktiven Computekontext zurück.
+    + [rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) gibt den zuvor aktiven Computekontext im Hintergrund zurück, sodass Sie ihn verwenden können.
+    + [rxGetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) gibt den aktiven Computekontext zurück.
     
     Beachten Sie, dass das Festlegen des Computekontexts nur Vorgänge betrifft, die Funktionen im **RevoScaleR**-Paket nutzen. Der Computekontext wirkt sich nicht darauf aus, wie Open-Source-R-Vorgänge erfolgen.
 
 ## <a name="create-a-data-source-using-rxsqlserver"></a>Erstellen einer Datenquelle mithilfe von RxSqlServer
 
-Wenn Sie Microsoft-R-Bibliotheken wie RevoScaleR und MicrosoftML verwenden, ist eine *Datenquelle* ein Objekt, das Sie mithilfe von RevoScaleR-Funktionen erstellen. Das Datenquellenobjekt gibt verschiedene Daten an, die Sie für eine Aufgabe verwenden möchten, z. B. zum Trainieren eines Modells oder Extrahieren von Features. Sie können Daten aus einer Vielzahl von Quellen, einschließlich SQL Server, erhalten. Eine Liste der derzeit unterstützten Quellen finden Sie unter [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource).
+Wenn Sie Microsoft-R-Bibliotheken wie RevoScaleR und MicrosoftML verwenden, ist eine *Datenquelle* ein Objekt, das Sie mithilfe von RevoScaleR-Funktionen erstellen. Das Datenquellenobjekt gibt verschiedene Daten an, die Sie für eine Aufgabe verwenden möchten, z. B. zum Trainieren eines Modells oder Extrahieren von Features. Sie können Daten aus einer Vielzahl von Quellen, einschließlich SQL Server, erhalten. Eine Liste der derzeit unterstützten Quellen finden Sie unter [RxDataSource](/r-server/r-reference/revoscaler/rxdatasource).
 
 Zuvor haben Sie eine Verbindungszeichenfolge definiert und diese Informationen in einer R-Variablen gespeichert. Sie können diese Verbindungsinformationen wiederverwenden, um die Daten anzugeben, die Sie erhalten möchten.
 
@@ -104,7 +104,7 @@ Zuvor haben Sie eine Verbindungszeichenfolge definiert und diese Informationen i
 
     Wir haben hier eine TOP-Klausel verwendet, um den Vorgang zu beschleunigen, die tatsächlich von der Abfrage zurückgegebenen Zeilen können je nach Reihenfolge jedoch variieren. Daher können sich auch Ihre Zusammenfassungsergebnisse von den unten aufgeführten unterscheiden. Sie können die TOP-Klausel entfernen.
 
-2. Übergeben Sie die Abfragedefinition als Argument an die [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata)-Funktion.
+2. Übergeben Sie die Abfragedefinition als Argument an die [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata)-Funktion.
 
     ```R
     inDataSource <- RxSqlServerData(
@@ -120,7 +120,7 @@ Zuvor haben Sie eine Verbindungszeichenfolge definiert und diese Informationen i
   
     + Das Argument *rowsPerRead* ist wichtig für das Speichermanagement und effiziente Berechnungen.  Die meisten analytischen Funktionen in[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] verarbeiten Daten in Segmenten und sammeln Zwischenergebnisse an, die die endgültigen Berechnungen zurückgeben, nachdem alle Daten gelesen wurden.  Durch Hinzufügen des *rowsPerRead*-Parameters können Sie steuern, wie viele Datenzeilen in jedes Segment für die Verarbeitung eingelesen werden.  Wenn der Wert dieses Parameters zu groß ist, könnte der Datenzugriff möglicherweise langsam sein, da Sie nicht über genügen Speicher verfügen, um einen solch großen Datenblock effizient zu verarbeiten.  Auf einigen Systemen kann sich die Leistung auch verringern, wenn *rowsPerRead* auf einen zu kleinen Wert festgelegt wird.
 
-3. Zu diesem Zeitpunkt haben Sie das *inDataSource*-Objekt zwar erstellt, es enthält allerdings keine Daten. Die Daten werden erst aus der SQL-Abfrage in die lokale Umgebung übertragen, nachdem Sie eine Funktion wie [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) oder [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary) ausgeführt haben.
+3. Zu diesem Zeitpunkt haben Sie das *inDataSource*-Objekt zwar erstellt, es enthält allerdings keine Daten. Die Daten werden erst aus der SQL-Abfrage in die lokale Umgebung übertragen, nachdem Sie eine Funktion wie [rxImport](/r-server/r-reference/revoscaler/rxdatastep) oder [rxSummary](/r-server/r-reference/revoscaler/rxsummary) ausgeführt haben.
 
     Da Sie jedoch inzwischen die Datenobjekte definiert haben, können Sie sie als Argument für andere Funktionen verwenden.
 
@@ -128,7 +128,7 @@ Zuvor haben Sie eine Verbindungszeichenfolge definiert und diese Informationen i
 
 In diesem Abschnitt testen Sie einige der Funktionen, die in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] bereitgestellt sind und Remotecomputekontexte unterstützen. Durch Anwenden von R-Funktionen auf die Datenquelle können Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten untersuchen, zusammenfassen und in einem Diagramm darstellen.
 
-1. Rufen Sie die Funktion [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) auf, um eine Liste der Variablen und der dazugehörigen Datentypen in der Datenquelle zu erhalten.
+1. Rufen Sie die Funktion [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo) auf, um eine Liste der Variablen und der dazugehörigen Datentypen in der Datenquelle zu erhalten.
 
     **rxGetVarInfo** ist eine praktische Funktion, die mit jedem beliebigen Datenrahmen oder unterschiedliche Daten in einem Remote-Datenobjekt verwendet werden kann, um Informationen wie die Maximal- und Minimalwerte, den Datentyp sowie die Anzahl der Ebenen in Faktorspalten abzurufen.
     
@@ -153,7 +153,7 @@ In diesem Abschnitt testen Sie einige der Funktionen, die in [!INCLUDE[rsql_prod
     Var 10: dropoff_longitude, Type: numeric
     ```
 
-2. Rufen Sie nun die RevoScaleR-Funktion [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary) auf, um detailliertere Statistiken zu einzelnen Variablen zu erhalten.
+2. Rufen Sie nun die RevoScaleR-Funktion [rxSummary](/r-server/r-reference/revoscaler/rxsummary) auf, um detailliertere Statistiken zu einzelnen Variablen zu erhalten.
 
     rxSummary basiert auf der R-Funktion `summary`, bietet jedoch einige zusätzliche Features und Vorteile. rxSummary funktioniert in mehreren Computekontexten und unterstützt Segmentierungen.  Sie können rxSummary auch verwenden, um Werte zu transformieren oder basierend auf den Faktorebenen zusammenzufassen.
     
@@ -205,7 +205,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 ```
 
 > [!TIP]
-> Während dieses Vorgangs können Sie ein Tool wie [Prozess-Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) oder SQL Profiler verwenden, um zu sehen, wie die Verbindung hergestellt und der R-Code mit SQL Server Services ausgeführt wird.
+> Während dieses Vorgangs können Sie ein Tool wie [Prozess-Explorer](/sysinternals/downloads/process-explorer) oder SQL Profiler verwenden, um zu sehen, wie die Verbindung hergestellt und der R-Code mit SQL Server Services ausgeführt wird.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -9,19 +9,19 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85ab092eb606fcc6896fa6a084a2cef0e5f018df
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: ec0323d35c05c34de763fbdece37546f7c8252df
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179724"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193659"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Erstellen von partitionsbasierten Modellen in SQL Server mit R
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Die partitionsbasierte Modellierung in SQL Server 2019 beschreibt die Möglichkeit, Modelle über partitionierte Daten zu erstellen und zu trainieren. Bei geschichteten Daten, die auf natürliche Weise in ein jeweiliges Klassifizierungsschema segmentiert werden, z. B. geografische Regionen, Datum und Uhrzeit, Alter oder Geschlecht, können Sie ein Skript für das gesamte Dataset ausführen, das Partitionen, die nach all diesen Vorgängen intakt bleiben, modellieren, trainieren und bewerten kann. 
 
-Die partitionsbasierte Modellierung wird mithilfe zwei neuer Parameter in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) aktiviert:
+Die partitionsbasierte Modellierung wird mithilfe zwei neuer Parameter in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) aktiviert:
 
 + Der Parameter **input_data_1_partition_by_columns**, der eine Spalte angibt, nach der partitioniert werden soll.
 + Der Parameter **input_data_1_order_by_columns**, der angibt, nach welchen Spalten sortiert werden soll. 
@@ -39,7 +39,7 @@ Für dieses Tutorial benötigen Sie Folgendes:
 
 + Ausreichend Systemressourcen. Das Dataset ist groß, und die Trainingsvorgänge sind sehr ressourcenintensiv. Verwenden Sie nach Möglichkeit ein System mit mindestens 8 GB RAM. Alternativ können Sie kleinere Datasets verwenden, um Ressourceneinschränkungen zu umgehen. Anweisungen zum Reduzieren des Datasets sind in diesem Artikel enthalten. 
 
-+ Ein Tool zum Ausführen von T-SQL-Abfragen, z. B. [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
++ Ein Tool zum Ausführen von T-SQL-Abfragen, z. B. [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 
 + Die Beispieldatei [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), die Sie auf Ihre lokale Datenbank-Engine-Instanz [herunterladen und dort wiederherstellen](demo-data-nyctaxi-in-sql.md) können. Die Dateigröße beträgt ungefähr 90 MB.
 
@@ -105,7 +105,7 @@ GO
 
 In diesem Tutorial umschließen Sie ein R-Skript in einer gespeicherten Prozedur. In diesem Schritt erstellen Sie eine gespeicherte Prozedur, die R verwendet, um ein Eingabedataset zu erstellen, ein Klassifizierungsmodell zum Vorhersagen von Trinkgeldern zu erstellen und das Modell anschließend in der Datenbank zu speichern.
 
-Unter den von diesem Skript verwendeten Parametereingaben finden Sie die Parameter **input_data_1_partition_by_columns** und **input_data_1_order_by_columns**. Denken Sie daran, dass diese Parameter den Mechanismus darstellen, nach dem die partitionierte Modellierung erfolgt. Die Parameter werden als Eingaben an [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) übergeben, um Partitionen mit dem externen Skript zu verarbeiten, das für jede Partition einmal ausgeführt wird. 
+Unter den von diesem Skript verwendeten Parametereingaben finden Sie die Parameter **input_data_1_partition_by_columns** und **input_data_1_order_by_columns**. Denken Sie daran, dass diese Parameter den Mechanismus darstellen, nach dem die partitionierte Modellierung erfolgt. Die Parameter werden als Eingaben an [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) übergeben, um Partitionen mit dem externen Skript zu verarbeiten, das für jede Partition einmal ausgeführt wird. 
 
 [Verwenden Sie die Parallelität](#parallel) für diese gespeicherte Prozedur, um eine schnellere Ausführung zu erzielen.
 
@@ -169,7 +169,7 @@ GO
 
 ### <a name="parallel-execution"></a>Parallele Ausführung
 
-Beachten Sie, dass die [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)-Eingaben `@parallel=1` enthalten, um die Parallelverarbeitung zu aktivieren. Im Gegensatz zu früheren Releases erhält der Abfrageoptimierer durch Festlegen von `@parallel=1` in SQL Server 2019 einen effektiveren Hinweis, wodurch die parallele Ausführung wahrscheinlicher wird.
+Beachten Sie, dass die [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)-Eingaben `@parallel=1` enthalten, um die Parallelverarbeitung zu aktivieren. Im Gegensatz zu früheren Releases erhält der Abfrageoptimierer durch Festlegen von `@parallel=1` in SQL Server 2019 einen effektiveren Hinweis, wodurch die parallele Ausführung wahrscheinlicher wird.
 
 Der Abfrageoptimierer wird bei Tabellen mit mehr als 256 Zeilen standardmäßig mit `@parallel=1` betrieben. Sie können dies jedoch explizit behandeln, indem Sie `@parallel=1` wie in diesem Skript festlegen.
 
@@ -336,8 +336,7 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) verwendet, um Vorgänge für partitionierte Daten zu durchlaufen. Im folgenden Tutorial erhalten Sie ausführlichere Informationen zum Aufrufen externer Skripts in gespeicherten Prozeduren und Verwenden von RevoScaleR-Funktionen.
+In diesem Tutorial haben Sie [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) verwendet, um Vorgänge für partitionierte Daten zu durchlaufen. Im folgenden Tutorial erhalten Sie ausführlichere Informationen zum Aufrufen externer Skripts in gespeicherten Prozeduren und Verwenden von RevoScaleR-Funktionen.
 
 > [!div class="nextstepaction"]
 > [Exemplarische Vorgehensweise für R und SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
-

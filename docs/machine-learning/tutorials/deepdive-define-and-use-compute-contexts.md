@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b18fbdd0a4c59b8458b2bc1f757ef189db5de3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7bf4385405c227fb337dda910c3f1ef158eff223
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178777"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195142"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>Definieren und Verwenden von Computekontexten (SQL Server und RevoScaleR-Tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Bei diesem Tutorial handelt es sich um das 4. Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). Hier erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
+Bei diesem Tutorial handelt es sich um das 4. Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). Hier erfahren Sie, wie Sie [RevoScaleR-Funktionen](/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
-Im vorherigen Tutorial haben Sie **RevoScaleR**-Funktionen zum Untersuchen von Datenobjekten verwendet. In diesem Tutorial wird die [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)-Funktion erläutert, mit der Sie einen Computekontext für einen Remote-SQL-Server definieren können. Mit einem Remotecomputekontext können Sie die R-Ausführung von einer lokalen Sitzung zu einer Remotesitzung auf dem Server verschieben. 
+Im vorherigen Tutorial haben Sie **RevoScaleR**-Funktionen zum Untersuchen von Datenobjekten verwendet. In diesem Tutorial wird die [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver)-Funktion erläutert, mit der Sie einen Computekontext für einen Remote-SQL-Server definieren können. Mit einem Remotecomputekontext können Sie die R-Ausführung von einer lokalen Sitzung zu einer Remotesitzung auf dem Server verschieben. 
 
 > [!div class="checklist"]
 > * Grundlegendes zu SQL Server-Remotecomputekontext
@@ -63,7 +63,7 @@ In diesem Abschnitt werden Sie durch die einzelnen Teile geführt.
   
     Das Argument *wait* für **RxInSqlServer** unterstützt diese Optionen:
   
-    -   **TRUE**. Der Auftrag wird als „blockiert“ konfiguriert und wird nicht zurückgegeben, bis er abgeschlossen wurde oder ein Fehler aufgetreten ist.  Weitere Informationen finden Sie unter [Verteiltes und paralleles Computing in Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing).
+    -   **TRUE**. Der Auftrag wird als „blockiert“ konfiguriert und wird nicht zurückgegeben, bis er abgeschlossen wurde oder ein Fehler aufgetreten ist.  Weitere Informationen finden Sie unter [Verteiltes und paralleles Computing in Machine Learning Server](/machine-learning-server/r/how-to-revoscaler-distributed-computing).
   
     -   **FALSE**. Aufträge werden als „nicht blockierend“ konfiguriert und sofort zurückgegeben, sodass Sie weiterhin anderen R-Code ausführen können. Jedoch auch im nicht blockierenden Modus muss die Clientverbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufrechterhalten werden, während der Auftrag ausgeführt wird.
 
@@ -90,9 +90,9 @@ In diesem Abschnitt werden Sie durch die einzelnen Teile geführt.
     
     Die Syntax für **RxInSqlServer** ist fast identisch mit der Syntax der **RxSqlServerData**-Funktion, die Sie zuvor zum Definieren der Datenquelle verwendet haben. Es gibt jedoch auch wichtige Unterschiede.
       
-    - Das Datenquellenobjekt (mithilfe der Funktion [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)definiert) gibt an, wo die Daten gespeichert werden.
+    - Das Datenquellenobjekt (mithilfe der Funktion [RxSqlServerData](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)definiert) gibt an, wo die Daten gespeichert werden.
     
-    - Im Gegensatz dazu gibt der mit der [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver)-Funktion definierte Computekontext an, wo Aggregationen und andere Berechnungen durchgeführt werden.
+    - Im Gegensatz dazu gibt der mit der [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver)-Funktion definierte Computekontext an, wo Aggregationen und andere Berechnungen durchgeführt werden.
     
     Das Definieren eines Computekontexts wirkt sich nicht auf andere generische R-Berechnungen aus, die Sie auf Ihrer Arbeitsstation ausführen können, und ändert nicht die Quelle der Daten. Sie können z.B. eine lokale Textdatei als Datenquelle definieren, aber SQL Server als Computekontext verwenden und alle Lesevorgänge und Zusammenfassungen der Daten auf dem SQL Server-Computer ausführen.
 
@@ -135,7 +135,7 @@ Es kann vorkommen, dass Vorgänge, die in Ihrem lokalen Kontext funktionieren, j
   
    In diesem Beispiel ist *traceLevel* auf 7 gesetzt, d.h. „alle Ablaufverfolgungsinformationen anzeigen“.
 
-2. Verwenden Sie die [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)-Funktion, um den für die Ablaufverfolgung aktivierten Computekontext anhand des Namens anzugeben.
+2. Verwenden Sie die [rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)-Funktion, um den für die Ablaufverfolgung aktivierten Computekontext anhand des Namens anzugeben.
 
     ```R
     rxSetComputeContext(sqlComputeTrace)

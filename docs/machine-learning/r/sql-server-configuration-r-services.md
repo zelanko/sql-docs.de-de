@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f9d4d3eab9f8f6d1d19b107eaf3825e9488df382
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: feaa53fa47591ecdb3f1f0bc66ab390def8fbbb1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180469"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195774"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>SQL Server-Konfiguration für die Verwendung mit R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88180469"
 Dieser Artikel ist der zweite in einer Reihe, in der die Leistungsoptimierung für R Services basierend auf zwei Fallstudien beschrieben wird.  Dieser Artikel enthält Anleitungen zur Hardware- und Netzwerkkonfiguration des Computers, der zum Ausführen von SQL Server R Services verwendet wird. Außerdem enthält er Informationen zu Methoden zum Konfigurieren der SQL Server-Instanz, der Datenbank oder der Tabellen, die in einer Lösung verwendet werden. Da bei Verwendung von NUMA in SQL Server die Trennlinie zwischen Hardware- und Datenbankoptimierungen unscharf ist, werden in einem dritten Abschnitt CPU-Affinität und Ressourcenkontrolle ausführlich erläutert.
 
 > [!TIP]
-> Wenn Sie noch nicht mit SQL Server vertraut sind, sollten Sie unbedingt das Handbuch zur SQL Server-Leistungsoptimierung lesen: [Überwachen und Optimieren der Leistung](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance).
+> Wenn Sie noch nicht mit SQL Server vertraut sind, sollten Sie unbedingt das Handbuch zur SQL Server-Leistungsoptimierung lesen: [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md).
 
 ## <a name="hardware-optimization"></a>Hardwareoptimierung
 
@@ -149,7 +149,7 @@ FROM sys.dm_os_memory_clerks
 
 Wenn die Abfrage einen einzigen Speicherknoten (Knoten 0) zurückgibt, verfügen Sie entweder nicht über NUMA-Hardware, oder die Hardware ist als interleaved konfiguriert (Nicht-NUMA). SQL Server ignoriert auch Hardware-NUMA, wenn vier oder weniger CPUs vorhanden sind oder mindestens ein Knoten nur über eine CPU verfügt.
 
-Wenn Ihr Computer über mehrere Prozessoren, jedoch nicht über Hardware-NUMA verfügt, können Sie auch [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server) verwenden, um CPUs in kleinere Gruppen zu unterteilen.  In SQL Server 2016 und SQL Server 2017 wird das Soft-NUMA-Feature beim Starten des SQL Server-Diensts automatisch aktiviert.
+Wenn Ihr Computer über mehrere Prozessoren, jedoch nicht über Hardware-NUMA verfügt, können Sie auch [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) verwenden, um CPUs in kleinere Gruppen zu unterteilen.  In SQL Server 2016 und SQL Server 2017 wird das Soft-NUMA-Feature beim Starten des SQL Server-Diensts automatisch aktiviert.
 
 Wenn Soft-NUMA aktiviert ist, werden die Knoten von SQL Server automatisch verwaltet. Zur Optimierung für bestimmte Workloads können Sie jedoch die _weiche Affinität_ deaktivieren und die CPU-Affinität für die Soft-NUMA-Knoten manuell konfigurieren. So können Sie besser steuern, welche Workloads welchen Knoten zugewiesen werden, insbesondere dann, wenn Sie eine Edition von SQL Server verwenden, die die Ressourcenkontrolle unterstützt. Indem Sie die CPU-Affinität angeben und Ressourcenpools an Gruppen von CPUs ausrichten, können Sie die Latenz verringern und sicherstellen, dass verwandte Prozesse innerhalb desselben NUMA-Knotens ausgeführt werden.
 
@@ -164,7 +164,7 @@ Weitere Informationen einschließlich Beispielcode finden Sie in diesem Tutorial
 
 **Andere Ressourcen:**
 
-+ [Soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA in SQL Server](../../database-engine/configure-windows/soft-numa-sql-server.md)
     
     Gewusst wie: Zuordnen von Soft-NUMA-Knoten zu den CPUs
 
@@ -178,7 +178,7 @@ Ein Problem bei R ist die übliche Verarbeitung auf einer einzelnen CPU. Dies is
 
 Es gibt mehrere Möglichkeiten, die Leistung der Featureentwicklung zu verbessern. Sie können entweder den R-Code optimieren und die Featureextraktion im Modellierungsprozess beibehalten oder den Featureentwicklungsprozess in SQL verschieben.
 
-- Verwenden von R. Sie definieren eine Funktion und übergeben sie dann während des Trainings als Argument an [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform). Wenn das Modell die parallele Verarbeitung unterstützt, kann die Featureentwicklungsaufgabe mithilfe mehrerer CPUs verarbeitet werden. Bei diesem Ansatz hat das Data Science-Team eine Leistungsverbesserung von 16 % bei der Bewertungszeit beobachtet. Dieser Ansatz erfordert jedoch ein Modell, das die Parallelisierung und eine Abfrage unterstützt, die mit einem parallelen Plan ausgeführt werden kann.
+- Verwenden von R. Sie definieren eine Funktion und übergeben sie dann während des Trainings als Argument an [rxTransform](/r-server/r-reference/revoscaler/rxtransform). Wenn das Modell die parallele Verarbeitung unterstützt, kann die Featureentwicklungsaufgabe mithilfe mehrerer CPUs verarbeitet werden. Bei diesem Ansatz hat das Data Science-Team eine Leistungsverbesserung von 16 % bei der Bewertungszeit beobachtet. Dieser Ansatz erfordert jedoch ein Modell, das die Parallelisierung und eine Abfrage unterstützt, die mit einem parallelen Plan ausgeführt werden kann.
 
 - Verwenden von R mit einem SQL-Computekontext. In einer Multiprozessorumgebung mit isolierten Ressourcen, die für die Ausführung separater Batches verfügbar sind, können Sie eine höhere Effizienz erzielen, indem Sie die für die einzelnen Batches verwendeten SQL-Abfragen isolieren, Daten aus Tabellen extrahieren und die Daten auf dieselbe Workloadgruppe beschränken. Zu den zum Isolieren der Batches verwendeten Methoden zählen die Partitionierung und die Verwendung von PowerShell, um separate Abfragen parallel auszuführen.
 

@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04c84a81b61d0c8bb5e377dcd2c282495886fd02
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7c6236befd5ba532c1ed80de0da9c67072526d2b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173453"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195122"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>Verschieben von Daten zwischen SQL Server und einer XDF-Datei (SQL Server und RevoScaleR-Tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Bei diesem Tutorial handelt es sich um das 13. Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Tutorial erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
+Bei diesem Tutorial handelt es sich um das 13. Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Tutorial erfahren Sie, wie Sie [RevoScaleR-Funktionen](/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
 In diesem Tutorial erfahren Sie, wie Sie eine XDF-Datei zum Übertragen von Daten zwischen Remote- und lokalen Computekontexten verwenden. Durch das Speichern der Daten in einer XDF-Datei können Sie Transformationen für die Daten durchführen.
 
-Verwenden Sie die Daten in der Datei, um eine neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle zu erstellen, wenn Sie fertig sind. Die [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)-Funktion kann Transformationen auf die Daten anwenden und die Konvertierung zwischen Datenrahmen und XDF-Dateien durchführen.
+Verwenden Sie die Daten in der Datei, um eine neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle zu erstellen, wenn Sie fertig sind. Die [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep)-Funktion kann Transformationen auf die Daten anwenden und die Konvertierung zwischen Datenrahmen und XDF-Dateien durchführen.
   
 ## <a name="create-a-sql-server-table-from-an-xdf-file"></a>Erstellen einer SQL Server-Tabelle aus einer XDF-Datei
 
@@ -65,7 +65,7 @@ Verwenden Sie für diese Übung wieder die Kreditkartenbetrugsdaten. In diesem S
     rxSetComputeContext("local")
     ```
     
-    Mit der Funktion [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)-Funktion können Sie Daten aus einer beliebigen unterstützten Datenquelle in eine lokale XDF-Datei importieren. Die Verwendung einer lokalen Kopie der Daten eignet sich dann, wenn Sie viele verschiedene Analysen der Daten durchführen, aber die wiederholte Ausführung der gleichen Abfrage vermeiden möchten.
+    Mit der Funktion [rxImport](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)-Funktion können Sie Daten aus einer beliebigen unterstützten Datenquelle in eine lokale XDF-Datei importieren. Die Verwendung einer lokalen Kopie der Daten eignet sich dann, wenn Sie viele verschiedene Analysen der Daten durchführen, aber die wiederholte Ausführung der gleichen Abfrage vermeiden möchten.
 
 5. Erstellen Sie das Datenquellenobjekt, indem Sie die zuvor als Argumente definierten Variablen an **RxSqlServerData** übergeben.
   
@@ -86,7 +86,7 @@ Verwenden Sie für diese Übung wieder die Kreditkartenbetrugsdaten. In diesem S
   
     Das von der **rxImport**-Funktion zurückgegebene Objekt `localDs` ist ein kompaktes **RxXdfData**-Datenquellenobjekt, das die lokal auf dem Datenträger gespeicherte `ccFraud.xdf`-Datendatei darstellt.
   
-7. Rufen Sie [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) für die XDF-Datei auf, um zu überprüfen, ob das Schema identisch ist.
+7. Rufen Sie [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) für die XDF-Datei auf, um zu überprüfen, ob das Schema identisch ist.
   
     ```R
     rxGetVarInfo(data = localDS)
@@ -115,4 +115,4 @@ Dieses Tutorial schließt das mehrteilige Tutorial zu **RevoScaleR** und SQL Ser
 Sie können zur R-Tutorialsliste zurückkehren und nicht absolvierte Übungen schrittweise durcharbeiten, um so Ihr Wissen über **RevoScaleR** zu vertiefen. Alternativ finden Sie weitere Informationen zu allgemeinen Aufgaben in den Artikeln zur Vorgehensweise im Inhaltsverzeichnis.
 
 > [!div class="nextstepaction"]
-> [R-Tutorials für SQL Server](sql-server-r-tutorials.md)
+> [R-Tutorials für SQL Server](./r-tutorials.md)

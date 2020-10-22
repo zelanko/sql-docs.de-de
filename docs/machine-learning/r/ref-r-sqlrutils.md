@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d006c3e9662e8e2d4d6486b991d8543ef96b7565
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8a458b1eadff2cd4ef36c73a75eb90a3d25530fa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179928"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195810"
 ---
 # <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils (R-Paket in SQL Server Machine Learning Services)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -35,7 +35,7 @@ Sie können die gespeicherte Prozedur auch aus einer R-Umgebung ausführen, inde
   
 ## <a name="full-reference-documentation"></a>Vollständige Referenzdokumentation
 
-Das **sqlrutils**-Paket wird in mehreren Microsoft-Produkten bereitgestellt. Die Verwendung ist jedoch immer identisch, unabhängig davon, ob Sie das Paket in SQL Server oder einem anderen Produkt abrufen. Aus diesem Grund wird die [Dokumentation für einzelne sqlrutils-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) nur an einer Stelle in der [R-Referenz](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) für Microsoft Machine Learning Server veröffentlicht. Abweichungen durch produktspezifisches Verhalten finden Sie ggf. auf der Hilfeseite der Funktion.
+Das **sqlrutils**-Paket wird in mehreren Microsoft-Produkten bereitgestellt. Die Verwendung ist jedoch immer identisch, unabhängig davon, ob Sie das Paket in SQL Server oder einem anderen Produkt abrufen. Aus diesem Grund wird die [Dokumentation für einzelne sqlrutils-Funktionen](/machine-learning-server/r-reference/revoscaler/revoscaler) nur an einer Stelle in der [R-Referenz](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) für Microsoft Machine Learning Server veröffentlicht. Abweichungen durch produktspezifisches Verhalten finden Sie ggf. auf der Hilfeseite der Funktion.
 
 ## <a name="functions-list"></a>Funktionsliste
 
@@ -43,16 +43,16 @@ Der folgende Abschnitt bietet eine Übersicht über die Funktionen, die Sie aus 
 
 |Funktion | BESCHREIBUNG |
 |------|-------------|
-|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Führt eine gespeicherte Prozedur aus.|
-|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Ruft eine Liste der Eingabeparameter in der gespeicherten Prozedur ab.| 
-|[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| Definiert die Datenquelle in SQL Server, die in dem R-Datenrahmen verwendet wird. Sie geben den Namen des Datenrahmens (data.frame), in dem die Eingabedaten gespeichert werden sollen, und eine Abfrage, mit der die Daten abgerufen werden, oder einen Standardwert an. Es werden nur einfache SELECT-Abfragen unterstützt. | 
-|[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| Definiert einen einzelnen Eingabeparameter, der in das T-SQL-Skript eingebettet wird. Sie müssen den Namen des Parameters und dessen R-Datentyp angeben.| 
-|[OutputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputdata)| Generiert ein Zwischendatenobjekt, das erforderlich ist, wenn Ihre R-Funktion eine Liste zurückgibt, die einen Datenrahmen (data.frame) enthält. Das *OutputData* -Objekt wird verwendet, um den Namen eines einzelnen „data.frame“ zu speichern, das aus der Liste abgerufen wurde.| 
-|[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | Generiert ein Zwischendatenobjekt, das erforderlich ist, wenn Ihre R-Funktion eine Liste zurückgibt. Im *OutputParameter* -Objekt werden der Name und der Datentyp eines einzelnen Elements der Liste gespeichert, wobei vorausgesetzt wird, dass das Element **kein** Datenrahmen ist. |
-|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Registriert die gespeicherte Prozedur bei einer Datenbank.|
-|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Weist einem Eingabedatenparameter der gespeicherten Prozedur eine Abfrage zu.| 
-|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Weist einem Eingabeparameter der gespeicherten Prozedur einen Wert zu.| 
-|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| Ein gespeichertes Prozedurobjekt.|
+|[executeStoredProcedure](/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Führt eine gespeicherte Prozedur aus.|
+|[getInputParameters](/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Ruft eine Liste der Eingabeparameter in der gespeicherten Prozedur ab.| 
+|[InputData](/machine-learning-server/r-reference/sqlrutils/inputdata)| Definiert die Datenquelle in SQL Server, die in dem R-Datenrahmen verwendet wird. Sie geben den Namen des Datenrahmens (data.frame), in dem die Eingabedaten gespeichert werden sollen, und eine Abfrage, mit der die Daten abgerufen werden, oder einen Standardwert an. Es werden nur einfache SELECT-Abfragen unterstützt. | 
+|[InputParameter](/machine-learning-server/r-reference/sqlrutils/inputparameter)| Definiert einen einzelnen Eingabeparameter, der in das T-SQL-Skript eingebettet wird. Sie müssen den Namen des Parameters und dessen R-Datentyp angeben.| 
+|[OutputData](/machine-learning-server/r-reference/sqlrutils/outputdata)| Generiert ein Zwischendatenobjekt, das erforderlich ist, wenn Ihre R-Funktion eine Liste zurückgibt, die einen Datenrahmen (data.frame) enthält. Das *OutputData* -Objekt wird verwendet, um den Namen eines einzelnen „data.frame“ zu speichern, das aus der Liste abgerufen wurde.| 
+|[OutputParameter](/machine-learning-server/r-reference/sqlrutils/outputparameter) | Generiert ein Zwischendatenobjekt, das erforderlich ist, wenn Ihre R-Funktion eine Liste zurückgibt. Im *OutputParameter* -Objekt werden der Name und der Datentyp eines einzelnen Elements der Liste gespeichert, wobei vorausgesetzt wird, dass das Element **kein** Datenrahmen ist. |
+|[registerStoredProcedure](/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Registriert die gespeicherte Prozedur bei einer Datenbank.|
+|[setInputDataQuery](/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Weist einem Eingabedatenparameter der gespeicherten Prozedur eine Abfrage zu.| 
+|[setInputParameterValue](/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Weist einem Eingabeparameter der gespeicherten Prozedur einen Wert zu.| 
+|[StoredProcedure](/machine-learning-server/r-reference/sqlrutils/storedprocedure)| Ein gespeichertes Prozedurobjekt.|
 
 
 ## <a name="how-to-use-sqlrutils"></a>Verwenden von sqlrutils
@@ -107,4 +107,3 @@ Dem Objekt für die gespeicherte Prozedur sind üblicherweise weder Daten noch W
 ## <a name="see-also"></a>Weitere Informationen
 
 [Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils](how-to-create-a-stored-procedure-using-sqlrutils.md)
-

@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fa8f5eab0c6d86f843d0f0c90ad49276e659171
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7223e1b1289d3cb2ea87763e693f65c3479afcdd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178641"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194502"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Erstellen einer Datenbank und von Berechtigungen (Tutorial zu SQL Server und RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Bei diesem Tutorial handelt es sich um das erste Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Lernprogramm erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
+Bei diesem Tutorial handelt es sich um das erste Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Lernprogramm erfahren Sie, wie Sie [RevoScaleR-Funktionen](/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
-In diesem Tutorial wird erläutert, wie Sie eine SQL Server-Datenbank erstellen und die für den Abschluss der anderen Tutorials dieses Lernprogramms erforderlichen Berechtigungen festlegen. Führen Sie mithilfe von [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) oder einem anderen Abfrage-Editor die folgenden Aufgaben aus:
+In diesem Tutorial wird erläutert, wie Sie eine SQL Server-Datenbank erstellen und die für den Abschluss der anderen Tutorials dieses Lernprogramms erforderlichen Berechtigungen festlegen. Führen Sie mithilfe von [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) oder einem anderen Abfrage-Editor die folgenden Aufgaben aus:
 
 > [!div class="checklist"]
 > * Erstellen einer neuen Datenbank zum Speichern der Daten für das Training und die Bewertung von zwei R-Modellen
@@ -94,11 +94,11 @@ Dieser Abschnitt enthält einige häufig auftretende Probleme, denen Sie möglic
 
 - **Wie kann ich die Datenbankkonnektivität und SQL-Abfragen überprüfen?**
   
-    Bevor Sie R-Code mithilfe des Servers ausführen, möchten Sie möglicherweise überprüfen, ob die Datenbank über Ihre R-Entwicklungsumgebung erreicht werden kann. Sowohl [Server-Explorer in Visual Studio](https://docs.microsoft.com/previous-versions/x603htbk(v=vs.140)) als auch [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) sind kostenlose Tools mit leistungsstarker Datenbankkonnektivität und Verwaltungsfunktionen.
+    Bevor Sie R-Code mithilfe des Servers ausführen, möchten Sie möglicherweise überprüfen, ob die Datenbank über Ihre R-Entwicklungsumgebung erreicht werden kann. Sowohl [Server-Explorer in Visual Studio](/previous-versions/x603htbk(v=vs.140)) als auch [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) sind kostenlose Tools mit leistungsstarker Datenbankkonnektivität und Verwaltungsfunktionen.
   
-    Wenn Sie zusätzliche Datenbankverwaltungstools installieren möchten, können Sie eine Testverbindung zur SQL Server-Instanz erstellen, indem Sie den [ODBC-Datenquellen-Administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator?view=sql-server-2017) in der Systemsteuerung verwenden. Wenn die Datenbank ordnungsgemäß konfiguriert ist und Sie den richtigen Benutzernamen und das richtige Kennwort eingeben, sollten Sie die zuvor von Ihnen erstellte Datenbank sehen und diese als Ihre Standarddatenbank auswählen.
+    Wenn Sie zusätzliche Datenbankverwaltungstools installieren möchten, können Sie eine Testverbindung zur SQL Server-Instanz erstellen, indem Sie den [ODBC-Datenquellen-Administrator](../../odbc/admin/odbc-data-source-administrator.md?view=sql-server-2017) in der Systemsteuerung verwenden. Wenn die Datenbank ordnungsgemäß konfiguriert ist und Sie den richtigen Benutzernamen und das richtige Kennwort eingeben, sollten Sie die zuvor von Ihnen erstellte Datenbank sehen und diese als Ihre Standarddatenbank auswählen.
   
-    Häufige Ursachen für Verbindungsfehler sind nicht für den Server aktivierte Remoteverbindungen und ein nicht aktiviertes Named Pipes-Protokoll. Weitere Tipps und Informationen zur Problembehandlung finden Sie im folgenden Artikel: [Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Häufige Ursachen für Verbindungsfehler sind nicht für den Server aktivierte Remoteverbindungen und ein nicht aktiviertes Named Pipes-Protokoll. Weitere Tipps und Informationen zur Problembehandlung finden Sie im folgenden Artikel: [Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
   
 - **Mein Tabellenname wurde mit dem Präfix DataReader versehen – warum?**
   

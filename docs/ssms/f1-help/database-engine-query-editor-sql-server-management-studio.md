@@ -7,7 +7,12 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
-- sql23.swb.tsqlresults.f1
+- sql13.swb.tsqlresults.f1
+- sql13.swb.query.advanced.f1
+- sql13.swb.query.ansi.f1
+- sql13.swb.query.general.f1
+- sql13.swb.query.general.f1
+- sql13.swb.sqleditors.multiserverresultssettings
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -38,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035464"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344066"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>SSMS-Abfrage-Editor (SQL Server Management Studio)
 
@@ -300,8 +305,8 @@ Wenn die Suchmaschine kein Thema mit einem F1-Hilfeschlüsselwort findet, das ge
 | Ziehen Sie Text von einer Position in einem Skript, und legen Sie ihn an einer anderen Position ab.| [Verschieben von Text mit Drag und Drop](../scripting/drag-and-drop-text.md) |
 | Beschreibt, wie Lesezeichen festgelegt werden, damit wichtige Codeteile leichter wiedergefunden werden können. | [Verwalten von Lesezeichen](../scripting/manage-bookmarks.md) |
 | Beschreibt, wie Skripts oder die Ergebnisse in einem Fenster oder einem Raster gedruckt werden.| [Drucken von Code und Ergebnissen](../scripting/print-code-and-results.md) |
-| Beschreibt, wie die grundlegenden Features im MDX-Abfrage-Editor angezeigt und verwendet werden. | [Erstellen von Analysis Services-Skripts](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| Beschreibt, wie die grundlegenden Features im DMX-Abfrage-Editor angezeigt und verwendet werden. | [Erstellen einer DMX-Abfrage](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| Beschreibt, wie die grundlegenden Features im MDX-Abfrage-Editor angezeigt und verwendet werden. | [Erstellen von Analysis Services-Skripts](/analysis-services/instances/create-analysis-services-scripts-in-management-studio) |
+| Beschreibt, wie die grundlegenden Features im DMX-Abfrage-Editor angezeigt und verwendet werden. | [Erstellen einer DMX-Abfrage](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio) |
 | Beschreibt, wie die grundlegenden Features im XML/A-Editor angezeigt und verwendet werden. | [XML-Editor](../scripting/xml-editor-sql-server-management-studio.md) |
 | Beschreibt, wie die sqlcmd-Features im Abfrage-Editor der Datenbank-Engine verwendet werden.| [Bearbeiten von SQLCMD-Skripts](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | Beschreibt, wie die Codeausschnitte im Abfrage-Editor der Datenbank-Engine verwendet werden. Ausschnitte sind Vorlagen für häufig verwendete Anweisungen oder Blöcke. Sie können angepasst oder erweitert werden, um sitespezifische Ausschnitte einzuschließen.| [T-SQL-Codeausschnitte](../scripting/add-transact-sql-snippets.md) |

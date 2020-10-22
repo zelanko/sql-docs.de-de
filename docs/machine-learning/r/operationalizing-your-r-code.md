@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 67176b65c8fe285d87bd56fff0b547b7bf5b8428
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 89643fabf2db39e7006e0efaac87adb991893f67
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956624"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098839"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Operationalisieren von R-Code mithilfe von gespeicherten Prozeduren in SQL Server-Machine Learning Services
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Bei der Verwendung von R- und Python-Funktionen in SQL Server-Machine Learning Services ist die häufigste Methode zum Verschieben von Lösungen in eine Produktionsumgebung das Einbetten von Code in gespeicherten Prozeduren. In diesem Artikel werden die wichtigsten Punkte zusammengefasst, die SQL-Entwickler beim Operationalisieren von R-Code mithilfe von SQL Server beachten müssen.
 

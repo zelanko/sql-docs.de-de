@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e2fcd1719c63d88eb20156aa2c4d84884cca1efc
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 31aafedd59bc94d5b80359c8335421569dd510bf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178832"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196294"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Erstellen einer neuen SQL Server-Tabelle mithilfe von rxDataStep (Tutorial für SQL Server und RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Bei diesem Tutorial handelt es sich um das elfte Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Lernprogramm erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
+Bei diesem Tutorial handelt es sich um das elfte Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Lernprogramm erfahren Sie, wie Sie [RevoScaleR-Funktionen](/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
 In diesem Tutorial erfahren Sie, wie Sie Daten zwischen In-Memory-Datenrahmen, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Kontext und lokale Dateien verschieben.
 
@@ -34,7 +34,7 @@ In diesem Tutorial kommt eine andere Herangehensweise zum Einsatz. Es werden Dat
 
 **Was ist XDF?**
 
-Das XDF-Format ist ein XML-Standard, der für hochdimensionale Daten entwickelt wurde und von [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf) nativ als Dateiformat verwendet wird. Dies ist ein binäres Dateiformat mit einer R-Schnittstelle, die die Verarbeitung und Analyse von Zeilen und Spalten optimiert.  Sie können es für das Verschieben von Daten verwenden, um Teilmengen von Daten zu speichern, die für Analysen hilfreich sind.
+Das XDF-Format ist ein XML-Standard, der für hochdimensionale Daten entwickelt wurde und von [Machine Learning Server](/machine-learning-server/r/concept-what-is-xdf) nativ als Dateiformat verwendet wird. Dies ist ein binäres Dateiformat mit einer R-Schnittstelle, die die Verarbeitung und Analyse von Zeilen und Spalten optimiert.  Sie können es für das Verschieben von Daten verwenden, um Teilmengen von Daten zu speichern, die für Analysen hilfreich sind.
 
 1. Legen Sie den Computekontext auf die lokale Arbeitsstation fest. **Für diesen Schritt sind DDL-Berechtigungen erforderlich.**
 
@@ -50,7 +50,7 @@ Das XDF-Format ist ein XML-Standard, der für hochdimensionale Daten entwickelt 
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
     ```
 
-3. Rufen Sie [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) für die Daten im Arbeitsspeicher auf, um eine Zusammenfassung des Datasets anzuzeigen.
+3. Rufen Sie [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) für die Daten im Arbeitsspeicher auf, um eine Zusammenfassung des Datasets anzuzeigen.
   
     ```R
     rxGetVarInfo(xdfAirDemo)

@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d02217eaae3cf402a1ccb6e08780f4e9406d446f
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 4a625684b3196fc246b2753fc7b7e38b3e603f6e
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956316"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155061"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Installieren einer benutzerdefinierten Python-Laufzeit für SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -41,7 +41,7 @@ Vor der Installation einer benutzerdefinierten Python-Laufzeit müssen Sie Folge
   > [!NOTE]
   > Die benutzerdefinierte Python-Laufzeit erfordert das kumulative Update (CU) 3 oder höher für SQL Server 2019.
 
-+ [SQL Server-Spracherweiterungen unter Windows mit dem Erweiterbarkeitsframework](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
++ [SQL Server-Spracherweiterungen unter Windows mit dem Erweiterbarkeitsframework](../../language-extensions/install/windows-java.md).
 
 + [Python 3.7]( https://www.python.org/downloads/release/python-379/).
 
@@ -170,7 +170,7 @@ Wenn Sie SQL Server für Linux installieren, müssen Sie ein Microsoft-Repositor
   > [!NOTE]
   > Die benutzerdefinierte Python-Laufzeit erfordert das kumulative Update (CU) 3 oder höher für SQL Server 2019.
 
-+ [SQL Server-Spracherweiterungen unter Linux mit dem Erweiterbarkeitsframework](../../linux/sql-server-linux-setup-language-extensions.md).
++ [SQL Server-Spracherweiterungen unter Linux mit dem Erweiterbarkeitsframework](../../linux/sql-server-linux-setup-language-extensions-java.md).
 
 + [Python 3.7](https://www.python.org/downloads/release/python-379/).
 

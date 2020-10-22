@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ffebcaa9afc8f2caa8717170d9746787c17593b3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d5132b0616dd223e195f47b1333308a920fb2572
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173600"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196272"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R-Tutorial: Ausführen von Vorhersagen in gespeicherten SQL-Prozeduren
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ GO
 
 + Die SELECT-Anweisung ruft das serialisierte Modell aus der Datenbank ab und speichert das Modell in der R-Variable `mod` zur weiteren Verarbeitung mit R.
 
-+ Die neuen Fälle für die Bewertung werden aus der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage abgerufen, die in `@inquery` festgelegt ist, dem ersten Parameter für die gespeicherte Prozedur. Wenn die Abfragedaten gelesen werden, werden die Zeilen im Standard-Datenrahmen, `InputDataSet`, gespeichert. Dieser Datenrahmen wird der [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)-Funktion in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) übergeben, die die Bewertungen generiert.
++ Die neuen Fälle für die Bewertung werden aus der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage abgerufen, die in `@inquery` festgelegt ist, dem ersten Parameter für die gespeicherte Prozedur. Wenn die Abfragedaten gelesen werden, werden die Zeilen im Standard-Datenrahmen, `InputDataSet`, gespeichert. Dieser Datenrahmen wird der [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict)-Funktion in [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) übergeben, die die Bewertungen generiert.
   
   `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -193,7 +193,7 @@ In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer ge
    @dropoff_longitude = -73.977303
    ```
 
-   Oder verwenden Sie diese kürzere Form, die für [Parameter für eine gespeicherte Prozedur](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters) unterstützt wird:
+   Oder verwenden Sie diese kürzere Form, die für [Parameter für eine gespeicherte Prozedur](../../relational-databases/stored-procedures/specify-parameters.md) unterstützt wird:
   
    ```sql
    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303

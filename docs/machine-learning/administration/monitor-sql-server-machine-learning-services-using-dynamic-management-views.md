@@ -3,21 +3,21 @@ title: Überwachen von Skripts mithilfe von dynamischen Verwaltungssichten
 description: Verwenden Sie dynamische Verwaltungssichten (DMVs) zum Überwachen der externen Skriptausführung von Python und R in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/17/2019
+ms.date: 10/14/2019
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aee3aac6fa0f53314b28cc6064200fc398702dac
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 09a01937611b239aeb6db1df406fc057063eb634
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173332"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115540"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Überwachen von SQL Server Machine Learning Services mithilfe von dynamischen Verwaltungssichten
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Verwenden Sie dynamische Verwaltungssichten (DMVs), um die externe Skriptausführung (Python und R) und Ressourcennutzung zu überwachen, Probleme zu diagnostizieren und die Leistung in SQL Server Machine Learning Services zu optimieren.
 
@@ -79,12 +79,12 @@ WHERE name = 'external scripts enabled';
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Column | BESCHREIBUNG |
-|--------|-------------|
-| IsMLServicesInstalled | Gibt „1“ zurück, wenn SQL Server Machine Learning Services für die Instanz installiert ist. Andernfalls wird „0“ (null) zurückgegeben. |
-| ExternalScriptsEnabled | Gibt „1“ zurück, wenn externe Skripts für die Instanz aktiviert sind. Andernfalls wird „0“ (null) zurückgegeben. |
+| Column                       | BESCHREIBUNG |
+|------------------------------|-------------|
+| IsMLServicesInstalled        | Gibt „1“ zurück, wenn SQL Server Machine Learning Services für die Instanz installiert ist. Andernfalls wird „0“ (null) zurückgegeben. |
+| ExternalScriptsEnabled       | Gibt „1“ zurück, wenn externe Skripts für die Instanz aktiviert sind. Andernfalls wird „0“ (null) zurückgegeben. |
 | ImpliedAuthenticationEnabled | Gibt „1“ zurück, wenn die implizite Authentifizierung aktiviert ist. Andernfalls wird „0“ (null) zurückgegeben. Die Konfiguration die für implizite Authentifizierung wird überprüft, indem verifiziert wird, ob eine Anmeldung für SQLRUserGroup existiert. |
-| IsTcpEnabled | Gibt „1“ zurück, wenn das TCP/IP-Protokoll für die Instanz aktiviert ist. Andernfalls wird „0“ (null) zurückgegeben. Weitere Informationen finden Sie unter [Standardnetzwerkkonfiguration von SQL Server](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md). |
+| IsTcpEnabled                 | Gibt „1“ zurück, wenn das TCP/IP-Protokoll für die Instanz aktiviert ist. Andernfalls wird „0“ (null) zurückgegeben. Weitere Informationen finden Sie unter [Standardnetzwerkkonfiguration von SQL Server](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md). |
 
 ## <a name="active-sessions"></a>Aktive Sitzungen
 
@@ -107,24 +107,24 @@ ON s.session_id = r.session_id;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Column | BESCHREIBUNG |
-|--------|-------------|
-| session_id | Identifiziert die einer aktiven primären Verbindung zugeordnete Sitzung. |
-| blocking_session_id | ID der Sitzung, die die Anforderung blockiert. Wenn diese Spalte den Wert NULL aufweist, wird die Anforderung nicht blockiert, oder die Sitzungsinformationen der blockierenden Sitzung sind nicht verfügbar (bzw. können nicht identifiziert werden). |
-| status | Status der Anforderung. |
-| database_name | Name der aktuellen Datenbank für jede Sitzung. |
-| login_name | SQL Server-Anmeldename, unter dem die Sitzung gegenwärtig ausgeführt wird. |
-| wait_time | Wenn die Anforderung zurzeit blockiert wird, gibt diese Spalte die Dauer des aktuellen Wartevorgangs in Millisekunden an. Lässt keine NULL-Werte zu. |
-| wait_type | Wenn die Anforderung zurzeit blockiert wird, gibt diese Spalte den Wartetyp zurück. Informationen zu Wartetypen finden Sie unter [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). |
-| last_wait_type | Wenn diese Anforderung zuvor bereits blockiert war, gibt diese Spalte den Typ des letzten Wartevorgangs zurück. |
-| total_elapsed_time | Gesamtzeit seit dem Eintreffen der Anforderung (in Millisekunden). |
-| cpu_time | Von der Anforderung beanspruchte CPU-Zeit (in Millisekunden). |
-| Lesevorgänge | Anzahl der von dieser Anforderung ausgeführten Lesevorgänge. |
-| logical_reads | Anzahl der von dieser Anforderung ausgeführten logischen Lesevorgänge. |
-| Schreibvorgänge | Anzahl der von dieser Anforderung ausgeführten Schreibvorgänge. |
-| language | Schlüsselwort, das einer unterstützten Skriptsprache entspricht. |
+| Column                | BESCHREIBUNG |
+|-----------------------|-------------|
+| session_id            | Identifiziert die einer aktiven primären Verbindung zugeordnete Sitzung. |
+| blocking_session_id   | ID der Sitzung, die die Anforderung blockiert. Wenn diese Spalte den Wert NULL aufweist, wird die Anforderung nicht blockiert, oder die Sitzungsinformationen der blockierenden Sitzung sind nicht verfügbar (bzw. können nicht identifiziert werden). |
+| status                | Status der Anforderung. |
+| database_name         | Name der aktuellen Datenbank für jede Sitzung. |
+| login_name            | SQL Server-Anmeldename, unter dem die Sitzung gegenwärtig ausgeführt wird. |
+| wait_time             | Wenn die Anforderung zurzeit blockiert wird, gibt diese Spalte die Dauer des aktuellen Wartevorgangs in Millisekunden an. Lässt keine NULL-Werte zu. |
+| wait_type             | Wenn die Anforderung zurzeit blockiert wird, gibt diese Spalte den Wartetyp zurück. Informationen zu Wartetypen finden Sie unter [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). |
+| last_wait_type        | Wenn diese Anforderung zuvor bereits blockiert war, gibt diese Spalte den Typ des letzten Wartevorgangs zurück. |
+| total_elapsed_time    | Gesamtzeit seit dem Eintreffen der Anforderung (in Millisekunden). |
+| cpu_time              | Von der Anforderung beanspruchte CPU-Zeit (in Millisekunden). |
+| Lesevorgänge                 | Anzahl der von dieser Anforderung ausgeführten Lesevorgänge. |
+| logical_reads         | Anzahl der von dieser Anforderung ausgeführten logischen Lesevorgänge. |
+| Schreibvorgänge                | Anzahl der von dieser Anforderung ausgeführten Schreibvorgänge. |
+| language              | Schlüsselwort, das einer unterstützten Skriptsprache entspricht. |
 | degree_of_parallelism | Zahl, die die Anzahl von parallelen Prozessen angibt, die erstellt wurden. Dieser Wert kann sich von der Anzahl von parallelen Prozessen unterscheiden, die angefordert wurden. |
-| external_user_name | Das Windows-Workerkonto, unter dem das Skript ausgeführt wurde. |
+| external_user_name    | Das Windows-Workerkonto, unter dem das Skript ausgeführt wurde. |
 
 ## <a name="execution-statistics"></a>Ausführungsstatistiken
 
@@ -143,10 +143,10 @@ ORDER BY language, counter_name;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Column | BESCHREIBUNG |
-|--------|-------------|
-| language | Name der registrierten externen Skriptsprache. |
-| counter_name | Name einer registrierten externen Skriptfunktion. |
+| Column        | BESCHREIBUNG |
+|---------------|-------------|
+| language      | Name der registrierten externen Skriptsprache. |
+| counter_name  | Name einer registrierten externen Skriptfunktion. |
 | counter_value | Gesamtanzahl der Instanzen, die von der registrierten externen Skriptfunktion auf dem Server aufgerufen wurden. Dieser Wert ist kumulativ und beginnt mit dem Zeitpunkt, zu dem das Feature auf der Instanz installiert wurde. Der Wert kann nicht zurückgesetzt werden. |
 
 ## <a name="performance-counters"></a>Leistungsindikatoren
@@ -165,15 +165,15 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys.dm_os_performance_counters** gibt die folgenden Leistungsindikatoren für externe Skripts aus:
 
-| Leistungsindikator | BESCHREIBUNG |
-|---------|-------------|
-| Total Executions | Gibt die Anzahl der R-Prozesse an, die durch lokale oder Remoteaufrufe gestartet wurden. |
-| Parallel Executions | Gibt an, wie oft ein Skript die _\@parallel_-Spezifikation enthielt, und dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] einen parallelen Abfrageplan generieren und verwenden konnte. |
-| Streaming Executions | Gibt die Anzahl der Aufrufe des Streamingfeatures an. |
-| SQL CC Executions | Gibt die Anzahl der ausgeführten externen R-Skripts an, in denen der Aufruf remote instanziiert wurde und SQL Server als Computekontext verwendet wurde. |
-| Implied Auth. Anmeldungen | Gibt an, wie oft ein ODBC-Loopback-Aufruf mit implizierter Authentifizierung abgeschlossen wurde, d. h. dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] den Aufruf im Auftrag des Benutzers ausgeführt und die Skriptanforderung gesendet hat. |
+| Leistungsindikator                   | BESCHREIBUNG |
+|---------------------------|-------------|
+| Total Executions          | Gibt die Anzahl der R-Prozesse an, die durch lokale oder Remoteaufrufe gestartet wurden. |
+| Parallel Executions       | Gibt an, wie oft ein Skript die _\@parallel_-Spezifikation enthielt, und dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] einen parallelen Abfrageplan generieren und verwenden konnte. |
+| Streaming Executions      | Gibt die Anzahl der Aufrufe des Streamingfeatures an. |
+| SQL CC Executions         | Gibt die Anzahl der ausgeführten externen R-Skripts an, in denen der Aufruf remote instanziiert wurde und SQL Server als Computekontext verwendet wurde. |
+| Implied Auth. Anmeldungen      | Gibt an, wie oft ein ODBC-Loopback-Aufruf mit implizierter Authentifizierung abgeschlossen wurde, d. h. dass [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] den Aufruf im Auftrag des Benutzers ausgeführt und die Skriptanforderung gesendet hat. |
 | Total Execution Time (ms) | Gibt an, wie viel Zeit zwischen Aufruf und Abschluss des Aufrufs vergangen ist. |
-| Execution Errors | Gibt an, wie oft Skripts Fehler gemeldet haben. Diese Zahl umfasst keine R- oder Python-Fehler. |
+| Execution Errors          | Gibt an, wie oft Skripts Fehler gemeldet haben. Diese Zahl umfasst keine R- oder Python-Fehler. |
 
 ## <a name="memory-usage"></a>Speicherauslastung
 
@@ -193,11 +193,11 @@ FROM sys.dm_os_sys_info;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Column | BESCHREIBUNG |
-|--------|-------------|
-| physical_memory_kb | Gibt die Gesamtmenge des physischen Speichers auf dem Computer an. |
-| committed_kb | Gibt den im Arbeitsspeicher-Manager zugesicherten Speicher in Kilobyte (KB) an. Reservierter Arbeitsspeicher im Speicher-Manager ist nicht eingeschlossen. |
-| external_pool_peak_memory_kb | Gibt die Summe des maximalen verwendeten Arbeitsspeichers für alle externen Ressourcenpools in Kilobyte an. |
+| Column                       | BESCHREIBUNG                                                                                                           |
+|------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| physical_memory_kb           | Gibt die Gesamtmenge des physischen Speichers auf dem Computer an.                                                                   |
+| committed_kb                 | Gibt den im Arbeitsspeicher-Manager zugesicherten Speicher in Kilobyte (KB) an. Reservierter Arbeitsspeicher im Speicher-Manager ist nicht eingeschlossen. |
+| external_pool_peak_memory_kb | Gibt die Summe des maximalen verwendeten Arbeitsspeichers für alle externen Ressourcenpools in Kilobyte an.                          |
 
 ## <a name="memory-configuration"></a>Konfiguration des Arbeitsspeichers
 
@@ -222,9 +222,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Column | BESCHREIBUNG |
-|--------|-------------|
-| name | Gibt den Namen des externen Ressourcenpools oder der SQL Server-Instanz an. |
+| Column             | BESCHREIBUNG |
+|--------------------|-------------|
+| name               | Gibt den Namen des externen Ressourcenpools oder der SQL Server-Instanz an. |
 | max_memory_percent | Gibt den maximalen Arbeitsspeicher an, den die SQL Server-Instanz oder der externe Ressourcenpool beanspruchen kann. |
 
 ## <a name="resource-pools"></a>Ressourcenpools
@@ -247,12 +247,12 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 Die Abfrage gibt die folgenden Spalten zurück:
 
-| Column | BESCHREIBUNG |
-|--------|-------------|
-| pool_name | Name des Ressourcenpools. Den Namen von SQL Server-Ressourcenpools wird `SQL Server` und den Namen von externen Ressourcenpools wird `External Pool` vorangestellt.
-| total_cpu_usage_hours | Gibt die kumulative CPU-Auslastung in Millisekunden seit der letzten Zurücksetzung der Resource Governor-Statistiken an. |
-| read_io_completed_total | Die Gesamtanzahl der E/A-Lesevorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken abgeschlossen wurden. |
-| write_io_completed_total | Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken abgeschlossen wurden. |
+| Column                   | BESCHREIBUNG  |
+|--------------------------|--------------|
+| pool_name                | Name des Ressourcenpools. Den Namen von SQL Server-Ressourcenpools wird `SQL Server` und den Namen von externen Ressourcenpools wird `External Pool` vorangestellt. |
+| total_cpu_usage_hours    | Gibt die kumulative CPU-Auslastung in Millisekunden seit der letzten Zurücksetzung der Resource Governor-Statistiken an. |
+| read_io_completed_total  | Die Gesamtanzahl der E/A-Lesevorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken abgeschlossen wurden.              |
+| write_io_completed_total | Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken abgeschlossen wurden.             |
 
 ## <a name="installed-packages"></a>Installierte Pakete
 
@@ -267,7 +267,7 @@ Zeigen Sie die in SQL Server Machine Learning Services installierten R-Pakete an
 Führen Sie die folgende Abfrage aus, um diese Ausgabe zu erhalten. Die Abfrage nutzt ein R-Skript, um die auf der SQL Server-Instanz installierten R-Pakete zu ermitteln.
 
 ```sql
-EXEC sp_execute_external_script @language = N'R'
+EXECUTE sp_execute_external_script @language = N'R'
 , @script = N'
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
 WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR(4000)
@@ -276,13 +276,13 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 Die folgenden Spalten werden zurückgegeben:
 
-| Column | BESCHREIBUNG |
-|--------|-------------|
-| Paket | Gibt den Namen des installierten Pakets an. |
-| Version | Gibt die Paketversion an. |
+| Column  | BESCHREIBUNG                                                 |
+|---------|-------------------------------------------------------------|
+| Paket | Gibt den Namen des installierten Pakets an.                              |
+| Version | Gibt die Paketversion an.                                     |
 | Depends (Abhängig) | Führt die Pakete auf, von denen das installierte Paket abhängt. |
-| Lizenz | Gibt die Lizenz für das installierte Paket an. |
-| LibPath | Gibt das Verzeichnis an, in dem Sie das Paket finden können. |
+| Lizenz | Gibt die Lizenz für das installierte Paket an.                          |
+| LibPath | Gibt das Verzeichnis an, in dem Sie das Paket finden können.                   |
 
 ### <a name="installed-packages-for-python"></a>Installierte Python-Pakete
 
@@ -293,19 +293,20 @@ Zeigen Sie die in SQL Server Machine Learning Services installierten Python-Pake
 Führen Sie die folgende Abfrage aus, um diese Ausgabe zu erhalten. Die Abfrage nutzt ein Python-Skript, um die auf der SQL Server-Instanz installierten Python-Pakete zu ermitteln.
 
 ```sql
-EXEC sp_execute_external_script @language = N'Python'
+EXECUTE sp_execute_external_script @language = N'Python'
 , @script = N'
-import pip
-OutputDataSet = pandas.DataFrame([(i.key, i.version, i.location) for i in pip.get_installed_distributions()])'
+import pkg_resources
+import pandas
+OutputDataSet = pandas.DataFrame(sorted([(i.key, i.version, i.location) for i in pkg_resources.working_set]))'
 WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHAR(1000)));
 ```
 
 Die folgenden Spalten werden zurückgegeben:
 
-| Column | BESCHREIBUNG |
-|--------|-------------|
-| Paket | Gibt den Namen des installierten Pakets an. |
-| Version | Gibt die Paketversion an. |
+| Column   | BESCHREIBUNG                               |
+|----------|-------------------------------------------|
+| Paket  | Gibt den Namen des installierten Pakets an.            |
+| Version  | Gibt die Paketversion an.                   |
 | Position | Gibt das Verzeichnis an, in dem Sie das Paket finden können. |
 
 ## <a name="next-steps"></a>Nächste Schritte

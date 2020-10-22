@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee2a12b8b45169d43b9dc86077fb0879c7413226
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e3204c5ba30831f0355113f7882727decad08866
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178612"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195082"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Bewerten neuer Daten (SQL Server- und RevoScaleR-Tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Dies ist das achte Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Dies ist das achte Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
 In diesem Tutorial erfahren Sie, wie Sie das logistische Regressionsmodell verwenden, das Sie im letzten Tutorial erstellt haben, um ein weiteres Dataset zu bewerten, das dieselben unabhängigen Variablen als Eingaben verwendet.
 
@@ -59,7 +59,7 @@ In diesem Tutorial erfahren Sie, wie Sie das logistische Regressionsmodell verwe
   
 4. Überprüfen Sie vorsichtshalber, ob die Ausgabetabelle vorhanden ist. Wenn bereits eine mit demselben Namen vorhanden ist, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, die neue Tabelle zu schreiben.
   
-    Rufen Sie dazu die Funktionen [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) und [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)auf, und übergeben Sie den Tabellennamen als Eingabe.
+    Rufen Sie dazu die Funktionen [rxSqlServerTableExists](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) und [rxSqlServerDropTable](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)auf, und übergeben Sie den Tabellennamen als Eingabe.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
@@ -68,7 +68,7 @@ In diesem Tutorial erfahren Sie, wie Sie das logistische Regressionsmodell verwe
     + **rxSqlServerTableExists** fragt den ODBC-Treiber ab und gibt TRUE zurück, wenn die Tabelle existiert, und FALSE, wenn dem nicht so ist.
     + **rxSqlServerDropTable** führt die DDL-Anweisungen aus und gibt TRUE zurück, wenn die Tabelle erfolgreich gelöscht wurde, und FALSE, wenn dem nicht so ist.
 
-5. Führen Sie [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) aus, um die Ergebnisse zu generieren, und speichern Sie sie in der neuen Tabelle, die in der Datenquelle „sqlScoreDS“ definiert ist.
+5. Führen Sie [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) aus, um die Ergebnisse zu generieren, und speichern Sie sie in der neuen Tabelle, die in der Datenquelle „sqlScoreDS“ definiert ist.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -80,7 +80,7 @@ In diesem Tutorial erfahren Sie, wie Sie das logistische Regressionsmodell verwe
         overwrite = TRUE)
     ```
   
-    Die Funktion **rxPredict** ist eine weitere Funktion, die die Ausführung in Remotecomputekontexten unterstützt. Sie können die Funktion **rxPredict** zum Generieren von Ergebnissen aus Modellen verwenden, die auf [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)oder [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm) basieren.
+    Die Funktion **rxPredict** ist eine weitere Funktion, die die Ausführung in Remotecomputekontexten unterstützt. Sie können die Funktion **rxPredict** zum Generieren von Ergebnissen aus Modellen verwenden, die auf [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit)oder [rxGlm](/machine-learning-server/r-reference/revoscaler/rxglm) basieren.
   
     - Der Parameter *writeModelVars* wurde in diesem Beispiel auf **TRUE** festgelegt. Dies bedeutet, dass die Variablen, die für die Schätzung verwendet wurden, in die neue Tabelle aufgenommen werden.
   
@@ -118,7 +118,7 @@ Nachdem die neue Tabelle erstellt wurde, berechnen Sie ein Histogramm von 10.000
 
      In diesem Beispiel wird veranschaulicht, wie einfach die Verwendung von **RxSqlServerData** -Datenquellobjekten ist, um beliebige Datasets auf Grundlage von SQL-Abfragen, Funktionen oder gespeicherten Prozeduren zu definieren und diese anschließend in Ihrem R-Code zu verwenden. Die Variable speichert nicht die eigentlichen Werte, sondern lediglich die Datenquellendefinition. Die Abfrage wird ausgeführt, um die Werte nur dann zu generieren, wenn sie in einer Funktion wie **rxImport**verwendet wird.
       
-2. Rufen Sie die Funktion [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) auf, um die Werte in einem Datenrahmen zu platzieren, der für verschiedene Computekontexte freigegeben werden kann.
+2. Rufen Sie die Funktion [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) auf, um die Werte in einem Datenrahmen zu platzieren, der für verschiedene Computekontexte freigegeben werden kann.
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)

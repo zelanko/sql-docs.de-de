@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 870ff07f771f06acfb24e9883477b177af36d425
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725871"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257210"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
 
@@ -23,7 +23,7 @@ ms.locfileid: "91725871"
 Ein Big Data-Cluster für SQL Server wird als Docker-Container auf einem Kubernetes-Cluster bereitgestellt. Im Folgenden finden Sie eine Übersicht über die Einrichtungs-und Konfigurationsschritte:
 
 - Einrichten eines Kubernetes-Clusters auf einer einzelnen VM, auf einem VM-Cluster oder in Azure Kubernetes Service (AKS), Red Hat OpenShift oder Azure Red Hat OpenShift (ARO)
-- Installieren des Clusterkonfigurationstools `azdata` auf dem Clientcomputer
+- Installieren des Clusterkonfigurationstools [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] auf dem Clientcomputer
 - Bereitstellen eines Big-Data-Clusters für SQL Server auf einem Kubernetes-Cluster
 
 ## <a name="supported-platforms"></a>Unterstützte Plattformen
@@ -77,7 +77,7 @@ Bei einer Bereitstellung in AKS müssen Sie keinen Speicher einrichten. AKS biet
 
 Bevor Sie einen Big-Data-Cluster für SQL Server 2019 bereitstellen können, müssen Sie zuerst die folgenden [Big-Data-Tools installieren](deploy-big-data-tools.md):
 
-- `azdata`
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 - `kubectl`
 - Azure Data Studio
 - [Datenvirtualisierungserweiterung](../azure-data-studio/extensions/data-virtualization-extension.md) für Azure Data Studio
@@ -91,10 +91,10 @@ In den folgenden Abschnitten finden Sie weitere Informationen darüber, wie Sie 
 
 ## <a name="default-configurations"></a><a id="configfile"></a> Standardkonfigurationen
 
-Die Bereitstellungsoptionen für Big-Data-Cluster werden in JSON-Konfigurationsdateien definiert. Sie können mit der Anpassung der Clusterbereitstellung über die integrierten Bereitstellungsprofile beginnen, die in `azdata`verfügbar sind. 
+Die Bereitstellungsoptionen für Big-Data-Cluster werden in JSON-Konfigurationsdateien definiert. Sie können mit der Anpassung der Clusterbereitstellung über die integrierten Bereitstellungsprofile beginnen, die in [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]verfügbar sind. 
 
 > [!NOTE]
-> Die Containerimages, die für die Bereitstellung im Big Data-Cluster erforderlich sind, werden im `mssql/bdc`-Repository auf Microsoft Container Registry (`mcr.microsoft.com`) gehostet. Diese Einstellungen sind standardmäßig bereits in der `control.json`-Konfigurationsdatei in jedem der Bereitstellungsprofile enthalten, die in `azdata` enthalten sind. Außerdem ist das Containerimagetag für jedes Release ebenfalls bereits in der gleichen Konfigurationsdatei voreingestellt. Wenn Sie die Containerimages in Ihrer eigenen privaten Containerregistrierung abrufen und/oder die Einstellungen für die Containerregistrierung oder das Containerrepository ändern müssen, befolgen Sie die Anweisungen im Artikel [Offlineinstallation](deploy-offline.md).
+> Die Containerimages, die für die Bereitstellung im Big Data-Cluster erforderlich sind, werden im `mssql/bdc`-Repository auf Microsoft Container Registry (`mcr.microsoft.com`) gehostet. Diese Einstellungen sind standardmäßig bereits in der `control.json`-Konfigurationsdatei in jedem der Bereitstellungsprofile enthalten, die in [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] enthalten sind. Außerdem ist das Containerimagetag für jedes Release ebenfalls bereits in der gleichen Konfigurationsdatei voreingestellt. Wenn Sie die Containerimages in Ihrer eigenen privaten Containerregistrierung abrufen und/oder die Einstellungen für die Containerregistrierung oder das Containerrepository ändern müssen, befolgen Sie die Anweisungen im Artikel [Offlineinstallation](deploy-offline.md).
 
 Führen Sie diesen Befehl aus, um herauszufinden, welche Vorlagen verfügbar sind:
 
@@ -117,7 +117,7 @@ Die folgenden Vorlagen sind ab SQL Server 2019 CU5 verfügbar:
 
 Sie können einen Big Data-Cluster bereitstellen, indem Sie `azdata bdc create` ausführen. Dadurch werden Sie aufgefordert, eine der Standardkonfigurationen auszuwählen. Anschließend werden Sie durch die Bereitstellungsschritte geführt.
 
-Wenn Sie zum ersten Mal `azdata` ausführen, müssen Sie auch `--accept-eula=yes` angeben, um die Lizenzbedingungen zu akzeptieren.
+Wenn Sie zum ersten Mal [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] ausführen, müssen Sie auch `--accept-eula=yes` angeben, um die Lizenzbedingungen zu akzeptieren.
 
 ```bash
 azdata bdc create --accept-eula=yes
@@ -176,7 +176,7 @@ Die folgenden Umgebungsvariablen werden für Sicherheitseinstellungen verwendet,
 |---|---|---|
 | `AZDATA_USERNAME` | Erforderlich |Der Benutzername für den Big Data-Clusteradministrator für SQL Server. In der SQL Server-Masterinstanz wird eine SysAdmin-Anmeldung mit dem gleichen Namen erstellt. Als bewährte Sicherheitsmaßnahme wird das `sa`-Konto deaktiviert. <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
 | `AZDATA_PASSWORD` | Erforderlich |Das Kennwort für die oben erstellten Benutzerkonten. Bei Clustern, die vor SQL Server 2019 CU5 bereitgestellt wurden, wird dasselbe Kennwort für den Benutzer `root` verwendet, um das Knox Gateway und HDFS zu sichern. |
-| `ACCEPT_EULA`| Erforderlich für die erste Verwendung von `azdata`| Legen Sie diese Einstellung auf „Ja“ fest. Wenn dieser Wert als Umgebungsvariable festgelegt ist, werden die Lizenzbedingungen für SQL Server und `azdata` akzeptiert. Wenn er nicht als Umgebungsvariable festgelegt ist, können Sie `--accept-eula=yes` angeben, wenn Sie den Befehl `azdata` zum ersten Mal verwenden.|
+| `ACCEPT_EULA`| Erforderlich für die erste Verwendung von [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]| Legen Sie diese Einstellung auf „Ja“ fest. Wenn dieser Wert als Umgebungsvariable festgelegt ist, werden die Lizenzbedingungen für SQL Server und [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] akzeptiert. Wenn er nicht als Umgebungsvariable festgelegt ist, können Sie `--accept-eula=yes` angeben, wenn Sie den Befehl [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] zum ersten Mal verwenden.|
 | `DOCKER_USERNAME` | Optional | Der Benutzername, mit dem auf Containerimages zugegriffen wird, wenn diese in einem privaten Repository gespeichert sind. Weitere Informationen darüber, wie Sie ein privates Docker-Repository zur Bereitstellung von Big-Data-Clustern nutzen, finden Sie im Artikel [Offlinebereitstellungen](deploy-offline.md).|
 | `DOCKER_PASSWORD` | Optional |Das Kennwort, mit dem auf das oben erwähnte private Repository zugegriffen wird. |
 
@@ -424,7 +424,7 @@ Sql: ready                                                                      
 > [!IMPORTANT]
 > Wenn Sie den `--all`-Paramenter verwenden, enthalten die Ausgaben dieser Befehle URLs zu Kibana-und Grafana-Dashboards. Dort ist eine ausführlichere Analyse möglich.
 
-Zusätzlich zu `azdata` können Sie auch Azure Data Studio verwenden, um Endpunkt- und Statusinformationen zu ermitteln. Weitere Informationen darüber, wie Sie mit `azdata` und Azure Data Studio den Clusterstatus abrufen können, finden Sie unter [Anzeigen des Status eines Big Data-Clusters](view-cluster-status.md).
+Zusätzlich zu [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] können Sie auch Azure Data Studio verwenden, um Endpunkt- und Statusinformationen zu ermitteln. Weitere Informationen darüber, wie Sie mit [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] und Azure Data Studio den Clusterstatus abrufen können, finden Sie unter [Anzeigen des Status eines Big Data-Clusters](view-cluster-status.md).
 
 ## <a name="connect-to-the-cluster"></a><a id="connect"></a> Herstellen einer Verbindung mit dem Cluster
 

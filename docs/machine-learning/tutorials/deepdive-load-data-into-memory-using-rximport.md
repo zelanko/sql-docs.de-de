@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c31650525934b14bf31135264d9b86c52d85119
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5be5c314cf50add1c215bbe52b5cf0d94a77a237
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179931"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195132"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>Laden von Daten in den Arbeitsspeicher mithilfe von rxImport (SQL Server- und RevoScaleR-Tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Bei diesem Tutorial handelt es sich um das 10. Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Tutorial erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
+Bei diesem Tutorial handelt es sich um das 10. Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Tutorial erfahren Sie, wie Sie [RevoScaleR-Funktionen](/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
 In diesem Tutorial erfahren Sie, wie Sie Daten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abrufen und anschließend die Funktion **rxImport** verwenden, um die gewünschten Daten in eine lokale Datei einzufügen. Auf diese Weise können Sie sie wiederholt im lokalen Computekontext analysieren, ohne die Datenbank erneut abfragen zu müssen.
 
-Mithilfe der [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)-Funktion können Daten aus einer Datenquelle in einen Datenrahmen im Arbeitsspeicher einer Sitzung oder in eine XDF-Datei auf einem Datenträger verschoben werden. Wenn Sie keine Datei als Ziel angeben, werden die Daten als Datenrahmen in den Arbeitsspeicher abgelegt.
+Mithilfe der [rxImport](/machine-learning-server/r-reference/revoscaler/rximport)-Funktion können Daten aus einer Datenquelle in einen Datenrahmen im Arbeitsspeicher einer Sitzung oder in eine XDF-Datei auf einem Datenträger verschoben werden. Wenn Sie keine Datei als Ziel angeben, werden die Daten als Datenrahmen in den Arbeitsspeicher abgelegt.
 
 ## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>Extrahieren einer Teilmenge von Daten von SQL Server in den lokalen Arbeitsspeicher
 
@@ -44,7 +44,7 @@ Sie haben sich dazu entschieden, nur die Hochrisikopersonen genauer zu untersuch
         connectionString = sqlConnString)
     ```
 
-3. Rufen Sie die Funktion [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) auf, um die Daten in einen Datenrahmen in der lokalen R-Sitzung zu lesen.
+3. Rufen Sie die Funktion [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) auf, um die Daten in einen Datenrahmen in der lokalen R-Sitzung zu lesen.
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
