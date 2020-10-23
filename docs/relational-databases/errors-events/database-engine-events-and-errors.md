@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f87cf70ebcb3a491d31fc7523ac6a4c0a7889a2f
-ms.sourcegitcommit: 49dab56fc71dc394f4dde9962ec44d99cc15027c
+ms.openlocfilehash: 25afd0615066472ce8e7a63b757576b50629e15f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84158619"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194249"
 ---
 # <a name="database-engine-errors"></a>Fehler der Datenbank-Engine
 
@@ -1626,6 +1626,7 @@ ORDER BY message_id
 |    3281    |    10    |    Nein    |    '%ls' wurde freigegeben, der Rückspulvorgang wurde initiiert.    |
 |    3283    |    16    |    Nein    |    Die Datei '%ls' wurde nicht ordnungsgemäß initialisiert. Ausführliche Informationen finden Sie in den Fehlerprotokollen.    |
 |    3284    |    16    |    Nein    |    Die Dateimarkierung für Gerät "%ls" ist nicht ausgerichtet. Geben Sie die RESTORE-Anweisung mit derselben Blockgröße, mit der der Sicherungssatz erstellt wurde, erneut aus: "%d" sieht wie ein möglicher Wert aus.    |
+|    3285    |    10    |    Ja    |    Die Dateimarkierung auf Gerät '%ls' ist offenbar nicht ausgerichtet. Der Wiederherstellungsvorgang wird mithilfe der weniger effizienten E/A fortgesetzt.  Sie können dies vermeiden, indem Sie die RESTORE-Anweisung erneut mit derselben Blockgröße ausgeben, mit der der Sicherungssatz erstellt wurde: "%d" sieht wie ein möglicher Wert aus.    |
 |    3301    |    21    |    Ja    |    Das Transaktionsprotokoll enthält einen ungültigen Datensatz (logop %d). Das Protokoll wurde beschädigt. Stellen Sie die Datenbank von einer vollständigen Sicherung wieder her, oder reparieren Sie die Datenbank.    |
 |    3302    |    21    |    Ja    |    Fehler beim Wiederholen von protokollierten Vorgängen in der '%.*ls'-Datenbank, da das Protokollende bei der Protokolldatensatz-ID %S_LSN nicht erreicht werden konnte. Dies weist auf eine Beschädigung in der Nähe der Protokolldatensatz- ID %S_LSN hin. Stellen Sie die Datenbank von einer vollständigen Sicherung wieder her, oder reparieren Sie die Datenbank.    |
 |    [3313](mssqlserver-3313-database-engine-error.md)    |    21    |    Ja    |    Fehler beim Wiederherstellen des protokollierten Vorgangs in der %.*ls-Datenbank bei Protokolldatensatz-ID %S_LSN. Normalerweise wird der jeweilige Fehler zuvor als Fehler im Windows-Ereignisprotokoll protokolliert. Stellen Sie die Datenbank von einer vollständigen Sicherung wieder her, oder reparieren Sie die Datenbank.    |
@@ -3465,7 +3466,7 @@ ORDER BY message_id
 |    7802    |    16    |    Nein    |    Funktionen mit dem Rückgabetyp '%.*ls' werden über einen SOAP-Aufruf nicht unterstützt.    |
 |    7803    |    15    |    Nein    |    Die %.*ls-Klausel kann in der %.* ls-Anweisung nicht verwendet werden.    |
 |    7804    |    15    |    Nein    |    Für %.*ls und %.* ls kann nicht der gleiche Wert verwendet werden.    |
-|    7805    |    16    |    Nein    |    Vor dem SITE-Parameter kann kein Schema wie „https://“ als Präfix eingefügt werden. Gültige Werte für SITE sind {"*" | "+" | "site_name"}.    |
+|    7805    |    16    |    Nein    |    Vor dem SITE-Parameter kann kein Schema wie „https://“ als Präfix eingefügt werden. Gültige Werte für SITE sind {"*" | '+' | "site_name"}.    |
 |    7806    |    16    |    Nein    |    Die vom Endpunkt '%.*ls' angegebene URL ist bereits für den Empfang von Anforderungen registriert, oder er ist für die Verwendung durch einen anderen Dienst reserviert.    |
 |    7807    |    16    |    Nein    |    Fehler ('0x%x') beim Registrieren des Endpunkts '%.*ls'.    |
 |    7808    |    10    |    Nein    |    Die Registrierung des Endpunkts '%.*ls' konnte nicht aufgehoben werden.    |
@@ -6780,7 +6781,7 @@ ORDER BY message_id
 |    18338    |    10    |    Nein    |    Ursache: Der Datenbankname konnte nicht von dem angegebenen Dateinamen bestimmt werden.    |
 |    18339    |    10    |    Nein    |    Ursache: Fehler beim Öffnen der in den Anmeldeeigenschaften angegebenen Datenbank.    |
 |    18340    |    10    |    Nein    |    Ursache: Fehler beim Speichern des Datenbanknamens und der -sortierung. Suchen Sie nach vorherigen Fehlern.    |
-|    18341    |    10    |    Nein    |    erforderlich. Ursache: Die aktuelle Sortierung stimmte nicht mit der Datenbanksortierung während des Zurücksetzens der Verbindung überein.    |
+|    18341    |    10    |    Nein    |    . Ursache: Die aktuelle Sortierung stimmte nicht mit der Datenbanksortierung während des Zurücksetzens der Verbindung überein.    |
 |    18342    |    10    |    Nein    |    Ursache: Fehler beim Senden einer Umgebungsänderungsbenachrichtigung an einen Protokollversand-Partnerknoten.    |
 |    18343    |    10    |    Nein    |    Ursache: Fehler beim Abrufen des Datenbanknamens oder beim Zuordnen der Datenbank zu einem Element während des erneuten Überprüfens der Anmeldung auf der Verbindung.    |
 |    18344    |    10    |    Nein    |    Ursache: Verbindung mit einer Anmeldung, die nicht angibt, dass eine Freigabe nicht zugelassen ist, während die Anmeldung auf der Verbindung erneut überprüft wird.    |
@@ -9110,4 +9111,4 @@ ORDER BY message_id
 ## <a name="see-also"></a>Weitere Informationen
 
 [Grundlegendes zu Datenbank-Engine-Fehlern](../../relational-databases/errors-events/understanding-database-engine-errors.md)
-[Ursachen und Lösungen für Datenbank-Engine-Fehler](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)
+[Ursachen und Lösungen für Datenbank-Engine-Fehler](/previous-versions/sql/sql-server-2016/ms365262(v=sql.130))
