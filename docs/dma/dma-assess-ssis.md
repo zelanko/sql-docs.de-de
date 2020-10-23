@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726313"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439404"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Durchführen einer SQL Server Integration Service-Migrations Bewertung mit Datenmigrations-Assistent
 
@@ -55,12 +55,12 @@ Die folgenden Schritt-für-Schritt-Anweisungen unterstützen Sie bei der ersten 
 1. Optionale Geben Sie einen Ordner Pfad ein, der SSIS-Pakete enthält.
 1. Optionale Geben Sie ggf. das Paket Verschlüsselungs Kennwort ein.
 1. Klicken Sie auf Verbindung mit dem SQL-Quell Server **herstellen** .
-  ![Quelle hinzufügen](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+  ![Screenshot, der den Bereich Verbindung mit einem Server herstellen mit der Option Ordner Pfad eingeben, der SSIS-Pakete enthält anzeigt](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
 
 ## <a name="add-sources-to-assess"></a>Hinzufügen von Quellen zur Bewertung
 
 1. Wählen Sie die zu Bewertungs baren SSIS-Paket Speichertypen aus, und klicken Sie dann auf **Hinzufügen**.
-![Quelle hinzufügen](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
+![Screenshot, der den Bereich Quellen hinzufügen anzeigt.](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. Wählen Sie **Quellen hinzufügen** aus, um das Menü verbindungsflyout zu öffnen, wenn Sie mehrere Ordner bewerten müssen.
 1. Klicken Sie auf **Start Assessment**.
   ![Bewertung starten](media/dma-assess-ssis/dma-assess-ssis-assess.png)
