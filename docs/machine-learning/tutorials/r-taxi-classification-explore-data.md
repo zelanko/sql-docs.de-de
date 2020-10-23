@@ -10,19 +10,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 12f964b71bd7dee79eeb3287efc7b67273abb65e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a0cacd4beee72cef845fa161d1a1bcd0263a7e6b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180354"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193686"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>R-Tutorial: Untersuchen und Visualisieren von Daten
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Im zweiten Teil dieser fünfteiligen Tutorialreihe werden Sie die Beispieldaten untersuchen und einige Plots erstellen. Im späteren Verlauf erfahren Sie, wie Sie Grafikobjekte in Python serialisieren, anschließend deserialisieren und Plots erstellen.
 
-Im zweiten Teil dieser fünfteiligen Tutorialreihe überprüfen Sie die Beispieldaten und generieren dann mithilfe von [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) einige Plots über [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) und die generische [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)-Funktion in Basis-R.
+Im zweiten Teil dieser fünfteiligen Tutorialreihe überprüfen Sie die Beispieldaten und generieren dann mithilfe von [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) einige Plots über [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) und die generische [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)-Funktion in Basis-R.
 
 Ein wichtiges Ziel dieses Artikels besteht darin, das Aufrufen von R-Funktionen von [!INCLUDE[tsql](../../includes/tsql-md.md)] in gespeicherten Prozeduren zu veranschaulichen und die Ergebnisse in Anwendungsdateiformaten zu speichern:
 
@@ -83,7 +83,7 @@ Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die Fahrtendate
 > Ab SQL Server 2019 erfordert der Isolationsmechanismus, dass Sie für das Verzeichnis, in dem die Plotdatei gespeichert ist, entsprechende Berechtigungen erteilen. Informationen zum Festlegen dieser Berechtigungen finden Sie im [Abschnitt zu Dateiberechtigungen unter „SQL Server 2019 unter Windows: Isolationsänderungen für Machine Learning Services“](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
-Verwenden Sie [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), eine der erweiterten R-Funktionen in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), um den Plot zu erstellen. In diesem Schritt wird ein Histogramm anhand der Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage gezeichnet. Sie können diese Funktion in eine gespeicherte Prozedur wie **RxPlotHistogram** einschließen.
+Verwenden Sie [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram), eine der erweiterten R-Funktionen in [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler), um den Plot zu erstellen. In diesem Schritt wird ein Histogramm anhand der Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage gezeichnet. Sie können diese Funktion in eine gespeicherte Prozedur wie **RxPlotHistogram** einschließen.
 
 1. Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer mit der rechten Maustaste auf die Datenbank **NYCTaxi_Sample**, und wählen Sie **Neue Abfrage** aus.
 
@@ -114,7 +114,7 @@ Verwenden Sie [rxHistogram](https://docs.microsoft.com/machine-learning-server/r
 
 Folgende Punkte sind bei diesem Skript besonders wichtig:
   
-+ Die Variable `@query` definiert den Abfragetext (`'SELECT tipped FROM nyctaxi_sample'`), der an das R-Skript als das Argument für die Skripteingabevariable, `@input_data_1`, übergeben wird. Wenn R-Skripts als externe Prozesse ausgeführt werden, sollte eine 1:1-Zuordnung zwischen den Eingaben in Ihr Skript und den Ausgaben in die gespeicherte Systemprozedur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) bestehen, die die R-Sitzung in SQL Server startet.
++ Die Variable `@query` definiert den Abfragetext (`'SELECT tipped FROM nyctaxi_sample'`), der an das R-Skript als das Argument für die Skripteingabevariable, `@input_data_1`, übergeben wird. Wenn R-Skripts als externe Prozesse ausgeführt werden, sollte eine 1:1-Zuordnung zwischen den Eingaben in Ihr Skript und den Ausgaben in die gespeicherte Systemprozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) bestehen, die die R-Sitzung in SQL Server startet.
   
 + Innerhalb des R-Skripts wird die Variable `image_file` definiert, um das Bild zu speichern.
 
