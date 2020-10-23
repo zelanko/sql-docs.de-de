@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c37608146b0ebf75cd0042f12ffc004f1273960
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c17b74aff83412dd7f74d3c9a9cb1fb7ec711b19
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178817"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196304"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Erstellen von R-Modellen (SQL Server- und RevoScaleR-Tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Bei diesem Tutorial handelt es sich um das 7. Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Lernprogramm erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
+Bei diesem Tutorial handelt es sich um das 7. Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Lernprogramm erfahren Sie, wie Sie [RevoScaleR-Funktionen](/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
 Sie haben die Trainingsdaten angereichert. In diesem Tutorial müssen Sie die Daten mithilfe der Regressionsmodellierung analysieren. Lineare Modelle spielen bei Predictive Analytics eine wichtige Rolle. Das **RevoScaleR**-Paket umfasst Regressionsalgorithmen, mit denen die Workload unterteilt und parallel ausgeführt werden kann.
 
@@ -31,7 +31,7 @@ Sie haben die Trainingsdaten angereichert. In diesem Tutorial müssen Sie die Da
 
 In diesem Schritt erstellen Sie ein einfaches lineares Modell, das den Kreditkartensaldo eines Kunden mithilfe der unabhängigen Variablen in den Spalten *gender* und *creditLine* schätzt.
   
-Zu diesem Zweck verwenden Sie die neue Funktion [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), die Remotecomputekontexte unterstützt.
+Zu diesem Zweck verwenden Sie die neue Funktion [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod), die Remotecomputekontexte unterstützt.
   
 1. Erstellen Sie eine R-Variable, um das fertige Modell zu speichern, und rufen Sie **rxLinMod** auf, um eine geeignete Formel zu übergeben.
   
@@ -75,7 +75,7 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>Erstellen eines logistischen Regressionsmodells
 
-Als Nächstes erstellen Sie ein logistisches Regressionsmodell, das angibt, ob ein bestimmter Kunde ein Betrugsrisiko darstellt. Verwenden Sie die **RevoScaleR-Funktion** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit), die die Anpassung der logistischen Regressionsmodelle in Remotecomputekontexten unterstützt.
+Als Nächstes erstellen Sie ein logistisches Regressionsmodell, das angibt, ob ein bestimmter Kunde ein Betrugsrisiko darstellt. Verwenden Sie die **RevoScaleR-Funktion** [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit), die die Anpassung der logistischen Regressionsmodelle in Remotecomputekontexten unterstützt.
 
 Lassen Sie den Computekontext wie er ist. Außerdem wird weiterhin dieselbe Datenquelle verwendet.
 

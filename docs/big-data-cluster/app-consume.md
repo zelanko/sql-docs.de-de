@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 12767b789fee400130990f6451a8a29e5bce6605
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 307d1cf41c319debad4b0fc06b8ba0da516491bd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725091"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257320"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Verwenden einer auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] bereitgestellten App mithilfe eines RESTful-Webdiensts
 
@@ -26,7 +26,7 @@ In diesem Artikel wird beschrieben, wie Sie mithilfe eines RESTful-Webdiensts ei
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - [Big Data-Cluster für SQL Server](deployment-guidance.md)
-- [Befehlszeilen-Hilfsprogramm „azdata“](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 - Eine App, die entweder mithilfe von [azdata](app-create.md) oder der [App-Bereitstellungserweiterung](app-deployment-extension.md) bereitgestellt wird
 
 > [!NOTE]

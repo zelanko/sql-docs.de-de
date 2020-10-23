@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569913"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196334"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>Häufige R-Skripterstellungsfehler in SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ Manchmal kann es jedoch vorkommen, dass Code, der in einer externen IDE oder ein
 
 2. Überprüfen Sie die Meldungen, um festzustellen, ob die Eingabe- oder Ausgabedaten Spalten nicht kompatible oder nicht unterstützte Datentypen enthalten. Beispielsweise geben Abfragen für eine SQL-Datenbank häufig GUIDs oder RowGUIDs zurück, die beide nicht unterstützt werden. Weitere Informationen finden Sie unter [R-Bibliotheken und Datentypen](../r/r-libraries-and-data-types.md).
 
-3. Lesen Sie die Hilfeseiten für einzelne R-Funktionen, um zu bestimmen, ob alle Parameter für den SQL Server-Computekontext unterstützt werden. Verwenden Sie für die ScaleR-Hilfe die Inline-R-Hilfebefehle, oder lesen Sie die Informationen unter [Referenz zu Paketen](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+3. Lesen Sie die Hilfeseiten für einzelne R-Funktionen, um zu bestimmen, ob alle Parameter für den SQL Server-Computekontext unterstützt werden. Verwenden Sie für die ScaleR-Hilfe die Inline-R-Hilfebefehle, oder lesen Sie die Informationen unter [Referenz zu Paketen](/r-server/r-reference/revoscaler/revoscaler).
 
 Wenn die R-Laufzeit funktionsfähig ist, das Skript jedoch Fehler zurückgibt, empfiehlt es sich, das Skript in einer dedizierten R-Entwicklungsumgebung wie R Tools für Visual Studio zu debuggen.
 

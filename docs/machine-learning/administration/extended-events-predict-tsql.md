@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: bbe54a44113ebadc07c837887f0d92e7bfb44cb4
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956844"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115350"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Überwachen von PREDICT-T-SQL-Anweisungen mit erweiterten Ereignissen in SQL Server Machine Learning Services
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Erfahren Sie, wie Sie erweiterte Ereignisse verwenden, um [PREDICT](../../t-sql/queries/predict-transact-sql.md)-T-SQL-Anweisungen in SQL Server Machine Learning Services zu überwachen und damit einhergehende Probleme zu beheben.
 
@@ -25,22 +25,22 @@ Erfahren Sie, wie Sie erweiterte Ereignisse verwenden, um [PREDICT](../../t-sql/
 
 Die folgenden erweiterten Ereignisse sind in allen Versionen von SQL Server verfügbar, die die [PREDICT](../../t-sql/queries/predict-transact-sql.md)-T-SQL-Anweisung unterstützen. 
 
-|name |object_type|description| 
-|----|----|----|
-|predict_function_completed |Ereignis  |Integrierte Aufschlüsselung der Ausführungszeit|
-|predict_model_cache_hit |Ereignis|Tritt auf, wenn ein Modell aus dem Modellcache der PREDICT-Funktion abgerufen wird. Verwenden Sie dieses Ereignis zusammen mit anderen predict_model_cache_*-Ereignissen zur Behandlung von Problemen, die vom Modellcache der PREDICT-Funktion verursacht werden.|
-|predict_model_cache_insert |Ereignis  |   Tritt auf, wenn ein Modell in den Modellcache der PREDICT-Funktion eingefügt wird. Verwenden Sie dieses Ereignis zusammen mit anderen predict_model_cache_*-Ereignissen zur Behandlung von Problemen, die vom Modellcache der PREDICT-Funktion verursacht werden.    |
-|predict_model_cache_miss   |Ereignis|Tritt auf, wenn ein Modell im Modellcache der PREDICT-Funktion nicht gefunden wird. Ein häufiges Vorkommen dieses Ereignisses kann darauf hindeuten, dass die SQL Server-Instanz mehr Arbeitsspeicher benötigt. Verwenden Sie dieses Ereignis zusammen mit anderen predict_model_cache_*-Ereignissen zur Behandlung von Problemen, die vom Modellcache der PREDICT-Funktion verursacht werden.|
-|predict_model_cache_remove |Ereignis| Tritt auf, wenn ein Modell aus dem Modellcache der PREDICT-Funktion entfernt wird. Verwenden Sie dieses Ereignis zusammen mit anderen predict_model_cache_*-Ereignissen zur Behandlung von Problemen, die vom Modellcache der PREDICT-Funktion verursacht werden.|
+| name                       | object_type | description |
+|----------------------------|-------------|-------------|
+| predict_function_completed | Ereignis       | Integrierte Aufschlüsselung der Ausführungszeit|
+| predict_model_cache_hit    | Ereignis       | Tritt auf, wenn ein Modell aus dem Modellcache der PREDICT-Funktion abgerufen wird. Verwenden Sie dieses Ereignis zusammen mit anderen predict_model_cache_*-Ereignissen zur Behandlung von Problemen, die vom Modellcache der PREDICT-Funktion verursacht werden.|
+| predict_model_cache_insert | Ereignis       | Tritt auf, wenn ein Modell in den Modellcache der PREDICT-Funktion eingefügt wird. Verwenden Sie dieses Ereignis zusammen mit anderen predict_model_cache_*-Ereignissen zur Behandlung von Problemen, die vom Modellcache der PREDICT-Funktion verursacht werden.   |
+| predict_model_cache_miss   | Ereignis       | Tritt auf, wenn ein Modell im Modellcache der PREDICT-Funktion nicht gefunden wird. Ein häufiges Vorkommen dieses Ereignisses kann darauf hindeuten, dass die SQL Server-Instanz mehr Arbeitsspeicher benötigt. Verwenden Sie dieses Ereignis zusammen mit anderen predict_model_cache_*-Ereignissen zur Behandlung von Problemen, die vom Modellcache der PREDICT-Funktion verursacht werden.|
+| predict_model_cache_remove | Ereignis       | Tritt auf, wenn ein Modell aus dem Modellcache der PREDICT-Funktion entfernt wird. Verwenden Sie dieses Ereignis zusammen mit anderen predict_model_cache_*-Ereignissen zur Behandlung von Problemen, die vom Modellcache der PREDICT-Funktion verursacht werden.|
 
 ## <a name="query-for-related-events"></a>Abfragen für verwandte Ereignisse
 
 Wenn Sie eine Liste aller für diese Ereignisse zurückgegebenen Spalten anzeigen möchten, führen Sie die folgende Abfrage in SQL Server Management Studio aus:
 
 ```sql
-SELECT * 
-FROM sys.dm_xe_object_columns 
-WHERE object_name LIKE `predict%'
+SELECT *
+FROM sys.dm_xe_object_columns
+WHERE object_name LIKE 'predict%'
 ```
 
 ## <a name="examples"></a>Beispiele

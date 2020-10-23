@@ -165,7 +165,7 @@
         - name: DMX-Operator (Referenz)
           href: ../dmx/data-mining-extensions-dmx-operator-reference.md
           items:
-            - name: + (Addieren)
+            - name: + (Hinzufügen)
               href: ../dmx/add-dmx.md
             - name: '- (Subtrahieren)'
               href: ../dmx/subtract-dmx.md
@@ -177,7 +177,7 @@
               href: ../dmx/less-than-dmx.md
             - name: '> (Größer als)'
               href: ../dmx/greater-than-dmx.md
-            - name: = (Gleich)
+            - name: '= (Gleich)'
               href: ../dmx/equal-to-dmx.md
             - name: <> (Ungleich)
               href: ../dmx/not-equal-to-dmx.md

@@ -11,12 +11,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22695214f9f3b375d285a8b3bb03bc1471535b17
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495003"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192374"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>Iris-Demodaten für Python- und R-Tutorials für SQL Machine Learning
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -130,7 +130,7 @@ Rufen Sie integrierte Iris-Daten von R oder Python ab. Laden Sie die Daten mit P
     EXEC dbo.get_iris_dataset;
     ```
 
-    Wenn Sie mit T-SQL nicht vertraut sind, sei Ihnen gesagt, dass mit der INSERT-Anweisung nur neue Daten hinzugefügt werden. Es wird nicht geprüft, ob Daten vorhanden sind, und die Tabelle wird weder gelöscht noch neu erstellt. Um zu vermeiden, dass sich in der Tabelle mehrere Kopien derselben Daten befinden, können Sie zuerst die folgende Anweisung ausführen: `TRUNCATE TABLE iris_data`. Mit der T-SQL-Anweisung [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) werden vorhandene Daten gelöscht, die Struktur der Tabelle bleibt jedoch erhalten.
+    Wenn Sie mit T-SQL nicht vertraut sind, sei Ihnen gesagt, dass mit der INSERT-Anweisung nur neue Daten hinzugefügt werden. Es wird nicht geprüft, ob Daten vorhanden sind, und die Tabelle wird weder gelöscht noch neu erstellt. Um zu vermeiden, dass sich in der Tabelle mehrere Kopien derselben Daten befinden, können Sie zuerst die folgende Anweisung ausführen: `TRUNCATE TABLE iris_data`. Mit der T-SQL-Anweisung [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md) werden vorhandene Daten gelöscht, die Struktur der Tabelle bleibt jedoch erhalten.
 
 ## <a name="query-the-data"></a>Abfragen der Daten
 

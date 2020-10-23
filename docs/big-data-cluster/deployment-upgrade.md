@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 058012d828dd9f6f327354809be4dfe67021744b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725851"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257190"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Upgraden von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -57,16 +57,16 @@ In diesem Abschnitt wird erläutert, wie ein BDC für SQL Server von einem unter
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-1. Aktualisieren Sie `azdata`.
+1. Aktualisieren Sie [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
-   Befolgen Sie die Anweisungen zur Installation von `azdata`. 
+   Befolgen Sie die Anweisungen zur Installation von [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
    - [Windows Installer](../azdata/install/deploy-install-azdata-installer.md)
    - [Linux mit apt](../azdata/install/deploy-install-azdata-linux-package.md)
    - [Linux mit yum](../azdata/install/deploy-install-azdata-yum.md)
    - [Linux mit zypper](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
-   >Wenn `azdata` mit `pip` installiert wurde, müssen Sie es vor der Installation mit Windows Installer oder mit dem Linux-Paket-Manager manuell entfernen.
+   >Wenn [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] mit `pip` installiert wurde, müssen Sie es vor der Installation mit Windows Installer oder mit dem Linux-Paket-Manager manuell entfernen.
 
 1. Aktualisieren Sie den Big Data-Cluster.
 
@@ -131,7 +131,7 @@ Ein direktes Upgrade von einem CTP- oder Release Candidate-Build von SQL Server-
 
 ### <a name="backup-and-delete-the-old-cluster"></a>Sichern und Löschen des alten Clusters
 
-Für Big Data-Cluster, die vor SQL Server 2019 GDR1 bereitgestellt wurden, ist kein direktes Upgrade möglich. Um ein Upgrade auf ein neues Release durchzuführen, muss der Cluster manuell entfernt und neu erstellt werden. Jedes Release verfügt über eine eindeutige Version von `azdata`, die mit der vorherigen Version nicht kompatibel ist. Auch wenn ein neueres Containerimage auf einem Cluster herunterladen wird, der mit einer älteren Version bereitgestellt wurde, ist das aktuelle Image möglicherweise nicht mit den älteren Images auf dem Cluster kompatibel. Das neuere Image wird abgerufen, wenn Sie das Imagetag `latest` in der Bereitstellungskonfigurationsdatei für die Containereinstellungen verwenden. Standardmäßig verfügt jedes Release über ein bestimmtes Imagetag, das der Releaseversion von SQL Server entspricht. Führen Sie die folgenden Schritte aus, um ein Upgrade auf das neueste Release durchzuführen:
+Für Big Data-Cluster, die vor SQL Server 2019 GDR1 bereitgestellt wurden, ist kein direktes Upgrade möglich. Um ein Upgrade auf ein neues Release durchzuführen, muss der Cluster manuell entfernt und neu erstellt werden. Jedes Release verfügt über eine eindeutige Version von [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], die mit der vorherigen Version nicht kompatibel ist. Auch wenn ein neueres Containerimage auf einem Cluster herunterladen wird, der mit einer älteren Version bereitgestellt wurde, ist das aktuelle Image möglicherweise nicht mit den älteren Images auf dem Cluster kompatibel. Das neuere Image wird abgerufen, wenn Sie das Imagetag `latest` in der Bereitstellungskonfigurationsdatei für die Containereinstellungen verwenden. Standardmäßig verfügt jedes Release über ein bestimmtes Imagetag, das der Releaseversion von SQL Server entspricht. Führen Sie die folgenden Schritte aus, um ein Upgrade auf das neueste Release durchzuführen:
 
 1. Sichern Sie vor dem Löschen des alten Clusters die Daten auf der SQL Server-Masterinstanz und auf HDFS. Für die SQL Server-Masterinstanz können Sie [SQL Server-Sicherung und -Wiederherstellung](data-ingestion-restore-database.md) verwenden. Für HDFS [können Sie die Daten mit `curl` herauskopieren](data-ingestion-curl.md).
 
@@ -142,18 +142,18 @@ Für Big Data-Cluster, die vor SQL Server 2019 GDR1 bereitgestellt wurden, ist k
    ```
 
    > [!Important]
-   > Verwenden Sie die Version von `azdata`, die Ihrem Cluster entspricht. Löschen Sie keinen älteren Cluster mit der neueren Version von `azdata`.
+   > Verwenden Sie die Version von [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], die Ihrem Cluster entspricht. Löschen Sie keinen älteren Cluster mit der neueren Version von [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
    > [!Note]
    > Wenn Sie einen `azdata bdc delete`-Befehl ausführen, werden alle innerhalb des Namespace erstellten Objekte mit dem Namen des Big Data-Clusters gelöscht, der Namespace jedoch nicht. Der Namespace kann für nachfolgende Bereitstellungen wiederverwendet werden, solange er leer ist und keine anderen Anwendungen in ihm erstellt wurden.
 
-1. Deinstallieren Sie die alte Version von `azdata`.
+1. Deinstallieren Sie die alte Version von [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
    ```powershell
    pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. Installieren Sie die neueste Version von `azdata`. Mit den folgenden Befehlen wird `azdata` aus dem neuesten Release installiert:
+1. Installieren Sie die neueste Version von [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Mit den folgenden Befehlen wird [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] aus dem neuesten Release installiert:
 
    **Windows:**
 
@@ -168,11 +168,11 @@ Für Big Data-Cluster, die vor SQL Server 2019 GDR1 bereitgestellt wurden, ist k
    ```
 
    > [!IMPORTANT]
-   > Für jedes Release ändert sich der Pfad zur `n-1`-Version von `azdata`. Auch wenn Sie zuvor `azdata` installiert haben, müssen Sie vor dem Erstellen des neuen Clusters vom aktuellen Pfad aus neu installieren.
+   > Für jedes Release ändert sich der Pfad zur `n-1`-Version von [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Auch wenn Sie zuvor [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] installiert haben, müssen Sie vor dem Erstellen des neuen Clusters vom aktuellen Pfad aus neu installieren.
 
 ### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> Überprüfen der azdata-Version
 
-Vergewissern Sie sich vor dem Bereitstellen eines neuen Big Data-Clusters, dass Sie die neueste Version von `azdata` mit dem `--version`-Parameter verwenden:
+Vergewissern Sie sich vor dem Bereitstellen eines neuen Big Data-Clusters, dass Sie die neueste Version von [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] mit dem `--version`-Parameter verwenden:
 
 ```bash
 azdata --version
@@ -180,7 +180,7 @@ azdata --version
 
 ### <a name="install-the-new-release"></a>Installieren des neuen Releases
 
-Nachdem Sie den vorherigen Big Data-Cluster entfernt und die neueste `azdata`-Version installiert haben, stellen Sie den neuen Big Data-Cluster mithilfe der aktuellen Bereitstellungsanweisungen bereit. Weitere Informationen finden Sie unter [Vorgehensweise: Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] auf Kubernetes](deployment-guidance.md). Stellen Sie anschließend alle erforderlichen Datenbanken oder Dateien wieder her.
+Nachdem Sie den vorherigen Big Data-Cluster entfernt und die neueste [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]-Version installiert haben, stellen Sie den neuen Big Data-Cluster mithilfe der aktuellen Bereitstellungsanweisungen bereit. Weitere Informationen finden Sie unter [Vorgehensweise: Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] auf Kubernetes](deployment-guidance.md). Stellen Sie anschließend alle erforderlichen Datenbanken oder Dateien wieder her.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

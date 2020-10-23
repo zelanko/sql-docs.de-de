@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 8f3ee552c2e58fa295d4a0094430bfca4ef3dcac
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956315"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155090"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Installieren einer benutzerdefinierten R-Laufzeit für SQL Server
 
@@ -37,7 +37,7 @@ Vor der Installation einer benutzerdefinierten R-Laufzeit müssen Sie Folgendes 
 
 + [SQL Server 2019 für Windows (kumulatives Update 3 oder höher)](../../database-engine/install-windows/install-sql-server.md).
 
-+ [SQL Server-Spracherweiterungen unter Windows mit dem Erweiterbarkeitsframework](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
++ [SQL Server-Spracherweiterungen unter Windows mit dem Erweiterbarkeitsframework](../../language-extensions/install/windows-java.md).
 
 + [R, Version 3.3 oder höher](https://cran.r-project.org/).
 
@@ -196,7 +196,7 @@ Vor der Installation einer benutzerdefinierten R-Laufzeit müssen Sie Folgendes 
 + [SQL Server 2019 für Linux (kumulatives Update 3 oder höher)](../../linux/sql-server-linux-setup.md).
 Bevor Sie SQL Server unter Linux installieren, müssen Sie ein Microsoft-Repository konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren von Repositorys](../../linux/sql-server-linux-change-repo.md).
 
-+ [SQL Server-Spracherweiterungen unter Linux mit dem Erweiterbarkeitsframework](../../linux/sql-server-linux-setup-language-extensions.md).
++ [SQL Server-Spracherweiterungen unter Linux mit dem Erweiterbarkeitsframework](../../linux/sql-server-linux-setup-language-extensions-java.md).
 
 + [R, Version 3.3 oder höher](https://cran.r-project.org/).
 

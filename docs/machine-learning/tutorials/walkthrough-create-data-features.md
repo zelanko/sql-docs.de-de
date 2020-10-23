@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e2f21808bcd45224027ae7ddc28c8a07f0d85db
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6e4b05970efde3519e29e51cfb3925ba1bbf4c16
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173598"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192630"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Erstellen von Datenfeatures mithilfe von R und SQL Server (Vorgehensweise)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ Zunächst gehen wir auf die für R-Benutzer bekannte Weise vor: Wir rufen die Da
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) kann entweder eine aus einer gültigen SELECT-Abfrage bestehenden Abfrage verwenden, die als Argument des _sqlQuery_-Parameters bereitgestellt wird, oder den Namen eines Tabellenobjekts, bereitgestellt als _table_-Parameter.
+    - [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) kann entweder eine aus einer gültigen SELECT-Abfrage bestehenden Abfrage verwenden, die als Argument des _sqlQuery_-Parameters bereitgestellt wird, oder den Namen eines Tabellenobjekts, bereitgestellt als _table_-Parameter.
     
     - Wenn Sie Stichproben von Daten aus einer Tabelle durchführen möchten, müssen Sie den _sqlQuery_-Parameter verwenden, mithilfe der T-SQL-Klausel TABLESAMPLE Stichprobenparameter definieren und das _rowBuffering_-Argument auf FALSE festlegen.
 
@@ -91,7 +91,7 @@ Zunächst gehen wir auf die für R-Benutzer bekannte Weise vor: Wir rufen die Da
     rxSetComputeContext("local");
     ```
 
-5. Rufen Sie die Funktion [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) auf, um die Featureentwicklungsdaten abzurufen, und wenden Sie die Funktion `env$ComputeDist` auf die Daten im Arbeitsspeicher an.
+5. Rufen Sie die Funktion [rxDataStep](/r-server/r-reference/revoscaler/rxdatastep) auf, um die Featureentwicklungsdaten abzurufen, und wenden Sie die Funktion `env$ComputeDist` auf die Daten im Arbeitsspeicher an.
 
     ```R
     start.time <- proc.time();
@@ -109,7 +109,7 @@ Zunächst gehen wir auf die für R-Benutzer bekannte Weise vor: Wir rufen die Da
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + Die „rxDataStep“-Funktion unterstützt verschiedene Methoden zum Ändern von Daten an Ort und Stelle. Weitere Informationen finden Sie in diesem Artikel:  [Transformieren und Unterteilen von Daten in Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + Die „rxDataStep“-Funktion unterstützt verschiedene Methoden zum Ändern von Daten an Ort und Stelle. Weitere Informationen finden Sie in diesem Artikel:  [Transformieren und Unterteilen von Daten in Microsoft R](/r-server/r/how-to-revoscaler-data-transform)
     
     Hinsichtlich „rxDataStep“ sollten Sie jedoch einige Punkte beachten: 
     
@@ -117,7 +117,7 @@ Zunächst gehen wir auf die für R-Benutzer bekannte Weise vor: Wir rufen die Da
 
     Der vorangehende Code kann auch eine Warnmeldung ausgeben, wenn er für größere Datasets ausgeführt wird. Wenn die Anzahl der Zeilen mal die Anzahl der erstellten Spalten einen festgelegten Wert überschreitet (der Standardwert ist 3.000.000), gibt „rxDataStep“ eine Warnung aus und die Anzahl der Zeilen im zurückgegebenen Datenrahmen wird abgeschnitten. Sie können das _maxRowsByCols_-Argument in der „rxDataStep“-Funktion ändern, um die Warnung zu entfernen. Wenn _maxRowsByCols_ jedoch zu groß ist, können beim Laden des Datenrahmens in den Arbeitsspeicher Probleme auftreten.
 
-7. Optional können Sie [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) aufrufen, um das Schema der transformierten Datenquelle zu überprüfen.
+7. Optional können Sie [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo) aufrufen, um das Schema der transformierten Datenquelle zu überprüfen.
 
     ```R
     rxGetVarInfo(data = changed_ds);
@@ -127,7 +127,7 @@ Zunächst gehen wir auf die für R-Benutzer bekannte Weise vor: Wir rufen die Da
 
 In dieser Übung lernen Sie, wie Sie dieselbe Aufgabe mithilfe von SQL-Funktionen anstelle von benutzerdefinierten R-Funktionen ausführen. 
 
-Wechseln Sie zu [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) oder zu einem anderen Abfrage-Editor, um das T-SQL-Skript auszuführen.
+Wechseln Sie zu [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) oder zu einem anderen Abfrage-Editor, um das T-SQL-Skript auszuführen.
 
 1. Verwenden Sie eine SQL-Funktion mit dem Namen *fnCalculateDistance*. Die Funktion sollte bereits in der Datenbank „NYCTaxi_Sample“ vorhanden sein. Stellen Sie im Objekt-Explorer über folgenden Pfad sicher, dass die Funktion vorhanden ist: Datenbanken > NYCTaxi_Sample > Programmierung > Funktionen > Skalarwertfunktionen >  dbo.fnCalculateDistance.
 
@@ -252,4 +252,3 @@ Ihre Zeiten können abhängig von Ihrer Netzwerkgeschwindigkeit und Ihrer Hardwa
 
 > [!div class="nextstepaction"]
 > [Erstellen eines R-Modells und Speichern in SQL](walkthrough-build-and-save-the-model.md)
-

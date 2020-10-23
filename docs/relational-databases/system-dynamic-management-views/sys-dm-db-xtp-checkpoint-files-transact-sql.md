@@ -1,5 +1,5 @@
 ---
-title: sys. dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft-Dokumentation
 description: Zeigt Informationen zu Prüf Punkt Dateien an, einschließlich Dateigröße, physischer Speicherort und Transaktions-ID. Erfahren Sie, wie sich diese Sicht bei Versionen von SQL Server unterscheidet.
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb13f60dd50a324795b705b3b99d6cf842a23869
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 010b043bbaab3a5ce1712d32b1e94f800fa630d3
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542280"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412661"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "89542280"
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterscheidet sich wesentlich von neueren Versionen und wird weiter unten im Thema unter [SQL Server 2014](#bkmk_2014)erläutert.  
   
- Weitere Informationen finden Sie unter [Erstellen und Verwalten von Speicher für Speicher optimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
+ Weitere Informationen finden Sie unter [Erstellen und Verwalten von Speicher für Memory-Optimized Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
 ##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher  
  In der folgenden Tabelle werden die Spalten für `sys.dm_db_xtp_checkpoint_files` , beginnend mit, beschrieben **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
 |Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|Die ID des Containers (in sys.database_files als Datei vom Typ FILESTREAM dargestellt), dem die Daten- oder Änderungsdatei angehört. Joins mit file_id in [sys. database_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
-|container_guid|**uniqueidentifier**|GUID des Containers, zu dem die Stamm-, Daten-oder Änderungsdatei gehört. Joins mit file_guid in der sys. database_files-Tabelle.|  
+|container_id|**int**|Die ID des Containers (in sys.database_files als Datei vom Typ FILESTREAM dargestellt), dem die Daten- oder Änderungsdatei angehört. Joins mit file_id in [sys.database_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
+|container_guid|**uniqueidentifier**|GUID des Containers, zu dem die Stamm-, Daten-oder Änderungsdatei gehört. Joins mit file_guid in der sys.database_files Tabelle.|  
 |checkpoint_file_id|**uniqueidentifier**|GUID der Prüf Punkt Datei.|  
 |relative_file_path|**nvarchar(256)**|Der Pfad der Datei relativ zum Container, dem Sie zugeordnet ist.|  
 |file_type|**smallint**|-1 kostenlos<br /><br /> 0 für die Datendatei.<br /><br /> 1 für Delta Datei.<br /><br /> 2 für Stammdatei<br /><br /> 3 für große Datendateien|  
@@ -65,14 +65,14 @@ ms.locfileid: "89542280"
 |end_checkpoint_id|**bigint**|ID des Endpunkts.|  
 |last_updated_checkpoint_id|**bigint**|ID des letzten Prüf Punkts, von dem diese Datei aktualisiert wurde.|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 => austragen<br /><br /> 1 => mit Schlüssel 1 verschlüsselt<br /><br /> 2 => mit Schlüssel 2 verschlüsselt. Nur für aktive Dateien gültig.|  
+|encryption_status_desc|**nvarchar(60)**|0 => unverschlüsselt<br /><br /> 1 => mit Schlüssel 1 verschlüsselt<br /><br /> 2 => mit Schlüssel 2 verschlüsselt. Nur für aktive Dateien gültig.|  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  In der folgenden Tabelle werden die Spalten für `sys.dm_db_xtp_checkpoint_files` , für beschrieben **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
 |Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|Die ID des Containers (in sys.database_files als Datei vom Typ FILESTREAM dargestellt), dem die Daten- oder Änderungsdatei angehört. Joins mit file_id in [sys. database_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
+|container_id|**int**|Die ID des Containers (in sys.database_files als Datei vom Typ FILESTREAM dargestellt), dem die Daten- oder Änderungsdatei angehört. Joins mit file_id in [sys.database_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|Die GUID des Containers, dem die Daten- oder Änderungsdatei angehört.|  
 |checkpoint_file_id|**GUID**|Die ID der Daten- oder Änderungsdatei.|  
 |relative_file_path|**nvarchar(256)**|Der Pfad zu der Daten- oder Änderungsdatei relativ zum Speicherort des Containers.|  
@@ -86,7 +86,7 @@ ms.locfileid: "89542280"
 |deleted_row_count|**bigint**|Die Anzahl der gelöschten Zeilen in der Änderungsdatei.|  
 |drop_table_deleted_row_count|**bigint**|Die Anzahl der Zeilen in den Datendateien, auf die sich die Tabellenlöschung auswirkt. Gilt für Datendateien, wenn die Zustandsspalte gleich 1 ist.<br /><br /> Zeigt die Anzahl der aus gelöschten Tabellen gelöschten Zeilen an. Statistiken drop_table_deleted_row_count werden kompiliert, nachdem die Arbeitsspeicher-Garbage Collection für die Zeilen aus gelöschten Tabellen abgeschlossen und ein Prüfpunkt erstellt wurde. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu starten, bevor die Statistiken zu gelöschten Tabellen in dieser Spalte angezeigt werden, werden sie im Rahmen der Wiederherstellung aktualisiert. Bei der Wiederherstellung werden keine Zeilen aus gelöschten Tabellen geladen. Statistiken zu gelöschten Tabellen werden während der Ladephase kompiliert und in dieser Spalte wiedergegeben, sobald die Wiederherstellung abgeschlossen ist.|  
 |state|**int**|0-vorab erstellt<br /><br /> 1-Unterkonstruktion<br /><br /> 2 - ACTIVE<br /><br /> 3-Merge-Ziel<br /><br /> 4-zusammengeführte Quelle<br /><br /> 5: für Sicherung/hohe Verfügbarkeit erforderlich<br /><br /> 6-bei Übergang zu Tombstone<br /><br /> 7-Tombstone|  
-|state_desc|**nvarchar(60)**|Precreated: ein kleiner Satz von Daten-und Änderungsdatei Paaren, die auch als Prüf Punkt Datei Paare (Cfps) bezeichnet werden, wird beibehalten, um alle Wartezeiten für die Zuordnung neuer Dateien während der Ausführung von Transaktionen zu minimieren oder auszuschließen. Dabei handelt es sich um Datendateien mit der vollständigen Größe von 128 MB und 8 MB große Änderungsdateien, die jedoch keine Daten enthalten. Die Anzahl der CFPs wird aus der Anzahl von logischen Prozessoren oder Zeitplanungsmodulen (einer pro Kern, kein Höchstwert) berechnet und beträgt mindestens 8. Dies ist ein fester Speichermehraufwand in Datenbanken mit speicheroptimierten Tabellen.<br /><br /> Unter dem Konstruktions Satz von Cfps, die seit dem letzten Prüfpunkt neu eingefügte und möglicherweise gelöschte Daten Zeilen speichern.<br /><br /> ACTIVE – Diese enthalten die eingefügten und gelöschten Zeilen aus den vorherigen geschlossenen Prüfpunkten. Diese CFPs enthalten alle erforderlichen eingefügten und gelöschten Zeilen, bevor der aktive Teil des Transaktionsprotokolls beim Neustart der Datenbank angewendet wird. Diese CFPs sind etwa doppelt so groß wie die In-Memory-Größe speicheroptimierter Tabellen, vorausgesetzt, die Zusammenführung hält mit der Transaktionsarbeitsauslastung mit.<br /><br /> Merge target: Das cFP speichert die konsolidierten Daten Zeilen aus den cFP (en), die durch die Zusammenschluss Richtlinie identifiziert wurden. Nachdem die Zusammenführung installiert wurde, befinden sich die MERGE TARGET-Übergänge im Status ACTIVE.<br /><br /> Zusammengeführte Quelle: Nachdem der Merge-Vorgang installiert wurde, werden die Quell-Cfps als zusammengeführte Quelle gekennzeichnet. Beachten Sie, dass die Auswertung der Zusammenführungsrichtlinie mehrere Zusammenführungen identifizieren kann, ein CFP jedoch nur an einem Zusammenführungsvorgang beteiligt sein darf.<br /><br /> Erforderlich für Sicherung/hohe Verfügbarkeit: Nachdem die Zusammenführung installiert wurde und das Merge-Ziel-cFP Teil eines permanenten Prüf Punkts ist, wechseln die CfPs der Merge-Quelle in diesen Zustand. CFPs in diesem Zustand werden benötigt, um die nahtlose Verwendung der Datenbank mit der speicheroptimierten Tabelle sicherzustellen.  Dies gilt beispielsweise für die Wiederherstellung von einem dauerhaften Prüfpunkt, um zu einem früheren Zustand zurückzukehren. Ein CFP kann für die Garbage Collection gekennzeichnet werden, sobald der Protokollkürzungspunkt hinter dem Transaktionsbereich liegt.<br /><br /> Bei der Umstellung auf Tombstone werden diese Cfps von der in-Memory-OLTP-Engine nicht benötigt und können in die Garbage Collection aufgenommen werden. Dieser Status gibt an, dass diese CFPs warten, bis sie vom Hintergrundthread in den nächsten Zustand (d. h. TOMBSTONE) versetzt werden.<br /><br /> Tombstone: Diese Cfps warten auf eine Garbage Collection durch den FILESTREAM-Garbage Collector. ([sp_filestream_force_garbage_collection &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
+|state_desc|**nvarchar(60)**|Precreated: ein kleiner Satz von Daten-und Änderungsdatei Paaren, die auch als Prüf Punkt Datei Paare (Cfps) bezeichnet werden, wird beibehalten, um alle Wartezeiten für die Zuordnung neuer Dateien während der Ausführung von Transaktionen zu minimieren oder auszuschließen. Dabei handelt es sich um Datendateien mit der vollständigen Größe von 128 MB und 8 MB große Änderungsdateien, die jedoch keine Daten enthalten. Die Anzahl der CFPs wird aus der Anzahl von logischen Prozessoren oder Zeitplanungsmodulen (einer pro Kern, kein Höchstwert) berechnet und beträgt mindestens 8. Dies ist ein fester Speichermehraufwand in Datenbanken mit speicheroptimierten Tabellen.<br /><br /> Unter dem Konstruktions Satz von Cfps, die seit dem letzten Prüfpunkt neu eingefügte und möglicherweise gelöschte Daten Zeilen speichern.<br /><br /> ACTIVE – Diese enthalten die eingefügten und gelöschten Zeilen aus den vorherigen geschlossenen Prüfpunkten. Diese CFPs enthalten alle erforderlichen eingefügten und gelöschten Zeilen, bevor der aktive Teil des Transaktionsprotokolls beim Neustart der Datenbank angewendet wird. Diese CFPs sind etwa doppelt so groß wie die In-Memory-Größe speicheroptimierter Tabellen, vorausgesetzt, die Zusammenführung hält mit der Transaktionsarbeitsauslastung mit.<br /><br /> Merge target: Das cFP speichert die konsolidierten Daten Zeilen aus den cFP (en), die durch die Zusammenschluss Richtlinie identifiziert wurden. Nachdem die Zusammenführung installiert wurde, befinden sich die MERGE TARGET-Übergänge im Status ACTIVE.<br /><br /> Zusammengeführte Quelle: Nachdem der Merge-Vorgang installiert wurde, werden die Quell-Cfps als zusammengeführte Quelle gekennzeichnet. Beachten Sie, dass die Auswertung der Zusammenführungsrichtlinie mehrere Zusammenführungen identifizieren kann, ein CFP jedoch nur an einem Zusammenführungsvorgang beteiligt sein darf.<br /><br /> Erforderlich für Sicherung/hohe Verfügbarkeit: Nachdem die Zusammenführung installiert wurde und das Merge-Ziel-cFP Teil eines permanenten Prüf Punkts ist, wechseln die CfPs der Merge-Quelle in diesen Zustand. CFPs in diesem Zustand werden benötigt, um die nahtlose Verwendung der Datenbank mit der speicheroptimierten Tabelle sicherzustellen.  Dies gilt beispielsweise für die Wiederherstellung von einem dauerhaften Prüfpunkt, um zu einem früheren Zustand zurückzukehren. Ein CFP kann für die Garbage Collection gekennzeichnet werden, sobald der Protokollkürzungspunkt hinter dem Transaktionsbereich liegt.<br /><br /> Bei der Umstellung auf Tombstone werden diese Cfps von der In-Memory OLTP-Engine nicht benötigt und können in die Garbage Collection aufgenommen werden. Dieser Status gibt an, dass diese CFPs warten, bis sie vom Hintergrundthread in den nächsten Zustand (d. h. TOMBSTONE) versetzt werden.<br /><br /> Tombstone: Diese Cfps warten auf eine Garbage Collection durch den FILESTREAM-Garbage Collector. ([sp_filestream_force_garbage_collection &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
 |lower_bound_tsn|**bigint**|Die untere Grenze für Transaktionen, die in der Datei enthalten sind. NULL, wenn die Zustandsspalte ungleich 2, 3 oder 4 ist.|  
 |upper_bound_tsn|**bigint**|Die obere Grenze für Transaktionen, die in der Datei enthalten sind. NULL, wenn die Zustandsspalte ungleich 2, 3 oder 4 ist.|  
 |last_backup_page_count|**int**|Die logische Seitenanzahl, die bei der letzten Sicherung bestimmt wird. Diese gilt, wenn die Zustandsspalte auf 2, 3, 4 oder 5 festgelegt ist. NULL, wenn die Seitenanzahl unbekannt ist.|  
@@ -99,7 +99,7 @@ ms.locfileid: "89542280"
  Erfordert die `VIEW DATABASE STATE`-Berechtigung auf dem Server.  
   
 ## <a name="use-cases"></a>Anwendungsfälle  
- Sie können den von in-Memory OLTP verwendeten Speicher wie folgt schätzen:  
+ Sie können den von In-Memory OLTP verwendeten Speicher wie folgt schätzen:  
   
 ```  
 -- total storage used by In-Memory OLTP  

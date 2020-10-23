@@ -31,7 +31,7 @@
           href: ../mdx/bitwise-operators.md
         - name: Vergleichsoperatoren
           href: ../mdx/comparison-operators.md
-        - name: Operator für Verkettungen
+        - name: Verkettungsoperatoren
           href: ../mdx/concatenation-operators.md
         - name: Mengenoperatoren
           href: ../mdx/set-operators.md
@@ -163,17 +163,17 @@
           href: ../mdx/string-concatenation-mdx.md
         - name: + (Union)
           href: ../mdx/union-mdx-operator-reference.md
-        - name: < (Kleiner als)
+        - name: < (kleiner als)
           href: ../mdx/less-than-mdx.md
         - name: <= (Kleiner als oder gleich)
           href: ../mdx/less-than-or-equal-to-mdx.md
         - name: <> (Ungleich)
           href: ../mdx/not-equal-to-mdx.md
-        - name: = (Gleich)
+        - name: '= (Gleich)'
           href: ../mdx/equal-to-mdx.md
-        - name: '> (Größer als)'
+        - name: '> (größer als)'
           href: ../mdx/greater-than-mdx.md
-        - name: '>= (Größer als oder gleich)'
+        - name: '>>= (größer oder gleich)'
           href: ../mdx/greater-than-or-equal-to-mdx.md
         - name: AND
           href: ../mdx/and-mdx.md
@@ -222,7 +222,7 @@
           href: ../mdx/closingperiod-mdx.md
         - name: CoalesceEmpty
           href: ../mdx/coalesceempty-mdx.md
-        - name: Correlation
+        - name: Korrelation
           href: ../mdx/correlation-mdx.md
         - name: Count (Dimension)
           href: ../mdx/count-dimension-mdx.md
@@ -252,7 +252,7 @@
           href: ../mdx/datamember-mdx.md
         - name: DefaultMember
           href: ../mdx/defaultmember-mdx.md
-        - name: Descendants
+        - name: Nachfolgerelemente
           href: ../mdx/descendants-mdx.md
         - name: Dimension
           href: ../mdx/dimension-mdx.md
@@ -306,7 +306,7 @@
           href: ../mdx/iif-mdx.md
         - name: Instr
           href: ../mdx/instr-mdx.md
-        - name: Intersect
+        - name: Überschneiden
           href: ../mdx/intersect-mdx.md
         - name: IsAncestor
           href: ../mdx/isancestor-mdx.md
@@ -348,7 +348,7 @@
           href: ../mdx/leaves-mdx.md
         - name: Ebene
           href: ../mdx/level-mdx.md
-        - name: Levels
+        - name: Ebenen
           href: ../mdx/levels-mdx.md
         - name: LinkMember
           href: ../mdx/linkmember-mdx.md
@@ -412,7 +412,7 @@
           href: ../mdx/properties-mdx.md
         - name: Qtd
           href: ../mdx/qtd-mdx.md
-        - name: Rank
+        - name: Rang
           href: ../mdx/rank-mdx.md
         - name: RollupChildren
           href: ../mdx/rollupchildren-mdx.md

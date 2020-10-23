@@ -9,12 +9,12 @@ ms.date: 06/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2de422caf8567f1473d1436a27a094fef9144085
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: d631a74bc71c814a70ef0ecfa33485ee4631ccd4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206044"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257074"
 ---
 # <a name="troubleshoot-pyspark-notebook"></a>Troubleshooting für `pyspark`-Notebooks
 
@@ -30,7 +30,7 @@ Für ein effizientes Troubleshooting Ihrer PySpark-Sitzung sammeln und überprü
 
 Für diese Troubleshootingschritte ist Folgendes erforderlich:
 
-1. Eine `azdata`-Installation, deren Konfiguration ordnungsgemäß auf Ihren Cluster festgelegt ist
+1. Eine [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]-Installation, deren Konfiguration ordnungsgemäß auf Ihren Cluster festgelegt ist
 2. Vertrautheit mit der Ausführung von Linux-Befehlen und Erfahrung mit Protokolltroubleshooting
 
 ## <a name="troubleshooting-steps"></a>Schritte zur Problembehandlung
@@ -127,7 +127,7 @@ Für diese Troubleshootingschritte ist Folgendes erforderlich:
 
 1. Überprüfen Sie die Anwendungs-ID und die einzelnen application_master- und Containerprotokolle.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Überprüfen der Anwendungs-ID":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Zelle mit Fehler":::
 
 1. Überprüfen Sie die YARN-Anwendungsprotokolle.
 
@@ -165,7 +165,7 @@ Für diese Troubleshootingschritte ist Folgendes erforderlich:
 
 1. Überprüfen Sie die Spark-Benutzeroberfläche.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Spark-Benutzeroberfläche":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Zelle mit Fehler":::
 
    Führen Sie ein Drilldown in die Tasks der Stufen durch, und suchen Sie nach Fehlern.
 

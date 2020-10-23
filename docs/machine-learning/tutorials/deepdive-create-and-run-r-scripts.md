@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: db549cf5b3ee7620806c1b87713211d5eb201c90
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3d8b04d384d7ee5f846197ff3465b9c0914ca94c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178860"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196314"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Berechnen von Zusammenfassungstatistiken in R (SQL Server- und RevoScaleR-Tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Bei diesem Tutorial handelt es sich um das 5. Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Tutorial erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
+Bei diesem Tutorial handelt es sich um das 5. Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Tutorial erfahren Sie, wie Sie [RevoScaleR-Funktionen](/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
 In diesem Tutorial werden die in den vorherigen Tutorials erstellten Datenquellen und Computekontexte verwendet, um leistungsstarke R-Skripts auszuführen. In diesem Tutorial verwenden Sie Computekontexte von lokalen und Remoteservern für die folgenden Aufgaben:
 
@@ -46,13 +46,13 @@ Um die Funktionsweise eines Computekontexts besser zu verstehen, generieren Sie 
     rxSetComputeContext(sqlCompute)
     ```
 
-2. Rufen Sie die Funktion [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) auf, und übergeben Sie alle erforderlichen Argumente, wie z. B. die Formel und die Datenquelle, und weisen Sie die Ergebnisse der Variablen `sumOut` zu.
+2. Rufen Sie die Funktion [rxSummary](/machine-learning-server/r-reference/revoscaler/rxsummary) auf, und übergeben Sie alle erforderlichen Argumente, wie z. B. die Formel und die Datenquelle, und weisen Sie die Ergebnisse der Variablen `sumOut` zu.
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    Die R-Sprache stellt zahlreiche Zusammenfassungsfunktionen bereit, **rxSummary** in **RevoScaleR** unterstützt jedoch die Ausführung auf verschiedenen Remotecomputekontexten, einschließlich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen zu ähnlichen Funktionen finden Sie unter [Datenzusammenfassungen unter Verwendung von RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+    Die R-Sprache stellt zahlreiche Zusammenfassungsfunktionen bereit, **rxSummary** in **RevoScaleR** unterstützt jedoch die Ausführung auf verschiedenen Remotecomputekontexten, einschließlich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen zu ähnlichen Funktionen finden Sie unter [Datenzusammenfassungen unter Verwendung von RevoScaleR](/machine-learning-server/r/how-to-revoscaler-data-summaries).
   
 3. Druckt den Inhalt von sumOut in der Konsole.
   

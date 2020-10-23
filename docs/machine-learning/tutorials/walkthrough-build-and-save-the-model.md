@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3a0a37da48ed367a3fc735e9bc6d805cfd5bfff3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178707"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196248"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Erstellen eines R-Modells und Speichern in SQL Server (exemplarische Vorgehensweise)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-Im folgenden Schritt wird demonstriert, wie Sie ein Machine Learning-Modell erstellen und das Modell in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichern. Nachdem Sie ein Modell gespeichert haben, können Sie es direkt aus dem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code mithilfe der gespeicherten Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) oder der [Funktion PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) aufrufen.
+Im folgenden Schritt wird demonstriert, wie Sie ein Machine Learning-Modell erstellen und das Modell in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichern. Nachdem Sie ein Modell gespeichert haben, können Sie es direkt aus dem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code mithilfe der gespeicherten Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) oder der [Funktion PREDICT (T-SQL)](../../t-sql/queries/predict-transact-sql.md) aufrufen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -67,7 +67,7 @@ GO
 
 Das Modell ist eine binäre Klassifizierung, die vorhersagt, ob der Taxifahrer eher ein Trinkgeld für eine bestimmte Fahrt erhält oder nicht. Verwenden Sie die Datenquelle, die Sie in der vorherigen Lektion erstellt haben, um die Trinkgeldklassifizierung mithilfe der logistischen Regression zu trainieren.
 
-1. Rufen Sie die [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) -Funktion auf, die im **RevoScaleR** -Paket enthalten ist, um ein logistisches Regressionsmodell zu erstellen. 
+1. Rufen Sie die [rxLogit](/r-server/r-reference/revoscaler/rxlogit) -Funktion auf, die im **RevoScaleR** -Paket enthalten ist, um ein logistisches Regressionsmodell zu erstellen. 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
@@ -109,7 +109,7 @@ Das Modell ist eine binäre Klassifizierung, die vorhersagt, ob der Taxifahrer e
 
 Da das Modell bereits erstellt wurde, können Sie es verwenden, um vorherzusagen, ob der Fahrer eher eine Trinkgeld für eine bestimmte Fahrt erhält oder nicht.
 
-1. Verwenden Sie zunächst die [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata)-Funktion, um ein Datenquellenobjekt zum Speichern des Bewertungsergebnisses zu definieren.
+1. Verwenden Sie zunächst die [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata)-Funktion, um ein Datenquellenobjekt zum Speichern des Bewertungsergebnisses zu definieren.
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -123,7 +123,7 @@ Da das Modell bereits erstellt wurde, können Sie es verwenden, um vorherzusagen
   
     + Um die Tabelle zu erstellen, die die vorhergesagten Werte speichert, muss der SQL-Login, der die Datenfunktion „rxSqlServer“ ausführt, über DDL-Berechtigungen in der Datenbank verfügen. Wenn dieser Anmeldename keine Tabellen erstellen kann, schlägt die Anweisung fehl.
 
-2. Rufen Sie die Funktion [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) auf, um Ergebnisse zu generieren.
+2. Rufen Sie die Funktion [rxPredict](/r-server/r-reference/revoscaler/rxpredict) auf, um Ergebnisse zu generieren.
 
     ```R
     rxPredict(modelObject = logitObj,
@@ -138,7 +138,7 @@ Da das Modell bereits erstellt wurde, können Sie es verwenden, um vorherzusagen
 
 ## <a name="plot-model-accuracy"></a>Zeichnen der Modellgenauigkeit
 
-Um eine Vorstellung von der Genauigkeit des Modells zu erhalten, können Sie die Funktion [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) verwenden, um die ROC-Kurve (Receiver Operating Characteristics Curve, Grenzwertoptimierungskurve) zu zeichnen. Da rxRoc eine der neuen Funktionen ist, die mit dem RevoScaleR-Paket bereitgestellt werden und Remotecomputekontexte unterstützt, haben Sie zwei Möglichkeiten:
+Um eine Vorstellung von der Genauigkeit des Modells zu erhalten, können Sie die Funktion [rxRoc](/r-server/r-reference/revoscaler/rxroc) verwenden, um die ROC-Kurve (Receiver Operating Characteristics Curve, Grenzwertoptimierungskurve) zu zeichnen. Da rxRoc eine der neuen Funktionen ist, die mit dem RevoScaleR-Paket bereitgestellt werden und Remotecomputekontexte unterstützt, haben Sie zwei Möglichkeiten:
 
 + Sie können die rxRoc-Funktion verwenden, um das Diagramm im Remotecomputekontext auszuführen und anschließend das Diagramm an Ihren lokalen Client zurückgeben.
 
@@ -173,7 +173,7 @@ In diesem Abschnitt experimentieren Sie mit beiden Techniken.
 
 Sie können überprüfen, ob der Computekontext lokal ist, indem Sie `rxGetComputeContext()` an der Eingabeaufforderung ausführen. Der Rückgabewert sollte „RxLocalSeq Compute Context“ lauten.
 
-1. Der Vorgang für den lokalen Computekontext ist weitgehend identisch. Verwenden Sie die Funktion [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport), um die angegebenen Daten in die lokale R-Umgebung zu verschieben.
+1. Der Vorgang für den lokalen Computekontext ist weitgehend identisch. Verwenden Sie die Funktion [rxImport](/r-server/r-reference/revoscaler/rximport), um die angegebenen Daten in die lokale R-Umgebung zu verschieben.
 
     ```R
     scoredOutput = rxImport(scoredOutput)

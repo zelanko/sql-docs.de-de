@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6c8fab6b5ecc6a548c5213f4401494f6803acc42
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b8f03c64dc86e6d23113f3a35ae669f216b66489
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178787"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195152"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec-sql-server-and-revoscaler-tutorial"></a>Ausführen von benutzerdefinierten R-Funktionen auf SQL Server mithilfe von rxExec (SQL Server- und RevoScaleR-Tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Bei diesem Tutorial handelt es sich um das 14. Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Tutorial erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
+Bei diesem Tutorial handelt es sich um das 14. Tutorial der [Tutorialreihe zu RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Tutorial erfahren Sie, wie Sie [RevoScaleR-Funktionen](/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 
 In diesem Tutorial verwenden Sie simulierte Daten, um die Ausführung einer benutzerdefinierten R-Funktion auf einem Remoteserver zu veranschaulichen.
 
-Sie können benutzerdefinierte R-Funktionen im Kontext von SQL Server ausführen, indem Sie die Funktion über [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) übergeben. Dabei wird davon ausgegangen, dass alle für das Skript erforderlichen Bibliotheken auf dem Server installiert sind und diese Bibliotheken mit der R-Basisverteilung kompatibel sind. 
+Sie können benutzerdefinierte R-Funktionen im Kontext von SQL Server ausführen, indem Sie die Funktion über [rxExec](/machine-learning-server/r-reference/revoscaler/rxexec) übergeben. Dabei wird davon ausgegangen, dass alle für das Skript erforderlichen Bibliotheken auf dem Server installiert sind und diese Bibliotheken mit der R-Basisverteilung kompatibel sind. 
 
 Die **rxExec**-Funktion in **RevoScaleR** bietet einen Mechanismus zum Ausführen beliebiger R-Skripts. Darüber hinaus kann **rxExec** Workloads explizit auf mehrere Kerne auf einem einzelnen Server verteilen und die Skalierung von Skripts erhöhen, die andernfalls auf die Ressourceneinschränkungen der nativen R-Engine beschränkt sind.
 

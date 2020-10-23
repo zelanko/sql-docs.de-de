@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fbd7b7f6c286a3d782ed8a40441260f3faea248e
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035363"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412505"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -46,9 +46,10 @@ ms.locfileid: "92035363"
 |classifier_name|**sysname**|Für Anforderungen, die Ressourcen verwenden, den Namen des Klassifizierers, der zum Zuweisen von Ressourcen und Wichtigkeit verwendet wird.||
 |resource_allocation_percentage|**Dezimalzahl (5, 2)**|Die prozentuale Menge der Ressourcen, die der Anforderung zugeordnet sind.</br>Gilt für: Azure Synapse Analytics|
 |result_cache_hit|**int**|Erläutert, ob für eine abgeschlossene Abfrage der resultsetcache verwendet wurde.  </br>Gilt für: Azure Synapse Analytics| 1 = resultsetcache-Treffer </br> 0 = resultsetcache-Fehler </br> Negative ganzzahlige Werte = Gründe für das Zwischenspeichern von Resultsets.  Weitere Informationen finden Sie im Abschnitt "Hinweise".|
+|Command2|**nvarchar9max)**|Enthält den vollständigen Text der Anforderung, wie er vom Benutzer gesendet wurde. Enthält Abfragen, die länger als 4000 Zeichen sind.|Jeder gültige Abfrage-oder Anforderungs Text. NULL = Abfragen mit einer Länge von 4000 Zeichen oder weniger. für diese Abfragen wird der vollständige Text in der Befehls Spalte gefunden.|
 ||||
   
-## <a name="remarks"></a>Bemerkungen 
+## <a name="remarks"></a>Hinweise 
  Informationen über die maximale Anzahl von Zeilen, die in dieser Sicht beibehalten werden, finden Sie im Abschnitt "Metadaten" im Thema [Kapazitäts Limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
 Der negative ganzzahlige Wert in der result_cache_hit-Spalte ist ein Bitmapwert aller angewendeten Gründe, warum das Resultset einer Abfrage nicht zwischengespeichert werden kann.  Diese Spalte kann [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt von mindestens einem der folgenden Werte:  

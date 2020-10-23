@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e0f7cf6f904768f8394b690c1a45d3cfb4c9bd71
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: cf9cf80d6ced7cfcfefecbff4f31095f82e04e1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173471"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194512"
 ---
 # <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>Sammeln von Daten zum Beheben von SQL Machine Learning-Problemen
 
@@ -36,7 +36,7 @@ Je nach der von Ihnen verwendeten Edition von SQL Server sind einige Machine Lea
 
 Welche Version von Microsoft R installiert wird, wenn Sie das R Services- oder Machine Learning Services-Feature auswählen, wird im Allgemeinen durch die SQL Server-Buildnummer bestimmt. Wenn Sie SQL Server aktualisieren oder patchen, müssen Sie auch die zugehörigen R-Komponenten aktualisieren oder patchen.
 
-Eine Liste der Releases und Links zu R-Komponentendownloads finden Sie unter [Installieren von Machine Learning in R und Python auf SQL Server-Computern ohne Internetzugang](/sql/machine-learning/install/sql-ml-component-install-without-internet-access). Auf Computern mit Internetzugriff wird die erforderliche Version von R automatisch identifiziert und installiert.
+Eine Liste der Releases und Links zu R-Komponentendownloads finden Sie unter [Installieren von Machine Learning in R und Python auf SQL Server-Computern ohne Internetzugang](../install/sql-ml-component-install-without-internet-access.md). Auf Computern mit Internetzugriff wird die erforderliche Version von R automatisch identifiziert und installiert.
 
 Es ist möglich, die R Server-Komponenten in einem als Bindung bezeichneten Prozess getrennt von der SQL Server-Datenbank-Engine zu aktualisieren. Daher kann die Version von R, die Sie beim Ausführen von R-Code in SQL Server verwenden, abhängig von der installierten Version von SQL Server und davon, ob Sie den Server auf die neueste Version von R migriert haben, unterschiedlich sein.
 

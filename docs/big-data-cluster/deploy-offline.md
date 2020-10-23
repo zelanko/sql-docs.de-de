@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
-ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
+ms.openlocfilehash: 0437880dbcf3bef50184daa9e52f8eba2a7e31b4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89875559"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257180"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Durchführen einer Offlinebereitstellung von Big Data-Clustern für SQL Server
 
@@ -77,7 +77,6 @@ Die folgenden Big Data-Cluster-Containerimages sind für eine Offlineinstallatio
 - **mssql-monitor-influxdb**
 - **mssql-monitor-kibana**
 - **mssql-monitor-telegraf**
-- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
 - **mssql-server-controller**
@@ -121,7 +120,7 @@ Sie können ein automatisiertes Python-Skript verwenden, das automatisch alle be
 
 ## <a name="install-tools-offline"></a>Offlineinstallation von Tools
 
-Bereitstellungen von Big Data-Clustern erfordern mehrere Tools, einschließlich **Python**, `azdata`und **kubectl**. Führen Sie die folgenden Schritte aus, um diese Tools auf einem Offlineserver zu installieren.
+Bereitstellungen von Big Data-Clustern erfordern mehrere Tools, einschließlich **Python**, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]und **kubectl**. Führen Sie die folgenden Schritte aus, um diese Tools auf einem Offlineserver zu installieren.
 
 ### <a name="install-python-offline"></a><a id="python"></a> Offlineinstallation von Python
 
@@ -143,7 +142,7 @@ Bereitstellungen von Big Data-Clustern erfordern mehrere Tools, einschließlich 
 
 ### <a name="install-azdata-offline"></a><a id="azdata"></a> Offlineinstallation von azdata
 
-1. Führen Sie auf einem Computer mit Internetzugriff und [Python](https://wiki.python.org/moin/BeginnersGuide/Download) den folgenden Befehl aus, um alle `azdata`-Pakete in den aktuellen Ordner herunterzuladen.
+1. Führen Sie auf einem Computer mit Internetzugriff und [Python](https://wiki.python.org/moin/BeginnersGuide/Download) den folgenden Befehl aus, um alle [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]-Pakete in den aktuellen Ordner herunterzuladen.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
@@ -167,7 +166,7 @@ Führen Sie die folgenden Schritte aus, um **kubectl** auf einem Offlinecomputer
 
 ## <a name="deploy-from-private-repository"></a>Bereitstellen aus privatem Repository
 
-Verwenden Sie zum Bereitstellen über das private Repository die im [Bereitstellungshandbuch](deployment-guidance.md) beschriebenen Schritte, und verwenden Sie unbedingt eine benutzerdefinierte Bereitstellungskonfigurationsdatei, die die Informationen zu Ihrem privaten Docker-Repository enthält. Die folgenden `azdata`-Befehle veranschaulichen, wie die Docker-Einstellungen in einer benutzerdefinierten Bereitstellungskonfigurationsdatei namens `control.json` geändert werden:
+Verwenden Sie zum Bereitstellen über das private Repository die im [Bereitstellungshandbuch](deployment-guidance.md) beschriebenen Schritte, und verwenden Sie unbedingt eine benutzerdefinierte Bereitstellungskonfigurationsdatei, die die Informationen zu Ihrem privaten Docker-Repository enthält. Die folgenden [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]-Befehle veranschaulichen, wie die Docker-Einstellungen in einer benutzerdefinierten Bereitstellungskonfigurationsdatei namens `control.json` geändert werden:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
