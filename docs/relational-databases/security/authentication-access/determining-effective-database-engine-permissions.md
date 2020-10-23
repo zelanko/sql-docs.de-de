@@ -15,12 +15,12 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e3c6120613ee79acb8219f35678f17fd9239962a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005623"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006598"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Ermitteln effektiver Datenbank-Engine-Berechtigungen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ In diesem Artikel wird beschrieben, wie Sie feststellen können, wer über Berec
 
 Feste Serverrollen und feste Datenbankrollen verfügen über vorkonfigurierte Berechtigungen, die nicht geändert werden können. Führen Sie die folgende Abfrage aus, um zu bestimmen, wer Mitglied der festen Serverrolle ist:    
 > [!NOTE]
->  Dies gilt nicht für SQL-Datenbank oder SQL Data Warehouse, bei denen die Berechtigung auf Serverebene nicht verfügbar ist. Die `is_fixed_role`-Spalte von `sys.server_principals` wurde zu SQL Server 2012 hinzugefügt. Sie ist für ältere Versionen von SQL Server nicht erforderlich.  
+>  Dies gilt nicht für SQL-Datenbank oder Synapse Analytics, bei denen die Berechtigung auf Serverebene nicht verfügbar ist. Die `is_fixed_role`-Spalte von `sys.server_principals` wurde zu SQL Server 2012 hinzugefügt. Sie ist für ältere Versionen von SQL Server nicht erforderlich.  
 > ```sql
 > SELECT SP1.name AS ServerRoleName, 
 >  isnull (SP2.name, 'No members') AS LoginName   
@@ -107,7 +107,7 @@ Denken Sie daran, dass ein Windows-Benutzer Mitglied von mehr als einer Windows-
 
 Die folgende Abfrage gibt eine Liste der Berechtigungen zurück, die auf Serverebene erteilt oder verweigert wurden. Diese Abfrage sollte in der Master-Datenbank ausgeführt werden.   
 > [!NOTE]
->  Berechtigungen auf Serverebene können nicht auf SQL-Datenbank oder SQL Data Warehouse abgefragt oder erteilt werden.   
+>  Berechtigungen auf Serverebene können nicht auf SQL-Datenbank oder Azure Synapse Analytics abgefragt oder erteilt werden.   
 > ```sql
 > SELECT pr.type_desc, pr.name, 
 >  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

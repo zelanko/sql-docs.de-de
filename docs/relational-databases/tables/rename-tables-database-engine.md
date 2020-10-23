@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5f00ffc9ce946c3c6116ba85af0c4ff7c82405b
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 87a05942a1061db1f074266d0b5df3b1797f5e73
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645784"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006132"
 ---
 # <a name="rename-tables-database-engine"></a>Umbenennen von Tabellen (Datenbank-Engine)
 
@@ -29,7 +29,7 @@ ms.locfileid: "88645784"
 
 Umbenennen einer Tabelle in einer SQL Server- oder Azure SQL-Datenbank
 
-Verwenden Sie die T-SQL-Anweisung [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) zum Umbenennen einer Tabelle in Azure SQL Data Warehouse oder Parallel Data Warehouse. 
+Verwenden Sie die T-SQL-Anweisung [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) zum Umbenennen einer Tabelle in Azure Synapse Analytics oder Parallel Data Warehouse. 
   
 > [!CAUTION]  
 >  Das Umbenennen einer Tabelle muss sorgfältig überlegt sein. Alle Abfragen, Sichten, benutzerdefinierten Funktionen, gespeicherten Prozeduren und Programme, die auf diese Tabelle verweisen, werden durch die Namensänderung ungültig.  

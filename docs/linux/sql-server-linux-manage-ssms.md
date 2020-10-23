@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 8520c3741102597ac3b7e93aceabc3ec6c114230
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0b118b1daa1b8b825d4b68ff1e436fd2f0b624f2
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883920"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115617"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Verwenden von SQL Server Management Studio unter Windows zum Verwalten von SQL Server für Linux
 
@@ -24,7 +24,7 @@ In diesem Artikel wird [SQL Server Management Studio (SSMS)](../ssms/sql-server-
 > [!TIP]
 > Wenn Sie nicht über einen Windows-Computer verfügen, auf dem SSMS ausgeführt werden kann, sollten Sie die Verwendung des neuen Tools [Azure Data Studio](../azure-data-studio/index.yml) in Erwägung ziehen. Es bietet ein grafisches Tool zum Verwalten von SQL Server und kann sowohl unter Linux als auch unter Windows ausgeführt werden.
 
-[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) ist Teil einer Suite von SQL-Tools, die Microsoft kostenlos für Ihre Entwicklungs- und Verwaltungsanforderungen anbietet. SSMS ist eine integrierte Umgebung, in der Sie auf alle SQL Server-Komponenten zugreifen sowie diese konfigurieren, verwalten und entwickeln können. Sie können damit eine Verbindung mit SQL Server herstellen, unabhängig davon, ob SQL Server auf einer lokalen Plattform in Docker-Containern oder in der Cloud ausgeführt wird. Außerdem kann eine Verbindung mit Azure SQL-Datenbank und Azure SQL Data Warehouse hergestellt werden. SSMS kombiniert eine Vielzahl grafischer Tools mit mehreren umfassenden Skript-Editoren, um Entwicklern und Administratoren mit unterschiedlichem Kenntnisstand den Zugriff auf SQL Server zu ermöglichen.
+[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) ist Teil einer Suite von SQL-Tools, die Microsoft kostenlos für Ihre Entwicklungs- und Verwaltungsanforderungen anbietet. SSMS ist eine integrierte Umgebung, in der Sie auf alle SQL Server-Komponenten zugreifen sowie diese konfigurieren, verwalten und entwickeln können. Sie können damit eine Verbindung mit SQL Server herstellen, unabhängig davon, ob SQL Server auf einer lokalen Plattform in Docker-Containern oder in der Cloud ausgeführt wird. Außerdem kann eine Verbindung mit Azure SQL-Datenbank und Azure Synapse Analytics hergestellt werden. SSMS kombiniert eine Vielzahl grafischer Tools mit mehreren umfassenden Skript-Editoren, um Entwicklern und Administratoren mit unterschiedlichem Kenntnisstand den Zugriff auf SQL Server zu ermöglichen.
 
 SSMS bietet auch eine Vielzahl von Entwicklungs-und Verwaltungsfunktionen für SQL Server, einschließlich Tools für folgende Aufgaben:
 
@@ -107,7 +107,7 @@ Nachdem eine Verbindung mit der *Masterdatenbank* hergestellt wurde, können Sie
 
 3. Geben Sie im Dialogfeld *Neue Datenbank* einen Namen für die neue Datenbank ein, und klicken Sie dann auf *OK*.
 
-Die neue Datenbank wurde erfolgreich auf Ihrem Server erstellt. Wenn Sie die Erstellung einer neuen Datenbank mit T-SQL bevorzugen, finden Sie weitere Informationen dazu unter [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-sql-server-transact-sql.md).
+Die neue Datenbank wurde erfolgreich auf Ihrem Server erstellt. Wenn Sie die Erstellung einer neuen Datenbank mit T-SQL bevorzugen, finden Sie weitere Informationen dazu unter [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-transact-sql.md).
 
 ### <a name="drop-a-database"></a>Löschen einer Datenbank
 
@@ -143,6 +143,6 @@ Wenn ein Bereich erweitert wird, fragt der Aktivitätsmonitor die Instanz nach I
 ## <a name="see-also"></a>Weitere Informationen
 - [Was ist SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Export and Import a database with SSMS (Exportieren und Importieren einer Datenbank mit SSMS)](sql-server-linux-migrate-ssms.md)
-- [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [Tutorial: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)
 - [Tutorial: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Überwachen der Serverleistung und -aktivität](../relational-databases/performance/server-performance-and-activity-monitoring.md)

@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b02f1325e97cc27b9ae0457bc964f25150851144
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ce39e398db9d3676bc9c6e2257c9847774927e26
+ms.sourcegitcommit: 757b827cf322c9f792f05915ff3450e95ba7a58a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396599"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92134868"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 
@@ -364,7 +364,7 @@ Die zwei Featuregruppen verbessern zusammen die E/A- und CPU-Auslastung:
 
 Wann immer möglich, machen sich die beiden Technologien gegenseitig zu Nutze. So können Batchmodusaggregate z.B. als Teil eines Columnstore-Indexes ausgewertet werden. Außerdem werden komprimierte Columnstore-Daten mit der Lauflängencodierung wesentlich effizienter mit Joins im Batchmodus und Batchmodusaggregaten verarbeitet. 
  
-Es ist jedoch wichtig zu berücksichtigen, dass die beiden Merkmale unabhängig voneinander sind:
+Es ist jedoch wichtig, zu berücksichtigen, dass die beiden Merkmale unabhängig voneinander sind:
 * Sie können Zeilenmoduspläne erhalten, die Columnstore-Indizes verwenden.
 * Sie können Batchmoduspläne erhalten, die nur Rowstore-Indizes verwenden. 
 

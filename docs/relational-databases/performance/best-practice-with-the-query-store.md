@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aab93dcc8036e0e1273a1c9444d7418214ad8926
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 1ad9bb98b55e654efd60c028187d6085f698e1f9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891050"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194332"
 ---
 # <a name="best-practices-with-query-store"></a>Bewährte Methoden für den Abfragespeicher
 
@@ -434,7 +434,7 @@ Die globalen Ablaufverfolgungsflags 7745 und 7752 können verwendet werden, um d
 > Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verwenden, planen Sie baldmöglichst die Installation der Verbesserungen zur Leistungsskalierbarkeit in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) ein. Ohne diese Verbesserungen kann es bei hohen Workloads der Datenbank zu Spinlock-Konflikten kommen und die Serverleistung beeinträchtigt werden. Insbesondere beim `QUERY_STORE_ASYNC_PERSIST`- oder `SPL_QUERY_STORE_STATS_COOKIE_CACHE`-Spinlock kann es zu heftigen Konflikten kommen. Nachdem diese Verbesserungen angewendet wurden, führt der Abfragespeicher nicht mehr zu Spinlock-Konflikten.
 
 > [!IMPORTANT]
-> Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) verwenden, planen Sie baldmöglichst die Installation der Verbesserung zur Leistungsskalierbarkeit in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22. Ohne diese Verbesserung kann bei hoher Ad-hoc-Workload der Datenbank der Abfragespeicher einen großen Teil des Speichers in Anspruch nehmen und die Serverleistung kann beeinträchtigt werden. Nachdem diese Verbesserung angewendet wurde, legt der Abfragespeicher interne Grenzwerte für die Menge an Arbeitsspeicher fest, die von seinen verschiedenen Komponenten verwendet werden kann. Zudem kann der Betriebsmodus automatisch in „schreibgeschützt“ geändert werden, bis genügend Arbeitsspeicher an den [!INCLUDE[ssde_md](../../includes/ssde_md.md)] zurückgegeben wurde. Beachten Sie, dass die internen Grenzwerte für den Arbeitsspeicher des Abfragespeichers nicht dokumentiert sind, da sie sich ändern können.  
+> Wenn Sie den Abfragespeicher für Erkenntnisse zu Just-In-Time-Arbeitsauslastungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) verwenden, planen Sie baldmöglichst die Installation der Verbesserung zur Leistungsskalierbarkeit in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 und [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU8. Ohne diese Verbesserung kann bei hoher Ad-hoc-Workload der Datenbank der Abfragespeicher einen großen Teil des Speichers in Anspruch nehmen und die Serverleistung kann beeinträchtigt werden. Nachdem diese Verbesserung angewendet wurde, legt der Abfragespeicher interne Grenzwerte für die Menge an Arbeitsspeicher fest, die von seinen verschiedenen Komponenten verwendet werden kann. Zudem kann der Betriebsmodus automatisch in „schreibgeschützt“ geändert werden, bis genügend Arbeitsspeicher an den [!INCLUDE[ssde_md](../../includes/ssde_md.md)] zurückgegeben wurde. Beachten Sie, dass die internen Grenzwerte für den Arbeitsspeicher des Abfragespeichers nicht dokumentiert sind, da sie sich ändern können.  
 
 ## <a name="see-also"></a>Weitere Informationen
 

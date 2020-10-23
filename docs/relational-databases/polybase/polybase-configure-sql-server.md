@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 31b07b70e5a90d36a7094f38eab7b99f3bac821e
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 23eadb2089e3f692e5e054441b7617e09e71ac01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834019"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005851"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in SQL Server
 
@@ -81,7 +81,7 @@ In diesem Abschnitt werden die folgenden Transact-SQL-Befehle verwendet:
 
 ## <a name="sql-server-connector-compatible-types"></a>Mit dem SQL Server-Connector kompatible Typen
 
-Sie können eine Verbindung mit anderen Datenquellen herstellen, die von einer SQL Server-Verbindung erkannt werden. Mithilfe des PolyBase-Connectors für SQL Server können Sie externe Tabellen in Azure SQL Data Warehouse und Azure SQL-Datenbank erstellen. Führen Sie dafür die zuvor erläuterten Schritte aus. Stellen Sie sicher, dass die für die gesamte Datenbank gültigen Anmeldeinformationen, die Serveradresse, der Port und die Standortzeichenfolge in Korrelation mit denen der kompatiblen Datenquelle stehen, mit der Sie eine Verbindung herstellen möchten.
+Sie können eine Verbindung mit anderen Datenquellen herstellen, die von einer SQL Server-Verbindung erkannt werden. Mithilfe des PolyBase-Connectors für SQL Server können Sie externe Tabellen in Azure Synapse Analytics und Azure SQL-Datenbank erstellen. Führen Sie dafür die zuvor erläuterten Schritte aus. Stellen Sie sicher, dass die für die gesamte Datenbank gültigen Anmeldeinformationen, die Serveradresse, der Port und die Standortzeichenfolge in Korrelation mit denen der kompatiblen Datenquelle stehen, mit der Sie eine Verbindung herstellen möchten.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

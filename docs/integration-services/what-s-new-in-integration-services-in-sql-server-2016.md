@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480827"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193733"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Neuigkeiten in Integration Services in SQL Server 2016
 
@@ -112,7 +112,7 @@ Diese neuen Funktionen benötigen SQL Server Data Tools (SSDT) Version 17.2 oder
         
         -   [Support für Azure Data Lake Store freigegeben](#datalakestore)
         
-        -   [Support für Azure SQL Data Warehouse freigegeben](#sqldwupload)
+        -   [Unterstützung für Azure Synapse Analytics freigegeben](#sqldwupload)
   
 -   **Nutzbarkeit und Produktivität**  
   
@@ -309,7 +309,7 @@ Wenn SQL Server 2016 Service Pack 1 installiert ist, unterstützen die OData-Que
 
 Die neueste Version von Azure Feature Pack enthält einen Verbindungs-Manager, eine Quelle und ein Ziel, um Daten zu und von Azure Data Lake Store zu verschieben. Weitere Informationen finden Sie unter [Azure Feature Pack für Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-#### <a name="support-for-azure-sql-data-warehouse-released"></a><a name="sqldwupload"></a> Support für Azure SQL Data Warehouse freigegeben
+#### <a name="support-for-azure-synapse-analytics-released"></a><a name="sqldwupload"></a>Unterstützung für Azure Synapse Analytics freigegeben
 
 Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask, um SQL Data Warehouse mit Daten aufzufüllen. Weitere Informationen finden Sie unter [Azure Feature Pack für Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -376,4 +376,4 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Editionen und unterstützten Funktionen von SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [Editionen und unterstützten Funktionen von SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)

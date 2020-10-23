@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f59bde18b416927484cac2a1b8dec86663ffeb05
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dcbd93a2e1e40c58cd92bd71449ba9a9155ba5b2
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487673"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006194"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Ausführen eines SSIS-Pakets aus Visual Studio Code mit Transact-SQL
 
@@ -23,7 +23,7 @@ ms.locfileid: "88487673"
 
 In diesem Schnellstart wird erläutert, wie Sie mit Visual Studio Code eine Verbindung mit der SSIS-Katalogdatenbank herstellen und anschließend mit Transact-SQL-Anweisungen ein im SSIS-Katalog gespeichertes SSIS-Paket ausführen.
 
-Visual Studio Code ist ein Code-Editor für Windows, macOS und Linux, der Erweiterungen unterstützt. Dazu gehört auch die `mssql`-Erweiterung zum Herstellen einer Verbindung mit Microsoft SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. Weitere Informationen zu VS Code finden Sie unter [Visual Studio Code](https://code.visualstudio.com/).
+Visual Studio Code ist ein Code-Editor für Windows, macOS und Linux, der Erweiterungen unterstützt. Dazu gehört auch die `mssql`-Erweiterung zum Herstellen einer Verbindung mit Microsoft SQL Server, Azure SQL-Datenbank und Azure Synapse Analytics. Weitere Informationen zu VS Code finden Sie unter [Visual Studio Code](https://code.visualstudio.com/).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

@@ -33,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc39fbcb191810f7e357167f15c4d0ca084711d8
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 325e6d949cfede5bec7ccdb958dac2c82e9d9efa
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688665"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005585"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL-Graph)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -119,13 +119,17 @@ In diesem Dokument werden nur Argumente für SQL-Graph aufgelistet. Eine vollst�
  *table_constraint*   
  Gibt die Eigenschaften einer PRIMARY KEY-, UNIQUE-, FOREIGN KEY-, CONNECTION- oder CHECK-Einschränkung bzw. eine DEFAULT-Definition an, die einer Tabelle hinzugefügt wurde.
  
+ > [!NOTE]   
+ > Die CONNECTION-Einschränkung ist nur für einen Edgetabellentyp gültig.
+ 
  ON { partition_scheme | filegroup | "default" }    
  Gibt das Partitionsschema oder die Dateigruppe an, in der die Tabelle gespeichert wird. Wenn „partition_scheme“ angegeben wird, muss die Tabelle eine partitionierte Tabelle sein, deren Partitionen in einem oder mehreren in „partition_scheme“ angegebenen Dateigruppen gespeichert werden. Wenn „filegroup“ angegeben ist, wird die Tabelle in der genannten Dateigruppe gespeichert. Die Dateigruppe muss in der Datenbank vorhanden sein. Wenn "default" angegeben oder ON überhaupt nicht angegeben ist, wird die Tabelle in der Standarddateigruppe gespeichert. Der in CREATE TABLE angegebene Speichermechanismus einer Tabelle kann nachfolgend nicht mehr geändert werden.
 
  ON {partition_scheme | filegroup | "default"}    
  Kann auch in einer PRIMARY KEY- oder UNIQUE-Einschränkung angegeben werden. Diese Einschränkungen erstellen Indizes. Wenn „filegroup“ angegeben ist, wird der Index in der genannten Dateigruppe gespeichert. Wenn "default" angegeben oder ON überhaupt nicht angegeben ist, wird der Index in derselben Dateigruppe wie die Tabelle gespeichert. Wenn die PRIMARY KEY- oder die UNIQUE-Einschränkung einen gruppierten Index erstellt, werden die Datenseiten für die Tabelle in derselben Dateigruppe wie der Index gespeichert. Wenn CLUSTERED angegeben wird oder ein gruppierter Index anderweitig durch die Einschränkung erstellt wird, und ein Wert für „partition_scheme“ angegeben wird, der von der Angabe für „partition_scheme“ oder „filegroup“ der Tabellendefinition abweicht (oder umgekehrt), wird nur die Einschränkungsdefinition berücksichtigt. Der andere Wert wird ignoriert.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Bemerkungen
+
 Das Erstellen einer temporären Tabelle als Knoten- oder Edgetabelle wird nicht unterstützt.  
 
 Das Erstellen einer Knoten- oder Edgetabelle als temporale Tabelle wird nicht unterstützt.
@@ -163,6 +167,16 @@ Im folgenden Beispiel wird das Erstellen von `EDGE`-Tabellen veranschaulicht.
 ```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
+```
+
+Im nächsten Beispiel wird eine Regel modelliert, dass **nur** Personen mit anderen Personen befreundet sein können, was bedeutet, dass dieser Edgeknoten keine Verweise auf andere Knoten als Personen erlaubt.
+
+```
+/* Create friend edge table with CONSTRAINT, restricts for nodes and it direction */
+CREATE TABLE dbo.FriendOf(
+  CONSTRAINT cnt_Person_FriendOf_Person
+    CONNECTION (dbo.Person TO dbo.Person) 
+)AS EDGE;
 ```
 
 

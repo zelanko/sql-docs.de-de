@@ -19,12 +19,12 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faa0ea1e841edfde76cdfeb4f3285116a47a50fd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 72b1c23ddc584f909661b07058e519347be045fa
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005699"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005393"
 ---
 # <a name="create-a-database-schema"></a>Erstellen eines Datenbankschemas
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "86005699"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 > [!NOTE]
-> Es wird kein Dialogfeld angezeigt, wenn Sie mithilfe von SSMS ein Schema für eine **Azure SQL-Datenbank** oder **Azure SQL Data Warehouse** erstellen. Sie müssen die generierte T-SQL-Anweisung zum Erstellen eines Schemas ausführen.
+> Es wird kein Dialogfeld angezeigt, wenn Sie mithilfe von SSMS ein Schema für eine **Azure SQL-Datenbank** oder **Azure Synapse Analytics** erstellen. Sie müssen die generierte T-SQL-Anweisung zum Erstellen eines Schemas ausführen.
   
 ### <a name="additional-options"></a>Zusätzliche Optionen  
  Im Dialogfeld **Schema – Neu** sind auch Optionen auf zwei zusätzlichen Seiten verfügbar: **Berechtigungen** und **Erweiterte Eigenschaften**.  

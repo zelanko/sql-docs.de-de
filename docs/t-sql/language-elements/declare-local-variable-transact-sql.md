@@ -21,12 +21,12 @@ ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbb4c1c7df2e06d1e3740e401a3c9304aa0beb3a
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 4fcb156d48e619a0d5ac399bf4c04a91720d3f0d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226928"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196616"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91226928"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DECLARE   
@@ -74,143 +74,143 @@ See CREATE TABLE for index option syntax.
   
 ```  
   
-```  
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+
+– Syntax für Azure Synapse Analytics und Parallel Data Warehouse  
   
 DECLARE   
-{{ @local_variable [AS] data_type } [ =value [ COLLATE <collation_name> ] ] } [,...n]  
+{{ @local_variable [AS] Datentyp } [ =Wert [ COLLATE <Name_der_Sortierung> ] ] } [,...n]  
   
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-## <a name="arguments"></a>Argumente
+## Arguments
 @*local_variable*  
- Der Name einer Variablen. Variablennamen müssen mit einem at-Zeichen (@) beginnen. Die Namen lokaler Variablen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
+ Is the name of a variable. Variable names must begin with an at (@) sign. Local variable names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 *data_type*  
- Ein vom System bereitgestellter, CLR-benutzerdefinierter Tabellentyp (Common Language Runtime) oder Aliasdatentyp. Eine Variable kann nicht den Datentyp **text**, **ntext** oder **image** haben.  
+ Is any system-supplied, common language runtime (CLR) user-defined table type, or alias data type. A variable cannot be of **text**, **ntext**, or **image** data type.  
   
- Weitere Informationen zu Systemdatentypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). Weitere Informationen zu CLR-benutzerdefinierten Typen oder Aliasdatentypen finden Sie unter [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
+ For more information about system data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). For more information about CLR user-defined types or alias data types, see [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
  =*value*  
- Weist der Variablen inline einen Wert zu. Der Wert kann eine Konstante oder ein Ausdruck sein; auf jeden Fall muss er mit dem Typ der Variablendeklaration übereinstimmen oder implizit in diesen Typ konvertiert werden können. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Assigns a value to the variable in-line. The value can be a constant or an expression, but it must either match the variable declaration type or be implicitly convertible to that type. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 @*cursor_variable_name*  
- Der Name einer Cursorvariablen. Cursorvariablennamen müssen mit einem at-Zeichen (@) beginnen und den Regeln für Bezeichner entsprechen.  
+ Is the name of a cursor variable. Cursor variable names must begin with an at (@) sign and conform to the rules for identifiers.  
   
 CURSOR  
- Gibt an, dass die Variable eine lokale Cursorvariable ist.  
+ Specifies that the variable is a local cursor variable.  
   
 @*table_variable_name*  
- Der Name einer Variablen vom Typ **table**. Variablennamen müssen mit einem at-Zeichen (@) beginnen und den Regeln für Bezeichner entsprechen.  
+ Is the name of a variable of type **table**. Variable names must begin with an at  (@) sign and conform to the rules for identifiers.  
   
 <table_type_definition>  
-Definiert den Datentyp **table**. Die Tabellendeklaration schließt Spaltendefinitionen, Namen, Datentypen und Einschränkungen ein. Die einzigen zulässigen Einschränkungstypen sind PRIMARY KEY, UNIQUE, NULL und CHECK. Ein Aliasdatentyp kann nicht als Skalar-Spaltendatentyp verwendet werden, wenn eine Regel oder Standarddefinition an den Typ gebunden ist.
+Defines the **table** data type. The table declaration includes column definitions, names, data types, and constraints. The only constraint types allowed are PRIMARY KEY, UNIQUE, NULL, and CHECK. An alias data type cannot be used as a column scalar data type if a rule or default definition is bound to the type.
   
-\<table_type_definiton> Ist eine Teilmenge von Informationen, die zum Definieren einer Tabelle in CREATE TABLE verwendet werden. Darin sind Elemente und wichtige Definitionen eingeschlossen. Weitere Informationen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+\<table_type_definiton>
+Is a subset of information used to define a table in CREATE TABLE. Elements and essential definitions are included here. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  *n*  
- Ein Platzhalter, der angibt, dass mehrere Variablen angegeben und ihnen Werte zugewiesen werden können. Beim Deklarieren von **table**-Variablen muss die **table**-Variable die einzige Variable sein, die in der DECLARE-Anweisung deklariert wird.  
+ Is a placeholder indicating that multiple variables can be specified and assigned values. When declaring **table** variables, the **table** variable must be the only variable being declared in the DECLARE statement.  
   
  *column_name*  
- Der Name der Spalte in der Tabelle.  
+ Is the name of the column in the table.  
   
  *scalar_data_type*  
- Gibt an, dass die Spalte ein skalarer Datentyp ist.  
+ Specifies that the column is a scalar data type.  
   
  *computed_column_expression*  
- Ein Ausdruck, der den Wert einer berechneten Spalte definiert. Sie wird mithilfe anderer Spalten derselben Tabelle mit einem Ausdruck berechnet. Eine berechnete Spalte kann beispielsweise die Definition **cost** AS **price \* qty** aufweisen. Der Ausdruck kann der Name einer nicht berechneten Spalte, eine Konstante, eine integrierte Funktion, eine Variable oder eine beliebige durch einen oder mehrere Operatoren verbundene Kombination der genannten Möglichkeiten sein. Der Ausdruck kann keine Unterabfrage oder benutzerdefinierte Funktion sein. Der Ausdruck kann nicht auf einen CLR-benutzerdefinierten Typ verweisen.  
+ Is an expression defining the value of a computed column. It is computed from an expression using other columns in the same table. For example, a computed column can have the definition **cost** AS **price \* qty**. The expression can be a noncomputed column name, constant, built-in function, variable, or any combination of these connected by one or more operators. The expression cannot be a subquery or a user-defined function. The expression cannot reference a CLR user-defined type.  
   
  [ COLLATE *collation_name*]  
- Gibt die Sortierung für die Spalte an. Als *collation_name* kann entweder der Name einer Windows-Sortierung oder ein SQL-Sortierungsname verwendet werden. Dieses Element gilt nur für Spalten der Datentypen **char**, **varchar**, **text**, **nchar**, **nvarchar** und **ntext**. Wenn collation_name nicht angegeben ist, wird der Spalte die Sortierung des benutzerdefinierten Datentyps zugewiesen, wenn es sich um eine Spalte von einem benutzerdefinierten Datentyp handelt, oder es wird die Sortierung der aktuellen Datenbank zugewiesen.  
+ Specifies the collation for the column. *collation_name* can be either a Windows collation name or an SQL collation name, and is applicable only for columns of the **char**, **varchar**, **text**, **nchar**, **nvarchar**, and **ntext** data types. If not specified, the column is assigned either the collation of the user-defined data type (if the column is of a user-defined data type) or the collation of the current database.  
   
- Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
+ For more information about the Windows and SQL collation names, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
  DEFAULT  
- Gibt den Wert an, der für die Spalte bereitgestellt wird, wenn kein Wert explizit angegeben wurde. DEFAULT-Definitionen können auf alle Spalten angewendet werden, mit Ausnahme der als **timestamp** definierten Spalten sowie von Spalten mit der IDENTITY-Eigenschaft. DEFAULT-Definitionen werden entfernt, wenn die Tabelle gelöscht wird. Es kann nur ein konstanter Wert wie eine Zeichenfolge, eine Systemfunktion, z. B. SYSTEM_USER(), oder NULL als Standardwert verwendet werden. Um die Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufrechtzuerhalten, ist es möglich, einer DEFAULT-Definition einen Einschränkungsnamen zuzuweisen.  
+ Specifies the value provided for the column when a value is not explicitly supplied during an insert. DEFAULT definitions can be applied to any columns except those defined as **timestamp** or those with the IDENTITY property. DEFAULT definitions are removed when the table is dropped. Only a constant value, such as a character string; a system function, such as a SYSTEM_USER(); or NULL can be used as a default. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT.  
   
  *constant_expression*  
- Eine Konstante, ein NULL-Wert oder eine Systemfunktion, die bzw. der als Standardwert für die Spalte verwendet wird.  
+ Is a constant, NULL, or a system function used as the default value for the column.  
   
  IDENTITY  
- Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn der Tabelle eine neue Zeile hinzugefügt wird, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereit. Identitätsspalten werden in der Regel in Verbindung mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft kann folgenden Spalten zugewiesen werden: **tinyint**, **smallint**, **int**, **decimal(p,0)** oder **numeric(p,0)** . Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Sie müssen entweder den Ausgangswert und den Schrittweitenwert oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
+ Indicates that the new column is an identity column. When a new row is added to the table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a unique incremental value for the column. Identity columns are commonly used in conjunction with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to **tinyint**, **smallint**, **int**, **decimal(p,0)**, or **numeric(p,0)** columns. Only one identity column can be created per table. Bound defaults and DEFAULT constraints cannot be used with an identity column. You must specify both the seed and increment, or neither. If neither is specified, the default is (1,1).  
   
  *seed*  
- Der Wert, der für die erste in die Tabelle geladene Zeile verwendet wird.  
+ Is the value used for the very first row loaded into the table.  
   
  *increment*  
- Der Schrittweitenwert, der zum Identitätswert der zuvor geladenen Zeile addiert wird.  
+ Is the incremental value added to the identity value of the previous row that was loaded.  
   
  ROWGUIDCOL  
- Gibt an, dass die neue Spalte eine Spalte mit für alle Zeilen global eindeutigen Bezeichnern ist. Nur eine **uniqueidentifier**-Spalte pro Tabelle kann als ROWGUIDCOL-Spalte gekennzeichnet werden. Die ROWGUIDCOL-Eigenschaft kann nur einer **uniqueidentifier**-Spalte zugewiesen werden.  
+ Indicates that the new column is a row global unique identifier column. Only one **uniqueidentifier** column per table can be designated as the ROWGUIDCOL column. The ROWGUIDCOL property can be assigned only to a **uniqueidentifier** column.  
   
  NULL | NOT NULL  
- Gibt an, ob NULL in der Variablen zulässig ist. Die Standardeinstellung ist NULL.  
+ Indicates if null is allowed in the variable. The default is NULL.  
   
  PRIMARY KEY  
- Eine Einschränkung, die Entitätsintegrität für eine bestimmte Spalte (oder Spalten) durch einen eindeutigen Index erzwingt. Es kann nur eine PRIMARY KEY-Einschränkung pro Tabelle erstellt werden.  
+ Is a constraint that enforces entity integrity for a given column or columns through a unique index. Only one PRIMARY KEY constraint can be created per table.  
   
  UNIQUE  
- Eine Einschränkung, die Entitätsintegrität für eine bestimmte Spalte (oder Spalten) durch einen eindeutigen Index bereitstellt. Eine Tabelle kann mehrere UNIQUE-Einschränkungen haben.  
+ Is a constraint that provides entity integrity for a given column or columns through a unique index. A table can have multiple UNIQUE constraints.  
   
  CHECK  
- Eine Einschränkung, die Domänenintegrität erzwingt, indem die möglichen Eingabewerte für eine oder mehrere Spalten beschränkt wird.  
+ Is a constraint that enforces domain integrity by limiting the possible values that can be entered into a column or columns.  
   
  *logical_expression*  
- Ein logischer Ausdruck, der TRUE oder FALSE zurückgibt.  
+ Is a logical expression that returns TRUE or FALSE.  
   
-## <a name="remarks"></a>Bemerkungen  
- Variablen werden oft in einem Batch oder einer Prozedur als Zähler für WHILE, LOOP oder für IF...ELSE-Blöcke verwendet.  
+## Remarks  
+ Variables are often used in a batch or procedure as counters for WHILE, LOOP, or for an IF...ELSE block.  
   
- Variablen können nur in Ausdrücken verwendet werden und stellen keinen Ersatz für Objektnamen oder Schlüsselwörter dar. Um dynamische SQL-Anweisungen zu erstellen, verwenden Sie EXECUTE.  
+ Variables can be used only in expressions, not in place of object names or keywords. To construct dynamic SQL statements, use EXECUTE.  
   
- Der Gültigkeitsbereich einer lokalen Variablen ist der Batch, in dem sie deklariert ist.  
+ The scope of a local variable is the batch in which it is declared.  
  
- Eine Tabellenvariable ist nicht zwingend speicherresident. Wenn nicht genügend Speicherplatz vorhanden ist, können die Seiten, die einer Tabellenvariablen zugehörig sind, an tempdb gesendet werden.
+ A table variable is not necessarily memory resident. Under memory pressure, the pages belonging to a table variable can be pushed out to tempdb.
   
- Auf eine Cursorvariable, der aktuell ein Cursor zugewiesen ist, kann in folgenden Anweisungen als Quelle verwiesen werden:  
+ A cursor variable that currently has a cursor assigned to it can be referenced as a source in a:  
   
--   CLOSE-Anweisung.  
+-   CLOSE statement.  
   
--   DEALLOCATE-Anweisung.  
+-   DEALLOCATE statement.  
   
--   FETCH-Anweisung.  
+-   FETCH statement.  
   
--   OPEN-Anweisung.  
+-   OPEN statement.  
   
--   Positionierte DELETE- oder UPDATE-Anweisung.  
+-   Positioned DELETE or UPDATE statement.  
   
--   SET CURSOR VARIABLE-Anweisung (auf der rechten Seite).  
+-   SET CURSOR variable statement (on the right side).  
   
- Bei all diesen Anweisungen wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Fehler ausgelöst, wenn eine Cursorvariable vorhanden ist, auf die verwiesen wird, für die aber aktuell kein Cursor zugeordnet ist. Ist keine Cursorvariable vorhanden, auf die verwiesen wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der gleiche Fehler ausgelöst wie für eine nicht deklarierte Variable eines anderen Typs.  
+ In all of these statements, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises an error if a referenced cursor variable exists but does not have a cursor currently allocated to it. If a referenced cursor variable does not exist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises the same error raised for an undeclared variable of another type.  
   
- Eine Cursorvariable hat folgende Eigenschaften:  
+ A cursor variable:  
   
--   Sie kann das Ziel eines Cursortyps oder einer anderen Cursorvariablen sein. Weitere Informationen finden Sie unter [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+-   Can be the target of either a cursor type or another cursor variable. For more information, see [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
--   Auf sie kann als Ziel eines Ausgabecursorparameters in einer EXECUTE-Anweisung verwiesen werden, wenn der Cursorvariablen aktuell kein Cursor zugewiesen ist.  
+-   Can be referenced as the target of an output cursor parameter in an EXECUTE statement if the cursor variable does not have a cursor currently assigned to it.  
   
--   Sie sollte als Zeiger auf den Cursor verstanden werden.  
+-   Should be regarded as a pointer to the cursor.  
   
-## <a name="examples"></a>Beispiele  
+## Examples  
   
-### <a name="a-using-declare"></a>A. Verwenden von DECLARE  
- Im folgenden Beispiel werden mithilfe der lokalen Variablen `@find` Kontaktinformationen für alle Nachnamen abgerufen, die mit `Man` beginnen.  
+### A. Using DECLARE  
+ The following example uses a local variable named `@find` to retrieve contact information for all last names beginning with `Man`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @find varchar(30);   
+DECLARE @find VARCHAR(30);   
 /* Also allowed:   
-DECLARE @find varchar(30) = 'Man%';   
+DECLARE @find VARCHAR(30) = 'Man%';   
 */  
 SET @find = 'Man%';   
 SELECT p.LastName, p.FirstName, ph.PhoneNumber  
 FROM Person.Person AS p   
 JOIN Person.PersonPhone AS ph ON p.BusinessEntityID = ph.BusinessEntityID  
 WHERE LastName LIKE @find;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -228,12 +228,12 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 ### <a name="b-using-declare-with-two-variables"></a>B. Verwenden von DECLARE mit zwei Variablen  
  Im folgenden Beispiel werden die Namen von Vertriebsmitarbeitern von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] abgerufen, die in der Vertriebsregion Nordamerika tätig sind und im laufenden Jahr bereits einen Umsatz von mindestens 2.000.000 USD erzielt haben.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET NOCOUNT ON;  
 GO  
-DECLARE @Group nvarchar(50), @Sales money;  
+DECLARE @Group nvarchar(50), @Sales MONEY;  
 SET @Group = N'North America';  
 SET @Sales = 2000000;  
 SET NOCOUNT OFF;  
@@ -245,14 +245,14 @@ WHERE TerritoryGroup = @Group and SalesYTD >= @Sales;
 ### <a name="c-declaring-a-variable-of-type-table"></a>C. Deklarieren einer Variablen vom Typ "table"  
  Im folgenden Beispiel wird eine `table`-Variable erstellt, die die in der OUTPUT-Klausel der UPDATE-Anweisung angegebenen Werte speichert. Es folgen zwei `SELECT`-Anweisungen, die die Werte in `@MyTableVar` und die Ergebnisse des Updatevorgangs in der `Employee`-Tabelle zurückgeben. Beachten Sie, dass sich die Ergebnisse in der `INSERTED.ModifiedDate`-Spalte von den Werten in der `ModifiedDate`-Spalte in der `Employee`-Tabelle unterscheiden. Der Grund dafür ist, dass der `AFTER UPDATE`-Trigger, der den Wert von `ModifiedDate` auf das aktuelle Datum aktualisiert, in der `Employee`-Tabelle definiert wird. Die von `OUTPUT` zurückgegebenen Spalten spiegeln jedoch die Daten wider, bevor Trigger ausgelöst werden. Weitere Informationen finden Sie unter [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    OldVacationHours int,  
-    NewVacationHours int,  
-    ModifiedDate datetime);  
+DECLARE @MyTableVar TABLE(  
+    EmpID INT NOT NULL,  
+    OldVacationHours INT,  
+    NewVacationHours INT,  
+    ModifiedDate DATETIME);  
 UPDATE TOP (10) HumanResources.Employee  
 SET VacationHours = VacationHours * 1.25   
 OUTPUT INSERTED.BusinessEntityID,  
@@ -275,7 +275,7 @@ GO
 ### <a name="d-declaring-a-variable-of-user-defined-table-type"></a>D: Deklarieren einer Variablen vom Typ 'user-defined table'  
  Im folgenden Beispiel wird ein Tabellenwertparameter oder eine Tabellenvariable mit dem Namen `@LocationTVP` erstellt. Dies erfordert einen entsprechenden benutzerdefinierten Tabellentyp mit dem Namen `LocationTableType`. Weitere Informationen zum Erstellen eines benutzerdefinierten Tabellentyps finden Sie unter [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md). Weitere Informationen zu Tabellenwertparametern finden Sie unter [Use Table-Valued Parameters &#40;Database Engine&#41; (Verwenden von Tabellenwertparametern &#40;Datenbank-Engine&#41;)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
-```  
+```sql  
 DECLARE @LocationTVP   
 AS LocationTableType;  
 ```  
@@ -285,12 +285,12 @@ AS LocationTableType;
 ### <a name="e-using-declare"></a>E. Verwenden von DECLARE  
  Im folgenden Beispiel werden mithilfe der lokalen Variablen `@find` Kontaktinformationen für alle Nachnamen abgerufen, die mit `Walt` beginnen.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @find varchar(30);  
+DECLARE @find VARCHAR(30);  
 /* Also allowed:   
-DECLARE @find varchar(30) = 'Man%';  
+DECLARE @find VARCHAR(30) = 'Man%';  
 */  
 SET @find = 'Walt%';  
   
@@ -302,10 +302,10 @@ WHERE LastName LIKE @find;
 ### <a name="f-using-declare-with-two-variables"></a>F. Verwenden von DECLARE mit zwei Variablen  
  Das folgende Beispiel ruft Variablen ab, um die Vor- und Nachnamen von Mitarbeitern in der `DimEmployee`-Tabelle anzugeben.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @lastName varchar(30), @firstName varchar(30);  
+DECLARE @lastName VARCHAR(30), @firstName VARCHAR(30);  
   
 SET @lastName = 'Walt%';  
 SET @firstName = 'Bryan';  

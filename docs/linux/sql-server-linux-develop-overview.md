@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 09bdea851ed3b9efeca1c69a09c12108706bbb22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9623feab13740d9b328d97a248742711871ffa3
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896505"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115483"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Erste Schritte bei der Entwicklung von Apps für SQL Server für Linux
 
@@ -24,7 +24,7 @@ Sie können Apps erstellen, die SQL Server für Linux mit einer Vielzahl von Pro
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
-> Mithilfe dieser Entwicklungsoptionen können Sie SQL Server auch auf anderen Plattformen verwenden. Apps können SQL Server lokal oder in der Cloud, unter Linux, unter Windows oder in Docker unter macOS ausführen. Sie können auch Azure SQL-Datenbank und Azure SQL Data Warehouse verwenden.
+> Mithilfe dieser Entwicklungsoptionen können Sie SQL Server auch auf anderen Plattformen verwenden. Apps können SQL Server lokal oder in der Cloud, unter Linux, unter Windows oder in Docker unter macOS ausführen. Sie können auch Azure SQL-Datenbank und Azure Synapse Analytics verwenden.
 
 ## <a name="try-the-tutorials"></a>Ausprobieren der Tutorials
 
@@ -62,7 +62,7 @@ Weitere Informationen finden Sie in den nachfolgenden Themen:
 
 Sie können die neue [mssql-Erweiterung](https://aka.ms/mssql-marketplace) für [Visual Studio Code](https://code.visualstudio.com) unter Linux, macOS und Windows verwenden. Eine detaillierte Anleitung finden Sie im folgenden Tutorial:
 
-- [Verwenden von Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Verwenden von Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 
 Sie können auch neue Befehlszeilentools verwenden, die für Linux nativ sind. Hierzu gehören die folgenden Tools:
 

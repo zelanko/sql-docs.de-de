@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725980"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006204"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW-Uploadtask
 
@@ -27,8 +27,8 @@ ms.locfileid: "91725980"
 
 
 
-Der **Azure SQL DW-Uploadtask** ermöglicht es einem SSIS-Paket, Tabellendaten aus dem Dateisystem oder Azure Blob Storage in Azure SQL Data Warehouse (DW) zu kopieren.
-Der Task nutzt PolyBase zur Leistungssteigerung gemäß der Beschreibung im Artikel [Azure SQL Data Warehouse Loading Patterns and Strategies](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)(Azure SQL Data Warehouse: Muster und Strategien zum Laden).
+Der **Azure SQL DW-Uploadtask** ermöglicht es einem SSIS-Paket, Tabellendaten aus dem Dateisystem oder Azure Blob Storage in Azure Synapse Analytics (DW) zu kopieren.
+Der Task nutzt PolyBase zur Leistungssteigerung gemäß der Beschreibung im Artikel [Azure Synapse Analytics Loading Patterns and Strategies](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)(Azure Synapse Analytics: Muster und Strategien zum Laden).
 Das gegenwärtig unterstützte Quelldatenformat ist Text mit Trennzeichen in UTF8-Codierung.
 Beim Kopieren aus einem Dateisystem werden Daten zunächst in Azure Blob Storage für das Staging und dann in Azure SQL Data Warehouse hochgeladen. Darum ist ein Azure Blob Storage-Konto erforderlich.
 

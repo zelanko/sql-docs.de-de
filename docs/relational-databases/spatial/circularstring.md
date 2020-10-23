@@ -12,21 +12,21 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d7aada1fca725dde6247e621a1ed6ca190c99f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 759d76a49f095c9ba28a1a1a5b6503442ccaef88
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455439"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006375"
 ---
 # <a name="circularstring"></a>CircularString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Ein **CircularString** ist eine Auflistung von 0 (null) oder mehr stetigen Kreisbogensegmenten. Ein Kreisbogensegment ist ein von drei Punkten in einer zweidimensionalen Ebene definierter gekrümmter Abschnitt; der erste Punkt darf nicht mit dem dritten Punkt identisch sein. Wenn alle drei Punkte eines Kreisbogensegments kollinear sind, wird das Bogensegment als Liniensegment behandelt.  
   
 ## <a name="circularstring-instances"></a>CircularString-Instanzen  
  In der unten stehenden Zeichnung sind gültige **CircularString** -Instanzen dargestellt:  
   
- ![5ff17e34-b578-4873-9d33-79500940d0bc](../../relational-databases/spatial/media/5ff17e34-b578-4873-9d33-79500940d0bc.gif)
+ ![CircularString-Beispiel](../../relational-databases/spatial/media/5ff17e34-b578-4873-9d33-79500940d0bc.gif)
   
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen  
  Eine **CircularString**-Instanz wird akzeptiert, wenn sie entweder leer ist oder eine ungerade Anzahl von Punkten n enthält, wobei n > 1 gilt. Die folgenden **CircularString** -Instanzen werden akzeptiert.  

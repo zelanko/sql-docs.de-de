@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 447304bf0927b08e76a668e93ca750f3f8bfc779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1d4c924652ec21ab4ed8e7c79d01d7f36835715b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896286"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006562"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Massenkopieren von Daten mit BCP in SQL Server für Linux
 
@@ -21,7 +21,7 @@ ms.locfileid: "85896286"
 
 In diesem Artikel wird beschrieben, wie Sie das Befehlszeilen-Hilfsprogramm [BCP](../tools/bcp-utility.md) zum Massenkopieren von Daten zwischen einer Instanz von SQL Server für Linux und einer Datendatei in einem benutzerdefinierten Format verwenden.
 
-Sie können mit `bcp` große Mengen neuer Zeilen in SQL Server-Tabellen importieren oder Daten aus SQL Server-Tabellen in Datendateien exportieren. Außer in Verbindung mit der Option „queryout“ sind für `bcp` keine Kenntnisse von Transact-SQL erforderlich. Das Befehlszeilen-Hilfsprogramm `bcp` kann in Microsoft SQL Server lokal ausgeführt werden oder in der Cloud, unter Linux, Windows oder Docker sowie SQL-Datenbank und Azure SQL Data Warehouse.
+Sie können mit `bcp` große Mengen neuer Zeilen in SQL Server-Tabellen importieren oder Daten aus SQL Server-Tabellen in Datendateien exportieren. Außer in Verbindung mit der Option „queryout“ sind für `bcp` keine Kenntnisse von Transact-SQL erforderlich. Das Befehlszeilen-Hilfsprogramm `bcp` kann in Microsoft SQL Server lokal ausgeführt werden oder in der Cloud, unter Linux, Windows oder Docker sowie SQL-Datenbank und Azure Synapse Analytics.
 
 In diesem Artikel lernen Sie Folgendes:
 - Importieren von Daten in eine Tabelle mithilfe des `bcp in`

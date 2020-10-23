@@ -30,17 +30,17 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22a6beec87891408ef34039675dd4a2b9ede5758
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 0ae2f5840120a24cbb0a1c0426c70e36084bd407
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869061"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004803"
 ---
 # <a name="principals-database-engine"></a>Prinzipale (Datenbank-Engine)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  *Prinzipale* sind Entitäten, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressourcen anfordern können. Wie bei anderen Komponenten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Autorisierungsmodells können Prinzipale hierarchisch angeordnet werden. Der Einflussbereich eines Prinzipals hängt vom Gültigkeitsbereich der Definition des Prinzipals ab: Windows, Server, Datenbank und ob der Prinzipal unteilbar oder eine Auflistung ist. Ein Windows-Anmeldename ist ein Beispiel eines unteilbaren Prinzipals und eine Windows-Gruppe das eines Prinzipals, der eine Auflistung darstellt. Jeder Prinzipal weist eine Sicherheits-ID (SID) auf. Dieser Artikel gilt für alle Versionen von SQL Server, jedoch gibt es bei Prinzipalen auf Serverebene in SQL-Datenbank oder SQL Data Warehouse eine Reihe von Einschränkungen. 
+  *Prinzipale* sind Entitäten, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressourcen anfordern können. Wie bei anderen Komponenten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Autorisierungsmodells können Prinzipale hierarchisch angeordnet werden. Der Einflussbereich eines Prinzipals hängt vom Gültigkeitsbereich der Definition des Prinzipals ab: Windows, Server, Datenbank und ob der Prinzipal unteilbar oder eine Auflistung ist. Ein Windows-Anmeldename ist ein Beispiel eines unteilbaren Prinzipals und eine Windows-Gruppe das eines Prinzipals, der eine Auflistung darstellt. Jeder Prinzipal weist eine Sicherheits-ID (SID) auf. Dieser Artikel gilt für alle Versionen von SQL Server, jedoch gibt es bei Prinzipalen auf Serverebene in SQL-Datenbank oder Azure Synapse Analytics eine Reihe von Einschränkungen. 
   
 ## <a name="sql-server-level-principals"></a>Prinzipale auf SQL Server-Ebene  
   

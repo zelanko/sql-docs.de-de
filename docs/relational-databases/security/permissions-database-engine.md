@@ -20,19 +20,20 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009393"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081949"
 ---
 # <a name="permissions-database-engine"></a>Berechtigungen (Datenbank-Engine)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Jedes sicherungsfähige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Element hat zugeordnete Berechtigungen, die einem Prinzipal erteilt werden können. [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Berechtigungen im Datenbankmodul werden sowohl auf dem Serverlevel, das den Anmeldeinformationen und Serverrollen zugewiesen ist, als auch auf dem Datenbanklevel verwaltet, das den Datenbankbenutzer und Datenbankrollen zugewiesen ist. Das Model für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] wendet dieses System auch auf die Datenbankberechtigungen an. Die Berechtigungen auf Serverebene sind jedoch nicht verfügbar. Dieses Thema bietet eine vollständige Liste der Berechtigungen. Eine typische Implementierung der Berechtigungen finden Sie unter [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-Die Gesamtanzahl der Berechtigungen für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] beträgt 237. Die meisten Berechtigungen – jedoch nicht alle – gelten für alle Plattformen. Zum Beispiel können für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] keine Berechtigungen auf Serverebene erteilt werden, und einige Berechtigungen sind nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sinnvoll. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] macht 230 Berechtigungen verfügbar. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] macht 219 Berechtigungen verfügbar. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] macht 214 Berechtigungen verfügbar. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] macht 195 Berechtigungen verfügbar. Im Thema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) wird angegeben, welche Themen in den aktuellsten Versionen neu sind.
+Die Gesamtzahl der Berechtigungen für [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] beträgt 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] macht 254 Berechtigungen verfügbar. Die meisten Berechtigungen – jedoch nicht alle – gelten für alle Plattformen. Zum Beispiel können für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] keine Berechtigungen auf Serverebene erteilt werden, und einige Berechtigungen sind nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sinnvoll.
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] macht 238 Berechtigungen verfügbar. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] macht 230 Berechtigungen verfügbar. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] macht 219 Berechtigungen verfügbar. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] macht 214 Berechtigungen verfügbar. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] macht 195 Berechtigungen verfügbar. Im Thema [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) wird angegeben, welche Themen in den aktuellsten Versionen neu sind.
 
 Sobald Sie sich mit den Berechtigungen vertraut gemacht haben, verwenden Sie die Anweisungen [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)und [DENY](../../t-sql/statements/deny-transact-sql.md) , um Berechtigungen auf Serverebene auf Anmeldungen und Berechtigungen auf Datenbankebene auf Benutzer anzuwenden. Beispiel:   
 ```sql

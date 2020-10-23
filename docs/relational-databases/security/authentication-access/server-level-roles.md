@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 976bfdb47aae7037e3a7636299ff98e4a1424944
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869019"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004280"
 ---
 # <a name="server-level-roles"></a>Rollen auf Serverebene
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91869019"
   
  Sie können Prinzipale auf Serverebene ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldungen, Windows-Konten und Windows-Gruppen) zu Rollen auf Serverebene zusammenfassen. Jedes Mitglied einer festen Serverrolle kann der gleichen Rolle andere Anmeldenamen hinzufügen. Mitglieder benutzerdefinierter Serverrollen können der Rolle keine weiteren Serverprinzipale hinzufügen.  
 > [!NOTE]
->  Berechtigungen auf Serverebene sind in der SQL-Datenbank oder SQL Data Warehouse nicht verfügbar. Weitere Informationen zur SQL-Datenbank finden Sie unter [Steuern und Gewähren des Datenbankzugriffs](/azure/sql-database/sql-database-manage-logins).
+>  Berechtigungen auf Serverebene sind in der SQL-Datenbank oder Azure Synapse Analytics nicht verfügbar. Weitere Informationen zur SQL-Datenbank finden Sie unter [Steuern und Gewähren des Datenbankzugriffs](/azure/sql-database/sql-database-manage-logins).
   
 ## <a name="fixed-server-level-roles"></a>Feste Rollen auf Serverebene  
  In der folgenden Tabelle werden die festen Rollen auf Serverebene und deren Möglichkeiten angezeigt.  

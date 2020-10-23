@@ -16,12 +16,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb9b80387573d0145c6510d9377ac959939dd536
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 1e101fe01c421dbd75b7d0426f13539fb0688e3d
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332349"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005861"
 ---
 # <a name="specify-parameters"></a>Angeben von Parametern
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ GO
 >  Wenn es sich bei dem Standardwert um eine Zeichenfolge handelt, die eingebettete Leerzeichen oder Satzzeichen enthält oder mit einer Zahl beginnt (z. B. 6xxx), muss der Wert in einfache, gerade Anführungszeichen eingeschlossen werden.  
 
 > [!NOTE] 
-> Standardparameter werden in Azure SQL Data Warehouse oder Parallel Data Warehouse nicht unterstützt. 
+> Standardparameter werden in Azure Synapse Analytics oder Parallel Data Warehouse nicht unterstützt. 
   
  Wenn kein entsprechender Wert als Standardwert für den Parameter angegeben werden kann, geben Sie NULL als Standardwert an. Es empfiehlt sich, die Prozedur eine benutzerdefinierte Meldung zurückgeben zu lassen, wenn sie ohne Wertangabe für den Parameter ausgeführt wird.  
   

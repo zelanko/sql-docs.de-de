@@ -2,7 +2,7 @@
 description: CREATE FUNCTION (Azure Synapse Analytics)
 title: CREATE FUNCTION (Azure Synapse Analytics) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/17/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,17 +14,17 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4dbe21949a1912eef8aad4de122a8b0a263eec7c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 8a655a2226ff7104fa7649ce851cbf9bd6da9355
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671163"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037053"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Erstellt eine benutzerdefinierte Funktion in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Eine benutzerdefinierte Funktion ist eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Routine, die Parameter annimmt, eine Aktion ausführt (z.B. eine komplexe Berechnung) und das Ergebnis dieser Aktion als Wert zurückgeben kann. Der Rückgabewert muss ein Skalarwert (Einzelwert) sein. Verwenden Sie diese Anweisung zum Erstellen einer wiederverwendbaren Routine, die auf folgende Weise verwendet werden kann:  
+  Erstellt eine benutzerdefinierte Funktion in [!INCLUDE[ssSDW](../../includes/ssazuresynapse_md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Eine benutzerdefinierte Funktion ist eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Routine, die Parameter annimmt, eine Aktion ausführt (z.B. eine komplexe Berechnung) und das Ergebnis dieser Aktion als Wert zurückgeben kann. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] muss der Rückgabewert ein Skalarwert (Einzelwert) sein. In [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] kann CREATE FUNCTION durch Verwenden der Syntax für Inline-Tabellenwertfunktionen (Vorschau) eine Tabelle zurückgeben oder durch Verwenden der Syntax für Skalarfunktionen einen Einzelwert zurückgeben. Verwenden Sie diese Anweisung zum Erstellen einer wiederverwendbaren Routine, die auf folgende Weise verwendet werden kann:  
   
 -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, wie z. B. SELECT  
   
@@ -36,12 +36,14 @@ ms.locfileid: "91671163"
   
 -   Zum Ersetzen einer gespeicherten Prozedur  
   
+-   Zum Verwenden einer Inlinefunktion als Filterprädikat für eine Sicherheitsrichtlinie  
+  
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
---Transact-SQL Scalar Function Syntax  
+-- Transact-SQL Scalar Function Syntax  (in Azure Synapse Analytics and Parallel Data Warehouse)
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
     [ = default ] }   
@@ -62,10 +64,24 @@ RETURNS return_data_type
     [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
-  
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+```syntaxsql
+-- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
+CREATE FUNCTION [ schema_name. ] function_name
+( [ { @parameter_name [ AS ] parameter_data_type
+    [ = default ] }
+    [ ,...n ]
+  ]
+)
+RETURNS TABLE
+    [ WITH SCHEMABINDING ]
+    [ AS ]
+    RETURN [ ( ] select_stmt [ ) ]
+[ ; ]
+```
   
 ## <a name="arguments"></a>Argumente  
  *schema_name*  
@@ -105,6 +121,14 @@ RETURNS return_data_type
   
  *scalar_expression*  
  Gibt den skalaren Wert an, den die Skalarfunktion zurückgibt.  
+
+ *select_stmt* **GILT FÜR**: Azure Synapse Analytics  
+ Einzelne SELECT-Anweisung, die den Rückgabewert einer Inline-Tabellenwertfunktion (Vorschau) definiert.
+
+ TABLE **GILT FÜR**: Azure Synapse Analytics  
+ Gibt an, dass der Rückgabewert der Tabellenwertfunktion eine Tabelle ist. Nur Konstanten und @*local_variables* können an Tabellenwertfunktionen übergeben werden.
+
+ In Inline-Tabellenwertfunktionen (Vorschau) wird der TABLE-Rückgabewert durch eine einzige SELECT-Anweisung definiert. Inlinefunktionen haben keine zugeordneten Rückgabevariablen.
   
  **\<function_option>::=** 
   
@@ -140,13 +164,15 @@ RETURNS return_data_type
 -   Geben Sie beim Erstellen der Funktion die WITH SCHEMABINDING-Klausel an. Hiermit wird sichergestellt, dass die Objekte, auf die in der Funktionsdefinition verwiesen wird, nicht geändert werden können, es sei denn, die Funktion wird auch geändert.  
   
 ## <a name="interoperability"></a>Interoperabilität  
- Die folgenden Anweisungen sind in einer Funktion zulässig:  
+ Die folgenden Anweisungen sind in Skalarwertfunktionen gültig:  
   
 -   Zuweisungsanweisungen  
   
 -   Anweisungen zur Ablaufsteuerung, mit Ausnahme von TRY...CATCH-Anweisungen  
   
 -   DECLARE-Anweisungen zum Definieren lokaler Datenbankvariablen.  
+
+In einer Inline-Tabellenwertfunktion (Vorschau) ist nur eine einzelne SELECT-Anweisung zulässig.
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Mit benutzerdefinierten Funktionen können keine Aktionen ausgeführt werden, die den Status einer Datenbank ändern.  
@@ -193,6 +219,45 @@ GO
   
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
+
+## <a name="examples-sssdwfull"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+
+### <a name="a-creating-an-inline-table-valued-function-preview"></a>A. Erstellen einer Inline-Tabellenwertfunktion (Vorschau)
+ Im folgenden Beispiel wird eine Inline-Tabellenwertfunktion erstellt, um einige wichtige Informationen zu Modulen zurückzugeben, die nach dem `objectType`-Parameter gefiltert werden. Sie enthält einen Standardwert, durch den sie alle Module zurückgibt, wenn die Funktion mit dem DEFAULT-Parameter aufgerufen wird. In diesem Beispiel werden einige der Systemkatalogansichten verwendet, die in [Metadaten](#metadata) erwähnt werden.
+
+```sql
+CREATE FUNCTION dbo.ModulesByType(@objectType CHAR(2) = '%%')
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        sm.object_id AS 'Object Id',
+        o.create_date AS 'Date Created',
+        OBJECT_NAME(sm.object_id) AS 'Name',
+        o.type AS 'Type',
+        o.type_desc AS 'Type Description', 
+        sm.definition AS 'Module Description'
+    FROM sys.sql_modules AS sm  
+    JOIN sys.objects AS o ON sm.object_id = o.object_id
+    WHERE o.type like '%' + @objectType + '%'
+);
+GO
+```
+Anschließend kann die Funktion aufgerufen werden, um folgendermaßen alle Ansichtsobjekte (**V**) zurückzugeben:
+```sql
+select * from dbo.ModulesByType('V');
+```
+
+### <a name="b-combining-results-of-an-inline-table-valued-function-preview"></a>B. Kombinieren der Ergebnisse einer Inline-Tabellenwertfunktion (Vorschau)
+ In diesem einfachen Beispiel wird die zuvor erstellte Tabellenwertfunktion verwendet, um zu zeigen, wie ihre Ergebnisse mithilfe von CROSS APPLY mit anderen Tabellen kombiniert werden können. Hier wählen wir alle Spalten aus beiden sys.objects und die Ergebnisse von `ModulesByType` für alle Zeilen aus, deren *type*-Spalte übereinstimmt. Weitere Details zum Verwenden von APPLY finden Sie unter [FROM-Klausel plus JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
+
+```sql
+SELECT * 
+FROM sys.objects o
+CROSS APPLY dbo.ModulesByType(o.type);
+GO
+```
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   

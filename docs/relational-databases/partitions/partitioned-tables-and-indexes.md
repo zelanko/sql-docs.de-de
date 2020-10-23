@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: e02e5e2e6449a1c8c62072d0cd5a86d44cdf22ce
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891010"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006000"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Tabellen- und Indexpartitionierung. Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt sein können. Die Daten werden horizontal partitioniert, sodass Gruppen von Zeilen einzelnen Partitionen zugeordnet werden. Alle Partitionen eines einzelnen Indexes oder einer Tabelle müssen sich in der gleichen Datenbank befinden. Die Tabelle oder der Index wird als einzelne logische Entität behandelt, wenn Abfragen oder Aktualisierungen für die Daten ausgeführt werden. Vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 waren partitionierte Tabellen und Indizes nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Tabellen- und Indexpartitionierung. Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die optional über mehrere Dateigruppen in einer Datenbank verteilt sein können. Die Daten werden horizontal partitioniert, sodass Gruppen von Zeilen einzelnen Partitionen zugeordnet werden. Alle Partitionen eines einzelnen Indexes oder einer Tabelle müssen sich in der gleichen Datenbank befinden. Die Tabelle oder der Index wird als einzelne logische Entität behandelt, wenn Abfragen oder Aktualisierungen für die Daten ausgeführt werden. Vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 waren partitionierte Tabellen und Indizes nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt standardmäßig bis zu 15.000 Partitionen. In früheren Versionen als [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde die Anzahl der Partitionen standardmäßig auf 1.000 beschränkt. Auf x86-basierten Systemen ist das Erstellen einer Tabelle oder eines Indexes mit mehr als 1.000 Partitionen möglich, wird aber nicht unterstützt.  
@@ -40,9 +40,12 @@ ms.locfileid: "91891010"
   
 -   Die Abfrageleistung lässt sich, abhängig von den am häufigsten ausgeführten Abfragetypen sowie der Hardwarekonfiguration, möglicherweise verbessern. So kann der Abfrageoptimierer zum Beispiel Gleichheitsjoin-Abfragen zwischen zwei oder mehreren partitionierten Tabellen schneller verarbeiten, wenn die Partitionierungsspalten mit den Spalten identisch sind, über die die Tabellen verknüpft werden. Weitere Informationen finden Sie weiter unten unter [Abfragen](#queries).
   
-Beim Sortieren von Daten nach E-A-Operationen geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zunächst nach Partitionen vor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] greift jeweils auf ein Laufwerk zu, wodurch sich die Leistung möglicherweise verringert. Um die Leistung beim Sortieren von Daten zu verbessern, verteilen Sie die Datendateien der Partitionen über mehrere Datenträger, d. h. durch das Einrichten eines RAID (Redundant Array of Independent Disks). Auf diese Weise kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , obwohl die Daten dabei weiterhin nach Partitionen sortiert werden, auf alle Laufwerke der einzelnen Partitionen gleichzeitig zugreifen.  
+Beim Sortieren von Daten nach E-A-Operationen geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zunächst nach Partitionen vor. Um die Leistung beim Sortieren von Daten zu verbessern, verteilen Sie die Datendateien der Partitionen über mehrere Datenträger, d. h. durch das Einrichten eines RAID (Redundant Array of Independent Disks). Auf diese Weise kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , obwohl die Daten dabei weiterhin nach Partitionen sortiert werden, auf alle Laufwerke der einzelnen Partitionen gleichzeitig zugreifen.  
   
 Darüber hinaus kann die Leistung verbessert werden, indem eine Sperrenausweitung auf Partitionsebene statt auf die gesamte Tabelle angewendet wird. Dies kann Sperrenkonflikte für die Tabelle reduzieren. Setzen Sie die `LOCK_ESCALATION`-Option der `ALTER TABLE`-Anweisung auf AUTO, um eine Sperrenausweitung auf die Partition zuzulassen und damit Sperrenkonflikte zu verringern. 
+
+> [!TIP]
+> Partitionen einer Tabelle oder eines Index können in einer Dateigruppe, beispielsweise der Dateigruppe `PRIMARY`, oder in mehreren Dateigruppen platziert werden. Bei der Verwendung von mehrstufigem Speicher ermöglicht die Verwendung mehrerer Dateigruppen das Zuweisen bestimmter Partitionen zu bestimmten Speicherebenen. Alle anderen Partitionierungsvorteile gelten unabhängig von der Anzahl der verwendeten Dateigruppen oder der Platzierung von Partitionen in bestimmten Dateigruppen.
   
 ## <a name="components-and-concepts"></a>Komponenten und Konzepte  
 Die folgenden Begriffe beziehen sich auf die Tabellen- und Indexpartitionierung.  
@@ -114,6 +117,8 @@ Wenn Sie häufig Abfragen ausführen, die Gleichheitsjoins zwischen mindestens z
 -  Sie definieren dieselbe Anzahl an Partitionen.
 -  Sie definieren dieselben Begrenzungswerte für Partitionen.
 Dies ermöglicht dem Abfrageoptimierer, den Join schneller zu verarbeiten, da die Partitionen selbst verknüpft werden können. Wenn eine Abfrage zwei Tabellen verknüpft, die nicht angeordnet oder nicht am Joinsfeld miteinander verknüpft sind, kann das Vorhandensein von Partitionen die Abfrageverarbeitung womöglich sogar verlangsamen, anstatt zu beschleunigen.
+
+Weitere Informationen zur Verarbeitung von Partitionen in der Abfrageverarbeitung finden Sie unter [Verbesserte Abfrageverarbeitung bei partitionierten Tabellen und Indizes](../../relational-databases/query-processing-architecture-guide.md#query-processing-enhancements-on-partitioned-tables-and-indexes).
 
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>Das Verhalten ändert sich beim Berechnen von Statistiken, während Vorgänge für partitionierte Indizes durchgeführt werden  
  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]werden Statistiken nicht durch das Scannen aller Zeilen in der Tabelle erstellt, wenn ein partitionierter Index erstellt oder neu erstellt wird. Der Abfrageoptimierer generiert stattdessen Statistiken mithilfe des Standardalgorithmus zur Stichprobenentnahme. Nachdem eine Datenbank mit partitionierten Indizes aktualisiert wurde, bemerken Sie möglicherweise einen Unterschied in den Histogrammdaten für diese Indizes. Diese Änderung des Verhaltens beeinträchtigt die Abfrageleistung möglicherweise nicht. Um Statistiken zu partitionierten Indizes durch das Scannen aller Zeilen in der Tabelle abzurufen, verwenden Sie `CREATE STATISTICS` oder `UPDATE STATISTICS` mit der `FULLSCAN`-Klausel.  

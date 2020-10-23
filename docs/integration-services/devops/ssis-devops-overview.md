@@ -9,18 +9,18 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 1cc68be44a45ece8ad844585162b0cff651ae487
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823482"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194083"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools"></a>DevOps-Tools für SQL Server Integration Services (SSIS)
+# <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>SSIS-DevOps-Tools (SQL Server Integration Services) Azure DevOps-Erweiterung
 
 Die Erweiterung [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) ist im **Azure DevOps Marketplace** verfügbar.
 
-Wenn Sie noch nicht über eine **Azure DevOps-Organisation** verfügen, registrieren Sie sich zunächst bei [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops). Fügen Sie anschließend gemäß [dieser Anleitung](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension) die Erweiterung **SSIS DevOps-Tools** hinzu.
+Wenn Sie noch nicht über eine **Azure DevOps-Organisation** verfügen, registrieren Sie sich zunächst bei [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops). Fügen Sie anschließend gemäß [dieser Anleitung](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension) die Erweiterung **SSIS DevOps-Tools** hinzu.
 
 **SSIS DevOps Tools** umfasst den **SSIS-Buildtask**, den **SSIS-Bereitstellungstask** sowie den **Konfigurationstask für SSIS-Kataloge**.
 
@@ -58,13 +58,13 @@ Name der Projektkonfiguration, die für den Build verwendet werden soll. Wird ke
 
 #### <a name="output-path"></a>Ausgabepfad
 
-Pfad eines separaten Ordners zum Speichern von Buildergebnissen, die über den Task [Veröffentlichen von Buildartefakten](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops) als Buildartefakt veröffentlicht werden können.
+Pfad eines separaten Ordners zum Speichern von Buildergebnissen, die über den Task [Veröffentlichen von Buildartefakten](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops) als Buildartefakt veröffentlicht werden können.
 
 ### <a name="limitations-and-known-issues"></a>Einschränkungen und bekannte Probleme
 
 - Der SSIS-Buildtask verwendet den Visual Studio- und SSIS-Designer, der für Build-Agents obligatorisch ist. Wenn Sie den SSIS-Buildtask also in der Pipeline ausführen möchten, wählen Sie für von Microsoft gehostete Agents **vs2017-win2016** aus. Oder installieren Sie für selbstgehostete Agents den Visual Studio- und SSIS-Designer (entweder VS2017 und SSDT2017 oder VS2019 und SSIS-Projekterweiterungen).
 
-- Wenn Sie SSIS-Projekte mit beliebigen Standardkomponenten (wie etwa SSIS Azure Feature Pack oder andere Drittanbieterkomponenten) erstellen möchten, müssen Sie diese auf dem Computer installieren, auf dem der Pipeline-Agent ausgeführt wird.  Bei von Microsoft gehosteten Agents können Benutzer einen [PowerShell-Skripttask](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) oder [Befehlszeilen-Skripttask](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) hinzufügen, um die Komponenten vor Ausführung des SSIS-Buildtasks herunterzuladen und zu installieren. Hier finden Sie das PowerShell-Beispielskript zum Installieren von Azure Feature Pack: 
+- Wenn Sie SSIS-Projekte mit beliebigen Standardkomponenten (wie etwa SSIS Azure Feature Pack oder andere Drittanbieterkomponenten) erstellen möchten, müssen Sie diese auf dem Computer installieren, auf dem der Pipeline-Agent ausgeführt wird.  Bei von Microsoft gehosteten Agents können Benutzer einen [PowerShell-Skripttask](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops) oder [Befehlszeilen-Skripttask](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops) hinzufügen, um die Komponenten vor Ausführung des SSIS-Buildtasks herunterzuladen und zu installieren. Hier finden Sie das PowerShell-Beispielskript zum Installieren von Azure Feature Pack: 
 
 ```powershell
 wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
@@ -172,7 +172,7 @@ Unter folgenden Hyperlinks finden Sie weitere Informationen zum [Angeben der JSO
 
 Der Pfad zur JSON-Konfigurationsdatei für den SSIS-Katalog. Diese Eigenschaft ist nur sichtbar, wenn „Dateipfad“ als Quelle der Konfigurationsdatei ausgewählt ist.
 
-Wenn Sie [Pipelinevariablen](/azure/devops/pipelines/process/variables) in der JSON-Konfiurationsdatei verwenden möchten, müssen Sie vor diesem Task einen [Dateitransformationstask](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) hinzufügen, um Konfigurationswerte durch Pipelinevariablen zu ersetzen. Weitere Informationen finden Sie unter [JSON-Variablenersetzung](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
+Wenn Sie [Pipelinevariablen](/azure/devops/pipelines/process/variables) in der JSON-Konfiurationsdatei verwenden möchten, müssen Sie vor diesem Task einen [Dateitransformationstask](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) hinzufügen, um Konfigurationswerte durch Pipelinevariablen zu ersetzen. Weitere Informationen finden Sie unter [JSON-Variablenersetzung](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops#json-variable-substitution).
 
 #### <a name="inline-configuration-json"></a>Inline configuration JSON (Inline eingebettete JSON-Konfiguration)
 
