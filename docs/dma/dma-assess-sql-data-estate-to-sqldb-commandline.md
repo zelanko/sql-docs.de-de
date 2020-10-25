@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867695"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496815"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>Dmacmd: Bewerten der Bereitschaft einer SQL Server-Datenbankmigration zu Azure SQL 
 
@@ -28,7 +28,12 @@ Wenn viele Organisationen versuchen, zu Azure zu migrieren, ist es wichtig, vorh
 
 [Datenmigrations-Assistent (DMA)](dma-overview.md) unterstützt Sie bei der Bewertung einer SQL Server Instanz für ein bestimmtes Azure SQL-Ziel und misst die Bereitschaft von SQL Server Datenbanken, die zu Azure SQL migrieren. Laden Sie DMA-Bewertungsergebnisse in Azure migrate Hub hoch, um eine zentralisierte Bereitschafts Ansicht des gesamten Datentyps zu erhalten. 
 
-In diesem Artikel erfahren Sie, wie Sie mit der DMA-Befehlszeilenschnittstelle (dmacmd) Bewertungen in der Skala ausführen und die Ergebnisse in Azure migrate Hub hochladen. Alternativ können Sie stattdessen die [DMA-GUI](dma-assess-sql-data-estate-to-sqldb.md) verwenden, um die Bewertung durchzuführen. 
+In diesem Artikel erfahren Sie, wie Sie mit der DMA-Befehlszeilenschnittstelle (dmacmd) Bewertungen in der Skala ausführen und die Ergebnisse in Azure migrate Hub hochladen. Alternativ können Sie stattdessen die [DMA-GUI](dma-assess-sql-data-estate-to-sqldb.md) verwenden, um die Bewertung durchzuführen.
+
+Weitere Informationen finden Sie im folgenden channel9-Video:
+
+>
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Voraussetzungen 
 
@@ -87,7 +92,7 @@ Die XML-Elemente, die an dmacmd übermittelt werden, werden in der folgenden Tab
 |**XML-Element** |**Definition**  |
 |---------|---------|
 |`AssessmentName`|Der Name der Bewertung.|
-|`AssessmentSourcePlatform`|Quelle SQL Server Plattform. Der Standardwert ist `SqlOnPrem`.|
+|`AssessmentSourcePlatform`|Quelle SQL Server Plattform. Standardwert: `SqlOnPrem`.|
 |`AssessmentTargetPlatform`|Ziel SQL Server Plattform.  </br> `AzureSqlDatabase` ist für ein Azure SQL-Daten Bank Ziel. </br> `ManagedSqlServer` ist für ein Azure SQL-verwaltete Instanz Ziel. </br></br>Das Beispiel " **Assessment-for-azuresqlmi** " bewertet ein SQL verwaltete Instanz-Ziel.|
 |`AssessmentDatabases`|Wenn Sie alle Datenbanken in einer Instanz bewerten müssen, geben Sie nur den Instanznamen an, und geben Sie in jeder Zeile bestimmte Datenbanken an. </br></br>Das Beispiel **Assessment-for-azuresqlmi** bewertet alle Datenbanken in der Instanz `Servername\SQL2017` und zwei bestimmte Datenbanken in der Instanz `Servername\SQL2016` .  |
 |`AssessmentResultDma` </br> `AssessmentResultJson` </br> `AssessmentResultCsv` | Gibt das Format der Ergebnisdatei an. `.DMA`, `.JSON` `.CSV` bzw. Doppelklicken Sie `.DMA` , um in der DMA-Benutzeroberfläche zu öffnen. <br> `AssessmentResultDma` ist erforderlich, um Bewertungsergebnisse in Azure migrate Hub hochzuladen.  |
@@ -139,3 +144,4 @@ Beachten Sie bei der Verwendung von dmacmd die folgenden bewährten Methoden:
 * [Datenmigrations-Assistent (DMA)](../dma/dma-overview.md)
 * [Datenmigrations-Assistent: Konfigurationseinstellungen](../dma/dma-configurationsettings.md)
 * [Datenmigrations-Assistent: bewährte Methoden](../dma/dma-bestpractices.md)
+

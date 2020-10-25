@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d44e90493c905764eaceea86b5cc3c3311091726
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: c4cdbd3a640e49bc9a43e30d4bf98cff7bf71194
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379412"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523825"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Installieren von SQL Server Operations Manager Management Packs (SCOM) für Analytics Platform System
 Führen Sie die folgenden Schritte aus, um die System Center Operations Manager-Management Packs (SCOM) für SQL Server PDW herunterzuladen und zu installieren. Die Management Packs sind erforderlich, um SQL Server PDW von SCOM zu überwachen.  
@@ -49,7 +49,7 @@ Für ältere Versionen von PDW ohne APS laden Sie das[System Center Monitoring P
   
 4.  Klicken Sie auf **Installieren**.  
   
-    ![Bestätigen der Installation](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
+    ![Screenshot des Assistenten zum Überprüfen der Basis Überwachung von SQL Server Appliance im MP-Installationsschritt, bei dem die Option "Install" rot markiert ist.](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
 5.  Klicken Sie auf **Schließen**.  
   
@@ -69,7 +69,7 @@ Für ältere Versionen von PDW ohne APS laden Sie das[System Center Monitoring P
   
 4.  Klicken Sie auf **Installieren**.  
   
-    ![Bestätigen der Installation](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
+    ![Screenshot des Assistenten für den pdwmp-Installer im Installationsschritt bestätigen, dass die Option installieren in rot angezeigt wird.](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
 5.  Klicken Sie auf **Schließen**.  
   

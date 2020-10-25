@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 095c14150a3f78f49a8e1dd6d711b5fefc617d49
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 9aae42b92c6d7d9bb5c26c84e49c49a8cde6bc57
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726341"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523877"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Bewerten Sie die Bereitschaft einer SQL Server-Datenbankmigration zu Azure SQL-Datenbank mithilfe des Datenmigrations-Assistent
 
@@ -59,7 +59,7 @@ Ein Azure Migrate-Projekt wird zum Speichern von Ermittlungs-, Bewertungs- und M
 
     | **Geografie**  | **Region des Speicherorts** |
     | ------------- | ------------- |
-    | Asia | „Asien, Südosten“ und „Asien, Osten“ |
+    | Asien | „Asien, Südosten“ und „Asien, Osten“ |
     | Europa | Europa, Süden oder Europa, Westen |
     | United Kingdom | „Vereinigtes Königreich, Süden“ oder „Vereinigtes Königreich, Westen“ |
     | USA | „USA, Mitte“ oder „USA, Westen 2“ |
@@ -132,11 +132,11 @@ Nachdem Sie erfolgreich ein Migrationsprojekt erstellt haben, können Sie unter 
 
 5. Nachdem die Bewertung abgeschlossen ist, wählen Sie **Hochladen in Azure migrate**aus.
 
-   ![Bildschirm "Azure migrate Datenmigrations-Assistent Überprüfungs Ergebnisse"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
+   ![Screenshot, der die Datenmigrations-Assistent anzeigt, bei der die Option Upload to Azure migrate aufgerufen wird.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
 6. Melden Sie sich beim Azure-Portal an.
 
-   ![Bildschirm "Azure migrate Datenmigrations-Assistent Überprüfungs Ergebnisse"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
+   ![Screenshot der Datenmigrations-Assistent, die das Azure-Portal Anmeldefenster anzeigt.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
 7. Wählen Sie das Abonnement und Azure migrate Projekt aus, in das Sie die Bewertungsergebnisse hochladen möchten, und wählen Sie dann **hochladen**aus.
 

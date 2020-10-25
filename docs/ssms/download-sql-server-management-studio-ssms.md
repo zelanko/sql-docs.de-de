@@ -24,12 +24,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 10/20/2020
-ms.openlocfilehash: 02526928d102dd9dba8a0f19b7a05f36a7de3bcc
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: e86a46603aeac49d0622f17c0520eb7d16970948
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257990"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412639"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 
@@ -162,5 +162,6 @@ Unterstützte Hardware:
 - [Download der neuesten SQL Server-Datatools](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [Neueste Updates](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Azure-Datenarchitekturleitfaden](https://docs.microsoft.com/azure/architecture/data-guide/)
+- [SQL Server-Blog](https://cloudblogs.microsoft.com/sqlserver/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

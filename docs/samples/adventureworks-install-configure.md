@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f4140db7be7367105832ff564d927ba6bc40ed25
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 1482104a0c8ffea7f7f2502b83b9b268b7bb08d2
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955891"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523946"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks-Beispieldatenbanken
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +75,7 @@ Führen Sie die folgenden Schritte aus, um die Datenbank in SQL Server Managemen
 3. Öffnen Sie SQL Server Management Studio (SSMS), und stellen Sie eine Verbindung mit Ihrem SQL Server in her. 
 4. Klicken Sie mit der rechten Maustaste auf **Datenbanken** **Objekt-Explorer**  >  **Restore Database...** , um den **Wiederherstellungs** -Assistenten zu starten. 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Screenshot, der zeigt, wie Sie die Datenbank wiederherstellen, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen klicken&quot;:::
 
 
 1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
@@ -84,7 +84,7 @@ Führen Sie die folgenden Schritte aus, um die Datenbank in SQL Server Managemen
 1. Überprüfen Sie die Registerkarte " **Dateien** ", um zu bestätigen, dass die **Wiederherstellung als** Speicherort und Dateinamen **mit dem gewünschten** Speicherort und den Dateinamen im Assistenten 
 1. Klicken Sie auf **OK**, um die Datenbank wiederherzustellen. 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Screenshot, der zeigt, wie Sie die Datenbank wiederherstellen, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen klicken&quot;:::
 
 
 1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
@@ -123,7 +123,7 @@ Führen Sie die folgenden Schritte aus, um die Datenbank in Azure Data Studio wi
 1. Öffnen Sie Azure Data Studio Studio, und stellen Sie eine Verbindung mit Ihrer SQL Server Instanz her
 1. Klicken Sie mit der rechten Maustaste auf Ihren Server, und wählen Sie **Verwalten**.
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="Screenshot, der zeigt, wie Sie die Datenbank wiederherstellen, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen klicken&quot;:::
 
 
 1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
@@ -133,7 +133,7 @@ Führen Sie die folgenden Schritte aus, um die Datenbank in Azure Data Studio wi
 
 1. Auswählen der **Wiederherstellung**
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Screenshot, der zeigt, wie Sie die Datenbank wiederherstellen, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen klicken&quot;:::
 
 
 1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
@@ -145,7 +145,7 @@ Führen Sie die folgenden Schritte aus, um die Datenbank in Azure Data Studio wi
     1. Wählen Sie unter **Wiederherstellen von**die Option *Sicherungsdatei*aus.
     1. Wählen Sie unter **Pfad der Sicherungsdatei**den Speicherort aus, an dem Sie die BAK-Datei gespeichert haben. 
     
-   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Screenshot, der zeigt, wie Sie die Datenbank wiederherstellen, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen klicken&quot;:::
 
 
 1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
@@ -155,7 +155,7 @@ Führen Sie die folgenden Schritte aus, um die Datenbank in Azure Data Studio wi
     
     Mit diesem Vorgang werden die restlichen Felder automatisch aufgefüllt, z. b. **Datenbank**, **Zieldatenbank** und **Wiederherstellung**. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Screenshot, der zeigt, wie Sie die Datenbank wiederherstellen, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen klicken&quot;:::
 
 
 1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
@@ -165,7 +165,7 @@ Führen Sie die folgenden Schritte aus, um die Datenbank in Azure Data Studio wi
 
 1. Wählen Sie **Wiederherstellen** aus, um die Datenbank wiederherzustellen. 
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Screenshot, der zeigt, wie Sie die Datenbank wiederherstellen, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen klicken&quot;:::
 
 
 1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
@@ -193,7 +193,7 @@ Führen Sie die folgenden Schritte aus, um eine-Beispieldatenbank zum Erstellen 
 1. Geben Sie die angeforderten Informationen ein, um die Datenbank zu erstellen. 
 1. Wählen Sie auf der Registerkarte **zusätzliche Einstellungen** die Option **Sample** als vorhandene Daten unter **Datenquelle**aus: 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Screenshot, der zeigt, wie Sie die Datenbank wiederherstellen, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen klicken&quot;:::
 
 
 1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
@@ -214,7 +214,7 @@ Führen Sie die folgenden Schritte aus, um eine Beispieldatenbank aus SQL Server
 1. Wenn Sie dies noch nicht getan haben, stellen Sie [die-Beispieldatenbank in SQL Server wieder her](#restore-to-sql-server). 
 1. Klicken Sie mit der rechten Maustaste auf die wiederhergestellte Datenbank in **Objekt-Explorer**  >  **Tasks**  >  **Datenbank in Microsoft Azure SQL-Datenbank**bereitstellen.... 
 
-   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen&quot;:::
+   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Screenshot, der zeigt, wie Sie die Datenbank wiederherstellen, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen klicken&quot;:::
 
 
 1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 

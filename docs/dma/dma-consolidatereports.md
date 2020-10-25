@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727801"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523917"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Bewerten eines Unternehmens und Konsolidieren der Bewertungsberichte mit DMA
 
@@ -96,7 +96,7 @@ Erstellen Sie eine Datenbank mit dem Namen **estatueingeventory** und eine Tabel
 - DatabaseName
 - Bewermentflag
 
-![Inhalt der SQL Server Tabelle](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
+![Screenshot eines SQL Server Tabellen Inhalts, wenn Sie eine SQL Server Tabelle verwenden.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 Wenn sich diese Datenbank nicht auf dem Tools-Computer befindet, stellen Sie sicher, dass der Computer Computer über eine Netzwerkverbindung zu dieser SQL Server Instanz verfügt.
 
@@ -113,7 +113,7 @@ Erstellen Sie eine Datenbank mit dem Namen **estatueingeventory** und eine Tabel
 - Port
 - Bewermentflag
 
-![Inhalt der SQL Server Tabelle](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+![Screenshot eines SQL Server Tabellen Inhalts bei Verwendung einer instanzinventur.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
 
 ## <a name="running-a-scaled-assessment"></a>Ausführen einer skalierten Bewertung
 

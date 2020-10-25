@@ -9,17 +9,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 770359a9ddb04eb8aaf45af7dd5b95447c30f264
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401086"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523867"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importieren Sie das SCOM Management Pack-Analytics Platform System.
 Führen Sie die folgenden Schritte aus, um die System Center Operations Manager (SCOM) Management Packs für Analytics Platform System (APS) zu importieren. Die Management Packs sind zum Überwachen paralleler Data Warehouse von SCOM erforderlich. 
   
-## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Bevor Sie beginnen  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Vorbereitungen  
 **Voraussetzungen**  
   
 System Center Operations Manager 2007 R2 muss installiert sein und ausgeführt werden.  
@@ -50,7 +50,7 @@ Die Management Packs müssen installiert sein. Weitere Informationen finden Sie 
   
 7.  Klicken Sie auf **Installieren**.  
   
-    ![Klicken Sie auf Installieren](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
+    ![Screenshot, der den Assistenten zum Importieren von Management Packs im Schritt "Management Packs auswählen" anzeigt, bei dem die Option "Install" rot markiert ist](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
 8.  Klicken Sie nach Abschluss **des**Vorgangs auf schließen.  
   
@@ -70,7 +70,7 @@ Die Management Packs müssen installiert sein. Weitere Informationen finden Sie 
   
 4.  Klicken Sie auf **Installieren**.  
   
-    ![Klicken Sie auf Installieren](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
+    ![Ein weiterer Screenshot des Assistenten zum Importieren von Management Packs wird im Schritt "Management Packs auswählen" angezeigt, wobei die Option "installieren" rot markiert ist.](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
 5.  Klicken Sie auf **Schließen**.  
   

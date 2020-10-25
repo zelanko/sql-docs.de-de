@@ -1,7 +1,7 @@
 ---
 title: Generieren von Daten in SQL-Beispielen wideworldimporters
 description: Verwenden Sie diese SQL-Anweisungen zum Generieren und Importieren von Beispiel Daten bis zum aktuellen Datum der wideworldimporters-Beispiel Datenbanken.
-ms.date: 04/04/2018
+ms.date: 10/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f60ad250ea68f58a98fb93da9f3c5853ad68bd47
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942191"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523935"
 ---
 # <a name="wideworldimporters-data-generation"></a>Datengenerierung von wideworldimporters
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +39,12 @@ So generieren Sie Beispiel Daten bis zum aktuellen Datum:
             @AreDatesPrinted = 1;
     ```
 
-    Diese Anweisung fügt der Datenbank bis zum aktuellen Datum Beispiel Verkäufe und Kauf Daten hinzu. Der Fortschritt der Datengenerierung nach Tag wird angezeigt. Die Datengenerierung kann etwa 10 Minuten für jedes Jahr dauern, für das Daten benötigt werden. Aufgrund eines zufälligen Faktors bei der Datengenerierung gibt es einige Unterschiede in den Daten, die zwischen den Ausführungen generiert werden.
+    Diese Anweisung fügt der Datenbank bis zum aktuellen Datum Beispiel Verkäufe und Kauf Daten hinzu. Der Fortschritt der Datengenerierung nach Tag wird angezeigt. Aufgrund eines zufälligen Faktors bei der Datengenerierung gibt es einige Unterschiede in den Daten, die zwischen den Ausführungen generiert werden.
 
     Ändern Sie den Wert für den-Parameter, um die Datenmenge zu erhöhen oder zu verringern, die für Bestellungen pro Tag generiert wurde `@AverageNumberOfCustomerOrdersPerDay` . Verwenden Sie die Parameter `@SaturdayPercentageOfNormalWorkDay` und `@SundayPercentageOfNormalWorkDay` , um das Bestell Volume für Wochentage festzulegen.
+
+> [!TIP]
+> Das Erzwingen der [verzögerten Dauerhaftigkeit](../relational-databases/logs/control-transaction-durability.md) in der Datenbank kann die Daten Generierungs Geschwindigkeit verbessern, insbesondere wenn sich das Daten Bank Transaktionsprotokoll auf einem Speichersubsystem mit hoher Latenz befindet Beachten Sie bei der Verwendung von verzögerter Dauerhaftigkeit die Auswirkungen auf potenzielle [Datenverluste](../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) , und ziehen Sie in Erwägung, die verzögerte Dauerhaftigkeit der Datengenerierung zu aktivieren.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importieren generierter Daten in wideworldimportersdw
 
