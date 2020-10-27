@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a51f5efc0c4c9cd2a341efd158b271853c0fb936
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 521efff2d77f2d0b6423b61c9b9b74e507764ff0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898691"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257100"
 ---
 # <a name="ad-mode-deployment-hangs--unhealthy-sparkhead-pods"></a>Hängende Bereitstellung im AD-Modus: fehlerhafte `sparkhead`-Pods
 
@@ -101,12 +101,12 @@ Extrahieren Sie die Protokolle, und suchen Sie nach
 `\mssql-cluster\control-<identifier>\controller\control-<identifier>-controller-stdout.log`.
 
 > [!TIP]
-> Protokolle können auf verschiedene Weise gesammelt werden. Anstatt die Protokolle mit `azdata` zu kopieren, können Sie ein Notebook in Azure Data Studio verwenden.
+> Protokolle können auf verschiedene Weise gesammelt werden. Anstatt die Protokolle mit [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] zu kopieren, können Sie ein Notebook in Azure Data Studio verwenden.
 > Stellen Sie in Azure Data Studio eine Verbindung mit dem Kubernetes-Cluster her, und führen Sie ein entsprechendes Notebook zur Problembehandlung aus. Hier einige Beispiele für Notebooks:
 >
 > - TSG027 – Clusterbereitstellung beobachten
 > - TSG061 – Alle Containerprotokollfragmente für Pods im Namespace des Big-Data-Clusters abrufen
-> - TSG001 – `azdata` copy-logs ausführen
+> - TSG001 – `azdata copy-logs` ausführen
 >
   
 ## <a name="inspect-the-logs"></a>Protokolle untersuchen

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e3be3a3ea0d3f3b3d452bfea058ff85dd8a9141
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730680"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257250"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>Sicherheitskonzepte für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -37,7 +37,7 @@ Die externen Clusterendpunkte unterstützen die AD-Authentifizierung. Verwenden 
 
 Es gibt fünf Einstiegspunkte für den Big Data-Cluster:
 
-* Masterinstanz: TDS-Endpunkt für den Zugriff auf die SQL Server-Masterinstanz im Cluster mithilfe von Datenbanktools und Anwendungen wie SSMS oder Azure Data Studio. Wenn Sie HDFS- oder SQL Server-Befehle von azdata verwenden, stellt das Tool je nach Vorgang eine Verbindung mit den anderen Endpunkten her.
+* Masterinstanz: TDS-Endpunkt für den Zugriff auf die SQL Server-Masterinstanz im Cluster mithilfe von Datenbanktools und Anwendungen wie SSMS oder Azure Data Studio. Wenn Sie HDFS- oder SQL Server-Befehle von [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] verwenden, stellt das Tool je nach Vorgang eine Verbindung mit den anderen Endpunkten her.
 
 * Gateway für den Zugriff auf HDFS-Dateien, Spark (Knox): HTTPS-Endpunkt für den Zugriff auf Dienste wie webHDFS und Spark.
 
@@ -59,16 +59,23 @@ Für die Verwaltung des Datenzugriffs gibt es im Cluster zwei Ebenen von Autoris
 
 Ein sicherer Big Data-Cluster impliziert konsistente und kohärente Unterstützung für Authentifizierung- und Autorisierungsszenarien sowohl für SQL Server als auch für HDFS/Spark. Authentifizierung ist der Prozess, mit dem die Identität eines Benutzers oder Diensts überprüft und sichergestellt wird, dass der Benutzer oder Dienst das ist, was er zu sein vorgibt. Autorisierung bezieht sich auf das Gewähren oder Verweigern des Zugriffs auf bestimmte Ressourcen basierend auf der Identität des Benutzers, der den Zugriff anfordert. Dieser Schritt wird ausgeführt, nachdem ein Benutzer per Authentifizierung identifiziert wurde.
 
-Im Big Data-Kontext erfolgt die Autorisierung in der Regel über Zugriffssteuerungslisten (Access Control Lists, ACLs), die Benutzeridentitäten bestimmte Berechtigungen zuordnen. HDFS unterstützt die Autorisierung durch Einschränken des Zugriffs auf Dienst-APIs, HDFS-Dateien und die Auftragsausführung.
+Im Big Data-Kontext erfolgt die Autorisierung über Zugriffssteuerungslisten (Access Control Lists, ACLs), die Benutzeridentitäten bestimmte Berechtigungen zuordnen. HDFS unterstützt die Autorisierung durch Einschränken des Zugriffs auf Dienst-APIs, HDFS-Dateien und die Auftragsausführung.
 
-## <a name="encryption-and-other-security-mechanisms"></a>Verschlüsselung und andere Sicherheitsmechanismen
+## <a name="encryption-in-flight-and-other-security-mechanisms"></a>Verschlüsselung in Flight und andere Sicherheitsmechanismen
 
 Die Verschlüsselung der Kommunikation zwischen Clients und externen Endpunkten sowie zwischen Komponenten innerhalb des Clusters wird mithilfe von Zertifikaten durch TLS/SSL gesichert.
 
 Die gesamte Kommunikation zwischen SQL Server-Instanzen, wie z. B. die Kommunikation der SQL-Masterinstanz mit einem Datenpool, wird mithilfe von SQL-Anmeldungen gesichert.
 
 > [!IMPORTANT]
->  Big Data-Cluster verwenden etcd zum Speichern von Anmeldeinformationen. Um Best Practices einzuhalten, müssen Sie sicherstellen, dass Ihr Kubernetes-Cluster so konfiguriert ist, dass etcd-Verschlüsselung für ruhende Daten verwendet wird. Standardmäßig werden Geheimnisse in etcd unverschlüsselt gespeichert. Weitere Informationen zu dieser Verwaltungsaufgabe finden Sie in der Kubernetes-Dokumentation unter https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ und https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+>  Big Data-Cluster verwenden `etcd` zum Speichern von Anmeldeinformationen. Als bewährte Methode sollten Sie sicherstellen, dass Ihr Kubernetes-Cluster so konfiguriert ist, dass `etcd`-Verschlüsselung für ruhende Daten verwendet wird. Standardmäßig sind in `etcd` gespeicherte Geheimnisse unverschlüsselt. Weitere Informationen zu dieser Verwaltungsaufgabe finden Sie in der Kubernetes-Dokumentation unter https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ und https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+
+## <a name="data-encryption-at-rest"></a>Datenverschlüsselung ruhender Daten
+
+Die Verschlüsselungsfunktion für ruhende Daten von SQL Server Big Data-Clustern unterstützt das Kernszenario der Verschlüsselung auf Anwendungsebene für die SQL Server- und HDFS-Komponenten. Einen umfassenden Leitfaden zur Verwendung der Funktion finden Sie in dem Artikel [Konzepte- und Konfigurationsleitfaden für die Verschlüsselung ruhender Daten](encryption-at-rest-concepts-and-configuration.md).
+
+> [!IMPORTANT]
+> Die Volumeverschlüsselung wird für alle SQL Server Big Data-Clusterbereitstellungen empfohlen. Vom Kunden bereitgestellte Speichervolumes, die in Kubernetes-Clustern konfiguriert wurden, sollten ebenfalls verschlüsselt werden, um einen umfassenden Ansatz bei der Verschlüsselung ruhender Daten zu verfolgen. Die Verschlüsselungsfunktion für ruhende Daten von SQL Server Big Data-Clustern ist eine zusätzliche Sicherheitsebene, die Verschlüsselung von SQL Server-Daten und -Protokolldateien auf Anwendungsebene sowie Unterstützung für HDFS-Verschlüsselungszonen bereitstellt.
 
 
 ## <a name="basic-administrator-login"></a>Standardanmeldung für Administratoren

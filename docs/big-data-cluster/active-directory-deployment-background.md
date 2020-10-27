@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5c30e4c3d7c3188920ecd15104b20a5472e306
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: a2b95ef0934c1eb01944df562c4c34cd73d8e0d0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91892500"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257340"
 ---
 # <a name="deploy-multiple-big-data-clusters-2019-in-the-same-active-directory-domain"></a>Bereitstellen mehrerer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in derselben Active Directory-Domäne
 
@@ -140,7 +140,7 @@ Dies ist nicht verpflichtend, jedoch empfehlenswert. Separate Organisationseinhe
 
 ### <a name="how-to-revert-back-to-the-pre-cu5-behavior"></a>Wie kann das Verhalten vor CU5 wiederhergestellt werden?
 
-Möglicherweise gibt es Szenarios, in denen Sie den neu eingeführten Parameter `subdomain` nicht unterstützen können, beispielsweise wenn Sie ein Release vor CU5 bereitstellen müssen und die `azdata`-CLI bereits aktualisiert haben. Dies ist zwar sehr unwahrscheinlich, wenn Sie das Verhalten vor dem CU5-Release jedoch wiederherstellen müssen, können Sie im Active Directory-Abschnitt von `control.json` den Parameter `useSubdomain` auf `false` festlegen.
+Möglicherweise gibt es Szenarios, in denen Sie den neu eingeführten Parameter `subdomain` nicht unterstützen können, beispielsweise wenn Sie ein Release vor CU5 bereitstellen müssen und die [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] bereits aktualisiert haben. Dies ist zwar sehr unwahrscheinlich, wenn Sie das Verhalten vor dem CU5-Release jedoch wiederherstellen müssen, können Sie im Active Directory-Abschnitt von `control.json` den Parameter `useSubdomain` auf `false` festlegen.
 
 Im folgenden Beispiel wird `useSubdomain` in diesem Szenario auf `false` festgelegt.
 

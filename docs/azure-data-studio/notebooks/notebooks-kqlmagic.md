@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 61b87d2dae44f30f84b513f6809ba8597de7712f
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 7f77f26ffbaa0dab14e41654fdcddda3dd4ab278
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226970"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300487"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Kqlmagic in Azure Data Studio
 
@@ -31,7 +31,7 @@ In diesem Artikel erfahren Sie, wie Sie ein Notebook in Azure Data Studio mithil
 
 Alle Schritte dieses Abschnitts werden in einem Azure Data Studio-Notebook ausgeführt.
 
-1. Erstellen Sie ein neues Notebook, und ändern Sie den **Kernel** in *Python 3*.
+1. Erstellen Sie ein neues Notebook, und ändern Sie den **Kernel** in *Python 3* .
 
    ![Neues Notebook](media/notebooks-kqlmagic/install-new-notebook.png)
 
@@ -112,7 +112,7 @@ In diesem Abschnitt wird das Ausführen der Datenanalyse mit Kqlmagic mit einem 
     > Wenn Sie Ihren eigenen ADX-Cluster verwenden, müssen Sie die Region wie folgt in die Verbindungszeichenfolge aufnehmen:   
     ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
-   Verwenden Sie die Geräteanmeldung zum Authentifizieren. Kopieren Sie den Code aus der Ausgabe, und klicken Sie auf **Authentifizieren**. Daraufhin wird ein Browser geöffnet, in den Sie den Code einfügen müssen. Sobald Sie sich erfolgreich authentifiziert haben, können Sie zu Azure Data Studio zurückkehren, um mit dem Rest des Skripts fortzufahren.
+   Verwenden Sie die Geräteanmeldung zum Authentifizieren. Kopieren Sie den Code aus der Ausgabe, und klicken Sie auf **Authentifizieren** . Daraufhin wird ein Browser geöffnet, in den Sie den Code einfügen müssen. Sobald Sie sich erfolgreich authentifiziert haben, können Sie zu Azure Data Studio zurückkehren, um mit dem Rest des Skripts fortzufahren.
 
    ![Azure Data Explorer-Authentifizierung](media/notebooks-kqlmagic/ade-auth.png)
 
@@ -254,8 +254,10 @@ Fragen Sie Daten mit dem [Render-Operator](/azure/data-explorer/kusto/query/rend
 
 Erfahren Sie mehr über Notebooks und Kqlmagic:
 
+- [Kusto-Erweiterung (KQL) für Azure Data Studio (Vorschau)](https://docs.microsoft.com/sql/azure-data-studio/extensions/kusto-extension)
+- [Erstellen und Ausführen eines Kusto-Notebooks (KQL) (Vorschau)](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-kusto-kernel)
 - [Verwenden einer Jupyter Notebook-Instanz und der Kqlmagic-Erweiterung zum Analysieren von Daten in Azure Data Explorer](/azure/data-explorer/Kqlmagic)
-- [Magic-Erweiterung für Jupyter Notebook und Jupyter Lab zum Ermöglichen der Notebook-Funktion mit Daten von Kusto, Application Insights und der Protokollanalyse](https://github.com/Microsoft/jupyter-Kqlmagic)
+- [Magic-Erweiterung für Jupyter Notebook und Jupyter Lab](https://github.com/Microsoft/jupyter-Kqlmagic) zum Ermöglichen der Notebook-Funktion mit Daten von Kusto, Application Insights und der Protokollanalyse.
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
 - [Verwenden von Notebooks in Azure Data Studio](./notebooks-guidance.md)

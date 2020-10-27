@@ -9,12 +9,12 @@ ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79ea97a0824d7213f0758d75f8b552372bba51c2
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 315752ffc775aa1db1970e3fef5c807e0f8e1708
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87879040"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257131"
 ---
 # <a name="kubernetes-rbac-model--impact-on-users-and-service-accounts-managing-bdc"></a>RBAC-Modell in Kubernetes und Auswirkungen auf Benutzer und Dienstkonten, die Big Data-Cluster verwalten
 
@@ -25,7 +25,7 @@ In diesem Artikel werden die Berechtigungsanforderungen für Big Data-Cluster v
 
 ## <a name="role-required-for-deployment"></a>Für die Bereitstellung erforderliche Rolle
 
-Der Big Data-Cluster verwendet Dienstkonten (z. B. `sa-mssql-controller` oder `master`), um z. B. die Bereitstellung der Clusterpods, der Dienste, der Hochverfügbarkeit und der Überwachung zu orchestrieren. Wenn die Bereitstellung des Big Data-Clusters beginnt (z. B. `azdata bdc create`), übernimmt `azdata` folgende Aufgaben:
+Der Big Data-Cluster verwendet Dienstkonten (z. B. `sa-mssql-controller` oder `master`), um z. B. die Bereitstellung der Clusterpods, der Dienste, der Hochverfügbarkeit und der Überwachung zu orchestrieren. Wenn die Bereitstellung des Big Data-Clusters beginnt (z. B. `azdata bdc create`), übernimmt [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] folgende Aufgaben:
 
 1. azdata überprüft, ob der bereitgestellte Namespace vorhanden ist.
 2. Ist dies nicht der Fall, wird ein Namespace erstellt und die `MSSQL_CLUSTER`-Bezeichnung darauf angewendet.
@@ -105,7 +105,7 @@ Wenn diese Einstellungen auf `false` festgelegt werden, wird im Workflow für di
 ## <a name="default-service-account-usage-from-within-a-bdc-pod"></a>Verwendung des Standarddienstkontos innerhalb eines BDC-Pods
 
 Zugunsten eines strengeren Sicherheitsmodells deaktivierte SQL Server 2019 CU5 die standardmäßige Einbindung von Anmeldeinformationen für das Kubernetes-Standarddienstkonto in den BDC-Pods. Dies gilt sowohl für neue als auch für aktualisierte Bereitstellungen in CU5 oder höheren Versionen.
-Das Anmeldeinformationstoken in den Pods kann für den Zugriff auf den Kubernetes-API-Server verwendet werden, und die Berechtigungsebene hängt von den Kubernetes-Autorisierungsrichtlinieneinstellungen ab. Wenn Sie über bestimmte Anwendungsfälle verfügen, für die das vorherige CU5-Verhalten wiederhergestellt werden muss, wird in CU6 ein neuer Funktionsschalter eingeführt, damit Sie die automatische Einbindung nur zum Zeitpunkt der Bereitstellung aktivieren können. Hierzu können Sie die Bereitstellungskonfigurationsdatei „control.json“ verwenden und *automountServiceAccountToken* auf *true* festlegen. Führen Sie den folgenden Befehl aus, um diese Einstellung in Ihrer benutzerdefinierten Konfigurationsdatei *control.json* mithilfe der `azdata`-CLI zu aktualisieren: 
+Das Anmeldeinformationstoken in den Pods kann für den Zugriff auf den Kubernetes-API-Server verwendet werden, und die Berechtigungsebene hängt von den Kubernetes-Autorisierungsrichtlinieneinstellungen ab. Wenn Sie über bestimmte Anwendungsfälle verfügen, für die das vorherige CU5-Verhalten wiederhergestellt werden muss, wird in CU6 ein neuer Funktionsschalter eingeführt, damit Sie die automatische Einbindung nur zum Zeitpunkt der Bereitstellung aktivieren können. Hierzu können Sie die Bereitstellungskonfigurationsdatei „control.json“ verwenden und *automountServiceAccountToken* auf *true* festlegen. Führen Sie den folgenden Befehl aus, um diese Einstellung in Ihrer benutzerdefinierten Konfigurationsdatei *control.json* mithilfe der [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] zu aktualisieren: 
 
 ``` bash
 azdata bdc config replace -c custom-bdc/control.json -j "$.security.automountServiceAccountToken=true"

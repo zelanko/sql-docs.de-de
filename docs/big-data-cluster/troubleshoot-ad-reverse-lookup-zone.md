@@ -9,12 +9,12 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1dbe3505616fa95c429faf6d1f018f947bd60930
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 63086a762e8c55109a43a32e39868b65808108f9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891030"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257090"
 ---
 # <a name="ad-mode-deployment-stopped---missing-reverse-lookup-zone-entry-for-dc"></a>Bereitstellung im AD-Modus beendet: Fehlender Eintrag für Reverse-Lookupzone für DC
 
@@ -90,12 +90,12 @@ azdata bdc debug copy-logs -n mssql-cluster -c security-support
 Extrahieren Sie die Protokolle, und suchen Sie nach `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`.
 
 > [!TIP]
-> Protokolle können auf verschiedene Weise gesammelt werden. Anstatt die Protokolle mit `azdata` zu kopieren, können Sie ein Notebook in Azure Data Studio verwenden.
+> Protokolle können auf verschiedene Weise gesammelt werden. Anstatt die Protokolle mit [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] zu kopieren, können Sie ein Notebook in Azure Data Studio verwenden.
 > Stellen Sie in Azure Data Studio eine Verbindung mit dem Kubernetes-Cluster her, und führen Sie ein entsprechendes Notebook zur Problembehandlung aus. Hier einige Beispiele für Notebooks:
 >
 > - TSG027 – Clusterbereitstellung beobachten
 > - TSG061 – Alle Containerprotokollfragmente für Pods im Namespace des Big-Data-Clusters abrufen
-> - TSG001 – `azdata` copy-logs ausführen
+> - TSG001 – `azdata copy-logs` ausführen
 >
 
 ## <a name="inspect-the-logs"></a>Protokolle untersuchen

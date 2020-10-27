@@ -9,18 +9,18 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725861"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257200"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Konfigurieren von Bereitstellungseinstellungen für Clusterressourcen und -dienste
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Ausgehend von einer Gruppe von vordefinierten und im Verwaltungstool `azdata` integrierten Konfigurationsprofilen können Sie die Standardeinstellungen ganz einfach an die Anforderungen Ihrer BDC-Workload anpassen. Die Struktur der Konfigurationsdateien ermöglicht es Ihnen, die Einstellungen für die jeweiligen Dienstressourcen einzeln zu aktualisieren.
+Ausgehend von einer Gruppe von vordefinierten und im Verwaltungstool [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] integrierten Konfigurationsprofilen können Sie die Standardeinstellungen ganz einfach an die Anforderungen Ihrer BDC-Workload anpassen. Die Struktur der Konfigurationsdateien ermöglicht es Ihnen, die Einstellungen für die jeweiligen Dienstressourcen einzeln zu aktualisieren.
 
 In diesem 13-minütigen Video erhalten Sie einen Überblick über die Big Data-Clusterkonfiguration:
 
@@ -648,7 +648,7 @@ Um für den Container, auf dem ElasticSearch ausgeführt wird, die Ausführung i
 }
 ```
 
-Sie können die Datei `control.json` manuell bearbeiten und den obigen Abschnitt zu `spec` hinzufügen. Alternativ können Sie auch eine `elasticsearch-patch.json`-Patchdatei erstellen und die Datei `control.json` mithilfe der `azdata`-Befehlszeilenschnittstelle patchen:
+Sie können die Datei `control.json` manuell bearbeiten und den obigen Abschnitt zu `spec` hinzufügen. Alternativ können Sie auch eine `elasticsearch-patch.json`-Patchdatei erstellen und die Datei `control.json` mithilfe der [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] patchen:
 
 ```json
 {
@@ -678,7 +678,7 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 ## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Aktivieren und Deaktivieren der Sammlung von Pod- und Knotenmetriken
 
 SQL Server 2019 CU5 hat zwei Funktionsparameter eingeführt, um die Sammlung von Pod- und Knotenmetriken zu steuern. Wenn Sie Ihre Kubernetes-Infrastruktur mithilfe anderer Lösungen überwachen, können Sie die integrierte Metriksammlung für Pods und Hostknoten deaktivieren, indem Sie *allowNodeMetricsCollection* und *allowPodMetricsCollection* in der Bereitstellungskonfigurationsdatei *control.json* auf *False* festlegen. Bei OpenShift-Umgebungen werden diese Einstellungen in den integrierten Bereitstellungsprofilen standardmäßig auf *False* festgelegt, da für das Sammeln von Pod- und Knotenmetriken von Berechtigungen abhängige Funktionen erforderlich sind.
-Führen Sie diesen Befehl aus, um die Werte dieser Einstellungen in Ihrer benutzerdefinierten Konfigurationsdatei mithilfe der *azdata*-CLI zu aktualisieren:
+Führen Sie diesen Befehl aus, um die Werte dieser Einstellungen in Ihrer benutzerdefinierten Konfigurationsdatei mithilfe der *azdata* -CLI zu aktualisieren:
 
 ```bash
  azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"

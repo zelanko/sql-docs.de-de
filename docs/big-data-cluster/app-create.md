@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 890b029833e7d34da7663b9f0e6ccfa63195c6d5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8e91315b5ec79c136b4d84a7fbc36a707cc3d82f
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725081"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257300"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>Bereitstellen einer App in einem Big Data-Cluster in SQL Server
 
@@ -32,19 +32,19 @@ In diesem Artikel wird beschrieben, wie Sie R- und Python-Skripts als Anwendung 
 - Unterstützung für das Hosting zusätzlicher Anwendungstypen: SQL Server Integration Services (SSIS) und MLeap.
 - [Visual Studio Code-Erweiterung](app-deployment-extension.md) zum Verwalten der Anwendungsbereitstellung
 
-Anwendungen werden mit dem `azdata`-Befehlszeilen-Hilfsprogramm bereitgestellt und verwaltet. Dieser Artikel enthält Beispiele für die Bereitstellung von Apps über die Befehlszeile. Weitere Informationen zur Verwendung in Visual Studio Code finden Sie unter [Visual Studio Code-Erweiterung](app-deployment-extension.md).
+Anwendungen werden mit [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] bereitgestellt und verwaltet. Dieser Artikel enthält Beispiele für die Bereitstellung von Apps über die Befehlszeile. Weitere Informationen zur Verwendung in Visual Studio Code finden Sie unter [Visual Studio Code-Erweiterung](app-deployment-extension.md).
 
 Die folgenden Typen von Apps werden unterstützt:
 
-- **Python**: Eine der beliebtesten allgemeinen Programmiersprachen für verschiedene Personas (wie z. B. Datentechniker, Datenanalysten oder DevOps-Techniker) unterstützt zahlreiche Szenarien wie Data Wrangling, Automatisierung, Prototypenerstellung. In gewissem Umfang wird sie auch zunehmend für die Programmierung von Anwendungen auf Unternehmensebene verwendet, die mit Webentwicklungsframeworks wie Flask und Django zusammenarbeiten, um unterschiedlichen Unternehmensanforderungen gerecht zu werden.  
-- **R**: Eine weitere beliebte Programmiersprache für Datentechniker und Datenanalysten. Im Vergleich zu Python ist R eine Programmiersprache, deren Schwerpunkt auf statistischem Computing und Grafiken liegt.  
+- **Python** : Eine der beliebtesten allgemeinen Programmiersprachen für verschiedene Personas (wie z. B. Datentechniker, Datenanalysten oder DevOps-Techniker) unterstützt zahlreiche Szenarien wie Data Wrangling, Automatisierung, Prototypenerstellung. In gewissem Umfang wird sie auch zunehmend für die Programmierung von Anwendungen auf Unternehmensebene verwendet, die mit Webentwicklungsframeworks wie Flask und Django zusammenarbeiten, um unterschiedlichen Unternehmensanforderungen gerecht zu werden.  
+- **R** : Eine weitere beliebte Programmiersprache für Datentechniker und Datenanalysten. Im Vergleich zu Python ist R eine Programmiersprache, deren Schwerpunkt auf statistischem Computing und Grafiken liegt.  
 - **SQL Server Integration Services (SSIS)** : Hochleistungsfähige Datenintegrationslösungen für das Erstellen und Debuggen von ETL-Paketen. Das Feature verwendet das Data Transformation Services-Paketdateiformat (DTSX), ein XML-basiertes Dateiformat, in dem die Anweisungen für die Verarbeitung der Datenmigration zwischen Datenbanken und die Integration externer Datenquellen gespeichert werden.   
-- **MLeap**: Ein gängiges Serialisierungsformat, das alles bietet, was zum Ausführen und Serialisieren von SparkML- und anderen Pipelines erforderlich ist, die dann zur Laufzeit geladen werden können, um ML-Bewertungsaufgaben nahezu in Echtzeit und in der Nähe der Daten zu verarbeiten.  
+- **MLeap** : Ein gängiges Serialisierungsformat, das alles bietet, was zum Ausführen und Serialisieren von SparkML- und anderen Pipelines erforderlich ist, die dann zur Laufzeit geladen werden können, um ML-Bewertungsaufgaben nahezu in Echtzeit und in der Nähe der Daten zu verarbeiten.  
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - [SQL Server 2019: Big Data-Cluster](deployment-guidance.md)
-- [Befehlszeilen-Hilfsprogramm „azdata“](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Funktionen
 
@@ -114,7 +114,7 @@ spec.yaml
 
 ## <a name="create-an-app"></a>Erstellen einer App
 
-Verwenden Sie zum Erstellen einer Anwendung `azdata` mit dem `app create`-Befehl. Diese Dateien befinden sich lokal auf dem Computer, auf dem Sie die App erstellen.
+Verwenden Sie zum Erstellen einer Anwendung [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] mit dem `app create`-Befehl. Diese Dateien befinden sich lokal auf dem Computer, auf dem Sie die App erstellen.
 
 Verwenden Sie die folgende Syntax, um eine neue App im Big Data-Cluster zu erstellen:
 

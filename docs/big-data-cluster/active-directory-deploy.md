@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb42be7b0affc351a013e29af9370d1a109e3d93
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 48dde8000274ea74df1c6095714b54669c5becdd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898708"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257290"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Bereitstellen eines SQL Server-Big Data-Clusters im Active Directory-Modus
 
@@ -50,12 +50,12 @@ Für die AD-Integration sind die folgenden Parameter erforderlich. Fügen Sie di
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: Liste der FQDNs der Domänencontroller. Der FQDN enthält den Computer-/Hostnamen eines Domänencontrollers. Wenn Sie über mehrere Domänencontroller verfügen, können Sie hier eine Liste angeben. Beispiel: `HOSTNAME.CONTOSO.LOCAL`.
 
   > [!IMPORTANT]
-  > Wenn mehrere Domänencontroller eine Domäne bereitstellen, verwenden Sie den primären Domänencontroller als ersten Eintrag in der `domainControllerFullyQualifiedDns`-Liste der Sicherheitskonfiguration. Geben Sie `netdom query fsmo` zum Abrufen des Namens des primären Domänencontrollers in die Eingabeaufforderung ein, und drücken Sie dann die **EINGABETASTE**.
+  > Wenn mehrere Domänencontroller eine Domäne bereitstellen, verwenden Sie den primären Domänencontroller als ersten Eintrag in der `domainControllerFullyQualifiedDns`-Liste der Sicherheitskonfiguration. Geben Sie `netdom query fsmo` zum Abrufen des Namens des primären Domänencontrollers in die Eingabeaufforderung ein, und drücken Sie dann die **EINGABETASTE** .
 
 - **Optionaler Parameter** `security.activeDirectory.realm`: In den meisten Fällen entspricht der Bereich dem Domänennamen. Falls sich Bereich und Domänenname unterscheiden, verwenden Sie diesen Parameter zum Definieren des Bereichs (z. B. `CONTOSO.LOCAL`). Der für diesen Parameter angegebene Wert sollte vollqualifiziert sein.
 
   > [!IMPORTANT]
-  > Zurzeit unterstützt der BDC keine Konfiguration, bei der der Active Directory-Domänenname sich vom **NETBIOS**-Namen der Active Directory-Domäne unterscheidet.
+  > Zurzeit unterstützt der BDC keine Konfiguration, bei der der Active Directory-Domänenname sich vom **NETBIOS** -Namen der Active Directory-Domäne unterscheidet.
 
 - `security.activeDirectory.domainDnsName`: Dies ist der Name Ihrer DNS-Domäne, die für den Cluster verwendet wird (z. B. `contoso.local`).
 
@@ -77,7 +77,7 @@ Ausführliche Informationen zum Aktualisieren der AD-Gruppen für diese Einstell
   >Erstellen Sie diese Gruppen in AD, bevor Sie mit der Bereitstellung beginnen. Wenn der Bereich für eine dieser AD-Gruppen „domain local“ ist, schlägt die Bereitstellung fehl.
 
   >[!IMPORTANT]
-  >Wenn Ihre Domänenbenutzer über eine große Anzahl an Gruppenmitgliedschaften verfügen, sollten Sie die Werte für die Gatewayeinstellung `httpserver.requestHeaderBuffer` (der Standardwert ist `8192`) und die HDFS-Einstellung `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (der Standardwert ist `10`) mithilfe der benutzerdefinierten Bereitstellungskonfigurationsdatei *bdc.json* anpassen. Dies ist eine bewährte Methode zum Vermeiden von Verbindungstimeouts des Gateways und/oder HTTP-Antworten mit dem Statuscode 431 (*Anforderungsheaderfelder zu groß*). Im folgenden Abschnitt der Konfigurationsdatei wird gezeigt, wie die Werte dieser Einstellungen definiert werden und welche Werte für eine höhere Anzahl an Gruppenmitgliedschaften empfohlen werden:
+  >Wenn Ihre Domänenbenutzer über eine große Anzahl an Gruppenmitgliedschaften verfügen, sollten Sie die Werte für die Gatewayeinstellung `httpserver.requestHeaderBuffer` (der Standardwert ist `8192`) und die HDFS-Einstellung `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (der Standardwert ist `10`) mithilfe der benutzerdefinierten Bereitstellungskonfigurationsdatei *bdc.json* anpassen. Dies ist eine bewährte Methode zum Vermeiden von Verbindungstimeouts des Gateways und/oder HTTP-Antworten mit dem Statuscode 431 ( *Anforderungsheaderfelder zu groß* ). Im folgenden Abschnitt der Konfigurationsdatei wird gezeigt, wie die Werte dieser Einstellungen definiert werden und welche Werte für eine höhere Anzahl an Gruppenmitgliedschaften empfohlen werden:
 
 ```json
 {
@@ -119,7 +119,7 @@ Ausführliche Informationen zum Aktualisieren der AD-Gruppen für diese Einstell
 
 In der folgenden Tabelle wird das Autorisierungsmodell für die Anwendungsverwaltung gezeigt:
 
-|   Autorisierte Rollen   |   azdata-Befehl   |
+|   Autorisierte Rollen   |   [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]-Befehl   |
 |----------------------|--------------------|
 |   appOwner           | azdata app create  |
 |   appOwner           | azdata app update  |
@@ -134,7 +134,7 @@ In der folgenden Tabelle wird das Autorisierungsmodell für die Anwendungsverwal
   >Der Wert, der über die Unterdomäneneinstellung übergeben wird, ist keine neue AD-Domäne, sondern eine DNS-Domäne, die intern vom Big Data-Cluster verwendet wird.
 
   >[!IMPORTANT]
-  >Sie müssen die neueste Version der **azdata-CLI** ab dem SQL Server 2019 CU5-Release installieren oder auf diese aktualisieren, um diese neuen Funktionen nutzen zu können und mehrere Big Data-Cluster in derselben Domäne bereitzustellen.
+  >Sie müssen die neueste Version der **[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]** ab dem SQL Server 2019 CU5-Release installieren oder auf diese aktualisieren, um diese neuen Funktionen nutzen zu können und mehrere Big Data-Cluster in derselben Domäne bereitzustellen.
 
   Weitere Informationen über die Bereitstellung mehrerer Big Data-Cluster in derselben Active Directory-Domäne finden Sie unter [Konzept: Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus](active-directory-deployment-background.md).
 
@@ -151,7 +151,7 @@ Wenn Sie Konfigurationsdatei für die Bereitstellung noch nicht initialisiert ha
 azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 ```
 
-Um die oben aufgeführten Parameter in der Datei `control.json` festzulegen, verwenden Sie die folgenden `azdata`-Befehle. Über diese Befehle werden die Konfigurationswerte vor der Bereitstellung durch Ihre eigenen Werte ersetzt.
+Um die oben aufgeführten Parameter in der Datei `control.json` festzulegen, verwenden Sie die folgenden [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]-Befehle. Über diese Befehle werden die Konfigurationswerte vor der Bereitstellung durch Ihre eigenen Werte ersetzt.
 
 > [!IMPORTANT]
 > Im SQL Server 2019 CU2-Release hat sich die Struktur des Sicherheitskonfigurationsabschnitts im Bereitstellungsprofil leicht geändert, sodass nun alle Einstellungen im Zusammenhang mit Active Directory im neuen `activeDirectory` in der json-Struktur unter `security` in der Datei `control.json` zu finden sind.
@@ -213,7 +213,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoin
 Sie finden hier ein Beispielskript für die [ Bereitstellung eines SQL Server-Big Data-Clusters in einem Einzelknoten-Kubernetes-Cluster (kubeadm) mit AD-Integration](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm-ad).
 
 > [!Note]
-> Möglicherweise gibt es Szenarios, in denen Sie den neu eingeführten Parameter `subdomain` nicht unterstützen können. Beispielsweise, wenn Sie ein Release vor CU5 bereitstellen müssen und die **azdata-CLI** bereits aktualisiert haben. Dies ist zwar sehr unwahrscheinlich, wenn Sie das Verhalten vor dem CU5-Release jedoch wiederherstellen müssen, können Sie im Active Directory-Abschnitt von `control.json` den Parameter `useSubdomain` auf `false` festlegen.  Der entsprechende Befehl lautet wie folgt:
+> Möglicherweise gibt es Szenarios, in denen Sie den neu eingeführten Parameter `subdomain` nicht unterstützen können. Beispielsweise wenn Sie ein Release vor CU5 bereitstellen müssen und die **[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]** bereits aktualisiert haben. Dies ist zwar sehr unwahrscheinlich, wenn Sie das Verhalten vor dem CU5-Release jedoch wiederherstellen müssen, können Sie im Active Directory-Abschnitt von `control.json` den Parameter `useSubdomain` auf `false` festlegen.  Der entsprechende Befehl lautet wie folgt:
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.useSubdomain=false"
@@ -221,7 +221,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 
 Sie sollten jetzt alle erforderlichen Parameter für eine BDC-Bereitstellung mit Active Directory-Integration festgelegt haben.
 
-Sie können nun den mit Azure Directory integrierten BDC-Cluster mithilfe des `azdata`-Befehls und des kubeadm-prod-Bereitstellungsprofils bereitstellen. Eine vollständige Dokumentation, wie Sie [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] bereitstellen, finden Sie unter [Bereitstellen von Big Data-Cluster für SQL Server in Kubernetes](deployment-guidance.md).
+Sie können nun den mit Azure Directory integrierten BDC-Cluster mithilfe des [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]-Befehls und des kubeadm-prod-Bereitstellungsprofils bereitstellen. Eine vollständige Dokumentation, wie Sie [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] bereitstellen, finden Sie unter [Bereitstellen von Big Data-Cluster für SQL Server in Kubernetes](deployment-guidance.md).
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>Überprüfen der Reverse-DNS-Einträge für den Domänencontroller
 
