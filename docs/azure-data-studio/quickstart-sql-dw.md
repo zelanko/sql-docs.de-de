@@ -9,14 +9,14 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: f0d6ba76868bb1b8a226145b2aa1306db46baa17
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115890"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257332"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>Schnellstart: Verwenden von Azure Data Studio zum Verbinden mit und Abfragen von Daten mithilfe eines dedizierten SQL-Pools in Azure Synapse Analytics
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Schnellstart: Verwenden von Azure Data Studio zum Verbinden mit und Abfragen von Daten mithilfe eines dedizierten SQL-Pools in Azure Synapse Analytics
 
 Dieser Schnellstart veranschaulicht das Herstellen einer Verbindung mit einem dedizierten SQL-Pool in Azure Synapse Analytics mithilfe von Azure Data Studio.
 
@@ -42,7 +42,7 @@ Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure Synapse Anal
 
    |   Einstellung    | Vorgeschlagener Wert | BESCHREIBUNG |
    |--------------|-----------------|-------------| 
-   | **Servername** | Der vollqualifizierte Servername | Beispielsweise sollte der Name ähnlich wie hier aussehen: **sqlpoolservername.database.windows.net**. |
+   | **Servername** | Der vollqualifizierte Servername | Beispielsweise sollte der Name ähnlich wie hier aussehen: **sqlpoolservername.database.windows.net** . |
    | **Authentifizierung** | SQL-Anmeldung| In diesem Tutorial wird SQL-Authentifizierung verwendet. |
    | **Benutzername** | Das Serveradministratorkonto | Hierbei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort (SQL-Anmeldung)** | Das Kennwort für das Serveradministratorkonto | Hierbei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
@@ -77,7 +77,7 @@ Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure Synapse Anal
 
 Der Abfrage-Editor ist immer noch mit der Datenbank *master* verbunden, aber wir möchten eine Tabelle in der Datenbank *TutorialDB* erstellen. 
 
-1. Ändern Sie den Verbindungskontext in **TutorialDB**:
+1. Ändern Sie den Verbindungskontext in **TutorialDB** :
 
 2. Fügen Sie den folgenden Codeausschnitt in den Abfrage-Editor ein, und wählen Sie **Ausführen** aus:
 
@@ -139,5 +139,6 @@ Der Abfrage-Editor ist immer noch mit der Datenbank *master* verbunden, aber wir
 Wenn Sie nicht mehr mit den in diesem Artikel erstellen Beispieldatenbanken arbeiten möchten, [löschen Sie die Ressourcengruppe](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Nächste Schritte
+Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Synapse SQL über Azure Data Studio (Vorschau)](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio).
 
 Nachdem Sie erfolgreich eine Verbindung mit Azure Synapse Analytics hergestellt und eine Abfrage ausgeführt haben, wechseln Sie zum [Tutorial zum Code-Editor](tutorial-sql-editor.md).
