@@ -1,80 +1,90 @@
 ---
-title: Konfigurieren der SQL-Bewertung für Azure Arc-fähige SQL Server-Instanzen
-titleSuffix: ''
-description: Konfigurieren der bedarfsgesteuerten SQL-Bewertung für Azure Arc-fähige SQL Server-Instanzen
+title: Konfigurieren der bedarfsgesteuerten SQL-Bewertung für eine Azure Arc-fähige SQL Server-Instanz
+description: Konfigurieren der bedarfsgesteuerten SQL-Bewertung für eine Azure Arc-fähige SQL Server-Instanz
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 41a7f1f4edc247f211ee5b3cdcaddfd139c5027c
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 459a49a4f2ed41b8e9d95c805431ff2c29a770fa
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988016"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92258002"
 ---
-# <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Konfigurieren der bedarfsgesteuerten SQL-Bewertung für Azure Arc-fähige SQL Server-Instanzen
+# <a name="configure-sql-assessment-on-an-azure-arc-enabled-sql-server-instance"></a>Konfigurieren der SQL-Bewertung für eine Azure Arc-fähige SQL Server-Instanz
 
-Sie können die SQL-Bewertung für Ihre SQL Server-Instanzen aktivieren, indem Sie die folgenden Schritte befolgen.
+Die SQL-Bewertung bietet eine Möglichkeit, Ihre Konfiguration von SQL Server zu bewerten. In diesem Artikel finden Sie Anweisungen für die Verwendung der SQL-Bewertung in einer Azure Arc-fähigen SQL Server-Instanz.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* Ihre SQL Server-Instanz ist mit Azure Arc verbunden. Befolgen Sie diese Anleitung, um [ein Onboarding für Ihre SQL Server-Instanz für eine Arc-fähige SQL Server-Instanz durchzuführen](connect.md).
+* Ihre SQL Server-Instanz muss mit Azure Arc verbunden sein. Anweisungen finden Sie im Artikel [Herstellen einer Verbindung zwischen Ihrer SQL Server-Instanz und Azure Arc](connect.md).
 
-* Die MMA-Erweiterung ist auf dem Computer installiert und konfiguriert. Befolgen Sie diese Anleitung, um [Microsoft Monitoring Agent (MMA) zu installieren](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma). Weitere Informationen finden Sie unter [Log Analytics-Agent](/azure/azure-monitor/platform/log-analytics-agent).
+* Die MMA-Erweiterung (Microsoft Monitoring Agent) muss auf dem Computer installiert und konfiguriert sein. Anweisungen finden Sie im Artikel [Installieren von MMA](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma). Weitere Informationen finden Sie auch im Artikel zum [Log Analytics-Agent](/azure/azure-monitor/platform/log-analytics-agent).
 
-* Für Ihre SQL Server-Instanz wurde das [TCP/IP-Protokoll aktiviert](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
+* Für Ihre SQL Server-Instanz muss das [TCP/IP-Protokoll aktiviert](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) sein.
 
-* Der [SQL Server-Browser](../../tools/configuration-manager/sql-server-browser-service.md) wird ausgeführt, wenn Sie eine benannte Instanz von SQL Server ausführen.
+* Der [SQL Server-Browserdienst](../../tools/configuration-manager/sql-server-browser-service.md) muss ausgeführt werden, wenn Sie eine benannte SQL Server-Instanz ausführen.
 
-* Sie haben sich das SQL Server-Dokument unter [Voraussetzungen für On-Demand-Bewertungen im Diensthub](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) angesehen.
+* Lesen Sie unbedingt das SQL Server-Dokument unter [Voraussetzungen für On-Demand-Bewertungen im Diensthub](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
-## <a name="enable-on-demand-sql-assessment"></a>Aktivieren der bedarfsgesteuerten SQL-Bewertung
+## <a name="run-on-demand-sql-assessment"></a>Ausführen der bedarfsgesteuerten SQL-Bewertung
 
-1. Öffnen Sie Ihre SQL Server-Ressource mit Azure Arc-Aktivierung, und klicken Sie im linken Menü auf die Option __Umgebungsintegrität__.
+1. Öffnen Sie Ihre SQL Server-Ressource mit Azure Arc-Aktivierung, und wählen Sie im linken Bereich die Option **Umgebungsintegrität** aus.
 
-   ![Auswahl der SQL-Bewertung](media/assess/sql-assessment-heading-sql-server-arc.png)
+   > [!div class="mx-imgBorder"]
+   > [ ![Screenshot des Bildschirms „Umgebungsintegrität“ einer SQL Server-Ressource mit Azure Arc-Aktivierung](media/assess/sql-assessment-heading-sql-server-arc.png) ](media/assess/sql-assessment-heading-sql-server-arc.png#lightbox)
 
 1. Geben Sie ein Arbeitsverzeichnis auf dem Computer für die Datensammlung an. Standardmäßig wird `C:\sql_assessment\work_dir` verwendet. Während der Sammlung und Analyse werden die Daten vorrübergehend in diesem Ordner gespeichert. Wenn der Ordner nicht vorhanden ist, wird er automatisch erstellt.
 
-1. Klicken Sie auf __Konfigurationsskript herunterladen__, und kopieren Sie das heruntergeladene Skript auf den Zielcomputer.
+1. Wählen Sie **Konfigurationsskript laden** aus. Kopieren Sie das heruntergeladene Skript auf den Zielcomputer.
 
-1. Starten Sie eine Administratoreninstanz von __powershell.exe__, und führen Sie eine der folgenden Aktionen aus: 
-   * Wenn Sie ein Domänenkonto nutzen, führen Sie die folgenden Befehle aus. Sie werden zur Eingabe des Benutzerkontos und Kennworts aufgefordert. 
+1. Öffnen Sie eine Administratoreninstanz von **powershell.exe** , und führen Sie einen der folgenden Codeblöcke aus:
+
+   * _Domänenkonto:_  Sie werden zur Eingabe von Benutzerkonto und Kennwort aufgefordert.
 
       ```powershell
       Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
       & '.\AddSqlAssessment.ps1'
       ```
 
-    * Wenn Sie ein MSA-Konto nutzen, führen Sie die folgenden Befehle aus.
+   * _Verwaltetes Dienstkonto (MSA)_
 
       ```powershell
       Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
       & '.\AddSqlAssessment.ps1' -ManagedServiceAccountName <MSA account name>
       ```
 
+> [!NOTE]
+> Das Skript plant eine Aufgabe mit dem Namen *SQLAssessment* , die die Datensammlung auslöst. Diese Aufgabe wird innerhalb einer Stunde nach dem Ausführen des Skripts ausgeführt. Anschließend wird sie alle sieben Tage wiederholt.
+
+> [!TIP]
+> Sie können die Aufgabe so ändern, dass sie an einem anderen Datum und einer anderen Uhrzeit ausgeführt wird, und Sie können auch eine sofortige Ausführung erzwingen. Suchen Sie in der Aufgabenplanungsbibliothek nach **Microsoft** > **Operations Management Suite** > **AOI\*\*\***  > **Bewertungen** > **SQLAssessment** .
+
+## <a name="view-sql-assessment-results"></a>Anzeigen der Ergebnisse der SQL-Bewertung
+
+* Wählen Sie im Bereich _Umgebungsintegrität_ die Schaltfläche **View SQL Assessment results** (Ergebnisse der SQL-Bewertung anzeigen) aus.
+
    > [!NOTE]
-   > Das Skript plant eine Aufgabe namens *SQLAssessment*, die innerhalb einer Stunde nach Ausführung des vorherigen Skripts und dann alle sieben Tage ausgeführt wird. Die Aufgabe kann so bearbeitet werden, dass sie an einem anderen Datum und zu einer anderen Uhrzeit ausgeführt wird. Es kann auch eine sofortige Ausführung erzwungen werden. Navigieren Sie dazu in der Aufgabenplanungsbibliothek zu Microsoft > Operations Management Suite > AOI*** > Bewertungen > SQLAssessment Diese Aufgabe löst die Datensammlung aus.
+   > Die Schaltfläche **View SQL Assessment result** (Ergebnisse der SQL-Bewertung anzeigen) ist solange deaktiviert, bis die Ergebnisse in Log Analytics bereitstehen. Dies kann bis zu zwei Stunden dauern, nachdem die Datendateien auf dem Zielcomputer verarbeitet wurden.
 
-## <a name="view-the-assessment-results"></a>Anzeigen der Bewertungsergebnisse
+   > [!div class="mx-imgBorder"]
+   > [ ![Screenshot der Ergebnisse der SQL-Bewertung](media/assess/sql-assessment-results.png) ](media/assess/sql-assessment-results.png#lightbox)
 
-Die Schaltfläche __View SQL assessment result__ (SQL-Bewertungsergebnis anzeigen) auf dem Blatt _Umgebungsintegrität_ ist solange deaktiviert, bis die Ergebnisse in Log Analytics zur Verwendung bereit stehen. Sobald die Schaltfläche aktiv ist, können Sie darauf klicken, um die Ergebnisse anzuzeigen. Es kann bis zu zwei Stunden dauern, bis die Ergebnisse in Log Analytics angezeigt werden, nachdem die Datendateien auf dem Zielcomputer verarbeitet wurden.
+* Sie können den Status der Datenverarbeitung auf dem Sammlungscomputer sehen, indem Sie die Dateien im Arbeitsordner überprüfen. Nachdem die geplante Aufgabe abgeschlossen ist, sollten mehrere Dateien mit dem Präfix _new._ im Arbeitsverzeichnis angezeigt werden.
 
-![SQL-Bewertungsergebnisse](media/assess/sql-assessment-results.png)
+   > [!div class="mx-imgBorder"]
+   > [ ![Screenshot eines Datei-Manager-Fensters mit neuen Datendateien im Arbeitsordner](media/assess/sql-assessment-data-files-ready.png) ](media/assess/sql-assessment-data-files-ready.png#lightbox)
 
-Sie können den Status der Datenverarbeitung auf dem Sammlungscomputer sehen, indem Sie die Dateien im Arbeitsordner überprüfen. Nachdem die geplante Aufgabe abgeschlossen ist, sollten mehrere Dateien mit dem Präfix _new._ im Arbeitsverzeichnis angezeigt werden:
+* Der Microsoft Monitoring Agent scannt den Arbeitsordner alle 15 Minuten. Er sucht nach Dateien mit dem Präfix _new.*_ und sendet die Daten an den Log Analytics-Arbeitsbereich. Nachdem MMA die Datei hochgeladen hat, wird das Präfix von _new._ in _processed._ geändert.
 
-![Bereite Datendateien](media/assess/sql-assessment-data-files-ready.png)
-
-Der Arbeitsordner wird von Microsoft Monitoring Agent alle 15 Minuten gescannt, um nach _new.*_ -Dateien zu suchen. Die Daten werden dann an den Arbeitsbereich in Log Analytics gesendet. Sobald die Datei hochgeladen wurde, ändert sich das Präfix von _new._ in _processed._ :
-
-![Verarbeitete Datendateien](media/assess/sql-assessment-data-files-processed.png)
+   > [!div class="mx-imgBorder"]
+   > ![Screenshot eines Datei-Manager-Fensters mit verarbeiteten Datendateien](media/assess/sql-assessment-data-files-processed.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sehen Sie sich das SQL Server-Dokument unter [Voraussetzungen für On-Demand-Bewertungen im Diensthub](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) an, um weitere Informationen zu erhalten.
+* Weitere Informationen finden Sie in den Dokumenten zu den Voraussetzungen unter [Voraussetzungen für On-Demand-Bewertungen im Diensthub](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
-Um eine umfassende Unterstützung der bedarfsgesteuerten SQL-Bewertung zu erhalten, ist ein Premier- oder Unified Support-Abonnement erforderlich. Weitere Informationen finden Sie unter [Azure Premier Support](https://azure.microsoft.com/support/plans/premier).
+* Um eine umfassende Unterstützung des Features zur bedarfsgesteuerten SQL-Bewertung zu erhalten, ist ein Premier- oder Unified Support-Abonnement erforderlich. Weitere Informationen finden Sie unter [Azure Premier Support](https://azure.microsoft.com/support/plans/premier).

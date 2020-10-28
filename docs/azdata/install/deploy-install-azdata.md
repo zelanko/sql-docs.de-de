@@ -1,25 +1,25 @@
 ---
-title: Installieren von azdata
+title: Installieren der Azure Data CLI (azdata)
 titleSuffix: ''
-description: Hier erfahren Sie, wie Sie das Tool „azdata“ installieren.
+description: Erfahren Sie, wie Sie das Tool Azure Data CLI (azdata) installieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 83da4e1554e1a6fa112c6fc8f629d30cbcb97d4d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 82aa3a2795328804a10a76e9ecd8af80f3bf7152
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725254"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257405"
 ---
-# <a name="install-azdata"></a>Installieren von `azdata`
+# <a name="install-azure-data-cli-azdata"></a>Installieren von [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-`azdata` ist ein in Python geschriebenes Befehlszeilen-Hilfsprogramm für Bootstraps und Verwaltung der Datendienste über REST-APIs. 
+[!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] ist ein in Python geschriebenes Befehlszeilen-Hilfsprogramm für Bootstraps und Verwaltung der Datendienste über REST-APIs. 
 
 ## <a name="find-latest-version"></a>Abrufen der aktuellen Version
 

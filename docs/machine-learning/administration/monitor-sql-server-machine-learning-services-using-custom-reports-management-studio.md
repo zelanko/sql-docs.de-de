@@ -3,21 +3,21 @@ title: Überwachen von Skripts mit benutzerdefinierten Berichten
 description: Verwenden Sie benutzerdefinierte Berichte in SQL Server Management Studio (SSMS), um die externe Skriptausführung (Python und R) und Ressourcennutzung zu überwachen, Probleme zu diagnostizieren und die Leistung in SQL Server Machine Learning Services zu optimieren.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/17/2019
+ms.date: 10/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca6070ec0b4558ab907f6945ac57dc9bc9ab5f
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ed72d25320caef7e946ffc317541665ca37c5b6d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847370"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115349"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Überwachen der Python- und R-Skriptausführung mithilfe von benutzerdefinierten Berichten in SQL Server Management Studio
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Verwenden Sie benutzerdefinierte Berichte in [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md), um die externe Skriptausführung (Python und R) und Ressourcennutzung zu überwachen, Probleme zu diagnostizieren und die Leistung in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) zu optimieren.
 
@@ -41,9 +41,14 @@ Führen Sie die folgenden Schritte aus, um diese Berichte zu verwenden:
 
 1. Laden Sie [benutzerdefinierte SSMS-Berichte](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) für SQL Server Machine Learning Services von GitHub herunter.
 
+   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   >[!NOTE]
+   > Der benutzerdefinierte Bericht **ML Services: Konfigurieren einer Instanz** wird in Azure SQL Managed Instance nicht unterstützt.
+   ::: moniker-end
+
 2. Kopieren der Berichte in Management Studio
 
-    1. Suchen Sie den Ordner der benutzerdefinierten Berichte, der von SQL Server Management Studio verwendet wird. Benutzerdefinierte Berichte werden standardmäßig im folgenden Ordner gespeichert (**user_name** entspricht hier Ihrem Windows-Benutzernamen):
+    1. Suchen Sie den Ordner der benutzerdefinierten Berichte, der von SQL Server Management Studio verwendet wird. Benutzerdefinierte Berichte werden standardmäßig im folgenden Ordner gespeichert ( **user_name** entspricht hier Ihrem Windows-Benutzernamen):
 
         `C:\Users\user_name\Documents\SQL Server Management Studio\Custom Reports`
 
@@ -55,11 +60,11 @@ Führen Sie die folgenden Schritte aus, um diese Berichte zu verwenden:
 
     1. Klicken Sie in Management Studio mit der rechten Maustaste auf den Knoten **Datenbanken** der Instanz, auf der Sie die Berichte ausführen möchten.
 
-    2. Klicken Sie auf **Berichte**, und klicken Sie dann auf **Benutzerdefinierte Berichte**.
+    2. Klicken Sie auf **Berichte** , und klicken Sie dann auf **Benutzerdefinierte Berichte** .
 
     3. Suchen Sie im Dialogfeld **Datei öffnen** den Ordner mit den benutzerdefinierten Berichten.
 
-    4. Wählen Sie eine der RDL-Dateien aus, die Sie heruntergeladen haben, und klicken Sie dann auf **Öffnen**.
+    4. Wählen Sie eine der RDL-Dateien aus, die Sie heruntergeladen haben, und klicken Sie dann auf **Öffnen** .
 
 ## <a name="reports"></a>Berichte
 

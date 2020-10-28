@@ -13,12 +13,12 @@ helpviewer_keywords:
 - maximum number of processors supported
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c7d4e0507667429e4f97674ef302a7d5aed8102
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 016d0e1a48e9f14356cae9dd4915fedd2b45374b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91510224"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92258003"
 ---
 # <a name="migration-guide-db2-to-sql-server"></a>Migrationsleitfaden: DB2 zu SQL Server
 [!INCLUDE[sqlserver](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -33,7 +33,7 @@ Weitere Migrationsleitfäden finden Sie im [Leitfaden zur Azure-Datenbankmigrati
 Sie müssen zunächst die folgenden Schritte ausführen, um Ihre DB2-Datenbank zu SQL Server migrieren zu können:
 
 - Überprüfen Sie, ob Ihre Quellumgebung unterstützt wird.
-- Laden Sie [SQL Server Migration Assistant (SSMA) for DB2](https://www.microsoft.com/download/details.aspx?id=54254) herunter.
+- [SQL Server Migration Assistant (SSMA) for DB2](https://www.microsoft.com/download/details.aspx?id=54254)
 
 
 
@@ -41,7 +41,7 @@ Sie müssen zunächst die folgenden Schritte ausführen, um Ihre DB2-Datenbank z
 
 Wenn diese Voraussetzungen erfüllt sind, können Sie die Topologie Ihrer Umgebung ermitteln und die Durchführbarkeit der Migration bewerten. 
 
-### <a name="assess-and-convert"></a>Bewerten und Konvertieren
+### <a name="assess"></a>Bewerten 
 
 Erstellen Sie mit SQL Server Migration Assistant (SSMA) eine Bewertung. 
 
@@ -49,7 +49,7 @@ Führen Sie die folgenden Schritte aus, um eine Bewertung zu erstellen:
 
 1. Öffnen Sie SQL Server Migration Assistant (SSMA) for DB2. 
 1. Klicken Sie auf **File** (Datei) und dann auf **New Project** (Neues Projekt). 
-1. Geben Sie einen Projektnamen und einen Speicherort für das Projekt an, und wählen Sie dann in der Dropdownliste ein SQL Server-Migrationsziel aus. Klicken Sie auf **OK**. 
+1. Geben Sie einen Projektnamen und einen Speicherort für das Projekt an, und wählen Sie dann in der Dropdownliste ein SQL Server-Migrationsziel aus. Klicken Sie auf **OK** . 
 
    :::image type="content" source="media/db2-to-sql-server/new-project.png" alt-text="Geben Sie die Projektdetails an, und klicken Sie zum Speichern auf „OK“.":::
 
@@ -74,7 +74,7 @@ Führen Sie die folgenden Schritte aus, um eine Bewertung zu erstellen:
 
 Überprüfen Sie die standardmäßig festgelegten Datentypzuordnungen, und ändern Sie sie bei Bedarf basierend auf den Anforderungen. Gehen Sie dazu folgendermaßen vor: 
 
-1. Klicken Sie im Menü auf **Tools**. 
+1. Klicken Sie im Menü auf **Tools** . 
 1. Klicken auf **Project Settings** (Projekteinstellungen). 
 1. Klicken Sie auf die Registerkarte **Type Mappings** (Typzuordnungen). 
 
@@ -82,7 +82,7 @@ Führen Sie die folgenden Schritte aus, um eine Bewertung zu erstellen:
 
 1. Sie können die Typzuordnung für die einzelnen Tabellen ändern, indem Sie die gewünschte Tabelle im **DB2 Metadata Explorer** (DB2-Metadaten-Explorer) auswählen. 
 
-### <a name="schema-conversion"></a>Schemakonvertierung 
+### <a name="convert-schema"></a>Schema konvertieren 
 
 Führen Sie die folgenden Schritte aus, um das Schema zu konvertieren:
 
@@ -141,10 +141,10 @@ Wenn die Daten in die Zielumgebung migriert wurden, müssen alle Anwendungen, di
 
 Das Testvorgehen für die Datenbankmigration umfasst die folgenden Aktivitäten:
 
-1. **Entwickeln von Validierungstests**: Für das Testen der Datenbankmigration müssen Sie SQL-Abfragen verwenden. Sie müssen die Validierungsabfragen erstellen, die für die Quell- und die Zieldatenbank ausgeführt werden sollen. Ihre Validierungsabfragen sollten den von Ihnen definierten Bereich abdecken.
-1. **Einrichten der Testumgebung**: Die Testumgebung sollte eine Kopie der Quelldatenbank und der Zieldatenbank enthalten. Stellen Sie sicher, dass Sie die Testumgebung isolieren.
-1. **Ausführen der Validierungstests**: Führen Sie die Validierungstests für die Quelle und das Ziel aus, und analysieren Sie anschließend die Ergebnisse.
-1. **Ausführen von Leistungstests**: Führen Sie Leistungstests für die Quelle und das Ziel aus, und analysieren und vergleichen Sie anschließend die Ergebnisse.
+1. **Entwickeln von Validierungstests** : Für das Testen der Datenbankmigration müssen Sie SQL-Abfragen verwenden. Sie müssen die Validierungsabfragen erstellen, die für die Quell- und die Zieldatenbank ausgeführt werden sollen. Ihre Validierungsabfragen sollten den von Ihnen definierten Bereich abdecken.
+1. **Einrichten der Testumgebung** : Die Testumgebung sollte eine Kopie der Quelldatenbank und der Zieldatenbank enthalten. Stellen Sie sicher, dass Sie die Testumgebung isolieren.
+1. **Ausführen der Validierungstests** : Führen Sie die Validierungstests für die Quelle und das Ziel aus, und analysieren Sie anschließend die Ergebnisse.
+1. **Ausführen von Leistungstests** : Führen Sie Leistungstests für die Quelle und das Ziel aus, und analysieren und vergleichen Sie anschließend die Ergebnisse.
 
    > [!NOTE]
    > Für Unterstützung bei der Entwicklung und Ausführung von Validierungstests nach der Migration sollten Sie die Datenqualitätslösung des Partners [QuerySurge](https://www.querysurge.com/company/partners/microsoft) in Erwägung ziehen. 
