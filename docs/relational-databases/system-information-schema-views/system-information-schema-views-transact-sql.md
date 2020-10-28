@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9d764f4f2e56137dc89f346c6235d0978ef82a9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c283777fea2999d7948a3282b623cd92f0baf54
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542109"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907384"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>System Informations Schema-Sichten (Transact-SQL)
 
@@ -41,7 +41,7 @@ Eine Informationsschemasicht ist eine der Methoden, die [!INCLUDE[ssNoVersion](.
 |---------------------|-----------------------------------------------|
 |Datenbank|Katalog|
 |Schema|Schema|
-|Object|Object|
+|Objekt|Objekt|
 |benutzerdefinierter Datentyp|Domain|
 
 Diese Namenzuordnungskonvention betrifft die folgenden ISO-kompatiblen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sichten.
@@ -100,6 +100,12 @@ SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
+
+## <a name="permissions"></a>Berechtigungen  
+Die Sichtbarkeit der Metadaten in Informations Schema Sichten ist auf Sicherungs fähige Elemente beschränkt, die einem Benutzer entweder gehören oder für die dem Benutzer eine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+
+> [!NOTE]  
+> Informations Schema Sichten werden serverweit definiert und können daher nicht innerhalb des Kontexts einer Benutzerdatenbank verweigert werden. Zum widerrufen oder Verweigern des Zugriffs (Select) muss die Master-Datenbank verwendet werden. Standardmäßig verfügt die public-Rolle über die SELECT-Berechtigung für alle Informations Schema Sichten, aber der Inhalt ist auf die Sichtbarkeit von Metadatenregeln beschränkt.
 
 ## <a name="see-also"></a>Weitere Informationen
 
