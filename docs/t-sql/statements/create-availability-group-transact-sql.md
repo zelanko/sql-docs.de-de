@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db4140d13fa0e521264a70bfcfb2363260327bdb
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: af27cbc5aaa05412052940b020ce9268a1c74ea3
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480450"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300419"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -155,7 +155,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
 |Ebene|Fehlerbedingung|  
 |-----------|-----------------------|  
-|1|Gibt an, dass in einem der folgenden Fälle ein automatisches Failover initiiert werden muss:<br /><br /> – Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst ist ausgefallen.<br /><br /> – Die Lesedauer der Verfügbarkeitsgruppe für die Verbindung mit dem WSFC-Cluster läuft ab, da keine ACK-Meldung von der Serverinstanz empfangen wird. Weitere Informationen finden Sie unter [How It Works: SQL Server Always On Lease Timeout (Funktionsweise: SQL Server Always On-Leasetimeout)](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout).|  
+|1|Gibt an, dass in einem der folgenden Fälle ein automatisches Failover initiiert werden muss:<br /><br /> – Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst ist ausgefallen.<br /><br /> – Die Lesedauer der Verfügbarkeitsgruppe für die Verbindung mit dem WSFC-Cluster läuft ab, da keine ACK-Meldung von der Serverinstanz empfangen wird. Weitere Informationen finden Sie unter [How It Works: SQL Server Always On Lease Timeout (Funktionsweise: SQL Server Always On-Leasetimeout)](/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout).|  
 |2|Gibt an, dass in einem der folgenden Fälle ein automatisches Failover initiiert werden muss:<br /><br /> – Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt keine Verbindung mit dem Cluster her, und der vom Benutzer angegebene HEALTH_CHECK_TIMEOUT-Schwellenwert der Verfügbarkeitsgruppe wurde überschritten.<br /><br /> – Das Verfügbarkeitsreplikat weist einen fehlerhaften Status auf.|  
 |3|Gibt an, dass ein automatisches Failover bei kritischen internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlern initiiert werden soll, z. B. verwaisten Spinlocks, schwerwiegenden Schreibzugriffsverletzungen oder zu vielen Sicherungen.<br /><br /> Dies ist das Standardverhalten.|  
 |4|Gibt an, dass ein automatisches Failover bei mittelschweren internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlern initiiert werden soll, z. B. bei dauerhaft unzureichendem Arbeitsspeicher im internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcenpool.|  
@@ -164,7 +164,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
 > [!NOTE]  
 >  Das Fehlen einer Reaktion auf Clientanforderungen durch eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ist für Verfügbarkeitsgruppen nicht relevant.  
   
- Der FAILURE_CONDITION_LEVEL- und der HEALTH_CHECK_TIMEOUT-Wert definieren eine *flexible Failoverrichtlinie* für eine angegebene Gruppe. Diese flexible Failoverrichtlinie bietet eine präzise Kontrolle der Bedingungen, die ein automatisches Failover verursachen müssen. Weitere Informationen finden Sie unter [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+ Der FAILURE_CONDITION_LEVEL- und der HEALTH_CHECK_TIMEOUT-Wert definieren eine *flexible Failoverrichtlinie* für eine angegebene Gruppe. Diese flexible Failoverrichtlinie bietet eine präzise Kontrolle der Bedingungen, die ein automatisches Failover verursachen müssen. Weitere Informationen finden Sie unter [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
  Gibt die Wartezeit (in Millisekunden) für die gespeicherte Systemprozedur [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) an, um Informationen über den Serverzustand zurückzugeben, ehe das WSFC-Cluster annimmt, dass die Serverinstanz langsam ist oder nicht reagiert. HEALTH_CHECK_TIMEOUT wird auf Gruppenebene festgelegt, ist aber nur für Verfügbarkeitsreplikate relevant, die für den Verfügbarkeitsmodus für synchrone Commits mit automatischem Failover (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) konfiguriert sind.  Weiterhin kann ein Integritätsprüfungstimeout nur ein automatisches Failover auslösen, wenn das primäre und das sekundäre Replikat für den automatischen Failovermodus konfiguriert sind (FAILOVER_MODE **=** AUTOMATIC) und das sekundäre Replikat gerade mit dem primären Replikat synchronisiert wird.  
@@ -186,7 +186,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
  Dient zum Erstellen einer Basis-Verfügbarkeitsgruppe. Basis-Verfügbarkeitsgruppen sind auf eine Datenbank und zwei Replikate beschränkt: ein primäres und ein sekundäres Replikat. Diese Option ist ein Ersatz für veraltete Datenbankspiegelungsfeatures in SQL Server Standard Edition. Weitere Informationen finden Sie unter [Basis-Verfügbarkeitsgruppen &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). Basis-Verfügbarkeitsgruppen werden ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] unterstützt.  
 
  DISTRIBUTED  
- Dient zum Erstellen einer verteilten Verfügbarkeitsgruppe. Diese Option wird mit dem Parameter AVAILABILITY GROUP ON verwendet, um die Verbindung von zwei Verfügbarkeitsgruppen in separaten Windows Server-Failoverclustern herzustellen.  Weitere Informationen finden Sie unter [Verteilte Verfügbarkeitsgruppen &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md). Verteilte Verfügbarkeitsgruppen werden ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] unterstützt. 
+ Dient zum Erstellen einer verteilten Verfügbarkeitsgruppe. Diese Option wird mit dem Parameter AVAILABILITY GROUP ON verwendet, um die Verbindung von zwei Verfügbarkeitsgruppen in separaten Windows Server-Failoverclustern herzustellen.  Weitere Informationen finden Sie unter [Verteilte Verfügbarkeitsgruppen &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md). Verteilte Verfügbarkeitsgruppen werden ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] unterstützt. 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Eingeführt in SQL Server 2017. Dient zum Festlegen einer minimalen Anzahl synchroner sekundärer Replikate, um einen Commit auszuführen, bevor das primäre Replikat einen Commit für die Transaktion ausführt. Garantiert, dass die SQL Server-Transaktion wartet, bis die Transaktionsprotokolle für die minimale Anzahl von sekundären Replikaten aktualisiert werden. Der Standardwert ist 0. Dies bietet das gleiche Verhalten wie SQL Server 2016. Der Mindestwert beträgt 0. Der maximale Wert ist die Anzahl der Replikate minus 1. Diese Option bezieht sich auf Replikate im synchronen Commitmodus. Wenn sich Replikate im synchronen Commitmodus befinden, warten Schreibvorgänge auf dem primären Replikat, bis Schreibvorgänge auf dem zweiten synchronen Replikat an das Transaktionsprotokoll der Replikatsdatenbank übergeben werden. Wenn ein SQL Server, der ein sekundäres synchronisiertes Replikat hostet, nicht mehr reagiert, markiert der SQL Server, der das erste primäre Replikat hostet, dieses sekundäre Replikat als NOT SYNCHRONIZED und setzt den Vorgang fort. Wenn die nicht reagierende Datenbank wieder online geschaltet wird, befindet sie sich im Zustand „nicht synchronisiert“, und das Replikat wird als fehlerhaft markiert, bis das primäre Replikat den Zustand „synchron“ wiederherstellen kann. Diese Einstellung stellt sicher, dass das primäre Replikat wartet, bis die minimale Anzahl der Replikate ein Commit für jede Transaktion ausgeführt hat. Wenn die minimale Anzahl der Replikate nicht verfügbar ist, schlagen Commits auf dem primären Replikat fehl. Für den Clustertyp `EXTERNAL` wird diese Einstellung geändert, wenn die Verfügbarkeitsgruppe der Clusterressource hinzugefügt wird. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen](../../linux/sql-server-linux-availability-group-ha.md).
@@ -214,7 +214,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
  \<server_instance> gibt die Adresse der Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die als Host für ein Replikat fungiert. Das Adressformat hängt davon ab, ob die Instanz die Standardinstanz oder eine benannte Instanz ist und ob es eine eigenständige Instanz oder eine Failoverclusterinstanz (FCI) ist, wie dies im Folgenden beschrieben ist:  
   
- { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
+ { ' *system_name* [\\*instance_name* ]' | ' *FCI_network_name* [\\*instance_name* ]' }  
   
  Diese Adresse weist die folgenden Komponenten auf:  
   
@@ -222,7 +222,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
  Der NetBIOS-Name des Computersystems, auf dem sich eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz befindet. Dieser Computer muss ein WSFC-Knoten sein.  
   
  *FCI_network_name*  
- Ist der Netzwerkname, der verwendet wird, um auf einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failovercluster zuzugreifen. Verwenden Sie diesen Namen, wenn die Serverinstanz als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverpartner beteiligt ist. Wenn SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) in einer FCI-Serverinstanz ausgeführt wird, wird die gesamte '*FCI_network_name*[\\*instance_name*]'-Zeichenfolge zurückgegeben (dabei handelt es sich um den vollständigen Replikatnamen).  
+ Ist der Netzwerkname, der verwendet wird, um auf einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failovercluster zuzugreifen. Verwenden Sie diesen Namen, wenn die Serverinstanz als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverpartner beteiligt ist. Wenn SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) in einer FCI-Serverinstanz ausgeführt wird, wird die gesamte ' *FCI_network_name* [\\*instance_name* ]'-Zeichenfolge zurückgegeben (dabei handelt es sich um den vollständigen Replikatnamen).  
   
  *instance_name*  
  Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die von *system_name* oder *FCI_network_name* gehostet wird und für die der HADR-Dienst aktiviert ist. Bei einer Standardserverinstanz ist *instance_name* optional. Bei dem Instanznamen wird die Groß-/Kleinschreibung berücksichtigt. In einer benannten Serverinstanz stimmt der Name dieses Werts mit dem Wert überein, der beim Ausführen von `select ServerProperty(N'InstanceName');` zurückgegeben wird.  
@@ -323,9 +323,9 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Gibt die URL an, die zum Weiterleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge zu diesem Verfügbarkeitsreplikat verwendet werden soll. Dies ist die URL, die die SQL Server-Datenbank-Engine überwacht. In der Regel überwacht die Standardinstanz der SQL Server-Datenbank-Engine auf TCP-Port 1433.  
   
- Für eine benannte Instanz können Sie die Portnummer durch das Abfragen der Spalten **port** und **type_desc** der dynamischen [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)-Verwaltungssicht abrufen. Die Serverinstanz verwendet den Transact-SQL-Listener (**type_desc='TSQL'** ).  
+ Für eine benannte Instanz können Sie die Portnummer durch das Abfragen der Spalten **port** und **type_desc** der dynamischen [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)-Verwaltungssicht abrufen. Die Serverinstanz verwendet den Transact-SQL-Listener ( **type_desc='TSQL'** ).  
   
- Weitere Informationen zum Berechnen der schreibgeschützten Routing-URL für ein Replikat finden Sie unter [Calculating read_only_routing_url for Always On (Berechnen von „read_only_routing_url“ für Always On)](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
+ Weitere Informationen zum Berechnen der schreibgeschützten Routing-URL für ein Replikat finden Sie unter [Calculating read_only_routing_url for Always On (Berechnen von „read_only_routing_url“ für Always On)](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
 > [!NOTE]  
 >  Für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollte der Transact-SQL-Listener konfiguriert werden, um einen bestimmten Port zu verwenden. Weitere Informationen finden Sie unter [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -344,7 +344,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
  ALL  
  Für die Datenbanken im primären Replikat sind alle Verbindungen zugelassen. Dies ist das Standardverhalten.  
   
- READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE } gibt eine durch Trennzeichen getrennte Liste von Serverinstanzen an, die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, die beim Ausführen unter der sekundären Rolle die folgenden Anforderungen erfüllen:  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ... *n* ] **)** | NONE } gibt eine durch Trennzeichen getrennte Liste von Serverinstanzen an, die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, die beim Ausführen unter der sekundären Rolle die folgenden Anforderungen erfüllen:  
   
 -   Wird konfiguriert, um alle Verbindungen oder schreibgeschützte Verbindungen (siehe das obige ALLOW_CONNECTIONS-Argument der SECONDARY_ROLE-Option) zuzulassen.  
   
@@ -459,7 +459,7 @@ Weitere Informationen finden Sie unter [Umleitung von Lese-/Schreibverbindungen 
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ...*n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
+ WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ... *n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
  Gibt an, dass der Verfügbarkeitsgruppenlistener statt DHCP mindestens eine statische IP-Adresse verwendet. Um eine Verfügbarkeitsgruppe über mehrere Subnetze zu erstellen, erfordert jedes Subnetz in der Listenerkonfiguration eine statische IP-Adresse. Für ein angegebenes Subnetz kann die statische IP-Adresse entweder eine IPv4-Adresse oder eine IPv6-Adresse sein. Wenden Sie sich an Ihren Netzwerkadministrator, um eine statische IP-Adresse für jedes Subnetz zu erhalten, das ein Replikat für die neue Verfügbarkeitsgruppe hostet.  
   
  Beispiel:  
@@ -476,7 +476,7 @@ Weitere Informationen finden Sie unter [Umleitung von Lese-/Schreibverbindungen 
  Gibt eine IPv6-Adresse für einen Verfügbarkeitsgruppenlistener an. Beispiel: `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
   
  PORT **=** *listener_port*  
- Gibt die Portnummer (*listener_port*) an, die von einem Verfügbarkeitsgruppenlistener verwendet wird, der anhand einer WITH IP-Klausel angegeben wird. PORT ist optional.  
+ Gibt die Portnummer ( *listener_port* ) an, die von einem Verfügbarkeitsgruppenlistener verwendet wird, der anhand einer WITH IP-Klausel angegeben wird. PORT ist optional.  
   
  Die Standardportnummer 1433 wird unterstützt. Wenn Sie jedoch Sicherheitsbedenken hegen, empfehlen wir die Verwendung einer anderen Portnummer.  
   
@@ -507,7 +507,7 @@ Weitere Informationen finden Sie unter [Umleitung von Lese-/Schreibverbindungen 
   
 |Replikatoption|Einstellung auf `COMPUTER01`|Einstellung auf `COMPUTER02`|Einstellung auf `COMPUTER03`|BESCHREIBUNG|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
-|ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|In diesem Beispiel weisen die Systeme dieselbe Domäne auf. Daher können die Endpunkt-URLs den Namen des Computersystems als Systemadresse verwenden.|  
+|ENDPOINT_URL|TCP:// *COMPUTER01:5022*|TCP:// *COMPUTER02:5022*|TCP:// *COMPUTER03:5022*|In diesem Beispiel weisen die Systeme dieselbe Domäne auf. Daher können die Endpunkt-URLs den Namen des Computersystems als Systemadresse verwenden.|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|Zwei der Replikate verwenden den Modus mit synchronem Commit. Nach der Synchronisierung unterstützen sie Failover ohne Datenverlust. Das dritte Replikat verwendet den Verfügbarkeitsmodus mit asynchronem Commit.|  
 |FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|Die Replikate mit synchronem Commit unterstützen automatisches Failover und geplantes manuelles Failover. Das Verfügbarkeitsmodusreplikat mit synchronem Commit unterstützt nur erzwungenes manuelles Failover.|  
 |BACKUP_PRIORITY|30|30|90|Dem Replikat mit asynchronem Commit wird eine höhere Priorität (90) als dem Replikat mit synchronem Commit zugewiesen. Sicherungen erfolgen tendenziell auf der Serverinstanz, die das Replikat mit asynchronem Commit hostet.|  
@@ -588,4 +588,4 @@ GO
  [DROP AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Problembehandlung für die Always On-Verfügbarkeitsgruppenkonfiguration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

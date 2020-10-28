@@ -15,6 +15,7 @@ f1_keywords:
 - CREATE_SEARCH_PROPERTY_TSQL
 - CREATE SEARCH PROPERTY
 - CREATE SEARCH PROPERTY LIST
+- sql13.swb.spl.newsearchpropertylist.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2b347260ffc65ddf640678aed8d2728a087f981
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 22ae11a8e37109e7ba90e2b02e9e4351510f9ae7
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688876"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344076"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +63,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
  Legt fest, dass die neue Eigenschaftenliste erstellt wird, indem eine vorhandene Eigenschaftenliste aus *database_name* kopiert wird. Wenn *source_list_name* nicht vorhanden ist, tritt bei CREATE SEARCH PROPERTY LIST ein Fehler auf. Die Sucheigenschaften in *source_list_name* werden von *new_list_name* geerbt.  
   
  AUTHORIZATION *owner_name*  
- Gibt den Namen eines Benutzers oder einer Rolle als Besitzer der Eigenschaftenliste an. *owner_name* muss der Name einer Rolle sein, deren Mitglied der aktuelle Benutzer ist, oder der aktuelle Benutzer benötigt die IMPERSONATE-Berechtigung für *owner_name*. Wird kein Wert angegeben, wird der aktuelle Benutzer zum Besitzer.  
+ Gibt den Namen eines Benutzers oder einer Rolle als Besitzer der Eigenschaftenliste an. *owner_name* muss der Name einer Rolle sein, deren Mitglied der aktuelle Benutzer ist, oder der aktuelle Benutzer benötigt die IMPERSONATE-Berechtigung für *owner_name* . Wird kein Wert angegeben, wird der aktuelle Benutzer zum Besitzer.  
   
 > [!NOTE]  
 >  Der Besitzer kann mithilfe der [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung geändert werden.  

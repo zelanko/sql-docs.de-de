@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8b3953f0f0000ce67f3d58ffbc4be07b5d921734
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c80e55d2a2dc54e90d33785bc64153fa1dbf8a6
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479217"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300844"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -210,7 +210,7 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Das Fehlen einer Reaktion auf Clientanforderungen durch eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ist für Verfügbarkeitsgruppen nicht relevant.  
   
- Der FAILURE_CONDITION_LEVEL- und der HEALTH_CHECK_TIMEOUT-Wert definieren eine *flexible Failoverrichtlinie* für eine angegebene Gruppe. Diese flexible Failoverrichtlinie bietet eine präzise Kontrolle der Bedingungen, die ein automatisches Failover verursachen müssen. Weitere Informationen finden Sie unter [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+ Der FAILURE_CONDITION_LEVEL- und der HEALTH_CHECK_TIMEOUT-Wert definieren eine *flexible Failoverrichtlinie* für eine angegebene Gruppe. Diese flexible Failoverrichtlinie bietet eine präzise Kontrolle der Bedingungen, die ein automatisches Failover verursachen müssen. Weitere Informationen finden Sie unter [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
  Gibt die Wartezeit (in Millisekunden) für die gespeicherte Systemprozedur [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) an, um Informationen über den Serverzustand zurückzugeben, ehe das WSFC-Cluster annimmt, dass die Serverinstanz langsam ist oder nicht reagiert. HEALTH_CHECK_TIMEOUT wird auf Gruppenebene festgelegt, ist aber nur für Verfügbarkeitsreplikate relevant, die für den Verfügbarkeitsmodus für synchrone Commits mit automatischem Failover (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) konfiguriert sind.  Weiterhin kann ein Integritätsprüfungstimeout nur ein automatisches Failover auslösen, wenn das primäre und das sekundäre Replikat für den automatischen Failovermodus konfiguriert sind (FAILOVER_MODE **=** AUTOMATIC) und das sekundäre Replikat gerade mit dem primären Replikat synchronisiert wird.  
@@ -259,7 +259,7 @@ Legt fest, ob verteilte Transaktionen für diese Verfügbarkeitsgruppe aktiviert
  \<server_instance>  
  Gibt die Adresse der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die als Host für ein Replikat fungiert. Das Adressformat hängt davon ab, ob die Instanz die Standardinstanz oder eine benannte Instanz ist und ob es eine eigenständige Instanz oder eine Failoverclusterinstanz (FCI) ist. Die Syntax lautet wie folgt:  
   
- { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
+ { ' *system_name* [\\*instance_name* ]' | ' *FCI_network_name* [\\*instance_name* ]' }  
   
  Diese Adresse weist die folgenden Komponenten auf:  
   
@@ -267,7 +267,7 @@ Legt fest, ob verteilte Transaktionen für diese Verfügbarkeitsgruppe aktiviert
  Der NetBIOS-Name des Computersystems, auf dem sich eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz befindet. Dieser Computer muss ein WSFC-Knoten sein.  
   
  *FCI_network_name*  
- Ist der Netzwerkname, der verwendet wird, um auf einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failovercluster zuzugreifen. Verwenden Sie diesen Namen, wenn die Serverinstanz als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverpartner beteiligt ist. Wenn SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) in einer FCI-Serverinstanz ausgeführt wird, wird die gesamte '*FCI_network_name*[\\*instance_name*]'-Zeichenfolge zurückgegeben (dabei handelt es sich um den vollständigen Replikatnamen).  
+ Ist der Netzwerkname, der verwendet wird, um auf einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failovercluster zuzugreifen. Verwenden Sie diesen Namen, wenn die Serverinstanz als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverpartner beteiligt ist. Wenn SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) in einer FCI-Serverinstanz ausgeführt wird, wird die gesamte ' *FCI_network_name* [\\*instance_name* ]'-Zeichenfolge zurückgegeben (dabei handelt es sich um den vollständigen Replikatnamen).  
   
  *instance_name*  
  Ist der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die von *system_name* oder *FCI_network_name* gehostet wird und für die Always On aktiviert ist. Bei einer Standardserverinstanz ist *instance_name* optional. Bei dem Instanznamen wird die Groß-/Kleinschreibung berücksichtigt. In einer eigenständigen Serverinstanz stimmt der Name dieses Werts mit dem Wert überein, der beim Ausführen von SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) zurückgegeben wird.  
@@ -277,7 +277,7 @@ Legt fest, ob verteilte Transaktionen für diese Verfügbarkeitsgruppe aktiviert
   
  Informationen zu den Voraussetzungen für WSFC-Knoten und Serverinstanzen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL ='TCP://*system-address*:*port*'  
+ ENDPOINT_URL ='TCP:// *system-address* : *port* '  
  Gibt den URL-Pfad des [Datenbankspiegelungsendpunkts](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz an, die das Verfügbarkeitsreplikat, das Sie hinzufügen oder ändern, hostet.  
   
  ENDPOINT_URL ist in der ADD REPLICA ON-Klausel erforderlich und in der MODIFY REPLICA ON-Klausel optional.  Weitere Informationen finden Sie unter [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)zu unterstützen.  
@@ -324,7 +324,7 @@ Legt fest, ob verteilte Transaktionen für diese Verfügbarkeitsgruppe aktiviert
 >  SQL Server-Failoverclusterinstanzen (FCIs) unterstützen kein automatisches Failover durch Verfügbarkeitsgruppen. Daher können die Verfügbarkeitsreplikate, die von einer FCI gehostet werden, nur für manuelles Failover konfiguriert werden.  
   
  MANUAL  
- Ermöglicht manuelles Failover oder erzwungenes manuelles Failover (*erzwungenes Failover*) durch den Datenbankadministrator.  
+ Ermöglicht manuelles Failover oder erzwungenes manuelles Failover ( *erzwungenes Failover* ) durch den Datenbankadministrator.  
   
  FAILOVER_MODE ist in der ADD REPLICA ON-Klausel erforderlich und in der MODIFY REPLICA ON-Klausel optional. Zwei Typen manuellen Failovers sind vorhanden, manuelles Failover ohne Datenverlust und erzwungenes Failover (mit möglichem Datenverlust), die unter anderen Bedingungen unterstützt werden.  Weitere Informationen finden Sie weiter unten in diesem Thema unter [Failover und Failovermodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
@@ -371,9 +371,9 @@ Legt fest, ob verteilte Transaktionen für diese Verfügbarkeitsgruppe aktiviert
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Gibt die URL an, die zum Weiterleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge zu diesem Verfügbarkeitsreplikat verwendet werden soll. Dies ist die URL, die die SQL Server-Datenbank-Engine überwacht. In der Regel überwacht die Standardinstanz der SQL Server-Datenbank-Engine auf TCP-Port 1433.  
   
- Für eine benannte Instanz können Sie die Portnummer durch das Abfragen der Spalten **port** und **type_desc** der dynamischen [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)-Verwaltungssicht abrufen. Die Serverinstanz verwendet den Transact-SQL-Listener (**type_desc='TSQL'** ).  
+ Für eine benannte Instanz können Sie die Portnummer durch das Abfragen der Spalten **port** und **type_desc** der dynamischen [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)-Verwaltungssicht abrufen. Die Serverinstanz verwendet den Transact-SQL-Listener ( **type_desc='TSQL'** ).  
   
- Weitere Informationen zum Berechnen der schreibgeschützten Routing-URL für ein Verfügbarkeitsreplikat finden Sie unter [Berechnen von read_only_routing_url für Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
+ Weitere Informationen zum Berechnen der schreibgeschützten Routing-URL für ein Verfügbarkeitsreplikat finden Sie unter [Berechnen von read_only_routing_url für Always On](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
 > [!NOTE]  
 >  Für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollte der Transact-SQL-Listener konfiguriert werden, um einen bestimmten Port zu verwenden. Weitere Informationen finden Sie unter [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -392,7 +392,7 @@ Legt fest, ob verteilte Transaktionen für diese Verfügbarkeitsgruppe aktiviert
  ALL  
  Für die Datenbanken im primären Replikat sind alle Verbindungen zugelassen. Dies ist das Standardverhalten.  
   
- READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ... *n* ] **)** | NONE }  
  Gibt beim Ausführen unter der sekundären Rolle eine durch Trennzeichen getrennte Liste von Serverinstanzen an, die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, die die folgenden Anforderungen erfüllt:  
   
 -   Wird konfiguriert, um alle Verbindungen oder schreibgeschützte Verbindungen (siehe das obige ALLOW_CONNECTIONS-Argument der SECONDARY_ROLE-Option) zuzulassen.  
@@ -449,7 +449,7 @@ Weitere Informationen finden Sie unter [Umleitung von Lese-/Schreibverbindungen 
  Weitere Informationen finden Sie unter [Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)mit einer Always On-Verfügbarkeitsgruppe verknüpft wird.  
   
  FAILOVER  
-Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an das sekundäre Replikat, mit dem Sie verbunden sind. Das Replikat, von dem das primäre Replikat gehostet wird, wird das *Failoverziel*.  Das Failoverziel übernimmt die primäre Rolle und stellt seine Kopie jeder Datenbank wieder her und schaltet sie als neue primäre Datenbanken online. Das frühere primäre Replikat geht gleichzeitig in die sekundäre Rolle über, und seine Datenbanken werden sekundäre Datenbanken und werden sofort angehalten. Zwischen diesen Rollen kann möglicherweise durch eine Reihe von Fehlern hin- und hergeschaltet werden.  
+Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an das sekundäre Replikat, mit dem Sie verbunden sind. Das Replikat, von dem das primäre Replikat gehostet wird, wird das *Failoverziel* .  Das Failoverziel übernimmt die primäre Rolle und stellt seine Kopie jeder Datenbank wieder her und schaltet sie als neue primäre Datenbanken online. Das frühere primäre Replikat geht gleichzeitig in die sekundäre Rolle über, und seine Datenbanken werden sekundäre Datenbanken und werden sofort angehalten. Zwischen diesen Rollen kann möglicherweise durch eine Reihe von Fehlern hin- und hergeschaltet werden.  
   
  Wird nur auf einem sekundären Replikat mit synchronem Commit unterstützt, das derzeit mit dem primären Replikat synchronisiert ist. Hinweis: Damit das sekundäre Replikat synchronisiert werden kann, muss das primäre Replikat ebenfalls im Modus mit synchronem Commit ausgeführt werden.  
   
@@ -565,7 +565,7 @@ Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an 
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ..._n_ ] **)** [ **,** PORT **=** _listener\_port_ ]  
+ WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ... _n_ ] **)** [ **,** PORT **=** _listener\_port_ ]  
  Gibt an, dass, der Listener der Verfügbarkeitsgruppe statt DHCPr eine oder mehrere statische IP-Adressen verwendet. Um eine Verfügbarkeitsgruppe über mehrere Subnetze zu erstellen, erfordert jedes Subnetz in der Listenerkonfiguration eine statische IP-Adresse. Für ein angegebenes Subnetz kann die statische IP-Adresse entweder eine IPv4-Adresse oder eine IPv6-Adresse sein. Wenden Sie sich an Ihren Netzwerkadministrator, um eine statische IP-Adresse für jedes Subnetz zu erhalten, das ein Verfügbarkeitsreplikat für die neue Verfügbarkeitsgruppe hostet.  
   
  Beispiel:  
@@ -582,7 +582,7 @@ Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an 
  Gibt eine IPv6-Adresse für einen Verfügbarkeitsgruppenlistener an. Beispiel: `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
   
  PORT **=** *listener_port*  
- Gibt die Portnummer (*listener_port*) an, die von einem Verfügbarkeitsgruppenlistener verwendet wird, der anhand einer WITH IP-Klausel angegeben wird. PORT ist optional.  
+ Gibt die Portnummer ( *listener_port* ) an, die von einem Verfügbarkeitsgruppenlistener verwendet wird, der anhand einer WITH IP-Klausel angegeben wird. PORT ist optional.  
   
  Die Standardportnummer 1433 wird unterstützt. Wenn Sie jedoch Sicherheitsbedenken hegen, empfehlen wir die Verwendung einer anderen Portnummer.  
   
@@ -594,7 +594,7 @@ Initiiert ein manuelles Failover der Verfügbarkeitsgruppe ohne Datenverlust an 
  \<modify\_listener\_option\>  
  MODIFY LISTENER verwendet eine der folgenden Optionen:  
   
- ADD IP { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4_mask_ **')** \| <b>('</b>dns\_name*ipv6\_address* __')__ }  
+ ADD IP { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4_mask_ **')** \| <b>('</b>dns\_name *ipv6\_address* __')__ }  
  Fügt dem durch *dns\_name* angegebenen Verfügbarkeitsgruppenlistener die angegebene IP-Adresse hinzu.  
   
  PORT **=** *listener_port*  
@@ -650,5 +650,4 @@ GO
  [Problembehandlung für die Always On-Verfügbarkeitsgruppenkonfiguration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
   

@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1f7e6cc805953007bb83eb5a50db5a39aea9e37b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 8b37413dd6450999e6671858073805dea5a5424e
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024579"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412575"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -108,7 +108,7 @@ column_name <data_type>
     [ COLLATE collation_name ]
     [ SPARSE ]
     [ MASKED WITH ( FUNCTION = ' mask_function ') ]
-    [ CONSTRAINT constraint_name [ DEFAULT constant_expression ] ]
+    [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression ]
     [ IDENTITY [ ( seed,increment ) ]
     [ NOT FOR REPLICATION ]
     [ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] ]
@@ -381,20 +381,20 @@ Berechnete Spalten können in SELECT-Listen, WHERE-Klauseln, ORDER BY-Klauseln o
 > [!NOTE]
 > Jede Zeile in einer Tabelle kann unterschiedliche Werte in den Spalten aufweisen, die für eine berechnete Spalte herangezogen werden, daher enthält die berechnete Spalte möglicherweise nicht in jeder Zeile den gleichen Wert.
 
-Die NULL-Zulässigkeit berechneter Spalten wird automatisch von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf Grundlage der verwendeten Ausdrücke bestimmt. Für das Ergebnis der meisten Ausdrücke wird die NULL-Zulässigkeit angenommen, und zwar auch dann, wenn nur Spalten vorhanden sind, die keine NULL-Werte zulassen, da mögliche Unter- oder Überläufe ebenfalls zu NULL-Ergebnissen führen. Verwenden Sie die Funktion `COLUMNPROPERTY` mit der Eigenschaft **AllowsNull**, um die NULL-Zulässigkeit von berechneten Spalten in einer Tabelle zu untersuchen. Ein Ausdruck, der NULL-Werte zulässt, kann nur durch die Angabe von `ISNULL` mit der Konstante *check_expression* in einen Ausdruck umgewandelt werden, der keine NULL-Werte zulässt. Die Konstante ist ein Wert ungleich NULL, durch den jedes NULL-Ergebnis ersetzt wird. Für berechnete Spalten, die auf CLR-benutzerdefinierten Typausdrücken (Common Language Runtime) basieren, ist die REFERENCES-Berechtigung für den Typ erforderlich.
+Die NULL-Zulässigkeit berechneter Spalten wird automatisch von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf Grundlage der verwendeten Ausdrücke bestimmt. Für das Ergebnis der meisten Ausdrücke wird die NULL-Zulässigkeit angenommen, und zwar auch dann, wenn nur Spalten vorhanden sind, die keine NULL-Werte zulassen, da mögliche Unter- oder Überläufe ebenfalls zu NULL-Ergebnissen führen. Verwenden Sie die Funktion `COLUMNPROPERTY` mit der Eigenschaft **AllowsNull** , um die NULL-Zulässigkeit von berechneten Spalten in einer Tabelle zu untersuchen. Ein Ausdruck, der NULL-Werte zulässt, kann nur durch die Angabe von `ISNULL` mit der Konstante *check_expression* in einen Ausdruck umgewandelt werden, der keine NULL-Werte zulässt. Die Konstante ist ein Wert ungleich NULL, durch den jedes NULL-Ergebnis ersetzt wird. Für berechnete Spalten, die auf CLR-benutzerdefinierten Typausdrücken (Common Language Runtime) basieren, ist die REFERENCES-Berechtigung für den Typ erforderlich.
 
 PERSISTED Gibt an, dass das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die berechneten Werte physisch in der Tabelle speichert und die Werte aktualisiert, wenn Spalten, von denen die berechnete Spalte abhängt, aktualisiert werden. Wenn Sie eine berechnete Spalte mit `PERSISTED` als persistente Spalte markieren, können Sie einen Index für eine berechnete Spalte erstellen, die deterministisch, jedoch nicht genau ist. Weitere Informationen finden Sie unter [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Sämtliche berechnete Spalten, die als Partitionierungsspalten einer partitionierten Tabelle verwendet werden, müssen ausdrücklich mit `PERSISTED` gekennzeichnet sein. *computed_column_expression* muss deterministisch sein, wenn `PERSISTED` angegeben wird.
 
 ON { *partition_scheme* | *filegroup* |  **"default"** } Gibt das Partitionsschema oder die Dateigruppe an, in der die Tabelle gespeichert wird. Wenn *partition_scheme* angegeben wird, soll die Tabelle eine partitionierte Tabelle sein, deren Partitionen in einem Satz aus einer oder mehreren in *partition_scheme* angegebenen Dateigruppen gespeichert werden. Wenn *filegroup* angegeben ist, wird die Tabelle in der genannten Dateigruppe gespeichert. Die Dateigruppe muss in der Datenbank vorhanden sein. Wenn **"default"** angegeben oder ON nicht angegeben ist, wird die Tabelle in der Standarddateigruppe gespeichert. Der in CREATE TABLE angegebene Speichermechanismus einer Tabelle kann nachfolgend nicht mehr geändert werden.
 
-ON {*partition_scheme* | *filegroup* |  **"default"** } kann auch in den Einschränkungen PRIMARY KEY und UNIQUE angegeben werden. Diese Einschränkungen erstellen Indizes. Wenn *filegroup* angegeben ist, wird der Index in der genannten Dateigruppe gespeichert. Wenn **"default"** angegeben oder ON überhaupt nicht angegeben ist, wird der Index in derselben Dateigruppe wie die Tabelle gespeichert. Wenn die Einschränkungen `PRIMARY KEY` oder `UNIQUE` einen gruppierten Index erstellt, werden die Datenseiten für die Tabelle in derselben Dateigruppe wie der Index gespeichert. Wenn `CLUSTERED` angegeben oder ein gruppierter Index anderweitig durch die Einschränkung erstellt wird, und ein Wert für *partition_scheme* angegeben wird, der von der Angabe für *partition_scheme* oder *filegroup* der Tabellendefinition abweicht (oder umgekehrt), wird nur die Einschränkungsdefinition berücksichtigt. Der andere Wert wird ignoriert.
+ON { *partition_scheme* | *filegroup* |  **"default"** } kann auch in den Einschränkungen PRIMARY KEY und UNIQUE angegeben werden. Diese Einschränkungen erstellen Indizes. Wenn *filegroup* angegeben ist, wird der Index in der genannten Dateigruppe gespeichert. Wenn **"default"** angegeben oder ON überhaupt nicht angegeben ist, wird der Index in derselben Dateigruppe wie die Tabelle gespeichert. Wenn die Einschränkungen `PRIMARY KEY` oder `UNIQUE` einen gruppierten Index erstellt, werden die Datenseiten für die Tabelle in derselben Dateigruppe wie der Index gespeichert. Wenn `CLUSTERED` angegeben oder ein gruppierter Index anderweitig durch die Einschränkung erstellt wird, und ein Wert für *partition_scheme* angegeben wird, der von der Angabe für *partition_scheme* oder *filegroup* der Tabellendefinition abweicht (oder umgekehrt), wird nur die Einschränkungsdefinition berücksichtigt. Der andere Wert wird ignoriert.
 
 > [!NOTE]
 > In diesem Zusammenhang ist *default* kein Schlüsselwort. Es handelt sich dabei um einen Bezeichner für die Standarddateigruppe, der wie bei ON **"default"** oder ON **[** default **]** begrenzt sein muss. Wenn **"default"** angegeben wird, muss die Option `QUOTED_IDENTIFIER` für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 >
 > Nachdem Sie eine partitionierte Tabelle erstellt haben, erwägen Sie, die `LOCK_ESCALATION`-Option für die Tabelle auf `AUTO` festzulegen. Dies kann die Parallelität verbessern, indem die Sperren auf Partitionsebene (HoBT) statt auf Tabellenebene aktiviert werden. Weitere Informationen finden Sie unter [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).
 
-TEXTIMAGE_ON { *filegroup*|  **"default"** } Gibt an, dass die Spalten vom Typ **text**, **ntext**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und eines CLR-benutzerdefinierten Typs (einschließlich „geometry“ und „geography“) in der angegebenen Dateigruppe gespeichert werden.
+TEXTIMAGE_ON { *filegroup*|  **"default"** } Gibt an, dass die Spalten vom Typ **text** , **ntext** , **image** , **xml** , **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und eines CLR-benutzerdefinierten Typs (einschließlich „geometry“ und „geography“) in der angegebenen Dateigruppe gespeichert werden.
 
 `TEXTIMAGE_ON` ist nicht zulässig, wenn die Tabelle keine Spalten für umfangreiche Werte enthält. `TEXTIMAGE_ON` darf nicht angegeben werden, wenn *partition_scheme* angegeben wird. Wenn **"default"** angegeben oder `TEXTIMAGE_ON` nicht angegeben wird, werden die Spalten für umfangreiche Werte in der Standarddateigruppe gespeichert. Die in `CREATE TABLE` angegebene Speicherung von Spaltendaten mit großen Werten kann nachfolgend nicht mehr geändert werden.
 
@@ -405,7 +405,7 @@ TEXTIMAGE_ON { *filegroup*|  **"default"** } Gibt an, dass die Spalten vom Typ *
 >
 > In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Dabei handelt es sich um einen Bezeichner für die Standarddateigruppe, der wie in `TEXTIMAGE_ON "default"` oder `TEXTIMAGE_ON [default]` abgegrenzt sein muss. Wenn **"default"** angegeben wird, muss die Option `QUOTED_IDENTIFIER` für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
-FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] und höher) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt `FILESTREAM` nicht.
+FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } **Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] und höher) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt `FILESTREAM` nicht.
 
 Gibt die Dateigruppe für FILESTREAM-Daten an.
 
@@ -442,13 +442,13 @@ Eine Liste unterstützter Systemtypen für speicheroptimierte Tabellen finden Si
 
 *scale* Die Dezimalstellen für den angegebenen Datentyp. Weitere Informationen zu gültigen Dezimalstellenwerten finden Sie unter [Genauigkeit, Dezimalstellen und Länge](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).
 
-**max** Gilt nur für die Datentypen **varchar**, **nvarchar** und **varbinary** zum Speichern von 2^31 Byte an Zeichen- und Binärdaten sowie von 2^30 Byte an Unicode-Daten.
+**max** Gilt nur für die Datentypen **varchar** , **nvarchar** und **varbinary** zum Speichern von 2^31 Byte an Zeichen- und Binärdaten sowie von 2^30 Byte an Unicode-Daten.
 
-CONTENT Gibt an, dass jede Instanz des **xml**-Datentyps in *column_name* mehrere allgemeine Elemente enthalten kann. CONTENT gilt nur für den **xml**-Datentyp und kann nur angegeben werden, wenn *xml_schema_collection* ebenfalls angegeben ist. Wird der Parameter nicht angegeben, entspricht CONTENT dem Standardverhalten.
+CONTENT Gibt an, dass jede Instanz des **xml** -Datentyps in *column_name* mehrere allgemeine Elemente enthalten kann. CONTENT gilt nur für den **xml** -Datentyp und kann nur angegeben werden, wenn *xml_schema_collection* ebenfalls angegeben ist. Wird der Parameter nicht angegeben, entspricht CONTENT dem Standardverhalten.
 
-DOCUMENT Gibt an, dass jede Instanz des **xml**-Datentyps in *column_name* nur ein allgemeines Element enthalten kann. DOCUMENT gilt nur für den **xml**-Datentyp und kann nur angegeben werden, wenn *xml_schema_collection* ebenfalls angegeben ist.
+DOCUMENT Gibt an, dass jede Instanz des **xml** -Datentyps in *column_name* nur ein allgemeines Element enthalten kann. DOCUMENT gilt nur für den **xml** -Datentyp und kann nur angegeben werden, wenn *xml_schema_collection* ebenfalls angegeben ist.
 
-*xml_schema_collection* Gilt nur für den **xml**-Datentyp zum Verknüpfen einer XML-Schemaauflistung mit diesem Typ. Vor der Typisierung einer **xml**-Spalte mit einem Schema muss das Schema zuerst mithilfe von [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) in der Datenbank erstellt werden.
+*xml_schema_collection* Gilt nur für den **xml** -Datentyp zum Verknüpfen einer XML-Schemaauflistung mit diesem Typ. Vor der Typisierung einer **xml** -Spalte mit einem Schema muss das Schema zuerst mithilfe von [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) in der Datenbank erstellt werden.
 
 DEFAULT Gibt den Wert an, der für die Spalte bereitgestellt wird, wenn während des Einfügens kein Wert explizit angegeben wurde. DEFAULT-Definitionen können auf alle Spalten angewendet werden, mit Ausnahme der als **timestamp** definierten Spalten sowie von Spalten mit der `IDENTITY`-Eigenschaft. Wenn ein Standardwert für einen benutzerdefinierten Spaltentyp angegeben wird, sollte dieser Typ eine implizite Konvertierung von *constant_expression* in den benutzerdefinierten Typ unterstützen. DEFAULT-Definitionen werden entfernt, wenn die Tabelle gelöscht wird. Es kann nur ein konstanter Wert (z. B. eine Zeichenfolge), eine Skalarfunktion (entweder eine System-, eine benutzerdefinierte oder eine CLR-Funktion) oder NULL als Standardwert verwendet werden. Um die Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufrechtzuerhalten, ist es möglich, einer DEFAULT-Definition einen Einschränkungsnamen zuzuweisen.
 
@@ -456,7 +456,7 @@ DEFAULT Gibt den Wert an, der für die Spalte bereitgestellt wird, wenn während
 
 *memory_optimized_constant_expression* Eine Konstante, ein NULL-Wert oder eine Systemfunktion, die bzw. der als Standardwert für die Spalte verwendet wird. Muss in systemintern kompilierten gespeicherten Prozeduren unterstützt werden. Weitere Informationen zu den integrierten Features in nativ kompilierten gespeicherten Prozeduren finden Sie unter [Unterstützte Features für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).
 
-IDENTITY Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn eine neue Zeile zur Tabelle hinzugefügt wird, stellt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereit. Identitätsspalten werden üblicherweise zusammen mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die Eigenschaft `IDENTITY` kann folgenden Spalten zugewiesen werden: **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** oder **numeric(p,0)** . Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Entweder müssen sowohl Ausgangswert als auch Schrittweite oder keines von beiden angegeben werden. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).
+IDENTITY Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn eine neue Zeile zur Tabelle hinzugefügt wird, stellt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereit. Identitätsspalten werden üblicherweise zusammen mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die Eigenschaft `IDENTITY` kann folgenden Spalten zugewiesen werden: **tinyint** , **smallint** , **int** , **bigint** , **decimal(p,0)** oder **numeric(p,0)** . Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Entweder müssen sowohl Ausgangswert als auch Schrittweite oder keines von beiden angegeben werden. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).
 
 *seed* Der Wert, der für die erste in die Tabelle geladene Zeile verwendet wird.
 
@@ -470,7 +470,7 @@ Gibt an, dass eine angegebene `datetime2`-Spalte vom System verwendet wird, um e
 
 Sie können eine oder beide Zeitraumspalten mit dem Flag **HIDDEN** kennzeichnen, um diese Spalten implizit auszublenden, sodass **SELECT \* FROM** _`<table>`_ für diese Spalten keinen Wert zurückgibt. Standardmäßig sind Zeitraumspalten nicht ausgeblendet. Damit sie verwendet werden können, müssen ausgeblendete Spalten explizit in allen Abfragen eingeschlossen werden, die direkt auf die temporale Tabelle verweisen. Zum Ändern des Attributs **HIDDEN** einer vorhandenen Zeitraumspalte, muss **PERIOD** gelöscht und mit einem anderen Flag neu erstellt werden.
 
-INDEX *index_name* [CLUSTERED | NONCLUSTERED] (*column_name* [ASC | DESC] [,... *n*] ) **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+INDEX *index_name* [CLUSTERED | NONCLUSTERED] ( *column_name* [ASC | DESC] [,... *n* ] ) **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt an, dass ein Index in der Tabelle erstellt werden soll. Dies kann ein gruppierter oder ein nicht gruppierter Index sein. Der Index enthält die aufgelisteten Spalten und sortiert die Daten in aufsteigender oder absteigender Reihenfolge.
 
@@ -478,7 +478,7 @@ INDEX *index_name* CLUSTERED COLUMNSTORE **Gilt für:** [!INCLUDE[ssNoVersion](.
 
 Gibt an, dass die gesamte Tabelle im Spaltenformat mit einem Columnstore-Index gespeichert werden soll. Dies beinhaltet immer alle Spalten in der Tabelle. Die Daten werden nicht in alphabetischer oder numerischer Reihenfolge sortiert, da die Zeilen zugunsten der Vorteile der Columnstore-Komprimierung organisiert sind.
 
-INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] ) **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE ( *column_name* [ ,... *n* ] ) **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt an, dass ein nicht gruppierter Columnstore-Index in der Tabelle erstellt werden soll. Die zugrunde liegende Tabelle kann ein Rowstore-Heap, gruppierter Index oder gruppierter Columnstore-Index sein. Eine zweite Kopie der Daten für die Spalten im Index wird immer gespeichert, wenn ein nicht gruppierter Columnstore-Index erstellt wird.
 
@@ -502,7 +502,7 @@ ON **"default"** Erstellt den angegebenen Index für die Standarddateigruppe
 
 Die Benennung default ist in diesem Kontext kein Schlüsselwort. Es handelt sich dabei um einen Bezeichner für die Standarddateigruppe, der wie bei ON **"default"** oder ON **[default]** begrenzt sein muss. Wenn "default" angegeben wird, muss die Option `QUOTED_IDENTIFIER` für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
-[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ] **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] und höher).
+[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ] **Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] und höher).
 
 Gibt die Platzierung der FILESTREAM-Daten für die Tabelle an, wenn ein gruppierter Index erstellt wird. Die FILESTREAM_ON-Klausel lässt zu, dass FILESTREAM-Daten in eine andere FILESTREAM-Dateigruppe oder ein anderes Partitionsschema verschoben werden.
 
@@ -516,7 +516,7 @@ Wenn die Tabelle nicht partitioniert ist, kann die FILESTREAM-Spalte nicht parti
 
 Weitere Informationen finden Sie unter [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md).
 
-ROWGUIDCOL Gibt an, dass die neue Spalte eine Spalte mit Zeilen-GUIDs ist. Nur eine **uniqueidentifier**-Spalte pro Tabelle kann als ROWGUIDCOL-Spalte gekennzeichnet werden. Nach der Anwendung der ROWGUIDCOL-Eigenschaft kann mit `$ROWGUID` auf die Spalte verwiesen werden. Die ROWGUIDCOL-Eigenschaft kann nur einer **uniqueidentifier**-Spalte zugewiesen werden. Spalten eines benutzerdefinierten Datentyps können nicht mit ROWGUIDCOL gekennzeichnet werden.
+ROWGUIDCOL Gibt an, dass die neue Spalte eine Spalte mit Zeilen-GUIDs ist. Nur eine **uniqueidentifier** -Spalte pro Tabelle kann als ROWGUIDCOL-Spalte gekennzeichnet werden. Nach der Anwendung der ROWGUIDCOL-Eigenschaft kann mit `$ROWGUID` auf die Spalte verwiesen werden. Die ROWGUIDCOL-Eigenschaft kann nur einer **uniqueidentifier** -Spalte zugewiesen werden. Spalten eines benutzerdefinierten Datentyps können nicht mit ROWGUIDCOL gekennzeichnet werden.
 
 Die ROWGUIDCOL-Eigenschaft erzwingt keine Eindeutigkeit der in der Spalte gespeicherten Werte. ROWGUIDCOL erzeugt auch nicht automatisch Werte für neue Zeilen, die in die Tabelle eingefügt werden. Zum Generieren eindeutiger Werte für jede Spalte verwenden Sie entweder die Funktion [NEWID](../../t-sql/functions/newid-transact-sql.md) oder [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) in [INSERT](../../t-sql/statements/insert-transact-sql.md)-Anweisungen, oder verwenden Sie diese Funktionen als Standardwert für die Spalte.
 
@@ -526,7 +526,7 @@ COLUMN_ENCRYPTION_KEY = *key_name* Gibt Spaltenverschlüsselungsschlüssel an. W
 
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } Bei der **deterministischen Verschlüsselung** wird eine Methode verwendet, die immer denselben verschlüsselten Wert für jeden angegebenen Nur-Text-Wert generiert. Die Verwendung der deterministischen Verschlüsselung ermöglicht die Suche mit einer Gleichheitsüberprüfung, das Gruppieren und das Verknüpfen von Tabellen mit Gleichheitsjoins, basierend auf verschlüsselten Werten. Jedoch erlaubt sie nicht autorisierten Benutzern möglicherweise, Informationen zu verschlüsselten Werten zu erraten, indem sie die Muster in den verschlüsselten Spalten untersuchen. Das Verknüpfen zweier Tabellen mit deterministisch verschlüsselten Spalten ist nur möglich, wenn die Spalten mit demselben Spaltenverschlüsselungsschlüssel verschlüsselt sind. Die deterministische Verschlüsselung muss eine Spaltensortierung mit einer binary2-Sortierreihenfolge für Zeichenspalten verwenden.
 
-Die**zufällige Verschlüsselung** verwendet eine Methode, die Daten in einer weniger vorhersagbaren Weise verschlüsselt. Die Verschlüsselung nach dem Zufallsprinzip ist zwar sicherer, verhindert jedoch jegliche Berechnungen und Indizierungen in verschlüsselten Spalten, es sei denn, Ihre SQL Server-Instanz unterstützt Always Encrypted mit Secure Enclaves. Weitere Einzelheiten finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Die **zufällige Verschlüsselung** verwendet eine Methode, die Daten in einer weniger vorhersagbaren Weise verschlüsselt. Die Verschlüsselung nach dem Zufallsprinzip ist zwar sicherer, verhindert jedoch jegliche Berechnungen und Indizierungen in verschlüsselten Spalten, es sei denn, Ihre SQL Server-Instanz unterstützt Always Encrypted mit Secure Enclaves. Weitere Einzelheiten finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 Wenn Sie Always Encrypted (ohne Secure Enclaves) verwenden, verwenden Sie die deterministische Verschlüsselung für Spalten, die mit Parametern oder Gruppierungsparametern durchsucht werden sollen (z. B. eine Behörden-ID-Nummer). Verwenden Sie die zufällige Datenverschlüsselung für Daten (z. B. Kreditkartennummern), die nicht mit anderen Datensätzen gruppiert oder in Jointabellen verwendet werden und nach denen nicht gesucht wird, wenn andere Spalten verwendet werden (z. B. Transaktionsnummern), um die Zeile zu suchen, die die betreffende verschlüsselte Spalte enthält.
 
@@ -542,7 +542,7 @@ Weitere Informationen einschließlich Featureeinschränkungen finden Sie unter [
 
 SPARSE Gibt an, dass die Spalte eine Sparsespalte ist. Der Speicher für Sparsespalten ist für NULL-Werte optimiert. Spalten mit geringer Dichte können nicht als NOT NULL festgelegt werden. Weitere Einschränkungen und Informationen zu Sparsespalten finden Sie unter [Verwenden von Sparsespalten](../../relational-databases/tables/use-sparse-columns.md).
 
-ADD MASKED WITH ( FUNCTION = ' *mask_function* ') **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
+ADD MASKED WITH ( FUNCTION = ' *mask_function* ') **Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
 
 Gibt eine dynamische Datenmaske an. *mask_function* ist der Name der Maskierungsfunktion mit den entsprechenden Parametern. Es stehen vier Optionen zur Verfügung:
 
@@ -563,7 +563,7 @@ Die Spalte ROWGUIDCOL kann nicht gelöscht, und die zugehörigen Einschränkunge
 
 Wenn das FILESTREAM-Speicherattribut für eine Spalte angegeben wird, werden alle Werte dieser Spalte in einem FILESTREAM-Datencontainer des Dateisystems gespeichert.
 
-COLLATE *collation_name* Gibt die Sortierung für die Spalte an. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. *collation_name* ist nur für Spalten mit den folgenden Datentypen anwendbar: **char**, **varchar**, **text**, **nchar**, **nvarchar** und **ntext**. Wenn collation_name nicht angegeben ist, wird der Spalte die Sortierung des benutzerdefinierten Datentyps zugewiesen, wenn es sich um eine Spalte von einem benutzerdefinierten Datentyp handelt, oder es wird die Standardsortierung der Datenbank zugewiesen.
+COLLATE *collation_name* Gibt die Sortierung für die Spalte an. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. *collation_name* ist nur für Spalten mit den folgenden Datentypen anwendbar: **char** , **varchar** , **text** , **nchar** , **nvarchar** und **ntext** . Wenn collation_name nicht angegeben ist, wird der Spalte die Sortierung des benutzerdefinierten Datentyps zugewiesen, wenn es sich um eine Spalte von einem benutzerdefinierten Datentyp handelt, oder es wird die Standardsortierung der Datenbank zugewiesen.
 
 Weitere Informationen zu den Windows- und SQL-Sortierungsnamen finden Sie unter [Name der Windows-Sortierung](../../t-sql/statements/windows-collation-name-transact-sql.md) und [SQL Server-Sortierungsname](../../t-sql/statements/sql-server-collation-name-transact-sql.md).
 
@@ -585,7 +585,7 @@ In einer `CREATE TABLE`-Anweisung kann CLUSTERED nur für eine einzige Einschrä
 
 FOREIGN KEY REFERENCES Eine Einschränkung, die referenzielle Integrität für die Daten in der Spalte oder den Spalten bereitstellt. FOREIGN KEY-Einschränkungen erfordern, dass jeder Wert in der Spalte in den entsprechenden Spalten, auf die verwiesen wird, in der Tabelle, auf die verwiesen wird, vorhanden ist. FOREIGN KEY-Einschränkungen können nur auf Spalten verweisen, die PRIMARY KEY- oder UNIQUE-Einschränkungen in der Tabelle sind, auf die verwiesen wird; oder auf Spalten, auf die in einer UNIQUE INDEX-Einschränkung in der Tabelle, auf die verwiesen wird, verwiesen wird. Fremdschlüssel für berechnete Spalten müssen auch als PERSISTED markiert werden.
 
-[ _schema\_name_ **.** ] *referenced_table_name*] Der Name der Tabelle, auf die in der FOREIGN KEY-Einschränkung verwiesen wird, sowie das Schema, zu dem sie gehört.
+[ _schema\_name_ **.** ] *referenced_table_name* ] Der Name der Tabelle, auf die in der FOREIGN KEY-Einschränkung verwiesen wird, sowie das Schema, zu dem sie gehört.
 
 **(** *ref_column* [ **,** ... *n* ] **)** Eine Spalte oder Liste von Spalten aus der Tabelle, auf die die FOREIGN KEY-Einschränkung verweist
 
@@ -603,11 +603,11 @@ Geben Sie CASCADE nicht an, wenn die Tabelle in eine Mergeveröffentlichung einb
 
 `ON DELETE CASCADE` kann nicht definiert werden, wenn bereits ein `INSTEAD OF`-Trigger für `ON DELETE` für die Tabelle vorhanden ist.
 
-In der Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] verfügt die Tabelle **ProductVendor** beispielsweise über eine referenzielle Beziehung zu der Tabelle **Vendor**. Der Fremdschlüssel **ProductVendor.BusinessEntityID** verweist auf den Primärschlüssel **Vendor.BusinessEntityID**.
+In der Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] verfügt die Tabelle **ProductVendor** beispielsweise über eine referenzielle Beziehung zu der Tabelle **Vendor** . Der Fremdschlüssel **ProductVendor.BusinessEntityID** verweist auf den Primärschlüssel **Vendor.BusinessEntityID** .
 
-Wenn eine `DELETE`-Anweisung für eine Zeile in der **Vendor**-Tabelle ausgeführt wird und eine `ON DELETE CASCADE`-Aktion für **ProductVendor.BusinessEntityID** festgelegt ist, sucht [!INCLUDE[ssDE](../../includes/ssde-md.md)] nach mindestens einer abhängigen Zeile in der **ProductVendor**-Tabelle. Falls eine solche Zeile vorhanden ist, werden die abhängigen Zeilen in der Tabelle **ProductVendor** sowie die Zeile, auf die in der Tabelle **Vendor** verwiesen wird, gelöscht.
+Wenn eine `DELETE`-Anweisung für eine Zeile in der **Vendor** -Tabelle ausgeführt wird und eine `ON DELETE CASCADE`-Aktion für **ProductVendor.BusinessEntityID** festgelegt ist, sucht [!INCLUDE[ssDE](../../includes/ssde-md.md)] nach mindestens einer abhängigen Zeile in der **ProductVendor** -Tabelle. Falls eine solche Zeile vorhanden ist, werden die abhängigen Zeilen in der Tabelle **ProductVendor** sowie die Zeile, auf die in der Tabelle **Vendor** verwiesen wird, gelöscht.
 
-Ist hingegen `NO ACTION` angegeben, löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus und führt ein Rollback für die Löschaktion der **Vendor**-Zeile aus, wenn in der **ProductVendor**-Tabelle mindestens eine Zeile vorhanden ist, die auf diese Zeile verweist.
+Ist hingegen `NO ACTION` angegeben, löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus und führt ein Rollback für die Löschaktion der **Vendor** -Zeile aus, wenn in der **ProductVendor** -Tabelle mindestens eine Zeile vorhanden ist, die auf diese Zeile verweist.
 
 ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT } Gibt an, welche Aktion für eine Zeile der geänderten Tabelle ausgeführt werden soll, wenn diese Zeile eine referenzielle Beziehung hat und die Zeile, auf die verwiesen wird, in der übergeordneten Tabelle aktualisiert wird. Der Standardwert ist NO ACTION.
 
@@ -623,11 +623,11 @@ Geben Sie `CASCADE` nicht an, wenn die Tabelle in eine Mergeveröffentlichung ei
 
 `ON UPDATE CASCADE`, `SET NULL` und `SET DEFAULT` können nicht definiert werden, wenn für `ON UPDATE` bereits ein `INSTEAD OF`-Trigger für die Tabelle vorhanden ist, die geändert wird.
 
-In der Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] verfügt die Tabelle **ProductVendor** beispielsweise über eine referenzielle Beziehung zur Tabelle **Vendor**: Der Fremdschlüssel **ProductVendor.BusinessEntity** verweist auf den Primärschlüssel **Vendor.BusinessEntityID**.
+In der Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] verfügt die Tabelle **ProductVendor** beispielsweise über eine referenzielle Beziehung zur Tabelle **Vendor** : Der Fremdschlüssel **ProductVendor.BusinessEntity** verweist auf den Primärschlüssel **Vendor.BusinessEntityID** .
 
-Wenn eine UPDATE-Anweisung für eine Zeile in der Tabelle **Vendor** ausgeführt wird, und eine ON UPDATE CASCADE-Aktion für **ProductVendor.BusinessEntityID** festgelegt ist, sucht [!INCLUDE[ssDE](../../includes/ssde-md.md)] nach mindestens einer abhängigen Zeile in der Tabelle **ProductVendor**. Falls eine solche Zeile vorhanden ist, werden die abhängigen Zeilen in der Tabelle **ProductVendor** sowie die Zeile, auf die in der Tabelle **Vendor** verwiesen wird, aktualisiert.
+Wenn eine UPDATE-Anweisung für eine Zeile in der Tabelle **Vendor** ausgeführt wird, und eine ON UPDATE CASCADE-Aktion für **ProductVendor.BusinessEntityID** festgelegt ist, sucht [!INCLUDE[ssDE](../../includes/ssde-md.md)] nach mindestens einer abhängigen Zeile in der Tabelle **ProductVendor** . Falls eine solche Zeile vorhanden ist, werden die abhängigen Zeilen in der Tabelle **ProductVendor** sowie die Zeile, auf die in der Tabelle **Vendor** verwiesen wird, aktualisiert.
 
-Ist hingegen NO ACTION angegeben, löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus und führt für die Updateaktion der **Vendor**-Zeile ein Rollback aus, wenn in der **ProductVendor**-Tabelle mindestens eine Zeile vorhanden ist, die auf diese Zeile verweist.
+Ist hingegen NO ACTION angegeben, löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus und führt für die Updateaktion der **Vendor** -Zeile ein Rollback aus, wenn in der **ProductVendor** -Tabelle mindestens eine Zeile vorhanden ist, die auf diese Zeile verweist.
 
 CHECK Eine Einschränkung, die Domänenintegrität erzwingt, indem die möglichen Eingabewerte für eine oder mehrere Spalten beschränkt wird. CHECK-Einschränkungen für berechnete Spalten müssen auch als PERSISTED markiert werden.
 
@@ -644,18 +644,18 @@ CHECK Eine Einschränkung, die Domänenintegrität erzwingt, indem die mögliche
 > [!IMPORTANT]
 > Es wird empfohlen, NOT NULL für die Partitionierungsspalte von partitionierten Tabellen sowie von nicht partitionierten Tabellen anzugeben, die als Quelle oder Ziel für ALTER TABLE...SWITCH-Vorgänge fungieren. Damit stellen Sie sicher, dass mit CHECK-Einschränkungen für Partitionierungsspalten keine Überprüfung auf NULL-Werte ausgeführt werden muss.
 
-WITH FILLFACTOR **=** _fillfactor_ Gibt an, wie weit die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die einzelnen Indexseiten füllen soll, die zum Speichern der Indexdaten verwendet werden. Vom Benutzer angegebene *fillfactor*-Werte können Zahlen von 1 bis 100 sein. Wenn kein Wert angegeben ist, lautet der Standardwert 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.
+WITH FILLFACTOR **=** _fillfactor_ Gibt an, wie weit die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die einzelnen Indexseiten füllen soll, die zum Speichern der Indexdaten verwendet werden. Vom Benutzer angegebene *fillfactor* -Werte können Zahlen von 1 bis 100 sein. Wenn kein Wert angegeben ist, lautet der Standardwert 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.
 
 > [!IMPORTANT]
 > Das Verwenden von WITH FILLFACTOR = *fillfactor* als einzige Indexoption, die für die PRIMARY KEY- oder UNIQUE-Einschränkungen gilt, wird hier aus Gründen der Abwärtskompatibilität weiterhin dokumentiert. In zukünftigen Releases wird dies jedoch nicht mehr der Fall sein.
 
 *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS Der Name des Spaltensatzes. Bei einem Spaltensatz handelt es sich um eine nicht typisierte XML-Darstellung, die alle Sparsespalten einer Tabelle in einer strukturierten Ausgabe kombiniert. Weitere Informationen zu Spaltensätzen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).
 
-PERIOD FOR SYSTEM_TIME ( *system_start_time_column_name*, *system_end_time_column_name* ) **Gilt für:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+PERIOD FOR SYSTEM_TIME ( *system_start_time_column_name* , *system_end_time_column_name* ) **Gilt für:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt die Namen der Spalten an, die das System verwendet, um den Zeitraum aufzuzeichnen, für den ein Datensatz gültig ist. Verwenden Sie dieses Argument zusammen mit den Argumenten GENERATED ALWAYS AS ROW { START | END } und WITH SYSTEM_VERSIONING = ON, um die Versionsverwaltung durch das System für eine Tabelle zu aktivieren. Weitere Informationen finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-COMPRESSION_DELAY **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+COMPRESSION_DELAY **Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Diese Verzögerung gibt bei einer speicheroptimierten Tabelle die minimale Anzahl von Minuten an, die eine Zeile in der Tabelle unverändert bleiben muss, bevor sie für die Komprimierung in den Columnstore-Index geeignet ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wählt spezifische Zeilen für die Komprimierung gemäß dem Zeitpunkt des letzten Updates aus. Wenn Zeilen innerhalb von zwei Stunden häufig geändert werden, können Sie beispielsweise `COMPRESSION_DELAY = 120 Minutes` festlegen, um sicherzustellen, dass Zeilen vor der Komprimierung durch SQL Server aktualisiert werden.
 
@@ -687,7 +687,7 @@ Gilt nur für columnstore-Indizes, einschließlich nicht gruppierter und gruppie
 
 Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { `<partition_number_expression>` | [ **,** ...*n* ] **)** Gibt die Partitionen an, für die die DATA_COMPRESSION-Einstellung gilt. Wenn die Tabelle nicht partitioniert ist, erzeugt das Argument `ON PARTITIONS` einen Fehler. Wenn die `ON PARTITIONS`-Klausel nicht angegeben wird, gilt die `DATA_COMPRESSION`-Option für alle Partitionen einer partitionierten Tabelle.
+ON PARTITIONS **(** { `<partition_number_expression>` | [ **,** ... *n* ] **)** Gibt die Partitionen an, für die die DATA_COMPRESSION-Einstellung gilt. Wenn die Tabelle nicht partitioniert ist, erzeugt das Argument `ON PARTITIONS` einen Fehler. Wenn die `ON PARTITIONS`-Klausel nicht angegeben wird, gilt die `DATA_COMPRESSION`-Option für alle Partitionen einer partitionierten Tabelle.
 
 *partition_number_expression* kann auf folgenden Weisen angegeben werden:
 
@@ -766,7 +766,7 @@ FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*
 
 Gibt den Namen an, der für die eindeutige Einschränkung verwendet werden soll, die automatisch für die Spalten **parent_path_locator** und **name** in der FileTable erstellt wird. Wenn dieser Wert nicht angegeben ist, wird ein Name für die Einschränkung generiert.
 
-SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ]  **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])
+SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* . *history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ]  **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])
 
 Ermöglicht die Systemversionsverwaltung der Tabelle, wenn die Einschränkungsanforderungen für den Datentyp, die NULL-Zulässigkeit und den Primärschlüssel erfüllt werden. Wenn das Argument `HISTORY_TABLE` nicht verwendet wird, generiert das System eine neue Verlaufstabelle, die dem Schema der aktuellen Tabelle in der gleichen Dateigruppe der aktuellen Tabelle entspricht, erstellt eine Verbindung zwischen den beiden Tabellen und ermöglicht dem System, den Verlauf von jedem Datensatz der aktuellen Tabelle in der Verlaufstabelle aufzuzeichnen. Der Name dieser Verlaufstabelle ist dann `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Standardmäßig ist die Verlaufstabelle **PAGE** -komprimiert. Wenn das Argument `HISTORY_TABLE` verwendet wird, um eine Verbindung zu einer vorhandenen Verlaufstabelle zu erstellen und diese zu verwenden, wird die Verbindung zwischen der aktuellen Tabelle und der angegebenen Tabelle hergestellt. Falls die aktuelle Tabelle partitioniert wurde, kann die Verlaufstabelle auf der Standarddateigruppe erstellt werden, da die Partitionierungskonfiguration nicht automatisch von der aktuellen auf die Verlaufstabelle repliziert wird. Falls der Name einer Verlaufstabelle während der Erstellung der Verlaufstabelle angegeben wird, müssen Sie das Schema und den Tabellennamen angeben. Wenn Sie einen Link zu einer vorhandenen Verlaufstabelle erstellen, können Sie eine Datenkonsistenzprüfung durchführen. Diese Datenkonsistenzprüfung stellt sicher, dass vorhandene Datensätze nicht überlappen. Die Datenkonsistenzprüfung ist standardmäßig aktiviert. Verwenden Sie dieses Argument mit den Argumenten `PERIOD FOR SYSTEM_TIME` und `GENERATED ALWAYS AS ROW { START | END }`, um die Systemversionsverwaltung für eine Tabelle zu aktivieren. Weitere Informationen finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
@@ -807,7 +807,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **Gilt für:** [!INCLUDE[ssNoV
     {( FILTER_COLUMN = Spaltenname,   
            RETENTION_PERIOD = { INFINITE | Anzahl {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } )}] **Gilt für:** *nur* Azure SQL Edge
 
-Aktiviert die auf Aufbewahrungsrichtlinien basierende Bereinigung von alten oder veralteten Daten aus Tabellen innerhalb einer Datenbank. Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren von Datenaufbewahrung](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). Die folgenden Parameter müssen angegeben werden, damit Datenaufbewahrung aktiviert wird. 
+Aktiviert die auf Aufbewahrungsrichtlinien basierende Bereinigung von alten oder veralteten Daten aus Tabellen innerhalb einer Datenbank. Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren von Datenaufbewahrung](/azure/azure-sql-edge/data-retention-enable-disable). Die folgenden Parameter müssen angegeben werden, damit Datenaufbewahrung aktiviert wird. 
 
 - FILTER_COLUMN = { spaltenname }  
 Gibt die Spalte an, die verwendet werden soll, um zu bestimmen, ob die Zeilen in der Tabelle veraltet sind. Die folgenden Datentypen sind für die Filterspalte zulässig.
@@ -822,7 +822,7 @@ Gibt die Spalte an, die verwendet werden soll, um zu bestimmen, ob die Zeilen in
 
 MEMORY_OPTIMIZED **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) Azure SQL Managed Instance unterstützt speicheroptimierte Tabellen nicht.
 
-Der Wert ON gibt an, dass die Tabelle arbeitsspeicheroptimiert ist. Speicheroptimierte Tabellen sind Teil des Features „In-Memory OLTP“, das verwendet wird, um die Leistung der Transaktionsverarbeitung zu optimieren. Informationen zu den ersten Schritten mit In-Memory-OLTP finden Sie unter [Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Ausführliche Informationen zu speicheroptimierten Tabellen finden Sie unter [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).
+Der Wert ON gibt an, dass die Tabelle arbeitsspeicheroptimiert ist. Speicheroptimierte Tabellen sind Teil des Features „In-Memory OLTP“, das verwendet wird, um die Leistung der Transaktionsverarbeitung zu optimieren. Informationen zu den ersten Schritten mit In-Memory-OLTP finden Sie unter [Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Ausführliche Informationen zu speicheroptimierten Tabellen finden Sie unter [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md).
 
 Der Standardwert OFF gibt an, dass die Tabelle auf einem Datenträger basiert.
 
@@ -865,7 +865,7 @@ Beim Erstellen einer Tabelle wird die Option QUOTED IDENTIFIER immer mit der Ein
 
 Sie können sowohl lokale als auch globale temporäre Tabellen erstellen. Lokale temporäre Tabellen sind nur während der aktuellen Sitzung sichtbar; globale temporäre Tabellen sind von allen Sitzungen aus sichtbar. Temporäre Tabellen können nicht partitioniert werden.
 
-Stellen Sie lokalen temporären Tabellennamen ein einzelnes Nummernzeichen (#*table_name*) und globalen temporären Tabellennamen ein doppeltes Nummernzeichen voran (##*table_name*).
+Stellen Sie lokalen temporären Tabellennamen ein einzelnes Nummernzeichen (# *table_name* ) und globalen temporären Tabellennamen ein doppeltes Nummernzeichen voran (## *table_name* ).
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen verweisen auf die temporäre Tabelle, indem sie den in der `CREATE TABLE`-Anweisung angegebenen Wert für *table_name* verwenden. Zum Beispiel:
 
@@ -880,7 +880,7 @@ VALUES (1);
 
 Wenn mehr als eine temporäre Tabelle innerhalb einer einzigen gespeicherten Prozedur oder innerhalb eines Batches erstellt wird, müssen verschiedene Namen für die temporären Tabellen verwendet werden.
 
-Wenn Sie eine temporäre Tabelle erstellen oder auf eine temporäre Tabelle zugreifen und dabei einen Schemanamen (*schema_name*) angeben, wird dieser ignoriert. Alle temporären Tabellen werden im dbo-Schema erstellt.
+Wenn Sie eine temporäre Tabelle erstellen oder auf eine temporäre Tabelle zugreifen und dabei einen Schemanamen ( *schema_name* ) angeben, wird dieser ignoriert. Alle temporären Tabellen werden im dbo-Schema erstellt.
 
 Wenn eine lokale temporäre Tabelle in einer gespeicherten Prozedur oder einer Anwendung erstellt wird, die von mehreren Benutzern gleichzeitig ausgeführt werden kann, muss es dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] möglich sein, die von den verschiedenen Benutzern erstellten Tabellen zu unterscheiden. Zu diesem Zweck fügt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] intern ein numerisches Suffix an alle Namen lokaler temporärer Tabellen an. Der vollständige, in der Tabelle **sysobjects** von **tempdb** gespeicherte Name einer temporären Tabelle besteht aus dem in der CREATE TABLE-Anweisung angegebenen Tabellennamen und dem vom System generierten numerischen Suffix. Damit das Suffix angefügt werden kann, darf *table_name* für eine lokale temporäre Tabelle nicht länger als 116 Zeichen sein.
 
@@ -1010,7 +1010,7 @@ Bevor eine partitionierte Tabelle mithilfe von CREATE TABLE erstellt wird, müss
     |SYSTEM_USER|Name des Benutzers, der einen Einfügevorgang ausführt.|
     |USER|Name des Benutzers, der einen Einfügevorgang ausführt.|
 - *constant_expression* in einer DEFAULT-Definition kann nicht auf eine andere Spalte in der Tabelle oder auf andere Tabellen, Sichten oder gespeicherte Prozeduren verwiesen werden.
-- DEFAULT-Definitionen können nicht für Spalten mit einem **timestamp**-Datentyp oder für Spalten mit IDENTITY-Eigenschaft erstellt werden.
+- DEFAULT-Definitionen können nicht für Spalten mit einem **timestamp** -Datentyp oder für Spalten mit IDENTITY-Eigenschaft erstellt werden.
 - DEFAULT-Definitionen können nicht für Spalten mit Aliasdatentypen erstellt werden, wenn der Aliasdatentyp an ein Standardobjekt gebunden ist.
 
 ## <a name="check-constraints"></a>CHECK-Einschränkungen
@@ -1022,7 +1022,7 @@ Bevor eine partitionierte Tabelle mithilfe von CREATE TABLE erstellt wird, müss
   CHECK-Einschränkungen und Regeln dienen beide zur Überprüfung der Daten während INSERT- und UPDATE-Anweisungen.
 
 - Sobald eine Regel und mindestens eine CHECK-Einschränkung für eine oder mehrere Spalten vorhanden sind, werden alle Einschränkungen ausgewertet.
-- CHECK-Einschränkungen können nicht für Spalten vom Typ **text**, **ntext** oder **image** definiert werden.
+- CHECK-Einschränkungen können nicht für Spalten vom Typ **text** , **ntext** oder **image** definiert werden.
 
 ## <a name="additional-constraint-information"></a>Weitere Informationen zu Einschränkungen
 
@@ -1046,11 +1046,11 @@ Wenn die NULL-Zulässigkeit der Spalte nicht explizit angegeben ist, wird sie ge
 |----------------------|----------|
 |Aliasdatentyp|Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet die NULL-Zulässigkeit, die beim Erstellen des Datentyps angegeben wurde. Verwenden Sie **sp_help** zum Bestimmen der standardmäßigen NULL-Zulässigkeit des Datentyps.|
 |CLR-benutzerdefinierter Typ|Die NULL-Zulässigkeit wird gemäß der Spaltendefinition bestimmt.|
-|Vom System bereitgestellter Datentyp|Wenn es für den vom System bereitgestellten Datentyp nur eine Option gibt, hat diese Vorrang. Für **timestamp**-Datentypen muss NOT NULL angegeben werden. Wenn Sitzungseinstellungen mithilfe von SET auf ON festgelegt werden, gilt Folgendes:<br />Wenn **ANSI_NULL_DFLT_ON** auf ON festgelegt ist, wird NULL zugewiesen. <br />Wenn **ANSI_NULL_DFLT_OFF** auf ON festgelegt ist, wird NOT NULL zugewiesen.<br /><br /> Wenn Datenbankeinstellungen mithilfe von ALTER DATABASE konfiguriert werden, gilt Folgendes:<br />Wenn **ANSI_NULL_DEFAULT_ON** auf ON festgelegt ist, wird NULL zugewiesen. <br />Wenn **ANSI_NULL_DEFAULT_OFF** auf ON festgelegt ist, wird NOT NULL zugewiesen.<br /><br /> Zum Anzeigen der Datenbankeinstellungen für ANSI_NULL_DEFAULT verwenden Sie die Katalogsicht **sys.databases**.|
+|Vom System bereitgestellter Datentyp|Wenn es für den vom System bereitgestellten Datentyp nur eine Option gibt, hat diese Vorrang. Für **timestamp** -Datentypen muss NOT NULL angegeben werden. Wenn Sitzungseinstellungen mithilfe von SET auf ON festgelegt werden, gilt Folgendes:<br />Wenn **ANSI_NULL_DFLT_ON** auf ON festgelegt ist, wird NULL zugewiesen. <br />Wenn **ANSI_NULL_DFLT_OFF** auf ON festgelegt ist, wird NOT NULL zugewiesen.<br /><br /> Wenn Datenbankeinstellungen mithilfe von ALTER DATABASE konfiguriert werden, gilt Folgendes:<br />Wenn **ANSI_NULL_DEFAULT_ON** auf ON festgelegt ist, wird NULL zugewiesen. <br />Wenn **ANSI_NULL_DEFAULT_OFF** auf ON festgelegt ist, wird NOT NULL zugewiesen.<br /><br /> Zum Anzeigen der Datenbankeinstellungen für ANSI_NULL_DEFAULT verwenden Sie die Katalogsicht **sys.databases** .|
 
 Wenn keine der ANSI_NULL_DFLT-Optionen für die Sitzung festgelegt wurde und für die Datenbank die Standardeinstellung gilt (ANSI_NULL_DEFAULT ist auf OFF festgelegt), wird der Standardwert NOT NULL zugewiesen.
 
-Wenn es sich bei der Spalte um eine berechnete Spalte handelt, wird die NULL-Zulässigkeit stets automatisch durch das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt. Zum Bestimmen der NULL-Zulässigkeit dieser Art von Spalte verwenden Sie die Funktion `COLUMNPROPERTY` mit der Eigenschaft **AllowsNull**.
+Wenn es sich bei der Spalte um eine berechnete Spalte handelt, wird die NULL-Zulässigkeit stets automatisch durch das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt. Zum Bestimmen der NULL-Zulässigkeit dieser Art von Spalte verwenden Sie die Funktion `COLUMNPROPERTY` mit der Eigenschaft **AllowsNull** .
 
 > [!NOTE]
 > Für den SQL Server-ODBC-Treiber und den SQL Server OLE DB-Treiber ist ANSI_NULL_DFLT_ON standardmäßig auf ON festgelegt. ODBC- und OLE DB-Benutzer können dies in ODBC-Datenquellen oder mit von der Anwendung festgelegten Verbindungsattributen oder -eigenschaften konfigurieren.
@@ -1603,7 +1603,7 @@ SELECT * FROM tempdb.sys.database_files;
 
 ### <a name="w-enable-data-retention-policy-on-a-table"></a>W. Aktivieren der Richtlinie für Datenaufbewahrung für eine Tabelle
 
-Im folgenden Beispiel wird eine Tabelle erstellt, in der Datenaufbewahrung aktiviert ist, und es wird ein Aufbewahrungszeitraum von einer Woche angegeben. Dieses Beispiel gilt nur für **Azure SQL Edge**.
+Im folgenden Beispiel wird eine Tabelle erstellt, in der Datenaufbewahrung aktiviert ist, und es wird ein Aufbewahrungszeitraum von einer Woche angegeben. Dieses Beispiel gilt nur für **Azure SQL Edge** .
 
 ```sql
 CREATE TABLE [dbo].[data_retention_table] 

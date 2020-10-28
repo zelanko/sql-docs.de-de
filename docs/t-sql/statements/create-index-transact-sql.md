@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbce72e7fc8e309700098424e7ca1830dab1b1af
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: ecba395399d758bbab2cae59ec4400554d3c665a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227184"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300606"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -231,7 +231,7 @@ Erstellen Sie den gruppierten Index, bevor Sie irgendeinen nicht gruppierten Ind
 Ist `CLUSTERED` nicht angegeben, wird ein nicht gruppierter Index erstellt.
 
 > [!NOTE]
-> Da die Blattebene eines gruppierten Index und seine Datenseiten per Definition identisch sind, bewirkt das Erstellen eines gruppierten Index und das Verwenden der ON *partition_scheme_name*- oder ON *filegroup_name*-Klausel effektiv, dass eine Tabelle aus der Dateigruppe, in der die Tabelle erstellt wurde, in das neue Partitionsschema oder die neue Dateigruppe verschoben wird. Bevor Sie Tabellen oder Indizes für bestimmte Dateigruppen erstellen, überprüfen Sie, welche Dateigruppen verfügbar sind, und stellen Sie sicher, dass in ihnen ausreichend freier Speicherplatz für den Index vorhanden ist.
+> Da die Blattebene eines gruppierten Index und seine Datenseiten per Definition identisch sind, bewirkt das Erstellen eines gruppierten Index und das Verwenden der ON *partition_scheme_name* - oder ON *filegroup_name* -Klausel effektiv, dass eine Tabelle aus der Dateigruppe, in der die Tabelle erstellt wurde, in das neue Partitionsschema oder die neue Dateigruppe verschoben wird. Bevor Sie Tabellen oder Indizes für bestimmte Dateigruppen erstellen, überprüfen Sie, welche Dateigruppen verfügbar sind, und stellen Sie sicher, dass in ihnen ausreichend freier Speicherplatz für den Index vorhanden ist.
 
 In einigen Fällen können durch das Erstellen eines gruppierten Indexes zuvor deaktivierte Indizes aktiviert werden. Weitere Informationen finden Sie unter [Aktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/enable-indexes-and-constraints.md) und [Deaktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/disable-indexes-and-constraints.md).
 
@@ -252,7 +252,7 @@ Wenn nicht anders angegeben, ist NONCLUSTERED der Standardindextyp.
 
 Es können bis zu 32 Spalten in einem einzigen zusammengesetzten Indexschlüssel kombiniert werden. Alle Spalten in einem zusammengesetzten Indexschlüssel müssen sich in derselben Tabelle oder Sicht befinden. Die maximal zulässige Größe der kombinierten Indexwerte liegt bei 900 Byte für gruppierte Indizes oder 1700 Byte für nicht gruppierte Indizes. Für Versionen vor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] liegen die Höchstwerte bei 16 Spalten und 900 Byte.
 
-Spalten, die von den Large Object-Datentypen (LOB-Datentyp) **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** oder **image** sind, können nicht als Schlüsselspalten für einen Index angegeben werden. Darüber hinaus darf eine Sichtdefinition keine Spalten der Datentypen **ntext**, **text** oder **image** enthalten, auch wenn in der CREATE INDEX-Anweisung nicht auf diese Spalten verwiesen wird.
+Spalten, die von den Large Object-Datentypen (LOB-Datentyp) **ntext** , **text** , **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** oder **image** sind, können nicht als Schlüsselspalten für einen Index angegeben werden. Darüber hinaus darf eine Sichtdefinition keine Spalten der Datentypen **ntext** , **text** oder **image** enthalten, auch wenn in der CREATE INDEX-Anweisung nicht auf diese Spalten verwiesen wird.
 
 Sie können Indizes für Spalten mit dem CLR-benutzerdefinierten Typ erstellen, wenn durch den Typ Binärreihenfolgen unterstützt werden. Außerdem können Sie Indizes für berechnete Spalten erstellen, die als Methodenaufrufe aus einer Spalte mit dem benutzerdefinierten Typ definiert sind, vorausgesetzt, die Methoden sind als deterministisch markiert und führen keine Datenzugriffe durch. Weitere Informationen zum Indizieren von Spalten mit dem CLR-benutzerdefinierten Typ finden Sie unter [CLR-benutzerdefinierte Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).
 
@@ -264,9 +264,9 @@ Gibt die Nichtschlüsselspalten an, die zur Blattebene des nicht gruppierten Ind
 
 Die Spaltennamen dürfen in der INCLUDE-Liste nicht wiederholt und nicht gleichzeitig als Schlüssel- und Nichtschlüsselspalten verwendet werden. Nicht gruppierte Indizes enthalten stets die Spalten des gruppierten Index, wenn ein gruppierter Index für die Tabelle definiert ist. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).
 
-Mit Ausnahme von **text**, **ntext**und **image**sind alle Datentypen zulässig. Der Index muss offline erstellt oder neu erstellt werden (ONLINE = OFF), wenn eine der angegebenen Nichtschlüsselspalten den Datentyp **varchar(max)** , **nvarchar(max)** oder **varbinary(max)** aufweist.
+Mit Ausnahme von **text** , **ntext** und **image** sind alle Datentypen zulässig. Der Index muss offline erstellt oder neu erstellt werden (ONLINE = OFF), wenn eine der angegebenen Nichtschlüsselspalten den Datentyp **varchar(max)** , **nvarchar(max)** oder **varbinary(max)** aufweist.
 
-Bei berechneten Spalten, die deterministisch und präzise oder unpräzise sind, kann es sich um eingeschlossene Spalten handeln. Berechnete Spalten, die aus den Datentypen **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und **xml** abgeleitet wurden, können, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte zulässig ist, in Spalten eingefügt werden, bei denen es sich nicht um Schlüsselspalten handelt. Weitere Informationen finden Sie unter [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).
+Bei berechneten Spalten, die deterministisch und präzise oder unpräzise sind, kann es sich um eingeschlossene Spalten handeln. Berechnete Spalten, die aus den Datentypen **image** , **ntext** , **text** , **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und **xml** abgeleitet wurden, können, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte zulässig ist, in Spalten eingefügt werden, bei denen es sich nicht um Schlüsselspalten handelt. Weitere Informationen finden Sie unter [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).
 
 Weitere Informationen zum Erstellen eines XML-Index finden Sie unter [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md).
 
@@ -289,7 +289,7 @@ Gefilterte Indizes gelten nicht für XML-Indizes und Volltextindizes. Bei UNIQUE
 
 ON *partition_scheme_name* **( _column_name_ )**      
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt das Partitionsschema an, das die Dateigruppen definiert, denen die Partitionen eines partitionierten Index zugeordnet werden. Das Partitionsschema muss bereits durch Ausführen von [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) oder [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) in der Datenbank vorhanden sein. *column_name* gibt die Spalte an, auf deren Grundlage ein partitionierter Index partitioniert wird. Diese Spalte muss mit dem Datentyp, der Länge und der Genauigkeit des Arguments der Partitionsfunktion übereinstimmen, die *partition_scheme_name* verwendet. *column_name* ist nicht auf Spalten in der Indexdefinition beschränkt. Es können beliebige Spalten der Basistabelle angegeben werden, mit der Ausnahme, dass *column_name* beim Partitionieren von UNIQUE-Indizes aus den Spalten ausgewählt werden muss, die als eindeutige Schlüssel verwendet werden. Mit dieser Einschränkung kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Eindeutigkeit der Schlüsselwerte in nur einer einzigen Partition überprüfen.
 
@@ -311,7 +311,7 @@ Erstellt den angegebenen Index für die angegebene Dateigruppe. Wenn kein Speich
 
 ON **"** default **"**      
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Erstellt den angegebenen Index in derselben Dateigruppe oder in demselben Partitionsschema wie die Tabelle oder Sicht.
 
@@ -353,14 +353,14 @@ Die Sicht muss mit SCHEMABINDING definiert werden, um einen Index für sie zu er
 
 Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] kann es sich bei dem Objekt um eine Tabelle handeln, die gemeinsam mit einem gruppierten Columnstore-Index gespeichert wird.
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt das aus drei Teilen bestehende Namensformat _database_name_.[_schema_name_]._object_name_, wenn *database_name* die aktuelle Datenbank bzw. _database_name_`tempdb` ist und _object_name_ mit # beginnt.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt das aus drei Teilen bestehende Namensformat _database_name_ .[ _schema_name_ ]. _object_name_ , wenn *database_name* die aktuelle Datenbank bzw. _database_name_`tempdb` ist und _object_name_ mit # beginnt.
 
 **\<relational_index_option\>::=**       
 Gibt die Optionen an, die beim Erstellen des Indexes verwendet werden sollen.
 
 PAD_INDEX = { ON | **OFF** }      
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt die Auffüllung von Indizes an. Der Standardwert ist OFF.
 
@@ -370,13 +370,13 @@ Der Prozentsatz des mit *fillfactor* angegebenen freien Speicherplatzes wird fü
 OFF oder _fillfactor_ ist nicht angegeben      
 Die Zwischenebenenseiten sind nahezu vollständig aufgefüllt. Allerdings ist ausreichend Speicherplatz vorhanden, um mindestens eine Zeile in der maximal für den Index möglichen Größe aufzunehmen, wenn der Schlüsselsatz auf den Zwischenseiten berücksichtigt wird.
 
-Die Option PAD_INDEX ist nur dann hilfreich, wenn FILLFACTOR angegeben ist, da PAD_INDEX den durch FILLFACTOR angegebenen Prozentsatz verwendet. Wenn der für FILLFACTOR angegebene Prozentsatz nicht groß genug ist, um eine Zeile aufzunehmen, überschreibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] diesen Prozentsatz intern, um das Minimum zuzulassen. Auf jeder Zwischenindexseite befinden sich unabhängig vom angegebenen _fillfactor_-Wert nie weniger als zwei Zeilen.
+Die Option PAD_INDEX ist nur dann hilfreich, wenn FILLFACTOR angegeben ist, da PAD_INDEX den durch FILLFACTOR angegebenen Prozentsatz verwendet. Wenn der für FILLFACTOR angegebene Prozentsatz nicht groß genug ist, um eine Zeile aufzunehmen, überschreibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] diesen Prozentsatz intern, um das Minimum zuzulassen. Auf jeder Zwischenindexseite befinden sich unabhängig vom angegebenen _fillfactor_ -Wert nie weniger als zwei Zeilen.
 
 In abwärtskompatibler Syntax ist WITH PAD_INDEX gleichwertig mit WITH PAD_INDEX = ON.
 
 FILLFACTOR **=** _fillfactor_      
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt einen Prozentsatz an, der angibt, wie weit das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -neuerstellung füllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Wenn *fillfactor* 100 ist, erstellt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] Indizes mit vollständig aufgefüllten Blattseiten.
 
@@ -389,7 +389,7 @@ Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Inde
 
 SORT_IN_TEMPDB = { ON | **OFF** }      
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt an, ob temporäre Ergebnisse des Sortierens in **tempdb** gespeichert werden sollen. Außer für Hyperscale von Azure SQL-Datenbank ist der Standardwert OFF. Für alle Indexerstellungsvorgänge in Hyperscale ist SORT_IN_TEMPDB unabhängig von der angegebenen Option immer ON, sofern nicht die fortsetzbare Indexneuerstellung verwendet wird.
 
@@ -418,7 +418,7 @@ Um IGNORE_DUP_KEY anzuzeigen, verwenden Sie [sys.indexes](../../relational-datab
 
 In abwärtskompatibler Syntax ist WITH IGNORE_DUP_KEY gleichwertig mit WITH IGNORE_DUP_KEY = ON.
 
-STATISTICS_NORECOMPUTE = { ON | **OFF**}      
+STATISTICS_NORECOMPUTE = { ON | **OFF** }      
 Gibt an, ob Verteilungsstatistiken neu berechnet werden. Der Standardwert ist OFF.
 
 EIN      
@@ -436,9 +436,9 @@ In abwärtskompatibler Syntax ist WITH STATISTICS_NORECOMPUTE gleichwertig mit W
 
 STATISTICS_INCREMENTAL = { ON | **OFF** }     
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-Bei **ON** wird die Statistik pro Partition erstellt. Bei **OFF** wird die Statistikstruktur gelöscht und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berechnet die Statistiken erneut. Der Standardwert ist **OFF**.
+Bei **ON** wird die Statistik pro Partition erstellt. Bei **OFF** wird die Statistikstruktur gelöscht und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berechnet die Statistiken erneut. Der Standardwert ist **OFF** .
 
 Wenn Statistiken pro Partition nicht unterstützt werden, wird die Option ignoriert und eine Warnung generiert. Inkrementelle Statistiken werden für folgende Statistiktypen nicht unterstützt:
 
@@ -474,7 +474,7 @@ ONLINE = { ON | **OFF** }
 Gibt an, ob die zugrunde liegenden Tabellen und zugeordneten Indizes für Abfragen und Datenänderungen während des Indexvorgangs verfügbar sind. Der Standardwert ist OFF.
 
 > [!IMPORTANT]
-> Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
+> Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
 
 EIN      
 Lang andauernde Sperren werden nicht für die Dauer des Indexvorgangs aufrechterhalten. Während der Hauptphase des Indexvorgangs wird nur eine beabsichtigte freigegebene Sperre für die Quelltabelle aufrechterhalten. Dadurch können Abfragen oder Updates für die zugrunde liegende Tabelle und die Indizes fortgesetzt werden. Zu Beginn des Vorgangs wird für sehr kurze Zeit eine freigegebene Sperre (S) für das Quellobjekt aufrechterhalten. Am Ende des Vorgangs wird für die Quelle für kurze Zeit eine freigegebene Sperre (S) aktiviert, wenn ein nicht gruppierter Index erstellt wird. Eine Schemaänderungssperre (SCH-M) wird aktiviert, wenn ein gruppierter Index online erstellt oder gelöscht und wenn ein gruppierter oder nicht gruppierter Index neu erstellt wird. ONLINE kann nicht auf ON festgelegt werden, wenn ein Index auf einer lokalen temporären Tabelle erstellt wird.
@@ -491,14 +491,14 @@ Indizes, einschließlich Indizes globaler temporärer Tabellen, können online e
 - Eindeutiger gruppierter Ausgangsindex für eine Sicht
 - Deaktivierte gruppierte Indizes
 - Columnstore-Indizes
-- Gruppierter Index, wenn die zugrunde liegende Tabelle LOB-Datentypen (**image**, **ntext**, **text**) und räumliche Datentypen enthält.
-- **varchar(max)** - und **varbinary(max)** -Spalten können nicht Teil eines Index sein. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] kann ein gruppierter Index mit der Option **ONLINE** erstellt oder neu erstellt werden, wenn eine Tabelle Spalten vom Typ **varchar(max)** oder **varbinary(max)** enthält. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] lässt die **ONLINE**-Option nicht zu, wenn die Basistabelle Spalten vom Typ **varchar(max)** oder **varbinary(max)** enthält.
+- Gruppierter Index, wenn die zugrunde liegende Tabelle LOB-Datentypen ( **image** , **ntext** , **text** ) und räumliche Datentypen enthält.
+- **varchar(max)** - und **varbinary(max)** -Spalten können nicht Teil eines Index sein. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] kann ein gruppierter Index mit der Option **ONLINE** erstellt oder neu erstellt werden, wenn eine Tabelle Spalten vom Typ **varchar(max)** oder **varbinary(max)** enthält. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] lässt die **ONLINE** -Option nicht zu, wenn die Basistabelle Spalten vom Typ **varchar(max)** oder **varbinary(max)** enthält.
 
 Weitere Informationen finden Sie unter [Funktionsweise von Onlineindexvorgängen](../../relational-databases/indexes/how-online-index-operations-work.md).
 
-RESUMABLE **=** { ON | **OFF**}      
+RESUMABLE **=** { ON | **OFF** }      
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
  Gibt an, ob ein Onlineindexvorgang fortsetzbar ist.
 
@@ -508,9 +508,9 @@ Der Indexvorgang ist fortsetzbar.
  OFF      
 Der Indexvorgang ist nicht fortsetzbar.
 
-MAX_DURATION **=** *time* [**MINUTES**] verwendet mit **RESUMABLE = ON** (erfordert **ONLINE = ON**)   
+MAX_DURATION **=** *time* [ **MINUTES** ] verwendet mit **RESUMABLE = ON** (erfordert **ONLINE = ON** )   
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt die Zeitspanne an (als ganzzahligen Wert in Minuten), in der ein fortsetzbarer Onlineindexvorgang ausgeführt wird, bevor er angehalten wird.
 
@@ -521,7 +521,7 @@ Gibt die Zeitspanne an (als ganzzahligen Wert in Minuten), in der ein fortsetzba
 > Fortsetzbare Neuerstellungen von Onlineindizes werden für Columnstore-Indizes nicht unterstützt.
 
 ALLOW_ROW_LOCKS = { **ON** | OFF }      
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt an, ob Zeilensperren zulässig sind. Der Standardwert ist ON.
 
@@ -532,7 +532,7 @@ OFF
 Zeilensperren werden nicht verwendet.
 
 ALLOW_PAGE_LOCKS = { **ON** | OFF }      
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt an, ob Seitensperren zulässig sind. Der Standardwert ist ON.
 
@@ -543,12 +543,12 @@ OFF
 Seitensperren werden nicht verwendet.
 
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt an, ob der Konflikt beim Einfügen der letzten Seite optimiert werden soll. Der Standardwert ist OFF. Weitere Informationen finden Sie im Abschnitt [Sequenzielle Schlüssel](#sequential-keys).
 
 MAXDOP = *max_degree_of_parallelism*      
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Indexvorgangs. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.
 
@@ -566,7 +566,7 @@ Verwendet abhängig von der aktuellen Systemarbeitsauslastung die tatsächliche 
  Weitere Informationen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]
-> Parallele Indexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Features, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [Editionen und unterstütze Features für SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) und [Editionen und unterstützte Features von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+> Parallele Indexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Features, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [Editionen und unterstütze Features für SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) und [Editionen und unterstützte Features von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
 DATA_COMPRESSION      
 Gibt die Datenkomprimierungsoption für den angegebenen Index, die Partitionsnummer oder den Bereich von Partitionen an. Die folgenden Optionen sind verfügbar:
@@ -582,8 +582,8 @@ Der Index oder die angegebenen Partitionen werden mit Seitenkomprimierung kompri
 
 Weitere Informationen zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)**       
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ... _n_ ] **)**       
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt die Partitionen an, für die die DATA_COMPRESSION-Einstellung gilt. Wenn der Index nicht partitioniert ist, erzeugt das ON PARTITIONS-Argument einen Fehler. Wenn die ON PARTITIONS-Klausel nicht angegeben wird, gilt die DATA_COMPRESSION-Option für alle Partitionen eines partitionierten Indexes.
 
@@ -633,7 +633,7 @@ Wenn ein eindeutiger Index vorhanden ist, prüft [!INCLUDE[ssDE](../../includes/
 ## <a name="partitioned-indexes"></a>Partitionierte Indizes
 Partitionierte Indizes werden ähnlich wie partitionierte Tabellen erstellt und verwaltet. Aber wie gewöhnliche Indizes werden sie wie separate Datenobjekte behandelt. Sie können einen partitionierten Index für eine nicht partitionierte Tabelle erstellen, und Sie können einen nicht partitionierten Index für eine partitionierte Tabelle erstellen.
 
-Wenn Sie einen Index für eine partitionierte Tabelle erstellen und keine Dateigruppe angeben, in die der Index platziert werden soll, wird der Index auf die gleiche Weise partitioniert wie die zugrunde liegende Tabelle. Der Grund hierfür ist, dass Indizes standardmäßig in dieselben Dateigruppen wie die zugrunde liegenden Tabellen platziert werden. Bei partitionierten Tabellen werden Indizes in dasselbe Partitionsschema platziert, das dieselben Partitionierungsspalten verwendet. Wenn der Index das gleiche Partitionsschema und die gleiche Partitionierungsspalte wie die Tabelle verwendet, wird der Index auf die Tabelle *ausgerichtet*.
+Wenn Sie einen Index für eine partitionierte Tabelle erstellen und keine Dateigruppe angeben, in die der Index platziert werden soll, wird der Index auf die gleiche Weise partitioniert wie die zugrunde liegende Tabelle. Der Grund hierfür ist, dass Indizes standardmäßig in dieselben Dateigruppen wie die zugrunde liegenden Tabellen platziert werden. Bei partitionierten Tabellen werden Indizes in dasselbe Partitionsschema platziert, das dieselben Partitionierungsspalten verwendet. Wenn der Index das gleiche Partitionsschema und die gleiche Partitionierungsspalte wie die Tabelle verwendet, wird der Index auf die Tabelle *ausgerichtet* .
 
 > [!WARNING]
 > Das Erstellen bzw. Neuerstellen von nicht ausgerichteten Indizes für eine Tabelle mit mehr als 1.000 Partitionen ist möglich, wird aber nicht unterstützt. Dies hätte Leistungseinbußen oder eine zu hohe Speicherauslastung während der Vorgänge zur Folge. Es empfiehlt sich, bei mehr als 1.000 Partitionen nur ausgerichtete Indizes zu verwenden.
@@ -682,7 +682,7 @@ Weitere Informationen zu räumlichen Indizes finden Sie unter [CREATE SPATIAL IN
 Weitere Informationen zu XML-Indizes finden Sie unter [CREATE XML INDEX;](../../t-sql/statements/create-xml-index-transact-sql.md) und [XML-Indizes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).
 
 ## <a name="index-key-size"></a>Indexschlüsselgröße
-Die maximale Größe für einen Indexschlüssel beträgt 900 Byte für gruppierte Indizes und 1700 Byte für nicht gruppierte Indizes. (Vor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] lag die maximale Größe bei 900 Byte.) Indizes für Spalten des Datentyps **varchar**, deren Größe das Limit überschreitet, können erstellt werden, wenn die in den Spalten vorhandenen Daten zum Zeitpunkt der Indexerstellung das Größenlimit nicht überschreiten. Allerdings treten bei nachfolgenden Einfüge- oder Updateaktionen für die Spalten Fehler auf, wenn dadurch das Limit überschritten wird. Der Indexschlüssel eines gruppierten Indexes kann keine Spalten des Datentyps **varchar** enthalten, bei denen Daten in der Zuordnungseinheit ROW_OVERFLOW_DATA vorhanden sind. Wird ein gruppierter Index für eine **varchar**-Spalte erstellt, bei der in der Zuordnungseinheit IN_ROW_DATA Daten vorhanden sind, erzeugen alle nachfolgenden Einfügungen und Updates der Spalte einen Fehler, bei der diese Daten aus der Zeile entfernt werden.
+Die maximale Größe für einen Indexschlüssel beträgt 900 Byte für gruppierte Indizes und 1700 Byte für nicht gruppierte Indizes. (Vor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] lag die maximale Größe bei 900 Byte.) Indizes für Spalten des Datentyps **varchar** , deren Größe das Limit überschreitet, können erstellt werden, wenn die in den Spalten vorhandenen Daten zum Zeitpunkt der Indexerstellung das Größenlimit nicht überschreiten. Allerdings treten bei nachfolgenden Einfüge- oder Updateaktionen für die Spalten Fehler auf, wenn dadurch das Limit überschritten wird. Der Indexschlüssel eines gruppierten Indexes kann keine Spalten des Datentyps **varchar** enthalten, bei denen Daten in der Zuordnungseinheit ROW_OVERFLOW_DATA vorhanden sind. Wird ein gruppierter Index für eine **varchar** -Spalte erstellt, bei der in der Zuordnungseinheit IN_ROW_DATA Daten vorhanden sind, erzeugen alle nachfolgenden Einfügungen und Updates der Spalte einen Fehler, bei der diese Daten aus der Zeile entfernt werden.
 
 Nicht gruppierte Indizes können Nichtschlüsselspalten auf der Blattebene des Indexes enthalten. Diese Spalten werden von [!INCLUDE[ssDE](../../includes/ssde-md.md)] beim Berechnen der Indexschlüsselgröße nicht berücksichtigt. Weitere Informationen finden Sie unter [Erstellen von Indizes mit eingeschlossenen Spalten](../../relational-databases/indexes/create-indexes-with-included-columns.md) und im [Leitfaden zur Architektur und zum Design von SQL Server-Indizes](../../relational-databases/sql-server-index-design-guide.md).
 
@@ -701,7 +701,7 @@ Für persistente berechnete Spalten müssen die folgenden SET-Optionen wie im vo
 
 Die jeweilige UNIQUE- oder PRIMARY KEY-Einschränkung kann eine berechnete Spalte enthalten, sofern diese alle Bedingungen für das Indizieren erfüllt. Die berechnete Spalte muss insbesondere deterministisch und präzise oder deterministisch und persistent sein. Weitere Informationen zu deterministischen Funktionen finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
 
-Berechnete Spalten, die aus den Datentypen **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und **xml** abgeleitet wurden, können entweder als Schlüssel oder eingefügte Spalte indiziert werden, bei der es sich nicht um eine Schlüsselspalte handelt, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte oder Nichtschlüsselspalte zulässig ist. Sie können beispielsweise keinen primären XML-Index für eine berechnete **xml**-Spalte erstellen. Wenn der Indexschlüssel die zulässige Größe von 900 Byte überschreitet, wird eine Warnmeldung angezeigt.
+Berechnete Spalten, die aus den Datentypen **image** , **ntext** , **text** , **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und **xml** abgeleitet wurden, können entweder als Schlüssel oder eingefügte Spalte indiziert werden, bei der es sich nicht um eine Schlüsselspalte handelt, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte oder Nichtschlüsselspalte zulässig ist. Sie können beispielsweise keinen primären XML-Index für eine berechnete **xml** -Spalte erstellen. Wenn der Indexschlüssel die zulässige Größe von 900 Byte überschreitet, wird eine Warnmeldung angezeigt.
 
 Das Erstellen eines Indexes für eine berechnete Spalte kann bei einem Einfüge- oder Updatevorgang einen Fehler erzeugen, wenn der Einfüge- oder Updatevorgang zuvor funktioniert hat. Ein solcher Fehler tritt möglicherweise auf, wenn die berechnete Spalte einen arithmetischen Fehler zur Folge hat. In der folgenden Tabelle wird zum Beispiel die INSERT-Anweisung erfolgreich ausgeführt, obwohl die berechnete Spalte `c` einen arithmetischen Fehler zur Folge hat.
 
@@ -726,9 +726,9 @@ Nichtschlüsselspalten werden als eingeschlossene Spalten bezeichnet und können
 ## <a name="specifying-index-options"></a>Angeben von Indexoptionen
 Mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden neue Indexoptionen eingeführt. Außerdem werden die Optionen auf andere Weise angegeben. In der abwärtskompatiblen Syntax ist WITH *option_name* gleichbedeutend mit WITH **(** \<option_name>  **= ON )** . Beim Festlegen von Indexoptionen gelten folgende Regeln:
 
-- Neue Indexoptionen können nur mithilfe von WITH (**_option\_name_ = ON | OFF**) angegeben werden.
-- Optionen können nicht mithilfe der abwärtskompatiblen und der neuen Syntax in derselben Anweisung angegeben werden. Wenn Sie beispielsweise WITH (**DROP_EXISTING, ONLINE = ON**) angeben, schlägt die Anweisung fehl.
-- Beim Erstellen eines XML-Index müssen die Optionen mithilfe von WITH (**_option_name_= ON | OFF**) angegeben werden.
+- Neue Indexoptionen können nur mithilfe von WITH ( **_option\_name_ = ON | OFF** ) angegeben werden.
+- Optionen können nicht mithilfe der abwärtskompatiblen und der neuen Syntax in derselben Anweisung angegeben werden. Wenn Sie beispielsweise WITH ( **DROP_EXISTING, ONLINE = ON** ) angeben, schlägt die Anweisung fehl.
+- Beim Erstellen eines XML-Index müssen die Optionen mithilfe von WITH ( **_option_name_ = ON | OFF** ) angegeben werden.
 
 ## <a name="drop_existing-clause"></a>DROP_EXISTING (Klausel)
 Mit der DROP_EXISTING-Klausel können Sie den Index neu erstellen, Spalten hinzufügen oder löschen, Optionen ändern, die Sortierreihenfolge für Spalten ändern sowie das Partitionsschema oder die Dateigruppe ändern.
@@ -754,7 +754,7 @@ Die folgenden Regeln gelten für das Durchführen von Onlineindexvorgängen:
 Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .
 
 ### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a>Fortsetzbare Indexvorgänge
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Die folgenden Richtlinien gelten für fortsetzbare Indexvorgänge:
 
@@ -797,7 +797,7 @@ Wenn `ALLOW_ROW_LOCKS = ON` und `ALLOW_PAGE_LOCK = ON` angegeben sind, sind Sper
 Wenn `ALLOW_ROW_LOCKS = OFF` und `ALLOW_PAGE_LOCK = OFF` angegeben sind, ist nur eine Sperre auf Tabellenebene zulässig, wenn auf den Index zugegriffen wird.
 
 ## <a name="sequential-keys"></a>Sequenzielle Schlüssel
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Das Leistungsproblem von Speicherkonflikten bei Einfügevorgängen für die letzte Seite tritt häufig auf, wenn eine große Anzahl von gleichzeitigen Threads versucht, Zeilen in einen Index mit einem sequentiellen Schlüssel einzufügen. Ein Index wird als sequentiell betrachtet, wenn die führende Schlüsselspalte Werte enthält, die immer größer (oder kleiner) werden, wie beispielsweise eine Identitätsspalte oder ein Datum, das auf das aktuelle Datum/Uhrzeit voreingestellt ist. Da die einzufügenden Schlüssel sequentiell sind, werden alle neuen Zeilen am Ende der Indexstruktur eingefügt – also auf der gleichen Seite. Dies führt zu Konflikten für die Seite im Speicher, die als mehrere Threads betrachtet werden kann, die auf PAGELATCH_EX für die betreffende Seite warten.
 
@@ -1054,7 +1054,7 @@ GO
 ### <a name="j-create-a-partitioned-index"></a>J. Erstellen eines partitionierten Index
 Im folgenden Beispiel wird ein nicht gruppierter partitionierter Index für `TransactionsPS1` (ein vorhandenes Partitionsschema in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank) erstellt. Dieses Beispiel setzt voraus, dass das Beispiel für einen partitionierten Index installiert wurde.
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 CREATE NONCLUSTERED INDEX IX_TransactionHistory_ReferenceOrderID
@@ -1104,7 +1104,7 @@ GO
 ```
 
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. Erstellen, Fortsetzen, Anhalten und Abbrechen von Vorgängen fortsetzbarer Indizes
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1133,7 +1133,7 @@ ALTER INDEX test_idx2 ON test_table ABORT;
 ### <a name="n-basic-syntax"></a>N. Grundlegende Syntax
 Erstellen, Fortsetzen, Anhalten und Abbrechen von Vorgängen fortsetzbarer Indizes       
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1206,4 +1206,4 @@ WITH (DROP_EXISTING = ON);
 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)     
 [sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)    
 [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)     
-[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)     
+[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c6ae2579cad1a04239f6d4abc4691982a49d0ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff8efe5476597a85a26034cc278730c2d867ddae
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547547"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300236"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Ein oder mehrere Parameter im benutzerdefinierten Aggregat. Der Wert eines Parameters muss vom Benutzer angegeben werden, wenn die Aggregatfunktion ausgeführt wird. Geben Sie einen Parameternamen an, der mit dem Zeichen **@** beginnt. Der Parametername muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Parameter gelten lokal in der jeweiligen Funktion.  
   
  *system_scalar_type*  
- Einer der skalaren Systemdatentypen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um den Wert des Eingabeparameters oder Rückgabewerts zu speichern. Alle skalaren Datentypen, außer **text**, **ntext** und **image**, können als Parameter für ein benutzerdefiniertes Aggregat verwendet werden. Nicht skalare Typen, wie beispielsweise **cursor** und **table**, können nicht angegeben werden.  
+ Einer der skalaren Systemdatentypen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um den Wert des Eingabeparameters oder Rückgabewerts zu speichern. Alle skalaren Datentypen, außer **text** , **ntext** und **image** , können als Parameter für ein benutzerdefiniertes Aggregat verwendet werden. Nicht skalare Typen, wie beispielsweise **cursor** und **table** , können nicht angegeben werden.  
   
  *udt_schema_name*  
  Der Name des Schemas, zu dem der CLR-benutzerdefinierte Typ gehört. Wenn der Name des Schemas nicht angegeben ist, verweist [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf *udt_type_name* in der folgenden Reihenfolge:  
@@ -93,7 +93,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Erfordert die CREATE AGGREGATE-Berechtigungen sowie die REFERENCES-Berechtigung für die Assembly, die in der EXTERNAL NAME-Klausel angegeben ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird davon ausgegangen, dass eine StringUtilities.csproj-Beispielanwendung kompiliert wird. Weitere Informationen finden Sie unter [Beispiel für Zeichenfolgenhilfsprogramm-Funktionen](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ Im folgenden Beispiel wird davon ausgegangen, dass eine StringUtilities.csproj-Beispielanwendung kompiliert wird. Weitere Informationen finden Sie unter [Beispiel für Zeichenfolgenhilfsprogramm-Funktionen](/previous-versions/sql/sql-server-2016/ff878119(v=sql.130)).  
   
  In diesem Beispiel wird das `Concatenate`-Aggregat erstellt. Bevor das Aggregat erstellt wird, wird die `StringUtilities.dll`-Assembly in der lokalen Datenbank registriert.  
   
@@ -120,5 +120,4 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
-  
   

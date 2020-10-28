@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c916977259dc82638117b800e5fc6c2d306edf04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7644e25159a7df28d2de51d5e1a08a0e1b36ef05
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454256"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300373"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
 
 ## <a name="arguments"></a>Argumente
  *distance*  
- Ein Wert vom Typ **float** (**double** in .NET-Framework), der den Abstand zu der geometry-Instanz angibt, um die der Puffer berechnet werden soll.  
+ Ein Wert vom Typ **float** ( **double** in .NET-Framework), der den Abstand zu der geometry-Instanz angibt, um die der Puffer berechnet werden soll.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
@@ -51,10 +51,10 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
 ## <a name="remarks"></a>Bemerkungen  
  `STBuffer()` berechnet einen Puffer wie [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), wobei *tolerance* = distance \* 0,001 und *relative* = **false** ist.  
   
- Wenn *distance* > 0, wird eine **Polygon**- oder **MultiPolygon**-Instanz zurückgegeben.  
+ Wenn *distance* > 0, wird eine **Polygon** - oder **MultiPolygon** -Instanz zurückgegeben.  
   
 > [!NOTE]  
->  Da distance ein **float**-Wert ist, kann ein sehr kleiner Wert in den Berechnungen mit 0 gleichgesetzt werden.  In diesem Fall wird eine Kopie der aufrufenden Instanz von **geometry** zurückgegeben.  Informationen hierzu finden Sie unter [float und real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+>  Da distance ein **float** -Wert ist, kann ein sehr kleiner Wert in den Berechnungen mit 0 gleichgesetzt werden.  In diesem Fall wird eine Kopie der aufrufenden Instanz von **geometry** zurückgegeben.  Informationen hierzu finden Sie unter [float und real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
   
  Wenn *distance* = 0 ist, wird eine Kopie der aufrufenden Instanz von **geometry** zurückgegeben.  
   
@@ -69,7 +69,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
   
  Ein negativer Puffer entfernt alle Punkte innerhalb des gegebenen Abstands der Begrenzung der geometry-Instanz.  
   
- Die Abweichung zwischen dem theoretischen und dem berechneten Puffer beträgt max(tolerance, extents * 1,E-7), wobei tolerance = distance \* 0,001 ist. Weitere Informationen zu Erweiterungen finden Sie unter [geometry-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ Die Abweichung zwischen dem theoretischen und dem berechneten Puffer beträgt max(tolerance, extents * 1,E-7), wobei tolerance = distance \* 0,001 ist. Weitere Informationen zu Erweiterungen finden Sie unter [geometry-Datentyp-Methodenverweis](./spatial-types-geometry-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -108,7 +108,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
  SELECT @g.STBuffer(-2).ToString();
  ```  
   
- Diese **SELECT**-Anweisung gibt `GEOMETRYCOLLECTION EMPTY.` zurück.  
+ Diese **SELECT** -Anweisung gibt `GEOMETRYCOLLECTION EMPTY.` zurück.  
   
 ### <a name="e-calling-stbuffer-with-parameter_value--0"></a>E. Aufrufen von STBuffer() mit parameter_value = 0  
  Im folgenden Beispiel wird eine Kopie der aufrufenden Instanz von `geometry` zurückgegeben:  
@@ -163,11 +163,9 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- Von den ersten beiden **SELECT**-Anweisungen wird eine Instanz von `MultiPolygon` zurückgegeben, da der *distance*-Parameter kleiner oder gleich 1/2 des Abstands zwischen den beiden Punkten (1 1) und (1 4) ist. Von der dritten **SELECT**-Anweisung gibt `Polygon` zurückgegeben, da sich die zwischengespeicherten Instanzen der beiden Punkte (1 1) und (1 4) überschneiden.  
+ Von den ersten beiden **SELECT** -Anweisungen wird eine Instanz von `MultiPolygon` zurückgegeben, da der *distance* -Parameter kleiner oder gleich 1/2 des Abstands zwischen den beiden Punkten (1 1) und (1 4) ist. Von der dritten **SELECT** -Anweisung gibt `Polygon` zurückgegeben, da sich die zwischengespeicherten Instanzen der beiden Punkte (1 1) und (1 4) überschneiden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [BufferWithTolerance &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
-  
-

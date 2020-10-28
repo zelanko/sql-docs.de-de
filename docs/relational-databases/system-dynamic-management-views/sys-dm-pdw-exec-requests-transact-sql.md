@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 544991790a86e1738474b7b71c39bcbcb7fc395a
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: f62aebfe079ed8a701301ca7d5d3a5c70127407a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92412505"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678905"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,14 +41,14 @@ ms.locfileid: "92412505"
 |database_id|**int**|Der Bezeichner der vom expliziten Kontext verwendeten Datenbank (z. b. DB_X verwenden).|Weitere Informationen finden Sie unter ID in [sys. Datenbanken &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Enthält den vollständigen Text der Anforderung, wie er vom Benutzer gesendet wurde.|Jeder gültige Abfrage-oder Anforderungs Text. Abfragen, die länger als 4000 Bytes sind, werden abgeschnitten.|  
 |resource_class|**nvarchar (20)**|Die für diese Anforderung verwendete Arbeits Auslastungs Gruppe. |Statische Ressourcenklassen</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Dynamische Ressourcenklassen</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|Die Wichtigkeits Einstellung, die die Anforderung an ausgeführt hat.  Dies ist die relative Wichtigkeit einer Anforderung in dieser Arbeits Auslastungs Gruppe und zwischen Arbeits Auslastungs Gruppen für freigegebene Ressourcen.  Die in der Klassifizierung angegebene Wichtigkeit überschreibt die Wichtigkeits Einstellung der Arbeits Auslastungs Gruppe.</br>Gilt für: Azure Synapse Analytics|NULL</br>niedrig</br>below_normal</br>Normal (Standard)</br>above_normal</br>high|
-|group_name|**sysname** |Bei Anforderungen, die Ressourcen verwenden, ist group_name der Name der Arbeits Auslastungs Gruppe, unter der die Anforderung ausgeführt wird.  Wenn die Anforderung keine Ressourcen verwendet, ist group_name NULL.</br>Gilt für: Azure Synapse Analytics|
+|importance|**nvarchar(128)**|Die Wichtigkeits Einstellung, die die Anforderung an ausgeführt hat.  Dies ist die relative Wichtigkeit einer Anforderung in dieser Arbeits Auslastungs Gruppe und zwischen Arbeits Auslastungs Gruppen für freigegebene Ressourcen.  Die in der Klassifizierung angegebene Wichtigkeit überschreibt die Wichtigkeits Einstellung der Arbeits Auslastungs Gruppe.</br>Gilt für: Azure SQL Data Warehouse|NULL</br>niedrig</br>below_normal</br>Normal (Standard)</br>above_normal</br>high|
+|group_name|**sysname** |Bei Anforderungen, die Ressourcen verwenden, ist group_name der Name der Arbeits Auslastungs Gruppe, unter der die Anforderung ausgeführt wird.  Wenn die Anforderung keine Ressourcen verwendet, ist group_name NULL.</br>Gilt für: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|Für Anforderungen, die Ressourcen verwenden, den Namen des Klassifizierers, der zum Zuweisen von Ressourcen und Wichtigkeit verwendet wird.||
-|resource_allocation_percentage|**Dezimalzahl (5, 2)**|Die prozentuale Menge der Ressourcen, die der Anforderung zugeordnet sind.</br>Gilt für: Azure Synapse Analytics|
-|result_cache_hit|**int**|Erläutert, ob für eine abgeschlossene Abfrage der resultsetcache verwendet wurde.  </br>Gilt für: Azure Synapse Analytics| 1 = resultsetcache-Treffer </br> 0 = resultsetcache-Fehler </br> Negative ganzzahlige Werte = Gründe für das Zwischenspeichern von Resultsets.  Weitere Informationen finden Sie im Abschnitt "Hinweise".|
-|Command2|**nvarchar9max)**|Enthält den vollständigen Text der Anforderung, wie er vom Benutzer gesendet wurde. Enthält Abfragen, die länger als 4000 Zeichen sind.|Jeder gültige Abfrage-oder Anforderungs Text. NULL = Abfragen mit einer Länge von 4000 Zeichen oder weniger. für diese Abfragen wird der vollständige Text in der Befehls Spalte gefunden.|
+|resource_allocation_percentage|**Dezimalzahl (5, 2)**|Die prozentuale Menge der Ressourcen, die der Anforderung zugeordnet sind.</br>Gilt für: Azure SQL Data Warehouse|
+|result_cache_hit|**int**|Erläutert, ob für eine abgeschlossene Abfrage der resultsetcache verwendet wurde.  </br>Gilt für: Azure SQL Data Warehouse| 1 = resultsetcache-Treffer </br> 0 = resultsetcache-Fehler </br> Negative ganzzahlige Werte = Gründe für das Zwischenspeichern von Resultsets.  Weitere Informationen finden Sie im Abschnitt "Hinweise".|
+|client_correlation_id|**nvarchar(255)**|Optionaler benutzerdefinierter Name für eine Client Sitzung.  Um für eine Sitzung festzulegen, wenden Sie sp_set_session_context ' client_correlation_id ', ' <CorrelationIDName> ' an.  Führen `SELECT SESSION_CONTEXT(N'client_correlation_id')` Sie aus, um den Wert abzurufen.|
 ||||
-  
+
 ## <a name="remarks"></a>Hinweise 
  Informationen über die maximale Anzahl von Zeilen, die in dieser Sicht beibehalten werden, finden Sie im Abschnitt "Metadaten" im Thema [Kapazitäts Limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
@@ -57,18 +57,17 @@ Der negative ganzzahlige Wert in der result_cache_hit-Spalte ist ein Bitmapwert 
 |Wert            |BESCHREIBUNG  |  
 |-----------------|-----------------|  
 |**1**|Resultsetcache-Treffer|  
-|**0x00** (**0**)|Resultsetcache-Fehler|  
-|-**0x01** (**-1**)|Das Zwischenspeichern von Resultsets ist für die Datenbank deaktiviert.|  
-|-**0x02** (**-2**)|Das Zwischenspeichern von Resultsets ist für die Sitzung deaktiviert. | 
-|-**0x04** (**-4**)|Das Zwischenspeichern von Resultsets ist deaktiviert, weil keine Datenquellen für die Abfrage verfügbar sind.|  
-|-**0x08** (**-8**)|Das Zwischenspeichern von Resultsets ist aufgrund von Sicherheits Prädikaten auf Zeilenebene deaktiviert.|  
-|-**0x10** (**-16**)|Das Zwischenspeichern von Resultsets ist aufgrund der Verwendung der Systemtabelle, der temporären Tabelle oder der externen Tabelle in der Abfrage deaktiviert.|  
-|-**0x20** (**-32**)|Das Zwischenspeichern von Resultsets ist deaktiviert, da die Abfrage Lauf Zeitkonstanten, benutzerdefinierte Funktionen oder nicht deterministische Funktionen enthält.|  
-|-**0x40**(**-64**)|Das Zwischenspeichern von Resultsets ist deaktiviert, da die geschätzte Größe des Resultsets >10 GB beträgt.|  
-|-**0x80**(**-128**) |Das Zwischenspeichern von Resultsets ist deaktiviert, da das Resultset Zeilen mit großer Größe (>64 KB) enthält.|  
-|-**0x100**(**-256**) |Das Zwischenspeichern von Resultsets ist aufgrund der Verwendung von granularer dynamischer Daten Maskierung deaktiviert.|  
+|**0x00** ( **0** )|Resultsetcache-Fehler|  
+|-**0x01** ( **-1** )|Das Zwischenspeichern von Resultsets ist für die Datenbank deaktiviert.|  
+|-**0x02** ( **-2** )|Das Zwischenspeichern von Resultsets ist für die Sitzung deaktiviert. | 
+|-**0x04** ( **-4** )|Das Zwischenspeichern von Resultsets ist deaktiviert, weil keine Datenquellen für die Abfrage verfügbar sind.|  
+|-**0x08** ( **-8** )|Das Zwischenspeichern von Resultsets ist aufgrund von Sicherheits Prädikaten auf Zeilenebene deaktiviert.|  
+|-**0x10** ( **-16** )|Das Zwischenspeichern von Resultsets ist aufgrund der Verwendung der Systemtabelle, der temporären Tabelle oder der externen Tabelle in der Abfrage deaktiviert.|  
+|-**0x20** ( **-32** )|Das Zwischenspeichern von Resultsets ist deaktiviert, da die Abfrage Lauf Zeitkonstanten, benutzerdefinierte Funktionen oder nicht deterministische Funktionen enthält.|  
+|-**0x40** ( **-64** )|Das Zwischenspeichern von Resultsets ist deaktiviert, da die geschätzte Größe des Resultsets >10 GB beträgt.|  
+|-**0x80** ( **-128** ) |Das Zwischenspeichern von Resultsets ist deaktiviert, da das Resultset Zeilen mit großer Größe (>64 KB) enthält.|  
+|-**0x100** ( **-256** ) |Das Zwischenspeichern von Resultsets ist aufgrund der Verwendung von granularer dynamischer Daten Maskierung deaktiviert.|  
 
-  
 ## <a name="permissions"></a>Berechtigungen
 
  Erfordert die VIEW SERVER STATE-Berechtigung.  
@@ -82,4 +81,4 @@ Der negative ganzzahlige Wert in der result_cache_hit-Spalte ist ein Bitmapwert 
   
 ## <a name="see-also"></a>Weitere Informationen
 
- [Azure Synapse Analytics und parallele Data Warehouse dynamische Verwaltungs Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

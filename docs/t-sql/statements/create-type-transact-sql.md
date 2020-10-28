@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f1a1e3d5ab483e550b8bcbfc28b4928f62948e5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5e04a826b3ea7769ceb9ec54cc5175c24f6b98a2
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541339"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300581"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -191,16 +191,16 @@ column_name <data_type>
  *base_type* kann außerdem jedes Synonym für Datentypen sein, das einem dieser Systemdatentypen zugeordnet wird.  
   
  *precision*  
- Für **decimal** oder **numeric**: Eine nicht negative ganze Zahl, die die maximale Anzahl von Dezimalstellen angibt, die vor und nach dem Dezimaltrennzeichen gespeichert werden können. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ Für **decimal** oder **numeric** : Eine nicht negative ganze Zahl, die die maximale Anzahl von Dezimalstellen angibt, die vor und nach dem Dezimaltrennzeichen gespeichert werden können. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  *scale*  
- Für **decimal** oder **numeric**: Eine nicht negative ganze Zahl, die die maximale Anzahl von Dezimalstellen angibt, die nach dem Dezimalzeichen gespeichert werden können. Diese Zahl muss kleiner oder gleich der Gesamtzahl der Stellen sein. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
+ Für **decimal** oder **numeric** : Eine nicht negative ganze Zahl, die die maximale Anzahl von Dezimalstellen angibt, die nach dem Dezimalzeichen gespeichert werden können. Diese Zahl muss kleiner oder gleich der Gesamtzahl der Stellen sein. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  **NULL** | NOT NULL  
  Gibt an, ob für den Typ NULL-Werte zulässig sind. Wird keine Angabe gemacht, ist NULL der Standardwert.  
   
  *assembly_name*  
- **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Assembly an, die auf die Implementierung des benutzerdefinierten Typs in der Common Language Runtime (CLR) verweist. *assembly_name* sollte einer vorhandenen Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der aktuellen Datenbank entsprechen.  
   
@@ -208,7 +208,7 @@ column_name <data_type>
 >  EXTERNAL_NAME ist in einer eigenständigen Datenbank nicht verfügbar.  
   
  **[.** *class_name* **]**  
- **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt die Klasse innerhalb der Assembly an, die den benutzerdefinierten Typ implementiert. *class_name* muss ein gültiger Bezeichner sein und als Klasse mit Assemblysichtbarkeit in der Assembly vorhanden sein. Bei *class_name* muss unabhängig von der Datenbanksortierung die Groß-/Kleinschreibung beachtet werden, und der Wert muss genau dem Klassennamen in der entsprechenden Assembly entsprechen. Der Klassenname kann ein mit einem Namespace qualifizierter Name sein, der in eckigen Klammern ( **[ ]** ) steht, wenn die Programmiersprache, die zum Schreiben der Klasse verwendet wird, das Konzept von Namespaces verwendet, wie z.B. C#. Wenn *class_name* nicht angegeben ist, geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon aus, dass der Wert mit *type_name* identisch ist.  
   
@@ -279,13 +279,13 @@ Gibt an, dass ein Index in der Tabelle erstellt werden soll. Dies kann ein grupp
  Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] kann die Verarbeitung von Daten in einem Tabellentyp im Primärspeicher und nicht auf dem Datenträger erfolgen. Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Codebeispiele, die das Erstellen speicheroptimierter Tabellentypen veranschaulichen, finden Sie unter [Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die CREATE TYPE-Berechtigung für die aktuelle Datenbank und die ALTER-Berechtigung für *schema_name*. Wenn *schema_name* nicht angegeben wird, gelten die Standardregeln für die Namensauflösung, um das Schema für den aktuellen Benutzer zu bestimmen. Wird *assembly_name* angegeben, muss ein Benutzer entweder Besitzer der Assembly sein oder die REFERENCES-Berechtigung für die Assembly besitzen.  
+ Erfordert die CREATE TYPE-Berechtigung für die aktuelle Datenbank und die ALTER-Berechtigung für *schema_name* . Wenn *schema_name* nicht angegeben wird, gelten die Standardregeln für die Namensauflösung, um das Schema für den aktuellen Benutzer zu bestimmen. Wird *assembly_name* angegeben, muss ein Benutzer entweder Besitzer der Assembly sein oder die REFERENCES-Berechtigung für die Assembly besitzen.  
 
  Wenn in der CREATE TABLE-Anweisung eine Spalte als Spalte eines benutzerdefinierten Typs definiert wird, ist die REFERENCES-Berechtigung für den benutzerdefinierten Typ erforderlich.
  
    >[!NOTE]
   > Eine Benutzer, der eine Tabelle mit einer Spalte erstellt, die einen benutzerdefinierten Typ verwendet, benötigt die REFERENCES-Berechtigung für den benutzerdefinierten Typ.
-  > Wenn diese Tabelle in TempDB erstellt werden muss, muss entweder **vor** jedem Erstellen der Tabelle die REFERENCES-Berechtigung explizit erteilt werden, oder der betreffende Datentyp und die REFERENCES-Berechtigungen müssen der Modelldatenbank hinzugefügt werden. Wenn dies erfolgt ist, stehen der betreffende Datentyp und die Berechtigungen dauerhaft in TempDB zur Verfügung. Andernfalls verschwinden der benutzerdefinierte Datentyp und die Berechtigungen bei einem Neustart von SQL Server. Weitere Informationen finden Sie unter [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)
+  > Wenn diese Tabelle in TempDB erstellt werden muss, muss entweder **vor** jedem Erstellen der Tabelle die REFERENCES-Berechtigung explizit erteilt werden, oder der betreffende Datentyp und die REFERENCES-Berechtigungen müssen der Modelldatenbank hinzugefügt werden. Wenn dies erfolgt ist, stehen der betreffende Datentyp und die Berechtigungen dauerhaft in TempDB zur Verfügung. Andernfalls verschwinden der benutzerdefinierte Datentyp und die Berechtigungen bei einem Neustart von SQL Server. Weitere Informationen finden Sie unter [CREATE TABLE](./create-table-transact-sql.md?view=sql-server-2017#permissions-1)
   
 ## <a name="examples"></a>Beispiele  
   
@@ -300,7 +300,7 @@ FROM varchar(11) NOT NULL ;
 ### <a name="b-creating-a-user-defined-type"></a>B. Erstellen eines benutzerdefinierten Typs  
  Im folgenden Beispiel wird der Typ `Utf8String` erstellt, der auf die Klasse `utf8string` in der Assembly `utf8string` verweist. Vor dem Erstellen des Typs wird die Assembly `utf8string` in der lokalen Datenbank registriert. Ersetzen Sie den binären Teil der CREATE ASSEMBLY-Anweisung durch eine gültige Beschreibung.  
   
-**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
 ```sql  
 CREATE ASSEMBLY utf8string  
@@ -347,4 +347,3 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
  [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     
  [Arbeiten mit benutzerdefinierten Typen in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
-  

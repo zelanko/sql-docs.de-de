@@ -1,6 +1,6 @@
 ---
+title: Table Properties - SSMS
 description: Table Properties - SSMS
-title: Tabelleneigenschaften – SSMS | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,23 +9,25 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
+- sql12.SWB.SELECTCOLUMNS.F1
+- sql13.SWB.SELECTCOLUMNS.F1
 - sql13.swb.tableproperties.storage.f1
 - sql13.swb.tableproperties.changetracking.f1
 - sql13.swb.tableproperties.general.f1
-- sql12.SWB.SELECTCOLUMNS.F1
 - sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 018b1388e283541f883844daf77c68267c535a9c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: a76a0aac8ff4630eb8b51835bba618303fe497cb
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810463"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344056"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   In diesem Thema werden die Tabelleneigenschaften beschrieben, die im Dialogfeld "Tabelleneigenschaften" in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden. Weitere Informationen zum Anzeigen dieser Eigenschaften finden Sie unter [Anzeigen der Tabellendefinition](../../relational-databases/tables/view-the-table-definition.md).  
@@ -69,7 +71,7 @@ ms.locfileid: "91810463"
  Gibt an, ob das Objekt mit der Option „Bezeichner in Anführungszeichen“ auf ON erstellt wurde. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
  **Sperrenausweitung**  
- Gibt die Granularität der Sperrenausweitung der Tabelle an. Weitere Informationen zum Sperren in der Datenbank-Engine finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung in SQL Server](../sql-server-transaction-locking-and-row-versioning-guide.md?view=sql-server-ver15). Mögliche Werte:  
+ Gibt die Granularität der Sperrenausweitung der Tabelle an. Weitere Informationen zum Sperren in der Datenbank-Engine finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung in SQL Server](../sql-server-transaction-locking-and-row-versioning-guide.md). Mögliche Werte:  
   
  AUTO  
  Mit dieser Option kann von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die für das Tabellenschema geeignete Granularität der Sperrenausweitung ausgewählt werden.  
@@ -84,11 +86,11 @@ ms.locfileid: "91810463"
  Verhindert die Sperrenausweitung in den meisten Fällen. Sperren auf Tabellenebene sind jedoch nicht völlig ausgeschlossen. Wenn Sie z. B. eine Tabelle scannen, die unter der serialisierbaren Isolationsstufe keinen gruppierten Index aufweist, muss [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Tabellensperre zulassen, damit die Datenintegrität gewahrt wird.  
   
  **Die Tabelle ist repliziert**  
- Gibt an, ob die Tabelle mit der Replikationsfunktion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere Datenbank repliziert wurde. Mögliche Werte sind **True** und **False**.  
+ Gibt an, ob die Tabelle mit der Replikationsfunktion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere Datenbank repliziert wurde. Mögliche Werte sind **True** und **False** .  
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> Seite "Änderungsnachverfolgung"  
  **Änderungsnachverfolgung**  
- Gibt an, ob die Änderungsnachverfolgung für die Tabelle aktiviert ist. Der Standardwert ist **False**.  
+ Gibt an, ob die Änderungsnachverfolgung für die Tabelle aktiviert ist. Der Standardwert ist **False** .  
   
  Diese Option ist nur dann verfügbar, wenn die Änderungsnachverfolgung für die Datenbank aktiviert ist.  
   
@@ -109,7 +111,7 @@ ms.locfileid: "91810463"
  Der Stammordner für die FileTable.  
   
  **Aktivierter FileTable-Namespace**  
- Wenn **True**, gibt dieser Wert an, dass die Tabelle eine FileTable ist. Wenn Sie diesen Wert in **False**ändern, ändern Sie die FileTable in eine gewöhnliche Benutzertabelle. Wenn Sie die Tabelle später wieder in eine FileTable ändern möchten, muss die Tabelle eine FileTable-Konsistenzprüfung bestehen, damit die Konvertierung erfolgreich ist.  
+ Wenn **True** , gibt dieser Wert an, dass die Tabelle eine FileTable ist. Wenn Sie diesen Wert in **False** ändern, ändern Sie die FileTable in eine gewöhnliche Benutzertabelle. Wenn Sie die Tabelle später wieder in eine FileTable ändern möchten, muss die Tabelle eine FileTable-Konsistenzprüfung bestehen, damit die Konvertierung erfolgreich ist.  
   
 ##  <a name="storage-page"></a><a name="Storage"></a> Seite "Speicher"  
  Zeigt die speicherbezogenen Eigenschaften der ausgewählten Tabelle an.  
@@ -135,7 +137,7 @@ ms.locfileid: "91810463"
  Der Name der Dateigruppe, die die Tabelle enthält.  
   
  **Die Tabelle ist partitioniert**  
- Mögliche Werte sind **True** und **False**.  
+ Mögliche Werte sind **True** und **False** .  
   
  **FILESTREAM-Dateigruppe**  
  Geben Sie den Namen der FILESTREAM-Datendateigruppe an, wenn die Tabelle eine **varbinary(max)** -Spalte mit FILESTREAM-Attribut aufweist. Der Standardwert entspricht der standardmäßigen FILESTREAM-Datendateigruppe.  
@@ -144,7 +146,7 @@ ms.locfileid: "91810463"
   
 ### <a name="general"></a>Allgemein  
  **Das VarDecimal-Speicherformat ist aktiviert.**  
- Bei **True**wird durch diesen schreibgeschützten Wert angegeben, dass die Datentypen **dezimal** und **numerisch** mithilfe des vardecimal-Speicherformats gespeichert werden. Um diese Option zu ändern, verwenden Sie die Option **vardecimal-Speicherformat** von [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Das Vardecimal-Speicherformat ist veraltet. Verwenden Sie stattdessen die ROW-Komprimierung.  
+ Bei **True** wird durch diesen schreibgeschützten Wert angegeben, dass die Datentypen **dezimal** und **numerisch** mithilfe des vardecimal-Speicherformats gespeichert werden. Um diese Option zu ändern, verwenden Sie die Option **vardecimal-Speicherformat** von [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Das Vardecimal-Speicherformat ist veraltet. Verwenden Sie stattdessen die ROW-Komprimierung.  
   
  **Indexspeicher**  
  Der Speicherplatz in Megabytes, der von den Indizes in der Tabelle belegt wird. Dieser Wert schließt die Speicherverwendung für den XML-Index der Tabelle nicht mit ein. Verwenden Sie stattdessen [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) , wenn XML-Indizes zur Tabelle gehören.  

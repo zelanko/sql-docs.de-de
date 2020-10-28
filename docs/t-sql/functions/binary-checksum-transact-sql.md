@@ -20,12 +20,12 @@ ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c8caff3b757de461c79081976623ec493efffc4
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2dd65d2923d063440e292884da2bb4c6aecf0ec4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116821"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255458"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -40,6 +40,8 @@ Gibt den binären Prüfsummenwert zurück, der für eine Zeile einer Tabelle ode
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumente
@@ -79,7 +81,7 @@ oder
   
 Die `BINARY_CHECKSUM`-Werte für die Zeichenfolgen „McCavity“ und „Mccavity“ sind z. B. unterschiedlich. Bei einem Server ohne Unterscheidung nach Groß-/Kleinschreibung gibt `CHECKSUM` jedoch für diese Zeichenfolgen dieselben Prüfsummenwerte zurück. Sie sollten Vergleiche zwischen `CHECKSUM`-Werten und `BINARY_CHECKSUM`-Werten vermeiden.
  
-`BINARY_CHECKSUM` unterstützt für den Typ **varbinary(max)** beliebige Längen und bis zu 255 Zeichen für den Typ **nvarchar(max)**.
+`BINARY_CHECKSUM` unterstützt für den Typ **varbinary(max)** beliebige Längen und bis zu 255 Zeichen für den Typ **nvarchar(max)** .
   
 ## <a name="examples"></a>Beispiele  
 Im folgenden Beispiel wird `BINARY_CHECKSUM` verwendet, um Änderungen in einer Zeile einer Tabelle zu erkennen.

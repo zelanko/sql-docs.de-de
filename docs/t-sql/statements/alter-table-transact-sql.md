@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2b08c13f95ef72ff03ce9b7de2a3dfb815d89f1
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 131f1c7578aad18f6eae95c34ad2beec8ebad73f
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412791"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300624"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -429,7 +429,7 @@ Gibt an, dass die benannte Spalte geändert werden soll.
 
 Für die geänderte Spalte gilt Folgendes:
 
-- Eine Spalte mit dem **timestamp**-Datentyp.
+- Eine Spalte mit dem **timestamp** -Datentyp.
 - Die Spalte darf nicht die ROWGUIDCOL-Spalte der Tabelle sein.
 - Die Spalte darf keine berechnete Spalte sein und nicht in einer berechneten Spalte verwendet werden.
 - Die Spalte darf nicht in mit der CREATE STATISTICS-Anweisung generierten Statistiken verwendet werden. Benutzer müssen DROP STATISTICS ausführen, um die Statistiken zu löschen, bevor ALTER COLUMN erfolgreich ausgeführt werden kann.  Führen Sie diese Abfrage aus, um alle vom Benutzer erstellten Statistiken und Statistikspalten für eine Tabelle abzurufen.
@@ -454,7 +454,7 @@ WHERE s.object_id = OBJECT_ID('<table_name>');
 - Die Spalte darf nicht in einer CHECK- oder UNIQUE-Einschränkung verwendet werden. Das Ändern der Länge einer Spalte mit variabler Länge, die in einer CHECK- oder UNIQUE-Einschränkung verwendet wird, ist dagegen zulässig.
 - Der Spalte darf keine Standarddefinition zugeordnet sein. Die Länge, die Genauigkeit oder die Dezimalstellen einer Spalte können jedoch geändert werden, sofern der Datentyp nicht geändert wird.
 
-Der Datentyp von **text**-, **ntext**- und **image**-Spalten kann nur auf die folgende Weise geändert werden:
+Der Datentyp von **text** -, **ntext** - und **image** -Spalten kann nur auf die folgende Weise geändert werden:
 
 - **text** in **varchar(max)** , **nvarchar(max)** oder **xml**
 - **ntext** in **varchar(max)** , **nvarchar(max)** oder **xml**
@@ -465,7 +465,7 @@ Der Datentyp von **text**-, **ntext**- und **image**-Spalten kann nur auf die fo
 > [!NOTE]
 > Der Datentyp einer Spalte einer partitionierten Tabelle kann nicht geändert werden.
 >
-> Der Datentyp der Spalten, die in einem Index enthalten sind, kann nicht geändert werden, es sei denn, die Spalte ist vom Datentyp **varchar**, **nvarchar** oder **varbinary**, und die neue Größe ist größer oder gleich der alten Größe.
+> Der Datentyp der Spalten, die in einem Index enthalten sind, kann nicht geändert werden, es sei denn, die Spalte ist vom Datentyp **varchar** , **nvarchar** oder **varbinary** , und die neue Größe ist größer oder gleich der alten Größe.
 >
 > Spalten, die in einer PRIMARY KEY-Einschränkung enthalten sind, können nicht von **NOT NULL** in **NULL** geändert werden.
 
@@ -474,7 +474,7 @@ Wenn Sie Always Encrypted (ohne Secure Enclaves) verwenden, können Sie, falls d
 Wenn Sie Always Encrypted mit Secure Enclaves verwenden, können Sie alle Verschlüsselungseinstellungen ändern, solange der Spaltenverschlüsselungsschlüssel, der die Spalte schützt (und der neue Spaltenverschlüsselungsschlüssel, wenn Sie den Schlüssel ändern), Enclave-Berechnungen unterstützt (verschlüsselt mit Enclave-fähigen Spaltenhauptschlüsseln). Weitere Einzelheiten finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 *column_name*  
-Der Name der Spalte, die geändert, hinzugefügt oder gelöscht werden soll. *column_name* darf maximal 128 Zeichen lang sein. Bei neuen Spalten, die mit einem **timestamp**-Datentyp erstellt wurden, ist *column_name* nicht erforderlich. Der Name **timestamp** wird verwendet, wenn Sie *column_name* nicht für eine Spalte vom Datentyp **timestamp** angeben.
+Der Name der Spalte, die geändert, hinzugefügt oder gelöscht werden soll. *column_name* darf maximal 128 Zeichen lang sein. Bei neuen Spalten, die mit einem **timestamp** -Datentyp erstellt wurden, ist *column_name* nicht erforderlich. Der Name **timestamp** wird verwendet, wenn Sie *column_name* nicht für eine Spalte vom Datentyp **timestamp** angeben.
 
 > [!NOTE]
 > Neue Spalten werden hinzugefügt, nachdem alle vorhandenen Spalten in der Tabelle geändert wurden.
@@ -505,17 +505,17 @@ Die Genauigkeit für den angegebenen Datentyp. Weitere Informationen über gült
 Die Dezimalstellen für den angegebenen Datentyp. Weitere Informationen zu gültigen Dezimalstellenwerten finden Sie unter [Genauigkeit, Dezimalstellen und Länge](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).
 
 **max**  
-Gilt nur für die Datentypen **varchar**, **nvarchar**, und **varbinary** zum Speichern von 2^31-1 Bytes an Zeichen- und Binärdaten sowie von Unicode-Daten.
+Gilt nur für die Datentypen **varchar** , **nvarchar** , und **varbinary** zum Speichern von 2^31-1 Bytes an Zeichen- und Binärdaten sowie von Unicode-Daten.
 
 *xml_schema_collection*  
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Gilt nur für den **xml**-Datentyp zum Zuordnen eines XML-Schemas zum Typ. Bevor Sie eine **xml**-Spalte mit einer Schemaauflistung typisieren können, muss die Schemaauflistung mithilfe von [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) in der Datenbank erstellt werden.
+Gilt nur für den **xml** -Datentyp zum Zuordnen eines XML-Schemas zum Typ. Bevor Sie eine **xml** -Spalte mit einer Schemaauflistung typisieren können, muss die Schemaauflistung mithilfe von [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) in der Datenbank erstellt werden.
 
 COLLATE \< *collation_name* >  
 Gibt die neue Sortierung für die geänderte Spalte an. Wenn keine Sortierung angegeben ist, wird der Spalte die Standardsortierung der Datenbank zugewiesen. Als Sortierungsname kann entweder der Name einer Windows-Sortierreihenfolge oder ein SQL-Sortierungsname verwendet werden. Eine Liste und weitere Informationen finden Sie unter [Name der Windows-Sortierung](../../t-sql/statements/windows-collation-name-transact-sql.md) und [SQL Server-Sortierungsname](../../t-sql/statements/sql-server-collation-name-transact-sql.md).
 
-Mit der COLLATE-Klausel werden nur die Sortierungen von Spalten der Datentypen **char**, **varchar**, **nchar** und **nvarchar** geändert. Um die Sortierung einer benutzerdefinierten Aliasdatentyp-Spalte zu ändern, verwenden Sie separate ALTER TABLE-Anweisungen zum Ändern der Spalte in einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp. Ändern Sie dann die Sortierung, und ändern Sie die Spalte zurück in einen Aliasdatentyp.
+Mit der COLLATE-Klausel werden nur die Sortierungen von Spalten der Datentypen **char** , **varchar** , **nchar** und **nvarchar** geändert. Um die Sortierung einer benutzerdefinierten Aliasdatentyp-Spalte zu ändern, verwenden Sie separate ALTER TABLE-Anweisungen zum Ändern der Spalte in einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp. Ändern Sie dann die Sortierung, und ändern Sie die Spalte zurück in einen Aliasdatentyp.
 
 Mit ALTER COLUMN kann die Sortierung nicht geändert werden, wenn mindestens eine der folgenden Bedingungen zutrifft:
 
@@ -542,12 +542,12 @@ Wenn Sie eine Tabelle mit der CREATE TABLE- oder ALTER TABLE-Anweisung erstellen
 Wenn Sie eine Spalte mit einem benutzerdefinierten Datentyp hinzufügen, stellen Sie sicher, dass Sie die Spalte mit der gleichen NULL-Zulässigkeit wie der des benutzerdefinierten Datentyps definieren. Geben Sie zudem einen Standardwert für die Spalte an. Weitere Informationen finden Sie unter [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).
 
 > [!NOTE]
-> Wenn NULL oder NOT NULL mit ALTER COLUMN angegeben werden, muss auch *new_data_type* [(*precision* [, *scale* ])] angegeben werden. Wenn Datentyp, Genauigkeit und Dezimalstellen nicht geändert werden, geben Sie die aktuellen Spaltenwerte an.
+> Wenn NULL oder NOT NULL mit ALTER COLUMN angegeben werden, muss auch *new_data_type* [( *precision* [, *scale* ])] angegeben werden. Wenn Datentyp, Genauigkeit und Dezimalstellen nicht geändert werden, geben Sie die aktuellen Spaltenwerte an.
 
 [ {ADD | DROP} ROWGUIDCOL ]  
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Gibt an, dass die ROWGUIDCOL-Eigenschaft der angegebenen Spalte hinzugefügt oder daraus gelöscht wird. ROWGUIDCOL zeigt an, dass die Spalte eine GUID-Spalte für eine Zeile darstellt. Sie können nur eine **uniqueidentifier**-Spalte pro Tabelle als ROWGUIDCOL-Spalte kennzeichnen. Die ROWGUIDCOL-Eigenschaft kann nur einer **uniqueidentifier**-Spalte zugewiesen werden. ROWGUIDCOL kann keiner Spalte eines benutzerdefinierten Datentyps zugewiesen werden.
+Gibt an, dass die ROWGUIDCOL-Eigenschaft der angegebenen Spalte hinzugefügt oder daraus gelöscht wird. ROWGUIDCOL zeigt an, dass die Spalte eine GUID-Spalte für eine Zeile darstellt. Sie können nur eine **uniqueidentifier** -Spalte pro Tabelle als ROWGUIDCOL-Spalte kennzeichnen. Die ROWGUIDCOL-Eigenschaft kann nur einer **uniqueidentifier** -Spalte zugewiesen werden. ROWGUIDCOL kann keiner Spalte eines benutzerdefinierten Datentyps zugewiesen werden.
 
 ROWGUIDCOL erzwingt keine Eindeutigkeit der in der Spalte gespeicherten Werte und generiert nicht automatisch Werte für neue Zeilen, die in die Tabelle eingefügt werden. Um für jede Spalte eindeutige Werte zu generieren, verwenden Sie entweder die NEWID- oder die NEWSEQUENTIALID-Funktion in INSERT-Anweisungen. Geben Sie alternativ dazu die NEWID- oder die NEWSEQUENTIALID-Funktion als Standardwert für die Spalte an.
 
@@ -632,7 +632,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
 
 Gibt die Namen der Spalten an, die das System zum Aufzeichnen des Zeitraums verwendet, für den ein Datensatz gültig ist. Sie können vorhandene Spalten angeben oder neue Spalten im Rahmen des ADD PERIOD FOR SYSTEM_TIME-Arguments erstellen. Richten Sie Spalten mit dem Datentyp „datetime2“ ein, und definieren Sie sie als NOT NULL. Wenn Sie eine Zeitraumspalte als NULL definieren, tritt ein Fehler auf. Sie können für die Spalten system_start_time und system_end_time [column_constraint](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) definieren und/oder [Standardwerte für Spalten angeben](../../relational-databases/tables/specify-default-values-for-columns.md). Sehen Sie sich Beispiel A in den folgenden [Beispielen zur Systemversionsverwaltung](#system_versioning) an, in dem veranschaulicht wird, wie Sie Standardwerte für system_end_time-Spalten einsetzen können.
 
-Verwenden Sie dieses Argument mit dem Argument SET SYSTEM_VERSIONING, um die Systemversionsverwaltung für eine vorhandene Tabelle zu ermöglichen. Weitere Informationen finden Sie im Artikel zu [temporalen Tabelle](../../relational-databases/tables/temporal-tables.md) und unter [Getting Started with Temporal Tables in Azure SQL Database (Erste Schritte mit temporalen Tabellen in Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).
+Verwenden Sie dieses Argument mit dem Argument SET SYSTEM_VERSIONING, um die Systemversionsverwaltung für eine vorhandene Tabelle zu ermöglichen. Weitere Informationen finden Sie im Artikel zu [temporalen Tabelle](../../relational-databases/tables/temporal-tables.md) und unter [Getting Started with Temporal Tables in Azure SQL Database (Erste Schritte mit temporalen Tabellen in Azure SQL-Datenbank)](/azure/azure-sql/temporal-tables).
 
 Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] können Benutzer eine oder beide Zeitraumspalten mit dem Flag **HIDDEN** kennzeichnen, um diese Spalten implizit auszublenden, sodass **SELECT \* FROM\<table_name>** für diese Spalten keinen Wert zurückgibt. Standardmäßig sind Zeitraumspalten nicht ausgeblendet. Damit sie verwendet werden können, müssen ausgeblendete Spalten explizit in allen Abfragen eingeschlossen werden, die direkt auf die temporale Tabelle verweisen.
 
@@ -642,7 +642,7 @@ Gibt an, dass eine oder mehrere Spaltendefinitionen, Definitionen berechneter Sp
 CONSTRAINT *constraint_name*  
 Gibt an, dass *constraint_name* aus der Tabelle entfernt wird. Es können mehrere Einschränkungen aufgeführt werden.
 
-Der benutzerdefinierte oder vom System bereitgestellte Name der Einschränkung kann durch Abfragen der Katalogsichten **sys.check_constraint**, **sys.default_constraints**, **sys.key_constraints** und **sys.foreign_keys** ermittelt werden.
+Der benutzerdefinierte oder vom System bereitgestellte Name der Einschränkung kann durch Abfragen der Katalogsichten **sys.check_constraint** , **sys.default_constraints** , **sys.key_constraints** und **sys.foreign_keys** ermittelt werden.
 
 Eine PRIMARY KEY-Einschränkung kann nicht gelöscht werden, wenn ein XML-Index für die Tabelle vorhanden ist.
 
@@ -665,7 +665,7 @@ Gibt an, dass *contraint_name* oder *column_name* aus der Tabelle gelöscht wird
 - Wenn sie an eine Regel gebunden ist.
 
 > [!NOTE]
-> Durch Löschen einer Spalte wird der Speicherplatz der Spalte nicht freigegeben. Unter Umständen müssen Sie den Speicherplatz einer gelöschten Spalte freigeben, wenn das Limit der Zeilengröße einer Tabelle fast erreicht oder überschritten ist. Zum Freigeben des Speicherplatzes erstellen Sie einen gruppierten Index für die Tabelle oder erstellen einen vorhandenen gruppierten Index mithilfe von [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) neu. Weitere Informationen zu den Auswirkungen gelöschter LOB-Datentypen finden Sie in [diesem CSS-Blogbeitrag](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower).
+> Durch Löschen einer Spalte wird der Speicherplatz der Spalte nicht freigegeben. Unter Umständen müssen Sie den Speicherplatz einer gelöschten Spalte freigeben, wenn das Limit der Zeilengröße einer Tabelle fast erreicht oder überschritten ist. Zum Freigeben des Speicherplatzes erstellen Sie einen gruppierten Index für die Tabelle oder erstellen einen vorhandenen gruppierten Index mithilfe von [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) neu. Weitere Informationen zu den Auswirkungen gelöschter LOB-Datentypen finden Sie in [diesem CSS-Blogbeitrag](/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower).
 
 PERIOD FOR SYSTEM_TIME  
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -696,7 +696,7 @@ Verwendet abhängig von der aktuellen Systemarbeitsauslastung die tatsächliche 
 Weitere Informationen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]
-> Parallele Indexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Weitere Informationen finden Sie unter [Editionen und unterstützte Features von SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) und unter [Editionen und unterstützte Features von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+> Parallele Indexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Weitere Informationen finden Sie unter [Editionen und unterstützte Features von SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) und unter [Editionen und unterstützte Features von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
 ONLINE **=** { ON | **OFF** } \<as applies to drop_clustered_constraint_option>  
 Gibt an, ob die zugrunde liegenden Tabellen und zugeordneten Indizes für Abfragen und Datenänderungen während des Indexvorgangs verfügbar sind. Der Standardwert ist OFF. Sie können REBUILD als ONLINE-Vorgang ausführen.
@@ -712,9 +712,9 @@ Die Tabellensperren werden für die Dauer des Indexvorgangs angewendet. Ein Offl
 Weitere Informationen finden Sie unter [Funktionsweise von Onlineindexvorgängen](../../relational-databases/indexes/how-online-index-operations-work.md).
 
 > [!NOTE]
-> Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Weitere Informationen finden Sie unter [Editionen und unterstützte Features von SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) und unter [Editionen und unterstützte Features von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+> Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Weitere Informationen finden Sie unter [Editionen und unterstützte Features von SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) und unter [Editionen und unterstützte Features von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n*] **)**  | *filegroup* |  **"** default **"** }  
+MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n* ] **)**  | *filegroup* |  **"** default **"** }  
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Gibt einen Speicherort an, an den die Datenzeilen verschoben werden sollen, die sich aktuell auf der Blattebene des gruppierten Indexes befinden. Die Tabelle wird an den neuen Speicherort verschoben. Diese Option gilt nur für Einschränkungen, durch die ein gruppierter Index erstellt wird.
@@ -772,7 +772,7 @@ Eine partitionierte Tabelle mit einem gruppierten Columnstore-Index verhält sic
 - Der eindeutige Index muss den Partitionsschlüssel beinhalten. Durch das Einbeziehen des Partitionsschlüssels in einen eindeutigen Bezeichner kann sich jedoch die Eindeutigkeit verändern.
 - Alle nicht gruppierten Indizes müssen den Partitionsschlüssel enthalten, damit Partitionen gewechselt werden können.
 
-Informationen zu **SWITCH**-Einschränkungen beim Verwenden von Replikaten finden Sie unter [Replizieren partitionierter Tabellen und Indizes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).
+Informationen zu **SWITCH** -Einschränkungen beim Verwenden von Replikaten finden Sie unter [Replizieren partitionierter Tabellen und Indizes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).
 
 Nicht gruppierte Columnstore-Indizes für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 und für Versionen von SQL-Datenbank vor V12 waren schreibgeschützt. Nicht gruppierte Columnstore-Indizes müssen im aktuellen Format erneut erstellt werden (das aktualisiert werden kann), bevor PARTITION-Vorgänge ausgeführt werden können.
 
@@ -789,7 +789,7 @@ Wenn *partition_scheme_name* angegeben wurde, gelten die Regeln für [CREATE TAB
 
 **"** default **"** gibt die FILESTREAM-Dateigruppe mit dem DEFAULT-Eigenschaftensatz an. Wenn keine FILESTREAM-Dateigruppe vorhanden ist, tritt ein Fehler auf.
 
-**"** NULL **"** gibt an, dass alle Verweise auf FILESTREAM-Dateigruppen für die Tabelle entfernt werden. Alle FILESTREAM-Spalten müssen zuerst gelöscht werden. Verwenden Sie SET FILESTREAM_ON = "**NULL**", um alle FILESTREAM-Daten zu löschen, die mit einer Tabelle verknüpft sind.
+**"** NULL **"** gibt an, dass alle Verweise auf FILESTREAM-Dateigruppen für die Tabelle entfernt werden. Alle FILESTREAM-Spalten müssen zuerst gelöscht werden. Verwenden Sie SET FILESTREAM_ON = " **NULL** ", um alle FILESTREAM-Daten zu löschen, die mit einer Tabelle verknüpft sind.
 
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ] ) ] } **)**  
  **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -797,7 +797,7 @@ SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . h
 Deaktiviert oder aktiviert die Systemversionsverwaltung einer Tabelle. Das System überprüft, ob die Einschränkungsanfoderungen des Datentyps, der NULL-Zulässigkeit und des Primärschlüssels für die Systemversionierung eingehalten wurden, um die Systemversionierung einer Tabelle zu ermöglichen. Wenn das Argument HISTORY_TABLE nicht verwendet wird, generiert das System eine neue Verlaufstabelle, die dem Schema der aktuellen Tabelle entspricht, erstellt eine Verknüpfung zwischen den beiden Tabellen und ermöglicht dem System, den Verlauf von jedem Datensatz der aktuellen Tabelle in der Verlaufstabelle aufzuzeichnen. Der Name dieser Verlaufstabelle ist dann `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Wenn Sie das Argument HISTORY_TABLE verwenden, um eine Verknüpfung mit einer vorhandenen Verlaufstabelle zu erstellen und diese zu verwenden, erstellt das System eine Verknüpfung zwischen der aktuellen Tabelle und der angegebenen Tabelle. Wenn Sie eine Verknüpfung mit einer vorhandenen Verlaufstabelle erstellen, können Sie eine Datenkonsistenzprüfung durchführen. Diese Datenkonsistenzprüfung stellt sicher, dass vorhandene Datensätze nicht überlappen. Die Datenkonsistenzprüfung ist standardmäßig aktiviert. Weitere Informationen finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS} }  
-**Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Gilt für** : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Gibt die endliche oder unendliche Aufbewahrungsdauer für Verlaufsdaten in temporalen Tabellen an. Wenn sie weggelassen wird, wird von einer unendlichen Vermerkdauer ausgegangen.
 
@@ -808,7 +808,7 @@ SET (DATA_DELETION =
                 )] }   
 **Anwendungsbereich:** *Nur* Azure SQL Edge
 
-Aktiviert die auf Aufbewahrungsrichtlinien basierende Bereinigung von alten oder veralteten Daten aus Tabellen innerhalb einer Datenbank. Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren von Datenaufbewahrung](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). Die folgenden Parameter müssen angegeben werden, damit Datenaufbewahrung aktiviert wird. 
+Aktiviert die auf Aufbewahrungsrichtlinien basierende Bereinigung von alten oder veralteten Daten aus Tabellen innerhalb einer Datenbank. Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren von Datenaufbewahrung](/azure/azure-sql-edge/data-retention-enable-disable). Die folgenden Parameter müssen angegeben werden, damit Datenaufbewahrung aktiviert wird. 
 
 - FILTER_COLUMN = { spaltenname }  
 Gibt die Spalte an, die verwendet werden soll, um zu bestimmen, ob die Zeilen in der Tabelle veraltet sind. Die folgenden Datentypen sind für die Filterspalte zulässig.
@@ -851,7 +851,7 @@ Erstellt alle Partitionen neu, wenn die Komprimierungseinstellungen für die Par
 REBUILD WITH ( \<rebuild_option> )  
 Alle Optionen gelten für eine Tabelle mit einem gruppierten Index. Wenn die Tabelle nicht über einen gruppierten Index verfügt, wird die Heapstruktur nur von einigen der Optionen beeinflusst.
 
-Wenn mit dem REBUILD-Vorgang keine bestimmte Komprimierungseinstellung angegeben wird, wird die aktuelle Komprimierungseinstellung für die Partition verwendet. Um die aktuelle Einstellung zurückzugeben, fragen Sie die **data_compression**-Spalte in der **sys.partitions**-Katalogsicht ab.
+Wenn mit dem REBUILD-Vorgang keine bestimmte Komprimierungseinstellung angegeben wird, wird die aktuelle Komprimierungseinstellung für die Partition verwendet. Um die aktuelle Einstellung zurückzugeben, fragen Sie die **data_compression** -Spalte in der **sys.partitions** -Katalogsicht ab.
 
 Die vollständigen Beschreibungen dieser Optionen zum Neuerstellen finden Sie unter [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md).
 
@@ -885,7 +885,7 @@ EIN
 Lang andauernde Tabellensperren werden nicht für die Dauer des Indexvorgangs aufrechterhalten. Erfordert eine S-Sperre für die Tabelle am Anfang der Indexneuerstellung und eine Sch-M-Sperre für die Tabelle am Ende der Onlineneuerstellung des Indexes. Obwohl beide Sperren kurze Metadatensperren sind, muss die Sch-M-Sperre auf den Abschluss aller blockierenden Transaktionen warten. Während der Wartezeit sperrt die Sch-M-Sperre alle anderen Transaktionen, die an dieser Sperre warten, wenn sie auf die gleiche Tabelle zugreifen.
 
 > [!NOTE]
-> Durch Neuerstellung von Onlineindizes können die *low_priority_lock_wait*-Optionen festgelegt werden, die weiter unten in diesem Abschnitt beschrieben werden.
+> Durch Neuerstellung von Onlineindizes können die *low_priority_lock_wait* -Optionen festgelegt werden, die weiter unten in diesem Abschnitt beschrieben werden.
 
 OFF  
 Die Tabellensperren werden für die Dauer des Indexvorgangs angewendet. Dadurch wird verhindert, dass Benutzer für die Dauer des Vorgangs auf die zugrunde liegende Tabelle zugreifen können.
@@ -980,12 +980,12 @@ WAIT_AT_LOW_PRIORITY
 
 Bei der Onlineindexneuerstellung muss auf blockierende Vorgänge für diese Tabelle gewartet werden. **WAIT_AT_LOW_PRIORITY** gibt an, dass der Onlineneuerstellungsvorgang für den Index auf Sperren mit niedriger Priorität wartet und die weitere Ausführung anderer Vorgänge ermöglicht, während der Onlineerstellungsvorgang für den Index wartet. Die Option **WAIT AT LOW PRIORITY** auszulassen, entspricht `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.
 
-MAX_DURATION = *time* [**MINUTES** ]  
+MAX_DURATION = *time* [ **MINUTES** ]  
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Die Wartezeit (ein ganzzahliger Wert in Minuten), für die **SWITCH** oder die Sperren der Onlineindexneuerstellung mit niedriger Priorität warten, wenn der DDL-Befehl ausgeführt wird. Wenn der Vorgang während des **MAX_DURATION**-Zeitraums blockiert wird, wird eine der **ABORT_AFTER_WAIT**-Aktionen ausgeführt. **MAX_DURATION** wird immer in Minuten angegeben, und das Wort **MINUTES** kann ausgelassen werden.
+Die Wartezeit (ein ganzzahliger Wert in Minuten), für die **SWITCH** oder die Sperren der Onlineindexneuerstellung mit niedriger Priorität warten, wenn der DDL-Befehl ausgeführt wird. Wenn der Vorgang während des **MAX_DURATION** -Zeitraums blockiert wird, wird eine der **ABORT_AFTER_WAIT** -Aktionen ausgeführt. **MAX_DURATION** wird immer in Minuten angegeben, und das Wort **MINUTES** kann ausgelassen werden.
 
-ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
+ABORT_AFTER_WAIT = [ **NONE** | **SELF** | **BLOCKERS** } ]  
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Keine  
@@ -997,7 +997,7 @@ SELF
 BLOCKERS  
 Alle Benutzertransaktionen, die derzeit **SWITCH** oder den DDL-Vorgang zur Neuerstellung des Onlineindexes blockieren, werden beendet, sodass der Vorgang fortgesetzt werden kann.
 
-Erfordert die **ALTER ANY CONNECTION**-Berechtigung.
+Erfordert die **ALTER ANY CONNECTION** -Berechtigung.
 
 IF EXISTS  
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1012,7 +1012,7 @@ Wenn der Prozedurcache Ausführungspläne enthält, die auf die Tabelle verweise
 
 ## <a name="changing-the-size-of-a-column"></a>Ändern der Größe einer Spalte
 
-Sie können Länge, Genauigkeit oder Dezimalstellen einer Spalte ändern, indem Sie die neue Größe für den Spaltendatentyp angeben. Verwenden Sie die ALTER COLUMN-Klausel. Wenn die Spalte Daten enthält, darf die neue Größe nicht unter der maximalen Datenmenge liegen. Außerdem kann die Spalte nicht in einem Index definiert werden, es sei denn, die Spalte ist vom Datentyp **varchar**, **nvarchar** oder **varbinary** und der Index ist nicht das Ergebnis einer PRIMARY KEY-Einschränkung. Sehen Sie sich hierzu das Beispiel in dem kurzen Abschnitt mit dem Titel [Ändern einer Spaltendefinition](#alter_column) an.
+Sie können Länge, Genauigkeit oder Dezimalstellen einer Spalte ändern, indem Sie die neue Größe für den Spaltendatentyp angeben. Verwenden Sie die ALTER COLUMN-Klausel. Wenn die Spalte Daten enthält, darf die neue Größe nicht unter der maximalen Datenmenge liegen. Außerdem kann die Spalte nicht in einem Index definiert werden, es sei denn, die Spalte ist vom Datentyp **varchar** , **nvarchar** oder **varbinary** und der Index ist nicht das Ergebnis einer PRIMARY KEY-Einschränkung. Sehen Sie sich hierzu das Beispiel in dem kurzen Abschnitt mit dem Titel [Ändern einer Spaltendefinition](#alter_column) an.
 
 ## <a name="locks-and-alter-table"></a>Sperren und ALTER TABLE
 
@@ -1024,7 +1024,7 @@ Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition ist das 
 
 Während die vorhandenen Zeilen auf den in Metadaten gespeicherten Wert verweisen, wird der Standardwert für alle neu eingefügten Zeilen in der Zeile gespeichert, ohne einen anderen Wert für die Spalte anzugeben. Der in Metadaten gespeicherte Standardwert wird in eine vorhandene Zeile verschoben, wenn die Zeile aktualisiert wird (auch wenn die tatsächliche Spalte nicht in der UPDATE-Anweisung angegeben wird) oder wenn die Tabelle oder der gruppierte Index neu erstellt wird.
 
-Spalten vom Typ **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** oder CLR UDTS können nicht in einem Onlinevorgang hinzugefügt werden. Eine Spalte kann nicht online hinzugefügt werden, wenn dies dazu führt, dass die maximal mögliche Zeilengröße den Grenzwert von 8.060 Byte überschreitet. Die Spalte wird in diesem Fall als Offlinevorgang hinzugefügt.
+Spalten vom Typ **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** , **text** , **ntext** , **image** , **hierarchyid** , **geometry** , **geography** oder CLR UDTS können nicht in einem Onlinevorgang hinzugefügt werden. Eine Spalte kann nicht online hinzugefügt werden, wenn dies dazu führt, dass die maximal mögliche Zeilengröße den Grenzwert von 8.060 Byte überschreitet. Die Spalte wird in diesem Fall als Offlinevorgang hinzugefügt.
 
 ## <a name="parallel-plan-execution"></a>Ausführung paralleler Pläne
 
@@ -1088,7 +1088,7 @@ Wenn NTEXT-Spalten gelöscht werden, wird das Cleanup der gelöschten Daten als 
 
 ## <a name="online-index-rebuild"></a>Onlineneuerstellung von Indizes
 
-Um die DDL-Anweisung für eine Onlineindexneuerstellung auszuführen, müssen alle aktiven blockierenden Transaktionen, die für eine bestimmte Tabelle ausgeführt werden, abgeschlossen sein. Wenn die Onlineindexneuerstellung gestartet wird, werden alle neuen Transaktionen blockiert, die zur Ausführung in dieser Tabelle bereit sind. Obwohl die Sperre für die Onlineindexneuerstellung nur kurz dauert, kann das Warten auf den Abschluss aller noch offenen Transaktionen und das Blockieren des Starts aller neuen Transaktionen für eine bestimmte Tabelle den Durchsatz beeinträchtigen. Dies kann zur Verlangsamung oder Ausfall einer Arbeitsauslastung führen und den Zugriff auf die zugrunde liegende Tabelle deutlich einschränken. Mit der **WAIT_AT_LOW_PRIORITY**-Option können Datenbankadministratoren die S-Sperre sowie Sch-M-Sperren, die für die Onlineneuerstellung von Indizes erforderlich sind, verwalten und eine von drei Optionen auswählen. In allen drei Fällen gilt: Sind während der Wartezeit (`(MAX_DURATION =n [minutes])`) keine blockierenden Aktivitäten vorhanden, wird die Onlineindexneuerstellung ohne Wartezeit sofort ausgeführt, und die DDL-Anweisung wird abgeschlossen.
+Um die DDL-Anweisung für eine Onlineindexneuerstellung auszuführen, müssen alle aktiven blockierenden Transaktionen, die für eine bestimmte Tabelle ausgeführt werden, abgeschlossen sein. Wenn die Onlineindexneuerstellung gestartet wird, werden alle neuen Transaktionen blockiert, die zur Ausführung in dieser Tabelle bereit sind. Obwohl die Sperre für die Onlineindexneuerstellung nur kurz dauert, kann das Warten auf den Abschluss aller noch offenen Transaktionen und das Blockieren des Starts aller neuen Transaktionen für eine bestimmte Tabelle den Durchsatz beeinträchtigen. Dies kann zur Verlangsamung oder Ausfall einer Arbeitsauslastung führen und den Zugriff auf die zugrunde liegende Tabelle deutlich einschränken. Mit der **WAIT_AT_LOW_PRIORITY** -Option können Datenbankadministratoren die S-Sperre sowie Sch-M-Sperren, die für die Onlineneuerstellung von Indizes erforderlich sind, verwalten und eine von drei Optionen auswählen. In allen drei Fällen gilt: Sind während der Wartezeit (`(MAX_DURATION =n [minutes])`) keine blockierenden Aktivitäten vorhanden, wird die Onlineindexneuerstellung ohne Wartezeit sofort ausgeführt, und die DDL-Anweisung wird abgeschlossen.
 
 ## <a name="compatibility-support"></a>Kompatibilitätsunterstützung
 
@@ -1110,7 +1110,7 @@ ALTER TABLE-Berechtigungen gelten für beide an einer ALTER TABLE SWITCH-Anweisu
 
 Falls Sie Spalten in der ALTER TABLE-Anweisung mit einem benutzerdefinierten CLR-Typ (Common Language Runtime) oder Aliasdatentyp definieren, ist die REFERENCES-Berechtigung für den Typ erforderlich.
 
-Für das Hinzufügen oder Ändern einer Spalte, durch die die Zeilen der Tabelle aktualisiert werden, ist die **UPDATE**-Berechtigung für die Tabelle erforderlich. Dies gilt beispielsweise für das Hinzufügen einer **NOT NULL**-Spalte mit einem Standardwert oder für das Hinzufügen einer Identitätsspalte zu einer nicht leeren Tabelle.
+Für das Hinzufügen oder Ändern einer Spalte, durch die die Zeilen der Tabelle aktualisiert werden, ist die **UPDATE** -Berechtigung für die Tabelle erforderlich. Dies gilt beispielsweise für das Hinzufügen einer **NOT NULL** -Spalte mit einem Standardwert oder für das Hinzufügen einer Identitätsspalte zu einer nicht leeren Tabelle.
 
 ## <a name="examples"></a><a name="Example_Top"></a> Beispiele
 
@@ -1435,7 +1435,7 @@ GO
 DROP TABLE Person.ContactBackup ;
 ```
 
-![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird")[Beispiele](#Example_Top)
+![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird")[Beispiele](#Example_Top)
 
 ### <a name="altering-a-column-definition"></a><a name="alter_column"></a> Ändern einer Spaltendefinition
 
@@ -1456,7 +1456,7 @@ GO
 
 #### <a name="b-changing-the-size-of-a-column"></a>B. Ändern der Größe einer Spalte
 
-Im folgenden Beispiel werden die Größe einer **varchar**-Spalte sowie die Genauigkeit und die Dezimalstellen einer **decimal**-Spalte geändert. Da die Spalten Daten enthalten, kann die Spaltengröße nur erhöht werden. Beachten Sie auch, dass `col_a` in einem eindeutigen Index definiert ist. Die Größe von `col_a` kann erhöht werden, da die Spalte vom Datentyp **varchar** und der Index nicht das Ergebnis einer PRIMARY KEY-Einschränkung ist.
+Im folgenden Beispiel werden die Größe einer **varchar** -Spalte sowie die Genauigkeit und die Dezimalstellen einer **decimal** -Spalte geändert. Da die Spalten Daten enthalten, kann die Spaltengröße nur erhöht werden. Beachten Sie auch, dass `col_a` in einem eindeutigen Index definiert ist. Die Größe von `col_a` kann erhöht werden, da die Spalte vom Datentyp **varchar** und der Index nicht das Ergebnis einer PRIMARY KEY-Einschränkung ist.
 
 ```sql
 -- Create a two-column table with a unique index on the varchar column.
@@ -1628,7 +1628,7 @@ ENABLE CHANGE_TRACKING ;
 
 Im folgenden Beispiel werden die Änderungsnachverfolgung sowie die Verfolgung von Spalten aktiviert, die während einer Änderung aktualisiert werden.
 
-**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
+**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
 
 ```sql
 USE AdventureWorks;

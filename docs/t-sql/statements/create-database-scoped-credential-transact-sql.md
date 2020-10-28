@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 560c5c4c3888c36ef77030db2151f09a47b1dcc0
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cfca6f2f7e40593e4480c90ecf543eb39fc810be
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834214"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300936"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* Gibt den Namen für die datenbankweit gültigen Anmeldeinformationen an, die erstellt werden sollen. *credential_name* darf nicht mit dem Nummernzeichen (#) beginnen. Systemanmeldeinformationen beginnen mit zwei Nummernzeichen (##).
 
-IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Der Identitätsname muss `SHARED ACCESS SIGNATURE` entsprechen, um eine Datei aus Azure Blob Storage mithilfe eines freigegebenen Schlüssels zu importieren. Jeder gültige Wert kann für die Identität verwendet werden, um Daten in SQL Data Warehouse zu laden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Verwenden Sie nicht den Domänennamen im IDENTITY-Argument, wenn Sie Kerberos (Windows Active Directory oder MIT KDC) verwenden. Sie sollten lediglich den Kontonamen verwenden.
+IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Der Identitätsname muss `SHARED ACCESS SIGNATURE` entsprechen, um eine Datei aus Azure Blob Storage mithilfe eines freigegebenen Schlüssels zu importieren. Jeder gültige Wert kann für die Identität verwendet werden, um Daten in SQL Data Warehouse zu laden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). Verwenden Sie nicht den Domänennamen im IDENTITY-Argument, wenn Sie Kerberos (Windows Active Directory oder MIT KDC) verwenden. Sie sollten lediglich den Kontonamen verwenden.
 
 > [!IMPORTANT]
 > Die SQL, Oracle, Teradata und MongoDB ODBC-Connectors für PolyBase unterstützen nur die einfache Authentifizierung, nicht die Kerberos-Authentifizierung.
@@ -85,13 +85,13 @@ Im Folgenden werden einige Anwendungen datenbankweit gültiger Anmeldeinformatio
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwendet datenbankweit gültige Anmeldeinformationen, um Dateien für erweiterte Ereignisse in den Blobspeicher von Azure Blob Storage zu schreiben.
 
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwendet datenbankweit gültige Anmeldeinformationen für Pools für elastische Datenbanken. Weitere Informationen finden Sie unter [Tame explosive growth with elastic databases (Verwenden von elastischen Datenbanken zum Abfangen von Lastspitzen)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/).
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwendet datenbankweit gültige Anmeldeinformationen für Pools für elastische Datenbanken. Weitere Informationen finden Sie unter [Tame explosive growth with elastic databases (Verwenden von elastischen Datenbanken zum Abfangen von Lastspitzen)](/azure/azure-sql/database/elastic-pool-overview).
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) verwenden datenbankweit gültige Anmeldeinformationen, um auf Daten aus dem Blobspeicher von Azure Blob Storage zuzugreifen. Weitere Informationen finden Sie unter [Beispiele für Massenzugriff auf Daten in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die **CONTROL**-Berechtigung für die Datenbank.
+Erfordert die **CONTROL** -Berechtigung für die Datenbank.
 
 ## <a name="examples"></a>Beispiele
 
@@ -127,7 +127,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 Im folgenden Beispiel werden datenbankweit gültige Anmeldeinformationen erstellt, die zum Erstellen einer [externen Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md) verwendet werden können, die wiederum von PolyBase in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] verwendet werden kann.
 
 Azure Data Lake Store verwendet eine Azure Active Directory-Anwendung für Dienst-zu-Dienst-Authentifizierungen.
-Bevor Sie versuchen, datenbankweit gültige Anmeldeinformationen zu erstellen, ist es erforderlich, dass Sie [eine AAD-Anwendung](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) erstellen und sich die Werte für „client_id“, „OAuth_2.0_Token_EndPoint“ und „key“ notieren.
+Bevor Sie versuchen, datenbankweit gültige Anmeldeinformationen zu erstellen, ist es erforderlich, dass Sie [eine AAD-Anwendung](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) erstellen und sich die Werte für „client_id“, „OAuth_2.0_Token_EndPoint“ und „key“ notieren.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
@@ -148,4 +148,4 @@ WITH
 - [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)
 - [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)
 - [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)
-- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
+- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)

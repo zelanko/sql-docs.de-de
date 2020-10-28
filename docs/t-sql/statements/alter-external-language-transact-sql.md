@@ -11,12 +11,12 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28972df677bc52ed9128331bd279a1ee5802f8e7
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 006a0577292ba825a3d28cd63cc573ac35cc5771
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688404"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300426"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -115,7 +115,7 @@ Derzeit werden **PARAMETERS** und **ENVIRONMENT_VARIABLES** nicht unterstützt.
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die `ALTER ANY EXTERNAL LANGUAGE`-Berechtigung. Standardmäßig verfügt jeder Benutzer mit **dbo**, der Mitglied der Rolle **db_owner** ist, über die Berechtigung zum Ändern einer externen Sprache. Allen anderen Benutzern müssen Sie die Berechtigung mithilfe einer [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql)-Anweisung explizit gewähren, in der Sie ALTER ANY EXTERNAL LANGUAGE als Berechtigung angeben.
+Erfordert die `ALTER ANY EXTERNAL LANGUAGE`-Berechtigung. Standardmäßig verfügt jeder Benutzer mit **dbo** , der Mitglied der Rolle **db_owner** ist, über die Berechtigung zum Ändern einer externen Sprache. Allen anderen Benutzern müssen Sie die Berechtigung mithilfe einer [GRANT](./grant-database-permissions-transact-sql.md)-Anweisung explizit gewähren, in der Sie ALTER ANY EXTERNAL LANGUAGE als Berechtigung angeben.
 
 ## <a name="examples"></a>Beispiele
 
@@ -134,4 +134,4 @@ GO
 [CREATE EXTERNAL LANGUAGE (Transact-SQL)](create-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  
 [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)  
+[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d33d1b9e1369128bc3eeae3df1ca48c4dbbb69e8
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227084"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300840"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,10 +59,10 @@ SET ANSI_WARNINGS ON
   
 -   Bei ON wird eine Warnmeldung generiert, wenn NULL-Werte in Aggregatfunktionen, wie z. B. SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP oder COUNT, auftreten. Bei OFF wird keine Warnung ausgegeben.  
   
--   Bei ON bewirken Fehler aufgrund einer Division durch Null und arithmetische Überlauffehler, dass für die Anweisung ein Rollback ausgeführt und eine Fehlermeldung generiert wird. Bei OFF bewirken Fehler aufgrund einer Division durch Null und arithmetische Überlauffehler, dass NULL-Werte zurückgegeben werden. Das Verhalten, bei dem Fehler aufgrund einer Division durch 0 (null) oder arithmetischer Überlauffehler bewirken, dass NULL-Werte zurückgegeben werden, tritt auf, wenn ein INSERT- oder UPDATE-Vorgang in einer Spalte des Typs **character**, Unicode oder **binary** versucht wird und die Länge eines der neuen Werte die maximale Spaltengröße überschreitet. Wenn SET ANSI_WARNINGS auf ON festgelegt ist, wird der INSERT- oder UPDATE-Vorgang gemäß ISO-Standard abgebrochen. Nachfolgende Leerzeichen werden in Zeichenspalten ignoriert, und nachfolgende Nullen werden in Binärspalten ignoriert. Bei OFF werden Daten auf die Spaltengröße abgeschnitten, und die Anweisung wird erfolgreich ausgeführt.  
+-   Bei ON bewirken Fehler aufgrund einer Division durch Null und arithmetische Überlauffehler, dass für die Anweisung ein Rollback ausgeführt und eine Fehlermeldung generiert wird. Bei OFF bewirken Fehler aufgrund einer Division durch Null und arithmetische Überlauffehler, dass NULL-Werte zurückgegeben werden. Das Verhalten, bei dem Fehler aufgrund einer Division durch 0 (null) oder arithmetischer Überlauffehler bewirken, dass NULL-Werte zurückgegeben werden, tritt auf, wenn ein INSERT- oder UPDATE-Vorgang in einer Spalte des Typs **character** , Unicode oder **binary** versucht wird und die Länge eines der neuen Werte die maximale Spaltengröße überschreitet. Wenn SET ANSI_WARNINGS auf ON festgelegt ist, wird der INSERT- oder UPDATE-Vorgang gemäß ISO-Standard abgebrochen. Nachfolgende Leerzeichen werden in Zeichenspalten ignoriert, und nachfolgende Nullen werden in Binärspalten ignoriert. Bei OFF werden Daten auf die Spaltengröße abgeschnitten, und die Anweisung wird erfolgreich ausgeführt.  
   
 > [!NOTE]  
-> Wenn Abschneidevorgänge bei beliebigen Konvertierungen in oder von **binary**- oder **varbinary**-Daten auftreten, werden keine Warnungen oder Fehler ausgelöst, unabhängig von den SET-Optionen.  
+> Wenn Abschneidevorgänge bei beliebigen Konvertierungen in oder von **binary** - oder **varbinary** -Daten auftreten, werden keine Warnungen oder Fehler ausgelöst, unabhängig von den SET-Optionen.  
   
 > [!NOTE]  
 > ANSI_WARNINGS wird beim Übergeben von Parametern in einer gespeicherten Prozedur oder einer benutzerdefinierten Funktion oder beim Deklarieren und Festlegen von Variablen in einer Batchanweisung nicht berücksichtigt. Wird beispielsweise eine Variable als **char(3)** definiert und dann auf einen Wert festgelegt, der länger als drei Zeichen ist, werden die Daten auf die definierte Größe abgeschnitten, und die Anweisung INSERT oder UPDATE wird erfolgreich ausgeführt.  
@@ -76,7 +76,7 @@ ANSI_WARNINGS muss beim Erstellen oder Bearbeiten von Indizes für berechnete Sp
 > [!IMPORTANT]
 > ANSI_WARNINGS sollte zum Ausführen von verteilten Abfragen auf ON festgelegt sein.  
   
-Clients wie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der Microsoft JDBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen automatisch ANSI_WARNINGS mit einem Verbindungsflag auf EIN fest. Diese Einstellung kann in ODBC-Datenquellen und ODBC-Verbindungsattributen konfiguriert werden, die in der Anwendung festgelegt werden, bevor die Verbindung hergestellt wird. Der Standardwert für SET ANSI_WARNINGS für Verbindungen von DB-Library-Anwendungen ist OFF. Weitere Informationen finden Sie unter [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) in den TDS-Protokollspezifikationen (Tabular Data Stream). 
+Clients wie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der Microsoft JDBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen automatisch ANSI_WARNINGS mit einem Verbindungsflag auf EIN fest. Diese Einstellung kann in ODBC-Datenquellen und ODBC-Verbindungsattributen konfiguriert werden, die in der Anwendung festgelegt werden, bevor die Verbindung hergestellt wird. Der Standardwert für SET ANSI_WARNINGS für Verbindungen von DB-Library-Anwendungen ist OFF. Weitere Informationen finden Sie unter [LOGIN7](/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) in den TDS-Protokollspezifikationen (Tabular Data Stream). 
 
 Ist SET ANSI_DEFAULTS auf ON festgelegt, so ist ANSI_WARNINGS aktiviert.  
   
@@ -188,5 +188,4 @@ DROP TABLE T1;
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
-  
   

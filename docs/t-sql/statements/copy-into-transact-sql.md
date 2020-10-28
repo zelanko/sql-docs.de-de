@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: 0951081be190fff9c2d7f88d28f88b14f793eb43
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624817"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300287"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -43,9 +43,9 @@ In diesem Artikel erfahren Sie, wie Sie die COPY-Anweisung in [!INCLUDE[ssSDW](.
 
 In den folgenden Dokumentationen finden Sie umfassende Beispiele und Schnellstarts, die die COPY-Anweisung verwenden:
 
-- [Schnellstart: Massenladen von Daten mit der COPY-Anweisung](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
-- [Schnellstart: Beispiele zur Verwendung der COPY-Anweisung und der unterstützten Authentifizierungsmethoden](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [Schnellstart: Erstellen der COPY-Anweisung mithilfe der umfassenden Benutzeroberfläche von Synapse Studio (Vorschau für Arbeitsbereiche)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [Schnellstart: Massenladen von Daten mit der COPY-Anweisung](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [Schnellstart: Beispiele zur Verwendung der COPY-Anweisung und der unterstützten Authentifizierungsmethoden](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [Schnellstart: Erstellen der COPY-Anweisung mithilfe der umfassenden Benutzeroberfläche von Synapse Studio (Vorschau für Arbeitsbereiche)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## <a name="syntax"></a>Syntax  
 
@@ -85,9 +85,9 @@ Eine optionale Liste mit einer oder mehreren Spalten, mit denen Quelldatenfelder
 
 [(Spaltenname [Standardwert] [Feldnummer] [,...n])]
 
-- *Spaltenname*: Der Name der Spalte in der Zieltabelle.
-- *Standardwert*: Der Standardwert, durch den alle NULL-Werte in der Eingabedatei ersetzt werden. Der Standardwert gilt für alle Dateiformate. Beim COPY-Vorgang wird versucht, NULL aus der Eingabedatei zu laden, wenn eine Spalte aus der Spaltenliste ausgelassen wird oder ein leeres Eingabedateifeld vorhanden ist.
-- *Feldnummer*: Die Feldnummer der Eingabedatei, die dem Namen der Zielspalte zugeordnet wird.
+- *Spaltenname* : Der Name der Spalte in der Zieltabelle.
+- *Standardwert* : Der Standardwert, durch den alle NULL-Werte in der Eingabedatei ersetzt werden. Der Standardwert gilt für alle Dateiformate. Beim COPY-Vorgang wird versucht, NULL aus der Eingabedatei zu laden, wenn eine Spalte aus der Spaltenliste ausgelassen wird oder ein leeres Eingabedateifeld vorhanden ist.
+- *Feldnummer* : Die Feldnummer der Eingabedatei, die dem Namen der Zielspalte zugeordnet wird.
 - Die Feldindizierung beginnt bei 1.
 
 Wenn keine Spaltenliste angegeben wird, ordnet COPY die Spalten auf Grundlage der Quell- und Zielordnung zu: Eingabefeld 1 wird Zielspalte 1 zugeordnet, Feld 2 wird Spalte 2 zugeordnet usw.
@@ -101,11 +101,11 @@ Speicherorte, wo die Dateien bereitgestellt werden, die die Daten enthalten. Der
 > [!NOTE]  
 > Der .blob-Endpunkt ist auch für ADLS Gen2 verfügbar und führt derzeit zur besten Leistung. Verwenden Sie den .blob-Endpunkt, wenn .dfs für Ihre Authentifizierungsmethode nicht erforderlich ist.
 
-- *Konto*: Der Speicherkontoname
+- *Konto* : Der Speicherkontoname
 
-- *Container*: Der Blobcontainername
+- *Container* : Der Blobcontainername
 
-- *Pfad*: Der Ordner- oder Dateipfad für die Daten. Der Speicherort beginnt im Container. Wenn ein Ordner angegeben wird, ruft COPY alle Dateien aus dem Ordner und seinen Unterordnern ab. COPY ignoriert ausgeblendete Ordner, und es werden keine Dateien zurückgegeben, die mit einem Unterstrich (_) oder einem Punkt (.) beginnen, es sei denn, sie werden explizit im Pfad angegeben. Dieses Verhalten gilt auch dann, wenn ein Pfad mit einem Platzhalter angegeben wird.
+- *Pfad* : Der Ordner- oder Dateipfad für die Daten. Der Speicherort beginnt im Container. Wenn ein Ordner angegeben wird, ruft COPY alle Dateien aus dem Ordner und seinen Unterordnern ab. COPY ignoriert ausgeblendete Ordner, und es werden keine Dateien zurückgegeben, die mit einem Unterstrich (_) oder einem Punkt (.) beginnen, es sei denn, sie werden explizit im Pfad angegeben. Dieses Verhalten gilt auch dann, wenn ein Pfad mit einem Platzhalter angegeben wird.
 
 Platzhalter können im Pfad enthalten sein, wobei gilt:
 
@@ -141,9 +141,9 @@ Es können nur mehrere Dateispeicherorte aus demselben Speicherkonto und Contain
 |  **Azure Blob Storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1: Der .blob-Endpunkt ( **.blob**.core.windows.net) unter Ihrem externen Speicherortpfad ist für diese Authentifizierungsmethode erforderlich.
+1: Der .blob-Endpunkt ( **.blob** .core.windows.net) unter Ihrem externen Speicherortpfad ist für diese Authentifizierungsmethode erforderlich.
 
-2: Der .dfs-Endpunkt ( **.dfs**.core.windows.net) unter Ihrem externen Speicherortpfad ist für diese Authentifizierungsmethode erforderlich.
+2: Der .dfs-Endpunkt ( **.dfs** .core.windows.net) unter Ihrem externen Speicherortpfad ist für diese Authentifizierungsmethode erforderlich.
 
 
 > [!NOTE]  
@@ -154,7 +154,7 @@ Es können nur mehrere Dateispeicherorte aus demselben Speicherkonto und Contain
 - Authentifizieren mit Shared Access Signatures (SAS)
   
   - *IDENTITY: Eine Konstante mit dem Wert von „Shared Access Signature“*
-  - *SECRET: Die* [*Shared Access Signature (SAS)* ](/azure/storage/common/storage-sas-overview) *bietet delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
+  - *SECRET: Die* [*Shared Access Signature (SAS)*](/azure/storage/common/storage-sas-overview) *bietet delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
   -  Erforderliche Mindestberechtigungen: READ und LIST
   
 - Authentifizieren mit [*Dienstprinzipalen*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -179,7 +179,7 @@ Es können nur mehrere Dateispeicherorte aus demselben Speicherkonto und Contain
   - Mindestens erforderliche RBAC-Rollen: Mitwirkender von Speicherblobdaten oder Besitzer von Speicherblobdaten für den AAD-Benutzer
 
 *ERRORFILE = Verzeichnisspeicherort*</br>
-*ERRORFILE* gilt nur für CSV. Gibt in der COPY-Anweisung das Verzeichnis an, in das die abgelehnten Zeilen und die entsprechende Fehlerdatei geschrieben werden sollen. Der vollständige Pfad vom Speicherkonto oder der relative Pfad zum Container kann angegeben werden. Ist der angegebene Pfad nicht vorhanden, wird ein Pfad für Sie erstellt. Es wird ein untergeordnetes Verzeichnis mit dem Namen „_rejectedrows“ erstellt. Mit dem „_ “-Zeichen wird sichergestellt, dass das Verzeichnis für andere Datenverarbeitungsvorgänge übergangen wird, es sei denn, es ist explizit im LOCATION-Parameter angegeben. 
+*ERRORFILE* gilt nur für CSV. Gibt in der COPY-Anweisung das Verzeichnis an, in das die abgelehnten Zeilen und die entsprechende Fehlerdatei geschrieben werden sollen. Der vollständige Pfad vom Speicherkonto oder der relative Pfad zum Container kann angegeben werden. Ist der angegebene Pfad nicht vorhanden, wird ein Pfad für Sie erstellt. Es wird ein untergeordnetes Verzeichnis mit dem Namen „ _rejectedrows“ erstellt. Mit dem „_ “-Zeichen wird sichergestellt, dass das Verzeichnis für andere Datenverarbeitungsvorgänge übergangen wird, es sei denn, es ist explizit im LOCATION-Parameter angegeben. 
 
 In diesem Verzeichnis befindet sich ein Ordner, der ausgehend von der Zeit der Lastübermittlung im Format „JahrMonatTag-StundeMinuteSekunde“ erstellt wurde (z.B. 20180330-173205). In diesen Ordner werden zwei Dateitypen geschrieben: die Ursachendatei (Fehler) und die Datendatei (Zeile), denen jeweils queryID, distributionID und eine Datei-GUID vorangestellt werden. Da die Daten und die Ursache in getrennten Dateien gespeichert sind, haben die zugehörigen Dateien ein entsprechendes Präfix.
 
@@ -193,7 +193,7 @@ Wenn ERRORFILE den vollständigen Pfad des Speicherkontos definiert hat, wird ER
   
 - Authentifizieren mit Shared Access Signatures (SAS)
   - *IDENTITY: Eine Konstante mit dem Wert von „Shared Access Signature“*
-  - *SECRET: Die* [*Shared Access Signature (SAS)* ](/azure/storage/common/storage-sas-overview) *bietet delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
+  - *SECRET: Die* [*Shared Access Signature (SAS)*](/azure/storage/common/storage-sas-overview) *bietet delegierten Zugriff auf Ressourcen in Ihrem Speicherkonto.*
   - Erforderliche Mindestberechtigungen: READ, LIST, WRITE, CREATE, DELETE
   
 - Authentifizieren mit [*Dienstprinzipalen*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
