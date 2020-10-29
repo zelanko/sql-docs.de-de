@@ -1,322 +1,74 @@
 ---
-title: Clusterstatus anzeigen
-titleSuffix: SQL Server big data clusters
-description: In diesem Artikel wird erläutert, wie Sie den Status eines Big-Data-Clusters mithilfe von Azure Data Studio, Notebooks und „azdata“-Befehlen anzeigen.
-author: yualan
-ms.author: alayu
+title: Verwaltungsressourcen für Big Data-Cluster (BDC)
+titleSuffix: SQL Server
+description: In diesem Artikel wird erläutert, wie Sie den Status eines Big-Data-Clusters mithilfe von Azure Data Studio, Notebooks und der azdata-Befehlen (Azure Data CLI) anzeigen.
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 10/20/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7f5b3b210cb4e20bdf9585a7efdfd0f10aa19f29
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5d469d1b8d89b07748485c9df3f7f7905af52099
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725785"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358178"
 ---
-# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Anzeigen des Status eines Big-Data-Clusters 
+# <a name="administration-resources-for-big-data-clusters-bdc"></a>Verwaltungsressourcen für Big Data-Cluster (BDC) 
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-In diesem Artikel wird beschrieben, wie Sie auf die Dienstendpunkte zugreifen und den Status von Big Data-Clusterkomponenten für SQL Server anzeigen. Sie können sowohl Azure Data Studio als auch **azdata** verwenden. Beide Verfahren werden in diesem Artikel erläutert.
+In diesem Artikel ist beschrieben, wie ein SQL Server-Big Data-Cluster von außen verwaltet wird.
 
-## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Verwenden von Azure Data Studio
+## <a name="know-your-architecture"></a>Wissen, wie die Architektur aussieht
 
-Nachdem Sie den neuesten **Insider-Build** von [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) heruntergeladen haben, können Sie mithilfe des Dashboards des Big-Data-Clusters für SQL Server Dienstendpunkte sowie den Status eines Big-Data-Clusters anzeigen. Einige der unten aufgeführten Features sind erstmals im Insider-Build von Azure Data Studio verfügbar.
+Ab SQL Server 2019 (15.x) können Sie SQL Server-Big Data-Cluster verwenden, um skalierbare Cluster von SQL Server-, Spark- und HDFS-Containern bereitzustellen, die auf Kubernetes ausgeführt werden. In den folgenden Artikeln erhalten Sie eine Übersicht über Big Data-Cluster:
+- [Was sind Big Data-Cluster von SQL Server?](big-data-cluster-overview.md)
 
-1. Stellen Sie zunächst eine Verbindung mit Ihrem Big-Data-Cluster in Azure Data Studio her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem Big-Data-Cluster für SQL Server mithilfe von Azure Data Studio](connect-to-big-data-cluster.md).
+SQL Server-Big Data-Cluster stellen eine kohärente und konsistente Autorisierung und Authentifizierung bereit. In den folgenden Artikeln erhalten Sie eine Übersicht über die Big Data-Cluster-Sicherheit:
+- [Sicherheitskonzepte für SQL Server-Big Data-Cluster](concept-security.md)
 
-1. Klicken Sie mit der rechten Maustaste auf den Endpunkt des Big-Data-Clusters, und klicken Sie auf **Verwalten**.
+## <a name="manage-and-operate-with-tools"></a>Verwalten und Steuern mit Tools
 
-   ![Rechtsklick auf „Verwalten“](media/view-cluster-status/right-click-manage.png)
+In den folgenden Artikeln ist beschrieben, wie Big Data-Cluster auf folgende Arten verwaltet und gesteuert werden: 
 
-1. Klicken Sie auf die Registerkarte **SQL Server Big Data Cluster** (Big-Data-Cluster für SQL Server), um auf das Dashboard des Big-Data-Clusters zuzugreifen.
+- [Herstellen einer Verbindung mit einem Big-Data-Cluster für SQL Server mit Azure Data Studio](connect-to-big-data-cluster.md)
+- [Verwalten von Big Data-Clustern mit dem Controllerdashboard von SQL Server](manage-with-controller-dashboard.md)
+- [Verwalten von SQL Server-Big Data-Clustern mit Azure Data Studio-Notebooks](notebooks-manage-bdc.md)
+- [Verwalten von Big Data-Clustern (BDC) mit Notebooks](cluster-manage-notebooks.md)
+- [Ausführen eines Beispielnotebooks mithilfe von Spark](notebooks-tutorial-spark.md)
 
-   ![Dashboard des Big-Data-Clusters](media/view-cluster-status/bdc-dashboard.png)
+## <a name="monitor-with-tools"></a>Überwachen mit Tools
 
-### <a name="service-endpoints"></a>Dienstendpunkte
+In den folgenden Artikeln ist beschrieben, wie Sie Big Data-Cluster auf folgende Weisen überwachen: 
 
-Es ist wichtig, einfach auf die verschiedenen Dienste innerhalb eines Big-Data-Clusters zugreifen zu können. Das Dashboard des Big-Data-Clusters stellt eine Dienstendpunkttabelle bereit, in der die Dienstendpunkte angezeigt werden und aus der diese kopiert werden können.
+- [Überwachen des Clusterstatus mit Azure Data Studio](cluster-monitor-ads.md)
+- [Überwachen eines Clusters mit azdata und kubectl](cluster-monitor-cmdlet.md)
+- [Überwachen eines Clusters mit azdata und einem Grafana-Dashboard](cluster-monitor-grafana.md)
+- [Überwachen eines Clusters mit Notebooks](cluster-monitor-notebooks.md)
 
-![Dienstendpunkte](media/view-cluster-status/service-endpoints.png)
+## <a name="monitor-and-inspect-logs-with-notebooks"></a>Überwachen und Untersuchen von Protokollen mit Notebooks
 
-Diese Dienste listen die Endpunkte auf, die Sie kopieren und einfügen können, wenn Sie den Endpunkt für die Verbindung mit diesen Diensten benötigen. Sie können beispielsweise auf das Kopiersymbol rechts neben dem Endpunkt klicken und diesen dann in ein Textfenster einfügen, in dem er angefordert wird. Der Endpunkt des Clusterverwaltungsdiensts wird zum Ausführen des [Notebooks für den Clusterstatus](#notebook) benötigt.
+In den folgenden Artikeln sind viele der Jupyter-Notebooks aufgelistet, die in Azure Data Studio verfügbar sind.
 
-### <a name="dashboards"></a>Dashboards
+- [Überwachen eines Clusters mit Notebooks](cluster-monitor-notebooks.md)
+- [Sammeln und Analysieren von Protokollen im Cluster mit Notebooks](cluster-logging-notebooks.md)
 
-In der Dienstendpunkttabelle werden auch mehrere Dashboards für die Überwachung offengelegt:
+## <a name="big-data-clusters-troubleshooting-resources"></a>Problembehandlungsressourcen für Big Data-Cluster
 
-- Metriken (Grafana)
-- Protokolle (Kibana)
-- Spark-Auftragsüberwachung
-- Spark-Ressourcenverwaltung
+In den folgenden Artikeln ist beschrieben, wie Sie Probleme mit Big Data-Clustern beheben:
 
-Sie können direkt auf diese Links klicken. Sie müssen sich beim Zugriff auf diese Dashboards authentifizieren. Geben Sie für die Dashboards „Metriken“ und „Protokolle“ die Controller-Administratoranmeldeinformationen an, die Sie zum Zeitpunkt der Bereitstellung mithilfe der Umgebungsvariablen **AZDATA_USERNAME** und **AZDATA_PASSWORD** festlegen. Spark-Dashboards verwenden Gateway-Anmeldeinformationen (Knox): entweder eine AD-Identität in einem Cluster, der mit AD integriert ist oder **AZDATA_USERNAME**, und **AZDATA_PASSWORD**, wenn die Standardauthentifizierung in Ihrem Cluster verwendet wird.
+- [Problembehandlung für Big Data-Cluster für SQL Server auf Kubernetes](cluster-troubleshooting-commands.md) 
+- [Problembehandlung für ein PySpark-Notebook](troubleshoot-pyspark-notebook.md)
+- [Problembehandlung für Big Data-Cluster (BDC) mit Notebooks](cluster-troubleshooter-notebooks.md)
+- [Wiederherstellen von HDFS-Berechtigungen](troubleshoot-hdfs-restore-admin.md)
 
-[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
-
-### <a name="cluster-status-notebook"></a><a id="notebook"></a> Notebook für den Clusterstatus
-
-1. Sie können auch den Clusterstatus des Big-Data-Clusters anzeigen, indem Sie das Notebook für den Clusterstatus starten. Klicken Sie auf die Aufgabe **Clusterstatus**, um das Notebook zu starten.
-
-    ![Starten](media/view-cluster-status/cluster-status-launch.png)
-
-2. Bevor Sie beginnen, benötigen Sie folgende Elemente:
-
-    - Name des Big-Data-Clusters
-    - Benutzername des Controllers
-    - Kennwort des Controllers
-    - Endpunkte des Controllers
-
-    Der Standardname des Big-Data-Clusters ist **mssql-cluster**, sofern Sie diesen nicht im Laufe der Bereitstellung angepasst haben. Sie finden den Endpunkt des Controllers in der Dienstendpunkttabelle im Dashboard des Big-Data-Clusters. Der Endpunkt wird als **Clusterverwaltungsdienst** aufgeführt. Wenn Sie die Anmeldeinformationen nicht kennen, fragen Sie den Administrator, der Ihren Cluster bereitgestellt hat.
-
-3. Klicken Sie in der oberen Symbolleiste auf **Run Cells** (Zellen ausführen).
-
-4. Befolgen Sie die Aufforderung zur Eingabe Ihrer Anmeldeinformationen. Nachdem Sie die Anmeldeinformationen für den Namen des Big-Data-Clusters, den Benutzernamen sowie das Kennwort des Controllers eingegeben haben, drücken Sie die EINGABETASTE.
-
-    > [!Note]
-    > Wenn Sie keine Konfigurationsdatei für Ihre Big Data eingerichtet haben, werden Sie nach dem Endpunkt des Controllers gefragt. Geben oder fügen Sie ihn ein, und drücken Sie dann die EINGABETASTE, um fortzufahren.
-
-5. Wenn Sie erfolgreich eine Verbindung hergestellt haben, zeigt der Rest des Notebooks die Ausgabe der einzelnen Komponenten des Big-Data-Clusters an. Wenn Sie eine bestimmte Codezelle erneut ausführen möchten, zeigen Sie mit der Maus auf die Codezelle, und klicken Sie auf das Symbol zum **Ausführen**.
-
-## <a name="use-azdata"></a>Verwenden von azdata
-
-Sie können auch [azdata](../azdata/install/deploy-install-azdata.md)-Befehle zum Anzeigen beider Endpunkte sowie des Clusterstatus verwenden.
-
-### <a name="service-endpoints"></a>Dienstendpunkte
-
-1. Melden Sie sich beim Big-Data-Cluster mit [azdata login](../azdata/reference/reference-azdata.md) an. Legen Sie den Parameter **--controller-endpoint** auf die externe IP-Adresse des Controllerendpunkts fest.
-
-   ```bash
-   azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
-   ```
-
-   Geben Sie den Benutzernamen und das Kennwort an (AZDATA_USERNAME und AZDATA_PASSWORD), die Sie während der Bereitstellung für den Controller konfiguriert haben. 
-   Für die AD-Authentifizierung lautet der Befehl wie folgt:
-
-  ```bash
-   azdata login --endpoint https://<control_domain_name>:30080 --auth ad
-   ```
-
-1. Führen Sie [`azdata bdc endpoint list`](../azdata/reference/reference-azdata-bdc-endpoint.md) aus, um eine Liste mit Beschreibungen jedes Endpunkts sowie deren entsprechende IP-Adressen und Portwerte abzurufen. 
-
-   ```bash
-   azdata bdc endpoint list -o table
-   ```
-
-   Die folgende Liste zeigt eine Beispielausgabe dieses Befehls an:
-
-   ```output
-   Description                                             Endpoint                                                   Ip              Name               Port    Protocol
-   ------------------------------------------------------  ---------------------------------------------------------  --------------  -----------------  ------  ----------
-   Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  gateway            30443   https
-   Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  spark-history      30443   https
-   Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  yarn-ui            30443   https
-   Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  app-proxy          30778   https
-   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  mgmtproxy          30777   https
-   Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  logsui             30777   https
-   Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  metricsui          30777   https
-   Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  controller         30080   https
-   SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  sql-server-master  31433   tcp
-   HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  webhdfs            30443   https
-   Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
-   ```
-
-### <a name="view-cluster-status"></a>Clusterstatus anzeigen
-
-Sie können den Status des Clusters mit dem Befehl [`azdata bdc status show`](../azdata/reference/reference-azdata-bdc-status.md) anzeigen.
-
-```bash
-azdata bdc status show
-```
-
-> [!TIP]
-> Zum Ausführen der Statusbefehle müssen Sie sich zunächst mit dem Befehl **azdata login** anmelden, der im vorangegangenen Abschnitt zu Endpunkten gezeigt wurde.
-
-Im Folgenden wird eine Beispielausgabe dieses Befehls angezeigt:
-
-```output
- Bdc: ready                                                                                                                                                                                                          Health Status:  healthy
- ===========================================================================================================================================================================================================================================
- Services: ready                                                                                                                                                                                                     Health Status:  healthy
- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Servicename    State    Healthstatus    Details
-
- spark          ready    healthy         -
- sql            ready    healthy         -
- hdfs           ready    healthy         -
- control        ready    healthy         -
- gateway        ready    healthy         -
- app            ready    healthy         -
-
-
- Spark Services: ready                                                                                                                                                                                               Health Status:  healthy
- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Resourcename    State    Healthstatus    Details
-
- sparkhead       ready    healthy         StatefulSet sparkhead is healthy
- storage-0       ready    healthy         StatefulSet storage-0 is healthy
-
-
- Sql Services: ready                                                                                                                                                                                                 Health Status:  healthy
- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Resourcename    State    Healthstatus    Details
-
- master          ready    healthy         StatefulSet master is healthy
- compute-0       ready    healthy         StatefulSet compute-0 is healthy
- data-0          ready    healthy         StatefulSet data-0 is healthy
- storage-0       ready    healthy         StatefulSet storage-0 is healthy
-
-
- Hdfs Services: ready                                                                                                                                                                                                Health Status:  healthy
- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Resourcename    State    Healthstatus    Details
-
- nmnode-0        ready    healthy         StatefulSet nmnode-0 is healthy
- zookeeper       ready    healthy         StatefulSet zookeeper is healthy
- storage-0       ready    healthy         StatefulSet storage-0 is healthy
- sparkhead       ready    healthy         StatefulSet sparkhead is healthy
-
-
- Control Services: ready                                                                                                                                                                                             Health Status:  healthy
- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Resourcename    State    Healthstatus    Details
-
- controldb       ready    healthy         StatefulSet controldb is healthy
- control         ready    healthy         ReplicaSet control is healthy
- metricsdc       ready    healthy         DaemonSet metricsdc is healthy
- metricsui       ready    healthy         ReplicaSet metricsui is healthy
- metricsdb       ready    healthy         StatefulSet metricsdb is healthy
- logsui          ready    healthy         ReplicaSet logsui is healthy
- logsdb          ready    healthy         StatefulSet logsdb is healthy
- mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
- controlwd       ready    healthy         ReplicaSet controlwd is healthy
-
-
- Gateway Services: ready                                                                                                                                                                                             Health Status:  healthy
- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Resourcename    State    Healthstatus    Details
-
- gateway         ready    healthy         StatefulSet gateway is healthy
-
-
- App Services: ready                                                                                                                                                                                                 Health Status:  healthy
- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Resourcename    State    Healthstatus    Details
-
- appproxy        ready    healthy         ReplicaSet appproxy is healthy
-```
-
-### <a name="view-specific-resource-status"></a>Anzeigen des Status einer bestimmten Ressource
-
-Sie können den Status einer bestimmten Ressource im Cluster mit dem Befehl [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) anzeigen. Wenn Sie diesen Befehl verwenden, können Sie mit dem `--resource`-Parameter filtern. Beispiele für `--resource`-Parametereingaben
-
-- master
-- Steuerung
-- compute-0
-- storage-0
-- gateway
-
-Der folgende Befehl zeigt z. B. den Status des Speicherpools an:
-
-```bash
-azdata bdc status show --all --resource storage-0
-```
-
-Wenn Sie den Status aller Komponenten anzeigen möchten, die einen bestimmten Dienst ausführen, müssen Sie die entsprechende `azdata bdc <serviceName> status show`-Befehlsgruppe verwenden. Beispiel:
-
-- azdata bdc sql status show –-alle
-- azdata bdc hdfs status show –-alle
-- azdata bdc spark status show –-alle
-
-Nachfolgend sehen Sie eine Beispielausgabe:
-
-```output
-  Storage-0: ready                                                                                                                                                                                                    Health Status:  healthy
- ===========================================================================================================================================================================================================================================
- Instances: running                                                                                                                                                                                                  Health Status:  healthy
- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Instancename    State    Healthstatus    Details
-
- storage-0-0     running  healthy         Pod storage-0-0 is healthy
- storage-0-1     running  healthy         Pod storage-0-1 is healthy
-
-
- Dashboards
- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Name            Url
-
- nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/nodemetrics/ui
- sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/sqlmetrics/ui
- logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/logs/ui
- ```
-
-> [!TIP]
-> Führen Sie den Befehl "Status" mit `--all`-Parametern für weitere Integritätsdetails aus, einschließlich Links zu den Dashboards „Metriken“ und „Protokolle“, die der jeweiligen Instanz entsprechen. Im Folgenden sehen Sie eine Beispielausgabe unter Verwendung der `--all`-Parameter:
-
-```output
- Spark: ready                                                                                                                                                                                                        Health Status:  healthy
- ===========================================================================================================================================================================================================================================
- Resources: ready                                                                                                                                                                                                    Health Status:  healthy
- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Resourcename    State    Healthstatus    Details
-
- sparkhead       ready    healthy         StatefulSet sparkhead is healthy
- storage-0       ready    healthy         StatefulSet storage-0 is healthy
-
-
- Sparkhead Resources: running                                                                                                                                                                                        Health Status:  healthy
- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Instancename    State    Healthstatus    Details
-
- sparkhead-0     running  healthy         Pod sparkhead-0 is healthy
- sparkhead-1     running  healthy         Pod sparkhead-1 is healthy
-
-
-      Dashboards
-      --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-      Name            Url
-
-      nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/sparkhead-1/status/nodemetrics/ui
-      sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/sparkhead-1/status/sqlmetrics/ui
-      logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/sparkhead-1/status/logs/ui
-
-
- Storage-0 Resources: running                                                                                                                                                                                        Health Status:  healthy
- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Instancename    State    Healthstatus    Details
-
- storage-0-0     running  healthy         Pod storage-0-0 is healthy
- storage-0-1     running  healthy         Pod storage-0-1 is healthy
-
-
-      Dashboards
-      --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-      Name            Url
-
-      nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/nodemetrics/ui
-      sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/sqlmetrics/ui
-      logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/logs/ui
-```
-
-Der `logsUrl`-Wert verweist auf ein Kibana-Dashboard:
-
-![Kibana-Dashboard](./media/view-cluster-status/kibana-dashboard.png)
-
-> [!NOTE]
-> Der (alte) Microsoft Edge-Browser ist nicht mit Kibana kompatibel. Sie müssen den Chromium-basierten Browser verwenden, damit das Dashboard korrekt angezeigt wird. Wenn Sie die Dashboards mit einem nicht unterstützten Browser laden, wird eine leere Seite angezeigt. Klicken Sie hier, um unterstützte Browser für Kibana anzuzeigen.
-
-Die Werte für `nodeMetricsUrl` und `sqlMetricsUrl` verweisen auf ein Grafana-Dashboard zur Überwachung von Kubernetes-Knotenmetriken und Big Data-Cluster-Dienstmetriken:
-
-![Grafana-Dashboard](./media/view-cluster-status/grafana-dashboard.png)
-
-![SQL](./media/view-cluster-status/grafana-sql-status.png)
-
-### <a name="view-controller-status"></a>Anzeigen des Controllerstatus
-
-Sie können den Controllerstatus mit dem Befehl [`azdata bdc control status show`](../azdata/reference/reference-azdata-bdc-control-status.md) anzeigen. Dieser stellt ähnliche Links zu den Dashboards für die Überwachung bereit, die im Zusammenhang mit den Controllerkomponenten des Big Data-Clusters stehen.
+In den folgenden Artikeln ist beschrieben, wie Sie Probleme mit Big Data-Clustern beheben, die im Active Directory-Modus bereitgestellt sind:
+- [Behandeln von Problemen mit der Integration von Active Directory in SQL Server-Big Data-Clustern](troubleshoot-active-directory.md) 
+- [Symptom: Fehler beim Anmelden im AD-Modus: nicht vertrauenswürdige Domäne (Big Data-Cluster)](troubleshoot-ad-login-failed-untrusted-domain.md)
+- [Bereitstellung im AD-Modus beendet: Fehlender Eintrag für Reverse-Lookupzone für DC](troubleshoot-ad-reverse-lookup-zone.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
