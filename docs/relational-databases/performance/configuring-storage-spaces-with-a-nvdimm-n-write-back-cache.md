@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 438bb53d76763ecb7179638591f0353cb1bedf6f
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 7f95a343074ce2fb9f7f54c3121b0db6beafe34d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891890"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679228"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Konfigurieren von Speicherplätzen mit NVDIMM-N-Zurückschreibcache
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "91891890"
 Get-PhysicalDisk | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Get-PhysicalDisk](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
+ ![Screenshot eines Windows PowerShell-Fensters mit der Ausgabe des Get-PhysicalDisk-Cmdlets](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
   
 > [!NOTE]  
 >  Mit NVDIMM-N-Geräten ist es nicht mehr erforderlich, dass Sie speziell die Geräte auswählen, die Ziele für einen Zückschreibcache sein können.  
@@ -47,7 +47,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Auswählen von FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Auswählen von FriendlyName")  
+ ![Screenshot eines Windows PowerShell-Fensters mit der Ausgabe des $pd-Cmdlets](../../relational-databases/performance/media/select-friendlyname.png "Auswählen von FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>Erstellen des Speicherpools  
  Über die Variable „$pd“, die die physischen Datenträger enthält, ist es einfach, den Speicherpool mit dem PowerShell-Cmdlet „New-StoragePool“ zu erstellen.  
@@ -56,7 +56,7 @@ $pd | Select FriendlyName, MediaType, BusType
 New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
- ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
+ ![Screenshot eines Windows PowerShell-Fensters mit der Ausgabe des New-StoragePool-Cmdlets](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
 ## <a name="creating-the-virtual-disk-and-volume"></a>Erstellen des virtuellen Datenträgers und Volumes  
  Nachdem ein Pool erstellt wurde, besteht der nächste Schritt darin, einen virtuellen Datenträger anzulegen und diesen zu formatieren. In diesem Fall wird nur 1 virtueller Datenträger erstellt, und das PowerShell-Cmdlet „New-Volume“ kann verwendet werden, um diesen Prozess zu optimieren:  
@@ -65,15 +65,15 @@ New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName N
 New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
- ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  
+ ![Screenshot eines Windows PowerShell-Fensters mit der Ausgabe des New-Volume-Cmdlets](../../relational-databases/performance/media/new-volume.png "New-Volume")  
   
  Der virtuelle Datenträger wurde erstellt, initialisiert und mit NTFS formatiert. Der folgende Screenshot zeigt, dass der Datenträger eine Größe von 300 GB und eine Schreibcachegröße von 1 GB hat, die auf den NVDIMM-Ns gehostet wird.  
   
- ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
+ ![Screenshot eines Windows PowerShell-Fensters mit der Ausgabe des Get-VirtualDisk-Cmdlets](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
   
  Sie können dieses neue Volume jetzt auf dem Server sehen. Dieses Laufwerk können Sie nun für Ihr SQL Server-Transaktionsprotokoll verwenden.  
   
- ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
+ ![Screenshot eines Datei-Explorer-Fensters auf der Seite „Dieser PC“ mit dem Log_Space-Laufwerk](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Speicherplätze unter Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   

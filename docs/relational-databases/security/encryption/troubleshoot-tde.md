@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 2eb908b1d63b70453aeff0e650f93b7c4e794520
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867945"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679251"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Häufige Fehler bei Transparent Data Encryption (TDE) mit vom Kunden verwalteten Schlüsseln in Azure Key Vault
 
@@ -34,7 +34,7 @@ Wenn das zugrunde liegende Azure Key Vault-Schlüsselzugriffsproblem innerhalb d
 
 Wenn eine unzugängliche Datenbank nicht länger benötigt wird, kann sie sofort gelöscht werden, um Kosten zu vermeiden. Alle weiteren Aktionen für die Datenbank sind erst dann erlaubt, wenn der Zugriff auf den Azure Key Vault-Schlüssel wiederhergestellt wurde und die Datenbank wieder online ist. Das Ändern der TDE-Option von kundenseitig verwalteten Schlüsseln zu dienstseitig verwalteten Schlüsseln ist ebenfalls nicht möglich, wenn eine mit kundenseitig verwalteten Schlüsseln verschlüsselte Datenbank nicht zugänglich ist. Dies ist erforderlich, um die Daten vor einem nicht autorisierten Zugriff zu schützen, wenn die Berechtigungen für den TDE-Schutz widerrufen wurden. 
 
-Wenn eine Datenbank länger als 8 Stunden nicht zugänglich ist, ist eine automatische Reparatur nicht mehr möglich. Wenn der erforderliche Azure Key Vault-Schlüsselzugriff erst danach wiederhergestellt wurde, müssen Sie den Zugriff auf den Schlüssel manuell noch mal validieren, um die Datenbank wieder online zu schalten. Das Onlineschalten der Datenbank kann in diesem Fall je nach Größe der Datenbank sehr lange dauern. Sobald die Datenbank wieder online ist, gehen zuvor konfigurierte Einstellungen wie die [Failovergruppe](/azure/sql-database/sql-database-auto-failover-group), der PITR-Verlauf und Tags **verloren**. Daher wird empfohlen, ein Benachrichtigungssystem mit [Aktionsgruppen](/azure/azure-monitor/platform/action-groups) zu implementieren, mit dem zugrunde liegende Probleme mit dem Azure Key Vault-Schlüsselzugriff erkannt und gelöst werden können. 
+Wenn eine Datenbank länger als 8 Stunden nicht zugänglich ist, ist eine automatische Reparatur nicht mehr möglich. Wenn der erforderliche Azure Key Vault-Schlüsselzugriff erst danach wiederhergestellt wurde, müssen Sie den Zugriff auf den Schlüssel manuell noch mal validieren, um die Datenbank wieder online zu schalten. Das Onlineschalten der Datenbank kann in diesem Fall je nach Größe der Datenbank sehr lange dauern. Sobald die Datenbank wieder online ist, gehen zuvor konfigurierte Einstellungen wie die [Failovergruppe](/azure/sql-database/sql-database-auto-failover-group), der PITR-Verlauf und Tags **verloren** . Daher wird empfohlen, ein Benachrichtigungssystem mit [Aktionsgruppen](/azure/azure-monitor/platform/action-groups) zu implementieren, mit dem zugrunde liegende Probleme mit dem Azure Key Vault-Schlüsselzugriff erkannt und gelöst werden können. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Häufige Fehler, die zu unzugänglichen Datenbanken führen
 
@@ -80,9 +80,9 @@ Verwenden Sie das folgende Cmdlet oder den folgenden Befehl, um eine Azure AD-Id
 
 - Azure CLI: [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) mit der Option `--assign_identity`.
 
-Navigieren Sie im Azure-Portal zum Schlüsseltresor und anschließend zu **Zugriffsrichtlinien**. Führen Sie die folgenden Schritte aus: 
+Navigieren Sie im Azure-Portal zum Schlüsseltresor und anschließend zu **Zugriffsrichtlinien** . Führen Sie die folgenden Schritte aus: 
 
- 1. Verwenden Sie die Schaltfläche **Neues Element hinzufügen**, um die im vorherigen Schritt erstellte AppId für den Server hinzuzufügen. 
+ 1. Verwenden Sie die Schaltfläche **Neues Element hinzufügen** , um die im vorherigen Schritt erstellte AppId für den Server hinzuzufügen. 
  1. Weisen Sie die folgenden Schlüsselberechtigungen zu: „Get (Abrufen)“, „Wrap (Packen)“ und „Unwrap (Entpacken)“. 
 
 Weitere Informationen finden Sie unter [Zuweisen einer Azure AD-Identität zu einem Server](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server).
@@ -159,7 +159,7 @@ So identifizieren Sie den Schlüssel-URI und den Schlüsseltresor:
 
 Vergewissern Sie sich, dass die logische SQL Server-Instanz über Berechtigungen für den Schlüsseltresor und über die richtigen Zugriffsberechtigungen für den Schlüssel verfügt:
 
-- Navigieren Sie im Azure-Portal zum Schlüsseltresor und dann zu **Zugriffsrichtlinien**. Suchen Sie nach der AppId der logischen SQL Server-Instanz.  
+- Navigieren Sie im Azure-Portal zum Schlüsseltresor und dann zu **Zugriffsrichtlinien** . Suchen Sie nach der AppId der logischen SQL Server-Instanz.  
 - Ist die AppId vorhanden, vergewissern Sie sich, dass sie über die folgenden Schlüsselberechtigungen verfügt: „Get (Abrufen)“, „Wrap (Packen)“ und „Unwrap (Entpacken)“.
 - Fehlt die AppId, fügen Sie sie über die Schaltfläche **Neues Element hinzufügen** hinzu. 
 

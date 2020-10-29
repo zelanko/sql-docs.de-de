@@ -14,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22ad17c49a2f084453c87f26b9c782404f93483d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 435c9e512278d3954c46e543ab6d68610f1cbdfc
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784025"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679258"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Massenladen von verschlüsselten Daten in Spalten mithilfe von Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ Erstellen Sie den Benutzer mit der Option **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS*
 ## <a name="data-migration-scenarios"></a>Datenmigrationsszenarien  
 Die folgende Tabelle zeigt die empfohlenen Einstellungen für mehrere Migrationsszenarien.  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+![Screenshot einer Tabelle mit den empfohlenen Einstellungen für mehrere Migrationsszenarios](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>Massenladen von verschlüsselten Daten  
 Verwenden Sie das folgende Verfahren, um verschlüsselte Daten zu laden.  
@@ -58,7 +58,7 @@ Das folgende Szenario zeigt, wie nicht ordnungsgemäß importierte Daten zur Dat
 
 1.  Die Option ist für einen Benutzer auf ON festgelegt.  
  
-2.  Der Benutzer führt die Anwendung aus, die mit der Datenbank verbunden ist. Die Anwendung verwendet Massen-APIs zum Einfügen von Klartextwerten in verschlüsselte Spalten. Die Anwendung erwartet von einem durch Always Encrypted aktivierten Clienttreiber die Verschlüsselung der Daten beim Einfügen. Die Anwendung ist jedoch falsch konfiguriert, sodass sie entweder einen Treiber verwendet, der Always Encrypted nicht unterstützt, oder die Verbindungszeichenfolge **column encryption setting=enabled**nicht enthält.  
+2.  Der Benutzer führt die Anwendung aus, die mit der Datenbank verbunden ist. Die Anwendung verwendet Massen-APIs zum Einfügen von Klartextwerten in verschlüsselte Spalten. Die Anwendung erwartet von einem durch Always Encrypted aktivierten Clienttreiber die Verschlüsselung der Daten beim Einfügen. Die Anwendung ist jedoch falsch konfiguriert, sodass sie entweder einen Treiber verwendet, der Always Encrypted nicht unterstützt, oder die Verbindungszeichenfolge **column encryption setting=enabled** nicht enthält.  
 
 3.  Die Anwendung sendet Klartextwerte an den Server. Da kryptografische Metadatenüberprüfungen auf dem Server für den Benutzer deaktiviert sind, lässt der Server zu, dass falsche Daten (Klartext statt richtig verschlüsselter Chiffretext) in eine verschlüsselte Spalte eingefügt werden.  
  

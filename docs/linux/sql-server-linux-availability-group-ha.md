@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: 9ab42b6628f34c020d02dcffac130601dddb1938
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 8c48facb150d527cc1c03c0d5cd9ca0849a889f0
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784801"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679276"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen
 
@@ -62,8 +62,8 @@ Eine Verfügbarkeitsgruppe mit drei synchronen Replikaten ermöglicht die Lesesk
 |Verfügbarkeitsverhalten |Leseskalierung|Hochverfügbarkeit und </br> Datenschutz | Schutz von Daten|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|Ausfall des primären Replikats |Automatisches Failover. Das neue primäre Replikat besitzt Lese-/Schreibberechtigungen. |Automatisches Failover. Das neue primäre Replikat besitzt Lese-/Schreibberechtigungen. |Automatisches Failover. Das neue primäre Replikat steht erst dann für Benutzertransaktionen zur Verfügung, wenn das vorherige Replikat wiederhergestellt wurde und der Verfügbarkeitsgruppe als sekundäres Replikat beigetreten ist. |
-|Ausfall eines sekundären Replikats  | Das primäre Replikat besitzt Lese-/Schreibberechtigungen. Es wird kein automatisches Failover ausgeführt, wenn das primäre Replikat ausfällt. |Das primäre Replikat besitzt Lese-/Schreibberechtigungen. Es wird kein automatisches Failover ausgeführt, wenn auch das primäre Replikat ausfällt. | Das primäre Replikat steht nicht für Benutzertransaktionen zur Verfügung. |
+|Ausfall des primären Replikats |Automatisches Failover. Das neue primäre Replikat besitzt Lese-/Schreibberechtigungen. |Automatisches Failover. Das neue primäre Replikat besitzt Lese-/Schreibberechtigungen. |Automatisches Failover. Das neue primäre Replikat steht erst dann für Benutzertransaktionen zur Verfügung, wenn das vorherige Replikat wiederhergestellt wurde und der Verfügbarkeitsgruppe als sekundäres Replikat beigetreten ist. |
+|Ausfall eines sekundären Replikats  | Das primäre Replikat besitzt Lese-/Schreibberechtigungen. Es wird kein automatisches Failover ausgeführt, wenn das primäre Replikat ausfällt. |Das primäre Replikat besitzt Lese-/Schreibberechtigungen. Es wird kein automatisches Failover ausgeführt, wenn auch das primäre Replikat ausfällt. | Das primäre Replikat steht nicht für Benutzertransaktionen zur Verfügung. |
 
 <sup>\*</sup> Standardwert
 
@@ -81,7 +81,7 @@ Eine Verfügbarkeitsgruppe mit zwei synchronen Replikaten gewährleistet die Les
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Das neue primäre Replikat besitzt Lese-/Schreibberechtigungen.| Automatisches Failover. Das neue primäre Replikat steht erst dann für Benutzertransaktionen zur Verfügung, wenn das vorherige Replikat wiederhergestellt wurde und der Verfügbarkeitsgruppe als sekundäres Replikat beigetreten ist.|
-|Ausfall eines sekundären Replikats  |Das primäre Replikat besitzt Lese-/Schreibberechtigungen. Es wird nicht gespiegelt, weshalb die Gefahr eines Datenverlusts besteht. |Das primäre Replikat steht erst dann für Benutzertransaktionen zur Verfügung, wenn das sekundäre Replikat wiederhergestellt wurde.|
+|Ausfall eines sekundären Replikats  |Das primäre Replikat besitzt Lese-/Schreibberechtigungen. Es wird nicht gespiegelt, weshalb die Gefahr eines Datenverlusts besteht. |Das primäre Replikat steht erst dann für Benutzertransaktionen zur Verfügung, wenn das sekundäre Replikat wiederhergestellt wurde.|
 
 <sup>\*</sup> Standardwert
 
@@ -107,9 +107,9 @@ Der Standardwert für `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` ist 0. In de
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Ausfall des primären Replikats | Automatisches Failover. Das neue primäre Replikat besitzt Lese-/Schreibberechtigungen. | Automatisches Failover. Das neue primäre Replikat steht nicht für Benutzertransaktionen zur Verfügung. |
-|Ausfall des sekundären Replikats | Das primäre Replikat besitzt Lese-/Schreibberechtigungen. Es wird nicht gespiegelt, weshalb die Gefahr eines Datenverlusts besteht (falls das primäre Replikat ausfällt und nicht wiederhergestellt werden kann). Es wird kein automatisches Failover ausgeführt, wenn auch das primäre Replikat ausfällt. | Das primäre Replikat steht nicht für Benutzertransaktionen zur Verfügung. Es gibt kein Replikat, das als Failoverziel verwendet werden kann, wenn auch das primäre Replikat ausfällt. |
-|Ausfall des Konfigurationsreplikats | Das primäre Replikat besitzt Lese-/Schreibberechtigungen. Es wird kein automatisches Failover ausgeführt, wenn auch das primäre Replikat ausfällt. | Das primäre Replikat besitzt Lese-/Schreibberechtigungen. Es wird kein automatisches Failover ausgeführt, wenn auch das primäre Replikat ausfällt. |
-|Ausfall des synchronen sekundären Replikats und des Konfigurationsreplikats| Das primäre Replikat steht nicht für Benutzertransaktionen zur Verfügung. Es wird kein automatisches Failover ausgeführt. | Das primäre Replikat steht nicht für Benutzertransaktionen zur Verfügung. Es gibt kein Replikat, das als Failoverziel verwendet werden kann, wenn auch das primäre Replikat ausfällt. |
+|Ausfall des sekundären Replikats | Das primäre Replikat besitzt Lese-/Schreibberechtigungen. Es wird nicht gespiegelt, weshalb die Gefahr eines Datenverlusts besteht (falls das primäre Replikat ausfällt und nicht wiederhergestellt werden kann). Es wird kein automatisches Failover ausgeführt, wenn auch das primäre Replikat ausfällt. | Das primäre Replikat steht nicht für Benutzertransaktionen zur Verfügung. Es gibt kein Replikat, das als Failoverziel verwendet werden kann, wenn auch das primäre Replikat ausfällt. |
+|Ausfall des Konfigurationsreplikats | Das primäre Replikat besitzt Lese-/Schreibberechtigungen. Es wird kein automatisches Failover ausgeführt, wenn auch das primäre Replikat ausfällt. | Das primäre Replikat besitzt Lese-/Schreibberechtigungen. Es wird kein automatisches Failover ausgeführt, wenn auch das primäre Replikat ausfällt. |
+|Ausfall des synchronen sekundären Replikats und des Konfigurationsreplikats| Das primäre Replikat steht nicht für Benutzertransaktionen zur Verfügung. Es wird kein automatisches Failover ausgeführt. | Das primäre Replikat steht nicht für Benutzertransaktionen zur Verfügung. Es gibt kein Replikat, das als Failoverziel verwendet werden kann, wenn auch das primäre Replikat ausfällt. |
 
 <sup>\*</sup> Standardwert
 
