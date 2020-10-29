@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: In Teil drei dieser fünfteiligen Tutorialreihe verwenden Sie T-SQL-Funktionen zum Erstellen und Speichern von Features aus Beispieldaten mithilfe von SQL Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 25f61771524d170ade9914605916c6f2cffc6d3b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e498b76d1b7924a4ee4154c35c4e492612b9c801
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193702"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412564"
 ---
 # <a name="r-tutorial-create-data-features"></a>R-Tutorial: Erstellen von Datenfeatures
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -40,11 +40,11 @@ In Teil fünf erfahren Sie, wie Sie die Modelle [operationalisieren](./python-ta
 
 ## <a name="about-feature-engineering"></a>Über die Featureentwicklung
 
-Nachdem Sie eine Zeit damit verbracht haben, Daten zu durchsuchen, haben Sie einige Einsichten in die Daten gesammelt und sind nun bereit, mit der *Featureentwicklung*fortzufahren. Das Erstellen nützlicher Features aus den Rohdaten ist ein wichtiger Schritt bei der Erstellung von Analysemodellen.
+Nachdem Sie eine Zeit damit verbracht haben, Daten zu durchsuchen, haben Sie einige Einsichten in die Daten gesammelt und sind nun bereit, mit der *Featureentwicklung* fortzufahren. Das Erstellen nützlicher Features aus den Rohdaten ist ein wichtiger Schritt bei der Erstellung von Analysemodellen.
 
 In diesem Dataset basieren die Entfernungswerte auf der vom Taxameter angezeigten Entfernung und stellen nicht zwangsläufig die geografische Distanz oder tatsächlich zurückgelegte Entfernung dar. Aus diesem Grund müssen Sie die direkte Entfernung zwischen den Abhol- und den Zielorten berechnen, indem Sie die verfügbaren Koordinaten in im Quell-Dataset NYC Taxi verwenden. Sie erreichen dies, indem Sie die [Haversine-Formel](https://en.wikipedia.org/wiki/Haversine_formula) in einer benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktion verwenden.
 
-Verwenden Sie eine benutzerdefinierte T-SQL-Funktion, _fnCalculateDistance_, um die Entfernung mithilfe der Haversine-Formel zu berechnen, und verwenden Sie eine zweite benutzerdefinierte T-SQL-Funktion, _fnEngineerFeatures_, um eine Tabelle mit allen Funktionen zu erstellen.
+Verwenden Sie eine benutzerdefinierte T-SQL-Funktion, _fnCalculateDistance_ , um die Entfernung mithilfe der Haversine-Formel zu berechnen, und verwenden Sie eine zweite benutzerdefinierte T-SQL-Funktion, _fnEngineerFeatures_ , um eine Tabelle mit allen Funktionen zu erstellen.
 
 Der Gesamtprozess sieht folgendermaßen aus:
 
@@ -58,9 +58,9 @@ Der Gesamtprozess sieht folgendermaßen aus:
 
 Die Funktion _fnCalculateDistance_ sollte heruntergeladen und bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Teil der Vorbereitung für dieses Tutorial registriert worden sein. Überprüfen Sie kurz den Code.
   
-1. Erweitern Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**Programmierbarkeit**, erweitern Sie **Funktionen** und anschließend **Skalarwertfunktionen**.   
+1. Erweitern Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**Programmierbarkeit** , erweitern Sie **Funktionen** und anschließend **Skalarwertfunktionen** .   
 
-2. Klicken Sie mit der rechten Maustaste auf _fnCalculateDistance_, und wählen Sie **Ändern** aus, um das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript in einem neuen Abfragefenster zu öffnen.
+2. Klicken Sie mit der rechten Maustaste auf _fnCalculateDistance_ , und wählen Sie **Ändern** aus, um das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript in einem neuen Abfragefenster zu öffnen.
   
    ```sql
    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
@@ -92,9 +92,9 @@ Die Funktion _fnCalculateDistance_ sollte heruntergeladen und bei [!INCLUDE[ssNo
 
 ## <a name="generate-the-features-using-_fnengineerfeatures_"></a>Generieren der Features mithilfe von _fnEngineerFeatures_
 
-Verwenden Sie eine andere Funktion, _fnEngineerFeatures_, um die berechneten Werte einer Tabelle hinzuzufügen, die zum Trainieren des Modells verwendet werden kann. Die neue Funktion ruft die zuvor erstellte T-SQL-Funktion _fnCalculateDistance_ auf, um die direkte Entfernung zwischen den Abhol- und Zielorten abzurufen. 
+Verwenden Sie eine andere Funktion, _fnEngineerFeatures_ , um die berechneten Werte einer Tabelle hinzuzufügen, die zum Trainieren des Modells verwendet werden kann. Die neue Funktion ruft die zuvor erstellte T-SQL-Funktion _fnCalculateDistance_ auf, um die direkte Entfernung zwischen den Abhol- und Zielorten abzurufen. 
 
-1. Nehmen Sie sich ein paar Minuten Zeit, um den Code für die benutzerdefinierte T-SQL-Funktion _fnEngineerFeatures_zu überprüfen, die für Sie als Teil der Vorbereitung für diese exemplarische Vorgehensweise erstellt wurde.
+1. Nehmen Sie sich ein paar Minuten Zeit, um den Code für die benutzerdefinierte T-SQL-Funktion _fnEngineerFeatures_ zu überprüfen, die für Sie als Teil der Vorbereitung für diese exemplarische Vorgehensweise erstellt wurde.
   
    ```sql
    CREATE FUNCTION [dbo].[fnEngineerFeatures] (  

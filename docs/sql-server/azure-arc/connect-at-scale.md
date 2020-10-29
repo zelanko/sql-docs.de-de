@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 0bd60864615e1ffbf2aecac5eb41efa86407ba68
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988006"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734381"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>Herstellen einer Verbindung zwischen SQL Server-Instanzen und Azure Arc im großen Stil
 
@@ -79,10 +79,10 @@ Auf jedem Computer muss [Azure PowerShell](/powershell/azure/install-az-ps) inst
 
 Auf jedem Zielcomputer muss die [Azure CLI installiert](/cli/azure/install-azure-cli) sein. Das Registrierungsskript führt automatisch eine Anmeldung bei Azure mit den Anmeldeinformationen des Dienstprinzipals durch, wenn diese bereitgestellt wurden und nicht bereits ein anderer Benutzer angemeldet ist. Führen Sie die folgenden Schritte aus, um für SQL Server-Instanzen auf mehreren Linux-Computern eine Verbindung herzustellen.
 
-1. Erstellen Sie mit dem Befehl [az ad sp create-for-rbac](/cli/azure/ad/sp.md#az_ad_sp_create_for_rbac) den Dienstprinzipal. 
+1. Erstellen Sie mit dem Befehl [az ad sp create-for-rbac](/cli/azure/ad/sp#az_ad_sp_create_for_rbac) den Dienstprinzipal.
 
    ```azurecli-interactive
-   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>    
+   az ad sp create-for-rbac --name <your service principal name> --role <your custom role name>
    ```
 
    ```output
@@ -116,7 +116,7 @@ Auf jedem Zielcomputer muss die [Azure CLI installiert](/cli/azure/install-azure
 
 ## <a name="validate-successful-onboarding"></a>Überprüfen des erfolgreichen Onboardings
 
-Navigieren Sie nach dem Registrieren der SQL Server-Instanzen mit Azure Arc-fähigen SQL Server-Instanzen (Vorschau) zum [Azure-Portal](https://aka.ms/azureportal), und zeigen Sie die neu erstellten Azure Arc-Ressourcen an. Für jeden verbundenen Computer wird eine neue Ressource vom Typ __Computer – Azure Arc__ angezeigt und für jede registrierte SQL Server-Instanz eine neue Ressource vom Typ __SQL Server – Azure Arc__. 
+Navigieren Sie nach dem Registrieren der SQL Server-Instanzen mit Azure Arc-fähigen SQL Server-Instanzen (Vorschau) zum [Azure-Portal](https://aka.ms/azureportal), und zeigen Sie die neu erstellten Azure Arc-Ressourcen an. Für jeden verbundenen Computer wird eine neue Ressource vom Typ __Computer – Azure Arc__ angezeigt und für jede registrierte SQL Server-Instanz eine neue Ressource vom Typ __SQL Server – Azure Arc__ . 
 
 ![Erfolgreiches Onboarding](./media/join-at-scale/successful-onboard.png)
 

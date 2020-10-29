@@ -16,12 +16,12 @@ ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3c468994dcfa80b1db2ee8c6c49dd881dd7bcf85
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eaba2d8acd2a0443bfe2ed97fc53b50fcb667629
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417806"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439384"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Diagrammbereich (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,27 +39,27 @@ Jede Tabelle und jedes Tabellenwertobjekt wird im Diagrammbereich in einem separ
   
 ## <a name="options"></a>Optionen  
 **Tabellen**  
-Listet die Tabellen auf, die dem Diagrammbereich hinzugefügt werden können. Um eine Tabelle hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**. Um mehrere Tabellen gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
+Listet die Tabellen auf, die dem Diagrammbereich hinzugefügt werden können. Um eine Tabelle hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen** . Um mehrere Tabellen gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen** .  
   
 **Ansichten**  
-Listet die Sichten auf, die dem Diagrammbereich hinzugefügt werden können. Um eine Sicht hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**. Um mehrere Sichten gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
+Listet die Sichten auf, die dem Diagrammbereich hinzugefügt werden können. Um eine Sicht hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen** . Um mehrere Sichten gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen** .  
   
 **Funktionen**  
-Listet die benutzerdefinierten Funktionen auf, die dem Diagrammbereich hinzugefügt werden können. Um eine Funktion hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**. Um mehrere Funktionen gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
+Listet die benutzerdefinierten Funktionen auf, die dem Diagrammbereich hinzugefügt werden können. Um eine Funktion hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen** . Um mehrere Funktionen gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen** .  
   
 **Lokale Tabellen**  
 Listet die von Abfragen erstellten Tabellen auf, nicht die zur Datenbank gehörigen.  
   
 **Synonyme**  
-Listet die Synonyme auf, die dem Diagrammbereich hinzugefügt werden können. Um ein Synonym hinzuzufügen, wählen Sie es aus, und klicken Sie auf **Hinzufügen**. Um mehrere Synonyme gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
+Listet die Synonyme auf, die dem Diagrammbereich hinzugefügt werden können. Um ein Synonym hinzuzufügen, wählen Sie es aus, und klicken Sie auf **Hinzufügen** . Um mehrere Synonyme gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen** .  
   
 |Symbol|Objekttyp|  
 |--------|---------------|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbi1.gif "Visual Database Tools (Symbol)")|Tabelle|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbi2.gif "Visual Database Tools (Symbol)")|Abfrage oder Sicht|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbi3.gif "Visual Database Tools (Symbol)")|Verknüpfte Tabelle|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dvudficon.gif "Visual Database Tools (Symbol)")|Benutzerdefinierte Funktion|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbi5.gif "Visual Database Tools (Symbol)")|Verknüpfte Sicht|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi1.gif":::|Tabelle|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi2.gif":::|Abfrage oder Sicht|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi3.gif":::|Verknüpfte Tabelle|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dvudficon.gif":::|Benutzerdefinierte Funktion|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi5.gif":::|Verknüpfte Sicht|  
   
 Jedes Rechteck zeigt die Datenspalten für die Tabelle bzw. das Tabellenwertobjekt an. Neben den Spaltennamen finden Sie Kontrollkästchen und Symbole, die Informationen zum Verwenden der Spalten in der Abfrage liefern. In QuickInfos erhalten Sie u. a. Informationen zum Datentyp und zur Größe der Spalten.  
   
@@ -67,11 +67,11 @@ In der folgenden Tabelle werden die verwendeten Kontrollkästchen und Symbole f�
   
 |Kontrollkästchen oder Symbol|BESCHREIBUNG|  
 |-----------------------|---------------|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools (Symbol)")<br /><br />![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools (Symbol)")<br /><br />![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools (Symbol)")<br /><br />![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools (Symbol)")|Gibt an, ob eine Datenspalte im Resultset der Abfrage enthalten ist oder nicht (SELECT-Abfrage) oder ob sie in einer UPDATE-, INSERT FROM-, MAKE TABLE- oder INSERT INTO-Abfrage verwendet wird. Wählen Sie die Spalte aus, um sie in die Ergebnisse aufzunehmen. Wenn **(Alle Spalten)** ausgewählt ist, werden in der Ausgabe alle Datenspalten angezeigt.<br /><br />Das mit dem Kontrollkästchen verwendete Symbol ändert sich entsprechend dem Typ der erstellten Abfrage. Beim Erstellen einer DELETE-Abfrage können Sie keine einzelnen Spalten auswählen.|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools (Symbol)")<br /><br />![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Datenspalte zum Sortieren der Abfrageergebnisse verwendet wird (d. h. Teil einer ORDER BY-Klausel ist). Das Symbol wird als A-Z bei aufsteigender oder als Z-A bei absteigender Sortierreihenfolge dargestellt.|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbid.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Datenspalte in einer Aggregatabfrage zum Erstellen eines gruppierten Resultsets verwendet wird (d. h. Teil einer GROUP BY-Klausel ist).|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbie.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Datenspalte in eine Suchbedingung der Abfrage eingebunden ist (d. h. Teil einer WHERE- oder HAVING-Klausel ist).|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbif.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Inhalte der Datenspalte für die Ausgabe zusammengefasst werden (d. h. in eine SUM- oder AVG- oder eine andere Aggregatfunktion eingebunden sind).|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi7.gif":::<br /><br />:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi8.gif":::<br /><br />:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbi9.gif":::<br /><br />:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbia.gif":::|Gibt an, ob eine Datenspalte im Resultset der Abfrage enthalten ist oder nicht (SELECT-Abfrage) oder ob sie in einer UPDATE-, INSERT FROM-, MAKE TABLE- oder INSERT INTO-Abfrage verwendet wird. Wählen Sie die Spalte aus, um sie in die Ergebnisse aufzunehmen. Wenn **(Alle Spalten)** ausgewählt ist, werden in der Ausgabe alle Datenspalten angezeigt.<br /><br />Das mit dem Kontrollkästchen verwendete Symbol ändert sich entsprechend dem Typ der erstellten Abfrage. Beim Erstellen einer DELETE-Abfrage können Sie keine einzelnen Spalten auswählen.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbib.gif":::<br /><br />:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbic.gif":::|Zeigt an, dass die Datenspalte zum Sortieren der Abfrageergebnisse verwendet wird (d. h. Teil einer ORDER BY-Klausel ist). Das Symbol wird als A-Z bei aufsteigender oder als Z-A bei absteigender Sortierreihenfolge dargestellt.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbid.gif":::|Zeigt an, dass die Datenspalte in einer Aggregatabfrage zum Erstellen eines gruppierten Resultsets verwendet wird (d. h. Teil einer GROUP BY-Klausel ist).|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbie.gif":::|Zeigt an, dass die Datenspalte in eine Suchbedingung der Abfrage eingebunden ist (d. h. Teil einer WHERE- oder HAVING-Klausel ist).|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbif.gif":::|Zeigt an, dass die Inhalte der Datenspalte für die Ausgabe zusammengefasst werden (d. h. in eine SUM- oder AVG- oder eine andere Aggregatfunktion eingebunden sind).|  
   
 > [!NOTE]  
 > Der Abfrage- und Sicht-Designer zeigt keine Datenspalten für eine Tabelle oder ein Tabellenwertobjekt an, wenn Sie nicht über die erforderlichen Zugriffsrechte verfügen oder der ODBC-Treiber keine Informationen über die Tabelle oder das Objekt zurückgeben kann. In einem solchen Fall zeigt der Abfrage- und Sicht-Designer nur die Titelleiste für die Tabelle oder das Objekt mit Tabellenstruktur an.  
@@ -83,19 +83,19 @@ Die Form des Symbols in der Mitte der Joinlinie zeigt an, wie die Tabellen oder 
   
 |Joinliniensymbol|BESCHREIBUNG|  
 |------------------|---------------|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools (Symbol)")|Innerer Join (erstellt mit einem Gleichheitszeichen).|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools (Symbol)")|Innerer Join mit dem Operator "größer als". (Der im Symbol der Joinlinie angezeigte Operator gibt den im Join verwendeten Operator wieder.)|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbij.gif "Visual Database Tools (Symbol)")|Äußerer Join, bei dem sämtliche Zeilen aus der links angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbik.gif "Visual Database Tools (Symbol)")|Äußerer Join, bei dem sämtliche Zeilen aus der rechts angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbil.gif "Visual Database Tools (Symbol)")|Ein vollständiger äußerer Join, bei dem alle Zeilen aus beiden Tabellen aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbih.gif":::|Innerer Join (erstellt mit einem Gleichheitszeichen).|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbii.gif":::|Innerer Join mit dem Operator "größer als". (Der im Symbol der Joinlinie angezeigte Operator gibt den im Join verwendeten Operator wieder.)|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbij.gif":::|Äußerer Join, bei dem sämtliche Zeilen aus der links angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbik.gif":::|Äußerer Join, bei dem sämtliche Zeilen aus der rechts angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbil.gif":::|Ein vollständiger äußerer Join, bei dem alle Zeilen aus beiden Tabellen aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
   
 Symbole an den Enden der Joinlinie zeigen den Jointyp an. In der folgenden Tabelle werden die Jointypen und die an den Enden der Joinlinien verwendeten Symbole aufgelistet.  
   
 |Symbole an den Enden der Joinlinien|BESCHREIBUNG|  
 |-----------------------------|---------------|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools (Symbol)")|1:1-Join|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools (Symbol)")|1:n-Join|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbio.gif "Visual Database Tools (Symbol)")|Der Abfrage- und Sicht-Designer konnte den Jointyp nicht ermitteln.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbim.gif":::|1:1-Join|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbin.gif":::|1:n-Join|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif ":::|Der Abfrage- und Sicht-Designer konnte den Jointyp nicht ermitteln.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32cdcca2e4052374e7f26d59a3caf35f200cd47d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6961dd76f35316dbd3923bb24849011a20f184c0
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725805"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793737"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>Ausführen eines Beispielnotebooks mithilfe von Spark
 
@@ -41,10 +41,10 @@ Verwenden Sie die folgenden Anweisungen, um die Notebook-Beispieldatei **spark-s
 
 1. Navigieren Sie zu dem Verzeichnis, in das Sie die Notebook-Beispieldatei herunterladen möchten.
 
-1. Führen Sie den folgenden **curl**-Befehl aus, um die Notebook-Datei von GitHub herunterzuladen:
+1. Führen Sie den folgenden **curl** -Befehl aus, um die Notebook-Datei von GitHub herunterzuladen:
 
    ```bash
-   curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
+   curl https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb -o transform-csv-files.ipynb
    ```
 
 ## <a name="open-the-notebook"></a>Öffnen des Notebooks
@@ -57,7 +57,7 @@ In den folgenden Schritte ist gezeigt, wie Sie die Notebook-Datei in Azure Data 
 
    ![Notebook öffnen](media/notebook-tutorial-spark/azure-data-studio-open-notebook.png)
 
-1. Warten Sie, bis die Felder für den **Kernel** und den Zielkontext (**Anfügen an**) ausgefüllt sind. Legen Sie den **Kernel** auf **PySpark3** fest, und legen Sie **Anfügen an** auf die IP-Adresse des Endpunkts Ihres Big Data-Clusters fest.
+1. Warten Sie, bis die Felder für den **Kernel** und den Zielkontext ( **Anfügen an** ) ausgefüllt sind. Legen Sie den **Kernel** auf **PySpark3** fest, und legen Sie **Anfügen an** auf die IP-Adresse des Endpunkts Ihres Big Data-Clusters fest.
 
    ![„Kernel“ und „Anfügen an“ festlegen](media/notebook-tutorial-spark/set-kernel-and-attach-to.png)
 

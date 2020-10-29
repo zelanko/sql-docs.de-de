@@ -10,10 +10,10 @@ ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
+ms.lasthandoff: 10/22/2020
 ms.locfileid: "87243271"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lektion 1: Erstellen einer Beispiel-Abonnentendatenbank
@@ -28,7 +28,7 @@ Für diese Lektion wird angenommen, dass Sie [!INCLUDE[ssManStudioFull_md](../in
   
 2.  Klicken Sie mit der rechten Maustaste auf „Datenbanken“, und wählen Sie **Neue Datenbank...** aus.  
   
-3.  Geben Sie im Dialogfeld „Neue Datenbank“ in das Feld **Datenbankname***Subscribers*ein. 
+3.  Geben Sie im Dialogfeld „Neue Datenbank“ in das Feld **Datenbankname***Subscribers* ein. 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 5.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Neue Abfrage** .  

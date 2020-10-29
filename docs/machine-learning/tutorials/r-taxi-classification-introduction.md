@@ -4,18 +4,18 @@ titleSuffix: SQL machine learning
 description: In dieser fünfteiligen Tutorialreihe lernen Sie, wie Sie R-Code in gespeicherte Prozeduren von SQL Server und in T-SQL-Funktionen mit SQL Machine Learning einbetten, um Taxi-Fahrpreise in New York City mithilfe von binärer Klassifizierung vorherzusagen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: c1f9f1b43b9c49cebaed706bf3c8448881c4df46
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9b3f8d66d7197e2e55a07f7a5b6de5da1b4ee24a
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173604"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412557"
 ---
 # <a name="r-tutorial-predict-nyc-taxi-fares-with-binary-classification"></a>R-Tutorial: Vorhersagen von Taxi-Fahrpreisen in New York City mit binärer Klassifizierung
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -72,6 +72,10 @@ In Teil fünf erfahren Sie, wie Sie die Modelle [operationalisieren](r-taxi-clas
 + Installieren Sie [R-Bibliotheken](../package-management/r-package-information.md)
 
 + [Erteilen Sie Berechtigungen zum Ausführen von R-Skripts](../security/user-permission.md)
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
++ Ab SQL Server 2019 erfordert der Isolationsmechanismus, dass Sie für das Verzeichnis, in dem die Plotdatei gespeichert ist, entsprechende Berechtigungen erteilen. Informationen zum Festlegen dieser Berechtigungen finden Sie im [Abschnitt zu Dateiberechtigungen unter „SQL Server 2019 unter Windows: Isolationsänderungen für Machine Learning Services“](../install/sql-server-machine-learning-services-2019.md#file-permissions).
+::: moniker-end
 
 + Stellen Sie die [Demodatenbank für Taxifahrten in New York City](demo-data-nyctaxi-in-sql.md) wieder her.
 

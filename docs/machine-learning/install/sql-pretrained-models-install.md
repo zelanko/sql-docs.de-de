@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a509b16abc2c52f504cf3783f5fb22370faaef94
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956751"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793747"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installieren von vortrainierten Machine Learning-Modellen unter SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -27,7 +27,7 @@ Wenn Sie die vortrainierten Modelle verwenden möchten, rufen Sie die in der fol
 
 | R-Funktion (MicrosoftML) | Python-Funktion (microsoftml) | Verwendung |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](//machine-learning-server/python-reference/microsoftml/get-sentiment) | Generiert positive/negative Stimmungsbewertungen über Texteingaben. |
+| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](/machine-learning-server/python-reference/microsoftml/get-sentiment) | Generiert positive/negative Stimmungsbewertungen über Texteingaben. |
 | [featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](/machine-learning-server/python-reference/microsoftml/featurize-image) | Extrahiert Textinformationen aus Bilddateieingaben. |
 
 ## <a name="prerequisites"></a>Voraussetzungen

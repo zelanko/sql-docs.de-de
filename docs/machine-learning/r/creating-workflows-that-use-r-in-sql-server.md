@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ea99f736af30fb1989bd8728896bed3f12c4c59c
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: cdb11607fe7424c8c1159ba767e6f8292361065f
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956621"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793757"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Erstellen von SSIS- und SSRS-Workflows mit R unter SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -143,7 +143,7 @@ Nach Abschluss dieser Aufgabe können Sie als Prüfpunkt die Tabelle „ssis_iri
 
 Nachdem Sie nun über Code verfügen, mit dem Sie Trainingsdaten laden und ein Modell generieren können, müssen Sie jetzt nur noch mit dem Modell Vorhersagen generieren. 
 
-Fügen Sie hierzu das R-Skript in die SQL-Abfrage ein, um die in die R-Funktion in ssis_iris_model integrierte Funktion [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) auszulösen. Dieser Task wird von der gespeicherten Prozedur **predict_species_length** ausgeführt.
+Fügen Sie hierzu das R-Skript in die SQL-Abfrage ein, um die in die R-Funktion in ssis_iris_model integrierte Funktion [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) auszulösen. Dieser Task wird von der gespeicherten Prozedur **predict_species_length** ausgeführt.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))

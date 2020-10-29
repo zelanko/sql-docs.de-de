@@ -15,12 +15,12 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1d8686e1502fab121e49abed19f8f01488d22b7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462797"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439354"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Darstellungsweise von Joins im Abfrage- und Sicht-Designer (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,26 +41,26 @@ Die Form des Symbols in der Mitte der Joinlinie zeigt an, wie die Tabellen oder 
   
 |**Joinliniensymbol**|**Beschreibung**|  
 |----------------------|-------------------|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools (Symbol)")|Innerer Join (erstellt mit einem Gleichheitszeichen).|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools (Symbol)")|Innerer Join mit dem Operator "größer als".|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbij.gif "Visual Database Tools (Symbol)")|Äußerer Join, bei dem sämtliche Zeilen aus der links angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbik.gif "Visual Database Tools (Symbol)")|Äußerer Join, bei dem sämtliche Zeilen aus der rechts angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbil.gif "Visual Database Tools (Symbol)")|Ein vollständiger äußerer Join, bei der alle Zeilen aus beiden Tabellen aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbih.gif":::|Innerer Join (erstellt mit einem Gleichheitszeichen).|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbii.gif":::|Innerer Join mit dem Operator "größer als".|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbij.gif":::|Äußerer Join, bei dem sämtliche Zeilen aus der links angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbik.gif":::|Äußerer Join, bei dem sämtliche Zeilen aus der rechts angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbil.gif":::|Ein vollständiger äußerer Join, bei der alle Zeilen aus beiden Tabellen aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
   
 Die Symbole an den Enden der Joinlinie zeigen den Jointyp an. In der folgenden Tabelle werden die Jointypen und die an den Enden der Joinslinien verwendeten Symbole aufgelistet.  
   
 |**Symbole an den Enden der Joinlinien**|**Jointyp**|  
 |---------------------------------|--------------------|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools (Symbol)")|1:1-Join|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools (Symbol)")|1:n-Join|  
-|![Visual Database Tools (Symbol)](../../ssms/visual-db-tools/media/dv3wbio.gif "Visual Database Tools (Symbol)")|Der Abfrage- und Sicht-Designer konnte den Joinstyp nicht ermitteln. Dies tritt häufig auf, wenn Sie einen Join manuell erstellt haben.|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbim.gif":::|1:1-Join|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbin.gif":::|1:n-Join|  
+|:::image type="icon" source="../../ssms/visual-db-tools/media/dv3wbio.gif":::|Der Abfrage- und Sicht-Designer konnte den Joinstyp nicht ermitteln. Dies tritt häufig auf, wenn Sie einen Join manuell erstellt haben.|  
   
 ## <a name="sql-pane"></a>SQL-Bereich  
 Ein Join kann in einer SQL-Anweisung auf unterschiedliche Weise ausgedrückt werden. Die genaue Syntax ergibt sich aus der verwendeten Datenbank und daraus, wie Sie den Join definiert haben.  
   
 Folgende Syntaxoptionen werden beim Verknüpfen von Tabellen angewendet:  
   
--   **JOIN-Qualifizierer in der FROM-Klausel**.   Die Schlüsselwörter INNER und OUTER geben den Jointyp an. Diese Syntax entspricht dem Standard bei ANSI 92 SQL.  
+-   **JOIN-Qualifizierer in der FROM-Klausel** .   Die Schlüsselwörter INNER und OUTER geben den Jointyp an. Diese Syntax entspricht dem Standard bei ANSI 92 SQL.  
   
     Wenn Sie z. B. die Tabellen `publishers` und `pub_info` über die Spalte `pub_id` der beiden Tabellen verknüpfen, kann dies mit folgender SQL-Anweisung ausgedrückt werden:  
   
@@ -72,7 +72,7 @@ Folgende Syntaxoptionen werden beim Verknüpfen von Tabellen angewendet:
   
     Wenn Sie einen äußeren Join erstellen, wird LEFT OUTER oder RIGHT OUTER statt INNER verwendet.  
   
--   **WHERE-Klausel zum Vergleich der Spalten in beiden Tabellen**.   Eine WHERE-Klausel wird angezeigt, wenn die Datenbank die JOIN-Syntax nicht unterstützt (oder wenn Sie sie selbst eingegeben haben). Wenn der Join über die WHERE-Klausel erstellt wird, werden beide Tabellennamen in der FROM-Klausel angegeben.  
+-   **WHERE-Klausel zum Vergleich der Spalten in beiden Tabellen** .   Eine WHERE-Klausel wird angezeigt, wenn die Datenbank die JOIN-Syntax nicht unterstützt (oder wenn Sie sie selbst eingegeben haben). Wenn der Join über die WHERE-Klausel erstellt wird, werden beide Tabellennamen in der FROM-Klausel angegeben.  
   
     Die folgende Anweisung verknüpft z. B. die Tabellen `publishers` und `pub_info` .  
   
