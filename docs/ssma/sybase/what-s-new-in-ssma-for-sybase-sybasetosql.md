@@ -4,22 +4,30 @@ description: Informieren Sie sich über Änderungen an SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 9/28/2020
+ms.date: 10/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: fdbe37ddb915e64c5f947a64078e574a8eed8bbd
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 57b589ef62259904d63106298326dd537d33fc15
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497794"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036062"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Neues in SSMA für SAP ASE (sybasedesql)
 
 In diesem Artikel werden die Änderungen an SQL Server Migration Assistant (SSMA) für SAP ASE (ehemals SSMA für Sybase) in jeder Version aufgeführt.
+
+## <a name="ssma-v815"></a>SSMA v 8.15
+
+Zusätzlich zu den Verbesserungen der Barrierefreiheit enthält die Version Version 8.15 von SSMA für SAP ASE folgende Änderungen:
+
+* Revamp-Bewertungsberichte für die Arbeit in modernen Browsern
+* Von der Datenbank zur Azure AD Authentifizierung bereitgestellte Autorität verwenden
+* Benennen von aus Dateien geladenen Anweisungen verbessern
 
 ## <a name="ssma-v814"></a>SSMA v 8,14
 
@@ -73,7 +81,7 @@ Das v 8.7-Release von SSMA für SAP ASE weist kleinere Korrekturen und Leistungs
 
 Zusätzlich zu einem Zielsatz von Korrekturen, die zur Verbesserung der Benutzerfreundlichkeit und Leistung entwickelt wurden, wurde die Version Version 8.6 von SSMA für SAP ASE durch Hinzufügen einer Einstellung verbessert, mit der Benutzer die erweiterten SSMA-Eigenschaften im konvertierten Code weglassen können.
 
-Um diese Einstellung zu nutzen, navigieren Sie in SSMA für SAP ASE **zu Extras**  >  **Projekteinstellungen**  >  **Allgemeine**  >  **Konvertierung**, und aktualisieren **Misc**Sie dann unter "Verschiedenes" den Wert der Einstellung " **Erweiterte Eigenschaften** unterdrücken" auf " **Ja**".
+Um diese Einstellung zu nutzen, navigieren Sie in SSMA für SAP ASE **zu Extras**  >  **Projekteinstellungen**  >  **Allgemeine**  >  **Konvertierung** , und aktualisieren **Misc** Sie dann unter "Verschiedenes" den Wert der Einstellung " **Erweiterte Eigenschaften** unterdrücken" auf " **Ja** ".
 
 ![Einstellung für erweiterte Eigenschaften weglassen](../sybase/media/ssma-omit-extended-properties.png)
 
@@ -129,7 +137,7 @@ Das v 8.0-Release von SSMA für SAP ASE wurde durch gezielte Korrekturen verbess
 
   ![SQL-Datenbank-Mi-Projekt](../media/ssma-newproject-sqldbmi.png)
 
-* **Korrektur Ratgeber**nach der Konvertierung. Weitere Informationen hierzu [finden Sie hier](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+* **Korrektur Ratgeber** nach der Konvertierung. Weitere Informationen hierzu [finden Sie hier](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
 * Vorläufige Datenbank/Schema-Auswahl.
 
@@ -154,7 +162,7 @@ Die Version Version 7.9 von SSMA für SAP ASE enthält die folgenden Änderungen
 
 Das Release v 7.8 von SSMA für SAP ASE enthält die folgenden Änderungen:
 
-* Ändern Sie in den **Projekteinstellungen**hervorgehobene Typzuordnung.
+* Ändern Sie in den **Projekteinstellungen** hervorgehobene Typzuordnung.
 * Die Möglichkeit für Benutzer, Telemetriedaten zu deaktivieren.
 
 ## <a name="ssma-v77"></a>SSMA v 7.7
@@ -299,7 +307,7 @@ Die Version vom Juli 2010 von SSMA für Sybase wurde hinzugefügt:
 
 * Unterstützung für die Migration zu SQL Server 2008 R2.
 * Eine neue SSMA-Konsolenanwendung für die Befehlszeilen Ausführung.
-* Unterstützung für die Datenmigration mithilfe von Server seitigen und Client seitigen Daten Migrations Modulen.
+* Unterstützung für die Datenmigration mit Server-Side und Client-Side Datenmigrations-Engines.
 * Unterstützung für die "Custom Select"-Anweisung bei der Datenmigration.
 * Unterstützung für die Migration von Sybase ASE 15.0.3 und 15,5.
 

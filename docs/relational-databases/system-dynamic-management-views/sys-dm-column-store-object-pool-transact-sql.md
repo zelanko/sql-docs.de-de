@@ -1,6 +1,6 @@
 ---
-description: sys. dm_column_store_object_pool (Transact-SQL)
-title: sys. dm_column_store_object_pool (Transact-SQL) | Microsoft-Dokumentation
+description: sys.dm_column_store_object_pool (Transact-SQL)
+title: sys.dm_column_store_object_pool (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c53ddf41cd1d1ac1b71b28779e19383d4266834
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9ead8a41e3ac6aea721603df7bcf288dbcef80d0
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537647"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036086"
 ---
-# <a name="sysdm_column_store_object_pool-transact-sql"></a>sys. dm_column_store_object_pool (Transact-SQL)
+# <a name="sysdm_column_store_object_pool-transact-sql"></a>sys.dm_column_store_object_pool (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
@@ -29,17 +29,17 @@ ms.locfileid: "89537647"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|`database_id`|`int`|Die ID der Datenbank. Dies ist innerhalb einer Instanz einer SQL Server-Datenbank oder eines Azure SQL-Datenbankservers eindeutig. |  
-|`object_id`|`int`|ID des Objekts. Bei dem Objekt handelt es sich um einen der object_types. | 
-|`index_id`|`int`|ID des columnstore-Indexes.|  
-|`partition_number`|`bigint`|Auf 1 basierende Partitionsnummer im Index oder Heap. Jede Tabelle oder Sicht weist mindestens eine Partition auf.| 
-|`column_id`|`int`|ID der columnstore-Spalte. Dies ist für DELETE_BITMAP NULL.| 
-|`row_group_id`|`int`|ID der Zeilen Gruppe.|
-|`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT-ein Spalten Segment. `object_id` die Segment-ID. Ein Segment speichert alle Werte für eine Spalte innerhalb einer Zeilen Gruppe. Wenn eine Tabelle z. b. 10 Spalten enthält, gibt es 10 Spalten Segmente pro Zeilen Gruppe. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY: ein globales Wörterbuch, das Suchinformationen für alle Spalten Segmente in der Tabelle enthält.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY: ein lokales Wörterbuch, das einer Spalte zugeordnet ist.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY: eine weitere Darstellung des globalen Wörterbuchs. Dies ermöglicht eine umgekehrte Suche nach Werten, die dictionary_id werden können. Wird zum Erstellen komprimierter Segmente als Teil von tupelverschiebungs-oder Massen Laden verwendet.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP: eine Bitmap, die Segment Löschungen nachverfolgt. Es gibt eine DELETE-Bitmap pro Partition.|  
-|`access_count`|`int`|Anzahl der Lese-oder Schreibzugriffe auf dieses Objekt.|  
-|`memory_used_in_bytes`|`bigint`|Von diesem Objekt im Objekt Pool verwendeter Arbeitsspeicher.|  
-|`object_load_time`|`datetime`|Uhrzeit, zu der object_id in den Objekt Pool eingefügt wurde.|  
+|**database_id**|INT|Die ID der Datenbank. Dies ist innerhalb einer Instanz einer SQL Server-Datenbank oder eines Azure SQL-Datenbankservers eindeutig. |  
+|**object_id**|INT|ID des Objekts. Bei dem Objekt handelt es sich um einen der object_types. | 
+|**index_id**|INT|ID des columnstore-Indexes.|  
+|**partition_number**|BIGINT|Auf 1 basierende Partitionsnummer im Index oder Heap. Jede Tabelle oder Sicht weist mindestens eine Partition auf.| 
+|**column_id**|INT|ID der columnstore-Spalte. Dies ist für DELETE_BITMAP NULL.| 
+|**row_group_id**|INT|ID der Zeilen Gruppe.|
+|**object_type**|SMALLINT|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
+|**object_type_desc**|nvarchar(60)|COLUMN_SEGMENT-ein Spalten Segment. `object_id` die Segment-ID. Ein Segment speichert alle Werte für eine Spalte innerhalb einer Zeilen Gruppe. Wenn eine Tabelle z. b. 10 Spalten enthält, gibt es 10 Spalten Segmente pro Zeilen Gruppe. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY: ein globales Wörterbuch, das Suchinformationen für alle Spalten Segmente in der Tabelle enthält.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY: ein lokales Wörterbuch, das einer Spalte zugeordnet ist.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY: eine weitere Darstellung des globalen Wörterbuchs. Dies ermöglicht eine umgekehrte Suche nach Werten, die dictionary_id werden können. Wird zum Erstellen komprimierter Segmente als Teil von tupelverschiebungs-oder Massen Laden verwendet.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP: eine Bitmap, die Segment Löschungen nachverfolgt. Es gibt eine DELETE-Bitmap pro Partition.|  
+|**access_count**|INT|Anzahl der Lese-oder Schreibzugriffe auf dieses Objekt.|  
+|**memory_used_in_bytes**|BIGINT|Von diesem Objekt im Objekt Pool verwendeter Arbeitsspeicher.|  
+|**object_load_time**|datetime|Uhrzeit, zu der object_id in den Objekt Pool eingefügt wurde.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 
@@ -54,5 +54,5 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `V
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  
+ [Columnstore-Indizes: Übersicht](../../relational-databases/indexes/columnstore-indexes-overview.md) 
   

@@ -21,12 +21,12 @@ ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e66b54b849f8e8ce35737a8c84871b95f28232f
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: e4d69890ba5c76c3d37ecd6accd9ba13caa7b089
+ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834385"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93036096"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,6 @@ ms.locfileid: "91834385"
 ## <a name="syntax"></a>Syntax    
     
 ```    
-    
 sys.dm_db_index_operational_stats (    
     { database_id | NULL | 0 | DEFAULT }    
   , { object_id | NULL | 0 | DEFAULT }    
@@ -54,86 +53,31 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="arguments"></a>Argumente    
 
-:::row:::
-    :::column:::
-        *database_id*
-    :::column-end:::
-    :::column:::
-        NULL
-    :::column-end:::
-    :::column:::
-        0
-    :::column-end:::
-    :::column:::
-        DEFAULT
-    :::column-end:::
-:::row-end:::
+*database_id* | NULL | 0 | Vorgegebene
 
-  Die ID der Datenbank. *database_id* ist vom Datentyp **smallint**. Gültige Eingaben sind die ID einer Datenbank, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
+  Die ID der Datenbank. *database_id* ist vom Datentyp **smallint** . Gültige Eingaben sind die ID einer Datenbank, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
     
- Geben Sie NULL an, wenn Informationen zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen. Wenn Sie für *database_id*NULL angeben, müssen Sie für *object_id*, *index_id*und *partition_number*ebenfalls NULL angeben.    
+ Geben Sie NULL an, wenn Informationen zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen. Wenn Sie für *database_id* NULL angeben, müssen Sie für *object_id* , *index_id* und *partition_number* ebenfalls NULL angeben.    
     
  Die integrierte [DB_ID](../../t-sql/functions/db-id-transact-sql.md)-Funktion kann angegeben werden.    
 
-:::row:::
-    :::column:::
-        *object_id*
-    :::column-end:::
-    :::column:::
-        NULL
-    :::column-end:::
-    :::column:::
-        0
-    :::column-end:::
-    :::column:::
-        DEFAULT
-    :::column-end:::
-:::row-end:::
+*object_id* | NULL | 0 | Vorgegebene
 
- Die Objekt-ID der Tabelle oder Sicht mit dem Index. *object_id* ist vom Datentyp **int**.    
+ Die Objekt-ID der Tabelle oder Sicht mit dem Index. *object_id* ist vom Datentyp **int** .    
     
  Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
     
- Geben Sie NULL an, wenn zwischengespeicherte Informationen zu allen Tabellen und Sichten in der angegebenen Datenbank zurückgegeben werden sollen. Wenn Sie für *object_id*NULL angeben, müssen Sie auch für *index_id* und *partition_number*NULL angeben.    
+ Geben Sie NULL an, wenn zwischengespeicherte Informationen zu allen Tabellen und Sichten in der angegebenen Datenbank zurückgegeben werden sollen. Wenn Sie für *object_id* NULL angeben, müssen Sie auch für *index_id* und *partition_number* NULL angeben.    
 
-:::row:::
-    :::column:::
-        *index_id*
-    :::column-end:::
-    :::column:::
-        0
-    :::column-end:::
-    :::column:::
-        NULL
-    :::column-end:::
-    :::column:::
-        -1
-    :::column-end:::
-    :::column:::
-        DEFAULT
-    :::column-end:::
-:::row-end:::
+*index_id* | 0 | NULL | -1 | Vorgegebene
 
- Die ID des Index. *index_id* ist vom Datentyp **int**. Gültige Eingaben sind die ID eines Indexes, 0, wenn *object_id* ein Heap ist, NULL,-1 oder default. Der Standardwert ist -1. NULL, -1 und DEFAULT sind in diesem Kontext gleichwertig.    
+ Die ID des Index. *index_id* ist vom Datentyp **int** . Gültige Eingaben sind die ID eines Indexes, 0, wenn *object_id* ein Heap ist, NULL,-1 oder default. Der Standardwert ist -1. NULL, -1 und DEFAULT sind in diesem Kontext gleichwertig.    
     
- Geben Sie NULL an, wenn zwischengespeicherte Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Wenn Sie für *index_id*NULL angeben, müssen Sie auch für *partition_number*NULL angeben.    
+ Geben Sie NULL an, wenn zwischengespeicherte Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Wenn Sie für *index_id* NULL angeben, müssen Sie auch für *partition_number* NULL angeben.    
 
-:::row:::
-    :::column:::
-        *partition_number*
-    :::column-end:::
-    :::column:::
-        NULL
-    :::column-end:::
-    :::column:::
-        0
-    :::column-end:::
-    :::column:::
-        DEFAULT
-    :::column-end:::
-:::row-end:::
+*partition_number* | NULL | 0 | Vorgegebene
 
- Partitionsnummer im Objekt. *partition_number* ist vom Datentyp **int**. Gültige Eingaben sind die *partion_number* eines Indexes oder Heaps, NULL, 0 oder default. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
+ Partitionsnummer im Objekt. *partition_number* ist vom Datentyp **int** . Gültige Eingaben sind die *partion_number* eines Indexes oder Heaps, NULL, 0 oder default. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.    
     
  Geben Sie NULL an, um zwischengespeicherte Informationen für alle Partitionen des Indexes oder Heaps zurückzugeben.    
     
@@ -141,13 +85,13 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>Zurückgegebene Tabelle    
     
-|Spaltenname|Datentyp|Beschreibung|    
+|Spaltenname|Datentyp|BESCHREIBUNG|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|Datenbank-ID|    
 |**object_id**|**int**|ID der Tabelle oder Sicht.|    
 |**index_id**|**int**|ID des Indexes oder Heaps.<br /><br /> 0 = Heap| 
 |**partition_number**|**int**|Auf 1 basierende Partitionsnummer im Index oder Heap.| 
-|**hobt_id**|**bigint**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> ID des Data Heap-oder B-Struktur-Rowsets, das interne Daten für einen columnstore--Index nachverfolgt.<br /><br /> NULL: Dies ist kein internes columnstore--Rowset.<br /><br /> Weitere Informationen finden Sie unter [sys.internal_partitions &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> ID des Data Heap-oder B-Struktur-Rowsets, das interne Daten für einen columnstore--Index nachverfolgt.<br /><br /> NULL: Dies ist kein internes columnstore--Rowset.<br /><br /> Weitere Informationen finden Sie unter [sys.internal_partitions &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Gesamtzahl der Einfügevorgänge auf Blattebene.|    
 |**leaf_delete_count**|**bigint**|Gesamtzahl der Löschvorgänge auf Blattebene. leaf_delete_count wird nur für gelöschte Datensätze erhöht, die nicht als "Ghost First" gekennzeichnet sind. Bei gelöschten Datensätzen, die zuerst Ghosting sind, wird **leaf_ghost_count** stattdessen inkrementiert.|    
 |**leaf_update_count**|**bigint**|Gesamtzahl der Updates auf Blattebene.|    
@@ -162,11 +106,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|Gesamtzahl der im Index oder Heap gestarteten Bereichs- und Tabellenscans.|    
 |**singleton_lookup_count**|**bigint**|Gesamtzahl der Abrufvorgänge einzelner Zeilen aus dem Index oder Heap.|    
 |**forwarded_fetch_count**|**bigint**|Anzahl der über einen weitergeleiteten Datensatz abgerufenen Zeilen.<br /><br /> 0 = Indizes|    
-|**lob_fetch_in_pages**|**bigint**|Gesamtzahl der aus der LOB_DATA-Zuordnungseinheit abgerufenen LOB-Seiten (Large Object). Diese Seiten enthalten Daten, die in Spalten vom Typ **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** und **XML**gespeichert sind. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_pages**|**bigint**|Gesamtzahl der aus der LOB_DATA-Zuordnungseinheit abgerufenen LOB-Seiten (Large Object). Diese Seiten enthalten Daten, die in Spalten vom Typ **Text** , **ntext** , **Image** , **varchar (max)** , **nvarchar (max)** , **varbinary (max)** und **XML** gespeichert sind. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
 |**lob_fetch_in_bytes**|**bigint**|Gesamtzahl der abgerufenen LOB-Datenbytes.|    
 |**lob_orphan_create_count**|**bigint**|Gesamtzahl verwaister LOB-Werte, die für Massenvorgänge erstellt werden.<br /><br /> 0 = Nicht gruppierter Index|    
 |**lob_orphan_insert_count**|**bigint**|Gesamtzahl verwaister LOB-Werte, die während Massenvorgängen eingefügt werden.<br /><br /> 0 = Nicht gruppierter Index|    
-|**row_overflow_fetch_in_pages**|**bigint**|Gesamtwert der Zeilenüberlauf-Datenseiten, die aus der ROW_OVERFLOW_DATA-Zuordnungseinheit abgerufen werden.<br /><br /> Diese Seiten enthalten Daten, die in Spalten vom Typ **varchar (n)**, **nvarchar (n**), **varbinary (n)** und **sql_variant** gespeichert wurden, die aus der Zeile verschoben wurden.|    
+|**row_overflow_fetch_in_pages**|**bigint**|Gesamtwert der Zeilenüberlauf-Datenseiten, die aus der ROW_OVERFLOW_DATA-Zuordnungseinheit abgerufen werden.<br /><br /> Diese Seiten enthalten Daten, die in Spalten vom Typ **varchar (n)** , **nvarchar (n** ), **varbinary (n)** und **sql_variant** gespeichert wurden, die aus der Zeile verschoben wurden.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|Gesamtzahl der abgerufenen Zeilenüberlauf-Datenbytes.|    
 |**column_value_push_off_row_count**|**bigint**|Gesamtzahl der Spaltenwerte für LOB-Daten und Zeilenüberlaufdaten, die durch Ausführen eines Pushs außerhalb von Zeilen verschoben wurden, damit eine eingefügte oder aktualisierte Zeile auf eine Seite passt.|    
 |**column_value_pull_in_row_count**|**bigint**|Gesamtwert der Spaltenwerte für LOB-Daten und Zeilenüberlaufdaten, die durch Ausführen eines Pulls innerhalb eine Zeile verschoben werden. Dieser Vorgang findet statt, wenn Speicherplatz in einem Datensatz durch einen Updatevorgang frei gemacht wird und die Möglichkeit besteht, durch Ausführen eines Pulls einen oder mehrere Werte außerhalb von Zeilen aus den Zuordnungseinheiten LOB_DATA oder ROW_OVERFLOW_DATA zur IN_ROW_DATA-Zuordnungseinheit zu verschieben.|    
@@ -182,15 +126,15 @@ sys.dm_db_index_operational_stats (
 |**page_latch_wait_in_ms**|**bigint**|Gesamtzahl der Millisekunden, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] aufgrund eines Latchkonflikts gewartet hat.|    
 |**page_io_latch_wait_count**|**bigint**|Gesamthäufigkeit, mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einen E/A-Seitenlatch gewartet hat.|    
 |**page_io_latch_wait_in_ms**|**bigint**|Gesamtzahl der Millisekunden, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einen E/A-Seitenlatch gewartet hat.|    
-|**tree_page_latch_wait_count**|**bigint**|Eine Teilmenge von **page_latch_wait_count**, die nur die B-Baumstrukturseiten der oberen Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
-|**tree_page_latch_wait_in_ms**|**bigint**|Eine Teilmenge von **page_latch_wait_in_ms**, die nur die B-Baumstrukturseiten der unteren Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
-|**tree_page_io_latch_wait_count**|**bigint**|Eine Teilmenge von **page_io_latch_wait_count**, die nur die B-Baumstrukturseiten der oberen Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
-|**tree_page_io_latch_wait_in_ms**|**bigint**|Eine Teilmenge von **page_io_latch_wait_in_ms**, die nur die B-Baumstrukturseiten der oberen Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
+|**tree_page_latch_wait_count**|**bigint**|Eine Teilmenge von **page_latch_wait_count** , die nur die B-Baumstrukturseiten der oberen Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
+|**tree_page_latch_wait_in_ms**|**bigint**|Eine Teilmenge von **page_latch_wait_in_ms** , die nur die B-Baumstrukturseiten der unteren Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
+|**tree_page_io_latch_wait_count**|**bigint**|Eine Teilmenge von **page_io_latch_wait_count** , die nur die B-Baumstrukturseiten der oberen Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
+|**tree_page_io_latch_wait_in_ms**|**bigint**|Eine Teilmenge von **page_io_latch_wait_in_ms** , die nur die B-Baumstrukturseiten der oberen Ebene umfasst. Immer 0 für einen Heap oder einen columnstore-Index.|    
 |**page_compression_attempt_count**|**bigint**|Die Anzahl der Seiten, die für Komprimierung auf PAGE-Ebene für bestimmte Partitionen einer Tabelle, eines Index oder einer indizierten Sicht bewertet wurden. Dies schließt Seiten ein, die nicht komprimiert wurden, da beträchtliche Einsparungen nicht erreicht werden konnten. Immer 0 für den columnstore-Index.|    
 |**page_compression_success_count**|**bigint**|Die Anzahl der Datenseiten, die mithilfe von PAGE-Komprimierung für bestimmte Partitionen einer Tabelle, eines Index oder einer indizierten Sicht komprimiert wurden. Immer 0 für den columnstore-Index.|    
     
-## <a name="remarks"></a>Hinweise    
- Dieses dynamische Verwaltungsobjekt akzeptiert keine abhängigen Parameter von CROSS APPLY und OUTER APPLY.    
+## <a name="remarks"></a>Bemerkungen    
+ Dieses dynamische Verwaltungs Objekt akzeptiert keine korrelierten Parameter von `CROSS APPLY` und `OUTER APPLY` .    
     
  Mithilfe von **sys.dm_db_index_operational_stats** können Sie nachverfolgen, wie lange Benutzer warten müssen, um eine Tabelle, einen Index oder eine Partition zu lesen, in eine Tabelle, einen Index oder eine Partition zu schreiben und die Tabellen oder Indizes mit hohen E/A-Aktivitäten oder Hotspots zu identifizieren.    
     
@@ -246,15 +190,15 @@ sys.dm_db_index_operational_stats (
 ## <a name="permissions"></a>Berechtigungen    
  Folgende Berechtigungen sind erforderlich:    
     
--   CONTROL-Berechtigung für das angegebene Objekt innerhalb der Datenbank    
+-   `CONTROL` Berechtigung für das angegebene Objekt innerhalb der Datenbank    
     
--   VIEW DATABASE STATE-Berechtigung zum Zurückgeben von Informationen zu allen Objekten innerhalb der angegebenen Datenbank mithilfe des Objekt Platzhalters @*object_id* = NULL    
+-   `VIEW DATABASE STATE` Berechtigung zum Zurückgeben von Informationen zu allen Objekten innerhalb der angegebenen Datenbank mithilfe des Objekt Platzhalters @ *object_id* = NULL    
     
--   View Server State-Berechtigung zum Zurückgeben von Informationen zu allen Datenbanken mithilfe des Daten Bank Platzhalters @*database_id* = NULL    
+-   `VIEW SERVER STATE` Berechtigung zum Zurückgeben von Informationen zu allen Datenbanken mithilfe des Daten Bank Platzhalters @ *database_id* = NULL    
     
- Wenn die VIEW DATABASE STATE-Berechtigung erteilt wurde, ist die Rückgabe für alle Objekte in der Datenbank zulässig, unabhängig davon, ob CONTROL-Berechtigungen für bestimmte Objekte verweigert wurden.    
+ Durch das erteilen `VIEW DATABASE STATE` von können alle Objekte in der Datenbank zurückgegeben werden, unabhängig davon, welche Steuerelement Berechtigungen für bestimmte Objekte verweigert wurden.    
     
- Nach dem Verweigern der VIEW DATABASE STATE-Berechtigung können keine Objekte in der Datenbank zurückgegeben werden, unabhängig von möglicherweise erteilten CONTROL-Berechtigungen für bestimmte Objekte. Wenn der Datenbank-Platzhalter @*database_id*= NULL angegeben wird, wird die Datenbank auch weggelassen.    
+ Das verweigern `VIEW DATABASE STATE` lässt nicht zu, dass alle Objekte in der Datenbank zurückgegeben werden, unabhängig von den Berechtigungen, die für bestimmte Objekte erteilt wurden. Außerdem wird die Datenbank weggelassen, wenn der Daten Bank Platzhalter `@database_id=NULL` angegeben wird.    
     
  Weitere Informationen finden Sie unter [dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).    
     
@@ -264,9 +208,9 @@ sys.dm_db_index_operational_stats (
  Im folgenden Beispiel werden Informationen für alle Indizes und Partitionen der `Person.Address`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben. Für die Ausführung dieser Abfrage ist zumindest die CONTROL-Berechtigung in der `Person.Address`-Tabelle erforderlich.    
     
 > [!IMPORTANT]    
->  Wenn Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen DB_ID und OBJECT_ID zur Rückgabe eines Parameterwerts verwenden, sollten Sie sicherstellen, dass eine gültige ID zurückgegeben wird. Wenn der Datenbank- oder Objektname nicht gefunden werden kann, wenn sie z. B. nicht vorhanden oder fehlerhaft geschrieben sind, geben beide Funktionen NULL zurück. Die **sys.dm_db_index_operational_stats**-Funktion interpretiert NULL als Platzhalterwert, der alle Datenbanken oder alle Objekte angibt. Da dies ein versehentlicher Vorgang sein kann, veranschaulichen die Beispiele in diesem Abschnitt, wie Sie auf sichere Weise Datenbank- und Objekt-IDs bestimmen.    
+> Wenn Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen DB_ID und OBJECT_ID zur Rückgabe eines Parameterwerts verwenden, sollten Sie sicherstellen, dass eine gültige ID zurückgegeben wird. Wenn der Datenbank- oder Objektname nicht gefunden werden kann, wenn sie z. B. nicht vorhanden oder fehlerhaft geschrieben sind, geben beide Funktionen NULL zurück. Die **sys.dm_db_index_operational_stats** -Funktion interpretiert NULL als Platzhalterwert, der alle Datenbanken oder alle Objekte angibt. Da dies ein versehentlicher Vorgang sein kann, veranschaulichen die Beispiele in diesem Abschnitt, wie Sie auf sichere Weise Datenbank- und Objekt-IDs bestimmen.    
     
-```    
+```sql    
 DECLARE @db_id int;    
 DECLARE @object_id int;    
 SET @db_id = DB_ID(N'AdventureWorks2012');    
@@ -284,16 +228,14 @@ ELSE
     SELECT * FROM sys.dm_db_index_operational_stats(@db_id, @object_id, NULL, NULL);    
   END;    
 GO    
-    
 ```    
     
 ### <a name="b-returning-information-for-all-tables-and-indexes"></a>B. Zurückgeben von Informationen für alle Tabellen und Indizes    
  Im folgenden Beispiel werden Informationen für alle Tabellen und Indizes in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zurückgegeben. Für die Ausführung dieser Abfrage ist die VIEW SERVER STATE-Berechtigung erforderlich.    
     
-```    
+```sql    
 SELECT * FROM sys.dm_db_index_operational_stats( NULL, NULL, NULL, NULL);    
-GO    
-    
+GO        
 ```    
     
 ## <a name="see-also"></a>Weitere Informationen    
