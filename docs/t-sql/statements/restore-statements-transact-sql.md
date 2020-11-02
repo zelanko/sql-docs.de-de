@@ -41,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 12d218ea2075e861b04eb7e3718d630eb19ffe28
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: b2e568e5fc2bc170101b47a436b8af24a22b0137
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227274"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496881"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE-Anweisungen (Transact-SQL)
 
@@ -65,7 +65,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
+        [SQL Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -326,17 +326,17 @@ Ein Rollback wird von der RESTORE-Anweisung über die Optionen [ RECOVERY | NORE
 
 - RECOVERY (die Standardeinstellung) gibt an, dass das Rollback erst dann ausgeführt werden kann, wenn das Rollforward für die aktuelle Sicherung abgeschlossen ist.
 
-  Das Wiederherstellen der Datenbank erfordert, dass die gesamte Gruppe der wiederhergestellten Daten (*Rollforwardgruppe*) mit der Datenbank konsistent ist. Wenn das Rollforward für die Rollforwardgruppe nicht weit genug ausgeführt wurde, um die Konsistenz mit der Datenbank herzustellen, und wenn RECOVERY angegeben ist, dann gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus. Informationen zum Wiederherstellungsprozess finden Sie unter [ (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
+  Das Wiederherstellen der Datenbank erfordert, dass die gesamte Gruppe der wiederhergestellten Daten ( *Rollforwardgruppe* ) mit der Datenbank konsistent ist. Wenn das Rollforward für die Rollforwardgruppe nicht weit genug ausgeführt wurde, um die Konsistenz mit der Datenbank herzustellen, und wenn RECOVERY angegeben ist, dann gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus. Informationen zum Wiederherstellungsprozess finden Sie unter [ (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ## <a name="compatibility-support"></a>Kompatibilitätsunterstützung
-Sicherungen der Datenbanken **master**, **model** und **msdb**, die mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurden, können von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht wiederhergestellt werden.
+Sicherungen der Datenbanken **master** , **model** und **msdb** , die mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurden, können von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht wiederhergestellt werden.
 
 > [!NOTE]
 > Es kann keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherung zu einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wiederhergestellt werden, die älter als die Version ist, von der die Sicherung erstellt wurde.
 
 Jede Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet im Vergleich zu früheren Versionen jedoch einen anderen Standardpfad. Daher muss zum Wiederherstellen einer Datenbank, die am Standardort für Sicherungen in früheren Versionen erstellt wurde, die MOVE-Option verwendet werden. Informationen zum neuen Standardpfad finden Sie unter [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
-Nachdem Sie eine Datenbank einer früheren Version in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederhergestellt haben, wird die Datenbank automatisch aktualisiert. In der Regel ist die Datenbank sofort verfügbar. Wenn eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank aber Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **upgrade_option**. Wenn die Upgradeoption auf „Importieren“ (**upgrade_option** = 2) oder „Neu erstellen“ (**upgrade_option** = 0) festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf Importieren festgelegt ist und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Verwenden Sie **sp_fulltext_service** , um die Einstellung der Servereigenschaft [upgrade_option](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)zu ändern.
+Nachdem Sie eine Datenbank einer früheren Version in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederhergestellt haben, wird die Datenbank automatisch aktualisiert. In der Regel ist die Datenbank sofort verfügbar. Wenn eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Datenbank aber Volltextindizes aufweist, werden diese beim Upgrade entweder importiert, zurückgesetzt oder neu erstellt, je nach der Einstellung der Servereigenschaft **upgrade_option** . Wenn die Upgradeoption auf „Importieren“ ( **upgrade_option** = 2) oder „Neu erstellen“ ( **upgrade_option** = 0) festgelegt ist, sind die Volltextindizes während des Upgrades nicht verfügbar. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf Importieren festgelegt ist und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Verwenden Sie **sp_fulltext_service** , um die Einstellung der Servereigenschaft [upgrade_option](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)zu ändern.
 
 Wird eine Datenbank zum ersten Mal an eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt oder wiederhergestellt, ist noch keine Kopie des Datenbank-Hauptschlüssels (verschlüsselt vom Diensthauptschlüssel) auf dem Server gespeichert. Der Datenbank-Hauptschlüssel (Database Master Key, DMK) muss mithilfe der Anweisung **OPEN MASTER KEY** entschlüsselt werden. Nachdem der Datenbank-Hauptschlüssel entschlüsselt wurde, können Sie für die Zukunft die automatische Entschlüsselung aktivieren, indem Sie die Anweisung **ALTER MASTER KEY REGENERATE** verwenden. Auf diese Weise können Sie eine Kopie des mit dem Diensthauptschlüssel (Service Master Key, SMK) verschlüsselten Datenbank-Hauptschlüssels für den Server bereitstellen. Wenn eine Datenbank von einer früheren Version aktualisiert wurde, sollte der DMK neu generiert werden, damit er den neueren AES-Algorithmus verwendet. Weitere Informationen zum Neugenerieren des DMK finden Sie unter [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). Die zum Neugenerieren des DMK zum Upgrade auf AES erforderliche Zeit hängt von der Anzahl der Objekte ab, die durch den DMK geschützt werden. Der DMK muss nur einmal auf AES aktualisiert und neu generiert werden. Dies hat keine Auswirkungen auf zukünftige Neugenerierungen im Rahmen einer Schlüsselrotationsstrategie.
 
@@ -349,7 +349,7 @@ RESTORE kann nach einem Fehler neu gestartet werden. Außerdem können Sie RESTO
 
 RESTORE ist nicht in einer expliziten oder implizierten Transaktion zulässig.
 
-Für das Wiederherstellen einer beschädigten **master**-Datenbank ist eine spezielle Vorgehensweise erforderlich. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).
+Für das Wiederherstellen einer beschädigten **master** -Datenbank ist eine spezielle Vorgehensweise erforderlich. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Systemdatenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).
 
 Durch das Wiederherstellen einer Datenbank wird der Plancache für die wiederherzustellende Datenbank gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. 
 
@@ -740,7 +740,7 @@ RESTORE DATABASE Sales
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />Verwaltete Instanz \*_**
+        **_\* SQL Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
@@ -887,7 +887,7 @@ WHERE r.command = 'RESTORE DATABASE'
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_**
@@ -933,7 +933,7 @@ RESTORE DATABASE *database_name* Gibt an, dass eine Benutzerdatenbank in einer D
 
 Beim Wiederherstellen einer Benutzerdatenbank wird eine vollständige Datenbanksicherung wiederhergestellt. Anschließend kann optional eine differenzielle Sicherung auf der Appliance wiederhergestellt werden. Das Wiederherstellen einer Benutzerdatenbank beinhaltet das Wiederherstellen von Datenbankbenutzern und Datenbankrollen.
 
-FROM DISK = '\\\\*UNC_path*\\*backup_directory*' Netzwerkpfad und Verzeichnis, aus denen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] die Sicherungsdateien wiederherstellt. Ein Beispiel: FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup‘.
+FROM DISK = '\\\\*UNC_path*\\*backup_directory* ' Netzwerkpfad und Verzeichnis, aus denen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] die Sicherungsdateien wiederherstellt. Ein Beispiel: FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup‘.
 
 *backup_directory* Gibt den Namen eines Verzeichnisses an, das die vollständige oder differenzielle Sicherung enthält. Beispielsweise kann für eine vollständige oder differenzielle Sicherung ein RESTORE HEADERONLY-Vorgang ausgeführt werden.
 

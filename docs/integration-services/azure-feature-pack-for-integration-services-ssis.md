@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1a3bcdf7a5ade98e659b376e7ad3845e64875c3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 63e40e66003737798c444f220058feceab69411a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727602"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678924"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack für Integration Services (SSIS)
 
@@ -112,17 +112,17 @@ Die folgenden Java-Builds wurden getestet.
 
 1. Laden Sie das ZIP-Paket für die Installation herunter, und extrahieren Sie es.
 2. Führen Sie über die Eingabeaufforderung `sysdm.cpl` aus.
-3. Klicken Sie auf der Registerkarte **Erweitert** auf **Umgebungsvariablen**.
-4. Klicken Sie im Abschnitt **Systemvariablen** auf **Neu**.
+3. Klicken Sie auf der Registerkarte **Erweitert** auf **Umgebungsvariablen** .
+4. Klicken Sie im Abschnitt **Systemvariablen** auf **Neu** .
 5. Geben Sie `JAVA_HOME` für den **Variablennamen** ein.
-6. Klicken Sie auf **Verzeichnis durchsuchen**, navigieren Sie zum extrahierten Ordner, und wählen Sie den Unterordner `jre` aus.
+6. Klicken Sie auf **Verzeichnis durchsuchen** , navigieren Sie zum extrahierten Ordner, und wählen Sie den Unterordner `jre` aus.
    Wählen Sie anschließend **OK** aus. Daraufhin wird der **Variablenwert** automatisch aufgefüllt.
-7. Klicken Sie auf **OK**, um das Dialogfeld **New System Variable** (Neue Systemvariable) zu schließen.
-8. Klicken Sie auf **OK**, um das Dialogfeld **Umgebungsvariablen** zu schließen.
-9. Klicken Sie auf **OK**, um das Dialogfeld **Systemeigenschaften** zu schließen.
+7. Klicken Sie auf **OK** , um das Dialogfeld **New System Variable** (Neue Systemvariable) zu schließen.
+8. Klicken Sie auf **OK** , um das Dialogfeld **Umgebungsvariablen** zu schließen.
+9. Klicken Sie auf **OK** , um das Dialogfeld **Systemeigenschaften** zu schließen.
 
 > [!TIP]
-> Wenn Sie das Parquet-Format verwenden und die Fehlermeldung "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**" (Beim Aufrufen von Java ist ein Fehler aufgetreten. Meldung: java.lang.OutOfMemoryError:Java heap space) auftritt, können Sie die Umgebungsvariable *`_JAVA_OPTIONS`* hinzufügen, um die minimale/maximale Heapgröße für JVM anzupassen.
+> Wenn Sie das Parquet-Format verwenden und die Fehlermeldung "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space** " (Beim Aufrufen von Java ist ein Fehler aufgetreten. Meldung: java.lang.OutOfMemoryError:Java heap space) auftritt, können Sie die Umgebungsvariable *`_JAVA_OPTIONS`* hinzufügen, um die minimale/maximale Heapgröße für JVM anzupassen.
 >
 >![JVM-Heap](media/azure-feature-pack-jvm-heap-size.png)
 >
@@ -149,7 +149,7 @@ powershell.exe -file install_openjdk.ps1
 ~~~
 
 > [!TIP]
-> Wenn Sie das Parquet-Format verwenden und die Fehlermeldung "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space**" (Beim Aufrufen von Java ist ein Fehler aufgetreten. Meldung: java.lang.OutOfMemoryError:Java heap space) auftritt, können Sie einen Befehl in *`main.cmd`* hinzufügen, um die minimale/maximale Heapgröße für JVM anzupassen. Beispiel:
+> Wenn Sie das Parquet-Format verwenden und die Fehlermeldung "An error occurred when invoking java, message: **java.lang.OutOfMemoryError:Java heap space** " (Beim Aufrufen von Java ist ein Fehler aufgetreten. Meldung: java.lang.OutOfMemoryError:Java heap space) auftritt, können Sie einen Befehl in *`main.cmd`* hinzufügen, um die minimale/maximale Heapgröße für JVM anzupassen. Beispiel:
 > ~~~
 > setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
 > ~~~
@@ -180,18 +180,18 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 5.  Verwenden Sie den Azure HDInsight Blob Download-Task zum Herunterladen der Pig/Hive-Ausgabedaten vom Azure BLOB-Speicher.
 
-![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
+![Screenshot: SSIS-Big-Data-Szenario in Azure Connector](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
 ## <a name="scenario-managing-data-in-the-cloud"></a>Szenario: Verwalten von Daten in der Cloud
  Verwenden Sie das Azure BLOB-Ziel in einem SSIS-Paket, um Ausgabedaten in einen Azure BLOB-Speicher zu schreiben, oder verwenden Sie die Azure Blob-Quelle zum Lesen von Daten aus einem Azure BLOB-Speicher.
 
-![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
+![Screenshot: Datenfluss von der OLE DB-Quelle zum Azure-Blobziel](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
  
- ![SSIS-AzureConnector-CloudArchive-2](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
+ ![Screenshot: Datenfluss von der Azure-Blobquelle zum OLE DB-Ziel](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
 
  Verwenden Sie den Foreach-Schleifencontainer mit dem Azure Blob-Enumerator, um Daten in mehreren BLOB-Dateien zu verarbeiten.
 
-![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
+![Screenshot: Foreach-Schleifencontainer der Ablaufsteuerung](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## <a name="release-notes"></a>Versionsinformationen
 

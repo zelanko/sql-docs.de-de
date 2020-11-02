@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 64680ae71e34d1da94bf0ec8b2ab1ef75cd3c4d3
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867249"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679018"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -49,9 +49,9 @@ In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] verwendet Alway
 
 Mit Secure Enclaves schützt Always Encrypted die Vertraulichkeit von Daten und bietet gleichzeitig folgende Vorteile:
 
-- **Direkte Verschlüsselung**: Kryptografische Vorgänge für vertrauliche Daten, wie z.B. die anfängliche Datenverschlüsselung oder das Rotieren eines Spaltenverschlüsselungsschlüssels, werden innerhalb der Secure Enclave ausgeführt und erfordern kein Verschieben der Daten an einen Ort außerhalb der Datenbank. Sie können die direkte Verschlüsselung mit der Transact-SQL-Anweisung ALTER TABLE ausführen. Sie benötigen keine Tools wie etwa den Always Encrypted-Assistenten in SSMS oder das PowerShell-Cmdlet „Set-SqlColumnEncryption“.
+- **Direkte Verschlüsselung** : Kryptografische Vorgänge für vertrauliche Daten, wie z.B. die anfängliche Datenverschlüsselung oder das Rotieren eines Spaltenverschlüsselungsschlüssels, werden innerhalb der Secure Enclave ausgeführt und erfordern kein Verschieben der Daten an einen Ort außerhalb der Datenbank. Sie können die direkte Verschlüsselung mit der Transact-SQL-Anweisung ALTER TABLE ausführen. Sie benötigen keine Tools wie etwa den Always Encrypted-Assistenten in SSMS oder das PowerShell-Cmdlet „Set-SqlColumnEncryption“.
 
-- **Umfangreiche Berechnungen**: Vorgänge in verschlüsselten Spalten, wie z.B. Musterabgleich (das LIKE-Prädikat) und Bereichsvergleiche, werden innerhalb der Secure Enclave unterstützt. Damit lässt sich Always Encrypted für eine Vielzahl von Anwendungen und Szenarien verwenden, bei denen solche Berechnungen innerhalb des Datenbanksystems ausgeführt werden müssen.
+- **Umfangreiche Berechnungen** : Vorgänge in verschlüsselten Spalten, wie z.B. Musterabgleich (das LIKE-Prädikat) und Bereichsvergleiche, werden innerhalb der Secure Enclave unterstützt. Damit lässt sich Always Encrypted für eine Vielzahl von Anwendungen und Szenarien verwenden, bei denen solche Berechnungen innerhalb des Datenbanksystems ausgeführt werden müssen.
 
 ## <a name="secure-enclave-attestation"></a>Nachweis von Secure Enclaves
 
@@ -63,14 +63,14 @@ Der Nachweisprozess, den SQL Server für Secure Enclaves für VBS in [!INCLUDE[s
 
 ## <a name="supported-client-drivers"></a>Unterstützte Clienttreiber
 
-Um Always Encrypted mit Secure Enclaves verwenden zu können, muss eine Anwendung einen Clienttreiber nutzen, der dieses Feature unterstützt. Sie müssen die Anwendung sowie den Clienttreiber konfigurieren, um Enclave-Berechnungen und Enclave-Nachweise zu aktivieren. Weitere Informationen, einschließlich der Liste der unterstützten Clienttreiber, finden Sie unter [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md).
+Um Always Encrypted mit Secure Enclaves verwenden zu können, muss eine Anwendung einen Clienttreiber nutzen, der dieses Feature unterstützt. Sie müssen die Anwendung sowie den Clienttreiber konfigurieren, um Enclave-Berechnungen und Enclave-Nachweise zu aktivieren. Weitere Informationen, einschließlich der Liste der unterstützten Clienttreiber, finden Sie unter [Entwickeln von Anwendungen mithilfe von Always Encrypted](always-encrypted-client-development.md).
 
 ## <a name="enclave-enabled-keys"></a>Enclave-fähige Schlüssel
 
 Always Encrypted mit Secure Enclave führt das Konzept der Enclave-fähigen Schlüssel ein:
 
-- **Enclave-fähiger Spaltenhauptschlüssel**: Ein Spaltenhauptschlüssel, für den die ENCLAVE_COMPUTATIONS-Eigenschaft im Spaltenhauptschlüssel-Metadatenobjekt in der Datenbank angegeben ist. Das Spaltenhauptschlüssel-Metadatenobjekt muss auch eine gültige Signatur der Metadateneigenschaften enthalten.
-- **Enclave-fähiger Spaltenverschlüsselungsschlüssel**: Ein Spaltenverschlüsselungsschlüssel, der mit einem Enclave-fähigen Spaltenhauptschlüssel verschlüsselt ist.
+- **Enclave-fähiger Spaltenhauptschlüssel** : Ein Spaltenhauptschlüssel, für den die ENCLAVE_COMPUTATIONS-Eigenschaft im Spaltenhauptschlüssel-Metadatenobjekt in der Datenbank angegeben ist. Das Spaltenhauptschlüssel-Metadatenobjekt muss auch eine gültige Signatur der Metadateneigenschaften enthalten.
+- **Enclave-fähiger Spaltenverschlüsselungsschlüssel** : Ein Spaltenverschlüsselungsschlüssel, der mit einem Enclave-fähigen Spaltenhauptschlüssel verschlüsselt ist.
 
 Wenn die SQL Server-Engine feststellt, dass die in einer Abfrage angegebenen Vorgänge innerhalb der Secure Enclave ausgeführt werden müssen, fordert die Engine den Clienttreiber auf, die für die Berechnungen erforderlichen Spaltenverschlüsselungsschlüssel für die Secure Enclave freizugeben. Der Clienttreiber gibt die Spaltenverschlüsselungsschlüssel nur dann frei, wenn diese Enclave-fähig sind (also mit Enclave-fähigen Spaltenhauptschlüsseln verschlüsselt wurden) und ordnungsgemäß signiert wurden. Andernfalls kann die Abfrage nicht ausgeführt werden.
 
@@ -80,8 +80,8 @@ Weitere Informationen finden Sie unter [Verwalten von Schlüsseln für Always En
 
 Eine Enclave-fähige Spalte ist eine Datenbankspalte, die mit einem Enclave-fähigen Spaltenverschlüsselungsschlüssel verschlüsselt ist. Welche Funktionalität für eine Enclave-fähige Spalte verfügbar ist, richtet sich nach dem von der Spalte verwendeten Verschlüsselungstyp.
 
-- **Deterministische Verschlüsselung**: Enclave-fähige Spalten, die die deterministische Verschlüsselung verwenden, unterstützen die direkte Verschlüsselung, aber keine anderen Vorgänge innerhalb der Secure Enclave. Gleichheitsvergleiche werden unterstützt. Dafür wird jedoch außerhalb der Enclave der Chiffretext verglichen.  
-- **Verschlüsselung nach dem Zufallsprinzip**: Enclave-fähige Spalten, die die Verschlüsselung nach dem Zufallsprinzip verwenden, unterstützen die direkte Verschlüsselung sowie umfangreiche Berechnungen innerhalb der Secure Enclave. Zu den unterstützten umfangreichen Berechnungen zählen Musterabgleich und [Vergleichsoperatoren](../../../t-sql/language-elements/comparison-operators-transact-sql.md), einschließlich Gleichheitsvergleich.
+- **Deterministische Verschlüsselung** : Enclave-fähige Spalten, die die deterministische Verschlüsselung verwenden, unterstützen die direkte Verschlüsselung, aber keine anderen Vorgänge innerhalb der Secure Enclave. Gleichheitsvergleiche werden unterstützt. Dafür wird jedoch außerhalb der Enclave der Chiffretext verglichen.  
+- **Verschlüsselung nach dem Zufallsprinzip** : Enclave-fähige Spalten, die die Verschlüsselung nach dem Zufallsprinzip verwenden, unterstützen die direkte Verschlüsselung sowie umfangreiche Berechnungen innerhalb der Secure Enclave. Zu den unterstützten umfangreichen Berechnungen zählen Musterabgleich und [Vergleichsoperatoren](../../../t-sql/language-elements/comparison-operators-transact-sql.md), einschließlich Gleichheitsvergleich.
 
 Weitere Informationen zu Verschlüsselungstypen finden Sie unter [Always Encrypted-Kryptografie](always-encrypted-cryptography.md).
 

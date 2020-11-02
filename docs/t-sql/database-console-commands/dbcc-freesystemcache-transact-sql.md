@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6edb71255096e8a3164361af07ca0d675f6a9e7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f99d6e50aed43273dbcaa659f95a8bb8a1fe73d3
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422894"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638983"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ DBCC FREESYSTEMCACHE
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumente
-( 'ALL' [,_pool\_name_ ] )  
+( 'ALL' [, _pool\_name_ ] )  
 ALL gibt alle unterstützten Caches an.  
 _pool\_name_ gibt einen Cache für den Resource Governor-Poolcache an. Nur diesem Pool zugeordnete Einträge werden freigegeben.  
   
@@ -62,7 +62,11 @@ NO_INFOMSGS
 Alle Informationsmeldungen werden unterdrückt.  
   
 ## <a name="remarks"></a>Bemerkungen  
-Durch das Ausführen von DBCC FREESYSTEMCACHE wird der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende Informationsmeldung: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den %2!s!-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von DBCC FREEPROCCACHE- oder DBCC FREESYSTEMCACHE-Vorgängen ausgelöst wurden.“ Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
+Durch das Ausführen von DBCC FREESYSTEMCACHE wird der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende Infomeldung: 
+
+>`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
+
+ Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 ## <a name="result-sets"></a>Resultsets  
 DBCC FREESYSTEMCACHE gibt Folgendes zurück: „Die DBCC-Ausführung wurde abgeschlossen. Falls DBCC Fehlermeldungen ausgegeben hat, wenden Sie sich an den Systemadministrator."

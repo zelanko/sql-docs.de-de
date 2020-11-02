@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e1de8032c72f829dbc564bae38b12b120f13695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81ba47199707e4f59094ec0070017610f61d3187
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499246"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439466"
 ---
 # <a name="index-json-data"></a>Indizieren von JSON-Daten
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +70,7 @@ Sie müssen Ihre Abfragen nicht neu schreiben. Falls Sie wie in der vorherigen B
 ### <a name="execution-plan-for-this-example"></a>Ausführungsplan für dieses Beispiel
 Hier finden Sie den Ausführungsplan für die Abfrage in diesem Beispiel.  
   
-![Ausführungsplan](../../relational-databases/json/media/jsonindexblog1.png "Ausführungsplan")  
+![Screenshot: Ausführungsplan für dieses Beispiel](../../relational-databases/json/media/jsonindexblog1.png "Ausführungsplan")  
   
 Statt eines vollständigen Tabellenscans verwendet SQL Server eine Indexsuche im nicht gruppierten Index, und findet so die Zeilen, die die angegebenen Bedingungen erfüllen. Er verwendet dann eine Schlüsselsuche in der Tabelle `SalesOrderHeader`, um die anderen Spalten abzurufen, auf die die Abfrage verweist – in diesem Beispiel `SalesOrderNumber` und `OrderDate`.  
  
@@ -138,13 +138,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Wenn Sie sich den tatsächlichen Ausführungsplan ansehen, sehen Sie, dass er die sortierten Werte aus dem nicht gruppierten Index verwendet.  
   
- ![Ausführungsplan](../../relational-databases/json/media/jsonindexblog2.png "Ausführungsplan")  
+ ![Screenshot: Ausführungsplan mit sortierten Werten aus dem nicht gruppierten Index](../../relational-databases/json/media/jsonindexblog2.png "Ausführungsplan")  
   
  Obwohl die Abfrage eine `ORDER BY`-Klausel hat, verwendet der Ausführungsplan keinen Sort-Operator. Der JSON-Index ist bereits nach den Regeln für serbisches Kyrillisch geordnet. Daher kann SQL Server den nicht gruppierten Index verwenden, in dem die Ergebnisse bereits sortiert wurden.  
   
  Falls Sie jedoch die Sortierung des `ORDER BY`-Ausdrucks ändern, indem Sie beispielsweise `COLLATE French_100_CI_AS_SC` an die `JSON_VALUE`-Funktion anhängen, erhalten Sie einen anderen Ausführungsplan für die Abfrage.  
   
- ![Ausführungsplan](../../relational-databases/json/media/jsonindexblog3.png "Ausführungsplan")  
+ ![Screenshot: anderer Ausführungsplan](../../relational-databases/json/media/jsonindexblog3.png "Ausführungsplan")  
   
  Da die Anordnung der Werte im Index nicht mit den französischen Sortierungsregeln übereinstimmt, kann SQL Server den Index nicht verwenden, um Ergebnisse zu ordnen. Daher wird ein Sort-Operator hinzugefügt, der Ergebnisse nach den französischen Sortierungsregeln sortiert.  
  

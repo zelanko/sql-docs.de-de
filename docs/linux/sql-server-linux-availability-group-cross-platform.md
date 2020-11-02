@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac19c1c8e0dfc2e8a8cf4711400eb3c5cb29b5f2
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 3800029fb04f058f6f2a0f00ed3f859d1385782e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784837"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523895"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Konfigurieren einer SQL Server Always On-Verfügbarkeitsgruppe unter Windows und Linux (plattformübergreifend)
 
@@ -69,7 +69,7 @@ Die Schritte zum Erstellen der Verfügbarkeitsgruppe sind identisch mit den Schr
 
    Die folgende Abbildung zeigt diesen ganzen Schritt.
 
-   ![Aktivieren von Verfügbarkeitsgruppen unter Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![Screenshot: Git Bash-Fenster mit dem Befehl](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
 1. Konfigurieren Sie die Hostdatei auf beiden Servern, oder registrieren Sie die Servernamen bei DNS.
 
@@ -110,7 +110,7 @@ Die Schritte zum Erstellen der Verfügbarkeitsgruppe sind identisch mit den Schr
 
    In der folgenden Abbildung sind Besitz und Gruppe für Zertifikat und Schlüssel ordnungsgemäß festgelegt.
 
-   ![Aktivieren von Verfügbarkeitsgruppen unter Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+   ![Screenshot: Git Bash-Fenster mit der CER- und der PVK-Datei im Ordner „/var/opt/mssql/data“](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
 1. Erstellen Sie auf dem sekundären Replikat einen Anmeldenamen und ein Kennwort für die Datenbank, und erstellen Sie einen Hauptschlüssel.

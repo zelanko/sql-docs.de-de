@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 787d6d914cd290f7edc3847663690b63f58babeb
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: b9a4fc2995b0442f46794ad8ad226b48bfa4726b
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192280"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496999"
 ---
 # <a name="database-files-and-filegroups"></a>Datenbankdateien und Dateigruppen
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -212,6 +212,7 @@ Empfehlungen für die Arbeit mit Dateien und Dateigruppen:
 - Verteilen Sie unterschiedliche Tabellen, die in denselben Joinabfragen verwendet werden, auf unterschiedliche Dateigruppen. Auf diese Weise wird die Leistung verbessert, da die verknüpften Daten in parallelen Datenträger-E/A-Vorgängen gesucht werden.
 - Verteilen Sie Tabellen, auf die häufig zugegriffen wird, und die nicht gruppierten Indizes, die zu diesen Tabellen gehören, auf unterschiedliche Dateigruppen. Durch die Verwendung verschiedener Dateigruppen wird die Leistung verbessert, da auf Dateien, die sich auf unterschiedlichen physischen Datenträgern befinden, parallele E/A-Vorgänge ausgeführt werden können.
 - Platzieren Sie die Transaktionsprotokolldatei(en) nicht auf demselben physischen Datenträger wie die anderen Dateien und Dateigruppen.
+- Wenn Sie mithilfe von Tools wie [Diskpart](/windows-server/administration/windows-commands/diskpart) ein Volume oder eine Partition erweitern müssen, auf dem oder der sich Datenbankdateien befinden, sollten Sie zunächst alle System- und Benutzerdatenbanken sichern und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste anhalten. Außerdem sollten Sie in Erwägung ziehen, nach erfolgreicher Erweiterung von Datenträgervolumes den Befehl [`DBCC CHECKDB`](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) auszuführen, um die physische Integrität aller auf dem Volume befindlicher Datenbanken sicherzustellen.
 
 Weitere Informationen und Empfehlungen zur Verwaltung von Transaktionsprotokolldateien finden Sie unter [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 

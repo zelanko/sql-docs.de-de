@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 1cfc3dc5fa707a10f6adcf6e12122698ff4f9428
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943006"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524017"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Verwenden des Assistenten für externe Tabellen mit ODBC-Datenquellen
 
-Eine der wichtigsten Funktionen in SQL Server 2019 ist die Datenvirtualisierung. Dabei können die Daten ihren ursprünglichen Speicherort beibehalten. Diese Daten können Sie in einer SQL Server-Instanz *virtualisieren*, sodass sie wie in jeder anderen Tabelle in SQL Server abgefragt werden können. Dadurch werden weniger ETL-Vorgänge benötigt. Dieser Prozess wird durch die Verwendung von PolyBase-Connectors ermöglicht. Weitere Informationen finden Sie unter [Erste Schritte mit PolyBase](polybase-guide.md).
+Eine der wichtigsten Funktionen in SQL Server 2019 ist die Datenvirtualisierung. Dabei können die Daten ihren ursprünglichen Speicherort beibehalten. Diese Daten können Sie in einer SQL Server-Instanz *virtualisieren* , sodass sie wie in jeder anderen Tabelle in SQL Server abgefragt werden können. Dadurch werden weniger ETL-Vorgänge benötigt. Dieser Prozess wird durch die Verwendung von PolyBase-Connectors ermöglicht. Weitere Informationen finden Sie unter [Erste Schritte mit PolyBase](polybase-guide.md).
 
 Dieses Video bietet eine Einführung in die Datenvirtualisierung:
 
@@ -28,7 +28,7 @@ Dieses Video bietet eine Einführung in die Datenvirtualisierung:
 
 ## <a name="start-the-external-table-wizard"></a>Starten des Assistenten für externe Tabellen
 
-Stellen Sie eine Verbindung mit der Masterinstanz her, indem Sie die IP-Adresse/Portnummer des **sql-server-master**-Endpunkts verwenden, den Sie mithilfe des Befehls [**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) abgerufen haben. Erweitern Sie im Objekt-Explorer den Knoten **Datenbanken**. Wählen Sie dann eine der Datenbanken aus, in der Sie die Daten aus einer vorhandenen SQL Server-Instanz virtualisieren möchten. Klicken Sie erst mit der rechten Maustaste auf die Datenbank und anschließend mit der linken auf **Create External Table** (Externe Tabelle erstellen), um den Assistenten zum Virtualisieren von Daten zu starten. Sie können den Assistenten zum Virtualisieren von Daten auch über die Befehlspalette starten. Drücken Sie unter Windows STRG+UMSCHALT+P oder unter macOS CMD+UMSCHALT+P.
+Stellen Sie eine Verbindung mit der Masterinstanz her, indem Sie die IP-Adresse/Portnummer des **sql-server-master** -Endpunkts verwenden, den Sie mithilfe des Befehls [**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) abgerufen haben. Erweitern Sie im Objekt-Explorer den Knoten **Datenbanken** . Wählen Sie dann eine der Datenbanken aus, in der Sie die Daten aus einer vorhandenen SQL Server-Instanz virtualisieren möchten. Klicken Sie erst mit der rechten Maustaste auf die Datenbank und anschließend mit der linken auf **Create External Table** (Externe Tabelle erstellen), um den Assistenten zum Virtualisieren von Daten zu starten. Sie können den Assistenten zum Virtualisieren von Daten auch über die Befehlspalette starten. Drücken Sie unter Windows STRG+UMSCHALT+P oder unter macOS CMD+UMSCHALT+P.
 
 ![Assistent zum Virtualisieren von Daten](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Auswählen einer Datenquelle
@@ -41,11 +41,11 @@ Wenn Sie den Assistenten über eine der Datenbanken gestartet haben, wird das Dr
 
 ![Auswählen einer Datenquelle](media/data-virtualization/select-data-source.png)
 
-Klicken Sie auf **Weiter**, um fortzufahren.
+Klicken Sie auf **Weiter** , um fortzufahren.
 
 ## <a name="create-a-database-master-key"></a>Erstellen eines Datenbankhauptschlüssels
 
-In diesem Schritt sollten Sie einen Datenbankhauptschlüssel erstellen. Sie müssen einen Hauptschlüssel erstellen. Dieser sichert die von einer externen Datenquelle verwendeten Anmeldeinformationen. Wählen Sie ein sicheres Kennwort für Ihren Hauptschlüssel aus. Sichern Sie den Hauptschlüssel außerdem über den Befehl **BACKUP MASTER KEY**. Verwahren Sie die Sicherungskopie an einem sicheren Ort außerhalb der Geschäftsräume.
+In diesem Schritt sollten Sie einen Datenbankhauptschlüssel erstellen. Sie müssen einen Hauptschlüssel erstellen. Dieser sichert die von einer externen Datenquelle verwendeten Anmeldeinformationen. Wählen Sie ein sicheres Kennwort für Ihren Hauptschlüssel aus. Sichern Sie den Hauptschlüssel außerdem über den Befehl **BACKUP MASTER KEY** . Verwahren Sie die Sicherungskopie an einem sicheren Ort außerhalb der Geschäftsräume.
 
 ![Erstellen eines Datenbankhauptschlüssels](media/data-virtualization/virtualize-data-master-key.png)
 
@@ -58,13 +58,13 @@ In diesem Schritt erfahren Sie, wie Sie Ihre externe Datenquelle und die entspre
 
 Konfigurieren Sie anschließend Anmeldeinformationen. Geben Sie einen Namen für die Anmeldeinformationen ein. Es handelt sich dabei um die für die gesamte Datenbank gültigen Anmeldeinformationen, die verwendet werden, um die Anmeldeinformationen für die externe Datenquelle zu speichern, die Sie erstellen. z. B. `TestCred`. Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit der Datenquelle herzustellen.
 
-![Anmeldeinformationen für die externe Datenquelle](media/data-virtualization/data-source-credentials.png)
+![Screenshot zu Schritt 3: Herstellen einer Verbindung mit der Datenquelle](media/data-virtualization/data-source-credentials.png)
 
 ## <a name="external-data-table-mapping"></a>Zuordnungstabelle für externe Daten
 
 Wählen Sie auf der nächsten Seite die Tabellen aus, für die Sie externe Ansichten erstellen möchten. Wenn Sie übergeordnete Datenbanken auswählen, werden auch die untergeordneten Tabellen hinzugefügt. Wenn Sie Tabellen ausgewählt haben, wird auf der nächsten Seite rechts eine Zuordnungstabelle angezeigt. An dieser Stelle können Sie Typänderungen vornehmen. Außerdem können Sie den Namen der ausgewählten externen Tabelle ändern.
 
-![Anmeldeinformationen für die externe Datenquelle](media/data-virtualization/data-table-map.png)
+![Screenshot zu Schritt 4: Zuordnen der Datenquellenobjekte zur externen Tabelle](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >Wenn Sie auf eine andere ausgewählte Tabelle doppelklicken, ändert sich die Zuordnungsansicht.
@@ -74,7 +74,7 @@ Wählen Sie auf der nächsten Seite die Tabellen aus, für die Sie externe Ansic
 
 ## <a name="summary"></a>Zusammenfassung
 
-In diesem Schritt erhalten Sie eine Zusammenfassung Ihrer Auswahl. Diese umfasst den Namen der für die gesamte Datenbank gültigen Anmeldeinformationen und der Objekte der externen Datenquelle, die in der Zieldatenbank erstellt werden. Klicken Sie auf **Skript generieren**, um in T-SQL ein Skript mit der Syntax zu erstellen, die zum Erstellen der externen Datenquelle verwendet wird. Klicken Sie auf **Erstellen**, um ein externes Datenquellenobjekt zu erstellen.
+In diesem Schritt erhalten Sie eine Zusammenfassung Ihrer Auswahl. Diese umfasst den Namen der für die gesamte Datenbank gültigen Anmeldeinformationen und der Objekte der externen Datenquelle, die in der Zieldatenbank erstellt werden. Klicken Sie auf **Skript generieren** , um in T-SQL ein Skript mit der Syntax zu erstellen, die zum Erstellen der externen Datenquelle verwendet wird. Klicken Sie auf **Erstellen** , um ein externes Datenquellenobjekt zu erstellen.
 
 ![Bildschirm „Zusammenfassung“](media/data-virtualization/virtualize-data-summary.png)
 

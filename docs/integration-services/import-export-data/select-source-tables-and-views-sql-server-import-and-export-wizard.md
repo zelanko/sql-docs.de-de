@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dad9a87c5055e8dfd8292dca048b5f9d239c1e94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57485f68a1e9418e3d9d2402257599bf54e1ad7b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346786"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439314"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Quelltabellen und -sichten auswählen (SQL Server-Import/Export-Assistent)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent zeigt die Seite **Quelltabellen und -sichten auswählen**an, nachdem Sie angegeben haben, dass Sie eine vollständige Tabelle kopieren möchten, oder nachdem Sie eine Abfrage bereitstellen. Auf dieser Seite wählen Sie die vorhandenen Tabellen und Sichten zum Kopieren aus. Anschließend ordnen Sie die Quelltabellen neuen oder vorhandenen Zieltabellen zu. Optional können Sie auch die Zuordnung einzelner Spalten überprüfen und eine Vorschau von Beispieldaten anzeigen.
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent zeigt die Seite **Quelltabellen und -sichten auswählen** an, nachdem Sie angegeben haben, dass Sie eine vollständige Tabelle kopieren möchten, oder nachdem Sie eine Abfrage bereitstellen. Auf dieser Seite wählen Sie die vorhandenen Tabellen und Sichten zum Kopieren aus. Anschließend ordnen Sie die Quelltabellen neuen oder vorhandenen Zieltabellen zu. Optional können Sie auch die Zuordnung einzelner Spalten überprüfen und eine Vorschau von Beispieldaten anzeigen.
 
 > [!TIP]
 > Wenn Sie mehr als eine SQL Server-Datenbank oder SQL Server-Datenbankobjekte kopieren müssen, die keine Tabellen und Sichten sind, verwenden Sie den Assistenten zum Kopieren von Datenbanken anstelle des Import/Export-Assistenten. Weitere Informationen finden Sie unter [Verwenden des Assistenten zum Kopieren von Datenbanken](../../relational-databases/databases/use-the-copy-database-wizard.md).  
@@ -34,14 +34,14 @@ ms.locfileid: "88346786"
  
 In diesem Beispiel enthält die Liste **Quelle** alle Tabellen der AdventureWorks-Beispieldatenbank. Die ausgewählte Zeile zeigt an, dass der Benutzer die Tabelle **Sales.Customer** von der Quelle in die neue Tabelle **Sales.CustomerNew** des Ziels kopieren möchte. 
    
- ![Seite „Tabellen auswählen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/select-tables1.png "Seite „Tabellen auswählen“ des Import/Export-Assistenten")
+ ![Screenshot: Seite zum Auswählen von Tabellen im Import/Export-Assistenten, wenn Sie Tabellen kopieren möchten](../../integration-services/import-export-data/media/select-tables1.png "Seite „Tabellen auswählen“ des Import/Export-Assistenten")
   
 ## <a name="screen-shot---if-you-provided-a-query"></a>Screenshot: Wenn Sie eine Abfrage bereitgestellt haben  
  Der folgende Screenshot zeigt ein Beispiel der Seite **Quelltabellen und -sichten auswählen** des Assistenten, wenn Sie zuvor die Option **Abfrage zum Angeben der zu übertragenden Daten schreiben** auf der Seite **Tabelle kopieren oder Datenbank abfragen** ausgewählt haben. Die Liste **Quelle** enthält nur eine einzige Zeile. In dieser stellt das Element `[Query]` die Abfrage dar, die Sie auf der Seite **Quellabfrage angeben** bereitgestellt haben.
  
 In diesem Beispiel möchte der Benutzer die Abfrageergebnisse aus der Quelle in die **Sales.CustomerNew** am Ziel kopieren.  
     
- ![Seite „Tabellen auswählen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/select-tables2.png "Seite „Tabellen auswählen“ des Import/Export-Assistenten")  
+ ![Screenshot: Seite zum Auswählen von Tabellen im Import/Export-Assistenten, wenn Sie eine Abfrage bereitgestellt haben](../../integration-services/import-export-data/media/select-tables2.png "Seite „Tabellen auswählen“ des Import/Export-Assistenten")  
 
 ## <a name="select-source-and-destination-tables"></a>Auswählen von Quell- und Zieltabellen 
 **Quelle**  
@@ -57,14 +57,14 @@ Wenn Sie eine Abfrage bereitgestellt haben, enthält die Liste nur das Element `
 
 ## <a name="optionally-review-column-mappings-and-preview-data"></a>Optionales Überprüfen der Spaltenzuordnungen und Anzeigen der Datenvorschau
 **Zuordnungen bearbeiten**   
-Klicken Sie optional auf **Zuordnungen bearbeiten**, um das Dialogfeld **Spaltenzuordnungen** für die ausgewählte Tabelle anzuzeigen. Verwenden Sie das Dialogfeld **Spaltenzuordnungen** , um Folgendes auszuführen.
+Klicken Sie optional auf **Zuordnungen bearbeiten** , um das Dialogfeld **Spaltenzuordnungen** für die ausgewählte Tabelle anzuzeigen. Verwenden Sie das Dialogfeld **Spaltenzuordnungen** , um Folgendes auszuführen.
 -   Überprüfen Sie die Zuordnung einzelner Spalten zwischen der Quelle und dem Ziel.
 -   Wenn Sie nur eine Teilmenge von Spalten kopieren möchten, wählen Sie **ignore** für Spalten aus, die Sie nicht kopieren möchten.
 
 Weitere Informationen finden Sie unter [Spaltenzuordnungen](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
 
 **Vorschau**  
-Klicken Sie optional auf **Vorschau**, um bis zu 200 Zeilen mit Beispieldaten im Dialogfeld **Datenvorschau** anzuzeigen. Dadurch können Sie sicherstellen, dass der Assistent die Daten kopieren wird, die Sie kopieren möchten. Weitere Informationen finden Sie unter [Datenvorschau](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
+Klicken Sie optional auf **Vorschau** , um bis zu 200 Zeilen mit Beispieldaten im Dialogfeld **Datenvorschau** anzuzeigen. Dadurch können Sie sicherstellen, dass der Assistent die Daten kopieren wird, die Sie kopieren möchten. Weitere Informationen finden Sie unter [Datenvorschau](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
   
 Nachdem Sie die Daten in der Vorschau anzeigen, sollten Sie die Optionen ändern, die Sie auf den vorherigen Seiten des Assistenten ausgewählt haben. Um diese Änderungen vorzunehmen, wechseln Sie zurück auf die Seite **Quelltabellen und -sichten auswählen** , und klicken Sie auf **Zurück** , um zu vorherigen Seiten zurückzukehren, auf denen Sie Ihre jeweilige Auswahl ändern können.  
 
@@ -75,22 +75,22 @@ Nachdem Sie die Daten in der Vorschau anzeigen, sollten Sie die Optionen ändern
 
 ### <a name="excel-source-tables"></a>Excel-Quellentabellen
 Die Liste der Quelltabellen und-sichten für eine Excel-Datenquelle enthält zwei Typen von Excel-Objekten.
--   **Arbeitsblätter:** Die Namen von Arbeitsblättern enden auf das Dollarzeichen ($): z.B. **Sheet1$**.
+-   **Arbeitsblätter:** Die Namen von Arbeitsblättern enden auf das Dollarzeichen ($): z.B. **Sheet1$** .
 -   **Benannte Bereiche:** Benannte Bereiche sind ggf. nach dem Namen aufgeführt.
 
-Sie müssen eine Abfrage schreiben, wenn Sie Daten von oder in einen bestimmten, unbenannten Zellbereich laden möchten: z.B. von oder in **[Sheet1$ A1:B4]**. Wechseln Sie zurück auf die Seite **Tabelle kopieren oder Datenbank abfragen** , uns wählen Sie **Abfrage zum Angeben der zu übertragenden Daten schreiben**aus.
+Sie müssen eine Abfrage schreiben, wenn Sie Daten von oder in einen bestimmten, unbenannten Zellbereich laden möchten: z.B. von oder in **[Sheet1$ A1:B4]** . Wechseln Sie zurück auf die Seite **Tabelle kopieren oder Datenbank abfragen** , uns wählen Sie **Abfrage zum Angeben der zu übertragenden Daten schreiben** aus.
 
 ### <a name="excel-destination-tables"></a>Excel-Zieltabellen
 Wenn Sie Daten nach Excel exportieren, können Sie das Ziel wie folgt angeben.
--   **Arbeitsblatt:** Fügen Sie das $-Zeichen an das Ende des Blattnamens an, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B. **[Sheet1$]**, um ein Arbeitsblatt anzugeben.
--   **Benannter Bereich:** Verwenden Sie einfach den Namen des Bereichs, z.B. **MyDataRange**, um einen benannten Bereich anzugeben.
+-   **Arbeitsblatt:** Fügen Sie das $-Zeichen an das Ende des Blattnamens an, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B. **[Sheet1$]** , um ein Arbeitsblatt anzugeben.
+-   **Benannter Bereich:** Verwenden Sie einfach den Namen des Bereichs, z.B. **MyDataRange** , um einen benannten Bereich anzugeben.
 -   **Unbenannter Bereich:** Um einen Bereich von Zellen anzugeben, den Sie nicht benannt haben, fügen Sie das $-Zeichen an das Ende des Blattnamens an, fügen Sie die Bereichsspezifikation hinzu, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B: **[Sheet1$A1:B4]** .
 
 > [!TIP]
 > Wenn Sie Excel als Quelle oder Ziel verwenden, sollten Sie auf **Zuordnungen bearbeiten** klicken und die Datentypzuordnungen auf der Seite **Spaltenzuordnungen** überprüfen. 
 
 ## <a name="whats-next"></a>Nächste Schritte  
- Nach der Auswahl der zu kopierenden vorhandenen Tabellen und Sichten und dem Zuordnen dieser zu ihren Zielen ist **Paket speichern und ausführen**die nächste Seite. Auf dieser Seite geben Sie an, ob der Kopiervorgang sofort ausgeführt werden soll. Abhängig von Ihrer Konfiguration können Sie möglicherweise auch das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket speichern, das der Assistent erstellt hat, um es anzupassen und später wiederzuverwenden. Weitere Informationen finden Sie unter [Paket speichern und ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
+ Nach der Auswahl der zu kopierenden vorhandenen Tabellen und Sichten und dem Zuordnen dieser zu ihren Zielen ist **Paket speichern und ausführen** die nächste Seite. Auf dieser Seite geben Sie an, ob der Kopiervorgang sofort ausgeführt werden soll. Abhängig von Ihrer Konfiguration können Sie möglicherweise auch das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket speichern, das der Assistent erstellt hat, um es anzupassen und später wiederzuverwenden. Weitere Informationen finden Sie unter [Paket speichern und ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Weitere Informationen
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  

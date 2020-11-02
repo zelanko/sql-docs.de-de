@@ -26,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44c696a3c912f52fef2ca5d5ece3411e59dba5d3
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 51c7252e957a9f19d83c6d2b840f91a7261af02b
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957011"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639003"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,17 +43,16 @@ Entfernt alle Elemente aus dem Plancache, entfernt einen bestimmten Plan aus dem
   
 ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntax  
+Syntax für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
-Syntax für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
-
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
 Syntax für [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
   
-```syntaxsql
+```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
      [ WITH NO_INFOMSGS ]   
 [;]  
@@ -95,7 +94,11 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="remarks"></a>Hinweise  
 Verwenden Sie DBCC FREEPROCCACHE, um den Plancache sorgfältig zu leeren. Durch das Löschen des Prozedur-/Plancaches werden alle Pläne entfernt, und eingehende Abfrageausführungen werden mit einem neuen Plan kompiliert, statt dass alle zuvor zwischengespeicherten Pläne wieder verwendet werden. 
 
-Bei steigender Anzahl von Kompilierungen kann es zu einer plötzlichen, vorübergehenden Abnahme der Abfrageleistung kommen. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den "%2!s!"-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von "DBCC FREEPROCCACHE"- oder "DBCC FREESYSTEMCACHE"-Vorgängen ausgelöst wurden.“ Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
+Bei steigender Anzahl von Kompilierungen kann es zu einer plötzlichen, vorübergehenden Abnahme der Abfrageleistung kommen. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende Infomeldung:
+
+> `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.` 
+
+Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 Der Prozedurcache wird außerdem durch die folgenden Neukonfigurierungsvorgänge gelöscht:
 -   access check cache bucket count  

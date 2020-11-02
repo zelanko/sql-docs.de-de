@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91523e68c03467a7c6aaab40a5cbd3ab696b1890
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 37ac7271be5090f17db16f67968df6eca138856d
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866538"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679030"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ Für die Ausführung von SELECT-Abfragen, die in verschlüsselten Spalten gespei
 ### <a name="example"></a>Beispiel
 Sofern `SSN` eine verschlüsselte Spalte in der Tabelle `Patients` ist, ruft die folgende Abfrage die binären Chiffretextwerte ab, wenn Always Encrypted für die Datenbankverbindung deaktiviert ist.   
 
-![always-encrypted-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ciphertext.png)
+![Screenshot: Abfrage „SELECT [SSN] FROM [dbo].[Patients]“ und die Ergebnisse der Abfrage, dargestellt als binäre Chiffretextwerte](../../../relational-databases/security/encryption/media/always-encrypted-ciphertext.png)
  
 ## <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>Abrufen von in verschlüsselten Spalten gespeicherten Klartextwerten    
 So rufen Sie Werte aus einer verschlüsselten Spalte als Klartext ab (um die Werte zu entschlüsseln)   
@@ -49,7 +49,7 @@ So rufen Sie Werte aus einer verschlüsselten Spalte als Klartext ab (um die Wer
 ### <a name="example"></a>Beispiel
 Wenn SSN eine verschlüsselte Spalte `char(11)` in der Tabelle `Patients` ist, gibt die unten gezeigte Abfrage Klartextwerte zurück, sofern Always Encrypted für die Datenbankverbindung aktiviert ist und Sie Zugriff auf den Spaltenhauptschlüssel haben, der für die Spalte `SSN` konfiguriert ist.   
 
-![always-encrypted-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-plaintext.png)
+![Screenshot: Abfrage „SELECT [SSN] FROM [Clinic].[dbo].[Patients]“ und die Ergebnisse der Abfrage, dargestellt als Nur-Text-Werte](../../../relational-databases/security/encryption/media/always-encrypted-plaintext.png)
  
 ## <a name="sending-plaintext-values-targeting-encrypted-columns"></a>Senden von Klartextwerten an verschlüsselte Spalten       
 So führen Sie eine Abfrage aus, die einen Wert an eine verschlüsselte Spalte sendet, z.B. eine Abfrage, die einen in einer verschlüsselten Spalte gespeicherten Wert einfügt, aktualisiert oder danach filtert:
@@ -63,7 +63,7 @@ So führen Sie eine Abfrage aus, die einen Wert an eine verschlüsselte Spalte s
 ### <a name="example"></a>Beispiel
 Wenn `SSN` eine verschlüsselte Spalte `char(11)` in der Tabelle `Patients` ist, versucht das folgende Skript eine Zeile zu finden, die `'795-73-9838'` in der Spalte „SSN“ enthält und den Wert der Spalte `LastName` zurückgibt. Vorausgesetzt wird, dass Always Encrypted für die Datenbankverbindung aktiviert ist, dass „Parametrisierung für Always Encrypted“ für das Fenster „Abfrage-Editor“ aktiviert ist und dass Sie Zugriff auf den Spaltenhauptschlüssel haben, der für die Spalte `SSN` konfiguriert ist.   
 
-![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
+![Screenshot: Abfrage „DECLARE @SSN CHAR(11) = '795-73-9838' SELECT [LastName] FROM [dbo].[Patients] WHERE [SSN] = @SSN“ und die Ergebnisse der Abfrage](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
 
 ## <a name="permissions-for-querying-encrypted-columns"></a>Berechtigungen zum Abfragen verschlüsselter Spalten
 
@@ -71,8 +71,8 @@ Zum Anwenden von Abfragen auf verschlüsselte Spalten, einschließlich Abfragen 
 
 Zusätzlich zu den oben aufgeführten Berechtigungen benötigen Sie zum Entschlüsseln von Abfrageergebnissen oder Verschlüsseln von Abfrageparametern (die durch parametrisierte Transact-SQL-Anweisungen erstellt wurden) auch Zugriff auf den Spaltenhauptschlüssel, der die Zielspalten schützt:
 
-- **Zertifikatspeicher – Lokaler Computer**: Sie benötigen `Read`-Zugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.   
-- **Azure Key Vault**: Sie benötigen die Berechtigungen `get`, `unwrapKey` und `verify` für den Tresor, der den Spaltenhauptschlüssel enthält.
+- **Zertifikatspeicher – Lokaler Computer** : Sie benötigen `Read`-Zugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.   
+- **Azure Key Vault** : Sie benötigen die Berechtigungen `get`, `unwrapKey` und `verify` für den Tresor, der den Spaltenhauptschlüssel enthält.
 - **Schlüsselspeicheranbieter (KSP)** : Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Schlüsselspeicheranbieters ab.   
 - **Kryptografiedienstanbieter (CSP)** : Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Kryptografiedienstanbieters ab.
 
@@ -98,14 +98,14 @@ So aktivieren (oder deaktivieren) Sie Always Encrypted:
     1. Wenn Sie [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] verwenden und Ihre SQL Server-Instanz mit einer Secure Enclave konfiguriert sind, können Sie eine Enclave-Nachweis-URL angeben. Stellen Sie sicher, dass Sie das Textfeld **Enclave-Nachweis-URL** leer lassen, wenn Ihre SQL Server-Instanz nicht Secure Enclave verwendet. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md).
 1. Bei Verwendung von SSMS 17 oder älter:
     1. Wählen Sie die Registerkarte **Weitere Eigenschaften** aus.
-    1. Geben Sie `Column Encryption Setting = Enabled` ein, um Always Encrypted zu aktivieren. Geben Sie zum Deaktivieren von Always Encrypted `Column Encryption Setting = Disabled` an, oder entfernen Sie die Einstellung **Spaltenverschlüsselungseinstellung** von der Registerkarte **Zusätzliche Eigenschaften** (der Standardwert ist **Deaktiviert**).   
- 1. Klicken Sie auf **Verbinden**.
+    1. Geben Sie `Column Encryption Setting = Enabled` ein, um Always Encrypted zu aktivieren. Geben Sie zum Deaktivieren von Always Encrypted `Column Encryption Setting = Disabled` an, oder entfernen Sie die Einstellung **Spaltenverschlüsselungseinstellung** von der Registerkarte **Zusätzliche Eigenschaften** (der Standardwert ist **Deaktiviert** ).   
+ 1. Klicken Sie auf **Verbinden** .
 
 > [!TIP]
 > So schalten Sie zwischen dem Aktivieren und Deaktivieren von Always Encrypted für ein vorhandenes Fenster „Abfrage-Editor“ um:   
 > 1.    Klicken Sie im Fenster „Abfrage-Editor“ mit der rechten Maustaste auf eine beliebige Stelle.
 > 2.    Wählen Sie **Verbindung** > **Verbindung ändern...** aus. Dadurch wird das Dialogfeld **Verbindung mit Server herstellen** für die aktuelle Verbindung für das Abfrage-Editor-Fenster geöffnet. 
-> 2.    Aktivieren oder deaktivieren Sie Always Encrypted, indem Sie die oben stehenden Schritte ausführen, und klicken Sie auf **Verbinden**.  
+> 2.    Aktivieren oder deaktivieren Sie Always Encrypted, indem Sie die oben stehenden Schritte ausführen, und klicken Sie auf **Verbinden** .  
    
 ## <a name="parameterization-for-always-encrypted"></a><a name="param"></a>Parametrisierung für Always Encrypted   
  
@@ -127,17 +127,17 @@ So aktivieren Sie „Parametrisierung für Always Encrypted“ für das aktuelle
 
 1. Wählen Sie im Hauptmenü **Abfrage** aus.
 2. Wählen Sie **Abfrageoptionen...** aus.
-3. Navigieren Sie zu **Ausführung** > **Erweitert**.
-4. Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted**.
-5. Klicken Sie auf **OK**.
+3. Navigieren Sie zu **Ausführung** > **Erweitert** .
+4. Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted** .
+5. Klicken Sie auf **OK** .
 
 So aktivieren oder deaktivieren Sie „Parametrisierung für Always Encrypted“ für künftige „Abfrage-Editor“-Fenster
 
 1. Wählen Sie im Hauptmenü **Tools** aus.
 2. Wählen Sie **Optionen...** aus.
-3. Navigieren Sie zu **Abfrageausführung** > **SQL Server** > **Erweitert**.
-4. Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted**.
-5. Klicken Sie auf **OK**.
+3. Navigieren Sie zu **Abfrageausführung** > **SQL Server** > **Erweitert** .
+4. Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted** .
+5. Klicken Sie auf **OK** .
 
 Bei Ausführung einer Abfrage im Fenster „Abfrage-Editor“, das eine Datenbankverbindung mit aktiviertem Always Encrypted aufweist, ohne dass die Parametrisierung für das Fenster „Abfrage-Editor“ aktiviert ist, werden Sie zur Aktivierung aufgefordert.
 
@@ -183,17 +183,17 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio nutzt Intellisense, um Sie zu informieren, welche Variablen erfolgreich parametrisiert werden können und welche Parametrisierungsversuche misslingen (samt Grund).   
 
-Eine Deklaration einer Variablen, die erfolgreich parametrisiert werden kann, wird im Abfrage-Editor mit einer Warnunterstreichung markiert. Wenn Sie den Mauszeiger über einer Deklarationsanweisung bewegen, die mit einer Warnunterstreichung markiert wurde, werden die Ergebnisse des Parametrisierungsvorgangs, einschließlich der Werte der Haupteigenschaften des resultierenden [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) -Objekts (dem die Variable zugeordnet ist) angezeigt: [SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype), [Size](/dotnet/api/system.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/system.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/system.data.sqlclient.sqlparameter.scale) und [SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue). Eine vollständige Liste aller Variablen, die erfolgreich parametrisiert wurden, finden Sie auf der Registerkarte **Warnung** der Ansicht **Fehlerliste** . Zum Öffnen der Ansicht **Fehlerliste** wählen im Hauptmenü **Ansicht** und dann **Fehlerliste**aus.    
+Eine Deklaration einer Variablen, die erfolgreich parametrisiert werden kann, wird im Abfrage-Editor mit einer Warnunterstreichung markiert. Wenn Sie den Mauszeiger über einer Deklarationsanweisung bewegen, die mit einer Warnunterstreichung markiert wurde, werden die Ergebnisse des Parametrisierungsvorgangs, einschließlich der Werte der Haupteigenschaften des resultierenden [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) -Objekts (dem die Variable zugeordnet ist) angezeigt: [SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype), [Size](/dotnet/api/system.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/system.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/system.data.sqlclient.sqlparameter.scale) und [SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue). Eine vollständige Liste aller Variablen, die erfolgreich parametrisiert wurden, finden Sie auf der Registerkarte **Warnung** der Ansicht **Fehlerliste** . Zum Öffnen der Ansicht **Fehlerliste** wählen im Hauptmenü **Ansicht** und dann **Fehlerliste** aus.    
 
-Wenn SQL Server Management Studio versucht hat, eine Variable zu parametrisieren, aber die Parametrisierung misslungen ist, wird die Deklaration der Variablen mit einer Fehlerunterstreichung gekennzeichnet. Wenn Sie den Mauszeiger über der Deklarationsanweisung bewegen, die mit einer Fehlerunterstreichung markiert wurde, erhalten Sie Informationen zum Fehler. In der Ansicht **Fehlerliste** sehen Sie auf der Registerkarte **Fehler** die vollständige Liste von Parametrisierungsfehlern für alle Variablen. Zum Öffnen der Ansicht **Fehlerliste** wählen im Hauptmenü **Ansicht** und dann **Fehlerliste**aus.   
+Wenn SQL Server Management Studio versucht hat, eine Variable zu parametrisieren, aber die Parametrisierung misslungen ist, wird die Deklaration der Variablen mit einer Fehlerunterstreichung gekennzeichnet. Wenn Sie den Mauszeiger über der Deklarationsanweisung bewegen, die mit einer Fehlerunterstreichung markiert wurde, erhalten Sie Informationen zum Fehler. In der Ansicht **Fehlerliste** sehen Sie auf der Registerkarte **Fehler** die vollständige Liste von Parametrisierungsfehlern für alle Variablen. Zum Öffnen der Ansicht **Fehlerliste** wählen im Hauptmenü **Ansicht** und dann **Fehlerliste** aus.   
 
 Das nachstehende Bildschirmfoto zeigt ein Beispiel von sechs Variablendeklarationen. SQL Server Management Studio hat die ersten drei Variablen erfolgreich parametrisiert. Die letzten drei Variablen haben nicht die Bedingungen für die Parametrisierung erfüllt, weshalb SQL Server Management Studio nicht versucht hat, sie zu parametrisieren (ihre Deklarationen sind nicht gekennzeichnet).
 
-![always-encrypted-parameter-warnings](../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png)
+![Screenshot: Beispiel für sechs Variablendeklarationen, drei davon erfolgreich parametrisiert und drei mit Fehlern und den zugehörigen Warnmeldungen](../../../relational-databases/security/encryption/media/always-encrypted-parameter-warnings.png)
  
 Ein weiteres nachstehendes Beispiel zeigt zwei Variablen, die die Bedingungen für die Parametrisierung erfüllt haben, doch der Parametrisierungsversuch ist misslungen, weil die Variablen falsch initialisiert waren.    
  
-![always-encrypted-error](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
+![Screenshot: Beispiel für zwei Variablendeklarationen, bei denen letztendlich ein Fehler auftritt, und die zugehörigen Fehlermeldungen](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
  
 > [!NOTE]
 > Da Always Encrypted eine beschränkte Teilmenge von Typumwandlungen unterstützt, ist es in vielen Fällen erforderlich, dass der Datentyp einer Transact-SQL-Variablen dem Typ der Spalte in der Zieldatenbank entspricht. Angenommen, der Typ der Spalte `SSN` in der Tabelle `Patients` ist `char(11)`. Die folgende Abfrage misslingt, da der Typ der Variablen `@SSN` (der `nchar(11)`ist) nicht dem Typ der Spalte entspricht.   

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1cc68be44a45ece8ad844585162b0cff651ae487
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 597792aa200edf6dcb9cfe49c95ab5e1befa0c55
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194083"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92343652"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>SSIS-DevOps-Tools (SQL Server Integration Services) Azure DevOps-Erweiterung
 
@@ -22,7 +22,7 @@ Die Erweiterung [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?i
 
 Wenn Sie noch nicht über eine **Azure DevOps-Organisation** verfügen, registrieren Sie sich zunächst bei [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops). Fügen Sie anschließend gemäß [dieser Anleitung](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension) die Erweiterung **SSIS DevOps-Tools** hinzu.
 
-**SSIS DevOps Tools** umfasst den **SSIS-Buildtask**, den **SSIS-Bereitstellungstask** sowie den **Konfigurationstask für SSIS-Kataloge**.
+**SSIS DevOps Tools** umfasst den **SSIS-Buildtask** , den **SSIS-Bereitstellungstask** sowie den **Konfigurationstask für SSIS-Kataloge** .
 
 - Der **[SSIS-Buildtask](#ssis-build-task)** unterstützt das Erstellen von DTPROJ-Dateien in einem Projekt- oder Paketbereitstellungsmodell.
 
@@ -90,8 +90,8 @@ Pfad der ISPAC- oder SSISDeploymentManifest-Quelldateien, die Sie bereitstellen 
 
 Typ des Ziels. Zurzeit unterstützt der SSIS-Bereitstellungstask die folgenden beiden Zieltypen:
 
-- *Dateisystem*: Stellen Sie SSISDeploymentManifest-Dateien und die zugehörigen Dateien für ein angegebenes Dateisystem bereit. Es werden sowohl lokale als auch Azure-Dateifreigaben unterstützt.
-- *SSISDB*: Stellen Sie ISPAC-Dateien für einen angegebenen SSIS-Katalog bereit, der lokal auf SQL Server oder Azure-SSIS Integration Runtime gehostet werden kann.
+- *Dateisystem* : Stellen Sie SSISDeploymentManifest-Dateien und die zugehörigen Dateien für ein angegebenes Dateisystem bereit. Es werden sowohl lokale als auch Azure-Dateifreigaben unterstützt.
+- *SSISDB* : Stellen Sie ISPAC-Dateien für einen angegebenen SSIS-Katalog bereit, der lokal auf SQL Server oder Azure-SSIS Integration Runtime gehostet werden kann.
 
 #### <a name="destination-server"></a>Zielserver
 
@@ -290,7 +290,7 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 
 |Eigenschaft  |Beschreibung  |Notizen  |
 |---------|---------|---------|
-|Ordner  |Ein Array von Ordnerobjekten. Jedes Objekt enthält Konfigurationsinformationen für einen Katalogordner.|Weitere Informationen zum Schema von Ordnerobjekten finden Sie unter *Ordnerattribute*.|
+|Ordner  |Ein Array von Ordnerobjekten. Jedes Objekt enthält Konfigurationsinformationen für einen Katalogordner.|Weitere Informationen zum Schema von Ordnerobjekten finden Sie unter *Ordnerattribute* .|
 
 ##### <a name="folder-attributes"></a>Ordnerattribute
 
@@ -298,16 +298,16 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 |---------|---------|---------|
 |name  |Der Name des Katalogordners.|Sofern der Ordner noch nicht vorhanden ist, wird er erstellt.|
 |description|Eine Beschreibung des Katalogordners.|Der Wert *NULL* wird übersprungen.|
-|projects|Ein Array von Projektobjekten. Jedes Objekt enthält Konfigurationsinformationen für ein Projekt.|Weitere Informationen zum Schema von Projektobjekten finden Sie unter *Projektattribute*.|
-|environments|Ein Array von Umgebungsobjekten. Jedes Objekt enthält Konfigurationsinformationen für eine Umgebung.|Weitere Informationen zum Schema von Umgebungsattributen finden Sie unter *Umgebungsattribute*.|
+|projects|Ein Array von Projektobjekten. Jedes Objekt enthält Konfigurationsinformationen für ein Projekt.|Weitere Informationen zum Schema von Projektobjekten finden Sie unter *Projektattribute* .|
+|environments|Ein Array von Umgebungsobjekten. Jedes Objekt enthält Konfigurationsinformationen für eine Umgebung.|Weitere Informationen zum Schema von Umgebungsattributen finden Sie unter *Umgebungsattribute* .|
 
 ##### <a name="project-attributes"></a>Projektattribute
 
 |Eigenschaft  |Beschreibung  |Hinweise  |
 |---------|---------|---------|
 |name|Der Name des Projekts. |Das Projektobjekt wird übersprungen, wenn das Projekt nicht im übergeordneten Ordner vorhanden ist.|
-|parameters|Ein Array von Parameterobjekten. Jedes Objekt enthält Konfigurationsinformationen für einen Parameter.|Weitere Informationen zum Schema von Parameterobjekten finden Sie unter *Parameterattribute*.|
-|references|Ein Array von Verweisobjekten. Jedes Objekt stellt einen Umgebungsverweis auf das Zielprojekt dar.|Weitere Informationen zu Verweisobjekten finden Sie unter *Verweisattribute*.|
+|parameters|Ein Array von Parameterobjekten. Jedes Objekt enthält Konfigurationsinformationen für einen Parameter.|Weitere Informationen zum Schema von Parameterobjekten finden Sie unter *Parameterattribute* .|
+|references|Ein Array von Verweisobjekten. Jedes Objekt stellt einen Umgebungsverweis auf das Zielprojekt dar.|Weitere Informationen zu Verweisobjekten finden Sie unter *Verweisattribute* .|
 
 ##### <a name="parameter-attributes"></a>Parameterattribute
 
@@ -315,7 +315,7 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 |---------|---------|---------|
 |name|Der Name des Parameters.|<li>Der Parameter kann ein Projektparameter oder ein Paketparameter sein. <li>Wenn er nicht vorhanden ist, wird der Parameter übersprungen. <li>Wenn es sich bei dem Parameter um eine Eigenschaft des Verbindungs-Managers handelt, muss der Name das Format **CM.\<Connection Manager Name>.\<Property Name>** aufweisen. |
 |Container|Der Container des Parameters.|<li>Wenn der Parameter ein Projektparameter ist, muss *container* dem Projektnamen entsprechen. <li>Wenn es sich um einen Paketparameter handelt, muss *container* dem Namen des Pakets mit der Erweiterung **.dtsx** entsprechen.|
-|value|Wert des Parameters|<li>Wenn *valueType* auf *referenced* festgelegt ist: Der Wert ist ein Verweis auf eine Umgebungsvariable des Typs *String*. <li> Wenn *valueType* auf *literal* festgelegt ist: Dieses Attribut unterstützt alle gültigen JSON-Werte des Typs *Boolean*, *Zahl* und *String*. <li> Der Wert wird in den Typ des Zielparameters konvertiert. Wenn die Konvertierung nicht möglich ist, tritt ein Fehler auf.<li> Der Wert *NULL* ist ungültig. Der Task überspringt dieses Parameterobjekt und gibt eine Warnung aus.|
+|value|Wert des Parameters|<li>Wenn *valueType* auf *referenced* festgelegt ist: Der Wert ist ein Verweis auf eine Umgebungsvariable des Typs *String* . <li> Wenn *valueType* auf *literal* festgelegt ist: Dieses Attribut unterstützt alle gültigen JSON-Werte des Typs *Boolean* , *Zahl* und *String* . <li> Der Wert wird in den Typ des Zielparameters konvertiert. Wenn die Konvertierung nicht möglich ist, tritt ein Fehler auf.<li> Der Wert *NULL* ist ungültig. Der Task überspringt dieses Parameterobjekt und gibt eine Warnung aus.|
 |valueType|Der Typ des Parameterwerts.|Gültige Typen sind: <br> *literal:* Das Attribut *value* stellt einen Literalwert dar. <br> *referenced:* Das Attribut *value* stellt einen Verweis auf eine Umgebungsvariable dar.|
 
 ##### <a name="reference-attributes"></a>Verweisattribute
@@ -331,7 +331,7 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 |---------|---------|---------|
 |name|Der Name der Umgebung.|Sofern sie noch nicht vorhanden ist, wird die Umgebung erstellt.|
 |description|Die Beschreibung der Umgebung.|Der Wert *NULL* wird übersprungen.|
-|variables|Ein Array von Variablenobjekten.|Jedes Objekt enthält Konfigurationsinformationen für eine Umgebungsvariable. Weitere Informationen zum Schema eines Variablenobjekten finden Sie unter *Variablenattribute*.|
+|variables|Ein Array von Variablenobjekten.|Jedes Objekt enthält Konfigurationsinformationen für eine Umgebungsvariable. Weitere Informationen zum Schema eines Variablenobjekten finden Sie unter *Variablenattribute* .|
 
 ##### <a name="variable-attributes"></a>Variablenattribute
 
@@ -344,6 +344,12 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 |sensitive|Gibt an, ob der Wert der Umgebungsvariablen vertraulich ist.|Gültige Eingaben sind: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>Versionshinweise
+
+### <a name="version-103"></a>Version 1.0.3
+
+Veröffentlichungsdatum: 21. Oktober 2020
+
+- Hiermit wird das Angeben eines Verbindungszeichenfolgen-Suffix für den SSIS-Bereitstellungstask und den Konfigurationstask für SSIS-Kataloge ermöglicht.
 
 ### <a name="version-102"></a>Version 1.0.2
 

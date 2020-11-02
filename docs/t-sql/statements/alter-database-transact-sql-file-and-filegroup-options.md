@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8baedeb74c111207f55e7d2c77ee44a9c6eef27a
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: d749835aa5a71aa99cd0f8f417b7e0ace68b467f
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688289"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496860"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE-Optionen für Dateien und Dateigruppen (Transact-SQL)
 
@@ -66,7 +66,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
     :::column-end:::
 :::row-end:::
 
@@ -211,7 +211,7 @@ SIZE *size* Gibt die Dateigröße an. SIZE gilt nicht für FILESTREAM-Dateigrupp
 
 In Verbindung mit ADD FILE ist *size* die Anfangsgröße für die Datei. In Verbindung mit MODIFY FILE ist *size* die neue Größe für die Datei und muss größer als die aktuelle Dateigröße sein.
 
-Wenn *size* für die primäre Datei nicht angegeben wird, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Größe der primären Datei in der**model**-Datenbank. Wenn eine sekundäre Datendatei oder Protokolldatei angegeben wird, für die *size* jedoch nicht angegeben ist, legt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Größe der Datei auf 1 MB fest.
+Wenn *size* für die primäre Datei nicht angegeben wird, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Größe der primären Datei in der **model** -Datenbank. Wenn eine sekundäre Datendatei oder Protokolldatei angegeben wird, für die *size* jedoch nicht angegeben ist, legt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Größe der Datei auf 1 MB fest.
 
 Die Suffixe KB, MB, GB und TB können verwendet werden, um Kilobyte, Megabyte, Gigabyte oder Terabyte als Einheit anzugeben. Die Standardeinheit ist MB. Geben Sie eine ganze Zahl (also ohne Dezimalstellen) an. Um einen Bruchteil eines Megabyte anzugeben, konvertieren Sie den Wert in Kilobyte, indem Sie die Zahl mit 1024 multiplizieren. Geben Sie z. B. 1536 KB statt 1,5 MB (1,5 x 1024 = 1536) an.
 
@@ -221,7 +221,7 @@ Die Suffixe KB, MB, GB und TB können verwendet werden, um Kilobyte, Megabyte, G
 > - Wenn ein UNC-Pfad für die Datei angegeben wird
 > - Für die Dateigruppen `FILESTREAM` und `MEMORY_OPTIMIZED_DATA`
 
-MAXSIZE { *max_size*| UNLIMITED } Gibt die maximale Größe an, auf die die Datei vergrößert werden kann.
+MAXSIZE { *max_size* | UNLIMITED } Gibt die maximale Größe an, auf die die Datei vergrößert werden kann.
 
 *max_size* Die maximale Dateigröße. Die Suffixe KB, MB, GB und TB können verwendet werden, um Kilobyte, Megabyte, Gigabyte oder Terabyte als Einheit anzugeben. Die Standardeinheit ist MB. Geben Sie eine ganze Zahl (also ohne Dezimalstellen) an. Wenn *max_file_size* nicht angegeben ist, kann die Datei so lange größer werden, bis der Speicherplatz auf dem Datenträger erschöpft ist.
 
@@ -273,7 +273,7 @@ CONTAINS MEMORY_OPTIMIZED_DATA
 
 Gibt an, dass die Dateigruppe arbeitsspeicheroptimierte Daten im Dateisystem speichert. Weitere Informationen finden Sie unter [In-Memory OLTP – Arbeitsspeicheroptimierung](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Nur eine `MEMORY_OPTIMIZED_DATA`-Dateigruppe ist pro Datenbank zulässig. Zum Erstellen von speicheroptimierten Tabellen kann die Dateigruppe nicht leer sein. Mindestens eine Datei muss angegeben werden. *filegroup_name* verweist auf einen Pfad. Der Pfad muss bis zum letzten Ordner vorhanden sein, und der letzte Ordner darf nicht vorhanden sein.
 
-REMOVE FILEGROUP *filegroup_name* Entfernt eine Dateigruppe aus der Datenbank. Die Dateigruppe kann nur entfernt werden, wenn sie leer ist. Entfernen Sie zuerst alle Dateien aus der Dateigruppe. Weitere Informationen finden Sie im Abschnitt „REMOVE FILE *logical_file_name*“ in diesem Artikel.
+REMOVE FILEGROUP *filegroup_name* Entfernt eine Dateigruppe aus der Datenbank. Die Dateigruppe kann nur entfernt werden, wenn sie leer ist. Entfernen Sie zuerst alle Dateien aus der Dateigruppe. Weitere Informationen finden Sie im Abschnitt „REMOVE FILE *logical_file_name* “ in diesem Artikel.
 
 > [!NOTE]
 > Wenn vom FILESTREAM-Garbage Collector nicht alle Dateien aus einem FILESTREAM-Container entfernt wurden, wird beim Ausführen von `ALTER DATABASE REMOVE FILE` zum Entfernen eines FILESTREAM-Containers ein Fehler zurückgegeben. Weitere Informationen finden Sie unter [Entfernen eines FILESTREAM-Containers](#removing-a-filestream-container) weiter unten in diesem Thema.
@@ -282,9 +282,9 @@ MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT |
 
 \<filegroup_updatability_option> Legt die „read-only“- oder „read/write“-Eigenschaft für die Dateigruppe fest.
 
-DEFAULT Ändert die Standarddatenbank-Dateigruppe in *filegroup_name*. Es können nicht mehrere Dateigruppen in der Datenbank gleichzeitig als Standarddateigruppe verwendet werden. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md).
+DEFAULT Ändert die Standarddatenbank-Dateigruppe in *filegroup_name* . Es können nicht mehrere Dateigruppen in der Datenbank gleichzeitig als Standarddateigruppe verwendet werden. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md).
 
-NAME = *new_filegroup_name* Ändert den Namen der Dateigruppe in *new_filegroup_name*.
+NAME = *new_filegroup_name* Ändert den Namen der Dateigruppe in *new_filegroup_name* .
 
 AUTOGROW_SINGLE_FILE **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
 
@@ -319,7 +319,7 @@ READ_WRITE | READWRITE Gibt an, dass die Gruppe den Status READ_WRITE hat. Updat
 > [!NOTE]
 > Das Schlüsselwort `READWRITE` wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von `READWRITE` bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, in denen derzeit `READWRITE` verwendet wird, sodass diese stattdessen `READ_WRITE` verwenden.
 > [!TIP]
-> Der Status dieser Optionen kann mithilfe der Spalte **is_read_only** in der **sys.databases**-Katalogsicht oder der **Updateability**-Eigenschaft der `DATABASEPROPERTYEX`-Funktion ermittelt werden.
+> Der Status dieser Optionen kann mithilfe der Spalte **is_read_only** in der **sys.databases** -Katalogsicht oder der **Updateability** -Eigenschaft der `DATABASEPROPERTYEX`-Funktion ermittelt werden.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -686,7 +686,7 @@ GO
         [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />Verwaltete Instanz \*_**<br />&nbsp;
+        **_\* SQL Managed Instance \*_**<br />&nbsp;
     :::column-end:::
 :::row-end:::
 
@@ -776,11 +776,11 @@ SIZE *size* Gibt die Dateigröße an.
 
 In Verbindung mit ADD FILE ist *size* die Anfangsgröße für die Datei. In Verbindung mit MODIFY FILE ist *size* die neue Größe für die Datei und muss größer als die aktuelle Dateigröße sein.
 
-Wenn *size* für die primäre Datei nicht angegeben wird, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Größe der primären Datei in der**model**-Datenbank. Wenn eine sekundäre Datendatei oder Protokolldatei angegeben wird, für die *size* jedoch nicht angegeben ist, legt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Größe der Datei auf 1 MB fest.
+Wenn *size* für die primäre Datei nicht angegeben wird, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Größe der primären Datei in der **model** -Datenbank. Wenn eine sekundäre Datendatei oder Protokolldatei angegeben wird, für die *size* jedoch nicht angegeben ist, legt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Größe der Datei auf 1 MB fest.
 
 Die Suffixe KB, MB, GB und TB können verwendet werden, um Kilobyte, Megabyte, Gigabyte oder Terabyte als Einheit anzugeben. Die Standardeinheit ist MB. Geben Sie eine ganze Zahl (also ohne Dezimalstellen) an. Um einen Bruchteil eines Megabyte anzugeben, konvertieren Sie den Wert in Kilobyte, indem Sie die Zahl mit 1024 multiplizieren. Geben Sie z. B. 1536 KB statt 1,5 MB (1,5 x 1024 = 1536) an.
 
-MAXSIZE { *max_size*| UNLIMITED } Gibt die maximale Größe an, auf die die Datei vergrößert werden kann.
+MAXSIZE { *max_size* | UNLIMITED } Gibt die maximale Größe an, auf die die Datei vergrößert werden kann.
 
 *max_size* Die maximale Dateigröße. Die Suffixe KB, MB, GB und TB können verwendet werden, um Kilobyte, Megabyte, Gigabyte oder Terabyte als Einheit anzugeben. Die Standardeinheit ist MB. Geben Sie eine ganze Zahl (also ohne Dezimalstellen) an. Wenn *max_file_size* nicht angegeben ist, kann die Datei so lange größer werden, bis der Speicherplatz auf dem Datenträger erschöpft ist.
 
@@ -813,15 +813,15 @@ GO
 ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_fg;
 ```
 
-REMOVE FILEGROUP *filegroup_name* Entfernt eine Dateigruppe aus der Datenbank. Die Dateigruppe kann nur entfernt werden, wenn sie leer ist. Entfernen Sie zuerst alle Dateien aus der Dateigruppe. Weitere Informationen finden Sie im Abschnitt „REMOVE FILE *logical_file_name*“ in diesem Artikel.
+REMOVE FILEGROUP *filegroup_name* Entfernt eine Dateigruppe aus der Datenbank. Die Dateigruppe kann nur entfernt werden, wenn sie leer ist. Entfernen Sie zuerst alle Dateien aus der Dateigruppe. Weitere Informationen finden Sie im Abschnitt „REMOVE FILE *logical_file_name* “ in diesem Artikel.
 
 MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Ändert die Dateigruppe durch Festlegen des Status auf READ_ONLY oder READ_WRITE, Festlegen der Dateigruppe als Standarddateigruppe für die Datenbank oder Ändern des Dateigruppennamens.
 
 \<filegroup_updatability_option> Legt die „read-only“- oder „read/write“-Eigenschaft für die Dateigruppe fest.
 
-DEFAULT Ändert die Standarddatenbank-Dateigruppe in *filegroup_name*. Es können nicht mehrere Dateigruppen in der Datenbank gleichzeitig als Standarddateigruppe verwendet werden. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md).
+DEFAULT Ändert die Standarddatenbank-Dateigruppe in *filegroup_name* . Es können nicht mehrere Dateigruppen in der Datenbank gleichzeitig als Standarddateigruppe verwendet werden. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md).
 
-NAME = *new_filegroup_name* Ändert den Namen der Dateigruppe in *new_filegroup_name*.
+NAME = *new_filegroup_name* Ändert den Namen der Dateigruppe in *new_filegroup_name* .
 
 AUTOGROW_SINGLE_FILE
 
@@ -851,7 +851,7 @@ READ_WRITE | READWRITE Gibt an, dass die Gruppe den Status READ_WRITE hat. Updat
 > [!NOTE]
 > Das Schlüsselwort `READWRITE` wird in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt. Vermeiden Sie die Verwendung von `READWRITE` bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, in denen derzeit `READWRITE` verwendet wird, sodass diese stattdessen `READ_WRITE` verwenden.
 
-Der Status dieser Optionen kann mithilfe der Spalte **is_read_only** in der **sys.databases**-Katalogsicht oder der **Updateability**-Eigenschaft der `DATABASEPROPERTYEX`-Funktion ermittelt werden.
+Der Status dieser Optionen kann mithilfe der Spalte **is_read_only** in der **sys.databases** -Katalogsicht oder der **Updateability** -Eigenschaft der `DATABASEPROPERTYEX`-Funktion ermittelt werden.
 
 ## <a name="remarks"></a>Bemerkungen
 

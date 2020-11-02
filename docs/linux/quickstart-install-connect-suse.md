@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 8babcb8b849360ba4a025d62a8e89f5ad92175c2
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: c9ac655959814370058059e86814d4ae1abcbc9a
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115939"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496994"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Schnellstart: Installieren von SQL Server und Erstellen einer Datenbank unter SUSE Linux Enterprise Server
 
@@ -66,9 +66,9 @@ Weitere Systemanforderungen finden Sie unter [Systemanforderungen für SQL Serve
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a name="install-sql-server"></a><a id="install"></a>Installieren von SQL Server
+## <a name="install-sql-server-2017"></a><a id="install"></a>Installieren von SQL Server 2017
 
-Um SQL Server unter SLES zu konfigurieren, führen Sie in einem Terminal die folgenden Befehle aus, um das Paket **mssql-server** zu installieren:
+Führen Sie zum Konfigurieren von SQL Server 2017 unter SLES in einem Terminal die folgenden Befehle aus, um das Paket **mssql-server** zu installieren:
 
 1. Laden Sie die Konfigurationsdatei für das SLES-Repository für Microsoft SQL Server 2017 herunter:
 
@@ -131,9 +131,9 @@ Jetzt wird SQL Server auf Ihrem SLES-Computer ausgeführt und ist einsatzbereit!
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a name="install-sql-server"></a><a id="install"></a>Installieren von SQL Server
+## <a name="install-sql-server-2019"></a><a id="install"></a>Installieren von SQL Server 2019
 
-Um SQL Server unter SLES zu konfigurieren, führen Sie in einem Terminal die folgenden Befehle aus, um das Paket **mssql-server** zu installieren:
+Führen Sie zum Konfigurieren von SQL Server 2019 unter SLES in einem Terminal die folgenden Befehle aus, um das Paket **mssql-server** zu installieren:
 
 1. Laden Sie die Konfigurationsdatei für das SLES-Repository für Microsoft SQL Server 2019 herunter:
 
@@ -146,9 +146,9 @@ Um SQL Server unter SLES zu konfigurieren, führen Sie in einem Terminal die fol
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
    ```
-   
+
    Damit sichergestellt ist, dass der Microsoft-Paketsignaturschlüssel auf Ihrem System installiert ist, importieren Sie den Schlüssel mit folgendem Befehl: 
-   
+
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
@@ -202,7 +202,7 @@ Um eine Datenbank zu erstellen, müssen Sie eine Verbindung mit einem Tool herst
    sudo zypper install -y mssql-tools unixODBC-devel
    ```
 
-1. Fügen Sie für einfacheres Arbeiten `/opt/mssql-tools/bin/` zu Ihrer **PATH**-Umgebungsvariablen hinzu. Dadurch können Sie die Tools ausführen, ohne den vollständigen Pfad angeben zu müssen. Führen Sie die folgenden Befehle aus, um **PATH** sowohl für Anmeldesitzungen als auch für interaktive Sitzungen oder Sitzungen ohne Anmeldung zu ändern:
+1. Fügen Sie für einfacheres Arbeiten `/opt/mssql-tools/bin/` zu Ihrer **PATH** -Umgebungsvariablen hinzu. Dadurch können Sie die Tools ausführen, ohne den vollständigen Pfad angeben zu müssen. Führen Sie die folgenden Befehle aus, um **PATH** sowohl für Anmeldesitzungen als auch für interaktive Sitzungen oder Sitzungen ohne Anmeldung zu ändern:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

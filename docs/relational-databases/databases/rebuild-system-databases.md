@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
-ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
+ms.openlocfilehash: 2365440fd87789a30e67c8c5effcbf0e85b8bc24
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91210625"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638993"
 ---
 # <a name="rebuild-system-databases"></a>Neuerstellen von Systemdatenbanken
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -107,10 +107,10 @@ ms.locfileid: "91210625"
     |--------------------|-----------------|  
     |/QUIET oder /Q|Gibt an, dass Setup ohne Benutzeroberfläche ausgeführt wird.|  
     |/ACTION=REBUILDDATABASE|Gibt an, dass die Systemdatenbanken vom Setup neu erstellt werden.|  
-    |/INSTANCENAME=*InstanceName*|Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Geben Sie MSSQLSERVER für die Standardinstanz ein.|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|Gibt die Windows-Gruppen oder die individuellen Konten an, die der festen Serverrolle **sysadmin** hinzugefügt werden sollen. Wenn Sie mehr als ein Konto angeben, trennen Sie die Konten mit einem Leerzeichen. Geben Sie z.B. **BUILTIN\Administrators MyDomain\MyUser**ein. Wenn Sie ein Konto angeben, dessen Name ein Leerzeichen enthält, setzen Sie den Kontonamen in doppelte Anführungszeichen. Geben Sie beispielsweise **NT AUTHORITY\SYSTEM**ein.|  
-    |[ /SAPWD=*StrongPassword* ]|Legt das Kennwort für das **sa**-Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fest. Dieser Parameter ist erforderlich, wenn die Instanz den gemischten Authentifizierungsmodus ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Authentifizierung) verwendet.<br /><br /> **&#42;&#42; Sicherheitshinweis &#42;&#42;** Das Konto **sa** ist ein bekanntes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konto und oft das Ziel böswilliger Benutzer. Es ist sehr wichtig, dass Sie für die **sa** -Anmeldung ein sicheres Kennwort verwenden.<br /><br /> Geben Sie diesen Parameter nicht für den Windows-Authentifizierungsmodus an.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Gibt eine neue Sortierung auf Serverebene an. Dieser Parameter ist optional. Wenn keine Sortierung angegeben wird, wird die aktuelle Sortierung des Servers verwendet.<br /><br /> **\*\* Wichtig \*\*** Die Änderung der Sortierung auf Serverebene ändert nicht die Sortierung vorhandener Benutzerdatenbanken. Alle neu erstellten Benutzerdatenbanken verwenden standardmäßig die neue Sortierung.<br /><br /> Weitere Informationen finden Sie unter [Festlegen oder Ändern der Serversortierung](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
+    |/INSTANCENAME= *InstanceName*|Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Geben Sie MSSQLSERVER für die Standardinstanz ein.|  
+    |/SQLSYSADMINACCOUNTS= *accounts*|Gibt die Windows-Gruppen oder die individuellen Konten an, die der festen Serverrolle **sysadmin** hinzugefügt werden sollen. Wenn Sie mehr als ein Konto angeben, trennen Sie die Konten mit einem Leerzeichen. Geben Sie z.B. **BUILTIN\Administrators MyDomain\MyUser** ein. Wenn Sie ein Konto angeben, dessen Name ein Leerzeichen enthält, setzen Sie den Kontonamen in doppelte Anführungszeichen. Geben Sie beispielsweise **NT AUTHORITY\SYSTEM** ein.|  
+    |[ /SAPWD= *StrongPassword* ]|Legt das Kennwort für das **sa** -Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fest. Dieser Parameter ist erforderlich, wenn die Instanz den gemischten Authentifizierungsmodus ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Authentifizierung) verwendet.<br /><br /> **&#42;&#42; Sicherheitshinweis &#42;&#42;** Das Konto **sa** ist ein bekanntes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konto und oft das Ziel böswilliger Benutzer. Es ist sehr wichtig, dass Sie für die **sa** -Anmeldung ein sicheres Kennwort verwenden.<br /><br /> Geben Sie diesen Parameter nicht für den Windows-Authentifizierungsmodus an.|  
+    |[ /SQLCOLLATION= *CollationName* ]|Gibt eine neue Sortierung auf Serverebene an. Dieser Parameter ist optional. Wenn keine Sortierung angegeben wird, wird die aktuelle Sortierung des Servers verwendet.<br /><br /> **\*\* Wichtig \*\*** Die Änderung der Sortierung auf Serverebene ändert nicht die Sortierung vorhandener Benutzerdatenbanken. Alle neu erstellten Benutzerdatenbanken verwenden standardmäßig die neue Sortierung.<br /><br /> Weitere Informationen finden Sie unter [Festlegen oder Ändern der Serversortierung](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Gibt die Anzahl von tempdb-Datendateien an. Dieser Wert kann auf bis zu 8 bzw. auf die Anzahl von Kernen erhöht werden, je nachdem, welcher Wert größer ist.<br /><br /> Standardwert: 8 oder die Anzahl von Kernen, je nachdem, welcher Wert niedriger ist.|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Gibt die Anfangsgröße jeder tempdb-Datendatei in MB an. Das Setup ermöglicht eine Größe von bis zu 1024 MB.<br /><br /> Standardwert: 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Gibt das Dateivergrößerungsinkrement jeder tempdb-Datendatei in MB an. Der Wert 0 zeigt an, dass die automatische Vergrößerung deaktiviert ist und kein zusätzlicher Platz zulässig ist. Das Setup ermöglicht eine Größe von bis zu 1024 MB.<br /><br /> Standardwert: 64|  
@@ -149,15 +149,15 @@ ms.locfileid: "91210625"
   
 1.  Starten Sie von den Installationsmedien das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setupprogramm (setup.exe).  
   
-2.  Klicken Sie im linken Navigationsbereich auf **Wartung**und dann auf **Reparieren**.  
+2.  Klicken Sie im linken Navigationsbereich auf **Wartung** und dann auf **Reparieren** .  
   
 3.  Es werden Unterstützungsregeln für Setup und Dateiroutinen ausgeführt, um sicherzustellen, dass die erforderlichen Komponenten auf dem System installiert sind und dass der Computer den Setupüberprüfungsregeln erfüllt. Klicken Sie zum Fortsetzen auf **OK** oder auf **Installieren** .  
   
-4.  Wählen Sie auf der Seite Instanz auswählen die zu reparierende Instanz aus, und klicken Sie dann zum auf **Weiter**, um den Vorgang fortzusetzen.  
+4.  Wählen Sie auf der Seite Instanz auswählen die zu reparierende Instanz aus, und klicken Sie dann zum auf **Weiter** , um den Vorgang fortzusetzen.  
   
-5.  Die Reparaturregeln werden ausgeführt, um den Vorgang zu überprüfen. Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
+5.  Die Reparaturregeln werden ausgeführt, um den Vorgang zu überprüfen. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
   
-6.  Klicken Sie auf der Seite **Bereit zum Reparieren** auf **Reparieren**. Wenn die Seite Abgeschlossen angezeigt wird, wurde der Vorgang abgeschlossen.  
+6.  Klicken Sie auf der Seite **Bereit zum Reparieren** auf **Reparieren** . Wenn die Seite Abgeschlossen angezeigt wird, wurde der Vorgang abgeschlossen.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Erstellen einer neuen msdb-Datenbank  
 
@@ -172,7 +172,7 @@ ms.locfileid: "91210625"
   
      Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  Trennen Sie in einem weiteren Befehlszeilenfenster die **msdb**-Datenbank, indem Sie den folgenden Befehl ausführen und dabei *\<servername>* durch die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ersetzen: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`.  
+3.  Trennen Sie in einem weiteren Befehlszeilenfenster die **msdb** -Datenbank, indem Sie den folgenden Befehl ausführen und dabei *\<servername>* durch die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ersetzen: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`.  
   
 4.  Benennen Sie in Windows Explorer die **msdb** -Datenbankdateien um. Diese befinden sich standardmäßig im Unterordner DATA der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.  
   
@@ -192,9 +192,9 @@ ms.locfileid: "91210625"
 
 ##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> Neuerstellen der tempdb-Datenbank  
 
-Wenn die **tempdb**-Datenbank beschädigt ist und die Datenbank-Engine nicht startet, können Sie **tempdb** neu erstellen, ohne alle Systemdatenbanken neu erstellen zu müssen.
+Wenn die **tempdb** -Datenbank beschädigt ist und die Datenbank-Engine nicht startet, können Sie **tempdb** neu erstellen, ohne alle Systemdatenbanken neu erstellen zu müssen.
   
-1. Benennen Sie die aktuellen Dateien „Tempdb.mdf“ und „Templog.ldf“ um, falls sie nicht fehlen. 
+1. Benennen Sie die aktuellen Dateien „tempdb.mdf“ und „templog.ldf“ um, falls sie vorhanden sind. 
 1. Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Eingabeaufforderung aus mithilfe des folgenden Befehls. 
 
    ```sql
@@ -209,7 +209,7 @@ Wenn die **tempdb**-Datenbank beschädigt ist und die Datenbank-Engine nicht sta
 1. Stellen Sie mithilfe von **sqlcmd** eine Verbindung mit dem Server her, und verwenden Sie dann die folgende gespeicherte Prozedur, um den Status der tempdb-Datenbank zurückzusetzen.
 
    ```sql
-   exec master..sp_resetstatus Tempdb
+   exec master..sp_resetstatus tempdb
    ```
 
 1. Fahren Sie den Server herunter, indem Sie im Eingabeaufforderungsfenster STRG+C drücken.

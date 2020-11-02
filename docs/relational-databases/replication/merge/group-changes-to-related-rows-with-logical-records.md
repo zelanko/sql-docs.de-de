@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da2699b397d7c5440adc9cdddb3e2b4c1b239fe7
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ec09eb43fdd00d57860abf1f40e5010084eded97
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866997"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524031"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "91866997"
   
  ![Logischer Datensatz für drei Tabellen, mit ausschließlich Spaltennamen](../../../relational-databases/replication/merge/media/logical-records-01.gif "Logischer Datensatz für drei Tabellen, mit ausschließlich Spaltennamen")  
   
- Die **Customers** -Tabelle ist die übergeordnete Tabelle in dieser Beziehung und enthält eine **CustID**-Primärschlüsselspalte. Die **Orders** -Tabelle enthält eine **OrderID**-Primärschlüsselspalte sowie eine FOREIGN KEY-Einschränkung für die **CustID** -Spalte, die auf die **CustID** -Spalte in der **Customers** -Tabelle verweist. Dementsprechend enthält die **OrderItems** -Tabelle eine **OrderItemID**-Primärschlüsselspalte sowie eine FOREIGN KEY-Einschränkung für die **OrderID** -Spalte, die auf die **OrderID** -Spalte in der **Orders** -Tabelle verweist.  
+ Die **Customers** -Tabelle ist die übergeordnete Tabelle in dieser Beziehung und enthält eine **CustID** -Primärschlüsselspalte. Die **Orders** -Tabelle enthält eine **OrderID** -Primärschlüsselspalte sowie eine FOREIGN KEY-Einschränkung für die **CustID** -Spalte, die auf die **CustID** -Spalte in der **Customers** -Tabelle verweist. Dementsprechend enthält die **OrderItems** -Tabelle eine **OrderItemID** -Primärschlüsselspalte sowie eine FOREIGN KEY-Einschränkung für die **OrderID** -Spalte, die auf die **OrderID** -Spalte in der **Orders** -Tabelle verweist.  
   
  In diesem Beispiel besteht ein logischer Datensatz aus allen Zeilen in der **Orders** -Tabelle, die sich auf einen einzelnen **CustID** -Wert beziehen, und allen Zeilen der **OrderItems** -Tabelle, die sich auf jene Zeilen in der **Orders** -Tabelle beziehen. Das Diagramm zeigt alle Zeilen in den drei Tabellen, die im logischen Datensatz für Customer 2 enthalten sind:  
   
- ![Logischer Datensatz für drei Tabellen mit Werten](../../../relational-databases/replication/merge/media/logical-records-02.gif "Logischer Datensatz für drei Tabellen mit Werten")  
+ ![Erster Screenshot eines logischen Datensatzes über drei Tabellen mit Werten](../../../relational-databases/replication/merge/media/logical-records-02.gif "Logischer Datensatz für drei Tabellen mit Werten")  
   
  Informationen zum Definieren einer logischen Datensatzbeziehung zwischen Artikeln finden Sie unter [Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "91866997"
 ### <a name="the-application-of-changes-as-a-unit"></a>Anwendung von Änderungen als Einheit  
  Falls die Mergeverarbeitung unterbrochen wird, wie z. B. bei einer gelöschten Verbindung, wird bei Verwendung logischer Datensätze für die teilweise abgeschlossene Gruppe verknüpfter replizierter Änderungen ein Rollback ausgeführt. Beispiel: Ein Abonnent fügt einen neuen Auftrag mit **OrderID** = 6 und zwei neue Zeilen in der **OrderItems** -Tabelle mit **OrderItemID** = 10 und **OrderItemID** = 11 für **OrderID** = 6 hinzu.  
   
- ![Logischer Datensatz für drei Tabellen mit Werten](../../../relational-databases/replication/merge/media/logical-records-04.gif "Logischer Datensatz für drei Tabellen mit Werten")  
+ ![Zweiter Screenshot eines logischen Datensatzes über drei Tabellen mit Werten](../../../relational-databases/replication/merge/media/logical-records-04.gif "Logischer Datensatz für drei Tabellen mit Werten")  
   
  Wenn der Replikationsprozess unterbrochen wird, nachdem die **Orders** -Zeile für **OrderID** = 6 abgeschlossen wurde, jedoch bevor die **OrderItems** 10 und 11 abgeschlossen wurden, ist der **OrderTotal** -Wert für **OrderID** = 6 ohne Verwendung logischer Datensätze nicht mit der Summe der **OrderAmount** -Werte für die **OrderItems** -Zeilen konsistent. Bei Verwendung logischer Datensätze wird für die **Orders** -Zeile für **OrderID** = 6 erst dann ein Commit ausgeführt, wenn die verknüpften **OrderItems** -Änderungen repliziert wurden.  
   
@@ -131,11 +131,11 @@ ms.locfileid: "91866997"
   
      ![Untergeordnete Tabelle mit mehr als einer übergeordneten Tabelle](../../../relational-databases/replication/merge/media/logical-records-03.gif "Untergeordnete Tabelle mit mehr als einer übergeordneten Tabelle")  
   
-     Sie können keinen logischen Datensatz verwenden, der die drei Tabellen in dieser Beziehung darstellt, da die Zeilen in **ClassMembers** keiner einzelnen Primärschlüsselzeile zugewiesen sind. Die Tabellen **Classes** und **ClassMembers** könnten jedoch einen logischen Datensatz bilden, ebenso die Tabellen **ClassMembers** und **Students**, aber nicht alle drei zusammen.  
+     Sie können keinen logischen Datensatz verwenden, der die drei Tabellen in dieser Beziehung darstellt, da die Zeilen in **ClassMembers** keiner einzelnen Primärschlüsselzeile zugewiesen sind. Die Tabellen **Classes** und **ClassMembers** könnten jedoch einen logischen Datensatz bilden, ebenso die Tabellen **ClassMembers** und **Students** , aber nicht alle drei zusammen.  
   
 -   Die Veröffentlichung kann keine kreisförmigen Joinfilterbeziehungen enthalten.  
   
-     Nehmen Sie das Beispiel **Customers**, **Orders**und **OrderItems**: Sie könnten keine logischen Datensätze verwenden, wenn die **Orders** -Tabelle auch eine FOREIGN KEY-Einschränkung aufweisen würde, die auf die **OrderItems** -Tabelle verweist.  
+     Nehmen Sie das Beispiel **Customers** , **Orders** und **OrderItems** : Sie könnten keine logischen Datensätze verwenden, wenn die **Orders** -Tabelle auch eine FOREIGN KEY-Einschränkung aufweisen würde, die auf die **OrderItems** -Tabelle verweist.  
   
 ## <a name="performance-implications-of-logical-records"></a>Leistungseinschränkungen logischer Datensätze  
  Logische Datensätze wirken sich auf die Leistung aus. Ohne logische Datensätze kann der Replikations-Agent alle Änderungen für einen bestimmten Artikel gleichzeitig verarbeiten. Da die Änderungen zeilenweise erfolgen, bestehen außerdem nur minimale Sperr- und Transaktionsprotokollanforderungen für die Anwendung von Änderungen.  

@@ -25,12 +25,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0355e777d05ba9b8257f57a65999e6973c53b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 875859d70488bd536223e400e183bcc88a3b4d99
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458859"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497014"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "88458859"
         [SQL-Datenbank](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -159,7 +159,7 @@ Falls MUST_CHANGE angegeben wird, müssen CHECK_EXPIRATION und CHECK_POLICY auf 
 
 Falls CHECK_POLICY auf OFF festgelegt ist, kann CHECK_EXPIRATION nicht auf ON festgelegt werden. Eine ALTER LOGIN-Anweisung mit dieser Kombination von Optionen erzeugt einen Fehler.
 
-Sie können ALTER LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. ALTER LOGIN [*domain\group*] DISABLE gibt zum Beispiel die folgende Fehlermeldung zurück:
+Sie können ALTER LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. ALTER LOGIN [ *domain\group* ] DISABLE gibt zum Beispiel die folgende Fehlermeldung zurück:
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -284,7 +284,7 @@ GO
         **_\* SQL-Datenbank \*_**
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -398,7 +398,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 Im folgenden Beispiel wird die Anmeldung `Mary5` den EKM-Anmeldeinformationen `EKMProvider1` zugeordnet.
 
 
-**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
+**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
 
 ```sql
 ALTER LOGIN Mary5
@@ -428,7 +428,7 @@ GO
 
 Im folgenden Beispiel wird das Kennwort für die `TestUser`-Anmeldung in einen bereits vorhandenen Hashwert geändert.
 
-**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
+**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -456,7 +456,7 @@ GO
         [SQL-Datenbank](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />Verwaltete Instanz \*_**
+        **_\* SQL Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -590,7 +590,7 @@ Falls MUST_CHANGE angegeben wird, müssen CHECK_EXPIRATION und CHECK_POLICY auf 
 
 Falls CHECK_POLICY auf OFF festgelegt ist, kann CHECK_EXPIRATION nicht auf ON festgelegt werden. Eine ALTER LOGIN-Anweisung mit dieser Kombination von Optionen erzeugt einen Fehler.
 
-Sie können ALTER_LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. Dies ist beabsichtigt. ALTER_LOGIN [*domain\group*] DISABLE gibt zum Beispiel die folgende Fehlermeldung zurück:
+Sie können ALTER_LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. Dies ist beabsichtigt. ALTER_LOGIN [ *domain\group* ] DISABLE gibt zum Beispiel die folgende Fehlermeldung zurück:
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -721,7 +721,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         [SQL-Datenbank](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -832,7 +832,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 Im folgenden Beispiel wird die Anmeldung `Mary5` den EKM-Anmeldeinformationen `EKMProvider1` zugeordnet.
 
-**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
+**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
 
 ```sql
 ALTER LOGIN Mary5
@@ -862,7 +862,7 @@ GO
 
 Im folgenden Beispiel wird das Kennwort für die `TestUser`-Anmeldung in einen bereits vorhandenen Hashwert geändert.
 
-**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
+**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
 
 ```sql
 ALTER LOGIN TestUser WITH
@@ -890,7 +890,7 @@ GO
         [SQL-Datenbank](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -972,7 +972,7 @@ Falls MUST_CHANGE angegeben wird, müssen CHECK_EXPIRATION und CHECK_POLICY auf 
 
 Falls CHECK_POLICY auf OFF festgelegt ist, kann CHECK_EXPIRATION nicht auf ON festgelegt werden. Eine ALTER LOGIN-Anweisung mit dieser Kombination von Optionen erzeugt einen Fehler.
 
-Sie können ALTER_LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. Dies ist beabsichtigt. ALTER_LOGIN [*domain\group*] DISABLE gibt zum Beispiel die folgende Fehlermeldung zurück:
+Sie können ALTER_LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. Dies ist beabsichtigt. ALTER_LOGIN [ *domain\group* ] DISABLE gibt zum Beispiel die folgende Fehlermeldung zurück:
 
 `"Msg 15151, Level 16, State 1, Line 1
 "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -1035,7 +1035,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 Im folgenden Beispiel wird die Anmeldung `Mary5` den EKM-Anmeldeinformationen `EKMProvider1` zugeordnet.
 
-**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
+**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
 
 ```sql
 ALTER LOGIN Mary5
@@ -1065,7 +1065,7 @@ GO
 
 Im folgenden Beispiel wird das Kennwort für die `TestUser`-Anmeldung in einen bereits vorhandenen Hashwert geändert.
 
-**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
+**Gilt für** :  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
 
 ```sql
 ALTER LOGIN TestUser WITH

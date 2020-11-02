@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d043d7613467381b0c19dfb2ac2ee2ee4ec0e523
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: e4763f4c4f28ad4787785b4e5838155fb9a05f10
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529421"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496869"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -71,7 +71,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -191,7 +191,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 DATABASE Gibt eine vollständige Datenbanksicherung an. Wird eine Liste von Dateien und Dateigruppen angegeben, werden nur diese Dateien und Dateigruppen gesichert. Während einer vollständigen oder differenziellen Datenbanksicherung werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auch die erforderlichen Teile des Transaktionsprotokolls gesichert, um eine konsistente Datenbank zu erzeugen, wenn die Sicherung wiederhergestellt wird.
 
-Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung*) erstellte Sicherung wiederherstellen, wird die komplette Sicherung wiederhergestellt. Nur Protokollsicherungen können bis zu einem bestimmten Zeitpunkt oder bis zu einer bestimmten Transaktion in der Sicherung wiederhergestellt werden.
+Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung* ) erstellte Sicherung wiederherstellen, wird die komplette Sicherung wiederhergestellt. Nur Protokollsicherungen können bis zu einem bestimmten Zeitpunkt oder bis zu einer bestimmten Transaktion in der Sicherung wiederhergestellt werden.
 
 > [!NOTE]
 > Für die **Masterdatenbank** kann nur eine vollständige Datenbanksicherung ausgeführt werden.
@@ -205,12 +205,12 @@ Eine Protokollsicherung können Sie auf eine bestimmte Zeit oder Transaktion in 
 > [!NOTE]
 > Nach einer normalen Protokollsicherung sind einige Transaktionsprotokolldatensätze inaktiv, sofern Sie nicht `WITH NO_TRUNCATE` oder `COPY_ONLY` angeben. Das Protokoll wird abgeschnitten, nachdem alle Datensätze innerhalb mindestens einer virtuellen Protokolldatei deaktiviert werden. Wenn das Protokoll nach routinemäßigen Protokollsicherungen nicht abgeschnitten wird, wird das Abschneiden des Protokolls möglicherweise verzögert. Weitere Informationen finden Sie in [Faktoren, die die Protokollkürzung verzögern können](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).
 
-{ _database\_name_ |  **@** _database\_name\_var_ } Die Datenbank, aus der das Transaktionsprotokoll, die Teildatenbank oder die vollständige Datenbank gesichert wird. Bei Angabe in Form einer Variablen ( **@** _database\_name\_var_) kann dieser Name entweder als Zeichenfolgenkonstante ( **@** _database\_name\_var_ **=** _database name_) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.
+{ _database\_name_ |  **@** _database\_name\_var_ } Die Datenbank, aus der das Transaktionsprotokoll, die Teildatenbank oder die vollständige Datenbank gesichert wird. Bei Angabe in Form einer Variablen ( **@** _database\_name\_var_ ) kann dieser Name entweder als Zeichenfolgenkonstante ( **@** _database\_name\_var_ **=** _database name_ ) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text** ) angegeben werden.
 
 > [!NOTE]
 > Eine Sicherung der Spiegeldatenbank in einer Datenbank-Spiegelungspartnerschaft ist nicht möglich.
 
-\<file_or_filegroup> [ **,** ...*n* ] wird nur mit BACKUP DATABASE verwendet, gibt eine Datenbankdatei oder eine Dateigruppe in einer Datenbank an, die in einer Dateisicherung enthalten sein soll, oder gibt eine schreibgeschützte Datei oder Dateigruppe an, die in einer Teilsicherung enthalten sein soll.
+\<file_or_filegroup> [ **,** ... *n* ] wird nur mit BACKUP DATABASE verwendet, gibt eine Datenbankdatei oder eine Dateigruppe in einer Datenbank an, die in einer Dateisicherung enthalten sein soll, oder gibt eine schreibgeschützte Datei oder Dateigruppe an, die in einer Teilsicherung enthalten sein soll.
 
 FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } Der logische Name einer Datei oder einer Variablen, deren Wert dem logischen Namen einer Datei entspricht, die in der Sicherung enthalten sein soll.
 
@@ -223,7 +223,7 @@ FILEGROUP **=** { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\
 
 Weitere Informationen finden Sie unter [Vollständige Dateisicherungen](../../relational-databases/backup-restore/full-file-backups-sql-server.md) und [Sichern von Dateien und Dateigruppen](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).
 
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } [ **,** ..._n_ ] ] Gibt eine Teilsicherung an. Eine Teilsicherung umfasst alle Dateien mit Lese-/Schreibzugriff in einer Datenbank: die primäre Dateigruppe und alle beliebigen sekundären Dateigruppen mit Lese-/Schreibzugriff sowie auch alle angegebenen schreibgeschützten Dateien oder Dateigruppen.
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } [ **,** ... _n_ ] ] Gibt eine Teilsicherung an. Eine Teilsicherung umfasst alle Dateien mit Lese-/Schreibzugriff in einer Datenbank: die primäre Dateigruppe und alle beliebigen sekundären Dateigruppen mit Lese-/Schreibzugriff sowie auch alle angegebenen schreibgeschützten Dateien oder Dateigruppen.
 
 READ_WRITE_FILEGROUPS Gibt an, dass alle Dateigruppen mit Lese-/Schreibzugriff in der Teilsicherung gesichert werden sollen. Wenn die Datenbank schreibgeschützt ist, umfasst READ_WRITE_FILEGROUPS nur die primäre Dateigruppe.
 
@@ -236,13 +236,13 @@ FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ 
 
 Weitere Informationen zu Sicherungen des Protokollfragments finden Sie unter [Teilsicherungen](../../relational-databases/backup-restore/partial-backups-sql-server.md).
 
-TO \<backup_device> [ **,** ...*n* ] gibt an, dass es sich bei den zugehörigen [Sicherungsmedien](../../relational-databases/backup-restore/backup-devices-sql-server.md) entweder um einen nicht gespiegelten Mediensatz oder um den ersten Spiegel innerhalb eines gespiegelten Mediensatzes handelt (für den eine oder mehrere MIRROR TO-Klauseln deklariert sind).
+TO \<backup_device> [ **,** ... *n* ] gibt an, dass es sich bei den zugehörigen [Sicherungsmedien](../../relational-databases/backup-restore/backup-devices-sql-server.md) entweder um einen nicht gespiegelten Mediensatz oder um den ersten Spiegel innerhalb eines gespiegelten Mediensatzes handelt (für den eine oder mehrere MIRROR TO-Klauseln deklariert sind).
 
 \<backup_device>
 
 Gibt ein logisches oder physisches Sicherungsmedium an, das für den Sicherungsvorgang verwendet werden soll.
 
-{*logical_device_name* \| **@** _logical\_device\_name\_var_} **Gilt für:** SQL Server: Der logische Name des Sicherungsmediums, auf dem die Datenbank gesichert wird. Der logische Name muss den Regeln für Bezeichner entsprechen. Bei Angabe in Form einer Variablen (@*logical_device_name_var*) kann der Name des Sicherungsmediums entweder als Zeichenfolgenkonstante (@_logical\_device\_name\_var_ **=** logical backup device name) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.
+{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **Gilt für:** SQL Server: Der logische Name des Sicherungsmediums, auf dem die Datenbank gesichert wird. Der logische Name muss den Regeln für Bezeichner entsprechen. Bei Angabe in Form einer Variablen (@ *logical_device_name_var* ) kann der Name des Sicherungsmediums entweder als Zeichenfolgenkonstante (@ _logical\_device\_name\_var_ **=** logical backup device name) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text** ) angegeben werden.
 
 {DISK \| TAPE \| URL} **=** { **'** _physical\_device\_name_ **'** \| **@** _physical\_device\_name\_var_ \| 'NUL'} **Gilt für:** DISK, TAPE und URL gelten für SQL Server.
 Gibt eine Datenträgerdatei oder ein Bandmedium oder einen Microsoft Azure-BLOB-Speicherdienst an. Das URL-Format wird zum Erstellen von Sicherungen in Microsoft Azure Storage verwendet. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Ein Tutorial finden Sie unter [Tutorial: SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage-Dienst](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).
@@ -250,7 +250,7 @@ Gibt eine Datenträgerdatei oder ein Bandmedium oder einen Microsoft Azure-BLOB-
 > [!NOTE]
 > Das Datenträgermedium NUL verwirft alle Informationen, die es empfängt, und sollte nur zu Testzwecken verwendet werden. Es ist nicht zur Verwendung in der Produktion bestimmt.
 > [!IMPORTANT]
-> Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] können Sie nur auf ein einzelnes Gerät sichern, wenn Sie über die URL sichern. Wenn Sie eine Sicherung auf mehreren Geräten durchführen möchten, müssen Sie [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher verwenden, und Sie müssen SAS-Token (Shared Access Signature) verwenden. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).
+> Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] können Sie nur auf ein einzelnes Gerät sichern, wenn Sie über die URL sichern. Wenn Sie eine Sicherung auf mehreren Geräten durchführen möchten, müssen Sie [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher verwenden, und Sie müssen SAS-Token (Shared Access Signature) verwenden. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).
 
 **URL betrifft:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 und höher).
 
@@ -266,7 +266,7 @@ Weitere Informationen finden Sie unter [Sicherungsmedien](../../relational-datab
 
 *n* Ein Platzhalter, der anzeigt, dass in einer durch Trennzeichen getrennten Liste möglicherweise bis zu 64 Sicherungsmedien angegeben werden.
 
-MIRROR TO \<backup_device> [ **,** ...*n* ] gibt bis zu drei sekundäre Sicherungsmedien an, die die in der TO-Klausel angegebenen Sicherungsmedien spiegeln. Die MIRROR TO-Klausel muss denselben Typ und dieselbe Anzahl von Sicherungsdateien angeben wie die TO-Klausel. Die maximale Anzahl von MIRROR TO-Klauseln lautet drei.
+MIRROR TO \<backup_device> [ **,** ... *n* ] gibt bis zu drei sekundäre Sicherungsmedien an, die die in der TO-Klausel angegebenen Sicherungsmedien spiegeln. Die MIRROR TO-Klausel muss denselben Typ und dieselbe Anzahl von Sicherungsdateien angeben wie die TO-Klausel. Die maximale Anzahl von MIRROR TO-Klauseln lautet drei.
 
 Diese Option ist nur in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar.
 
@@ -285,7 +285,7 @@ Weitere Informationen finden Sie unter "Medienfamilien in gespiegelten Mediensä
 
 Gibt die Optionen an, die bei einem Sicherungsvorgang verwendet werden sollen.
 
-CREDENTIAL **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 und höher).
+CREDENTIAL **Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 und höher).
 Wird nur verwendet, wenn eine Sicherung in Microsoft Azure Blob Storage erstellt wird.
 
 FILE_SNAPSHOT **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
@@ -360,24 +360,24 @@ Wenn keine der Optionen angegeben wird, wird das Ablaufdatum durch die Konfigura
 > [!IMPORTANT]
 > Diese Optionen verhindern nur, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Datei überschreibt. Bänder können mit anderen Methoden gelöscht werden, und Dateien auf einem Datenträger können mit entsprechenden Betriebssystembefehlen gelöscht werden. Weitere Informationen zur Prüfung des Ablaufdatums finden Sie unter SKIP und FORMAT in diesem Thema.
 
-EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } Gibt an, wann der Sicherungssatz abläuft und überschrieben werden kann. Bei Angabe in Form einer Variablen (@_date\_var_) muss das Datum dem konfigurierten **datetime**-Systemformat entsprechen und als eines der folgenden Elemente angegeben werden:
+EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } Gibt an, wann der Sicherungssatz abläuft und überschrieben werden kann. Bei Angabe in Form einer Variablen (@ _date\_var_ ) muss das Datum dem konfigurierten **datetime** -Systemformat entsprechen und als eines der folgenden Elemente angegeben werden:
 
-- Eine Zeichenfolgekonstante (@_date\_var_ **=** date)
-- Eine Variable mit einem Zeichenfolgen-Datentyp (mit Ausnahme der Datentypen **ntext** oder **text**)
-- Eine **smalldatetime**-Variable
-- Eine **datetime**-Variable
+- Eine Zeichenfolgekonstante (@ _date\_var_ **=** date)
+- Eine Variable mit einem Zeichenfolgen-Datentyp (mit Ausnahme der Datentypen **ntext** oder **text** )
+- Eine **smalldatetime** -Variable
+- Eine **datetime** -Variable
 
 Beispiel:
 
 - `'Dec 31, 2020 11:59 PM'`
 - `'1/1/2021'`
 
-Informationen zum Angeben der **datetime**-Werte finden Sie unter [Datums- und Uhrzeittypen](../../t-sql/data-types/date-and-time-types.md).
+Informationen zum Angeben der **datetime** -Werte finden Sie unter [Datums- und Uhrzeittypen](../../t-sql/data-types/date-and-time-types.md).
 
 > [!NOTE]
 > Zum Ignorieren des Ablaufdatums verwenden Sie die Option `SKIP`.
 
-RETAINDAYS **=** { *days* |  **@** _days\_var_ } Gibt die Anzahl von Tagen an, die verstreichen müssen, bevor diese Sicherungsmedien überschrieben werden können. Bei Angabe als Variable ( **@** _days\_var_) muss der Wert als Integer angegeben werden.
+RETAINDAYS **=** { *days* |  **@** _days\_var_ } Gibt die Anzahl von Tagen an, die verstreichen müssen, bevor diese Sicherungsmedien überschrieben werden können. Bei Angabe als Variable ( **@** _days\_var_ ) muss der Wert als Integer angegeben werden.
 
 **Mediensatzoptionen**
 
@@ -409,7 +409,7 @@ Weitere Informationen finden Sie weiter unten in diesem Thema unter [Mediensätz
 NOSKIP Weist die BACKUP-Anweisung an, das Ablaufdatum aller Sicherungssätze auf den Medien zu prüfen, bevor diese überschrieben werden dürfen. Dies ist das Standardverhalten.
 
 SKIP Deaktiviert die Prüfung von Ablaufdatum und Namen der Sicherungssätze. Diese Überprüfung wird normalerweise von der BACKUP-Anweisung ausgeführt, damit ein Überschreiben von Sicherungssätzen verhindert wird. Informationen zu Interaktionen zwischen { INIT | NOINIT } und { NOSKIP | SKIP } finden Sie unter "Hinweise" weiter unten in diesem Thema.
-Zum Anzeigen des Ablaufdatums und der Sicherungssätze fragen Sie die **expiration_date**-Spalte der [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)-Verlaufstabelle ab.
+Zum Anzeigen des Ablaufdatums und der Sicherungssätze fragen Sie die **expiration_date** -Spalte der [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)-Verlaufstabelle ab.
 
 { **NOFORMAT** | FORMAT } Gibt an, dass der Medienheader auf alle Volumes geschrieben werden soll, die für diesen Sicherungsvorgang verwendet werden. Dabei werden vorhandene Medienheader und Sicherungssätze überschrieben.
 
@@ -440,7 +440,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } Gibt die Ge
 Der gesamte von den Puffern belegte Speicherplatz wird durch `BUFFERCOUNT * MAXTRANSFERSIZE` bestimmt.
 
 > [!NOTE]
-> Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](https://docs.microsoft.com/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition).
+> Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition).
 
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
 
@@ -574,7 +574,7 @@ Die unterstützten Sicherungstypen sind vom Wiederherstellungsmodell der Datenba
     |Teilweise Datenbanksicherung|[Teilsicherungen](../../relational-databases/backup-restore/partial-backups-sql-server.md) umfassen Dateigruppen mit Lese-/Schreibzugriff und möglicherweise mindestens eine schreibgeschützte Datei oder Dateigruppe.<br /><br /> Optional kann jede Teilsicherung als Basis einer Serie von einer oder mehreren [differenziellen Teilsicherungen](../../relational-databases/backup-restore/differential-backups-sql-server.md) dienen.|
     |Datei oder Dateigruppe|[Dateisicherungen](../../relational-databases/backup-restore/full-file-backups-sql-server.md) umfassen mindestens eine Datei oder Dateigruppe und sind nur für Datenbanken relevant, in denen mehrere Dateigruppen enthalten sind. Beim einfachen Wiederherstellungsmodell werden Dateisicherungen im Wesentlichen auf schreibgeschützte sekundäre Dateigruppen beschränkt.<br /> Optional kann jede Dateisicherung als Basis einer Serie von einer oder mehreren [differenziellen Dateisicherungen](../../relational-databases/backup-restore/differential-backups-sql-server.md) dienen.|
 
-- Beim vollständigen oder massenprotokollierten Wiederherstellungsmodell enthalten die herkömmlichen Sicherungen auch sequentielle *Transaktionsprotokollsicherungen* (oder *Protokollsicherungen*), die erforderlich sind. Jede Protokollsicherung umfasst den Teil des Transaktionsprotokolls, der beim Erstellen der Sicherung aktiv war, und enthält alle Protokolldatensätze, die in einer vorherigen Protokollsicherung nicht gesichert wurden.
+- Beim vollständigen oder massenprotokollierten Wiederherstellungsmodell enthalten die herkömmlichen Sicherungen auch sequentielle *Transaktionsprotokollsicherungen* (oder *Protokollsicherungen* ), die erforderlich sind. Jede Protokollsicherung umfasst den Teil des Transaktionsprotokolls, der beim Erstellen der Sicherung aktiv war, und enthält alle Protokolldatensätze, die in einer vorherigen Protokollsicherung nicht gesichert wurden.
 
     Wenn Sie die Gefahr eines Datenverlusts minimieren und den damit verbundenen höheren Verwaltungsaufwand in Kauf nehmen möchten, sollten Sie häufige Protokollsicherungen planen. Wenn Sie zwischen vollständigen Sicherungen differenzielle Sicherungen planen, kann dies die Wiederherstellungszeit verkürzen, da Sie nach dem Wiederherstellen der Daten nur eine geringe Anzahl von Protokollsicherungen wiederherstellen müssen.
 
@@ -661,7 +661,7 @@ Weitere Informationen über gespiegelte Mediensätze finden Sie unter [Gespiegel
 
 ### <a name="restoring-sql-server-backups"></a><a name="Restoring_Backups"></a>Wiederherstellen von SQL Server-Sicherungen
 
-Sie können die [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)-Anweisung von [!INCLUDE[tsql](../../includes/tsql-md.md)] oder die **Restore**-Tasks von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um eine Datenbank wiederherzustellen und optional wieder online zu schalten, oder um eine Datei oder Dateigruppe wiederherzustellen. Weitere Informationen finden Sie unter [Übersicht über Wiederherstellungsvorgänge](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
+Sie können die [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)-Anweisung von [!INCLUDE[tsql](../../includes/tsql-md.md)] oder die **Restore** -Tasks von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um eine Datenbank wiederherzustellen und optional wieder online zu schalten, oder um eine Datei oder Dateigruppe wiederherzustellen. Weitere Informationen finden Sie unter [Übersicht über Wiederherstellungsvorgänge](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
 
 ## <a name="additional-considerations-about-backup-options"></a><a name="Additional_Considerations"></a>Weitere Überlegungen zu BACKUP-Optionen
 
@@ -696,7 +696,7 @@ Die BACKUP-Anweisung ist nicht in einer expliziten oder implizierten Transaktion
 
 Sicherungsvorgänge über Plattformen hinweg, sogar zwischen unterschiedlichen Prozessortypen, können ausgeführt werden, solange die Sortierung der Datenbank vom Betriebssystem unterstützt wird.
 
-Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ermöglicht die Einstellung `MAXTRANSFERSIZE` **größer als 65.536 (64 KB)** einen optimierten Komprimierungsalgorithmus für TDE-verschlüsselte Datenbanken ([Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)), der eine Seite zuerst entschlüsselt, komprimiert und dann wieder verschlüsselt. Wenn `MAXTRANSFERSIZE` nicht angegeben ist, oder wenn `MAXTRANSFERSIZE = 65536` (64 KB) verwendet wird, komprimiert die Sicherungskomprimierung mit TDE-verschlüsselten Datenbanken die verschlüsselten Seiten direkt und gibt möglicherweise keine guten Komprimierungsraten aus. Weitere Informationen finden Sie unter [Backup Compression for TDE-enabled Databases (Sicherungskomprimierung für TDE-fähige Datenbanken)](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ermöglicht die Einstellung `MAXTRANSFERSIZE` **größer als 65.536 (64 KB)** einen optimierten Komprimierungsalgorithmus für TDE-verschlüsselte Datenbanken ( [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)), der eine Seite zuerst entschlüsselt, komprimiert und dann wieder verschlüsselt. Wenn `MAXTRANSFERSIZE` nicht angegeben ist, oder wenn `MAXTRANSFERSIZE = 65536` (64 KB) verwendet wird, komprimiert die Sicherungskomprimierung mit TDE-verschlüsselten Datenbanken die verschlüsselten Seiten direkt und gibt möglicherweise keine guten Komprimierungsraten aus. Weitere Informationen finden Sie unter [Backup Compression for TDE-enabled Databases (Sicherungskomprimierung für TDE-fähige Datenbanken)](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases).
 
 Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 muss `MAXTRANSFERSIZE` nicht mehr festgelegt werden, um diesen optimierten Komprimierungsalgorithmus mit TDE zu aktivieren. Wenn der Sicherungsbefehl `WITH COMPRESSION` angegeben ist, oder wenn die Serverkonfiguration *backup compression default* auf 1 festgelegt ist, wird `MAXTRANSFERSIZE` automatisch auf 128.000 erhöht, um den optimierten Algorithmus zu aktivieren. Wenn `MAXTRANSFERSIZE` für den Sicherungsbefehl mit einem Wert > 64.000 angegeben wird, wird der angegebene Wert berücksichtigt. Anders ausgedrückt: SQL Server verringert den Wert nie automatisch, sondern erhöht ihn nur. Wenn Sie eine TDE-verschlüsselte Datenbank mit `MAXTRANSFERSIZE = 65536` sichern müssen, müssen Sie `WITH NO_COMPRESSION` angeben oder sicherstellen, dass die Serverkonfiguration *backup compression default* auf 0 festgelegt ist.
 
@@ -732,7 +732,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind folgende Tabel
 - [backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)
 - [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)
 
-Wird eine Wiederherstellung durchgeführt, wenn der Sicherungssatz noch nicht in der **msdb**-Datenbank erfasst ist, werden möglicherweise die Tabellen mit Sicherungsverläufen verändert.
+Wird eine Wiederherstellung durchgeführt, wenn der Sicherungssatz noch nicht in der **msdb** -Datenbank erfasst ist, werden möglicherweise die Tabellen mit Sicherungsverläufen verändert.
 
 ## <a name="security"></a>Sicherheit
 
@@ -942,7 +942,7 @@ WHERE r.command LIKE 'BACKUP%'
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        **_\*SQL-Datenbank<br />verwaltete Instanz\*_** &nbsp;
+        **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -953,7 +953,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 ## <a name="azure-sql-managed-instance"></a>Verwaltete Azure SQL-Instanz
 
-Dieser Dienst sichert eine SQL-Datenbank, die sich in Azure SQL Managed Instance befindet bzw. gehostet wird. SQL [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) verfügt über automatische Sicherungen und ermöglicht es Benutzern, vollständige `COPY_ONLY`-Sicherungen von Datenbanken zu erstellen. Differenzielle Sicherungen, Protokollsicherungen und Dateimomentaufnahmesicherungen werden nicht unterstützt.
+Dieser Dienst sichert eine SQL-Datenbank, die sich in Azure SQL Managed Instance befindet bzw. gehostet wird. SQL [Managed Instance](/azure/sql-database/sql-database-managed-instance) verfügt über automatische Sicherungen und ermöglicht es Benutzern, vollständige `COPY_ONLY`-Sicherungen von Datenbanken zu erstellen. Differenzielle Sicherungen, Protokollsicherungen und Dateimomentaufnahmesicherungen werden nicht unterstützt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -996,9 +996,9 @@ DATABASE Gibt eine vollständige Datenbanksicherung an. Während einer Datenbank
 > [!IMPORTANT]
 > Eine Datenbanksicherung, die auf einer verwalteten Instanz erstellt wird, kann nur auf einer anderen Instanz von Azure SQL Managed Instance wiederhergestellt werden. Sie kann nicht auf einer lokalen SQL Server-Instanz wiederhergestellt werden (genauso wenig, wie eine Sicherung einer SQL Server 2016-Datenbank auf einer SQL Server 2012-Instanz wiederhergestellt werden kann).
 
-Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung*) erstellte Sicherung wiederherstellen, wird die komplette Sicherung wiederhergestellt. Informationen zum Wiederherstellen der automatischen Sicherungen von SQL Managed Instance finden Sie unter [Wiederherstellen einer Datenbank in Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore).
+Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung* ) erstellte Sicherung wiederherstellen, wird die komplette Sicherung wiederhergestellt. Informationen zum Wiederherstellen der automatischen Sicherungen von SQL Managed Instance finden Sie unter [Wiederherstellen einer Datenbank in Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
-{ *database_name* |  **@** _database\_name\_var_ } ist die Datenbank, aus der die vollständige Datenbank gesichert wird. Bei Angabe in Form einer Variablen ( **@** _database\_name\_var_) kann dieser Name entweder als Zeichenfolgenkonstante ( **@** _database\_name\_var_ **=** _database name_) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.
+{ *database_name* |  **@** _database\_name\_var_ } ist die Datenbank, aus der die vollständige Datenbank gesichert wird. Bei Angabe in Form einer Variablen ( **@** _database\_name\_var_ ) kann dieser Name entweder als Zeichenfolgenkonstante ( **@** _database\_name\_var_ **=** _database name_ ) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text** ) angegeben werden.
 
 Weitere Informationen finden Sie unter [Vollständige Dateisicherungen](../../relational-databases/backup-restore/full-file-backups-sql-server.md) und [Sichern von Dateien und Dateigruppen](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).
 
@@ -1007,7 +1007,7 @@ TO URL
 Gibt die URL an, die für den Sicherungsvorgang verwendet werden soll. Das URL-Format wird zum Erstellen von Sicherungen in Microsoft Azure Storage verwendet.
 
 > [!IMPORTANT]
-> Um auf mehreren Geräten eine Sicherung durchzuführen, wenn Sie über die URL sichern, müssen Sie Shared Access Signature-Token (SAS) verwenden. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).
+> Um auf mehreren Geräten eine Sicherung durchzuführen, wenn Sie über die URL sichern, müssen Sie Shared Access Signature-Token (SAS) verwenden. Beispiele für die Erstellung einer Shared Access Signature finden Sie unter [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).
 
 *n* Ein Platzhalter, der anzeigt, dass in einer durch Trennzeichen getrennten Liste möglicherweise bis zu 64 Sicherungsmedien angegeben werden.
 
@@ -1057,7 +1057,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } Gibt die Ge
 Der gesamte von den Puffern belegte Speicherplatz wird durch `BUFFERCOUNT * MAXTRANSFERSIZE` bestimmt.
 
 > [!NOTE]
-> Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](https://docs.microsoft.com/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition).
+> Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition).
 
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
 
@@ -1132,7 +1132,7 @@ WITH STATS = 5, COPY_ONLY;
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
@@ -1145,7 +1145,7 @@ WITH STATS = 5, COPY_ONLY;
 
 Erstellt eine Sicherungskopie einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbank und speichert die Sicherung nicht auf der Appliance, sondern in einem benutzerdefinierten Netzwerkpfad. Verwenden Sie diese Anweisung mit [RESTORE DATABASE - Analytics Platform System](../../t-sql/statements/restore-statements-transact-sql.md) zur Notfallwiederherstellung oder zum Kopieren einer Datenbank von einer Appliance auf eine andere.
 
-**Bevor Sie beginnen**, lesen Sie „Erwerb und Konfiguration eines Sicherungsservers“ in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
+**Bevor Sie beginnen** , lesen Sie „Erwerb und Konfiguration eines Sicherungsservers“ in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].
 
 Es gibt zwei Arten von Sicherungen in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Eine *vollständige Datenbanksicherung* ist eine Sicherung einer kompletten [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbank. Bei einer *differenziellen Datenbanksicherung* werden nur die Änderungen seit der letzten vollständigen Datenbanksicherung erfasst. Die Sicherung einer Benutzerdatenbank schließt Datenbankbenutzer und Datenbankrollen ein. Eine Sicherung der Masterdatenbank schließt Anmeldungen ein.
 
@@ -1176,7 +1176,7 @@ BACKUP DATABASE database_name
 
 *database_name* Der Name der Datenbank, in der eine Sicherung erstellt werden soll. Die Datenbank kann die Masterdatenbank oder eine Benutzerdatenbank sein.
 
-TO DISK = '\\\\*UNC_path*\\*backup_directory*' Netzwerkpfad und Verzeichnis, in die [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] die Sicherungsdateien schreibt. Beispiel: '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.
+TO DISK = '\\\\*UNC_path*\\*backup_directory* ' Netzwerkpfad und Verzeichnis, in die [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] die Sicherungsdateien schreibt. Beispiel: '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.
 
 - Der Pfad zum Sicherungsverzeichnisnamen muss bereits vorhanden sein und als vollqualifizierter UNC-Pfad (Universal Naming Convention) angegeben werden.
 - Das Sicherungsverzeichnis *backup_directory* darf nicht vor dem Ausführen des Sicherungsbefehls vorhanden sein. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] erstellt das Sicherungsverzeichnis.
@@ -1207,7 +1207,7 @@ Beispiel:
 
 ## <a name="permissions"></a>Berechtigungen
 
-Erfordert die **BACKUP DATABASE**-Berechtigung oder die Mitgliedschaft in der festen Datenbankrolle **db_backupoperator**. Die Masterdatenbank kann nur von einem normalen Benutzer gesichert werden, der der festen Datenbankrolle **Db_backupoperator** hinzugefügt wurde. Die Masterdatenbank kann nur durch **sa**, den Fabricadministrator, oder Mitglieder der festen Serverrolle **Sysadmin** gesichert werden.
+Erfordert die **BACKUP DATABASE** -Berechtigung oder die Mitgliedschaft in der festen Datenbankrolle **db_backupoperator** . Die Masterdatenbank kann nur von einem normalen Benutzer gesichert werden, der der festen Datenbankrolle **Db_backupoperator** hinzugefügt wurde. Die Masterdatenbank kann nur durch **sa** , den Fabricadministrator, oder Mitglieder der festen Serverrolle **Sysadmin** gesichert werden.
 
 Erfordert ein Windows-Konto mit der Berechtigung, auf das Sicherungsverzeichnis zuzugreifen, es zu erstellen und auf es zu schreiben. Sie müssen außerdem den Windows-Kontonamen und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] speichern. Verwenden Sie die gespeicherte Prozedur [sp_pdw_add_network_credentials – [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md), um diese Netzwerkanmeldeinformationen zu [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] hinzuzufügen.
 

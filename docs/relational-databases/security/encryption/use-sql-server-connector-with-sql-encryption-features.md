@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32d0e4ea4ca6457701ae5ed4710d5213b3fe164c
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725950"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679009"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ Verwenden Sie nach dem Abschluss der Teile I bis IV des Themas „Installationss
  
 Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschlüsselungsschlüssel erstellen, der zum Verschlüsseln der Daten und Protokolle in der Datenbank dient. Zum Verschlüsseln einer Datenbank ist die **CONTROL** -Berechtigung für die Datenbank erforderlich. Die folgende Grafik zeigt die Hierarchie des Verschlüsselungsschlüssels bei Verwendung von Azure Key Vault.  
   
- ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
+ ![Diagramm: Hierarchie des Verschlüsselungsschlüssels bei Verwendung von Azure Key Vault](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **Erstellen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für die Datenbank-Engine für die Nutzung von TDE**  
   
@@ -56,7 +56,7 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
     -   Ersetzen Sie den ersten Teil des `SECRET` -Arguments durch die Azure Active Directory- **Client-ID** aus Teil I. In diesem Beispiel ist die **Client-ID**`EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
-        >  Bindestriche müssen aus der **Client-ID**entfernt werden.  
+        >  Bindestriche müssen aus der **Client-ID** entfernt werden.  
   
     -   Vervollständigen Sie den zweiten Teil des `SECRET`-Arguments mit dem **geheimen Clientschlüssel** aus Teil 1. In diesem Beispiel ist der **geheime Clientschlüssel** aus Teil 1 `ReplaceWithAADClientSecret`. 
   
@@ -116,13 +116,13 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
     GO  
     ```  
   
-     Überprüfen Sie mithilfe von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], dass TDE aktiviert wurde, indem Sie eine Verbindung mit Ihrer Datenbank mithilfe des Objekt-Explorers herstellen. Klicken Sie mit der rechten Maustaste auf Ihre Datenbank, zeigen Sie auf **Aufgaben**, und klicken Sie anschließend auf **Datenbankverschlüsselung verwalten**.  
+     Überprüfen Sie mithilfe von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], dass TDE aktiviert wurde, indem Sie eine Verbindung mit Ihrer Datenbank mithilfe des Objekt-Explorers herstellen. Klicken Sie mit der rechten Maustaste auf Ihre Datenbank, zeigen Sie auf **Aufgaben** , und klicken Sie anschließend auf **Datenbankverschlüsselung verwalten** .  
   
-     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
+     ![Screenshot: Objekt-Explorer mit ausgewählter Option „Aufgaben“ > „Datenbankverschlüsselung verwalten“](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
      Prüfen Sie im Dialogfeld **Datenbankverschlüsselung verwalten** , nach, ob TDE aktiviert ist und welcher Schlüssel für die Verschlüsselung des DEKs verwendet wird.  
   
-     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
+     ![Screenshot: Dialogfeld „Datenbankverschlüsselung verwalten“ mit ausgewählter Option „Datenbankverschlüsselung aktivieren“ und einem gelben Banner mit der Aufschrift „Now TDE is turned on“ (TDE ist nun aktiviert)](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
      Alternativ können Sie das folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript ausführen. Der Verschlüsselungsstatus 3 gibt eine verschlüsselte Datenbank an.  
   
@@ -155,9 +155,9 @@ Das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] benötigt die Anmeldeinformat
     -   Ersetzen Sie den ersten Teil des `SECRET` -Arguments durch die Azure Active Directory- **Client-ID** aus Teil I. In diesem Beispiel ist die **Client-ID**`EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
-        >  Bindestriche müssen aus der **Client-ID**entfernt werden.  
+        >  Bindestriche müssen aus der **Client-ID** entfernt werden.  
   
-    -   Setzen Sie in den zweiten Teil des `SECRET` -Arguments den **geheimen Clientschlüssel** aus Teil I ein. In diesem Beispiel ist der **geheime Clientschlüssel** aus Teil I `Replace-With-AAD-Client-Secret`. Die endgültige Zeichenfolge für das `SECRET` -Argument ist eine lange Abfolge von Buchstaben und Ziffern *ohne Bindestriche*.   
+    -   Setzen Sie in den zweiten Teil des `SECRET` -Arguments den **geheimen Clientschlüssel** aus Teil I ein. In diesem Beispiel ist der **geheime Clientschlüssel** aus Teil I `Replace-With-AAD-Client-Secret`. Die endgültige Zeichenfolge für das `SECRET` -Argument ist eine lange Abfolge von Buchstaben und Ziffern *ohne Bindestriche* .   
   
         ```sql  
         USE master;  
@@ -217,7 +217,7 @@ Das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] benötigt die Anmeldeinformat
     
     Um eine Sicherung, die mithilfe von TDE verschlüsselt wurde, wiederherzustellen, muss die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Zielinstanz zunächst über eine Kopie des asymmetrischen Key Vault-Schlüssels für die Verschlüsselung verfügen. Dies würde folgendermaßen erreicht werden:  
     
-    - Ist der ursprüngliche asymmetrische Schlüssel, der für TDE verwendet wird, nicht mehr im Key Vault vorhanden, dann stellen Sie die wichtigste Schlüsselsicherung im Key Vault wieder her oder importieren Sie den Schlüssel aus einem lokalen HSM. **Wichtig:** Damit der Fingerabdruck des Schlüssels dem in der Datenbanksicherung gespeicherten Fingerabdruck entspricht, erhält der Schlüssel **denselben Key Vault-Schlüsselnamen**, den er ursprünglich erhalten hatte.
+    - Ist der ursprüngliche asymmetrische Schlüssel, der für TDE verwendet wird, nicht mehr im Key Vault vorhanden, dann stellen Sie die wichtigste Schlüsselsicherung im Key Vault wieder her oder importieren Sie den Schlüssel aus einem lokalen HSM. **Wichtig:** Damit der Fingerabdruck des Schlüssels dem in der Datenbanksicherung gespeicherten Fingerabdruck entspricht, erhält der Schlüssel **denselben Key Vault-Schlüsselnamen** , den er ursprünglich erhalten hatte.
     
     - Wenden Sie die Schritte 1 und 2 auf die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Zielinstanz an.
     

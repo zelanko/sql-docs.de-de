@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ce2552519eeecb654478f522d3dd3b8880d2697
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cda6ec744ca603c1a03df22bcb391b6d75bbff58
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88347276"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439344"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Vorgang wird ausgeführt (SQL Server-Import/Export-Assistent)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-Nachdem Sie Ihre Auswahl im Assistenten überprüft und auf der Seite **Abschließen des Assistenten** auf **Fertig stellen** geklickt haben, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Vorgang wird ausgeführt**an. Auf dieser Seite sehen Sie den Status und das Ergebnis des Vorgangs, den Sie auf den vorherigen Seiten konfiguriert haben. Sie müssen auf dieser Seite keine Aktionen durchführen.
+Nachdem Sie Ihre Auswahl im Assistenten überprüft und auf der Seite **Abschließen des Assistenten** auf **Fertig stellen** geklickt haben, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Vorgang wird ausgeführt** an. Auf dieser Seite sehen Sie den Status und das Ergebnis des Vorgangs, den Sie auf den vorherigen Seiten konfiguriert haben. Sie müssen auf dieser Seite keine Aktionen durchführen.
 
 ## <a name="screen-shot---operation-in-progress"></a>Screenshot: Vorgang wird ausgeführt 
  Der folgende Screenshot zeigt die Seite **Vorgang wird ausgeführt** des Assistenten während der Vorgang noch ausgeführt wird.  
@@ -34,7 +34,7 @@ Nachdem Sie Ihre Auswahl im Assistenten überprüft und auf der Seite **Abschlie
 ## <a name="screen-shot---operation-completed"></a>Screenshot: Vorgang wurde abgeschlossen 
  Der folgende Screenshot zeigt die Seite **Vorgang wird ausgeführt** des Assistenten nachdem der Vorgang abgeschlossen wurde. Klicken Sie auf ein Element in der Spalte **Nachricht** , um weitere Informationen zum jeweiligen Schritt zu erhalten.  
   
- ![Seite „Vorgang wird ausgeführt“ im Import/Export-Assistenten](../../integration-services/import-export-data/media/performing-operation2.png "Seite „Vorgang wird ausgeführt“ im Import/Export-Assistenten")  
+ ![Screenshot: Seite zur erfolgreichen Ausführung des Import/Export-Assistenten](../../integration-services/import-export-data/media/performing-operation2.png "Seite „Vorgang wird ausgeführt“ im Import/Export-Assistenten")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>Überwachen des Vorgangsstatus
  **Aktion**  
@@ -53,7 +53,7 @@ Nachdem Sie Ihre Auswahl im Assistenten überprüft und auf der Seite **Abschlie
  **Report**  
  Mit dieser Option können Sie einen Bericht mit den Ergebnissen anzeigen, den Bericht in einer Datei speichern, den Bericht in die Zwischenablage kopieren oder den Bericht per E-Mail versenden.  
   
-## <a name="whats-next"></a>Nächste Schritte  
+## <a name="whats-next"></a>Ausblick  
  Wenn der von Ihnen konfigurierte Vorgang ausgeführt und erfolgreich abgeschlossen wurde, sind Sie mit der Ausführung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten fertig.  
 -   Wenn Sie den Vorgang sofort ausgeführt haben, können Sie das ausgewählte Ziel öffnen, um die Daten zu überprüfen, die der Assistent kopiert hat.  
 -   Wenn Sie das vom Assistenten erstellte SSIS-Paket gespeichert haben, können Sie es in SQL Server Data Tools öffnen, um es anzupassen und wiederzuverwenden. Informationen zur Anpassung des gespeicherten Pakets und zur späteren erneuten Ausführung finden Sie unter [Speichern des SSIS-Pakets](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).

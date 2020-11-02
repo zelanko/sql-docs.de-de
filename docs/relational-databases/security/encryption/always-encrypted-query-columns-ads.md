@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 82315c744073fa5f497f0aaf78eb6dedc04126a9
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866695"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679043"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Abfragen von Spalten mithilfe von Always Encrypted mit Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,7 @@ In diesem Abschnitt wird beschrieben, wie in verschlüsselten Spalten gespeicher
 ### <a name="example"></a>Beispiel
 Sofern `SSN` eine verschlüsselte Spalte in der Tabelle `Patients` ist, ruft die folgende Abfrage die binären Chiffretextwerte ab, wenn Always Encrypted für die Datenbankverbindung deaktiviert ist.   
 
-![always-encrypted-ads-query-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
+![Screenshot: Abfrage „SELECT * FROM [dbo].[Patients]“ und die Ergebnisse der Abfrage, dargestellt als binäre Chiffretextwerte](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
  
 ## <a name="retrieving-plaintext-values-stored-in-encrypted-columns"></a>Abrufen von in verschlüsselten Spalten gespeicherten Klartextwerten    
 In diesem Abschnitt wird beschrieben, wie in verschlüsselten Spalten gespeicherte Daten als Chiffretext abgerufen werden.
@@ -52,7 +52,7 @@ In diesem Abschnitt wird beschrieben, wie in verschlüsselten Spalten gespeicher
 ### <a name="example"></a>Beispiel
 Wenn SSN eine verschlüsselte Spalte in der Tabelle `Patients` ist, gibt die unten gezeigte Abfrage Klartextwerte zurück, sofern Always Encrypted für die Datenbankverbindung aktiviert ist und Sie Zugriff auf den Spaltenhauptschlüssel haben, der für die Spalte `SSN` konfiguriert ist.   
 
-![always-encrypted-ads-query-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
+![Screenshot: Abfrage „SELECT * FROM [dbo].[Patients]“ und die Ergebnisse der Abfrage, dargestellt als Nur-Text-Werte](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
  
 ## <a name="sending-plaintext-values-targeting-encrypted-columns"></a>Senden von Klartextwerten an verschlüsselte Spalten       
 In diesem Abschnitt wird beschrieben, wie eine Abfrage ausgeführt wird, die Werte sendet, welche eine verschlüsselte Spalte als Ziel haben. Beispielsweise eine Abfrage, mit der ein Wert in einer verschlüsselten Spalte eingefügt oder aktualisiert wird oder mit der nach einem solchen Wert gefiltert wird:
@@ -71,7 +71,7 @@ In diesem Abschnitt wird beschrieben, wie eine Abfrage ausgeführt wird, die Wer
 ### <a name="example"></a>Beispiel
 Wenn `SSN` eine verschlüsselte `char(11)`-Spalte in der Tabelle `Patients` ist, versucht das nachfolgende Skript, eine Zeile zu finden, die `'795-73-9838'` in der Spalte "SSN" enthält. Die Ergebnisse werden zurückgegeben, wenn Always Encrypted für die Datenbankverbindung aktiviert ist, die Parametrisierung für Always Encrypted für das Abfragefenster aktiviert ist und Sie Zugriff auf den für die Spalte `SSN` konfigurierten Spaltenhauptschlüssel haben.   
 
-![always-encrypted-ads-query-parameters](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
+![Screenshot: Abfrage „DECLARE @SSN char(11) = '795-73-9838' SELECT * FROM [dbo].[Patients] WHERE [SSN] = @SSN“ und die Ergebnisse der Abfrage](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
 
 ## <a name="permissions-for-querying-encrypted-columns"></a>Berechtigungen zum Abfragen verschlüsselter Spalten
 
@@ -80,7 +80,7 @@ Zum Ausführen von Abfragen für verschlüsselte Spalten, einschließlich Abfrag
 Zusätzlich zu den oben aufgeführten Berechtigungen benötigen Sie zum Entschlüsseln von Abfrageergebnissen oder Verschlüsseln von Abfrageparametern (die durch parametrisierte Transact-SQL-Anweisungen erstellt wurden) auch Zugriff auf den Spaltenhauptschlüssel, der die Zielspalten schützt:
 
 - **Zertifikatspeicher – lokaler Computer:** Sie benötigen **Lesezugriff** auf das als Spaltenhauptschlüssel verwendete Zertifikat oder Administratorrechte auf dem Computer.   
-- **Azure Key Vault:** Sie benötigen die Berechtigungen **Abrufen**, **Schlüssel entpacken** und **Überprüfen** für den Schlüsseltresor, der den Spaltenhauptschlüssel enthält.
+- **Azure Key Vault:** Sie benötigen die Berechtigungen **Abrufen** , **Schlüssel entpacken** und **Überprüfen** für den Schlüsseltresor, der den Spaltenhauptschlüssel enthält.
 
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
@@ -99,14 +99,14 @@ Sie können Always Encrypted aktivieren oder deaktivieren, wenn Sie eine Verbind
 
 So aktivieren (oder deaktivieren) Sie Always Encrypted:
 1. Klicken Sie im Dialogfeld **Verbindung** auf **Erweitert...** .
-2. Um Always Encrypted für die Verbindung zu aktivieren, legen Sie das Feld **Always Encrypted** auf **Aktiviert** fest. Wenn Sie Always Encrypted deaktivieren möchten, lassen Sie entweder das Feld **Always Encrypted** leer, oder setzen Sie es auf **Deaktiviert**.
+2. Um Always Encrypted für die Verbindung zu aktivieren, legen Sie das Feld **Always Encrypted** auf **Aktiviert** fest. Wenn Sie Always Encrypted deaktivieren möchten, lassen Sie entweder das Feld **Always Encrypted** leer, oder setzen Sie es auf **Deaktiviert** .
 3. Wenn Sie [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] verwenden und Ihre SQL Server-Instanz mit einer Secure Enclave konfiguriert ist, können Sie ein Enclave-Protokoll und eine Enclave-Nachweis-URL angeben. Achten Sie darauf, die Felder **Nachweisprotokoll** und **Enclave-Nachweis-URL** leer zu lassen, wenn Ihre SQL Server-Instanz keine Secure Enclave verwendet. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md).
-4. Klicken Sie auf **OK**, um **Erweiterte Eigenschaften** zu schließen.
+4. Klicken Sie auf **OK** , um **Erweiterte Eigenschaften** zu schließen.
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+![Dieses kurze Video zeigt die Schritte zum Aktivieren von Always Encrypted für die Verbindung.](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
 
 > [!TIP]
-> Um für ein vorhandenes Abfragefenster zwischen aktiviertem und deaktiviertem Always Encrypted zu wechseln, klicken Sie auf **Trennen**, klicken Sie dann auf **Verbinden**, und führen Sie die obigen Schritte aus, um die Verbindung mit der Datenbank mit den gewünschten Werten des Felds **Always Encrypted** wiederherzustellen. 
+> Um für ein vorhandenes Abfragefenster zwischen aktiviertem und deaktiviertem Always Encrypted zu wechseln, klicken Sie auf **Trennen** , klicken Sie dann auf **Verbinden** , und führen Sie die obigen Schritte aus, um die Verbindung mit der Datenbank mit den gewünschten Werten des Felds **Always Encrypted** wiederherzustellen. 
 
 > [!NOTE] 
 > Die Schaltfläche **Verbindung ändern** in einem Abfragefenster unterstützt derzeit nicht das Umschalten zwischen aktiviertem und deaktiviertem Always Encrypted.
@@ -129,12 +129,12 @@ WHERE [SSN] = @SSN
 
 So aktivieren bzw. deaktivieren Sie die Parametrisierung für Always Encrypted:
 
-1. Wählen Sie **Datei** > **Einstellungen** > **Einstellungen** (**Code** > **Einstellungen** > **Einstellungen** auf dem Mac) aus.
-2. Navigieren Sie zu **Daten** > **Microsoft SQL Server**.
-3. Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted**.
-4. Schließen Sie das Fenster **Einstellungen**.
+1. Wählen Sie **Datei** > **Einstellungen** > **Einstellungen** ( **Code** > **Einstellungen** > **Einstellungen** auf dem Mac) aus.
+2. Navigieren Sie zu **Daten** > **Microsoft SQL Server** .
+3. Aktivieren bzw. deaktivieren **Parametrisierung für Always Encrypted** .
+4. Schließen Sie das Fenster **Einstellungen** .
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
+![Dieses kurze Video zeigt, wie Sie die Parametrisierung für Always Encrypted aktivieren/deaktivieren.](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
 
 > [!NOTE]
 > Die Parametrisierung für Always Encrypted funktioniert nur in einer Abfrage, die Datenbankverbindungen verwendet, für die Always Encrypted aktiviert ist (siehe [Aktivieren und Deaktivieren von Always Encrypted für eine Datenbankverbindung](#enabling-and-disabling-always-encrypted-for-a-database-connection)). Transact-SQL-Variablen werden nicht parametrisiert, wenn das Abfragefenster eine Datenbankverbindung ohne aktiviertes Always Encrypted verwendet.
@@ -180,7 +180,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio nutzt Intellisense, um Sie zu informieren, welche Variablen erfolgreich parametrisiert werden können und welche Parametrisierungsversuche fehlschlagen (samt Grund).   
 
-Eine Deklaration einer Variablen, die erfolgreich parametrisiert werden kann, wird im Abfragefenster mit einer Unterstreichung gekennzeichnet, die auf eine zugrunde liegende Informationsmeldung verweist. Wenn Sie mit der Maus auf eine Deklarationsanweisung zeigen, die mit einer zugrunde liegenden Informationsmeldung gekennzeichnet wurde, wird die Meldung mit den Ergebnissen des Parametrisierungsvorgangs, einschließlich der Werte der Haupteigenschaften des resultierenden [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter)-Objekts, angezeigt (die Variable ist zugeordnet zu: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale) und [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Eine vollständige Liste aller Variablen, die erfolgreich parametrisiert wurden, finden Sie in der Ansicht **Probleme**. Um die Ansicht **Probleme** zu öffnen, wählen Sie **Ansicht** > **Probleme** aus.    
+Eine Deklaration einer Variablen, die erfolgreich parametrisiert werden kann, wird im Abfragefenster mit einer Unterstreichung gekennzeichnet, die auf eine zugrunde liegende Informationsmeldung verweist. Wenn Sie mit der Maus auf eine Deklarationsanweisung zeigen, die mit einer zugrunde liegenden Informationsmeldung gekennzeichnet wurde, wird die Meldung mit den Ergebnissen des Parametrisierungsvorgangs, einschließlich der Werte der Haupteigenschaften des resultierenden [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter)-Objekts, angezeigt (die Variable ist zugeordnet zu: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale) und [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). Eine vollständige Liste aller Variablen, die erfolgreich parametrisiert wurden, finden Sie in der Ansicht **Probleme** . Um die Ansicht **Probleme** zu öffnen, wählen Sie **Ansicht** > **Probleme** aus.    
 
 
 

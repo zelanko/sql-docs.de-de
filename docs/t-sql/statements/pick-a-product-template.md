@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 5edf147637d7e9e9ca94c4e1daa53f9beabaeb4f
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 73b7f235802ed6217c826b16a81943721fc4b45e
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988403"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496922"
 ---
 # <a name="title-transact-sql"></a>Titel (Transact-SQL)
 
@@ -41,7 +41,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         [SQL-Datenbank](pick-a-product-template.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](pick-a-product-template.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](pick-a-product-template.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](pick-a-product-template.md?view=azure-sqldw-latest)
@@ -64,7 +64,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         **_\* SQL-Datenbank \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -88,7 +88,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         [SQL-Datenbank](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\*SQL-Datenbank<br />verwaltete Instanz\*_** &nbsp;
+        **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -110,7 +110,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         [SQL-Datenbank](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

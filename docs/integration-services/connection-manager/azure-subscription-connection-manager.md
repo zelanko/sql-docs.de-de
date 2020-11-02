@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da836cc7f53f4a4d83aae28ea2a41ec646ca3bd0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 277e92a906acb89960e16c941fbd71df023ddb23
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91728068"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678993"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure-Abonnementverbindungs-Manager
 
@@ -30,19 +30,19 @@ ms.locfileid: "91728068"
   
  Der **Azure-Abonnement-Verbindungs-Manager** ist eine Komponente des [SQL Server Integration Services-Feature Packs (SSIS) für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
-1.  Wählen Sie im oben angezeigten Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** die Option **Azure-Abonnement**aus, und klicken Sie auf **Hinzufügen**.  Das Dialogfeld **Azure-Abonnementverbindungs-Manager-Editor** wird geöffnet.  
+1.  Wählen Sie im oben angezeigten Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** die Option **Azure-Abonnement** aus, und klicken Sie auf **Hinzufügen** .  Das Dialogfeld **Azure-Abonnementverbindungs-Manager-Editor** wird geöffnet.  
   
-    ![SSIS-AzureSubscriptionConnectionManager](../../integration-services/connection-manager/media/ssis-azuresubscriptionconnectionmanager.png)
+    ![Screenshot: Dialogfeld „Azure Subscription Connection Manager Editor“ (Editor des Azure-Abonnementverbindungs-Managers)](../../integration-services/connection-manager/media/ssis-azuresubscriptionconnectionmanager.png)
   
-2.  Geben Sie Ihre Azure-Abonnement-ID, die ein Azure-Abonnement eindeutig identifiziert, in **Azure-Abonnement-ID**ein.  Der Wert befindet sich im [Azure-Verwaltungsportal](https://manage.windowsazure.com) auf der Seite **Einstellungen** :  
+2.  Geben Sie Ihre Azure-Abonnement-ID, die ein Azure-Abonnement eindeutig identifiziert, in **Azure-Abonnement-ID** ein.  Der Wert befindet sich im [Azure-Verwaltungsportal](https://manage.windowsazure.com) auf der Seite **Einstellungen** :  
   
-    ![SSIS-AzureSettings-SubscriptionID](../../integration-services/connection-manager/media/ssis-azuresettings-subscriptionid.png "SSIS-AzureSettings-SubscriptionID")  
+    ![Screenshot: Azure-Verwaltungsportal mit der Registerkarte „Abonnements“ der Seite „Einstellungen“](../../integration-services/connection-manager/media/ssis-azuresettings-subscriptionid.png "SSIS-AzureSettings-SubscriptionID")  
   
 3.  Wählen Sie **Verwaltungszertifikatspeicherort** und **Verwaltungszertifikatspeichername** aus den Dropdownlisten aus.  
   
-4.  Geben Sie **Management certificate thumbprint** (Fingerabdruck für as Verwaltungszertifikat) ein, oder klicken Sie auf **Durchsuchen...**, um ein Zertifikat aus dem ausgewählten Store auszuwählen. Das Zertifikat muss als Verwaltungszertifikat für das Abonnement hochgeladen werden. Klicken Sie hierzu auf der folgenden Seite des Azure-Portals auf **Hochladen** (in diesem [MSDN-Beitrag](/previous-versions/azure/gg551722(v=azure.100)) finden Sie weitere Informationen).  
+4.  Geben Sie **Management certificate thumbprint** (Fingerabdruck für as Verwaltungszertifikat) ein, oder klicken Sie auf **Durchsuchen...** , um ein Zertifikat aus dem ausgewählten Store auszuwählen. Das Zertifikat muss als Verwaltungszertifikat für das Abonnement hochgeladen werden. Klicken Sie hierzu auf der folgenden Seite des Azure-Portals auf **Hochladen** (in diesem [MSDN-Beitrag](/previous-versions/azure/gg551722(v=azure.100)) finden Sie weitere Informationen).  
   
-     ![SSIS-AzureSettings-ManagementCertificate](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
+     ![Screenshot: Azure-Verwaltungsportal mit der Registerkarte „Verwaltungszertifikat“ der Seite „Einstellungen“](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   
 5.  Klicken Sie auf **Verbindung testen** , um die Verbindung zu testen.  
   

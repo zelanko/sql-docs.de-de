@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 225de42adb409ef908544bb51c4d523452554838
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 174873d62a2c90ba6309f9063294a27517326d62
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869310"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523985"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server
 
@@ -76,9 +76,9 @@ Eine Dokumentation der erweiterten Ereignissen, die nur für Azure SQL-Datenbank
 Im Allgemeinen erfolgt der Zugriff auf die erweiterten Optionen mit einer der folgenden Methoden:
 
 
-- Das reguläre Menü **Datei** > **Öffnen** > **Datei**.
-- Rechtsklick im **Objekt-Explorer** unter **Verwaltung** > **Erweiterte Ereignisse**.
-- Das spezielle Menü **Erweiterte Ereignisse**und die spezielle Symbolleiste für erweiterte Ereignisse.
+- Das reguläre Menü **Datei** > **Öffnen** > **Datei** .
+- Rechtsklick im **Objekt-Explorer** unter **Verwaltung** > **Erweiterte Ereignisse** .
+- Das spezielle Menü **Erweiterte Ereignisse** und die spezielle Symbolleiste für erweiterte Ereignisse.
 - Rechtsklick in den Bereich im Registerkartenformat, in dem die Zieldaten angezeigt werden.
 
 
@@ -96,7 +96,7 @@ Es gibt verschiedene Möglichkeiten event_file-Zieldaten in die SSMS-Benutzerobe
 
 
 - Die Inhalte einer XEL-Datei liegen nicht im Nur-Text-Format vor, das mit dem Text-Editor angezeigt werden kann.
-  - Wenn Sie möchten, können Sie über das Menü **Datei** > **Öffnen** > **Dateien für erweiterte Ereignisse zusammenführen**mehrere XEL-Dateien aneinanderfügen.
+  - Wenn Sie möchten, können Sie über das Menü **Datei** > **Öffnen** > **Dateien für erweiterte Ereignisse zusammenführen** mehrere XEL-Dateien aneinanderfügen.
 
 
 
@@ -119,7 +119,7 @@ SSMS kann Daten aus jedem Ziel anzeigen. Die Ansichten unterscheiden sich jedoch
 ### <a name="b1-open-xel-with-menu-file--open--file"></a>B.1 Öffnen einer .XEL-Datei über das Menü „Datei“ > „Öffnen“ > „Datei“
 
 
-Sie können eine einzelne .XEL-Datei über das Standardmenü **Datei** > **Öffnen** > **Datei**öffnen.
+Sie können eine einzelne .XEL-Datei über das Standardmenü **Datei** > **Öffnen** > **Datei** öffnen.
 
 Sie können auch eine .XEL-Datei per Drag & Drop auf die Registerkartenleiste in der SSMS-Benutzeroberfläche ziehen.
 
@@ -133,7 +133,7 @@ Die Option **Zieldaten anzeigen** zeigt die Daten an, die bisher erfasst wurden.
 
 Im Bereich **Objekt-Explorer** können Sie die Knoten erweitern und dann mit der rechten Maustaste auf folgende Optionen klicken:
 
-- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > *[Ihr_Zielknoten]* > **Zieldaten anzeigen**.
+- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > *[Ihr_Zielknoten]* > **Zieldaten anzeigen** .
 
 
 Die Zieldaten werden in SSMS in einem Bereich im Registerkartenformat angezeigt. Dies wird im folgenden Screenshot gezeigt.
@@ -153,7 +153,7 @@ Die Zieldaten werden in SSMS in einem Bereich im Registerkartenformat angezeigt.
 Wenn Ihre Ereignissitzung aktiv ist, können Sie die Ereignisdaten in Echtzeit anzeigen, so wie sie vom Ziel empfangen werden.
 
 
-- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Livedaten anzeigen**.
+- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Livedaten anzeigen** .
 
 
 ![Ihre Sitzung > Livedaten anzeigen](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -186,8 +186,8 @@ Wenn die Zieldaten in SSMS vorhanden sind, können Sie die Daten mit folgenden S
 
     ![Exportieren der angezeigten Daten: Erweiterte Ereignisse > Exportieren nach > (CSV- oder XEL-Datei oder eine Tabelle)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)
 
-2. Klicken Sie auf das neue Menüelement **Erweiterte Ereignisse**.
-3. Klicken Sie auf **Exportieren nach**, und wählen Sie ein Format aus.
+2. Klicken Sie auf das neue Menüelement **Erweiterte Ereignisse** .
+3. Klicken Sie auf **Exportieren nach** , und wählen Sie ein Format aus.
 
 
 
@@ -238,7 +238,7 @@ Mit der Option **Spalten auswählen** können Sie steuern, welche Datenspalten a
 - Im Kontextmenü einer Überschrift in der Datenanzeige.
 
 
-Wenn Sie auf **Spalten auswählen**klicken, wird das gleichnamige Dialogfeld angezeigt.
+Wenn Sie auf **Spalten auswählen** klicken, wird das gleichnamige Dialogfeld angezeigt.
 
 
 ![Dialogfeld „Spalten auswählen“ mit Optionen „Spalten zusammenführen“](../../relational-databases/extended-events/media/xevents-ssms-ui35-choosecolumns.png)
@@ -271,7 +271,7 @@ Folgende SSMS-Anzeigefilter stehen zur Verfügung:
 - Ein Filter für *Spaltenwerte* .
 
 
-Die Beziehung zwischen dem Zeitfilter und dem Spaltenfilter ist ein boolesches*AND*.
+Die Beziehung zwischen dem Zeitfilter und dem Spaltenfilter ist ein boolesches *AND* .
 
 
 ![Filter für Zeitraum und Spalten im Dialogfeld „Filter“](../../relational-databases/extended-events/media/xevents-ssms-ui45-filters.png)
@@ -290,7 +290,7 @@ Die Gruppierung von Zeilen durch Abgleichen von Werten in einer bestimmten Spalt
 
 Mit der Schaltfläche **Gruppierung** auf der Symbolleiste der erweiterten Ereignisse starten Sie ein Dialogfeld, in dem Sie die angezeigten Daten nach einer bestimmten Spalte gruppieren können. Der nächste Screenshot zeigt ein Dialogfeld, das zum Gruppieren nach der Spalte *Name* verwendet wird.
 
-![Symbolleiste > Schaltfläche „Gruppierung“, dann Dialogfeld „Gruppierung“](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
+![Screenshot: Symbolleiste mit ausgewählter Option „Gruppierung“ und dem Dialogfeld „Gruppierung“](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 
 Nachdem die Gruppierung durchgeführt wurde, ändert sich die Anzeige, wie in der nächsten Abbildung veranschaulicht.
 
@@ -301,13 +301,13 @@ Nachdem die Gruppierung durchgeführt wurde, ändert sich die Anzeige, wie in de
 #### <a name="d42-aggregation"></a>D.4.2 Aggregation
 
 
-Nachdem die angezeigten Daten gruppiert wurden, können Sie damit fortfahren, Daten in anderen Spalten zu aggregieren.  Der nächste Screenshot zeigt die gruppierten Daten, die nach *Anzahl*aggregiert werden.
+Nachdem die angezeigten Daten gruppiert wurden, können Sie damit fortfahren, Daten in anderen Spalten zu aggregieren.  Der nächste Screenshot zeigt die gruppierten Daten, die nach *Anzahl* aggregiert werden.
 
-![Symbolleiste > Schaltfläche „Aggregation“, dann Dialogfeld „Aggregation“](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
+![Screenshot: Symbolleiste mit ausgewählter Option „Aggregation“ und dem Dialogfeld „Aggregation“](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 
 Nachdem die Aggregation durchgeführt wurde, ändert sich die Anzeige, wie in der nächsten Abbildung veranschaulicht.
 
-![Symbolleiste > Schaltfläche „Aggregation“, dann Dialogfeld „Aggregation“](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
+![Screenshot: Anzeige, dass ein COUNT-Wert hinzugefügt wurde](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
 
 
 

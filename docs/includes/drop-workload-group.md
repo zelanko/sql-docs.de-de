@@ -1,6 +1,6 @@
 Löscht eine vorhandene benutzerdefinierte Arbeitsauslastungsgruppe der Ressourcenkontrolle.
 
-![Symbol für Themenlink](../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+:::image type="icon" source="../database-engine/configure-windows/media/topic-link.gif"::: [Transact-SQL-Syntaxkonventionen](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -11,7 +11,7 @@ DROP WORKLOAD GROUP group_name
 
 ## <a name="arguments"></a>Argumente
 
-*group_name*: Der Name einer vorhandenen benutzerdefinierten Arbeitsauslastungsgruppe.
+*group_name* : Der Name einer vorhandenen benutzerdefinierten Arbeitsauslastungsgruppe.
 
 ## <a name="remarks"></a>Bemerkungen
 

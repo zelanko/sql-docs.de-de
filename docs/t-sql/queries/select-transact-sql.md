@@ -26,31 +26,31 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d3bc17bec08636983f5a8c85395da758720a3e0
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: faece054ca8f125e8c3594eb588ffa8cf97ddc16
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227204"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344901"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Ruft Zeilen aus der Datenbank ab und ermöglicht die Auswahl einer oder vieler Zeilen oder Spalten aus einer Tabelle oder aus zahlreichen Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die vollständige Syntax der SELECT-Anweisung ist komplex, die Hauptklauseln können jedoch wie folgt zusammengefasst werden:  
   
-[ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
+[ WITH { [[ XMLNAMESPACES ,]](../../t-sql/xml/with-xmlnamespaces.md) [[ \<common_table_expression> ]](../../t-sql/queries/with-common-table-expression-transact-sql.md) } ]
   
- SELECT *select_list* [ INTO *new_table* ]  
+ [SELECT *select_list*](../../t-sql/queries/select-clause-transact-sql.md) [ [INTO *new_table*](../../t-sql/queries/select-into-clause-transact-sql.md) ]  
   
- [ FROM *table_source* ] [ WHERE *search_condition* ]  
+ [ [FROM *table_source*](../../t-sql/queries/from-transact-sql.md) ] [ [WHERE *search_condition*](../../t-sql/queries/where-transact-sql.md) ]  
   
- [ GROUP BY *group_by_expression* ]  
+ [ [GROUP BY *group_by_expression*](../../t-sql/queries/select-group-by-transact-sql.md) ]  
   
- [ HAVING *search_condition* ]  
+ [ [HAVING *search_condition*](../../t-sql/queries/select-having-transact-sql.md) ]  
   
- [ ORDER BY *order_expression* [ ASC | DESC ] ]  
+ [ [ORDER BY *order_expression* [ ASC | DESC ] ](../../t-sql/queries/select-order-by-clause-transact-sql.md)]  
   
- Die Operatoren UNION, EXCEPT und INTERSECT können zwischen Abfragen verwendet werden, um deren Ergebnisse in einem Resultset zu kombinieren oder zu vergleichen.  
+ Die Operatoren [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md), [EXCEPT und INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md) können zwischen Abfragen verwendet werden, um deren Ergebnisse in einem Resultset zu kombinieren oder zu vergleichen.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,8 +62,7 @@ ms.locfileid: "91227204"
 <SELECT statement> ::=    
     [ WITH { [ XMLNAMESPACES ,] [ <common_table_expression> [,...n] ] } ]  
     <query_expression>   
-    [ ORDER BY { order_by_expression | column_position [ ASC | DESC ] }   
-  [ ,...n ] ]   
+    [ ORDER BY <order_by_expression> ] 
     [ <FOR Clause>]   
     [ OPTION ( <query_hint> [ ,...n ] ) ]   
 <query_expression> ::=   
@@ -191,7 +190,7 @@ SELECT <select_criteria>
 > Nehmen wir als Beispiel einen gruppierten Index für eine Sicht, die manche Tabellenzeilen ausschließt und deren SELECT-Spaltenliste CONVERT verwendet, wodurch ein Datentyp von *varchar* in *integer* geändert wird. In diesem Fall kann CONVERT ausgeführt werden, bevor die WHERE-Klausel ausgeführt wird. Dies ist wirklich ein Ausnahmefall. Es gibt meistens eine Möglichkeit, die Sicht zu ändern, um die veränderte Reihenfolge zu vermeiden, falls dies in Ihrem Fall relevant ist. 
 
 ## <a name="permissions"></a>Berechtigungen  
- Die Auswahl von Daten erfordert die Berechtigung **SELECT** für die Tabelle oder Sicht, die über einen höheren Bereich, beispielsweise über die Berechtigung **SELECT** für das Schema oder die Berechtigung **CONTROL** für die Tabelle, vererbt werden kann. Oder sie erfordert die Mitgliedschaft in der festen Datenbankrolle **db_datareader** oder **db_owner** oder der festen Serverrolle **sysadmin**. Das Erstellen einer neuen Tabelle mit **SELECT INTO** erfordert auch die Berechtigungen **CREATE TABLE** und **ALTER SCHEMA** für das Schema, das die neue Tabelle besitzt.  
+ Die Auswahl von Daten erfordert die Berechtigung **SELECT** für die Tabelle oder Sicht, die über einen höheren Bereich, beispielsweise über die Berechtigung **SELECT** für das Schema oder die Berechtigung **CONTROL** für die Tabelle, vererbt werden kann. Oder sie erfordert die Mitgliedschaft in der festen Datenbankrolle **db_datareader** oder **db_owner** oder der festen Serverrolle **sysadmin** . Das Erstellen einer neuen Tabelle mit **SELECT INTO** erfordert auch die Berechtigungen **CREATE TABLE** und **ALTER SCHEMA** für das Schema, das die neue Tabelle besitzt.  
   
 ## <a name="examples"></a>Beispiele:   
 In den folgenden Beispielen wird die [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]-Datenbank verwendet.

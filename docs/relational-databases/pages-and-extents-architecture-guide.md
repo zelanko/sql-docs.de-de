@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56bd6740a6b016bd06084b2e44958e61adc7ca89
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991851"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439394"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Handbuch zur Architektur von Seiten und Blöcken
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -97,7 +97,7 @@ Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] verwenden die meisten Speicher
 > [!NOTE]
 > Bis einschließlich [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] kann das Ablaufverfolgungsflag 1118 verwendet werden, um die Standardzuordnung so zu ändern, dass immer einheitliche Blöcke verwendet werden. Weitere Informationen zu diesem Ablaufverfolgungsflag finden Sie unter [DBCC TRACEON – Trace Flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] wird die vom Ablaufverfolgungsflag 1118 bereitgestellte Funktionalität für tempdb automatisch aktiviert. Für Benutzerdatenbanken wird dieses Verhalten durch die `SET MIXED_PAGE_ALLOCATION`-Option von `ALTER DATABASE` gesteuert. Der Standardwert ist auf OFF festgelegt, und das Ablaufverfolgungsflag 1118 hat keine Auswirkungen. Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> Ab [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] wird die vom Ablaufverfolgungsflag 1118 bereitgestellte Funktionalität für tempdb und alle Benutzerdatenbanken automatisch aktiviert. Für Benutzerdatenbanken wird dieses Verhalten durch die `SET MIXED_PAGE_ALLOCATION`-Option von `ALTER DATABASE` gesteuert. Der Standardwert ist auf OFF festgelegt, und das Ablaufverfolgungsflag 1118 hat keine Auswirkungen. Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] kann die Systemfunktion `sys.dm_db_database_page_allocations` Informationen zur Seitenzuordnung für eine Datenbank, eine Tabelle, einen Index und eine Partition melden.
 
@@ -182,7 +182,7 @@ Wenn von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eine neue Ze
 
 Ein neuer Block für eine Zuordnungseinheit wird nur dann von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] zugeordnet, wenn es nicht schnell möglich ist, in einem vorhandenen Block eine Seite zu finden, die ausreichend Speicherplatz bietet, um die eingefügte Zeile aufnehmen zu können. 
 
-<a name="ProportionalFill"></a> Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ordnet Blöcke auf der Basis der verfügbaren Blöcke in der Dateigruppe zu und verwendet dazu einen **Zuordnungsalgorithmus zur proportionalen Füllung**. Wenn eine Dateigruppe zwei Dateien enthält, von denen die eine über doppelt so viel freien Speicherplatz wie die andere verfügt, werden in der Datei, die über mehr freien Speicherplatz verfügt, zwei Seiten für jede Seite zugeordnet, die in der anderen Datei zugeordnet wird. Dies bedeutet, dass der Anteil des verwendeten Speicherplatzes in allen Dateien einer Dateigruppe ähnlich groß sein sollte. 
+<a name="ProportionalFill"></a> Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ordnet Blöcke auf der Basis der verfügbaren Blöcke in der Dateigruppe zu und verwendet dazu einen **Zuordnungsalgorithmus zur proportionalen Füllung** . Wenn eine Dateigruppe zwei Dateien enthält, von denen die eine über doppelt so viel freien Speicherplatz wie die andere verfügt, werden in der Datei, die über mehr freien Speicherplatz verfügt, zwei Seiten für jede Seite zugeordnet, die in der anderen Datei zugeordnet wird. Dies bedeutet, dass der Anteil des verwendeten Speicherplatzes in allen Dateien einer Dateigruppe ähnlich groß sein sollte. 
 
 ## <a name="tracking-modified-extents"></a>Protokollieren geänderter Blöcke 
 

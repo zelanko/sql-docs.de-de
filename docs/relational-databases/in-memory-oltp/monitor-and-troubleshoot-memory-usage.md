@@ -12,12 +12,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcaae9b53ace5a79e3e1e2c5ccc3e0dc2449306c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 08a3bbf542911c31681f72c74ed783cf6ae79d99
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545192"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439521"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "89545192"
   
 1.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Klicken Sie auf **Neue Abfrage**.  
+2.  Klicken Sie auf **Neue Abfrage** .  
   
 3.  Fügen Sie den folgenden Code im Fenster für die neue Abfrage ein, und führen Sie die einzelnen Abschnitte aus.  
 
@@ -138,13 +138,13 @@ ms.locfileid: "89545192"
   
 2.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank, für die Berichte abgerufen werden sollen.  
   
-3.  Wählen Sie im Kontextmenü **Berichte** -> **Standard Berichte** -> **Speicherauslastung nach speicheroptimierten Objekten**aus.  
+3.  Wählen Sie im Kontextmenü **Berichte** -> **Standard Berichte** -> **Speicherauslastung nach speicheroptimierten Objekten** aus.  
   
- ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
+ ![Screenshot: Objekt-Explorer mit ausgewählter Option „Berichte“ > „Standardberichte“ > „Speicherauslastung nach speicheroptimierten Objekten“](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
  Dieser Bericht zeigt die Arbeitsspeicherauslastung durch die oben erstellte Datenbank.  
   
- ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
+ ![Screenshot: gesamte Speicherauslastung durch den Bericht zu speicheroptimierten Objekten](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
 ###  <a name="using-dmvs"></a><a name="bkmk_UsingDMVs"></a> Verwenden von DMVs  
  Es gibt mehrere DMVs zum Überwachen des durch speicheroptimierte Tabellen, Indizes, Systemobjekte und Laufzeitstrukturen verwendeten Arbeitsspeichers.  

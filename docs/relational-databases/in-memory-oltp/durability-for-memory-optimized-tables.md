@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05f9a1bad426ad38b832597876522e67d1f01d73
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a268de26245955dd6be838e822f1cb84b693324
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537053"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92497022"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Dauerhaftigkeit für speicheroptimierte Tabellen
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89537053"
 ### <a name="the-data-file"></a>Die Datendatei  
  Eine Datendatei enthält Zeilen aus einer oder mehreren speicheroptimierten Tabellen, die von mehreren Transaktionen im Rahmen eines INSERT- oder UPDATE-Vorgangs eingefügt wurden. Beispielsweise können eine Zeile aus der speicheroptimierten Tabelle T1 und die nächste Zeile aus der speicheroptimierten Tabelle T2 stammen. Die Zeilen werden an die Datendatei in der Transaktionsreihenfolge im Transaktionsprotokoll angefügt, sodass sequenzieller Datenzugriff gewährleistet wird. Dies ermöglicht im Vergleich zu zufälliger E/A einen erheblich besseren E/A-Durchsatz.  
   
- Sobald die Datendatei voll ist, werden die Zeilen, die durch neue Transaktionen eingefügt werden, in einer weiteren Datendatei gespeichert. Im Laufe der Zeit werden die Zeilen aus dauerhaften speicheroptimierten Tabellen in einer oder mehreren Datendateien gespeichert, die Zeilen aus einem disjunkten, aber zusammenhängenden Bereich von Transaktionen enthalten. Beispielsweise enthält eine Datendatei, deren Zeitstempel für den Transaktionscommit im Bereich (100, 200) liegt, alle Zeilen, die von Transaktionen mit einem Commitzeitstempel größer als 100 und kleiner oder gleich 200 eingefügt wurden. Beim Commitzeitstempel handelt es sich um eine monoton ansteigende Zahl, die einer Transaktion zugewiesen wird, sobald sie für den Commit bereit ist. Jede Transaktion besitzt einen eindeutigen Commitzeitstempel.  
+ Sobald die Datendatei voll ist, werden die Zeilen, die durch neue Transaktionen eingefügt werden, in einer weiteren Datendatei gespeichert. Im Laufe der Zeit werden die Zeilen aus dauerhaften speicheroptimierten Tabellen in einer oder mehreren Datendateien gespeichert, die Zeilen aus einem disjunkten aber zusammenhängenden Bereich von Transaktionen enthalten. Beispielsweise enthält eine Datendatei, deren Zeitstempel für den Transaktionscommit im Bereich (100, 200) liegt, alle Zeilen, die von Transaktionen mit einem Commitzeitstempel größer als 100 und kleiner oder gleich 200 eingefügt wurden. Beim Commitzeitstempel handelt es sich um eine monoton ansteigende Zahl, die einer Transaktion zugewiesen wird, sobald sie für den Commit bereit ist. Jede Transaktion besitzt einen eindeutigen Commitzeitstempel.  
   
  Wenn eine Zeile gelöscht oder aktualisiert wird, wird die Zeile in der Datendatei nicht entfernt oder direkt geändert. Stattdessen werden die gelöschten Zeilen in einem anderen Typ von Datei, der Änderungsdatei, nachverfolgt. Updatevorgänge werden für jede einzelne Zeile als Tupel von Lösch- und Einfügevorgängen verarbeitet. Dadurch werden zufällige E/A-Vorgänge für die Datendatei verhindert.  
  

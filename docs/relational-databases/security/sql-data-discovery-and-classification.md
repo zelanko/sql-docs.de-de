@@ -11,30 +11,30 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 90c219cd2e1034df4cc714247ae8d983bf54ff01
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ed1b0cb22d26895d5b01e59d36ede00f44ce4cd1
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867759"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439499"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Die Datenermittlung und -klassifizierung führt ein neues Tool in [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) für das **Ermitteln**, **Klassifizieren**, **Bezeichnen**  &  **Melden** von vertraulichen Daten in Ihren Datenbanken ein.
+Die Datenermittlung und -klassifizierung führt ein neues Tool in [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) für das **Ermitteln** , **Klassifizieren** , **Bezeichnen**  &  **Melden** von vertraulichen Daten in Ihren Datenbanken ein.
 Die Ermittlung und Klassifizierung Ihrer sensibelsten Daten (geschäftliche, finanzielle, gesundheitliche usw.) kann im Informationsschutzformat Ihres Unternehmens eine entscheidende Rolle spielen. Sie kann für Folgendes als Infrastruktur gelten:
 * Maßnahmen zum Einhalten von Datenschutzstandards.
 * Steuern des Zugriffs auf und Verstärken der Sicherheit von Datenbanken oder Spalten, die hochsensible Daten enthalten.
 
 > [!NOTE]
-> Die Datenermittlung und -klassifizierung wird **in SQL Server 2012 und höher unterstützt und kann mit [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) oder höher verwendet werden**. Weitere Informationen zur Datenermittlung und -klassifizierung in Azure SQL-Datenbanken finden Sie unter [Azure SQL-Datenbank – Datenermittlung und -klassifizierung](/azure/sql-database/sql-database-data-discovery-and-classification/).
+> Die Datenermittlung und -klassifizierung wird **in SQL Server 2012 und höher unterstützt und kann mit [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) oder höher verwendet werden** . Weitere Informationen zur Datenermittlung und -klassifizierung in Azure SQL-Datenbanken finden Sie unter [Azure SQL-Datenbank – Datenermittlung und -klassifizierung](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
 ## <a name="overview"></a><a id="subheading-1"></a>Übersicht
 Die Datenermittlung und -klassifizierung führen eine Reihe von erweiterten Diensten ein, und sie bilden ein neues SQL Information Protection-Paradigma für den Schutz von Daten, nicht nur von der Datenbank:
 
 * **Ermittlung und Empfehlungen:** Die Klassifizierungsengine überprüft Ihre Datenbank und identifiziert Spalten, die möglicherweise sensible Daten enthalten. Dann besteht die einfache Möglichkeit zum Überprüfen und Anwenden der geeigneten Empfehlungen zur Klassifizierung und zum manuellen Klassifizieren von Spalten.
 * **Bezeichnung:** Sensible Daten können dauerhaft mit Klassifizierungsbezeichnungen gekennzeichnet werden.
-* **Sichtbarkeit**: Der Klassifizierungsstatus der Datenbank kann in einem detaillierten Bericht im Portal angezeigt werden, der zwecks Konformität und Überwachung sowie anderer Gründe ausgedruckt oder exportiert werden kann.
+* **Sichtbarkeit** : Der Klassifizierungsstatus der Datenbank kann in einem detaillierten Bericht im Portal angezeigt werden, der zwecks Konformität und Überwachung sowie anderer Gründe ausgedruckt oder exportiert werden kann.
 
 ## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="subheading-2"></a>Ermitteln, Klassifizieren und Bezeichnen von sensiblen Spalten
 Im folgenden Abschnitt werden die Schritte zum Ermitteln, Klassifizieren und Bezeichnen von Spalten mit sensiblen Daten in Ihrer Datenbank sowie das Anzeigen des aktuellen Klassifizierungsstatus Ihrer Datenbank und das Exportieren von Berichten beschrieben.
@@ -49,47 +49,47 @@ Die Klassifizierung umfasst zwei Metadatenattribute:
 
 2. Klicken Sie im Objekt-Explorer von SSMS mit der rechten Maustaste auf die Datenbank, die Sie klassifizieren möchten, und wählen Sie dann **Aufgaben** > **Datenermittlung und -klassifizierung** > **Daten klassifizieren…** aus.
 
-   ![Navigationsbereich][0]
+   ![Screenshot: SSMS-Objekt-Explorer mit ausgewählter Option „Aufgaben“ > „Datenermittlung und -klassifizierung“ > „Daten klassifizieren...“][0]
 
-3. Die Klassifizierungsengine prüft Ihre Datenbank auf Spalten, die potenziell sensible Daten enthalten, und erstellt eine Liste der **empfohlenen Spaltenklassifizierungen**:
+3. Die Klassifizierungsengine prüft Ihre Datenbank auf Spalten, die potenziell sensible Daten enthalten, und erstellt eine Liste der **empfohlenen Spaltenklassifizierungen** :
 
     * Klicken Sie auf das Benachrichtigungsfeld für die Empfehlungen im oberen Rand des Fensters, oder klicken Sie auf den Bereich für Empfehlungen im unteren Rand des Fensters, um eine Liste der empfohlenen Spaltenklassifizierungen anzuzeigen:
 
-        ![Navigationsbereich][2]
+        ![Screenshot: Benachrichtigung „Wir haben 39 Spalten mit Klassifizierungsempfehlungen gefunden. Klicken Sie hier, um sie anzuzeigen.“][2]
 
-        ![Navigationsbereich][3]
+        ![Screenshot: Benachrichtigung „Wir haben 39 Spalten mit Klassifizierungsempfehlungen gefunden. Klicken Sie hier, um sie anzuzeigen.“][3]
 
     * Überprüfen Sie die Liste der Empfehlungen:
         * Zum Akzeptieren einer Empfehlung für eine bestimmte Spalte aktivieren Sie das Kontrollkästchen in der linken Spalte der entsprechenden Zeile. Sie können auch *alle Empfehlungen* als akzeptiert markieren, indem Sie das Kontrollkästchen im Tabellenkopf der Empfehlungen aktivieren.
 
         * Sie können auch den empfohlenen Informationstyp und die Vertraulichkeitsbezeichnung mithilfe der Dropdownfelder ändern.        
 
-        ![Navigationsbereich][4]
+        ![Screenshot: Liste mit Empfehlungen][4]
 
     * Klicken Sie zum Anwenden Ihrer ausgewählten Empfehlungen auf die blaue Schaltfläche **Accept selected recommendations** (Ausgewählte Änderungen akzeptieren).
 
-        ![Navigationsbereich][5]
+        ![Screenshot: Schaltfläche „Ausgewählte Empfehlungen annehmen“][5]
 
-4. Alternativ oder zusätzlich zur empfehlungsbasierten Klassifizierung können Sie Spalten auch **manuell klassifizieren**:
+4. Alternativ oder zusätzlich zur empfehlungsbasierten Klassifizierung können Sie Spalten auch **manuell klassifizieren** :
 
-    * Klicken Sie im oberen Menü des Fensters auf **Klassifizierung hinzufügen**.
+    * Klicken Sie im oberen Menü des Fensters auf **Klassifizierung hinzufügen** .
 
-        ![Navigationsbereich][6]
+        ![Screenshot: Menü oben mit umrandeter Option „Klassifizierung hinzufügen“][6]
 
     * Wählen Sie im daraufhin geöffneten Kontextfenster das Schema, die Tabelle und dann die Spalte, die Sie klassifizieren möchten, sowie den Informationstyp und die Vertraulichkeitsbezeichnung aus. Klicken Sie dann auf die Schaltfläche **Klassifizierung hinzufügen** am unteren Rand des Kontextfensters.
 
-        ![Navigationsbereich][7]
+        ![Screenshot: Kontextfenster „Klassifizierung hinzufügen“][7]
 
-5. Klicken Sie im oberen Menü des Fensters auf **Speichern**, um Ihre Klassifizierung zu vervollständigen und die Datenbankspalten dauerhaft mit den neuen Klassifizierungsmetadaten zu bezeichnen (Tag).
+5. Klicken Sie im oberen Menü des Fensters auf **Speichern** , um Ihre Klassifizierung zu vervollständigen und die Datenbankspalten dauerhaft mit den neuen Klassifizierungsmetadaten zu bezeichnen (Tag).
 
-    ![Navigationsbereich][8]
+    ![Screenshot: Menü oben mit umrandeter Option „Speichern“][8]
 
 
-6. Klicken Sie im oberen Menü des Fensters auf **Bericht anzeigen**, um einen Bericht mit einer vollständigen Zusammenfassung des Klassifizierungsstatus der Datenbank zu generieren. Sie können auch über SSMS einen Bericht erstellen. Klicken Sie mit der rechten Maustaste auf die Datenbank, in der der Bericht erstellt werden soll, und wählen Sie **Aufgaben** > **Datenermittlung und -klassifizierung** > **Bericht generieren…** aus.
+6. Klicken Sie im oberen Menü des Fensters auf **Bericht anzeigen** , um einen Bericht mit einer vollständigen Zusammenfassung des Klassifizierungsstatus der Datenbank zu generieren. Sie können auch über SSMS einen Bericht erstellen. Klicken Sie mit der rechten Maustaste auf die Datenbank, in der der Bericht erstellt werden soll, und wählen Sie **Aufgaben** > **Datenermittlung und -klassifizierung** > **Bericht generieren…** aus.
 
-    ![Navigationsbereich][9]
+    ![Screenshot: Menü oben mit umrandeter Option „Bericht anzeigen“][9]
 
-    ![Navigationsbereich][10]
+    ![Screenshot: Bericht zur SQL-Datenklassifizierung][10]
 
 ## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>Verwalten der Information Protection-Richtlinie mit SSMS
 
@@ -109,7 +109,7 @@ Sie können die Information Protection-Richtlinie mit [SSMS 18.4](../../ssms/do
 
 > [!IMPORTANT]
 > Die Information Protection-Richtliniendatei wird nicht in SQL Server gespeichert.
-> Für SSMS wird eine Information Protection-Standardrichtlinie verwendet. Wenn eine benutzerdefinierte Information Protection-Richtlinie nicht angewendet werden kann, kann in SSMS nicht die Standardrichtlinie verwendet werden. Die Datenklassifizierung schlägt fehl. Klicken Sie auf **Information Protection-Richtlinie zurücksetzen**, damit die Standardrichtlinie verwendet, das Problem behoben und die Datenklassifizierung ausgeführt wird.
+> Für SSMS wird eine Information Protection-Standardrichtlinie verwendet. Wenn eine benutzerdefinierte Information Protection-Richtlinie nicht angewendet werden kann, kann in SSMS nicht die Standardrichtlinie verwendet werden. Die Datenklassifizierung schlägt fehl. Klicken Sie auf **Information Protection-Richtlinie zurücksetzen** , damit die Standardrichtlinie verwendet, das Problem behoben und die Datenklassifizierung ausgeführt wird.
 
 ## <a name="accessing-the-classification-metadata"></a><a id="subheading-4"></a>Zugriff auf Klassifizierungsmetadaten
 
@@ -191,7 +191,7 @@ FROM
 Mit T-SQL können Sie Spaltenklassifizierungen hinzufügen/entfernen sowie alle Klassifizierungen für die gesamte Datenbank abrufen.
 
 - Hinzufügen/Aktualisieren der Klassifizierung einer oder mehrerer Spalten: [VERTRAULICHKEITSKLASSIFIZIERUNG HINZUFÜGEN](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
-- Entfernen der Klassifizierung einer oder mehrerer Spalten: [VERTRAULICHKEITSKLASSIFIZIERUNG VERWERFEN](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+- Entfernen der Klassifizierung aus einer oder mehreren Spalten: [VERTRAULICHKEITSKLASSIFIZIERUNG LÖSCHEN](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 # <a name="powershell-cmdlet"></a>[PowerShell-Cmdlet](#tab/sql-powelshell)
 Sie können das Power Shell-Cmdlet verwenden, um Spaltenklassifizierungen hinzuzufügen/zu entfernen sowie alle Klassifizierungen abzurufen und Empfehlungen für die gesamte Datenbank zu erhalten.

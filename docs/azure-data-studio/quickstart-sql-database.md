@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7eb89be3b94565f7a8642dad893642176a22822b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766439"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439294"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>Schnellstart: Verwenden von Azure Data Studio, um eine Verbindung mit einer Azure SQL-Datenbank-Instanz herzustellen und sie abzufragen
 
@@ -39,13 +39,13 @@ Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure SQL-Datenban
 
 1. Wenn Sie Azure Data Studio zum ersten Mal ausführen, sollte die **Homepage** geöffnet werden. Wenn die **Homepage** nicht angezeigt wird, wählen Sie **Hilfe** > **Willkommen** aus. Wählen Sie **Neue Verbindung** aus, um den Bereich **Verbindung** zu öffnen:
    
-   ![Symbol „Neue Verbindung“](media/quickstart-sql-database/new-connection-icon.png)
+   ![Screenshot: Dialogfeld „Willkommen – Azure Data Studio“ mit umrandeter Option „Neue Verbindung“](media/quickstart-sql-database/new-connection-icon.png)
 
 2. In diesem Artikel wird die SQL-Anmeldung verwendet, aber auch die Windows-Authentifizierung unterstützt. Füllen Sie die folgenden Felder mit dem Servernamen, Benutzernamen und Kennwort für Ihre Azure SQL-Serverinstanz aus:
 
    | Einstellung       | Vorgeschlagener Wert | BESCHREIBUNG |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Servername** | Der vollqualifizierte Servername | Etwa: **servername.database.windows.net**. |
+   | **Servername** | Der vollqualifizierte Servername | Etwa: **servername.database.windows.net** . |
    | **Authentifizierung** | SQL-Anmeldung| In diesem Tutorial wird die SQL-Authentifizierung verwendet. |
    | **Benutzername** | Der Benutzername des Serveradministratorkontos | Der Benutzername des Kontos, das zum Erstellen des Servers verwendet wird. |
    | **Kennwort (SQL-Anmeldung)** | Das Kennwort des Serveradministratorkontos | Das Kennwort des Kontos, das zum Erstellen des Servers verwendet wird. |
@@ -53,9 +53,9 @@ Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure SQL-Datenban
    | **Datenbankname** | *Leer lassen* | Sie stellen hier nur eine Verbindung mit dem Server her. |
    | **Servergruppe** | <Default> auswählen | Sie können für dieses Feld eine bestimmte Servergruppe festlegen, die Sie erstellt haben. | 
 
-   ![Symbol „Neue Verbindung“](media/quickstart-sql-database/new-connection-screen.png)  
+   ![Screenshot: Seite „Verbindung“ in Azure Data Studio](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. Wählen Sie **Verbinden**.
+3. Wählen Sie **Verbinden** .
 
 4. Wenn der Server nicht über eine Firewallregel verfügt, die Azure Data Studio ermöglicht, eine Verbindung herzustellen, wird das Formular **Neue Firewallregel erstellen** geöffnet. Füllen Sie das Formular aus, um eine neue Firewallregel zu erstellen. Weitere Informationen finden Sie unter [Firewallregeln](/azure/sql-database/sql-database-firewall-configure).
 
@@ -67,7 +67,7 @@ Nachdem die Verbindung erfolgreich hergestellt wurde, wird Ihr Server in der Ran
 
 In den nächsten Abschnitten wird die TutorialDB-Datenbank erstellt, die in anderen Azure Data Studio-Tutorials verwendet wird.
 
-1. Klicken Sie in Ihrer Azure SQL-Serverinstanz mit der rechten Maustaste auf die Randleiste **SERVER**, und wählen Sie **Neue Abfrage** aus.
+1. Klicken Sie in Ihrer Azure SQL-Serverinstanz mit der rechten Maustaste auf die Randleiste **SERVER** , und wählen Sie **Neue Abfrage** aus.
 
 1. Fügen Sie diesen SQL-Code in den Abfrage-Editor ein.
 
@@ -90,7 +90,7 @@ In den nächsten Abschnitten wird die TutorialDB-Datenbank erstellt, die in ande
 
 Der Abfrage-Editor ist mit der Datenbank **master** verbunden, aber wir möchten eine Tabelle in der Datenbank **TutorialDB** erstellen. 
 
-1. Stellen Sie eine Verbindung mit der **TutorialDB**-Datenbank her.
+1. Stellen Sie eine Verbindung mit der **TutorialDB** -Datenbank her.
 
    ![Kontext ändern](media/quickstart-sql-database/change-context2.png)
 

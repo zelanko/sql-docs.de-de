@@ -146,7 +146,7 @@ Einer der Vorteile von Verfügbarkeitsgruppen ist, dass Hohe Verfügbarkeit und 
  
 Außerhalb einer Verfügbarkeitsgruppe mit dem Clustertyp „Keiner“ erfordert eine Verfügbarkeitsgruppe, dass alle Replikate Teil desselben zugrunde liegenden Clusters (WSFC oder Pacemaker) sind. Das bedeutet, dass WSFC in der obigen Abbildung gestreckt wird, um in zwei verschiedenen Rechenzentren zu arbeiten, wodurch die Komplexität unabhängig von der Plattform (Windows Server oder Linux) erhöht wird. Das Strecken von Clustern über Entfernungen erhöht die Komplexität. In SQL Server 2016 wurde eingeführt, dass eine verteilte Verfügbarkeitsgruppe es einer Verfügbarkeitsgruppe ermöglichen kann, Verfügbarkeitsgruppen zu umfassen, die auf verschiedenen Clustern konfiguriert wurden. Dies entkoppelt die Anforderung, dass alle Knoten im selben Cluster enthalten sein müssen. Dadurch wird das Konfigurieren der Notfallwiederherstellung wesentlich einfacher. Weitere Informationen zu verteilten Verfügbarkeitsgruppen finden Sie unter [Verteilte Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
-![Verteilte Verfügbarkeitsgruppen](media/sql-server-ha-story/image11.png)
+![Diagramm einer verteilten Verfügbarkeitsgruppe](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>Always On-Failoverclusterinstanzen
 
@@ -216,7 +216,7 @@ Bevor die plattformübergreifenden Szenarios und die für die Interoperabilität
 
 Verteilte Verfügbarkeitsgruppen wurden dafür entwickelt, mehrere Konfigurationen für Verfügbarkeitsgruppen zu umfassen, unabhängig davon, ob die zwei zugrunde liegenden Cluster der Verfügbarkeitsgruppen zwei verschiedene WSFCs oder Linux-Verteilungen sind oder ob einer sich auf einem WSFC und der andere auf Linux befindet. Eine verteilte Verfügbarkeitsgruppe ist die primäre Methode für plattformübergreifende Lösungen. Eine verteilte Verfügbarkeitsgruppe ist außerdem die primäre Lösung für Migrationen, z.B. für das Konvertieren von einer Windows Server-basierten SQL Server-Infrastruktur zu einer Linux-basierten, wenn Ihr Unternehmen dies durchführen möchte. Wie bereits erwähnt minimieren Verfügbarkeitsgruppen, insbesondere verteilte Verfügbarkeitsgruppen, die Zeit, die eine Anwendung nicht für die Verwendung verfügbar ist. Im Folgenden wird ein Beispiel für eine verteilte Verfügbarkeitsgruppe dargestellt, die einen WSFC und Pacemaker umfasst.
 
-![Verteilte Verfügbarkeitsgruppen](media/sql-server-ha-story/image9.png)
+![Diagramm: verteilte Verfügbarkeitsgruppe, die einen WSFC und Pacemaker umfasst](media/sql-server-ha-story/image9.png)
  
 Wenn eine Verfügbarkeitsgruppe mit dem Clustertyp „Keiner“ konfiguriert ist, kann diese Windows Server und Linux umfassen sowie mehrere Linux-Verteilungen. Da es sich dabei nicht um eine echte Konfiguration für die Hochverfügbarkeit handelt, sollte diese nicht für unternehmenskritische Bereitstellungen verwendet werden, sondern für schreibgeschützte Szenarios sowie für Migrations- und Upgradeszenarios.
 
@@ -233,7 +233,7 @@ Seit sekundäre Replikate in SQL Server 2012 eingeführt wurden, können diese f
 
 Die Skalierung von lesbaren Kopien einer Datenbank über Verfügbarkeitsgruppen wurde erstmals mit den verteilten Verfügbarkeitsgruppen in SQL Server 2016 eingeführt. Dadurch können Unternehmen schreibgeschützte Kopien der Datenbank nicht nur lokal besitzen, sondern auch regional und global mit minimalem Konfigurationsaufwand. Außerdem werden durch lokal ausgeführte Abfragen der Netzwerkdatenverkehr und die Latenz reduziert. Jedes primäre Replikat einer Verfügbarkeitsgruppe kann für zwei andere Verfügbarkeitsgruppen ein Seeding ausführen, selbst wenn es sich nicht um eine vollständige Lese-/Schreibkopie handelt. Somit kann jede verteilte Verfügbarkeitsgruppe bis zu 27 lesbare Kopien einer Datei unterstützen. 
 
-![Verteilte Verfügbarkeitsgruppen](media/sql-server-ha-story/image11.png)
+![Diagramm: verteilte Verfügbarkeitsgruppe im Zusammenhang mit der Leseskalierung](media/sql-server-ha-story/image11.png)
 
 Ab SQL Server 2017 ist es möglich, eine schreibgeschützte Lösung mit Verfügbarkeitsgruppen mit dem Clustertyp „Keiner“ nahezu in Echtzeit zu erstellen. Wenn es das Ziel ist, Verfügbarkeitsgruppen für lesbare sekundäre Replikate und nicht für die Verfügbarkeit zu verwenden, wird dadurch die Komplexität der Verwendung eines WSFC oder von Pacemaker entfernt, außerdem erhalten die lesbaren Replikate die Vorteile einer Verfügbarkeitsgruppe in einer einfacheren Bereitstellungsmethode. 
 
