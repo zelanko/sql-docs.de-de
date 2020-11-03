@@ -16,12 +16,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40acaf67fedc76495f52aced7b7d0f61b76cb530
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ffa64e3a567a219e192c9108b04e2c96efaf5c
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494194"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235630"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph-Verarbeitung mit SQL Server und Azure SQL-Datenbank
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -55,7 +55,7 @@ CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![Person-friends-Tables](../../relational-databases/graphs/media/person-friends-tables.png "Knoten "Person" und "Friends Edge Tables"")  
+![Diagramm, in dem die Knoten und Kanten angezeigt werden, werden als Tabellen gespeichert.](../../relational-databases/graphs/media/person-friends-tables.png "Knoten "Person" und "Friends Edge Tables"")  
 Knoten und Kanten werden als Tabellen gespeichert.  
 
 ### <a name="query-language-extensions"></a>Abfrage Spracherweiterungen  

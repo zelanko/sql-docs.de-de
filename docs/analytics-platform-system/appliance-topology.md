@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e16e1cd972b6374a5b3d17eef5a406b57b1d3c41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95c5e20097ceb25f8c0897201fd88505dfb29642
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401381"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235177"
 ---
 # <a name="appliance-topology---analytics-platform-system"></a>Geräte Topologie-Analytics Platform System
 Zeigt zusammenfassende Informationen zum gesamten Analytics-Platt Form System an.  
   
 Auf der Seite wird eine schreibgeschützte Version aller Hosts und Fabric-Knoten in der aktuellen Appliance einschließlich Ihrer Ethernet-und InfiniBand-IP-Adressen aufgelistet.  
   
-![SQL_Server_PDW_DWConfig_ApplTop](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
+![Screenshot des Dialog Felds "Microsoft Analytics Platform System Configuration Manager" mit der Geräte Topologie.](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Starten Sie die Configuration Manager &#40;Analytics-Platt Form System&#41;](launch-the-configuration-manager.md)  

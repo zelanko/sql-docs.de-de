@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f275628747d0b17ede6c76f67961fe5233e788c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412860"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243539"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -41,7 +41,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **topprozent** -Funktion berechnet die Summe des angegebenen numerischen Ausdrucks, der für die angegebene Menge ausgewertet wurde, und sortiert die Menge in absteigender Reihenfolge. Anschließend gibt die Funktion die Elemente mit den höchsten Werten zurück, deren kumulativer Prozentsatz vom Gesamtwert mindestens dem angegebenen Prozentsatz entspricht. Diese Funktion gibt die kleinste Teilmenge einer Menge zurück, deren kumulativer Gesamtwert mindestens dem angegebenen Prozentsatz entspricht. Die zurückgegebenen Elemente werden der Größe nach absteigend sortiert.  
   
 > [!WARNING]  
@@ -52,7 +52,10 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 > [!IMPORTANT]  
 >  Wie bei der Funktion " [bottomprozent](../mdx/bottompercent-mdx.md) " unterbricht die Funktion " **topprozent** " immer die Hierarchie.  
   
-## <a name="example"></a>Beispiel  
+## <a name="examples"></a>Beispiele  
+
+### <a name="a-return-toppercent"></a>A. Rückgabe topprozent
+
  Im folgenden Beispiel werden die Orte zurückgegeben, in denen der Wiederverkäufer die ersten 10 % seines Umsatzes in der Kategorie Bike erzielt hat. Das Ergebnis wird in absteigender Reihenfolge sortiert und beginnt mit dem Ort mit dem höchsten Umsatzwert.  
   
 ```  
@@ -89,8 +92,9 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ```  
   
-## <a name="example"></a>Beispiel  
- In der folgenden exemplarischen Vorgehensweise werden die Auswirkungen negativer Werte in der *numeric_expression*erläutert. Zuerst muss ein Kontext erzeugt werden, in dem das Verhalten demonstriert werden kann.  
+### <a name="b-understand-the-effect-of-negative-values"></a>B. Verstehen der Auswirkung von negativen Werten
+
+ In der folgenden exemplarischen Vorgehensweise werden die Auswirkungen negativer Werte in der *numeric_expression* erläutert. Zuerst muss ein Kontext erzeugt werden, in dem das Verhalten demonstriert werden kann.  
   
  Die folgende Abfrage gibt eine Tabelle mit Werten für Sales Amount, Total Product Cost und Gross Profit für den Wiederverkäufer zurück. Die Tabelle ist in absteigender Reihenfolge nach Gewinnen sortiert. Da nur negative Gewinnwerte vorhanden sind, wird der geringste Verlust zuoberst angezeigt.  
   

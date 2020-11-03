@@ -15,24 +15,24 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eeb6cde4e4b24d9ef7b5e67de8bfd155808fd649
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 57051ece8e432ed56c2b376c6586ff5a147b25b6
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331050"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235541"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Erstellen einer Graph-Datenbank und Ausführen einiger Muster Vergleichs Abfragen mit T-SQL
 
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-Dieses Beispiel stellt ein [!INCLUDE[tsql-md](../../includes/tsql-md.md)] Skript zum Erstellen einer Graph-Datenbank mit Knoten und Kanten bereit und verwendet dann die neue Match-Klausel, um einige Muster zu vergleichen und das Diagramm zu durchlaufen. Dieses Beispielskript funktioniert sowohl für Azure SQL-Datenbank als auch für[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Dieses Beispiel stellt ein [!INCLUDE[tsql-md](../../includes/tsql-md.md)] Skript zum Erstellen einer Graph-Datenbank mit Knoten und Kanten bereit und verwendet dann die neue Match-Klausel, um einige Muster zu vergleichen und das Diagramm zu durchlaufen. Dieses Beispielskript funktioniert sowohl für Azure SQL-Datenbank als auch für [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>Beispiel Schema
 
 Dieses Beispiel erstellt ein Diagramm Schema, wie in Abbildung 1 gezeigt, für ein hypothetisches soziales Netzwerk mit Personen-, Restaurant-und Stadt Knoten. Diese Knoten sind über Freunde, likes, livesin und locatcher-Kanten miteinander verbunden.
 
-![Person-Cities-Restaurants-Tables](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "SQL Graph-Daten Bank Beispiel")  
+![Das Diagramm zeigt ein Beispiel Schema mit Restaurant-, Stadt-, Personen Knoten und livesin, locatcher, gefällt Edge.](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "SQL Graph-Daten Bank Beispiel")  
 Abbildung 1: Beispiel Schema mit "Restaurant", "City", "Person Nodes" und "livesin", "loingedin", gefällt Kanten
 
 ## <a name="sample-script"></a>Beispielskript
