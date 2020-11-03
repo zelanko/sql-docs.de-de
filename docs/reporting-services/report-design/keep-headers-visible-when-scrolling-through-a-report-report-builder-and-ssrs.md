@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d846d6ce9a206dc632dec3033707b645bd7c1b55
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: ce0edeb4d0d78f43da0c510b09e74e7972f5d301
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255495"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907108"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Sichtbarhalten von Kopfzeilen beim Durchführen eines Bildlaufs durch einen Bericht (Berichts-Generator und SSRS)
   Damit Zeilen- und Spaltenbezeichnungen nach dem Rendern des Berichts bei einem Bildlauf nicht aus der Sicht verschwinden, können Sie die Zeilen- oder Spaltenüberschriften fixieren.  
@@ -28,11 +28,11 @@ ms.locfileid: "84255495"
   
  Die folgende Abbildung zeigt eine Tabelle.  
   
- ![Table](../../reporting-services/report-design/media/table.png "Tabelle")  
+ ![Screenshot einer Tabelle](../../reporting-services/report-design/media/table.png "Tabelle")  
   
  Die folgende Abbildung zeigt eine Matrix.  
   
- ![Matrix](../../reporting-services/report-design/media/matrix.png "Matrix")  
+ ![Screenshot einer Matrix](../../reporting-services/report-design/media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,7 +41,7 @@ ms.locfileid: "84255495"
   
 1.  Klicken Sie im Tablix-Datenbereich mit der rechten Maustaste auf den Zeilen-, Spalten- oder Eckziehpunkt, und klicken Sie anschließend auf **Tablix-Eigenschaften**.  
   
-2.  Wählen Sie auf der Registerkarte **Allgemein** unter **Zeilenköpfe** oder **Spaltenüberschriften**die Option **Die Kopfzeile sollte beim Ausführen eines Bildlaufs sichtbar bleiben**aus.  
+2.  Wählen Sie auf der Registerkarte **Allgemein** unter **Zeilenköpfe** oder **Spaltenüberschriften** die Option **Die Kopfzeile sollte beim Ausführen eines Bildlaufs sichtbar bleiben** aus.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "84255495"
   
      ![Tablix-Element-Eigenschaften](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Tablix-Element-Eigenschaften")  
   
-4.  Legen Sie im Eigenschaftenbereich **FixedData** auf **True**fest.  
+4.  Legen Sie im Eigenschaftenbereich **FixedData** auf **True** fest.  
   
 5.  Wiederholen Sie diesen Schritt für die angrenzenden Elemente, die bei einem Bildlauf sichtbar bleiben sollen.  
   
